@@ -31,7 +31,7 @@ translation_of: Web/API/Console/group
 
 <p>{{h3_gecko_minversion("Using groups in the console", "9.0")}}</p>
 
-<p><span id="result_box" lang="fr"><span>Vous pouvez utiliser des groupes imbriqués pour organiser votre sortie en associant visuellement les messages correspondants.</span> <span>Pour créer un nouveau bloc imbriqué, appelez <code>console.group ()</code>.</span> <span>La méthode <code>console.groupCollapsed ()</code> est similaire, mais le nouveau bloc est réduit et nécessite de cliquer sur un bouton de divulgation pour le lire.</span></span></p>
+<p>Vous pouvez utiliser des groupes imbriqués pour organiser votre sortie en associant visuellement les messages correspondants. Pour créer un nouveau bloc imbriqué, appelez <code>console.group ()</code>. La méthode <code>console.groupCollapsed ()</code> est similaire, mais le nouveau bloc est réduit et nécessite de cliquer sur un bouton de divulgation pour le lire.</p>
 
 <div class="note">
 <p><strong>Note :</strong> De Gecko 9 jusqu'à Gecko 51, la méthode <code>groupCollapsed()</code> n'était pas identique à <code>group()</code>. Les groupes réduits sont entièrement pris en charge depuis Gecko 52. Voir {{bug("1088360")}}.</p>
@@ -39,22 +39,22 @@ translation_of: Web/API/Console/group
 
 <p>Pour sortir du groupe courant, appeler <code>console.groupEnd()</code>. Par exemple, étant donné ce code :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"This is the outer level"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">group</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Level 2"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">group</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Level 3"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">warn</span><span class="punctuation token">(</span><span class="string token">"More of level 3"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">groupEnd</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Back to level 2"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">groupEnd</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Back to the outer level"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">console.log("This is the outer level");
+console.group();
+console.log("Level 2");
+console.group();
+console.log("Level 3");
+console.warn("More of level 3");
+console.groupEnd();
+console.log("Back to level 2");
+console.groupEnd();
+console.log("Back to the outer level");</pre>
 
-<p><span class="short_text" id="result_box" lang="fr"><span>La sortie ressemble à ceci :</span></span></p>
+<p>La sortie ressemble à ceci :</p>
 
-<p><img alt="A screenshot of messages nested in the console output." src="https://developer.mozilla.org/@api/deki/files/6082/=nesting.png"></p>
+<p><img alt="Une capture d'écran de messages imbriqués dans la sortie de la console." src="nesting.png"></p>
 
-<p>Pour plus de détail, se reporter à l'article <a href="https://developer.mozilla.org/fr/docs/Web/API/console#Using_groups_in_the_console">Using groups in the console</a> dans la documentation sur la {{domxref("console")}}.</p>
+<p>Pour plus de détail, se reporter à l'article <a href="/fr/docs/Web/API/console#Using_groups_in_the_console">Using groups in the console</a> dans la documentation sur la {{domxref("console")}}.</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 
@@ -82,5 +82,5 @@ console<span class="punctuation token">.</span><span class="function token">log<
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
+ <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
 </ul>

@@ -12,9 +12,8 @@ translation_of: Web/API/FileReader/readAsArrayBuffer
 
 <p>La méthode <strong><code>readAsArrayBuffer()</code></strong> de l'interface {{domxref("FileReader")}} permet de lire un {{domxref("Blob")}} ou un {{domxref("File")}} (<em>fichier</em>). Quand l'opération est finie, l'attribut {{domxref("FileReader.readyState","readyState")}} prend la valeur <code>"DONE"</code> (<em>terminé</em>) à savoir <code>2</code>, et l'événement {{event("loadend")}} est levé. L'attribut {{domxref("FileReader.result","résultat")}} contient alors les données lues sous la forme d'un objet {{domxref("ArrayBuffer")}}.</p>
 
-<div class="blockIndicator note">
-<p><strong>Nouvelle API disponible</strong><br>
- La méthode {{domxref("Blob.arrayBuffer()")}} est une nouvelle API basée sur les promesses permettant de lire un fichier.</p>
+<div class="note">
+<p><strong>Note :</strong> La méthode {{domxref("Blob.arrayBuffer()")}} est une nouvelle API basée sur les promesses permettant de lire un fichier.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>

@@ -25,7 +25,9 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/queueMicrotask
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">La méthode <code><strong>queueMicrotask()</strong></code>, qui est exposée par {{domxref("Window")}} ou l'interface {{domxref("Worker")}}, met en file d'attente une micro-tâche qui doit être exécutée à un moment sûr avant que le contrôle soit retourné à la boucle d'événement du navigateur.</span> La micro-tâche est une fonction courte qui doit être exécutée après que la tâche actuelle ait terminé son exécution et lorsqu'il n'y a pas d'autre code en attente d'exécution avant que le contrôle du contexte d'exécution soit retourné à la boucle d'événement du navigateur.</p>
+<p>La méthode <code><strong>queueMicrotask()</strong></code>, qui est exposée par {{domxref("Window")}} ou l'interface {{domxref("Worker")}}, met en file d'attente une micro-tâche qui doit être exécutée à un moment sûr avant que le contrôle soit retourné à la boucle d'événement du navigateur.</p>
+
+<p>La micro-tâche est une fonction courte qui doit être exécutée après que la tâche actuelle ait terminé son exécution et lorsqu'il n'y a pas d'autre code en attente d'exécution avant que le contrôle du contexte d'exécution soit retourné à la boucle d'événement du navigateur.</p>
 
 <p>Cela permet à votre code de fonctionner sans interférer avec aucun autre code potentiellement à une plus haute priorité en attente, mais avant que le navigateur ne regagne le contrôle du contexte d'exécution, qui dépend potentiellement de la tâche que vous devez effectuer. Vous pouvez en apprendre plus sur comment utiliser les micro-tâches et pourquoi vous devriez le faire dans notre <a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">microtask guide</a>.</p>
 

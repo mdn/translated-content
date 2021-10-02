@@ -12,7 +12,7 @@ translation_of: Web/API/File/Using_files_from_web_applications
 
 <p>Grâce à l'API File ajoutée au DOM avec HTML5, il est maintenant possible depuis une page web de proposer à l'utilisateur de sélectionner des fichiers locaux, puis d'en lire le contenu. Cette sélection est possible en utilisant un élément HTML {{ HTMLElement("input") }} ou par glisser-déposer.</p>
 
-<p>Vous pouvez utiliser si vous le souhaitez l'API DOM File depuis du code chrome d'extensions ou d'un autre navigateur ; notez cependant qu'il existe des fonctionnalités additionnelles auxquelles il vous faudra être attentif. Reportez-vous à <a href="/en/Extensions/Using_the_DOM_File_API_in_chrome_code" title="en/Extensions/Using the DOM File API in chrome code">Using the DOM File API in chrome code</a> pour plus de détails.</p>
+<p>Vous pouvez utiliser si vous le souhaitez l'API DOM File depuis du code chrome d'extensions ou d'un autre navigateur ; notez cependant qu'il existe des fonctionnalités additionnelles auxquelles il vous faudra être attentif. Reportez-vous à <a href="/en/Extensions/Using_the_DOM_File_API_in_chrome_code">Using the DOM File API in chrome code</a> pour plus de détails.</p>
 
 <h2 id="Accéder_au(x)_fichier(s)_sélectionné(s)">Accéder au(x) fichier(s) sélectionné(s)</h2>
 
@@ -35,7 +35,7 @@ translation_of: Web/API/File/Using_files_from_web_applications
 var </code>fichierSelectionne <code>= $('#input')[0].files[0];</code></pre>
 
 <div class="note">
-<p>Si vous rencontrez une erreur "<code>files is undefined</code>" : vous n'avez pas sélectionné le bon élément HTML, en oubliant qu'un sélecteur jQuery renvoie une liste d'éléments DOM correspondants. Récupérez l'élément DOM pour appeler sa méthode "<code>files</code>".</p>
+<p><strong>Note :</strong> Si vous rencontrez une erreur "<code>files is undefined</code>" : vous n'avez pas sélectionné le bon élément HTML, en oubliant qu'un sélecteur jQuery renvoie une liste d'éléments DOM correspondants. Récupérez l'élément DOM pour appeler sa méthode "<code>files</code>".</p>
 </div>
 
 <h2 id="Accéder_au(x)_fichier(s)_sélectionné(s)_sur_un_événement_change">Accéder au(x) fichier(s) sélectionné(s) sur un événement <em>change</em></h2>
@@ -54,7 +54,7 @@ var </code>fichierSelectionne <code>= $('#input')[0].files[0];</code></pre>
 
 <h3 id="Ajouter_dynamiquement_un_gestionnaire_d'événement_change">Ajouter dynamiquement un gestionnaire d'événement <em>change</em></h3>
 
-<p>Dans le cas où votre champ input a été créé à l'aide d'une bibliothèque JavaScript comme <a class="external" href="http://www.jquery.com/">jQuery</a>, il vous faudra utiliser la méthode {{ domxref("EventTarget.addEventListener()") }} pour ajouter le gestionnaire d'événement <code>change</code>, comme cela :</p>
+<p>Dans le cas où votre champ input a été créé à l'aide d'une bibliothèque JavaScript comme <a href="http://www.jquery.com/">jQuery</a>, il vous faudra utiliser la méthode {{ domxref("EventTarget.addEventListener()") }} pour ajouter le gestionnaire d'événement <code>change</code>, comme cela :</p>
 
 <pre class="brush: js">var inputElement = document.getElementById("inputField");
 inputElement.addEventListener("change", handleFiles, false);
@@ -387,7 +387,7 @@ function handleFiles(files) {
 </ol>
 
 <div class="note">
-<p><strong>Note :</strong> la méthode non standard <code>sendAsBinary</code> utilisée dans l'exemple ci-dessus est obsolète depuis Gecko 31 {{ geckoRelease(31) }} ; utilisez plutôt la méthode standard <code>send(Blob data)</code>. </p>
+<p><strong>Note :</strong> la méthode non standard <code>sendAsBinary</code> utilisée dans l'exemple ci-dessus est obsolète depuis Gecko 31 {{ geckoRelease(31) }} ; utilisez plutôt la méthode standard <code>send(Blob data)</code>. </p>
 </div>
 
 <h3 id="Gérer_le_processus_de_téléchargement_d'un_fichier_de_manière_asynchrone">Gérer le processus de téléchargement d'un fichier de manière asynchrone</h3>
@@ -455,29 +455,29 @@ if (isset($_FILES['myFile'])) {
 
 <p>Sous Firefox, la constante de configuration <code>pdfjs.disabled</code> doit être définie à <code>false</code> {{non-standard_inline()}} pour afficher les PDF encapsulés dans dans un {{ HTMLElement("iframe") }} plutôt que de s'en voir proposer le téléchargement sur le PC local.</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>iframe</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>viewer<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html">&lt;iframe id="viewer"&gt;</pre>
 
 <p>Et voici comment modifier la valeur de l'attribut <code>src</code> :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> obj_url <span class="operator token">=</span> window<span class="punctuation token">.</span>URL<span class="punctuation token">.</span><span class="function token">createObjectURL</span><span class="punctuation token">(</span>blob<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> iframe <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'viewer'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-iframe<span class="punctuation token">.</span><span class="function token">setAttribute</span><span class="punctuation token">(</span><span class="string token">'src'</span><span class="punctuation token">,</span> obj_url<span class="punctuation token">)</span><span class="punctuation token">;</span>
-window<span class="punctuation token">.</span>URL<span class="punctuation token">.</span><span class="function token">revokeObjectURL</span><span class="punctuation token">(</span>obj_url<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">var obj_url = window.URL.createObjectURL(blob);
+var iframe = document.getElementById('viewer');
+iframe.setAttribute('src', obj_url);
+window.URL.revokeObjectURL(obj_url);</pre>
 
 <h2 id="Exemple_Utiliser_un_objet_URLs_avec_d'autres_types_de_fichiers">Exemple : Utiliser un objet URLs avec d'autres types de fichiers</h2>
 
 <p>Vous pouvez manipuler de la même façon des fichiers d'autres formats. Voici comment prévisualiser une vidéo téléchargée sur le serveur :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> video <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'video'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> obj_url <span class="operator token">=</span> window<span class="punctuation token">.</span>URL<span class="punctuation token">.</span><span class="function token">createObjectURL</span><span class="punctuation token">(</span>blob<span class="punctuation token">)</span><span class="punctuation token">;</span>
-video<span class="punctuation token">.</span>src <span class="operator token">=</span> obj_url<span class="punctuation token">;</span>
-video<span class="punctuation token">.</span><span class="function token">play</span><span class="punctuation token">(</span><span class="punctuation token">)</span>
-window<span class="punctuation token">.</span>URL<span class="punctuation token">.</span><span class="function token">revokeObjectURL</span><span class="punctuation token">(</span>obj_url<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">var video = document.getElementById('video');
+var obj_url = window.URL.createObjectURL(blob);
+video.src = obj_url;
+video.play()
+window.URL.revokeObjectURL(obj_url);</pre>
 
-<h2 id="Specification" name="Specification">Spécifications</h2>
+<h2 id="Specification">Spécifications</h2>
 
 <ul>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#file-upload-state-%28type=file%29" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected">File upload state</a> (HTML 5 working draft)</li>
+ <li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#file-upload-state-%28type=file%29">File upload state</a> (HTML 5 working draft)</li>
  <li><a href="http://www.w3.org/TR/FileAPI/">File API</a></li>
 </ul>
 
@@ -488,7 +488,7 @@ window<span class="punctuation token">.</span>URL<span class="punctuation token"
  <li>{{ domxref("FileList") }}</li>
  <li>{{ domxref("FileReader") }}</li>
  <li><a href="/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest">Utiliser XMLHttpRequest</a></li>
- <li><a href="/en/Extensions/Using_the_DOM_File_API_in_chrome_code" title="en/Extensions/Using the DOM File API in chrome code">Using the DOM File API in chrome code</a></li>
+ <li><a href="/en/Extensions/Using_the_DOM_File_API_in_chrome_code">Using the DOM File API in chrome code</a></li>
  <li>{{ domxref("XMLHttpRequest") }}</li>
- <li><a class="external" href="http://www.jquery.com/">jQuery</a> JavaScript library</li>
+ <li><a href="http://www.jquery.com/">jQuery</a> JavaScript library</li>
 </ul>

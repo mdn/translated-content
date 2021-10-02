@@ -5,13 +5,13 @@ translation_of: Web/HTTP/Content_negotiation
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary">En <a href="/en-US/docs/Glossary/HTTP">HTTP</a>, la <em><strong>négociation de contenu</strong></em> est le mécanisme utilisé pour fournir différentes représentations d'une ressource à la même URI, afin que l'agent utilisateur puisse spécifier celle qui convient le mieux à l'utilisateur (par exemple, la langue d'un document, le format d'image, ou l'encodage du contenu).</p>
+<p>En <a href="/en-US/docs/Glossary/HTTP">HTTP</a>, la <em><strong>négociation de contenu</strong></em> est le mécanisme utilisé pour fournir différentes représentations d'une ressource à la même URI, afin que l'agent utilisateur puisse spécifier celle qui convient le mieux à l'utilisateur (par exemple, la langue d'un document, le format d'image, ou l'encodage du contenu).</p>
 
 <h2 id="Principes_de_la_négociation_de_contenu">Principes de la négociation de contenu</h2>
 
 <p>Un document spécifique s'appelle une <em>ressource</em>. Lorsqu'un client veut y accéder, il le demande en utilisant son URL. Le serveur utilise cette URL pour choisir une des différentes versions qu'il peut fournir - chaque version étant appelée une représentation - et renvoie cette représentation spécifique au client. La ressource globale, ainsi que chacune de ses représentations, ont une URL spécifique. La façon dont une représentation spécifique est choisie est déterminée par la <em>négociation de contenu</em> et il existe plusieurs façons de négocier entre le client et le serveur.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13789/HTTPNego.png" style="height: 311px; width: 767px;"></p>
+<p><img alt="" src="httpnego.png"></p>
 
 <p>La sélection de la représentation la mieux adaptée se fait par l'un des deux mécanismes suivants:</p>
 
@@ -28,7 +28,7 @@ translation_of: Web/HTTP/Content_negotiation
 
 <p>Dans la <em>négociation de contenu gérée par le serveur</em>, ou négociation proactive de contenu, le navigateur (ou tout autre type de client) envoie plusieurs en-têtes HTTP avec l'URL décrivant les choix préférés de l'utilisateur. Le serveur les utilise comme indications et un algorithme interne choisit le meilleur contenu à servir au client. L'algorithme est spécifique au serveur et n'est pas défini dans la norme. Voir, par exemple, l'<a href="http://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm">algorithme de négociation d'Apache 2.2</a>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13791/HTTPNegoServer.png" style="height: 380px; width: 767px;"></p>
+<p><img alt="" src="httpnegoserver.png"></p>
 
 <p>La norme HTTP/1.1 définit la liste des en-têtes standard qui initient la négociation pilotée par le serveur ({{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}). Bien qu'à proprement parler {{HTTPHeader("User-Agent")}} ne figure pas dans la liste, il est aussi parfois utilisé pour envoyer une représentation spécifique de la ressource demandée, bien que cela ne soit pas considéré comme une bonne pratique. Le serveur utilise l'en-tête {{HTTPHeader("Vary")}} pour indiquer quels en-têtes il a effectivement utilisés pour la négociation de contenu (ou plus précisément les en-têtes de réponse associés), pour que les <a href="/en-US/docs/Web/HTTP/Caching">caches</a> puissent fonctionner de manière optimale.</p>
 
@@ -51,7 +51,7 @@ translation_of: Web/HTTP/Content_negotiation
 <h3 id="The_Accept-CH_header_experimental_inline">The <code>Accept-CH</code> header {{experimental_inline}}</h3>
 
 <div class="note">
-<p>This is part of an <strong>experimental</strong> technology called <em>Client Hints</em>. Initial support is in Chrome 46 or later. The Device-Memory value is in Chrome 61 or later.</p>
+<p><strong>Note :</strong> This is part of an <strong>experimental</strong> technology called <em>Client Hints</em>. Initial support is in Chrome 46 or later. The Device-Memory value is in Chrome 61 or later.</p>
 </div>
 
 <p>The experimental {{HTTPHeader("Accept-CH")}} lists configuration data that can be used by the server to select an appropriate response. Valid values are:</p>
@@ -92,7 +92,7 @@ translation_of: Web/HTTP/Content_negotiation
 <h3 id="The_Accept-CH-Lifetime_header">The <code>Accept-CH-Lifetime</code> header</h3>
 
 <div class="note">
-<p>This is part of an <strong>experimental</strong> technology called <em>Client Hints </em> and is only available in Chrome 61 or later.</p>
+<p><strong>Note :</strong> This is part of an <strong>experimental</strong> technology called <em>Client Hints </em> and is only available in Chrome 61 or later.</p>
 </div>
 
 <p>The {{HTTPHeader("Accept-CH-Lifetime")}} header is used with the <code>Device-Memory</code> value of the <code>Accept-CH</code> header and indicates the amount of time the device should opt-in to sharing the amount of device memory with the server. The value is given in miliseconds and it's use is optional.</p>
@@ -117,7 +117,7 @@ translation_of: Web/HTTP/Content_negotiation
 <h3 id="The_User-Agent_header">The <code>User-Agent</code> header</h3>
 
 <div class="note">
-<p>Though there are legitimate uses of this header for selecting content, <a href="/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">it is considered bad practice</a> to rely on it to define what features are supported by the user agent.</p>
+<p><strong>Note :</strong> Though there are legitimate uses of this header for selecting content, <a href="/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">it is considered bad practice</a> to rely on it to define what features are supported by the user agent.</p>
 </div>
 
 <p>The {{HTTPHeader("User-Agent")}} header identifies the browser sending the request. This string may contain a space-separated list of <em>product tokens</em> and <em>comments</em>.</p>
@@ -138,6 +138,6 @@ translation_of: Web/HTTP/Content_negotiation
 
 <p>From the beginnings of HTTP, the protocol allowed another negotiation type: <em>agent-driven negotiation</em> or <em>reactive negotiation</em>. In this negotiation, when facing an ambiguous request, the server sends back a page containing links to the available alternative resources. The user is presented the resources and choose the one to use.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13795/HTTPNego3.png"></p>
+<p><img alt="" src="httpnego3.png"></p>
 
 <p>Unfortunately, the HTTP standard does not specify the format of the page allowing to choose between the available resource, which prevents to easily automatize the process. Besides falling back to the <em>server-driven negotiation</em>, this method is almost always used in conjunction with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed in order to fetch the real resource, slowing the availability of the resource to the user.</p>

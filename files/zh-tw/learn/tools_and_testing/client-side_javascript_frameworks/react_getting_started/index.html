@@ -1,0 +1,500 @@
+---
+title: React 新手入門
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
+tags:
+  - 初學者
+  - 框架
+  - 安裝
+  - 學習
+  - 用戶端
+  - Beginner
+  - Frameworks
+  - JavaScript
+  - Learn
+  - React
+  - client-side
+  - jsx
+  - props
+---
+<div>{{LearnSidebar}}</div>
+
+<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+
+<p class="summary">在本文中，我們將向React打個招呼。我們將探索其背後與範例的一些細節，在自己電腦設置基本的React工具鏈環境，並建立一個簡單入門的應用程式——好瞭解React基本架構。</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">預備知識：</th>
+   <td>
+    <p>熟悉基本的<a href="/zh-TW/docs/Learn/HTML">HTML</a>、<a href="/zh-TW/docs/Learn/CSS">CSS</a>、以及<a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a>程式語言，具備<a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">終端機/命令列環境</a>的基本知識。</p>
+
+    <p>React使用稱為JSX（JavaScript和XML）的HTML-in-JavaScript語法。熟悉HTML和JavaScript將幫助您學習JSX，並更好地確定應用程式內的錯誤是與JavaScript有關還是與React更具體的領域有關。</p>
+   </td>
+  </tr>
+  <tr>
+   <th scope="row">學習目標：</th>
+   <td>設立本機的React開發環境，建立初始應用程式，瞭解React基本運作方式。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Hello_React">Hello React</h2>
+
+<p>正如其官方標語所述，<a href="https://reactjs.org/">React</a>是一個用來建構使用者介面的函式庫。React不是框架——它甚至不是web獨有的開發技術，它可以和其他函式庫或套件搭配使用，以在特定環境中渲染。例如，<a href="https://reactnative.dev/">React Native</a>可用來建立手機應用程式；<a href="https://facebook.github.io/react-360/">React 360</a>可以用來建立VR應用程式；除此之外還有很多的可能性。</p>
+
+<p>為了要建構web，開發者將React與<a href="https://reactjs.org/docs/react-dom.html">ReactDOM</a>搭配使用。React與ReactDOM的組合經常與其他web開發框架相提並論——以用於解決相同的問題。當我們稱呼React為「框架（framework）」時，我們是使用口語化的理解好加以討論。</p>
+
+<p>(使用)React的主要目標是最大限度減少開發者建構UI介面時出現的錯誤。它通過使用元件——描述部分使用者界面且自成一體的邏輯與程式碼段落來實現這點。這些元件可以組合在一起以建立完整的UI界面，React將大部分的渲染邏輯給抽象化出來，讓你可以專注於UI層的程式設計。</p>
+
+<h2 id="Use_cases">使用範例</h2>
+
+<p>與本文章模組中涵蓋的其他框架不同，React不會對程式碼風格規範或檔案組織實施嚴格的規則限制。這允許團隊設置最適合他們的開發規範，並以任何他們想要的方式採用React。React可以處理單一個按鈕、界面的幾個部分或應用程式整個使用者界面。</p>
+
+<p>儘管React<em>可以</em>用來開發<a href="https://reactjs.org/docs/add-react-to-a-website.html">介面的少許部分</a>，但它沒辦法像jQuery函式庫，甚至像Vue這樣的框架能簡單「引入（drop into）」進應用程式中——當你使用React建構應用程式時，它會更加平易近人。</p>
+
+<p>此外，React應用程式有許多開發者體驗(developer-experience)優勢，例如使用JSX編寫介面時會需要編譯過程。添加如Babel這樣的編譯器到網站上會讓程式碼執行效率變慢，因此開發者通常會在建構階段中設置此類開發工具。React對開發工具需求蠻吃重的，但這些都是可以學習的。</p>
+
+<p>本文將重點介紹透過Facebook提供的<a href="https://create-react-app.dev/">create-react-app</a>工具，來使用React渲染應用程式使用者界面的範例。</p>
+
+<h2 id="How_does_React_use_JavaScript">React如何使用JavaScript？</h2>
+
+<p>React在許多設計模式中利用了現代JavaScript特性。它與JavaScript最大的區別在於使用<a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a>語法。JSX擴展了JavaScript語法，以便能與類似HTML的程式碼並存。例如：</p>
+
+<pre class="brush: js">const heading = &lt;h1&gt;Mozilla Developer Network&lt;/h1&gt;;</pre>
+
+<p>這個<code>heading</code>變數又稱為<strong>JSX expression（JSX表達式）</strong>。React可以在我們的應用程式中使用它，以渲染顯示<code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code>標籤</p>
+
+<p>假如我們出於語義化的原因，想要將<code>heading</code>包裹在<code><a href="/en-US/docs/Web/HTML/Element/header">&lt;header&gt;</a></code>標籤中，那該怎麼做呢？JSX方法允許我們將元素互相嵌套，就像我們在使用HTML一樣：</p>
+
+<pre class="brush: js">const header = (
+  &lt;header&gt;
+    &lt;h1&gt;Mozilla Developer Network&lt;/h1&gt;
+  &lt;/header&gt;
+);</pre>
+
+<div class="notecard note">
+<p><strong>注意：</strong>前面程式碼中的括號<code>(</code>、<code>)</code>不是JSX獨有的，這對你的應用程式沒有任何影響。它們會向你（和你的電腦）發出訊號，表示括號其中的多行程式碼是同個表達式的一部分。你也可以像這樣編寫表達式：</p>
+
+<pre class="brush: js">const header = &lt;header&gt;
+    &lt;h1&gt;Mozilla Developer Network&lt;/h1&gt;
+&lt;/header&gt;</pre>
+
+<p>然而，這樣寫看起來有點不對勁，因為這段表達式<code><a href="/en-US/docs/Web/HTML/Element/header">&lt;header&gt;</a></code>的開始標籤沒有縮排到與其對應結束標籤相同的位置。</p>
+</div>
+
+<p>當然，若沒有其他的幫助，你的瀏覽器是無法直接讀取解析JSX的，當編譯完成（藉由使用像<a href="https://babeljs.io/">Babel</a>或<a href="https://parceljs.org/">Parcel</a>之類的工具），我們的header表達式看起來像這樣：</p>
+
+<pre class="brush: js">const header = React.createElement("header", null,
+  React.createElement("h1", null, "Mozilla Developer Network")
+);</pre>
+
+<p>是<em>可以</em>跳過編譯階段，並使用<code><a href="https://reactjs.org/docs/react-api.html#createelement">React.createElement()</a></code>來撰寫你自己的UI介面的。但是，這樣做會失去JSX的聲明性優勢，並且程式碼更難閱讀。雖然編譯是開發過程的額外步驟，但是許多React社群的開發者認為為了可讀性，使用JSX是值得的。此外，各種流行工具能使JSX到JavaScript的編譯成為其設置過程的一部分。除非你想，否則你不必自己配置編譯設定。</p>
+
+<p>因為JSX是HTML和JavaScript的混合體，有一些開發者覺得它很直觀。也有其他人認為JSX的混合性使其變得混亂。但是，一旦你對它開始熟悉，JSX能讓你更快、更直觀地建構使用者界面，並允許其他人一眼就能更好地理解你的程式碼（codebase）。</p>
+
+<p>要閱讀更多有關JSX的資訊，可以查看React團隊的<a href="https://reactjs.org/docs/jsx-in-depth.html">JSX In Depth</a>文章。</p>
+
+<h2 id="Setting_up_your_first_React_app">設置你的第一個React應用程式</h2>
+
+<p>有很多方法可以使用React，但我們將使用命令行界面（CLI）工具create-react-app。如前面所說，它可以透過安裝一些套件和創建一些文件檔案以處理上面描述的工具，使其可以用來加速開發React應用程式的過程。</p>
+
+<p>是可以<a href="https://zh-hant.reactjs.org/docs/add-react-to-a-website.html">不使用create-react-app就將React加入到網站裡</a>的，藉由複製一些<code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code>元素並加進HTML檔案中即可，但create-react-app CLI確實是開發React應用程式的常見起點。使用它可以讓你花更少的時間在設置上，好使用更多的時間專注在建構應用程式上。</p>
+
+<h3 id="Requirements">環境要求</h3>
+
+<p>為了使用<a href="https://create-react-app.dev/">create-react-app</a>，你需要先安裝<a href="https://nodejs.org/en/">Node.js</a>。建議你使用長期支援（LTS）版本。Node.js包括npm（Node.js套件管理器）和 npx（Node.js套件運行器）。</p>
+
+<p>你也可以使用Yarn套件管理器作為替代方案，但我們假設你在這個教學中使用npm。參閱<a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Package management basics</a>可取得有關npm和yarn的更多資訊。</p>
+
+<p>如果你使用的系統是Windows，你需要安裝一些軟體來讓Windows與Unix/macOS的終端機terminal保持同等環境，以便使用本教學中提到的terminal終端機指令。<strong>Gitbash</strong>（它包含在<a href="https://gitforwindows.org/">git for Windows toolset</a>工具的其中之一）或者<strong><a href="https://docs.microsoft.com/en-us/windows/wsl/about">Windows Subsystem for Linux</a></strong>（<strong>WSL</strong>）也同樣適合。有關這些以及一般終端指令的詳細資訊，可以參閱<a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">Command line crash course</a>。</p>
+
+<p>另外要記住的是，React和ReactDOM建立的應用程式只能在相當現代的瀏覽器上執行——通過一些polyfills才可以在IE9+上運作。建議你使用現代瀏覽器來學習這些教學，例如：Firefox、Microsoft Edge、Safari或Chrome等。</p>
+
+<p>此外，請參閱以下內容以取得更多資訊：</p>
+
+<ul>
+ <li><a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/">"What is npm" on nodejs.org</a></li>
+ <li><a href="https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner">"Introducing npx" on the npm blog</a></li>
+ <li><a href="https://create-react-app.dev/">The create-react-app documentation</a></li>
+</ul>
+
+<h3 id="Initializing_your_app">初始化你的應用程式</h3>
+
+<p><code>create-react-app</code>需要一個參數：一個你給予應用程式的名字。<code>create-react-app</code>會使用該名稱建立一個新目錄，並在其中建立必要的文件檔案。確保你有<code>cd</code>到你希望該應用程式在你電腦硬碟裡的資料夾位置，然後在你電腦終端機terminal執行以下指令：</p>
+
+<pre class="brush: bash">npx create-react-app moz-todo-react</pre>
+
+<p>此指令會建立一個名為<code>moz-todo-react</code>的資料夾目錄，並在其中做了幾件事：</p>
+
+<ul>
+ <li>安裝一些對React應用程式至關重要的npm套件。</li>
+ <li>編寫用來啟動React應用程式的腳本語言。</li>
+ <li>建立定義基本應用程式架構的文件和目錄結構。</li>
+ <li>如果你的電腦已有安裝git版控，則將該資料夾目錄初始化為git存儲庫。</li>
+</ul>
+
+<div class="notecard note">
+<p><strong>注意：</strong>如果您已有安裝yarn套件管理器，<code>create-react-app</code>默認將使用它而不是使用npm。如果你已安裝yarn和npm兩個套件管理器並且堅持繼續使用npm，當你要執行<code>create-react-app</code>指令時，你可以添加指令<code>--use-npm</code></p>
+
+<pre class="brush: bash">npx create-react-app moz-todo-react --use-npm</pre>
+</div>
+
+<p><code>create-react-app</code>執行時會在你的終端機terminal顯示一些訊息；這是正常的！執行可能需要一小段時間，所以現在可能是暫時泡杯茶休息的好時機。</p>
+
+<p>當這個過程完成後，<code>cd</code>切換進<code>moz-todo-react</code>資料夾目錄並執行指令<code>npm start</code>。這個藉由<code>create-react-app</code>安裝的腳本將會在本機伺服器(電腦)的<code>localhost:3000</code>啟動以提供服務，並在新瀏覽器分頁打開該應用程式。你的瀏覽器將顯示如下內容：</p>
+
+<p><img alt="Screenshot of Firefox MacOS, open to localhost:3000, showing the default create-react-app application" src="default-create-react-app.png" style="border-style: solid; border-width: 1px;"></p>
+
+<h3 id="Application_structure">應用程式的結構</h3>
+
+<p><code>create-react-app</code>提供我們開發React應用程式所需的一切。其初始資料夾目錄結構如下：</p>
+
+<pre>moz-todo-react
+├── README.md
+├── node_modules
+├── package.json
+├── package-lock.json
+├── .gitignore
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    └── serviceWorker.js</pre>
+
+<p>The <strong><code>src</code></strong> directory is where we'll spend most of our time, as it's where the source code for our application lives.</p>
+
+<p>The <strong><code>public</code></strong> directory contains files that will be read by your browser while you're developing the app; the most important of these is <code>index.html</code>. React injects your code into this file so that your browser can run it. There's some other markup that helps create-react-app function, so take care not to edit it unless you know what you're doing. You very much should change the text inside the <code><a href="/en-US/docs/Web/HTML/Element/title">&lt;title&gt;</a></code> element in this file to reflect the title of your application. Accurate page titles are important for accessibility!</p>
+
+<p>The <code>public</code> directory will also be published when you build and deploy a production version of your app. We won’t cover deployment in this tutorial, but you should be able to use a similar solution to that described in our <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment">Deploying our app</a> tutorial.</p>
+
+<p>The <code>package.json</code> file contains information about our project that Node.js/npm uses to keep it organized. This file is not unique to React applications; create-react-app merely populates it. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read <a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/">What is the file `package.json`? on NodeJS.org</a>; we also talk about it in our <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Package management basics</a> tutorial.</p>
+
+<h2 id="Exploring_our_first_React_component_—_&lt;App&gt;">探索我們的第一個React元件——<code>&lt;App/&gt;</code></h2>
+
+<p>In React, a <strong>component</strong> is a reusable module that renders a part of our app. These parts can be big or small, but they are usually clearly defined: they serve a single, obvious purpose.</p>
+
+<p>Let's open <code>src/App.js</code>, since our browser is prompting us to edit it. This file contains our first component, <code>App</code>, and a few other lines of code:</p>
+
+<pre class="brush: js">import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    &lt;div className="App"&gt;
+      &lt;header className="App-header"&gt;
+        &lt;img src={logo} className="App-logo" alt="logo" /&gt;
+        &lt;p&gt;
+          Edit &lt;code&gt;src/App.js&lt;/code&gt; and save to reload.
+        &lt;/p&gt;
+        &lt;a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        &gt;
+          Learn React
+        &lt;/a&gt;
+      &lt;/header&gt;
+    &lt;/div&gt;
+  );
+}
+export default App;</pre>
+
+<p>The <code>App.js</code> file consists of three main parts: some <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import">import</a></code> statements at the top, the <code>App</code> component in the middle, and an <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/export">export</a></code> statement at the bottom. Most React components follow this pattern.</p>
+
+<h3 id="Import_statements">Import 引入語法</h3>
+
+<p>The <code>import</code> statements at the top of the file allow <code>App.js</code> to use code that has been defined elsewhere. Let's look at these statements more closely.</p>
+
+<pre class="brush: js">import React from 'react';
+import logo from './logo.svg';
+import './App.css';</pre>
+
+<p>The first statement imports the React library itself. Because React turns the JSX we write into <code>React.createElement()</code>, all React components must import the <code>React</code> module. If you skip this step, your application will produce an error.</p>
+
+<p>The second statement imports a logo from <code>'./logo.svg'</code>. Note the use of <code>./</code> at the beginning of the path, and the <code>.svg</code> extension at the end — these tell us that the file is local and that it is not a JavaScript file. Indeed, the <code>logo.svg</code> file lives in our source directory.</p>
+
+<p>We don't write a path or extension when importing the <code>React</code> module — this is not a local file; instead, it is listed as a dependency in our <code>package.json</code> file. Be careful of this distinction as you work through this lesson!</p>
+
+<p>The third statement imports the CSS related to our App component. Note that there is no variable name and no <code>from</code> directive. This particular import syntax is not native to JavaScript module syntax — it comes from Webpack, the tool create-react-app uses to bundle all our JavaScript files together and serve them to the browser.</p>
+
+<h3 id="The_App_component"><code>App</code>元件</h3>
+
+<p>After the imports, we have a function named <code>App</code>. Whereas most of the JavaScript community prefers camel-case names like <code>helloWorld</code>, React components use pascal-case variable names, like <code>HelloWorld</code>, to make it clear that a given JSX element is a React component, and not a regular HTML tag. If you were to rename the <code>App</code> function to <code>app</code>, your browser would show you an error.</p>
+
+<p>Let's look at <code>App</code> more closely.</p>
+
+<pre class="brush: js">function App() {
+  return (
+    &lt;div className="App"&gt;
+      &lt;header className="App-header"&gt;
+        &lt;img src={logo} className="App-logo" alt="logo" /&gt;
+        &lt;p&gt;
+          Edit &lt;code&gt;src/App.js&lt;/code&gt; and save to reload.
+        &lt;/p&gt;
+        &lt;a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        &gt;
+          Learn React
+        &lt;/a&gt;
+      &lt;/header&gt;
+    &lt;/div&gt;
+  );
+}</pre>
+
+<p>The <code>App</code> function returns a JSX expression. This expression defines what your browser ultimately renders to the DOM.</p>
+
+<p>Some elements in the expression have attributes, which are written just like in HTML, following a pattern of <code>attribute="value"</code>. On line 3, the opening <code><a href="/en-US/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> tag has a <code>className</code> attribute. This is the same as the <code><a href="/en-US/docs/Web/HTML/Global_attributes/class">class</a></code> attribute in HTML, but because JSX is JavaScript, we can't use the word <code>class</code> — it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. A few other HTML attributes are written differently in JSX than they are in HTML too, for the same kind of reason. We'll cover them as we encounter them.</p>
+
+<p>Take a moment to change the <code><a href="/en-US/docs/Web/HTML/Element/p">&lt;p&gt;</a></code> tag on line 6 so that it reads "Hello, world!", then save your file. You'll notice that this change is immediately rendered in the development server running at <code>http://localhost:3000</code> in your browser. Now delete the <code><a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt;</a></code> tag and save; the "Learn React" link will be gone.</p>
+
+<p>Your <code>App</code> component should now look like this:</p>
+
+<pre class="brush: js">function App() {
+  return (
+    &lt;div className="App"&gt;
+      &lt;header className="App-header"&gt;
+        &lt;img src={logo} className="App-logo" alt="logo" /&gt;
+        &lt;p&gt;
+          Hello, World!
+        &lt;/p&gt;
+      &lt;/header&gt;
+    &lt;/div&gt;
+  );
+}</pre>
+
+<h3 id="Export_statements">Export 匯出語法</h3>
+
+<p>在<code>App.js</code>文件中的最底部，這個陳述語法<code>export default App</code>可以使我們的<code>App</code>元件能用在其他模組。</p>
+
+<h2 id="Interrogating_the_index">查詢索引</h2>
+
+<p>Let’s open <code>src/index.js</code>, because that's where the <code>App</code> component is being used. This file is the entry point for our app, and it initially looks like this:</p>
+
+<pre class="brush: js">import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+
+ReactDOM.render(
+  &lt;React.StrictMode&gt;
+    &lt;App /&gt;
+  &lt;/React.StrictMode&gt;,
+  document.getElementById('root')
+);
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();</pre>
+
+<p>As with <code>App.js</code>, the file starts by importing all the JS modules and other assets it needs to run. <code>src/index.css</code> holds global styles that are applied to our whole app. We can also see our <code>App</code> component imported here; it is made available for import thanks to the <code>export</code> statement at the bottom of <code>App.js</code>.</p>
+
+<p>Line 7 calls React’s <code>ReactDOM.render()</code> function with two arguments:</p>
+
+<ul>
+ <li>The component we want to render, <code>&lt;App /&gt;</code> in this case.</li>
+ <li>The DOM element inside which we want the component to be rendered, in this case the element with an ID of <code>root</code>. If you look inside <code>public/index.html</code>, you'll see that this is a <code>&lt;div&gt;</code> element just inside the <code>&lt;body&gt;</code>.</li>
+</ul>
+
+<p>All of this tells React that we want to render our React application with the <code>App</code> component as the root, or first component.</p>
+
+<div class="notecard note">
+<p><strong>Note</strong>: In JSX, React components and HTML elements must have closing slashes. Writing just <code>&lt;App&gt;</code> or just <code>&lt;img&gt;</code> will cause an error.</p>
+</div>
+
+<p><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service workers</a> are interesting pieces of code that help application performance and allow features of your web applications to work offline, but they’re not in scope for this article. You can delete line 5, as well as most of the code below it.</p>
+
+<p>Your final <code>index.js</code> file should look like this:</p>
+
+<pre class="brush: js">import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+
+ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
+
+<h2 id="Variables_and_props">Variables and props</h2>
+
+<p>接下來，我們將使用一些JavaScript技巧好更輕鬆地在React中編輯元件與處理數據資料。我們將談談變數是如何在JSX中被使用的，並介紹props，這是一種將資料傳遞到其他元件（接著就可以用變數形式來使用）的方式。</p>
+
+<h3 id="Variables_in_JSX">JSX中的變數</h3>
+
+<p>回到<code>App.js</code>，讓我們關注第9行：</p>
+
+<pre class="brush: js">&lt;img src={logo} className="App-logo" alt="logo" /&gt;</pre>
+
+<p>在這裡，<code>&lt;img /&gt;</code>標籤的<code>src</code>屬性值在花括號（即大括號<code>{</code>與<code>}</code>）中，這就是JSX識別變數的方式。React將會監聽<code>{logo}</code>，它知道你指的是我們在應用程式第2行引入的logo，然後檢索logo檔案並呈現它。</p>
+
+<p>讓我們嘗試創造一個自己的變數。在<code>App</code>的return語句之前，加入<code>const subject = 'React';</code>。你的<code>App</code>元件現在應該看起來是這樣：</p>
+
+<pre class="brush: js">function App() {
+  const subject = "React";
+  return (
+    &lt;div className="App"&gt;
+      &lt;header className="App-header"&gt;
+        &lt;img src={logo} className="App-logo" alt="logo" /&gt;
+        &lt;p&gt;
+          Hello, World!
+        &lt;/p&gt;
+      &lt;/header&gt;
+    &lt;/div&gt;
+  );
+}</pre>
+
+<p>至第8行改成我們的<code>subject</code>變數而不是單字「world」，像這樣：</p>
+
+<pre class="brush: js">function App() {
+  const subject = "React";
+  return (
+    &lt;div className="App"&gt;
+      &lt;header className="App-header"&gt;
+        &lt;img src={logo} className="App-logo" alt="logo" /&gt;
+        &lt;p&gt;
+          Hello, {subject}!
+        &lt;/p&gt;
+      &lt;/header&gt;
+    &lt;/div&gt;
+  );
+}</pre>
+
+<p>當你存檔時，你的瀏覽器應該顯示「Hello, React!」而不是「Hello, world!」</p>
+
+<p>變數很方便，但我們剛剛設置的變數並沒有充分利用React的特性。接下來該是props出場了。</p>
+
+<h3 id="Component_props">Component props</h3>
+
+<p>A <strong>prop</strong> is any data passed into a React component. React props are comparable to HTML attributes. Where HTML elements have attributes, React components have props. Props are written inside component calls, and use the same syntax as HTML attributes — <code>prop="value"</code>.  In React, dataflow is unidirectional: props can only be passed from Parent components down to Child components; and props are read-only. </p>
+
+<p>Let’s open <code>index.js</code> and give our <code>&lt;App/&gt;</code> call its first prop.</p>
+
+<p>Add a prop of <code>subject</code> to the <code>&lt;App/&gt;</code> component call, with a value of <code>Clarice</code>. When you are done, your code should look something like this:</p>
+
+<pre class="brush: js">ReactDOM.render(&lt;App subject="Clarice" /&gt;, document.getElementById('root'));</pre>
+
+<p>Back in <code>App.js</code>, let's revisit the App function itself, which reads like this (with the <code>return</code> statement shortened for brevity):</p>
+
+<pre class="brush: js">function App() {
+  const subject = "React";
+  return (
+    // return statement
+  );
+}</pre>
+
+<p>Change the signature of the <code>App</code> function so that it accepts <code>props</code> as a parameter, and delete the <code>subject</code> const. Just like any other function parameter, you can put <code>props</code> in a <code>console.log()</code> to print it to your browser's console. Go ahead and do that before the <code>return</code> statement, like so:</p>
+
+<pre class="brush: js">function App(props) {
+  console.log(props);
+  return (
+    // return statement
+  );
+}</pre>
+
+<p>保存文件並檢查瀏覽器的JavaScript控制台console。你應該會看到這樣的記錄：</p>
+
+<pre class="brush: js">Object { subject: "Clarice" }</pre>
+
+<p>物件屬性<code>subject</code>與我們添加到到<code>&lt;App /&gt;</code>元件調用的prop<code>subject</code>相對應，並且字串<code>Clarice</code>與它的值對應。React的元件props總是以這種方式傳遞到物件中。</p>
+
+<p>現在<code>subject</code>是我們的props之一了，讓我們在<code>App.js</code>中使用它。用<code>props.subject</code>代替原本的<code>React</code>字串，如果你想的話，也可以刪除<code>console.log()</code>，你的程式碼看起來會是這樣：</p>
+
+<pre class="brush: js">function App(props) {
+  const subject = props.subject;
+  return (
+    // return statement
+  );
+}</pre>
+
+<p>當你保存時, 應用程式現在應該會向你打招呼「Hello, Clarice!」。如果你返回<code>index.js</code>檔案內修改<code>subject</code>的值並存檔，你的字串將發生變化。</p>
+
+<h2 id="Summary">總結</h2>
+
+<p>我們對React的初步瞭解就到此結束了，包括如何在本機環境安裝它、建立入門應用程式及如何運作的基本知識。在下個章節中，我們將開始建構我們的第一個合適的應用程式——一個待辦清單。然而，在我們這樣做之前，先回顧一下我們學到的一些東西。</p>
+
+<p>在React中：</p>
+
+<ul>
+ <li>元件可以引入（import）它們需要的模組，且必須在它們的文件檔案底部將自己匯出（export）。</li>
+ <li>元件函式的命名是<code>PascalCase</code>大駝峰式命名法。</li>
+ <li>你可以透過將JSX變數放在大括號之間來讀取它們，例如<code>{so}</code>。</li>
+ <li>某些JSX屬性與HTML屬性不同，因此它們不會與JavaScript保留字衝突。例如，HTML中的<code>class</code>在JSX中會轉成<code>className</code>。注意多字組合而成的屬性名稱是駝峰式（camel-cased）命名的。</li>
+ <li>Props就像元件中被調用的屬性一樣被撰寫並傳遞到元件中。</li>
+</ul>
+
+<p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
+
+<h2 id="In_this_module">In this module</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
+ <li>React
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
+  </ul>
+ </li>
+ <li>Ember
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
+  </ul>
+ </li>
+ <li>Vue
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
+  </ul>
+ </li>
+ <li>Svelte
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
+  </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+   </ul>
+ </li>
+</ul>

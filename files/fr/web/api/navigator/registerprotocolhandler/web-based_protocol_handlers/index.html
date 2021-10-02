@@ -5,7 +5,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 ---
 
 
-<h3 id="Introduction" name="Introduction">Introduction</h3>
+<h3 id="Introduction">Introduction</h3>
 
 <p>Il est relativement courant de voir des pages web lier des ressources utilisant des protocoles non-<code>http</code>. Prenons par exemple le protocole <code>mailto:</code> :</p>
 
@@ -16,9 +16,9 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 
 <p>Les gestionnaires de protocoles web permettent à des applications web de participer également à ce processus. Leur importance va grandissant au fur et à mesure que différents types d'applications migrent vers le web. De fait, un grand nombre d'applications de courrier déjà basées sur le web pourraient traiter un lien <code>mailto</code>.</p>
 
-<h3 id="Enregistrement" name="Enregistrement">Enregistrement</h3>
+<h3 id="Enregistrement">Enregistrement</h3>
 
-<p>La définition d'une application web comme gestionnaire de protocole n'est pas un processus difficile. En gros, l'application web utilise <code><a href="/fr/DOM/window.navigator.registerProtocolHandler" title="fr/DOM/window.navigator.registerProtocolHandler">registerProtocolHandler()</a></code> pour s'enregistrer auprès du navigateur comme gestionnaire potentiel pour un protocole donné. Par exemple :</p>
+<p>La définition d'une application web comme gestionnaire de protocole n'est pas un processus difficile. En gros, l'application web utilise <code><a href="/fr/DOM/window.navigator.registerProtocolHandler">registerProtocolHandler()</a></code> pour s'enregistrer auprès du navigateur comme gestionnaire potentiel pour un protocole donné. Par exemple :</p>
 
 <pre>navigator.registerProtocolHandler("mailto",
                                   "https://www.example.com/?uri=%s",
@@ -35,13 +35,13 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 
 <p>Lorsqu'un navigateur exécutera ce code, il devra demander à l'utilisateur la permission d'autoriser l'application web à s'enregistrer comme gestionnaire du protocole. Firefox affichera une question dans une barre de notification :</p>
 
-<p><img alt="Image:wph-notification.png" class="internal" src="/@api/deki/files/1491/=Wph-notification.png"></p>
+<p><img alt="" src="protocolregister.png"></p>
 
 <p>{{ Note() }}</p>
 
-<h4 id="Exemple" name="Exemple">Exemple</h4>
+<h4 id="Exemple">Exemple</h4>
 
-<pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
+<pre class="brush: html">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
 &lt;html lang="fr"&gt;
 &lt;head&gt;
   &lt;title&gt;Web Protocol Handler Sample - Register&lt;/title&gt;
@@ -56,15 +56,13 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 &lt;/html&gt;
 </pre>
 
-<h3 id="Activation" name="Activation">Activation</h3>
+<h3 id="Activation">Activation</h3>
 
 <p>À présent, chaque fois que l'utilisateur activera un lien utilisant le protocole enregistré, le navigateur dirigera l'action vers l'URL spécifiée lors de l'enregistrement de l'application web. Firefox, par défaut, demandera à l'utilisateur avant d'effectuer cette action.</p>
 
-<p><img alt="Image:wph-launch.png"></p>
+<h4 id="Exemple_2">Exemple</h4>
 
-<h4 id="Exemple_2" name="Exemple_2">Exemple</h4>
-
-<pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
+<pre class="brush: html">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
 &lt;html lang="fr"&gt;
 &lt;head&gt;
   &lt;title&gt;Exemple de gestionnaire de protocole web — test&lt;/title&gt;
@@ -75,7 +73,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 &lt;/html&gt;
 </pre>
 
-<h3 id="Traitement" name="Traitement">Traitement</h3>
+<h3 id="Traitement">Traitement</h3>
 
 <p>La phase suivante est le traitement de l'action. Le navigateur extrait le <code>href</code> du lien activé, le combine avec le modèle d'URL fourni lors de l'enregistrement et effectue une requête HTTP GET sur l'URL. Ainsi, avec les exemples précédents, le navigateur effectuerait une requête GET sur cette URL :</p>
 
@@ -86,9 +84,9 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 
 <p>{{ Note("Le code côté serveur reçoit le contenu <strong>entier</strong> de l\'attribut <code>href</code>. Cela signifie qu\'il devra traiter la chaîne pour retirer l\'indication de protocole des données.") }}</p>
 
-<h4 id="Exemple_3" name="Exemple_3">Exemple</h4>
+<h4 id="Exemple_3">Exemple</h4>
 
-<pre>&lt;?php
+<pre class="brush: html">&lt;?php
 $value = "";
 if ( isset ( $_GET["value"] ) ) {
   $value = $_GET["value"];

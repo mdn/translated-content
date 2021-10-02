@@ -12,7 +12,9 @@ original_slug: Web/API/API_HTML_Drag_and_Drop
 ---
 <p>{{DefaultAPISidebar("HTML Drag and Drop API")}}</p>
 
-<p><span class="seoSummary"><strong>L'interface HTML <em>Drag and Drop</em></strong> (pour glisser-déposer) permet à des applications d'utiliser des fonctionnalités de glisser-déposer dans le navigateur.</span> L'utilisateur pourra sélectionner des éléments déplaçables à la souris et les déplacer vers un élément où on peut déposer en relâchant le bouton de la souris. Une représentation translucide de l'élément déplacé suit le pointeur lors de l'opération.</p>
+<p><strong>L'interface HTML <em>Drag and Drop</em></strong> (pour glisser-déposer) permet à des applications d'utiliser des fonctionnalités de glisser-déposer dans le navigateur.</p>
+
+<p>L'utilisateur pourra sélectionner des éléments déplaçables à la souris et les déplacer vers un élément où on peut déposer en relâchant le bouton de la souris. Une représentation translucide de l'élément déplacé suit le pointeur lors de l'opération.</p>
 
 <p>Pour les sites web et les extensions, on peut personnaliser les éléments qui peuvent être déplacés, la façon dont ceux-ci sont signalés et les éléments qui peuvent servir de destination.</p>
 
@@ -41,12 +43,12 @@ original_slug: Web/API/API_HTML_Drag_and_Drop
   <tr>
    <td>{{event('dragend')}}</td>
    <td>{{domxref('GlobalEventHandlers.ondragend','ondragend')}}</td>
-   <td>…une opération de déplacement se termine (en relâchant le bouton de la souris ou en utilisant la touche Echap, voir <a href="/en-US/docs/DragDrop/Drag_Operations#dragend" title="Finishing a Drag">Terminer un déplacement</a>)</td>
+   <td>…une opération de déplacement se termine (en relâchant le bouton de la souris ou en utilisant la touche Echap, voir <a href="/en-US/docs/DragDrop/Drag_Operations#dragend" >Terminer un déplacement</a>)</td>
   </tr>
   <tr>
    <td>{{event('dragenter')}}</td>
    <td>{{domxref('GlobalEventHandlers.ondragenter','ondragenter')}}</td>
-   <td>…un élément en cours de déplacement arrive sur une zone de dépôt valide (voir <a href="/fr/docs/DragDrop/Drag_Operations#droptargets" title="Specifying Drop Targets">indiquer une cible de destination</a>).</td>
+   <td>…un élément en cours de déplacement arrive sur une zone de dépôt valide (voir <a href="/fr/docs/DragDrop/Drag_Operations#droptargets" >indiquer une cible de destination</a>).</td>
   </tr>
   <tr>
    <td>{{event('dragexit')}}</td>
@@ -66,17 +68,19 @@ original_slug: Web/API/API_HTML_Drag_and_Drop
   <tr>
    <td>{{event('dragstart')}}</td>
    <td>{{domxref('GlobalEventHandlers.ondragstart','ondragstart')}}</td>
-   <td>…l'utilisateur commence à déplacer un élément (voir <a href="/fr/docs/DragDrop/Drag_Operations#dragstart" title="Starting a Drag Operation">démarrer une opération de glissement</a>).</td>
+   <td>…l'utilisateur commence à déplacer un élément (voir <a href="/fr/docs/DragDrop/Drag_Operations#dragstart" >démarrer une opération de glissement</a>).</td>
   </tr>
   <tr>
    <td>{{event('drop')}}</td>
    <td>{{domxref('GlobalEventHandlers.ondrop','ondrop')}}</td>
-   <td>…un élément est déposé sur une cible valide (voir <a href="/fr/docs/DragDrop/Drag_Operations#drop" title="Performing a Drop">déposer un élément</a>).</td>
+   <td>…un élément est déposé sur une cible valide (voir <a href="/fr/docs/DragDrop/Drag_Operations#drop" >déposer un élément</a>).</td>
   </tr>
  </tbody>
 </table>
 
-<p class="note"><strong>Note :</strong> Les évènements <code>dragstart</code> et <code>dragend</code> ne sont pas déclenchés lors qu'on glisse-dépose un fichier de l'appareil dans le navigateur.</p>
+<div class="note">
+  <p><strong>Note :</strong> Les évènements <code>dragstart</code> et <code>dragend</code> ne sont pas déclenchés lors qu'on glisse-dépose un fichier de l'appareil dans le navigateur.</p>
+</div>
 
 <h2 id="Interfaces">Interfaces</h2>
 
@@ -101,11 +105,13 @@ original_slug: Web/API/API_HTML_Drag_and_Drop
 
 <p>La différence principale entre {{domxref("DataTransfer")}} et {{domxref("DataTransferItem")}} est l'utilisation de la méthode synchrone {{domxref("DataTransfer.getData","getData()")}} pour la première et de la méthode asynchrone {{domxref("DataTransferItem.getAsString","getAsString()")}} pour la deuxième.</p>
 
-<p class="note"><strong>Note :</strong> {{domxref("DragEvent")}} et {{domxref("DataTransfer")}} sont largement prises en charge par les navigateurs de bureau tandis que {{domxref("DataTransferItem")}} et {{domxref("DataTransferItemList")}} ont une compatibilité plus restreinte. Voir la section ci-après sur l'interopérabilité.</p>
+<div class="note">
+  <p><strong>Note :</strong> {{domxref("DragEvent")}} et {{domxref("DataTransfer")}} sont largement prises en charge par les navigateurs de bureau tandis que {{domxref("DataTransferItem")}} et {{domxref("DataTransferItemList")}} ont une compatibilité plus restreinte. Voir la section ci-après sur l'interopérabilité.</p>
+</div>
 
 <h3 id="Interfaces_spécifiques_à_Gecko">Interfaces spécifiques à Gecko</h3>
 
-<p>Mozilla / Firefox prend en charge certaines fonctionnalités qui ne font pas partie du modèle standard. Ce sont des fonctions utilitaires pour aider au déplacement de plusieurs objets ou de données qui ne sont pas du texte (des fichiers par exemple). Pour plus d'informations, voir <a href="/fr/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items" title="Dragging and Dropping Multiple Items">Glisser-déposer plusieurs objets</a>. Voir aussi la page de référence de {{domxref("DataTransfer")}} pour la liste de l'ensemble <a href="/fr/docs/Web/API/DataTransfer#Gecko_properties">des propriétés spécifique à Gecko</a> et <a href="/fr/docs/Web/API/DataTransfer#Gecko_methods">des méthodes spécifiques à Gecko</a>.</p>
+<p>Mozilla / Firefox prend en charge certaines fonctionnalités qui ne font pas partie du modèle standard. Ce sont des fonctions utilitaires pour aider au déplacement de plusieurs objets ou de données qui ne sont pas du texte (des fichiers par exemple). Pour plus d'informations, voir <a href="/fr/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items" >Glisser-déposer plusieurs objets</a>. Voir aussi la page de référence de {{domxref("DataTransfer")}} pour la liste de l'ensemble <a href="/fr/docs/Web/API/DataTransfer#Gecko_properties">des propriétés spécifique à Gecko</a> et <a href="/fr/docs/Web/API/DataTransfer#Gecko_methods">des méthodes spécifiques à Gecko</a>.</p>
 
 <h2 id="Bases">Bases</h2>
 
@@ -125,7 +131,7 @@ function dragstart_handler(ev) {
 &lt;p id="p1" draggable="true" ondragstart="dragstart_handler(event)"&gt;Cet élément est déplaçable.&lt;/p&gt;
 </pre>
 
-<p>Voir <a href="/fr/docs/Web/HTML/Global_attributes/draggable" title="draggable global attribute">la page de référence sur l'attribut <code>draggable</code></a> et <a href="/fr/docs/Web/Guide/HTML/Drag_operations#draggableattribute">le guide sur les opérations de déplacement</a> pour plus d'informations.</p>
+<p>Voir <a href="/fr/docs/Web/HTML/Global_attributes/draggable" >la page de référence sur l'attribut <code>draggable</code></a> et <a href="/fr/docs/Web/Guide/HTML/Drag_operations#draggableattribute">le guide sur les opérations de déplacement</a> pour plus d'informations.</p>
 
 <h3 id="Définir_les_données_déplacées">Définir les données déplacées</h3>
 
@@ -141,7 +147,7 @@ function dragstart_handler(ev) {
 }
 </pre>
 
-<p>Pour connaître la liste des types de donnée communément utilisées lors d'un glisser/déposer (texte, HTML, liens, fichiers, etc.), voir <a href="/fr/docs/DragDrop/Recommended_Drag_Types" title="Recommended Drag Types">les types recommandés</a>. Pour plus d'informations sur les informations transportées, voir <a href="/fr/docs/Web/Guide/HTML/Drag_operations#dragdata" title="Drag Data">Drag Data</a>.</p>
+<p>Pour connaître la liste des types de donnée communément utilisées lors d'un glisser/déposer (texte, HTML, liens, fichiers, etc.), voir <a href="/fr/docs/DragDrop/Recommended_Drag_Types" >les types recommandés</a>. Pour plus d'informations sur les informations transportées, voir <a href="/fr/docs/Web/Guide/HTML/Drag_operations#dragdata" >Drag Data</a>.</p>
 
 <h3 id="Définir_limage_pour_le_déplacement">Définir l'image pour le déplacement</h3>
 
@@ -157,7 +163,7 @@ function dragstart_handler(ev) {
 }
 </pre>
 
-<p>Pour en savoir plus, voir <a href="/fr/docs/DragDrop/Drag_Operations#dragfeedback" title="Setting the Drag Feedback Image">Définir l'image de <em>feedback</em> pour le glisser-déposer</a>.</p>
+<p>Pour en savoir plus, voir <a href="/fr/docs/DragDrop/Drag_Operations#dragfeedback" >Définir l'image de <em>feedback</em> pour le glisser-déposer</a>.</p>
 
 <h3 id="Définir_leffet_de_déplacement">Définir l'effet de déplacement</h3>
 
@@ -180,7 +186,7 @@ function dragstart_handler(ev) {
 }
 </pre>
 
-<p>See <a href="/en-US/docs/Web/Guide/HTML/Drag_operations#drageffects" title="Drag Effects">Drag Effects</a> for more details.</p>
+<p>See <a href="/en-US/docs/Web/Guide/HTML/Drag_operations#drageffects" >Drag Effects</a> for more details.</p>
 
 <h3 id="Définir_la_zone_où_déposer_lélément_déplacé">Définir la zone où déposer l'élément déplacé</h3>
 
@@ -241,13 +247,13 @@ function drop_handler(ev) {
 
 <p>À la fin de l'opération, c'est l'évènement {{event("dragend")}} qui est déclenché <em>sur l'élément source</em> (celui qui a été "saisi" au début). Cet évènement est déclenché lorsque l'opération est terminée ou qu'elle a été annulée. Le gestionnaire d'évènement pour {{event("dragend")}} peut vérifier la valeur de la propriété {{domxref("DataTransfer.dropEffect","dropEffect")}} afin de déterminer si l'opération a réussi ou non.</p>
 
-<p>Pour plus d'informations sur la gestion de la fin d'une opération de glisser-déposer, voir <a href="/fr/docs/DragDrop/Drag_Operations#dragend" title="Finishing a Drag">Terminer un glisser-déposer</a>.</p>
+<p>Pour plus d'informations sur la gestion de la fin d'une opération de glisser-déposer, voir <a href="/fr/docs/DragDrop/Drag_Operations#dragend" >Terminer un glisser-déposer</a>.</p>
 
 <h2 id="Interopérabilité">Interopérabilité</h2>
 
 <p>Comme on peut le voir <a href="/en-US/docs/Web/API/DataTransferItem#Browser_compatibility">dans le tableau de compatibilité pour l'interface <code>DataTransferItem</code></a>, la prise en charge du <em>drag-and-drop</em> est assez répandue parmi les navigateurs de bureau à l'exception des interfaces {{domxref("DataTransferItem")}} et {{domxref("DataTransferItemList")}}. Ce tableau montre également que la prise en charge sur mobile est assez faible.</p>
 
-<h2 id="Examples_and_demos" name="Examples_and_demos">Exemples et démos</h2>
+<h2 id="Examples_and_demos">Exemples et démos</h2>
 
 <ul>
  <li><a href="https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html">Copier et déplacer des éléments avec l'interface <code>DataTransfer</code></a></li>
@@ -258,12 +264,12 @@ function drop_handler(ev) {
  </li>
 </ul>
 
-<h2 id="See_also" name="See_also">Voir aussi</h2>
+<h2 id="See_also">Voir aussi</h2>
 
 <ul>
- <li><a class="internal" href="/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations" title="Drag Operations">Les opérations de déplacement</a></li>
- <li><a class="internal" href="/fr/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items" title="Dragging and Dropping Multiple Items">Glisser-déposer plusieurs objets</a></li>
- <li><a class="internal" href="/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types" title="Recommended Drag Types">Types de déplacement recommandés</a></li>
- <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd" title="Drag and Drop Standard">Spécification HTML5 : Drag and Drop</a></li>
- <li><a href="http://caniuse.com/#search=draganddrop" title="Drag and Drop interoperability data from CanIUse">Données d'interopérabilité pour l'API Drag and Drop sur CanIUse</a></li>
+ <li><a href="/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Les opérations de déplacement</a></li>
+ <li><a href="/fr/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Glisser-déposer plusieurs objets</a></li>
+ <li><a href="/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Types de déplacement recommandés</a></li>
+ <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd">Spécification HTML5 : Drag and Drop</a></li>
+ <li><a href="http://caniuse.com/#search=draganddrop">Données d'interopérabilité pour l'API Drag and Drop sur CanIUse</a></li>
 </ul>

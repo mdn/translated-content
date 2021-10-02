@@ -14,11 +14,11 @@ original_slug: Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteri
 <div>{{DefaultAPISidebar("IndexedDB")}}</div>
 
 <div class="note">
-<p>Il existe un certain nombre de technologies Web qui stockent des données d'un type ou d'un autre du côté client (c'est-à-dire sur le disque local). Le processus par lequel le navigateur calcule l'espace alloué au stockage de données Web et les données à supprimer quand la limite est atteinte n'est pas simple et diffère d'un navigateur à l'autre. Cet article tente d'expliquer comment tout cela fonctionne.</p>
+<p><strong>Note :</strong> Il existe un certain nombre de technologies Web qui stockent des données d'un type ou d'un autre du côté client (c'est-à-dire sur le disque local). Le processus par lequel le navigateur calcule l'espace alloué au stockage de données Web et les données à supprimer quand la limite est atteinte n'est pas simple et diffère d'un navigateur à l'autre. Cet article tente d'expliquer comment tout cela fonctionne.</p>
 </div>
 
 <div class="note">
-<p><strong>Note </strong>: Les informations ci-dessous devraient être assez précises pour la plupart des navigateurs modernes, mais les spécificités du navigateur sont évoquées quand elles sont connues. Opera et Chrome devraient se comporter de la même manière dans tous les cas. Mais <a href="http://www.opera.com/mobile/mini">Opera Mini</a> (encore basé sur presto du côté serveur) ne stocke aucune donnée sur le client.</p>
+<p><strong>Note :</strong> Les informations ci-dessous devraient être assez précises pour la plupart des navigateurs modernes, mais les spécificités du navigateur sont évoquées quand elles sont connues. Opera et Chrome devraient se comporter de la même manière dans tous les cas. Mais <a href="http://www.opera.com/mobile/mini">Opera Mini</a> (encore basé sur presto du côté serveur) ne stocke aucune donnée sur le client.</p>
 </div>
 
 <h2 id="Les_différents_types_de_stockage_des_données">Les différents types de stockage des données</h2>
@@ -67,19 +67,19 @@ original_slug: Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteri
 </ul>
 
 <div class="note">
-<p><strong>Note :</strong>  Depuis l'introduction de l' <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_API">API Storage</a> , le dossier "permanent" peut être considéré comme obsolète, il n'est plus utilisé que pour les bases de données de type persistant IndexedDB. Peu importe le mode, "best-effort"<em> (meilleur effort)</em> ou "persistant", les données sont stockées sous <code>&lt;profile&gt;/storage/default</code>.</p>
+<p><strong>Note :</strong> Depuis l'introduction de l' <a href="/en-US/docs/Web/API/Storage_API">API Storage</a> , le dossier "permanent" peut être considéré comme obsolète, il n'est plus utilisé que pour les bases de données de type persistant IndexedDB. Peu importe le mode, "best-effort"<em> (meilleur effort)</em> ou "persistant", les données sont stockées sous <code>&lt;profile&gt;/storage/default</code>.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Dans Firefox, vous pouvez trouver votre dossier profil en entrant : <code>support</code> dans la barre d'URL et en appuyant sur le bouton <em>Show in..</em>. <em>(</em><em>Afficher dans ...)</em> (par exemple, <em>"Show in Finder"</em> sur Mac OS X) à côté du titre <em>"Profile Folder" (</em><em>dossier de profil)</em> .</p>
+<p><strong>Note :</strong> Dans Firefox, vous pouvez trouver votre dossier profil en entrant : <code>support</code> dans la barre d'URL et en appuyant sur le bouton <em>Show in..</em>. <em>(</em><em>Afficher dans ...)</em> (par exemple, <em>"Show in Finder"</em> sur Mac OS X) à côté du titre <em>"Profile Folder" (</em><em>dossier de profil)</em> .</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Si vous regardez dans votre profil les répertoires de données stockées, vous pouvez voir un quatrième dossier : <code>persistent</code> . À la base, le dossier <code>persistent</code> a été renommé <code>permanent,</code> il y a quelques temps, pour faciliter les mises à niveau / migrations.</p>
+<p><strong>Note :</strong> Si vous regardez dans votre profil les répertoires de données stockées, vous pouvez voir un quatrième dossier : <code>persistent</code> . À la base, le dossier <code>persistent</code> a été renommé <code>permanent,</code> il y a quelques temps, pour faciliter les mises à niveau / migrations.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Les utilisateurs ne doivent pas ajouter leurs propres répertoires ou fichiers sous <code>&lt;profile&gt;/storage</code> . Cela entraînerait l'échec de l'initialisation du stockage ; par exemple {{domxref ("IDBFactory.open ()", "open ()")}} déclencherait un événement d'erreur.</p>
+<p><strong>Note :</strong> Les utilisateurs ne doivent pas ajouter leurs propres répertoires ou fichiers sous <code>&lt;profile&gt;/storage</code> . Cela entraînerait l'échec de l'initialisation du stockage ; par exemple {{domxref ("IDBFactory.open ()", "open ()")}} déclencherait un événement d'erreur.</p>
 </div>
 
 <h2 id="Limites_de_stockage">Limites de stockage</h2>
@@ -109,7 +109,7 @@ original_slug: Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteri
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Si la limite de groupe est dépassée, ou si l'éviction d'origine ne crée pas assez d'espace libre, le navigateur lance  <code>QuotaExceededError</code>.</p>
+<p><strong>Note :</strong> Si la limite de groupe est dépassée, ou si l'éviction d'origine ne crée pas assez d'espace libre, le navigateur lance  <code>QuotaExceededError</code>.</p>
 </div>
 
 <h2 id="Politique_LRU">Politique LRU</h2>
@@ -123,7 +123,7 @@ original_slug: Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteri
 <p>Dans Firefox, les technologies suivantes utilisent le stockage de données du navigateur pour stocker des données au besoin. Nous les qualifions de "quota clients" dans ce contexte :</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/API/API_IndexedDB">IndexedDB</a></li>
+ <li><a href="/fr/docs/Web/API/API_IndexedDB">IndexedDB</a></li>
  <li><a href="http://asmjs.org/">asm.js</a> caching</li>
  <li><a href="/fr/docs/Web/API/Cache">Cache API</a></li>
 </ul>
@@ -135,6 +135,6 @@ original_slug: Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteri
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="http://www.html5rocks.com/en/tutorials/offline/quota-research/">Working with quota on mobile browsers</a>, de<a href="http://blog.agektmr.com" title="Eiji Kitamura"> Eiji Kitamura.</a> Une analyse détaillée du stockage côté client sur les navigateurs mobiles.</li>
- <li><a href="https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts">Quota Management API : Fast Facts</a>, de<a href="http://blog.agektmr.com" title="Eiji Kitamura"> Eiji Kitamura.</a> Un regard sur l'API Quota Management dans Chrome / Blink (qui devrait également inclure Opera aussi.)</li>
+ <li><a href="http://www.html5rocks.com/en/tutorials/offline/quota-research/">Working with quota on mobile browsers</a>, de<a href="http://blog.agektmr.com"> Eiji Kitamura.</a> Une analyse détaillée du stockage côté client sur les navigateurs mobiles.</li>
+ <li><a href="https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts">Quota Management API : Fast Facts</a>, de<a href="http://blog.agektmr.com"> Eiji Kitamura.</a> Un regard sur l'API Quota Management dans Chrome / Blink (qui devrait également inclure Opera aussi.)</li>
 </ul>

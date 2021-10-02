@@ -10,7 +10,7 @@ translation_of: Web/API/Window/paste_event
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">L'événement <strong><code>paste</code></strong> est déclenché lorsque l'utilisateur a lancé une action de "paste" via l'interface utilisateur du navigateur.</span></p>
+<p>L'événement <strong><code>paste</code></strong> est déclenché lorsque l'utilisateur a lancé une action de "paste" via l'interface utilisateur du navigateur.</p>
 
 <table class="properties">
  <tbody>
@@ -33,11 +33,11 @@ translation_of: Web/API/Window/paste_event
  </tbody>
 </table>
 
-<p><span class="tlid-translation translation" lang="fr"><span title="">La cible d'origine de cet événement est le {{domxref ("Element")}} qui était la cible prévue de l'action de collage</span></span>. Vous pouvez écouter cet événement sur l'interface {{domxref ("Window")}} pour le gérer dans les phases de capture ou de bullage. Pour plus de détails sur cet événement, veuillez consulter la page sur le <a href="/en-US/docs/Web/API/Element/paste_event">Element: paste event</a>.</p>
+<p>La cible d'origine de cet événement est le {{domxref ("Element")}} qui était la cible prévue de l'action de collage. Vous pouvez écouter cet événement sur l'interface {{domxref ("Window")}} pour le gérer dans les phases de capture ou de bullage. Pour plus de détails sur cet événement, veuillez consulter la page sur le <a href="/en-US/docs/Web/API/Element/paste_event">Element: paste event</a>.</p>
 
 <h2 id="Exemples">Exemples</h2>
 
-<pre class="brush: js notranslate">window.addEventListener('paste', (event) =&gt; {
+<pre class="brush: js">window.addEventListener('paste', (event) =&gt; {
     console.log('paste action initiated')
 });</pre>
 

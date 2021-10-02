@@ -18,12 +18,12 @@ translation_of: Web/API/ServiceWorkerRegistration
 <div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
 </div>
 
-<p><span class="seoSummary">The <code>ServiceWorkerRegistration</code> interface of the <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> represents the service worker registration. You register a service worker to control one or more pages that share the same origin.</span></p>
+<p>The <code>ServiceWorkerRegistration</code> interface of the <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> represents the service worker registration. You register a service worker to control one or more pages that share the same origin.</p>
 
 <p>The lifetime of a service worker registration is beyond that of the <code>ServiceWorkerRegistration</code> objects that represent them within the lifetime of their corresponding service worker clients. The browser maintains a persistent list of active <code>ServiceWorkerRegistration</code> objects.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This feature is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
+<p><strong>Note :</strong> This feature is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
 </div>
 
 <h2 id="Properties">Properties</h2>
@@ -33,17 +33,17 @@ translation_of: Web/API/ServiceWorkerRegistration
 <dl>
  <dt>{{domxref("ServiceWorkerRegistration.scope")}} {{readonlyinline}}</dt>
  <dd>Returns a unique identifier for a service worker registration. This must be on the same origin as the document that registers the {{domxref("ServiceWorker")}}.</dd>
- <dt>{{domxref("ServiceWorkerRegistration.installing")}} <strong style="font-weight: bold;">{{readonlyinline}}</strong></dt>
+ <dt>{{domxref("ServiceWorkerRegistration.installing")}}{{readonlyinline}}</dt>
  <dd>Returns a service worker whose state is <code>installing</code>. This is initially set to <code>null</code>.</dd>
- <dt>{{domxref("ServiceWorkerRegistration.waiting")}} <strong style="font-weight: bold;">{{readonlyinline}}</strong></dt>
+ <dt>{{domxref("ServiceWorkerRegistration.waiting")}}{{readonlyinline}}</dt>
  <dd>Returns a service worker whose state is <code>waiting</code>. This is initially set to <code>null</code>.</dd>
- <dt>{{domxref("ServiceWorkerRegistration.active")}} <strong style="font-weight: bold;">{{readonlyinline}}</strong></dt>
+ <dt>{{domxref("ServiceWorkerRegistration.active")}}{{readonlyinline}}</dt>
  <dd>Returns a service worker whose state is either <code>activating</code> or <code>activated</code>. This is initially set to <code>null</code>. An active worker will control a {{domxref("ServiceWorkerClient")}} if the client's URL falls within the scope of the registration (the <code>scope</code> option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)</dd>
  <dt>{{domxref("ServiceWorkerRegistration.navigationPreload")}} {{readonlyinline}}</dt>
  <dd>Returns the instance of {{domxref("NavigationPreloadManager")}} associated with the current service worker registration.</dd>
  <dt>{{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}</dt>
  <dd>Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status.</dd>
- <dt>{{domxref("ServiceWorkerRegistration.sync")}} <strong style="font-weight: bold; line-height: 19.0909080505371px;">{{non-standard_inline}} </strong>{{readonlyinline}} </dt>
+ <dt>{{domxref("ServiceWorkerRegistration.sync")}} <strong>{{non-standard_inline}} </strong>{{readonlyinline}} </dt>
  <dd>Returns a reference to the {{domxref("SyncManager")}} interface, which manages background synchronization processes.</dd>
 </dl>
 
@@ -58,7 +58,7 @@ translation_of: Web/API/ServiceWorkerRegistration
 
 <dl>
  <dt>{{domxref("ServiceWorkerRegistration.onupdatefound")}} {{readonlyinline}}</dt>
- <dd>An <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener" title="This method is called whenever an event occurs of the type for which the EventListener interface was registered."><code>EventListener</code></a> property called whenever an event of type <code>updatefound</code> is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.</dd>
+ <dd>An <a href="/en-US/docs/Web/API/EventListener"><code>EventListener</code></a> property called whenever an event of type <code>updatefound</code> is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>

@@ -25,18 +25,18 @@ translation_of: Web/API/WebGLRenderingContext/getUniformLocation
 <div> </div>
 
 <dl>
- <dt><span class="seoSummary">{{domxref ("WebGLRenderingContext.getUniform", "getUniform()")}}</span></dt>
- <dd><span class="seoSummary">Retourne la valeur de l'uniform à l'emplacement indiqué.</span></dd>
+ <dt>{{domxref ("WebGLRenderingContext.getUniform", "getUniform()")}}</dt>
+ <dd>Retourne la valeur de l'uniform à l'emplacement indiqué.</dd>
  <dt><br>
- <span class="seoSummary">{{domxref ("WebGLRenderingContext.uniform", "uniform[1234] [fi] [v]()")}}</span></dt>
- <dd><span class="seoSummary">Affecte à la valeur de l'uniform la valeur spécifiée, qui peut être un nombre flottant ou entier unique, ou un vecteur de 2 à 4 composantes spécifié soit comme une liste de valeurs, soit comme un {{jsxref ("Float32Array")}} ou un {{ jsxref ("Int32Array")}}.</span></dd>
+ {{domxref ("WebGLRenderingContext.uniform", "uniform[1234] [fi] [v]()")}}</dt>
+ <dd>Affecte à la valeur de l'uniform la valeur spécifiée, qui peut être un nombre flottant ou entier unique, ou un vecteur de 2 à 4 composantes spécifié soit comme une liste de valeurs, soit comme un {{jsxref ("Float32Array")}} ou un {{ jsxref ("Int32Array")}}.</dd>
  <dt><br>
- <span class="seoSummary">{{domxref ("WebGLRenderingContext.uniformMatrix", "uniformMatrix[234][fv]()")}}</span></dt>
- <dd><span class="seoSummary">Affecte à la valeur de l'uniforme la matrice spécifiée, éventuellement avec transposition. La valeur est représentée comme une suite de valeurs GLfloat ou comme un Float32Array.</span></dd>
+ {{domxref ("WebGLRenderingContext.uniformMatrix", "uniformMatrix[234][fv]()")}}</dt>
+ <dd>Affecte à la valeur de l'uniforme la matrice spécifiée, éventuellement avec transposition. La valeur est représentée comme une suite de valeurs GLfloat ou comme un Float32Array.</dd>
 </dl>
 
 <p><br>
- <span class="seoSummary">L'uniform lui-même est déclaré dans le programme shader en utilisant GLSL.</span></p>
+ L'uniform lui-même est déclaré dans le programme shader en utilisant GLSL.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -59,7 +59,7 @@ translation_of: Web/API/WebGLRenderingContext/getUniformLocation
 <p><code>WebGLUniformLocation</code> est une valeur opaque utilisée pour identifier de manière unique l'emplacement dans la mémoire de la GPU auquel se trouve la variable uniform. Avec cette valeur en main, vous pouvez appeler d'autres méthodes WebGL pour accéder à la valeur de la variable uniform.</p>
 
 <div class="note">
-<p>Le type <code>WebGLUniformLocation</code> est compatible avec le type <code>GLint</code> pour indiquer l'indice ou l'emplacement d'un attribut uniform.</p>
+<p><strong>Note :</strong> Le type <code>WebGLUniformLocation</code> est compatible avec le type <code>GLint</code> pour indiquer l'indice ou l'emplacement d'un attribut uniform.</p>
 </div>
 
 <h3 id="Erreurs">Erreurs</h3>
@@ -77,7 +77,7 @@ translation_of: Web/API/WebGLRenderingContext/getUniformLocation
 
 <p>Dans cet exemple, extrait de la méthode <code>animateScene()</code> dans l'article <a href="/fr-FR/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene">Un exemple d'animation 2D WebGL de base</a>, retrouve les emplacements de trois uniforms du programme d'ombrage, puis définit la valeur de chacun des trois uniforms.</p>
 
-<pre class="brush: js highlight[3-8]">gl.useProgram(programmeShader);
+<pre class="brush: js">gl.useProgram(programmeShader);
 
 uScalingFactor =
     gl.getUniformLocation(programmeShader, "uScalingFactor");
@@ -90,7 +90,9 @@ gl.uniform2fv(uScalingFactor, currentScale);
 gl.uniform2fv(uRotationVector, currentRotation);
 gl.uniform4fv(uGlobalColor, [0.1, 0.7, 0.2, 1.0]);</pre>
 
-<div class="callout-box">Cet extrait de code provient de <a href="/fr-FR/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene">la fonction animateScene()</a> dans "Un exemple d'animation WebGL 2D de base". Voir cet article pour l'exemple complet et pour voir l'animation résultante en action.</div>
+<div class="note">
+  <p><strong>Note :</strong> Cet extrait de code provient de <a href="/fr-FR/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene">la fonction animateScene()</a> dans "Un exemple d'animation WebGL 2D de base". Voir cet article pour l'exemple complet et pour voir l'animation résultante en action.</p>
+</div>
 
 <p>Après avoir défini le programme d'ombrage en cours comme <code>programmeShader</code>, ce code récupère les trois uniforms <code>"uScalingFactor"</code>, <code>"uGlobalColor"</code> et <code>"uRotationVector"</code>, en appelant <code>getUniformLocation()</code> une fois pour chaque uniform.</p>
 

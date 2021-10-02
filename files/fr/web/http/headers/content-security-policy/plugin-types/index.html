@@ -47,7 +47,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/plugin-types
 
 <p>Un ou plusieurs <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">types MIME</a> peuvent être autorisées pour cette directive :</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: plugin-types &lt;type&gt;/&lt;subtype&gt;;
+<pre class="syntaxbox">Content-Security-Policy: plugin-types &lt;type&gt;/&lt;subtype&gt;;
 Content-Security-Policy: plugin-types &lt;type&gt;/&lt;subtype&gt; &lt;type&gt;/&lt;subtype&gt;;
 </pre>
 
@@ -62,23 +62,23 @@ Content-Security-Policy: plugin-types &lt;type&gt;/&lt;subtype&gt; &lt;type&gt;/
 
 <p>Pour intedire tous les greffons, la directive {{CSP("object-src")}} doit être définie à <code>'none'</code>. La directive <code>plugin-types</code> n'est utilisée que si vous autorisez au préalable les greffons avec <code>object-src</code>.</p>
 
-<pre class="brush: html notranslate">&lt;meta http-equiv="Content-Security-Policy" content="object-src 'none'"&gt;</pre>
+<pre class="brush: html">&lt;meta http-equiv="Content-Security-Policy" content="object-src 'none'"&gt;</pre>
 
 <h3 id="Autoriser_le_contenu_Flash">Autoriser le contenu Flash</h3>
 
 <p>Soit cet en-tête CSP :</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: plugin-types application/x-shockwave-flash</pre>
+<pre class="brush: bash">Content-Security-Policy: plugin-types application/x-shockwave-flash</pre>
 
 <p>Cet objet Flash sera autorisé et se chargera (dans la mesure où le navigateur gère Flash) :</p>
 
-<pre class="brush: html notranslate">&lt;object data="https://example.com/flash" type="application/x-shockwave-flash"&gt;&lt;/object&gt;</pre>
+<pre class="brush: html">&lt;object data="https://example.com/flash" type="application/x-shockwave-flash"&gt;&lt;/object&gt;</pre>
 
 <h3 id="Autoriser_les_applets_Java">Autoriser les applets Java</h3>
 
 <p>Pour charger une {{HTMLElement("applet")}}, vous devez spécifier la valeur <code>application/x-java-applet</code> :</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: plugin-types application/x-java-applet</pre>
+<pre class="brush: bash">Content-Security-Policy: plugin-types application/x-java-applet</pre>
 
 <h2 id="Spécifications">Spécifications</h2>
 

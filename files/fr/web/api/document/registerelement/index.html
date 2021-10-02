@@ -13,15 +13,15 @@ translation_of: Web/API/Document/registerElement
 <p>{{APIRef("DOM")}} {{Deprecated_header}}</p>
 
 <div class="warning">
-<p><strong>Warning : </strong>document.registerElement() est déprécié en faveur de <a href="https://developer.mozilla.org/fr/docs/Web/API/CustomElementRegistry/define">customElements.define()</a>.</p>
+<p><strong>Attention :</strong> document.registerElement() est déprécié en faveur de <a href="/fr/docs/Web/API/CustomElementRegistry/define">customElements.define()</a>.</p>
 </div>
 
 <p>{{draft}}</p>
 
-<p>La méthode <code><strong>Document.registerElement()</strong></code> permet d'enregistrer un nouvel <a href="https://developer.mozilla.org/fr/docs/Web/Web_Components/Custom_Elements">élément personnalisé</a> dans le navigateur, et retourne un constructeur pour ce nouvel élément.</p>
+<p>La méthode <code><strong>Document.registerElement()</strong></code> permet d'enregistrer un nouvel <a href="/fr/docs/Web/Web_Components/Custom_Elements">élément personnalisé</a> dans le navigateur, et retourne un constructeur pour ce nouvel élément.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Il s'agit d'une technologie expérimentale. Le navigateur dans lequel vous l'utilisez doit être compatible avec les Composants Web. Voir <a href="https://developer.mozilla.org/fr/docs/Web/Web_Components#Activer_les_Web_Components_dans_Firefox">Activer les Composants Web dans Firefox</a>.</p>
+<p><strong>Note :</strong> Il s'agit d'une technologie expérimentale. Le navigateur dans lequel vous l'utilisez doit être compatible avec les Composants Web. Voir <a href="/fr/docs/Web/Web_Components#Activer_les_Web_Components_dans_Firefox">Activer les Composants Web dans Firefox</a>.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
@@ -32,9 +32,7 @@ translation_of: Web/API/Document/registerElement
 
 <dl>
  <dt><em>nom-tag</em></dt>
- <dd>
- <div class="syntaxbox">Le nom de l'élément personnalisé. Le nom doit contenir un tiret (-), par exemple <code>mon-tag</code>.</div>
- </dd>
+ <dd>Le nom de l'élément personnalisé. Le nom doit contenir un tiret (-), par exemple <code>mon-tag</code>.</dd>
  <dt><em>options {{optional_inline}}</em></dt>
  <dd>Un objet définissant le prototype sur lequel se base l'élément personnalisé, ainsi qu'un tag existant à étendre.</dd>
 </dl>
@@ -63,5 +61,5 @@ montag.textContent = "Je suis un élément mon-tag.";
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/Web_Components/Custom_Elements">Éléments personnalisés</a></li>
+ <li><a href="/fr/docs/Web/Web_Components/Custom_Elements">Éléments personnalisés</a></li>
 </ul>

@@ -12,7 +12,7 @@ translation_of: Web/API/Window/resizeBy
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">window.resizeBy(<em>xDelta, yDelta</em>)
+<pre class="syntaxbox">window.resizeBy(<em>xDelta, yDelta</em>)
 </pre>
 
 <h3 id="Paramètres">Paramètres</h3>
@@ -24,7 +24,7 @@ translation_of: Web/API/Window/resizeBy
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush:js notranslate">// Réduit la fenêtre
+<pre class="brush:js">// Réduit la fenêtre
 window.resizeBy(-200, -200);
 </pre>
 
@@ -34,11 +34,11 @@ window.resizeBy(-200, -200);
 
 <h3 id="Créer_et_redimensionner_une_fenêtre_externe">Créer et redimensionner une fenêtre externe</h3>
 
-<p>Pour des raisons de sécurité, il n'est plus possible dans Firefox pour un site Web de modifier la taille par défaut d'une fenêtre dans un navigateur si la fenêtre n'a pas été créée par window.open () ou contient plusieurs onglets. Consultez le tableau de compatibilité pour plus de détails sur le changement.</p>
+<p>Pour des raisons de sécurité, il n'est plus possible dans Firefox pour un site Web de modifier la taille par défaut d'une fenêtre dans un navigateur si la fenêtre n'a pas été créée par <code>window.open()</code> ou contient plusieurs onglets. Consultez le tableau de compatibilité pour plus de détails sur le changement.</p>
 
 <p>Même si vous créez une fenêtre avec <code>window.open()</code> <strong>elle n'est pas redimensionnable par défaut.</strong> Pour rendre la fenêtre redimensionnable, vous devez l'ouvrir avec le paramètre <code>"resizable"</code> .</p>
 
-<pre class="brush: js notranslate">// Créer une fenêtre redimensionnable
+<pre class="brush: js">// Créer une fenêtre redimensionnable
 myExternalWindow = window.open("http://myurl.domain", "myWindowName", "resizable");
 
 // Redimensionner la fenêtre à 500 x 500

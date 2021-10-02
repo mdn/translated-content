@@ -12,7 +12,7 @@ translation_of: Web/API/Document/createTextNode
 
 <p>Crée un nouveau nœud de texte.</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox"><var>var text</var> = document.createTextNode(<var>données</var>);
 </pre>
@@ -22,34 +22,34 @@ translation_of: Web/API/Document/createTextNode
  <li><code>donnees</code> est une chaîne contenant les données à placer dans le nœud de texte.</li>
 </ul>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="doctype token">&lt;!DOCTYPE html&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span> <span class="attr-name token">lang</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>en<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>title</span><span class="punctuation token">&gt;</span></span>createTextNode example<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>title</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
-<span class="keyword token">function</span> <span class="function token">addTextNode</span><span class="punctuation token">(</span>text<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> newtext <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createTextNode</span><span class="punctuation token">(</span>text<span class="punctuation token">)</span><span class="punctuation token">,</span>
-      p1 <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"p1"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;createTextNode example&lt;/title&gt;
+&lt;script&gt;
+function addTextNode(text) {
+  var newtext = document.createTextNode(text),
+      p1 = document.getElementById("p1");
 
-  p1<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>newtext<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
-</span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>head</span><span class="punctuation token">&gt;</span></span>
+  p1.appendChild(newtext);
+}
+&lt;/script&gt;
+&lt;/head&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>body</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>button</span> <span class="attr-name token">onclick</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>addTextNode(<span class="punctuation token">'</span>YES! <span class="punctuation token">'</span>);<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>YES!<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>button</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>button</span> <span class="attr-name token">onclick</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>addTextNode(<span class="punctuation token">'</span>NO! <span class="punctuation token">'</span>);<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>NO!<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>button</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>button</span> <span class="attr-name token">onclick</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>addTextNode(<span class="punctuation token">'</span>WE CAN! <span class="punctuation token">'</span>);<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>WE CAN!<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>button</span><span class="punctuation token">&gt;</span></span>
+&lt;body&gt;
+  &lt;button onclick="addTextNode('YES! ');"&gt;YES!&lt;/button&gt;
+  &lt;button onclick="addTextNode('NO! ');"&gt;NO!&lt;/button&gt;
+  &lt;button onclick="addTextNode('WE CAN! ');"&gt;WE CAN!&lt;/button&gt;
 
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>hr</span> <span class="punctuation token">/&gt;</span></span>
+  &lt;hr /&gt;
 
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>p1<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>First line of paragraph.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>body</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code></pre>
+  &lt;p id="p1"&gt;First line of paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécifications</h2>
+<h2 id="Sp.C3.A9cification">Spécifications</h2>
 
 <table class="standard-table">
  <thead>

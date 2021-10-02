@@ -18,21 +18,21 @@ original_slug: Web/CSS/CSS_Lists/Indentation_homogène_des_listes
 
 <p>Commençons par une simple liste minimale. L'élément de la liste ne possède aucune puce (le marqueur devant l'élément). Pour le moment, il ne fait pas partie d'une liste.</p>
 
-<p><img alt="" src="/@api/deki/files/619/=Consistent-list-indentation-figure1.gif"></p>
+<p><img alt="" src="consistent-list-indentation-figure1.gif"></p>
 
 <p>La bordure pointillée rouge représente la limite extérieure de la zone de contenu de l'élément de la liste. Pour le moment, cet élément ne possède ni remplissage (<em>padding</em>) ni bordure. Si on ajoute deux autres éléments à la liste, on obtient alors ce résultat :</p>
 
-<p><img alt="" src="/@api/deki/files/620/=Consistent-list-indentation-figure2.gif" style="height: 100px; width: 200px;"></p>
+<p><img alt="" src="consistent-list-indentation-figure2.gif"></p>
 
 <p>À présent, nous allons placer ces éléments dans un élément parent. Pour cet exemple, nous utiliserons une liste non-ordonnée avec {{HTMLElement("ul")}}. Selon <a href="/fr/docs/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte">le modèle de boîtes CSS</a>, les boîtes des éléments de la liste s'inscrivent dans la boîte de contenu de l'élément parent. Cette dernière n'a, pour l'instant, aucune marge ni aucun remplissage (<em>padding</em>). On obtient donc ce résultat :</p>
 
-<p><img alt="" src="/@api/deki/files/621/=Consistent-list-indentation-figure3.gif"></p>
+<p><img alt="" src="consistent-list-indentation-figure3.gif"></p>
 
 <p>Ici, la bordure pointillée bleue révèle les limites de la zone de contenu de l'élément <code>ul</code>. Puisqu'il n'a pas de remplissage (<em>padding</em>), cette limite épouse étroitement celles des trois éléments de la liste.</p>
 
 <p>On ajoute maintenant les puces aux éléments de la liste. Puisqu'il s'agit d'une liste non ordonnée, nous ajoutons les traditionnelles puces en forme de disques pleins, comme ceci :</p>
 
-<p><img alt="" src="/@api/deki/files/622/=Consistent-list-indentation-figure4.gif"></p>
+<p><img alt="" src="consistent-list-indentation-figure4.gif"></p>
 
 <p>Visuellement, ces marqueurs apparaissent en dehors de la zone de contenu de l'élément <code>ul</code>, mais ce n'est pas ce qui est le plus important ici. Ce qui compte, c'est que ces marqueurs prennent place en dehors de la « boîte principale » des éléments <code>li</code>. Ils apparaissent comme des sortes d'appendices aux items de liste, qui se tiennent en dehors de la zone de contenu de chaque item, tout en étant attaché à chaque <code>li</code>.</p>
 
@@ -61,12 +61,12 @@ original_slug: Web/CSS/CSS_Lists/Indentation_homogène_des_listes
 
 <p>Observons de plus près ces deux dernières approches. Dans Internet Explorer et Opera, les listes sont indentées en fixant une marge gauche de 40 pixels pour l'élément <code>ul</code>. Si nous appliquons une couleur d'arrière-plan, à celui-ci en conservant les bordures des éléments de la liste et de cet élément <code>ul</code>, nous obtenons le résultat qui suit :</p>
 
-<p><img alt="" src="/@api/deki/files/623/=Consistent-list-indentation-figure5.gif"></p>
+<p><img alt="" src="consistent-list-indentation-figure5.gif"></p>
 
 <p>De son côté, Gecko applique un <em>padding</em> gauche de 40 pixels à cet élément <code>ul</code>. Avec les mêmes styles que dans le cas précédent, notre exemple s'affichera dans un navigateur basé sur Gecko de la façon suivante :</p>
 
 <p><br>
- <img alt="" src="/@api/deki/files/624/=Consistent-list-indentation-figure6.gif" style="height: 102px; width: 242px;"></p>
+ <img alt="" src="consistent-list-indentation-figure6.gif"></p>
 
 <p>Comme nous pouvons le voir, les marqueurs restent attachés aux éléments <code>li</code>, où qu'ils soient. La différence réside uniquement dans la manière dont l'élément <code>ul</code> est mis en forme. Nous ne pouvons voir cette différence que si nous essayons de donner un arrière-plan ou des bordures à cet élément <code>ul</code></p>
 

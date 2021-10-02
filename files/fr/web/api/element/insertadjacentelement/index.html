@@ -11,9 +11,9 @@ translation_of: Web/API/Element/insertAdjacentElement
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>La méthode <code>insertAdjacentElement()</code> insère un noeud d'élément donné à une position donnée<span id="result_box" lang="fr"><span> par rapport à l'élément sur lequel il est appelé.</span></span></p>
+<p>La méthode <code>insertAdjacentElement()</code> insère un noeud d'élément donné à une position donnée par rapport à l'élément sur lequel il est appelé.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre><em>targetElement</em>.insertAdjacentElement(<em>position</em>, <em>element</em>);</pre>
 
@@ -23,10 +23,10 @@ translation_of: Web/API/Element/insertAdjacentElement
  <dt>position</dt>
  <dd>Un objet {{domxref("DOMString")}} (<em>chaîne de caractères</em>) représentant la position par rapport à <code>targetElement</code> ; cela doit correspondre ( sans prendre en compte la casse ) à une des chaînes suivantes :
  <ul>
-  <li><code style="color: red;">'beforebegin'</code> : Avant <code>targetElement</code> lui-même.</li>
-  <li><code style="color: green;">'afterbegin'</code> : A l'intérieur de <code>targetElement</code>, avant son premier enfant.</li>
-  <li><code style="color: blue;">'beforeend'</code> : A l'intérieur de <code>targetElement</code>, après son dernier enfant.</li>
-  <li><code style="color: magenta;">'afterend'</code> : Après <code>targetElement</code> lui-même.</li>
+  <li><code>'beforebegin'</code> : Avant <code>targetElement</code> lui-même.</li>
+  <li><code>'afterbegin'</code> : A l'intérieur de <code>targetElement</code>, avant son premier enfant.</li>
+  <li><code>'beforeend'</code> : A l'intérieur de <code>targetElement</code>, après son dernier enfant.</li>
+  <li><code>'afterend'</code> : Après <code>targetElement</code> lui-même.</li>
  </ul>
  </dd>
  <dt>element</dt>
@@ -60,17 +60,19 @@ translation_of: Web/API/Element/insertAdjacentElement
 
 <h3 id="Visualisation_des_positionnements">Visualisation des positionnements</h3>
 
-<pre>&lt;!-- <strong><code style="color: red;">beforebegin</code></strong> --&gt;
-<code style="font-weight: bold;">&lt;p&gt;</code>
-&lt;!-- <strong><code style="color: green;">afterbegin</code></strong> --&gt;
+<pre>&lt;!-- beforebegin --&gt;
+&lt;p&gt;
+&lt;!-- afterbegin --&gt;
 foo
-&lt;!-- <strong><code style="color: blue;">beforeend</code></strong> --&gt;
-<code style="font-weight: bold;">&lt;/p&gt;</code>
-&lt;!-- <strong><code style="color: magenta;">afterend</code></strong> --&gt;</pre>
+&lt;!-- beforeend --&gt;
+&lt;/p&gt;
+&lt;!-- afterend --&gt;</pre>
 
-<div class="note"><strong>Note :</strong> Les positions <code>beforebegin</code> et <code>afterend</code> ne fonctionnent que si le noeud est dans l'arbre et s'il possède un élément parent.</div>
+<div class="note">
+  <p><strong>Note :</strong> Les positions <code>beforebegin</code> et <code>afterend</code> ne fonctionnent que si le noeud est dans l'arbre et s'il possède un élément parent.</p>
+</div>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush: js">beforeBtn.addEventListener('click', function() {
   var tempDiv = document.createElement('div');
@@ -92,7 +94,7 @@ afterBtn.addEventListener('click', function() {
 
 <p>Une démo de notre <a href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html">insertAdjacentElement.html</a> est disponible sur Github ( avec le <a href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html">code source</a> ). Nous avons un ensemble d'éléments {{htmlelement("div")}} dans un conteneur. Quand un élément reçoit un clic, il est sélectionné et vous pouvez appuyer sur les boutons <em>Insert before</em> (<em>insérer avant</em>) et <em>Insert after</em> (<em>insérer après</em>) pour insérer de nouveaux divs avant ou après l'élement sélectionné en utilisant <code>insertAdjacentElement()</code>.</p>
 
-<h2 id="Specification" name="Specification">Spécification</h2>
+<h2 id="Specification">Spécification</h2>
 
 <table class="standard-table">
  <thead>

@@ -14,15 +14,13 @@ translation_of: Web/CSS/gap
 
 <div>{{EmbedInteractiveExample("pages/css/gap.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <div class="note">
 <p><strong>Note :</strong> La propriété {{cssxref("grid-gap")}} a initialement été définie dans le module de spécification <a href="/fr/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>. Cette version préfixée a été remplacée par <code>gap</code>. Toutefois, à des fins de compatibilité envers les navigateurs qui n'implémentent pas encore la version non-préfixée, mieux vaut utiliser les deux versions.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="brush: css no-line-numbers notranslate">/* Une valeur de longueur */
+<pre class="brush: css no-line-numbers">/* Une valeur de longueur */
 /* Type &lt;length&gt;          */
 gap: 20px;
 gap: 1em;
@@ -80,7 +78,7 @@ gap: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html; notranslate">&lt;div id="flexbox"&gt;
+<pre class="brush: html;">&lt;div id="flexbox"&gt;
   &lt;div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;/div&gt;
@@ -92,7 +90,7 @@ gap: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[5] notranslate">#flexbox {
+<pre class="brush: css">#flexbox {
   display: flex;
   flex-wrap: wrap;
   width: 300px;
@@ -117,7 +115,7 @@ gap: unset;
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html; notranslate">&lt;div id="grid"&gt;
+<pre class="brush: html;">&lt;div id="grid"&gt;
   &lt;div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;/div&gt;
@@ -131,14 +129,12 @@ gap: unset;
 
 <h4 id="CSS_2">CSS</h4>
 
-<div class="hidden">
-<pre class="brush: css notranslate">#grid {
+<pre class="brush: css hidden">#grid {
   grid-gap: 20px 5px;
 }
 </pre>
-</div>
 
-<pre class="brush: css; highlight[5] notranslate">#grid {
+<pre class="brush: css">#grid {
   display: grid;
   height: 200px;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
@@ -159,7 +155,7 @@ gap: unset;
 
 <h4 id="HTML_3">HTML</h4>
 
-<pre class="brush: html; notranslate">&lt;p class="content-box"&gt;
+<pre class="brush: html;">&lt;p class="content-box"&gt;
   voici un texte en multi-colonne sur des colonnes avec
   une gouttière de 40 pixels créée grâce à la propriété
   CSS &lt;code&gt;gap&lt;/code&gt;. Est-ce que c'est pas trop génial ?
@@ -168,7 +164,7 @@ gap: unset;
 
 <h4 id="CSS_3">CSS</h4>
 
-<pre class="brush: css; highlight[3] notranslate">.content-box {
+<pre class="brush: css">.content-box {
   column-count: 3;
   gap: 40px;
 }

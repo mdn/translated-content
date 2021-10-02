@@ -30,7 +30,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: &lt;policy-directive&gt;; &lt;policy-directive&gt;
+<pre class="syntaxbox">Content-Security-Policy: &lt;policy-directive&gt;; &lt;policy-directive&gt;
 </pre>
 
 <h2 id="Directives">Directives</h2>
@@ -44,7 +44,9 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
  <dd>Définit les sources valides pour les <a href="/fr/docs/Web/API/Web_Workers_API">web workers</a> et les éléments qui représentent des contextes de navigation imbriqués tels que {{HTMLElement("frame")}} et {{HTMLElement("iframe")}}.</dd>
 </dl>
 
-<div class="blockIndicator warning">Plutôt que la directive <strong><code>child-src</code></strong>, si vous souhaitez réguler les contextes de navigation imbriqués et les workers séparément, vous pouvez utiliser respectivement les directives {{CSP("frame-src")}} et {{CSP("worker-src")}}.</div>
+<div class="warning">
+  <p><strong>Attention :</strong>Plutôt que la directive <strong><code>child-src</code></strong>, si vous souhaitez réguler les contextes de navigation imbriqués et les workers séparément, vous pouvez utiliser respectivement les directives {{CSP("frame-src")}} et {{CSP("worker-src")}}.</p>
+</div>
 
 <dl>
  <dt>{{CSP("connect-src")}}</dt>
@@ -65,8 +67,8 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
  <dd>Définit les sources valides pour les ressources des éléments {{HTMLElement("object")}}, {{HTMLElement("embed")}} et {{HTMLElement("applet")}}.</dd>
 </dl>
 
-<div class="blockIndicator note">
-<p>Les éléments contrôlés pa ar <code>object-src</code> sont considérés peut-être par coïcidence comme des éléments HTML du passé et ne recevront de nouvelles fonctionnalités normalisées (comme les attributs de sécurité <code>sandbox</code> et <code>allow</code> pour <code>&lt;iframe&gt;</code>). De ce fait, il est <strong>recommandé</strong> de restreindre cette directive, c'est-à-dire la définir explicitement à <code>object-src 'none'</code> dans la mesure du possible.</p>
+<div class="note">
+<p><strong>Note :</strong> Les éléments contrôlés pa ar <code>object-src</code> sont considérés peut-être par coïcidence comme des éléments HTML du passé et ne recevront de nouvelles fonctionnalités normalisées (comme les attributs de sécurité <code>sandbox</code> et <code>allow</code> pour <code>&lt;iframe&gt;</code>). De ce fait, il est <strong>recommandé</strong> de restreindre cette directive, c'est-à-dire la définir explicitement à <code>object-src 'none'</code> dans la mesure du possible.</p>
 </div>
 
 <dl>
@@ -124,9 +126,9 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 </dl>
 
 <div class="warning">
-<p>Bien que la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to" title="La directive HTTP Content-Security-Policy (CSP) report-to demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP Report-To."><code>report-to</code></a> est prévue remplacer la directive <code><strong>report-uri</strong></code> maintenant dépréciée, <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to" title="La directive HTTP Content-Security-Policy (CSP) report-to demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP Report-To."><code>report-to</code></a> n'est pas encore supportée par la plupart des navigateurs modernes. Par rétrocompatibilité avec les navigateurs courants et tout en prévoyant une compatibilité future quand les navigateurs supporteront <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to" title="La directive HTTP Content-Security-Policy (CSP) report-to demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP Report-To."><code>report-to</code></a>, vous pouvez spécifier les deux directives <code><strong>report-uri</strong></code> et <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to" title="La directive HTTP Content-Security-Policy (CSP) report-to demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP Report-To."><code>report-to</code></a>:</p>
+<p><strong>Attention :</strong> Bien que la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to" title="La directive HTTP Content-Security-Policy (CSP) report-to demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP Report-To."><code>report-to</code></a> est prévue remplacer la directive <code><strong>report-uri</strong></code> maintenant dépréciée, <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to" title="La directive HTTP Content-Security-Policy (CSP) report-to demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP Report-To."><code>report-to</code></a> n'est pas encore supportée par la plupart des navigateurs modernes. Par rétrocompatibilité avec les navigateurs courants et tout en prévoyant une compatibilité future quand les navigateurs supporteront <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to" title="La directive HTTP Content-Security-Policy (CSP) report-to demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP Report-To."><code>report-to</code></a>, vous pouvez spécifier les deux directives <code><strong>report-uri</strong></code> et <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to" title="La directive HTTP Content-Security-Policy (CSP) report-to demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP Report-To."><code>report-to</code></a>:</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: ...; report-uri https://endpoint.com; report-to groupname</pre>
+<pre class="syntaxbox">Content-Security-Policy: ...; report-uri https://endpoint.com; report-to groupname</pre>
 
 <p>Dans les navigateurs qui supportent <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to" title="La directive HTTP Content-Security-Policy (CSP) report-to demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP Report-To."><code>report-to</code></a>, la directive <code><strong>report-uri</strong></code> sera ignorée.</p>
 </div>
@@ -163,7 +165,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 
 <p>L'en-tête <code>Content-Security-Policy</code> peut être utilisé plus d'une fois comme illustré ci-après. On notera la directive {{CSP("connect-src")}} utilisée ici. Bien que la deuxième règle autorise la connexion, la première contient <code>connect-src 'none'</code>. L'ajout de règles supplémentaires permet uniquement d'augmenter les protections. Les niveaux les plus stricts pour chaque règle sont alors utilisés. Dans l'exemple qui suit, cela signifie que la directive <code>connect-src 'none'</code> sera respectée.</p>
 
-<pre class="notranslate">Content-Security-Policy: default-src 'self' http://example.com;
+<pre>Content-Security-Policy: default-src 'self' http://example.com;
                          connect-src 'none';
 Content-Security-Policy: connect-src http://example.com/;
                          script-src http://example.com/</pre>
@@ -174,7 +176,7 @@ Content-Security-Policy: connect-src http://example.com/;
 
 <p>Dans cet exemple, on désactive les scripts écrits à même le document (<em>inline</em>), les opérations <code>eval()</code> et les ressources (images, polices, scripts, etc.) peuvent uniquement être chargées via HTTPS :</p>
 
-<pre class="notranslate">// en-tête HTTP
+<pre>// en-tête HTTP
 Content-Security-Policy: default-src https:
 
 // version avec la balise HTML meta
@@ -185,13 +187,13 @@ Content-Security-Policy: default-src https:
 
 <p>Cet exemple est plutôt adapté pour un site historique qui utilise de nombreux scripts écrits dans les documents mais pour lequel on veut s'assurer que les ressources sont chargées via HTTPS et pour lequel on veut désactiver les plugins :</p>
 
-<pre class="notranslate">Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'</pre>
+<pre>Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'</pre>
 
 <h3 id="Exemple_3">Exemple 3</h3>
 
 <p>On ne met pas en place la règle de sécurité mais on récolte les enfreintes qui se seraient produites pour cette règle :</p>
 
-<pre class="notranslate">Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
+<pre>Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
 
 <p>Pour plus d'exemples, consulter <a href="https://wiki.mozilla.org/Security/Guidelines/Web_Security#Examples_5">les recommandations de Mozilla pour la sécurité web</a>.</p>
 

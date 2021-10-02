@@ -12,7 +12,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Utilisation_d'images
 ---
 <p>{{CanvasSidebar}}{{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations")}}</p>
 
-<p class="summary">Jusqu'à présent, nous avons créé nos propres <a href="/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">formes</a> et <a href="/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">styles appliqués</a>. L'une des fonctionnalités les plus intéressantes de <a href="/fr/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a> est la possibilité d'utiliser des images. Celles-ci peuvent être utilisées pour faire de la composition dynamique de photos ou comme décors de graphes, pour des <i>sprites</i> dans des jeux, et ainsi de suite. Les images externes peuvent être utilisées dans n'importe quel format pris en charge par le navigateur, comme PNG, GIF ou JPEG. Vous pouvez même utiliser l'image produite par d'autres éléments du canevas sur la même page comme source !</p>
+<p>Jusqu'à présent, nous avons créé nos propres <a href="/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">formes</a> et <a href="/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">styles appliqués</a>. L'une des fonctionnalités les plus intéressantes de <a href="/fr/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a> est la possibilité d'utiliser des images. Celles-ci peuvent être utilisées pour faire de la composition dynamique de photos ou comme décors de graphes, pour des <i>sprites</i> dans des jeux, et ainsi de suite. Les images externes peuvent être utilisées dans n'importe quel format pris en charge par le navigateur, comme PNG, GIF ou JPEG. Vous pouvez même utiliser l'image produite par d'autres éléments du canevas sur la même page comme source !</p>
 
 <p>L'importation d'images dans un canevas se déroule en deux étapes :</p>
 
@@ -125,22 +125,20 @@ function getMyVideo() {
 </dl>
 
 <div class="note">
-<p>Les images SVG doivent spécifier une largeur et une hauteur dans l'élément racine <code>&lt;svg&gt;</code>.</p>
+<p><strong>Note :</strong> Les images SVG doivent spécifier une largeur et une hauteur dans l'élément racine <code>&lt;svg&gt;</code>.</p>
 </div>
 
 <h3 id="example_a_simple_line_graph">Exemple : un graphique linéaire simple</h3>
 
 <p>Dans l'exemple suivant, nous utiliserons une image externe comme fond pour un petit graphique linéaire. L'utilisation d'images de fond peut rendre vos scripts considérablement plus légers puisqu'il n'est alors pas nécessaire de dessiner des arrières-plans élaborés. Une seule image est utilisée ici, on utilise donc le gestionnaire d'évènement <code>load</code> de l'objet image pour lancer les instructions de dessin. La méthode <code>drawImage()</code> place l'image de fond aux coordonnées (0,0), soit le coin supérieur gauche du canevas.</p>
 
-<div class="hidden">
-  <pre class="brush: html">
+<pre class="brush: html hidden">
 &lt;html&gt;
   &lt;body onload="draw();"&gt;
     &lt;canvas id="canvas" width="180" height="150"&gt;&lt;/canvas&gt;
   &lt;/body&gt;
 &lt;/html&gt;
-  </pre>
-</div>
+</pre>
 
 <pre class="brush: js">
 function draw() {
@@ -178,18 +176,16 @@ function draw() {
 <p>Dans cet exemple, nous utiliserons une image comme fond d'écran en la répétant plusieurs fois sur le canevas. Cette opération est réalisée simplement en faisant une boucle qui place l'image redimensionnée à différentes positions. Dans le code ci-dessous, la première boucle <code>for</code> s'occupe des lignes alors que la seconde gère les colonnes. L'image est redimensionnée à un tiers de sa taille originale, ce qui fait 50×38 pixels.</p>
 
 <div class="note">
-<p><strong>Note</strong> : les images peuvent devenir floues lorsqu'elles sont agrandies ou granuleuses si elles sont réduites. Il vaut mieux ne pas redimensionner une image contenant du texte devant rester lisible.</p>
+<p><strong>Note :</strong> Les images peuvent devenir floues lorsqu'elles sont agrandies ou granuleuses si elles sont réduites. Il vaut mieux ne pas redimensionner une image contenant du texte devant rester lisible.</p>
 </div>
 
-<div class="hidden">
-<pre class="brush: html">
+<pre class="brush: html hidden">
 &lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-</div>
 
 <pre class="brush: js">
 function draw() {

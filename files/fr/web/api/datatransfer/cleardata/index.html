@@ -13,7 +13,9 @@ translation_of: Web/API/DataTransfer/clearData
 
 <p>La méthode DataTransfer.clearData() retire l'opération de {{domxref("DataTransfer","glisser-déposer")}} pour le format donné. Si la donnée pour le format ciblé n'existe pas, cette méthode n'aura aucun effet.</p>
 
-<p class="note">Si cette méthode est appelée sans argument, ou que le format donné est une  {{domxref("DOMString","chaîne de caractères")}}  vide, les données de tous les formats seront retirées.</p>
+<div class="note">
+  <p><strong>Note :</strong> Si cette méthode est appelée sans argument, ou que le format donné est une  {{domxref("DOMString","chaîne de caractères")}}  vide, les données de tous les formats seront retirées.</p>
+</div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -37,7 +39,7 @@ translation_of: Web/API/DataTransfer/clearData
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html line-numbers  language-html">&lt;span class="tweaked" id="source" draggable="true"&gt;
+<pre class="brush: html">&lt;span class="tweaked" id="source" draggable="true"&gt;
   Sélectionnez cet élément, glissez-le et déposez-le dans la Zone de Dépose pour le déplacer.
 &lt;/span&gt;
 &lt;span class="tweaked" id="target"&gt;Zone de Dépose&lt;/span&gt;
@@ -47,7 +49,7 @@ translation_of: Web/API/DataTransfer/clearData
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css line-numbers  language-css">span.tweaked {
+<pre class="brush: css">span.tweaked {
   display: inline-block;
   margin: 1em 0;
   padding: 1em 2em;

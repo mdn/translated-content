@@ -13,19 +13,19 @@ tags:
   - listes descriptives
   - sémantique
 translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-original_slug: Apprendre/HTML/Introduction_à_HTML/formatage-avance-texte
+original_slug: Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting
 ---
 <div>{{LearnSidebar}}</div>
 
 <div>{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks", "Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML")}}</div>
 
-<p class="summary">Il y a de nombreux autres éléments HTML pour mettre en forme un texte qui n'ont pas été mentionnés dans l'article<a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals"> Les concepts fondamentaux du HTML liés au texte</a>. Les éléments abordés ici sont moins connus mais tout aussi utiles (et ce n'est aucunement une liste complète). Nous voyons ici comment marquer des citations, des listes de description, du code informatique et autres choses relatives au texte : indices et exposants, informations de contact, etc.</p>
+<p class="summary">Il y a de nombreux autres éléments HTML pour mettre en forme un texte qui n'ont pas été mentionnés dans l'article<a href="/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"> Les concepts fondamentaux du HTML liés au texte</a>. Les éléments abordés ici sont moins connus mais tout aussi utiles (et ce n'est aucunement une liste complète). Nous voyons ici comment marquer des citations, des listes de description, du code informatique et autres choses relatives au texte : indices et exposants, informations de contact, etc.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
-   <td>Être familiarisé avec les bases du HTML, traitées à la page <a href="https://developer.mozilla.org/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started">Commencer avec le HTML</a> et du formatage de texte HTML, décrit dans les <a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals">Fondamentaux du texte HTML</a>.</td>
+   <td>Être familiarisé avec les bases du HTML, traitées à la page <a href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started">Commencer avec le HTML</a> et du formatage de texte HTML, décrit dans les <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">Fondamentaux du texte HTML</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objectifs :</th>
@@ -36,7 +36,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/formatage-avance-texte
 
 <h2 id="Listes_descriptives"><span>Listes descriptives</span></h2>
 
-<p>Dans les bases du texte en HTML, nous avons exposé comment on pouvait baliser <a href="/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists">des listes simples en HTML</a>, mais sans mentionner le troisième type de liste que vous rencontrerez à l'occasion — <strong>les <span>listes descriptives</span></strong>. L'objectif de ces listes est de marquer une série d'éléments et leurs descriptions associées, comme termes et définition, ou bien questions et réponse. Voici l'exemple d'un ensemble de termes et leur définitions :</p>
+<p>Dans les bases du texte en HTML, nous avons exposé comment on pouvait baliser <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists">des listes simples en HTML</a>, mais sans mentionner le troisième type de liste que vous rencontrerez à l'occasion — <strong>les <span>listes descriptives</span></strong>. L'objectif de ces listes est de marquer une série d'éléments et leurs descriptions associées, comme termes et définition, ou bien questions et réponse. Voici l'exemple d'un ensemble de termes et leur définitions :</p>
 
 <pre class="notranslate">soliloque
 Dans une pièce de théâtre, action d'un acteur adressant à lui-même ses pensées ou sentiments intimes et, de la sorte, les faisant partager à son auditoire (mais pas aux autres personnages de la pièce).
@@ -224,14 +224,14 @@ de citation&lt;/em&gt;) indique que le bloc de texte inclus est une citation ét
 
 <p>Pour le changer en bloc de citation, on ferait simplement ceci :</p>
 
-<pre class="brush: html notranslate">&lt;blockquote cite="https://developer.mozilla.org/fr/docs/Web/HTML/Element/blockquote"&gt;
+<pre class="brush: html notranslate">&lt;blockquote cite="/fr/docs/Web/HTML/Element/blockquote"&gt;
   &lt;p&gt;L'&lt;strong&gt;Élément HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;&lt;/strong&gt; (ou &lt;em&gt;Élément HTML bloc de citation&lt;/em&gt;)
      indique que le bloc de texte inclus est une citation étendue.&lt;/p&gt;
 &lt;/blockquote&gt;</pre>
 
 <p>Le navigateur l'affichera par défaut sous forme d'un paragraphe indenté, avec l'indication qu'il s'agit d'une citation ; MDN agit de même et y ajoute un style personnalisé :</p>
 
-<blockquote cite="https://developer.mozilla.org/fr/docs/Web/HTML/Element/blockquote">
+<blockquote cite="/fr/docs/Web/HTML/Element/blockquote">
 <p>L'<strong>Élément HTML <code>&lt;blockquote&gt;</code></strong> (ou <em>Élément HTML bloc de citation</em>) indique que le bloc de texte inclus est une citation étendue.</p>
 </blockquote>
 
@@ -239,27 +239,27 @@ de citation&lt;/em&gt;) indique que le bloc de texte inclus est une citation ét
 
 <p>Les citations en ligne fonctionnent exactement de la même manière, sauf que l'on utilise l'élément {{htmlelement("q")}}. Par exemple, le balisage suivant contient une citation de la page MDN <code>&lt;q&gt;</code> :</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;L'élément citation — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — est &lt;q cite="https://developer.mozilla.org/fr/docs/Web/HTML/Element/q"&gt;prévu
+<pre class="brush: html notranslate">&lt;p&gt;L'élément citation — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — est &lt;q cite="/fr/docs/Web/HTML/Element/q"&gt;prévu
 pour de courtes citations ne nécessitant pas un nouvel alinéa&lt;/q&gt;.&lt;/p&gt;</pre>
 
 <p>Le navigateur l'affichera par défaut comme du texte normal entre guillemets pour indiquer une citation, comme ceci :</p>
 
-<p>L'élément citation — <code>&lt;q&gt;</code> — est <q cite="https://developer.mozilla.org/fr/docs/Web/HTML/Element/q">prévu pour de courtes citations ne nécessitant pas un nouvel alinéa</q>.</p>
+<p>L'élément citation — <code>&lt;q&gt;</code> — est <q cite="/fr/docs/Web/HTML/Element/q">prévu pour de courtes citations ne nécessitant pas un nouvel alinéa</q>.</p>
 
 <h3 id="Citations_2">Citations</h3>
 
-<p>Le contenu de l'attribut {{htmlattrxref("cite","blockquote")}} semble utile, malheureusement les navigateurs, lecteurs d'écran, etc. n'en font pas grand chose. Il n'y a pas possibilité de faire afficher différemment au navigateur le contenu d'un  <code>cite</code> sans utiliser votre propre JavaScript ou style CSS. Si vous souhaitez rendre disponible la source de la citation sur votre page, la meilleure façon de le faire est d'inclure l'élément {{htmlelement("cite")}} à coté de l'élément citation. Cet élément est vraiment destiné à contenir le nom de la source de la citation — c'est-à-dire le nom du livre ou de la personne auteur de la citation — mais il n'y a aucune raison pour laquelle vous n'avez pas pu lier le texte à l'intérieur de <code>&lt;cite&gt;</code> à la source de la citation d'une manière ou d'une autre :</p>
+<p>Le contenu de l'attribut {{htmlattrxref("cite","blockquote")}} semble utile, malheureusement les navigateurs, lecteurs d'écran, etc. n'en font pas grand chose. Il n'y a pas possibilité de faire afficher différemment au navigateur le contenu d'un <code>cite</code> sans utiliser votre propre JavaScript ou style CSS. Si vous souhaitez rendre disponible la source de la citation sur votre page, la meilleure façon de le faire est d'inclure l'élément {{htmlelement("cite")}} à coté de l'élément citation. Cet élément est vraiment destiné à contenir le nom de la source de la citation — c'est-à-dire le nom du livre ou de la personne auteur de la citation — mais il n'y a aucune raison pour laquelle vous n'avez pas pu lier le texte à l'intérieur de <code>&lt;cite&gt;</code> à la source de la citation d'une manière ou d'une autre :</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Selon la &lt;a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/blockquote"&gt;
+<pre class="brush: html notranslate">&lt;p&gt;Selon la &lt;a href="/fr/docs/Web/HTML/Element/blockquote"&gt;
 &lt;cite&gt;page blockquote du MDN&lt;/cite&gt;&lt;/a&gt;:
 &lt;/p&gt;
 
 &lt;p&gt;L'&lt;strong&gt;Élément HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;&lt;/strong&gt; (ou &lt;em&gt;Élément HTML bloc de citation&lt;/em&gt;)
    indique que le bloc de texte inclus est une citation étendue.&lt;/p&gt;
 
-&lt;p&gt;L'élément citation — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — est &lt;q cite="https://developer.mozilla.org/fr/docs/Web/HTML/Element/q"&gt;prévu
+&lt;p&gt;L'élément citation — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — est &lt;q cite="/fr/docs/Web/HTML/Element/q"&gt;prévu
    pour de courtes citations ne nécessitant pas un nouvel alinéa&lt;/q&gt;.&lt;/p&gt;
- — &lt;a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/q"&gt;
+ — &lt;a href="/fr/docs/Web/HTML/Element/q"&gt;
 &lt;cite&gt;page q du MDN&lt;/cite&gt;&lt;/a&gt;.&lt;/p&gt;</pre>
 
 <p>Les citations sont affichées avec un police italique par défaut. Vous pouvez voir l'affichage de ce code dans l'exemple <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/quotations.html">quotations.html</a>.</p>
@@ -561,7 +561,7 @@ textarea.onkeyup = function(){
   &lt;p&gt;Chris Mills, Manchester, The Grim North, UK&lt;/p&gt;
 &lt;/address&gt;</pre>
 
-<p>Une chose à retenir cependant : l'élément {{htmlelement("address")}} est destiné à marquer les coordonnées de la personne ayant écrit le document HTML et non pas <em>n'importe quelle</em> adresse. Donc, ce qui précède ne serait acceptable que si Chris avait écrit le document sur lequel ce balisage apparaît. Notez que serait également acceptable ce qui suit :</p>
+<p>Une chose à retenir cependant : l'élément {{htmlelement("address")}} est destiné à marquer les coordonnées de la personne ayant écrit le document HTML et non pas <em>n'importe quelle</em> adresse. Donc, ce qui précède ne serait acceptable que si Chris avait écrit le document sur lequel ce balisage apparaît. Notez que serait également acceptable ce qui suit :</p>
 
 <pre class="brush: html notranslate">&lt;address&gt;
   &lt;p&gt;Page écrite par &lt;a href="../authors/chris-mills/"&gt;Chris Mills&lt;/a&gt;.&lt;/p&gt;
@@ -589,7 +589,7 @@ textarea.onkeyup = function(){
 
 <ul>
  <li>{{htmlelement("code")}} : pour marquer des parties génériques de code.</li>
- <li>{{htmlelement("pre")}} : pour conserver les blancs (généralement dans les blocs de code) — si vous indentez ou mettez des blancs en excès  dans votre texte, les navigateurs les ignoreront et vous ne les verrez plus dans le rendu de la page. Par contre si vous enveloppez le texte dans des balises &lt;pre&gt;&lt;/pre&gt;, les blancs seront rendus tels qu'il se présentent dans votre éditeur de texte.</li>
+ <li>{{htmlelement("pre")}} : pour conserver les blancs (généralement dans les blocs de code) — si vous indentez ou mettez des blancs en excès dans votre texte, les navigateurs les ignoreront et vous ne les verrez plus dans le rendu de la page. Par contre si vous enveloppez le texte dans des balises &lt;pre&gt;&lt;/pre&gt;, les blancs seront rendus tels qu'il se présentent dans votre éditeur de texte.</li>
  <li>{{htmlelement("var")}} : pour marquer spécifiquement les noms de variables.</li>
  <li>{{htmlelement("kbd")}} : pour marquer les touches de clavier (et autres types d'entrées) à presser sur l'ordinateur.</li>
  <li>{{htmlelement("samp")}} : pour marquer une sortie de programme.</li>
@@ -664,7 +664,7 @@ para.onclick = function() {
 
 
 
-<p>Nous voici arrivés à la fin de notre étude de la sémantique des textes en HTML. N'oubliez pas que ce qui précède ne constitue pas la liste exhaustive des éléments texte en HTML — nous avons essayé de couvrir essentiellement les plus courants dans la nature ou du moins ceux que nous avons pensé intéressants. Pour en voir plus, jetez un coup d'oeil à notre <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element">Référence des éléments HTML</a> (la section <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element#Inline_text_semantics">sémantique de texte en ligne</a> serait un bon point de départ.) Dans l'article suivant, nous examinerons les éléments HTML à utiliser pour structurer les diverses parties d'un document HTML.</p>
+<p>Nous voici arrivés à la fin de notre étude de la sémantique des textes en HTML. N'oubliez pas que ce qui précède ne constitue pas la liste exhaustive des éléments texte en HTML — nous avons essayé de couvrir essentiellement les plus courants dans la nature ou du moins ceux que nous avons pensé intéressants. Pour en voir plus, jetez un coup d'oeil à notre <a href="/fr/docs/Web/HTML/Element">Référence des éléments HTML</a> (la section <a href="/fr/docs/Web/HTML/Element#inline_text_semantics">sémantique de texte en ligne</a> serait un bon point de départ.) Dans l'article suivant, nous examinerons les éléments HTML à utiliser pour structurer les diverses parties d'un document HTML.</p>
 
 <p>{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks", "Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML")}}</p>
 
@@ -672,12 +672,12 @@ para.onclick = function() {
 
 <ul>
  <li><a href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started">Commencer avec le HTML</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/The_head_metadata_in_HTML">Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/HTML_text_fundamentals">Fondamentaux du texte HTML</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks">Création d'hyperliens</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">Fondamentaux du texte HTML</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Création d'hyperliens</a></li>
  <li>Formatage avancé du texte</li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Document_and_website_structure">Structure de Site Web et de document</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Debugging_HTML">Déboguer de l'HTML</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Marking_up_a_letter">Faire une lettre</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Structuring_a_page_of_content">Structurer une page de contenu</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">Structure de Site Web et de document</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Déboguer de l'HTML</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter">Faire une lettre</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content">Structurer une page de contenu</a></li>
 </ul>

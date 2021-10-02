@@ -4,33 +4,31 @@ slug: Web/API/StyleSheet/parentStyleSheet
 translation_of: Web/API/StyleSheet/parentStyleSheet
 ---
 <div>
-<div><font><font>{{APIRef ("CSSOM")}}</font></font></div>
+<div>{{APIRef ("CSSOM")}}</div>
 </div>
 
-<h2 id="Summary" name="Summary"><font><font>Résumé</font></font></h2>
+<p>Renvoie la feuille de style qui inclut celle-ci, le cas échéant.</p>
 
-<p><font><font>Renvoie la feuille de style qui inclut celle-ci, le cas échéant.</font></font></p>
+<h2 id="Syntax">Syntaxe</h2>
 
-<h2 id="Syntax" name="Syntax"><font><font>Syntaxe</font></font></h2>
+<pre class="syntaxbox"><em>ObjRef</em> = stylesheet.parentStyleSheet
+</pre>
 
-<pre class="syntaxbox"><em><font><font>ObjRef</font></font></em><font><font> = stylesheet.parentStyleSheet
-</font></font></pre>
+<h2 id="Example">Exemple</h2>
 
-<h2 id="Example" name="Example"><font><font>Exemple</font></font></h2>
+<pre class="brush:js">// trouve la feuille de style de niveau supérieur
+If (stylesheet.parentStyleSheet) {
+    Feuille = stylesheet.parentStyleSheet;
+} autre {
+    Feuille = feuille de style;
+}</pre>
 
-<pre class="brush:js"><font><font>// trouve la feuille de style de niveau supérieur</font></font><font><font>
-If (stylesheet.parentStyleSheet) {</font></font><font><font>
-    Feuille = stylesheet.parentStyleSheet;</font></font><font><font>
-} autre {</font></font><font><font>
-    Feuille = feuille de style;</font></font><font><font>
-}</font></font></pre>
+<h2 id="Notes">Remarques</h2>
 
-<h2 id="Notes" name="Notes"><font><font>Remarques</font></font></h2>
+<p>Cette propriété renvoie NULL est la feuille de style actuelle est une feuille de style de haut niveau ou si l'inclusion de la feuille de style n'est pas prise en charge.</p>
 
-<p><font><font>Cette propriété renvoie NULL est la feuille de style actuelle est une feuille de style de haut niveau ou si l'inclusion de la feuille de style n'est pas prise en charge.</font></font></p>
-
-<h2 id="Specification" name="Specification"><font><font>spécification</font></font></h2>
+<h2 id="Specification">spécification</h2>
 
 <ul>
- <li><a class="external" href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-parentStyleSheet"><font><font>ParentStyleSheet </font></font></a></li>
+ <li><a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-parentStyleSheet">ParentStyleSheet </a></li>
 </ul>

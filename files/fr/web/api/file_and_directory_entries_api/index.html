@@ -15,27 +15,27 @@ original_slug: Web/API/API_fichier_systeme
 <p>L'API asynchrone a les interfaces suivantes :</p>
 
 <ul>
- <li><a href="/en/DOM/File_API/File_System_API/LocalFileSystem" title="en/DOM/File_API/File_System_API/LocalFileSystem">LocalFileSystem</a> a deux méthodes globales qui vous permet d'avoir accès à un espace virtuel : requestFileSystem() et resolveLocalFileSystemURL().  Les méthodes sont implémentées par l'objet <a href="/fr/docs/window">window</a> et le worker global scope.</li>
- <li><a href="/en/DOM/File_API/File_System_API/FileSystem" title="en/DOM/File_API/File_system_API/FileSystem">FileSystem</a> représente un fichier système. L'objet est la passerelle à votre API toute entière.</li>
- <li><a href="/en/DOM/File_API/File_System_API/Entry" title="en/DOM/File_API/File_system_API/Entry">Entry</a> représente une entrée dans un fichier système. L'entrée peut être un fichier ou un dossier.</li>
- <li><a href="/en/DOM/File_API/File_System_API/DirectoryEntry" title="en/DOM/File_API/File_system_API/DirectoryEntry">DirectoryEntry</a> représente un dossier dans un fichier système.</li>
- <li><a href="/en/DOM/File_API/File_System_API/DirectoryReader" title="en/DOM/File_API/File_system_API/DirectoryReader">DirectoryReader</a> vous permet la lecture de fichiers et dossiers à partir d'un dossier.</li>
- <li><a href="/en/DOM/File_API/File_System_API/FileEntry" title="en/DOM/File_API/File_system_API/FileEntry">FileEntry</a> représente un fichier dans un fichier système.</li>
- <li><a href="/en/DOM/File_API/File_System_API/FileError" title="en/DOM/File_API/File_system_API/FileError">FileError</a> est une erreur que vous pourriez rencontrer pendant l'utilisation des méthodes asynchrones.</li>
+ <li><a href="/en/DOM/File_API/File_System_API/LocalFileSystem">LocalFileSystem</a> a deux méthodes globales qui vous permet d'avoir accès à un espace virtuel : requestFileSystem() et resolveLocalFileSystemURL().  Les méthodes sont implémentées par l'objet <a href="/fr/docs/window">window</a> et le worker global scope.</li>
+ <li><a href="/en/DOM/File_API/File_System_API/FileSystem">FileSystem</a> représente un fichier système. L'objet est la passerelle à votre API toute entière.</li>
+ <li><a href="/en/DOM/File_API/File_System_API/Entry">Entry</a> représente une entrée dans un fichier système. L'entrée peut être un fichier ou un dossier.</li>
+ <li><a href="/en/DOM/File_API/File_System_API/DirectoryEntry">DirectoryEntry</a> représente un dossier dans un fichier système.</li>
+ <li><a href="/en/DOM/File_API/File_System_API/DirectoryReader">DirectoryReader</a> vous permet la lecture de fichiers et dossiers à partir d'un dossier.</li>
+ <li><a href="/en/DOM/File_API/File_System_API/FileEntry">FileEntry</a> représente un fichier dans un fichier système.</li>
+ <li><a href="/en/DOM/File_API/File_System_API/FileError">FileError</a> est une erreur que vous pourriez rencontrer pendant l'utilisation des méthodes asynchrones.</li>
 </ul>
 
 <h2 id="API_synchrone">API synchrone</h2>
 
-<p>L'API synchrone est utile avec les <a href="/En/Using_web_workers" rel="internal" title="https://developer.mozilla.org/En/Using_web_workers">WebWorkers</a>. Contrairement à l'API asynchrone, l'API synchrone n'utilise pas les callbacks parce que les méthodes de l'API retournent des valeurs.</p>
+<p>L'API synchrone est utile avec les <a href="/En/Using_web_workers">WebWorkers</a>. Contrairement à l'API asynchrone, l'API synchrone n'utilise pas les callbacks parce que les méthodes de l'API retournent des valeurs.</p>
 
 <ul>
- <li><a href="/en/DOM/File_API/File_System_API/LocalFileSystemSync" title="en/DOM/File_API/File_System_API/LocalFileSystemSync">LocalFileSystemSync</a> a deux méthodes globales qui vous permet d'avoir accès à un espace virtuel : requestFileSystemSync() et resolveLocalFileSystemSyncURL(). Les méthodes sont implémentées par l'objet worker.</li>
- <li><a href="/en/DOM/File_API/File_System_API/FileSystemSync" title="en/DOM/File_API/File_system_API/FileSystemSync">FileSystemSync</a> représente un fichier système.</li>
- <li><a href="/en/DOM/File_API/File_System_API/EntrySync" title="en/DOM/File_API/File_system_API/EntrySync">EntrySync</a> représente une entrée dans un fichier système. L'entrée peut être un fichier ou un dossier.</li>
- <li><a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync" title="en/DOM/File_API/File_system_API/DirectoryEntrySync">DirectoryEntrySync</a> représente un dossier dans un fichier système.</li>
- <li><a href="/en/DOM/File_API/File_System_API/DirectoryReaderSync" title="en/DOM/File_API/File_system_API/DirectoryReaderSync">DirectoryReaderSync</a>  vous permet la lecture de fichiers et dossiers à partir d'un dossier.</li>
- <li><a href="/en/DOM/File_API/File_System_API/FileEntrySync" title="en/DOM/File_API/File_system_API/FileEntrySync">FileEntrySync</a> représente un fichier dans un fichier système.</li>
- <li><a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_system_API/FileException">FileException</a> est une erreur que vous pourriez rencontrer pendant l'utilisation des méthodes synchrones.</li>
+ <li><a href="/en/DOM/File_API/File_System_API/LocalFileSystemSync">LocalFileSystemSync</a> a deux méthodes globales qui vous permet d'avoir accès à un espace virtuel : requestFileSystemSync() et resolveLocalFileSystemSyncURL(). Les méthodes sont implémentées par l'objet worker.</li>
+ <li><a href="/en/DOM/File_API/File_System_API/FileSystemSync">FileSystemSync</a> représente un fichier système.</li>
+ <li><a href="/en/DOM/File_API/File_System_API/EntrySync">EntrySync</a> représente une entrée dans un fichier système. L'entrée peut être un fichier ou un dossier.</li>
+ <li><a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> représente un dossier dans un fichier système.</li>
+ <li><a href="/en/DOM/File_API/File_System_API/DirectoryReaderSync">DirectoryReaderSync</a>  vous permet la lecture de fichiers et dossiers à partir d'un dossier.</li>
+ <li><a href="/en/DOM/File_API/File_System_API/FileEntrySync">FileEntrySync</a> représente un fichier dans un fichier système.</li>
+ <li><a href="/en/DOM/File_API/File_System_API/FileException">FileException</a> est une erreur que vous pourriez rencontrer pendant l'utilisation des méthodes synchrones.</li>
 </ul>
 
 <h2 id="Compatibilité_navigateur">Compatibilité navigateur</h2>

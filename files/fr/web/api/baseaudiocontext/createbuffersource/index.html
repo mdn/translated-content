@@ -5,7 +5,9 @@ translation_of: Web/API/BaseAudioContext/createBufferSource
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p><span class="seoSummary">La méthode <code>createBufferSource()</code> de l’interface {{ domxref("BaseAudioContext") }} est utilisée pour créer un nouveau {{ domxref("AudioBufferSourceNode") }}, qui peut être employé pour jouer des données audio contenues dans un objet {{ domxref("AudioBuffer") }}.</span> Des {{ domxref("AudioBuffer") }} peuvent être créés en utilisant {{domxref("BaseAudioContext.createBuffer")}}, ou sont retournés par la méthode {{domxref("BaseAudioContext.decodeAudioData")}} quand elle a terminé de décoder une piste audio avec succès.</p>
+<p>La méthode <code>createBufferSource()</code> de l’interface {{ domxref("BaseAudioContext") }} est utilisée pour créer un nouveau {{ domxref("AudioBufferSourceNode") }}, qui peut être employé pour jouer des données audio contenues dans un objet {{ domxref("AudioBuffer") }}.</p>
+
+<p>Des {{ domxref("AudioBuffer") }} peuvent être créés en utilisant {{domxref("BaseAudioContext.createBuffer")}}, ou sont retournés par la méthode {{domxref("BaseAudioContext.decodeAudioData")}} quand elle a terminé de décoder une piste audio avec succès.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -20,10 +22,10 @@ translation_of: Web/API/BaseAudioContext/createBufferSource
 <p>Dans cet exemple, on crée un tampon de deux secondes, on le remplit avec du bruit blanc, puis on le joue via un {{ domxref("AudioBufferSourceNode") }}. Les commentaires devraient expliquer clairement ce qui se passe.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Vous pouvez également <a href="https://mdn.github.io/webaudio-examples/audio-buffer/" lang="en-US">exécuter le code en direct</a>, ou <a href="https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html" lang="en-US">voir la source</a>.</p>
+<p><strong>Note :</strong> Vous pouvez également <a href="https://mdn.github.io/webaudio-examples/audio-buffer/">exécuter le code en direct</a>, ou <a href="https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html">voir la source</a>.</p>
 </div>
 
-<pre class="brush: js;highlight[31]">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var button = document.querySelector('button');
 var pre = document.querySelector('pre');
 var myScript = document.querySelector('script');
@@ -87,5 +89,5 @@ button.onclick = function() {
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API" lang="fr">Utiliser la Web Audio API</a></li>
+ <li><a href="/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Utiliser la Web Audio API</a></li>
 </ul>

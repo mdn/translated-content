@@ -34,7 +34,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 </dl>
 
 <div class="note">
-<p><strong>Note</strong> : La première syntaxe utilisant les paramètres supplémentaires ne fonctionne pas pour Internet Explorer 9 et les versions antérieures. Si vous souhaitez obtenir cette fonctionnalité pour ce navigateur, vous devrez utiliser une prothèse, <a href="#polyfill">voir ci-après</a>.</p>
+<p><strong>Note :</strong> La première syntaxe utilisant les paramètres supplémentaires ne fonctionne pas pour Internet Explorer 9 et les versions antérieures. Si vous souhaitez obtenir cette fonctionnalité pour ce navigateur, vous devrez utiliser une prothèse, <a href="#polyfill">voir ci-après</a>.</p>
 </div>
 
 <h3 id="Valeur_de_retour">Valeur de retour</h3>
@@ -85,7 +85,7 @@ function clearAlert() {
 <p><strong>Note :</strong> Voir aussi les exemples pour <a href="/fr/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout#Exemples"><code>clearTimeout()</code></a>.</p>
 </div>
 
-<h2 id="Prothèse_d'émulation_(polyfill)"><a name="polyfill">Prothèse d'émulation (<em>polyfill</em>)</a></h2>
+<h2 id="Prothèse_d'émulation_(polyfill)">Prothèse d'émulation (<em>polyfill</em>)</h2>
 
 <p>S'il vous faut passer un ou plusieurs arguments à la fonction de rappel tout en prenant en charge Internet Explorer 9 et les versions antérieures, vous pouvez utiliser cette prothèse qui ajoute la prise en charge des paramètres additionnels :</p>
 
@@ -217,7 +217,9 @@ setTimeout.call(monTableau, monTableau.maMéthode, 2500, 2);
 
 <h3 id="Solutions_éventuelles">Solutions éventuelles</h3>
 
-<p class="note"><strong>Note</strong>: JavaScript 1.8.5 introduced the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind()</a></code> method to set the value of <code>this</code> for all calls to a given function. This can avoid having to use a wrapper function to set the value of <code>this</code> in a callback.</p>
+<div class="note">
+  <p><strong>Note :</strong> JavaScript 1.8.5 introduced the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind()</a></code> method to set the value of <code>this</code> for all calls to a given function. This can avoid having to use a wrapper function to set the value of <code>this</code> in a callback.</p>
+</div>
 
 <p>Exemple d'utilisation :</p>
 
@@ -254,7 +256,7 @@ window.setTimeout("console.log('Coucou monde !');", 500);
 
 <p>Une chaîne de caractères passée à <code>setTimeout</code> sera évaluée dans le contexte global. Aussi, les symboles locaux au contexte de l'appel de <code>setTimeout()</code> ne seront pas accessibles au code présent dans la chaîne de caractères lors de son évaluation.</p>
 
-<h3 id="Durée_plus_longue_que_le_paramètre_indiquée"><a id="durée" name="durée">Durée plus longue que le paramètre indiquée</a></h3>
+<h3 id="Durée_plus_longue_que_le_paramètre_indiquée">Durée plus longue que le paramètre indiquée</h3>
 
 <p>Plusieurs raisons peuvent expliquer une durée réelle plus longue que le délai passé en argument. Voici les plus fréquentes.</p>
 
@@ -262,30 +264,30 @@ window.setTimeout("console.log('Coucou monde !');", 500);
 
 <p>Dans les navigateurs récents les appels à <code>setTimeout()/</code>{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}} possèdent au plus une précision de 4ms lorsque plusieurs appels imbriqués sont réalisés. Par exemple :</p>
 
-<pre class="brush: js" id="ct-0">function cb() { f(); setTimeout(cb, 0); }
+<pre class="brush: js">function cb() { f(); setTimeout(cb, 0); }
 setTimeout(cb, 0);</pre>
 
 <pre class="brush: js">setInterval(f, 0);</pre>
 
 <p>Pour Chrome et Firefox, la limitation est active à partir du cinquième appel de fonction de rappel,  Safari active la limitation à partir du sixième et Edge à partir du troisième. Gecko traite <code>setInterval()</code> de la même façon depuis la <a href="/fr/docs/Mozilla/Firefox/Releases/56">version 56</a>.</p>
 
-<p><a class="external" href="http://code.google.com/p/chromium/issues/detail?id=792#c10">Par le passé</a>, certains navigateurs implémentaient cette limite différemment (pour les appels à <code>setInterval()</code> quelle que soit leur provenance ou lorsqu'un appel <code>setTimeout()</code> était imbriqué dans un autre pour un certain nombre de niveaux d'imbrication.</p>
+<p><a href="http://code.google.com/p/chromium/issues/detail?id=792#c10">Par le passé</a>, certains navigateurs implémentaient cette limite différemment (pour les appels à <code>setInterval()</code> quelle que soit leur provenance ou lorsqu'un appel <code>setTimeout()</code> était imbriqué dans un autre pour un certain nombre de niveaux d'imbrication.</p>
 
 <p>Pour implémenter un minuteur de 0ms, on pourra utiliser {{domxref("window.postMessage()")}}.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Le délai minimal est géré dans Firefox via une préférence : <code>dom.min_timeout_value</code>.</p>
+<p><strong>Note :</strong> Le délai minimal est géré dans Firefox via une préférence : <code>dom.min_timeout_value</code>.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong> : Cette durée de 4 ms est <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">définie dans la spécification HTML5</a> et est la même dans l'ensemble des navigateurs à partir de 2010. Avant {{geckoRelease("5.0")}}, la valeur minimale pour les appels imbriqués était 10ms.</p>
+<p><strong>Note :</strong> Cette durée de 4 ms est <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">définie dans la spécification HTML5</a> et est la même dans l'ensemble des navigateurs à partir de 2010. Avant {{geckoRelease("5.0")}}, la valeur minimale pour les appels imbriqués était 10ms.</p>
 </div>
 
 <h4 id="Précision_minimale_des_minuteurs_pour_les_onglets_inactifs_plus_de_1000ms">Précision minimale des minuteurs pour les onglets inactifs : plus de 1000ms</h4>
 
 <p>Afin de réduire la charge (ainsi que la consommation d'énergie associée) des onglets en arrière-plan, les minuteurs ne sont déclenchés au maximum qu'une fois par seconde pour les onglets inactifs.</p>
 
-<p>Firefox implémente ce comportement depuis Firefox 5 (cf.  {{bug(633421)}}) et la valeur du seuil de 1000ms peut être paramétrée via la préférence <span class="comment-copy"><code>dom.min_background_timeout_value</code>.</span> Chrome implémente ce comportement depuis la version 11 (<a class="external" href="http://crbug.com/66078">crbug.com/66078</a>).</p>
+<p>Firefox implémente ce comportement depuis Firefox 5 (cf.  {{bug(633421)}}) et la valeur du seuil de 1000ms peut être paramétrée via la préférence <code>dom.min_background_timeout_value</code>. Chrome implémente ce comportement depuis la version 11 (<a href="http://crbug.com/66078">crbug.com/66078</a>).</p>
 
 <p>Firefox pour Android utilise un minimum de 15 minutes depuis Firefox 14 (cf.  {{bug(736602)}}) et les onglets en arrière-plan peuvent être déchargés complètement.</p>
 

@@ -16,7 +16,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Utilisation_de_base
 
 <p>Commençons par regarder l'élément {{HTMLElement("canvas")}} lui-même.</p>
 
-<pre class="brush: html notranslate">&lt;canvas id="tutoriel" width="150" height="150"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="tutoriel" width="150" height="150"&gt;&lt;/canvas&gt;
 </pre>
 
 <p>Ceci ressemble beaucoup à l'élément &lt;img&gt;. La seule différence est qu'il n'y a pas les attributs <code>src</code> et <code>alt</code>. L'élément <code>&lt;canvas&gt;</code> a seulement deux attributs : {{htmlattrxref ("width", "canvas")}} et {{htmlattrxref ("height", "canvas")}} (« largeur » et « hauteur »). Ces deux attributs sont optionnels et peuvent aussi être fixés à travers le <a href="/fr/docs/R%C3%A9f%C3%A9rence_du_DOM_Gecko">DOM</a>. Quand les attributs <strong>width</strong> et <strong>height</strong> ne sont pas spécifiés, le canvas sera initialement large de <strong>300 pixels</strong> et haut de <strong>150 pixels</strong>. Les dimensions du canvas peuvent être modifiés par du <a href="/fr/docs/Web/CSS">CSS</a>, mais l'image sera dessinée selon les valeurs <strong>width</strong> et <strong>height</strong> du canvas et ensuite étirée pour afficher dans l'espace donné par le CSS.</p>
@@ -29,7 +29,6 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Utilisation_de_base
 
 <p>L'élément <code>&lt;canvas&gt;</code> peut être stylisé comme n'importe quelle image normale (marges, contours, arrière-plan, etc). Si aucun style n'est donné, le canvas sera par défaut complètement transparent. Il faut noter que peu importe quels styles sont utilisés, le style n'affectera pas l'acte de dessiner sur le canvas. Nous verrons en détail la stylisation des canvas plus tard dans ce tutoriel.</p>
 
-<div id="section_2">
 <h3 id="Contenu_de_repli">Contenu de repli</h3>
 
 <p>Puisque certains plus anciens navigateurs ne supportent pas l'élément {{HTMLElement("canvas")}} (les plus communs étant les versions d'Internet Explorer avant la version 9), il est mieux d'avoir du contenu de repli pour afficher.</p>
@@ -38,7 +37,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Utilisation_de_base
 
 <p>Le contenu de repli pourrait, par exemple, donner une description texte du canvas, ou afficher une image fixe comme aperçu de ce que le canvas dessinerait de façon dynamique.</p>
 
-<pre class="brush: html  notranslate">&lt;canvas id="stockGraph" width="150" height="150"&gt;
+<pre class="brush: html ">&lt;canvas id="stockGraph" width="150" height="150"&gt;
   current stock price: $3.15 + 0.15
 &lt;/canvas&gt;
 
@@ -58,21 +57,20 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Utilisation_de_base
 
 <h2 id="Le_contexte_de_rendu">Le contexte de rendu</h2>
 
-<p>L'élément {{HTMLElement("canvas")}} crée une surface pour dessiner à grandeur fixe. Cette surface expose un ou plusieurs <strong>contextes de rendu</strong>, qui sont utilisés pour créer et manipuler le contenu affiché. Ce tutoriel se concentrera sur le contexte de rendu 2D. D'autres contextes permettent d'autres types de rendu, tel que le contexte <a href="/fr/docs/Web/WebGL">WebGL</a>, qui utilise un contexte 3D ("experimental-webgl") inspiré de <a class="external" href="http://www.khronos.org/opengles/" rel="external" title="http://en.wikipedia.org/wiki/OpenGL_ES">OpenGL ES</a>.</p>
+<p>L'élément {{HTMLElement("canvas")}} crée une surface pour dessiner à grandeur fixe. Cette surface expose un ou plusieurs <strong>contextes de rendu</strong>, qui sont utilisés pour créer et manipuler le contenu affiché. Ce tutoriel se concentrera sur le contexte de rendu 2D. D'autres contextes permettent d'autres types de rendu, tel que le contexte <a href="/fr/docs/Web/WebGL">WebGL</a>, qui utilise un contexte 3D ("experimental-webgl") inspiré de <a href="http://www.khronos.org/opengles/">OpenGL ES</a>.</p>
 
 <p>Initialement, le canvas est vide. Pour afficher quelque chose,  un script doit commencer par accéder au contexte de rendu pour pouvoir dessiner dessus. L'élément {{HTMLElement("canvas")}} a une <a href="/fr/docs/Web/API/HTMLCanvasElement#M.C3.A9thodes">méthode</a> nommée <code>getContext()</code>, qui peut être utilisée pour obtenir le contexte de rendu et ses fonctions de dessin. <code>getContext()</code> a comme seul paramètre le type de contexte. Pour des graphiques 2D, comme ceux utilisés dans ce tutoriel, il faut spécifier "2d".</p>
 
-<pre class="brush: js notranslate">var canvas = document.getElementById('tutorial');
+<pre class="brush: js">var canvas = document.getElementById('tutorial');
 var ctx = canvas.getContext('2d');</pre>
 
 <p>La première ligne obtient le {{HTMLElement("canvas")}} dans le DOM en appelant {{domxref("document.getElementById()")}}. Lorsque nous avons l'élément canvas, nous pouvons accéder au contexte de rendu en utilisant sa méthode <code>getContext()</code>.</p>
 
-<div id="section_5">
 <h2 id="Vérification_de_la_prise_en_charge">Vérification de la prise en charge</h2>
 
 <p>Le contenu de repli est affiché dans les navigateurs qui ne prennent pas en charge l'élément {{HTMLElement("canvas")}}. Les scripts peuvent aussi vérifier la prise en charge de manière programmatique en vérifiant la présence de la méthode <code>getContext()</code>. Notre extrait de code ci-dessus se transforme donc en ceci :</p>
 
-<pre class="brush: js notranslate">var canvas = document.getElementById('tutorial');
+<pre class="brush: js">var canvas = document.getElementById('tutorial');
 
 if (canvas.getContext) {
   var ctx = canvas.getContext('2d');
@@ -80,14 +78,13 @@ if (canvas.getContext) {
 } else {
   // code pour le cas où canvas ne serait pas supporté
 }</pre>
-</div>
-</div>
+
 
 <h2 id="Un_modèle_basique">Un modèle basique</h2>
 
 <p>Voici un modèle minimaliste, que nous allons utiliser comme point de départ dans des futurs exemples.</p>
 
-<pre class="brush: html  notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html ">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"/&gt;
@@ -119,7 +116,7 @@ if (canvas.getContext) {
 
 <p>Pour commencer, observons un exemple simple qui dessine deux rectangles qui s'intersectent, un d'entre eux ayant de la transparence alpha. Nous verrons plus en détail comment ça marche dans les exemples suivants.</p>
 
-<pre class="brush: html  notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html ">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
  &lt;head&gt;
   &lt;meta charset="utf-8"/&gt;
@@ -145,6 +142,6 @@ if (canvas.getContext) {
 
 <p>Cet exemple ressemble a ceci :</p>
 
-<p>{{EmbedLiveSample("Un_exemple_simple", 160, 160, "https://mdn.mozillademos.org/files/228/canvas_ex1.png")}}</p>
+<p>{{EmbedLiveSample("Un_exemple_simple", 160, 160, "canvas_ex1.png")}}</p>
 
 <p>{{PreviousNext("Tutoriel_canvas", "Tutoriel_canvas/Formes_géométriques")}}</p>

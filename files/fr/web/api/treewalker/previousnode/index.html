@@ -13,12 +13,12 @@ translation_of: Web/API/TreeWalker/previousNode
 
 <p>La méthode <strong><code>TreeWalker.previousNode()</code></strong> déplace le {{domxref("Node")}} courant vers le noeud précédent <em>visible</em> dans l'ordre du document et renvoie le noeud trouvé. Elle déplace aussi le noeud courant vers celui-ci. S'il n'en existe aucun ou s'il est avant le <em>noeud racine</em> défini lors de la construction de l'objet, elle renvoie <code>null</code> et le noeud actuel n'est pas changé.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><em>node</em> = <em>treeWalker</em>.previousNode();
 </pre>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush: js">var treeWalker = document.createTreeWalker(
     document.body,
@@ -30,7 +30,7 @@ var node = treeWalker.previousNode(); // renvoie null car il n'y a pas de parent
 
 </pre>
 
-<h2 id="Specification" name="Specification">Spécifications</h2>
+<h2 id="Specification">Spécifications</h2>
 
 <table class="standard-table">
  <tbody>

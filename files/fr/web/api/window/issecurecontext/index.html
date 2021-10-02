@@ -15,7 +15,7 @@ translation_of: Web/API/Window/isSecureContext
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">var <em>isSecure</em> = window.isSecureContext</pre>
+<pre class="syntaxbox">var <em>isSecure</em> = window.isSecureContext</pre>
 
 <h2 id="Exemples">Exemples</h2>
 
@@ -23,7 +23,7 @@ translation_of: Web/API/Window/isSecureContext
 
 <p>Vous pouvez utiliser la détection des fonctionnalités pour vérifier si elles sont dans un contexte sécurisé ou non à l'aide du booléen <code>isSecureContext</code> qui est exposé sur la portée globale.</p>
 
-<pre class="brush: js notranslate">if (window.isSecureContext) {
+<pre class="brush: js">if (window.isSecureContext) {
   // La page est un contexte sécurisé afin que les techniciens de service soient désormais disponibles
   navigator.serviceWorker.register("/offline-worker.js").then(function () {
     ...

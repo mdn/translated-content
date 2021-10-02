@@ -11,39 +11,39 @@ translation_of: Web/API/URL
 
 <p>L'interface <strong><code>URL</code></strong><strong> </strong>représente un objet qui fournit des méthodes statiques utilisées pour créer des URL d'objet.</p>
 
-<p><span id="result_box" lang="fr"><span>Lors de l'utilisation d'un agent utilisateur dans lequel aucun constructeur n'a encore été implémenté, il est possible d'accéder à un objet en utilisant les propriétés</span></span> {{domxref("Window.URL")}} (préfixées sur un navigateur basé sur Webkit tel que <code>Window.webkitURL</code>).</p>
+<p>Lors de l'utilisation d'un agent utilisateur dans lequel aucun constructeur n'a encore été implémenté, il est possible d'accéder à un objet en utilisant les propriétés {{domxref("Window.URL")}} (préfixées sur un navigateur basé sur Webkit tel que <code>Window.webkitURL</code>).</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Utilisation">Utilisation</h2>
 
-<p>Le constructeur <span id="result_box" lang="fr"><span>prend un paramètre url et un paramètre de base facultatif à utiliser comme base si le paramètre url est une URL relative :</span></span></p>
+<p>Le constructeur prend un paramètre url et un paramètre de base facultatif à utiliser comme base si le paramètre url est une URL relative :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> url <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">URL</span><span class="punctuation token">(</span><span class="string token">'../cats'</span><span class="punctuation token">,</span> <span class="string token">'http://www.example.com/dogs'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>url<span class="punctuation token">.</span>hostname<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// "www.example.com"</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>url<span class="punctuation token">.</span>pathname<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// "/cats"</span></code></pre>
+<pre class="brush: js">const url = new URL('../cats', 'http://www.example.com/dogs');
+console.log(url.hostname); // "www.example.com"
+console.log(url.pathname); // "/cats"</pre>
 
 <p>Les propriétés de l'URL peuvent être définies pour construire l'URL :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">url<span class="punctuation token">.</span>hash <span class="operator token">=</span> <span class="string token">'tabby'</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>url<span class="punctuation token">.</span>href<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// "http://www.example.com/cats#tabby"</span></code></pre>
+<pre class="brush: js">url.hash = 'tabby';
+console.log(url.href); // "http://www.example.com/cats#tabby"</pre>
 
 <p>Les URL seront encodées selon la norme RFC 3986:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">url<span class="punctuation token">.</span>pathname <span class="operator token">=</span> <span class="string token">'démonstration.html'</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>url<span class="punctuation token">.</span>href<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// "http://www.example.com/d%C3%A9monstration.html"</span></code></pre>
+<pre class="brush: js">url.pathname = 'démonstration.html';
+console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"</pre>
 
 <p>L'interface {{domxref("URLSearchParams")}}  peut être utilisée pour construire et manipuler la chaîne de requête de l'URL.</p>
 
-<p><span id="result_box" lang="fr"><span>Pour obtenir les paramètres de recherche à partir de l'URL de la fenêtre en cours :</span></span></p>
+<p>Pour obtenir les paramètres de recherche à partir de l'URL de la fenêtre en cours :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// https://some.site/?id=123</span>
-<span class="keyword token">var</span> parsedUrl <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">URL</span><span class="punctuation token">(</span>window<span class="punctuation token">.</span>location<span class="punctuation token">.</span>href<span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>parsedUrl<span class="punctuation token">.</span>searchParams<span class="punctuation token">.</span><span class="keyword token">get</span><span class="punctuation token">(</span><span class="string token">"id"</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// 123</span></code></pre>
+<pre class="brush: js">// https://some.site/?id=123
+var parsedUrl = new URL(window.location.href);
+console.log(parsedUrl.searchParams.get("id")); // 123</pre>
 
-<p>La méthode <code>stringifier</code> de l' <code>URL</code> est la propriété <code>href</code> , ainsi le constructeur<span id="result_box" lang="fr"><span> peut être utilisé pour normaliser et encoder directement une URL :</span></span></p>
+<p>La méthode <code>stringifier</code> de l' <code>URL</code> est la propriété <code>href</code> , ainsi le constructeur peut être utilisé pour normaliser et encoder directement une URL :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> response <span class="operator token">=</span> <span class="keyword token">await</span> <span class="function token">fetch</span><span class="punctuation token">(</span><span class="keyword token">new</span> <span class="class-name token">URL</span><span class="punctuation token">(</span><span class="string token">'http://www.example.com/démonstration.html'</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">const response = await fetch(new URL('http://www.example.com/démonstration.html'));</pre>
 
 <h2 id="Constructeur">Constructeur</h2>
 
@@ -56,7 +56,7 @@ console<span class="punctuation token">.</span><span class="function token">log<
 
 <dl>
  <dt>{{domxref("URL.hash")}}</dt>
- <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant un <code>'#'</code> <span class="short_text" id="result_box" lang="fr"><span>suivi de l'identifiant du fragment de l'URL.</span></span></dd>
+ <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant un <code>'#'</code> suivi de l'identifiant du fragment de l'URL.</dd>
  <dt>{{domxref("URL.host")}}</dt>
  <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant l'hôte, c'est-à-dire le <em>hostname (nom d'hôte)</em>, <code>':'</code>et le <em>port</em> de l'URL.</dd>
  <dt>{{domxref("URL.hostname")}}</dt>
@@ -67,7 +67,7 @@ console<span class="punctuation token">.</span><span class="function token">log<
 
 <dl>
  <dt>{{domxref("URL.origin")}} {{readonlyInline}}</dt>
- <dd>Retourne une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant l'origine de l'URL, <span class="short_text" id="result_box" lang="fr"><span>c'est son schéma, son domaine et son port</span></span> .</dd>
+ <dd>Retourne une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant l'origine de l'URL, c'est son schéma, son domaine et son port .</dd>
 </dl>
 
 <dl>
@@ -91,19 +91,19 @@ console<span class="punctuation token">.</span><span class="function token">log<
  <dt>{{domxref("URL.search")}}</dt>
  <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant un <code>'?'</code> suivi par les paramètres de l'URL.</dd>
  <dt>{{domxref("URL.searchParams")}}</dt>
- <dd>Retourne un objet {{domxref("URLSearchParams")}}  <span id="result_box" lang="fr"><span>permettant d'accéder aux arguments de requête GET contenus dans l'URL.</span></span></dd>
+ <dd>Retourne un objet {{domxref("URLSearchParams")}}  permettant d'accéder aux arguments de requête GET contenus dans l'URL.</dd>
  <dt>{{domxref("URL.username")}}</dt>
- <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant<span id="result_box" lang="fr"><span> le nom d'utilisateur spécifié avant le nom de domaine.</span></span></dd>
+ <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant le nom d'utilisateur spécifié avant le nom de domaine.</dd>
 </dl>
 
 <h2 id="Méthodes">Méthodes</h2>
 
-<p><em>L'interface <code>URL</code> </em> <span id="result_box" lang="fr"><span>implémente les méthodes définies dans </span></span><em>{{domxref("URLUtils")}}.</em></p>
+<p><em>L'interface <code>URL</code> </em> implémente les méthodes définies dans <em>{{domxref("URLUtils")}}.</em></p>
 
 <dl>
  <dt>{{domxref("URLUtils.toString()")}}</dt>
  <dd>Retourne une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant l'URL entière. C'est un synonyme de {{domxref("URLUtils.href")}}, mais il ne peut pas être utilisé pour modifier la valeur.</dd>
- <dt>{{domxref("URL.toJSON()")}} <sup>[disponible depuis FireFox v54]</sup></dt>
+ <dt>{{domxref("URL.toJSON()")}}</dt>
  <dd>Retourne une {{domxref("DOMString")}}   <em>(chaîne de caractères)</em> contenant l'URL entière. Il retourne la même chaîne que la propriété <code>href</code> .</dd>
 </dl>
 
@@ -111,9 +111,9 @@ console<span class="punctuation token">.</span><span class="function token">log<
 
 <dl>
  <dt>{{ domxref("URL.createObjectURL()") }}</dt>
- <dd>Retourne une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant un "blob URL" unique ; c'est une URL avec <code>blob :</code> <span id="result_box" lang="fr"><span>son schéma suivi d'une chaîne opaque identifiant de manière unique l'objet dans le navigateur.</span></span></dd>
+ <dd>Retourne une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant un "blob URL" unique ; c'est une URL avec <code>blob :</code> son schéma suivi d'une chaîne opaque identifiant de manière unique l'objet dans le navigateur.</dd>
  <dt>{{ domxref("URL.revokeObjectURL()") }}</dt>
- <dd><span id="result_box" lang="fr"><span>Révoque un objet URL précédemment créé avec {{domxref ("URL.createObjectURL ()")}}.</span></span></dd>
+ <dd>Révoque un objet URL précédemment créé avec {{domxref ("URL.createObjectURL ()")}}.</dd>
 </dl>
 
 <h2 id="Spécifications">Spécifications</h2>

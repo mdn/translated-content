@@ -14,7 +14,7 @@ translation_of: Web/API/CanvasRenderingContext2D/createLinearGradient
 
 <p>La méthode <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.createLinearGradient()</code></strong> de l'API Canvas 2D crée un gradient le long de la ligne donnée par les coordonnées représentées par les paramètres.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14681/mdn-canvas-linearGradient.png" style="height: 121px; width: 264px;"></p>
+<p><img alt="" src="mdn-canvas-lineargradient.png"></p>
 
 <p>Cette méthode retourne un {{domxref("CanvasGradient")}} linéaire.</p>
 
@@ -58,7 +58,7 @@ translation_of: Web/API/CanvasRenderingContext2D/createLinearGradient
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[4]">var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 var gradient = ctx.createLinearGradient(0, 0, 200, 0);
@@ -70,10 +70,9 @@ ctx.fillRect(10, 10, 200, 100);
 
 <p>Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel sur le canevas :</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+<h4 id="code_jouable">Code jouable</h4>
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="edit" type="button" value="Edit" /&gt;
   &lt;input id="reset" type="button" value="Reset" /&gt;
@@ -86,7 +85,7 @@ ctx.fillStyle = gradient;
 ctx.fillRect(10,10,200,100);&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -110,9 +109,8 @@ edit.addEventListener("click", function() {
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

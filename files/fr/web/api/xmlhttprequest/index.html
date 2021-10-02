@@ -13,7 +13,9 @@ translation_of: Web/API/XMLHttpRequest
 ---
 <div>{{DefaultAPISidebar("XMLHttpRequest")}}</div>
 
-<p><span class="seoSummary">Les objets <code>XMLHttpRequest</code> (XHR) permettent d'interagir avec des serveurs. On peut récupérer des données à partir d'une URL sans avoir à rafraîchir complètement la page. Cela permet à une page web d'être mise à jour sans perturber les actions de l'utilisateur.</span> <code>XMLHttpRequest</code> est beaucoup utilisé par l'approche {{Glossary("AJAX")}}.</p>
+<p>Les objets <code>XMLHttpRequest</code> (XHR) permettent d'interagir avec des serveurs. On peut récupérer des données à partir d'une URL sans avoir à rafraîchir complètement la page. Cela permet à une page web d'être mise à jour sans perturber les actions de l'utilisateur.</p> 
+
+<p><code>XMLHttpRequest</code> est beaucoup utilisé par l'approche {{Glossary("AJAX")}}.</p>
 
 <p>{{InheritanceDiagram(650, 150)}}</p>
 
@@ -33,23 +35,23 @@ translation_of: Web/API/XMLHttpRequest
 <p><em>Cette interface hérite également des propriétés de {{domxref("XMLHttpRequestEventTarget")}} et de {{domxref("EventTarget")}}.</em></p>
 
 <dl>
- <dt id="xmlhttprequest-onreadystatechange">{{domxref("XMLHttpRequest.onreadystatechange")}}</dt>
+ <dt>{{domxref("XMLHttpRequest.onreadystatechange")}}</dt>
  <dd>Un gestionnaire d'évènement ({{event("Event_handlers", "event handler")}}) invoqué à chaque fois que l'attribut <code>readyState</code> change.</dd>
- <dt id="xmlhttprequest-readystate">{{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}</dt>
  <dd>L'état de la requête sous la forme d'un <code>unsigned short</code>.</dd>
  <dt>{{domxref("XMLHttpRequest.response")}} {{readonlyinline}}</dt>
  <dd>Un objet {{jsxref("ArrayBuffer")}}, {{domxref("Blob")}}, {{domxref("Document")}}, un objet JavaScript ou une chaîne de caractères ({{domxref("DOMString")}}) selon la valeur de {{domxref("XMLHttpRequest.responseType")}}. Cet objet contient le corps de la réponse.</dd>
- <dt id="xmlhttprequest-responsetext">{{domxref("XMLHttpRequest.responseText")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.responseText")}} {{readonlyinline}}</dt>
  <dd>Une chaîne de caractères {{domxref("DOMString")}} qui contient la réponse à la requête sous forme de texte ou la valeur <code>null</code> si la requête a échoué ou n'a pas encore été envoyée.</dd>
- <dt id="xmlhttprequest-responsetype">{{domxref("XMLHttpRequest.responseType")}}</dt>
+ <dt>{{domxref("XMLHttpRequest.responseType")}}</dt>
  <dd>Une valeur parmi une liste qui définit le type de réponse.</dd>
- <dt id="xmlhttprequest-responsexml">{{domxref("XMLHttpRequest.responseURL")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.responseURL")}} {{readonlyinline}}</dt>
  <dd>L'URL sérialisée de la réponse ou la chaîne vide si l'URL est nulle.</dd>
- <dt id="xmlhttprequest-responsexml">{{domxref("XMLHttpRequest.responseXML")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.responseXML")}} {{readonlyinline}}</dt>
  <dd>Un objet {{domxref("Document")}} qui contient la réponse de la requête ou <code>null</code> si la requête a échoué, qu'elle n'a pas encore été envoyée ou qu'elle ne peut pas être analysée comme XML ou HTML. Cette propriété n'est pas disponible dans les <em>workers</em>.</dd>
- <dt id="xmlhttprequest-status">{{domxref("XMLHttpRequest.status")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.status")}} {{readonlyinline}}</dt>
  <dd>Une valeur numérique <code>unsigned short</code> qui décrit le statut de la réponse à la requête.</dd>
- <dt id="xmlhttprequest-statustext">{{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}</dt>
  <dd>Une chaîne {{domxref("DOMString")}} qui contient la chaîne de caractères / réponse renvoyée par le serveur HTTP. À la différence de {{domxref("XMLHttpRequest.status")}}, tout le texte du statut est inclus ("<code>200 OK</code>" plutôt que "<code>200</code>" par exemple).</dd>
 </dl>
 
@@ -58,13 +60,13 @@ translation_of: Web/API/XMLHttpRequest
 </div>
 
 <dl>
- <dt id="xmlhttprequest-timeout">{{domxref("XMLHttpRequest.timeout")}}</dt>
+ <dt>{{domxref("XMLHttpRequest.timeout")}}</dt>
  <dd>Un entier <code>unsigned long</code> qui représente le nombre de millisecondes qu'une requête peut prendre avant d'être terminée automatiquement.</dd>
- <dt id="xmlhttprequesteventtarget-ontimeout">{{domxref("XMLHttpRequestEventTarget.ontimeout")}}</dt>
+ <dt>{{domxref("XMLHttpRequestEventTarget.ontimeout")}}</dt>
  <dd>Un gestionnaire d'évènement ({{event("Event_handlers", "event handler")}}) appelé lorsque la requête a expiré. {{gecko_minversion_inline("12.0")}}</dd>
- <dt id="xmlhttprequest-upload">{{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}</dt>
  <dd>Un objet {{domxref("XMLHttpRequestUpload")}} qui représente le processus d'<em>upload</em>.</dd>
- <dt id="xmlhttprequest-withcredentials">{{domxref("XMLHttpRequest.withCredentials")}}</dt>
+ <dt>{{domxref("XMLHttpRequest.withCredentials")}}</dt>
  <dd>Un booléen ({{domxref("Boolean")}}) qui indique si des requêtes <code>Access-Control</code> d'origines différentes peuvent être effectuées avec des informations d'authentification telles que des cookies ou des en-têtes d'autorisation.</dd>
 </dl>
 
@@ -119,11 +121,13 @@ translation_of: Web/API/XMLHttpRequest
  <dd>Initialise l'objet depuis pour une utilisation depuis du code C++.</dd>
 </dl>
 
-<div class="warning"><strong>Attention !</strong> Cette méthode ne doit pas être appelée depuis du code JavaScript.</div>
+<div class="warning">
+  <p><strong>Attention :</strong> Cette méthode ne doit pas être appelée depuis du code JavaScript.</p>
+</div>
 
 <dl>
  <dt>{{domxref("XMLHttpRequest.openRequest()")}}</dt>
- <dd>Initialise une requête depuis du code natif. Voir la méthode <a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#open()"><code>open()</code></a> ci-avant pour initialiser une requête de façon standard en JavaSCript.</dd>
+ <dd>Initialise une requête depuis du code natif. Voir la méthode <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#open()"><code>open()</code></a> ci-avant pour initialiser une requête de façon standard en JavaSCript.</dd>
  <dt>{{domxref("XMLHttpRequest.sendAsBinary()")}}{{deprecated_inline()}}</dt>
  <dd>Une variante de <code>send()</code> afin d'envoyer des données binaires.</dd>
 </dl>
@@ -183,8 +187,8 @@ translation_of: Web/API/XMLHttpRequest
    <li><a href="/fr/docs/Web/Guide/AJAX/Premiers_pas">Introduction à AJAX</a></li>
    <li><a href="/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest">Utiliser XMLHttpRequest</a></li>
    <li><a href="/fr/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">Manipuler le HTML avec XMLHttpRequest</a></li>
-   <li><a href="/fr/docs/Web/API/Fetch_API" title="Fetch API">L'API Fetch</a></li>
+   <li><a href="/fr/docs/Web/API/Fetch_API">L'API Fetch</a></li>
   </ul>
  </li>
- <li><a class="external" href="https://www.html5rocks.com/en/tutorials/file/xhr2/">HTML5 Rocks — Nouvelles astuces avec XMLHttpRequest2 (en anglais)</a></li>
+ <li><a href="https://www.html5rocks.com/en/tutorials/file/xhr2/">HTML5 Rocks — Nouvelles astuces avec XMLHttpRequest2 (en anglais)</a></li>
 </ul>

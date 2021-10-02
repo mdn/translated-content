@@ -16,7 +16,7 @@ original_slug: Web/CSS/CSS_Basic_User_Interface/Utilisation_d_URL_pour_la_propri
 
 <p>La syntaxe de base (CSS 2.1) pour cette propriété est :</p>
 
-<pre class="syntaxbox">{{CSSxRef("cursor")}}: <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets">[</a> {{CSSxRef("&lt;url&gt;")}} , <a href="/fr/docs/Web/CSS/Syntaxe_de_définition_des_valeurs">]</a><a href="/fr/docs/Web/CSS/Syntaxe_de_définition_des_valeurs">*</a> {{CSSxRef("cursor", "<var>&lt;keyword&gt;</var>", "#Valeurs")}}</pre>
+<pre class="syntaxbox">{{CSSxRef("cursor")}}: <a href="/en-US/docs/Web/CSS/Value_definition_syntax#brackets">[</a> {{CSSxRef("&lt;url&gt;")}} , <a href="/fr/docs/Web/CSS/Value_definition_syntax">]</a><a href="/fr/docs/Web/CSS/Value_definition_syntax">*</a> {{CSSxRef("cursor", "<var>&lt;keyword&gt;</var>", "#Valeurs")}}</pre>
 
 <p>Ceci signifie que zéro URL ou plus peuvent être définies en étant séparées par des virgules et doivent être suivies par un des mots-clés comme <code>auto</code> ou <code>pointer</code>.</p>
 
@@ -27,9 +27,9 @@ original_slug: Web/CSS/CSS_Basic_User_Interface/Utilisation_d_URL_pour_la_propri
 
 <p>En utilisant cette règle, le moteur essaiera d'abord de charger <code>toto.cur</code>. Si ce fichier n'existe pas ou si, pour une autre raison, l'URL n'est pas valable, ce sera celle de <code>truc.gif</code> qui sera essayée. Si cette valeur ne peut pas être utilisée non plus, le curseur correspondant à la valeur <code>auto</code> sera utilisé.</p>
 
-<p>Le support de la <a class="external" href="https://www.w3.org/TR/css3-ui/#cursor">syntaxe</a> CSS3 pour les valeurs du curseur a été ajoutée à partir de Firefox 1.5.</p>
+<p>Le support de la <a href="https://www.w3.org/TR/css3-ui/#cursor">syntaxe</a> CSS3 pour les valeurs du curseur a été ajoutée à partir de Firefox 1.5.</p>
 
-<pre class="syntaxbox">{{CSSxRef("cursor")}}: <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets">[</a> {{CSSxRef("&lt;uri&gt;")}} <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets">[</a> &lt;x&gt; &lt;y&gt; <a href="/fr/docs/Web/CSS/Syntaxe_de_définition_des_valeurs">]</a><a href="/fr/docs/Web/CSS/Syntaxe_de_définition_des_valeurs">?</a> , <a href="/fr/docs/Web/CSS/Syntaxe_de_définition_des_valeurs">]</a><a href="/fr/docs/Web/CSS/Syntaxe_de_définition_des_valeurs">*</a> {{CSSxRef("cursor", "<var>&lt;keyword&gt;</var>", "#Valeurs")}}
+<pre class="syntaxbox">{{CSSxRef("cursor")}}: <a href="/en-US/docs/Web/CSS/Value_definition_syntax#brackets">[</a> {{CSSxRef("&lt;uri&gt;")}} <a href="/en-US/docs/Web/CSS/Value_definition_syntax#brackets">[</a> &lt;x&gt; &lt;y&gt; <a href="/fr/docs/Web/CSS/Value_definition_syntax">]</a><a href="/fr/docs/Web/CSS/Value_definition_syntax">?</a> , <a href="/fr/docs/Web/CSS/Value_definition_syntax">]</a><a href="/fr/docs/Web/CSS/Value_definition_syntax">*</a> {{CSSxRef("cursor", "<var>&lt;keyword&gt;</var>", "#Valeurs")}}
 </pre>
 
 <p>Cette syntaxe permet d'indiquer les coordonnées des points chauds du curseur qui seront maintenues aux frontières de l'image du curseur. Si aucun n'est indiqué, les coordonnées du point chaud sont lus à partir du fichier lui-même (pour les fichier CUR et XBM) ou sont réglés au coin supérieur gauche de l'image. Un exemple de la syntaxe CSS3 est:</p>

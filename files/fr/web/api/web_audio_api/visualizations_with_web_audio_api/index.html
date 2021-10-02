@@ -3,12 +3,10 @@ title: Visualisations avec la Web Audio API
 slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 translation_of: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 ---
-<div class="summary">
 <p>L'une des fonctionnalités les plus intéressantes de la Web Audio API est la possibilité d'extraire de la source audio la fréquence, la forme d'onde et d'autres données, qui permettent de créer des visualisations. Cet article explique comment, et fournit quelques exemples basiques.</p>
-</div>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez trouver des exemples de tous les extraits de the code dans notre démo <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a>.</p>
+<p><strong>Note :</strong> Vous pouvez trouver des exemples de tous les extraits de the code dans notre démo <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a>.</p>
 </div>
 
 <h2 id="Concepts_de_base">Concepts de base</h2>
@@ -26,13 +24,13 @@ analyseur.connect(distortion);
 // etc.</pre>
 
 <div class="note">
-<p><strong>Note</strong>: il n'est pas nécessaire de connecter la sortie de l'analyseur à un noeud pour qu'il fonctionne, il suffit que l'entrée soit connectée à la source, directement ou via un autre noeud.</p>
+<p><strong>Note :</strong> il n'est pas nécessaire de connecter la sortie de l'analyseur à un noeud pour qu'il fonctionne, il suffit que l'entrée soit connectée à la source, directement ou via un autre noeud.</p>
 </div>
 
 <p>L'analyseur va alors capturer les données audio en usant une Transformation de Fourier Rapide (fft) à une certaine fréquence, en fonction de ce qui est spécifié dans la propriété {{ domxref("AnalyserNode.fftSize") }} (la valeur par défaut est 2048).</p>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez aussi spécifier des valeurs de puissance minimum et maximum pour la plage de mise à l'échelle fft, en utilisant {{ domxref("AnalyserNode.minDecibels") }} et {{ domxref("AnalyserNode.maxDecibels") }}, et plusieurs valeurs de transition en utilisant {{ domxref("AnalyserNode.smoothingTimeConstant") }}.</p>
+<p><strong>Note :</strong> Vous pouvez aussi spécifier des valeurs de puissance minimum et maximum pour la plage de mise à l'échelle fft, en utilisant {{ domxref("AnalyserNode.minDecibels") }} et {{ domxref("AnalyserNode.maxDecibels") }}, et plusieurs valeurs de transition en utilisant {{ domxref("AnalyserNode.smoothingTimeConstant") }}.</p>
 </div>
 
 <p>Pour capturer des données, il faut utiliser les méthodes {{ domxref("AnalyserNode.getFloatFrequencyData()") }} et {{ domxref("AnalyserNode.getByteFrequencyData()") }} pour la fréquence, et {{ domxref("AnalyserNode.getByteTimeDomainData()") }} et {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} pour la forme d'onde.</p>
@@ -122,7 +120,7 @@ var tableauDonnees = new Uint8Array(tailleMemoireTampon);</pre>
 
 <p>Ce qui nous donne un affichage de forme d'onde, actualisé plusieurs fois par seconde :</p>
 
-<p><img alt="a black oscilloscope line, showing the waveform of an audio signal" src="https://mdn.mozillademos.org/files/7977/wave.png" style="display: block; height: 96px; margin: 0px auto; width: 640px;"></p>
+<p><img alt="Une ligne d'oscilloscope noire, illustrant la forme d'onde d'un signal audio" src="wave.png"></p>
 
 <h2 id="Création_d'un_graphique_à_barres_représentant_la_fréquence">Création d'un graphique à barres représentant la fréquence</h2>
 
@@ -175,10 +173,8 @@ var tableauDonnees = new Uint8Array(tailleMemoireTampon);</pre>
 
 <p>Ce code donne le résultat suivant:</p>
 
-<p><img alt="a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal" src="https://mdn.mozillademos.org/files/7975/bar-graph.png" style="height: 157px; width: 1260px;"></p>
+<p><img alt="Une série de barres rouges dans un barre-graphe qui illustre l'intensité des différentes fréquences d'un signal audio" src="bar-graph.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: Les examples de cet article montrent l'utilisation de {{ domxref("AnalyserNode.getByteFrequencyData()") }} et {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. Pour des exemples montrant {{ domxref("AnalyserNode.getFloatFrequencyData()") }} et {{ domxref("AnalyserNode.getFloatTimeDomainData()") }}, voir notre démo <a href="http://mdn.github.io/voice-change-o-matic-float-data/">Voice-change-O-matic-float-data</a> (et son <a href="https://github.com/mdn/voice-change-o-matic-float-data">code source</a>) — elle est identique à la <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic </a>originale, à ceci près qu'elle utilise des données à virgule flottante, au lieu de données non signées.</p>
+<p><strong>Note :</strong> Les examples de cet article montrent l'utilisation de {{ domxref("AnalyserNode.getByteFrequencyData()") }} et {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. Pour des exemples montrant {{ domxref("AnalyserNode.getFloatFrequencyData()") }} et {{ domxref("AnalyserNode.getFloatTimeDomainData()") }}, voir notre démo <a href="http://mdn.github.io/voice-change-o-matic-float-data/">Voice-change-O-matic-float-data</a> (et son <a href="https://github.com/mdn/voice-change-o-matic-float-data">code source</a>) — elle est identique à la <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic </a>originale, à ceci près qu'elle utilise des données à virgule flottante, au lieu de données non signées.</p>
 </div>
-
-<p> </p>

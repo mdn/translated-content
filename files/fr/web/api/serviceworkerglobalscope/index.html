@@ -92,7 +92,7 @@ translation_of: Web/API/ServiceWorkerGlobalScope
 
 <p>The code also handles exceptions thrown from the {{domxref("GlobalFetch.fetch", "fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', function(event) {
+<pre class="brush: js">self.addEventListener('fetch', function(event) {
   console.log('Handling fetch event for', event.request.url);
 
   event.respondWith(
@@ -146,7 +146,7 @@ translation_of: Web/API/ServiceWorkerGlobalScope
 
 <ul>
  <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
+ <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
+ <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
  <li>{{jsxref("Promise")}}</li>
 </ul>

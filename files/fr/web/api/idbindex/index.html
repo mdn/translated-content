@@ -25,7 +25,7 @@ translation_of: Web/API/IDBIndex
 
 <h2 id="Méthodes">Méthodes</h2>
 
-<p>Hérite de: <a href="/en/DOM/EventTarget" title="en/DOM/EventTarget">EventTarget</a></p>
+<p>Hérite de: <a href="/en/DOM/EventTarget">EventTarget</a></p>
 
 <dl>
  <dt>{{domxref("IDBIndex.count()")}}</dt>
@@ -56,7 +56,7 @@ translation_of: Web/API/IDBIndex
  <dt>{{domxref("IDBIndex.objectStore")}} {{readonlyInline}}</dt>
  <dd>Renvoie un {{domxref("IDBObjectStore","accès au magasin d'objet")}} que référence l'index.</dd>
  <dt>{{domxref("IDBIndex.keyPath")}} {{readonlyInline}}</dt>
- <dd>Renvoie le chemin de clé de l'index. Si l'index n'est pas <a href="https://developer.mozilla.org/fr/IndexedDB/Index#gloss_auto-populated" title="en/IndexedDB/Index#gloss auto-populated">automatiquement mise à jour</a> la propriété vaux <code>null</code>.</dd>
+ <dd>Renvoie le chemin de clé de l'index. Si l'index n'est pas <a href="/fr/IndexedDB/Index#gloss_auto-populated">automatiquement mise à jour</a> la propriété vaux <code>null</code>.</dd>
  <dt>{{domxref("IDBIndex.multiEntry")}} {{readonlyInline}}</dt>
  <dd>Renvoie un {{domxref("Boolean","booléen")}} qui indique comment l'index gère le chemin de clé si c'est un tableau.</dd>
  <dt>{{domxref("IDBIndex.unique")}} {{readonlyInline}}</dt>
@@ -69,7 +69,7 @@ translation_of: Web/API/IDBIndex
 
 <p>Finalement, On itère sur tous les enregistrements pour en insérer les données dans un tableau HTML. En utilisant la méthode {{domxref("IDBIndex.openCursor")}} qui travaille de la même façon que la méthode {{domxref("IDBObjectStore.openCursor")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet sauf que les enregistrements sont renvoyés dans l'ordre de l'index et non celui du magasin d'objet.</p>
 
-<pre class="brush:js notranslate">function displayDataByIndex() {
+<pre class="brush:js">function displayDataByIndex() {
   tableEntry.innerHTML = '';
 
   //ouvre un transaction
@@ -103,7 +103,7 @@ translation_of: Web/API/IDBIndex
   };
 };</pre>
 
-<p class="note">Pour un exemple de travail complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>).</p>
+<div class="note"><p><strong>Note :</strong> Pour un exemple de travail complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>).</p></div>
 
 <h2 id="Spécification">Spécification</h2>
 
@@ -135,6 +135,6 @@ translation_of: Web/API/IDBIndex
  <li>{{domxref("IDBKeyRange","Définir l'intervalle des clés")}}</li>
  <li>{{domxref("IDBObjectStore","Accès aux magasins d'objets")}}</li>
  <li>{{domxref("IDBCursor","Utiliser les curseur")}}</li>
- <li>Exemple de référence: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">voir l'exemple en direct</a>.)</li>
+ <li>Exemple de référence: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">voir l'exemple en direct</a>.)</li>
 </ul>
 </div>

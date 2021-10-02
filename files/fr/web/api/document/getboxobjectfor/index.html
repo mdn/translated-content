@@ -13,9 +13,11 @@ translation_of: Web/API/Document/getBoxObjectFor
 
 <p>Renvoie un <code>boxObject</code> (x, y, largeur, hauteur) pour un élément spécifié.</p>
 
-<div class="note"><strong>Note :</strong> Cette méthode est obsolète. Vous devez utiliser la méthode {{domxref("element.getBoundingClientRect()")}} à la place.</div>
+<div class="note">
+  <p><strong>Note :</strong> Cette méthode est obsolète. Vous devez utiliser la méthode {{domxref("element.getBoundingClientRect()")}} à la place.</p>
+</div>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><var>boxObject</var> = <var>document</var>.getBoxObjectFor(<var>element</var>);
 </pre>
@@ -25,7 +27,7 @@ translation_of: Web/API/Document/getBoxObjectFor
  <li><code>element</code> est un {{domxref("element","DOMElement")}}</li>
 </ul>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush:js">var myDiv = document.getElementById("myDiv"),
     boxObj = document.getBoxObjectFor (myDiv);
@@ -37,6 +39,6 @@ alert (
   ", Height:" + boxObj.height
 );</pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
-<p>Spécifié dans <a href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/xul/nsIDOMXULDocument.idl" title="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/xul/nsIDOMXULDocument.idl">nsIXULDocument.idl</a></p>
+<p>Spécifié dans <a href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/xul/nsIDOMXULDocument.idl">nsIXULDocument.idl</a></p>

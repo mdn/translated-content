@@ -12,9 +12,9 @@ tags:
 browser-compat: api.EventTarget
 translation_of: Web/API/EventTarget
 ---
-<nav>{{ApiRef("DOM Events")}}</nav>
+<div>{{ApiRef("DOM Events")}}</div>
 
-<p><span class="seoSummary"><code>EventTarget</code> est une interface DOM implémentée par des objets qui peuvent recevoir des événements et peuvent avoir des écouteurs pour eux.</span></p>
+<p><code>EventTarget</code> est une interface DOM implémentée par des objets qui peuvent recevoir des événements et peuvent avoir des écouteurs pour eux.</p>
 
 <p>{{domxref ("Element")}}, {{domxref ("Document")}} et {{domxref ("Window")}} sont les cibles d'événements les plus fréquentes, mais d'autres objets peuvent également être des cibles d'événements. Par exemple {{domxref ("XMLHttpRequest")}}, {{domxref ("AudioNode")}}, {{domxref ("AudioContext")}} et autres.</p>
 
@@ -55,7 +55,7 @@ translation_of: Web/API/EventTarget
 
 <h3 id="Implémentation_simple_dEventTarget">Implémentation simple d'EventTarget</h3>
 
-<pre class="brush: js notranslate">const EventTarget = function () {
+<pre class="brush: js">const EventTarget = function () {
   this.listeners = {}
 }
 

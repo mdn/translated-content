@@ -28,7 +28,7 @@ translation_of: Web/HTTP/Headers/Content-Encoding
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">Content-Encoding: gzip
+<pre class="syntaxbox">Content-Encoding: gzip
 Content-Encoding: compress
 Content-Encoding: deflate
 Content-Encoding: identity
@@ -60,11 +60,11 @@ Content-Encoding: deflate, gzip
 
 <p>Côté client, on peut fournir la liste des mécanismes de compression pris en charge en envoyant l'en-tête {{HTTPHeader("Accept-Encoding")}} lors de la négociation de l'encodage.</p>
 
-<pre class="notranslate">Accept-Encoding: gzip, deflate</pre>
+<pre>Accept-Encoding: gzip, deflate</pre>
 
 <p>Le serveur répondra avec le schéma utilisé avec l'en-tête de réponse <code>Content-Encoding</code>.</p>
 
-<pre class="notranslate">Content-Encoding: gzip</pre>
+<pre>Content-Encoding: gzip</pre>
 
 <p>À noter que le serveur n'est pas obligé d'utiliser de méthode de compression. La compression dépend fortement des paramètres du serveur et des modules de serveur utilisés.</p>
 

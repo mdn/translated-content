@@ -20,16 +20,16 @@ translation_of: Web/API/Node/isConnected
 
 <h3 id="Renvoie_la_valeur">Renvoie la valeur</h3>
 
-<p>Un {{domxref("Boolean")}} (<em>booléen</em>) — <code>true</code> (<em>vrai</em>) si le noeud est connecté <span class="short_text" id="result_box" lang="fr"><span>à son objet contextuel pertinent</span></span> et <code>false</code> (<em>faux</em>) sinon.</p>
+<p>Un {{domxref("Boolean")}} (<em>booléen</em>) — <code>true</code> (<em>vrai</em>) si le noeud est connecté à son objet contextuel pertinent et <code>false</code> (<em>faux</em>) sinon.</p>
 
 <h2 id="Exemples">Exemples</h2>
 
 <p>Un exemple DOM standard :</p>
 
-<pre class="brush: js"><code class="language-html">let test = document.createElement('p');
+<pre class="brush: js">let test = document.createElement('p');
 console.log(test.isConnected); // renvoie false (<em>faux</em>)
-document.body.appendChild(test);</code>
-<code class="language-html">console.log(test.isConnected); // renvoie true</code> (<em>vrai</em>)
+document.body.appendChild(test);
+console.log(test.isConnected); // renvoie true (<em>vrai</em>)
 </pre>
 
 <p>Un exemple DOM shadow :</p>

@@ -12,10 +12,10 @@ translation_of: Web/API/Element/matches
 <p><code>La méthode<strong> </strong></code><strong><code>element.matches()</code></strong> renvoie <code>true</code> lorsque l'élément peut être sélectionné par le sélecteur défini par la chaîne passée en paramêtre; sinon, elle renvoie <code>false</code>.</p>
 
 <div class="warning">
-<p>Certains navigateurs implémentent cette méthode sous le nom <code>matchesSelector()</code> non-standardisé et préfixé.</p>
+<p><strong>Attention :</strong> Certains navigateurs implémentent cette méthode sous le nom <code>matchesSelector()</code> non-standardisé et préfixé.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><em>var result</em> = <em>element</em>.matches(selectorString);
 </pre>
@@ -25,23 +25,23 @@ translation_of: Web/API/Element/matches
  <li><code>selectorString</code> est une chaîne définissant le sélecteur à tester sur l'élément.</li>
 </ul>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>ul</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>birds<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span>perroquet amazone<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>endangered<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>aigle des Philippines<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span>pélican<span class="tag token"><span class="tag token"><span class="punctuation token"> blanc&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>ul</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html">&lt;ul id="birds"&gt;
+  &lt;li&gt;perroquet amazone&lt;/li&gt;
+  &lt;li class="endangered"&gt;aigle des Philippines&lt;/li&gt;
+  &lt;li&gt;pélican blanc&lt;/li&gt;
+&lt;/ul&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text/javascript<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
-  <span class="keyword token">var</span> birds <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementsByTagName</span><span class="punctuation token">(</span><span class="string token">'li'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+&lt;script type="text/javascript"&gt;
+  var birds = document.getElementsByTagName('li');
 
-  <span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> i <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> i <span class="operator token">&lt;</span> birds<span class="punctuation token">.</span>length<span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span>birds<span class="punctuation token">[</span>i<span class="punctuation token">]</span><span class="punctuation token">.</span><span class="function token">matches</span><span class="punctuation token">(</span><span class="string token">'.endangered'</span><span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Le - '</span> <span class="operator token">+</span> birds<span class="punctuation token">[</span>i<span class="punctuation token">]</span><span class="punctuation token">.</span>textContent <span class="operator token">+</span> <span class="string token">'- est en voie de disparition !'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-  <span class="punctuation token">}</span>
-</span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span></code></pre>
+  for (var i = 0; i &lt; birds.length; i++) {
+    if (birds[i].matches('.endangered')) {
+      console.log('Le - ' + birds[i].textContent + '- est en voie de disparition !');
+    }
+  }
+&lt;/script&gt;</pre>
 
 <p>Ce code affichera l'alerte "Le - aigle des Philippines - est en voie de disparition !" sur la console, puisque l'élèment possède l'attribut<code> class </code>de valeur <code>endangered</code>.</p>
 
@@ -73,9 +73,9 @@ translation_of: Web/API/Element/matches
 
 <p>Cependant, étant donné la possibilité de prendre en charge les anciens navigateurs, les éléments suivants devraient suffire pour la plupart (sinon tous) des cas pratiques (c'est-à-dire le support IE9 +).</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">if (!Element.prototype.matches) {
+<pre class="brush: html">if (!Element.prototype.matches) {
     Element.prototype.matches = Element.prototype.msMatchesSelector;
-}</code></pre>
+}</pre>
 
 <h2 id="Spécification">Spécification</h2>
 
@@ -103,6 +103,6 @@ translation_of: Web/API/Element/matches
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Les_s%C3%A9lecteurs">La syntaxe des sélecteurs</a></li>
+ <li><a href="/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Les_s%C3%A9lecteurs">La syntaxe des sélecteurs</a></li>
  <li>autres méthodes qui utilisent les sélecteurs : {{domxref("element.querySelector()")}} et {{domxref("element.closest()")}}.</li>
 </ul>

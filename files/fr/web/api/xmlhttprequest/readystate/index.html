@@ -5,7 +5,7 @@ translation_of: Web/API/XMLHttpRequest/readyState
 ---
 <p>{{APIRef('XMLHttpRequest')}}</p>
 
-<p>La propriété XMLHttpRequest.readyState renvoie l'état dans lequel se trouve un client XMLHttpRequest.Un client <abbr title="XMLHttpRequest">XHR</abbr> existe dans l'un des états suivants :</p>
+<p>La propriété XMLHttpRequest.readyState renvoie l'état dans lequel se trouve un client XMLHttpRequest.Un client <abbr>XHR</abbr> existe dans l'un des états suivants :</p>
 
 <table class="standard-table">
  <tbody>
@@ -56,12 +56,12 @@ translation_of: Web/API/XMLHttpRequest/readyState
 </dl>
 
 <div class="note">
-<p>Les noms des États sont différents dans les versions d'Internet Explorer antérieures à 11. Au lieu de <code>UNSENT</code>, <code>OPENED</code>,<code> HEADERS_RECEIVED</code>,<code> LOADING</code> and <code>DONE</code>, the names <code>READYSTATE_UNINITIALIZED</code> (0), <code>READYSTATE_LOADING</code> (1), <code>READYSTATE_LOADED</code> (2), <code>READYSTATE_INTERACTIVE</code> (3) et <code>READYSTATE_COMPLETE</code> (4) sont utilisés.</p>
+<p><strong>Note :</strong> Les noms des états sont différents dans les versions d'Internet Explorer antérieures à 11. Au lieu de <code>UNSENT</code>, <code>OPENED</code>,<code> HEADERS_RECEIVED</code>,<code> LOADING</code> and <code>DONE</code>, the names <code>READYSTATE_UNINITIALIZED</code> (0), <code>READYSTATE_LOADING</code> (1), <code>READYSTATE_LOADED</code> (2), <code>READYSTATE_INTERACTIVE</code> (3) et <code>READYSTATE_COMPLETE</code> (4) sont utilisés.</p>
 </div>
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: js notranslate">var xhr = new XMLHttpRequest();
+<pre class="brush: js">var xhr = new XMLHttpRequest();
 console.log('UNSENT', xhr.readyState); // readyState will be 0
 
 xhr.open('GET', '/api', true);

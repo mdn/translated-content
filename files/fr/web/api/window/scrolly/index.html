@@ -5,11 +5,9 @@ translation_of: Web/API/Window/scrollY
 ---
 <div>{{APIRef}}</div>
 
-<h2 id="Summary" name="Summary">Résumé</h2>
-
 <p>La propriété <code><strong>scrollY</strong></code> de l'objet {{domxref("Window")}} est une propriété en lecture seule. Elle retourne le nombre de pixels la page actuellement défilés verticalement. Dans les navigateurs modernes, cette valeur est précise au sous-pixel près. Ainsi, la valeur retournée n'est pas forcement un entier.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox">var y = window.scrollY;</pre>
 
@@ -17,7 +15,7 @@ translation_of: Web/API/Window/scrollY
  <li><code>y</code> est le nombre de pixels verticaux défilés.</li>
 </ul>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush:js">// make sure and go down to the second page
 if (window.scrollY) {
@@ -26,7 +24,7 @@ if (window.scrollY) {
 
 window.scrollByPages(1);</pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>Utilisez cette propriété pour être sûre que le document n'as pas été défilé verticalement si vous utilisez les fonctions de défilement tels que {{domxref("window.scrollBy")}}, {{domxref("window.scrollByLines")}}, ou {{domxref("window.scrollByPages")}}.</p>
 
@@ -43,7 +41,7 @@ var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documen
 var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
 </pre>
 
-<h2 id="Specification" name="Specification">Spécifications</h2>
+<h2 id="Specification">Spécifications</h2>
 
 <table class="standard-table">
  <thead>

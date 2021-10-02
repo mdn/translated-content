@@ -10,7 +10,7 @@ translation_of: Web/API/BiquadFilterNode
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p class="summary">L'interface <code><strong>BiquadFilterNode</strong></code> représente un simple filtre de bas niveau, créé avec la méthode <span class="seoSummary">{{ domxref("AudioContext.createBiquadFilter()") }}</span>. Il s'agit d'un {{domxref("AudioNode")}} qui peut représenter différents types de filtres, dispositifs de réglage de tonalité ou égaliseurs graphiques. Un <code>BiquadFilterNode</code> a toujours exactement une entrée et une sortie.</p>
+<p>L'interface <code><strong>BiquadFilterNode</strong></code> représente un simple filtre de bas niveau, créé avec la méthode {{ domxref("AudioContext.createBiquadFilter()") }}. Il s'agit d'un {{domxref("AudioNode")}} qui peut représenter différents types de filtres, dispositifs de réglage de tonalité ou égaliseurs graphiques. Un <code>BiquadFilterNode</code> a toujours exactement une entrée et une sortie.</p>
 
 <table class="properties">
  <tbody>
@@ -52,15 +52,13 @@ translation_of: Web/API/BiquadFilterNode
  <dt>{{domxref("BiquadFilterNode.frequency")}}</dt>
  <dd>Est un {{domxref ("AudioParam")}} de type <a href="/fr/docs/Web/API/AudioParam#a-rate">a-rate</a> : un nombre flottant à double précision représentant une fréquence de l'algorithme de filtrage, exprimée en Hertz.</dd>
  <dt>{{domxref("BiquadFilterNode.detune")}}</dt>
- <dd>Est un {{domxref ("AudioParam")}} de type <a href="/fr/docs/Web/API/AudioParam#a-rate">a-rate</a> : un nombre flottant à double précision représentant le désaccordage de la fréquence exprimé en <a class="external external-icon" href="https://fr.wikipedia.org/wiki/Cent_et_savart">cents</a>.</dd>
+ <dd>Est un {{domxref ("AudioParam")}} de type <a href="/fr/docs/Web/API/AudioParam#a-rate">a-rate</a> : un nombre flottant à double précision représentant le désaccordage de la fréquence exprimé en <a href="https://fr.wikipedia.org/wiki/Cent_et_savart">cents</a>.</dd>
  <dt>{{domxref("BiquadFilterNode.Q")}}</dt>
  <dd>Est un {{domxref ("AudioParam")}} de type <a href="/fr/docs/Web/API/AudioParam#a-rate">a-rate</a> : un nombre flottant à double précision représentant un <a href="http://en.wikipedia.org/wiki/Q_factor">facteur</a><a href="http://en.wikipedia.org/wiki/Q_factor"> Q</a>, ou facteur de qualité.</dd>
  <dt>{{domxref("BiquadFilterNode.gain")}} {{readonlyInline}}</dt>
  <dd>Est un {{domxref ("AudioParam")}} de type <a href="/fr/docs/Web/API/AudioParam#a-rate">a-rate</a> : un nombre flottant à double précision représentant le <a href="http://en.wikipedia.org/wiki/Gain">gain</a><a href="http://en.wikipedia.org/wiki/Gain"> </a>utilisé dans l'algorithme de filtrage.</dd>
  <dt>{{domxref("BiquadFilterNode.type")}}</dt>
- <dd>Une chaîne définissant le type d'algorithme de filtrage que le noeud implémente:</dd>
- <dd>La signification des paramètres diffère en fonction du type du filtre (sauf detune qui a la même signification dans tous les cas, et n'est donc pas listé ci-dessous)</dd>
- <dd>
+ <dd><p>Une chaîne définissant le type d'algorithme de filtrage que le noeud implémente: La signification des paramètres diffère en fonction du type du filtre (sauf detune qui a la même signification dans tous les cas, et n'est donc pas listé ci-dessous)</p>
  <table class="standard-table">
   <caption></caption>
   <thead>
@@ -77,14 +75,14 @@ translation_of: Web/API/BiquadFilterNode
     <th scope="row"><code>lowpass</code></th>
     <td>Filtre standard passe-bas résonnant de second ordre avec atténuation de 12dB/octave. Les fréquences inférieures au seuil sont inchangées; les fréquences supérieures sont atténuées.</td>
     <td>La fréquence de coupure</td>
-    <td>Indique comment la fréquence a <span id="result_box" lang="fr"><span class="hps">culminé</span> </span><span id="result_box" lang="fr"> </span>autour de la coupure. Plus la valeur est élevée, plus le point culminant est haut</td>
+    <td>Indique comment la fréquence a culminé  autour de la coupure. Plus la valeur est élevée, plus le point culminant est haut</td>
     <td>Non utilisé</td>
    </tr>
    <tr>
     <th scope="row"><code>highpass</code></th>
     <td>Filtre standard passe-haut résonnant de second ordre avec atténuation de 12dB/octave. Les fréquences inférieures à la fréquence de coupure sont atténuées, les fréquences supérieures sont inchangées.</td>
     <td>La fréquence de coupure</td>
-    <td>Indique comment la fréquence a <span id="result_box" lang="fr"><span class="hps">culminé</span> </span><span id="result_box" lang="fr"> </span>autour de la coupure. Plus la valeur est élevée, plus le point culminant est haut</td>
+    <td>Indique comment la fréquence a culminé  autour de la coupure. Plus la valeur est élevée, plus le point culminant est haut</td>
     <td>Non utilisé</td>
    </tr>
    <tr>

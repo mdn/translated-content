@@ -11,7 +11,7 @@ translation_of: Web/API/Window/frameElement
 ---
 <div>{{ApiRef}}</div>
 
-<p><span class="seoSummary">La propriété <code><strong>Window.frameElement</strong></code> renvoie l'élément (tel que {{HTMLElement("iframe")}} ou {{HTMLElement("object")}}) dans lequel la fenêtre est intégrée.</span></p>
+<p>La propriété <code><strong>Window.frameElement</strong></code> renvoie l'élément (tel que {{HTMLElement("iframe")}} ou {{HTMLElement("object")}}) dans lequel la fenêtre est intégrée.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Malgré le nom de cette propriété, elle fonctionne pour les documents intégrés dans n'importe quel point d'incorporation, y compris {{HTMLElement("object")}}, {{HTMLElement("iframe")}}, ou {{HTMLElement("embed")}}.</p>
@@ -19,7 +19,7 @@ translation_of: Web/API/Window/frameElement
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">const <em>frameEl</em> = window.frameElement
+<pre class="syntaxbox">const <em>frameEl</em> = window.frameElement
 </pre>
 
 <h3 id="Valeur">Valeur</h3>
@@ -28,7 +28,7 @@ translation_of: Web/API/Window/frameElement
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush:js notranslate">const frameEl = window.frameElement;
+<pre class="brush:js">const frameEl = window.frameElement;
 // Si nous sommes incorporés, modifiez l'URL de l'élément contenant en 'http://mozilla.org/'
 if (frameEl) {
   frameEl.src = 'http://mozilla.org/';

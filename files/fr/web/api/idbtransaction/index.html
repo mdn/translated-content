@@ -17,7 +17,7 @@ translation_of: Web/API/IDBTransaction
 
 <p>On notera qu'une transaction commence dès sa création et pas lorsque la première requête est lancée. Par exemple :</p>
 
-<pre class="brush: js" id="comment_text_0">var trans1 = db.transaction("toto", "readwrite");
+<pre class="brush: js">var trans1 = db.transaction("toto", "readwrite");
 var trans2 = db.transaction("toto", "readwrite");
 trans2.put("2", "clé");
 trans1.put("1", "clé");
@@ -184,5 +184,5 @@ function addData() {
  <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
  <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
  <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
+ <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
 </ul>

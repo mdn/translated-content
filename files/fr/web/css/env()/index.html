@@ -16,7 +16,7 @@ translation_of: Web/CSS/env()
 
 <p><code>env()</code> peut être utilisée aux endroits où on souhaite remplacer la valeur, à la façon de la fonction <code><a href="/fr/docs/Web/CSS/var()">var()</a></code>.</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   padding:
     env(safe-area-inset-top, 20px)
     env(safe-area-inset-right, 20px)
@@ -26,13 +26,13 @@ translation_of: Web/CSS/env()
 
 <p>La fonction <code>env()</code> peut être utilisée à n'importe quel endroit où une valeur peut être associée à une propriété, à n'importe quel endroit où une valeur peut être utilisée dans un descripteur d'une règle @ (ex. dans une <a href="/fr/docs/Web/CSS/@media">requête média</a>) et, de façon générale, à n'importe quel endroit où les valeurs CSS sont autorisées. Selon les évolutions de la spécification, cette fonction pourrait également être utilisées à d'autres endroits comme les sélecteurs.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note :</strong> Les variables d'environnement furent initialement fournies par le navigateur iOS afin de permettre aux développeurs de placer le contenu sur une zone sûre de la zone d'affichage (<em>viewport</em>) et d'éviter le décrochement formé en haut de l'écran sur certains des appareils.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="brush: css notranslate">/* Utilisation des quatre zones sûres */
+<pre class="brush: css">/* Utilisation des quatre zones sûres */
 env(safe-area-inset-top)
 env(safe-area-inset-right)
 env(safe-area-inset-bottom)
@@ -48,11 +48,11 @@ env(safe-area-inset-left, 1.4rem);
 <h3 id="Valeurs">Valeurs</h3>
 
 <dl>
- <dt><code id="safe-area-inset-top" style="white-space: nowrap;">safe-area-inset-top</code>, <code id="safe-area-inset-right" style="white-space: nowrap;">safe-area-inset-right</code>, <code id="safe-area-inset-bottom" style="white-space: nowrap;">safe-area-inset-bottom</code>, <code id="safe-area-inset-left" style="white-space: nowrap;">safe-area-inset-left</code></dt>
+ <dt><code>safe-area-inset-top</code>, <code>safe-area-inset-right</code>, <code>safe-area-inset-bottom</code>, <code>safe-area-inset-left</code></dt>
  <dd>Ces mots-clés sont des variables d'environnement qui définissent un rectangle avec les décalages par rapport à chacun des côtés de la zone d'affichage (<em>viewport</em>) dans lequel on pourra placer du contenu sans que ce dernier puisse être rogné du fait de la forme non rectangulaire de l'affichage.</dd>
 </dl>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note :</strong> À la différence des autres propriétés CSS, les identifiants provenant de l'agent utilisateur sont sensibles à la casse.</p>
 </div>
 
@@ -66,7 +66,7 @@ env(safe-area-inset-left, 1.4rem);
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
   Si la fonction &lt;code&gt;env()&lt;/code&gt; est prise en charge dans votre
   navigateur, le texte de ce paragraphe aura 50 pixels de padding avec
   la bordure gauche mais pas la droite / basse et haute.
@@ -77,7 +77,7 @@ env(safe-area-inset-left, 1.4rem);
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   width: 300px;
   border: 2px solid red;
   padding:
@@ -93,7 +93,7 @@ env(safe-area-inset-left, 1.4rem);
 
 <h3 id="Exemples_de_valeurs">Exemples de valeurs</h3>
 
-<pre class="brush: css notranslate">/* zéro pour les agents utilisateurs rectangulaires */
+<pre class="brush: css">/* zéro pour les agents utilisateurs rectangulaires */
 padding: env(safe-area-inset-bottom, 50px);
 
 /* 50px car les propriétés de l'agent sont sensibles à la casse */
@@ -110,7 +110,7 @@ padding: env(x, 50px, 20px);
 
 <p>Pour la deuxième valeur, il est possible d'utiliser des virgules afin de fournir un ensemble composite de valeurs à la propriété. Toutefois, si la propriété en question ne permet pas de gérer plusieurs valeurs, la déclaration sera invalide.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note :</strong> Les propriétés relatives à l'agent utilisateur ne sont pas réinitialisées avec la propriété {{cssxref("all")}}.</p>
 </div>
 

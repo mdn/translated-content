@@ -32,7 +32,7 @@ var source = audioCtx.createMediaElementSource(myMediaElement);</pre>
 <p>Cet exemple simple crée une source depuis un élément {{ htmlelement("audio") }} grâce à <code>createMediaElementSource()</code>, puis passe le signal audio à travers un {{ domxref("GainNode") }} avant de l’injecter dans le {{ domxref("AudioDestinationNode") }} pour la lecture. Quand le pointeur de la souris est déplacé, la fonction <code>updatePage()</code> est invoquée, et calcule le gain actuel comme rapport de la position Y de la souris divisée par la hauteur totale de la fenêtre. Vous pouvez ainsi augmenter ou diminuer le volume de la musique jouée, en déplaçant le pointeur de la souris vers le haut ou vers le bas.</p>
 
 <div class="note">
-<p><strong>Note</strong> : Vous pouvez également <a href="http://mdn.github.io/webaudio-examples/media-source-buffer/">voir cet exemple en temps réel</a>, ou <a href="https://github.com/mdn/webaudio-examples/tree/master/media-source-buffer">examiner le code source</a>.</p>
+<p><strong>Note :</strong> Vous pouvez également <a href="http://mdn.github.io/webaudio-examples/media-source-buffer/">voir cet exemple en temps réel</a>, ou <a href="https://github.com/mdn/webaudio-examples/tree/master/media-source-buffer">examiner le code source</a>.</p>
 </div>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -73,7 +73,7 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);</pre>
 
 <div class="note">
-<p><strong>Note </strong>: Du fait de l’appel à <code>createMediaElementSource()</code>, la lecture de l’audio du {{ domxref("HTMLMediaElement") }} est redirigée dans le graphe de traitement de l’AudioContext. Ainsi, jouer / mettre en pause le média est toujours possible via l’API des éléments média ou via les contrôles du lecteur.</p>
+<p><strong>Note :</strong> Du fait de l’appel à <code>createMediaElementSource()</code>, la lecture de l’audio du {{ domxref("HTMLMediaElement") }} est redirigée dans le graphe de traitement de l’AudioContext. Ainsi, jouer / mettre en pause le média est toujours possible via l’API des éléments média ou via les contrôles du lecteur.</p>
 </div>
 
 <h2 id="Spécifications">Spécifications</h2>

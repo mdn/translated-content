@@ -12,7 +12,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Concepts_de_base_flexbox
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">Le module des boîtes flexibles, aussi appelé « <em>flexbox</em> », a été conçu comme un modèle de disposition unidimensionnel et comme une méthode permettant de distribuer l'espace entre des objets d'une interface ainsi que de les aligner. Dans cet article, nous verrons les fonctionnalités principales des <em>flexbox</em> que nous approfondirons ensuite dans d'autres articles.</p>
+<p>Le module des boîtes flexibles, aussi appelé « <em>flexbox</em> », a été conçu comme un modèle de disposition unidimensionnel et comme une méthode permettant de distribuer l'espace entre des objets d'une interface ainsi que de les aligner. Dans cet article, nous verrons les fonctionnalités principales des <em>flexbox</em> que nous approfondirons ensuite dans d'autres articles.</p>
 
 <p>Lorsqu'on décrit les boîtes flexibles comme une méthode de disposition unidimensionnelle, on indique en fait que les <em>flexbox</em> gèrent une seule dimension à la fois : une ligne ou une colonne. Ce modèle est à comparer au modèle bidimensionnel de <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">la disposition en grille (CSS Grid)</a> qui contrôle à la fois les colonnes et les lignes.</p>
 
@@ -33,21 +33,21 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Concepts_de_base_flexbox
 
 <p>Si on choisit la valeur <code>row</code> ou <code>row-reverse</code>, l'axe principal sera aligné avec la direction « en ligne » (<em>inline</em> direction) (c'est la direction logique qui suit le sens d'écriture du document).</p>
 
-<p><img alt="If flex-direction is set to row the main axis runs along the row in the inline direction." src="https://mdn.mozillademos.org/files/15614/Basics1.png" style="display: block; height: 152px; margin: 0px auto; width: 522px;"></p>
+<p><img alt="If flex-direction is set to row the main axis runs along the row in the inline direction." src="basics1.png"></p>
 
 <p>Si on choisit la valeur <code>column</code> ou <code>column-reverse</code>, l'axe principal suivra la direction de bloc (<em>block direction</em>) et progressera le long de l'axe perpendiculaire au sens d'écriture.</p>
 
-<p><img alt="If flex-direction is set to column the main axis runs in the block direction." src="https://mdn.mozillademos.org/files/15615/Basics2.png" style="display: block; height: 227px; margin: 0px auto; width: 709px;"></p>
+<p><img alt="If flex-direction is set to column the main axis runs in the block direction." src="basics2.png"></p>
 
 <h3 id="L'axe_secondaire_(cross_axis)">L'axe secondaire (<em>cross axis</em>)</h3>
 
 <p>L'axe secondaire est perpendiculaire à l'axe principal. Ainsi, si <code>flex-direction</code> vaut <code>row</code> ou <code>row-reverse</code>, l'axe secondaire suivra l'axe des colonnes.</p>
 
-<p><img alt="If flex-direction is set to row then the cross axis runs in the block direction." src="https://mdn.mozillademos.org/files/15616/Basics3.png" style="display: block; height: 125px; margin: 0px auto; width: 666px;"></p>
+<p><img alt="If flex-direction is set to row then the cross axis runs in the block direction." src="basics3.png"></p>
 
 <p>Si l'axe principale est <code>column</code> ou <code>column-reverse</code>, l'axe secondaire suivra celui des lignes (horizontales).</p>
 
-<p><img alt="If flex-direction is set to column then the cross axis runs in the inline direction." src="https://mdn.mozillademos.org/files/15617/Basics4.png" style="display: block; height: 244px; margin: 0px auto; width: 523px;"></p>
+<p><img alt="If flex-direction is set to column then the cross axis runs in the inline direction." src="basics4.png"></p>
 
 <p>Comprendre les liens entre les différents axes est crucial lorsqu'on commence à aligner/justifier des éléments flexibles sur un axe ou l'autre grâce aux fonctionnalités et propriétés des boîtes flexibles.</p>
 
@@ -59,11 +59,11 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Concepts_de_base_flexbox
 
 <p>Si <code>flex-direction</code> vaut <code>row</code> et que nous travaillons sur un document écrit en français, la ligne de début de l'axe principal sera située à gauche et la ligne de fin sera située à droite.</p>
 
-<p><img alt="Working in English the start edge is on the left." src="https://mdn.mozillademos.org/files/15618/Basics5.png" style="display: block; height: 152px; margin: 0px auto; width: 631px;"></p>
+<p><img alt="Working in English the start edge is on the left." src="basics5.png"></p>
 
 <p>Si on travaille sur un document écrit dans une langue arabe, la ligne de début de l'axe principal sera à droite et la ligne de fin à gauche.</p>
 
-<p><img alt="The start edge in a RTL language is on the right." src="https://mdn.mozillademos.org/files/15619/Basics6.png" style="display: block; height: 152px; margin: 0px auto; width: 634px;"></p>
+<p><img alt="The start edge in a RTL language is on the right." src="basics6.png"></p>
 
 <p>Dans les deux cas, la ligne de début de l'axe secondaire est située en haut et la ligne de fin de cet axe est située en bas car ces deux langues sont écrites horizontalement.</p>
 
@@ -132,7 +132,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Concepts_de_base_flexbox
 
 <p>Prenons un conteneur de 500 pixels de large et qui contient trois éléments de 100 pixels de large. Il faut donc 300 pixels pour disposer ces éléments et il reste ainsi 200 pixels d'espace disponible. Si on ne modifie pas les valeurs initiales, l'espace disponible sera placé après le dernier élément.</p>
 
-<p><img alt="This flex container has available space after laying out the items." src="https://mdn.mozillademos.org/files/15620/Basics7.png" style="display: block; height: 198px; margin: 0px auto; width: 528px;"></p>
+<p><img alt="This flex container has available space after laying out the items." src="basics7.png"></p>
 
 <p>Si on préfère que les éléments s'étirent pour occuper l'espace restant, il nous faut une méthode pour distribuer cet espace parmi les éléments. C'est le rôle des propriétés <code>flex-</code> qui s'appliquent aux éléments.</p>
 
@@ -233,4 +233,4 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Concepts_de_base_flexbox
 
 <h2 id="Prochaines_étapes">Prochaines étapes</h2>
 
-<p>Avec cet article, vous devriez comprendre les différentes fonctionnalités et concepts relatifs aux <em>flexbox</em>. Dans le prochain article, nous verrons <a href="/fr/docs/Web/CSS/Disposition_flexbox_CSS/Liens_entre_flexbox_et_les_autres_dispositions">comment cette spécification s'articule avec les autres modules CSS</a>.</p>
+<p>Avec cet article, vous devriez comprendre les différentes fonctionnalités et concepts relatifs aux <em>flexbox</em>. Dans le prochain article, nous verrons <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods">comment cette spécification s'articule avec les autres modules CSS</a>.</p>

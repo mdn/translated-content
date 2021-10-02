@@ -13,8 +13,6 @@ translation_of: Web/CSS/grid-template-rows
 
 <div>{{EmbedInteractiveExample("pages/css/grid-template-rows.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="brush: css no-line-numbers">/* Valeur avec un mot-clé */
@@ -65,16 +63,14 @@ grid-template-rows: unset;
  <dd>Un mot-clé qui représente la plus grande des contributions maximales de contenu aux objets de la grilles qui occupe la piste de la grille.</dd>
  <dt><code>min-content</code></dt>
  <dd>Un mot-clé qui représente la plus grande des contributions minimales de contenu aux objets de la grilles qui occupe la piste de la grille.</dd>
- <dt>{{cssxref("minmax", "minmax(min, max)")}}</dt>
+ <dt>{{cssxref("minmax()", "minmax(min, max)")}}</dt>
  <dd>Une notation fonctionnelle qui définit un intervalle de taille entre <code>min</code> et <code>max</code>. Si <code>max</code> est inférieur à <code>min</code>, <code>max</code> est ignoré et la fonction est traitée comme un minimum. En tant que maximum, elle joue le rôle d'une valeur <code>&lt;flex&gt;</code> qui définit le facteur de flexibilité de la piste. Cette notation est invalide en tant que minimum.</dd>
  <dt><code>auto</code></dt>
- <dd>Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille.</dd>
- <dd>
- <p class="note"><strong>Note :</strong> Les pistes de taille <code>auto</code> (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.</p>
+ <dd>Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille. <div class="note"><p><strong>Note :</strong> Les pistes de taille <code>auto</code> (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.</p></div>
  </dd>
  <dt>{{cssxref("fit-content", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}</dt>
  <dd>Cette notation représente la formule <code>min(max-content, max(auto, argument))</code> qui est calculée comme pour <code>auto</code> (i.e. <code>minmax(auto, max-content)</code>) sauf que la taille de la piste est ramenée à <em>argument</em> si elle est plus grande que le minimum fourni par <code>auto</code>.</dd>
- <dt>{{cssxref("repeat","repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ], &lt;track-list&gt; )")}}</dt>
+ <dt>{{cssxref("repeat()","repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ], &lt;track-list&gt; )")}}</dt>
  <dd>Représente un fragment répété d'une liste de pistes, cela permet de gérer des grilles avec de nombreuses lignes pour lesquelles on réutilise un motif.</dd>
 </dl>
 
@@ -142,6 +138,6 @@ grid-template-rows: unset;
  <li>{{cssxref("grid-template-columns")}}</li>
  <li>{{cssxref("grid-template-areas")}}</li>
  <li>{{cssxref("grid-template")}}</li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base#Les_pistes">Guide : les concepts de base pour les grilles CSS : les pistes</a></li>
- <li>Tutoriel vidéo : <a href="http://gridbyexample.com/video/series-define-a-grid/">définir une grille (en anglais)</a></li>
+ <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#les_pistes">Guide : les concepts de base pour les grilles CSS : les pistes</a></li>
+ <li>Tutoriel vidéo : <a href="https://gridbyexample.com/video/series-define-a-grid/">définir une grille (en anglais)</a></li>
 </ul>

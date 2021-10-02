@@ -8,10 +8,10 @@ translation_of: Web/API/Worker/Worker
 ---
 <p>{{APIRef("Worker")}}</p>
 
-<p>Le constructeur <code><strong>Worker()</strong></code> crée un objet {{domxref("Worker")}} qui exécute le script à l'URL spécifiée. Ce script doit obéir à la <a href="/en/Same_origin_policy_for_JavaScript" title="Same origin policy for JavaScript">same-origin policy</a>.</p>
+<p>Le constructeur <code><strong>Worker()</strong></code> crée un objet {{domxref("Worker")}} qui exécute le script à l'URL spécifiée. Ce script doit obéir à la <a href="/en/Same_origin_policy_for_JavaScript">same-origin policy</a>.</p>
 
 <div class="note">
-<p><strong>Remarque </strong>: il y a un désaccord entre les éditeurs de navigateur sur la question de savoir si une donnée URI relève ou non de la même origine. Bien que Gecko 10.0 {{ geckoRelease("10.0") }} et suivant accepte les données URIs, ce n'est pas le cas dans tous les autres navigateurs.</p>
+<p><strong>Note :</strong> il y a un désaccord entre les éditeurs de navigateur sur la question de savoir si une donnée URI relève ou non de la même origine. Bien que Gecko 10.0 {{ geckoRelease("10.0") }} et suivant accepte les données URIs, ce n'est pas le cas dans tous les autres navigateurs.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
@@ -30,7 +30,7 @@ translation_of: Web/API/Worker/Worker
  <ul>
   <li><code>type</code>: Une {{domxref("DOMString")}} définissant le type de worker à créer. The valeur peuvent être <code>classic</code> ou <code>module</code>. Si cette prpriété n'est pas définie, la valeur sera <code>classic</code>.</li>
   <li><code>credentials</code>: Une {{domxref("DOMString")}} définissant le type de politique d'origine à utiliser pour le <em>worker</em>. Les valeurs peuvent être <dfn><code>omit</code></dfn>, <code><dfn>same-origin</dfn></code> ou <dfn><code>include</code>. </dfn>Si cette propriété n'est pas définie, ou que type est défini à <code>classic</code>, la valeur sera <code>classic</code>.</li>
-  <li><code>name</code>: Une {{domxref("DOMString")}} définissant un identifiant pour l'environment du worker {{domxref("DedicatedWorkerGlobalScope")}}, souvent utilisé pour le débogage.<span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span></li>
+  <li><code>name</code>: Une {{domxref("DOMString")}} définissant un identifiant pour l'environment du worker {{domxref("DedicatedWorkerGlobalScope")}}, souvent utilisé pour le débogage.</li>
  </ul>
  </dd>
 </dl>
@@ -54,7 +54,7 @@ first.onchange = function() {
   console.log('Message envoyé au worker');
 }</pre>
 
-<p>Pour un exemple complet, consultez notre <a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Exemple basique d'un worker dédié </a>(<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">lancer le worker dédié</a>).</p>
+<p>Pour un exemple complet, consultez notre <a href="https://github.com/mdn/simple-web-worker">Exemple basique d'un worker dédié </a>(<a href="http://mdn.github.io/simple-web-worker/">lancer le worker dédié</a>).</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 
@@ -75,12 +75,10 @@ first.onchange = function() {
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-
-
 <p>{{Compat("api.Worker.Worker")}}</p>
 
 <div class="blockIndicator note">
-<p><strong>Remarque:</strong> Un navigateur peut indiquer avoir un support complet de <code>Worker()</code> même s'il ne supporte pas les fichiers worker écrit comme des modules. À partir du premier août 2019, aucun navigateur n'est connu pour avoir un support en production des fichiers <em>worker</em> écrit comme des modules. Sans ces suppports, les fichiers <em>workers</em> écrit sous forme de module et les modules utilisés dans les workers doivent être transpilés ou convertis en non-module pour être utilisables.</p>
+<p><strong>Note :</strong> Un navigateur peut indiquer avoir un support complet de <code>Worker()</code> même s'il ne supporte pas les fichiers worker écrit comme des modules. À partir du premier août 2019, aucun navigateur n'est connu pour avoir un support en production des fichiers <em>worker</em> écrit comme des modules. Sans ces suppports, les fichiers <em>workers</em> écrit sous forme de module et les modules utilisés dans les workers doivent être transpilés ou convertis en non-module pour être utilisables.</p>
 </div>
 
 <h2 id="Voir_aussi">Voir aussi</h2>

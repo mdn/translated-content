@@ -4,7 +4,7 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
 original_slug: Web/API/Web_Workers_API/algorithme_clonage_structure
 ---
-<p>L’algorithme de clonage structuré est un nouvel algorithme <a class="external" href="http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data">défini par la spécification HTML5</a> pour sérialiser les objets JavaScript complexes. Il est plus puissant que <a href="/en/JSON" title="en/JSON">JSON</a> en cela qu’il supporte la sérialisation d’objets contenant des graphes cycliques — des objets peuvent faire référence à des objets faisant référence à d’autres objets dans le même graphe. De plus, dans certains cas, l’algorithme de clonage structuré peut être plus efficace que JSON.</p>
+<p>L’algorithme de clonage structuré est un nouvel algorithme <a href="http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data">défini par la spécification HTML5</a> pour sérialiser les objets JavaScript complexes. Il est plus puissant que <a href="/en/JSON">JSON</a> en cela qu’il supporte la sérialisation d’objets contenant des graphes cycliques — des objets peuvent faire référence à des objets faisant référence à d’autres objets dans le même graphe. De plus, dans certains cas, l’algorithme de clonage structuré peut être plus efficace que JSON.</p>
 
 <p>L’algorithme, essentiellement, parcourt tous les champs de l’objet original, copiant les valeurs de chaque champ dans un nouvel objet. Si un champ est lui-même un objet avec des champs, ces champs sont parcourus de manière récursive jusqu’à ce que chaque champ et sous-champ aient été copié dans le nouvel objet.</p>
 
@@ -13,7 +13,7 @@ original_slug: Web/API/Web_Workers_API/algorithme_clonage_structure
 <p>Il y a quelques avantages notables à utiliser l’algorithme de clonage structuré plutôt que JSON :</p>
 
 <ul>
- <li>Le clonage structuré peut copier des objets <a href="/en/JavaScript/Reference/Global_Objects/RegExp" title="en/JavaScript/Reference/Global Objects/regexp"><code>RegExp</code></a>.</li>
+ <li>Le clonage structuré peut copier des objets <a href="/en/JavaScript/Reference/Global_Objects/RegExp"><code>RegExp</code></a>.</li>
  <li>Le clonage structuré peut copier des objets {{ domxref("Blob") }}, {{ domxref("File") }} et {{ domxref("FileList") }}.</li>
  <li>Le clonage structuré peut copier des objets {{ domxref("ImageData") }}. Les dimensions du {{ domxref("CanvasPixelArray") }} du clone correspondront à celles de l’original, et il recevra une copie des mêmes données de pixels.</li>
  <li>Le clonage structuré copie correctement les objets contenant des graphes de références cycliques.</li>
@@ -22,11 +22,11 @@ original_slug: Web/API/Web_Workers_API/algorithme_clonage_structure
 <h2 id="Ce_qui_ne_marche_pas_avec_le_clonage_structuré">Ce qui ne marche pas avec le clonage structuré</h2>
 
 <ul>
- <li>Les objets <a href="/en/JavaScript/Reference/Global_Objects/Error" title="en/JavaScript/Reference/Global Objects/Error"><code>Error</code></a> et <a href="/en/JavaScript/Reference/Global_Objects/Function" title="en/JavaScript/Reference/Global Objects/Function"><code>Function</code></a> ne peuvent pas être copiés par l’algorithme de clonage structuré ; toute tentative de le faire émettra une exception <code>DATA_CLONE_ERR</code>.</li>
+ <li>Les objets <a href="/en/JavaScript/Reference/Global_Objects/Error"><code>Error</code></a> et <a href="/en/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a> ne peuvent pas être copiés par l’algorithme de clonage structuré ; toute tentative de le faire émettra une exception <code>DATA_CLONE_ERR</code>.</li>
  <li>De la même manière, toute tentative de cloner des nœuds DOM émettra une exception <code>DATA_CLONE_ERR</code>.</li>
  <li>Certains paramètres d’objets ne sont pas préservés :
   <ul>
-   <li>Le champ <code>lastIndex</code> des objets <a href="/en/JavaScript/Reference/Global_Objects/RegExp" title="en/JavaScript/Reference/Global Objects/regexp"><code>RegExp</code></a> n’est pas préservé.</li>
+   <li>Le champ <code>lastIndex</code> des objets <a href="/en/JavaScript/Reference/Global_Objects/RegExp"><code>RegExp</code></a> n’est pas préservé.</li>
    <li>Les descripteurs de propriétés, accesseurs et mutateurs (ainsi que les fonctionnalités de métadonnées similaires) ne sont pas copiés. Par exemple, si un objet est marqué en lecture seule <em>via</em> un descripteur de propriété, il sera en lecture et écriture dans le clone, car c’est la condition par défaut.</li>
    <li>La chaîne de prototypes n’est ni parcourue, ni copiée.</li>
   </ul>
@@ -141,12 +141,14 @@ original_slug: Web/API/Web_Workers_API/algorithme_clonage_structure
 }
 </pre>
 
-<div class="note"><strong>  Note :</strong> Cet algorithme ne prend en charge que les objets spéciaux <a href="/en/JavaScript/Reference/Global_Objects/RegExp" title="RegExp"><code>RegExp</code></a>, <a href="/en/JavaScript/Reference/Global_Objects/Array" title="Array"><code>Array</code></a> et <a href="/en/JavaScript/Reference/Global_Objects/Date" title="Date"><code>Date</code></a>. Vous pouvez implémenter d’autres cas spéciaux selon vos besoins.</div>
+<div class="note">
+  <p><strong>Note :</strong> Cet algorithme ne prend en charge que les objets spéciaux <a href="/en/JavaScript/Reference/Global_Objects/RegExp"><code>RegExp</code></a>, <a href="/en/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a> et <a href="/en/JavaScript/Reference/Global_Objects/Date"><code>Date</code></a>. Vous pouvez implémenter d’autres cas spéciaux selon vos besoins.</p>
+</div>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a class="external" href="http://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data">Spécification HTML5 : Passage sécurisé de données structurées</a></li>
+ <li><a href="http://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data">Spécification HTML5 : Passage sécurisé de données structurées</a></li>
  <li>{{ domxref("window.history") }}</li>
  <li>{{ domxref("window.postMessage()") }}</li>
  <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>

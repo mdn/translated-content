@@ -4,35 +4,35 @@ slug: Web/API/Web_Audio_API
 translation_of: Web/API/Web_Audio_API
 ---
 <div>
-<p><span style="line-height: 1.5;">La Web Audio API propose un système puissant et flexible pour contrôler les données audio sur internet. Elle permet notamment de sélectionner des sources audio (microphone, flux media), d'y ajouter des effets, de créer des visualisations, d'appliquer des effets de spatialisation (comme la balance), etc.</span></p>
+<p>La Web Audio API propose un système puissant et flexible pour contrôler les données audio sur internet. Elle permet notamment de sélectionner des sources audio (microphone, flux media), d'y ajouter des effets, de créer des visualisations, d'appliquer des effets de spatialisation (comme la balance), etc.</p>
 </div>
 
 <h2 id="Concepts_et_usages">Concepts et usages</h2>
 
-<p><span style="line-height: 1.5;">La Web Audio API effectue des opérations dans un <strong>contexte audio</strong>; elle a été conçue pour supporter le <strong>routing modulaire</strong>. Les opérations audio basiques sont réalisées via des <strong>noeuds audio</strong> reliés entre eux pour former un <strong>graphe de routage audio</strong>. Plusieurs sources - avec différents types d'agencements de canaux - peuvent être supportées, même dans un seul contexte. Ce design modulaire et flexible permet de créer des fonctions audio complexes avec des effets dynamiques.</span></p>
+<p>La Web Audio API effectue des opérations dans un <strong>contexte audio</strong>; elle a été conçue pour supporter le <strong>routing modulaire</strong>. Les opérations audio basiques sont réalisées via des <strong>noeuds audio</strong> reliés entre eux pour former un <strong>graphe de routage audio</strong>. Plusieurs sources - avec différents types d'agencements de canaux - peuvent être supportées, même dans un seul contexte. Ce design modulaire et flexible permet de créer des fonctions audio complexes avec des effets dynamiques.</p>
 
-<p><span style="line-height: 1.5;">Les noeuds audio sont reliés au niveau de leurs entrées et sorties, formant des chaînes ou des réseaux simples. Il peut y avoir une ou plusieurs sources. Les sources fournissent des tableaux d'intensités sonores (échantillons), souvent plusieurs dizaines de milliers par seconde. Ceux-ci peuvent être calculées mathématiquement </span>(avec un {{domxref("OscillatorNode")}}), ou peuvent provenir de fichiers sons ou vidéos (comme {{domxref("AudioBufferSourceNode")}} ou {{domxref("MediaElementAudioSourceNode")}}) ou de flux audio ({{domxref("MediaStreamAudioSourceNode")}}). En réalité, les fichiers sons sont eux-même des enregistrements d'intensités sonores, qui viennent de microphones ou d'instruments électriques, et sont mixés dans une seule onde complexe.</p>
+<p>Les noeuds audio sont reliés au niveau de leurs entrées et sorties, formant des chaînes ou des réseaux simples. Il peut y avoir une ou plusieurs sources. Les sources fournissent des tableaux d'intensités sonores (échantillons), souvent plusieurs dizaines de milliers par seconde. Ceux-ci peuvent être calculées mathématiquement (avec un {{domxref("OscillatorNode")}}), ou peuvent provenir de fichiers sons ou vidéos (comme {{domxref("AudioBufferSourceNode")}} ou {{domxref("MediaElementAudioSourceNode")}}) ou de flux audio ({{domxref("MediaStreamAudioSourceNode")}}). En réalité, les fichiers sons sont eux-même des enregistrements d'intensités sonores, qui viennent de microphones ou d'instruments électriques, et sont mixés dans une seule onde complexe.</p>
 
 <p>Les sorties de ces noeuds peuvent être liées aux entrées d'autres noeuds, qui mixent ces flux d'échantillons sonores ou les séparent en différents flux. Une modification courante est la multiplications des échantillons par une valeur afin d'en augmenter ou diminuer le volume sonore (comme c'est le cas pour le {{domxref("GainNode")}}). Le son est ensuite lié à une destination ({{domxref("AudioContext.destination")}}), qui l'envoie aux enceintes ou au casque audio. Cette dernière connexion n'est utile que si le son doit être entendu.<br>
  <br>
  Un processus de développement typique avec web audio ressemble à ceci :</p>
 
-<ol>
+<ul>
  <li>Création d'un contexte audio</li>
  <li>Dans ce contexte, création des sources — comme <code>&lt;audio&gt;</code>, oscillator, stream</li>
  <li>Création de noeuds d'effets, comme la réverbération, les filtres biquad, la balance, le compresseur</li>
  <li>Choix de la sortie audio (appelée destination), par exemple les enceintes du système</li>
  <li>Connection des sources aux effets, et des effets à la destination</li>
-</ol>
+</ul>
 
-<p><img alt="A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information." src="https://mdn.mozillademos.org/files/12523/webaudioAPI.svg" style="display: block; height: 143px; margin: 0px auto; width: 643px;"></p>
+<p><img alt="Un diagramme de boîte avec une boîte extérieure intitulée contexte audio et trois boîtes à l'intérieur intitulées source, effets et destination. Les trois boîtes intérieures ont des flèches qui pointent de la gauche vers la droite, indiquant le sens du flux de l'information audio." src="audio-context_.png"></p>
 
 <p>Le timing est contrôlé avec une grande précision et une latence faible, ce qui permet aux développeurs d'écrire un code qui réagit précisément aux événements et qui est capable de traiter des échantillons précis, même avec un taux d'échantillonnage élevé. Cela permet d'envisager des applications telles que des boîtes à rythme ou des séquenceurs.</p>
 
 <p>La Web Audio API permet également de contrôler la <em>spatialisation</em> du son. En utilisant un système basé sur le modèle <em>émetteur - récepteur, </em>elle permet le contrôle de la balance ainsi que la gestion de l'atténuation du son en fonction de la distance, ou effet doppler, induite par un déplacement de la source sonore (ou de l'auditeur).</p>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez lire d'avantage de détails sur la Web Audio API en vous rendant sur notre article<a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API"> Concepts de base de la Web Audio API</a>.</p>
+<p><strong>Note :</strong> Vous pouvez lire d'avantage de détails sur la Web Audio API en vous rendant sur notre article<a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API"> Concepts de base de la Web Audio API</a>.</p>
 </div>
 
 <h2 id="Interface_de_la_Web_Audio_API">Interface de la Web Audio API</h2>
@@ -58,7 +58,7 @@ translation_of: Web/API/Web_Audio_API
 
 <dl>
  <dt>{{domxref("OscillatorNode")}}</dt>
- <dd>Un objet <strong><code style="font-size: 14px;">OscillatorNode</code></strong><strong> </strong>est un module de traitement audio qui génère la création d'une onde sinusoïdale d'une certaine fréquence.</dd>
+ <dd>Un objet <strong><code>OscillatorNode</code></strong><strong> </strong>est un module de traitement audio qui génère la création d'une onde sinusoïdale d'une certaine fréquence.</dd>
  <dt>{{domxref("AudioBuffer")}}</dt>
  <dd>Un objet <strong><code>AudioBuffer</code></strong> est un petit morceau de contenu audio monté en mémoire. Il peut être créé à partir d'un fichier audio avec la méthode {{ domxref("AudioContext.decodeAudioData()") }}, ou à partir de données brutes en utilisant {{ domxref("AudioContext.createBuffer()") }}. Une fois décodé sous cette forme, la source audio peut être placée dans un {{ domxref("AudioBufferSourceNode") }}.</dd>
  <dt>{{domxref("AudioBufferSourceNode")}}</dt>
@@ -66,7 +66,7 @@ translation_of: Web/API/Web_Audio_API
  <dt>{{domxref("MediaElementAudioSourceNode")}}</dt>
  <dd>Un objet <code><strong>MediaElementAudio</strong></code><strong><code>SourceNode</code></strong> est une source audio composée d'un élément  HTML5 {{ htmlelement("audio") }} ou {{ htmlelement("video") }}. C'est un {{domxref("AudioNode")}} qui se comporte comme une source audio.</dd>
  <dt>{{domxref("MediaStreamAudioSourceNode")}}</dt>
- <dd>Un objet <code><strong>MediaStreamAudio</strong></code><strong><code>SourceNode</code></strong> est une source audio composée d'un <a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} (tel qu'une webcam ou un microphone). C'est un {{domxref("AudioNode")}} qui se comporte comme une source audio.</dd>
+ <dd>Un objet <code><strong>MediaStreamAudio</strong></code><strong><code>SourceNode</code></strong> est une source audio composée d'un <a href="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} (tel qu'une webcam ou un microphone). C'est un {{domxref("AudioNode")}} qui se comporte comme une source audio.</dd>
 </dl>
 
 <h3 id="Définition_des_filtres_d'effets_audio">Définition des filtres d'effets audio</h3>
@@ -96,7 +96,7 @@ translation_of: Web/API/Web_Audio_API
  <dt>{{domxref("AudioDestinationNode")}}</dt>
  <dd>Un noeud <strong><code>AudioDestinationNode</code></strong> représente la destination finale d'une source audio source dans un contexte donné — en général les enceintes du matériel.</dd>
  <dt>{{domxref("MediaStreamAudioDestinationNode")}}</dt>
- <dd>Un noeud <code><strong>MediaStreamAudio</strong></code><strong><code>DestinationNode</code></strong> représente une destination audio constituée d'un {{domxref("MediaStream")}} <a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> à une seule piste <code>AudioMediaStreamTrack</code>; il peut être utilisé de façon similaire à un {{domxref("MediaStream")}} obtenu avec {{ domxref("Navigator.getUserMedia") }}. C'est un {{domxref("AudioNode")}} qui se comporte comme une destination audio.</dd>
+ <dd>Un noeud <code><strong>MediaStreamAudio</strong></code><strong><code>DestinationNode</code></strong> représente une destination audio constituée d'un {{domxref("MediaStream")}} <a href="/en-US/docs/WebRTC">WebRTC</a> à une seule piste <code>AudioMediaStreamTrack</code>; il peut être utilisé de façon similaire à un {{domxref("MediaStream")}} obtenu avec {{ domxref("Navigator.getUserMedia") }}. C'est un {{domxref("AudioNode")}} qui se comporte comme une destination audio.</dd>
 </dl>
 
 <h3 id="Analyse_des_données_et_visualisation">Analyse des données et visualisation</h3>
@@ -127,7 +127,7 @@ translation_of: Web/API/Web_Audio_API
 <h3 id="Traitement_audio_avec_JavaScript">Traitement audio avec JavaScript</h3>
 
 <div class="note">
-<p><strong>Note</strong>: Au jour de la publication de la spécification Web Audio API le 29 août 2014, ces fonctionnalités sont dépréciées, et seront bientôt remplacées par {{ anch("Audio_Workers") }}.</p>
+<p><strong>Note :</strong> Au jour de la publication de la spécification Web Audio API le 29 août 2014, ces fonctionnalités sont dépréciées, et seront bientôt remplacées par {{ anch("Audio_Workers") }}.</p>
 </div>
 
 <dl>
@@ -152,7 +152,7 @@ translation_of: Web/API/Web_Audio_API
  <dd>The <code>OfflineAudioCompletionEvent</code> est envoyé aux fonctions de callback qui écoutent l'évènement {{event("complete")}} event implements this interface.</dd>
 </dl>
 
-<h3 id="Audio_Workers" name="Audio_Workers">Audio Workers</h3>
+<h3 id="Audio_Workers">Audio Workers</h3>
 
 <p>Les Audio workers offrent la possibilité de traiter le son directement dans le contexte d'un <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">web worker</a>. En date du 29 August 2014, ils ne sont encore implémentés par aucun navigateur. Lorsqu'ils seront implémentés, ils remplaceront {{domxref("ScriptProcessorNode")}}, et les autres fonctionnalités mentionnées dans la section <a href="#Audio_processing_via_JavaScript">Traitement audio avec JavaScript</a> ci-avant.</p>
 
@@ -165,7 +165,7 @@ translation_of: Web/API/Web_Audio_API
  <dd>UN objet <code>Event</code> est transmis aux objets {{domxref("AudioWorkerGlobalScope")}} pour effectuer un traitement audio.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Objets obsolètes</h2>
+<h2 id="Example">Objets obsolètes</h2>
 
 <p>Les objets suivants étaient définis dans les versions précédentes de la spécification, mais sont maintenant obsolètes et ont été remplacés.</p>
 
@@ -176,13 +176,13 @@ translation_of: Web/API/Web_Audio_API
  <dd>Utilisé pour définir une forme d'onde périodique. Cet objet est obsolète, et a été remplacé par {{domxref("PeriodicWave")}}.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <p>Cet exemple montre l'utilisation d'un grand nombre de fonctions Web Audio. La démo est disponible en ligne sur <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-o-matic</a> (voir aussi le <a href="https://github.com/mdn/voice-change-o-matic"> code source complet sur Github</a>) —c'est une démo expérimentale d'application pour modifier la voix; baissez le son de vos enceintes pour l'utiliser, au moins au début !</p>
 
 <p>Les lignes qui concernent la Web Audio API sont surlignées; si vous voulez en savoir davantage sur les différentes méthodes, consultez la documentation.</p>
 
-<pre class="brush: js; highlight:[1,2,9,10,11,12,36,37,38,39,40,41,62,63,72,114,115,121,123,124,125,147,151]">var contexteAudio = new (window.AudioContext || window.webkitAudioContext)(); // définition du contexte audio
+<pre class="brush: js">var contexteAudio = new (window.AudioContext || window.webkitAudioContext)(); // définition du contexte audio
 // les navigateurs avec un moteur Webkit/blink demandent un préfixe
 
 var voixSelectionnee = document.getElementById("voice"); // case à cocher pour la sélection d'effets de voix
@@ -370,36 +370,32 @@ function muterVoix() { // allumer / éteindre le son
  <li><a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic example</a></li>
  <li><a href="http://mdn.github.io/violent-theremin/">Violent Theremin example</a></li>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics">Web audio spatialisation basics</a></li>
- <li><a href="http://www.html5rocks.com/tutorials/webaudio/positional_audio/" title="http://www.html5rocks.com/tutorials/webaudio/positional_audio/">Mixing Positional Audio and WebGL</a></li>
- <li><a href="http://www.html5rocks.com/tutorials/webaudio/games/" title="http://www.html5rocks.com/tutorials/webaudio/games/">Developing Game Audio with the Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext" title="/en-US/docs/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext">Porting webkitAudioContext code to standards based AudioContext</a></li>
+ <li><a href="http://www.html5rocks.com/tutorials/webaudio/positional_audio/">Mixing Positional Audio and WebGL</a></li>
+ <li><a href="http://www.html5rocks.com/tutorials/webaudio/games/">Developing Game Audio with the Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext">Porting webkitAudioContext code to standards based AudioContext</a></li>
  <li><a href="https://github.com/bit101/tones">Tones</a>: a simple library for playing specific tones/notes using the Web Audio API.</li>
  <li><a href="https://github.com/goldfire/howler.js/">howler.js</a>: a JS audio library that defaults to <a href="https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html">Web Audio API</a> and falls back to <a href="http://www.whatwg.org/specs/web-apps/current-work/#the-audio-element">HTML5 Audio</a>, as well as providing other useful features.</li>
  <li><a href="https://github.com/mattlima/mooog">Mooog</a>: jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.</li>
 </ul>
 
-<section id="Quick_Links">
-<h3 id="Quicklinks">Quicklinks</h3>
+<h3 id="guides">Guides</h3>
 
-<ol>
- <li data-default-state="open"><strong><a href="#">Guides</a></strong>
-
-  <ol>
+  <ul>
    <li><a href="/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API">Les concepts de base de la Web Audio API</a></li>
    <li><a href="/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Utiliser la Web Audio API</a></li>
    <li><a href="/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Visualizations with Web Audio API</a></li>
    <li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics">Web audio spatialisation basics</a></li>
-   <li><a href="/en-US/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext" title="/en-US/docs/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext">Porting webkitAudioContext code to standards based AudioContext</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><strong><a href="#">Exemples</a></strong>
-  <ol>
+   <li><a href="/en-US/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext">Porting webkitAudioContext code to standards based AudioContext</a></li>
+  </ul>
+
+<h3 id="démos">Démos</h3>
+  <ul>
    <li><a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a></li>
    <li><a href="http://mdn.github.io/violent-theremin/">Violent Theremin</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><strong><a href="#">Objets</a></strong>
-  <ol>
+  </ul>
+
+<h3 id="api">API</h3>
+  <ul>
    <li>{{domxref("AnalyserNode")}}</li>
    <li>{{domxref("AudioBuffer")}}</li>
    <li>{{domxref("AudioBufferSourceNode")}}</li>
@@ -429,7 +425,5 @@ function muterVoix() { // allumer / éteindre le son
    <li>{{domxref("PeriodicWave")}}</li>
    <li>{{domxref("ScriptProcessorNode")}}</li>
    <li>{{domxref("WaveShaperNode")}}</li>
-  </ol>
- </li>
-</ol>
-</section>
+  </ul>
+

@@ -15,7 +15,7 @@ translation_of: Web/API/Event/currentTarget
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">var <em>currentEventTarget</em> = <em>event</em>.currentTarget;</pre>
+<pre class="syntaxbox">var <em>currentEventTarget</em> = <em>event</em>.currentTarget;</pre>
 
 <h3 id="Valeur">Valeur</h3>
 
@@ -25,7 +25,7 @@ translation_of: Web/API/Event/currentTarget
 
 <p><code>Event.currentTarget</code> peut s'avérer utile lorsqu'on attache le même gestionnaire d'évènement à plusieurs éléments.</p>
 
-<pre class="brush: js notranslate">// Cette fonction masque la cible courante de l'évènement
+<pre class="brush: js">// Cette fonction masque la cible courante de l'évènement
 // et l'affiche dans la console.
 function hide(e){
   e.currentTarget.style.visibility = 'hidden';
@@ -46,7 +46,7 @@ document.body.addEventListener('click', hide, false);
 </pre>
 
 <div class="note">
-<p><strong>Note : </strong>La valeur de <code>event.currentTarget</code> est <strong>uniquement</strong> disponible lorsque l'évènement est géré. Ainsi, on ne pourra pas observer la valeur de <code>currentTarget</code> <em>a posteriori</em> (ex. si on a stocké la valeur d'<code>event</code> dans une variable lors de la gestion de l'évènement puis qu'on utilise celle-ci plus tard, <code>event.currentTarget</code> aura la valeur <code>null</code>).</p>
+<p><strong>Note :</strong> La valeur de <code>event.currentTarget</code> est <strong>uniquement</strong> disponible lorsque l'évènement est géré. Ainsi, on ne pourra pas observer la valeur de <code>currentTarget</code> <em>a posteriori</em> (ex. si on a stocké la valeur d'<code>event</code> dans une variable lors de la gestion de l'évènement puis qu'on utilise celle-ci plus tard, <code>event.currentTarget</code> aura la valeur <code>null</code>).</p>
 </div>
 
 <h2 id="Spécifications">Spécifications</h2>

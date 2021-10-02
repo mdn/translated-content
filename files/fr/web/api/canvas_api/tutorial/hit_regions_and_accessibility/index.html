@@ -6,13 +6,13 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Hit_regions_and_accessibility
 ---
 <div>{{CanvasSidebar}} {{ PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Optimizing_canvas") }}</div>
 
-<div class="summary">L'élément {{HTMLElement("canvas")}} lui-même est juste un bitmap et ne fourni aucune information sur les objets dessinés. Le contenu des canvas n'est pas sujet aux outils d'accessibility comme l'est la sémantique HTML. En général vous devriez éviter d'utiliser les canvas sur les sites ou les applications accessibles. Le marche à suivre suivante peut vous aider à les rendre plus accessibles.</div>
+<p>L'élément {{HTMLElement("canvas")}} lui-même est juste un bitmap et ne fourni aucune information sur les objets dessinés. Le contenu des canvas n'est pas sujet aux outils d'accessibility comme l'est la sémantique HTML. En général vous devriez éviter d'utiliser les canvas sur les sites ou les applications accessibles. Le marche à suivre suivante peut vous aider à les rendre plus accessibles.</p>
 
 <h2 id="Moyen_de_repli">Moyen de repli</h2>
 
 <p>Le contenu à l'intérieur d'un tag <code>&lt;canvas&gt; ... &lt;/canvas&gt;</code> peut être utilisé comme moyen de secours pour les navigteurs qui ne supportent pas le rendu de canvas. C'est aussi très utile pour les utilisateurs qui utilisent des technologies adaptées (comme les lecteurs d'écran) qui peuvent lire et interpréter les éléments du DOM. Un bon exemple sur <a href="http://www.html5accessibility.com/tests/canvas.html">html5accessibility.com</a> demontre comment cela peut être fait.</p>
 
-<pre class="brush: html notranslate">&lt;canvas&gt;
+<pre class="brush: html">&lt;canvas&gt;
   &lt;h2&gt;Shapes&lt;/h2&gt;
   &lt;p&gt;A rectangle with a black border.
    In the background is a pink circle.
@@ -29,7 +29,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Hit_regions_and_accessibility
 
 <p>Accessible Rich Internet Applications <strong>(<a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a>)</strong> (≈ <a href="https://fr.wikipedia.org/wiki/Accessible_Rich_Internet_Applications">Les applications Internet Accessibles Riches)</a> défini des pistes pour rendre le contenu Web et les applications Web plus accessibles pour les personnes ayant un handicap. Vous pouvez utiliser les attributs ARIA pour decrire le comportement et le but de vos éléments canvas. Allez voir <a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a> et <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">les techniques ARIA</a> pour plus d'informations.</p>
 
-<pre class="brush: html notranslate">&lt;canvas id="button" tabindex="0" role="button" aria-pressed="false" aria-label="Start game"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="button" tabindex="0" role="button" aria-pressed="false" aria-label="Start game"&gt;&lt;/canvas&gt;
 </pre>
 
 <h2 id="Zones_cibles_hit_Region">Zones cibles (hit Region)</h2>
@@ -47,7 +47,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Hit_regions_and_accessibility
 
 <p>Vous pouvez ajouter une "hit region" à votre chemin et vérifier la propriété {{domxref("MouseEvent.region")}} pour tester si votre souris entre dans votre région, par exemple.</p>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 &lt;script&gt;
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
@@ -66,7 +66,7 @@ canvas.addEventListener('mousemove', function(event) {
 
 <p>La méthode <code>addHitRegion()</code> accepte aussi une option de <code>control</code> pour envoyer des événement vers un élément (c'est un enfant des canvas):</p>
 
-<pre class="brush: js notranslate">ctx.addHitRegion({control: element});</pre>
+<pre class="brush: js">ctx.addHitRegion({control: element});</pre>
 
 <p>Cela peut être utile pour le routage d'éléments {{HTMLElement("input")}}, par exemple. Regardez aussi <a href="http://codepen.io/adobe/pen/BhcmK">codepen demo</a>.</p>
 

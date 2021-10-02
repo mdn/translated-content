@@ -20,7 +20,7 @@ void <var><em>ctx</em>.drawImage(image, dx, dy, dLargeur, dHauteur);</var>
 void <var><em>ctx</em>.drawImage(image, sx, sy, sLargeur, sHauteur, dx, dy, dLargeur, dHauteur);</var>
 </pre>
 
-<p><img alt="drawImage" src="https://mdn.mozillademos.org/files/225/Canvas_drawimage.jpg" style="float: right;"></p>
+<p><img alt="drawImage" src="canvas_drawimage.jpg"></p>
 
 <h3 id="Paramètres">Paramètres</h3>
 
@@ -33,7 +33,7 @@ void <var><em>ctx</em>.drawImage(image, sx, sy, sLargeur, sHauteur, dx, dy, dLar
  <dd>La coordonnée <code>y</code> dans le canvas de destination où placer le coin supérieur gauche de l'<code>image</code> source.</dd>
  <dt><code>dLargeur</code></dt>
  <dd>La largeur de l'<code>image</code> dessinée dans le contexte de la balise canvas. Cela permet d'ajuster la taille de l'image. Si cet argument n'est pas spécifié, l'image prendra sa largeur normale.</dd>
- <dt><font face="Consolas, Liberation Mono, Courier, monospace">dHauteur</font></dt>
+ <dt>dHauteur</dt>
  <dd>La hauteur de l'<code>image</code> dessinée dans le contexte de la balise canvas. Cela permet d'ajuster la taille de l'image. Si cet argument n'est pas spécifié, l'image prendra sa hauteur normale.</dd>
  <dt><code>sx</code></dt>
  <dd>La coordonnée <code>x</code> du bord en haut à gauche de la partie de l'<code>image</code> source à dessiner dans le contexte du canvas.</dd>
@@ -65,14 +65,14 @@ void <var><em>ctx</em>.drawImage(image, sx, sy, sLargeur, sHauteur, dx, dy, dLar
 <h4 id="HTML">HTML</h4>
 
 <pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-  &lt;img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
+  &lt;img id="source" src="rhino.jpg"
        width="300" height="227"&gt;
 &lt;/div&gt;
 </pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[5]">var canvas = document.getElementById("canvas");
+<pre class="brush: js">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var image = document.getElementById("source");
 
@@ -81,11 +81,10 @@ ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
 
 <p>Éditez le code suivant pour voir les changements en direct dans la balise canvas:</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+<h4 id="code_jouable">Code jouable</h4>
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-  &lt;img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227"&gt;
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+  &lt;img id="source" src="rhino.jpg" width="300" height="227"&gt;
 &lt;/div&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="edit" type="button" value="Edit" /&gt;
@@ -95,7 +94,7 @@ ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
 ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var image = document.getElementById('source');
 var textarea = document.getElementById("code");
@@ -120,9 +119,8 @@ edit.addEventListener("click", function() {
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 
@@ -152,8 +150,8 @@ window.addEventListener("load", drawCanvas);
  <li>A partir de {{geckoRelease("5.0")}} <code>drawImage()</code> gère les arguments négatifs, conformément à la spécification, en inversant ces valeurs par rapport aux axes.</li>
  <li>Spécifier une image <code>null</code> ou <code>undefined</code> en appellant <code>drawImage()</code> correctement retournera une exception <code>TYPE_MISMATCH_ERR</code> à partir de {{geckoRelease("5.0")}}.</li>
  <li>Prior to Gecko 7.0 {{ geckoRelease("7.0") }}, Firefox ajoute une exception si une des coordonnées est nulle ou négative. Selon la spécification, cela ne durera pas.</li>
- <li>Gecko 9.0 {{ geckoRelease("9.0") }} supporte désormais correctement le CORS pour dessiner des images de domaines étrangers sans <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Images_avec_le_contr%C3%B4le_d_acc%C3%A8s_HTTP" title="en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">corrompre le canvas</a>.</li>
- <li>Gecko 11.0 {{ geckoRelease("11.0") }} permet désormais de dessiner les images SVG dans le canvas sans <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Images_avec_le_contr%C3%B4le_d_acc%C3%A8s_HTTP" title="en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">corrompre le canevas</a>.</li>
+ <li>Gecko 9.0 {{ geckoRelease("9.0") }} supporte désormais correctement le CORS pour dessiner des images de domaines étrangers sans <a href="/fr/docs/Web/HTML/Images_avec_le_contr%C3%B4le_d_acc%C3%A8s_HTTP">corrompre le canvas</a>.</li>
+ <li>Gecko 11.0 {{ geckoRelease("11.0") }} permet désormais de dessiner les images SVG dans le canvas sans <a href="/fr/docs/Web/HTML/Images_avec_le_contr%C3%B4le_d_acc%C3%A8s_HTTP">corrompre le canevas</a>.</li>
 </ul>
 
 <h2 id="Notes">Notes</h2>

@@ -37,7 +37,7 @@ translation_of: Web/API/BeforeUnloadEvent
 
 <h2 id="Exemples">Exemples</h2>
 
-<pre class="brush:js; notranslate">window.addEventListener("beforeunload", function(event) {
+<pre class="brush:js;">window.addEventListener("beforeunload", function(event) {
   event.returnValue = "\o/";
 });
 
@@ -48,7 +48,7 @@ window.addEventListener("beforeunload", function(event) {
 
 <p>Les navigateurs basés sur WebKit ne suivent pas la spécification concernant la demande de confirmation. Un exemple similaire fonctionnant sur presque tous les navigateurs serait plutôt comme :</p>
 
-<pre class="brush: js notranslate">window.addEventListener("beforeunload", function (e) {
+<pre class="brush: js">window.addEventListener("beforeunload", function (e) {
   var confirmationMessage = "\o/";
 
   (e || window.event).returnValue = confirmationMessage;     // Gecko + IE

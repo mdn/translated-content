@@ -12,7 +12,7 @@ translation_of: Web/API/Node/insertBefore
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p class="summary">La méthode <code><strong>Node.insertBefore()</strong></code> insère un nœud avant un <em>nœud de référence</em> en tant qu'enfant d'un <em>nœud parent</em> spécifié.</p>
+<p>La méthode <code><strong>Node.insertBefore()</strong></code> insère un nœud avant un <em>nœud de référence</em> en tant qu'enfant d'un <em>nœud parent</em> spécifié.</p>
 
 <p>Si le nœud donné existe déjà dans le document, <code>insertBefore()</code> le déplace de sa position actuelle vers la nouvelle position. (C'est-à-dire qu'il sera automatiquement retiré de son parent existant avant d'être ajouté au nouveau parent spécifié).</p>
 
@@ -94,7 +94,7 @@ parentDiv.insertBefore(sp1, sp2)
 &lt;/script&gt;
 </pre>
 
-<p>Il n'existe pas de méthode <code>insertAfter</code>. Il peut être émulé avec une combinaison des méthodes <code>insertBefore</code><a class="internal" href="/fr/docs/Web/API/Node/insertBefore"> </a>et <code><a href="/fr/docs/Web/API/Node/nextSibling">nextSibling</a></code>.</p>
+<p>Il n'existe pas de méthode <code>insertAfter</code>. Il peut être émulé avec une combinaison des méthodes <code>insertBefore</code><a href="/fr/docs/Web/API/Node/insertBefore"> </a>et <code><a href="/fr/docs/Web/API/Node/nextSibling">nextSibling</a></code>.</p>
 
 <p>Dans l'exemple ci-dessus, <code>sp1</code> pourrait être inséré après <code>sp2</code> en utilisant :</p>
 

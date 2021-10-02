@@ -12,26 +12,26 @@ translation_of: Web/API/Range/selectNode
 
 <p>La méthode <code>Range.selectNode()</code> définit le {{domxref ("Range")}} destiné à contenir le {{domxref("Node")}} et son contenu. Le {{domxref ("Node")}} parent du début et de la fin du {{domxref("Range")}} sera le même que le parent du <em>noeudDeReference</em>.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><em>range</em>.selectNode(<em>noeudDeReference</em>);
 </pre>
 
-<h3 id="Parameters" name="Parameters">Paramètres</h3>
+<h3 id="Parameters">Paramètres</h3>
 
 <dl>
  <dt><em>noeudDeReference</em></dt>
  <dd>Le {{domxref("Node")}} à choisir à l'intérieur d'un <code>{domxref("Range")}}</code>.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush:js">var range = document.createRange();
 var noeudDeReference = document.getElementsByTagName("div").item(0);
 
 range.selectNode(noeudDeReference);</pre>
 
-<h2 id="Specification" name="Specification">Spécifications</h2>
+<h2 id="Specification">Spécifications</h2>
 
 <table class="standard-table">
  <tbody>
