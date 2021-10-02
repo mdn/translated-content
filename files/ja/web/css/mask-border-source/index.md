@@ -5,7 +5,7 @@ tags:
   - CSS
   - CSS Masking
   - CSS プロパティ
-  - Experimental
+  - 実験的
   - NeedsCompatTable
   - NeedsExample
   - Reference
@@ -53,31 +53,31 @@ mask-border-source: unset;
 
 ## 例
 
-### Basic usage
+### 基本的な使用
 
-This property doesn't appear to be supported anywhere yet. When it eventually starts to be supported, it will serve to define the source of the border mask.
+このプロパティは、まだどこでも対応されていないようです。このプロパティが対応されるようになれば、境界マスクのソースを定義する役割を果たすことになります。
 
 ```css
 mask-border-source: url(image.jpg);
 ```
 
-Chromium-based browsers support an outdated version of this property — `mask-box-image-source` — with a prefix:
+Chromium ベースのブラウザーは、このプロパティの古い版 — `mask-box-image-source` — に接頭辞つきで対応しています。
 
 ```css
 -webkit-mask-box-image-source: url(image.jpg);
 ```
 
-> **Note:** The [`mask-border`](/ja/docs/Web/CSS/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
+> **Note:** [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{cssxref("mask-border")}}
 - {{cssxref("mask-border-mode")}}

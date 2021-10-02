@@ -3,9 +3,9 @@ title: mask-border-repeat
 slug: Web/CSS/mask-border-repeat
 tags:
   - CSS
+  - CSS Masking
   - CSS プロパティ
-  - CSS マスク
-  - Experimental
+  - 実験的
   - NeedsCompatTable
   - NeedsExample
   - Reference
@@ -38,10 +38,10 @@ mask-border-repeat: unset;
 
 `mask-border-repeat` プロパティは、以下の値のリストから 1 つまたは 2 つの値を使用して指定します。
 
-- **1 つ**の値が指定されると、**全四辺**に同じ動作が適用されます。
+- **1 つ**の値が指定されると、**全 4 辺**に同じ動作が適用されます。
 - **2 つ**の値が指定されると、最初の値は**上と下**の辺に、二番目の値は**左と右**の辺に適用されます。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
 - `stretch`
   - : 元の画像の辺の領域は、それぞれの境界の間の溝を埋めるように引き伸ばされます。
@@ -62,31 +62,31 @@ mask-border-repeat: unset;
 
 ## 例
 
-### Basic usage
+### 基本的な使用
 
-This property doesn't appear to be supported anywhere yet. When it eventually starts to be supported, it will serve to define how the border mask slice will repeat around the border — i.e. will it just repeat, or be scaled slightly so a whole number of slices fits, or be stretched so one slice fits?
+このプロパティは、まだどこでも対応されていないようです。このプロパティが対応されるようになれば、境界マスクのスライスが境界の周りでどのように繰り返されるかを定義することができるようになります。 — つまり、ただ繰り返すのか、スライスの全体数が収まるように少しだけ拡大縮小するのか、1 つのスライスが収まるように引き伸ばすのか、ということです。
 
 ```css
 mask-border-repeat: round;
 ```
 
-Chromium-based browsers support an outdated version of this property — `mask-box-image-repeat` — with a prefix:
+Chromium ベースのブラウザーは、このプロパティの古い版 — `mask-box-image-repeat` — に接頭辞つきで対応しています。
 
 ```css
 -webkit-mask-box-image-repeat: round;
 ```
 
-> **Note:** The [`mask-border`](/ja/docs/Web/CSS/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
+> **Note:** [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{cssxref("mask-border")}}
 - {{cssxref("mask-border-mode")}}
