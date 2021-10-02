@@ -5,7 +5,7 @@ tags:
   - CSS
   - CSS Masking
   - CSS プロパティ
-  - Experimental
+  - 実験的
   - NeedsCompatTable
   - NeedsExample
   - Reference
@@ -23,13 +23,13 @@ translation_of: Web/CSS/mask-border-width
 /* キーワード値 */
 mask-border-width: auto;
 
-/* &lt;length&gt; 値 */
+/* <length> 値 */
 mask-border-width: 1rem;
 
-/* &lt;percentage&gt; 値 */
+/* <percentage> 値 */
 mask-border-width: 25%;
 
-/* &lt;number&gt; 値 */
+/* <number> 値 */
 mask-border-width: 3;
 
 /* 上下 | 左右 */
@@ -74,31 +74,31 @@ mask-border-width: unset;
 
 ## 例
 
-### Basic usage
+### 基本的な使用
 
-This property doesn't appear to be supported anywhere yet. When it eventually starts to be supported, it will serve to define the width of the border mask — setting this to a different value to [`mask-border-slice`](/ja/docs/Web/CSS/mask-border-slice) will cause the slices to be scaled to fit the border mask.
+このプロパティは、まだどこでも対応されていないようです。このプロパティが対応されるようになれば、境界マスクの幅を定義することになります。このプロパティを [`mask-border-slice`](/ja/docs/Web/CSS/mask-border-slice) と異なる値に設定すると、スライスは境界マスクに合わせて拡大縮小されます。
 
 ```css
 mask-border-width: 30 fill;
 ```
 
-Chromium-based browsers support an outdated version of this property — `mask-box-image-width` — with a prefix:
+Chromium ベースのブラウザーは、このプロパティの古い版 — `mask-box-image-width` — に接頭辞つきで対応しています。
 
 ```css
 -webkit-mask-box-image-width: 20px;
 ```
 
-> **Note:** The [`mask-border`](/ja/docs/Web/CSS/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
+> **Note:** [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{cssxref("mask-border")}}
 - {{cssxref("mask-border-mode")}}
