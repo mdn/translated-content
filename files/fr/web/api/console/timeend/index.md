@@ -10,49 +10,31 @@ tags:
   - Méthode
 translation_of: Web/API/Console/timeEnd
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>Arrête un chronomètre (<em>timer</em>) précédemment démarré par {{domxref("console.time()")}}.</p>
+Arrête un chronomètre (_timer_) précédemment démarré par {{domxref("console.time()")}}.
 
-<p>Voir <a href="/fr/docs/Web/API/console#Timers">Timers</a> dans la documentation de {{domxref("console")}} pour des détails et des exemples.</p>
+Voir [Timers](/fr/docs/Web/API/console#Timers) dans la documentation de {{domxref("console")}} pour des détails et des exemples.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">console.timeEnd(<em>label</em>);
-</pre>
+    console.timeEnd(label);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>label</code></dt>
- <dd>Le nom du <em>timer</em> à stopper. Une fois arrêté, le temps écoulé est automatiquement affiché dans la <a href="/fr/docs/Outils/Console_Web">Console Web</a>.</dd>
-</dl>
+- `label`
+  - : Le nom du _timer_ à stopper. Une fois arrêté, le temps écoulé est automatiquement affiché dans la [Console Web](/fr/docs/Outils/Console_Web).
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#timeend", "console.timeEnd()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | Statut                           | Commentaire         |
+| -------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName("Console API", "#timeend", "console.timeEnd()")}} | {{Spec2("Console API")}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("api.Console.timeEnd")}}</div>
+{{Compat("api.Console.timeEnd")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a>.</li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/).

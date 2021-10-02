@@ -11,28 +11,31 @@ tags:
   - workerStart
 translation_of: Web/API/PerformanceResourceTiming/workerStart
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>La propriété en lecture seule <strong><code>workerStart</code></strong> de l'interface <a href="/fr/docs/Web/API/PerformanceResourceTiming"><code>PerformanceResourceTiming</code></a> renvoie un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> immédiatement avant l'envoi du <a href="/fr/docs/Web/API/FetchEvent"><code>FetchEvent</code></a> si un processus de <i>service worker</i> est déjà en cours, ou immédiatement avant le démarrage du processus de <i>service worker</i> s'il n'est pas déjà en cours. Si la ressource n'est pas interceptée par un <i>service worker</i>, la propriété renvoie toujours 0.</p>
+La propriété en lecture seule **`workerStart`** de l'interface [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming) renvoie un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant l'envoi du [`FetchEvent`](/fr/docs/Web/API/FetchEvent) si un processus de _service worker_ est déjà en cours, ou immédiatement avant le démarrage du processus de _service worker_ s'il n'est pas déjà en cours. Si la ressource n'est pas interceptée par un _service worker_, la propriété renvoie toujours 0.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js"><var>resource</var>.workerStart;</pre>
+```js
+resource.workerStart;
+```
 
-<h3 id="Return_Value">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> immédiatement avant de transmettre le <a href="/fr/docs/Web/API/FetchEvent"><code>FetchEvent</code></a> si un processus de <i>service worker</i> est déjà en cours, ou immédiatement avant de lancer le processus de <i>service worker</i> s'il n'est pas encore en cours. Si la ressource n'est pas interceptée par un <i>service worker</i>, la propriété retourne toujours 0.</p>
+Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant de transmettre le [`FetchEvent`](/fr/docs/Web/API/FetchEvent) si un processus de _service worker_ est déjà en cours, ou immédiatement avant de lancer le processus de _service worker_ s'il n'est pas encore en cours. Si la ressource n'est pas interceptée par un _service worker_, la propriété retourne toujours 0.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>Dans l'exemple suivant, la valeur des propriétés <code>*Start</code> et <code>*End</code> de tous les événements de <a href="/fr/docs/Web/API/PerformanceEntry/entryType">type</a> <code>"resource"</code> sont enregistrés.</p>
+Dans l'exemple suivant, la valeur des propriétés `*Start` et `*End` de tous les événements de [type](/fr/docs/Web/API/PerformanceEntry/entryType) `"resource"` sont enregistrés.
 
-<pre class="brush: js">function print_PerformanceEntries() {
+```js
+function print_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
   let p = performance.getEntriesByType("resource");
-  for (let i = 0; i &lt; p.length; i++) {
+  for (let i = 0; i < p.length; i++) {
     print_start_and_end_properties(p[i]);
   }
 }
@@ -46,7 +49,7 @@ function print_start_and_end_properties(perfEntry) {
                 "responseStart", "responseEnd",
                 "secureConnectionStart"];
 
-  for (let i = 0; i &lt; properties.length; i++) {
+  for (let i = 0; i < properties.length; i++) {
     // vérifie chaque propriété
     let supported = properties[i] in perfEntry;
     if (supported) {
@@ -57,28 +60,15 @@ function print_start_and_end_properties(perfEntry) {
     }
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Resource Timing 2', '#dom-performanceresourcetiming-workerstart',
-        'workerStart')}}</td>
-      <td>{{Spec2('Resource Timing 2')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                            | Statut                                   | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('Resource Timing 2', '#dom-performanceresourcetiming-workerstart',
+        'workerStart')}} | {{Spec2('Resource Timing 2')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceResourceTiming.workerStart")}}</p>
+{{Compat("api.PerformanceResourceTiming.workerStart")}}

@@ -11,25 +11,24 @@ tags:
   - createBiquadFilter
 translation_of: Web/API/BaseAudioContext/createBiquadFilter
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>La méthode <code>createBiquadFilter()</code> de l'interface {{ domxref("BaseAudioContext") }} crée un {{ domxref("BiquadFilterNode") }}, qui représente un filtre de second ordre configurable comme plusieurs types de filtres communs différents.</p>
-</div>
+La méthode `createBiquadFilter()` de l'interface {{ domxref("BaseAudioContext") }} crée un {{ domxref("BiquadFilterNode") }}, qui représente un filtre de second ordre configurable comme plusieurs types de filtres communs différents.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">baseAudioContext.createBiquadFilter();</pre>
+    baseAudioContext.createBiquadFilter();
 
-<h3 id="Description">Retourne</h3>
+### Retourne
 
-<p>un {{domxref("BiquadFilterNode")}}.</p>
+un {{domxref("BiquadFilterNode")}}.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>L'exemple suivant montre une utilisation basique d'un AudioContext pour créer un nœud de filtre Biquad. Pour un exemple fonctionnel complet, visitez notre démonstration <a href="https://mdn.github.io/voice-change-o-matic/">voice-change-o-matic</a> (et lisez de même le <a href="https://github.com/mdn/voice-change-o-matic">code source</a>).</p>
+L'exemple suivant montre une utilisation basique d'un AudioContext pour créer un nœud de filtre Biquad. Pour un exemple fonctionnel complet, visitez notre démonstration [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) (et lisez de même le [code source](https://github.com/mdn/voice-change-o-matic)).
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 //set up the different audio nodes we will use for the app
 var analyser = audioCtx.createAnalyser();
@@ -52,35 +51,19 @@ gainNode.connect(audioCtx.destination);
 
 biquadFilter.type = "lowshelf";
 biquadFilter.frequency.setValueAtTime(1000, audioCtx.currentTime);
-biquadFilter.gain.setValueAtTime(25, audioCtx.currentTime);</pre>
+biquadFilter.gain.setValueAtTime(25, audioCtx.currentTime);
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createbiquadfilter', 'createBiquadFilter()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                    | Status                               | Comment |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createbiquadfilter', 'createBiquadFilter()')}} | {{Spec2('Web Audio API')}} |         |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>
+{{Compat("api.BaseAudioContext.createBiquadFilter")}}
 
+## Voir aussi
 
-<p>{{Compat("api.BaseAudioContext.createBiquadFilter")}}</p>
-</div>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Utiliser l'API Web Audio</a></li>
-</ul>
+- [Utiliser l'API Web Audio](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)

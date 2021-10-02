@@ -8,38 +8,38 @@ tags:
   - Reference
 translation_of: Web/API/FeaturePolicy/allowsFeature
 ---
-<div>{{APIRef("Feature Policy API")}}{{SeeCompatTable}}</div>
+{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
-<p>La méthode <strong><code>allowsFeature()</code></strong> de l'interface {{DOMxRef("FeaturePolicy")}} permet l'introspection de directives du Feature Policy sur lequel la méthode est appelée. Elle retourne un {{JSxRef("Boolean")}} valant <code>true</code> si et seulement si la fonctionnalité dont le nom de directive est fourni est permise dans le contexte spécifié (ou le contexte par défaut si aucun contexte n'est spécifié).</p>
+La méthode **`allowsFeature()`** de l'interface {{DOMxRef("FeaturePolicy")}} permet l'introspection de directives du Feature Policy sur lequel la méthode est appelée. Elle retourne un {{JSxRef("Boolean")}} valant `true` si et seulement si la fonctionnalité dont le nom de directive est fourni est permise dans le contexte spécifié (ou le contexte par défaut si aucun contexte n'est spécifié).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">const listePermissions = <em>FeaturePolicy</em>.allowsFeature(&lt;nomDirective&gt;)
-</pre>
+    const listePermissions = FeaturePolicy.allowsFeature(<nomDirective>)
 
-<p>ou</p>
+ou
 
-<pre class="syntaxbox">const listePermissions = <em>FeaturePolicy</em>.allowsFeature(&lt;nomDirective&gt;, &lt;origine&gt;)</pre>
+    const listePermissions = FeaturePolicy.allowsFeature(<nomDirective>, <origine>)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<h4 id="Nom_de_directive"><code>Nom de directive</code></h4>
+#### `Nom de directive`
 
-<p>Le nom de la directive associée à une fonctionnalité.</p>
+Le nom de la directive associée à une fonctionnalité.
 
-<h4 id="Origine_Optional_inline"><code>Origine</code> {{Optional_inline}}</h4>
+#### `Origine` {{Optional_inline}}
 
-<p>Une URL d'origine sur lequel vérifier la disponibilité de la fonctionnalité. Si omise, sa valeur par défaut est utilisée.</p>
+Une URL d'origine sur lequel vérifier la disponibilité de la fonctionnalité. Si omise, sa valeur par défaut est utilisée.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un {{JSxRef("Boolean")}} valant <code>true</code> si et seulement si la fonctionnalité est permise.</p>
+Un {{JSxRef("Boolean")}} valant `true` si et seulement si la fonctionnalité est permise.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Cet exemple demande au document s'il lui est permis par Feature Policy d'utiliser l'API Camera (appareil photo). Notez que l'API Camera pourrait être restreinte par l'API Permissions si l'utilisateur n'a pas encore accordé la permission.</p>
+Cet exemple demande au document s'il lui est permis par Feature Policy d'utiliser l'API Camera (appareil photo). Notez que l'API Camera pourrait être restreinte par l'API Permissions si l'utilisateur n'a pas encore accordé la permission.
 
-<pre class="brush: js">// D'abord, récupère le Feature Policy
+```js
+// D'abord, récupère le Feature Policy
 const featurePolicy = document.featurePolicy
 
 // Demande si la fonctionnalité est disponible
@@ -50,27 +50,14 @@ if (estPermise)
 
 else
   console.log("FP n'autorise pas l'appareil photo.")
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Feature Policy","","allowsFeature")}}</td>
-   <td>{{Spec2("Feature Policy")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                    | Statut                               | Commentaire          |
+| ---------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName("Feature Policy","","allowsFeature")}} | {{Spec2("Feature Policy")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("api.FeaturePolicy.allowsFeature")}}</p>
+{{Compat("api.FeaturePolicy.allowsFeature")}}

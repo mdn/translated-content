@@ -8,49 +8,48 @@ tags:
   - Reference
 translation_of: Web/API/IDBTransaction/objectStore
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>La méthode <strong><code>objectStore()</code></strong>, rattachée à l'interface {{domxref("IDBTransaction")}}, renvoie l'accès à un des magasins d'objets liés à la transation sous la forme d'un objet {{domxref("IDBObjectStore")}}.</p>
+La méthode **`objectStore()`**, rattachée à l'interface {{domxref("IDBTransaction")}}, renvoie l'accès à un des magasins d'objets liés à la transation sous la forme d'un objet {{domxref("IDBObjectStore")}}.
 
-<p>Si cette méthode est appelée plusieurs fois sur la même transaction et avec le même nom de magasin, elle renverra la même instance de  {{domxref("IDBObjectStore")}}. Si cette méthode est appelée sur une autre transaction, elle renverra une instance différente.</p>
+Si cette méthode est appelée plusieurs fois sur la même transaction et avec le même nom de magasin, elle renverra la même instance de  {{domxref("IDBObjectStore")}}. Si cette méthode est appelée sur une autre transaction, elle renverra une instance différente.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var objectStore = transaction.objectStore(nom);</pre>
+```js
+var objectStore = transaction.objectStore(nom);
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>nom</code></dt>
- <dd>Le nom du magasin d'objets auquel on veut accéder.</dd>
-</dl>
+- `nom`
+  - : Le nom du magasin d'objets auquel on veut accéder.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un objet {{domxref("IDBObjectStore")}} qui permet d'accéder au magasin d'objets.</p>
+Un objet {{domxref("IDBObjectStore")}} qui permet d'accéder au magasin d'objets.
 
-<h2 id="Exceptions">Exceptions</h2>
+## Exceptions
 
-<dl>
- <dt><code>NotFoundError</code></dt>
- <dd>Cette exception {{domxref("DOMException")}} est levée si le magasin d'objets demandé n'a pas été trouvé sur la transaction.</dd>
- <dt><code>InvalidStateError</code></dt>
- <dd>Cette exception {{domxref("DOMException")}} est levée si la transaction est terminée ou si la demande a été faite sur un objet source qui a été supprimé ou retiré.</dd>
-</dl>
+- `NotFoundError`
+  - : Cette exception {{domxref("DOMException")}} est levée si le magasin d'objets demandé n'a pas été trouvé sur la transaction.
+- `InvalidStateError`
+  - : Cette exception {{domxref("DOMException")}} est levée si la transaction est terminée ou si la demande a été faite sur un objet source qui a été supprimé ou retiré.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans le code qui suit, on ouvre une connexion à la base de données. Sur cette connexion, on démarre une transaction (cf.  {{domxref("IDBTransaction")}}) en lecture/écriture afin d'accéder au magasin d'objets <code>"toDoList"</code> pour y ajouter un enregistrement (via la méthode {{domxref("IDBObjectStore.add")}}). On notera également l'utilisation des gestionnaires d'événement {{domxref("IDBTransaction.oncomplete")}} et {{domxref("IDBTransaction.onerror")}} de la transaction qui permettent d'afficher la résultat de la transaction sur la page.</p>
+Dans le code qui suit, on ouvre une connexion à la base de données. Sur cette connexion, on démarre une transaction (cf.  {{domxref("IDBTransaction")}}) en lecture/écriture afin d'accéder au magasin d'objets `"toDoList"` pour y ajouter un enregistrement (via la méthode {{domxref("IDBObjectStore.add")}}). On notera également l'utilisation des gestionnaires d'événement {{domxref("IDBTransaction.oncomplete")}} et {{domxref("IDBTransaction.onerror")}} de la transaction qui permettent d'afficher la résultat de la transaction sur la page.
 
-<p>La méthode <strong><code>objectStore()</code></strong> permet d'accéder au magasin d'objets <code>"toDoList"</code>.</p>
+La méthode **`objectStore()`** permet d'accéder au magasin d'objets `"toDoList"`.
 
-<pre class="brush: js">// Connexion à la base de données
+```js
+// Connexion à la base de données
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Connexion établie.&lt;/li&gt;';
+  note.innerHTML += '<li>Connexion établie.</li>';
 
   // On affecte la connexion à la variable db.
   db = DBOpenRequest.result;
@@ -71,13 +70,13 @@ function addData() {
   // On utilise oncomplete en cas de succès de
   // l'ouverture de la transaction
   transaction.oncomplete = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction terminée : modification de la base de données OK.&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction terminée : modification de la base de données OK.</li>';
   };
 
   // En cas d'échec de l'ouverture, on utilisera
   // le gestionnaire onerror
   transaction.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;L\'erreur: "' + transaction.error +'" s\'est produite, échec de la transaction.&lt;/li&gt;';
+    note.innerHTML += '<li>L\'erreur: "' + transaction.error +'" s\'est produite, échec de la transaction.</li>';
   };
 
   // On ouvre un magasin d'objets sur la transaction
@@ -88,44 +87,29 @@ function addData() {
   var objectStoreRequest = objectStore.add(newItem[0]);
   objectStoreRequest.onsuccess = function(event) {
     // et on signale l'ajout de l'enregistrement
-    note.innerHTML += '&lt;li&gt;Enregistrement ajouté.&lt;/li&gt;';
+    note.innerHTML += '<li>Enregistrement ajouté.</li>';
   };
 };
-</pre>
+```
 
-<div class="note">
-  <p><strong>Note :</strong> Pour un exemple fonctionnel complet, voir notre application <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">l'exemple <em>live</em> est disponible ici</a>).</p>
-</div>
+> **Note :** Pour un exemple fonctionnel complet, voir notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([l'exemple _live_ est disponible ici](https://mdn.github.io/to-do-notifications/)).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBTransaction-objectStore-IDBObjectStore-DOMString-name', 'objectStore()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                    | État                         | Commentaires |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBTransaction-objectStore-IDBObjectStore-DOMString-name', 'objectStore()')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBTransaction.objectStore")}}</p>
+{{Compat("api.IDBTransaction.objectStore")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Manipuler IndexedDB</a></li>
- <li>Démarrer des transactions : {{domxref("IDBDatabase")}}</li>
- <li>Manipuler des transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}</li>
- <li>Manipuler des curseurs : {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence pour IndexedDB : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a></li>
-</ul>
+- [Manipuler IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Démarrer des transactions : {{domxref("IDBDatabase")}}
+- Manipuler des transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
+- Manipuler des curseurs : {{domxref("IDBCursor")}}
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)

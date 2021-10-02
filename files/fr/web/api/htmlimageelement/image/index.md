@@ -7,56 +7,45 @@ tags:
   - DOM
 translation_of: Web/API/HTMLImageElement/Image
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>Le constructeur <strong><code>Image()</code></strong> crée une nouvelle instance {{domxref("HTMLImageElement")}} .</p>
+Le constructeur **`Image()`** crée une nouvelle instance {{domxref("HTMLImageElement")}} .
 
-<p>C'est fonctionnellement équivalent à {{domxref("Document.createElement()", "document.createElement('img')")}}.</p>
+C'est fonctionnellement équivalent à {{domxref("Document.createElement()", "document.createElement('img')")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Image(width, height)</pre>
+    Image(width, height)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>width</dt>
- <dd>La largeur de l'image (c'est-à-dire, la valeur pour l'attribut {{htmlattrxref("width", "img")}})</dd>
- <dt>height</dt>
- <dd>La hauteur de l'image (c'est-à-dire, la valeur pour l'attribut {{htmlattrxref("height", "img")}}).</dd>
-</dl>
+- width
+  - : La largeur de l'image (c'est-à-dire, la valeur pour l'attribut {{htmlattrxref("width", "img")}})
+- height
+  - : La hauteur de l'image (c'est-à-dire, la valeur pour l'attribut {{htmlattrxref("height", "img")}}).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var myImage = new Image(100, 200);
+```js
+var myImage = new Image(100, 200);
 myImage.src = 'picture.jpg';
-console.log(myImage);</pre>
+console.log(myImage);
+```
 
-<div>Cela équivaudrait à définir la balise HTML suivante dans le {{htmlelement("body")}} (<em>corps</em>) :</div>
+Cela équivaudrait à définir la balise HTML suivante dans le {{htmlelement("body")}} (_corps_) :
 
-<pre class="brush: html">&lt;img width="100" height="200" src="picture.jpg"&gt;
-</pre>
+```html
+<img width="100" height="200" src="picture.jpg">
+```
 
-<div class="note">
-<p><strong>Note :</strong> Le "bitmap" entier est chargé quelle que soit la taille spécifiée dans le constructeur. Si une taille est spécifiée dans le constructeur, elle sera reflétée dans les propriétés {{domxref("HTMLImageElement.width")}} et {{domxref("HTMLImageElement.height")}} de l'instance résultante. La largeur intrinsèque et la hauteur de l'image en pixels CSS sont reflétées à travers les propriétés {{domxref("HTMLImageElement.naturalWidth")}} et {{domxref("HTMLImageElement.naturalHeight")}}. Si aucune taille n'est spécifiée dans le constructeur, les deux paires de ces propriétés auront les mêmes valeurs.</p>
-</div>
+> **Note :** Le "bitmap" entier est chargé quelle que soit la taille spécifiée dans le constructeur. Si une taille est spécifiée dans le constructeur, elle sera reflétée dans les propriétés {{domxref("HTMLImageElement.width")}} et {{domxref("HTMLImageElement.height")}} de l'instance résultante. La largeur intrinsèque et la hauteur de l'image en pixels CSS sont reflétées à travers les propriétés {{domxref("HTMLImageElement.naturalWidth")}} et {{domxref("HTMLImageElement.naturalHeight")}}. Si aucune taille n'est spécifiée dans le constructeur, les deux paires de ces propriétés auront les mêmes valeurs.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "embedded-content.html#dom-image", "Image()")}}</td>
-   <td>{{spec2("HTML WHATWG")}}</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                           | Commentaire |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName("HTML WHATWG", "embedded-content.html#dom-image", "Image()")}} | {{spec2("HTML WHATWG")}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.HTMLImageElement.Image")}}</p>
+{{Compat("api.HTMLImageElement.Image")}}

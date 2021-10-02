@@ -14,44 +14,29 @@ tags:
   - domLoading
 translation_of: Web/API/PerformanceTiming/domLoading
 ---
-<p>{{APIRef("Navigation Timing")}}</p>
+{{APIRef("Navigation Timing")}}
 
-<div class="warning">
-  <p><strong>Attention :</strong> Cette interface est dépréciée dans la spécification <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2</a>. Veuillez utiliser l'interface <a href="/fr/docs/Web/API/PerformanceNavigationTiming"><code>PerformanceNavigationTiming</code></a> à la place.</p>
-</div>
+> **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
 
-<p>L'ancienne propriété en lecture seule <code><strong>domLoading</code></strong> retourne un <code>unsigned long long</code> représentant le moment, en millisecondes depuis l'époque UNIX, où le parseur a commencé son travail, c'est-à-dire lorsque son <a href="/fr/docs/Web/API/Document/readyState"><code>Document.readyState</code></a> passe à <code>"loading"</code> et que l'événement <a href="/fr/docs/Web/API/Document/readystatechange_event"><code>readystatechange</code></a> correspondant est déclenché.</p>
+L'ancienne propriété en lecture seule **`domLoading`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, où le parseur a commencé son travail, c'est-à-dire lorsque son [`Document.readyState`](/fr/docs/Web/API/Document/readyState) passe à `"loading"` et que l'événement [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event) correspondant est déclenché.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">let <var>time</var> = <var>performanceTiming</var>.domLoading;</pre>
+```js
+let time = performanceTiming.domLoading;
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Navigation Timing', '#dom-performancetiming-domloading',
-        'PerformanceTiming.domLoading')}}</td>
-      <td>{{Spec2('Navigation Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                        | Statut                                   | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('Navigation Timing', '#dom-performancetiming-domloading',
+        'PerformanceTiming.domLoading')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceTiming.domLoading")}}</p>
+{{Compat("api.PerformanceTiming.domLoading")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>L'interface <a href="/fr/docs/Web/API/PerformanceTiming"><code>PerformanceTiming</code></a> à laquelle elle appartient.</li>
-</ul>
+- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.

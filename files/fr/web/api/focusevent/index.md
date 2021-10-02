@@ -9,55 +9,36 @@ tags:
   - Interface
 translation_of: Web/API/FocusEvent
 ---
-<p>{{APIRef("DOM Events")}}{{SeeCompatTable}}</p>
+{{APIRef("DOM Events")}}{{SeeCompatTable}}
 
-<p>L'interface <strong><code>FocusEvent</code> </strong>représente les événements liés au focus tels que<code> </code>{{event("focus")}}, {{event("blur")}}, {{event("focusin")}} ou {{event("focusout")}}.</p>
+L'interface **`FocusEvent` **représente les événements liés au focus tels que` `{{event("focus")}}, {{event("blur")}}, {{event("focusin")}} ou {{event("focusout")}}.
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{domxref("FocusEvent.FocusEvent", "FocusEvent()")}}</dt>
- <dd>crée un événement <strong>FocusEvent </strong>avec les paramètres donnés<strong>.</strong></dd>
-</dl>
+- {{domxref("FocusEvent.FocusEvent", "FocusEvent()")}}
+  - : crée un événement **FocusEvent** avec les paramètres donnés**.**
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Hértite des propriétés de son parent domxref("UIEvent")}} et indirectement de {{domxref("Event")}}</em>.</p>
+_Hértite des propriétés de son parent domxref("UIEvent")}} et indirectement de {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("FocusEvent.relatedTarget")}} {{readonlyInline}}</dt>
- <dd>est un {{domxref("EventTarget")}} représentant une cible secondaire pour cet événement. Car dans certain cas (comme quand vous tabulez dans ou hors de la page), cette propriété peut être définie comme étant nulle pour des raisons de sécurité.</dd>
-</dl>
+- {{domxref("FocusEvent.relatedTarget")}} {{readonlyInline}}
+  - : est un {{domxref("EventTarget")}} représentant une cible secondaire pour cet événement. Car dans certain cas (comme quand vous tabulez dans ou hors de la page), cette propriété peut être définie comme étant nulle pour des raisons de sécurité.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Aucune méthode spécifique ; Hérite des propriétés de son parent<em> {{domxref("UIEvent")}} </em>et indirectement de {{domxref("Event")}}</em>.</p>
+_Aucune méthode spécifique ; Hérite des propriétés de son parent _{{domxref("UIEvent")}}_ et indirectement de {{domxref("Event")}}_.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#interface-FocusEvent', 'FocusEvent')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Première définition.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | Statut                           | Commentaire          |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('DOM3 Events', '#interface-FocusEvent', 'FocusEvent')}} | {{Spec2('DOM3 Events')}} | Première définition. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.FocusEvent")}}
 
+## Voir aussi
 
-<p>{{Compat("api.FocusEvent")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>L'interface de base {{domxref("Event")}}</li>
-</ul>
+- L'interface de base {{domxref("Event")}}

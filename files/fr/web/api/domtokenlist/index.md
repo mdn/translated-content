@@ -10,105 +10,94 @@ tags:
   - Marques
 translation_of: Web/API/DOMTokenList
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>L'interface <code><strong>DOMTokenList</strong></code> représente un ensemble de "token" (<em>marques</em>) séparées par un espace. On obtient un tel ensemble grâce aux propriétés {{domxref("Element.classList")}}, {{domxref("HTMLLinkElement.relList")}}, {{domxref("HTMLAnchorElement.relList")}} ou {{domxref("HTMLAreaElement.relList")}}. Les positions de cette liste sont numérotées à partir de 0.<code> DOMTokenList</code> est toujours sensible à la casse.</p>
+L'interface **`DOMTokenList`** représente un ensemble de "token" (_marques_) séparées par un espace. On obtient un tel ensemble grâce aux propriétés {{domxref("Element.classList")}}, {{domxref("HTMLLinkElement.relList")}}, {{domxref("HTMLAnchorElement.relList")}} ou {{domxref("HTMLAreaElement.relList")}}. Les positions de cette liste sont numérotées à partir de 0.` DOMTokenList` est toujours sensible à la casse.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}</dt>
- <dd>Un entier qui représente le nombre d'objets qui sont stockés dans l'objet.</dd>
- <dt>{{domxref("DOMTokenList.value")}} {{ReadOnlyInline}}</dt>
- <dd>retourne la valeur de la liste comme une {{domxref("DOMString")}}  <em>(chaîne de caractères).</em></dd>
-</dl>
+- {{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}
+  - : Un entier qui représente le nombre d'objets qui sont stockés dans l'objet.
+- {{domxref("DOMTokenList.value")}} {{ReadOnlyInline}}
+  - : retourne la valeur de la liste comme une {{domxref("DOMString")}}  _(chaîne de caractères)._
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{domxref("DOMTokenList.item()")}}</dt>
- <dd>renvoie un élément de la liste à partir de son index (ou {{jsxref("undefined")}} lorsque le nombre passé est supérieur ou égal à la longueur de la liste).</dd>
- <dt>{{domxref("DOMTokenList.contains()")}}</dt>
- <dd>renvoie <code>true</code> <em>(vrai)</em> si la chaîne de caractères contient la marque <em>(token)</em> passée en argument, <code>false</code> <em>(faux)</em> sinon.</dd>
- <dt>{{domxref("DOMTokenList.add()")}}</dt>
- <dd>ajoute une marque à la chaîne sous-jacente.</dd>
- <dt>{{domxref("DOMTokenList.remove()")}}</dt>
- <dd>retire une marque de la chaîne sous-jacente.</dd>
- <dt>{{domxref("DOMTokenList.replace()")}}</dt>
- <dd>remplace une marque existant par une nouvelle.</dd>
- <dt>{{domxref("DOMTokenList.supports()")}}</dt>
- <dd>renvoie <code>true</code> <em>(vrai)</em> si une marque passée en argument appartient bien aux marques prises en charge pour l'attribut correspondant.</dd>
- <dt>{{domxref("DOMTokenList.toggle()")}}</dt>
- <dd>retire une marque de la chaîne de caractères sous-jacente et renvoie <code>false</code>. Si la marque n'existe pas, elle est ajoutée et la méthode renvoie <code>true</code>.</dd>
- <dt>{{domxref("DOMTokenList.entries()")}}</dt>
- <dd>renvoie un {{jsxref("Iteration_protocols","itérateur","",1)}} qui permet de parcourir l'ensemble des clés/valeurs contenues dans cet objet.</dd>
- <dt>{{domxref("DOMTokenList.forEach()")}}</dt>
- <dd>exécute une fonction pour chaque élément de la <code>DOMTokenList</code>.</dd>
- <dt>{{domxref("DOMTokenList.keys()")}}</dt>
- <dd>renvoie un {{jsxref("Iteration_protocols", "itérateur","",1)}} qui permet de parcourir l'ensemble des clés contenues dans cet objet.</dd>
- <dt>{{domxref("DOMTokenList.values()")}}</dt>
- <dd>renvoie un {{jsxref("Iteration_protocols", "itérateur","",1)}} qui permet de parcourir l'ensemble des valeurs contenues dans cet objet.</dd>
-</dl>
+- {{domxref("DOMTokenList.item()")}}
+  - : renvoie un élément de la liste à partir de son index (ou {{jsxref("undefined")}} lorsque le nombre passé est supérieur ou égal à la longueur de la liste).
+- {{domxref("DOMTokenList.contains()")}}
+  - : renvoie `true` _(vrai)_ si la chaîne de caractères contient la marque _(token)_ passée en argument, `false` _(faux)_ sinon.
+- {{domxref("DOMTokenList.add()")}}
+  - : ajoute une marque à la chaîne sous-jacente.
+- {{domxref("DOMTokenList.remove()")}}
+  - : retire une marque de la chaîne sous-jacente.
+- {{domxref("DOMTokenList.replace()")}}
+  - : remplace une marque existant par une nouvelle.
+- {{domxref("DOMTokenList.supports()")}}
+  - : renvoie `true` _(vrai)_ si une marque passée en argument appartient bien aux marques prises en charge pour l'attribut correspondant.
+- {{domxref("DOMTokenList.toggle()")}}
+  - : retire une marque de la chaîne de caractères sous-jacente et renvoie `false`. Si la marque n'existe pas, elle est ajoutée et la méthode renvoie `true`.
+- {{domxref("DOMTokenList.entries()")}}
+  - : renvoie un {{jsxref("Iteration_protocols","itérateur","",1)}} qui permet de parcourir l'ensemble des clés/valeurs contenues dans cet objet.
+- {{domxref("DOMTokenList.forEach()")}}
+  - : exécute une fonction pour chaque élément de la `DOMTokenList`.
+- {{domxref("DOMTokenList.keys()")}}
+  - : renvoie un {{jsxref("Iteration_protocols", "itérateur","",1)}} qui permet de parcourir l'ensemble des clés contenues dans cet objet.
+- {{domxref("DOMTokenList.values()")}}
+  - : renvoie un {{jsxref("Iteration_protocols", "itérateur","",1)}} qui permet de parcourir l'ensemble des valeurs contenues dans cet objet.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple suivant, nous récupérons la liste d'un ensemble de classes définies sur un élément {{htmlelement("p")}} en tant que <code>DOMTokenList</code> en<code> </code>utilisant  {{domxref("Element.classList")}}, ajoutons une classe en utilisant  {{domxref("DOMTokenList.add()")}}, puis mettons à jour le {{domxref("Node.textContent")}} du <code>&lt;p&gt;</code> pour qu'il soit égal à la  <code>DOMTokenList</code>.</p>
+Dans l'exemple suivant, nous récupérons la liste d'un ensemble de classes définies sur un élément {{htmlelement("p")}} en tant que `DOMTokenList` en` `utilisant  {{domxref("Element.classList")}}, ajoutons une classe en utilisant  {{domxref("DOMTokenList.add()")}}, puis mettons à jour le {{domxref("Node.textContent")}} du `<p>` pour qu'il soit égal à la  `DOMTokenList`.
 
-<p>D'abord HTML :</p>
+D'abord HTML :
 
-<pre class="brush: html">&lt;p class="a b c"&gt;&lt;/p&gt;</pre>
+```html
+<p class="a b c"></p>
+```
 
-<p>Puis Javascript :</p>
+Puis Javascript :
 
-<pre class="brush: js">var para = document.querySelector("p");
+```js
+var para = document.querySelector("p");
 var classes = para.classList;
 para.classList.add("d");
-para.textContent = 'paragraph classList is "' + classes + '"';</pre>
+para.textContent = 'paragraph classList is "' + classes + '"';
+```
 
-<p>La sortie ressemble à ceci :</p>
+La sortie ressemble à ceci :
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Découpage_des_espaces_et_suppression_des_doublons">Découpage des espaces et suppression des doublons</h2>
+## Découpage des espaces et suppression des doublons
 
-<p>Les méthodes qui modifient la <code>DOMTokenList</code> (comme {{domxref("DOMTokenList.add()")}}) suppriment automatiquement les espaces en excès et les valeurs en double de la liste. Par exemple :</p>
+Les méthodes qui modifient la `DOMTokenList` (comme {{domxref("DOMTokenList.add()")}}) suppriment automatiquement les espaces en excès et les valeurs en double de la liste. Par exemple :
 
-<pre class="brush: html">&lt;span class="    d   d e f"&gt;&lt;/span&gt;</pre>
+```html
+<span class="    d   d e f"></span>
+```
 
-<pre class="brush: js">var span = document.querySelector("span");
+```js
+var span = document.querySelector("span");
 var classes = span.classList;
 span.classList.add("x");
-span.textContent = 'span classList is "' + classes + '"';</pre>
+span.textContent = 'span classList is "' + classes + '"';
+```
 
-<p>La sortie ressemble à ceci :</p>
+La sortie ressemble à ceci :
 
-<p>{{ EmbedLiveSample('Trimming_of_whitespace_and_removal_of_duplicates', '100%', 60) }}</p>
+{{ EmbedLiveSample('Trimming_of_whitespace_and_removal_of_duplicates', '100%', 60) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#interface-domtokenlist", "DOMTokenList")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | Statut                           | Commentaire         |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName("DOM WHATWG", "#interface-domtokenlist", "DOMTokenList")}} | {{Spec2("DOM WHATWG")}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("api.DOMTokenList")}}</div>
+{{Compat("api.DOMTokenList")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("DOMSettableTokenList")}} : un objet qui étend <code>DOMTokenList</code> avec une propriété <em>.value</em> modifiable</li>
-</ul>
+- {{domxref("DOMSettableTokenList")}} : un objet qui étend `DOMTokenList` avec une propriété _.value_ modifiable

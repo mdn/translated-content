@@ -3,69 +3,51 @@ title: WorkerGlobalScope.importScripts()
 slug: Web/API/WorkerGlobalScope/importScripts
 translation_of: Web/API/WorkerGlobalScope/importScripts
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>La méthode <code><strong>importScripts()</strong></code> de l'interface synchrome {{domxref("WorkerGlobalScope")}} importe un ou plusieurs scripts dans l'environnement du worker.</p>
+La méthode **`importScripts()`** de l'interface synchrome {{domxref("WorkerGlobalScope")}} importe un ou plusieurs scripts dans l'environnement du worker.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">self.importScripts('foo.js');
-self.importScripts('foo.js', 'bar.js', ...);</pre>
+```js
+self.importScripts('foo.js');
+self.importScripts('foo.js', 'bar.js', ...);
+```
 
-<h3 id="Specifications">Paramètres</h3>
+### Paramètres
 
-<p>Une liste d'objets {{domxref("DOMString")}} séparés par des virgules et représentant les scripts à importer.</p>
+Une liste d'objets {{domxref("DOMString")}} séparés par des virgules et représentant les scripts à importer.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Rien.</p>
+Rien.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>NetworkError</code></td>
-   <td>Importer un script qui n'est pas servi avec un type MIME valide. (i.e. <code>text/javascript</code>).</td>
-  </tr>
- </tbody>
-</table>
+| Exception      | Description                                                                                |
+| -------------- | ------------------------------------------------------------------------------------------ |
+| `NetworkError` | Importer un script qui n'est pas servi avec un type MIME valide. (i.e. `text/javascript`). |
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Si vous disposez d'un code présent dans un script indépendant appelé <code>foo.js</code> que vous souhaitez utiliser à l'intérieur de worker.js, vous pouvez l'importer de la façon suivante:</p>
+Si vous disposez d'un code présent dans un script indépendant appelé `foo.js` que vous souhaitez utiliser à l'intérieur de worker.js, vous pouvez l'importer de la façon suivante:
 
-<pre class="brush: js">importScripts('foo.js');</pre>
+```js
+importScripts('foo.js');
+```
 
-<p><code>importScripts()</code> et <code>self.importScripts()</code> sont effectivement équivalentes — les deux expressions correspondent à la façon d'appeler <code>importScripts()</code> au sein du contexte local du worker.</p>
+`importScripts()` et `self.importScripts()` sont effectivement équivalentes — les deux expressions correspondent à la façon d'appeler `importScripts()` au sein du contexte local du worker.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-workerglobalscope-importscripts', 'importScripts()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | Statut                           | Commentaire |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', '#dom-workerglobalscope-importscripts', 'importScripts()')}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WorkerGlobalScope.importScripts")}}</p>
+{{Compat("api.WorkerGlobalScope.importScripts")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<p>{{domxref("WorkerGlobalScope")}}</p>
+{{domxref("WorkerGlobalScope")}}

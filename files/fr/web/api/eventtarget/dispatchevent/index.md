@@ -9,63 +9,43 @@ tags:
   - évènements
 translation_of: Web/API/EventTarget/dispatchEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>Envoie un {{domxref("Event")}} (<em>évènement</em>) à la {{domxref("EventTarget")}} (<em>cible</em>) spécifiée (synchrone) en appelant les {{domxref("EventListener")}} (<em>écouteurs</em>)  dans l'ordre approprié. Le processus normal de traitement de l'évènement (y compris les phases de capture et l'éventuelle propagation) s'applique aussi aux évènements diffusés manuellement avec <code>dispatchEvent()</code>.</p>
+Envoie un {{domxref("Event")}} (_évènement_) à la {{domxref("EventTarget")}} (_cible_) spécifiée (synchrone) en appelant les {{domxref("EventListener")}} (_écouteurs_)  dans l'ordre approprié. Le processus normal de traitement de l'évènement (y compris les phases de capture et l'éventuelle propagation) s'applique aussi aux évènements diffusés manuellement avec `dispatchEvent()`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>cancelled</em> = !<em>target</em>.dispatchEvent(<em>event</em>)
-</pre>
+    cancelled = !target.dispatchEvent(event)
 
-<h3 id="Param.C3.A8tres">Paramètres</h3>
+### Paramètres
 
-<ul>
- <li><code>event</code> est un objet {{domxref("Event")}} à envoyer.</li>
- <li><code>target</code> (<em>cible</em>) est utilisée pour initialiser la {{domxref("Event", "", "target")}} et déterminer quels écouteurs d'évènements doivent être invoqués.</li>
-</ul>
+- `event` est un objet {{domxref("Event")}} à envoyer.
+- `target` (_cible_) est utilisée pour initialiser la {{domxref("Event", "", "target")}} et déterminer quels écouteurs d'évènements doivent être invoqués.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<ul>
- <li>La valeur de retour est  <code>false</code> (<em>faux</em>) si l'évènement est annulable et au moins l'un des gestionnaires d'événements qui ont géré cet événement appelé {{domxref ("Event.preventDefault ()")}}. Sinon, elle est <code>true</code> (<em>vrai</em>).</li>
-</ul>
+- La valeur de retour est  `false` (_faux_) si l'évènement est annulable et au moins l'un des gestionnaires d'événements qui ont géré cet événement appelé {{domxref ("Event.preventDefault ()")}}. Sinon, elle est `true` (_vrai_).
 
-<p>La méthode <code>dispatchEvent</code> lance une exception <code>UNSPECIFIED_EVENT_TYPE_ERR</code> si le type de l'évènement n'a pas été spécifié par son initialisation avant l'appel de la méthode ou s'il est <code>null</code> ou une chaîne vide. Les exceptions lancées par les gestionnaires d'évènements sont signalées comme exceptions non interceptées ; les gestionnaires d'événements s'exécutent sur une pile d'appels imbriquée : ils bloquent l'appelant jusqu'à ce qu'ils se terminent, mais les exceptions ne se propagent pas à l'appelant.</p>
+La méthode `dispatchEvent` lance une exception `UNSPECIFIED_EVENT_TYPE_ERR` si le type de l'évènement n'a pas été spécifié par son initialisation avant l'appel de la méthode ou s'il est `null` ou une chaîne vide. Les exceptions lancées par les gestionnaires d'évènements sont signalées comme exceptions non interceptées ; les gestionnaires d'événements s'exécutent sur une pile d'appels imbriquée : ils bloquent l'appelant jusqu'à ce qu'ils se terminent, mais les exceptions ne se propagent pas à l'appelant.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Contrairement aux événements "natifs", qui sont déclenchés par le DOM et invoquent les gestionnaires d'événements de manière asynchrone via la <a href="/fr/docs/Web/JavaScript/Concurrence_et_boucle_des_%C3%A9v%C3%A9nements">boucle des événements</a>, <code>dispatchEvent</code> appelle les gestionnaires d'événements de manière synchrone. Tous les gestionnaires d'événements applicables s'exécuteront et retourneront avant que le code ne continue après l'appel à <code>dispatchEvent</code>.</p>
+Contrairement aux événements "natifs", qui sont déclenchés par le DOM et invoquent les gestionnaires d'événements de manière asynchrone via la [boucle des événements](/fr/docs/Web/JavaScript/Concurrence_et_boucle_des_%C3%A9v%C3%A9nements), `dispatchEvent` appelle les gestionnaires d'événements de manière synchrone. Tous les gestionnaires d'événements applicables s'exécuteront et retourneront avant que le code ne continue après l'appel à `dispatchEvent`.
 
-<p>Comme montré dans l'exemple qui précède, <code>dispatchEvent</code> est la dernière étape du processus création-initialisation-envoi, qui est utilisé pour envoyer des évènements dans le modèle de l'implémentation des évènements. Ceux-ci peuvent être créés en utilisant le <a href="/fr/docs/Web/API/Event/Event">constructeur d'évènements</a>.</p>
+Comme montré dans l'exemple qui précède, `dispatchEvent` est la dernière étape du processus création-initialisation-envoi, qui est utilisé pour envoyer des évènements dans le modèle de l'implémentation des évènements. Ceux-ci peuvent être créés en utilisant le [constructeur d'évènements](/fr/docs/Web/API/Event/Event).
 
-<p>Voir aussi <a href="/fr/docs/Web/API/Event">Objet Event référence</a>.</p>
+Voir aussi [Objet Event référence](/fr/docs/Web/API/Event).
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Voir <a href="/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events">Création et déclenchement d'évènements</a>.</p>
+Voir [Création et déclenchement d'évènements](/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events).
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-eventtarget-dispatchevent', 'EventTarget.dispatchEvent()')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td>Définition initiale dans la spécification DOM 2 Events (<em>évènements</em>)</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | Statut                           | Commentaire                                                           |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-eventtarget-dispatchevent', 'EventTarget.dispatchEvent()')}} | {{ Spec2('DOM WHATWG') }} | Définition initiale dans la spécification DOM 2 Events (_évènements_) |
 
-<h2 id="Voir_.C3.A9galement">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("api.EventTarget.dispatchEvent")}}</p>
+{{Compat("api.EventTarget.dispatchEvent")}}

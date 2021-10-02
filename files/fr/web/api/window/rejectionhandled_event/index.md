@@ -13,70 +13,58 @@ tags:
   - rejectionhandled
 translation_of: Web/API/Window/rejectionhandled_event
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>L'événement <strong><code>rejectionhandled</code></strong> est envoyé à la portée globale du script (généralement {{domxref("window")}} mais aussi {{domxref("Worker")}}) chaque fois qu'un JavaScript {{jsxref("Promise")}} est rejeté mais après que le rejet de la promesse a été traité.</p>
+L'événement **`rejectionhandled`** est envoyé à la portée globale du script (généralement {{domxref("window")}} mais aussi {{domxref("Worker")}}) chaque fois qu'un JavaScript {{jsxref("Promise")}} est rejeté mais après que le rejet de la promesse a été traité.
 
-<p>Cela peut être utilisé dans le débogage et pour la résilience générale des applications, en tandem avec l'événement {{domxref ("Window.unhandledrejection_event", "unhandledrejection")}}, qui est envoyé lorsqu'une promesse est rejetée mais qu'il n'y a pas de responsable du rejet .</p>
+Cela peut être utilisé dans le débogage et pour la résilience générale des applications, en tandem avec l'événement {{domxref ("Window.unhandledrejection_event", "unhandledrejection")}}, qui est envoyé lorsqu'une promesse est rejetée mais qu'il n'y a pas de responsable du rejet .
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bulles</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Annulable</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("PromiseRejectionEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Propriété de gestionnaire d'événements</th>
-   <td>{{domxref("WindowEventHandlers.onrejectionhandled", "onrejectionhandled")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bulles</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Annulable</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("PromiseRejectionEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Propriété de gestionnaire d'événements</th>
+      <td>
+        {{domxref("WindowEventHandlers.onrejectionhandled", "onrejectionhandled")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Vous pouvez utiliser l'événement <code>rejectionhandled</code> pour consigner les promesses rejetées sur la console, ainsi que les raisons pour lesquelles elles ont été rejetées :</p>
+Vous pouvez utiliser l'événement `rejectionhandled` pour consigner les promesses rejetées sur la console, ainsi que les raisons pour lesquelles elles ont été rejetées :
 
-<pre class="brush: js">window.addEventListener("rejectionhandled", event =&gt; {
+```js
+window.addEventListener("rejectionhandled", event => {
   console.log("Promise rejected; reason: " + event.reason);
 }, false);
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#unhandled-promise-rejections', 'rejectionhandled')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                    | Statut                           | Commentaire          |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('HTML WHATWG', 'webappapis.html#unhandled-promise-rejections', 'rejectionhandled')}} | {{Spec2('HTML WHATWG')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.rejectionhandled_event")}}</p>
+{{Compat("api.Window.rejectionhandled_event")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>{{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}</li>
- <li>{{domxref("PromiseRejectionEvent")}}</li>
- <li>{{jsxref("Promise")}}</li>
- <li>{{domxref("Window/unhandledrejection_event", "unhandledrejection")}}</li>
-</ul>
+- {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}
+- {{domxref("PromiseRejectionEvent")}}
+- {{jsxref("Promise")}}
+- {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}

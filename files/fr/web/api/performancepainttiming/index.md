@@ -11,71 +11,58 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformancePaintTiming
 ---
-<p>{{APIRef("Performance Timeline API")}}</p>
+{{APIRef("Performance Timeline API")}}
 
-<p>L'interface <strong><code>PerformancePaintTiming</code></strong> de l'API <a href="/fr/docs/Web/API/Paint_Timing_API">Paint Timing API</a> fournit des informations de temps sur les opérations de « peinture » (également appelées « render ») pendant la construction de la page Web. « Paint » fait référence à la conversion de l'arbre de rendu en pixels à l'écran.</p>
+L'interface **`PerformancePaintTiming`** de l'API [Paint Timing API](/fr/docs/Web/API/Paint_Timing_API) fournit des informations de temps sur les opérations de « peinture » (également appelées « render ») pendant la construction de la page Web. « Paint » fait référence à la conversion de l'arbre de rendu en pixels à l'écran.
 
-<p>Une application peut enregistrer un <a href="/fr/docs/Web/API/PerformanceObserver"><code>PerformanceObserver</code></a> pour le <a href="/fr/docs/Web/API/PerformanceEntry">type d'entrée de performance</a> « <code>paint</code> » et l'observateur peut récupérer les heures auxquelles les événements de peinture se produisent. Utilisez ces informations pour aider à identifier les zones qui prennent trop de temps pour offrir une bonne expérience utilisateur.</p>
+Une application peut enregistrer un [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour le [type d'entrée de performance](/fr/docs/Web/API/PerformanceEntry) « `paint` » et l'observateur peut récupérer les heures auxquelles les événements de peinture se produisent. Utilisez ces informations pour aider à identifier les zones qui prennent trop de temps pour offrir une bonne expérience utilisateur.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Propriétés</h2>
+## Propriétés
 
-<p>Cette interface n'a pas de propriétés mais elle étend les propriétés de <a href="/fr/docs/Web/API/PerformanceEntry"><code>PerformanceEntry</code></a> suivantes (pour <a href="/fr/docs/Web/API/PerformanceEntry/entryType">le type d'entrée de performance</a> « <code>paint</code> ») en qualifiant/contraignant les propriétés comme suit :</p>
+Cette interface n'a pas de propriétés mais elle étend les propriétés de [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) suivantes (pour [le type d'entrée de performance](/fr/docs/Web/API/PerformanceEntry/entryType) « `paint` ») en qualifiant/contraignant les propriétés comme suit :
 
-<dl>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>PerformanceEntry.entryType</code></a></dt>
-  <dd>Retourne « <code>paint</code> ».</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry/name"><code>PerformanceEntry.name</code></a></dt>
-  <dd>Retourne soit <code>"first-paint"</code> ou <code>"first-contentful-paint"</code>.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry/startTime"><code>PerformanceEntry.startTime</code></a></dt>
-  <dd>Retourne le <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> du moment où la peinture s'est produite.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry/duration"><code>PerformanceEntry.duration</code></a></dt>
-  <dd>Retourne « <code>0</code> ».</dd>
-</dl>
+- [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType)
+  - : Retourne « `paint` ».
+- [`PerformanceEntry.name`](/fr/docs/Web/API/PerformanceEntry/name)
+  - : Retourne soit `"first-paint"` ou `"first-contentful-paint"`.
+- [`PerformanceEntry.startTime`](/fr/docs/Web/API/PerformanceEntry/startTime)
+  - : Retourne le [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) du moment où la peinture s'est produite.
+- [`PerformanceEntry.duration`](/fr/docs/Web/API/PerformanceEntry/duration)
+  - : Retourne « `0` ».
 
-<h2 id="Methods">Méthodes</h2>
+## Méthodes
 
-<p>Cette interface n'a pas de méthodes.</p>
+Cette interface n'a pas de méthodes.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">function showPaintTimings() {
+```js
+function showPaintTimings() {
   if (window.performance) {
     let performance = window.performance;
     let performanceEntries = performance.getEntriesByType('paint');
-    performanceEntries.forEach( (performanceEntry, i, entries) =&gt; {
+    performanceEntries.forEach( (performanceEntry, i, entries) => {
       console.log("Le temps pour " + performanceEntry.name + " est de " + performanceEntry.startTime + " millisecondes.");
     });
   } else {
     console.log("Performance Timing n'est pas prise en charge.");
   }
-}</pre>
+}
+```
 
-<p>Le code ci-dessus produit une sortie de console semblable à ce qui suit :</p>
+Le code ci-dessus produit une sortie de console semblable à ce qui suit :
 
-<pre>Le temps pour first-paint est de 2785.915 millisecondes.
-Le temps pour first-contentful-paint est de 2787.460 millisecondes.</pre>
+    Le temps pour first-paint est de 2785.915 millisecondes.
+    Le temps pour first-contentful-paint est de 2787.460 millisecondes.
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Paint Timing','#sec-PerformancePaintTiming','PerformancePaintTiming')}}</td>
-      <td>{{Spec2('Paint Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                    | Statut                           | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('Paint Timing','#sec-PerformancePaintTiming','PerformancePaintTiming')}} | {{Spec2('Paint Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformancePaintTiming")}}</p>
+{{Compat("api.PerformancePaintTiming")}}

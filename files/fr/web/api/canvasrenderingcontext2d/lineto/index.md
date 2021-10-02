@@ -9,63 +9,64 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/lineTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La méthode <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.lineTo()</code></strong> de l'API Canvas 2D connecte le dernier point du sous-chemin en cours aux coordonnées <code>x, y</code> spécifiées avec une ligne droite (sans tracer réellement le chemin).</p>
+La méthode **`CanvasRenderingContext2D`\*\***`.lineTo()`\*\* de l'API Canvas 2D connecte le dernier point du sous-chemin en cours aux coordonnées `x, y` spécifiées avec une ligne droite (sans tracer réellement le chemin).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var><em>ctx</em>.lineTo(x, y);</var>
-</pre>
+    void ctx.lineTo(x, y);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>x</code></dt>
- <dd>L'abscisse <em>x</em> du point d'arrivée.</dd>
- <dt><code>y</code></dt>
- <dd>L'ordonnée <em>y</em> du point d'arrivée.</dd>
-</dl>
+- `x`
+  - : L'abscisse _x_ du point d'arrivée.
+- `y`
+  - : L'ordonnée _y_ du point d'arrivée.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_de_la_méthode_lineTo">Utilisation de la méthode <code>lineTo</code></h3>
+### Utilisation de la méthode `lineTo`
 
-<p>Ceci est un extrait de code utilisant la méthode <code>lineTo</code>. Il faut utiliser la méthode {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} pour débuter un dessin, pour ensuite pouvoir dessiner une ligne dessus. On peut déplacer le crayon avec la méthode {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} et utiliser la méthode {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} pour rendre la ligne visible.</p>
+Ceci est un extrait de code utilisant la méthode `lineTo`. Il faut utiliser la méthode {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} pour débuter un dessin, pour ensuite pouvoir dessiner une ligne dessus. On peut déplacer le crayon avec la méthode {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} et utiliser la méthode {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} pour rendre la ligne visible.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.moveTo(50,50);
 ctx.lineTo(100, 100);
 ctx.stroke();
-</pre>
+```
 
-<p>Éditez le code suivant pour voir les changements en direct:</p>
+Éditez le code suivant pour voir les changements en direct:
 
-<h4 id="code_jouable">Code jouable</h4>
+#### Code jouable
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.moveTo(50,50);
 ctx.lineTo(100, 100);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -88,35 +89,22 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
+{{ EmbedLiveSample('code_jouable', 700, 360) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-lineto", "CanvasRenderingContext2D.lineTo")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                            | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-lineto", "CanvasRenderingContext2D.lineTo")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.lineTo")}}</p>
+{{Compat("api.CanvasRenderingContext2D.lineTo")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>l'interface qui la définit, {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.moveTo()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.stroke()")}}</li>
-</ul>
+- l'interface qui la définit, {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.moveTo()")}}
+- {{domxref("CanvasRenderingContext2D.stroke()")}}

@@ -10,49 +10,32 @@ tags:
   - Reference
 translation_of: Web/API/CanvasGradient
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>L'interface <code><strong>CanvasGradient</strong></code>  représente un objet opaque décrivant un dégradé. Il est retourné par les méthodes {{domxref("CanvasRenderingContext2D.createLinearGradient()")}} ou {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}.</p>
+L'interface **`CanvasGradient`**  représente un objet opaque décrivant un dégradé. Il est retourné par les méthodes {{domxref("CanvasRenderingContext2D.createLinearGradient()")}} ou {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Représentant un objet opaque, il n'y a aucune propriété exposée.</em></p>
+_Représentant un objet opaque, il n'y a aucune propriété exposée._
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Il n'y a pas de méthode héritée.</em></p>
+_Il n'y a pas de méthode héritée._
 
-<dl>
- <dt>{{domxref("CanvasGradient.addColorStop()")}}</dt>
- <dd>Ajoute un nouveau point d'arrêt, défini par un <code>décalage</code> et une <code>couleur</code>. Si le décalage n'est pas compris entre 0 et 1, une <code>INDEX_SIZE_ERR</code> est générée ; si la couleur ne peut être analysée comme une {{cssxref("&lt;color&gt;")}} CSS,  une <code>SYNTAX_ERR</code> est générée.</dd>
-</dl>
+- {{domxref("CanvasGradient.addColorStop()")}}
+  - : Ajoute un nouveau point d'arrêt, défini par un `décalage` et une `couleur`. Si le décalage n'est pas compris entre 0 et 1, une `INDEX_SIZE_ERR` est générée ; si la couleur ne peut être analysée comme une {{cssxref("&lt;color&gt;")}} CSS,  une `SYNTAX_ERR` est générée.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "the-canvas-element.html#canvasgradient", "CanvasGradient")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | Statut                           | Commentaire |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "the-canvas-element.html#canvasgradient", "CanvasGradient")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CanvasGradient")}}</p>
+{{Compat("api.CanvasGradient")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>Créateur dans  {{domxref("CanvasRenderingContext2D")}}.</li>
- <li>L'élément {{HTMLElement("canvas")}} et son interface associée {{domxref("HTMLCanvasElement")}}.</li>
-</ul>
+- Créateur dans  {{domxref("CanvasRenderingContext2D")}}.
+- L'élément {{HTMLElement("canvas")}} et son interface associée {{domxref("HTMLCanvasElement")}}.

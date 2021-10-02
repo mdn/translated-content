@@ -3,32 +3,29 @@ title: StyleSheet.parentStyleSheet
 slug: Web/API/StyleSheet/parentStyleSheet
 translation_of: Web/API/StyleSheet/parentStyleSheet
 ---
-<div>
-<div>{{APIRef ("CSSOM")}}</div>
-</div>
+{{APIRef ("CSSOM")}}
 
-<p>Renvoie la feuille de style qui inclut celle-ci, le cas échéant.</p>
+Renvoie la feuille de style qui inclut celle-ci, le cas échéant.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>ObjRef</em> = stylesheet.parentStyleSheet
-</pre>
+    ObjRef = stylesheet.parentStyleSheet
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">// trouve la feuille de style de niveau supérieur
+```js
+// trouve la feuille de style de niveau supérieur
 If (stylesheet.parentStyleSheet) {
     Feuille = stylesheet.parentStyleSheet;
 } autre {
     Feuille = feuille de style;
-}</pre>
+}
+```
 
-<h2 id="Notes">Remarques</h2>
+## Remarques
 
-<p>Cette propriété renvoie NULL est la feuille de style actuelle est une feuille de style de haut niveau ou si l'inclusion de la feuille de style n'est pas prise en charge.</p>
+Cette propriété renvoie NULL est la feuille de style actuelle est une feuille de style de haut niveau ou si l'inclusion de la feuille de style n'est pas prise en charge.
 
-<h2 id="Specification">spécification</h2>
+## spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-parentStyleSheet">ParentStyleSheet </a></li>
-</ul>
+- [ParentStyleSheet](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-parentStyleSheet)

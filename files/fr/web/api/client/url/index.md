@@ -11,23 +11,22 @@ tags:
   - URL
 translation_of: Web/API/Client/url
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}La propriété **`url`** (lecture seule) de l'interface {{domxref("Client")}} retourne l'url du service worker client courant.
 
-<div>La propriété <code><strong>url</strong></code> (lecture seule) de l'interface {{domxref("Client")}} retourne l'url du service worker client courant.</div>
+## Syntaxe
 
-<div> </div>
+```js
+var clientUrl = Client.url;
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+### Valeur de retour
 
-<pre class="brush: js">var clientUrl = Client.url;</pre>
+Valeur de type {{domxref("USVString")}}.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+## Exemple
 
-<p>Valeur de type {{domxref("USVString")}}.</p>
-
-<h2 id="Exemple">Exemple</h2>
-
-<pre class="brush: js">self.addEventListener('notificationclick', function(event) {
+```js
+self.addEventListener('notificationclick', function(event) {
   console.log('Au click de notification : ', event.notification.tag);
   event.notification.close();
 
@@ -36,33 +35,23 @@ translation_of: Web/API/Client/url
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client)
+      if (client.url == '/' && 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#client-url', 'url')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Défintion initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | Statut                               | Commentaire         |
+| ------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
+| {{SpecName('Service Workers', '#client-url', 'url')}} | {{Spec2('Service Workers')}} | Défintion initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Client.url")}}</p>
+{{Compat("api.Client.url")}}

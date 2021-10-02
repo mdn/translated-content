@@ -12,36 +12,28 @@ tags:
   - id
 translation_of: Web/API/Client/id
 ---
-<p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>La propriété <code><strong>id</strong></code> (lecture seule) de l'interface {{domxref("Client")}} retourne l'identifiant universellement unique de l'objet {{domxref("Client")}}.</p>
+La propriété **`id`** (lecture seule) de l'interface {{domxref("Client")}} retourne l'identifiant universellement unique de l'objet {{domxref("Client")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var clientId = Client.id;</pre>
+```js
+var clientId = Client.id;
+```
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">TBD
-</pre>
+```js
+TBD
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#client-id', 'id')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | Statut                               | Commentaire         |
+| -------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName('Service Workers', '#client-id', 'id')}} | {{Spec2('Service Workers')}} | Initial definition. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Client.id")}}</p>
+{{Compat("api.Client.id")}}

@@ -3,24 +3,24 @@ title: WebSocket.extensions
 slug: Web/API/WebSocket/extensions
 browser-compat: api.WebSocket.extensions
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p>La propriété en lecture seule <strong><code>WebSocket.extensions</code></strong> renvoie les extensions sélectionnées par le serveur. Actuellement, cette propriété vaut une chaîne de caractères vide ou la liste des extensions négociées par la connexion.</p>
+La propriété en lecture seule **`WebSocket.extensions`** renvoie les extensions sélectionnées par le serveur. Actuellement, cette propriété vaut une chaîne de caractères vide ou la liste des extensions négociées par la connexion.
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
+```js
 var extensions = aWebSocket.extensions;
-</pre>
+```
 
-<h2 id="value">Valeur</h2>
+## Valeur
 
-<p>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a>.</p>
+Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString).
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}

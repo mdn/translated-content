@@ -12,21 +12,22 @@ tags:
   - Noeuds
 translation_of: Web/API/NodeList/entries
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>La méthode <code><strong>NodeList.entries()</strong></code> renvoie un {{jsxref("Les_protocoles_iteration",'itérateur')}} permettant de parcourir toutes les paires clé / valeur contenues dans cet objet . Les valeurs sont des objets {{domxref("Node")}}.</p>
+La méthode **`NodeList.entries()`** renvoie un {{jsxref("Les_protocoles_iteration",'itérateur')}} permettant de parcourir toutes les paires clé / valeur contenues dans cet objet . Les valeurs sont des objets {{domxref("Node")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">list.entries();</pre>
+    list.entries();
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}}.</p>
+renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var node = document.createElement("div");
+```js
+var node = document.createElement("div");
 var kid1 = document.createElement("p");
 var kid2 = document.createTextNode("hey");
 var kid3 = document.createElement("span");
@@ -40,42 +41,25 @@ var list = node.childNodes;
 for (var entry of list.entries()) {
   console.log(entry);
 }
-</pre>
+```
 
-<p>résultat :</p>
+résultat :
 
-<pre>Array [ 0, &lt;p&gt; ]
-Array [ 1, #text "hey" ]
-Array [ 2, &lt;span&gt; ]</pre>
+    Array [ 0, <p> ]
+    Array [ 1, #text "hey" ]
+    Array [ 2, <span> ]
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#interface-nodelist','entries() (as iterable&lt;Node&gt;)')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | Statut                           | Commentaire          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('DOM WHATWG','#interface-nodelist','entries() (as iterable&lt;Node&gt;)')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>
+{{Compat("api.NodeList.entries")}}
 
+## Voir aussi
 
-<p>{{Compat("api.NodeList.entries")}}</p>
-</div>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{domxref("Node")}}</li>
- <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("Node")}}
+- {{domxref("NodeList")}}

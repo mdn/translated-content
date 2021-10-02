@@ -12,124 +12,113 @@ tags:
   - register
 translation_of: Web/API/ServiceWorkerContainer/register
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>La méthode <strong><code>register()</code></strong> de l'interface {{domxref("ServiceWorkerContainer")}} crée ou met à jour un {{domxref("ServiceWorkerRegistration")}} pour la <code>scriptURL</code> donnée.</p>
+La méthode **`register()`** de l'interface {{domxref("ServiceWorkerContainer")}} crée ou met à jour un {{domxref("ServiceWorkerRegistration")}} pour la `scriptURL` donnée.
 
-<p>En cas de succès, un <code>ServiceWorkerRegistration</code> attache la <code>scriptURL</code> fournie à une portée, qui sera utilisé ensuite pour la correspondance de navigation. Vous pouvez appeler cette méthode en toutes circonstances depuis la page contrôlée. C'est-à-dire, vous n'avez pas besoin de vérifier si un enregistrement existe déjà.</p>
+En cas de succès, un `ServiceWorkerRegistration` attache la `scriptURL` fournie à une portée, qui sera utilisé ensuite pour la correspondance de navigation. Vous pouvez appeler cette méthode en toutes circonstances depuis la page contrôlée. C'est-à-dire, vous n'avez pas besoin de vérifier si un enregistrement existe déjà.
 
-<p>Il y a une confusion fréquente autour de la signification et de l'utilisation de la portée. Puisque qu'un <code>ServiceWorker</code> ne peut pas avoir une portée plus large que son propre emplacement, utilisez uniquement l'option de la portée lorsque vous avez besoin d'une portée plus étroite que la valeur par défaut.</p>
+Il y a une confusion fréquente autour de la signification et de l'utilisation de la portée. Puisque qu'un `ServiceWorker` ne peut pas avoir une portée plus large que son propre emplacement, utilisez uniquement l'option de la portée lorsque vous avez besoin d'une portée plus étroite que la valeur par défaut.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>serviceWorkerContainer</em>.register(<em>scriptURL</em>, <em>options</em>)
-  .then(function(<em>serviceWorkerRegistration</em>) { ... })</pre>
+    serviceWorkerContainer.register(scriptURL, options)
+      .then(function(serviceWorkerRegistration) { ... })
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>scriptURL</code></dt>
- <dd>L' URL du script contenant le <code>ServiceWorker</code>. Le fichier qui a enregistré le <code>ServiceWorker</code> doit avoir un <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types">JavaScript MIME type</a> valide.</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>Un objet contenant les options d'enregistrement. Les options sont:
- <ul>
-  <li><code>scope</code>: Un {{domxref("USVString")}} représentant une URL qui définit la portée d'enregistrement d'un <code>ServiceWorker</code>; c'est-à-dire quelle plage d'URL un <code>ServiceWorker</code> peut contrôler. Il s'agit généralement d'une URL relative. Elle est relative à l'URL de base de l'application. Par défaut, la valeur de la portée de l'enregistrement d'un <code>ServiceWorker</code> est limité au répertoire qui contient le script du <code>ServiceWorker</code>. Consultez la section <a href="#Exemples">Exemples</a> pour plus d'informations sur son fonctionnement.</li>
-  <li>{{non-standard_inline}} <code>type</code>: Un {{domxref("WorkerType")}}, il prend les valeurs "classic" ou "module". Par défaut, la valeur est fixé à "classic".</li>
-  <li>{{non-standard_inline}} <code>updateViaCache</code>: Un {{domxref("ServiceWorkerUpdateViaCache")}}, il prend les valeurs "imports" ou "all" ou "none". Par défaut, la valeur est fixé à "imports".</li>
- </ul>
- </dd>
-</dl>
+- `scriptURL`
+  - : L' URL du script contenant le `ServiceWorker`. Le fichier qui a enregistré le `ServiceWorker` doit avoir un [JavaScript MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types) valide.
+- `options` {{optional_inline}}
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+  - : Un objet contenant les options d'enregistrement. Les options sont:
 
-<p>Une {{jsxref("Promise")}}  qui se résout avec un objet {{domxref("ServiceWorkerRegistration")}}.</p>
+    - `scope`: Un {{domxref("USVString")}} représentant une URL qui définit la portée d'enregistrement d'un `ServiceWorker`; c'est-à-dire quelle plage d'URL un `ServiceWorker` peut contrôler. Il s'agit généralement d'une URL relative. Elle est relative à l'URL de base de l'application. Par défaut, la valeur de la portée de l'enregistrement d'un `ServiceWorker` est limité au répertoire qui contient le script du `ServiceWorker`. Consultez la section [Exemples](#Exemples) pour plus d'informations sur son fonctionnement.
+    - {{non-standard_inline}} `type`: Un {{domxref("WorkerType")}}, il prend les valeurs "classic" ou "module". Par défaut, la valeur est fixé à "classic".
+    - {{non-standard_inline}} `updateViaCache`: Un {{domxref("ServiceWorkerUpdateViaCache")}}, il prend les valeurs "imports" ou "all" ou "none". Par défaut, la valeur est fixé à "imports".
 
-<h2 id="Exemples">Exemples</h2>
+### Valeur de retour
 
-<p>Les exemples décrits ici doivent être pris ensemble pour obtenir une meilleure compréhension de comment la portée des <code>ServiceWorker</code> s'applique à une page.</p>
+Une {{jsxref("Promise")}} qui se résout avec un objet {{domxref("ServiceWorkerRegistration")}}.
 
-<p>L'exemple suivant utilise la valeur par défaut de la portée (en l'omettant). Le code du <code>ServiceWorker</code> dans ce cas, s'il est inclus dans <code>example.com/index.html</code>, contrôlera <code>example.com/index.html</code>, ainsi que les pages en dessous, comme <code>example.com/product/description.html</code>.</p>
+## Exemples
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+Les exemples décrits ici doivent être pris ensemble pour obtenir une meilleure compréhension de comment la portée des `ServiceWorker` s'applique à une page.
+
+L'exemple suivant utilise la valeur par défaut de la portée (en l'omettant). Le code du `ServiceWorker` dans ce cas, s'il est inclus dans `example.com/index.html`, contrôlera `example.com/index.html`, ainsi que les pages en dessous, comme `example.com/product/description.html`.
+
+```js
+if ('serviceWorker' in navigator) {
   // Register a service worker hosted at the root of the
   // site using the default scope.
   navigator.serviceWorker.register('/sw.js').then(
-    (registration) =&gt; {
+    (registration) => {
       console.log('Service worker registration succeeded:', registration)
     },
-    /*catch*/ (error) =&gt; {
-      console.log('Service worker registration failed:', error)
-    }
-  )
-} else {
-  console.log('Service workers are not supported.')
-}</pre>
-
-<p>Le code suivant, s'il est inclus dans <code>example.com/index.html</code>, à la racine d'un site, s'appliquerait exactement aux mêmes pages que l'exemple ci-dessus. N'oubliez pas que la portée, lorsqu'elle est incluse, utilise l'emplacement de la page comme base.</p>
-
-<p>Sinon, si ce code était inclus dans une page à <code>example.com/product/description.html</code>, avec le fichier Javascript résidant à <code>example.com/product/sw.js</code>, alors le service worker ne s'appliquerait qu'aux ressources sous <code>example.com /product</code>.</p>
-
-<pre class="brush: js">if ('serviceWorker' in navigator) {
-  // declaring scope manually
-  navigator.serviceWorker.register('/sw.js', { scope: './' }).then(
-    (registration) =&gt; {
-      console.log('Service worker registration succeeded:', registration)
-    },
-    /*catch*/ (error) =&gt; {
+    /*catch*/ (error) => {
       console.log('Service worker registration failed:', error)
     }
   )
 } else {
   console.log('Service workers are not supported.')
 }
-</pre>
+```
 
-<p>Il y a une confusion fréquente autour de la signification et de l'utilisation de la portée. Puisque qu'un <code>ServiceWorker</code> ne peut pas avoir une portée plus large que son propre emplacement, utilisez uniquement l'option de la portée lorsque vous avez besoin d'une portée plus étroite que la valeur par défaut.</p>
+Le code suivant, s'il est inclus dans `example.com/index.html`, à la racine d'un site, s'appliquerait exactement aux mêmes pages que l'exemple ci-dessus. N'oubliez pas que la portée, lorsqu'elle est incluse, utilise l'emplacement de la page comme base.
 
-<p>Le code suivant, s'il est inclus dans <code>example.com/index.html</code>, à la racine d'un site, ne s'appliquerait qu'aux ressources sous <code>example.com/product</code>.</p>
+Sinon, si ce code était inclus dans une page à `example.com/product/description.html`, avec le fichier Javascript résidant à `example.com/product/sw.js`, alors le service worker ne s'appliquerait qu'aux ressources sous `example.com /product`.
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   // declaring scope manually
-  navigator.serviceWorker.register('/sw.js', { scope: '/product/' }).then(
-    (registration) =&gt; {
+  navigator.serviceWorker.register('/sw.js', { scope: './' }).then(
+    (registration) => {
       console.log('Service worker registration succeeded:', registration)
     },
-    /*catch*/ (error) =&gt; {
+    /*catch*/ (error) => {
       console.log('Service worker registration failed:', error)
     }
   )
 } else {
   console.log('Service workers are not supported.')
-}</pre>
+}
+```
 
-<p>Toutefois, les serveurs peuvent supprimer cette restriction en définissant un en-tête <a href="https://w3c.github.io/ServiceWorker/#service-worker-allowed">Service-Worker-Allowed</a> sur le script du <code>ServiceWorker</code>, et alors vous pouvez spécifier une portée maximale pour ce <code>ServiceWorker</code> au-dessus de l'emplacement du <code>ServiceWorker</code>.</p>
+Il y a une confusion fréquente autour de la signification et de l'utilisation de la portée. Puisque qu'un `ServiceWorker` ne peut pas avoir une portée plus large que son propre emplacement, utilisez uniquement l'option de la portée lorsque vous avez besoin d'une portée plus étroite que la valeur par défaut.
 
-<h2 id="Spécifications">Spécifications</h2>
+Le code suivant, s'il est inclus dans `example.com/index.html`, à la racine d'un site, ne s'appliquerait qu'aux ressources sous `example.com/product`.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-serviceworkercontainer-register', 'ServiceWorkerContainer: register')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+```js
+if ('serviceWorker' in navigator) {
+  // declaring scope manually
+  navigator.serviceWorker.register('/sw.js', { scope: '/product/' }).then(
+    (registration) => {
+      console.log('Service worker registration succeeded:', registration)
+    },
+    /*catch*/ (error) => {
+      console.log('Service worker registration failed:', error)
+    }
+  )
+} else {
+  console.log('Service workers are not supported.')
+}
+```
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+Toutefois, les serveurs peuvent supprimer cette restriction en définissant un en-tête [Service-Worker-Allowed](https://w3c.github.io/ServiceWorker/#service-worker-allowed) sur le script du `ServiceWorker`, et alors vous pouvez spécifier une portée maximale pour ce `ServiceWorker` au-dessus de l'emplacement du `ServiceWorker`.
 
-<p>{{Compat("api.ServiceWorkerContainer.register")}}</p>
+## Spécifications
 
-<h2 id="Voir_également">Voir également</h2>
+| Specification                                                                                                                                    | Status                               | Comment              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('Service Workers', '#dom-serviceworkercontainer-register', 'ServiceWorkerContainer: register')}} | {{Spec2('Service Workers')}} | Définition initiale. |
 
-<ul>
- <li><a href="https://www.w3.org/TR/service-workers/#navigator-service-worker-register">W3.org ServiceWorker Register</a></li>
- <li><a href="https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-register">W3c.github.io ServiceWorker Register</a></li>
- <li><a href="https://www.w3.org/TR/service-workers/#enumdef-serviceworkerupdateviacache">W3.org option update via cache</a></li>
- <li><a href="https://html.spec.whatwg.org/multipage/workers.html#workertype">WHATWG.org Worker Type</a></li>
-</ul>
+## Compatibilité des navigateurs
+
+{{Compat("api.ServiceWorkerContainer.register")}}
+
+## Voir également
+
+- [W3.org ServiceWorker Register](https://www.w3.org/TR/service-workers/#navigator-service-worker-register)
+- [W3c.github.io ServiceWorker Register](https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-register)
+- [W3.org option update via cache](https://www.w3.org/TR/service-workers/#enumdef-serviceworkerupdateviacache)
+- [WHATWG.org Worker Type](https://html.spec.whatwg.org/multipage/workers.html#workertype)

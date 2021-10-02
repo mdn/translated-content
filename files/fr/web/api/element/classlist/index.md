@@ -10,58 +10,56 @@ tags:
   - Propriétés
 translation_of: Web/API/Element/classList
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>La propriété en lecture seule<strong> </strong> <code><strong>Element.classList</strong></code> retourne une collection directe  {{domxref("DOMTokenList")}} des attributs de classe de l'élément.</p>
+La propriété en lecture seule** \*\***`Element.classList`\*\* retourne une collection directe  {{domxref("DOMTokenList")}} des attributs de classe de l'élément.
 
-<p>L'utilisation de <code>classList</code> est une alternative à la propriété {{domxref("element.className")}} qui renvoie une chaine composée de la liste des classes, séparées par des espaces.</p>
+L'utilisation de `classList` est une alternative à la propriété {{domxref("element.className")}} qui renvoie une chaine composée de la liste des classes, séparées par des espaces.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">const <var>elementClasses</var> = elementNodeReference.classList;
-</pre>
+    const elementClasses = elementNodeReference.classList;
 
-<p><em>elementClasses</em> est une <a href="/en-US/docs/DOM/DOMTokenList">DOMTokenList</a> représentant l'attribut class de <em>elementNodeReference</em>. Si l'attribut class n'a pas été défini ou est vide <em>elementClasses.length</em> retourne 0. <code>element.classList</code> est en lecture seule. Pour la modifier il convient d'utiliser les méthodes <code>add()</code> et <code>remove()</code>.</p>
+_elementClasses_ est une [DOMTokenList](/en-US/docs/DOM/DOMTokenList) représentant l'attribut class de _elementNodeReference_. Si l'attribut class n'a pas été défini ou est vide _elementClasses.length_ retourne 0. `element.classList` est en lecture seule. Pour la modifier il convient d'utiliser les méthodes `add()` et `remove()`.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>add( String [, String] )</dt>
- <dd>Ajoute les classes spécifiées. Si une classe est déjà assignée en attribut de cet élément, elle est ignorée.</dd>
- <dt>remove( String [, String] )</dt>
- <dd>Supprime les classes spécifiées.<br>
- <strong>Note:</strong> Supprimer une classe qui n'existe pas NE génère PAS d'erreurs.</dd>
- <dt><strong>item</strong>( Number )</dt>
- <dd>Renvoie la position d'une classe dans une collection.</dd>
- <dt><strong>toggle</strong>( String [, force] )</dt>
- <dd>Si un seul argument est présent : change la présence d'une classe dans la liste. Si la classe existe, alors la supprime et renvoie <code>false</code>, dans le cas inverse, ajoute cette classe et retourne <code>true</code>.<br>
- Si le second argument est présent : Si l'argument <code>force</code> est à <code>true</code>, ajoute cette classe, si l'argument est à <code>false</code>, la supprime.</dd>
- <dt>contains( String )</dt>
- <dd>Vérifie si la classe spécifiée est présente dans la liste des classes attribuées à cet élément.</dd>
- <dt>replace( oldClass, newClass )</dt>
- <dd>Remplace une classe par une autre.</dd>
-</dl>
+- add( String \[, String] )
+  - : Ajoute les classes spécifiées. Si une classe est déjà assignée en attribut de cet élément, elle est ignorée.
+- remove( String \[, String] )
+  - : Supprime les classes spécifiées.
+    **Note:** Supprimer une classe qui n'existe pas NE génère PAS d'erreurs.
+- **item**( Number )
+  - : Renvoie la position d'une classe dans une collection.
+- **toggle**( String \[, force] )
+  - : Si un seul argument est présent : change la présence d'une classe dans la liste. Si la classe existe, alors la supprime et renvoie `false`, dans le cas inverse, ajoute cette classe et retourne `true`.
+    Si le second argument est présent : Si l'argument `force` est à `true`, ajoute cette classe, si l'argument est à `false`, la supprime.
+- contains( String )
+  - : Vérifie si la classe spécifiée est présente dans la liste des classes attribuées à cet élément.
+- replace( oldClass, newClass )
+  - : Remplace une classe par une autre.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">const div = document.createElement('div');
+```js
+const div = document.createElement('div');
 div.className = 'foo';
 
-// notre point de départ: &lt;div class="foo"&gt;&lt;/div&gt;
+// notre point de départ: <div class="foo"></div>
 console.log(div.outerHTML);
 
 // utiliser l'API classList pour supprimer et ajouter des classes
 div.classList.remove("foo");
 div.classList.add("anotherclass");
 
-// &lt;div class="anotherclass"&gt;&lt;/div&gt;
+// <div class="anotherclass"></div>
 console.log(div.outerHTML);
 
 // si "visible" est défini, le supprimer, sinon, l'ajouter
 div.classList.toggle("visible");
 
 // ajouter/supprimer "visible", en fonction d'un test conditionnel, pour i inférieur à 10
-div.classList.toggle("visible", i &lt; 10 );
+div.classList.toggle("visible", i < 10 );
 
 console.log(div.classList.contains("foo"));
 
@@ -75,19 +73,19 @@ div.classList.add(...cls);
 div.classList.remove(...cls);
 
 // remplacer la classe "foo" par la classe "bar"
-div.classList.replace("foo", "bar");</pre>
+div.classList.replace("foo", "bar");
+```
 
-<div class="note">
-<p><strong>Note :</strong> Les versions de Firefox antérieures à la 26 n'implémentent pas l'utilisation de plusieurs arguments dans les méthodes add/remove/toggle. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814014">https://bugzilla.mozilla.org/show_bug.cgi?id=814014</a></p>
-</div>
+> **Note :** Les versions de Firefox antérieures à la 26 n'implémentent pas l'utilisation de plusieurs arguments dans les méthodes add/remove/toggle. Voir <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
 
-<h2 id="Prothèse_démulation">Prothèse d'émulation</h2>
+## Prothèse d'émulation
 
-<p>L'ancien événement <code><a href="https://msdn.microsoft.com/en-us/windows/ms536956(v=vs.71)">onpropertychange</a></code> peut être utilisé pour créer une maquette <code>classList</code> vivante grâce à une propriété <code>Element.prototype.className</code> qui déclenche l'événement spécifié une fois qu'il est modifié.</p>
+L'ancien événement [`onpropertychange`](<https://msdn.microsoft.com/en-us/windows/ms536956(v=vs.71)>) peut être utilisé pour créer une maquette `classList` vivante grâce à une propriété `Element.prototype.className` qui déclenche l'événement spécifié une fois qu'il est modifié.
 
-<p>La polyfill suivante pour <code>classList</code> et <code>DOMTokenList</code> garantit une conformité <strong>totale</strong> (couverture) pour toutes les méthodes et propriétés standard de <code>Element.prototype.classList</code> pour les navigateurs <strong>IE10-IE11</strong> ainsi qu'un comportement quasi conforme pour <strong>IE 6-9</strong>. Consultez ce qui suit :</p>
+La polyfill suivante pour `classList` et `DOMTokenList` garantit une conformité **totale** (couverture) pour toutes les méthodes et propriétés standard de `Element.prototype.classList` pour les navigateurs **IE10-IE11** ainsi qu'un comportement quasi conforme pour **IE 6-9**. Consultez ce qui suit :
 
-<pre class="brush: js">// 1. String.prototype.trim polyfill
+```js
+// 1. String.prototype.trim polyfill
 if (!"".trim) String.prototype.trim = function(){ return this.replace(/^[\s﻿]+|[\s﻿]+$/g, ''); };
 (function(window){"use strict"; // prevent global namespace pollution
 if(!window.DOMException) (DOMException = function(reason){this.message = reason}).prototype = new Error;
@@ -127,7 +125,7 @@ if (typeof DOMTokenList !== "function") (function(window){
     window.DOMTokenList = DOMTokenList;
     function whenPropChanges(){
         var evt = window.event, prop = evt.propertyName;
-        if ( !skipPropChange &amp;&amp; (prop==="className" || (prop==="classList" &amp;&amp; !defineProperty)) ) {
+        if ( !skipPropChange && (prop==="className" || (prop==="classList" && !defineProperty)) ) {
             var target = evt.srcElement, protoObjProto = target[" uCLp"], strval = "" + target[prop];
             var tokens=strval.trim().split(wsRE), resTokenList=target[prop==="classList"?" uCL":"classList"];
             var oldLen = protoObjProto.length;
@@ -135,7 +133,7 @@ if (typeof DOMTokenList !== "function") (function(window){
                 for(var innerI=0; innerI!==cI; ++innerI) if(tokens[innerI]===tokens[cI]) {sub++; continue a;}
                 resTokenList[cI-sub] = tokens[cI];
             }
-            for (var i=cLen-sub; i &lt; oldLen; ++i) delete resTokenList[i]; //remove trailing indexs
+            for (var i=cLen-sub; i < oldLen; ++i) delete resTokenList[i]; //remove trailing indexs
             if(prop !== "classList") return;
             skipPropChange = 1, target.classList = resTokenList, target.className = strval;
             skipPropChange = 0, resTokenList.length = tokens.length - sub;
@@ -153,7 +151,7 @@ if (typeof DOMTokenList !== "function") (function(window){
             this[cI-sub] = toks[cI];
         }
         protoObjProto.length = cLen-sub, protoObjProto.value = ele.className, protoObjProto[" uCL"] = ele;
-        if (defineProperty) { defineProperty(ele, "classList", { // IE8 &amp; IE9 allow defineProperty on the DOM
+        if (defineProperty) { defineProperty(ele, "classList", { // IE8 & IE9 allow defineProperty on the DOM
             enumerable:   1, get: function(){return resTokenList},
             configurable: 0, set: function(newVal){
                 skipPropChange = 1, ele.className = protoObjProto.value = (newVal += ""), skipPropChange = 0;
@@ -162,7 +160,7 @@ if (typeof DOMTokenList !== "function") (function(window){
                     for(var innerI=0; innerI!==cI; ++innerI) if(toks[innerI]===toks[cI]) {sub++; continue a;}
                     resTokenList[cI-sub] = toks[cI];
                 }
-                for (var i=cLen-sub; i &lt; oldLen; ++i) delete resTokenList[i]; //remove trailing indexs
+                for (var i=cLen-sub; i < oldLen; ++i) delete resTokenList[i]; //remove trailing indexs
             }
         }); defineProperty(ele, " uCLp", { // for accessing the hidden prototype
             enumerable: 0, configurable: 0, writeable: 0, value: protoObj.prototype
@@ -171,7 +169,7 @@ if (typeof DOMTokenList !== "function") (function(window){
         }); } else { ele.classList=resTokenList, ele[" uCL"]=resTokenList, ele[" uCLp"]=protoObj.prototype; }
         ele.attachEvent( "onpropertychange", whenPropChanges );
     }
-    try { // Much faster &amp; cleaner version for IE8 &amp; IE9:
+    try { // Much faster & cleaner version for IE8 & IE9:
         // Should work in IE8 because Element.prototype instanceof Node is true according to the specs
         window.Object.defineProperty(window.Element.prototype, "classList", {
             enumerable: 1,   get: function(val){
@@ -184,8 +182,8 @@ if (typeof DOMTokenList !== "function") (function(window){
         window[" uCL"] = polyfillClassList;
         // the below code ensures polyfillClassList is applied to all current and future elements in the doc.
         document.documentElement.firstChild.appendChild(document.createElement('style')).styleSheet.cssText=(
-            '_*{x-uCLp:expression(!this.hasOwnProperty("classList")&amp;&amp;window[" uCL"](this))}' + //  IE6
-            '[class]{x-uCLp/**/:expression(!this.hasOwnProperty("classList")&amp;&amp;window[" uCL"](this))}' //IE7-8
+            '_*{x-uCLp:expression(!this.hasOwnProperty("classList")&&window[" uCL"](this))}' + //  IE6
+            '[class]{x-uCLp/**/:expression(!this.hasOwnProperty("classList")&&window[" uCL"](this))}' //IE7-8
         );
     }
 })(window);
@@ -195,15 +193,15 @@ if (typeof DOMTokenList !== "function") (function(window){
         function NullCheck(n) {return n===void 0 ? null : n} return NullCheck(this[i]);
     };
     if (!DOMTokenListProto.toggle || testClass.toggle("a",0)!==false) DOMTokenListProto.toggle=function(val){
-        if (arguments.length &gt; 1) return (this[arguments[1] ? "add" : "remove"](val), !!arguments[1]);
+        if (arguments.length > 1) return (this[arguments[1] ? "add" : "remove"](val), !!arguments[1]);
         var oldValue = this.value;
-        return (this.remove(oldValue), oldValue === this.value &amp;&amp; (this.add(val), true) /*|| false*/);
+        return (this.remove(oldValue), oldValue === this.value && (this.add(val), true) /*|| false*/);
     };
     if (!DOMTokenListProto.replace || typeof testClass.replace("a", "b") !== "boolean")
         DOMTokenListProto.replace = function(oldToken, newToken){
             checkIfValidClassListEntry("replace", oldToken), checkIfValidClassListEntry("replace", newToken);
             var oldValue = this.value;
-            return (this.remove(oldToken), this.value !== oldValue &amp;&amp; (this.add(newToken), true));
+            return (this.remove(oldToken), this.value !== oldValue && (this.add(newToken), true));
         };
     if (!DOMTokenListProto.contains) DOMTokenListProto.contains = function(value){
         for (var i=0,Len=this.length; i !== Len; ++i) if (this[i] === value) return true;
@@ -216,69 +214,46 @@ if (typeof DOMTokenList !== "function") (function(window){
     if (!DOMTokenListProto.entries) DOMTokenListProto.entries = function(){
         var nextIndex = 0, that = this;
         return {next: function() {
-            return nextIndex&lt;that.length ? {value: [nextIndex, that[nextIndex++]], done: false} : {done: true};
+            return nextIndex<that.length ? {value: [nextIndex, that[nextIndex++]], done: false} : {done: true};
         }};
     };
     if (!DOMTokenListProto.values) DOMTokenListProto.values = function(){
         var nextIndex = 0, that = this;
         return {next: function() {
-            return nextIndex&lt;that.length ? {value: that[nextIndex++], done: false} : {done: true};
+            return nextIndex<that.length ? {value: that[nextIndex++], done: false} : {done: true};
         }};
     };
     if (!DOMTokenListProto.keys) DOMTokenListProto.keys = function(){
         var nextIndex = 0, that = this;
         return {next: function() {
-            return nextIndex&lt;that.length ? {value: nextIndex++, done: false} : {done: true};
+            return nextIndex<that.length ? {value: nextIndex++, done: false} : {done: true};
         }};
     };
 })(window.DOMTokenList.prototype, window.document.createElement("div").classList);
 })(window);
-</pre>
+```
 
-<h3 id="Mise_en_garde">Mise en garde</h3>
+### Mise en garde
 
-<p>La prothèse d'émulation est limitée dans sa fonctionnalité. Elle est actuellement incapable de traiter les éléments hors document (par exemple, les éléments créés par <code>document.createElement</code> avant d'être ajoutés à un nœud parent) dans IE6-7.</p>
+La prothèse d'émulation est limitée dans sa fonctionnalité. Elle est actuellement incapable de traiter les éléments hors document (par exemple, les éléments créés par `document.createElement` avant d'être ajoutés à un nœud parent) dans IE6-7.
 
-<p>Cependant, elle devrait très bien fonctionner dans IE9. Une différence majeure entre la version prothésée de <code>classList</code> et les spécifications du W3 est que pour IE6-8, il n'y a pas moyen de créer un objet immuable (un objet dont les propriétés ne peuvent pas être directement modifiées). Dans IE9, en revanche, c'est possible en étendant le prototype, en gelant l'objet visible et en écrasant les méthodes de propriétés natives. Cependant, de telles actions ne fonctionneraient pas dans IE6-IE8 et, dans IE9, elles ralentiraient la performance de la page web entière au point de la faire ramper, rendant ces modifications complètement impraticables pour cette prothèse d'émulation.</p>
+Cependant, elle devrait très bien fonctionner dans IE9. Une différence majeure entre la version prothésée de `classList` et les spécifications du W3 est que pour IE6-8, il n'y a pas moyen de créer un objet immuable (un objet dont les propriétés ne peuvent pas être directement modifiées). Dans IE9, en revanche, c'est possible en étendant le prototype, en gelant l'objet visible et en écrasant les méthodes de propriétés natives. Cependant, de telles actions ne fonctionneraient pas dans IE6-IE8 et, dans IE9, elles ralentiraient la performance de la page web entière au point de la faire ramper, rendant ces modifications complètement impraticables pour cette prothèse d'émulation.
 
-<p>Une note mineure est que dans IE6-7, cette prothèse utilise la propriété <code>window[" uCL"]</code> de l'objet window pour communiquer avec les expressions CSS, la propriété css <code>x-uCLp</code> sur tous les éléments, et la propriété <code>element[" uCL"]</code> sur tous les éléments pour permettre la collecte des déchets et augmenter les performances. Dans tous les navigateurs prothésés (IE6-9), une propriété <code>element[" uCLp"]</code> supplémentaire est ajoutée à l'élément pour garantir un prototypage conforme aux normes, et une propriété <code>DOMTokenList[" uCL"]</code> est ajoutée à chaque objet <code>element["classList"]</code> pour garantir que la <code>DOMTokenList</code> est liée à son propre élément.</p>
+Une note mineure est que dans IE6-7, cette prothèse utilise la propriété `window[" uCL"]` de l'objet window pour communiquer avec les expressions CSS, la propriété css `x-uCLp` sur tous les éléments, et la propriété `element[" uCL"]` sur tous les éléments pour permettre la collecte des déchets et augmenter les performances. Dans tous les navigateurs prothésés (IE6-9), une propriété `element[" uCLp"]` supplémentaire est ajoutée à l'élément pour garantir un prototypage conforme aux normes, et une propriété `DOMTokenList[" uCL"]` est ajoutée à chaque objet `element["classList"]` pour garantir que la `DOMTokenList` est liée à son propre élément.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "dom.html#dom-classlist", "Element.classList")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Note dans la spécification HTML relative à l'attribut {{htmlattrxref("class")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-element-classlist", "Element.classList")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-element-classlist", "Element.classList")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | Statut                           | Commentaire                                                                             |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------- |
+| {{SpecName("HTML WHATWG", "dom.html#dom-classlist", "Element.classList")}} | {{Spec2("HTML WHATWG")}} | Note dans la spécification HTML relative à l'attribut {{htmlattrxref("class")}}. |
+| {{SpecName("DOM WHATWG", "#dom-element-classlist", "Element.classList")}}     | {{Spec2("DOM WHATWG")}} | Définition initiale.                                                                    |
+| {{SpecName("DOM4", "#dom-element-classlist", "Element.classList")}}             | {{Spec2("DOM4")}}         |                                                                                         |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Element.classList")}}</p>
+{{Compat("api.Element.classList")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("element.className")}}</li>
- <li>{{domxref("DOMTokenList")}}</li>
-</ul>
+- {{domxref("element.className")}}
+- {{domxref("DOMTokenList")}}

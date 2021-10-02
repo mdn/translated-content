@@ -11,31 +11,33 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Scissor_animation
 original_slug: Web/API/WebGL_API/By_example/Créer_une_animation_avec_découpe_et_applique
 ---
-<div>{{IncludeSubnav("/fr/Apprendre")}}</div>
+{{IncludeSubnav("/fr/Apprendre")}}
 
-<p>{{PreviousNext("Apprendre/WebGL/Par_exemple/Modèle_1","Apprendre/WebGL/Par_exemple/Une_pluie_de_rectangle")}}</p>
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Modèle_1","Apprendre/WebGL/Par_exemple/Une_pluie_de_rectangle")}}
 
-<p>Dans cet article, on voit comment créer des animations grâce à des opérations de découpe et d'applique.</p>
+Dans cet article, on voit comment créer des animations grâce à des opérations de découpe et d'applique.
 
-<p>{{EmbedLiveSample("Une_animation_grâce_à_des_découpes",660,425)}}</p>
+{{EmbedLiveSample("Une_animation_grâce_à_des_découpes",660,425)}}
 
-<h3 id="Une_animation_grâce_à_des_découpes">Une animation grâce à des découpes</h3>
+### Une animation grâce à des découpes
 
-<p>Dans cet exemple, on anime des carrés grâce aux méthodes {{domxref("WebGLRenderingContext.scissor()","scissor()")}} et {{domxref("WebGLRenderingContext.clear()","clear()")}}. Ensuite, on crée à nouveau une boucle d'animation grâce aux <em>timers</em>. Cette fois-ci, la position du carré (la zone de découpe) est mise à jour à chaque <em>frame </em>(on a environ une frame rafraîchie toutes les 17 millisecondes, ce qui correspond environ à 60fps (<em>frame per second</em> ou <em>frame </em>par seconde).</p>
+Dans cet exemple, on anime des carrés grâce aux méthodes {{domxref("WebGLRenderingContext.scissor()","scissor()")}} et {{domxref("WebGLRenderingContext.clear()","clear()")}}. Ensuite, on crée à nouveau une boucle d'animation grâce aux _timers_. Cette fois-ci, la position du carré (la zone de découpe) est mise à jour à chaque _frame_ (on a environ une frame rafraîchie toutes les 17 millisecondes, ce qui correspond environ à 60fps (_frame per second_ ou _frame_ par seconde).
 
-<p>En revanche, la couleur du carré (définie avec {{domxref("WebGLRenderingContext.clearColor()","clearColor")}}) est uniquement mise à jour lorsqu'un nouveau carré est créé. On voit ici que {{Glossary("WebGL")}} est un automate. Pour chaque carré, on définit sa couleur une fois puis on met à jour sa position à chaque <em>frame</em>. L'état lié à la couleur reste tel quel jusqu'à ce qu'un nouveau carré soit créé.</p>
+En revanche, la couleur du carré (définie avec {{domxref("WebGLRenderingContext.clearColor()","clearColor")}}) est uniquement mise à jour lorsqu'un nouveau carré est créé. On voit ici que {{Glossary("WebGL")}} est un automate. Pour chaque carré, on définit sa couleur une fois puis on met à jour sa position à chaque _frame_. L'état lié à la couleur reste tel quel jusqu'à ce qu'un nouveau carré soit créé.
 
-<pre class="brush: html hidden">&lt;p&gt;Une animation WebGL obtenue en appliquant des couleurs
-unies sur le buffer de dessin et en utilisant des tests de découpe.&lt;/p&gt;
-&lt;button id="animation-onoff"&gt;
+```html hidden
+<p>Une animation WebGL obtenue en appliquant des couleurs
+unies sur le buffer de dessin et en utilisant des tests de découpe.</p>
+<button id="animation-onoff">
   Cliquez ici pour
-&lt;strong&gt;[verbe ici]&lt;/strong&gt;
-  l'animation&lt;/button&gt;
-&lt;canvas&gt;Il semblerait que votre navigateur
-    ne supporte pas l'élément HTML5 canvas.&lt;/canvas&gt;
-</pre>
+<strong>[verbe ici]</strong>
+  l'animation</button>
+<canvas>Il semblerait que votre navigateur
+    ne supporte pas l'élément HTML5 canvas.</canvas>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   text-align : center;
 }
 canvas {
@@ -52,12 +54,14 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
+```
 
-<pre class="brush: js hidden">;(function(){
-</pre>
+```js hidden
+;(function(){
+```
 
-<pre class="brush: js">"use strict"
+```js
+"use strict"
 window.addEventListener("load", setupAnimation, false);
 // Voici les variables qui permettront de
 // manipuler le contexte WebGL, la couleur
@@ -113,7 +117,7 @@ function drawAnimation () {
   // Lorsque le carré atteint le bas, on crée un nouveau
   // carré avec une nouvelle vitesse et une nouvelle
   // couleur.
-  if (position[1] &lt; 0) {
+  if (position[1] < 0) {
     // La position horizontale est choisie aléatoirement.
     // La position verticale correspond au haut
     // du buffer de dessin.
@@ -132,9 +136,10 @@ function drawAnimation () {
 function getRandomColor() {
   return [Math.random(), Math.random(), Math.random()];
 }
-</pre>
+```
 
-<pre class="brush: js hidden">function getRenderingContext() {
+```js hidden
+function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
@@ -153,11 +158,12 @@ function getRandomColor() {
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;
 }
-</pre>
+```
 
-<pre class="brush: js hidden">})();
-</pre>
+```js hidden
+})();
+```
 
-<p>Le code source de cet exemple est également disponible sur <a href="https://github.com/idofilin/webgl-by-example/tree/master/scissor-animation">GitHub</a>.</p>
+Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/scissor-animation).
 
-<p>{{PreviousNext("Apprendre/WebGL/Par_exemple/Modèle_1","Apprendre/WebGL/Par_exemple/Une_pluie_de_rectangle")}}</p>
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Modèle_1","Apprendre/WebGL/Par_exemple/Une_pluie_de_rectangle")}}

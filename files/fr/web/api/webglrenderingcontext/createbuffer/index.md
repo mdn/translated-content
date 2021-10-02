@@ -9,67 +9,63 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/createBuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>La méthode <strong><code>WebGLRenderingContext.createBuffer() </code></strong>de l'<a href="/fr-FR/docs/Web/API/WebGL_API">API WebGL</a> crée et initialise un {{domxref ("WebGLBuffer")}} stockant des données telles que des sommets ou des couleurs.</p>
+La méthode **`WebGLRenderingContext.createBuffer() `**de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) crée et initialise un {{domxref ("WebGLBuffer")}} stockant des données telles que des sommets ou des couleurs.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">WebGLBuffer <var>gl</var>.createBuffer();
-</pre>
+    WebGLBuffer gl.createBuffer();
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Un {{domxref("WebGLBuffer")}} stockant des données telles que des sommets ou des couleurs.</p>
+Un {{domxref("WebGLBuffer")}} stockant des données telles que des sommets ou des couleurs.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Création_d'un_tampon">Création d'un tampon</h3>
+### Création d'un tampon
 
-<pre class="brush: js">var canevas = document.getElementById('canevas');
+```js
+var canevas = document.getElementById('canevas');
 var gl = canevas.getContext('webgl');
 var tampon = gl.createBuffer();
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.5", "createBuffer")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>
-    <p>Définition initiale.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glGenBuffers.xml", "glGenBuffers")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>
-    <p>Page man de l’API OpenGL (similaire).</p>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('WebGL', "#5.14.5", "createBuffer")}}</td>
+      <td>{{Spec2('WebGL')}}</td>
+      <td><p>Définition initiale.</p></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('OpenGL ES 2.0', "glGenBuffers.xml", "glGenBuffers")}}
+      </td>
+      <td>{{Spec2('OpenGL ES 2.0')}}</td>
+      <td><p>Page man de l’API OpenGL (similaire).</p></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WebGLRenderingContext.createBuffer")}}</p>
+{{Compat("api.WebGLRenderingContext.createBuffer")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindBuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteBuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isBuffer()")}}</li>
- <li>Autres tampons : {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindBuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
+- {{domxref("WebGLRenderingContext.isBuffer()")}}
+- Autres tampons : {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}

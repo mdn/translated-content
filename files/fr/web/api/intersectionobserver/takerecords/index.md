@@ -12,53 +12,34 @@ tags:
   - takeRecords
 translation_of: Web/API/IntersectionObserver/takeRecords
 ---
-<div>{{APIRef("Intersection Observer API")}}</div>
+{{APIRef("Intersection Observer API")}}
 
-<p>La méthode <code><strong>takeRecords()</strong></code> de l'interface <a href="/fr/docs/Web/API/IntersectionObserver"><code>IntersectionObserver</code></a> renvoie un tableau d'objets <a href="/fr/docs/Web/API/IntersectionObserverEntry"><code>IntersectionObserverEntry</code></a>, un pour chaque élément ciblé qui a subi un changement d'intersection depuis la dernière vérification des intersections, soit explicitement par un appel à cette méthode, soit implicitement par un appel automatique à la fonction de rappel de l'observateur.</p>
+La méthode **`takeRecords()`** de l'interface [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) renvoie un tableau d'objets [`IntersectionObserverEntry`](/fr/docs/Web/API/IntersectionObserverEntry), un pour chaque élément ciblé qui a subi un changement d'intersection depuis la dernière vérification des intersections, soit explicitement par un appel à cette méthode, soit implicitement par un appel automatique à la fonction de rappel de l'observateur.
 
-<div class="note">
-  <p><strong>Note :</strong> Si vous utilisez la fonction de rappel pour surveiller ces changements, vous n'avez pas besoin d'appeler cette méthode. L'appel de cette méthode efface la liste des intersections en attente, de sorte que la fonction de rappel ne sera pas exécutée.</p>
-</div>
+> **Note :** Si vous utilisez la fonction de rappel pour surveiller ces changements, vous n'avez pas besoin d'appeler cette méthode. L'appel de cette méthode efface la liste des intersections en attente, de sorte que la fonction de rappel ne sera pas exécutée.
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>intersectionObserverEntries</var> = <var>intersectionObserver</var>.takeRecords();</pre>
+    intersectionObserverEntries = intersectionObserver.takeRecords();
 
-<h3 id="parameters">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="return_value">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un tableau d'objets <a href="/fr/docs/Web/API/IntersectionObserverEntry"><code>IntersectionObserverEntry</code></a>, un pour chaque élément cible dont l'intersection avec la racine a changé depuis la dernière vérification des intersections.</p>
+Un tableau d'objets [`IntersectionObserverEntry`](/fr/docs/Web/API/IntersectionObserverEntry), un pour chaque élément cible dont l'intersection avec la racine a changé depuis la dernière vérification des intersections.
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('IntersectionObserver','#dom-intersectionobserver-takerecords','IntersectionObserver.takeRecords()')}}
-      </td>
-      <td>{{Spec2('IntersectionObserver')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                            | Statut                                       | Commentaire          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
+| {{SpecName('IntersectionObserver','#dom-intersectionobserver-takerecords','IntersectionObserver.takeRecords()')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IntersectionObserver.takeRecords")}}</p>
+{{Compat("api.IntersectionObserver.takeRecords")}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Intersection_Observer_API">L'API <i>Intersection Observer</i></a></li>
-</ul>
+- [L'API _Intersection Observer_](/en-US/docs/Web/API/Intersection_Observer_API)

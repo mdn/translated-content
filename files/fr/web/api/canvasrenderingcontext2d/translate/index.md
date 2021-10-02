@@ -9,40 +9,39 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/translate
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La méthode <strong>CanvasRenderingContext2D.translate()</strong> de l'API Canvas 2D ajoute une transformation de translation en déplaçant le canevas et son origine x horizontalement et y verticalement sur la grille.</p>
+La méthode **CanvasRenderingContext2D.translate()** de l'API Canvas 2D ajoute une transformation de translation en déplaçant le canevas et son origine x horizontalement et y verticalement sur la grille.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var><em>ctx</em>.translate(x, y);</var>
-</pre>
+    void ctx.translate(x, y);
 
-<p><img alt="" src="canvas_grid_translate.png"></p>
+![](canvas_grid_translate.png)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Distance de déplacement dans le sens horizontal.</dd>
- <dt>y</dt>
- <dd>Distance de déplacement dans le sens vertical.</dd>
-</dl>
+- `x`
+  - : Distance de déplacement dans le sens horizontal.
+- y
+  - : Distance de déplacement dans le sens vertical.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_de_la_méthode_translate">Utilisation de la méthode <code>translate</code></h3>
+### Utilisation de la méthode `translate`
 
-<p>Il s'agit seulement d'un extrait de code simple qui utilise la méthode translate.</p>
+Il s'agit seulement d'un extrait de code simple qui utilise la méthode translate.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canevas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canevas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canevas = document.getElementById('canevas');
+```js
+var canevas = document.getElementById('canevas');
 var ctx = canevas.getContext('2d');
 
 ctx.translate(50, 50);
@@ -50,24 +49,26 @@ ctx.fillRect(0, 0, 100, 100);
 
 // Réinitialise la matrice de transformation en cours à la matrice identité
 ctx.setTransform(1, 0, 0, 1, 0, 0);
-</pre>
+```
 
-<p>Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct sur le canevas :</p>
+Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct sur le canevas :
 
-<h4 id="code_jouable">Code jouable</h4>
+#### Code jouable
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.translate(50, 50);
 ctx.fillRect(0,0,100,100);
-ctx.setTransform(1, 0, 0, 1, 0, 0);&lt;/textarea&gt;
-</pre>
+ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -90,33 +91,20 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
+{{ EmbedLiveSample('code_jouable', 700, 360) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-translate", "CanvasRenderingContext2D.translate")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                    | Statut                           | Commentaire |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-translate", "CanvasRenderingContext2D.translate")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.translate")}}</p>
+{{Compat("api.CanvasRenderingContext2D.translate")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}

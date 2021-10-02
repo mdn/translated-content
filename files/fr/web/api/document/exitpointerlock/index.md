@@ -9,42 +9,28 @@ tags:
   - Reference
 translation_of: Web/API/Document/exitPointerLock
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p>La méthode <strong><code>exitPointerLock()</code></strong> permet de relâcher un pointeur de façon asynchrone lorsque le pointeur était auparavant mobilisé par la méthode {{domxref("Element.requestPointerLock()")}}.</p>
+La méthode **`exitPointerLock()`** permet de relâcher un pointeur de façon asynchrone lorsque le pointeur était auparavant mobilisé par la méthode {{domxref("Element.requestPointerLock()")}}.
 
-<p>Pour connaître le succès ou l'échec de cette requête, il faut surveiller les évènements {{event("pointerlockchange")}} et {{event("pointerlockerror")}}.</p>
+Pour connaître le succès ou l'échec de cette requête, il faut surveiller les évènements {{event("pointerlockchange")}} et {{event("pointerlockerror")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">document.exitPointerLock();
-</pre>
+    document.exitPointerLock();
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Lock','l#extensions-to-the-document-interface','Document')}}</td>
-   <td>{{Spec2('Pointer Lock')}}</td>
-   <td>Extension de l'interface <code>Document</code></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                             | Commentaires                        |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------- |
+| {{SpecName('Pointer Lock','l#extensions-to-the-document-interface','Document')}} | {{Spec2('Pointer Lock')}} | Extension de l'interface `Document` |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Document.exitPointerLock")}}</p>
+{{Compat("api.Document.exitPointerLock")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Document.pointerLockElement")}}</li>
- <li>{{domxref("Element.requestPointerLock()")}}</li>
- <li><a href="/fr/docs/WebAPI/Pointer_Lock">L'API <em>Pointer Lock</em></a></li>
-</ul>
+- {{domxref("Document.pointerLockElement")}}
+- {{domxref("Element.requestPointerLock()")}}
+- [L'API _Pointer Lock_](/fr/docs/WebAPI/Pointer_Lock)

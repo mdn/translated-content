@@ -9,47 +9,38 @@ tags:
   - Worker
 translation_of: Web/API/DedicatedWorkerGlobalScope/close
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>La méthode <code><strong>close()</strong></code> de l'interface {{domxref("DedicatedWorkerGlobalScope")}} ferme toutes les tâches placées dans la boucle de l'évènement <code>DedicatedWorkerGlobalScope</code>, fermant effectivement cette portée particulière.</p>
+La méthode **`close()`** de l'interface {{domxref("DedicatedWorkerGlobalScope")}} ferme toutes les tâches placées dans la boucle de l'évènement `DedicatedWorkerGlobalScope`, fermant effectivement cette portée particulière.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">self.close();</pre>
+```js
+self.close();
+```
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Si vous souhaitez fermer votre instance de travail depuis l'intérieur du worker, vous pouvez appeler ce qui suit :</p>
+Si vous souhaitez fermer votre instance de travail depuis l'intérieur du worker, vous pouvez appeler ce qui suit :
 
-<pre class="brush: js">close();</pre>
+```js
+close();
+```
 
-<p><code>close()</code> et <code>self.close()</code> sont effectivement équivalents — les deux représentent une instruction <code>close()</code> qui est appelée de l'intérieur de la portée interne du worker.</p>
+`close()` et `self.close()` sont effectivement équivalents — les deux représentent une instruction `close()` qui est appelée de l'intérieur de la portée interne du worker.
 
-<div class="note">
-<p><strong>Note :</strong> Il y a une autre façon d'arrêter le worker depuis le fil principal : la méthode {{domxref("Worker.terminate")}}.</p>
-</div>
+> **Note :** Il y a une autre façon d'arrêter le worker depuis le fil principal : la méthode {{domxref("Worker.terminate")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-dedicatedworkerglobalscope-close', 'close()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                           | Commentaire |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', '#dom-dedicatedworkerglobalscope-close', 'close()')}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DedicatedWorkerGlobalScope.close")}}</p>
+{{Compat("api.DedicatedWorkerGlobalScope.close")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<p>{{domxref("DedicatedWorkerGlobalScope")}}</p>
+{{domxref("DedicatedWorkerGlobalScope")}}

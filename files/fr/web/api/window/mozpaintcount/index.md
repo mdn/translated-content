@@ -3,7 +3,7 @@ title: Window.mozPaintCount
 slug: Web/API/Window/mozPaintCount
 tags:
   - API
-  - 'API:Mozilla Extensions'
+  - API:Mozilla Extensions
   - Déprécié
   - HTML DOM
   - NeedsExample
@@ -13,23 +13,21 @@ tags:
   - Window
 translation_of: Web/API/Window/mozPaintCount
 ---
-<p>{{APIRef("Mozilla Extensions")}}{{Non-standard_Header}}{{Obsolete_Header("Gecko72")}}{{Gecko_MinVersion_Header("2.0")}}</p>
+{{APIRef("Mozilla Extensions")}}{{Non-standard_Header}}{{Obsolete_Header("Gecko72")}}{{Gecko_MinVersion_Header("2.0")}}
 
-<p>Renvoie le nombre de fois où le document actuel a été peint à l'écran dans cette fenêtre.</p>
+Renvoie le nombre de fois où le document actuel a été peint à l'écran dans cette fenêtre.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><code>var <em>paintCount</em> = window.mozPaintCount;</code></pre>
+    var paintCount = window.mozPaintCount;
 
-<ul>
- <li><code><em>paintCount</em></code> stocke la valeur de la propriété <code>window.mozPaintCount</code>.</li>
- <li>La valeur <code>window.mozPaintCount</code> est <code>longue</code>, et commence à zéro lorsque le document est créé pour la première fois, en incrémentant de un à chaque fois que le document est peint.</li>
-</ul>
+- `paintCount` stocke la valeur de la propriété `window.mozPaintCount`.
+- La valeur `window.mozPaintCount` est `longue`, et commence à zéro lorsque le document est créé pour la première fois, en incrémentant de un à chaque fois que le document est peint.
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<p>Ne fait partie d'aucune spécification ou recommandation du <abbr>W3C</abbr>.</p>
+Ne fait partie d'aucune spécification ou recommandation du W3C.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.mozPaintCount")}}</p>
+{{Compat("api.Window.mozPaintCount")}}

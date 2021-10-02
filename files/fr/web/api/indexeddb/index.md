@@ -10,68 +10,47 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/indexedDB
 original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La propriété <strong><code>indexedDB</code></strong> en lecture seule, rattachée au <em>mixin</em> {{domxref("WindowOrWorkerGlobalScope")}} fournit un mécanisme qui permet aux applications d'accéder aux bases de données indexées de façon asynchrone.</p>
+La propriété **`indexedDB`** en lecture seule, rattachée au _mixin_ {{domxref("WindowOrWorkerGlobalScope")}} fournit un mécanisme qui permet aux applications d'accéder aux bases de données indexées de façon asynchrone.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <em>IDBFactory</em> = self.indexedDB;</pre>
+    var IDBFactory = self.indexedDB;
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un objet {{domxref("IDBFactory")}}.</p>
+Un objet {{domxref("IDBFactory")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var db;
+```js
+var db;
 function openDB() {
  var DBOpenRequest = window.indexedDB.open('toDoList');
  DBOpenRequest.onsuccess = function(e) {
    db = DBOpenRequest.result;
  }
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB 2', '#dom-windoworworkerglobalscope-indexeddb', 'indexedDB')}}</td>
-   <td>{{Spec2('IndexedDB 2')}}</td>
-   <td>Rattachement partiel à <code>WindowOrWorkerGlobalScope</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBEnvironment-indexedDB', 'indexedDB')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                             | Commentaires                                        |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------- |
+| {{SpecName('IndexedDB 2', '#dom-windoworworkerglobalscope-indexeddb', 'indexedDB')}} | {{Spec2('IndexedDB 2')}} | Rattachement partiel à `WindowOrWorkerGlobalScope`. |
+| {{SpecName('IndexedDB', '#widl-IDBEnvironment-indexedDB', 'indexedDB')}}                 | {{Spec2('IndexedDB')}}     | Définition initiale.                                |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>
-<div>
+{{Compat("api.WindowOrWorkerGlobalScope.indexedDB")}}
 
+## Voir aussi
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.indexedDB")}}</p>
-</div>
-</div>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
- <li>Initier une connexion : {{domxref("IDBDatabase")}}</li>
- <li>Utiliser les transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
- <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
-</ul>
+- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Initier une connexion : {{domxref("IDBDatabase")}}
+- Utiliser les transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
+- Utiliser les curseurs {{domxref("IDBCursor")}}
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).

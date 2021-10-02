@@ -8,41 +8,27 @@ tags:
   - Propriétés
 translation_of: Web/API/FileRequest/lockedFile
 ---
-<p>{{APIRef("File System API")}} {{non-standard_header}}</p>
+{{APIRef("File System API")}} {{non-standard_header}}
 
-<h2 id="Résumé">Résumé</h2>
+## Résumé
 
-<p>La propriété <code>lockedFile</code> représente l'objet {{domxref("LockedFile")}} à partir duquel la requête a été lancée.</p>
+La propriété `lockedFile` représente l'objet {{domxref("LockedFile")}} à partir duquel la requête a été lancée.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var lockedFile = <em>instanceOfFileRequest</em>.lockedFile
-</pre>
+    var lockedFile = instanceOfFileRequest.lockedFile
 
-<h2 id="Valeur">Valeur</h2>
+## Valeur
 
-<p>Un objet {{domxref("LockedFile")}}.</p>
+Un objet {{domxref("LockedFile")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('FileSystem')}}</td>
-   <td>{{Spec2('FileSystem')}}</td>
-   <td>Brouillon proposé.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                        | Statut                           | Commentaire        |
+| ------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('FileSystem')}} | {{Spec2('FileSystem')}} | Brouillon proposé. |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("FileRequest")}}</li>
- <li>{{domxref("LockedFile")}}</li>
-</ul>
+- {{domxref("FileRequest")}}
+- {{domxref("LockedFile")}}

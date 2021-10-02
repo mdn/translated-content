@@ -3,65 +3,47 @@ title: URLSearchParams.entries()
 slug: Web/API/URLSearchParams/entries
 translation_of: Web/API/URLSearchParams/entries
 ---
-<p>{{APIRef("URL API")}}{{SeeCompatTable}}</p>
+{{APIRef("URL API")}}{{SeeCompatTable}}
 
-<p>La méthode <code><strong>URLSearchParams.entries()</strong></code> retourne  un itérateur( {{jsxref("Iteration_protocols",'iterator')}}) permettant de parcourir les paires de clé/valeur contenues dans cet objet. La clé et la valeur de chaque paire est un objet  {{domxref("USVString")}} .</p>
+La méthode **`URLSearchParams.entries()`** retourne  un itérateur( {{jsxref("Iteration_protocols",'iterator')}}) permettant de parcourir les paires de clé/valeur contenues dans cet objet. La clé et la valeur de chaque paire est un objet  {{domxref("USVString")}} .
 
-<div class="note">
-<p><strong>Note :</strong> This method is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note :** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">searchParams.entries();</pre>
+    searchParams.entries();
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns an {{jsxref("Iteration_protocols","iterator")}}.</p>
+Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// Create a test URLSearchParams object
-var searchParams = new URLSearchParams("key1=value1&amp;key2=value2");
+```js
+// Create a test URLSearchParams object
+var searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Display the key/value pairs
 for(var pair of searchParams.entries()) {
    console.log(pair[0]+ ', '+ pair[1]);
 }
-</pre>
+```
 
-<p>The result is:</p>
+The result is:
 
-<pre>key1, value1
-key2, value2</pre>
+    key1, value1
+    key2, value2
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#urlsearchparams','entries() (as iterator&lt;&gt;)')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status               | Comment            |
+| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
+| {{SpecName('URL', '#urlsearchparams','entries() (as iterator&lt;&gt;)')}} | {{Spec2('URL')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("api.URLSearchParams.entries")}}
 
+## See also
 
-<p>{{Compat("api.URLSearchParams.entries")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>Other URL-related interfaces: {{domxref("URL")}}, {{domxref("URLUtils")}}.</li>
-</ul>
+- Other URL-related interfaces: {{domxref("URL")}}, {{domxref("URLUtils")}}.

@@ -8,59 +8,43 @@ tags:
   - impression
 translation_of: Web/API/WindowEventHandlers/onbeforeprint
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<p>La propriété <code>onbeforeprint</code> définit et retourne le code du gestionnaire d'événement <code>onbeforeprint</code> onbeforeprint pour la fenêtre actuelle.</p>
+La propriété `onbeforeprint` définit et retourne le code du gestionnaire d'événement `onbeforeprint` onbeforeprint pour la fenêtre actuelle.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">window.onbeforeprint = <em>code de traitement de l'événement</em>
-</pre>
+    window.onbeforeprint = code de traitement de l'événement
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Les événements <code>beforeprint</code> et <code>afterprint</code> permettent aux pages de modifier leur contenu avant le début de l'impression (peut-être pour supprimer une bannière, par exemple), puis d'annuler ces modifications une fois l'impression terminée. En général, les auteurs de contenu devraient préférer l'utilisation d'une règle CSS <a href="/en-US/docs/Web/CSS/@media">@media print</a>, mais il peut être nécessaire d'utiliser ces événements dans certains cas.</p>
+Les événements `beforeprint` et `afterprint` permettent aux pages de modifier leur contenu avant le début de l'impression (peut-être pour supprimer une bannière, par exemple), puis d'annuler ces modifications une fois l'impression terminée. En général, les auteurs de contenu devraient préférer l'utilisation d'une règle CSS [@media print](/en-US/docs/Web/CSS/@media), mais il peut être nécessaire d'utiliser ces événements dans certains cas.
 
-<p>L'événement <code>beforeprint</code> est appelé avant l'ouverture de la fenêtre de dialogue d'impression.</p>
+L'événement `beforeprint` est appelé avant l'ouverture de la fenêtre de dialogue d'impression.
 
-<p>Safari ne reconnaît pas ces événements, mais un résultat équivalent à l'événement <code>beforeprint</code> peut être obtenu avec <code>{{domxref("window.matchMedia")}}('print')</code>.</p>
+Safari ne reconnaît pas ces événements, mais un résultat équivalent à l'événement `beforeprint` peut être obtenu avec `{{domxref("window.matchMedia")}}('print')`.
 
-<pre class="brush: js">var mediaQueryList = window.matchMedia('print');
+```js
+var mediaQueryList = window.matchMedia('print');
 mediaQueryList.addListener(function(mql) {
   if(mql.matches) {
     console.log('équivalent webkit de onbeforeprint');
   }
-});</pre>
+});
+```
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#handler-window-onbeforeprint', 'onbeforeprint')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                           | Comment |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', '#handler-window-onbeforeprint', 'onbeforeprint')}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.WindowEventHandlers.onbeforeprint")}}
 
+## Voir également
 
-<p>{{Compat("api.WindowEventHandlers.onbeforeprint")}}</p>
-
-<h2 id="See_also">Voir également</h2>
-
-<ul>
- <li>{{domxref("window.print")}}</li>
- <li>{{domxref("window.onafterprint")}}</li>
- <li><a href="/en-US/docs/Printing">Printing</a></li>
-</ul>
+- {{domxref("window.print")}}
+- {{domxref("window.onafterprint")}}
+- [Printing](/en-US/docs/Printing)

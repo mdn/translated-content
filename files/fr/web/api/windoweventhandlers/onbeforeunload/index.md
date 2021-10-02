@@ -3,25 +3,28 @@ title: window.onbeforeunload
 slug: Web/API/WindowEventHandlers/onbeforeunload
 translation_of: Web/API/WindowEventHandlers/onbeforeunload
 ---
-<h2 id="Sommaire">Résumé</h2>
+## Résumé
 
-<p>Le gestionnaire d'événement <code><strong>WindowEventHandlers.onbeforeunload</strong></code> contient le code exécuté lorsque l'évènement {{event("beforeunload")}} est envoyé. Cet événement se déclenche lorsque la fenêtre est sur le point de recharger ses ressources.</p>
+Le gestionnaire d'événement **`WindowEventHandlers.onbeforeunload`** contient le code exécuté lorsque l'évènement {{event("beforeunload")}} est envoyé. Cet événement se déclenche lorsque la fenêtre est sur le point de recharger ses ressources.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: html">&lt;element beforeunload="funcRef(event);" /&gt;</pre>
+```html
+<element beforeunload="funcRef(event);" />
+```
 
-<pre class="brush: html">&lt;script type="text/javascript"&gt;
+```html
+<script type="text/javascript">
 	window.onbeforeunload = funcRef
-&lt;/script&gt;</pre>
+</script>
+```
 
-<ul>
- <li>funcRef : Référence à une fonction appelée lorsque l'évènement se déclenche</li>
-</ul>
+- funcRef : Référence à une fonction appelée lorsque l'évènement se déclenche
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">window.onbeforeunload = function (e) {
+```js
+window.onbeforeunload = function (e) {
   var e = e || window.event;
 
   // For IE and Firefox
@@ -32,18 +35,16 @@ translation_of: Web/API/WindowEventHandlers/onbeforeunload
   // For Safari
   return 'Any string';
 };
-</pre>
+```
 
-<h2 id="EventProperty">Propriétés de l'objet <strong>event</strong></h2>
+## Propriétés de l'objet **event**
 
-<pre>returnValue</pre>
+    returnValue
 
-<ul>
- <li>Applique ou récupère la valeur de retour de l'évènement.</li>
-</ul>
+- Applique ou récupère la valeur de retour de l'évènement.
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<p>L'évènement 'onbeforeunload' a été introduit par Microsoft dans IE4 et s'est généralisé dans tous les navigateurs.</p>
+L'évènement 'onbeforeunload' a été introduit par Microsoft dans IE4 et s'est généralisé dans tous les navigateurs.
 
-<p><a href="http://msdn.microsoft.com/en-us/library/ms536907%28VS.85%29.aspx">MSDN—onbeforeunload Event</a></p>
+[MSDN—onbeforeunload Event](http://msdn.microsoft.com/en-us/library/ms536907%28VS.85%29.aspx)

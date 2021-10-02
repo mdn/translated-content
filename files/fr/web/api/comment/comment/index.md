@@ -7,47 +7,31 @@ tags:
   - DOM
 translation_of: Web/API/Comment/Comment
 ---
-<p>{{ApiRef("DOM")}}{{seeCompatTable}}</p>
+{{ApiRef("DOM")}}{{seeCompatTable}}
 
-<p>Le constructeur <code><strong>Comment()</strong></code> renvoie un objet {{domxref("Comment")}} <em>(Commentaire)</em> nouvellement créé avec le {{domxref ("DOMString")}} donné en paramètre comme contenu textuel.</p>
+Le constructeur **`Comment()`** renvoie un objet {{domxref("Comment")}} _(Commentaire)_ nouvellement créé avec le {{domxref ("DOMString")}} donné en paramètre comme contenu textuel.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>comment</em>1 = new Comment(); // Create an empty comment
-<code><em>comment2</em></code> = new Comment("This is a comment");
-</pre>
+    comment1 = new Comment(); // Create an empty comment
+    comment2 = new Comment("This is a comment");
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var comment = new Comment("Test");</pre>
+```js
+var comment = new Comment("Test");
+```
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#comment', 'Comment.Comment()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | Statut                           | Commentaire          |
+| -------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('DOM WHATWG', '#comment', 'Comment.Comment()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.Comment.Comment")}}
 
+## Voir aussi
 
-<p>{{Compat("api.Comment.Comment")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
-
-<p> </p>
+- [The DOM interfaces index](/fr/docs/Web/API/Document_Object_Model)

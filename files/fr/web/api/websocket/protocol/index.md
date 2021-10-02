@@ -3,24 +3,24 @@ title: WebSocket.protocol
 slug: Web/API/WebSocket/protocol
 browser-compat: api.WebSocket.protocol
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p>La propriété en lecture seule <strong><code>WebSocket.protocol</code></strong> renvoie le nom du sous protocole sélectionné par le serveur. Cette valeur sera l'une des chaînes de caractères du paramètre <code>protocols</code> utilisé lors de la création de l'objet <a href="/fr/docs/Web/API/WebSocket"><code>WebSocket</code></a> ou la chaîne vide si aucune connexion n'est établie.</p>
+La propriété en lecture seule **`WebSocket.protocol`** renvoie le nom du sous protocole sélectionné par le serveur. Cette valeur sera l'une des chaînes de caractères du paramètre `protocols` utilisé lors de la création de l'objet [`WebSocket`](/fr/docs/Web/API/WebSocket) ou la chaîne vide si aucune connexion n'est établie.
 
-<h2 id="syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 var protocol = uneWebSocket.protocol;
-</pre>
+```
 
-<h2 id="value">Valeur</h2>
+## Valeur
 
-<p>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a>.</p>
+Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString).
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}

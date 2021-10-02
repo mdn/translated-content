@@ -3,75 +3,71 @@ title: IDBObjectStore
 slug: Web/API/IDBObjectStore
 translation_of: Web/API/IDBObjectStore
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<p>L'interface <strong><code>IDBObjectStore</code></strong> de l'{{domxref("IndexedDB_API","API IndexedDB")}} est un accès aux magasins d'objet de la base de données.</p>
+L'interface **`IDBObjectStore`** de l'{{domxref("IndexedDB_API","API IndexedDB")}} est un accès aux magasins d'objet de la base de données.
 
-<p>Le magasin d'objet emmagasine des enregistrements. Chaque enregistrement est constitué d'un couple clé/valeur. Chaque valeurs est indexée sur sa clé. Les clés sont triées pour former l'index primaire du magasin. Ce qui permet un accès rapide et ordonnée aux valeurs.</p>
+Le magasin d'objet emmagasine des enregistrements. Chaque enregistrement est constitué d'un couple clé/valeur. Chaque valeurs est indexée sur sa clé. Les clés sont triées pour former l'index primaire du magasin. Ce qui permet un accès rapide et ordonnée aux valeurs.
 
-<p>Le magasin d'objet peut en plus de l'index primaire avoir des index qui ordonnent les enregistrements sur d'autres clés. Ces index se mettent automatiquement à jour dans la plupart des cas et permettent de mettre des contraintes d’unicités pour d'autres clés que la clé primaire du magasin d'objet.</p>
+Le magasin d'objet peut en plus de l'index primaire avoir des index qui ordonnent les enregistrements sur d'autres clés. Ces index se mettent automatiquement à jour dans la plupart des cas et permettent de mettre des contraintes d’unicités pour d'autres clés que la clé primaire du magasin d'objet.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{domxref("IDBObjectStore.add()")}}</dt>
- <dd>Une {{domxref("IDBRequest","requête")}} pour ajouter un enregistrement au magasin d'objet relié, un <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">clone structuré</a> de la valeur passé en paramètre et sa clé .</dd>
- <dt>{{domxref("IDBObjectStore.clear()")}}</dt>
- <dd>Une {{domxref("IDBRequest","requête")}} pour vider le magasin d'objet relié.</dd>
- <dt>{{domxref("IDBObjectStore.delete()")}}</dt>
- <dd>Une {{domxref("IDBRequest","requête")}} de suppression d'enregistrement(s) du magasin d'objet relié.</dd>
- <dt>{{domxref("IDBObjectStore.get()")}}</dt>
- <dd>Une {{domxref("IDBRequest","requête")}} pour renvoyer la valeur d'un enregistrement du magasin d'objet relié.</dd>
- <dt>{{domxref("IDBObjectStore.getAll()")}}</dt>
- <dd>Une {{domxref("IDBRequest","requête")}} qui renvoie un tableau ordonné suivant les clés, des valeurs de tous les enregistrements du magasin d'objet relié. On peut limité le nombre d'enregistrements en les filtrants suivant leurs clés ou en paramétrant le compteur.</dd>
- <dt>{{domxref("IDBObjectStore.getAllKeys()")}}</dt>
- <dd>Une {{domxref("IDBRequest","requête")}} qui renvoie la liste de toutes les clés des enregistrements du magasin d'objet. On peut limité le nombre d'enregistrements en les filtrants suivant leurs clés ou en paramétrant le compteur.</dd>
- <dt>{{domxref("IDBObjectStore.createIndex()")}}</dt>
- <dd>Met en place sur le magasin d'objet relié, un nouvel index et en renvoie l'{{domxref("IDBIndex","accès")}}.</dd>
- <dt>{{domxref("IDBObjectStore.deleteIndex()")}}</dt>
- <dd>Supprime l'index dont le nom est passé en paramètre, du magasin d'objet relié.</dd>
- <dt>{{domxref("IDBObjectStore.index()")}}</dt>
- <dd>L'{{domxref("IDBIndex","accès")}} à l'index dont le nom est passé en paramètre du magasin d'objet relié.</dd>
- <dt>{{domxref("IDBObjectStore.put()")}}</dt>
- <dd>Une {{domxref("IDBRequest","requête")}} pour ajouter ou mettre à jour un enregistrement du magasin d'objet relié, un <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">clone structuré</a> de la valeur passée en paramètre et sa clé.</dd>
- <dt>{{domxref("IDBObjectStore.openCursor()")}}</dt>
- <dd>Une {{domxref("IDBRequest","requête")}} récursive suivant un {{domxref("IDBCursorWithValue","curseur avec valeur")}} qui itère le magasin d'objet relié.</dd>
- <dt>{{domxref("IDBObjectStore.openKeyCursor()")}}</dt>
- <dd>Une {{domxref("IDBRequest","requête")}} récursive suivant un {{domxref("IDBCursor","curseur")}} qui itère le magasin d'objet relié.</dd>
- <dt>{{domxref("IDBObjectStore.count()")}}</dt>
- <dd>Une {{domxref("IDBRequest","requête")}} au magasin d'objet relié. La requête compte le nombre d'enregistrements dans ce magasin d'objet ou sur l'{{domxref("IDBKeyRange","intervalle de clé")}} passé en paramètre.</dd>
-</dl>
+- {{domxref("IDBObjectStore.add()")}}
+  - : Une {{domxref("IDBRequest","requête")}} pour ajouter un enregistrement au magasin d'objet relié, un [clone structuré](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) de la valeur passé en paramètre et sa clé .
+- {{domxref("IDBObjectStore.clear()")}}
+  - : Une {{domxref("IDBRequest","requête")}} pour vider le magasin d'objet relié.
+- {{domxref("IDBObjectStore.delete()")}}
+  - : Une {{domxref("IDBRequest","requête")}} de suppression d'enregistrement(s) du magasin d'objet relié.
+- {{domxref("IDBObjectStore.get()")}}
+  - : Une {{domxref("IDBRequest","requête")}} pour renvoyer la valeur d'un enregistrement du magasin d'objet relié.
+- {{domxref("IDBObjectStore.getAll()")}}
+  - : Une {{domxref("IDBRequest","requête")}} qui renvoie un tableau ordonné suivant les clés, des valeurs de tous les enregistrements du magasin d'objet relié. On peut limité le nombre d'enregistrements en les filtrants suivant leurs clés ou en paramétrant le compteur.
+- {{domxref("IDBObjectStore.getAllKeys()")}}
+  - : Une {{domxref("IDBRequest","requête")}} qui renvoie la liste de toutes les clés des enregistrements du magasin d'objet. On peut limité le nombre d'enregistrements en les filtrants suivant leurs clés ou en paramétrant le compteur.
+- {{domxref("IDBObjectStore.createIndex()")}}
+  - : Met en place sur le magasin d'objet relié, un nouvel index et en renvoie l'{{domxref("IDBIndex","accès")}}.
+- {{domxref("IDBObjectStore.deleteIndex()")}}
+  - : Supprime l'index dont le nom est passé en paramètre, du magasin d'objet relié.
+- {{domxref("IDBObjectStore.index()")}}
+  - : L'{{domxref("IDBIndex","accès")}} à l'index dont le nom est passé en paramètre du magasin d'objet relié.
+- {{domxref("IDBObjectStore.put()")}}
+  - : Une {{domxref("IDBRequest","requête")}} pour ajouter ou mettre à jour un enregistrement du magasin d'objet relié, un [clone structuré](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) de la valeur passée en paramètre et sa clé.
+- {{domxref("IDBObjectStore.openCursor()")}}
+  - : Une {{domxref("IDBRequest","requête")}} récursive suivant un {{domxref("IDBCursorWithValue","curseur avec valeur")}} qui itère le magasin d'objet relié.
+- {{domxref("IDBObjectStore.openKeyCursor()")}}
+  - : Une {{domxref("IDBRequest","requête")}} récursive suivant un {{domxref("IDBCursor","curseur")}} qui itère le magasin d'objet relié.
+- {{domxref("IDBObjectStore.count()")}}
+  - : Une {{domxref("IDBRequest","requête")}} au magasin d'objet relié. La requête compte le nombre d'enregistrements dans ce magasin d'objet ou sur l'{{domxref("IDBKeyRange","intervalle de clé")}} passé en paramètre.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{domxref("IDBObjectStore.indexNames")}} {{readonlyInline}}</dt>
- <dd>La liste des noms d'index du magasin d'objet relié.</dd>
- <dt>{{domxref("IDBObjectStore.keyPath")}} {{readonlyInline}}</dt>
- <dd>Le <a href="/fr/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath">nom de la clé</a> du magasin d'objets relié.</dd>
- <dt>{{domxref("IDBObjectStore.name")}} {{readonlyInline}}</dt>
- <dd>Le nom du magasin d'objet relié.</dd>
- <dt>{{domxref("IDBObjectStore.transaction")}} {{readonlyInline}}</dt>
- <dd>La {{domxref("IDBTransaction","transaction")}} à laquelle l'accès du magasin d'objet appartient.</dd>
- <dt>{{domxref("IDBObjectStore.autoIncrement")}} {{readonlyInline}}</dt>
- <dd>La position du drapeau d’incrémentation automatique du magasin d'objet relié.</dd>
-</dl>
+- {{domxref("IDBObjectStore.indexNames")}} {{readonlyInline}}
+  - : La liste des noms d'index du magasin d'objet relié.
+- {{domxref("IDBObjectStore.keyPath")}} {{readonlyInline}}
+  - : Le [nom de la clé](/fr/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath) du magasin d'objets relié.
+- {{domxref("IDBObjectStore.name")}} {{readonlyInline}}
+  - : Le nom du magasin d'objet relié.
+- {{domxref("IDBObjectStore.transaction")}} {{readonlyInline}}
+  - : La {{domxref("IDBTransaction","transaction")}} à laquelle l'accès du magasin d'objet appartient.
+- {{domxref("IDBObjectStore.autoIncrement")}} {{readonlyInline}}
+  - : La position du drapeau d’incrémentation automatique du magasin d'objet relié.
 
-<dl>
-</dl>
+<!---->
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Cet exemple montre différents usages de l'accès au magasin d'objet. On met à jour la structure de donnée avec {{domxref("IDBObjectStore.createIndex")}} dans un gestionnaire d'événement <code>onupgradeneeded</code>. On ajoute un nouvel enregistrement avec {{domxref("IDBObjectStore.add")}}.</p>
+Cet exemple montre différents usages de l'accès au magasin d'objet. On met à jour la structure de donnée avec {{domxref("IDBObjectStore.createIndex")}} dans un gestionnaire d'événement `onupgradeneeded`. On ajoute un nouvel enregistrement avec {{domxref("IDBObjectStore.add")}}.
 
-<pre class="brush: js">// connexion à la base de données
+```js
+// connexion à la base de données
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // gère le succès de la connexion
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Connexion ouverte.&lt;/li&gt;';
+  note.innerHTML += '<li>Connexion ouverte.</li>';
 
   //affect la connexion à la variable db.
   db = DBOpenRequest.result;
@@ -84,7 +80,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
   var db = event.target.result;
 
   db.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Erreur de chargement de la base.&lt;/li&gt;';
+    note.innerHTML += '<li>Erreur de chargement de la base.</li>';
   };
 
   // Ajoute un magasin d'objets à la base de données
@@ -100,7 +96,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += '&lt;li&gt;Le magasin d\'objet est ajouté.&lt;/li&gt;';
+  note.innerHTML += '<li>Le magasin d\'objet est ajouté.</li>';
 };
 
 // Un nouvel enregistrement à ajouter
@@ -113,11 +109,11 @@ var transaction = db.transaction(["toDoList"], "readwrite");
 
 // affiche le succès de la transaction
 transaction.oncomplete = function(event) {
-  note.innerHTML += '&lt;li&gt;La transaction à été effectuée.&lt;/li&gt;';
+  note.innerHTML += '<li>La transaction à été effectuée.</li>';
 };
 
 transaction.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;La transaction n\'as pue aboutir.&lt;/li&gt;';
+  note.innerHTML += '<li>La transaction n\'as pue aboutir.</li>';
 };
 
 // Un accès à toDoList pour la transaction
@@ -127,41 +123,27 @@ var objectStoreRequest = objectStore.add(newItem[0]);
 
 //l'enregistrement c'est bien passé.
 objectStoreRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;L\'enregistrement à été ajouté au magasin d\'objet.&lt;/li&gt;';
-}</pre>
+  note.innerHTML += '<li>L\'enregistrement à été ajouté au magasin d\'objet.</li>';
+}
+```
 
-<div class="note">
-  <p><strong>Note :</strong> Pour un exemple de travail complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>).</p>
-</div>
+> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#idl-def-IDBObjectStore', 'IDBObjectStore')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | Statut                       | Commentaire |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
+| {{SpecName('IndexedDB', '#idl-def-IDBObjectStore', 'IDBObjectStore')}} | {{Spec2('IndexedDB')}} |             |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBObjectStore")}}</p>
+{{Compat("api.IDBObjectStore")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}</li>
- <li>{{domxref("IDBDatabase","Débuter une connexion")}}</li>
- <li>{{domxref("IDBTransaction","Utilisé les transactions")}}</li>
- <li>{{domxref("IDBKeyRange","Définir l'intervalle des clés")}}</li>
- <li>{{domxref("IDBCursor","Utiliser les curseur")}}</li>
- <li>Exemple de référence: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- {{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}
+- {{domxref("IDBDatabase","Débuter une connexion")}}
+- {{domxref("IDBTransaction","Utilisé les transactions")}}
+- {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
+- {{domxref("IDBCursor","Utiliser les curseur")}}
+- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

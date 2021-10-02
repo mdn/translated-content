@@ -10,27 +10,25 @@ tags:
   - Remplacement
 translation_of: Web/API/Node/replaceChild
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La méthode <strong><code>Node.replaceChild()</code></strong> remplace un nœud enfant du noeud spécifié par un autre nœud.</p>
+La méthode **`Node.replaceChild()`** remplace un nœud enfant du noeud spécifié par un autre nœud.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>replacedNode</em> = <em>parentNode</em>.replaceChild(<em>newChild</em>, <em>oldChild</em>);
-</pre>
+    replacedNode = parentNode.replaceChild(newChild, oldChild);
 
-<ul>
- <li><code>newChild</code> est le nouveau nœud qui remplacera <code>oldChild</code>. S'il existe déjà dans le DOM, il sera d'abord enlevé.</li>
- <li><code>oldChild</code> est le nœud existant à remplacer.</li>
- <li><code>replaceNode</code> est le nœud remplacé. C'est le même nœud que <code>oldChild</code>.</li>
-</ul>
+- `newChild` est le nouveau nœud qui remplacera `oldChild`. S'il existe déjà dans le DOM, il sera d'abord enlevé.
+- `oldChild` est le nœud existant à remplacer.
+- `replaceNode` est le nœud remplacé. C'est le même nœud que `oldChild`.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">// Étant donné que :
-// &lt;div&gt;
-//   &lt;span id="childSpan"&gt;foo bar&lt;/span&gt;
-// &lt;/div&gt;
+```js
+// Étant donné que :
+// <div>
+//   <span id="childSpan">foo bar</span>
+// </div>
 
 // Crée un nœud d'élément vide
 // sans ID, sans attributs et sans contenu
@@ -53,38 +51,22 @@ var parentDiv = sp2.parentNode;
 parentDiv.replaceChild(sp1, sp2);
 
 // Résultat :
-// &lt;div&gt;
-//   &lt;span id="newSpan"&gt;nouvel élément span de remplacement.&lt;/span&gt;
-// &lt;/div&gt;
-</pre>
+// <div>
+//   <span id="newSpan">nouvel élément span de remplacement.</span>
+// </div>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Spécification</th>
-			<th scope="col">Statut</th>
-			<th scope="col">Commentaire</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("DOM WHATWG", "#dom-node-replacechild", "Node: replaceChild")}}
-			</td>
-			<td>{{Spec2("DOM WHATWG")}}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+| Spécification                                                                                        | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName("DOM WHATWG", "#dom-node-replacechild", "Node: replaceChild")}} | {{Spec2("DOM WHATWG")}} |             |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Node.replaceChild")}}</p>
+{{Compat("api.Node.replaceChild")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Node.removeChild")}}</li>
- <li>{{domxref("ChildNode.replaceWith")}}</li>
-</ul>
+- {{domxref("Node.removeChild")}}
+- {{domxref("ChildNode.replaceWith")}}

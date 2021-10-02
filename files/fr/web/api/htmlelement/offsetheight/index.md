@@ -5,50 +5,45 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/HTMLElement/offsetHeight
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
+### Résumé
 
-<p>Propriété <abbr>DHTML</abbr> permettant d'obtenir la hauteur d'un élément par rapport à la mise en page.</p>
+Propriété DHTML permettant d'obtenir la hauteur d'un élément par rapport à la mise en page.
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval">var <em>hauteurTotaleElem</em> = document.getElementById(<em>id</em>).offsetHeight;
-</pre>
+    var hauteurTotaleElem = document.getElementById(id).offsetHeight;
 
-<p><em>hauteurTotalElem</em> est une variable stockant un entier correspondant à la valeur en pixels de la hauteur totale de l'élément identifé par <code>id</code>. <code>offsetHeight</code> est une propriété en lecture seule.</p>
+_hauteurTotalElem_ est une variable stockant un entier correspondant à la valeur en pixels de la hauteur totale de l'élément identifé par `id`. `offsetHeight` est une propriété en lecture seule.
 
-<h3 id="Description">Description</h3>
+### Description
 
-<p>Typiquement, la propriété <strong>offsetHeight</strong> d'un élément est une mesure qui comprend les bordures de l'élément, ses marges internes verticales (padding), la barre de défilement horizontale si présente et affichée, et la hauteur CSS de l'élément.</p>
+Typiquement, la propriété **offsetHeight** d'un élément est une mesure qui comprend les bordures de l'élément, ses marges internes verticales (padding), la barre de défilement horizontale si présente et affichée, et la hauteur CSS de l'élément.
 
-<h3 id="Exemple">Exemple</h3>
+### Exemple
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p><img src="dimensions-offset.png"></p>
+![](dimensions-offset.png)
 
-<p>L'exemple d'image ci-avant montre une barre de défilement et un décalage <code>offsetHeight</code> qui rentre dans la fenêtre. Toutefois, les éléments non-défilables peuvent avoir des valeurs <code>offsetHeight</code> élevées, voire plus élevéesque le contenu visible. Ces éléments sont généralement contenu au sein d'éléments défilables et, de fait, les éléments non-défilables peuvent être partiellement ou complètement invisible, selon la valeur de <code>scrollTop</code> pour le conteneur.</p>
+L'exemple d'image ci-avant montre une barre de défilement et un décalage `offsetHeight` qui rentre dans la fenêtre. Toutefois, les éléments non-défilables peuvent avoir des valeurs `offsetHeight` élevées, voire plus élevéesque le contenu visible. Ces éléments sont généralement contenu au sein d'éléments défilables et, de fait, les éléments non-défilables peuvent être partiellement ou complètement invisible, selon la valeur de `scrollTop` pour le conteneur.
 
-<h3 id="Sp.C3.A9cification">Spécification</h3>
+### Spécification
 
-<p><code>offsetHeight</code> fait partie du modèle objet DHTML de Microsoft Internet Explorer. Elle ne fait partie d'aucune spécification ou recommandation technique du W3C.</p>
+`offsetHeight` fait partie du modèle objet DHTML de Microsoft Internet Explorer. Elle ne fait partie d'aucune spécification ou recommandation technique du W3C.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p><code>offsetHeight</code> est une propriété du modèle objet DHTML introduite par Microsoft Internet Explorer. On l'appelle parfois la hauteur physique ou graphique d'un élément, ou sa hauteur « border-box » (bordure et boîte).</p>
+`offsetHeight` est une propriété du modèle objet DHTML introduite par Microsoft Internet Explorer. On l'appelle parfois la hauteur physique ou graphique d'un élément, ou sa hauteur « border-box » (bordure et boîte).
 
-<h3 id="R.C3.A9f.C3.A9rences">Références</h3>
+### Références
 
-<ul>
- <li><a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/offsetheight.asp?frame=true"><em>offsetHeight definition</em> sur MSDN</a></li>
- <li><a href="http://msdn.microsoft.com/workshop/author/om/measuring.asp"><em>Measuring Element Dimension and Location</em> sur MSDN</a></li>
-</ul>
+- [_offsetHeight definition_ sur MSDN](http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/offsetheight.asp?frame=true)
+- [_Measuring Element Dimension and Location_ sur MSDN](http://msdn.microsoft.com/workshop/author/om/measuring.asp)
 
-<h3 id="Voir_aussi">Voir aussi</h3>
+### Voir aussi
 
-<ul>
- <li><a href="/fr/DOM/element.clientHeight"><code>element.clientHeight</code></a></li>
- <li><a href="/fr/DOM/element.scrollHeight"><code>element.scrollHeight</code></a></li>
- <li><a href="/fr/DOM/element.offsetWidth"><code>element.offsetWidth</code></a></li>
-</ul>
+- [`element.clientHeight`](/fr/DOM/element.clientHeight)
+- [`element.scrollHeight`](/fr/DOM/element.scrollHeight)
+- [`element.offsetWidth`](/fr/DOM/element.offsetWidth)

@@ -7,34 +7,32 @@ tags:
   - Méthode
 translation_of: Web/API/HTMLFormElement/submit
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>La méthode  <strong><code>HTMLFormElement.submit()</code></strong>  soumet un {{HtmlElement("form")}} donné</p>
+La méthode  **`HTMLFormElement.submit()`**  soumet un {{HtmlElement("form")}} donné
 
-<p>Cette méthode est similaire, mais pas identique, à l’activation du script submit {{HtmlElement ("button")}}. Lors de l'appel direct de cette méthode, cependant:</p>
+Cette méthode est similaire, mais pas identique, à l’activation du script submit {{HtmlElement ("button")}}. Lors de l'appel direct de cette méthode, cependant:
 
-<ul>
- <li>Aucun événement {{event ("submit")}} n'est déclenché. En particulier, le formulaire  </li>
- <li>{{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}}  le gestionnaire d'événement n'est pas exécuté .</li>
- <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation</a> n'est pas déclenché .</li>
-</ul>
+- Aucun événement {{event ("submit")}} n'est déclenché. En particulier, le formulaire
+- {{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}}  le gestionnaire d'événement n'est pas exécuté .
+- [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation) n'est pas déclenché .
 
-<p>Si un contrôle de formulaire (tel qu'un  submit bouton ) a un<code>name</code> ou un <code>id</code> de <code>submit</code>, cette méthode masquera la méthode d'envoi du formulaire.</p>
+Si un contrôle de formulaire (tel qu'un  submit bouton ) a un`name` ou un `id` de `submit`, cette méthode masquera la méthode d'envoi du formulaire.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>HTMLFormElement</em>.submit()
-</pre>
+    HTMLFormElement.submit()
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">document.forms["myform"].submit();
-</pre>
+```js
+document.forms["myform"].submit();
+```
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<p><a href="https://html.spec.whatwg.org/multipage/forms.html#the-form-element">HTML Living standard: The form element</a></p>
+[HTML Living standard: The form element](https://html.spec.whatwg.org/multipage/forms.html#the-form-element)
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.HTMLFormElement.submit")}}</p>
+{{Compat("api.HTMLFormElement.submit")}}

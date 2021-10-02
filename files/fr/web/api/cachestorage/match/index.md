@@ -12,56 +12,49 @@ tags:
   - match
 translation_of: Web/API/CacheStorage/match
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>La fonction <strong><code>match()</code></strong> de l'interface {{domxref("CacheStorage")}} qu'une {{domxref("Request", "Requête")}} est la clé d'un objet {{domxref("Cache")}} object suivie par un objet {{domxref("CacheStorage")}} et retourne une {{jsxref("Promise", "Promesse")}} qui renvoie la {{domxref("Response", "Réponse")}} correspondante.</p>
+La fonction **`match()`** de l'interface {{domxref("CacheStorage")}} qu'une {{domxref("Request", "Requête")}} est la clé d'un objet {{domxref("Cache")}} object suivie par un objet {{domxref("CacheStorage")}} et retourne une {{jsxref("Promise", "Promesse")}} qui renvoie la {{domxref("Response", "Réponse")}} correspondante.
 
-<p>Vous pouvez accéder à <code>CacheStorage</code> via la propriété globale {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}}.</p>
+Vous pouvez accéder à `CacheStorage` via la propriété globale {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}}.
 
-<p>Les objets <code>Cache</code> sont cherchés par ordre de création.</p>
+Les objets `Cache` sont cherchés par ordre de création.
 
-<div class="note">
-  <p><strong>Note :</strong> {{domxref("CacheStorage.match()", "caches.match()")}} est une méthode de commodité. Une fonctionnalité équivalente consiste à appeler {{domxref("cache.match()")}} sur chaque cache (dans l'ordre renvoyé par {{domxref("CacheStorage.keys()", "caches.keys()")}}) jusqu'à ce qu'une {{domxref("Response", "Réponse")}} soit renvoyée.</p>
-</div>
+> **Note :** {{domxref("CacheStorage.match()", "caches.match()")}} est une méthode de commodité. Une fonctionnalité équivalente consiste à appeler {{domxref("cache.match()")}} sur chaque cache (dans l'ordre renvoyé par {{domxref("CacheStorage.keys()", "caches.keys()")}}) jusqu'à ce qu'une {{domxref("Response", "Réponse")}} soit renvoyée.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">caches.match(<em>request</em>,{<em>options</em>}).then(function(<em>response</em>) {
-  // faire quelque-chose avec la requête et la réponse
-});
-</pre>
+    caches.match(request,{options}).then(function(response) {
+      // faire quelque-chose avec la requête et la réponse
+    });
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>request</dt>
- <dd>La {{domxref("Request", "Requête")}} recherchée.</dd>
- <dt>options {{optional_inline}}</dt>
- <dd>Un objet dont les propriétés contrôlent comment la correspondance est fait avec l'opération <code>match</code>. Les options disponible sont:
- <ul>
-  <li><code>ignoreSearch</code>: Un {{domxref("Boolean")}} qui détermine si le preocessus de rapprochement doit ignorer la chaîne de requête dans l'url. Défini à <code>true</code>, la partie <code>?value=bar</code> de <code>http://foo.com/?value=bar</code> sera ignoré lors d'un rapporchement. La valeur par défaut est <code>false</code>.</li>
-  <li><code>ignoreMethod</code>: Un {{domxref("Boolean")}} qui, quand défini à <code>true</code>, empêche l'opération de rapprochement de valider le verbe http de la {{domxref("Request", "Requête")}} <code>http</code> (normalement, seulement <code>GET</code> et <code>HEAD</code> sont authorisés) La valeur par défaut est <code>false</code>.</li>
-  <li><code>ignoreVary</code>: Un {{domxref("Boolean")}} qui, quand défini à <code>true</code>, dit à l'opération de rapprochement de ne pas faire le rapprochement avec le header <code>VARY</code>. En d'autres termes, si une URL est sélectionnée elle sera conservée indépemment de la présence du header <code>VARY</code>. La valeur par défaut est <code>false</code>.</li>
-  <li><code>cacheName</code>: Un {{domxref("DOMString")}} qui représente le cache dans lequel on recherche.</li>
- </ul>
- </dd>
-</dl>
+- request
+  - : La {{domxref("Request", "Requête")}} recherchée.
+- options {{optional_inline}}
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : Un objet dont les propriétés contrôlent comment la correspondance est fait avec l'opération `match`. Les options disponible sont:
 
-<p>Une {{jsxref("Promise", "Promesse")}} qui renvoie les {{domxref("Response", "Réponses")}} correspondante.</p>
+    - `ignoreSearch`: Un {{domxref("Boolean")}} qui détermine si le preocessus de rapprochement doit ignorer la chaîne de requête dans l'url. Défini à `true`, la partie `?value=bar` de `http://foo.com/?value=bar` sera ignoré lors d'un rapporchement. La valeur par défaut est `false`.
+    - `ignoreMethod`: Un {{domxref("Boolean")}} qui, quand défini à `true`, empêche l'opération de rapprochement de valider le verbe http de la {{domxref("Request", "Requête")}} `http` (normalement, seulement `GET` et `HEAD` sont authorisés) La valeur par défaut est `false`.
+    - `ignoreVary`: Un {{domxref("Boolean")}} qui, quand défini à `true`, dit à l'opération de rapprochement de ne pas faire le rapprochement avec le header `VARY`. En d'autres termes, si une URL est sélectionnée elle sera conservée indépemment de la présence du header `VARY`. La valeur par défaut est `false`.
+    - `cacheName`: Un {{domxref("DOMString")}} qui représente le cache dans lequel on recherche.
 
-<h2 id="Exemples">Exemples</h2>
+### Valeur retournée
 
-<p>Cet exemple est tiré du MDN <a href="https://github.com/mdn/sw-test/">sw-test example</a> (voir <a href="https://mdn.github.io/sw-test/">sw-test running live</a>). Nous attendons pour un évènement {{domxref("FetchEvent")}} et nous construisons une réponse comme suit:</p>
+Une {{jsxref("Promise", "Promesse")}} qui renvoie les {{domxref("Response", "Réponses")}} correspondante.
 
-<ol>
- <li>Vérifier si une correspondance pour la requète est trouvée dans le {{domxref("CacheStorage")}} en utilisant {{domxref("CacheStorage.match")}}. Si oui, la servir.</li>
- <li>Si non, ouvrire le cache <code>v1</code> avec <code>open()</code>, mettre le réseau par défaut dans le cache avec {{domxref("Cache.put")}} et retourner un clone du réseau par défaut en utilisant <code>return response.clone()</code> — obligatoire car <code>put()</code> détruit le corps de la réponse.</li>
- <li>Si ceci échoue (e.g., parce que le réseau est inactif), retourner une réponse de secours.</li>
-</ol>
+## Exemples
 
-<pre class="brush: js">self.addEventListener('fetch', function(event) {
+Cet exemple est tiré du MDN [sw-test example](https://github.com/mdn/sw-test/) (voir [sw-test running live](https://mdn.github.io/sw-test/)). Nous attendons pour un évènement {{domxref("FetchEvent")}} et nous construisons une réponse comme suit:
+
+1.  Vérifier si une correspondance pour la requète est trouvée dans le {{domxref("CacheStorage")}} en utilisant {{domxref("CacheStorage.match")}}. Si oui, la servir.
+2.  Si non, ouvrire le cache `v1` avec `open()`, mettre le réseau par défaut dans le cache avec {{domxref("Cache.put")}} et retourner un clone du réseau par défaut en utilisant `return response.clone()` — obligatoire car `put()` détruit le corps de la réponse.
+3.  Si ceci échoue (e.g., parce que le réseau est inactif), retourner une réponse de secours.
+
+```js
+self.addEventListener('fetch', function(event) {
   event.respondWith(caches.match(event.request).then(function(response) {
     // caches.match() always resolves
     // but in case of success response will have value
@@ -83,35 +76,21 @@ translation_of: Web/API/CacheStorage/match
       });
     }
   }));
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-cachestorage-match', 'CacheStorage: match')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | Statut                               | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('Service Workers', '#dom-cachestorage-match', 'CacheStorage: match')}} | {{Spec2('Service Workers')}} | Définition initiale. |
 
-<h2 id="Compatibilités_des_navigateurs">Compatibilités des navigateurs</h2>
+## Compatibilités des navigateurs
 
+{{Compat("api.CacheStorage.match")}}
 
+## Voir aussi
 
-<p>{{Compat("api.CacheStorage.match")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers">Utiliser les Service Workers</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>
-</ul>
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WindowOrWorkerGlobalScope.caches")}}

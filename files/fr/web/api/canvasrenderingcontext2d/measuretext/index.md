@@ -9,65 +9,52 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/measureText
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La méthode <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.measureText()</code></strong> renvoie un objet {{domxref ("TextMetrics")}} qui contient des informations sur le texte mesuré (telle que sa largeur, par exemple).</p>
+La méthode **`CanvasRenderingContext2D`\*\***`.measureText()`\*\* renvoie un objet {{domxref ("TextMetrics")}} qui contient des informations sur le texte mesuré (telle que sa largeur, par exemple).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var><em>ctx</em></var>.measureText(texte);</pre>
+    ctx.measureText(texte);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>texte</dt>
- <dd>Le texte à mesurer.</dd>
-</dl>
+- texte
+  - : Le texte à mesurer.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Un objet {{domxref("TextMetrics")}}.</p>
+Un objet {{domxref("TextMetrics")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Étant donné cet élément {{HTMLElement("canvas")}} :</p>
+Étant donné cet élément {{HTMLElement("canvas")}} :
 
-<pre class="brush: html">&lt;canvas id="canevas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canevas"></canvas>
+```
 
-<p>vous pouvez obtenir un objet {{domxref("TextMetrics")}} en utilisant le code suivant :</p>
+vous pouvez obtenir un objet {{domxref("TextMetrics")}} en utilisant le code suivant :
 
-<pre class="brush: js">var canevas = document.getElementById('canevas');
+```js
+var canevas = document.getElementById('canevas');
 var ctx = canevas.getContext('2d');
 
 var texte = ctx.measureText('foo'); // objet TextMetrics
 texte.width; // 16;
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-measuretext", "CanvasRenderingContext2D.measureText")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                        | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-measuretext", "CanvasRenderingContext2D.measureText")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.measureText")}}</p>
+{{Compat("api.CanvasRenderingContext2D.measureText")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}.</li>
- <li>{{domxref("TextMetrics")}}</li>
-</ul>
+- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}.
+- {{domxref("TextMetrics")}}

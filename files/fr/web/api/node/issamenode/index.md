@@ -8,86 +8,69 @@ tags:
   - Noeuds
 translation_of: Web/API/Node/isSameNode
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>La méthode <code><strong>Node.isSameNode()</strong></code> teste si deux noeuds sont identiques, c'est-à-dire, s'ils font référence au même objet.</p>
+La méthode **`Node.isSameNode()`** teste si deux noeuds sont identiques, c'est-à-dire, s'ils font référence au même objet.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <em>isSameNode</em> = <em>node</em>.isSameNode(<em>other</em>);
-</pre>
+    var isSameNode = node.isSameNode(other);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<ul>
- <li><code>other</code> Le {{domxref("Node")}} à tester.</li>
-</ul>
+- `other` Le {{domxref("Node")}} à tester.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans cet exemple, nous créons 3 blocs {{HTMLElement("div")}}. Le premier et le troisième ont les mêmes contenus et attributs, alors que le second est différent. Ensuite, nous exécutons du JavaScript pour comparer les nœuds en utilisant <code>isSameNode()</code> et sortons les résultats.</p>
+Dans cet exemple, nous créons 3 blocs {{HTMLElement("div")}}. Le premier et le troisième ont les mêmes contenus et attributs, alors que le second est différent. Ensuite, nous exécutons du JavaScript pour comparer les nœuds en utilisant `isSameNode()` et sortons les résultats.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;This is the first element.&lt;/div&gt;
-&lt;div&gt;This is the second element.&lt;/div&gt;
-&lt;div&gt;This is the first element.&lt;/div&gt;
+```html
+<div>This is the first element.</div>
+<div>This is the second element.</div>
+<div>This is the first element.</div>
 
-&lt;p id="output"&gt;&lt;/p&gt;</pre>
+<p id="output"></p>
+```
 
-<pre class="brush: css hidden">#output {
+```css hidden
+#output {
   width: 440px;
   border: 2px solid black;
   border-radius: 5px;
   padding: 10px;
   margin-top: 20px;
   display: block;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let output = document.getElementById("output");
+```js
+let output = document.getElementById("output");
 let divList  = document.getElementsByTagName("div");
 
-output.innerHTML += "div 0 same as div 0: " + divList[0].isSameNode(divList[0]) + "&lt;br/&gt;";
-output.innerHTML += "div 0 same as div 1: " + divList[0].isSameNode(divList[1]) + "&lt;br/&gt;";
-output.innerHTML += "div 0 same as div 2: " + divList[0].isSameNode(divList[2]) + "&lt;br/&gt;";
-</pre>
+output.innerHTML += "div 0 same as div 0: " + divList[0].isSameNode(divList[0]) + "<br/>";
+output.innerHTML += "div 0 same as div 1: " + divList[0].isSameNode(divList[1]) + "<br/>";
+output.innerHTML += "div 0 same as div 2: " + divList[0].isSameNode(divList[2]) + "<br/>";
+```
 
-<h3 id="Résultats">Résultats</h3>
+### Résultats
 
-<p>{{ EmbedLiveSample('Example', 480) }}</p>
+{{ EmbedLiveSample('Example', 480) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-node', 'Node')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Pas de changement (a été longtemps retiré).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#Node3-isSameNode', 'Node.isSameNode()')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | Statut                           | Commentaire                                 |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#interface-node', 'Node')}}                             | {{Spec2('DOM WHATWG')}} | Pas de changement (a été longtemps retiré). |
+| {{SpecName('DOM3 Core', 'core.html#Node3-isSameNode', 'Node.isSameNode()')}} | {{Spec2('DOM3 Core')}}     | Définition initiale                         |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Node.isSameNode")}}</p>
+{{Compat("api.Node.isSameNode")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Node.isEqualNode()")}}</li>
-</ul>
+- {{domxref("Node.isEqualNode()")}}

@@ -11,99 +11,68 @@ tags:
   - UIEvent
 translation_of: Web/API/UIEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>L'interface <strong><code>UIEvent</code></strong> représente des évènements simples de l'interface utilisateur.</p>
+L'interface **`UIEvent`** représente des évènements simples de l'interface utilisateur.
 
-<p><code>UIEvent</code> dérive de {{domxref("Event")}}. Bien que la méthode {{domxref("UIEvent.initUIEvent()")}}  soit conservée pour la compatibilité ascendante, vous devez créer un objet <code>UIEvent</code> en utilisant le constructeur {{domxref("UIEvent.UIEvent", "UIEvent()")}}.</p>
+`UIEvent` dérive de {{domxref("Event")}}. Bien que la méthode {{domxref("UIEvent.initUIEvent()")}}  soit conservée pour la compatibilité ascendante, vous devez créer un objet `UIEvent` en utilisant le constructeur {{domxref("UIEvent.UIEvent", "UIEvent()")}}.
 
-<p>Plusieurs interfaces descendent directement ou indirectement de celle-ci : {{domxref("MouseEvent")}}, {{domxref("FocusEvent")}}, {{domxref("KeyboardEvent")}}, {{domxref("WheelEvent")}}, {{domxref("InputEvent")}} et {{domxref("CompositionEvent")}}.</p>
+Plusieurs interfaces descendent directement ou indirectement de celle-ci : {{domxref("MouseEvent")}}, {{domxref("FocusEvent")}}, {{domxref("KeyboardEvent")}}, {{domxref("WheelEvent")}}, {{domxref("InputEvent")}} et {{domxref("CompositionEvent")}}.
 
-<h2 id="Constructeurs">Constructeurs</h2>
+## Constructeurs
 
-<dl>
- <dt>{{domxref("UIEvent.UIEvent()", "UIEvent()")}}</dt>
- <dd>Crée un objet <code>UIEvent</code>.</dd>
-</dl>
+- {{domxref("UIEvent.UIEvent()", "UIEvent()")}}
+  - : Crée un objet `UIEvent`.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Cette interface hérite également des propriétés de son parent {{domxref("Event")}}.</em></p>
+_Cette interface hérite également des propriétés de son parent {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("UIEvent.cancelBubble")}} {{Non-standard_inline}} {{Deprecated_inline}}</dt>
- <dd>{{jsxref("Boolean")}} <em>(booléen)</em> indiquant si les conséquences de l'évènement ont été annulées ou non.</dd>
-</dl>
+- {{domxref("UIEvent.cancelBubble")}} {{Non-standard_inline}} {{Deprecated_inline}}
+  - : {{jsxref("Boolean")}} _(booléen)_ indiquant si les conséquences de l'évènement ont été annulées ou non.
 
-<dl>
- <dt>{{domxref("UIEvent.detail")}}{{readonlyinline}}</dt>
- <dd>Retourne un <code>long</code> qui donne quelques détails sur l'évènement, dépendant du type d'évènement.</dd>
- <dt>{{domxref("UIEvent.isChar")}} {{obsolete_inline}} {{readonlyinline}}</dt>
- <dd>Retourne un {{jsxref("Boolean")}} indiquant si l'évènement a produit un caractère clé ou non.</dd>
- <dt>{{domxref("UIEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Retourne la coordonnée horizontale de l'évènement par rapport à la couche actuelle.</dd>
- <dt>{{domxref("UIEvent.layerY")}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Retourne la coordonnée verticale de l'évènement par rapport à la couche actuelle.</dd>
- <dt>{{domxref("UIEvent.pageX")}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Retourne la coordonnée horizontale de l'évènement par rapport à l'ensemble du document.</dd>
- <dt>{{domxref("UIEvent.pageY")}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Retourne la coordonnée verticale de l'évènement par rapport à l'ensemble du document.</dd>
- <dt>{{domxref("UIEvent.sourceCapabilities")}} {{non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Retourne une instance de l'interface <code>InputDeviceCapabilities</code> qui fournit des informations sur le périphérique physique responsable de l'évènement.</dd>
- <dt>{{domxref("UIEvent.view")}}{{readonlyinline}}</dt>
- <dd>Retourne un {{domxref("WindowProxy")}} qui contient la vue de la génération de l'évènement.</dd>
- <dt>{{domxref("UIEvent.which")}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Retourne l'identifiant <code>keyCode</code> de la touche pressée, ou le code du caractère (<code>charCode</code>) pour une touche alphanumérique enfoncée.</dd>
-</dl>
+<!---->
 
-<h2 id="Méthodes">Méthodes</h2>
+- {{domxref("UIEvent.detail")}}{{readonlyinline}}
+  - : Retourne un `long` qui donne quelques détails sur l'évènement, dépendant du type d'évènement.
+- {{domxref("UIEvent.isChar")}} {{obsolete_inline}} {{readonlyinline}}
+  - : Retourne un {{jsxref("Boolean")}} indiquant si l'évènement a produit un caractère clé ou non.
+- {{domxref("UIEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Retourne la coordonnée horizontale de l'évènement par rapport à la couche actuelle.
+- {{domxref("UIEvent.layerY")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Retourne la coordonnée verticale de l'évènement par rapport à la couche actuelle.
+- {{domxref("UIEvent.pageX")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Retourne la coordonnée horizontale de l'évènement par rapport à l'ensemble du document.
+- {{domxref("UIEvent.pageY")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Retourne la coordonnée verticale de l'évènement par rapport à l'ensemble du document.
+- {{domxref("UIEvent.sourceCapabilities")}} {{non-standard_inline}} {{readonlyinline}}
+  - : Retourne une instance de l'interface `InputDeviceCapabilities` qui fournit des informations sur le périphérique physique responsable de l'évènement.
+- {{domxref("UIEvent.view")}}{{readonlyinline}}
+  - : Retourne un {{domxref("WindowProxy")}} qui contient la vue de la génération de l'évènement.
+- {{domxref("UIEvent.which")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Retourne l'identifiant `keyCode` de la touche pressée, ou le code du caractère (`charCode`) pour une touche alphanumérique enfoncée.
 
-<p><em>Cette interface hérite également des méthodes de son parent, {{domxref("Event")}}.</em></p>
+## Méthodes
 
-<dl>
- <dt>{{domxref("UIEvent.initUIEvent()")}} {{deprecated_inline}}</dt>
- <dd>Initialise un objet <code>UIEvent</code>. Si l'évènement a déjà été envoyé, cette méthode ne fait rien.</dd>
-</dl>
+_Cette interface hérite également des méthodes de son parent, {{domxref("Event")}}._
 
-<h2 id="Spécifications">Spécifications</h2>
+- {{domxref("UIEvent.initUIEvent()")}} {{deprecated_inline}}
+  - : Initialise un objet `UIEvent`. Si l'évènement a déjà été envoyé, cette méthode ne fait rien.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('InputDeviceCapabilities')}}</td>
-   <td>{{Spec2('InputDeviceCapabilities')}}</td>
-   <td>Ajoute la propriété <code>sourceCapabilities</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('UI Events')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-   <td>Extension de DOM3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#interface-UIEvent', 'UIEvent')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Ajoute le constructeur <code>UIEvent()</code>, déprécie la méthode <code>initUIEvent()</code> et change le type de <code>view</code> de <code>AbstractView</code> vers <code>WindowProxy</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events', '#Events-UIEvent', 'UIEvent')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+## Spécifications
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+| Spécification                                                                    | Statut                                           | Commentaire                                                                                                                               |
+| -------------------------------------------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('InputDeviceCapabilities')}}                             | {{Spec2('InputDeviceCapabilities')}} | Ajoute la propriété `sourceCapabilities`.                                                                                                 |
+| {{SpecName('UI Events')}}                                                 | {{Spec2('UI Events')}}                     | Extension de DOM3.                                                                                                                        |
+| {{SpecName('DOM3 Events', '#interface-UIEvent', 'UIEvent')}} | {{Spec2('DOM3 Events')}}                 | Ajoute le constructeur `UIEvent()`, déprécie la méthode `initUIEvent()` et change le type de `view` de `AbstractView` vers `WindowProxy`. |
+| {{SpecName('DOM2 Events', '#Events-UIEvent', 'UIEvent')}}     | {{Spec2('DOM2 Events')}}                 | Définition initiale.                                                                                                                      |
 
-<p>{{Compat("api.UIEvent")}}</p>
+## Compatibilité des navigateurs
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+{{Compat("api.UIEvent")}}
 
-<ul>
- <li><a href="/fr/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li>{{ domxref("Event") }}</li>
-</ul>
+## Voir aussi
+
+- [Introduction to events](/fr/docs/Learn/JavaScript/Building_blocks/Events)
+- {{ domxref("Event") }}

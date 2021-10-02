@@ -10,62 +10,48 @@ tags:
   - Service Workers
 translation_of: Web/API/Clients/matchAll
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}La méthode **`matchAll()`** de l'interface {{domxref("Clients")}} retourne une [`Promesse`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) pour une liste de service worker clients. Inclure le paramètre `options` permet de retourner tous les services worker clients dont l'origine est la même que l'origine du service worker associé. Si `options` n'est pas inclus, la méthode retourne que le service worker client controllé par le service worker.
 
-<div>La méthode <strong><code>matchAll()</code></strong> de l'interface {{domxref("Clients")}} retourne une <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promesse</a></code> pour une liste de service worker clients. Inclure le paramètre <code>options</code> permet de retourner tous les services worker clients dont l'origine est la même que l'origine du service worker associé. Si <code>options</code> n'est pas inclus, la méthode retourne que le service worker client controllé par le service worker.</div>
+## Syntaxe
 
-<div> </div>
-
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush: js">ServiceWorkerClients.matchAll(options).then(function(clients) {
+```js
+ServiceWorkerClients.matchAll(options).then(function(clients) {
   // faire quelque chose avec la list de clients
-});</pre>
+});
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>options</code></dt>
- <dd><p>L'objet <code>option</code> vous permet de définir les options pour l'opération. Les options disponibles sont :</p>
- <ul>
-  <li><code>includeUncontrolled</code>: Un {{domxref("Boolean")}} — défini à <code>true</code>, l'opération retournera tous les services worker clients qui sont de la même origine que le service worker courant. Sinon, elle ne retournera que le service worker client controllé par le service worker courant. La valeur par défaut est <code>false</code>.</li>
-  <li><code>type</code>: Défini le type de client que vous voulez observer. Les types disponibles sont <code>window</code>, <code>worker</code>, <code>sharedworker</code>, et <code>all</code>. La valeur par défaut est <code>all</code>.</li>
- </ul>
- </dd>
-</dl>
+- `options`
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+  - : L'objet `option` vous permet de définir les options pour l'opération. Les options disponibles sont :
 
-<p>Une  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promesse</a></code> qui se résout avec un tableau d'objets {{domxref("Client")}}.</p>
+    - `includeUncontrolled`: Un {{domxref("Boolean")}} — défini à `true`, l'opération retournera tous les services worker clients qui sont de la même origine que le service worker courant. Sinon, elle ne retournera que le service worker client controllé par le service worker courant. La valeur par défaut est `false`.
+    - `type`: Défini le type de client que vous voulez observer. Les types disponibles sont `window`, `worker`, `sharedworker`, et `all`. La valeur par défaut est `all`.
 
-<h2 id="Exemples">Exemples</h2>
+### Valeur de retour
 
-<pre class="brush: js">clients.matchAll(options).then(function(clientList) {
-  for(var i = 0 ; i &lt; clients.length ; i++) {
+Une  [`Promesse`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout avec un tableau d'objets {{domxref("Client")}}.
+
+## Exemples
+
+```js
+clients.matchAll(options).then(function(clientList) {
+  for(var i = 0 ; i < clients.length ; i++) {
     if(clientList[i].url === 'index.html') {
       clients.openWindow(clientList[i]);
       // ou faire quelque chose avec le client
     }
   }
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#clients', 'Clients')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initial.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | Statut                               | Commentaire         |
+| ------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
+| {{SpecName('Service Workers', '#clients', 'Clients')}} | {{Spec2('Service Workers')}} | Définition initial. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Clients.matchAll")}}</p>
+{{Compat("api.Clients.matchAll")}}

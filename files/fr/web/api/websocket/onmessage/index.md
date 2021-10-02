@@ -3,25 +3,26 @@ title: WebSocket.onmessage
 slug: Web/API/WebSocket/onmessage
 browser-compat: api.WebSocket.onmessage
 ---
-<div>{{APIRef("Web Sockets API")}}</div>
+{{APIRef("Web Sockets API")}}
 
-<p>La propriété <strong><code>WebSocket.onmessage</code></strong> est un <a href="/fr/docs/Web/Events/Event_handlers">gestionnaire d'évènement</a> qui est appelé lorsqu'un message est reçu depuis le serveur. Ce gestionnaire est appelé avec un évènement <a href="/fr/docs/Web/API/MessageEvent"><code>MessageEvent</code></a> en paramètre.</p>
+La propriété **`WebSocket.onmessage`** est un [gestionnaire d'évènement](/fr/docs/Web/Events/Event_handlers) qui est appelé lorsqu'un message est reçu depuis le serveur. Ce gestionnaire est appelé avec un évènement [`MessageEvent`](/fr/docs/Web/API/MessageEvent) en paramètre.
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
+```js
 unWebSocket.onmessage = function(event) {
   console.debug("Message WebSocket reçu :", event);
-};</pre>
+};
+```
 
-<h2 id="value">Valeur</h2>
+## Valeur
 
-<p>Un objet <a href="/fr/docs/Web/API/EventListener"><code>EventListener</code></a>.</p>
+Un objet [`EventListener`](/fr/docs/Web/API/EventListener).
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}

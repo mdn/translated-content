@@ -8,95 +8,98 @@ tags:
   - boîte de dialogue
 translation_of: Web/API/Window/openDialog
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<p><code>window.openDialog</code> est une extension à <a href="/fr/DOM/window.open">window.open()</a>. Elle s'utilise de la même manière, excepté qu'elle peut prendre plusieurs paramètres optionnels après<code>windowFeatures</code>, et que<code>windowFeatures</code> est traîté différemment.</p>
+`window.openDialog` est une extension à [window.open()](/fr/DOM/window.open). Elle s'utilise de la même manière, excepté qu'elle peut prendre plusieurs paramètres optionnels après`windowFeatures`, et que`windowFeatures` est traîté différemment.
 
-<p>Les paramètres optionnels, si présents, seront regroupés dans un objet JavaScript Array et seront accessibles depuis la nouvelle fenêtre par la propriété <code>window.arguments</code>. Ils sont accessibles depuis les scripts de la fenêtre à tout moment, notamment lors du traitement d'un évênement<code>load</code> . Ces paramètres peuvent donc être utilisés pour passer des arguments à une boîte de dialogue, et pour les récupérer ensuite.</p>
+Les paramètres optionnels, si présents, seront regroupés dans un objet JavaScript Array et seront accessibles depuis la nouvelle fenêtre par la propriété `window.arguments`. Ils sont accessibles depuis les scripts de la fenêtre à tout moment, notamment lors du traitement d'un évênement`load` . Ces paramètres peuvent donc être utilisés pour passer des arguments à une boîte de dialogue, et pour les récupérer ensuite.
 
-<p>Notez que l'appel à la méthode<code>openDialog()</code> se termine immédiatement. Si vous souhaitez le bloquer jusqu'à ce que l'utilisateur ferme la boîte de dialogue, utilisez la valeur<code>modal</code> pour le paramètre f<code>eatures</code>. En conséquence, l'utilisateur ne pourra pas interagir avec la fenêtre parente jusqu'à ce qu'il ferme la boîte de dialogue modale.</p>
+Notez que l'appel à la méthode`openDialog()` se termine immédiatement. Si vous souhaitez le bloquer jusqu'à ce que l'utilisateur ferme la boîte de dialogue, utilisez la valeur`modal` pour le paramètre f`eatures`. En conséquence, l'utilisateur ne pourra pas interagir avec la fenêtre parente jusqu'à ce qu'il ferme la boîte de dialogue modale.
 
-<h3 id="Syntax">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval"><em>newWindow</em> = openDialog(<em>url</em>, <em>name</em>, <em>features</em>, <em>arg1</em>, <em>arg2</em>, ...)
-</pre>
+    newWindow = openDialog(url, name, features, arg1, arg2, ...)
 
-<dl>
- <dt>newWindow</dt>
- <dd>La nouvelle fenêtre ouverte.</dd>
- <dt>url</dt>
- <dd>L'URL du document à charger dans la nouvelle fenêtre.</dd>
- <dt>name</dt>
- <dd>Le nom de la fenêtre (optionnel). Voir la description de<a href="/fr/DOM/window.open">window.open()</a> pour plus de détails.</dd>
- <dt>features</dt>
- <dd>Voir la description de<a href="/fr/DOM/window.open">window.open()</a> pour la description.</dd>
- <dt>arg1, arg2, ... </dt>
- <dd>Les arguments à passer à la nouvelle fenêtre (optionnel).</dd>
-</dl>
+- newWindow
+  - : La nouvelle fenêtre ouverte.
+- url
+  - : L'URL du document à charger dans la nouvelle fenêtre.
+- name
+  - : Le nom de la fenêtre (optionnel). Voir la description de[window.open()](/fr/DOM/window.open) pour plus de détails.
+- features
+  - : Voir la description de[window.open()](/fr/DOM/window.open) pour la description.
+- arg1, arg2, ...
+  - : Les arguments à passer à la nouvelle fenêtre (optionnel).
 
-<h3 id="Example">Exemple</h3>
+### Exemple
 
-<pre class="brush: js">var win = openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);</pre>
+```js
+var win = openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
+```
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<h4 id="New_Features">Nouvelles fonctionnalités</h4>
+#### Nouvelles fonctionnalités
 
-<dl>
- <dt><code>all</code></dt>
- <dd>Active ou désactive (<code>"all=no"</code>) toutes les fonctionnalités (excepté <code>chrome</code>, <code>dialog</code> et<code>modal</code>). Peut être utilisé conjointement avec les autres drapeaux (par exemple, <code>"menubar=no, all"</code> active toutes les fonctionnalités excepté <code>menubar</code>). Ce drapeau est ignorée par la méthode<a href="/fr/DOM/window.open">window.open()</a> mais pas par <code>window.openDialog()</code>.</dd>
-</dl>
+- `all`
+  - : Active ou désactive (`"all=no"`) toutes les fonctionnalités (excepté `chrome`, `dialog` et`modal`). Peut être utilisé conjointement avec les autres drapeaux (par exemple, `"menubar=no, all"` active toutes les fonctionnalités excepté `menubar`). Ce drapeau est ignorée par la méthode[window.open()](/fr/DOM/window.open) mais pas par `window.openDialog()`.
 
-<h4 id="Default_behaviour">Comportement</h4>
+#### Comportement
 
-<p>La méthode<code>window.openDialog()</code> traite l'absence du paramètre<code>features</code> de la même manière que<a href="/fr/DOM/window.open">window.open()</a> (une chaîne vide désactive toutes les fonctionnalités) excepté pour<code>chrome</code> et<code>dialog</code> qui sont activés par défaut et peuvent être explicitement désactivées par "<code>chrome=no</code>".</p>
+La méthode`window.openDialog()` traite l'absence du paramètre`features` de la même manière que[window.open()](/fr/DOM/window.open) (une chaîne vide désactive toutes les fonctionnalités) excepté pour`chrome` et`dialog` qui sont activés par défaut et peuvent être explicitement désactivées par "`chrome=no`".
 
-<h4 id="Passing_extra_parameters_to_the_dialog">Passage de paramètres supplémentaires</h4>
+#### Passage de paramètres supplémentaires
 
-<p>Pour passer des paramètres supplémentaires à la boîte de dialogue, vous pouvez simplement les ajouter après le paramètre f<code>eatures</code> :</p>
+Pour passer des paramètres supplémentaires à la boîte de dialogue, vous pouvez simplement les ajouter après le paramètre f`eatures` :
 
-<pre class="brush: js">openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);</pre>
+```js
+openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
+```
 
-<p>Ces paramètres seront ensuite regroupés dans une propriété <code>arguments</code> de type<a href="/en/Core_JavaScript_1.5_Reference/Global_Objects/Array">Array</a>, et cette propriété sera ajoutée à la nouvelle boîte de dialogue.</p>
+Ces paramètres seront ensuite regroupés dans une propriété `arguments` de type[Array](/en/Core_JavaScript_1.5_Reference/Global_Objects/Array), et cette propriété sera ajoutée à la nouvelle boîte de dialogue.
 
-<p>Pour accéder à ces paramètres depuis un script de la boîte de dialogue, utilisez le procédé suivant :</p>
+Pour accéder à ces paramètres depuis un script de la boîte de dialogue, utilisez le procédé suivant :
 
-<pre class="brush: js">var food = window.arguments[0];
-var price = window.arguments[1];</pre>
+```js
+var food = window.arguments[0];
+var price = window.arguments[1];
+```
 
-<p>Notez que vous pouvez accéder à cette propriété depuis n'importe où dans le script. (<a href="/en/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog">Autre exemple</a>).</p>
+Notez que vous pouvez accéder à cette propriété depuis n'importe où dans le script. ([Autre exemple](/en/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog)).
 
-<h4 id="Returning_values_from_the_dialog">Retourner des arguments depuis la boîte de dialogue</h4>
+#### Retourner des arguments depuis la boîte de dialogue
 
-<p>Depuis que<code><a href="/fr/DOM/window.close">window.close()</a></code> efface toutes les propriétés associées à la boîte de dialogue (c'est-à-dire les variables spécifiées depuis le code JavaScript chargé depuis la boîte de dialogue), il n'est pas possible de retourner des valeur après la fermeture de la boîte de dialogue en utilisant des variables globales (ou toute autre méthode).</p>
+Depuis que[`window.close()`](/fr/DOM/window.close) efface toutes les propriétés associées à la boîte de dialogue (c'est-à-dire les variables spécifiées depuis le code JavaScript chargé depuis la boîte de dialogue), il n'est pas possible de retourner des valeur après la fermeture de la boîte de dialogue en utilisant des variables globales (ou toute autre méthode).
 
-<p>Pour pouvoir retourner des valeurs à la fenêtre parente, vous devez passer un objet via les paramètres supplémentaires. Vous pouvez ensuite accéder à cet objet depuis la boîte de dialogue et modifier ces propriétés, dont les données que vous souhaiter conserver après l'appel à la méthode<code>window.close()</code>.</p>
+Pour pouvoir retourner des valeurs à la fenêtre parente, vous devez passer un objet via les paramètres supplémentaires. Vous pouvez ensuite accéder à cet objet depuis la boîte de dialogue et modifier ces propriétés, dont les données que vous souhaiter conserver après l'appel à la méthode`window.close()`.
 
-<pre class="brush: js">var retVals = { address: null, delivery: null };
-openDialog("http://example.tld/zzz.xul", "dlg", "modal", "pizza", 6.98, retVals);</pre>
+```js
+var retVals = { address: null, delivery: null };
+openDialog("http://example.tld/zzz.xul", "dlg", "modal", "pizza", 6.98, retVals);
+```
 
-<p>Si vous modifiez les propriétés de l'objet<code>retVals</code> depuis la boîte de dialogue comme décrit précédemment, vous pouvez y accéder via le tableau<code>retVals</code> après l'appel à <code>openDialog()</code>.</p>
+Si vous modifiez les propriétés de l'objet`retVals` depuis la boîte de dialogue comme décrit précédemment, vous pouvez y accéder via le tableau`retVals` après l'appel à `openDialog()`.
 
-<p>Depuis la boîte de dialogue, vous pouvez modifier les propriétés comme suit :</p>
+Depuis la boîte de dialogue, vous pouvez modifier les propriétés comme suit :
 
-<pre class="brush: js">var retVals = window.arguments[2];
+```js
+var retVals = window.arguments[2];
 retVals.address = enteredAddress;
-retVals.delivery = "immediate";</pre>
+retVals.delivery = "immediate";
+```
 
-<p>Voir aussi<a href="http://groups.google.com/group/netscape.public.dev.xul/msg/02075a1736406b40">ce message</a>. (<a href="/en/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog">Autre exemple</a>).<br>
- Voir aussi<a href="/fr/DOM/window.importDialog">window.importDialog()</a>.</p>
+Voir aussi[ce message](http://groups.google.com/group/netscape.public.dev.xul/msg/02075a1736406b40). ([Autre exemple](/en/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog)).
+Voir aussi[window.importDialog()](/fr/DOM/window.importDialog).
 
-<h3 id="Specification">Spécification</h3>
+### Spécification
 
-<p>{{ DOM0() }}</p>
+{{ DOM0() }}
 
-<h3 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h3>
+### Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.openDialog")}}</p>
+{{Compat("api.Window.openDialog")}}
 
-<h3 id="Voir_également">Voir également</h3>
+### Voir également
 
-<ul>
- <li><a href="/en-US/Add-ons/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog">Another example</a></li>
- <li><a href="/en-US/docs/Archive/Web/Window.importDialog"><code>window.importDialog</code></a> (mobile) {{obsolete_inline}}</li>
-</ul>
+- [Another example](/en-US/Add-ons/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog)
+- [`window.importDialog`](/en-US/docs/Archive/Web/Window.importDialog) (mobile) {{obsolete_inline}}

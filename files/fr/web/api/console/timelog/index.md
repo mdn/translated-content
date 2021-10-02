@@ -11,89 +11,67 @@ tags:
   - débogage
 translation_of: Web/API/Console/timeLog
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>Affiche dans la console la valeur actuelle d'un timer précédemment appelé par {{domxref("console.time()")}}</p>
+Affiche dans la console la valeur actuelle d'un timer précédemment appelé par {{domxref("console.time()")}}
 
-<p>Voir <a href="/en-US/docs/Web/API/console#Timers">Timers</a> dans la documentation pour des exemples et plus de détails</p>
+Voir [Timers](/en-US/docs/Web/API/console#Timers) dans la documentation pour des exemples et plus de détails
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">console.timeLog(<em>label</em>);
-</pre>
+    console.timeLog(label);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>label</code></dt>
- <dd>Le nom du timer à afficher sur la console</dd>
-</dl>
+- `label`
+  - : Le nom du timer à afficher sur la console
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Si aucun label n'est inclus</p>
+Si aucun label n'est inclus
 
-<pre>default: 1042ms</pre>
+    default: 1042ms
 
-<p>Si un <code>label</code> est inclus:</p>
+Si un `label` est inclus:
 
-<pre>timer name: 1242ms</pre>
+    timer name: 1242ms
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Si aucun timer n'est en cours d'éxecution, <code>timeLog()</code> retourne l'avertissement suivant :</p>
+Si aucun timer n'est en cours d'éxecution, `timeLog()` retourne l'avertissement suivant :
 
-<pre>Timer “default” doesn’t exist.</pre>
+    Timer “default” doesn’t exist.
 
-<p>Si le paramètre label est spécifé mais aucun timer n'y correspond :</p>
+Si le paramètre label est spécifé mais aucun timer n'y correspond :
 
-<pre> Timer “timer name” doesn’t exist. </pre>
+     Timer “timer name” doesn’t exist.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre>console.time("answer time");
-alert("Click to continue");
-console.timeLog("answer time");
-alert("Do a bunch of other stuff...");
-console.timeEnd("answer time");</pre>
+    console.time("answer time");
+    alert("Click to continue");
+    console.timeLog("answer time");
+    alert("Do a bunch of other stuff...");
+    console.timeEnd("answer time");
 
-<p>Le résultat de l'exemple ci-dessus montre le temps qu'a mis l'utilisateur à fermer la première pop-up d'alerte, puis le temps que l'utilisateur a pris pour fermer la seconde :</p>
+Le résultat de l'exemple ci-dessus montre le temps qu'a mis l'utilisateur à fermer la première pop-up d'alerte, puis le temps que l'utilisateur a pris pour fermer la seconde :
 
-<p><img src="timer_output.png"></p>
+![](timer_output.png)
 
-<p>Notez que le nom du timer est à la fois affiché lorsque la valeur est affichée par <code>timeLog()</code> et lorsque le timer est arrêté</p>
+Notez que le nom du timer est à la fois affiché lorsque la valeur est affichée par `timeLog()` et lorsque le timer est arrêté
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#timelog", "console.timeLog()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | Statut                           | Commentaire         |
+| -------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName("Console API", "#timelog", "console.timeLog()")}} | {{Spec2("Console API")}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>
+{{Compat("api.Console.timeLog")}}
 
+## Voir aussi
 
-<p>{{Compat("api.Console.timeLog")}}</p>
-</div>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Documentation d'Opera Dragonfly: Console</a></li>
-</ul>
+- [Documentation d'Opera Dragonfly: Console](http://www.opera.com/dragonfly/documentation/console/)

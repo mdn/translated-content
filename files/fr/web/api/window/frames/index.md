@@ -13,31 +13,29 @@ tags:
   - Reference
 translation_of: Web/API/Window/frames
 ---
-<p>{{ApiRef("Window")}}</p>
+{{ApiRef("Window")}}
 
-<p>Renvoie la fenêtre elle-même, qui est semblable à un objet de type Array, listant les frames présentes dans la fenêtre courante.</p>
+Renvoie la fenêtre elle-même, qui est semblable à un objet de type Array, listant les frames présentes dans la fenêtre courante.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>frameList</em> = window.frames;
-</pre>
+    frameList = window.frames;
 
-<ul>
- <li><code>frameList</code> est une liste d'objets frame, semblable à un tableau grâce à la propriété <code>length</code> . Ses éléments sont accessibles en utilisant la notation  <code>{{ mediawiki.external('i') }}</code>.</li>
- <li><code>frameList === window</code> est évalué à <code>true</code>.</li>
- <li>Chaque élément de <code>window.frames</code> est un pseudo tableau représentant l'objet <a href="/en/DOM/window">window</a> correspondant au contenu de la  <a href="/en/HTML/Element/frame">&lt;frame&gt;</a> ou <a href="/en/HTML/Element/iframe">&lt;iframe&gt;</a> , et non au DOM element (i)frame (ex., <code>window.frames[ 0 ]</code> équivaut à <code>document.getElementsByTagName( "iframe" )[ 0 ].contentWindow</code>).</li>
- <li>pour plus de détails sur la valeur retournée, se référer au <a href="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/5628c6f346859d4f/169aa7004565066?hl=en&amp;ie=UTF-8&amp;oe=utf-8&amp;q=window.frames&amp;pli=1">fil de discussion sur mozilla.dev.platform</a>.</li>
-</ul>
+- `frameList` est une liste d'objets frame, semblable à un tableau grâce à la propriété `length` . Ses éléments sont accessibles en utilisant la notation  `{{ mediawiki.external('i') }}`.
+- `frameList === window` est évalué à `true`.
+- Chaque élément de `window.frames` est un pseudo tableau représentant l'objet [window](/en/DOM/window) correspondant au contenu de la  [\<frame>](/en/HTML/Element/frame) ou [\<iframe>](/en/HTML/Element/iframe) , et non au DOM element (i)frame (ex., `window.frames[ 0 ]` équivaut à `document.getElementsByTagName( "iframe" )[ 0 ].contentWindow`).
+- pour plus de détails sur la valeur retournée, se référer au [fil de discussion sur mozilla.dev.platform](http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/5628c6f346859d4f/169aa7004565066?hl=en&ie=UTF-8&oe=utf-8&q=window.frames&pli=1).
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var frames = window.frames; // ou // var frames = window.parent.frames;
-for (var i = 0; i &lt; frames.length; i++) {
+```js
+var frames = window.frames; // ou // var frames = window.parent.frames;
+for (var i = 0; i < frames.length; i++) {
   // faire quelque chose avec chaque subframe en tant que frames[i]
   frames[i].document.body.style.background = "red";
 }
-</pre>
+```
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<p>{{SpecName('HTML WHATWG','browsers.html#dom-frames','Window.frames')}}</p>
+{{SpecName('HTML WHATWG','browsers.html#dom-frames','Window.frames')}}

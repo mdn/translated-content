@@ -10,35 +10,31 @@ tags:
   - Window
 translation_of: Web/API/Window/innerHeight
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<p>Récupère la hauteur (en pixels) de la partie visible de la fenêtre de navigation en incluant, si elle est affichée, la barre de défilement horizontale.</p>
+Récupère la hauteur (en pixels) de la partie visible de la fenêtre de navigation en incluant, si elle est affichée, la barre de défilement horizontale.
 
-<div class="note">
-<p><strong>Note :</strong> La valeur retournée par cette propriété correspond le cas échéant à la hauteur de la fenêtre définie par {{ifmethod("nsIDOMWindowUtils", "setCSSViewport")}}, dans le cas où vous utilisez cette méthode pour définir les dimensions de la fenêtre virtuelle dans le but d'agencer la page.</p>
-</div>
+> **Note :** La valeur retournée par cette propriété correspond le cas échéant à la hauteur de la fenêtre définie par {{ifmethod("nsIDOMWindowUtils", "setCSSViewport")}}, dans le cas où vous utilisez cette méthode pour définir les dimensions de la fenêtre virtuelle dans le but d'agencer la page.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre>var hauteur = window.innerHeight;
-</pre>
+    var hauteur = window.innerHeight;
 
-<h3 id="Valeur_renvoy.C3.A9e">Valeur</h3>
+### Valeur
 
-<p>Renvoie la hauteur de la partie visible de la fenêtre de navigation. La propriété <code>window.innerHeight</code> est accessible en lecture seulement ; elle n'a pas de valeur par défaut.</p>
+Renvoie la hauteur de la partie visible de la fenêtre de navigation. La propriété `window.innerHeight` est accessible en lecture seulement ; elle n'a pas de valeur par défaut.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<ul>
- <li>La propriété <code>window.innerHeight</code> est supportée par tout objet assimilé à une fenêtre <em>{{domxref("window")}}</em>, un cadre <em>frame </em>, un ensemble de cadres <em>frameset</em>, ou une fenêtre secondaire.</li>
- <li>Il existe un <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=189112#c7">algorithme</a> pour calculer la hauteur de la partie visible de la fenêtre en excluant la barre de défilement horizontale si est elle affichée.</li>
-</ul>
+- La propriété `window.innerHeight` est supportée par tout objet assimilé à une fenêtre _{{domxref("window")}}_, un cadre _frame_ , un ensemble de cadres *frameset*, ou une fenêtre secondaire.
+- Il existe un [algorithme](https://bugzilla.mozilla.org/show_bug.cgi?id=189112#c7) pour calculer la hauteur de la partie visible de la fenêtre en excluant la barre de défilement horizontale si est elle affichée.
 
-<h2 id="Attention">Exemples</h2>
+## Exemples
 
-<h3 id="Code">Sur un <em>frameset</em></h3>
+### Sur un _frameset_
 
-<pre class="brush:js">var intFrameHeight = window.innerHeight; // ou
+```js
+var intFrameHeight = window.innerHeight; // ou
 
 var intFrameHeight = self.innerHeight;
 // retournera la hauteur de la partie visible du cadre dans frameset
@@ -48,48 +44,31 @@ var intFramesetHeight = parent.innerHeight;
 
 var intOuterFramesetHeight = top.innerHeight;
 // retournera la hauteur de la partie visible du frameset le plus éloigné
-</pre>
+```
 
-<p>{{todo("ajouter ici un lien vers une démo interactive")}}</p>
+{{todo("ajouter ici un lien vers une démo interactive")}}
 
-<ul>
- <li>Pour modifier les dimensions d'une fenêtre, voir {{domxref("window.resizeBy()")}} et {{domxref("window.resizeTo()")}}.</li>
- <li>Pour récupérer la hauteur extérieure d'une fenêtre, c'est-à-dire la hauteur de la fenêtre du navigateur dans sa totalité, voir {{domxref("window.outerHeight")}}.</li>
-</ul>
+- Pour modifier les dimensions d'une fenêtre, voir {{domxref("window.resizeBy()")}} et {{domxref("window.resizeTo()")}}.
+- Pour récupérer la hauteur extérieure d'une fenêtre, c'est-à-dire la hauteur de la fenêtre du navigateur dans sa totalité, voir {{domxref("window.outerHeight")}}.
 
-<h3 id="Exemple_graphique">Exemple graphique</h3>
+### Exemple graphique
 
-<p>L'illustration suivante montre la différence entre <code>outerHeight</code> et <code>innerHeight</code>.</p>
+L'illustration suivante montre la différence entre `outerHeight` et `innerHeight`.
 
-<p><img alt="Illustration de la différence entre innerHeight et outerHeight" src="firefoxinnervsouterheight2.png"></p>
+![Illustration de la différence entre innerHeight et outerHeight](firefoxinnervsouterheight2.png)
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-window-innerheight', 'window.innerHeight')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | Statut                           | Commentaire         |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName('CSSOM View', '#dom-window-innerheight', 'window.innerHeight')}} | {{Spec2('CSSOM View')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.innerHeight")}}</p>
+{{Compat("api.Window.innerHeight")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("window.innerWidth")}}</li>
- <li>{{domxref("window.outerHeight")}}</li>
- <li>{{domxref("window.outerWidth")}}</li>
-</ul>
+- {{domxref("window.innerWidth")}}
+- {{domxref("window.outerHeight")}}
+- {{domxref("window.outerWidth")}}

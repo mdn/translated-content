@@ -1,52 +1,50 @@
 ---
 title: CSS Properties and Values API (Propriétés et valeurs)
 slug: Web/API/CSS_Properties_and_Values_API
-translation_of: 'Web/API/CSS_Properties_and_Values_API'
+translation_of: Web/API/CSS_Properties_and_Values_API
 ---
-<p>{{SeeCompatTable}} L'<strong>API Propriétés et valeurs CSS</strong> — qui fait partie de l'ensemble d'API <a href="/fr/docs/Web/Houdini">CSS Houdini</a> — sert à définir explicitement des <a href="/fr/docs/Web/CSS/--*">propriétés CSS personnalisées</a>, ce qui permet la vérification des types de propriétés, de leur donner des valeurs par défaut et de déterminer si une propriété peut hériter ses valeurs ou non.</p>
+{{SeeCompatTable}} L'**API Propriétés et valeurs CSS** — qui fait partie de l'ensemble d'API [CSS Houdini](/fr/docs/Web/Houdini) — sert à définir explicitement des [propriétés CSS personnalisées](/fr/docs/Web/CSS/--*), ce qui permet la vérification des types de propriétés, de leur donner des valeurs par défaut et de déterminer si une propriété peut hériter ses valeurs ou non.
 
-<h2 id="interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
-  <dt>{{domxref('CSS.registerProperty')}}</dt>
-  <dd>Définit la manière dont un navigateur devrait analyser une {{cssxref('--*', 'propriété CSS personnalisée')}}. L'accès à cette interface se fait en <a href="/fr/docs/Web/JavaScript">JavaScript</a> via {{domxref('CSS.registerProperty')}}.</dd>
-  <dt>{{cssxref('@property')}}</dt>
-  <dd>Définit la manière dont un navigateur devrait analyser une {{cssxref('--*', 'propriété CSS personnalisée')}}. L'accès à cette interface se fait à l'aide d'une règle <a href="/fr/docs/Web/CSS/At-rule">at-rule</a> {{cssxref('@property')}} en <a href="/fr/docs/Web/CSS">CSS</a>.</dd>
-</dl>
+- {{domxref('CSS.registerProperty')}}
+  - : Définit la manière dont un navigateur devrait analyser une {{cssxref('--*', 'propriété CSS personnalisée')}}. L'accès à cette interface se fait en [JavaScript](/fr/docs/Web/JavaScript) via {{domxref('CSS.registerProperty')}}.
+- {{cssxref('@property')}}
+  - : Définit la manière dont un navigateur devrait analyser une {{cssxref('--*', 'propriété CSS personnalisée')}}. L'accès à cette interface se fait à l'aide d'une règle [at-rule](/fr/docs/Web/CSS/At-rule) {{cssxref('@property')}} en [CSS](/fr/docs/Web/CSS).
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<p>L'exemple suivant utilise {{domxref('CSS.registerProperty')}} en <a href="/fr/docs/Web/JavaScript">JavaScript</a> pour typer une <a href="/fr/docs/Web/CSS/--*">propriété CSS personnalisée</a>, <code>--ma-couleur</code> en tant que couleur et que valeur par défaut, sans lui permettre d'hériter de sa valeur :</p>
+L'exemple suivant utilise {{domxref('CSS.registerProperty')}} en [JavaScript](/fr/docs/Web/JavaScript) pour typer une [propriété CSS personnalisée](/fr/docs/Web/CSS/--*), `--ma-couleur` en tant que couleur et que valeur par défaut, sans lui permettre d'hériter de sa valeur :
 
-<pre class="brush: js">window.CSS.registerProperty({
+```js
+window.CSS.registerProperty({
   name: '--ma-couleur',
-  syntax: '&lt;color&gt;',
+  syntax: '<color>',
   inherits: false,
   initialValue: '#c0ffee',
 });
-</pre>
+```
 
-<p>Le même enregistrement peut se faire en <a href="/fr/docs/Web/CSS">CSS</a> en utilisant la règle <a href="/fr/docs/Web/CSS/At-rule">at-rule</a> {{cssxref('@property')}} :</p>
+Le même enregistrement peut se faire en [CSS](/fr/docs/Web/CSS) en utilisant la règle [at-rule](/fr/docs/Web/CSS/At-rule) {{cssxref('@property')}} :
 
-<pre class="brush: css">@property --ma-couleur {
-  syntax: '&lt;color&gt;';
+```css
+@property --ma-couleur {
+  syntax: '<color>';
   inherits: false;
   initial-value: #c0ffee;
 }
-</pre>
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications("api.CSS.registerProperty")}}</p>
+{{Specifications("api.CSS.registerProperty")}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>Voir les interfaces individuelles</p>
+Voir les interfaces individuelles
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/API/CSS_Painting_API">API Peinture CSS</a></li>
-  <li><a href="/fr/docs/Web/API/CSS_Typed_OM_API">API Typage de modèle d'objet CSS</a></li>
-  <li><a href="/fr/docs/Web/Houdini">CSS Houdini</a></li>
-</ul>
+- [API Peinture CSS](/fr/docs/Web/API/CSS_Painting_API)
+- [API Typage de modèle d'objet CSS](/fr/docs/Web/API/CSS_Typed_OM_API)
+- [CSS Houdini](/fr/docs/Web/Houdini)

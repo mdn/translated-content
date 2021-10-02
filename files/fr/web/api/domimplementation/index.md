@@ -8,69 +8,40 @@ tags:
   - Reference
 translation_of: Web/API/DOMImplementation
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>L'interface <code><strong>DOMImplementation</strong></code> représente un objet fournissant des méthodes qui ne dépendent pas d'un document particulier. Un tel objet est renvoyé par la propriété {{domxref("Document.implementation")}}.</p>
+L'interface **`DOMImplementation`** représente un objet fournissant des méthodes qui ne dépendent pas d'un document particulier. Un tel objet est renvoyé par la propriété {{domxref("Document.implementation")}}.
 
-<h2 id="Propriété">Propriété</h2>
+## Propriété
 
-<p><em>Cette interface n'a pas de propriété spécifique et n'en hérite aucune.</em></p>
+_Cette interface n'a pas de propriété spécifique et n'en hérite aucune._
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Pas de méthode héritée.</em></p>
+_Pas de méthode héritée._
 
-<dl>
- <dt>{{domxref("DOMImplementation.createDocument()")}}</dt>
- <dd>Crée et retourne un {{domxref("XMLDocument")}}.</dd>
- <dt>{{domxref("DOMImplementation.createDocumentType()")}}</dt>
- <dd>Crée et retourne un {{domxref("DocumentType")}}.</dd>
- <dt>{{domxref("DOMImplementation.createHTMLDocument()")}}</dt>
- <dd>Crée et retourne un {{domxref("Document")}} HTML.</dd>
- <dt>{{domxref("DOMImplementation.hasFeature()")}}</dt>
- <dd>Retourne un {{domxref("Boolean")}} indiquant si une caractéristique donnée est supportée ou non. Cette fonction n'est pas fiable et est conservée uniquement à des fins de compatibilité : à l'exception des requêtes liées au SVG, elle renvoie toujours la valeur <code>true</code> <em>(vrai).</em> Les anciens navigateurs sont très incohérents dans leur comportement.</dd>
-</dl>
+- {{domxref("DOMImplementation.createDocument()")}}
+  - : Crée et retourne un {{domxref("XMLDocument")}}.
+- {{domxref("DOMImplementation.createDocumentType()")}}
+  - : Crée et retourne un {{domxref("DocumentType")}}.
+- {{domxref("DOMImplementation.createHTMLDocument()")}}
+  - : Crée et retourne un {{domxref("Document")}} HTML.
+- {{domxref("DOMImplementation.hasFeature()")}}
+  - : Retourne un {{domxref("Boolean")}} indiquant si une caractéristique donnée est supportée ou non. Cette fonction n'est pas fiable et est conservée uniquement à des fins de compatibilité : à l'exception des requêtes liées au SVG, elle renvoie toujours la valeur `true` _(vrai)._ Les anciens navigateurs sont très incohérents dans leur comportement.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#domimplementation', 'DOMImplementation')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Supprime la méthode <code>getFeature()</code>.<br>
-    Ajoute la méthode <code>createHTMLDocument()</code>.<br>
-    Modifie le type de retour de <code>createDocument()</code> de {{domxref("Document")}} à {{domxref("XMLDocument")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-102161490', 'DOMImplementation')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Ajoute la méthode <code>getFeature()</code> (jamais implémentée par un agent utilisateur).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-102161490', 'DOMImplementation')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Ajoute les méthodes <code>createDocument()</code> et <code>createDocumentType()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-102161490', 'DOMImplementation')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Définition initial.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                           | Commentaire                                                                                                                                                                                               |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#domimplementation', 'DOMImplementation')}}             | {{Spec2('DOM WHATWG')}} | Supprime la méthode `getFeature()`. Ajoute la méthode `createHTMLDocument()`. Modifie le type de retour de `createDocument()` de {{domxref("Document")}} à {{domxref("XMLDocument")}}. |
+| {{SpecName('DOM3 Core', 'core.html#ID-102161490', 'DOMImplementation')}}         | {{Spec2('DOM3 Core')}}     | Ajoute la méthode `getFeature()` (jamais implémentée par un agent utilisateur).                                                                                                                           |
+| {{SpecName('DOM2 Core', 'core.html#ID-102161490', 'DOMImplementation')}}         | {{Spec2('DOM2 Core')}}     | Ajoute les méthodes `createDocument()` et `createDocumentType()`.                                                                                                                                         |
+| {{SpecName('DOM1', 'level-one-core.html#ID-102161490', 'DOMImplementation')}} | {{Spec2('DOM1')}}         | Définition initial.                                                                                                                                                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DOMImplementation")}}</p>
+{{Compat("api.DOMImplementation")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Document_Object_Model">Référence du DOM.</a></li>
-</ul>
+- [Référence du DOM.](/fr/docs/Web/API/Document_Object_Model)

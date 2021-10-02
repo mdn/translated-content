@@ -12,70 +12,57 @@ tags:
   - delete
 translation_of: Web/API/Cache/delete
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>La méthode <strong><code>delete()</code></strong> de l'interface {{domxref("Cache")}} cherche l'entrée {{domxref("Cache")}} dont la clé est la requête passée en argument, et retourne une {{jsxref("Promise", "Promesse")}}. Si une entrée {{domxref("Cache")}} est trouvée, elle est supprimée, et la promesse est résolue à <code>true</code>. Dans le cas contraire, la promesse est résolue à <code>false</code>.</p>
+La méthode **`delete()`** de l'interface {{domxref("Cache")}} cherche l'entrée {{domxref("Cache")}} dont la clé est la requête passée en argument, et retourne une {{jsxref("Promise", "Promesse")}}. Si une entrée {{domxref("Cache")}} est trouvée, elle est supprimée, et la promesse est résolue à `true`. Dans le cas contraire, la promesse est résolue à `false`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">cache.delete(request,{options}).then(function(true) {
+```js
+cache.delete(request,{options}).then(function(true) {
   //your cache entry has been deleted
 });
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>request</dt>
- <dd>La {{domxref("Request", "Requête")}} à supprimer.</dd>
- <dt>options {{optional_inline}}</dt>
- <dd>Un objet dont les paramètres contrôlent comment le matching est effectué lors de l'opération de <code>delete</code>. Les options disponibles sont :
- <ul>
-  <li><code>ignoreSearch</code>: Un {{domxref("Boolean")}} qui spécifie si le matching doit ignorer ou non la query string dans l'url.  Si mis à <code>true</code>, la partie <code>?value=bar</code> de l'url <code>http://foo.com/?value=bar</code> sera ignorée lors du matching. Est à <code>false</code> par défaut.</li>
-  <li><code>ignoreMethod</code>: Un {{domxref("Boolean")}} qui, quand mis à <code>true</code>, empêche les opérations de matching de valider la méthode <code>HTTP</code> de la {{domxref("Request", "Requête")}} (en temps normal, seules <code>GET</code> et <code>HEAD</code> sont autorisées.) Est à  <code>false</code> par défaut.</li>
-  <li><code>ignoreVary</code>: Un {{domxref("Boolean")}} qui, quand mis à <code>true,</code> indique à l'opération de matching de ne pas effectuer le matching <code>VARY</code> des header.  En d'autres termes, si l'URL correspond, un match sera obtenu peu importe que la {{domxref("Response", "Réponse")}} ait un header <code>VARY</code> ou non. Est à <code>false</code> par défaut.</li>
-  <li><code>cacheName</code>: Une {{domxref("DOMString")}} qui représente un cache spécifique où effectuer la recherche. A noter que cette option est ignorée par <code>Cache.delete()</code>.</li>
- </ul>
- </dd>
-</dl>
+- request
+  - : La {{domxref("Request", "Requête")}} à supprimer.
+- options {{optional_inline}}
 
-<h3 id="Retour">Retour</h3>
+  - : Un objet dont les paramètres contrôlent comment le matching est effectué lors de l'opération de `delete`. Les options disponibles sont :
 
-<p>Une {{jsxref("Promise", "Promesse")}} qui est résolue à <code>true</code> si l'entrée de cache est supprimée, ou à <code>false</code> dans le cas contraire.</p>
+    - `ignoreSearch`: Un {{domxref("Boolean")}} qui spécifie si le matching doit ignorer ou non la query string dans l'url.  Si mis à `true`, la partie `?value=bar` de l'url `http://foo.com/?value=bar` sera ignorée lors du matching. Est à `false` par défaut.
+    - `ignoreMethod`: Un {{domxref("Boolean")}} qui, quand mis à `true`, empêche les opérations de matching de valider la méthode `HTTP` de la {{domxref("Request", "Requête")}} (en temps normal, seules `GET` et `HEAD` sont autorisées.) Est à  `false` par défaut.
+    - `ignoreVary`: Un {{domxref("Boolean")}} qui, quand mis à `true,` indique à l'opération de matching de ne pas effectuer le matching `VARY` des header.  En d'autres termes, si l'URL correspond, un match sera obtenu peu importe que la {{domxref("Response", "Réponse")}} ait un header `VARY` ou non. Est à `false` par défaut.
+    - `cacheName`: Une {{domxref("DOMString")}} qui représente un cache spécifique où effectuer la recherche. A noter que cette option est ignorée par `Cache.delete()`.
 
-<h2 id="Exemples">Exemples</h2>
+### Retour
 
-<pre class="brush: js">caches.open('v1').then(function(cache) {
+Une {{jsxref("Promise", "Promesse")}} qui est résolue à `true` si l'entrée de cache est supprimée, ou à `false` dans le cas contraire.
+
+## Exemples
+
+```js
+caches.open('v1').then(function(cache) {
   cache.delete('/images/image.png').then(function(response) {
     someUIUpdateFunction();
   });
-})</pre>
+})
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-cache-delete', 'Cache: delete')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | Statut                               | Commentaires         |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('Service Workers', '#dom-cache-delete', 'Cache: delete')}} | {{Spec2('Service Workers')}} | Définition initiale. |
 
-<h2 id="Compatibilités_des_navigateurs">Compatibilités des navigateurs</h2>
+## Compatibilités des navigateurs
 
-<p>{{Compat("api.Cache.delete")}}</p>
+{{Compat("api.Cache.delete")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers">Utiliser les Service Workers</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WorkerGlobalScope.caches")}}</li>
-</ul>
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WorkerGlobalScope.caches")}}

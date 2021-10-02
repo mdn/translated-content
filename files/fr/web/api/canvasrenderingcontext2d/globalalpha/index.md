@@ -9,40 +9,35 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/globalAlpha
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}La propriété **CanvasRenderingContext2D.globalAlpha** de l'API Canvas 2D spécifie la valeur alpha qui sera appliquée aux formes et aux images avant qu'elles ne soient dessinées sur le canevas. La valeur est comprise entre 0,0 (entièrement transparente) et 1,0 (entièrement opaque).
 
-<div>La propriété <strong>CanvasRenderingContext2D.globalAlpha</strong> de l'API Canvas 2D spécifie la valeur alpha qui sera appliquée aux formes et aux images avant qu'elles ne soient dessinées sur le canevas. La valeur est comprise entre 0,0 (entièrement transparente) et 1,0 (entièrement opaque).</div>
+Voir aussi le chapitre [Ajout de styles et de couleurs](/fr-FR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) dans le [Tutoriel canvas](/fr-FR/docs/Web/API/Canvas_API/Tutorial).
 
-<div> </div>
+## Syntaxe
 
-<p>Voir aussi le chapitre <a href="/fr-FR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Ajout de styles et de couleurs</a> dans le <a href="/fr-FR/docs/Web/API/Canvas_API/Tutorial">Tutoriel canvas</a>.</p>
+    ctx.globalAlpha = valeur;
 
-<h2 id="Syntaxe">Syntaxe</h2>
+### Options
 
-<pre class="syntaxbox"><var>ctx.globalAlpha = valeur;</var>
-</pre>
+- `valeur`
+  - : Un nombre entre 0,0 (entièrement transparente) et 1,0 (entièrement opaque). La valeur par défaut est 1,0. Les valeurs hors de la plage, y compris {{jsxref ("Infinity")}} et {{jsxref ("NaN")}} ne seront pas définies et `globalAlpha` conservera sa valeur précédente.
 
-<h3 id="Options">Options</h3>
+## Exemples
 
-<dl>
- <dt><code>valeur</code></dt>
- <dd>Un nombre entre 0,0 (entièrement transparente) et 1,0 (entièrement opaque). La valeur par défaut est 1,0. Les valeurs hors de la plage, y compris {{jsxref ("Infinity")}} et {{jsxref ("NaN")}} ne seront pas définies et <code>globalAlpha</code> conservera sa valeur précédente.</dd>
-</dl>
+### Utilisation de la propriété `globalAlpha`
 
-<h2 id="Exemples">Exemples</h2>
+Il s'agit seulement d'un simple fragment de code utilisant la propriété `globalAlpha` pour dessiner deux rectangles semi-transparents.
 
-<h3 id="Using_the_globalAlpha_property">Utilisation de la propriété <code>globalAlpha</code></h3>
+#### HTML
 
-<p>Il s'agit seulement d'un simple fragment de code utilisant la propriété <code>globalAlpha</code> pour dessiner deux rectangles semi-transparents.</p>
+```html
+<canvas id="canevas"></canvas>
+```
 
-<h4 id="HTML">HTML</h4>
+#### JavaScript
 
-<pre class="brush: html">&lt;canvas id="canevas"&gt;&lt;/canvas&gt;
-</pre>
-
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">var canevas = document.getElementById('canevas');
+```js
+var canevas = document.getElementById('canevas');
 var ctx = canevas.getContext('2d');
 
 ctx.globalAlpha = 0.5;
@@ -52,28 +47,30 @@ ctx.fillRect(10, 10, 100, 100);
 
 ctx.fillStyle = "red";
 ctx.fillRect(50, 50, 100, 100);
-</pre>
+```
 
-<p>Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct dans le canevas :</p>
+Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct dans le canevas :
 
-<h4 id="code_jouable">Code jouable</h4>
+#### Code jouable
 
-<pre class="brush: html hidden">&lt;canvas id="canevas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="modifier" type="button" value="Modifier" /&gt;
-  &lt;input id="effacement" type="button" value="Effacement" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code" style="height:120px;"&gt;
+```html hidden
+<canvas id="canevas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="modifier" type="button" value="Modifier" />
+  <input id="effacement" type="button" value="Effacement" />
+</div>
+<textarea id="code" class="playable-code" style="height:120px;">
 ctx.globalAlpha = 0.5;
 
 ctx.fillStyle = 'blue';
 ctx.fillRect(10, 10, 100, 100);
 
 ctx.fillStyle = 'red';
-ctx.fillRect(50, 50, 100, 100);&lt;/textarea&gt;
-</pre>
+ctx.fillRect(50, 50, 100, 100);</textarea>
+```
 
-<pre class="brush: js hidden">var canevas = document.getElementById('canevas');
+```js hidden
+var canevas = document.getElementById('canevas');
 var ctx = canevas.getContext('2d');
 var zoneTexte = document.getElementById('code');
 var effacement = document.getElementById('effacement');
@@ -96,15 +93,16 @@ modifier.addEventListener('click', function() {
 
 zoneTexte.addEventListener('input', dessinerCanevas);
 window.addEventListener('load', dessinerCanevas);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('code_jouable', 700, 380) }}</p>
+{{ EmbedLiveSample('code_jouable', 700, 380) }}
 
-<h3 id="A_globalAlpha_example">Un exemple de <code>globalAlpha</code></h3>
+### Un exemple de `globalAlpha`
 
-<p>Dans cet exemple, un arrière-plan de quatre carrés de différentes couleurs est dessiné. Au dessus, se trouve un ensemble de cercles semi-transparents. La propriété globalAlpha est définie à 0,2, valeur qui sera utilisée pour toutes les formes à partir de ce point. Chaque étape de la boucle <code>for</code> dessine un ensemble de cercles de rayons croissants. Le résultat final est un dégradé radial. En superposant toujours plus de cercles les uns sur les autres, la transparence des cercles déjà dessinés est réduite. En augmentant le nombre d'étapes et, concrètement, en dessinant davantage de cercles, l'arrière-plan disparaitra complètement du centre de l'image.</p>
+Dans cet exemple, un arrière-plan de quatre carrés de différentes couleurs est dessiné. Au dessus, se trouve un ensemble de cercles semi-transparents. La propriété globalAlpha est définie à 0,2, valeur qui sera utilisée pour toutes les formes à partir de ce point. Chaque étape de la boucle `for` dessine un ensemble de cercles de rayons croissants. Le résultat final est un dégradé radial. En superposant toujours plus de cercles les uns sur les autres, la transparence des cercles déjà dessinés est réduite. En augmentant le nombre d'étapes et, concrètement, en dessinant davantage de cercles, l'arrière-plan disparaitra complètement du centre de l'image.
 
-<pre class="brush: js">var ctx = document.getElementById('canevas').getContext('2d');
+```js
+var ctx = document.getElementById('canevas').getContext('2d');
 
 // Dessiner l'arrière-plan
 ctx.fillStyle = '#FD0';
@@ -121,53 +119,38 @@ ctx.fillStyle = '#FFF';
 ctx.globalAlpha = 0.2;
 
 // Dessiner les cercles semi-transparents
-for (i = 0; i &lt; 7; i++){
+for (i = 0; i < 7; i++){
   ctx.beginPath();
   ctx.arc(75, 75, 10 + 10 * i, 0, Math.PI * 2, true);
   ctx.fill();
 }
-</pre>
+```
 
-<pre class="brush: html hidden">&lt;canvas id="canevas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canevas" width="150" height="150"></canvas>
+```
 
-<p>{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}</p>
+{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-globalalpha", "CanvasRenderingContext2D.globalAlpha")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                        | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-globalalpha", "CanvasRenderingContext2D.globalAlpha")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.globalAlpha")}}</p>
+{{Compat("api.CanvasRenderingContext2D.globalAlpha")}}
 
-<h2 id="Notes_spécifiques_à_Gecko">Notes spécifiques à Gecko</h2>
+## Notes spécifiques à Gecko
 
-<ul>
- <li>À partir de Gecko 5.0, la spécification de valeurs invalides pour globalAlpha ne génère plus une exception SYNTAX_ERR ; celles-ci sont silencieusement et correctement ignorées.</li>
-</ul>
+- À partir de Gecko 5.0, la spécification de valeurs invalides pour globalAlpha ne génère plus une exception SYNTAX_ERR ; celles-ci sont silencieusement et correctement ignorées.
 
-<h2 id="Notes_spécifiques_à_WebKitBlink">Notes spécifiques à WebKit/Blink</h2>
+## Notes spécifiques à WebKit/Blink
 
-<ul>
- <li>Dans les navigateurs WebKit et Blink, une méthode non standard et désapprouvée <code>ctx.setAlpha() </code>est implémentée en plus de cette propriété.</li>
-</ul>
+- Dans les navigateurs WebKit et Blink, une méthode non standard et désapprouvée `ctx.setAlpha() `est implémentée en plus de cette propriété.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}</li>
-</ul>
+- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}

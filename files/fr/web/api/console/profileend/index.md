@@ -8,42 +8,33 @@ tags:
   - Profils
 translation_of: Web/API/Console/profileEnd
 ---
-<p>{{APIRef("Console API")}}{{Non-standard_header}}</p>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<div class="warning">
-<p><strong>Attention :</strong> L'appel de cet API immédiatement après <code>console.profile()</code> peut l'empêcher de fonctionner. Pour contourner ce problème, appelez-le par un  <code>setTimeout</code> avec un délai d'au-moins 5 ms. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1173588">bug #1173588</a>.</p>
-</div>
+> **Attention :** L'appel de cet API immédiatement après `console.profile()` peut l'empêcher de fonctionner. Pour contourner ce problème, appelez-le par un  `setTimeout` avec un délai d'au-moins 5 ms. Voir [bug #1173588](https://bugzilla.mozilla.org/show_bug.cgi?id=1173588).
 
-<p>La méthode <code>profileEnd</code>  arrête l'enregistrement d'un profil lancé précédemment avec {{domxref("Console.profile()")}}.</p>
+La méthode `profileEnd`  arrête l'enregistrement d'un profil lancé précédemment avec {{domxref("Console.profile()")}}.
 
-<p>Vous pouvez éventuellement insérer un argument pour nommer le profil. Cela vous permet d'arrêter uniquement ce profil si vous avez enregistré plusieurs profils.</p>
+Vous pouvez éventuellement insérer un argument pour nommer le profil. Cela vous permet d'arrêter uniquement ce profil si vous avez enregistré plusieurs profils.
 
-<ul>
- <li>Si <code>Console.profileEnd()</code> reçoit un nom de profil qui correspond au nom d'un profil en cours d'enregistrement, ce profil est arrêté.</li>
- <li>Si <code>Console.profileEnd()</code> reçoit un nom de profil qui ne correspond pas au nom d'un profil en cours d'enregistrement, aucune modification n'est apportée.</li>
- <li>Si <code>Console.profileEnd()</code> ne reçoit pas un nom de profil, le dernier profil démarré est arrêté.</li>
-</ul>
+- Si `Console.profileEnd()` reçoit un nom de profil qui correspond au nom d'un profil en cours d'enregistrement, ce profil est arrêté.
+- Si `Console.profileEnd()` reçoit un nom de profil qui ne correspond pas au nom d'un profil en cours d'enregistrement, aucune modification n'est apportée.
+- Si `Console.profileEnd()` ne reçoit pas un nom de profil, le dernier profil démarré est arrêté.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">console.profileEnd(<em>profileName</em>);
-</pre>
+    console.profileEnd(profileName);
 
-<h2 id="Paramètres">Paramètres</h2>
+## Paramètres
 
-<dl>
- <dt><code>profileName</code></dt>
- <dd>Le nom à donner au profil. Ce paramètre est facultatif.</dd>
-</dl>
+- `profileName`
+  - : Le nom à donner au profil. Ce paramètre est facultatif.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Console.profileEnd")}}</p>
+{{Compat("api.Console.profileEnd")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Console.profile()")}}</li>
-</ul>
+- {{domxref("Console.profile()")}}

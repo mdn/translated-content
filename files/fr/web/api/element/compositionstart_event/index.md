@@ -10,11 +10,11 @@ tags:
 translation_of: Web/API/Element/compositionstart_event
 original_slug: Web/Events/compositionstart
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>L'événement <strong><code>compositionstart</code></strong> est déclenché lorsqu'un système de composition de texte tel qu'une {{glossary("input method editor","méthode de saisie")}} démarre une nouvelle session de composition.</p>
+L'événement **`compositionstart`** est déclenché lorsqu'un système de composition de texte tel qu'une {{glossary("input method editor","méthode de saisie")}} démarre une nouvelle session de composition.
 
-<p>Par exemple, cet événement pourrait être déclenché après qu'un utilisateur a commencé à saisir un caractère chinois en utilisant un <a href="https://en.wikipedia.org/wiki/Pinyin">Pinyin</a> IME.</p>
+Par exemple, cet événement pourrait être déclenché après qu'un utilisateur a commencé à saisir un caractère chinois en utilisant un [Pinyin](https://en.wikipedia.org/wiki/Pinyin) IME.
 
 <table class="properties">
   <tbody>
@@ -37,30 +37,35 @@ original_slug: Web/Events/compositionstart
   </tbody>
 </table>
 
-<h2 id="Examples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">const inputElement = document.querySelector('input[type="text"]');
+```js
+const inputElement = document.querySelector('input[type="text"]');
 
-inputElement.addEventListener('compositionstart', (event) =&gt; {
+inputElement.addEventListener('compositionstart', (event) => {
   console.log(`generated characters were: ${event.data}`);
-});</pre>
+});
+```
 
-<h3 id="Live_example">Exemple concret</h3>
+### Exemple concret
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="control"&gt;
-  &lt;label for="name"&gt;Sur macOS, cliquez dans la zone de texte ci-dessous,&lt;br&gt; puis tapez &lt;kbd&gt;option&lt;/kbd&gt; + &lt;kbd&gt;`&lt;/kbd&gt;, puis &lt;kbd&gt;a&lt;/kbd&gt; :&lt;/label&gt;
-  &lt;input type="text" id="example" name="example"&gt;
-&lt;/div&gt;
+```html
+<div class="control">
+  <label for="name">Sur macOS, cliquez dans la zone de texte ci-dessous,<br> puis tapez <kbd>option</kbd> + <kbd>`</kbd>, puis <kbd>a</kbd> :</label>
+  <input type="text" id="example" name="example">
+</div>
 
-&lt;div class="event-log"&gt;
-  &lt;label&gt;Event log:&lt;/label&gt;
-  &lt;textarea readonly class="event-log-contents" rows="8" cols="25"&gt;&lt;/textarea&gt;
-  &lt;button class="clear-log"&gt;Clear&lt;/button&gt;
-&lt;/div&gt;</pre>
+<div class="event-log">
+  <label>Event log:</label>
+  <textarea readonly class="event-log-contents" rows="8" cols="25"></textarea>
+  <button class="clear-log">Clear</button>
+</div>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   padding: .2rem;
   display: grid;
   grid-template-areas: "control  log";
@@ -91,15 +96,16 @@ kbd {
   padding: 1px 2px 0;
   border: 1px solid black;
 }
-</pre>
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const inputElement = document.querySelector('input[type="text"]');
+```js
+const inputElement = document.querySelector('input[type="text"]');
 const log = document.querySelector('.event-log-contents');
 const clearLog = document.querySelector('.clear-log');
 
-clearLog.addEventListener('click', () =&gt; {
+clearLog.addEventListener('click', () => {
   log.textContent = '';
 });
 
@@ -110,35 +116,22 @@ function handleEvent(event) {
 inputElement.addEventListener('compositionstart', handleEvent);
 inputElement.addEventListener('compositionupdate', handleEvent);
 inputElement.addEventListener('compositionend', handleEvent);
-</pre>
+```
 
-<h4 id="Result">Résultat</h4>
+#### Résultat
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '180px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '180px') }}
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('UI Events', '#event-type-compositionstart')}}</td>
-      <td>{{Spec2('UI Events')}}</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                | Statut                       |
+| ---------------------------------------------------------------------------- | ---------------------------- |
+| {{SpecName('UI Events', '#event-type-compositionstart')}} | {{Spec2('UI Events')}} |
 
-<h2 id="Compatibilités_navigateur">Compatibilités navigateur</h2>
+## Compatibilités navigateur
 
-<p>{{Compat("api.Element.compositionstart_event")}}</p>
+{{Compat("api.Element.compositionstart_event")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>Événements liés : {{domxref("Element/compositionend_event", "compositionend")}}, {{domxref("Element/compositionupdate_event", "compositionupdate")}}.</li>
-</ul>
+- Événements liés : {{domxref("Element/compositionend_event", "compositionend")}}, {{domxref("Element/compositionupdate_event", "compositionupdate")}}.

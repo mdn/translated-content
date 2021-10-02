@@ -8,45 +8,27 @@ tags:
   - lecture seule
 translation_of: Web/API/Window/screenX
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La propriété  <code><strong>Window.screenX</strong></code> retourne la distance honrizontale, in CSS pixels, of the left border of the user's browser from the left side of the screen.</p>
+La propriété  **`Window.screenX`** retourne la distance honrizontale, in CSS pixels, of the left border of the user's browser from the left side of the screen.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>lLoc</em> = window.screenX
-</pre>
+    lLoc = window.screenX
 
-<ul>
- <li><em><code>lLoc</code></em> is the number of CSS pixels from the left side the screen.</li>
-</ul>
+- _`lLoc`_ is the number of CSS pixels from the left side the screen.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM View', '#dom-window-screenx', 'Window.screenX') }}</td>
-   <td>{{ Spec2('CSSOM View') }}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                           | Commentaire         |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{ SpecName('CSSOM View', '#dom-window-screenx', 'Window.screenX') }} | {{ Spec2('CSSOM View') }} | Définition initiale |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.screenX")}}</p>
+{{Compat("api.Window.screenX")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>{{domxref("window.screenLeft")}}</li>
-  <li>{{domxref("Window.screenY")}}</li>
-</ul>
+- {{domxref("window.screenLeft")}}
+- {{domxref("Window.screenY")}}

@@ -10,45 +10,27 @@ tags:
   - Window
 translation_of: Web/API/Window/top
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Renvoie une référence à la fenêtre la plus haute dans la hiérarchie des fenêtres</p>
+Renvoie une référence à la fenêtre la plus haute dans la hiérarchie des fenêtres
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <var>topWindow</var> = window.top;
-</pre>
+    var topWindow = window.top;
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Là où la propriété {{domxref("window.parent")}} renvoie le parent immédiat de la fenêtre courante, <code>window.top</code> renvoie la fenêtre la plus haute dans la hiérarchie des objets de fenêtre.</p>
+Là où la propriété {{domxref("window.parent")}} renvoie le parent immédiat de la fenêtre courante, `window.top` renvoie la fenêtre la plus haute dans la hiérarchie des objets de fenêtre.
 
-<p>Cette propriété est particulièrement utile lorsque vous avez affaire à une fenêtre qui se trouve dans une subframe d'un ou de plusieurs parents, et que vous souhaitez accéder au jeu de frameset de niveau supérieur.</p>
+Cette propriété est particulièrement utile lorsque vous avez affaire à une fenêtre qui se trouve dans une subframe d'un ou de plusieurs parents, et que vous souhaitez accéder au jeu de frameset de niveau supérieur.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'browsers.html#dom-top', 'window.top')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'browsers.html#dom-top', 'window.top')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Spécification initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | Statut                           | Commentaire            |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------- |
+| {{SpecName('HTML WHATWG', 'browsers.html#dom-top', 'window.top')}} | {{Spec2('HTML WHATWG')}} |                        |
+| {{SpecName('HTML5 W3C', 'browsers.html#dom-top', 'window.top')}}     | {{Spec2('HTML5 W3C')}}     | Spécification initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.top")}}</p>
+{{Compat("api.Window.top")}}

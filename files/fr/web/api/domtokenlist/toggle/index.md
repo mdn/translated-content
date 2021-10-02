@@ -9,38 +9,39 @@ tags:
   - Méthodes
 translation_of: Web/API/DOMTokenList/toggle
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La méthode <code><strong>toggle()</strong></code> (<em>bascule</em>) de l'interface {{domxref("DOMTokenList")}} supprime une marque (<em>token)</em> donnée de la liste et renvoie <code>false</code> (<em>faux</em>). Si <em>token</em> n'existe pas, il est ajouté et la fonction renvoie <code>true</code>.</p>
+La méthode **`toggle()`** (_bascule_) de l'interface {{domxref("DOMTokenList")}} supprime une marque (_token)_ donnée de la liste et renvoie `false` (_faux_). Si _token_ n'existe pas, il est ajouté et la fonction renvoie `true`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">tokenList.toggle(token, force);</pre>
+    tokenList.toggle(token, force);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>token</dt>
- <dd>Une {{domxref("DOMString")}} (<em>chaîne de caractères</em>) représentant la marque que l'on veut activer.</dd>
- <dt>force {{optional_inline}}</dt>
- <dd>Un {{domxref("Boolean")}} (<em>booléen</em>) qui, si inclus, transforme la bascule (toggle) en opération unique. Si elle est définie <code>false</code> (<em>faux</em>), la marque sera seulement supprimée et aucun ajout ne suivra. Si elle est définie <code>true</code> (<em>vrai</em>), la marque sera seulement ajoutée et pas supprimée après.</dd>
-</dl>
+- token
+  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la marque que l'on veut activer.
+- force {{optional_inline}}
+  - : Un {{domxref("Boolean")}} (_booléen_) qui, si inclus, transforme la bascule (toggle) en opération unique. Si elle est définie `false` (_faux_), la marque sera seulement supprimée et aucun ajout ne suivra. Si elle est définie `true` (_vrai_), la marque sera seulement ajoutée et pas supprimée après.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Un {{domxref("Boolean")}} (<em>booléen</em>) — <code>false</code> (<em>faux</em>) si la marque n'est pas dans la liste après l'appel ou <code>true</code> (<em>vrai</em>) si elle y est.</p>
+Un {{domxref("Boolean")}} (_booléen_) — `false` (_faux_) si la marque n'est pas dans la liste après l'appel ou `true` (_vrai_) si elle y est.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que <code>DOMTokenList</code> en utilisant {{domxref("Element.classList")}}. Nous remplaçons alors une marque dans la liste et écrivons la liste dans le {{domxref("Node.textContent")}} du <code>&lt;span&gt;</code>.</p>
+Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Nous remplaçons alors une marque dans la liste et écrivons la liste dans le {{domxref("Node.textContent")}} du `<span>`.
 
-<p>D'abord, le HTML :</p>
+D'abord, le HTML :
 
-<pre class="brush: html">&lt;span class="a b"&gt;classList is 'a b'&lt;/span&gt;</pre>
+```html
+<span class="a b">classList is 'a b'</span>
+```
 
-<p>Maintenant le JavaScript :</p>
+Maintenant le JavaScript :
 
-<pre class="brush: js">var span = document.querySelector("span");
+```js
+var span = document.querySelector("span");
 var classes = span.classList;
 span.onclick = function() {
   var result = classes.toggle("c");
@@ -50,29 +51,18 @@ span.onclick = function() {
     span.textContent = "'c' removed; classList is now '" + classes + "'.";
   }
 }
-</pre>
+```
 
-<p>La sortie ressemble à ceci :</p>
+La sortie ressemble à ceci :
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-toggle','toggle()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                           | Commentaire          |
+| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('DOM WHATWG','#dom-domtokenlist-toggle','toggle()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("api.DOMTokenList.toggle")}}</div>
+{{Compat("api.DOMTokenList.toggle")}}

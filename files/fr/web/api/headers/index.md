@@ -12,84 +12,72 @@ tags:
   - Reference
 translation_of: Web/API/Headers
 ---
-<div>{{APIRef("Fetch API")}}</div>
+{{APIRef("Fetch API")}}
 
-<p>L'interface <code>Headers</code> de l'API Fetch vous permet d'effectuer diverses actions sur les en-têtes de requête et de réponse HTTP. Ces actions incluent la récupération, la configuration, l’ajout et la suppression. Un objet <code>Headers</code> a une liste <code>Headers</code> associée qui est vide lors de l'initialisation et qui est constituée de zéro ou plusieurs paires de noms et de valeurs. Vous pouvez en ajouter via les méthodes comme{{domxref("Headers.append","append()")}} (see {{anch("Examples")}}.)  Dans toutes les méthodes de cette interface, les noms des <code>Headers</code> sont reliés à une séquence d'octets sensible à la case.</p>
+L'interface `Headers` de l'API Fetch vous permet d'effectuer diverses actions sur les en-têtes de requête et de réponse HTTP. Ces actions incluent la récupération, la configuration, l’ajout et la suppression. Un objet `Headers` a une liste `Headers` associée qui est vide lors de l'initialisation et qui est constituée de zéro ou plusieurs paires de noms et de valeurs. Vous pouvez en ajouter via les méthodes comme{{domxref("Headers.append","append()")}} (see {{anch("Examples")}}.)  Dans toutes les méthodes de cette interface, les noms des `Headers` sont reliés à une séquence d'octets sensible à la case.
 
-<p>Pour des raisons de sécurité, les <code>Headers</code> ci-dessous peuvent être controlés uniquement par l'User Agent : {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  et {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.</p>
+Pour des raisons de sécurité, les `Headers` ci-dessous peuvent être controlés uniquement par l'User Agent : {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  et {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
 
-<p>Un objet <code>Headers</code> a aussi une garde associée, qui prend la valeur <code>immutable</code>, <code>request</code>, <code>request-no-cors</code>, <code>reponse</code>, or <code>none</code>. Cela affecte si les méthodes {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, et {{domxref("Headers.append","append()")}}  vont modifier le <code>Header</code>. Pour plus d'informations voir {{Glossary("Guard")}}.</p>
+Un objet `Headers` a aussi une garde associée, qui prend la valeur `immutable`, `request`, `request-no-cors`, `reponse`, or `none`. Cela affecte si les méthodes {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, et {{domxref("Headers.append","append()")}}  vont modifier le `Header`. Pour plus d'informations voir {{Glossary("Guard")}}.
 
-<p>Vous pouvez récuperer un objet <code>Header</code> via les propriétés {{domxref("Request.headers")}} et {{domxref("Response.headers")}} et créer un nouvel objet <code>Header</code> en utilisant le constructeur {{domxref("Headers.Headers()")}}.</p>
+Vous pouvez récuperer un objet `Header` via les propriétés {{domxref("Request.headers")}} et {{domxref("Response.headers")}} et créer un nouvel objet `Header` en utilisant le constructeur {{domxref("Headers.Headers()")}}.
 
-<p>Un objet implémentant <code>Headers</code> peut directement être utilisé dans une structure {{jsxref("Statements/for...of", "for...of")}}, au lieu de{{domxref('Headers.entries()', 'entries()')}}: <code>for (var p of myHeaders)</code> est équivalent à <code>for (var p of myHeaders.entries())</code>.</p>
+Un objet implémentant `Headers` peut directement être utilisé dans une structure {{jsxref("Statements/for...of", "for...of")}}, au lieu de{{domxref('Headers.entries()', 'entries()')}}: `for (var p of myHeaders)` est équivalent à `for (var p of myHeaders.entries())`.
 
-<div class="note">
-<p><strong>Note :</strong> Vous pouvez trouver plus d'informations à propos des Headers disponibles en lisant la page suivante : <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a>.</p>
-</div>
+> **Note :** Vous pouvez trouver plus d'informations à propos des Headers disponibles en lisant la page suivante : [HTTP headers](/en-US/docs/Web/HTTP/Headers).
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{domxref("Headers.Headers()", "Headers()")}}</dt>
- <dd>Crée un nouvel objet <code>Headers</code>.</dd>
-</dl>
+- {{domxref("Headers.Headers()", "Headers()")}}
+  - : Crée un nouvel objet `Headers`.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{domxref("Headers.append()")}}</dt>
- <dd>Ajoute une nouvelle valeur à un Header existant dans un objet <code>Headers</code>, ou ajoute le header s'il n'existe pas déjà.</dd>
- <dt>{{domxref("Headers.delete()")}}</dt>
- <dd>Supprime un header dans un objet <code>Headers</code>.</dd>
- <dt>{{domxref("Headers.entries()")}}</dt>
- <dd>Retourne un {{jsxref("Iteration_protocols","iterator")}} permettant d'acceder à toutes les paires clef/valeur contenue dans cet objet.</dd>
- <dt>{{domxref("Headers.forEach()")}}</dt>
- <dd>Exécute une fonction fournie une fois pour chaque élément du tableau.</dd>
- <dt>{{domxref("Headers.get()")}}</dt>
- <dd>Retourne une séquence {{domxref("ByteString")}} de toutes les valeurs d'un Header dans un objet <code>Headers</code> avec un nom donné.</dd>
- <dt>{{domxref("Headers.has()")}}</dt>
- <dd>Retourne un booléen indiquant si un objet <code>Headers</code> contient un certain header.</dd>
- <dt>{{domxref("Headers.keys()")}}</dt>
- <dd>Retourne un  {{jsxref("Iteration_protocols", "iterator")}} permettant de parcourir toutes les clefs des paires clef/valeur contenues dans cet objet.</dd>
- <dt>{{domxref("Headers.set()")}}</dt>
- <dd>Définti une nouvelle valeur pour un header existant dans un objet <code>Headers</code>, ou ajoute le header s'il n'existe pas déjà.</dd>
- <dt>{{domxref("Headers.values()")}}</dt>
- <dd>Retourne un {{jsxref("Iteration_protocols", "iterator")}} permettant de parcourir toutes les valeurs des paires clefs/valeur contenues dans cet objet.</dd>
-</dl>
+- {{domxref("Headers.append()")}}
+  - : Ajoute une nouvelle valeur à un Header existant dans un objet `Headers`, ou ajoute le header s'il n'existe pas déjà.
+- {{domxref("Headers.delete()")}}
+  - : Supprime un header dans un objet `Headers`.
+- {{domxref("Headers.entries()")}}
+  - : Retourne un {{jsxref("Iteration_protocols","iterator")}} permettant d'acceder à toutes les paires clef/valeur contenue dans cet objet.
+- {{domxref("Headers.forEach()")}}
+  - : Exécute une fonction fournie une fois pour chaque élément du tableau.
+- {{domxref("Headers.get()")}}
+  - : Retourne une séquence {{domxref("ByteString")}} de toutes les valeurs d'un Header dans un objet `Headers` avec un nom donné.
+- {{domxref("Headers.has()")}}
+  - : Retourne un booléen indiquant si un objet `Headers` contient un certain header.
+- {{domxref("Headers.keys()")}}
+  - : Retourne un  {{jsxref("Iteration_protocols", "iterator")}} permettant de parcourir toutes les clefs des paires clef/valeur contenues dans cet objet.
+- {{domxref("Headers.set()")}}
+  - : Définti une nouvelle valeur pour un header existant dans un objet `Headers`, ou ajoute le header s'il n'existe pas déjà.
+- {{domxref("Headers.values()")}}
+  - : Retourne un {{jsxref("Iteration_protocols", "iterator")}} permettant de parcourir toutes les valeurs des paires clefs/valeur contenues dans cet objet.
 
-<div class="note">
-<p><strong>Note :</strong> Pour être clair, la différence entre {{domxref("Headers.set()")}} et {{domxref("Headers.append()")}} est que si le header spécifié existe et accepte plusieurs valeurs,  {{domxref("Headers.set()")}} va remplacer la valeur existante par la nouvelle, tandis que {{domxref("Headers.append()")}} va ajouter la nouvelle valeur à la fin des autres valeurs. Voir leurs pages dédiées pour des exemples de code.</p>
-</div>
+> **Note :** Pour être clair, la différence entre {{domxref("Headers.set()")}} et {{domxref("Headers.append()")}} est que si le header spécifié existe et accepte plusieurs valeurs,  {{domxref("Headers.set()")}} va remplacer la valeur existante par la nouvelle, tandis que {{domxref("Headers.append()")}} va ajouter la nouvelle valeur à la fin des autres valeurs. Voir leurs pages dédiées pour des exemples de code.
 
-<div class="note">
-<p><strong>Note :</strong> Toutes les méthodes Headers vont retourner <code>TypeError</code> si vous essayez de passer dans une réfférenceun nom qui n'est pas un <a href="https://fetch.spec.whatwg.org/#concept-header-name">nom de Header HTTP valide</a>. Les opérations de mutation vont retourner <code>TypeError</code> si le header a un {{Glossary("Guard")}} immuable. Dans tous les autres cas, les erreurs sont silencieuses.</p>
-</div>
+> **Note :** Toutes les méthodes Headers vont retourner `TypeError` si vous essayez de passer dans une réfférenceun nom qui n'est pas un [nom de Header HTTP valide](https://fetch.spec.whatwg.org/#concept-header-name). Les opérations de mutation vont retourner `TypeError` si le header a un {{Glossary("Guard")}} immuable. Dans tous les autres cas, les erreurs sont silencieuses.
 
-<div class="note">
-<p><strong>Note :</strong> Lorsque les valeurs d'en-tête sont itérées, elles sont automatiquement triées par ordre lexicographique et les valeurs des noms d'en-tête en double sont combinées.</p>
-</div>
+> **Note :** Lorsque les valeurs d'en-tête sont itérées, elles sont automatiquement triées par ordre lexicographique et les valeurs des noms d'en-tête en double sont combinées.
 
-<h3 id="Méthodes_obsolètes">Méthodes obsolètes</h3>
+### Méthodes obsolètes
 
-<dl>
- <dt>{{domxref("Headers.getAll()")}}</dt>
- <dd>Utilisée pour retourner un array de toutes les valeurs d'un header dans un objet <code>Headers</code> avec un nom donné. Cette méthode est maintenant supprimée des standards, et {{domxref("Headers.get()")}} retourne maintenant toutes les valeurs d'un nom donné au lieu du premier seulement.</dd>
-</dl>
+- {{domxref("Headers.getAll()")}}
+  - : Utilisée pour retourner un array de toutes les valeurs d'un header dans un objet `Headers` avec un nom donné. Cette méthode est maintenant supprimée des standards, et {{domxref("Headers.get()")}} retourne maintenant toutes les valeurs d'un nom donné au lieu du premier seulement.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans le fragment de code suivant, nous créons un nouvel Header en utilisant le contructeur <code>Headers()</code>, ajoutons un nouvel header à ce dernier en utilisant <code>append()</code>, puis retournons la valeur du header en utilisant <code>get()</code> :</p>
+Dans le fragment de code suivant, nous créons un nouvel Header en utilisant le contructeur `Headers()`, ajoutons un nouvel header à ce dernier en utilisant `append()`, puis retournons la valeur du header en utilisant `get()` :
 
-<pre class="brush: js">var monHeader = new Headers();
+```js
+var monHeader = new Headers();
 
 monHeader.append('Content-Type', 'text/xml');
 monHeader.get('Content-Type') // doit retourner 'text/xml'
-</pre>
+```
 
-<p>La même chose peut être accomplie en passant par un array d'array  un littéral d'objet au constructeur.</p>
+La même chose peut être accomplie en passant par un array d'array  un littéral d'objet au constructeur.
 
-<pre class="brush: js">var mesHeaders = new Headers({
+```js
+var mesHeaders = new Headers({
     'Content-Type': 'text/xml'
 });
 
@@ -99,35 +87,20 @@ mesHeaders = new Headers([
 ]);
 
 mesHeaders.get('Content-Type') // doit retourner 'text/xml'
-</pre>
+```
 
-<h2 id="Caractéristiques">Caractéristiques</h2>
+## Caractéristiques
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Caractéristiques</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#headers-class','Headers')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Caractéristiques                                                 | Statut                   | Commentaires |
+| ---------------------------------------------------------------- | ------------------------ | ------------ |
+| {{SpecName('Fetch','#headers-class','Headers')}} | {{Spec2('Fetch')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.Headers")}}
 
+## Voir aussi
 
-<p>{{Compat("api.Headers")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">API ServiceWorker</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [API ServiceWorker](/en-US/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

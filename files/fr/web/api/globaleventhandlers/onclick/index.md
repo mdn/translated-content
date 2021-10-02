@@ -3,32 +3,33 @@ title: element.onclick
 slug: Web/API/GlobalEventHandlers/onclick
 translation_of: Web/API/GlobalEventHandlers/onclick
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
+### Résumé
 
-<p>La propriété <strong>onclick</strong> représente le gestionnaire d'évènement onClick de l'élément courant.</p>
+La propriété **onclick** représente le gestionnaire d'évènement onClick de l'élément courant.
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<p><code><em>element</em>.onclick = <em>functionRef</em></code></p>
+`element.onclick = functionRef`
 
-<p>où <em>functionRef</em> est une fonction ou une expression de type <em>function. </em>Consulter la <a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope">référence des fonctions</a> pour plus de détails.</p>
+où _functionRef_ est une fonction ou une expression de type _function._ Consulter la [référence des fonctions](/en-US/docs/JavaScript/Reference/Functions_and_function_scope) pour plus de détails.
 
-<p>Le paramètre fourni au gestionnaire d'évènement <em>functionRef</em> lors du déclenchement de l'évènement est un objet qui représente l'évènement de click, de type {{ domxref("MouseEvent") }}.</p>
+Le paramètre fourni au gestionnaire d'évènement _functionRef_ lors du déclenchement de l'évènement est un objet qui représente l'évènement de click, de type {{ domxref("MouseEvent") }}.
 
-<h3 id="Exemple">Exemple</h3>
+### Exemple
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;onclick event example&lt;/title&gt;
-&lt;script type="text/javascript"&gt;
+```html
+<!doctype html>
+<html>
+<head>
+<title>onclick event example</title>
+<script type="text/javascript">
 function initElement()
 {
   var p = document.getElementById("foo");
   // NOTE: showAlert(); ou showAlert(param); NE fonctionne PAS ici.
-  // Il faut fournir une valeur de type <em><strong>function</strong></em> (nom de fonction déclaré ailleurs ou declaration en ligne de fonction).
+  // Il faut fournir une valeur de type function (nom de fonction déclaré ailleurs ou declaration en ligne de fonction).
   p.onclick = showAlert;
 };
 
@@ -36,31 +37,33 @@ function showAlert()
 {
   alert("Evènement de click détecté");
 }
-&lt;/script&gt;
-&lt;style type="text/css"&gt;
+</script>
+<style type="text/css">
 #foo {
 border: solid blue 2px;
 }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body onload="initElement();"&gt;
-&lt;span id="foo"&gt;Mon Span à cliquer&lt;/span&gt;
-&lt;p&gt;Cliquez sur l'élément ci-dessus.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</style>
+</head>
+<body onload="initElement();">
+<span id="foo">Mon Span à cliquer</span>
+<p>Cliquez sur l'élément ci-dessus.</p>
+</body>
+</html>
+```
 
-<p>Vous pouvez aussi utiliser la syntaxe des fonctions déclarées en ligne, anonymes ou non.</p>
+Vous pouvez aussi utiliser la syntaxe des fonctions déclarées en ligne, anonymes ou non.
 
-<pre class="brush: js">// affectation de fonction anonyme declarée en ligne
+```js
+// affectation de fonction anonyme declarée en ligne
 p.onclick = function() { alert("moot!"); };
-</pre>
+```
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p>L'évènement <code>click</code> est déclenché lorsque l'utilisateur clique sur un élément.</p>
+L'évènement `click` est déclenché lorsque l'utilisateur clique sur un élément.
 
-<p>Avec cette syntaxe un seul gestionnaire d'évènement click peut être assigné à un élement . Pour gérer plusieurs fonctions gestionnaires d'évènements click sur un même élément, utilisez {{ domxref("EventTarget.addEventListener()") }} qui fait partie de la spécification DOM Events.</p>
+Avec cette syntaxe un seul gestionnaire d'évènement click peut être assigné à un élement . Pour gérer plusieurs fonctions gestionnaires d'évènements click sur un même élément, utilisez {{ domxref("EventTarget.addEventListener()") }} qui fait partie de la spécification DOM Events.
 
-<h3 id="Sp.C3.A9cification">Spécification</h3>
+### Spécification
 
-<p>Defini en <a href="http://w3c.github.io/html/webappapis.html#dom-globaleventhandlers-onclick">HTML</a>.</p>
+Defini en [HTML](http://w3c.github.io/html/webappapis.html#dom-globaleventhandlers-onclick).

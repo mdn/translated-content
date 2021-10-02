@@ -9,51 +9,40 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/canvas
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La propriété <code><strong>CanvasRenderingContext2D.canvas</strong></code> est une référence à l'objet {{domxref("HTMLCanvasElement")}} qui est associé au contexte. Il peut être {{jsxref("null")}} s'il n'est pas associé à un élément {{HTMLElement("canvas")}}.</p>
+La propriété **`CanvasRenderingContext2D.canvas`** est une référence à l'objet {{domxref("HTMLCanvasElement")}} qui est associé au contexte. Il peut être {{jsxref("null")}} s'il n'est pas associé à un élément {{HTMLElement("canvas")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var><em>ctx</em></var>.canvas;</pre>
+    ctx.canvas;
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Soit cet élément {{HTMLElement("canvas")}}:</p>
+Soit cet élément {{HTMLElement("canvas")}}:
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<p>Vous pouvez obtenir la référence à l'élément <code>canvas</code> grâce à <code>CanvasRenderingContext2D</code> en utilisant la propriété <code>canvas</code> :</p>
+Vous pouvez obtenir la référence à l'élément `canvas` grâce à `CanvasRenderingContext2D` en utilisant la propriété `canvas` :
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 ctx.canvas // HTMLCanvasElement
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-canvas", "CanvasRenderingContext2D.canvas")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                            | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-canvas", "CanvasRenderingContext2D.canvas")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.canvas")}}</p>
+{{Compat("api.CanvasRenderingContext2D.canvas")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- {{domxref("CanvasRenderingContext2D")}}

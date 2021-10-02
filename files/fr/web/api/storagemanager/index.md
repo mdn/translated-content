@@ -16,40 +16,25 @@ tags:
   - Usage
 translation_of: Web/API/StorageManager
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}
 
-<p>The <strong><code>StorageManager</code></strong> interface of the the <a href="/en-US/docs/Web/API/Storage_API">Storage API</a> provides an interface for managing persistance permissions and estimating available storage. You can get a reference to this interface using either {{domxref("navigator.storage")}} or {{domxref("WorkerNavigator.storage")}}.</p>
+The **`StorageManager`** interface of the the [Storage API](/en-US/docs/Web/API/Storage_API) provides an interface for managing persistance permissions and estimating available storage. You can get a reference to this interface using either {{domxref("navigator.storage")}} or {{domxref("WorkerNavigator.storage")}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-	<dt>{{domxref("StorageManager.estimate()")}} {{securecontext_inline}}</dt>
-	<dd>Returns a {{domxref("StorageEstimate")}} object containing usage and quota numbers for your origin.</dd>
-	<dt>{{domxref("StorageManager.persist()")}} {{securecontext_inline}}</dt>
-	<dd>Returns a {{jsxref('Promise')}} that resolves to <code>true</code> if the user agent is able to persist your site's storage.</dd>
-	<dt>{{domxref("StorageManager.persisted()")}} {{securecontext_inline}}</dt>
-	<dd>Returns a {{jsxref('Promise')}} that resolves to <code>true</code> if persistence has already been granted for your site's storage.</dd>
-</dl>
+- {{domxref("StorageManager.estimate()")}} {{securecontext_inline}}
+  - : Returns a {{domxref("StorageEstimate")}} object containing usage and quota numbers for your origin.
+- {{domxref("StorageManager.persist()")}} {{securecontext_inline}}
+  - : Returns a {{jsxref('Promise')}} that resolves to `true` if the user agent is able to persist your site's storage.
+- {{domxref("StorageManager.persisted()")}} {{securecontext_inline}}
+  - : Returns a {{jsxref('Promise')}} that resolves to `true` if persistence has already been granted for your site's storage.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Storage','#storagemanager','StorageManger')}}</td>
-			<td>{{Spec2('Storage')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+| Specification                                                                | Status                       | Comment             |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('Storage','#storagemanager','StorageManger')}} | {{Spec2('Storage')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-
-<p>{{Compat("api.StorageManager")}}</p>
+{{Compat("api.StorageManager")}}

@@ -10,70 +10,50 @@ tags:
   - Élément HTML
 translation_of: Web/API/HTMLElement/isContentEditable
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p>La propriété en lecture seule <strong><code>HTMLElement.isContentEditable</code></strong> renvoie un  {{jsxref("Boolean")}} qui est <code>true </code><em>(vrai)</em> si le contenu de l'élément est éditable ; sinon elle renvoie <code>false</code><em>(faux)</em>.</p>
+La propriété en lecture seule **`HTMLElement.isContentEditable`** renvoie un  {{jsxref("Boolean")}} qui est `true `_(vrai)_ si le contenu de l'élément est éditable ; sinon elle renvoie `false`_(faux)_.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>editable</em> = <em>element</em>.isContentEditable
-</pre>
+    editable = element.isContentEditable
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.getElementById("infoText1").innerHTML += document.getElementById("myText1").isContentEditable;
-document.getElementById("infoText2").innerHTML += document.getElementById("myText2").isContentEditable;</pre>
+```js
+document.getElementById("infoText1").innerHTML += document.getElementById("myText1").isContentEditable;
+document.getElementById("infoText2").innerHTML += document.getElementById("myText2").isContentEditable;
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="myText1"&gt;Uneditable Paragraph&lt;/p&gt;
-&lt;p id="myText2" contentEditable="true"&gt;Editable Paragraph&lt;/p&gt;
+```html
+<p id="myText1">Uneditable Paragraph</p>
+<p id="myText2" contentEditable="true">Editable Paragraph</p>
 
-&lt;p id="infoText1"&gt;Can edit the first paragraph? &lt;/p&gt;
-&lt;p id="infoText2"&gt;Can edit the second paragraph? &lt;/p&gt;</pre>
+<p id="infoText1">Can edit the first paragraph? </p>
+<p id="infoText2">Can edit the second paragraph? </p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "editing.html#dom-iscontenteditable", "HTMLElement.contenteditable")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Pas de changement de la dernière image, {{SpecName('HTML5.1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "editing.html#dom-iscontenteditable", "HTMLElement.contenteditable")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>L'image de {{SpecName('HTML WHATWG')}}, n'est pas changée par {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "editing.html#dom-iscontenteditable", "HTMLElement.contenteditable")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Image de  {{SpecName('HTML WHATWG')}},  definition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                    | Status                           | Comment                                                                                                 |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "editing.html#dom-iscontenteditable", "HTMLElement.contenteditable")}} | {{Spec2('HTML WHATWG')}} | Pas de changement de la dernière image, {{SpecName('HTML5.1')}}                                |
+| {{SpecName('HTML5.1', "editing.html#dom-iscontenteditable", "HTMLElement.contenteditable")}}     | {{Spec2('HTML5.1')}}     | L'image de {{SpecName('HTML WHATWG')}}, n'est pas changée par {{SpecName('HTML5 W3C')}} |
+| {{SpecName('HTML5 W3C', "editing.html#dom-iscontenteditable", "HTMLElement.contenteditable")}}     | {{Spec2('HTML5 W3C')}}     | Image de  {{SpecName('HTML WHATWG')}},  definition initiale.                                   |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.HTMLElement.isContentEditable")}}</p>
+{{Compat("api.HTMLElement.isContentEditable")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("element.contentEditable")}}</li>
- <li>L'attribut global <a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a>.</li>
-</ul>
+- {{domxref("element.contentEditable")}}
+- L'attribut global [contenteditable](/en-US/docs/Web/HTML/Global_attributes/contenteditable).

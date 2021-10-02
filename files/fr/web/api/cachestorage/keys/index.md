@@ -12,32 +12,32 @@ tags:
   - keys
 translation_of: Web/API/CacheStorage/keys
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>La méthode <code><strong>keys</strong></code><strong><code>()</code></strong> de l'interface {{domxref("CacheStorage")}} retourne une {{jsxref("Promise", "Promesse")}} qui renvoie une liste content les chaines de caractères correspondant à tous les noms des {{domxref("Cache")}} suivient par l'objet {{domxref("CacheStorage")}}. Utilisez cette méthode pour itérer sur une liste de tous les objets {{domxref("Cache")}}.</p>
+La méthode **`keys`\*\***`()`\*\* de l'interface {{domxref("CacheStorage")}} retourne une {{jsxref("Promise", "Promesse")}} qui renvoie une liste content les chaines de caractères correspondant à tous les noms des {{domxref("Cache")}} suivient par l'objet {{domxref("CacheStorage")}}. Utilisez cette méthode pour itérer sur une liste de tous les objets {{domxref("Cache")}}.
 
-<p>Vous pouvez accéder à <code>CacheStorage</code> via la propriété globale {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}}.</p>
+Vous pouvez accéder à `CacheStorage` via la propriété globale {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">caches.keys().then(function(<em>keyList</em>) {
-  // faire quelque-chose avec votre keylist
-});
-</pre>
+    caches.keys().then(function(keyList) {
+      // faire quelque-chose avec votre keylist
+    });
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Retour">Retour</h3>
+### Retour
 
-<p>Une {{jsxref("Promise", "Promesse")}} qui retourne une liste de noms de {{domxref("Cache")}} contenus dans un objet {{domxref("CacheStorage")}}.</p>
+Une {{jsxref("Promise", "Promesse")}} qui retourne une liste de noms de {{domxref("Cache")}} contenus dans un objet {{domxref("CacheStorage")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans ce fragment de code, nous attendons un évènement, et bloquons avec un {{domxref("ExtendableEvent.waitUntil","waitUntil()")}}, qui nettoie les anciens caches, inutilisés, avant que le nouveau service worker soit activé. Nous avons ici une liste blanche contenant le nom du cache que nous voulons garder. Nous retournons les clés des caches dans l'objet {{domxref("CacheStorage")}} utilisant {{domxref("CacheStorage.keys")}}, pour ensuite vérifier que chaque clé est dans la liste blance. Sinon, nous la supprimons avec <code>delete().</code></p>
+Dans ce fragment de code, nous attendons un évènement, et bloquons avec un {{domxref("ExtendableEvent.waitUntil","waitUntil()")}}, qui nettoie les anciens caches, inutilisés, avant que le nouveau service worker soit activé. Nous avons ici une liste blanche contenant le nom du cache que nous voulons garder. Nous retournons les clés des caches dans l'objet {{domxref("CacheStorage")}} utilisant {{domxref("CacheStorage.keys")}}, pour ensuite vérifier que chaque clé est dans la liste blance. Sinon, nous la supprimons avec `delete().`
 
-<pre class="brush: js">this.addEventListener('activate', function(event) {
+```js
+this.addEventListener('activate', function(event) {
   var cacheWhitelist = ['v2'];
 
   event.waitUntil(
@@ -49,35 +49,21 @@ translation_of: Web/API/CacheStorage/keys
       });
     })
   );
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-cachestorage-keys', 'CacheStorage: keys')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                               | Commentaire          |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('Service Workers', '#dom-cachestorage-keys', 'CacheStorage: keys')}} | {{Spec2('Service Workers')}} | Définition initiale. |
 
-<h2 id="Compatibilités_des_navigateurs">Compatibilités des navigateurs</h2>
+## Compatibilités des navigateurs
 
+{{Compat("api.CacheStorage.keys")}}
 
+## Voir aussi
 
-<p>{{Compat("api.CacheStorage.keys")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers">Utiliser les Service Workers</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WorkerGlobalScope.caches")}}</li>
-</ul>
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WorkerGlobalScope.caches")}}

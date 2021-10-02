@@ -8,67 +8,52 @@ tags:
   - namespaceURI
 translation_of: Web/API/Attr/namespaceURI
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>La propriété en lecture seule <code><strong>Attr.namespaceURI</strong></code> retourne l'URI d'espace de nom de l'attribut, ou <code>null</code> si l'élément  n'est pas dans un espace de noms.</p>
+La propriété en lecture seule **`Attr.namespaceURI`** retourne l'URI d'espace de nom de l'attribut, ou `null` si l'élément  n'est pas dans un espace de noms.
 
-<div class="note">
-<p><strong>Note :</strong> Avant DOM4 cet API était défini dans l'interface {{domxref("Node")}}.</p>
-</div>
+> **Note :** Avant DOM4 cet API était défini dans l'interface {{domxref("Node")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>namespace</var> = <var>attribute</var>.namespaceURI</pre>
+    namespace = attribute.namespaceURI
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans cet extrait de code, un attribut est examiné pour son {{domxref("localName")}} et son <code>namespaceURI</code>. Si le <code>namespaceURI</code> renvoie l'espace de noms XUL et le <code>localName</code> retourne "browser" (<em>navigateur</em>), alors le noeud est compris comme étant un <code>&lt;browser/&gt;</code> XUL.</p>
+Dans cet extrait de code, un attribut est examiné pour son {{domxref("localName")}} et son `namespaceURI`. Si le `namespaceURI` renvoie l'espace de noms XUL et le `localName` retourne "browser" (_navigateur_), alors le noeud est compris comme étant un `<browser/>` XUL.
 
-<pre class="brush:js">if (attribute.localName == "value" &amp;&amp;
+```js
+if (attribute.localName == "value" &&
     attribute.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
   // ceci est une valeur XUL
-}</pre>
+}
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Ce n'est pas une valeur calculée, mais le résultat d'une recherche d'espace de noms basée sur un examen des déclarations d'espace de noms dans la portée. L'URI de l'espace de noms d'un attribut est figé à l'heure de création de l'attribut.</p>
+Ce n'est pas une valeur calculée, mais le résultat d'une recherche d'espace de noms basée sur un examen des déclarations d'espace de noms dans la portée. L'URI de l'espace de noms d'un attribut est figé à l'heure de création de l'attribut.
 
-<p>Dans Firefox 3.5 et précédents, l'URI d'espace de nom pour les attributs HTML dans les documents HTML est <code>null</code>. Dans les versions ultérieures, en conformité avec HTML5, il est <code><a href="https://www.w3.org/1999/xhtml">https://www.w3.org/1999/xhtml</a></code> comme dans XHTML. {{gecko_minversion_inline("1.9.2")}}</p>
+Dans Firefox 3.5 et précédents, l'URI d'espace de nom pour les attributs HTML dans les documents HTML est `null`. Dans les versions ultérieures, en conformité avec HTML5, il est [`https://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) comme dans XHTML. {{gecko_minversion_inline("1.9.2")}}
 
-<p>Vous pouvez créer un attribut avec le <code>namespaceURI</code> spécifié en utilisant la méthode de DOM niveau 2 {{domxref("Element.setAttributeNS")}}.</p>
+Vous pouvez créer un attribut avec le `namespaceURI` spécifié en utilisant la méthode de DOM niveau 2 {{domxref("Element.setAttributeNS")}}.
 
-<p>Selon la spécification <a href="https://www.w3.org/TR/xml-names11/">Namespaces en XML</a>, un attribut n'hérite pas de l'espace de noms de l'élément auquel il est attaché. Si un attribut n'est pas explicitement donné à un espace de noms, il n'a pas d'espace de noms.</p>
+Selon la spécification [Namespaces en XML](https://www.w3.org/TR/xml-names11/), un attribut n'hérite pas de l'espace de noms de l'élément auquel il est attaché. Si un attribut n'est pas explicitement donné à un espace de noms, il n'a pas d'espace de noms.
 
-<p>Le DOM ne gère pas ou n'applique pas la validation de l'espace de noms en soi. Il appartient à l'application DOM de faire toute validation nécessaire. Notez également que le préfixe d'espace de noms, une fois associé à un nœud particulier, ne peut pas être modifié.</p>
+Le DOM ne gère pas ou n'applique pas la validation de l'espace de noms en soi. Il appartient à l'application DOM de faire toute validation nécessaire. Notez également que le préfixe d'espace de noms, une fois associé à un nœud particulier, ne peut pas être modifié.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-element-namespaceuri", "Element.namespaceuri")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                   | Commentaire         |
+| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
+| {{SpecName("DOM4", "#dom-element-namespaceuri", "Element.namespaceuri")}} | {{Spec2("DOM4")}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Attr.namespaceURI")}}</p>
+{{Compat("api.Attr.namespaceURI")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Attr.localName")}}</li>
- <li>{{domxref("Attr.prefix")}}</li>
- <li>{{domxref("Element.namespaceURI")}}</li>
- <li>{{domxref("Node.namespaceURI")}}</li>
-</ul>
+- {{domxref("Attr.localName")}}
+- {{domxref("Attr.prefix")}}
+- {{domxref("Element.namespaceURI")}}
+- {{domxref("Node.namespaceURI")}}

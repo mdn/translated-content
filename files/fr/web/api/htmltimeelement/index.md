@@ -3,62 +3,35 @@ title: HTMLTimeElement
 slug: Web/API/HTMLTimeElement
 translation_of: Web/API/HTMLTimeElement
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>L'interface <strong><code>HTMLTimeElement</code></strong> fournit des propriétés spéciales (en plus de celles fournies en héritage par l'interface {{domxref("HTMLElement")}}) pour manipuler les éléments {{HTMLElement("time")}}.</p>
+L'interface **`HTMLTimeElement`** fournit des propriétés spéciales (en plus de celles fournies en héritage par l'interface {{domxref("HTMLElement")}}) pour manipuler les éléments {{HTMLElement("time")}}.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Hérite des propriétés de {{domxref("HTMLElement")}}.</em></p>
+_Hérite des propriétés de {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLTimeElement.dateTime")}}</dt>
- <dd>C'est une {{domxref("DOMString")}} qui reflète l'attribut {{htmlattrxref("datetime", "time")}} de l'élément HTML correspondant, dans une forme interprétable par un ordinateur de la date et de l'heure.</dd>
-</dl>
+- {{domxref("HTMLTimeElement.dateTime")}}
+  - : C'est une {{domxref("DOMString")}} qui reflète l'attribut {{htmlattrxref("datetime", "time")}} de l'élément HTML correspondant, dans une forme interprétable par un ordinateur de la date et de l'heure.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Pas de méthode spécifique, mais cette interface hérite des méthodes de {{domxref("HTMLElement")}}.</em></p>
+_Pas de méthode spécifique, mais cette interface hérite des méthodes de {{domxref("HTMLElement")}}._
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmltimeelement", "HTMLTimeElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "text-level-semantics.html#the-time-element", "HTMLTimeElement")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Pas de changement depuis {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "text-level-semantics.html#the-time-element", "HTMLTimeElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | Status                           | Commentaires                                               |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "#htmltimeelement", "HTMLTimeElement")}}                                 | {{Spec2('HTML WHATWG')}} |                                                            |
+| {{SpecName('HTML5.1', "text-level-semantics.html#the-time-element", "HTMLTimeElement")}}     | {{Spec2('HTML5.1')}}     | Pas de changement depuis {{SpecName("HTML5 W3C")}}. |
+| {{SpecName('HTML5 W3C', "text-level-semantics.html#the-time-element", "HTMLTimeElement")}} | {{Spec2('HTML5 W3C')}}     | Définition initiale.                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>
+{{Compat("api.HTMLTimeElement")}}
 
+## Voir aussi
 
-<p>{{Compat("api.HTMLTimeElement")}}</p>
-</div>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>L'élément HTML {{HTMLElement("time")}} implémentant cette interface.</li>
-</ul>
+- L'élément HTML {{HTMLElement("time")}} implémentant cette interface.

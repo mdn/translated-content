@@ -3,24 +3,25 @@ title: AudioBuffer.duration
 slug: Web/API/AudioBuffer/duration
 translation_of: Web/API/AudioBuffer/duration
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>La propriéré <code>duration</code>  de l'interface {{ domxref("AudioBuffer") }} renvoie un nombre flottant à double précision représentant la durée, en secondes, des données PCM stockées dans le buffer.</p>
-</div>
+La propriéré `duration`  de l'interface {{ domxref("AudioBuffer") }} renvoie un nombre flottant à double précision représentant la durée, en secondes, des données PCM stockées dans le buffer.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var tableauTampon = audioCtx.createBuffer(nombreCanaux, nombreFrames, contexteAudio.sampleRate);
-tableauTampon.duration;</pre>
+```js
+var tableauTampon = audioCtx.createBuffer(nombreCanaux, nombreFrames, contexteAudio.sampleRate);
+tableauTampon.duration;
+```
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Nombre flottant à double précision.</p>
+Nombre flottant à double précision.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">// Stereo
+```js
+// Stereo
 var nombreCanaux = 2;
 
 // Crée une mémoire tampon vide de 2 secondes
@@ -31,10 +32,10 @@ var tableauDonnees = audioCtx.createBuffer(nombreCanaux, nombreFrames, contexteA
 bouton.onclick = function() {
   // remplit la mémoire tampon avec du bruit blanc
   // valeurs aléatoires entre -1.0 et 1.0
-  for (var canal = 0; canal &lt; nombreCanaux; canal++) {
+  for (var canal = 0; canal < nombreCanaux; canal++) {
     // génère le tableau contenant les données
     var tampon = tableauDonnees.getChannelData(canal);
-    for (var i = 0; i &lt; nombreFrames; i++) {
+    for (var i = 0; i < nombreFrames; i++) {
       // Math.random() donne une valeur comprise entre [0; 1.0]
       // l'audio doit être compris entre [-1.0; 1.0]
       tampon[i] = Math.random() * 2 - 1;
@@ -42,31 +43,18 @@ bouton.onclick = function() {
   }
   console.log(tableauDonnees.duration);
 }
-</pre>
+```
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioBuffer-duration', 'duration')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                               | Commentaire |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
+| {{SpecName('Web Audio API', '#widl-AudioBuffer-duration', 'duration')}} | {{Spec2('Web Audio API')}} |             |
 
-<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+## Compatibilité navigateurs
 
-<p>{{Compat("api.AudioBuffer.duration")}}</p>
+{{Compat("api.AudioBuffer.duration")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Utiliser la Web Audio API</a></li>
-</ul>
+- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

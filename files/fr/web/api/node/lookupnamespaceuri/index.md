@@ -8,16 +8,12 @@ tags:
   - Noeuds
 translation_of: Web/API/Node/lookupNamespaceURI
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>La méthode <code><strong>Node.lookupNamespaceURI()</strong></code> accepte un préfixe et renvoie l'URI de l'espace de nom associé avec lui sur le noeud donné s'il le trouve (et <code>null</code> sinon). La fourniture de <code>null</code> pour le préfixe renverra l'espace de nom par défaut.</p>
+La méthode **`Node.lookupNamespaceURI()`** accepte un préfixe et renvoie l'URI de l'espace de nom associé avec lui sur le noeud donné s'il le trouve (et `null` sinon). La fourniture de `null` pour le préfixe renverra l'espace de nom par défaut.
 
-<p>Du fait du <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=312019">bug 312019</a>, cette méthode ne fonctionne pas avec les espaces de noms attribués dynamiquement (c'est-à-dire ceux qui sont définis par <a href="/en/DOM/Node.prefix">Node.prefix</a>).</p>
+Du fait du [bug 312019](https://bugzilla.mozilla.org/show_bug.cgi?id=312019), cette méthode ne fonctionne pas avec les espaces de noms attribués dynamiquement (c'est-à-dire ceux qui sont définis par [Node.prefix](/en/DOM/Node.prefix)).
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-lookupNamespaceURI">http://www.w3.org/TR/DOM-Level-3-Cor...upNamespaceURI</a></li>
-</ul>
-
-<p> </p>
+- [http://www.w3.org/TR/DOM-Level-3-Cor...upNamespaceURI](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-lookupNamespaceURI)

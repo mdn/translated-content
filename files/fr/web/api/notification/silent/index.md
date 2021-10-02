@@ -13,42 +13,28 @@ tags:
   - silent
 translation_of: Web/API/Notification/silent
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>La propriété en lecture seule <strong><code>silent</code></strong> de l'interface {{domxref ("Notification")}} spécifie si la notification doit être silencieuse, c'est-à-dire qu'aucun son ou vibration ne doit être émis, quels que soient les paramètres de l'appareil. Ceci est comme définis à l'aide de l'option <code>silent</code> lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()")}}.</p>
+La propriété en lecture seule **`silent`** de l'interface {{domxref ("Notification")}} spécifie si la notification doit être silencieuse, c'est-à-dire qu'aucun son ou vibration ne doit être émis, quels que soient les paramètres de l'appareil. Ceci est comme définis à l'aide de l'option `silent` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>Notification</var>.silent
-</pre>
+    Notification.silent
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un {{domxref("Boolean")}}. <code>false</code> est la valeur par défaut; <code>true</code> rend la notification silencieuse.</p>
+Un {{domxref("Boolean")}}. `false` est la valeur par défaut; `true` rend la notification silencieuse.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-notification-silent','silent')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                                     | Commentaire     |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------- |
+| {{SpecName('Web Notifications','#dom-notification-silent','silent')}} | {{Spec2('Web Notifications')}} | Living standard |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Notification.silent")}}</p>
+{{Compat("api.Notification.silent")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a></li>
-</ul>
+- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

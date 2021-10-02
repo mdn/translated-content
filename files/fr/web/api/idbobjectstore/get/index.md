@@ -3,57 +3,52 @@ title: IDBObjectStore.get()
 slug: Web/API/IDBObjectStore/get
 translation_of: Web/API/IDBObjectStore/get
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-<p>La méthode <strong><code>get()</code></strong> de l'interface {{domxref("IDBObjectStore")}} fait une {{domxref("IDBRequest","requête")}} pour renvoyer la valeur d'un enregistrement du magasin d'objet {{domxref("IDBObjectStore","relié")}}.</p>
-</div>
+La méthode **`get()`** de l'interface {{domxref("IDBObjectStore")}} fait une {{domxref("IDBRequest","requête")}} pour renvoyer la valeur d'un enregistrement du magasin d'objet {{domxref("IDBObjectStore","relié")}}.
 
-<p>{{Note("Si plusieurs enregistrements peuvent être sélectionnés la valeur du premier enregistrement rencontré (dont la valeur n'est pas <code>undefined</code>) sera renvoyée.")}} {{Note("On ne peut pas savoir s'il y a correspondance mais que l(es) enregistrement(s) a/ont des valeurs non définie (<code>undefined</code>) ou s'ils n'y as pas de correspondance par cette méthode. On peut utulisé la methode getAllKeys pour retrouvé la ou les clés du ou des enregistrements qui n'ont pas de valeur défini (valeur = <code>undefined</code>).")}}</p>
+{{Note("Si plusieurs enregistrements peuvent être sélectionnés la valeur du premier enregistrement rencontré (dont la valeur n'est pas <code>undefined</code>) sera renvoyée.")}} {{Note("On ne peut pas savoir s'il y a correspondance mais que l(es) enregistrement(s) a/ont des valeurs non définie (<code>undefined</code>) ou s'ils n'y as pas de correspondance par cette méthode. On peut utulisé la methode getAllKeys pour retrouvé la ou les clés du ou des enregistrements qui n'ont pas de valeur défini (valeur = <code>undefined</code>).")}}
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var request = objectStore.get(cle);</pre>
+```js
+var request = objectStore.get(cle);
+```
 
-<h2 id="Paramètre">Paramètre</h2>
+## Paramètre
 
-<dl>
- <dt><code>cle</code></dt>
- <dd>la clé ou l'{{domxref("IDBKeyRange","intervalle de clé")}} de l'enregistrement dont on cherche la valeur.</dd>
-</dl>
+- `cle`
+  - : la clé ou l'{{domxref("IDBKeyRange","intervalle de clé")}} de l'enregistrement dont on cherche la valeur.
 
-<h2 id="Renvoie">Renvoie</h2>
+## Renvoie
 
-<dl>
- <dt>Une {{domxref("IDBRequest","requête")}}</dt>
- <dd>La propriété {{domxref("IDBRequest.result","result")}} de cette requête renvoie en cas de succès,  un clone structuré de la valeur de l'enregistrement correspondant à la clé ou du premier correspondant à l'intervalle de clé.</dd>
-</dl>
+- Une {{domxref("IDBRequest","requête")}}
+  - : La propriété {{domxref("IDBRequest.result","result")}} de cette requête renvoie en cas de succès,  un clone structuré de la valeur de l'enregistrement correspondant à la clé ou du premier correspondant à l'intervalle de clé.
 
-<h2 id="Exceptions">Exceptions</h2>
+## Exceptions
 
-<dl>
- <dt><code>TransactionInactiveError</code></dt>
- <dd>Cette {{domxref("DOMException","exception")}} est levé si la {{domxref("IDBTransaction","transaction")}} dont dépend cet {{domxref("IDBObjectStore","accès")}} au magasin d'objet est inactive.</dd>
- <dt><code>DataError</code></dt>
- <dd>Cette {{domxref("DOMException","exception")}} est levé si la clé ou l'{{domxref("IDBKeyRange","intervalle de clé")}} est invalide.</dd>
- <dt><code>InvalidStateError</code></dt>
- <dd>Cette {{domxref("DOMException","exception")}} est levé si le magasin d'objet à été supprimé.</dd>
-</dl>
+- `TransactionInactiveError`
+  - : Cette {{domxref("DOMException","exception")}} est levé si la {{domxref("IDBTransaction","transaction")}} dont dépend cet {{domxref("IDBObjectStore","accès")}} au magasin d'objet est inactive.
+- `DataError`
+  - : Cette {{domxref("DOMException","exception")}} est levé si la clé ou l'{{domxref("IDBKeyRange","intervalle de clé")}} est invalide.
+- `InvalidStateError`
+  - : Cette {{domxref("DOMException","exception")}} est levé si le magasin d'objet à été supprimé.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans le code suivant , on ouvre une {{domxref("IDBTransaction","transaction")}} sur la {{domxref("IDBDatabase","connexion")}} à la base de données, pour avoir l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet dans lequel on veut retrouver la valeur d'un enregistrement.</p>
+Dans le code suivant , on ouvre une {{domxref("IDBTransaction","transaction")}} sur la {{domxref("IDBDatabase","connexion")}} à la base de données, pour avoir l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet dans lequel on veut retrouver la valeur d'un enregistrement.
 
-<p>La méthode <strong><code>get() </code></strong>sert à retrouver la valeur de l'enregistrement dont la clé est <code><em>Walk dog</em></code> dans magasin d'objets <em><code>toDoList</code></em></p>
+La méthode **`get() `**sert à retrouver la valeur de l'enregistrement dont la clé est `Walk dog` dans magasin d'objets _`toDoList`_
 
-<pre class="brush: js">// ouvre la connexion à la base de données
+```js
+// ouvre la connexion à la base de données
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // Gère l'ouverture de la connexion
 DBOpenRequest.onsuccess = function() {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // enregistre la connexion dans la variable db
   db = DBOpenRequest.result;
@@ -68,12 +63,12 @@ function deleteData() {
 
   // affiche le succès de la transaction.
   transaction.oncomplete = function() {
-    note.innerHTML += '&lt;li&gt;Transaction effectuée: fin de la modification de la base de données.&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction effectuée: fin de la modification de la base de données.</li>';
   };
 
   // affiche la cause de l’échec de la transaction.
   transaction.onerror = function() {
-    note.innerHTML += '&lt;li&gt;Échec de la transaction: ' + transaction.error + ' la base de données n\'a pas été modifié&lt;/li&gt;';
+    note.innerHTML += '<li>Échec de la transaction: ' + transaction.error + ' la base de données n\'a pas été modifié</li>';
   };
 
   // ouvre un accès au magasin d'objet toDoList
@@ -84,47 +79,32 @@ function deleteData() {
 
   objectStoreRequest.onsuccess = function() {
     //Affiche le succès de la requête
-    note.innerHTML += '&lt;li&gt;Enregistrement retrouvé.&lt;/li&gt;';
+    note.innerHTML += '<li>Enregistrement retrouvé.</li>';
 
     //affecte la valeur de l'enregistrement à la variable
     var myRecord = objectStoreRequest.result;
   };
 };
-</pre>
+```
 
-<div class="note">
-  <p><strong>Note :</strong> Pour un exemple de travail complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>).</p>
-</div>
+> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBObjectStore-get-IDBRequest-any-key', 'get()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | Statut                       | Commentaire |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------- |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-get-IDBRequest-any-key', 'get()')}} | {{Spec2('IndexedDB')}} |             |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBObjectStore.get")}}</p>
+{{Compat("api.IDBObjectStore.get")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}</li>
- <li>{{domxref("IDBDatabase","Débuter une connexion")}}</li>
- <li>{{domxref("IDBTransaction","Utilisé les transactions")}}</li>
- <li>{{domxref("IDBKeyRange","Définir l'intervalle des clés")}}</li>
- <li>{{domxref("IDBObjectStore","Accès aux magasins d'objets")}}</li>
- <li>{{domxref("IDBCursor","Utiliser les curseur")}}</li>
- <li>Exemple de référence: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- {{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}
+- {{domxref("IDBDatabase","Débuter une connexion")}}
+- {{domxref("IDBTransaction","Utilisé les transactions")}}
+- {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
+- {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
+- {{domxref("IDBCursor","Utiliser les curseur")}}
+- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

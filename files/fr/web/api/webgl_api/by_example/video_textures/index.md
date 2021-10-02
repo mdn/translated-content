@@ -11,14 +11,14 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Video_textures
 original_slug: Web/API/WebGL_API/By_example/Les_textures_vidéos
 ---
-<div>{{draft}}{{IncludeSubnav("/fr/Apprendre")}}</div>
+{{draft}}{{IncludeSubnav("/fr/Apprendre")}}
 
-<p>{{Previous("Apprendre/WebGL/Par_exemple/Générer_des_textures_avec_du_code")}}</p>
+{{Previous("Apprendre/WebGL/Par_exemple/Générer_des_textures_avec_du_code")}}
 
-<p>Cet exemple illustre comment utiliser des fichiers vidéos comme textures.</p>
+Cet exemple illustre comment utiliser des fichiers vidéos comme textures.
 
-<h3 id="Des_textures_à_partir_de_vidéos">Des textures à partir de vidéos</h3>
+### Des textures à partir de vidéos
 
-<p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510)}}</p>
+{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510)}}
 
-<p>{{Previous("Apprendre/WebGL/Par_exemple/Générer_des_textures_avec_du_code")}}</p>
+{{Previous("Apprendre/WebGL/Par_exemple/Générer_des_textures_avec_du_code")}}

@@ -8,13 +8,11 @@ tags:
   - XPath
 translation_of: Web/API/XPathExpression
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>Une <code>XPathExpression</code> est une requête de XPath compilé renvoyée par {{domxref("document.createExpression()")}}. Elle a une méthode <code>evaluate()</code> qui peut être utilisée pour exécuter le XPath compilé.</p>
+Une `XPathExpression` est une requête de XPath compilé renvoyée par {{domxref("document.createExpression()")}}. Elle a une méthode `evaluate()` qui peut être utilisée pour exécuter le XPath compilé.
 
-<h2 id="Methods">Méthodes</h2>
+## Méthodes
 
-<ul>
- <li>evaluate (<code>contextNode</code>, <code>type</code>, <code>result</code>) - fournit un noeud / document contextuel, une constante {{domxref("XPathResult")}} et <code>XPathResult</code> pour stocker la requête ou null pour renvoyer un nouveau XPathResult.</li>
- <li>evaluateWithContext (<code>contextNode</code>, <code>contextPosition</code>, <code>contextSize</code>, <code>type</code>, <code>result</code>) - fournit un noeud / document, une position et une taille contextuels, une constante <code>XPathResult</code> et un <code>XPathResult</code> pour stocker la requête ou null pour renvoyer un nouveau XPathResult.</li>
-</ul>
+- evaluate (`contextNode`, `type`, `result`) - fournit un noeud / document contextuel, une constante {{domxref("XPathResult")}} et `XPathResult` pour stocker la requête ou null pour renvoyer un nouveau XPathResult.
+- evaluateWithContext (`contextNode`, `contextPosition`, `contextSize`, `type`, `result`) - fournit un noeud / document, une position et une taille contextuels, une constante `XPathResult` et un `XPathResult` pour stocker la requête ou null pour renvoyer un nouveau XPathResult.

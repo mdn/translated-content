@@ -3,32 +3,30 @@ title: window.onpopstate
 slug: Web/API/WindowEventHandlers/onpopstate
 translation_of: Web/API/WindowEventHandlers/onpopstate
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<p>{{ gecko_minversion_header("2") }}</p>
+{{ gecko_minversion_header("2") }}
 
-<h3 id="Résumé">Résumé</h3>
+### Résumé
 
-<p>Un gestionnaire d'évènement pour l'évènement <code>popstate</code> de la fenêtre.</p>
+Un gestionnaire d'évènement pour l'évènement `popstate` de la fenêtre.
 
-<p>L'évènement <code>popstate</code> est envoyé à la fenêtre à chaque fois que l'entrée actuelle de l'historique change avec 2 autres entrées du même document. Si l'entrée actuelle a été créée en appelant <code>history.pushState()</code> ou a été modifiée en appelant <code>history.replaceState()</code>, la propriété state de l'évènement <code>popstate</code> contient une copie de l'objet d'entrée de l'historique.</p>
+L'évènement `popstate` est envoyé à la fenêtre à chaque fois que l'entrée actuelle de l'historique change avec 2 autres entrées du même document. Si l'entrée actuelle a été créée en appelant `history.pushState()` ou a été modifiée en appelant `history.replaceState()`, la propriété state de l'évènement `popstate` contient une copie de l'objet d'entrée de l'historique.
 
-<p>Sachez qu'appeler <code>history.pushState()</code> ou <code>history.replaceState()</code> ne déclenchera pas l'évènement <code>popstate</code>. Cet évènement n'est déclenché que par une action utilisateur telle que cliquer sur le bouton Retour (ou appeler <code>history.back()</code>, en JavaScript). L'évènement n'est déclenché que pour la navigation entre deux entrées du même document.</p>
+Sachez qu'appeler `history.pushState()` ou `history.replaceState()` ne déclenchera pas l'évènement `popstate`. Cet évènement n'est déclenché que par une action utilisateur telle que cliquer sur le bouton Retour (ou appeler `history.back()`, en JavaScript). L'évènement n'est déclenché que pour la navigation entre deux entrées du même document.
 
-<h3 id="Syntax">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval">window.onpopstate = <em>funcRef</em>;
-</pre>
+    window.onpopstate = funcRef;
 
-<ul>
- <li><code>funcRef</code> est une référence à une fonction.</li>
-</ul>
+- `funcRef` est une référence à une fonction.
 
-<h3 id="Lévènement_popstate">L'évènement popstate</h3>
+### L'évènement popstate
 
-<p>Par exemple, une page à l'adresse <a href="http://example.com/example.html">http://example.com/example.html</a> exécutant le code suivant générera les alertes suivantes:</p>
+Par exemple, une page à l'adresse <http://example.com/example.html> exécutant le code suivant générera les alertes suivantes:
 
-<pre class="brush: js">window.onpopstate = function(event) {
+```js
+window.onpopstate = function(event) {
   alert("adresse: " + document.location + ", état: " + JSON.stringify(event.state));
 };
 history.pushState({page: 1}, "titre 1", "?page=1");
@@ -37,20 +35,16 @@ history.replaceState({page: 3}, "titre 3", "?page=3");
 history.back(); // affiche "adresse: http://example.com/example.html?page=1, état: {"page":1}"
 history.back(); // affiche "adresse: http://example.com/example.html, état: null
 history.go(2);  // affiche "adresse: http://example.com/example.html?page=3, état: {"page":3}
-</pre>
+```
 
-<p>Même si l'entrée originelle (de <a href="http://example.com/example.html">http://example.com/example.html</a>) n'a aucun objet d'état associé, l'évènement <code>popstate</code> est toujours déclenché lorsque l'entrée est activée après un deuxième appel à <code>history.back()</code>.</p>
+Même si l'entrée originelle (de <http://example.com/example.html>) n'a aucun objet d'état associé, l'évènement `popstate` est toujours déclenché lorsque l'entrée est activée après un deuxième appel à `history.back()`.
 
-<h3 id="Specification">Spécification</h3>
+### Spécification
 
-<ul>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#handler-window-onpopstate">HTML5 popstate event</a></li>
-</ul>
+- [HTML5 popstate event](http://www.whatwg.org/specs/web-apps/current-work/#handler-window-onpopstate)
 
-<h3 id="Lire_également">Lire également</h3>
+### Lire également
 
-<ul>
- <li>{{ domxref("window.history") }}</li>
- <li><a href="/fr/docs/DOM/manipuler_lhistorique_du_navigateur">Manipuler l'historique du navigateur</a></li>
- <li><a href="/fr/docs/DOM/Manipulating_the_browser_history/Example">Exemple de navigation en Ajax</a></li>
-</ul>
+- {{ domxref("window.history") }}
+- [Manipuler l'historique du navigateur](/fr/docs/DOM/manipuler_lhistorique_du_navigateur)
+- [Exemple de navigation en Ajax](/fr/docs/DOM/Manipulating_the_browser_history/Example)

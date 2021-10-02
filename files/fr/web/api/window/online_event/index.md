@@ -9,69 +9,59 @@ tags:
   - Window
 translation_of: Web/API/Window/online_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>L'événement <strong><code>online</code></strong> de l'interface {{domxref("Window")}} est déclenché lorsque le navigateur a obtenu l'accès au réseau et que la valeur de {{domxref("Navigator.onLine")}} passe à <code>true</code>.</p>
+L'événement **`online`** de l'interface {{domxref("Window")}} est déclenché lorsque le navigateur a obtenu l'accès au réseau et que la valeur de {{domxref("Navigator.onLine")}} passe à `true`.
 
-<div class="note">
-  <p><strong>Note :</strong> Cet événement ne doit pas être utilisé pour déterminer la disponibilité d'un site Web particulier. Des problèmes de réseau ou des pare-feu peuvent encore empêcher l'accès au site Web.</p>
-</div>
+> **Note :** Cet événement ne doit pas être utilisé pour déterminer la disponibilité d'un site Web particulier. Des problèmes de réseau ou des pare-feu peuvent encore empêcher l'accès au site Web.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bulles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Annulable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Propriété de gestionnaire d'événements</th>
-   <td>{{domxref("GlobalEventHandlers.ononline", "ononline")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bulles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Annulable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Propriété de gestionnaire d'événements</th>
+      <td>
+        {{domxref("GlobalEventHandlers.ononline", "ononline")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">// addEventListener version
-window.addEventListener('online', (event) =&gt; {
+```js
+// addEventListener version
+window.addEventListener('online', (event) => {
     console.log("Vous êtes maintenant connecté au réseau.");
 });
 
 // ononline version
-window.ononline = (event) =&gt; {
+window.ononline = (event) => {
   console.log("Vous êtes maintenant connecté au réseau.");
 };
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "indices.html#event-online", "online event")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                           |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- |
+| {{SpecName('HTML WHATWG', "indices.html#event-online", "online event")}} | {{Spec2('HTML WHATWG')}} |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.online_event")}}</p>
+{{Compat("api.Window.online_event")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Window/offline_event"><code>offline</code></a></li>
-</ul>
+- [`offline`](/en-US/docs/Web/API/Window/offline_event)

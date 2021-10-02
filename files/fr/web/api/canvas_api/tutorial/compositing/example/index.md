@@ -11,17 +11,18 @@ tags:
 translation_of: Web/API/Canvas_API/Tutorial/Compositing/Example
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Composition/Example
 ---
-<div>{{CanvasSidebar}}</div>
+{{CanvasSidebar}}
 
-<p>Cet exemple illustre un certain nombre d'<a href="/fr/docs/Web/API/CanvasRenderingContext2D.globalCompositeOperation">opérations de composition</a>. Le résultat donne ceci:</p>
+Cet exemple illustre un certain nombre d'[opérations de composition](/fr/docs/Web/API/CanvasRenderingContext2D.globalCompositeOperation). Le résultat donne ceci:
 
-<p>{{EmbedLiveSample("Exemple_de_composition", "100%", 7250)}}</p>
+{{EmbedLiveSample("Exemple_de_composition", "100%", 7250)}}
 
-<h2 id="Exemple_de_composition">Exemple de composition</h2>
+## Exemple de composition
 
-<p>Ce code configure les valeurs globales utilisées par le reste du programme.</p>
+Ce code configure les valeurs globales utilisées par le reste du programme.
 
-<pre class="brush: js">var canvas1 = document.createElement("canvas");
+```js
+var canvas1 = document.createElement("canvas");
 var canvas2 = document.createElement("canvas");
 var gco = [ 'source-over','source-in','source-out','source-atop',
             'destination-over','destination-in','destination-out','destination-atop',
@@ -59,13 +60,14 @@ var gcoText = [
 ].reverse();
 var width = 320;
 var height = 340;
-</pre>
+```
 
-<h3 id="Programme_principal">Programme principal</h3>
+### Programme principal
 
-<p>Quand la page se charge, le code suivant s'exécute pour configurer et exécuter l'exemple:</p>
+Quand la page se charge, le code suivant s'exécute pour configurer et exécuter l'exemple:
 
-<pre class="brush: js">window.onload = function() {
+```js
+window.onload = function() {
     // lum en sRGB
     var lum = {
         r: 0.33,
@@ -82,11 +84,12 @@ var height = 340;
     runComposite();
     return;
 };
-</pre>
+```
 
-<p>Et dans le code suivant, <code>runComposite()</code> gère la majeure partie du travail, en s'appuyant sur un certain nombre de fonctions utilitaires pour faire les parties difficiles.</p>
+Et dans le code suivant, `runComposite()` gère la majeure partie du travail, en s'appuyant sur un certain nombre de fonctions utilitaires pour faire les parties difficiles.
 
-<pre class="brush: js">function createCanvas() {
+```js
+function createCanvas() {
     var canvas = document.createElement("canvas");
     canvas.style.background = "url("+op_8x8.data+")";
     canvas.style.border = "1px solid #000";
@@ -156,13 +159,14 @@ function runComposite() {
         dl.appendChild(dd);
     }
 };
-</pre>
+```
 
-<h3 id="Fonctions_utilitaires">Fonctions utilitaires</h3>
+### Fonctions utilitaires
 
-<p>Notre programme repose sur un certain nombbre de fonctions utilitaires:</p>
+Notre programme repose sur un certain nombbre de fonctions utilitaires:
 
-<pre class="brush: js">var lightMix = function() {
+```js
+var lightMix = function() {
     var ctx = canvas2.getContext("2d");
     ctx.save();
     ctx.globalCompositeOperation = "lighter";
@@ -184,9 +188,10 @@ function runComposite() {
     ctx.fillRect(0,0,30,30)
     ctx.fill();
 };
-</pre>
+```
 
-<pre class="brush: js">var colorSphere = function(element) {
+```js
+var colorSphere = function(element) {
     var ctx = canvas1.getContext("2d");
     var width = 360;
     var halfWidth = width / 2;
@@ -194,7 +199,7 @@ function runComposite() {
     var offset = 0; // scrollbar offset
     var oleft = -20;
     var otop = -20;
-    for (var n = 0; n &lt;= 359; n ++) {
+    for (var n = 0; n <= 359; n ++) {
         var gradient = ctx.createLinearGradient(oleft + halfWidth, otop, oleft + halfWidth, otop + halfWidth);
         var color = Color.HSV_RGB({ H: (n + 300) % 360, S: 100, V: 100 });
         gradient.addColorStop(0, "rgba(0,0,0,0)");
@@ -216,9 +221,10 @@ function runComposite() {
     ctx.fill();
     return ctx.canvas;
 };
-</pre>
+```
 
-<pre class="brush: js">// HSV (1978) = H: Hue / S: Saturation / V: Value
+```js
+// HSV (1978) = H: Hue / S: Saturation / V: Value
 Color = {};
 Color.HSV_RGB = function (o) {
     var H = o.H / 360,
@@ -229,7 +235,7 @@ Color.HSV_RGB = function (o) {
     if (S == 0) {
         R = G = B = Math.round(V * 255);
     } else {
-        if (H &gt;= 1) H = 0;
+        if (H >= 1) H = 0;
         H = 6 * H;
         D = H - Math.floor(H);
         A = Math.round(255 * V * (1 - S));
@@ -293,4 +299,5 @@ var createInterlace = function (size, color1, color2) {
     return pattern;
 };
 
-var op_8x8 = createInterlace(8, "#FFF", "#eee");</pre>
+var op_8x8 = createInterlace(8, "#FFF", "#eee");
+```

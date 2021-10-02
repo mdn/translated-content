@@ -4,45 +4,41 @@ slug: Web/API/Element/clientLeft
 translation_of: Web/API/Element/clientLeft
 browser-compat: api.Element.clientLeft
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>La propriété en lecture seule <strong><code>Element.clientLeft</code></strong> représente la largeur de la bordure gauche d'un élément, exprimée en pixels. Cette largeur inclut l'éventuelle largeur de la barre de défilement verticale si le texte se lit de droite à gauche et s'il y a un dépassement entraînant l'apparition d'une barre de défilement à gauche. <code>clientLeft</code> n'inclut pas la marge gauche ou le remplissage (<i lang="en">padding</i>) à gauche.</p>
+La propriété en lecture seule **`Element.clientLeft`** représente la largeur de la bordure gauche d'un élément, exprimée en pixels. Cette largeur inclut l'éventuelle largeur de la barre de défilement verticale si le texte se lit de droite à gauche et s'il y a un dépassement entraînant l'apparition d'une barre de défilement à gauche. `clientLeft` n'inclut pas la marge gauche ou le remplissage (<i lang="en">padding</i>) à gauche.
 
-<p>Lorsque la préférence <a href="http://kb.mozillazine.org/Layout.scrollbar.side"><code>layout.scrollbar.side</code></a> est paramétrée à 1 ou à 3 et que la direction du texte est de droite à gauche, <strong>alors la barre de défilement verticale est placée à gauche</strong> et ce placement aura donc un impact sur la valeur de <code>clientLeft</code>.</p>
+Lorsque la préférence [`layout.scrollbar.side`](http://kb.mozillazine.org/Layout.scrollbar.side) est paramétrée à 1 ou à 3 et que la direction du texte est de droite à gauche, **alors la barre de défilement verticale est placée à gauche** et ce placement aura donc un impact sur la valeur de `clientLeft`.
 
-<div class="note">
-  <p><strong>Note :</strong> Cette propriété sera arrondie en une valeur entière. Si vous souhaitez utiliser une valeur décimale, vous pouvez utiliser <a href="/fr/docs/Web/API/Element/getBoundingClientRect"><code>element.getBoundingClientRect()</code></a>. </p>
-</div>
+> **Note :** Cette propriété sera arrondie en une valeur entière. Si vous souhaitez utiliser une valeur décimale, vous pouvez utiliser [`element.getBoundingClientRect()`](/fr/docs/Web/API/Element/getBoundingClientRect).
 
-<div class="note">
-  <p><strong>Note :</strong> Lorsqu'un élément se voit appliquer <code>display: inline</code>, <code>clientLeft</code> renvoie <code>0</code>, quelle que soit la bordure de l'élément.</p>
-</div>
+> **Note :** Lorsqu'un élément se voit appliquer `display: inline`, `clientLeft` renvoie `0`, quelle que soit la bordure de l'élément.
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
+```js
 var left = element.clientLeft;
-</pre>
+```
 
-<h2 id="exemple">Exemple</h2>
+## Exemple
 
-<p>Dans l'exemple qui suit, la zone du client possède un arrière-plan blanc avec une bordure <code>border-left</code> noire de 24px. La valeur de <code>clientLeft</code> correspond à la distance entre la fin de la zone de la marge et le début des zones de contenu et de remplissage : 24px.</p>
+Dans l'exemple qui suit, la zone du client possède un arrière-plan blanc avec une bordure `border-left` noire de 24px. La valeur de `clientLeft` correspond à la distance entre la fin de la zone de la marge et le début des zones de contenu et de remplissage : 24px.
 
-<h3>HTML</h3>
+### HTML
 
-<pre class="brush: html">
-&lt;div id="container"&gt;
-  &lt;div id="contained"&gt;
-    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+```html
+<div id="container">
+  <div id="contained">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 	  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-	  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+	  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+</div>
+```
 
-<h3>CSS</h3>
+### CSS
 
-<pre class="brush: css">
+```css
 
 #container {
 	margin: 3rem;
@@ -57,24 +53,24 @@ var left = element.clientLeft;
 	overflow: auto;
 	background-color: white;
 }
-</pre>
+```
 
-<h3>Résultat</h3>
+### Résultat
 
 {{EmbedLiveSample("Exemple", 400, 350)}}
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p><code>clientLeft</code> fut introduit avec le modèle d'objet DHTML d'Internet Explorer.</p>
+`clientLeft` fut introduit avec le modèle d'objet DHTML d'Internet Explorer.
 
-<p>La position de la barre de défilement verticale pour les textes écrits de droite à gauche dépend de la préférence <a href="http://kb.mozillazine.org/Layout.scrollbar.side"><code>layout.scrollbar.side</code></a>.</p>
+La position de la barre de défilement verticale pour les textes écrits de droite à gauche dépend de la préférence [`layout.scrollbar.side`](http://kb.mozillazine.org/Layout.scrollbar.side).
 
-<p>Les applications utilisant le moteur Gecko prennent en charge <code>clientLeft</code> depuis Gecko 1.9 (Firefox 3 l'implémente avec <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=111207">le bug 111207</a>). Cette propriété n'est pas prise en charge pour Firefox 2 et les versions antérieures.</p>
+Les applications utilisant le moteur Gecko prennent en charge `clientLeft` depuis Gecko 1.9 (Firefox 3 l'implémente avec [le bug 111207](https://bugzilla.mozilla.org/show_bug.cgi?id=111207)). Cette propriété n'est pas prise en charge pour Firefox 2 et les versions antérieures.

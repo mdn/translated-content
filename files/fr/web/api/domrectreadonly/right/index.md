@@ -10,41 +10,30 @@ tags:
   - Rectangle
 translation_of: Web/API/DOMRectReadOnly/right
 ---
-<p>{{APIRef("DOM")}}{{ SeeCompatTable() }}</p>
+{{APIRef("DOM")}}{{ SeeCompatTable() }}
 
-<p>La propriété en lecture seule <code><strong>right</strong></code> de l'interface <strong><code>DOMRectReadOnly</code></strong> renvoie la valeur de la coordonnée droite du <code>DOMRect.</code> (a la même valeur que <code>x + width</code> <em>(x + largeur)</em>, ou <code>x</code> si <code>width</code> est négative).</p>
+La propriété en lecture seule **`right`** de l'interface **`DOMRectReadOnly`** renvoie la valeur de la coordonnée droite du `DOMRect.` (a la même valeur que `x + width` _(x + largeur)_, ou `x` si `width` est négative).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var recRight = DOMRect.right;</pre>
+```js
+var recRight = DOMRect.right;
+```
 
-<h3 id="Specification">Valeur</h3>
+### Valeur
 
-<p>Un double.</p>
+Un double.
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Geometry Interfaces', '#dom-domrectreadonly-right', 'right')}}</td>
-   <td>{{Spec2('Geometry Interfaces')}}</td>
-   <td>La dernière version de la spécification est un ED.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | Statut                                       | Commentaire                                        |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------- |
+| {{SpecName('Geometry Interfaces', '#dom-domrectreadonly-right', 'right')}} | {{Spec2('Geometry Interfaces')}} | La dernière version de la spécification est un ED. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DOMRectReadOnly.right")}}</p>
+{{Compat("api.DOMRectReadOnly.right")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("DOMRect")}}</li>
-</ul>
+- {{domxref("DOMRect")}}

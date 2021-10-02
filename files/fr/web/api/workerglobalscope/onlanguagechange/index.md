@@ -3,45 +3,34 @@ title: WorkerGlobalScope.onlanguagechange
 slug: Web/API/WorkerGlobalScope/onlanguagechange
 translation_of: Web/API/WorkerGlobalScope/onlanguagechange
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>La propriété <strong><code>onlanguagechange</code></strong> de l'interface {{domxref("WorkerGlobalScope")}} représente un {{event("Event_handlers", "event handler")}} à appeler lorsque l'événement {{event("languagechange")}} survient et se propage à travers le {{domxref("Worker")}}.</p>
+La propriété **`onlanguagechange`** de l'interface {{domxref("WorkerGlobalScope")}} représente un {{event("Event_handlers", "event handler")}} à appeler lorsque l'événement {{event("languagechange")}} survient et se propage à travers le {{domxref("Worker")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre>self.onlanguagechange = function() { ... };</pre>
+    self.onlanguagechange = function() { ... };
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>L'extrait de code suivant montre un gestionnaire <code>onlanguagechange</code> placé au sein d'un worker :</p>
+L'extrait de code suivant montre un gestionnaire `onlanguagechange` placé au sein d'un worker :
 
-<pre class="brush: js">self.onlanguagechange = function() {
+```js
+self.onlanguagechange = function() {
   console.log('Your preferred language settings have been changed');
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#handler-workerglobalscope-onlanguagechange", "WorkerGlobalScope.onlanguagechange")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                        | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "#handler-workerglobalscope-onlanguagechange", "WorkerGlobalScope.onlanguagechange")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.WorkerGlobalScope.onlanguagechange")}}
 
+## Voir aussi
 
-<p>{{Compat("api.WorkerGlobalScope.onlanguagechange")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<p>L'interface {{domxref("WorkerGlobalScope")}} à laquelle elle appartient.</p>
+L'interface {{domxref("WorkerGlobalScope")}} à laquelle elle appartient.

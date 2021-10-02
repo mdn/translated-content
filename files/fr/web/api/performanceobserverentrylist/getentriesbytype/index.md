@@ -10,32 +10,31 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceObserverEntryList/getEntriesByType
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>La méthode <strong><code>getEntriesByType()</code></strong> de la <a href="/fr/docs/Web/API/PerformanceObserverEntryList"><code>PerformanceObserverEntryList</code></a> retourne une liste d'objets <a href="/fr/docs/Web/API/PerformanceEntry">d'entrée de performance</a> explicitement <em>observés</em> pour un <a href="/fr/docs/Web/API/PerformanceEntry/entryType">type d'entrée de performance</a>. Les membres de la liste sont déterminés par l'ensemble des <a href="/fr/docs/Web/API/PerformanceEntry/entryType">types d'entrées</a> spécifiés dans l'appel à la méthode <a href="/fr/docs/Web/API/PerformanceObserver/observe"><code>observe()</code></a>. La liste est disponible dans la fonction de rappel de l'observateur (en tant que premier paramètre de la fonction de rappel).</p>
+La méthode **`getEntriesByType()`** de la [`PerformanceObserverEntryList`](/fr/docs/Web/API/PerformanceObserverEntryList) retourne une liste d'objets [d'entrée de performance](/fr/docs/Web/API/PerformanceEntry) explicitement _observés_ pour un [type d'entrée de performance](/fr/docs/Web/API/PerformanceEntry/entryType). Les membres de la liste sont déterminés par l'ensemble des [types d'entrées](/fr/docs/Web/API/PerformanceEntry/entryType) spécifiés dans l'appel à la méthode [`observe()`](/fr/docs/Web/API/PerformanceObserver/observe). La liste est disponible dans la fonction de rappel de l'observateur (en tant que premier paramètre de la fonction de rappel).
 
-<div class="note">
-  <p><strong>Note :</strong> Cette interface est exposée à <a href="/fr/docs/Web/API/Window"><code>Window</code></a> et <a href="/fr/docs/Web/API/Worker"><code>Worker</code></a>.</p>
-</div>
+> **Note :** Cette interface est exposée à [`Window`](/fr/docs/Web/API/Window) et [`Worker`](/fr/docs/Web/API/Worker).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">let <var>entries</var> = <var>list</var>.getEntriesByType(<var>type</var>);</pre>
+```js
+let entries = list.getEntriesByType(type);
+```
 
-<h3 id="Parameters">Paramètres</h3>
+### Paramètres
 
-<dl>
-  <dt><em><code>type</code></em></dt>
-  <dd>Le type d'entrée à récupérer, tel que « <code>frame</code> ». Les types d'entrée valides sont énumérés dans <a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>PerformanceEntry.entryType</code></a>.</dd>
-</dl>
+- _`type`_
+  - : Le type d'entrée à récupérer, tel que « `frame` ». Les types d'entrée valides sont énumérés dans [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType).
 
-<h3 id="Return_Value">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une liste d'objets <a href="/fr/docs/Web/API/PerformanceEntry"><code>PerformanceEntry</code></a> explicitement <em>observés</em> qui ont le <code>type</code> spécifié. Les éléments seront dans l'ordre chronologique basé sur les <a href="/fr/docs/Web/API/PerformanceEntry/startTime"><code>startTime</code></a> des entrées. Si aucun objet n'a le <code>type</code> spécifié, ou si aucun argument n'est fourni, une liste vide est retournée.</p>
+Une liste d'objets [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) explicitement _observés_ qui ont le `type` spécifié. Les éléments seront dans l'ordre chronologique basé sur les [`startTime`](/fr/docs/Web/API/PerformanceEntry/startTime) des entrées. Si aucun objet n'a le `type` spécifié, ou si aucun argument n'est fourni, une liste vide est retournée.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">function print_perf_entry(pe) {
+```js
+function print_perf_entry(pe) {
   console.log("name: " + pe.name +
               "; entryType: " + pe.entryType +
               "; startTime: " + pe.startTime +
@@ -48,19 +47,19 @@ const observe_all = new PerformanceObserver(function(list, obs) {
 
   // Imprime toutes les entrées
   perfEntries = list.getEntries();
-  for (let i = 0; i &lt; perfEntries.length; i++) {
+  for (let i = 0; i < perfEntries.length; i++) {
     print_perf_entry(perfEntries[i]);
   }
 
   // Imprime les entrées nommées "Begin" avec le type "mark".
   perfEntries = list.getEntriesByName("Begin", "mark");
-  for (let i = 0; i &lt; perfEntries.length; i++) {
+  for (let i = 0; i < perfEntries.length; i++) {
     print_perf_entry(perfEntries[i]);
   }
 
   // Imprime les entrées de type "mark".
   perfEntries = list.getEntriesByType("mark");
-  for (let i = 0; i &lt; perfEntries.length; i++) {
+  for (let i = 0; i < perfEntries.length; i++) {
     print_perf_entry(perfEntries[i]);
   }
 });
@@ -70,33 +69,20 @@ observe_all.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'res
 const observe_frame = new PerformanceObserver(function(list, obs) {
   let perfEntries = list.getEntries();
   // Ne devrait avoir que des entrées "frame"
-  for (let i = 0; i &lt; perfEntries.length; i++) {
+  for (let i = 0; i < perfEntries.length; i++) {
     print_perf_entry(perfEntries[i]);
   }
 });
 // inscrire à l'événement "frame" uniquement
 observe_frame.observe({entryTypes: ['frame']});
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead> 
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceobserverentrylist-getentriesbytype', 'getEntriesByType()')}}</td>
-      <td>{{Spec2('Performance Timeline Level 2')}}</td>
-      <td>Définition initiale de la méthode <code>getEntriesByType()</code>.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                                    | Statut                                                   | Commentaire                                             |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------- |
+| {{SpecName('Performance Timeline Level 2', '#dom-performanceobserverentrylist-getentriesbytype', 'getEntriesByType()')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale de la méthode `getEntriesByType()`. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceObserverEntryList.getEntriesByType")}}</p>
+{{Compat("api.PerformanceObserverEntryList.getEntriesByType")}}

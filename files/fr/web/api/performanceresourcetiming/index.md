@@ -10,109 +10,88 @@ tags:
   - Resource Timing API
 translation_of: Web/API/PerformanceResourceTiming
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>L'interface <strong><code>PerformanceResourceTiming</code></strong> permet de récupérer et d'analyser des données de synchronisation réseau détaillées concernant le chargement des <em>ressources</em> d'une application. Une application peut utiliser les mesures temporelles pour déterminer, par exemple, la durée nécessaire à l'extraction d'une ressource spécifique, telle qu'une <a href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a>, un élément <a href="/fr/docs/Web/SVG/Element/svg"><code>&lt;svg&gt;</code></a>, une image ou un script.</p>
+L'interface **`PerformanceResourceTiming`** permet de récupérer et d'analyser des données de synchronisation réseau détaillées concernant le chargement des _ressources_ d'une application. Une application peut utiliser les mesures temporelles pour déterminer, par exemple, la durée nécessaire à l'extraction d'une ressource spécifique, telle qu'une [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), un élément [`<svg>`](/fr/docs/Web/SVG/Element/svg), une image ou un script.
 
-<p>Les propriétés de l'interface créent une <em>chronologie de chargement des ressources</em> avec un <a href="/fr/docs/Web/API/DOMHighResTimeStamp">timestamps haute résolution</a> pour les événements réseau tels que les heures de début et de fin de redirection, les heures de début de récupération, les heures de début et de fin de recherche DNS, les heures de début et de fin de réponse, etc. En outre, l'interface étend <a href="/fr/docs/Web/API/PerformanceEntry"><code>PerformanceEntry</code></a> avec d'autres propriétés qui fournissent des données sur la taille de la ressource extraite ainsi que le <em>type</em> de ressource qui a initié l'extraction.</p>
+Les propriétés de l'interface créent une _chronologie de chargement des ressources_ avec un [timestamps haute résolution](/fr/docs/Web/API/DOMHighResTimeStamp) pour les événements réseau tels que les heures de début et de fin de redirection, les heures de début de récupération, les heures de début et de fin de recherche DNS, les heures de début et de fin de réponse, etc. En outre, l'interface étend [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) avec d'autres propriétés qui fournissent des données sur la taille de la ressource extraite ainsi que le _type_ de ressource qui a initié l'extraction.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Properties">Propriétés</h2>
+## Propriétés
 
-<p>Cette interface étend les propriétés <a href="/fr/docs/Web/API/PerformanceEntry"><code>PerformanceEntry</code></a> suivantes pour les types d'entrée de performance des ressources en les restreignant comme suit :</p>
+Cette interface étend les propriétés [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) suivantes pour les types d'entrée de performance des ressources en les restreignant comme suit :
 
-<dl>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>PerformanceEntry.entryType</code></a> {{readonlyInline}}</dt>
-  <dd>Retourne <code>"resource"</code>.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry/name"><code>PerformanceEntry.name</code></a> {{readonlyInline}}</dt>
-  <dd>Retourne l'URL des ressources.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry/startTime"><code>PerformanceEntry.startTime</code></a> {{readonlyInline}}</dt>
-  <dd>Retourne le <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> de l'heure de début de la récupération d'une ressource. Cette valeur est équivalente à <a href="/fr/docs/Web/API/PerformanceResourceTiming/fetchStart"><code>PerformanceResourceTiming.fetchStart</code></a>.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry/duration"><code>PerformanceEntry.duration</code></a> {{readonlyInline}}</dt>
-  <dd>Retourne un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> qui est la différence entre les propriétés <a href="/fr/docs/Web/API/PerformanceResourceTiming/responseEnd"><code>responseEnd</code></a> et <a href="/fr/docs/Web/API/PerformanceEntry/startTime"><code>startTime</code></a>.</dd>
-</dl>
+- [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) {{readonlyInline}}
+  - : Retourne `"resource"`.
+- [`PerformanceEntry.name`](/fr/docs/Web/API/PerformanceEntry/name) {{readonlyInline}}
+  - : Retourne l'URL des ressources.
+- [`PerformanceEntry.startTime`](/fr/docs/Web/API/PerformanceEntry/startTime) {{readonlyInline}}
+  - : Retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) de l'heure de début de la récupération d'une ressource. Cette valeur est équivalente à [`PerformanceResourceTiming.fetchStart`](/fr/docs/Web/API/PerformanceResourceTiming/fetchStart).
+- [`PerformanceEntry.duration`](/fr/docs/Web/API/PerformanceEntry/duration) {{readonlyInline}}
+  - : Retourne un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) qui est la différence entre les propriétés [`responseEnd`](/fr/docs/Web/API/PerformanceResourceTiming/responseEnd) et [`startTime`](/fr/docs/Web/API/PerformanceEntry/startTime).
 
-<p>L'interface prend également en charge les propriétés suivantes, qui sont énumérées dans l'ordre temporel selon lequel elles sont enregistrées pour l'extraction d'une seule ressource. Une liste alphabétique est présentée dans la navigation, à gauche.</p>
+L'interface prend également en charge les propriétés suivantes, qui sont énumérées dans l'ordre temporel selon lequel elles sont enregistrées pour l'extraction d'une seule ressource. Une liste alphabétique est présentée dans la navigation, à gauche.
 
-<dl>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/initiatorType"><code>PerformanceResourceTiming.initiatorType</code></a> {{readonlyInline}}</dt>
-  <dd>Une chaîne de caractère <a href="/fr/docs/Web/API/DOMString"><code>string</code></a> représentant le <em>type</em> de ressource qui a initié l'entrée de performance, comme spécifié dans <a href="/fr/docs/Web/API/PerformanceResourceTiming/initiatorType"><code>PerformanceResourceTiming.initiatorType</code></a>.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/nextHopProtocol"><code>PerformanceResourceTiming.nextHopProtocol</code></a> {{readonlyInline}}</dt>
-  <dd>Une chaîne de caractère <a href="/fr/docs/Web/API/DOMString"><code>string</code></a> représentant le <em>protocole réseau</em> utilisé pour récupérer la ressource, tel qu'identifié par le <a href="https://datatracker.ietf.org/doc/html/rfc7301">ALPN Protocol ID (RFC7301)</a>.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/workerStart"><code>PerformanceResourceTiming.workerStart</code></a> {{readonlyInline}}</dt>
-  <dd>Retourne un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> immédiatement avant de transmettre le <a href="/fr/docs/Web/API/FetchEvent"><code>FetchEvent</code></a> si un processus de Service Worker est déjà en cours, ou immédiatement avant de lancer le processus de Service Worker s'il n'est pas encore en cours. Si la ressource n'est pas interceptée par un Service Worker, la propriété retourne toujours 0.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/redirectStart"><code>PerformanceResourceTiming.redirectStart</code></a> {{readonlyInline}}</dt>
-  <dd>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> qui représente l'heure de début de l'extraction qui déclenche la redirection.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/redirectEnd"><code>PerformanceResourceTiming.redirectEnd</code></a> {{readonlyInline}}</dt>
-  <dd>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> immédiatement après la réception du dernier octet de la réponse de la dernière redirection.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/fetchStart"><code>PerformanceResourceTiming.fetchStart</code></a> {{readonlyInline}}</dt>
-  <dd>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> immédiatement avant que le navigateur ne commence à récupérer la ressource.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/domainLookupStart"><code>PerformanceResourceTiming.domainLookupStart</code></a> {{readonlyInline}}</dt>
-  <dd>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> immédiatement avant que le navigateur ne commence la recherche du nom de domaine pour la ressource.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/domainLookupEnd"><code>PerformanceResourceTiming.domainLookupEnd</code></a> {{readonlyInline}}</dt>
-  <dd>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> représentant l'heure immédiatement après la fin de la recherche du nom de domaine de la ressource par le navigateur.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/connectStart"><code>PerformanceResourceTiming.connectStart</code></a> {{readonlyInline}}</dt>
-  <dd>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> immédiatement avant que le navigateur ne commence à établir la connexion avec le serveur pour récupérer la ressource.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/connectEnd"><code>PerformanceResourceTiming.connectEnd</code></a> {{readonlyInline}}</dt>
-  <dd>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> immédiatement après que le navigateur ait fini d'établir la connexion avec le serveur pour récupérer la ressource.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/secureConnectionStart"><code>PerformanceResourceTiming.secureConnectionStart</code></a> {{readonlyInline}}</dt>
-  <dd>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> immédiatement avant que le navigateur ne lance le processus de reconnaissance pour sécuriser la connexion en cours.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/requestStart"><code>PerformanceResourceTiming.requestStart</code></a> {{readonlyInline}}</dt>
-  <dd>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> immédiatement avant que le navigateur ne commence à demander la ressource au serveur.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/responseStart"><code>PerformanceResourceTiming.responseStart</code></a> {{readonlyInline}}</dt>
-  <dd>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> immédiatement après que le navigateur ait reçu le premier octet de la réponse du serveur.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/responseEnd"><code>PerformanceResourceTiming.responseEnd</code></a> {{readonlyInline}}</dt>
-  <dd>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> immédiatement après la réception par le navigateur du dernier octet de la ressource ou immédiatement avant la fermeture de la connexion de transfert, selon la première éventualité.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/transferSize"><code>PerformanceResourceTiming.transferSize</code></a> {{readonlyInline}}</dt>
-  <dd>Un nombre représentant la taille (en octets) de la ressource extraite. La taille comprend les champs d'en-tête de la réponse plus le corps des données utiles de la réponse.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/encodedBodySize"><code>PerformanceResourceTiming.encodedBodySize</code></a> {{readonlyInline}}</dt>
-  <dd>Un nombre représentant la taille (en octets) reçue de la récupération (HTTP ou cache), du <em>corps de la donnée</em>, avant de supprimer tout codage de contenu appliqué.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/decodedBodySize"><code>PerformanceResourceTiming.decodedBodySize</code></a> {{readonlyInline}}</dt>
-  <dd>Un nombre représentant la taille (en octets) reçue de la récupération (HTTP ou cache) du <em>message body</em>, après avoir retiré tout codage de contenu appliqué.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/serverTiming"><code>PerformanceResourceTiming.serverTiming</code></a> {{readonlyInline}}</dt>
-  <dd>Un tableau d'entrées <a href="/fr/docs/Web/API/PerformanceServerTiming"><code>PerformanceServerTiming</code></a> contenant des mesures de synchronisation du serveur.</dd>
-</dl>
+- [`PerformanceResourceTiming.initiatorType`](/fr/docs/Web/API/PerformanceResourceTiming/initiatorType) {{readonlyInline}}
+  - : Une chaîne de caractère [`string`](/fr/docs/Web/API/DOMString) représentant le _type_ de ressource qui a initié l'entrée de performance, comme spécifié dans [`PerformanceResourceTiming.initiatorType`](/fr/docs/Web/API/PerformanceResourceTiming/initiatorType).
+- [`PerformanceResourceTiming.nextHopProtocol`](/fr/docs/Web/API/PerformanceResourceTiming/nextHopProtocol) {{readonlyInline}}
+  - : Une chaîne de caractère [`string`](/fr/docs/Web/API/DOMString) représentant le _protocole réseau_ utilisé pour récupérer la ressource, tel qu'identifié par le [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
+- [`PerformanceResourceTiming.workerStart`](/fr/docs/Web/API/PerformanceResourceTiming/workerStart) {{readonlyInline}}
+  - : Retourne un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant de transmettre le [`FetchEvent`](/fr/docs/Web/API/FetchEvent) si un processus de Service Worker est déjà en cours, ou immédiatement avant de lancer le processus de Service Worker s'il n'est pas encore en cours. Si la ressource n'est pas interceptée par un Service Worker, la propriété retourne toujours 0.
+- [`PerformanceResourceTiming.redirectStart`](/fr/docs/Web/API/PerformanceResourceTiming/redirectStart) {{readonlyInline}}
+  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) qui représente l'heure de début de l'extraction qui déclenche la redirection.
+- [`PerformanceResourceTiming.redirectEnd`](/fr/docs/Web/API/PerformanceResourceTiming/redirectEnd) {{readonlyInline}}
+  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après la réception du dernier octet de la réponse de la dernière redirection.
+- [`PerformanceResourceTiming.fetchStart`](/fr/docs/Web/API/PerformanceResourceTiming/fetchStart) {{readonlyInline}}
+  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne commence à récupérer la ressource.
+- [`PerformanceResourceTiming.domainLookupStart`](/fr/docs/Web/API/PerformanceResourceTiming/domainLookupStart) {{readonlyInline}}
+  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne commence la recherche du nom de domaine pour la ressource.
+- [`PerformanceResourceTiming.domainLookupEnd`](/fr/docs/Web/API/PerformanceResourceTiming/domainLookupEnd) {{readonlyInline}}
+  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant l'heure immédiatement après la fin de la recherche du nom de domaine de la ressource par le navigateur.
+- [`PerformanceResourceTiming.connectStart`](/fr/docs/Web/API/PerformanceResourceTiming/connectStart) {{readonlyInline}}
+  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne commence à établir la connexion avec le serveur pour récupérer la ressource.
+- [`PerformanceResourceTiming.connectEnd`](/fr/docs/Web/API/PerformanceResourceTiming/connectEnd) {{readonlyInline}}
+  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après que le navigateur ait fini d'établir la connexion avec le serveur pour récupérer la ressource.
+- [`PerformanceResourceTiming.secureConnectionStart`](/fr/docs/Web/API/PerformanceResourceTiming/secureConnectionStart) {{readonlyInline}}
+  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne lance le processus de reconnaissance pour sécuriser la connexion en cours.
+- [`PerformanceResourceTiming.requestStart`](/fr/docs/Web/API/PerformanceResourceTiming/requestStart) {{readonlyInline}}
+  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne commence à demander la ressource au serveur.
+- [`PerformanceResourceTiming.responseStart`](/fr/docs/Web/API/PerformanceResourceTiming/responseStart) {{readonlyInline}}
+  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après que le navigateur ait reçu le premier octet de la réponse du serveur.
+- [`PerformanceResourceTiming.responseEnd`](/fr/docs/Web/API/PerformanceResourceTiming/responseEnd) {{readonlyInline}}
+  - : Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après la réception par le navigateur du dernier octet de la ressource ou immédiatement avant la fermeture de la connexion de transfert, selon la première éventualité.
+- [`PerformanceResourceTiming.transferSize`](/fr/docs/Web/API/PerformanceResourceTiming/transferSize) {{readonlyInline}}
+  - : Un nombre représentant la taille (en octets) de la ressource extraite. La taille comprend les champs d'en-tête de la réponse plus le corps des données utiles de la réponse.
+- [`PerformanceResourceTiming.encodedBodySize`](/fr/docs/Web/API/PerformanceResourceTiming/encodedBodySize) {{readonlyInline}}
+  - : Un nombre représentant la taille (en octets) reçue de la récupération (HTTP ou cache), du _corps de la donnée_, avant de supprimer tout codage de contenu appliqué.
+- [`PerformanceResourceTiming.decodedBodySize`](/fr/docs/Web/API/PerformanceResourceTiming/decodedBodySize) {{readonlyInline}}
+  - : Un nombre représentant la taille (en octets) reçue de la récupération (HTTP ou cache) du _message body_, après avoir retiré tout codage de contenu appliqué.
+- [`PerformanceResourceTiming.serverTiming`](/fr/docs/Web/API/PerformanceResourceTiming/serverTiming) {{readonlyInline}}
+  - : Un tableau d'entrées [`PerformanceServerTiming`](/fr/docs/Web/API/PerformanceServerTiming) contenant des mesures de synchronisation du serveur.
 
-<h2 id="Methods">Méthodes</h2>
+## Méthodes
 
-<dl>
-  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming/toJSON"><code>PerformanceResourceTiming.toJSON()</code></a></dt>
-  <dd>Renvoie une chaîne de caractère <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui est la représentation JSON de l'objet <a href="/fr/docs/Web/API/PerformanceResourceTiming"><code>PerformanceResourceTiming</code></a>.</dd>
-</dl>
+- [`PerformanceResourceTiming.toJSON()`](/fr/docs/Web/API/PerformanceResourceTiming/toJSON)
+  - : Renvoie une chaîne de caractère [`DOMString`](/fr/docs/Web/API/DOMString) qui est la représentation JSON de l'objet [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming).
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>Voir l'exemple dans <a href="/fr/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API">Utilisation de Resource Timing API</a>.</p>
+Voir l'exemple dans [Utilisation de Resource Timing API](/fr/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API).
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Resource Timing', '#performanceresourcetiming', 'PerformanceResourceTiming')}}</td>
-      <td>{{Spec2('Resource Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                            | Statut                               | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('Resource Timing', '#performanceresourcetiming', 'PerformanceResourceTiming')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceResourceTiming")}}</p>
+{{Compat("api.PerformanceResourceTiming")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/API/Resource_Timing_API">L'API <i>Resource Timing</i></a></li>
-  <li><a href="/fr/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API">Utilisation de l'API <i>Resource Timing</i></a></li>
-</ul>
+- [L'API _Resource Timing_](/fr/docs/Web/API/Resource_Timing_API)
+- [Utilisation de l'API _Resource Timing_](/fr/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)

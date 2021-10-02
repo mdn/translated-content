@@ -10,29 +10,28 @@ tags:
   - Reference
 translation_of: Web/API/Notification/permission
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>La propriété en lecture seule <strong><code>permission</code></strong> de l'interface {{domxref ("Notification")}} indique l'autorisation actuelle accordée par l'utilisateur à l'origine actuelle pour afficher des notifications.</p>
+La propriété en lecture seule **`permission`** de l'interface {{domxref ("Notification")}} indique l'autorisation actuelle accordée par l'utilisateur à l'origine actuelle pour afficher des notifications.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Notification.permission</pre>
+    Notification.permission
 
-<h3 id="Return_Value">Valeur</h3>
+### Valeur
 
-<p>Une {{domxref("DOMString")}} représentant l'autorisation actuelle. La valeur peut être:</p>
+Une {{domxref("DOMString")}} représentant l'autorisation actuelle. La valeur peut être:
 
-<ul>
- <li><code>granted</code>: L'utilisateur a explicitement accordé l'autorisation à l'origine actuelle d'afficher les notifications système.</li>
- <li><code>denied</code>: L'utilisateur a explicitement refusé l'autorisation pour l'origine actuelle d'afficher les notifications système.</li>
- <li><code>default</code>: La décision de l'utilisateur est inconnue; dans ce cas, l'application agira comme si l'autorisation était <code>denied</code>.</li>
-</ul>
+- `granted`: L'utilisateur a explicitement accordé l'autorisation à l'origine actuelle d'afficher les notifications système.
+- `denied`: L'utilisateur a explicitement refusé l'autorisation pour l'origine actuelle d'afficher les notifications système.
+- `default`: La décision de l'utilisateur est inconnue; dans ce cas, l'application agira comme si l'autorisation était `denied`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>L'extrait suivant peut être utilisé si vous souhaitez d'abord vérifier si les notifications sont prises en charge, puis vérifier si l'autorisation a été accordée pour l'origine actuelle pour envoyer des notifications, puis demander l'autorisation si nécessaire, avant d'envoyer une notification.</p>
+L'extrait suivant peut être utilisé si vous souhaitez d'abord vérifier si les notifications sont prises en charge, puis vérifier si l'autorisation a été accordée pour l'origine actuelle pour envoyer des notifications, puis demander l'autorisation si nécessaire, avant d'envoyer une notification.
 
-<pre class="brush: js">function notifyMe() {
+```js
+function notifyMe() {
   // Let's check if the browser supports notifications
   if (!('Notification' in window)) {
     console.log('This browser does not support desktop notification')
@@ -49,7 +48,7 @@ translation_of: Web/API/Notification/permission
     Notification.permission !== 'denied' ||
     Notification.permission === 'default'
   ) {
-    Notification.requestPermission((permission) =&gt; {
+    Notification.requestPermission((permission) => {
       // If the user accepts, let's create a notification
       if (permission === 'granted') {
         const notification = new Notification('Hi there!')
@@ -60,34 +59,21 @@ translation_of: Web/API/Notification/permission
   // At last, if the user has denied notifications, and you
   // want to be respectful there is no need to bother them any more.
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Web Notifications","#dom-notification-permission","permission")}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                                     | Commentaire     |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------- |
+| {{SpecName("Web Notifications","#dom-notification-permission","permission")}} | {{Spec2('Web Notifications')}} | Living standard |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Notification.permission")}}</p>
+{{Compat("api.Notification.permission")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/docs/Web/API/Notifications_API">API de notifications</a></li>
- <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a></li>
- <li><a href="/en-US/docs/Web/API/Permissions_API">Permissions d'API</a></li>
- <li><a href="/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API">Utilisation des permissions d'API</a></li>
-</ul>
+- [API de notifications](/docs/Web/API/Notifications_API)
+- [Utilisation de l'API Notifications](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Permissions d'API](/en-US/docs/Web/API/Permissions_API)
+- [Utilisation des permissions d'API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API)

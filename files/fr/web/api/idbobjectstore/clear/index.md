@@ -3,46 +3,45 @@ title: IDBObjectStore.clear()
 slug: Web/API/IDBObjectStore/clear
 translation_of: Web/API/IDBObjectStore/clear
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<p>La méthode <strong><code>clear()</code></strong> de l'interface {{domxref("IDBObjectStore")}} fait une {{domxref("IDBRequest","requête")}} pour vider le magasin d'objet {{domxref("IDBObjectStore","relié")}}.</p>
+La méthode **`clear()`** de l'interface {{domxref("IDBObjectStore")}} fait une {{domxref("IDBRequest","requête")}} pour vider le magasin d'objet {{domxref("IDBObjectStore","relié")}}.
 
-<p>Vider un magasin d'objet consiste à supprimer tous les enregistrements et les entrées des index de ce magasin d'objet.</p>
+Vider un magasin d'objet consiste à supprimer tous les enregistrements et les entrées des index de ce magasin d'objet.
 
-<div class="note">
-<p><strong>Note :</strong> La méthode clear() ne remet pas à zero le compteur du génerateur de clé s'il y en à un.</p>
-</div>
+> **Note :** La méthode clear() ne remet pas à zero le compteur du génerateur de clé s'il y en à un.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var request = objectStore.clear();</pre>
+```js
+var request = objectStore.clear();
+```
 
-<h2 id="Renvoie">Renvoie</h2>
+## Renvoie
 
-<p>Une {{domxref("IDBRequest","requête")}}.</p>
+Une {{domxref("IDBRequest","requête")}}.
 
-<h2 id="Exceptions">Exceptions</h2>
+## Exceptions
 
-<dl>
- <dt><code>ReadOnlyError</code></dt>
- <dd>Cette {{domxref("DOMException","exception")}} est levé si la transaction associé à cette requête est en {{domxref("IDBTransaction.mode","mode")}} lecture seule.</dd>
- <dt><code>TransactionInactiveError</code></dt>
- <dd>Cette {{domxref("DOMException","exception")}} est levé si la {{domxref("IDBTransaction","transaction")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d’objet est inactive.</dd>
-</dl>
+- `ReadOnlyError`
+  - : Cette {{domxref("DOMException","exception")}} est levé si la transaction associé à cette requête est en {{domxref("IDBTransaction.mode","mode")}} lecture seule.
+- `TransactionInactiveError`
+  - : Cette {{domxref("DOMException","exception")}} est levé si la {{domxref("IDBTransaction","transaction")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d’objet est inactive.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans le code suivant, on ouvre une {{domxref("IDBDatabase","connexion")}} à la base de donnée. Sur cette connexion on démarre une {{domxref("IDBTransaction","transaction")}} en lecture/écriture pour avoir un {{domxref("IDBObjectStore","accès")}} au magasin d'objet <code>"toDoList"</code> et le {{domxref("IDBObjectStore.clear","vider")}}</p>
+Dans le code suivant, on ouvre une {{domxref("IDBDatabase","connexion")}} à la base de donnée. Sur cette connexion on démarre une {{domxref("IDBTransaction","transaction")}} en lecture/écriture pour avoir un {{domxref("IDBObjectStore","accès")}} au magasin d'objet `"toDoList"` et le {{domxref("IDBObjectStore.clear","vider")}}
 
-<p>La méthode <strong><code>clear()</code></strong> de l'accès au magasin d'objet fait une {{domxref("IDBRequest","requête")}} pour vider le magasin d'objet <code>toDoList</code>.</p>
+La méthode **`clear()`** de l'accès au magasin d'objet fait une {{domxref("IDBRequest","requête")}} pour vider le magasin d'objet `toDoList`.
 
-<pre class="brush: js">//Connexion à la base de données
+```js
+//Connexion à la base de données
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-	note.innerHTML += '&lt;li&gt;Connexion établie.&lt;/li&gt;';
+	note.innerHTML += '<li>Connexion établie.</li>';
 
 	//Affecte la connexion à la variable db.
 	db = DBOpenRequest.result;
@@ -57,12 +56,12 @@ function clearData() {
 
   // en cas de succès de l'ouverture de la transaction
   transaction.oncomplete = function(event) {
-	note.innerHTML += '&lt;li&gt;Transaction complété : modification de la base de données terminée.&lt;/li&gt;';
+	note.innerHTML += '<li>Transaction complété : modification de la base de données terminée.</li>';
   };
 
   // en cas d'échec de l'ouverture de la transaction
   transaction.onerror = function(event) {
-     note.innerHTML += '&lt;li&gt;Transaction en échec à cause de l\'erreur : ' + transaction.error + '&lt;/li&gt;';
+     note.innerHTML += '<li>Transaction en échec à cause de l\'erreur : ' + transaction.error + '</li>';
   };
 
   // ouvre l'accès au un magasin "toDoList" de la transaction
@@ -73,44 +72,29 @@ function clearData() {
 
   objectStoreRequest.onsuccess = function(event) {
   // rapporte le succès du nettoyage
-  note.innerHTML += '&lt;li&gt;Enregistrements effacées.&lt;/li&gt;';
+  note.innerHTML += '<li>Enregistrements effacées.</li>';
   };
 };
-</pre>
+```
 
-<div class="note">
-  <p><strong>Note :</strong> Pour un exemple de travail complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>).</p>
-</div>
+> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBObjectStore-clear-IDBRequest', 'clear()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                       | Commentaire |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-clear-IDBRequest', 'clear()')}} | {{Spec2('IndexedDB')}} |             |
 
-<h2 id="Browser_compatibility">Compatibilité avec les navigateurs</h2>
+## Compatibilité avec les navigateurs
 
-<p>{{Compat("api.IDBObjectStore.clear")}}</p>
+{{Compat("api.IDBObjectStore.clear")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}</li>
- <li>{{domxref("IDBDatabase","Débuter une connexion")}}</li>
- <li>{{domxref("IDBTransaction","Utilisé les transactions")}}</li>
- <li>{{domxref("IDBKeyRange","Définir l'intervalle des clés")}}</li>
- <li>{{domxref("IDBObjectStore","Accès aux magasins d'objets")}}</li>
- <li>{{domxref("IDBCursor","Utiliser les curseur")}}</li>
- <li>Exemple de référence: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- {{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}
+- {{domxref("IDBDatabase","Débuter une connexion")}}
+- {{domxref("IDBTransaction","Utilisé les transactions")}}
+- {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
+- {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
+- {{domxref("IDBCursor","Utiliser les curseur")}}
+- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

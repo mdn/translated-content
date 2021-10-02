@@ -6,33 +6,29 @@ tags:
   - DOM_0
 translation_of: Web/API/Window/scrollTo
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
+### Résumé
 
-<p>Fait défiler le document jusqu'à un jeu de coordonnées particulier.</p>
+Fait défiler le document jusqu'à un jeu de coordonnées particulier.
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval">window.scrollTo(<em>coord-x</em>,<em>coord-y</em>);
-</pre>
+    window.scrollTo(coord-x,coord-y);
 
-<h3 id="Param.C3.A8tres">Paramètres</h3>
+### Paramètres
 
-<ul>
- <li><code>coord-x</code> est le pixel le long de l'axe horizontal du document qui doit être affiché en haut à gauche.</li>
- <li><code>coord-y</code> est le pixel le long de l'axe vertical du document qui doit être affiché en haut à gauche.</li>
-</ul>
+- `coord-x` est le pixel le long de l'axe horizontal du document qui doit être affiché en haut à gauche.
+- `coord-y` est le pixel le long de l'axe vertical du document qui doit être affiché en haut à gauche.
 
-<h3 id="Exemple">Exemple</h3>
+### Exemple
 
-<pre>window.scrollTo(0, 1000);
-</pre>
+    window.scrollTo(0, 1000);
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p>Cette fonction est fonctionnellement identique à <a href="scroll">window.scroll</a>. Pour un défilement relatif, consultez <a href="scrollBy">window.scrollBy</a>, <a href="scrollByLines">window.scrollByLines</a> et <a href="scrollByPages">window.scrollByPages</a>.</p>
+Cette fonction est fonctionnellement identique à [window.scroll](scroll). Pour un défilement relatif, consultez [window.scrollBy](scrollBy), [window.scrollByLines](scrollByLines) et [window.scrollByPages](scrollByPages).
 
-<h3 id="Sp.C3.A9cification">Spécification</h3>
+### Spécification
 
-<p>{{ DOM0() }}</p>
+{{ DOM0() }}

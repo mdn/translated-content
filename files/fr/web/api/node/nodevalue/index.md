@@ -8,86 +8,81 @@ tags:
   - Propriétés
 translation_of: Web/API/Node/nodeValue
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La propriété <code><strong>Node.nodeValue</strong></code> renvoie ou définit la valeur du nœud courant.</p>
+La propriété **`Node.nodeValue`** renvoie ou définit la valeur du nœud courant.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>value</var> = <var>node</var>.nodeValue;
-</pre>
+    value = node.nodeValue;
 
-<p><code>value</code> (<em>valeur</em>) est une chaîne contenant la valeur du nœud courant, s'il y en a une.</p>
+`value` (_valeur_) est une chaîne contenant la valeur du nœud courant, s'il y en a une.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Pour le document lui-même, <code>nodeValue</code> renvoie <code>null</code>. Pour des nœuds texte, de commentaires et CDATA, <code>nodeValue</code> renvoie le contenu du nœud. Pour les nœuds d'attributs, il s'agira de la valeur de l'attribut.</p>
+Pour le document lui-même, `nodeValue` renvoie `null`. Pour des nœuds texte, de commentaires et CDATA, `nodeValue` renvoie le contenu du nœud. Pour les nœuds d'attributs, il s'agira de la valeur de l'attribut.
 
-<p>Le tableau suivant montre les valeurs de retour pour différents types de nœuds :</p>
+Le tableau suivant montre les valeurs de retour pour différents types de nœuds :
 
 <table>
- <tbody>
-  <tr>
-   <td>Attr</td>
-   <td>valeur de l'attribut</td>
-  </tr>
-  <tr>
-   <td>CDATASection</td>
-   <td>contenu de la section CDATA</td>
-  </tr>
-  <tr>
-   <td>Comment</td>
-   <td>contenu du commentaire</td>
-  </tr>
-  <tr>
-   <td>Document</td>
-   <td><code>null</code></td>
-  </tr>
-  <tr>
-   <td>DocumentFragment</td>
-   <td><code>null</code></td>
-  </tr>
-  <tr>
-   <td>DocumentType</td>
-   <td><code>null</code></td>
-  </tr>
-  <tr>
-   <td>Element</td>
-   <td><code>null</code></td>
-  </tr>
-  <tr>
-   <td>NamedNodeMap</td>
-   <td><code>null</code></td>
-  </tr>
-  <tr>
-   <td>EntityReference</td>
-   <td><code>null</code></td>
-  </tr>
-  <tr>
-   <td>Notation</td>
-   <td><code>null</code></td>
-  </tr>
-  <tr>
-   <td>ProcessingInstruction</td>
-   <td>tout le contenu à l'exception de la cible</td>
-  </tr>
-  <tr>
-   <td>Text</td>
-   <td>contenu du nœud texte</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>Attr</td>
+      <td>valeur de l'attribut</td>
+    </tr>
+    <tr>
+      <td>CDATASection</td>
+      <td>contenu de la section CDATA</td>
+    </tr>
+    <tr>
+      <td>Comment</td>
+      <td>contenu du commentaire</td>
+    </tr>
+    <tr>
+      <td>Document</td>
+      <td><code>null</code></td>
+    </tr>
+    <tr>
+      <td>DocumentFragment</td>
+      <td><code>null</code></td>
+    </tr>
+    <tr>
+      <td>DocumentType</td>
+      <td><code>null</code></td>
+    </tr>
+    <tr>
+      <td>Element</td>
+      <td><code>null</code></td>
+    </tr>
+    <tr>
+      <td>NamedNodeMap</td>
+      <td><code>null</code></td>
+    </tr>
+    <tr>
+      <td>EntityReference</td>
+      <td><code>null</code></td>
+    </tr>
+    <tr>
+      <td>Notation</td>
+      <td><code>null</code></td>
+    </tr>
+    <tr>
+      <td>ProcessingInstruction</td>
+      <td>tout le contenu à l'exception de la cible</td>
+    </tr>
+    <tr>
+      <td>Text</td>
+      <td>contenu du nœud texte</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Lorsque <code>nodeValue</code> est défini comme étant <code>null</code>, l'assignation n'a aucun effet.</p>
+Lorsque `nodeValue` est défini comme étant `null`, l'assignation n'a aucun effet.
 
-<h2 id="Sp.C3.A9cification">Spécification</h2>
+## Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D080">DOM Level 2 Core: Node.nodeValue</a>  <small>— <a href="http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-F68D080">traduction</a> (non normative)</small></li>
-</ul>
+- [DOM Level 2 Core: Node.nodeValue](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D080) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-F68D080) (non normative)
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("api.Node.nodeValue")}}</p>
+{{Compat("api.Node.nodeValue")}}

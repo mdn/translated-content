@@ -8,34 +8,34 @@ tags:
   - Reference
 translation_of: Web/API/FeaturePolicy/getAllowlistForFeature
 ---
-<div>{{APIRef("Feature Policy API")}}{{SeeCompatTable}}</div>
+{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
-<p>La méthode <strong><code>getAllowlistForFeature()</code></strong> de {{DOMxRef("FeaturePolicy")}} permet d'obtenir la liste des permissions associée à une fonctionnalité pour ce Feature Policy.</p>
+La méthode **`getAllowlistForFeature()`** de {{DOMxRef("FeaturePolicy")}} permet d'obtenir la liste des permissions associée à une fonctionnalité pour ce Feature Policy.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">const listePermissions = <em>FeaturePolicy</em>.getAllowlistForFeature(&lt;fonctionnalité&gt;)
-</pre>
+    const listePermissions = FeaturePolicy.getAllowlistForFeature(<fonctionnalité>)
 
-<h3 id="Parameter">Parameter</h3>
+### Parameter
 
-<h4 id="Nom_de_fonctionnalité">Nom de fonctionnalité</h4>
+#### Nom de fonctionnalité
 
-<p>Un nom de fonctionnalité doit être fourni.</p>
+Un nom de fonctionnalité doit être fourni.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une <a href="fr/Web/HTTP/Feature_Policy/Using_Feature_Policy">liste de permissions</a> pour la fonctionnalité demandée est retournée.</p>
+Une [liste de permissions](fr/Web/HTTP/Feature_Policy/Using_Feature_Policy) pour la fonctionnalité demandée est retournée.
 
-<h2 id="Erreurs">Erreurs</h2>
+## Erreurs
 
-<p>La fonction jettera un avertissement si la directive de Feature Policy demandée est inconnue. Toutefois, elle retournera aussi un tableau vide, indiquant que l'utilisation de cette fonctionnalité n'est permise pour aucune origine.</p>
+La fonction jettera un avertissement si la directive de Feature Policy demandée est inconnue. Toutefois, elle retournera aussi un tableau vide, indiquant que l'utilisation de cette fonctionnalité n'est permise pour aucune origine.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Cet exemple affiche toutes les origines à qui la directive Feature Policy permet d'utiliser l'API Camera (appareil photo). Notez que l'API Camera pourrait être restreinte par l'API Permissions si l'utilisateur n'a pas encore accordé la permission.</p>
+Cet exemple affiche toutes les origines à qui la directive Feature Policy permet d'utiliser l'API Camera (appareil photo). Notez que l'API Camera pourrait être restreinte par l'API Permissions si l'utilisateur n'a pas encore accordé la permission.
 
-<pre class="brush: js">// D'abord, récupère l'objet Feature Policy
+```js
+// D'abord, récupère l'objet Feature Policy
 const featurePolicy = document.featurePolicy
 
 // Puis demande la liste pour la fonctionnalité "camera"
@@ -43,27 +43,14 @@ const listePermissions = featurePolicy.getAllowlistForFeature("camera")
 
 for (const origine of listePermissions)
   console.log(origine)
-</pre>
+```
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Feature Policy","","getAllowlistForFeature")}}</td>
-   <td>{{Spec2("Feature Policy")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | Statut                               | Commentaire          |
+| ---------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName("Feature Policy","","getAllowlistForFeature")}} | {{Spec2("Feature Policy")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("api.FeaturePolicy.getAllowlistForFeature")}}</p>
+{{Compat("api.FeaturePolicy.getAllowlistForFeature")}}

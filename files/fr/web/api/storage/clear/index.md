@@ -9,59 +9,46 @@ tags:
   - Stockage Web
 translation_of: Web/API/Storage/clear
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>La méthode <code>clear()</code> de l'interface {{domxref("Storage")}},  lorsqu'elle est invoquée, vide toutes les clés stockées.</p>
+La méthode `clear()` de l'interface {{domxref("Storage")}},  lorsqu'elle est invoquée, vide toutes les clés stockées.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js"><em>storage</em>.clear();</pre>
+```js
+storage.clear();
+```
 
-<h3 id="Retoune">Retoune</h3>
+### Retoune
 
-<p>{{jsxref("undefined")}}</p>
+{{jsxref("undefined")}}
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>La fonction suivante crée trois entrées de données dans le stockage local, puis les supprime en utilisant clear().</p>
+La fonction suivante crée trois entrées de données dans le stockage local, puis les supprime en utilisant clear().
 
-<pre class="brush: js">function peuplerLeStockage() {
+```js
+function peuplerLeStockage() {
   localStorage.setItem('bgcolor', 'red');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'monChat.png');
 
   localStorage.clear();
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note :</strong> Pour voir un exemple réel, vous pouvez visitez notre <a href="https://mdn.github.io/dom-examples/web-storage/">Démo de stockage web</a>. Les modifications sont visibles dans la console, vous pouvez actualiser la page et conserver les modifications.</p>
-</div>
+> **Note :** Pour voir un exemple réel, vous pouvez visitez notre [Démo de stockage web](https://mdn.github.io/dom-examples/web-storage/). Les modifications sont visibles dans la console, vous pouvez actualiser la page et conserver les modifications.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-clear', 'Storage.clear')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | État                             | Commentaire |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-clear', 'Storage.clear')}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.Storage.clear")}}
 
+## Voir aussi
 
-<p>{{Compat("api.Storage.clear")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Utilisation de l'API de stockage web</a></li>
-</ul>
+- [Utilisation de l'API de stockage web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

@@ -11,30 +11,33 @@ tags:
   - nextHopProtocol
 translation_of: Web/API/PerformanceResourceTiming/nextHopProtocol
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>La propriété en lecture seule <strong><code>nextHopProtocol</code></strong> est une <a href="/fr/docs/Web/API/DOMString">chaîne de caractères</a> représentant le <em>protocole réseau</em> utilisé pour récupérer la ressource, tel qu'identifié par le <a href="https://datatracker.ietf.org/doc/html/rfc7301">ALPN Protocol ID (RFC7301)</a>.</p>
+La propriété en lecture seule **`nextHopProtocol`** est une [chaîne de caractères](/fr/docs/Web/API/DOMString) représentant le _protocole réseau_ utilisé pour récupérer la ressource, tel qu'identifié par le [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
 
-<p>Lorsqu'un proxy est utilisé, si une connexion tunnel est établie, cette propriété renvoie l'ID du protocole ALPN du protocole tunnelisé. Sinon, cette propriété renvoie l'ID du protocole ALPN du premier saut vers le proxy.</p>
+Lorsqu'un proxy est utilisé, si une connexion tunnel est établie, cette propriété renvoie l'ID du protocole ALPN du protocole tunnelisé. Sinon, cette propriété renvoie l'ID du protocole ALPN du premier saut vers le proxy.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js"><var>resource</var>.nextHopProtocol;</pre>
+```js
+resource.nextHopProtocol;
+```
 
-<h3 id="Return_Value">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>string</code></a> représentant le <em>protocole réseau</em> utilisé pour récupérer la ressource, tel qu'identifié par le <a href="https://datatracker.ietf.org/doc/html/rfc7301">ALPN Protocol ID (RFC7301)</a>.</p>
+Une chaîne de caractères [`string`](/fr/docs/Web/API/DOMString) représentant le _protocole réseau_ utilisé pour récupérer la ressource, tel qu'identifié par le [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>L'exemple suivant utilise la propriété <code>nextHopProtocol</code> :</p>
+L'exemple suivant utilise la propriété `nextHopProtocol` :
 
-<pre class="brush: js">function print_PerformanceEntries() {
+```js
+function print_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
   let p = performance.getEntriesByType("resource");
-  for (let i = 0; i &lt; p.length; i++) {
+  for (let i = 0; i < p.length; i++) {
     print_nextHopProtocol(p[i]);
   }
 }
@@ -45,28 +48,15 @@ function print_nextHopProtocol(perfEntry) {
   else
     console.log("nextHopProtocol = N'EST PAS pris en charge");
 }
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Resource Timing 2',
-        '#dom-performanceresourcetiming-nexthopprotocol', 'nextHopProtocol')}}</td>
-      <td>{{Spec2('Resource Timing 2')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                        | Statut                                   | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('Resource Timing 2',
+        '#dom-performanceresourcetiming-nexthopprotocol', 'nextHopProtocol')}} | {{Spec2('Resource Timing 2')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceResourceTiming.nextHopProtocol")}}</p>
+{{Compat("api.PerformanceResourceTiming.nextHopProtocol")}}

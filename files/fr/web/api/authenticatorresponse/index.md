@@ -9,49 +9,32 @@ tags:
   - Web Authn
 translation_of: Web/API/AuthenticatorResponse
 ---
-<p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>L'interface <code><strong>AuthenticatorResponse</strong></code>, rattachée à l'<a href="/en-US/docs/Web/API/Web_Authentication_API">API Web Authentication</a>, constitue l'interface de base pour les interfaces qui fournissent une racine cryptographique de confiance pour une paire de clés. Les interfaces filles contiennent des informations relatives au navigateur telles que l'origine du <em>challenge</em> et qui peuvent être renvoyée par {{domxref("PublicKeyCredential.response")}}.</p>
+L'interface **`AuthenticatorResponse`**, rattachée à l'[API Web Authentication](/en-US/docs/Web/API/Web_Authentication_API), constitue l'interface de base pour les interfaces qui fournissent une racine cryptographique de confiance pour une paire de clés. Les interfaces filles contiennent des informations relatives au navigateur telles que l'origine du _challenge_ et qui peuvent être renvoyée par {{domxref("PublicKeyCredential.response")}}.
 
-<h2 id="Interfaces_basées_sur_AuthenticatorResponse">Interfaces basées sur <code>AuthenticatorResponse</code></h2>
+## Interfaces basées sur `AuthenticatorResponse`
 
-<p>Voici la liste des interfaces basées sur <code>AuthenticatorResponse</code>.</p>
+Voici la liste des interfaces basées sur `AuthenticatorResponse`.
 
-<ul>
- <li>{{domxref("AuthenticatorAssertionResponse")}}</li>
- <li>{{domxref("AuthenticatorAttestationResponse")}}</li>
-</ul>
+- {{domxref("AuthenticatorAssertionResponse")}}
+- {{domxref("AuthenticatorAttestationResponse")}}
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{domxref("AuthenticatorResponse.clientDataJSON")}}</dt>
- <dd>Une chaîne de caractères <a href="/fr/docs/Learn/JavaScript/Objects/JSON">JSON</a> stockée dans un {{domxref("ArrayBuffer")}} et qui représente les données du client passées à {{domxref("CredentialsContainer.create()")}} ou {{domxref("CredentialsContainer.get()")}}.</dd>
-</dl>
+- {{domxref("AuthenticatorResponse.clientDataJSON")}}
+  - : Une chaîne de caractères [JSON](/fr/docs/Learn/JavaScript/Objects/JSON) stockée dans un {{domxref("ArrayBuffer")}} et qui représente les données du client passées à {{domxref("CredentialsContainer.create()")}} ou {{domxref("CredentialsContainer.get()")}}.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p>Aucune.</p>
+Aucune.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAuthn')}}</td>
-   <td>{{Spec2('WebAuthn')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                    | État                         | Commentaires         |
+| -------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('WebAuthn')}} | {{Spec2('WebAuthn')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.AuthenticatorResponse")}}</p>
+{{Compat("api.AuthenticatorResponse")}}

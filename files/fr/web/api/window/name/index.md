@@ -8,47 +8,34 @@ tags:
   - Reference
 translation_of: Web/API/Window/name
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="En_bref">En bref</h2>
+## En bref
 
-<p>Récupère ou définit le nom de la fenêtre.</p>
+Récupère ou définit le nom de la fenêtre.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js"><var>string</var> = window.name;
-window.name = <var>string</var>;
-</pre>
+```js
+string = window.name;
+window.name = string;
+```
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">window.name = "lab_view";
-</pre>
+```js
+window.name = "lab_view";
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Les noms de fenêtres sont principalement utilisés pour définir les cibles de liens hypertextes et de formulaires. Les fenêtres n'ont pas besoin d'être nommées.</p>
+Les noms de fenêtres sont principalement utilisés pour définir les cibles de liens hypertextes et de formulaires. Les fenêtres n'ont pas besoin d'être nommées.
 
-<p>Les noms de fenêtres ont en outre été utilisés par quelques <em>frameworks </em>pour le support des échanges de messages inter-domaines (par exemple <a href="http://www.thomasfrank.se/sessionvars.html">SessionVars</a> et <a href="http://www.sitepen.com/blog/2008/07/22/windowname-transport/">dojox.io.windowName</a> de Dojo) comme une alternative plus sécurisée à JSONP. Toutefois, les applications web modernes manipulant des données sensibles devraient utiliser l'<a href="/fr/docs/Web/API/Window/postMessage">API postMessage</a> pour les échanges de messages inter-domaines plutôt que s'appuyer sur <code>window.name</code>.</p>
+Les noms de fenêtres ont en outre été utilisés par quelques _frameworks_ pour le support des échanges de messages inter-domaines (par exemple [SessionVars](http://www.thomasfrank.se/sessionvars.html) et [dojox.io.windowName](http://www.sitepen.com/blog/2008/07/22/windowname-transport/) de Dojo) comme une alternative plus sécurisée à JSONP. Toutefois, les applications web modernes manipulant des données sensibles devraient utiliser l'[API postMessage](/fr/docs/Web/API/Window/postMessage) pour les échanges de messages inter-domaines plutôt que s'appuyer sur `window.name`.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'browsers.html#dom-name', 'Window.name')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'browsers.html#dom-name', 'Window.name')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                           | Comment |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'browsers.html#dom-name', 'Window.name')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML5 W3C', 'browsers.html#dom-name', 'Window.name')}}     | {{Spec2('HTML5 W3C')}}     |         |

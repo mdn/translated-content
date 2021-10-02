@@ -8,37 +8,31 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/removeAttributeNS
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><code>removeAttributeNS</code> supprime l'attribut spécifié d'un élément.</p>
+`removeAttributeNS` supprime l'attribut spécifié d'un élément.
 
-<p>Dans Firefox 3 et postérieurs, cette méthode réinitialise les valeurs DOM à leur valeur par défaut.</p>
+Dans Firefox 3 et postérieurs, cette méthode réinitialise les valeurs DOM à leur valeur par défaut.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>element</em>.removeAttributeNS(<em>namespace</em>,<em>attrName</em>);
-</pre>
+    element.removeAttributeNS(namespace,attrName);
 
-<ul>
- <li><code>namespace</code> est une chaîne qui contient l'espace de noms de l'attribut.</li>
- <li><code>attrName</code> est une chaîne qui nomme l'attribut à supprimer du noeud en cours.</li>
-</ul>
+- `namespace` est une chaîne qui contient l'espace de noms de l'attribut.
+- `attrName` est une chaîne qui nomme l'attribut à supprimer du noeud en cours.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre>// &lt;div id="div1" xmlns:special="http://www.mozilla.org/ns/specialspace"
-//      special:specialAlign="utterleft" width="200px" /&gt;
-d = document.getElementById("div1");
-d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
-// l'élément est devenu : &lt;div id="div1" width="200px" /&gt;
-</pre>
+    // <div id="div1" xmlns:special="http://www.mozilla.org/ns/specialspace"
+    //      special:specialAlign="utterleft" width="200px" />
+    d = document.getElementById("div1");
+    d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
+    // l'élément est devenu : <div id="div1" width="200px" />
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Sp.C3.A9cification">Spécification</h2>
+## Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElRemAtNS">DOM Level 2 Core: removeAttributeNS (en)</a> <small>— <a href="http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElRemAtNS">traduction en français</a> (non normative)</small></li>
-</ul>
+- [DOM Level 2 Core: removeAttributeNS (en)](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElRemAtNS) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElRemAtNS) (non normative)

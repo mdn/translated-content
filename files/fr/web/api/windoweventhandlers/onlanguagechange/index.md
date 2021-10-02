@@ -10,55 +10,38 @@ tags:
   - Window
 translation_of: Web/API/WindowEventHandlers/onlanguagechange
 ---
-<div>{{APIRef("HTML DOM")}} {{SeeCompatTable}}</div>
+{{APIRef("HTML DOM")}} {{SeeCompatTable}}
 
-<p>La propriété <code><strong>onlanguagechange</strong></code> du mixin {{domxref("WindowEventHandlers")}} est le {{event("Event_handlers", "event handler")}} pour le traitement des événements {{event("languagechange")}}.</p>
+La propriété **`onlanguagechange`** du mixin {{domxref("WindowEventHandlers")}} est le {{event("Event_handlers", "event handler")}} pour le traitement des événements {{event("languagechange")}}.
 
-<p>Ces événements sont reçus par l'objet implémentant cette interface, généralement un {{domxref ("Window")}}, un {{domxref ("HTMLBodyElement")}} ou un {{domxref ("HTMLIFrameElement")}}. Un tel événement est envoyé par le navigateur pour informer que la liste des langues préférées a été mise à jour. La liste est accessible via {{domxref("NavigatorLanguage.languages")}}.</p>
+Ces événements sont reçus par l'objet implémentant cette interface, généralement un {{domxref ("Window")}}, un {{domxref ("HTMLBodyElement")}} ou un {{domxref ("HTMLIFrameElement")}}. Un tel événement est envoyé par le navigateur pour informer que la liste des langues préférées a été mise à jour. La liste est accessible via {{domxref("NavigatorLanguage.languages")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>object</em>.onlanguagechange = <em>function</em>;
-</pre>
+    object.onlanguagechange = function;
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<ul>
- <li><code>function</code> est le nom d'une fonction définie par l'utilisateur, sans le suffixe <code>()</code> ni aucun paramètre, ou une déclaration de fonction anonyme, telle que <code>function(event) {...}</code>. Un gestionnaire d'événements a toujours un seul paramètre, contenant l'événement, ici de type {{domxref ("Event")}}.</li>
-</ul>
+- `function` est le nom d'une fonction définie par l'utilisateur, sans le suffixe `()` ni aucun paramètre, ou une déclaration de fonction anonyme, telle que `function(event) {...}`. Un gestionnaire d'événements a toujours un seul paramètre, contenant l'événement, ici de type {{domxref ("Event")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">window.onlanguagechange = function(event) {
+```js
+window.onlanguagechange = function(event) {
   console.log('événement de changement de langue détecté!');
 };
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', '#handler-window-onlanguagechange', 'WindowEventHandler.onlanguagechange') }}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td>Spécification initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                | Statut                               | Commentaire             |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------- |
+| {{ SpecName('HTML WHATWG', '#handler-window-onlanguagechange', 'WindowEventHandler.onlanguagechange') }} | {{ Spec2('HTML WHATWG') }} | Spécification initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WindowEventHandlers.onlanguagechange")}}</p>
+{{Compat("api.WindowEventHandlers.onlanguagechange")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>L'événement {{event("languagechange")}} et son type, {{domxref("Event")}}</li>
-</ul>
+- L'événement {{event("languagechange")}} et son type, {{domxref("Event")}}

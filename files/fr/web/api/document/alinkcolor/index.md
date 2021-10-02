@@ -9,28 +9,27 @@ tags:
   - Reference
 translation_of: Web/API/Document/alinkColor
 ---
-<div>{{APIRef("DOM")}}{{Deprecated_header}}</div>
+{{APIRef("DOM")}}{{Deprecated_header}}
 
-<p>Retourne ou définit la couleur d'un lien actif dans le corps du document. Un lien hypertexte est actif durant le temps entre les événements <code>mousedown</code> et <code>mouseup</code>.</p>
+Retourne ou définit la couleur d'un lien actif dans le corps du document. Un lien hypertexte est actif durant le temps entre les événements `mousedown` et `mouseup`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <var>color</var> = <var>document</var>.alinkColor;
-<var>document</var>.alinkColor = <var>color</var>;
-</pre>
+    var color = document.alinkColor;
+    document.alinkColor = color;
 
-<p><var>color</var> est un echaîne de caractère contenant le nom de la couleur en anglais(exemple., <code>blue</code> pour bleu, <code>darkblue</code> pour bleu foncé, etc.) ou la valeur hexadécimal de la couleur (exemple, <code>#0000FF</code>)</p>
+*color* est un echaîne de caractère contenant le nom de la couleur en anglais(exemple., `blue` pour bleu, `darkblue` pour bleu foncé, etc.) ou la valeur hexadécimal de la couleur (exemple, `#0000FF`)
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>La valeur par défaut pour cette propriété est rouge (<code>#ee000</code> en hexadécimal) sur Mozilla Firefox.</p>
+La valeur par défaut pour cette propriété est rouge (`#ee000` en hexadécimal) sur Mozilla Firefox.
 
-<p><code>document.alinkColor</code> est obsolète dans <a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268">DOM Level 2 HTML</a> (lien en anglais). Une alternative est le sélecteur CSS {{Cssxref(":active")}}.</p>
+`document.alinkColor` est obsolète dans [DOM Level 2 HTML](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268) (lien en anglais). Une alternative est le sélecteur CSS {{Cssxref(":active")}}.
 
-<p>Une autre alternative est <code>document.body.aLink</code>, même si elle est <a href="http://www.w3.org/TR/html401/struct/global.html#adef-alink">obsolète dans HTML 4.01</a> (lien en anglais) en faveur de l'alternative CSS ci-dessus.</p>
+Une autre alternative est `document.body.aLink`, même si elle est [obsolète dans HTML 4.01](http://www.w3.org/TR/html401/struct/global.html#adef-alink) (lien en anglais) en faveur de l'alternative CSS ci-dessus.
 
-<p><a href="/fr/docs/Mozilla/Gecko">Gecko </a>supporte <code>alinkColor</code>/<code>:active</code> et {{Cssxref(":focus")}}. Internet Explorer 6 et 7 supportent <code>alinkColor</code>/<code>:active</code> seulement pour la <a href="/fr/docs/Web/HTML/Element/a">balise HTML des liens (&lt;a&gt;)</a> et le comportement est le même que <code>:focus</code> sur Gecko. Il n'y a pas de support pour <code>:focus</code> sur IE.</p>
+[Gecko ](/fr/docs/Mozilla/Gecko)supporte `alinkColor`/`:active` et {{Cssxref(":focus")}}. Internet Explorer 6 et 7 supportent `alinkColor`/`:active` seulement pour la [balise HTML des liens (\<a>)](/fr/docs/Web/HTML/Element/a) et le comportement est le même que `:focus` sur Gecko. Il n'y a pas de support pour `:focus` sur IE.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Document.alinkColor")}}</p>
+{{Compat("api.Document.alinkColor")}}

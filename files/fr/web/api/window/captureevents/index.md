@@ -9,24 +9,24 @@ tags:
   - Non-standard
 translation_of: Web/API/Window/captureEvents
 ---
-<div>{{ ApiRef() }} {{deprecated_header(1.9)}} {{Non-standard_header}}</div>
+{{ ApiRef() }} {{deprecated_header(1.9)}} {{Non-standard_header}}
 
-<p>La méthode <code><strong>Window.captureEvents()</strong></code> enregistre la fenêtre pour capturer tous les événements du type spécifié.</p>
+La méthode **`Window.captureEvents()`** enregistre la fenêtre pour capturer tous les événements du type spécifié.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">window.captureEvents(<em>eventType</em>)
-</pre>
+    window.captureEvents(eventType)
 
-<p><code>eventType</code> est une combinaison des valeurs suivantes: <code>Event.ABORT</code>, <code>Event.BLUR</code>, <code>Event.CLICK</code>, <code>Event.CHANGE</code>, <code>Event.DBLCLICK</code>, <code>Event.DRAGDDROP</code>, <code>Event.ERROR</code>, <code>Event.FOCUS</code>, <code>Event.KEYDOWN</code>, <code>Event.KEYPRESS</code>, <code>Event.KEYUP</code>, <code>Event.LOAD</code>, <code>Event.MOUSEDOWN</code>, <code>Event.MOUSEMOVE</code>, <code>Event.MOUSEOUT</code>, <code>Event.MOUSEOVER</code>, <code>Event.MOUSEUP</code>, <code>Event.MOVE</code>, <code>Event.RESET</code>, <code>Event.RESIZE</code>, <code>Event.SELECT</code>, <code>Event.SUBMIT</code>, <code>Event.UNLOAD</code>.</p>
+`eventType` est une combinaison des valeurs suivantes: `Event.ABORT`, `Event.BLUR`, `Event.CLICK`, `Event.CHANGE`, `Event.DBLCLICK`, `Event.DRAGDDROP`, `Event.ERROR`, `Event.FOCUS`, `Event.KEYDOWN`, `Event.KEYPRESS`, `Event.KEYUP`, `Event.LOAD`, `Event.MOUSEDOWN`, `Event.MOUSEMOVE`, `Event.MOUSEOUT`, `Event.MOUSEOVER`, `Event.MOUSEUP`, `Event.MOVE`, `Event.RESET`, `Event.RESIZE`, `Event.SELECT`, `Event.SUBMIT`, `Event.UNLOAD`.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="fr"&gt;
-&lt;head&gt;
-&lt;!-- ... --&gt;
-&lt;script&gt;
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- ... -->
+<script>
 function reg() {
   window.captureEvents(Event.CLICK);
   window.onclick = page_click;
@@ -35,23 +35,23 @@ function reg() {
 function page_click() {
   alert('événement de clic sur la page détecté!');
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onload="reg();"&gt;
-&lt;p&gt;cliquez n'importe où sur cette page.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onload="reg();">
+<p>cliquez n'importe où sur cette page.</p>
+</body>
+</html>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Les événements déclenchés dans le DOM par l'activité de l'utilisateur (tels que cliquer sur des boutons ou déplacer le focus loin du document actuel) passent généralement par la <a href="/en-US/docs/Web/API/Window"><code>window</code></a> de haut niveau et les objets de<code> </code><a href="/en-US/docs/Web/API/document"><code>document</code></a> avant d'arriver à l'objet qui a déclenché l'événement.</p>
+Les événements déclenchés dans le DOM par l'activité de l'utilisateur (tels que cliquer sur des boutons ou déplacer le focus loin du document actuel) passent généralement par la [`window`](/en-US/docs/Web/API/Window) de haut niveau et les objets de` `[`document`](/en-US/docs/Web/API/document) avant d'arriver à l'objet qui a déclenché l'événement.
 
-<p>Lorsque vous appelez la méthode <code>captureEvents()</code> sur <a href="/en-US/docs/Web/API/Window"><code>window</code></a>, événements du type que vous spécifier (par exemple, <code>Event.CLICK</code>) ne passe plus par les objets "inférieurs" de la hiérarchie. Pour que les événements "bouillonnent" comme ils le font normalement, vous devez appeler<code> </code><a href="/en-US/docs/Web/API/window.releaseEvents"><code>window.releaseEvents()</code></a> ({{deprecated_inline}}) sur la fenêtre pour l'empêcher de piéger les événements.</p>
+Lorsque vous appelez la méthode `captureEvents()` sur [`window`](/en-US/docs/Web/API/Window), événements du type que vous spécifier (par exemple, `Event.CLICK`) ne passe plus par les objets "inférieurs" de la hiérarchie. Pour que les événements "bouillonnent" comme ils le font normalement, vous devez appeler` `[`window.releaseEvents()`](/en-US/docs/Web/API/window.releaseEvents) ({{deprecated_inline}}) sur la fenêtre pour l'empêcher de piéger les événements.
 
-<p>Notez que vous pouvez transmettre une liste d'événements à cette méthode en utilisant la syntaxe suivante : <code>window.captureEvents(Event.KEYPRESS | Event.KEYDOWN | Event.KEYUP)</code>.</p>
+Notez que vous pouvez transmettre une liste d'événements à cette méthode en utilisant la syntaxe suivante : `window.captureEvents(Event.KEYPRESS | Event.KEYDOWN | Event.KEYUP)`.
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<p>Cela ne fait partie d'aucune spécification.</p>
+Cela ne fait partie d'aucune spécification.

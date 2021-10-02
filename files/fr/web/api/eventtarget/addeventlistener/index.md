@@ -28,74 +28,66 @@ tags:
   - mselementresize
 translation_of: Web/API/EventTarget/addEventListener
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>>La méthode <code><strong>addEventListener()</strong></code> de {{domxref("EventTarget")}} attache une fonction à appeler chaque fois que l'évènement spécifié est envoyé à la cible.</p>
+\>La méthode **`addEventListener()`** de {{domxref("EventTarget")}} attache une fonction à appeler chaque fois que l'évènement spécifié est envoyé à la cible.
 
-<p>Les cibles courantes sont un {{domxref("Element")}}, le {{domxref("Document")}} lui-même et une {{domxref("Window")}}, mais on peut tout à fait cible n'importe quel objet prenant en charge les évènements (comme {{domxref("XMLHttpRequest")}}).</p>
+Les cibles courantes sont un {{domxref("Element")}}, le {{domxref("Document")}} lui-même et une {{domxref("Window")}}, mais on peut tout à fait cible n'importe quel objet prenant en charge les évènements (comme {{domxref("XMLHttpRequest")}}).
 
-<p><code>addEventListener()</code> agit en ajoutant une fonction ou un objet qui implémente {{domxref("EventListener")}} à la liste des gestionnaires d'évènement pour le type d'évènement spécifié sur la cible ({{domxref("EventTarget")}}) à partir de laquelle il est appelé.</p>
+`addEventListener()` agit en ajoutant une fonction ou un objet qui implémente {{domxref("EventListener")}} à la liste des gestionnaires d'évènement pour le type d'évènement spécifié sur la cible ({{domxref("EventTarget")}}) à partir de laquelle il est appelé.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre
-  class="brush: js"><var>target</var>.addEventListener(<var>type</var>, <var>listener</var> [, <var>options</var>]);
-<var>target</var>.addEventListener(<var>type</var>, <var>listener</var> [, <var>useCapture</var>]);
-<var>target</var>.addEventListener(<var>type</var>, <var>listener</var> [, <var>useCapture</var>, <var>wantsUntrusted</var> {{Non-standard_inline}}]); // Gecko/Mozilla uniquement</pre>
+```js
+target.addEventListener(type, listener [, options]);
+target.addEventListener(type, listener [, useCapture]);
+target.addEventListener(type, listener [, useCapture, wantsUntrusted {{Non-standard_inline}}]); // Gecko/Mozilla uniquement
+```
 
+### Paramètres
 
-<h3 id="Parameters">Paramètres</h3>
+- `type`
+  - : Une chaîne sensible à la casse représentant le [type d'évènement](/fr/docs/Web/Events) à écouter.
+- `listener`
+  - : L'objet qui recevra un évènement (c'est-à-dire un objet qui implémente l'interface {{domxref("Event")}}) lorsqu'un évènement du type spécifié se produit. Cet argument doit être un objet implémentant l'interface {{domxref("EventListener")}} ou une [fonction](/fr/docs/Web/JavaScript/Guide/Functions) JavaScript. Voir {{anch("The_event_listener_callback", "Fonction de rappel (<i>callback</i> pour le gestionnaire d'évènement)")}} pour plus de détails sur le fonctionnement d'une fonction de rappel.
+- `options` {{optional_inline}}
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>Une chaîne sensible à la casse représentant le <a href="/fr/docs/Web/Events">type d'évènement</a> à écouter.</dd>
-  <dt><code>listener</code></dt>
-  <dd>L'objet qui recevra un évènement (c'est-à-dire un objet qui implémente l'interface {{domxref("Event")}}) lorsqu'un évènement du type spécifié se produit. Cet argument doit être un objet implémentant l'interface {{domxref("EventListener")}} ou une <a href="/fr/docs/Web/JavaScript/Guide/Functions">fonction</a> JavaScript. Voir {{anch("The_event_listener_callback", "Fonction de rappel (<i>callback</i> pour le gestionnaire d'évènement)")}} pour plus de détails sur le fonctionnement d'une fonction de rappel.</dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>Un objet options spécifie les caractéristiques de l'écouteur d'évènements. Les options disponibles sont :
-    <dl>
-      <dt><code>capture</code></dt>
-        <dd>Un booléen ({{jsxref("Boolean")}}) indiquant que les évènements de ce type seront distribués à l'<code><var>listener</var></code> enregistré avant d'être distribués à tout <code>EventTarget</code> située en dessous dans l'arborescence DOM.</dd>
-        <dt><code>once</code></dt>
-        <dd>Un booléen ({{jsxref("Boolean")}}) indiquant que <code>listener</code> doit être invoqué au plus une fois après avoir été ajouté. Si <code>true</code> (vrai), <code>listener</code> sera automatiquement supprimé après son appel.</dd>
-        <dt><code>passive</code></dt>
-        <dd>Un booléen ({{jsxref("Boolean")}}) qui, si <code>true</code>, indique que la fonction spécifiée par <code>listener</code> n'appellera jamais {{domxref("Event.preventDefault", "preventDefault()")}}. Si un écouteur passif appelle <code>preventDefault()</code>, l'agent utilisateur ne fera rien d'autre que de générer un avertissement dans la console. Voir {{anch("Improving_scrolling_performance_with_passive_listeners","Améliorer les performances du défilement avec des gestionnaires passifs")}} pour en apprendre davantage.</dd>
-        <dt><code>mozSystemGroup</code> {{non-standard_inline}}</dt>
-        <dd>Un booléen ({{jsxref("Boolean")}}) indiquant que l'écouteur doit être ajouté au groupe système. Disponible uniquement pour le code s'exécutant dans XBL ou dans le {{glossary("chrome")}} du navigateur Firefox.</dd>
-      </dl>
-    </dd>
-  <dt><code>useCapture</code> {{optional_inline}}</dt>
-  <dd>Un booléen ({{jsxref("Boolean")}}) indiquant si les évènements de ce type seront distribués au <code>listener</code> enregistré avant d'être distribués à toute <code>EventTarget</code> (« cible d'évènement ») située en dessous dans l'arborescence DOM. Les évènements qui se propagent vers le haut dans l'arborescence ne déclencheront pas un écouteur indiqué comme utilisant la capture. La propagation et la capture d'évènements sont deux manières de propager des évènements qui se produisent dans un élément imbriqué dans un autre, lorsque les deux éléments ont enregistré un gestionnaire pour cet évènement. Le mode de propagation de l'évènement détermine l'ordre dans lequel les éléments reçoivent l'évènement. Voir les <a href="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow">DOM Level 3 Events</a> et <a href="http://www.quirksmode.org/js/events_order.html#link4">JavaScript Event order</a> pour une explication détaillée. S'il n'est pas spécifié, <code>useCapture</code> aura <code>false</code> comme valeur par défaut.</dd>
-</dl>
+  - : Un objet options spécifie les caractéristiques de l'écouteur d'évènements. Les options disponibles sont :
 
-<div class="notecard note">
-  <p><strong>Note :</strong> Pour les écouteurs attachés à la cible d'évènement, l'évènement se trouve dans la phase cible, plutôt que dans les phases de propagation et de capture. Les évènements dans la phase cible déclencheront tous les écouteurs d'un élément dans l'ordre où ils ont été enregistrés, indépendamment du paramètre <code>useCapture</code>.</p>
-</div>
+    - `capture`
+      - : Un booléen ({{jsxref("Boolean")}}) indiquant que les évènements de ce type seront distribués à l'`listener` enregistré avant d'être distribués à tout `EventTarget` située en dessous dans l'arborescence DOM.
+    - `once`
+      - : Un booléen ({{jsxref("Boolean")}}) indiquant que `listener` doit être invoqué au plus une fois après avoir été ajouté. Si `true` (vrai), `listener` sera automatiquement supprimé après son appel.
+    - `passive`
+      - : Un booléen ({{jsxref("Boolean")}}) qui, si `true`, indique que la fonction spécifiée par `listener` n'appellera jamais {{domxref("Event.preventDefault", "preventDefault()")}}. Si un écouteur passif appelle `preventDefault()`, l'agent utilisateur ne fera rien d'autre que de générer un avertissement dans la console. Voir {{anch("Improving_scrolling_performance_with_passive_listeners","Améliorer les performances du défilement avec des gestionnaires passifs")}} pour en apprendre davantage.
+    - `mozSystemGroup` {{non-standard_inline}}
+      - : Un booléen ({{jsxref("Boolean")}}) indiquant que l'écouteur doit être ajouté au groupe système. Disponible uniquement pour le code s'exécutant dans XBL ou dans le {{glossary("chrome")}} du navigateur Firefox.
 
-<div class="notecard note">
-  <p><strong>Note :</strong> <code>useCapture</code> n'a pas toujours été facultatif. Idéalement, vous devriez l'inclure pour une compatibilité navigateur la plus large possible.</p>
-</div>
+- `useCapture` {{optional_inline}}
+  - : Un booléen ({{jsxref("Boolean")}}) indiquant si les évènements de ce type seront distribués au `listener` enregistré avant d'être distribués à toute `EventTarget` (« cible d'évènement ») située en dessous dans l'arborescence DOM. Les évènements qui se propagent vers le haut dans l'arborescence ne déclencheront pas un écouteur indiqué comme utilisant la capture. La propagation et la capture d'évènements sont deux manières de propager des évènements qui se produisent dans un élément imbriqué dans un autre, lorsque les deux éléments ont enregistré un gestionnaire pour cet évènement. Le mode de propagation de l'évènement détermine l'ordre dans lequel les éléments reçoivent l'évènement. Voir les [DOM Level 3 Events](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow) et [JavaScript Event order](http://www.quirksmode.org/js/events_order.html#link4) pour une explication détaillée. S'il n'est pas spécifié, `useCapture` aura `false` comme valeur par défaut.
 
-<dl>
-  <dt><code>wantsUntrusted</code> {{Non-standard_inline}}</dt>
-  <dd>Un paramètre spécifique à Firefox (Gecko). Si <code>true</code>, l'écouteur reçoit les évènements synthétiques distribués par le contenu web (le défaut est <code>false</code> pour le {{glossary("chrome")}} du navigateur et <code>true</code> pour les pages web ordinaires). Ce paramètre est utile pour le code qui se trouve dans les compléments, ainsi que pour le navigateur lui-même.</dd>
-</dl>
+> **Note :** Pour les écouteurs attachés à la cible d'évènement, l'évènement se trouve dans la phase cible, plutôt que dans les phases de propagation et de capture. Les évènements dans la phase cible déclencheront tous les écouteurs d'un élément dans l'ordre où ils ont été enregistrés, indépendamment du paramètre `useCapture`.
 
-<h3 id="Return_value">Valeur de retour</h3>
+> **Note :** `useCapture` n'a pas toujours été facultatif. Idéalement, vous devriez l'inclure pour une compatibilité navigateur la plus large possible.
 
-<p><code>undefined</code></p>
+- `wantsUntrusted` {{Non-standard_inline}}
+  - : Un paramètre spécifique à Firefox (Gecko). Si `true`, l'écouteur reçoit les évènements synthétiques distribués par le contenu web (le défaut est `false` pour le {{glossary("chrome")}} du navigateur et `true` pour les pages web ordinaires). Ce paramètre est utile pour le code qui se trouve dans les compléments, ainsi que pour le navigateur lui-même.
 
-<h2 id="Usage_notes">Notes d'utilisation</h2>
+### Valeur de retour
 
-<h3 id="The_event_listener_callback">Utilisation d'une fonction de rappel (<i>callback</i>)</h3>
+`undefined`
 
-<p>L'écouteur d'évènement peut être spécifié, soit comme une fonction de rappel (<i>callback</i>), soit comme un objet qui implémente {{domxref("EventListener")}} dont la méthode {{domxref("EventListener.handleEvent", "handleEvent()")}} sert de fonction de rappel.</p>
+## Notes d'utilisation
 
-<p>La fonction de rappel reçoit les mêmes paramètres et fournit la même valeur de retour que la méthode <code>handleEvent()</code> ; c'est-à-dire que le rappel accepte un seul paramètre : un objet basé sur {{domxref("Event")}} décrivant l'évènement qui s'est produit, et il ne retourne rien.</p>
+### Utilisation d'une fonction de rappel (_callback_)
 
-<p>Par exemple, un rappel de gestionnaire d'évènements pouvant être utilisé pour gérer à la fois {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} et {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} peut ressembler à ceci :</p>
+L'écouteur d'évènement peut être spécifié, soit comme une fonction de rappel (_callback_), soit comme un objet qui implémente {{domxref("EventListener")}} dont la méthode {{domxref("EventListener.handleEvent", "handleEvent()")}} sert de fonction de rappel.
 
-<pre class="brush: js">
+La fonction de rappel reçoit les mêmes paramètres et fournit la même valeur de retour que la méthode `handleEvent()` ; c'est-à-dire que le rappel accepte un seul paramètre : un objet basé sur {{domxref("Event")}} décrivant l'évènement qui s'est produit, et il ne retourne rien.
+
+Par exemple, un rappel de gestionnaire d'évènements pouvant être utilisé pour gérer à la fois {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} et {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} peut ressembler à ceci :
+
+```js
 function eventHandler(event) {
   if (event.type == 'fullscreenchange') {
     /* gérer un passage en plein écran */
@@ -103,17 +95,17 @@ function eventHandler(event) {
     /* gérer une erreur de passage en plein écran */
   }
 }
-</pre>
+```
 
-<h3 id="Safely_detecting_option_support">Détection la prise en charge d'<code>options</code></h3>
+### Détection la prise en charge d'`options`
 
-<p>Dans les anciennes versions de la spécification DOM, le troisième paramètre de <code>addEventListener()</code> était une valeur booléenne indiquant s'il fallait ou non utiliser la capture. Au fil du temps, il est devenu clair que davantage d'options étaient nécessaires. Plutôt que d'ajouter davantage de paramètres à la fonction (ce qui complique énormément les choses lors du traitement des valeurs optionnelles), le troisième paramètre a été changé en un objet pouvant contenir diverses propriétés définissant les valeurs des options pour configurer le processus de suppression de l'écouteur d'évènement.</p>
+Dans les anciennes versions de la spécification DOM, le troisième paramètre de `addEventListener()` était une valeur booléenne indiquant s'il fallait ou non utiliser la capture. Au fil du temps, il est devenu clair que davantage d'options étaient nécessaires. Plutôt que d'ajouter davantage de paramètres à la fonction (ce qui complique énormément les choses lors du traitement des valeurs optionnelles), le troisième paramètre a été changé en un objet pouvant contenir diverses propriétés définissant les valeurs des options pour configurer le processus de suppression de l'écouteur d'évènement.
 
-<p>Du fait que les navigateurs anciens supposent toujours que le troisième paramètre est un booléen, vous devez construire votre code de façon à gérer ce scénario intelligemment. Vous pouvez le faire en utilisant la détection de fonctionnalité pour chacune des options qui vous intéresse.</p>
+Du fait que les navigateurs anciens supposent toujours que le troisième paramètre est un booléen, vous devez construire votre code de façon à gérer ce scénario intelligemment. Vous pouvez le faire en utilisant la détection de fonctionnalité pour chacune des options qui vous intéresse.
 
-<p>Par exemple, si vous voulez vérifier l'option <code>passive</code> :</p>
+Par exemple, si vous voulez vérifier l'option `passive` :
 
-<pre class="brush: js">
+```js
 let passiveSupported = false;
 
 try {
@@ -128,46 +120,46 @@ try {
 } catch(err) {
   passiveSupported = false;
 }
-</pre>
+```
 
-<p>Cela crée un objet <code>options</code> avec une fonction accesseur pour la propriété <code>passive</code> ; l'accesseur initialise un indicateur, <code>passiveSupported</code>, à <code>true</code> si elle est appelée. Cela signifie que si le navigateur vérifie la valeur de la propriété <code>passive</code> dans l'objet <code>options</code>, <code>passiveSupported</code> sera initialisé à <code>true</code> ; sinon, il restera <code>false</code>. Nous appelons alors <code>addEventListener()</code> pour installer un faux gestionnaire d'évènements, en spécifiant ces options, se sorte qu'elles soient vérifiées si le navigateur reconnaît un objet comme troisième paramètre. Ensuite, nous appelons <code>removeEventListener()</code> pour faire le ménage après notre passage. (Notez que <code>handleEvent()</code> est ignoré dans les écouteurs d'évènements qui ne sont pas appelés).</p>
+Cela crée un objet `options` avec une fonction accesseur pour la propriété `passive` ; l'accesseur initialise un indicateur, `passiveSupported`, à `true` si elle est appelée. Cela signifie que si le navigateur vérifie la valeur de la propriété `passive` dans l'objet `options`, `passiveSupported` sera initialisé à `true` ; sinon, il restera `false`. Nous appelons alors `addEventListener()` pour installer un faux gestionnaire d'évènements, en spécifiant ces options, se sorte qu'elles soient vérifiées si le navigateur reconnaît un objet comme troisième paramètre. Ensuite, nous appelons `removeEventListener()` pour faire le ménage après notre passage. (Notez que `handleEvent()` est ignoré dans les écouteurs d'évènements qui ne sont pas appelés).
 
-<p>Vous pouvez vérifier de cette façon si une option quelconque est supportée. Ajoutez simplement un accesseur pour cette option en utilisant un code similaire à celui montré ci-dessus.</p>
+Vous pouvez vérifier de cette façon si une option quelconque est supportée. Ajoutez simplement un accesseur pour cette option en utilisant un code similaire à celui montré ci-dessus.
 
-<p>Ensuite, lorsque vous voulez créer un écouteur d'évènements réel qui utilise les options en question, vous pouvez faire quelque chose comme ce qui suit :</p>
+Ensuite, lorsque vous voulez créer un écouteur d'évènements réel qui utilise les options en question, vous pouvez faire quelque chose comme ce qui suit :
 
-<pre class="brush: js">
+```js
 someElement.addEventListener(
   "mouseup",
   handleMouseUp,
   passiveSupported ? { passive: true } : false
 );
-</pre>
+```
 
-<p>Ici, nous ajoutons un écouteur pour l'évènement {{domxref("Element/mouseup_event", "mouseup")}} dans l'élément <code>someElement</code>. Pour le troisième paramètre, si <code>passiveSupported</code> est <code>true</code>, nous spécifions un objet <code>options</code> avec <code>passive</code> initialisée à <code>true</code> ; sinon, nous savons que nous devons passer un Boolean, et nous passons <code>false</code> comme valeur du paramètre <code>useCapture</code>.</p>
+Ici, nous ajoutons un écouteur pour l'évènement {{domxref("Element/mouseup_event", "mouseup")}} dans l'élément `someElement`. Pour le troisième paramètre, si `passiveSupported` est `true`, nous spécifions un objet `options` avec `passive` initialisée à `true` ; sinon, nous savons que nous devons passer un Boolean, et nous passons `false` comme valeur du paramètre `useCapture`.
 
-<p>Si vous préférez, vous pouvez utiliser une bibliothèque tierce comme <a href="https://github.com/modernizr/modernizr">Modernizr</a> ou <a href="https://github.com/rafrex/detect-it">Detect It</a> pour faire ce test pour vous.</p>
+Si vous préférez, vous pouvez utiliser une bibliothèque tierce comme [Modernizr](https://github.com/modernizr/modernizr) ou [Detect It](https://github.com/rafrex/detect-it) pour faire ce test pour vous.
 
-<p>Vous pouvez en apprendre davantage dans l'article à propos des <code><a href="https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection">EventListenerOptions</a></code> du <a href="https://wicg.github.io/admin/charter.html">Groupe Web Incubator Community</a>.</p>
+Vous pouvez en apprendre davantage dans l'article à propos des [`EventListenerOptions`](https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection) du [Groupe Web Incubator Community](https://wicg.github.io/admin/charter.html).
 
-<h2 id="Examples">Exemples</h2>
+## Exemples
 
-<h3 id="Add_a_simple_listener">Ajouter un écouteur simple</h3>
+### Ajouter un écouteur simple
 
-<p>Cet exemple montre comment utiliser <code>addEventListener()</code> pour surveiller les clics de souris sur un élément.</p>
+Cet exemple montre comment utiliser `addEventListener()` pour surveiller les clics de souris sur un élément.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">
-&lt;table id="outside"&gt;
-  &lt;tr&gt;&lt;td id="t1"&gt;un&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td id="t2"&gt;deux&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table id="outside">
+  <tr><td id="t1">un</td></tr>
+  <tr><td id="t2">deux</td></tr>
+</table>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">
+```js
 // Fonction pour changer le contenu de t2
 function modifyText() {
   const t2 = document.querySelector("#t2");
@@ -181,30 +173,30 @@ function modifyText() {
 // Ajouter un écouteur d'évènements à la table
 const el = document.querySelector("#outside");
 el.addEventListener("click", modifyText, false);
-</pre>
+```
 
-<p>Dans ce code, <code>modifyText()</code> est un écouteur pour les évènements <code>click</code> enregistré en utilisant <code>addEventListener()</code>. Un clic n'importe où sur la table se propagera jusqu'au gestionnaire et exécutera <code>modifyText()</code>.</p>
+Dans ce code, `modifyText()` est un écouteur pour les évènements `click` enregistré en utilisant `addEventListener()`. Un clic n'importe où sur la table se propagera jusqu'au gestionnaire et exécutera `modifyText()`.
 
-<h4 id="Result">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Add_a_simple_listener')}}</p>
+{{EmbedLiveSample('Add_a_simple_listener')}}
 
-<h3 id="Event_listener_with_anonymous_function">Écouteur d'évènement avec une fonction anonyme</h3>
+### Écouteur d'évènement avec une fonction anonyme
 
-<p>Ici, nous allons voir comment utiliser une fonction anonyme pour passer des paramètres à l'écouteur d'évènements.</p>
+Ici, nous allons voir comment utiliser une fonction anonyme pour passer des paramètres à l'écouteur d'évènements.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">
-&lt;table id="outside"&gt;
-  &lt;tr&gt;&lt;td id="t1"&gt;un&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td id="t2"&gt;deux&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table id="outside">
+  <tr><td id="t1">un</td></tr>
+  <tr><td id="t2">deux</td></tr>
+</table>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">
+```js
 // Fonction pour changer le contenu de t2
 function modifyText(newText) {
   const t2 = document.querySelector("#t2");
@@ -214,30 +206,30 @@ function modifyText(newText) {
 // Fonction pour ajouter un écouteur d'évènement à la table
 const el = document.querySelector("#outside");
 el.addEventListener("click", function(){modifyText("quatre")}, false);
-</pre>
+```
 
-<p>Notez que l'écouteur est une fonction anonyme encapsulant le code qui peut à son tour envoyer des paramètres à la fonction <code>modifyText()</code>, qui est responsable de la réponse effective à l'évènement.</p>
+Notez que l'écouteur est une fonction anonyme encapsulant le code qui peut à son tour envoyer des paramètres à la fonction `modifyText()`, qui est responsable de la réponse effective à l'évènement.
 
-<h4 id="Result_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Event_listener_with_anonymous_function')}}</p>
+{{EmbedLiveSample('Event_listener_with_anonymous_function')}}
 
-<h3 id="Event_listener_with_an_arrow_function">Écouteur d'évènement avec une fonction fléchée</h3>
+### Écouteur d'évènement avec une fonction fléchée
 
-<p>Cet exemple montre un écouteur d'évènement simple implémenté en utilisant la notation de fonction fléchée.</p>
+Cet exemple montre un écouteur d'évènement simple implémenté en utilisant la notation de fonction fléchée.
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">
-&lt;table id="outside"&gt;
-  &lt;tr&gt;&lt;td id="t1"&gt;un&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td id="t2"&gt;deux&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table id="outside">
+  <tr><td id="t1">un</td></tr>
+  <tr><td id="t2">deux</td></tr>
+</table>
+```
 
-<h4 id="JavaScript_3">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">
+```js
 // Fonction pour changer le contenu de t2
 function modifyText(newText) {
   const t2 = document.querySelector("#t2");
@@ -246,40 +238,41 @@ function modifyText(newText) {
 
 // Ajouter un écouteur d'évènements à la table avec une fonction fléchée
 const el = document.querySelector("#outside");
-el.addEventListener("click", () =&gt; {
+el.addEventListener("click", () => {
   modifyText("quatre");
-}, false);</pre>
+}, false);
+```
 
-<h4 id="Result_3">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Event_listener_with_an_arrow_function')}}</p>
+{{EmbedLiveSample('Event_listener_with_an_arrow_function')}}
 
-<p>Notez que si les fonctions anonymes et fléchées sont similaires, elles ont des liaisons <code>this</code> différentes. Alors que les fonctions anonymes (et toutes les fonctions JavaScript traditionnelles) créent leurs propres liaisons <code>this</code>, les fonctions fléchées héritent la liaison <code>this</code> de la fonction contenante. <a href="fr/docs/Web/JavaScript/Reference/Operators/this#avec_les_fonctions_fléchées">Voir la page sur l'opérateur <code>this</code> pour plus d'informations.</a></p>
+Notez que si les fonctions anonymes et fléchées sont similaires, elles ont des liaisons `this` différentes. Alors que les fonctions anonymes (et toutes les fonctions JavaScript traditionnelles) créent leurs propres liaisons `this`, les fonctions fléchées héritent la liaison `this` de la fonction contenante. [Voir la page sur l'opérateur `this` pour plus d'informations.](fr/docs/Web/JavaScript/Reference/Operators/this#avec_les_fonctions_fléchées)
 
-<p>Cela signifie que les variables et constantes disponibles pour la fonction contenante sont aussi disponibles pour le gestionnaire d'évènements lors de l'utilisation d'une fonction fléchée.</p>
+Cela signifie que les variables et constantes disponibles pour la fonction contenante sont aussi disponibles pour le gestionnaire d'évènements lors de l'utilisation d'une fonction fléchée.
 
-<h3 id="Example_of_options_usage">Exemple d'utilisation des options</h3>
+### Exemple d'utilisation des options
 
-<h4 id="HTML_4">HTML</h4>
+#### HTML
 
-<pre class="brush: html">
-&lt;div class="outer"&gt;
-  extérieur, once &amp; none-once
-  &lt;div class="middle" target="_blank"&gt;
-    milieu, capture &amp; none-capture
-    &lt;a class="inner1" href="https://www.mozilla.org" target="_blank"&gt;
-      intérieur1, passive &amp; preventDefault (ce qui n'est pas autorisé)
-    &lt;/a&gt;
-    &lt;a class="inner2" href="/" target="_blank"&gt;
-      intérieur2, none-passive &amp; preventDefault (nouvelle page non ouverte)
-    &lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="outer">
+  extérieur, once & none-once
+  <div class="middle" target="_blank">
+    milieu, capture & none-capture
+    <a class="inner1" href="https://www.mozilla.org" target="_blank">
+      intérieur1, passive & preventDefault (ce qui n'est pas autorisé)
+    </a>
+    <a class="inner2" href="/" target="_blank">
+      intérieur2, none-passive & preventDefault (nouvelle page non ouverte)
+    </a>
+  </div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">
+```css
 .outer,
 .middle,
 .inner1,
@@ -305,11 +298,11 @@ el.addEventListener("click", () =&gt; {
   color: purple;
   width: 400px;
 }
-</pre>
+```
 
-<h4 id="JavaScript_4">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">
+```js
 const outer = document.querySelector('.outer');
 const middle = document.querySelector('.middle');
 const inner1 = document.querySelector('.inner1');
@@ -364,32 +357,32 @@ function nonePassiveHandler(event) {
   // event.stopPropagation();
   console.log('intérieur2, none-passive, default, nouvelle page non ouverte');
 }
-</pre>
+```
 
-<h4 id="Result_4">Résultat</h4>
+#### Résultat
 
-<p>Cliquez les conteneurs <var>extérieur</var>, <var>milieu</var>, <var>intérieurs</var> respectivement pour voir comment les options fonctionnent. Vous pouvez ouvrir la console pour observer les différents messages émis.</p>
+Cliquez les conteneurs _extérieur_, _milieu_, _intérieurs_ respectivement pour voir comment les options fonctionnent. Vous pouvez ouvrir la console pour observer les différents messages émis.
 
-<p>{{EmbedLiveSample('Example_of_options_usage', '', '320')}}</p>
+{{EmbedLiveSample('Example_of_options_usage', '', '320')}}
 
-<p>Avant d'utiliser une valeur particulière dans l'objet <code>options</code>, c'est une bonne idée que de s'assurer que le navigateur de l'utilisateur la prend en charge, du fait qu'elles sont un ajout que tous les navigateurs n'ont pas pris en charge historiquement. Voir {{anch("Safely_detecting_option_support", "Détection sûre du support des options")}} pour les détails.</p>
+Avant d'utiliser une valeur particulière dans l'objet `options`, c'est une bonne idée que de s'assurer que le navigateur de l'utilisateur la prend en charge, du fait qu'elles sont un ajout que tous les navigateurs n'ont pas pris en charge historiquement. Voir {{anch("Safely_detecting_option_support", "Détection sûre du support des options")}} pour les détails.
 
-<h3 id="Add_a_abortable_listener">Ajout d'un écouteur annulable</h3>
+### Ajout d'un écouteur annulable
 
-<p>Cet exemple montre comment ajouter un <code>addEventListener()</code> qui peut être interrompu par un {{domxref("AbortSignal")}}.</p>
+Cet exemple montre comment ajouter un `addEventListener()` qui peut être interrompu par un {{domxref("AbortSignal")}}.
 
-<h4 id="HTML_5">HTML</h4>
+#### HTML
 
-<pre class="brush: html">
-&lt;table id="outside"&gt;
-  &lt;tr&gt;&lt;td id="t1"&gt;un&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td id="t2"&gt;deux&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table id="outside">
+  <tr><td id="t1">un</td></tr>
+  <tr><td id="t2">deux</td></tr>
+</table>
+```
 
-<h4 id="JavaScript_5">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">
+```js
 // Ajout d'un écouteur d'évènement annulable à la table
 const controller = new AbortController();
 const el = document.querySelector("#outside");
@@ -405,92 +398,90 @@ function modifyText() {
     controller.abort(); // supprime l'écouteur lorsque la valeur est "trois".
   }
 }
-</pre>
+```
 
-<p>Dans l'exemple ci-dessus, nous modifions le code de l'exemple {{anch('Add_a_simple_listener', 'Ajouter un écouteur simple')}} de telle sorte qu'après que le contenu de la deuxième ligne soit devenu « trois », nous appelons <code>abort()</code> à partir du {{domxref("AbortController")}} que nous avons passé à l'appel <code>addEventListener()</code>. Cela a pour résultat que la valeur reste à "trois" pour toujours, parce que nous n'avons plus de code écoutant un évènement de clic.</p>
+Dans l'exemple ci-dessus, nous modifions le code de l'exemple {{anch('Add_a_simple_listener', 'Ajouter un écouteur simple')}} de telle sorte qu'après que le contenu de la deuxième ligne soit devenu « trois », nous appelons `abort()` à partir du {{domxref("AbortController")}} que nous avons passé à l'appel `addEventListener()`. Cela a pour résultat que la valeur reste à "trois" pour toujours, parce que nous n'avons plus de code écoutant un évènement de clic.
 
-<h4 id="Result_5">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Add_a_abortable_listener')}}</p>
+{{EmbedLiveSample('Add_a_abortable_listener')}}
 
-<h2 id="Other_notes">Autres notes</h2>
+## Autres notes
 
-<h3 id="Why_use_addEventListener">Pourquoi utiliser addEventListener() ?</h3>
+### Pourquoi utiliser addEventListener() ?
 
-<p><code>addEventListener</code> est la manière d'enregistrer un écouteur d'évènements telle que spécifiée dans le DOM du W3C. Ses avantages sont les suivants :</p>
+`addEventListener` est la manière d'enregistrer un écouteur d'évènements telle que spécifiée dans le DOM du W3C. Ses avantages sont les suivants :
 
-<ul>
-  <li>Elle permet d'ajouter plus d'un seul gestionnaire pour un évènement. Cela peut s'avérer particulièrement utile pour les bibliothèques {{Glossary("AJAX")}}, les modules JavaScript ou tout autre sorte de code qui a besoin de fonctionner correctement avec d'autres bibliothèques/extensions.</li>
-  <li>Elle donne un contrôle plus fin sur la phase d'activation de l'écouteur (capture contre propagation)</li>
-  <li>Elle fonctionne avec tout élément DOM, pas seulement avec les éléments HTML.</li>
-</ul>
+- Elle permet d'ajouter plus d'un seul gestionnaire pour un évènement. Cela peut s'avérer particulièrement utile pour les bibliothèques {{Glossary("AJAX")}}, les modules JavaScript ou tout autre sorte de code qui a besoin de fonctionner correctement avec d'autres bibliothèques/extensions.
+- Elle donne un contrôle plus fin sur la phase d'activation de l'écouteur (capture contre propagation)
+- Elle fonctionne avec tout élément DOM, pas seulement avec les éléments HTML.
 
-<p>L'<a href="#older_way_to_register_event_listeners">ancienne manière alternative</a> d'enregistrer des évènements est décrite ci-dessous.</p>
+L'[ancienne manière alternative](#older_way_to_register_event_listeners) d'enregistrer des évènements est décrite ci-dessous.
 
-<h3 id="Adding_a_listener_during_event_dispatch">Ajout d'un écouteur pendant la distribution d'un évènement</h3>
+### Ajout d'un écouteur pendant la distribution d'un évènement
 
-<p>Si un {{domxref("EventListener")}} est ajouté à une {{domxref("EventTarget")}} pendant qu'elle traite un évènement, cet évènement ne déclenchera l'écouteur. Cependant, le même écouteur pourra être déclenché à une étape ultérieure du flux d'évènements, telle que la phase de propagation.</p>
+Si un {{domxref("EventListener")}} est ajouté à une {{domxref("EventTarget")}} pendant qu'elle traite un évènement, cet évènement ne déclenchera l'écouteur. Cependant, le même écouteur pourra être déclenché à une étape ultérieure du flux d'évènements, telle que la phase de propagation.
 
-<h3 id="Multiple_identical_event_listeners">Écouteurs d'évènements identiques multiples</h3>
+### Écouteurs d'évènements identiques multiples
 
-<p>Si des <code>EventListener</code> identiques multiples sont enregistrés sur la même <code>EventTarget</code> avec les mêmes paramètres, les instances dupliquées sont supprimées. Elles ne provoqueront pas un appel en double de l'<code>EventListener</code>, et elles n'ont pas besoin d'être enlevées avec la méthode {{domxref("EventTarget.removeEventListener()", "removeEventListener()")}}.</p>
+Si des `EventListener` identiques multiples sont enregistrés sur la même `EventTarget` avec les mêmes paramètres, les instances dupliquées sont supprimées. Elles ne provoqueront pas un appel en double de l'`EventListener`, et elles n'ont pas besoin d'être enlevées avec la méthode {{domxref("EventTarget.removeEventListener()", "removeEventListener()")}}.
 
-<p>Notez toutefois que lors de l'utilisation d'une fonction anonyme comme gestionnaire, de tels écouteurs ne seront PAS identiques, du fait que les fonctions anonymes ne sont pas identiques, même si définies en utilisant le MÊME code source inchangé, simplement appelé répétitivement, même dans une boucle.</p>
+Notez toutefois que lors de l'utilisation d'une fonction anonyme comme gestionnaire, de tels écouteurs ne seront PAS identiques, du fait que les fonctions anonymes ne sont pas identiques, même si définies en utilisant le MÊME code source inchangé, simplement appelé répétitivement, même dans une boucle.
 
-<p>Cependant, le fait de définir répétitivement la même fonction nommée dans de tels cas peut être davantage problématique. (Voir <a href="#memory_issues">Problèmes de mémoire</a> ci-dessous.)</p>
+Cependant, le fait de définir répétitivement la même fonction nommée dans de tels cas peut être davantage problématique. (Voir [Problèmes de mémoire](#memory_issues) ci-dessous.)
 
-<h3 id="The_value_of_this_within_the_handler">La valeur de "this" à l'intérieur du gestionnaire</h3>
+### La valeur de "this" à l'intérieur du gestionnaire
 
-<p>Il est souvent souhaitable de référencer l'élément sur lequel le gestionnaire d'évènements a été déclenché, comme lors de l'utilisation d'un gestionnaire générique pour un ensemble d'éléments similaires.</p>
+Il est souvent souhaitable de référencer l'élément sur lequel le gestionnaire d'évènements a été déclenché, comme lors de l'utilisation d'un gestionnaire générique pour un ensemble d'éléments similaires.
 
-<p>Lorsqu'une fonction gestionnaire est attachée à un élément en utilisant <code>addEventListener()</code>, la valeur de {{jsxref("Operators/this","this")}} à l'intérieur du gestionnaire est une référence à l'élément. C'est la même valeur que celle de la propriété <code>currentTarget</code> de l'argument évènement qui est passé au gestionnaire.</p>
+Lorsqu'une fonction gestionnaire est attachée à un élément en utilisant `addEventListener()`, la valeur de {{jsxref("Operators/this","this")}} à l'intérieur du gestionnaire est une référence à l'élément. C'est la même valeur que celle de la propriété `currentTarget` de l'argument évènement qui est passé au gestionnaire.
 
-<pre class="brush: js">
+```js
 my_element.addEventListener('click', function(e) {
   console.log(this.className)           // journalise le className de my_element
   console.log(e.currentTarget === this) // journalise `true`
 })
-</pre>
+```
 
-<p>Pour mémoire, les <a href="/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions#pas_de_this_lié_à_la_fonction">fonctions fléchées n'ont pas de <code>this</code> lié</a>.</p>
+Pour mémoire, les [fonctions fléchées n'ont pas de `this` lié](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions#pas_de_this_lié_à_la_fonction).
 
-<pre class="brush: js">
-my_element.addEventListener('click', (e) =&gt; {
+```js
+my_element.addEventListener('click', (e) => {
   console.log(this.className)           // ATTENTION : `this` n'est pas `my_element`
   console.log(e.currentTarget === this) // journalise `false`
 })
-</pre>
+```
 
-<p>Si un gestionnaire d'évènements (par exemple, {{domxref("GlobalEventHandlers.onclick", "onclick")}}) est spécifié sur un élément dans la source HTML, le code JavaScript dans la valeur de l'attribut est effectivement encapsulé dans une fonction du gestionnaire qui lie la valeur de <code>this</code> d'une manière cohérente avec le <code>addEventListener()</code> ; une occurrence de <code>this</code> dans le code représente une référence à l'élément.</p>
+Si un gestionnaire d'évènements (par exemple, {{domxref("GlobalEventHandlers.onclick", "onclick")}}) est spécifié sur un élément dans la source HTML, le code JavaScript dans la valeur de l'attribut est effectivement encapsulé dans une fonction du gestionnaire qui lie la valeur de `this` d'une manière cohérente avec le `addEventListener()` ; une occurrence de `this` dans le code représente une référence à l'élément.
 
-<pre class="brush: html">
-&lt;table id="my_table" onclick="console.log(this.id);"&gt;
-&lt;!-- `this` fait référence à la table ; journalise 'my_table' --&gt;
+```html
+<table id="my_table" onclick="console.log(this.id);">
+<!-- `this` fait référence à la table ; journalise 'my_table' -->
   ...
-&lt;/table&gt;
-</pre>
+</table>
+```
 
-<p>Notez que la valeur de <code>this</code> à l'intérieur d'une fonction, appelée par le code dans la valeur de l'attribut, se comporte selon les <a href="/fr/docs/Web/JavaScript/Reference/Operators/this">règles standard</a>. Ceci est illustré dans l'exemple suivant :</p>
+Notez que la valeur de `this` à l'intérieur d'une fonction, appelée par le code dans la valeur de l'attribut, se comporte selon les [règles standard](/fr/docs/Web/JavaScript/Reference/Operators/this). Ceci est illustré dans l'exemple suivant :
 
-<pre class="brush: html">
-&lt;script&gt;
+```html
+<script>
   function logID() { console.log(this.id); }
-&lt;/script&gt;
-&lt;table id="my_table" onclick="logID();"&gt;
-&lt;!-- lorsqu'appelée, `this` fera référence à l'objet global --&gt;
+</script>
+<table id="my_table" onclick="logID();">
+<!-- lorsqu'appelée, `this` fera référence à l'objet global -->
   ...
-&lt;/table&gt;
-</pre>
+</table>
+```
 
-<p>La valeur de <code>this</code> à l'intérieur de <code>logID</code> est une référence à l'objet global {{domxref("Window")}} (ou <code>undefined</code> dans le cas du <a href="/fr/docs/Web/JavaScript/Reference/Strict_mode">mode strict</a>).</p>
+La valeur de `this` à l'intérieur de `logID` est une référence à l'objet global {{domxref("Window")}} (ou `undefined` dans le cas du [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode)).
 
-<h4 id="Specifying_this_using_bind">Spécification de "this" en utilisant bind()</h4>
+#### Spécification de "this" en utilisant bind()
 
-<p>La méthode {{jsxref("Function.prototype.bind()")}} vous permet de spécifier la valeur qui doit être utilisée comme <code>this</code> pour tous les appels à une fonction donnée. Cette méthode vous permet de contourner facilement les problèmes dans lesquels ce que <code>this</code> sera n'est pas clair, en fonction du contexte depuis lequel votre fonction a été appelée. Notez toutefois que vous aurez besoin de conserver quelque part une référence à l'écouteur, de façon à pouvoir le supprimer ultérieurement.</p>
+La méthode {{jsxref("Function.prototype.bind()")}} vous permet de spécifier la valeur qui doit être utilisée comme `this` pour tous les appels à une fonction donnée. Cette méthode vous permet de contourner facilement les problèmes dans lesquels ce que `this` sera n'est pas clair, en fonction du contexte depuis lequel votre fonction a été appelée. Notez toutefois que vous aurez besoin de conserver quelque part une référence à l'écouteur, de façon à pouvoir le supprimer ultérieurement.
 
-<p>Ceci est un exemple avec et sans <code>bind()</code> :</p>
+Ceci est un exemple avec et sans `bind()` :
 
-<pre class="brush: js">
+```js
 const Something = function(element) {
   // |this| est un objet nouvellement créé
   this.name = 'Quelque chose de bon';
@@ -504,11 +495,11 @@ const Something = function(element) {
   element.addEventListener('click', this.onclick2.bind(this), false); // Astuce
 }
 const s = new Something(document.body);
-</pre>
+```
 
-<p>Une autre solution consiste à utiliser une fonction spéciale appelée <code>handleEvent()</code> to intercepter tous les évènements :</p>
+Une autre solution consiste à utiliser une fonction spéciale appelée `handleEvent()` to intercepter tous les évènements :
 
-<pre class="brush: js">
+```js
 const Something = function(element) {
   // |this| est un objet nouvellement créé
   this.name = 'Quelque chose de bon';
@@ -533,11 +524,11 @@ const Something = function(element) {
   element.removeEventListener('dblclick', this, false);
 }
 const s = new Something(document.body);
-</pre>
+```
 
-<p>Une autre manière de gérer la référence à this est de passer à l'<code>EventListener</code> une fonction qui appelle la méthode de l'objet qui contient les champs auxquels on a besoin d'accéder :</p>
+Une autre manière de gérer la référence à this est de passer à l'`EventListener` une fonction qui appelle la méthode de l'objet qui contient les champs auxquels on a besoin d'accéder :
 
-<pre class="brush: js">
+```js
 class SomeClass {
 
   constructor() {
@@ -565,32 +556,32 @@ class SomeClass {
 
 const myObject = new SomeClass();
 myObject.register();
-</pre>
+```
 
-<h3 id="Getting_data_into_and_out_of_an_event_listener">Passer des données à et depuis un écouteur d'évènements</h3>
+### Passer des données à et depuis un écouteur d'évènements
 
-<p>On peut avoir l'impression que les écouteurs d'évènements sont comme des îles et qu'il est extrêmement difficile de leur passer des données quelconques, encore moins d'en récupérer après qu'ils ont été exécutés. Les écouteurs d'évènements ne prennent qu'un seul argument, l'objet <a href="/fr/docs/Learn/JavaScript/Building_blocks/Events#event_objects"><code>event</code></a>, qui est passé automatiquement à l'écouteur, et la valeur retournée est ignorée. Aussi, comment pouvons-nous leur passer des données et en récupérer ? Il y a certain nombre de bonnes méthodes pour ce faire.</p>
+On peut avoir l'impression que les écouteurs d'évènements sont comme des îles et qu'il est extrêmement difficile de leur passer des données quelconques, encore moins d'en récupérer après qu'ils ont été exécutés. Les écouteurs d'évènements ne prennent qu'un seul argument, l'objet [`event`](/fr/docs/Learn/JavaScript/Building_blocks/Events#event_objects), qui est passé automatiquement à l'écouteur, et la valeur retournée est ignorée. Aussi, comment pouvons-nous leur passer des données et en récupérer ? Il y a certain nombre de bonnes méthodes pour ce faire.
 
-<h4 id="Getting_data_into_an_event_listener_using_this">Passer des données à un écouteur d'évènement en utilisant "this"</h4>
+#### Passer des données à un écouteur d'évènement en utilisant "this"
 
-<p>Comme mentionné <a href="#specifying_this_using_bind">ci-dessus</a>, vous pouvez utiliser <code>Function.prototype.bind()</code> pour passer une valeur à un écouteur d'évènements via la variable de référence <code>this</code>.</p>
+Comme mentionné [ci-dessus](#specifying_this_using_bind), vous pouvez utiliser `Function.prototype.bind()` pour passer une valeur à un écouteur d'évènements via la variable de référence `this`.
 
-<pre class="brush: js">
+```js
 const myButton = document.getElementById('my-button-id');
 const someString = 'Donnée';
 
 myButton.addEventListener('click', function () {
   console.log(this); // Valeur attendue : "Donnée".
 }.bind(someString));
-</pre>
+```
 
-<p>Cette méthode est appropriée quand vous n'avez pas besoin de savoir sur quel élément HTML l'écouteur d'évènement a été déclenché par programme depuis l'intérieur de l'écouteur d'évènements. Le principal avantage de cette façon de faire est que l'écouteur d'évènements reçoit les données sensiblement de la même manière qu'il le ferait si vous les lui passiez au moyen de sa liste d'arguments.</p>
+Cette méthode est appropriée quand vous n'avez pas besoin de savoir sur quel élément HTML l'écouteur d'évènement a été déclenché par programme depuis l'intérieur de l'écouteur d'évènements. Le principal avantage de cette façon de faire est que l'écouteur d'évènements reçoit les données sensiblement de la même manière qu'il le ferait si vous les lui passiez au moyen de sa liste d'arguments.
 
-<h4 id="Getting_data_into_an_event_listener_using_the_outer_scope_property">Passer des données à un écouteur d'évènements en utilisant une propriété de portée externe</h4>
+#### Passer des données à un écouteur d'évènements en utilisant une propriété de portée externe
 
-<p>Quand une portée externe contient une déclaration de variable (avec <code>const</code>, <code>let</code>), toutes les fonctions internes déclarées dans cette portée ont accès à cette variable (voir <a href="/fr/docs/Glossary/Function#different_types_of_functions">ici</a> pour des informations sur les fonctions externes/internes, et <a href="/fr/docs/Web/JavaScript/Reference/Statements/var#implicit_globals_and_outer_function_scope">ici</a> pour des informations sur la portée des variables). Par conséquent, une des façons les plus simples pour accéder à des données depuis l'extérieur d'un écouteur d'évènements est de le rendre accessible dans la portée dans laquelle l'écouteur d'évènement est déclaré.</p>
+Quand une portée externe contient une déclaration de variable (avec `const`, `let`), toutes les fonctions internes déclarées dans cette portée ont accès à cette variable (voir [ici](/fr/docs/Glossary/Function#different_types_of_functions) pour des informations sur les fonctions externes/internes, et [ici](/fr/docs/Web/JavaScript/Reference/Statements/var#implicit_globals_and_outer_function_scope) pour des informations sur la portée des variables). Par conséquent, une des façons les plus simples pour accéder à des données depuis l'extérieur d'un écouteur d'évènements est de le rendre accessible dans la portée dans laquelle l'écouteur d'évènement est déclaré.
 
-<pre class="brush: js">
+```js
 const myButton = document.getElementById('my-button-id');
 let someString = 'Donnée';
 
@@ -601,23 +592,19 @@ myButton.addEventListener('click', function() {
 });
 
 console.log(someString);  // Valeur attendue : 'Donnée' (ne donnera jamais 'Encore des données')
-</pre>
+```
 
-<div class="notecard note">
-<p><strong>Note :</strong> Bien que les portées internes aient accès aux variables <code>const</code> et <code>let</code> depuis les portées externes, vous ne pouvez pas vous attendre à ce que des changements quelconques de ces variables soient accessibles après la définition de l'écouteur d'évènements, à l'intérieur de la même portée externe. Pourquoi ? Simplement parce qu'au moment où l'écouteur d'évènements s'exécutera, la portée dans laquelle il a été défini pourra avoir déjà fini de s'exécuter.</p>
-</div>
+> **Note :** Bien que les portées internes aient accès aux variables `const` et `let` depuis les portées externes, vous ne pouvez pas vous attendre à ce que des changements quelconques de ces variables soient accessibles après la définition de l'écouteur d'évènements, à l'intérieur de la même portée externe. Pourquoi ? Simplement parce qu'au moment où l'écouteur d'évènements s'exécutera, la portée dans laquelle il a été défini pourra avoir déjà fini de s'exécuter.
 
-<h4 id="Getting_data_into_and_out_of_an_event_listener_using_objects">Passer des données à et depuis un écouteur d'évènements en utilisant des objets</h4>
+#### Passer des données à et depuis un écouteur d'évènements en utilisant des objets
 
-<p>A l'inverse de la plupart des fonctions en JavaScript, les objets sont conservés en mémoire aussi longtemps qu'une variable les référençant existe en mémoire. Ceci, et le fait que les objets peuvent avoir des propriétés, et qu'ils peuvent être passés alentour par référence, en font des candidats plausibles pour partager des données entre les portées. Explorons cela.</p>
+A l'inverse de la plupart des fonctions en JavaScript, les objets sont conservés en mémoire aussi longtemps qu'une variable les référençant existe en mémoire. Ceci, et le fait que les objets peuvent avoir des propriétés, et qu'ils peuvent être passés alentour par référence, en font des candidats plausibles pour partager des données entre les portées. Explorons cela.
 
-<div class="notecard note">
-<p><strong>Note :</strong> Les fonctions en JavaScript sont en fait des objets. (Par conséquent, elles aussi peuvent avoir des propriétés, et seront conservées en mémoire même après qu'elles ont fini de s'exécuter, si elles ont été affectées à une variable qui persiste en mémoire.)</p>
-</div>
+> **Note :** Les fonctions en JavaScript sont en fait des objets. (Par conséquent, elles aussi peuvent avoir des propriétés, et seront conservées en mémoire même après qu'elles ont fini de s'exécuter, si elles ont été affectées à une variable qui persiste en mémoire.)
 
-<p>Du fait que les propriétés d'un objet peuvent être utilisées pour stocker des données en mémoire aussi longtemps qu'une variable référençant l'objet existe en mémoire, vous pouvez en fait les utiliser pour passer des données dans un écouteur d'évènements, et retourner tous les changements aux données après que l'écouteur d'évènements s'est exécuté. Considérez cet exemple :</p>
+Du fait que les propriétés d'un objet peuvent être utilisées pour stocker des données en mémoire aussi longtemps qu'une variable référençant l'objet existe en mémoire, vous pouvez en fait les utiliser pour passer des données dans un écouteur d'évènements, et retourner tous les changements aux données après que l'écouteur d'évènements s'est exécuté. Considérez cet exemple :
 
-<pre class="brush: js">
+```js
 const myButton = document.getElementById('my-button-id');
 const someObject = {aProperty: 'Donnée'};
 
@@ -633,43 +620,37 @@ window.setInterval(function() {
     someObject.aProperty = 'Donnée';  // Rétablit la valeur pour attendre l'exécution du prochain évènement
   }
 }, 5000);
-</pre>
+```
 
-<p>Dans cet exemple, même si la portée dans laquelle à la fois l'écouteur d'évènements et la fonction d'intervalle ont été définis a fini de s'exécuter avant que la valeur originale de <code>unObjet.unePropriete</code> ait changé, du fait que <code>someObject</code> persiste en mémoire (par référence) à la fois dans l'écouteur d'évènements et dans la fonction d'intervalle, tous deux ont accès aux mêmes données (i.e. quand l'un change les données, l'autre peut répondre aux changements).</p>
+Dans cet exemple, même si la portée dans laquelle à la fois l'écouteur d'évènements et la fonction d'intervalle ont été définis a fini de s'exécuter avant que la valeur originale de `unObjet.unePropriete` ait changé, du fait que `someObject` persiste en mémoire (par référence) à la fois dans l'écouteur d'évènements et dans la fonction d'intervalle, tous deux ont accès aux mêmes données (i.e. quand l'un change les données, l'autre peut répondre aux changements).
 
-<div class="notecard note">
-  <p><strong>Note :</strong> Les objets sont stockés dans les variables par référence, ce qui signifie que seul l'emplacement en mémoire des données elles-mêmes est stocké dans la variable. Entre autres choses, cela signifie que les variables qui "stockent" des objets peuvent en fait affecter d'autres variables qui se voient affecter ("stocker") la même référence d'objet. Quand deux variables référencent le même objet (par ex., <code>let a = b = {aProperty: 'Ouai'};</code>), le fait de changer les données dans l'une ou l'autre des variables affectera l'autre.</p>
-</div>
+> **Note :** Les objets sont stockés dans les variables par référence, ce qui signifie que seul l'emplacement en mémoire des données elles-mêmes est stocké dans la variable. Entre autres choses, cela signifie que les variables qui "stockent" des objets peuvent en fait affecter d'autres variables qui se voient affecter ("stocker") la même référence d'objet. Quand deux variables référencent le même objet (par ex., `let a = b = {aProperty: 'Ouai'};`), le fait de changer les données dans l'une ou l'autre des variables affectera l'autre.
 
-<div class="notecard note">
-  <p><strong>Note :</strong> Du fait que les objets sont stockés dans les variables par référence, vous pouvez retourner un objet depuis une fonction pour le maintenir en vie (le conserver en mémoire, de sorte que vous n'en perdiez pas les données) après que cette fonction a fini de s'exécuter.</p>
-</div>
+> **Note :** Du fait que les objets sont stockés dans les variables par référence, vous pouvez retourner un objet depuis une fonction pour le maintenir en vie (le conserver en mémoire, de sorte que vous n'en perdiez pas les données) après que cette fonction a fini de s'exécuter.
 
-<h3 id="Legacy_Internet_Explorer_and_attachEvent">Prise en charge d'Internet Explorer et attachEvent</h3>
+### Prise en charge d'Internet Explorer et attachEvent
 
-<p>Dans les versions Internet Explorer versions avant IE 9, vous deviez utiliser <code>attachEvent()</code> plutôt que la méthode standard <code>addEventListener</code>. Pour IE, nous modifions l'exemple précédent en :</p>
+Dans les versions Internet Explorer versions avant IE 9, vous deviez utiliser `attachEvent()` plutôt que la méthode standard `addEventListener`. Pour IE, nous modifions l'exemple précédent en :
 
-<pre class="brush: js">
+```js
 if (el.addEventListener) {
   el.addEventListener('click', modifierTexte, false);
 } else if (el.attachEvent)  {
   el.attachEvent('onclick', modifierTexte);
 }
-</pre>
+```
 
-<p>Il y a un inconvénient avec <code>attachEvent</code> : la valeur de <code>this</code> sera une référence à l'objet <code>window</code>, au lieu de l'élément sur lequel il a été déclenché.</p>
+Il y a un inconvénient avec `attachEvent` : la valeur de `this` sera une référence à l'objet `window`, au lieu de l'élément sur lequel il a été déclenché.
 
-<p>La méthode <code>attachEvent()</code> peut être couplée avec l'évènement <code>onresize</code> pour détecter que certains éléments dans une page web ont été redimensionnés. L'évènement propriétaire <code>mselementresize</code>, lorsqu'il est couplé avec la méthode <code>addEventListener</code> d'enregistrement des gestionnaires d'évènements, fournit une fonctionnalité similaire à celle de <code>onresize</code>, se déclenchant quand certains éléments HTML sont redimensionnés.</p>
+La méthode `attachEvent()` peut être couplée avec l'évènement `onresize` pour détecter que certains éléments dans une page web ont été redimensionnés. L'évènement propriétaire `mselementresize`, lorsqu'il est couplé avec la méthode `addEventListener` d'enregistrement des gestionnaires d'évènements, fournit une fonctionnalité similaire à celle de `onresize`, se déclenchant quand certains éléments HTML sont redimensionnés.
 
-<h3 id="Polyfill">Prothèse d'émulation (<i>polyfill</i>)</h3>
+### Prothèse d'émulation (_polyfill_)
 
-<p>Vous pouvez contourner le fait que <code>addEventListener()</code>, <code>removeEventListener()</code>, {{domxref("Event.preventDefault()")}} et {{domxref("Event.stopPropagation()")}} ne sont pas pris en charge par IE 8 en utilisant le code suivant au début de votre script. Le code prend en charge l'utilisation de <code>handleEvent()</code>, et aussi l'évènement {{event("DOMContentLoaded")}}.</p>
+Vous pouvez contourner le fait que `addEventListener()`, `removeEventListener()`, {{domxref("Event.preventDefault()")}} et {{domxref("Event.stopPropagation()")}} ne sont pas pris en charge par IE 8 en utilisant le code suivant au début de votre script. Le code prend en charge l'utilisation de `handleEvent()`, et aussi l'évènement {{event("DOMContentLoaded")}}.
 
-<div class="cardnote note">
-  <p><strong>Note :</strong> <code>useCapture</code> n'est pas pris en charge, du fait qu'IE 8 n'a aucune méthode alternative. Le code suivant ajoute seulement la prise en charge d'IE 8. Cette émulation pour IE 8 fonctionne uniquement en mode standard : une déclaration <code>doctype</code> est requise.</p>
-</div>
+> **Note :** `useCapture` n'est pas pris en charge, du fait qu'IE 8 n'a aucune méthode alternative. Le code suivant ajoute seulement la prise en charge d'IE 8. Cette émulation pour IE 8 fonctionne uniquement en mode standard : une déclaration `doctype` est requise.
 
-<pre class="brush: js">
+```js
 (function() {
   if (!Event.prototype.preventDefault) {
     Event.prototype.preventDefault=function() {
@@ -716,9 +697,9 @@ if (el.addEventListener) {
     };
     var removeEventListener=function(type,listener /*, useCapture (sera ignoré) */) {
       var counter=0;
-      while (counter&lt;eventListeners.length) {
+      while (counter<eventListeners.length) {
         var eventListener=eventListeners[counter];
-        if (eventListener.object==this &amp;&amp; eventListener.type==type &amp;&amp; eventListener.listener==listener) {
+        if (eventListener.object==this && eventListener.type==type && eventListener.listener==listener) {
           if (type=="DOMContentLoaded") {
             this.detachEvent("onreadystatechange",eventListener.wrapper);
           } else {
@@ -742,13 +723,13 @@ if (el.addEventListener) {
     }
   }
 })();
-</pre>
+```
 
-<h3 id="Older_way_to_register_event_listeners">Ancienne manière d'enregistrer les écouteurs d'évènements</h3>
+### Ancienne manière d'enregistrer les écouteurs d'évènements
 
-<p>La méthode <code>addEventListener()</code> a été ajoutée dans la spécification DOM 2 <a href="http://www.w3.org/TR/DOM-Level-2-Events">Events</a>. Avant cela, les écouteurs d'évènements étaient enregistrés de la manière suivante :</p>
+La méthode `addEventListener()` a été ajoutée dans la spécification DOM 2 [Events](http://www.w3.org/TR/DOM-Level-2-Events). Avant cela, les écouteurs d'évènements étaient enregistrés de la manière suivante :
 
-<pre class="brush: js">
+```js
 // Passage d'une référence à une fonction
 // Ne pas ajouter de '()' après, cela appelerait la fonction !
 el.onclick = modifyText;
@@ -757,20 +738,20 @@ el.onclick = modifyText;
 element.onclick = function() {
   ...logique de la fonction...
 };
-</pre>
+```
 
-<p>Cette méthode remplace l'(les) écouteur(s) d'évènements <code>click</code> existant(s) de l'élément s'il y en a. D'autres évènements et leurs gestionnaires d'évènements associés comme <code>blur</code> (<code>onblur</code>), et  <code>keypress</code> ( <code>onkeypress</code>) se comportent de façon similaire.</p>
+Cette méthode remplace l'(les) écouteur(s) d'évènements `click` existant(s) de l'élément s'il y en a. D'autres évènements et leurs gestionnaires d'évènements associés comme `blur` (`onblur`), et `keypress` ( `onkeypress`) se comportent de façon similaire.
 
-<p>Comme elle faisait partie de façon fondamentale du DOM 0, cette méthode est très largement prise en charge et ne nécessite aucun code multi-navigateur. C'est pourquoi elle est souvent utilisée pour enregistrer des évènements dynamiquement quand de très anciens navigateurs (comme IE dans les versions antérieures à IE8) doivent être pris en charge ; voir la table plus bas pour les détails de la prise en charge par les navigateurs pour <code>addEventListener</code>.</p>
+Comme elle faisait partie de façon fondamentale du DOM 0, cette méthode est très largement prise en charge et ne nécessite aucun code multi-navigateur. C'est pourquoi elle est souvent utilisée pour enregistrer des évènements dynamiquement quand de très anciens navigateurs (comme IE dans les versions antérieures à IE8) doivent être pris en charge ; voir la table plus bas pour les détails de la prise en charge par les navigateurs pour `addEventListener`.
 
-<h3 id="Memory_issues">Problèmes de mémoire</h3>
+### Problèmes de mémoire
 
-<pre class="brush: js">
+```js
 let i;
 const els = document.getElementsByTagName('*');
 
 // Cas 1
-for (i=0 ; i&lt;els.length ; i++) {
+for (i=0 ; i<els.length ; i++) {
   els[i].addEventListener("click", function(e){/*faire quelque chose*/}, false);
 }
 
@@ -779,46 +760,45 @@ function processEvent(e) {
   /* faire quelque chose */
 }
 
-for (i=0 ; i&lt;els.length ; i++) {
+for (i=0 ; i<els.length ; i++) {
   els[i].addEventListener("click", processEvent, false);
 }
-</pre>
+```
 
-<p>Dans le premier cas ci-dessus, une nouvelle fonction gestionnaire (anonyme) est créée à chaque itération de la boucle. Dans le second cas, la même fonction déclarée préalablement est utilisée comme gestionnaire d'évènements. Cela entraîne une consommation de mémoire réduite. De plus, dans le premier cas, il n'est pas possible d'appeler {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} du fait qu'aucune référence à la fonction anonyme n'est conservée (ou ici, n'est conservée aucune des multiples fonctions anonymes que la boucle peut créer). Dans le second cas, il est possible de faire <code>myElement.removeEventListener("click", processEvent, false)</code> du fait que <code>processEvent</code> est la référence à la fonction.</p>
+Dans le premier cas ci-dessus, une nouvelle fonction gestionnaire (anonyme) est créée à chaque itération de la boucle. Dans le second cas, la même fonction déclarée préalablement est utilisée comme gestionnaire d'évènements. Cela entraîne une consommation de mémoire réduite. De plus, dans le premier cas, il n'est pas possible d'appeler {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} du fait qu'aucune référence à la fonction anonyme n'est conservée (ou ici, n'est conservée aucune des multiples fonctions anonymes que la boucle peut créer). Dans le second cas, il est possible de faire `myElement.removeEventListener("click", processEvent, false)` du fait que `processEvent` est la référence à la fonction.
 
-<p>En fait, en ce qui concerne la consommation de mémoire, l'absence de conservation d'une référence à la fonction n'est pas le problème réel ; c'est plutôt l'absence de conservation d'une référence STATIQUE à la fonction. Dans les deux cas à problème ci-dessous, une référence à la fonction est conservée, mais du fait qu'elle est redéfinie à chaque itération, elle n'est pas statique. Dans le troisème cas, la référence à la fonction anonyme est réaffectée à chaque itération. Dans le quatrième cas, la définition entière de la fonction est inchangée, mais elle est néanmoins répétitivement définie comme si elle était nouvelle (à moins qu'elle n'ait été [[promue]] par le compilateur), et elle n'est donc pas statique. Par conséquent, bien qu'il ne semble y avoir simplement que des [[Multiple identical event listeners]], dans les deux cas, chaque itération créera à la place un nouvel écouteur avec sa propre unique référence à la fonction gestionnaire. Cependant, du fait que la définition de la fonction elle-même ne change pas, la MÊME fonction peut toujours être appelée pour chaque écouteur dupliqué (spécialement si le code est optimisé.)</p>
+En fait, en ce qui concerne la consommation de mémoire, l'absence de conservation d'une référence à la fonction n'est pas le problème réel ; c'est plutôt l'absence de conservation d'une référence STATIQUE à la fonction. Dans les deux cas à problème ci-dessous, une référence à la fonction est conservée, mais du fait qu'elle est redéfinie à chaque itération, elle n'est pas statique. Dans le troisème cas, la référence à la fonction anonyme est réaffectée à chaque itération. Dans le quatrième cas, la définition entière de la fonction est inchangée, mais elle est néanmoins répétitivement définie comme si elle était nouvelle (à moins qu'elle n'ait été \[\[promue]] par le compilateur), et elle n'est donc pas statique. Par conséquent, bien qu'il ne semble y avoir simplement que des \[\[Multiple identical event listeners]], dans les deux cas, chaque itération créera à la place un nouvel écouteur avec sa propre unique référence à la fonction gestionnaire. Cependant, du fait que la définition de la fonction elle-même ne change pas, la MÊME fonction peut toujours être appelée pour chaque écouteur dupliqué (spécialement si le code est optimisé.)
 
-<p>Également dans les deux cas, du fait que la référence à la fonction e été conservée mais est répétitivement redéfinie par chaque ajout, l'instruction 'remove' ci-dessus peut toujours supprimer un écouteur, mais seulement le dernier ajouté.</p>
+Également dans les deux cas, du fait que la référence à la fonction e été conservée mais est répétitivement redéfinie par chaque ajout, l'instruction 'remove' ci-dessus peut toujours supprimer un écouteur, mais seulement le dernier ajouté.
 
-<pre class="brush: js">
+```js
 // Pour illustration seulement : notez la "FAUTE" de [j] au lieu de [i] entrainant ainsi que les évènements voulus sont tous enregistrés pour le MÊME élément
 
 // Cas 3
-for (let i=0, j=0 ; i&lt;els.length ; i++) {
+for (let i=0, j=0 ; i<els.length ; i++) {
   /* faire des tas de choses avec j */
   els[j].addEventListener("click", processEvent = function(e) {/*faire quelque chose*/}, false);
 }
 
 // Cas 4
-for (let i=0, j=0 ; i&lt;els.length ; i++) {
+for (let i=0, j=0 ; i<els.length ; i++) {
   /* faire des tas de choses avec  j */
   function processEvent(e) {/*faire quelque chose*/};
   els[j].addEventListener("click", processEvent, false);
-}</pre>
+}
+```
 
-<h3 id="Improving_scrolling_performance_with_passive_listeners">Amélioration des performances de défilement avec les écouteurs passifs</h3>
+### Amélioration des performances de défilement avec les écouteurs passifs
 
-<p>D'après la spécification, la valeur par défaut pour l'option <code>passive</code> est toujours <code>false</code>. Toutefois, cela introduit la possibilité que des écouteurs d'évènements gérant certains évènements tactiles (parmi d'autres) bloquent le fil d'exécution principal du navigateur pendant qu'il essaye de gérer le défilement, avec pour résultat une possiblement énorme réduction de performance pendant la gestion du défilement.</p>
+D'après la spécification, la valeur par défaut pour l'option `passive` est toujours `false`. Toutefois, cela introduit la possibilité que des écouteurs d'évènements gérant certains évènements tactiles (parmi d'autres) bloquent le fil d'exécution principal du navigateur pendant qu'il essaye de gérer le défilement, avec pour résultat une possiblement énorme réduction de performance pendant la gestion du défilement.
 
-<p>Pour prévenir ce problème, certains navigateurs (spécifiquement, Chrome et Firefox) ont changé la valeur par défault de l'option <code>passive</code> à <code>true</code> pour les évènements {{event("touchstart")}} et {{event("touchmove")}} dans les nœuds de niveau document {{domxref("Window")}}, {{domxref("Document")}}, et {{domxref("Document.body")}}. Cela empêche que l'écouteur d'évènement ne soit appelé, de sorte qu'il ne peut pas bloquer le rendu de la page pendant que l'utilisateur fait un défilement.</p>
+Pour prévenir ce problème, certains navigateurs (spécifiquement, Chrome et Firefox) ont changé la valeur par défault de l'option `passive` à `true` pour les évènements {{event("touchstart")}} et {{event("touchmove")}} dans les nœuds de niveau document {{domxref("Window")}}, {{domxref("Document")}}, et {{domxref("Document.body")}}. Cela empêche que l'écouteur d'évènement ne soit appelé, de sorte qu'il ne peut pas bloquer le rendu de la page pendant que l'utilisateur fait un défilement.
 
-<div class="notecard note">
-  <p><strong>Note :</strong> Voir la table de compatibilité ci-dessous si vous avez besoin de savoir quels navigateurs (et/ou quelles versions de ces navigateurs) implémentent ce comportement modifié.</p>
-</div>
+> **Note :** Voir la table de compatibilité ci-dessous si vous avez besoin de savoir quels navigateurs (et/ou quelles versions de ces navigateurs) implémentent ce comportement modifié.
 
-<p>Vous pouvez passer outre ce comportement en initialisant explicitement la valeur de <code>passive</code> à <code>false</code>, comme montré ci-dessous :</p>
+Vous pouvez passer outre ce comportement en initialisant explicitement la valeur de `passive` à `false`, comme montré ci-dessous :
 
-<pre class="brush: js">
+```js
 /* Détection de la fonctionnalité */
 let passiveIfSupported = false;
 
@@ -838,49 +818,26 @@ window.addEventListener('scroll', function(event) {
   /* faire quelque chose */
   // ne peut pas utiliser event.preventDefault();
 }, passiveIfSupported );
-</pre>
+```
 
-<p>Dans les navigateurs anciens qui ne prennent pas en charge le paramètre <code>options</code> d'<code>addEventListener()</code>, le fait d'essayer de l'utiliser empêche l'utilisation de l'argument <code>useCapture</code> sans utilisation appropriée de la <a href="#safely_detecting_option_support">détection de fonctionnalité</a>.</p>
+Dans les navigateurs anciens qui ne prennent pas en charge le paramètre `options` d'`addEventListener()`, le fait d'essayer de l'utiliser empêche l'utilisation de l'argument `useCapture` sans utilisation appropriée de la [détection de fonctionnalité](#safely_detecting_option_support).
 
-<p>Vous n'avez pas besoin de vous inquiéter de la valeur de <code>passive</code> pour l'évènement {{event("scroll")}} de base. Du fait qu'il ne peut pas être annulé, les écouteurs d'évènements ne peuvant pas bloquer le rendu de la page de toute façon.</p>
+Vous n'avez pas besoin de vous inquiéter de la valeur de `passive` pour l'évènement {{event("scroll")}} de base. Du fait qu'il ne peut pas être annulé, les écouteurs d'évènements ne peuvant pas bloquer le rendu de la page de toute façon.
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>Spécification</th>
-      <th>Statut</th>
-      <th>Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("DOM WHATWG", "#dom-eventtarget-addeventlistener", "EventTarget.addEventListener()")}}</td>
-      <td>{{Spec2("DOM WHATWG")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM4", "#dom-eventtarget-addeventlistener", "EventTarget.addEventListener()")}}</td>
-      <td>{{Spec2("DOM4")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM2 Events", "#Events-EventTarget-addEventListener", "EventTarget.addEventListener()")}}</td>
-      <td>{{Spec2("DOM2 Events")}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                            | Statut                           | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName("DOM WHATWG", "#dom-eventtarget-addeventlistener", "EventTarget.addEventListener()")}}         | {{Spec2("DOM WHATWG")}} |                      |
+| {{SpecName("DOM4", "#dom-eventtarget-addeventlistener", "EventTarget.addEventListener()")}}                 | {{Spec2("DOM4")}}         |                      |
+| {{SpecName("DOM2 Events", "#Events-EventTarget-addEventListener", "EventTarget.addEventListener()")}} | {{Spec2("DOM2 Events")}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.EventTarget.addEventListener", 3)}}</p>
+{{Compat("api.EventTarget.addEventListener", 3)}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>{{domxref("EventTarget.removeEventListener()")}}</li>
-  <li><a href="/fr/docs/Web/Guide/Events/Creating_and_triggering_events">Création et déclenchement d'évènements</a></li>
-  <li><a href="http://www.quirksmode.org/js/this.html">Plus de détails sur l'utilisation de <code>this</code> dans les gestionnaires d'évènements</a></li>
-</ul>
+- {{domxref("EventTarget.removeEventListener()")}}
+- [Création et déclenchement d'évènements](/fr/docs/Web/Guide/Events/Creating_and_triggering_events)
+- [Plus de détails sur l'utilisation de `this` dans les gestionnaires d'évènements](http://www.quirksmode.org/js/this.html)

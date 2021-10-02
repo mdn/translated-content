@@ -8,105 +8,90 @@ tags:
   - Web Audio API
 translation_of: Web/API/AudioParam
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>L'interface <strong><code>AudioParam</code></strong> représente un paramètre audio, en général un paramètre d'un {{domxref ("AudioNode")}} tel qu'un {{ domxref("GainNode.gain") }}. On peut lui donner une valeur spécifique ou définir une variation de valeur qui intervient à un certain moment et selon un certain fonctionnement.</p>
+L'interface **`AudioParam`** représente un paramètre audio, en général un paramètre d'un {{domxref ("AudioNode")}} tel qu'un {{ domxref("GainNode.gain") }}. On peut lui donner une valeur spécifique ou définir une variation de valeur qui intervient à un certain moment et selon un certain fonctionnement.
 
-<p>Il y a deux sortes de <code>AudioParam</code>, <em>a-rate</em> et <em>k-rate</em> :</p>
+Il y a deux sortes de `AudioParam`, _a-rate_ et _k-rate_ :
 
-<ul>
- <li>Un <code>AudioParam</code> <em>a-rate</em> réévalue la valeur du paramètre audio pour chaque trame d'échantillons du signal audio.</li>
- <li>Un <code>AudioParam</code> <em>k-rate </em>utilise la même valeur de paramètre audio initial pour l'ensemble du bloc traité, c'est-à-dire 128 échantillons.</li>
-</ul>
+- Un `AudioParam` _a-rate_ réévalue la valeur du paramètre audio pour chaque trame d'échantillons du signal audio.
+- Un `AudioParam` _k-rate_ utilise la même valeur de paramètre audio initial pour l'ensemble du bloc traité, c'est-à-dire 128 échantillons.
 
-<p>Chaque {{domxref ("AudioNode")}} définit lequel de ses paramètres sont <em>a-rate</em> ou <em>k-rate</em>.</p>
+Chaque {{domxref ("AudioNode")}} définit lequel de ses paramètres sont _a-rate_ ou _k-rate_.
 
-<p>Chaque <code>AudioParam</code> a une liste d'événements, initialement vide, qui définit quand et comment les valeurs changent. Si cette liste n'est pas vide, les modifications faites directement avec <code>AudioParam.value</code> sont ignorées. Cette liste d'événements permet de planifier les changements qui doivent se produire à des moments très précis à l'aide de courbes d'automatisation chronologiques arbitraires. Les informations de temps utilisées sont celles définies par {{domxref ("AudioContext.currentTime")}}.</p>
+Chaque `AudioParam` a une liste d'événements, initialement vide, qui définit quand et comment les valeurs changent. Si cette liste n'est pas vide, les modifications faites directement avec `AudioParam.value` sont ignorées. Cette liste d'événements permet de planifier les changements qui doivent se produire à des moments très précis à l'aide de courbes d'automatisation chronologiques arbitraires. Les informations de temps utilisées sont celles définies par {{domxref ("AudioContext.currentTime")}}.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Hérite des propriétés de son parent, <code>AudioNode</code>.</em></p>
+_Hérite des propriétés de son parent, `AudioNode`._
 
-<dl>
- <dt>{{domxref("AudioParam.defaultValue")}} {{readonlyInline}}</dt>
- <dd>Volume initial tel que défini par l'{{domxref ("AudioNode")}} qui crée l'<code>AudioParam</code>.</dd>
- <dt>{{domxref("AudioParam.maxValue")}} {{readonlyInline}}</dt>
- <dd>Valeur maximum de la plage nominale (effective). </dd>
- <dt>{{domxref("AudioParam.minValue")}} {{readonlyinline}}</dt>
- <dd>Valeur minimum de la plage nominale (effective). </dd>
-</dl>
+- {{domxref("AudioParam.defaultValue")}} {{readonlyInline}}
+  - : Volume initial tel que défini par l'{{domxref ("AudioNode")}} qui crée l'`AudioParam`.
+- {{domxref("AudioParam.maxValue")}} {{readonlyInline}}
+  - : Valeur maximum de la plage nominale (effective).
+- {{domxref("AudioParam.minValue")}} {{readonlyinline}}
+  - : Valeur minimum de la plage nominale (effective).
 
-<dl>
- <dt>{{domxref("AudioParam.value")}}</dt>
- <dd>Volume, exprimé sous forme de nombre flottant, initialement défini par la valeur de <code>AudioParam.defaultValue</code>. Même s'il peut être modifié, toute modification qui a lieu alors que des événements d'automatisation sont prévus - événements programmés en utilisant les méthodes de la <code>AudioParam</code> - est ignorée, sans lever aucune exception</dd>
-</dl>
+<!---->
 
-<h2 id="Méthodes">Méthodes</h2>
+- {{domxref("AudioParam.value")}}
+  - : Volume, exprimé sous forme de nombre flottant, initialement défini par la valeur de `AudioParam.defaultValue`. Même s'il peut être modifié, toute modification qui a lieu alors que des événements d'automatisation sont prévus - événements programmés en utilisant les méthodes de la `AudioParam` - est ignorée, sans lever aucune exception
 
-<p><em>Hérite des propriétés de son parent, AudioNode.</em></p>
+## Méthodes
 
-<dl>
- <dt>{{domxref("AudioParam.setValueAtTime()")}}</dt>
- <dd>Planifie un changement de la valeur d' <code>AudioParam</code> à un moment précis, <code>startTime</code>, tel que mesuré par rapport à {{domxref ("AudioContext.currentTime")}}. La nouvelle valeur est passée en argument.</dd>
- <dt>{{domxref("AudioParam.linearRampToValueAtTime()")}}</dt>
- <dd>Planifie un changement de la valeur d'<code>AudioParam</code>. Le changement commence à l'heure prévue pour l'événement précédent, évolue selon une rampe linéaire jusqu'à la nouvelle valeur passée dans l'argument <code>value</code>, et atteint la nouvelle valeur à l'heure indiquée par le paramètre <code>endTime</code>.</dd>
- <dt>{{domxref("AudioParam.exponentialRampToValueAtTime()")}}</dt>
- <dd>Planifie un changement de la valeur d'<code>AudioParam</code>. Le changement commence à l'heure prévue pour l'événement précédent, suit une rampe exponentielle jusqu'à la nouvelle valeur passée dans l'argument <code>value</code>, et atteint la nouvelle valeur à l'heure indiquée par le paramètre <code>endTime</code>.<br>
- Les rampes exponentielles sont utiles lors du changement de fréquence ou de taux de lecture en raison de la façon dont l'oreille humaine fonctionne.</dd>
- <dt>{{domxref("AudioParam.setTargetAtTime()")}}</dt>
- <dd>Planifie le début d'un changement de la valeur d'<code>AudioParam</code>. Le changement commence à l'heure spécifiée par l'argument <code>startTime</code> et de façon exponentielle tend vers la valeur donnée par le paramètre <code>target</code>. Le taux de décroissance exponentielle est définie par le paramètre <code>timeConstant</code>. C'est le temps nécessaire à un système continu linéaire du premier ordre invariant dans le temps pour atteindre la valeur de 1 - 1 / e (environ 63,2%) donné une réponse d'entrée de l'étape (passage de 0 à 1 en valeur), Plus il est grand, plus la transition sera facile. Ceci est utile pour la décroissance ou la libération de portions d'enveloppes.</dd>
- <dt>{{domxref("AudioParam.setValueCurveAtTime()")}}</dt>
- <dd>Planifie des valeurs de <code>AudioParam</code> selon un jeu de valeurs, défini par le paramètre  <code>values </code>({{domxref ("Float32Array")}}), mis à l'échelle pour s'adapter à l'intervalle de temps donné, en commençant à <code>startTime</code>.</dd>
- <dt>{{domxref("AudioParam.cancelScheduledValues()")}}</dt>
- <dd>Annule toutes les modifications futures prévues du <code>AudioParam</code>.</dd>
- <dt>{{domxref("AudioParam.cancelAndHoldAtTime()")}}</dt>
- <dd>Annule toutes les modifications futures prévues du <code>AudioParam</code> mais maintient sa valeur à un certain moment, en attendant que d'autres changements soient effectués. La nouvelle valeur est passée en argument.</dd>
-</dl>
+_Hérite des propriétés de son parent, AudioNode._
 
-<h2 id="Exemples">Exemples</h2>
+- {{domxref("AudioParam.setValueAtTime()")}}
+  - : Planifie un changement de la valeur d' `AudioParam` à un moment précis, `startTime`, tel que mesuré par rapport à {{domxref ("AudioContext.currentTime")}}. La nouvelle valeur est passée en argument.
+- {{domxref("AudioParam.linearRampToValueAtTime()")}}
+  - : Planifie un changement de la valeur d'`AudioParam`. Le changement commence à l'heure prévue pour l'événement précédent, évolue selon une rampe linéaire jusqu'à la nouvelle valeur passée dans l'argument `value`, et atteint la nouvelle valeur à l'heure indiquée par le paramètre `endTime`.
+- {{domxref("AudioParam.exponentialRampToValueAtTime()")}}
+  - : Planifie un changement de la valeur d'`AudioParam`. Le changement commence à l'heure prévue pour l'événement précédent, suit une rampe exponentielle jusqu'à la nouvelle valeur passée dans l'argument `value`, et atteint la nouvelle valeur à l'heure indiquée par le paramètre `endTime`.
+    Les rampes exponentielles sont utiles lors du changement de fréquence ou de taux de lecture en raison de la façon dont l'oreille humaine fonctionne.
+- {{domxref("AudioParam.setTargetAtTime()")}}
+  - : Planifie le début d'un changement de la valeur d'`AudioParam`. Le changement commence à l'heure spécifiée par l'argument `startTime` et de façon exponentielle tend vers la valeur donnée par le paramètre `target`. Le taux de décroissance exponentielle est définie par le paramètre `timeConstant`. C'est le temps nécessaire à un système continu linéaire du premier ordre invariant dans le temps pour atteindre la valeur de 1 - 1 / e (environ 63,2%) donné une réponse d'entrée de l'étape (passage de 0 à 1 en valeur), Plus il est grand, plus la transition sera facile. Ceci est utile pour la décroissance ou la libération de portions d'enveloppes.
+- {{domxref("AudioParam.setValueCurveAtTime()")}}
+  - : Planifie des valeurs de `AudioParam` selon un jeu de valeurs, défini par le paramètre  `values `({{domxref ("Float32Array")}}), mis à l'échelle pour s'adapter à l'intervalle de temps donné, en commençant à `startTime`.
+- {{domxref("AudioParam.cancelScheduledValues()")}}
+  - : Annule toutes les modifications futures prévues du `AudioParam`.
+- {{domxref("AudioParam.cancelAndHoldAtTime()")}}
+  - : Annule toutes les modifications futures prévues du `AudioParam` mais maintient sa valeur à un certain moment, en attendant que d'autres changements soient effectués. La nouvelle valeur est passée en argument.
 
-<p>Ce premier exemple simple montre la définition de la valeur de  <code>gain </code>d'un<code> </code>{{domxref("GainNode")}}. <code>gain</code> est un exemple de paramètre audio de type a-rate, car sa valeur peut potentiellement être différente pour chaque trame d'échantillon.</p>
+## Exemples
 
-<pre class="brush: js">var AudioContext = window.AudioContext || window.webkitAudioContext;
+Ce premier exemple simple montre la définition de la valeur de  `gain `d'un` `{{domxref("GainNode")}}. `gain` est un exemple de paramètre audio de type a-rate, car sa valeur peut potentiellement être différente pour chaque trame d'échantillon.
+
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var gainNode = audioCtx.createGain();
-gainNode.gain.value = 0;</pre>
+gainNode.gain.value = 0;
+```
 
-<p>Ce deuxième exemple montre la définition de plusieurs paramètres d'un {{ domxref("BiquadFilterNode") }}. Ce sont des exemples de paramètre audio de type k-rate AudioParam's, comme les valeurs sont définies une fois pour l'ensemble des échantillons.</p>
+Ce deuxième exemple montre la définition de plusieurs paramètres d'un {{ domxref("BiquadFilterNode") }}. Ce sont des exemples de paramètre audio de type k-rate AudioParam's, comme les valeurs sont définies une fois pour l'ensemble des échantillons.
 
-<pre class="brush: js">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var biquadFilter = audioCtx.createBiquadFilter();
 
 biquadFilter.type = "lowshelf";
 biquadFilter.frequency.value = 1000;
-biquadFilter.gain.value = 25;</pre>
+biquadFilter.gain.value = 25;
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#AudioParam-section', 'AudioParam')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | Statut                               | Commentaire |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
+| {{SpecName('Web Audio API', '#AudioParam-section', 'AudioParam')}} | {{Spec2('Web Audio API')}} |             |
 
-<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+## Compatibilité navigateurs
 
-<p>{{Compat("api.AudioParam")}}</p>
+{{Compat("api.AudioParam")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Utiliser la Web Audio API</a></li>
-</ul>
+- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

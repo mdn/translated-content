@@ -9,71 +9,72 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/setTransform
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La méthode <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.setTransform()</code></strong> de l'API Canvas 2D réinitialise (remplace) la transformation en cours à la matrice identité et appelle ensuite la transformation décrite par les arguments de cette méthode.</p>
+La méthode **`CanvasRenderingContext2D`\*\***`.setTransform()`\*\* de l'API Canvas 2D réinitialise (remplace) la transformation en cours à la matrice identité et appelle ensuite la transformation décrite par les arguments de cette méthode.
 
-<p>Voir aussi la méthode {{domxref("CanvasRenderingContext2D.transform()", "transform()")}}, qui ne replace pas la matrice de transformation en cours et la multiplie par celle donnée..</p>
+Voir aussi la méthode {{domxref("CanvasRenderingContext2D.transform()", "transform()")}}, qui ne replace pas la matrice de transformation en cours et la multiplie par celle donnée..
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var><em>ctx</em>.setTransform(a, b, c, d, e, f);</var>
-</pre>
+    void ctx.setTransform(a, b, c, d, e, f);
 
-<p>La matrice de transformation est décrite par : <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &amp; c &amp; e \\ b &amp; d &amp; f \\ 0 &amp; 0 &amp; 1 \end{array} \right]</annotation></semantics></math></p>
+La matrice de transformation est décrite par : <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>a (m11)</code></dt>
- <dd>Échelle horizontale.</dd>
- <dt><em><code>b (m12)</code></em></dt>
- <dd>Inclinaison horizontale.</dd>
- <dt><code>c (m21)</code></dt>
- <dd>Inclinaison verticale.</dd>
- <dt><code>d (m22)</code></dt>
- <dd>Échelle verticale.</dd>
- <dt><code>e (dx)</code></dt>
- <dd>Déplacement horizontal.</dd>
- <dt><code>f (dy)</code></dt>
- <dd>Déplacement vertical.</dd>
-</dl>
+- `a (m11)`
+  - : Échelle horizontale.
+- _`b (m12)`_
+  - : Inclinaison horizontale.
+- `c (m21)`
+  - : Inclinaison verticale.
+- `d (m22)`
+  - : Échelle verticale.
+- `e (dx)`
+  - : Déplacement horizontal.
+- `f (dy)`
+  - : Déplacement vertical.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_de_la_méthode_setTransform">Utilisation de la méthode <code>setTransform</code></h3>
+### Utilisation de la méthode `setTransform`
 
-<p>Ceci est seulement un fragment de code simple qui utilise la méthode <code>setTransform</code>.</p>
+Ceci est seulement un fragment de code simple qui utilise la méthode `setTransform`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.setTransform(1, 1, 0, 1, 0, 0);
 ctx.fillRect(0, 0, 100, 100);
-</pre>
+```
 
-<p>Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas :</p>
+Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas :
 
-<h4 id="code_jouable">Code jouable</h4>
+#### Code jouable
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.setTransform(1,1,0,1,0,0);
-ctx.fillRect(0,0,100,100);&lt;/textarea&gt;
-</pre>
+ctx.fillRect(0,0,100,100);</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -96,34 +97,21 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
+{{ EmbedLiveSample('code_jouable', 700, 360) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-settransform", "CanvasRenderingContext2D.setTransform")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                            | Statut                           | Commentaire |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-settransform", "CanvasRenderingContext2D.setTransform")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+## Compatibilité navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.setTransform")}}</p>
+{{Compat("api.CanvasRenderingContext2D.setTransform")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.transform()")}}</li>
-</ul>
+- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.transform()")}}

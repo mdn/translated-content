@@ -9,53 +9,37 @@ tags:
   - Propriétés
 translation_of: Web/API/TreeWalker/root
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>La propriété en lecture seule <code><strong>TreeWalker.root</strong></code> renvoie le noeud qui est la racine de ce que TreeWalker doit traverser.</p>
+La propriété en lecture seule **`TreeWalker.root`** renvoie le noeud qui est la racine de ce que TreeWalker doit traverser.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>root</em> = TreeWalker.root;</pre>
+    root = TreeWalker.root;
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var treeWalker = document.createTreeWalker(
+```js
+var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 root = treeWalker.root; // document.body dans ce cas
-</pre>
+```
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-treewalker-root', 'TreeWalker.root')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Pas de changement de {{SpecName('DOM2 Traversal_Range')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker-root', 'TreeWalker.root')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                        | Statut                                       | Commentaire                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-treewalker-root', 'TreeWalker.root')}}                                         | {{Spec2('DOM WHATWG')}}             | Pas de changement de {{SpecName('DOM2 Traversal_Range')}} |
+| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker-root', 'TreeWalker.root')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                  |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.TreeWalker.root")}}</p>
+{{Compat("api.TreeWalker.root")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface {{domxref("TreeWalker")}}.</li>
-</ul>
+- L'interface {{domxref("TreeWalker")}}.

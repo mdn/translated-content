@@ -3,14 +3,12 @@ title: HTMLDocument
 slug: Web/API/HTMLDocument
 translation_of: Web/API/HTMLDocument
 ---
-<p>{{ APIRef("HTML DOM") }}</p>
+{{ APIRef("HTML DOM") }}
 
-<p><strong><code>HTMLDocument</code></strong> est une interface abstraite de <a href="/fr-FR/docs/DOM">DOM</a> qui fournit un accès aux propriétés spéciales et aux méthodes non présentes par défaut dans un document ordinaire (XML).</p>
+**`HTMLDocument`** est une interface abstraite de [DOM](/fr-FR/docs/DOM) qui fournit un accès aux propriétés spéciales et aux méthodes non présentes par défaut dans un document ordinaire (XML).
 
-<p>Ses méthodes et propriétés sont incluses dans la page {{domxref("document")}} et listées séparément dans leur propre section DOM référencées ci-dessus.</p>
+Ses méthodes et propriétés sont incluses dans la page {{domxref("document")}} et listées séparément dans leur propre section DOM référencées ci-dessus.
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268">http://www.w3.org/TR/DOM-Level-2-HTM...ml#ID-26809268</a></li>
-</ul>
+- [http://www.w3.org/TR/DOM-Level-2-HTM...ml#ID-26809268](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268)

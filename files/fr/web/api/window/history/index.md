@@ -3,51 +3,35 @@ title: Window.history
 slug: Web/API/Window/history
 translation_of: Web/API/Window/history
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La propriété en lecture seule <strong><code>Window.history</code></strong> renvoie une référence à l'objet {{domxref("History")}}, qui offre la possibilité de manipuler l'historique de session du navigateur (pages visitées dans l'onglet ou le cadre dans lesquels la page courante est chargée).</p>
+La propriété en lecture seule **`Window.history`** renvoie une référence à l'objet {{domxref("History")}}, qui offre la possibilité de manipuler l'historique de session du navigateur (pages visitées dans l'onglet ou le cadre dans lesquels la page courante est chargée).
 
-<p>L'objet <code>History</code> obtenu a les méthodes suivantes : voir <a href="/en/DOM/Manipulating_the_browser_history">la manipulation de l'historique du navigateur</a> pour avoir plus de détails ainsi que des exemples.<br>
- En particulier, cet article explique les caractéristiques des méthodes <code>pushState()</code> et <code>replaceState()</code>qu'il est utile de connaître avant de les utiliser.</p>
+L'objet `History` obtenu a les méthodes suivantes : voir [la manipulation de l'historique du navigateur](/en/DOM/Manipulating_the_browser_history) pour avoir plus de détails ainsi que des exemples.
+En particulier, cet article explique les caractéristiques des méthodes `pushState()` et `replaceState()`qu'il est utile de connaître avant de les utiliser.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">history.back();     // similaire au bouton de retour
+```js
+history.back();     // similaire au bouton de retour
 history.go(-1);     // similaire à history.back();
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Pour les pages de niveau supérieur, vous pourrez voir la liste des pages dans l'historique des sessions, accessibles grâce à l'objet <code>History</code>, situé dans le menu déroulant près des boutons précédent et suivant.</p>
+Pour les pages de niveau supérieur, vous pourrez voir la liste des pages dans l'historique des sessions, accessibles grâce à l'objet `History`, situé dans le menu déroulant près des boutons précédent et suivant.
 
-<p>Pour des raisons de sécurité, l'objet <code>History</code> n'autorise pas l'accès au URL d'autres pages présentes dans l'historique de la session mais autorise d'y naviguer.</p>
+Pour des raisons de sécurité, l'objet `History` n'autorise pas l'accès au URL d'autres pages présentes dans l'historique de la session mais autorise d'y naviguer.
 
-<p>Il n'y a pas de possibilité de nettoyer l'historique de la session ou de désactiver les boutons précédent et suivant. La solution éventuelle la plus proche serait la méthode <a href="/en/DOM/window.location#replace">location.replace()</a>, permettant de remplacer l'élément actuel de l'historique de la session par l'URL fournie.</p>
+Il n'y a pas de possibilité de nettoyer l'historique de la session ou de désactiver les boutons précédent et suivant. La solution éventuelle la plus proche serait la méthode [location.replace()](/en/DOM/window.location#replace), permettant de remplacer l'élément actuel de l'historique de la session par l'URL fournie.
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'browsers.html#the-history-interface', 'The History interface')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'browsers.html#the-history-interface', 'The History interface')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                            | Status                           | Commentaire |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', 'browsers.html#the-history-interface', 'The History interface')}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML5 W3C', 'browsers.html#the-history-interface', 'The History interface')}} | {{Spec2('HTML5 W3C')}}     |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("api.Window.history")}}</p>
+{{Compat("api.Window.history")}}

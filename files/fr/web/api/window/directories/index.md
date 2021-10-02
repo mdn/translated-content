@@ -14,30 +14,32 @@ tags:
   - Window
 translation_of: Web/API/Window/directories
 ---
-<p>{{ obsolete_header("2.0") }}</p>
+{{ obsolete_header("2.0") }}
 
-<p>{{ APIRef() }}</p>
+{{ APIRef() }}
 
-<p>Retourne l'objet de la barre d'outils de la barre personnelle de la fenêtre. Utilisez plutôt {{ domxref("window.personalbar") }}.</p>
+Retourne l'objet de la barre d'outils de la barre personnelle de la fenêtre. Utilisez plutôt {{ domxref("window.personalbar") }}.
 
-<h3 id="Syntax">Syntaxe</h3>
+### Syntaxe
 
-<pre class="brush: js">var <var>dirBar</var> = window.directories;
-</pre>
+```js
+var dirBar = window.directories;
+```
 
-<h3 id="Parameters">Paramètres</h3>
+### Paramètres
 
-<p><var>dirBar</var> est un objet du type <code>BarProp</code>.</p>
+_dirBar_ est un objet du type `BarProp`.
 
-<h3 id="Example">Exemple</h3>
+### Exemple
 
-<pre class="brush: html">&lt;script&gt;
+```html
+<script>
  function dirs() {
   alert(window.directories);
  }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h3 id="Specification">Spécification</h3>
+### Spécification
 
-<p>Ne fait pas partie des spécifications.</p>
+Ne fait pas partie des spécifications.

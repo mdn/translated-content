@@ -10,50 +10,37 @@ tags:
   - ServiceWorker
 translation_of: Web/API/ExtendableEvent/ExtendableEvent
 ---
-<p>{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}</p>
+{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
 
-<p>Le contructeur <code><strong>ExtendableEvent()</strong></code> crée un nouvel objet {{domxref("ExtendableEvent")}}.</p>
+Le contructeur **`ExtendableEvent()`** crée un nouvel objet {{domxref("ExtendableEvent")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var myExtendableEvent = new ExtendableEvent(type, init);</pre>
+```js
+var myExtendableEvent = new ExtendableEvent(type, init);
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><em>type</em></dt>
- <dd>Le type de l'ExtendableEvent, par exemple {{Event("install")}}, {{Event("activate")}}.</dd>
- <dt><em>init</em> {{optional_inline}}</dt>
- <dd>Un objet d'options contenant n'importe quelle configuration personnalisée que vous voulez appeler à un objet d'évènement. Pour le moment, il n'existe pas d'option dans la spécification, mais il a été défini pour une compatibilité future pour les différents évènements dérivés.</dd>
-</dl>
+- _type_
+  - : Le type de l'ExtendableEvent, par exemple {{Event("install")}}, {{Event("activate")}}.
+- _init_ {{optional_inline}}
+  - : Un objet d'options contenant n'importe quelle configuration personnalisée que vous voulez appeler à un objet d'évènement. Pour le moment, il n'existe pas d'option dans la spécification, mais il a été défini pour une compatibilité future pour les différents évènements dérivés.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#extendable-event', 'ExtendableEvent')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                               | Commentaire          |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('Service Workers', '#extendable-event', 'ExtendableEvent')}} | {{Spec2('Service Workers')}} | Définition initiale. |
 
-<h2 id="Compatibilités_des_navigateurs">Compatibilités des navigateurs</h2>
+## Compatibilités des navigateurs
 
-<p>{{Compat("api.ExtendableEvent.ExtendableEvent")}}</p>
+{{Compat("api.ExtendableEvent.ExtendableEvent")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Utilisation des Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Exemple simple de service workers</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Les  ServiceWorker sont-ils prêts?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Utilisation performante des web workers</a></li>
-</ul>
+- [Utilisation des Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Exemple simple de service workers](https://github.com/mdn/sw-test)
+- [Les  ServiceWorker sont-ils prêts?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Utilisation performante des web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)

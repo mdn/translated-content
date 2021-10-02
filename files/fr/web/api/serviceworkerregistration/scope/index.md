@@ -11,45 +11,30 @@ tags:
   - scope
 translation_of: Web/API/ServiceWorkerRegistration/scope
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>La propriété en lecture seule <strong><code>scope</code></strong> de l'interface {{domxref ("ServiceWorkerRegistration")}} renvoie un identifiant unique pour un enregistrement de service worker. Le service worker doit être sur la même origine que le document qui enregistre le {{domxref ("ServiceWorker")}}.</p>
+La propriété en lecture seule **`scope`** de l'interface {{domxref ("ServiceWorkerRegistration")}} renvoie un identifiant unique pour un enregistrement de service worker. Le service worker doit être sur la même origine que le document qui enregistre le {{domxref ("ServiceWorker")}}.
 
-<div class="note">
-<p><strong>Note :</strong> Cette fonctionnalité est disponible dans <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note :** Cette fonctionnalité est disponible dans [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>serviceWorkerRegistration</em>.scope</pre>
+    serviceWorkerRegistration.scope
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-serviceworkerregistration-scope', 'ServiceWorkerRegistration.scope')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                | État                                 | Commentaire          |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('Service Workers', '#dom-serviceworkerregistration-scope', 'ServiceWorkerRegistration.scope')}} | {{Spec2('Service Workers')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.ServiceWorkerRegistration.scope")}}</p>
+{{Compat("api.ServiceWorkerRegistration.scope")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Utilisation des Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Exemple basique de code pour les Services workers</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">ServiceWorker est-il prêt?</a></li>
- <li>{{jsxref("Promise","Promesse")}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Utilisation des web workers</a></li>
-</ul>
+- [Utilisation des Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Exemple basique de code pour les Services workers](https://github.com/mdn/sw-test)
+- [ServiceWorker est-il prêt?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise","Promesse")}}
+- [Utilisation des web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

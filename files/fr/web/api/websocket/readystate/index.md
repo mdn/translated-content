@@ -3,19 +3,19 @@ title: WebSocket.readyState
 slug: Web/API/WebSocket/readyState
 browser-compat: api.WebSocket.readyState
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p>La propriété en lecture seule <strong><code>WebSocket.readyState</code></strong> renvoie l'état courant de la connexion <a href="/fr/docs/Web/API/WebSocket"><code>WebSocket</code></a>.</p>
+La propriété en lecture seule **`WebSocket.readyState`** renvoie l'état courant de la connexion [`WebSocket`](/fr/docs/Web/API/WebSocket).
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
+```js
 var readyState = uneWebSocket.readyState;
-</pre>
+```
 
-<h2 id="value">Valeur</h2>
+## Valeur
 
-<p>Cette propriété peut valoir l'une des valeurs de type <code>unsigned short</code> suivantes :</p>
+Cette propriété peut valoir l'une des valeurs de type `unsigned short` suivantes :
 
 <table class="standard-table">
   <tbody>
@@ -47,10 +47,10 @@ var readyState = uneWebSocket.readyState;
   </tbody>
 </table>
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}

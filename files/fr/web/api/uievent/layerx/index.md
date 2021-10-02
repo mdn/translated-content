@@ -10,27 +10,26 @@ tags:
   - lecture seule
 translation_of: Web/API/UIEvent/layerX
 ---
-<p>{{APIRef("DOM Events")}} {{Non-standard_header}}</p>
+{{APIRef("DOM Events")}} {{Non-standard_header}}
 
-<p>La propriété en lecture seule <code><strong>UIEvent.layerX</strong></code> retourne la coordonnée horizontale de l'évènement relativement à la couche en cours.</p>
+La propriété en lecture seule **`UIEvent.layerX`** retourne la coordonnée horizontale de l'évènement relativement à la couche en cours.
 
-<p>Cette propriété prend en compte le défilement de la page, et retourne une valeur relative à l'ensemble du document, à moins que l'évènement ne se soit produit à l'intérieur d'un élément positionné, auquel cas la valeur retournée est relative au coin supérieur gauche de l'élément positionné.</p>
+Cette propriété prend en compte le défilement de la page, et retourne une valeur relative à l'ensemble du document, à moins que l'évènement ne se soit produit à l'intérieur d'un élément positionné, auquel cas la valeur retournée est relative au coin supérieur gauche de l'élément positionné.
 
-<h2 id="Syntax"><strong>Syntaxe</strong></h2>
+## **Syntaxe**
 
-<pre>var <em>posx</em> = <em>event</em>.layerX</pre>
+    var posx = event.layerX
 
-<ul>
- <li><em><code>posx</code></em> est une valeur entière en pixels pour la coordonnée x du pointeur de la souris, lorsque l'évènement souris est déclenché.</li>
-</ul>
+- *`posx`* est une valeur entière en pixels pour la coordonnée x du pointeur de la souris, lorsque l'évènement souris est déclenché.
 
-<h2 id="Syntax"><strong>Exemples</strong></h2>
+## **Exemples**
 
-<pre class="brush: html">&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Exemple pageX\pageY &amp; layerX\layerY&lt;/title&gt;
+```html
+<html>
+<head>
+<title>Exemple pageX\pageY & layerX\layerY</title>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function montrerCoords(evt){
   var form = document.forms.form_coords;
@@ -41,9 +40,9 @@ function montrerCoords(evt){
   form.layerXCoords.value = evt.layerX;
   form.layerYCoords.value = evt.layerY;
 }
-&lt;/script&gt;
+</script>
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 
  #d1 {
   border: solid blue 1px;
@@ -69,44 +68,44 @@ function montrerCoords(evt){
   padding: 10px;
  }
 
-&lt;/style&gt;
-&lt;/head&gt;
+</style>
+</head>
 
-&lt;body onmousedown="montrerCoords(event)"&gt;
+<body onmousedown="montrerCoords(event)">
 
-&lt;p&gt;Pour afficher les coordonnées de la souris, veuillez cliquer quelque part sur la page.&lt;/p&gt;
+<p>Pour afficher les coordonnées de la souris, veuillez cliquer quelque part sur la page.</p>
 
-&lt;div id="d1"&gt;
-&lt;span&gt;Cette div n'est pas positionnée : cliquer dedans renverra des valeurs layerX/layerY identiques à celles de pageX/PageY.&lt;/span&gt;
-&lt;/div&gt;
+<div id="d1">
+<span>Cette div n'est pas positionnée : cliquer dedans renverra des valeurs layerX/layerY identiques à celles de pageX/PageY.</span>
+</div>
 
-&lt;div id="d2"&gt;
+<div id="d2">
 
-&lt;span&gt;Cette div est positionnée : cliquer dedans renverra des valeurs layerX/layerY
-relatives à son coin supérieur. Notez que les valeurs de pageX\pageY sont toujours relatives au document, ce qui inclue le défilement dans la page.&lt;/span&gt;
+<span>Cette div est positionnée : cliquer dedans renverra des valeurs layerX/layerY
+relatives à son coin supérieur. Notez que les valeurs de pageX\pageY sont toujours relatives au document, ce qui inclue le défilement dans la page.</span>
 
-&lt;span&gt;Un peu de défilement ! C'est un div positionné : le clic renverra des valeurs layerX/layerY relative à son coin supérieur gauche. Notez que les valeurs de pageX\pageY sont toujours relatives au document, ce qui inclue le défilement dans la page.&lt;/span&gt;
+<span>Un peu de défilement ! C'est un div positionné : le clic renverra des valeurs layerX/layerY relative à son coin supérieur gauche. Notez que les valeurs de pageX\pageY sont toujours relatives au document, ce qui inclue le défilement dans la page.</span>
 
-&lt;/div&gt;
+</div>
 
-&lt;div id="d3"&gt;
-&lt;form name="form_coords" id="form1"&gt;
- Id de l'élément parent : &lt;input type="text" name="parentId" size="7" /&gt;&lt;br /&gt;
- pageX:&lt;input type="text" name="pageXCoords" size="7" /&gt;
- pageY:&lt;input type="text" name="pageYCoords" size="7" /&gt;&lt;br /&gt;
- layerX:&lt;input type="text" name="layerXCoords" size="7" /&gt;
- layerY:&lt;input type="text" name="layerYCoords" size="7" /&gt;
-&lt;/form&gt;
-&lt;/div&gt;
+<div id="d3">
+<form name="form_coords" id="form1">
+ Id de l'élément parent : <input type="text" name="parentId" size="7" /><br />
+ pageX:<input type="text" name="pageXCoords" size="7" />
+ pageY:<input type="text" name="pageYCoords" size="7" /><br />
+ layerX:<input type="text" name="layerXCoords" size="7" />
+ layerY:<input type="text" name="layerYCoords" size="7" />
+</form>
+</div>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p><em>Cette propriété ne fait partie d'aucune spécification.</em></p>
+_Cette propriété ne fait partie d'aucune spécification._
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.UIEvent.layerX")}}</p>
+{{Compat("api.UIEvent.layerX")}}

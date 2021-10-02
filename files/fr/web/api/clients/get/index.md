@@ -10,50 +10,39 @@ tags:
   - get
 translation_of: Web/API/Clients/get
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}La méthode **`get()`** de l'interface {{domxref("Clients")}} récupère un service worker client correspondant à un id donné et le retourne dans une {{jsxref("Promise")}}.
 
-<div>La méthode <code><strong>get()</strong></code> de l'interface {{domxref("Clients")}} récupère un service worker client correspondant à un id donné et le retourne dans une {{jsxref("Promise")}}.</div>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush: js">self.clients.get(id).then(function(client) {
+```js
+self.clients.get(id).then(function(client) {
   // Faire quelque chose avec le client
-});</pre>
+});
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>id</code></dt>
- <dd>Une {{domxref("DOMString")}} représentant l'id du client que vous souhaitez récuperer.</dd>
-</dl>
+- `id`
+  - : Une {{domxref("DOMString")}} représentant l'id du client que vous souhaitez récuperer.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> qui se résoud avec un objet {{domxref("Client")}}.</p>
+Une [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résoud avec un objet {{domxref("Client")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">self.clients.get(options).then(function(client) {
+```js
+self.clients.get(options).then(function(client) {
   self.clients.openWindow(client.url);
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#clients-get-method', 'get()')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                               | Commentaires        |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
+| {{SpecName('Service Workers', '#clients-get-method', 'get()')}} | {{Spec2('Service Workers')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Clients.get")}}</p>
+{{Compat("api.Clients.get")}}

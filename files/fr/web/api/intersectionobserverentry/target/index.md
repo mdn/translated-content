@@ -9,50 +9,40 @@ tags:
   - target
 translation_of: Web/API/IntersectionObserverEntry/target
 ---
-<div>{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}</div>
+{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
 
-<p>La propriété en lecture seule <strong><code>target</code></strong> de l'interface {{domxref("IntersectionObserverEntry")}} indique quel {{domxref("Element")}} ciblé a changé sa proportion d'intersection avec l'élément racine.</p>
+La propriété en lecture seule **`target`** de l'interface {{domxref("IntersectionObserverEntry")}} indique quel {{domxref("Element")}} ciblé a changé sa proportion d'intersection avec l'élément racine.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var><code>var <em>target</em> = </code>IntersectionObserverEntry</var>.target;
-</pre>
+    var target = IntersectionObserverEntry.target;
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>La propriété <code>target</code> de l'<code>IntersectionObserverEntry</code> spécifie quel {{domxref("Element")}} précédemment ciblé par l'appel à {{domxref("IntersectionObserver.observe()")}} dont l'intersection avec la racine a changé.</p>
+La propriété `target` de l'`IntersectionObserverEntry` spécifie quel {{domxref("Element")}} précédemment ciblé par l'appel à {{domxref("IntersectionObserver.observe()")}} dont l'intersection avec la racine a changé.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans cet exemple, la valeur de la propriété CSS {{cssxref("opacity")}} de chaque élément cible vaut son {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}}.</p>
+Dans cet exemple, la valeur de la propriété CSS {{cssxref("opacity")}} de chaque élément cible vaut son {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}}.
 
-<pre class="brush: js">function intersectionCallback(entries) {
+```js
+function intersectionCallback(entries) {
   entries.forEach(function(entry) {
     entry.target.opacity = entry.intersectionRatio;
   });
-}</pre>
+}
+```
 
-<p>Ainsi, l'élément devient visible seulement lorsqu'il est entièrement visible, c'est-à-dire que la zone qu'il couvre est contenue dans celle de la racine. Autrement, son opacité diminue graduellement avec sa proportion d'intersection avec son élément racine.</p>
+Ainsi, l'élément devient visible seulement lorsqu'il est entièrement visible, c'est-à-dire que la zone qu'il couvre est contenue dans celle de la racine. Autrement, son opacité diminue graduellement avec sa proportion d'intersection avec son élément racine.
 
-<p>Pour voir un exemple plus concret, vous pouvez vous renseigner sur l'{{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility", "Handling intersection changes")}}.</p>
+Pour voir un exemple plus concret, vous pouvez vous renseigner sur l'{{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility", "Handling intersection changes")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IntersectionObserver', '#dom-intersectionobserverentry-target', 'IntersectionObserverEntry.target')}}</td>
-   <td>{{Spec2('IntersectionObserver')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                            | Statut                                       | Commentaire         |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
+| {{SpecName('IntersectionObserver', '#dom-intersectionobserverentry-target', 'IntersectionObserverEntry.target')}} | {{Spec2('IntersectionObserver')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IntersectionObserverEntry.target")}}</p>
+{{Compat("api.IntersectionObserverEntry.target")}}

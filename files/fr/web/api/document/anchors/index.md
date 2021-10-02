@@ -4,35 +4,36 @@ slug: Web/API/Document/anchors
 translation_of: Web/API/Document/anchors
 original_slug: Web/API/Document/Document.anchors
 ---
-<div>{{APIRef("DOM")}} {{deprecated_header()}}</div>
+{{APIRef("DOM")}} {{deprecated_header()}}
 
-<p><code>anchors</code> retourne une liste de toutes les ancres du document.</p>
+`anchors` retourne une liste de toutes les ancres du document.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>nodeList</var> = document.anchors;
-</pre>
+    nodeList = document.anchors;
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">if ( document.anchors.length &gt;= 5 ) {
+```js
+if ( document.anchors.length >= 5 ) {
   dump("Trop d'ancres trouvées !");
   window.location = "http://www.google.com";
 }
-</pre>
+```
 
-<p>L'exemple suivant remplit un tableau avec chaque ancre présente sur la page :</p>
+L'exemple suivant remplit un tableau avec chaque ancre présente sur la page :
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;Test&lt;/title&gt;
-&lt;script&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Test</title>
+<script>
 function init() {
   var toc = document.getElementById("toc");
   var i, li, newAnchor;
-  for (i = 0; i &lt; document.anchors.length; i++) {
+  for (i = 0; i < document.anchors.length; i++) {
     li = document.createElement("li");
     newAnchor = document.createElement('a');
     newAnchor.href = "#" + document.anchors[i].name;
@@ -41,41 +42,39 @@ function init() {
     toc.appendChild(li);
   }
 }
-&lt;/script&gt;
+</script>
 
-&lt;/head&gt;
-&lt;body onload="init()"&gt;
+</head>
+<body onload="init()">
 
-&lt;h1&gt;Title&lt;/h1&gt;
-&lt;h2&gt;&lt;a name="contents"&gt;Contents&lt;/a&gt;&lt;/h2&gt;
-&lt;ul id="toc"&gt;&lt;/ul&gt;
+<h1>Title</h1>
+<h2><a name="contents">Contents</a></h2>
+<ul id="toc"></ul>
 
-&lt;h2&gt;&lt;a name="plants"&gt;Plants&lt;/a&gt;&lt;/h2&gt;
-&lt;ol&gt;
-    &lt;li&gt;Apples&lt;/li&gt;
-    &lt;li&gt;Oranges&lt;/li&gt;
-    &lt;li&gt;Pears&lt;/li&gt;
-&lt;/ol&gt;
+<h2><a name="plants">Plants</a></h2>
+<ol>
+    <li>Apples</li>
+    <li>Oranges</li>
+    <li>Pears</li>
+</ol>
 
-&lt;h2&gt;&lt;a name="veggies"&gt;Veggies&lt;/a&gt;&lt;/h2&gt;
-&lt;ol&gt;
-    &lt;li&gt;Carrots&lt;/li&gt;
-    &lt;li&gt;Celery&lt;/li&gt;
-    &lt;li&gt;Beats&lt;/li&gt;
-&lt;/ol&gt;
+<h2><a name="veggies">Veggies</a></h2>
+<ol>
+    <li>Carrots</li>
+    <li>Celery</li>
+    <li>Beats</li>
+</ol>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<p><a href="https://jsfiddle.net/S4yNp">Voir dans JSFiddle</a></p>
+[Voir dans JSFiddle](https://jsfiddle.net/S4yNp)
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Pour des raisons de rétrocompatibilité, la liste d'ancres retournée contient seulement les ancres créées avec l'attribut <code>name</code>, pas celles créées avec l'attribut <code>id</code>.</p>
+Pour des raisons de rétrocompatibilité, la liste d'ancres retournée contient seulement les ancres créées avec l'attribut `name`, pas celles créées avec l'attribut `id`.
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7577272">DOM Level 2 HTML: anchors</a></li>
-</ul>
+- [DOM Level 2 HTML: anchors](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7577272)

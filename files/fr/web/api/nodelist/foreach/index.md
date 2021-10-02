@@ -9,44 +9,42 @@ tags:
   - Noeuds
 translation_of: Web/API/NodeList/forEach
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La méthode <strong><code>forEach()</code></strong> de l'interface {{domxref("NodeList")}} appelle le rappel donné en paramètre une fois pour chaque paire de valeurs dans la liste, dans l'ordre d'insertion.</p>
+La méthode **`forEach()`** de l'interface {{domxref("NodeList")}} appelle le rappel donné en paramètre une fois pour chaque paire de valeurs dans la liste, dans l'ordre d'insertion.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>nodeList.</em>forEach<em>(callback[, thisArg]);</em>
-</pre>
+    nodeList.forEach(callback[, thisArg]);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>Fonction à exécuter pour chaque élément, contenant éventuellement 3 arguments :
- <dl>
-  <dt><em><code>currentValue</code></em></dt>
-  <dd>L'élément en cours de traitement dans la NodeList.</dd>
-  <dt><code><em>currentIndex</em></code></dt>
-  <dd>L'index de l'élément en cours de traitement dans la NodeList.</dd>
-  <dt><em><code>listObj</code></em></dt>
-  <dd>L'objet NodeList auquel <code>forEach()</code> est appliqué.</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code><code> {{Optional_inline}}</code></dt>
- <dd>Valeur à utiliser comme {{jsxref("this")}} lors de l'exécution du <code>callback</code> (<em>rappel</em>).</dd>
-</dl>
+- `callback`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : Fonction à exécuter pour chaque élément, contenant éventuellement 3 arguments :
 
-<p>{{jsxref('undefined')}} (<em>indéfini</em>).</p>
+    - _`currentValue`_
+      - : L'élément en cours de traitement dans la NodeList.
+    - `currentIndex`
+      - : L'index de l'élément en cours de traitement dans la NodeList.
+    - _`listObj`_
+      - : L'objet NodeList auquel `forEach()` est appliqué.
 
-<h2 id="Exceptions">Exceptions</h2>
+- ` thisArg`` {{Optional_inline}}  `
+  - : Valeur à utiliser comme {{jsxref("this")}} lors de l'exécution du `callback` (_rappel_).
 
-<p><em>Aucune</em>.</p>
+### Valeur retournée
 
-<h2 id="Exemple">Exemple</h2>
+{{jsxref('undefined')}} (_indéfini_).
 
-<pre class="brush: js">var node = document.createElement("div");
+## Exceptions
+
+_Aucune_.
+
+## Exemple
+
+```js
+var node = document.createElement("div");
 var kid1 = document.createElement("p");
 var kid2 = document.createTextNode("hey");
 var kid3 = document.createElement("span");
@@ -62,62 +60,42 @@ list.forEach(
     console.log(currentValue + ', ' + currentIndex + ', ' + this);
   },
   'myThisArg'
-);</pre>
+);
+```
 
-<p>résultat :</p>
+résultat :
 
-<pre>[object HTMLParagraphElement], 0, myThisArg
-[object Text], 1, myThisArg
-[object HTMLSpanElement], 2, myThisArg</pre>
+    [object HTMLParagraphElement], 0, myThisArg
+    [object Text], 1, myThisArg
+    [object HTMLSpanElement], 2, myThisArg
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Ce {{Glossary("Polyfill","polyfill")}} ajoute une compatibilité à tous les navigateurs prenant en charge <a href="https://caniuse.com/#search=es5">ES5</a> :</p>
+Ce {{Glossary("Polyfill","polyfill")}} ajoute une compatibilité à tous les navigateurs prenant en charge [ES5](https://caniuse.com/#search=es5) :
 
-<pre class="brush: js">if (window.NodeList &amp;&amp; !NodeList.prototype.forEach) {
+```js
+if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = function (callback, thisArg) {
         thisArg = thisArg || window;
-        for (var i = 0; i &lt; this.length; i++) {
+        for (var i = 0; i < this.length; i++) {
             callback.call(thisArg, this[i], i, this);
         }
     };
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td>Définit <code>NodeList</code> comme <code>iterable&lt;Node&gt; </code>(<em>noeud itérable</em>)</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("WebIDL", "#es-forEach", "forEach")}}</td>
-   <td>{{Spec2("WebIDL")}}</td>
-   <td>Définit <code>forEach</code> sur les déclarations <code>iterable</code> (<em>itératives</em>)</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | Statut                           | Commentaire                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}} | {{ Spec2('DOM WHATWG') }} | Définit `NodeList` comme `iterable<Node> `(_noeud itérable_)     |
+| {{SpecName("WebIDL", "#es-forEach", "forEach")}}                 | {{Spec2("WebIDL")}}         | Définit `forEach` sur les déclarations `iterable` (_itératives_) |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>
+{{Compat("api.NodeList.forEach")}}
 
+## Voir aussi
 
-<p>{{Compat("api.NodeList.forEach")}}</p>
-</div>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{domxref("Node")}}</li>
- <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("Node")}}
+- {{domxref("NodeList")}}

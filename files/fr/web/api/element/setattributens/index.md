@@ -8,38 +8,35 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/setAttributeNS
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><code>setAttributeNS</code> ajoute un nouvel attribut ou modifie la valeur d'un attribut avec un espace de noms et un nom donnés.</p>
+`setAttributeNS` ajoute un nouvel attribut ou modifie la valeur d'un attribut avec un espace de noms et un nom donnés.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">element.setAttributeNS(
+```js
+element.setAttributeNS(
 namespace,
 name,
-value)</pre>
+value)
+```
 
-<ul>
- <li><code>namespace</code> est une chaîne spécifiant l'espace de noms de l'attribut.</li>
- <li><code>name</code> est une chaîne identifiant l'attribut par son nom qualifié ; c'est-à-dire un préfixe d'espace de noms suivi d'un deux-points suivi d'un nom local.</li>
- <li><code>value</code> est la valeur chaîne désirée pour le nouvel attribut.</li>
-</ul>
+- `namespace` est une chaîne spécifiant l'espace de noms de l'attribut.
+- `name` est une chaîne identifiant l'attribut par son nom qualifié ; c'est-à-dire un préfixe d'espace de noms suivi d'un deux-points suivi d'un nom local.
+- `value` est la valeur chaîne désirée pour le nouvel attribut.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="eval">var d = document.getElementById("d1");
-d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
-</pre>
+    var d = document.getElementById("d1");
+    d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<p><code>setAttributeNS</code>  est la seule méthode pour les attributs d'espace nom qui attend le nom qualifié complet, c'est-à-dire <code>"namespace:localname"</code>.</p>
+`setAttributeNS`  est la seule méthode pour les attributs d'espace nom qui attend le nom qualifié complet, c'est-à-dire `"namespace:localname"`.
 
-<h2 id="Sp.C3.A9cification">Spécification</h2>
+## Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS">DOM Level 2 Core: setAttributeNS (en)</a> <small>— <a href="http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElSetAttrNS">traduction en français</a> (non normative)</small></li>
- <li><a href="https://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-qualifiedname">DOM-Level-2-Core: glossary qualified name</a></li>
-</ul>
+- [DOM Level 2 Core: setAttributeNS (en)](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElSetAttrNS) (non normative)
+- [DOM-Level-2-Core: glossary qualified name](https://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-qualifiedname)

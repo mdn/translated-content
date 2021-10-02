@@ -7,54 +7,51 @@ tags:
 translation_of: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 original_slug: Web/API/WebGL_API/Tutorial/Animer_des_objets_avec_WebGL
 ---
-<p>{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}</p>
+{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
 
-<p>Dans cet exemple, nous allons faire tourner notre carré 2D.</p>
+Dans cet exemple, nous allons faire tourner notre carré 2D.
 
-<h2 id="Faire_tourner_le_carré">Faire tourner le carré</h2>
+## Faire tourner le carré
 
-<p>Commençons par faire tourner le carré. La première chose dont nous avons besoin est une variable pour mémoriser la rotation courante du carré :</p>
+Commençons par faire tourner le carré. La première chose dont nous avons besoin est une variable pour mémoriser la rotation courante du carré :
 
-<pre class="brush: js">var <code>squareRotation</code> = 0.0;
-</pre>
+```js
+var squareRotation = 0.0;
+```
 
-<p>Maintenant, nous devons modifier la fonction <code>drawScene() </code>pour appliquer la rotation courante du carré quand on le dessine. Après déplacement à la position de dessin initiale du carré, nous appliquons la rotation comme suit :  </p>
+Maintenant, nous devons modifier la fonction `drawScene() `pour appliquer la rotation courante du carré quand on le dessine. Après déplacement à la position de dessin initiale du carré, nous appliquons la rotation comme suit :
 
-<pre><code>  mat4.rotate(modelViewMatrix,  // matrice de destination
-              modelViewMatrix,  // matrice de rotation
-              squareRotation,   // rotation en radians
-              [0, 0, 1]);       // axe autour duquel tourner</code></pre>
+      mat4.rotate(modelViewMatrix,  // matrice de destination
+                  modelViewMatrix,  // matrice de rotation
+                  squareRotation,   // rotation en radians
+                  [0, 0, 1]);       // axe autour duquel tourner
 
-<p>Ceci fait tourner la modelViewMatrix de la valeur courante de <code>squareRotation</code>, autour de l'axe Z.</p>
+Ceci fait tourner la modelViewMatrix de la valeur courante de `squareRotation`, autour de l'axe Z.
 
-<p>Pour réaliser effectivement l'animation, nous avons besoin d'ajouter du code qui change la valeur de <code>squareRotation</code> au fil du temps. Nous pouvons faire cela en créant une nouvelle variable pour mémoriser l'instant auquel nous avons réalisé l'animation pour la dernière fois (appelons le <code>then</code>), puis en ajoutant le code suivant à la fin de la fonction principale :</p>
+Pour réaliser effectivement l'animation, nous avons besoin d'ajouter du code qui change la valeur de `squareRotation` au fil du temps. Nous pouvons faire cela en créant une nouvelle variable pour mémoriser l'instant auquel nous avons réalisé l'animation pour la dernière fois (appelons le `then`), puis en ajoutant le code suivant à la fin de la fonction principale :
 
-<pre><code>var then = 0;
+    var then = 0;
 
-// Dessiner la scène répétitivement
-function render(now) {
-  now *= 0.001;  // conversion en secondes
-  const deltaTime = now - then;
-  then = now;
+    // Dessiner la scène répétitivement
+    function render(now) {
+      now *= 0.001;  // conversion en secondes
+      const deltaTime = now - then;
+      then = now;
 
-  drawScene(gl, programInfo, buffers, deltaTime);
+      drawScene(gl, programInfo, buffers, deltaTime);
 
-  requestAnimationFrame(render);
-}
-requestAnimationFrame(render);</code></pre>
+      requestAnimationFrame(render);
+    }
+    requestAnimationFrame(render);
 
-<p>Ce code utilise <code>requestAnimationFrame</code> pour demander au navigateur d'appeler la fonction "<code>render</code>" à chaque image. <code>requestAnimationFrame</code> nous transmet le temps en millisecondes depuis le chargement de la page. Nous le convertissons en secondes, puis nous lui soustrayons le dernier instant pour calculer <code>deltaTime</code>, qui est le nombre de secondes depuis le rendu de la dernière image. À la fin de drawscene, nous ajoutons le code pour mettre à jour <code>squareRotation</code>.</p>
+Ce code utilise `requestAnimationFrame` pour demander au navigateur d'appeler la fonction "`render`" à chaque image. `requestAnimationFrame` nous transmet le temps en millisecondes depuis le chargement de la page. Nous le convertissons en secondes, puis nous lui soustrayons le dernier instant pour calculer `deltaTime`, qui est le nombre de secondes depuis le rendu de la dernière image. À la fin de drawscene, nous ajoutons le code pour mettre à jour `squareRotation`.
 
-<pre><code>  squareRotation += deltaTime;</code></pre>
+      squareRotation += deltaTime;
 
-<p>Ce code utilise le laps de temps qui s'est écoulé depuis la dernière fois que nous avons mis à jour la valeur <code>squareRotation</code> pour déterminer de combien faire tourner le carré.</p>
+Ce code utilise le laps de temps qui s'est écoulé depuis la dernière fois que nous avons mis à jour la valeur `squareRotation` pour déterminer de combien faire tourner le carré.
 
-<p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample4/index.html', 670, 510) }}</p>
+{{EmbedGHLiveSample('webgl-examples/tutorial/sample4/index.html', 670, 510) }}
 
-<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample4">Voir le code complet</a> | <a href="http://mdn.github.io/webgl-examples/tutorial/sample4/">Ouvrir cette démo dans une nouvelle page</a></p>
+[Voir le code complet](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample4) | [Ouvrir cette démo dans une nouvelle page](http://mdn.github.io/webgl-examples/tutorial/sample4/)
 
-<p>{{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}</p>
-
-<p> </p>
-
-<p> </p>
+{{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}

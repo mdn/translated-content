@@ -10,79 +10,61 @@ tags:
   - mousedown
 translation_of: Web/API/Element/mousedown_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>L'évènement <strong><code>mousedown</code></strong> est déclenché à partir d'un {{domxref("Element")}} lorsqu'on appuie sur le bouton d'un dispositif de pointage (une souris par exemple) pendant que le curseur est sur l'élément.</p>
+L'évènement **`mousedown`** est déclenché à partir d'un {{domxref("Element")}} lorsqu'on appuie sur le bouton d'un dispositif de pointage (une souris par exemple) pendant que le curseur est sur l'élément.
 
-<div class="note">
-<p><strong>Note :</strong> Cet évènement est différent de {{domxref("Element/click_event", "click")}}. <code>click</code> est déclenché après qu'un clic "entier" ait eu lieu (c'est-à-dire quand le bouton a été pressé puis relaché tandis que le pointeur était sur le même élément). <code>mousedown</code> est déclenché dès qu'on appuie sur le bouton.</p>
-</div>
+> **Note :** Cet évènement est différent de {{domxref("Element/click_event", "click")}}. `click` est déclenché après qu'un clic "entier" ait eu lieu (c'est-à-dire quand le bouton a été pressé puis relaché tandis que le pointeur était sur le même élément). `mousedown` est déclenché dès qu'on appuie sur le bouton.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Se propage/remonte dans le DOM</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th scope="row">Annulable</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Propriété pour la gestion d'évènement</th>
-   <td>{{domxref("GlobalEventHandlers.onmousedown", "onmousedown")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Se propage/remonte dans le DOM</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th scope="row">Annulable</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Propriété pour la gestion d'évènement</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onmousedown", "onmousedown")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>{{page("/fr/docs/Web/API/Element/mousemove_event", "Exemples")}}</p>
+{{page("/fr/docs/Web/API/Element/mousemove_event", "Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-  </tr>
- </thead>
- <thead>
-  <tr>
-   <td>{{SpecName('UI Events', '#event-type-mousedown', 'mousedown')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#event-type-mousedown', 'mousedown')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-  </tr>
- </thead>
-</table>
+| Spécification                                                                            | État                             |
+| ---------------------------------------------------------------------------------------- | -------------------------------- |
+| {{SpecName('UI Events', '#event-type-mousedown', 'mousedown')}}     | {{Spec2('UI Events')}}     |
+| {{SpecName('DOM3 Events', '#event-type-mousedown', 'mousedown')}} | {{Spec2('DOM3 Events')}} |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Element.mousedown_event")}}</p>
+{{Compat("api.Element.mousedown_event")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements">Une introduction aux évènements</a></li>
- <li>D'autres évènements connexes
-  <ul>
-   <li><a href="/fr/docs/Web/API/Element/mouseup_event"><code>mouseup</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/mousemove_event"><code>mousemove</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/click_event"><code>click</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/dblclick_event"><code>dblclick</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/mouseout_event"><code>mouseout</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/mouseover_event"><code>mouseover</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/mouseenter_event"><code>mouseenter</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/mouseleave_event"><code>mouseleave</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/contextmenu_event"><code>contextmenu</code></a></li>
-  </ul>
- </li>
-</ul>
+- [Une introduction aux évènements](/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements)
+- D'autres évènements connexes
+
+  - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
+  - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)
+  - [`click`](/fr/docs/Web/API/Element/click_event)
+  - [`dblclick`](/fr/docs/Web/API/Element/dblclick_event)
+  - [`mouseout`](/fr/docs/Web/API/Element/mouseout_event)
+  - [`mouseover`](/fr/docs/Web/API/Element/mouseover_event)
+  - [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)
+  - [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event)
+  - [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event)

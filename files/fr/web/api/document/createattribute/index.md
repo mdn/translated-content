@@ -8,84 +8,51 @@ tags:
   - Reference
 translation_of: Web/API/Document/createAttribute
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>La méthode <code><strong>Document.createAttribute()</strong></code> crée un nouveau nœud d'attribut et le renvoie. L'objet a créé un noeud implémentant l'interface {{domxref("Attr")}}. Le DOM   n'impose pas le type d'attribut à ajouter à un élément particulier de cette manière.  </p>
+La méthode **`Document.createAttribute()`** crée un nouveau nœud d'attribut et le renvoie. L'objet a créé un noeud implémentant l'interface {{domxref("Attr")}}. Le DOM n'impose pas le type d'attribut à ajouter à un élément particulier de cette manière.
 
-<div class="note">
-<p><strong>Note :</strong> La chaîne de caractères donnée dans le paramètre est convertie en minuscules.</p>
-</div>
+> **Note :** La chaîne de caractères donnée dans le paramètre est convertie en minuscules.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>attribut</em> = document.createAttribute(nom)
-</pre>
+    attribut = document.createAttribute(nom)
 
-<h3 id="Param.C3.A8tres">Paramètres</h3>
+### Paramètres
 
-<ul>
- <li><code>nom</code> est une chaîne de caractères contenant le nom de l'attribut.</li>
-</ul>
+- `nom` est une chaîne de caractères contenant le nom de l'attribut.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un nœud {{domxref("Attr")}}.</p>
+Un nœud {{domxref("Attr")}}.
 
-<h3 id="Exceptions_levées">Exceptions levées</h3>
+### Exceptions levées
 
-<ul>
- <li><code>INVALID_CHARACTER_ERR</code>  si le paramètre contient un caractère invalide pour un attribut XML.</li>
-</ul>
+- `INVALID_CHARACTER_ERR`  si le paramètre contient un caractère invalide pour un attribut XML.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-
-<pre class="brush:js">var node = document.getElementById("div1");
+```js
+var node = document.getElementById("div1");
 var a = document.createAttribute("my_attrib");
 a.value = "newVal";
 node.setAttributeNode(a);
 console.log(node.getAttribute("my_attrib")); // "newVal"
-</pre>
-<h2 id="Spécifications">Spécifications</h2>
+```
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-document-createattribute','Document.createAttribute()')}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>  Comportement précis avec des caractères majuscules.  </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core','core.html#ID-1084891198','Document.createAttribute()')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Pas de modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core','core.html#ID-1084891198','Document.createAttribute()')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Pas de modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1','level-one-core.html#ID-1084891198','Document.createAttribute()')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+## Spécifications
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+| Spécification                                                                                                        | État                             | Commentaires                                        |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------- |
+| {{SpecName('DOM WHATWG','#dom-document-createattribute','Document.createAttribute()')}} | {{Spec2("DOM WHATWG")}} | Comportement précis avec des caractères majuscules. |
+| {{SpecName('DOM3 Core','core.html#ID-1084891198','Document.createAttribute()')}}         | {{Spec2('DOM3 Core')}}     | Pas de modification.                                |
+| {{SpecName('DOM2 Core','core.html#ID-1084891198','Document.createAttribute()')}}         | {{Spec2('DOM2 Core')}}     | Pas de modification.                                |
+| {{SpecName('DOM1','level-one-core.html#ID-1084891198','Document.createAttribute()')}}     | {{Spec2('DOM1')}}         | Définition initiale.                                |
 
-<p>{{Compat("api.Document.createAttribute")}}</p>
+## Compatibilité des navigateurs
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+{{Compat("api.Document.createAttribute")}}
 
-<ul>
- <li>{{domxref("Document.createElement()")}}</li>
-</ul>
+## Voir aussi
+
+- {{domxref("Document.createElement()")}}

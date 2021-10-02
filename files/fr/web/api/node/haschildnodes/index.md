@@ -10,69 +10,57 @@ tags:
   - Reference
 translation_of: Web/API/Node/hasChildNodes
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La méthode <code><strong>Node.hasChildNodes()</strong></code> renvoie un {{jsxref("Boolean")}} indiquant si le {{domxref("Node","noeud")}} actuel possède des <a href="/fr/docs/Web/API/Node/childNodes">nœuds enfants</a> ou non.</p>
+La méthode **`Node.hasChildNodes()`** renvoie un {{jsxref("Boolean")}} indiquant si le {{domxref("Node","noeud")}} actuel possède des [nœuds enfants](/fr/docs/Web/API/Node/childNodes) ou non.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js"><var>bool</var> = <var>node</var>.hasChildNodes();</pre>
+```js
+bool = node.hasChildNodes();
+```
 
-<h3 id="Return_value">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un {{jsxref("Boolean")}} qui est <code>true</code> si le nœud a des nœuds enfants, et <code>false</code> dans le cas contraire.</p>
+Un {{jsxref("Boolean")}} qui est `true` si le nœud a des nœuds enfants, et `false` dans le cas contraire.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">let foo = document.getElementById('foo');
+```js
+let foo = document.getElementById('foo');
 
 if (foo.hasChildNodes()) {
   // Faire quelque chose avec 'foo.childNodes'
-}</pre>
+}
+```
 
-<h2 id="Polyfill">Prothèse d'émulation</h2>
+## Prothèse d'émulation
 
-<pre class="brush:js">(function(prototype) {
+```js
+(function(prototype) {
   prototype.hasChildNodes = prototype.hasChildNodes || function() {
     return !!this.firstChild;
   }
-})(Node.prototype);</pre>
+})(Node.prototype);
+```
 
-<p>Il y a différentes façons de déterminer si le noeud a un noeud enfant :</p>
+Il y a différentes façons de déterminer si le noeud a un noeud enfant :
 
-<ul>
-  <li><code>node.hasChildNodes()</code></li>
-  <li><code>node.firstChild != null</code> (ou simplement <code>node.firstChild</code>)</li>
-  <li><code>node.childNodes &amp;&amp; node.childNodes.length</code> (ou <code>node.childNodes.length &gt; 0</code>)</li>
-</ul>
+- `node.hasChildNodes()`
+- `node.firstChild != null` (ou simplement `node.firstChild`)
+- `node.childNodes && node.childNodes.length` (ou `node.childNodes.length > 0`)
 
-<h2 id="Specifications">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("DOM WHATWG", "#dom-node-haschildnodes", "Node: hasChildNodes")}}
-      </td>
-      <td>{{Spec2("DOM WHATWG")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                        | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName("DOM WHATWG", "#dom-node-haschildnodes", "Node: hasChildNodes")}} | {{Spec2("DOM WHATWG")}} |             |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Node.hasChildNodes")}}</p>
+{{Compat("api.Node.hasChildNodes")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Node.childNodes")}}</li>
- <li>{{domxref("Node.hasAttributes")}}</li>
-</ul>
+- {{domxref("Node.childNodes")}}
+- {{domxref("Node.hasAttributes")}}

@@ -11,51 +11,38 @@ tags:
   - root
 translation_of: Web/API/IntersectionObserver/root
 ---
-<div>{{APIRef("Intersection Observer API")}}</div>
+{{APIRef("Intersection Observer API")}}
 
-<p>La propriété en lecture seule <strong><code>root</code></strong> de l'interface <a href="/fr/docs/Web/API/IntersectionObserver"><code>IntersectionObserver</code></a> identifie l'<a href="/fr/docs/Web/API/Element"><code>Element</code></a> ou le <a href="/fr/docs/Web/API/Document"><code>Document</code></a> dont les bornes sont considérées comme la zone englobante (<i>bounding box</i>) de la zone d'affichage (<i>viewport</i>) au sein de laquelle les intersections avec la cible sont observées. Si <code>root</code> vaut <code>null</code>, ce sont les limites de la zone d'affichage (<i>viewport</i>) courantes qui sont utilisées.</p>
+La propriété en lecture seule **`root`** de l'interface [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) identifie l'[`Element`](/fr/docs/Web/API/Element) ou le [`Document`](/fr/docs/Web/API/Document) dont les bornes sont considérées comme la zone englobante (_bounding box_) de la zone d'affichage (_viewport_) au sein de laquelle les intersections avec la cible sont observées. Si `root` vaut `null`, ce sont les limites de la zone d'affichage (_viewport_) courantes qui sont utilisées.
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>root</var> = IntersectionObserver.root;</pre>
+    root = IntersectionObserver.root;
 
-<h3 id="value">Valeur</h3>
+### Valeur
 
-<p>Un objet <a href="/fr/docs/Web/API/Element"><code>Element</code></a> ou <a href="/fr/docs/Web/API/Document"><code>Document</code></a> dont la boîte englobante est utilisée pour définir les limites de la zone de visibilité utilisée pour déterminer la proportion de l'élément cible qui est visible. L'intersection de ce rectangle délimiteur, décalé par toute marge spécifiée au moyen des options passées au constructeur de l'<a href="/fr/docs/Web/API/IntersectionObserver/IntersectionObserver"><code>IntersectionObserver()</code></a> (voir <code>options.rootMargin</code>), les limites de la zone recouverte par l'élément cible, moins les limites de la zone recouverte par chaque élément ou autre objet chevauchant l'élément cible, est considéré comme la partie visible de l'élément.</p>
+Un objet [`Element`](/fr/docs/Web/API/Element) ou [`Document`](/fr/docs/Web/API/Document) dont la boîte englobante est utilisée pour définir les limites de la zone de visibilité utilisée pour déterminer la proportion de l'élément cible qui est visible. L'intersection de ce rectangle délimiteur, décalé par toute marge spécifiée au moyen des options passées au constructeur de l'[`IntersectionObserver()`](/fr/docs/Web/API/IntersectionObserver/IntersectionObserver) (voir `options.rootMargin`), les limites de la zone recouverte par l'élément cible, moins les limites de la zone recouverte par chaque élément ou autre objet chevauchant l'élément cible, est considéré comme la partie visible de l'élément.
 
-<p>Si <code>root</code> vaut <code>null</code>, ce sera le document parent qui sera considéré comme racine et la zone d'intersection sera la zone d'affichage (<i>viewport</i>).</p>
+Si `root` vaut `null`, ce sera le document parent qui sera considéré comme racine et la zone d'intersection sera la zone d'affichage (_viewport_).
 
-<h2 id="example">Exemple</h2>
+## Exemple
 
-<p>Cet exemple définit la propriété <a href="/fr/docs/Web/CSS/border"><code>border</code></a> de l'élément racine de l'observateur d'intersection comme une ligne verte moyenne de 2 pixels grâce aux propriétés exposées par CSSOM.</p>
+Cet exemple définit la propriété [`border`](/fr/docs/Web/CSS/border) de l'élément racine de l'observateur d'intersection comme une ligne verte moyenne de 2 pixels grâce aux propriétés exposées par CSSOM.
 
-<pre class="brush: js">observer.root.style.border = "2px solid #44aa44";</pre>
+```js
+observer.root.style.border = "2px solid #44aa44";
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('IntersectionObserver', '#dom-intersectionobserver-root', 'IntersectionObserver')}}</td>
-      <td>{{Spec2('IntersectionObserver')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                | Statut                                       | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
+| {{SpecName('IntersectionObserver', '#dom-intersectionobserver-root', 'IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IntersectionObserver.root")}}</p>
+{{Compat("api.IntersectionObserver.root")}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/API/Intersection_Observer_API/Timing_element_visibility">Mesurer la visibilité d'un élément dans le temps l'API <i>Intersection Observer</i></a></li>
-</ul>
+- [Mesurer la visibilité d'un élément dans le temps l'API _Intersection Observer_](/fr/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)

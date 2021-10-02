@@ -17,125 +17,96 @@ tags:
   - screen
 translation_of: Web/API/Screen_Capture_API
 ---
-<div>{{DefaultAPISidebar("Screen Capture API")}}</div>
+{{DefaultAPISidebar("Screen Capture API")}}
 
-<p>The Screen Capture API introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network.</p>
+The Screen Capture API introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network.
 
-<h2 id="API_Screen_Capture_concepts_et_utilisation">API Screen Capture concepts et utilisation</h2>
+## API Screen Capture concepts et utilisation
 
-<p>L'API Screen Capture est relativement simple à utiliser. Sa seule méthode est {{domxref("MediaDevices.getDisplayMedia()")}} dont le but est de demander à l'utilisateur un écran ou une portion d'écran à capturer sous la forme de {{domxref("MediaStream")}}.</p>
+L'API Screen Capture est relativement simple à utiliser. Sa seule méthode est {{domxref("MediaDevices.getDisplayMedia()")}} dont le but est de demander à l'utilisateur un écran ou une portion d'écran à capturer sous la forme de {{domxref("MediaStream")}}.
 
-<p>Pour commencer à capturer une vidéo de l'écran, il faut appeler <code>getDisplayMedia()</code> dans une instance de <code>navigator.mediaDevices</code></p>
+Pour commencer à capturer une vidéo de l'écran, il faut appeler `getDisplayMedia()` dans une instance de `navigator.mediaDevices`
 
-<pre class="brush: js">captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);</pre>
+```js
+captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+```
 
-<p>La {{jsxref("Promise")}} retournée par <code>getDisplayMedia()</code> résout un {{domxref("MediaStream")}} qui diffuse le dédia capturé.</p>
+La {{jsxref("Promise")}} retournée par `getDisplayMedia()` résout un {{domxref("MediaStream")}} qui diffuse le dédia capturé.
 
-<p>Voir l'article <a href="/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Utiliser l'API Screen Capture</a> pour plus de détails sur l’utilisation de l’API pour capturer le contenu de l’écran sous forme de flux.</p>
+Voir l'article [Utiliser l'API Screen Capture](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) pour plus de détails sur l’utilisation de l’API pour capturer le contenu de l’écran sous forme de flux.
 
-<h2 id="Ajouts_à_l'interface_actuelle">Ajouts à l'interface actuelle</h2>
+## Ajouts à l'interface actuelle
 
-<p>L'API Screen Capture n'a pas sa propre interface. Cependant, elle ajoute une méthode à l'existante interface {{domxref("MediaDevices")}} .</p>
+L'API Screen Capture n'a pas sa propre interface. Cependant, elle ajoute une méthode à l'existante interface {{domxref("MediaDevices")}} .
 
-<h3 id="Interface_MediaDevices">Interface MediaDevices</h3>
+### Interface MediaDevices
 
-<dl>
- <dt>{{domxref("MediaDevices.getDisplayMedia()")}}</dt>
- <dd>La méthode <code>getDisplayMedia()</code> est ajoutée à l'interface <code>MediaDevices</code>. Similaire à {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, cette méthode crée une promise qui  method creates a promise qui résout un {{domxref("MediaStream")}} contenant  la zone d'affichage sélectionnée par l'utilisateur, dans un format qui correspond aux options spécifiées.</dd>
-</dl>
+- {{domxref("MediaDevices.getDisplayMedia()")}}
+  - : La méthode `getDisplayMedia()` est ajoutée à l'interface `MediaDevices`. Similaire à {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, cette méthode crée une promise qui  method creates a promise qui résout un {{domxref("MediaStream")}} contenant  la zone d'affichage sélectionnée par l'utilisateur, dans un format qui correspond aux options spécifiées.
 
-<h2 id="Ajouts_aux_dictionnaires_actuels">Ajouts aux dictionnaires actuels</h2>
+## Ajouts aux dictionnaires actuels
 
-<p>L'API Screen Capture ajoute des propriétés au dictionnaire suivant définit par d'autres spécificités.</p>
+L'API Screen Capture ajoute des propriétés au dictionnaire suivant définit par d'autres spécificités.
 
-<h3 id="MediaTrackConstraints">MediaTrackConstraints</h3>
+### MediaTrackConstraints
 
-<dl>
- <dt>{{domxref("MediaTrackConstraints.cursor")}}</dt>
- <dd>Un {{domxref("ConstrainDOMString")}}  indiquant si le curseur doit ou non être inclus dans le flux de la surface d'affichage capturée, et s'il doit toujours être visible ou s'il ne doit l'être que lorsque la souris est en mouvement.</dd>
- <dt>{{domxref("MediaTrackConstraints.displaySurface")}}</dt>
- <dd>Un {{domxref("ConstrainDOMString")}} indiquant quel type de surface d'affichage doit être capturé. La valeur peut être <code>application</code>, <code>browser</code>, <code>monitor</code>, ou <code>window</code>.</dd>
- <dt>{{domxref("MediaTrackConstraints.logicalSurface")}}</dt>
- <dd>Indique si la vidéo dans le flux représente ou non une surface d'affichage logique (c'est-à-dire une surface qui peut ne pas être entièrement visible à l'écran ou peut-être complètement hors écran). La valeur <code>true</code> indique qu'une surface d'affichage logique doit être capturée.</dd>
-</dl>
+- {{domxref("MediaTrackConstraints.cursor")}}
+  - : Un {{domxref("ConstrainDOMString")}}  indiquant si le curseur doit ou non être inclus dans le flux de la surface d'affichage capturée, et s'il doit toujours être visible ou s'il ne doit l'être que lorsque la souris est en mouvement.
+- {{domxref("MediaTrackConstraints.displaySurface")}}
+  - : Un {{domxref("ConstrainDOMString")}} indiquant quel type de surface d'affichage doit être capturé. La valeur peut être `application`, `browser`, `monitor`, ou `window`.
+- {{domxref("MediaTrackConstraints.logicalSurface")}}
+  - : Indique si la vidéo dans le flux représente ou non une surface d'affichage logique (c'est-à-dire une surface qui peut ne pas être entièrement visible à l'écran ou peut-être complètement hors écran). La valeur `true` indique qu'une surface d'affichage logique doit être capturée.
 
-<h3 id="MediaTrackSettings">MediaTrackSettings</h3>
+### MediaTrackSettings
 
-<dl>
- <dt>{{domxref("MediaTrackSettings.cursor")}}</dt>
- <dd>Une chaîne de caractères indiquant si la surface d'affichage en cours de capture comprend ou non le curseur de la souris et, dans l'affirmative, si elle est visible uniquement lorsque la souris est en mouvement ou si elle est toujours visible. La valeur peut être <code>always</code>, <code>motion</code>, ou <code>never</code>.</dd>
- <dt>{{domxref("MediaTrackSettings.displaySurface")}}</dt>
- <dd>Une chaîne indiquant le type de surface d'affichage en cours de capture. La valeur peut être<code>application</code>, <code>browser</code>, <code>monitor</code>, ou <code>window</code>.</dd>
- <dt>{{domxref("MediaTrackSettings.logicalSurface")}}</dt>
- <dd>Valeur booléenne valant <code>true</code> si la vidéo en cours de capture ne correspond pas directement à une seule zone d'affichage à l'écran.</dd>
-</dl>
+- {{domxref("MediaTrackSettings.cursor")}}
+  - : Une chaîne de caractères indiquant si la surface d'affichage en cours de capture comprend ou non le curseur de la souris et, dans l'affirmative, si elle est visible uniquement lorsque la souris est en mouvement ou si elle est toujours visible. La valeur peut être `always`, `motion`, ou `never`.
+- {{domxref("MediaTrackSettings.displaySurface")}}
+  - : Une chaîne indiquant le type de surface d'affichage en cours de capture. La valeur peut être`application`, `browser`, `monitor`, ou `window`.
+- {{domxref("MediaTrackSettings.logicalSurface")}}
+  - : Valeur booléenne valant `true` si la vidéo en cours de capture ne correspond pas directement à une seule zone d'affichage à l'écran.
 
-<h3 id="MediaTrackSupportedConstraints">MediaTrackSupportedConstraints</h3>
+### MediaTrackSupportedConstraints
 
-<dl>
- <dt>{{domxref("MediaTrackSupportedConstraints.cursor")}}</dt>
- <dd>Valeur booléenne valant <code>true</code> si l'environnement actuel supporte la contrainte {{domxref("MediaTrackConstraints.cursor")}}.</dd>
- <dt>{{domxref("MediaTrackSupportedConstraints.displaySurface")}}</dt>
- <dd>Valeur booléenne valant <code>true</code> si l'environnement actuel supporte la contrainte {{domxref("MediaTrackConstraints.displaySurface")}}.</dd>
- <dt>{{domxref("MediaTrackSupportedConstraints.logicalSurface")}}</dt>
- <dd>Valeur booléenne valant <code>true</code> si l'environnement actuel supporte la contrainte {{domxref("MediaTrackConstraints.logicalSurface")}}.</dd>
-</dl>
+- {{domxref("MediaTrackSupportedConstraints.cursor")}}
+  - : Valeur booléenne valant `true` si l'environnement actuel supporte la contrainte {{domxref("MediaTrackConstraints.cursor")}}.
+- {{domxref("MediaTrackSupportedConstraints.displaySurface")}}
+  - : Valeur booléenne valant `true` si l'environnement actuel supporte la contrainte {{domxref("MediaTrackConstraints.displaySurface")}}.
+- {{domxref("MediaTrackSupportedConstraints.logicalSurface")}}
+  - : Valeur booléenne valant `true` si l'environnement actuel supporte la contrainte {{domxref("MediaTrackConstraints.logicalSurface")}}.
 
-<h2 id="Dictionnaires">Dictionnaires</h2>
+## Dictionnaires
 
-<p>Le dictionnaire suivant est difinit par l'API Screen Capture.</p>
+Le dictionnaire suivant est difinit par l'API Screen Capture.
 
-<dl>
- <dt><code>CursorCaptureConstraint</code></dt>
- <dd>Un type de chaîne énuméré utilisé pour fournir la valeur de la propriété <code>cursor</code> aux paramètres et aux contraintes. La valeur peut être <code>always</code>, <code>motion</code>, ou <code>never</code>.</dd>
- <dt><code>DisplayCaptureSurfaceType</code></dt>
- <dd>Un type de chaîne énuméré utilisé pour identifier le type de surface d'affichage à capturer. ce type est utilisé pour la propriété <code>displaySurface</code> dans les objets contraints et paramètres, et a plusieurs valeurs possibles <code>application</code>, <code>browser</code>, <code>monitor</code>, and <code>window</code>.</dd>
-</dl>
+- `CursorCaptureConstraint`
+  - : Un type de chaîne énuméré utilisé pour fournir la valeur de la propriété `cursor` aux paramètres et aux contraintes. La valeur peut être `always`, `motion`, ou `never`.
+- `DisplayCaptureSurfaceType`
+  - : Un type de chaîne énuméré utilisé pour identifier le type de surface d'affichage à capturer. ce type est utilisé pour la propriété `displaySurface` dans les objets contraints et paramètres, et a plusieurs valeurs possibles `application`, `browser`, `monitor`, and `window`.
 
-<h2 id="Validation_de_Feature_Policy">Validation de Feature Policy</h2>
+## Validation de Feature Policy
 
-<p>{{Glossary("User agent", "User agents")}} qui supportent  Feature Policy (soit en utilisant les entetes HTTP {{HTTPHeader("Feature-Policy")}} ou l'attribut {{HTMLElement("iframe")}}{{htmlattrxref("allow", "iframe")}} peut spécifier la volonté d'utiliser l'API Screen Capture API en utilisant la directive Policy Controle <code>display-capture</code>:</p>
+{{Glossary("User agent", "User agents")}} qui supportent  Feature Policy (soit en utilisant les entetes HTTP {{HTTPHeader("Feature-Policy")}} ou l'attribut {{HTMLElement("iframe")}}{{htmlattrxref("allow", "iframe")}} peut spécifier la volonté d'utiliser l'API Screen Capture API en utilisant la directive Policy Controle `display-capture`:
 
-<pre class="brush: html">&lt;iframe allow="display-capture" src="/some-other-document.html"&gt;</pre>
+```html
+<iframe allow="display-capture" src="/some-other-document.html">
+```
 
-<p>La liste d’autorisations par défaut est <code>self</code>, ce qui permet à tout contenu du document d’utiliser Screen Capture.</p>
+La liste d’autorisations par défaut est `self`, ce qui permet à tout contenu du document d’utiliser Screen Capture.
 
-<p>Voir <a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Utiliser Feature Policy</a> pour une explication plus en détail sur comment est utilisé Feature Policy.</p>
+Voir [Utiliser Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) pour une explication plus en détail sur comment est utilisé Feature Policy.
 
-<h2 id="Caracteristiques">Caracteristiques</h2>
+## Caracteristiques
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Caracteristiques</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Screen Capture')}}</td>
-   <td>{{Spec2('Screen Capture')}}</td>
-   <td>Définition Initiale</td>
-  </tr>
- </tbody>
-</table>
+| Caracteristiques                         | Statut                               | Commentaire         |
+| ---------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName('Screen Capture')}} | {{Spec2('Screen Capture')}} | Définition Initiale |
 
-<h2 id="Compatibilité_des_Navigateurs">Compatibilité des Navigateurs</h2>
+## Compatibilité des Navigateurs
 
-<div>
+{{Compat("api.MediaDevices.getDisplayMedia")}}
 
+## Voir aussi
 
-<div>
-
-
-<p>{{Compat("api.MediaDevices.getDisplayMedia")}}</p>
-</div>
-
-
-</div>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Utiliser l'API Screen Capture</a></li>
- <li>{{domxref("MediaDevices.getDisplayMedia()")}}</li>
-</ul>
+- [Utiliser l'API Screen Capture](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- {{domxref("MediaDevices.getDisplayMedia()")}}

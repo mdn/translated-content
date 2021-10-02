@@ -9,40 +9,39 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/rotate
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La méthode <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.rotate()</code></strong><code> de l'API</code> Canvas 2D ajoute une rotation à la matrice de transformation. L'argument angle représente un angle de rotation horaire et il est exprimé en radians.</p>
+La méthode **`CanvasRenderingContext2D`\*\***`.rotate()`\*\*` de l'API` Canvas 2D ajoute une rotation à la matrice de transformation. L'argument angle représente un angle de rotation horaire et il est exprimé en radians.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var><em>ctx</em>.rotate(angle);</var>
-</pre>
+    void ctx.rotate(angle);
 
-<p><img alt="" src="canvas_grid_rotate.png"></p>
+![](canvas_grid_rotate.png)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>angle</code></dt>
- <dd>L'angle de rotation horaire en radians. Vous pouvez utiliser <code><em>degrés</em> * Math.PI / 180</code> si vous voulez faire la conversion à partir d'une valeur en degrés.</dd>
-</dl>
+- `angle`
+  - : L'angle de rotation horaire en radians. Vous pouvez utiliser `degrés * Math.PI / 180` si vous voulez faire la conversion à partir d'une valeur en degrés.
 
-<p>Le centre de la rotation est toujours l'origine du canevas. Pour changer le centre, il faudra déplacer le canevas en utilisant la méthode {{domxref("CanvasRenderingContext2D.translate", "translate()")}}.</p>
+Le centre de la rotation est toujours l'origine du canevas. Pour changer le centre, il faudra déplacer le canevas en utilisant la méthode {{domxref("CanvasRenderingContext2D.translate", "translate()")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_de_la_méthode_rotate">Utilisation de la méthode <code>rotate</code></h3>
+### Utilisation de la méthode `rotate`
 
-<p>Ceci est seulement un fragment de code simple qui utilise la méthode <code>rotate</code>.</p>
+Ceci est seulement un fragment de code simple qui utilise la méthode `rotate`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.rotate(45 * Math.PI / 180);
@@ -50,24 +49,26 @@ ctx.fillRect(70, 0, 100, 30);
 
 // réinitialise la matrice de transformation courante à la matrice identité
 ctx.setTransform(1, 0, 0, 1, 0, 0);
-</pre>
+```
 
-<p>Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas:</p>
+Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas:
 
-<h4 id="code_jouable">Code jouable</h4>
+#### Code jouable
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.rotate(45 * Math.PI / 180);
 ctx.fillRect(70,0,100,30);
-ctx.setTransform(1, 0, 0, 1, 0, 0);&lt;/textarea&gt;
-</pre>
+ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -90,33 +91,20 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
+{{ EmbedLiveSample('code_jouable', 700, 360) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-rotate", "CanvasRenderingContext2D.rotate")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                            | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-rotate", "CanvasRenderingContext2D.rotate")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+## Compatibilité navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.rotate")}}</p>
+{{Compat("api.CanvasRenderingContext2D.rotate")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}

@@ -10,40 +10,37 @@ tags:
   - Window
 translation_of: Web/API/Window/scrollByLines
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<p>{{Non-standard_header}}</p>
+{{Non-standard_header}}
 
-<p>Fait défiler le document du nombre de lignes spécifié.</p>
+Fait défiler le document du nombre de lignes spécifié.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">window.scrollByLines(<var>lignes</var>)
-</pre>
+    window.scrollByLines(lignes)
 
-<h2 id="Parameters">Paramètres</h2>
+## Paramètres
 
-<ul>
- <li><code>lignes</code> est le nombre de lignes à faire défiler.</li>
- <li><code>lignes</code> peut être un entier positif ou négatif.</li>
-</ul>
+- `lignes` est le nombre de lignes à faire défiler.
+- `lignes` peut être un entier positif ou négatif.
 
-<h2 id="Example">Exemples</h2>
+## Exemples
 
-<pre class="brush:html">&lt;!-- Faire défiler le document de 5 lignes vers le bas. --&gt;
-&lt;button onclick="scrollByLines(5);"&gt;5 lignes vers le bas&lt;/button&gt;
-</pre>
+```html
+<!-- Faire défiler le document de 5 lignes vers le bas. -->
+<button onclick="scrollByLines(5);">5 lignes vers le bas</button>
+```
 
-<pre class="brush:html">&lt;!-- Faire défiler le document de 5 lignes vers le haut. --&gt;
-&lt;button onclick="scrollByLines(-5);"&gt;5 lignes vers le haut&lt;/button&gt;
-</pre>
+```html
+<!-- Faire défiler le document de 5 lignes vers le haut. -->
+<button onclick="scrollByLines(-5);">5 lignes vers le haut</button>
+```
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<p>Ne fait partie d'aucune spécification.</p>
+Ne fait partie d'aucune spécification.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("window.scrollBy")}}, {{domxref("window.scrollByPages")}}</li>
-</ul>
+- {{domxref("window.scrollBy")}}, {{domxref("window.scrollByPages")}}

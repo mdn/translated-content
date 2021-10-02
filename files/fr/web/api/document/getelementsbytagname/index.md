@@ -8,37 +8,32 @@ tags:
   - Méthodes
 translation_of: Web/API/Document/getElementsByTagName
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<div> </div>
+Renvoie une {{domxref ("HTMLCollection")}} des éléments avec le nom de balise donné. Le document complet est recherché, y compris le nœud racine. Le `HTMLCollection` renvoyée est en direct, ce qui signifie qu'elle se met à jour automatiquement pour rester synchronisée avec l'arborescence DOM sans avoir à rappeler document.getElementsByTagName ().
 
-<p>Renvoie une {{domxref ("HTMLCollection")}} des éléments avec le nom de balise donné. Le document complet est recherché, y compris le nœud racine. Le <code>HTMLCollection</code> renvoyée est en direct, ce qui signifie qu'elle se met à jour automatiquement pour rester synchronisée avec l'arborescence DOM sans avoir à rappeler document.getElementsByTagName ().</p>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
+    var elements = document.getElementsByTagName(name);
 
-<pre class="syntaxbox">var <var>elements</var> = document.getElementsByTagName(<em>name</em>);</pre>
+- `elements` est une liste de nœuds (`NodeList`) des éléments trouvés dans l'ordre dans lequel ils apparaissent dans l'arbre.
+- `nom` est une chaîne représentant le nom des éléments. La chaîne spéciale `"*"` représente « tous les éléments ».
 
-<ul>
- <li><code>elements</code> est une liste de nœuds (<code>NodeList</code>) des éléments trouvés dans l'ordre dans lequel ils apparaissent dans l'arbre.</li>
- <li><code>nom</code> est une chaîne représentant le nom des éléments. La chaîne spéciale <code>"*"</code> représente « tous les éléments ».</li>
-</ul>
+> **Note :** [La dernière spécification W3C](https://dom.spec.whatwg.org/) dit que  `elements` est une   `HTMLCollection` ; cependant cette méthode renvoie une  {{domxref("NodeList")}} dans les navigateurs WebKit. Voir  {{bug(14869)}} pour plus de détails.
 
-<div class="note">
-<p><strong>Note :</strong> <a href="https://dom.spec.whatwg.org/">La dernière spécification W3C</a> dit que  <code>elements</code> est une   <code>HTMLCollection</code> ; cependant cette méthode renvoie une  {{domxref("NodeList")}} dans les navigateurs WebKit. Voir  {{bug(14869)}} pour plus de détails.</p>
-</div>
+## Exemple
 
-<h2 id="Exemple">Exemple</h2>
+Dans l'exemple suivant, `getElementsByTagName()` commence à partir d'un élément parent particulier et effectue une recherche descendante récursive dans le DOM à partir de cet élément parent, en créant une collection de tous les éléments descendants qui correspondent au paramètre de `name`. Cela démontre à la fois `document.getElementsByTagName()` et son homologue {{domxref ("Element.getElementsByTagName ()")}}, qui lance la recherche sur un élément spécifique dans l'arbre DOM.
 
-<p>Dans l'exemple suivant, <code>getElementsByTagName()</code> commence à partir d'un élément parent particulier et effectue une recherche descendante récursive dans le DOM à partir de cet élément parent, en créant une collection de tous les éléments descendants qui correspondent au paramètre de <code>name</code>. Cela démontre à la fois <code>document.getElementsByTagName()</code> et son homologue {{domxref ("Element.getElementsByTagName ()")}}, qui lance la recherche sur un élément spécifique dans l'arbre DOM.</p>
+Cliquer sur les boutons utilise `getElementsByTagName()` pour compter les éléments de paragraphe descendant d'un parent particulier (le document lui-même ou l'un des éléments {{HTMLElement ("div")}} imbriqués).
 
-<p>Cliquer sur les boutons utilise <code>getElementsByTagName()</code> pour compter les éléments de paragraphe descendant d'un parent particulier (le document lui-même ou l'un des éléments {{HTMLElement ("div")}} imbriqués).</p>
-
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-8" /&gt;
-  &lt;title&gt;getElementsByTagName example&lt;/title&gt;
-  &lt;script&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>getElementsByTagName example</title>
+  <script>
     function getAllParaElems() {
       var allParas = document.getElementsByTagName('p');
       var num = allParas.length;
@@ -58,56 +53,53 @@ translation_of: Web/API/Document/getElementsByTagName
       var num = div2Paras.length;
       alert('There are ' + num + ' paragraph in #div2');
     }
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body style="border: solid green 3px"&gt;
-  &lt;p&gt;Some outer text&lt;/p&gt;
-  &lt;p&gt;Some outer text&lt;/p&gt;
+  </script>
+</head>
+<body style="border: solid green 3px">
+  <p>Some outer text</p>
+  <p>Some outer text</p>
 
-  &lt;div id="div1" style="border: solid blue 3px"&gt;
-    &lt;p&gt;Some div1 text&lt;/p&gt;
-    &lt;p&gt;Some div1 text&lt;/p&gt;
-    &lt;p&gt;Some div1 text&lt;/p&gt;
+  <div id="div1" style="border: solid blue 3px">
+    <p>Some div1 text</p>
+    <p>Some div1 text</p>
+    <p>Some div1 text</p>
 
-    &lt;div id="div2" style="border: solid red 3px"&gt;
-      &lt;p&gt;Some div2 text&lt;/p&gt;
-      &lt;p&gt;Some div2 text&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+    <div id="div2" style="border: solid red 3px">
+      <p>Some div2 text</p>
+      <p>Some div2 text</p>
+    </div>
+  </div>
 
-  &lt;p&gt;Some outer text&lt;/p&gt;
-  &lt;p&gt;Some outer text&lt;/p&gt;
+  <p>Some outer text</p>
+  <p>Some outer text</p>
 
-  &lt;button onclick="getAllParaElems();"&gt;
-    show all p elements in document&lt;/button&gt;&lt;br /&gt;
+  <button onclick="getAllParaElems();">
+    show all p elements in document</button><br />
 
-  &lt;button onclick="div1ParaElems();"&gt;
-    show all p elements in div1 element&lt;/button&gt;&lt;br /&gt;
+  <button onclick="div1ParaElems();">
+    show all p elements in div1 element</button><br />
 
-  &lt;button onclick="div2ParaElems();"&gt;
-    show all p elements in div2 element&lt;/button&gt;
+  <button onclick="div2ParaElems();">
+    show all p elements in div2 element</button>
 
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</body>
+</html>
+```
 
-<h2 id="Sp.C3.A9cification">Notes</h2>
+## Notes
 
-<p>Lorsqu'elle est appelée sur un document HTML, <code>getElementsByTagName()</code> classe son argument avant de continuer. Cela n'est pas souhaitable lorsque vous essayez de faire correspondre des éléments camelCase SVG dans un sous-arbre dans un document HTML. {{Domxref ("document.getElementsByTagNameNS ()")}} est utile dans ce cas. Voir aussi {{Bug (499656)}}.<br>
- <br>
- <code>document.getElementsByTagName()</code> est similaire à {{domxref ("element.getElementsByTagName ()")}}, sauf que sa recherche englobe tout le document.</p>
+Lorsqu'elle est appelée sur un document HTML, `getElementsByTagName()` classe son argument avant de continuer. Cela n'est pas souhaitable lorsque vous essayez de faire correspondre des éléments camelCase SVG dans un sous-arbre dans un document HTML. {{Domxref ("document.getElementsByTagNameNS ()")}} est utile dans ce cas. Voir aussi {{Bug (499656)}}.
 
-<h2 id="Sp.C3.A9cification">Spécifications</h2>
+`document.getElementsByTagName()` est similaire à {{domxref ("element.getElementsByTagName ()")}}, sauf que sa recherche englobe tout le document.
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C9094">DOM Level 2 Core : getElementsByTagName</a> <small>— <a href="http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-A6C9094">traduction</a> (non normative)</small></li>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents">HTML 5: APIs in HTML documents</a></li>
-</ul>
+## Spécifications
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+- [DOM Level 2 Core : getElementsByTagName](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C9094) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-A6C9094) (non normative)
+- [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
 
-<ul>
- <li>{{domxref("Element.getElementsByTagName()")}}</li>
- <li>{{domxref("document.getElementById()")}} pour renvoyer une référence à un élément par son <code>id</code> (<em>identifiant</em>)</li>
- <li>{{domxref("document.getElementsByName()")}} pour renvoyer une référence à un élément par son <code>name</code> (<em>nom</em>)</li>
- <li>{{domxref("document.querySelector()")}} pour les sélecteurs puissants via des requêtes comme <code>'div.myclass'</code></li>
-</ul>
+## Voir aussi
+
+- {{domxref("Element.getElementsByTagName()")}}
+- {{domxref("document.getElementById()")}} pour renvoyer une référence à un élément par son `id` (_identifiant_)
+- {{domxref("document.getElementsByName()")}} pour renvoyer une référence à un élément par son `name` (_nom_)
+- {{domxref("document.querySelector()")}} pour les sélecteurs puissants via des requêtes comme `'div.myclass'`

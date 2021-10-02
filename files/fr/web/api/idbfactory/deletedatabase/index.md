@@ -8,44 +8,41 @@ tags:
   - Reference
 translation_of: Web/API/IDBFactory/deleteDatabase
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>La méthode <strong><code>deleteDatabase()</code></strong>, rattachée à l'interface {{domxref("IDBFactory")}}, permet de demander la suppression d'une base de données. La méthode renvoie immédiatement un objet {{domxref("IDBOpenDBRequest")}} puis effectue l'opération de suppression de façon asynchrone.</p>
+La méthode **`deleteDatabase()`**, rattachée à l'interface {{domxref("IDBFactory")}}, permet de demander la suppression d'une base de données. La méthode renvoie immédiatement un objet {{domxref("IDBOpenDBRequest")}} puis effectue l'opération de suppression de façon asynchrone.
 
-<p>Si la base de données est bien supprimée, un évènement <code>success</code> est déclenché sur l'objet <code>IDBOpenDBRequest</code> renvoyé et la propriété <code>result</code> vaut alors <code>undefined</code>. Si une erreur se produit lors de la suppression, ce sera un évènement <code>error</code> qui sera déclenché sur l'objet renvoyé par la méthode.</p>
+Si la base de données est bien supprimée, un évènement `success` est déclenché sur l'objet `IDBOpenDBRequest` renvoyé et la propriété `result` vaut alors `undefined`. Si une erreur se produit lors de la suppression, ce sera un évènement `error` qui sera déclenché sur l'objet renvoyé par la méthode.
 
-<div>
-<p>Lorsque la méthode <code>deleteDatabase()</code> est invoquée, toutes les autres connexions qui sont ouvertes sur cette base de données recevront un évènement <code><a href="/fr/docs/Web/Events/versionchange_indexedDB">versionchange</a></code>.</p>
-</div>
+Lorsque la méthode `deleteDatabase()` est invoquée, toutes les autres connexions qui sont ouvertes sur cette base de données recevront un évènement [`versionchange`](/fr/docs/Web/Events/versionchange_indexedDB).
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La syntaxe actuellement standard est :</p>
+La syntaxe actuellement standard est :
 
-<pre class="syntaxbox">var <em>request</em> = <em>indexedDB</em>.deleteDatabase(<em>nom</em>);</pre>
+    var request = indexedDB.deleteDatabase(nom);
 
-<p>Une version expérimentale permet de gérer des options (cf. ci-après) :</p>
+Une version expérimentale permet de gérer des options (cf. ci-après) :
 
-<pre class="syntaxbox">var <em>request</em> = <em>indexedDB</em>.deleteDatabase(nom, options);</pre>
+    var request = indexedDB.deleteDatabase(nom, options);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>nom</code></dt>
- <dd>Le nom de la base de données qu'on souhaite supprimer. Tenter de supprimer une base de données qui n'existe pas ne déclenchera pas d'exception (contrairement à la tentative de suppression d'un magasin d'objets inexistant avec {{domxref("IDBDatabase.deleteObjectStore()")}} qui déclenchera bien une exception).</dd>
- <dt><code>options</code> {{NonStandardBadge}}</dt>
- <dd>Dans Gecko, à partir de <a href="/fr/Firefox/Releases/26">la version 26</a>, il est possible d'inclure un paramètre pour indiquer le stockage de la base. La valeur peut être <code>permanent</code> (la valeur par défaut) ou <code>temporary</code> si on souhaite supprimer une base de données qui fait partie d'une mémoire partagée.</dd>
-</dl>
+- `nom`
+  - : Le nom de la base de données qu'on souhaite supprimer. Tenter de supprimer une base de données qui n'existe pas ne déclenchera pas d'exception (contrairement à la tentative de suppression d'un magasin d'objets inexistant avec {{domxref("IDBDatabase.deleteObjectStore()")}} qui déclenchera bien une exception).
+- `options` {{NonStandardBadge}}
+  - : Dans Gecko, à partir de [la version 26](/fr/Firefox/Releases/26), il est possible d'inclure un paramètre pour indiquer le stockage de la base. La valeur peut être `permanent` (la valeur par défaut) ou `temporary` si on souhaite supprimer une base de données qui fait partie d'une mémoire partagée.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Cette méthode renvoie un objet {{domxref("IDBOpenDBRequest")}} sur lequel seront déclenchés les évènements relatifs à la requête.</p>
+Cette méthode renvoie un objet {{domxref("IDBOpenDBRequest")}} sur lequel seront déclenchés les évènements relatifs à la requête.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
+```js
+var DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
 
 DBDeleteRequest.onerror = function(event) {
   console.log("Erreur lors de la suppression de la base");
@@ -56,42 +53,25 @@ DBDeleteRequest.onsuccess = function(event) {
 
   console.log(event.result); // undefined
 };
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBFactory-deleteDatabase-IDBOpenDBRequest-DOMString-name', 'deleteDatabase()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbfactory-deletedatabase", "deleteDatabase()")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                        | État                             | Commentaires |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBFactory-deleteDatabase-IDBOpenDBRequest-DOMString-name', 'deleteDatabase()')}} | {{Spec2('IndexedDB')}}     |              |
+| {{SpecName("IndexedDB 2", "#dom-idbfactory-deletedatabase", "deleteDatabase()")}}                                         | {{Spec2("IndexedDB 2")}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBFactory.deleteDatabase")}}</p>
+{{Compat("api.IDBFactory.deleteDatabase")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Manipuler IndexedDB</a></li>
- <li>Démarrer des transactions : {{domxref("IDBDatabase")}}</li>
- <li>Manipuler des transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}</li>
- <li>Manipuler des curseurs : {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence pour IndexedDB : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a></li>
-</ul>
+- [Manipuler IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Démarrer des transactions : {{domxref("IDBDatabase")}}
+- Manipuler des transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
+- Manipuler des curseurs : {{domxref("IDBCursor")}}
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)

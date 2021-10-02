@@ -9,105 +9,68 @@ tags:
   - Reference
 translation_of: Web/API/IDBFactory/cmp
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>La méthode <strong><code>cmp()</code></strong> de l'interface {{domxref("IDBFactory")}} compare deux valeurs de clé et détermine si celles-ci sont égales et sinon, laquelle est la plus grande. Cette opération est utilisée pour l'enregistrement et le parcours des données.</p>
+La méthode **`cmp()`** de l'interface {{domxref("IDBFactory")}} compare deux valeurs de clé et détermine si celles-ci sont égales et sinon, laquelle est la plus grande. Cette opération est utilisée pour l'enregistrement et le parcours des données.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<div class="note"><p><strong>Note :</strong> Cette méthode ne doit pas être utilisée pour comparer des valeurs JavaScript. En effet, de nombreuses valeurs JavaScript ne sont pas des valeurs valides pour représenter des clés IndexedDB (les booléens et les objets par exemple), dans ces cas, elles peuvent être traitées comme des clés égales (ainsi IndexedDB ignore les tableaux ayant des propriétés non numériques et les considère comme des tableaux vides, de sorte que les éventuels tableaux non numériques seront considérés comme égaux). Une exception est levée si l'une des valeurs n'est pas une clé valide.</p></div>
+> **Note :** Cette méthode ne doit pas être utilisée pour comparer des valeurs JavaScript. En effet, de nombreuses valeurs JavaScript ne sont pas des valeurs valides pour représenter des clés IndexedDB (les booléens et les objets par exemple), dans ces cas, elles peuvent être traitées comme des clés égales (ainsi IndexedDB ignore les tableaux ayant des propriétés non numériques et les considère comme des tableaux vides, de sorte que les éventuels tableaux non numériques seront considérés comme égaux). Une exception est levée si l'une des valeurs n'est pas une clé valide.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var resultat = window.indexedDB.cmp(a, b);</pre>
+    var resultat = window.indexedDB.cmp(a, b);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>a</code></dt>
- <dd>La première clé pour la comparaison.</dd>
- <dt><code>b</code></dt>
- <dd>La deuxième clé pour la comparaison.</dd>
-</dl>
+- `a`
+  - : La première clé pour la comparaison.
+- `b`
+  - : La deuxième clé pour la comparaison.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un entier qui indique le résultat de la comparaison. Le tableau ci-dessous indique les valeurs possibles et leur signification :</p>
+Un entier qui indique le résultat de la comparaison. Le tableau ci-dessous indique les valeurs possibles et leur signification :
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Valeur renvoyée</th>
-   <th scope="col">Description</th>
-  </tr>
-  <tr>
-   <td>-1</td>
-   <td>La clé 1 est plus petite que la clé 2.</td>
-  </tr>
-  <tr>
-   <td>0</td>
-   <td>Les deux clé sont égales.</td>
-  </tr>
-  <tr>
-   <td>1</td>
-   <td>La clé 1 est plus grande que la clé 2.</td>
-  </tr>
- </tbody>
-</table>
+| Valeur renvoyée | Description                            |
+| --------------- | -------------------------------------- |
+| -1              | La clé 1 est plus petite que la clé 2. |
+| 0               | Les deux clé sont égales.              |
+| 1               | La clé 1 est plus grande que la clé 2. |
 
-<h3 id="Exceptions_levées">Exceptions levées</h3>
+### Exceptions levées
 
-<p>Cette méthode peut lever une exception {{domxref("DOMException")}} de type :</p>
+Cette méthode peut lever une exception {{domxref("DOMException")}} de type :
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
-  <tr>
-   <td><a href="/fr/docs/Web/API/DOMError"><code>DataError</code></a></td>
-   <td>L'une des clés fournies n'est pas valide.</td>
-  </tr>
- </thead>
-</table>
+| Exception                                | Description                               |
+| ---------------------------------------- | ----------------------------------------- |
+| [`DataError`](/fr/docs/Web/API/DOMError) | L'une des clés fournies n'est pas valide. |
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js;">var a = 1;
+```js
+var a = 1;
 var b = 2;
 var result = window.indexedDB.cmp(a, b);
-console.log( "Résultat de la comparaison : " + result );</pre>
+console.log( "Résultat de la comparaison : " + result );
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBFactory-cmp-short-any-first-any-second', 'cmp')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                         | Commentaires |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBFactory-cmp-short-any-first-any-second', 'cmp')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBFactory.cmp")}}</p>
+{{Compat("api.IDBFactory.cmp")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
- <li>Initier une connexion : {{domxref("IDBDatabase")}}</li>
- <li>Utiliser les transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
- <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
-</ul>
+- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Initier une connexion : {{domxref("IDBDatabase")}}
+- Utiliser les transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
+- Utiliser les curseurs {{domxref("IDBCursor")}}
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).

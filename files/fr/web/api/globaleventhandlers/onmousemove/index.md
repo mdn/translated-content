@@ -7,31 +7,33 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/GlobalEventHandlers/onmousemove
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
+### Résumé
 
-<p>La propriété <strong>onmousemove</strong> renvoie le code de gestion de l'évènement <code>mousemove</code> pour l'élément courant.</p>
+La propriété **onmousemove** renvoie le code de gestion de l'évènement `mousemove` pour l'élément courant.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<p><code><em>element</em>.onmousemove = <em>functionRef</em></code></p>
+`element.onmousemove = functionRef`
 
-<p>où <em>functionRef</em> est une fonction ou une expression de type <em>function. </em>Consulter la <a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope">référence des fonctions</a> pour plus de détails.</p>
+où _functionRef_ est une fonction ou une expression de type _function._ Consulter la [référence des fonctions](/en-US/docs/JavaScript/Reference/Functions_and_function_scope) pour plus de détails.
 
-<p>Le paramètre fournit au gestionnaire d'évènement <em>functionRef</em> lors du déclenchement de l'évènement est objet qui représente l'évènement de déplacment de souris, de type {{ domxref("MouseEvent") }}.</p>
+Le paramètre fournit au gestionnaire d'évènement _functionRef_ lors du déclenchement de l'évènement est objet qui représente l'évènement de déplacment de souris, de type {{ domxref("MouseEvent") }}.
 
-<h3 id="Notes">Exemple</h3>
+### Exemple
 
-<pre class="brush: js">document.body.onmousemove = event =&gt; {
+```js
+document.body.onmousemove = event => {
   // Suivi de la position de la souris dans la console
   console.log(`Position de la souris : X = ${event.clientX} | Y = ${event.clientY}`);
-}</pre>
+}
+```
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p>L'évènement <code>mousemove</code> se déclenche lorsque l'utilisateur déplace la souris.</p>
+L'évènement `mousemove` se déclenche lorsque l'utilisateur déplace la souris.
 
-<h3 id="Sp.C3.A9cification">Spécification</h3>
+### Spécification
 
-<p>{{ DOM0() }}</p>
+{{ DOM0() }}

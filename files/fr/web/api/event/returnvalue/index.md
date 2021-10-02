@@ -9,24 +9,21 @@ tags:
   - évènements
 translation_of: Web/API/Event/returnValue
 ---
-<p>{{APIRef("DOM Events")}}{{Non-standard_header}}{{ Deprecated_header() }}</p>
+{{APIRef("DOM Events")}}{{Non-standard_header}}{{ Deprecated_header() }}
 
-<p>La propriété <code><strong>Event.returnValue</strong></code> indique si l'action par défaut pour cet évènement a été empêchée ou non. Elle est définie à <code>true</code> (<em>vrai</em>) par défaut, permettant à l'action par défaut de se produire. La définition de cette propriété à <code>false</code> (<em>faux</em>) empêche le déclenchement de l'action par défaut.</p>
+La propriété **`Event.returnValue`** indique si l'action par défaut pour cet évènement a été empêchée ou non. Elle est définie à `true` (_vrai_) par défaut, permettant à l'action par défaut de se produire. La définition de cette propriété à `false` (_faux_) empêche le déclenchement de l'action par défaut.
 
-<div class="note">
-<p><strong>Note :</strong> Utilisez {{domxref("Event.preventDefault()")}} à la place de cette méthode non standard.</p>
-</div>
+> **Note :** Utilisez {{domxref("Event.preventDefault()")}} à la place de cette méthode non standard.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">event.returnValue = <em>bool;</em>
-<em>var bool</em> = event.returnValue;
-</pre>
+    event.returnValue = bool;
+    var bool = event.returnValue;
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Bien qu'elle ait été inclue <a href="https://www.w3.org/TR/1999/WD-DOM-Level-2-19990304/events.html#attribute-returnValue">dans l'ancien brouillon de travail de W3C DOM niveau 2</a><em>, cette propriété ne fait partie d'aucune spécification.</em></p>
+Bien qu'elle ait été inclue [dans l'ancien brouillon de travail de W3C DOM niveau 2](https://www.w3.org/TR/1999/WD-DOM-Level-2-19990304/events.html#attribute-returnValue)_, cette propriété ne fait partie d'aucune spécification._
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Event.returnValue")}}</p>
+{{Compat("api.Event.returnValue")}}

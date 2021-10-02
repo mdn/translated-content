@@ -9,66 +9,48 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/shaderSource
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>La méthode <strong><code>WebGLRenderingContext.shaderSource()</code></strong> de l'<a href="/en-US/docs/Web/API/WebGL_API">API WebGL</a> définit le code source d'un {{domxref("WebGLShader")}}.</p>
+La méthode **`WebGLRenderingContext.shaderSource()`** de l'[API WebGL](/en-US/docs/Web/API/WebGL_API) définit le code source d'un {{domxref("WebGLShader")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var>gl</var>.shaderSource(<var>shader</var>, <var>source</var>);
-</pre>
+    void gl.shaderSource(shader, source);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt>shader</dt>
- <dd>Un objet {{domxref("WebGLShader")}} dans lequel définir le code source.</dd>
- <dt>source</dt>
- <dd>Une {{domxref("DOMString")}} contenant le code source GLSL à définir.</dd>
-</dl>
+- shader
+  - : Un objet {{domxref("WebGLShader")}} dans lequel définir le code source.
+- source
+  - : Une {{domxref("DOMString")}} contenant le code source GLSL à définir.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Aucune.</p>
+Aucune.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var shader = gl.createShader(gl.VERTEX_SHADER);
+```js
+var shader = gl.createShader(gl.VERTEX_SHADER);
 gl.shaderSource(shader, originalSource);
 
-var source = gl.getShaderSource(shader);</pre>
+var source = gl.getShaderSource(shader);
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.9", "shaderSource")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glShaderSource.xml", "glShaderSource")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>Page man de l'API OpenGL (similaire).</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | Statut                               | Commentaire                           |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------- |
+| {{SpecName('WebGL', "#5.14.9", "shaderSource")}}                             | {{Spec2('WebGL')}}             | Définition initiale.                  |
+| {{SpecName('OpenGL ES 2.0', "glShaderSource.xml", "glShaderSource")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL (similaire). |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WebGLRenderingContext.shaderSource")}}</p>
+{{Compat("api.WebGLRenderingContext.shaderSource")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.createShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getShaderSource()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createShader()")}}
+- {{domxref("WebGLRenderingContext.isShader()")}}
+- {{domxref("WebGLRenderingContext.deleteShader()")}}
+- {{domxref("WebGLRenderingContext.getShaderSource()")}}

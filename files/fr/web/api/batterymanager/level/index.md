@@ -3,65 +3,50 @@ title: BatteryManager.level
 slug: Web/API/BatteryManager/level
 translation_of: Web/API/BatteryManager/level
 ---
-<div>{{obsolete_header}}</div>
+{{obsolete_header}}{{APIRef("Battery API")}}
 
-<div>{{APIRef("Battery API")}}</div>
+Indique le niveau de charge de la batterie en tant que valeur comprise entre `0.0` (déchargée) et `1.0` (rechargée).
 
-<p>Indique le niveau de charge de la batterie en tant que valeur comprise entre <code>0.0</code> (déchargée) et <code>1.0</code> (rechargée).</p>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
+    var level = battery.level
 
-<pre class="syntaxbox">var level = battery.level</pre>
+`level` est un nombre représentant le niveau de charge de la batterie en tant que valeur comprise entre `0.0` et `1.0`. Une veleur de `0.0` signifie que `battery`, qui est un objet de type {{domxref("BatteryManager")}}, est vide, et que le système est sur le point d'être désactivé. Une valeur de `1.0` signifie que la batterie est pleine.
 
-<p><code>level</code> est un nombre représentant le niveau de charge de la batterie en tant que valeur comprise entre <code>0.0</code> et <code>1.0</code>. Une veleur de <code>0.0</code> signifie que <code><em>battery</em></code>, qui est un objet de type {{domxref("BatteryManager")}}, est vide, et que le système est sur le point d'être désactivé. Une valeur de <code>1.0</code> signifie que la batterie est pleine.</p>
+La valeur `1.0` est aussi retournée si le système n'est pas capable de déterminer son niveau de charge ou si le système n'est pas alimenté par une batterie.
 
-<p>La valeur <code>1.0</code> est aussi retournée si le système n'est pas capable de déterminer son niveau de charge ou si le système n'est pas alimenté par une batterie.</p>
+## Exemple
 
-<h2 id="Example">Exemple</h2>
+### Code HTML
 
-<h3 id="Code_HTML">Code HTML</h3>
+```html
+<div id="level">(niveau de batterie inconnu)</div>
+```
 
-<pre class="brush: html">&lt;div id="level"&gt;(niveau de batterie inconnu)&lt;/div&gt;
-</pre>
+### Code JavaScript
 
-<h3 id="Code_JavaScript">Code JavaScript</h3>
-
-<pre class="brush: js;">navigator.getBattery().then(function(battery) {
+```js
+navigator.getBattery().then(function(battery) {
 
     var level = battery.level;
 
     document.querySelector('#level').textContent = level;
 });
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Example', '100%', 30, '', 'Web/API/BatteryManager/level') }}</p>
+{{ EmbedLiveSample('Example', '100%', 30, '', 'Web/API/BatteryManager/level') }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Battery API")}}</td>
-   <td>{{Spec2("Battery API")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Specification                        | Status                           | Comment             |
+| ------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName("Battery API")}} | {{Spec2("Battery API")}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.BatteryManager.level")}}</p>
+{{Compat("api.BatteryManager.level")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("BatteryManager")}}</li>
- <li>{{domxref("Navigator.getBattery")}}</li>
-</ul>
+- {{domxref("BatteryManager")}}
+- {{domxref("Navigator.getBattery")}}

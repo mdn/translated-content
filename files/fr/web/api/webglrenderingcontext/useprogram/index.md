@@ -9,29 +9,27 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/useProgram
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>La méthode <strong><code>WebGLRenderingContext.useProgram()</code></strong> de l'<a href="/fr-FR/docs/Web/API/WebGL_API">API WebGL</a> définit le {{domxref("WebGLProgram")}} spécifié comme faisant partie de l'état de rendu en cours.</p>
+La méthode **`WebGLRenderingContext.useProgram()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) définit le {{domxref("WebGLProgram")}} spécifié comme faisant partie de l'état de rendu en cours.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var>gl</var>.useProgram(<var>programme</var>);
-</pre>
+    void gl.useProgram(programme);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>programme</dt>
- <dd>Un {{domxref("WebGLProgram")}} à utiliser.</dd>
-</dl>
+- programme
+  - : Un {{domxref("WebGLProgram")}} à utiliser.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Aucune.</p>
+Aucune.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var programme = gl.createProgram();
+```js
+var programme = gl.createProgram();
 
 // Attacher les shaders pré-existants
 gl.attachShader(programme, vertexShader);
@@ -39,42 +37,25 @@ gl.attachShader(programme, fragmentShader);
 
 gl.linkProgram(programme);
 gl.useProgram(programme);
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.9", "useProgram")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glUseProgram.xml", "glUseProgram")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>Page man de l'API OpenGL.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | Statut                               | Commentaire               |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------- |
+| {{SpecName('WebGL', "#5.14.9", "useProgram")}}                             | {{Spec2('WebGL')}}             | Définition initiale.      |
+| {{SpecName('OpenGL ES 2.0', "glUseProgram.xml", "glUseProgram")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL. |
 
-<h2 id="Browser_compatibilité_des_navigateurs">Browser compatibilité des navigateurs</h2>
+## Browser compatibilité des navigateurs
 
-<p>{{Compat("api.WebGLRenderingContext.useProgram")}}</p>
+{{Compat("api.WebGLRenderingContext.useProgram")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.createProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.linkProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.validateProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getProgramInfoLog()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createProgram()")}}
+- {{domxref("WebGLRenderingContext.deleteProgram()")}}
+- {{domxref("WebGLRenderingContext.isProgram()")}}
+- {{domxref("WebGLRenderingContext.linkProgram()")}}
+- {{domxref("WebGLRenderingContext.validateProgram()")}}
+- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
+- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}

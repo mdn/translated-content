@@ -8,73 +8,64 @@ tags:
   - Reference
 translation_of: Web/API/IDBDatabase/close
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>La méthode <strong><code>close()</code></strong> de l'interface {{domxref("IDBDatabase")}} ferme de façon asynchrone la connexion à la base de donnée.</p>
+La méthode **`close()`** de l'interface {{domxref("IDBDatabase")}} ferme de façon asynchrone la connexion à la base de donnée.
 
-<p>La connexion sera fermée lorsque toutes les transactions liées à cette connexion seront terminées. En revanche, on ne pourra pas démarrer de nouvelles transactions sur la connexion une fois que cette méthode a été appelée. Les méthodes qui initialisent des transactions déclencheront une exception lorsque la fermeture est en cours.</p>
+La connexion sera fermée lorsque toutes les transactions liées à cette connexion seront terminées. En revanche, on ne pourra pas démarrer de nouvelles transactions sur la connexion une fois que cette méthode a été appelée. Les méthodes qui initialisent des transactions déclencheront une exception lorsque la fermeture est en cours.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">db.close();</pre>
+```js
+db.close();
+```
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Aucune.</p>
+Aucune.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">// ouverture de la connexion à la base de données toDoList
+```js
+// ouverture de la connexion à la base de données toDoList
   var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
   // deux gestionnaires d’événements effectuant les
   // opérations après que l'ouverture se soit bien
   // passée ou non.
   DBOpenRequest.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Erreur lors du chargement de la base.&lt;/li&gt;';
+    note.innerHTML += '<li>Erreur lors du chargement de la base.</li>';
   };
 
   DBOpenRequest.onsuccess = function(event) {
-    note.innerHTML += '&lt;li&gt;Base chargée.&lt;/li&gt;';
+    note.innerHTML += '<li>Base chargée.</li>';
 
     // affecte la connexion à la variable db
     db = DBOpenRequest.result;
 
     // fermeture de la base de donnée.
     db.close();
-  }</pre>
+  }
+```
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBDatabase-close-void', 'close()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                         | Commentaires |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBDatabase-close-void', 'close()')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBDatabase.close")}}</p>
+{{Compat("api.IDBDatabase.close")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Manipuler IndexedDB</a></li>
- <li>Démarrer des transactions : {{domxref("IDBDatabase")}}</li>
- <li>Manipuler des transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}</li>
- <li>Manipuler des curseurs : {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence pour IndexedDB : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a></li>
-</ul>
+- [Manipuler IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Démarrer des transactions : {{domxref("IDBDatabase")}}
+- Manipuler des transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
+- Manipuler des curseurs : {{domxref("IDBCursor")}}
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)

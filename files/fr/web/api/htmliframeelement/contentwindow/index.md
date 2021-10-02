@@ -8,39 +8,26 @@ tags:
   - Web
 translation_of: Web/API/HTMLIFrameElement/contentWindow
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>La propriété <strong><code>contentWindow</code></strong> renvoie l'objet <code><a href="/fr/docs/Web/API/Window">Window</a></code> d'un élément {{HTMLElement("iframe")}}. Cet objet <code>Window</code> peut être utilisé pour accéder au document de l'<em>iframe</em> et à son DOM. Cet attribut est en lecture seule mais ses propriétés peuvent être manipulées comme pour l'objet global <code>Window</code>.</p>
+La propriété **`contentWindow`** renvoie l'objet [`Window`](/fr/docs/Web/API/Window) d'un élément {{HTMLElement("iframe")}}. Cet objet `Window` peut être utilisé pour accéder au document de l'_iframe_ et à son DOM. Cet attribut est en lecture seule mais ses propriétés peuvent être manipulées comme pour l'objet global `Window`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var x = document.getElementsByTagName("iframe")[0].contentWindow;
+```js
+var x = document.getElementsByTagName("iframe")[0].contentWindow;
 //x = window.frames[0];
 
 x.document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
-// ceci devrait changer le 1er iframe dans le document bleu.</pre>
+// ceci devrait changer le 1er iframe dans le document bleu.
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-iframe-contentwindow', 'HTMLIFrameElement: contentWindow')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                | État                             | Commentaires |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
+| {{SpecName('HTML WHATWG', '#dom-iframe-contentwindow', 'HTMLIFrameElement: contentWindow')}} | {{Spec2('HTML WHATWG')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("api.HTMLIFrameElement.contentWindow")}}</p>
+{{Compat("api.HTMLIFrameElement.contentWindow")}}

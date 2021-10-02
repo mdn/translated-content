@@ -9,41 +9,30 @@ tags:
   - Reference
 translation_of: Web/API/FederatedCredential/provider
 ---
-<p>{{SeeCompatTable}}{{APIRef("")}}</p>
+{{SeeCompatTable}}{{APIRef("")}}
 
-<p>La propriété <strong><code>provider</code></strong>, rattachée à l'interface {{domxref("FederatedCredential")}}, fournit une chaîne de caractères {{domxref("USVString")}} qui décrit un fournisseur d'identité fédéré.</p>
+La propriété **`provider`**, rattachée à l'interface {{domxref("FederatedCredential")}}, fournit une chaîne de caractères {{domxref("USVString")}} qui décrit un fournisseur d'identité fédéré.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var provider = FederatedCredential.provider</pre>
+    var provider = FederatedCredential.provider
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Une chaîne de caractères {{domxref("USVString")}} identifiant un fournisseur d'identité fédéré.</p>
+Une chaîne de caractères {{domxref("USVString")}} identifiant un fournisseur d'identité fédéré.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">// TBD</pre>
+```js
+// TBD
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Credential Management')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                    | État                                         | Commentaires         |
+| ------------------------------------------------ | -------------------------------------------- | -------------------- |
+| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.FederatedCredential.provider")}}</p>
+{{Compat("api.FederatedCredential.provider")}}

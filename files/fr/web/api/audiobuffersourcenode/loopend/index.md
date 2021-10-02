@@ -10,31 +10,31 @@ tags:
   - Web Audio API
 translation_of: Web/API/AudioBufferSourceNode/loopEnd
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>La propriété <strong><code>loopEnd</code></strong> de l'interface {{ domxref("AudioBufferSourceNode") }} est un nombre flottant à double précision qui indique, en secondes, à quel moment de l'{{domxref("AudioBuffer")}} la relecture doit s'arrêter, et éventuellement boucler de nouveau en reprenant à la position indiquée par la propriété {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}}. Elle n'est prise en compte que si la propriété {{domxref("AudioBufferSourceNode.loop", "loop")}} vaut <code>true.</code></p>
+La propriété **`loopEnd`** de l'interface {{ domxref("AudioBufferSourceNode") }} est un nombre flottant à double précision qui indique, en secondes, à quel moment de l'{{domxref("AudioBuffer")}} la relecture doit s'arrêter, et éventuellement boucler de nouveau en reprenant à la position indiquée par la propriété {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}}. Elle n'est prise en compte que si la propriété {{domxref("AudioBufferSourceNode.loop", "loop")}} vaut `true.`
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var source = contexteAudio.createBufferSource();
+```js
+var source = contexteAudio.createBufferSource();
 source.loopEnd = 3;
-</pre>
+```
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un nombre flottant à double précision. La valeur par défaut est <code>0</code>.</p>
+Un nombre flottant à double précision. La valeur par défaut est `0`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est utilisée pour décoder une piste audio et la mettre dans un {{domxref("AudioBufferSourceNode")}}. L'interface fournit deux boutons pour démarrer et arrêter la lecture, et des sliders pour modifier les propriétés <code>playbackRate</code>, <code>loopStart</code> et <code>loopEnd</code> à la volée.</p>
+Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est utilisée pour décoder une piste audio et la mettre dans un {{domxref("AudioBufferSourceNode")}}. L'interface fournit deux boutons pour démarrer et arrêter la lecture, et des sliders pour modifier les propriétés `playbackRate`, `loopStart` et `loopEnd` à la volée.
 
-<p>Lorsque la lecture de la source audio est terminée, elle boucle. Il est possible de contrôler la durée de la boucle en modifiant <code>loopStart</code> et <code>loopEnd</code>. Par exemple, si leurs valeurs sont fixées à 20 et 25, respectivement, le son bouclera entre la 20ème et la 25ème secondes du morceau.</p>
+Lorsque la lecture de la source audio est terminée, elle boucle. Il est possible de contrôler la durée de la boucle en modifiant `loopStart` et `loopEnd`. Par exemple, si leurs valeurs sont fixées à 20 et 25, respectivement, le son bouclera entre la 20ème et la 25ème secondes du morceau.
 
-<div class="note">
-<p><strong>Note :</strong> Voir <a href="http://mdn.github.io/decode-audio-data/"> l'exemple complet</a> et <a href="https://github.com/mdn/decode-audio-data">son code source</a>.</p>
-</div>
+> **Note :** Voir [l'exemple complet](http://mdn.github.io/decode-audio-data/) et [son code source](https://github.com/mdn/decode-audio-data).
 
-<pre class="brush: js">function getData() {
+```js
+function getData() {
   source = contexteAudio.createBufferSource();
   requete = new XMLHttpRequest();
 
@@ -75,31 +75,19 @@ loopstartControl.oninput = function() {
 loopendControl.oninput = function() {
   source.loopEnd = loopendControl.value;
   loopendValue.innerHTML = loopendControl.value;
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-loopEnd', 'loopEnd')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                               | Commentaires |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
+| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-loopEnd', 'loopEnd')}} | {{Spec2('Web Audio API')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.AudioBufferSourceNode.loopEnd")}}</p>
+{{Compat("api.AudioBufferSourceNode.loopEnd")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Utiliser la Web Audio API</a></li>
-</ul>
+- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

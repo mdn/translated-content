@@ -3,47 +3,33 @@ title: AnalyserNode()
 slug: Web/API/AnalyserNode/AnalyserNode
 translation_of: Web/API/AnalyserNode/AnalyserNode
 ---
-<p>{{APIRef("'Web Audio API'")}}{{SeeCompatTable}}</p>
+{{APIRef("'Web Audio API'")}}{{SeeCompatTable}}
 
-<p>Le constructeur <strong><code>AnalyserNode</code></strong> crée un nouvel objet {{domxref("AnalyserNode")}}.</p>
+Le constructeur **`AnalyserNode`** crée un nouvel objet {{domxref("AnalyserNode")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var analyserNode = new AnalyserNode(context, options)</pre>
+    var analyserNode = new AnalyserNode(context, options)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><em>context</em></dt>
- <dd>Référence à un {{domxref("AudioContext")}}.</dd>
- <dt><em>options</em> {{optional_inline}}</dt>
- <dd><p>Un objet avec les propriétés suivantes :</p>
- <ul>
-  <li><code>fftSize</code>: taille initiale sde la FFT pour l'analyse du domaine fréquentiel . La valeur par défaut est 2048.</li>
-  <li><code>maxDecibels</code>: valeur maximale de puissance de la plage pour l'analyse FFT, en décibels. La valeur par défaut est -30.</li>
-  <li><code>minDecibels</code>: valeur minimale de puissance de la plage pour l'analyse FFT, en décibels. La valeur par défaut est -100.</li>
-  <li><code>smoothingTimeConstant</code>:  valeur de lissage pour l'analyse FFT. La valeur par défaut est 0.8</li>
- </ul>
- </dd>
-</dl>
+- _context_
+  - : Référence à un {{domxref("AudioContext")}}.
+- _options_ {{optional_inline}}
 
-<h2 id="Spécifications">Spécifications</h2>
+  - : Un objet avec les propriétés suivantes :
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API','#the-analysernode-interface','AnalyserNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td>Première définition.</td>
-  </tr>
- </tbody>
-</table>
+    - `fftSize`: taille initiale sde la FFT pour l'analyse du domaine fréquentiel . La valeur par défaut est 2048.
+    - `maxDecibels`: valeur maximale de puissance de la plage pour l'analyse FFT, en décibels. La valeur par défaut est -30.
+    - `minDecibels`: valeur minimale de puissance de la plage pour l'analyse FFT, en décibels. La valeur par défaut est -100.
+    - `smoothingTimeConstant`:  valeur de lissage pour l'analyse FFT. La valeur par défaut est 0.8
 
-<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+## Spécifications
 
-<p>{{Compat("api.AnalyserNode.AnalyserNode")}}</p>
+| Spécification                                                                                        | Statut                               | Commentaire          |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('Web Audio API','#the-analysernode-interface','AnalyserNode')}} | {{Spec2('Web Audio API')}} | Première définition. |
+
+## Compatibilité navigateurs
+
+{{Compat("api.AnalyserNode.AnalyserNode")}}

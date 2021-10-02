@@ -11,41 +11,30 @@ tags:
   - W
 translation_of: Web/API/DOMPointReadOnly/w
 ---
-<p>{{APIRef("DOM")}}{{ SeeCompatTable() }}</p>
+{{APIRef("DOM")}}{{ SeeCompatTable() }}
 
-<p>La propriété en lecture seule <code><strong>w</strong></code> de l'interface <strong><code>DOMPointReadOnly</code></strong> représente la perspective d'un point.</p>
+La propriété en lecture seule **`w`** de l'interface **`DOMPointReadOnly`** représente la perspective d'un point.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var perspective = DOMPoint.w;</pre>
+```js
+var perspective = DOMPoint.w;
+```
 
-<h3 id="Specification">Valeur</h3>
+### Valeur
 
-<p>Un double.</p>
+Un double.
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Geometry Interfaces', '#dom-dompointreadonly-w', 'w')}}</td>
-   <td>{{Spec2('Geometry Interfaces')}}</td>
-   <td>La dernière version de la spécification est un ED.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | Statut                                       | Commentaire                                        |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------- |
+| {{SpecName('Geometry Interfaces', '#dom-dompointreadonly-w', 'w')}} | {{Spec2('Geometry Interfaces')}} | La dernière version de la spécification est un ED. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DOMPointReadOnly.w")}}</p>
+{{Compat("api.DOMPointReadOnly.w")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("DOMPoint")}}</li>
-</ul>
+- {{domxref("DOMPoint")}}

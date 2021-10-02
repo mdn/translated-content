@@ -4,51 +4,53 @@ slug: Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 translation_of: Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Hit_regions_and_accessibility
 ---
-<div>{{CanvasSidebar}} {{ PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Optimizing_canvas") }}</div>
+{{CanvasSidebar}} {{ PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Optimizing_canvas") }}
 
-<p>L'élément {{HTMLElement("canvas")}} lui-même est juste un bitmap et ne fourni aucune information sur les objets dessinés. Le contenu des canvas n'est pas sujet aux outils d'accessibility comme l'est la sémantique HTML. En général vous devriez éviter d'utiliser les canvas sur les sites ou les applications accessibles. Le marche à suivre suivante peut vous aider à les rendre plus accessibles.</p>
+L'élément {{HTMLElement("canvas")}} lui-même est juste un bitmap et ne fourni aucune information sur les objets dessinés. Le contenu des canvas n'est pas sujet aux outils d'accessibility comme l'est la sémantique HTML. En général vous devriez éviter d'utiliser les canvas sur les sites ou les applications accessibles. Le marche à suivre suivante peut vous aider à les rendre plus accessibles.
 
-<h2 id="Moyen_de_repli">Moyen de repli</h2>
+## Moyen de repli
 
-<p>Le contenu à l'intérieur d'un tag <code>&lt;canvas&gt; ... &lt;/canvas&gt;</code> peut être utilisé comme moyen de secours pour les navigteurs qui ne supportent pas le rendu de canvas. C'est aussi très utile pour les utilisateurs qui utilisent des technologies adaptées (comme les lecteurs d'écran) qui peuvent lire et interpréter les éléments du DOM. Un bon exemple sur <a href="http://www.html5accessibility.com/tests/canvas.html">html5accessibility.com</a> demontre comment cela peut être fait.</p>
+Le contenu à l'intérieur d'un tag `<canvas> ... </canvas>` peut être utilisé comme moyen de secours pour les navigteurs qui ne supportent pas le rendu de canvas. C'est aussi très utile pour les utilisateurs qui utilisent des technologies adaptées (comme les lecteurs d'écran) qui peuvent lire et interpréter les éléments du DOM. Un bon exemple sur [html5accessibility.com](http://www.html5accessibility.com/tests/canvas.html) demontre comment cela peut être fait.
 
-<pre class="brush: html">&lt;canvas&gt;
-  &lt;h2&gt;Shapes&lt;/h2&gt;
-  &lt;p&gt;A rectangle with a black border.
+```html
+<canvas>
+  <h2>Shapes</h2>
+  <p>A rectangle with a black border.
    In the background is a pink circle.
-   Partially overlaying the &lt;a href="http://en.wikipedia.org/wiki/Circle" onfocus="drawCircle();" onblur="drawPicture();"&gt;circle&lt;/a&gt;.
+   Partially overlaying the <a href="http://en.wikipedia.org/wiki/Circle" onfocus="drawCircle();" onblur="drawPicture();">circle</a>.
    Partially overlaying the circle is a green
-   &lt;a href="http://en.wikipedia.org/wiki/Square" onfocus="drawSquare();" onblur="drawPicture();"&gt;square&lt;/a&gt;
-   and a purple &lt;a href="http://en.wikipedia.org/wiki/Triangle" onfocus="drawTriangle();" onblur="drawPicture();"&gt;triangle&lt;/a&gt;,
-   both of which are semi-opaque, so the full circle can be seen underneath.&lt;/p&gt;
-&lt;/canvas&gt; </pre>
+   <a href="http://en.wikipedia.org/wiki/Square" onfocus="drawSquare();" onblur="drawPicture();">square</a>
+   and a purple <a href="http://en.wikipedia.org/wiki/Triangle" onfocus="drawTriangle();" onblur="drawPicture();">triangle</a>,
+   both of which are semi-opaque, so the full circle can be seen underneath.</p>
+</canvas>
+```
 
-<p>Jetez un oeil à la <a href="https://www.youtube.com/watch?v=ABeIFlqYiMQ">video comment NVDA lit cet exemple par Steve Faulkner</a> (en anglais).</p>
+Jetez un oeil à la [video comment NVDA lit cet exemple par Steve Faulkner](https://www.youtube.com/watch?v=ABeIFlqYiMQ) (en anglais).
 
-<h2 id="Les_règles_ARIA">Les règles ARIA</h2>
+## Les règles ARIA
 
-<p>Accessible Rich Internet Applications <strong>(<a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a>)</strong> (≈ <a href="https://fr.wikipedia.org/wiki/Accessible_Rich_Internet_Applications">Les applications Internet Accessibles Riches)</a> défini des pistes pour rendre le contenu Web et les applications Web plus accessibles pour les personnes ayant un handicap. Vous pouvez utiliser les attributs ARIA pour decrire le comportement et le but de vos éléments canvas. Allez voir <a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a> et <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">les techniques ARIA</a> pour plus d'informations.</p>
+Accessible Rich Internet Applications **([ARIA](/en-US/docs/Web/Accessibility/ARIA))** (≈ [Les applications Internet Accessibles Riches)](https://fr.wikipedia.org/wiki/Accessible_Rich_Internet_Applications) défini des pistes pour rendre le contenu Web et les applications Web plus accessibles pour les personnes ayant un handicap. Vous pouvez utiliser les attributs ARIA pour decrire le comportement et le but de vos éléments canvas. Allez voir [ARIA](/en-US/docs/Web/Accessibility/ARIA) et [les techniques ARIA](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques) pour plus d'informations.
 
-<pre class="brush: html">&lt;canvas id="button" tabindex="0" role="button" aria-pressed="false" aria-label="Start game"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="button" tabindex="0" role="button" aria-pressed="false" aria-label="Start game"></canvas>
+```
 
-<h2 id="Zones_cibles_hit_Region">Zones cibles (hit Region)</h2>
+## Zones cibles (hit Region)
 
-<p>Que les coordonnés de la souris soient dans une zone particulière des canvas, est un problème fréquent à résoudre. L'API de la "hit region" vous permet de definir une zone de votre canvas et offre une autre possibilité pour proposer du contenu interactif dans les canvas a destination des outils d'accessibilité. Il permet de rendre la "hit detection" plus simple easier and vous laisser envoyer des événements aux éléments du DOM. L'API a les trois methodes suivantes (qui sont encore expérimentales dans les navigateurs actuel ; reportez-vous au tableau des comptibilités des navigateurs).</p>
+Que les coordonnés de la souris soient dans une zone particulière des canvas, est un problème fréquent à résoudre. L'API de la "hit region" vous permet de definir une zone de votre canvas et offre une autre possibilité pour proposer du contenu interactif dans les canvas a destination des outils d'accessibilité. Il permet de rendre la "hit detection" plus simple easier and vous laisser envoyer des événements aux éléments du DOM. L'API a les trois methodes suivantes (qui sont encore expérimentales dans les navigateurs actuel ; reportez-vous au tableau des comptibilités des navigateurs).
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.addHitRegion()")}} {{experimental_inline}}</dt>
- <dd>Ajoute une "hit region" au canvas..</dd>
- <dt>{{domxref("CanvasRenderingContext2D.removeHitRegion()")}} {{experimental_inline}}</dt>
- <dd>Supprime la "hit region" avec l'<code>id</code> spécifiée venant du canvas.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.clearHitRegions()")}} {{experimental_inline}}</dt>
- <dd>Retire toutes les "hit regions" du cnavas.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.addHitRegion()")}} {{experimental_inline}}
+  - : Ajoute une "hit region" au canvas..
+- {{domxref("CanvasRenderingContext2D.removeHitRegion()")}} {{experimental_inline}}
+  - : Supprime la "hit region" avec l'`id` spécifiée venant du canvas.
+- {{domxref("CanvasRenderingContext2D.clearHitRegions()")}} {{experimental_inline}}
+  - : Retire toutes les "hit regions" du cnavas.
 
-<p>Vous pouvez ajouter une "hit region" à votre chemin et vérifier la propriété {{domxref("MouseEvent.region")}} pour tester si votre souris entre dans votre région, par exemple.</p>
+Vous pouvez ajouter une "hit region" à votre chemin et vérifier la propriété {{domxref("MouseEvent.region")}} pour tester si votre souris entre dans votre région, par exemple.
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-&lt;script&gt;
+```html
+<canvas id="canvas"></canvas>
+<script>
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
@@ -62,37 +64,34 @@ canvas.addEventListener('mousemove', function(event) {
     alert('hit region: ' + event.region);
   }
 });
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>La méthode <code>addHitRegion()</code> accepte aussi une option de <code>control</code> pour envoyer des événement vers un élément (c'est un enfant des canvas):</p>
+La méthode `addHitRegion()` accepte aussi une option de `control` pour envoyer des événement vers un élément (c'est un enfant des canvas):
 
-<pre class="brush: js">ctx.addHitRegion({control: element});</pre>
+```js
+ctx.addHitRegion({control: element});
+```
 
-<p>Cela peut être utile pour le routage d'éléments {{HTMLElement("input")}}, par exemple. Regardez aussi <a href="http://codepen.io/adobe/pen/BhcmK">codepen demo</a>.</p>
+Cela peut être utile pour le routage d'éléments {{HTMLElement("input")}}, par exemple. Regardez aussi [codepen demo](http://codepen.io/adobe/pen/BhcmK).
 
-<h2 id="Focus_rings">Focus rings</h2>
+## Focus rings
 
-<p>Quand on travaille avec le clavier, focus rings (anneaux de mise au point) sont utilies pour aider dans la navigation sur une page. Pour dessiner des "focus ring" dans un dessin de canvas, la propriété <code>drawFocusIfNeeded</code> peut être utilisée.</p>
+Quand on travaille avec le clavier, focus rings (anneaux de mise au point) sont utilies pour aider dans la navigation sur une page. Pour dessiner des "focus ring" dans un dessin de canvas, la propriété `drawFocusIfNeeded` peut être utilisée.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} {{experimental_inline}}</dt>
- <dd>Si un élément donné est ciblé, cette méthode dessine un anneaud de mise ne valeur autoure du chemin courant.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} {{experimental_inline}}
+  - : Si un élément donné est ciblé, cette méthode dessine un anneaud de mise ne valeur autoure du chemin courant.
 
-<p>De plus, la méthode <code>scrollPathIntoView()</code> peut être utilisée pour rendre visible un élément dans une page s'il est ciblé, par exemple.</p>
+De plus, la méthode `scrollPathIntoView()` peut être utilisée pour rendre visible un élément dans une page s'il est ciblé, par exemple.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}} {{experimental_inline}}</dt>
- <dd>Affiche le chemin courant ou le chemin donné.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}} {{experimental_inline}}
+  - : Affiche le chemin courant ou le chemin donné.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases">Canvas accessibility use cases</a></li>
- <li><a href="https://www.w3.org/html/wg/wiki/AddedElementCanvas">Canvas element accessibility issues</a></li>
- <li><a href="http://www.paciellogroup.com/blog/2012/06/html5-canvas-accessibility-in-firefox-13/">HTML5 Canvas Accessibility in Firefox 13 – by Steve Faulkner</a></li>
- <li><a href="https://html.spec.whatwg.org/multipage/scripting.html#best-practices">Best practices for interactive canvas elements</a></li>
-</ul>
+- [Canvas accessibility use cases](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
+- [Canvas element accessibility issues](https://www.w3.org/html/wg/wiki/AddedElementCanvas)
+- [HTML5 Canvas Accessibility in Firefox 13 – by Steve Faulkner](http://www.paciellogroup.com/blog/2012/06/html5-canvas-accessibility-in-firefox-13/)
+- [Best practices for interactive canvas elements](https://html.spec.whatwg.org/multipage/scripting.html#best-practices)
 
-<div>{{ PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Optimizing_canvas") }}</div>
+{{ PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Optimizing_canvas") }}

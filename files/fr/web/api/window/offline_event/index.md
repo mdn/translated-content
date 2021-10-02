@@ -9,65 +9,57 @@ tags:
   - Window
 translation_of: Web/API/Window/offline_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>L'événement <strong><code>offline</code></strong> de l'interface {{domxref("Window")}} se déclenche lorsque le navigateur perd la connexion au réseau et la valeur de  {{domxref("Navigator.onLine")}} bascule à <code>false</code>.</p>
+L'événement **`offline`** de l'interface {{domxref("Window")}} se déclenche lorsque le navigateur perd la connexion au réseau et la valeur de  {{domxref("Navigator.onLine")}} bascule à `false`.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bulles</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Annulable</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Propriété de gestionnaire d'événements</th>
-   <td>{{domxref("GlobalEventHandlers.onoffline", "onoffline")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bulles</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Annulable</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Propriété de gestionnaire d'événements</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onoffline", "onoffline")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">//version addEventListener
-window.addEventListener('offline', (event) =&gt; {
+```js
+//version addEventListener
+window.addEventListener('offline', (event) => {
     console.log("La Connexion au réseau est perdu.");
 });
 
 // onoffline version
-window.onoffline = (event) =&gt; {
+window.onoffline = (event) => {
   console.log("La Connexion au réseau a été perdue.");
 };
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "indices.html#event-offline", "offline event")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | Statut                           |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- |
+| {{SpecName('HTML WHATWG', "indices.html#event-offline", "offline event")}} | {{Spec2('HTML WHATWG')}} |
 
-<h2 id="Compatibilité_des_Navigateurs">Compatibilité des Navigateurs</h2>
+## Compatibilité des Navigateurs
 
-<p>{{Compat("api.Window.offline_event")}}</p>
+{{Compat("api.Window.offline_event")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Window/online_event"><code>online</code></a></li>
-</ul>
+- [`online`](/en-US/docs/Web/API/Window/online_event)

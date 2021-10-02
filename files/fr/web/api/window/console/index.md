@@ -10,47 +10,36 @@ tags:
   - lecture seule
 translation_of: Web/API/Window/console
 ---
-<p>{{ APIRef }}</p>
+{{ APIRef }}
 
-<p>La propriété <strong><code>Window.console</code></strong> en lecture seule retourne une référence à l'objet {{domxref("Console")}}, qui founit des méthodes pour afficher des information sur la console du navigateur. Ces méthodes ont pour seul but le débogage et ne devraient pas servir à présenter des informations au utilisateurs.</p>
+La propriété **`Window.console`** en lecture seule retourne une référence à l'objet {{domxref("Console")}}, qui founit des méthodes pour afficher des information sur la console du navigateur. Ces méthodes ont pour seul but le débogage et ne devraient pas servir à présenter des informations au utilisateurs.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>var consoleObj</em> = <em>window</em>.console;
-</pre>
+    var consoleObj = window.console;
 
-<h2 id="Example">Exemples</h2>
+## Exemples
 
-<h3 id="Afficher_dans_la_console">Afficher dans la console</h3>
+### Afficher dans la console
 
-<p>Le premier exemple affiche du texte dans la console.</p>
+Le premier exemple affiche du texte dans la console.
 
-<pre class="brush: js">console.log("An error occurred while loading the content");
-</pre>
+```js
+console.log("An error occurred while loading the content");
+```
 
-<p>L'exemple suivant affiche un objet dans la console, et les champs de l'objet y sont écrit:</p>
+L'exemple suivant affiche un objet dans la console, et les champs de l'objet y sont écrit:
 
-<pre class="brush: js">console.dir(someObject);</pre>
+```js
+console.dir(someObject);
+```
 
-<p>Voir {{SectionOnPage("/en-US/docs/Web/API/Console", "Usage")}} pour plus d'exemples appronfondit.</p>
+Voir {{SectionOnPage("/en-US/docs/Web/API/Console", "Usage")}} pour plus d'exemples appronfondit.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Console API')}}</td>
-   <td>{{Spec2('Console API')}}</td>
-   <td>Définition Initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                        | Status                           | Commentaire          |
+| ------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('Console API')}} | {{Spec2('Console API')}} | Définition Initiale. |
 
-<div class="note">
-<p><strong>Note :</strong> Actuellement il y a beaucoup de différences d'implémentation entre les navigateurs, mais ils sont en train d'être standardisés pour les rendre plus consistants entre eux.</p>
-</div>
+> **Note :** Actuellement il y a beaucoup de différences d'implémentation entre les navigateurs, mais ils sont en train d'être standardisés pour les rendre plus consistants entre eux.

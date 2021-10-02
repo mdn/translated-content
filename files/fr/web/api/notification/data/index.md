@@ -11,44 +11,30 @@ tags:
   - données
 translation_of: Web/API/Notification/data
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>La propriété en lecture seule <strong><code>data</code></strong> de l'interface {{domxref ("Notification")}} renvoie un clone structuré des données de la notification, comme définis à l'aide de l'option <code>data</code>  lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification() ")}}.</p>
+La propriété en lecture seule **`data`** de l'interface {{domxref ("Notification")}} renvoie un clone structuré des données de la notification, comme définis à l'aide de l'option `data`  lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification() ")}}.
 
-<p>Les données de la notification peuvent être des données arbitraires, sans restriction de format que vous souhaitez associer à la notification.</p>
+Les données de la notification peuvent être des données arbitraires, sans restriction de format que vous souhaitez associer à la notification.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>Notification</var>.data
-</pre>
+    Notification.data
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un clone structuré.</p>
+Un clone structuré.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-notification-data','data')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                     | Commentaire          |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('Web Notifications','#dom-notification-data','data')}} | {{Spec2('Web Notifications')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Notification.data")}}</p>
+{{Compat("api.Notification.data")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a></li>
-</ul>
+- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

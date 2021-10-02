@@ -11,43 +11,32 @@ tags:
   - x
 translation_of: Web/API/DOMPointReadOnly/x
 ---
-<p>{{APIRef("DOM")}}{{ SeeCompatTable() }}</p>
+{{APIRef("DOM")}}{{ SeeCompatTable() }}
 
-<p>La propriété en lecture seule <code><strong>x</strong></code> de l'interface <strong><code>DOMPointReadOnly</code></strong> représente la coordonnée x d'un point.</p>
+La propriété en lecture seule **`x`** de l'interface **`DOMPointReadOnly`** représente la coordonnée x d'un point.
 
-<p>En général, x positif signifie à droite et négatif à gauche (par rapport à l'origine).</p>
+En général, x positif signifie à droite et négatif à gauche (par rapport à l'origine).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var xPos = DOMPoint.x;</pre>
+```js
+var xPos = DOMPoint.x;
+```
 
-<h3 id="Specification">Valeur</h3>
+### Valeur
 
-<p>Un double.</p>
+Un double.
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Geometry Interfaces', '#dom-dompointreadonly-x', 'x')}}</td>
-   <td>{{Spec2('Geometry Interfaces')}}</td>
-   <td>La dernière version de la spécification est un ED.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | Statut                                       | Commentaire                                        |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------- |
+| {{SpecName('Geometry Interfaces', '#dom-dompointreadonly-x', 'x')}} | {{Spec2('Geometry Interfaces')}} | La dernière version de la spécification est un ED. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DOMPointReadOnly.x")}}</p>
+{{Compat("api.DOMPointReadOnly.x")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("DOMPoint")}}</li>
-</ul>
+- {{domxref("DOMPoint")}}

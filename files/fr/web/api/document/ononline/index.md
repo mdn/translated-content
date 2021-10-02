@@ -9,31 +9,25 @@ tags:
   - Propriétés
 translation_of: Web/API/Document/ononline
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Un évènement "<code>online</code>" est lancé sur le <code>&lt;body&gt;</code> (<em>corps</em>) de chaque page quand le navigateur bascule entre les modes online (<em>en ligne</em>) et offline (<em>hors ligne</em>). De plus les évènements se propagent de <code>document.body</code> vers <code>document</code> et finalement sur <code>window</code>. Les deux évènements ne sont pas annulables (vous ne pouvez pas empêcher l'utilisateur de se connecter ou de vous déconnecter).</p>
+Un évènement "`online`" est lancé sur le `<body>` (_corps_) de chaque page quand le navigateur bascule entre les modes online (_en ligne_) et offline (_hors ligne_). De plus les évènements se propagent de `document.body` vers `document` et finalement sur `window`. Les deux évènements ne sont pas annulables (vous ne pouvez pas empêcher l'utilisateur de se connecter ou de vous déconnecter).
 
-<p><code>window.navigator.onLine</code> renvoie un booléen <em>true</em> (<em>vrai</em>) si le navigateur est online et false s'il est définitivement offline (déconnecté du réseau). Les évènements online et offline sont lancés si la valeur de cet attribut change.</p>
+`window.navigator.onLine` renvoie un booléen _true_ (_vrai_) si le navigateur est online et false s'il est définitivement offline (déconnecté du réseau). Les évènements online et offline sont lancés si la valeur de cet attribut change.
 
-<div class="note">
-<p><strong>Note :</strong> Il est important de noter que cet événement et cet attribut sont intrinsèquement peu fiables. Un ordinateur peut être connecté à un réseau sans avoir accès à Internet.</p>
-</div>
+> **Note :** Il est important de noter que cet événement et cet attribut sont intrinsèquement peu fiables. Un ordinateur peut être connecté à un réseau sans avoir accès à Internet.
 
-<p>Vous pouvez enregistrer les écouteurs de ces événements de plusieurs manières habituelles :</p>
+Vous pouvez enregistrer les écouteurs de ces événements de plusieurs manières habituelles :
 
-<ul>
- <li>en utilisant <code><a href="/en/DOM/element.addEventListener">addEventListener</a></code> sur <code>window</code>, <code>document</code> ou <code>document.body</code></li>
- <li>en définissant les propriétés <code>.ononline</code> ou <code>.onoffline</code> sur <code>document</code> ou <code>document.body</code> sur un objet  <code>Function</code> JavaScript. (<strong>Note :</strong> l'utilisation de <code>window.ononline</code> ou <code>window.onoffline</code> ne fonctionnera pas pour des raisons de compatibilité).</li>
- <li>en spécifiant les attributs <code>ononline="..."</code> ou <code>onoffline="..."</code> sur la balise <code>&lt;body&gt;</code>  dans le balisage HTML.</li>
-</ul>
+- en utilisant [`addEventListener`](/en/DOM/element.addEventListener) sur `window`, `document` ou `document.body`
+- en définissant les propriétés `.ononline` ou `.onoffline` sur `document` ou `document.body` sur un objet  `Function` JavaScript. (**Note :** l'utilisation de `window.ononline` ou `window.onoffline` ne fonctionnera pas pour des raisons de compatibilité).
+- en spécifiant les attributs `ononline="..."` ou `onoffline="..."` sur la balise `<body>`  dans le balisage HTML.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>Il existe  <a href="https://bugzilla.mozilla.org/attachment.cgi?id=220609">un cas de test simple</a> que vous pouvez exécuter pour vérifier le fonctionnement des évènements.</p>
+Il existe  [un cas de test simple](https://bugzilla.mozilla.org/attachment.cgi?id=220609) que vous pouvez exécuter pour vérifier le fonctionnement des évènements.
 
-<h2 id="Example">Références</h2>
+## Références
 
-<ul>
- <li><a href="/fr/docs/Web/API/NavigatorOnLine/%C3%89v%C3%A8nements_online_et_offline">Évènements online et offline</a></li>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#event-online">Spécification</a> <a href="http://www.whatwg.org/specs/web-apps/current-work/#event-online">WHATWG Web App</a> (en)</li>
-</ul>
+- [Évènements online et offline](/fr/docs/Web/API/NavigatorOnLine/%C3%89v%C3%A8nements_online_et_offline)
+- [Spécification](http://www.whatwg.org/specs/web-apps/current-work/#event-online) [WHATWG Web App](http://www.whatwg.org/specs/web-apps/current-work/#event-online) (en)

@@ -10,65 +10,50 @@ tags:
   - URI
 translation_of: Web/API/Element/namespaceURI
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>La propriété en lecture seule <code><strong>Element.namespaceURI</strong></code> renvoie l'URI d'espace de noms de l'élément ou <code>null</code> si l'élément n'est pas dans un espace de nom.</p>
+La propriété en lecture seule **`Element.namespaceURI`** renvoie l'URI d'espace de noms de l'élément ou `null` si l'élément n'est pas dans un espace de nom.
 
-<div class="note">
-<p><strong>Note :</strong> Avant DOM4, cet API était définie dans l'interface {{domxref("Node")}}.</p>
-</div>
+> **Note :** Avant DOM4, cet API était définie dans l'interface {{domxref("Node")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>namespace</var> = <var>element</var>.namespaceURI</pre>
+    namespace = element.namespaceURI
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans cet extrait, un élément est examiné pour son {{domxref("localName")}} et son <code>namespaceURI</code>. Si le <code>namespaceURI</code> renvoie l'espace de noms XUL et le <code>localName</code> retourne "browser" (<em>navigateur</em>), alors le noeud est compris comme étant un <code>&lt;browser/&gt;</code> XUL.</p>
+Dans cet extrait, un élément est examiné pour son {{domxref("localName")}} et son `namespaceURI`. Si le `namespaceURI` renvoie l'espace de noms XUL et le `localName` retourne "browser" (_navigateur_), alors le noeud est compris comme étant un `<browser/>` XUL.
 
-<pre class="brush:js">if (element.localName == "browser" &amp;&amp;
+```js
+if (element.localName == "browser" &&
     element.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
   // c'est un navigateur XUL
-}</pre>
+}
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Ce n'est pas une valeur calculée qui est le résultat d'une recherche d'espace de noms basée sur un examen des déclarations d'espace de noms dans la portée. L'URI de l'espace de noms d'un nœud est fixé au moment de la création du nœud.</p>
+Ce n'est pas une valeur calculée qui est le résultat d'une recherche d'espace de noms basée sur un examen des déclarations d'espace de noms dans la portée. L'URI de l'espace de noms d'un nœud est fixé au moment de la création du nœud.
 
-<p>Dans Firefox 3.5 et antérieurs, l'URI d'espace de noms pour les éléments HTML dans un document HTML est <code>null</code>. Dans les versions postérieures, en conformité avec HTML5, c'est <code><a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code> comme dans XHTML. {{gecko_minversion_inline("1.9.2")}}</p>
+Dans Firefox 3.5 et antérieurs, l'URI d'espace de noms pour les éléments HTML dans un document HTML est `null`. Dans les versions postérieures, en conformité avec HTML5, c'est [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) comme dans XHTML. {{gecko_minversion_inline("1.9.2")}}
 
-<p>Vous pouvez créer un élément avec l'<code>namespaceURI</code> spécifié en utilisant la méthode DOM niveau 2 <a href="/fr/docs/Web/API/Document/createElementNS">document.createElementNS</a>.</p>
+Vous pouvez créer un élément avec l'`namespaceURI` spécifié en utilisant la méthode DOM niveau 2 [document.createElementNS](/fr/docs/Web/API/Document/createElementNS).
 
-<p>Le DOM ne gère pas ou n'applique pas la validation de l'espace de noms en soi. Il appartient à l'application DOM de faire toute validation nécessaire. Notez également que le préfixe d'espace de noms, une fois associé à un élément particulier, ne peut pas être modifié.</p>
+Le DOM ne gère pas ou n'applique pas la validation de l'espace de noms en soi. Il appartient à l'application DOM de faire toute validation nécessaire. Notez également que le préfixe d'espace de noms, une fois associé à un élément particulier, ne peut pas être modifié.
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-element-namespaceuri", "Element.namespaceuri")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                   | Commentaire         |
+| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
+| {{SpecName("DOM4", "#dom-element-namespaceuri", "Element.namespaceuri")}} | {{Spec2("DOM4")}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Element.namespaceURI")}}</p>
+{{Compat("api.Element.namespaceURI")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Element.localName")}}</li>
- <li>{{domxref("Element.prefix")}}</li>
- <li>{{domxref("Attr.namespaceURI")}}</li>
- <li>{{domxref("Node.namespaceURI")}}</li>
-</ul>
+- {{domxref("Element.localName")}}
+- {{domxref("Element.prefix")}}
+- {{domxref("Attr.namespaceURI")}}
+- {{domxref("Node.namespaceURI")}}

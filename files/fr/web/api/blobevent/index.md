@@ -14,57 +14,40 @@ tags:
   - events
 translation_of: Web/API/BlobEvent
 ---
-<div>{{APIRef ("Media Capture and Streams")}}</div>
+{{APIRef ("Media Capture and Streams")}}
 
-<p>L'interface <code>BlobEvent</code> représente les événements associés à un {{domxref ("Blob")}}. Ces blobs sont généralement, mais pas nécessairement, associés au contenu multimédia.</p>
+L'interface `BlobEvent` représente les événements associés à un {{domxref ("Blob")}}. Ces blobs sont généralement, mais pas nécessairement, associés au contenu multimédia.
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{domxref("BlobEvent.BlobEvent", "BlobEvent()")}}</dt>
- <dd>Crée un événement <code>BlobEvent</code> avec les paramètres donnés.</dd>
-</dl>
+- {{domxref("BlobEvent.BlobEvent", "BlobEvent()")}}
+  - : Crée un événement `BlobEvent` avec les paramètres donnés.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Hérite des propriétés de son parent, {{domxref("Event")}}</em>.</p>
+_Hérite des propriétés de son parent, {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("BlobEvent.data")}} {{readonlyInline}}</dt>
- <dd>Un objet {{domxref("Blob")}} qui représente les données associées à l'évènement. L'évènement a été déclenché sur le {{domxref("EventTarget")}} en raison de quelque chose survenu spécifiquement sur ce {{domxref("Blob")}}.</dd>
- <dt>{{domxref("BlobEvent.timecode")}} {{readonlyinline}}</dt>
- <dd>{{domxref("DOMHighResTimeStamp")}} indique la différence entre l'horodatage du premier bloc de données et l'horadatage du premier bloc <code>BlobEvent</code> produit par cet enregistreur. On notera que le <em>timecode</em> du premier <code>BlobEvent</code> produit , n'a pas besoin d'être nul.</dd>
-</dl>
+- {{domxref("BlobEvent.data")}} {{readonlyInline}}
+  - : Un objet {{domxref("Blob")}} qui représente les données associées à l'évènement. L'évènement a été déclenché sur le {{domxref("EventTarget")}} en raison de quelque chose survenu spécifiquement sur ce {{domxref("Blob")}}.
+- {{domxref("BlobEvent.timecode")}} {{readonlyinline}}
+  - : {{domxref("DOMHighResTimeStamp")}} indique la différence entre l'horodatage du premier bloc de données et l'horadatage du premier bloc `BlobEvent` produit par cet enregistreur. On notera que le _timecode_ du premier `BlobEvent` produit , n'a pas besoin d'être nul.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Pas de méthode spécifique ; hérite des méthodes de son parent<em> {{domxref("Event")}}.</em></em></p>
+_Pas de méthode spécifique ; hérite des méthodes de son parent _{{domxref("Event")}}.\*\*
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('MediaStream Recording', '#blob-event', 'BlobEvent')}}</td>
-   <td>{{Spec2('MediaStream Recording')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                         | Commentaires        |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
+| {{SpecName('MediaStream Recording', '#blob-event', 'BlobEvent')}} | {{Spec2('MediaStream Recording')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.BlobEvent")}}</p>
+{{Compat("api.BlobEvent")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface de base {{domxref("Event")}} .</li>
- <li><a href="/fr/docs/Web/API/MediaStream_Recording_API">L'API MediaStream Recording </a>: envoie des objets <code>BlobEvent</code> chaque fois qu'un fragment de media est prêt.</li>
- <li><a href="/fr/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Utiliser l'API MediaStream Recording</a></li>
-</ul>
+- L'interface de base {{domxref("Event")}} .
+- [L'API MediaStream Recording ](/fr/docs/Web/API/MediaStream_Recording_API): envoie des objets `BlobEvent` chaque fois qu'un fragment de media est prêt.
+- [Utiliser l'API MediaStream Recording](/fr/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)

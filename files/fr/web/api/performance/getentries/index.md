@@ -2,35 +2,34 @@
 title: performance.getEntries()
 slug: Web/API/Performance/getEntries
 tags:
-- API
-- Method
-- Méthode
-- Reference
-- Performance web
+  - API
+  - Method
+  - Méthode
+  - Reference
+  - Performance web
 translation_of: Web/API/Performance/getEntries
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>La méthode <strong><code>getEntries()</code></strong> renvoie une liste de tous les objets {{domxref("PerformanceEntry")}} pour la page. Les membres de la liste (<em>entrées</em>) peuvent être créés en faisant des <em>marqueurs</em> ou des <em>mesures</em> de performance (par exemple en appelant la méthode {{domxref("Performance.mark", "mark()")}}) à des moments explicites. Si vous souhaitez filtrer  les entrées de performance en fonction de leur type ou de leur nom, consultez la documentation des méthodes {{domxref("Performance.getEntriesByType", "getEntriesByType()")}} et {{domxref("Performance.getEntriesByName", "getEntriesByName()")}}.</p>
+La méthode **`getEntries()`** renvoie une liste de tous les objets {{domxref("PerformanceEntry")}} pour la page. Les membres de la liste (_entrées_) peuvent être créés en faisant des _marqueurs_ ou des _mesures_ de performance (par exemple en appelant la méthode {{domxref("Performance.mark", "mark()")}}) à des moments explicites. Si vous souhaitez filtrer les entrées de performance en fonction de leur type ou de leur nom, consultez la documentation des méthodes {{domxref("Performance.getEntriesByType", "getEntriesByType()")}} et {{domxref("Performance.getEntriesByName", "getEntriesByName()")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
-  <var>entries</var> = window.performance.getEntries();
-</pre>
+```js
+  entries = window.performance.getEntries();
+```
 
-<h3 id="Return_Value">Valeur de retour</h3>
+### Valeur de retour
 
-<dl>
-  <dt><code>entries</code></dt>
-  <dd>Un tableau ({{jsxref("Array")}}) d'objets {{domxref("PerformanceEntry")}}. Les éléments seront classés par ordre chronologique en fonction des entrées {{domxref("PerformanceEntry.startTime","startTime")}}.</dd>
-</dl>
+- `entries`
+  - : Un tableau ({{jsxref("Array")}}) d'objets {{domxref("PerformanceEntry")}}. Les éléments seront classés par ordre chronologique en fonction des entrées {{domxref("PerformanceEntry.startTime","startTime")}}.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">function use_PerformanceEntry_methods() {
+```js
+function use_PerformanceEntry_methods() {
   console.log("PerformanceEntry tests ...");
 
   if (performance.mark === undefined) {
@@ -50,14 +49,14 @@ translation_of: Web/API/Performance/getEntries
 
   // Utilise getEntries() pour itérer à travers chaque entrée.
   let p = performance.getEntries();
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     console.log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
 
   // Utilise getEntriesByType() pour obtenir toutes les entrées "mark".
   p = performance.getEntriesByType("mark");
-  for (let i=0; i &lt; p.length; i++) {
+  for (let i=0; i < p.length; i++) {
     console.log ("Mark only entry[" + i + "]: name = " + p[i].name +
          "; startTime = " + p[i].startTime +
          "; duration  = " + p[i].duration);
@@ -65,40 +64,23 @@ translation_of: Web/API/Performance/getEntries
 
   // Utilise getEntriesByName() pour obtenir toutes les entrées "mark" nommées "Begin".
   p = performance.getEntriesByName("Begin", "mark");
-  for (let i=0; i &lt; p.length; i++) {
+  for (let i=0; i < p.length; i++) {
     console.log ("Mark and Begin entry[" + i + "]: name = " + p[i].name +
          "; startTime = " + p[i].startTime +
          "; duration  = " + p[i].duration);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-        <th scope="col">Spécification</th>
-        <th scope="col">Statut</th>
-        <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Performance Timeline Level 2', '#dom-performance-getentries',
-        'getEntries()')}}</td>
-      <td>{{Spec2('Performance Timeline Level 2')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Performance Timeline', '#dom-performance-getentries',
-        'getEntries()')}}</td>
-      <td>{{Spec2('Performance Timeline')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                        | Statut                                                   | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------------------- |
+| {{SpecName('Performance Timeline Level 2', '#dom-performance-getentries',
+        'getEntries()')}} | {{Spec2('Performance Timeline Level 2')}} |                      |
+| {{SpecName('Performance Timeline', '#dom-performance-getentries',
+        'getEntries()')}}             | {{Spec2('Performance Timeline')}}             | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Performance.getEntries")}}</p>
+{{Compat("api.Performance.getEntries")}}

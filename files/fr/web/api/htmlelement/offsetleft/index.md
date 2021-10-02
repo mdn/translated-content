@@ -5,53 +5,68 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/HTMLElement/offsetLeft
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
-<p>Renvoie le nombre de pixels dont le
- <i>
-  coin supérieur gauche</i>
- de l'élément courant est décalé vers là gauche au sein du nœud <code><a href="fr/DOM/element.offsetParent">offsetParent</a></code>.</p>
-<h3 id="Syntaxe">Syntaxe</h3>
-<pre class="eval"><i>left</i> =<i>element</i>.offsetLeft;
-</pre>
-<p><code>left</code> est un entier représentant le décalage vers la gauche en pixels.</p>
-<h3 id="Note">Note</h3>
-<p><code>offsetLeft</code> renvoie la position du coin supérieur gauche de l'élément ; pas nécessairement du « vrai » bord gauche de l'élément. C'est important pour les éléments <b>span</b> dans les textes continus qui s'étendent sur plusieurs lignes. Le span peut commencer au milieu de la page et continuer au début de la ligne suivante. La propriété <code>offsetLeft</code> fera référence au coin gauche de départ du span, pas le bord gauche du texte au début de la seconde ligne. Par conséquent, une boîte avec les valeurs left, top, width et height correspondant à <code>offsetLeft, offsetTop, offsetWidth</code> et <code>offsetHeight</code> ne contiendra pas forcément un span avec débordement de texte.</p>
-<h3 id="Exemple">Exemple</h3>
-<pre>var colorTable = document.getElementById("t1");
-var tOLeft = colorTable.offsetLeft;
+{{ ApiRef() }}
 
-if (tOLeft &gt; 5) {
-  // grand décalage à gauche : faire quelque chose ici
-}
-</pre>
-<h3 id="Exemple_2">Exemple</h3>
-<p>Comme noté plus haut, cet exemple montre une « longue » phrase qui déborde dans un div avec une bordure bleue, et une boîte rouge dont on pourrait croire qu'elle décrit les limites du span.</p>
+### Résumé
 
-<p><img src="offsetleft.jpg"></p>
+Renvoie le nombre de pixels dont le
+_coin supérieur gauche_
+de l'élément courant est décalé vers là gauche au sein du nœud [`offsetParent`](fr/DOM/element.offsetParent).
 
-<p><small>Note : il s'agit d'une image de l'exemple, pas d'un rendu direct dans le navigateur. En effet, il n'est pas possible d'intégrer des scripts dans la page du wiki.</small></p>
-<pre class="brush: html">&lt;div style="width: 300px; border-color:blue;
-  border-style:solid; border-width:1;"&gt;
-  &lt;span&gt;Short span. &lt;/span&gt;
-  &lt;span id="long"&gt;Long span that wraps withing this div.&lt;/span&gt;
-&lt;/div&gt;
+### Syntaxe
 
-&lt;div id="box" style="position: absolute; border-color: red;
-  border-width: 1; border-style: solid; z-index: 10"&gt;
-&lt;/div&gt;
+    left =element.offsetLeft;
 
-&lt;script&gt;
+`left` est un entier représentant le décalage vers la gauche en pixels.
+
+### Note
+
+`offsetLeft` renvoie la position du coin supérieur gauche de l'élément ; pas nécessairement du « vrai » bord gauche de l'élément. C'est important pour les éléments **span** dans les textes continus qui s'étendent sur plusieurs lignes. Le span peut commencer au milieu de la page et continuer au début de la ligne suivante. La propriété `offsetLeft` fera référence au coin gauche de départ du span, pas le bord gauche du texte au début de la seconde ligne. Par conséquent, une boîte avec les valeurs left, top, width et height correspondant à `offsetLeft, offsetTop, offsetWidth` et `offsetHeight` ne contiendra pas forcément un span avec débordement de texte.
+
+### Exemple
+
+    var colorTable = document.getElementById("t1");
+    var tOLeft = colorTable.offsetLeft;
+
+    if (tOLeft > 5) {
+      // grand décalage à gauche : faire quelque chose ici
+    }
+
+### Exemple
+
+Comme noté plus haut, cet exemple montre une « longue » phrase qui déborde dans un div avec une bordure bleue, et une boîte rouge dont on pourrait croire qu'elle décrit les limites du span.
+
+![](offsetleft.jpg)
+
+Note : il s'agit d'une image de l'exemple, pas d'un rendu direct dans le navigateur. En effet, il n'est pas possible d'intégrer des scripts dans la page du wiki.
+
+```html
+<div style="width: 300px; border-color:blue;
+  border-style:solid; border-width:1;">
+  <span>Short span. </span>
+  <span id="long">Long span that wraps withing this div.</span>
+</div>
+
+<div id="box" style="position: absolute; border-color: red;
+  border-width: 1; border-style: solid; z-index: 10">
+</div>
+
+<script>
   var box = document.getElementById("box");
   var long = document.getElementById("long");
   box.style.left = long.offsetLeft + document.body.scrollLeft;
   box.style.top = long.offsetTop + document.body.scrollTop;
   box.style.width = long.offsetWidth;
   box.style.height = long.offsetHeight;
-&lt;/script&gt;
-</pre>
-<h3 id="Voir_aussi">Voir aussi</h3>
-<p><code><a href="fr/DOM/element.offsetParent">offsetParent</a></code>, <code><a href="fr/DOM/element.offsetTop">offsetTop</a></code>, <code><a href="fr/DOM/element.offsetWidth">offsetWidth</a></code>, <code><a href="fr/DOM/element.offsetHeight">offsetHeight</a></code></p>
-<h3 id="Sp.C3.A9cification">Spécification</h3>
-<p>Cette propriété ne fait partie d'aucun standard ou recommandation technique du W3C.</p>
-<p><a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/offsetleft.asp">MSDN: offsetLeft</a></p>
+</script>
+```
+
+### Voir aussi
+
+[`offsetParent`](fr/DOM/element.offsetParent), [`offsetTop`](fr/DOM/element.offsetTop), [`offsetWidth`](fr/DOM/element.offsetWidth), [`offsetHeight`](fr/DOM/element.offsetHeight)
+
+### Spécification
+
+Cette propriété ne fait partie d'aucun standard ou recommandation technique du W3C.
+
+[MSDN: offsetLeft](http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/offsetleft.asp)

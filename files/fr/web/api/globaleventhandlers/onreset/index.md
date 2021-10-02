@@ -9,25 +9,23 @@ tags:
   - évènements
 translation_of: Web/API/GlobalEventHandlers/onreset
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<p>La propriété <code><strong>GlobalEventHandlers.onreset</strong></code> contient un {{event("Event_handlers", "event handler")}} (<em>gestionnaire d'évènements</em>) déclenché quand un évènement {{event("reset")}} est reçu.</p>
+La propriété **`GlobalEventHandlers.onreset`** contient un {{event("Event_handlers", "event handler")}} (_gestionnaire d'évènements_) déclenché quand un évènement {{event("reset")}} est reçu.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre>window.onreset = funcRef;
-</pre>
+    window.onreset = funcRef;
 
-<h3 id="Parameters">Paramètres</h3>
+### Paramètres
 
-<ul>
- <li><code>funcRef</code> est une référence à une fonction.</li>
-</ul>
+- `funcRef` est une référence à une fonction.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: html">&lt;html&gt;
-&lt;script&gt;
+```html
+<html>
+<script>
 function reg() {
   window.captureEvents(Event.RESET);
   window.onreset = hit;
@@ -36,38 +34,27 @@ function reg() {
 function hit() {
  alert('hit');
 }
-&lt;/script&gt;
+</script>
 
-&lt;body onload="reg();"&gt;
- &lt;form&gt;
-   &lt;input type="reset" value="reset" /&gt;
- &lt;/form&gt;
- &lt;div id="d"&gt; &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onload="reg();">
+ <form>
+   <input type="reset" value="reset" />
+ </form>
+ <div id="d"> </div>
+</body>
+</html>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>L'évènement <code>reset</code> est déclenché quand l'utilisateur clique sur le bouton de réinitialisation dans un formulaire (<code>&lt;input type="reset"/&gt;</code>).</p>
+L'évènement `reset` est déclenché quand l'utilisateur clique sur le bouton de réinitialisation dans un formulaire (`<input type="reset"/>`).
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onreset','onreset')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                           | Commentaire |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onreset','onreset')}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.GlobalEventHandlers.onreset")}}</p>
+{{Compat("api.GlobalEventHandlers.onreset")}}

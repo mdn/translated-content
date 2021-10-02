@@ -3,27 +3,32 @@ title: WorkerGlobalScope.navigator
 slug: Web/API/WorkerGlobalScope/navigator
 translation_of: Web/API/WorkerGlobalScope/navigator
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>La propriété en lecture seule <code><strong>navigator</strong></code> de l'interface {{domxref("WorkerGlobalScope")}} retourne le {{domxref("WorkerNavigator")}} associé au worker. C'est un objet navigator spécifique, essentiellement un sous-ensemble de {{domxref("Navigator")}} pour les contextes de navigation, mais adapté aux workers.</p>
+La propriété en lecture seule **`navigator`** de l'interface {{domxref("WorkerGlobalScope")}} retourne le {{domxref("WorkerNavigator")}} associé au worker. C'est un objet navigator spécifique, essentiellement un sous-ensemble de {{domxref("Navigator")}} pour les contextes de navigation, mais adapté aux workers.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var navigatorObj = self.navigator;</pre>
+```js
+var navigatorObj = self.navigator;
+```
 
-<h3 id="Specifications">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un objet  {{domxref("WorkerNavigator")}}.</p>
+Un objet  {{domxref("WorkerNavigator")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Si vous appelez</p>
+Si vous appelez
 
-<pre class="brush: js">console.log(navigator);</pre>
+```js
+console.log(navigator);
+```
 
-<p>à l'intérieur d'un worker (ce qui équivaut à <code>self.console.log(self.navigator);</code>, puisqu'il est appelé dans le contexte du worker qui peut être référencé par {{domxref("WorkerGlobalScope.self")}}), la console vous retournera un objet {{domxref("WorkerNavigator")}} — comme ce qui suit :</p>
+à l'intérieur d'un worker (ce qui équivaut à `self.console.log(self.navigator);`, puisqu'il est appelé dans le contexte du worker qui peut être référencé par {{domxref("WorkerGlobalScope.self")}}), la console vous retournera un objet {{domxref("WorkerNavigator")}} — comme ce qui suit :
 
-<pre class="brush: js">Object {onLine: true, userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) Ap…ML, like Gecko) Chrome/40.0.2214.93 Safari/537.36", product: "Gecko", platform: "MacIntel", appVersion: "5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKi…ML, like Gecko) Chrome/40.0.2214.93 Safari/537.36"…}
+```js
+Object {onLine: true, userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) Ap…ML, like Gecko) Chrome/40.0.2214.93 Safari/537.36", product: "Gecko", platform: "MacIntel", appVersion: "5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKi…ML, like Gecko) Chrome/40.0.2214.93 Safari/537.36"…}
     appCodeName: "Mozilla"
     appName: "Netscape"
     appVersion: "5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36"
@@ -32,35 +37,23 @@ translation_of: Web/API/WorkerGlobalScope/navigator
     platform: "MacIntel"
     product: "Gecko"
     userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36"
-    __proto__: Object</pre>
+    __proto__: Object
+```
 
-<p>Vous pouvez utiliser l'objet navigator pour récupérer des informations supplémentaires sur l'environnement d'exécution, comme vous pourriez le faire avec un objet {{domxref("Navigator")}} normal.</p>
+Vous pouvez utiliser l'objet navigator pour récupérer des informations supplémentaires sur l'environnement d'exécution, comme vous pourriez le faire avec un objet {{domxref("Navigator")}} normal.
 
-<div class="note">
-<p><strong>Note :</strong> Firefox rencontre un bogue avec l'utilisation de <code>console.log</code> à l'intérieur des workers partagés/service (voir {{Bug("1058644")}}), ce qui peut occasionner d'étranges résultats, mais cela devrait être bientôt corrigé.</p>
-</div>
+> **Note :** Firefox rencontre un bogue avec l'utilisation de `console.log` à l'intérieur des workers partagés/service (voir {{Bug("1058644")}}), ce qui peut occasionner d'étranges résultats, mais cela devrait être bientôt corrigé.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-worker-navigator', 'navigator')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', '#dom-worker-navigator', 'navigator')}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WorkerGlobalScope.navigator")}}</p>
+{{Compat("api.WorkerGlobalScope.navigator")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<p>{{domxref("WorkerNavigator")}}</p>
+{{domxref("WorkerNavigator")}}

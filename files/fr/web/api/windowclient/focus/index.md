@@ -12,62 +12,53 @@ tags:
   - WindowClient
 translation_of: Web/API/WindowClient/focus
 ---
-<p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>La méthode <strong><code>focus()</code></strong> de l'interface {{domxref("WindowClient")}} focus le client en cours et retourne une {{jsxref("Promise")}} qui est résolue vers le {{domxref("WindowClient")}} existant.</p>
+La méthode **`focus()`** de l'interface {{domxref("WindowClient")}} focus le client en cours et retourne une {{jsxref("Promise")}} qui est résolue vers le {{domxref("WindowClient")}} existant.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Client.focus().then(function(WindowClient) {
-  // utilisez le WindowClient une fois qu'il est focus
-});</pre>
+    Client.focus().then(function(WindowClient) {
+      // utilisez le WindowClient une fois qu'il est focus
+    });
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Nil.</p>
+Nil.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une {{jsxref("Promise")}} qui est résolue vers le {{domxref("WindowClient")}} existant.</p>
+Une {{jsxref("Promise")}} qui est résolue vers le {{domxref("WindowClient")}} existant.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">self.addEventListener('notificationclick', function(event) {
+```js
+self.addEventListener('notificationclick', function(event) {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
-<code>  // Vérifie si le client en cours est ouvert et
-  // le focus le cas échéant</code>
+  // Vérifie si le client en cours est ouvert et
+  // le focus le cas échéant
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client)
+      if (client.url == '/' && 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#client-focus-method', 'focus()')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale..</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                 | Commentaires          |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | --------------------- |
+| {{SpecName('Service Workers', '#client-focus-method', 'focus()')}} | {{Spec2('Service Workers')}} | Définition initiale.. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WindowClient.focus")}}</p>
+{{Compat("api.WindowClient.focus")}}

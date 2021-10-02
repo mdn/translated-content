@@ -9,62 +9,46 @@ tags:
   - Type
 translation_of: Web/API/Selection/type
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p>La propriété en lecture simple <strong><code>type</code></strong> de l'interface {{domxref("Selection")}} retourne un {{domxref("DOMString")}} décrivant le type de la sélection courante.</p>
+La propriété en lecture simple **`type`** de l'interface {{domxref("Selection")}} retourne un {{domxref("DOMString")}} décrivant le type de la sélection courante.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>value</em> =<em> sel</em>.type
-</pre>
+    value = sel.type
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Une {{domxref("DOMString")}} décrivant le type de la sélection courante. Les valeurs possibles sont :</p>
+Une {{domxref("DOMString")}} décrivant le type de la sélection courante. Les valeurs possibles sont :
 
-<ul>
- <li><code>None</code>: Aucune sélection courante.</li>
- <li><code>Caret</code>: La sélection est réduite (le curseur est dans un texte mais il n'y a pas de plage sélectionnée).</li>
- <li><code>Range</code>: Une plage est sélectionnnée.</li>
-</ul>
+- `None`: Aucune sélection courante.
+- `Caret`: La sélection est réduite (le curseur est dans un texte mais il n'y a pas de plage sélectionnée).
+- `Range`: Une plage est sélectionnnée.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans cet exemple le gestionnaire d'évènemenet est activé à chaque changement de la sélection. <code>console.log(selection.type)</code> retourne <code>Caret</code> ou <code>Range</code> selon que le curseur est sur un simple caractère ou qu'une plage est sélectionée.</p>
+Dans cet exemple le gestionnaire d'évènemenet est activé à chaque changement de la sélection. `console.log(selection.type)` retourne `Caret` ou `Range` selon que le curseur est sur un simple caractère ou qu'une plage est sélectionée.
 
-<pre class="brush: js">var selection;
+```js
+var selection;
 
 document.onselectionchange = function() {
   console.log('New selection made');
   selection = document.getSelection();
   console.log(selection.type);
-};</pre>
+};
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selection API', '#dom-selection-type', 'Selection.type')}}</td>
-   <td>{{Spec2('Selection API')}}</td>
-   <td>Courant</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                               | Comment |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Selection API', '#dom-selection-type', 'Selection.type')}} | {{Spec2('Selection API')}} | Courant |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.Selection.type")}}
 
+## Voir aussi
 
-<p>{{Compat("api.Selection.type")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{domxref("Selection")}}</li>
-</ul>
+- {{domxref("Selection")}}

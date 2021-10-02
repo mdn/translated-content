@@ -3,57 +3,42 @@ title: XMLHttpRequest.onreadystatechange
 slug: Web/API/XMLHttpRequest/onreadystatechange
 translation_of: Web/API/XMLHttpRequest/onreadystatechange
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Un <a href="/en-US/docs/Web/API/EventHandler"><code>EventHandler</code></a> qui réagit aux changements de <code>readyState</code>. Le callback est appelé dans le contexte du thread de rendu. La propriété <strong><code>XMLHttpRequest.onreadystatechange</code></strong>  contient le gestionnaire d'évènement appelé lorsque l'évènement {{event("readystatechange")}} est déclenché, soit chaque fois que la propriété {{domxref("XMLHttpRequest.readyState", "readyState")}} de {{domxref("XMLHttpRequest")}} est modifiée.</p>
+Un [`EventHandler`](/en-US/docs/Web/API/EventHandler) qui réagit aux changements de `readyState`. Le callback est appelé dans le contexte du thread de rendu. La propriété **`XMLHttpRequest.onreadystatechange`**  contient le gestionnaire d'évènement appelé lorsque l'évènement {{event("readystatechange")}} est déclenché, soit chaque fois que la propriété {{domxref("XMLHttpRequest.readyState", "readyState")}} de {{domxref("XMLHttpRequest")}} est modifiée.
 
-<div class="warning">
-<p><strong>Attention :</strong> Ne doit pas être utilisé avec des requêtes synchrone ni avec du code natif.</p>
-</div>
+> **Attention :** Ne doit pas être utilisé avec des requêtes synchrone ni avec du code natif.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>XMLHttpRequest</em>.onreadystatechange = <em>callback</em>;</pre>
+    XMLHttpRequest.onreadystatechange = callback;
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<ul>
- <li><code><em>callback</em></code> est la fonction exécutée lorsque <code>readyState</code> change.</li>
-</ul>
+- `callback` est la fonction exécutée lorsque `readyState` change.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var xhr = new XMLHttpRequest(),
+```js
+var xhr = new XMLHttpRequest(),
     method = "GET",
     url = "https://developer.mozilla.org/";
 
-xhr.open(<em>method</em>, <em>url</em>, true);
+xhr.open(method, url, true);
 xhr.onreadystatechange = function () {
-  if(xhr.readyState === 4 &amp;&amp; xhr.status === 200) {
+  if(xhr.readyState === 4 && xhr.status === 200) {
     console.log(xhr.responseText);
   }
 };
-xhr.send();</pre>
+xhr.send();
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#handler-xhr-onreadystatechange')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                               | Comment                |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
+| {{SpecName('XMLHttpRequest', '#handler-xhr-onreadystatechange')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
 
-<h2 id="Compatibilité_des_fureteurs">Compatibilité des fureteurs</h2>
+## Compatibilité des fureteurs
 
-
-
-<p>{{Compat("api.XMLHttpRequest.onreadystatechange")}}</p>
+{{Compat("api.XMLHttpRequest.onreadystatechange")}}

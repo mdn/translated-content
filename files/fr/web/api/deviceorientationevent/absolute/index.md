@@ -4,52 +4,34 @@ slug: Web/API/DeviceOrientationEvent/absolute
 translation_of: Web/API/DeviceOrientationEvent/absolute
 original_slug: Web/API/DeviceOrientationEvent.absolute
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<p>Indique si l'appareil partage des données en référentiel absolut c'est à dire sur avec des cordonnées issu du référentiel terrestre, ou si il partage des données utilisant un référentiel arbitraire déterminé par l'appareil. Voir <a href="/en/DOM/Orientation_and_motion_data_explained">Orientation et mouvement expliqué</a> pour plus de détails.</p>
+Indique si l'appareil partage des données en référentiel absolut c'est à dire sur avec des cordonnées issu du référentiel terrestre, ou si il partage des données utilisant un référentiel arbitraire déterminé par l'appareil. Voir [Orientation et mouvement expliqué](/en/DOM/Orientation_and_motion_data_explained) pour plus de détails.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval">var absolute = <em>instanceOfDeviceOrientationEvent</em>.absolute;
-</pre>
+    var absolute = instanceOfDeviceOrientationEvent.absolute;
 
-<p><code>DeviceOrientationEvent.absolute</code> retourne un booléen :</p>
+`DeviceOrientationEvent.absolute` retourne un booléen :
 
-<ul>
- <li><code>true</code> : si les données d'orientation dans <code>instanceOfDeviceOrientationEvent</code> est proposer dans un référentiel terrestre.</li>
- <li><code>false</code> : si les données d'orientation utilisent un référentiel arbitraire.</li>
-</ul>
+- `true` : si les données d'orientation dans `instanceOfDeviceOrientationEvent` est proposer dans un référentiel terrestre.
+- `false` : si les données d'orientation utilisent un référentiel arbitraire.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statuts</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Device Orientation')}}</td>
-   <td>{{Spec2('Device Orientation')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                | Statuts                                  | Commentaires           |
+| -------------------------------------------- | ---------------------------------------- | ---------------------- |
+| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Initial specification. |
 
-<h2 id="Compatibilité_entre_les_navigateurs">Compatibilité entre les navigateurs</h2>
+## Compatibilité entre les navigateurs
 
-<p>{{ page("/en-US/docs/Web/API/DeviceOrientationEvent","Browser_compatibility") }}</p>
+{{ page("/en-US/docs/Web/API/DeviceOrientationEvent","Browser_compatibility") }}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{ domxref("DeviceOrientationEvent") }}</li>
- <li><a href="/en/Detecting_device_orientation">Detecting device orientation</a></li>
- <li><a href="/en/DOM/Orientation_and_motion_data_explained">Orientation and motion data explained</a></li>
- <li>{{ domxref("window.ondeviceorientation") }}</li>
-</ul>
+- {{ domxref("DeviceOrientationEvent") }}
+- [Detecting device orientation](/en/Detecting_device_orientation)
+- [Orientation and motion data explained](/en/DOM/Orientation_and_motion_data_explained)
+- {{ domxref("window.ondeviceorientation") }}
 
-<p>{{ event("deviceorientation") }}</p>
+{{ event("deviceorientation") }}

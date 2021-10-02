@@ -8,23 +8,24 @@ tags:
   - Évènement personnalisé
 translation_of: Web/API/CustomEvent/detail
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Le <code><strong>detail</strong></code> de la propriété en lecture seule de l'interface {{domxref("CustomEvent")}} renvoie toutes les données transmises lors de l'initialisation de l'évènement.</p>
+Le **`detail`** de la propriété en lecture seule de l'interface {{domxref("CustomEvent")}} renvoie toutes les données transmises lors de l'initialisation de l'évènement.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"> let myDetail = <em>customEventInstance.detail</em>;</pre>
+     let myDetail = customEventInstance.detail;
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Toute donnée initialisée avec l'évènement.</p>
+Toute donnée initialisée avec l'évènement.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">// ajoute un écouteur d'évènement approprié
+```js
+// ajoute un écouteur d'évènement approprié
 obj.addEventListener("cat", function(e) { process(e.detail) });
 
 // crée et distribue l'évènement
@@ -36,38 +37,19 @@ let event = new CustomEvent("cat", {
 obj.dispatchEvent(event);
 
 // Retournera un objet contenant la propriété hazcheeseburger
-let myDetail = <em>event.detail</em>;
-</pre>
+let myDetail = event.detail;
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-customeventinit-detail','detail')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | Statut                           | Commentaire          |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('DOM WHATWG','#dom-customeventinit-detail','detail')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.CustomEvent.detail")}}
 
+## Voir aussi
 
-<p>{{Compat("api.CustomEvent.detail")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{domxref("CustomEvent")}}</li>
-</ul>
-
-<p> </p>
+- {{domxref("CustomEvent")}}

@@ -3,67 +3,47 @@ title: XMLHttpRequest.open()
 slug: Web/API/XMLHttpRequest/open
 translation_of: Web/API/XMLHttpRequest/open
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>La méthode <code><strong>open()</strong></code> de {{domxref("XMLHttpRequest")}} instancie une nouvelle requête ou réinitialise un déjà existante.</p>
+La méthode **`open()`** de {{domxref("XMLHttpRequest")}} instancie une nouvelle requête ou réinitialise un déjà existante.
 
-<div class="note">
-  <p><strong>Note :</strong> Appeler cette méthode pour une requête déjà active (pour laquelle une méthode <code>open()</code> a déjà été appelée) est équivalent à appeler  {{domxref("XMLHttpRequest.abort", "abort()")}}.</p>
-</div>
+> **Note :** Appeler cette méthode pour une requête déjà active (pour laquelle une méthode `open()` a déjà été appelée) est équivalent à appeler  {{domxref("XMLHttpRequest.abort", "abort()")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>XMLHttpRequest</em>.open(<var>method</var>,<var> url</var>)
-<em>XMLHttpRequest</em>.open(<var>method</var>,<var> url</var>,<var> async)</var>
-<em>XMLHttpRequest</em>.open(<var>method</var>,<var> url</var>,<var> async</var>,<var> user</var>)
-<em>XMLHttpRequest</em>.open(<var>method</var>,<var> url</var>,<var> async</var>,<var> user</var>,<var> password</var>)
-</pre>
+    XMLHttpRequest.open(method, url)
+    XMLHttpRequest.open(method, url, async)
+    XMLHttpRequest.open(method, url, async, user)
+    XMLHttpRequest.open(method, url, async, user, password)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>method</code></dt>
- <dd>La méthode  <a href="/en-US/docs/Web/HTTP/Methods">HTTP request </a> à utiliser telles que : <code>"GET"</code>, <code>"POST"</code>, <code>"PUT"</code>, <code>"DELETE"</code>, etc. Ignorée pour les URL non-HTTP(S).</dd>
- <dt><code>url</code></dt>
- <dd>Une {{domxref("DOMString")}} représentant l'URL à laquelle envoyer la requête.</dd>
- <dt><code>async</code> {{optional_inline}}</dt>
- <dd>Un booléen optionnel par défaut à <code>true</code>, indiquant s'il faut, ou pas, traiter la requête en asynchrone.  Si la valeur est à <code>false</code>, la méthode <code>send()</code> ne retourne rien tant qu'elle n'a pas reçu la réponse. Si la valeur est à  <code>true</code>, une notification de transaction complétée est fournie en utilisant un gestionnaire d'évènements. Le paramètre doit être sur "true" si l'attribut <code>multipart</code> est sur "true" aussi ou une exception sera levée.
- <div class="note">
-  <p><strong>Note :</strong> Les requêtes asynchrones sur le "thread" principal peuvent facilement dérouter l'utilisateur et devraient être évitées; En fait, de nombreux navigateurs ont un support XHR obsolète sur la totalité du "thread" principal. Les requêtes synchrones sont acceptées dans  {{domxref("Worker")}}.</p>
- </div>
- </dd>
- <dt><code>user</code> {{optional_inline}}</dt>
- <dd>Le nom de l'utilisateur, optionnel, à utiliser dans un but d'authentification. Sa valeur par défaut est <code>null</code>.</dd>
- <dt><code>password</code> {{optional_inline}}</dt>
- <dd>Le mot de passe, optionnel, à utiliser dans un but d'authentification. Sa valeur par défaut est <code>null</code>.</dd>
-</dl>
+- `method`
+  - : La méthode  [HTTP request ](/en-US/docs/Web/HTTP/Methods) à utiliser telles que : `"GET"`, `"POST"`, `"PUT"`, `"DELETE"`, etc. Ignorée pour les URL non-HTTP(S).
+- `url`
+  - : Une {{domxref("DOMString")}} représentant l'URL à laquelle envoyer la requête.
+- `async` {{optional_inline}}
 
-<h2 id="Spécificités">Spécificités</h2>
+  - : Un booléen optionnel par défaut à `true`, indiquant s'il faut, ou pas, traiter la requête en asynchrone.  Si la valeur est à `false`, la méthode `send()` ne retourne rien tant qu'elle n'a pas reçu la réponse. Si la valeur est à  `true`, une notification de transaction complétée est fournie en utilisant un gestionnaire d'évènements. Le paramètre doit être sur "true" si l'attribut `multipart` est sur "true" aussi ou une exception sera levée.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#the-open()-method', 'open()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+    > **Note :** Les requêtes asynchrones sur le "thread" principal peuvent facilement dérouter l'utilisateur et devraient être évitées; En fait, de nombreux navigateurs ont un support XHR obsolète sur la totalité du "thread" principal. Les requêtes synchrones sont acceptées dans  {{domxref("Worker")}}.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+- `user` {{optional_inline}}
+  - : Le nom de l'utilisateur, optionnel, à utiliser dans un but d'authentification. Sa valeur par défaut est `null`.
+- `password` {{optional_inline}}
+  - : Le mot de passe, optionnel, à utiliser dans un but d'authentification. Sa valeur par défaut est `null`.
 
-<p>{{Compat("api.XMLHttpRequest.open")}}</p>
+## Spécificités
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+| Specification                                                                        | Status                               | Comment                |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
+| {{SpecName('XMLHttpRequest', '#the-open()-method', 'open()')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
 
-<ul>
- <li><a href="/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest">Utiliser XMLHttpRequest</a></li>
- <li>Méthodes {{domxref("XMLHttpRequest")}} en relation : {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}},{{domxref("XMLHttpRequest.send", "send()")}}, and {{domxref("XMLHttpRequest.abort", "abort()")}}</li>
-</ul>
+## Compatibilité des navigateurs
+
+{{Compat("api.XMLHttpRequest.open")}}
+
+## Voir aussi
+
+- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest)
+- Méthodes {{domxref("XMLHttpRequest")}} en relation : {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}},{{domxref("XMLHttpRequest.send", "send()")}}, and {{domxref("XMLHttpRequest.abort", "abort()")}}

@@ -9,38 +9,37 @@ tags:
   - Écouteurs
 translation_of: Web/API/EventListener
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>L'interface <strong><code>EventListener</code></strong> représente un objet qui peut gérer un évènement distribué par un objet {{domxref("EventTarget")}}.</p>
+L'interface **`EventListener`** représente un objet qui peut gérer un évènement distribué par un objet {{domxref("EventTarget")}}.
 
-<div class="note">
-<p><strong>Note :</strong> En raison du besoin de compatibilité avec le contenu existant, <code>EventListener</code> accepte à la fois une fonction et un objet avec une fonction de propriété <code>handleEvent</code>. Ceci est illustré dans l'exemple ci-dessous.</p>
-</div>
+> **Note :** En raison du besoin de compatibilité avec le contenu existant, `EventListener` accepte à la fois une fonction et un objet avec une fonction de propriété `handleEvent`. Ceci est illustré dans l'exemple ci-dessous.
 
-<h2 id="Method_overview">Propriétés</h2>
+## Propriétés
 
-<p><em>Cette interface n'implémente ni n'hérite d'aucune propriété.</em></p>
+_Cette interface n'implémente ni n'hérite d'aucune propriété._
 
-<h2 id="Methods">Méthodes</h2>
+## Méthodes
 
-<p><em>Cette interface n'hérite d'aucune méthode.</em></p>
+_Cette interface n'hérite d'aucune méthode._
 
-<dl>
- <dt>{{domxref("EventListener.handleEvent()")}}</dt>
- <dd>une fonction qui est appelée lorsque se produit un événement du type spécifié.</dd>
-</dl>
+- {{domxref("EventListener.handleEvent()")}}
+  - : une fonction qui est appelée lorsque se produit un événement du type spécifié.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;button id="btn"&gt;Click here!&lt;/button&gt;</pre>
+```html
+<button id="btn">Click here!</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p> </p>
 
-<pre class="brush: js">const buttonElement = document.getElementById('btn');
+
+```js
+const buttonElement = document.getElementById('btn');
 
 // Ajoute un gestionnaire pour l'évènement 'click' qui fournit une fonction de rappel.
 // Chaque fois que l'élément est cliqué, une fenêtre contextuelle avec "Élément clické!"
@@ -49,38 +48,22 @@ buttonElement.addEventListener('click', function (event) {
   alert('Element clicked through function!');
 });
 
-// Pour la compatibilité, un objet qui n'est pas une fonction avec une propriété `handleEvent` (<em>gestion d'évènement</em>)
+// Pour la compatibilité, un objet qui n'est pas une fonction avec une propriété `handleEvent` (gestion d'évènement)
 // sera traitée exactement comme la fonction elle-même.
 buttonElement.addEventListener('click', {
   handleEvent: function (event) {
     alert('Element clicked through handleEvent property!');
   }
-});</pre>
+});
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#callbackdef-eventlistener', 'EventListener')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Pas de changement.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events', '#Events-EventListener', 'EventListener')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                           | Commentaire          |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('DOM WHATWG', '#callbackdef-eventlistener', 'EventListener')}} | {{Spec2('DOM WHATWG')}} | Pas de changement.   |
+| {{SpecName('DOM2 Events', '#Events-EventListener', 'EventListener')}}     | {{Spec2('DOM2 Events')}} | Définition initiale. |

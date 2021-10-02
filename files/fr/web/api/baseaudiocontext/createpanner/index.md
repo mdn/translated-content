@@ -12,31 +12,30 @@ tags:
   - createPanner
 translation_of: Web/API/BaseAudioContext/createPanner
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>La méthode <code>createPanner()</code> de l'interface {{ domxref("BaseAudioContext") }} est utilisée pour créer un nouveau {{domxref("PannerNode")}}, qui sert à spatialiser dans un environnement 3D un flux audio entrant.</p>
-</div>
+La méthode `createPanner()` de l'interface {{ domxref("BaseAudioContext") }} est utilisée pour créer un nouveau {{domxref("PannerNode")}}, qui sert à spatialiser dans un environnement 3D un flux audio entrant.
 
-<p>Le <em>panner node</em> est spatialisé en relation avec l'{{domxref("AudioListener") }} de l'AudioContext (défini par l'attribut {{domxref("AudioContext.listener") }}), qui représente la position et l'orientation de la personne écoutant le flux audio.</p>
+Le _panner node_ est spatialisé en relation avec l'{{domxref("AudioListener") }} de l'AudioContext (défini par l'attribut {{domxref("AudioContext.listener") }}), qui représente la position et l'orientation de la personne écoutant le flux audio.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">baseAudioCtx.createPanner();</pre>
+    baseAudioCtx.createPanner();
 
-<h3 id="Retourne">Retourne</h3>
+### Retourne
 
-<p>Un {{domxref("PannerNode")}}.</p>
+Un {{domxref("PannerNode")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans l'exemple suivant, vous pouvez voir comment la méthode <code>createPanner()</code>, l'{{domxref("AudioListener")}} et le {{domxref("PannerNode")}} peuvent être utilisés pour contrôler la spatialisation d'un flux audio. Généralement, vous définirez la position dans un espace 3D que votre écouteur et votre <em>panner</em> (source) occupaient initialement, puis ajuster la position de l'un ou des deux au fur et à mesure de l'utilisation. Vous pourriez par exemple vouloir déplacer un personnage dans un monde de jeu vidéo, et vouloir que le rendu audio change de manière réaliste tandis que le personnage s'approche ou s'éloigne d'un diffuseur audio tel qu'une chaîne stéréo. Dans cet exemple, vous pouvez voir ceci contrôlé par les fonctions <code>moveRight()</code>, <code>moveLeft()</code>, etc., qui définissent de nouvelles valeurs pour la position du <em>panner</em> via la fonction <code>PositionPanner()</code>.</p>
+Dans l'exemple suivant, vous pouvez voir comment la méthode `createPanner()`, l'{{domxref("AudioListener")}} et le {{domxref("PannerNode")}} peuvent être utilisés pour contrôler la spatialisation d'un flux audio. Généralement, vous définirez la position dans un espace 3D que votre écouteur et votre _panner_ (source) occupaient initialement, puis ajuster la position de l'un ou des deux au fur et à mesure de l'utilisation. Vous pourriez par exemple vouloir déplacer un personnage dans un monde de jeu vidéo, et vouloir que le rendu audio change de manière réaliste tandis que le personnage s'approche ou s'éloigne d'un diffuseur audio tel qu'une chaîne stéréo. Dans cet exemple, vous pouvez voir ceci contrôlé par les fonctions `moveRight()`, `moveLeft()`, etc., qui définissent de nouvelles valeurs pour la position du _panner_ via la fonction `PositionPanner()`.
 
-<p>Pour voir une implantation complète, visitez notre <a href="https://mdn.github.io/webaudio-examples/panner-node/">exemple de panner-node</a> (<a href="https://github.com/mdn/webaudio-examples/tree/master/panner-node">lisez le code source aussi !</a>) – cette démonstration vous transporte dans un environnement 2.5D appelé "Pièce de métal", où vous pouvez jouer un morceau sur une boom box et vous déplacer autour de celle-ci pour entendre comment le son change !</p>
+Pour voir une implantation complète, visitez notre [exemple de panner-node](https://mdn.github.io/webaudio-examples/panner-node/) ([lisez le code source aussi !](https://github.com/mdn/webaudio-examples/tree/master/panner-node)) – cette démonstration vous transporte dans un environnement 2.5D appelé "Pièce de métal", où vous pouvez jouer un morceau sur une boom box et vous déplacer autour de celle-ci pour entendre comment le son change !
 
-<p>Notez la manière dont nous avons utilisé la détection de fonctionnalité pour soit donner au navigateur les nouvelles valeurs des propriétés (comme {{domxref("AudioListener.forwardX")}}) pour définir la position, etc. s'il le permet, ou d'anciennes méthodes (comme {{domxref("AudioListener.setOrientation()")}}) s'il les permet aussi mais non les nouvelles propriétés.</p>
+Notez la manière dont nous avons utilisé la détection de fonctionnalité pour soit donner au navigateur les nouvelles valeurs des propriétés (comme {{domxref("AudioListener.forwardX")}}) pour définir la position, etc. s'il le permet, ou d'anciennes méthodes (comme {{domxref("AudioListener.setOrientation()")}}) s'il les permet aussi mais non les nouvelles propriétés.
 
-<pre class="brush: js">// set up listener and panner position information
+```js
+// set up listener and panner position information
 var WIDTH = window.innerWidth;
 var HEIGHT = window.innerHeight;
 
@@ -117,41 +116,21 @@ function positionPanner() {
     panner.setPosition(xPos,yPos,zPos);
   }
   pannerData.innerHTML = 'Panner data: X ' + xPos + ' Y ' + yPos + ' Z ' + zPos;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note :</strong> In terms of working out what position values to apply to the listener and panner, to make the sound appropriate to what the visuals are doing on screen, there is quite a bit of math involved, but you will soon get used to it with a bit of experimentation.</p>
-</div>
+> **Note :** In terms of working out what position values to apply to the listener and panner, to make the sound appropriate to what the visuals are doing on screen, there is quite a bit of math involved, but you will soon get used to it with a bit of experimentation.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createpanner', 'createPanner()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                               | Comment |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createpanner', 'createPanner()')}} | {{Spec2('Web Audio API')}} |         |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>
-<div>
+{{Compat("api.BaseAudioContext.createPanner")}}
 
+## Voir aussi
 
-<p>{{Compat("api.BaseAudioContext.createPanner")}}</p>
-</div>
-</div>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Utiliser l'API Web Audio</a></li>
-</ul>
+- [Utiliser l'API Web Audio](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)

@@ -11,34 +11,36 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Basic_scissoring
 original_slug: Web/API/WebGL_API/By_example/Appliquer_des_découpes_simples
 ---
-<div>{{IncludeSubnav("/fr/Apprendre")}}</div>
+{{IncludeSubnav("/fr/Apprendre")}}
 
-<p>{{PreviousNext("Apprendre/WebGL/Par_exemple/Masque_de_couleur","Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL")}}</p>
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Masque_de_couleur","Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL")}}
 
-<p>Dans cet article, on illustre comment dessiner des rectangles et des carrés grâce à des opérations de découpe simple (<em>scissoring</em>).</p>
+Dans cet article, on illustre comment dessiner des rectangles et des carrés grâce à des opérations de découpe simple (_scissoring_).
 
-<p>{{EmbedLiveSample("Appliquer_les_changements_sur_le_buffer_lors_de_la_découpe",660,330)}}</p>
+{{EmbedLiveSample("Appliquer_les_changements_sur_le_buffer_lors_de_la_découpe",660,330)}}
 
-<h3 id="Appliquer_les_changements_sur_le_buffer_lors_de_la_découpe">Appliquer les changements sur le <em>buffer</em> lors de la découpe</h3>
+### Appliquer les changements sur le _buffer_ lors de la découpe
 
-<p>Voici une démonstration simple des opérations appliquées sur le contexte de rendu avec la méthode {{domxref("WebGLRenderingContext.scissor","scissor")}}.</p>
+Voici une démonstration simple des opérations appliquées sur le contexte de rendu avec la méthode {{domxref("WebGLRenderingContext.scissor","scissor")}}.
 
-<p>La commande {{domxref("WebGLRenderingContext.clear","clear()")}} permet de dessiner la couleur d'applique (définie à l'aide de {{domxref("WebGLRenderingContext.clearColor","clearColor()")}}) sur tous les pixels du tampon (<em>buffer</em>) de dessin. La commande  {{domxref("WebGLRenderingContext.scissor","scissor()")}} permet quant à elle de définir un masque qui permet de ne modifier que les pixels contenus dans un rectangle donné.</p>
+La commande {{domxref("WebGLRenderingContext.clear","clear()")}} permet de dessiner la couleur d'applique (définie à l'aide de {{domxref("WebGLRenderingContext.clearColor","clearColor()")}}) sur tous les pixels du tampon (_buffer_) de dessin. La commande  {{domxref("WebGLRenderingContext.scissor","scissor()")}} permet quant à elle de définir un masque qui permet de ne modifier que les pixels contenus dans un rectangle donné.
 
-<p>Cet article représente une excellente occasion pour distinguer les <em>pixels</em> des <em>fragments</em>. Un pixel est un élément d'une image (en pratique c'est un point) sur l'écran ou un élément unique du tampon de dessin (l'espace mémoire qui contient les données relatives aux pixels comme les différentes composantes couleur). Un <em>fragment</em> fait référence au pixel manipulé par les processus {{Glossary("WebGL")}}.</p>
+Cet article représente une excellente occasion pour distinguer les _pixels_ des _fragments_. Un pixel est un élément d'une image (en pratique c'est un point) sur l'écran ou un élément unique du tampon de dessin (l'espace mémoire qui contient les données relatives aux pixels comme les différentes composantes couleur). Un _fragment_ fait référence au pixel manipulé par les processus {{Glossary("WebGL")}}.
 
-<p>Cette distinction existe car la couleur d'un fragment (et ses autres caractéristiques comme la profondeur) peut être manipulée et modifiée à plusieurs reprises avant d'être écrite à l'écran. On a déjà vu comment la couleur d'un fragment pouvait être modifiée au cours des opérations graphiques en appliquant un {{domxref("WebGLRenderingContext.colorMask()","masque de couleur", "", 1)}}. Il existe d'autres cas où les fragments sont ignorés (le pixel n'est pass mis à jour) ou d'autres où ils interagissent avec la valeur du pixel existant (afin de fusionner les couleurs pour les éléments transparents qui composent une scène).</p>
+Cette distinction existe car la couleur d'un fragment (et ses autres caractéristiques comme la profondeur) peut être manipulée et modifiée à plusieurs reprises avant d'être écrite à l'écran. On a déjà vu comment la couleur d'un fragment pouvait être modifiée au cours des opérations graphiques en appliquant un {{domxref("WebGLRenderingContext.colorMask()","masque de couleur", "", 1)}}. Il existe d'autres cas où les fragments sont ignorés (le pixel n'est pass mis à jour) ou d'autres où ils interagissent avec la valeur du pixel existant (afin de fusionner les couleurs pour les éléments transparents qui composent une scène).
 
-<p>Ici, on voit une autre distinction entre les fragments et les pixels. La découpe est une étape distincte du processus graphique de  {{Glossary("WebGL")}}/{{Glossary("OpenGL")}} (elle est traitée après l'applique de couleur et avant le masque de couleur). Avant que les pixels réels soient mis à jour, les fragments doivent passer le test de la découpe. S'ils réussissent ce test, ils continuent dans le processus de traitement et les pixels correspondants sont mis à jours. S'ils échouent, le processus rejette les fragments et ils ne sont plus gérés pour les traitements ultérieurs, les pixels correspondants ne seront pas mis à jour. Seuls les fragments appartenant à la zone rectangulaire donnée réussissent le test et seuls les pixels correspondants sont mis à jour. Au final, on obtient un rectangle qui est dessiné à l'écran.</p>
+Ici, on voit une autre distinction entre les fragments et les pixels. La découpe est une étape distincte du processus graphique de  {{Glossary("WebGL")}}/{{Glossary("OpenGL")}} (elle est traitée après l'applique de couleur et avant le masque de couleur). Avant que les pixels réels soient mis à jour, les fragments doivent passer le test de la découpe. S'ils réussissent ce test, ils continuent dans le processus de traitement et les pixels correspondants sont mis à jours. S'ils échouent, le processus rejette les fragments et ils ne sont plus gérés pour les traitements ultérieurs, les pixels correspondants ne seront pas mis à jour. Seuls les fragments appartenant à la zone rectangulaire donnée réussissent le test et seuls les pixels correspondants sont mis à jour. Au final, on obtient un rectangle qui est dessiné à l'écran.
 
-<p>Par défaut, l'étape de découpe est désactivée dans le processus. Ici, on l'active avec la méthode  {{domxref("WebGLRenderingContext.enable","enable()")}} (<code>enable()</code> sera utilisée pour activer de nombreuses autres fonctionnalités liées à WebGL) avec la constante <code>SCISSOR_TEST</code>. Là aussi, on voit l'ordre généralement utilisé pour les commandes {{Glossary("WebGL")}}. Tout d'abord, on modifie l'état de WebGL (ici on active le test de découpe et on crée un masque rectangulaire). Une fois que l'état a bien été modifié, on exécute les commandes de dessin (ici <code>clear()</code>) pour commencer le processus de traitement des fragments.</p>
+Par défaut, l'étape de découpe est désactivée dans le processus. Ici, on l'active avec la méthode  {{domxref("WebGLRenderingContext.enable","enable()")}} (`enable()` sera utilisée pour activer de nombreuses autres fonctionnalités liées à WebGL) avec la constante `SCISSOR_TEST`. Là aussi, on voit l'ordre généralement utilisé pour les commandes {{Glossary("WebGL")}}. Tout d'abord, on modifie l'état de WebGL (ici on active le test de découpe et on crée un masque rectangulaire). Une fois que l'état a bien été modifié, on exécute les commandes de dessin (ici `clear()`) pour commencer le processus de traitement des fragments.
 
-<pre class="brush: html">&lt;p&gt;Le résultat de la découpe.&lt;/p&gt;
-&lt;canvas&gt;Il semblerait que votre navigateur
-    ne supporte pas l'élément canvas.&lt;/canvas&gt;
-</pre>
+```html
+<p>Le résultat de la découpe.</p>
+<canvas>Il semblerait que votre navigateur
+    ne supporte pas l'élément canvas.</canvas>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 canvas {
@@ -50,9 +52,10 @@ canvas {
   border : none;
   background-color : black;
 }
-</pre>
+```
 
-<pre class="brush: js">window.addEventListener("load", function setupWebGL (evt) {
+```js
+window.addEventListener("load", function setupWebGL (evt) {
   "use strict"
   window.removeEventListener(evt.type, setupWebGL, false);
   var paragraph = document.querySelector("p");
@@ -84,8 +87,8 @@ canvas {
   gl.clearColor(1.0, 1.0, 0.0, 1.0);
   gl.clear(gl.COLOR_BUFFER_BIT);
 }, false);
-</pre>
+```
 
-<p>Le code source de cet exemple est également disponible sur <a href="https://github.com/idofilin/webgl-by-example/tree/master/basic-scissoring">GitHub</a>.</p>
+Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/basic-scissoring).
 
-<p>{{PreviousNext("Apprendre/WebGL/Par_exemple/Masque_de_couleur","Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL")}}</p>
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Masque_de_couleur","Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL")}}

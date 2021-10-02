@@ -13,66 +13,65 @@ tags:
   - find
 translation_of: Web/API/Window/find
 ---
-<div>{{ApiRef}}{{Non-standard_Header}}</div>
+{{ApiRef}}{{Non-standard_Header}}
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> La prise en charge de <code>Window.find()</code> pourrait changer dans les futures versions de Gecko. Voir {{Bug("672395")}}.</p>
-</div>
+> **Note :** La prise en charge de `Window.find()` pourrait changer dans les futures versions de Gecko. Voir {{Bug("672395")}}.
 
-<p>La méthode <code><strong>Window.find()</strong></code> trouve une chaîne dans une fenêtre.</p>
+La méthode **`Window.find()`** trouve une chaîne dans une fenêtre.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>window</em>.find(<em>aString</em>, <em>aCaseSensitive</em>, <em>aBackwards</em>, <em>aWrapAround</em>,
-            <em>aWholeWord</em>, <em>aSearchInFrames</em>, <em>aShowDialog</em>);</pre>
+    window.find(aString, aCaseSensitive, aBackwards, aWrapAround,
+                aWholeWord, aSearchInFrames, aShowDialog);
 
-<dl>
- <dt><code>aString</code></dt>
- <dd>La chaîne de caractère à rechercher.</dd>
- <dt><code>aCaseSensitive</code></dt>
- <dd>{{jsxref("Boolean")}}. Si <code>true</code>, spécifie une recherche sensible à la casse.</dd>
- <dt><code>aBackwards</code></dt>
- <dd>{{jsxref("Boolean")}}. Si <code>true</code>, spécifie une recherche vers l'arrière.</dd>
- <dt><code>aWrapAround</code></dt>
- <dd>{{jsxref("Boolean")}}. Si <code>true</code>, spécifie une recherche enveloppante.</dd>
- <dt><code>aWholeWord</code> {{Unimplemented_Inline}}</dt>
- <dd>{{jsxref("Boolean")}}. Si <code>true</code>, spécifie une recherche de mot entier. Ceci n'est pas implémenté; voir {{bug(481513)}}.</dd>
- <dt><code>aSearchInFrames</code></dt>
- <dd>{{jsxref("Boolean")}}. Si <code>true</code>, spécifie une recherche dans les cadres.</dd>
-</dl>
+- `aString`
+  - : La chaîne de caractère à rechercher.
+- `aCaseSensitive`
+  - : {{jsxref("Boolean")}}. Si `true`, spécifie une recherche sensible à la casse.
+- `aBackwards`
+  - : {{jsxref("Boolean")}}. Si `true`, spécifie une recherche vers l'arrière.
+- `aWrapAround`
+  - : {{jsxref("Boolean")}}. Si `true`, spécifie une recherche enveloppante.
+- `aWholeWord` {{Unimplemented_Inline}}
+  - : {{jsxref("Boolean")}}. Si `true`, spécifie une recherche de mot entier. Ceci n'est pas implémenté; voir {{bug(481513)}}.
+- `aSearchInFrames`
+  - : {{jsxref("Boolean")}}. Si `true`, spécifie une recherche dans les cadres.
 
-<h3 id="Retourne">Retourne</h3>
+### Retourne
 
-<p><code>true</code> si la chaîne est trouvé; autrement, <code>false</code>.</p>
+`true` si la chaîne est trouvé; autrement, `false`.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">findString = function findText(text) {
+```js
+findString = function findText(text) {
   alert("String \x22" + text + "\x22 found? " + window.find(text));
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Apples, Bananas, and Oranges.&lt;/p&gt;
-&lt;button type="button" onClick='findString("Apples")'&gt;Search for Apples&lt;/button&gt;
-&lt;button type="button" onClick='findString("Banana")'&gt;Search for Banana&lt;/button&gt;
-&lt;button type="button" onClick='findString("Orange")'&gt;Search for Orange&lt;/button&gt;
-</pre>
+```html
+<p>Apples, Bananas, and Oranges.</p>
+<button type="button" onClick='findString("Apples")'>Search for Apples</button>
+<button type="button" onClick='findString("Banana")'>Search for Banana</button>
+<button type="button" onClick='findString("Orange")'>Search for Orange</button>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Dans certains navigateurs, <code>Window.find()</code> sélectionne (met en évidence) le contenu trouvé sur le site.</p>
+Dans certains navigateurs, `Window.find()` sélectionne (met en évidence) le contenu trouvé sur le site.
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<p>Cela ne fait partie d'aucune spécification.</p>
+Cela ne fait partie d'aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>Cette méthode fonctionne dans de nombreux navigateurs modernes, notamment Firefox, Chrome, et Safari.</p>
+Cette méthode fonctionne dans de nombreux navigateurs modernes, notamment Firefox, Chrome, et Safari.

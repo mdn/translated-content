@@ -8,46 +8,37 @@ tags:
   - Reference
 translation_of: Web/API/Document/compatMode
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>Indique si le document est affiché en mode dégradé (<a href="/fr/docs/Mode_quirks_de_Mozilla">Quirks mode</a>) ou dans le respect des standards.</p>
+Indique si le document est affiché en mode dégradé ([Quirks mode](/fr/docs/Mode_quirks_de_Mozilla)) ou dans le respect des standards.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>mode</em> = document.compatMode
-</pre>
+    mode = document.compatMode
 
-<h2 id="Valeurs">Valeurs</h2>
+## Valeurs
 
-<ul>
- <li><code>"BackCompat"</code> si le document est a ffiché en mode   "quirks" ; </li>
-</ul>
+- `"BackCompat"` si le document est a ffiché en mode   "quirks" ;
 
-<dl>
- <dt>mode</dt>
- <dd>est une  valeur énumérée qui peut être :</dd>
-</dl>
+<!---->
 
-<ul>
- <li><code>"CSS1Compat"</code> si le document est affiché en mode "no-quirks" (aussi connu sous le nom de mode "standard") ou "limited-quirks" (mo de "proche du standard").</li>
-</ul>
+- mode
+  - : est une  valeur énumérée qui peut être :
 
-<dl>
-</dl>
+<!---->
 
-<div class="note">
-<p><strong>Note :</strong> tous ces modes sont maintenant définis dans les normes, de sorte que les anciens «standards» et «presque standards» sont absurdes et ne sont plus utilisés dans les normes.</p>
-</div>
+- `"CSS1Compat"` si le document est affiché en mode "no-quirks" (aussi connu sous le nom de mode "standard") ou "limited-quirks" (mo de "proche du standard").
 
-<h2 id="Example">Exemple</h2>
+<!---->
 
-<pre class="eval">if (document.compatMode == "BackCompat") {
-  // en mode Quirks
-}
-</pre>
+> **Note :** tous ces modes sont maintenant définis dans les normes, de sorte que les anciens «standards» et «presque standards» sont absurdes et ne sont plus utilisés dans les normes.
 
-<h2 id="Specification">Spécifications</h2>
+## Exemple
 
-<ul>
- <li><a href="http://dom.spec.whatwg.org/#dom-document-compatmode">DOM: Document.compatMode</a></li>
-</ul>
+    if (document.compatMode == "BackCompat") {
+      // en mode Quirks
+    }
+
+## Spécifications
+
+- [DOM: Document.compatMode](http://dom.spec.whatwg.org/#dom-document-compatmode)

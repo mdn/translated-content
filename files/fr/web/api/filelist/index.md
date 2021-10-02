@@ -7,65 +7,67 @@ tags:
   - Files
 translation_of: Web/API/FileList
 ---
-<div>{{APIRef("File API")}}{{gecko_minversion_header("1.9")}}</div>
+{{APIRef("File API")}}{{gecko_minversion_header("1.9")}}
 
-<p>Un objet <strong><code>FileList</code></strong> est renvoyé par la propriété <code>files</code> d'un élément HTML {{HTMLElement("input")}}. Il permet d'accéder à la liste des fichiers sélectionnés via l'élément <code>&lt;input type="file"&gt;</code>. Cet objet peut également être utilisé pour les fichiers glissés-déposés dans du contenu web via l'<a href="/fr/docs/Web/API/API_HTML_Drag_and_Drop">API Drag &amp; Drop</a> (voir l'objet <a href="/fr/docs/Web/API/DataTransfer"><code>DataTransfer</code></a> pour plus de détails).</p>
+Un objet **`FileList`** est renvoyé par la propriété `files` d'un élément HTML {{HTMLElement("input")}}. Il permet d'accéder à la liste des fichiers sélectionnés via l'élément `<input type="file">`. Cet objet peut également être utilisé pour les fichiers glissés-déposés dans du contenu web via l'[API Drag & Drop](/fr/docs/Web/API/API_HTML_Drag_and_Drop) (voir l'objet [`DataTransfer`](/fr/docs/Web/API/DataTransfer) pour plus de détails).
 
-<h2 id="Utiliser_une_liste_de_fichiers">Utiliser une liste de fichiers</h2>
+## Utiliser une liste de fichiers
 
-<p>Tous les éléments <code>&lt;input&gt;</code> possèdent un attribut <code>files</code> de type <code>FileList</code> qui permet d'accéder aux éléments de cette liste. Ainsi, si le code HTML utilisé est :</p>
+Tous les éléments `<input>` possèdent un attribut `files` de type `FileList` qui permet d'accéder aux éléments de cette liste. Ainsi, si le code HTML utilisé est :
 
-<pre>&lt;input id="fileItem" type="file"&gt;
-</pre>
+    <input id="fileItem" type="file">
 
-<p>On pourra utiliser la ligne suivant pour récupérer le premier fichier de la liste sous la forme d'un objet <a href="/fr/docs/Web/API/File"><code>File</code></a> :</p>
+On pourra utiliser la ligne suivant pour récupérer le premier fichier de la liste sous la forme d'un objet [`File`](/fr/docs/Web/API/File) :
 
-<pre class="brush: js">var file = document.getElementById('fileItem').files[0]</pre>
+```js
+var file = document.getElementById('fileItem').files[0]
+```
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Attribut</td>
-   <td class="header">Type</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
-   <td><code>length</code></td>
-   <td><code>integer</code></td>
-   <td>Une valeur en lecture seule qui indique le nombre de fichier dans la liste.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td class="header">Attribut</td>
+      <td class="header">Type</td>
+      <td class="header">Description</td>
+    </tr>
+    <tr>
+      <td><code>length</code></td>
+      <td><code>integer</code></td>
+      <td>
+        Une valeur en lecture seule qui indique le nombre de fichier dans la
+        liste.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<h3 id="item()"><code>item()</code></h3>
+### `item()`
 
-<p>Cette méthode renvoie un objet <a href="/fr/docs/Web/API/File"><code>File</code></a> qui représente le fichier à l'indice fourni.</p>
+Cette méthode renvoie un objet [`File`](/fr/docs/Web/API/File) qui représente le fichier à l'indice fourni.
 
-<pre> File item(
-   index
- );
-</pre>
+     File item(
+       index
+     );
 
-<h4 id="Paramètres">Paramètres</h4>
+#### Paramètres
 
-<dl>
- <dt><code>index</code></dt>
- <dd>Un indice (commençant à partir de zéro) indiquant le fichier qu'on souhaite récupérer de la liste.</dd>
-</dl>
+- `index`
+  - : Un indice (commençant à partir de zéro) indiquant le fichier qu'on souhaite récupérer de la liste.
 
-<h4 id="Valeur_de_retour">Valeur de retour</h4>
+#### Valeur de retour
 
-<p>L'objet <a href="/fr/docs/Web/API/File"><code>File</code></a> qui représente le fichier demandé.</p>
+L'objet [`File`](/fr/docs/Web/API/File) qui représente le fichier demandé.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans cet exemple, on parcourt l'ensemble des fichiers sélectionnés par l'utilisateur via un élément {{HTMLElement("input")}} :</p>
+Dans cet exemple, on parcourt l'ensemble des fichiers sélectionnés par l'utilisateur via un élément {{HTMLElement("input")}} :
 
-<pre class="brush:js">// fileInput est un élément HTML input : &lt;input type="file" id="myfileinput" multiple&gt;
+```js
+// fileInput est un élément HTML input : <input type="file" id="myfileinput" multiple>
 var fileInput = document.getElementById("myfileinput");
 
 // files est un objet FileList (semblable à NodeList)
@@ -73,30 +75,33 @@ var files = fileInput.files;
 var file;
 
 // on parcourt les fichiers
-for (var i = 0; i &lt; files.length; i++) {
+for (var i = 0; i < files.length; i++) {
     // on récupère le i-ème fichier
     file = files.item(i);
     // ou encore
     file = files[i];
     console.log(file.name);
 }
-</pre>
+```
 
-<h3 id="Exemple_complet">Exemple complet</h3>
+### Exemple complet
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input id="myfiles" multiple type="file"&gt;</pre>
+```html
+<input id="myfiles" multiple type="file">
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var recupererFichiers = function() {
+```js
+var recupererFichiers = function() {
   var fichiersInput = document.querySelector("#myFiles");
   var fichiers = fichiersInput.files;
 
   var nbFichiers = fichiers.length;
   var i = 0;
-  while(i &lt; nbFichiers){
+  while(i < nbFichiers){
     var fichier = fichiers[i];
     console.log(fichier.name);
     i++;
@@ -105,44 +110,26 @@ for (var i = 0; i &lt; files.length; i++) {
 
 // On invoque cette fonction pour chaque modification apportée à l'élément
 // input
-document.querySelector("#myFiles").onchange = recupererFichiers;</pre>
+document.querySelector("#myFiles").onchange = recupererFichiers;
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Exemple_complet")}}</p>
+{{EmbedLiveSample("Exemple_complet")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('File API', '#filelist-section', 'FileList')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#concept-input-type-file-selected', 'selected files')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                             | Commentaires |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
+| {{SpecName('File API', '#filelist-section', 'FileList')}}                                 | {{Spec2('File API')}}     |              |
+| {{SpecName('HTML WHATWG', '#concept-input-type-file-selected', 'selected files')}} | {{Spec2('HTML WHATWG')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.FileList")}}</p>
+{{Compat("api.FileList")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/File/Using_files_from_web_applications">Utiliser des fichiers dans des applications web</a></li>
- <li><code><a href="/fr/docs/Web/API/File">File</a></code></li>
- <li><code><a href="/fr/docs/Web/API/FileReader">FileReader</a></code></li>
-</ul>
+- [Utiliser des fichiers dans des applications web](/fr/docs/Web/API/File/Using_files_from_web_applications)
+- [`File`](/fr/docs/Web/API/File)
+- [`FileReader`](/fr/docs/Web/API/FileReader)

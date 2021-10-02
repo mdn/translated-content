@@ -3,55 +3,39 @@ title: ServiceWorkerContainer.getRegistration()
 slug: Web/API/ServiceWorkerContainer/getRegistration
 translation_of: Web/API/ServiceWorkerContainer/getRegistration
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>La méthode <strong><code>getRegistration()</code></strong> de l'interface {{domxref("ServiceWorkerContainer")}} fournis un objet {{domxref("ServiceWorkerRegistration")}} dont la porté inclue l'URL du document. Cette méthode retourne une {{jsxref("Promise")}} qui se résout avec un {{domxref("ServiceWorkerRegistration")}} ou <code>undefined</code>.</p>
+La méthode **`getRegistration()`** de l'interface {{domxref("ServiceWorkerContainer")}} fournis un objet {{domxref("ServiceWorkerRegistration")}} dont la porté inclue l'URL du document. Cette méthode retourne une {{jsxref("Promise")}} qui se résout avec un {{domxref("ServiceWorkerRegistration")}} ou `undefined`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>serviceWorkerContainer</em>.getRegistration(<em>scope</em>).then(function(<em>serviceWorkerRegistration</em>) { ... });</pre>
+    serviceWorkerContainer.getRegistration(scope).then(function(serviceWorkerRegistration) { ... });
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>scope</code> {{optional_inline}}</dt>
- <dd>Un identifiant unique pour l'enregistrement du service worker que vous voulez récupérer. L'URL de porté de l'enregistrement . C'est souvent une URL relative.</dd>
-</dl>
+- `scope` {{optional_inline}}
+  - : Un identifiant unique pour l'enregistrement du service worker que vous voulez récupérer. L'URL de porté de l'enregistrement . C'est souvent une URL relative.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une {{domxref("Promise")}} qui est résolue avec un objet {{domxref("ServiceWorkerRegistration")}} ou <code>undefined</code>.</p>
+Une {{domxref("Promise")}} qui est résolue avec un objet {{domxref("ServiceWorkerRegistration")}} ou `undefined`.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">navigator.serviceWorker.getRegistration('/app').then(function(registration) {
+```js
+navigator.serviceWorker.getRegistration('/app').then(function(registration) {
   if(registration){
     document.querySelector('#status').textContent = 'ServiceWorkerRegistration found.';
   }
 });
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statuts</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-serviceworkercontainer-getregistration', 'ServiceWorkerContainer: getRegistration')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                    | Statuts                              | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('Service Workers', '#dom-serviceworkercontainer-getregistration', 'ServiceWorkerContainer: getRegistration')}} | {{Spec2('Service Workers')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>
-
-
-<p>{{Compat("api.ServiceWorkerContainer.getRegistration")}}</p>
-</div>
+{{Compat("api.ServiceWorkerContainer.getRegistration")}}

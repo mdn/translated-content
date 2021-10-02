@@ -10,28 +10,28 @@ tags:
   - WebGL
 translation_of: Web/API/WebGL_API/By_example/Hello_GLSL
 ---
-<div>{{IncludeSubnav("/fr/Apprendre")}}</div>
+{{IncludeSubnav("/fr/Apprendre")}}
 
-<p>{{PreviousNext("Apprendre/WebGL/Par_exemple/Une_pluie_de_rectangle","Apprendre/WebGL/Par_exemple/Introduction_aux_attributs_vertex")}}</p>
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Une_pluie_de_rectangle","Apprendre/WebGL/Par_exemple/Introduction_aux_attributs_vertex")}}
 
-<p>Dans cet article, on décrit un programme de manipulation de <em>shaders</em> qui dessine un carré de couleur.</p>
+Dans cet article, on décrit un programme de manipulation de _shaders_ qui dessine un carré de couleur.
 
-<div class="note">
-<p><strong>Note :</strong> Cet exemple devrait fonctionner pour l'ensemble des navigateurs récents. Cependant, pour les versions anciennes ou mobiles, il peut y avoir des dysfonctionnements. Si le canevas reste blanc, vous pouvez vérifier le résultat avec l'exemple suivant qui dessine exactement la même chose. Assurez-vous de bien lire les explications et le code présent sur cette page avant de passer à la suivante.</p>
-</div>
+> **Note :** Cet exemple devrait fonctionner pour l'ensemble des navigateurs récents. Cependant, pour les versions anciennes ou mobiles, il peut y avoir des dysfonctionnements. Si le canevas reste blanc, vous pouvez vérifier le résultat avec l'exemple suivant qui dessine exactement la même chose. Assurez-vous de bien lire les explications et le code présent sur cette page avant de passer à la suivante.
 
-<p>{{EmbedLiveSample("Hello_World_en_GLSL",660,425)}}</p>
+{{EmbedLiveSample("Hello_World_en_GLSL",660,425)}}
 
-<h3 id="Hello_World_en_GLSL"><em>Hello World</em> en GLSL</h3>
+### _Hello World_ en GLSL
 
-<p>Voici un exemple de premier programme qu'on peut écrire pour manipuler des <em>shaders</em>.</p>
+Voici un exemple de premier programme qu'on peut écrire pour manipuler des _shaders_.
 
-<pre class="brush: html hidden">&lt;p&gt;Hello World! Hello GLSL!&lt;/p&gt;
-&lt;canvas&gt;Votre navigateur semble ne pas
-    supporter l'élément HTML5.&lt;/canvas&gt;
-</pre>
+```html hidden
+<p>Hello World! Hello GLSL!</p>
+<canvas>Votre navigateur semble ne pas
+    supporter l'élément HTML5.</canvas>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   text-align : center;
 }
 canvas {
@@ -49,29 +49,33 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;script type="x-shader/x-vertex" id="vertex-shader"&gt;
+```html
+<script type="x-shader/x-vertex" id="vertex-shader">
 #version 100
 void main() {
   gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
   gl_PointSize = 64.0;
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<pre class="brush: html">&lt;script type="x-shader/x-fragment" id="fragment-shader"&gt;
+```html
+<script type="x-shader/x-fragment" id="fragment-shader">
 #version 100
 void main() {
   gl_FragColor = vec4(0.18, 0.54, 0.34, 1.0);
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<pre class="brush: js hidden">;(function(){
-</pre>
+```js hidden
+;(function(){
+```
 
-<pre class="brush: js">"use strict"
+```js
+"use strict"
 window.addEventListener("load", setupWebGL, false);
 var gl,
   program;
@@ -128,9 +132,10 @@ if (buffer)
 if (program)
   gl.deleteProgram(program);
 }
-</pre>
+```
 
-<pre class="brush: js hidden">function getRenderingContext() {
+```js hidden
+function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
@@ -149,11 +154,12 @@ if (program)
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;
 }
-</pre>
+```
 
-<pre class="brush: js hidden">})();
-</pre>
+```js hidden
+})();
+```
 
-<p>Le code source de cet exemple est également disponible sur <a href="https://github.com/idofilin/webgl-by-example/tree/master/hello-glsl">GitHub</a>.</p>
+Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/hello-glsl).
 
-<p>{{PreviousNext("Apprendre/WebGL/Par_exemple/Une_pluie_de_rectangle","Apprendre/WebGL/Par_exemple/Introduction_aux_attributs_vertex")}}</p>
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Une_pluie_de_rectangle","Apprendre/WebGL/Par_exemple/Introduction_aux_attributs_vertex")}}

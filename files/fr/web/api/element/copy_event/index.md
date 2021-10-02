@@ -4,104 +4,63 @@ slug: Web/API/Element/copy_event
 translation_of: Web/API/Element/copy_event
 original_slug: Web/Events/copy
 ---
-<p>L'événement <strong>copy</strong> est déclenché lorsque l'utilisateur initie une copie par le biais de l'interface du navigateur (par exemple, Ctrl/Cmd+C ou "copier" du menu contextuel) et en réponse d'un appel de {{domxref("Document.execCommand", "document.execCommand('copy')")}} autorisé.</p>
+L'événement **copy** est déclenché lorsque l'utilisateur initie une copie par le biais de l'interface du navigateur (par exemple, Ctrl/Cmd+C ou "copier" du menu contextuel) et en réponse d'un appel de {{domxref("Document.execCommand", "document.execCommand('copy')")}} autorisé.
 
-<h2 id="Informations_générales">Informations générales</h2>
+## Informations générales
 
-<dl>
- <dt>Spécification</dt>
- <dd><a href="https://www.w3.org/TR/clipboard-apis/#the-copy-action">Clipboard</a></dd>
- <dt>Interface</dt>
- <dd>{{domxref("ClipboardEvent")}}</dd>
- <dt>Propagation</dt>
- <dd>Oui</dd>
- <dt>Annulable</dt>
- <dd>Oui</dd>
- <dt>Cible</dt>
- <dd>{{domxref("Element")}}: L'élément ayant le focus (pour les éléments {{domxref("HTMLElement.contentEditable", "contentEditable")}} - l'élément contenant le début de la sélection), ou l'élément {{HTMLElement("body")}}</dd>
- <dt>Action par défaut</dt>
- <dd>Voir ce-dessous</dd>
-</dl>
+- Spécification
+  - : [Clipboard](https://www.w3.org/TR/clipboard-apis/#the-copy-action)
+- Interface
+  - : {{domxref("ClipboardEvent")}}
+- Propagation
+  - : Oui
+- Annulable
+  - : Oui
+- Cible
+  - : {{domxref("Element")}}: L'élément ayant le focus (pour les éléments {{domxref("HTMLElement.contentEditable", "contentEditable")}} - l'élément contenant le début de la sélection), ou l'élément {{HTMLElement("body")}}
+- Action par défaut
+  - : Voir ce-dessous
 
-<p>Un gestionnaire de cet événement peut modifier l'objet {{domxref("ClipboardEvent.clipboardData")}} en appellant {{domxref("DataTransfer.setData", "setData(format, data)")}}:</p>
+Un gestionnaire de cet événement peut modifier l'objet {{domxref("ClipboardEvent.clipboardData")}} en appellant {{domxref("DataTransfer.setData", "setData(format, data)")}}:
 
-<pre class="brush: js">document.addEventListener('copy', function(e){
+```js
+document.addEventListener('copy', function(e){
     e.clipboardData.setData('text/plain', 'Hello, world!');
-    e.clipboardData.setData('text/html', '&lt;b&gt;Hello, world!&lt;/b&gt;');
+    e.clipboardData.setData('text/html', '<b>Hello, world!</b>');
     e.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
-});</pre>
+});
+```
 
-<p>Un gestionnaire de cet événement ne peut pas lire les données du presse-papiers en utilisant {{domxref("DataTransfer.getData", "clipboardData.getData()")}}.</p>
+Un gestionnaire de cet événement ne peut pas lire les données du presse-papiers en utilisant {{domxref("DataTransfer.getData", "clipboardData.getData()")}}.
 
-<p>L'action par défaut de l'événement dépend de la source de celui-ci et du comportement du gestionnaire:</p>
+L'action par défaut de l'événement dépend de la source de celui-ci et du comportement du gestionnaire:
 
-<ul>
- <li>Un événement de copie <a href="/fr/docs/Web/Guide/Events/Creating_and_triggering_events">synthétique</a> n'a pas d'action par défaut;</li>
- <li>Si l'événement n'a pas été annulé: Copie de la sélection (s'il y a) dans le presse-papiers;</li>
- <li>Si le gestionnaire a annulé l'événement et appelé setData(): Copie le contenu de <em>clipboardData</em> de {{domxref("ClipboardEvent")}};</li>
- <li>Si le gestionnaire a annulé l'événement sans appelé setData(): Aucune action.</li>
-</ul>
+- Un événement de copie [synthétique](/fr/docs/Web/Guide/Events/Creating_and_triggering_events) n'a pas d'action par défaut;
+- Si l'événement n'a pas été annulé: Copie de la sélection (s'il y a) dans le presse-papiers;
+- Si le gestionnaire a annulé l'événement et appelé setData(): Copie le contenu de _clipboardData_ de {{domxref("ClipboardEvent")}};
+- Si le gestionnaire a annulé l'événement sans appelé setData(): Aucune action.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
- </tbody>
-</table>
+| Property                              | Type                                 | Description                                            |
+| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Clipboard API', '#clipboard-event-copy')}}</td>
-      <td>{{Spec2('Clipboard API')}}</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                            | Statut                               |
+| ------------------------------------------------------------------------ | ------------------------------------ |
+| {{SpecName('Clipboard API', '#clipboard-event-copy')}} | {{Spec2('Clipboard API')}} |
 
-<h2 id="Browser_compatibility">Compatibilités navigateur</h2>
+## Compatibilités navigateur
 
-<p>{{Compat("api.Element.copy_event")}}</p>
+{{Compat("api.Element.copy_event")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>Événements relatifs : {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}</li>
-  <li>Cet événement sur {{domxref("Document")}} cible : {{domxref("Document/copy_event", "copy")}}</li>
-  <li>Cet événement sur {{domxref("Window")}} cible : {{domxref("Window/copy_event", "copy")}}</li>
-</ul>
-   
+- Événements relatifs : {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
+- Cet événement sur {{domxref("Document")}} cible : {{domxref("Document/copy_event", "copy")}}
+- Cet événement sur {{domxref("Window")}} cible : {{domxref("Window/copy_event", "copy")}}

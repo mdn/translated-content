@@ -3,68 +3,62 @@ title: AudioNode
 slug: Web/API/AudioNode
 translation_of: Web/API/AudioNode
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>L'interface <strong><code>AudioNode</code></strong> est une interface générique pour représenter un module de traitement audio tel qu'une source audio {{HTMLElement("audio")}}, un élément {{HTMLElement("video")}}, un {{domxref("OscillatorNode")}}, une sortie audio, ou un module de traitement intermédiaire  (filtres {{domxref("BiquadFilterNode")}} ou {{domxref("ConvolverNode")}}), un contrôle de volume {{domxref("GainNode")}}.</p>
+L'interface **`AudioNode`** est une interface générique pour représenter un module de traitement audio tel qu'une source audio {{HTMLElement("audio")}}, un élément {{HTMLElement("video")}}, un {{domxref("OscillatorNode")}}, une sortie audio, ou un module de traitement intermédiaire  (filtres {{domxref("BiquadFilterNode")}} ou {{domxref("ConvolverNode")}}), un contrôle de volume {{domxref("GainNode")}}.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<p><img alt="Des objets AudioNode participant à un objet AudioContext pour créer un graphe de routage audio." src="webaudiobasics.png"></p>
+![Des objets AudioNode participant à un objet AudioContext pour créer un graphe de routage audio.](webaudiobasics.png)
 
+Un `AudioNode` a des entrées et sorties, chacune avec un certain nombre de _canaux_.\* *Un `AudioNode` avec zero entrée et une ou plusieurs sorties est appelée un *noeud source\*. Le traitement exact varie d'un `AudioNode` à l'autre; en général un noeud lit l'entrée, réalise un traitement, et génère de nouvelles valeurs pour la sortie, ou laisse simplement l'entrée traverser (par exemple dans le cas de l'{{domxref("AnalyserNode")}}, où le résultat du traitment du traitement est accessible à part).
 
-<p>Un <code>AudioNode</code> a des entrées et sorties, chacune avec un certain nombre de <em>canaux</em>.<em> </em>Un <code>AudioNode</code> avec zero entrée et une ou plusieurs sorties est appelée un <em> noeud source</em>. Le traitement exact varie d'un <code>AudioNode</code> à l'autre; en général un noeud lit l'entrée, réalise un traitement, et génère de nouvelles valeurs pour la sortie, ou laisse simplement l'entrée traverser (par exemple dans le cas de l'{{domxref("AnalyserNode")}}, où le résultat du traitment du traitement est accessible à part).</p>
+Plusieurs noeuds peuvent être reliés dans un _graphe de traitement_. Un tel graphe est contenu dans un {{domxref("AudioContext")}}. Chaque `AudioNode` fait partie d'exactement un contexte. Les noeuds de traitement héritent des  propriétés et méthodse d'`AudioNode`, mais définissent aussi leurs propres fonctionnalités par dessus. Pour plus de détails, voir les pages individuelles liées sur la page d'accueil [Web Audio API](/en-US/docs/Web/API/Web_Audio_API).
 
-<p>Plusieurs noeuds peuvent être reliés dans un <em>graphe de traitement</em>. Un tel graphe est contenu dans un {{domxref("AudioContext")}}. Chaque <code>AudioNode</code> fait partie d'exactement un contexte. Les noeuds de traitement héritent des  propriétés et méthodse d'<code>AudioNode</code>, mais définissent aussi leurs propres fonctionnalités par dessus. Pour plus de détails, voir les pages individuelles liées sur la page d'accueil <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>.</p>
+> **Note :** Un `AudioNode` peut être la cible d'évènements, et implémente donc l'interface {{domxref("EventTarget")}}.
 
-<div class="note">
-<p><strong>Note :</strong> Un <code>AudioNode</code> peut être la cible d'évènements, et implémente donc l'interface {{domxref("EventTarget")}}.</p>
-</div>
+## Propriétés
 
-<h2 id="Propriétés">Propriétés</h2>
+- {{domxref("AudioNode.context")}} {{readonlyInline}}
+  - : Renvoie le {{domxref("AudioContext")}} associé, c'est-à-dire l'objet représentant le graphe de traitement dont le noeud fait partie.
 
-<dl>
- <dt>{{domxref("AudioNode.context")}} {{readonlyInline}}</dt>
- <dd>Renvoie le {{domxref("AudioContext")}} associé, c'est-à-dire l'objet représentant le graphe de traitement dont le noeud fait partie.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}</dt>
- <dd>Renvoie le nombre d'entrées d'un noeud. Les noeuds source sont des noeuds dont la propriété <code>numberOfInputs</code> a la valeur <code>0</code>.</dd>
-</dl>
+- {{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}
+  - : Renvoie le nombre d'entrées d'un noeud. Les noeuds source sont des noeuds dont la propriété `numberOfInputs` a la valeur `0`.
 
-<dl>
- <dt>{{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}</dt>
- <dd>Renvoie le nombre de sorties d'un noeud. Les noeuds de destination — comme {{ domxref("AudioDestinationNode") }} — sont des noeuds dont cette propriété a la valeur <code>0</code>.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("AudioNode.channelCount")}}</dt>
- <dd>Représente un entier utilisé pour déterminer le nombre de canaux lors d'une <a href="/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Conversion_ascendante_et_descendante">conversion ascendante ou descendante</a>. Son usage et sa définition précise dépendent de la valeur de {{domxref("AudioNode.channelCountMode")}}.</dd>
-</dl>
+- {{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}
+  - : Renvoie le nombre de sorties d'un noeud. Les noeuds de destination — comme {{ domxref("AudioDestinationNode") }} — sont des noeuds dont cette propriété a la valeur `0`.
 
-<dl>
- <dt>{{domxref("AudioNode.channelCountMode")}}</dt>
- <dd>Représente une liste énumérative qui décrit la façon dont les canaux doivent être connectés entre les entrées et les sorties.</dd>
- <dt>{{domxref("AudioNode.channelInterpretation")}}</dt>
- <dd>Représente une liste énumérative qui décrit la signification des canaux. Cette interprétation définit la façon dont la <a href="/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Conversion_ascendante_et_descendante">conversion ascendante ou descendante</a> est réalisée. Les valeurs possibles sont <code>"speakers"</code> ou <code>"discrete"</code>.</dd>
-</dl>
+<!---->
 
-<h2 id="Méthodes">Méthodes</h2>
+- {{domxref("AudioNode.channelCount")}}
+  - : Représente un entier utilisé pour déterminer le nombre de canaux lors d'une [conversion ascendante ou descendante](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Conversion_ascendante_et_descendante). Son usage et sa définition précise dépendent de la valeur de {{domxref("AudioNode.channelCountMode")}}.
 
-<p><em>Implémente aussi les méthodes de l'interface </em>{{domxref("EventTarget")}}.</p>
+<!---->
 
-<dl>
- <dt>{{domxref("AudioNode.connect()")}}</dt>
- <dd>Permet de connecter une sortie du noeud à l'entrée d'un autre noeud, soit comme données audio, soir comme valeur d'un {{domxref("AudioParam")}}.</dd>
- <dt>{{domxref("AudioNode.disconnect()")}}</dt>
- <dd>Permet de déconnecter le noeud d'un autre noeud auquel il est déjà connecté.</dd>
-</dl>
+- {{domxref("AudioNode.channelCountMode")}}
+  - : Représente une liste énumérative qui décrit la façon dont les canaux doivent être connectés entre les entrées et les sorties.
+- {{domxref("AudioNode.channelInterpretation")}}
+  - : Représente une liste énumérative qui décrit la signification des canaux. Cette interprétation définit la façon dont la [conversion ascendante ou descendante](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Conversion_ascendante_et_descendante) est réalisée. Les valeurs possibles sont `"speakers"` ou `"discrete"`.
 
-<h2 id="Exemple">Exemple</h2>
+## Méthodes
 
-<p>Ce simple extrait de code illustre la creation de quelques noeuds audio, et la façon dont les propriétés et méthodes <code>AudioNode</code> peuvent être utilisées. Vous pouvez trouver d'autres exemples sur n'importe lequel des exemples liés sur la page <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> (par exemple <a href="https://github.com/mdn/violent-theremin">Violent Theremin</a>.) </p>
+_Implémente aussi les méthodes de l'interface_ {{domxref("EventTarget")}}.
 
-<pre class="brush: js">var AudioContext = window.AudioContext || window.webkitAudioContext;
+- {{domxref("AudioNode.connect()")}}
+  - : Permet de connecter une sortie du noeud à l'entrée d'un autre noeud, soit comme données audio, soir comme valeur d'un {{domxref("AudioParam")}}.
+- {{domxref("AudioNode.disconnect()")}}
+  - : Permet de déconnecter le noeud d'un autre noeud auquel il est déjà connecté.
+
+## Exemple
+
+Ce simple extrait de code illustre la creation de quelques noeuds audio, et la façon dont les propriétés et méthodes `AudioNode` peuvent être utilisées. Vous pouvez trouver d'autres exemples sur n'importe lequel des exemples liés sur la page [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) (par exemple [Violent Theremin](https://github.com/mdn/violent-theremin).)
+
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 
 var audioCtx = new AudioContext();
 
@@ -77,31 +71,19 @@ gainNode.connect(audioCtx.destination);
 oscillator.context;
 oscillator.numberOfInputs;
 oscillator.numberOfOutputs;
-oscillator.channelCount;</pre>
+oscillator.channelCount;
+```
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#the-audionode-interface', 'AudioNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | Statut                               | Commentaire |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
+| {{SpecName('Web Audio API', '#the-audionode-interface', 'AudioNode')}} | {{Spec2('Web Audio API')}} |             |
 
-<h2 id="Compatibilité_navigateur">Compatibilité navigateur</h2>
+## Compatibilité navigateur
 
-<p>{{Compat("api.AudioNode")}}</p>
+{{Compat("api.AudioNode")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Utiliser la Web Audio API</a></li>
-</ul>
+- [Utiliser la Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

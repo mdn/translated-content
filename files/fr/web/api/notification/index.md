@@ -9,115 +9,106 @@ tags:
   - Reference
 translation_of: Web/API/Notification
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>L'interface Notification de l'<a href="/fr/docs/Web/API/Notifications_API">API Notifications</a> est utilisée pour configurer et afficher les notifications de bureau à l'utilisateur. L'apparence et les fonctionnalités spécifiques de ces notifications varient selon les plates-formes, mais elles permettent généralement de fournir des informations de manière asynchrone à l'utilisateur.</p>
+L'interface Notification de l'[API Notifications](/fr/docs/Web/API/Notifications_API) est utilisée pour configurer et afficher les notifications de bureau à l'utilisateur. L'apparence et les fonctionnalités spécifiques de ces notifications varient selon les plates-formes, mais elles permettent généralement de fournir des informations de manière asynchrone à l'utilisateur.
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{domxref("Notification.Notification", "Notification()")}}</dt>
- <dd>Créer une nouvelle instance de l'object <code>Notification</code>.</dd>
-</dl>
+- {{domxref("Notification.Notification", "Notification()")}}
+  - : Créer une nouvelle instance de l'object `Notification`.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<h3 id="Propriétés_statiques">Propriétés statiques</h3>
+### Propriétés statiques
 
-<p><em>Ces propriétés ne sont disponibles que sur l'objet </em><code>Notification</code> <em>lui-même.</em></p>
+_Ces propriétés ne sont disponibles que sur l'objet_ `Notification` _lui-même._
 
-<dl>
- <dt>{{domxref("Notification.permission")}} {{readonlyinline}}</dt>
- <dd><p>Une chaîne représentant l'autorisation actuelle d'afficher les notifications. Les valeurs possibles sont:</p>
- <ul>
-  <li><code>denied</code> — L'utilisateur refuse d'afficher des notifications.</li>
-  <li><code>granted</code> — L'utilisateur accepte d'afficher des notifications.</li>
-  <li><code>default</code> — Le choix de l'utilisateur est inconnu et donc le navigateur agira comme si la valeur était refusée.</li>
- </ul>
- </dd>
- <dt>{{domxref("Notification.maxActions")}} {{readonlyinline}}</dt>
- <dd>Le nombre maximal d'actions pris en charge par l'appareil et l'agent utilisateur.</dd>
-</dl>
+- {{domxref("Notification.permission")}} {{readonlyinline}}
 
-<h3 id="Propriétés_de_linstance">Propriétés de l'instance</h3>
+  - : Une chaîne représentant l'autorisation actuelle d'afficher les notifications. Les valeurs possibles sont:
 
-<p><em>Ces propriétés ne sont disponibles que sur les instances de l'objet </em><code>Notification</code><em>.</em></p>
+    - `denied` — L'utilisateur refuse d'afficher des notifications.
+    - `granted` — L'utilisateur accepte d'afficher des notifications.
+    - `default` — Le choix de l'utilisateur est inconnu et donc le navigateur agira comme si la valeur était refusée.
 
-<dl>
- <dt>{{domxref("Notification.actions")}} {{readonlyinline}}</dt>
- <dd>Tableau d'actions de la notification comme spécifié dans le paramètre <code>options</code> du constructeur.</dd>
- <dt>{{domxref("Notification.badge")}} {{readonlyinline}}</dt>
- <dd>L'URL de l'image utilisée pour représenter la notification lorsqu'il n'y a pas assez d'espace pour afficher la notification elle-même.</dd>
- <dt>{{domxref("Notification.body")}} {{readonlyinline}}</dt>
- <dd>Une chaîne représentant le corps de la notification telle que spécifiée dans le paramètre <code>options</code> du constructeur.</dd>
- <dt>{{domxref("Notification.data")}} {{readonlyinline}}</dt>
- <dd>Renvoie un clone structuré des données de la notification.</dd>
- <dt>{{domxref("Notification.dir")}} {{readonlyinline}}</dt>
- <dd>La direction du texte de la notification comme spécifié dans le paramètre <code>options</code> du constructeur.</dd>
- <dt>{{domxref("Notification.lang")}} {{readonlyinline}}</dt>
- <dd>Code de langue de la notification tel que spécifié dans le paramètre <code>options</code> du constructeur.</dd>
- <dt>{{domxref("Notification.tag")}} {{readonlyinline}}</dt>
- <dd>L'ID de la notification (le cas échéant) tel que spécifié dans le paramètre <code>options</code> du constructeur.</dd>
- <dt>{{domxref("Notification.icon")}} {{readonlyinline}}</dt>
- <dd>L'URL de l'image utilisée comme icône de la notification comme spécifié dans le paramètre <code>options</code> du constructeur.</dd>
- <dt>{{domxref("Notification.image")}} {{readonlyinline}}</dt>
- <dd>L'URL d'une image à afficher dans le cadre de la notification, comme spécifié dans le paramètre <code>options</code> du constructeur.</dd>
- <dt>{{domxref("Notification.renotify")}} {{readonlyinline}}</dt>
- <dd>Spécifie si l'utilisateur doit être averti après qu'une nouvelle notification remplace l'ancienne.</dd>
- <dt>{{domxref("Notification.requireInteraction")}} {{readonlyinline}}</dt>
- <dd>Un {{jsxref ("Boolean")}} indiquant qu'une notification doit rester active jusqu'à ce que l'utilisateur clique dessus ou la rejette, plutôt que de se fermer automatiquement.</dd>
- <dt>{{domxref("Notification.silent")}} {{readonlyinline}}</dt>
- <dd>Spécifie si la notification doit être silencieuse, c'est-à-dire qu'aucun son ou vibration ne doit être émis, quels que soient les paramètres de l'appareil.</dd>
- <dt>{{domxref("Notification.timestamp")}} {{readonlyinline}}</dt>
- <dd>Spécifie l'heure à laquelle une notification est créée ou applicable (passée, présente ou future).</dd>
- <dt>{{domxref("Notification.title")}} {{readonlyinline}}</dt>
- <dd>Le titre de la notification tel que spécifié dans le premier paramètre du constructeur.</dd>
- <dt>{{domxref("Notification.vibrate")}} {{readonlyinline}}</dt>
- <dd>Spécifie un modèle de vibration pour les périphériques dotés d'un matériel de vibration à émettre.</dd>
-</dl>
+- {{domxref("Notification.maxActions")}} {{readonlyinline}}
+  - : Le nombre maximal d'actions pris en charge par l'appareil et l'agent utilisateur.
 
-<h3 id="Gestionnaires_dévénements">Gestionnaires d'événements</h3>
+### Propriétés de l'instance
 
-<dl>
- <dt>{{domxref("Notification.onclick")}}</dt>
- <dd>Un gestionnaire pour l'événement {{domxref ("Element/click_event", "click")}}. Il est déclenché à chaque fois que l'utilisateur clique sur la notification.</dd>
- <dt>{{domxref("Notification.onclose")}}</dt>
- <dd>Un gestionnaire pour l'événement {{domxref ("HTMLDialogElement/close_event", "close")}}. Il est déclenché lorsque l'utilisateur ferme la notification.</dd>
- <dt>{{domxref("Notification.onerror")}}</dt>
- <dd>Un gestionnaire pour l'événement {{domxref ("HTMLElement/error_event", "error")}}. Il est déclenché chaque fois que la notification rencontre une erreur.</dd>
- <dt>{{domxref("Notification.onshow")}}</dt>
- <dd>Un gestionnaire pour l'événement {{domxref ("Element/show_event", "show")}}. Il est déclenché lorsque la notification est affichée.</dd>
-</dl>
+_Ces propriétés ne sont disponibles que sur les instances de l'objet_ `Notification`_._
 
-<h2 id="Méthodes">Méthodes</h2>
+- {{domxref("Notification.actions")}} {{readonlyinline}}
+  - : Tableau d'actions de la notification comme spécifié dans le paramètre `options` du constructeur.
+- {{domxref("Notification.badge")}} {{readonlyinline}}
+  - : L'URL de l'image utilisée pour représenter la notification lorsqu'il n'y a pas assez d'espace pour afficher la notification elle-même.
+- {{domxref("Notification.body")}} {{readonlyinline}}
+  - : Une chaîne représentant le corps de la notification telle que spécifiée dans le paramètre `options` du constructeur.
+- {{domxref("Notification.data")}} {{readonlyinline}}
+  - : Renvoie un clone structuré des données de la notification.
+- {{domxref("Notification.dir")}} {{readonlyinline}}
+  - : La direction du texte de la notification comme spécifié dans le paramètre `options` du constructeur.
+- {{domxref("Notification.lang")}} {{readonlyinline}}
+  - : Code de langue de la notification tel que spécifié dans le paramètre `options` du constructeur.
+- {{domxref("Notification.tag")}} {{readonlyinline}}
+  - : L'ID de la notification (le cas échéant) tel que spécifié dans le paramètre `options` du constructeur.
+- {{domxref("Notification.icon")}} {{readonlyinline}}
+  - : L'URL de l'image utilisée comme icône de la notification comme spécifié dans le paramètre `options` du constructeur.
+- {{domxref("Notification.image")}} {{readonlyinline}}
+  - : L'URL d'une image à afficher dans le cadre de la notification, comme spécifié dans le paramètre `options` du constructeur.
+- {{domxref("Notification.renotify")}} {{readonlyinline}}
+  - : Spécifie si l'utilisateur doit être averti après qu'une nouvelle notification remplace l'ancienne.
+- {{domxref("Notification.requireInteraction")}} {{readonlyinline}}
+  - : Un {{jsxref ("Boolean")}} indiquant qu'une notification doit rester active jusqu'à ce que l'utilisateur clique dessus ou la rejette, plutôt que de se fermer automatiquement.
+- {{domxref("Notification.silent")}} {{readonlyinline}}
+  - : Spécifie si la notification doit être silencieuse, c'est-à-dire qu'aucun son ou vibration ne doit être émis, quels que soient les paramètres de l'appareil.
+- {{domxref("Notification.timestamp")}} {{readonlyinline}}
+  - : Spécifie l'heure à laquelle une notification est créée ou applicable (passée, présente ou future).
+- {{domxref("Notification.title")}} {{readonlyinline}}
+  - : Le titre de la notification tel que spécifié dans le premier paramètre du constructeur.
+- {{domxref("Notification.vibrate")}} {{readonlyinline}}
+  - : Spécifie un modèle de vibration pour les périphériques dotés d'un matériel de vibration à émettre.
 
-<h3 id="Méthodes_statiques">Méthodes statiques</h3>
+### Gestionnaires d'événements
 
-<p><em>Ces méthodes ne sont disponibles que sur l'objet </em><code>Notification</code> <em>lui-même.</em></p>
+- {{domxref("Notification.onclick")}}
+  - : Un gestionnaire pour l'événement {{domxref ("Element/click_event", "click")}}. Il est déclenché à chaque fois que l'utilisateur clique sur la notification.
+- {{domxref("Notification.onclose")}}
+  - : Un gestionnaire pour l'événement {{domxref ("HTMLDialogElement/close_event", "close")}}. Il est déclenché lorsque l'utilisateur ferme la notification.
+- {{domxref("Notification.onerror")}}
+  - : Un gestionnaire pour l'événement {{domxref ("HTMLElement/error_event", "error")}}. Il est déclenché chaque fois que la notification rencontre une erreur.
+- {{domxref("Notification.onshow")}}
+  - : Un gestionnaire pour l'événement {{domxref ("Element/show_event", "show")}}. Il est déclenché lorsque la notification est affichée.
 
-<dl>
- <dt>{{domxref("Notification.requestPermission()")}}</dt>
- <dd>Demande l'autorisation à l'utilisateur d'afficher les notifications.</dd>
-</dl>
+## Méthodes
 
-<h3 id="Méthodes_dinstance">Méthodes d'instance</h3>
+### Méthodes statiques
 
-<p><em>Ces propriétés ne sont disponibles que sur une instance de l'objet </em><code>Notification</code><em> ou via son </em><a href="/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">prototype</a><em>. L'objet </em><code>Notification</code><em> hérite également de l'interface {{domxref ("EventTarget")}}.</em></p>
+_Ces méthodes ne sont disponibles que sur l'objet_ `Notification` _lui-même._
 
-<dl>
- <dt>{{domxref("Notification.close()")}}</dt>
- <dd>Ferme programmatiquement une instance de notification.</dd>
-</dl>
+- {{domxref("Notification.requestPermission()")}}
+  - : Demande l'autorisation à l'utilisateur d'afficher les notifications.
 
-<h2 id="Exemples">Exemples</h2>
+### Méthodes d'instance
 
-<p>Supposons ce HTML de base:</p>
+_Ces propriétés ne sont disponibles que sur une instance de l'objet_ `Notification` _ou via son_ [prototype](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)_. L'objet_ `Notification` _hérite également de l'interface {{domxref ("EventTarget")}}._
 
-<pre class="brush: html">&lt;button onclick="notifyMe()"&gt;Notifie moi !&lt;/button&gt;</pre>
+- {{domxref("Notification.close()")}}
+  - : Ferme programmatiquement une instance de notification.
 
-<p>Il est possible d'envoyer une notification comme suit - nous présentons ici un ensemble de code assez détaillé et complet que vous pourriez utiliser si vous vouliez d'abord vérifier si les notifications sont prises en charge, puis vérifiez si l'autorisation a été accordée pour l'{{glossary("Origin","origine")}} actuelle d'envoyer des notifications, puis demander l'autorisation si nécessaire, avant d'envoyer une notification.</p>
+## Exemples
 
-<pre class="brush: js">function notifyMe() {
+Supposons ce HTML de base:
+
+```html
+<button onclick="notifyMe()">Notifie moi !</button>
+```
+
+Il est possible d'envoyer une notification comme suit - nous présentons ici un ensemble de code assez détaillé et complet que vous pourriez utiliser si vous vouliez d'abord vérifier si les notifications sont prises en charge, puis vérifiez si l'autorisation a été accordée pour l'{{glossary("Origin","origine")}} actuelle d'envoyer des notifications, puis demander l'autorisation si nécessaire, avant d'envoyer une notification.
+
+```js
+function notifyMe() {
   // Vérifions si le navigateur prend en charge les notifications
   if (!('Notification' in window)) {
     alert('Ce navigateur ne prend pas en charge la notification de bureau')
@@ -131,7 +122,7 @@ translation_of: Web/API/Notification
 
   // Sinon, nous devons demander la permission à l'utilisateur
   else if (Notification.permission !== 'denied') {
-    Notification.requestPermission().then((permission) =&gt; {
+    Notification.requestPermission().then((permission) => {
       // Si l'utilisateur accepte, créons une notification
       if (permission === 'granted') {
         const notification = new Notification('Salut toi!')
@@ -142,37 +133,22 @@ translation_of: Web/API/Notification
   // Enfin, si l'utilisateur a refusé les notifications, et que vous
   // voulez être respectueux, il n'est plus nécessaire de les déranger.
 }
-</pre>
+```
 
-<p>Nous ne montrons plus d'exemple en direct sur cette page, car Chrome et Firefox n'autorisent plus les demandes de notification des {{htmlelement ("iframe")}}s d'origine croisée, avec d'autres navigateurs à suivre. Pour voir un exemple en action, consultez notre <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">exemple de liste de tâches</a> (voir également l'<a href="https://mdn.github.io/to-do-notifications/">application en cours d'exécution</a>.)</p>
+Nous ne montrons plus d'exemple en direct sur cette page, car Chrome et Firefox n'autorisent plus les demandes de notification des {{htmlelement ("iframe")}}s d'origine croisée, avec d'autres navigateurs à suivre. Pour voir un exemple en action, consultez notre [exemple de liste de tâches](https://github.com/mdn/to-do-notifications/tree/gh-pages) (voir également l'[application en cours d'exécution](https://mdn.github.io/to-do-notifications/).)
 
-<div class="note">
-<p><strong>Note :</strong> Dans l'exemple ci-dessus, nous générons des notifications en réponse à un geste de l'utilisateur (en cliquant sur un bouton). Il ne s'agit pas seulement d'une bonne pratique - vous ne devriez pas envoyer de spam aux utilisateurs avec des notifications qu'ils n'acceptent pas - mais les navigateurs suivants interdiront explicitement les notifications non déclenchées en réponse à un geste de l'utilisateur. Firefox le fait déjà depuis la version 72, par exemple.</p>
-</div>
+> **Note :** Dans l'exemple ci-dessus, nous générons des notifications en réponse à un geste de l'utilisateur (en cliquant sur un bouton). Il ne s'agit pas seulement d'une bonne pratique - vous ne devriez pas envoyer de spam aux utilisateurs avec des notifications qu'ils n'acceptent pas - mais les navigateurs suivants interdiront explicitement les notifications non déclenchées en réponse à un geste de l'utilisateur. Firefox le fait déjà depuis la version 72, par exemple.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                | État                                     | Commentaire     |
+| -------------------------------------------- | ---------------------------------------- | --------------- |
+| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | Living standard |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Notification")}}</p>
+{{Compat("api.Notification")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a></li>
-</ul>
+- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

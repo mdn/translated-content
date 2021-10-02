@@ -3,35 +3,22 @@ title: Window.focus()
 slug: Web/API/Window/focus
 translation_of: Web/API/Window/focus
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<h2 id="Résumé">Résumé</h2>
+## Résumé
 
-<p>Demande la mise au premier plan de la fenêtre. Cet appel peut échouer en fonction des réglages utilisateurs, et ne garantit pas que la fenêtre sera au-dessus des autres au retour de cette méthode.</p>
+Demande la mise au premier plan de la fenêtre. Cet appel peut échouer en fonction des réglages utilisateurs, et ne garantit pas que la fenêtre sera au-dessus des autres au retour de cette méthode.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval">window.focus()
-</pre>
+    window.focus()
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="eval">if (clicked) { window.focus(); }
-</pre>
+    if (clicked) { window.focus(); }
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','interaction.html#dom-window-focus','Window.focus()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG','interaction.html#dom-window-focus','Window.focus()')}} | {{Spec2('HTML WHATWG')}} |         |

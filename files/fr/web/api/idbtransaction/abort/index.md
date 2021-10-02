@@ -9,35 +9,36 @@ tags:
   - Reference
 translation_of: Web/API/IDBTransaction/abort
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>La méthode <strong><code>abort()</code></strong>, rattachée à l'interface {{domxref("IDBTransaction")}}, permet d'annuler les modifications apportées aux objets de la base de données pendant la transaction courante.</p>
+La méthode **`abort()`**, rattachée à l'interface {{domxref("IDBTransaction")}}, permet d'annuler les modifications apportées aux objets de la base de données pendant la transaction courante.
 
-<p>Tous les objets {{domxref("IDBRequest")}} créés pendant cette transaction verront leur attribut {{domxref("IDBRequest.error")}} prendre la valeur <code>AbortError</code>.</p>
+Tous les objets {{domxref("IDBRequest")}} créés pendant cette transaction verront leur attribut {{domxref("IDBRequest.error")}} prendre la valeur `AbortError`.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">transaction.abort();</pre>
+    transaction.abort();
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Aucune.</p>
+Aucune.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Cette méthode peut déclencher une exception {{domxref("DOMException")}} du type <code>InvalidStateError</code> lorsque la transaction a été validée ou qu'elle a déjà été annulée.</p>
+Cette méthode peut déclencher une exception {{domxref("DOMException")}} du type `InvalidStateError` lorsque la transaction a été validée ou qu'elle a déjà été annulée.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans le fragment de code suivant, on ouvre une transaction en lecture/écriture sur la base de données et on ajoute des données au magasin d'objets. On dispose également de fonctions attachées aux gestionnaires d'évènements de la transaction pour gérer la réussite ou l'échec des opérations. Ensuite, on annule les opérations de la transaction grâce à <code>abort()</code>. Pour un exemple complet, vous pouvez consulter <a href="https://github.com/mdn/to-do-notifications/">notre application de notifications To-do</a> (cf. <a href="https://mdn.github.io/to-do-notifications/">la démonstration <em>live</em></a>).</p>
+Dans le fragment de code suivant, on ouvre une transaction en lecture/écriture sur la base de données et on ajoute des données au magasin d'objets. On dispose également de fonctions attachées aux gestionnaires d'évènements de la transaction pour gérer la réussite ou l'échec des opérations. Ensuite, on annule les opérations de la transaction grâce à `abort()`. Pour un exemple complet, vous pouvez consulter [notre application de notifications To-do](https://github.com/mdn/to-do-notifications/) (cf. [la démonstration _live_](https://mdn.github.io/to-do-notifications/)).
 
-<pre class="brush: js">// On ouvre la base de données
+```js
+// On ouvre la base de données
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Initialisation de la base.&lt;/li&gt;';
+  note.innerHTML += '<li>Initialisation de la base.</li>';
 
   // On enregistre le résultat de l'ouverture dans la
   // variable db afin de l'utiliser ensuite
@@ -59,12 +60,12 @@ function addData() {
 
   // On gère la réussite de la transaction
   transaction.oncomplete = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction terminée : modifications appliquées.&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction terminée : modifications appliquées.</li>';
   };
 
 
   transaction.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction non ouverte à cause d'une erreur.&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction non ouverte à cause d'une erreur.</li>';
   };
 
   // On crée le magasin d'objet pour la transaction
@@ -76,42 +77,30 @@ function addData() {
   objectStoreRequest.onsuccess = function(event) {
     // On gère la réussite de l'ajout de l'élément dans
     // la base de données
-    note.innerHTML += '&lt;li&gt;Nouvel objet ajouté dans la base de données.&lt;/li&gt;';
+    note.innerHTML += '<li>Nouvel objet ajouté dans la base de données.</li>';
   };
 
   // On annule la transaction en cours
   transaction.abort();
-};</pre>
+};
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBTransaction-abort-void', 'abort')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                         | Commentaires |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBTransaction-abort-void', 'abort')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBTransaction.abort")}}</p>
+{{Compat("api.IDBTransaction.abort")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
- <li>Initier une connexion : {{domxref("IDBDatabase")}}</li>
- <li>Utiliser les transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
- <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
-</ul>
+- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Initier une connexion : {{domxref("IDBDatabase")}}
+- Utiliser les transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
+- Utiliser les curseurs {{domxref("IDBCursor")}}
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).

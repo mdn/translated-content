@@ -7,14 +7,22 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/GlobalEventHandlers/onfocus
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
-<p>La propriété <b>onfocus</b> renvoie le gestionnaire de l'évènement <code>focus</code> pour l'élément courant.</p>
-<h3 id="Syntaxe">Syntaxe</h3>
-<pre class="eval">code de gestion de l'évènement = element.onfocus
-</pre>
-<h3 id="Notes">Notes</h3>
-<p>L'évènement focus se déclenche lorsque l'utilisateur donne le focus clavier à l'élément donné.</p>
-<p>Contrairement à Microsoft Internet Explorer, dans lequel presque toutes les sortes d'éléments peuvent recevoir l'évènement focus, presqu'aucune sorte d'élément ne reçoit cet évènement dans les navigateurs utilisant Gecko.</p>
-<h3 id="Sp.C3.A9cification">Spécification</h3>
-<p>{{ DOM0() }}</p>
+{{ ApiRef() }}
+
+### Résumé
+
+La propriété **onfocus** renvoie le gestionnaire de l'évènement `focus` pour l'élément courant.
+
+### Syntaxe
+
+    code de gestion de l'évènement = element.onfocus
+
+### Notes
+
+L'évènement focus se déclenche lorsque l'utilisateur donne le focus clavier à l'élément donné.
+
+Contrairement à Microsoft Internet Explorer, dans lequel presque toutes les sortes d'éléments peuvent recevoir l'évènement focus, presqu'aucune sorte d'élément ne reçoit cet évènement dans les navigateurs utilisant Gecko.
+
+### Spécification
+
+{{ DOM0() }}

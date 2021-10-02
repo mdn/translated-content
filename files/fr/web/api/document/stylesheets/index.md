@@ -5,53 +5,27 @@ translation_of: Web/API/DocumentOrShadowRoot/styleSheets
 translation_of_original: Web/API/Document/styleSheets
 original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}La propriété **`Document.styleSheets `**est en lecture seule et retourne une liste {{domxref("StyleSheetList")}} d'objets {{domxref("StyleSheet")}}, qui font référence à l'ensemble des feuilles de style contenues ou embarquées dans le document.
 
-<div>La propriété <strong><code>Document.styleSheets </code></strong>est en lecture seule et retourne une liste {{domxref("StyleSheetList")}} d'objets {{domxref("StyleSheet")}}, qui font référence à l'ensemble des feuilles de style contenues ou embarquées dans le document.</div>
+## Syntaxe
 
-<div> </div>
+    var styleSheetList = document.styleSheets;
 
-<h2 id="Syntax">Syntaxe</h2>
+L'objet retourné est une liste {{domxref("StyleSheetList")}}.
 
-<pre class="syntaxbox">var <var>styleSheetList</var> = <em>document</em>.styleSheets;
-</pre>
+Il s'agit d'une collection ordonnée d'objets {{domxref("StyleSheet")}}. `styleSheetList.item(index)` ou  `styleSheetList{{ mediawiki.External('<em>index</em>') }}` retourne un seul objet stylesheet par son `index `(`index` débute par 0).
 
-<p>L'objet retourné est une liste {{domxref("StyleSheetList")}}.</p>
+## Spécification
 
-<p>Il s'agit d'une collection ordonnée d'objets {{domxref("StyleSheet")}}. <code><em>styleSheetList</em>.item(<em>index</em>)</code> ou  <code><em>styleSheetList</em>{{ mediawiki.External('<em>index</em>') }}</code> retourne un seul objet stylesheet par son <code>index </code>(<code>index</code> débute par 0).</p>
+| Spécification                                                                                                                        | Statut                           | Commentaire |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('CSSOM', '#dom-document-stylesheets', 'styleSheets')}}                                             | {{Spec2('CSSOM')}}         |             |
+| {{SpecName('DOM2 Style', 'stylesheets.html#StyleSheets-DocumentStyle-styleSheets', 'styleSheets')}} | {{Spec2('DOM2 Style')}} |             |
 
-<h2 id="Specification">Spécification</h2>
+## Voir aussi
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
- </tbody>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM', '#dom-document-stylesheets', 'styleSheets')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'stylesheets.html#StyleSheets-DocumentStyle-styleSheets', 'styleSheets')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+- {{Link("/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information")}}
 
-<h2 id="See_also">Voir aussi</h2>
+<!---->
 
-<ul>
- <li>{{Link("/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information")}}</li>
-</ul>
-
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-DocumentStyle-styleSheets">DOM Level 2 Style: styleSheets</a></li>
-</ul>
+- [DOM Level 2 Style: styleSheets](http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-DocumentStyle-styleSheets)

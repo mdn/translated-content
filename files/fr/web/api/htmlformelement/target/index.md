@@ -3,23 +3,21 @@ title: HTMLFormElement.target
 slug: Web/API/HTMLFormElement/target
 translation_of: Web/API/HTMLFormElement/target
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>La propriété <strong><code>HTMLFormElement.target</code></strong> représente la cible de l'action (i.e., le cadre de destination dans lequel produire le résultat).</p>
+La propriété **`HTMLFormElement.target`** représente la cible de l'action (i.e., le cadre de destination dans lequel produire le résultat).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>string</em> = form.target
-form.target = <em>string</em>
-</pre>
+    string = form.target
+    form.target = string
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="eval">myForm.target = document.frames[1].name;
-</pre>
+    myForm.target = document.frames[1].name;
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<p><a href="http://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method">HTML 5, Section 4.10.19.6, Form submission</a></p>
+[HTML 5, Section 4.10.19.6, Form submission](http://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method)
 
-<p><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-6512890">DOM Level 2 HTML: target</a></p>
+[DOM Level 2 HTML: target](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-6512890)

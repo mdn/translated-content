@@ -8,104 +8,94 @@ tags:
   - Propriétés
 translation_of: Web/API/Element/outerHTML
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>L'attribut <code>outerHTML</code> de l'interface DOM {{domxref("element")}} récupère le fragment HTML sérialisé décrivant l'élément ainsi que ses descendants. Il peut aussi être utilisé pour remplacer l'élément avec les noeuds générés de la chaîne fournie.</p>
+L'attribut `outerHTML` de l'interface DOM {{domxref("element")}} récupère le fragment HTML sérialisé décrivant l'élément ainsi que ses descendants. Il peut aussi être utilisé pour remplacer l'élément avec les noeuds générés de la chaîne fournie.
 
-<p>Pour obtenir uniquement la représentation HTML du contenu d'un élément ou pour remplacer le contenu d'un élément, utilisez plutôt la propriété {{domxref ("Element.innerHTML", "innerHTML")}}.</p>
+Pour obtenir uniquement la représentation HTML du contenu d'un élément ou pour remplacer le contenu d'un élément, utilisez plutôt la propriété {{domxref ("Element.innerHTML", "innerHTML")}}.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: html">var content = element.outerHTML;
+```html
+var content = element.outerHTML;
 
-element.outerHTML = htmlString;</pre>
+element.outerHTML = htmlString;
+```
 
-<h3 class="highlight-spanned" id="Valeur">Valeur</h3>
+### Valeur
 
-<p>La lecture de la valeur de <code>outerHTML</code> renvoie une  {{domxref("DOMString")}} contenant la sérialisation HTML des descendants de l'élément. Définir la valeur de <code>innerHTML</code> supprime tous les descendants et les remplace par les noeuds construits en analysant le HTML donné dans la chaîne <code>htmlString</code>.</p>
+La lecture de la valeur de `outerHTML` renvoie une  {{domxref("DOMString")}} contenant la sérialisation HTML des descendants de l'élément. Définir la valeur de `innerHTML` supprime tous les descendants et les remplace par les noeuds construits en analysant le HTML donné dans la chaîne `htmlString`.
 
-<h3 class="highlight-spanned" id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
- <dt><code>SyntaxError</code></dt>
- <dd>Une tentative a été faite de définir la valeur de <code>outerHTML</code> en utilisant une chaîne qui n'est pas correctement formée HTML.</dd>
- <dt><code>NoModificationAllowedError</code></dt>
- <dd>Une tentative a été faite de définir  <code>outerHTML</code>  sur un élément qui est enfant direct du {{domxref("Document")}}, tel que {{domxref("Document.documentElement")}}.</dd>
-</dl>
+- `SyntaxError`
+  - : Une tentative a été faite de définir la valeur de `outerHTML` en utilisant une chaîne qui n'est pas correctement formée HTML.
+- `NoModificationAllowedError`
+  - : Une tentative a été faite de définir  `outerHTML`  sur un élément qui est enfant direct du {{domxref("Document")}}, tel que {{domxref("Document.documentElement")}}.
 
-<h2 id="Examples">Exemples</h2>
+## Exemples
 
-<p>Récupérer la valeur de la propriété <code>outerHTML</code> d'un élément :</p>
+Récupérer la valeur de la propriété `outerHTML` d'un élément :
 
-<pre class="brush: js">// HTML:
-// &lt;div id="d"&gt;&lt;p&gt;Contenu&lt;/p&gt;&lt;p&gt;Plus Complexe&lt;/p&gt;&lt;/div&gt;
+```js
+// HTML:
+// <div id="d"><p>Contenu</p><p>Plus Complexe</p></div>
 
 d = document.getElementById("d");
 dump(d.outerHTML);
 
-// la chaîne '&lt;div id="d"&gt;&lt;p&gt;Contenu&lt;/p&gt;&lt;p&gt;Plus Complexe&lt;/p&gt;&lt;/div&gt;'
+// la chaîne '<div id="d"><p>Contenu</p><p>Plus Complexe</p></div>'
 // est affichée dans la fenêtre console
-</pre>
+```
 
-<p>Remplacer un noeud en modifiant la propriété <code>outerHTML</code> :</p>
+Remplacer un noeud en modifiant la propriété `outerHTML` :
 
-<pre class="brush: js">// HTML:
-// &lt;div id="container"&gt;&lt;div id="d"&gt;Ceci est un div.&lt;/div&gt;&lt;/div&gt;
+```js
+// HTML:
+// <div id="container"><div id="d">Ceci est un div.</div></div>
 
 container = document.getElementById("container");
 d = document.getElementById("d");
 console.log(container.firstChild.nodeName); // affiche "DIV"
 
-d.outerHTML = "&lt;p&gt;Ce paragraphe remplace le div original.&lt;/p&gt;";
+d.outerHTML = "<p>Ce paragraphe remplace le div original.</p>";
 console.log(container.firstChild.nodeName); // affiche "P"
 
 // Le div #d ne fait plus partie de l'arbre décrivant le document,
 // le nouveau paragraphe l'ayant remplacé.
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Si un élément n'a pas de noeud parent, définir sa propriété <code>outerHTML</code> ne le modifiera pas, ni ses descendants. De nombreux navigateurs déclencheront aussi une exception. Par exemple :</p>
+Si un élément n'a pas de noeud parent, définir sa propriété `outerHTML` ne le modifiera pas, ni ses descendants. De nombreux navigateurs déclencheront aussi une exception. Par exemple :
 
-<pre class="brush: js">var div = document.createElement("div");
-div.outerHTML = "&lt;div class=\"test\"&gt;test&lt;/div&gt;";
-console.log(div.outerHTML); // output: "&lt;div&gt;&lt;/div&gt;"</pre>
+```js
+var div = document.createElement("div");
+div.outerHTML = "<div class=\"test\">test</div>";
+console.log(div.outerHTML); // output: "<div></div>"
+```
 
-<p>Aussi, lorsqu'un élément va être remplacé dans le document, la variable dont la propriété <code>outerHTML</code> a été modifiée contiendra toujours une référence à l'élément initial :</p>
+Aussi, lorsqu'un élément va être remplacé dans le document, la variable dont la propriété `outerHTML` a été modifiée contiendra toujours une référence à l'élément initial :
 
-<pre class="brush: js">var p = document.getElementsByTagName("p")[0];
+```js
+var p = document.getElementsByTagName("p")[0];
 console.log(p.nodeName); // affiche: "P"
-p.outerHTML = "&lt;div&gt;Ce div remplace un paragraph.&lt;/div&gt;";
+p.outerHTML = "<div>Ce div remplace un paragraph.</div>";
 console.log(p.nodeName); // toujours "P";
-</pre>
+```
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#outerhtml', 'Element.outerHTML')}}</td>
-   <td>{{ Spec2('DOM Parsing') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                               | Commentaire |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
+| {{SpecName('DOM Parsing', '#outerhtml', 'Element.outerHTML')}} | {{ Spec2('DOM Parsing') }} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Element.outerHTML")}}</p>
+{{Compat("api.Element.outerHTML")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Sérialisation de l'arborescence DOM en XML ou HTML : {{domxref("XMLSerializer")}}</li>
- <li>Analyse XML ou HTML dans l'arborescence DOM : {{domxref("DOMParser")}}</li>
- <li>{{domxref("HTMLElement.outerText")}}</li>
-</ul>
+- Sérialisation de l'arborescence DOM en XML ou HTML : {{domxref("XMLSerializer")}}
+- Analyse XML ou HTML dans l'arborescence DOM : {{domxref("DOMParser")}}
+- {{domxref("HTMLElement.outerText")}}

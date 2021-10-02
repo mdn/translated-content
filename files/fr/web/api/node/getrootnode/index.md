@@ -9,43 +9,43 @@ tags:
   - Racine
 translation_of: Web/API/Node/getRootNode
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La méthode <strong><code>getRootNode()</code></strong> de l'interface {{domxref("Node")}} renvoie le contexte de la racine de l'objet, qui peut optionnellement inclure la racine "shadow" si elle est disponible.</p>
+La méthode **`getRootNode()`** de l'interface {{domxref("Node")}} renvoie le contexte de la racine de l'objet, qui peut optionnellement inclure la racine "shadow" si elle est disponible.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var root = node.getRootNode(options)</pre>
+    var root = node.getRootNode(options)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>options {{optional_inline}}</dt>
- <dd>Un objet qui définit les options pour obtenir le noeud racine. Les options disponibles sont :
- <ul>
-  <li><code>composed</code> : un {{jsxref('Boolean')}} (<em>booléen</em>) qui indique si la racine shadow doit être retournée (<code>false</code> (<em>faux</em>) par défaut) ou un noeud racine au-delà de la racine shadow (<code>true</code>).</li>
- </ul>
- </dd>
-</dl>
+- options {{optional_inline}}
 
-<h3 id="Retourne">Retourne</h3>
+  - : Un objet qui définit les options pour obtenir le noeud racine. Les options disponibles sont :
 
-<p>Une interface {{domxref('Node')}}.</p>
+    - `composed` : un {{jsxref('Boolean')}} (_booléen_) qui indique si la racine shadow doit être retournée (`false` (_faux_) par défaut) ou un noeud racine au-delà de la racine shadow (`true`).
 
-<h2 id="Exemple">Exemple</h2>
+### Retourne
 
-<p>Le premier exemple retourne une référence au noeud HTML/document lorsqu'il est exécuté dans les navigateurs de support :</p>
+Une interface {{domxref('Node')}}.
 
-<pre class="brush: js">rootNode = node.getRootNode();</pre>
+## Exemple
 
-<p>Cet exemple plus complexe montre la différence entre retourner une racine normale et une racine qui inclut la racine shadow (voir le <a href="https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html">code source complet</a>):</p>
+Le premier exemple retourne une référence au noeud HTML/document lorsqu'il est exécuté dans les navigateurs de support :
 
-<pre class="brush: html">&lt;!-- source: https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html --&gt;
-&lt;div class="js-parent"&gt;
-    &lt;div class="js-child"&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="js-shadowHost"&gt;&lt;/div&gt;
-&lt;script&gt;
+```js
+rootNode = node.getRootNode();
+```
+
+Cet exemple plus complexe montre la différence entre retourner une racine normale et une racine qui inclut la racine shadow (voir le [code source complet](<https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html>)):
+
+```html
+<!-- source: https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html -->
+<div class="js-parent">
+    <div class="js-child"></div>
+</div>
+<div class="js-shadowHost"></div>
+<script>
     // work on Chrome 54+，Opera41+
 
     var parent = document.querySelector('.js-parent'),
@@ -57,33 +57,23 @@ translation_of: Web/API/Node/getRootNode
 
     // create a ShadowRoot
     var shadowRoot = shadowHost.attachShadow({mode:'open'});
-    shadowRoot.innerHTML = '&lt;style&gt;div{background:#2bb8aa;}&lt;/style&gt;'
-        + '&lt;div class="js-shadowChild"&gt;content&lt;/div&gt;';
+    shadowRoot.innerHTML = '<style>div{background:#2bb8aa;}</style>'
+        + '<div class="js-shadowChild">content</div>';
     var shadowChild = shadowRoot.querySelector('.js-shadowChild');
 
     // The default value of composed is false
     console.log(shadowChild.getRootNode() === shadowRoot); // true
     console.log(shadowChild.getRootNode({composed:false}) === shadowRoot); // true
     console.log(shadowChild.getRootNode({composed:true}).nodeName); // #document
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-node-getrootnode','getRootNode()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | Statut                           | Commentaire          |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('DOM WHATWG','#dom-node-getrootnode','getRootNode()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Node.getRootNode")}}</p>
+{{Compat("api.Node.getRootNode")}}

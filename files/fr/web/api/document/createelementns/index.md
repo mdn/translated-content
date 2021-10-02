@@ -11,51 +11,50 @@ tags:
   - URI
 translation_of: Web/API/Document/createElementNS
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>Crée un élément avec l'URI de l'espace de noms spécifié et un nom qualifié.</p>
+Crée un élément avec l'URI de l'espace de noms spécifié et un nom qualifié.
 
-<p>Pour créer un élément sans spécifier d'URI d'espace de noms, utilisez la méthode <a href="/fr/docs/Web/API/Document/createElement">createElement </a><a href="/fr/docs/Web/API/Document/createElement"> </a>.</p>
+Pour créer un élément sans spécifier d'URI d'espace de noms, utilisez la méthode [createElement ](/fr/docs/Web/API/Document/createElement)[](/fr/docs/Web/API/Document/createElement).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var element = document.createElementNS(namespaceURI, qualifiedName[, options]);</pre>
+```js
+var element = document.createElementNS(namespaceURI, qualifiedName[, options]);
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>namespaceURI</code></dt>
- <dd>est une chaîne de caractères qui spécifie <a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI">l'URI de l'espace de noms</a> à associer à l'élément. La propriété <a href="/fr/docs/Web/API/Node/namespaceURI">namespaceURI</a> de l'élément créé est initialisée avec la valeur de <code>namespaceURI</code>. voir <a href="#URI_d'espaces_de_nom_valides">URI d'espaces de nom valides</a></dd>
- <dt><code>qualifiedName</code></dt>
- <dd>est une chaîne de caractères qui spécifie le type de l'élément à créer. La propriété <a href="/fr/docs/Web/API/Node/nodeName">nodeName</a> de l'élément créé est initialisée avec la valeur de <code>qualifiedName</code></dd>
- <dt><code>Options </code>Facultatif</dt>
- <dd><p>Un objet facultatif <code>ElementCreationOptions</code> contient une propriété unique nommée <code>is</code>, dont la valeur est le nom de la balise pour un élément personnalisé défini précédemment à l'aide de  <code>customElements.define()</code> . Pour la rétro-compatibilité avec les versions précédentes de la <a href="https://www.w3.org/TR/custom-elements/">spécification des éléments personnalisés</a>, quelques navigateurs vous permettront de passer ici une chaîne de caractères à la place d'un objet, pour laquelle la valeur est un nom d'élément personnalisé. Voir  <a href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">Extending native HTML elements</a>  pour plus d'informations sur la façon d'utiliser ce paramètre. Le nouvel élément recevra un attribut <code>is</code> dont la valeur est le nom de la balise de l'élément personnalisé. Les éléments personnalisés sont une fonctionnalité expérimentale disponible uniquement dans certains navigateurs.</p></dd>
-</dl>
+- `namespaceURI`
+  - : est une chaîne de caractères qui spécifie [l'URI de l'espace de noms](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) à associer à l'élément. La propriété [namespaceURI](/fr/docs/Web/API/Node/namespaceURI) de l'élément créé est initialisée avec la valeur de `namespaceURI`. voir [URI d'espaces de nom valides](#URI_d'espaces_de_nom_valides)
+- `qualifiedName`
+  - : est une chaîne de caractères qui spécifie le type de l'élément à créer. La propriété [nodeName](/fr/docs/Web/API/Node/nodeName) de l'élément créé est initialisée avec la valeur de `qualifiedName`
+- `Options `Facultatif
+  - : Un objet facultatif `ElementCreationOptions` contient une propriété unique nommée `is`, dont la valeur est le nom de la balise pour un élément personnalisé défini précédemment à l'aide de  `customElements.define()` . Pour la rétro-compatibilité avec les versions précédentes de la [spécification des éléments personnalisés](https://www.w3.org/TR/custom-elements/), quelques navigateurs vous permettront de passer ici une chaîne de caractères à la place d'un objet, pour laquelle la valeur est un nom d'élément personnalisé. Voir  [Extending native HTML elements](https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml)  pour plus d'informations sur la façon d'utiliser ce paramètre. Le nouvel élément recevra un attribut `is` dont la valeur est le nom de la balise de l'élément personnalisé. Les éléments personnalisés sont une fonctionnalité expérimentale disponible uniquement dans certains navigateurs.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Le nouvel <code><a href="/fr/docs/Web/API/Element">element</a></code>.</p>
+Le nouvel [`element`](/fr/docs/Web/API/Element).
 
-<h2 id="Example">URI d'espaces de nom valides</h2>
+## URI d'espaces de nom valides
 
-<ul>
- <li>HTML - Utiliser <code>http://www.w3.org/1999/xhtml</code></li>
- <li>SVG - Utiliser <code>http://www.w3.org/2000/svg</code></li>
- <li>XBL - Utiliser <code>http://www.mozilla.org/xbl</code></li>
- <li>XUL - Utiliser <code>http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</code></li>
-</ul>
+- HTML - Utiliser `http://www.w3.org/1999/xhtml`
+- SVG - Utiliser `http://www.w3.org/2000/svg`
+- XBL - Utiliser `http://www.mozilla.org/xbl`
+- XUL - Utiliser `http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul`
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>Cet exemple crée un nouvel élément &lt;div&gt; dans l'espace de noms <a href="/fr/docs/XHTML">XHTML</a> et l'ajoute à l'élément vbox. Bien que ce ne soit pas un document <a href="/fr/docs/Mozilla/Tech/XUL">XUL</a> très utile, cela montre l'utilisation d'éléments de deux espaces de noms différents au sein d'un même document :</p>
+Cet exemple crée un nouvel élément \<div> dans l'espace de noms [XHTML](/fr/docs/XHTML) et l'ajoute à l'élément vbox. Bien que ce ne soit pas un document [XUL](/fr/docs/Mozilla/Tech/XUL) très utile, cela montre l'utilisation d'éléments de deux espaces de noms différents au sein d'un même document :
 
-<pre class="brush:xml">&lt;?xml version="1.0"?&gt;
-&lt;page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+```xml
+<?xml version="1.0"?>
+<page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
       xmlns:html="http://www.w3.org/1999/xhtml"
       title="||Working with elements||"
-      onload="init()"&gt;
+      onload="init()">
 
-&lt;script type="text/javascript"&gt;&lt;![CDATA[
+<script type="text/javascript"><![CDATA[
  var container;
  var newdiv;
  var txtnode;
@@ -68,46 +67,32 @@ translation_of: Web/API/Document/createElementNS
    container.appendChild(newdiv);
  }
 
-]]&gt;&lt;/script&gt;
+]]></script>
 
- &lt;vbox id='ContainerBox' flex='1'&gt;
-  &lt;html:div&gt;
+ <vbox id='ContainerBox' flex='1'>
+  <html:div>
    Le script sur cette page ajoutera du contenu dynamique ci-dessous :
-  &lt;/html:div&gt;
- &lt;/vbox&gt;
+  </html:div>
+ </vbox>
 
-&lt;/page&gt;</pre>
+</page>
+```
 
-<div class="note">
-<p><strong>Note :</strong> Cet exemple utilise un script interne, ce qui n'est pas recommandé dans les documents XHTML. Cet exemple particulier est en fait un document XUL intégrant du XHTML. Cependant, la recommandation s'applique quand même.</p>
-</div>
+> **Note :** Cet exemple utilise un script interne, ce qui n'est pas recommandé dans les documents XHTML. Cet exemple particulier est en fait un document XUL intégrant du XHTML. Cependant, la recommandation s'applique quand même.
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', "#dom-document-createelementns", "Document.createElement")}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('DOM WHATWG', "#dom-document-createelementns", "Document.createElement")}} | {{Spec2('DOM WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Document.createElementNS")}}</p>
+{{Compat("api.Document.createElementNS")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="document.createElement">document.createElement</a></li>
- <li><a href="document.createTextNode">document.createTextNode</a></li>
- <li><a href="/fr/docs/Web/API/Node/namespaceURI">Node.namespaceURI</a></li>
- <li><a href="http://www.w3.org/TR/1999/REC-xml-names-19990114">Namespaces in XML</a></li>
-</ul>
+- [document.createElement](document.createElement)
+- [document.createTextNode](document.createTextNode)
+- [Node.namespaceURI](/fr/docs/Web/API/Node/namespaceURI)
+- [Namespaces in XML](http://www.w3.org/TR/1999/REC-xml-names-19990114)

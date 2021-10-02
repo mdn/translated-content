@@ -7,31 +7,29 @@ tags:
   - Propriété
 translation_of: Web/API/HTMLElement/outerText
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{ Non-standard_header() }}</p>
+{{ Non-standard_header() }}
 
-<h2 id="Résumé">Résumé</h2>
+## Résumé
 
-<p><strong><code>HTMLElement.outerText</code></strong> n'est pas une propriété standard. En lecture, elle renvoie la même valeur que {{domxref("Node.innerText")}}. En écriture, elle supprime le noeud courant et le remplace par le texte fourni.</p>
+**`HTMLElement.outerText`** n'est pas une propriété standard. En lecture, elle renvoie la même valeur que {{domxref("Node.innerText")}}. En écriture, elle supprime le noeud courant et le remplace par le texte fourni.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Voir <a href="http://stackoverflow.com/questions/18481382/what-is-the-difference-between-innertext-and-outertext/18481435#18481435">cette réponse proposée sur StackOverflow</a>.</p>
+Voir [cette réponse proposée sur StackOverflow](http://stackoverflow.com/questions/18481382/what-is-the-difference-between-innertext-and-outertext/18481435#18481435).
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<p>Ne fait partie d'aucune spécification. Discussion de la norme : <a href="https://github.com/whatwg/html/issues/668">whatwg/html#668</a>.</p>
+Ne fait partie d'aucune spécification. Discussion de la norme : [whatwg/html#668](https://github.com/whatwg/html/issues/668).
 
-<p>Microsoft en a publié <a href="https://msdn.microsoft.com/en-us/library/ms534311(v=vs.85).aspx">une description sur MSDN</a>.</p>
+Microsoft en a publié [une description sur MSDN](<https://msdn.microsoft.com/en-us/library/ms534311(v=vs.85).aspx>).
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.HTMLElement.outerText")}}</p>
+{{Compat("api.HTMLElement.outerText")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Node.innerText")}}</li>
- <li>{{domxref("Element.outerHTML")}}</li>
-</ul>
+- {{domxref("Node.innerText")}}
+- {{domxref("Element.outerHTML")}}

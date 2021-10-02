@@ -14,44 +14,29 @@ tags:
   - requestStart
 translation_of: Web/API/PerformanceTiming/requestStart
 ---
-<p>{{ APIRef("PerformanceTiming") }}</p>
+{{ APIRef("PerformanceTiming") }}
 
-<div class="warning">
-  <p><strong>Attention :</strong> Cette interface est dépréciée dans la spécification <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2</a>. Veuillez utiliser l'interface <a href="/fr/docs/Web/API/PerformanceNavigationTiming"><code>PerformanceNavigationTiming</code></a> à la place.</p>
-</div>
+> **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
 
-<p>L'ancienne propriété en lecture seule <code><strong>requestStart</code></strong> retourne un <code>unsigned long long</code> représentant le moment, en millisecondes depuis l'époque UNIX, où le navigateur a envoyé la requête pour obtenir le document actuel, depuis le serveur ou depuis un cache. Si la couche de transport échoue après le début de la requête et que la connexion est rouverte, cette propriété sera définie sur le temps correspondant à la nouvelle requête.</p>
+L'ancienne propriété en lecture seule **`requestStart`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, où le navigateur a envoyé la requête pour obtenir le document actuel, depuis le serveur ou depuis un cache. Si la couche de transport échoue après le début de la requête et que la connexion est rouverte, cette propriété sera définie sur le temps correspondant à la nouvelle requête.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">let <var>time</var> = <var>performanceTiming</var>.requestStart;</pre>
+```js
+let time = performanceTiming.requestStart;
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Navigation Timing', '#dom-performancetiming-requeststart',
-        'PerformanceTiming.requestStart')}}</td>
-      <td>{{Spec2('Navigation Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                            | Statut                                   | Commentaire          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('Navigation Timing', '#dom-performancetiming-requeststart',
+        'PerformanceTiming.requestStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceTiming.requestStart")}}</p>
+{{Compat("api.PerformanceTiming.requestStart")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>L'interface <a href="/fr/docs/Web/API/PerformanceTiming"><code>PerformanceTiming</code></a> à laquelle elle appartient.</li>
-</ul>
+- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.

@@ -11,66 +11,50 @@ tags:
 translation_of: Web/API/Crypto/getRandomValues
 original_slug: Web/API/RandomSource/getRandomValues
 ---
-<p>{{APIRef("Web Crypto API")}}</p>
+{{APIRef("Web Crypto API")}}
 
-<p>La méthode <code><strong>RandomSource.getRandomValues()</strong></code> permet d’obtenir des valeurs pseudo-aléatoires cryptographiquement satisfaisantes. Le tableau donné en paramètre est rempli avec des nombres pseudo-aléatoires.</p>
+La méthode **`RandomSource.getRandomValues()`** permet d’obtenir des valeurs pseudo-aléatoires cryptographiquement satisfaisantes. Le tableau donné en paramètre est rempli avec des nombres pseudo-aléatoires.
 
-<p>Pour garantir une performance suffisante, les implémentations n’utilisent pas un vrai générateur de nombres aléatoires, mais un générateur de nombres pseudo-aléatoires <em>semé </em>avec une valeur ayant suffisamment d'{{Glossary("entropie")}}. Les générateurs utilisés d’une implémentation à une autre seront différents mais toujours satisfaisants pour une utilisation en cryptographie. Les implémentations doivent également utiliser une graine ayant suffisamment d’entropie, comme une source d’entropie au niveau du système.</p>
+Pour garantir une performance suffisante, les implémentations n’utilisent pas un vrai générateur de nombres aléatoires, mais un générateur de nombres pseudo-aléatoires _semé_ avec une valeur ayant suffisamment d'{{Glossary("entropie")}}. Les générateurs utilisés d’une implémentation à une autre seront différents mais toujours satisfaisants pour une utilisation en cryptographie. Les implémentations doivent également utiliser une graine ayant suffisamment d’entropie, comme une source d’entropie au niveau du système.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>cryptoObj</em>.getRandomValues(<em>typedArray</em>);</pre>
+    cryptoObj.getRandomValues(typedArray);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><em>typedArray</em></dt>
- <dd>Un {{jsxref("TypedArray")}} de nombres entiers, qui est un {{jsxref("Int8Array")}}, un {{jsxref("Uint8Array")}}, un {{jsxref("Uint16Array")}}, un {{jsxref("Int32Array")}}, ou encore un {{jsxref("Uint32Array")}}. Tous les éléments du tableau seront subsitués avec des nombres aléatoires.</dd>
-</dl>
+- _typedArray_
+  - : Un {{jsxref("TypedArray")}} de nombres entiers, qui est un {{jsxref("Int8Array")}}, un {{jsxref("Uint8Array")}}, un {{jsxref("Uint16Array")}}, un {{jsxref("Int32Array")}}, ou encore un {{jsxref("Uint32Array")}}. Tous les éléments du tableau seront subsitués avec des nombres aléatoires.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
- <li>Une {{exception("QuotaExceededError")}} {{domxref("DOMException")}} est levée si la taille de la requête est plus grand que 65 536 octets.</li>
-</ul>
+- Une {{exception("QuotaExceededError")}} {{domxref("DOMException")}} est levée si la taille de la requête est plus grand que 65 536 octets.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">/* on part du principe ici que window.crypto.getRandomValues est disponible */
+```js
+/* on part du principe ici que window.crypto.getRandomValues est disponible */
 
 var array = new Uint32Array(10);
 window.crypto.getRandomValues(array);
 
 console.log("Your lucky numbers:");
-for (var i = 0; i &lt; array.length; i++) {
+for (var i = 0; i < array.length; i++) {
     console.log(array[i]);
 }
-</pre>
+```
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Crypto API', '#RandomSource-method-getRandomValues')}}</td>
-   <td>{{Spec2('Web Crypto API')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                               | Comment            |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName('Web Crypto API', '#RandomSource-method-getRandomValues')}} | {{Spec2('Web Crypto API')}} | Initial definition |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("api.Crypto.getRandomValues")}}</div>
+{{Compat("api.Crypto.getRandomValues")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{ domxref("Window.crypto") }} pour obtenir un objet {{domxref("Crypto")}}.</li>
- <li>{{jsxref("Math.random")}}, une source non cryptographique de nombres aléatoires.</li>
-</ul>
+- {{ domxref("Window.crypto") }} pour obtenir un objet {{domxref("Crypto")}}.
+- {{jsxref("Math.random")}}, une source non cryptographique de nombres aléatoires.

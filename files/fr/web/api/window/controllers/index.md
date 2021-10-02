@@ -12,29 +12,27 @@ tags:
   - Window
 translation_of: Web/API/Window/controllers
 ---
-<div>{{APIRef}}{{non-standard_header}}</div>
+{{APIRef}}{{non-standard_header}}
 
-<p>Retourne les contrôleurs XUL de la fenêtre chrome.</p>
+Retourne les contrôleurs XUL de la fenêtre chrome.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>controleurs</var> = window.controllers
-</pre>
+    controleurs = window.controllers
 
-<ul>
- <li><code>controleurs</code> est un objet de type <a href="/en-US/docs/XULControllers"><code>XULControllers</code></a> (<a href="/en-US/docs/XPCOM_Interface_Reference/nsIControllers"><code>nsIControllers</code></a>).</li>
-</ul>
+- `controleurs` est un objet de type [`XULControllers`](/en-US/docs/XULControllers) ([`nsIControllers`](/en-US/docs/XPCOM_Interface_Reference/nsIControllers)).
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<p>Spécifique à XUL. Ne fait pas partie de la spécification.</p>
+Spécifique à XUL. Ne fait pas partie de la spécification.
 
-<p>Par défaut, le contrôleur d'une fenêtre contient le code qui prend en charge les commandes globales de la fenêtre.</p>
+Par défaut, le contrôleur d'une fenêtre contient le code qui prend en charge les commandes globales de la fenêtre.
 
-<p>Le code Chrome peut ajouter des contrôleurs (à utiliser conjointement avec les fonctions goDoCommand et goUpdateCommand dans globalOverlay.js).</p>
+Le code Chrome peut ajouter des contrôleurs (à utiliser conjointement avec les fonctions goDoCommand et goUpdateCommand dans globalOverlay.js).
 
-<p>Cependant, les contrôleurs ajoutés doivent être explicitement supprimés lorsque la fenêtre est déchargée, car cela n'est pas fait automatiquement.<br>
- Chaque suppression manquante peut provoquer le</p>
-<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=415775">bug 415775</a>:
+Cependant, les contrôleurs ajoutés doivent être explicitement supprimés lorsque la fenêtre est déchargée, car cela n'est pas fait automatiquement.
+Chaque suppression manquante peut provoquer le
 
-<pre >ASSERTION: XPConnect is being called on a scope without a 'Components' property!</pre>
+[bug 415775](https://bugzilla.mozilla.org/show_bug.cgi?id=415775):
+
+    ASSERTION: XPConnect is being called on a scope without a 'Components' property!

@@ -4,81 +4,42 @@ slug: Web/API/HTMLElement/animationiteration_event
 translation_of: Web/API/HTMLElement/animationiteration_event
 original_slug: Web/Events/animationiteration
 ---
-<p>L'événement<strong> </strong><code><strong> animationiteration</strong> est déclenché lorsqu'une itération d'une animation se termine. Cet événement ne se produit pas pour les animations avec <em>animation-iteration-count</em> valant 1.</code></p>
+L'événement\*\* \*\*`animationiteration est déclenché lorsqu'une itération d'une animation se termine. Cet événement ne se produit pas pour les animations avec animation-iteration-count valant 1.`
 
-<h2 id="informations_générales">informations générales</h2>
+## informations générales
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Spécification</dt>
- <dd style="margin: 0 0 0 120px;"><a href="http://www.w3.org/TR/css3-animations/#animation-events">CSS Animations</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">AnimationEvent</dd>
- <dt style="float: left; text-align: right; width: 120px;">Synchronisme</dt>
- <dd style="margin: 0 0 0 120px;">synchronous</dd>
- <dt style="float: left; text-align: right; width: 120px;">Propagation</dt>
- <dd style="margin: 0 0 0 120px;">Oui</dd>
- <dt style="float: left; text-align: right; width: 120px;">Annulable</dt>
- <dd style="margin: 0 0 0 120px;">Non</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cible</dt>
- <dd style="margin: 0 0 0 120px;">Document, Element</dd>
- <dt style="float: left; text-align: right; width: 120px;">Action par défaut</dt>
- <dd style="margin: 0 0 0 120px;">Aucune</dd>
-</dl>
+- Spécification
+  - : [CSS Animations](http://www.w3.org/TR/css3-animations/#animation-events)
+- Interface
+  - : AnimationEvent
+- Synchronisme
+  - : synchronous
+- Propagation
+  - : Oui
+- Annulable
+  - : Non
+- Cible
+  - : Document, Element
+- Action par défaut
+  - : Aucune
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Propriété</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{ReadOnlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>La cible de l'événement (la plus haute cible dans l'arbre du DOM).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{ReadOnlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Le type de l'événement.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{ReadOnlyInline}}</td>
-   <td><code>boolean</code></td>
-   <td>Est-ce que l'événement se propage?</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{ReadOnlyInline}}</td>
-   <td><code>boolean</code></td>
-   <td>Est-il possible d'annuler l'événement?</td>
-  </tr>
-  <tr>
-   <td><code>animationName</code> {{ReadOnlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Le nom de la propriété CSS associéee à la transition.</td>
-  </tr>
-  <tr>
-   <td><code>elapsedTime</code> {{ReadOnlyInline}}</td>
-   <td>Float</td>
-   <td>Le temps durant lequel l'animation a durée, en secondes, quand l'événement est déclenché, excepté le temps lorsque l'animation était en pause. Pour un événement <strong>animationstart</strong>, <em>elapsedTime</em> vaut zéro à moins que <em>animation-delay </em>ne soit négatif, et dans ce cas, l'événement sera déclenché avec un <em>elapsedTime</em> de (-1 * delay).</td>
-  </tr>
- </tbody>
-</table>
+| Propriété                                | Type                                 | Description                                                                                                                                                                                                                                                                                                                                    |
+| ---------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target` {{ReadOnlyInline}}        | {{domxref("EventTarget")}} | La cible de l'événement (la plus haute cible dans l'arbre du DOM).                                                                                                                                                                                                                                                                             |
+| `type` {{ReadOnlyInline}}          | {{domxref("DOMString")}}     | Le type de l'événement.                                                                                                                                                                                                                                                                                                                        |
+| `bubbles` {{ReadOnlyInline}}       | `boolean`                            | Est-ce que l'événement se propage?                                                                                                                                                                                                                                                                                                             |
+| `cancelable` {{ReadOnlyInline}}    | `boolean`                            | Est-il possible d'annuler l'événement?                                                                                                                                                                                                                                                                                                         |
+| `animationName` {{ReadOnlyInline}} | {{domxref("DOMString")}}     | Le nom de la propriété CSS associéee à la transition.                                                                                                                                                                                                                                                                                          |
+| `elapsedTime` {{ReadOnlyInline}}   | Float                                | Le temps durant lequel l'animation a durée, en secondes, quand l'événement est déclenché, excepté le temps lorsque l'animation était en pause. Pour un événement **animationstart**, _elapsedTime_ vaut zéro à moins que _animation-delay_ ne soit négatif, et dans ce cas, l'événement sera déclenché avec un _elapsedTime_ de (-1 \* delay). |
 
-<h2 id="Evénements_liés">Evénements liés</h2>
+## Evénements liés
 
-<ul>
- <li>{{Event("animationstart")}}</li>
- <li>{{Event("animationend")}}</li>
- <li>{{Event("animationiteration")}}</li>
-</ul>
+- {{Event("animationstart")}}
+- {{Event("animationend")}}
+- {{Event("animationiteration")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/CSS/Using_CSS_animations">Utilisation des animations CSS</a></li>
-</ul>
+- [Utilisation des animations CSS](/fr/docs/CSS/Using_CSS_animations)

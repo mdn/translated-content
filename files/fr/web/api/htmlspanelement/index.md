@@ -6,14 +6,12 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/HTMLSpanElement
 ---
-<div>
- {{ ApiRef() }}</div>
-<p>L'élément DOM <code>span</code> supporte l'interface <code>HTMLSpanElement</code>, qui est dérivé de l'interface {{ domxref("HTMLElement") }}. Il ne supporte aucune propriété ou méthode additionnelle par rapport à <code>HTMLElement</code>.</p>
-<h2 id="Voir_également">Voir également</h2>
-<ul>
- <li>{{ HTMLElement("span") }}</li>
- <li>Spécification W3C de l'élément <a href="http://www.w3.org/TR/html4/struct/global.html#edef-SPAN">span</a></li>
- <li>Spécification DOM : <a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-58190037">interface <code>HTMLElement</code></a></li>
-</ul>
-<div>
-  </div>
+{{ ApiRef() }}
+
+L'élément DOM `span` supporte l'interface `HTMLSpanElement`, qui est dérivé de l'interface {{ domxref("HTMLElement") }}. Il ne supporte aucune propriété ou méthode additionnelle par rapport à `HTMLElement`.
+
+## Voir également
+
+- {{ HTMLElement("span") }}
+- Spécification W3C de l'élément [span](http://www.w3.org/TR/html4/struct/global.html#edef-SPAN)
+- Spécification DOM : [interface `HTMLElement`](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-58190037)

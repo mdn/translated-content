@@ -8,64 +8,53 @@ tags:
   - paste
 translation_of: Web/API/Window/paste_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>L'événement <strong><code>paste</code></strong> est déclenché lorsque l'utilisateur a lancé une action de "paste" via l'interface utilisateur du navigateur.</p>
+L'événement **`paste`** est déclenché lorsque l'utilisateur a lancé une action de "paste" via l'interface utilisateur du navigateur.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bulles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Annulable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("ClipboardEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Propriété du gestionnaire d'événements</th>
-   <td>{{domxref("HTMLElement/onpaste", "onpaste")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bulles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Annulable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("ClipboardEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Propriété du gestionnaire d'événements</th>
+      <td>{{domxref("HTMLElement/onpaste", "onpaste")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>La cible d'origine de cet événement est le {{domxref ("Element")}} qui était la cible prévue de l'action de collage. Vous pouvez écouter cet événement sur l'interface {{domxref ("Window")}} pour le gérer dans les phases de capture ou de bullage. Pour plus de détails sur cet événement, veuillez consulter la page sur le <a href="/en-US/docs/Web/API/Element/paste_event">Element: paste event</a>.</p>
+La cible d'origine de cet événement est le {{domxref ("Element")}} qui était la cible prévue de l'action de collage. Vous pouvez écouter cet événement sur l'interface {{domxref ("Window")}} pour le gérer dans les phases de capture ou de bullage. Pour plus de détails sur cet événement, veuillez consulter la page sur le [Element: paste event](/en-US/docs/Web/API/Element/paste_event).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">window.addEventListener('paste', (event) =&gt; {
+```js
+window.addEventListener('paste', (event) => {
     console.log('paste action initiated')
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Statut</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Clipboard API', '#clipboard-event-paste')}}</td>
-   <td>{{Spec2('Clipboard API')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                            | Statut                               |
+| ------------------------------------------------------------------------ | ------------------------------------ |
+| {{SpecName('Clipboard API', '#clipboard-event-paste')}} | {{Spec2('Clipboard API')}} |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.paste_event")}}</p>
+{{Compat("api.Window.paste_event")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>Événements liés: {{domxref("Window/cut_event", "cut")}}, {{domxref("Window/copy_event", "copy")}}</li>
- <li>Cet événement sur {{domxref("Element")}} cible: {{domxref("Element/paste_event", "paste")}}</li>
- <li>Cet événement sur {{domxref("Document")}} cible: {{domxref("Document/paste_event", "paste")}}</li>
-</ul>
+- Événements liés: {{domxref("Window/cut_event", "cut")}}, {{domxref("Window/copy_event", "copy")}}
+- Cet événement sur {{domxref("Element")}} cible: {{domxref("Element/paste_event", "paste")}}
+- Cet événement sur {{domxref("Document")}} cible: {{domxref("Document/paste_event", "paste")}}

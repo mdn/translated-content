@@ -4,47 +4,46 @@ slug: Web/API/CanvasRenderingContext2D/bezierCurveTo
 translation_of: Web/API/CanvasRenderingContext2D/bezierCurveTo
 browser-compat: api.CanvasRenderingContext2D.bezierCurveTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La méthode <code><strong>CanvasRenderingContext2D.bezierCurveTo()</strong></code> de l'API Canvas 2D ajoute une <a href="https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier">courbe de Bézier</a> cubique au sous-chemin courant. Elle requiert trois points : les deux premiers sont des points de contrôle et le troisième est le point d'arrivée. Le point de départ est le dernier point dans le chemin courant, qui peut être changé au moyen de la méthode <a href="/fr/docs/Web/API/CanvasRenderingContext2D/moveTo"><code>moveTo()</code></a> avant de créer une courbe de Bézier.</p>
+La méthode **`CanvasRenderingContext2D.bezierCurveTo()`** de l'API Canvas 2D ajoute une [courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier) cubique au sous-chemin courant. Elle requiert trois points : les deux premiers sont des points de contrôle et le troisième est le point d'arrivée. Le point de départ est le dernier point dans le chemin courant, qui peut être changé au moyen de la méthode [`moveTo()`](/fr/docs/Web/API/CanvasRenderingContext2D/moveTo) avant de créer une courbe de Bézier.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">void ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
-</pre>
+```js
+void ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>cp1x</code></dt>
- <dd>L'abscisse du premier point de contrôle.</dd>
- <dt><code>cp1y</code></dt>
- <dd>L'ordonnée du premier point de contrôle.</dd>
- <dt><code>cp2x</code></dt>
- <dd>L'abscisse du second point de contrôle.</dd>
- <dt><code>cp2y</code></dt>
- <dd>L'ordonnée du second point de contrôle.</dd>
- <dt><code>x</code></dt>
- <dd>L'abscisse du point d'arrivée.</dd>
- <dt><code>y</code></dt>
- <dd>L'ordonnée du point d'arrivée.</dd>
-</dl>
+- `cp1x`
+  - : L'abscisse du premier point de contrôle.
+- `cp1y`
+  - : L'ordonnée du premier point de contrôle.
+- `cp2x`
+  - : L'abscisse du second point de contrôle.
+- `cp2y`
+  - : L'ordonnée du second point de contrôle.
+- `x`
+  - : L'abscisse du point d'arrivée.
+- `y`
+  - : L'ordonnée du point d'arrivée.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="how_beziercurveto_works">Fonctionnement de bezierCurveTo()</h3>
+### Fonctionnement de bezierCurveTo()
 
-<p>Cet exemple montre comment une courbe cubique de Bézier est dessinée.</p>
+Cet exemple montre comment une courbe cubique de Bézier est dessinée.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">
-&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">
+```js
 // Define canvas and context
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -74,52 +73,51 @@ ctx.beginPath();
 ctx.arc(cp1.x, cp1.y, 5, 0, 2 * Math.PI);  // Point de contrôle n°1
 ctx.arc(cp2.x, cp2.y, 5, 0, 2 * Math.PI);  // Point de contrôle n°2
 ctx.fill();
-</pre>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>Dans cet exemple, les points de contrôle sont rouges et les points de départ et d'arrivée sont bleus.</p>
+Dans cet exemple, les points de contrôle sont rouges et les points de départ et d'arrivée sont bleus.
 
-<p>{{EmbedLiveSample('how_beziercurveto_works', 315, 165)}}</p>
+{{EmbedLiveSample('how_beziercurveto_works', 315, 165)}}
 
-<h3 id="a_simple_bezier_curve">Une courbe cubique de Bézier simple</h3>
+### Une courbe cubique de Bézier simple
 
-<p>Cet exemple dessine une courbe cubique de Bézier simple en utilisant <code>bezierCurveTo()</code>.</p>
+Cet exemple dessine une courbe cubique de Bézier simple en utilisant `bezierCurveTo()`.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">
-&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<p>La courbe débute au point spécifié par <code>moveTo()</code>&nbsp;: (30, 30). Le premier point de contrôle est placé à (120, 160), le second à (180, 10) et le point d'arrivée à (220, 140).</p>
+La courbe débute au point spécifié par `moveTo()` : (30, 30). Le premier point de contrôle est placé à (120, 160), le second à (180, 10) et le point d'arrivée à (220, 140).
 
-<pre class="brush: js">
+```js
 const canvas = document.getElementById("canvas");
 const contexte2D = canvas.getContext("2d");
 
 contexte2D.beginPath();
 contexte2D.moveTo(30, 30);
 contexte2D.bezierCurveTo(120,160, 180,10, 220,140);
-contexte2D.stroke();</pre>
+contexte2D.stroke();
+```
 
-<h4 id="result_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('a_simple_bezier_curve', 700, 180)}}</p>
+{{EmbedLiveSample('a_simple_bezier_curve', 700, 180)}}
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface définissant cette méthode : <a href="/fr/docs/Web/API/CanvasRenderingContext2D"><code>CanvasRenderingContext2D</code></a></li>
- <li><a href="https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier">L'article Wikipédia sur les courbes de Bézier</a></li>
-</ul>
+- L'interface définissant cette méthode : [`CanvasRenderingContext2D`](/fr/docs/Web/API/CanvasRenderingContext2D)
+- [L'article Wikipédia sur les courbes de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier)

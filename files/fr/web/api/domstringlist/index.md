@@ -8,41 +8,24 @@ tags:
   - Types
 translation_of: Web/API/DOMStringList
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>Un type renvoyé par certaines API contenant une liste de <a href="/fr/docs/Web/API/DOMString">DOMString</a> (<em>chaînes de caractères</em>).</p>
+Un type renvoyé par certaines API contenant une liste de [DOMString](/fr/docs/Web/API/DOMString) (_chaînes de caractères_).
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{domxref("DOMStringList.length")}} {{ReadOnlyInline}}</dt>
- <dd>Renvoie la longueur de la liste.</dd>
-</dl>
+- {{domxref("DOMStringList.length")}} {{ReadOnlyInline}}
+  - : Renvoie la longueur de la liste.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{domxref("DOMStringList.item()")}}</dt>
- <dd>Renvoie une {{domxref("DOMString")}} (<em>chaîne de caractères</em>).</dd>
- <dt>{{domxref("DOMStringList.contains()")}}</dt>
- <dd>Renvoie un {{jsxref("Boolean")}} (<em>booléen</em>) indiquant si la chaîne de caractères donnée est dans la liste.</dd>
-</dl>
+- {{domxref("DOMStringList.item()")}}
+  - : Renvoie une {{domxref("DOMString")}} (_chaîne de caractères_).
+- {{domxref("DOMStringList.contains()")}}
+  - : Renvoie un {{jsxref("Boolean")}} (_booléen_) indiquant si la chaîne de caractères donnée est dans la liste.
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "common-dom-interfaces.html#the-domstringlist-interface", "DOMStringList")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Définition  initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                            | Statut                           | Commentaire           |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
+| {{SpecName("HTML WHATWG", "common-dom-interfaces.html#the-domstringlist-interface", "DOMStringList")}} | {{Spec2("HTML WHATWG")}} | Définition  initiale. |

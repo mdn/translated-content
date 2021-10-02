@@ -9,36 +9,32 @@ tags:
   - Reference
 translation_of: Web/API/HTMLShadowElement
 ---
-<div>{{APIRef("Web Components")}}{{Deprecated_header}}</div>
+{{APIRef("Web Components")}}{{Deprecated_header}}
 
-<p>L'interface <code><strong>HTMLShadowElement</strong></code> représente un élement HTML {{HTMLElement("shadow")}}, utililisé dans le <a href="/fr/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a>.</p>
+L'interface **`HTMLShadowElement`** représente un élement HTML {{HTMLElement("shadow")}}, utililisé dans le [Shadow DOM](/fr/docs/Web/Web_Components/Shadow_DOM).
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Propriétés</h2>
+## Propriétés
 
-<p><em>Cette interface hérite des propriétés de {{domxref("HTMLElement")}}.</em></p>
+_Cette interface hérite des propriétés de {{domxref("HTMLElement")}}._
 
-<h2 id="Methods">Méthodes</h2>
+## Méthodes
 
-<p><em>Cette interface hérite des methodes de {{domxref("HTMLElement")}}.</em></p>
+_Cette interface hérite des methodes de {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLContentElement.getDistributedNodes()")}}</dt>
- <dd>Retourne un {{domxref("NodeList")}} statique du {{glossary("distributed nodes")}} associé avec l'élément <code>&lt;content&gt;</code>.</dd>
-</dl>
+- {{domxref("HTMLContentElement.getDistributedNodes()")}}
+  - : Retourne un {{domxref("NodeList")}} statique du {{glossary("distributed nodes")}} associé avec l'élément `<content>`.
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette fonctionnalité n'est plus définie par aucune spécification.</p>
+Cette fonctionnalité n'est plus définie par aucune spécification.
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.HTMLShadowElement")}}</p>
+{{Compat("api.HTMLShadowElement")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>L'élément HTML {{HTMLElement("shadow")}}, qui implémente cette interface.</li>
- <li><a href="/fr/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a></li>
-</ul>
+- L'élément HTML {{HTMLElement("shadow")}}, qui implémente cette interface.
+- [Shadow DOM](/fr/docs/Web/Web_Components/Shadow_DOM)

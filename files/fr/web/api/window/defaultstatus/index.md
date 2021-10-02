@@ -14,37 +14,33 @@ tags:
   - Window
 translation_of: Web/API/Window/defaultStatus
 ---
-<p>{{ obsolete_header(23) }}</p>
+{{ obsolete_header(23) }}
 
-<p>{{ APIRef() }}</p>
+{{ APIRef() }}
 
-<p>Obtient / définit le texte de la barre d'état pour la fenêtre donnée.</p>
+Obtient / définit le texte de la barre d'état pour la fenêtre donnée.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>var sMsg</em> = window.defaultStatus;
-window.defaultStatus = <em>sMsg;</em>
-</pre>
+    var sMsg = window.defaultStatus;
+    window.defaultStatus = sMsg;
 
-<h3 id="Parameters">Paramètres</h3>
+### Paramètres
 
-<ul>
- <li><code>sMsg</code> est une chaîne contenant le texte à afficher par défaut dans la barre d'état.</li>
-</ul>
+- `sMsg` est une chaîne contenant le texte à afficher par défaut dans la barre d'état.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="notranslate">&lt;html&gt;
- &lt;body onload="window.defaultStatus='salut!';"/&gt;
-  &lt;button onclick="window.confirm('Êtes-vous sûr de vouloir quitter?');"&gt;confirmer&lt;/button&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    <html>
+     <body onload="window.defaultStatus='salut!';"/>
+      <button onclick="window.confirm('Êtes-vous sûr de vouloir quitter?');">confirmer</button>
+     </body>
+    </html>
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Pour définir le statut une fois la fenêtre ouverte, utilisez {{domxref("window.status")}}.</p>
+Pour définir le statut une fois la fenêtre ouverte, utilisez {{domxref("window.status")}}.
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<p>HTML5</p>
+HTML5

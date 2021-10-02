@@ -9,46 +9,33 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest/withCredentials
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>La propriété <code><strong>XMLHttpRequest.withCredentials</strong></code> est un booléen qui indique si une requête <code>Access-Control</code> entre plusieurs sites devrait être réalisée avec des informations d'authentification (<em>credentials</em>) telles que des cookies, des en-têtes d'autorisation ou des certificats clients. Activer <code>withCredentials</code> n'aura aucun impact sur les requêtes effectuées sur un même site.</p>
+La propriété **`XMLHttpRequest.withCredentials`** est un booléen qui indique si une requête `Access-Control` entre plusieurs sites devrait être réalisée avec des informations d'authentification (_credentials_) telles que des cookies, des en-têtes d'autorisation ou des certificats clients. Activer `withCredentials` n'aura aucun impact sur les requêtes effectuées sur un même site.
 
-<p>Cette propriété est également utilisée afin d'indiquer lorsque les cookies doivent être ignorés pour une réponse. Par défaut, la valeur est à <code>false</code>. Une requête <code>XMLHttpRequest</code> d'un autre domaine ne pourra pas définir de cookies pour cet autre domaine à moins que <code>withCredentials</code> vaille <code>true</code> avant la requête.</p>
+Cette propriété est également utilisée afin d'indiquer lorsque les cookies doivent être ignorés pour une réponse. Par défaut, la valeur est à `false`. Une requête `XMLHttpRequest` d'un autre domaine ne pourra pas définir de cookies pour cet autre domaine à moins que `withCredentials` vaille `true` avant la requête.
 
-<p>Les cookies tiers obtenus lorsque <code>withCredentials</code> vaut <code>true</code> continuent de respecter la règle de même origine et ne peuvent donc pas être manipulés en script via <code><a href="/fr/docs/Web/API/Document/cookie">document.cookie</a></code> ou depuis les en-têtes de la réponse.</p>
+Les cookies tiers obtenus lorsque `withCredentials` vaut `true` continuent de respecter la règle de même origine et ne peuvent donc pas être manipulés en script via [`document.cookie`](/fr/docs/Web/API/Document/cookie) ou depuis les en-têtes de la réponse.
 
-<div class="note">
-<p><strong>Note :</strong> Cette propriété n'a aucun impact pour les requêtes effectuées sur le même site.</p>
-</div>
+> **Note :** Cette propriété n'a aucun impact pour les requêtes effectuées sur le même site.
 
-<div class="note">
-<p><strong>Note :</strong> Les réponses<strong> </strong><code>XMLHttpRequest</code> provenant d'un domaine différent ne peuvent pas définir de cookies pour ce domaine à moins d'avoir <code>withCredentials</code> à <code>true</code> avant l'envoi de la requête (quelle que soit la valeur de l'en-tête <code>Access-Control-</code>).</p>
-</div>
+> **Note :** Les réponses\*\* \*\*`XMLHttpRequest` provenant d'un domaine différent ne peuvent pas définir de cookies pour ce domaine à moins d'avoir `withCredentials` à `true` avant l'envoi de la requête (quelle que soit la valeur de l'en-tête `Access-Control-`).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://example.com/', true);
 xhr.withCredentials = true;
-xhr.send(null);</pre>
+xhr.send(null);
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#the-withcredentials-attribute')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                                 | Commentaires |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------ |
+| {{SpecName('XMLHttpRequest', '#the-withcredentials-attribute')}} | {{Spec2('XMLHttpRequest')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.XMLHttpRequest.withCredentials")}}</p>
+{{Compat("api.XMLHttpRequest.withCredentials")}}

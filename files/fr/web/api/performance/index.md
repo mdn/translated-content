@@ -9,148 +9,88 @@ tags:
   - Reference
 translation_of: Web/API/Performance
 ---
-<div>{{APIRef("High Resolution Time")}}</div>
+{{APIRef("High Resolution Time")}}
 
-<p>L'interface <strong><code>Performance</code></strong> donne accès à des informations liées aux performances pour la page actuelle. Elle fait partie de l'API « High Resolution Time », mais est complétée par les APIs <a href="/fr/docs/Web/API/Performance_Timeline">Performance Timeline</a>, <a href="/fr/docs/Web/API/Navigation_timing_API">Navigation Timing</a>, <a href="/fr/docs/Web/API/User_Timing_API">User Timing</a>, et <a href="/fr/docs/Web/API/Resource_Timing_API">Resource Timing</a>.</p>
+L'interface **`Performance`** donne accès à des informations liées aux performances pour la page actuelle. Elle fait partie de l'API « High Resolution Time », mais est complétée par les APIs [Performance Timeline](/fr/docs/Web/API/Performance_Timeline), [Navigation Timing](/fr/docs/Web/API/Navigation_timing_API), [User Timing](/fr/docs/Web/API/User_Timing_API), et [Resource Timing](/fr/docs/Web/API/Resource_Timing_API).
 
-<p>Un objet de ce type peut être obtenu en appelant l'attribut en lecture seule {{domxref("window.performance")}}.</p>
+Un objet de ce type peut être obtenu en appelant l'attribut en lecture seule {{domxref("window.performance")}}.
 
-<div class="note">
-  <p><strong>Note :</strong> Cette interface et ses attributs sont accessibles aux <a href="/fr/docs/Web/API/Web_Workers_API">Web Workers</a> via <code><a href="/fr/docs/Web/API/WorkerGlobalScope/performance">WorkerGlobalScope.performance</a></code> sauf dans les cas cités ci-dessous. Notez également que les marqueurs et les mesures de performance sont définis par contexte. Si vous créez un marqueur dans le processus principal (ou un autre Web Worker), vous ne pourrez pas le voir dans le processus du Web Worker, et réciproquement.</p>
-</div>
+> **Note :** Cette interface et ses attributs sont accessibles aux [Web Workers](/fr/docs/Web/API/Web_Workers_API) via [`WorkerGlobalScope.performance`](/fr/docs/Web/API/WorkerGlobalScope/performance) sauf dans les cas cités ci-dessous. Notez également que les marqueurs et les mesures de performance sont définis par contexte. Si vous créez un marqueur dans le processus principal (ou un autre Web Worker), vous ne pourrez pas le voir dans le processus du Web Worker, et réciproquement.
 
-<h2 id="Properties">Propriétés</h2>
+## Propriétés
 
-<p><em>L'interface <code>Performance</code> n'hérite d'aucune propriété.</em></p>
+_L'interface `Performance` n'hérite d'aucune propriété._
 
-<dl>
-  <dt>
-    {{domxref("performance.navigation")}} {{readonlyInline}} {{deprecated_inline}}
-  </dt>
-  <dd>
-    {{domxref("PerformanceNavigation")}} est un objet qui fournit des informations contextuelles sur les opérations incluses dans les indicateurs de <code>timing</code>, notamment si la page a été chargée ou actualisée, combien de redirections ont été effectuées, etc…
-    <div class="note">
-      <p><strong>Note :</strong> Indisponible dans les Web Workers.</p>
-    </div>
-  </dd>
-  <dt>
-    {{domxref("performance.timing")}} {{readonlyInline}} {{deprecated_inline}}
-  </dt>
-  <dd>
-    {{domxref("PerformanceTiming")}} est un objet contenant des informations de performance liées à la latence.
-    <div class="note">
-      <p><strong>Note :</strong> Indisponible dans les Web Workers.</p>
-    </div>
-  </dd>
-  <dt>
-    {{domxref("performance.memory")}} {{readonlyInline}} {{Non-standard_inline}}</dt>
-  <dd>
-    Une extension <em>non standard</em> ajoutée dans Chrome, cette propriété fournit à un objet des informations de base sur l'utilisation de la mémoire. <em>Vous <strong>ne devriez pas utiliser</strong> cette API non standard.</em>
-  </dd>
-  <dt>
-    {{domxref("Performance.timeOrigin")}} {{readonlyInline}} {{Experimental_inline}}
-  </dt>
-  <dd>
-    Fournit un horodatage haute résolution de l'heure de début de la mesure de performance.
-  </dd>
-</dl>
+- {{domxref("performance.navigation")}} {{readonlyInline}} {{deprecated_inline}}
 
-<h2 id="Methods">Méthodes</h2>
+  - : {{domxref("PerformanceNavigation")}} est un objet qui fournit des informations contextuelles sur les opérations incluses dans les indicateurs de `timing`, notamment si la page a été chargée ou actualisée, combien de redirections ont été effectuées, etc…
 
-<p><em>L'interface <code>Performance</code> n'hérite d'aucune méthode</em>.</p>
+    > **Note :** Indisponible dans les Web Workers.
 
-<dl>
-  <dt>{{domxref("performance.clearMarks()")}}</dt>
-  <dd>Supprime le <em>marqueur</em> indiqué des données de performances du navigateur mises en mémoire tampon.</dd>
-  <dt>{{domxref("performance.clearMeasures()")}}</dt>
-  <dd>Supprime la <em>mesure</em> indiquée des données de performances du navigateur mises en mémoire tampon.</dd>
-  <dt>{{domxref("performance.clearResourceTimings()")}}</dt>
-  <dd>Supprime toutes les {{domxref("PerformanceEntry","entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType","entryType")}} "<code>resource</code>" des données de performances du navigateur mises en mémoire tampon.</dd>
-  <dt>{{domxref("performance.getEntries()")}}</dt>
-  <dd>Retourne une liste d'objets {{domxref("PerformanceEntry")}} basée sur le <em>filtre</em> indiqué.</dd>
-  <dt>{{domxref("performance.getEntriesByName()")}}</dt>
-  <dd>Retourne une liste d'objets {{domxref("PerformanceEntry")}} basée sur le <em>nom</em> indiqué.</dd>
-  <dt>{{domxref("performance.getEntriesByType()")}}</dt>
-  <dd>Retourne une liste d'objets {{domxref("PerformanceEntry")}} basée sur le <em>type</em> indiqué.</dd>
-  <dt>{{domxref("performance.mark()")}}</dt>
-  <dd>Crée un {{domxref("DOMHighResTimeStamp","timestamp")}} avec le nom indiqué, dans la mémoire tampon du navigateur dédiée aux performances.</dd>
-  <dt>{{domxref("performance.measure()")}}</dt>
-  <dd>Crée un {{domxref("DOMHighResTimeStamp","timestamp")}} nommé, dans la mémoire tampon du navigateur dédiée aux performances, entre deux marqueurs spécifiques (connus comme le <em>marqueur de début</em> et le <em>marqueur de fin</em>, respectivement).</dd>
-  <dt>{{domxref("Performance.now()")}}</dt>
-  <dd>Retourne un objet {{domxref("DOMHighResTimeStamp")}} représentant le nombre de millisecondes écoulées depuis un instant donné.</dd>
-  <dt>{{domxref("performance.setResourceTimingBufferSize()")}}</dt>
-  <dd>Configure la taille de la mémoire tampon pour le chronométrage des ressources du navigateur. La valeur passée en argument indiquera le nombre maximal d'objets {{domxref("PerformanceEntry")}} ayant le {{domxref("PerformanceEntry.entryType","type")}} "<code>resource</code>" qu'il sera possible d'y stocker.</dd>
-  <dt>{{domxref("Performance.toJSON()")}}</dt>
-  <dd>Retourne un objet JSON représentant l'objet <code>Performance</code>.</dd>
-</dl>
+- {{domxref("performance.timing")}} {{readonlyInline}} {{deprecated_inline}}
 
-<h2 id="Events">Événements</h2>
+  - : {{domxref("PerformanceTiming")}} est un objet contenant des informations de performance liées à la latence.
 
-<p>On pourra écouter ces événements en utilisant <code>addEventListener()</code> ou en assignant un gestionnaire d'événement à la propriété <code>on<em>&lt;EventName&gt;</em></code> de cette interface.</p>
+    > **Note :** Indisponible dans les Web Workers.
 
-<dl>
-  <dt>{{DOMxRef("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}}</dt>
-  <dd>Déclenché lorsque le <a href="/fr/docs/Web/API/Performance/setResourceTimingBufferSize">tampon de synchronisation des ressources</a> du navigateur est plein. Également disponible via la propriété {{DOMxRef("Performance.onresourcetimingbufferfull", "onresourcetimingbufferfull")}}.</dd>
-</dl>
+- {{domxref("performance.memory")}} {{readonlyInline}} {{Non-standard_inline}}
+  - : Une extension _non standard_ ajoutée dans Chrome, cette propriété fournit à un objet des informations de base sur l'utilisation de la mémoire. _Vous **ne devriez pas utiliser** cette API non standard._
+- {{domxref("Performance.timeOrigin")}} {{readonlyInline}} {{Experimental_inline}}
+  - : Fournit un horodatage haute résolution de l'heure de début de la mesure de performance.
 
-<h2 id="Specifications">Spécifications</h2>
+## Méthodes
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaires</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Highres Time Level 2', '#sec-performance', 'Performance')}}</td>
-      <td>{{Spec2('Highres Time Level 2')}}</td>
-      <td>Définition de la méthode <code>toJson()</code>.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Highres Time', '#performance', 'Performance')}}</td>
-      <td>{{Spec2('Highres Time')}}</td>
-      <td>Définition de la méthode <code>now()</code>.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Performance Timeline Level 2', '#extensions-to-the-performance-interface',  'Performance extensions')}}</td>
-      <td>{{Spec2('Performance Timeline Level 2')}}</td>
-      <td>Changements sur l'interface <code>getEntries()</code>.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Performance Timeline', '#extensions-to-the-performance-interface', 'Performance extensions')}}</td>
-      <td>{{Spec2('Performance Timeline')}}</td>
-      <td>Définition des méthodes <code>getEntries()</code>, <code>getEntriesByType()</code> et <code>getEntriesByName()</code>.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Resource Timing', '#extensions-performance-interface', 'Performance extensions')}}</td>
-      <td>{{Spec2('Resource Timing')}}</td>
-      <td>Définition des méthodes <code>clearResourceTimings()</code> et <code>setResourceTimingBufferSize()</code> et de la propriété <code>onresourcetimingbufferfull</code>.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('User Timing Level 2', '#extensions-performance-interface', 'Performance extensions')}}</td>
-      <td>{{Spec2('User Timing Level 2')}}</td>
-      <td>Clarifications des méthodes <code>mark()</code>, <code>clearMark()</code>, <code>measure()</code> et <code>clearMeasure()</code>.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('User Timing', '#extensions-performance-interface', 'Performance extensions')}}</td>
-      <td>{{Spec2('User Timing')}}</td>
-      <td>Définition des méthodes <code>mark()</code>, <code>clearMark()</code>, <code>measure()</code> et <code>clearMeasure()</code>.</td>
-    </tr>
-  </tbody>
-</table>
+_L'interface `Performance` n'hérite d'aucune méthode_.
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+- {{domxref("performance.clearMarks()")}}
+  - : Supprime le _marqueur_ indiqué des données de performances du navigateur mises en mémoire tampon.
+- {{domxref("performance.clearMeasures()")}}
+  - : Supprime la _mesure_ indiquée des données de performances du navigateur mises en mémoire tampon.
+- {{domxref("performance.clearResourceTimings()")}}
+  - : Supprime toutes les {{domxref("PerformanceEntry","entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType","entryType")}} "`resource`" des données de performances du navigateur mises en mémoire tampon.
+- {{domxref("performance.getEntries()")}}
+  - : Retourne une liste d'objets {{domxref("PerformanceEntry")}} basée sur le _filtre_ indiqué.
+- {{domxref("performance.getEntriesByName()")}}
+  - : Retourne une liste d'objets {{domxref("PerformanceEntry")}} basée sur le _nom_ indiqué.
+- {{domxref("performance.getEntriesByType()")}}
+  - : Retourne une liste d'objets {{domxref("PerformanceEntry")}} basée sur le _type_ indiqué.
+- {{domxref("performance.mark()")}}
+  - : Crée un {{domxref("DOMHighResTimeStamp","timestamp")}} avec le nom indiqué, dans la mémoire tampon du navigateur dédiée aux performances.
+- {{domxref("performance.measure()")}}
+  - : Crée un {{domxref("DOMHighResTimeStamp","timestamp")}} nommé, dans la mémoire tampon du navigateur dédiée aux performances, entre deux marqueurs spécifiques (connus comme le _marqueur de début_ et le _marqueur de fin_, respectivement).
+- {{domxref("Performance.now()")}}
+  - : Retourne un objet {{domxref("DOMHighResTimeStamp")}} représentant le nombre de millisecondes écoulées depuis un instant donné.
+- {{domxref("performance.setResourceTimingBufferSize()")}}
+  - : Configure la taille de la mémoire tampon pour le chronométrage des ressources du navigateur. La valeur passée en argument indiquera le nombre maximal d'objets {{domxref("PerformanceEntry")}} ayant le {{domxref("PerformanceEntry.entryType","type")}} "`resource`" qu'il sera possible d'y stocker.
+- {{domxref("Performance.toJSON()")}}
+  - : Retourne un objet JSON représentant l'objet `Performance`.
 
-<p>{{Compat("api.Performance")}}</p>
+## Événements
 
-<h2 id="See_Also">Voir aussi</h2>
+On pourra écouter ces événements en utilisant `addEventListener()` ou en assignant un gestionnaire d'événement à la propriété `on<EventName>` de cette interface.
 
-<ul>
-  <li><a href="/fr/docs/Web/API/Performance_Timeline">Performance Timeline</a></li>
-  <li><a href="/fr/docs/Web/API/Navigation_timing_API">Navigation Timing API</a></li>
-  <li><a href="/fr/docs/Web/API/User_Timing_API">User Timing API</a></li>
-  <li><a href="/fr/docs/Web/API/Resource_Timing_API">Resource Timing API</a></li>
-</ul>
+- {{DOMxRef("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}}
+  - : Déclenché lorsque le [tampon de synchronisation des ressources](/fr/docs/Web/API/Performance/setResourceTimingBufferSize) du navigateur est plein. Également disponible via la propriété {{DOMxRef("Performance.onresourcetimingbufferfull", "onresourcetimingbufferfull")}}.
+
+## Spécifications
+
+| Spécification                                                                                                                                            | Statut                                                   | Commentaires                                                                                                                         |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('Highres Time Level 2', '#sec-performance', 'Performance')}}                                                         | {{Spec2('Highres Time Level 2')}}             | Définition de la méthode `toJson()`.                                                                                                 |
+| {{SpecName('Highres Time', '#performance', 'Performance')}}                                                                         | {{Spec2('Highres Time')}}                         | Définition de la méthode `now()`.                                                                                                    |
+| {{SpecName('Performance Timeline Level 2', '#extensions-to-the-performance-interface',  'Performance extensions')}} | {{Spec2('Performance Timeline Level 2')}} | Changements sur l'interface `getEntries()`.                                                                                          |
+| {{SpecName('Performance Timeline', '#extensions-to-the-performance-interface', 'Performance extensions')}}             | {{Spec2('Performance Timeline')}}             | Définition des méthodes `getEntries()`, `getEntriesByType()` et `getEntriesByName()`.                                                |
+| {{SpecName('Resource Timing', '#extensions-performance-interface', 'Performance extensions')}}                             | {{Spec2('Resource Timing')}}                     | Définition des méthodes `clearResourceTimings()` et `setResourceTimingBufferSize()` et de la propriété `onresourcetimingbufferfull`. |
+| {{SpecName('User Timing Level 2', '#extensions-performance-interface', 'Performance extensions')}}                     | {{Spec2('User Timing Level 2')}}             | Clarifications des méthodes `mark()`, `clearMark()`, `measure()` et `clearMeasure()`.                                                |
+| {{SpecName('User Timing', '#extensions-performance-interface', 'Performance extensions')}}                                 | {{Spec2('User Timing')}}                         | Définition des méthodes `mark()`, `clearMark()`, `measure()` et `clearMeasure()`.                                                    |
+
+## Compatibilité des navigateurs
+
+{{Compat("api.Performance")}}
+
+## Voir aussi
+
+- [Performance Timeline](/fr/docs/Web/API/Performance_Timeline)
+- [Navigation Timing API](/fr/docs/Web/API/Navigation_timing_API)
+- [User Timing API](/fr/docs/Web/API/User_Timing_API)
+- [Resource Timing API](/fr/docs/Web/API/Resource_Timing_API)

@@ -8,41 +8,35 @@ tags:
   - Propriétés
 translation_of: Web/API/Document/lastStyleSheetSet
 ---
-<p>{{ APIRef("DOM") }}{{ gecko_minversion_header("1.9") }}</p>
+{{ APIRef("DOM") }}{{ gecko_minversion_header("1.9") }}
 
-<p>Renvoie le dernier jeu de feuilles de styles activé ; cette valeur de la propriété change chaque fois que la propriété {{ domxref("document.selectedStyleSheetSet") }} est modifiée.</p>
+Renvoie le dernier jeu de feuilles de styles activé ; cette valeur de la propriété change chaque fois que la propriété {{ domxref("document.selectedStyleSheetSet") }} est modifiée.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>lastStyleSheetSet</em> = document.lastStyleSheetSet
-</pre>
+    lastStyleSheetSet = document.lastStyleSheetSet
 
-<p>En retour, <code>lastStyleSheetSet</code> indique le jeu de feuilles de styles qui a été défini le plus récemment. Si le jeu de feuilles de style en cours n'a pas été modifié en définissant {{ domxref("document.selectedStyleSheetSet") }}, la valeur retournée est <code>null</code>.</p>
+En retour, `lastStyleSheetSet` indique le jeu de feuilles de styles qui a été défini le plus récemment. Si le jeu de feuilles de style en cours n'a pas été modifié en définissant {{ domxref("document.selectedStyleSheetSet") }}, la valeur retournée est `null`.
 
-<div class="note">
-  <p><strong>Note :</strong> Cette valeur ne doit pas changer lorsque {{ domxref("document.enableStyleSheetsForSet()") }} est appelé.</p>
-</div>
+> **Note :** Cette valeur ne doit pas changer lorsque {{ domxref("document.enableStyleSheetsForSet()") }} est appelé.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var lastSheetSet = document.lastStyleSheetSet;
+```js
+var lastSheetSet = document.lastStyleSheetSet;
 if (!lastSheetSet) {
   lastSheetSet = "Sheet not yet changed";
 }
 console.log("The last sheet set is: " + lastSheetSet);
-</pre>
+```
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{ domxref("document.preferredStyleSheetSet") }}</li>
- <li>{{ domxref("document.selectedStyleSheetSet") }}</li>
- <li>{{ domxref("document.styleSheetSets") }}</li>
- <li>{{ domxref("document.enableStyleSheetsForSet()") }}</li>
-</ul>
+- {{ domxref("document.preferredStyleSheetSet") }}
+- {{ domxref("document.selectedStyleSheetSet") }}
+- {{ domxref("document.styleSheetSets") }}
+- {{ domxref("document.enableStyleSheetsForSet()") }}
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<ul>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets">HTML5: Alternate Style Sheets</a></li>
-</ul>
+- [HTML5: Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)

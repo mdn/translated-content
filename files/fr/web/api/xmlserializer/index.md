@@ -6,52 +6,47 @@ tags:
 translation_of: Web/API/XMLSerializer
 original_slug: XMLSerializer
 ---
+`XMLSerializer` sert à convertir des sous-arborescence DOM ou des documents DOM en texte. `XMLSerializer` est accessible aux scripts sans privilèges.
 
-<p><code>XMLSerializer</code> sert à convertir des sous-arborescence DOM ou des documents DOM en texte. <code>XMLSerializer</code> est accessible aux scripts sans privilèges.</p>
+> **Note :** `XMLSerializer` sert le plus souvent aux applications et extensions basées sur la plateforme Mozilla. Bien qu'il soit utilisable par les pages Web, il ne fait partie d'aucun standard et son niveau de support dans les autres navigateurs est inconnu.
 
-<div class="note">
-  <p><strong>Note :</strong> <code>XMLSerializer</code> sert le plus souvent aux applications et extensions basées sur la plateforme Mozilla. Bien qu'il soit utilisable par les pages Web, il ne fait partie d'aucun standard et son niveau de support dans les autres navigateurs est inconnu.</p>
-</div>
+### Méthodes
 
-<h3 id="M.C3.A9thodes">Méthodes</h3>
-<dl>
-  <dt>
-    serializeToString</dt>
-  <dd>
-    Retourne la sous-arborescence sérialisée sous la forme d'une chaîne de caractères</dd>
-  <dt>
-    serializeToStream</dt>
-  <dd>
-    La sous-arborescence débutant par l'élément spécifié est sérialisée en un flux d'octets en utilisant l'encodage de caractères indiqué.</dd>
-</dl>
-<h3 id="Exemple">Exemple</h3>
-<pre class="eval"> var s = new XMLSerializer();
- var d = document;
- var str = s.serializeToString(d);
- alert(str);
-</pre>
-<pre class="eval"> var s = new XMLSerializer();
- var stream = {
-   close : function()
-   {
-     alert("Flux fermé");
-   },
-   flush : function()
-   {
-   },
-   write : function(string, count)
-   {
-     alert("'" + string + "'\n nb d'octets : " + count + "");
-   }
- };
- s.serializeToStream(document, stream, "UTF-8");
-</pre>
-<h3 id="Voir_.C3.A9galement">Voir également</h3>
-<ul>
-  <li><a href="http://www.xulplanet.com/references/objref/XMLSerializer.html">Reference (en)</a> (XULPlanet)</li>
-  <li><a href="fr/Parsing_and_serializing_XML">Parsing and serializing XML</a></li>
-  <li><a href="http://xulplanet.com/tutorials/mozsdk/xmlparse.php">Parsing and serializing XML (en)</a> (XULPlanet)</li>
-  <li><a href="http://kb.mozillazine.org/Parsing_and_serializing_XML#Parsing_strings_into_DOM_trees">Parsing and serializing XML (en)</a> (MozillaZine)</li>
-  <li><a href="fr/XMLHttpRequest">XMLHttpRequest</a></li>
-  <li><a href="fr/DOMParser">DOMParser</a></li>
-</ul>
+- serializeToString
+  - : Retourne la sous-arborescence sérialisée sous la forme d'une chaîne de caractères
+- serializeToStream
+  - : La sous-arborescence débutant par l'élément spécifié est sérialisée en un flux d'octets en utilisant l'encodage de caractères indiqué.
+
+### Exemple
+
+     var s = new XMLSerializer();
+     var d = document;
+     var str = s.serializeToString(d);
+     alert(str);
+
+<!---->
+
+     var s = new XMLSerializer();
+     var stream = {
+       close : function()
+       {
+         alert("Flux fermé");
+       },
+       flush : function()
+       {
+       },
+       write : function(string, count)
+       {
+         alert("'" + string + "'\n nb d'octets : " + count + "");
+       }
+     };
+     s.serializeToStream(document, stream, "UTF-8");
+
+### Voir également
+
+- [Reference (en)](http://www.xulplanet.com/references/objref/XMLSerializer.html) (XULPlanet)
+- [Parsing and serializing XML](fr/Parsing_and_serializing_XML)
+- [Parsing and serializing XML (en)](http://xulplanet.com/tutorials/mozsdk/xmlparse.php) (XULPlanet)
+- [Parsing and serializing XML (en)](http://kb.mozillazine.org/Parsing_and_serializing_XML#Parsing_strings_into_DOM_trees) (MozillaZine)
+- [XMLHttpRequest](fr/XMLHttpRequest)
+- [DOMParser](fr/DOMParser)

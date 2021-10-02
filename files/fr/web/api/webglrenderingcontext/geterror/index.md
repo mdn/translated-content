@@ -9,97 +9,51 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/getError
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>La méthode <strong><code>WebGLRenderingContext.getError()</code></strong> de l'<a href="/fr-Fr/docs/Web/API/WebGL_API">API WebGL</a> retourne des informations d'erreur.</p>
+La méthode **`WebGLRenderingContext.getError()`** de l'[API WebGL](/fr-Fr/docs/Web/API/WebGL_API) retourne des informations d'erreur.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">GLenum <var>gl</var>.getError();
-</pre>
+    GLenum gl.getError();
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constante</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>gl.NO_ERROR</code></td>
-   <td>Aucune erreur n'a été enregistrée. La valeur de cette constante est 0.</td>
-  </tr>
-  <tr>
-   <td><code>gl.INVALID_ENUM</code></td>
-   <td>Une valeur non acceptable a été spécifiée pour un argument énuméré. La commande est ignorée et l'indicateur d'erreur est positionné.</td>
-  </tr>
-  <tr>
-   <td><code>gl.INVALID_VALUE</code></td>
-   <td>Un argument numérique est hors de sa plage. La commande est ignorée et l'indicateur d'erreur est positionné.</td>
-  </tr>
-  <tr>
-   <td><code>gl.INVALID_OPERATION</code></td>
-   <td>La commande indiquée n'est pas permise dans l'état courant. La commande est ignorée et l'indicateur d'erreur est positionné.</td>
-  </tr>
-  <tr>
-   <td><code>gl.INVALID_FRAMEBUFFER_OPERATION</code></td>
-   <td>Le tampon d'images actuellement lié n'est pas complet lors d'une tentative de rendu ou de relecture.</td>
-  </tr>
-  <tr>
-   <td><code>gl.OUT_OF_MEMORY</code></td>
-   <td>Plus assez de mémoire restante pour exécuter la commande.</td>
-  </tr>
-  <tr>
-   <td><code>gl.CONTEXT_LOST_WEBGL</code></td>
-   <td>Si le contexte WebGL est perdu, cette erreur est retournée lors du premier appel à <code>getError</code>. Après cela et jusqu'à ce que le contexte soit restauré, elle retourne <code>gl.NO_ERROR</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Constante                          | Description                                                                                                                                                                         |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `gl.NO_ERROR`                      | Aucune erreur n'a été enregistrée. La valeur de cette constante est 0.                                                                                                              |
+| `gl.INVALID_ENUM`                  | Une valeur non acceptable a été spécifiée pour un argument énuméré. La commande est ignorée et l'indicateur d'erreur est positionné.                                                |
+| `gl.INVALID_VALUE`                 | Un argument numérique est hors de sa plage. La commande est ignorée et l'indicateur d'erreur est positionné.                                                                        |
+| `gl.INVALID_OPERATION`             | La commande indiquée n'est pas permise dans l'état courant. La commande est ignorée et l'indicateur d'erreur est positionné.                                                        |
+| `gl.INVALID_FRAMEBUFFER_OPERATION` | Le tampon d'images actuellement lié n'est pas complet lors d'une tentative de rendu ou de relecture.                                                                                |
+| `gl.OUT_OF_MEMORY`                 | Plus assez de mémoire restante pour exécuter la commande.                                                                                                                           |
+| `gl.CONTEXT_LOST_WEBGL`            | Si le contexte WebGL est perdu, cette erreur est retournée lors du premier appel à `getError`. Après cela et jusqu'à ce que le contexte soit restauré, elle retourne `gl.NO_ERROR`. |
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">gl.getError(); // gl.NO_ERROR (0)
+```js
+gl.getError(); // gl.NO_ERROR (0)
 
 gl.enable(gl.MACHINTRUC);
 gl.getError(); // gl.INVALID_ENUM;
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.3", "getError")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glGetError.xml", "glGetError")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>Page man de l'API OpenGL.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | Statut                               | Commentaire               |
+| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------- |
+| {{SpecName('WebGL', "#5.14.3", "getError")}}                     | {{Spec2('WebGL')}}             | Définition initiale.      |
+| {{SpecName('OpenGL ES 2.0', "glGetError.xml", "glGetError")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WebGLRenderingContext.getError")}}</p>
+{{Compat("api.WebGLRenderingContext.getError")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("WebGLRenderingContext")}}</li>
- <li>{{domxref("WebGLContextEvent")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext")}}
+- {{domxref("WebGLContextEvent")}}

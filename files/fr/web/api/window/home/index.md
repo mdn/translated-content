@@ -11,26 +11,26 @@ tags:
   - Window
 translation_of: Web/API/Window/home
 ---
-<div>{{APIRef}}{{ Non-standard_header() }} {{ obsolete_header(31) }}</div>
+{{APIRef}}{{ Non-standard_header() }} {{ obsolete_header(31) }}
 
-<p>La méthode <code><strong>Window.home()</strong></code> renvoie la fenêtre à la page d'accueil.</p>
+La méthode **`Window.home()`** renvoie la fenêtre à la page d'accueil.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>window</em>.home();
-</pre>
+    window.home();
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">function goHome() {
+```js
+function goHome() {
   window.home();
 }
-</pre>
+```
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<p>DOM Niveau 0. Ne fait pas partie de la spécification.</p>
+DOM Niveau 0. Ne fait pas partie de la spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.home")}}</p>
+{{Compat("api.Window.home")}}

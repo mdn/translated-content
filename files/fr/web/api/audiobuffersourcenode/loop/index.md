@@ -9,35 +9,33 @@ tags:
   - Web Audio API
 translation_of: Web/API/AudioBufferSourceNode/loop
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>La propriété <code>loop</code> de l'interface {{domxref("AudioBufferSourceNode") }} est un booléen indiquant si la ressource audio doit être rejouée quand à la fin de l'{{domxref("AudioBuffer")}}.</p>
-</div>
+La propriété `loop` de l'interface {{domxref("AudioBufferSourceNode") }} est un booléen indiquant si la ressource audio doit être rejouée quand à la fin de l'{{domxref("AudioBuffer")}}.
 
-<p>La valeur par défaut de la propriété <code>loop </code>est <code>false</code>.</p>
+La valeur par défaut de la propriété `loop `est `false`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var source = audioCtx.createBufferSource();
+```js
+var source = audioCtx.createBufferSource();
 source.loop = true;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Un booléen.</p>
+Un booléen.
 
-<p>Lorsque la lecture en boucle est activée, le son commence à jouer au point spécifié lorsque {{domxref("AudioBufferSourceNode.start", "start()")}} est appelée. Quand il atteint le point spécifié par la propriété {{domxref("AudioBufferSourceNode.loopEnd", "loopEnd")}}, il recommence au point spécifié par la propriété {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}}</p>
+Lorsque la lecture en boucle est activée, le son commence à jouer au point spécifié lorsque {{domxref("AudioBufferSourceNode.start", "start()")}} est appelée. Quand il atteint le point spécifié par la propriété {{domxref("AudioBufferSourceNode.loopEnd", "loopEnd")}}, il recommence au point spécifié par la propriété {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}}
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est utilisée pour décoder une piste audio et la placer dans un {{domxref("AudioBufferSourceNode")}}. Les boutons mis à disposition permettent de lire et d'arrêter la lecture audio, et un slider est utilisé pour changer la valeur de <code>playbackRate</code> en temps réel. Quand la lecture est terminée, elle boucle.</p>
+Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est utilisée pour décoder une piste audio et la placer dans un {{domxref("AudioBufferSourceNode")}}. Les boutons mis à disposition permettent de lire et d'arrêter la lecture audio, et un slider est utilisé pour changer la valeur de `playbackRate` en temps réel. Quand la lecture est terminée, elle boucle.
 
-<div class="note">
-<p><strong>Note :</strong> Vous pouvez <a href="http://mdn.github.io/decode-audio-data/">essayer un exemple live</a> (or <a href="https://github.com/mdn/decode-audio-data">voir la source</a>.)</p>
-</div>
+> **Note :** Vous pouvez [essayer un exemple live](http://mdn.github.io/decode-audio-data/) (or [voir la source](https://github.com/mdn/decode-audio-data).)
 
-<pre class="brush: js">function getData() {
+```js
+function getData() {
   source = audioCtx.createBufferSource();
   request = new XMLHttpRequest();
 
@@ -70,31 +68,19 @@ play.onclick = function() {
   source.start(0);
   play.setAttribute('disabled', 'disabled');
   playbackControl.removeAttribute('disabled');
-}</pre>
+}
+```
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-loop', 'loop')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                               | Commentaire |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
+| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-loop', 'loop')}} | {{Spec2('Web Audio API')}} |             |
 
-<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+## Compatibilité navigateurs
 
-<p>{{Compat("api.AudioBufferSourceNode.loop")}}</p>
+{{Compat("api.AudioBufferSourceNode.loop")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Utiliser la Web Audio API</a></li>
-</ul>
+- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

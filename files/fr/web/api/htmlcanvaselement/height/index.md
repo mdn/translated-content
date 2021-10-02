@@ -8,69 +8,45 @@ tags:
   - Propriété
 translation_of: Web/API/HTMLCanvasElement/height
 ---
-<div>
-<div>
-<div>{{APIRef("Canvas API")}}</div>
-</div>
-</div>
+{{APIRef("Canvas API")}}
 
-<p>La propriété <strong><code>HTMLCanvasElement.height</code></strong> est un entier positif reflétant l'attribut HTML {{htmlattrxref("height", "canvas")}} de l'élément {{HTMLElement("canvas")}} mesuré en pixels CSS. Quand cet attribut n'est pas spécifié, ou si on lui affecte une valeur invalide, telle que négative, la valeur par défaut de <code>150</code> is utilisée.</p>
+La propriété **`HTMLCanvasElement.height`** est un entier positif reflétant l'attribut HTML {{htmlattrxref("height", "canvas")}} de l'élément {{HTMLElement("canvas")}} mesuré en pixels CSS. Quand cet attribut n'est pas spécifié, ou si on lui affecte une valeur invalide, telle que négative, la valeur par défaut de `150` is utilisée.
 
-<p>C'est l'une des deux propriétés, l'autre étant {{domxref("HTMLCanvasElement.width")}}, qui contrôlent la taille du canevas.</p>
+C'est l'une des deux propriétés, l'autre étant {{domxref("HTMLCanvasElement.width")}}, qui contrôlent la taille du canevas.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>var <em>pxl</em> = <em>canvas</em></var>.height;
-<em>canvas</em>.height = <em>pxl</em>;
-</pre>
+    var pxl = canvas.height;
+    canvas.height = pxl;
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Étant donné cet élément {{HTMLElement("canvas")}} :</p>
+Étant donné cet élément {{HTMLElement("canvas")}} :
 
-<pre class="brush: html">&lt;canvas id="canvas" width="300" height="300"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="300" height="300"></canvas>
+```
 
-<p>vous pouvez obtenir la hauteur du canevas avec le code suivant :</p>
+vous pouvez obtenir la hauteur du canevas avec le code suivant :
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 console.log(canvas.height); // 300
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#attr-canvas-height", "HTMLCanvasElement.height")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Pas de changement depuis l'instantané le plus récent, {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "scripting-1.html#attr-canvas-height", "HTMLCanvasElement.height")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "scripting-1.html#attr-canvas-height", "HTMLCanvasElement.height")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Instantané du {{SpecName('HTML WHATWG')}} contenant la définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                | Statut                           | Commentaire                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "scripting.html#attr-canvas-height", "HTMLCanvasElement.height")}} | {{Spec2('HTML WHATWG')}} | Pas de changement depuis l'instantané le plus récent, {{SpecName('HTML5 W3C')}} |
+| {{SpecName('HTML5.1', "scripting-1.html#attr-canvas-height", "HTMLCanvasElement.height")}}     | {{Spec2('HTML5.1')}}     |                                                                                        |
+| {{SpecName('HTML5 W3C', "scripting-1.html#attr-canvas-height", "HTMLCanvasElement.height")}} | {{Spec2('HTML5 W3C')}}     | Instantané du {{SpecName('HTML WHATWG')}} contenant la définition initiale.   |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.HTMLCanvasElement.height")}}</p>
+{{Compat("api.HTMLCanvasElement.height")}}
 
-<h2 id="See_Also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface la définissant, {{domxref("HTMLCanvasElement")}}.</li>
- <li>L'autre propriété contrôlant la taille du canevas, {{domxref("HTMLCanvasElement.width")}}.</li>
-</ul>
+- L'interface la définissant, {{domxref("HTMLCanvasElement")}}.
+- L'autre propriété contrôlant la taille du canevas, {{domxref("HTMLCanvasElement.width")}}.

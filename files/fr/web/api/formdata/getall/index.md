@@ -11,72 +11,61 @@ tags:
   - getAll
 translation_of: Web/API/FormData/getAll
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>La méthode <code><strong>getAll()</strong></code> de l'interface {{domxref("FormData")}} renvoie toutes les valeurs associées à une clé donnée à partir d'un objet <code>FormData</code>.</p>
+La méthode **`getAll()`** de l'interface {{domxref("FormData")}} renvoie toutes les valeurs associées à une clé donnée à partir d'un objet `FormData`.
 
-<div class="note">
-<p><strong>Note :</strong> Cette méthode est disponible dans les <a href="/fr/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note :** Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">formData.getAll(name);</pre>
+```js
+formData.getAll(name);
+```
 
-<h3 id="append_Parameters">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Un {{domxref("USVString")}} représentant le nom de la clé que vous voulez récupérer.</dd>
-</dl>
+- `name`
+  - : Un {{domxref("USVString")}} représentant le nom de la clé que vous voulez récupérer.
 
-<h3 id="Retours">Retours</h3>
+### Retours
 
-<p>Un tableau de {{domxref("FormDataEntryValue")}} dont la clé correspond à la valeur passée dans le paramètre <code>name</code>. Si la clé n'existe pas, la méthode renvoie une liste vide.</p>
+Un tableau de {{domxref("FormDataEntryValue")}} dont la clé correspond à la valeur passée dans le paramètre `name`. Si la clé n'existe pas, la méthode renvoie une liste vide.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>La ligne suivante crée un objet <code>FormData</code> vide :</p>
+La ligne suivante crée un objet `FormData` vide :
 
-<pre class="brush: js">var formData = new FormData();</pre>
+```js
+var formData = new FormData();
+```
 
-<p>Si nous ajoutons deux valeurs <code>username</code> en utilisant {{domxref("FormData.append")}} :</p>
+Si nous ajoutons deux valeurs `username` en utilisant {{domxref("FormData.append")}} :
 
-<pre class="brush: js">formData.append('username', 'Chris');
-formData.append('username', 'Bob');</pre>
+```js
+formData.append('username', 'Chris');
+formData.append('username', 'Bob');
+```
 
-<p>La fonction <code>getAll()</code> suivante va retourner chaque valeurs de <code>username</code> dans un tableau :</p>
+La fonction `getAll()` suivante va retourner chaque valeurs de `username` dans un tableau :
 
-<pre class="brush: js">formData.getAll('username'); // Returns ["Chris", "Bob"]</pre>
+```js
+formData.getAll('username'); // Returns ["Chris", "Bob"]
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest','#dom-formdata-getall','getAll()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                               | Commentaire |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
+| {{SpecName('XMLHttpRequest','#dom-formdata-getall','getAll()')}} | {{Spec2('XMLHttpRequest')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.FormData.getAll")}}
 
+## Voir aussi
 
-<p>{{Compat("api.FormData.getAll")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest">Utiliser XMLHttpRequest</a></li>
- <li><a href="/fr/docs/Web/API/FormData/Utilisation_objets_FormData">Utiliser les objets FormData</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Utiliser XMLHttpRequest](/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Utiliser les objets FormData](/fr/docs/Web/API/FormData/Utilisation_objets_FormData)
+- {{HTMLElement("Form")}}

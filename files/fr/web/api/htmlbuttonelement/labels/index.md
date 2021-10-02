@@ -7,60 +7,47 @@ tags:
   - Propriété
 translation_of: Web/API/HTMLButtonElement/labels
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>La propriété en lecture seule <code><strong>HTMLButtonElement.labels</strong></code> renvoie une {{domxref("NodeList")}} (<em>liste de noeuds</em>) des éléments {{HTMLElement("label")}} (<em>étiquette</em>) associés avec l'élément {{HTMLElement("button")}} (<em>bouton</em>).</p>
+La propriété en lecture seule **`HTMLButtonElement.labels`** renvoie une {{domxref("NodeList")}} (_liste de noeuds_) des éléments {{HTMLElement("label")}} (_étiquette_) associés avec l'élément {{HTMLElement("button")}} (_bouton_).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <var>labelElements</var> = <var>button</var>.labels;
-</pre>
+    var labelElements = button.labels;
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une {{domxref("NodeList")}} contenant les éléments <code>&lt;label&gt;</code> associés avec l'élément <code>&lt;button&gt;</code>.</p>
+Une {{domxref("NodeList")}} contenant les éléments `<label>` associés avec l'élément `<button>`.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;label id="label1" for="test"&gt;Label 1&lt;/label&gt;
-&lt;button id="test"&gt;Button&lt;/button&gt;
-&lt;label id="label2" for="test"&gt;Label 2&lt;/label&gt;
-</pre>
+```html
+<label id="label1" for="test">Label 1</label>
+<button id="test">Button</button>
+<label id="label2" for="test">Label 2</label>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">window.addEventListener("DOMContentLoaded", function() {
+```js
+window.addEventListener("DOMContentLoaded", function() {
   const button = document.getElementById("test");
-  for(var i = 0; i &lt; button.labels.length; i++) {
+  for(var i = 0; i < button.labels.length; i++) {
     console.log(button.labels[i].textContent); // "Label 1" et "Label 2"
   }
-});</pre>
+});
+```
 
-<p>{{EmbedLiveSample("Example", "100%", 30)}}</p>
+{{EmbedLiveSample("Example", "100%", 30)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "forms.html#dom-lfe-labels", "labels")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | Statut                           | Commentaire          |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName("HTML WHATWG", "forms.html#dom-lfe-labels", "labels")}} | {{Spec2("HTML WHATWG")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("api.HTMLButtonElement.labels")}}</p>
+{{Compat("api.HTMLButtonElement.labels")}}

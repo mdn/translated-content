@@ -9,52 +9,35 @@ tags:
   - Web Components
 translation_of: Web/API/HTMLContentElement
 ---
-<p>{{ APIRef("Web Components") }}</p>
+{{ APIRef("Web Components") }}
 
-<p>L'interface <code><strong>HTMLContentElement</strong></code> represente un élément HTML {{HTMLElement("content")}}, utilisé dans le <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a>. </p>
+L'interface **`HTMLContentElement`** represente un élément HTML {{HTMLElement("content")}}, utilisé dans le [Shadow DOM](/en-US/docs/Web/Web_Components/Shadow_DOM).
 
-<h2 id="Properties">Propriétés</h2>
+## Propriétés
 
-<p><em>Cette interface hérite des propriétés de {{domxref("HTMLElement")}}.</em></p>
+_Cette interface hérite des propriétés de {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLContentElement.select")}}</dt>
- <dd>Une {{domxref("DOMString")}} qui renvoie le {{ htmlattrxref("select", "content") }} d'un attribut HTML. La valeur de retour est une liste de sélecteurs CSS séparés par des virgules. Ils récupèrent le contenu à inserer à la place de l'élément <code>&lt;content&gt;</code>.</dd>
-</dl>
+- {{domxref("HTMLContentElement.select")}}
+  - : Une {{domxref("DOMString")}} qui renvoie le {{ htmlattrxref("select", "content") }} d'un attribut HTML. La valeur de retour est une liste de sélecteurs CSS séparés par des virgules. Ils récupèrent le contenu à inserer à la place de l'élément `<content>`.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Cette interface hérite des methodes de {{domxref("HTMLElement")}}.</em></p>
+_Cette interface hérite des methodes de {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLContentElement.getDistributedNodes()")}}</dt>
- <dd>Retourne un {{domxref("NodeList")}} statique du {{glossary("distributed nodes")}} associé avec l'élément <code>&lt;content&gt;</code>. </dd>
-</dl>
+- {{domxref("HTMLContentElement.getDistributedNodes()")}}
+  - : Retourne un {{domxref("NodeList")}} statique du {{glossary("distributed nodes")}} associé avec l'élément `<content>`.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Shadow DOM', '#the-content-element', 'content')}}</td>
-   <td>{{Spec2('Shadow DOM')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | Statut                           | Commentaire |
+| -------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('Shadow DOM', '#the-content-element', 'content')}} | {{Spec2('Shadow DOM')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.HTMLContentElement")}}</p>
+{{Compat("api.HTMLContentElement")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'élement HTML {{HTMLElement("content")}}, qui implémente cette interface.</li>
- <li><a href="/en-US/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a></li>
-</ul>
+- L'élement HTML {{HTMLElement("content")}}, qui implémente cette interface.
+- [Shadow DOM](/en-US/docs/Web/Web_Components/Shadow_DOM)

@@ -11,30 +11,33 @@ tags:
   - redirectStart
 translation_of: Web/API/PerformanceResourceTiming/redirectStart
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>La propriété en lecture seule <strong><code>redirectStart</code></strong> retourne un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> représentant l'instant du début de la récupération qui initie la redirection.</p>
+La propriété en lecture seule **`redirectStart`** retourne un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant l'instant du début de la récupération qui initie la redirection.
 
-<p>S'il y a des redirections HTTP lors de l'extraction de la ressource et si l'une des redirections ne provient pas de la même origine que le document actuel, mais que l'algorithme de vérification de l'autorisation de synchronisation réussit pour chaque ressource redirigée, cette propriété renvoie l'heure de début de l'extraction qui initie la redirection ; sinon, zéro est renvoyé.</p>
+S'il y a des redirections HTTP lors de l'extraction de la ressource et si l'une des redirections ne provient pas de la même origine que le document actuel, mais que l'algorithme de vérification de l'autorisation de synchronisation réussit pour chaque ressource redirigée, cette propriété renvoie l'heure de début de l'extraction qui initie la redirection ; sinon, zéro est renvoyé.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js"><var>resource</var>.redirectStart;</pre>
+```js
+resource.redirectStart;
+```
 
-<h3 id="Return_Value">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> représentant l'heure de début de l'extraction qui déclenche la redirection.</p>
+Un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant l'heure de début de l'extraction qui déclenche la redirection.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>Dans l'exemple suivant, la valeur des propriétés <code>*Start</code> et <code>*End</code> de tous les événements de <a href="/fr/docs/Web/API/PerformanceEntry/entryType">type</a> <code>"resource"</code> sont enregistrés.</p>
+Dans l'exemple suivant, la valeur des propriétés `*Start` et `*End` de tous les événements de [type](/fr/docs/Web/API/PerformanceEntry/entryType) `"resource"` sont enregistrés.
 
-<pre class="brush: js">function print_PerformanceEntries() {
+```js
+function print_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
   let p = performance.getEntriesByType("resource");
-  for (let i = 0; i &lt; p.length; i++) {
+  for (let i = 0; i < p.length; i++) {
     print_start_and_end_properties(p[i]);
   }
 }
@@ -48,7 +51,7 @@ function print_start_and_end_properties(perfEntry) {
                 "responseStart", "responseEnd",
                 "secureConnectionStart"];
 
-  for (let i = 0; i &lt; properties.length; i++) {
+  for (let i = 0; i < properties.length; i++) {
     // vérifie chaque propriété
     let supported = properties[i] in perfEntry;
     if (supported) {
@@ -59,28 +62,15 @@ function print_start_and_end_properties(perfEntry) {
     }
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Resource Timing', '#dom-performanceresourcetiming-redirectstart',
-        'redirectStart')}}</td>
-      <td>{{Spec2('Resource Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                | Statut                               | Commentaire          |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('Resource Timing', '#dom-performanceresourcetiming-redirectstart',
+        'redirectStart')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceResourceTiming.redirectStart")}}</p>
+{{Compat("api.PerformanceResourceTiming.redirectStart")}}

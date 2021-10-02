@@ -7,66 +7,52 @@ tags:
   - WebGL
 translation_of: Web/API/WebGLTexture
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>L'interface WebGLTexture fait partie de l'<a href="/fr/docs/Web/API/WebGL_API">API WebGL</a> et représente un objet de texture opaque fournissant un stockage et un état pour les opérations de texturation.</p>
+L'interface WebGLTexture fait partie de l'[API WebGL](/fr/docs/Web/API/WebGL_API) et représente un objet de texture opaque fournissant un stockage et un état pour les opérations de texturation.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'objet WebGLTexture ne définit aucune méthode ou propriété propre, et son contenu n'est pas directement accessible. Lors du travail avec des objets WebGLTexture, les méthodes suivantes du {{domxref("WebGLRenderingContext")}} sont utiles :</p>
+L'objet WebGLTexture ne définit aucune méthode ou propriété propre, et son contenu n'est pas directement accessible. Lors du travail avec des objets WebGLTexture, les méthodes suivantes du {{domxref("WebGLRenderingContext")}} sont utiles :
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isTexture()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindTexture()")}}
+- {{domxref("WebGLRenderingContext.createTexture()")}}
+- {{domxref("WebGLRenderingContext.deleteTexture()")}}
+- {{domxref("WebGLRenderingContext.isTexture()")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Création_d'une_texture">Création d'une texture</h3>
+### Création d'une texture
 
-<pre class="brush: js">var canevas = document.getElementById('canvas');
+```js
+var canevas = document.getElementById('canvas');
 var gl = canevas.getContext('webgl');
 var texture = gl.createTexture();
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.9", "WebGLTexture")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                | Statut                   | Commentaire          |
+| ------------------------------------------------------------ | ------------------------ | -------------------- |
+| {{SpecName('WebGL', "#5.9", "WebGLTexture")}} | {{Spec2('WebGL')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WebGLTexture")}}</p>
+{{Compat("api.WebGLTexture")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.compressedTexImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.copyTexImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.copyTexSubImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.generateMipmap()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getTexParameter()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texSubImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texParameterf()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texParameteri()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindTexture()")}}
+- {{domxref("WebGLRenderingContext.createTexture()")}}
+- {{domxref("WebGLRenderingContext.deleteTexture()")}}
+- {{domxref("WebGLRenderingContext.isTexture()")}}
+- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
+- {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
+- {{domxref("WebGLRenderingContext.copyTexImage2D()")}}
+- {{domxref("WebGLRenderingContext.copyTexSubImage2D()")}}
+- {{domxref("WebGLRenderingContext.generateMipmap()")}}
+- {{domxref("WebGLRenderingContext.getTexParameter()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}
+- {{domxref("WebGLRenderingContext.texSubImage2D()")}}
+- {{domxref("WebGLRenderingContext.texParameterf()")}}
+- {{domxref("WebGLRenderingContext.texParameteri()")}}

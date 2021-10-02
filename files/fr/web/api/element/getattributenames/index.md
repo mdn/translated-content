@@ -9,58 +9,49 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/getAttributeNames
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code>Element.getAttributeNames()</code> renvoie les noms des attributs de l'élément sous la forme d'un {{jsxref("Array")}} (<em>tableau</em>) de chaînes de caractères. Si l'élément n'a pas d'attributs, il retourne un tableau vide.</p>
+`Element.getAttributeNames()` renvoie les noms des attributs de l'élément sous la forme d'un {{jsxref("Array")}} (_tableau_) de chaînes de caractères. Si l'élément n'a pas d'attributs, il retourne un tableau vide.
 
-<p>L'utilisation de <code>getAttributeNames()</code> complété par {{domxref("Element.getAttribute","getAttribute()")}}, est une alternative efficiente et performante pour l'accès à {{domxref("Element.attributes")}}.</p>
+L'utilisation de `getAttributeNames()` complété par {{domxref("Element.getAttribute","getAttribute()")}}, est une alternative efficiente et performante pour l'accès à {{domxref("Element.attributes")}}.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>let attributeNames</em> = element.getAttributeNames();
-</pre>
+    let attributeNames = element.getAttributeNames();
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">// Itérer sur les attributs de l'élément
+```js
+// Itérer sur les attributs de l'élément
 for(let name of element.getAttributeNames())
 {
 	let value = element.getAttribute(name);
 	console.log(name, value);
 }
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: html">if (Element.prototype.getAttributeNames == undefined) {
+```html
+if (Element.prototype.getAttributeNames == undefined) {
   Element.prototype.getAttributeNames = function () {
     var attributes = this.attributes;
     var length = attributes.length;
     var result = new Array(length);
-    for (var i = 0; i &lt; length; i++) {
+    for (var i = 0; i < length; i++) {
       result[i] = attributes[i].name;
     }
     return result;
   };
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-element-getattributenames", "Element.getAttributeNames")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | Statut                           | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName("DOM WHATWG", "#dom-element-getattributenames", "Element.getAttributeNames")}} | {{Spec2("DOM WHATWG")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Element.getAttributeNames")}}</p>
+{{Compat("api.Element.getAttributeNames")}}

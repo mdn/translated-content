@@ -8,15 +8,16 @@ tags:
   - NeedsUpdate
 translation_of: Web/API/StyleSheetList
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>L'interface StyleSheetList représente une liste de {{domxref("StyleSheet")}}.</p>
+L'interface StyleSheetList représente une liste de {{domxref("StyleSheet")}}.
 
-<p>Il s'agit d'un objet de type array, mais qui ne peut pas être itéré à l'aide de la méthode {{jsxref("Array")}}. Il peut néanmoins être itéré dans une boucle {{jsxref("Statements/for", "for")}} standard en utilisant ses indices, ou converti en un {{jsxref("Array")}}. </p>
+Il s'agit d'un objet de type array, mais qui ne peut pas être itéré à l'aide de la méthode {{jsxref("Array")}}. Il peut néanmoins être itéré dans une boucle {{jsxref("Statements/for", "for")}} standard en utilisant ses indices, ou converti en un {{jsxref("Array")}}.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">// Récupère toutes les règles CSS du document en cours en utilisant les méthodes de Array
+```js
+// Récupère toutes les règles CSS du document en cours en utilisant les méthodes de Array
 var allCSS = [].slice.call(document.styleSheets)
                      .reduce(function (prev, styleSheet) {
         if (styleSheet.cssRules) {
@@ -28,4 +29,5 @@ var allCSS = [].slice.call(document.styleSheets)
         } else {
             return prev;
         }
-    });</pre>
+    });
+```

@@ -8,67 +8,68 @@ tags:
   - Géolocalisation
 translation_of: Web/API/Geolocation_API
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
-<p>L'API <strong>Geolocation </strong>(pour géolocalisation) permet à un utilisateur d'indiquer sa localisation à une application web s'il le souhaite. Pour des raisons de vie privée, l'application doit demander la permission à l'utilisateur de manipuler ces informations.</p>
+L'API **Geolocation** (pour géolocalisation) permet à un utilisateur d'indiquer sa localisation à une application web s'il le souhaite. Pour des raisons de vie privée, l'application doit demander la permission à l'utilisateur de manipuler ces informations.
 
-<h2 id="Lobjet_geolocation">L'objet <code>geolocation</code></h2>
+## L'objet `geolocation`
 
-<p>L'API <a href="/fr/docs/Web/API/Geolocation">Geolocation</a> est publiée via l'objet {{domxref("navigator.geolocation")}}.</p>
+L'API [Geolocation](/fr/docs/Web/API/Geolocation) est publiée via l'objet {{domxref("navigator.geolocation")}}.
 
-<p>Si l'objet existe, les services de géolocalisation sont disponibles. On peut donc tester la présence de ces fonctionnalités de cette façon :</p>
+Si l'objet existe, les services de géolocalisation sont disponibles. On peut donc tester la présence de ces fonctionnalités de cette façon :
 
-<pre class="brush: js">if ("geolocation" in navigator) {
+```js
+if ("geolocation" in navigator) {
   /* la géolocalisation est disponible */
 } else {
   /* la géolocalisation n'est pas disponible */
 }
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong> Pour Firefox 24 et les versions antérieures, <code>"geolocation" in navigator</code> renvoyait toujours <code>true</code> même si l'API était désactivée. Cela a été corrigé à partir de <a href="/en-US/docs/Mozilla/Firefox/Releases/25/Site_Compatibility">Firefox 25</a> afin de respecter la spécification ({{bug(884921)}}).</p>
-</div>
+> **Note :** Pour Firefox 24 et les versions antérieures, `"geolocation" in navigator` renvoyait toujours `true` même si l'API était désactivée. Cela a été corrigé à partir de [Firefox 25](/en-US/docs/Mozilla/Firefox/Releases/25/Site_Compatibility) afin de respecter la spécification ({{bug(884921)}}).
 
-<h3 id="Obtenir_la_position_actuelle">Obtenir la position actuelle</h3>
+### Obtenir la position actuelle
 
-<p>Afin d'obtenir la position actuelle de l'utilisateur, on peut appeler la méthode {{domxref("geolocation.getCurrentPosition()","getCurrentPosition()")}}. Cela initie une requête asynchrone pour détecter la position de l'utilisateur en demandant au composant matériel une position à jour. Lorsque la position est déterminée, la fonction de <em>callback</em> est appelée. Il est possible de fournir un deuxième <em>callback</em> afin de gérer les erreurs. Le troisième paramètre de la fonction, optionnel, est un objet d'options qui indique l'âge maximal pour la position, le temps à attendre l'exécution de la requête et si on souhaite obtenir une précision élevée pour la position.</p>
+Afin d'obtenir la position actuelle de l'utilisateur, on peut appeler la méthode {{domxref("geolocation.getCurrentPosition()","getCurrentPosition()")}}. Cela initie une requête asynchrone pour détecter la position de l'utilisateur en demandant au composant matériel une position à jour. Lorsque la position est déterminée, la fonction de _callback_ est appelée. Il est possible de fournir un deuxième _callback_ afin de gérer les erreurs. Le troisième paramètre de la fonction, optionnel, est un objet d'options qui indique l'âge maximal pour la position, le temps à attendre l'exécution de la requête et si on souhaite obtenir une précision élevée pour la position.
 
-<div class="note">
-<p><strong>Note :</strong> Par défaut {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}} tente de répondre aussi rapidement que possible quitte à ce que le résultat soit peu précis. Cela permet de répondre rapidement (potentiellement avec des données peu précises comme l'IP ou le WiFi) plutôt que d'attendre une ou plusieurs minutes le calibrage du GPS.</p>
-</div>
+> **Note :** Par défaut {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}} tente de répondre aussi rapidement que possible quitte à ce que le résultat soit peu précis. Cela permet de répondre rapidement (potentiellement avec des données peu précises comme l'IP ou le WiFi) plutôt que d'attendre une ou plusieurs minutes le calibrage du GPS.
 
-<pre class="brush: js">navigator.geolocation.getCurrentPosition(function(position) {
+```js
+navigator.geolocation.getCurrentPosition(function(position) {
   faireQqc(position.coords.latitude, position.coords.longitude);
-});</pre>
+});
+```
 
-<p>Dans l'exemple ci-avant, la fonction <code>faireQqc()</code> sera exécutée quand la localisation sera obtenue.</p>
+Dans l'exemple ci-avant, la fonction `faireQqc()` sera exécutée quand la localisation sera obtenue.
 
-<h3 id="Suivre_lévolution_de_la_position">Suivre l'évolution de la position</h3>
+### Suivre l'évolution de la position
 
-<p>Si les données de position changent (que l'appareil ait bougé ou que des informations de géolocalisation plus précises soient disponibles), on peut définir une fonction de <em>callback</em> qui sera appelée avec les informations mises à jour</p>
+Si les données de position changent (que l'appareil ait bougé ou que des informations de géolocalisation plus précises soient disponibles), on peut définir une fonction de _callback_ qui sera appelée avec les informations mises à jour
 
-<p>Pour cela, on utilise la fonction {{domxref("Geolocation.watchPosition()","watchPosition()")}} qui utilise les mêmes paramètres d'entrée que {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}. Ce <em>callback</em> est appelé plusieurs fois, permettant au navigateur de mettre à jour la position lorsqu'on se déplace ou lorsque des données plus précises sont fournies. La fonction de rappel pour la gestion des erreurs (optionnelle) peut aussi être appelée de façon répétée.</p>
+Pour cela, on utilise la fonction {{domxref("Geolocation.watchPosition()","watchPosition()")}} qui utilise les mêmes paramètres d'entrée que {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}. Ce _callback_ est appelé plusieurs fois, permettant au navigateur de mettre à jour la position lorsqu'on se déplace ou lorsque des données plus précises sont fournies. La fonction de rappel pour la gestion des erreurs (optionnelle) peut aussi être appelée de façon répétée.
 
-<div class="note">
-<p><strong>Note :</strong> On peut utiliser {{domxref("Geolocation.watchPosition()","watchPosition()")}} sans avoir d'abord appelé {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}.</p>
-</div>
+> **Note :** On peut utiliser {{domxref("Geolocation.watchPosition()","watchPosition()")}} sans avoir d'abord appelé {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}.
 
-<pre class="brush: js">var watchID = navigator.geolocation.watchPosition(function(position) {
+```js
+var watchID = navigator.geolocation.watchPosition(function(position) {
   faireQqc(position.coords.latitude, position.coords.longitude);
-});</pre>
+});
+```
 
-<p>La méthode {{domxref("Geolocation.watchPosition()","watchPosition()")}} renvoie un identifiant qui peut être utilisé afin de redemander la position. Cet identifiant peut également être passé à la méthode {{domxref("Geolocation.clearWatch()","clearWatch()")}} afin d'arrêter le suivi de la position.</p>
+La méthode {{domxref("Geolocation.watchPosition()","watchPosition()")}} renvoie un identifiant qui peut être utilisé afin de redemander la position. Cet identifiant peut également être passé à la méthode {{domxref("Geolocation.clearWatch()","clearWatch()")}} afin d'arrêter le suivi de la position.
 
-<pre class="brush: js">navigator.geolocation.clearWatch(watchID);
-</pre>
+```js
+navigator.geolocation.clearWatch(watchID);
+```
 
-<h3 id="Paramétrer_la_réponse">Paramétrer la réponse</h3>
+### Paramétrer la réponse
 
-<p>{{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}} et {{domxref("Geolocation.watchPosition()","watchPosition()")}} prennent en argument un <em>callback</em> appelé en cas de succès, un deuxième <em>callback</em> (optionnel) appelé en cas d'erreur et un troisième argument (optionnel) qui est un objet <code><a href="/fr/docs/Web/API/PositionOptions">PositionOptions</a></code>.</p>
+{{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}} et {{domxref("Geolocation.watchPosition()","watchPosition()")}} prennent en argument un _callback_ appelé en cas de succès, un deuxième _callback_ (optionnel) appelé en cas d'erreur et un troisième argument (optionnel) qui est un objet [`PositionOptions`](/fr/docs/Web/API/PositionOptions).
 
-<p>Un appel à {{domxref("Geolocation.watchPosition()","watchPosition")}} peut donc ressembler à :</p>
+Un appel à {{domxref("Geolocation.watchPosition()","watchPosition")}} peut donc ressembler à :
 
-<pre class="brush: js">function geo_success(position) {
+```js
+function geo_success(position) {
   do_something(position.coords.latitude, position.coords.longitude);
 }
 
@@ -82,28 +83,31 @@ var geo_options = {
   timeout           : 27000
 };
 
-var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_options);</pre>
+var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_options);
+```
 
-<h2 id="Décrire_une_position">Décrire une position</h2>
+## Décrire une position
 
-<p>La position de l'utilisateur est décrite par un objet {{domxref("Position")}} qui fait référence à un objet {{domxref("Coordinates")}} via la propriété <code>coords</code>.</p>
+La position de l'utilisateur est décrite par un objet {{domxref("Position")}} qui fait référence à un objet {{domxref("Coordinates")}} via la propriété `coords`.
 
-<p>{{page("/fr/docs/Web/API/Position")}}</p>
+{{page("/fr/docs/Web/API/Position")}}
 
-<p>{{page("/fr/docs/Web/API/Position/coords","Coordinates")}}</p>
+{{page("/fr/docs/Web/API/Position/coords","Coordinates")}}
 
-<h2 id="Gérer_les_erreurs">Gérer les erreurs</h2>
+## Gérer les erreurs
 
-<p>Le <em>callback</em> de gestion des erreurs (s'il est passé à <code>getCurrentPosition()</code> ou <code>watchPosition()</code>) s'attend à recevoir un objet <code><a href="/fr/docs/Web/API/PositionError">PositionError</a></code> comme premier paramètre.</p>
+Le _callback_ de gestion des erreurs (s'il est passé à `getCurrentPosition()` ou `watchPosition()`) s'attend à recevoir un objet [`PositionError`](/fr/docs/Web/API/PositionError) comme premier paramètre.
 
-<pre class="brush: js">function errorCallback(error) {
+```js
+function errorCallback(error) {
   alert('ERROR(' + error.code + '): ' + error.message);
 };
-</pre>
+```
 
-<h2 id="Exemple_interactif">Exemple interactif</h2>
+## Exemple interactif
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   padding: 20px;
   background-color:#ffffc9
 }
@@ -111,18 +115,20 @@ var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_optio
 button {
   margin: .5rem 0;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html;">&lt;button id = "find-me"&gt;Montrer ma localisation&lt;/button&gt;&lt;br/&gt;
-&lt;p id = "status"&gt;&lt;/p&gt;
-&lt;a id = "map-link" target="_blank"&gt;&lt;/a&gt;
-</pre>
+```html
+<button id = "find-me">Montrer ma localisation</button><br/>
+<p id = "status"></p>
+<a id = "map-link" target="_blank"></a>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function geoFindMe() {
+```js
+function geoFindMe() {
 
   const status = document.querySelector('#status');
   const mapLink = document.querySelector('#map-link');
@@ -153,17 +159,18 @@ button {
 }
 
 document.querySelector('#find-me').addEventListener('click', geoFindMe);
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemple_interactif', 350, 150, "", "", "", "geolocation")}}</p>
+{{EmbedLiveSample('Exemple_interactif', 350, 150, "", "", "", "geolocation")}}
 
-<h2 id="Demander_la_permission">Demander la permission</h2>
+## Demander la permission
 
-<p>Pour une extension, toute utilisation des données de géolocalisation ne peut se faire qu'après avoir obtenu la permission. La fonction qui suit permet de demander la permission de façon semblable au rendu des pages web. La réponse de l'utilisateur est enregistrée dans la préférence indiquée par le paramètre <code>pref</code>. La fonction fournie dans le paramètre de <code>callback</code> sera appelée avec une valeur booléenne qui indique la réponse de l'utilisateur. Lorsque cette dernière vaut <code>true</code>, le module complémentaire pourra accéder aux données de géolocalisation.</p>
+Pour une extension, toute utilisation des données de géolocalisation ne peut se faire qu'après avoir obtenu la permission. La fonction qui suit permet de demander la permission de façon semblable au rendu des pages web. La réponse de l'utilisateur est enregistrée dans la préférence indiquée par le paramètre `pref`. La fonction fournie dans le paramètre de `callback` sera appelée avec une valeur booléenne qui indique la réponse de l'utilisateur. Lorsque cette dernière vaut `true`, le module complémentaire pourra accéder aux données de géolocalisation.
 
-<pre class="brush: js">function prompt(window, pref, message, callback) {
+```js
+function prompt(window, pref, message, callback) {
     let branch = Components.classes["@mozilla.org/preferences-service;1"]
                            .getService(Components.interfaces.nsIPrefBranch);
 
@@ -225,20 +232,18 @@ prompt(window,
        "extensions.foo-addon.allowGeolocation",
        "Foo Add-on wants to know your location.",
        function callback(allowed) { alert(allowed); });
-</pre>
+```
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Geolocation")}}</p>
+{{Compat("api.Geolocation")}}
 
-<h3 id="Disponibilité">Disponibilité</h3>
+### Disponibilité
 
-<p>La localisation basée sur le WiFi étant généralement obtenue via un service Google, l'API de géolocalisation peut être indisponible en Chine. Vous pouvez utiliser des fournisseurs tiers tels que <a href="http://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation">Baidu</a>, <a href="https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation">Autonavi</a> ou <a href="http://lbs.qq.com/tool/component-geolocation.html">Tencent</a>. Ces services se basent sur l'adresse IP de l'utilisateur ou sur une application locale afin de fournir un positionnement amélioré.</p>
+La localisation basée sur le WiFi étant généralement obtenue via un service Google, l'API de géolocalisation peut être indisponible en Chine. Vous pouvez utiliser des fournisseurs tiers tels que [Baidu](http://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation) ou [Tencent](http://lbs.qq.com/tool/component-geolocation.html). Ces services se basent sur l'adresse IP de l'utilisateur ou sur une application locale afin de fournir un positionnement amélioré.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("navigator.geolocation")}}</li>
- <li><a href="https://www.w3.org/TR/geolocation-API/">L'API Geolocation sur w3.org</a></li>
- <li><a href="https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/">Qui a déplacé ma géolocalisation ? sur le blog Hacks</a></li>
-</ul>
+- {{domxref("navigator.geolocation")}}
+- [L'API Geolocation sur w3.org](https://www.w3.org/TR/geolocation-API/)
+- [Qui a déplacé ma géolocalisation ? sur le blog Hacks](https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/)

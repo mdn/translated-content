@@ -5,13 +5,20 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/GlobalEventHandlers/onscroll
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
-<p>La propriété <b>onscroll</b> renvoie le gestionnaire d'évènement <code>scroll</code> pour l'élément courant.</p>
-<h3 id="Syntaxe">Syntaxe</h3>
-<pre class="eval"><i>code de gestion d'évènement</i> = element.onscroll;
-</pre>
-<h3 id="Notes">Notes</h3>
-<p>L'évènement <code>scroll</code> se déclenche lorsque l'utilisateur fait défiler le contenu d'un élément.</p>
-<h3 id="Sp.C3.A9cification">Spécification</h3>
-<p>DOM Level 0. Ne fait partie d'aucune spécification.</p>
+{{ ApiRef() }}
+
+### Résumé
+
+La propriété **onscroll** renvoie le gestionnaire d'évènement `scroll` pour l'élément courant.
+
+### Syntaxe
+
+    code de gestion d'évènement = element.onscroll;
+
+### Notes
+
+L'évènement `scroll` se déclenche lorsque l'utilisateur fait défiler le contenu d'un élément.
+
+### Spécification
+
+DOM Level 0. Ne fait partie d'aucune spécification.

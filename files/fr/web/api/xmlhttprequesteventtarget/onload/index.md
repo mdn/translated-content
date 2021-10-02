@@ -3,54 +3,38 @@ title: XMLHttpRequestEventTarget.onload
 slug: Web/API/XMLHttpRequestEventTarget/onload
 translation_of: Web/API/XMLHttpRequestEventTarget/onload
 ---
-<p> </p>
+{{APIRef("XMLHttpRequest")}}
 
-<div>{{APIRef("XMLHttpRequest")}}</div>
+The **`XMLHttpRequestEventTarget.onload`** is the function called when an {{domxref("XMLHttpRequest")}} transaction completes successfully.
 
-<p>The <strong><code>XMLHttpRequestEventTarget.onload</code></strong> is the function called when an {{domxref("XMLHttpRequest")}} transaction completes successfully.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+    XMLHttpRequest.onload = callback;
 
-<pre class="syntaxbox"><em>XMLHttpRequest</em>.onload = <em>callback</em>;</pre>
+### Values
 
-<h3 id="Values">Values</h3>
+- `callback` is the function to be executed when the request completes successfully. It receives a {{domxref("ProgressEvent")}} object as its first argument. The value of *this* (i.e. the context) is the same {{domxref("XMLHttpRequest")}} this callback is related to.
 
-<ul>
- <li><code><em>callback</em></code> is the function to be executed when the request completes successfully. It receives a {{domxref("ProgressEvent")}} object as its first argument. The value of <em>this</em> (i.e. the context) is the same {{domxref("XMLHttpRequest")}} this callback is related to.</li>
-</ul>
+## Example
 
-<h2 id="Example">Example</h2>
-
-<pre class="brush: js">var xmlhttp = new XMLHttpRequest(),
+```js
+var xmlhttp = new XMLHttpRequest(),
   method = 'GET',
   url = 'https://developer.mozilla.org/';
 
-xmlhttp.open(<em>method</em>, <em>url</em>, true);
+xmlhttp.open(method, url, true);
 xmlhttp.onload = function () {
   // Do something with the retrieved data ( found in xmlhttp.response )
 };
 xmlhttp.send();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#handler-xhr-onload')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                            | Status                               | Comment                |
+| ------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
+| {{SpecName('XMLHttpRequest', '#handler-xhr-onload')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-
-<p>{{Compat("api.XMLHttpRequestEventTarget.onload")}}</p>
+{{Compat("api.XMLHttpRequestEventTarget.onload")}}

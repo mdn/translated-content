@@ -11,23 +11,24 @@ tags:
   - origin
 translation_of: Web/API/ExtendableMessageEvent/origin
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>La propriété en lecture seule <strong>origin</strong> de l'interface {{domxref("ExtendableMessageEvent")}} retourne l'origine du  {{domxref("ServiceWorkerClient")}} qui a envoyé le message.</p>
+La propriété en lecture seule **origin** de l'interface {{domxref("ExtendableMessageEvent")}} retourne l'origine du  {{domxref("ServiceWorkerClient")}} qui a envoyé le message.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var myOrigin = ExtendableMessageEventInstance.origin;</pre>
+    var myOrigin = ExtendableMessageEventInstance.origin;
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Une {{domxref("DOMString")}}.</p>
+Une {{domxref("DOMString")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Le code suivant est utilisé, dans un service worker, pour répondre à un message push en envoyant les données reçues par le  <a href="/fr/docs/Web/API/PushMessageData"><code>PushMessageData</code></a> au contexte principale, via le <a href="/en-US/docs/Web/API/Channel_Messaging_API">canal de messages</a>. L'objet événement de <code>onmessage</code> sera un <code>ExtendableMessageEvent.</code></p>
+Le code suivant est utilisé, dans un service worker, pour répondre à un message push en envoyant les données reçues par le  [`PushMessageData`](/fr/docs/Web/API/PushMessageData) au contexte principale, via le [canal de messages](/en-US/docs/Web/API/Channel_Messaging_API). L'objet événement de `onmessage` sera un `ExtendableMessageEvent.`
 
-<pre class="brush: js">var port;
+```js
+var port;
 
 self.addEventListener('push', function(e) {
   var obj = e.data.json();
@@ -43,34 +44,21 @@ self.onmessage = function(e) {
   console.log(e.origin);
   port = e.ports[0];
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#extendablemessage-event-origin-attribute', 'ExtendableMessageEvent.origin')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                    | Statut                               | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('Service Workers', '#extendablemessage-event-origin-attribute', 'ExtendableMessageEvent.origin')}} | {{Spec2('Service Workers')}} | Définition initiale. |
 
-<h2 id="Compatibilités_des_navigateurs">Compatibilités des navigateurs</h2>
+## Compatibilités des navigateurs
 
-<p>{{Compat("api.ExtendableMessageEvent.origin")}}</p>
+{{Compat("api.ExtendableMessageEvent.origin")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Utilisation des Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Exemple simple des service workers</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Est-ce que les service workers sont prêts ?</a></li>
- <li><a href="/en-US/docs/Web/API/Channel_Messaging_API">Canal de messages</a></li>
-</ul>
+- [Utilisation des Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Exemple simple des service workers](https://github.com/mdn/sw-test)
+- [Est-ce que les service workers sont prêts ?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Canal de messages](/en-US/docs/Web/API/Channel_Messaging_API)

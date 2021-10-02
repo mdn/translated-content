@@ -12,54 +12,38 @@ tags:
   - évènements
 translation_of: Web/API/WindowEventHandlers/onafterprint
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<p>La propriété WindowEventHandlers.onafterprint définit et renvoie {{event("afterprint")}} {{event("Event_handlers", "event handler")}} pourl a fenêtre actuelle.</p>
+La propriété WindowEventHandlers.onafterprint définit et renvoie {{event("afterprint")}} {{event("Event_handlers", "event handler")}} pourl a fenêtre actuelle.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>window</em>.onafterprint = <em>code de traitement de l'événement</em>
-</pre>
+    window.onafterprint = code de traitement de l'événement
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Les événements <code>beforeprint</code> et <code>afterprint</code> permettent aux pages de modifier leur contenu avant le début de l'impression (pour supprimer une bannière, par exemple), puis d'annuler ces modifications une fois l'impression terminée. En général, les auteurs de contenu devraient préférer l'utilisation d'une règle CSS <a href="/en-US/docs/Web/CSS/@media">@media print</a>, mais il peut être nécessaire d'utiliser ces événements dans certains cas.</p>
+Les événements `beforeprint` et `afterprint` permettent aux pages de modifier leur contenu avant le début de l'impression (pour supprimer une bannière, par exemple), puis d'annuler ces modifications une fois l'impression terminée. En général, les auteurs de contenu devraient préférer l'utilisation d'une règle CSS [@media print](/en-US/docs/Web/CSS/@media), mais il peut être nécessaire d'utiliser ces événements dans certains cas.
 
-<p>L'événement <code>afterprint</code> est appelé après l'impression par l'utilisateur, ou s'il interrompt la boîte de dialogue d'impression.</p>
-
-<p> </p>
-
-<p> </p>
-
-<p>Safari ne reconnaît pas ces événements.</p>
-
-<h2 id="Spécification">Spécification</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#handler-window-onafterprint', 'onafterprint')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+L'événement `afterprint` est appelé après l'impression par l'utilisateur, ou s'il interrompt la boîte de dialogue d'impression.
 
 
 
-<p>{{Compat("api.WindowEventHandlers.onafterprint")}}</p>
 
-<h2 id="Voir_également">Voir également</h2>
 
-<ul>
- <li>{{domxref("window.print")}}</li>
- <li>{{domxref("window.onbeforeprint")}}</li>
- <li><a href="/en-US/docs/Printing">Printing</a></li>
-</ul>
+Safari ne reconnaît pas ces événements.
+
+## Spécification
+
+| Specification                                                                                        | Status                           | Comment |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', '#handler-window-onafterprint', 'onafterprint')}} | {{Spec2('HTML WHATWG')}} |         |
+
+## Compatibilité des navigateurs
+
+{{Compat("api.WindowEventHandlers.onafterprint")}}
+
+## Voir également
+
+- {{domxref("window.print")}}
+- {{domxref("window.onbeforeprint")}}
+- [Printing](/en-US/docs/Printing)

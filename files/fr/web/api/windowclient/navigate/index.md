@@ -12,44 +12,31 @@ tags:
   - WindowClient
 translation_of: Web/API/WindowClient/navigate
 ---
-<p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>La méthode <strong><code>navigate()</code></strong> de l'interface  {{domxref("WindowClient")}} charge une URL spécifiée dans une page de client contrôlée, puis retourne une  {{jsxref("Promise")}}  qui devra être analysée par  {{domxref("WindowClient")}} (le demandeur).</p>
+La méthode **`navigate()`** de l'interface  {{domxref("WindowClient")}} charge une URL spécifiée dans une page de client contrôlée, puis retourne une  {{jsxref("Promise")}}  qui devra être analysée par  {{domxref("WindowClient")}} (le demandeur).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>WindowClient</em>.navigate(<em>url</em>).then(function(<em>WindowClient</em>) {
-  // do something with your WindowClient after navigation
-});</pre>
+    WindowClient.navigate(url).then(function(WindowClient) {
+      // do something with your WindowClient after navigation
+    });
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>url</code></dt>
- <dd>L'emplacement pour naviguer vers (url est une string) .</dd>
-</dl>
+- `url`
+  - : L'emplacement pour naviguer vers (url est une string) .
 
-<h3 id="Retour">Retour</h3>
+### Retour
 
-<p>Une {{jsxref("Promise")}}  qui sera analysée par le demandeur {{domxref("WindowClient")}} (fonctionnement asynchrone : je te promet de faire, mais je suis pas sûr, à toi de vérifier) .</p>
+Une {{jsxref("Promise")}}  qui sera analysée par le demandeur {{domxref("WindowClient")}} (fonctionnement asynchrone : je te promet de faire, mais je suis pas sûr, à toi de vérifier) .
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#client-navigate-method', 'navigate()')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                               | Commentaire         |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
+| {{SpecName('Service Workers', '#client-navigate-method', 'navigate()')}} | {{Spec2('Service Workers')}} | définition initiale |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WindowClient.navigate")}}</p>
+{{Compat("api.WindowClient.navigate")}}

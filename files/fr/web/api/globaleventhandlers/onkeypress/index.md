@@ -7,16 +7,26 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/GlobalEventHandlers/onkeypress
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
-<p>La propriété <strong>onkeypress</strong> définit et renvoie le gestionnaire d'évènement <code>keypress</code> de l'élément courant.</p>
-<h3 id="Syntaxe">Syntaxe</h3>
-<pre class="eval">element.onkeypress = code de gestion de l'évènement
-</pre>
-<h3 id="Notes">Notes</h3>
-<p>L'évènement <code>keypress</code> se déclenche lorsque qu'une touche du clavier est pressée.</p>
-<p>À différencier de <a href="/fr/DOM/element.onkeydown">onkeydown</a> qui se déclenche lorsque qu'une touche du clavier est enfoncée. (La nuance se situe dans le fait que <code>onkeydown</code> se produit avant <code>onkeypress</code>, même s'il se produisent quasiment au même instant)</p>
-<h3 id="Notes">Voir aussi</h3>
-<p><a href="/fr/DOM/element.onkeydown">onkeydown</a> <a href="/fr/DOM/element.onkeyup">onkeyup</a></p>
-<h3 id="Sp.C3.A9cification">Spécification</h3>
-<p>{{ DOM0() }}</p>
+{{ ApiRef() }}
+
+### Résumé
+
+La propriété **onkeypress** définit et renvoie le gestionnaire d'évènement `keypress` de l'élément courant.
+
+### Syntaxe
+
+    element.onkeypress = code de gestion de l'évènement
+
+### Notes
+
+L'évènement `keypress` se déclenche lorsque qu'une touche du clavier est pressée.
+
+À différencier de [onkeydown](/fr/DOM/element.onkeydown) qui se déclenche lorsque qu'une touche du clavier est enfoncée. (La nuance se situe dans le fait que `onkeydown` se produit avant `onkeypress`, même s'il se produisent quasiment au même instant)
+
+### Voir aussi
+
+[onkeydown](/fr/DOM/element.onkeydown) [onkeyup](/fr/DOM/element.onkeyup)
+
+### Spécification
+
+{{ DOM0() }}

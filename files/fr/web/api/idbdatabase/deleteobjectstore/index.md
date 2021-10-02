@@ -8,61 +8,45 @@ tags:
   - Reference
 translation_of: Web/API/IDBDatabase/deleteObjectStore
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>La méthode <strong><code>deleteObjectStore()</code></strong> de l'interface {{domxref("IDBDatabase")}} supprime un magasin d'objet et ses index de la base de données.</p>
+La méthode **`deleteObjectStore()`** de l'interface {{domxref("IDBDatabase")}} supprime un magasin d'objet et ses index de la base de données.
 
-<p>Comme la méthode {{domxref("IDBDatabase.createObjectStore")}}, cette méthode doit être appelée <em>uniquement</em> lors d'une transaction en mode <a href="/fr/docs/Web/API/IDBTransaction"><code>versionchange</code></a>.</p>
+Comme la méthode {{domxref("IDBDatabase.createObjectStore")}}, cette méthode doit être appelée _uniquement_ lors d'une transaction en mode [`versionchange`](/fr/docs/Web/API/IDBTransaction).
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">dbInstance.deleteObjectStore(name);</pre>
+```js
+dbInstance.deleteObjectStore(name);
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Le nom du magasin d'objet à supprimer.</dd>
-</dl>
+- `name`
+  - : Le nom du magasin d'objet à supprimer.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Aucune.</p>
+Aucune.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Cette méthode peut lever une {{domxref("DOMException")}} d'un de ces types suivants:</p>
+Cette méthode peut lever une {{domxref("DOMException")}} d'un de ces types suivants:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>Levée si la méthode n'est pas appelée lors d'une transaction en mode <code>versionchange</code>. Pour les anciens navigateurs basés sur WebKit, il faut d'abord appeler la méthode  {{domxref("IDBVersionChangeRequest.setVersion")}}.</td>
-  </tr>
-  <tr>
-   <td><code>TransactionInactiveError</code></td>
-   <td>Levée si la méthode est appelée sur une base de données qui n'existe pas (ex. elle a été effacée). Pour les versions antérieures à Firefox 41, ce dernier déclenchait une erreur <code>InvalidStateError</code>, cela est désormais corrigé (cf. {{bug("1176165")}}).</td>
-  </tr>
-  <tr>
-   <td><code>NotFoundError</code></td>
-   <td>Levée lors de la suppression d'un magasin d'objets qui n'existe pas. Les noms sont sensibles à la casse.</td>
-  </tr>
- </tbody>
-</table>
+| Exception                  | Description                                                                                                                                                                                                                                                      |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `InvalidStateError`        | Levée si la méthode n'est pas appelée lors d'une transaction en mode `versionchange`. Pour les anciens navigateurs basés sur WebKit, il faut d'abord appeler la méthode  {{domxref("IDBVersionChangeRequest.setVersion")}}.                       |
+| `TransactionInactiveError` | Levée si la méthode est appelée sur une base de données qui n'existe pas (ex. elle a été effacée). Pour les versions antérieures à Firefox 41, ce dernier déclenchait une erreur `InvalidStateError`, cela est désormais corrigé (cf. {{bug("1176165")}}). |
+| `NotFoundError`            | Levée lors de la suppression d'un magasin d'objets qui n'existe pas. Les noms sont sensibles à la casse.                                                                                                                                                         |
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans cet exemple, on ouvre une connexion à la base de données et dans le gestionnaire d'événements <code>onupdateneeded</code>, on ajoute un magasin d'objets en utilisant la méthode {{domxref("IDBDatabase.createObjectStore")}}. Enfin, on supprime ce magasin d'objets grâce à <code>deleteObjectStore()</code>.</p>
+Dans cet exemple, on ouvre une connexion à la base de données et dans le gestionnaire d'événements `onupdateneeded`, on ajoute un magasin d'objets en utilisant la méthode {{domxref("IDBDatabase.createObjectStore")}}. Enfin, on supprime ce magasin d'objets grâce à `deleteObjectStore()`.
 
-<pre class="brush: js;">  // Connexion à la base de données
+```js
+  // Connexion à la base de données
   var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
   /* Gestionnaire d'événements qui intervient lors de
@@ -75,7 +59,7 @@ translation_of: Web/API/IDBDatabase/deleteObjectStore
     var db = event.target.result;
 
     db.onerror = function(event) {
-      note.innerHTML += '&lt;li&gt;Erreur du chargement de la base de données.&lt;/li&gt;';
+      note.innerHTML += '<li>Erreur du chargement de la base de données.</li>';
     };
 
     // Ajoute un magasin d'objets à la base de données
@@ -92,48 +76,31 @@ translation_of: Web/API/IDBDatabase/deleteObjectStore
 
     objectStore.createIndex("notified", "notified", { unique: false });
 
-    note.innerHTML += '&lt;li&gt;Magasin d\'objets ajouté.&lt;/li&gt;';
+    note.innerHTML += '<li>Magasin d\'objets ajouté.</li>';
 
     // Supprime le magasin d'objets
 
     db.deleteObjectStore("toDoList");
   };
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBDatabase-deleteObjectStore-void-DOMString-name', 'deleteObjectStore()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbdatabase-deleteobjectstore", "deleteObjectStore()")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                    | État                             | Commentaires |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBDatabase-deleteObjectStore-void-DOMString-name', 'deleteObjectStore()')}} | {{Spec2('IndexedDB')}}     |              |
+| {{SpecName("IndexedDB 2", "#dom-idbdatabase-deleteobjectstore", "deleteObjectStore()")}}                             | {{Spec2("IndexedDB 2")}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBDatabase.deleteObjectStore")}}</p>
+{{Compat("api.IDBDatabase.deleteObjectStore")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Manipuler IndexedDB</a></li>
- <li>Démarrer des transactions : {{domxref("IDBDatabase")}}</li>
- <li>Manipuler des transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}</li>
- <li>Manipuler des curseurs : {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence pour IndexedDB : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a></li>
-</ul>
+- [Manipuler IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Démarrer des transactions : {{domxref("IDBDatabase")}}
+- Manipuler des transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
+- Manipuler des curseurs : {{domxref("IDBCursor")}}
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)

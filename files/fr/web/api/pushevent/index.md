@@ -13,36 +13,33 @@ tags:
   - hors-ligne
 translation_of: Web/API/PushEvent
 ---
-<p>{{APIRef("Push API")}}{{SeeCompatTable()}}</p>
+{{APIRef("Push API")}}{{SeeCompatTable()}}
 
-<p>L'interface <strong><code>PushEvent</code></strong> de l'<a href="/en-US/docs/Web/API/Push_API">API Push</a> représente un message Push qui a été reçu. Cet événement est envoyé au <a href="/fr/docs/Web/API/ServiceWorkerGlobalScope">scope global</a> d'un {{domxref("ServiceWorker")}}. Il contient les informations transmises de l'application serveur vers un {{domxref("PushSubscription")}}.</p>
+L'interface **`PushEvent`** de l'[API Push](/en-US/docs/Web/API/Push_API) représente un message Push qui a été reçu. Cet événement est envoyé au [scope global](/fr/docs/Web/API/ServiceWorkerGlobalScope) d'un {{domxref("ServiceWorker")}}. Il contient les informations transmises de l'application serveur vers un {{domxref("PushSubscription")}}.
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{domxref("PushEvent.PushEvent()")}}</dt>
- <dd>Créer un nouvel objet <code>PushEvent</code>.</dd>
-</dl>
+- {{domxref("PushEvent.PushEvent()")}}
+  - : Créer un nouvel objet `PushEvent`.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Hérite des propriétés de son parent, {{domxref("ExtendableEvent")}}. Propriétés additionnelles:</em></p>
+_Hérite des propriétés de son parent, {{domxref("ExtendableEvent")}}. Propriétés additionnelles:_
 
-<dl>
- <dt>{{domxref("PushEvent.data")}} {{readonlyinline}}</dt>
- <dd>Retourne une référence à un objet {{domxref("PushMessageData")}} contenant les données transmises au {{domxref("PushSubscription")}}.</dd>
-</dl>
+- {{domxref("PushEvent.data")}} {{readonlyinline}}
+  - : Retourne une référence à un objet {{domxref("PushMessageData")}} contenant les données transmises au {{domxref("PushSubscription")}}.
 
-<h2>Méthodes</h2>
+## Méthodes
 
-<p><em>Hérite des méthodes de son parent, {{domxref("ExtendableEvent")}}</em>.</p>
+_Hérite des méthodes de son parent, {{domxref("ExtendableEvent")}}_.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>L'exemple suivant prends les données du <code>PushEvent</code> et les affiche sur tous les clients du service worker.</p>
+L'exemple suivant prends les données du `PushEvent` et les affiche sur tous les clients du service worker.
 
-<pre class="brush: js">self.addEventListener('push', function(event) {
-  if (!(self.Notification &amp;&amp; self.notification.permission === 'granted')) {
+```js
+self.addEventListener('push', function(event) {
+  if (!(self.Notification && self.notification.permission === 'granted')) {
     return;
   }
 
@@ -66,33 +63,20 @@ translation_of: Web/API/PushEvent
     }
   });
 });
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API','#the-push-event','PushEvent')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>Définition intiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | Statut                       | Commentaire        |
+| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName('Push API','#the-push-event','PushEvent')}} | {{Spec2('Push API')}} | Définition intiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PushEvent")}}</p>
+{{Compat("api.PushEvent")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Push_API/Using_the_Push_API">Utiliser l'API Push</a></li>
- <li><a href="/fr/docs/Web/API/Push_API">API Push</a></li>
- <li><a href="/fr/docs/Web/API/Service_Worker_API">API Service Worker</a></li>
-</ul>
+- [Utiliser l'API Push](/fr/docs/Web/API/Push_API/Using_the_Push_API)
+- [API Push](/fr/docs/Web/API/Push_API)
+- [API Service Worker](/fr/docs/Web/API/Service_Worker_API)

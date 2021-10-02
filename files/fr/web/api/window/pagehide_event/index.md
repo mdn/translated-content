@@ -4,67 +4,34 @@ slug: Web/API/Window/pagehide_event
 translation_of: Web/API/Window/pagehide_event
 original_slug: Web/Events/pagehide
 ---
-<p>L’évènement <code>pagehide</code> est émis lorsqu’une entrée dans un historique de session est sur le point d’être quittée.</p>
+L’évènement `pagehide` est émis lorsqu’une entrée dans un historique de session est sur le point d’être quittée.
 
-<h2 id="Informations_générales">Informations générales</h2>
+## Informations générales
 
-<dl>
- <dt>Spécification</dt>
- <dd><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-pagehide">HTML5</a></dd>
- <dt>Interface</dt>
- <dd><a href="/fr/docs/Web/API/PageTransitionEvent">PageTransitionEvent</a></dd>
- <dt>Bouillonne</dt>
- <dd>Non</dd>
- <dt>Annulable</dt>
- <dd>Non</dd>
- <dt>Cible</dt>
- <dd>Document (dispatché sur Window)</dd>
- <dt>Action par défaut</dt>
- <dd>Aucune</dd>
-</dl>
+- Spécification
+  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-pagehide)
+- Interface
+  - : [PageTransitionEvent](/fr/docs/Web/API/PageTransitionEvent)
+- Bouillonne
+  - : Non
+- Annulable
+  - : Non
+- Cible
+  - : Document (dispatché sur Window)
+- Action par défaut
+  - : Aucune
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Propriété</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>La cible de l’évènement (la plus haute dans l’arbre DOM).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Le type d’évènement.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Si l’évènement bouillonne en temps normal ou non.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Si l’évènement est annulable ou non.</td>
-  </tr>
-  <tr>
-   <td><code>persisted</code> {{readonlyInline}}</td>
-   <td>{{jsxref("boolean")}}</td>
-   <td>Si l’entrée est chargée depuis le cache ou non.</td>
-  </tr>
- </tbody>
-</table>
+| Propriété                             | Type                                 | Description                                               |
+| ------------------------------------- | ------------------------------------ | --------------------------------------------------------- |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | La cible de l’évènement (la plus haute dans l’arbre DOM). |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | Le type d’évènement.                                      |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Si l’évènement bouillonne en temps normal ou non.         |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Si l’évènement est annulable ou non.                      |
+| `persisted` {{readonlyInline}}  | {{jsxref("boolean")}}         | Si l’entrée est chargée depuis le cache ou non.           |
 
-<h2 id="Évènements_liés">Évènements liés</h2>
+## Évènements liés
 
-<ul>
- <li><a href="/fr/docs/Web/Events/pageshow"><code>pageshow</code></a></li>
- <li><a href="/fr/docs/Utilisation_du_cache_de_Firefox_1.5#L.27.C3.A9v.C3.A8nement_pagehide">Utilisation du cache de Firefox 1.5 — L’évènement pagehide</a></li>
-</ul>
+- [`pageshow`](/fr/docs/Web/Events/pageshow)
+- [Utilisation du cache de Firefox 1.5 — L’évènement pagehide](/fr/docs/Utilisation_du_cache_de_Firefox_1.5#L.27.C3.A9v.C3.A8nement_pagehide)

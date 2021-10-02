@@ -9,74 +9,48 @@ tags:
   - évènements
 translation_of: Web/API/KeyboardEvent/KeyboardEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>Le constructeur <strong><code>KeyboardEvent()</code></strong> crée un nouveau {{domxref("KeyboardEvent")}}.</p>
+Le constructeur **`KeyboardEvent()`** crée un nouveau {{domxref("KeyboardEvent")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"> event = new KeyboardEvent(typeArg, KeyboardEventInit);</pre>
+     event = new KeyboardEvent(typeArg, KeyboardEventInit);
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt>typeArg</dt>
- <dd>Une représentation du nom de l'évènement sous forme de {{domxref("DOMString")}}.</dd>
- <dt>KeyboardEventInit{{optional_inline}}</dt>
- <dd><p>Un dictionnaire <code>KeyboardEventInit</code> ayant les champs suivants :</p>
- <ul>
-  <li><code>"key"</code>, optionnel et par défaut <code>""</code>, de type {{domxref("DOMString")}}, qui définit la valeur de {{domxref("KeyboardEvent.key")}}.</li>
-  <li><code>"code"</code>, optionnel et par défaut <code>""</code>, de type {{domxref("DOMString")}}, qui définit la valeur de {{domxref("KeyboardEvent.code")}}.</li>
-  <li><code>"location"</code>, optionnel et par défaut <code>0</code>, de type <code>unsigned long</code>, qui définit la valeur de {{domxref("KeyboardEvent.location")}}.</li>
-  <li><code>"ctrlKey"</code>, optionnel et par défaut <code>false</code>, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.ctrlKey")}}.</li>
-  <li><code>"shiftKey"</code>, optionnel et par défaut <code>false</code>, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.shiftKey")}}.</li>
-  <li><code>"altKey"</code>, optionnel et par défaut <code>false</code>, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.altKey")}}.</li>
-  <li><code>"metaKey"</code>, optionnel et par défaut <code>false</code>, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.metaKey")}}.</li>
-  <li><code>"repeat"</code>, optionnel et par défaut <code>false</code>, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.repeat")}}.</li>
-  <li><code>"isComposing"</code>, optionnel et par défaut <code>false</code>, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.isComposing")}}.</li>
-  <li><code>"charCode"</code>, optionnel et par défaut <code>0</code>, de type <code>unsigned long</code>, qui définit la valeur du déprécié {{domxref("KeyboardEvent.charCode")}}.</li>
-  <li><code>"keyCode"</code>, optionnel et par défaut <code>0</code>, de type <code>unsigned long</code>, qui définit la valeur du déprécié {{domxref("KeyboardEvent.keyCode")}}.</li>
-  <li><code>"which"</code>, optionnel et par défaut <code>0</code>, de type <code>unsigned long</code>, qui définit la valeur du déprécié {{domxref("KeyboardEvent.which")}}.</li>
- </ul>
- </dd>
-</dl>
+- typeArg
+  - : Une représentation du nom de l'évènement sous forme de {{domxref("DOMString")}}.
+- KeyboardEventInit{{optional_inline}}
 
-<div class="note">
-  <p><strong>Note :</strong> Le dictionnaire <code>KeyboardEventInit</code> accepte aussi les champs des dictionnaires  {{domxref("UIEvent.UIEvent", "UIEventInit")}} et {{domxref("Event.Event", "EventInit")}}.</p>
-</div>
+  - : Un dictionnaire `KeyboardEventInit` ayant les champs suivants :
 
-<h2 id="Specifications">Spécifications</h2>
+    - `"key"`, optionnel et par défaut `""`, de type {{domxref("DOMString")}}, qui définit la valeur de {{domxref("KeyboardEvent.key")}}.
+    - `"code"`, optionnel et par défaut `""`, de type {{domxref("DOMString")}}, qui définit la valeur de {{domxref("KeyboardEvent.code")}}.
+    - `"location"`, optionnel et par défaut `0`, de type `unsigned long`, qui définit la valeur de {{domxref("KeyboardEvent.location")}}.
+    - `"ctrlKey"`, optionnel et par défaut `false`, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.ctrlKey")}}.
+    - `"shiftKey"`, optionnel et par défaut `false`, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.shiftKey")}}.
+    - `"altKey"`, optionnel et par défaut `false`, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.altKey")}}.
+    - `"metaKey"`, optionnel et par défaut `false`, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.metaKey")}}.
+    - `"repeat"`, optionnel et par défaut `false`, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.repeat")}}.
+    - `"isComposing"`, optionnel et par défaut `false`, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.isComposing")}}.
+    - `"charCode"`, optionnel et par défaut `0`, de type `unsigned long`, qui définit la valeur du déprécié {{domxref("KeyboardEvent.charCode")}}.
+    - `"keyCode"`, optionnel et par défaut `0`, de type `unsigned long`, qui définit la valeur du déprécié {{domxref("KeyboardEvent.keyCode")}}.
+    - `"which"`, optionnel et par défaut `0`, de type `unsigned long`, qui définit la valeur du déprécié {{domxref("KeyboardEvent.which")}}.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('UI Events','#interface-keyboardevent','KeyboardEvent()')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-   <td>Définition actuelle.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#interface-KeyboardEvent','KeyboardEvent()')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+> **Note :** Le dictionnaire `KeyboardEventInit` accepte aussi les champs des dictionnaires {{domxref("UIEvent.UIEvent", "UIEventInit")}} et {{domxref("Event.Event", "EventInit")}}.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Spécifications
 
+| Spécification                                                                                    | Statut                           | Commentaire          |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('UI Events','#interface-keyboardevent','KeyboardEvent()')}}     | {{Spec2('UI Events')}}     | Définition actuelle. |
+| {{SpecName('DOM3 Events','#interface-KeyboardEvent','KeyboardEvent()')}} | {{Spec2('DOM3 Events')}} | Définition initiale. |
 
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.KeyboardEvent.KeyboardEvent")}}</p>
+{{Compat("api.KeyboardEvent.KeyboardEvent")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("KeyboardEvent")}}, l'interface des objets qu'il construit.</li>
-</ul>
+- {{domxref("KeyboardEvent")}}, l'interface des objets qu'il construit.

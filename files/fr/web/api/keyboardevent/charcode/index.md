@@ -11,32 +11,28 @@ tags:
   - évènements
 translation_of: Web/API/KeyboardEvent/charCode
 ---
-<p>{{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}</p>
+{{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}
 
-<p>La propriété en lecture seule {{domxref("KeyboardEvent.charCode")}} retourne la valeur Unicode d'une touche caractère pressée pendant un évènement {{ domxref("element.onkeypress", "keypress") }}.</p>
+La propriété en lecture seule {{domxref("KeyboardEvent.charCode")}} retourne la valeur Unicode d'une touche caractère pressée pendant un évènement {{ domxref("element.onkeypress", "keypress") }}.
 
-<p>Pour des constantes équivalant ces codes numériques, voir {{ domxref("KeyboardEvent", "KeyEvent") }}.</p>
+Pour des constantes équivalant ces codes numériques, voir {{ domxref("KeyboardEvent", "KeyEvent") }}.
 
-<div class="note">
-<p><strong>Note :</strong> N'utilisez plus cette propriété, elle est dépréciée. Utilisez plutôt {{domxref("KeyboardEvent.key")}}.</p>
-</div>
+> **Note :** N'utilisez plus cette propriété, elle est dépréciée. Utilisez plutôt {{domxref("KeyboardEvent.key")}}.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>var value</em> = <em>event</em>.charCode;
-</pre>
+    var value = event.charCode;
 
-<ul>
- <li><em><code>value</code></em> est la valeur Unicode du caractère associé à la touche pressée.</li>
-</ul>
+- _`value`_ est la valeur Unicode du caractère associé à la touche pressée.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Exemple charCode&lt;/title&gt;
+```html
+<html>
+  <head>
+    <title>Exemple charCode</title>
 
-    &lt;script type="text/javascript"&gt;
+    <script type="text/javascript">
 
       function AfficherCaractere(e)
       {
@@ -47,48 +43,35 @@ translation_of: Web/API/KeyboardEvent/charCode
         );
       }
 
-    &lt;/script&gt;
-  &lt;/head&gt;
+    </script>
+  </head>
 
-  &lt;body onkeypress="AfficherCaractere(event);"&gt;
-    &lt;p&gt;Tapez une touche caractère de votre clavier (a,b,c...)&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  <body onkeypress="AfficherCaractere(event);">
+    <p>Tapez une touche caractère de votre clavier (a,b,c...)</p>
+  </body>
+</html>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Après un évènement {{ domxref("element.onkeypress", "keypress") }}, la valeur Unicode de la touche pressée est stockée dans l'une ou l'autre des propriétés <code>{{ domxref("event.keyCode", "keyCode") }}</code> et <code>charCode</code>, jamais les deux à la fois. Si la touche pressée génère un caractère (ex. 'a'), <code>charCode</code> prend la valeur du code de ce caractère, en respectant la casse. (i.e. <code>charCode</code> tient compte d'une touche Maj. enfoncée). Sinon, le code est stocké dans <code>keyCode</code>.</p>
+Après un évènement {{ domxref("element.onkeypress", "keypress") }}, la valeur Unicode de la touche pressée est stockée dans l'une ou l'autre des propriétés `{{ domxref("event.keyCode", "keyCode") }}` et `charCode`, jamais les deux à la fois. Si la touche pressée génère un caractère (ex. 'a'), `charCode` prend la valeur du code de ce caractère, en respectant la casse. (i.e. `charCode` tient compte d'une touche Maj. enfoncée). Sinon, le code est stocké dans `keyCode`.
 
-<p>Quand une ou plusieurs touche modificatrices sont pressées, il y a quelques règles complexes pour <code>charCode</code>, jetez un oeil à <a href="/en/Gecko_Keypress_Event">Gecko Keypress Event</a> (en anglais) pour le détail.</p>
+Quand une ou plusieurs touche modificatrices sont pressées, il y a quelques règles complexes pour `charCode`, jetez un oeil à [Gecko Keypress Event](/en/Gecko_Keypress_Event) (en anglais) pour le détail.
 
-<p><code>charCode</code> n'est jamais défini lors d'évènements {{ domxref("element.onkeydown", "keydown") }} et {{ domxref("element.onkeyup", "keyup") }}. Dans ces cas, <code>keyCode</code> is set instead.</p>
+`charCode` n'est jamais défini lors d'évènements {{ domxref("element.onkeydown", "keydown") }} et {{ domxref("element.onkeyup", "keyup") }}. Dans ces cas, `keyCode` is set instead.
 
-<p>Pour obtenir le code de la touche qu'il soit stocké dans <code>keyCode</code> ou <code>charCode</code>, requêtez la propriété {{ domxref("event.which", "which") }}.</p>
+Pour obtenir le code de la touche qu'il soit stocké dans `keyCode` ou `charCode`, requêtez la propriété {{ domxref("event.which", "which") }}.
 
-<p>Les caractères entrés via IME ne s'enregistrent pas sous <code>keyCode</code> ou <code>charCode</code>. Actually with the Chinese IME I'm using, entering the IME results in a keypress event with keyCode = 229 and no other key events fire until the IME exits (which may happen after multiple characters are inputted). I'm not sure if other IME's work this way.</p>
+Les caractères entrés via IME ne s'enregistrent pas sous `keyCode` ou `charCode`. Actually with the Chinese IME I'm using, entering the IME results in a keypress event with keyCode = 229 and no other key events fire until the IME exits (which may happen after multiple characters are inputted). I'm not sure if other IME's work this way.
 
-<p>Pour une liste de valeurs de <code>charCode</code> associées à leurs touches, lancez l'exemple dans <a href="/en/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants">Gecko DOM Reference:Examples #Example 7: Displaying Event Object Constants</a> (en anglais) et regardez le tableau HTML résultant.</p>
+Pour une liste de valeurs de `charCode` associées à leurs touches, lancez l'exemple dans [Gecko DOM Reference:Examples #Example 7: Displaying Event Object Constants](/en/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants) (en anglais) et regardez le tableau HTML résultant.
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification (en anglais)</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#widl-KeyboardEvent-charCode','KeyboardEvent.charCode')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Définition initiale; Déprécié</td>
-  </tr>
- </tbody>
-</table>
+| Spécification (en anglais)                                                                                       | Statut                           | Commentaire                   |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------- |
+| {{SpecName('DOM3 Events','#widl-KeyboardEvent-charCode','KeyboardEvent.charCode')}} | {{Spec2('DOM3 Events')}} | Définition initiale; Déprécié |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.KeyboardEvent.charCode")}}</p>
+{{Compat("api.KeyboardEvent.charCode")}}

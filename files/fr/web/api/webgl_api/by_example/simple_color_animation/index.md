@@ -11,32 +11,34 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Simple_color_animation
 original_slug: Web/API/WebGL_API/By_example/Créer_une_animation_colorée
 ---
-<div>{{IncludeSubnav("/fr/Apprendre")}}</div>
+{{IncludeSubnav("/fr/Apprendre")}}
 
-<p>{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris","Apprendre/WebGL/Par_exemple/Masque_de_couleur")}}</p>
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris","Apprendre/WebGL/Par_exemple/Masque_de_couleur")}}
 
-<p>Dans cet exemple, on crée une animation avec des couleurs en appliquant chaque seconde une couleur aléatoire dans le contexte de rendu {{Glossary("WebGL")}}.</p>
+Dans cet exemple, on crée une animation avec des couleurs en appliquant chaque seconde une couleur aléatoire dans le contexte de rendu {{Glossary("WebGL")}}.
 
-<p>{{EmbedLiveSample("Créer_une_animation_avec_clear",660,425)}}</p>
+{{EmbedLiveSample("Créer_une_animation_avec_clear",660,425)}}
 
-<h3 id="Créer_une_animation_avec_clear">Créer une animation avec <code> clear</code></h3>
+### Créer une animation avec `clear`
 
-<p>Cet exemple illustre comment lancer une animation avec WebGL et gérer les interactions de l'utilisateur. L'utilisateur peut lancer, arrêter et reprendre l'animation en cliquant sur le bouton.</p>
+Cet exemple illustre comment lancer une animation avec WebGL et gérer les interactions de l'utilisateur. L'utilisateur peut lancer, arrêter et reprendre l'animation en cliquant sur le bouton.
 
-<p>Cette fois, on place les appels à la fonction WebGL à l'intérieur d'un gestionnaire d'événement de <em>timer</em>. Un gestionnaire d'événements pour les clics permet de gérer les interactions simples (lancer et arrêter l'animation). Le <em>timer</em> et la fonction de gestion du <em>timer</em> créent une boucle d'animation qui permet d'exécuter un ensemble de commandes pour le dessin à des intervalles réguliers (généralement, pour chaque <em>frame</em>, dans ce cas, on a une fréquence d'une <em>frame </em>par seconde).</p>
+Cette fois, on place les appels à la fonction WebGL à l'intérieur d'un gestionnaire d'événement de _timer_. Un gestionnaire d'événements pour les clics permet de gérer les interactions simples (lancer et arrêter l'animation). Le _timer_ et la fonction de gestion du _timer_ créent une boucle d'animation qui permet d'exécuter un ensemble de commandes pour le dessin à des intervalles réguliers (généralement, pour chaque _frame_, dans ce cas, on a une fréquence d'une _frame_ par seconde).
 
-<pre class="brush: html">&lt;p&gt;Un programme WebGL simple qui crée une animation colorée.&lt;/p&gt;
-&lt;p&gt;Vous pouvez sur le bouton pour activer/désactiver l'animation.&lt;/p&gt;
-&lt;canvas id="canvas-view"&gt;Il semblerait que votre navigateur ne
-    supporte pas l'élément canvas.&lt;/canvas&gt;
-&lt;button id="animation-onoff"&gt;
+```html
+<p>Un programme WebGL simple qui crée une animation colorée.</p>
+<p>Vous pouvez sur le bouton pour activer/désactiver l'animation.</p>
+<canvas id="canvas-view">Il semblerait que votre navigateur ne
+    supporte pas l'élément canvas.</canvas>
+<button id="animation-onoff">
   Cliquez ici pour
-&lt;strong&gt;[le verbe de l'action]&lt;/strong&gt;
+<strong>[le verbe de l'action]</strong>
   l'animation
-&lt;/button&gt;
-</pre>
+</button>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 button {
@@ -54,9 +56,10 @@ canvas {
   border : none;
   background-color : black;
 }
-</pre>
+```
 
-<pre class="brush: js">window.addEventListener("load", function setupAnimation (evt) {
+```js
+window.addEventListener("load", function setupAnimation (evt) {
   "use strict"
   window.removeEventListener(evt.type, setupAnimation, false);
 
@@ -133,8 +136,8 @@ canvas {
     return [Math.random(), Math.random(), Math.random()];
   }
 }, false);
-</pre>
+```
 
-<p>Le code source de cet exemple est également disponible sur <a href="https://github.com/idofilin/webgl-by-example/tree/master/simple-color-animation">GitHub</a>.</p>
+Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/simple-color-animation).
 
-<p>{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris","Apprendre/WebGL/Par_exemple/Masque_de_couleur")}}</p>
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris","Apprendre/WebGL/Par_exemple/Masque_de_couleur")}}

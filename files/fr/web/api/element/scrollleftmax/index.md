@@ -3,24 +3,22 @@ title: Element.scrollLeftMax
 slug: Web/API/Element/scrollLeftMax
 translation_of: Web/API/Element/scrollLeftMax
 ---
-<p>{{APIRef("DOM")}}{{Non-standard_header}}</p>
+{{APIRef("DOM")}}{{Non-standard_header}}
 
-<p>La propriété non modifiable  <code><strong>Element.scrollLeftMax</strong></code> renvoie un  {{jsxref("Number")}} représentant la distance restante de défilement vers la gauche de l'élément.</p>
+La propriété non modifiable  **`Element.scrollLeftMax`** renvoie un  {{jsxref("Number")}} représentant la distance restante de défilement vers la gauche de l'élément.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre>var <em>pxl</em> = <em>elt</em>.scrollLeftMax;</pre>
+    var pxl = elt.scrollLeftMax;
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<p><em>Cette propriété ne fait partie d'aucune spécification.</em></p>
+_Cette propriété ne fait partie d'aucune spécification._
 
-<h2 id="Browser_compatibility" >Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Element.scrollLeftMax")}}</p>
+{{Compat("api.Element.scrollLeftMax")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Element.scrollTopMax")}} renvoie la distance restante de défilement vers le haut de l'élément.</li>
-</ul>
+- {{domxref("Element.scrollTopMax")}} renvoie la distance restante de défilement vers le haut de l'élément.

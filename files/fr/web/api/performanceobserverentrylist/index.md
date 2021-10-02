@@ -8,56 +8,41 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceObserverEntryList
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>L'interface <strong><code>PerformanceObserverEntryList</code></strong> est une liste d'<a href="/fr/docs/Web/API/PerformanceEntry">événements de performance</a> qui ont été explicitement <em>observés</em> via la méthode <a href="/fr/docs/Web/API/PerformanceObserver/observe"><code>observe()</code></a>.</p>
+L'interface **`PerformanceObserverEntryList`** est une liste d'[événements de performance](/fr/docs/Web/API/PerformanceEntry) qui ont été explicitement _observés_ via la méthode [`observe()`](/fr/docs/Web/API/PerformanceObserver/observe).
 
-<div class="note">
-  <p><strong>Note :</strong> Cette interface est exposée à <a href="/fr/docs/Web/API/Window"><code>Window</code></a> et <a href="/fr/docs/Web/API/Worker"><code>Worker</code></a>.</p>
-</div>
+> **Note :** Cette interface est exposée à [`Window`](/fr/docs/Web/API/Window) et [`Worker`](/fr/docs/Web/API/Worker).
 
-<h2 id="Methods">Méthodes</h2>
+## Méthodes
 
-<dl>
-  <dt><a href="/fr/docs/Web/API/PerformanceObserverEntryList/getEntries"><code>PerformanceObserverEntryList.getEntries()</code></a></dt>
-  <dd>Retourne une liste d'objets explicitement <em>observés</em> de <a href="/fr/docs/Web/API/PerformanceEntry"><code>PerformanceEntry</code></a> en fonction du <em>filtre</em> donné.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceObserverEntryList/getEntriesByType"><code>PerformanceObserverEntryList.getEntriesByType()</code></a></dt>
-  <dd>Retourne une liste d'objets explicitement <em>observés</em> de <a href="/fr/docs/Web/API/PerformanceEntry"><code>PerformanceEntry</code></a> du <em>type d'entrée</em> donné.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceObserverEntryList/getEntriesByName"><code>PerformanceObserverEntryList.getEntriesByName()</code></a></dt>
-  <dd>Retourne une liste d'objets explicitement <em>observés</em> de <a href="/fr/docs/Web/API/PerformanceEntry"><code>PerformanceEntry</code></a> en fonction du <em>nom</em> et du <em>type d'entrée</em> donnés.</dd>
-</dl>
+- [`PerformanceObserverEntryList.getEntries()`](/fr/docs/Web/API/PerformanceObserverEntryList/getEntries)
+  - : Retourne une liste d'objets explicitement _observés_ de [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) en fonction du _filtre_ donné.
+- [`PerformanceObserverEntryList.getEntriesByType()`](/fr/docs/Web/API/PerformanceObserverEntryList/getEntriesByType)
+  - : Retourne une liste d'objets explicitement _observés_ de [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) du _type d'entrée_ donné.
+- [`PerformanceObserverEntryList.getEntriesByName()`](/fr/docs/Web/API/PerformanceObserverEntryList/getEntriesByName)
+  - : Retourne une liste d'objets explicitement _observés_ de [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) en fonction du _nom_ et du _type d'entrée_ donnés.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">// Crée un observateur pour tous les types d'événements de performance
+```js
+// Crée un observateur pour tous les types d'événements de performance
 // la liste est de type PerformanceObserveEntryList
 const observe_all = new PerformanceObserver(function(list, obs) {
   let perfEntries = list.getEntries();
-  for (let i = 0; i &lt; perfEntries.length; i++) {
+  for (let i = 0; i < perfEntries.length; i++) {
     print_perf_entry(perfEntries[i]);
     // faire quelque chose avec
   }
-})</pre>
+})
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Performance Timeline Level 2', '#idl-def-performanceobserverentrylist', 'PerformanceObserverEntryList')}}</td>
-      <td>{{Spec2('Performance Timeline Level 2')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                                | Statut                                                   | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------------------- |
+| {{SpecName('Performance Timeline Level 2', '#idl-def-performanceobserverentrylist', 'PerformanceObserverEntryList')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceObserverEntryList")}}</p>
+{{Compat("api.PerformanceObserverEntryList")}}

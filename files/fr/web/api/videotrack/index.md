@@ -13,72 +13,61 @@ tags:
   - track
 translation_of: Web/API/VideoTrack
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>L'interface {{domxref("VideoTrack")}} représente une seule piste vidéo d'un élément {{HTMLElement("video")}}. L'utilisation la plus courante à un objet <code>VideoTrack</code> est de basculer sa propriété {{domxref("VideoTrack.selected", "selected")}} afin d'en faire la piste vidéo active pour l'élément {{HTMLElement("video")}}.</p>
+L'interface {{domxref("VideoTrack")}} représente une seule piste vidéo d'un élément {{HTMLElement("video")}}. L'utilisation la plus courante à un objet `VideoTrack` est de basculer sa propriété {{domxref("VideoTrack.selected", "selected")}} afin d'en faire la piste vidéo active pour l'élément {{HTMLElement("video")}}.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{domxref("VideoTrack.selected", "selected")}}</dt>
- <dd>Une valeur booléenne qui contrôle si la piste vidéo est active ou non. Seule une seule piste vidéo peut être active à un moment donné, donc la définition de cette propriété sur <code>true</code> pour une piste pendant qu'une autre piste est active rendra cette autre piste inactive.</dd>
- <dt>{{domxref("VideoTrack.id", "id")}} {{ReadOnlyInline}}</dt>
- <dd>Un {{domxref("DOMString")}} qui identifie de manière unique la piste dans le média. Cet identifiant peut être utilisé pour localiser une piste spécifique dans une liste de pistes vidéo en appelant {{domxref("VideoTrackList.getTrackById()")}}. L'identifiant peut également être utilisé comme partie fragment de l'URL si le support prend en charge la recherche par fragment de support conformément à la <a href="https://www.w3.org/TR/media-frags/">spécification UR de fragments de média</a>.</dd>
- <dt>{{domxref("VideoTrack.kind", "kind")}} {{ReadOnlyInline}}</dt>
- <dd>Un {{domxref("DOMString")}} spécifiant la catégorie dans laquelle appartient la piste. Par exemple, la piste vidéo principale aurait un <code>type</code> <code>"principale"</code>.</dd>
- <dt>{{domxref("VideoTrack.label", "label")}} {{ReadOnlyInline}}</dt>
- <dd>Un {{domxref("DOMString")}} fournissant une étiquette lisible par l'homme pour la piste. Par exemple, une piste dont le <code>type</code> est <code>"signe"</code> peut avoir l'<code>étiquette</code> <code>"Une interprétation en langue des signes"</code>. Cette chaîne est vide si aucune étiquette n'est fournie.</dd>
- <dt>{{domxref("VideoTrack.language", "language")}} {{ReadOnlyInline}}</dt>
- <dd>Un {{domxref("DOMString")}} spécifiant la langue principale de la piste vidéo, ou une chaîne vide si elle est inconnue. La langue est spécifié en tant que code de langue BCP 47 ({{RFC(5646)}}), tel que <code>"en-US"</code> ou <code>"pt-BR"</code>.</dd>
- <dt>{{domxref("VideoTrack.sourceBuffer", "sourceBuffer")}} {{ReadOnlyInline}}</dt>
- <dd>Le {{domxref("SourceBuffer")}} qui a créé la piste. Renvoie null si la piste n'a pas été créée par un {{domxref("SourceBuffer")}} ou le {{domxref("SourceBuffer")}} a été supprimé de l'attribut {{domxref("MediaSource.sourceBuffers")}} de sa source média parent.</dd>
-</dl>
+- {{domxref("VideoTrack.selected", "selected")}}
+  - : Une valeur booléenne qui contrôle si la piste vidéo est active ou non. Seule une seule piste vidéo peut être active à un moment donné, donc la définition de cette propriété sur `true` pour une piste pendant qu'une autre piste est active rendra cette autre piste inactive.
+- {{domxref("VideoTrack.id", "id")}} {{ReadOnlyInline}}
+  - : Un {{domxref("DOMString")}} qui identifie de manière unique la piste dans le média. Cet identifiant peut être utilisé pour localiser une piste spécifique dans une liste de pistes vidéo en appelant {{domxref("VideoTrackList.getTrackById()")}}. L'identifiant peut également être utilisé comme partie fragment de l'URL si le support prend en charge la recherche par fragment de support conformément à la [spécification UR de fragments de média](https://www.w3.org/TR/media-frags/).
+- {{domxref("VideoTrack.kind", "kind")}} {{ReadOnlyInline}}
+  - : Un {{domxref("DOMString")}} spécifiant la catégorie dans laquelle appartient la piste. Par exemple, la piste vidéo principale aurait un `type` `"principale"`.
+- {{domxref("VideoTrack.label", "label")}} {{ReadOnlyInline}}
+  - : Un {{domxref("DOMString")}} fournissant une étiquette lisible par l'homme pour la piste. Par exemple, une piste dont le `type` est `"signe"` peut avoir l'`étiquette` `"Une interprétation en langue des signes"`. Cette chaîne est vide si aucune étiquette n'est fournie.
+- {{domxref("VideoTrack.language", "language")}} {{ReadOnlyInline}}
+  - : Un {{domxref("DOMString")}} spécifiant la langue principale de la piste vidéo, ou une chaîne vide si elle est inconnue. La langue est spécifié en tant que code de langue BCP 47 ({{RFC(5646)}}), tel que `"en-US"` ou `"pt-BR"`.
+- {{domxref("VideoTrack.sourceBuffer", "sourceBuffer")}} {{ReadOnlyInline}}
+  - : Le {{domxref("SourceBuffer")}} qui a créé la piste. Renvoie null si la piste n'a pas été créée par un {{domxref("SourceBuffer")}} ou le {{domxref("SourceBuffer")}} a été supprimé de l'attribut {{domxref("MediaSource.sourceBuffers")}} de sa source média parent.
 
-<h2 id="Notes_dutilisation">Notes d'utilisation</h2>
+## Notes d'utilisation
 
-<p>Pour obtenir un <code>VideoTrack</code> pour un élément multimédia donné, utilisez la propriété {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}}, qui renvoie un objet {{domxref("VideoTrackList")}} à partir duquel vous pouvez obtenir les pistes individuelles contenues dans le média:</p>
+Pour obtenir un `VideoTrack` pour un élément multimédia donné, utilisez la propriété {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}}, qui renvoie un objet {{domxref("VideoTrackList")}} à partir duquel vous pouvez obtenir les pistes individuelles contenues dans le média:
 
-<pre class="brush: js">var el = document.querySelector("video");
+```js
+var el = document.querySelector("video");
 var tracks = el.videoTracks;
-</pre>
+```
 
-<p>Vous pouvez ensuite accéder aux pistes individuelles du média en utilisant soit la syntaxe de tableau, soit des fonctions telles que {{jsxref("Array.forEach", "forEach()")}}.</p>
+Vous pouvez ensuite accéder aux pistes individuelles du média en utilisant soit la syntaxe de tableau, soit des fonctions telles que {{jsxref("Array.forEach", "forEach()")}}.
 
-<p>Ce premier exemple obtient la première piste vidéo sur le média:</p>
+Ce premier exemple obtient la première piste vidéo sur le média:
 
-<pre class="brush: js">var firstTrack = tracks[0];</pre>
+```js
+var firstTrack = tracks[0];
+```
 
-<p>L'exemple suivant parcourt toutes les pistes vidéo du média, activant la première piste vidéo qui est dans la langue préférée de l'utilisateur (tirée d'une variable <code>userLanguage</code>).</p>
+L'exemple suivant parcourt toutes les pistes vidéo du média, activant la première piste vidéo qui est dans la langue préférée de l'utilisateur (tirée d'une variable `userLanguage`).
 
-<pre class="brush: js">for (var i = 0; i &lt; tracks.length; i++) {
+```js
+for (var i = 0; i < tracks.length; i++) {
   if (tracks[i].language === userLanguage) {
     tracks[i].selected = true;
     break;
   }
 });
-</pre>
+```
 
-<p>Le {{domxref("VideoTrack.language", "language")}} est au format standard ({{RFC(5646)}}). Pour l'anglais américain, ce serait <code>"en-US"</code>, par exemple.</p>
+Le {{domxref("VideoTrack.language", "language")}} est au format standard ({{RFC(5646)}}). Pour l'anglais américain, ce serait `"en-US"`, par exemple.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#videotrack', 'VideoTrack')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', '#videotrack', 'VideoTrack')}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.VideoTrack")}}</p>
+{{Compat("api.VideoTrack")}}

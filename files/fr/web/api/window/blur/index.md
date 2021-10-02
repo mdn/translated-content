@@ -8,39 +8,30 @@ tags:
   - Méthode
 translation_of: Web/API/Window/blur
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>Éloigne la mise au point de la fenêtre.</p>
+Éloigne la mise au point de la fenêtre.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><code>window.blur()</code></pre>
+    window.blur()
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">window.blur();</pre>
+```js
+window.blur();
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>La méthode <code>window.blur()</code> est l'équivalent programmatique du déplacement du focus de l'utilisateur loin de la fenêtre courante.</p>
+La méthode `window.blur()` est l'équivalent programmatique du déplacement du focus de l'utilisateur loin de la fenêtre courante.
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentair</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','interaction.html#dom-window-blur','Window.blur()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                           | Commentair |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG','interaction.html#dom-window-blur','Window.blur()')}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.blur")}}</p>
+{{Compat("api.Window.blur")}}

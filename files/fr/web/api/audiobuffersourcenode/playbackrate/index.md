@@ -3,49 +3,44 @@ title: AudioBufferSourceNode.playbackRate
 slug: Web/API/AudioBufferSourceNode/playbackRate
 translation_of: Web/API/AudioBufferSourceNode/playbackRate
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>La propriété <code>playbackRate</code> de l'interface {{ domxref("AudioBufferSourceNode") }} est un {{domxref("AudioParam")}} de type <a href="/en-US/docs/DOM/AudioParam#k-rate">k-rate</a> qui définit la vitesse à laquelle le contenu audio sera lu.</p>
-</div>
+La propriété `playbackRate` de l'interface {{ domxref("AudioBufferSourceNode") }} est un {{domxref("AudioParam")}} de type [k-rate](/en-US/docs/DOM/AudioParam#k-rate) qui définit la vitesse à laquelle le contenu audio sera lu.
 
-<p>Une valeur de 1.0 (c'est ) indique que le son doit être lu à la vitesse de son taux d'échantillonnage, une valeur inférieure qu'il doit être lu plus lentement, et une valeur supérieure plus rapidement. la valeur par défaut est <code>1.0</code>. Pour toute autre valeur l'<code>AudioBufferSourceNode</code> rééchantillone le son avant de l'envoyer vers la sortie.</p>
+Une valeur de 1.0 (c'est ) indique que le son doit être lu à la vitesse de son taux d'échantillonnage, une valeur inférieure qu'il doit être lu plus lentement, et une valeur supérieure plus rapidement. la valeur par défaut est `1.0`. Pour toute autre valeur l'`AudioBufferSourceNode` rééchantillone le son avant de l'envoyer vers la sortie.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var source = contexteAudio.createBufferSource();
+```js
+var source = contexteAudio.createBufferSource();
 source.playbackRate.value = 1.25; // proportion : 25% plus rapide que la vitesse normale
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong> Bien que le <code>AudioParam</code> renvoyé soit en lecture seule, la valeur qu'il représente ne l'est pas.</p>
-</div>
+> **Note :** Bien que le `AudioParam` renvoyé soit en lecture seule, la valeur qu'il représente ne l'est pas.
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un {{domxref("AudioParam")}} dont la {{domxref("AudioParam.value", "value")}} est un nombre flottant à double précision, qui représente la vitesse de lecture d'un son en proportion décimale du taux d'échantillonnage original.</p>
+Un {{domxref("AudioParam")}} dont la {{domxref("AudioParam.value", "value")}} est un nombre flottant à double précision, qui représente la vitesse de lecture d'un son en proportion décimale du taux d'échantillonnage original.
 
-<p>Considérons un buffer audio échantillonné à 44.1 kHz (44,100 échantillons par seconde). Observons l'effet de quelques valeurs de la propriété <code>playbackRate</code> :</p>
+Considérons un buffer audio échantillonné à 44.1 kHz (44,100 échantillons par seconde). Observons l'effet de quelques valeurs de la propriété `playbackRate` :
 
-<ul>
- <li>un <code>playbackRate</code> de 1.0 entraîne une lecture à vitesse originale : 44,100 Hz.</li>
- <li>un <code>playbackRate</code> de 0.5 entraîne une lecture à la moitié de la vitesse originale : 22,050 Hz.</li>
- <li>un <code>playbackRate</code> de 2.0 entraîne une lecture au double de la vitesse originale : 88,200 Hz.</li>
-</ul>
+- un `playbackRate` de 1.0 entraîne une lecture à vitesse originale : 44,100 Hz.
+- un `playbackRate` de 0.5 entraîne une lecture à la moitié de la vitesse originale : 22,050 Hz.
+- un `playbackRate` de 2.0 entraîne une lecture au double de la vitesse originale : 88,200 Hz.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est utilisée pour décoder une piste audio et la mettre dans un {{domxref("AudioBufferSourceNode")}}. L'interface fournit deux boutons pour démarrer et arrêter la lecture, et des sliders pour modifier les propriétés <code>playbackRate</code>, <code>loopStart</code> et <code>loopEnd</code> à la volée.</p>
+Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est utilisée pour décoder une piste audio et la mettre dans un {{domxref("AudioBufferSourceNode")}}. L'interface fournit deux boutons pour démarrer et arrêter la lecture, et des sliders pour modifier les propriétés `playbackRate`, `loopStart` et `loopEnd` à la volée.
 
-<div class="note">
-<p><strong>Note :</strong> Voir <a href="http://mdn.github.io/decode-audio-data/"> l'exemple complet</a> et <a href="https://github.com/mdn/decode-audio-data">son code source</a>.</p>
-</div>
+> **Note :** Voir [ l'exemple complet](http://mdn.github.io/decode-audio-data/) et [son code source](https://github.com/mdn/decode-audio-data).
 
-<pre class="brush: html">&lt;input class="playback-rate-control" type="range" min="0.25" max="3" step="0.05" value="1"&gt;
-&lt;span class="playback-rate-value"&gt;1.0&lt;/span&gt;
-</pre>
+```html
+<input class="playback-rate-control" type="range" min="0.25" max="3" step="0.05" value="1">
+<span class="playback-rate-value">1.0</span>
+```
 
-<pre class="brush: js">function getData() {
+```js
+function getData() {
   source = contexteAudio.createBufferSource();
   requete = new XMLHttpRequest();
 
@@ -94,31 +89,19 @@ stop.onclick = function() {
 playbackControl.oninput = function() {
   source.playbackRate.value = playbackControl.value;
   playbackValue.innerHTML = playbackControl.value;
-}</pre>
+}
+```
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-playbackRate', 'playbackRate')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | Statut                               | Commentaire |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
+| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-playbackRate', 'playbackRate')}} | {{Spec2('Web Audio API')}} |             |
 
-<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+## Compatibilité navigateurs
 
-<p>{{Compat("api.AudioBufferSourceNode.playbackRate")}}</p>
+{{Compat("api.AudioBufferSourceNode.playbackRate")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Utiliser la Web Audio API</a></li>
-</ul>
+- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

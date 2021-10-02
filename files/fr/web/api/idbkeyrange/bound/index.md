@@ -9,53 +9,51 @@ tags:
   - Reference
 translation_of: Web/API/IDBKeyRange/bound
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>La méthode <strong><code>bound()</code></strong>, rattachée à l'interface {{domxref("IDBKeyRange")}}, renvoie un intervalle de clé délimité par une borne inférieure et une borne supérieure.</p>
+La méthode **`bound()`**, rattachée à l'interface {{domxref("IDBKeyRange")}}, renvoie un intervalle de clé délimité par une borne inférieure et une borne supérieure.
 
-<p>L'intervalle peut être ouvert (les limites sont exclues) ou fermé (les limites sont incluses). Par défaut, l'intervalle est fermé.</p>
+L'intervalle peut être ouvert (les limites sont exclues) ou fermé (les limites sont incluses). Par défaut, l'intervalle est fermé.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">myKeyRange = IDBKeyRange.bound(lower, upper, lowerOpen, upperOpen);</pre>
+```js
+myKeyRange = IDBKeyRange.bound(lower, upper, lowerOpen, upperOpen);
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>lower</code></dt>
- <dd>La limite inférieure de l'intervalle.</dd>
- <dt><code>upper</code></dt>
- <dd>La limite supérieure de l'intervalle.</dd>
- <dt><code>lowerOpen</code> {{optional_inline}}</dt>
- <dd>Si cette valeur vaut <code>false</code> (la valeur par defaut), l'intervalle contient la limite inférieure.</dd>
- <dt><code>upperOpen</code> {{optional_inline}}</dt>
- <dd>Si cette valeur vaut <code>false</code> (la valeur par défaut), l'intervalle contient la limite supérieure.</dd>
-</dl>
+- `lower`
+  - : La limite inférieure de l'intervalle.
+- `upper`
+  - : La limite supérieure de l'intervalle.
+- `lowerOpen` {{optional_inline}}
+  - : Si cette valeur vaut `false` (la valeur par defaut), l'intervalle contient la limite inférieure.
+- `upperOpen` {{optional_inline}}
+  - : Si cette valeur vaut `false` (la valeur par défaut), l'intervalle contient la limite supérieure.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un objet {{domxref("IDBKeyRange")}} qui représente l'intervalle de clé.</p>
+Un objet {{domxref("IDBKeyRange")}} qui représente l'intervalle de clé.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
- <dt><code>DataError</code></dt>
- <dd>Cette exception {{domxref("DOMException")}} est levée si :
- <ul>
-  <li>Une des limites passé n'est pas valide.</li>
-  <li>La limite inférieur est supèrieur à la limite supérieur.</li>
-  <li>Les limites correspondent et l'intervalle est ouvert.</li>
- </ul>
- </dd>
-</dl>
+- `DataError`
 
-<h2 id="Exemples">Exemples</h2>
+  - : Cette exception {{domxref("DOMException")}} est levée si :
 
-<p>Dans l'exemple qui suit, on illustre comment créer un intervalle de clé. On déclare <code>keyRangeValue = IDBKeyRange.bound("A", "F");</code> ce qui représente un intervalle entre "A" et "F". Ensuite, on ouvre une transaction grâce à un objet {{domxref("IDBTransaction")}} puis on ouvre un magasin d'objets et on ouvre un curseur avec la méthode {{domxref("IDBObjectStore.openCursor")}} pour lequel on indique <code>keyRangeValue</code> comme intervalle de clé correspondant. Cela signifie que le curseur ne parcourera que les enregistrements dont les clés sont contenues dans cet intervalle. L'intervalle contient bien les valeurs "A" et "F" car les bornes sont incluses. Si on avait utilisé <code>IDBKeyRange.bound("A", "F", true, true);</code>, l'intervalle n'aurait pas inclus "A" et "F" mais uniquement les valeurs intermédiaires.</p>
+    - Une des limites passé n'est pas valide.
+    - La limite inférieur est supèrieur à la limite supérieur.
+    - Les limites correspondent et l'intervalle est ouvert.
 
-<pre class="brush: js">function displayData() {
+## Exemples
+
+Dans l'exemple qui suit, on illustre comment créer un intervalle de clé. On déclare `keyRangeValue = IDBKeyRange.bound("A", "F");` ce qui représente un intervalle entre "A" et "F". Ensuite, on ouvre une transaction grâce à un objet {{domxref("IDBTransaction")}} puis on ouvre un magasin d'objets et on ouvre un curseur avec la méthode {{domxref("IDBObjectStore.openCursor")}} pour lequel on indique `keyRangeValue` comme intervalle de clé correspondant. Cela signifie que le curseur ne parcourera que les enregistrements dont les clés sont contenues dans cet intervalle. L'intervalle contient bien les valeurs "A" et "F" car les bornes sont incluses. Si on avait utilisé `IDBKeyRange.bound("A", "F", true, true);`, l'intervalle n'aurait pas inclus "A" et "F" mais uniquement les valeurs intermédiaires.
+
+```js
+function displayData() {
   var keyRangeValue = IDBKeyRange.bound("A", "F");
 
   var transaction = db.transaction(['fThings'], 'readonly');
@@ -65,7 +63,7 @@ translation_of: Web/API/IDBKeyRange/bound
     var cursor = event.target.result;
       if(cursor) {
         var listItem = document.createElement('li');
-        listItem.innerHTML = '&lt;strong&gt;' + cursor.value.fThing + '&lt;/strong&gt;, ' + cursor.value.fRating;
+        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
         list.appendChild(listItem);
 
         cursor.continue();
@@ -73,43 +71,27 @@ translation_of: Web/API/IDBKeyRange/bound
         console.log('Les éléments ont été affichés.');
       }
     };
-  };</pre>
+  };
+```
 
-<div class="note">
-<p><strong>Note :</strong> Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter <a href="https://github.com/mdn/IDBKeyRange-example">le dépôt GitHub IDBKeyRange-example</a> (<a href="https://mdn.github.io/IDBKeyRange-example/">ainsi que la démonstration associée</a>).</p>
-</div>
+> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/IDBKeyRange-example) ([ainsi que la démonstration associée](https://mdn.github.io/IDBKeyRange-example/)).
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<div>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBKeyRange-bound-IDBKeyRange-any-lower-any-upper-boolean-lowerOpen-boolean-upperOpen', 'bound()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-</div>
+| Spécification                                                                                                                                                                    | État                         | Commentaires |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBKeyRange-bound-IDBKeyRange-any-lower-any-upper-boolean-lowerOpen-boolean-upperOpen', 'bound()')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBKeyRange.bound")}}</p>
+{{Compat("api.IDBKeyRange.bound")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
- <li>Initier une connexion : {{domxref("IDBDatabase")}}</li>
- <li>Utiliser les transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
- <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
-</ul>
+- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Initier une connexion : {{domxref("IDBDatabase")}}
+- Utiliser les transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
+- Utiliser les curseurs {{domxref("IDBCursor")}}
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).

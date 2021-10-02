@@ -13,66 +13,58 @@ tags:
   - put
 translation_of: Web/API/Cache/put
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>La méthode <strong><code>put()</code></strong> de l'interface {{domxref("Cache")}} permet d'ajouter des paires clé/valeur à l'objet {{domxref("Cache")}} en cours.</p>
+La méthode **`put()`** de l'interface {{domxref("Cache")}} permet d'ajouter des paires clé/valeur à l'objet {{domxref("Cache")}} en cours.
 
-<p>Souvent, le comportement voulu est juste de {{domxref("WindowOrWorkerGlobalScope.fetch","fetch()")}} une ou plusieurs requête, et d'ajouter les résultats directement dans le cache. Dans ce type de cas, il est plus judicieux d'utiliser  {{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}} , étant donné que ces méthodes sont des raccourcis pour une ou plusieurs de ces opérations :</p>
+Souvent, le comportement voulu est juste de {{domxref("WindowOrWorkerGlobalScope.fetch","fetch()")}} une ou plusieurs requête, et d'ajouter les résultats directement dans le cache. Dans ce type de cas, il est plus judicieux d'utiliser  {{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}} , étant donné que ces méthodes sont des raccourcis pour une ou plusieurs de ces opérations :
 
-<pre class="brush: js">fetch(url).then(function(response) {
+```js
+fetch(url).then(function(response) {
   if (!response.ok) {
     throw new TypeError('Bad response status');
   }
   return cache.put(url, response);
-})</pre>
+})
+```
 
-<div class="note">
-<p><strong>Note :</strong> <code>put()</code> écrasera toute paire clé/valeur précedemment stockée en cache et qui correspond à la requête.</p>
-</div>
+> **Note :** `put()` écrasera toute paire clé/valeur précedemment stockée en cache et qui correspond à la requête.
 
-<div class="note">
-<p><strong>Note :</strong> Les implémentations initiales de Cache (à la fois dans Blink et Gecko) résolvent les promesses   {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, et {{domxref("Cache.put")}} quand le corps de la réponse est entièrement écrit en stockage.  Les versions plus récentes des spécifications sont plus précises en déclarant que le navigateur peut résoudre ces promesses dès que l'entrée est enregistrée en base de donnée, même si le reste de la requête est encore en train d'arriver.</p>
-</div>
+> **Note :** Les implémentations initiales de Cache (à la fois dans Blink et Gecko) résolvent les promesses   {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, et {{domxref("Cache.put")}} quand le corps de la réponse est entièrement écrit en stockage.  Les versions plus récentes des spécifications sont plus précises en déclarant que le navigateur peut résoudre ces promesses dès que l'entrée est enregistrée en base de donnée, même si le reste de la requête est encore en train d'arriver.
 
-<div class="note">
-<p><strong>Note :</strong> Depuis Chrome 46, l'API Cache ne stocke que les requêtes depuis des origines sécurisées, à savoir celles servies en HTTPS.</p>
-</div>
+> **Note :** Depuis Chrome 46, l'API Cache ne stocke que les requêtes depuis des origines sécurisées, à savoir celles servies en HTTPS.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">cache.put(request, response).then(function() {
+```js
+cache.put(request, response).then(function() {
   // la paire requête/réponse a été ajoutée au cache
 });
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>request</dt>
- <dd>La {{domxref("Request", "Requête")}} à ajouter au cache.</dd>
- <dt>response</dt>
- <dd>La {{domxref("Response", "Réponse")}} à associer à la requête.</dd>
-</dl>
+- request
+  - : La {{domxref("Request", "Requête")}} à ajouter au cache.
+- response
+  - : La {{domxref("Response", "Réponse")}} à associer à la requête.
 
-<h3 id="Retour">Retour</h3>
+### Retour
 
-<p>Une {{jsxref("Promise", "Promesse")}} est retournée avec void.</p>
+Une {{jsxref("Promise", "Promesse")}} est retournée avec void.
 
-<div class="note">
-<p><strong>Note :</strong> La promesse sera rompue avec un <code>TypeError</code> si le schéma d'URL n'est pas <code>http</code> ou <code>https</code>.</p>
-</div>
+> **Note :** La promesse sera rompue avec un `TypeError` si le schéma d'URL n'est pas `http` ou `https`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet extrait de code est tiré du MDN <a href="https://github.com/mdn/sw-test/">sw-test example</a> (lancez <a href="https://mdn.github.io/sw-test/">sw-test dans votre navigateur</a>). On attend le déclenchement d'un {{domxref("FetchEvent")}}, puis l'on va retourner une réponse spéciale d'après la procédure suivante :</p>
+Cet extrait de code est tiré du MDN [sw-test example](https://github.com/mdn/sw-test/) (lancez [sw-test dans votre navigateur](https://mdn.github.io/sw-test/)). On attend le déclenchement d'un {{domxref("FetchEvent")}}, puis l'on va retourner une réponse spéciale d'après la procédure suivante :
 
-<ol>
- <li>Vérifier si un match pour la requête a été trouvé dans le {{domxref("CacheStorage")}} grâce à  {{domxref("CacheStorage.match","CacheStorage.match()")}} . Si oui, servir cette réponse.</li>
- <li>Sinon, ouvrir le cache <code>v1</code> avec <code>open()</code>, insérer la requête réseau par défaut dans le cache via {{domxref("Cache.put","Cache.put()")}} , et retourner un clone de cette requête avec <code>return response.clone()</code> — nécessaire car <code>put()</code> détruit le corps de la réponse.</li>
- <li>En cas d'échec (e.g., car le réseau est inaccessible), retourner une réponse de secours.</li>
-</ol>
+1.  Vérifier si un match pour la requête a été trouvé dans le {{domxref("CacheStorage")}} grâce à  {{domxref("CacheStorage.match","CacheStorage.match()")}} . Si oui, servir cette réponse.
+2.  Sinon, ouvrir le cache `v1` avec `open()`, insérer la requête réseau par défaut dans le cache via {{domxref("Cache.put","Cache.put()")}} , et retourner un clone de cette requête avec `return response.clone()` — nécessaire car `put()` détruit le corps de la réponse.
+3.  En cas d'échec (e.g., car le réseau est inaccessible), retourner une réponse de secours.
 
-<pre class="brush: js">var response;
+```js
+var response;
 var cachedResponse = caches.match(event.request).catch(function() {
   return fetch(event.request);
 }).then(function(r) {
@@ -83,33 +75,21 @@ var cachedResponse = caches.match(event.request).catch(function() {
   return response.clone();
 }).catch(function() {
   return caches.match('/sw-test/gallery/myLittleVader.jpg');
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-cache-put', 'Cache: put')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                               | Commentaire          |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('Service Workers', '#dom-cache-put', 'Cache: put')}} | {{Spec2('Service Workers')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Cache.put")}}</p>
+{{Compat("api.Cache.put")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers">Utiliser les Service Workers</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>
-</ul>
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WindowOrWorkerGlobalScope.caches")}}

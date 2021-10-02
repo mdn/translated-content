@@ -3,32 +3,33 @@ title: IDBKeyRange.upperOpen
 slug: Web/API/IDBKeyRange/upperOpen
 translation_of: Web/API/IDBKeyRange/upperOpen
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<p>La propriété <strong><code>upperOpen</code></strong> de l'interface {{domxref("IDBKeyRange")}} renvoie un booléen indiquant si la valeur de la limite supérieure est incluse dans l'{{domxref("IDBKeyRange","intervalle de clé")}}.</p>
+La propriété **`upperOpen`** de l'interface {{domxref("IDBKeyRange")}} renvoie un booléen indiquant si la valeur de la limite supérieure est incluse dans l'{{domxref("IDBKeyRange","intervalle de clé")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">myKeyRange.upperOpen;</pre>
+```js
+myKeyRange.upperOpen;
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<dl>
- <dt>true</dt>
- <dd>La valeur de la limite supérieure n'est pas incluse dans l'intervalle.</dd>
- <dt>false</dt>
- <dd>La valeur de la limite supérieure est incluse dans l'intervalle.</dd>
-</dl>
+- true
+  - : La valeur de la limite supérieure n'est pas incluse dans l'intervalle.
+- false
+  - : La valeur de la limite supérieure est incluse dans l'intervalle.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans l'exemple suivant, on récupère l'{{domxref("IDBKeyRange","intervalle de clé")}} entre "F" et "W". Puis on ouvre une {{domxref("IDBTransaction","transaction")}} sur la connexion pour avoir l’{{domxref("IDBObjectStore","accès")}} au magasin d'objets 'fThings'. On met en place un {{domxref("IDBCursor","curseur")}} sur l'intervalle pour afficher dans une liste les valeurs des propriétés fThing et fRating des objets trouvés.</p>
+Dans l'exemple suivant, on récupère l'{{domxref("IDBKeyRange","intervalle de clé")}} entre "F" et "W". Puis on ouvre une {{domxref("IDBTransaction","transaction")}} sur la connexion pour avoir l’{{domxref("IDBObjectStore","accès")}} au magasin d'objets 'fThings'. On met en place un {{domxref("IDBCursor","curseur")}} sur l'intervalle pour afficher dans une liste les valeurs des propriétés fThing et fRating des objets trouvés.
 
-<p>La propriété <strong><code>upperOpen</code></strong> sert ici à afficher sur la console le booléen indiquant si la valeur de la limite supérieure est comprise dans l'intervalle.</p>
+La propriété **`upperOpen`** sert ici à afficher sur la console le booléen indiquant si la valeur de la limite supérieure est comprise dans l'intervalle.
 
-<pre class="brush: js">function displayData() {
+```js
+function displayData() {
   var keyRangeValue = IDBKeyRange.bound("F", "W", true, true);
   console.log(keyRangeValue.upperOpen);
 
@@ -39,7 +40,7 @@ translation_of: Web/API/IDBKeyRange/upperOpen
     var cursor = event.target.result;
       if(cursor) {
         var listItem = document.createElement('li');
-        listItem.innerHTML = '&lt;strong&gt;' + cursor.value.fThing + '&lt;/strong&gt;, ' + cursor.value.fRating;
+        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
         list.appendChild(listItem);
 
         cursor.continue();
@@ -47,37 +48,25 @@ translation_of: Web/API/IDBKeyRange/upperOpen
         console.log('Entries all displayed.');
       }
     };
-  };</pre>
+  };
+```
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBKeyRange-upperOpen', 'upperOpen')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | Statut                       | Commentaire |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
+| {{SpecName('IndexedDB', '#widl-IDBKeyRange-upperOpen', 'upperOpen')}} | {{Spec2('IndexedDB')}} |             |
 
-<h2 id="Browser_compatibility">Compatibilité avec les navigateurs</h2>
+## Compatibilité avec les navigateurs
 
-<p>{{Compat("api.IDBKeyRange.upperOpen")}}</p>
+{{Compat("api.IDBKeyRange.upperOpen")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}</li>
- <li>{{domxref("IDBDatabase","Débuter une connexion")}}</li>
- <li>{{domxref("IDBTransaction","Utilisé les transactions")}}</li>
- <li>{{domxref("IDBKeyRange","Définir l'intervalle des clés")}}</li>
- <li>{{domxref("IDBObjectStore","Accès aux magasins d'objets")}}</li>
- <li>{{domxref("IDBCursor","Utiliser les curseur")}}</li>
- <li>Exemple de référence: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- {{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}
+- {{domxref("IDBDatabase","Débuter une connexion")}}
+- {{domxref("IDBTransaction","Utilisé les transactions")}}
+- {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
+- {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
+- {{domxref("IDBCursor","Utiliser les curseur")}}
+- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

@@ -9,50 +9,39 @@ tags:
   - Window
 translation_of: Web/API/Window/isSecureContext
 ---
-<p>{{APIRef}}{{SeeCompatTable}}</p>
+{{APIRef}}{{SeeCompatTable}}
 
-<p>La propriété en lecteur seule <code><strong>window.isSecureContext</strong></code> indique si un contexte est capable d'utiliser des fonctionnalités qui nécessitent des <a href="/en-US/docs/Web/Security/Secure_Contexts">contextes sécurisés</a>.</p>
+La propriété en lecteur seule **`window.isSecureContext`** indique si un contexte est capable d'utiliser des fonctionnalités qui nécessitent des [contextes sécurisés](/en-US/docs/Web/Security/Secure_Contexts).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <em>isSecure</em> = window.isSecureContext</pre>
+    var isSecure = window.isSecureContext
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Détection_des_fonctionnalités">Détection des fonctionnalités</h3>
+### Détection des fonctionnalités
 
-<p>Vous pouvez utiliser la détection des fonctionnalités pour vérifier si elles sont dans un contexte sécurisé ou non à l'aide du booléen <code>isSecureContext</code> qui est exposé sur la portée globale.</p>
+Vous pouvez utiliser la détection des fonctionnalités pour vérifier si elles sont dans un contexte sécurisé ou non à l'aide du booléen `isSecureContext` qui est exposé sur la portée globale.
 
-<pre class="brush: js">if (window.isSecureContext) {
+```js
+if (window.isSecureContext) {
   // La page est un contexte sécurisé afin que les techniciens de service soient désormais disponibles
   navigator.serviceWorker.register("/offline-worker.js").then(function () {
     ...
   });
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Spécification</th>
-   <th>Statut</th>
-   <th>Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Secure Contexts')}}</td>
-   <td>{{Spec2('Secure Contexts','#monkey-patching-global-object','isSecureContext')}}</td>
-   <td>Spécification initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                            | Statut                                                                                                   | Commentaire             |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------------------- | ----------------------- |
+| {{SpecName('Secure Contexts')}} | {{Spec2('Secure Contexts','#monkey-patching-global-object','isSecureContext')}} | Spécification initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.isSecureContext")}}</p>
+{{Compat("api.Window.isSecureContext")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/en-US/docs/Web/Security/Secure_Contexts">Contextes sécurisés</a></li>
-</ul>
+- [Contextes sécurisés](/en-US/docs/Web/Security/Secure_Contexts)

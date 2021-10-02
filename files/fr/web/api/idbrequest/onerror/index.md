@@ -3,82 +3,70 @@ title: IDBRequest.onerror
 slug: Web/API/IDBRequest/onerror
 translation_of: Web/API/IDBRequest/onerror
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<p>le gestionnaire d'événement <strong><code>onerror</code></strong> de l'interface {{domxref("IDBRequest")}} capte l'événement <code><a href="/en-US/docs/Web/Events/error">error</a></code>, déclenché quand une requête renvoie une erreur.</p>
+le gestionnaire d'événement **`onerror`** de l'interface {{domxref("IDBRequest")}} capte l'événement [`error`](/en-US/docs/Web/Events/error), déclenché quand une requête renvoie une erreur.
 
-<p>Le gestionnaire d'événement reçoit l'événement <a href="/en-US/docs/Web/Events/error">error</a> avec le type="error" en paramètre.</p>
+Le gestionnaire d'événement reçoit l'événement [error](/en-US/docs/Web/Events/error) avec le type="error" en paramètre.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">request.onerror = function( event ) { ... };</pre>
+```js
+request.onerror = function( event ) { ... };
+```
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>L'exemple suivant demande un titre d'enregistrement donné, <code>onsuccess</code> obtient l'enregistrement associé au {{domxref("IDBObjectStore","magasin d'objets")}} (mis à disposition en tant que <code>objectStoreTitleRequest.result</code>), on met à jour une propriété de l'enregistrement, puis le sauve dans le magasin d'objets. En bas le gestionnaire d'événement <code>onerror</code> affiche le code d'erreur si la {{domxref("IDBRequest","requête")}} échoue. Pour un exemple de travail complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>).</p>
+L'exemple suivant demande un titre d'enregistrement donné, `onsuccess` obtient l'enregistrement associé au {{domxref("IDBObjectStore","magasin d'objets")}} (mis à disposition en tant que `objectStoreTitleRequest.result`), on met à jour une propriété de l'enregistrement, puis le sauve dans le magasin d'objets. En bas le gestionnaire d'événement `onerror` affiche le code d'erreur si la {{domxref("IDBRequest","requête")}} échoue. Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
 
-<pre>var title = "Walk dog";
+    var title = "Walk dog";
 
-// Ouvrez une transaction comme d'habitude
-var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+    // Ouvrez une transaction comme d'habitude
+    var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
 
-// Obtenez l'objet toDoList qui a ce titre
-var objectStoreTitleRequest = objectStore.get(title);
+    // Obtenez l'objet toDoList qui a ce titre
+    var objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = function() {
-  // Prenez l'objet de données renvoyé comme résultat
-  var data = objectStoreTitleRequest.result;
+    objectStoreTitleRequest.onsuccess = function() {
+      // Prenez l'objet de données renvoyé comme résultat
+      var data = objectStoreTitleRequest.result;
 
-  // Mettre à jour la valeur notified de l'objet à "yes"
-  data.notified = "yes";
+      // Mettre à jour la valeur notified de l'objet à "yes"
+      data.notified = "yes";
 
-  // Créer une autre requête qui insère le nouvelle élément dans la base de données
-  var updateTitleRequest = objectStore.put(data);
+      // Créer une autre requête qui insère le nouvelle élément dans la base de données
+      var updateTitleRequest = objectStore.put(data);
 
-  // Lorsque cette requête réussit, appelle de la fonction displayData() pour mettre à jour l'affichage
-  updateTitleRequest.onsuccess = function() {
-    displayData();
-  };
-};
+      // Lorsque cette requête réussit, appelle de la fonction displayData() pour mettre à jour l'affichage
+      updateTitleRequest.onsuccess = function() {
+        displayData();
+      };
+    };
 
-objectStoreTitleRequest.onerror = function() {
-  // Si une erreur se produit à la demande, on l'affiche
-  console.log("Il y a eu une erreur dans la récupération des données: " + objectStoreTitleRequest.error);
-};
-</pre>
+    objectStoreTitleRequest.onerror = function() {
+      // Si une erreur se produit à la demande, on l'affiche
+      console.log("Il y a eu une erreur dans la récupération des données: " + objectStoreTitleRequest.error);
+    };
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBRequest-onerror', 'onerror')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                       | Commentaire |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ----------- |
+| {{SpecName('IndexedDB', '#widl-IDBRequest-onerror', 'onerror')}} | {{Spec2('IndexedDB')}} |             |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBRequest.onerror")}}</p>
+{{Compat("api.IDBRequest.onerror")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li><a href="/en-US/docs/Web/Events/error">Error Event</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [Error Event](/en-US/docs/Web/Events/error)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

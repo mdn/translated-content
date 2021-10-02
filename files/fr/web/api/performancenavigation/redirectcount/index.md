@@ -15,44 +15,29 @@ tags:
   - Héritage
 translation_of: Web/API/PerformanceNavigation/redirectCount
 ---
-<p>{{APIRef("Navigation Timing")}}</p>
+{{APIRef("Navigation Timing")}}
 
-<div class="warning">
-  <p><strong>Attention :</strong> Cette interface est dépréciée dans la spécification <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2</a>. Veuillez utiliser la propriété <a href="/fr/docs/Web/API/PerformanceNavigationTiming/redirectCount"><code>PerformanceNavigationTiming.redirectCount</code></a> de l'interface <a href="/fr/docs/Web/API/PerformanceNavigationTiming"><code>PerformanceNavigationTiming</code></a> à la place.</p>
-</div>
+> **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.redirectCount`](/fr/docs/Web/API/PerformanceNavigationTiming/redirectCount) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
 
-<p>L'ancienne propriété en lecture seule <code><strong>PerformanceNavigation.redirectCount</code></strong> renvoie un <code>unsigned short</code> représentant le nombre de <strong>Redirections</strong> effectués avant d'atteindre la page.</p>
+L'ancienne propriété en lecture seule **`PerformanceNavigation.redirectCount`** renvoie un `unsigned short` représentant le nombre de **Redirections** effectués avant d'atteindre la page.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:js">let <var>amount</var> = performanceNavigation.redirectCount;</pre>
+```js
+let amount = performanceNavigation.redirectCount;
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécifications</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Navigation Timing', '#dom-performancenavigation-redirectcount',
-        'PerformanceNavigation.redirectCount')}}</td>
-      <td>{{Spec2('Navigation Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécifications                                                                                                                                                       | Statut                                   | Commentaire          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('Navigation Timing', '#dom-performancenavigation-redirectcount',
+        'PerformanceNavigation.redirectCount')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceNavigation.redirectCount")}}</p>
+{{Compat("api.PerformanceNavigation.redirectCount")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>L'interface <a href="/fr/docs/Web/API/PerformanceNavigation"><code>PerformanceNavigation</code></a> à laquelle il appartient.</li>
-</ul>
+- L'interface [`PerformanceNavigation`](/fr/docs/Web/API/PerformanceNavigation) à laquelle il appartient.

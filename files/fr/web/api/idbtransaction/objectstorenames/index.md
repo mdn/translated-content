@@ -8,47 +8,34 @@ tags:
   - Reference
 translation_of: Web/API/IDBTransaction/ObjectStoreNames
 ---
-<div>{{APIRef("IndexedDB")}}{{SeeCompatTable}}</div>
+{{APIRef("IndexedDB")}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>objectStoreNames</code></strong> de l'interface {{domxref("IDBTransaction")}} renvoie la {{domxref("DOMStringList","liste")}} des noms des magasins d'objets de la {{domxref("IDBTransaction","transaction")}} .</p>
+La propriété **`objectStoreNames`** de l'interface {{domxref("IDBTransaction")}} renvoie la {{domxref("DOMStringList","liste")}} des noms des magasins d'objets de la {{domxref("IDBTransaction","transaction")}} .
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var maBaseDeDonnees = transactionObj.objectStoreNames;</pre>
+    var maBaseDeDonnees = transactionObj.objectStoreNames;
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une liste {{domxref("DOMStringList")}} contenant les noms des magasins d'objets liés à la transaction ({{domxref("IDBTransaction")}}).</p>
+Une liste {{domxref("DOMStringList")}} contenant les noms des magasins d'objets liés à la transaction ({{domxref("IDBTransaction")}}).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB2', '#dom-idbtransaction-objectstorenames', 'db')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                         | Commentaires |
+| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB2', '#dom-idbtransaction-objectstorenames', 'db')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBTransaction.objectStoreNames")}}</p>
+{{Compat("api.IDBTransaction.objectStoreNames")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Manipuler IndexedDB</a></li>
- <li>Démarrer des transactions : {{domxref("IDBDatabase")}}</li>
- <li>Manipuler des transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}</li>
- <li>Manipuler des curseurs : {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence pour IndexedDB : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a></li>
-</ul>
+- [Manipuler IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Démarrer des transactions : {{domxref("IDBDatabase")}}
+- Manipuler des transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
+- Manipuler des curseurs : {{domxref("IDBCursor")}}
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)

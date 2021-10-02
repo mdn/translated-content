@@ -9,44 +9,37 @@ tags:
   - ServiceWorker
 translation_of: Web/API/NotificationEvent
 ---
-<div>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</div>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>L'interface <strong><code>NotificationEvent</code></strong> représente un évènement de clic pour une notification et qui est dispatché vers le {{domxref("ServiceWorkerGlobalScope")}} d'un {{domxref("ServiceWorker")}}.</p>
+L'interface **`NotificationEvent`** représente un évènement de clic pour une notification et qui est dispatché vers le {{domxref("ServiceWorkerGlobalScope")}} d'un {{domxref("ServiceWorker")}}.
 
-<p>Cette interface hérite de l'interface {{domxref("ExtendableEvent")}}.</p>
+Cette interface hérite de l'interface {{domxref("ExtendableEvent")}}.
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{domxref("NotificationEvent.NotificationEvent()")}}</dt>
- <dd>Cette méthode permet de créer un nouvel objet <code>NotificationEvent</code>.</dd>
-</dl>
+- {{domxref("NotificationEvent.NotificationEvent()")}}
+  - : Cette méthode permet de créer un nouvel objet `NotificationEvent`.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Cet objet hérite de propriétés grâce à son ancêtre : {{domxref("Event")}}</em>.</p>
+_Cet objet hérite de propriétés grâce à son ancêtre : {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("NotificationEvent.notification")}} {{readonlyInline}}</dt>
- <dd>Cette propriété renvoie un objet {{domxref("Notification")}} représentant la notification sur laquelle on a cliqué pour déclencher l'évènement.</dd>
- <dt>{{domxref("NotificationEvent.action")}} {{readonlyinline}}</dt>
- <dd>Cette propriété renvoie une chaîne de caractères identifiant le bouton de la notification sur lequel l'utilisateur a cliqué. Cette valeur sera {{jsxref("undefined")}} si l'utilisateur a cliqué autre part que sur le bouton pour la notification ou si la notification ne possède pas de bouton.</dd>
-</dl>
+- {{domxref("NotificationEvent.notification")}} {{readonlyInline}}
+  - : Cette propriété renvoie un objet {{domxref("Notification")}} représentant la notification sur laquelle on a cliqué pour déclencher l'évènement.
+- {{domxref("NotificationEvent.action")}} {{readonlyinline}}
+  - : Cette propriété renvoie une chaîne de caractères identifiant le bouton de la notification sur lequel l'utilisateur a cliqué. Cette valeur sera {{jsxref("undefined")}} si l'utilisateur a cliqué autre part que sur le bouton pour la notification ou si la notification ne possède pas de bouton.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Cet objet hérite de méthodes grâce à son parent </em><em>{{domxref("ExtendableEvent")}}</em>.</p>
+_Cet objet hérite de méthodes grâce à son parent_ _{{domxref("ExtendableEvent")}}_.
 
-<dl>
- <dt>{{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}</dt>
- <dd>
- <p>Cette méthode allonge la durée de vie de l'évènement. Elle est conçue pour être appelée dans le gestionnaire d'évènement {{event("install")}} lors de l'installation (cf. {{domxref("ServiceWorkerRegistration.installing")}}) du <em>worker</em> et dans le gestionnaire d'évènement {{event("active")}} pour le <em>worker</em> actif (cf. {{domxref("ServiceWorkerRegistration.active")}}).</p>
- </dd>
-</dl>
+- {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
+  - : Cette méthode allonge la durée de vie de l'évènement. Elle est conçue pour être appelée dans le gestionnaire d'évènement {{event("install")}} lors de l'installation (cf. {{domxref("ServiceWorkerRegistration.installing")}}) du _worker_ et dans le gestionnaire d'évènement {{event("active")}} pour le _worker_ actif (cf. {{domxref("ServiceWorkerRegistration.active")}}).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">self.addEventListener('notificationclick', function(event) {
+```js
+self.addEventListener('notificationclick', function(event) {
   console.log('Au clic sur la notification : ', event.notification.tag);
   event.notification.close();
 
@@ -55,38 +48,25 @@ translation_of: Web/API/NotificationEvent
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client)
+      if (client.url == '/' && 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
 });
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications','#notificationevent','NotificationEvent')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                                     | Commentaires |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------ |
+| {{SpecName('Web Notifications','#notificationevent','NotificationEvent')}} | {{Spec2('Web Notifications')}} |              |
 
-<div class="note">
-<p><strong>Note :</strong> Cette interface est définie au sein de <a href="/fr/docs/Web/API/Notifications_API">l'API Notifications</a>, mais on y accède via {{domxref("ServiceWorkerGlobalScope")}}.</p>
-</div>
+> **Note :** Cette interface est définie au sein de [l'API Notifications](/fr/docs/Web/API/Notifications_API), mais on y accède via {{domxref("ServiceWorkerGlobalScope")}}.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.NotificationEvent")}}</p>
+{{Compat("api.NotificationEvent")}}

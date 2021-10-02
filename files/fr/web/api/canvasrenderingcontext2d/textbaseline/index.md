@@ -9,73 +9,74 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/textBaseline
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La propriété <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.textBaseline</code></strong> de l'API Canvas 2D spécifie la ligne de base de texte à utiliser lors du dessin d'un texte.</p>
+La propriété **`CanvasRenderingContext2D`\*\***`.textBaseline`\*\* de l'API Canvas 2D spécifie la ligne de base de texte à utiliser lors du dessin d'un texte.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var><em>ctx</em>.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";</var>
-</pre>
+    ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
 
-<h3 id="Options">Options</h3>
+### Options
 
-<p>Valeurs possibles :</p>
+Valeurs possibles :
 
-<dl>
- <dt>top</dt>
- <dd>La ligne de base du texte est le haut du cadratin.</dd>
- <dt>hanging</dt>
- <dd>La ligne de base du texte est la ligne de base supérieure.</dd>
- <dt>middle</dt>
- <dd>La ligne de base du texte est le milieu du cadratin.</dd>
- <dt>alphabetic</dt>
- <dd>La ligne de base du texte est la ligne de base normale alphabétique.</dd>
- <dt>ideographic</dt>
- <dd>La ligne de base du texte est la ligne de base idéographique ; c'est le bas du corps des caractères, si le corps principal des caractères fait saillie en dessous de la ligne de base alphabétique.</dd>
- <dt>bottom</dt>
- <dd>La ligne de base du texte est le bas du cadre. Cela diffère de ligne de base idéographique en ce que la ligne de base idéographique ne prend pas en considération les jambages.</dd>
-</dl>
+- top
+  - : La ligne de base du texte est le haut du cadratin.
+- hanging
+  - : La ligne de base du texte est la ligne de base supérieure.
+- middle
+  - : La ligne de base du texte est le milieu du cadratin.
+- alphabetic
+  - : La ligne de base du texte est la ligne de base normale alphabétique.
+- ideographic
+  - : La ligne de base du texte est la ligne de base idéographique ; c'est le bas du corps des caractères, si le corps principal des caractères fait saillie en dessous de la ligne de base alphabétique.
+- bottom
+  - : La ligne de base du texte est le bas du cadre. Cela diffère de ligne de base idéographique en ce que la ligne de base idéographique ne prend pas en considération les jambages.
 
-<p>La valeur par défaut est <code>alphabetic</code>.</p>
+La valeur par défaut est `alphabetic`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Using_the_textBaseline_property">Utilisation de la propritété <code>textBaseline</code></h3>
+### Utilisation de la propritété `textBaseline`
 
-<p>Ceci est seulement un fragment de code simple utilisant la propriété <code>textBaseline</code> pour définir un réglage différent de ligne de base de texte.</p>
+Ceci est seulement un fragment de code simple utilisant la propriété `textBaseline` pour définir un réglage différent de ligne de base de texte.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.font = '48px serif';
 ctx.textBaseline = 'hanging';
 ctx.strokeText('Hello world', 0, 100);
-</pre>
+```
 
-<p>Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas :</p>
+Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas :
 
-<h4 id="code_jouable">Code jouable</h4>
+#### Code jouable
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.font = '48px serif';
 ctx.textBaseline = 'hanging';
-ctx.strokeText('Hello world', 0, 100);&lt;/textarea&gt;
-</pre>
+ctx.strokeText('Hello world', 0, 100);</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById('canvas');
+```js hidden
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
@@ -98,33 +99,20 @@ edit.addEventListener('click', function() {
 
 textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
+{{ EmbedLiveSample('code_jouable', 700, 360) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-textbaseline", "CanvasRenderingContext2D.textBaseline")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                            | Statut                           | Commentaire |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-textbaseline", "CanvasRenderingContext2D.textBaseline")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.textBaseline")}}</p>
+{{Compat("api.CanvasRenderingContext2D.textBaseline")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}.</li>
-</ul>
+- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}.

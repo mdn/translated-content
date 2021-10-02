@@ -11,96 +11,78 @@ tags:
   - local
 translation_of: Web/API/Element/localName
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>La propriété en lecture seule <code><strong>Element.localName</strong></code> renvoie la partie locale du nom qualifié d'un élément.</p>
+La propriété en lecture seule **`Element.localName`** renvoie la partie locale du nom qualifié d'un élément.
 
-<div class="note">
-<p><strong>Note :</strong> Dans les versions précédentes de la spécification DOM, cet API était défini dans l'interface {{domxref("Node")}}.</p>
-</div>
+> **Note :** Dans les versions précédentes de la spécification DOM, cet API était défini dans l'interface {{domxref("Node")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>name</var> = <var>element</var>.localName
-</pre>
+    name = element.localName
 
-<h3 id="Valeur_renvoyée">Valeur renvoyée</h3>
+### Valeur renvoyée
 
-<p>Une {{domxref("DOMString")}} (<em>chaîne de caractères</em>) représentant la partie locale du nom qualifié de l'élément.</p>
+Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la partie locale du nom qualifié de l'élément.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>(Doit être servi avec un type de contenu XML, tel que <code>text/xml</code> ou <code>application/xhtml+xml</code>.)</p>
+(Doit être servi avec un type de contenu XML, tel que `text/xml` ou `application/xhtml+xml`.)
 
-<pre class="brush:xml">&lt;html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:svg="http://www.w3.org/2000/svg"&gt;
-&lt;head&gt;
-  &lt;script type="application/javascript"&gt;&lt;![CDATA[
+```xml
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:svg="http://www.w3.org/2000/svg">
+<head>
+  <script type="application/javascript"><![CDATA[
   function test() {
     var text = document.getElementById('text');
     var circle = document.getElementById('circle');
 
-    text.value = "&lt;svg:circle&gt; has:\n" +
+    text.value = "<svg:circle> has:\n" +
                  "localName = '" + circle.localName + "'\n" +
                  "namespaceURI = '" + circle.namespaceURI + "'";
   }
-  ]]&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="test()"&gt;
-  &lt;svg:svg version="1.1"
+  ]]></script>
+</head>
+<body onload="test()">
+  <svg:svg version="1.1"
     width="100px" height="100px"
-    viewBox="0 0 100 100"&gt;
-    &lt;svg:circle cx="50" cy="50" r="30" style="fill:#aaa" id="circle"/&gt;
-  &lt;/svg:svg&gt;
-  &lt;textarea id="text" rows="4" cols="55"/&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    viewBox="0 0 100 100">
+    <svg:circle cx="50" cy="50" r="30" style="fill:#aaa" id="circle"/>
+  </svg:svg>
+  <textarea id="text" rows="4" cols="55"/>
+</body>
+</html>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Le nom local d'un noeud est la partie du nom qualifié du noeud qui arrive après le signe deux points. Les noms qualifiés sont typiquement utilisés dans XML comme partie de l'espace de noms des documents particuliers XML. Par exemple, dans le nom qualifié <code>ecomm:partners</code>, <code>partners</code> est le nom local et <code>ecomm</code> est le préfixe :</p>
+Le nom local d'un noeud est la partie du nom qualifié du noeud qui arrive après le signe deux points. Les noms qualifiés sont typiquement utilisés dans XML comme partie de l'espace de noms des documents particuliers XML. Par exemple, dans le nom qualifié `ecomm:partners`, `partners` est le nom local et `ecomm` est le préfixe :
 
-<pre class="brush:xml">&lt;ecomm:business id="soda_shop" type="brick_n_mortar" xmlns:ecomm="http://example.com/ecomm"&gt;
-  &lt;ecomm:partners&gt;
-    &lt;ecomm:partner id="1001"&gt;Tony's Syrup Warehouse
-    &lt;/ecomm:partner&gt;
-  &lt;/ecomm:partner&gt;
-&lt;/ecomm:business&gt;
-</pre>
+```xml
+<ecomm:business id="soda_shop" type="brick_n_mortar" xmlns:ecomm="http://example.com/ecomm">
+  <ecomm:partners>
+    <ecomm:partner id="1001">Tony's Syrup Warehouse
+    </ecomm:partner>
+  </ecomm:partner>
+</ecomm:business>
+```
 
-<div class="note">
-<p><strong>Note :</strong> Dans {{Gecko("1.9.2")}} et antérieurs, la propriété renvoie la version majuscule du nom local pour les éléments HTML dans les DOM HTML (par opposition aux éléments XHTML dans les DOM XML). Dans les versions plus tardives, en conformité avec HTML5, la propriété renvoie dans la cas du stockage interne du DOM, en minuscule pour les éléments HTML dans les DOM HTML et les éléments XHTML dans les DOM XML. La propriété {{domxref("element.tagName","tagName")}} continue à renvoyer la casse majuscule pour les éléments HTML dans les DOM HTML.</p>
-</div>
+> **Note :** Dans {{Gecko("1.9.2")}} et antérieurs, la propriété renvoie la version majuscule du nom local pour les éléments HTML dans les DOM HTML (par opposition aux éléments XHTML dans les DOM XML). Dans les versions plus tardives, en conformité avec HTML5, la propriété renvoie dans la cas du stockage interne du DOM, en minuscule pour les éléments HTML dans les DOM HTML et les éléments XHTML dans les DOM XML. La propriété {{domxref("element.tagName","tagName")}} continue à renvoyer la casse majuscule pour les éléments HTML dans les DOM HTML.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-localname', 'Element.localName')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                           | Commentaire          |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('DOM WHATWG', '#dom-element-localname', 'Element.localName')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Element.localName")}}</p>
+{{Compat("api.Element.localName")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Element.namespaceURI")}}</li>
- <li>{{domxref("Element.prefix")}}</li>
- <li>{{domxref("Attr.localName")}}</li>
- <li>{{domxref("Node.localName")}}</li>
-</ul>
+- {{domxref("Element.namespaceURI")}}
+- {{domxref("Element.prefix")}}
+- {{domxref("Attr.localName")}}
+- {{domxref("Node.localName")}}

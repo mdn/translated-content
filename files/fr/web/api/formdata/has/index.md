@@ -11,70 +11,56 @@ tags:
   - has
 translation_of: Web/API/FormData/has
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>La méthode <code><strong>has()</strong></code> de l'interface {{domxref("FormData")}} renvoie un booléen indiquant si un objet <code>FormData</code> contient une certaine clé.</p>
+La méthode **`has()`** de l'interface {{domxref("FormData")}} renvoie un booléen indiquant si un objet `FormData` contient une certaine clé.
 
-<div class="note">
-<p><strong>Note :</strong> Cette méthode est disponible dans les <a href="/fr/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note :** Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">formData.has(name);</pre>
+```js
+formData.has(name);
+```
 
-<h3 id="append_Parameters">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Un {{domxref("USVString")}} représentant le nom de la clé que vous voulez tester.</dd>
-</dl>
+- `name`
+  - : Un {{domxref("USVString")}} représentant le nom de la clé que vous voulez tester.
 
-<h3 id="Retours">Retours</h3>
+### Retours
 
-<p>Un {{domxref("Boolean")}}.</p>
+Un {{domxref("Boolean")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>La ligne suivante crée un objet <code>FormData</code> vide :</p>
+La ligne suivante crée un objet `FormData` vide :
 
-<pre class="brush: js">var formData = new FormData();</pre>
+```js
+var formData = new FormData();
+```
 
-<p>L'extrait suivant montre les résultats des tests effectués pour vérifier l'existence d'un <code>username</code> dans l'objet FormData, avant et après avoir ajouté une valeur <code>username</code> avec {{domxref("FormData.append")}} :</p>
+L'extrait suivant montre les résultats des tests effectués pour vérifier l'existence d'un `username` dans l'objet FormData, avant et après avoir ajouté une valeur `username` avec {{domxref("FormData.append")}} :
 
-<pre class="brush: js">formData.has('username'); // Retourne false
+```js
+formData.has('username'); // Retourne false
 formData.append('username', 'Chris');
 formData.has('username'); // Retourne true
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest','#dom-formdata-has','has()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | Statut                               | Commentaire |
+| ---------------------------------------------------------------------------- | ------------------------------------ | ----------- |
+| {{SpecName('XMLHttpRequest','#dom-formdata-has','has()')}} | {{Spec2('XMLHttpRequest')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.FormData.has")}}
 
+## Voir aussi
 
-<p>{{Compat("api.FormData.has")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest">Utilisation de XMLHttpRequest</a></li>
- <li><a href="/fr/docs/Web/API/FormData/Utilisation_objets_FormData">Utilisation des objects FormData </a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest)
+- [Utilisation des objects FormData](/fr/docs/Web/API/FormData/Utilisation_objets_FormData)
+- {{HTMLElement("Form")}}

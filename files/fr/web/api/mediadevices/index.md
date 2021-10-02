@@ -14,40 +14,37 @@ tags:
   - WebRTC
 translation_of: Web/API/MediaDevices
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>L'interface <strong><code>MediaDevices</code></strong> permet d'accéder aux périphériques d'entrée multimédia connectés tels que les caméras et les microphones, ainsi que le partage d'écran. Essentiellement, il vous permet d'accéder à n'importe quelle source matérielle de données multimédias.</p>
+L'interface **`MediaDevices`** permet d'accéder aux périphériques d'entrée multimédia connectés tels que les caméras et les microphones, ainsi que le partage d'écran. Essentiellement, il vous permet d'accéder à n'importe quelle source matérielle de données multimédias.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Hérite des propriétés de son interface parente, {{domxref("EventTarget")}}.</em></p>
+_Hérite des propriétés de son interface parente, {{domxref("EventTarget")}}._
 
-<h2 id="Handlers">Événéments</h2>
+## Événéments
 
-<dl>
- <dt>{{domxref("MediaDevices/devicechange_event", "devicechange")}}</dt>
- <dd>Déclenché lorsqu'un périphérique d'entrée ou de sortie multimédia est connecté ou retiré de l'ordinateur de l'utilisateur.<br>
- Egalement disponible via la propriété {{domxref("MediaDevices/ondevicechange", "ondevicechange")}}.</dd>
-</dl>
+- {{domxref("MediaDevices/devicechange_event", "devicechange")}}
+  - : Déclenché lorsqu'un périphérique d'entrée ou de sortie multimédia est connecté ou retiré de l'ordinateur de l'utilisateur.
+    Egalement disponible via la propriété {{domxref("MediaDevices/ondevicechange", "ondevicechange")}}.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Hérite des méthodes de son interface parente, {{domxref("EventTarget")}}.</em></p>
+_Hérite des méthodes de son interface parente, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{ domxref("MediaDevices.enumerateDevices", "enumerateDevices()") }}</dt>
- <dd>Obtient un tableau d'informations sur les périphériques d'entrée et de sortie multimédia disponibles sur le système.</dd>
- <dt>{{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}}</dt>
- <dd>Renvoie un objet conforme à {{domxref("MediaTrackSupportedConstraints")}} indiquant quelles propriétés de contrainte sont prises en charge sur l'interface {{domxref("MediaStreamTrack")}}. Consultez {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}} pour en savoir plus sur les contraintes et comment les utiliser.</dd>
- <dt>{{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}</dt>
- <dd>Invite l'utilisateur à sélectionner un affichage ou une partie d'un affichage (comme une fenêtre) à capturer en tant que {{domxref("MediaStream")}} à des fins de partage ou d'enregistrement. Renvoie une promesse qui se résout en un <code>MediaStream</code>.</dd>
- <dt>{{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}</dt>
- <dd>Avec l'autorisation de l'utilisateur via une invite, allume une caméra et / ou un microphone sur le système et fournit un {{domxref("MediaStream")}} contenant une piste vidéo et / ou une piste audio avec l'entrée.</dd>
-</dl>
+- {{ domxref("MediaDevices.enumerateDevices", "enumerateDevices()") }}
+  - : Obtient un tableau d'informations sur les périphériques d'entrée et de sortie multimédia disponibles sur le système.
+- {{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}}
+  - : Renvoie un objet conforme à {{domxref("MediaTrackSupportedConstraints")}} indiquant quelles propriétés de contrainte sont prises en charge sur l'interface {{domxref("MediaStreamTrack")}}. Consultez {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}} pour en savoir plus sur les contraintes et comment les utiliser.
+- {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}
+  - : Invite l'utilisateur à sélectionner un affichage ou une partie d'un affichage (comme une fenêtre) à capturer en tant que {{domxref("MediaStream")}} à des fins de partage ou d'enregistrement. Renvoie une promesse qui se résout en un `MediaStream`.
+- {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}
+  - : Avec l'autorisation de l'utilisateur via une invite, allume une caméra et / ou un microphone sur le système et fournit un {{domxref("MediaStream")}} contenant une piste vidéo et / ou une piste audio avec l'entrée.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">'use strict';
+```js
+'use strict';
 
 // Placez les variables dans la portée globale pour les rendre disponibles à la console du navigateur.
 var video = document.querySelector('video');
@@ -81,42 +78,28 @@ navigator.mediaDevices.getUserMedia(constraints)
 });
 
 function errorMsg(msg, error) {
-  errorElement.innerHTML += '&lt;p&gt;' + msg + '&lt;/p&gt;';
+  errorElement.innerHTML += '<p>' + msg + '</p>';
   if (typeof error !== 'undefined') {
     console.error(error);
   }
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Capture', '#mediadevices', 'MediaDevices')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                               | Commentaire         |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
+| {{SpecName('Media Capture', '#mediadevices', 'MediaDevices')}} | {{Spec2('Media Capture')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.MediaDevices")}}</p>
+{{Compat("api.MediaDevices")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture et Streams API</a>: l'API dont cette interface fait partie.</li>
- <li><a href="/en-US/docs/Web/API/Screen_Capture_API">API de capture d'écran</a>: L'API définissant la méthode {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}.</li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li>{{domxref("Navigator.mediaDevices")}}: Renvoie une référence à un objet <code>MediaDevices</code> qui peut être utilisé pour accéder aux périphériques.</li>
- <li><a href="https://github.com/chrisjohndigital/CameraCaptureJS">CameraCaptureJS:</a> Capture et lecture vidéo HTML5 à l'aide de <code>MediaDevices</code> et de l'API d'enregistrement MediaStream (<a href="https://github.com/chrisjohndigital/CameraCaptureJS">source sur GitHub</a>)</li>
- <li><a href="https://github.com/chrisjohndigital/OpenLang">OpenLang</a>: Application Web de laboratoire de langage vidéo HTML5 video utilisant <code>MediaDevices</code> et l'API d'enregistrement MediaStream pour l'enregistrement vidéo (<a href="https://github.com/chrisjohndigital/OpenLang">source sur GitHub</a>)</li>
-</ul>
+- [Media Capture et Streams API](/en-US/docs/Web/API/Media_Streams_API): l'API dont cette interface fait partie.
+- [API de capture d'écran](/en-US/docs/Web/API/Screen_Capture_API): L'API définissant la méthode {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}.
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("Navigator.mediaDevices")}}: Renvoie une référence à un objet `MediaDevices` qui peut être utilisé pour accéder aux périphériques.
+- [CameraCaptureJS:](https://github.com/chrisjohndigital/CameraCaptureJS) Capture et lecture vidéo HTML5 à l'aide de `MediaDevices` et de l'API d'enregistrement MediaStream ([source sur GitHub](https://github.com/chrisjohndigital/CameraCaptureJS))
+- [OpenLang](https://github.com/chrisjohndigital/OpenLang): Application Web de laboratoire de langage vidéo HTML5 video utilisant `MediaDevices` et l'API d'enregistrement MediaStream pour l'enregistrement vidéo ([source sur GitHub](https://github.com/chrisjohndigital/OpenLang))

@@ -8,65 +8,66 @@ tags:
   - Méthode
 translation_of: Web/API/CanvasRenderingContext2D/fillRect
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La méthode <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fillRect()</code></strong> de l'API 2D des Canvas dessine un rectangle plein aux coordonnées <em>(x, y)</em>, aux dimensions déterminées par <em>largeur</em> et <em>hauteur</em> et au style déterminé par l'attribut <code>fillStyle</code>.</p>
+La méthode **`CanvasRenderingContext2D`\*\***`.fillRect()`\*_ de l'API 2D des Canvas dessine un rectangle plein aux coordonnées _(x, y)*, aux dimensions déterminées par *largeur* et *hauteur\* et au style déterminé par l'attribut `fillStyle`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var><em>ctx</em>.fillRect(x, y, largeur, hauteur);</var>
-</pre>
+    void ctx.fillRect(x, y, largeur, hauteur);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>x</code></dt>
- <dd>L'ordonnée <em>x</em> des coordonnées du point de départ du rectangle.</dd>
- <dt><code>y</code></dt>
- <dd>L'abscisse <em>y</em> des coordonnées du point de départ du rectangle.</dd>
- <dt><code>largeur</code></dt>
- <dd>La largeur du rectangle.</dd>
- <dt><code>hauteur</code></dt>
- <dd>La hauteur de rectangle.</dd>
-</dl>
+- `x`
+  - : L'ordonnée *x* des coordonnées du point de départ du rectangle.
+- `y`
+  - : L'abscisse *y* des coordonnées du point de départ du rectangle.
+- `largeur`
+  - : La largeur du rectangle.
+- `hauteur`
+  - : La hauteur de rectangle.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_de_la_méthode_fillRect">Utilisation de la méthode <code>fillRect</code></h3>
+### Utilisation de la méthode `fillRect`
 
-<p>Ceci est juste un extrait de code qui utilise la méthode <code>fillRect</code>.</p>
+Ceci est juste un extrait de code qui utilise la méthode `fillRect`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 
 // remplir la balise entièrement
 // ctx.fillRect(0, 0, canvas.width, canvas.height);
-</pre>
+```
 
-<p>Éditez le code suivant pour voir les changements en direct dans la balise canvas:</p>
+Éditez le code suivant pour voir les changements en direct dans la balise canvas:
 
-<h4 id="code_jouable">Code jouable</h4>
+#### Code jouable
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);&lt;/textarea&gt;
-</pre>
+ctx.fillRect(10, 10, 100, 100);</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -89,36 +90,23 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
+{{ EmbedLiveSample('code_jouable', 700, 360) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fillrect", "CanvasRenderingContext2D.fillRect")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                | Statut                           | Commentaire |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fillrect", "CanvasRenderingContext2D.fillRect")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.fillRect")}}</p>
+{{Compat("api.CanvasRenderingContext2D.fillRect")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface qui le définit, {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.fillStyle")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.clearRect()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.strokeRect()")}}</li>
-</ul>
+- L'interface qui le définit, {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.fillStyle")}}
+- {{domxref("CanvasRenderingContext2D.clearRect()")}}
+- {{domxref("CanvasRenderingContext2D.strokeRect()")}}

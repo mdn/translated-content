@@ -3,65 +3,66 @@ title: CanvasRenderingContext2D.strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
 translation_of: Web/API/CanvasRenderingContext2D/strokeStyle
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La propriété <code><strong>CanvasRenderingContext2D.strokeStyle</strong></code> de l'API Canvas 2D spécifie la couleur ou le style à utiliser pour dessiner les lignes autour des formes. La valeur par défaut est <code>#000</code> (black).</p>
+La propriété **`CanvasRenderingContext2D.strokeStyle`** de l'API Canvas 2D spécifie la couleur ou le style à utiliser pour dessiner les lignes autour des formes. La valeur par défaut est `#000` (black).
 
-<p>Voir également le chapitre <a href="/fr/docs/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs">Ajout de styles et de couleurs</a> dans le <a href="/fr/docs/Tutoriel_canvas">Tutoriel canvas</a>.</p>
+Voir également le chapitre [Ajout de styles et de couleurs](/fr/docs/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs) dans le [Tutoriel canvas](/fr/docs/Tutoriel_canvas).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var><em>ctx</em>.strokeStyle = color;
-</var><var><em>ctx</em>.strokeStyle = gradient;
-</var><var><em>ctx</em>.strokeStyle = pattern;</var>
-</pre>
+    ctx.strokeStyle = color;
+    ctx.strokeStyle = gradient;
+    ctx.strokeStyle = pattern;
 
-<h3 id="Options">Options</h3>
+### Options
 
-<dl>
- <dt><code>color</code></dt>
- <dd>Une {{domxref("DOMString")}} analysée comme valeur CSS {{cssxref("&lt;color&gt;")}}.</dd>
- <dt><code>gradient</code></dt>
- <dd>Un objet {{domxref("CanvasGradient")}} (un gradient linéaire ou radial).</dd>
- <dt><code>pattern</code></dt>
- <dd>Un objet {{domxref("CanvasPattern")}} (une image répétée).</dd>
-</dl>
+- `color`
+  - : Une {{domxref("DOMString")}} analysée comme valeur CSS {{cssxref("&lt;color&gt;")}}.
+- `gradient`
+  - : Un objet {{domxref("CanvasGradient")}} (un gradient linéaire ou radial).
+- `pattern`
+  - : Un objet {{domxref("CanvasPattern")}} (une image répétée).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Using_the_strokeStyle_property">Utiliser la propriété <code>strokeStyle</code> pour définir une couleur différente</h3>
+### Utiliser la propriété `strokeStyle` pour définir une couleur différente
 
-<p>Ceci est un simple snippet de code utilisant la propriété <code>strokeStyle</code> pour définir une couleur différente.</p>
+Ceci est un simple snippet de code utilisant la propriété `strokeStyle` pour définir une couleur différente.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.strokeStyle = 'blue';
 ctx.strokeRect(10, 10, 100, 100);
-</pre>
+```
 
-<p>Éditez le code ci-dessous pour voir vos changements mettre à jour le canvas en direct:</p>
+Éditez le code ci-dessous pour voir vos changements mettre à jour le canvas en direct:
 
-<h4 id="code_jouable">Code jouable</h4>
+#### Code jouable
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.strokeStyle = 'blue';
-ctx.strokeRect(10, 10, 100, 100);&lt;/textarea&gt;
-</pre>
+ctx.strokeRect(10, 10, 100, 100);</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById('canvas');
+```js hidden
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
@@ -84,18 +85,19 @@ edit.addEventListener('click', function() {
 
 textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
+{{ EmbedLiveSample('code_jouable', 700, 360) }}
 
-<h3 id="A_strokeStyle_example">Un exemple <code>strokeStyle</code></h3>
+### Un exemple `strokeStyle`
 
-<p>Cet exemple utilise la propriété <code>strokeStyle</code> pour changer les couleurs des contours des formes. Nous utilisons la méthode {{domxref("CanvasRenderingContext2D.arc", "arc()")}} pour dessiner des cercles au lieu de carrés.</p>
+Cet exemple utilise la propriété `strokeStyle` pour changer les couleurs des contours des formes. Nous utilisons la méthode {{domxref("CanvasRenderingContext2D.arc", "arc()")}} pour dessiner des cercles au lieu de carrés.
 
-<pre class="brush: js">var ctx = document.getElementById('canvas').getContext('2d');
+```js
+var ctx = document.getElementById('canvas').getContext('2d');
 
-for (var i = 0; i &lt; 6; i++) {
-  for (var j = 0; j &lt; 6; j++) {
+for (var i = 0; i < 6; i++) {
+  for (var j = 0; j < 6; j++) {
     ctx.strokeStyle = 'rgb(0,' + Math.floor(255 - 42.5 * i) + ',' +
                       Math.floor(255 - 42.5 * j) + ')';
     ctx.beginPath();
@@ -103,52 +105,39 @@ for (var i = 0; i &lt; 6; i++) {
     ctx.stroke();
   }
 }
-</pre>
+```
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<p>Le résultat devrait ressembler à ça:</p>
+Le résultat devrait ressembler à ça:
 
-<p>{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}</p>
+{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-strokestyle", "CanvasRenderingContext2D.strokeStyle")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                        | Status                           | Comment |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-strokestyle", "CanvasRenderingContext2D.strokeStyle")}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.CanvasRenderingContext2D.strokeStyle")}}</p>
+{{Compat("api.CanvasRenderingContext2D.strokeStyle")}}
 
-<h2 id="Notes_spécifiques_à_WebKitBlink">Notes spécifiques à WebKit/Blink</h2>
+## Notes spécifiques à WebKit/Blink
 
-<ul>
- <li>Dans les navigateurs basés sur WebKit et Blink, une méthode non standard et dépréciée, <code>ctx.setStrokeColor()</code>, est implémentée en plus de cette propriété.
+- Dans les navigateurs basés sur WebKit et Blink, une méthode non standard et dépréciée, `ctx.setStrokeColor()`, est implémentée en plus de cette propriété.
 
-  <pre class="brush: js">setStrokeColor(color, optional alpha);
-setStrokeColor(grayLevel, optional alpha);
-setStrokeColor(r, g, b, a);
-setStrokeColor(c, m, y, k, a);
-</pre>
- </li>
-</ul>
+  ```js
+  setStrokeColor(color, optional alpha);
+  setStrokeColor(grayLevel, optional alpha);
+  setStrokeColor(r, g, b, a);
+  setStrokeColor(c, m, y, k, a);
+  ```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface qui définit cette propriété, {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasGradient")}}</li>
- <li>{{domxref("CanvasPattern")}}</li>
-</ul>
+- L'interface qui définit cette propriété, {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasGradient")}}
+- {{domxref("CanvasPattern")}}

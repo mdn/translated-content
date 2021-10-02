@@ -11,41 +11,28 @@ tags:
   - Reference
 translation_of: Web/API/Notification/image
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>La propriété en lecture seule <code><strong>image</strong></code> de l'interface {{domxref ("Notification")}} contient l'URL d'une image à afficher dans le cadre de la notification, comme définis à l'aide de l'option <code>image</code> lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification"," Notification()")}}.</p>
+La propriété en lecture seule **`image`** de l'interface {{domxref ("Notification")}} contient l'URL d'une image à afficher dans le cadre de la notification, comme définis à l'aide de l'option `image` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification"," Notification()")}}.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>Notification</var>.image</pre>
+    Notification.image
 
-<h3 id="Value">Valeur</h3>
+### Valeur
 
-<p>Une {{domxref("USVString")}}.</p>
+Une {{domxref("USVString")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications','#image-resource','image')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                                     | Commentaire     |
+| -------------------------------------------------------------------------------- | ---------------------------------------- | --------------- |
+| {{SpecName('Web Notifications','#image-resource','image')}} | {{Spec2('Web Notifications')}} | Living standard |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Notification.image")}}</p>
+{{Compat("api.Notification.image")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a></li>
-</ul>
+- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

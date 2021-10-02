@@ -14,47 +14,30 @@ tags:
   - Reference
 translation_of: Web/API/Performance/timing
 ---
-<p>{{deprecated_header}}{{APIRef("Navigation Timing")}}</p>
+{{deprecated_header}}{{APIRef("Navigation Timing")}}
 
-<div class="warning">
-  <p><strong>Attention :</strong> Cette propriété est dépréciée dans la spécification <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2</a>. Veuillez utiliser l'interface {{domxref("PerformanceNavigationTiming")}} à la place.</p>
-</div>
+> **Attention :** Cette propriété est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface {{domxref("PerformanceNavigationTiming")}} à la place.
 
-<p>L'ancienne propriété <strong><code>Performance.timing</code></strong> renvoie un objet {{domxref("PerformanceTiming")}}  en lecture seule contenant des informations de performance liées à la latence.</p>
+L'ancienne propriété **`Performance.timing`** renvoie un objet {{domxref("PerformanceTiming")}} en lecture seule contenant des informations de performance liées à la latence.
 
 {{warning("Cette propriété n'est pas disponible dans les Web Workers.")}}
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
-  <var>timingInfo</var> = performance.timing;
-</pre>
+```js
+  timingInfo = performance.timing;
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Navigation Timing Level 2', '#obsolete')}}</td>
-      <td>{{Spec2('Navigation Timing Level 2')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                            | Statut                                               | Commentaire          |
+| ------------------------------------------------------------------------ | ---------------------------------------------------- | -------------------- |
+| {{SpecName('Navigation Timing Level 2', '#obsolete')}} | {{Spec2('Navigation Timing Level 2')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Performance.timing")}}</p>
+{{Compat("api.Performance.timing")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>L'interface {{domxref("Performance")}} à laquelle il appartient.</li>
-</ul>
+- L'interface {{domxref("Performance")}} à laquelle il appartient.

@@ -3,21 +3,22 @@ title: WindowClient.focused
 slug: Web/API/WindowClient/focused
 translation_of: Web/API/WindowClient/focused
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>La propriété <strong><code>focused</code></strong> , en lecture seule de l'interface  {{domxref("WindowClient")}} , est un {{domxref("Boolean")}} qui indique si client actuel a le focus .</p>
+La propriété **`focused`** , en lecture seule de l'interface  {{domxref("WindowClient")}} , est un {{domxref("Boolean")}} qui indique si client actuel a le focus .
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">myFocused = WindowClient.focused;</pre>
+    myFocused = WindowClient.focused;
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("Boolean")}}.</p>
+A {{domxref("Boolean")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">self.addEventListener('notificationclick', function(event) {
+```js
+self.addEventListener('notificationclick', function(event) {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -26,9 +27,9 @@ translation_of: Web/API/WindowClient/focused
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client) {
+      if (client.url == '/' && 'focus' in client) {
         if(!client.focused)
           return client.focus();
         }
@@ -37,25 +38,15 @@ translation_of: Web/API/WindowClient/focused
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#window-client-interface', 'WindowClient')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                               | Comment            |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName('Service Workers', '#window-client-interface', 'WindowClient')}} | {{Spec2('Service Workers')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WindowClient.focused")}}</p>
+{{Compat("api.WindowClient.focused")}}

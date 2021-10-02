@@ -8,63 +8,48 @@ tags:
   - Étiquettes
 translation_of: Web/API/HTMLInputElement/labels
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>La propriété en lecture seule <code><strong>HTMLInputElement.labels</strong></code> renvoie une {{domxref("NodeList")}} (<em>liste de noeuds</em>) des éléments {{HTMLElement("label")}} (<em>étiquette</em>) associés avec l'élément {{HTMLElement("input")}} (<em>entrée</em>).</p>
+La propriété en lecture seule **`HTMLInputElement.labels`** renvoie une {{domxref("NodeList")}} (_liste de noeuds_) des éléments {{HTMLElement("label")}} (_étiquette_) associés avec l'élément {{HTMLElement("input")}} (_entrée_).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <var>labelElements</var> = <var>input</var>.labels;
-</pre>
+    var labelElements = input.labels;
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une {{domxref("NodeList")}} contenant les éléments <code>&lt;label&gt;</code> associés avec l'élément <code>&lt;input&gt;</code>.</p>
+Une {{domxref("NodeList")}} contenant les éléments `<label>` associés avec l'élément `<input>`.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;label id="label1" for="test"&gt;Label 1&lt;/label&gt;
-&lt;input id="test"/&gt;
-&lt;label id="label2" for="test"&gt;Label 2&lt;/label&gt;
-</pre>
+```html
+<label id="label1" for="test">Label 1</label>
+<input id="test"/>
+<label id="label2" for="test">Label 2</label>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">window.addEventListener("DOMContentLoaded", function() {
+```js
+window.addEventListener("DOMContentLoaded", function() {
   const input = document.getElementById("test");
-  for(var i = 0; i &lt; input.labels.length; i++) {
+  for(var i = 0; i < input.labels.length; i++) {
     console.log(input.labels[i].textContent); // "Label 1" et "Label 2"
   }
-});</pre>
+});
+```
 
-<p>{{EmbedLiveSample("Exemple", "100%", 30)}}</p>
+{{EmbedLiveSample("Exemple", "100%", 30)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "forms.html#dom-lfe-labels", "labels")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Pas de changement.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "forms.html#dom-lfe-labels", "labels")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | Statut                           | Commentaire          |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName("HTML WHATWG", "forms.html#dom-lfe-labels", "labels")}} | {{Spec2("HTML WHATWG")}} | Pas de changement.   |
+| {{SpecName("HTML5 W3C", "forms.html#dom-lfe-labels", "labels")}}     | {{Spec2("HTML5 W3C")}}     | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.HTMLInputElement.labels")}}</p>
+{{Compat("api.HTMLInputElement.labels")}}

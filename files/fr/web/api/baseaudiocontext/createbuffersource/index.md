@@ -3,29 +3,28 @@ title: BaseAudioContext.createBufferSource()
 slug: Web/API/BaseAudioContext/createBufferSource
 translation_of: Web/API/BaseAudioContext/createBufferSource
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>La méthode <code>createBufferSource()</code> de l’interface {{ domxref("BaseAudioContext") }} est utilisée pour créer un nouveau {{ domxref("AudioBufferSourceNode") }}, qui peut être employé pour jouer des données audio contenues dans un objet {{ domxref("AudioBuffer") }}.</p>
+La méthode `createBufferSource()` de l’interface {{ domxref("BaseAudioContext") }} est utilisée pour créer un nouveau {{ domxref("AudioBufferSourceNode") }}, qui peut être employé pour jouer des données audio contenues dans un objet {{ domxref("AudioBuffer") }}.
 
-<p>Des {{ domxref("AudioBuffer") }} peuvent être créés en utilisant {{domxref("BaseAudioContext.createBuffer")}}, ou sont retournés par la méthode {{domxref("BaseAudioContext.decodeAudioData")}} quand elle a terminé de décoder une piste audio avec succès.</p>
+Des {{ domxref("AudioBuffer") }} peuvent être créés en utilisant {{domxref("BaseAudioContext.createBuffer")}}, ou sont retournés par la méthode {{domxref("BaseAudioContext.decodeAudioData")}} quand elle a terminé de décoder une piste audio avec succès.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <var>source</var> = <var>baseAudioContext</var>.createBufferSource();</pre>
+    var source = baseAudioContext.createBufferSource();
 
-<h3 id="Retourne">Retourne</h3>
+### Retourne
 
-<p>Un {{domxref("AudioBufferSourceNode")}}.</p>
+Un {{domxref("AudioBufferSourceNode")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans cet exemple, on crée un tampon de deux secondes, on le remplit avec du bruit blanc, puis on le joue via un {{ domxref("AudioBufferSourceNode") }}. Les commentaires devraient expliquer clairement ce qui se passe.</p>
+Dans cet exemple, on crée un tampon de deux secondes, on le remplit avec du bruit blanc, puis on le joue via un {{ domxref("AudioBufferSourceNode") }}. Les commentaires devraient expliquer clairement ce qui se passe.
 
-<div class="note">
-<p><strong>Note :</strong> Vous pouvez également <a href="https://mdn.github.io/webaudio-examples/audio-buffer/">exécuter le code en direct</a>, ou <a href="https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html">voir la source</a>.</p>
-</div>
+> **Note :** Vous pouvez également [exécuter le code en direct](https://mdn.github.io/webaudio-examples/audio-buffer/), ou [voir la source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var button = document.querySelector('button');
 var pre = document.querySelector('pre');
 var myScript = document.querySelector('script');
@@ -43,10 +42,10 @@ var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 button.onclick = function() {
   // Remplit le tampon avec du bruit blanc ;
   // simplement des valeurs aléatoires entre -1.0 et 1.0
-  for (var channel = 0; channel &lt; channels; channel++) {
+  for (var channel = 0; channel < channels; channel++) {
    // Ceci nous donne l’ArrayBuffer qui contient les données
    var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i &lt; frameCount; i++) {
+   for (var i = 0; i < frameCount; i++) {
      // Math.random() est parmi [0; 1.0]
      // audio doit être parmi [-1.0; 1.0]
      nowBuffering[i] = Math.random() * 2 - 1;
@@ -63,31 +62,19 @@ button.onclick = function() {
   source.connect(audioCtx.destination);
   // commence la lecture de la source
   source.start();
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createbuffersource', 'createBufferSource()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                    | Statut                               | Commentaire |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
+| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createbuffersource', 'createBufferSource()')}} | {{Spec2('Web Audio API')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.BaseAudioContext.createBufferSource")}}</p>
+{{Compat("api.BaseAudioContext.createBufferSource")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Utiliser la Web Audio API</a></li>
-</ul>
+- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

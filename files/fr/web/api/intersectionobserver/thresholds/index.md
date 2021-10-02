@@ -12,45 +12,30 @@ tags:
   - Reference
 translation_of: Web/API/IntersectionObserver/thresholds
 ---
-<div>{{APIRef("Intersection Observer API")}}</div>
+{{APIRef("Intersection Observer API")}}
 
-<p>La propriété en lecture seule <strong><code>thresholds</code></strong> de l'interface <a href="/fr/docs/Web/API/IntersectionObserver"><code>IntersectionObserver</code></a> retourne la liste des seuils d'intersection spécifiés lors de l'instanciation avec <a href="/fr/docs/Web/API/IntersectionObserver/IntersectionObserver"><code>IntersectionObserver()</code></a>. Si un seul seuil a été fourni lors de l'instanciation de l'objet, cette propriété sera un tableau contenant cette unique valeur numérique.</p>
+La propriété en lecture seule **`thresholds`** de l'interface [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) retourne la liste des seuils d'intersection spécifiés lors de l'instanciation avec [`IntersectionObserver()`](/fr/docs/Web/API/IntersectionObserver/IntersectionObserver). Si un seul seuil a été fourni lors de l'instanciation de l'objet, cette propriété sera un tableau contenant cette unique valeur numérique.
 
-<p>Voir <a href="/fr/docs/Web/API/Intersection_Observer_API#Thresholds">la section sur les seuils</a> pour apprendre comment fonctionnent les seuils d'intersection.</p>
+Voir [la section sur les seuils](/fr/docs/Web/API/Intersection_Observer_API#Thresholds) pour apprendre comment fonctionnent les seuils d'intersection.
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>thresholds</var> = IntersectionObserver.thresholds;</pre>
+    thresholds = IntersectionObserver.thresholds;
 
-<h3 id="value">Valeur</h3>
+### Valeur
 
-<p>Un tableau de seuils d'intersection, spécifiés lors de l'instanciation via <code>options.threshold</code>. Si un seul seuil a été fourni, sans être donné dans un tableau (avec une valeur numérique « brute » donc), la valeur de la propriété sera un tableau contenant cette unique valeur. Quel qu'ait été l'ordre du tableau fourni à l'origine, celui fournit par <code>thresholds</code> sera trié par ordre croissant.</p>
+Un tableau de seuils d'intersection, spécifiés lors de l'instanciation via `options.threshold`. Si un seul seuil a été fourni, sans être donné dans un tableau (avec une valeur numérique « brute » donc), la valeur de la propriété sera un tableau contenant cette unique valeur. Quel qu'ait été l'ordre du tableau fourni à l'origine, celui fournit par `thresholds` sera trié par ordre croissant.
 
-<p>Si aucune option <code>threshold</code> n'est fournie lors de l'instanciation avec <code>IntersectionObserver()</code>, la valeur par défaut de <code>thresholds</code> est définie à <code>[0]</code>.</p>
+Si aucune option `threshold` n'est fournie lors de l'instanciation avec `IntersectionObserver()`, la valeur par défaut de `thresholds` est définie à `[0]`.
 
-<div class="warning">
-  <p><strong>Attention :</strong> Bien que l'objet d'<code>options</code> qu'on peut spécifier à la création d'un <a href="/fr/docs/Web/API/IntersectionObserver"><code>IntersectionObserver</code></a> possède une propriété champ nommée <a href="/fr/docs/Web/API/IntersectionObserver/IntersectionObserver"><code>threshold</code></a>, cette propriété-ci s'appelle <code>thresholds</code> (avec un « s » supplémentaire donc). <em>Cela peut porter à confusion</em>. Si vous utilisez <code>thresholds</code> par erreur comme nom pour la propriété de l'objet <code>options</code>, le tableau porté par <code>thresholds</code> va se retrouver égal à <code>[0.0]</code>, ce qui n'est probablement pas ce à quoi vous vous attendiez. Le déboguage n'en sera que plus chaotique.</p>
-</div>
+> **Attention :** Bien que l'objet d'`options` qu'on peut spécifier à la création d'un [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) possède une propriété champ nommée [`threshold`](/fr/docs/Web/API/IntersectionObserver/IntersectionObserver), cette propriété-ci s'appelle `thresholds` (avec un « s » supplémentaire donc). _Cela peut porter à confusion_. Si vous utilisez `thresholds` par erreur comme nom pour la propriété de l'objet `options`, le tableau porté par `thresholds` va se retrouver égal à `[0.0]`, ce qui n'est probablement pas ce à quoi vous vous attendiez. Le déboguage n'en sera que plus chaotique.
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-     <th scope="col">Spécification</th>
-     <th scope="col">Statut</th>
-     <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('IntersectionObserver', '#dom-intersectionobserver-thresholds', 'IntersectionObserver.thresholds')}}</td>
-      <td>{{Spec2('IntersectionObserver')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                        | Statut                                       | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
+| {{SpecName('IntersectionObserver', '#dom-intersectionobserver-thresholds', 'IntersectionObserver.thresholds')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IntersectionObserver.thresholds")}}</p>
+{{Compat("api.IntersectionObserver.thresholds")}}

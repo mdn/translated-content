@@ -13,47 +13,45 @@ tags:
   - back
 translation_of: Web/API/Window/back
 ---
-<div>{{APIRef}}{{ Non-standard_header() }}{{deprecated_header}}</div>
+{{APIRef}}{{ Non-standard_header() }}{{deprecated_header}}
 
-<p>La méthode obsolète et non standard <code>back()</code> sur l'objet {{domxref("window")}} renvoie la fenêtre à l'élément précédent de l'historique. Il s'agissait d'une méthode spécifique à Firefox et a été supprimée dans Firefox 31.</p>
+La méthode obsolète et non standard `back()` sur l'objet {{domxref("window")}} renvoie la fenêtre à l'élément précédent de l'historique. Il s'agissait d'une méthode spécifique à Firefox et a été supprimée dans Firefox 31.
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> Utilisez plutôt la méthode standard {{domxref("history.back")}}.</p>
-</div>
+> **Note :** Utilisez plutôt la méthode standard {{domxref("history.back")}}.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">window.back();</pre>
+    window.back();
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Cet exemple simple gère un clic sur un bouton "Retour" en rappelant <code>back()</code>.</p>
+Cet exemple simple gère un clic sur un bouton "Retour" en rappelant `back()`.
 
-<pre class="brush:js">function boutonRetour() {
+```js
+function boutonRetour() {
   if (peutRevenirEnArriere) {
     window.back();
   }
-}</pre>
+}
+```
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<p>Cela ne fait partie d'aucune spécification.</p>
+Cela ne fait partie d'aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>Cette méthode non standard n'a été implémentée que dans Firefox et a été supprimée dans Firefox 31.</p>
+Cette méthode non standard n'a été implémentée que dans Firefox et a été supprimée dans Firefox 31.
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>{{domxref("History.back()")}}</li>
- <li>{{domxref("History.forward()")}}</li>
-</ul>
+- {{domxref("History.back()")}}
+- {{domxref("History.forward()")}}

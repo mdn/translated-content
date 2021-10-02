@@ -3,50 +3,52 @@ title: WorkerGlobalScope.dump()
 slug: Web/API/WorkerGlobalScope/dump
 translation_of: Web/API/WorkerGlobalScope/dump
 ---
-<div>{{APIRef("Web Workers API")}}</div>
+{{APIRef("Web Workers API")}}
 
-<div class="warning">
-<p><strong>Attention :</strong> Cette fonctionnalité n'est ni standard, ni en voie de standardisation. Ne l'utilisez pas pour des sites accessibles sur le Web : elle ne fonctionnera pas pour tout utilisateur. Il peut également y avoir d'importantes incompatibilités entre les implémentations et son comportement peut être modifié dans le futur.</p>
-</div>
+> **Attention :** Cette fonctionnalité n'est ni standard, ni en voie de standardisation. Ne l'utilisez pas pour des sites accessibles sur le Web : elle ne fonctionnera pas pour tout utilisateur. Il peut également y avoir d'importantes incompatibilités entre les implémentations et son comportement peut être modifié dans le futur.
 
-<p>La méthode <code><strong>dump()</strong></code> de l'interface {{domxref("WorkerGlobalScope")}} permet d'écrire des messages vers <code>stdout</code> — i.e. dans le terminal, seulement sur Firefox. C'est la même chose que {{domxref("window.dump")}} dans Firefox, mais pour les <em>worker</em>s.</p>
+La méthode **`dump()`** de l'interface {{domxref("WorkerGlobalScope")}} permet d'écrire des messages vers `stdout` — i.e. dans le terminal, seulement sur Firefox. C'est la même chose que {{domxref("window.dump")}} dans Firefox, mais pour les *worker*s.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">dump('Mon message\n');</pre>
+```js
+dump('Mon message\n');
+```
 
-<h3 id="Paramètre">Paramètre</h3>
+### Paramètre
 
-<p>Une {{domxref("DOMString")}} contenant le message que vous voulez envoyer.</p>
+Une {{domxref("DOMString")}} contenant le message que vous voulez envoyer.
 
-<h3 id="Retour">Retour</h3>
+### Retour
 
-<p>Rien.</p>
+Rien.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Pour écrire quelque chose depuis votre <em>worker</em> vers votre terminal, vous devez d'abord ouvrir une instance de Firefox depuis votre invité de commande ou terminal. Par exemple, sous Mac OS X vous le lancer en utilisant quelque chose comme (en supposant que vous êtes dans le répertoire de l'application):</p>
+Pour écrire quelque chose depuis votre _worker_ vers votre terminal, vous devez d'abord ouvrir une instance de Firefox depuis votre invité de commande ou terminal. Par exemple, sous Mac OS X vous le lancer en utilisant quelque chose comme (en supposant que vous êtes dans le répertoire de l'application):
 
-<pre class="brush: bash">./Firefox.app/Contents/MacOS/firefox-bin -profile /tmp -no-remote</pre>
+```bash
+./Firefox.app/Contents/MacOS/firefox-bin -profile /tmp -no-remote
+```
 
-<p>Maintenant allez dans <code>about:config</code> et activez la préférence <code>browser.dom.window.dump.enabled</code>.</p>
+Maintenant allez dans `about:config` et activez la préférence `browser.dom.window.dump.enabled`.
 
-<p>Après, lancez un worker contenant la ligne suivante:</p>
+Après, lancez un worker contenant la ligne suivante:
 
-<pre class="brush: js">dump('test\n');</pre>
+```js
+dump('test\n');
+```
 
-<p>Vous devriez observer le message «test» apparaître dans le terminal.</p>
+Vous devriez observer le message «test» apparaître dans le terminal.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette méthode n’apparaît dans aucune spécification.</p>
+Cette méthode n’apparaît dans aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.WorkerGlobalScope.dump")}}
 
+## Voir aussi
 
-<p>{{Compat("api.WorkerGlobalScope.dump")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<p>{{domxref("WorkerGlobalScope")}}</p>
+{{domxref("WorkerGlobalScope")}}

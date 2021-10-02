@@ -9,25 +9,24 @@ tags:
   - évènements
 translation_of: Web/API/Event/bubbles
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>Indique si l'événement donné se propage à travers le DOM ou non.</p>
+Indique si l'événement donné se propage à travers le DOM ou non.
 
-<div class="note">
-<p><strong>Note :</strong> Voir <a href="/fr/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture">Propagation et capture des évènements</a> pour plus d'informations sur la propagation.</p>
-</div>
+> **Note :** Voir [Propagation et capture des évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture) pour plus d'informations sur la propagation.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre>event.bubbles</pre>
+    event.bubbles
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Retourne un booléen dont la valeur est <code>true</code> (<em>vraie</em>) si l'événement se propage à travers le DOM.</p>
+Retourne un booléen dont la valeur est `true` (_vraie_) si l'événement se propage à travers le DOM.
 
-<h2 id="Syntax">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">function goInput(e) {
+```js
+function goInput(e) {
   // vérifie la propagation et
   if (!e.bubbles) {
      // la lance si elle ne l'a pas été
@@ -35,49 +34,23 @@ translation_of: Web/API/Event/bubbles
   }
   // déjà propagé
   doOutput(e)
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note :</strong> Certains évènements seulement peuvent se propager. Ceux dont cette propriété est définie à  <code>true</code>. Vous pouvez utiliser cette propriété pour vérifier si un évènement est autorisé à se propager ou non.</p>
-</div>
+> **Note :** Certains évènements seulement peuvent se propager. Ceux dont cette propriété est définie à  `true`. Vous pouvez utiliser cette propriété pour vérifier si un évènement est autorisé à se propager ou non.
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-bubbles', 'Event.bubbles')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4', '#dom-event-bubbles', 'Event.bubbles')}}</td>
-   <td>{{ Spec2('DOM4') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events', '#Events-Event-canBubble', 'Event.bubbles')}}</td>
-   <td>{{ Spec2('DOM2 Events') }}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                               | Commentaire          |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('DOM WHATWG', '#dom-event-bubbles', 'Event.bubbles')}}         | {{ Spec2('DOM WHATWG') }}     |                      |
+| {{SpecName('DOM4', '#dom-event-bubbles', 'Event.bubbles')}}                 | {{ Spec2('DOM4') }}             |                      |
+| {{SpecName('DOM2 Events', '#Events-Event-canBubble', 'Event.bubbles')}} | {{ Spec2('DOM2 Events') }} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.Event.bubbles")}}
 
+## Voir aussi
 
-<p>{{Compat("api.Event.bubbles")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Event/stopPropagation">stopPropagation</a> pour empêcher la propagation</li>
-</ul>
+- [stopPropagation](/en-US/docs/Web/API/Event/stopPropagation) pour empêcher la propagation

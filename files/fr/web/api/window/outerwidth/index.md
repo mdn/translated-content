@@ -9,51 +9,35 @@ tags:
   - Reference
 translation_of: Web/API/Window/outerWidth
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code>Window.outerWidth</code> récupère la largeur de l'extérieur de la fenêtre du navigateur. Elle représente la largeur de toute la fenêtre du navigateur, y compris la barre latérale (si elle est agrandie), la fenêtre chrome et le redimensionnement de la fenêtre.</p>
+`Window.outerWidth` récupère la largeur de l'extérieur de la fenêtre du navigateur. Elle représente la largeur de toute la fenêtre du navigateur, y compris la barre latérale (si elle est agrandie), la fenêtre chrome et le redimensionnement de la fenêtre.
 
-<p>Cette propriété est en lecture seule ; elle n'a pas de valeur par défaut.</p>
+Cette propriété est en lecture seule ; elle n'a pas de valeur par défaut.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>largeurExterieureFenetre</var> = window.outerWidth;
-</pre>
+    largeurExterieureFenetre = window.outerWidth;
 
-<p>Lors du retour, <code>largeurExterieureFenetre</code> vaut la largeur de l'extérieur de la fenêtre.</p>
+Lors du retour, `largeurExterieureFenetre` vaut la largeur de l'extérieur de la fenêtre.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Pour changer la taille d'une fenêtre, voir {{domxref("window.resizeBy()")}} et {{domxref("window.resizeTo ()")}}.</p>
+Pour changer la taille d'une fenêtre, voir {{domxref("window.resizeBy()")}} et {{domxref("window.resizeTo ()")}}.
 
-<p>Pour récupérer la largeur interne d'une fenêtre, c'est-à-dire la largeur de la page affichée, voir {{domxref ("window.innerWidth")}}.</p>
+Pour récupérer la largeur interne d'une fenêtre, c'est-à-dire la largeur de la page affichée, voir {{domxref ("window.innerWidth")}}.
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM View', '#dom-window-outerwidth', 'Window.outerWidth') }}</td>
-   <td>{{ Spec2('CSSOM View') }}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | Statut                           | Commentaire          |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{ SpecName('CSSOM View', '#dom-window-outerwidth', 'Window.outerWidth') }} | {{ Spec2('CSSOM View') }} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.outerWidth")}}</p>
+{{Compat("api.Window.outerWidth")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("window.outerHeight")}}, {{domxref("window.innerHeight")}}, {{domxref("window.innerWidth")}}</li>
- <li>{{domxref("window.resizeBy()")}}, {{domxref("window.resizeTo()")}}</li>
-</ul>
+- {{domxref("window.outerHeight")}}, {{domxref("window.innerHeight")}}, {{domxref("window.innerWidth")}}
+- {{domxref("window.resizeBy()")}}, {{domxref("window.resizeTo()")}}

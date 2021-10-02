@@ -11,37 +11,37 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 ---
-<div>{{APIRef}} {{SeeCompatTable}}</div>
+{{APIRef}} {{SeeCompatTable}}
 
-<p>La propriété <code>CanvasRenderingContext2D.imageSmoothingEnabled</code> de l'API Canvas 2D peut être affectée pour changer le fait que les images soient lissées (<code>true</code>, par défaut) ou non (<code>false</code>). Lors de la récupération de la propriété <code>imageSmoothingEnabled</code>, la dernière valeur à laquelle elle a été définie est renvoyée.</p>
+La propriété `CanvasRenderingContext2D.imageSmoothingEnabled` de l'API Canvas 2D peut être affectée pour changer le fait que les images soient lissées (`true`, par défaut) ou non (`false`). Lors de la récupération de la propriété `imageSmoothingEnabled`, la dernière valeur à laquelle elle a été définie est renvoyée.
 
-<p>Cette propriété est utile pour les jeux à thème pixel-art, lors d'une mise à l'échelle du canvas par exemple. L'algorithme de redimensionnement par défaut peut créer des effets de flou et ruiner les jolis pixels. Mettez cette propriété à <code>false</code> dans ce cas. Voir aussi la propriété CSS {{cssxref("image-rendering")}}.</p>
+Cette propriété est utile pour les jeux à thème pixel-art, lors d'une mise à l'échelle du canvas par exemple. L'algorithme de redimensionnement par défaut peut créer des effets de flou et ruiner les jolis pixels. Mettez cette propriété à `false` dans ce cas. Voir aussi la propriété CSS {{cssxref("image-rendering")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var><em>ctx</em>.imageSmoothingEnabled = valeur;</var></pre>
+    ctx.imageSmoothingEnabled = valeur;
 
-<h3 id="Options">Options</h3>
+### Options
 
-<dl>
- <dt><code>valeur</code></dt>
- <dd>Un {{jsxref("Boolean")}} indiquant de lisser les images ou non.</dd>
-</dl>
+- `valeur`
+  - : Un {{jsxref("Boolean")}} indiquant de lisser les images ou non.
 
-<h2 id="exemples">exemples</h2>
+## exemples
 
-<h3 id="désactiver_le_lissage_d_image">Désactiver le lissage d'image</h3>
+### Désactiver le lissage d'image
 
-<p>Dans cet exemple, on compare trois images. La première image est dessinée avec sa taille naturelle, la deuxième est élargie pour obtenir 3 fois la taille originale et le lissage est activée, la troisième est élargie pour obtenir 3 fois la taille originale et le lissage est désactivé.</p>
+Dans cet exemple, on compare trois images. La première image est dessinée avec sa taille naturelle, la deuxième est élargie pour obtenir 3 fois la taille originale et le lissage est activée, la troisième est élargie pour obtenir 3 fois la taille originale et le lissage est désactivé.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas" width="460" height="210"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="460" height="210"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 
 const ctx = canvas.getContext('2d');
 ctx.font = '16px sans-serif';
@@ -64,36 +64,23 @@ img.onload = function() {
   ctx.imageSmoothingEnabled = false;
   ctx.drawImage(img, w * 4, 24, w * 3, h * 3);
 };
-</pre>
+```
 
-<h4 id="résultat">Résultat</h4>
+#### Résultat
 
-<p>{{ EmbedLiveSample('désactiver_le_lissage_d_image', 700, 240) }}</p>
+{{ EmbedLiveSample('désactiver_le_lissage_d_image', 700, 240) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-imagesmoothingenabled", "CanvasRenderingContext2D.imageSmoothingEnabled")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                                    | Statut                           | Commentaire |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-imagesmoothingenabled", "CanvasRenderingContext2D.imageSmoothingEnabled")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.imageSmoothingEnabled")}}</p>
+{{Compat("api.CanvasRenderingContext2D.imageSmoothingEnabled")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{cssxref("image-rendering")}}</li>
-</ul>
+- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}
+- {{cssxref("image-rendering")}}

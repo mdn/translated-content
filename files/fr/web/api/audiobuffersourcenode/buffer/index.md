@@ -3,36 +3,34 @@ title: AudioBufferSourceNode.buffer
 slug: Web/API/AudioBufferSourceNode/buffer
 translation_of: Web/API/AudioBufferSourceNode/buffer
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>La propriété <code><strong>buffer</strong></code> de l'interface {{ domxref("AudioBufferSourceNode") }} donne la possibilité de lire un son en utilisant un {{domxref("AudioBuffer")}} comme ressource audio.</p>
+La propriété **`buffer`** de l'interface {{ domxref("AudioBufferSourceNode") }} donne la possibilité de lire un son en utilisant un {{domxref("AudioBuffer")}} comme ressource audio.
 
-<p>Si la propriété <code>buffer</code> a la valeur NULL, elle définit un canal unique silencieux (chaque échantillon vaut 0).</p>
+Si la propriété `buffer` a la valeur NULL, elle définit un canal unique silencieux (chaque échantillon vaut 0).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>AudioBufferSourceNode</em>.buffer = <em>soundBuffer</em>;
-</pre>
+    AudioBufferSourceNode.buffer = soundBuffer;
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un {{domxref("AudioBuffer")}} qui contient les données représentant le son que le noeud va lire.</p>
+Un {{domxref("AudioBuffer")}} qui contient les données représentant le son que le noeud va lire.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<div class="note">
-<p><strong>Note :</strong> Pour un exemple complet, voir <a href="http://mdn.github.io/audio-buffer/">le code interprété</a>, ou <a href="https://github.com/mdn/audio-buffer">le code source</a>.</p>
-</div>
+> **Note :** Pour un exemple complet, voir [le code interprété](http://mdn.github.io/audio-buffer/), ou [le code source](https://github.com/mdn/audio-buffer).
 
-<pre class="brush: js">var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+```js
+var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
 button.onclick = function() {
   // Remplit le buffer avec du bruit blanc;
   // valeurs aléatoires entre -1.0 et 1.0
-  for (var channel = 0; channel &lt; channels; channel++) {
+  for (var channel = 0; channel < channels; channel++) {
    // Crée le ArrayBuffer qui contient effectivement les données
    var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i &lt; frameCount; i++) {
+   for (var i = 0; i < frameCount; i++) {
      // Math.random() is in [0; 1.0]
      // audio doit être compris entre [-1.0; 1.0]
      nowBuffering[i] = Math.random() * 2 - 1;
@@ -43,31 +41,19 @@ button.onclick = function() {
   // C'est le AudioNode à utiliser pour jouer un AudioBuffer
   var source = audioCtx.createBufferSource();
   // Définit le buffer dans l'AudioBufferSourceNode
-  source.buffer = myArrayBuffer;</pre>
+  source.buffer = myArrayBuffer;
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Web Audio API", "#widl-AudioBufferSourceNode-buffer", "buffer")}}</td>
-   <td>{{Spec2("Web Audio API")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                               | Commentaire         |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName("Web Audio API", "#widl-AudioBufferSourceNode-buffer", "buffer")}} | {{Spec2("Web Audio API")}} | Définition initiale |
 
-<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+## Compatibilité navigateurs
 
-<p>{{Compat("api.AudioBufferSourceNode.buffer")}}</p>
+{{Compat("api.AudioBufferSourceNode.buffer")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<p>{{page("/en-US/docs/Web/API/AudioBufferSourceNode","See_also")}}</p>
+{{page("/en-US/docs/Web/API/AudioBufferSourceNode","See_also")}}

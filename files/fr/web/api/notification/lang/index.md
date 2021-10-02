@@ -10,44 +10,30 @@ tags:
   - Reference
 translation_of: Web/API/Notification/lang
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>La propriété en lecture seule <strong><code>lang</code></strong> de l'interface {{domxref ("Notification")}} indique la langue utilisée dans la notification, comme définis à l'aide de l'option <code>lang</code> lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()" )}}.</p>
+La propriété en lecture seule **`lang`** de l'interface {{domxref ("Notification")}} indique la langue utilisée dans la notification, comme définis à l'aide de l'option `lang` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()" )}}.
 
-<p>La langue elle-même est spécifiée à l'aide d'un {{domxref ("DOMString")}} représentant <a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">une balise de langue BCP 47</a>. Consultez la page des <a href="http://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/">codes de langue à 2 lettres ISO</a> de Sitepoint pour une référence simple.</p>
+La langue elle-même est spécifiée à l'aide d'un {{domxref ("DOMString")}} représentant [une balise de langue BCP 47](http://www.rfc-editor.org/rfc/bcp/bcp47.txt). Consultez la page des [codes de langue à 2 lettres ISO](http://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/) de Sitepoint pour une référence simple.
 
-<h2 id="Syntaxz">Syntaxz</h2>
+## Syntaxz
 
-<pre class="syntaxbox"><var>N</var><var>otification</var>.lang
-</pre>
+    Notification.lang
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Une {{domxref("DOMString")}} spécifiant la balise de langue.</p>
+Une {{domxref("DOMString")}} spécifiant la balise de langue.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-notification-lang','lang')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                     | Commentaire     |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------- |
+| {{SpecName('Web Notifications','#dom-notification-lang','lang')}} | {{Spec2('Web Notifications')}} | Living standard |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.Notification.lang")}}</p>
+{{Compat("api.Notification.lang")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a></li>
-</ul>
+- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

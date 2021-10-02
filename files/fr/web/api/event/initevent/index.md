@@ -9,77 +9,54 @@ tags:
   - Reference
 translation_of: Web/API/Event/initEvent
 ---
-<p>{{ApiRef("DOM")}}{{deprecated_header}}</p>
+{{ApiRef("DOM")}}{{deprecated_header}}
 
-<p>La méthode <strong><code>Event.initEvent()</code></strong> est utilisée pour initialiser la valeur d'un objet {{domxref("event")}} créé à l'aide de {{domxref("Document.createEvent()")}}.</p>
+La méthode **`Event.initEvent()`** est utilisée pour initialiser la valeur d'un objet {{domxref("event")}} créé à l'aide de {{domxref("Document.createEvent()")}}.
 
-<p>Les évènements initialisés par ce moyen ont été créés par la méthode {{domxref("Document.createEvent()")}}. Celle-ci doit être appelée à définir l'évènement avant qu'il ne soit distribué, en utilisant {{domxref("EventTarget.dispatchEvent()")}}. Une fois l'évènement transmis, la méthode ne fait plus rien.</p>
+Les évènements initialisés par ce moyen ont été créés par la méthode {{domxref("Document.createEvent()")}}. Celle-ci doit être appelée à définir l'évènement avant qu'il ne soit distribué, en utilisant {{domxref("EventTarget.dispatchEvent()")}}. Une fois l'évènement transmis, la méthode ne fait plus rien.
 
-<div class="note">
-<p><strong>Note :</strong> Ne pas utiliser cette méthode qui est dépréciée.</p>
+> **Note :** Ne pas utiliser cette méthode qui est dépréciée.
+>
+> À la place, utilisez un constructeur d'évènements spécifique comme {{domxref("Event.Event", "Event()")}} . La page [Création et déclenchement d'évènements](/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events) vous donne plus d'informations sur la manière de les utiliser.
 
-<p>À la place, utilisez un constructeur d'évènements spécifique comme {{domxref("Event.Event", "Event()")}} . La page <a href="/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events">Création et déclenchement d'évènements</a> vous donne plus d'informations sur la manière de les utiliser.</p>
-</div>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
+    event.initEvent(type, bubbles, cancelable)
 
-<pre class="eval"><em>event</em>.initEvent(<em>type</em>, <em>bubbles</em>, <em>cancelable</em>)
-</pre>
+- `type`
+  - : est une {{domxref("DOMString")}}  qui définit le type d'évènement.
+- `bubbles`
+  - : est un {{jsxref("Boolean")}} indiquant si l'évènement doit se propager vers le haut dans la chaîne des évènements ou non. Une fois déterminé, la propriété en lecture seule  {{domxref("Event.bubbles")}} donnera sa valeur.
+- `cancelable`
+  - : Une valeur booléenne définissant si l'évènement peut être annulé. Une fois déterminé, la propriété en lecture seule  {{ domxref("Event.cancelable") }}  donnera sa valeur.
 
-<dl>
- <dt><code>type</code></dt>
- <dd>est une {{domxref("DOMString")}}  qui définit le type d'évènement.</dd>
- <dt><code>bubbles</code></dt>
- <dd>est un {{jsxref("Boolean")}} indiquant si l'évènement doit se propager vers le haut dans la chaîne des évènements ou non. Une fois déterminé, la propriété en lecture seule  {{domxref("Event.bubbles")}} donnera sa valeur.</dd>
- <dt><code>cancelable</code></dt>
- <dd>Une valeur booléenne définissant si l'évènement peut être annulé. Une fois déterminé, la propriété en lecture seule  {{ domxref("Event.cancelable") }}  donnera sa valeur.</dd>
-</dl>
+## Exemple
 
-<h2 id="Exemple">Exemple</h2>
+    // Crée un évènement.
+    var event = document.createEvent('Event');
 
-<pre><code>// Crée un évènement.
-var event = document.createEvent('Event');
-</code>
-// Crée un évènement click qui doit se propager vers le haut
-// et ne peut être annulé<code>
-event.initEvent('click', true, false);
+    // Crée un évènement click qui doit se propager vers le haut
+    // et ne peut être annulé
+    event.initEvent('click', true, false);
 
-// Écoute les évènements.
-elem.addEventListener('click', function (e) {
-  // e.target matches elem
-}, false);
+    // Écoute les évènements.
+    elem.addEventListener('click', function (e) {
+      // e.target matches elem
+    }, false);
 
-elem.dispatchEvent(event);</code>
-</pre>
+    elem.dispatchEvent(event);
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-initevent','Event.initEvent()')}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Depuis {{SpecName('DOM2 Events')}}, dépréciée, remplacée par les constructeurs d'événements.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events','##Events-Event-initEvent','Event.initEvent()')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | Statut                           | Commentaire                                                                                           |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-event-initevent','Event.initEvent()')}}         | {{Spec2("DOM WHATWG")}} | Depuis {{SpecName('DOM2 Events')}}, dépréciée, remplacée par les constructeurs d'événements. |
+| {{SpecName('DOM2 Events','##Events-Event-initEvent','Event.initEvent()')}} | {{Spec2('DOM2 Events')}} | Définition initiale.                                                                                  |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Event.initEvent")}}</p>
+{{Compat("api.Event.initEvent")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>Le constructeur à utiliser à la place de cette méthode dépréciée : {{domxref("Event.Event","Event()")}}. Des constructeurs plus spécifiques peuvent aussi être utilisés.</li>
-</ul>
+- Le constructeur à utiliser à la place de cette méthode dépréciée : {{domxref("Event.Event","Event()")}}. Des constructeurs plus spécifiques peuvent aussi être utilisés.

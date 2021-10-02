@@ -11,34 +11,35 @@ tags:
   - postMessage
 translation_of: Web/API/Client/postMessage
 ---
-<p>{{SeeCompatTable}}{{APIRef("Client")}}</p>
+{{SeeCompatTable}}{{APIRef("Client")}}
 
-<p>La méthode <code><strong>postMessage() </strong></code>de l'interface {{domxref("Client")}} permet à un service worker client d'envoyer un message à un {{domxref("ServiceWorker")}}.</p>
+La méthode **`postMessage() `**de l'interface {{domxref("Client")}} permet à un service worker client d'envoyer un message à un {{domxref("ServiceWorker")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">Client.postMessage(message[, transfer]);</pre>
+```js
+Client.postMessage(message[, transfer]);
+```
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Void.</p>
+Void.
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>message</code></dt>
- <dd>Le message à envoyer au service worker.</dd>
- <dt><code>transfer {{optional_inline}}</code></dt>
- <dd>Un objet transferable, comme par exemple une référence à un port.</dd>
-</dl>
+- `message`
+  - : Le message à envoyer au service worker.
+- `transfer {{optional_inline}}`
+  - : Un objet transferable, comme par exemple une référence à un port.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Ce fragment de code est tiré de l'<a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/post-message/index.html">exemple d'envoi de message du service worker</a> exemple d'envoi de message du service worker (voir <a href="https://googlechrome.github.io/samples/service-worker/post-message/">exemple en ligne</a>). Le code envoi un message et transfert le port vers le service worker qui pourra répondre via {{domxref("Client.postMessage()")}}.</p>
+Ce fragment de code est tiré de l'[exemple d'envoi de message du service worker](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/post-message/index.html) exemple d'envoi de message du service worker (voir [exemple en ligne](https://googlechrome.github.io/samples/service-worker/post-message/)). Le code envoi un message et transfert le port vers le service worker qui pourra répondre via {{domxref("Client.postMessage()")}}.
 
-<p>Ce message est contenu dans une promesse qui se résolvera si la réponse ne contient pas d'erreur et qui échouera avec l'erreur.</p>
+Ce message est contenu dans une promesse qui se résolvera si la réponse ne contient pas d'erreur et qui échouera avec l'erreur.
 
-<pre class="brush: js">function sendMessage(message) {
+```js
+function sendMessage(message) {
   return new Promise(function(resolve, reject) {
      var messageChannel = new MessageChannel();
      messageChannel.port1.onmessage = function(event) {
@@ -50,25 +51,15 @@ translation_of: Web/API/Client/postMessage
      };
     navigator.serviceWorker.controller.postMessage(message, [messageChannel.port2]);
   });
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#client-postmessage-method', 'postMessage()')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                               | Commentaire         |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName('Service Workers', '#client-postmessage-method', 'postMessage()')}} | {{Spec2('Service Workers')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Client.postMessage")}}</p>
+{{Compat("api.Client.postMessage")}}

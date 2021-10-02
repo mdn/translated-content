@@ -3,47 +3,32 @@ title: ImageData.data
 slug: Web/API/ImageData/data
 translation_of: Web/API/ImageData/data
 ---
-<p>{{APIRef("Canvas API")}}</p>
+{{APIRef("Canvas API")}}
 
-<p>La propriété en lecteur seul <code>ImageData.data</code> retourne un {{jsxref("Uint8ClampedArray")}}. Il représente un tableau unidirectionnel contenant les données sous forme d'entiers inclus entre 0 et 255 dans l'ordre RGBA comme ceci : <code>[r1,g1,b1,a1,…,rn;gn;bn;an]</code>.</p>
+La propriété en lecteur seul `ImageData.data` retourne un {{jsxref("Uint8ClampedArray")}}. Il représente un tableau unidirectionnel contenant les données sous forme d'entiers inclus entre 0 et 255 dans l'ordre RGBA comme ceci : `[r1,g1,b1,a1,…,rn;gn;bn;an]`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>imagedata</em>.data
-</pre>
+    imagedata.data
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var imagedata = new ImageData(100, 100);
+```js
+var imagedata = new ImageData(100, 100);
 imagedata.data; // Uint8ClampedArray[40000]
-</pre>
+```
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'scripting.html#dom-imagedata-data', 'ImageData.data')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'scripting.html#dom-imagedata-data', 'ImageData.data')}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.ImageData.data")}}
 
+## See also
 
-<p>{{Compat("api.ImageData.data")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("ImageData.height")}}</li>
- <li>{{domxref("ImageData.width")}}</li>
-</ul>
+- {{domxref("ImageData.height")}}
+- {{domxref("ImageData.width")}}

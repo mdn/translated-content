@@ -10,40 +10,28 @@ tags:
   - Propriétés
 translation_of: Web/API/Event/cancelBubble
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>La propriété <code><strong>Event.cancelBubble</strong></code> est un alias historique de {{domxref("Event.stopPropagation()")}}. Définir sa valeur à <code>true</code> (vrai) avant le renvoi à partir d'un gestionnaire d'évènements empêche la propagation de l'évènement. Dans les implémentations les plus tardives, cette définition à false (<em>faux</em>) ne fait rien. Voir {{anch("Compatibilité des navigateurs")}} pour plus de détails. </p>
+La propriété **`Event.cancelBubble`** est un alias historique de {{domxref("Event.stopPropagation()")}}. Définir sa valeur à `true` (vrai) avant le renvoi à partir d'un gestionnaire d'évènements empêche la propagation de l'évènement. Dans les implémentations les plus tardives, cette définition à false (_faux_) ne fait rien. Voir {{anch("Compatibilité des navigateurs")}} pour plus de détails.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">event.cancelBubble = <em>bool;</em>
-<em>var bool</em> = event.cancelBubble;
-</pre>
+    event.cancelBubble = bool;
+    var bool = event.cancelBubble;
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre>elem.onclick = function(e) {
- // fais des choses sympas ici
-  e.cancelBubble = true;
-}</pre>
+    elem.onclick = function(e) {
+     // fais des choses sympas ici
+      e.cancelBubble = true;
+    }
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-cancelbubble', 'cancelBubble')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | Statut                           | Commentaire |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('DOM WHATWG', '#dom-event-cancelbubble', 'cancelBubble')}} | {{Spec2('DOM WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Event.cancelBubble")}}</p>
+{{Compat("api.Event.cancelBubble")}}

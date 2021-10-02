@@ -10,55 +10,47 @@ tags:
   - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/url
 ---
-<div>{{APIRef("Element Timing API")}}</div>
+{{APIRef("Element Timing API")}}
 
-<p>La propriété en lecture seule <strong><code>url</code></strong> de l'interface <a href="/fr/docs/Web/API/PerformanceElementTiming"><code>PerformanceElementTiming</code></a> renvoie l'URL initiale de la demande de ressource lorsque l'élément est une image.</p>
+La propriété en lecture seule **`url`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie l'URL initiale de la demande de ressource lorsque l'élément est une image.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:js">var <var>url</var> = <var>PerformanceElementTiming</var>.url;</pre>
+```js
+var url = PerformanceElementTiming.url;
+```
 
-<h3>Valeur</h3>
-<p>Une <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui est l'URL initiale de la demande de ressources pour les images ou 0 pour le texte.</p>
+### Valeur
 
-<h2 id="Examples">Exemples</h2>
+Une [`DOMString`](/fr/docs/Web/API/DOMString) qui est l'URL initiale de la demande de ressources pour les images ou 0 pour le texte.
 
-<p>Dans cet exemple, appeler <code>entry.url</code> renvoie <code>https://example.com/image.jpg</code>.</p>
+## Exemples
 
-<pre class="brush:html">&lt;img src="https://example.com/image.jpg" alt="une belle imahe" elementtiming="big-image" id="myImage"&gt;</pre>
+Dans cet exemple, appeler `entry.url` renvoie `https://example.com/image.jpg`.
 
-<pre class="brush:js">const <var>observer</var> = new PerformanceObserver((list) => {
-  let <var>entries</var> = list.getEntries().forEach(function (entry) {
+```html
+<img src="https://example.com/image.jpg" alt="une belle imahe" elementtiming="big-image" id="myImage">
+```
+
+```js
+const observer = new PerformanceObserver((list) => {
+  let entries = list.getEntries().forEach(function (entry) {
     if (entry.identifier === "big-image") {
       console.log(entry.url);
     }
   });
 });
-observer.observe({ entryTypes: ["element"] });</pre>
+observer.observe({ entryTypes: ["element"] });
+```
 
-<div class="note">
-  <p><strong>Note :</strong> Cet exemple utilise l'interface <a href="/fr/docs/Web/API/PerformanceObserver"><code>PerformanceObserver</code></a> pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément <a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>PerformanceEntry.entryType</code></a> afin d'utiliser l'interface <code>PerformanceElementTiming</code>.</p>
-</div>
+> **Note :** Cet exemple utilise l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) afin d'utiliser l'interface `PerformanceElementTiming`.
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Element Timing API','#dom-performanceelementtiming-url','PerformanceElementTiming.url')}}</td>
-      <td>{{Spec2('Element Timing API')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                            | Statut                                   | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('Element Timing API','#dom-performanceelementtiming-url','PerformanceElementTiming.url')}} | {{Spec2('Element Timing API')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceElementTiming.url")}}</p>
+{{Compat("api.PerformanceElementTiming.url")}}

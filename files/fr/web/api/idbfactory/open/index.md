@@ -9,82 +9,66 @@ tags:
   - Reference
 translation_of: Web/API/IDBFactory/open
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>La méthode <strong><code>open()</code></strong> de l'interface {{domxref("IDBFactory")}} lance une requête pour ouvrir une <a href="/fr/docs/Web/API/API_IndexedDB#Se_connecter_à_la_base_de_données">connexion à une base de données</a>.</p>
+La méthode **`open()`** de l'interface {{domxref("IDBFactory")}} lance une requête pour ouvrir une [connexion à une base de données](/fr/docs/Web/API/API_IndexedDB#Se_connecter_à_la_base_de_données).
 
-<p>La méthode renvoie immédiatement un objet {{domxref("IDBOpenDBRequest")}} puis effectue l'opération d'ouverture de façon asynchrone. Si l'opération réussit, un évènement <code>success</code> sera éms sur l'objet <code>IDBOpenDBRequest</code> renvoyé par la méthode, et la propriété <code>result</code> de l'évènement aura la valeur de l'objet {{domxref("IDBDatabase")}} associé à la connexion.</p>
+La méthode renvoie immédiatement un objet {{domxref("IDBOpenDBRequest")}} puis effectue l'opération d'ouverture de façon asynchrone. Si l'opération réussit, un évènement `success` sera éms sur l'objet `IDBOpenDBRequest` renvoyé par la méthode, et la propriété `result` de l'évènement aura la valeur de l'objet {{domxref("IDBDatabase")}} associé à la connexion.
 
-<p>Si une erreur se produit lors de la connexion, un évènement <code>error</code> sera émis sur l'objet <code>IDBOpenDBRequest</code> renvoyé par la méthode.</p>
+Si une erreur se produit lors de la connexion, un évènement `error` sera émis sur l'objet `IDBOpenDBRequest` renvoyé par la méthode.
 
-<p>Cette méthode peut également émettre les évènements <code>upgradeneeded</code>, <code>blocked</code> ou <code>versionchange</code>.</p>
+Cette méthode peut également émettre les évènements `upgradeneeded`, `blocked` ou `versionchange`.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La syntaxe standard est la suivante :</p>
+La syntaxe standard est la suivante :
 
-<pre class="syntaxbox">var <em>IDBOpenDBRequest</em> = <em>indexedDB</em>.open(<em>nom</em>);
-var <em>IDBOpenDBRequest</em> = <em>indexedDB</em>.open(<em>nom</em>, <em>version</em>);
-</pre>
+    var IDBOpenDBRequest = indexedDB.open(nom);
+    var IDBOpenDBRequest = indexedDB.open(nom, version);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>nom</code></dt>
- <dd>Le nom de la base de données qu'on souhaite ouvrir.</dd>
- <dt><code>version</code> {{optional_inline}}</dt>
- <dd>Paramètre optionnel qui représente la version de la base de données qu'on veut ouvrir. Si ce paramètre n'est pas fourni et que la base de données existe, une connexion sera ouverte sans changer la version de la base de données. Si ce paramètre n'est pas fourni est que la base de données n'existe pas, elle sera créée avec une version <code>1</code>.</dd>
-</dl>
+- `nom`
+  - : Le nom de la base de données qu'on souhaite ouvrir.
+- `version` {{optional_inline}}
+  - : Paramètre optionnel qui représente la version de la base de données qu'on veut ouvrir. Si ce paramètre n'est pas fourni et que la base de données existe, une connexion sera ouverte sans changer la version de la base de données. Si ce paramètre n'est pas fourni est que la base de données n'existe pas, elle sera créée avec une version `1`.
 
-<h4 id="Objet_options_expérimental_de_Gecko">Objet options expérimental de Gecko</h4>
+#### Objet options expérimental de Gecko
 
-<dl>
- <dt><code>options</code> (<code>version</code> et <code>storage</code>) {{optional_inline}} {{deprecated_inline}}</dt>
- <dd>Dans Gecko, à partir de <a href="/fr/Firefox/Releases/26">la version 26</a>, il est possible de passer en paramètre un objet <code>options</code> non standard, qui contienne le numéro de version de la base de données (équivalent donc au paramètre <code>version</code> définit ci-avant), et également une valeur <code>storage</code> qui décrit si on souhaite utiliser un stockage permanent (avec la valeur <code>persistent</code>) ou un stockage temporaire (avec la valeur <code>temporary</code>).
- <div class="warning">
-  <p><strong>Attention :</strong> l’attribut <code>storage</code> est déprécié et sera prochainement retiré de Gecko. Vous devriez utiliser {{domxref("StorageManager.persist()")}} à la place pour obtenir un stockage persistant.</p>
- </div>
- </dd>
-</dl>
+- `options` (`version` et `storage`) {{optional_inline}} {{deprecated_inline}}
 
-<div class="note">
-<p><strong>Note :</strong> Vous pouvez consulter l'article <a href="/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria">les limites de stockage du navigateur et les critères d'éviction</a> pour en savoir plus sur les différents types de stockage disponibles et la façon dont Firefox gère les données côté client.</p>
-</div>
+  - : Dans Gecko, à partir de [la version 26](/fr/Firefox/Releases/26), il est possible de passer en paramètre un objet `options` non standard, qui contienne le numéro de version de la base de données (équivalent donc au paramètre `version` définit ci-avant), et également une valeur `storage` qui décrit si on souhaite utiliser un stockage permanent (avec la valeur `persistent`) ou un stockage temporaire (avec la valeur `temporary`).
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+    > **Attention :** l’attribut `storage` est déprécié et sera prochainement retiré de Gecko. Vous devriez utiliser {{domxref("StorageManager.persist()")}} à la place pour obtenir un stockage persistant.
 
-<p>Un objet {{domxref("IDBOpenDBRequest")}} sur lequel sont déclenchés les différents évènements liés à cette requête.</p>
+> **Note :** Vous pouvez consulter l'article [les limites de stockage du navigateur et les critères d'éviction](/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria) pour en savoir plus sur les différents types de stockage disponibles et la façon dont Firefox gère les données côté client.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Valeur de retour
 
-<p>Cette méthode peut lever une {{domxref("DOMException")}} de type suivant :</p>
+Un objet {{domxref("IDBOpenDBRequest")}} sur lequel sont déclenchés les différents évènements liés à cette requête.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>TypeError</code></td>
-   <td>La valeur de version est zéro ou un nombre négatif ou n’est pas un nombre.</td>
-  </tr>
- </tbody>
-</table>
+### Exceptions
 
-<h2 id="Exemples">Exemples</h2>
+Cette méthode peut lever une {{domxref("DOMException")}} de type suivant :
 
-<p>Voici un exemple d'ouverture de la base de données <code>toDoList</code> en utilisant la syntaxe standard et le paramètre <code>version</code> :</p>
+| Exception   | Description                                                                |
+| ----------- | -------------------------------------------------------------------------- |
+| `TypeError` | La valeur de version est zéro ou un nombre négatif ou n’est pas un nombre. |
 
-<pre class="brush: js">var request = window.indexedDB.open("toDoList", 4);</pre>
+## Exemples
 
-<p>Dans le fragment de code qui suit, on effectue une requête pour ouvrir une base de données et on inclut des gestionnaires d'évènements pour gérer la réussite ou l'échec de l'ouverture. Pour consulter un exemple fonctionnel complet, vous pouvez étudier notre application <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">cf. l'exemple <em>live</em></a>).</p>
+Voici un exemple d'ouverture de la base de données `toDoList` en utilisant la syntaxe standard et le paramètre `version` :
 
-<pre class="brush:js">var note = document.querySelector("ul");
+```js
+var request = window.indexedDB.open("toDoList", 4);
+```
+
+Dans le fragment de code qui suit, on effectue une requête pour ouvrir une base de données et on inclut des gestionnaires d'évènements pour gérer la réussite ou l'échec de l'ouverture. Pour consulter un exemple fonctionnel complet, vous pouvez étudier notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([cf. l'exemple _live_](https://mdn.github.io/to-do-notifications/)).
+
+```js
+var note = document.querySelector("ul");
 
 window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 // NE PAS utiliser "var indexedDB = ..." si on n’est pas dans une fonction.
@@ -99,54 +83,37 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 // On ajoute deux gestionnaires d'évènements
 // Le premier utilisé en cas d'échec
 DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Erreur lors du chargement de la base.&lt;/li&gt;';
+  note.innerHTML += '<li>Erreur lors du chargement de la base.</li>';
 };
 
 // Et le second en cas de réussite
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Base de données initialisée.&lt;/li&gt;';
+  note.innerHTML += '<li>Base de données initialisée.</li>';
 
   // On stocke le résultat de l'ouverture dans la
   // variable db qui sera utilisée par la suite
   // pour d'autres opérations
   db = DBOpenRequest.result;
 };
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBFactory-open-IDBOpenDBRequest-DOMString-name-unsigned-long-long-version', 'open()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbfactory-open", "open()")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                    | État                             | Commentaires |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBFactory-open-IDBOpenDBRequest-DOMString-name-unsigned-long-long-version', 'open()')}} | {{Spec2('IndexedDB')}}     |              |
+| {{SpecName("IndexedDB 2", "#dom-idbfactory-open", "open()")}}                                                                                 | {{Spec2("IndexedDB 2")}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBFactory.open")}}</p>
+{{Compat("api.IDBFactory.open")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
- <li>Démarrer des transactions : {{domxref("IDBDatabase")}}</li>
- <li>Manipuler des transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}</li>
- <li>Manipuler des curseurs : {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence pour IndexedDB : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a></li>
-</ul>
+- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Démarrer des transactions : {{domxref("IDBDatabase")}}
+- Manipuler des transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
+- Manipuler des curseurs : {{domxref("IDBCursor")}}
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)

@@ -10,63 +10,43 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/clearInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/clearInterval
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>La méthode <strong><code>clearInterval()</code></strong>, rattachée au <em>mixin </em>{{domxref("WindowOrWorkerGlobalScope")}}, permet d'annuler une action répétée minutée initiée via un appel à {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}}.</p>
+La méthode **`clearInterval()`**, rattachée au _mixin_ {{domxref("WindowOrWorkerGlobalScope")}}, permet d'annuler une action répétée minutée initiée via un appel à {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}}.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>scope</em>.clearInterval(<var>intervalID</var>)
-</pre>
+    scope.clearInterval(intervalID)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>intervalID</code></dt>
- <dd>L'identifiant de l'intervalle de répétition qu'on souhaite annuler. Cet identifiant est renvoyé lorsqu'on appelle <code>setInterval()</code> pour définir l'intervalle de répétition.</dd>
-</dl>
+- `intervalID`
+  - : L'identifiant de l'intervalle de répétition qu'on souhaite annuler. Cet identifiant est renvoyé lorsqu'on appelle `setInterval()` pour définir l'intervalle de répétition.
 
-<p>On notera que l'ensemble des identifiants utilisés est commun entre ceux fournis par {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} et ceux fournis par {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}}. Cela signifie qu'on peut, techniquement, utiliser <code>clearInterval()</code> et {{domxref("WindowOrWorkerGlobalScope.clearTimeout", "clearTimeout()")}} de façon interchangeable. C'est toutefois une mauvaise pratique, qui nuit à la lisibilité du code et à sa maintenabilité.</p>
+On notera que l'ensemble des identifiants utilisés est commun entre ceux fournis par {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} et ceux fournis par {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}}. Cela signifie qu'on peut, techniquement, utiliser `clearInterval()` et {{domxref("WindowOrWorkerGlobalScope.clearTimeout", "clearTimeout()")}} de façon interchangeable. C'est toutefois une mauvaise pratique, qui nuit à la lisibilité du code et à sa maintenabilité.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>{{jsxref("undefined")}}</p>
+{{jsxref("undefined")}}
 
-<h2 id="Example">Exemples</h2>
+## Exemples
 
-<p>Voir <a href="/fr/docs/Web/API/WindowTimers/setInterval#Exemples">l'exemple <code>setInterval()</code></a>.</p>
+Voir [l'exemple `setInterval()`](/fr/docs/Web/API/WindowTimers/setInterval#Exemples).
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-clearinterval', 'WindowOrWorkerGlobalScope.clearInterval()')}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Cette méthode a été déplacée sur le <em>mixin</em> <code>WindowOrWorkerGlobalScope</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-clearinterval', 'clearInterval()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                    | État                             | Commentaires                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------ |
+| {{SpecName('HTML WHATWG', 'webappapis.html#dom-clearinterval', 'WindowOrWorkerGlobalScope.clearInterval()')}} | {{Spec2("HTML WHATWG")}} | Cette méthode a été déplacée sur le _mixin_ `WindowOrWorkerGlobalScope`. |
+| {{SpecName('HTML WHATWG', 'webappapis.html#dom-clearinterval', 'clearInterval()')}}                                 | {{Spec2('HTML WHATWG')}} |                                                                          |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.clearInterval")}}</p>
+{{Compat("api.WindowOrWorkerGlobalScope.clearInterval")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.setInterval")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}</li>
- <li>{{domxref("Window.requestAnimationFrame")}}</li>
-</ul>
+- {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}
+- {{domxref("WindowOrWorkerGlobalScope.setInterval")}}
+- {{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}
+- {{domxref("Window.requestAnimationFrame")}}

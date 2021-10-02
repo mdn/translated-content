@@ -14,42 +14,39 @@ tags:
   - setLineDash
 translation_of: Web/API/CanvasRenderingContext2D/setLineDash
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La méthode <strong><code>setLineDash()</code></strong> de l'interface Canvas 2D API's {{domxref("CanvasRenderingContext2D")}} définit le modèle à utiliser pour les pointillés lors du dessin de la ligne, en utilisant un tableau de valeurs qui spécifie les longueurs des alternances entre pleins et creux.</p>
+La méthode **`setLineDash()`** de l'interface Canvas 2D API's {{domxref("CanvasRenderingContext2D")}} définit le modèle à utiliser pour les pointillés lors du dessin de la ligne, en utilisant un tableau de valeurs qui spécifie les longueurs des alternances entre pleins et creux.
 
-<div class="note">
-<p><strong>Note :</strong> Pour renvoyer une ligne pleine, configurez la liste pour les pointillés avec un tableau vide.</p>
-</div>
+> **Note :** Pour renvoyer une ligne pleine, configurez la liste pour les pointillés avec un tableau vide.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var><em>ctx</em>.setLineDash(segments);</var>
-</pre>
+    ctx.setLineDash(segments);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>segments</code></dt>
- <dd>Un tableau {{jsxref("Array")}} de nombres qui spécifie les distances qui vont alternativement dessiner pleins et creux (dans l'unité du système de coordonnées). Si le nombre d'éléments du tableau est impair, les éléments du tableau sont recopiés et concaténés. Par exemple, <code>[5, 15, 25]</code> est transformé en <code>[5, 15, 25, 5, 15, 25]</code>. Si le tableau est vide, le pointillé est supprimé, et la ligne devient pleine.</dd>
-</dl>
+- `segments`
+  - : Un tableau {{jsxref("Array")}} de nombres qui spécifie les distances qui vont alternativement dessiner pleins et creux (dans l'unité du système de coordonnées). Si le nombre d'éléments du tableau est impair, les éléments du tableau sont recopiés et concaténés. Par exemple, `[5, 15, 25]` est transformé en `[5, 15, 25, 5, 15, 25]`. Si le tableau est vide, le pointillé est supprimé, et la ligne devient pleine.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>C'est simplement un fragment de code qui utilise la méthode <code>setLineDash()</code> pour dessiner une ligne pointillée au dessus d'une ligne pleine.</p>
+C'est simplement un fragment de code qui utilise la méthode `setLineDash()` pour dessiner une ligne pointillée au dessus d'une ligne pleine.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -63,20 +60,21 @@ ctx.setLineDash([]);
 ctx.moveTo(0, 150);
 ctx.lineTo(400, 150);
 ctx.stroke();
-</pre>
+```
 
-<h3 id="Essayez_le">Essayez le</h3>
+### Essayez le
 
-<p>Editez le code ci-dessous et observez les changements se produire dans le canvas:</p>
+Editez le code ci-dessous et observez les changements se produire dans le canvas:
 
-<h4 id="code_jouable">Code jouable</h4>
+#### Code jouable
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code" style="height:150px"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code" style="height:150px">
 ctx.beginPath();
 ctx.setLineDash([5, 15]);
 ctx.moveTo(0, 50);
@@ -87,10 +85,11 @@ ctx.beginPath();
 ctx.setLineDash([]);
 ctx.moveTo(0, 150);
 ctx.lineTo(400, 150);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -113,47 +112,30 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('code_jouable', 10, 410) }}</p>
+{{ EmbedLiveSample('code_jouable', 10, 410) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-setlinedash", "CanvasRenderingContext2D.setLineDash")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                        | Status                           | Comment |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-setlinedash", "CanvasRenderingContext2D.setLineDash")}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Compatibilité_des_navivgateurs">Compatibilité des navivgateurs</h2>
+## Compatibilité des navivgateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.setLineDash")}}</p>
+{{Compat("api.CanvasRenderingContext2D.setLineDash")}}
 
-<h2 id="Notes_spécifiques_pour_Gecko">Notes spécifiques pour Gecko</h2>
+## Notes spécifiques pour Gecko
 
-<ul>
- <li>Depuis  Gecko 7.0 {{geckoRelease("7.0")}}, la propriété non standard et dépréciée <code>mozDash</code> a été implémentée  comme liste de définition pour les pointillés. Cette propriété sera dépréciée et supprimée dans le futur, voir {{bug(931643)}}. Utilisez <code>setLineDash()</code> à la place.</li>
-</ul>
+- Depuis  Gecko 7.0 {{geckoRelease("7.0")}}, la propriété non standard et dépréciée `mozDash` a été implémentée  comme liste de définition pour les pointillés. Cette propriété sera dépréciée et supprimée dans le futur, voir {{bug(931643)}}. Utilisez `setLineDash()` à la place.
 
-<h2 id="Notes_spécifiques_pour_WebKit">Notes spécifiques pour WebKit</h2>
+## Notes spécifiques pour WebKit
 
-<ul>
- <li>Dans les navigateurs à base de WebKit (e.g. Safari), la propriété non standard et dépréciée <code>webkitLineDash</code> est implémentée en plus de cette méthode. Utilisez <code>setLineDash()</code> à la place.</li>
-</ul>
+- Dans les navigateurs à base de WebKit (e.g. Safari), la propriété non standard et dépréciée `webkitLineDash` est implémentée en plus de cette méthode. Utilisez `setLineDash()` à la place.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface qui la définit, {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.getLineDash()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineDashOffset")}}</li>
-</ul>
+- L'interface qui la définit, {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.getLineDash()")}}
+- {{domxref("CanvasRenderingContext2D.lineDashOffset")}}

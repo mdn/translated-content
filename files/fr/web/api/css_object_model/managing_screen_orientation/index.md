@@ -8,37 +8,37 @@ tags:
   - Screen Orientation
 translation_of: Web/API/CSS_Object_Model/Managing_screen_orientation
 ---
-<p>{{SeeCompatTable}}{{APIRef}}</p>
+{{SeeCompatTable}}{{APIRef}}
 
-<h2 id="Sommaire">Sommaire</h2>
+## Sommaire
 
-<p>L'orientation de l'écran est quelque chose de légèrement différent de <a href="/fr/docs/WebAPI/Detecting_device_orientation">l'orientation de l'appareil</a>. Même si un appareil n'a pas la capacité de détecter sa propre orientation, un écran en possède toujours une. Et si on est capable de connaître son orientation, il est bon d'avoir la possibilité de contrôler l'orientation de l'écran afin de préserver ou d'adapter l'interface d'une application web.</p>
+L'orientation de l'écran est quelque chose de légèrement différent de [l'orientation de l'appareil](/fr/docs/WebAPI/Detecting_device_orientation). Même si un appareil n'a pas la capacité de détecter sa propre orientation, un écran en possède toujours une. Et si on est capable de connaître son orientation, il est bon d'avoir la possibilité de contrôler l'orientation de l'écran afin de préserver ou d'adapter l'interface d'une application web.
 
-<p>Il y a plusieurs manières de gérer l'orientation de l'écran, à la fois avec CSS et JavaScript:</p>
+Il y a plusieurs manières de gérer l'orientation de l'écran, à la fois avec CSS et JavaScript:
 
-<ul>
- <li>La première est la <a href="/fr/docs/Web/CSS/Requ%C3%AAtes_m%C3%A9dia/Utiliser_les_Media_queries#orientation">media query orientation</a>. Cela permet au contenu d'ajuster sa mise en forme à l'aide de CSS, selon que la fenêtre soit en mode paysage (c'est à dire que la largeur est plus grande que la hauteur) ou en mode portrait (que sa hauteur est plus grande que sa largeur).</li>
- <li>La deuxième est l'API JavaScript d'orientation d'écran, qui peut être utilisée pour récupérer l'orientation en cours de l'écran et éventuellement de la verrouiller.</li>
+- La première est la [media query orientation](/fr/docs/Web/CSS/Requ%C3%AAtes_m%C3%A9dia/Utiliser_les_Media_queries#orientation). Cela permet au contenu d'ajuster sa mise en forme à l'aide de CSS, selon que la fenêtre soit en mode paysage (c'est à dire que la largeur est plus grande que la hauteur) ou en mode portrait (que sa hauteur est plus grande que sa largeur).
+- La deuxième est l'API JavaScript d'orientation d'écran, qui peut être utilisée pour récupérer l'orientation en cours de l'écran et éventuellement de la verrouiller.
+
+## Ajuster la mise en page selon l'orientation
+
+Un des cas d'utilisation les plus courants pour les changements d'orientation est quand vous souhaitez modifier la mise en page de votre contenu selon l'orientation de l'appareil. Par exemple, peut-être que vous voudriez qu'une barre d'outils s'étende le long de la dimension la plus longue de l'appareil. En utilisant une media query, vous pouvez le faire facilement et automatiquement.
+
+Prenons pour exemple le code HTML suivant:
+
+```html
+<ul id="toolbar">
+  <li>A</li>
+  <li>B</li>
+  <li>C</li>
 </ul>
 
-<h2 id="Ajuster_la_mise_en_page_selon_l'orientation">Ajuster la mise en page selon l'orientation</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut interdum tristique dapibus. Nullam quis malesuada est.</p>
+```
 
-<p>Un des cas d'utilisation les plus courants pour les changements d'orientation est quand vous souhaitez modifier la mise en page de votre contenu selon l'orientation de l'appareil. Par exemple, peut-être que vous voudriez qu'une barre d'outils s'étende le long de la dimension la plus longue de l'appareil. En utilisant une media query, vous pouvez le faire facilement et automatiquement.</p>
+Le CSS s'appuie sur une media query `orientation` pour gérer les styles spécifiques liés à l'orientation de l'écran.
 
-<p>Prenons pour exemple le code HTML suivant:</p>
-
-<pre class="brush: html">&lt;ul id="toolbar"&gt;
-  &lt;li&gt;A&lt;/li&gt;
-  &lt;li&gt;B&lt;/li&gt;
-  &lt;li&gt;C&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut interdum tristique dapibus. Nullam quis malesuada est.&lt;/p&gt;
-</pre>
-
-<p>Le CSS s'appuie sur une media query <code>orientation</code> pour gérer les styles spécifiques liés à l'orientation de l'écran.</p>
-
-<pre class="brush: css">/* D'abord, on définit les styles communs */
+```css
+/* D'abord, on définit les styles communs */
 
 html, body {
   width : 100%;
@@ -77,11 +77,12 @@ li {
   padding: 0.5em;
   background: white;
 }
-</pre>
+```
 
-<p>Une fois qu'on a définit les styles communs, on peut définir des cas spéciaux selon l'orientation.</p>
+Une fois qu'on a définit les styles communs, on peut définir des cas spéciaux selon l'orientation.
 
-<pre class="brush: css">/* En mode portrait, on veut la barre d'outils en haut */
+```css
+/* En mode portrait, on veut la barre d'outils en haut */
 
 @media screen and (orientation: portrait) {
   #toolbar {
@@ -106,75 +107,61 @@ li {
     margin-top: .5em;
   }
 }
-</pre>
+```
 
-<p>Et voici le résultat:</p>
+Et voici le résultat:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Portrait</th>
-   <th scope="col">Landscape</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ EmbedLiveSample("Ajuster_la_mise_en_page_selon_l'orientation", 180, 350) }}</td>
-   <td>{{ EmbedLiveSample("Ajuster_la_mise_en_page_selon_l'orientation", 350, 180) }}</td>
-  </tr>
- </tbody>
-</table>
+| Portrait                                                                                                 | Landscape                                                                                                |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| {{ EmbedLiveSample("Ajuster_la_mise_en_page_selon_l'orientation", 180, 350) }} | {{ EmbedLiveSample("Ajuster_la_mise_en_page_selon_l'orientation", 350, 180) }} |
 
-<div class="note">
-<p><strong>Note:</strong> La media query orientation s'applique en vérité selon l'orientation de la fenêtre du navigateur (ou iframe) et non l'orientation de l'appareil.</p>
-</div>
+> **Note :** La media query orientation s'applique en vérité selon l'orientation de la fenêtre du navigateur (ou iframe) et non l'orientation de l'appareil.
 
-<h2 id="Verrouiller_l'orientation_de_l'écran">Verrouiller l'orientation de l'écran</h2>
+## Verrouiller l'orientation de l'écran
 
-<div class="warning">
-<p><strong>Attention :</strong> Cette API est expérimentale et est actuellement disponible sur <a href="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> et <a href="/en-US/docs/Mozilla/Firefox_for_Android">Firefox pour Android</a> avec le préfixe <code>moz</code>, et sur Internet Explorer pour Windows 8.1 et plus avec le préfixe <code>ms</code>.</p>
-</div>
+> **Attention :** Cette API est expérimentale et est actuellement disponible sur [Firefox OS](/en-US/docs/Mozilla/Firefox_OS) et [Firefox pour Android](/en-US/docs/Mozilla/Firefox_for_Android) avec le préfixe `moz`, et sur Internet Explorer pour Windows 8.1 et plus avec le préfixe `ms`.
 
-<p>Certains appareils (principalement les appareils mobiles) peuvent changer dynamiquement d'orientation d'écran selon leur propre orientation, garantissant que l'utilisateur sera toujours capable de lire ce qu'il y a sur l'écran. Bien que ce comportement soit parfaitement adapté au contenu texte, certains contenus peuvent être affectés négativement par ce changement. Par exemple, les jeux basés sur l'orientation de l'appareil être gachés par un tel changement.</p>
+Certains appareils (principalement les appareils mobiles) peuvent changer dynamiquement d'orientation d'écran selon leur propre orientation, garantissant que l'utilisateur sera toujours capable de lire ce qu'il y a sur l'écran. Bien que ce comportement soit parfaitement adapté au contenu texte, certains contenus peuvent être affectés négativement par ce changement. Par exemple, les jeux basés sur l'orientation de l'appareil être gachés par un tel changement.
 
-<p>L'API Screen Orientation (orientation de l'écran) est faite pour empêcher ou gérer un tel changement.</p>
+L'API Screen Orientation (orientation de l'écran) est faite pour empêcher ou gérer un tel changement.
 
-<h3 id="Écouter_les_changements_d'orientation">Écouter les changements d'orientation</h3>
+### Écouter les changements d'orientation
 
-<p>L'événement {{event("orientationchange")}} est déclenché chaque fois que l'appareil change l'orientation de l'écran et l'orientation peut elle-même être lue avec la propriété {{domxref("Screen.orientation")}}.</p>
+L'événement {{event("orientationchange")}} est déclenché chaque fois que l'appareil change l'orientation de l'écran et l'orientation peut elle-même être lue avec la propriété {{domxref("Screen.orientation")}}.
 
-<pre class="brush: js">screen.addEventListener("orientationchange", function () {
+```js
+screen.addEventListener("orientationchange", function () {
   console.log("The orientation of the screen is: " + screen.orientation);
 });
-</pre>
+```
 
-<h3 id="Empêcher_le_changement_d'orientation">Empêcher le changement d'orientation</h3>
+### Empêcher le changement d'orientation
 
-<p>Toute application web peut verrouiller l'écran dans une orientation pour répondre à ses besoins. L'écran est verrouillé en utilisant la méthode {{domxref("Screen.lockOrientation()")}} et dévérouillé en utilisant {{domxref("Screen.unlockOrientation()")}}.</p>
+Toute application web peut verrouiller l'écran dans une orientation pour répondre à ses besoins. L'écran est verrouillé en utilisant la méthode {{domxref("Screen.lockOrientation()")}} et dévérouillé en utilisant {{domxref("Screen.unlockOrientation()")}}.
 
-<p>{{domxref("Screen.lockOrientation()")}} accepte une chaîne de caractères (ou une série de chaînes de caractères) pour définir le type de verrouillage à appliquer. Les valeurs acceptées sont: <code>portrait-primary</code>, <code>portrait-secondary</code>, <code>landscape-primary</code>, <code>landscape-secondary</code>, <code>portrait</code>, <code>landscape</code> (Voir {{domxref("Screen.lockOrientation")}}  pour en savoir plus sur ces valeurs).</p>
+{{domxref("Screen.lockOrientation()")}} accepte une chaîne de caractères (ou une série de chaînes de caractères) pour définir le type de verrouillage à appliquer. Les valeurs acceptées sont: `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, `landscape` (Voir {{domxref("Screen.lockOrientation")}}  pour en savoir plus sur ces valeurs).
 
-<pre class="brush: js">screen.lockOrientation('landscape');</pre>
+```js
+screen.lockOrientation('landscape');
+```
 
-<div class="note">
-<p><strong>Note:</strong> Un verrouillage d'écran est dépendant de l'application web. Si une a application A est verrouillée à <code>landscape</code> et l'application B est verrouillée à <code>portrait</code>, passer de l'application A à B ou à A ne va pas déclencher un événement {{event("orientationchange")}} parce que les deux applications gardent l'orientation qu'elles avaient.</p>
+> **Note :** Un verrouillage d'écran est dépendant de l'application web. Si une a application A est verrouillée à `landscape` et l'application B est verrouillée à `portrait`, passer de l'application A à B ou à A ne va pas déclencher un événement {{event("orientationchange")}} parce que les deux applications gardent l'orientation qu'elles avaient.
+>
+> En revanche, verrouiller l'orientation peut décléncher l'événement {{event("orientationchange")}} si l'orientation a dû être changée pour satisfaire aux critères du verrouillage.
 
-<p>En revanche, verrouiller l'orientation peut décléncher l'événement {{event("orientationchange")}} si l'orientation a dû être changée pour satisfaire aux critères du verrouillage.</p>
-</div>
+## Firefox OS et Android: Verrouiller l'orientation avec le manifeste
 
-<h2 id="Firefox_OS_et_Android_Verrouiller_l'orientation_avec_le_manifeste">Firefox OS et Android: Verrouiller l'orientation avec le manifeste</h2>
+Pour Firefox OS et Firefox Android (bientôt pour la version bureau de Firefox également), vous pouvez le champ [orientation](/en-US/Apps/Build/Manifest#orientation) dans le fichier manifeste de votre application, par exemple:
 
-<p>Pour Firefox OS et Firefox Android (bientôt pour la version bureau de Firefox également), vous pouvez le champ <a href="/en-US/Apps/Build/Manifest#orientation">orientation</a> dans le fichier manifeste de votre application, par exemple:</p>
+```json
+"orientation": "portrait"
+```
 
-<pre class="brush: json">"orientation": "portrait"</pre>
+## Voir aussi
 
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{domxref("Screen.orientation")}}</li>
- <li>{{domxref("Screen.lockOrientation()")}}</li>
- <li>{{domxref("Screen.unlockOrientation()")}}</li>
- <li>{{domxref("Screen.onorientationchange")}}</li>
- <li><a href="/fr/docs/Web/CSS/Requ%C3%AAtes_m%C3%A9dia/Utiliser_les_Media_queries#orientation">Media query orientation</a></li>
- <li><a href="http://hacks.mozilla.org/2009/06/media-queries/">A short introduction to media queries in Firefox 3.5</a></li>
-</ul>
+- {{domxref("Screen.orientation")}}
+- {{domxref("Screen.lockOrientation()")}}
+- {{domxref("Screen.unlockOrientation()")}}
+- {{domxref("Screen.onorientationchange")}}
+- [Media query orientation](/fr/docs/Web/CSS/Requ%C3%AAtes_m%C3%A9dia/Utiliser_les_Media_queries#orientation)
+- [A short introduction to media queries in Firefox 3.5](http://hacks.mozilla.org/2009/06/media-queries/)

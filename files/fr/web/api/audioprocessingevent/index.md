@@ -8,88 +8,36 @@ tags:
   - Web Audio API
 translation_of: Web/API/AudioProcessingEvent
 ---
-<p>{{APIRef("Web Audio API")}}{{deprecated_header}}</p>
+{{APIRef("Web Audio API")}}{{deprecated_header}}
 
-<p>AudioProcessingEvent représente l'évènement qui est passé lorsqu'un tampon {{domxref ("ScriptProcessorNode")}} est prêt à être traité.</p>
+AudioProcessingEvent représente l'évènement qui est passé lorsqu'un tampon {{domxref ("ScriptProcessorNode")}} est prêt à être traité.
 
-<div class="note">
-<p><strong>Note :</strong> Cette fonctionnalité est dépréciée à partir de la version du 29 Août 2014 de la spécification Web Audio API, elle sera remplacée par les <a href="/en-US/docs/Web/API/Web_Audio_API#Audio_Workers">Audio Workers</a>.</p>
-</div>
+> **Note :** Cette fonctionnalité est dépréciée à partir de la version du 29 Août 2014 de la spécification Web Audio API, elle sera remplacée par les [Audio Workers](/en-US/docs/Web/API/Web_Audio_API#Audio_Workers).
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>La liste ci-dessous inclut les propriétés héritées de son parent, {{domxref("Event")}}.</em></p>
+_La liste ci-dessous inclut les propriétés héritées de son parent, {{domxref("Event")}}._
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Propriété</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{ReadOnlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>La cible de l'évènement (la plus haute dans le DOM).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{ReadOnlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Le type d'évènement.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{ReadOnlyInline}}</td>
-   <td><code>boolean</code></td>
-   <td>Indique si l'évènement se propage normalement.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{ReadOnlyInline}}</td>
-   <td><code>boolean</code></td>
-   <td>Indique s'il est possible d'annuler l'évènement.</td>
-  </tr>
-  <tr>
-   <td><code>playbackTime</code> {{ReadOnlyInline}}</td>
-   <td><code>double</code></td>
-   <td>Moment auquel le son sera joué, tel que défini par {{domxref("AudioContext.currentTime")}}</td>
-  </tr>
-  <tr>
-   <td><code>inputBuffer</code> {{ReadOnlyInline}}</td>
-   <td>{{domxref("AudioBuffer")}}</td>
-   <td>Tampon contenant les données audio à traiter en entrée. Le nombre de canaux est défini comme paramètre, <code>numberOfInputChannels</code>, de la méthode constructeur {{domxref("AudioContext.createScriptProcessor()")}}. L'<code>AudioBuffer</code> renvoyé est valide uniquement dans la portée de la fonction <code>onaudioprocess</code>.</td>
-  </tr>
-  <tr>
-   <td><code>outputBuffer</code> {{ReadOnlyInline}}</td>
-   <td>{{domxref("AudioBuffer")}}</td>
-   <td>Tampon dans lequel les données doivent être écrites en sortie. Le nombre de canaux est défini comme paramètre, <code>numberOfOutputChannels</code>, de la méthode constructeur {{domxref("AudioContext.createScriptProcessor()")}}. L'<code>AudioBuffer</code> renvoyé est valide uniquement dans la portée de la fonction <code>onaudioprocess</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Propriété                               | Type                                 | Description                                                                                                                                                                                                                                                                                                                             |
+| --------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target` {{ReadOnlyInline}}       | {{domxref("EventTarget")}} | La cible de l'évènement (la plus haute dans le DOM).                                                                                                                                                                                                                                                                                    |
+| `type` {{ReadOnlyInline}}         | {{domxref("DOMString")}}     | Le type d'évènement.                                                                                                                                                                                                                                                                                                                    |
+| `bubbles` {{ReadOnlyInline}}      | `boolean`                            | Indique si l'évènement se propage normalement.                                                                                                                                                                                                                                                                                          |
+| `cancelable` {{ReadOnlyInline}}   | `boolean`                            | Indique s'il est possible d'annuler l'évènement.                                                                                                                                                                                                                                                                                        |
+| `playbackTime` {{ReadOnlyInline}} | `double`                             | Moment auquel le son sera joué, tel que défini par {{domxref("AudioContext.currentTime")}}                                                                                                                                                                                                                                 |
+| `inputBuffer` {{ReadOnlyInline}}  | {{domxref("AudioBuffer")}} | Tampon contenant les données audio à traiter en entrée. Le nombre de canaux est défini comme paramètre, `numberOfInputChannels`, de la méthode constructeur {{domxref("AudioContext.createScriptProcessor()")}}. L'`AudioBuffer` renvoyé est valide uniquement dans la portée de la fonction `onaudioprocess`.         |
+| `outputBuffer` {{ReadOnlyInline}} | {{domxref("AudioBuffer")}} | Tampon dans lequel les données doivent être écrites en sortie. Le nombre de canaux est défini comme paramètre, `numberOfOutputChannels`, de la méthode constructeur {{domxref("AudioContext.createScriptProcessor()")}}. L'`AudioBuffer` renvoyé est valide uniquement dans la portée de la fonction `onaudioprocess`. |
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#AudioProcessingEvent-section', 'AudioProcessingEvent')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | Statut                               | Commentaire |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
+| {{SpecName('Web Audio API', '#AudioProcessingEvent-section', 'AudioProcessingEvent')}} | {{Spec2('Web Audio API')}} |             |
 
-<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+## Compatibilité navigateurs
 
-<p>{{Compat("api.AudioProcessingEvent")}}</p>
+{{Compat("api.AudioProcessingEvent")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Utiliser la Web Audio API</a></li>
-</ul>
+- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

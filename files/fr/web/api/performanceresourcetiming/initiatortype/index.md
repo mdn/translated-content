@@ -11,35 +11,36 @@ tags:
   - initiatorType
 translation_of: Web/API/PerformanceResourceTiming/initiatorType
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>La propriété <strong><code>initiatorType</code></strong> en lecture seule est une <a href="/fr/docs/Web/API/DOMString">chaîne de caractères</a> qui représente le <em>type</em> de ressource qui a initié l'événement de performance.</p>
+La propriété **`initiatorType`** en lecture seule est une [chaîne de caractères](/fr/docs/Web/API/DOMString) qui représente le _type_ de ressource qui a initié l'événement de performance.
 
-<p>La valeur de cette chaîne est la suivante:</p>
+La valeur de cette chaîne est la suivante:
 
-<ul>
-  <li>Si l'initiateur est un <a href="/fr/docs/Web/API/Element"><code>Element</code></a>, la propriété retourne la propriété <a href="/fr/docs/Web/API/Node/localName"><code>localName</code></a> de l'élément.</li>
-  <li>Si l'initiateur est une ressource <a href="/fr/docs/Web/API/CSS"><code>CSS</code></a>, la propriété renvoie « <code>css</code> ».</li>
-  <li>Si l'initiateur est un objet <a href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a>, la propriété renvoie « <code>xmlhttprequest</code> ».</li>
-  <li>Si l'initiateur est un objet <a href="/fr/docs/Web/API/PerformanceNavigationTiming"><code>PerformanceNavigationTiming</code></a>, la propriété renvoie une chaîne vide (<code>""</code>).</li>
-</ul>
+- Si l'initiateur est un [`Element`](/fr/docs/Web/API/Element), la propriété retourne la propriété [`localName`](/fr/docs/Web/API/Node/localName) de l'élément.
+- Si l'initiateur est une ressource [`CSS`](/fr/docs/Web/API/CSS), la propriété renvoie « `css` ».
+- Si l'initiateur est un objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), la propriété renvoie « `xmlhttprequest` ».
+- Si l'initiateur est un objet [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming), la propriété renvoie une chaîne vide (`""`).
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js"><var>resource</var>.initiatorType;</pre>
+```js
+resource.initiatorType;
+```
 
-<h3 id="Return_Value">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères (<a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a>) représentant le <em>type</em> de ressource qui a initié l'événement de performance, comme spécifié ci-dessus.</p>
+Une chaîne de caractères ([`DOMString`](/fr/docs/Web/API/DOMString)) représentant le _type_ de ressource qui a initié l'événement de performance, comme spécifié ci-dessus.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">function print_PerformanceEntries() {
+```js
+function print_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
   let p = performance.getEntriesByType("resource");
-  for (let i = 0; i &lt; p.length; i++) {
+  for (let i = 0; i < p.length; i++) {
     print_initiatorType(p[i]);
   }
 }
@@ -51,28 +52,15 @@ function print_initiatorType(perfEntry) {
   else
     console.log("... initiatorType = N'EST PAS pris en charge");
 }
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Resource Timing',
-        '#dom-performanceresourcetiming-initiatortype', 'initiatorType')}}</td>
-      <td>{{Spec2('Resource Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                | Statut                               | Commentaire          |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('Resource Timing',
+        '#dom-performanceresourcetiming-initiatortype', 'initiatorType')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceResourceTiming.initiatorType")}}</p>
+{{Compat("api.PerformanceResourceTiming.initiatorType")}}

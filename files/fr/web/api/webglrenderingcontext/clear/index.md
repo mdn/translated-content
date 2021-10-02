@@ -9,85 +9,66 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/clear
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>La méthode <strong><code>WebGLRenderingContext.clear()</code></strong> de <a href="/fr/docs/Web/API/WebGL_API">l'API WebGL</a> efface les tampons avec des valeurs prédéfinies.</p>
+La méthode **`WebGLRenderingContext.clear()`** de [l'API WebGL](/fr/docs/Web/API/WebGL_API) efface les tampons avec des valeurs prédéfinies.
 
-<p>Ces valeurs prédéfinies peuvent être affectées par {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} ou {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}}.</p>
+Ces valeurs prédéfinies peuvent être affectées par {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} ou {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}}.
 
-<p>Les masques d'écriture, de détourage, de tramage et de tampon peuvent affecter la méthode <code>clear()</code>.</p>
+Les masques d'écriture, de détourage, de tramage et de tampon peuvent affecter la méthode `clear()`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var>gl</var>.clear(<var>masque</var>);
-</pre>
+    void gl.clear(masque);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>masque</code></dt>
- <dd>Un masque OU par bits {{domxref("GLbitfield")}} qui indique les tampons à effacer. Les valeurs possibles sont :
- <ul>
-  <li><code>gl.COLOR_BUFFER_BIT</code></li>
-  <li><code>gl.DEPTH_BUFFER_BIT</code></li>
-  <li><code>gl.STENCIL_BUFFER_BIT</code></li>
- </ul>
- </dd>
-</dl>
+- `masque`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : Un masque OU par bits {{domxref("GLbitfield")}} qui indique les tampons à effacer. Les valeurs possibles sont :
 
-<p>Aucune.</p>
+    - `gl.COLOR_BUFFER_BIT`
+    - `gl.DEPTH_BUFFER_BIT`
+    - `gl.STENCIL_BUFFER_BIT`
 
-<h3 id="Exceptions">Exceptions</h3>
+### Valeur retournée
 
-<p>Si <em>masque</em> n'est pas l'une des valeurs possibles listées, une erreur <code>gl.INVALID_ENUM</code> est déclenchée.</p>
+Aucune.
 
-<h2 id="Exemples">Exemples</h2>
+### Exceptions
 
-<p>La méthode <code>clear()</code> accepte des valeurs multiples.</p>
+Si *masque* n'est pas l'une des valeurs possibles listées, une erreur `gl.INVALID_ENUM` est déclenchée.
 
-<pre class="brush: js">gl.clear(gl.DEPTH_BUFFER_BIT);
+## Exemples
+
+La méthode `clear()` accepte des valeurs multiples.
+
+```js
+gl.clear(gl.DEPTH_BUFFER_BIT);
 gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);
-</pre>
+```
 
-<p>Pour obtenir les valeurs d'effacement courantes, interrogez les constantes <code>COLOR_CLEAR_VALUE</code>, <code>DEPTH_CLEAR_VALUE</code> et <code>STENCIL_CLEAR_VALUE</code> grâce à la méthode <code>getParameter()</code>.</p>
+Pour obtenir les valeurs d'effacement courantes, interrogez les constantes `COLOR_CLEAR_VALUE`, `DEPTH_CLEAR_VALUE` et `STENCIL_CLEAR_VALUE` grâce à la méthode `getParameter()`.
 
-<pre class="brush: js">gl.getParameter(gl.COLOR_CLEAR_VALUE);
+```js
+gl.getParameter(gl.COLOR_CLEAR_VALUE);
 gl.getParameter(gl.DEPTH_CLEAR_VALUE);
 gl.getParameter(gl.STENCIL_CLEAR_VALUE);
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.11", "clear")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glClear.xml", "glClear")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>Page man de l'API OpenGL.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | Statut                               | Commentaire               |
+| ------------------------------------------------------------------------ | ------------------------------------ | ------------------------- |
+| {{SpecName('WebGL', "#5.14.11", "clear")}}                 | {{Spec2('WebGL')}}             | Définition initiale.      |
+| {{SpecName('OpenGL ES 2.0', "glClear.xml", "glClear")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WebGLRenderingContext.clear")}}</p>
+{{Compat("api.WebGLRenderingContext.clear")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.clearColor()")}}</li>
- <li>{{domxref("WebGLRenderingContext.clearDepth()")}}</li>
- <li>{{domxref("WebGLRenderingContext.clearStencil()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.clearColor()")}}
+- {{domxref("WebGLRenderingContext.clearDepth()")}}
+- {{domxref("WebGLRenderingContext.clearStencil()")}}

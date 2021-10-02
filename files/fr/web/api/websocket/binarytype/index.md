@@ -3,31 +3,28 @@ title: WebSocket.binaryType
 slug: Web/API/WebSocket/binaryType
 browser-compat: api.WebSocket.binaryType
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p>La propriété <strong><code>WebSocket.binaryType</code></strong> contrôle le type de données binaires reçues via la connexion WebSocket.</p>
+La propriété **`WebSocket.binaryType`** contrôle le type de données binaires reçues via la connexion WebSocket.
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
+```js
 var binaryType = aWebSocket.binaryType;
-</pre>
+```
 
-<h2 id="value">Valeur</h2>
+## Valeur
 
-<p>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> ayant l'une de ces deux valeurs :</p>
+Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) ayant l'une de ces deux valeurs :
 
-<dl>
-  <dt><code>"blob"</code></dt>
-  <dd>Utilise des objets <a href="/fr/docs/Web/API/Blob"><code>Blob</code></a> pour les données binaires. Il s'agit de la valeur par défaut.</dd>
-  <dt><code>"arraybuffer"</code></dt>
-  <dd>Utilise des objets <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a> pour les données binaires.
-  </dd>
-</dl>
+- `"blob"`
+  - : Utilise des objets [`Blob`](/fr/docs/Web/API/Blob) pour les données binaires. Il s'agit de la valeur par défaut.
+- `"arraybuffer"`
+  - : Utilise des objets [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) pour les données binaires.
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">
+```js
 // On crée une connexion WebSocket connection.
 const socket = new WebSocket("ws://localhost:8080");
 // On change le type de données binaires de "blob" à "arraybuffer"
@@ -43,12 +40,13 @@ socket.addEventListener("message", function (event) {
     // Frame textuelle
     console.log(event.data);
   }
-});</pre>
+});
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}

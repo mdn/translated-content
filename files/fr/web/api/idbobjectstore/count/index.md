@@ -9,96 +9,65 @@ tags:
   - Reference
 translation_of: Web/API/IDBObjectStore/count
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>La méthode <strong><code>count()</code></strong>, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un <em>thread</em> séparé, renvoie le nombre d'enregistrements qui correspondent à la clé ou à l'intervalle de clé ({{domxref("IDBKeyRange")}}) passé en argument. Si aucun argument n'est fourni, la méthode renvoie le nombre total d'enregistrements contenus dans le magasin d'objets.</p>
+La méthode **`count()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, renvoie le nombre d'enregistrements qui correspondent à la clé ou à l'intervalle de clé ({{domxref("IDBKeyRange")}}) passé en argument. Si aucun argument n'est fourni, la méthode renvoie le nombre total d'enregistrements contenus dans le magasin d'objets.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var requete = ObjectStore.count(optionalKeyRange);</pre>
+    var requete = ObjectStore.count(optionalKeyRange);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>optionalKeyRange</code></dt>
- <dd>Une clé ou un intervalle de clé ({{domxref("IDBKeyRange")}}) qui indique le critère de comptage des enregistrements.</dd>
-</dl>
+- `optionalKeyRange`
+  - : Une clé ou un intervalle de clé ({{domxref("IDBKeyRange")}}) qui indique le critère de comptage des enregistrements.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un objet {{domxref("IDBRequest")}} sur lequel seront déclenchés les différents évènements relatifs à l'opération.</p>
+Un objet {{domxref("IDBRequest")}} sur lequel seront déclenchés les différents évènements relatifs à l'opération.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Cette méthode peut déclencher une exception {{domxref("DOMException")}} ayant un des types suivants :</p>
+Cette méthode peut déclencher une exception {{domxref("DOMException")}} ayant un des types suivants :
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>L'objet {{domxref("IDBObjectStore")}} a été supprimé.</td>
-  </tr>
-  <tr>
-   <td><code>TransactionInactiveError</code></td>
-   <td>La transaction associée à l'objet {{domxref("IDBObjectStore")}} est inactive.</td>
-  </tr>
-  <tr>
-   <td><code>DataError</code></td>
-   <td>La clé ou l'intervalle de clé passé en argument est invalide.</td>
-  </tr>
- </tbody>
-</table>
+| Exception                  | Description                                                                              |
+| -------------------------- | ---------------------------------------------------------------------------------------- |
+| `InvalidStateError`        | L'objet {{domxref("IDBObjectStore")}} a été supprimé.                         |
+| `TransactionInactiveError` | La transaction associée à l'objet {{domxref("IDBObjectStore")}} est inactive. |
+| `DataError`                | La clé ou l'intervalle de clé passé en argument est invalide.                            |
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans ce fragment de code, on crée une transaction, on récupère un magasin d'objets puis on compte le nombre d'enregistrements contenus dans ce magasin grâce à la méthode <code>count()</code>. Lorsque l'évènement associé au succès de l'opération est déclenché, on inscrit le résultat dans la console.</p>
+Dans ce fragment de code, on crée une transaction, on récupère un magasin d'objets puis on compte le nombre d'enregistrements contenus dans ce magasin grâce à la méthode `count()`. Lorsque l'évènement associé au succès de l'opération est déclenché, on inscrit le résultat dans la console.
 
-<pre class="brush: js">var transaction = db.transaction(['fThings'], 'readonly');
+```js
+var transaction = db.transaction(['fThings'], 'readonly');
 var objectStore = transaction.objectStore('fThings');
 
 var countRequest = objectStore.count();
 countRequest.onsuccess = function() {
   console.log(countRequest.result);
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBObjectStore-count-IDBRequest-any-key', 'count()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                         | Commentaires |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-count-IDBRequest-any-key', 'count()')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBObjectStore.count")}}</p>
+{{Compat("api.IDBObjectStore.count")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
- <li>Initier une connexion : {{domxref("IDBDatabase")}}</li>
- <li>Utiliser les transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
- <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
-</ul>
+- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Initier une connexion : {{domxref("IDBDatabase")}}
+- Utiliser les transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
+- Utiliser les curseurs {{domxref("IDBCursor")}}
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).

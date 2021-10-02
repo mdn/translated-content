@@ -9,28 +9,30 @@ tags:
   - évènements
 translation_of: Web/API/GlobalEventHandlers/onloadend
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<p>La propriété <strong><code>onloadend</code></strong> du "mixin" {{domxref("GlobalEventHandlers")}} est un {{event("Event_handlers", "event handler")}} (<em>gestionnaire d'évènements</em>) représentant le code à appeler lorsque l'évènement {{event("loadend")}} est déclenché (quand la progression est arrêtée sur le chargement d'une ressource).</p>
+La propriété **`onloadend`** du "mixin" {{domxref("GlobalEventHandlers")}} est un {{event("Event_handlers", "event handler")}} (_gestionnaire d'évènements_) représentant le code à appeler lorsque l'évènement {{event("loadend")}} est déclenché (quand la progression est arrêtée sur le chargement d'une ressource).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>img</var>.onloadend = <var>funcRef</var>;
-</pre>
+    img.onloadend = funcRef;
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p><code>funcRef</code> est la fonction du gestionnaire à appeler quand l'évènement <code>loadend </code>de la ressource est déclenché.</p>
+`funcRef` est la fonction du gestionnaire à appeler quand l'évènement `loadend `de la ressource est déclenché.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Contenu_HTML">Contenu HTML</h3>
+### Contenu HTML
 
-<pre class="brush: html">&lt;img src="myImage.jpg"&gt;</pre>
+```html
+<img src="myImage.jpg">
+```
 
-<h3 id="Contenu_JavaScript">Contenu JavaScript</h3>
+### Contenu JavaScript
 
-<pre class="brush: js">// 'loadstart' est le premier lancé, puis 'load', puis 'loadend'
+```js
+// 'loadstart' est le premier lancé, puis 'load', puis 'loadend'
 
 image.addEventListener('load', function(e) {
   console.log('Image loaded');
@@ -42,27 +44,15 @@ image.addEventListener('loadstart', function(e) {
 
 image.addEventListener('loadend', function(e) {
   console.log('Image load finished');
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "webappapis.html#handler-onloadend", "onloadend")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                           | Commentaire          |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName("HTML WHATWG", "webappapis.html#handler-onloadend", "onloadend")}} | {{Spec2("HTML WHATWG")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.GlobalEventHandlers.onloadend")}}</p>
+{{Compat("api.GlobalEventHandlers.onloadend")}}

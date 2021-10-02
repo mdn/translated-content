@@ -10,55 +10,52 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/createLinearGradient
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La méthode <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.createLinearGradient()</code></strong> de l'API Canvas 2D crée un gradient le long de la ligne donnée par les coordonnées représentées par les paramètres.</p>
+La méthode **`CanvasRenderingContext2D`\*\***`.createLinearGradient()`\*\* de l'API Canvas 2D crée un gradient le long de la ligne donnée par les coordonnées représentées par les paramètres.
 
-<p><img alt="" src="mdn-canvas-lineargradient.png"></p>
+![](mdn-canvas-lineargradient.png)
 
-<p>Cette méthode retourne un {{domxref("CanvasGradient")}} linéaire.</p>
+Cette méthode retourne un {{domxref("CanvasGradient")}} linéaire.
 
-<p>NOTE : les coordonnées sont globales, aussi soyez conscient du fait que, lors de l'utilisation "fillRect" (et de ses amis), les coordonnées NE sont PAS relatives aux coordonnées spécifiées dans les arguments de "fillRect".</p>
+NOTE : les coordonnées sont globales, aussi soyez conscient du fait que, lors de l'utilisation "fillRect" (et de ses amis), les coordonnées NE sont PAS relatives aux coordonnées spécifiées dans les arguments de "fillRect".
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">CanvasGradient <var><em>ctx</em>.createLinearGradient(x0, y0, x1, y1);</var>
-</pre>
+    CanvasGradient ctx.createLinearGradient(x0, y0, x1, y1);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>x0</code></dt>
- <dd>La coordonnée sur l'axe des x du point de début.</dd>
- <dt><code>y0</code></dt>
- <dd>La coordonnée sur l'axe des y du point de début.</dd>
- <dt><code>x1</code></dt>
- <dd>La coordonnée sur l'axe des x du point de fin.</dd>
- <dt><code>y1</code></dt>
- <dd>La coordonnée sur l'axe des y du point de fin.</dd>
-</dl>
+- `x0`
+  - : La coordonnée sur l'axe des x du point de début.
+- `y0`
+  - : La coordonnée sur l'axe des y du point de début.
+- `x1`
+  - : La coordonnée sur l'axe des x du point de fin.
+- `y1`
+  - : La coordonnée sur l'axe des y du point de fin.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<dl>
- <dt>{{domxref("CanvasGradient")}}</dt>
- <dd>Un <code>CanvasGradient linéaire</code> initialisé avec la ligne spécifiée.</dd>
-</dl>
+- {{domxref("CanvasGradient")}}
+  - : Un `CanvasGradient linéaire` initialisé avec la ligne spécifiée.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_de_la_méthode_createLinearGradient">Utilisation de la méthode <code>createLinearGradient</code></h3>
+### Utilisation de la méthode `createLinearGradient`
 
-<p>Ceci est seulement un simple fragment de code qui utilise la méthode <code>createLinearGradient</code> pour créer un {{domxref("CanvasGradient")}} avec les points de début et de fin spécifiés. Une fois créé, vous pouvez utiliser la méthode {{domxref("CanvasGradient.addColorStop()")}} pour définir de nouveaux arrêts sur le gradient, avec des déplacements et des couleurs spécifiés. Le gradient est appliqué si vous le mettez comme {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} courant, et il est dessiné sur le canevas lors de l'utilisation de la méthode {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}}, par exemple.</p>
+Ceci est seulement un simple fragment de code qui utilise la méthode `createLinearGradient` pour créer un {{domxref("CanvasGradient")}} avec les points de début et de fin spécifiés. Une fois créé, vous pouvez utiliser la méthode {{domxref("CanvasGradient.addColorStop()")}} pour définir de nouveaux arrêts sur le gradient, avec des déplacements et des couleurs spécifiés. Le gradient est appliqué si vous le mettez comme {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} courant, et il est dessiné sur le canevas lors de l'utilisation de la méthode {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}}, par exemple.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 var gradient = ctx.createLinearGradient(0, 0, 200, 0);
@@ -66,26 +63,28 @@ gradient.addColorStop(0, 'green');
 gradient.addColorStop(1, 'white');
 ctx.fillStyle = gradient;
 ctx.fillRect(10, 10, 200, 100);
-</pre>
+```
 
-<p>Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel sur le canevas :</p>
+Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel sur le canevas :
 
-<h4 id="code_jouable">Code jouable</h4>
+#### Code jouable
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 var gradient = ctx.createLinearGradient(0,0,200,0);
 gradient.addColorStop(0,"green");
 gradient.addColorStop(1,"white");
 ctx.fillStyle = gradient;
-ctx.fillRect(10,10,200,100);&lt;/textarea&gt;
-</pre>
+ctx.fillRect(10,10,200,100);</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -108,40 +107,25 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
+{{ EmbedLiveSample('code_jouable', 700, 360) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-createlineargradient", "CanvasRenderingContext2D.createLinearGradient")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                                | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-createlineargradient", "CanvasRenderingContext2D.createLinearGradient")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+## Compatibilité navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.createLinearGradient")}}</p>
+{{Compat("api.CanvasRenderingContext2D.createLinearGradient")}}
 
-<h2 id="Notes_spécifiques_à_Gecko">Notes spécifiques à Gecko</h2>
+## Notes spécifiques à Gecko
 
-<ul>
- <li>A partir de Gecko 2.0 {{geckoRelease("2.0")}}, le fait de spécifier des valeurs non finies  déclenche maintenant <code>NOT_SUPPORTED_ERR</code> au lieu de <code>SYNTAX_ERR</code>.</li>
-</ul>
+- A partir de Gecko 2.0 {{geckoRelease("2.0")}}, le fait de spécifier des valeurs non finies  déclenche maintenant `NOT_SUPPORTED_ERR` au lieu de `SYNTAX_ERR`.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.createRadialGradient()")}}</li>
-</ul>
+- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}

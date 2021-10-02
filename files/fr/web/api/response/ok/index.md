@@ -11,65 +11,50 @@ tags:
   - ok
 translation_of: Web/API/Response/ok
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>La propriété en lecture seule <code><strong>ok</strong></code> de l'interface {{domxref("Response")}} contient un booléen correspondant au succès (codes de statut compris entre 200 et 299) ou à l'échec de la réponse.</p>
+La propriété en lecture seule **`ok`** de l'interface {{domxref("Response")}} contient un booléen correspondant au succès (codes de statut compris entre 200 et 299) ou à l'échec de la réponse.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <var>myOK</var> = <var>response</var>.ok;</pre>
+    var myOK = response.ok;
 
-<h3 id="Value">Valeur</h3>
+### Valeur
 
-<p>Un {{domxref("Boolean")}}.</p>
+Un {{domxref("Boolean")}}.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>Dans <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-response">notre exemple</a> (voir <a href="https://mdn.github.io/fetch-examples/fetch-response/">la démonstration en ligne</a>) nous créons un nouvel objet {{domxref("Request")}} en utilisant le constructeur {{domxref("Request.Request","Request()")}} avec le chemin vers un JPG en argument. On récupère (<em>fetch</em> en anglais) ensuite la requête en utilisant {{domxref("GlobalFetch.fetch()")}}, on extrait un <em>blob</em> de la réponse en utilisant {{domxref("Body.blob")}} pour créer un objet URL grâce à {{domxref("URL.createObjectURL")}} et l'afficher dans une balise {{htmlelement("img")}}.</p>
+Dans [notre exemple](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (voir [la démonstration en ligne](https://mdn.github.io/fetch-examples/fetch-response/)) nous créons un nouvel objet {{domxref("Request")}} en utilisant le constructeur {{domxref("Request.Request","Request()")}} avec le chemin vers un JPG en argument. On récupère (_fetch_ en anglais) ensuite la requête en utilisant {{domxref("GlobalFetch.fetch()")}}, on extrait un _blob_ de la réponse en utilisant {{domxref("Body.blob")}} pour créer un objet URL grâce à {{domxref("URL.createObjectURL")}} et l'afficher dans une balise {{htmlelement("img")}}.
 
-<div class="note">
-<p><strong>Note :</strong> Nous affichons la valeur de la propriété <code>ok</code> de la réponse dans la console en haut du bloc <code>fetch()</code>.</p>
-</div>
+> **Note :** Nous affichons la valeur de la propriété `ok` de la réponse dans la console en haut du bloc `fetch()`.
 
-<pre class="brush: js">var myImage = document.querySelector('img');
+```js
+var myImage = document.querySelector('img');
 
 var myRequest = new Request('flowers.jpg');
 
 fetch(myRequest).then(function(response) {
-  console.log(response.ok); // retourne true si la réponse est retournée avec succès 
+  console.log(response.ok); // retourne true si la réponse est retournée avec succès
   response.blob().then(function(myBlob) {
     var objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
-});</pre>
+});
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-response-ok','ok')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                | Statut                   | Commentaire         |
+| ------------------------------------------------------------ | ------------------------ | ------------------- |
+| {{SpecName('Fetch','#dom-response-ok','ok')}} | {{Spec2('Fetch')}} | Définition initiale |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Response.ok")}}</p>
+{{Compat("api.Response.ok")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Service_Worker_API">API ServiceWorker</a></li>
- <li><a href="/fr/docs/Web/HTTP/CORS">Contrôle d'accès HTTP (CORS)</a></li>
- <li><a href="/fr/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
+- [Contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/CORS)
+- [HTTP](/fr/docs/Web/HTTP)

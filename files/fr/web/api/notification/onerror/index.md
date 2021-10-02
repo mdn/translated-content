@@ -11,42 +11,26 @@ tags:
   - onerror
 translation_of: Web/API/Notification/onerror
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>La propriété <strong><code>onerror</code></strong> de l'interface {{domxref ("Notification")}} spécifie un écouteur d'événements pour recevoir les événements {{domxref ("HTMLElement/error_event", "error")}}. Ces événements se produisent lorsque quelque chose ce déroule mal avec une {{domxref ("Notification")}} (dans de nombreux cas, une erreur qui empêche l'affichage de la notification.)</p>
+La propriété **`onerror`** de l'interface {{domxref ("Notification")}} spécifie un écouteur d'événements pour recevoir les événements {{domxref ("HTMLElement/error_event", "error")}}. Ces événements se produisent lorsque quelque chose ce déroule mal avec une {{domxref ("Notification")}} (dans de nombreux cas, une erreur qui empêche l'affichage de la notification.)
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>Notification</var>.onerror = function(event) { ... }
-<var>Notification</var>.onerror = (even) =&gt; { ... }
-</pre>
+    Notification.onerror = function(event) { ... }
+    Notification.onerror = (even) => { ... }
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-notification-onerror','onerror')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                                     | Commentaire          |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
+| {{SpecName('Web Notifications','#dom-notification-onerror','onerror')}} | {{Spec2('Web Notifications')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Notification.onerror")}}</p>
+{{Compat("api.Notification.onerror")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>{{domxref("Notification")}}</li>
- <li><a href="/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a></li>
-</ul>
+- {{domxref("Notification")}}
+- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

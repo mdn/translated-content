@@ -4,63 +4,59 @@ slug: Web/API/FormData/get
 translation_of: Web/API/FormData/get
 browser-compat: api.FormData.get
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>La méthode <strong><code>get()</code></strong> de l'interface <a href="/fr/docs/Web/API/FormData"><code>FormData</code></a> renvoie la première valeur associée à une clé donnée dans un objet <code>FormData</code>. Si vous souhaitez manipuler plusieurs valeurs et les récupérer intégralement, utilisez plutôt la méthode <a href="/fr/docs/Web/API/FormData/getAll"><code>getAll()</code></a>.</p>
+La méthode **`get()`** de l'interface [`FormData`](/fr/docs/Web/API/FormData) renvoie la première valeur associée à une clé donnée dans un objet `FormData`. Si vous souhaitez manipuler plusieurs valeurs et les récupérer intégralement, utilisez plutôt la méthode [`getAll()`](/fr/docs/Web/API/FormData/getAll).
 
-<div class="note">
-  <p><strong>Note :</strong> Cette méthode est disponible dans les <a href="/fr/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note :** Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">formData.get(name);</pre>
+```js
+formData.get(name);
+```
 
-<h3 id="append_Parameters">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/USVString"><code>USVString</code></a> représentant le nom de la clé que vous souhaitez retrouver.</dd>
-</dl>
+- `name`
+  - : Une chaîne de caractères [`USVString`](/fr/docs/Web/API/USVString) représentant le nom de la clé que vous souhaitez retrouver.
 
-<h3 id="Return_value">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un objet <a href="/fr/docs/Web/API/FormDataEntryValue"><code>FormDataEntryValue</code></a> contenant la valeur. Si la clé n'existe pas, la méthode renvoie <code>null</code>.</p>
+Un objet [`FormDataEntryValue`](/fr/docs/Web/API/FormDataEntryValue) contenant la valeur. Si la clé n'existe pas, la méthode renvoie `null`.
 
-<h2 id="example">Exemple</h2>
+## Exemple
 
-<p>La ligne suivante crée un objet <code>FormData</code> vide :</p>
+La ligne suivante crée un objet `FormData` vide :
 
-<pre class="brush: js">
+```js
 var formData = new FormData();
-</pre>
+```
 
-<p>Si nous ajoutons deux valeurs <code>username</code> en utilisant <a href="/fr/docs/Web/API/FormData/append"><code>FormData.append</code></a> :</p>
+Si nous ajoutons deux valeurs `username` en utilisant [`FormData.append`](/fr/docs/Web/API/FormData/append) :
 
-<pre class="brush: js">
+```js
 formData.append('username', 'Chris');
 formData.append('username', 'Bob');
-</pre>
+```
 
-<p>L'appel suivant à <code>get()</code> renverra uniquement la première valeur <code>username</code> indexée :</p>
+L'appel suivant à `get()` renverra uniquement la première valeur `username` indexée :
 
-<pre class="brush: js">
+```js
 formData.get('username'); // Renvoie "Chris"
-</pre>
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHTTPRequest</code></a></li>
- <li><a href="/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest">Utiliser XMLHttpRequest</a></li>
- <li><a href="/fr/docs/Web/API/FormData/Using_FormData_Objects">Utiliser les objets <code>FormData</code></a></li>
- <li><a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a></li>
-</ul>
+- [`XMLHTTPRequest`](/fr/docs/Web/API/XMLHttpRequest)
+- [Utiliser XMLHttpRequest](/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Utiliser les objets `FormData`](/fr/docs/Web/API/FormData/Using_FormData_Objects)
+- [`<form>`](/fr/docs/Web/HTML/Element/Form)

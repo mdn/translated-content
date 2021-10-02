@@ -10,55 +10,50 @@ tags:
   - Reference
 translation_of: Web/API/Notification/requestPermission
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<div class="note">
-<p><strong>Note:</strong> Cette fonctionnalité n'est pas disponible dans {{domxref("SharedWorker")}}</p>
-</div>
+> **Note :** Cette fonctionnalité n'est pas disponible dans {{domxref("SharedWorker")}}
 
-<div class="note">
-<p><strong>Note :</strong> Safari utilise toujours la syntaxe de function de rappel (callback ) pour obtenir l'autorisation. Lisez <a href="/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a> pour un bon exemple de la fonctionnalité de détection et d'exécution du code le cas échéant.</p>
-</div>
+> **Note :** Safari utilise toujours la syntaxe de function de rappel (callback ) pour obtenir l'autorisation. Lisez [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API) pour un bon exemple de la fonctionnalité de détection et d'exécution du code le cas échéant.
 
-<p>La méthode <strong><code>requestPermission()</code></strong> de l'interface {{domxref ("Notification")}} demande l'autorisation à l'utilisateur pour l'origine actuelle d'afficher des notifications.</p>
+La méthode **`requestPermission()`** de l'interface {{domxref ("Notification")}} demande l'autorisation à l'utilisateur pour l'origine actuelle d'afficher des notifications.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La dernière spécification a mis à jour cette méthode avec une syntaxe basée sur une promesse qui fonctionne comme ceci:</p>
+La dernière spécification a mis à jour cette méthode avec une syntaxe basée sur une promesse qui fonctionne comme ceci:
 
-<pre class="notranslate">Notification.requestPermission()
-  .then((permission) =&gt; { ... })</pre>
+    Notification.requestPermission()
+      .then((permission) => { ... })
 
-<p>Auparavant, la syntaxe était basée sur un simple rappel; cette version est désormais obsolète:</p>
+Auparavant, la syntaxe était basée sur un simple rappel; cette version est désormais obsolète:
 
-<pre class="notranslate">Notification.requestPermission(<var>callback</var>);</pre>
+    Notification.requestPermission(callback);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code><var>callback</var></code> {{optional_inline}} {{deprecated_inline("gecko46")}}</dt>
- <dd>Une fonction de rappel facultative qui est appelée avec la valeur d'autorisation. Déconseillé en faveur de la valeur de retour de la promesse.</dd>
-</dl>
+- `callback` {{optional_inline}} {{deprecated_inline("gecko46")}}
+  - : Une fonction de rappel facultative qui est appelée avec la valeur d'autorisation. Déconseillé en faveur de la valeur de retour de la promesse.
 
-<h3 id="Retour">Retour</h3>
+### Retour
 
-<p>Une {{jsxref ("Promise", "Promesse")}} qui se résout en une {{domxref ("DOMString")}} avec la permission choisie par l'utilisateur. Les valeurs possibles pour cette chaîne sont:</p>
+Une {{jsxref ("Promise", "Promesse")}} qui se résout en une {{domxref ("DOMString")}} avec la permission choisie par l'utilisateur. Les valeurs possibles pour cette chaîne sont:
 
-<ul>
- <li><code>granted</code></li>
- <li><code>denied</code></li>
- <li><code>default</code></li>
-</ul>
+- `granted`
+- `denied`
+- `default`
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Supposons ce HTML de base:</p>
+Supposons ce HTML de base:
 
-<pre class="brush: html">&lt;button onclick="notifyMe()"&gt;Notifie moi !&lt;/button&gt;</pre>
+```html
+<button onclick="notifyMe()">Notifie moi !</button>
+```
 
-<p>Il est possible d'envoyer une notification comme suit - nous présentons ici un ensemble de code assez détaillé et complet que vous pourriez utiliser si vous vouliez d'abord vérifier si les notifications sont prises en charge, puis vérifiez si l'autorisation a été accordée pour l'origine actuelle d'envoyer des notifications, puis demander l'autorisation si nécessaire, avant d'envoyer une notification.</p>
+Il est possible d'envoyer une notification comme suit - nous présentons ici un ensemble de code assez détaillé et complet que vous pourriez utiliser si vous vouliez d'abord vérifier si les notifications sont prises en charge, puis vérifiez si l'autorisation a été accordée pour l'origine actuelle d'envoyer des notifications, puis demander l'autorisation si nécessaire, avant d'envoyer une notification.
 
-<pre class="brush: js">function notifyMe() {
+```js
+function notifyMe() {
   // Vérifions si le navigateur prend en charge les notifications
   if (!('Notification' in window)) {
     alert('Ce navigateur ne prend pas en charge la notification de bureau')
@@ -72,7 +67,7 @@ translation_of: Web/API/Notification/requestPermission
 
   // Sinon, nous devons demander la permission à l'utilisateur
   else if (Notification.permission !== 'denied') {
-    Notification.requestPermission().then((permission) =&gt; {
+    Notification.requestPermission().then((permission) => {
       // Si l'utilisateur accepte, créons une notification
       if (permission === 'granted') {
         const notification = new Notification('Salut toi!')
@@ -83,37 +78,22 @@ translation_of: Web/API/Notification/requestPermission
   // Enfin, si l'utilisateur a refusé les notifications, et que vous
   // voulez être respectueux, il n'est plus nécessaire de les déranger.
 }
-</pre>
+```
 
-<p>Nous ne montrons plus d'exemple en direct sur cette page, car Chrome et Firefox n'autorisent plus les demandes de notification des {{htmlelement ("iframe")}}s d'origine croisée, avec d'autres navigateurs à suivre. Pour voir un exemple en action, consultez notre <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">exemple de liste de tâches</a> (voir également l'<a href="https://mdn.github.io/to-do-notifications/">application en cours d'exécution</a>.)</p>
+Nous ne montrons plus d'exemple en direct sur cette page, car Chrome et Firefox n'autorisent plus les demandes de notification des {{htmlelement ("iframe")}}s d'origine croisée, avec d'autres navigateurs à suivre. Pour voir un exemple en action, consultez notre [exemple de liste de tâches](https://github.com/mdn/to-do-notifications/tree/gh-pages) (voir également l'[application en cours d'exécution](https://mdn.github.io/to-do-notifications/).)
 
-<div class="note">
-<p><strong>Note :</strong> Dans l'exemple ci-dessus, nous générons des notifications en réponse à un geste de l'utilisateur (en cliquant sur un bouton). Il ne s'agit pas seulement d'une bonne pratique - vous ne devriez pas envoyer de spam aux utilisateurs avec des notifications qu'ils n'acceptent pas - mais les navigateurs suivants interdiront explicitement les notifications non déclenchées en réponse à un geste de l'utilisateur. Firefox le fait déjà depuis la version 72, par exemple.</p>
-</div>
+> **Note :** Dans l'exemple ci-dessus, nous générons des notifications en réponse à un geste de l'utilisateur (en cliquant sur un bouton). Il ne s'agit pas seulement d'une bonne pratique - vous ne devriez pas envoyer de spam aux utilisateurs avec des notifications qu'ils n'acceptent pas - mais les navigateurs suivants interdiront explicitement les notifications non déclenchées en réponse à un geste de l'utilisateur. Firefox le fait déjà depuis la version 72, par exemple.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                | Status                                   | Comment         |
+| -------------------------------------------- | ---------------------------------------- | --------------- |
+| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | Living standard |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Notification.requestPermission")}}</p>
+{{Compat("api.Notification.requestPermission")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a></li>
-</ul>
+- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

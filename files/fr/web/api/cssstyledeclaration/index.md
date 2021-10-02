@@ -10,47 +10,42 @@ tags:
   - Reference
 translation_of: Web/API/CSSStyleDeclaration
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p><code>CSSStyleDeclaration</code> représente une collection de paires propriété/valeur CSS. Elle est utilisée dans quelques API :</p>
+`CSSStyleDeclaration` représente une collection de paires propriété/valeur CSS. Elle est utilisée dans quelques API :
 
-<ul>
- <li>{{domxref("HTMLElement.style")}} - pour manipuler le style d'un seul élément (&lt;elem style="..."&gt;) ;</li>
- <li>(AFAIRE : à reformuler) est une interface avec le <a href="http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block">declaration block</a> renvoyé par la propriété <code><a href="/en/DOM/cssRule.style">style</a></code> d'une <code>cssRule</code> dans une <a href="/fr/docs/Web/API/StyleSheet">feuille de style</a>, lorsque la règle est une <a href="/en/DOM/cssRule#CSSStyleRule">CSSStyleRule</a> ;</li>
- <li><code>CSSStyleDeclaration</code> est également une interface en <strong>lecture seule</strong> pour le résultat de <a href="/fr/docs/Web/API/Window/getComputedStyle">window.getComputedStyle()</a>.</li>
-</ul>
+- {{domxref("HTMLElement.style")}} - pour manipuler le style d'un seul élément (\<elem style="...">) ;
+- (AFAIRE : à reformuler) est une interface avec le [declaration block](http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) renvoyé par la propriété [`style`](/en/DOM/cssRule.style) d'une `cssRule` dans une [feuille de style](/fr/docs/Web/API/StyleSheet), lorsque la règle est une [CSSStyleRule](/en/DOM/cssRule#CSSStyleRule) ;
+- `CSSStyleDeclaration` est également une interface en **lecture seule** pour le résultat de [window.getComputedStyle()](/fr/docs/Web/API/Window/getComputedStyle).
 
-<h2 id="Syntax">Attributs</h2>
+## Attributs
 
-<dl>
- <dt>{{domxref("CSSStyleDeclaration.cssText")}}</dt>
- <dd>Représentation textuelle du bloc de déclaration. La définition de cet attribut modifie le style.</dd>
- <dt>{{domxref("CSSStyleDeclaration.length")}} {{readonlyInline}}</dt>
- <dd>Le nombre de propriétés. Voir la méthode {{domxref("CSSStyleDeclaration.item",'item()')}} ci-dessous.</dd>
- <dt>{{domxref("CSSStyleDeclaration.parentRule")}} {{readonlyInline}}</dt>
- <dd>Le contenant {{domxref("CSSRule")}}.</dd>
-</dl>
+- {{domxref("CSSStyleDeclaration.cssText")}}
+  - : Représentation textuelle du bloc de déclaration. La définition de cet attribut modifie le style.
+- {{domxref("CSSStyleDeclaration.length")}} {{readonlyInline}}
+  - : Le nombre de propriétés. Voir la méthode {{domxref("CSSStyleDeclaration.item",'item()')}} ci-dessous.
+- {{domxref("CSSStyleDeclaration.parentRule")}} {{readonlyInline}}
+  - : Le contenant {{domxref("CSSRule")}}.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{domxref("CSSStyleDeclaration.getPropertyPriority()")}}</dt>
- <dd>Retourne la priorité facultative "important".</dd>
- <dt>{{domxref("CSSStyleDeclaration.getPropertyValue()")}}</dt>
- <dd>Retourne la valeur de la propriété avec un nom de propriété.</dd>
- <dt>{{domxref("CSSStyleDeclaration.item()")}}</dt>
- <dd>Retourne un nom de propriété.</dd>
- <dt>{{domxref("CSSStyleDeclaration.removeProperty()")}}</dt>
- <dd>Supprime une propriété du bloc de déclaration CSS.</dd>
- <dt>{{domxref("CSSStyleDeclaration.setProperty()")}}</dt>
- <dd>Modifie une propriété CSS existante ou crée une nouvelle propriété CSS dans le bloc de déclaration.</dd>
- <dt>{{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{obsolete_inline}}</dt>
- <dd>Uniquement supporté via getComputedStyle dans Firefox. Retourne la valeur de la propriété en tant que {{domxref("CSSPrimitiveValue")}} ou <code>null</code> pour les <a href="/fr/docs/Web/CSS/Propriétés_raccourcies">propriétés raccourcies</a>.</dd>
-</dl>
+- {{domxref("CSSStyleDeclaration.getPropertyPriority()")}}
+  - : Retourne la priorité facultative "important".
+- {{domxref("CSSStyleDeclaration.getPropertyValue()")}}
+  - : Retourne la valeur de la propriété avec un nom de propriété.
+- {{domxref("CSSStyleDeclaration.item()")}}
+  - : Retourne un nom de propriété.
+- {{domxref("CSSStyleDeclaration.removeProperty()")}}
+  - : Supprime une propriété du bloc de déclaration CSS.
+- {{domxref("CSSStyleDeclaration.setProperty()")}}
+  - : Modifie une propriété CSS existante ou crée une nouvelle propriété CSS dans le bloc de déclaration.
+- {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{obsolete_inline}}
+  - : Uniquement supporté via getComputedStyle dans Firefox. Retourne la valeur de la propriété en tant que {{domxref("CSSPrimitiveValue")}} ou `null` pour les [propriétés raccourcies](/fr/docs/Web/CSS/Propriétés_raccourcies).
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var objStyle = document.styleSheets[0].cssRules[0].style;
+```js
+var objStyle = document.styleSheets[0].cssRules[0].style;
 console.log(objStyle.cssText);
 
 for (var i = objStyle.length; i--;) {
@@ -58,38 +53,20 @@ for (var i = objStyle.length; i--;) {
   objStyle.removeProperty(chaineNom);
 }
 
-console.log(objStyle.cssText);</pre>
+console.log(objStyle.cssText);
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Le bloc de déclaration est la partie de la règle de mise en forme qui apparaît dans les accolades et qui fournit les définitions de mise en forme (pour le sélecteur, la partie qui précède les accolades).</p>
+Le bloc de déclaration est la partie de la règle de mise en forme qui apparaît dans les accolades et qui fournit les définitions de mise en forme (pour le sélecteur, la partie qui précède les accolades).
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Properties_Reference">Référence des propriétés CSS</a></li>
-</ul>
+- [Référence des propriétés CSS](/fr/docs/Web/CSS/CSS_Properties_Reference)
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM', '#the-cssstyledeclaration-interface', 'CSSStyleDeclaration')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleDeclaration', 'CSSPrimitiveValue')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | Statut                           | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('CSSOM', '#the-cssstyledeclaration-interface', 'CSSStyleDeclaration')}}     | {{Spec2('CSSOM')}}         |                      |
+| {{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleDeclaration', 'CSSPrimitiveValue')}} | {{Spec2('DOM2 Style')}} | Définition initiale. |

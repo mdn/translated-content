@@ -13,35 +13,32 @@ tags:
   - ServiceWorkers
 translation_of: Web/API/Client
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>L'interface <code>Client</code> de l'<a href="/en-US/docs/Web/API/ServiceWorker_API">API ServiceWorker</a> représente la portée d'exécution d'un {{domxref("Worker")}} ou {{domxref("SharedWorker")}}. Les clients {{domxref("Window")}} sont représentés par le plus spécifique {{domxref("WindowClient")}}. Vous pouvez obtenir les objets <code>Client</code>/<code>WindowClient</code> via les méthodes {{domxref("Clients.matchAll","Clients.matchAll()")}} et {{domxref("Clients.get","Clients.get()")}}.</p>
+L'interface `Client` de l'[API ServiceWorker](/en-US/docs/Web/API/ServiceWorker_API) représente la portée d'exécution d'un {{domxref("Worker")}} ou {{domxref("SharedWorker")}}. Les clients {{domxref("Window")}} sont représentés par le plus spécifique {{domxref("WindowClient")}}. Vous pouvez obtenir les objets `Client`/`WindowClient` via les méthodes {{domxref("Clients.matchAll","Clients.matchAll()")}} et {{domxref("Clients.get","Clients.get()")}}.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{domxref("Client.postMessage()")}}</dt>
- <dd>Permet à un service worker d'envoyer un message au <code><a href="/en-US/docs/Web/API/ServiceWorkerClient">ServiceWorkerClient</a></code>.</dd>
-</dl>
+- {{domxref("Client.postMessage()")}}
+  - : Permet à un service worker d'envoyer un message au [`ServiceWorkerClient`](/en-US/docs/Web/API/ServiceWorkerClient).
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{domxref("Client.id")}} {{readonlyInline}}</dt>
- <dd>Retourne l'identifiant universellement unique de l'objet <code>Client</code>.</dd>
- <dt>{{domxref("Client.type")}} {{readonlyInline}}</dt>
- <dd>Indique le type de contexte de navigation du client courant. Cette valeur peut être <code>auxiliary</code>, <code>top-level</code>, <code>nested</code>, or <code>none</code>.</dd>
- <dt>{{domxref("Client.url")}} {{readonlyInline}}</dt>
- <dd>Retourne l'URL du client service worker courant.</dd>
-</dl>
+- {{domxref("Client.id")}} {{readonlyInline}}
+  - : Retourne l'identifiant universellement unique de l'objet `Client`.
+- {{domxref("Client.type")}} {{readonlyInline}}
+  - : Indique le type de contexte de navigation du client courant. Cette valeur peut être `auxiliary`, `top-level`, `nested`, or `none`.
+- {{domxref("Client.url")}} {{readonlyInline}}
+  - : Retourne l'URL du client service worker courant.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Ce code est basé sur un fragment pris d'un <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/post-message/index.html">exemple d'envoi de message</a> (voir <a href="https://googlechrome.github.io/samples/service-worker/post-message/">l'exemple en ligne</a>.) Ce code envoie une référence de message à laquelle le service worker peut répondre via {{domxref("Client.postMessage()")}}.</p>
+Ce code est basé sur un fragment pris d'un [exemple d'envoi de message](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/post-message/index.html) (voir [l'exemple en ligne](https://googlechrome.github.io/samples/service-worker/post-message/).) Ce code envoie une référence de message à laquelle le service worker peut répondre via {{domxref("Client.postMessage()")}}.
 
-<p>Ce message est contenu dans une promesse qui est résolue si la réponse ne contient pas d'erreur et est rejetée avec une erreur.</p>
+Ce message est contenu dans une promesse qui est résolue si la réponse ne contient pas d'erreur et est rejetée avec une erreur.
 
-<pre class="brush: js">// client service worker (par exemple un document)
+```js
+// client service worker (par exemple un document)
 function sendMessage(message) {
   return new Promise(function(resolve, reject) {
     // Notez que c'est la version du ServiceWorker.postMessage
@@ -57,36 +54,23 @@ self.addEventListener("message", function(e) {
   // e.source est un object client
   e.source.postMessage("Hello! Your message was: " + e.data);
 });
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#client', 'Client')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | État                                 | Commentaire         |
+| -------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName('Service Workers', '#client', 'Client')}} | {{Spec2('Service Workers')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("api.Client")}}</div>
+{{Compat("api.Client")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Utiliser les Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Exemple simple de service workers</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Est ce que le ServiceWorker est prêt ?</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promesses</a></li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Utilisation performante des web workers</a></li>
- <li><a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</a></li>
-</ul>
+- [Utiliser les Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Exemple simple de service workers](https://github.com/mdn/sw-test)
+- [Est ce que le ServiceWorker est prêt ?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Promesses](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [Utilisation performante des web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)
+- [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API)

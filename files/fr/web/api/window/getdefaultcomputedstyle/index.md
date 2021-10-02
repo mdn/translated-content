@@ -8,80 +8,81 @@ tags:
   - Reference
 translation_of: Web/API/window/getDefaultComputedStyle
 ---
-<div>{{APIRef("CSSOM")}}{{Non-standard_header}}</div>
+{{APIRef("CSSOM")}}{{Non-standard_header}}
 
-<p><code>getDefaultComputedStyle()</code> fournit les valeurs calculées par défaut de toutes les propriétés CSS d'un élément, en ignorant la mise en forme de l'auteur. C'est-à-dire que seules les mises en forme de l'agent utilisateur et de l'utilisateur sont pris en compte.</p>
+`getDefaultComputedStyle()` fournit les valeurs calculées par défaut de toutes les propriétés CSS d'un élément, en ignorant la mise en forme de l'auteur. C'est-à-dire que seules les mises en forme de l'agent utilisateur et de l'utilisateur sont pris en compte.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <em>miseEnForme</em> = window.getDefaultComputedStyle(<em>element</em>[, <em>pseudoElt</em>]);
-</pre>
+    var miseEnForme = window.getDefaultComputedStyle(element[, pseudoElt]);
 
-<dl>
- <dt>element</dt>
- <dd>L'{{domxref("Element")}} dont on veut obtenir la mise en forme calculée.</dd>
- <dt>pseudoElt {{optional_inline}}</dt>
- <dd>Une chaîne indiquant le pseudo-élément à rechercher. Doit être <code>null</code> (ou non indiqué) pour les éléments ordinaires.</dd>
-</dl>
+- element
+  - : L'{{domxref("Element")}} dont on veut obtenir la mise en forme calculée.
+- pseudoElt {{optional_inline}}
+  - : Une chaîne indiquant le pseudo-élément à rechercher. Doit être `null` (ou non indiqué) pour les éléments ordinaires.
 
-<p>Le <code>style</code> retourné est un objet <a href="/fr-FR/docs/Web/API/CSSStyleDeclaration"><code>CSSStyleDeclaration</code></a>.</p>
+Le `style` retourné est un objet [`CSSStyleDeclaration`](/fr-FR/docs/Web/API/CSSStyleDeclaration).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var elem1 = document.getElementById("IdElem");
+```js
+var elem1 = document.getElementById("IdElem");
 var miseEnForme = window.getDefaultComputedStyle(elem1);
-</pre>
+```
 
-<pre class="brush: html">&lt;style&gt;
+```html
+<style>
 #conteneur-elem {
    position: absolute;
    left:     100px;
    top:      200px;
    height:   100px;
  }
-&lt;/style&gt;
+</style>
 
-&lt;div id="conteneur-elem"&gt;factice&lt;/div&gt;
-&lt;div id="sortie"&gt;&lt;/div&gt;
+<div id="conteneur-elem">factice</div>
+<div id="sortie"></div>
 
-&lt;script&gt;
+<script>
     var elem = document.getElementById("conteneur-elem");
     var laPropCSS = window.getDefaultComputedStyle(elem).position;
     document.getElementById("sortie").innerHTML = laPropCSS; // affichera "static"
-&lt;/script&gt;   </pre>
+</script>
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'objet retourné est du même type que l'objet retourné par <code>getComputedStyle</code>, mais il ne prend en compte que les règles user-agent et user.</p>
+L'objet retourné est du même type que l'objet retourné par `getComputedStyle`, mais il ne prend en compte que les règles user-agent et user.
 
-<h2 id="Utilisation_avec_des_pseudo-éléments">Utilisation avec des pseudo-éléments</h2>
+## Utilisation avec des pseudo-éléments
 
-<p><code>getDefaultComputedStyle</code> peut extraire des informations de mise en forme à partir de pseudo-éléments (par exemple, ::after, ::before).</p>
+`getDefaultComputedStyle` peut extraire des informations de mise en forme à partir de pseudo-éléments (par exemple, ::after, ::before).
 
-<pre class="brush: html">&lt;style&gt;
+```html
+<style>
  h3:after {
    content: ' déchire !';
  }
-&lt;/style&gt;
+</style>
 
-&lt;h3&gt;contenu généré&lt;/h3&gt;
+<h3>contenu généré</h3>
 
-&lt;script&gt;
+<script>
   var h3       = document.querySelector('h3'),
       resultat = getDefaultComputedStyle(h3, ':after').content;
 
   console.log('le contenu généré est : ', resultat); // retourne 'none'
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>La valeur retournée est, dans certains cas connus, expressément incorrecte par intention délibérée. En particulier, pour éviter le problème de sécurité appelé CSS History Leak, les navigateurs peuvent "mentir" sur la valeur utilisée pour un lien et toujours retourner des valeurs comme si l'utilisateur n'avait jamais visité le site concerné, et/ou limiter les styles qui peuvent être appliqués via l'utilisation du pseudo-sélecteur <code>:visited</code>. Voir <a href="http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/">http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/</a> et <a href="http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/">http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-visited/</a> pour le détail des exemples de la manière dont cela est implémenté.</p>
+La valeur retournée est, dans certains cas connus, expressément incorrecte par intention délibérée. En particulier, pour éviter le problème de sécurité appelé CSS History Leak, les navigateurs peuvent "mentir" sur la valeur utilisée pour un lien et toujours retourner des valeurs comme si l'utilisateur n'avait jamais visité le site concerné, et/ou limiter les styles qui peuvent être appliqués via l'utilisation du pseudo-sélecteur `:visited`. Voir <http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/> et [http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-visited/](http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) pour le détail des exemples de la manière dont cela est implémenté.
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<p>Proposé au groupe de travail CSS.</p>
+Proposé au groupe de travail CSS.
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.getDefaultComputedStyle")}}</p>
+{{Compat("api.Window.getDefaultComputedStyle")}}

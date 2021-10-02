@@ -9,25 +9,26 @@ tags:
   - évènements
 translation_of: Web/API/EventTarget/EventTarget
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>Le constructeur <code><strong>EventTarget()</strong></code> crée une nouvelle instance d'objet {{domxref("EventTarget")}}.</p>
+Le constructeur **`EventTarget()`** crée une nouvelle instance d'objet {{domxref("EventTarget")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <var>myEventTarget</var> = new EventTarget();</pre>
+    var myEventTarget = new EventTarget();
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une instance d'objet {{domxref("EventTarget")}}.</p>
+Une instance d'objet {{domxref("EventTarget")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">class MyEventTarget extends EventTarget {
+```js
+class MyEventTarget extends EventTarget {
   constructor(mySecret) {
     super();
     this._secret = mySecret;
@@ -44,37 +45,19 @@ myEventTarget.addEventListener("foo", function(e) {
 
 let event = new CustomEvent("foo", { detail: 7 });
 myEventTarget.dispatchEvent(event);
-let newValue = myEventTarget.secret; // == 7</pre>
+let newValue = myEventTarget.secret; // == 7
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-eventtarget-eventtarget', 'EventTarget() constructor')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | Statut                           | Commentaire |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('DOM WHATWG', '#dom-eventtarget-eventtarget', 'EventTarget() constructor')}} | {{Spec2('DOM WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>
+{{Compat("api.EventTarget.EventTarget")}}
 
+## Voir aussi
 
-<p>{{Compat("api.EventTarget.EventTarget")}}</p>
-</div>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{domxref("EventTarget")}}</li>
-</ul>
-
-<p> </p>
+- {{domxref("EventTarget")}}

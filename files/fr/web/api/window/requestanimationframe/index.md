@@ -7,39 +7,37 @@ tags:
   - JavaScript
 translation_of: Web/API/window/requestAnimationFrame
 ---
-<p>{{APIRef("Window")}}</p>
+{{APIRef("Window")}}
 
-<p>La méthode <strong><code>window.requestAnimationFrame()</code></strong> notifie le navigateur que vous souhaitez exécuter une animation et demande que celui-ci exécute une fonction spécifique de mise à jour de l'animation, avant le prochain rafraîchissement du navigateur. Cette méthode prend comme argument un callback qui sera appelé avant le rafraîchissement du navigateur.</p>
+La méthode **`window.requestAnimationFrame()`** notifie le navigateur que vous souhaitez exécuter une animation et demande que celui-ci exécute une fonction spécifique de mise à jour de l'animation, avant le prochain rafraîchissement du navigateur. Cette méthode prend comme argument un callback qui sera appelé avant le rafraîchissement du navigateur.
 
-<div class="note">
-  <p><strong>Note :</strong> Si vous souhaitez animer une nouvelle frame durant le prochain repaint, votre callback doit appeler la méthode <code>requestAnimationFrame()</code>.</p>
-</div>
+> **Note :** Si vous souhaitez animer une nouvelle frame durant le prochain repaint, votre callback doit appeler la méthode `requestAnimationFrame()`.
 
-<p>Vous devez appeler cette méthode dès que vous êtes prêt à rafraîchir votre animation. La fonction contenant l'animation doit être appelée avant que le navigateur n'effectue un nouveau rafraîchissement . En moyenne, le callback sera appelé 60 fois par seconde, cela dépendra de la fréquence de rafraîchissement de votre écran, conformément aux recommandations de la W3C. Cette fréquence peut être inférieure si plusieurs onglets sont ouverts simultanément.</p>
+Vous devez appeler cette méthode dès que vous êtes prêt à rafraîchir votre animation. La fonction contenant l'animation doit être appelée avant que le navigateur n'effectue un nouveau rafraîchissement . En moyenne, le callback sera appelé 60 fois par seconde, cela dépendra de la fréquence de rafraîchissement de votre écran, conformément aux recommandations de la W3C. Cette fréquence peut être inférieure si plusieurs onglets sont ouverts simultanément.
 
-<p>Le callback possède un seul argument, un {{domxref("DOMHighResTimeStamp")}}, qui est le temps, en millisecondes avec une précision minimum de 10 µs, durant lequel l'exécution du rafraîchissement est prévu.</p>
+Le callback possède un seul argument, un {{domxref("DOMHighResTimeStamp")}}, qui est le temps, en millisecondes avec une précision minimum de 10 µs, durant lequel l'exécution du rafraîchissement est prévu.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js"><em>requestID</em> = window.requestAnimationFrame(<em>callback</em>);       // Firefox 23 / IE 10 / Chrome / Safari 7 (incl. iOS)
-<em>requestID</em> = window.mozRequestAnimationFrame(<em>callback</em>);    // Firefox &lt; 23
-<em>requestID</em> = window.webkitRequestAnimationFrame(callback); // Anciennes versions de Safari / Chrome
-</pre>
+```js
+requestID = window.requestAnimationFrame(callback);       // Firefox 23 / IE 10 / Chrome / Safari 7 (incl. iOS)
+requestID = window.mozRequestAnimationFrame(callback);    // Firefox < 23
+requestID = window.webkitRequestAnimationFrame(callback); // Anciennes versions de Safari / Chrome
+```
 
-<h3 id="Parameters">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>Un paramètre définissant la fonction à appeler lorsque votre animation va être rafraîchie lors du prochain rafraîchissement. Le callback ne prend qu'un seul argument, un {{domxref("DOMHighResTimeStamp")}}, qui est le temps à partir duquel requestAnimationFrame va commencer à appeler les callbacks.</dd>
-</dl>
+- `callback`
+  - : Un paramètre définissant la fonction à appeler lorsque votre animation va être rafraîchie lors du prochain rafraîchissement. Le callback ne prend qu'un seul argument, un {{domxref("DOMHighResTimeStamp")}}, qui est le temps à partir duquel requestAnimationFrame va commencer à appeler les callbacks.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p><code>requestID</code> est un entier <code>long</code> unique identifiant l'élément dans la liste des callbacks. C'est une valeur différente de zéro, mais il est prudent de ne pas faire de suppositions sur cette valeur. En passant cette valeur en paramètre de la méthode {{domxref("window.cancelAnimationFrame()")}},  vous annulez l'appel du callback.</p>
+`requestID` est un entier `long` unique identifiant l'élément dans la liste des callbacks. C'est une valeur différente de zéro, mais il est prudent de ne pas faire de suppositions sur cette valeur. En passant cette valeur en paramètre de la méthode {{domxref("window.cancelAnimationFrame()")}},  vous annulez l'appel du callback.
 
-<h2 id="Notes">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+```js
+window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                               window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
 
@@ -52,42 +50,38 @@ function step(timestamp) {
   if (start === null) start = timestamp;
   progress = timestamp - start;
   d.style.left = Math.min(progress/10, 200) + "px";
-  if (progress &lt; 2000) {
+  if (progress < 2000) {
     requestAnimationFrame(step);
   }
 }
 
 requestAnimationFrame(step);
-</pre>
+```
 
-<h2 id="Browser_compatibility">Compatibilités</h2>
+## Compatibilités
 
-<div>
-<p>{{Compat("api.Window.requestAnimationFrame")}}</p>
-</div>
+{{Compat("api.Window.requestAnimationFrame")}}
 
-<h3 id="Specification">Notes pour Gecko</h3>
+### Notes pour Gecko
 
-<p>[1] Avant Gecko 11.0 {{geckoRelease("11.0")}}, <code>mozRequestAnimationFrame()</code> pouvait être appelée sans paramètres d'entrée. Cela n'est plus supporté et n'est pas susceptible d'être standardisé.</p>
+\[1] Avant Gecko 11.0 {{geckoRelease("11.0")}}, `mozRequestAnimationFrame()` pouvait être appelée sans paramètres d'entrée. Cela n'est plus supporté et n'est pas susceptible d'être standardisé.
 
-<p>[2] Le callback prend comme paramètre un {{domxref("DOMTimeStamp")}} au lieu d'un {{domxref("DOMHighResTimeStamp")}} si c'est la version préfixée qui est utilisée. <code>DOMTimeStamp</code> n'a qu'une précision de l'ordre de la milliseconde, mais <code>DOMHightResTimeStamp</code> a une précision minimale de l'ordre de 10 microsecondes.</p>
+\[2] Le callback prend comme paramètre un {{domxref("DOMTimeStamp")}} au lieu d'un {{domxref("DOMHighResTimeStamp")}} si c'est la version préfixée qui est utilisée. `DOMTimeStamp` n'a qu'une précision de l'ordre de la milliseconde, mais `DOMHightResTimeStamp` a une précision minimale de l'ordre de 10 microsecondes.
 
-<h3 id="Notes_pour_Chrome">Notes pour Chrome</h3>
+### Notes pour Chrome
 
-<p>La syntaxe correcte, dans Chrome, pour annuler l'exécution est<code> window.cancelAnimationFrame()</code>. Dans les anciennes versions, <code>window.webkitCancelAnimationFrame()</code> &amp; <code>window.webkitCancelRequestAnimationFrame() sont obsolètes</code> mais sont toujours supportées pour le moment.</p>
+La syntaxe correcte, dans Chrome, pour annuler l'exécution est` window.cancelAnimationFrame()`. Dans les anciennes versions, `window.webkitCancelAnimationFrame()` & `window.webkitCancelRequestAnimationFrame() sont obsolètes` mais sont toujours supportées pour le moment.
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<p>{{spec("http://www.w3.org/TR/animation-timing/#requestAnimationFrame", "Timing control for script-based animations: requestAnimationFrame", "WD")}}</p>
+{{spec("http://www.w3.org/TR/animation-timing/#requestAnimationFrame", "Timing control for script-based animations: requestAnimationFrame", "WD")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("window.mozAnimationStartTime")}}</li>
- <li>{{domxref("window.cancelAnimationFrame()")}}</li>
- <li><a href="http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html">mozRequestAnimationFrame</a> - Blog post</li>
- <li><a href="http://paulirish.com/2011/requestanimationframe-for-smart-animating/">requestAnimationFrame for smart animating</a> - Blog post</li>
- <li><a href="http://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/">Animating with javascript: from setInterval to requestAnimationFrame</a> - Blog post</li>
- <li><a href="http://blogs.msdn.com/b/ie/archive/2011/07/05/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-1.aspx">Using PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 1</a> - Blog post</li>
- <li><a href="http://www.testufo.com/#test=animation-time-graph">TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations</a></li>
-</ul>
+- {{domxref("window.mozAnimationStartTime")}}
+- {{domxref("window.cancelAnimationFrame()")}}
+- [mozRequestAnimationFrame](http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html) - Blog post
+- [requestAnimationFrame for smart animating](http://paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
+- [Animating with javascript: from setInterval to requestAnimationFrame](http://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
+- [Using PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 1](http://blogs.msdn.com/b/ie/archive/2011/07/05/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-1.aspx) - Blog post
+- [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](http://www.testufo.com/#test=animation-time-graph)

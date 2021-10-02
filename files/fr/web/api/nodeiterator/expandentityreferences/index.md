@@ -10,55 +10,39 @@ tags:
   - Propriété
 translation_of: Web/API/NodeIterator/expandEntityReferences
 ---
-<p>{{APIRef("DOM")}} {{deprecated_header}}</p>
+{{APIRef("DOM")}} {{deprecated_header}}
 
-<p>La propriété en lecture seule <code><strong>NodeIterator.expandEntityReferences</strong></code> renvoie un {{domxref("Boolean")}} (<em>booléen</em>) indiquant si les enfants des noeuds de référence d'entité sont visibles ou non pour le {{domxref("NodeIterator")}}.</p>
+La propriété en lecture seule **`NodeIterator.expandEntityReferences`** renvoie un {{domxref("Boolean")}} (_booléen_) indiquant si les enfants des noeuds de référence d'entité sont visibles ou non pour le {{domxref("NodeIterator")}}.
 
-<p>Si cette valeur est <code>false</code> (<em>faux</em>), les enfants des nœuds de référence d'entité (ainsi que tous leurs descendants) sont rejetés. Cela a préséance sur la valeur de la méthode  {{domxref("NodeIterator.whatToShow")}} et le filtre associé.</p>
+Si cette valeur est `false` (_faux_), les enfants des nœuds de référence d'entité (ainsi que tous leurs descendants) sont rejetés. Cela a préséance sur la valeur de la méthode  {{domxref("NodeIterator.whatToShow")}} et le filtre associé.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>expand</em> = <em>nodeIterator</em>.expandEntityReferences;
-</pre>
+    expand = nodeIterator.expandEntityReferences;
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var nodeIterator = document.createNodeIterator(
+```js
+var nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
-expand = nodeIterator.expandEntityReferences;</pre>
+expand = nodeIterator.expandEntityReferences;
+```
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#nodeiterator', 'NodeIterator')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Suppression de la spécification</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeIterator-expandEntityReferences', 'NodeIterator.expandEntityReferences')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                                            | Statut                                       | Commentaire                     |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------- |
+| {{SpecName('DOM WHATWG', '#nodeiterator', 'NodeIterator')}}                                                                                                         | {{Spec2('DOM WHATWG')}}             | Suppression de la spécification |
+| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeIterator-expandEntityReferences', 'NodeIterator.expandEntityReferences')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.            |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.NodeIterator.expandEntityReferences")}}</p>
+{{Compat("api.NodeIterator.expandEntityReferences")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface à laquelle cette propriété appartient : {{domxref("NodeIterator")}}.</li>
-</ul>
+- L'interface à laquelle cette propriété appartient : {{domxref("NodeIterator")}}.

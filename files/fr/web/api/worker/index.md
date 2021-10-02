@@ -11,122 +11,96 @@ tags:
   - Workers
 translation_of: Web/API/Worker
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>L'interface <strong>Worker</strong> de l'<a href="/fr/docs/Web/API/Web_Workers_API">API Web Workers</a> représente une tâche de fond qui peut facilement être créée et peut envoyer des messages en retour à son créateur. Créer un Worker est aussi simple que d'appeler le constructeur <code>Worker()</code>, en spécifiant un script qui définira le comportement du thread du worker.</p>
+L'interface **Worker** de l'[API Web Workers](/fr/docs/Web/API/Web_Workers_API) représente une tâche de fond qui peut facilement être créée et peut envoyer des messages en retour à son créateur. Créer un Worker est aussi simple que d'appeler le constructeur `Worker()`, en spécifiant un script qui définira le comportement du thread du worker.
 
-<p>Notez qu'un worker peut lui aussi lancer d'autre Worker tant que ces autres workers sont hébergés par une page qui a la même origine que la page parente. (Note: <a href="https://bugs.webkit.org/show_bug.cgi?id=22723">Les workers imbriqués ne sont pas encore implémentés dans WebKit</a>).</p>
+Notez qu'un worker peut lui aussi lancer d'autre Worker tant que ces autres workers sont hébergés par une page qui a la même origine que la page parente. (Note: [Les workers imbriqués ne sont pas encore implémentés dans WebKit](https://bugs.webkit.org/show_bug.cgi?id=22723)).
 
-<p>De plus les workers peuvent utiliser <a href="/en/DOM/XMLHttpRequest"><code>XMLHttpRequest</code></a> pour les communiquer avec le réseau, à l'exception des attributs <code>responseXML</code> et <code>channel</code> qui vont toujours retourner <code>null</code>.</p>
+De plus les workers peuvent utiliser [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) pour les communiquer avec le réseau, à l'exception des attributs `responseXML` et `channel` qui vont toujours retourner `null`.
 
-<p>Toutes les<a href="/fr/DOM/Worker/Functions_available_to_workers"> interfaces et toutes les fonctions</a> ne seront pas disponibles pour le script associé au worker.</p>
+Toutes les[ interfaces et toutes les fonctions](/fr/DOM/Worker/Functions_available_to_workers) ne seront pas disponibles pour le script associé au worker.
 
-<div class="note">
-<p><strong>Note :</strong> Dans Firefox, si vous souhaitez utiliser les workers dans une extension et que vous souhaitez avoir accès au <a href="/en/js-ctypes">js-ctypes</a>, vous devez utiliser le {{ domxref("ChromeWorker") }} à la place.</p>
-</div>
+> **Note :** Dans Firefox, si vous souhaitez utiliser les workers dans une extension et que vous souhaitez avoir accès au [js-ctypes](/en/js-ctypes), vous devez utiliser le {{ domxref("ChromeWorker") }} à la place.
 
-<h2 id="Constructeurs">Constructeurs</h2>
+## Constructeurs
 
-<dl>
- <dt>{{domxref("Worker.Worker", "Worker()")}}</dt>
- <dd>Créer un web worker dédié qui execute le script qui est au bout de l'URL spécifié. Les workers peuvent aussi être créés en utilisant les <a href="/fr/docs/Web/API/Blob">Blobs</a>.</dd>
-</dl>
+- {{domxref("Worker.Worker", "Worker()")}}
+  - : Créer un web worker dédié qui execute le script qui est au bout de l'URL spécifié. Les workers peuvent aussi être créés en utilisant les [Blobs](/fr/docs/Web/API/Blob).
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Il hérite de propriétés de son parent, {{domxref("EventTarget")}}, et implémente les propriétés de {{domxref("AbstractWorker")}}.</em></p>
+_Il hérite de propriétés de son parent, {{domxref("EventTarget")}}, et implémente les propriétés de {{domxref("AbstractWorker")}}._
 
-<h3 id="Gestionnaires_dévénements">Gestionnaires d'événements</h3>
+### Gestionnaires d'événements
 
-<dl>
- <dt>{{domxref("AbstractWorker.onerror")}}</dt>
- <dd>Un {{ domxref("EventListener") }} qui est appelé quand un {{domxref("ErrorEvent")}} de type <code>error</code> arrive dans le worker. Il est hérité de {{domxref("AbstractWorker")}}.</dd>
- <dt>{{domxref("Worker.onmessage")}}</dt>
- <dd>Un {{ domxref("EventListener") }} qui est appelé quand un {{domxref("MessageEvent")}} de type <code>message</code> arrive dans le worker — i.e. quand un message est envoyé au document parent depuis le worker via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. Le message est stocké dans la propriété {{domxref("MessageEvent.data", "data")}} de l'événement.</dd>
- <dt>{{domxref("Worker.onmessageerror")}}</dt>
- <dd>Un {{event("Event_handlers", "event handler")}} qui indique le code à appeler quand un message {{event("messageerror")}} arrive.</dd>
-</dl>
+- {{domxref("AbstractWorker.onerror")}}
+  - : Un {{ domxref("EventListener") }} qui est appelé quand un {{domxref("ErrorEvent")}} de type `error` arrive dans le worker. Il est hérité de {{domxref("AbstractWorker")}}.
+- {{domxref("Worker.onmessage")}}
+  - : Un {{ domxref("EventListener") }} qui est appelé quand un {{domxref("MessageEvent")}} de type `message` arrive dans le worker — i.e. quand un message est envoyé au document parent depuis le worker via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. Le message est stocké dans la propriété {{domxref("MessageEvent.data", "data")}} de l'événement.
+- {{domxref("Worker.onmessageerror")}}
+  - : Un {{event("Event_handlers", "event handler")}} qui indique le code à appeler quand un message {{event("messageerror")}} arrive.
 
-<dl>
-</dl>
+<!---->
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Il hérite de son parent, </em> <em>{{domxref("EventTarget")}},</em> et implémente les propriétés de <em>{{domxref("AbstractWorker")}}.</em></p>
+_Il hérite de son parent,_ _{{domxref("EventTarget")}},_ et implémente les propriétés de _{{domxref("AbstractWorker")}}._
 
-<dl>
- <dt>{{domxref("Worker.postMessage()")}}</dt>
- <dd>Envoie un message, qui est n'importe quel objets JavaScript vers la clôture du worker.</dd>
- <dt>{{domxref("Worker.terminate()")}}</dt>
- <dd>Termine immédiatement le worker. Ceci n'offre aucune chance au worker de finir son opération en cours, il est simplement arrêté une fois pour toute. Les instances de <code><a href="/fr/docs/Web/API/ServiceWorker">ServiceWorker</a></code> ne supportent pas cette méthode.</dd>
-</dl>
+- {{domxref("Worker.postMessage()")}}
+  - : Envoie un message, qui est n'importe quel objets JavaScript vers la clôture du worker.
+- {{domxref("Worker.terminate()")}}
+  - : Termine immédiatement le worker. Ceci n'offre aucune chance au worker de finir son opération en cours, il est simplement arrêté une fois pour toute. Les instances de [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker) ne supportent pas cette méthode.
 
-<h2 id="Évènements">Évènements</h2>
+## Évènements
 
-<dl>
- <dt><code><a href="/fr/docs/Web/API/Worker/message_event">message</a></code></dt>
- <dd>Lorsque le worker parent reçoit un message venant du worker. On peut aussi y accéder via la propriété {{domxref("Worker.onmessage")}}.</dd>
- <dt><code><a href="/fr/docs/Web/API/Worker/messageerror_event">messageerror</a></code></dt>
- <dd>Lorsque le worker reçois un message qu'il ne peut <a href="/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">désérialiser</a>. Aussi disponible à travers la propriété {{domxref("Worker.onmessageerror")}}.</dd>
-</dl>
+- [`message`](/fr/docs/Web/API/Worker/message_event)
+  - : Lorsque le worker parent reçoit un message venant du worker. On peut aussi y accéder via la propriété {{domxref("Worker.onmessage")}}.
+- [`messageerror`](/fr/docs/Web/API/Worker/messageerror_event)
+  - : Lorsque le worker reçois un message qu'il ne peut [désérialiser](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). Aussi disponible à travers la propriété {{domxref("Worker.onmessageerror")}}.
 
-<dl>
- <dt><code><a href="/fr/docs/Web/API/Window/rejectionhandled_event">rejectionhandled</a></code></dt>
- <dd>Levé à chaque fois qu'une {{jsxref("Promise")}} est rejeté, avec ou sans gestionnaire pour intercepter l'exception. Aussi disponible à travers le gestionnaire <code><a href="/fr/docs/Web/API/WindowEventHandlers/onrejectionhandled">onrejectionhandled</a></code>.</dd>
- <dt><code><a href="/fr/docs/Web/API/Window/unhandledrejection_event">unhandledrejection</a></code></dt>
- <dd>Levé quand une {{jsxref("Promise")}} est rejetée sans gestionnaire pour récupérer l'exception. Aussi disponible à travers la propriété <code><a href="/fr/docs/Web/API/WindowEventHandlers/onunhandledrejection">onunhandledrejection</a></code>.</dd>
-</dl>
+<!---->
 
-<h2 id="Exemple">Exemple</h2>
+- [`rejectionhandled`](/fr/docs/Web/API/Window/rejectionhandled_event)
+  - : Levé à chaque fois qu'une {{jsxref("Promise")}} est rejeté, avec ou sans gestionnaire pour intercepter l'exception. Aussi disponible à travers le gestionnaire [`onrejectionhandled`](/fr/docs/Web/API/WindowEventHandlers/onrejectionhandled).
+- [`unhandledrejection`](/fr/docs/Web/API/Window/unhandledrejection_event)
+  - : Levé quand une {{jsxref("Promise")}} est rejetée sans gestionnaire pour récupérer l'exception. Aussi disponible à travers la propriété [`onunhandledrejection`](/fr/docs/Web/API/WindowEventHandlers/onunhandledrejection).
 
-<p>L'extrait de code suivant montre la création d'un objet {{domxref("Worker")}} en utilisant le constructeur {{domxref("Worker.Worker", "Worker()")}} et l'utilisation de l'objet:</p>
+## Exemple
 
-<pre class="brush: js">var monWorker = new Worker("worker.js");
+L'extrait de code suivant montre la création d'un objet {{domxref("Worker")}} en utilisant le constructeur {{domxref("Worker.Worker", "Worker()")}} et l'utilisation de l'objet:
+
+```js
+var monWorker = new Worker("worker.js");
 var premier = document.querySelector('#numero1');
 
 premier.onchange = function() {
   monWorker.postMessage([premiere.valeur, deuxieme.valeur]);
   console.log('Message envoyé au worker');
-}</pre>
+}
+```
 
-<p>Pour un exemple complet, voir <a href="https://github.com/mdn/simple-web-worker">Exemple basique de worker dédié</a> (<a href="http://mdn.github.io/simple-web-worker/">exécuter le worker dédié</a>).</p>
+Pour un exemple complet, voir [Exemple basique de worker dédié](https://github.com/mdn/simple-web-worker) ([exécuter le worker dédié](http://mdn.github.io/simple-web-worker/)).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statuts</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#worker", "Worker")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                    | Statuts                          | Commentaire |
+| ---------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "#worker", "Worker")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_avec_les_navigateurs">Compatibilité avec les navigateurs</h2>
+## Compatibilité avec les navigateurs
 
-<div>
-<p>Voici le support des différents type de worker. Voir les pages de chaque worker pour avoir les particularités.</p>
+Voici le support des différents type de worker. Voir les pages de chaque worker pour avoir les particularités.
 
+{{Compat("api.Worker")}}
 
+### Comportement des erreur Cross-origin sur les worker
 
-<p>{{Compat("api.Worker")}}</p>
+Dans les premières versions des spécifications, charger un scripte worker en cross-origin lève une exception `SecurityError`. Désormais, à la place un évènement {{event("error")}} lancé.
 
-<h3 id="Comportement_des_erreur_Cross-origin_sur_les_worker">Comportement des erreur Cross-origin sur les worker</h3>
+## Voir aussi
 
-<p>Dans les premières versions des spécifications, charger un scripte worker en cross-origin lève une exception <code>SecurityError</code>. Désormais, à la place un évènement {{event("error")}} lancé.</p>
-</div>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/Web/API/Web_Workers_API/Utilisation_des_web_workers">Utiliser les web Worker</a></li>
- <li><a href="/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers">Fonctions et classes disponibles dans les Web Workers</a></li>
- <li>D'autres type de workers: {{ domxref("SharedWorker") }}, et <a href="/fr/docs/Web/API/ServiceWorker_API">ServiceWorker</a>.</li>
- <li>Worker non-standard, spécifique à Gecko: {{ domxref("ChromeWorker") }}, utilisé par les extensions.</li>
-</ul>
+- [Utiliser les web Worker](/fr/docs/Web/API/Web_Workers_API/Utilisation_des_web_workers)
+- [Fonctions et classes disponibles dans les Web Workers](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
+- D'autres type de workers: {{ domxref("SharedWorker") }}, et [ServiceWorker](/fr/docs/Web/API/ServiceWorker_API).
+- Worker non-standard, spécifique à Gecko: {{ domxref("ChromeWorker") }}, utilisé par les extensions.

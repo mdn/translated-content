@@ -12,58 +12,52 @@ tags:
   - Échappement
 translation_of: Web/API/Document/querySelector
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p>La méthode <code><strong>querySelector()</strong></code> de l'interface {{domxref("Document")}} retourne le premier {{domxref("Element")}} dans le document correspondant au sélecteur - ou groupe de sélecteurs - spécifié(s), ou <code>null</code> si aucune correspondance n'est trouvée.</p>
+La méthode **`querySelector()`** de l'interface {{domxref("Document")}} retourne le premier {{domxref("Element")}} dans le document correspondant au sélecteur - ou groupe de sélecteurs - spécifié(s), ou `null` si aucune correspondance n'est trouvée.
 
-<div class="note">
-<p><strong>Note :</strong> La correspondance est effectuée en utilisant le parcours pré-ordonné profondeur-d'abord des nœuds du document, en partant du premier élément dans le balisage du document et en itérant à travers les nœuds en séquence, par ordre du compte de nœuds enfants.</p>
-</div>
+> **Note :** La correspondance est effectuée en utilisant le parcours pré-ordonné profondeur-d'abord des nœuds du document, en partant du premier élément dans le balisage du document et en itérant à travers les nœuds en séquence, par ordre du compte de nœuds enfants.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">element = document.querySelector(sélecteurs);
-</pre>
+```js
+element = document.querySelector(sélecteurs);
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>selectors</code> (sélecteurs)</dt>
- <dd>une  {{domxref("DOMString")}} (<em>chaîne de caractères</em>) qui contient un ou plusieurs sélecteurs à comparer. La chaîne doit être composée de sélecteurs CSS valides ; sinon une exception <code>SYNTAX_ERR</code> est lancée. Voir <a href="/fr/docs/Web/API/Document_Object_Model/Localisation_des_%C3%A9l%C3%A9ments_DOM_avec_les_s%C3%A9lecteurs">Localisation des éléments DOM avec les sélecteurs</a> pour plus d'informations sur les sélecteurs et leur gestion.</dd>
-</dl>
+- `selectors` (sélecteurs)
+  - : une  {{domxref("DOMString")}} (_chaîne de caractères_) qui contient un ou plusieurs sélecteurs à comparer. La chaîne doit être composée de sélecteurs CSS valides ; sinon une exception `SYNTAX_ERR` est lancée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Localisation_des_%C3%A9l%C3%A9ments_DOM_avec_les_s%C3%A9lecteurs) pour plus d'informations sur les sélecteurs et leur gestion.
 
-<div class="note">
-<p><strong>Note :</strong> les caractères qui n'appartiennent pas à la syntaxe standard CSS doivent être échappés par un antislash ("\"). Puisque JavaScript utilise aussi cette barre pour l'échappement, une attention particulière est nécessaire quand des chaînes comprennent ces caractères. Voir {{anch("Caractère spécial d'échappement")}} pour plus d'informations.</p>
-</div>
+> **Note :** les caractères qui n'appartiennent pas à la syntaxe standard CSS doivent être échappés par un antislash ("\\"). Puisque JavaScript utilise aussi cette barre pour l'échappement, une attention particulière est nécessaire quand des chaînes comprennent ces caractères. Voir {{anch("Caractère spécial d'échappement")}} pour plus d'informations.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Un objet {{domxref("Element")}} représentant le premier élément dans le document qui corresponde au jeu de <a href="/fr/docs/Web/CSS/S%C3%A9lecteurs_CSS">sélecteurs CSS</a> spécifié, ou <code>null</code> s'il n'y a pas de correspondances.</p>
+Un objet {{domxref("Element")}} représentant le premier élément dans le document qui corresponde au jeu de [sélecteurs CSS](/fr/docs/Web/CSS/S%C3%A9lecteurs_CSS) spécifié, ou `null` s'il n'y a pas de correspondances.
 
-<p>Si vous avez besoin d'une liste de tous les éléments correspondant aux sélecteurs spécifiés, vous devez utiliser {{domxref("Document.querySelectorAll", "querySelectorAll()")}} à la place.</p>
+Si vous avez besoin d'une liste de tous les éléments correspondant aux sélecteurs spécifiés, vous devez utiliser {{domxref("Document.querySelectorAll", "querySelectorAll()")}} à la place.
 
-<h3 id="Exception">Exception</h3>
+### Exception
 
-<dl>
- <dt><code>SYNTAX_ERR</code></dt>
- <dd>La syntaxe des sélecteurs spécifiés est invalide.</dd>
-</dl>
+- `SYNTAX_ERR`
+  - : La syntaxe des sélecteurs spécifiés est invalide.
 
-<h2 id="Notes">Notes d'utilisation</h2>
+## Notes d'utilisation
 
-<p>Si le sélecteur correspond à un ID et que cet ID est utilisé de façon erronée plusieurs fois dans le document, le premier élément en correspondance est retourné.</p>
+Si le sélecteur correspond à un ID et que cet ID est utilisé de façon erronée plusieurs fois dans le document, le premier élément en correspondance est retourné.
 
-<p>Les <a href="/fr/docs/Web/CSS/Pseudo-elements">pseudo-éléments</a> CSS ne retourneront jamais aucun élément, comme spécifié dans l'<a href="http://www.w3.org/TR/selectors-api/#grammar">API des sélecteurs</a> (en).</p>
+Les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) CSS ne retourneront jamais aucun élément, comme spécifié dans l'[API des sélecteurs](http://www.w3.org/TR/selectors-api/#grammar) (en).
 
-<h3 id="Caractère_spécial_d'échappement">Caractère spécial d'échappement</h3>
+### Caractère spécial d'échappement
 
-<p>Pour faire correspondre un ID (<em>identifiant</em>) ou un sélecteur qui ne respecte pas la syntaxe CSS (en utilisant un point virgule ou un espace par exemple), vous devez échapper le caractère avec un antislash (\). Comme l'antislash est un caractère d'échappement en JavaScript, si vous entrez une chaîne de caractères littérale, vous devez donc l'échapper <em>deux fois</em> (une pour la chaîne de caractères JavaScript et une autre fois pour <code>querySelector</code>) :</p>
+Pour faire correspondre un ID (_identifiant_) ou un sélecteur qui ne respecte pas la syntaxe CSS (en utilisant un point virgule ou un espace par exemple), vous devez échapper le caractère avec un antislash (\\). Comme l'antislash est un caractère d'échappement en JavaScript, si vous entrez une chaîne de caractères littérale, vous devez donc l'échapper _deux fois_ (une pour la chaîne de caractères JavaScript et une autre fois pour `querySelector`) :
 
-<pre class="brush: html">&lt;div id="machin\bidule"&gt;&lt;/div&gt;
-&lt;div id="machin:bidule"&gt;&lt;/div&gt;
+```html
+<div id="machin\bidule"></div>
+<div id="machin:bidule"></div>
 
-&lt;script&gt;
-  console.log('#machin\bidule')               // "#machinidule" <code>(\b est le caractère de contrôle retour arrière)</code>
+<script>
+  console.log('#machin\bidule')               // "#machinidule" (\b est le caractère de contrôle retour arrière)
   document.querySelector('#machin\bidule')    // ne correspond à rien
 
   console.log('#machin\\bidule')              // "#machin\bidule"
@@ -72,55 +66,42 @@ translation_of: Web/API/Document/querySelector
 
   document.querySelector('#machin:bidule')    // ne correspond à rien
   document.querySelector('#machin\\:bidule')  // correspond au second div
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Exemple">Exemples</h2>
+## Exemples
 
-<h3 id="Trouver_le_premier_élément_correspondant_à_une_classe">Trouver le premier élément correspondant à une classe</h3>
+### Trouver le premier élément correspondant à une classe
 
-<p>Dans cet exemple, le premier élément dans le document qui contient la classe "<code>maclasse</code>" est retourné :</p>
+Dans cet exemple, le premier élément dans le document qui contient la classe "`maclasse`" est retourné :
 
-<pre class="brush: js">var el = document.querySelector(".maclasse");</pre>
+```js
+var el = document.querySelector(".maclasse");
+```
 
-<h3 id="Notes">Un sélecteur plus complexe</h3>
+### Un sélecteur plus complexe
 
-<p>Les <em>sélecteurs</em> peuvent également être réellement puissants comme le montre l'exemple suivant. Ici, le premier élément <code>&lt;input name="identifiant"/&gt;</code> dans un <code>&lt;div class="panneau-utilisateur principal"&gt;</code> dans le document est retourné :</p>
+Les _sélecteurs_ peuvent également être réellement puissants comme le montre l'exemple suivant. Ici, le premier élément `<input name="identifiant"/>` dans un `<div class="panneau-utilisateur principal">` dans le document est retourné :
 
-<pre class="brush: js">var el = document.querySelector("div.panneau-utilisateur.principal input[name='<code>identifiant</code>']");</pre>
+```js
+var el = document.querySelector("div.panneau-utilisateur.principal input[name='identifiant']");
+```
 
-<h2 id="Browser_Compatibility">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Selectors API Level 2", "#interface-definitions", "document.querySelector()")}}</td>
-   <td>{{Spec2("Selectors API Level 2")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Selectors API Level 1", "#interface-definitions", "document.querySelector()")}}</td>
-   <td>{{Spec2("Selectors API Level 1")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | Statut                                       | Commentaire         |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------- |
+| {{SpecName("Selectors API Level 2", "#interface-definitions", "document.querySelector()")}} | {{Spec2("Selectors API Level 2")}} |                     |
+| {{SpecName("Selectors API Level 1", "#interface-definitions", "document.querySelector()")}} | {{Spec2("Selectors API Level 1")}} | Définition initiale |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("api.Document.querySelector")}}</div>
+{{Compat("api.Document.querySelector")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Document_Object_Model/Localisation_des_%C3%A9l%C3%A9ments_DOM_avec_les_s%C3%A9lecteurs">Localisation des éléments DOM avec les sélecteurs</a></li>
- <li>{{domxref("document.querySelectorAll()")}} ;</li>
- <li>{{domxref("element.querySelector()")}} ;</li>
- <li>{{domxref("element.querySelectorAll()")}} ;</li>
- <li><a href="/fr/docs/Archive/Add-ons/Code_snippets/QuerySelector">Extraits de code pour <code>querySelector</code></a></li>
-</ul>
+- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Localisation_des_%C3%A9l%C3%A9ments_DOM_avec_les_s%C3%A9lecteurs)
+- {{domxref("document.querySelectorAll()")}} ;
+- {{domxref("element.querySelector()")}} ;
+- {{domxref("element.querySelectorAll()")}} ;
+- [Extraits de code pour `querySelector`](/fr/docs/Archive/Add-ons/Code_snippets/QuerySelector)

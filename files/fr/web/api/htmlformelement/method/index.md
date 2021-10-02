@@ -3,23 +3,21 @@ title: HTMLFormElement.method
 slug: Web/API/HTMLFormElement/method
 translation_of: Web/API/HTMLFormElement/method
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>La propriété <code><strong>HTMLFormElement.method</strong></code> représente la méthode HTTP utilisée pour soumettre un formulaire.</p>
+La propriété **`HTMLFormElement.method`** représente la méthode HTTP utilisée pour soumettre un formulaire.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>string</em> = form.method
-form.method = <em>string</em>
-</pre>
+    string = form.method
+    form.method = string
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="eval">document.forms["myform"].method = "post";
-</pre>
+    document.forms["myform"].method = "post";
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<p><a href="http://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method">HTML 5, Section 4.10.19.6, Form submission</a></p>
+[HTML 5, Section 4.10.19.6, Form submission](http://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method)
 
-<p><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-82545539">DOM Level 2 HTML: method</a></p>
+[DOM Level 2 HTML: method](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-82545539)

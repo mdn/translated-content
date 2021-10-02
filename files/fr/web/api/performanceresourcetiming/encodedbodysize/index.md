@@ -11,27 +11,30 @@ tags:
   - encodedBodySize
 translation_of: Web/API/PerformanceResourceTiming/encodedBodySize
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>La propriété <strong><code>encodedBodySize</code></strong> en lecture seule représente la taille (en octets) reçue de la récupération (HTTP ou cache), du <em>corps de la donnée utile</em>, avant de supprimer tout codage de contenu appliqué.</p>
+La propriété **`encodedBodySize`** en lecture seule représente la taille (en octets) reçue de la récupération (HTTP ou cache), du _corps de la donnée utile_, avant de supprimer tout codage de contenu appliqué.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>Si la ressource est extraite d'un cache d'application ou d'une ressource locale, elle doit renvoyer la taille du corps de la charge utile avant de supprimer tout codage de contenu appliqué.</p>
+Si la ressource est extraite d'un cache d'application ou d'une ressource locale, elle doit renvoyer la taille du corps de la charge utile avant de supprimer tout codage de contenu appliqué.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js"><var>resource</var>.encodedBodySize;</pre>
+```js
+resource.encodedBodySize;
+```
 
-<h3 id="Return_Value">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un <code>number</code> représentant la taille (en octets) reçue de la récupération (HTTP ou cache), du <em>corps de la donnée utile</em>, avant de supprimer tout codage de contenu appliqué.</p>
+Un `number` représentant la taille (en octets) reçue de la récupération (HTTP ou cache), du _corps de la donnée utile_, avant de supprimer tout codage de contenu appliqué.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>Dans l'exemple suivant, la valeur des propriétés de taille de tous les <a href="/fr/docs/Web/API/PerformanceEntry/entryType">types</a> <code>"resource"</code> sont enregistrées.</p>
+Dans l'exemple suivant, la valeur des propriétés de taille de tous les [types](/fr/docs/Web/API/PerformanceEntry/entryType) `"resource"` sont enregistrées.
 
-<pre class="brush: js">function log_sizes(perfEntry){
+```js
+function log_sizes(perfEntry){
   // Vérifie la prise en charge des propriétés PerformanceEntry.*size et imprime leurs valeurs
   // si elles sont prises en charge
   if ("decodedBodySize" in perfEntry)
@@ -52,32 +55,19 @@ translation_of: Web/API/PerformanceResourceTiming/encodedBodySize
 function check_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
   let p = performance.getEntriesByType("resource");
-  for (let i = 0; i &lt; p.length; i++) {
+  for (let i = 0; i < p.length; i++) {
     log_sizes(p[i]);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Resource Timing 2',
-        '#dom-performanceresourcetiming-encodedbodysize', 'encodedBodySize')}}</td>
-      <td>{{Spec2('Resource Timing 2')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                        | Statut                                   | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('Resource Timing 2',
+        '#dom-performanceresourcetiming-encodedbodysize', 'encodedBodySize')}} | {{Spec2('Resource Timing 2')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceResourceTiming.encodedBodySize")}}</p>
+{{Compat("api.PerformanceResourceTiming.encodedBodySize")}}

@@ -11,50 +11,33 @@ tags:
   - Reference
 translation_of: Web/API/IntersectionObserver/disconnect
 ---
-<div>{{APIRef("Intersection Observer API")}}</div>
+{{APIRef("Intersection Observer API")}}
 
-<p>La méthode <code><strong>disconnect()</strong></code>, rattachée à l'interface <a href="/fr/docs/Web/API/IntersectionObserver"><code>IntersectionObserver</code></a>, arrête l'observation des changements de visibilité de l'ensemble des éléments cibles.</p>
+La méthode **`disconnect()`**, rattachée à l'interface [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver), arrête l'observation des changements de visibilité de l'ensemble des éléments cibles.
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>intersectionObserver</var>.disconnect();</pre>
+    intersectionObserver.disconnect();
 
-<h3 id="parameters">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="return_value">Valeur de retour</h3>
+### Valeur de retour
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('IntersectionObserver','#dom-intersectionobserver-disconnect','IntersectionObserver.disconnect()')}}
-      </td>
-      <td>{{Spec2('IntersectionObserver')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                        | Statut                                       | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
+| {{SpecName('IntersectionObserver','#dom-intersectionobserver-disconnect','IntersectionObserver.disconnect()')}} | {{Spec2('IntersectionObserver')}} | Définition initiale. |
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IntersectionObserver.disconnect")}}</p>
+{{Compat("api.IntersectionObserver.disconnect")}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/API/IntersectionObserver/observe"><code>observe()</code></a></li>
-  <li><a href="/fr/docs/Web/API/IntersectionObserver/unobserve"><code>unobserve()</code></a></li>
-</ul>
+- [`observe()`](/fr/docs/Web/API/IntersectionObserver/observe)
+- [`unobserve()`](/fr/docs/Web/API/IntersectionObserver/unobserve)

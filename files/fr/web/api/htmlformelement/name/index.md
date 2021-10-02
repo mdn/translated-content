@@ -3,30 +3,28 @@ title: HTMLFormElement.name
 slug: Web/API/HTMLFormElement/name
 translation_of: Web/API/HTMLFormElement/name
 ---
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p>La propriété <code>HTMLFormElement.name</code> représente le nom de l'élément <code>form</code> sous la forme d'une chaîne de caratères.</p>
+La propriété `HTMLFormElement.name` représente le nom de l'élément `form` sous la forme d'une chaîne de caratères.
 
-<p>Si votre {{HTMLElement("Form")}} contient un élément appelé <em>name</em>, alors ce dernier redéfinit la propriété <code>form.name</code>, afin que vous ne puissiez y accéder. Internet Explorer (IE) bloque la définition ou la modification du nom d'un élément créé avec <code>createElement()</code> à partir de la propriété <code>name</code>.</p>
+Si votre {{HTMLElement("Form")}} contient un élément appelé *name*, alors ce dernier redéfinit la propriété `form.name`, afin que vous ne puissiez y accéder. Internet Explorer (IE) bloque la définition ou la modification du nom d'un élément créé avec `createElement()` à partir de la propriété `name`.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>string</em> = form.name
-form.name = <em>string</em></pre>
+    string = form.name
+    form.name = string
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">var form1name = document.getElementById("form1").name;
+```js
+var form1name = document.getElementById("form1").name;
 
 if (form1name != document.form.form1) {
    // browser doesn't support this form of reference
-}</pre>
+}
+```
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/html5/forms.html#dom-form-name">HTML 5, Section 4.10.3, The form Element</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-22051454">DOM Level 2 HTML: name</a></li>
-</ul>
+- [HTML 5, Section 4.10.3, The form Element](http://www.w3.org/TR/html5/forms.html#dom-form-name)
+- [DOM Level 2 HTML: name](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-22051454)

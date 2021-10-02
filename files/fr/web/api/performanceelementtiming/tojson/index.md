@@ -10,59 +10,48 @@ tags:
   - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/toJSON
 ---
-<div>{{APIRef("Element Timing API")}}</div>
+{{APIRef("Element Timing API")}}
 
-<p>La méthode <strong><code>toJSON()</code></strong> de l'interface <a href="/fr/docs/Web/API/PerformanceElementTiming"><code>PerformanceElementTiming</code></a> est un sérialiseur standard. Elle renvoie une représentation JSON des propriétés de l'objet.</p>
+La méthode **`toJSON()`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) est un sérialiseur standard. Elle renvoie une représentation JSON des propriétés de l'objet.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:js">var <var>json</var> = PerformanceElementTiming.toJSON();</pre>
+```js
+var json = PerformanceElementTiming.toJSON();
+```
 
-<h3 id="Returns">Valeur de retour</h3>
+### Valeur de retour
 
-<dl>
-  <dt><code>json</code></dt>
-  <dd>Un objet JSON qui est la sérialisation de l'objet <a href="/fr/docs/Web/API/PerformanceElementTiming"><code>PerformanceElementTiming</code></a>.</dd>
-</dl>
+- `json`
+  - : Un objet JSON qui est la sérialisation de l'objet [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming).
 
-<h2 id="Examples">Exemples</h2>
+## Exemples
 
-<p>Dans cet exemple, l'appel de <code>entry.toJSON()</code> renvoie une représentation JSON de l'objet <a href="/fr/docs/Web/API/PerformanceElementTiming"><code>PerformanceElementTiming</code></a>, avec les informations sur l'élément image.</p>
+Dans cet exemple, l'appel de `entry.toJSON()` renvoie une représentation JSON de l'objet [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming), avec les informations sur l'élément image.
 
-<pre class="brush:html">&lt;img src="image.jpg" alt="une belle image" elementtiming="big-image" id="myImage"&gt;</pre>
+```html
+<img src="image.jpg" alt="une belle image" elementtiming="big-image" id="myImage">
+```
 
-<pre class="brush:js">const <var>observer</var> = new PerformanceObserver((list) => {
-  let <var>entries</var> = list.getEntries().forEach(function (entry) {
+```js
+const observer = new PerformanceObserver((list) => {
+  let entries = list.getEntries().forEach(function (entry) {
     if (entry.identifier === "big-image") {
       console.log(entry.toJSON());
     }
   });
 });
-observer.observe({ entryTypes: ["element"] });</pre>
+observer.observe({ entryTypes: ["element"] });
+```
 
-<div class="note">
-  <p><strong>Note :</strong> Cet exemple utilise l'interface <a href="/fr/docs/Web/API/PerformanceObserver"><code>PerformanceObserver</code></a> pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément <a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>PerformanceEntry.entryType</code></a> afin d'utiliser l'interface <code>PerformanceElementTiming</code>.</p>
-</div>
+> **Note :** Cet exemple utilise l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) afin d'utiliser l'interface `PerformanceElementTiming`.
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Element Timing API','#dom-performanceelementtiming-tojson','PerformanceElementTiming.toJson()')}}</td>
-      <td>{{Spec2('Element Timing API')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                    | Statut                                   | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
+| {{SpecName('Element Timing API','#dom-performanceelementtiming-tojson','PerformanceElementTiming.toJson()')}} | {{Spec2('Element Timing API')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceElementTiming.toJSON")}}</p>
+{{Compat("api.PerformanceElementTiming.toJSON")}}

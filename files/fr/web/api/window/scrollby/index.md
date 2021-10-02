@@ -8,49 +8,32 @@ tags:
   - Référence(2)
 translation_of: Web/API/Window/scrollBy
 ---
-<p>{{ APIRef() }}</p>
+{{ APIRef() }}
 
-<p>Fait défiler le document dans la fenêtre du nombre de pixels passé en paramètre.</p>
+Fait défiler le document dans la fenêtre du nombre de pixels passé en paramètre.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval">window.scrollBy(<em>X</em>, <em>Y</em>);
-</pre>
+    window.scrollBy(X, Y);
 
-<h3 id="Parameters">Paramètres</h3>
+### Paramètres
 
-<ul>
- <li><code>X</code> est le nombre en pixels pour le défilement horizontal.</li>
- <li><code>Y</code> est le nombre en pixels pour le défilement vertical.</li>
-</ul>
+- `X` est le nombre en pixels pour le défilement horizontal.
+- `Y` est le nombre en pixels pour le défilement vertical.
 
-<p>Des coordonnées positives feront défiler à droite et vers le bas de la page. Des coordonnées négatives feront défiler à gauche et vers le haut de la page. </p>
+Des coordonnées positives feront défiler à droite et vers le bas de la page. Des coordonnées négatives feront défiler à gauche et vers le haut de la page.
 
-<h2 id="Example">Exemples</h2>
+## Exemples
 
-<pre class="eval">// fait défiler d'une page
-window.scrollBy(0, window.innerHeight);
-</pre>
+    // fait défiler d'une page
+    window.scrollBy(0, window.innerHeight);
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p><a href="/fr/docs/DOM/Window.scrollBy">window.scrollBy</a> fait défiler en fonction d'un nombre précis, alors que <a href="/fr/docs/DOM/Window.scroll">window.scroll</a> fait défiler vers une position absolue dans le document. Voir aussi <a href="/fr/docs/DOM/Window.scrollByLines">window.scrollByLines</a>, <a href="/fr/docs/DOM/Window.scrollByPages">window.scrollByPages</a></p>
+[window.scrollBy](/fr/docs/DOM/Window.scrollBy) fait défiler en fonction d'un nombre précis, alors que [window.scroll](/fr/docs/DOM/Window.scroll) fait défiler vers une position absolue dans le document. Voir aussi [window.scrollByLines](/fr/docs/DOM/Window.scrollByLines), [window.scrollByPages](/fr/docs/DOM/Window.scrollByPages)
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM View', '#dom-window-scrollby', 'window.scrollBy()') }}</td>
-   <td>{{ Spec2('CSSOM View') }}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                           | Commentaire          |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{ SpecName('CSSOM View', '#dom-window-scrollby', 'window.scrollBy()') }} | {{ Spec2('CSSOM View') }} | Définition initiale. |

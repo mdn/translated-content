@@ -7,102 +7,84 @@ tags:
   - Selector
 translation_of: Web/API/Element/matches
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><code>La méthode<strong> </strong></code><strong><code>element.matches()</code></strong> renvoie <code>true</code> lorsque l'élément peut être sélectionné par le sélecteur défini par la chaîne passée en paramêtre; sinon, elle renvoie <code>false</code>.</p>
+`La méthode `**`element.matches()`** renvoie `true` lorsque l'élément peut être sélectionné par le sélecteur défini par la chaîne passée en paramêtre; sinon, elle renvoie `false`.
 
-<div class="warning">
-<p><strong>Attention :</strong> Certains navigateurs implémentent cette méthode sous le nom <code>matchesSelector()</code> non-standardisé et préfixé.</p>
-</div>
+> **Attention :** Certains navigateurs implémentent cette méthode sous le nom `matchesSelector()` non-standardisé et préfixé.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>var result</em> = <em>element</em>.matches(selectorString);
-</pre>
+    var result = element.matches(selectorString);
 
-<ul>
- <li><code>result</code> contient la valeur retournée <code>true</code> ou <code>false</code>.</li>
- <li><code>selectorString</code> est une chaîne définissant le sélecteur à tester sur l'élément.</li>
+- `result` contient la valeur retournée `true` ou `false`.
+- `selectorString` est une chaîne définissant le sélecteur à tester sur l'élément.
+
+## Exemple
+
+```html
+<ul id="birds">
+  <li>perroquet amazone</li>
+  <li class="endangered">aigle des Philippines</li>
+  <li>pélican blanc</li>
 </ul>
 
-<h2 id="Example">Exemple</h2>
-
-<pre class="brush: html">&lt;ul id="birds"&gt;
-  &lt;li&gt;perroquet amazone&lt;/li&gt;
-  &lt;li class="endangered"&gt;aigle des Philippines&lt;/li&gt;
-  &lt;li&gt;pélican blanc&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   var birds = document.getElementsByTagName('li');
 
-  for (var i = 0; i &lt; birds.length; i++) {
+  for (var i = 0; i < birds.length; i++) {
     if (birds[i].matches('.endangered')) {
       console.log('Le - ' + birds[i].textContent + '- est en voie de disparition !');
     }
   }
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>Ce code affichera l'alerte "Le - aigle des Philippines - est en voie de disparition !" sur la console, puisque l'élèment possède l'attribut<code> class </code>de valeur <code>endangered</code>.</p>
+Ce code affichera l'alerte "Le - aigle des Philippines - est en voie de disparition !" sur la console, puisque l'élèment possède l'attribut` class `de valeur `endangered`.
 
-<h2 id="Exceptions">Exceptions</h2>
+## Exceptions
 
-<dl>
- <dt><code>SYNTAX_ERR</code></dt>
- <dd>Lorsque la chaîne passée en paramêtre défini sélecteur invalide.</dd>
-</dl>
+- `SYNTAX_ERR`
+  - : Lorsque la chaîne passée en paramêtre défini sélecteur invalide.
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Pour les navigateurs qui ne supportent pas <code>Element.matches()</code> ou <code>Element.matchesSelector()</code>, mais fournissent le support de<code> document.querySelectorAll()</code>, il existe un <em>polyfill</em> :</p>
+Pour les navigateurs qui ne supportent pas `Element.matches()` ou `Element.matchesSelector()`, mais fournissent le support de` document.querySelectorAll()`, il existe un _polyfill_ :
 
-<pre>if (!Element.prototype.matches) {
-    Element.prototype.matches =
-        Element.prototype.matchesSelector ||
-        Element.prototype.mozMatchesSelector ||
-        Element.prototype.msMatchesSelector ||
-        Element.prototype.oMatchesSelector ||
-        Element.prototype.webkitMatchesSelector ||
-        function(s) {
-            var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-                i = matches.length;
-            while (--i &gt;= 0 &amp;&amp; matches.item(i) !== this) {}
-            return i &gt; -1;
-        };
-}</pre>
+    if (!Element.prototype.matches) {
+        Element.prototype.matches =
+            Element.prototype.matchesSelector ||
+            Element.prototype.mozMatchesSelector ||
+            Element.prototype.msMatchesSelector ||
+            Element.prototype.oMatchesSelector ||
+            Element.prototype.webkitMatchesSelector ||
+            function(s) {
+                var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+                    i = matches.length;
+                while (--i >= 0 && matches.item(i) !== this) {}
+                return i > -1;
+            };
+    }
 
-<p>Cependant, étant donné la possibilité de prendre en charge les anciens navigateurs, les éléments suivants devraient suffire pour la plupart (sinon tous) des cas pratiques (c'est-à-dire le support IE9 +).</p>
+Cependant, étant donné la possibilité de prendre en charge les anciens navigateurs, les éléments suivants devraient suffire pour la plupart (sinon tous) des cas pratiques (c'est-à-dire le support IE9 +).
 
-<pre class="brush: html">if (!Element.prototype.matches) {
+```html
+if (!Element.prototype.matches) {
     Element.prototype.matches = Element.prototype.msMatchesSelector;
-}</pre>
+}
+```
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-matches', 'Element.prototype.matches')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Status                           |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-element-matches', 'Element.prototype.matches')}} | {{Spec2('DOM WHATWG')}} |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.Element.matches")}}
 
+## Voir aussi
 
-<p>{{Compat("api.Element.matches")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Les_s%C3%A9lecteurs">La syntaxe des sélecteurs</a></li>
- <li>autres méthodes qui utilisent les sélecteurs : {{domxref("element.querySelector()")}} et {{domxref("element.closest()")}}.</li>
-</ul>
+- [La syntaxe des sélecteurs](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Les_s%C3%A9lecteurs)
+- autres méthodes qui utilisent les sélecteurs : {{domxref("element.querySelector()")}} et {{domxref("element.closest()")}}.

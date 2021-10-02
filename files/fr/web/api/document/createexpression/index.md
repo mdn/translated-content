@@ -8,24 +8,21 @@ tags:
   - XPath
 translation_of: Web/API/Document/createExpression
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>Cette méthode compile une <code><a href="/fr/docs/Web/API/XPathExpression">XPathExpression</a></code> qui peut ensuite être utilisée pour des évaluations (répétées).</p>
+Cette méthode compile une [`XPathExpression`](/fr/docs/Web/API/XPathExpression) qui peut ensuite être utilisée pour des évaluations (répétées).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>xpathExpr</em> = <em>document</em>.createExpression(<em>xpathText</em>, <em>namespaceURLMapper</em>);
-</pre>
+    xpathExpr = document.createExpression(xpathText, namespaceURLMapper);
 
-<h3 id="Arguments">Paramètres</h3>
+### Paramètres
 
-<ul>
- <li>String (<em>chaîne de caractères</em>) <code>xpathText</code> (l'expression XPath à compiler)</li>
- <li>Fonction <code>namespaceURLMapper</code> (mappe un préfixe d'espace de noms à une URL d'espace de noms (ou null si aucun n'est nécessaire)).</li>
-</ul>
+- String (_chaîne de caractères_) `xpathText` (l'expression XPath à compiler)
+- Fonction `namespaceURLMapper` (mappe un préfixe d'espace de noms à une URL d'espace de noms (ou null si aucun n'est nécessaire)).
 
-<p>{{ Fx_minversion_note(3, "Avant Firefox 3, vous pouviez appeler cette méthode sur des documents autres que celui que vous aviez prévu d'exécuter avec XPath. Sous Firefox 3, vous devez l'appeler sur le même document.") }}</p>
+{{ Fx_minversion_note(3, "Avant Firefox 3, vous pouviez appeler cette méthode sur des documents autres que celui que vous aviez prévu d'exécuter avec XPath. Sous Firefox 3, vous devez l'appeler sur le même document.") }}
 
-<h3 id="Return">Valeur retournée</h3>
+### Valeur retournée
 
-<p><a href="/fr/docs/Web/API/XPathExpression">XPathExpression</a></p>
+[XPathExpression](/fr/docs/Web/API/XPathExpression)

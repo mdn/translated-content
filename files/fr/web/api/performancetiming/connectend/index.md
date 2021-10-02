@@ -14,44 +14,29 @@ tags:
   - connectEnd
 translation_of: Web/API/PerformanceTiming/connectEnd
 ---
-<p>{{APIRef("Navigation Timing")}}</p>
+{{APIRef("Navigation Timing")}}
 
-<div class="warning">
-  <p><strong>Attention :</strong> Cette interface est dépréciée dans la spécification <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2</a>. Veuillez utiliser l'interface <a href="/fr/docs/Web/API/PerformanceNavigationTiming"><code>PerformanceNavigationTiming</code></a> à la place.</p>
-</div>
+> **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
 
-<p>L'ancienne propriété en lecture seule <code><strong>connectEnd</code></strong> retourne un <code>unsigned long long</code> représentant le moment, en millisecondes depuis l'époque UNIX, où la connexion a été ouverte en réseau. Si la couche de transport signale une erreur et que l'établissement de la connexion est recommencé, l'heure de fin du dernier établissement de la connexion est donnée. Si une connexion persistante est utilisée, la valeur sera la même que <a href="/fr/docs/Web/API/PerformanceTiming/fetchStart"><code>PerformanceTiming.fetchStart</code></a>. Une connexion est considérée comme ouverte lorsque toute poignée de main de connexion sécurisée, ou authentification SOCKS, est terminée.</p>
+L'ancienne propriété en lecture seule **`connectEnd`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, où la connexion a été ouverte en réseau. Si la couche de transport signale une erreur et que l'établissement de la connexion est recommencé, l'heure de fin du dernier établissement de la connexion est donnée. Si une connexion persistante est utilisée, la valeur sera la même que [`PerformanceTiming.fetchStart`](/fr/docs/Web/API/PerformanceTiming/fetchStart). Une connexion est considérée comme ouverte lorsque toute poignée de main de connexion sécurisée, ou authentification SOCKS, est terminée.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">let <var>time</var> = <var>performanceTiming</var>.connectEnd;</pre>
+```js
+let time = performanceTiming.connectEnd;
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Navigation Timing', '#dom-performancetiming-connectend',
-        'PerformanceTiming.connectEnd')}}</td>
-      <td>{{Spec2('Navigation Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                        | Statut                                   | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('Navigation Timing', '#dom-performancetiming-connectend',
+        'PerformanceTiming.connectEnd')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceTiming.connectEnd")}}</p>
+{{Compat("api.PerformanceTiming.connectEnd")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>L'interface <a href="/fr/docs/Web/API/PerformanceTiming"><code>PerformanceTiming</code></a> à laquelle elle appartient.</li>
-</ul>
+- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.

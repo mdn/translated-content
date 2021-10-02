@@ -9,46 +9,44 @@ tags:
   - Propriétés
 translation_of: Web/API/NodeList/length
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<h2 id="Résumé">Résumé</h2>
+## Résumé
 
-<p><code>length</code> renvoie le nombre d'éléments dans une <code>NodeList</code>.</p>
+`length` renvoie le nombre d'éléments dans une `NodeList`.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js"><em>numItems</em> =<em>nodeList</em>.length
-</pre>
+```js
+numItems =nodeList.length
+```
 
-<ul>
- <li><code>numItems</code> est un entier (<em>integer</em>), valeur représentant le nombre d'éléments dans une <code>NodeList</code>.</li>
-</ul>
+- `numItems` est un entier (_integer_), valeur représentant le nombre d'éléments dans une `NodeList`.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">// tous les paragraphes dans le document
+```js
+// tous les paragraphes dans le document
 var items = document.getElementsByTagName("p");
 // pour chaque élément de la liste,
 // ajouter l'élément entier en tant que chaîne de HTML
 var gross = "";
-for (var i = 0; i &lt; items.length; i++) {
+for (var i = 0; i < items.length; i++) {
   gross += items[i].innerHTML;
 }
 // gross est maintenant tout le HTML pour les paragraphes
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Malgré l'emplacement de cette page dans la référence, <code>length</code> n'est pas une propriété d'<a href="en/DOM/element">Element</a>, mais plutôt d'une <code>NodeList</code>. Les objets NodeList sont retournés à partir des méthodes DOM comme <a href="en/DOM/document.getElementsByTagName">document.getElementsByTagName</a>.</p>
+Malgré l'emplacement de cette page dans la référence, `length` n'est pas une propriété d'[Element](en/DOM/element), mais plutôt d'une `NodeList`. Les objets NodeList sont retournés à partir des méthodes DOM comme [document.getElementsByTagName](en/DOM/document.getElementsByTagName).
 
-<p><code>length</code> est une propriété très commune dans la programmation de DOM. Il est très courant de tester la longueur d'une liste (pour voir si elle existe) et de l'utiliser comme itérateur dans une boucle for, comme dans l'exemple ci-dessus.</p>
+`length` est une propriété très commune dans la programmation de DOM. Il est très courant de tester la longueur d'une liste (pour voir si elle existe) et de l'utiliser comme itérateur dans une boucle for, comme dans l'exemple ci-dessus.
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<p><a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-203510337">length</a></p>
+[length](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-203510337)
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("api.NodeList.length")}}</p>
+{{Compat("api.NodeList.length")}}

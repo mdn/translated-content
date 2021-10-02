@@ -3,31 +3,31 @@ title: CSSStyleDeclaration.cssText
 slug: Web/API/CSSStyleDeclaration/cssText
 translation_of: Web/API/CSSStyleDeclaration/cssText
 ---
-<p>A ne pas confondre avec la règle de style de feuille de style {{domxref("CSSRule.cssText")}}.</p>
+A ne pas confondre avec la règle de style de feuille de style {{domxref("CSSRule.cssText")}}.
 
-<div>{{APIRef("CSSOM") }}</div>
+{{APIRef("CSSOM") }}
 
-<p><strong>cssText</strong> retourne ou définit seulement le texte de la déclaration de style <strong>inline</strong> de l'élément. Pour pouvoir définir dynamiquement une règle d'une <strong>stylesheet</strong>, voir <a href="/fr-FR/docs/DOM/Using_dynamic_styling_information">Utilisation d'informations de mise en forme dynamiques.</a></p>
+**cssText** retourne ou définit seulement le texte de la déclaration de style **inline** de l'élément. Pour pouvoir définir dynamiquement une règle d'une **stylesheet**, voir [Utilisation d'informations de mise en forme dynamiques.](/fr-FR/docs/DOM/Using_dynamic_styling_information)
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js"><em>chaine</em> = elem.style.cssText
-</pre>
+```js
+chaine = elem.style.cssText
+```
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: html"><code>&lt;span id="s1" style="</code>color: red;"<code>&gt;
+```html
+<span id="s1" style="color: red;">
 Du texte
-&lt;/span&gt;</code>
+</span>
 
-&lt;script&gt;
+<script>
   var elem = document.getElementById("s1");
   alert(elem.style.cssText); // "color: red;"
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration">DOM Level 2 Style CSS - Interface CSSStyleDeclaration (introduced in DOM Level 2)</a></li>
-</ul>
+- [DOM Level 2 Style CSS - Interface CSSStyleDeclaration (introduced in DOM Level 2)](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration)

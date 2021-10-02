@@ -3,41 +3,26 @@ title: VideoTrack.id
 slug: Web/API/VideoTrack/id
 translation_of: Web/API/VideoTrack/id
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>La propriété <code>id</code> contient une chaîne qui identifie de manière unique une piste représentée par {{domxref("VideoTrack")}}. Cet ID peut être utilisé avec la méthode {{domxref("VideoTrackList.getTrackById()")}} pour localiser une piste spécifique dans le media associé à l'élément media.</p>
+La propriété `id` contient une chaîne qui identifie de manière unique une piste représentée par {{domxref("VideoTrack")}}. Cet ID peut être utilisé avec la méthode {{domxref("VideoTrackList.getTrackById()")}} pour localiser une piste spécifique dans le media associé à l'élément media.
 
-<p>Cet ID peut aussi être utilisé comme un fragement d'URL pour charger une piste (si le media supporte les fragments de media).</p>
+Cet ID peut aussi être utilisé comme un fragement d'URL pour charger une piste (si le media supporte les fragments de media).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <em>trackID</em> = <em>VideoTrack</em>.id;</pre>
+    var trackID = VideoTrack.id;
 
-<p>Valeur</p>
+Valeur
 
-<p>Une {{domxref("DOMString")}} qui identifie la piste, utilisable par la suite pour l'appel de {{domxref("VideoTrackList.getTrackById", "getTrackById()")}} sur une {{domxref("VideoTrackList")}} tel que spécifié par la propriété {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}} d'un élément media.</p>
+Une {{domxref("DOMString")}} qui identifie la piste, utilisable par la suite pour l'appel de {{domxref("VideoTrackList.getTrackById", "getTrackById()")}} sur une {{domxref("VideoTrackList")}} tel que spécifié par la propriété {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}} d'un élément media.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-videotrack-id', 'VideoTrack: id')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                           | Comment |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', '#dom-videotrack-id', 'VideoTrack: id')}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("api.VideoTrack.id")}}</p>
+{{Compat("api.VideoTrack.id")}}

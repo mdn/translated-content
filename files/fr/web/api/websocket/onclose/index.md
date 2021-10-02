@@ -3,25 +3,26 @@ title: WebSocket.onclose
 slug: Web/API/WebSocket/onclose
 browser-compat: api.WebSocket.onclose
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p>La propriété <code><strong>WebSocket.onclose</strong></code> est un <a href="/fr/docs/Web/Events/Event_handlers">gestionnaire d'évènement</a> invoqué lorsque l'état <a href="/fr/docs/Web/API/WebSocket/readyState"><code>readyState</code></a> de la connexion WebSocket change de valeur pour passer à <a href="/fr/docs/Web/API/WebSocket/readyState"><code>CLOSED</code></a>. Ce gestionnaire est appelé avec un paramètre <a href="/fr/docs/Web/API/CloseEvent"><code>CloseEvent</code></a>.</p>
+La propriété **`WebSocket.onclose`** est un [gestionnaire d'évènement](/fr/docs/Web/Events/Event_handlers) invoqué lorsque l'état [`readyState`](/fr/docs/Web/API/WebSocket/readyState) de la connexion WebSocket change de valeur pour passer à [`CLOSED`](/fr/docs/Web/API/WebSocket/readyState). Ce gestionnaire est appelé avec un paramètre [`CloseEvent`](/fr/docs/Web/API/CloseEvent).
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
+```js
 unWebSocket.onclose = function(event) {
   console.log("La WebSocket est désormais fermée.");
-};</pre>
+};
+```
 
-<h2 id="value">Valeur</h2>
+## Valeur
 
-<p>Une fonction <a href="/fr/docs/Web/API/EventListener"><code>EventListener</code></a>.</p>
+Une fonction [`EventListener`](/fr/docs/Web/API/EventListener).
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}

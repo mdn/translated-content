@@ -9,35 +9,34 @@ tags:
   - Performance web
 translation_of: Web/API/Performance/clearMarks
 ---
-<div>{{APIRef("User Timing API")}}</div>
+{{APIRef("User Timing API")}}
 
-<p>La méthode <strong><code>clearMarks()</code></strong> supprime les <em>marqueurs nommés</em> du tampon d'entrée des performances du navigateur. Si la méthode est appelée sans arguments, toutes les {{domxref("PerformanceEntry", "entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType", "entryType")}} de « <code>mark</code> » seront supprimées du tampon d'entrée de performance.</p>
+La méthode **`clearMarks()`** supprime les _marqueurs nommés_ du tampon d'entrée des performances du navigateur. Si la méthode est appelée sans arguments, toutes les {{domxref("PerformanceEntry", "entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType", "entryType")}} de « `mark` » seront supprimées du tampon d'entrée de performance.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
-  <em>performance</em>.clearMarks();
-  <em>performance</em>.clearMarks(name);
-</pre>
+```js
+  performance.clearMarks();
+  performance.clearMarks(name);
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
-  <dt>name {{optional_inline}}</dt>
-  <dd>Un {{domxref("DOMString")}} représentant le nom de l'horodatage. Si cet argument est omis, toutes les {{domxref("PerformanceEntry","entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType","entryType")}} de « <code>mark</code> » seront supprimés.</dd>
-</dl>
+- name {{optional_inline}}
+  - : Un {{domxref("DOMString")}} représentant le nom de l'horodatage. Si cet argument est omis, toutes les {{domxref("PerformanceEntry","entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType","entryType")}} de « `mark` » seront supprimés.
 
-<h3 id="Return_value">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Aucune.</p>
+Aucune.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>L'exemple suivant montre les deux utilisations de la méthode <code>clearMarks()</code>.</p>
+L'exemple suivant montre les deux utilisations de la méthode `clearMarks()`.
 
-<pre class="brush: js">// Créé une petite aide pour montrer combien d'entrées PerformanceMark il y a.
+```js
+// Créé une petite aide pour montrer combien d'entrées PerformanceMark il y a.
 function logMarkCount() {
   console.log(
     "J'ai trouvé autant d'entrées : " + performance.getEntriesByType("mark").length
@@ -61,33 +60,16 @@ logMarkCount() // "J'ai trouvé autant d'entrées : 4"
 // Supprime toutes les entrées de PerformanceMark.
 performance.clearMarks();
 logMarkCount() // "J'ai trouvé autant d'entrées : 0"
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('User Timing Level 2', '#dom-performance-clearmarks',
-        'clearMarks()')}}</td>
-      <td>{{Spec2('User Timing Level 2')}}</td>
-      <td>Clarification de <code>clearMarks()</code>.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('User Timing', '#dom-performance-clearmarks', 'clearMarks()')}}</td>
-      <td>{{Spec2('User Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                            | Statut                                       | Commentaire                      |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------------------- |
+| {{SpecName('User Timing Level 2', '#dom-performance-clearmarks',
+        'clearMarks()')}} | {{Spec2('User Timing Level 2')}} | Clarification de `clearMarks()`. |
+| {{SpecName('User Timing', '#dom-performance-clearmarks', 'clearMarks()')}}                     | {{Spec2('User Timing')}}             | Définition initiale.             |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Performance.clearMarks")}}</p>
+{{Compat("api.Performance.clearMarks")}}

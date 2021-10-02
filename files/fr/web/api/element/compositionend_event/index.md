@@ -4,47 +4,50 @@ slug: Web/API/Element/compositionend_event
 translation_of: Web/API/Element/compositionend_event
 original_slug: Web/Events/compositionend
 ---
-<p>L'événement <strong><code>compositionend</code></strong> est déclenché lorsque la composition d'un texte via {{glossary("input method editor", "méthode de saisie")}} est terminée ou annulée (démarre avec des caractères spéciaux qui requièrent une séquence de touches et d'autres entrées telles que la reconnaissance vocale ou la suggestion de mot sur mobile).</p>
+L'événement **`compositionend`** est déclenché lorsque la composition d'un texte via {{glossary("input method editor", "méthode de saisie")}} est terminée ou annulée (démarre avec des caractères spéciaux qui requièrent une séquence de touches et d'autres entrées telles que la reconnaissance vocale ou la suggestion de mot sur mobile).
 
-<p>Par exemple, cette événement pourrait être déclanché quand un utilisateur saisie un caractère chinois en utilisant la méthode de saisie <a href="https://en.wikipedia.org/wiki/Pinyin">Pinyin</a>.</p>
+Par exemple, cette événement pourrait être déclanché quand un utilisateur saisie un caractère chinois en utilisant la méthode de saisie [Pinyin](https://en.wikipedia.org/wiki/Pinyin).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Se propage/remonte dans le DOM</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th scope="row">Annulable</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("CompositionEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Propriété pour la gestion d'évènement</th>
-   <td>Aucune</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Se propage/remonte dans le DOM</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th scope="row">Annulable</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("CompositionEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Propriété pour la gestion d'évènement</th>
+      <td>Aucune</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="Html">Html</h3>
+### Html
 
-<pre class="brush: html">&lt;div class="control"&gt;
-  &lt;label for="name"&gt;Sur macOS, cliquez sur la boîte de texte,&lt;br&gt; puis appuyez sur &lt;kbd&gt;option&lt;/kbd&gt; + &lt;kbd&gt;`&lt;/kbd&gt;, puis &lt;kbd&gt;a&lt;/kbd&gt;:&lt;/label&gt;
-  &lt;input type="text" id="example" name="example"&gt;
-&lt;/div&gt;
+```html
+<div class="control">
+  <label for="name">Sur macOS, cliquez sur la boîte de texte,<br> puis appuyez sur <kbd>option</kbd> + <kbd>`</kbd>, puis <kbd>a</kbd>:</label>
+  <input type="text" id="example" name="example">
+</div>
 
-&lt;div class="event-log"&gt;
-  &lt;label&gt;Log d'événement:&lt;/label&gt;
-  &lt;textarea readonly class="event-log-contents" rows="8" cols="25"&gt;&lt;/textarea&gt;
-  &lt;button class="clear-log"&gt;Effacer&lt;/button&gt;
-&lt;/div&gt;</pre>
+<div class="event-log">
+  <label>Log d'événement:</label>
+  <textarea readonly class="event-log-contents" rows="8" cols="25"></textarea>
+  <button class="clear-log">Effacer</button>
+</div>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   padding: .2rem;
   display: grid;
   grid-template-areas: "control  log";
@@ -75,15 +78,16 @@ kbd {
   padding: 1px 2px 0;
   border: 1px solid black;
 }
-</pre>
+```
 
-<h3 id="JS">JS</h3>
+### JS
 
-<pre class="brush: js">const inputElement = document.querySelector('input[type="text"]');
+```js
+const inputElement = document.querySelector('input[type="text"]');
 const log = document.querySelector('.event-log-contents');
 const clearLog = document.querySelector('.clear-log');
 
-clearLog.addEventListener('click', () =&gt; {
+clearLog.addEventListener('click', () => {
     log.textContent = '';
 });
 
@@ -93,36 +97,24 @@ function handleEvent(event) {
 
 inputElement.addEventListener('compositionstart', handleEvent);
 inputElement.addEventListener('compositionupdate', handleEvent);
-inputElement.addEventListener('compositionend', handleEvent);</pre>
+inputElement.addEventListener('compositionend', handleEvent);
+```
 
-<h3 id="Resultat">Resultat</h3>
+### Resultat
 
-<p>{{ EmbedLiveSample('Exemple', '100%', '180px') }}</p>
+{{ EmbedLiveSample('Exemple', '100%', '180px') }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('UI Events', '#event-type-compositionend')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | Status                       |
+| ------------------------------------------------------------------------ | ---------------------------- |
+| {{SpecName('UI Events', '#event-type-compositionend')}} | {{Spec2('UI Events')}} |
 
-<h2 id="Compatibilités_navigateurs">Compatibilités navigateurs</h2>
+## Compatibilités navigateurs
 
-<p>{{Compat("api.Element.compositionend_event")}}</p>
+{{Compat("api.Element.compositionend_event")}}
 
-<h2 id="Evénements_liés">Evénements liés</h2>
+## Evénements liés
 
-<ul>
- <li>{{Event("compositionstart")}}</li>
- <li>{{Event("compositionupdate")}}</li>
-</ul>
+- {{Event("compositionstart")}}
+- {{Event("compositionupdate")}}

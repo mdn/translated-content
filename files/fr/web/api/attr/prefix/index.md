@@ -8,58 +8,41 @@ tags:
   - Reference
 translation_of: Web/API/Attr/prefix
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>La propriété <strong><code>Attr.prefix </code></strong>en lecture seule renvoie le préfixe de l'espace de noms de l'attribut spécifié ou null si aucun préfixe n'est spécifié</p>
+La propriété **`Attr.prefix `**en lecture seule renvoie le préfixe de l'espace de noms de l'attribut spécifié ou null si aucun préfixe n'est spécifié
 
-<div class="note">
-<p><strong>Note :</strong> Avant DOM4, cette API a été définie dans l'interface {{domxref ("Node")}}.</p>
-</div>
+> **Note :** Avant DOM4, cette API a été définie dans l'interface {{domxref ("Node")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>string</var> = <var>attribute</var>.prefix
-</pre>
+    string = attribute.prefix
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Le code suivant affiche "x" dans la console.</p>
+Le code suivant affiche "x" dans la console.
 
-<pre class="brush:xml">&lt;div x:id="example" onclick="console.log(this.attributes[0].prefix)"/&gt;
-</pre>
+```xml
+<div x:id="example" onclick="console.log(this.attributes[0].prefix)"/>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Cela ne fonctionnera que lorsqu'un analyseur conscient de l'espace de noms est utilisé, c'est-à-dire lorsqu'il s'agit d'un document avec un type MIME XML. Cela ne fonctionnera pas pour les documents HTML.</p>
+Cela ne fonctionnera que lorsqu'un analyseur conscient de l'espace de noms est utilisé, c'est-à-dire lorsqu'il s'agit d'un document avec un type MIME XML. Cela ne fonctionnera pas pour les documents HTML.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-attr-prefix", "Attr.prefix")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | Statut                   | Commentaire         |
+| ------------------------------------------------------------------------ | ------------------------ | ------------------- |
+| {{SpecName("DOM4", "#dom-attr-prefix", "Attr.prefix")}} | {{Spec2("DOM4")}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Attr.prefix")}}</p>
+{{Compat("api.Attr.prefix")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>{{domxref("Attr.namespaceURI")}}</li>
- <li>{{domxref("Attr.localName")}}</li>
- <li>{{domxref("Element.prefix")}}</li>
- <li>{{domxref("Node.prefix")}}</li>
-</ul>
+- {{domxref("Attr.namespaceURI")}}
+- {{domxref("Attr.localName")}}
+- {{domxref("Element.prefix")}}
+- {{domxref("Node.prefix")}}

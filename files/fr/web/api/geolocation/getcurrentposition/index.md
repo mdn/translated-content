@@ -8,34 +8,32 @@ tags:
   - Reference
 translation_of: Web/API/Geolocation/getCurrentPosition
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>La méthode <strong><code>Geolocation.getCurrentPosition()</code></strong> fournit la position actuelle de l'appareil.</p>
+La méthode **`Geolocation.getCurrentPosition()`** fournit la position actuelle de l'appareil.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">navigator.geolocation.getCurrentPosition(<em>success[</em>, <em>error[</em>, <em>[options]]</em>)</pre>
+    navigator.geolocation.getCurrentPosition(success[, error[, [options]])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>success</code></dt>
- <dd>Une fonction de rappel qui prend un objet {{domxref("Position")}} comme argument.</dd>
- <dt><code>error</code> {{optional_inline}}</dt>
- <dd>Une fonction de rappel qui prend un objet {{domxref("PositionError")}} comme argument.</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>Un objet {{domxref("PositionOptions")}} optionnel. Les options décrites par cet objet sont :
- <ul>
-  <li><code>maximumAge</code> : un entier qui exprime une durée en millisecondes ou l'infini pour indiquer la durée maximale pendant laquelle mettre en cache la position.</li>
-  <li><code>timeout</code> : un entier qui exprime la durée, en millisecondes, avant que la fonction de rappel <code>error</code> soit appelé. Si cette propriété vaut <code>0</code>, la fonction d'erreur ne sera jamais appelée.</li>
-  <li><code>enableHighAccuracy</code> : un booléen qui indique si une précision élevée est requise.</li>
- </ul>
- </dd>
-</dl>
+- `success`
+  - : Une fonction de rappel qui prend un objet {{domxref("Position")}} comme argument.
+- `error` {{optional_inline}}
+  - : Une fonction de rappel qui prend un objet {{domxref("PositionError")}} comme argument.
+- `options` {{optional_inline}}
 
-<h2 id="Exemples">Exemples</h2>
+  - : Un objet {{domxref("PositionOptions")}} optionnel. Les options décrites par cet objet sont :
 
-<pre class="brush: js">var options = {
+    - `maximumAge` : un entier qui exprime une durée en millisecondes ou l'infini pour indiquer la durée maximale pendant laquelle mettre en cache la position.
+    - `timeout` : un entier qui exprime la durée, en millisecondes, avant que la fonction de rappel `error` soit appelé. Si cette propriété vaut `0`, la fonction d'erreur ne sera jamais appelée.
+    - `enableHighAccuracy` : un booléen qui indique si une précision élevée est requise.
+
+## Exemples
+
+```js
+var options = {
   enableHighAccuracy: true,
   timeout: 5000,
   maximumAge: 0
@@ -55,34 +53,19 @@ function error(err) {
 }
 
 navigator.geolocation.getCurrentPosition(success, error, options);
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Geolocation')}}</td>
-   <td>{{Spec2('Geolocation')}}</td>
-   <td>Spécification initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                        | État                             | Commentaires            |
+| ------------------------------------ | -------------------------------- | ----------------------- |
+| {{SpecName('Geolocation')}} | {{Spec2('Geolocation')}} | Spécification initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Geolocation.getCurrentPosition")}}</p>
+{{Compat("api.Geolocation.getCurrentPosition")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation">Utiliser la géolocalisation</a></li>
- <li>{{domxref("Navigator.geolocation")}}</li>
-</ul>
+- [Utiliser la géolocalisation](/en-US/docs/WebAPI/Using_geolocation)
+- {{domxref("Navigator.geolocation")}}

@@ -5,36 +5,44 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/HTMLStyleElement
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id="Notes">Notes</h3>
-<p>Consultez les pages suivantes pour plus d'informations sur certains des objets utilisés pour manipuler les propriétés CSS depuis le DOM :</p>
-<ul>
- <li><a href="fr/DOM/element.style">L'objet DOM element.style</a></li>
- <li><a href="fr/DOM/stylesheet">L'objet DOM stylesheet</a></li>
- <li><a href="fr/DOM/cssRule">L'objet DOM cssRule</a></li>
- <li><a href="fr/DOM/CSS">La liste des propriétés DOM CSS</a></li>
-</ul>
-<h3 id="Informations_.C3.A0_d.C3.A9placer_vers_d.27autres_pages">Informations à déplacer vers d'autres pages</h3>
-<p>L'objet basique <code>style</code> explose les interfaces <code>StyleSheet</code> et <code>CSSStyleSheet</code> de la spécification
- <i>
-  DOM Level 2 Style</i>
- . Ces interfaces contiennent des membres comme <code>insertRule</code>, <code>selectorText</code>, et <code>parentStyleSheet</code> permettant d'accéder et de manipuler les règles de style individuelles qui constituent une feuille de style CSS.</p>
-<p>Pour obtenir les objets <code>style</code> depuis un objet <code>document</code>, il est possible d'utiliser la propriété <code>document.styleSheets</code> et d'accéder aux objets individuels par un index (par exemple, <code>document.styleSheets{{ mediawiki.external(0) }}</code> est la première feuille de style définie pour le document, et ainsi de suite). Bien qu'il existe plusieurs syntaxes pour exprimer les feuilles de style d'un document, les navigateurs basés sur Mozilla gèrent uniquement CSS. Par conséquent, l'objet <code>style</code> récupéré depuis ce tableau implémente à la fois les interfaces StyleSheet et CSSStyleSheet.</p>
-<pre class="eval">var ss = document.styleSheets[1];
-ss.cssRules[0].style.backgroundColor="blue";
-</pre>
-<p>La liste des propriétés disponibles dans le DOM pour la propriété de style est donnée dans la <a href="fr/DOM/CSS">liste des propriétés DOM CSS</a>.</p>
-<p>La propriété <a href="fr/DOM/style">style</a> de l'élément peut également être utilisée pour obtenir et définir les styles d'un élément. Cependant, cette propriété renvoie uniquement les attributs de style qui ont été définis
- <i>
-  in-line</i>
- ou directement sur cet élément à l'aide de <code>element.style.propertyName</code> (par exemple <code>&lt;td style="background-color: lightblue"&gt;</code> renvoie la chaîne "background-color:lightblue", même si d'autres styles peuvent s'appliquer à l'élément depuis une feuille de style).</p>
-<p>De plus, lorsque cette propriété est définie sur un élément, elle écrase et efface tout style qui peut avoir été défini ailleurs pour cette propriété particulière de l'élément. Par exemple, définir la propriété <code>border</code> écrasera les réglages définis ailleurs pour la propriété <code>border</code> de cet élément dans la section <code>head</code> du document ou dans des feuilles de style externes. Cependant, cela n'affectera pas les autres déclarations de propriétés pour les styles de cet élément, comme <code>padding</code>, <code>margin</code> ou <code>font</code> par exemple.</p>
-<p>Pour changer le style d'un élément particulier, l'exemple suivant peut être adapté :</p>
-<pre class="brush: html">&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;exemple de style simple&lt;/title&gt;
+{{ ApiRef() }}
 
-&lt;script type="text/javascript"&gt;
+### Notes
+
+Consultez les pages suivantes pour plus d'informations sur certains des objets utilisés pour manipuler les propriétés CSS depuis le DOM :
+
+- [L'objet DOM element.style](fr/DOM/element.style)
+- [L'objet DOM stylesheet](fr/DOM/stylesheet)
+- [L'objet DOM cssRule](fr/DOM/cssRule)
+- [La liste des propriétés DOM CSS](fr/DOM/CSS)
+
+### Informations à déplacer vers d'autres pages
+
+L'objet basique `style` explose les interfaces `StyleSheet` et `CSSStyleSheet` de la spécification
+_DOM Level 2 Style_
+. Ces interfaces contiennent des membres comme `insertRule`, `selectorText`, et `parentStyleSheet` permettant d'accéder et de manipuler les règles de style individuelles qui constituent une feuille de style CSS.
+
+Pour obtenir les objets `style` depuis un objet `document`, il est possible d'utiliser la propriété `document.styleSheets` et d'accéder aux objets individuels par un index (par exemple, `document.styleSheets{{ mediawiki.external(0) }}` est la première feuille de style définie pour le document, et ainsi de suite). Bien qu'il existe plusieurs syntaxes pour exprimer les feuilles de style d'un document, les navigateurs basés sur Mozilla gèrent uniquement CSS. Par conséquent, l'objet `style` récupéré depuis ce tableau implémente à la fois les interfaces StyleSheet et CSSStyleSheet.
+
+    var ss = document.styleSheets[1];
+    ss.cssRules[0].style.backgroundColor="blue";
+
+La liste des propriétés disponibles dans le DOM pour la propriété de style est donnée dans la [liste des propriétés DOM CSS](fr/DOM/CSS).
+
+La propriété [style](fr/DOM/style) de l'élément peut également être utilisée pour obtenir et définir les styles d'un élément. Cependant, cette propriété renvoie uniquement les attributs de style qui ont été définis
+_in-line_
+ou directement sur cet élément à l'aide de `element.style.propertyName` (par exemple `<td style="background-color: lightblue">` renvoie la chaîne "background-color:lightblue", même si d'autres styles peuvent s'appliquer à l'élément depuis une feuille de style).
+
+De plus, lorsque cette propriété est définie sur un élément, elle écrase et efface tout style qui peut avoir été défini ailleurs pour cette propriété particulière de l'élément. Par exemple, définir la propriété `border` écrasera les réglages définis ailleurs pour la propriété `border` de cet élément dans la section `head` du document ou dans des feuilles de style externes. Cependant, cela n'affectera pas les autres déclarations de propriétés pour les styles de cet élément, comme `padding`, `margin` ou `font` par exemple.
+
+Pour changer le style d'un élément particulier, l'exemple suivant peut être adapté :
+
+```html
+<html>
+<head>
+<title>exemple de style simple</title>
+
+<script type="text/javascript">
 
 function alterStyle(elem) {
   elem.style.background = 'green';
@@ -44,68 +52,68 @@ function resetStyle(elemId) {
   elem = document.getElementById(elemId);
   elem.style.background = 'white';
 }
-&lt;/script&gt;
+</script>
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 #p1 {
  border: solid blue 2px;
 }
-&lt;/style&gt;
-&lt;/head&gt;
+</style>
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;!-- passe une référence à l'objet de l'élément comme paramètre 'this'. --&gt;
-&lt;p id="p1" onclick="alterStyle(this)";&gt;
- Cliquez ici pour changer la couleur de fond. &lt;/p&gt;
+<!-- passe une référence à l'objet de l'élément comme paramètre 'this'. -->
+<p id="p1" onclick="alterStyle(this)";>
+ Cliquez ici pour changer la couleur de fond. </p>
 
-&lt;!-- passe l'id 'p1' d'un autre style de l'élément à modifier. --&gt;
-&lt;button onclick="resetStyle('p1');"&gt;Réinitialiser la couleur de fond&lt;/button&gt;
+<!-- passe l'id 'p1' d'un autre style de l'élément à modifier. -->
+<button onclick="resetStyle('p1');">Réinitialiser la couleur de fond</button>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-<p>La méthode <code>getComputedStyle()</code> de l'objet <code>document.defaultView</code> renvoie tous les styles qui ont finalement été calculés pour un élément. Consultez l'<a href="fr/R%c3%a9f%c3%a9rence_du_DOM_Gecko/Exemples#Exemple_6_:_getComputedStyle">exemple 6 : getComputedStyle</a> dans le chapitre des exemples pour plus d'informations sur l'utilisation de cette méthode.</p>
-<h3 id="L.27objet_DOM_style">L'objet DOM style</h3>
-<p>L'objet <code>style</code> représente une règle de style individuelle. Contrairement aux règles individuelles disponibles depuis la collection <code><a href="fr/DOM/document.styleSheets">document.styleSheets</a></code>, on accède à l'objet depuis l'objet <code>document</code> ou depuis les éléments auxquels ce style est appliqué. Il représente les styles
- <i>
-  in-line</i>
- d'un élément particulier.</p>
-<p>Mais il y a plus important que les deux propriétés exposées ici, c'est l'utilisation de l'objet <code>style</code> pour définir des propriétés de style individuelles sur un élément :</p>
-<pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-  "http://www.w3.org/TR/html4/loose.dtd"&gt;
-&lt;html&gt;
- &lt;head&gt;
-  &lt;title&gt;style Property Example&lt;/title&gt;
-  &lt;link rel="StyleSheet" href="example.css" type="text/css"&gt;
-  &lt;script type="text/javascript"&gt;
-    function stilo()
-    {
-      document.getElementById("d").style.color = "orange";
-    }
-  &lt;/script&gt;
- &lt;/head&gt;
+</body>
+</html>
+```
 
- &lt;body&gt;
-  &lt;div id="d" class="thunder"&gt;Thunder&lt;/div&gt;
-  &lt;button onclick="stilo()"&gt;ss&lt;/button&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-<p>Les attributs <b>media</b> et <b>type</b> du style peuvent être donnés ou non. Notez qu'il est également possible de changer les styles d'un élément en obtenant une référence vers cet élément et en utilisant ensuite sa méthode DOM <a href="fr/DOM/element.setAttribute">setAttribute()</a> pour spécifier à la fois la propriété CSS et sa valeur.</p>
-<pre class="eval">var el = document.getElementById("un-element");
-el.setAttribute("style", "background-color:darkblue;");
-</pre>
-<p><br>
- Soyez cependant conscient que <code>setAttribute</code> écrasera toute propriété de style qui pourrait déjà avoir été définie dans l'objet style de cet élément. Si l'élément « un-element » ci-dessus avait déjà un attribut indiquant par exemple <code>style="font-size: 18px"</code>, cette valeur serait supprimée par l'utilisation de <code>setAttribute</code>.</p>
-<h5 id="Propri.C3.A9t.C3.A9s">Propriétés</h5>
-<dl>
- <dt>
-  <a href="fr/DOM/style.media">style.media</a></dt>
- <dd>
-  spécifie le média de destination pour lequel l'information de style est prévue.</dd>
- <dt>
-  <a href="fr/DOM/style.type">style.type</a></dt>
- <dd>
-  renvoie le type de style appliqué par cette règle.</dd>
-</dl>
+La méthode `getComputedStyle()` de l'objet `document.defaultView` renvoie tous les styles qui ont finalement été calculés pour un élément. Consultez l'[exemple 6 : getComputedStyle](fr/R%c3%a9f%c3%a9rence_du_DOM_Gecko/Exemples#Exemple_6_:_getComputedStyle) dans le chapitre des exemples pour plus d'informations sur l'utilisation de cette méthode.
+
+### L'objet DOM style
+
+L'objet `style` représente une règle de style individuelle. Contrairement aux règles individuelles disponibles depuis la collection [`document.styleSheets`](fr/DOM/document.styleSheets), on accède à l'objet depuis l'objet `document` ou depuis les éléments auxquels ce style est appliqué. Il représente les styles
+_in-line_
+d'un élément particulier.
+
+Mais il y a plus important que les deux propriétés exposées ici, c'est l'utilisation de l'objet `style` pour définir des propriétés de style individuelles sur un élément :
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+      "http://www.w3.org/TR/html4/loose.dtd">
+    <html>
+     <head>
+      <title>style Property Example</title>
+      <link rel="StyleSheet" href="example.css" type="text/css">
+      <script type="text/javascript">
+        function stilo()
+        {
+          document.getElementById("d").style.color = "orange";
+        }
+      </script>
+     </head>
+
+     <body>
+      <div id="d" class="thunder">Thunder</div>
+      <button onclick="stilo()">ss</button>
+     </body>
+    </html>
+
+Les attributs **media** et **type** du style peuvent être donnés ou non. Notez qu'il est également possible de changer les styles d'un élément en obtenant une référence vers cet élément et en utilisant ensuite sa méthode DOM [setAttribute()](fr/DOM/element.setAttribute) pour spécifier à la fois la propriété CSS et sa valeur.
+
+    var el = document.getElementById("un-element");
+    el.setAttribute("style", "background-color:darkblue;");
+
+Soyez cependant conscient que `setAttribute` écrasera toute propriété de style qui pourrait déjà avoir été définie dans l'objet style de cet élément. Si l'élément « un-element » ci-dessus avait déjà un attribut indiquant par exemple `style="font-size: 18px"`, cette valeur serait supprimée par l'utilisation de `setAttribute`.
+
+##### Propriétés
+
+- [style.media](fr/DOM/style.media)
+  - : spécifie le média de destination pour lequel l'information de style est prévue.
+- [style.type](fr/DOM/style.type)
+  - : renvoie le type de style appliqué par cette règle.

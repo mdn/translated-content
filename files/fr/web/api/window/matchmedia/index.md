@@ -3,49 +3,43 @@ title: window.matchMedia
 slug: Web/API/Window/matchMedia
 translation_of: Web/API/Window/matchMedia
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<p>Retourne un nouvel objet {{domxref("MediaQueryList")}} contenant les résultats de la chaîne de caractères <a href="/en-US/docs/CSS/Media_queries">media query</a> spécifiée.</p>
-<h2 id="Syntax">Syntaxe</h2>
-<pre class="syntaxbox"><em>mql</em> = window.matchMedia(<em>mediaQueryString</em>)</pre>
-<p>Ici, <code>mediaQueryString</code> est une chaîne de caractère représentant la media query pour laquelle on retourne un nouvel objet {{domxref("MediaQueryList")}}.</p>
-<h2 id="Example">Exemple</h2>
-<pre class="brush: js">if (window.matchMedia("(min-width: 400px)").matches) {
+Retourne un nouvel objet {{domxref("MediaQueryList")}} contenant les résultats de la chaîne de caractères [media query](/en-US/docs/CSS/Media_queries) spécifiée.
+
+## Syntaxe
+
+    mql = window.matchMedia(mediaQueryString)
+
+Ici, `mediaQueryString` est une chaîne de caractère représentant la media query pour laquelle on retourne un nouvel objet {{domxref("MediaQueryList")}}.
+
+## Exemple
+
+```js
+if (window.matchMedia("(min-width: 400px)").matches) {
   /* the view port is at least 400 pixels wide */
 } else {
   /* the view port is less than 400 pixels wide */
-}</pre>
-<p>Ce code permet de gérer la mise en page d'une manière différente quand l'écran est moins large.</p>
-<p>Voir <a href="/en-US/docs/DOM/Using_media_queries_from_code">Utiliser les media queries avec du code</a> pour plus d'exemples.</p>
+}
+```
 
-<h2 id="Specifications">Spécifications</h2>
+Ce code permet de gérer la mise en page d'une manière différente quand l'écran est moins large.
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSSOM View", "#dom-window-matchmedia", "Window.matchMedia()")}}</td>
-      <td>{{Spec2("CSSOM View")}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+Voir [Utiliser les media queries avec du code](/en-US/docs/DOM/Using_media_queries_from_code) pour plus d'exemples.
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Spécifications
 
-<p>{{Compat("api.Window.matchMedia")}}</p>
+| Spécification                                                                                        | Statut                           | Commentaire          |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName("CSSOM View", "#dom-window-matchmedia", "Window.matchMedia()")}} | {{Spec2("CSSOM View")}} | Définition initiale. |
 
-<h2 id="See_also">Voir aussi</h2>
+## Compatibilité des navigateurs
 
-<ul>
- <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
- <li><a href="/en-US/docs/DOM/Using_media_queries_from_code">Using media queries from code</a></li>
- <li>{{domxref("MediaQueryList")}}</li>
- <li>{{domxref("MediaQueryListListener")}}</li>
-</ul>
+{{Compat("api.Window.matchMedia")}}
+
+## Voir aussi
+
+- [Media queries](/en-US/docs/CSS/Media_queries)
+- [Using media queries from code](/en-US/docs/DOM/Using_media_queries_from_code)
+- {{domxref("MediaQueryList")}}
+- {{domxref("MediaQueryListListener")}}

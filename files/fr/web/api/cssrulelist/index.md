@@ -6,42 +6,37 @@ tags:
   - DOM
 translation_of: Web/API/CSSRuleList
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p>A <code>CSSRuleList</code> est un objet de type tableau contenant une collection ordonnée d'objects <code><a href="/en/DOM/cssRule">CSSRule</a></code>.</p>
+A `CSSRuleList` est un objet de type tableau contenant une collection ordonnée d'objects [`CSSRule`](/en/DOM/cssRule).
 
-<h2 id="Syntax">Description</h2>
+## Description
 
-<p>Chaque règle <code>CSSRule</code> peut être atteinte via <code><var>rules</var>.item(<var>index</var>),</code> ou simplement <code><var>rules</var>[<var>index</var>]</code>, où <code><var>rules</var></code> est un objet implementant l'interface  <code>CSSRuleList</code>, et <code><var>index</var></code> est l'index de la règle (commence à zéro comme les tableaux), dans l'ordre dans lequel elle apparait dans la feuille de style CSS. Le nombre d'objets est <code><var>rules</var>.length</code>.</p>
+Chaque règle `CSSRule` peut être atteinte via `rules.item(index),` ou simplement `rules[index]`, où `rules` est un objet implementant l'interface  `CSSRuleList`, et `index` est l'index de la règle (commence à zéro comme les tableaux), dans l'ordre dans lequel elle apparait dans la feuille de style CSS. Le nombre d'objets est `rules.length`.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">// récuperer la première règle de la première feuille de style
+```js
+// récuperer la première règle de la première feuille de style
 var firstRule = document.styleSheets[0].cssRules[0];
-</pre>
+```
 
-<h2 id="Notes">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><code><a href="/en/DOM/cssRule">CSSRule</a></code></li>
-</ul>
+- [`CSSRule`](/en/DOM/cssRule)
 
-<h3 id="Implémentations_de_CSSRuleList">Implémentations de CSSRuleList</h3>
+### Implémentations de CSSRuleList
 
-<p>Il existe plusieurs propriétés dans le CSSOM qui retourne une <code>CSSRuleList</code> :</p>
+Il existe plusieurs propriétés dans le CSSOM qui retourne une `CSSRuleList` :
 
-<ul>
- <li>{{ domxref("CSSStyleSheet") }} property {{ domxref("CSSStyleSheet/cssRules", "cssRules") }}</li>
- <li>{{ domxref("CSSMediaRule") }} property {{ domxref("CSSMediaRule/cssRules", "cssRules") }}</li>
- <li>{{ domxref("CSSKeyframesRule") }} property {{ domxref("CSSKeyframesRule/cssRules", "cssRules") }}</li>
- <li>{{ domxref("CSSMozDocumentRule") }} property {{ domxref("CSSMozDocumentRule/cssRules", "cssRules") }}</li>
-</ul>
+- {{ domxref("CSSStyleSheet") }} property {{ domxref("CSSStyleSheet/cssRules", "cssRules") }}
+- {{ domxref("CSSMediaRule") }} property {{ domxref("CSSMediaRule/cssRules", "cssRules") }}
+- {{ domxref("CSSKeyframesRule") }} property {{ domxref("CSSKeyframesRule/cssRules", "cssRules") }}
+- {{ domxref("CSSMozDocumentRule") }} property {{ domxref("CSSMozDocumentRule/cssRules", "cssRules") }}
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRuleList">DOM Level 2 Style: <code>CSSRuleList</code> interface</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet-cssRules">DOM Level 2 Style: <code>CSSStyleSheet</code> attribute <code>cssRules</code></a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSMediaRule-cssRules">DOM Level 2 Style: <code>CSSMediaRule</code> attribute </a><code><a href="http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSMediaRule-cssRules">cssRules</a></code></li>
- <li><a href="http://dev.w3.org/csswg/css3-animations/#DOM-CSSKeyframesRule">CSS Animations: <code>CSSKeyframesRule</code> interface</a></li>
-</ul>
+- [DOM Level 2 Style: `CSSRuleList` interface](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRuleList)
+- [DOM Level 2 Style: `CSSStyleSheet` attribute `cssRules`](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet-cssRules)
+- [DOM Level 2 Style: `CSSMediaRule` attribute ](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSMediaRule-cssRules)[`cssRules`](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSMediaRule-cssRules)
+- [CSS Animations: `CSSKeyframesRule` interface](http://dev.w3.org/csswg/css3-animations/#DOM-CSSKeyframesRule)

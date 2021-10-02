@@ -10,41 +10,30 @@ tags:
   - Fragments
 translation_of: Web/API/DocumentFragment/DocumentFragment
 ---
-<p>{{ApiRef("DOM")}}{{seeCompatTable}}</p>
+{{ApiRef("DOM")}}{{seeCompatTable}}
 
-<p>Le constructeur <code><strong>DocumentFragment()</strong></code> renvoie un nouvel objet  {{domxref("DocumentFragment")}} créé vide.</p>
+Le constructeur **`DocumentFragment()`** renvoie un nouvel objet  {{domxref("DocumentFragment")}} créé vide.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>fragment</em> = new DocumentFragment()</pre>
+    fragment = new DocumentFragment()
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">fragment = new DocumentFragment();</pre>
+```js
+fragment = new DocumentFragment();
+```
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-documentfragment', 'DocumentFragment.DocumentFragment()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | Statut                           | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('DOM WHATWG', '#dom-documentfragment', 'DocumentFragment.DocumentFragment()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DocumentFragment.DocumentFragment")}}</p>
+{{Compat("api.DocumentFragment.DocumentFragment")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Document_Object_Model">L'index des interfaces du DOM.</a></li>
-</ul>
+- [L'index des interfaces du DOM.](/fr/docs/Web/API/Document_Object_Model)

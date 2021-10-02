@@ -16,42 +16,41 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/quadraticCurveTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La méthode <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.quadraticCurveTo()</code></strong> de l'API Canvas 2D ajoute une <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve">courbe de Bézier</a> quadratique au sous-chemin courant. Elle requiert deux points: le premier est le point de contrôle et le second est le point d'arrivée. Le point de départ est le dernier point du chemin courant, qui peut être changé au moyen de la méthode {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} avant de créer la courbe quadratique de Bézier.</p>
+La méthode **`CanvasRenderingContext2D`\*\***`.quadraticCurveTo()`\*\* de l'API Canvas 2D ajoute une [courbe de Bézier](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) quadratique au sous-chemin courant. Elle requiert deux points: le premier est le point de contrôle et le second est le point d'arrivée. Le point de départ est le dernier point du chemin courant, qui peut être changé au moyen de la méthode {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} avant de créer la courbe quadratique de Bézier.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void contexte2D.quadraticCurveTo(<em>pointContrôleX</em>, <em>pointContrôleY</em>, <em>pointArrivéeX</em>, <em>pointArrivéeY</em>);
-</pre>
+    void contexte2D.quadraticCurveTo(pointContrôleX, pointContrôleY, pointArrivéeX, pointArrivéeY);
 
-<h3 id="Paramètress">Paramètress</h3>
+### Paramètress
 
-<dl>
- <dt><code>pointContrôleX</code></dt>
- <dd>La coordonnée en x du point de contrôle.</dd>
- <dt><code>pointContrôleY</code></dt>
- <dd>La coordonnée en y du point de contrôle.</dd>
- <dt><code>pointArrivéeX</code></dt>
- <dd>La coordonnée en x du point d'arrivée.</dd>
- <dt><code>pointArrivéeY</code></dt>
- <dd>La coordonnée en y du point d'arrivée.</dd>
-</dl>
+- `pointContrôleX`
+  - : La coordonnée en x du point de contrôle.
+- `pointContrôleY`
+  - : La coordonnée en y du point de contrôle.
+- `pointArrivéeX`
+  - : La coordonnée en x du point d'arrivée.
+- `pointArrivéeY`
+  - : La coordonnée en y du point d'arrivée.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Comment_quadraticCurveTo_fonctionne">Comment quadraticCurveTo fonctionne</h3>
+### Comment quadraticCurveTo fonctionne
 
-<p>Cet exemple montre comment un courbe quadratique de Bézier est dessinée.</p>
+Cet exemple montre comment un courbe quadratique de Bézier est dessinée.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canevas = document.getElementById("canvas");
+```js
+const canevas = document.getElementById("canvas");
 const contexte2D= canevas.getContext("2d");
 
 // courbe quadratique de Bézier
@@ -72,66 +71,53 @@ contexte2D.fillStyle = 'red';
 contexte2D.beginPath();
 contexte2D.arc(230, 30, 5, 0, 2 * Math.PI);
 contexte2D.fill();
-</pre>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>Dans cet exemple, le point de contrôle est rouge et les points de départ et d'arrivée sont en bleu.</p>
+Dans cet exemple, le point de contrôle est rouge et les points de départ et d'arrivée sont en bleu.
 
-<p>{{EmbedLiveSample('How_quadraticCurveTo_works', 315, 165)}}</p>
+{{EmbedLiveSample('How_quadraticCurveTo_works', 315, 165)}}
 
-<h3 id="Une_courbe_quadratique_simple">Une courbe quadratique simple</h3>
+### Une courbe quadratique simple
 
-<p>Cet exemple dessine une simple courbe quadratique de Bézier au moyen de la méthode <code>quadraticCurveTo()</code>.</p>
+Cet exemple dessine une simple courbe quadratique de Bézier au moyen de la méthode `quadraticCurveTo()`.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<p>La courbe commence au point spécifié par <code>moveTo()</code>: (20, 110). Le point de contrôle est placé à (230, 150). La courbe s'achève en (250, 20).</p>
+La courbe commence au point spécifié par `moveTo()`: (20, 110). Le point de contrôle est placé à (230, 150). La courbe s'achève en (250, 20).
 
-<pre class="brush: js">const canevas = document.getElementById("canvas");
+```js
+const canevas = document.getElementById("canvas");
 const contexte2D = canevas.getContext("2d");
 
 contexte2D.beginPath();
 contexte2D.moveTo(20, 110);
 contexte2D.quadraticCurveTo(230, 150, 250, 20);
 contexte2D.stroke();
-</pre>
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('A_simple_quadratic_curve', 700, 180)}}</p>
+{{EmbedLiveSample('A_simple_quadratic_curve', 700, 180)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-quadraticcurveto", "CanvasRenderingContext2D.quadraticCurveTo")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                        | Statut                           | Commentaire |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-quadraticcurveto", "CanvasRenderingContext2D.quadraticCurveTo")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.CanvasRenderingContext2D.quadraticCurveTo")}}
 
+## Voir aussi
 
-<p>{{Compat("api.CanvasRenderingContext2D.quadraticCurveTo")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>L'interface définissant cette méthode : {{domxref("CanvasRenderingContext2D")}}</li>
- <li><a href="http://fr.wikipedia.org/wiki/Courbe_de_Bézier">L'article Wikipédia sur les courbes quadratiques de Bézier</a></li>
-</ul>
+- L'interface définissant cette méthode : {{domxref("CanvasRenderingContext2D")}}
+- [L'article Wikipédia sur les courbes quadratiques de Bézier](http://fr.wikipedia.org/wiki/Courbe_de_Bézier)

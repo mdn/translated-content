@@ -11,19 +11,20 @@ tags:
   - débogage
 translation_of: Web/API/Console/count
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>Affiche dans la console le nombre de fois où la fonction <code>count()</code> a été appelée. Cette fonction accepte l'argument optionnel <code>label</code>.</p>
+Affiche dans la console le nombre de fois où la fonction `count()` a été appelée. Cette fonction accepte l'argument optionnel `label`.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>Si un <code>label</code> est passé en paramètre, la fonction affiche le nombre de fois où la fonction <code>count()</code> a été appelée pour ce <code>label</code> spécifiquempent.</p>
+Si un `label` est passé en paramètre, la fonction affiche le nombre de fois où la fonction `count()` a été appelée pour ce `label` spécifiquempent.
 
-<p>Si aucun <code>label</code> est passé en paramètre, la fonction affiche le nombre de fois où la fonction <code>count()</code> a été appelée jusqu'à présent.</p>
+Si aucun `label` est passé en paramètre, la fonction affiche le nombre de fois où la fonction `count()` a été appelée jusqu'à présent.
 
-<p>Ci-dessous, un exemple d'utilisation :</p>
+Ci-dessous, un exemple d'utilisation :
 
-<pre class="brush: js">function greet() {
+```js
+function greet() {
   console.count();
   return "hi " + user;
 }
@@ -33,21 +34,22 @@ greet();
 user = "alice";
 greet();
 greet();
-console.count();</pre>
+console.count();
+```
 
-<p>La console affichera les lignes suivantes :</p>
+La console affichera les lignes suivantes :
 
-<pre class="eval">"&lt;no label&gt;: 1"
-"&lt;no label&gt;: 2"
-"&lt;no label&gt;: 3"
-"&lt;no label&gt;: 1"
-</pre>
+    "<no label>: 1"
+    "<no label>: 2"
+    "<no label>: 3"
+    "<no label>: 1"
 
-<p>A noter, la dernière ligne inscrite dans la console fait référence à l'appel de la fonction <code>count()</code> de la ligne 11 qui est traité comme un événement indépendant.</p>
+A noter, la dernière ligne inscrite dans la console fait référence à l'appel de la fonction `count()` de la ligne 11 qui est traité comme un événement indépendant.
 
-<p>Si la variable <code>user</code> est passée à la fonction comme paramètre <code>label</code>, le code ci-dessous génèrera un nouveau compteur lorsque la variable <code>user</code> sera modifiée :</p>
+Si la variable `user` est passée à la fonction comme paramètre `label`, le code ci-dessous génèrera un nouveau compteur lorsque la variable `user` sera modifiée :
 
-<pre class="brush: js">function greet() {
+```js
+function greet() {
   console.count(user);
   return "hi " + user;
 }
@@ -57,48 +59,33 @@ greet();
 user = "alice";
 greet();
 greet();
-console.count("alice");</pre>
+console.count("alice");
+```
 
-<p>La console affichera les lignes suivantes :</p>
+La console affichera les lignes suivantes :
 
-<pre class="eval">"bob: 1"
-"alice: 1"
-"alice: 2"
-"alice: 3"</pre>
+    "bob: 1"
+    "alice: 1"
+    "alice: 2"
+    "alice: 3"
 
-<p>Nous obtenons maintenant deux compteurs distinct basés sur un libellé différent. L'appel de la fonction <code>count()</code> avec "alice" à la ligne 11 n'est pas considéré comme un événement indépendant car le compteur existe déjà.</p>
+Nous obtenons maintenant deux compteurs distinct basés sur un libellé différent. L'appel de la fonction `count()` avec "alice" à la ligne 11 n'est pas considéré comme un événement indépendant car le compteur existe déjà.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">console.count([label]);
-</pre>
+    console.count([label]);
 
-<h2 id="Paramètres">Paramètres</h2>
+## Paramètres
 
-<dl>
- <dt><code>label</code></dt>
- <dd><p>Une chaîne de caractères. Si ce paramètre est renseigné, <code>count()</code> affiche le nombre de fois que la fonction a été appelée jusqu'à présent avec ce libellé. S'il est omis, <code>count()</code> affiche le nombre de fois que la fonction a été appelée sur cette ligne.</p></dd>
-</dl>
+- `label`
+  - : Une chaîne de caractères. Si ce paramètre est renseigné, `count()` affiche le nombre de fois que la fonction a été appelée jusqu'à présent avec ce libellé. S'il est omis, `count()` affiche le nombre de fois que la fonction a été appelée sur cette ligne.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#count", "console.count()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | Status                           | Commentaire         |
+| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName("Console API", "#count", "console.count()")}} | {{Spec2("Console API")}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Console.count")}}</p>
+{{Compat("api.Console.count")}}

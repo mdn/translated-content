@@ -11,44 +11,29 @@ tags:
   - stop
 translation_of: Web/API/Window/stop
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>window.stop()</code></strong> arrête le chargment des ressources supplémentaires dans le contexte de navigation actuel, ce qui équivaut au bouton d'arrêt dans le navigateur.</p>
+**`window.stop()`** arrête le chargment des ressources supplémentaires dans le contexte de navigation actuel, ce qui équivaut au bouton d'arrêt dans le navigateur.
 
-<p>En raison de la manière dont les scripts sont exécutés, cette méthode ne peut pas interrompre le chargement de son document parent, mais elle arrêtera ses images, nouvelles fenêtres et autres objets en cours de chargement.</p>
+En raison de la manière dont les scripts sont exécutés, cette méthode ne peut pas interrompre le chargement de son document parent, mais elle arrêtera ses images, nouvelles fenêtres et autres objets en cours de chargement.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">window.stop()
-</pre>
+    window.stop()
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">window.stop();
-</pre>
+```js
+window.stop();
+```
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécifications</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','browsers.html#dom-window-stop','Window.stop()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'browsers.html#dom-window-stop', 'Window.stop')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécifications                                                                                       | Statut                           | Commentaires |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
+| {{SpecName('HTML WHATWG','browsers.html#dom-window-stop','Window.stop()')}} | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-stop', 'Window.stop')}}     | {{Spec2('HTML5 W3C')}}     |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.stop")}}</p>
+{{Compat("api.Window.stop")}}

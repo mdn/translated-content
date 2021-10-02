@@ -10,33 +10,31 @@ tags:
   - XML
 translation_of: Web/API/XMLDocument/async
 ---
-<p>{{APIRef("DOM")}}{{Deprecated_header}} {{Non-standard_header}}</p>
+{{APIRef("DOM")}}{{Deprecated_header}} {{Non-standard_header}}
 
-<p><code>document.async</code> peut être défini pour indiquer si un appel {{domxref("document.load")}} doit être une requête asynchrone ou synchrone. <code>true</code> (<em>vrai</em>) est la valeur par défaut, indiquant que les documents doivent être chargés de façon asynchrone.</p>
+`document.async` peut être défini pour indiquer si un appel {{domxref("document.load")}} doit être une requête asynchrone ou synchrone. `true` (_vrai_) est la valeur par défaut, indiquant que les documents doivent être chargés de façon asynchrone.
 
-<p>(Il a été possible de charger des documents de manière synchrone depuis 1.4 alpha.)</p>
+(Il a été possible de charger des documents de manière synchrone depuis 1.4 alpha.)
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">function loadXMLData(e) {
-  alert(new XMLSerializer().serializeToString(e.target)); // Donne le contenu querydata.xml sous forme "string" (<em>chaîne de caractère</em>)
+```js
+function loadXMLData(e) {
+  alert(new XMLSerializer().serializeToString(e.target)); // Donne le contenu querydata.xml sous forme "string" (chaîne de caractère)
 }
 
 var xmlDoc = document.implementation.createDocument("", "test", null);
 
 xmlDoc.async = false;
 xmlDoc.onload = loadXMLData;
-xmlDoc.load('querydata.xml');</pre>
+xmlDoc.load('querydata.xml');
+```
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DocumentLS">DOM Level 3 Load &amp; Save module</a></li>
-</ul>
+- [DOM Level 3 Load & Save module](http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DocumentLS)
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/XML_dans_Mozilla">XML in Mozilla</a></li>
- <li>{{domxref("document.load")}}</li>
-</ul>
+- [XML in Mozilla](/fr/docs/XML_dans_Mozilla)
+- {{domxref("document.load")}}

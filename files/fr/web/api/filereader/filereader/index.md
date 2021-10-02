@@ -8,52 +8,40 @@ tags:
   - Reference
 translation_of: Web/API/FileReader/FileReader
 ---
-<p><strong><code>FileReader()</code></strong>  est un constructeur qui permet de créer un nouvel objet FileReader.</p>
+**`FileReader()`**  est un constructeur qui permet de créer un nouvel objet FileReader.
 
-<p>Pour plus de details à propos de <code>FileReader</code>, visiter <a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a>.</p>
+Pour plus de details à propos de `FileReader`, visiter [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var reader = new FileReader();</pre>
+```js
+var reader = new FileReader();
+```
 
-<h3 id="Paramèteres">Paramèteres</h3>
+### Paramèteres
 
-<p>Aucun.</p>
+Aucun.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>L'extrait de code ci-dessous montre la création d'un objet <code><a href="/en-US/docs/Web/API/FileReader">FileReader</a></code> en utilisant le constructeur <code>FileReader()</code>  ainsi qu'une utilisation subséquente de cet objet:</p>
+L'extrait de code ci-dessous montre la création d'un objet [`FileReader`](/en-US/docs/Web/API/FileReader) en utilisant le constructeur `FileReader()`  ainsi qu'une utilisation subséquente de cet objet:
 
-<pre class="brush: js">function printFile(file) {
+```js
+function printFile(file) {
   var reader = new FileReader();
   reader.onload = function(evt) {
     console.log(evt.target.result);
   };
   reader.readAsText(file);
 }
-</pre>
+```
 
-<h2 id="Caractéristiques">Caractéristiques</h2>
+## Caractéristiques
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Caractéristique</th>
-   <th scope="col">Status</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('File API')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Définition Initiale</td>
-  </tr>
- </tbody>
-</table>
+| Caractéristique                  | Status                       | Commentaire         |
+| -------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('File API')}} | {{Spec2('File API')}} | Définition Initiale |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a></li>
-</ul>
+- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)

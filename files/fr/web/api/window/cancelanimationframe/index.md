@@ -11,24 +11,21 @@ tags:
   - Window
 translation_of: Web/API/Window/cancelAnimationFrame
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}La méthode **`window.cancelAnimationFrame()`** met fin à une animation précédement configurée par un appel à {{domxref("window.requestAnimationFrame()")}}.
 
-<div>La méthode <code><strong>window.cancelAnimationFrame()</strong></code> met fin à une animation précédement configurée par un appel à {{domxref("window.requestAnimationFrame()")}}.</div>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
+    window.cancelAnimationFrame(requestID);
 
-<pre class="syntaxbox">window.cancelAnimationFrame(<em>requestID</em>);</pre>
+### Paramètres
 
-<h3 id="Paramètres">Paramètres</h3>
+- `requestID`
+  - : L'identifiant retourné par l'appel à {{domxref("window.requestAnimationFrame()")}} qui a généré la fonction de rappel (callback)
 
-<dl>
- <dt><code>requestID</code></dt>
- <dd>L'identifiant retourné par l'appel à {{domxref("window.requestAnimationFrame()")}} qui a généré la fonction de rappel (callback)</dd>
-</dl>
+## Exemples
 
-<h2 id="Exemples">Exemples</h2>
-
-<pre class="brush: js">var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+```js
+var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                             window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
 var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
@@ -40,7 +37,7 @@ var myReq; // Déclarer la variable globalement avant de lancer l'animation
 function step(timestamp) {
   var progress = timestamp - start;
   d.style.left = Math.min(progress / 10, 200) + 'px';
-  if (progress &lt; 2000) {
+  if (progress < 2000) {
     // Ne pas oublier de récupérer l'identifiant à chaque appel de la fonction
     myReq = requestAnimationFrame(step);
   }
@@ -48,30 +45,19 @@ function step(timestamp) {
 myReq = requestAnimationFrame(step);
 // L'annulation utilise le dernier identifiant
 cancelAnimationFrame(myReq);
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{spec("https://www.w3.org/TR/html51/webappapis.html#animation-frames", "Timing control for script-based animations: cancelAnimationFrame", "WD")}}</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{spec("https://www.w3.org/TR/html51/webappapis.html#animation-frames", "Timing control for script-based animations: cancelAnimationFrame", "WD")}} |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.cancelAnimationFrame")}}</p>
+{{Compat("api.Window.cancelAnimationFrame")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("window.mozAnimationStartTime")}}</li>
- <li>{{domxref("window.requestAnimationFrame()")}}</li>
-</ul>
+- {{domxref("window.mozAnimationStartTime")}}
+- {{domxref("window.requestAnimationFrame()")}}

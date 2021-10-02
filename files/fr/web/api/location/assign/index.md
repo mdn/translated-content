@@ -10,62 +10,42 @@ tags:
   - WebAPI
 translation_of: Web/API/Location/assign
 ---
-<p>{{ APIRef("Location") }}</p>
+{{ APIRef("Location") }}
 
-<p>La méthode <code><strong>Location.assign()</strong></code> charge et affiche dans la fenêtre le document situé à l'URL spécifiée.</p>
+La méthode **`Location.assign()`** charge et affiche dans la fenêtre le document situé à l'URL spécifiée.
 
-<p>Si l'action est impossible à cause d'une violation de sécurité, une {{domxref("DOMException")}} de type <code>SECURITY_ERROR</code> est lancée. Cela se produit si l'origine du script appelant est différente de l'origine de la page initialement désignée par l'objet {{domxref("Location")}}, principalement quand le script est hébergé sur un autre domaine.</p>
+Si l'action est impossible à cause d'une violation de sécurité, une {{domxref("DOMException")}} de type `SECURITY_ERROR` est lancée. Cela se produit si l'origine du script appelant est différente de l'origine de la page initialement désignée par l'objet {{domxref("Location")}}, principalement quand le script est hébergé sur un autre domaine.
 
-<p>Si l'URL spécifiée n'est pas valide, une {{domxref("DOMException")}} de type <code>SYNTAX_ERROR</code> est lancée.</p>
+Si l'URL spécifiée n'est pas valide, une {{domxref("DOMException")}} de type `SYNTAX_ERROR` est lancée.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>object</em>.assign(<em>url</em>);
-</pre>
+    object.assign(url);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><em>url</em></dt>
- <dd>Une {{domxref("DOMString")}} contenant l'URL de la page vers laquelle naviguer.</dd>
-</dl>
+- _url_
+  - : Une {{domxref("DOMString")}} contenant l'URL de la page vers laquelle naviguer.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Navigue vers l'article Location.reload
-document.location.assign('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');</pre>
+```js
+// Navigue vers l'article Location.reload
+document.location.assign('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "history.html#dom-location-assign", "Location.assign()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Pas de différence avec {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#dom-location-assign", "Location.assign()")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | Statut                           | Commentaires                                             |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "history.html#dom-location-assign", "Location.assign()")}} | {{Spec2('HTML WHATWG')}} | Pas de différence avec {{SpecName("HTML5 W3C")}}. |
+| {{SpecName('HTML5 W3C', "browsers.html#dom-location-assign", "Location.assign()")}} | {{Spec2('HTML5 W3C')}}     | Définition initiale.                                     |
 
-<h2 id="Compatibilité">Compatibilité</h2>
+## Compatibilité
 
+{{Compat("api.Location.assign")}}
 
+## Voir aussi
 
-<p>{{Compat("api.Location.assign")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>L'interface {{domxref("Location")}} à laquelle appartient cette méthode.</li>
- <li>Méthodes similaires : {{domxref("Location.replace()")}} et {{domxref("Location.reload()")}}.</li>
-</ul>
+- L'interface {{domxref("Location")}} à laquelle appartient cette méthode.
+- Méthodes similaires : {{domxref("Location.replace()")}} et {{domxref("Location.reload()")}}.

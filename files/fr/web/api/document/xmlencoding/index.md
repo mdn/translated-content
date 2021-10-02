@@ -10,26 +10,21 @@ tags:
   - XML
 translation_of: Web/API/Document/xmlEncoding
 ---
-<p>{{APIRef("DOM")}}{{ obsolete_header("10.0") }}</p>
+{{APIRef("DOM")}}{{ obsolete_header("10.0") }}
 
-<p>Renvoie le codage déterminé par la déclaration XML. Devrait être <code>null</code> si non précisé ou inconnu.</p>
+Renvoie le codage déterminé par la déclaration XML. Devrait être `null` si non précisé ou inconnu.
 
-<div class="warning">
-  <p><strong>Attention :</strong> N'utilisez pas cet attribut ; il a été supprimé de la spécification DOM Niveau 4 et n'est plus pris en charge dans Gecko 10.0 {{ geckoRelease("10.0") }}.</p>
-</div>
+> **Attention :** N'utilisez pas cet attribut ; il a été supprimé de la spécification DOM Niveau 4 et n'est plus pris en charge dans Gecko 10.0 {{ geckoRelease("10.0") }}.
 
-<p>Si la déclaration XML indique :</p>
+Si la déclaration XML indique :
 
-<pre>&lt;?xml version="1.0" encoding="UTF-16"?&gt;
-</pre>
+    <?xml version="1.0" encoding="UTF-16"?>
 
-<p>... le résultat doit être "UTF-16".</p>
+... le résultat doit être "UTF-16".
 
-<p>Cependant, Firefox 3.0 inclut des informations sur l'"endianness" (par exemple, UTF-16BE pour le codage "big endian") et, tandis que cette information supplémentaire est supprimée à partir de Firefox 3.1b3, Firefox 3.1b3 consulte toujours l'encodage du fichier plutôt que la déclaration XML, comme la spécification le prévoit ("Un attribut spécifiant, <em>dans le cadre de la déclaration XML</em>, l'encodage de ce document.").</p>
+Cependant, Firefox 3.0 inclut des informations sur l'"endianness" (par exemple, UTF-16BE pour le codage "big endian") et, tandis que cette information supplémentaire est supprimée à partir de Firefox 3.1b3, Firefox 3.1b3 consulte toujours l'encodage du fichier plutôt que la déclaration XML, comme la spécification le prévoit ("Un attribut spécifiant, _dans le cadre de la déclaration XML_, l'encodage de ce document.").
 
-<h3 id="Spécification">Spécification</h3>
+### Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-encoding">http://www.w3.org/TR/DOM-Level-3-Cor...ment3-encoding</a></li>
- <li>A été supprimé de {{ spec("http://www.w3.org/TR/domcore/","DOM Core Level 4","WD") }}</li>
-</ul>
+- [http://www.w3.org/TR/DOM-Level-3-Cor...ment3-encoding](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-encoding)
+- A été supprimé de {{ spec("http://www.w3.org/TR/domcore/","DOM Core Level 4","WD") }}

@@ -3,90 +3,83 @@ title: 'HTMLElement: beforeinput event'
 slug: Web/API/HTMLElement/beforeinput_event
 translation_of: Web/API/HTMLElement/beforeinput_event
 ---
-<div>{{APIRef}} {{SeeCompatTable}}</div>
+{{APIRef}} {{SeeCompatTable}}
 
-<p>L’évènement DOM <strong><code>beforeinput</code></strong> est émis quand la valeur d’un élément {{HTMLElement("input")}}, {{HTMLElement("select")}}, ou {{HTMLElement("textarea")}} est sur le point d’être modifié. L’évènement s’applique également aux éléments ayant l’attribut {{domxref("HTMLElement.contentEditable", "contenteditable")}} actif, et à tout élément quand le {{domxref("Document.designMode", "designMode")}} est activé.</p>
+L’évènement DOM **`beforeinput`** est émis quand la valeur d’un élément {{HTMLElement("input")}}, {{HTMLElement("select")}}, ou {{HTMLElement("textarea")}} est sur le point d’être modifié. L’évènement s’applique également aux éléments ayant l’attribut {{domxref("HTMLElement.contentEditable", "contenteditable")}} actif, et à tout élément quand le {{domxref("Document.designMode", "designMode")}} est activé.
 
-<p>Dans le cas de <code>contenteditable</code> et <code>designMode</code>, la cible de l’évènement est <em>l’hôte d’édition.</em> Si ces propriétés s’appliquent à plusieurs éléments, l’hôte d’édition est le plus proche ancêtre dont le parent n’est pas éditable.</p>
+Dans le cas de `contenteditable` et `designMode`, la cible de l’évènement est _l’hôte d’édition._ Si ces propriétés s’appliquent à plusieurs éléments, l’hôte d’édition est le plus proche ancêtre dont le parent n’est pas éditable.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bouillonne</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th>Annulable</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{DOMxRef("InputEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Propriété gestionnaire d’évènement</th>
-   <td>Aucune</td>
-  </tr>
-  <tr>
-   <th>Sync / Async</th>
-   <td>Sync</td>
-  </tr>
-  <tr>
-   <th>Composé</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th>Action par défaut</th>
-   <td>Mettre à jour l’élément DOM</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bouillonne</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th>Annulable</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{DOMxRef("InputEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Propriété gestionnaire d’évènement</th>
+      <td>Aucune</td>
+    </tr>
+    <tr>
+      <th>Sync / Async</th>
+      <td>Sync</td>
+    </tr>
+    <tr>
+      <th>Composé</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th>Action par défaut</th>
+      <td>Mettre à jour l’élément DOM</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple affiche la valeur de l’élément {{HtmlElement("input")}} juste avant qu’elle soit modifiée.</p>
+Cet exemple affiche la valeur de l’élément {{HtmlElement("input")}} juste avant qu’elle soit modifiée.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input placeholder="Saisissez du texte" name="name"/&gt;
-&lt;p id="values"&gt;&lt;/p&gt;</pre>
+```html
+<input placeholder="Saisissez du texte" name="name"/>
+<p id="values"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const input = document.querySelector('input');
+```js
+const input = document.querySelector('input');
 const log = document.getElementById('values');
 
 input.addEventListener('beforeinput', updateValue);
 
 function updateValue(e) {
   log.textContent = e.target.value;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('UI Events', "#event-type-beforeinput", "beforeinput event")}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                       |
+| ------------------------------------------------------------------------------------------------ | ---------------------------- |
+| {{SpecName('UI Events', "#event-type-beforeinput", "beforeinput event")}} | {{Spec2('UI Events')}} |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.HTMLElement.beforeinput_event")}}</p>
+{{Compat("api.HTMLElement.beforeinput_event")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Évènement associé : <code><a href="/en-US/docs/Web/API/HTMLElement/input_event">input</a></code></li>
-</ul>
+- Évènement associé : [`input`](/en-US/docs/Web/API/HTMLElement/input_event)

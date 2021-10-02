@@ -10,58 +10,45 @@ tags:
   - WebAuthn
 translation_of: Web/API/AuthenticatorAssertionResponse
 ---
-<p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>L'interface <code><strong>AuthenticatorAssertionResponse</strong></code>, rattachée à l'<a href="/fr/docs/Web/API/Web_Authentication_API">API Web Authentication</a>, est renvoyée par un appel à {{domxref('CredentialsContainer.get()')}} lorsqu'on a passé un objet {{domxref('PublicKeyCredential')}} en argument. Cette interface fournit une preuve à un service que l'objet possède une paire de clé et que la requête d'authentification est valide et approvée.</p>
+L'interface **`AuthenticatorAssertionResponse`**, rattachée à l'[API Web Authentication](/fr/docs/Web/API/Web_Authentication_API), est renvoyée par un appel à {{domxref('CredentialsContainer.get()')}} lorsqu'on a passé un objet {{domxref('PublicKeyCredential')}} en argument. Cette interface fournit une preuve à un service que l'objet possède une paire de clé et que la requête d'authentification est valide et approvée.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt><code>AuthenticatorAssertionResponse.clientDataJSON</code></dt>
- <dd>Les données du client pour l'authentification telles que l'origine et le <em>challenge</em>. La propriété {{domxref("AuthenticatorAttestationResponse.clientDataJSON","clientDataJSON")}} est héritée de {{domxref("AuthenticatorResponse")}}.</dd>
- <dt>{{domxref("AuthenticatorAssertionResponse.authenticatorData")}}</dt>
- <dd>Un objet {{jsxref("ArrayBuffer")}} contenant les informations sur l'authenticateur telles que :
- <ul>
-  <li>l'empreinte d'identifiant (<em>Relying Party ID Hash</em>) <code>rpidHash</code></li>
-  <li>un compteur de signature</li>
-  <li>un test de présence d'utilisateur</li>
-  <li>des marqueurs de vérification de l'utilisateur</li>
-  <li>les éventuelles extensions traitées par l'authentificateur</li>
- </ul>
- Ce champ est l'un des deux champs qui est signé par l'authentificateur.</dd>
- <dt>{{domxref("AuthenticatorAssertionResponse.signature")}}</dt>
- <dd>Une signature d'assertion par rapport à {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} et {{domxref("AuthenticatorResponse.clientDataJSON")}}. La signature d'assertion est créée avec la clé privée de la paire de clés (générée avec l'appel à <code>create()</code>) et est vérifiée avec la clé publique la même paire de clé.</dd>
- <dt>{{domxref("AuthenticatorAssertionResponse.userHandle")}}</dt>
- <dd>Un objet {{jsxref("ArrayBuffer")}} contenant un identifiant opaque pour l'utilisateur.</dd>
-</dl>
+- `AuthenticatorAssertionResponse.clientDataJSON`
+  - : Les données du client pour l'authentification telles que l'origine et le _challenge_. La propriété {{domxref("AuthenticatorAttestationResponse.clientDataJSON","clientDataJSON")}} est héritée de {{domxref("AuthenticatorResponse")}}.
+- {{domxref("AuthenticatorAssertionResponse.authenticatorData")}}
 
-<h2 id="Méthodes">Méthodes</h2>
+  - : Un objet {{jsxref("ArrayBuffer")}} contenant les informations sur l'authenticateur telles que :
 
-<p>Aucune.</p>
+    - l'empreinte d'identifiant (_Relying Party ID Hash_) `rpidHash`
+    - un compteur de signature
+    - un test de présence d'utilisateur
+    - des marqueurs de vérification de l'utilisateur
+    - les éventuelles extensions traitées par l'authentificateur
 
-<h2 id="Exemples">Exemples</h2>
+    Ce champ est l'un des deux champs qui est signé par l'authentificateur.
 
-<p>TBD</p>
+- {{domxref("AuthenticatorAssertionResponse.signature")}}
+  - : Une signature d'assertion par rapport à {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} et {{domxref("AuthenticatorResponse.clientDataJSON")}}. La signature d'assertion est créée avec la clé privée de la paire de clés (générée avec l'appel à `create()`) et est vérifiée avec la clé publique la même paire de clé.
+- {{domxref("AuthenticatorAssertionResponse.userHandle")}}
+  - : Un objet {{jsxref("ArrayBuffer")}} contenant un identifiant opaque pour l'utilisateur.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Méthodes
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAuthn')}}</td>
-   <td>{{Spec2('WebAuthn')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+Aucune.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Exemples
 
-<p>{{Compat("api.AuthenticatorAssertionResponse")}}</p>
+TBD
+
+## Spécifications
+
+| Spécification                    | État                         | Commentaires         |
+| -------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('WebAuthn')}} | {{Spec2('WebAuthn')}} | Définition initiale. |
+
+## Compatibilité des navigateurs
+
+{{Compat("api.AuthenticatorAssertionResponse")}}

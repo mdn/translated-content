@@ -10,67 +10,65 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/createTexture
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>La méthode <strong><code>WebGLRenderingContext.createTexture()</code></strong> de l'API WebGL crée et initialise un objet {{domxref("WebGLTexture")}}.</p>
+La méthode **`WebGLRenderingContext.createTexture()`** de l'API WebGL crée et initialise un objet {{domxref("WebGLTexture")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">WebGLTexture <var>gl</var>.createTexture();
-</pre>
+    WebGLTexture gl.createTexture();
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Un objet {{domxref("WebGLTexture")}} auquel des images peuvent être liées.</p>
+Un objet {{domxref("WebGLTexture")}} auquel des images peuvent être liées.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Voir aussi le <a href="/fr-FR/docs/Web/API/WebGL_API/Tutorial">tutoriel WebGL</a> sur l'<a href="/fr-FR/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">Utilisation de textures en WebGL</a>.</p>
+Voir aussi le [tutoriel WebGL](/fr-FR/docs/Web/API/WebGL_API/Tutorial) sur l'[Utilisation de textures en WebGL](/fr-FR/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 
-<h3 id="Création_d'une_texture">Création d'une texture</h3>
+### Création d'une texture
 
-<pre class="brush: js">var canevas = document.getElementById('canevas');
+```js
+var canevas = document.getElementById('canevas');
 var gl = canevas.getContext('webgl');
 var texture = gl.createTexture();
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.8", "createTexture")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>
-    <p>Définition initiale.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glGenTextures.xml", "glGenTextures")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>Page man de l’API OpenGL (similaire).</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('WebGL', "#5.14.8", "createTexture")}}</td>
+      <td>{{Spec2('WebGL')}}</td>
+      <td><p>Définition initiale.</p></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('OpenGL ES 2.0', "glGenTextures.xml", "glGenTextures")}}
+      </td>
+      <td>{{Spec2('OpenGL ES 2.0')}}</td>
+      <td>Page man de l’API OpenGL (similaire).</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WebGLRenderingContext.createTexture")}}</p>
+{{Compat("api.WebGLRenderingContext.createTexture")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindTexture()")}}
+- {{domxref("WebGLRenderingContext.deleteTexture()")}}
+- {{domxref("WebGLRenderingContext.isTexture()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}

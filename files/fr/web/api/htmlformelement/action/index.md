@@ -3,24 +3,23 @@ title: HTMLFormElement.action
 slug: Web/API/HTMLFormElement/action
 translation_of: Web/API/HTMLFormElement/action
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>La propriété <strong><code>HTMLFormElement.action</code></strong> représente l'action associée à l'élément {{HTMLElement("form")}}.</p>
+La propriété **`HTMLFormElement.action`** représente l'action associée à l'élément {{HTMLElement("form")}}.
 
-<p>L'action d'un formulaire est le programme exécuté sur le serveur lorsque le formulaire est soumis. Cette propriété peut être récupérée ou définie.</p>
+L'action d'un formulaire est le programme exécuté sur le serveur lorsque le formulaire est soumis. Cette propriété peut être récupérée ou définie.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>string</em> = form.action
-form.action = <em>string</em>
-</pre>
+    string = form.action
+    form.action = string
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>form.action = "/cgi-bin/publish";</p>
+form.action = "/cgi-bin/publish";
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<p><a href="http://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method">HTML 5, Section 4.10.19.6, Form submission</a></p>
+[HTML 5, Section 4.10.19.6, Form submission](http://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method)
 
-<p><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-74049184">DOM Level 2 HTML: action</a></p>
+[DOM Level 2 HTML: action](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-74049184)

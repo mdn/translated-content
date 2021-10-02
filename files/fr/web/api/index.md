@@ -10,24 +10,22 @@ tags:
   - Web
 translation_of: Web/API
 ---
-<p>Quand vous codez en JavaScript pour le web, il y a un grand nombre d'API disponibles. La liste ci-dessous énumère toutes les interfaces (types et objets) que vous pouvez appeler quand vous développez votre application web ou votre site.</p>
+Quand vous codez en JavaScript pour le web, il y a un grand nombre d'API disponibles. La liste ci-dessous énumère toutes les interfaces (types et objets) que vous pouvez appeler quand vous développez votre application web ou votre site.
 
-<p>Les APIs Web sont habituellement utilisés avec le JavaScript, bien que cela ne devrait pas toujours être le cas.</p>
+Les APIs Web sont habituellement utilisés avec le JavaScript, bien que cela ne devrait pas toujours être le cas.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Voici une liste de toutes les APIs disponibles.</p>
+Voici une liste de toutes les APIs disponibles.
 
-<div>{{ListGroups}}</div>
+{{ListGroups}}
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<p>Voici une liste de toutes les interfaces (c'est à dire, les types d'objets) disponibles.</p>
+Voici une liste de toutes les interfaces (c'est à dire, les types d'objets) disponibles.
 
-<div>{{APIListAlpha}}</div>
+{{APIListAlpha}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/Web/Events">Web API event reference</a></li>
-</ul>
+- [Web API event reference](/en-US/docs/Web/Events)

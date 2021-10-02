@@ -1,167 +1,151 @@
 ---
 title: Event
 slug: Web/API/Event
-browser-compat: api.Event
 translation_of: Web/API/Event
+browser-compat: api.Event
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>L'interface <code><strong>Event</strong></code> interface représente un évènement qui se produit dans le DOM.</p>
+L'interface **`Event`** interface représente un évènement qui se produit dans le DOM.
 
-<p>Un évènement peut être déclenché par une action humaine (clic avec la souris, appui sur une touche du clavier) ou généré par des API pour représenter la progression d'une tâche asynchrone. Il est également possible de déclencher un évènement à partir d'un programme, en appelant par exemple la méthode <a href="/fr/docs/Web/API/HTMLElement/click"><code>HTMLElement.click()</code></a> sur un élément ou en définissant l'évènement avant de l'envoyer sur une cible avec la méthode <a href="/fr/docs/Web/API/EventTarget/dispatchEvent"><code>EventTarget.dispatchEvent()</code></a>.</p>
+Un évènement peut être déclenché par une action humaine (clic avec la souris, appui sur une touche du clavier) ou généré par des API pour représenter la progression d'une tâche asynchrone. Il est également possible de déclencher un évènement à partir d'un programme, en appelant par exemple la méthode [`HTMLElement.click()`](/fr/docs/Web/API/HTMLElement/click) sur un élément ou en définissant l'évènement avant de l'envoyer sur une cible avec la méthode [`EventTarget.dispatchEvent()`](/fr/docs/Web/API/EventTarget/dispatchEvent).
 
-<p>Il existe de nombreux types d'évènements dont certains utilisent d'autres interfaces basées sur <code>Event</code>. L'interface <code>Event</code> contient les propriétés et méthodes qui sont communes à l'ensemble des évènements.</p>
+Il existe de nombreux types d'évènements dont certains utilisent d'autres interfaces basées sur `Event`. L'interface `Event` contient les propriétés et méthodes qui sont communes à l'ensemble des évènements.
 
-<p>De nombreux éléments DOM peuvent être paramétrés afin d'accepter (« d'écouter ») ces évènements et d'exécuter du code en réaction afin de les traiter (« gérer »). Les gestionnaires d'évènements sont généralement connectés (« attachés ») aux <a href="/fr/docs/Web/HTML/Element">éléments HTML</a> (tels que <code>&lt;button&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, etc.) grâce à la méthode <a href="/fr/docs/Web/API/EventTarget/addEventListener"><code>EventTarget.addEventListener()</code></a> qui remplace les anciens <a href="/fr/docs/Web/HTML/Global_attributes">attributs de gestion d'évènement</a> qui étaient auparavant utilisés en HTML. Avec cette méthode d'ajout plus récente, les gestionnaires peuvent également être déconnectés/détachés si besoin via la méthode <a href="/fr/docs/Web/API/EventTarget/removeEventListener"><code>EventTarget.removeEventListener()</code></a>.</p>
+De nombreux éléments DOM peuvent être paramétrés afin d'accepter (« d'écouter ») ces évènements et d'exécuter du code en réaction afin de les traiter (« gérer »). Les gestionnaires d'évènements sont généralement connectés (« attachés ») aux [éléments HTML](/fr/docs/Web/HTML/Element) (tels que `<button>`, `<div>`, `<span>`, etc.) grâce à la méthode [`EventTarget.addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) qui remplace les anciens [attributs de gestion d'évènement](/fr/docs/Web/HTML/Global_attributes) qui étaient auparavant utilisés en HTML. Avec cette méthode d'ajout plus récente, les gestionnaires peuvent également être déconnectés/détachés si besoin via la méthode [`EventTarget.removeEventListener()`](/fr/docs/Web/API/EventTarget/removeEventListener).
 
-<div class="notecard note">
-<p><strong>Note :</strong> Il est tout à fait possible d'attacher plusieurs gestionnaires d'évènement à un seul élément, y compris pour la gestion d'un évènement particulier. Ainsi, des modules de code indépendant peuvent attacher leurs gestionnaires de façon indépendante (par exemple, sur une page web, un module de publicité et un autre module d'analyse pourront tout à fait attacher des gestionnaires pour étudier la consultation d'une vidéo).</p>
-</div>
+> **Note :** Il est tout à fait possible d'attacher plusieurs gestionnaires d'évènement à un seul élément, y compris pour la gestion d'un évènement particulier. Ainsi, des modules de code indépendant peuvent attacher leurs gestionnaires de façon indépendante (par exemple, sur une page web, un module de publicité et un autre module d'analyse pourront tout à fait attacher des gestionnaires pour étudier la consultation d'une vidéo).
 
-<p>Lorsqu'il y a de nombreux éléments imbriqués, chacun ayant ses propres gestionnaires d'évènement, le traitement des évènements peut se révéler compliqué, notamment lorsqu'un élément parent reçoit le même évènement que ses éléments enfants (par exemple pour des évènements qui se déclenchent sur la surface visuelle de l'élément enfant). Dans ce cas, l'ordre du traitement de ces évènements dépend des paramètres <a href="/fr/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture">de bouillonnement (<i>bubbling</i>) et de capture</a> définis sur chaque gestionnaire ainsi déclenché.</p>
+Lorsqu'il y a de nombreux éléments imbriqués, chacun ayant ses propres gestionnaires d'évènement, le traitement des évènements peut se révéler compliqué, notamment lorsqu'un élément parent reçoit le même évènement que ses éléments enfants (par exemple pour des évènements qui se déclenchent sur la surface visuelle de l'élément enfant). Dans ce cas, l'ordre du traitement de ces évènements dépend des paramètres [de bouillonnement (_bubbling_) et de capture](/fr/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture) définis sur chaque gestionnaire ainsi déclenché.
 
-<h2 id="introduction">Interfaces basées sur Event</h2>
+## Interfaces basées sur Event
 
-<p>Voici une liste des interfaces basées sur <code>Event</code> avec un lien vers leur documentation dans la référence MDN.</p>
+Voici une liste des interfaces basées sur `Event` avec un lien vers leur documentation dans la référence MDN.
 
-<p>On notera que l'ensemble des interfaces d'évènements ont un nom qui termine par <i>Event</i> (« évènement » en anglais).</p>
+On notera que l'ensemble des interfaces d'évènements ont un nom qui termine par _Event_ (« évènement » en anglais).
 
-<ul>
- <li><a href="/fr/docs/Web/API/AnimationEvent"><code>AnimationEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/AudioProcessingEvent"><code>AudioProcessingEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/BeforeInputEvent"><code>BeforeInputEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/BeforeUnloadEvent"><code>BeforeUnloadEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/BlobEvent"><code>BlobEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/ClipboardEvent"><code>ClipboardEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/CloseEvent"><code>CloseEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/CompositionEvent"><code>CompositionEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/CSSFontFaceLoadEvent"><code>CSSFontFaceLoadEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/CustomEvent"><code>CustomEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/DeviceMotionEvent"><code>DeviceMotionEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/DeviceOrientationEvent"><code>DeviceOrientationEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/DeviceProximityEvent"><code>DeviceProximityEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/DOMTransactionEvent"><code>DOMTransactionEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/DragEvent"><code>DragEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/EditingBeforeInputEvent"><code>EditingBeforeInputEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/ErrorEvent"><code>ErrorEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/FetchEvent"><code>FetchEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/FocusEvent"><code>FocusEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/GamepadEvent"><code>GamepadEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/HashChangeEvent"><code>HashChangeEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/IDBVersionChangeEvent"><code>IDBVersionChangeEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/InputEvent"><code>InputEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/KeyboardEvent"><code>KeyboardEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/MediaStreamEvent"><code>MediaStreamEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/MessageEvent"><code>MessageEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/MouseEvent"><code>MouseEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/MutationEvent"><code>MutationEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/OfflineAudioCompletionEvent"><code>OfflineAudioCompletionEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/OverconstrainedError"><code>OverconstrainedError</code></a></li>
- <li><a href="/fr/docs/Web/API/PageTransitionEvent"><code>PageTransitionEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/PaymentRequestUpdateEvent"><code>PaymentRequestUpdateEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/PointerEvent"><code>PointerEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/PopStateEvent"><code>PopStateEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/ProgressEvent"><code>ProgressEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/RelatedEvent"><code>RelatedEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/RTCDataChannelEvent"><code>RTCDataChannelEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/RTCPeerConnectionIceEvent"><code>RTCPeerConnectionIceEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/SensorEvent"><code>SensorEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/StorageEvent"><code>StorageEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/SVGEvent"><code>SVGEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/SVGZoomEvent"><code>SVGZoomEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/TimeEvent"><code>TimeEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/TouchEvent"><code>TouchEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/TrackEvent"><code>TrackEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/TransitionEvent"><code>TransitionEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/UIEvent"><code>UIEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/UserProximityEvent"><code>UserProximityEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/WebGLContextEvent"><code>WebGLContextEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/WheelEvent"><code>WheelEvent</code></a></li>
-</ul>
+- [`AnimationEvent`](/fr/docs/Web/API/AnimationEvent)
+- [`AudioProcessingEvent`](/fr/docs/Web/API/AudioProcessingEvent)
+- [`BeforeInputEvent`](/fr/docs/Web/API/BeforeInputEvent)
+- [`BeforeUnloadEvent`](/fr/docs/Web/API/BeforeUnloadEvent)
+- [`BlobEvent`](/fr/docs/Web/API/BlobEvent)
+- [`ClipboardEvent`](/fr/docs/Web/API/ClipboardEvent)
+- [`CloseEvent`](/fr/docs/Web/API/CloseEvent)
+- [`CompositionEvent`](/fr/docs/Web/API/CompositionEvent)
+- [`CSSFontFaceLoadEvent`](/fr/docs/Web/API/CSSFontFaceLoadEvent)
+- [`CustomEvent`](/fr/docs/Web/API/CustomEvent)
+- [`DeviceMotionEvent`](/fr/docs/Web/API/DeviceMotionEvent)
+- [`DeviceOrientationEvent`](/fr/docs/Web/API/DeviceOrientationEvent)
+- [`DeviceProximityEvent`](/fr/docs/Web/API/DeviceProximityEvent)
+- [`DOMTransactionEvent`](/fr/docs/Web/API/DOMTransactionEvent)
+- [`DragEvent`](/fr/docs/Web/API/DragEvent)
+- [`EditingBeforeInputEvent`](/fr/docs/Web/API/EditingBeforeInputEvent)
+- [`ErrorEvent`](/fr/docs/Web/API/ErrorEvent)
+- [`FetchEvent`](/fr/docs/Web/API/FetchEvent)
+- [`FocusEvent`](/fr/docs/Web/API/FocusEvent)
+- [`GamepadEvent`](/fr/docs/Web/API/GamepadEvent)
+- [`HashChangeEvent`](/fr/docs/Web/API/HashChangeEvent)
+- [`IDBVersionChangeEvent`](/fr/docs/Web/API/IDBVersionChangeEvent)
+- [`InputEvent`](/fr/docs/Web/API/InputEvent)
+- [`KeyboardEvent`](/fr/docs/Web/API/KeyboardEvent)
+- [`MediaStreamEvent`](/fr/docs/Web/API/MediaStreamEvent)
+- [`MessageEvent`](/fr/docs/Web/API/MessageEvent)
+- [`MouseEvent`](/fr/docs/Web/API/MouseEvent)
+- [`MutationEvent`](/fr/docs/Web/API/MutationEvent)
+- [`OfflineAudioCompletionEvent`](/fr/docs/Web/API/OfflineAudioCompletionEvent)
+- [`OverconstrainedError`](/fr/docs/Web/API/OverconstrainedError)
+- [`PageTransitionEvent`](/fr/docs/Web/API/PageTransitionEvent)
+- [`PaymentRequestUpdateEvent`](/fr/docs/Web/API/PaymentRequestUpdateEvent)
+- [`PointerEvent`](/fr/docs/Web/API/PointerEvent)
+- [`PopStateEvent`](/fr/docs/Web/API/PopStateEvent)
+- [`ProgressEvent`](/fr/docs/Web/API/ProgressEvent)
+- [`RelatedEvent`](/fr/docs/Web/API/RelatedEvent)
+- [`RTCDataChannelEvent`](/fr/docs/Web/API/RTCDataChannelEvent)
+- [`RTCPeerConnectionIceEvent`](/fr/docs/Web/API/RTCPeerConnectionIceEvent)
+- [`SensorEvent`](/fr/docs/Web/API/SensorEvent)
+- [`StorageEvent`](/fr/docs/Web/API/StorageEvent)
+- [`SVGEvent`](/fr/docs/Web/API/SVGEvent)
+- [`SVGZoomEvent`](/fr/docs/Web/API/SVGZoomEvent)
+- [`TimeEvent`](/fr/docs/Web/API/TimeEvent)
+- [`TouchEvent`](/fr/docs/Web/API/TouchEvent)
+- [`TrackEvent`](/fr/docs/Web/API/TrackEvent)
+- [`TransitionEvent`](/fr/docs/Web/API/TransitionEvent)
+- [`UIEvent`](/fr/docs/Web/API/UIEvent)
+- [`UserProximityEvent`](/fr/docs/Web/API/UserProximityEvent)
+- [`WebGLContextEvent`](/fr/docs/Web/API/WebGLContextEvent)
+- [`WheelEvent`](/fr/docs/Web/API/WheelEvent)
 
-<h2 id="constructor">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt><a href="/fr/docs/Web/API/Event/Event"><code>Event()</code></a></dt>
- <dd>Crée un objet <code>Event</code> et le renvoie à l'appelant.</dd>
-</dl>
+- [`Event()`](/fr/docs/Web/API/Event/Event)
+  - : Crée un objet `Event` et le renvoie à l'appelant.
 
-<h2 id="properties">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt><a href="/fr/docs/Web/API/Event/bubbles"><code>Event.bubbles</code></a> {{readonlyinline}}</dt>
- <dd>Un booléen qui indique si l'évènement bouillonne/remonte vers le haut dans l'arbre du DOM.</dd>
- <dt><a href="/fr/docs/Web/API/Event/cancelBubble"><code>Event.cancelBubble</code></a></dt>
- <dd>Un alias historique de <a href="/fr/docs/Web/API/Event/stopPropagation"><code>Event.stopPropagation()</code></a>. Définir sa valeur à <code>true</code> avant le retour d'un gestionnaire d'évènement empêchera la propagation de l'évènement.</dd>
- <dt><a href="/fr/docs/Web/API/Event/cancelable"><code>Event.cancelable</code></a> {{readonlyinline}}</dt>
- <dd>Un booléen qui indique si l'évènement peut être annulé.</dd>
- <dt><a href="/fr/docs/Web/API/Event/composed"><code>Event.composed</code></a> {{ReadOnlyInline}}</dt>
- <dd>Un booléen qui indique si l'évènement peut bouillonner entre l'arbre du shadow DOM et le DOM standard.</dd>
- <dt><a href="/fr/docs/Web/API/Event/currentTarget"><code>Event.currentTarget</code></a> {{readonlyinline}}</dt>
- <dd>Une référence vers la cible actuellement enregistrée pour l'évènement. Il s'agit de l'objet vers lequel l'évènement est présentement destiné à être envoyé. Cette cible peut avoir été modifiée pendant la vie de l'évènement via un reciblage.</dd>
- <dt><a href="/fr/docs/Web/API/Event/deepPath"><code>Event.deepPath</code></a> {{non-standard_inline}}</dt>
- <dd>Un tableau (<a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>) de nœuds (<a href="/fr/docs/Web/API/Node"><code>Node</code></a>) du DOM qui ont été parcourus lors du bouillonnement/de la remontée de l'évènement.</dd>
- <dt><a href="/fr/docs/Web/API/Event/defaultPrevented"><code>Event.defaultPrevented</code></a> {{readonlyinline}}</dt>
- <dd>Indique si un appel à <a href="/fr/docs/Web/API/Event/preventDefault"><code>Event.preventDefault()</code></a> a annulé l'évènement.</dd>
- <dt><a href="/fr/docs/Web/API/Event/eventPhase"><code>Event.eventPhase</code></a> {{readonlyinline}}</dt>
- <dd>Indique la phase du flux de l'évènement qui est en cours de traitement.</dd>
- <dt><a href="/fr/docs/Web/API/Event/explicitOriginalTarget"><code>Event.explicitOriginalTarget</code></a> {{non-standard_inline}} {{readonlyinline}}</dt>
- <dd>La cible explicite et originnelle de l'évènement (spécifique à Mozilla).</dd>
- <dt><a href="/fr/docs/Web/API/Event/originalTarget"><code>Event.originalTarget</code></a> {{non-standard_inline}} {{readonlyinline}}</dt>
- <dd>La cible originale de l'évènement avant tout reciblage (spécifique à Mozilla).</dd>
- <dt><a href="/fr/docs/Web/API/Event/returnValue"><code>Event.returnValue</code></a> {{Deprecated_Inline}}</dt>
- <dd>Une propriété historique, introduite par Internet Explorer puis adoptée au sein de la spécification du DOM pour la compatibilité des sites existants. À la place, on privilégiera l'usage de <a href="/fr/docs/Web/API/Event/preventDefault"><code>Event.preventDefault()</code></a> et <a href="/fr/docs/Web/API/Event/defaultPrevented"><code>Event.defaultPrevented</code></a>.</dd>
- <dt><a href="/fr/docs/Web/API/Event/srcElement"><code>Event.srcElement</code></a> {{non-standard_inline}}</dt>
- <dd>Un alias non-standard (provenant d'anciennes versions d'Internet Explorer) pour <a href="/fr/docs/Web/API/Event/target"><code>Event.target</code></a>. Certains navigateurs le prennent en charge à des fins de compatibilité web.</dd>
- <dt><a href="/fr/docs/Web/API/Event/target"><code>Event.target</code></a> {{readonlyinline}}</dt>
- <dd>Une référence à la cible à laquelle l'évènement était initialement destiné.</dd>
- <dt><a href="/fr/docs/Web/API/Event/timeStamp"><code>Event.timeStamp</code></a> {{readonlyinline}}</dt>
- <dd>Le temps auquel l'évènement a été créé (exprimé en millisecondes). La spécification indique que cette valeur est relative à l'epoch mais l'implémentation des navigateurs peut varier. Des travaux sont en cours afin que cette valeur devienne une valeur de type <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a>.</dd>
- <dt><a href="/fr/docs/Web/API/Event/type"><code>Event.type</code></a> {{readonlyinline}}</dt>
- <dd>Le nom de l'évènement, exprimé de façon insensible à la casse.</dd>
- <dt><a href="/fr/docs/Web/API/Event/isTrusted"><code>Event.isTrusted</code></a> {{readonlyinline}}</dt>
- <dd>Indique si l'évènement a été initié par le navigateur (suite à une action humaine comme un clic) ou par un script (en utilisant une méthode de création comme <a href="/fr/docs/Web/API/Event/initEvent"><code>Event.initEvent</code></a>).</dd>
-</dl>
+- [`Event.bubbles`](/fr/docs/Web/API/Event/bubbles) {{readonlyinline}}
+  - : Un booléen qui indique si l'évènement bouillonne/remonte vers le haut dans l'arbre du DOM.
+- [`Event.cancelBubble`](/fr/docs/Web/API/Event/cancelBubble)
+  - : Un alias historique de [`Event.stopPropagation()`](/fr/docs/Web/API/Event/stopPropagation). Définir sa valeur à `true` avant le retour d'un gestionnaire d'évènement empêchera la propagation de l'évènement.
+- [`Event.cancelable`](/fr/docs/Web/API/Event/cancelable) {{readonlyinline}}
+  - : Un booléen qui indique si l'évènement peut être annulé.
+- [`Event.composed`](/fr/docs/Web/API/Event/composed) {{ReadOnlyInline}}
+  - : Un booléen qui indique si l'évènement peut bouillonner entre l'arbre du shadow DOM et le DOM standard.
+- [`Event.currentTarget`](/fr/docs/Web/API/Event/currentTarget) {{readonlyinline}}
+  - : Une référence vers la cible actuellement enregistrée pour l'évènement. Il s'agit de l'objet vers lequel l'évènement est présentement destiné à être envoyé. Cette cible peut avoir été modifiée pendant la vie de l'évènement via un reciblage.
+- [`Event.deepPath`](/fr/docs/Web/API/Event/deepPath) {{non-standard_inline}}
+  - : Un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) de nœuds ([`Node`](/fr/docs/Web/API/Node)) du DOM qui ont été parcourus lors du bouillonnement/de la remontée de l'évènement.
+- [`Event.defaultPrevented`](/fr/docs/Web/API/Event/defaultPrevented) {{readonlyinline}}
+  - : Indique si un appel à [`Event.preventDefault()`](/fr/docs/Web/API/Event/preventDefault) a annulé l'évènement.
+- [`Event.eventPhase`](/fr/docs/Web/API/Event/eventPhase) {{readonlyinline}}
+  - : Indique la phase du flux de l'évènement qui est en cours de traitement.
+- [`Event.explicitOriginalTarget`](/fr/docs/Web/API/Event/explicitOriginalTarget) {{non-standard_inline}} {{readonlyinline}}
+  - : La cible explicite et originnelle de l'évènement (spécifique à Mozilla).
+- [`Event.originalTarget`](/fr/docs/Web/API/Event/originalTarget) {{non-standard_inline}} {{readonlyinline}}
+  - : La cible originale de l'évènement avant tout reciblage (spécifique à Mozilla).
+- [`Event.returnValue`](/fr/docs/Web/API/Event/returnValue) {{Deprecated_Inline}}
+  - : Une propriété historique, introduite par Internet Explorer puis adoptée au sein de la spécification du DOM pour la compatibilité des sites existants. À la place, on privilégiera l'usage de [`Event.preventDefault()`](/fr/docs/Web/API/Event/preventDefault) et [`Event.defaultPrevented`](/fr/docs/Web/API/Event/defaultPrevented).
+- [`Event.srcElement`](/fr/docs/Web/API/Event/srcElement) {{non-standard_inline}}
+  - : Un alias non-standard (provenant d'anciennes versions d'Internet Explorer) pour [`Event.target`](/fr/docs/Web/API/Event/target). Certains navigateurs le prennent en charge à des fins de compatibilité web.
+- [`Event.target`](/fr/docs/Web/API/Event/target) {{readonlyinline}}
+  - : Une référence à la cible à laquelle l'évènement était initialement destiné.
+- [`Event.timeStamp`](/fr/docs/Web/API/Event/timeStamp) {{readonlyinline}}
+  - : Le temps auquel l'évènement a été créé (exprimé en millisecondes). La spécification indique que cette valeur est relative à l'epoch mais l'implémentation des navigateurs peut varier. Des travaux sont en cours afin que cette valeur devienne une valeur de type [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp).
+- [`Event.type`](/fr/docs/Web/API/Event/type) {{readonlyinline}}
+  - : Le nom de l'évènement, exprimé de façon insensible à la casse.
+- [`Event.isTrusted`](/fr/docs/Web/API/Event/isTrusted) {{readonlyinline}}
+  - : Indique si l'évènement a été initié par le navigateur (suite à une action humaine comme un clic) ou par un script (en utilisant une méthode de création comme [`Event.initEvent`](/fr/docs/Web/API/Event/initEvent)).
 
-<h3 id="deprecated_properties">Propriétés dépréciées</h3>
+### Propriétés dépréciées
 
-<dl>
- <dt><a href="/fr/docs/Web/API/Event/composed"><code>Event.scoped</code></a> {{readonlyinline}} {{deprecated_inline}}</dt>
- <dd>Un booléen qui indique si l'évènement courant remontera de l'arbre du shadow DOM vers l'arbre du DOM classique. <a href="/fr/docs/Web/API/Event/composed"><code>Event.composed</code></a> doit être utilisé à la place.</dd>
-</dl>
+- [`Event.scoped`](/fr/docs/Web/API/Event/composed) {{readonlyinline}} {{deprecated_inline}}
+  - : Un booléen qui indique si l'évènement courant remontera de l'arbre du shadow DOM vers l'arbre du DOM classique. [`Event.composed`](/fr/docs/Web/API/Event/composed) doit être utilisé à la place.
 
-<h2 id="methods">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt><a href="/fr/docs/Web/API/Event/composedPath"><code>Event.composedPath()</code></a></dt>
- <dd>Renvoie le chemin de l'évènement (c'est-à-dire les objets pour lesquels des gestionnaires d'évènements seront appelés). Ce chemin n'inclut pas les nœuds des arbres shadow si la racine shadow a été créée avec un <a href="/fr/docs/Web/API/ShadowRoot/mode"><code>ShadowRoot.mode</code></a>.</dd>
- <dt><a href="/fr/docs/Web/API/Event/preventDefault"><code>Event.preventDefault()</code></a></dt>
- <dd>Annule l'évènement (si celui-ci peut être annulé).</dd>
- <dt><a href="/fr/docs/Web/API/Event/stopImmediatePropagation"><code>Event.stopImmediatePropagation</code></a></dt>
- <dd>Pour l'évènement courant, empêche les autres gestionnaires d'évènements d'être appelés. Cela inclut les gestionnaires attachés au même élément ainsi que ceux attachés aux éléments qui seront parcourus ensuite (pendant la phase de capture par exemple).</dd>
- <dt><a href="/fr/docs/Web/API/Event/stopPropagation"><code>Event.stopPropagation</code></a></dt>
- <dd>Arrête la propagation des évènements plus loin dans le DOM.</dd>
-</dl>
+- [`Event.composedPath()`](/fr/docs/Web/API/Event/composedPath)
+  - : Renvoie le chemin de l'évènement (c'est-à-dire les objets pour lesquels des gestionnaires d'évènements seront appelés). Ce chemin n'inclut pas les nœuds des arbres shadow si la racine shadow a été créée avec un [`ShadowRoot.mode`](/fr/docs/Web/API/ShadowRoot/mode).
+- [`Event.preventDefault()`](/fr/docs/Web/API/Event/preventDefault)
+  - : Annule l'évènement (si celui-ci peut être annulé).
+- [`Event.stopImmediatePropagation`](/fr/docs/Web/API/Event/stopImmediatePropagation)
+  - : Pour l'évènement courant, empêche les autres gestionnaires d'évènements d'être appelés. Cela inclut les gestionnaires attachés au même élément ainsi que ceux attachés aux éléments qui seront parcourus ensuite (pendant la phase de capture par exemple).
+- [`Event.stopPropagation`](/fr/docs/Web/API/Event/stopPropagation)
+  - : Arrête la propagation des évènements plus loin dans le DOM.
 
-<h3 id="deprecated_methods">Méthodes dépréciées</h3>
+### Méthodes dépréciées
 
-<dl>
- <dt><a href="/fr/docs/Web/API/Event/initEvent"><code>Event.initEvent()</code></a> {{deprecated_inline}}</dt>
- <dd>Initialise la valeur d'un évènement créé. Si l'évènement a déjà diffusé, cette méthode n'a aucun effet.</dd>
-</dl>
+- [`Event.initEvent()`](/fr/docs/Web/API/Event/initEvent) {{deprecated_inline}}
+  - : Initialise la valeur d'un évènement créé. Si l'évènement a déjà diffusé, cette méthode n'a aucun effet.
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>Les types d'évènement disponibles : <a href="/fr/docs/Web/Events">Référence des évènements</a></li>
-  <li><a href="/fr/docs/Web/API/Event/Comparison_of_Event_Targets">Comparaison des cibles d'évènements</a> (<code>target</code> vs <code>currentTarget</code> vs <code>relatedTarget</code> vs <code>originalTarget</code>)</li>
-  <li><a href="/fr/docs/Web/Events/Creating_and_triggering_events">Créer et déclencher des évènements personnalisés</a></li>
-</ul>
+- Les types d'évènement disponibles : [Référence des évènements](/fr/docs/Web/Events)
+- [Comparaison des cibles d'évènements](/fr/docs/Web/API/Event/Comparison_of_Event_Targets) (`target` vs `currentTarget` vs `relatedTarget` vs `originalTarget`)
+- [Créer et déclencher des évènements personnalisés](/fr/docs/Web/Events/Creating_and_triggering_events)

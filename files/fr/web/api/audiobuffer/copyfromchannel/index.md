@@ -8,55 +8,41 @@ tags:
   - Web Audio API
 translation_of: Web/API/AudioBuffer/copyFromChannel
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>La méthode <code>copyFromChannel() </code>de l'interface {{ domxref("AudioBuffer") }} copie les échantillons de l'un des canaux de l'<code>AudioBuffer</code> dans un tableau.</p>
+La méthode `copyFromChannel() `de l'interface {{ domxref("AudioBuffer") }} copie les échantillons de l'un des canaux de l'`AudioBuffer` dans un tableau.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>tableauDonnees</em>.copyFromChannel(<em>destination</em>,numeroCanal,decalageDebut);</pre>
+    tableauDonnees.copyFromChannel(destination,numeroCanal,decalageDebut);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><em>destination</em></dt>
- <dd>Un tableau {{domxref("Float32Array")}} dans lequel copier les données.</dd>
- <dt><em>channelNumber</em></dt>
- <dd>Le numéro du canal de l'AudioBuffer depuis lequel copier les données. Si <em>channelNumber</em> est supérieur ou égal à {{domxref("AudioBuffer.numberOfChannels")}}, une exception <code>INDEX_SIZE_ERR est</code> levée.</dd>
- <dt><em>startInChannel</em> {{optional_inline}}</dt>
- <dd>Un offset optionnel à partir duquel copier les données. Si la valeur de <em>startInChannel</em> est supérieure à {{domxref("AudioBuffer.length")}}, une exception <code>INDEX_SIZE_ERR</code> est levée.</dd>
-</dl>
+- _destination_
+  - : Un tableau {{domxref("Float32Array")}} dans lequel copier les données.
+- _channelNumber_
+  - : Le numéro du canal de l'AudioBuffer depuis lequel copier les données. Si *channelNumber* est supérieur ou égal à {{domxref("AudioBuffer.numberOfChannels")}}, une exception `INDEX_SIZE_ERR est` levée.
+- _startInChannel_ {{optional_inline}}
+  - : Un offset optionnel à partir duquel copier les données. Si la valeur de *startInChannel* est supérieure à {{domxref("AudioBuffer.length")}}, une exception `INDEX_SIZE_ERR` est levée.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var tableauDonnees = contextAudio.createBuffer(2, frameCount, contextAudio.sampleRate);
+```js
+var tableauDonnees = contextAudio.createBuffer(2, frameCount, contextAudio.sampleRate);
 var autreTableau = new Float32Array(length);
 tableauDonnees.copyFromChannel(autreTableau,1,0);
-</pre>
+```
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioBuffer-copyFromChannel-void-Float32Array-destination-long-channelNumber-unsigned-long-startInChannel', 'copyFromChannel')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                                                                            | Statut                               | Commentaire |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
+| {{SpecName('Web Audio API', '#widl-AudioBuffer-copyFromChannel-void-Float32Array-destination-long-channelNumber-unsigned-long-startInChannel', 'copyFromChannel')}} | {{Spec2('Web Audio API')}} |             |
 
-<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+## Compatibilité navigateurs
 
-<p>{{Compat("api.AudioBuffer.copyFromChannel")}}</p>
+{{Compat("api.AudioBuffer.copyFromChannel")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Utiliser la Web Audio API</a></li>
-</ul>
+- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

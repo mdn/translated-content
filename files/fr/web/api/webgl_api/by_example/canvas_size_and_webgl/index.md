@@ -10,32 +10,34 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Canvas_size_and_WebGL
 original_slug: Web/API/WebGL_API/By_example/Tailles_de_canvas_et_WebGL
 ---
-<div>{{IncludeSubnav("/fr/Apprendre")}}</div>
+{{IncludeSubnav("/fr/Apprendre")}}
 
-<p>{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_découpes_simples","Apprendre/WebGL/Par_exemple/Modèle_1")}}</p>
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_découpes_simples","Apprendre/WebGL/Par_exemple/Modèle_1")}}
 
-<p>{{EmbedLiveSample("Les_effets_liés_à_la_taille_du_canevas_sur_le_rendu_avec_WebGL",660,180)}}</p>
+{{EmbedLiveSample("Les_effets_liés_à_la_taille_du_canevas_sur_le_rendu_avec_WebGL",660,180)}}
 
-<p>Dans cet exemple, on observe l'effet obtenu quand on définit (ou non) la taille du canevas HTML avec sa taille {{Glossary("CSS")}} (exprimée en pixels CSS), tel qu'il apparaît dans la fenêtre du navigateur.</p>
+Dans cet exemple, on observe l'effet obtenu quand on définit (ou non) la taille du canevas HTML avec sa taille {{Glossary("CSS")}} (exprimée en pixels CSS), tel qu'il apparaît dans la fenêtre du navigateur.
 
-<h3 id="Les_effets_liés_à_la_taille_du_canevas_sur_le_rendu_avec_WebGL">Les effets liés à la taille du canevas sur le rendu avec WebGL</h3>
+### Les effets liés à la taille du canevas sur le rendu avec WebGL
 
-<p>Grâce aux méthodes {{domxref("WebGLRenderingContext.scissor()","scissor()")}} et {{domxref("WebGLRenderingContext.clear()","clear()")}} on peut démontrer que le tampon (<em>buffer</em>) de dessin WebGL est affecté par la taille du canevas (l'élément HTML <code>canvas</code>).</p>
+Grâce aux méthodes {{domxref("WebGLRenderingContext.scissor()","scissor()")}} et {{domxref("WebGLRenderingContext.clear()","clear()")}} on peut démontrer que le tampon (_buffer_) de dessin WebGL est affecté par la taille du canevas (l'élément HTML `canvas`).
 
-<p>La taille du premier canevas est définie avec la taille de l'élément, mis en forme, qui est déterminée par {{Glossary("CSS")}}. Pour cela, on affecte respectivement les valeurs {{domxref("Element.clientWidth","clientWidth")}} and {{domxref("Element.clientHeight","clientHeight")}} aux propriétés {{domxref("HTMLCanvasElement.width","width")}} et {{domxref("HTMLCanvasElement.height","height")}}.</p>
+La taille du premier canevas est définie avec la taille de l'élément, mis en forme, qui est déterminée par {{Glossary("CSS")}}. Pour cela, on affecte respectivement les valeurs {{domxref("Element.clientWidth","clientWidth")}} and {{domxref("Element.clientHeight","clientHeight")}} aux propriétés {{domxref("HTMLCanvasElement.width","width")}} et {{domxref("HTMLCanvasElement.height","height")}}.
 
-<p>Pour le deuxième canevas, on n'applique pas ce traitement, c'est donc les dimensions internes du canevas : {{domxref("HTMLCanvasElement.width","width")}} et {{domxref("HTMLCanvasElement.height","height")}} qui sont prises en compte. Celles-ci sont différentes des dimensions de l'élément <code>canvas</code> affiché dans le fenêtre du navigateur.</p>
+Pour le deuxième canevas, on n'applique pas ce traitement, c'est donc les dimensions internes du canevas : {{domxref("HTMLCanvasElement.width","width")}} et {{domxref("HTMLCanvasElement.height","height")}} qui sont prises en compte. Celles-ci sont différentes des dimensions de l'élément `canvas` affiché dans le fenêtre du navigateur.
 
-<p>L'effet devient visible quand on utilise les méthodes {{domxref("WebGLRenderingContext.scissor()","scissor()")}} et {{domxref("WebGLRenderingContext.clear()","clear()")}} pour dessiner un carré au centre du canevas en définissant sa position et sa taille en pixels. Dans le premier canevas, on obtient bien le bon résultat et dans le deuxième, on a la mauvaise forme, la mauvaise taille et la mauvaise position.</p>
+L'effet devient visible quand on utilise les méthodes {{domxref("WebGLRenderingContext.scissor()","scissor()")}} et {{domxref("WebGLRenderingContext.clear()","clear()")}} pour dessiner un carré au centre du canevas en définissant sa position et sa taille en pixels. Dans le premier canevas, on obtient bien le bon résultat et dans le deuxième, on a la mauvaise forme, la mauvaise taille et la mauvaise position.
 
-<pre class="brush: html">&lt;p&gt;On compare les deux canevas.&lt;/p&gt;
-&lt;canvas&gt;Votre navigateur ne semble pas
-    supporter l'élément HTML5 canvas.&lt;/canvas&gt;
-&lt;canvas&gt;Votre navigateur ne semble pas
-    supporter l'élément HTML5 canvas.&lt;/canvas&gt;
-</pre>
+```html
+<p>On compare les deux canevas.</p>
+<canvas>Votre navigateur ne semble pas
+    supporter l'élément HTML5 canvas.</canvas>
+<canvas>Votre navigateur ne semble pas
+    supporter l'élément HTML5 canvas.</canvas>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 canvas {
@@ -46,9 +48,10 @@ canvas {
   border : none;
   background-color : black;
 }
-</pre>
+```
 
-<pre class="brush: js">window.addEventListener("load", function() {
+```js
+window.addEventListener("load", function() {
   "use strict"
   var firstCanvas = document.getElementsByTagName("canvas")[0],
     secondCanvas = document.getElementsByTagName("canvas")[1];
@@ -76,8 +79,8 @@ canvas {
     gl.clear(gl.COLOR_BUFFER_BIT);
   });
 }, false);
-</pre>
+```
 
-<p>Le code source de cet exemple est également disponible sur <a href="https://github.com/idofilin/webgl-by-example/tree/master/canvas-size-and-webgl">GitHub</a>.</p>
+Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/canvas-size-and-webgl).
 
-<p>{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_découpes_simples","Apprendre/WebGL/Par_exemple/Modèle_1")}}</p>
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_découpes_simples","Apprendre/WebGL/Par_exemple/Modèle_1")}}

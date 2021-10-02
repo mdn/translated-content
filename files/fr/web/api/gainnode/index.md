@@ -8,86 +8,69 @@ tags:
   - Web Audio API
 translation_of: Web/API/GainNode
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>L'interface <strong><code>GainNode</code></strong> représente une variation de volume. Il s'agit d'un {{domxref("AudioNode")}}, c'est un module de traitement audio, qui provoque un gain donné à appliquer à des données d'entrée avant sa propagation à la sortie. Un <code>GainNode</code> a toujours exactement une entrée et une sortie, avec la même quantité de canaux.</p>
+L'interface **`GainNode`** représente une variation de volume. Il s'agit d'un {{domxref("AudioNode")}}, c'est un module de traitement audio, qui provoque un gain donné à appliquer à des données d'entrée avant sa propagation à la sortie. Un `GainNode` a toujours exactement une entrée et une sortie, avec la même quantité de canaux.
 
-<p>Le gain est une valeur sans unité, qui change éventuellement avec le temps, qui est multiplié à chaque échantillon correspondant de tous les canaux entrées. En cas de modification, le nouveau gain est appliqué à l'aide d'un algorithme d'effilochage afin d'éviter aux «clics» inesthétiques d'apparaître dans l'audio résultant.</p>
+Le gain est une valeur sans unité, qui change éventuellement avec le temps, qui est multiplié à chaque échantillon correspondant de tous les canaux entrées. En cas de modification, le nouveau gain est appliqué à l'aide d'un algorithme d'effilochage afin d'éviter aux «clics» inesthétiques d'apparaître dans l'audio résultant.
 
-<p><img alt="Un objet GainNode augmente le gain de la sortie." src="webaudiogainnode.png"></p>
+![Un objet GainNode augmente le gain de la sortie.](webaudiogainnode.png)
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><dfn>Nombre d'entrées</dfn></th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row"><dfn>Nombre de sorties</dfn></th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row"><dfn>Mode de comptage des canaux</dfn></th>
-   <td><code>"max"</code></td>
-  </tr>
-  <tr>
-   <th scope="row"><dfn>Nombre de canaux</dfn></th>
-   <td><code>2</code> (inutilisés dans le mode de comptage par défaut)</td>
-  </tr>
-  <tr>
-   <th scope="row"><dfn>Interprétation des canaux</dfn></th>
-   <td><code>"speakers"</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row"><dfn>Nombre d'entrées</dfn></th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row"><dfn>Nombre de sorties</dfn></th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row"><dfn>Mode de comptage des canaux</dfn></th>
+      <td><code>"max"</code></td>
+    </tr>
+    <tr>
+      <th scope="row"><dfn>Nombre de canaux</dfn></th>
+      <td><code>2</code> (inutilisés dans le mode de comptage par défaut)</td>
+    </tr>
+    <tr>
+      <th scope="row"><dfn>Interprétation des canaux</dfn></th>
+      <td><code>"speakers"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{domxref("GainNode.GainNode", "GainNode()")}}</dt>
- <dd>Crée une nouvelle instance d'un objet <code>GainNode</code>. Il ne faut pas créer un noeud de gain manuellement, mais plutôt utiliser la méthode {{domxref("AudioContext.createGain()")}}.</dd>
-</dl>
+- {{domxref("GainNode.GainNode", "GainNode()")}}
+  - : Crée une nouvelle instance d'un objet `GainNode`. Il ne faut pas créer un noeud de gain manuellement, mais plutôt utiliser la méthode {{domxref("AudioContext.createGain()")}}.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Hérite des propritétés de son parent, </em><em>{{domxref("AudioNode")}}</em>.</p>
+_Hérite des propritétés de son parent,_ _{{domxref("AudioNode")}}_.
 
-<dl>
- <dt>{{domxref("GainNode.gain")}}</dt>
- <dd>Est un <a href="/fr/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref ("AudioParam")}} représentant le montant du gain à appliquer. (Bien que le <code>AudioParam</code> retournée est en lecture seule, la valeur qu'il représente ne l'est pas).</dd>
-</dl>
+- {{domxref("GainNode.gain")}}
+  - : Est un [a-rate](/fr/docs/Web/API/AudioParam#a-rate) {{domxref ("AudioParam")}} représentant le montant du gain à appliquer. (Bien que le `AudioParam` retournée est en lecture seule, la valeur qu'il représente ne l'est pas).
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p>Aucune méthode spécifique; hérite des méthodes de son parent, {{domxref("AudioNode")}}.</p>
+Aucune méthode spécifique; hérite des méthodes de son parent, {{domxref("AudioNode")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createGain","Example")}}</p>
+{{page("/en-US/docs/Web/API/AudioContext.createGain","Example")}}
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statuts</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#GainNode-section', 'GainNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statuts                              | Commentaire |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
+| {{SpecName('Web Audio API', '#GainNode-section', 'GainNode')}} | {{Spec2('Web Audio API')}} |             |
 
-<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+## Compatibilité navigateurs
 
-<p>{{Compat("api.GainNode")}}</p>
+{{Compat("api.GainNode")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Utiliser l'API Web Audio</a></li>
-</ul>
+- [Utiliser l'API Web Audio](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
