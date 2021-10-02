@@ -11199,12 +11199,6 @@
       "AndreiSoroka"
     ]
   },
-  "Web/API/Window/crypto": {
-    "modified": "2019-03-23T22:55:57.909Z",
-    "contributors": [
-      "pinal"
-    ]
-  },
   "Web/API/Window/devicePixelRatio": {
     "modified": "2020-10-15T21:52:27.387Z",
     "contributors": [
@@ -11903,6 +11897,12 @@
     "modified": "2020-10-15T22:33:31.469Z",
     "contributors": [
       "andzion105"
+    ]
+  },
+  "Web/API/crypto_property": {
+    "modified": "2019-03-23T22:55:57.909Z",
+    "contributors": [
+      "pinal"
     ]
   },
   "Web/API/fetch": {

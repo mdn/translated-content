@@ -22875,13 +22875,6 @@
       "Jee"
     ]
   },
-  "Web/API/Window/crypto": {
-    "modified": "2019-03-23T22:22:09.825Z",
-    "contributors": [
-      "koaqiu",
-      "Taoja"
-    ]
-  },
   "Web/API/Window/customElements": {
     "modified": "2020-10-15T22:02:36.021Z",
     "contributors": [
@@ -24517,6 +24510,13 @@
     "modified": "2020-10-15T22:26:03.129Z",
     "contributors": [
       "Fulgrim"
+    ]
+  },
+  "Web/API/crypto_property": {
+    "modified": "2019-03-23T22:22:09.825Z",
+    "contributors": [
+      "koaqiu",
+      "Taoja"
     ]
   },
   "Web/API/element/scrollWidth": {

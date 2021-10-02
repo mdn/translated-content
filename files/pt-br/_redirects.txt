@@ -539,6 +539,7 @@
 /pt-BR/docs/Web/API/Window.navigator	/pt-BR/docs/Web/API/Window/navigator
 /pt-BR/docs/Web/API/Window.openDialog	/pt-BR/docs/Web/API/Window/openDialog
 /pt-BR/docs/Web/API/Window/Window.localStorage	/pt-BR/docs/Web/API/Window/localStorage
+/pt-BR/docs/Web/API/Window/crypto	/pt-BR/docs/Web/API/crypto_property
 /pt-BR/docs/Web/API/Window/performance	/pt-BR/docs/Web/API/performance_property
 /pt-BR/docs/Web/API/WindowBase64/atob	/pt-BR/docs/Web/API/atob
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/atob	/pt-BR/docs/Web/API/atob

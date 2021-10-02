@@ -7213,13 +7213,6 @@
       "alattalatta"
     ]
   },
-  "Web/API/Window/crypto": {
-    "modified": "2020-10-15T21:40:03.517Z",
-    "contributors": [
-      "alattalatta",
-      "hoony"
-    ]
-  },
   "Web/API/Window/customElements": {
     "modified": "2020-10-15T22:26:45.848Z",
     "contributors": [
@@ -7628,6 +7621,13 @@
     "contributors": [
       "teoli",
       "Sebuls"
+    ]
+  },
+  "Web/API/crypto_property": {
+    "modified": "2020-10-15T21:40:03.517Z",
+    "contributors": [
+      "alattalatta",
+      "hoony"
     ]
   },
   "Web/API/notification": {

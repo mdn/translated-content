@@ -1562,6 +1562,7 @@
 /zh-CN/docs/Web/API/Window/btoa	/zh-CN/docs/Web/API/btoa
 /zh-CN/docs/Web/API/Window/caches	/zh-CN/docs/Web/API/caches
 /zh-CN/docs/Web/API/Window/clearInterval	/zh-CN/docs/Web/API/clearInterval
+/zh-CN/docs/Web/API/Window/crypto	/zh-CN/docs/Web/API/crypto_property
 /zh-CN/docs/Web/API/Window/minimize	/zh-CN/docs/conflicting/Web/API/Window
 /zh-CN/docs/Web/API/Window/mozAnimationStartTIme	/zh-CN/docs/Web/API/Animation/startTime
 /zh-CN/docs/Web/API/Window/onbeforeunload	/zh-CN/docs/Web/API/WindowEventHandlers/onbeforeunload

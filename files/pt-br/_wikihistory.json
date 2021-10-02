@@ -6643,13 +6643,6 @@
       "fabreu"
     ]
   },
-  "Web/API/Window/crypto": {
-    "modified": "2019-03-23T22:12:19.817Z",
-    "contributors": [
-      "Hikashii",
-      "AlexandreBarros"
-    ]
-  },
   "Web/API/Window/document": {
     "modified": "2019-03-23T22:49:44.918Z",
     "contributors": [
@@ -6994,6 +6987,13 @@
       "GarkGarcia",
       "teoli",
       "Willkuns"
+    ]
+  },
+  "Web/API/crypto_property": {
+    "modified": "2019-03-23T22:12:19.817Z",
+    "contributors": [
+      "Hikashii",
+      "AlexandreBarros"
     ]
   },
   "Web/API/fetch": {

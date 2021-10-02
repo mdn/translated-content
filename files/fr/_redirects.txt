@@ -3789,6 +3789,7 @@
 /fr/docs/Web/API/Window.showModalDialog	/fr/docs/Web/API/Window/showModalDialog
 /fr/docs/Web/API/Window/URL	/fr/docs/conflicting/Web/API/URL
 /fr/docs/Web/API/Window/caches	/fr/docs/Web/API/caches
+/fr/docs/Web/API/Window/crypto	/fr/docs/Web/API/crypto_property
 /fr/docs/Web/API/Window/gamepaddisconnected	/fr/docs/Web/API/Window/gamepaddisconnected_event
 /fr/docs/Web/API/Window/mozAnimationStartTime	/fr/docs/Web/API/Animation/startTime
 /fr/docs/Web/API/Window/ondevicelight	/fr/docs/orphaned/Web/API/Window/ondevicelight
