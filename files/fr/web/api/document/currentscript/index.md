@@ -9,58 +9,44 @@ tags:
   - Script
 translation_of: Web/API/Document/currentScript
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>Retourne l'élément {{HTMLElement("script")}} dont le script est en cours de traitement.</p>
+Retourne l'élément {{HTMLElement("script")}} dont le script est en cours de traitement.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <var>curScriptElement</var> = document.currentScript;
-</pre>
+    var curScriptElement = document.currentScript;
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Cet exemple vérifie si le script s'exécute de manière asynchrone :</p>
+Cet exemple vérifie si le script s'exécute de manière asynchrone :
 
-<pre class="brush:js">if (document.currentScript.async) {
+```js
+if (document.currentScript.async) {
   console.log("Exécution asynchrone");
 } else {
   console.log("Exécution synchrone");
-}</pre>
+}
+```
 
-<p><a href="/samples/html/currentScript.html">Voir l'exemple sur une page</a></p>
+[Voir l'exemple sur une page](/samples/html/currentScript.html)
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Il est important de noter que l'élément {{HTMLElement("script")}} ne sera pas référencé si le code dans le script est appelé par une fonction de rappel ou par un gestionnaire d'événements ; seul sera référencé l'élément alors qu'il est initialement en cours d'exécution.</p>
+Il est important de noter que l'élément {{HTMLElement("script")}} ne sera pas référencé si le code dans le script est appelé par une fonction de rappel ou par un gestionnaire d'événements ; seul sera référencé l'élément alors qu'il est initialement en cours d'exécution.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "dom.html#dom-document-currentscript", "Document.currentScript")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                | Statut                           | Commentaire         |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName("HTML WHATWG", "dom.html#dom-document-currentscript", "Document.currentScript")}} | {{Spec2("HTML WHATWG")}} | Définition initiale |
 
-<h2 id="Compatibilité_navigateur">Compatibilité navigateur</h2>
+## Compatibilité navigateur
 
-<div>{{Compat("api.Document.currentScript")}}</div>
+{{Compat("api.Document.currentScript")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTMLElement("script")}}</li>
- <li>{{domxref("document.onafterscriptexecute")}}</li>
- <li>{{domxref("document.onbeforescriptexecute")}}</li>
-</ul>
+- {{HTMLElement("script")}}
+- {{domxref("document.onafterscriptexecute")}}
+- {{domxref("document.onbeforescriptexecute")}}

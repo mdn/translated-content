@@ -8,81 +8,71 @@ tags:
   - Reference
 translation_of: Web/API/Document/createEvent
 ---
-<div class="warning">
-<p><strong>Attention :</strong> De nombreuses méthodes utilisées avec <code>createEvent</code>, tels que <code>initCustomEvent</code>, sont obsolètes. Utilisez le <a href="/fr/docs/Web/API/CustomEvent">constructeur d'événement </a><a href="/fr/docs/Web/API/CustomEvent"> </a>à la place.</p>
-</div>
+> **Attention :** De nombreuses méthodes utilisées avec `createEvent`, tels que `initCustomEvent`, sont obsolètes. Utilisez le [constructeur d'événement ](/fr/docs/Web/API/CustomEvent)[](/fr/docs/Web/API/CustomEvent)à la place.
 
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p>Crée un <a href="/en-US/docs/DOM/event">event</a> du type spécifié. L'objet retourné doit être intialisé et peut être passé ensuite à <a href="/en-US/docs/DOM/element.dispatchEvent">element.dispatchEvent</a>.</p>
+Crée un [event](/en-US/docs/DOM/event) du type spécifié. L'objet retourné doit être intialisé et peut être passé ensuite à [element.dispatchEvent](/en-US/docs/DOM/element.dispatchEvent).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <em>event</em> = <em>document</em>.createEvent(<em>type</em>);
-</pre>
+    var event = document.createEvent(type);
 
-<ul>
- <li><code>event</code> est l'objet <a href="/en-US/docs/DOM/event">Event</a> créé.</li>
- <li><code>type</code> est une chaîne de caractères qui représente le type d'événement à créer. Les types possibles d'événement incluent <code>"UIEvents"</code>, <code>"MouseEvents"</code>, <code>"MutationEvents"</code> et <code>"HTMLEvents"</code>. Voir la section {{Anch("Notes")}} pour plus de détails.</li>
-</ul>
+- `event` est l'objet [Event](/en-US/docs/DOM/event) créé.
+- `type` est une chaîne de caractères qui représente le type d'événement à créer. Les types possibles d'événement incluent `"UIEvents"`, `"MouseEvents"`, `"MutationEvents"` et `"HTMLEvents"`. Voir la section {{Anch("Notes")}} pour plus de détails.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre>// Crée l'événement.
-var event = document.createEvent('Event');
+    // Crée l'événement.
+    var event = document.createEvent('Event');
 
-// Nomme l'événement 'build'.
-event.initEvent('build', true, true);
+    // Nomme l'événement 'build'.
+    event.initEvent('build', true, true);
 
-//  Écoute l'événement.
-elem.addEventListener('build', function (e) {
-  // e.target correspond à elem
-}, false);
+    //  Écoute l'événement.
+    elem.addEventListener('build', function (e) {
+      // e.target correspond à elem
+    }, false);
 
-// target peut être tout Element ou autre EventTarget.
-elem.dispatchEvent(event);
-</pre>
+    // target peut être tout Element ou autre EventTarget.
+    elem.dispatchEvent(event);
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p>Les chaînes de type d'événement appropriées pour passer à <code>createEvent ()</code> sont répertoriées dans la norme DOM - voir le tableau à l'étape 2. Gardez à l'esprit que la plupart des objets événement ont maintenant des constructeurs, qui sont la méthode recommandée pour créer des occurrences d'objet événement.</p>
+Les chaînes de type d'événement appropriées pour passer à `createEvent ()` sont répertoriées dans la norme DOM - voir le tableau à l'étape 2. Gardez à l'esprit que la plupart des objets événement ont maintenant des constructeurs, qui sont la méthode recommandée pour créer des occurrences d'objet événement.
 
-<p>Gecko prend en charge certains alias d'objet événement non standard, répertoriés ci-dessous :</p>
+Gecko prend en charge certains alias d'objet événement non standard, répertoriés ci-dessous :
 
 <table class="fullwidth-table">
- <tbody>
-  <tr>
-   <th>Event Module</th>
-   <th>Standard event object</th>
-   <th>Gecko also supports</th>
-  </tr>
-  <tr>
-   <td>Text event module</td>
-   <td><code>TextEvent</code></td>
-   <td><code>TextEvents</code></td>
-  </tr>
-  <tr>
-   <td>Keyboard event module</td>
-   <td><code>KeyboardEvent</code></td>
-   <td><code>KeyEvents</code></td>
-  </tr>
-  <tr>
-   <td>Basic events module</td>
-   <td><code>Event</code></td>
-   <td><code>Events</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Event Module</th>
+      <th>Standard event object</th>
+      <th>Gecko also supports</th>
+    </tr>
+    <tr>
+      <td>Text event module</td>
+      <td><code>TextEvent</code></td>
+      <td><code>TextEvents</code></td>
+    </tr>
+    <tr>
+      <td>Keyboard event module</td>
+      <td><code>KeyboardEvent</code></td>
+      <td><code>KeyEvents</code></td>
+    </tr>
+    <tr>
+      <td>Basic events module</td>
+      <td><code>Event</code></td>
+      <td><code>Events</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-DocumentEvent-createEvent">DOM Level 2 Events: createEvent</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Events/#events-Events-DocumentEvent-createEvent">DOM Level 3 Events: createEvent</a></li>
-</ul>
+- [DOM Level 2 Events: createEvent](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-DocumentEvent-createEvent)
+- [DOM Level 3 Events: createEvent](http://www.w3.org/TR/DOM-Level-3-Events/#events-Events-DocumentEvent-createEvent)
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events">Création et déclenchement d'événements</a></li>
-</ul>
+- [Création et déclenchement d'événements](/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events)

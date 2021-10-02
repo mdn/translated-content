@@ -9,80 +9,57 @@ tags:
   - Propriété
 translation_of: Web/API/Node/firstChild
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La propriété en lecture seule <strong><code>Node.firstChild</code> r</strong>envoie le premier nœud enfant de l'arbre ou <code>null</code> s'il n'en a pas. Si le noeud est un <code>Document</code> , il renvoie le premier noeud de la liste de ses enfants directs.</p>
+La propriété en lecture seule **`Node.firstChild` r**envoie le premier nœud enfant de l'arbre ou `null` s'il n'en a pas. Si le noeud est un `Document` , il renvoie le premier noeud de la liste de ses enfants directs.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <var>childNode</var> = <var>node</var>.firstChild;</pre>
+    var childNode = node.firstChild;
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Cet exemple montre l'utilisation de <code>firstChild</code> et la manière dont les nœuds d'espaces peuvent interférer.</p>
+Cet exemple montre l'utilisation de `firstChild` et la manière dont les nœuds d'espaces peuvent interférer.
 
-<pre class="brush: html">&lt;p id="para-01"&gt;
-  &lt;span&gt;Premier span&lt;/span&gt;
-&lt;/p&gt;
+```html
+<p id="para-01">
+  <span>Premier span</span>
+</p>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   var p01 = document.getElementById('para-01');
   alert(p01.firstChild.nodeName)
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<p>Dans le code ci-dessus, la <a href="/fr/docs/Web/API/Console">console</a> affichera « #text » car un nœud texte a été inséré pour préserver les blancs entre la fin des balises ouvrantes &lt;p&gt; et &lt;span&gt;. <strong>Tout</strong> <a href="/fr/docs/Gestion_des_espaces_dans_le_DOM">espace</a> provoquera l'insertion d'un nœud <code>#text</code> , qu'il s'agisse d'un simple espace ou de plusieurs, de retours à la ligne, tabulations, etc.</p>
+Dans le code ci-dessus, la [console](/fr/docs/Web/API/Console) affichera « #text » car un nœud texte a été inséré pour préserver les blancs entre la fin des balises ouvrantes \<p> et \<span>. **Tout** [espace](/fr/docs/Gestion_des_espaces_dans_le_DOM) provoquera l'insertion d'un nœud `#text` , qu'il s'agisse d'un simple espace ou de plusieurs, de retours à la ligne, tabulations, etc.
 
-<p>Un autre nœud <code>#text</code> est inséré entre les balises de fermeture &lt;/span&gt; et &lt;/p&gt;.</p>
+Un autre nœud `#text` est inséré entre les balises de fermeture \</span> et \</p>.
 
-<p>Si ces espaces sont retirés du code source, les nœuds <code>#text</code> n'apparaîtront plus et l'élément span deviendra le premier enfant du paragraphe.</p>
+Si ces espaces sont retirés du code source, les nœuds `#text` n'apparaîtront plus et l'élément span deviendra le premier enfant du paragraphe.
 
-<pre class="brush: html">&lt;p id="para-01"&gt;&lt;span&gt;Premier span&lt;/span&gt;&lt;/p&gt;
+```html
+<p id="para-01"><span>Premier span</span></p>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   var p01 = document.getElementById('para-01');
   alert(p01.firstChild.nodeName)
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<p>À présent, l'alerte affichera « SPAN ».</p>
+À présent, l'alerte affichera « SPAN ».
 
-<p>Pour éviter le problème avec <code>node.firstChild</code>  renvoyant des noeuds <code>#text</code> ou <code>#comment</code>,  {{domxref("ParentNode.firstElementChild")}}  peut être utilisé pour renvoyer seulement le premier noeud élément. Toutefois,  <code>node.firstElementChild</code> nécessite un "shim" pour Internet Explorer 9 et antérieurs.</p>
+Pour éviter le problème avec `node.firstChild`  renvoyant des noeuds `#text` ou `#comment`,  {{domxref("ParentNode.firstElementChild")}}  peut être utilisé pour renvoyer seulement le premier noeud élément. Toutefois,  `node.firstElementChild` nécessite un "shim" pour Internet Explorer 9 et antérieurs.
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-node-firstchild', 'Node.firstChild')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Pas de changement</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-169727388', 'Node.firstChild')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Pas de changement</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-169727388', 'Node.firstChild')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Pas de changement</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-169727388', 'Node.firstChild')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | Statut                           | Commentaire         |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName('DOM WHATWG', '#dom-node-firstchild', 'Node.firstChild')}}         | {{Spec2('DOM WHATWG')}} | Pas de changement   |
+| {{SpecName('DOM3 Core', 'core.html#ID-169727388', 'Node.firstChild')}}         | {{Spec2('DOM3 Core')}}     | Pas de changement   |
+| {{SpecName('DOM2 Core', 'core.html#ID-169727388', 'Node.firstChild')}}         | {{Spec2('DOM2 Core')}}     | Pas de changement   |
+| {{SpecName('DOM1', 'level-one-core.html#ID-169727388', 'Node.firstChild')}} | {{Spec2('DOM1')}}         | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Node.firstChild")}}</p>
+{{Compat("api.Node.firstChild")}}

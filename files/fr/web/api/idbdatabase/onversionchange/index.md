@@ -8,31 +8,34 @@ tags:
   - Reference
 translation_of: Web/API/IDBDatabase/onversionchange
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>Le gestionnaire d'événement <strong><code>onversionchange</code></strong>, rattaché à l'interface {{domxref("IDBDatabase")}}, s’exécute au déclenchement de l'événement <code>versionchange</code> qui se produit lorsque la structure de la base de donnée change (l'événement {{domxref("IDBOpenDBRequest.onupgradeneeded")}} ou {{domxref("IDBFactory.deleteDatabase")}} a été demandé par ailleurs (probablement dans une autre fenêtre ou onglet sur le même ordinateur)).</p>
+Le gestionnaire d'événement **`onversionchange`**, rattaché à l'interface {{domxref("IDBDatabase")}}, s’exécute au déclenchement de l'événement `versionchange` qui se produit lorsque la structure de la base de donnée change (l'événement {{domxref("IDBOpenDBRequest.onupgradeneeded")}} ou {{domxref("IDBFactory.deleteDatabase")}} a été demandé par ailleurs (probablement dans une autre fenêtre ou onglet sur le même ordinateur)).
 
-<p>Cela n'est pas la même chose qu'une transaction <code>versionchange</code> (bien que les concepts soient apparentés).</p>
+Cela n'est pas la même chose qu'une transaction `versionchange` (bien que les concepts soient apparentés).
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">db.onversionchange = function() { ... }</pre>
+```js
+db.onversionchange = function() { ... }
+```
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Cette exemple illustre un gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded")}} dans lequel on ajoute un magasin d'objets. Les deux gestionnaires d'événements <code>onerror</code> et <code>onabort</code> sont utilisés pour les cas d'échec. Le gestionnaire d'événement <code>onversionchange</code> est utilisé afin d'indiquer que la structure de la base de données a été modifiée.</p>
+Cette exemple illustre un gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded")}} dans lequel on ajoute un magasin d'objets. Les deux gestionnaires d'événements `onerror` et `onabort` sont utilisés pour les cas d'échec. Le gestionnaire d'événement `onversionchange` est utilisé afin d'indiquer que la structure de la base de données a été modifiée.
 
-<pre class="brush: js">DBOpenRequest.onupgradeneeded = function(event) {
+```js
+DBOpenRequest.onupgradeneeded = function(event) {
   var db = event.target.result;
 
   db.onerror = function() {
-    note.innerHTML += '&lt;li&gt;Erreur du chargement de la base de données.&lt;/li&gt;';
+    note.innerHTML += '<li>Erreur du chargement de la base de données.</li>';
   };
 
   db.onabort = function() {
-    note.innerHTML += '&lt;li&gt;L\'ouverture de la connexion à été annulée !&lt;/li&gt;';
+    note.innerHTML += '<li>L\'ouverture de la connexion à été annulée !</li>';
   };
 
   // Ajoute un magasin d'objets à la base de données
@@ -49,42 +52,30 @@ translation_of: Web/API/IDBDatabase/onversionchange
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += '&lt;li&gt;Le magasin d\'objet à été ajouté.&lt;/li&gt;';
+  note.innerHTML += '<li>Le magasin d\'objet à été ajouté.</li>';
 
   db.onversionchange = function(event) {
-    note.innerHTML += '&lt;li&gt;Des changements ont été appliqués sur la base de données. Vous devez réactualiser cette page ou la fermer et utiliser l\'autre version de cette application qui est ouverte.&lt;/li&gt;';
+    note.innerHTML += '<li>Des changements ont été appliqués sur la base de données. Vous devez réactualiser cette page ou la fermer et utiliser l\'autre version de cette application qui est ouverte.</li>';
   };
-};</pre>
+};
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBDatabase-onversionchange', 'onversionchange')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                         | Commentaires |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBDatabase-onversionchange', 'onversionchange')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBDatabase.onversionchange")}}</p>
+{{Compat("api.IDBDatabase.onversionchange")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Manipuler IndexedDB</a></li>
- <li>Démarrer des transactions : {{domxref("IDBDatabase")}}</li>
- <li>Manipuler des transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}</li>
- <li>Manipuler des curseurs : {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence pour IndexedDB : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a></li>
-</ul>
+- [Manipuler IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Démarrer des transactions : {{domxref("IDBDatabase")}}
+- Manipuler des transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
+- Manipuler des curseurs : {{domxref("IDBCursor")}}
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)

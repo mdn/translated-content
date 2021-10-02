@@ -9,66 +9,47 @@ tags:
   - Quadrilatère
 translation_of: Web/API/DOMPointReadOnly
 ---
-<p>{{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}</p>
+{{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}
 
-<p>L'interface <strong><code>DOMPointReadOnly</code></strong> spécifie les propriétés standard utilisées par {{domxref("DOMPoint")}} pour définir un point 2D ou 3D dans un système de coordonnées.</p>
+L'interface **`DOMPointReadOnly`** spécifie les propriétés standard utilisées par {{domxref("DOMPoint")}} pour définir un point 2D ou 3D dans un système de coordonnées.
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{domxref("DOMPointReadOnly.DOMPointReadOnly","DOMPointReadOnly()")}}</dt>
- <dd>Défini pour créer un nouvel objet <code>DOMPointReadOnly</code>, mais notez que ce constructeur ne peut pas être appelé par un JavaScript tiers : ce faisant, il retourne un  typeError "constructeur illégal" .</dd>
-</dl>
+- {{domxref("DOMPointReadOnly.DOMPointReadOnly","DOMPointReadOnly()")}}
+  - : Défini pour créer un nouvel objet `DOMPointReadOnly`, mais notez que ce constructeur ne peut pas être appelé par un JavaScript tiers : ce faisant, il retourne un  typeError "constructeur illégal" .
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{domxref("DOMPointReadOnly.fromPoint")}}</dt>
- <dd>Traduit la position / perspective d'un <code>DOMPoint</code> à une nouvelle position (ne semble pas encore être pris en charge).</dd>
- <dt>{{domxref("DOMPointReadOnly.matrixTransform")}}</dt>
- <dd>Applique une transformation matricielle à un objet <code>DOMPointReadOnly</code>  (ne semble pas encore être pris en charge).</dd>
- <dt>{{domxref("DOMPointReadOnly.toJSON()")}}</dt>
- <dd>Renvoie une représentation JSON de l'objet <code>DOMPointReadOnly</code>.</dd>
-</dl>
+- {{domxref("DOMPointReadOnly.fromPoint")}}
+  - : Traduit la position / perspective d'un `DOMPoint` à une nouvelle position (ne semble pas encore être pris en charge).
+- {{domxref("DOMPointReadOnly.matrixTransform")}}
+  - : Applique une transformation matricielle à un objet `DOMPointReadOnly`  (ne semble pas encore être pris en charge).
+- {{domxref("DOMPointReadOnly.toJSON()")}}
+  - : Renvoie une représentation JSON de l'objet `DOMPointReadOnly`.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{domxref("DOMPointReadOnly.x")}} {{readonlyInline}}</dt>
- <dd>La coordonnée x du <code>DOMPoint</code>.</dd>
- <dt>{{domxref("DOMPointReadOnly.y")}} {{readonlyInline}}</dt>
- <dd>La coordonnée y du <code>DOMPoint</code>.</dd>
- <dt>{{domxref("DOMPointReadOnly.z")}} {{readonlyInline}}</dt>
- <dd>La coordonnée z du <code>DOMPoint</code>.</dd>
- <dt>{{domxref("DOMPointReadOnly.w")}} {{readonlyInline}}</dt>
- <dd>La valeur de perspective du <code>DOMPoint</code>.</dd>
-</dl>
+- {{domxref("DOMPointReadOnly.x")}} {{readonlyInline}}
+  - : La coordonnée x du `DOMPoint`.
+- {{domxref("DOMPointReadOnly.y")}} {{readonlyInline}}
+  - : La coordonnée y du `DOMPoint`.
+- {{domxref("DOMPointReadOnly.z")}} {{readonlyInline}}
+  - : La coordonnée z du `DOMPoint`.
+- {{domxref("DOMPointReadOnly.w")}} {{readonlyInline}}
+  - : La valeur de perspective du `DOMPoint`.
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Geometry Interfaces', '#DOMPoint', 'DOMPoint')}}</td>
-   <td>{{Spec2('Geometry Interfaces')}}</td>
-   <td>La dernière version de la spécification est un ED.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | Statut                                       | Commentaire                                        |
+| -------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------- |
+| {{SpecName('Geometry Interfaces', '#DOMPoint', 'DOMPoint')}} | {{Spec2('Geometry Interfaces')}} | La dernière version de la spécification est un ED. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DOMPointReadOnly")}}</p>
+{{Compat("api.DOMPointReadOnly")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>{{domxref("DOMPoint")}}</li>
-  <li>{{domxref("DOMRect")}}</li>
-  <li>{{domxref("DOMMatrix")}}</li>
-</ul>
+- {{domxref("DOMPoint")}}
+- {{domxref("DOMRect")}}
+- {{domxref("DOMMatrix")}}

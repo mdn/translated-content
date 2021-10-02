@@ -4,24 +4,24 @@ slug: Web/API/caches
 translation_of: Web/API/WindowOrWorkerGlobalScope/caches
 original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 ---
-<p>{{APIRef()}}{{SeeCompatTable}}</p>
+{{APIRef()}}{{SeeCompatTable}}
 
-<p>La propriété en lecture seule  <code><strong>caches</strong></code> de l'interface {{domxref("WindowOrWorkerGlobalScope")}} retourne l'objet {{domxref("CacheStorage")}} associé au contexte actuel. Cet objet permet de stocker des ressources pour une utilisation hors-ligne et de générer des réponses personnalisées à des requêtes.</p>
+La propriété en lecture seule  **`caches`** de l'interface {{domxref("WindowOrWorkerGlobalScope")}} retourne l'objet {{domxref("CacheStorage")}} associé au contexte actuel. Cet objet permet de stocker des ressources pour une utilisation hors-ligne et de générer des réponses personnalisées à des requêtes.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <em>myCacheStorage</em> = self.caches; // ou simplement caches
-</pre>
+    var myCacheStorage = self.caches; // ou simplement caches
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Un objet de type {{domxref("CacheStorage")}}.</p>
+Un objet de type {{domxref("CacheStorage")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>L'exemple suivant montre comment mettre en cache un contexte de <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a> pour stocker des ressources et les utiliser hors-ligne.</p>
+L'exemple suivant montre comment mettre en cache un contexte de [service worker](/en-US/docs/Web/API/Service_Worker_API) pour stocker des ressources et les utiliser hors-ligne.
 
-<pre class="brush: js">this.addEventListener('install', function(event) {
+```js
+this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
@@ -38,43 +38,45 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/caches
       ]);
     })
   );
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#self-caches', 'caches')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>
-    <p>Défini dans un <code>WindowOrWorkerGlobalScope</code> partiel dans la nouvelle spec.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('Service Workers', '#self-caches', 'caches')}}
+      </td>
+      <td>{{Spec2('Service Workers')}}</td>
+      <td>
+        <p>
+          Défini dans un <code>WindowOrWorkerGlobalScope</code> partiel dans la
+          nouvelle spec.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Service Workers')}}</td>
+      <td>{{Spec2('Service Workers')}}</td>
+      <td>Définition initiale.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.WindowOrWorkerGlobalScope.caches")}}
 
+## Voir aussi
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.caches")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>
- <li>{{domxref("CacheStorage")}}</li>
- <li>{{domxref("Cache")}}</li>
-</ul>
+- [Service Workers](/en-US/docs/Web/API/ServiceWorker_API)
+- [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
+- {{domxref("CacheStorage")}}
+- {{domxref("Cache")}}

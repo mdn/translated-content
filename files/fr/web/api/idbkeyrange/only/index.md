@@ -9,36 +9,37 @@ tags:
   - Reference
 translation_of: Web/API/IDBKeyRange/only
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>La méthode <strong><code>only()</code></strong>, rattachée à l'interface {{domxref("IDBKeyRange")}}, permet de créer un nouvel intervalle de clé qui ne contient qu'une valeur.</p>
+La méthode **`only()`**, rattachée à l'interface {{domxref("IDBKeyRange")}}, permet de créer un nouvel intervalle de clé qui ne contient qu'une valeur.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">myKeyRange = IDBKeyRange.only(valeur);</pre>
+```js
+myKeyRange = IDBKeyRange.only(valeur);
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>valeur</code></dt>
- <dd>La valeur dans l'intervalle de clé.</dd>
-</dl>
+- `valeur`
+  - : La valeur dans l'intervalle de clé.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>L'objet {{domxref("IDBKeyRange")}} correspondant à l'intervalle de clé qui vient d'être créé.</p>
+L'objet {{domxref("IDBKeyRange")}} correspondant à l'intervalle de clé qui vient d'être créé.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Cette méthode peut déclencher une exception {{domxref("DOMException")}} du type <code>DataError</code> lorsque la valeur passée en argument n'est pas une clé valide.</p>
+Cette méthode peut déclencher une exception {{domxref("DOMException")}} du type `DataError` lorsque la valeur passée en argument n'est pas une clé valide.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple qui suit, on illustre comment utiliser un intervalle de clé qui ne contient qu'une seule clé. On déclare un intervalle qui ne contient que la valeur "A" avec <code>keyRangeValue = IDBKeyRange.only("A");</code> Ensuite, on ouvre une transaction grâce à {{domxref("IDBTransaction")}} puis un magasin d'objets et un curseur grâce à la méthode {{domxref("IDBObjectStore.openCursor")}} pour laquelle on passe <code>keyRangeValue</code> en argument. Cela signifie que le curseur permettra uniquement de récupérer les enregistrements dont la clé vaut "A".</p>
+Dans l'exemple qui suit, on illustre comment utiliser un intervalle de clé qui ne contient qu'une seule clé. On déclare un intervalle qui ne contient que la valeur "A" avec `keyRangeValue = IDBKeyRange.only("A");` Ensuite, on ouvre une transaction grâce à {{domxref("IDBTransaction")}} puis un magasin d'objets et un curseur grâce à la méthode {{domxref("IDBObjectStore.openCursor")}} pour laquelle on passe `keyRangeValue` en argument. Cela signifie que le curseur permettra uniquement de récupérer les enregistrements dont la clé vaut "A".
 
-<pre class="brush: js">function displayData() {
+```js
+function displayData() {
   var keyRangeValue = IDBKeyRange.only("A");
 
   var transaction = db.transaction(['fThings'], 'readonly');
@@ -48,7 +49,7 @@ translation_of: Web/API/IDBKeyRange/only
     var cursor = event.target.result;
       if(cursor) {
         var listItem = document.createElement('li');
-        listItem.innerHTML = '&lt;strong&gt;' + cursor.value.fThing + '&lt;/strong&gt;, ' + cursor.value.fRating;
+        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
         list.appendChild(listItem);
 
         cursor.continue();
@@ -56,41 +57,27 @@ translation_of: Web/API/IDBKeyRange/only
         console.log('Les éléments sont affichés.');
       }
     };
-  };</pre>
+  };
+```
 
-<div class="note">
-<p><strong>Note :</strong> Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter <a href="https://github.com/mdn/IDBKeyRange-example">le dépôt GitHub IDBKeyRange-example</a> (<a href="https://mdn.github.io/IDBKeyRange-example/">ainsi que la démonstration associée</a>).</p>
-</div>
+> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/IDBKeyRange-example) ([ainsi que la démonstration associée](https://mdn.github.io/IDBKeyRange-example/)).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBKeyRange-only-IDBKeyRange-any-value', 'only')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                         | Commentaires |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBKeyRange-only-IDBKeyRange-any-value', 'only')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBKeyRange.only")}}</p>
+{{Compat("api.IDBKeyRange.only")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
- <li>Initier une connexion : {{domxref("IDBDatabase")}}</li>
- <li>Utiliser les transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
- <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
-</ul>
+- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Initier une connexion : {{domxref("IDBDatabase")}}
+- Utiliser les transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
+- Utiliser les curseurs {{domxref("IDBCursor")}}
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).

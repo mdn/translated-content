@@ -9,34 +9,32 @@ tags:
   - Reference
 translation_of: Web/API/Document/hasFocus
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<p>La méthode <code><strong>Document.hasFocus()</strong></code> retourne une valeur  {{jsxref("Boolean")}} <code>true</code> <em>(vrai)</em> indiquant si le document ou tout élément à l'intérieur du document a le focus. Cette méthode peut être utilisée pour déterminer si l'élément actif d'un document a le focus.</p>
+La méthode **`Document.hasFocus()`** retourne une valeur  {{jsxref("Boolean")}} `true` _(vrai)_ indiquant si le document ou tout élément à l'intérieur du document a le focus. Cette méthode peut être utilisée pour déterminer si l'élément actif d'un document a le focus.
 
-<div class="note">
-<p><strong>Note :</strong> Lors de la visualisation d'un document, un élément avec focus est toujours l'élément actif dans le document, mais un élément actif n'a pas nécessairement le focus. Par exemple, un élément actif dans une fenêtre contextuelle qui n'est pas le premier plan n'a pas de focus.</p>
-</div>
+> **Note :** Lors de la visualisation d'un document, un élément avec focus est toujours l'élément actif dans le document, mais un élément actif n'a pas nécessairement le focus. Par exemple, un élément actif dans une fenêtre contextuelle qui n'est pas le premier plan n'a pas de focus.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval">focused = document.hasFocus();
-</pre>
+    focused = document.hasFocus();
 
-<h3 id="Exemple">Valeur retournée</h3>
+### Valeur retournée
 
-<p><code>false</code> <em>(faux)</em> si l'élément actif dans le document n'a pas de focus ; <code>true</code><em> (vrai)</em> si l'élément actif dans le document a le focus.</p>
+`false` _(faux)_ si l'élément actif dans le document n'a pas de focus ; `true` _(vrai)_ si l'élément actif dans le document a le focus.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;TEST&lt;/title&gt;
-&lt;style&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>TEST</title>
+<style>
 #message { font-weight: bold; }
-&lt;/style&gt;
-&lt;script&gt;
+</style>
+<script>
 setInterval( checkPageFocus, 200 );
 
 function checkPageFocus() {
@@ -56,40 +54,26 @@ function openWindow() {
     "width=640,height=300,left=150,top=260"
   );
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;JavaScript hasFocus example&lt;/h1&gt;
-  &lt;div id="message"&gt;Waiting for user action&lt;/div&gt;
-  &lt;div&gt;&lt;button onclick="openWindow()"&gt;Open a new window&lt;/button&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</script>
+</head>
+<body>
+  <h1>JavaScript hasFocus example</h1>
+  <div id="message">Waiting for user action</div>
+  <div><button onclick="openWindow()">Open a new window</button></div>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-document-hasfocus', 'Document.hasFocus()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                | Statut                           | Commentaire         |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName('HTML WHATWG', 'interaction.html#dom-document-hasfocus', 'Document.hasFocus()')}} | {{Spec2('HTML WHATWG')}} | Définition initiale |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Document.hasFocus")}}</p>
+{{Compat("api.Document.hasFocus")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/API/Page_Visibility_API">Utilisation de l'API de visibilité des pages</a></li>
-</ul>
+- [Utilisation de l'API de visibilité des pages](/fr/docs/Web/API/Page_Visibility_API)

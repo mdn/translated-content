@@ -10,48 +10,46 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Boilerplate_1
 original_slug: Web/API/WebGL_API/By_example/Modèle_1
 ---
-<div>{{IncludeSubnav("/fr/Apprendre")}}</div>
+{{IncludeSubnav("/fr/Apprendre")}}
 
-<p>{{PreviousNext("Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL","Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique")}}</p>
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL","Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique")}}
 
-<p>Dans cet article, on décrit les fragments de code qui seront réutilisés pour les exemples suivants (où ils seront masqués pour une meilleur lisibilité). Parmi ce code, on définit une fonction JavaScript utilitaire qui permet de simplifier l'initialisation de WebGL.</p>
+Dans cet article, on décrit les fragments de code qui seront réutilisés pour les exemples suivants (où ils seront masqués pour une meilleur lisibilité). Parmi ce code, on définit une fonction JavaScript utilitaire qui permet de simplifier l'initialisation de WebGL.
 
-<p>{{EmbedLiveSample("Socle_pour_l'initialisation_du_contexte_WebGL",660,400)}}</p>
+{{EmbedLiveSample("Socle_pour_l'initialisation_du_contexte_WebGL",660,400)}}
 
-<h2 id="Socle_pour_l'initialisation_du_contexte_WebGL">Socle pour l'initialisation du contexte WebGL</h2>
+## Socle pour l'initialisation du contexte WebGL
 
-<p>Nous avons vu plusieurs fois les mêmes morceaux de {{Glossary("HTML")}}, {{Glossary("CSS")}} et {{Glossary("JavaScript")}}. Nous allons donc les cacher par la suite afin de mieux nous concentrer sur les parties du code qui sont pertinentes pour l'apprentissage de {{Glossary("WebGL")}}.</p>
+Nous avons vu plusieurs fois les mêmes morceaux de {{Glossary("HTML")}}, {{Glossary("CSS")}} et {{Glossary("JavaScript")}}. Nous allons donc les cacher par la suite afin de mieux nous concentrer sur les parties du code qui sont pertinentes pour l'apprentissage de {{Glossary("WebGL")}}.
 
-<p>Plus précisément, le code HTML contiendra</p>
+Plus précisément, le code HTML contiendra
 
-<ul>
- <li>Un élément {{HTMLElement("p")}} qui décrira l'exemple et qui permettra d'afficher des messages d'erreur</li>
- <li>Un élément {{HTMLElement("canvas")}}</li>
- <li>Un bouton (élément {{HTMLElement("button")}})</li>
-</ul>
+- Un élément {{HTMLElement("p")}} qui décrira l'exemple et qui permettra d'afficher des messages d'erreur
+- Un élément {{HTMLElement("canvas")}}
+- Un bouton (élément {{HTMLElement("button")}})
 
-<p>Les règles CSS s'appliqueront aux éléments <code>body</code>, <code>canvas</code> et <code>button</code>. Les éléments supplémentaires pour le code CSS et HTML seront détaillés dans les pages des exemples concernés.</p>
+Les règles CSS s'appliqueront aux éléments `body`, `canvas` et `button`. Les éléments supplémentaires pour le code CSS et HTML seront détaillés dans les pages des exemples concernés.
 
-<p>Dans les exemples suivants, on utilisera la fonction utilitaire JavaScript <code>getRenderingContext</code> pour initialiser {{domxref("WebGLRenderingContext","le contexte de rendu WebGL", "", 1)}}. Grâce aux exemples précédents, vous devriez pouvoir comprendre le rôle de cette fonction. Pour résumer, celle-ci</p>
+Dans les exemples suivants, on utilisera la fonction utilitaire JavaScript `getRenderingContext` pour initialiser {{domxref("WebGLRenderingContext","le contexte de rendu WebGL", "", 1)}}. Grâce aux exemples précédents, vous devriez pouvoir comprendre le rôle de cette fonction. Pour résumer, celle-ci
 
-<ul>
- <li>Obtient le contexte de rendu de la part de l'élément <code>canvas</code></li>
- <li>Initialise le buffer de dessin</li>
- <li>Nettoie le buffer avec <code>clear</code></li>
- <li>Applique le contexte initialisé</li>
-</ul>
+- Obtient le contexte de rendu de la part de l'élément `canvas`
+- Initialise le buffer de dessin
+- Nettoie le buffer avec `clear`
+- Applique le contexte initialisé
 
-<p>S'il y a une erreur, la fonction affiche un message d'erreur et renvoie <code>null</code>.</p>
+S'il y a une erreur, la fonction affiche un message d'erreur et renvoie `null`.
 
-<p>Enfin, tout le code JavaScript est exécuté par une fonction immédiatement appelée (une technique plutôt commune avec JavaScript). La déclaration de la fonction et son invocation seront cachées.</p>
+Enfin, tout le code JavaScript est exécuté par une fonction immédiatement appelée (une technique plutôt commune avec JavaScript). La déclaration de la fonction et son invocation seront cachées.
 
-<pre class="brush: html">&lt;p&gt;[ Un texte qui décrit l'exemple. ]&lt;/p&gt;
-&lt;button&gt;[ Un bouton optionnel pour les interactions. ]&lt;/button&gt;
-&lt;canvas&gt;Il semblerait que votre navigateur ne supporte
-    pas le canevas HTML5.&lt;/canvas&gt;
-</pre>
+```html
+<p>[ Un texte qui décrit l'exemple. ]</p>
+<button>[ Un bouton optionnel pour les interactions. ]</button>
+<canvas>Il semblerait que votre navigateur ne supporte
+    pas le canevas HTML5.</canvas>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 canvas {
@@ -69,9 +67,10 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
+```
 
-<pre class="brush: js">function getRenderingContext() {
+```js
+function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
@@ -91,8 +90,8 @@ button {
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;
 }
-</pre>
+```
 
-<p>Le code source de cet exemple est également disponible sur <a href="https://github.com/idofilin/webgl-by-example/tree/master/boilerplate-1">GitHub</a>.</p>
+Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/boilerplate-1).
 
-<p>{{PreviousNext("Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL","Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique")}}</p>
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL","Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique")}}

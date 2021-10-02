@@ -12,39 +12,28 @@ tags:
   - timeOrigin
 translation_of: Web/API/Performance/getEntriesByName
 ---
-<p>{{SeeCompatTable}}{{APIRef("High Resolution Time")}}</p>
+{{SeeCompatTable}}{{APIRef("High Resolution Time")}}
 
-<p>La propriété en lecture seule <strong><code>timeOrigin</code></strong> de l'interface {{domxref("Performance")}} renvoie l'horodatage haute résolution de l'heure de début de la mesure de performance.</p>
+La propriété en lecture seule **`timeOrigin`** de l'interface {{domxref("Performance")}} renvoie l'horodatage haute résolution de l'heure de début de la mesure de performance.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
+```js
   var timeOrigin = performance.timeOrigin
-</pre>
+```
 
-<h3 id="Value">Valeur</h3>
+### Valeur
 
-<p>Un horodatage haute résolution (voir le type <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a>).</p>
+Un horodatage haute résolution (voir le type [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp)).
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Highres Time Level 2','#timeorigin-attribute','timeOrigin')}}</td>
-      <td>{{Spec2('Highres Time Level 2')}}</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                    | Statut                                       |
+| ------------------------------------------------------------------------------------------------ | -------------------------------------------- |
+| {{SpecName('Highres Time Level 2','#timeorigin-attribute','timeOrigin')}} | {{Spec2('Highres Time Level 2')}} |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Performance.timeOrigin")}}</p>
+{{Compat("api.Performance.timeOrigin")}}

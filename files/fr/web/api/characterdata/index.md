@@ -6,84 +6,55 @@ tags:
   - DOM
 translation_of: Web/API/CharacterData
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>L'interface abstraite <code><strong>CharacterData</strong></code> représente un objet {{domxref("Node")}} (<em>noeud</em>) qui contient des caractères. C'est une interface abstraite, ce qui signifie qu'il n'existe aucun objet de type <code>CharacterData</code> : elle est implémentée par d'autres interfaces comme {{domxref("Text")}}, {{domxref("Comment")}} ou {{domxref("ProcessingInstruction")}} qui ne sont pas abstraites.</p>
+L'interface abstraite **`CharacterData`** représente un objet {{domxref("Node")}} (_noeud_) qui contient des caractères. C'est une interface abstraite, ce qui signifie qu'il n'existe aucun objet de type `CharacterData` : elle est implémentée par d'autres interfaces comme {{domxref("Text")}}, {{domxref("Comment")}} ou {{domxref("ProcessingInstruction")}} qui ne sont pas abstraites.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Hérite des propriétés de son parent {{domxref("Node")}} et implémente les interfaces {{domxref("ChildNode")}} et {{domxref("NonDocumentTypeChildNode")}}.</em></p>
+_Hérite des propriétés de son parent {{domxref("Node")}} et implémente les interfaces {{domxref("ChildNode")}} et {{domxref("NonDocumentTypeChildNode")}}._
 
-<dl>
- <dt>{{domxref("CharacterData.data")}}</dt>
- <dd>est une {{domxref("DOMString")}} (<em>chaîne de caractères</em>) representant les données textuelles contenues dans cet objet.</dd>
- <dt>{{domxref("CharacterData.length")}} {{readonlyInline}}</dt>
- <dd>Retourne un <code>unsigned long</code> représentant la taille de la chaîne de caractères contenue dans <code>CharacterData.data</code>.</dd>
- <dt>{{domxref("NonDocumentTypeChildNode.nextElementSibling")}} {{readonlyInline}}</dt>
- <dd>Retourne l'{{domxref("Element")}} immédiatement après celui spécifié dans la liste des enfants de son parent, ou <code>null</code> si l'élément spécifié est le dernier de la liste.</dd>
- <dt>{{domxref("NonDocumentTypeChildNode.previousElementSibling")}} {{readonlyInline}}</dt>
- <dd>Retourne l'{{domxref("Element")}} immédiatement avant celui spécifié dans la liste des enfants de son parent, ou <code>null</code> si l'élément spécifié est le premier de la liste.</dd>
-</dl>
+- {{domxref("CharacterData.data")}}
+  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) representant les données textuelles contenues dans cet objet.
+- {{domxref("CharacterData.length")}} {{readonlyInline}}
+  - : Retourne un `unsigned long` représentant la taille de la chaîne de caractères contenue dans `CharacterData.data`.
+- {{domxref("NonDocumentTypeChildNode.nextElementSibling")}} {{readonlyInline}}
+  - : Retourne l'{{domxref("Element")}} immédiatement après celui spécifié dans la liste des enfants de son parent, ou `null` si l'élément spécifié est le dernier de la liste.
+- {{domxref("NonDocumentTypeChildNode.previousElementSibling")}} {{readonlyInline}}
+  - : Retourne l'{{domxref("Element")}} immédiatement avant celui spécifié dans la liste des enfants de son parent, ou `null` si l'élément spécifié est le premier de la liste.
 
-<h2 id="Methods">Méthodes</h2>
+## Méthodes
 
-<p><em>Hérite des méthodes de son parent {{domxref("Node")}}, et implémente les interfaces {{domxref("ChildNode")}} <em>et {{domxref("NonDocumentTypeChildNode")}}</em>.</em></p>
+*Hérite des méthodes de son parent {{domxref("Node")}}, et implémente les interfaces {{domxref("ChildNode")}} *et {{domxref("NonDocumentTypeChildNode")}}_._
 
-<dl>
- <dt>{{domxref("CharacterData.appendData()")}}</dt>
- <dd>Ajoute la {{domxref("DOMString")}} (<em>chaîne de caractères</em>) donnée à la chaîne <code>CharacterData.data</code> ; dans le retour de la méthode, <code>data</code> contient la {{domxref("DOMString")}} concaténée .</dd>
- <dt>{{domxref("CharacterData.deleteData()")}}</dt>
- <dd>Supprime la quantité spécifiée de caractères, en commençant au point désigné, à partir de la chaîne <code>CharacterData.data</code> ; dans le retour de la méthode, <code>data</code> contient le raccourci {{domxref ("DOMString")}}.</dd>
- <dt>{{domxref("CharacterData.insertData()")}}</dt>
- <dd>Insère les caractères spécifiés, au point désigné, dans la chaîne <code>CharacterData.data</code> ; dans le retour de cette méthode, <code>data</code> contient la {{domxref ("DOMString")}} (<em>chaîne de caractères</em>) modifiée.</dd>
- <dt>{{domxref("ChildNode.remove()")}} {{experimental_inline}}</dt>
- <dd>Supprime l'objet de la liste d'enfants de son parent.</dd>
- <dt>{{domxref("CharacterData.replaceData()")}}</dt>
- <dd>Remplace la quantité spécifiée de caractères, en commençant au point désigné, avec la {{domxref ("DOMString")}} (<em>chaîne de caractères</em>) spécifiée ; dans le retour de cette méthode, <code>data</code> contient la {{domxref ("DOMString")}} modifiée.</dd>
- <dt>{{domxref("CharacterData.substringData()")}}</dt>
- <dd>Renvoie une {{domxref ("DOMString")}} (<em>chaîne de caractères</em>) contenant la partie de <code>CharacterData.data</code> de la longueur spécifiée et commençant au point désigné.</dd>
-</dl>
+- {{domxref("CharacterData.appendData()")}}
+  - : Ajoute la {{domxref("DOMString")}} (_chaîne de caractères_) donnée à la chaîne `CharacterData.data` ; dans le retour de la méthode, `data` contient la {{domxref("DOMString")}} concaténée .
+- {{domxref("CharacterData.deleteData()")}}
+  - : Supprime la quantité spécifiée de caractères, en commençant au point désigné, à partir de la chaîne `CharacterData.data` ; dans le retour de la méthode, `data` contient le raccourci {{domxref ("DOMString")}}.
+- {{domxref("CharacterData.insertData()")}}
+  - : Insère les caractères spécifiés, au point désigné, dans la chaîne `CharacterData.data` ; dans le retour de cette méthode, `data` contient la {{domxref ("DOMString")}} (_chaîne de caractères_) modifiée.
+- {{domxref("ChildNode.remove()")}} {{experimental_inline}}
+  - : Supprime l'objet de la liste d'enfants de son parent.
+- {{domxref("CharacterData.replaceData()")}}
+  - : Remplace la quantité spécifiée de caractères, en commençant au point désigné, avec la {{domxref ("DOMString")}} (_chaîne de caractères_) spécifiée ; dans le retour de cette méthode, `data` contient la {{domxref ("DOMString")}} modifiée.
+- {{domxref("CharacterData.substringData()")}}
+  - : Renvoie une {{domxref ("DOMString")}} (_chaîne de caractères_) contenant la partie de `CharacterData.data` de la longueur spécifiée et commençant au point désigné.
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#characterdata', 'CharacterData')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Ajoute une implémention des interfaces {{domxref("ChildNode")}} et{{domxref("NonDocumentTypeChildNode")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-FF21A306', 'CharacterData')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Pas de changement depuis {{SpecName('DOM2 Core')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-FF21A306', 'CharacterData')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Pas de changement depuis {{SpecName('DOM1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-FF21A306', 'CharacterData')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                           | Commentaire                                                                                                                     |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#characterdata', 'CharacterData')}}                 | {{Spec2('DOM WHATWG')}} | Ajoute une implémention des interfaces {{domxref("ChildNode")}} et{{domxref("NonDocumentTypeChildNode")}}. |
+| {{SpecName('DOM3 Core', 'core.html#ID-FF21A306', 'CharacterData')}}         | {{Spec2('DOM3 Core')}}     | Pas de changement depuis {{SpecName('DOM2 Core')}}.                                                                      |
+| {{SpecName('DOM2 Core', 'core.html#ID-FF21A306', 'CharacterData')}}         | {{Spec2('DOM2 Core')}}     | Pas de changement depuis {{SpecName('DOM1')}}.                                                                          |
+| {{SpecName('DOM1', 'level-one-core.html#ID-FF21A306', 'CharacterData')}} | {{Spec2('DOM1')}}         | Définition initiale.                                                                                                            |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CharacterData")}}</p>
+{{Compat("api.CharacterData")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Document_Object_Model">Référence du DOM</a>.</li>
-</ul>
+- [Référence du DOM](/fr/docs/Web/API/Document_Object_Model).

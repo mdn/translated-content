@@ -3,98 +3,86 @@ title: selection
 slug: Web/API/Selection
 translation_of: Web/API/Selection
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
+### Résumé
 
-<p>La classe de l'objet retourné par <code><a href="Window/getSelection"> window.getSelection()</a></code>, <a href="/fr/docs/Web/API/Document/getSelection"><code>document.getSelection()</code></a> et d'autres méthodes.</p>
+La classe de l'objet retourné par [`window.getSelection()`](Window/getSelection), [`document.getSelection()`](/fr/docs/Web/API/Document/getSelection) et d'autres méthodes.
 
-<h3 id="Description">Description</h3>
+### Description
 
-<p>Un objet <code>selection</code> représente les <a href="range">plages</a> sélectionnées par l'utilisateur. Habituellement, il ne contient qu'une seule plage accessible comme ceci :</p>
+Un objet `selection` représente les [plages](range) sélectionnées par l'utilisateur. Habituellement, il ne contient qu'une seule plage accessible comme ceci :
 
-<pre class="eval">range = sel.getRangeAt(0);
-</pre>
+    range = sel.getRangeAt(0);
 
-<p>L'appel de la méthode <code><a href="Selection/toString">toString()</a></code> renvoie le texte contenu dans la sélection. Cet appel peut être automatique, par exemple lorsque l'objet est passé à la fonction alert() : </p>
+L'appel de la méthode [`toString()`](Selection/toString) renvoie le texte contenu dans la sélection. Cet appel peut être automatique, par exemple lorsque l'objet est passé à la fonction alert() :
 
-<pre class="eval">selObj = window.getSelection();
-window.alert(selObj);
-</pre>
+    selObj = window.getSelection();
+    window.alert(selObj);
 
-<h3 id="Glossaire">Glossaire</h3>
+### Glossaire
 
-<p>Autres mots clés utilisés dans cette section.</p>
+Autres mots clés utilisés dans cette section.
 
-<dl>
- <dt>anchor (ancre)</dt>
- <dd>L'« ancre » d'une sélection est son point de départ. Pour une sélection avec la souris, l'« ancre » correspond à l'endroit initialement pressé par le bouton de la souris. Quand l'utilisateur modifie la sélection à la souris ou au clavier, l'« ancre » ne change pas.</dd>
- <dt>focus (focus)</dt>
- <dd>Le « focus » d'une sélection est son point d'arrivée. Pour une sélection avec la souris, le « focus » correspond à l'endroit où le bouton de la souris est relaché. Quand l'utilisateur modifie la sélection à la souris ou au clavier, le « focus » pointe la fin de la sélection modifiée.</dd>
- <dt>range (plage)</dt>
- <dd>Une « plage » est une partie contigüe d'un document. Une « plage » peut contenir aussi bien des nœuds entiers que des portions de nœuds, comme un extrait de nœud texte. Habituellement, un utilisateur n'effectuera qu'une seule sélection à la fois, mais il lui est possible de sélectionner plusieurs « plages » (par ex. en utilisant la touche Ctrl). Une « plage » est obtenue depuis une sélection par l'objet <a href="range">range</a>. Les objets <code>range</code> peuvent également être créés via le DOM et ajoutés ou supprimés d'une sélection par programmation.</dd>
-</dl>
+- anchor (ancre)
+  - : L'« ancre » d'une sélection est son point de départ. Pour une sélection avec la souris, l'« ancre » correspond à l'endroit initialement pressé par le bouton de la souris. Quand l'utilisateur modifie la sélection à la souris ou au clavier, l'« ancre » ne change pas.
+- focus (focus)
+  - : Le « focus » d'une sélection est son point d'arrivée. Pour une sélection avec la souris, le « focus » correspond à l'endroit où le bouton de la souris est relaché. Quand l'utilisateur modifie la sélection à la souris ou au clavier, le « focus » pointe la fin de la sélection modifiée.
+- range (plage)
+  - : Une « plage » est une partie contigüe d'un document. Une « plage » peut contenir aussi bien des nœuds entiers que des portions de nœuds, comme un extrait de nœud texte. Habituellement, un utilisateur n'effectuera qu'une seule sélection à la fois, mais il lui est possible de sélectionner plusieurs « plages » (par ex. en utilisant la touche Ctrl). Une « plage » est obtenue depuis une sélection par l'objet [range](range). Les objets `range` peuvent également être créés via le DOM et ajoutés ou supprimés d'une sélection par programmation.
 
-<h3 id="Propri.C3.A9t.C3.A9s">Propriétés</h3>
+### Propriétés
 
-<dl>
- <dt><a href="/fr/docs/Web/API/Selection/anchorNode">anchorNode</a></dt>
- <dd>Renvoie le nœud d'où la sélection commence.</dd>
- <dt><a href="/fr/docs/Web/API/Selection/anchorOffset">anchorOffset</a></dt>
- <dd>Renvoie un nombre correspondant au décalage de l'« ancre » de la sélection au sein de l'<code>anchorNode</code>. Si l'<code>anchorNode</code> est un noeud texte, il s'agit du nombre de caractères précédants l'« ancre » au sein de l'<code>anchorNode</code>. Si l'<code>anchorNode</code> est un élément, il s'agit du nombre de noeuds enfants de l'<code>anchorNode</code> précédant l'« ancre ».</dd>
- <dt><a href="/fr/docs/Web/API/Selection/focusNode">focusNode</a></dt>
- <dd>Renvoie le nœud où la sélection se termine.</dd>
- <dt><a href="/fr/docs/Web/API/Selection/focusOffset">focusOffset</a></dt>
- <dd>Renvoie un nombre correspondant au décalage du « focus » de la sélection au sein du focus<code>Node</code>. Si le focus<code>Node</code> est un noeud texte, il s'agit du nombre de caractères précédants le « focus » au sein du focus<code>Node</code>. Si le focusNode est un élément, il s'agit du nombre de noeuds enfants du focus<code>Node</code> précédant le « focus ».</dd>
- <dt><a href="/fr/docs/Web/API/Selection/isCollapsed">isCollapsed</a></dt>
- <dd>Renvoie un booléen indiquant si le point de départ et d'arrivée sont à la même position.</dd>
- <dt><a href="/fr/docs/Web/API/Selection/rangeCount">rangeCount</a></dt>
- <dd>Renvoie le nombre de « plages » dans la sélection.</dd>
-</dl>
+- [anchorNode](/fr/docs/Web/API/Selection/anchorNode)
+  - : Renvoie le nœud d'où la sélection commence.
+- [anchorOffset](/fr/docs/Web/API/Selection/anchorOffset)
+  - : Renvoie un nombre correspondant au décalage de l'« ancre » de la sélection au sein de l'`anchorNode`. Si l'`anchorNode` est un noeud texte, il s'agit du nombre de caractères précédants l'« ancre » au sein de l'`anchorNode`. Si l'`anchorNode` est un élément, il s'agit du nombre de noeuds enfants de l'`anchorNode` précédant l'« ancre ».
+- [focusNode](/fr/docs/Web/API/Selection/focusNode)
+  - : Renvoie le nœud où la sélection se termine.
+- [focusOffset](/fr/docs/Web/API/Selection/focusOffset)
+  - : Renvoie un nombre correspondant au décalage du « focus » de la sélection au sein du focus`Node`. Si le focus`Node` est un noeud texte, il s'agit du nombre de caractères précédants le « focus » au sein du focus`Node`. Si le focusNode est un élément, il s'agit du nombre de noeuds enfants du focus`Node` précédant le « focus ».
+- [isCollapsed](/fr/docs/Web/API/Selection/isCollapsed)
+  - : Renvoie un booléen indiquant si le point de départ et d'arrivée sont à la même position.
+- [rangeCount](/fr/docs/Web/API/Selection/rangeCount)
+  - : Renvoie le nombre de « plages » dans la sélection.
 
-<h3 id="M.C3.A9thodes">Méthodes</h3>
+### Méthodes
 
-<dl>
- <dt><a href="/fr/docs/Web/API/Selection/getRangeAt">getRangeAt</a></dt>
- <dd>Renvoie un objet range représentant une des « plages » actuellement sélectionnée.</dd>
- <dt><a href="/fr/docs/Web/API/Selection/collapse">collapse</a></dt>
- <dd>Réduit la sélection courante à un simple point.</dd>
- <dt><a href="/fr/docs/Web/API/Selection/extend">extend</a></dt>
- <dd>Déplace le « focus » de la sélection à un endroit spécifié.</dd>
- <dt><a href="/fr/docs/Web/API/Selection/collapseToStart">collapseToStart</a></dt>
- <dd>Déplace le « focus » de la sélection au même point que l'« ancre ».</dd>
- <dt><a href="/fr/docs/Web/API/Selection/collapseToEnd">collapseToEnd</a></dt>
- <dd>Déplace l'« ancre » de la sélection au même point que le « focus ». Le « focus » ne bouge pas.</dd>
- <dt><a href="/fr/docs/Web/API/Selection/selectAllChildren">selectAllChildren</a></dt>
- <dd>Ajoute tous les enfants d'un nœud spécifié à la sélection.</dd>
- <dt><a href="/fr/docs/Web/API/Selection/addRange">addRange</a></dt>
- <dd>Un objet range devant être ajouté à la sélection.</dd>
- <dt><a href="/fr/docs/Web/API/Selection/removeRange">removeRange</a></dt>
- <dd>Supprime une « plage » de la sélection.</dd>
- <dt><a href="/fr/docs/Web/API/Selection/removeAllRanges">removeAllRanges</a></dt>
- <dd>Supprime toutes les « plages » de la sélection.</dd>
- <dt><a href="/fr/docs/Web/API/Selection/deleteFromDocument">deleteFromDocument</a></dt>
- <dd>Efface le contenu de la sélection du document.</dd>
- <dt><a href="/fr/docs/Web/API/Selection/selectionLanguageChange">selectionLanguageChange</a></dt>
- <dd> </dd>
- <dt><a href="/fr/docs/Web/API/Selection/toString">toString</a></dt>
- <dd>Renvoie une chaîne de caractères représentant l'actuel objet <code>selection</code>, i.e. le texte sélectionné.</dd>
- <dt><a href="/fr/docs/Web/API/Selection/containsNode">containsNode</a></dt>
- <dd>Indique si un nœud donné appartient à la sélection.</dd>
-</dl>
+- [getRangeAt](/fr/docs/Web/API/Selection/getRangeAt)
+  - : Renvoie un objet range représentant une des « plages » actuellement sélectionnée.
+- [collapse](/fr/docs/Web/API/Selection/collapse)
+  - : Réduit la sélection courante à un simple point.
+- [extend](/fr/docs/Web/API/Selection/extend)
+  - : Déplace le « focus » de la sélection à un endroit spécifié.
+- [collapseToStart](/fr/docs/Web/API/Selection/collapseToStart)
+  - : Déplace le « focus » de la sélection au même point que l'« ancre ».
+- [collapseToEnd](/fr/docs/Web/API/Selection/collapseToEnd)
+  - : Déplace l'« ancre » de la sélection au même point que le « focus ». Le « focus » ne bouge pas.
+- [selectAllChildren](/fr/docs/Web/API/Selection/selectAllChildren)
+  - : Ajoute tous les enfants d'un nœud spécifié à la sélection.
+- [addRange](/fr/docs/Web/API/Selection/addRange)
+  - : Un objet range devant être ajouté à la sélection.
+- [removeRange](/fr/docs/Web/API/Selection/removeRange)
+  - : Supprime une « plage » de la sélection.
+- [removeAllRanges](/fr/docs/Web/API/Selection/removeAllRanges)
+  - : Supprime toutes les « plages » de la sélection.
+- [deleteFromDocument](/fr/docs/Web/API/Selection/deleteFromDocument)
+  - : Efface le contenu de la sélection du document.
+- [selectionLanguageChange](/fr/docs/Web/API/Selection/selectionLanguageChange)
+  - :
+- [toString](/fr/docs/Web/API/Selection/toString)
+  - : Renvoie une chaîne de caractères représentant l'actuel objet `selection`, i.e. le texte sélectionné.
+- [containsNode](/fr/docs/Web/API/Selection/containsNode)
+  - : Indique si un nœud donné appartient à la sélection.
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.Selection")}}
 
+### Voir aussi
 
-<p>{{Compat("api.Selection")}}</p>
+[window.getSelection](Window/getSelection), [`document.getSelection()`](/fr/docs/Web/API/Document/getSelection),[Range](range)
 
-<h3 id="Voir_aussi">Voir aussi</h3>
+### Liens externes
 
-<p><a href="Window/getSelection">window.getSelection</a>, <a href="/fr/docs/Web/API/Document/getSelection"><code>document.getSelection()</code></a>,<a href="range">Range</a></p>
-
-<h3 id="Liens_externes">Liens externes</h3>
-
-<ul>
- <li><a href="http://lxr.mozilla.org/mozilla/source/content/base/public/nsISelection.idl">Définition IDL dans Mozilla cross-reference</a></li>
-</ul>
+- [Définition IDL dans Mozilla cross-reference](http://lxr.mozilla.org/mozilla/source/content/base/public/nsISelection.idl)

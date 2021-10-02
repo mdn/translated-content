@@ -11,41 +11,28 @@ tags:
   - description
 translation_of: Web/API/PerformanceServerTiming/description
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>La propriété en lecture seule <strong><code>description</code></strong> retourne une chaîne de caractères (<a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a>) décrivant la métrique spécifiée par le serveur, ou une chaîne vide.</p>
+La propriété en lecture seule **`description`** retourne une chaîne de caractères ([`DOMString`](/fr/docs/Web/API/DOMString)) décrivant la métrique spécifiée par le serveur, ou une chaîne vide.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js"><var>serverTiming</var>.description;</pre>
+```js
+serverTiming.description;
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Server Timing','#dom-performanceservertiming-description',
-        'description')}}</td>
-      <td>{{Spec2('Server Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                    | Statut                               | Commentaire          |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('Server Timing','#dom-performanceservertiming-description',
+        'description')}} | {{Spec2('Server Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceServerTiming.description")}}</p>
+{{Compat("api.PerformanceServerTiming.description")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/API/PerformanceServerTiming"><code>PerformanceServerTiming</code></a></li>
-  <li><a href="/fr/docs/Web/HTTP/Headers/Server-Timing"><code>Server-Timing</code></a></li>
-</ul>
+- [`PerformanceServerTiming`](/fr/docs/Web/API/PerformanceServerTiming)
+- [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing)

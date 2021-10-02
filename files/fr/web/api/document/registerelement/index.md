@@ -10,56 +10,52 @@ tags:
   - Référence(2)
 translation_of: Web/API/Document/registerElement
 ---
-<p>{{APIRef("DOM")}} {{Deprecated_header}}</p>
+{{APIRef("DOM")}} {{Deprecated_header}}
 
-<div class="warning">
-<p><strong>Attention :</strong> document.registerElement() est déprécié en faveur de <a href="/fr/docs/Web/API/CustomElementRegistry/define">customElements.define()</a>.</p>
-</div>
+> **Attention :** document.registerElement() est déprécié en faveur de [customElements.define()](/fr/docs/Web/API/CustomElementRegistry/define).
 
-<p>{{draft}}</p>
+{{draft}}
 
-<p>La méthode <code><strong>Document.registerElement()</strong></code> permet d'enregistrer un nouvel <a href="/fr/docs/Web/Web_Components/Custom_Elements">élément personnalisé</a> dans le navigateur, et retourne un constructeur pour ce nouvel élément.</p>
+La méthode **`Document.registerElement()`** permet d'enregistrer un nouvel [élément personnalisé](/fr/docs/Web/Web_Components/Custom_Elements) dans le navigateur, et retourne un constructeur pour ce nouvel élément.
 
-<div class="note">
-<p><strong>Note :</strong> Il s'agit d'une technologie expérimentale. Le navigateur dans lequel vous l'utilisez doit être compatible avec les Composants Web. Voir <a href="/fr/docs/Web/Web_Components#Activer_les_Web_Components_dans_Firefox">Activer les Composants Web dans Firefox</a>.</p>
-</div>
+> **Note :** Il s'agit d'une technologie expérimentale. Le navigateur dans lequel vous l'utilisez doit être compatible avec les Composants Web. Voir [Activer les Composants Web dans Firefox](/fr/docs/Web/Web_Components#Activer_les_Web_Components_dans_Firefox).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <em>constructeur</em> = document.registerElement(<em>nom-tag</em>, <em>options</em>);</pre>
+    var constructeur = document.registerElement(nom-tag, options);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><em>nom-tag</em></dt>
- <dd>Le nom de l'élément personnalisé. Le nom doit contenir un tiret (-), par exemple <code>mon-tag</code>.</dd>
- <dt><em>options {{optional_inline}}</em></dt>
- <dd>Un objet définissant le prototype sur lequel se base l'élément personnalisé, ainsi qu'un tag existant à étendre.</dd>
-</dl>
+- _nom-tag_
+  - : Le nom de l'élément personnalisé. Le nom doit contenir un tiret (-), par exemple `mon-tag`.
+- _options {{optional_inline}}_
+  - : Un objet définissant le prototype sur lequel se base l'élément personnalisé, ainsi qu'un tag existant à étendre.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Voici un exemple très simple :</p>
+Voici un exemple très simple :
 
-<pre class="brush: js">var Montag = document.registerElement('mon-tag');
-</pre>
+```js
+var Montag = document.registerElement('mon-tag');
+```
 
-<p>Le nouveau tag est désormais enregistré dans le navigateur. La variable <code>Montag</code> contient un constructeur que vous pouvez utiliser pour créer des éléments <code>mon-tag</code> dans le document de la façon suivante :</p>
+Le nouveau tag est désormais enregistré dans le navigateur. La variable `Montag` contient un constructeur que vous pouvez utiliser pour créer des éléments `mon-tag` dans le document de la façon suivante :
 
-<pre class="brush: js">document.body.appendChild(new Montag());</pre>
+```js
+document.body.appendChild(new Montag());
+```
 
-<p>Ceci insert un élément <code>mon-tag</code> vide qui sera visible si vous utilisez les outils de développement du navigateur. Il ne sera pas visible si vous utilisez la fonction de visualisation de la source du navigateur. Et il ne sera pas visible dans le navigateur tant que vous n'aurez pas ajouter du contenu au tag. Ce qui suit est un exemple d'ajout de contenu au nouveau tag :</p>
+Ceci insert un élément `mon-tag` vide qui sera visible si vous utilisez les outils de développement du navigateur. Il ne sera pas visible si vous utilisez la fonction de visualisation de la source du navigateur. Et il ne sera pas visible dans le navigateur tant que vous n'aurez pas ajouter du contenu au tag. Ce qui suit est un exemple d'ajout de contenu au nouveau tag :
 
-<pre class="brush: js">var montag = document.getElementsByTagName("mon-tag")[0];
+```js
+var montag = document.getElementsByTagName("mon-tag")[0];
 montag.textContent = "Je suis un élément mon-tag.";
-</pre>
+```
 
-<h2 id="Compatibilité_avec_les_navigateurs">Compatibilité avec les navigateurs</h2>
+## Compatibilité avec les navigateurs
 
-<p>{{Compat("api.Document.registerElement")}}</p>
+{{Compat("api.Document.registerElement")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/Web_Components/Custom_Elements">Éléments personnalisés</a></li>
-</ul>
+- [Éléments personnalisés](/fr/docs/Web/Web_Components/Custom_Elements)

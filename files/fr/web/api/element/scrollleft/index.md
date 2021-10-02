@@ -6,64 +6,59 @@ tags:
   - DOM_0
 translation_of: Web/API/Element/scrollLeft
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
+### Résumé
 
-<p>Définit ou obtient le nombre de pixels dont le contenu est défilé vers la gauche.</p>
+Définit ou obtient le nombre de pixels dont le contenu est défilé vers la gauche.
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval">// Obtient le nombre de pixels défilés
-var <var>sLeft</var> = <var>element</var>.scrollLeft;
-</pre>
+    // Obtient le nombre de pixels défilés
+    var sLeft = element.scrollLeft;
 
-<p><var>sLeft</var> est un entier représentant le nombre de pixels dont <var>element</var> a été défilé vers la gauche.</p>
+_sLeft_ est un entier représentant le nombre de pixels dont _element_ a été défilé vers la gauche.
 
-<pre class="eval">// Définit le nombre de pixels défilés
-<var>element</var>.scrollLeft = 10;
-</pre>
+    // Définit le nombre de pixels défilés
+    element.scrollLeft = 10;
 
-<p><strong>scrollLeft</strong> peut être n'importe quelle valeur entière, cependant :</p>
+**scrollLeft** peut être n'importe quelle valeur entière, cependant :
 
-<ul>
- <li>Si l'élément ne peut pas défiler (par exemple parce qu'il ne déborde pas), <code>scrollLeft</code> est mis à 0.</li>
- <li>S'il reçoit une valeur inférieure à 0, <code>scrollLeft</code> est mis à 0.</li>
- <li>S'il reçoit une valeur plus grande que le maximum dont le contenu peut défiler, <code>scrollLeft</code> est mis au maximum.</li>
-</ul>
+- Si l'élément ne peut pas défiler (par exemple parce qu'il ne déborde pas), `scrollLeft` est mis à 0.
+- S'il reçoit une valeur inférieure à 0, `scrollLeft` est mis à 0.
+- S'il reçoit une valeur plus grande que le maximum dont le contenu peut défiler, `scrollLeft` est mis au maximum.
 
-<h3 id="Exemple">Exemple</h3>
+### Exemple
 
-<pre class="brush: html">&lt;script type="text/javascript"&gt;
+```html
+<script type="text/javascript">
 
 function doScrollLeft(el, p)
 {
   el.scrollLeft = p;
 }
 
-&lt;/script&gt;
+</script>
 
-&lt;div id="aDiv"
+<div id="aDiv"
      style="width: 100px; height: 200px; overflow: auto;"
-&gt;
-&lt;script type="text/javascript"&gt;
-for (var i=0; i&lt;100; ++i){
-  document.write(i + '-FooBar-FooBar-FooBar&lt;br&gt;');
+>
+<script type="text/javascript">
+for (var i=0; i<100; ++i){
+  document.write(i + '-FooBar-FooBar-FooBar<br>');
 }
-&lt;/script&gt;
-&lt;/div&gt;
-&lt;br&gt;
-&lt;input type="button" value="Défile de 50 pixels"
+</script>
+</div>
+<br>
+<input type="button" value="Défile de 50 pixels"
        onclick="doScrollLeft(document.getElementById('aDiv'), 50);"
-&gt;
-</pre>
+>
+```
 
-<h3 id="Sp.C3.A9cification">Spécification</h3>
+### Spécification
 
-<p>{{ DOM0() }}</p>
+{{ DOM0() }}
 
-<h3 id="R.C3.A9f.C3.A9rences">Références</h3>
+### Références
 
-<ul>
- <li><a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/scrollleft.asp"><em>scrollLeft</em> sur MSDN</a></li>
-</ul>
+- [_scrollLeft_ sur MSDN](http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/scrollleft.asp)

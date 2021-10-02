@@ -10,29 +10,28 @@ tags:
   - Reference
 translation_of: Web/API/Geolocation/clearWatch
 ---
-<p>{{ APIref("Geolocation API") }}</p>
+{{ APIref("Geolocation API") }}
 
-<p>La méthode <strong><code>Geolocation.clearWatch()</code></strong> est utilisée pour libérer les ressources de localisation/erreur créées antérieurement en utilisant {{domxref("Geolocation.watchPosition()")}}.</p>
+La méthode **`Geolocation.clearWatch()`** est utilisée pour libérer les ressources de localisation/erreur créées antérieurement en utilisant {{domxref("Geolocation.watchPosition()")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">navigator.geolocation.clearWatch(<em>id</em>);</pre>
+    navigator.geolocation.clearWatch(id);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><em>id</em></dt>
- <dd>Le nombre ID est donné par la méthode qui permet la localisation : {{domxref("Geolocation.watchPosition()")}} ; ressource que vous désirez supprimer.</dd>
-</dl>
+- _id_
+  - : Le nombre ID est donné par la méthode qui permet la localisation : {{domxref("Geolocation.watchPosition()")}} ; ressource que vous désirez supprimer.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var id, target, option;
+```js
+var id, target, option;
 
 function success(pos) {
   var crd = pos.coords;
 
-  if (target.latitude === crd.latitude &amp;&amp; target.longitude === crd.longitude) {
+  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
     console.log('Congratulation, you reach the target');
     navigator.geolocation.clearWatch(id);
   }
@@ -54,36 +53,21 @@ options = {
 };
 
 id = navigator.geolocation.watchPosition(success, error, options);
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Geolocation')}}</td>
-   <td>{{Spec2('Geolocation')}}</td>
-   <td>Spécification initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                        | Statut                           | Commentaire             |
+| ------------------------------------ | -------------------------------- | ----------------------- |
+| {{SpecName('Geolocation')}} | {{Spec2('Geolocation')}} | Spécification initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Geolocation.clearWatch")}}</p>
+{{Compat("api.Geolocation.clearWatch")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Using_geolocation">Utiliser geolocation</a></li>
- <li>{{domxref("Geolocation")}}</li>
- <li>{{domxref("Geolocation.watchPosition()")}}</li>
- <li>{{domxref("Geolocation.getCurrentPosition()")}}</li>
-</ul>
+- [Utiliser geolocation](/fr/docs/Web/API/Using_geolocation)
+- {{domxref("Geolocation")}}
+- {{domxref("Geolocation.watchPosition()")}}
+- {{domxref("Geolocation.getCurrentPosition()")}}

@@ -3,43 +3,53 @@ title: WebSocket.close()
 slug: Web/API/WebSocket/close
 browser-compat: api.WebSocket.close
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p>La méthode <strong><code>WebSocket.close()</code></strong> ferme la connexion <a href="/fr/docs/Web/API/WebSocket"><code>WebSocket</code></a> ou interrompt l'éventuelle tentative de connexion. Si la connexion est déjà fermée (état <code>CLOSED</code>), cette méthode ne fait rien.</p>
+La méthode **`WebSocket.close()`** ferme la connexion [`WebSocket`](/fr/docs/Web/API/WebSocket) ou interrompt l'éventuelle tentative de connexion. Si la connexion est déjà fermée (état `CLOSED`), cette méthode ne fait rien.
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">WebSocket.close();</pre>
-<pre class="brush: js">WebSocket.close(code);</pre>
-<pre class="brush: js">WebSocket.close(reason);</pre>
-<pre class="brush: js">WebSocket.close(code, reason);</pre>
+```js
+WebSocket.close();
+```
 
-<h3 id="parameters">Paramètres</h3>
+```js
+WebSocket.close(code);
+```
 
-<dl>
-  <dt><code>code</code> {{optional_inline}}</dt>
-  <dd>Une valeur numérique indiquant le code de statut qui explique pourquoi la connexion est fermée. Si ce paramètre n'est pas fourni, 1005 sera la valeur par défaut. Voir <a href="/fr/docs/Web/API/CloseEvent#status_codes">la liste des codes de statut</a> de <a href="/fr/docs/Web/API/CloseEvent"><code>CloseEvent</code></a> pour les valeurs autorisées.</dd>
-  <dt><code>reason</code> {{optional_inline}}</dt>
-  <dd>Une chaîne de caractères, lisible et compréhensible par un humain qui explique pourquoi la connexion est fermée. Cette chaîne ne doit pas être plus longue que 123 octets de texte UTF-8 (attention, <strong>cela ne signifie pas</strong> 123 caractères).</dd>
-</dl>
+```js
+WebSocket.close(reason);
+```
 
-<h3 id="exceptions_thrown">Exceptions levées</h3>
+```js
+WebSocket.close(code, reason);
+```
 
-<dl>
-  <dt><code>INVALID_ACCESS_ERR</code></dt>
-  <dd>Un code invalide a été fourni avec <code>code</code>.</dd>
-  <dt><code>SYNTAX_ERR</code></dt>
-  <dd>La chaîne de caractères pour <code>reason</code> est trop longue ou contient des <i lang="en">surrogates</i> non appairés.</dd>
-</dl>
+### Paramètres
 
-<div class="note">
-  <p><strong>Note :</strong> Avant Gecko 8.0, cette méthode ne prenait en charge aucun paramètre.</p>
-</div>
+- `code` {{optional_inline}}
+  - : Une valeur numérique indiquant le code de statut qui explique pourquoi la connexion est fermée. Si ce paramètre n'est pas fourni, 1005 sera la valeur par défaut. Voir [la liste des codes de statut](/fr/docs/Web/API/CloseEvent#status_codes) de [`CloseEvent`](/fr/docs/Web/API/CloseEvent) pour les valeurs autorisées.
+- `reason` {{optional_inline}}
+  - : Une chaîne de caractères, lisible et compréhensible par un humain qui explique pourquoi la connexion est fermée. Cette chaîne ne doit pas être plus longue que 123 octets de texte UTF-8 (attention, **cela ne signifie pas** 123 caractères).
 
-<h2 id="specifications">Spécifications</h2>
+### Exceptions levées
 
-<p>{{Specifications}}</p>
+- `INVALID_ACCESS_ERR`
+  - : Un code invalide a été fourni avec `code`.
+- `SYNTAX_ERR`
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+  - : La chaîne de caractères pour `reason` est trop longue ou contient des
 
-<p>{{Compat}}</p>
+    <i lang="en">surrogates</i>
+
+    non appairés.
+
+> **Note :** Avant Gecko 8.0, cette méthode ne prenait en charge aucun paramètre.
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

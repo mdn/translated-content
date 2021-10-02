@@ -3,29 +3,32 @@ title: IDBIndex.locale
 slug: Web/API/IDBIndex/locale
 translation_of: Web/API/IDBIndex/locale
 ---
-<div>{{APIRef("IndexedDB")}}{{SeeCompatTable}}</div>
+{{APIRef("IndexedDB")}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>locale</code></strong> de l'interface {{domxref("IDBIndex")}} renvoie la localisation de l'index (par exemple fr, ou <code>en-US</code>) <code>si la localisation à été spécifie lors de la mise en place de l'index</code> (voir les paramètres {{domxref("IDBObjectStore.createIndex")}}).</p>
+La propriété **`locale`** de l'interface {{domxref("IDBIndex")}} renvoie la localisation de l'index (par exemple fr, ou `en-US`) `si la localisation à été spécifie lors de la mise en place de l'index` (voir les paramètres {{domxref("IDBObjectStore.createIndex")}}).
 
-<p>{{note("Cette propriété renvoie la localisation utilisé par l'index. En d'autres termes, elle ne renverras jamais 'auto'.")}}</p>
+{{note("Cette propriété renvoie la localisation utilisé par l'index. En d'autres termes, elle ne renverras jamais 'auto'.")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var indexLocalisation = myIndex.locale;</pre>
+```js
+var indexLocalisation = myIndex.locale;
+```
 
-<h2 id="Valeur">Valeur</h2>
+## Valeur
 
-<p>Une {{domxref("DOMString","chaîne de caractère")}} représentant la localisation courante de l'index.</p>
+Une {{domxref("DOMString","chaîne de caractère")}} représentant la localisation courante de l'index.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans l'exemple suivant on ouvre une transaction puis un magasin d'objet et enfin l'index <code>lName</code>.</p>
+Dans l'exemple suivant on ouvre une transaction puis un magasin d'objet et enfin l'index `lName`.
 
-<p>La valeur de la propriété <code>Locale</code> est affichée sur la console.</p>
+La valeur de la propriété `Locale` est affichée sur la console.
 
-<p>Finalement, On itère sur tous les enregistrements pour en insérer les données dans un tableau HTML. En utilisant la méthode {{domxref("IDBIndex.openCursor")}} qui travaille de la même façon que la méthode {{domxref("IDBObjectStore.openCursor")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet sauf que les enregistrements sont renvoyés dans l'ordre de l'index et non celui du magasin d'objet.</p>
+Finalement, On itère sur tous les enregistrements pour en insérer les données dans un tableau HTML. En utilisant la méthode {{domxref("IDBIndex.openCursor")}} qui travaille de la même façon que la méthode {{domxref("IDBObjectStore.openCursor")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet sauf que les enregistrements sont renvoyés dans l'ordre de l'index et non celui du magasin d'objet.
 
-<pre class="brush:js">function displayDataByIndex() {
+```js
+function displayDataByIndex() {
   tableEntry.innerHTML = '';
 
   //ouvre un transaction
@@ -43,14 +46,14 @@ translation_of: Web/API/IDBIndex/locale
     var cursor = event.target.result;
     if(cursor) {
       var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '&lt;td&gt;' + cursor.value.id + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.lName + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.fName + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.jTitle + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.company + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.eMail + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.phone + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.age + '&lt;/td&gt;';
+      tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
+                           + '<td>' + cursor.value.lName + '</td>'
+                           + '<td>' + cursor.value.fName + '</td>'
+                           + '<td>' + cursor.value.jTitle + '</td>'
+                           + '<td>' + cursor.value.company + '</td>'
+                           + '<td>' + cursor.value.eMail + '</td>'
+                           + '<td>' + cursor.value.phone + '</td>'
+                           + '<td>' + cursor.value.age + '</td>';
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
@@ -58,26 +61,25 @@ translation_of: Web/API/IDBIndex/locale
       console.log('Tous les enregistrements ont été affichés.');
     }
   };
-};</pre>
+};
+```
 
-<div class="note"><p><strong>Note :</strong> Pour un exemple de travail complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>).</p></div>
+> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<p>Ne fait actuellement partie d'aucune spécification.</p>
+Ne fait actuellement partie d'aucune spécification.
 
-<h2 id="Compatibilité_avec_les_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBIndex.locale")}}</p>
+{{Compat("api.IDBIndex.locale")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}</li>
- <li>{{domxref("IDBDatabase","Débuter une connexion")}}</li>
- <li>{{domxref("IDBTransaction","Utilisé les transactions")}}</li>
- <li>{{domxref("IDBKeyRange","Définir l'intervalle des clés")}}</li>
- <li>{{domxref("IDBObjectStore","Accès aux magasins d'objets")}}</li>
- <li>{{domxref("IDBCursor","Utiliser les curseur")}}</li>
- <li>Exemple de référence: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- {{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}
+- {{domxref("IDBDatabase","Débuter une connexion")}}
+- {{domxref("IDBTransaction","Utilisé les transactions")}}
+- {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
+- {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
+- {{domxref("IDBCursor","Utiliser les curseur")}}
+- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

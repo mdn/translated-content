@@ -3,27 +3,23 @@ title: HTMLFormElement.length
 slug: Web/API/HTMLFormElement/length
 translation_of: Web/API/HTMLFormElement/length
 ---
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p>La propriété en lecture seule <code><strong>HTMLFormElement.length</strong></code> retourne le nombre de contrôles présents dans l'élément {{HTMLElement("Form")}}.</p>
+La propriété en lecture seule **`HTMLFormElement.length`** retourne le nombre de contrôles présents dans l'élément {{HTMLElement("Form")}}.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>integer</var> = form.length
-</pre>
+    integer = form.length
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">if (document.getElementById("form1").length &gt; 1) {
+```js
+if (document.getElementById("form1").length > 1) {
   // more than one form control here
 }
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<ul>
- <li><a href="http://www.w3.org/TR/html5/forms.html#dom-form-length">HTML 5, Section 4.10.3, The form Element</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#HTML-HTMLFormElement-length">DOM Level 2: length</a></li>
-</ul>
+- [HTML 5, Section 4.10.3, The form Element](http://www.w3.org/TR/html5/forms.html#dom-form-length)
+- [DOM Level 2: length](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#HTML-HTMLFormElement-length)

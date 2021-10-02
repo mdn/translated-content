@@ -9,60 +9,57 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/setTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>La méthode <strong><code>setTimeout()</code></strong>, rattachée au <em>mixin</em>  {{domxref("WindowOrWorkerGlobalScope")}} (et qui succède à <code>window.setTimeout()</code>) permet de définir un « minuteur » (<em>timer</em>) qui exécute une fonction ou un code donné après la fin du délai indiqué.</p>
+La méthode **`setTimeout()`**, rattachée au *mixin*  {{domxref("WindowOrWorkerGlobalScope")}} (et qui succède à `window.setTimeout()`) permet de définir un « minuteur » (_timer_) qui exécute une fonction ou un code donné après la fin du délai indiqué.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>var identifiant</em> = <em>scope</em>.setTimeout(<em>fonction</em>[, <em>delai</em>, <em>param1</em>, <em>param2</em>, ...]);
-<em>var</em> <em>identifiant</em> = <em>scope</em>.setTimeout(<em>fonction</em>[, <em>delai</em>]);
-<em>var identifiant</em> = <em>scope</em>.setTimeout(<em>code</em>[, <em>delai</em>]);
-</pre>
+    var identifiant = scope.setTimeout(fonction[, delai, param1, param2, ...]);
+    var identifiant = scope.setTimeout(fonction[, delai]);
+    var identifiant = scope.setTimeout(code[, delai]);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>function</code></dt>
- <dd>Une fonction ({{jsxref("function")}}) qui doit être exécuté au déclenchement du minuteur après le temps imparti.</dd>
- <dt><code>code</code></dt>
- <dd>Une chaîne de caractères qui représente le code à exécuter. Cette chaîne est compilée et exécutée à l'expiration du minuteur. Pour des raisons analogues à celles exprimées avec {{jsxref("Objets_globaux/eval", "eval()")}}, cette syntaxe n'est pas <strong>recommandée</strong>.</dd>
- <dt><code>delai</code> {{optional_inline}}</dt>
- <dd>La durée, exprimée en millisecondes, à attendre avant que la fonction indiquée soit exécutée. Par défaut, ce paramètre vaut 0, ce qui signifiie que la fonction est exécutée dès que possible. La durée réelle mesurée avant l'exécution de la fonction peut être supérieure à ce paramètre, voir <a href="#durée">la section ci-après</a>.</dd>
- <dt><code>param1, … , paramN</code> {{optional_inline}}</dt>
- <dd>D'autres paramètres qui seront passés à la fonction une fois que le temps est écoulé.</dd>
-</dl>
+- `function`
+  - : Une fonction ({{jsxref("function")}}) qui doit être exécuté au déclenchement du minuteur après le temps imparti.
+- `code`
+  - : Une chaîne de caractères qui représente le code à exécuter. Cette chaîne est compilée et exécutée à l'expiration du minuteur. Pour des raisons analogues à celles exprimées avec {{jsxref("Objets_globaux/eval", "eval()")}}, cette syntaxe n'est pas **recommandée**.
+- `delai` {{optional_inline}}
+  - : La durée, exprimée en millisecondes, à attendre avant que la fonction indiquée soit exécutée. Par défaut, ce paramètre vaut 0, ce qui signifiie que la fonction est exécutée dès que possible. La durée réelle mesurée avant l'exécution de la fonction peut être supérieure à ce paramètre, voir [la section ci-après](#durée).
+- `param1, … , paramN` {{optional_inline}}
+  - : D'autres paramètres qui seront passés à la fonction une fois que le temps est écoulé.
 
-<div class="note">
-<p><strong>Note :</strong> La première syntaxe utilisant les paramètres supplémentaires ne fonctionne pas pour Internet Explorer 9 et les versions antérieures. Si vous souhaitez obtenir cette fonctionnalité pour ce navigateur, vous devrez utiliser une prothèse, <a href="#polyfill">voir ci-après</a>.</p>
-</div>
+> **Note :** La première syntaxe utilisant les paramètres supplémentaires ne fonctionne pas pour Internet Explorer 9 et les versions antérieures. Si vous souhaitez obtenir cette fonctionnalité pour ce navigateur, vous devrez utiliser une prothèse, [voir ci-après](#polyfill).
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La valeur renvoyée par la fonction est un entier qui représente un identifiant du minuteur créé par l'appel à <code>setTimeout()</code>. Cet identifiant pourra être passé à la méthode {{domxref("WindowOrWorkerGlobalScope.clearTimeout","clearTimeout()")}} afin d'annuler ce minuteur donné.</p>
+La valeur renvoyée par la fonction est un entier qui représente un identifiant du minuteur créé par l'appel à `setTimeout()`. Cet identifiant pourra être passé à la méthode {{domxref("WindowOrWorkerGlobalScope.clearTimeout","clearTimeout()")}} afin d'annuler ce minuteur donné.
 
-<p>Il peut être utile de savoir que <code>setTimeout()</code> et {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} partagent le même ensemble d'identifiants et que  <code>clearTimeout()</code> et {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} sont, techniquement, interchangeables. Toutefois pour des raisons de lisibilité et de maintenance, mieux vaut les utiliser par paires plutôt que de les mélanger.</p>
+Il peut être utile de savoir que `setTimeout()` et {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} partagent le même ensemble d'identifiants et que  `clearTimeout()` et {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} sont, techniquement, interchangeables. Toutefois pour des raisons de lisibilité et de maintenance, mieux vaut les utiliser par paires plutôt que de les mélanger.
 
-<p>Le moteur d'exécution garantit qu'un identifiant donné ne sera pas réutilisé par un appel ultérieur à <code>setTimeout()</code> ou <code>setInterval()</code> pour un même objet (une fenêtre ou un <em>worker</em>). En revanche, différents objets possèdent chacun leurs ensembles d'identifiants.</p>
+Le moteur d'exécution garantit qu'un identifiant donné ne sera pas réutilisé par un appel ultérieur à `setTimeout()` ou `setInterval()` pour un même objet (une fenêtre ou un _worker_). En revanche, différents objets possèdent chacun leurs ensembles d'identifiants.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple qui suit, on dispose deux boutons classiques auxquels on associe, via des gestionnaires d'évènements, des fonctions qui utilisent <code>setTimeout()</code> et <code>clearTimeout()</code>. Utiliser le premier bouton déclenchera un minuteur qui affichera une boîte de dialogue après deux secondes. L'identifiant est enregistré à la création du minuteur et on peut annuler le minuteur en cours en appuyant sur le deuxième bouton (dont la fonction associée au gestionnaire d'évènements utilise <code>clearTimeout()</code>).</p>
+Dans l'exemple qui suit, on dispose deux boutons classiques auxquels on associe, via des gestionnaires d'évènements, des fonctions qui utilisent `setTimeout()` et `clearTimeout()`. Utiliser le premier bouton déclenchera un minuteur qui affichera une boîte de dialogue après deux secondes. L'identifiant est enregistré à la création du minuteur et on peut annuler le minuteur en cours en appuyant sur le deuxième bouton (dont la fonction associée au gestionnaire d'évènements utilise `clearTimeout()`).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;button onclick="delayedAlert();"&gt;
+```html
+<button onclick="delayedAlert();">
   Affiche une alerte après deux secondes
-&lt;/button&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;button onclick="clearAlert();"&gt;
+</button>
+<p></p>
+<button onclick="clearAlert();">
   Annuler l'alerte avant qu'elle ne se déclenche
-&lt;/button&gt;
-</pre>
+</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var timeoutID;
+```js
+var timeoutID;
 
 function delayedAlert() {
   timeoutID = window.setTimeout(slowAlert, 2000);
@@ -75,21 +72,20 @@ function slowAlert() {
 function clearAlert() {
   window.clearTimeout(timeoutID);
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples')}}</p>
+{{EmbedLiveSample('Exemples')}}
 
-<div class="note">
-<p><strong>Note :</strong> Voir aussi les exemples pour <a href="/fr/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout#Exemples"><code>clearTimeout()</code></a>.</p>
-</div>
+> **Note :** Voir aussi les exemples pour [`clearTimeout()`](/fr/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout#Exemples).
 
-<h2 id="Prothèse_d'émulation_(polyfill)">Prothèse d'émulation (<em>polyfill</em>)</h2>
+## Prothèse d'émulation (_polyfill_)
 
-<p>S'il vous faut passer un ou plusieurs arguments à la fonction de rappel tout en prenant en charge Internet Explorer 9 et les versions antérieures, vous pouvez utiliser cette prothèse qui ajoute la prise en charge des paramètres additionnels :</p>
+S'il vous faut passer un ou plusieurs arguments à la fonction de rappel tout en prenant en charge Internet Explorer 9 et les versions antérieures, vous pouvez utiliser cette prothèse qui ajoute la prise en charge des paramètres additionnels :
 
-<pre class="brush: js">/*\
+```js
+/*\
 |*|
 |*|  Polyfill which enables the passage of arbitrary arguments to the
 |*|  callback functions of JavaScript timers (HTML5 standard syntax).
@@ -128,104 +124,111 @@ function clearAlert() {
     };
   }, 0, 'test');
 }())
-</pre>
+```
 
-<h3 id="Correctif_ciblé_sur_IE">Correctif ciblé sur IE</h3>
+### Correctif ciblé sur IE
 
-<p>Si vous souhaitez ne cibler que IE 9 et antérieurs, vous pouvez utiliser les commentaires conditionnels JavaScript :</p>
+Si vous souhaitez ne cibler que IE 9 et antérieurs, vous pouvez utiliser les commentaires conditionnels JavaScript :
 
-<pre class="brush: js">/*@cc_on
-  // conditional IE &lt; 9 only fix
-  @if (@_jscript_version &lt;= 9)
+```js
+/*@cc_on
+  // conditional IE < 9 only fix
+  @if (@_jscript_version <= 9)
   (function(f){
      window.setTimeout = f(window.setTimeout);
      window.setInterval = f(window.setInterval);
   })(function(f){return function(c,t){var a=[].slice.call(arguments,2);return f(function(){c instanceof Function?c.apply(this,a):eval(c)},t)}});
   @end
 @*/
-</pre>
+```
 
-<p>Ou plutôt les commentaires conditionnels HTML :</p>
+Ou plutôt les commentaires conditionnels HTML :
 
-<pre class="brush: html">&lt;!--[if lte IE 9]&gt;&lt;script&gt;
+```html
+<!--[if lte IE 9]><script>
 (function(f){
 window.setTimeout=f(window.setTimeout);
 window.setInterval=f(window.setInterval);
 })(function(f){return function(c,t){
 var a=[].slice.call(arguments,2);return f(function(){c instanceof Function?c.apply(this,a):eval(c)},t)}
 });
-&lt;/script&gt;&lt;![endif]--&gt;
-</pre>
+</script><![endif]-->
+```
 
-<h3 id="Autres_méthodes_de_contournement">Autres méthodes de contournement</h3>
+### Autres méthodes de contournement
 
-<p>Vous pouvez également utiliser une fonction anonyme comme fonction de rappel (<em>callback</em>) :</p>
+Vous pouvez également utiliser une fonction anonyme comme fonction de rappel (_callback_) :
 
-<pre class="brush: js">var intervalID = setTimeout(function() {
+```js
+var intervalID = setTimeout(function() {
   maFonction('un', 'deux', 'trois');
   }, 1000);
-</pre>
+```
 
-<p>Voici une réécriture de l'exemple précédent avec <a href="/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es">les fonctions fléchées</a> :</p>
+Voici une réécriture de l'exemple précédent avec [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) :
 
-<pre class="brush: js">var intervalID = setTimeout(() =&gt; {
+```js
+var intervalID = setTimeout(() => {
   maFonction('un', 'deux', 'trois');
   }, 1000);
-</pre>
+```
 
-<p>On peut également utiliser {{jsxref("Function.prototype.bind()")}} :</p>
+On peut également utiliser {{jsxref("Function.prototype.bind()")}} :
 
-<pre class="brush: js">setTimeout(function(arg1){}.bind(undefined, 10), 1000);
-</pre>
+```js
+setTimeout(function(arg1){}.bind(undefined, 10), 1000);
+```
 
-<h2 id="Le_problème_«_this_»">Le problème « <code>this</code> »</h2>
+## Le problème « `this` »
 
-<p>Lorsqu'on passe une fonction à <code>setTimeout()</code>, cette fonction peut être appelée avec une valeur <code>this</code> qui n'est pas celle qu'on attend. Ce problème est expliqué en détails dans la référence JavaScript<a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this#Dans_le_contexte_d'une_fonction">JavaScript reference</a>.</p>
+Lorsqu'on passe une fonction à `setTimeout()`, cette fonction peut être appelée avec une valeur `this` qui n'est pas celle qu'on attend. Ce problème est expliqué en détails dans la référence JavaScript[JavaScript reference](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this#Dans_le_contexte_d'une_fonction).
 
-<h3 id="Explications">Explications</h3>
+### Explications
 
-<p>Le code exécuté par <code>setTimeout()</code> est appelé dans un contexte d'exécution différent de celui de la fonction où <code>setTimeout</code> a été appelé. Les règles usuelles pour la détermination de <code>this</code> s'appliquent : si <code>this</code> n'est pas défini lors de l'appel ou avec <code>bind</code>, la valeur par défaut sera l'objet global (<code>global</code> ou <code>window</code>) en mode non-strict ou {{jsxref("undefined")}} en mode strict. Aussi, le <code>this</code> utilisé par la fonction de rappel ne sera pas le même <code>this</code> que celui utilisé par la fonction ayant appelé <code>setTimeout</code>.</p>
+Le code exécuté par `setTimeout()` est appelé dans un contexte d'exécution différent de celui de la fonction où `setTimeout` a été appelé. Les règles usuelles pour la détermination de `this` s'appliquent : si `this` n'est pas défini lors de l'appel ou avec `bind`, la valeur par défaut sera l'objet global (`global` ou `window`) en mode non-strict ou {{jsxref("undefined")}} en mode strict. Aussi, le `this` utilisé par la fonction de rappel ne sera pas le même `this` que celui utilisé par la fonction ayant appelé `setTimeout`.
 
-<div class="note">
-<p><strong>Note :</strong> La valeur par défaut pour <code>this</code>, lors de l'utilisation d'une fonction de rappel par <code>setTimeout</code> sera toujours l'objet <code>window</code> et pas la valeur <code>undefined</code>, même en mode strict.</p>
-</div>
+> **Note :** La valeur par défaut pour `this`, lors de l'utilisation d'une fonction de rappel par `setTimeout` sera toujours l'objet `window` et pas la valeur `undefined`, même en mode strict.
 
-<p>Par exemple :</p>
+Par exemple :
 
-<pre class="brush: js">monTableau = ['zéro', 'un', 'deux'];
+```js
+monTableau = ['zéro', 'un', 'deux'];
 monTableau.maMéthode = function (sPropriété) {
-    console.log(arguments.length &gt; 0 ? this[sPropriété] : this);
+    console.log(arguments.length > 0 ? this[sPropriété] : this);
 };
 
 monTableau.maMéthode();  // affichera "zéro,un,deux" dans la console
-monTableau.maMéthode(1); // affichera "un"</pre>
+monTableau.maMéthode(1); // affichera "un"
+```
 
-<p>Le code qui précède fonctionne car lorsque <code>maMéthode</code> est appelée, <code>this</code> correspond à <code>monTableau</code> et qu'au sein de <code>maMéthode</code>, <code>this[sPropriété]</code> correspond alors à <code>monTableau[sPropriété]</code>. Toutefois, avec :</p>
+Le code qui précède fonctionne car lorsque `maMéthode` est appelée, `this` correspond à `monTableau` et qu'au sein de `maMéthode`, `this[sPropriété]` correspond alors à `monTableau[sPropriété]`. Toutefois, avec :
 
-<pre class="brush: js">setTimeout(monTableau.maMéthode, 1000);
+```js
+setTimeout(monTableau.maMéthode, 1000);
 // affiche "[object Window]" après 1 seconde
 setTimeout(monTableau.maMéthode, 1500, '1');
-// affiche "undefined" après 1.5 seconde</pre>
+// affiche "undefined" après 1.5 seconde
+```
 
-<p>La fonction <code>monTableau.maMéthode</code> est pasée à <code>setTimeout</code> et, lorsqu'elle est appelée, <code>this</code> n'est pas défini et le moteur utilise la valeur par défaut : <code>window</code>. Il n'y apas d'option qui permettent de passer une valeur  <code>thisArg</code> à <code>setTimeout()</code> comme on peut le faire avec {{jsxref("Array.prototype.forEach()")}} ou {{jsxref("Array.prototype.reduce()")}} par exemple. Aussi, utiliser <code>call()</code> afin de définir <code>this</code> ne fonctionnera pas non plus.</p>
+La fonction `monTableau.maMéthode` est pasée à `setTimeout` et, lorsqu'elle est appelée, `this` n'est pas défini et le moteur utilise la valeur par défaut : `window`. Il n'y apas d'option qui permettent de passer une valeur  `thisArg` à `setTimeout()` comme on peut le faire avec {{jsxref("Array.prototype.forEach()")}} ou {{jsxref("Array.prototype.reduce()")}} par exemple. Aussi, utiliser `call()` afin de définir `this` ne fonctionnera pas non plus.
 
-<pre class="brush: js">setTimeout.call(monTableau, monTableau.maMéthode, 2000);
+```js
+setTimeout.call(monTableau, monTableau.maMéthode, 2000);
 // error: "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object"
 setTimeout.call(monTableau, monTableau.maMéthode, 2500, 2);
 // même erreur
-</pre>
+```
 
-<h3 id="Solutions_éventuelles">Solutions éventuelles</h3>
+### Solutions éventuelles
 
-<div class="note">
-  <p><strong>Note :</strong> JavaScript 1.8.5 introduced the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind()</a></code> method to set the value of <code>this</code> for all calls to a given function. This can avoid having to use a wrapper function to set the value of <code>this</code> in a callback.</p>
-</div>
+> **Note :** JavaScript 1.8.5 introduced the [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method to set the value of `this` for all calls to a given function. This can avoid having to use a wrapper function to set the value of `this` in a callback.
 
-<p>Exemple d'utilisation :</p>
+Exemple d'utilisation :
 
-<pre class="brush: js">var monTableau = ['zéro', 'un', 'deux'];
+```js
+var monTableau = ['zéro', 'un', 'deux'];
 var maMéthodeLiée = (function (sPropriété) {
-  console.log(arguments.length &gt; 0 ? this[sPropriété] : this);
+  console.log(arguments.length > 0 ? this[sPropriété] : this);
 }).bind(monTableau);
 
 
@@ -235,129 +238,113 @@ setTimeout(maMéthodeLiée, 1000);
 // affiche "zéro,un,deux" après une seconde
 setTimeout(maMéthodeLiée, 1500, "1");
 // affiche "un" après 1.5 seconde
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Les minuteurs peuvent être annulés avec {{domxref("WindowOrWorkerGlobalScope.clearTimeout","clearTimeout()")}}. Si on souhaite appeler une fonction de façon répétée, on utilisera plutôt {{domxref("WindowOrWorkerGlobalScope.setInterval()","setInterval()")}}.</p>
+Les minuteurs peuvent être annulés avec {{domxref("WindowOrWorkerGlobalScope.clearTimeout","clearTimeout()")}}. Si on souhaite appeler une fonction de façon répétée, on utilisera plutôt {{domxref("WindowOrWorkerGlobalScope.setInterval()","setInterval()")}}.
 
-<h3 id="Utiliser_des_chaînes_pour_le_code_plutôt_que_des_fonctions">Utiliser des chaînes pour le code plutôt que des fonctions</h3>
+### Utiliser des chaînes pour le code plutôt que des fonctions
 
-<p>Passer une chaîne de caractères pour le code à exécuter, plutôt qu'une fonction, souffre des mêmes dangers que {{jsxref("Objets_globaux/eval","eval()")}}.</p>
+Passer une chaîne de caractères pour le code à exécuter, plutôt qu'une fonction, souffre des mêmes dangers que {{jsxref("Objets_globaux/eval","eval()")}}.
 
-<pre class="brush: js">// Recommandé
+```js
+// Recommandé
 window.setTimeout(function() {
     console.log('Coucou monde !');
 }, 500);
 
 // Non recommandé
 window.setTimeout("console.log('Coucou monde !');", 500);
-</pre>
+```
 
-<p>Une chaîne de caractères passée à <code>setTimeout</code> sera évaluée dans le contexte global. Aussi, les symboles locaux au contexte de l'appel de <code>setTimeout()</code> ne seront pas accessibles au code présent dans la chaîne de caractères lors de son évaluation.</p>
+Une chaîne de caractères passée à `setTimeout` sera évaluée dans le contexte global. Aussi, les symboles locaux au contexte de l'appel de `setTimeout()` ne seront pas accessibles au code présent dans la chaîne de caractères lors de son évaluation.
 
-<h3 id="Durée_plus_longue_que_le_paramètre_indiquée">Durée plus longue que le paramètre indiquée</h3>
+### Durée plus longue que le paramètre indiquée
 
-<p>Plusieurs raisons peuvent expliquer une durée réelle plus longue que le délai passé en argument. Voici les plus fréquentes.</p>
+Plusieurs raisons peuvent expliquer une durée réelle plus longue que le délai passé en argument. Voici les plus fréquentes.
 
-<h4 id="Précision_minimale_à_4ms">Précision minimale à 4ms</h4>
+#### Précision minimale à 4ms
 
-<p>Dans les navigateurs récents les appels à <code>setTimeout()/</code>{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}} possèdent au plus une précision de 4ms lorsque plusieurs appels imbriqués sont réalisés. Par exemple :</p>
+Dans les navigateurs récents les appels à `setTimeout()/`{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}} possèdent au plus une précision de 4ms lorsque plusieurs appels imbriqués sont réalisés. Par exemple :
 
-<pre class="brush: js">function cb() { f(); setTimeout(cb, 0); }
-setTimeout(cb, 0);</pre>
+```js
+function cb() { f(); setTimeout(cb, 0); }
+setTimeout(cb, 0);
+```
 
-<pre class="brush: js">setInterval(f, 0);</pre>
+```js
+setInterval(f, 0);
+```
 
-<p>Pour Chrome et Firefox, la limitation est active à partir du cinquième appel de fonction de rappel,  Safari active la limitation à partir du sixième et Edge à partir du troisième. Gecko traite <code>setInterval()</code> de la même façon depuis la <a href="/fr/docs/Mozilla/Firefox/Releases/56">version 56</a>.</p>
+Pour Chrome et Firefox, la limitation est active à partir du cinquième appel de fonction de rappel,  Safari active la limitation à partir du sixième et Edge à partir du troisième. Gecko traite `setInterval()` de la même façon depuis la [version 56](/fr/docs/Mozilla/Firefox/Releases/56).
 
-<p><a href="http://code.google.com/p/chromium/issues/detail?id=792#c10">Par le passé</a>, certains navigateurs implémentaient cette limite différemment (pour les appels à <code>setInterval()</code> quelle que soit leur provenance ou lorsqu'un appel <code>setTimeout()</code> était imbriqué dans un autre pour un certain nombre de niveaux d'imbrication.</p>
+[Par le passé](http://code.google.com/p/chromium/issues/detail?id=792#c10), certains navigateurs implémentaient cette limite différemment (pour les appels à `setInterval()` quelle que soit leur provenance ou lorsqu'un appel `setTimeout()` était imbriqué dans un autre pour un certain nombre de niveaux d'imbrication.
 
-<p>Pour implémenter un minuteur de 0ms, on pourra utiliser {{domxref("window.postMessage()")}}.</p>
+Pour implémenter un minuteur de 0ms, on pourra utiliser {{domxref("window.postMessage()")}}.
 
-<div class="note">
-<p><strong>Note :</strong> Le délai minimal est géré dans Firefox via une préférence : <code>dom.min_timeout_value</code>.</p>
-</div>
+> **Note :** Le délai minimal est géré dans Firefox via une préférence : `dom.min_timeout_value`.
 
-<div class="note">
-<p><strong>Note :</strong> Cette durée de 4 ms est <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">définie dans la spécification HTML5</a> et est la même dans l'ensemble des navigateurs à partir de 2010. Avant {{geckoRelease("5.0")}}, la valeur minimale pour les appels imbriqués était 10ms.</p>
-</div>
+> **Note :** Cette durée de 4 ms est [définie dans la spécification HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers) et est la même dans l'ensemble des navigateurs à partir de 2010. Avant {{geckoRelease("5.0")}}, la valeur minimale pour les appels imbriqués était 10ms.
 
-<h4 id="Précision_minimale_des_minuteurs_pour_les_onglets_inactifs_plus_de_1000ms">Précision minimale des minuteurs pour les onglets inactifs : plus de 1000ms</h4>
+#### Précision minimale des minuteurs pour les onglets inactifs : plus de 1000ms
 
-<p>Afin de réduire la charge (ainsi que la consommation d'énergie associée) des onglets en arrière-plan, les minuteurs ne sont déclenchés au maximum qu'une fois par seconde pour les onglets inactifs.</p>
+Afin de réduire la charge (ainsi que la consommation d'énergie associée) des onglets en arrière-plan, les minuteurs ne sont déclenchés au maximum qu'une fois par seconde pour les onglets inactifs.
 
-<p>Firefox implémente ce comportement depuis Firefox 5 (cf.  {{bug(633421)}}) et la valeur du seuil de 1000ms peut être paramétrée via la préférence <code>dom.min_background_timeout_value</code>. Chrome implémente ce comportement depuis la version 11 (<a href="http://crbug.com/66078">crbug.com/66078</a>).</p>
+Firefox implémente ce comportement depuis Firefox 5 (cf.  {{bug(633421)}}) et la valeur du seuil de 1000ms peut être paramétrée via la préférence `dom.min_background_timeout_value`. Chrome implémente ce comportement depuis la version 11 ([crbug.com/66078](http://crbug.com/66078)).
 
-<p>Firefox pour Android utilise un minimum de 15 minutes depuis Firefox 14 (cf.  {{bug(736602)}}) et les onglets en arrière-plan peuvent être déchargés complètement.</p>
+Firefox pour Android utilise un minimum de 15 minutes depuis Firefox 14 (cf.  {{bug(736602)}}) et les onglets en arrière-plan peuvent être déchargés complètement.
 
-<div class="note">
-<p><strong>Note :</strong> Firefox 50 ne limite plus la réactivité des onglets en arrière-plan si un contexte Web Audio API {{domxref("AudioContext")}} joue un son. Firefox 51 élargit le spectre en supprimant la limitation si un objet {{domxref("AudioContext")}} est présent dans l'onglet, même sans jouer de son. Cela a permis de résoudre différents problèmes avec certaines applications qui jouent de la musique en arrière-plan.</p>
-</div>
+> **Note :** Firefox 50 ne limite plus la réactivité des onglets en arrière-plan si un contexte Web Audio API {{domxref("AudioContext")}} joue un son. Firefox 51 élargit le spectre en supprimant la limitation si un objet {{domxref("AudioContext")}} est présent dans l'onglet, même sans jouer de son. Cela a permis de résoudre différents problèmes avec certaines applications qui jouent de la musique en arrière-plan.
 
-<h4 id="Limitation_des_minuteurs_pour_les_scripts_de_pistage">Limitation des minuteurs pour les scripts de pistage</h4>
+#### Limitation des minuteurs pour les scripts de pistage
 
-<p>Depuis Firefox 55, les scripts de pistage (par exemple Google Analytics) (c'est-à-dire que toute URL que Firefox reconnaît comme appartenant à un domaine de pistage via <a href="https://wiki.mozilla.org/Security/Tracking_protection#Lists">la liste TP</a>) ont une limitation plus forte. En premier plan la limitation est toujours de 4ms mais pour les onglets en arrière-plan, la limite est à 10000ms une fois que 30 secondes se sont écoulées après le premier chargement du document.</p>
+Depuis Firefox 55, les scripts de pistage (par exemple Google Analytics) (c'est-à-dire que toute URL que Firefox reconnaît comme appartenant à un domaine de pistage via [la liste TP](https://wiki.mozilla.org/Security/Tracking_protection#Lists)) ont une limitation plus forte. En premier plan la limitation est toujours de 4ms mais pour les onglets en arrière-plan, la limite est à 10000ms une fois que 30 secondes se sont écoulées après le premier chargement du document.
 
-<p>Ces seuils peuvent être gérés via les préférences :</p>
+Ces seuils peuvent être gérés via les préférences :
 
-<ul>
- <li><code>dom.min_tracking_timeout_value</code> : 4</li>
- <li><code>dom.min_tracking_background_timeout_value</code> : 10000</li>
- <li><code>dom.timeout.tracking_throttling_delay</code> : 30000</li>
-</ul>
+- `dom.min_tracking_timeout_value` : 4
+- `dom.min_tracking_background_timeout_value` : 10000
+- `dom.timeout.tracking_throttling_delay` : 30000
 
-<h4 id="Minuteurs_en_retard">Minuteurs en retard</h4>
+#### Minuteurs en retard
 
-<p>En plus de ces limitations, le minuteur peut être déclenché plus tard si le navigateur ou le système d'opération est occupé sur d'autres tâches. On notera particulièrement que la fonction de rappel n'est pas exécutée tant que le <em>thread</em> du script n'a pas terminé. Par exemple :</p>
+En plus de ces limitations, le minuteur peut être déclenché plus tard si le navigateur ou le système d'opération est occupé sur d'autres tâches. On notera particulièrement que la fonction de rappel n'est pas exécutée tant que le _thread_ du script n'a pas terminé. Par exemple :
 
-<pre class="brush: js">function toto() {
+```js
+function toto() {
   console.log('appel de toto');
 }
 setTimeout(toto, 0);
-console.log('Après setTimeout');</pre>
+console.log('Après setTimeout');
+```
 
-<p>affichera, dans la console :</p>
+affichera, dans la console :
 
-<pre class="brush: js">Après setTimeout
-appel de toto</pre>
+```js
+Après setTimeout
+appel de toto
+```
 
-<p>Ici, même si <code>setTimeout</code> a été appelé avec un délai nul, la fonction de rappel est placée dans la queue et est planifiée pour être exécutée dès que possible : ce qui n'est pas « immédiatement ». Le code courant doit finir d'être exécuté afin que les appels dans la queue puissent être dépilés.</p>
+Ici, même si `setTimeout` a été appelé avec un délai nul, la fonction de rappel est placée dans la queue et est planifiée pour être exécutée dès que possible : ce qui n'est pas « immédiatement ». Le code courant doit finir d'être exécuté afin que les appels dans la queue puissent être dépilés.
 
-<h3 id="Valeur_de_délai_maximale">Valeur de délai maximale</h3>
+### Valeur de délai maximale
 
-<p>Les navigateurs que sont Internet Explorer, Chrome, Safari et Firefox stockent, en interne, la valeur du délai comme un entier sur 32 bits signé. Il y a donc un dépassement de borne si le délai est supérieur à 2147483647 millisecondes, ce qui correspond à 24.8 days. Si une telle valeur (supérieure à ce seuil) est utilisée, le minuteur est déclenché dès que possible.</p>
+Les navigateurs que sont Internet Explorer, Chrome, Safari et Firefox stockent, en interne, la valeur du délai comme un entier sur 32 bits signé. Il y a donc un dépassement de borne si le délai est supérieur à 2147483647 millisecondes, ce qui correspond à 24.8 days. Si une telle valeur (supérieure à ce seuil) est utilisée, le minuteur est déclenché dès que possible.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Spécification</th>
-   <th>État</th>
-   <th>Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-settimeout', 'WindowOrWorkerGlobalScope.setTimeout()')}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Déplacement de la méthode sur le <em>mixin</em> <code>WindowOrWorkerGlobalScope</code> dans la dernière spécification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "webappapis.html#dom-settimeout", "WindowTimers.setTimeout()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Définition initiale (<em>DOM Level 0</em>)</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                            | État                             | Commentaires                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'webappapis.html#dom-settimeout', 'WindowOrWorkerGlobalScope.setTimeout()')}} | {{Spec2("HTML WHATWG")}} | Déplacement de la méthode sur le _mixin_ `WindowOrWorkerGlobalScope` dans la dernière spécification. |
+| {{SpecName("HTML WHATWG", "webappapis.html#dom-settimeout", "WindowTimers.setTimeout()")}}                 | {{Spec2("HTML WHATWG")}} | Définition initiale (_DOM Level 0_)                                                                  |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.setTimeout")}}</p>
+{{Compat("api.WindowOrWorkerGlobalScope.setTimeout")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.setInterval")}}</li>
- <li>{{domxref("window.requestAnimationFrame")}}</li>
-</ul>
+- {{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}
+- {{domxref("WindowOrWorkerGlobalScope.setInterval")}}
+- {{domxref("window.requestAnimationFrame")}}

@@ -10,61 +10,46 @@ tags:
   - WebAuthn
 translation_of: Web/API/CredentialsContainer
 ---
-<p>{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}</p>
+{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}
 
-<p>L'interface <strong><code>CredentialsContainer</code></strong>, rattachée à l'<a href="/en-US/docs/Web/API/Credential_Management_API">API Credential Management</a>, expose des méthodes pour demander l'accès aux informations d'authentification et informer l'agent utilisateur lorsque des évènements pertinents se produisent (connexion et déconnexion réussies par exemple). On peut accéder à cette interface via {{domxref('Navigator.credentials')}}.</p>
+L'interface **`CredentialsContainer`**, rattachée à l'[API Credential Management](/en-US/docs/Web/API/Credential_Management_API), expose des méthodes pour demander l'accès aux informations d'authentification et informer l'agent utilisateur lorsque des évènements pertinents se produisent (connexion et déconnexion réussies par exemple). On peut accéder à cette interface via {{domxref('Navigator.credentials')}}.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p>Aucune.</p>
+Aucune.
 
-<h3 id="Gestionnaires_d'évènements">Gestionnaires d'évènements</h3>
+### Gestionnaires d'évènements
 
-<p>Aucun.</p>
+Aucun.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("CredentialsContainer.create()")}}{{securecontext_inline}}</dt>
- <dd>Cette méthode renvoie une promesse ({{jsxref("Promise")}}) qui est résolue avec une nouvelle instance {{domxref("Credential")}} construite selon les options fournies ou <code>null</code> si aucun objet <code>Credential</code> ne peut être créé.</dd>
- <dt>{{domxref("CredentialsContainer.get()")}}{{securecontext_inline}}</dt>
- <dd>Cette méthode renvoie une promesse ({{jsxref("Promise")}}) qui est résolue avec l'instance de {{domxref("Credential")}} qui correspond aux paramètres fournis.</dd>
- <dt>{{domxref("CredentialsContainer.preventSilentAccess()")}}{{securecontext_inline}}</dt>
- <dd>Cette méthode active un marqueur qui indique si une connexion automatique est autorisée pour les futures visites sur cette origine et renvoie une promesse ({{jsxref("Promise")}}) vide. <br>
- <br>
- On pourra par exemple appeler cette méthode après qu'un utilisateur se soit déconnecté d'un site web pour s'assurer qu'il n'est pas reconnecté à la prochaine visite. Dans des versions antérieures de la spécification, cette méthode était intitulée <code>requireUserMediation()</code>. Voir le tableau de compatibilité ci-après pour plus de détails.</dd>
- <dt>{{domxref("CredentialsContainer.store()")}}{{securecontext_inline}}</dt>
- <dd>Cette méthode enregistre des informations d'authentification pour un utilisateur à partir d'une instance {{domxref("Credential")}} fournie et renvoie cette instance dans une promesse ({{jsxref("Promise")}}).</dd>
-</dl>
+- {{domxref("CredentialsContainer.create()")}}{{securecontext_inline}}
+  - : Cette méthode renvoie une promesse ({{jsxref("Promise")}}) qui est résolue avec une nouvelle instance {{domxref("Credential")}} construite selon les options fournies ou `null` si aucun objet `Credential` ne peut être créé.
+- {{domxref("CredentialsContainer.get()")}}{{securecontext_inline}}
+  - : Cette méthode renvoie une promesse ({{jsxref("Promise")}}) qui est résolue avec l'instance de {{domxref("Credential")}} qui correspond aux paramètres fournis.
+- {{domxref("CredentialsContainer.preventSilentAccess()")}}{{securecontext_inline}}
 
-<h2 id="Exemples">Exemples</h2>
+  - : Cette méthode active un marqueur qui indique si une connexion automatique est autorisée pour les futures visites sur cette origine et renvoie une promesse ({{jsxref("Promise")}}) vide.
 
-<pre class="brush: js">// TBD</pre>
+    On pourra par exemple appeler cette méthode après qu'un utilisateur se soit déconnecté d'un site web pour s'assurer qu'il n'est pas reconnecté à la prochaine visite. Dans des versions antérieures de la spécification, cette méthode était intitulée `requireUserMediation()`. Voir le tableau de compatibilité ci-après pour plus de détails.
 
-<h2 id="Spécifications">Spécifications</h2>
+- {{domxref("CredentialsContainer.store()")}}{{securecontext_inline}}
+  - : Cette méthode enregistre des informations d'authentification pour un utilisateur à partir d'une instance {{domxref("Credential")}} fournie et renvoie cette instance dans une promesse ({{jsxref("Promise")}}).
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Credential Management')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebAuthn')}}</td>
-   <td>{{Spec2('WebAuthn')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+## Exemples
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+```js
+// TBD
+```
 
-<p>{{Compat("api.CredentialsContainer")}}</p>
+## Spécifications
+
+| Spécification                                    | État                                         | Commentaires         |
+| ------------------------------------------------ | -------------------------------------------- | -------------------- |
+| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+| {{SpecName('WebAuthn')}}                 | {{Spec2('WebAuthn')}}                 | Définition initiale. |
+
+## Compatibilité des navigateurs
+
+{{Compat("api.CredentialsContainer")}}

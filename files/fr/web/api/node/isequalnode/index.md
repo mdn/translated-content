@@ -9,82 +9,68 @@ tags:
   - Noeuds
 translation_of: Web/API/Node/isEqualNode
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>La méthode <code><strong>Node.isEqualNode()</strong></code> permet de tester l'égalité entre deux éléments du DOM. Deux noeuds sont équivalents s'ils ont le même type, les mêmes caractéristiques de définition (ID, nombre d'enfants et autres), des attributs qui correspondent etc. L'ensemble spécifique de points des données qui doit correspondre varie en fonction des types de nœuds.</p>
+La méthode **`Node.isEqualNode()`** permet de tester l'égalité entre deux éléments du DOM. Deux noeuds sont équivalents s'ils ont le même type, les mêmes caractéristiques de définition (ID, nombre d'enfants et autres), des attributs qui correspondent etc. L'ensemble spécifique de points des données qui doit correspondre varie en fonction des types de nœuds.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <var>isEqualNode</var> = <var>node</var>.isEqualNode(<var>otherNode</var>);
-</pre>
+    var isEqualNode = node.isEqualNode(otherNode);
 
-<ul>
- <li><code>otherNode</code> : Le noeud à comparer.</li>
-</ul>
+- `otherNode` : Le noeud à comparer.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans cet exemple, nous créons trois blocs {{HTMLElement("div")}}. Le premier et le troisième ont les mêmes contenus et attributs, alors que le second est différent. Alors, nous éxécutons du JavaScript pour comparer les noeuds en utilisant <code>isEqualNode()</code> et sortons les résultats.</p>
+Dans cet exemple, nous créons trois blocs {{HTMLElement("div")}}. Le premier et le troisième ont les mêmes contenus et attributs, alors que le second est différent. Alors, nous éxécutons du JavaScript pour comparer les noeuds en utilisant `isEqualNode()` et sortons les résultats.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;This is the first element.&lt;/div&gt;
-&lt;div&gt;This is the second element.&lt;/div&gt;
-&lt;div&gt;This is the first element.&lt;/div&gt;
+```html
+<div>This is the first element.</div>
+<div>This is the second element.</div>
+<div>This is the first element.</div>
 
-&lt;p id="output"&gt;&lt;/p&gt;</pre>
+<p id="output"></p>
+```
 
-<h3 id="Specification">CSS</h3>
+### CSS
 
-<pre class="brush: css">#output {
+```css
+#output {
   width: 440px;
   border: 2px solid black;
   border-radius: 5px;
   padding: 10px;
   margin-top: 20px;
   display: block;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let output = document.getElementById("output");
+```js
+let output = document.getElementById("output");
 let divList  = document.getElementsByTagName("div");
 
-output.innerHTML += "div 0 equals div 0: " + divList[0].isEqualNode(divList[0]) + "&lt;br/&gt;";
-output.innerHTML += "div 0 equals div 1: " + divList[0].isEqualNode(divList[1]) + "&lt;br/&gt;";
-output.innerHTML += "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) + "&lt;br/&gt;";</pre>
+output.innerHTML += "div 0 equals div 0: " + divList[0].isEqualNode(divList[0]) + "<br/>";
+output.innerHTML += "div 0 equals div 1: " + divList[0].isEqualNode(divList[1]) + "<br/>";
+output.innerHTML += "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) + "<br/>";
+```
 
-<h3 id="Résultats">Résultats</h3>
+### Résultats
 
-<p>{{ EmbedLiveSample('Example', 480) }}</p>
+{{ EmbedLiveSample('Example', 480) }}
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-node-isequalnode', 'Node.isEqualNode')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                           | Commentaire |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('DOM WHATWG', '#dom-node-isequalnode', 'Node.isEqualNode')}} | {{Spec2('DOM WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Node.isEqualNode")}}</p>
+{{Compat("api.Node.isEqualNode")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Node.isSameNode()")}}</li>
-</ul>
+- {{domxref("Node.isSameNode()")}}

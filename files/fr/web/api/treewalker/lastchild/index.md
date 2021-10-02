@@ -9,54 +9,37 @@ tags:
   - Noeuds
 translation_of: Web/API/TreeWalker/lastChild
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>La méthode <strong><code>TreeWalker.lastChild()</code></strong> déplace le {{domxref("Node")}} courant au dernier enfant <em>visible</em> du noeud courant et renvoie l'enfant trouvé. Il déplace aussi le noeud courant vers cet enfant. Si aucun enfant n'existe, elle retourne <code>null</code> et le noeud courant reste inchangé.</p>
+La méthode **`TreeWalker.lastChild()`** déplace le {{domxref("Node")}} courant au dernier enfant _visible_ du noeud courant et renvoie l'enfant trouvé. Il déplace aussi le noeud courant vers cet enfant. Si aucun enfant n'existe, elle retourne `null` et le noeud courant reste inchangé.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>node</em> = <em>treeWalker</em>.lastChild();
-</pre>
+    node = treeWalker.lastChild();
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var treeWalker = document.createTreeWalker(
+```js
+var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 var node = treeWalker.lastChild(); // renvoie le dernier enfant visible de l'élément racine
-</pre>
+```
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-treewalker-lastchild', 'TreeWalker.lastChild')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Pas de changement de {{SpecName('DOM2 Traversal_Range')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker-lastChild', 'TreeWalker.lastChild')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                    | Statut                                       | Commentaire                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-treewalker-lastchild', 'TreeWalker.lastChild')}}                                         | {{Spec2('DOM WHATWG')}}             | Pas de changement de {{SpecName('DOM2 Traversal_Range')}} |
+| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker-lastChild', 'TreeWalker.lastChild')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                  |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.TreeWalker.firstChild")}}</p>
+{{Compat("api.TreeWalker.firstChild")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface {{domxref("TreeWalker")}} à laquelle elle appartient.</li>
-</ul>
+- L'interface {{domxref("TreeWalker")}} à laquelle elle appartient.

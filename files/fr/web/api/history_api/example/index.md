@@ -4,143 +4,147 @@ slug: Web/API/History_API/Example
 translation_of: Web/API/History_API/Example
 original_slug: Web/Guide/DOM/Manipuler_historique_du_navigateur/Example
 ---
-<p>Voici un exemple de site web AJAX composé uniquement de trois pages (<em>page_un.php</em>, <em>page_deux.php</em> et <em>page_trois.php</em>). Pour tester cet exemple, merci de créer les fichiers suivants :</p>
+Voici un exemple de site web AJAX composé uniquement de trois pages (_page_un.php_, *page_deux.php* et *page_trois.php*). Pour tester cet exemple, merci de créer les fichiers suivants :
 
-<p><strong>page_un.php</strong>:</p>
+**page_un.php**:
 
-<pre class="brush: php">&lt;?php
+```php
+<?php
     $page_title = "Page un";
 
     $as_json = false;
-    if (isset($_GET["view_as"]) &amp;&amp; $_GET["view_as"] == "json") {
+    if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
         $as_json = true;
         ob_start();
     } else {
-?&gt;
-&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;?php
+?>
+<!doctype html>
+<html>
+<head>
+<?php
         include "include/header.php";
-        echo "&lt;title&gt;" . $page_title . "&lt;/title&gt;";
-?&gt;
-&lt;/head&gt;
+        echo "<title>" . $page_title . "</title>";
+?>
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;?php include "include/before_content.php"; ?&gt;
+<?php include "include/before_content.php"; ?>
 
-&lt;p&gt;This paragraph is shown only when the navigation starts from &lt;strong&gt;first_page.php&lt;/strong&gt;.&lt;/p&gt;
+<p>This paragraph is shown only when the navigation starts from <strong>first_page.php</strong>.</p>
 
-&lt;div id="ajax-content"&gt;
-&lt;?php } ?&gt;
+<div id="ajax-content">
+<?php } ?>
 
-    &lt;p&gt;This is the content of &lt;strong&gt;first_page.php&lt;/strong&gt;.&lt;/p&gt;
+    <p>This is the content of <strong>first_page.php</strong>.</p>
 
-&lt;?php
+<?php
     if ($as_json) {
-        echo json_encode(array("page" =&gt; $page_title, "content" =&gt; ob_get_clean()));
+        echo json_encode(array("page" => $page_title, "content" => ob_get_clean()));
     } else {
-?&gt;
-&lt;/div&gt;
+?>
+</div>
 
-&lt;p&gt;This paragraph is shown only when the navigation starts from &lt;strong&gt;first_page.php&lt;/strong&gt;.&lt;/p&gt;
+<p>This paragraph is shown only when the navigation starts from <strong>first_page.php</strong>.</p>
 
-&lt;?php
+<?php
         include "include/after_content.php";
-        echo "&lt;/body&gt;\n&lt;/html&gt;";
+        echo "</body>\n</html>";
     }
-?&gt;
-</pre>
+?>
+```
 
-<p><strong>page_deux.php</strong>:</p>
+**page_deux.php**:
 
-<pre class="brush: php">&lt;?php
+```php
+<?php
     $page_title = "Page deux";
 
     $as_json = false;
-    if (isset($_GET["view_as"]) &amp;&amp; $_GET["view_as"] == "json") {
+    if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
         $as_json = true;
         ob_start();
     } else {
-?&gt;
-&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;?php
+?>
+<!doctype html>
+<html>
+<head>
+<?php
         include "include/header.php";
-        echo "&lt;title&gt;" . $page_title . "&lt;/title&gt;";
-?&gt;
-&lt;/head&gt;
+        echo "<title>" . $page_title . "</title>";
+?>
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;?php include "include/before_content.php"; ?&gt;
+<?php include "include/before_content.php"; ?>
 
-&lt;p&gt;This paragraph is shown only when the navigation starts from &lt;strong&gt;second_page.php&lt;/strong&gt;.&lt;/p&gt;
+<p>This paragraph is shown only when the navigation starts from <strong>second_page.php</strong>.</p>
 
-&lt;div id="ajax-content"&gt;
-&lt;?php } ?&gt;
+<div id="ajax-content">
+<?php } ?>
 
-    &lt;p&gt;This is the content of &lt;strong&gt;second_page.php&lt;/strong&gt;.&lt;/p&gt;
+    <p>This is the content of <strong>second_page.php</strong>.</p>
 
-&lt;?php
+<?php
     if ($as_json) {
-        echo json_encode(array("page" =&gt; $page_title, "content" =&gt; ob_get_clean()));
+        echo json_encode(array("page" => $page_title, "content" => ob_get_clean()));
     } else {
-?&gt;
-&lt;/div&gt;
+?>
+</div>
 
-&lt;p&gt;This paragraph is shown only when the navigation starts from &lt;strong&gt;second_page.php&lt;/strong&gt;.&lt;/p&gt;
+<p>This paragraph is shown only when the navigation starts from <strong>second_page.php</strong>.</p>
 
-&lt;?php
+<?php
         include "include/after_content.php";
-        echo "&lt;/body&gt;\n&lt;/html&gt;";
+        echo "</body>\n</html>";
     }
-?&gt;
-</pre>
+?>
+```
 
-<p><strong>page_trois.php</strong>:</p>
+**page_trois.php**:
 
-<pre class="brush: php">&lt;?php
+```php
+<?php
     $page_title = "Page trois";
-    $page_content = "&lt;p&gt;Ceci est le contenu de la &lt;strong&gt;page_trois.php&lt;/strong&gt;. Ce contenu est stocké dans une variable PHP.&lt;/p&gt;";
+    $page_content = "<p>Ceci est le contenu de la <strong>page_trois.php</strong>. Ce contenu est stocké dans une variable PHP.</p>";
 
-    if (isset($_GET["view_as"]) &amp;&amp; $_GET["view_as"] == "json") {
-        echo json_encode(array("page" =&gt; $page_title, "content" =&gt; $page_content));
+    if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
+        echo json_encode(array("page" => $page_title, "content" => $page_content));
     } else {
-?&gt;
-&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;?php
+?>
+<!doctype html>
+<html>
+<head>
+<?php
         include "include/header.php";
-        echo "&lt;title&gt;" . $page_title . "&lt;/title&gt;";
-?&gt;
-&lt;/head&gt;
+        echo "<title>" . $page_title . "</title>";
+?>
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;?php include "include/before_content.php"; ?&gt;
+<?php include "include/before_content.php"; ?>
 
-&lt;p&gt;This paragraph is shown only when the navigation starts from &lt;strong&gt;third_page.php&lt;/strong&gt;.&lt;/p&gt;
+<p>This paragraph is shown only when the navigation starts from <strong>third_page.php</strong>.</p>
 
-&lt;div id="ajax-content"&gt;
-&lt;?php echo $page_content; ?&gt;
-&lt;/div&gt;
+<div id="ajax-content">
+<?php echo $page_content; ?>
+</div>
 
-&lt;p&gt;This paragraph is shown only when the navigation starts from &lt;strong&gt;third_page.php&lt;/strong&gt;.&lt;/p&gt;
+<p>This paragraph is shown only when the navigation starts from <strong>third_page.php</strong>.</p>
 
-&lt;?php
+<?php
         include "include/after_content.php";
-        echo "&lt;/body&gt;\n&lt;/html&gt;";
+        echo "</body>\n</html>";
     }
-?&gt;
-</pre>
+?>
+```
 
-<p><strong>css/style.css</strong>:</p>
+**css/style.css**:
 
-<pre class="brush: css">#ajax-loader {
+```css
+#ajax-loader {
     position: fixed;
     display: table;
     top: 0;
@@ -149,7 +153,7 @@ original_slug: Web/Guide/DOM/Manipuler_historique_du_navigateur/Example
     height: 100%;
 }
 
-#ajax-loader &gt; div {
+#ajax-loader > div {
     display: table-cell;
     width: 100%;
     height: 100%;
@@ -158,32 +162,42 @@ original_slug: Web/Guide/DOM/Manipuler_historique_du_navigateur/Example
     background-color: #000000;
     opacity: 0.65;
 }
-</pre>
-<p><strong>include/after_content.php</strong>:</p>
-<pre class="brush: php">&lt;p&gt;Ceci est le pied-de-page. Il est commun à toutes les pages ajax.&lt;/p&gt;
-</pre>
-<p><strong>include/before_content.php</strong>:</p>
-<pre class="brush: php">&lt;p&gt;
-[ &lt;a class="ajax-nav" href="page_un.php"&gt;Premier exemple&lt;/a&gt;
-| &lt;a class="ajax-nav" href="page_deux.php"&gt;Second exemple&lt;/a&gt;
-| &lt;a class="ajax-nav" href="page_trois.php"&gt;Troisième exemple&lt;/a&gt;
-| &lt;a class="ajax-nav" href="inexistante.php"&gt;Page inexistante&lt;/a&gt; ]
-&lt;/p&gt;
+```
 
-</pre>
-<p><strong>include/header.php</strong>:</p>
-<pre class="brush: html">&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
-&lt;script type="text/javascript" src="js/ajax_nav.js"&gt;&lt;/script&gt;
-&lt;link rel="stylesheet" href="css/style.css" /&gt;
-</pre>
-<p><strong>js/ajax_nav.js</strong>:</p>
+**include/after_content.php**:
 
-<pre class="brush: js">"use strict";
+```php
+<p>Ceci est le pied-de-page. Il est commun à toutes les pages ajax.</p>
+```
+
+**include/before_content.php**:
+
+```php
+<p>
+[ <a class="ajax-nav" href="page_un.php">Premier exemple</a>
+| <a class="ajax-nav" href="page_deux.php">Second exemple</a>
+| <a class="ajax-nav" href="page_trois.php">Troisième exemple</a>
+| <a class="ajax-nav" href="inexistante.php">Page inexistante</a> ]
+</p>
+```
+
+**include/header.php**:
+
+```html
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="js/ajax_nav.js"></script>
+<link rel="stylesheet" href="css/style.css" />
+```
+
+**js/ajax_nav.js**:
+
+```js
+"use strict";
 
 var ajaxRequest = new (function () {
 
     function closeReq () {
-        oLoadingBox.parentNode &amp;&amp; document.body.removeChild(oLoadingBox);
+        oLoadingBox.parentNode && document.body.removeChild(oLoadingBox);
         bIsLoading = false;
     }
 
@@ -243,7 +257,7 @@ var ajaxRequest = new (function () {
     }
 
     function filterURL (sURL, sViewMode) {
-        return sURL.replace(rSearch, "") + ("?" + sURL.replace(rHost, "&amp;").replace(rView, sViewMode ? "&amp;" + sViewKey + "=" + sViewMode : "").slice(1)).replace(rEndQstMark, "");
+        return sURL.replace(rSearch, "") + ("?" + sURL.replace(rHost, "&").replace(rView, sViewMode ? "&" + sViewKey + "=" + sViewMode : "").slice(1)).replace(rEndQstMark, "");
     }
 
     function getPage (sPage) {
@@ -278,7 +292,7 @@ var ajaxRequest = new (function () {
 
     function init () {
         oPageInfo.title = document.title;
-        for (var oLink, nIdx = 0, nLen = document.links.length; nIdx &lt; nLen; document.links[nIdx++].onclick = processLink);
+        for (var oLink, nIdx = 0, nLen = document.links.length; nIdx < nLen; document.links[nIdx++].onclick = processLink);
     }
 
     const
@@ -287,7 +301,7 @@ var ajaxRequest = new (function () {
         sTargetId = "ajax-content", sViewKey = "view_as", sAjaxClass = "ajax-nav",
 
         /* not customizable constants */
-        rSearch = /\?.*$/, rHost = /^[^\?]*\?*&amp;*/, rView = new RegExp("&amp;" + sViewKey + "\\=[^&amp;]*|&amp;*$", "i"), rEndQstMark = /\?$/,
+        rSearch = /\?.*$/, rHost = /^[^\?]*\?*&*/, rView = new RegExp("&" + sViewKey + "\\=[^&]*|&*$", "i"), rEndQstMark = /\?$/,
         oLoadingBox = document.createElement("div"), oCover = document.createElement("div"), oLoadingImg = new Image(),
         oPageInfo = {
             title: null,
@@ -383,15 +397,13 @@ var ajaxRequest = new (function () {
     this.rebuildLinks = init;
 
 })();
-</pre>
+```
 
-<div class="note">
-  <p><strong>Note :</strong> <a href="/en/JavaScript/Reference/Statements/const"><code>const</code></a> (instruction de constante) <strong>ne fait pas partie de ECMAScript 5</strong>. Il est supporté dans Firefox et Chrome (V8) et partiellement supporté dans Opera 9+ et Safari. <strong>Il n'est pas supporté dans Internet Explorer 6-9, ou dans la version de prévisualisation de Internet Explorer 10</strong>. <a href="/en/JavaScript/Reference/Statements/const"><code>const</code></a> sera défini par ECMAScript 6, mais avec une sémantique différente. Proches des variables déclarées avec l'instruction <a href="/en/JavaScript/Reference/Statements/let"><code>let</code></a>, les constantes déclarées avec <a href="/en/JavaScript/Reference/Statements/const"><code>const</code></a> seront limitées en portée. <strong>Nous ne l'avons utilisé que pour des raisons pédagogiques, si vous souhaitez une compatibilité maximale de ce code, merci de remplacer les références à </strong><strong><a href="/en/JavaScript/Reference/Statements/const"><code>const</code></a> par des instructions <a href="/en/JavaScript/Reference/Statements/var"><code>var</code></a>.</strong>
-  </p>
-</div>
-<p>Pour plus d'informations, voyez : <a href="/fr/docs/DOM/manipuler_lhistorique_du_navigateur">Manipuler l'historique du navigateur</a>.</p>
-<h2 id="Lire_également">Lire également</h2>
-<ul>
-  <li>{{ domxref("window.history") }}</li>
-  <li>{{ domxref("window.onpopstate") }}</li>
-</ul>
+> **Note :** [`const`](/en/JavaScript/Reference/Statements/const) (instruction de constante) **ne fait pas partie de ECMAScript 5**. Il est supporté dans Firefox et Chrome (V8) et partiellement supporté dans Opera 9+ et Safari. **Il n'est pas supporté dans Internet Explorer 6-9, ou dans la version de prévisualisation de Internet Explorer 10**. [`const`](/en/JavaScript/Reference/Statements/const) sera défini par ECMAScript 6, mais avec une sémantique différente. Proches des variables déclarées avec l'instruction [`let`](/en/JavaScript/Reference/Statements/let), les constantes déclarées avec [`const`](/en/JavaScript/Reference/Statements/const) seront limitées en portée. **Nous ne l'avons utilisé que pour des raisons pédagogiques, si vous souhaitez une compatibilité maximale de ce code, merci de remplacer les références à** **[`const`](/en/JavaScript/Reference/Statements/const) par des instructions [`var`](/en/JavaScript/Reference/Statements/var).**
+
+Pour plus d'informations, voyez : [Manipuler l'historique du navigateur](/fr/docs/DOM/manipuler_lhistorique_du_navigateur).
+
+## Lire également
+
+- {{ domxref("window.history") }}
+- {{ domxref("window.onpopstate") }}

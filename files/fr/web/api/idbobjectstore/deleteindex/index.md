@@ -3,63 +3,59 @@ title: IDBObjectStore.deleteIndex()
 slug: Web/API/IDBObjectStore/deleteIndex
 translation_of: Web/API/IDBObjectStore/deleteIndex
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<p>La méthode <strong><code>deleteIndex()</code></strong> de l'interface {{domxref("IDBObjectStore")}} supprime l'index dont le nom est passé en paramètre, du magasin d'objet relié ({{domxref("IDBObjectStore")}}).</p>
+La méthode **`deleteIndex()`** de l'interface {{domxref("IDBObjectStore")}} supprime l'index dont le nom est passé en paramètre, du magasin d'objet relié ({{domxref("IDBObjectStore")}}).
 
-<div class="note">
-<p><strong>Note :</strong> Cette méthode ne peut être appelée que si la transaction ({{domxref("IDBTransaction")}}) de l'accès ({{domxref("IDBObjectStore")}}) au magasin d'objet est en mode ({{domxref("IDBTransaction.mode")}}) <strong><a href="/fr/docs/Web/API/IDBTransaction/mode#versionchange">versionchange</a></strong>. Les propriétés<strong> indexNames ({{domxref("IDBObjectStore.indexNames")}}) </strong>des accès au magasin d'object seront aussi mises à jour.</p>
-</div>
+> **Note :** Cette méthode ne peut être appelée que si la transaction ({{domxref("IDBTransaction")}}) de l'accès ({{domxref("IDBObjectStore")}}) au magasin d'objet est en mode ({{domxref("IDBTransaction.mode")}}) **[versionchange](/fr/docs/Web/API/IDBTransaction/mode#versionchange)**. Les propriétés **indexNames ({{domxref("IDBObjectStore.indexNames")}})** des accès au magasin d'object seront aussi mises à jour.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">objectStore.deleteIndex(nomIndex);</pre>
+```js
+objectStore.deleteIndex(nomIndex);
+```
 
-<h3 id="Paramètre">Paramètre</h3>
+### Paramètre
 
-<dl>
- <dt>nomIndex</dt>
- <dd>Le nom de l'index à supprimer.</dd>
-</dl>
+- nomIndex
+  - : Le nom de l'index à supprimer.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Void.</p>
+Void.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
- <dt><code>InvalidStateError</code></dt>
- <dd>Cette exception ({{domxref("DOMException")}}) est levée si la transaction ({{domxref("IDBTransaction")}}) dont dépend cet accès ({{domxref("IDBObjectStore")}}) au magasin d'objet n'est pas en mode ({{domxref("IDBTransaction.mode")}}) <a href="/fr/docs/Web/API/IDBTransaction/mode#versionchange"><code>versionchange</code></a>.</dd>
- <dt><code>TransactionInactiveError</code></dt>
- <dd><p>Cette exception ({{domxref("DOMException")}}) est levée si la transaction ({{domxref("IDBTransaction")}}) de l'accès ({{domxref("IDBObjectStore")}}) au magasin d’objet est inactive.
- <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1176165">bug 1176165</a>).</p>
- </dd>
- <dt><code>NotFoundError</code></dt>
- <dd>Cette exception ({{domxref("DOMException")}}) est levée si l'index avec le nom (case sensible) demandé n'existe pas sur le magasin d'objet.</dd>
-</dl>
+- `InvalidStateError`
+  - : Cette exception ({{domxref("DOMException")}}) est levée si la transaction ({{domxref("IDBTransaction")}}) dont dépend cet accès ({{domxref("IDBObjectStore")}}) au magasin d'objet n'est pas en mode ({{domxref("IDBTransaction.mode")}}) [`versionchange`](/fr/docs/Web/API/IDBTransaction/mode#versionchange).
+- `TransactionInactiveError`
+  - : Cette exception ({{domxref("DOMException")}}) est levée si la transaction ({{domxref("IDBTransaction")}}) de l'accès ({{domxref("IDBObjectStore")}}) au magasin d’objet est inactive.
+    [bug 1176165](https://bugzilla.mozilla.org/show_bug.cgi?id=1176165)).
+- `NotFoundError`
+  - : Cette exception ({{domxref("DOMException")}}) est levée si l'index avec le nom (case sensible) demandé n'existe pas sur le magasin d'objet.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans l'exemple suivant on peut voir le gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded","<code>onupgradeneeded</code>")}} être utilisé pour mettre à jour la structure de la base de données quand un numéro de version supérieure est chargé.</p>
+Dans l'exemple suivant on peut voir le gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded","<code>onupgradeneeded</code>")}} être utilisé pour mettre à jour la structure de la base de données quand un numéro de version supérieure est chargé.
 
-<p>Des méthode <strong><code>deleteIndex()</code></strong> sont utilisées pour supprimer d'anciens index du magasin d'objet <code>toDoList</code>.</p>
+Des méthode **`deleteIndex()`** sont utilisées pour supprimer d'anciens index du magasin d'objet `toDoList`.
 
-<pre class="brush: js">var db;
+```js
+var db;
 
 // Requête d'ouverture de la base de données "toDoList"
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // Gère  l'échec de l'ouverture de la base
 DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;La base de donnée n\'as pas peut être ouverte.&lt;/li&gt;';
+  note.innerHTML += '<li>La base de donnée n\'as pas peut être ouverte.</li>';
 };
 
 // Gère le succès de l'ouverture de la base
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;La base de données est ouverte.&lt;/li&gt;';
+  note.innerHTML += '<li>La base de données est ouverte.</li>';
 
   //
   db = request.result;
@@ -74,7 +70,7 @@ DBOpenRequest.onsuccess = function(event) {
 DBOpenRequest.onupgradeneeded = function(event) {
 
   db.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Erreur de chargement de la base de données.&lt;/li&gt;';
+    note.innerHTML += '<li>Erreur de chargement de la base de données.</li>';
   };
 
   // L'Accès au magasin d'objet "toDoList" de la base de données
@@ -92,41 +88,26 @@ DBOpenRequest.onupgradeneeded = function(event) {
   objectStore.deleteIndex("secondes");
   objectStore.deleteIndex("contact");
 };
-</pre>
+```
 
-<div class="note">
-  <p><strong>Note :</strong> Pour un exemple de travail complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>).</p>
-</div>
+> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBObjectStore-deleteIndex-void-DOMString-indexName', 'deleteIndex()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                            | État                         | Commentaires |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-deleteIndex-void-DOMString-indexName', 'deleteIndex()')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Browser_compatibility">Compatibilité avec les navigateurs</h2>
+## Compatibilité avec les navigateurs
 
-<p>{{Compat("api.IDBObjectStore.deleteIndex")}}</p>
+{{Compat("api.IDBObjectStore.deleteIndex")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}</li>
- <li>{{domxref("IDBDatabase","Débuter une connexion")}}</li>
- <li>{{domxref("IDBTransaction","Utilisé les transactions")}}</li>
- <li>{{domxref("IDBKeyRange","Définir l'intervalle des clés")}}</li>
- <li>{{domxref("IDBObjectStore","Accès aux magasins d'objets")}}</li>
- <li>{{domxref("IDBCursor","Utiliser les curseur")}}</li>
- <li>Exemple de référence: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- {{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}
+- {{domxref("IDBDatabase","Débuter une connexion")}}
+- {{domxref("IDBTransaction","Utilisé les transactions")}}
+- {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
+- {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
+- {{domxref("IDBCursor","Utiliser les curseur")}}
+- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

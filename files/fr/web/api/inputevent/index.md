@@ -3,69 +3,48 @@ title: InputEvent
 slug: Web/API/InputEvent
 translation_of: Web/API/InputEvent
 ---
-<div>{{APIRef("DOM Events")}} {{SeeCompatTable}}</div>
+{{APIRef("DOM Events")}} {{SeeCompatTable}}
 
-<p>L’interface <strong><code>InputEvent</code></strong> représente un évènement notifiant la modification d’un contenu éditable.</p>
+L’interface **`InputEvent`** représente un évènement notifiant la modification d’un contenu éditable.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{domxref("InputEvent.InputEvent", "InputEvent()")}}</dt>
- <dd>Crée un objet <code>InputEvent</code>.</dd>
-</dl>
+- {{domxref("InputEvent.InputEvent", "InputEvent()")}}
+  - : Crée un objet `InputEvent`.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Cette interface hérite des propriétés de ses <em>parents, {{domxref("UIEvent")}} et {{domxref("Event")}}.</em></em></p>
+*Cette interface hérite des propriétés de ses *parents, {{domxref("UIEvent")}} et {{domxref("Event")}}.\*\*
 
-<dl>
- <dt>{{domxref("InputEvent.data")}}{{readOnlyInline}}</dt>
- <dd>Retourne une {{domxref("DOMString")}} avec les caractères insérést. Cela peut être une chaîne vide si la modification n’insère pas de texte (comme la suppression de caractères, par exemple).</dd>
- <dt>{{domxref("InputEvent.dataTransfer")}}{{readonlyinline}}</dt>
- <dd>Retourne un objet {{domxref("DataTransfer")}} contenant des informations sur des données de texte riche (<em>richtext</em>) ou brut (<em>plaintext</em>) étant ajoutées ou supprimées du contenu éditable.</dd>
- <dt>{{domxref("InputEvent.inputType")}}{{readonlyinline}}</dt>
- <dd>Retourne le type de modification du le contenu éditable tel que, par exemple, l’insertion, la suppression ou le formatage de texte. Voir la page de la propriété pour une liste complète des types de modification.</dd>
- <dt>{{domxref("InputEvent.isComposing")}}{{readOnlyInline}}</dt>
- <dd>Retourne une valeur {{jsxref("Boolean", "booléenne")}} indiquant si l’évènement est émis après {{event("compositionstart")}} et avant {{event("compositionend")}}.</dd>
-</dl>
+- {{domxref("InputEvent.data")}}{{readOnlyInline}}
+  - : Retourne une {{domxref("DOMString")}} avec les caractères insérést. Cela peut être une chaîne vide si la modification n’insère pas de texte (comme la suppression de caractères, par exemple).
+- {{domxref("InputEvent.dataTransfer")}}{{readonlyinline}}
+  - : Retourne un objet {{domxref("DataTransfer")}} contenant des informations sur des données de texte riche (_richtext_) ou brut (_plaintext_) étant ajoutées ou supprimées du contenu éditable.
+- {{domxref("InputEvent.inputType")}}{{readonlyinline}}
+  - : Retourne le type de modification du le contenu éditable tel que, par exemple, l’insertion, la suppression ou le formatage de texte. Voir la page de la propriété pour une liste complète des types de modification.
+- {{domxref("InputEvent.isComposing")}}{{readOnlyInline}}
+  - : Retourne une valeur {{jsxref("Boolean", "booléenne")}} indiquant si l’évènement est émis après {{event("compositionstart")}} et avant {{event("compositionend")}}.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Cette interface <em>hérite des méthodes de ses parents, {{domxref("UIEvent")}} et {{domxref("Event")}}.</em></em></p>
+*Cette interface *hérite des méthodes de ses parents, {{domxref("UIEvent")}} et {{domxref("Event")}}.\*\*
 
-<dl>
- <dt>{{domxref('InputEvent.getTargetRanges()')}}</dt>
- <dd>Retourne un tableau de {{domxref("Range", "ranges")}} statiques qui seront affectés par une modification du DOM si l’évènement input n’est pas annulé.</dd>
-</dl>
+- {{domxref('InputEvent.getTargetRanges()')}}
+  - : Retourne un tableau de {{domxref("Range", "ranges")}} statiques qui seront affectés par une modification du DOM si l’évènement input n’est pas annulé.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('InputEvents2','#interface-InputEvent','InputEvent')}}</td>
-   <td>{{Spec2('InputEvents2')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | Statut                           | Commentaire          |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('InputEvents2','#interface-InputEvent','InputEvent')}} | {{Spec2('InputEvents2')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.InputEvent")}}</p>
+{{Compat("api.InputEvent")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{ event("beforeinput") }}</li>
- <li><a href="/docs/Web/API/InputEvent/input_event">l’évènement <code>input</code></a></li>
-</ul>
+- {{ event("beforeinput") }}
+- [l’évènement `input`](/docs/Web/API/InputEvent/input_event)

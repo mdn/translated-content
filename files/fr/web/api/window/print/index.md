@@ -11,40 +11,26 @@ tags:
   - Window
 translation_of: Web/API/Window/print
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<p>Ouvre la fenêtre de dialogue d'impression pour imprimer le document courant. </p>
+Ouvre la fenêtre de dialogue d'impression pour imprimer le document courant.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval">window.print()
-</pre>
+    window.print()
 
-<h2 id="Specification">Notes</h2>
+## Notes
 
-<p>Disponible à partir de Chrome {{CompatChrome(45.0)}}, cette méthode est bloquée à l'intérieur d'une balise {{htmlelement("iframe")}} sauf si son attribut sandbox a la valeur allow-modal.</p>
+Disponible à partir de Chrome {{CompatChrome(45.0)}}, cette méthode est bloquée à l'intérieur d'une balise {{htmlelement("iframe")}} sauf si son attribut sandbox a la valeur allow-modal.
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 Web application', '#dom-print', 'print()')}}</td>
-   <td>{{Spec2('HTML5 Web application')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                                       | Commentaire          |
+| ------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
+| {{SpecName('HTML5 Web application', '#dom-print', 'print()')}} | {{Spec2('HTML5 Web application')}} | Définition initiale. |
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/en/Printing">Printing</a></li>
- <li>{{ domxref("window.onbeforeprint") }}</li>
- <li>{{ domxref("window.onafterprint") }}</li>
-</ul>
+- [Printing](/en/Printing)
+- {{ domxref("window.onbeforeprint") }}
+- {{ domxref("window.onafterprint") }}

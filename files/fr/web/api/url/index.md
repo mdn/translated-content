@@ -7,146 +7,131 @@ tags:
   - URL
 translation_of: Web/API/URL
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p>L'interface <strong><code>URL</code></strong><strong> </strong>représente un objet qui fournit des méthodes statiques utilisées pour créer des URL d'objet.</p>
+L'interface **`URL`\*\*** \*\*représente un objet qui fournit des méthodes statiques utilisées pour créer des URL d'objet.
 
-<p>Lors de l'utilisation d'un agent utilisateur dans lequel aucun constructeur n'a encore été implémenté, il est possible d'accéder à un objet en utilisant les propriétés {{domxref("Window.URL")}} (préfixées sur un navigateur basé sur Webkit tel que <code>Window.webkitURL</code>).</p>
+Lors de l'utilisation d'un agent utilisateur dans lequel aucun constructeur n'a encore été implémenté, il est possible d'accéder à un objet en utilisant les propriétés {{domxref("Window.URL")}} (préfixées sur un navigateur basé sur Webkit tel que `Window.webkitURL`).
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Utilisation">Utilisation</h2>
+## Utilisation
 
-<p>Le constructeur prend un paramètre url et un paramètre de base facultatif à utiliser comme base si le paramètre url est une URL relative :</p>
+Le constructeur prend un paramètre url et un paramètre de base facultatif à utiliser comme base si le paramètre url est une URL relative :
 
-<pre class="brush: js">const url = new URL('../cats', 'http://www.example.com/dogs');
+```js
+const url = new URL('../cats', 'http://www.example.com/dogs');
 console.log(url.hostname); // "www.example.com"
-console.log(url.pathname); // "/cats"</pre>
+console.log(url.pathname); // "/cats"
+```
 
-<p>Les propriétés de l'URL peuvent être définies pour construire l'URL :</p>
+Les propriétés de l'URL peuvent être définies pour construire l'URL :
 
-<pre class="brush: js">url.hash = 'tabby';
-console.log(url.href); // "http://www.example.com/cats#tabby"</pre>
+```js
+url.hash = 'tabby';
+console.log(url.href); // "http://www.example.com/cats#tabby"
+```
 
-<p>Les URL seront encodées selon la norme RFC 3986:</p>
+Les URL seront encodées selon la norme RFC 3986:
 
-<pre class="brush: js">url.pathname = 'démonstration.html';
-console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"</pre>
+```js
+url.pathname = 'démonstration.html';
+console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"
+```
 
-<p>L'interface {{domxref("URLSearchParams")}}  peut être utilisée pour construire et manipuler la chaîne de requête de l'URL.</p>
+L'interface {{domxref("URLSearchParams")}}  peut être utilisée pour construire et manipuler la chaîne de requête de l'URL.
 
-<p>Pour obtenir les paramètres de recherche à partir de l'URL de la fenêtre en cours :</p>
+Pour obtenir les paramètres de recherche à partir de l'URL de la fenêtre en cours :
 
-<pre class="brush: js">// https://some.site/?id=123
+```js
+// https://some.site/?id=123
 var parsedUrl = new URL(window.location.href);
-console.log(parsedUrl.searchParams.get("id")); // 123</pre>
+console.log(parsedUrl.searchParams.get("id")); // 123
+```
 
-<p>La méthode <code>stringifier</code> de l' <code>URL</code> est la propriété <code>href</code> , ainsi le constructeur peut être utilisé pour normaliser et encoder directement une URL :</p>
+La méthode `stringifier` de l' `URL` est la propriété `href` , ainsi le constructeur peut être utilisé pour normaliser et encoder directement une URL :
 
-<pre class="brush: js">const response = await fetch(new URL('http://www.example.com/démonstration.html'));</pre>
+```js
+const response = await fetch(new URL('http://www.example.com/démonstration.html'));
+```
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{domxref("URL.URL", "URL()")}} {{experimental_inline}}</dt>
- <dd>Crée et retourne un objet <code>URL</code>  composé des paramètres donnés.</dd>
-</dl>
+- {{domxref("URL.URL", "URL()")}} {{experimental_inline}}
+  - : Crée et retourne un objet `URL`  composé des paramètres donnés.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{domxref("URL.hash")}}</dt>
- <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant un <code>'#'</code> suivi de l'identifiant du fragment de l'URL.</dd>
- <dt>{{domxref("URL.host")}}</dt>
- <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant l'hôte, c'est-à-dire le <em>hostname (nom d'hôte)</em>, <code>':'</code>et le <em>port</em> de l'URL.</dd>
- <dt>{{domxref("URL.hostname")}}</dt>
- <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant le domaine de l'URL.</dd>
- <dt>{{domxref("URL.href")}}</dt>
- <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant l'URL entière.</dd>
-</dl>
+- {{domxref("URL.hash")}}
+  - : Est une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant un `'#'` suivi de l'identifiant du fragment de l'URL.
+- {{domxref("URL.host")}}
+  - : Est une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant l'hôte, c'est-à-dire le _hostname (nom d'hôte)_, `':'`et le _port_ de l'URL.
+- {{domxref("URL.hostname")}}
+  - : Est une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant le domaine de l'URL.
+- {{domxref("URL.href")}}
+  - : Est une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant l'URL entière.
 
-<dl>
- <dt>{{domxref("URL.origin")}} {{readonlyInline}}</dt>
- <dd>Retourne une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant l'origine de l'URL, c'est son schéma, son domaine et son port .</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("URL.password")}}</dt>
- <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant le mot de passe spécifié avant le nom du domaine.</dd>
-</dl>
+- {{domxref("URL.origin")}} {{readonlyInline}}
+  - : Retourne une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant l'origine de l'URL, c'est son schéma, son domaine et son port .
 
-<dl>
- <dt>{{domxref("URL.pathname")}}</dt>
- <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant une barre oblique initiale <code>'/'</code>suivie du chemin de l'URL.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("URL.port")}}</dt>
- <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant le numéro de port de l'URL.</dd>
-</dl>
+- {{domxref("URL.password")}}
+  - : Est une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant le mot de passe spécifié avant le nom du domaine.
 
-<dl>
- <dt>{{domxref("URL.protocol")}}</dt>
- <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant le schéma du protocole de l'URL, y compris le final <code>':'</code>.</dd>
- <dt>{{domxref("URL.search")}}</dt>
- <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant un <code>'?'</code> suivi par les paramètres de l'URL.</dd>
- <dt>{{domxref("URL.searchParams")}}</dt>
- <dd>Retourne un objet {{domxref("URLSearchParams")}}  permettant d'accéder aux arguments de requête GET contenus dans l'URL.</dd>
- <dt>{{domxref("URL.username")}}</dt>
- <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant le nom d'utilisateur spécifié avant le nom de domaine.</dd>
-</dl>
+<!---->
 
-<h2 id="Méthodes">Méthodes</h2>
+- {{domxref("URL.pathname")}}
+  - : Est une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant une barre oblique initiale `'/'`suivie du chemin de l'URL.
 
-<p><em>L'interface <code>URL</code> </em> implémente les méthodes définies dans <em>{{domxref("URLUtils")}}.</em></p>
+<!---->
 
-<dl>
- <dt>{{domxref("URLUtils.toString()")}}</dt>
- <dd>Retourne une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant l'URL entière. C'est un synonyme de {{domxref("URLUtils.href")}}, mais il ne peut pas être utilisé pour modifier la valeur.</dd>
- <dt>{{domxref("URL.toJSON()")}}</dt>
- <dd>Retourne une {{domxref("DOMString")}}   <em>(chaîne de caractères)</em> contenant l'URL entière. Il retourne la même chaîne que la propriété <code>href</code> .</dd>
-</dl>
+- {{domxref("URL.port")}}
+  - : Est une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant le numéro de port de l'URL.
 
-<h2 id="Méthodes_statiques">Méthodes statiques</h2>
+<!---->
 
-<dl>
- <dt>{{ domxref("URL.createObjectURL()") }}</dt>
- <dd>Retourne une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> contenant un "blob URL" unique ; c'est une URL avec <code>blob :</code> son schéma suivi d'une chaîne opaque identifiant de manière unique l'objet dans le navigateur.</dd>
- <dt>{{ domxref("URL.revokeObjectURL()") }}</dt>
- <dd>Révoque un objet URL précédemment créé avec {{domxref ("URL.createObjectURL ()")}}.</dd>
-</dl>
+- {{domxref("URL.protocol")}}
+  - : Est une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant le schéma du protocole de l'URL, y compris le final `':'`.
+- {{domxref("URL.search")}}
+  - : Est une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant un `'?'` suivi par les paramètres de l'URL.
+- {{domxref("URL.searchParams")}}
+  - : Retourne un objet {{domxref("URLSearchParams")}}  permettant d'accéder aux arguments de requête GET contenus dans l'URL.
+- {{domxref("URL.username")}}
+  - : Est une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant le nom d'utilisateur spécifié avant le nom de domaine.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Méthodes
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File API', '#creating-revoking', 'URL')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Ajoute les méthodes statiques <code>URL.createObjectURL()</code> et <code>URL.revokeObjectURL</code><code>()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#api', 'API')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Définition initiale (implémente <code>URLUtils</code>).</td>
-  </tr>
- </tbody>
-</table>
+*L'interface `URL` *implémente les méthodes définies dans _{{domxref("URLUtils")}}._
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+- {{domxref("URLUtils.toString()")}}
+  - : Retourne une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant l'URL entière. C'est un synonyme de {{domxref("URLUtils.href")}}, mais il ne peut pas être utilisé pour modifier la valeur.
+- {{domxref("URL.toJSON()")}}
+  - : Retourne une {{domxref("DOMString")}}   _(chaîne de caractères)_ contenant l'URL entière. Il retourne la même chaîne que la propriété `href` .
 
-<p>{{Compat("api.URL")}}</p>
+## Méthodes statiques
 
-<h2 id="See_also">Voir aussi</h2>
+- {{ domxref("URL.createObjectURL()") }}
+  - : Retourne une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant un "blob URL" unique ; c'est une URL avec `blob :` son schéma suivi d'une chaîne opaque identifiant de manière unique l'objet dans le navigateur.
+- {{ domxref("URL.revokeObjectURL()") }}
+  - : Révoque un objet URL précédemment créé avec {{domxref ("URL.createObjectURL ()")}}.
 
-<ul>
-  <li><a href="/fr/docs/Web/API/URL_API">URL API</a></li>
-  <li><a href="/fr/docs/Learn/Common_questions/What_is_a_URL">Qu'est-ce qu'un URL ?</a></li>
-  <li>Propriété permettant d'obtenir un objet <code>URL</code> : {{domxref("Window.URL")}}.</li>
-  <li>{{domxref("URLSearchParams")}}.</li>
-</ul>
+## Spécifications
+
+| Spécification                                                            | Statut                       | Commentaire                                                                           |
+| ------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------- |
+| {{SpecName('File API', '#creating-revoking', 'URL')}} | {{Spec2('File API')}} | Ajoute les méthodes statiques `URL.createObjectURL()` et ` URL.revokeObjectURL``() `. |
+| {{SpecName('URL', '#api', 'API')}}                             | {{Spec2('URL')}}         | Définition initiale (implémente `URLUtils`).                                          |
+
+## Compatibilité des navigateurs
+
+{{Compat("api.URL")}}
+
+## Voir aussi
+
+- [URL API](/fr/docs/Web/API/URL_API)
+- [Qu'est-ce qu'un URL ?](/fr/docs/Learn/Common_questions/What_is_a_URL)
+- Propriété permettant d'obtenir un objet `URL` : {{domxref("Window.URL")}}.
+- {{domxref("URLSearchParams")}}.

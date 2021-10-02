@@ -14,45 +14,30 @@ tags:
   - domContentLoadedEventEnd
 translation_of: Web/API/PerformanceTiming/domContentLoadedEventEnd
 ---
-<p>{{APIRef("Navigation Timing")}}</p>
+{{APIRef("Navigation Timing")}}
 
-<div class="warning">
-  <p><strong>Attention :</strong> Cette interface est dépréciée dans la spécification <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2</a>. Veuillez utiliser la propriété <a href="/fr/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventEnd"><code>PerformanceNavigationTiming.domContentLoadedEventEnd</code></a> de l'interface <a href="/fr/docs/Web/API/PerformanceNavigationTiming"><code>PerformanceNavigationTiming</code></a> à la place.</p>
-</div>
+> **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.domContentLoadedEventEnd`](/fr/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventEnd) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
 
-<p>L'ancienne propriété en lecture seule <code><strong>domContentLoadedEventEnd</code></strong> retourne un <code>unsigned long long</code> représentant le moment, en millisecondes depuis l'époque UNIX, juste après que tous les scripts qui doivent être exécutés le plus rapidement possible, dans l'ordre ou non, aient été exécutés.</p>
+L'ancienne propriété en lecture seule **`domContentLoadedEventEnd`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, juste après que tous les scripts qui doivent être exécutés le plus rapidement possible, dans l'ordre ou non, aient été exécutés.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">let <var>time</var> = <var>performanceTiming</var>.domContentLoadedEventEnd;</pre>
+```js
+let time = performanceTiming.domContentLoadedEventEnd;
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Navigation Timing',
+| Spécification                                                                                                                                                                                        | Statut                                   | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('Navigation Timing',
         '#dom-performancetiming-domcontentloadedeventend',
-        'PerformanceTiming.domContentLoadedEventEnd')}}</td>
-      <td>{{Spec2('Navigation Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+        'PerformanceTiming.domContentLoadedEventEnd')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceTiming.domContentLoadedEventEnd")}}</p>
+{{Compat("api.PerformanceTiming.domContentLoadedEventEnd")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>L'interface <a href="/fr/docs/Web/API/PerformanceTiming"><code>PerformanceTiming</code></a> à laquelle elle appartient.</li>
-</ul>
+- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.

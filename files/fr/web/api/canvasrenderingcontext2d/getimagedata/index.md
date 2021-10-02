@@ -14,88 +14,72 @@ tags:
   - getImageDate
 translation_of: Web/API/CanvasRenderingContext2D/getImageData
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La méthode <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.getImageData()</code></strong> de l'API Canvas 2D retourne un  objet {{domxref("ImageData")}} représentant les données de pixels sous-jacentes pour la zone du canevas désigné par le rectangle qui commence aux positions <em>(sx, sy)</em> et qui possède des attributs : <em>largeur (sw</em>) et <em>hauteur</em> (<em>sh)</em>. Cette méthode n'est pas affectée par la matrice de transformation du canevas.</p>
+La méthode **`CanvasRenderingContext2D`\*\***`.getImageData()`\*_ de l'API Canvas 2D retourne un  objet {{domxref("ImageData")}} représentant les données de pixels sous-jacentes pour la zone du canevas désigné par le rectangle qui commence aux positions _(sx, sy)* et qui possède des attributs : *largeur (sw*) et *hauteur* (*sh)\*. Cette méthode n'est pas affectée par la matrice de transformation du canevas.
 
-<p>Les pixels en dehors de la zone de canevas sont présents sous forme de valeurs noires transparentes dans les données d'image renvoyées.</p>
+Les pixels en dehors de la zone de canevas sont présents sous forme de valeurs noires transparentes dans les données d'image renvoyées.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">ImageData <var><em>ctx</em>.getImageData(sx, sy, sw, sh);</var>
-</pre>
+    ImageData ctx.getImageData(sx, sy, sw, sh);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>sx</code></dt>
- <dd>La coordonnée x du coin supérieur gauche du rectangle à partir duquel <em>ImageData</em> sera extrait.</dd>
- <dt><code>sy</code></dt>
- <dd>La coordonnée y du coin supérieur gauche du rectangle à partir duquel <em>ImageData</em><strong><em> </em></strong> sera extrait.</dd>
- <dt><code>sw</code></dt>
- <dd>La largeur du rectangle à partir duquel <em>ImageData<strong> </strong></em>sera extrait.</dd>
- <dt><code>sh</code></dt>
- <dd>La hauteur du rectangle à partir duquel <em>ImageData<strong> </strong></em>sera extrait.</dd>
-</dl>
+- `sx`
+  - : La coordonnée x du coin supérieur gauche du rectangle à partir duquel _ImageData_ sera extrait.
+- `sy`
+  - : La coordonnée y du coin supérieur gauche du rectangle à partir duquel \*ImageData\***\* \*** sera extrait.
+- `sw`
+  - : La largeur du rectangle à partir duquel \*ImageData** \***sera extrait.
+- `sh`
+  - : La hauteur du rectangle à partir duquel \*ImageData** \***sera extrait.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Un objet {{domxref("ImageData")}}  contenant les données de l'image pour le rectangle donné du canevas.</p>
+Un objet {{domxref("ImageData")}}  contenant les données de l'image pour le rectangle donné du canevas.
 
-<h3 id="Erreurs_renvoyées">Erreurs renvoyées</h3>
+### Erreurs renvoyées
 
-<dl>
- <dt><code>IndexSizeError</code></dt>
- <dd>Renvoyé si l'un des arguments de  largeur ou de hauteur est égal à zéro.</dd>
-</dl>
+- `IndexSizeError`
+  - : Renvoyé si l'un des arguments de  largeur ou de hauteur est égal à zéro.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_de_la_méthode_getImageData">Utilisation de la méthode  <code>getImageData</code></h3>
+### Utilisation de la méthode  `getImageData`
 
-<p>Ceci est juste un petit exemple qui utilise la méthode getImageData. Pour plus d'informations, visitez  <a href="/fr/docs/Tutoriel_canvas/Pixel_manipulation_with_canvas">Manipulation de pixels avec canvas</a> et l'objet {{domxref("ImageData")}}.</p>
+Ceci est juste un petit exemple qui utilise la méthode getImageData. Pour plus d'informations, visitez  [Manipulation de pixels avec canvas](/fr/docs/Tutoriel_canvas/Pixel_manipulation_with_canvas) et l'objet {{domxref("ImageData")}}.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
 
 console.log(ctx.getImageData(50, 50, 100, 100));
 // ImageData { largeur: 100, hauteur: 100, données: Uint8ClampedArray[40000] }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-getimagedata", "CanvasRenderingContext2D.getImageData")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                            | Statut                           | Commentaire |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-getimagedata", "CanvasRenderingContext2D.getImageData")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.getImageData")}}</p>
+{{Compat("api.CanvasRenderingContext2D.getImageData")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface le définissant : {{domxref("CanvasRenderingContext2D")}}.</li>
- <li>{{domxref("ImageData")}}</li>
- <li><a href="/fr/docs/Tutoriel_canvas/Pixel_manipulation_with_canvas">Manipulation de pixels avec canvas</a></li>
-</ul>
+- L'interface le définissant : {{domxref("CanvasRenderingContext2D")}}.
+- {{domxref("ImageData")}}
+- [Manipulation de pixels avec canvas](/fr/docs/Tutoriel_canvas/Pixel_manipulation_with_canvas)

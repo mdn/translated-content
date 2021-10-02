@@ -3,96 +3,61 @@ title: 'HTMLMediaElement: ended'
 slug: Web/API/HTMLMediaElement/ended_event
 translation_of: Web/API/HTMLMediaElement/ended_event
 ---
-<p>L'événement <strong>ended</strong> est déclenché lorsque la lecture ou le streaming s'est arrêté parce que la fin du média a été atteinte ou qu'aucune donnée n'est disponible.</p>
+L'événement **ended** est déclenché lorsque la lecture ou le streaming s'est arrêté parce que la fin du média a été atteinte ou qu'aucune donnée n'est disponible.
 
-<p>L'événement se produit dans deux contextes liés mais unique:</p>
+L'événement se produit dans deux contextes liés mais unique:
 
-<ul>
- <li>Les éléments basés sur {{domxref("HTMLMediaElement")}} ({{HTMLElement("audio")}} et {{HTMLElement("video")}}) déclenchent <strong>ended</strong> lorsque la lecture du média atteint la fin.</li>
- <li>Les pistes de flux média, qui sont basées sur l'interface {{domxref("MediaStreamTrack")}}, déclenchent <strong><code>ended</code></strong> lorsque la source de la piste interrompt définitivement l'envoi de données sur le flux. Il y'a différentes manières d'y arriver:
-  <ul>
-   <li>il n'y a plus de données à envoyer.</li>
-   <li>L'utilisateur a révoqué les autorisations nécessaires pour que les données soient envoyées.</li>
-   <li>Le matériel générant les données source a été supprimé ou éjecté.</li>
-   <li>Un peer distant a définitivement cessé d'envoyer des données. La mise en pause des médias ne génère pas l'événement <strong>ended</strong>.</li>
-  </ul>
- </li>
-</ul>
+- Les éléments basés sur {{domxref("HTMLMediaElement")}} ({{HTMLElement("audio")}} et {{HTMLElement("video")}}) déclenchent **ended** lorsque la lecture du média atteint la fin.
+- Les pistes de flux média, qui sont basées sur l'interface {{domxref("MediaStreamTrack")}}, déclenchent **`ended`** lorsque la source de la piste interrompt définitivement l'envoi de données sur le flux. Il y'a différentes manières d'y arriver:
 
-<h2 id="Informations_générales">Informations générales</h2>
+  - il n'y a plus de données à envoyer.
+  - L'utilisateur a révoqué les autorisations nécessaires pour que les données soient envoyées.
+  - Le matériel générant les données source a été supprimé ou éjecté.
+  - Un peer distant a définitivement cessé d'envoyer des données. La mise en pause des médias ne génère pas l'événement **ended**.
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Spécification</dt>
- <dd style="margin: 0 0 0 120px;"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-ended">HTML5 media</a> et <a href="https://www.w3.org/TR/mediacapture-streams/#event-mediastreamtrack-ended">Media Capture and Streams</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("Event")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Propagation</dt>
- <dd style="margin: 0 0 0 120px;">Non</dd>
- <dt style="float: left; text-align: right; width: 120px;">Annulable</dt>
- <dd style="margin: 0 0 0 120px;">Non</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cible</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("Element")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Action par défaut</dt>
- <dd style="margin: 0 0 0 120px;">Aucune</dd>
-</dl>
+## Informations générales
 
-<div class="note">
-<p><strong>Note :</strong> Bien que cet événement soit défini dans deux spécifications, à ce moment-là, les deux spécifient cet événement de manière identique, nous avons donc documenté comme si elles ne faisaient qu'une. Si à un moment donné, cela change, la documentation sera révisée.</p>
-</div>
+- Spécification
+  - : [HTML5 media](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-ended) et [Media Capture and Streams](https://www.w3.org/TR/mediacapture-streams/#event-mediastreamtrack-ended)
+- Interface
+  - : {{domxref("Event")}}
+- Propagation
+  - : Non
+- Annulable
+  - : Non
+- Cible
+  - : {{domxref("Element")}}
+- Action par défaut
+  - : Aucune
 
-<h2 id="Propriétés">Propriétés</h2>
+> **Note :** Bien que cet événement soit défini dans deux spécifications, à ce moment-là, les deux spécifient cet événement de manière identique, nous avons donc documenté comme si elles ne faisaient qu'une. Si à un moment donné, cela change, la documentation sera révisée.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
- </tbody>
-</table>
+## Propriétés
 
-<h2 id="Evénements_liés">Evénements liés</h2>
+| Property                              | Type                                 | Description                                            |
+| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
 
-<ul>
- <li>{{event("playing")}}</li>
- <li>{{event("waiting")}}</li>
- <li>{{event("seeking")}}</li>
- <li>{{event("seeked")}}</li>
- <li>{{event("ended")}}</li>
- <li>{{event("loadedmetadata")}}</li>
- <li>{{event("loadeddata")}}</li>
- <li>{{event("canplay")}}</li>
- <li>{{event("canplaythrough")}}</li>
- <li>{{event("durationchange")}}</li>
- <li>{{event("timeupdate")}}</li>
- <li>{{event("play")}}</li>
- <li>{{event("pause")}}</li>
- <li>{{event("ratechange")}}</li>
- <li>{{event("volumechange")}}</li>
- <li>{{event("suspend")}}</li>
- <li>{{event("emptied")}}</li>
- <li>{{event("stalled")}}</li>
-</ul>
+## Evénements liés
+
+- {{event("playing")}}
+- {{event("waiting")}}
+- {{event("seeking")}}
+- {{event("seeked")}}
+- {{event("ended")}}
+- {{event("loadedmetadata")}}
+- {{event("loadeddata")}}
+- {{event("canplay")}}
+- {{event("canplaythrough")}}
+- {{event("durationchange")}}
+- {{event("timeupdate")}}
+- {{event("play")}}
+- {{event("pause")}}
+- {{event("ratechange")}}
+- {{event("volumechange")}}
+- {{event("suspend")}}
+- {{event("emptied")}}
+- {{event("stalled")}}

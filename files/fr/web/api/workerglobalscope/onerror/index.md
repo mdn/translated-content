@@ -3,45 +3,34 @@ title: WorkerGlobalScope.onerror
 slug: Web/API/WorkerGlobalScope/onerror
 translation_of: Web/API/WorkerGlobalScope/onerror
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>La propriété <strong><code>onerror</code></strong> de l'interface {{domxref("WorkerGlobalScope")}} représente un {{event("Event_handlers", "event handler")}} à appeler lorsque l'événement {{event("error")}} survient et se propage à travers le {{domxref("Worker")}}.</p>
+La propriété **`onerror`** de l'interface {{domxref("WorkerGlobalScope")}} représente un {{event("Event_handlers", "event handler")}} à appeler lorsque l'événement {{event("error")}} survient et se propage à travers le {{domxref("Worker")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre>self.onerror = function() { ... };</pre>
+    self.onerror = function() { ... };
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>L'extrait de code suivant montre un gestionnaire <code>onerror</code> placé au sein d'un worker :</p>
+L'extrait de code suivant montre un gestionnaire `onerror` placé au sein d'un worker :
 
-<pre class="brush: js">self.onerror = function() {
+```js
+self.onerror = function() {
   console.log('There is an error inside your worker!');
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#handler-workerglobalscope-onerror", "WorkerGlobalScope.onerror")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "#handler-workerglobalscope-onerror", "WorkerGlobalScope.onerror")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_naviguateurs">Compatibilité des naviguateurs</h2>
+## Compatibilité des naviguateurs
 
+{{Compat("api.WorkerGlobalScope.onerror")}}
 
+## Voir aussi
 
-<p>{{Compat("api.WorkerGlobalScope.onerror")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<p>L'interface {{domxref("WorkerGlobalScope")}} à laquelle il appartient.</p>
+L'interface {{domxref("WorkerGlobalScope")}} à laquelle il appartient.

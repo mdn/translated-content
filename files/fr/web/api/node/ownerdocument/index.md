@@ -9,58 +9,37 @@ tags:
   - Propriétés
 translation_of: Web/API/Node/ownerDocument
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La propriété en lecture seule <code><strong>Node.ownerDocument</strong></code> renvoie l'objet document de niveau supérieur pour ce nœud.</p>
+La propriété en lecture seule **`Node.ownerDocument`** renvoie l'objet document de niveau supérieur pour ce nœud.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>document</em> = element.ownerDocument;
-</pre>
+    document = element.ownerDocument;
 
-<ul>
- <li><code>document</code> est l'objet <a href="/fr/docs/Web/API/document"><code>document</code></a> parent de l'élément courant.</li>
-</ul>
+- `document` est l'objet [`document`](/fr/docs/Web/API/document) parent de l'élément courant.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: html">// étant donné un nœud "p", obtient le premier enfant HTML
+```html
+// étant donné un nœud "p", obtient le premier enfant HTML
 // de l'objet document
 var d = p.ownerDocument;
 var html = d.documentElement;
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>L'objet <code>document</code> renvoyé par cette propriété est l'objet principal avec lequel tous les nœuds enfants du document HTML réel sont créés. Si cette propriété est utilisée sur un nœud qui est lui-même un document, le résultat est <code>null</code>.</p>
+L'objet `document` renvoyé par cette propriété est l'objet principal avec lequel tous les nœuds enfants du document HTML réel sont créés. Si cette propriété est utilisée sur un nœud qui est lui-même un document, le résultat est `null`.
 
-<h3 id="Sp.C3.A9cification">Spécifications</h3>
+### Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Spécification</th>
-   <th>Statut</th>
-   <th>Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-node-ownerdocument", "Node.ownerDocument")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Core", "core.html#node-ownerDoc", "Node.ownerDocument")}}</td>
-   <td>{{Spec2("DOM3 Core")}}</td>
-   <td>Pas de changement</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Core", "core.html#node-ownerDoc", "Node.ownerDocument")}}</td>
-   <td>{{Spec2("DOM2 Core")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | Statut                       | Commentaire          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName("DOM4", "#dom-node-ownerdocument", "Node.ownerDocument")}}         | {{Spec2("DOM4")}}     |                      |
+| {{SpecName("DOM3 Core", "core.html#node-ownerDoc", "Node.ownerDocument")}} | {{Spec2("DOM3 Core")}} | Pas de changement    |
+| {{SpecName("DOM2 Core", "core.html#node-ownerDoc", "Node.ownerDocument")}} | {{Spec2("DOM2 Core")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Node.ownerDocument")}}</p>
+{{Compat("api.Node.ownerDocument")}}

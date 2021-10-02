@@ -3,36 +3,34 @@ title: SharedWorkerGlobalScope.applicationCache
 slug: Web/API/SharedWorkerGlobalScope/applicationCache
 translation_of: Web/API/SharedWorkerGlobalScope/applicationCache
 ---
-<div>{{APIRef("Web Workers API")}}</div>
+{{APIRef("Web Workers API")}}
 
-<div class="warning">
-<p><strong>Attention :</strong> Application Cache est déprécié depuis Firefox 44, et ne sera plus disponible dans des contextes non sécurisés avant Firefox 60 ({{bug(1354175)}}, currently uniquement sur les versions Nightly/Beta). Ne pas utiliser cette fonctionnalité sur des sites web en production, utilisez plutôt les <a href="/fr/docs/Web/API/Service_Worker_API">services workers.</a></p>
-</div>
+> **Attention :** Application Cache est déprécié depuis Firefox 44, et ne sera plus disponible dans des contextes non sécurisés avant Firefox 60 ({{bug(1354175)}}, currently uniquement sur les versions Nightly/Beta). Ne pas utiliser cette fonctionnalité sur des sites web en production, utilisez plutôt les [services workers.](/fr/docs/Web/API/Service_Worker_API)
 
-<p>La propriété en lecture seule <code><strong>applicationCache</strong></code> de l'interface {{domxref("SharedWorkerGlobalScope")}} retourne l'objet {{domxref("ApplicationCache")}} pour le <em>worker</em> (voir <a href="/fr/docs/Web/HTML/Using_the_application_cache">Utiliser le cache d'application</a>).</p>
+La propriété en lecture seule **`applicationCache`** de l'interface {{domxref("SharedWorkerGlobalScope")}} retourne l'objet {{domxref("ApplicationCache")}} pour le _worker_ (voir [Utiliser le cache d'application](/fr/docs/Web/HTML/Using_the_application_cache)).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var nameObj = self.applicationCache;</pre>
+```js
+var nameObj = self.applicationCache;
+```
 
-<h3 id="valeur">valeur</h3>
+### valeur
 
-<p>Un {{domxref("ApplicationCache")}}.</p>
+Un {{domxref("ApplicationCache")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Si un <em>worker</em> partagé a un AppCache, vous pouvez récupérer une référence en utilisant à l'intérieur d'un <em>worker</em> partagé:</p>
+Si un _worker_ partagé a un AppCache, vous pouvez récupérer une référence en utilisant à l'intérieur d'un _worker_ partagé:
 
-<pre class="brush: js">self.applicationCache</pre>
+```js
+self.applicationCache
+```
 
-<h2 id="Browser_Compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.SharedWorkerGlobalScope.applicationCache")}}
 
+## Voir aussi
 
-<p>{{Compat("api.SharedWorkerGlobalScope.applicationCache")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{domxref("SharedWorkerGlobalScope")}}</li>
-</ul>
+- {{domxref("SharedWorkerGlobalScope")}}

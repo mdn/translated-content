@@ -8,35 +8,21 @@ tags:
   - Reference
 translation_of: Web/API/Document/dir
 ---
-<p>{{ApiRef("")}}</p>
+{{ApiRef("")}}
 
-<p>La propriété <code><strong>Document.dir</strong></code> est une chaîne de caractères {{domxref("DOMString")}} représentant la direction du texte du document : de gauche à droite (par défaut) ou de droite à gauche. Les valeurs possibles sont <code>'rtl'</code>, droite vers gauche, et <code>'ltr'</code>, gauche vers droite.</p>
+La propriété **`Document.dir`** est une chaîne de caractères {{domxref("DOMString")}} représentant la direction du texte du document : de gauche à droite (par défaut) ou de droite à gauche. Les valeurs possibles sont `'rtl'`, droite vers gauche, et `'ltr'`, gauche vers droite.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>dirStr</em> = <em>document.</em>dir;
-<em>document.dir</em> = <em>dirStr;</em>
-</pre>
+    dirStr = document.dir;
+    document.dir = dirStr;
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#dom-document-dir", "Document.dir")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                           | Commentaire          |
+| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName("HTML WHATWG", "#dom-document-dir", "Document.dir")}} | {{Spec2("HTML WHATWG")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Document.dir")}}</p>
+{{Compat("api.Document.dir")}}

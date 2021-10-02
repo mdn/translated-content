@@ -3,101 +3,91 @@ title: range
 slug: Web/API/Range
 translation_of: Web/API/Range
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="Introduction">Introduction</h3>
+### Introduction
 
-<p>L'objet <code>Range</code> (littéralement : "étendue" ou "portée", ici : "segment") représente un fragment de document qui peut contenir des nœuds et des parties de nœuds texte dans un document donné.</p>
+L'objet `Range` (littéralement : "étendue" ou "portée", ici : "segment") représente un fragment de document qui peut contenir des nœuds et des parties de nœuds texte dans un document donné.
 
-<p>Un segment peut être crée en utilisant la méthode <a href="/fr/docs/Web/API/document/createRange">createRange</a> de l'objet <a href="/fr/docs/Web/API/document">document</a>. Les objets range peuvent également être récupérés en utilisant la méthode <a href="/fr/docs/Web/API/Selection/getRangeAt">getRangeAt</a> de l'objet <a href="/fr/docs/Web/API/Selection">selection</a>.</p>
+Un segment peut être crée en utilisant la méthode [createRange](/fr/docs/Web/API/document/createRange) de l'objet [document](/fr/docs/Web/API/document). Les objets range peuvent également être récupérés en utilisant la méthode [getRangeAt](/fr/docs/Web/API/Selection/getRangeAt) de l'objet [selection](/fr/docs/Web/API/Selection).
 
-<h3 id="Propri.C3.A9t.C3.A9s">Propriétés</h3>
+### Propriétés
 
-<dl>
- <dt><a href="/fr/docs/Web/API/range/collapsed">collapsed</a></dt>
- <dd>Renvoie un booléen indiquant si le point de départ et le point final du segment sont confondus.</dd>
- <dt><a href="/fr/docs/Web/API/range/commonAncestorContainer">commonAncestorContainer</a></dt>
- <dd>Renvoie le nœud le plus profond qui contient à la fois les nœuds <code>startContainer</code> et <code>endContainer</code>.</dd>
- <dt><a href="/fr/docs/Web/API/range/endContainer">endContainer</a></dt>
- <dd>Renvoie le nœud dans lequel le segment se termine.</dd>
- <dt><a href="/fr/docs/Web/API/range/endOffset">endOffset</a></dt>
- <dd>Renvoie un nombre représentant l'endroit où le segment se termine dans <code>endContainer</code>.</dd>
- <dt><a href="/fr/docs/Web/API/range/startContainer">startContainer</a></dt>
- <dd>Renvoie le nœud dans lequel le segment débute.</dd>
- <dt><a href="/fr/docs/Web/API/range/startOffset">startOffset</a></dt>
- <dd>Renvoie un nombre représentant l'endroit où le segment débute dans <code>startContainer</code>.</dd>
-</dl>
+- [collapsed](/fr/docs/Web/API/range/collapsed)
+  - : Renvoie un booléen indiquant si le point de départ et le point final du segment sont confondus.
+- [commonAncestorContainer](/fr/docs/Web/API/range/commonAncestorContainer)
+  - : Renvoie le nœud le plus profond qui contient à la fois les nœuds `startContainer` et `endContainer`.
+- [endContainer](/fr/docs/Web/API/range/endContainer)
+  - : Renvoie le nœud dans lequel le segment se termine.
+- [endOffset](/fr/docs/Web/API/range/endOffset)
+  - : Renvoie un nombre représentant l'endroit où le segment se termine dans `endContainer`.
+- [startContainer](/fr/docs/Web/API/range/startContainer)
+  - : Renvoie le nœud dans lequel le segment débute.
+- [startOffset](/fr/docs/Web/API/range/startOffset)
+  - : Renvoie un nombre représentant l'endroit où le segment débute dans `startContainer`.
 
-<h3 id="M.C3.A9thodes">Méthodes</h3>
+### Méthodes
 
-<h4 id="M.C3.A9thodes_de_positionnement">Méthodes de positionnement</h4>
+#### Méthodes de positionnement
 
-<p>Ces méthodes permettent de définir le début et la fin d'un segment.</p>
+Ces méthodes permettent de définir le début et la fin d'un segment.
 
-<dl>
- <dt><a href="/fr/docs/Web/API/range/setStart">setStart</a></dt>
- <dd>Définit le point de départ d'un segment.</dd>
- <dt><a href="/fr/docs/Web/API/range/setEnd">setEnd</a></dt>
- <dd>Définit le point final d'un segment.</dd>
- <dt><a href="/fr/docs/Web/API/range/setStartBefore">setStartBefore</a></dt>
- <dd>Définit le point de départ d'un segment relativement à un autre nœud.</dd>
- <dt><a href="/fr/docs/Web/API/range/setStartAfter">setStartAfter</a></dt>
- <dd>Définit le point de départ d'un segment relativement à un autre nœud.</dd>
- <dt><a href="/fr/docs/Web/API/range/setEndBefore">setEndBefore</a></dt>
- <dd>Définit le point final d'un segment relativement à un autre nœud.</dd>
- <dt><a href="/fr/docs/Web/API/range/setEndAfter">setEndAfter</a></dt>
- <dd>Définit le point final d'un segment relativement à un autre nœud.</dd>
- <dt><a href="/fr/docs/Web/API/range/selectNode">selectNode</a></dt>
- <dd>Le contenu du segment devient le nœud et son contenu.</dd>
- <dt><a href="/fr/docs/Web/API/range/selectNodeContents">selectNodeContents</a></dt>
- <dd>le contenu du segment devient le contenu du nœud.</dd>
- <dt><a href="/fr/docs/Web/API/range/collapse">collapse</a></dt>
- <dd>Replie le segment sur l'un de ses points frontières.</dd>
-</dl>
+- [setStart](/fr/docs/Web/API/range/setStart)
+  - : Définit le point de départ d'un segment.
+- [setEnd](/fr/docs/Web/API/range/setEnd)
+  - : Définit le point final d'un segment.
+- [setStartBefore](/fr/docs/Web/API/range/setStartBefore)
+  - : Définit le point de départ d'un segment relativement à un autre nœud.
+- [setStartAfter](/fr/docs/Web/API/range/setStartAfter)
+  - : Définit le point de départ d'un segment relativement à un autre nœud.
+- [setEndBefore](/fr/docs/Web/API/range/setEndBefore)
+  - : Définit le point final d'un segment relativement à un autre nœud.
+- [setEndAfter](/fr/docs/Web/API/range/setEndAfter)
+  - : Définit le point final d'un segment relativement à un autre nœud.
+- [selectNode](/fr/docs/Web/API/range/selectNode)
+  - : Le contenu du segment devient le nœud et son contenu.
+- [selectNodeContents](/fr/docs/Web/API/range/selectNodeContents)
+  - : le contenu du segment devient le contenu du nœud.
+- [collapse](/fr/docs/Web/API/range/collapse)
+  - : Replie le segment sur l'un de ses points frontières.
 
-<h4 id="M.C3.A9thodes_de_modification">Méthodes de modification</h4>
+#### Méthodes de modification
 
-<p>Ces méthodes recupèrent les nœuds d'un segment et modifient le contenu d'un segment.</p>
+Ces méthodes recupèrent les nœuds d'un segment et modifient le contenu d'un segment.
 
-<dl>
- <dt><a href="/fr/docs/Web/API/range/cloneContents">cloneContents</a></dt>
- <dd>Renvoie un fragment de document où sont copiés les nœuds d'un segment.</dd>
- <dt><a href="/fr/docs/Web/API/range/deleteContents">deleteContents</a></dt>
- <dd>Supprime du document le contenu d'un segment.</dd>
- <dt><a href="/fr/docs/Web/API/range/extractContents">extractContents</a></dt>
- <dd>Déplace le contenu d'un segment, de l'arbre du document vers un fragment de document.</dd>
- <dt><a href="/fr/docs/Web/API/range/insertNode">insertNode</a></dt>
- <dd>Insère un nœud au début d'un segment.</dd>
- <dt><a href="/fr/docs/Web/API/range/surroundContents">surroundContents</a></dt>
- <dd>Déplace le contenu d'un segment dans un nouveau nœud.</dd>
-</dl>
+- [cloneContents](/fr/docs/Web/API/range/cloneContents)
+  - : Renvoie un fragment de document où sont copiés les nœuds d'un segment.
+- [deleteContents](/fr/docs/Web/API/range/deleteContents)
+  - : Supprime du document le contenu d'un segment.
+- [extractContents](/fr/docs/Web/API/range/extractContents)
+  - : Déplace le contenu d'un segment, de l'arbre du document vers un fragment de document.
+- [insertNode](/fr/docs/Web/API/range/insertNode)
+  - : Insère un nœud au début d'un segment.
+- [surroundContents](/fr/docs/Web/API/range/surroundContents)
+  - : Déplace le contenu d'un segment dans un nouveau nœud.
 
-<h4 id="Autres_m.C3.A9thodes">Autres méthodes</h4>
+#### Autres méthodes
 
-<dl>
- <dt><a href="/fr/docs/Web/API/range/compareBoundaryPoints">compareBoundaryPoints</a></dt>
- <dd>Compare les points frontières de deux segments.</dd>
- <dt><a href="/fr/docs/Web/API/range/cloneRange">cloneRange</a></dt>
- <dd>Renvoie un objet <code>Range</code> avec des points frontières identiques à ceux du segment cloné.</dd>
- <dt><a href="/fr/docs/Web/API/range/detach">detach</a></dt>
- <dd>Supprime le segment afin d'améliorer la performance.</dd>
- <dt><a href="/fr/docs/Web/API/range/toString">toString</a></dt>
- <dd>Renvoie le texte du segment.</dd>
-</dl>
+- [compareBoundaryPoints](/fr/docs/Web/API/range/compareBoundaryPoints)
+  - : Compare les points frontières de deux segments.
+- [cloneRange](/fr/docs/Web/API/range/cloneRange)
+  - : Renvoie un objet `Range` avec des points frontières identiques à ceux du segment cloné.
+- [detach](/fr/docs/Web/API/range/detach)
+  - : Supprime le segment afin d'améliorer la performance.
+- [toString](/fr/docs/Web/API/range/toString)
+  - : Renvoie le texte du segment.
 
-<h4 id="Les_m.C3.A9thodes_Gecko">Les méthodes Gecko</h4>
+#### Les méthodes Gecko
 
-<p>Cette section décrit les méthodes de range qui sont particulières à Mozilla et ne font pas partie des spécifications DOM W3C.</p>
+Cette section décrit les méthodes de range qui sont particulières à Mozilla et ne font pas partie des spécifications DOM W3C.
 
-<dl>
- <dt><a href="/fr/docs/Web/API/range/compareNode">compareNode</a> {{ Obsolete_inline() }}</dt>
- <dd>Renvoie une constante qui indique si le nœud est avant, après, dans ou englobe le segment.</dd>
- <dt><a href="/fr/docs/Web/API/range/comparePoint">comparePoint</a></dt>
- <dd>Renvoie -1, 0, ou 1, indiquant si le point se trouve avant, après, ou dans le segment.</dd>
- <dt><a href="/fr/docs/Web/API/range/createContextualFragment">createContextualFragment</a></dt>
- <dd>Renvoie un fragment de document créé à partir d'un morceau de code donné.</dd>
- <dt><a href="/fr/docs/Web/API/range/intersectsNode">intersectsNode</a> {{ Obsolete_inline() }}</dt>
- <dd>Renvoie un booléen indiquant si un nœud donné a une intersection avec le segment.</dd>
- <dt><a href="/fr/docs/Web/API/range/isPointInRange">isPointInRange</a></dt>
- <dd>Renvoie un booléen indiquant si le point donné est dans le segment.</dd>
-</dl>
+- [compareNode](/fr/docs/Web/API/range/compareNode) {{ Obsolete_inline() }}
+  - : Renvoie une constante qui indique si le nœud est avant, après, dans ou englobe le segment.
+- [comparePoint](/fr/docs/Web/API/range/comparePoint)
+  - : Renvoie -1, 0, ou 1, indiquant si le point se trouve avant, après, ou dans le segment.
+- [createContextualFragment](/fr/docs/Web/API/range/createContextualFragment)
+  - : Renvoie un fragment de document créé à partir d'un morceau de code donné.
+- [intersectsNode](/fr/docs/Web/API/range/intersectsNode) {{ Obsolete_inline() }}
+  - : Renvoie un booléen indiquant si un nœud donné a une intersection avec le segment.
+- [isPointInRange](/fr/docs/Web/API/range/isPointInRange)
+  - : Renvoie un booléen indiquant si le point donné est dans le segment.

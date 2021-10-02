@@ -8,28 +8,28 @@ tags:
   - Reference
 translation_of: Web/API/FeaturePolicy/features
 ---
-<div>{{APIRef("Feature Policy API")}}{{SeeCompatTable}}</div>
+{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
-<p>La méthode <strong><code>features()</code></strong> de l'interface {{DOMxRef("FeaturePolicy")}} retourne la liste des noms de directives de fonctionnalités supportées par l'agent utilisateur. Une fonctionnalité dont le nom apparait dans la liste pourrait n'être pas autorisée par le Feature Policy du contexte courant d'exécution ou n'être pas accessible à cause des permissions de l'utilisateur.</p>
+La méthode **`features()`** de l'interface {{DOMxRef("FeaturePolicy")}} retourne la liste des noms de directives de fonctionnalités supportées par l'agent utilisateur. Une fonctionnalité dont le nom apparait dans la liste pourrait n'être pas autorisée par le Feature Policy du contexte courant d'exécution ou n'être pas accessible à cause des permissions de l'utilisateur.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">const fonctionnalitésSupportées = <em>FeaturePolicy</em>.features()
-</pre>
+    const fonctionnalitésSupportées = FeaturePolicy.features()
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un tableau de chaines de caractères représentant les noms des directives Feature Policy dont la fonctionnalité associée est supportée par l'agent utilisateur.</p>
+Un tableau de chaines de caractères représentant les noms des directives Feature Policy dont la fonctionnalité associée est supportée par l'agent utilisateur.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Cet exemple affiche dans la console toutes les directives supportées par votre agent utilisateur :</p>
+Cet exemple affiche dans la console toutes les directives supportées par votre agent utilisateur :
 
-<pre class="brush: js">// Récupère l'objet Feature Policy
+```js
+// Récupère l'objet Feature Policy
 const featurePolicy = document.featurePolicy
 
 // Récupère la liste des noms de directives de Feature Policy dont les fonctionnalités sont supportées
@@ -38,27 +38,14 @@ const fonctionnalitésSupportées = featurePolicy.features()
 // Affiche chaque directive dans la console
 for (const directive of fonctionnalitésSupportées)
   console.log(directive)
-</pre>
+```
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Feature Policy","","features")}}</td>
-   <td>{{Spec2("Feature Policy")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                | Statut                               | Commentaire          |
+| ------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName("Feature Policy","","features")}} | {{Spec2("Feature Policy")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("api.FeaturePolicy.features")}}</p>
+{{Compat("api.FeaturePolicy.features")}}

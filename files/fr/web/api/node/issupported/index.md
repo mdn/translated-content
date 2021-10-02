@@ -8,71 +8,48 @@ tags:
   - Noeuds
 translation_of: Web/API/Node/isSupported
 ---
-<p>{{APIRef("DOM")}}{{obsolete_header}}</p>
+{{APIRef("DOM")}}{{obsolete_header}}
 
-<p>La méthode <code><strong>Node.isSupported()</strong></code> renvoie une marque  {{domxref("Boolean","booléenne")}} contenant le résultat du test par lequel est vérifié si une implémentation DOM prend en charge une fonctionnalité spécifique et si celle-ci est supportée par un noeud spécifique.</p>
+La méthode **`Node.isSupported()`** renvoie une marque  {{domxref("Boolean","booléenne")}} contenant le résultat du test par lequel est vérifié si une implémentation DOM prend en charge une fonctionnalité spécifique et si celle-ci est supportée par un noeud spécifique.
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="syntaxbox"><em>boolValue</em> = <em>element</em>.isSupported(<em>feature</em>, <em>version</em>)</pre>
+    boolValue = element.isSupported(feature, version)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>feature</code></dt>
- <dd>est une  {{domxref("DOMString")}} (<em>chaîne de caractères</em>) contenant le nom de la fonctionnalité à tester. C'est le même nom qui peut être passé à la méthode <code>hasFeature</code> de <a href="/fr/docs/Web/API/Document/implementation">DOMImplementation</a>. Les valeurs possibles définies dans la spécification DOM core sont listées dans la section <a href="http://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance">Conformance</a> de DOM Level 2.</dd>
- <dt><code>version</code></dt>
- <dd>est une  {{domxref("DOMString")}} (<em>chaîne de caractères</em>) contenant le numéro de version de la fonctionnalité à tester. En DOM Level 2, première version, il s'agit de la chaîne « <code>2.0</code> ». Si la version n'est pas spécifiée, la gestion de n'importe quelle version de la fonctionnalité suffira pour que soit renvoyée la valeur <code>true</code>.</dd>
-</dl>
+- `feature`
+  - : est une  {{domxref("DOMString")}} (_chaîne de caractères_) contenant le nom de la fonctionnalité à tester. C'est le même nom qui peut être passé à la méthode `hasFeature` de [DOMImplementation](/fr/docs/Web/API/Document/implementation). Les valeurs possibles définies dans la spécification DOM core sont listées dans la section [Conformance](http://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance) de DOM Level 2.
+- `version`
+  - : est une  {{domxref("DOMString")}} (_chaîne de caractères_) contenant le numéro de version de la fonctionnalité à tester. En DOM Level 2, première version, il s'agit de la chaîne « `2.0` ». Si la version n'est pas spécifiée, la gestion de n'importe quelle version de la fonctionnalité suffira pour que soit renvoyée la valeur `true`.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: html">&lt;div id="doc"&gt;
-&lt;/div&gt;
+```html
+<div id="doc">
+</div>
 
-&lt;script&gt;
+<script>
  // Obtenir un élément et vérifier pour voir s'il est pris en charge par les modules HTML DOM2.
  var main = document.getElementById('doc');
  var output = main.isSupported('HTML', '2.0');
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Sp.C3.A9cification">Spécifications</h2>
+## Spécifications
 
-<p> </p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-node', 'Node')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Supprimée de la spécification</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#Level-2-Core-Node-supports', 'Node.isSupported()')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Pas de changement de {{SpecName('DOM2 Core')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#Level-2-Core-Node-supports', 'Node.isSupported()')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+| Spécification                                                                                                        | Statut                           | Commentaire                                            |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------ |
+| {{SpecName('DOM WHATWG', '#interface-node', 'Node')}}                                             | {{Spec2('DOM WHATWG')}} | Supprimée de la spécification                          |
+| {{SpecName('DOM3 Core', 'core.html#Level-2-Core-Node-supports', 'Node.isSupported()')}} | {{Spec2('DOM3 Core')}}     | Pas de changement de {{SpecName('DOM2 Core')}}. |
+| {{SpecName('DOM2 Core', 'core.html#Level-2-Core-Node-supports', 'Node.isSupported()')}} | {{Spec2('DOM2 Core')}}     | Définition initiale.                                   |
 
-<p>{{Compat("api.Node.isSupported")}}</p>
+## Compatibilité des navigateurs
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+{{Compat("api.Node.isSupported")}}
 
-<ul>
- <li>L'interface {{domxref("Node")}} à laquelle elle appartient.</li>
-</ul>
+## Voir aussi
+
+- L'interface {{domxref("Node")}} à laquelle elle appartient.

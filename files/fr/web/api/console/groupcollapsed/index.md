@@ -12,53 +12,35 @@ tags:
   - débogage
 translation_of: Web/API/Console/groupCollapsed
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>Crée un nouveau groupe intégré dans la console Web. Contrairement à {{domxref ("console.group ()")}}, le nouveau groupe est créé réduit. L'utilisateur devra utiliser le bouton de divulgation à côté pour le développer, en révélant les entrées créées dans le groupe.</p>
+Crée un nouveau groupe intégré dans la console Web. Contrairement à {{domxref ("console.group ()")}}, le nouveau groupe est créé réduit. L'utilisateur devra utiliser le bouton de divulgation à côté pour le développer, en révélant les entrées créées dans le groupe.
 
-<p>Appellez  {{domxref("console.groupEnd()")}} pour revenir au groupe parent.</p>
+Appellez {{domxref("console.groupEnd()")}} pour revenir au groupe parent.
 
-<p>Voir <a href="/fr/docs/Web/API/console#Using_groups_in_the_console">Using groups in the console</a> dans la documentation  de {{domxref("console")}}  pour plus de détails et des exemples.</p>
+Voir [Using groups in the console](/fr/docs/Web/API/console#Using_groups_in_the_console) dans la documentation  de {{domxref("console")}}  pour plus de détails et des exemples.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">console.groupCollapsed([label]);
-</pre>
+    console.groupCollapsed([label]);
 
-<h2 id="Paramètres">Paramètres</h2>
+## Paramètres
 
-<dl>
- <dt><code>label</code></dt>
- <dd>Étiquette pour le groupe. Facultatif.</dd>
-</dl>
+- `label`
+  - : Étiquette pour le groupe. Facultatif.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#groupcollapsed", "console.groupCollapsed()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | Statut                           | Commentaire         |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName("Console API", "#groupcollapsed", "console.groupCollapsed()")}} | {{Spec2("Console API")}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Console.groupCollapsed")}}</p>
+{{Compat("api.Console.groupCollapsed")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

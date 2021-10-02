@@ -10,46 +10,30 @@ tags:
   - débogage
 translation_of: Web/API/Console/groupEnd
 ---
-<p>{{APIRef("Console API")}}</p>
+{{APIRef("Console API")}}
 
-<p>Quitte le groupe en ligne actuel dans la <a href="/fr/docs/Outils/Console_Web">console Web</a>. Voir  <a href="/fr/docs/Web/API/console#Using_groups_in_the_console">Using groups in the console</a>  dans la documentation {{domxref("console.group()")}} pour plus de détails et des exemples.</p>
+Quitte le groupe en ligne actuel dans la [console Web](/fr/docs/Outils/Console_Web). Voir  [Using groups in the console](/fr/docs/Web/API/console#Using_groups_in_the_console)  dans la documentation {{domxref("console.group()")}} pour plus de détails et des exemples.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">console.groupEnd();
-</pre>
+    console.groupEnd();
 
-<h2 id="Paramètres">Paramètres</h2>
+## Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#groupend", "console.groupEnd()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                           | Commentaire         |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName("Console API", "#groupend", "console.groupEnd()")}} | {{Spec2("Console API")}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Console.groupEnd")}}</p>
+{{Compat("api.Console.groupEnd")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

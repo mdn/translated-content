@@ -8,51 +8,30 @@ tags:
   - Propriété
 translation_of: Web/API/Event/defaultPrevented
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<h2 id="Résumé">Résumé</h2>
+## Résumé
 
-<p>Retourne un booléen indiquant si {{domxref("event.preventDefault()")}} a été appelée sur l'évènement ou non.</p>
+Retourne un booléen indiquant si {{domxref("event.preventDefault()")}} a été appelée sur l'évènement ou non.
 
-<div class="note">
-  <p><strong>Note :</strong> Cette propriété doit etre utilisée au lieu de la méthode <code>getPreventDefault()</code> qui n'est pas standard et est désormais dépréciée (voir {{bug(691151)}}).</p>
-</div>
+> **Note :** Cette propriété doit etre utilisée au lieu de la méthode `getPreventDefault()` qui n'est pas standard et est désormais dépréciée (voir {{bug(691151)}}).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval">bool = event.defaultPrevented </pre>
+    bool = event.defaultPrevented
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre> if (e.defaultPrevented) {
-   /* Le comportement par défaut a été inhibé */
- }
-</pre>
+     if (e.defaultPrevented) {
+       /* Le comportement par défaut a été inhibé */
+     }
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-defaultprevented', 'Event.defaultPrevented()')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('DOM WHATWG', '#dom-event-defaultprevented', 'Event.defaultPrevented()')}} | {{ Spec2('DOM WHATWG') }} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("api.Event.defaultPrevented")}}</p>
-
-<ul>
-</ul>
+{{Compat("api.Event.defaultPrevented")}}

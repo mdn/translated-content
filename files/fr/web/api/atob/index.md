@@ -10,69 +10,40 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/atob
 original_slug: Web/API/WindowOrWorkerGlobalScope/atob
 ---
-<p>{{APIRef ("HTML DOM")}}<br>
- La fonction <code>WindowOrWorkerGlobalScope.atob()</code> décode une chaîne de données qui a été codée en utilisant le codage en base 64. Vous pouvez utiliser la méthode {{domxref("WindowOrWorkerGlobalScope.btoa","btoa()")}} pour encoder et transmettre des données qui pourraient causer des problèmes de communication, puis les transmettre et utiliser la méthode atob() pour décoder les données . Par exemple, vous pouvez coder, transmettre et décoder des caractères de contrôle tels que les valeurs ASCII 0 à 31.</p>
+{{APIRef ("HTML DOM")}}
+La fonction `WindowOrWorkerGlobalScope.atob()` décode une chaîne de données qui a été codée en utilisant le codage en base 64. Vous pouvez utiliser la méthode {{domxref("WindowOrWorkerGlobalScope.btoa","btoa()")}} pour encoder et transmettre des données qui pourraient causer des problèmes de communication, puis les transmettre et utiliser la méthode atob() pour décoder les données . Par exemple, vous pouvez coder, transmettre et décoder des caractères de contrôle tels que les valeurs ASCII 0 à 31.
 
-<p>Pour une utilisation avec des chaînes Unicode ou UTF-8, voir <a href="/fr/docs/D%C3%A9coder_encoder_en_base64">cette note sur l'encodage et le décodage Base64</a> et <a href="/fr-FR/docs/Web/API/window.btoa#Unicode_Strings">cette note sur btoa()</a>.</p>
+Pour une utilisation avec des chaînes Unicode ou UTF-8, voir [cette note sur l'encodage et le décodage Base64](/fr/docs/D%C3%A9coder_encoder_en_base64) et [cette note sur btoa()](/fr-FR/docs/Web/API/window.btoa#Unicode_Strings).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval">var donneesDecodees = scope.atob(<em>donneesEncodees</em>);
-</pre>
+    var donneesDecodees = scope.atob(donneesEncodees);
 
-<h3 id="Déclenche">Déclenche</h3>
+### Déclenche
 
-<p>Déclenche une {{jsxref("DOMException")}} si la longueur de la chaîne passée en entrée n'est pas un multiple de 4.</p>
+Déclenche une {{jsxref("DOMException")}} si la longueur de la chaîne passée en entrée n'est pas un multiple de 4.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="eval"><em>donneesEncodees</em> = window.btoa('Salut, monde'); // encode une chaîne
-<em>donneesDecodees</em> = window.atob(<em>donneesEncodees</em>); // décode la chaîne
-</pre>
+    donneesEncodees = window.btoa('Salut, monde'); // encode une chaîne
+    donneesDecodees = window.atob(donneesEncodees); // décode la chaîne
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-btoa', 'WindowOrWorkerGlobalScope.atob()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Méthode déplacée dans le mixin <code>WindowOrWorkerGlobalScope</code> dans la spéc la plus récente.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-windowbase64-atob', 'WindowBase64.atob()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Pas de changement depuis l'instantané le plus récent {{SpecName("HTML5.1")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', '#dom-windowbase64-atob', 'WindowBase64.atob()')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Instantané de {{SpecName("HTML WHATWG")}}. Pas de changement.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "#dom-windowbase64-atob", "WindowBase64.atob()")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Instantané de {{SpecName("HTML WHATWG")}}. Création de <code>WindowBase64</code> (les propriétés se trouvaient sur la cible avant cela).</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | Statut                           | Commentaire                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'webappapis.html#dom-btoa', 'WindowOrWorkerGlobalScope.atob()')}} | {{Spec2('HTML WHATWG')}} | Méthode déplacée dans le mixin `WindowOrWorkerGlobalScope` dans la spéc la plus récente.                                               |
+| {{SpecName('HTML WHATWG', '#dom-windowbase64-atob', 'WindowBase64.atob()')}}                     | {{Spec2('HTML WHATWG')}} | Pas de changement depuis l'instantané le plus récent {{SpecName("HTML5.1")}}.                                                 |
+| {{SpecName('HTML5.1', '#dom-windowbase64-atob', 'WindowBase64.atob()')}}                         | {{Spec2('HTML5.1')}}     | Instantané de {{SpecName("HTML WHATWG")}}. Pas de changement.                                                                 |
+| {{SpecName("HTML5 W3C", "#dom-windowbase64-atob", "WindowBase64.atob()")}}                     | {{Spec2('HTML5 W3C')}}     | Instantané de {{SpecName("HTML WHATWG")}}. Création de `WindowBase64` (les propriétés se trouvaient sur la cible avant cela). |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.atob")}}</p>
+{{Compat("api.WindowOrWorkerGlobalScope.atob")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/Web/API/WindowBase64/Base64_encoding_and_decoding">Base64 encoding and decoding</a></li>
- <li><a href="/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">Les  URL de <code>données</code></a></li>
- <li>{{domxref("WindowOrWorkerGlobalScope.btoa","window.btoa()")}}</li>
- <li><a href="/fr-FR/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></li>
-</ul>
+- [Base64 encoding and decoding](/Web/API/WindowBase64/Base64_encoding_and_decoding)
+- [Les  URL de `données`](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
+- {{domxref("WindowOrWorkerGlobalScope.btoa","window.btoa()")}}
+- [Components.utils.importGlobalProperties](/fr-FR/docs/Components.utils.importGlobalProperties)

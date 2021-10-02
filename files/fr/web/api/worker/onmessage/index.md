@@ -7,23 +7,24 @@ tags:
   - Reference
 translation_of: Web/API/Worker/onmessage
 ---
-<p>{{ APIRef("Web Workers API") }}</p>
+{{ APIRef("Web Workers API") }}
 
-<p>La propriété <strong><code>onmessage</code></strong> de l'interface {{domxref("Worker")}} représente un {{event("Event_handlers", "event handler")}}, à savoir une fonction qui est appelée lorsque l'événement {{event("message")}} survient. Ces événements sont du type {{domxref("MessageEvent")}} et sont appelés quand le parent du worker reçoit un message (c’est-à-dire à partir de la méthode {{domxref("DedicatedWorkerGlobalScope.postMessage")}}).</p>
+La propriété **`onmessage`** de l'interface {{domxref("Worker")}} représente un {{event("Event_handlers", "event handler")}}, à savoir une fonction qui est appelée lorsque l'événement {{event("message")}} survient. Ces événements sont du type {{domxref("MessageEvent")}} et sont appelés quand le parent du worker reçoit un message (c’est-à-dire à partir de la méthode {{domxref("DedicatedWorkerGlobalScope.postMessage")}}).
 
-<div class="note">
-<p><strong>Note :</strong> Le contenu du message est fourni par la propriété <code>data</code> de l'événement {{event("message")}}.</p>
-</div>
+> **Note :** Le contenu du message est fourni par la propriété `data` de l'événement {{event("message")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">myWorker.onmessage = function(e) { ... }</pre>
+```js
+myWorker.onmessage = function(e) { ... }
+```
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>L'extrait de code suivant illustre la création d'un objet {{domxref("Worker")}} utilisant le constructeur {{domxref("Worker.Worker", "Worker()")}}. Les messages sont passés au worker lorsque la valeur de l'élément de formulaire <code>first</code> change. Un gestionnaire onmessage est également présent pour s'occuper des messages retournés par le worker.</p>
+L'extrait de code suivant illustre la création d'un objet {{domxref("Worker")}} utilisant le constructeur {{domxref("Worker.Worker", "Worker()")}}. Les messages sont passés au worker lorsque la valeur de l'élément de formulaire `first` change. Un gestionnaire onmessage est également présent pour s'occuper des messages retournés par le worker.
 
-<pre class="brush: js">var myWorker = new Worker("worker.js");
+```js
+var myWorker = new Worker("worker.js");
 
 first.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
@@ -34,46 +35,33 @@ myWorker.onmessage = function(e) {
   result.textContent = e.data;
   console.log('Message reçu du worker');
 }
-</pre>
+```
 
-<p>Dans le script <code>worker.js</code>, un gestionnaire <code>onmessage</code> se charge des messages en provenance du script principal :</p>
+Dans le script `worker.js`, un gestionnaire `onmessage` se charge des messages en provenance du script principal :
 
-<pre class="brush: js">onmessage = function(e) {
+```js
+onmessage = function(e) {
   console.log('Message reçu du script principal');
   var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
   console.log('Renvoi d\'un message au script principal');
   postMessage(workerResult);
-}</pre>
+}
+```
 
-<p>Remarquez comment dans le script principal, <code>onmessage</code> doit être appelée par <code>myWorker</code>, tandis que dans le script du worker vous avez juste besoin d'appeler <code>onmessage</code> parce que le worker est en réalité le contexte global ({{domxref("DedicatedWorkerGlobalScope")}}).</p>
+Remarquez comment dans le script principal, `onmessage` doit être appelée par `myWorker`, tandis que dans le script du worker vous avez juste besoin d'appeler `onmessage` parce que le worker est en réalité le contexte global ({{domxref("DedicatedWorkerGlobalScope")}}).
 
-<p>Pour un exemple complet, consulter notre <a href="https://github.com/mdn/simple-web-worker">Exemple basique de worker dédié</a> (<a href="http://mdn.github.io/simple-web-worker/">lancez le worker dédié</a>).</p>
+Pour un exemple complet, consulter notre [Exemple basique de worker dédié](https://github.com/mdn/simple-web-worker) ([lancez le worker dédié](http://mdn.github.io/simple-web-worker/)).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#handler-worker-onmessage", "Worker.onmessage")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "#handler-worker-onmessage", "Worker.onmessage")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>
+{{Compat("api.Worker.onmessage")}}
 
+## Voir aussi
 
-<p>{{Compat("api.Worker.onmessage")}}</p>
-</div>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<p>L'interface {{domxref("Worker")}} à laquelle elle appartient.</p>
+L'interface {{domxref("Worker")}} à laquelle elle appartient.

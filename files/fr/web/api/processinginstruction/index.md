@@ -11,33 +11,27 @@ tags:
   - instructions
 translation_of: Web/API/ProcessingInstruction
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Une <strong>instruction de traitement</strong> intègre des instructions spécifiques à une application en <a href="/en-US/docs/Glossary/XML">XML</a> qui peuvent être ignorées par d'autres applications (ne les reconnaissant pas). Même si un processeur XML ignore les instructions de traitement, il leur donnera une place dans le DOM.</p>
+Une **instruction de traitement** intègre des instructions spécifiques à une application en [XML](/en-US/docs/Glossary/XML) qui peuvent être ignorées par d'autres applications (ne les reconnaissant pas). Même si un processeur XML ignore les instructions de traitement, il leur donnera une place dans le DOM.
 
-<p>Une instruction de traitement est différente de la <a href="/en/XML/XML_Declaration">déclaration XML</a>, qui fournit des informations sur le document telles que le codage des caractères et ne peut apparaître que comme le premier élément d'un document.</p>
+Une instruction de traitement est différente de la [déclaration XML](/en/XML/XML_Declaration), qui fournit des informations sur le document telles que le codage des caractères et ne peut apparaître que comme le premier élément d'un document.
 
-<p>Les instructions de traitement définies par l'utilisateur ne peuvent pas commencer par '<code>xml</code>', car ceux-ci sont réservés (par exemple <code><a href="/en/XML/xml-stylesheet">&lt;?xml-stylesheet ?&gt;</a></code>).</p>
+Les instructions de traitement définies par l'utilisateur ne peuvent pas commencer par '`xml`', car ceux-ci sont réservés (par exemple [`<?xml-stylesheet ?>`](/en/XML/xml-stylesheet)).
 
-<p>Les instructions de traitement héritent des méthodes et propriétés de <a href="/fr/docs/Web/API/Node"><code>Node</code></a>.</p>
+Les instructions de traitement héritent des méthodes et propriétés de [`Node`](/fr/docs/Web/API/Node).
 
-<p>{{InheritanceDiagram(700,70)}}</p>
+{{InheritanceDiagram(700,70)}}
 
-<h3 id="Attributes">Attributs</h3>
+### Attributs
 
-<ul>
- <li>target (<em>cible</em>) (DOMString) (<em>chaîne de caractères</em>) - après le <code>&lt;?</code> et avant un <a href="/fr/docs/Gestion_des_espaces_dans_le_DOM">whitespace</a> (<em>espace</em>) le séparant des <code>data</code> (<em>données</em>)</li>
- <li>data (<em>données</em>) (DOMString) (<em>chaîne de caractères</em>) - premier caractère non espace après <code>target</code> et avant <code>?&gt;</code></li>
-</ul>
+- target (_cible_) (DOMString) (_chaîne de caractères_) - après le `<?` et avant un [whitespace](/fr/docs/Gestion_des_espaces_dans_le_DOM) (_espace_) le séparant des `data` (_données_)
+- data (_données_) (DOMString) (_chaîne de caractères_) - premier caractère non espace après `target` et avant `?>`
 
-<h3 id="Specification">Spécification</h3>
+### Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1004215813">DOM Level 1 Core : ProcessingInstruction interface</a></li>
-</ul>
+- [DOM Level 1 Core : ProcessingInstruction interface](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1004215813)
 
-<h3 id="See_also">Voir aussi</h3>
+### Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Document/createProcessingInstruction">document.createProcessingInstruction</a></li>
-</ul>
+- [document.createProcessingInstruction](/fr/docs/Web/API/Document/createProcessingInstruction)

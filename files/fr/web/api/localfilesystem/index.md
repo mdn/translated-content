@@ -3,47 +3,47 @@ title: LocalFileSystem
 slug: Web/API/LocalFileSystem
 translation_of: Web/API/LocalFileSystem
 ---
-<div>{{APIRef("File System API")}}{{non-standard_header()}}</div>
+{{APIRef("File System API")}}{{non-standard_header()}}
 
-<p>L'interface <code>LocalFileSystem</code>, appartenant à l'API <a href="/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System</a> fournit un accès à un système de fichier placé dans un bac à sable (<em>sandboxed file system</em>). Les méthodes de cette interface sont implémentées par les objets implémentants <code><a href="/fr/docs/Web/API/Window">Window</a></code> ou <code><a href="/fr/docs/Web/API/Worker">Worker</a></code>.</p>
+L'interface `LocalFileSystem`, appartenant à l'API [File System](/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction) fournit un accès à un système de fichier placé dans un bac à sable (_sandboxed file system_). Les méthodes de cette interface sont implémentées par les objets implémentants [`Window`](/fr/docs/Web/API/Window) ou [`Worker`](/fr/docs/Web/API/Worker).
 
-<h2 id="Concepts_de_base">Concepts de base</h2>
+## Concepts de base
 
-<h3 id="Créer_un_nouvel_espace_de_stockage">Créer un nouvel espace de stockage</h3>
+### Créer un nouvel espace de stockage
 
-<p>Il est possible de demander l'accès à un système de fichier dans un bac à sable en utilisant la méthode <code>window.requestFileSystem()</code>. Lorsque la création de cet espace est effectuée, une fonction de rappel (<em>callback</em>) est appelée avec un objet <code><a href="/fr/docs/Web/API/FileSystem">FileSystem</a></code> contenant deux propriétés : le nom et la racine du système de fichier ainsi créé.</p>
+Il est possible de demander l'accès à un système de fichier dans un bac à sable en utilisant la méthode `window.requestFileSystem()`. Lorsque la création de cet espace est effectuée, une fonction de rappel (_callback_) est appelée avec un objet [`FileSystem`](/fr/docs/Web/API/FileSystem) contenant deux propriétés : le nom et la racine du système de fichier ainsi créé.
 
-<p>Il est possible d'appeler cette méthode plusieurs fois pour différentes situations : on peut créer un espace de stockage temporaire et/ou un espace de stockage permanent (voir <a href="/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction">l'article sur les concepts de base</a> pour approfondir). On peut ainsi créer un espace de stockage temporaire pour mettre en cache certains fichiers (des images par exemple) afin d'améliorer les performances ou créer un espace de stockage pour des données applicatives (ex. des brouillons de messages créés par l'utilisateur) qui ne devraient pas être supprimées avant d'être répliquées sur les serveurs distants.</p>
+Il est possible d'appeler cette méthode plusieurs fois pour différentes situations : on peut créer un espace de stockage temporaire et/ou un espace de stockage permanent (voir [l'article sur les concepts de base](/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction) pour approfondir). On peut ainsi créer un espace de stockage temporaire pour mettre en cache certains fichiers (des images par exemple) afin d'améliorer les performances ou créer un espace de stockage pour des données applicatives (ex. des brouillons de messages créés par l'utilisateur) qui ne devraient pas être supprimées avant d'être répliquées sur les serveurs distants.
 
-<h3 id="Utiliser_un_stockage_persistent">Utiliser un stockage persistent</h3>
+### Utiliser un stockage persistent
 
-<p>La méthode <code>requestFileSystem()</code> permet d'indiquer si on souhaite un stockage persistent ou temporaire. Un espace de stockage persistent est conservé dans le navigateur tant que l'utilisateur ou que l'application ne l'a pas supprimé. Pour créer un espace de stockage permanent, l'utilisateur doit fournir la permission à l'application de l'utiliser. En revanche, un espace de stockage temporaire peut être créé sans permission mais peut être libéré par le navigateur à tout moment.</p>
+La méthode `requestFileSystem()` permet d'indiquer si on souhaite un stockage persistent ou temporaire. Un espace de stockage persistent est conservé dans le navigateur tant que l'utilisateur ou que l'application ne l'a pas supprimé. Pour créer un espace de stockage permanent, l'utilisateur doit fournir la permission à l'application de l'utiliser. En revanche, un espace de stockage temporaire peut être créé sans permission mais peut être libéré par le navigateur à tout moment.
 
-<p>Pour utiliser un stockage permanent, Chrome expose la méthode <code>requestQuota</code>. Il faut invoquer cette méthode ainsi :</p>
+Pour utiliser un stockage permanent, Chrome expose la méthode `requestQuota`. Il faut invoquer cette méthode ainsi :
 
-<pre class="notranslate">var requestedBytes = 1024*1024*10; // 10MB
+    var requestedBytes = 1024*1024*10; // 10MB
 
-navigator.webkitPersistentStorage.requestQuota (
-    requestedBytes, function(grantedBytes) {
-        window.requestFileSystem(PERSISTENT, grantedBytes, onInitFs, errorHandler);
+    navigator.webkitPersistentStorage.requestQuota (
+        requestedBytes, function(grantedBytes) {
+            window.requestFileSystem(PERSISTENT, grantedBytes, onInitFs, errorHandler);
 
-    }, function(e) { console.log('Error', e); }
-);
-</pre>
+        }, function(e) { console.log('Error', e); }
+    );
 
-<p>L'utilisateur doit fournir la permission à l'application pour enregistrer des données locales avant que l'application puisse utiliser le stockage permanent. Une fois que l'utilisateur a autorisé l'accès, il n'est plus nécessaire d'appeler <code>requestQuota()</code> (des appels ultérieurs n'auront aucun effet).</p>
+L'utilisateur doit fournir la permission à l'application pour enregistrer des données locales avant que l'application puisse utiliser le stockage permanent. Une fois que l'utilisateur a autorisé l'accès, il n'est plus nécessaire d'appeler `requestQuota()` (des appels ultérieurs n'auront aucun effet).
 
-<p>Une autre API, <em>Quota Management</em>, permet de connaître le quota alloué et l'espace consommé pour l'origine courante. On peut ainsi utiliser la méthode <code>window.webkitPersistentStorage.queryUsageAndQuota()</code>. Pour en savoir plus, voir cette <a href="http://stackoverflow.com/a/29662985/89484">réponse StackOverflow</a>.</p>
+Une autre API, _Quota Management_, permet de connaître le quota alloué et l'espace consommé pour l'origine courante. On peut ainsi utiliser la méthode `window.webkitPersistentStorage.queryUsageAndQuota()`. Pour en savoir plus, voir cette [réponse StackOverflow](http://stackoverflow.com/a/29662985/89484).
 
-<h3 id="Origine_unique">Origine unique</h3>
+### Origine unique
 
-<p>Le système de fichier est accessible depuis une seule origine. Cela signifie que votre application ne peut pas lire ou écrire des fichiers dans les systèmes de fichier éventuellement créés par d'autres applications. Par ailleurs, votre application ne peut pas accéder aux fichiers d'un répertoire arbitraire (ex. Mes Images, Mes Documents) sur le disque de l'utilisateur. Pour plus d'informations, voir <a href="/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction">l'article d'introduction aux concepts de base</a>.</p>
+Le système de fichier est accessible depuis une seule origine. Cela signifie que votre application ne peut pas lire ou écrire des fichiers dans les systèmes de fichier éventuellement créés par d'autres applications. Par ailleurs, votre application ne peut pas accéder aux fichiers d'un répertoire arbitraire (ex. Mes Images, Mes Documents) sur le disque de l'utilisateur. Pour plus d'informations, voir [l'article d'introduction aux concepts de base](/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction).
 
-<h3 id="Exemple">Exemple</h3>
+### Exemple
 
-<p>Voici un fragment de code qui illustre comment demander l'accès à un stockage sur le système de fichier.</p>
+Voici un fragment de code qui illustre comment demander l'accès à un stockage sur le système de fichier.
 
-<pre class="brush: js">// Gestion des préfixes spécifiques au navigateur
+```js
+// Gestion des préfixes spécifiques au navigateur
 window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;
 
 // Le premier paramètre indique le type de stockage
@@ -52,145 +52,95 @@ window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFile
 // errorHandler est la fonction à invoquer en cas d'erreur ou de refus d'accès
 
 window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
-</pre>
+```
 
-<h2 id="Constantes">Constantes</h2>
+## Constantes
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constante</th>
-   <th scope="col">Valeur</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>TEMPORARY</code></td>
-   <td><code>0</code></td>
-   <td>Un espace de stockage temporaire qui peut être supprimé par le navigateur lorsque celui-ci l'estime nécessaire.</td>
-  </tr>
-  <tr>
-   <td><code>PERSISTENT</code></td>
-   <td><code>1</code></td>
-   <td>Un espace de stockage qui reste permanent dans le navigateur tant que l'utilisateur ou que l'application ne l'a pas supprimé. L'utilisateur doit fournir une permission avant qu'une application puisse utiliser ce type de stockage.</td>
-  </tr>
- </tbody>
-</table>
+| Constante    | Valeur | Description                                                                                                                                                                                                                           |
+| ------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `TEMPORARY`  | `0`    | Un espace de stockage temporaire qui peut être supprimé par le navigateur lorsque celui-ci l'estime nécessaire.                                                                                                                       |
+| `PERSISTENT` | `1`    | Un espace de stockage qui reste permanent dans le navigateur tant que l'utilisateur ou que l'application ne l'a pas supprimé. L'utilisateur doit fournir une permission avant qu'une application puisse utiliser ce type de stockage. |
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<h3 id="requestFileSystem"><code>requestFileSystem()</code></h3>
+### `requestFileSystem()`
 
-<p>Cette méthode permet de demander l'accès à uyn système de fichier pour stocker des données. On peut ainsi accéder à un système de fichier placé dans un bac à sable en demandant un objet <code>LocalFileSystem</code> avec la méthode globale <code>window.requestFileSystem()</code>.</p>
+Cette méthode permet de demander l'accès à uyn système de fichier pour stocker des données. On peut ainsi accéder à un système de fichier placé dans un bac à sable en demandant un objet `LocalFileSystem` avec la méthode globale `window.requestFileSystem()`.
 
-<pre class="notranslate">void requestFileSystem(
-  in unsigned short type,
-  in unsigned long long size,
-  in FileSystemCallback successCallback,
-  in ErrorCallback errorCallback
-);</pre>
+    void requestFileSystem(
+      in unsigned short type,
+      in unsigned long long size,
+      in FileSystemCallback successCallback,
+      in ErrorCallback errorCallback
+    );
 
-<h4 id="Paramètres">Paramètres</h4>
+#### Paramètres
 
-<dl>
- <dt><code>type</code></dt>
- <dd>Le type de stockage sur le système de fichier. La valeur de cet argument peut être <code>TEMPORARY</code> ou <code>PERSISTENT</code>.</dd>
- <dt><code>size</code></dt>
- <dd>L'espace de stockage, exprimé en octets, nécessaire à l'application.</dd>
- <dt><code>successCallback</code></dt>
- <dd>Une fonction de rappel à invoquer lorsque le navigateur fournit bien l'accès au système de fichier. Cette fonction reçoit en argument un objet <code><a href="/fr/docs/Web/API/FileSystem">FileSystem</a></code> avec deux propriétés :
- <ul>
-  <li><code>name</code> - le nom unique, assigné par le navigateur au système de fichiers.</li>
-  <li><code>root</code> - un objet <code>DirectoryEntry</code> en lecture seule qui représente la racine du système de fichier.</li>
- </ul>
- </dd>
- <dt><code>errorCallback</code></dt>
- <dd>Une fonction de rappel à invoquer en cas d'erreur ou lorsque l'accès n'est pas autorisé. Cette fonction reçoit un objet <code>FileError</code> comme argument.</dd>
-</dl>
+- `type`
+  - : Le type de stockage sur le système de fichier. La valeur de cet argument peut être `TEMPORARY` ou `PERSISTENT`.
+- `size`
+  - : L'espace de stockage, exprimé en octets, nécessaire à l'application.
+- `successCallback`
 
-<h4 id="Valeur_de_retour">Valeur de retour</h4>
+  - : Une fonction de rappel à invoquer lorsque le navigateur fournit bien l'accès au système de fichier. Cette fonction reçoit en argument un objet [`FileSystem`](/fr/docs/Web/API/FileSystem) avec deux propriétés :
 
-<p><code>void</code></p>
+    - `name` - le nom unique, assigné par le navigateur au système de fichiers.
+    - `root` - un objet `DirectoryEntry` en lecture seule qui représente la racine du système de fichier.
 
-<h4 id="Exceptions">Exceptions</h4>
+- `errorCallback`
+  - : Une fonction de rappel à invoquer en cas d'erreur ou lorsque l'accès n'est pas autorisé. Cette fonction reçoit un objet `FileError` comme argument.
 
-<p>Cette méthode peut lever une exception <code><a href="/en-US/docs/Web/API/FileError">FileError</a></code> avec le code suivant :</p>
+#### Valeur de retour
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
-  <tr>
-   <td><code>SECURITY_ERROR</code></td>
-   <td>L'application n'est pas autorisée à accéder à l'interface <em>File System</em>. Par exemple, il est interdit d'utiliser <code>file://</code>. Pour plus de détails, consulter <a href="/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction#restrictions">l'article d'introduction aux concepts de base</a>.</td>
-  </tr>
- </thead>
-</table>
+`void`
 
-<h3 id="resolveLocalFileSystemURL"><code>resolveLocalFileSystemURL()</code></h3>
+#### Exceptions
 
-<p>Cette méthode permet de consulter une entrée pour un fichier ou un répertoire avec une URL locale.</p>
+Cette méthode peut lever une exception [`FileError`](/en-US/docs/Web/API/FileError) avec le code suivant :
 
-<pre class="notranslate">void resolveLocalFileSystemURL(
-  in DOMString url,
-  in EntryCallback successCallback,
-  in optional ErrorCallback errorCallback
-);
-</pre>
+| Exception        | Description                                                                                                                                                                                                                                                                             |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `SECURITY_ERROR` | L'application n'est pas autorisée à accéder à l'interface _File System_. Par exemple, il est interdit d'utiliser `file://`. Pour plus de détails, consulter [l'article d'introduction aux concepts de base](/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction#restrictions). |
 
-<h4 id="Paramètres_2">Paramètres</h4>
+### `resolveLocalFileSystemURL()`
 
-<dl>
- <dt><code>url</code></dt>
- <dd>L'URL du fichier local ou du répertoire sur le système de fichier.</dd>
- <dt><code>successCallback</code></dt>
- <dd>Une fonction de rappel à invoquer lorsque le navigateur fournit le fichier ou le répertoire de l'URL indiquée.</dd>
- <dt><code>errorCallback</code></dt>
- <dd>Une fonction de rappel à invoquer en cas d'erreur ou lorsque l'accès est refusé.</dd>
-</dl>
+Cette méthode permet de consulter une entrée pour un fichier ou un répertoire avec une URL locale.
 
-<h4 id="Valeur_de_retour_2">Valeur de retour</h4>
+    void resolveLocalFileSystemURL(
+      in DOMString url,
+      in EntryCallback successCallback,
+      in optional ErrorCallback errorCallback
+    );
 
-<p>void</p>
+#### Paramètres
 
-<h4 id="Exceptions_2">Exceptions</h4>
+- `url`
+  - : L'URL du fichier local ou du répertoire sur le système de fichier.
+- `successCallback`
+  - : Une fonction de rappel à invoquer lorsque le navigateur fournit le fichier ou le répertoire de l'URL indiquée.
+- `errorCallback`
+  - : Une fonction de rappel à invoquer en cas d'erreur ou lorsque l'accès est refusé.
 
-<p>Cette méthode peut lever une exception <code><a href="/fr/docs/Web/API/FileError">FileError</a></code> avec l'un des code suivants :</p>
+#### Valeur de retour
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
-  <tr>
-   <td><code>ENCODING_ERR</code></td>
-   <td>La syntaxe de l'URL est invalide.</td>
-  </tr>
-  <tr>
-   <td><code>NOT_FOUND_ERR</code></td>
-   <td>La structure de l'URL est correcte mais elle réfère à une ressource qui n'existe pas.</td>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>SECURITY_ERR</code></td>
-   <td>L'application n'est pas autorisée à accéder à l'interface pour le système de fichier.</td>
-  </tr>
- </tbody>
-</table>
+void
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+#### Exceptions
 
-<p>{{Compat("api.LocalFileSystem")}}</p>
+Cette méthode peut lever une exception [`FileError`](/fr/docs/Web/API/FileError) avec l'un des code suivants :
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+| Exception       | Description                                                                           |
+| --------------- | ------------------------------------------------------------------------------------- |
+| `ENCODING_ERR`  | La syntaxe de l'URL est invalide.                                                     |
+| `NOT_FOUND_ERR` | La structure de l'URL est correcte mais elle réfère à une ressource qui n'existe pas. |
+| `SECURITY_ERR`  | L'application n'est pas autorisée à accéder à l'interface pour le système de fichier. |
 
-<ul>
- <li>La spécification : {{spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD")}}</li>
- <li><a href="/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction">La référence pour l'API <em>File System</em></a></li>
- <li><a href="/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction">Une introduction aux concepts de base de l'API <em>File System</em></a></li>
-</ul>
+## Compatibilité des navigateurs
+
+{{Compat("api.LocalFileSystem")}}
+
+## Voir aussi
+
+- La spécification : {{spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD")}}
+- [La référence pour l'API _File System_](/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [Une introduction aux concepts de base de l'API _File System_](/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction)

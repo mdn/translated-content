@@ -10,47 +10,51 @@ tags:
   - mouseover
 translation_of: Web/API/Element/mouseover_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>L'évènement <strong><code>mouseover</code></strong> est déclenché à partir d'un {{domxref("Element")}} lorsqu'un dispositif de pointage (une souris par exemple) déplace le curseur sur l'élément ou sur l'un de ses éléments fils.</p>
+L'évènement **`mouseover`** est déclenché à partir d'un {{domxref("Element")}} lorsqu'un dispositif de pointage (une souris par exemple) déplace le curseur sur l'élément ou sur l'un de ses éléments fils.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Se propage/remonte dans le DOM</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th scope="row">Annulable</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Propriété pour la gestion d'évènement</th>
-   <td>{{domxref("GlobalEventHandlers.onmouseover", "onmouseover")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Se propage/remonte dans le DOM</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th scope="row">Annulable</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Propriété pour la gestion d'évènement</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onmouseover", "onmouseover")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>L'exemple suivant illustre la différence entre les évènements <code>mouseover</code> et <a href="/fr/docs/Web/Events/mouseenter"><code>mouseenter</code></a>.</p>
+L'exemple suivant illustre la différence entre les évènements `mouseover` et [`mouseenter`](/fr/docs/Web/Events/mouseenter).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul id="test"&gt;
-  &lt;li&gt;item 1&lt;/li&gt;
-  &lt;li&gt;item 2&lt;/li&gt;
-  &lt;li&gt;item 3&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul id="test">
+  <li>item 1</li>
+  <li>item 2</li>
+  <li>item 3</li>
+</ul>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let test = document.getElementById("test");
+```js
+let test = document.getElementById("test");
 
 // Ce gestionnaire ne sera exécuté qu'une fois
 // lorsque le curseur se déplace sur la liste
@@ -74,50 +78,35 @@ test.addEventListener("mouseover", function( event ) {
   setTimeout(function() {
     event.target.style.color = "";
   }, 500);
-}, false);</pre>
+}, false);
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples')}}</p>
+{{EmbedLiveSample('Exemples')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('UI Events', '#event-type-mouseover', 'mouseover')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#event-type-mouseover', 'mouseover')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                             |
+| ---------------------------------------------------------------------------------------- | -------------------------------- |
+| {{SpecName('UI Events', '#event-type-mouseover', 'mouseover')}}     | {{Spec2('UI Events')}}     |
+| {{SpecName('DOM3 Events', '#event-type-mouseover', 'mouseover')}} | {{Spec2('DOM3 Events')}} |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Element.mouseover_event")}}</p>
+{{Compat("api.Element.mouseover_event")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements">Une introduction aux évènements</a></li>
- <li>D'autres évènements connexes
-  <ul>
-   <li><a href="/fr/docs/Web/API/Element/mousedown_event"><code>mousedown</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/mouseup_event"><code>mouseup</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/mousemove_event"><code>mousemove</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/click_event"><code>click</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/dblclick_event"><code>dblclick</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/mouseout_event"><code>mouseout</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/mouseenter_event"><code>mouseenter</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/mouseleave_event"><code>mouseleave</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/contextmenu_event"><code>contextmenu</code></a></li>
-  </ul>
- </li>
-</ul>
+- [Une introduction aux évènements](/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements)
+- D'autres évènements connexes
+
+  - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
+  - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
+  - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)
+  - [`click`](/fr/docs/Web/API/Element/click_event)
+  - [`dblclick`](/fr/docs/Web/API/Element/dblclick_event)
+  - [`mouseout`](/fr/docs/Web/API/Element/mouseout_event)
+  - [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)
+  - [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event)
+  - [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event)

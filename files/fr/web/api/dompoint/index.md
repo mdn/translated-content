@@ -9,50 +9,45 @@ tags:
   - Quadrilatère
 translation_of: Web/API/DOMPoint
 ---
-<p>{{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}</p>
+{{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}
 
-<p>Un <strong><code>DOMPoint</code></strong> représente un point 2D ou 3D dans le système de coordonnées.</p>
+Un **`DOMPoint`** représente un point 2D ou 3D dans le système de coordonnées.
 
-<p>En général, un x positif représente une position à droite de l'origine ; un y positif est une position au-dessus de l'origine ; et un z positif est une position vers l'extérieur de l'écran (autrement dit, opposée à la direction de l'utilisateur).</p>
+En général, un x positif représente une position à droite de l'origine ; un y positif est une position au-dessus de l'origine ; et un z positif est une position vers l'extérieur de l'écran (autrement dit, opposée à la direction de l'utilisateur).
 
-<p>Il hérite de son parent {{domxref("DOMPointReadOnly")}}.</p>
+Il hérite de son parent {{domxref("DOMPointReadOnly")}}.
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{domxref("DOMPoint.DOMPoint","DOMPoint()")}}</dt>
- <dd>Crée un nouvel objet <code>DOMPoint</code>.</dd>
-</dl>
+- {{domxref("DOMPoint.DOMPoint","DOMPoint()")}}
+  - : Crée un nouvel objet `DOMPoint`.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em><code>DOMPoint</code> hérite des méthodes de son parent {{domxref("DOMPointReadOnly")}}.</em></p>
+_`DOMPoint` hérite des méthodes de son parent {{domxref("DOMPointReadOnly")}}._
 
-<dl>
- <dt>{{domxref("DOMPointReadOnly.fromPoint")}}</dt>
- <dd>Traduit la position/perspective d'un <code>DOMPoint</code> à une nouvelle position (ne semble pas encore être pris en charge).</dd>
-</dl>
+- {{domxref("DOMPointReadOnly.fromPoint")}}
+  - : Traduit la position/perspective d'un `DOMPoint` à une nouvelle position (ne semble pas encore être pris en charge).
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em><code>DOMPoint</code> hérite des propriétés de son parent {{domxref("DOMPointReadOnly")}}.</em></p>
+_`DOMPoint` hérite des propriétés de son parent {{domxref("DOMPointReadOnly")}}._
 
-<dl>
- <dt>{{domxref("DOMPointReadOnly.x")}}</dt>
- <dd>La coordonnée x du <code>DOMPoint</code>.</dd>
- <dt>{{domxref("DOMPointReadOnly.y")}}</dt>
- <dd>La coordonnée y du <code>DOMPoint</code>.</dd>
- <dt>{{domxref("DOMPointReadOnly.z")}}</dt>
- <dd>La coordonnée z du <code>DOMPoint</code>.</dd>
- <dt>{{domxref("DOMPointReadOnly.w")}}</dt>
- <dd>La valeur de perspective du <code>DOMPoint</code>.</dd>
-</dl>
+- {{domxref("DOMPointReadOnly.x")}}
+  - : La coordonnée x du `DOMPoint`.
+- {{domxref("DOMPointReadOnly.y")}}
+  - : La coordonnée y du `DOMPoint`.
+- {{domxref("DOMPointReadOnly.z")}}
+  - : La coordonnée z du `DOMPoint`.
+- {{domxref("DOMPointReadOnly.w")}}
+  - : La valeur de perspective du `DOMPoint`.
 
-<h2 id="Specification">Exemples</h2>
+## Exemples
 
-<p>Dans l' <a href="/fr/docs/Web/API/WebVR_API">API WebVR</a> (<em>VR = réalité virtuelle</em>), les valeurs <code>DOMPoint</code> sont utilisées pour représenter les points dans l'espace de coordonnées dans lequel l'affichage monté sur la tête de l'utilisateur existe. Dans l'extrait suivant, la position du VR HMD peut être récupérée en saisissant d'abord une référence à l'état actuel du capteur de position avec {{domxref("PositionSensorVRDevice.getState")}}, puis en accédant au résultat de la  {{domxref("VRPositionState.position","position")}} de la propriété {{domxref("VRPositionState")}}, qui renvoie un <code>DOMPoint</code>. Notez ci-dessous l'utilisation de <code>position.x</code>, <code>position.y</code> et <code>position.z</code>.</p>
+Dans l' [API WebVR](/fr/docs/Web/API/WebVR_API) (_VR = réalité virtuelle_), les valeurs `DOMPoint` sont utilisées pour représenter les points dans l'espace de coordonnées dans lequel l'affichage monté sur la tête de l'utilisateur existe. Dans l'extrait suivant, la position du VR HMD peut être récupérée en saisissant d'abord une référence à l'état actuel du capteur de position avec {{domxref("PositionSensorVRDevice.getState")}}, puis en accédant au résultat de la  {{domxref("VRPositionState.position","position")}} de la propriété {{domxref("VRPositionState")}}, qui renvoie un `DOMPoint`. Notez ci-dessous l'utilisation de `position.x`, `position.y` et `position.z`.
 
-<pre class="brush: js">function setView() {
+```js
+function setView() {
       var posState = gPositionSensor.getState();
       if(posState.hasPosition) {
         posPara.textContent = 'Position: x' + roundToTwo(posState.position.x) + " y"
@@ -60,7 +55,7 @@ translation_of: Web/API/DOMPoint
                                     + roundToTwo(posState.position.z);
         xPos = -posState.position.x * WIDTH * 2;
         yPos = posState.position.y * HEIGHT * 2;
-        if(-posState.position.z &gt; 0.01) {
+        if(-posState.position.z > 0.01) {
           zPos = -posState.position.z;
         } else {
           zPos = 0.01;
@@ -69,35 +64,21 @@ translation_of: Web/API/DOMPoint
 
   ...
 
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note :</strong> Voir notre <a href="https://github.com/mdn/webvr-tests/blob/gh-pages/positionsensorvrdevice/index.html">positionsensorvrdevice demo</a> pour le code complet.</p>
-</div>
+> **Note :** Voir notre [positionsensorvrdevice demo](https://github.com/mdn/webvr-tests/blob/gh-pages/positionsensorvrdevice/index.html) pour le code complet.
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Geometry Interfaces', '#DOMPoint', 'DOMPoint')}}</td>
-   <td>{{Spec2('Geometry Interfaces')}}</td>
-   <td>Dernière version de la spécification est un ED.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | Statut                                       | Commentaire                                     |
+| -------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------- |
+| {{SpecName('Geometry Interfaces', '#DOMPoint', 'DOMPoint')}} | {{Spec2('Geometry Interfaces')}} | Dernière version de la spécification est un ED. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DOMPoint")}}</p>
+{{Compat("api.DOMPoint")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("DOMRect")}}</li>
-</ul>
+- {{domxref("DOMRect")}}

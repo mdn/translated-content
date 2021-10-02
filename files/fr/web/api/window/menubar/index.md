@@ -9,64 +9,47 @@ tags:
   - Window
 translation_of: Web/API/Window/menubar
 ---
-<div>{{ APIRef() }}</div>
+{{ APIRef() }}
 
-<p>La propriété <code><strong>Window.menubar</strong></code> renvoie l'objet <code>menubar</code>, dont la visibilité peut être vérifiée.</p>
+La propriété **`Window.menubar`** renvoie l'objet `menubar`, dont la visibilité peut être vérifiée.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>objRef</em> = <em>window</em>.menubar
-</pre>
+    objRef = window.menubar
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>L'exemple HTML complet suivant montre comment la propriété <code>visible</code> de l'objet <code>menubar</code> est utilisée.</p>
+L'exemple HTML complet suivant montre comment la propriété `visible` de l'objet `menubar` est utilisée.
 
-<pre class="brush:html">&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Divers Tests DOM&lt;/title&gt;
-  &lt;script&gt;
+```html
+<html>
+<head>
+  <title>Divers Tests DOM</title>
+  <script>
     var visible = window.menubar.visible;
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Divers Tests DOM&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+</head>
+<body>
+  <p>Divers Tests DOM</p>
+</body>
+</html>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'browsers.html#dom-window-menubar', 'Window.menubar')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'browsers.html#dom-window-menubar', 'Window.menubar')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | Statut                           | Commentaire |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-menubar', 'Window.menubar')}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-menubar', 'Window.menubar')}}     | {{Spec2('HTML5 W3C')}}     |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.menubar")}}</p>
+{{Compat("api.Window.menubar")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>{{domxref("Window.locationbar")}}</li>
- <li>{{domxref("Window.personalbar")}}</li>
- <li>{{domxref("Window.scrollbars")}}</li>
- <li>{{domxref("Window.statusbar")}}</li>
- <li>{{domxref("Window.toolbar")}}</li>
-</ul>
+- {{domxref("Window.locationbar")}}
+- {{domxref("Window.personalbar")}}
+- {{domxref("Window.scrollbars")}}
+- {{domxref("Window.statusbar")}}
+- {{domxref("Window.toolbar")}}

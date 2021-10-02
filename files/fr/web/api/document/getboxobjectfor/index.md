@@ -9,27 +9,23 @@ tags:
   - Objets
 translation_of: Web/API/Document/getBoxObjectFor
 ---
-<p>{{ ApiRef("DOM") }} {{obsolete_header}}</p>
+{{ ApiRef("DOM") }} {{obsolete_header}}
 
-<p>Renvoie un <code>boxObject</code> (x, y, largeur, hauteur) pour un élément spécifié.</p>
+Renvoie un `boxObject` (x, y, largeur, hauteur) pour un élément spécifié.
 
-<div class="note">
-  <p><strong>Note :</strong> Cette méthode est obsolète. Vous devez utiliser la méthode {{domxref("element.getBoundingClientRect()")}} à la place.</p>
-</div>
+> **Note :** Cette méthode est obsolète. Vous devez utiliser la méthode {{domxref("element.getBoundingClientRect()")}} à la place.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>boxObject</var> = <var>document</var>.getBoxObjectFor(<var>element</var>);
-</pre>
+    boxObject = document.getBoxObjectFor(element);
 
-<ul>
- <li><code>boxObject</code> est un {{interface("nsIBoxObject")}}.</li>
- <li><code>element</code> est un {{domxref("element","DOMElement")}}</li>
-</ul>
+- `boxObject` est un {{interface("nsIBoxObject")}}.
+- `element` est un {{domxref("element","DOMElement")}}
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">var myDiv = document.getElementById("myDiv"),
+```js
+var myDiv = document.getElementById("myDiv"),
     boxObj = document.getBoxObjectFor (myDiv);
 
 alert (
@@ -37,8 +33,9 @@ alert (
   ", y:" + boxObj.y +
   ", Width:" + boxObj.width +
   ", Height:" + boxObj.height
-);</pre>
+);
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Spécifié dans <a href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/xul/nsIDOMXULDocument.idl">nsIXULDocument.idl</a></p>
+Spécifié dans [nsIXULDocument.idl](http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/xul/nsIDOMXULDocument.idl)

@@ -12,224 +12,173 @@ tags:
   - WebGL
 translation_of: Web/API/WebGL_API
 ---
-<div>{{WebGLSidebar}}</div>
+{{WebGLSidebar}}
 
-<p>WebGL (Bibliothèque de Graphismes Web) est une API JavaScript pour l'affichage de graphismes 2D et 3D dans n'importe quel navigateur web compatible sans utilisation de modules complémentaires. WebGl réalise cela en introduisant une API qui se conforme de façon très proche à OpenGL ES 2.0 et qui peut être utilisée dans les éléments <a href="/fr/docs/HTML/Canvas">canvas </a>d'HTML5.</p>
+WebGL (Bibliothèque de Graphismes Web) est une API JavaScript pour l'affichage de graphismes 2D et 3D dans n'importe quel navigateur web compatible sans utilisation de modules complémentaires. WebGl réalise cela en introduisant une API qui se conforme de façon très proche à OpenGL ES 2.0 et qui peut être utilisée dans les éléments [canvas ](/fr/docs/HTML/Canvas)d'HTML5.
 
-<p>Le support pour WebGL est présent dans <a href="/fr-FR/Firefox">Firefox</a> 4+, <a href="http://www.google.com/chrome/">Google Chrome</a> 9+, <a href="http://www.opera.com/">Opera</a> 12+, <a href="http://www.apple.com/safari/">Safari </a>5.1+ and <a href="http://windows.microsoft.com/fr-fr/internet-explorer/browser-ie">Internet Explorer</a> 11+ ; toutefois, l'appareil de l'utilisateur doit aussi avoir le matériel qui supporte ces fonctionnalités.</p>
+Le support pour WebGL est présent dans [Firefox](/fr-FR/Firefox) 4+, [Google Chrome](http://www.google.com/chrome/) 9+, [Opera](http://www.opera.com/) 12+, [Safari ](http://www.apple.com/safari/)5.1+ and [Internet Explorer](http://windows.microsoft.com/fr-fr/internet-explorer/browser-ie) 11+ ; toutefois, l'appareil de l'utilisateur doit aussi avoir le matériel qui supporte ces fonctionnalités.
 
-<p>L'élément {{HTMLElement("canvas")}} est aussi utilisé par <a href="/fr-FR/docs/Web/API/Canvas_API">Canvas 2D</a> pour faire des graphismes 2D sur les pages web.</p>
+L'élément {{HTMLElement("canvas")}} est aussi utilisé par [Canvas 2D](/fr-FR/docs/Web/API/Canvas_API) pour faire des graphismes 2D sur les pages web.
 
-<h2 id="Référence">Référence</h2>
+## Référence
 
-<h3 id="Interfaces_standard">Interfaces standard</h3>
+### Interfaces standard
 
-<ul>
- <li>{{domxref("WebGLRenderingContext")}}</li>
- <li>{{domxref("WebGL2RenderingContext")}} {{experimental_inline}}</li>
- <li>{{domxref("WebGLActiveInfo")}}</li>
- <li>{{domxref("WebGLBuffer")}}</li>
- <li>{{domxref("WebGLContextEvent")}}</li>
- <li>{{domxref("WebGLFramebuffer")}}</li>
- <li>{{domxref("WebGLProgram")}}</li>
- <li>{{domxref("WebGLQuery")}} {{experimental_inline}}</li>
- <li>{{domxref("WebGLRenderbuffer")}}</li>
- <li>{{domxref("WebGLSampler")}} {{experimental_inline}}</li>
- <li>{{domxref("WebGLShader")}}</li>
- <li>{{domxref("WebGLShaderPrecisionFormat")}}</li>
- <li>{{domxref("WebGLSync")}} {{experimental_inline}}</li>
- <li>{{domxref("WebGLTexture")}}</li>
- <li>{{domxref("WebGLTransformFeedback")}} {{experimental_inline}}</li>
- <li>{{domxref("WebGLUniformLocation")}}</li>
- <li>{{domxref("WebGLVertexArrayObject")}} {{experimental_inline}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext")}}
+- {{domxref("WebGL2RenderingContext")}} {{experimental_inline}}
+- {{domxref("WebGLActiveInfo")}}
+- {{domxref("WebGLBuffer")}}
+- {{domxref("WebGLContextEvent")}}
+- {{domxref("WebGLFramebuffer")}}
+- {{domxref("WebGLProgram")}}
+- {{domxref("WebGLQuery")}} {{experimental_inline}}
+- {{domxref("WebGLRenderbuffer")}}
+- {{domxref("WebGLSampler")}} {{experimental_inline}}
+- {{domxref("WebGLShader")}}
+- {{domxref("WebGLShaderPrecisionFormat")}}
+- {{domxref("WebGLSync")}} {{experimental_inline}}
+- {{domxref("WebGLTexture")}}
+- {{domxref("WebGLTransformFeedback")}} {{experimental_inline}}
+- {{domxref("WebGLUniformLocation")}}
+- {{domxref("WebGLVertexArrayObject")}} {{experimental_inline}}
 
-<h3 id="Extensions">Extensions</h3>
+### Extensions
 
-<ul>
- <li>{{domxref("ANGLE_instanced_arrays")}}</li>
- <li>{{domxref("EXT_blend_minmax")}}</li>
- <li>{{domxref("EXT_color_buffer_float")}}</li>
- <li>{{domxref("EXT_color_buffer_half_float")}}</li>
- <li>{{domxref("EXT_disjoint_timer_query")}}</li>
- <li>{{domxref("EXT_frag_depth")}}</li>
- <li>{{domxref("EXT_sRGB")}}</li>
- <li>{{domxref("EXT_shader_texture_lod")}}</li>
- <li>{{domxref("EXT_texture_filter_anisotropic")}}</li>
- <li>{{domxref("OES_element_index_uint")}}</li>
- <li>{{domxref("OES_standard_derivatives")}}</li>
- <li>{{domxref("OES_texture_float")}}</li>
- <li>{{domxref("OES_texture_float_linear")}}</li>
- <li>{{domxref("OES_texture_half_float")}}</li>
- <li>{{domxref("OES_texture_half_float_linear")}}</li>
- <li>{{domxref("OES_vertex_array_object")}}</li>
- <li>{{domxref("WEBGL_color_buffer_float")}}</li>
- <li>{{domxref("WEBGL_compressed_texture_astc")}}</li>
- <li>{{domxref("WEBGL_compressed_texture_atc")}}</li>
- <li>{{domxref("WEBGL_compressed_texture_etc")}}</li>
- <li>{{domxref("WEBGL_compressed_texture_etc1")}}</li>
- <li>{{domxref("WEBGL_compressed_texture_pvrtc")}}</li>
- <li>{{domxref("WEBGL_compressed_texture_s3tc")}}</li>
- <li>{{domxref("WEBGL_compressed_texture_s3tc_srgb")}}</li>
- <li>{{domxref("WEBGL_debug_renderer_info")}}</li>
- <li>{{domxref("WEBGL_debug_shaders")}}</li>
- <li>{{domxref("WEBGL_depth_texture")}}</li>
- <li>{{domxref("WEBGL_draw_buffers")}}</li>
- <li>{{domxref("WEBGL_lose_context")}}</li>
-</ul>
+- {{domxref("ANGLE_instanced_arrays")}}
+- {{domxref("EXT_blend_minmax")}}
+- {{domxref("EXT_color_buffer_float")}}
+- {{domxref("EXT_color_buffer_half_float")}}
+- {{domxref("EXT_disjoint_timer_query")}}
+- {{domxref("EXT_frag_depth")}}
+- {{domxref("EXT_sRGB")}}
+- {{domxref("EXT_shader_texture_lod")}}
+- {{domxref("EXT_texture_filter_anisotropic")}}
+- {{domxref("OES_element_index_uint")}}
+- {{domxref("OES_standard_derivatives")}}
+- {{domxref("OES_texture_float")}}
+- {{domxref("OES_texture_float_linear")}}
+- {{domxref("OES_texture_half_float")}}
+- {{domxref("OES_texture_half_float_linear")}}
+- {{domxref("OES_vertex_array_object")}}
+- {{domxref("WEBGL_color_buffer_float")}}
+- {{domxref("WEBGL_compressed_texture_astc")}}
+- {{domxref("WEBGL_compressed_texture_atc")}}
+- {{domxref("WEBGL_compressed_texture_etc")}}
+- {{domxref("WEBGL_compressed_texture_etc1")}}
+- {{domxref("WEBGL_compressed_texture_pvrtc")}}
+- {{domxref("WEBGL_compressed_texture_s3tc")}}
+- {{domxref("WEBGL_compressed_texture_s3tc_srgb")}}
+- {{domxref("WEBGL_debug_renderer_info")}}
+- {{domxref("WEBGL_debug_shaders")}}
+- {{domxref("WEBGL_depth_texture")}}
+- {{domxref("WEBGL_draw_buffers")}}
+- {{domxref("WEBGL_lose_context")}}
 
-<h3 id="Evènements">Evènements</h3>
+### Evènements
 
-<ul>
- <li>{{Event("webglcontextlost")}}</li>
- <li>{{Event("webglcontextrestored")}}</li>
- <li>{{Event("webglcontextcreationerror")}}</li>
-</ul>
+- {{Event("webglcontextlost")}}
+- {{Event("webglcontextrestored")}}
+- {{Event("webglcontextcreationerror")}}
 
-<h3 id="Constantes_et_types">Constantes et types</h3>
+### Constantes et types
 
-<ul>
- <li><a href="/fr-FR/docs/Web/API/WebGL_API/Constants">Constantes WebGL</a></li>
- <li><a href="/fr-FR/docs/Web/API/WebGL_API/Types">Types WebGL </a></li>
-</ul>
+- [Constantes WebGL](/fr-FR/docs/Web/API/WebGL_API/Constants)
+- [Types WebGL](/fr-FR/docs/Web/API/WebGL_API/Types)
 
-<h3 id="WebGL_2">WebGL 2</h3>
+### WebGL 2
 
-<p>WebGL 2 est une mise à jour majeure de WebGL, qui est fournie à travers l'interface {{domxref("WebGL2RenderingContext")}}. Elle est basée sur OpenGL ES 3.0, et ses nouvelles fonctionnalités comprennent :</p>
+WebGL 2 est une mise à jour majeure de WebGL, qui est fournie à travers l'interface {{domxref("WebGL2RenderingContext")}}. Elle est basée sur OpenGL ES 3.0, et ses nouvelles fonctionnalités comprennent :
 
-<ul>
- <li>les <a href="/fr-FR/docs/Web/API/WebGL2RenderingContext/texImage3D">textures 3D</a>,</li>
- <li>les <a href="/fr-FR/docs/Web/API/WebGLSampler">objets Sampler</a>,</li>
- <li>les <a href="/fr-FR/docs/Web/API/WebGL2RenderingContext#Uniform_buffer_objects">objets de tampon Uniform</a>,</li>
- <li>les <a href="/fr-FR/docs/Web/API/WebGLSync">objets Sync</a>,</li>
- <li>les <a href="/en-US/docs/Web/API/WebGLQuery">objets Query</a>,</li>
- <li>les <a href="/fr-FR/docs/Web/API/WebGLTransformFeedback">objets Tranform Feedback</a>,</li>
- <li>des extensions promues, qui sont maintenant essentielles pour WebGL 2 : les <a href="/fr-FR/docs/Web/API/WebGLVertexArrayObject">objets Vertex Array</a>, l'<a href="/fr-FR/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced">instanciation</a>, les <a href="/fr-FR/docs/Web/API/WebGL2RenderingContext/drawBuffers">cibles de rendu multiples</a>, la <a href="/fr-FR/docs/Web/API/EXT_frag_depth">profondeur de fragment</a>.</li>
-</ul>
+- les [textures 3D](/fr-FR/docs/Web/API/WebGL2RenderingContext/texImage3D),
+- les [objets Sampler](/fr-FR/docs/Web/API/WebGLSampler),
+- les [objets de tampon Uniform](/fr-FR/docs/Web/API/WebGL2RenderingContext#Uniform_buffer_objects),
+- les [objets Sync](/fr-FR/docs/Web/API/WebGLSync),
+- les [objets Query](/en-US/docs/Web/API/WebGLQuery),
+- les [objets Tranform Feedback](/fr-FR/docs/Web/API/WebGLTransformFeedback),
+- des extensions promues, qui sont maintenant essentielles pour WebGL 2 : les [objets Vertex Array](/fr-FR/docs/Web/API/WebGLVertexArrayObject), l'[instanciation](/fr-FR/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced), les [cibles de rendu multiples](/fr-FR/docs/Web/API/WebGL2RenderingContext/drawBuffers), la [profondeur de fragment](/fr-FR/docs/Web/API/EXT_frag_depth).
 
-<p>Voir aussi le post de blog <a href="https://hacks.mozilla.org/2017/01/webgl-2-lands-in-firefox/">"WebGL 2 lands in Firefox"</a> et <a href="http://webglsamples.org/WebGL2Samples/">webglsamples.org/WebGL2Samples</a> pour quelques démos.</p>
+Voir aussi le post de blog ["WebGL 2 lands in Firefox"](https://hacks.mozilla.org/2017/01/webgl-2-lands-in-firefox/) et [webglsamples.org/WebGL2Samples](http://webglsamples.org/WebGL2Samples/) pour quelques démos.
 
-<h2 id="Guides_et_tutoriels">Guides et tutoriels</h2>
+## Guides et tutoriels
 
-<p>Ci-dessous, vous pourrez trouver divers guides pour vous aider à apprendre les concepts WebGL, et des tutoriels qui proposent des leçons et des exemples pas-à-pas.</p>
+Ci-dessous, vous pourrez trouver divers guides pour vous aider à apprendre les concepts WebGL, et des tutoriels qui proposent des leçons et des exemples pas-à-pas.
 
-<h3 id="Guides">Guides</h3>
+### Guides
 
-<dl>
- <dt><a href="/fr-FR/docs/Web/API/WebGL_API/Data">Données en WebGL</a></dt>
- <dd>Un guide pour les variables, les tampons et autres types de données utilisés lors de l'écriture de code WebGL.</dd>
- <dt><a href="/fr-FR/docs/Web/API/WebGL_API/WebGL_best_practices">Meilleures pratiques WebGL</a></dt>
- <dd>Des indications et des suggestions pour vous aider à améliore la qualité, les performances et la fiabilité de votre contenu WebGL.</dd>
- <dt><a href="/fr-FR/docs/Web/API/WebGL_API/Using_Extensions">Utilisation des extensions</a></dt>
- <dd>Un guide pour l'utilisation des extensions WebGL.</dd>
-</dl>
+- [Données en WebGL](/fr-FR/docs/Web/API/WebGL_API/Data)
+  - : Un guide pour les variables, les tampons et autres types de données utilisés lors de l'écriture de code WebGL.
+- [Meilleures pratiques WebGL](/fr-FR/docs/Web/API/WebGL_API/WebGL_best_practices)
+  - : Des indications et des suggestions pour vous aider à améliore la qualité, les performances et la fiabilité de votre contenu WebGL.
+- [Utilisation des extensions](/fr-FR/docs/Web/API/WebGL_API/Using_Extensions)
+  - : Un guide pour l'utilisation des extensions WebGL.
 
-<h3 id="Tutoriels">Tutoriels</h3>
+### Tutoriels
 
-<dl>
- <dt><a href="/fr-FR/docs/Web/API/WebGL_API/Tutorial">Tutoriel WebGL</a></dt>
- <dd>Un guide pour les débutants sur les concepts essentiels de WebGL. Un bon endroit pour démarrer si vous n'avez pas d'expérience antérieure de WebGL.</dd>
-</dl>
+- [Tutoriel WebGL](/fr-FR/docs/Web/API/WebGL_API/Tutorial)
+  - : Un guide pour les débutants sur les concepts essentiels de WebGL. Un bon endroit pour démarrer si vous n'avez pas d'expérience antérieure de WebGL.
 
-<h3 id="Exemples">Exemples</h3>
+### Exemples
 
-<dl>
- <dt><a href="/fr-FR/docs/Web/API/WebGL_API/Basic_2D_animation_example">Un exemple de base d'animation WebGL 2D</a></dt>
- <dd>Cet exemple montre l'animation simple d'une forme monochrome. Les sujets abordés sont l'adaptation aux différences de ratio d'aspect, une fonction pour construire des programmes de shader à partir d'ensembles de plusieurs shaders, et les bases du dessin dans WebGL.</dd>
-</dl>
+- [Un exemple de base d'animation WebGL 2D](/fr-FR/docs/Web/API/WebGL_API/Basic_2D_animation_example)
+  - : Cet exemple montre l'animation simple d'une forme monochrome. Les sujets abordés sont l'adaptation aux différences de ratio d'aspect, une fonction pour construire des programmes de shader à partir d'ensembles de plusieurs shaders, et les bases du dessin dans WebGL.
 
-<h3 id="Tutoriels_avancés">Tutoriels avancés</h3>
+### Tutoriels avancés
 
-<dl>
- <dt><a href="/fr-FR/docs/Web/API/WebGL_API/WebGL_model_view_projection">Projection de vue de modèle WebGL</a></dt>
- <dd>Une explication détaillée des trois matrices de base qui sont typiquement utilisées pour représenter une vue d'un objet 3D : les matrices de modèle, de vue et de projection.</dd>
- <dt><a href="/fr-FR/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Mathématiques matricielles pour le web</a></dt>
- <dd>Un guide utile sur le fonctionnement des matrices de transformation 3D, qui peut être utilisé sur le web - à la fois pour les calculs WebGL et dans les transformations CSS3.</dd>
-</dl>
+- [Projection de vue de modèle WebGL](/fr-FR/docs/Web/API/WebGL_API/WebGL_model_view_projection)
+  - : Une explication détaillée des trois matrices de base qui sont typiquement utilisées pour représenter une vue d'un objet 3D : les matrices de modèle, de vue et de projection.
+- [Mathématiques matricielles pour le web](/fr-FR/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
+  - : Un guide utile sur le fonctionnement des matrices de transformation 3D, qui peut être utilisé sur le web - à la fois pour les calculs WebGL et dans les transformations CSS3.
 
-<h2 id="Ressources">Ressources</h2>
+## Ressources
 
-<ul>
- <li><a href="https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage">Raw WebGL: An introduction to WebGL</a> Une conférence de Nick Desaulniers qui présente les bases de WebGL. C'est un bon endroit pour commencer si vous n'avez jamais fait de programmation graphique de bas niveau.</li>
- <li><a href="http://www.khronos.org/webgl/">Khronos WebGL site</a> Le site principal pour WebGL chez le groupe Khronos.</li>
- <li><a href="http://learningwebgl.com/blog/?page_id=1217">Learning WebGL</a> Un site proposant des tutoriels sur la façon d'utiliser WebGL.</li>
- <li><a href="http://www.html5rocks.com/en/tutorials/webgl/webgl_fundamentals/">WebGL Fundamentals</a> Un tutoriel de base sur les fondamentaux de WebGL.</li>
- <li><a href="http://webglplayground.net/">WebGL playground</a> Un outil en ligne pour créer et partager des projets WebGL. Bon pour le prototypage rapide et l'expérimentation.</li>
- <li><a href="http://www.webglacademy.com/">WebGL Academy</a> Un éditeur HTML / JavaScript proposant des tutoriels pour apprendre les bases de la programmation webgl.</li>
- <li><a href="http://webglstats.com/">WebGL Stats</a> Un site proposant des statistiques sur les possibilités WebGL des navigateurs sur différentes plates-formes.</li>
-</ul>
+- [Raw WebGL: An introduction to WebGL](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage) Une conférence de Nick Desaulniers qui présente les bases de WebGL. C'est un bon endroit pour commencer si vous n'avez jamais fait de programmation graphique de bas niveau.
+- [Khronos WebGL site](http://www.khronos.org/webgl/) Le site principal pour WebGL chez le groupe Khronos.
+- [Learning WebGL](http://learningwebgl.com/blog/?page_id=1217) Un site proposant des tutoriels sur la façon d'utiliser WebGL.
+- [WebGL Fundamentals](http://www.html5rocks.com/en/tutorials/webgl/webgl_fundamentals/) Un tutoriel de base sur les fondamentaux de WebGL.
+- [WebGL playground](http://webglplayground.net/) Un outil en ligne pour créer et partager des projets WebGL. Bon pour le prototypage rapide et l'expérimentation.
+- [WebGL Academy](http://www.webglacademy.com/) Un éditeur HTML / JavaScript proposant des tutoriels pour apprendre les bases de la programmation webgl.
+- [WebGL Stats](http://webglstats.com/) Un site proposant des statistiques sur les possibilités WebGL des navigateurs sur différentes plates-formes.
 
-<h3 id="Bibliothèques">Bibliothèques</h3>
+### Bibliothèques
 
-<ul>
- <li><a href="https://github.com/toji/gl-matrix">glMatrix</a> Bibliothèque matricielle et vectorielle JavaScript pour les applications WebGL hautes performances</li>
- <li><a href="http://sylvester.jcoglan.com/">Sylvester</a> Une bibliothèque open source pour manipuler des vecteurs et des matrices. Non optimisée pour WebGL mais extrêmement robuste.</li>
-</ul>
+- [glMatrix](https://github.com/toji/gl-matrix) Bibliothèque matricielle et vectorielle JavaScript pour les applications WebGL hautes performances
+- [Sylvester](http://sylvester.jcoglan.com/) Une bibliothèque open source pour manipuler des vecteurs et des matrices. Non optimisée pour WebGL mais extrêmement robuste.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebGL')}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Définition. Basée sur OpenGL ES 2.0</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL2')}}</td>
-   <td>{{Spec2('WebGL2')}}</td>
-   <td>Construite au-dessus de WebGL 1. Basée sur OpenGL ES 3.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0')}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 3.0')}}</td>
-   <td>{{Spec2('OpenGL ES 3.0')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                            | Statut                               | Commentaire                                               |
+| ---------------------------------------- | ------------------------------------ | --------------------------------------------------------- |
+| {{SpecName('WebGL')}}             | {{Spec2('WebGL')}}             | Définition. Basée sur OpenGL ES 2.0                       |
+| {{SpecName('WebGL2')}}             | {{Spec2('WebGL2')}}             | Construite au-dessus de WebGL 1. Basée sur OpenGL ES 3.0. |
+| {{SpecName('OpenGL ES 2.0')}} | {{Spec2('OpenGL ES 2.0')}} |                                                           |
+| {{SpecName('OpenGL ES 3.0')}} | {{Spec2('OpenGL ES 3.0')}} |                                                           |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<h3 id="WebGL_1">WebGL 1</h3>
+### WebGL 1
 
-<p>{{Compat("api.WebGLRenderingContext", 0)}}</p>
+{{Compat("api.WebGLRenderingContext", 0)}}
 
-<h3 id="WebGL_2_2">WebGL 2</h3>
+### WebGL 2
 
-<p>{{Compat("api.WebGL2RenderingContext", 0)}}</p>
+{{Compat("api.WebGL2RenderingContext", 0)}}
 
-<h3 id="Notes_de_compatibilité">Notes de compatibilité</h3>
+### Notes de compatibilité
 
-<p>En plus du navigateur, la GPU elle-même doit également prendre en charge la fonctionnalité. Ainsi, par exemple, S3 Texture Compression (S3TC) n'est disponible que sur les tablettes à base de Tegra. La plupart des navigateurs rendent le contexte WebGL disponible via le nom de contexte <code>webgl</code>, mais les plus anciens ont aussi besoin d'<code>experimental-webgl</code>. De plus, le prochain <a href="/fr-FR/docs/Web/API/WebGL2RenderingContext">WebGL 2</a> sera entièrement rétrocompatible et comprendra le nom de contexte <code>webgl2</code>.</p>
+En plus du navigateur, la GPU elle-même doit également prendre en charge la fonctionnalité. Ainsi, par exemple, S3 Texture Compression (S3TC) n'est disponible que sur les tablettes à base de Tegra. La plupart des navigateurs rendent le contexte WebGL disponible via le nom de contexte `webgl`, mais les plus anciens ont aussi besoin d'`experimental-webgl`. De plus, le prochain [WebGL 2](/fr-FR/docs/Web/API/WebGL2RenderingContext) sera entièrement rétrocompatible et comprendra le nom de contexte `webgl2`.
 
-<h3 id="Notes_Gecko">Notes Gecko</h3>
+### Notes Gecko
 
-<h4 id="Débogage_et_test_WebGL">Débogage et test WebGL</h4>
+#### Débogage et test WebGL
 
-<p>À partir de Gecko 10.0 {{geckoRelease("10.0")}}, deux préférences sont disponibles pour vous permettre de contrôler les fonctionnalités de WebGL à des fins de test :</p>
+À partir de Gecko 10.0 {{geckoRelease("10.0")}}, deux préférences sont disponibles pour vous permettre de contrôler les fonctionnalités de WebGL à des fins de test :
 
-<dl>
- <dt><code>webgl.min_capability_mode</code></dt>
- <dd>Propriété booléenne qui, lorsqu'elle est <code>true</code>, active un mode de possibilités minimales. Dans ce mode, WebGL est configuré pour prendre en charge uniquement le jeu de fonctionnalités minimal et les fonctionnalités requises par la spécification WebGL. Cela vous permet de vous assurer que votre code WebGL fonctionnera sur n'importe quel appareil ou navigateur, indépendamment de leurs possibilités. Elle est <code>false</code> par défaut.</dd>
- <dt><code>webgl.disable_extensions</code></dt>
- <dd>Propriété booléenne qui, lorsqu'elle est <code>true</code>, désactive toutes les extensions WebGL. Elle est <code>false</code> par défaut.</dd>
-</dl>
+- `webgl.min_capability_mode`
+  - : Propriété booléenne qui, lorsqu'elle est `true`, active un mode de possibilités minimales. Dans ce mode, WebGL est configuré pour prendre en charge uniquement le jeu de fonctionnalités minimal et les fonctionnalités requises par la spécification WebGL. Cela vous permet de vous assurer que votre code WebGL fonctionnera sur n'importe quel appareil ou navigateur, indépendamment de leurs possibilités. Elle est `false` par défaut.
+- `webgl.disable_extensions`
+  - : Propriété booléenne qui, lorsqu'elle est `true`, désactive toutes les extensions WebGL. Elle est `false` par défaut.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr-FR/docs/Web/API/Canvas_API">Canvas</a></li>
- <li><a href="/fr-FR/docs/Web/API/WebGLRenderingContext/getSupportedExtensions#Browser_compatibility">Informations de compatibilité à propos des extensions WebGL</a></li>
-</ul>
+- [Canvas](/fr-FR/docs/Web/API/Canvas_API)
+- [Informations de compatibilité à propos des extensions WebGL](/fr-FR/docs/Web/API/WebGLRenderingContext/getSupportedExtensions#Browser_compatibility)

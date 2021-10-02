@@ -10,21 +10,18 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest/timeout
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>La propriété <code><strong>XMLHttpRequest.timeout</strong></code> est un <code>unsigned long</code> (un entier long, non-signé) représentant la durée, en millisecondes, qu'une requête peut prendre avant d'être automatiquement terminée. Par défaut, la valeur est 0 et il n'y pas de <em>timeout</em>. Lorsqu'une requête expire, un évènement <code><a href="/fr/docs/Web/API/XMLHttpRequest/timeout_event">timeout</a></code> est déclenché.</p>
+La propriété **`XMLHttpRequest.timeout`** est un `unsigned long` (un entier long, non-signé) représentant la durée, en millisecondes, qu'une requête peut prendre avant d'être automatiquement terminée. Par défaut, la valeur est 0 et il n'y pas de _timeout_. Lorsqu'une requête expire, un évènement [`timeout`](/fr/docs/Web/API/XMLHttpRequest/timeout_event) est déclenché.
 
-<div class="note">
-  <p><strong>Note :</strong> Pour un exemple, voir <a href="/fr/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#Example_using_a_timeout">Utiliser la propriété <code>timeout</code> avec une requête asynchrone</a>.</p>
-</div>
+> **Note :** Pour un exemple, voir [Utiliser la propriété `timeout` avec une requête asynchrone](/fr/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#Example_using_a_timeout).
 
-<div class="note">
-  <p><strong>Note :</strong> Ces délais d'expiration ne devraient pas être utilisés pour les requêtes <code>XMLHttpRequest</code> synchrones dans <a href="/fr/docs/Glossaire/Environnement_de_document">un environnement de document</a> : ils déclencheront une exception <code>InvalidAccessError</code>. On ne peut donc pas utiliser de <em>timeout</em> pour les requêtes synchrones avec une fenêtre parente.</p>
-</div>
+> **Note :** Ces délais d'expiration ne devraient pas être utilisés pour les requêtes `XMLHttpRequest` synchrones dans [un environnement de document](/fr/docs/Glossaire/Environnement_de_document) : ils déclencheront une exception `InvalidAccessError`. On ne peut donc pas utiliser de _timeout_ pour les requêtes synchrones avec une fenêtre parente.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 xhr.timeout = 2000; // durée en millisecondes
@@ -37,29 +34,17 @@ xhr.ontimeout = function (e) {
   // Requête qui a expiré. On traite ce cas.
 };
 
-xhr.send(null);</pre>
+xhr.send(null);
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#the-timeout-attribute')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>Standard évolutif WHATWG</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                                 | Commentaires             |
+| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------------ |
+| {{SpecName('XMLHttpRequest', '#the-timeout-attribute')}} | {{Spec2('XMLHttpRequest')}} | Standard évolutif WHATWG |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.XMLHttpRequest.timeout")}}</p>
+{{Compat("api.XMLHttpRequest.timeout")}}
 
-<p>Pour Internet Explorer, la propriété <code>timeout</code> ne peut être définie qu'après avoir appelé la méthode <code><a href="/fr/docs/Web/API/XMLHttpRequest/open">open()</a></code> et avant d'appeler la méthode <code><a href="/fr/docs/Web/API/XMLHttpRequest/send">send()</a></code>.</p>
+Pour Internet Explorer, la propriété `timeout` ne peut être définie qu'après avoir appelé la méthode [`open()`](/fr/docs/Web/API/XMLHttpRequest/open) et avant d'appeler la méthode [`send()`](/fr/docs/Web/API/XMLHttpRequest/send).

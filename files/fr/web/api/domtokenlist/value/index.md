@@ -8,54 +8,46 @@ tags:
   - Valeur
 translation_of: Web/API/DOMTokenList/value
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La propriété <code><strong>value</strong></code> (<em>valeur</em>) de l'interface {{domxref("DOMTokenList")}} renvoie la valeur de la liste en tant que {{domxref("DOMString")}} (chaîne de caractères), ou efface et définit la liste à la valeur donnée.</p>
+La propriété **`value`** (_valeur_) de l'interface {{domxref("DOMTokenList")}} renvoie la valeur de la liste en tant que {{domxref("DOMString")}} (chaîne de caractères), ou efface et définit la liste à la valeur donnée.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">tokenList.value;</pre>
+    tokenList.value;
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Une {{domxref("DOMString")}} (<em>chaîne de caractères</em>).</p>
+Une {{domxref("DOMString")}} (_chaîne de caractères_).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple suivant, nous récupérons la liste des classes définies sur un élément {{htmlelement("span")}} en tant que <code>DOMTokenList</code> en utilisant {{domxref("Element.classList")}}, puis écrivons alors la valeur de la liste dans le {{domxref("Node.textContent")}} du <code>&lt;span&gt;</code>.</p>
+Dans l'exemple suivant, nous récupérons la liste des classes définies sur un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}, puis écrivons alors la valeur de la liste dans le {{domxref("Node.textContent")}} du `<span>`.
 
-<p>D'abord le HTML :</p>
+D'abord le HTML :
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>Maintenant le JavaScript :</p>
+Maintenant le JavaScript :
 
-<pre class="brush: js">var span = document.querySelector("span");
+```js
+var span = document.querySelector("span");
 var classes = span.classList;
 span.textContent = classes.value;
-</pre>
+```
 
-<p>La sortie ressemble à ceci :</p>
+La sortie ressemble à ceci :
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-value','value')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | Statut                           | Commentaire         |
+| -------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName('DOM WHATWG','#dom-domtokenlist-value','value')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("api.DOMTokenList.value")}}</div>
+{{Compat("api.DOMTokenList.value")}}

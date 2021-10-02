@@ -6,42 +6,36 @@ tags:
   - DOM_0
 translation_of: Web/API/Window/confirm
 ---
-<p>{{ApiRef("Window")}}</p>
+{{ApiRef("Window")}}
 
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
+### Résumé
 
-<p>Affiche un dialogue modal avec un message et deux boutons, OK et Annuler.</p>
+Affiche un dialogue modal avec un message et deux boutons, OK et Annuler.
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval"><em>resultat</em> = window.confirm(<em>message</em>);
-</pre>
+    resultat = window.confirm(message);
 
-<ul>
- <li><code>message</code> est la chaîne contenant le texte à afficher dans le dialogue.</li>
- <li><code>resultat</code> est une valeur booléenne indiquant si OK ou Annuler a été sélectionné (<code>true</code> signifie OK).</li>
-</ul>
+- `message` est la chaîne contenant le texte à afficher dans le dialogue.
+- `resultat` est une valeur booléenne indiquant si OK ou Annuler a été sélectionné (`true` signifie OK).
 
-<h3 id="Exemple">Exemple</h3>
+### Exemple
 
-<pre class="eval">if (window.confirm("Une nouvelle fenêtre va s'ouvrir.")) {
-    window.open("fenetre.html", "Nouvelle fenêtre", "");
-}
-</pre>
+    if (window.confirm("Une nouvelle fenêtre va s'ouvrir.")) {
+        window.open("fenetre.html", "Nouvelle fenêtre", "");
+    }
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p>Le texte suivant est commun à cet article, <code>DOM:window.prompt</code> et <code>DOM:window.confirm</code> Les boîtes de dialogue sont des fenêtres modales : elles empêchent l'utilisateur d'accéder au reste de l'interface du programme tant qu'elles ne sont pas fermées. C'est pourquoi il ne faut pas abuser des fonctions créant une boîte de dialogue (ou fenêtre modale).</p>
+Le texte suivant est commun à cet article, `DOM:window.prompt` et `DOM:window.confirm` Les boîtes de dialogue sont des fenêtres modales : elles empêchent l'utilisateur d'accéder au reste de l'interface du programme tant qu'elles ne sont pas fermées. C'est pourquoi il ne faut pas abuser des fonctions créant une boîte de dialogue (ou fenêtre modale).
 
-<p>Les applications utilisant le chrome (par exemple les extensions) devront plutôt utiliser les méthodes de <a href="fr/NsIPromptService">nsIPromptService</a>.</p>
+Les applications utilisant le chrome (par exemple les extensions) devront plutôt utiliser les méthodes de [nsIPromptService](fr/NsIPromptService).
 
-<h3 id="Sp.C3.A9cification">Spécification</h3>
+### Spécification
 
-<p>{{ DOM0() }}</p>
+{{ DOM0() }}
 
-<h3 id="Voir_aussi">Voir aussi</h3>
+### Voir aussi
 
-<ul>
- <li><a href="/fr/docs/DOM/window.alert">alert</a></li>
- <li><a href="/fr/docs/DOM/window.prompt">prompt</a></li>
-</ul>
+- [alert](/fr/docs/DOM/window.alert)
+- [prompt](/fr/docs/DOM/window.prompt)

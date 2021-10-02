@@ -10,37 +10,26 @@ tags:
   - Reference
 translation_of: Web/API/PerformanceLongTaskTiming/attribution
 ---
-<p>{{SeeCompatTable}}{{APIRef("Long Tasks")}}</p>
+{{SeeCompatTable}}{{APIRef("Long Tasks")}}
 
-<p>La propriété en lecture seule <strong><code>attribution</code></strong> de l'interface <a href="/fr/docs/Web/API/PerformanceLongTaskTiming"><code>PerformanceLongTaskTiming</code></a> retourne une séquence d'instances <a href="/fr/docs/Web/API/TaskAttributionTiming"><code>TaskAttributionTiming</code></a>.</p>
+La propriété en lecture seule **`attribution`** de l'interface [`PerformanceLongTaskTiming`](/fr/docs/Web/API/PerformanceLongTaskTiming) retourne une séquence d'instances [`TaskAttributionTiming`](/fr/docs/Web/API/TaskAttributionTiming).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:js">var <var>taskAttributeTiming</var> = PerformanceLongTaskTiming.attribution;</pre>
+```js
+var taskAttributeTiming = PerformanceLongTaskTiming.attribution;
+```
 
-<h3 id="Value">Valeur</h3>
+### Valeur
 
-<p>Une séquence d'instances <a href="/fr/docs/Web/API/TaskAttributionTiming"><code>TaskAttributionTiming</code></a>.</p>
+Une séquence d'instances [`TaskAttributionTiming`](/fr/docs/Web/API/TaskAttributionTiming).
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Long Tasks','#dom-performancelongtasktiming-attribution','attribution')}}</td>
-      <td>{{Spec2('Long Tasks')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                    | Statut                           | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('Long Tasks','#dom-performancelongtasktiming-attribution','attribution')}} | {{Spec2('Long Tasks')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceLongTaskTiming.attribution")}}</p>
+{{Compat("api.PerformanceLongTaskTiming.attribution")}}

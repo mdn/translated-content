@@ -8,71 +8,53 @@ tags:
   - Reference
 translation_of: Web/API/Document/createTextNode
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Crée un nouveau nœud de texte.</p>
+Crée un nouveau nœud de texte.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>var text</var> = document.createTextNode(<var>données</var>);
-</pre>
+    var text = document.createTextNode(données);
 
-<ul>
- <li><code>texte</code> est un nœud de texte.</li>
- <li><code>donnees</code> est une chaîne contenant les données à placer dans le nœud de texte.</li>
-</ul>
+- `texte` est un nœud de texte.
+- `donnees` est une chaîne contenant les données à placer dans le nœud de texte.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;title&gt;createTextNode example&lt;/title&gt;
-&lt;script&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>createTextNode example</title>
+<script>
 function addTextNode(text) {
   var newtext = document.createTextNode(text),
       p1 = document.getElementById("p1");
 
   p1.appendChild(newtext);
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-  &lt;button onclick="addTextNode('YES! ');"&gt;YES!&lt;/button&gt;
-  &lt;button onclick="addTextNode('NO! ');"&gt;NO!&lt;/button&gt;
-  &lt;button onclick="addTextNode('WE CAN! ');"&gt;WE CAN!&lt;/button&gt;
+<body>
+  <button onclick="addTextNode('YES! ');">YES!</button>
+  <button onclick="addTextNode('NO! ');">NO!</button>
+  <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
 
-  &lt;hr /&gt;
+  <hr />
 
-  &lt;p id="p1"&gt;First line of paragraph.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+  <p id="p1">First line of paragraph.</p>
+</body>
+</html>
+```
 
-<h2 id="Sp.C3.A9cification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM3 Core", "core.html#ID-1975348127", "Document.createTextNode()")}}</td>
-   <td>{{Spec2("DOM3 Core")}}</td>
-   <td>Pas de changement</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Core", "core.html#ID-1975348127", "Document.createTextNode()")}}</td>
-   <td>{{Spec2("DOM2 Core")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | Statut                       | Commentaire         |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
+| {{SpecName("DOM3 Core", "core.html#ID-1975348127", "Document.createTextNode()")}} | {{Spec2("DOM3 Core")}} | Pas de changement   |
+| {{SpecName("DOM2 Core", "core.html#ID-1975348127", "Document.createTextNode()")}} | {{Spec2("DOM2 Core")}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Document.createTextNode")}}</p>
+{{Compat("api.Document.createTextNode")}}

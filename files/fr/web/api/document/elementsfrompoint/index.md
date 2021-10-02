@@ -14,90 +14,72 @@ tags:
 translation_of: Web/API/DocumentOrShadowRoot/elementsFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/elementsFromPoint
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>elementsFromPoint()</code></strong> de l'interface {{domxref("DocumentOrShadowRoot")}}  renvoie un tableau (<em>array</em>) de tous les éléments présents sous le point fourni en paramètre (relatif au <em>viewport</em>).</p>
+La propriété **`elementsFromPoint()`** de l'interface {{domxref("DocumentOrShadowRoot")}}  renvoie un tableau (_array_) de tous les éléments présents sous le point fourni en paramètre (relatif au _viewport_).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var elements = document.elementsFromPoint(x, y);</pre>
+    var elements = document.elementsFromPoint(x, y);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>x</dt>
- <dd>L'abscisse du point (coordonnée horizontale).</dd>
- <dt>y</dt>
- <dd>L'ordonnée du point (coordonnée verticale).</dd>
-</dl>
+- x
+  - : L'abscisse du point (coordonnée horizontale).
+- y
+  - : L'ordonnée du point (coordonnée verticale).
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un tableau (<em>array</em>) d'objets {{domxref('element')}} représentants les éléments du DOM concernés.</p>
+Un tableau (_array_) d'objets {{domxref('element')}} représentants les éléments du DOM concernés.
 
-<h2 id="Example">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p&gt;Du texte&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Éléments au point 30, 20:&lt;/p&gt;
-&lt;div id="output"&gt;&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p>Du texte</p>
+</div>
+<p>Éléments au point 30, 20:</p>
+<div id="output"></div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var output = document.getElementById("output");
+```js
+var output = document.getElementById("output");
 if (document.elementsFromPoint) {
   var elements = document.elementsFromPoint(30, 20);
-  for(var i = 0; i &lt; elements.length; i++) {
+  for(var i = 0; i < elements.length; i++) {
     output.textContent += elements[i].localName;
-    if (i &lt; elements.length - 1) {
-      output.textContent += " &lt; ";
+    if (i < elements.length - 1) {
+      output.textContent += " < ";
     }
   }
 } else {
-  output.innerHTML = "&lt;span style=\"color: red;\"&gt;" +
-     "Votre navigateur ne prend pas en charge &lt;code&gt;document.elementsFromPoint()&lt;/code&gt;" +
-     "&lt;/span&gt;";
-}</pre>
+  output.innerHTML = "<span style=\"color: red;\">" +
+     "Votre navigateur ne prend pas en charge <code>document.elementsFromPoint()</code>" +
+     "</span>";
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Example', '420', '120')}}</p>
+{{EmbedLiveSample('Example', '420', '120')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Shadow DOM','#extensions-to-the-documentorshadowroot-mixin','DocumentOrShadowRoot')}}</td>
-   <td>{{Spec2('Shadow DOM')}}</td>
-   <td>Définition initiale</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-document-elementsfrompoint', 'Document')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Précise l'ordre selon lequel les éléments sont peints.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                    | État                             | Commentaires                                           |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------ |
+| {{SpecName('Shadow DOM','#extensions-to-the-documentorshadowroot-mixin','DocumentOrShadowRoot')}} | {{Spec2('Shadow DOM')}} | Définition initiale                                    |
+| {{SpecName('CSSOM View', '#dom-document-elementsfrompoint', 'Document')}}                                 | {{Spec2('CSSOM View')}} | Précise l'ordre selon lequel les éléments sont peints. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DocumentOrShadowRoot.elementsFromPoint")}}</p>
+{{Compat("api.DocumentOrShadowRoot.elementsFromPoint")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{DOMxRef("DocumentOrShadowRoot.elementFromPoint()")}}</li>
- <li>{{DOMxRef("DocumentOrShadowRoot.msElementsFromRect()")}} {{Non-standard_Inline}}</li>
-</ul>
+- {{DOMxRef("DocumentOrShadowRoot.elementFromPoint()")}}
+- {{DOMxRef("DocumentOrShadowRoot.msElementsFromRect()")}} {{Non-standard_Inline}}

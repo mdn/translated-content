@@ -23,98 +23,87 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/queueMicrotask
 original_slug: Web/API/WindowOrWorkerGlobalScope/queueMicrotask
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>La méthode <code><strong>queueMicrotask()</strong></code>, qui est exposée par {{domxref("Window")}} ou l'interface {{domxref("Worker")}}, met en file d'attente une micro-tâche qui doit être exécutée à un moment sûr avant que le contrôle soit retourné à la boucle d'événement du navigateur.</p>
+La méthode **`queueMicrotask()`**, qui est exposée par {{domxref("Window")}} ou l'interface {{domxref("Worker")}}, met en file d'attente une micro-tâche qui doit être exécutée à un moment sûr avant que le contrôle soit retourné à la boucle d'événement du navigateur.
 
-<p>La micro-tâche est une fonction courte qui doit être exécutée après que la tâche actuelle ait terminé son exécution et lorsqu'il n'y a pas d'autre code en attente d'exécution avant que le contrôle du contexte d'exécution soit retourné à la boucle d'événement du navigateur.</p>
+La micro-tâche est une fonction courte qui doit être exécutée après que la tâche actuelle ait terminé son exécution et lorsqu'il n'y a pas d'autre code en attente d'exécution avant que le contrôle du contexte d'exécution soit retourné à la boucle d'événement du navigateur.
 
-<p>Cela permet à votre code de fonctionner sans interférer avec aucun autre code potentiellement à une plus haute priorité en attente, mais avant que le navigateur ne regagne le contrôle du contexte d'exécution, qui dépend potentiellement de la tâche que vous devez effectuer. Vous pouvez en apprendre plus sur comment utiliser les micro-tâches et pourquoi vous devriez le faire dans notre <a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">microtask guide</a>.</p>
+Cela permet à votre code de fonctionner sans interférer avec aucun autre code potentiellement à une plus haute priorité en attente, mais avant que le navigateur ne regagne le contrôle du contexte d'exécution, qui dépend potentiellement de la tâche que vous devez effectuer. Vous pouvez en apprendre plus sur comment utiliser les micro-tâches et pourquoi vous devriez le faire dans notre [microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide).
 
-<p>L'importance des micro-tâches vient de leur possibilité d'effectuer des tâches de manière asynchrone mais dans un ordre spécifique. Voir <a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">Using microtasks in JavaScript with queueMicrotask()</a> pour plus de détails.</p>
+L'importance des micro-tâches vient de leur possibilité d'effectuer des tâches de manière asynchrone mais dans un ordre spécifique. Voir [Using microtasks in JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) pour plus de détails.
 
-<p>Les micro-tâches sont particulièrement utiles pour les librairies et les frameworks qui doivent effectuer un nettoyage final ou d'autres tâches à exécuter avant le rendu.</p>
+Les micro-tâches sont particulièrement utiles pour les librairies et les frameworks qui doivent effectuer un nettoyage final ou d'autres tâches à exécuter avant le rendu.
 
-<p><code>queueMicrotask()</code> est exposé dans la mixin {{domxref("WindowOrWorkerGlobalScope")}}.</p>
+`queueMicrotask()` est exposé dans la mixin {{domxref("WindowOrWorkerGlobalScope")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>scope</em>.queueMicrotask(<em>function</em>);
-</pre>
+    scope.queueMicrotask(function);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>function</code></dt>
- <dd>Une {{jsxref("function")}} qui doit être exécutée lorsque le moteur du navigateur détermine qu'il est sûr d'appeler votre code. Les micro-tâches mises en files d'attente sont exécutées après la fin de toutes les tâches en attente mais avant de céder le contrôle à la boucle d'événement du navigateur.</dd>
-</dl>
+- `function`
+  - : Une {{jsxref("function")}} qui doit être exécutée lorsque le moteur du navigateur détermine qu'il est sûr d'appeler votre code. Les micro-tâches mises en files d'attente sont exécutées après la fin de toutes les tâches en attente mais avant de céder le contrôle à la boucle d'événement du navigateur.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">self.queueMicrotask(() =&gt; {
+```js
+self.queueMicrotask(() => {
   // function contents here
-})</pre>
+})
+```
 
-<p>Tiré de la <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing">spécification de queueMicrotask</a> :</p>
+Tiré de la [spécification de queueMicrotask](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing) :
 
-<pre class="brush: js">MyElement.prototype.loadData = function (url) {
+```js
+MyElement.prototype.loadData = function (url) {
   if (this._cache[url]) {
-    queueMicrotask(() =&gt; {
+    queueMicrotask(() => {
       this._setData(this._cache[url]);
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then(res =&gt; res.arrayBuffer()).then(data =&gt; {
+    fetch(url).then(res => res.arrayBuffer()).then(data => {
       this._cache[url] = data;
       this._setData(data);
       this.dispatchEvent(new Event("load"));
     });
   }
-};</pre>
+};
+```
 
-<h2 id="Lorsque_queueMicrotask_nest_pas_disponible">Lorsque queueMicrotask() n'est pas disponible</h2>
+## Lorsque queueMicrotask() n'est pas disponible
 
-<p>Le code ci-dessous est une prothèse d'émulation (<em>polyfill</em>) pour <code>queueMicrotask()</code>. Il crée une micro-tâche en utilisant une promesse qui se résout immédiatement, et utilise un timeout si la promesse ne peut pas être créée.</p>
+Le code ci-dessous est une prothèse d'émulation (_polyfill_) pour `queueMicrotask()`. Il crée une micro-tâche en utilisant une promesse qui se résout immédiatement, et utilise un timeout si la promesse ne peut pas être créée.
 
-<pre class="brush: js">if (typeof window.queueMicrotask !== "function") {
+```js
+if (typeof window.queueMicrotask !== "function") {
   window.queueMicrotask = function (callback) {
     Promise.resolve()
       .then(callback)
-      .catch(e =&gt; setTimeout(() =&gt; { throw e; }));
+      .catch(e => setTimeout(() => { throw e; }));
   };
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Spécification</th>
-   <th>Statut</th>
-   <th>Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "timers-and-user-prompts.html#microtask-queuing", "self.queueMicrotask()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                            | Statut                           | Commentaire         |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName("HTML WHATWG", "timers-and-user-prompts.html#microtask-queuing", "self.queueMicrotask()")}} | {{Spec2("HTML WHATWG")}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.queueMicrotask")}}</p>
+{{Compat("api.WindowOrWorkerGlobalScope.queueMicrotask")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">Using microtasks in JavaScript with queueMicrotask()</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous">Asynchronous JavaScript</a></li>
- <li><a href="https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md">queueMicrotask explainer</a></li>
- <li><a href="https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/">Tasks, microtasks, queues and schedules</a> by Jake Archibald</li>
-</ul>
+- [Using microtasks in JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
+- [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
+- [queueMicrotask explainer](https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md)
+- [Tasks, microtasks, queues and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/) by Jake Archibald

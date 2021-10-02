@@ -8,29 +8,32 @@ tags:
   - Reference
 translation_of: Web/API/IDBDatabase/onerror
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>Le gestionnaire d'événement <strong><code>onerror</code></strong>, rattaché à  l'interface <code>IDBDatabase</code>, s’exécute au déclenchement de l'événement <code>error</code> qui se produit lorsque la connexion à la base de donnée échoue.</p>
+Le gestionnaire d'événement **`onerror`**, rattaché à  l'interface `IDBDatabase`, s’exécute au déclenchement de l'événement `error` qui se produit lorsque la connexion à la base de donnée échoue.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">db.onerror = function() { ... }</pre>
+```js
+db.onerror = function() { ... }
+```
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans cet exemple, on illustre un gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded")}} dans lequel on ajoute un magasin d'objet et les deux gestionnaires d'événements <code>onerror</code> et <code>onabort</code> afin de gérer les cas d'échec de la connexion.</p>
+Dans cet exemple, on illustre un gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded")}} dans lequel on ajoute un magasin d'objet et les deux gestionnaires d'événements `onerror` et `onabort` afin de gérer les cas d'échec de la connexion.
 
-<pre class="brush: js">DBOpenRequest.onupgradeneeded = function(event) {
+```js
+DBOpenRequest.onupgradeneeded = function(event) {
   var db = event.target.result;
 
   db.onerror = function() {
-    note.innerHTML += '&lt;li&gt;Erreur du chargement de la base de données.&lt;/li&gt;';
+    note.innerHTML += '<li>Erreur du chargement de la base de données.</li>';
   };
 
   db.onabort = function() {
-    note.innerHTML += '&lt;li&gt;L\'ouverture de la connexion à été annulé!&lt;/li&gt;';
+    note.innerHTML += '<li>L\'ouverture de la connexion à été annulé!</li>';
   };
 
   // Ajoute un magasin d'objet à la base de données
@@ -47,38 +50,26 @@ translation_of: Web/API/IDBDatabase/onerror
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += '&lt;li&gt;Le magasin d\'objets à été ajouté.&lt;/li&gt;';
-};</pre>
+  note.innerHTML += '<li>Le magasin d\'objets à été ajouté.</li>';
+};
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBDatabase-onerror', 'onerror')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                         | Commentaires |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBDatabase-onerror', 'onerror')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBDatabase.onerror")}}</p>
+{{Compat("api.IDBDatabase.onerror")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Manipuler IndexedDB</a></li>
- <li>Démarrer des transactions : {{domxref("IDBDatabase")}}</li>
- <li>Manipuler des transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}</li>
- <li>Manipuler des curseurs : {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence pour IndexedDB : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a></li>
-</ul>
+- [Manipuler IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Démarrer des transactions : {{domxref("IDBDatabase")}}
+- Manipuler des transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
+- Manipuler des curseurs : {{domxref("IDBCursor")}}
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)

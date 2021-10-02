@@ -3,30 +3,33 @@ title: MediaSource.MediaSource()
 slug: Web/API/MediaSource/MediaSource
 translation_of: Web/API/MediaSource/MediaSource
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>Le constructeur <code><strong>MediaSource()</strong></code> de l'interface {{domxref("MediaSource")}} construit et retourne un nouvel object <code>MediaSource</code> sans buffer associé</p>
+Le constructeur **`MediaSource()`** de l'interface {{domxref("MediaSource")}} construit et retourne un nouvel object `MediaSource` sans buffer associé
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var mediaSource = new MediaSource();</pre>
+```js
+var mediaSource = new MediaSource();
+```
 
-<h3 id="Paramèteres">Paramèteres</h3>
+### Paramèteres
 
-<p>Aucun.</p>
+Aucun.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Le fragement de code suivant est tiré d'un exemple simple écrit par par Nick Desaulniers (<a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">voir la démonstration complète</a>, ou <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">télécharger les sources</a> pour une meilleure compréhention.)</p>
+Le fragement de code suivant est tiré d'un exemple simple écrit par par Nick Desaulniers ([voir la démonstration complète](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html), ou [télécharger les sources](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) pour une meilleure compréhention.)
 
-<pre class="brush: js">var video = document.querySelector('video');
+```js
+var video = document.querySelector('video');
 
 var assetURL = 'frag_bunny.mp4';
 // A besoin d'être spécifique, Blink (moteur de rendu Chrome) demande le codec
 // ./mp4info frag_bunny.mp4 | grep Codec
 var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
+if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
   var mediaSource = new MediaSource;
   //console.log(mediaSource.readyState); // "closed"
   video.src = URL.createObjectURL(mediaSource);
@@ -36,19 +39,13 @@ if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
 }
 
 ...
-</pre>
+```
 
-<h2 id="Compatibilitée_des_navigateurs">Compatibilitée des navigateurs</h2>
+## Compatibilitée des navigateurs
 
-<div>
+{{Compat("api.MediaSource.MediaSource")}}
 
+## Voir aussi
 
-<p>{{Compat("api.MediaSource.MediaSource")}}</p>
-</div>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}

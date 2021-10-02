@@ -11,44 +11,39 @@ tags:
   - WebRTC
 translation_of: Web/API/MediaStreamEvent
 ---
-<p>{{APIRef("WebRTC")}}{{deprecated_header}}</p>
+{{APIRef("WebRTC")}}{{deprecated_header}}
 
-<p>L'interface <strong><code>MediaStreamEvent</code></strong> représente les événements qui se produisent en relation avec un {{domxref("MediaStream")}}. Deux événements de ce type peuvent être lancés: {{event("addstream")}} et {{event("removestream")}}.</p>
+L'interface **`MediaStreamEvent`** représente les événements qui se produisent en relation avec un {{domxref("MediaStream")}}. Deux événements de ce type peuvent être lancés: {{event("addstream")}} et {{event("removestream")}}.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Un {{domxref("MediaStreamEvent")}} étant un {{domxref("Event")}}, cet événement implémente également ces propriétés</em>.</p>
+_Un {{domxref("MediaStreamEvent")}} étant un {{domxref("Event")}}, cet événement implémente également ces propriétés_.
 
-<dl>
- <dt>{{domxref("MediaStreamEvent.stream")}} {{readOnlyInline}}</dt>
- <dd>Contient le {{domxref("MediaStream")}} contenant le flux associé à l'événement.</dd>
-</dl>
+- {{domxref("MediaStreamEvent.stream")}} {{readOnlyInline}}
+  - : Contient le {{domxref("MediaStream")}} contenant le flux associé à l'événement.
 
-<h2 id="Constructeurs">Constructeurs</h2>
+## Constructeurs
 
-<dl>
- <dt>{{domxref("MediaStreamEvent.MediaStreamEvent()", "MediaStreamEvent()")}}</dt>
- <dd>Renvoie un nouveau <code>MediaStreamEvent</code>. Il prend deux paramètres, le premier étant un {{domxref("DOMString")}} représentant le type de l'événement; le second un dictionnaire contenant le {{domxref("MediaStream")}} auquel il se réfère.</dd>
-</dl>
+- {{domxref("MediaStreamEvent.MediaStreamEvent()", "MediaStreamEvent()")}}
+  - : Renvoie un nouveau `MediaStreamEvent`. Il prend deux paramètres, le premier étant un {{domxref("DOMString")}} représentant le type de l'événement; le second un dictionnaire contenant le {{domxref("MediaStream")}} auquel il se réfère.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Un {{domxref("MediaStreamEvent")}} étant un {{domxref("Event")}}, cet événement implémente également ces propriétés</em>.  <em>Il n'y a pas de méthode <em>{{domxref("MediaStreamEvent")}}</em> spécifique.</em></p>
+_Un {{domxref("MediaStreamEvent")}} étant un {{domxref("Event")}}, cet événement implémente également ces propriétés_.  _Il n'y a pas de méthode _{{domxref("MediaStreamEvent")}}_ spécifique._
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">pc.onaddstream = function( ev ) {
+```js
+pc.onaddstream = function( ev ) {
   alert("Un stream (id: '" + ev.stream.id + "') a été ajouté à cette connexion.");
 };
-</pre>
+```
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.MediaStreamEvent")}}</p>
+{{Compat("api.MediaStreamEvent")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/WebRTC_API">WebRTC</a></li>
- <li>Sa cible habituelle: {{domxref("RTCPeerConnection")}}.</li>
-</ul>
+- [WebRTC](/fr/docs/Web/API/WebRTC_API)
+- Sa cible habituelle: {{domxref("RTCPeerConnection")}}.

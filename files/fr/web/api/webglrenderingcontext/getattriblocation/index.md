@@ -9,61 +9,42 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/getAttribLocation
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>La méthode <strong><code>WebGLRenderingContext.getAttribLocation()</code></strong> de l'<a href="/fr-FR/docs/Web/API/WebGL_API">API WebGL</a> retourne l'emplacement d'une variable d'attribut dans le {{domxref("WebGLProgram")}} indiqué.</p>
+La méthode **`WebGLRenderingContext.getAttribLocation()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) retourne l'emplacement d'une variable d'attribut dans le {{domxref("WebGLProgram")}} indiqué.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">GLint <var>gl</var>.getAttribLocation(<var>programme</var>, <var>nom</var>);
-</pre>
+    GLint gl.getAttribLocation(programme, nom);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>programme</dt>
- <dd>Un {{domxref("WebGLProgram")}} contenant la variable d'attribut.</dd>
- <dt>nom</dt>
- <dd>Un {{domxref("DOMString")}} indiquant le nom de la variable d'attribut dont l'emplacement est à retourner.</dd>
-</dl>
+- programme
+  - : Un {{domxref("WebGLProgram")}} contenant la variable d'attribut.
+- nom
+  - : Un {{domxref("DOMString")}} indiquant le nom de la variable d'attribut dont l'emplacement est à retourner.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Un nombre {{domxref("GLint")}} indiquant l'emplacement du nom de la variable si trouvé. Retourne -1 sinon.</p>
+Un nombre {{domxref("GLint")}} indiquant l'emplacement du nom de la variable si trouvé. Retourne -1 sinon.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">gl.getAttribLocation(programme, 'vColor');
-</pre>
+```js
+gl.getAttribLocation(programme, 'vColor');
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.10", "getAttribLocation")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glGetAttribLocation.xml", "glGetAttribLocation")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>Page principale de l'API OpenGL.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                               | Commentaire                      |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------- |
+| {{SpecName('WebGL', "#5.14.10", "getAttribLocation")}}                                 | {{Spec2('WebGL')}}             | Définition initiale.             |
+| {{SpecName('OpenGL ES 2.0', "glGetAttribLocation.xml", "glGetAttribLocation")}} | {{Spec2('OpenGL ES 2.0')}} | Page principale de l'API OpenGL. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WebGLRenderingContext.getAttribLocation")}}</p>
+{{Compat("api.WebGLRenderingContext.getAttribLocation")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getUniformLocation()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getUniformLocation()")}}

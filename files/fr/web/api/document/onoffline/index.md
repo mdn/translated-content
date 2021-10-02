@@ -8,6 +8,6 @@ tags:
   - Propriétés
 translation_of: Web/API/Document/onoffline
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Le gestionnaire d'évènements est appelé lorsqu'un évènement {{event("offline")}} est lancé sur le corps (<em>body</em>) et propagé, quand la propriété <a href="/fr/docs/Web/API/NavigatorOnLine/onLine">navigator.onLine</a> change et devient <code>false</code> (<em>fausse</em>).</p>
+Le gestionnaire d'évènements est appelé lorsqu'un évènement {{event("offline")}} est lancé sur le corps (_body_) et propagé, quand la propriété [navigator.onLine](/fr/docs/Web/API/NavigatorOnLine/onLine) change et devient `false` (_fausse_).

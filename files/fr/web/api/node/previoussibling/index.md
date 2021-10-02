@@ -8,49 +8,46 @@ tags:
   - Propriétés
 translation_of: Web/API/Node/previousSibling
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La propriété en lecture seule  <code><strong>Node.previousSibling</strong></code> renvoie le nœud (<code>node</code>) précédant immédiatement le nœud courant dans la liste {{domxref("Node.childNodes", "childNodes")}} de son parent, ou <code>null</code> s'il s'agit du premier nœud de la liste.</p>
+La propriété en lecture seule  **`Node.previousSibling`** renvoie le nœud (`node`) précédant immédiatement le nœud courant dans la liste {{domxref("Node.childNodes", "childNodes")}} de son parent, ou `null` s'il s'agit du premier nœud de la liste.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>previousNode</var> = <em>node</em>.previousSibling;
-</pre>
+    previousNode = node.previousSibling;
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">// &lt;a&gt;&lt;b1 id="b1"/&gt;&lt;b2 id="b2"/&gt;&lt;/a&gt;
+```js
+// <a><b1 id="b1"/><b2 id="b2"/></a>
 
 alert(document.getElementById("b1").previousSibling); // null
-alert(document.getElementById("b2").previousSibling.id); // "b1"</pre>
+alert(document.getElementById("b2").previousSibling.id); // "b1"
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p></p><p>Les navigateurs basés sur Gecko insèrent des nœuds texte dans un document pour représenter des espaces
-    vides dans le balisage source. Par conséquent, un nœud obtenu par exemple via <a href="/fr/docs/Web/API/Node/firstChild"><code>Node.firstChild</code></a> ou
-    <a href="/fr/docs/Web/API/Node/previousSibling" title='{{APIRef("DOM")}}'><code>Node.previousSibling</code></a> peut faire référence à un nœud texte contenant des espaces plutôt qu'au véritable élément
-    que l'auteur comptait obtenir.</p>
+Les navigateurs basés sur Gecko insèrent des nœuds texte dans un document pour représenter des espaces
+vides dans le balisage source. Par conséquent, un nœud obtenu par exemple via [`Node.firstChild`](/fr/docs/Web/API/Node/firstChild) ou
+[`Node.previousSibling`](/fr/docs/Web/API/Node/previousSibling "{{APIRef("DOM")}}") peut faire référence à un nœud texte contenant des espaces plutôt qu'au véritable élément
+que l'auteur comptait obtenir.
 
-    <p>Consultez <a href="/fr/docs/Gestion_des_espaces_dans_le_DOM">Gestion des espaces dans le DOM</a>
-    et <a href="http://www.w3.org/DOM/faq.html#emptytext" rel="noopener"><i>Why are some Text nodes empty?</i>
-    dans la FAQ DOM 3 du W3C</a> pour plus d'informations.</p><p></p>
+Consultez [Gestion des espaces dans le DOM](/fr/docs/Gestion_des_espaces_dans_le_DOM)
+et [_Why are some Text nodes empty?_
+dans la FAQ DOM 3 du W3C](http://www.w3.org/DOM/faq.html#emptytext) pour plus d'informations.
 
-<p>L'opération inverse <code><a href="/fr/docs/Web/API/Node/nextSibling">Node.nextSibling</a></code> permet de rechercher l'élément suivant.</p>
+L'opération inverse [`Node.nextSibling`](/fr/docs/Web/API/Node/nextSibling) permet de rechercher l'élément suivant.
 
-<h2 id="Sp.C3.A9cification">Spécifications</h2>
+## Spécifications
 
-<ul>
- <li><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling">DOM Level 1 Core: previousSibling</a> <small>— <a href="http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling">traduction</a> (non normative)</small></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8">DOM Level 2 Core: previousSibling</a> <small>— <a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8">traduction</a> (non normative)</small></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-640FB3C8">DOM Level 3 Core: previousSibling</a></li>
-</ul>
+- [DOM Level 1 Core: previousSibling](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling) — [traduction](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling) (non normative)
+- [DOM Level 2 Core: previousSibling](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8) — [traduction](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8) (non normative)
+- [DOM Level 3 Core: previousSibling](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-640FB3C8)
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.Node.previousSibling")}}
 
+## Voir aussi
 
-<p>{{Compat("api.Node.previousSibling")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<p>{{domxref("Node.nextSibling")}}</p>
+{{domxref("Node.nextSibling")}}

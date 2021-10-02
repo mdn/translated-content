@@ -10,63 +10,43 @@ tags:
   - Vitesse
 translation_of: Web/API/DeviceMotionEvent/rotationRate
 ---
-<p>{{ ApiRef("Device Orientation Events") }}</p>
+{{ ApiRef("Device Orientation Events") }}
 
-<p>La propriété <code><strong>rotationRate</strong></code> renvoie la vitesse de rotation de l'appareil autour de chacun de ses axes en degrés par seconde.</p>
+La propriété **`rotationRate`** renvoie la vitesse de rotation de l'appareil autour de chacun de ses axes en degrés par seconde.
 
-<div class="note">
-  <p><strong>Note :</strong> Si le matériel n'est pas capable de fournir cette information, la propriété renvoie <code>null</code>.</p>
-</div>
+> **Note :** Si le matériel n'est pas capable de fournir cette information, la propriété renvoie `null`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var rates = <em>instanceOfDeviceMotionEvent</em>.rotationRate;
-</pre>
+    var rates = instanceOfDeviceMotionEvent.rotationRate;
 
-<h2 id="Valeurs">Valeurs</h2>
+## Valeurs
 
-<p>La propriété <code>rotationRates</code> est un objet en lecture seule décrivant la vitesse de rotation d'un appareil autour de chacun de ses axes :</p>
+La propriété `rotationRates` est un objet en lecture seule décrivant la vitesse de rotation d'un appareil autour de chacun de ses axes :
 
-<dl>
- <dt><code>alpha</code></dt>
- <dd>La vitesse de rotation de l'appareil sur son axe Z ; c'est-à-dire déplacé autour d'une ligne perpendiculaire à l'écran.</dd>
- <dt><code>beta</code></dt>
- <dd>La vitesse de rotation de l'appareil sur son axe X ; c'est-à-dire de l'avant vers l'arrière.</dd>
- <dt><code>gamma</code></dt>
- <dd>La vitesse de rotation de l'appareil sur son axe Y ; c'est-à-dire d'un côté à l'autre.</dd>
-</dl>
+- `alpha`
+  - : La vitesse de rotation de l'appareil sur son axe Z ; c'est-à-dire déplacé autour d'une ligne perpendiculaire à l'écran.
+- `beta`
+  - : La vitesse de rotation de l'appareil sur son axe X ; c'est-à-dire de l'avant vers l'arrière.
+- `gamma`
+  - : La vitesse de rotation de l'appareil sur son axe Y ; c'est-à-dire d'un côté à l'autre.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Device Orientation')}}</td>
-   <td>{{Spec2('Device Orientation')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                | État                                     | Commentaires         |
+| -------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DeviceMotionEvent.rotationRate")}}</p>
+{{Compat("api.DeviceMotionEvent.rotationRate")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{ domxref("DeviceMotionEvent") }}</li>
- <li>{{ event("devicemotion") }}</li>
- <li>{{ domxref("window.ondevicemotion") }}</li>
- <li>{{ event("deviceorientation") }}</li>
- <li>{{ domxref("DeviceOrientationEvent") }}</li>
- <li><a href="/fr/docs/WebAPI/Detecting_device_orientation">Détecter l'orientation de l'appareil</a></li>
- <li><a href="/fr/docs/Web/Guide/DOM/Events/Les_donn%C3%A9es_d_orientation_et_de_mouvement_expliqu%C3%A9es">Les données d'orientation et de mouvement expliquées</a></li>
-</ul>
+- {{ domxref("DeviceMotionEvent") }}
+- {{ event("devicemotion") }}
+- {{ domxref("window.ondevicemotion") }}
+- {{ event("deviceorientation") }}
+- {{ domxref("DeviceOrientationEvent") }}
+- [Détecter l'orientation de l'appareil](/fr/docs/WebAPI/Detecting_device_orientation)
+- [Les données d'orientation et de mouvement expliquées](/fr/docs/Web/Guide/DOM/Events/Les_donn%C3%A9es_d_orientation_et_de_mouvement_expliqu%C3%A9es)

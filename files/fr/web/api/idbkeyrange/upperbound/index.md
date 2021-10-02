@@ -9,43 +9,44 @@ tags:
   - Reference
 translation_of: Web/API/IDBKeyRange/upperBound
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>La méthode <strong><code>upperBound()</code></strong>, rattachée à l'interface  {{domxref("IDBKeyRange")}}, crée un intervalle de clé avec une borne supérieure.</p>
+La méthode **`upperBound()`**, rattachée à l'interface  {{domxref("IDBKeyRange")}}, crée un intervalle de clé avec une borne supérieure.
 
-<p>Par défaut, la borne est inclue dans l'intervalle (autrement dit, il est fermé à droite).</p>
+Par défaut, la borne est inclue dans l'intervalle (autrement dit, il est fermé à droite).
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">IDBKeyRange.upperBound(borne);
-IDBKeyRange.upperBound(borne, ouvert);</pre>
+```js
+IDBKeyRange.upperBound(borne);
+IDBKeyRange.upperBound(borne, ouvert);
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>borne</code></dt>
- <dd>La valeur de la borne supérieure pour l'intervalle.</dd>
- <dt><code>ouvert {{optional_inline}}</code></dt>
- <dd>Ce booléen indique si l'intervalle est ouvert à droite (autrement dit, s'il vaut <code>false</code> la borne est inclue et s'il vaut <code>true</code> la borne n'est pas inclue dans l'intervalle).</dd>
-</dl>
+- `borne`
+  - : La valeur de la borne supérieure pour l'intervalle.
+- `ouvert {{optional_inline}}`
+  - : Ce booléen indique si l'intervalle est ouvert à droite (autrement dit, s'il vaut `false` la borne est inclue et s'il vaut `true` la borne n'est pas inclue dans l'intervalle).
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un objet {{domxref("IDBKeyRange")}} qui correspond à l'intervalle de clé créé.</p>
+Un objet {{domxref("IDBKeyRange")}} qui correspond à l'intervalle de clé créé.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Cette méthode peut lever une exception {{domxref("DOMException")}} de type <code>DataError</code> lorsque la valeur passée en paramètre n'est pas une clé valide.</p>
+Cette méthode peut lever une exception {{domxref("DOMException")}} de type `DataError` lorsque la valeur passée en paramètre n'est pas une clé valide.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple qui suit, on illustre comment créer un intervalle de clé avec une borne supérieure, on utilise <code>keyRangeValue = IDBKeyRange.upperBound("F");</code> — cela permet de créer un intervalle qui contient "F" et les valeurs inférieures. On ouvre ensuite une transaction grâce à {{domxref("IDBTransaction")}}) puis un magasin d'objet et un curseur avec la méthode {{domxref("IDBObjectStore.openCursor")}} à laquelle on associe l'intervalle de clé <code>keyRangeValue</code>.</p>
+Dans l'exemple qui suit, on illustre comment créer un intervalle de clé avec une borne supérieure, on utilise `keyRangeValue = IDBKeyRange.upperBound("F");` — cela permet de créer un intervalle qui contient "F" et les valeurs inférieures. On ouvre ensuite une transaction grâce à {{domxref("IDBTransaction")}}) puis un magasin d'objet et un curseur avec la méthode {{domxref("IDBObjectStore.openCursor")}} à laquelle on associe l'intervalle de clé `keyRangeValue`.
 
-<p>Si on a avait utilisé <code>IDBKeyRange.upperBound("F", true);</code>, "F" n'aurait pas fait partie de l'intervalle.</p>
+Si on a avait utilisé `IDBKeyRange.upperBound("F", true);`, "F" n'aurait pas fait partie de l'intervalle.
 
-<pre class="brush: js">function displayData() {
+```js
+function displayData() {
   var keyRangeValue = IDBKeyRange.upperBound("F");
 
   var transaction = db.transaction(['fThings'], 'readonly');
@@ -55,7 +56,7 @@ IDBKeyRange.upperBound(borne, ouvert);</pre>
     var cursor = event.target.result;
       if(cursor) {
         var listItem = document.createElement('li');
-        listItem.innerHTML = '&lt;strong&gt;' + cursor.value.fThing + '&lt;/strong&gt;, ' + cursor.value.fRating;
+        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
         list.appendChild(listItem);
 
         cursor.continue();
@@ -63,41 +64,27 @@ IDBKeyRange.upperBound(borne, ouvert);</pre>
         console.log('Les éléments sont affichés.');
       }
     };
-  };</pre>
+  };
+```
 
-<div class="note">
-<p><strong>Note :</strong> Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter <a href="https://github.com/mdn/IDBKeyRange-example">le dépôt GitHub IDBKeyRange-example</a> (<a href="https://mdn.github.io/IDBKeyRange-example/">ainsi que la démonstration associée</a>).</p>
-</div>
+> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/IDBKeyRange-example) ([ainsi que la démonstration associée](https://mdn.github.io/IDBKeyRange-example/)).
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBKeyRange-upperBound-IDBKeyRange-any-upper-boolean-open', 'upperBound()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                    | État                         | Commentaires |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBKeyRange-upperBound-IDBKeyRange-any-upper-boolean-open', 'upperBound()')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBKeyRange.upperBound")}}</p>
+{{Compat("api.IDBKeyRange.upperBound")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
- <li>Initier une connexion : {{domxref("IDBDatabase")}}</li>
- <li>Utiliser les transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
- <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
-</ul>
+- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Initier une connexion : {{domxref("IDBDatabase")}}
+- Utiliser les transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
+- Utiliser les curseurs {{domxref("IDBCursor")}}
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).

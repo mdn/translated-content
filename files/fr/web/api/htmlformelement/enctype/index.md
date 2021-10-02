@@ -3,24 +3,23 @@ title: HTMLFormElement.enctype
 slug: Web/API/HTMLFormElement/enctype
 translation_of: Web/API/HTMLFormElement/enctype
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>La propriété <code><strong>HTMLFormElement.enctype</strong></code> représente le type de contenu de l'élément  {{HTMLElement("form")}}.</p>
+La propriété **`HTMLFormElement.enctype`** représente le type de contenu de l'élément  {{HTMLElement("form")}}.
 
-<p>Le type d'encodage généralement utilisé est "application/x-www-form-urlencoded".</p>
+Le type d'encodage généralement utilisé est "application/x-www-form-urlencoded".
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>string</em> = form.enctype
-form.enctype = <em>string</em>
-</pre>
+    string = form.enctype
+    form.enctype = string
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="eval">form.enctype = "application/x-www-form-urlencoded";</pre>
+    form.enctype = "application/x-www-form-urlencoded";
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<p><a href="http://www.w3.org/TR/html5/forms.html#attr-fs-enctype">HTML 5, Section 4.10.19.6, Form submission</a></p>
+[HTML 5, Section 4.10.19.6, Form submission](http://www.w3.org/TR/html5/forms.html#attr-fs-enctype)
 
-<p><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-84227810">DOM Level 2 HTML: enctype</a></p>
+[DOM Level 2 HTML: enctype](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-84227810)

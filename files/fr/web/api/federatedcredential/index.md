@@ -8,39 +8,36 @@ tags:
   - Reference
 translation_of: Web/API/FederatedCredential
 ---
-<p>{{SeeCompatTable}}{{APIRef("Credential Management API")}}</p>
+{{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
-<p>L'interface <strong><code>FederatedCredential</code></strong>, rattachée à l'<a href="/en-US/docs/Web/API/Credential_Management_API">API Credential Management</a>, donne des détails quant aux informations d'authentification fournies par un fournisseur d'identité fédéré. Un fournisseur d'identité fédéré est une entité en laquelle un site web à confiance pour authentifier un utilisateur et qui fournit une API à cet effet. <a href="http://openid.net/developers/specs/">OpenID Connect</a> est un exemple de <em>framework</em> pour construire un fournisseur d'identité fédéré.</p>
+L'interface **`FederatedCredential`**, rattachée à l'[API Credential Management](/en-US/docs/Web/API/Credential_Management_API), donne des détails quant aux informations d'authentification fournies par un fournisseur d'identité fédéré. Un fournisseur d'identité fédéré est une entité en laquelle un site web à confiance pour authentifier un utilisateur et qui fournit une API à cet effet. [OpenID Connect](http://openid.net/developers/specs/) est un exemple de _framework_ pour construire un fournisseur d'identité fédéré.
 
-<p>Pour les navigateurs qui le prennent en charge, une instance de cette interface pourra être passée comme propriété <code>credential</code> de l'objet <code>init</code> pour la méthode globale {{domxref('fetch')}}.</p>
+Pour les navigateurs qui le prennent en charge, une instance de cette interface pourra être passée comme propriété `credential` de l'objet `init` pour la méthode globale {{domxref('fetch')}}.
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{domxref("FederatedCredential.FederatedCredential()","FederatedCredential()")}}</dt>
- <dd>Crée un nouvel objet <code>FederatedCredential</code>.</dd>
-</dl>
+- {{domxref("FederatedCredential.FederatedCredential()","FederatedCredential()")}}
+  - : Crée un nouvel objet `FederatedCredential`.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Hérite des propriétés de l'interface parente : {{domxref("Credential")}}.</em></p>
+_Hérite des propriétés de l'interface parente : {{domxref("Credential")}}._
 
-<dl>
- <dt>{{domxref("FederatedCredential.provider")}} {{readonlyInline}}</dt>
- <dd>Une chaîne de caractères {{domxref("USVString")}} qui contient l'information sur le fournisseur d'authentification fédéré.</dd>
-</dl>
+- {{domxref("FederatedCredential.provider")}} {{readonlyInline}}
+  - : Une chaîne de caractères {{domxref("USVString")}} qui contient l'information sur le fournisseur d'authentification fédéré.
 
-<h3 id="Gestionnaires_d'évènements">Gestionnaires d'évènements</h3>
+### Gestionnaires d'évènements
 
-<p>Aucun.</p>
+Aucun.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p>Aucun.</p>
+Aucun.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var cred = new FederatedCredential({
+```js
+var cred = new FederatedCredential({
   id: id,
   name: name,
   provider: 'https://account.google.com',
@@ -51,27 +48,15 @@ translation_of: Web/API/FederatedCredential
 navigator.credentials.store(cred)
   .then(function() {
   // Faire quelque chose
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Credential Management')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                    | État                                         | Commentaires         |
+| ------------------------------------------------ | -------------------------------------------- | -------------------- |
+| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.FederatedCredential")}}</p>
+{{Compat("api.FederatedCredential")}}

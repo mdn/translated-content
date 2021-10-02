@@ -9,37 +9,34 @@ tags:
   - Resource Timing API
 translation_of: Web/API/PerformanceServerTiming
 ---
-<div>{{APIRef("Resource Timing API")}} {{securecontext_header}}</div>
+{{APIRef("Resource Timing API")}} {{securecontext_header}}
 
-<p>L'interface <strong><code>PerformanceServerTiming</code></strong> présente des métriques de serveur qui sont envoyées avec la réponse dans l'en-tête <a href="/fr/docs/Web/HTTP/Headers/Server-Timing"><code>Server-Timing</code></a> dans l'en-tête HTTP.</p>
+L'interface **`PerformanceServerTiming`** présente des métriques de serveur qui sont envoyées avec la réponse dans l'en-tête [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing) dans l'en-tête HTTP.
 
-<p>Cette interface est limitée à la même origine, mais vous pouvez utiliser l'en-tête <a href="/fr/docs/Web/HTTP/Headers/Timing-Allow-Origin"><code>Timing-Allow-Origin</code></a> pour spécifier les domaines qui sont autorisés à accéder aux paramètres du serveur. Notez que cette interface n'est disponible que dans des contextes sécurisés (HTTPS) dans certains navigateurs.</p>
+Cette interface est limitée à la même origine, mais vous pouvez utiliser l'en-tête [`Timing-Allow-Origin`](/fr/docs/Web/HTTP/Headers/Timing-Allow-Origin) pour spécifier les domaines qui sont autorisés à accéder aux paramètres du serveur. Notez que cette interface n'est disponible que dans des contextes sécurisés (HTTPS) dans certains navigateurs.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Properties">Propriétés</h2>
+## Propriétés
 
-<dl>
-  <dt><a href="/fr/docs/Web/API/PerformanceServerTiming/description"><code>PerformanceServerTiming.description</code></a>{{readonlyInline}}</dt>
-  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> décrivant la métrique spécifiée par le serveur, ou une chaîne vide.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceServerTiming/duration"><code>PerformanceServerTiming.duration</code></a>{{readonlyInline}}</dt>
-  <dd>Un double qui contient la durée de la métrique spécifiée par le serveur, ou la valeur <code>0.0</code>.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceServerTiming/name"><code>PerformanceServerTiming.name</code></a>{{readonlyInline}}</dt>
-  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> avec le nom de la métrique spécifiée par le serveur.</dd>
-</dl>
+- [`PerformanceServerTiming.description`](/fr/docs/Web/API/PerformanceServerTiming/description){{readonlyInline}}
+  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) décrivant la métrique spécifiée par le serveur, ou une chaîne vide.
+- [`PerformanceServerTiming.duration`](/fr/docs/Web/API/PerformanceServerTiming/duration){{readonlyInline}}
+  - : Un double qui contient la durée de la métrique spécifiée par le serveur, ou la valeur `0.0`.
+- [`PerformanceServerTiming.name`](/fr/docs/Web/API/PerformanceServerTiming/name){{readonlyInline}}
+  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) avec le nom de la métrique spécifiée par le serveur.
 
-<h2 id="Methods">Méthodes</h2>
+## Méthodes
 
-<dl>
-  <dt><a href="/fr/docs/Web/API/PerformanceServerTiming/toJSON()"><code>PerformanceServerTiming.toJSON()</code></a></dt>
-  <dd>Retourne une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui est la représentation JSON de l'objet <code>PerformanceServerTiming</code>.</dd>
-</dl>
+- [`PerformanceServerTiming.toJSON()`](</fr/docs/Web/API/PerformanceServerTiming/toJSON()>)
+  - : Retourne une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) qui est la représentation JSON de l'objet `PerformanceServerTiming`.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>Étant donné un serveur qui envoie l'en-tête <a href="/fr/docs/Web/HTTP/Headers/Server-Timing"><code>Server-Timing</code></a>, par exemple un serveur node.js comme celui-ci :</p>
+Étant donné un serveur qui envoie l'en-tête [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing), par exemple un serveur node.js comme celui-ci :
 
-<pre class="brush: js">const http = require('http');
+```js
+const http = require('http');
 
 function requestHandler(request, response) {
   const headers = {
@@ -51,48 +48,35 @@ function requestHandler(request, response) {
   };
   response.writeHead(200, headers);
   response.write('');
-  return setTimeout(_ =&gt; {
+  return setTimeout(_ => {
     response.end();
   }, 1000)
 };
 
-http.createServer(requestHandler).listen(3000).on('error', console.error);</pre>
+http.createServer(requestHandler).listen(3000).on('error', console.error);
+```
 
-<p>Les entrées <code>PerformanceServerTiming</code> sont désormais observables depuis JavaScript via la propriété <a href="/fr/docs/Web/API/PerformanceResourceTiming/serverTiming"><code>PerformanceResourceTiming.serverTiming</code></a> :</p>
+Les entrées `PerformanceServerTiming` sont désormais observables depuis JavaScript via la propriété [`PerformanceResourceTiming.serverTiming`](/fr/docs/Web/API/PerformanceResourceTiming/serverTiming) :
 
-<pre class="brush: js">let entries = performance.getEntriesByType('resource');
+```js
+let entries = performance.getEntriesByType('resource');
 console.log(entries[0].serverTiming);
 // 0: PerformanceServerTiming {name: "cache", duration: 23.2, description: "Cache Read"}
 // 1: PerformanceServerTiming {name: "db", duration: 53, description: ""}
 // 2: PerformanceServerTiming {name: "app", duration: 47.2, description: ""}
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Server Timing','#the-performanceservertiming-interface', 'PerformanceServerTiming')}}</td>
-      <td>{{Spec2('Server Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                    | Statut                               | Commentaire          |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('Server Timing','#the-performanceservertiming-interface', 'PerformanceServerTiming')}} | {{Spec2('Server Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceServerTiming")}}</p>
+{{Compat("api.PerformanceServerTiming")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/HTTP/Headers/Server-Timing"><code>Server-Timing</code></a></li>
-  <li><a href="/fr/docs/Web/API/PerformanceResourceTiming/serverTiming"><code>PerformanceResourceTiming.serverTiming</code></a></li>
-</ul>
+- [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing)
+- [`PerformanceResourceTiming.serverTiming`](/fr/docs/Web/API/PerformanceResourceTiming/serverTiming)

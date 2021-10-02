@@ -3,41 +3,25 @@ title: PositionOptions.maximumAge
 slug: Web/API/PositionOptions/maximumAge
 translation_of: Web/API/PositionOptions/maximumAge
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>La propriété <code><strong>PositionOptions.maximumAge</strong></code> est de type <code>long</code> positif indiquant l'âge maximal en millisecondes d'une position en cache possible qu'il est acceptable de renvoyer. Si la valeur est <code>0</code>, cela signifie que le périphérique ne peut pas utiliser une position mise en cache et doit tenter de récupérer la position actuelle réelle. Si la valeur est <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code> l'appareil doit renvoyer une position mise en cache indépendamment de son âge.</p>
+La propriété **`PositionOptions.maximumAge`** est de type `long` positif indiquant l'âge maximal en millisecondes d'une position en cache possible qu'il est acceptable de renvoyer. Si la valeur est `0`, cela signifie que le périphérique ne peut pas utiliser une position mise en cache et doit tenter de récupérer la position actuelle réelle. Si la valeur est [`Infinity`](/en-US/docs/JavaScript/Reference/Global_Objects/Infinity) l'appareil doit renvoyer une position mise en cache indépendamment de son âge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><var>positionOptions</var>.maximumAge = <var>timeLength</var>
-</pre>
+    positionOptions.maximumAge = timeLength
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Geolocation', '#maximumage', 'PositionOptions.maximumAge')}}</td>
-      <td>{{Spec2('Geolocation')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                    | Statut                           | Commentaire          |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('Geolocation', '#maximumage', 'PositionOptions.maximumAge')}} | {{Spec2('Geolocation')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PositionOptions.maximumAge")}}</p>
+{{Compat("api.PositionOptions.maximumAge")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/WebAPI/Using_geolocation">Utiliser geolocation</a></li>
-  <li>L'interface {{domxref("PositionOptions")}} à laquelle il appartient.</li>
-</ul>
+- [Utiliser geolocation](/fr/docs/WebAPI/Using_geolocation)
+- L'interface {{domxref("PositionOptions")}} à laquelle il appartient.

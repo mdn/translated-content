@@ -3,43 +3,38 @@ title: Document.width
 slug: Web/API/Document/width
 translation_of: Web/API/Document/width
 ---
-<div>{{APIRef("DOM")}} {{Obsolete_header}}</div>
+{{APIRef("DOM")}} {{Obsolete_header}}
 
-<div class="note">
-<p><strong>Note :</strong> À partir de {{Gecko("6.0")}},<code> document.width </code>n'est plus pris en charge. Au lieu de cela, utilisez document.body.clientWidth. Voir {{domxref("element.clientWidth")}}.</p>
-</div>
+> **Note :** À partir de {{Gecko("6.0")}},` document.width `n'est plus pris en charge. Au lieu de cela, utilisez document.body.clientWidth. Voir {{domxref("element.clientWidth")}}.
 
-<p>Renvoie la largeur de l'élément {{HTMLElement("body")}} du document courrent en pixels.</p>
+Renvoie la largeur de l'élément {{HTMLElement("body")}} du document courrent en pixels.
 
-<p>Non pris en charge par Internet Explorer.</p>
+Non pris en charge par Internet Explorer.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>pixels</em> = document.width;
-</pre>
+    pixels = document.width;
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">function init() {
+```js
+function init() {
     alert("La largeur du document est " + document.width + " pixels.");
 }
-</pre>
+```
 
-<h2 id="Alternatives">Alternatives</h2>
+## Alternatives
 
-<pre class="syntaxbox">document.body.clientWidth              /* largeur de &lt;body&gt; */
-document.documentElement.clientWidth   /* largeur de &lt;html&gt; */
-window.innerWidth                      /* largeur de la fenêtre */
-</pre>
+    document.body.clientWidth              /* largeur de <body> */
+    document.documentElement.clientWidth   /* largeur de <html> */
+    window.innerWidth                      /* largeur de la fenêtre */
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<p>HTML5</p>
+HTML5
 
-<h2 id="See_also">Voir également</h2>
+## Voir également
 
-<ul>
- <li>{{domxref("document.height")}}</li>
- <li>{{domxref("Element.clientWidth")}}</li>
- <li>{{domxref("Element.scrollWidth")}}</li>
-</ul>
+- {{domxref("document.height")}}
+- {{domxref("Element.clientWidth")}}
+- {{domxref("Element.scrollWidth")}}

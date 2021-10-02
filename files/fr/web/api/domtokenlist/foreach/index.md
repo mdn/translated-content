@@ -11,49 +11,49 @@ tags:
   - Pour chaque
 translation_of: Web/API/DOMTokenList/forEach
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La méthode <strong><code>forEach()</code></strong> de l'interface {{domxref("DOMTokenList")}} appelle le retour donné en paramètre, un pour chaque paire de valeurs dans la liste, dans l'ordre d'insertion.</p>
+La méthode **`forEach()`** de l'interface {{domxref("DOMTokenList")}} appelle le retour donné en paramètre, un pour chaque paire de valeurs dans la liste, dans l'ordre d'insertion.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>tokenList</var><em>.</em>forEach(<var>callback</var>);
-<em>tokenList.</em>forEach<em>(callback, argument);</em>
-</pre>
+    tokenList.forEach(callback);
+    tokenList.forEach(callback, argument);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>Fonction à exécuter pour chaque élément, prenant éventuellement 3 arguments :
- <dl>
-  <dt><em><code>currentValue</code></em></dt>
-  <dd>L'élément en cours de traitement dans le tableau.</dd>
-  <dt><code><em>currentIndex</em></code></dt>
-  <dd>L'index de l'élément en cours de traitement dans le tableau.</dd>
-  <dt><em><code>listObj</code></em></dt>
-  <dd>Le tableau que <code>forEach()</code> est en train d'appliquer.</dd>
- </dl>
- </dd>
- <dt><em><code>argument</code></em><code> {{Optional_inline}}</code></dt>
- <dd>Valeur à utiliser comme {{jsxref("this")}} lors de l'exécution du <code>callback</code> (<em>rappel</em>).</dd>
-</dl>
+- `callback`
 
-<h3 id="Valeur_renvoyée">Valeur renvoyée</h3>
+  - : Fonction à exécuter pour chaque élément, prenant éventuellement 3 arguments :
 
-<p>{{jsxref('undefined')}} (<em>indéfinie</em>).</p>
+    - _`currentValue`_
+      - : L'élément en cours de traitement dans le tableau.
+    - `currentIndex`
+      - : L'index de l'élément en cours de traitement dans le tableau.
+    - _`listObj`_
+      - : Le tableau que `forEach()` est en train d'appliquer.
 
-<h2 id="Exemple">Exemple</h2>
+- _`argument`_` {{Optional_inline}}`
+  - : Valeur à utiliser comme {{jsxref("this")}} lors de l'exécution du `callback` (_rappel_).
 
-<p>Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que <code>DOMTokenList</code> en utilisant {{domxref("Element.classList")}}. Nous récupérons un itérateur contenant les valeurs avec <code>forEach()</code> et écrivons chacune d'elles dans le  {{domxref("Node.textContent")}} du <code>&lt;span&gt;</code> pendant l'exécution de la fonction interne <code>forEach()</code>.</p>
+### Valeur renvoyée
 
-<h3 id="HTML">HTML</h3>
+{{jsxref('undefined')}} (_indéfinie_).
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+## Exemple
 
-<h3 id="JavaScript">JavaScript</h3>
+Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Nous récupérons un itérateur contenant les valeurs avec `forEach()` et écrivons chacune d'elles dans le  {{domxref("Node.textContent")}} du `<span>` pendant l'exécution de la fonction interne `forEach()`.
 
-<pre class="brush: js">var span = document.querySelector("span");
+### HTML
+
+```html
+<span class="a b c"></span>
+```
+
+### JavaScript
+
+```js
+var span = document.querySelector("span");
 var classes = span.classList;
 var iterator = classes.values();
 
@@ -62,35 +62,23 @@ classes.forEach(
     span.textContent += value + ' ' + key + "/" + this + '  ++  ';
   },
   "arg"
-);</pre>
+);
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{ EmbedLiveSample('Example', '100%', 60) }}</p>
+{{ EmbedLiveSample('Example', '100%', 60) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#interface-domtokenlist','forEach() (as iterable&lt;Node&gt;)')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | Statut                           | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('DOM WHATWG','#interface-domtokenlist','forEach() (as iterable&lt;Node&gt;)')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("api.DOMTokenList.forEach")}}</div>
+{{Compat("api.DOMTokenList.forEach")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("DOMSettableTokenList")}} (objet qui étend DOMTokenList avec la propriété définissable <em>.value</em>)</li>
-</ul>
+- {{domxref("DOMSettableTokenList")}} (objet qui étend DOMTokenList avec la propriété définissable _.value_)

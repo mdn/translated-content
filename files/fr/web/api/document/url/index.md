@@ -3,22 +3,21 @@ title: Document.URL
 slug: Web/API/Document/URL
 translation_of: Web/API/Document/URL
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Retourne l'<code><strong>URL</strong></code> du {{domxref("Document")}} sous forme de string (lecture seule).</p>
+Retourne l'**`URL`** du {{domxref("Document")}} sous forme de string (lecture seule).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var <em>string</em> = document.URL
-</pre>
+```js
+var string = document.URL
+```
 
-<h2 id="Specification">Exemple</h2>
+## Exemple
 
-<pre><code>var currentURL = document.URL;
-alert(currentURL);</code></pre>
+    var currentURL = document.URL;
+    alert(currentURL);
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-46183437">DOM Level 2 HTML: URL</a></li>
-</ul>
+- [DOM Level 2 HTML: URL](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-46183437)

@@ -3,30 +3,29 @@ title: FileReader.readAsBinaryString()
 slug: Web/API/FileReader/readAsBinaryString
 translation_of: Web/API/FileReader/readAsBinaryString
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>La méthode <code>readAsArrayBuffer()</code> de l'interface {{domxref("FileReader")}} permet de lire un {{domxref("Blob")}} ou un {{domxref("File")}} (<em>fichier</em>). Quand l'opération est finie, l'attribut {{domxref("FileReader.readyState","readyState")}} prend la valeur <code>"DONE"</code> (<em>terminé</em>), et l'événement {{event("loadend")}} est levé.</p>
+La méthode `readAsArrayBuffer()` de l'interface {{domxref("FileReader")}} permet de lire un {{domxref("Blob")}} ou un {{domxref("File")}} (_fichier_). Quand l'opération est finie, l'attribut {{domxref("FileReader.readyState","readyState")}} prend la valeur `"DONE"` (_terminé_), et l'événement {{event("loadend")}} est levé.
 
-<p>L'attribut {{domxref("FileReader.result","result")}} contient alors les données binaires brutes lues.</p>
+L'attribut {{domxref("FileReader.result","result")}} contient alors les données binaires brutes lues.
 
-<p>Notez que cette méthode fût enlevée de l'API, mais réintroduite pour des raison de compatibilité ascendante.</p>
+Notez que cette méthode fût enlevée de l'API, mais réintroduite pour des raison de compatibilité ascendante.
 
-<p>L'utilisation de {{domxref("FileReader.readAsArrayBuffer()")}} est recomandée.</p>
+L'utilisation de {{domxref("FileReader.readAsArrayBuffer()")}} est recomandée.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>instanceOfFileReader</em>.readAsBinaryString(blob);</pre>
+    instanceOfFileReader.readAsBinaryString(blob);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>blob</code></dt>
- <dd>Le {{domxref("Blob")}} or {{domxref("File")}} devant être lu.</dd>
-</dl>
+- `blob`
+  - : Le {{domxref("Blob")}} or {{domxref("File")}} devant être lu.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var canvas = document.createElement('canvas');
+```js
+var canvas = document.createElement('canvas');
 var height = 200;
 var width  = 200;
 
@@ -48,35 +47,19 @@ canvas.toBlob(function (blob) {
   }
 
   reader.readAsBinaryString(blob);
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('File API','#readAsBinaryString','readAsBinaryString')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                       | Comment |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ------- |
+| {{SpecName('File API','#readAsBinaryString','readAsBinaryString')}} | {{Spec2('File API')}} |         |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.FileReader.readAsBinaryString")}}
 
+## See also
 
-<p>{{Compat("api.FileReader.readAsBinaryString")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

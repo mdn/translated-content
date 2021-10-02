@@ -10,26 +10,27 @@ tags:
   - Reference
 translation_of: Web/API/IDBIndex/isAutoLocale
 ---
-<div>{{APIRef("IndexedDB")}}{{SeeCompatTable}}</div>
+{{APIRef("IndexedDB")}}{{SeeCompatTable}}
 
-<p>La propriété en lecture seule <strong><code>isAutoLocale</code></strong>, rattachée à l'interface {{domxref("IDBIndex")}}, est un booléen qui indique si la valeur <code>locale</code> de l'index vaut <code>auto</code> (cf. <a href="/fr/docs/Web/API/IDBObjectStore/createIndex#Paramètres">les paramètres optionnels de <code>createIndex()</code></a>).</p>
+La propriété en lecture seule **`isAutoLocale`**, rattachée à l'interface {{domxref("IDBIndex")}}, est un booléen qui indique si la valeur `locale` de l'index vaut `auto` (cf. [les paramètres optionnels de `createIndex()`](/fr/docs/Web/API/IDBObjectStore/createIndex#Paramètres)).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var monIndex = objectStore.index('index');
-console.log(monIndex.isAutoLocale);</pre>
+    var monIndex = objectStore.index('index');
+    console.log(monIndex.isAutoLocale);
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un booléen.</p>
+Un booléen.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple suivant, on ouvre une transaction et un magasin d'objet puis on récupère l'index <code>lName</code> depuis une base de données de contact. Ensuite, on ouvre un curseur simple sur l'index grâce à la méthode {{domxref("IDBIndex.openCursor")}} — cela fonctionne comme si on avait directement ouvert un curseur sur un magasin d'objet avec {{domxref("IDBObjectStore.openCursor")}} mais ici les enregistrements sont triés selon l'index et pas selon la clé primaire.</p>
+Dans l'exemple suivant, on ouvre une transaction et un magasin d'objet puis on récupère l'index `lName` depuis une base de données de contact. Ensuite, on ouvre un curseur simple sur l'index grâce à la méthode {{domxref("IDBIndex.openCursor")}} — cela fonctionne comme si on avait directement ouvert un curseur sur un magasin d'objet avec {{domxref("IDBObjectStore.openCursor")}} mais ici les enregistrements sont triés selon l'index et pas selon la clé primaire.
 
-<p>La valeur <code>isAutoLocale</code> est affichée dans la console.</p>
+La valeur `isAutoLocale` est affichée dans la console.
 
-<pre class="brush:js">function displayDataByIndex() {
+```js
+function displayDataByIndex() {
   tableEntry.innerHTML = '';
   var transaction = db.transaction(['contactsList'], 'readonly');
   var objectStore = transaction.objectStore('contactsList');
@@ -41,14 +42,14 @@ console.log(monIndex.isAutoLocale);</pre>
     var cursor = event.target.result;
     if(cursor) {
       var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '&lt;td&gt;' + cursor.value.id + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.lName + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.fName + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.jTitle + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.company + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.eMail + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.phone + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.age + '&lt;/td&gt;';
+      tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
+                           + '<td>' + cursor.value.lName + '</td>'
+                           + '<td>' + cursor.value.fName + '</td>'
+                           + '<td>' + cursor.value.jTitle + '</td>'
+                           + '<td>' + cursor.value.company + '</td>'
+                           + '<td>' + cursor.value.eMail + '</td>'
+                           + '<td>' + cursor.value.phone + '</td>'
+                           + '<td>' + cursor.value.age + '</td>';
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
@@ -56,24 +57,23 @@ console.log(monIndex.isAutoLocale);</pre>
       console.log('Les éléments ont été affichés.');
     }
   };
-};</pre>
+};
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Actuellement, cette propriété ne fait partie d'aucune spécification.</p>
+Actuellement, cette propriété ne fait partie d'aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBIndex.isAutoLocale")}}</p>
+{{Compat("api.IDBIndex.isAutoLocale")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
- <li>Initier une connexion : {{domxref("IDBDatabase")}}</li>
- <li>Utiliser les transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
- <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
-</ul>
+- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Initier une connexion : {{domxref("IDBDatabase")}}
+- Utiliser les transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
+- Utiliser les curseurs {{domxref("IDBCursor")}}
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).

@@ -13,14 +13,14 @@ tags:
   - Window
 translation_of: Web/API/Window/dialogArguments
 ---
-<p>{{ deprecated_header() }}{{APIRef}}</p>
+{{ deprecated_header() }}{{APIRef}}
 
-<p>La propriété <code>dialogArguments</code> renvoie les paramètres qui ont été transmis à la méthode {{domxref("window.showModalDialog()")}} method. Cela vous permet de déterminer quels paramètres ont été spécifiés lors de la boîte de dialogue modale.</p>
+La propriété `dialogArguments` renvoie les paramètres qui ont été transmis à la méthode {{domxref("window.showModalDialog()")}} method. Cela vous permet de déterminer quels paramètres ont été spécifiés lors de la boîte de dialogue modale.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>valeur</var> = window.dialogArguments;</pre>
+    valeur = window.dialogArguments;
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.dialogArguments")}}</p>
+{{Compat("api.Window.dialogArguments")}}

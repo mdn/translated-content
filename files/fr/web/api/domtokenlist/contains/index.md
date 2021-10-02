@@ -10,65 +10,56 @@ tags:
   - Recherche contenu
 translation_of: Web/API/DOMTokenList/contains
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La méthode <code><strong>contains()</strong></code> de l'interface {{domxref("DOMTokenList")}} renvoie un {{domxref("Boolean")}} (<em>booléen</em>) — <code>true</code> (<em>vrai</em>) si la liste sous-jacente contient le symbole donné, sinon <code>false</code> (<em>faux</em>).</p>
+La méthode **`contains()`** de l'interface {{domxref("DOMTokenList")}} renvoie un {{domxref("Boolean")}} (_booléen_) — `true` (_vrai_) si la liste sous-jacente contient le symbole donné, sinon `false` (_faux_).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">tokenList.contains(token);</pre>
+    tokenList.contains(token);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>token</dt>
- <dd>Une {{domxref("DOMString")}} (<em>chaîne de caractères</em>) représentant la "token" (<em>marque</em>) dont vous voulez vérifier l'existence dans la liste.</dd>
-</dl>
+- token
+  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la "token" (_marque_) dont vous voulez vérifier l'existence dans la liste.
 
-<h3 id="Valeur_renvoyée">Valeur renvoyée</h3>
+### Valeur renvoyée
 
-<p>Un {{domxref("Boolean")}} (<em>booléen</em>)— <code>true</code> (<em>vrai</em>) si la liste sous-jacente contient la marque donnée, sinon <code>false</code> (<em>faux</em>).</p>
+Un {{domxref("Boolean")}} (_booléen_)— `true` (_vrai_) si la liste sous-jacente contient la marque donnée, sinon `false` (_faux_).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple suivant, nous récupérons la liste des classes définies sur un élément {{htmlelement("span")}} en tant que <code>DOMTokenList</code> en utilisant {{domxref("Element.classList")}}. Nous testons ensuite l'existence de "c" dans la liste, et écrivons le résultat dans le {{domxref("Node.textContent")}} du <code>&lt;span&gt;</code>.</p>
+Dans l'exemple suivant, nous récupérons la liste des classes définies sur un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Nous testons ensuite l'existence de "c" dans la liste, et écrivons le résultat dans le {{domxref("Node.textContent")}} du `<span>`.
 
-<p>Tout d'abord, le code HTML :</p>
+Tout d'abord, le code HTML :
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>Maintenant, le JavaScript :</p>
+Maintenant, le JavaScript :
 
-<pre class="brush: js">var span = document.querySelector("span");
+```js
+var span = document.querySelector("span");
 var classes = span.classList;
 var result = classes.contains("c");
 if(result) {
   span.textContent = "The classList contains 'c'";
 } else {
    span.textContent = "The classList does not contain 'c'";
-}</pre>
+}
+```
 
-<p>La sortie ressemble à ceci :</p>
+La sortie ressemble à ceci :
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-contains','contains()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | Statut                           | Commentaire         |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName('DOM WHATWG','#dom-domtokenlist-contains','contains()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("api.DOMTokenList.contains")}}</div>
+{{Compat("api.DOMTokenList.contains")}}

@@ -9,32 +9,28 @@ tags:
 translation_of: Web/API/File/fileSize
 original_slug: Web/API/File/fileSize
 ---
-<p>{{APIRef("File API") }}{{non-standard_header}}</p>
+{{APIRef("File API") }}{{non-standard_header}}
 
-<p>{{obsolete_header(7.0)}}</p>
+{{obsolete_header(7.0)}}
 
-<h2 id="Résumé">Résumé</h2>
+## Résumé
 
-<p>Renvoie la taille du fichier en octets.</p>
+Renvoie la taille du fichier en octets.
 
-<div class="note">
-  <p><strong>Note :</strong> Cette propriété est dépréciée. Utilisez {{domxref("Blob.size")}} à la place.</p>
-</div>
+> **Note :** Cette propriété est dépréciée. Utilisez {{domxref("Blob.size")}} à la place.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre>var size = <em>instanceOfFile</em>.fileSize</pre>
+    var size = instanceOfFile.fileSize
 
-<h2 id="Valeur">Valeur</h2>
+## Valeur
 
-<p>Un nombre.</p>
+Un nombre.
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<p>Ne fait partie d'aucune spécification.</p>
+Ne fait partie d'aucune spécification.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Blob.size")}}</li>
-</ul>
+- {{domxref("Blob.size")}}

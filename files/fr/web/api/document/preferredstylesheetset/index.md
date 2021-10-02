@@ -10,39 +10,35 @@ tags:
   - Reference
 translation_of: Web/API/Document/preferredStyleSheetSet
 ---
-<div>{{APIRef("DOM")}}{{gecko_minversion_header("1.9")}}</div>
+{{APIRef("DOM")}}{{gecko_minversion_header("1.9")}}
 
-<p>Retourne la feuille de style préférée, telle que définie par l'auteur de la page.</p>
+Retourne la feuille de style préférée, telle que définie par l'auteur de la page.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>preferredStyleSheetSet</var> = document.preferredStyleSheetSet
-</pre>
+    preferredStyleSheetSet = document.preferredStyleSheetSet
 
-<p>Au retour, <code>preferredStyleSheetSet</code> indique la feuille de style préférée par l'auteur. Ceci est déterminé par l'ordre des déclarations des feuilles de style et par l'entête HTTP intitulé <code>Default-Style</code>.</p>
+Au retour, `preferredStyleSheetSet` indique la feuille de style préférée par l'auteur. Ceci est déterminé par l'ordre des déclarations des feuilles de style et par l'entête HTTP intitulé `Default-Style`.
 
-<p>En l'absence de feuille de style préférée, une chaine vide ("") est retournée.</p>
+En l'absence de feuille de style préférée, une chaine vide ("") est retournée.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">if (document.preferredStyleSheetSet) {
+```js
+if (document.preferredStyleSheetSet) {
   console.log("La feuille de style préférée est : " + document.preferredStyleSheetSet);
 } else {
   console.log("Il n'y a pas de feuille de style préférée.");
 }
-</pre>
+```
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<ul>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets">HTML5: Alternate Style Sheets</a></li>
-</ul>
+- [HTML5: Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("document.lastStyleSheetSet")}}</li>
- <li>{{domxref("document.selectedStyleSheetSet")}}</li>
- <li>{{domxref("document.styleSheetSets")}}</li>
- <li>{{domxref("document.enableStyleSheetsForSet()")}}</li>
-</ul>
+- {{domxref("document.lastStyleSheetSet")}}
+- {{domxref("document.selectedStyleSheetSet")}}
+- {{domxref("document.styleSheetSets")}}
+- {{domxref("document.enableStyleSheetsForSet()")}}

@@ -3,37 +3,37 @@ title: StyleSheet.ownerNode
 slug: Web/API/StyleSheet/ownerNode
 translation_of: Web/API/StyleSheet/ownerNode
 ---
-<div>{{APIRef ("CSSOM")}}</div>
+{{APIRef ("CSSOM")}}
 
-<p><strong>OwnerNode</strong> renvoie le noeud qui associe cette feuille de style au document.</p>
+**OwnerNode** renvoie le noeud qui associe cette feuille de style au document.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>ObjRef</em> = stylesheet.ownerNode
-</pre>
+    ObjRef = stylesheet.ownerNode
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: html">&lt;Html&gt;
- &lt;Head&gt;
-  &lt;Link rel = "StyleSheet" href = "example.css" type = "text / css" /&gt;
-  &lt;Script&gt;
+```html
+<Html>
+ <Head>
+  <Link rel = "StyleSheet" href = "example.css" type = "text / css" />
+  <Script>
    Function stilo () {
     Alerte (document.styleSheets [0] .ownerNode);
    }
-  &lt;/ Script&gt; 
- &lt;/ Head&gt;
- &lt;Body&gt;
-   &lt;Button onclick = "stilo ()"&gt; ss &lt;/ button&gt;
- &lt;/ Body&gt;
-&lt;/ Html&gt;
+  </ Script>
+ </ Head>
+ <Body>
+   <Button onclick = "stilo ()"> ss </ button>
+ </ Body>
+</ Html>
 // affiche "objet HTMLLinkElement"
-</pre>
+```
 
-<h2 id="Notes">Remarques</h2>
+## Remarques
 
-<p>Pour HTML, <strong>ownerNode</strong> peut être l' élément <a href="en/LINK">LINK</a> ou <a href="en/STYLE">STYLE</a> correspondant . Pour XML, il peut s'agir des instructions de traitement de liaison. Pour les feuilles de style qui sont incluses dans d'autres feuilles de style, la valeur de cet attribut est NULL.</p>
+Pour HTML, **ownerNode** peut être l' élément [LINK](en/LINK) ou [STYLE](en/STYLE) correspondant . Pour XML, il peut s'agir des instructions de traitement de liaison. Pour les feuilles de style qui sont incluses dans d'autres feuilles de style, la valeur de cet attribut est NULL.
 
-<h2 id="Specification">spécification</h2>
+## spécification
 
-<p>DOM Styles de niveau 2 - FEUILLE DE STYLES</p>
+DOM Styles de niveau 2 - FEUILLE DE STYLES

@@ -9,34 +9,29 @@ tags:
   - console
 translation_of: Web/API/Console/timeStamp
 ---
-<div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<p>Ajoute un seul marqueur à l'outil <a href="https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference">Performance</a> ou <a href="/fr/docs/Outils/Performance/Waterfall">Waterfall</a> du navigateur. Cela vous permet de corréler un point de votre code avec les autres événements enregistrés dans la chronologie, tels que les événements de mise en page et de peinture.</p>
+Ajoute un seul marqueur à l'outil [Performance](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference) ou [Waterfall](/fr/docs/Outils/Performance/Waterfall) du navigateur. Cela vous permet de corréler un point de votre code avec les autres événements enregistrés dans la chronologie, tels que les événements de mise en page et de peinture.
 
-<p>Vous pouvez éventuellement fournir un argument pour étiqueter l'horodatage, et cette étiquette sera ensuite affichée à côté du marqueur.</p>
+Vous pouvez éventuellement fournir un argument pour étiqueter l'horodatage, et cette étiquette sera ensuite affichée à côté du marqueur.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">console.timeStamp(label);
-</pre>
+    console.timeStamp(label);
 
-<h2 id="Paramètres">Paramètres</h2>
+## Paramètres
 
-<dl>
- <dt><code>label</code></dt>
- <dd>Étiquette pour l'horodatage. Facultatif.</dd>
-</dl>
+- `label`
+  - : Étiquette pour l'horodatage. Facultatif.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Console.timestamp")}}</p>
+{{Compat("api.Console.timestamp")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Console.time()")}}</li>
- <li>{{domxref("Console.timeEnd()")}}</li>
- <li><a href="/fr/docs/Outils/Performance/Waterfall#Marqueurs_de_temps">Ajout d'un marqueur de temps pour le Waterfall</a></li>
-</ul>
+- {{domxref("Console.time()")}}
+- {{domxref("Console.timeEnd()")}}
+- [Ajout d'un marqueur de temps pour le Waterfall](/fr/docs/Outils/Performance/Waterfall#Marqueurs_de_temps)

@@ -11,41 +11,28 @@ tags:
   - duration
 translation_of: Web/API/PerformanceServerTiming/duration
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>La propriété en lecture seule <strong><code>duration</code></strong> retourne un double qui contient la durée de la métrique spécifiée par le serveur, ou la valeur <code>0,0</code>.</p>
+La propriété en lecture seule **`duration`** retourne un double qui contient la durée de la métrique spécifiée par le serveur, ou la valeur `0,0`.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js"><var>serverTiming</var>.duration;</pre>
+```js
+serverTiming.duration;
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Server Timing','#dom-performanceservertiming-duration',
-        'duration')}}</td>
-      <td>{{Spec2('Server Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                            | Statut                               | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('Server Timing','#dom-performanceservertiming-duration',
+        'duration')}} | {{Spec2('Server Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceServerTiming.duration")}}</p>
+{{Compat("api.PerformanceServerTiming.duration")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/API/PerformanceServerTiming"><code>PerformanceServerTiming</code></a></li>
-  <li><a href="/fr/docs/Web/HTTP/Headers/Server-Timing"><code>Server-Timing</code></a></li>
-</ul>
+- [`PerformanceServerTiming`](/fr/docs/Web/API/PerformanceServerTiming)
+- [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing)

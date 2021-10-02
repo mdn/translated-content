@@ -14,43 +14,27 @@ translation_of: Web/API/DeviceMotionEventRotationRate/alpha
 translation_of_original: Web/API/DeviceRotationRate/alpha
 original_slug: Web/API/DeviceRotationRate/alpha
 ---
-<p>{{ ApiRef("Device Orientation Events") }}</p>
+{{ ApiRef("Device Orientation Events") }}
 
-<p>Cette propriété indique la vitesse de rotation autour de l'axe Z -- en degrés par seconde -- dans un objet {{ domxref("DeviceRotationRate") }}.</p>
+Cette propriété indique la vitesse de rotation autour de l'axe Z -- en degrés par seconde -- dans un objet {{ domxref("DeviceRotationRate") }}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <em>alpha</em> = <em>deviceRotationRate</em>.alpha;
-</pre>
+    var alpha = deviceRotationRate.alpha;
 
-<p>Cette propriété est en lecture seule.</p>
+Cette propriété est en lecture seule.
 
-<h3 id="Return_Value">Valeur retournée</h3>
+### Valeur retournée
 
-<dl>
- <dt><code>alpha</code></dt>
- <dd>Un <code>double</code> indiquant la vitesse de rotation autour de l'axe Z, en degrés par seconde. Voir <a href="/fr/docs/WebAPI/Detecting_device_orientation#Accelerometer_values_explained">Détecter l'orientation de l'appareil</a> pour plus de détails.</dd>
-</dl>
+- `alpha`
+  - : Un `double` indiquant la vitesse de rotation autour de l'axe Z, en degrés par seconde. Voir [Détecter l'orientation de l'appareil](/fr/docs/WebAPI/Detecting_device_orientation#Accelerometer_values_explained) pour plus de détails.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Device Orientation')}}</td>
-   <td>{{Spec2('Device Orientation')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                | Statut                                   | Commentaire          |
+| -------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DeviceMotionEventRotationRate.alpha")}}</p>
+{{Compat("api.DeviceMotionEventRotationRate.alpha")}}

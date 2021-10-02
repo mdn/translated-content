@@ -3,33 +3,29 @@ title: Document.bgColor
 slug: Web/API/Document/bgColor
 translation_of: Web/API/Document/bgColor
 ---
-<p>{{APIRef("DOM")}} {{ Deprecated_header() }}</p>
+{{APIRef("DOM")}} {{ Deprecated_header() }}
 
-<p>La propriété obsolète <code>bgColor</code> renvoie ou déinit la couleur de fond (background-color) du document courant.</p>
+La propriété obsolète `bgColor` renvoie ou déinit la couleur de fond (background-color) du document courant.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>color</em> = document.bgColor
-document.bgColor =<em>color</em>
-</pre>
+    color = document.bgColor
+    document.bgColor =color
 
-<h3 id="Parametres">Parametres</h3>
+### Parametres
 
-<ul>
- <li><code>color</code> est une chaîne de caractères représentant la couleur comme un mot (e.g., "red") ou une valeur hexadécimale (e.g., "<code>#ff0000</code>").</li>
-</ul>
+- `color` est une chaîne de caractères représentant la couleur comme un mot (e.g., "red") ou une valeur hexadécimale (e.g., "`#ff0000`").
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="eval">document.bgColor = "darkblue";
-</pre>
+    document.bgColor = "darkblue";
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>La valeur par défaut pour cette propriété sur Firefox est le blanc (<code>#ffffff</code> en hexadécimal).</p>
+La valeur par défaut pour cette propriété sur Firefox est le blanc (`#ffffff` en hexadécimal).
 
-<p><code>document.bgColor</code> est obsolète dans le <a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268">DOM Niveau 2 HTML</a>. L'alternative recommandée est l'utilisation du style CSS {{Cssxref("background-color")}} qui peut être accessible via le DOM avec <code>document.body.style.backgroundColor</code>. Une autre alternative est <code>document.body.bgColor</code>, mais c'est aussi obsolète dans HTML 4.01 en faveur de l'alternative CSS.</p>
+`document.bgColor` est obsolète dans le [DOM Niveau 2 HTML](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268). L'alternative recommandée est l'utilisation du style CSS {{Cssxref("background-color")}} qui peut être accessible via le DOM avec `document.body.style.backgroundColor`. Une autre alternative est `document.body.bgColor`, mais c'est aussi obsolète dans HTML 4.01 en faveur de l'alternative CSS.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Document.bgColor")}}</p>
+{{Compat("api.Document.bgColor")}}

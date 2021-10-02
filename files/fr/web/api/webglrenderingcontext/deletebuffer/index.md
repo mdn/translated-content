@@ -9,69 +9,51 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/deleteBuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>La méthode <strong><code>WebGLRenderingContext.deleteBuffer()</code></strong> de l'<a href="/fr-FR/docs/Web/API/WebGL_API">API WebGL</a> supprime le {{domxref ("WebGLBuffer")}} indiqué. Cette méthode n'a aucun effet si le tampon a déjà été supprimé.</p>
+La méthode **`WebGLRenderingContext.deleteBuffer()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) supprime le {{domxref ("WebGLBuffer")}} indiqué. Cette méthode n'a aucun effet si le tampon a déjà été supprimé.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var>gl</var>.deleteBuffer(<em>tampon</em>);
-</pre>
+    void gl.deleteBuffer(tampon);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>tampon</dt>
- <dd>Un objet {{domxref("WebGLBuffer")}} à supprimer.</dd>
-</dl>
+- tampon
+  - : Un objet {{domxref("WebGLBuffer")}} à supprimer.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Aucune.</p>
+Aucune.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Suppression_d'un_tampon">Suppression d'un tampon</h3>
+### Suppression d'un tampon
 
-<pre class="brush: js">var canevas = document.getElementById('canevas');
+```js
+var canevas = document.getElementById('canevas');
 var gl = canevas.getContext('webgl');
 var tampon = gl.createBuffer();
 
 // ...
 
-gl.deleteBuffer(tampon);</pre>
+gl.deleteBuffer(tampon);
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.5", "deleteBuffer")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glDeleteBuffers.xml", "glDeleteBuffers")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>Page man de l’API OpenGL (similaire).</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                               | Commentaire                           |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------- |
+| {{SpecName('WebGL', "#5.14.5", "deleteBuffer")}}                                 | {{Spec2('WebGL')}}             | Définition initiale.                  |
+| {{SpecName('OpenGL ES 2.0', "glDeleteBuffers.xml", "glDeleteBuffers")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l’API OpenGL (similaire). |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WebGLRenderingContext.deleteBuffer")}}</p>
+{{Compat("api.WebGLRenderingContext.deleteBuffer")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindBuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createBuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isBuffer()")}}</li>
- <li>Autres tampons : {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindBuffer()")}}
+- {{domxref("WebGLRenderingContext.createBuffer()")}}
+- {{domxref("WebGLRenderingContext.isBuffer()")}}
+- Autres tampons : {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}

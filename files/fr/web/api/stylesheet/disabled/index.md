@@ -3,23 +3,21 @@ title: StyleSheet.disabled
 slug: Web/API/StyleSheet/disabled
 translation_of: Web/API/StyleSheet/disabled
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>La <code><strong>StyleSheet.disabled</strong></code>propriété indique si la feuille de style est empêchée de demander le document. Une feuille de style peut être désactivé en réglant manuellement cette propriété <code>true</code>ou si elle est une forme inactive <a href="/en-US/docs/Web/CSS/Alternative_style_sheets">feuille de style alternatif</a> . Notez que <code>disabled == false</code>ne garantit pas la feuille de style est appliquée (il pourrait être supprimé du document, par exemple).</p>
+La **`StyleSheet.disabled`**propriété indique si la feuille de style est empêchée de demander le document. Une feuille de style peut être désactivé en réglant manuellement cette propriété `true`ou si elle est une forme inactive [feuille de style alternatif](/en-US/docs/Web/CSS/Alternative_style_sheets) . Notez que `disabled == false`ne garantit pas la feuille de style est appliquée (il pourrait être supprimé du document, par exemple).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>bool</em> = stylesheet.disabled
-</pre>
+    bool = stylesheet.disabled
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre>// si la feuille de style est désactivé ... 
-si (stylesheet.disabled) {
-   // appliquer le style en ligne 
-}
-</pre>
+    // si la feuille de style est désactivé ...
+    si (stylesheet.disabled) {
+       // appliquer le style en ligne
+    }
 
-<h2 id="Specification">spécification</h2>
+## spécification
 
-<p><a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-disabled">désactivée </a></p>
+[désactivée](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-disabled)

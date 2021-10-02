@@ -3,33 +3,32 @@ title: BiquadFilterNode.frequency
 slug: Web/API/BiquadFilterNode/frequency
 translation_of: Web/API/BiquadFilterNode/frequency
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>La propriété <code>frequency</code> de l'interface {{ domxref("BiquadFilterNode") }} est un  {{domxref("AudioParam")}} de type <a href="/fr/docs/DOM/AudioParam#k-rate">k-rate</a> : un nombre flottant à double précision représentant une fréquence de l'algorithme de filtrage courant, exprimée en hertz (Hz).</p>
+La propriété `frequency` de l'interface {{ domxref("BiquadFilterNode") }} est un  {{domxref("AudioParam")}} de type [k-rate](/fr/docs/DOM/AudioParam#k-rate) : un nombre flottant à double précision représentant une fréquence de l'algorithme de filtrage courant, exprimée en hertz (Hz).
 
-<p>Sa valeur par défaut est de <code>350</code> avec une portée nominale de <code>10</code> à la <a href="http://en.wikipedia.org/wiki/Nyquist_frequency">fréquence de Nyquist</a>, qui est la moitié de la fréquence d'échantillonnage.</p>
-</div>
+Sa valeur par défaut est de `350` avec une portée nominale de `10` à la [fréquence de Nyquist](http://en.wikipedia.org/wiki/Nyquist_frequency), qui est la moitié de la fréquence d'échantillonnage.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var contexteAudio = new AudioContext();
+```js
+var contexteAudio = new AudioContext();
 var filtreBiquad = contexteAudio.createBiquadFilter();
-filtreBiquad.frequency.value = 3000;</pre>
+filtreBiquad.frequency.value = 3000;
+```
 
-<div class="note">
-<p><strong>Note :</strong> Bien que le <code>AudioParam</code> renvoyé soit en lecture seule, la valeur qu'il représente ne l'est pas.</p>
-</div>
+> **Note :** Bien que le `AudioParam` renvoyé soit en lecture seule, la valeur qu'il représente ne l'est pas.
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un {{domxref("AudioParam")}}.</p>
+Un {{domxref("AudioParam")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>L'exemple suivant montre l'utilisation basique d'un AudioContext pour créer un filtre Biquad. Pour un exemple complet, consultez notre démo <a href="http://mdn.github.io/voice-change-o-matic/">voice-change-o-matic</a> (et son <a href="https://github.com/mdn/voice-change-o-matic">code source</a>).</p>
+L'exemple suivant montre l'utilisation basique d'un AudioContext pour créer un filtre Biquad. Pour un exemple complet, consultez notre démo [voice-change-o-matic](http://mdn.github.io/voice-change-o-matic/) (et son [code source](https://github.com/mdn/voice-change-o-matic)).
 
-<pre class="brush: js">var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
 
 // mise en place des différents noeuds audio que nous utiliserons par la suite
 var analyseur = contexteAudio.createAnalyser();
@@ -53,31 +52,18 @@ noeudGain.connect(contexteAudio.destination);
 filtreBiquad.type = "lowshelf";
 filtreBiquad.frequency.value = 1000;
 filtreBiquad.gain.value = 25;
-</pre>
+```
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-BiquadFilterNode-frequency', 'frequency')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                               | Comment |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Audio API', '#widl-BiquadFilterNode-frequency', 'frequency')}} | {{Spec2('Web Audio API')}} |         |
 
-<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+## Compatibilité navigateurs
 
-<div>{{Compat("api.BiquadFilterNode.frequency")}}</div>
+{{Compat("api.BiquadFilterNode.frequency")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web_Audio_API/Using_Web_Audio_API">Utiliser la Web Audio API</a></li>
-</ul>
+- [Utiliser la Web Audio API](/fr/docs/Web_Audio_API/Using_Web_Audio_API)

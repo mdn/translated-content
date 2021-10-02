@@ -3,25 +3,24 @@ title: Window.length
 slug: Web/API/Window/length
 translation_of: Web/API/Window/length
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<p>Retourne le nombre de frames (soit des éléments de frame ou iframe) présent sur la page.</p>
+Retourne le nombre de frames (soit des éléments de frame ou iframe) présent sur la page.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>nombreDeFrames</em>= window.length;
-</pre>
+    nombreDeFrames= window.length;
 
-<ul>
- <li><em>nombreDeFrames est égal au nombre de frames présent sur la page.</em></li>
-</ul>
+- _nombreDeFrames est égal au nombre de frames présent sur la page._
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">if (window.length) {
+```js
+if (window.length) {
   // La page contient des frames
-}</pre>
+}
+```
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<p>{{DOM0}}</p>
+{{DOM0}}

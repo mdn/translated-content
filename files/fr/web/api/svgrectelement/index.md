@@ -3,67 +3,46 @@ title: SVGRectElement
 slug: Web/API/SVGRectElement
 translation_of: Web/API/SVGRectElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>L'interface <code>SVGRectElement</code> fournit un accès aux propriétés et aux méthodes de l'élément {{SVGElement("rect")}}.</p>
+L'interface `SVGRectElement` fournit un accès aux propriétés et aux méthodes de l'élément {{SVGElement("rect")}}.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Cette interface hérite aussi des propriétés de </em><em>{{domxref("SVGGeometryElement")}}.</em></p>
+_Cette interface hérite aussi des propriétés de_ _{{domxref("SVGGeometryElement")}}._
 
-<dl>
- <dt>{{domxref("SVGRectElement.x")}} {{ReadOnlyInline}}</dt>
- <dd>Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("x")}} de l'élément {{SVGElement("rect")}} donné.</dd>
- <dt>{{domxref("SVGRectElement.x")}} {{ReadOnlyInline}}</dt>
- <dd>Retourne un {{domxref("SVGAnimatedLength")}}  correspondant à l'attribut {{SVGAttr("x")}} de l'élément {{SVGElement("rect")}} donné.</dd>
- <dt>{{domxref("SVGRectElement.y")}} {{ReadOnlyInline}}</dt>
- <dd>Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("y")}} de l'élément {{SVGElement("rect")}} donné.</dd>
- <dt>{{domxref("SVGRectElement.width")}} {{ReadOnlyInline}}</dt>
- <dd>Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("width")}} de l'élément {{SVGElement("rect")}} donné.</dd>
- <dt>{{domxref("SVGRectElement.height")}} {{ReadOnlyInline}}</dt>
- <dd>Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("height")}} de l'élément {{SVGElement("rect")}} donné.</dd>
- <dt>{{domxref("SVGRectElement.rx")}} {{ReadOnlyInline}}</dt>
- <dd>Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("rx")}} de l'élément {{SVGElement("rect")}} donné.</dd>
- <dt>{{domxref("SVGRectElement.ry")}} {{ReadOnlyInline}}</dt>
- <dd>Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("ry")}} de l'élément {{SVGElement("rect")}} donné.</dd>
-</dl>
+- {{domxref("SVGRectElement.x")}} {{ReadOnlyInline}}
+  - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("x")}} de l'élément {{SVGElement("rect")}} donné.
+- {{domxref("SVGRectElement.x")}} {{ReadOnlyInline}}
+  - : Retourne un {{domxref("SVGAnimatedLength")}}  correspondant à l'attribut {{SVGAttr("x")}} de l'élément {{SVGElement("rect")}} donné.
+- {{domxref("SVGRectElement.y")}} {{ReadOnlyInline}}
+  - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("y")}} de l'élément {{SVGElement("rect")}} donné.
+- {{domxref("SVGRectElement.width")}} {{ReadOnlyInline}}
+  - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("width")}} de l'élément {{SVGElement("rect")}} donné.
+- {{domxref("SVGRectElement.height")}} {{ReadOnlyInline}}
+  - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("height")}} de l'élément {{SVGElement("rect")}} donné.
+- {{domxref("SVGRectElement.rx")}} {{ReadOnlyInline}}
+  - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("rx")}} de l'élément {{SVGElement("rect")}} donné.
+- {{domxref("SVGRectElement.ry")}} {{ReadOnlyInline}}
+  - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("ry")}} de l'élément {{SVGElement("rect")}} donné.
 
-<h2 id="Méthode">Méthode</h2>
+## Méthode
 
-<p><em>Cette interface n'implémente pas de méthodes spécifiques mais elle hérite des méthodes parentes de <em>{{domxref("SVGGeometryElement")}}</em></em>.</p>
+_Cette interface n'implémente pas de méthodes spécifiques mais elle hérite des méthodes parentes de _{{domxref("SVGGeometryElement")}}\*\*.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "shapes.html#InterfaceSVGRectElement", "SVGRectElement")}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td>Remplace l'héritage de {{domxref("SVGElement")}}{{domxref("SVGTests")}}, {{domxref("SVGLangSpace")}}, {{domxref("SVGExternalResourcesRequired")}}, {{domxref("SVGStylable")}} et {{domxref("SVGTransformable")}} par {{domxref("SVGGeometryElement")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "shapes.html#InterfaceSVGRectElement", "SVGRectElement")}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                   | Comment                                                                                                                                                                                                                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName("SVG2", "shapes.html#InterfaceSVGRectElement", "SVGRectElement")}} | {{Spec2('SVG2')}} | Remplace l'héritage de {{domxref("SVGElement")}}{{domxref("SVGTests")}}, {{domxref("SVGLangSpace")}}, {{domxref("SVGExternalResourcesRequired")}}, {{domxref("SVGStylable")}} et {{domxref("SVGTransformable")}} par {{domxref("SVGGeometryElement")}} |
+| {{SpecName("SVG1.1", "shapes.html#InterfaceSVGRectElement", "SVGRectElement")}} | {{Spec2('SVG1.1')}} | Définition initiale                                                                                                                                                                                                                                                                                                        |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.SVGRectElement")}}
 
+## Voir aussi
 
-<p>{{Compat("api.SVGRectElement")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{SVGElement("rect")}}</li>
-</ul>
+- {{SVGElement("rect")}}

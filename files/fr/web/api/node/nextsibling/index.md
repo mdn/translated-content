@@ -8,34 +8,34 @@ tags:
   - Propriétés
 translation_of: Web/API/Node/nextSibling
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La propriété en lecture seule  <code><strong>Node.nextSibling</strong></code> renvoie le nœud (<code>node</code>) suivant immédiatement le nœud spécifié dans la liste des enfants ( {{domxref("Node.childNodes","childNodes")}}) de son nœud parent, ou <code>null</code> si le nœud spécifié est le dernier dans cette liste.</p>
+La propriété en lecture seule  **`Node.nextSibling`** renvoie le nœud (`node`) suivant immédiatement le nœud spécifié dans la liste des enfants ( {{domxref("Node.childNodes","childNodes")}}) de son nœud parent, ou `null` si le nœud spécifié est le dernier dans cette liste.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>nextNode</var> = <var>node</var>.nextSibling
-</pre>
+    nextNode = node.nextSibling
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p></p><p>Les navigateurs basés sur Gecko insèrent des nœuds texte dans un document pour représenter des espaces
-    vides dans le balisage source. Par conséquent, un nœud obtenu par exemple via <a href="/fr/docs/Web/API/Node/firstChild"><code>Node.firstChild</code></a> ou
-    <a href="/fr/docs/Web/API/Node/previousSibling" title='{{APIRef("DOM")}}'><code>Node.previousSibling</code></a> peut faire référence à un nœud texte contenant des espaces plutôt qu'au véritable élément
-    que l'auteur comptait obtenir.</p>
+Les navigateurs basés sur Gecko insèrent des nœuds texte dans un document pour représenter des espaces
+vides dans le balisage source. Par conséquent, un nœud obtenu par exemple via [`Node.firstChild`](/fr/docs/Web/API/Node/firstChild) ou
+[`Node.previousSibling`](/fr/docs/Web/API/Node/previousSibling "{{APIRef("DOM")}}") peut faire référence à un nœud texte contenant des espaces plutôt qu'au véritable élément
+que l'auteur comptait obtenir.
 
-    <p>Consultez <a href="/fr/docs/Gestion_des_espaces_dans_le_DOM">Gestion des espaces dans le DOM</a>
-    et <a href="http://www.w3.org/DOM/faq.html#emptytext" rel="noopener"><i>Why are some Text nodes empty?</i>
-    dans la FAQ DOM 3 du W3C</a> pour plus d'informations.</p><p></p>
+Consultez [Gestion des espaces dans le DOM](/fr/docs/Gestion_des_espaces_dans_le_DOM)
+et [_Why are some Text nodes empty?_
+dans la FAQ DOM 3 du W3C](http://www.w3.org/DOM/faq.html#emptytext) pour plus d'informations.
 
-<p>{{domxref("Element.nextElementSibling")}} peut être utilisé pour obtenir l'élément suivant en ignorant les noeuds d'espace.</p>
+{{domxref("Element.nextElementSibling")}} peut être utilisé pour obtenir l'élément suivant en ignorant les noeuds d'espace.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush:html">&lt;div id="div-01"&gt;Here is div-01&lt;/div&gt;
-&lt;div id="div-02"&gt;Here is div-02&lt;/div&gt;
+```html
+<div id="div-01">Here is div-01</div>
+<div id="div-02">Here is div-02</div>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 var el = document.getElementById('div-01').nextSibling,
     i = 1;
 
@@ -47,7 +47,7 @@ while (el) {
   i++;
 }
 
-&lt;/script&gt;
+</script>
 
 /**************************************************
   Ce qui suit est écrit sur la console pendant le chargement:
@@ -59,25 +59,22 @@ while (el) {
       3. #text
       4. SCRIPT
 
-**************************************************/</pre>
+**************************************************/
+```
 
-<p>Dans cet exemple, on peut voir que des nœuds <code>#text</code> sont insérés dans le DOM là où des espaces se trouvent dans le code source entre les balises (c'est-à-dire après la balise de fermeture d'un élément et avant la balise d'ouverture du suivant). Aucun espace n'est créé entre les éléments insérés par l'instruction <code>document.write</code> .</p>
+Dans cet exemple, on peut voir que des nœuds `#text` sont insérés dans le DOM là où des espaces se trouvent dans le code source entre les balises (c'est-à-dire après la balise de fermeture d'un élément et avant la balise d'ouverture du suivant). Aucun espace n'est créé entre les éléments insérés par l'instruction `document.write` .
 
-<p>L'inclusion possible de nœuds textes dans le DOM doit être prise en compte pour le parcours du DOM à l'aide de <code>nextSibling</code>. Consultez les ressources dans la section Notes .</p>
+L'inclusion possible de nœuds textes dans le DOM doit être prise en compte pour le parcours du DOM à l'aide de `nextSibling`. Consultez les ressources dans la section Notes .
 
-<h2 id="Sp.C3.A9cification">Spécification</h2>
+## Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling">DOM Level 1 Core: nextSibling</a> <small>— <a href="http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling">traduction</a> (non normative)</small></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F">DOM Level 2 Core: nextSibling</a> <small>— <a href="http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-6AC54C2F">traduction</a> (non normative)</small></li>
-</ul>
+- [DOM Level 1 Core: nextSibling](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling) — [traduction](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling) (non normative)
+- [DOM Level 2 Core: nextSibling](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-6AC54C2F) (non normative)
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.Node.nextSibling")}}
 
+## Voir aussi
 
-<p>{{Compat("api.Node.nextSibling")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<p>{{domxref("Element.nextElementSibling")}}</p>
+{{domxref("Element.nextElementSibling")}}

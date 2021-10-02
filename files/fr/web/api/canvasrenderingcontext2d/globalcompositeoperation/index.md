@@ -3,36 +3,38 @@ title: CanvasRenderingContext2D.globalCompositeOperation
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 translation_of: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La propriété <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.globalCompositeOperation</code></strong> de l'API Canvas 2D définit le type d'opération de composition à appliquer lors du tracé de nouvelles formes.</p>
+La propriété **`CanvasRenderingContext2D`\*\***`.globalCompositeOperation`\*\* de l'API Canvas 2D définit le type d'opération de composition à appliquer lors du tracé de nouvelles formes.
 
-<p>Voir aussi <a href="/fr/docs/Tutoriel_canvas/Composition">Composition et découpe</a> dans le <a href="/fr/docs/Tutoriel_canvas">Tutoriel canvas</a>.</p>
+Voir aussi [Composition et découpe](/fr/docs/Tutoriel_canvas/Composition) dans le [Tutoriel canvas](/fr/docs/Tutoriel_canvas).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>ctx</em>.globalCompositeOperation = <em>type</em>;</pre>
+    ctx.globalCompositeOperation = type;
 
-<p><code>type</code> est de type {{jsxref("String")}} et permet de choisir quelle opération de composition ou de mode fondu utiliser.</p>
+`type` est de type {{jsxref("String")}} et permet de choisir quelle opération de composition ou de mode fondu utiliser.
 
-<h3 id="Types">Types</h3>
+### Types
 
-<p>{{EmbedLiveSample("Compositing_example", 750, 6900, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}</p>
+{{EmbedLiveSample("Compositing_example", 750, 6900, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Changer_lopération_de_composition">Changer l'opération de composition</h3>
+### Changer l'opération de composition
 
-<p>Cet exemple utilise la propriété <code>globalCompositeOperation</code> pour dessiner deux rectangles qui s'excluent l'un l'autre quand ils se superposent.</p>
+Cet exemple utilise la propriété `globalCompositeOperation` pour dessiner deux rectangles qui s'excluent l'un l'autre quand ils se superposent.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.globalCompositeOperation = 'xor';
@@ -42,54 +44,33 @@ ctx.fillRect(10, 10, 100, 100);
 
 ctx.fillStyle = 'red';
 ctx.fillRect(50, 50, 100, 100);
-</pre>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{ EmbedLiveSample('Changing_the_composite_operation', 700, 180) }}</p>
+{{ EmbedLiveSample('Changing_the_composite_operation', 700, 180) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Etat</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-globalcompositeoperation", "CanvasRenderingContext2D.globalCompositeOperation")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Compositing')}}</td>
-   <td>{{Spec2('Compositing')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                                            | Etat                             | Commentaires |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-globalcompositeoperation", "CanvasRenderingContext2D.globalCompositeOperation")}} | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('Compositing')}}                                                                                                                                                     | {{Spec2('Compositing')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.globalCompositeOperation")}}</p>
+{{Compat("api.CanvasRenderingContext2D.globalCompositeOperation")}}
 
-<h3 id="Remarques_concernant_WebKitBlink">Remarques concernant WebKit/Blink</h3>
+### Remarques concernant WebKit/Blink
 
-<ul>
- <li>Dans les navigateurs de type WebKit et Blink, la méthode non-standard et obsolète <code>ctx.setCompositeOperation()</code> est implémentée à la place de cette propriété.</li>
- <li>Le support de <code>"plus-darker"</code> et<code>"darker"</code> a été abandonné à partir de Chrome 48. Veuillez utiliser <code>"darken"</code> à la place.</li>
-</ul>
+- Dans les navigateurs de type WebKit et Blink, la méthode non-standard et obsolète `ctx.setCompositeOperation()` est implémentée à la place de cette propriété.
+- Le support de `"plus-darker"` et`"darker"` a été abandonné à partir de Chrome 48. Veuillez utiliser `"darken"` à la place.
 
-<h3 id="Remarques_concernant_Gecko">Remarques concernant Gecko</h3>
+### Remarques concernant Gecko
 
-<ul>
- <li>Une version préliminaire de la spécification de Canvas définissait une valeur <code>"darker"</code>. Cependant, Firefox a abandonné le support de <code>"darker"</code> dans sa version 4 ({{bug(571532)}}). Voir aussi <a href="http://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker">cet article de blog</a> qui suggère l'utilisation de <code>"difference"</code> pour parvenir à un effet similaire à <code>"darker"</code>.</li>
-</ul>
+- Une version préliminaire de la spécification de Canvas définissait une valeur `"darker"`. Cependant, Firefox a abandonné le support de `"darker"` dans sa version 4 ({{bug(571532)}}). Voir aussi [cet article de blog](http://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker) qui suggère l'utilisation de `"difference"` pour parvenir à un effet similaire à `"darker"`.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface qui définit cette propriété : {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.globalAlpha")}}</li>
-</ul>
+- L'interface qui définit cette propriété : {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.globalAlpha")}}

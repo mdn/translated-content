@@ -9,34 +9,29 @@ tags:
   - débogage
 translation_of: Web/API/Console/profile
 ---
-<p>{{APIRef("Console API")}}{{Non-standard_header}}</p>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<p>Commence l'enregistrement d'un profil de performance (par exemple, l'outil <a href="/fr/docs/Outils/Performance">performance de Firefox</a>).</p>
+Commence l'enregistrement d'un profil de performance (par exemple, l'outil [performance de Firefox](/fr/docs/Outils/Performance)).
 
-<p>Vous pouvez éventuellement fournir un argument pour nommer le profil, ce qui vous permet d'arrêter uniquement ce profil si plusieurs profils sont enregistrés. Voir {{domxref("Console.profileEnd()")}} pour voir comment cet argument est interprété.</p>
+Vous pouvez éventuellement fournir un argument pour nommer le profil, ce qui vous permet d'arrêter uniquement ce profil si plusieurs profils sont enregistrés. Voir {{domxref("Console.profileEnd()")}} pour voir comment cet argument est interprété.
 
-<p>Pour arrêter l'enregistrement, appeler {{domxref("Console.profileEnd()")}}.</p>
+Pour arrêter l'enregistrement, appeler {{domxref("Console.profileEnd()")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">console.profile(<em>profileName</em>);
-</pre>
+    console.profile(profileName);
 
-<h2 id="Paramètres">Paramètres</h2>
+## Paramètres
 
-<dl>
- <dt><code>profileName</code></dt>
- <dd>Le nom à donner au profil. Facultatif.</dd>
-</dl>
+- `profileName`
+  - : Le nom à donner au profil. Facultatif.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Console.profile")}}</p>
+{{Compat("api.Console.profile")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Console.profileEnd()")}}</li>
-</ul>
+- {{domxref("Console.profileEnd()")}}

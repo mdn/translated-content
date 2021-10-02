@@ -11,35 +11,33 @@ tags:
   - delete
 translation_of: Web/API/CacheStorage/delete
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>La fonction <code><strong>delete</strong></code><strong><code>()</code></strong> de l'interface {{domxref("CacheStorage")}} trouve l'objet {{domxref("Cache")}} correspondant à un <code>cacheName</code>, et si trouvé, supprime l'objet {{domxref("Cache")}} et retourne une {{jsxref("Promise", "Promesse")}} qui renvoie <code>true</code>. Si aucun objet {{domxref("Cache")}} n'est trouvé, elle retourne <code>false</code>.</p>
+La fonction **`delete`\*\***`()`\*\* de l'interface {{domxref("CacheStorage")}} trouve l'objet {{domxref("Cache")}} correspondant à un `cacheName`, et si trouvé, supprime l'objet {{domxref("Cache")}} et retourne une {{jsxref("Promise", "Promesse")}} qui renvoie `true`. Si aucun objet {{domxref("Cache")}} n'est trouvé, elle retourne `false`.
 
-<p>Vous pouvez accéder à <code>CacheStorage</code> via la propriété globale {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}}.</p>
+Vous pouvez accéder à `CacheStorage` via la propriété globale {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">caches.delete(<em>cacheName</em>).then(function(true) {
-  // le cache est maintenant supprimé
-});
-</pre>
+    caches.delete(cacheName).then(function(true) {
+      // le cache est maintenant supprimé
+    });
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>cacheName</dt>
- <dd>Le nom du cache que vous souhaitez supprimer.</dd>
-</dl>
+- cacheName
+  - : Le nom du cache que vous souhaitez supprimer.
 
-<h3 id="Retour">Retour</h3>
+### Retour
 
-<p>Une {{jsxref("Promise", "Promesse")}} qui renvoie <code>true</code> si l'objet {{domxref("Cache")}} est trouvé et supprimé, <code>false</code> sinon.</p>
+Une {{jsxref("Promise", "Promesse")}} qui renvoie `true` si l'objet {{domxref("Cache")}} est trouvé et supprimé, `false` sinon.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans ce fragment de code, nous attendons un évènement, et bloquons avec un {{domxref("ExtendableEvent.waitUntil","waitUntil()")}}, qui nettoie les anciens, inutilisés, caches avant que le nouveau service worker soit activé. Nous avons ici une liste blanche contenant le nom du cache que nous voulons garder. Nous retournons les clés des caches dans l'objet {{domxref("CacheStorage")}} utilisant {{domxref("CacheStorage.keys")}}, pour ensuite vérifier que chaque clé est dans la liste blance. Sinon, nous la supprimons avec <code>delete().</code></p>
+Dans ce fragment de code, nous attendons un évènement, et bloquons avec un {{domxref("ExtendableEvent.waitUntil","waitUntil()")}}, qui nettoie les anciens, inutilisés, caches avant que le nouveau service worker soit activé. Nous avons ici une liste blanche contenant le nom du cache que nous voulons garder. Nous retournons les clés des caches dans l'objet {{domxref("CacheStorage")}} utilisant {{domxref("CacheStorage.keys")}}, pour ensuite vérifier que chaque clé est dans la liste blance. Sinon, nous la supprimons avec `delete().`
 
-<pre class="brush: js">this.addEventListener('activate', function(event) {
+```js
+this.addEventListener('activate', function(event) {
   var cacheWhitelist = ['v2'];
 
   event.waitUntil(
@@ -51,35 +49,21 @@ translation_of: Web/API/CacheStorage/delete
       }));
     })
   );
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#cache-storage-delete', 'CacheStorage: delete')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | Statut                               | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('Service Workers', '#cache-storage-delete', 'CacheStorage: delete')}} | {{Spec2('Service Workers')}} | Définition initiale. |
 
-<h2 id="Compatibilités_des_navigateurs">Compatibilités des navigateurs</h2>
+## Compatibilités des navigateurs
 
+{{Compat("api.CacheStorage.delete")}}
 
+## Voir aussi
 
-<p>{{Compat("api.CacheStorage.delete")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers">Utiliser les Service Workers</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>
-</ul>
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WindowOrWorkerGlobalScope.caches")}}

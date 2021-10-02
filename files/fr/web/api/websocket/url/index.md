@@ -3,24 +3,24 @@ title: WebSocket.url
 slug: Web/API/WebSocket/url
 browser-compat: api.WebSocket.url
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p>La propriété en lecture seule <strong><code>WebSocket.url</code></strong> renvoie l'URL absolue de la <a href="/fr/docs/Web/API/WebSocket"><code>WebSocket</code></a> telle que résolue par le constructeur.</p>
+La propriété en lecture seule **`WebSocket.url`** renvoie l'URL absolue de la [`WebSocket`](/fr/docs/Web/API/WebSocket) telle que résolue par le constructeur.
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
+```js
 var url = aWebSocket.url;
-</pre>
+```
 
-<h2 id="value">Valeur</h2>
+## Valeur
 
-<p>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a>.</p>
+Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString).
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -3,41 +3,25 @@ title: PositionOptions.enableHighAccuracy
 slug: Web/API/PositionOptions/enableHighAccuracy
 translation_of: Web/API/PositionOptions/enableHighAccuracy
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>la propriété <code><strong>PositionOptions.enableHighAccuracy</strong></code> est un {{domxref("Boolean")}} qui indique que l'application souhaite recevoir les meilleurs résultats possibles. Si <code>true</code> si l'appareil est capable de fournir une position plus précise, il le fera. Notez que cela peut entraîner des temps de réponse plus lents ou une augmentation de la consommation d'énergie (avec une puce GPS sur un appareil mobile par exemple). D'un autre côté, si <code>false</code> (la valeur par défaut), le périphérique peut prendre la liberté d'économiser des ressources en répondant plus rapidement et/ou en utilisant moins d'énergie.</p>
+la propriété **`PositionOptions.enableHighAccuracy`** est un {{domxref("Boolean")}} qui indique que l'application souhaite recevoir les meilleurs résultats possibles. Si `true` si l'appareil est capable de fournir une position plus précise, il le fera. Notez que cela peut entraîner des temps de réponse plus lents ou une augmentation de la consommation d'énergie (avec une puce GPS sur un appareil mobile par exemple). D'un autre côté, si `false` (la valeur par défaut), le périphérique peut prendre la liberté d'économiser des ressources en répondant plus rapidement et/ou en utilisant moins d'énergie.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><var>positionOptions</var>.enableHighAccuracy = <var>booleanValue</var>
-</pre>
+    positionOptions.enableHighAccuracy = booleanValue
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Geolocation', '#enablehighaccuracy', 'PositionOptions.enableHighAccuracy')}}</td>
-      <td>{{Spec2('Geolocation')}}</td>
-      <td>Définition initiale</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                        | Statut                           | Commentaire         |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName('Geolocation', '#enablehighaccuracy', 'PositionOptions.enableHighAccuracy')}} | {{Spec2('Geolocation')}} | Définition initiale |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PositionOptions.enableHighAccuracy")}}</p>
+{{Compat("api.PositionOptions.enableHighAccuracy")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/WebAPI/Using_geolocation">Utiliser geolocation</a></li>
- <li>L'interface {{domxref("PositionOptions")}} à laquelle il appartient.</li>
-</ul>
+- [Utiliser geolocation](/fr/docs/WebAPI/Using_geolocation)
+- L'interface {{domxref("PositionOptions")}} à laquelle il appartient.

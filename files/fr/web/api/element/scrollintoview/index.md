@@ -8,74 +8,59 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/scrollIntoView
 ---
-<div>{{ APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{ APIRef("DOM")}}{{SeeCompatTable}}
 
-<p>La méthode <code><strong>Element.scrollIntoView()</strong></code> fait défiler la page de manière à rendre l'élément visible.</p>
+La méthode **`Element.scrollIntoView()`** fait défiler la page de manière à rendre l'élément visible.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">element.scrollIntoView();
-element.scrollIntoView(<var>alignToTop</var>); // Paramètre booléen
-element.scrollIntoView(<var>scrollIntoViewOptions</var>); // Paramètre d'objet
-</pre>
+    element.scrollIntoView();
+    element.scrollIntoView(alignToTop); // Paramètre booléen
+    element.scrollIntoView(scrollIntoViewOptions); // Paramètre d'objet
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>alignToTop</code> {{ optional_inline() }}</dt>
- <dd><p>est une valeur {{jsxref("Boolean")}} optionnelle qui :</p>
- <ul>
-  <li>si elle vaut <code>true</code> (<em>vrai</em>), aligne l'élément avec le haut de la zone visible de l'ancêtre défilable. Correspond à <code>scrollIntoViewOptions: {block: "start", inline: "nearest"}</code>. C'est la valeur par défaut.</li>
-  <li>Si elle vaut <code>false</code> (<em>faux</em>), celui-ci sera aligné en bas de la zone visible de l'ancêtre défilable. Correspond à <code>scrollIntoViewOptions: {block: "end", inline: "nearest"}</code>.</li>
- </ul>
- </dd>
- <dt><code>scrollIntoViewOptions</code> {{optional_inline}} {{experimental_inline}}</dt>
- <dd>Est un objet qui a les propriétés suivantes :</dd>
- <dt><code>behavior</code> {{optional_inline}}</dt>
- <dd>Définit l'animation de transition qui peut être <code>"auto"</code>, <code>"instant"</code> ou <code>"smooth"</code>. Par défaut : <code>"auto"</code>.</dd>
- <dt><code>block</code> {{optional_inline}}</dt>
- <dd>L'une des options  <code>"start"</code>, <code>"center"</code>, <code>"end"</code> ou<code>"nearest"</code>. Par défaut : <code>"center"</code>.</dd>
- <dt><code>inline</code> {{optional_inline}}</dt>
- <dd>L'une des options <code>"start"</code>, <code>"center"</code>, <code>"end"</code> ou <code>"nearest"</code>. Par défaut : <code>"nearest"</code>.</dd>
-</dl>
+- `alignToTop` {{ optional_inline() }}
 
-<h2 id="Exemple">Exemple</h2>
+  - : est une valeur {{jsxref("Boolean")}} optionnelle qui :
 
-<pre class="brush: js">var element = document.getElementById("box");
+    - si elle vaut `true` (_vrai_), aligne l'élément avec le haut de la zone visible de l'ancêtre défilable. Correspond à `scrollIntoViewOptions: {block: "start", inline: "nearest"}`. C'est la valeur par défaut.
+    - Si elle vaut `false` (_faux_), celui-ci sera aligné en bas de la zone visible de l'ancêtre défilable. Correspond à `scrollIntoViewOptions: {block: "end", inline: "nearest"}`.
+
+- `scrollIntoViewOptions` {{optional_inline}} {{experimental_inline}}
+  - : Est un objet qui a les propriétés suivantes :
+- `behavior` {{optional_inline}}
+  - : Définit l'animation de transition qui peut être `"auto"`, `"instant"` ou `"smooth"`. Par défaut : `"auto"`.
+- `block` {{optional_inline}}
+  - : L'une des options  `"start"`, `"center"`, `"end"` ou`"nearest"`. Par défaut : `"center"`.
+- `inline` {{optional_inline}}
+  - : L'une des options `"start"`, `"center"`, `"end"` ou `"nearest"`. Par défaut : `"nearest"`.
+
+## Exemple
+
+```js
+var element = document.getElementById("box");
 
 element.scrollIntoView();
 element.scrollIntoView(false);
 element.scrollIntoView({block: "end"});
 element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>L'élément peut ne pas être aligné complètement avec le haut ou le bas, selon la disposition des autres éléments.</p>
+L'élément peut ne pas être aligné complètement avec le haut ou le bas, selon la disposition des autres éléments.
 
-<h2 id="Sp.C3.A9cification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Spécification</th>
-   <th>Statut</th>
-   <th>Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-element-scrollintoview", "Element.scrollIntoView()")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | Statut                           | Commentaire         |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName("CSSOM View", "#dom-element-scrollintoview", "Element.scrollIntoView()")}} | {{Spec2("CSSOM View")}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Element.scrollIntoView")}}</p>
+{{Compat("api.Element.scrollIntoView")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Element.scrollIntoViewIfNeeded()")}}<a href="/en-US/docs/Web/API/Element/scrollIntoViewIfNeeded"> </a>{{non-standard_inline}}</li>
-</ul>
+- {{domxref("Element.scrollIntoViewIfNeeded()")}}[ ](/en-US/docs/Web/API/Element/scrollIntoViewIfNeeded){{non-standard_inline}}

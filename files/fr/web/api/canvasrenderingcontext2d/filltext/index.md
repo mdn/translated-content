@@ -9,68 +9,69 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/fillText
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La méthode <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fillText()</code></strong> de l'API Canvas 2D écrit un texte donné à la position <em>(x, y)</em> donnée. Si le quatrième paramètre optionnel donnant une largeur maximum est fourni, le texte sera mis à l'échelle pour s'adapter à cette largeur.</p>
+La méthode **`CanvasRenderingContext2D`\*\***`.fillText()`\*_ de l'API Canvas 2D écrit un texte donné à la position _(x, y)\* donnée. Si le quatrième paramètre optionnel donnant une largeur maximum est fourni, le texte sera mis à l'échelle pour s'adapter à cette largeur.
 
-<p>Voir aussi la méthode {{domxref("CanvasRenderingContext2D.strokeText()")}} pour dessiner un texte mis en forme.</p>
+Voir aussi la méthode {{domxref("CanvasRenderingContext2D.strokeText()")}} pour dessiner un texte mis en forme.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var><em>ctx</em>.fillText(texte, x, y [, largeurMax]);</var>
-</pre>
+    void ctx.fillText(texte, x, y [, largeurMax]);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>texte</code></dt>
- <dd>Le texte à représenter en utilisant les valeurs en cours de {{domxref("CanvasRenderingContext2D.font","font")}}, {{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}, et de {{domxref("CanvasRenderingContext2D.direction","direction")}}.</dd>
-</dl>
+- `texte`
+  - : Le texte à représenter en utilisant les valeurs en cours de {{domxref("CanvasRenderingContext2D.font","font")}}, {{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}, et de {{domxref("CanvasRenderingContext2D.direction","direction")}}.
 
-<dl>
- <dt><code>x</code></dt>
- <dd>La valeur de la coordonnée sur l'axe des x du point de début du texte.</dd>
- <dt><code>y</code></dt>
- <dd>La valeur de la coordonnée sur l'axe des y du point de fin du texte.</dd>
- <dt><code>largeurMax</code> {{optional_inline}}</dt>
- <dd>La largeur maximum à dessiner. Si spécifiée, et si la longueur calculée de la chaîne est supérieure à cette largeur, la police est ajustée pour utiliser une police plus condensée horizontalement (s'il en existe une ou s'il peut en être synthétisée une raisonnablement lisible en mettant à l'échelle horizontalement la police en cours) ou une plus petite police.</dd>
-</dl>
+<!---->
 
-<h2 id="Exemples">Exemples</h2>
+- `x`
+  - : La valeur de la coordonnée sur l'axe des x du point de début du texte.
+- `y`
+  - : La valeur de la coordonnée sur l'axe des y du point de fin du texte.
+- `largeurMax` {{optional_inline}}
+  - : La largeur maximum à dessiner. Si spécifiée, et si la longueur calculée de la chaîne est supérieure à cette largeur, la police est ajustée pour utiliser une police plus condensée horizontalement (s'il en existe une ou s'il peut en être synthétisée une raisonnablement lisible en mettant à l'échelle horizontalement la police en cours) ou une plus petite police.
 
-<h3 id="Utilisation_de_la_méthode_fillText">Utilisation de la méthode <code>fillText</code></h3>
+## Exemples
 
-<p>Ceci est seulement un fragment de code simple utilisant la méthode <code>fillText</code>.</p>
+### Utilisation de la méthode `fillText`
 
-<h4 id="HTML">HTML</h4>
+Ceci est seulement un fragment de code simple utilisant la méthode `fillText`.
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+#### HTML
 
-<h4 id="JavaScript">JavaScript</h4>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+#### JavaScript
+
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.font = '48px serif';
 ctx.fillText('Hello world', 50, 100);
-</pre>
+```
 
-<p>Modifiez le code ci-dessous et voyez vos changements être mis à jour en temps réel dans le canevas :</p>
+Modifiez le code ci-dessous et voyez vos changements être mis à jour en temps réel dans le canevas :
 
-<h4 id="code_jouable">Code jouable</h4>
+#### Code jouable
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.font = "48px serif";
-ctx.fillText("Hello world", 50, 100);&lt;/textarea&gt;
-</pre>
+ctx.fillText("Hello world", 50, 100);</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -93,34 +94,21 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
+{{ EmbedLiveSample('code_jouable', 700, 360) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-filltext", "CanvasRenderingContext2D.fillText")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                | Statut                           | Commentaire |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-filltext", "CanvasRenderingContext2D.fillText")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.fillText")}}</p>
+{{Compat("api.CanvasRenderingContext2D.fillText")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.strokeText()")}}</li>
-</ul>
+- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.strokeText()")}}

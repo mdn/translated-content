@@ -10,46 +10,31 @@ tags:
   - WebAuthn
 translation_of: Web/API/AuthenticatorAttestationResponse
 ---
-<p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>L'interface <strong><code>AuthenticatorAttestationResponse</code></strong>, rattachée à l'<a href="/en-US/docs/Web/API/Web_Authentication_API">API Web Authentication</a>, est renvoyée par un appel à {{domxref('CredentialsContainer.create()')}} lorsqu'un objet {{domxref('PublicKeyCredential')}} est passé à la méthode. Elle fournit une racine cryptographique de confiance pour la nouvelle paire de clés qui a été générée.</p>
+L'interface **`AuthenticatorAttestationResponse`**, rattachée à l'[API Web Authentication](/en-US/docs/Web/API/Web_Authentication_API), est renvoyée par un appel à {{domxref('CredentialsContainer.create()')}} lorsqu'un objet {{domxref('PublicKeyCredential')}} est passé à la méthode. Elle fournit une racine cryptographique de confiance pour la nouvelle paire de clés qui a été générée.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt><code>AuthenticatorAttestationResponse.clientDataJSON</code></dt>
- <dd>Les données relatives aux client pour l'authentification telles que l'origine et le <em>challenge</em>. La propriété {{domxref("AuthenticatorAttestationResponse.clientDataJSON","clientDataJSON")}} est héritée de l'interface {{domxref("AuthenticatorResponse")}}.</dd>
- <dt>{{domxref("AuthenticatorAttestationResponse.attestationObject")}}</dt>
- <dd>Un objet {{domxref("ArrayBuffer")}} qui contient les données de l'authenticateur ainsi qu'une instruction d'attestation pour la nouvelle paire de clés.</dd>
-</dl>
+- `AuthenticatorAttestationResponse.clientDataJSON`
+  - : Les données relatives aux client pour l'authentification telles que l'origine et le _challenge_. La propriété {{domxref("AuthenticatorAttestationResponse.clientDataJSON","clientDataJSON")}} est héritée de l'interface {{domxref("AuthenticatorResponse")}}.
+- {{domxref("AuthenticatorAttestationResponse.attestationObject")}}
+  - : Un objet {{domxref("ArrayBuffer")}} qui contient les données de l'authenticateur ainsi qu'une instruction d'attestation pour la nouvelle paire de clés.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p>Aucune.</p>
+Aucune.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>TBD</p>
+TBD
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAuthn')}}</td>
-   <td>{{Spec2('WebAuthn')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                    | État                         | Commentaires         |
+| -------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('WebAuthn')}} | {{Spec2('WebAuthn')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.AuthenticatorAttestationResponse")}}</p>
+{{Compat("api.AuthenticatorAttestationResponse")}}

@@ -9,32 +9,33 @@ tags:
   - Reference
 translation_of: Web/API/IDBIndex/multiEntry
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>La propriété <strong><code>multiEntry</code></strong>, rattachée à l'interface {{domxref("IDBIndex")}}, est un booléen qui indique le comportement de l'index lorsque le résultat de l'évaluation d'un chemin de clé renvoie un tableau.</p>
+La propriété **`multiEntry`**, rattachée à l'interface {{domxref("IDBIndex")}}, est un booléen qui indique le comportement de l'index lorsque le résultat de l'évaluation d'un chemin de clé renvoie un tableau.
 
-<p>Ce comportement est paramétré au moment où l'index est créé avec la méthode {{domxref("IDBObjectStore.createIndex")}}. Cette méthode permet d'utiliser un paramètre facultatif <code>options</code> pour définir la propriété <code>multiEntry</code> avec <code>true</code>/<code>false</code>.</p>
+Ce comportement est paramétré au moment où l'index est créé avec la méthode {{domxref("IDBObjectStore.createIndex")}}. Cette méthode permet d'utiliser un paramètre facultatif `options` pour définir la propriété `multiEntry` avec `true`/`false`.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var monIndex = objectStore.index('index');
-console.log(monIndex.multiEntry);</pre>
+    var monIndex = objectStore.index('index');
+    console.log(monIndex.multiEntry);
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un booléen. S'il vaut <code>true</code>, cela signifie qu'il y a autant d'enregistrement que de valeurs dans le tableau renvoyé lors de l'évaluation du chemin (les clés des enregistrements sont les valeurs du tableau). S'il vaut <code>false</code>, cela signifie qu'il n'y aura qu'un seul enregistrement ajouté et que la clé sera le tableau.</p>
+Un booléen. S'il vaut `true`, cela signifie qu'il y a autant d'enregistrement que de valeurs dans le tableau renvoyé lors de l'évaluation du chemin (les clés des enregistrements sont les valeurs du tableau). S'il vaut `false`, cela signifie qu'il n'y aura qu'un seul enregistrement ajouté et que la clé sera le tableau.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple qui suit, on ouvre une transaction sur un magasin d'objets et on récupère l'index <code>lName</code> depuis la base de données des contacts. Ensuite, on ouvre un curseur simple sur l'index grâce à la méthode {{domxref("IDBIndex.openCursor")}} (cela fonctionne comme si on avait directement ouvert un curseur sur le magasin d'objets avec {{domxref("IDBObjectStore.openCursor")}} mais les enregistrements sont ici renvoyés en étant triés selon l'index et non selon la clé primaire.</p>
+Dans l'exemple qui suit, on ouvre une transaction sur un magasin d'objets et on récupère l'index `lName` depuis la base de données des contacts. Ensuite, on ouvre un curseur simple sur l'index grâce à la méthode {{domxref("IDBIndex.openCursor")}} (cela fonctionne comme si on avait directement ouvert un curseur sur le magasin d'objets avec {{domxref("IDBObjectStore.openCursor")}} mais les enregistrements sont ici renvoyés en étant triés selon l'index et non selon la clé primaire.
 
-<p>La propriété <code>multiEntry</code> est affichée dans la console. Dans cet exemple, elle a la valeur <code>false</code>.</p>
+La propriété `multiEntry` est affichée dans la console. Dans cet exemple, elle a la valeur `false`.
 
-<p>Enfin, on parcourt chacun des enregistrements pour insérer les données dans un tableau HTML. Pour consulter un exemple complet, vous pouvez vous référer à <a href="https://github.com/mdn/IDBIndex-example">notre dépôt IDBIndex-example</a> (<a href="https://mdn.github.io/IDBIndex-example/">voir également la démo <em>live</em></a>).</p>
+Enfin, on parcourt chacun des enregistrements pour insérer les données dans un tableau HTML. Pour consulter un exemple complet, vous pouvez vous référer à [notre dépôt IDBIndex-example](https://github.com/mdn/IDBIndex-example) ([voir également la démo _live_](https://mdn.github.io/IDBIndex-example/)).
 
-<pre class="brush: js">function displayDataByIndex() {
+```js
+function displayDataByIndex() {
   tableEntry.innerHTML = '';
   var transaction = db.transaction(['contactsList'], 'readonly');
   var objectStore = transaction.objectStore('contactsList');
@@ -46,14 +47,14 @@ console.log(monIndex.multiEntry);</pre>
     var cursor = event.target.result;
     if(cursor) {
       var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '&lt;td&gt;' + cursor.value.id + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.lName + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.fName + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.jTitle + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.company + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.eMail + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.phone + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.age + '&lt;/td&gt;';
+      tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
+                           + '<td>' + cursor.value.lName + '</td>'
+                           + '<td>' + cursor.value.fName + '</td>'
+                           + '<td>' + cursor.value.jTitle + '</td>'
+                           + '<td>' + cursor.value.company + '</td>'
+                           + '<td>' + cursor.value.eMail + '</td>'
+                           + '<td>' + cursor.value.phone + '</td>'
+                           + '<td>' + cursor.value.age + '</td>';
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
@@ -61,37 +62,25 @@ console.log(monIndex.multiEntry);</pre>
       console.log('Les éléments ont été affichés.');
     }
   };
-};</pre>
+};
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBIndex-multiEntry', 'multiEntry')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                         | Commentaires |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBIndex-multiEntry', 'multiEntry')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBIndex.multiEntry")}}</p>
+{{Compat("api.IDBIndex.multiEntry")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
- <li>Initier une connexion : {{domxref("IDBDatabase")}}</li>
- <li>Utiliser les transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
- <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
-</ul>
+- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Initier une connexion : {{domxref("IDBDatabase")}}
+- Utiliser les transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
+- Utiliser les curseurs {{domxref("IDBCursor")}}
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).

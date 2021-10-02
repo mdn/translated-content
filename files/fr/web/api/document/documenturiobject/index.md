@@ -8,31 +8,32 @@ tags:
   - Reference
 translation_of: Web/API/Document/documentURIObject
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>La propriété en lecture seule <code><strong>Document.documentURIObject</strong></code> renvoie un objet {{ Interface("nsIURI") }} représentant l'URI du <a href="/fr/docs/Web/API/document">document</a>.</p>
+La propriété en lecture seule **`Document.documentURIObject`** renvoie un objet {{ Interface("nsIURI") }} représentant l'URI du [document](/fr/docs/Web/API/document).
 
-<p>Cette propriété fonctionne uniquement pour les scripts privilégiés (UniversalXPConnect), comme le code des extensions. Pour le contenu Web, elle n'a aucune signification particulière et peut être utilisée comme n'importe quelle propriété personnalisée.</p>
+Cette propriété fonctionne uniquement pour les scripts privilégiés (UniversalXPConnect), comme le code des extensions. Pour le contenu Web, elle n'a aucune signification particulière et peut être utilisée comme n'importe quelle propriété personnalisée.
 
-<p>Dans le cas d'un code privilégié, il convient de faire attention à ne pas essayer d'obtenir ou modifier cette propriété sur un objet de contenu non enveloppé (par exemple sur l'objet <code>wrappedJSObject</code> d'un <code><a href="/fr/docs/Mozilla/Tech/Xray_vision">XPCNativeWrapper</a></code>). Consultez les commentaires du {{ Bug(324464) }} pour plus de détails.</p>
+Dans le cas d'un code privilégié, il convient de faire attention à ne pas essayer d'obtenir ou modifier cette propriété sur un objet de contenu non enveloppé (par exemple sur l'objet `wrappedJSObject` d'un [`XPCNativeWrapper`](/fr/docs/Mozilla/Tech/Xray_vision)). Consultez les commentaires du {{ Bug(324464) }} pour plus de détails.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var uri = doc.documentURIObject;</pre>
+```js
+var uri = doc.documentURIObject;
+```
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="eval">// Vérifie que le schéma d'URI pour l'onglet courant dans Firefox est « http »,
-// en supposant que ce code s'exécute dans le contexte de browser.xul
+    // Vérifie que le schéma d'URI pour l'onglet courant dans Firefox est « http »,
+    // en supposant que ce code s'exécute dans le contexte de browser.xul
 
-var uriObj = content.document.documentURIObject;
-var uriPort = uriObj.port;
+    var uriObj = content.document.documentURIObject;
+    var uriPort = uriObj.port;
 
-if (uriObj.schemeIs('http')) {
-  ...
-}
-</pre>
+    if (uriObj.schemeIs('http')) {
+      ...
+    }
 
-<h2 id="Sp.C3.A9cification">Spécifications</h2>
+## Spécifications
 
-<p>Ne fait partie d'aucune spécification.</p>
+Ne fait partie d'aucune spécification.

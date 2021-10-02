@@ -9,36 +9,36 @@ tags:
   - ShadowRoot
 translation_of: Web/API/ShadowRoot/delegatesFocus
 ---
-<div>{{APIRef("Shadow DOM")}}</div>
+{{APIRef("Shadow DOM")}}
 
-<p><strong><code>delegatesFocus</code></strong> est une propriété en lecture seule, rattachée à l'interface {{domxref("ShadowRoot")}} et qui renvoie un booléen indiquant si l'option <code>delegatesFocus</code> a été intialisée lors de l'attachement de la racine <em>shadow</em> (cf. {{domxref("Element.attachShadow()")}}).</p>
+**`delegatesFocus`** est une propriété en lecture seule, rattachée à l'interface {{domxref("ShadowRoot")}} et qui renvoie un booléen indiquant si l'option `delegatesFocus` a été intialisée lors de l'attachement de la racine _shadow_ (cf. {{domxref("Element.attachShadow()")}}).
 
-<div class="warning">
-<p><strong>Attention :</strong> Cette fonctionnalité est expérimentale, non-standard et uniquement disponible dans Chrome.</p>
-</div>
+> **Attention :** Cette fonctionnalité est expérimentale, non-standard et uniquement disponible dans Chrome.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <var>df</var> = <var>shadowRoot</var>.delegatesFocus</pre>
+    var df = shadowRoot.delegatesFocus
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un booléen : <code>true</code> si la racine <em>shadow</em> délègue la gestion du focus et <code>false</code> sinon.</p>
+Un booléen : `true` si la racine _shadow_ délègue la gestion du focus et `false` sinon.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">let customElem = document.querySelector('mon-element-shadow-dom');
+```js
+let customElem = document.querySelector('mon-element-shadow-dom');
 let shadow = customElem.shadowRoot;
 
   ...
 
 // Est-ce que la racine gère la délégation du focus ?
-let hostElem = shadow.delegatesFocus;</pre>
+let hostElem = shadow.delegatesFocus;
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette fonctionnalité n'est actuellement décrite dans aucune spécification.</p>
+Cette fonctionnalité n'est actuellement décrite dans aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.ShadowRoot.delegatesFocus")}}</p>
+{{Compat("api.ShadowRoot.delegatesFocus")}}

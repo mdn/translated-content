@@ -9,69 +9,62 @@ tags:
   - Window
 translation_of: Web/API/Window/messageerror_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>L'événement <code>messageerror</code> est déclenché sur un objet {{domxref('Window')}} lorsqu'il reçoit un message qui ne peut pas être désérialisé.</p>
+L'événement `messageerror` est déclenché sur un objet {{domxref('Window')}} lorsqu'il reçoit un message qui ne peut pas être désérialisé.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bulles</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Annulable</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MessageEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Propriété de gestionnaire d'événements</th>
-   <td>{{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bulles</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Annulable</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MessageEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Propriété de gestionnaire d'événements</th>
+      <td>
+        {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Écoutez <code>messageerror</code> en utilisant {{domxref("EventTarget/addEventListener", "addEventListener()")}} :</p>
+Écoutez `messageerror` en utilisant {{domxref("EventTarget/addEventListener", "addEventListener()")}} :
 
-<pre class="brush: js">window.addEventListener('messageerror', (event) =&gt; {
+```js
+window.addEventListener('messageerror', (event) => {
     console.error(event);
-});</pre>
+});
+```
 
-<p>Idem, mais en utilisant la propriété de gestionnaire d'événements {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}} :</p>
+Idem, mais en utilisant la propriété de gestionnaire d'événements {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}} :
 
-<pre class="brush: js">window.onmessageerror = (event) =&gt; {
+```js
+window.onmessageerror = (event) => {
     console.error(event);
-};</pre>
+};
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'indices.html#event-messageerror')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                           |
+| ------------------------------------------------------------------------------------ | -------------------------------- |
+| {{SpecName('HTML WHATWG', 'indices.html#event-messageerror')}} | {{Spec2('HTML WHATWG')}} |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.messageerror_event")}}</p>
+{{Compat("api.Window.messageerror_event")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>{{domxref("Window.postMessage()")}}</li>
- <li>Événements liés: {{domxref("Window/message_event", "message")}}.</li>
-</ul>
+- {{domxref("Window.postMessage()")}}
+- Événements liés: {{domxref("Window/message_event", "message")}}.

@@ -9,37 +9,24 @@ tags:
   - Reference
 translation_of: Web/API/PasswordCredential/name
 ---
-<p>{{SeeCompatTable}}{{APIRef("")}}</p>
+{{SeeCompatTable}}{{APIRef("")}}
 
-<p>La propriété <strong><code>name</code></strong> est accessible en lecture seule et est rattachée à l'interface {{domxref("PasswordCredential")}}. C'est une chaîne de caractères {{domxref("USVSTring")}} qui contient un nom public, compréhensible pour un humain et qui est destiné à être affiché dans un sélecteur de fournisseur d'authentification.</p>
+La propriété **`name`** est accessible en lecture seule et est rattachée à l'interface {{domxref("PasswordCredential")}}. C'est une chaîne de caractères {{domxref("USVSTring")}} qui contient un nom public, compréhensible pour un humain et qui est destiné à être affiché dans un sélecteur de fournisseur d'authentification.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>name</em> = <em>passwordCredential</em>.name</pre>
+    name = passwordCredential.name
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>A {{domxref("USVString")}} containing a name.</p>
+A {{domxref("USVString")}} containing a name.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Credential Management','#dom-credentialuserdata-name','name')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>Définition initiale..</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                                         | Commentaires          |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------- |
+| {{SpecName('Credential Management','#dom-credentialuserdata-name','name')}} | {{Spec2('Credential Management')}} | Définition initiale.. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PasswordCredential.name")}}</p>
+{{Compat("api.PasswordCredential.name")}}

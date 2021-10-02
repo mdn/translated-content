@@ -7,20 +7,21 @@ tags:
   - Reference
 translation_of: Web/API/ServiceWorker/onstatechange
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>Une propriété {{domxref("EventListener")}} appelée quand un évenement de type <code>statechange</code> est déclenché; c'est le cas dès que le {{domxref("ServiceWorker.state")}} change.</p>
+Une propriété {{domxref("EventListener")}} appelée quand un évenement de type `statechange` est déclenché; c'est le cas dès que le {{domxref("ServiceWorker.state")}} change.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">ServiceWorker.onstatechange = function(statechangeevent) { ... }
-ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )</pre>
+    ServiceWorker.onstatechange = function(statechangeevent) { ... }
+    ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Ce fragment de code présente <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">un exemple d'enregistrement d'évenements pour le service worker</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">démo live</a>). Le code écoute pour tout changement du {{domxref("ServiceWorker.state")}} et retourne sa valeur.</p>
+Ce fragment de code présente [un exemple d'enregistrement d'évenements pour le service worker](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([démo live](https://googlechrome.github.io/samples/service-worker/registration-events/)). Le code écoute pour tout changement du {{domxref("ServiceWorker.state")}} et retourne sa valeur.
 
-<pre class="brush: js">var serviceWorker;
+```js
+var serviceWorker;
 if (registration.installing) {
   serviceWorker = registration.installing;
   document.querySelector('#kind').textContent = 'installé';
@@ -37,11 +38,13 @@ if (serviceWorker) {
   serviceWorker.addEventListener('statechange', function(e) {
   logState(e.target.state);
   });
-}</pre>
+}
+```
 
-<p>Notez que quand l'évenement <code>statechange</code> est déclenché, la référence du service worker peut avoir changée. Par exemple :</p>
+Notez que quand l'évenement `statechange` est déclenché, la référence du service worker peut avoir changée. Par exemple :
 
-<pre class="brush: js">navigator.serviceWorker.register(..).then(function(swr) {
+```js
+navigator.serviceWorker.register(..).then(function(swr) {
   swr.installing.state == "installé"
   swr.installing.onstatechange = function() {
     swr.installing == null;
@@ -49,25 +52,15 @@ if (serviceWorker) {
     // statechange est mis en queue, pendant que le worker sous jacent est peut être en
     // état d'attente et sera immédiatement activé si possible.
   }
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#service-worker-onstatechange-attribute', 'ServiceWorker.onstatechange')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition intiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                | État                                 | Commentaire        |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName('Service Workers', '#service-worker-onstatechange-attribute', 'ServiceWorker.onstatechange')}} | {{Spec2('Service Workers')}} | Définition intiale |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.ServiceWorker.onstatechange")}}</p>
+{{Compat("api.ServiceWorker.onstatechange")}}

@@ -11,32 +11,34 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Raining_rectangles
 original_slug: Web/API/WebGL_API/By_example/Une_pluie_de_rectangle
 ---
-<div>{{IncludeSubnav("/fr/Apprendre")}}</div>
+{{IncludeSubnav("/fr/Apprendre")}}
 
-<p>{{PreviousNext("Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique","Apprendre/WebGL/Par_exemple/Hello_GLSL")}}</p>
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique","Apprendre/WebGL/Par_exemple/Hello_GLSL")}}
 
-<p>Cet exemple permet de créer un jeu simple qui illustre ce qu'il est possible de faire avec du « découpage », des animations et des interactions utilisateur.</p>
+Cet exemple permet de créer un jeu simple qui illustre ce qu'il est possible de faire avec du « découpage », des animations et des interactions utilisateur.
 
-<p>{{EmbedLiveSample("Utiliser_des_animations_et_des_interactions_grâce_à_des_découpes",660,425)}}</p>
+{{EmbedLiveSample("Utiliser_des_animations_et_des_interactions_grâce_à_des_découpes",660,425)}}
 
-<h3 id="Utiliser_des_animations_et_des_interactions_grâce_à_des_découpes">Utiliser des animations et des interactions grâce à des découpes</h3>
+### Utiliser des animations et des interactions grâce à des découpes
 
-<p>Voici un jeu simple où il faut essayer de cliquer sur les rectangles qui tombent pour en attraper le plus possible. Dans cet exemple, on utilise un approche orientée objet pour représenter les rectangles. Cela permet de mieux gérer l'état du rectangle (sa position, sa couleur, etc.) et cela rend le code plus compact et plus facile à réutiliser.</p>
+Voici un jeu simple où il faut essayer de cliquer sur les rectangles qui tombent pour en attraper le plus possible. Dans cet exemple, on utilise un approche orientée objet pour représenter les rectangles. Cela permet de mieux gérer l'état du rectangle (sa position, sa couleur, etc.) et cela rend le code plus compact et plus facile à réutiliser.
 
-<p>Dans cet exemple, on combine l'applique de couleurs unis dans le tampon de dessin et des opérations de découpe. C'est un aperçu d'une application graphique complète qui manipule les différentes phases des processus {{Glossary("WebGL")}} et de son automate.</p>
+Dans cet exemple, on combine l'applique de couleurs unis dans le tampon de dessin et des opérations de découpe. C'est un aperçu d'une application graphique complète qui manipule les différentes phases des processus {{Glossary("WebGL")}} et de son automate.
 
-<p>De plus, cet exmple illustre comment intégrer des fonctions WebGL dans une boucle de jeu. La boucle de jeu est responsable du dessin pour l'animation, de la gestion des entrées utilisateur et de la réactivité de l'ensemble. Voici comment la boucle de jeu est implémentée avec des  <code>setTimeout</code>.</p>
+De plus, cet exmple illustre comment intégrer des fonctions WebGL dans une boucle de jeu. La boucle de jeu est responsable du dessin pour l'animation, de la gestion des entrées utilisateur et de la réactivité de l'ensemble. Voici comment la boucle de jeu est implémentée avec des  `setTimeout`.
 
-<pre class="brush: html hidden">&lt;p&gt;Vous en avez attrapé
-&lt;strong&gt;0&lt;/strong&gt;.
+```html hidden
+<p>Vous en avez attrapé
+<strong>0</strong>.
   Vous en avez loupé
-&lt;strong&gt;0&lt;/strong&gt;.&lt;/p&gt;
-&lt;canvas&gt;Il semblerait que votre
+<strong>0</strong>.</p>
+<canvas>Il semblerait que votre
     navigateur ne supporte pas l'élément
-    HTML5 canvas.&lt;/canvas&gt;
-</pre>
+    HTML5 canvas.</canvas>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   text-align : center;
 }
 canvas {
@@ -54,12 +56,14 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
+```
 
-<pre class="brush: js hidden">;(function(){
-</pre>
+```js hidden
+;(function(){
+```
 
-<pre class="brush: js">"use strict"
+```js
+"use strict"
 window.addEventListener("load", setupAnimation, false);
 var gl,
   timer,
@@ -88,7 +92,7 @@ function drawAnimation () {
       rainingRect.size[0] , rainingRect.size[1]);
   gl.clear(gl.COLOR_BUFFER_BIT);
   rainingRect.position[1] -= rainingRect.velocity;
-  if (rainingRect.position[1] &lt; 0) {
+  if (rainingRect.position[1] < 0) {
     misses += 1;
     missesDisplay.innerHTML = misses;
     rainingRect = new Rectangle();
@@ -114,8 +118,8 @@ function playerClick (evt) {
   // On incrémente donc le score et on crée un nouveau rectangle
   var diffPos = [ position[0] - rainingRect.position[0],
       position[1] - rainingRect.position[1] ];
-  if ( diffPos[0] &gt;= 0 &amp;&amp; diffPos[0] &lt; rainingRect.size[0]
-      &amp;&amp; diffPos[1] &gt;= 0 &amp;&amp; diffPos[1] &lt; rainingRect.size[1] ) {
+  if ( diffPos[0] >= 0 && diffPos[0] < rainingRect.size[0]
+      && diffPos[1] >= 0 && diffPos[1] < rainingRect.size[1] ) {
     score += 1;
     scoreDisplay.innerHTML = score;
     rainingRect = new Rectangle();
@@ -146,9 +150,10 @@ function Rectangle () {
     return [Math.random(), Math.random(), Math.random()];
   }
 }
-</pre>
+```
 
-<pre class="brush: js hidden">function getRenderingContext() {
+```js hidden
+function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
@@ -167,11 +172,12 @@ function Rectangle () {
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;
 }
-</pre>
+```
 
-<pre class="brush: js hidden">})();
-</pre>
+```js hidden
+})();
+```
 
-<p>Le code source de cet exemple est également disponible sur <a href="https://github.com/idofilin/webgl-by-example/tree/master/raining-rectangles">GitHub</a>.</p>
+Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/raining-rectangles).
 
-<p>{{PreviousNext("Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique","Apprendre/WebGL/Par_exemple/Hello_GLSL")}}</p>
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique","Apprendre/WebGL/Par_exemple/Hello_GLSL")}}

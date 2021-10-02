@@ -10,154 +10,162 @@ tags:
 translation_of: Web/API/Element/innerHTML
 original_slug: Web/API/Element/innertHTML
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>La propriété <strong><code>Element.innerHTML</code></strong> de {{domxref("Element")}} récupère ou définit la syntaxe HTML décrivant les descendants de l'élément.</p>
+La propriété **`Element.innerHTML`** de {{domxref("Element")}} récupère ou définit la syntaxe HTML décrivant les descendants de l'élément.
 
-<div class="note">
-  <p><strong>Note :</strong> Si un nœud {{HTMLElement("div")}}, {{HTMLElement("span")}}, ou {{HTMLElement("noembed")}} a un sous-nœud de type texte contenant les caractères <code>(&amp;), (&lt;),</code> ou <code>(&gt;)</code>, <code>innerHTML</code> renverra à la place les chaînes suivantes : <code>"&amp;amp;"</code>, <code>"&amp;lt;"</code> et <code>"&amp;gt;"</code> respectivement. Utilisez {{domxref("Node.textContent")}} pour obtenir une copie exacte du contenu de ces nœuds.</p>
-</div>
+> **Note :** Si un nœud {{HTMLElement("div")}}, {{HTMLElement("span")}}, ou {{HTMLElement("noembed")}} a un sous-nœud de type texte contenant les caractères `(&), (<),` ou `(>)`, `innerHTML` renverra à la place les chaînes suivantes : `"&amp;"`, `"&lt;"` et `"&gt;"` respectivement. Utilisez {{domxref("Node.textContent")}} pour obtenir une copie exacte du contenu de ces nœuds.
 
-<p>Pour insérer le HTML dans le document, plutôt que de remplacer le contenu d'un élément, utilisez la méthode {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.</p>
+Pour insérer le HTML dans le document, plutôt que de remplacer le contenu d'un élément, utilisez la méthode {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">const <em>content</em> = <em>element</em>.innerHTML;
+    const content = element.innerHTML;
 
-<em>element</em>.innerHTML = <em>htmlString</em>;
-</pre>
+    element.innerHTML = htmlString;
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Une  {{domxref("DOMString")}} contenant la sérialisation HTML des descendants de l'élément. Définir la valeur de <code>innerHTML</code> supprime tous les descendants et les remplace par les noeuds construits en analysant le HTML donné dans la chaîne <code>htmlString</code>.</p>
+Une  {{domxref("DOMString")}} contenant la sérialisation HTML des descendants de l'élément. Définir la valeur de `innerHTML` supprime tous les descendants et les remplace par les noeuds construits en analysant le HTML donné dans la chaîne `htmlString`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
- <dt><code>SyntaxError</code></dt>
- <dd>Une tentative a été faite de définir la valeur de <code>innerHTML</code> en utilisant une chaîne qui n'est pas correctement formée HTML.</dd>
- <dt><code>NoModificationAllowedError</code></dt>
- <dd>Une tentative a été faite d'insérer le code HTML dans un noeud dont le parent est un {{domxref("Document")}}.</dd>
-</dl>
+- `SyntaxError`
+  - : Une tentative a été faite de définir la valeur de `innerHTML` en utilisant une chaîne qui n'est pas correctement formée HTML.
+- `NoModificationAllowedError`
+  - : Une tentative a été faite d'insérer le code HTML dans un noeud dont le parent est un {{domxref("Document")}}.
 
-<h2 id="Notes_dutilisation">Notes d'utilisation</h2>
+## Notes d'utilisation
 
-<p>La propriété <code>innerHTML</code> peut être utilisée pour examiner la source HTML actuelle de la page, y compris tous les changements réalisés depuis son chargement initial.</p>
+La propriété `innerHTML` peut être utilisée pour examiner la source HTML actuelle de la page, y compris tous les changements réalisés depuis son chargement initial.
 
-<h3 id="Lecture_du_contenu_HTML_dun_élément">Lecture du contenu HTML d'un élément</h3>
+### Lecture du contenu HTML d'un élément
 
-<p>La lecture de <code>innerHTML</code> amène l'agent utilisateur à sérialiser le fragment HTML ou XML composé des descendants de l'élément. La chaîne résultante est renvoyée.</p>
+La lecture de `innerHTML` amène l'agent utilisateur à sérialiser le fragment HTML ou XML composé des descendants de l'élément. La chaîne résultante est renvoyée.
 
-<pre class="brush: js">let contents = myElement.innerHTML;</pre>
+```js
+let contents = myElement.innerHTML;
+```
 
-<p>Cela vous permet de regarder le balisage HTML des nœuds de contenu de l'élément.</p>
+Cela vous permet de regarder le balisage HTML des nœuds de contenu de l'élément.
 
-<div class="note">
-<p><strong>Note :</strong> Le fragment HTML ou XML renvoyé est généré en fonction du contenu actuel de l'élément. Il est donc probable que le balisage et la mise en forme du fragment renvoyé ne correspondent pas au balisage de la page d'origine.</p>
-</div>
+> **Note :** Le fragment HTML ou XML renvoyé est généré en fonction du contenu actuel de l'élément. Il est donc probable que le balisage et la mise en forme du fragment renvoyé ne correspondent pas au balisage de la page d'origine.
 
-<h3 id="Remplacement_du_contenu_dun_élément">Remplacement du contenu d'un élément</h3>
+### Remplacement du contenu d'un élément
 
-<p>Définir la valeur de <code>innerHTML</code> vous permet de remplacer aisément le contenu existant d'un élément par un nouveau contenu.</p>
+Définir la valeur de `innerHTML` vous permet de remplacer aisément le contenu existant d'un élément par un nouveau contenu.
 
-<p>Par exemple, vous pouvez effacer le contenu entier du document en effaçant le contenu de l'attribut {{domxref("Document.body", "body")}} du document.</p>
+Par exemple, vous pouvez effacer le contenu entier du document en effaçant le contenu de l'attribut {{domxref("Document.body", "body")}} du document.
 
-<pre class="brush: js">document.body.innerHTML = "";</pre>
+```js
+document.body.innerHTML = "";
+```
 
-<p>Cet exemple récupère le balisage HTML actuel du document et remplace les caractères <code>"&lt;"</code> par l'entité HTML <code>"&amp; lt;"</code>, convertissant ainsi essentiellement le code HTML en texte brut. Ceci est ensuite inclus dans un élément {{HTMLElement ("pre")}}. Puis, la valeur de <code>innerHTML</code> est modifiée dans cette nouvelle chaîne. Par conséquent, le contenu du document est remplacé par un affichage du code source entier de la page.</p>
+Cet exemple récupère le balisage HTML actuel du document et remplace les caractères `"<"` par l'entité HTML `"& lt;"`, convertissant ainsi essentiellement le code HTML en texte brut. Ceci est ensuite inclus dans un élément {{HTMLElement ("pre")}}. Puis, la valeur de `innerHTML` est modifiée dans cette nouvelle chaîne. Par conséquent, le contenu du document est remplacé par un affichage du code source entier de la page.
 
-<pre class="brush: js">document.documentElement.innerHTML = "&lt;pre&gt;" +
-         document.documentElement.innerHTML.replace(/&lt;/g,"&amp;lt;") +
-            "&lt;/pre&gt;";</pre>
+```js
+document.documentElement.innerHTML = "<pre>" +
+         document.documentElement.innerHTML.replace(/</g,"&lt;") +
+            "</pre>";
+```
 
-<h4 id="Détails_opérationnels">Détails opérationnels</h4>
+#### Détails opérationnels
 
-<p>Qu'arrive-t-il exactement quand vous définissez la valeur de <code>innerHTML</code> ?  Cela entraîne l'agent utilisateur à suivre ces étapes :</p>
+Qu'arrive-t-il exactement quand vous définissez la valeur de `innerHTML` ?  Cela entraîne l'agent utilisateur à suivre ces étapes :
 
-<ol>
- <li>La valeur spécifiée est analysée en HTML ou XML (en fonction du type de document), ce qui donne un objet {{domxref ("DocumentFragment")}} représentant le nouvel ensemble de nœuds DOM pour les nouveaux éléments.</li>
- <li>Si l'élément dont le contenu est remplacé est un élément {{HTMLElement ("template")}}, l'attribut {{domxref ("HTMLTemplateElement.content", "content")}} de l'élément <code>&lt;template&gt;</code> est remplacé par le nouveau <code>DocumentFragment</code> créé à l'étape 1.</li>
- <li>Pour tous les autres éléments, le contenu de l'élément est remplacé par les noeuds du nouveau <code>DocumentFragment</code>.</li>
-</ol>
+1.  La valeur spécifiée est analysée en HTML ou XML (en fonction du type de document), ce qui donne un objet {{domxref ("DocumentFragment")}} représentant le nouvel ensemble de nœuds DOM pour les nouveaux éléments.
+2.  Si l'élément dont le contenu est remplacé est un élément {{HTMLElement ("template")}}, l'attribut {{domxref ("HTMLTemplateElement.content", "content")}} de l'élément `<template>` est remplacé par le nouveau `DocumentFragment` créé à l'étape 1.
+3.  Pour tous les autres éléments, le contenu de l'élément est remplacé par les noeuds du nouveau `DocumentFragment`.
 
-<h3 id="Considérations_de_sécurité">Considérations de sécurité</h3>
+### Considérations de sécurité
 
-<p>Il n'est pas rare de voir <code>innerHTML</code> utilisé pour insérer du texte dans une page Web. Il est possible que ceci devienne un vecteur d'attaque sur un site, ce qui crée potentiellement un risque de sécurité.</p>
+Il n'est pas rare de voir `innerHTML` utilisé pour insérer du texte dans une page Web. Il est possible que ceci devienne un vecteur d'attaque sur un site, ce qui crée potentiellement un risque de sécurité.
 
-<pre class="brush: js">const name = "John";
+```js
+const name = "John";
 // en supposant que 'el' est un élément de document HTML
 el.innerHTML = name; // inoffensif dans ce cas
 
 // ...
 
-name = "&lt;script&gt;alert('I am John in an annoying alert!')&lt;/script&gt;";
-el.innerHTML = name; // inoffensif dans ce cas</pre>
+name = "<script>alert('I am John in an annoying alert!')</script>";
+el.innerHTML = name; // inoffensif dans ce cas
+```
 
-<p>Bien que cela puisse ressembler à une attaque {{interwiki ("wikipedia", "cross-site_scripting","cross-site scripting")}}, le résultat est inoffensif. HTML5 spécifie qu'une balise {{HTMLElement ("script")}} insérée avec <code>innerHTML</code> <a href="https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0">ne doit pas s'exécuter</a>.</p>
+Bien que cela puisse ressembler à une attaque {{interwiki ("wikipedia", "cross-site_scripting","cross-site scripting")}}, le résultat est inoffensif. HTML5 spécifie qu'une balise {{HTMLElement ("script")}} insérée avec `innerHTML` [ne doit pas s'exécuter](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
 
-<p>Cependant, il existe des moyens d'exécuter JavaScript sans utiliser les éléments {{HTMLElement ("script")}}, donc il existe toujours un risque de sécurité chaque fois que vous utilisez <code>innerHTML</code> pour définir des chaînes sur lesquelles vous n'avez aucun contrôle. Par exemple :</p>
+Cependant, il existe des moyens d'exécuter JavaScript sans utiliser les éléments {{HTMLElement ("script")}}, donc il existe toujours un risque de sécurité chaque fois que vous utilisez `innerHTML` pour définir des chaînes sur lesquelles vous n'avez aucun contrôle. Par exemple :
 
-<pre class="brush: js">const name = "&lt;img src='x' onerror='alert(1)'&gt;";
-el.innerHTML = name; // affiche l'alerte</pre>
+```js
+const name = "<img src='x' onerror='alert(1)'>";
+el.innerHTML = name; // affiche l'alerte
+```
 
-<p>Pour cette raison, il est recommandé de ne pas utiliser <code>innerHTML</code> pour insérer du texte brut ; à la place, utilisez {{domxref("Node.textContent")}}. Cela n'analyse pas le contenu passé en HTML, mais l'insère à la place en tant que texte brut.</p>
+Pour cette raison, il est recommandé de ne pas utiliser `innerHTML` pour insérer du texte brut ; à la place, utilisez {{domxref("Node.textContent")}}. Cela n'analyse pas le contenu passé en HTML, mais l'insère à la place en tant que texte brut.
 
-<div class="warning">
-<p><strong>Attention :</strong> Si votre projet est soumis à une vérification de sécurité, l'utilisation de <code>innerHTML</code> entraînera probablement le rejet de votre code. Par exemple, si vous utilisez <code>innerHTML</code> dans une extension de navigateur et soumettez l'extension à addons.mozilla.org, elle ne passera pas le processus de révision automatique.</p>
-</div>
+> **Attention :** Si votre projet est soumis à une vérification de sécurité, l'utilisation de `innerHTML` entraînera probablement le rejet de votre code. Par exemple, si vous utilisez `innerHTML` dans une extension de navigateur et soumettez l'extension à addons.mozilla.org, elle ne passera pas le processus de révision automatique.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Cet exemple utilise <code>innerHTML</code> pour créer un mécanisme pour consigner des messages dans une boîte sur une page Web.</p>
+Cet exemple utilise `innerHTML` pour créer un mécanisme pour consigner des messages dans une boîte sur une page Web.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function log(msg) {
+```js
+function log(msg) {
   var logElem = document.querySelector(".log");
 
   var time = new Date();
   var timeStr = time.toLocaleTimeString();
-  logElem.innerHTML += timeStr + ": " + msg + "&lt;br/&gt;";
+  logElem.innerHTML += timeStr + ": " + msg + "<br/>";
 }
 
-log("Logging mouse events inside this container...");</pre>
+log("Logging mouse events inside this container...");
+```
 
-<p>La fonction <code>log()</code> crée la sortie du journal en récupérant l'heure actuelle à partir d'un objet {{jsxref ("Date")}} en utilisant {{jsxref ("Date.toLocaleTimeString", "toLocaleTimeString ()")}} et en créant une chaîne avec l'horodatage et le texte du message. Ensuite, le message est ajouté à la boîte avec la classe <code>"log"</code>.</p>
+La fonction `log()` crée la sortie du journal en récupérant l'heure actuelle à partir d'un objet {{jsxref ("Date")}} en utilisant {{jsxref ("Date.toLocaleTimeString", "toLocaleTimeString ()")}} et en créant une chaîne avec l'horodatage et le texte du message. Ensuite, le message est ajouté à la boîte avec la classe `"log"`.
 
-<p>Nous ajoutons une seconde méthode qui enregistre des informations sur les événements basés sur {{domxref ("MouseEvent")}} (tels que {{event ("mousedown")}}, {{event ("click")}} et {{event ("mouseenter") }}) :</p>
+Nous ajoutons une seconde méthode qui enregistre des informations sur les événements basés sur {{domxref ("MouseEvent")}} (tels que {{event ("mousedown")}}, {{event ("click")}} et {{event ("mouseenter") }}) :
 
-<pre class="brush: js">function logEvent(event) {
-  var msg = "Event &lt;strong&gt;" + event.type + "&lt;/strong&gt; at &lt;em&gt;" +
-            event.clientX + ", " + event.clientY + "&lt;/em&gt;";
+```js
+function logEvent(event) {
+  var msg = "Event <strong>" + event.type + "</strong> at <em>" +
+            event.clientX + ", " + event.clientY + "</em>";
   log(msg);
-}</pre>
+}
+```
 
-<p>Alors, nous utilisons ceci comme un gestionnaire d'évènements pour un certain nombre d'évènements de souris sur la boîte qui contient notre journal.</p>
+Alors, nous utilisons ceci comme un gestionnaire d'évènements pour un certain nombre d'évènements de souris sur la boîte qui contient notre journal.
 
-<pre class="brush: js">var boxElem = document.querySelector(".box");
+```js
+var boxElem = document.querySelector(".box");
 
 boxElem.addEventListener("mousedown", logEvent);
 boxElem.addEventListener("mouseup", logEvent);
 boxElem.addEventListener("click", logEvent);
 boxElem.addEventListener("mouseenter", logEvent);
-boxElem.addEventListener("mouseleave", logEvent);</pre>
+boxElem.addEventListener("mouseleave", logEvent);
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>Le HTML est assez simple pour notre exemple.</p>
+Le HTML est assez simple pour notre exemple.
 
-<pre class="brush: html">&lt;div class="box"&gt;
-  &lt;div&gt;&lt;strong&gt;Log:&lt;/strong&gt;&lt;/div&gt;
-  &lt;div class="log"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="box">
+  <div><strong>Log:</strong></div>
+  <div class="log"></div>
+</div>
+```
 
-<p>Le {{HTMLElement ("div")}} avec la classe <code>"box"</code> est juste un conteneur pour la mise en page, présentant le contenu avec une boîte autour de lui. Le <code>&lt;div&gt;</code> dont la classe est <code>"log"</code> est le conteneur pour le texte du journal lui-même.</p>
+Le {{HTMLElement ("div")}} avec la classe `"box"` est juste un conteneur pour la mise en page, présentant le contenu avec une boîte autour de lui. Le `<div>` dont la classe est `"log"` est le conteneur pour le texte du journal lui-même.
 
-<h3 id="Notes">CSS</h3>
+### CSS
 
-<p>Les styles CSS suivants pour notre exemple de contenu.</p>
+Les styles CSS suivants pour notre exemple de contenu.
 
-<pre class="brush: css">.box {
+```css
+.box {
   width: 600px;
   height: 300px;
   border: 1px solid black;
@@ -169,38 +177,24 @@ boxElem.addEventListener("mouseleave", logEvent);</pre>
 .log {
   margin-top: 8px;
   font-family: monospace;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>Le contenu résultant ressemble à ceci. Vous pouvez voir la sortie dans le journal en déplaçant la souris dans et hors de la boîte, en cliquant dedans, et ainsi de suite.</p>
+Le contenu résultant ressemble à ceci. Vous pouvez voir la sortie dans le journal en déplaçant la souris dans et hors de la boîte, en cliquant dedans, et ainsi de suite.
 
-<p>{{EmbedLiveSample("Exemple", 640, 350)}}</p>
+{{EmbedLiveSample("Exemple", 640, 350)}}
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#innerhtml', 'Element.innerHTML')}}</td>
-   <td>{{ Spec2('DOM Parsing') }}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                               | Commentaire          |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('DOM Parsing', '#innerhtml', 'Element.innerHTML')}} | {{ Spec2('DOM Parsing') }} | Définition initiale. |
 
-<h2 id="References">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Node.textContent")}} and {{domxref("Node.innerText")}}</li>
- <li>{{domxref("Element.insertAdjacentHTML")}}</li>
- <li>Analyse HTML dans une arborescence DOM : {{domxref("DOMParser")}}</li>
- <li>Sérialisation XML ou HTML dans une arborescence DOM : {{domxref("XMLSerializer")}}</li>
-</ul>
+- {{domxref("Node.textContent")}} and {{domxref("Node.innerText")}}
+- {{domxref("Element.insertAdjacentHTML")}}
+- Analyse HTML dans une arborescence DOM : {{domxref("DOMParser")}}
+- Sérialisation XML ou HTML dans une arborescence DOM : {{domxref("XMLSerializer")}}

@@ -10,39 +10,29 @@ tags:
   - Window
 translation_of: Web/API/Window/navigator
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La propriété en lecture-seule <strong><code>Window.navigator</code></strong> renvoie une référence à un objet qui est une instance de {{domxref("Navigator")}} et possède des méthodes et propriétés à propos de l'application qui exécute le script.</p>
+La propriété en lecture-seule **`Window.navigator`** renvoie une référence à un objet qui est une instance de {{domxref("Navigator")}} et possède des méthodes et propriétés à propos de l'application qui exécute le script.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js"><var>navigatorObject</var> = window.navigator</pre>
+```js
+navigatorObject = window.navigator
+```
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var sUsrAg = navigator.userAgent;
+```js
+var sUsrAg = navigator.userAgent;
 console.log("Voici l'agent utilisateur du navigateur courant", sUsrAg);
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaires</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-navigator', 'Window: navigator')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                            | Statut                           | Commentaires |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
+| {{SpecName('HTML WHATWG', '#dom-navigator', 'Window: navigator')}} | {{Spec2('HTML WHATWG')}} |              |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.navigator")}}</p>
+{{Compat("api.Window.navigator")}}

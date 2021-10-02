@@ -9,31 +9,32 @@ tags:
   - Reference
 translation_of: Web/API/IDBIndex/unique
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>La propriété <strong><code>unique</code></strong>, rattachée à l'interface <code>IDBIndex</code>, est un booléen qui indique si l'index utilisé permet d'avoir des clés dupliquées.</p>
+La propriété **`unique`**, rattachée à l'interface `IDBIndex`, est un booléen qui indique si l'index utilisé permet d'avoir des clés dupliquées.
 
-<p>Cette caractéristique est décidée lors de la création de l'index, avec la méthode {{domxref("IDBObjectStore.createIndex")}}. Cette méthode prend un paramètre optionnel, <code>unique</code>, qui, s'il vaut <code>true</code>, indique que l'index ne permettra pas d'avoir de clés dupliquées.</p>
+Cette caractéristique est décidée lors de la création de l'index, avec la méthode {{domxref("IDBObjectStore.createIndex")}}. Cette méthode prend un paramètre optionnel, `unique`, qui, s'il vaut `true`, indique que l'index ne permettra pas d'avoir de clés dupliquées.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var myIndex = objectStore.index('index');</pre>
+    var myIndex = objectStore.index('index');
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un booléen qui vaut <code>true</code> si l'index permet d'avoir des valeurs dupliquées pour une même clé ou <code>false</code> s'il n'est pas possible d'avoir de clés dupliquées.</p>
+Un booléen qui vaut `true` si l'index permet d'avoir des valeurs dupliquées pour une même clé ou `false` s'il n'est pas possible d'avoir de clés dupliquées.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple suivant, on ouvre une transaction en lecture sur un magasin d'objets puis on récupère l'index <code>lName</code>. On ouvre alors un curseur sur l'index grâce à {{domxref("IDBIndex.openCursor")}} (cela fonctionne de façon analogue à l'ouverture d'un curseur sur le magasin d'objets avec {{domxref("IDBObjectStore.openCursor")}} sauf qu'ici, les enregistrements sont triés selon l'index et pas selon la clé primaire.</p>
+Dans l'exemple suivant, on ouvre une transaction en lecture sur un magasin d'objets puis on récupère l'index `lName`. On ouvre alors un curseur sur l'index grâce à {{domxref("IDBIndex.openCursor")}} (cela fonctionne de façon analogue à l'ouverture d'un curseur sur le magasin d'objets avec {{domxref("IDBObjectStore.openCursor")}} sauf qu'ici, les enregistrements sont triés selon l'index et pas selon la clé primaire.
 
-<p>On affiche le caractère unique des clé dans la console (ici, on voit que la propriété vaut <code>false</code>).</p>
+On affiche le caractère unique des clé dans la console (ici, on voit que la propriété vaut `false`).
 
-<p>Enfin, on parcourt chaque enregistrement et on insère les données dans le tableau HTML (pour voir un exemple complet, consulter <a href="https://github.com/mdn/IDBIndex-example">notre dépôt IDBIndex-example</a> (<a href="https://mdn.github.io/IDBIndex-example/">voir la démonstration <em>live</em></a>).</p>
+Enfin, on parcourt chaque enregistrement et on insère les données dans le tableau HTML (pour voir un exemple complet, consulter [notre dépôt IDBIndex-example](https://github.com/mdn/IDBIndex-example) ([voir la démonstration _live_](https://mdn.github.io/IDBIndex-example/)).
 
-<pre class="brush: js">function displayDataByIndex() {
+```js
+function displayDataByIndex() {
   tableEntry.innerHTML = '';
   var transaction = db.transaction(['contactsList'], 'readonly');
   var objectStore = transaction.objectStore('contactsList');
@@ -45,14 +46,14 @@ translation_of: Web/API/IDBIndex/unique
     var cursor = event.target.result;
     if(cursor) {
       var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '&lt;td&gt;' + cursor.value.id + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.lName + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.fName + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.jTitle + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.company + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.eMail + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.phone + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.age + '&lt;/td&gt;';
+      tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
+                           + '<td>' + cursor.value.lName + '</td>'
+                           + '<td>' + cursor.value.fName + '</td>'
+                           + '<td>' + cursor.value.jTitle + '</td>'
+                           + '<td>' + cursor.value.company + '</td>'
+                           + '<td>' + cursor.value.eMail + '</td>'
+                           + '<td>' + cursor.value.phone + '</td>'
+                           + '<td>' + cursor.value.age + '</td>';
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
@@ -60,37 +61,25 @@ translation_of: Web/API/IDBIndex/unique
       console.log('Les éléments sont affichés.');
     }
   };
-};</pre>
+};
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBIndex-unique', 'unique')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                         | Commentaires |
+| -------------------------------------------------------------------------------- | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBIndex-unique', 'unique')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBIndex.unique")}}</p>
+{{Compat("api.IDBIndex.unique")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
- <li>Initier une connexion : {{domxref("IDBDatabase")}}</li>
- <li>Utiliser les transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
- <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
-</ul>
+- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Initier une connexion : {{domxref("IDBDatabase")}}
+- Utiliser les transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
+- Utiliser les curseurs {{domxref("IDBCursor")}}
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).

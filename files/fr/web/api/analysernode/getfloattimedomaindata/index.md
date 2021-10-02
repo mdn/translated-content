@@ -3,17 +3,16 @@ title: AnalyserNode.getFloatTimeDomainData()
 slug: Web/API/AnalyserNode/getFloatTimeDomainData
 translation_of: Web/API/AnalyserNode/getFloatTimeDomainData
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>La méthode <strong><code>getFloatTimeDomainData()</code></strong> de l'interface {{ domxref("AnalyserNode") }} copie les données de forme d'onde ou du domaine temporel, dans un tableau {{domxref("Float32Array")}} passé en paramètre.</p>
+La méthode **`getFloatTimeDomainData()`** de l'interface {{ domxref("AnalyserNode") }} copie les données de forme d'onde ou du domaine temporel, dans un tableau {{domxref("Float32Array")}} passé en paramètre.
 
-<p>Si le tableau a moins d'éléments que la propriété {{domxref("AnalyserNode.fftSize")}}, les données en excès sont supprimées. S'il a davantage d'éléments, les éléments non utilisés sont ignorés.</p>
-</div>
+Si le tableau a moins d'éléments que la propriété {{domxref("AnalyserNode.fftSize")}}, les données en excès sont supprimées. S'il a davantage d'éléments, les éléments non utilisés sont ignorés.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var contexteAudio = new AudioContext();
+```js
+var contexteAudio = new AudioContext();
 var analyseur = contexteAudio.createAnalyser();
 
 // La taille du tableau Float32Array doit correspondre à la valeur de la propriété fftSize
@@ -21,17 +20,18 @@ var tableauDonnees = new Float32Array(analyseur.fftSize);
 
 // remplit le tableau Float32Array avec les données renvoyées par la méthode getFloatTimeDomainData()
 analyseur.getFloatTimeDomainData(tableauDonnees);
-</pre>
+```
 
-<h3 id="Renvoie">Renvoie</h3>
+### Renvoie
 
-<p>Un tableau {{domxref("Float32Array")}}.</p>
+Un tableau {{domxref("Float32Array")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>L'exemple suivant montre comment créer simplement un  <code>AnalyserNode</code> avec {{domxref("AudioContext")}}, puis utiliser {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a>  (et en particulier <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lignes 128–205</a>).</p>
+L'exemple suivant montre comment créer simplement un  `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)  (et en particulier [app.js lignes 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
-<pre class="brush: js">var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
 var analyseur = contexteAudio.createAnalyser();
 
   ...
@@ -56,7 +56,7 @@ function dessiner() {
   var largeurTranche = LARGEUR * 1.0 / tailleMemoireTampon;
   var x = 0;
 
-  for(var i = 0; i &lt; tailleMemoireTampon; i++) {
+  for(var i = 0; i < tailleMemoireTampon; i++) {
     var v = tableauDonnees[i] * 200.0;
     var y = HAUTEUR/2 + v;
 
@@ -72,40 +72,26 @@ function dessiner() {
   contexteCanvas.stroke();
 };
 
-dessiner();</pre>
+dessiner();
+```
 
-<p> </p>
 
-<h2 id="Paramètres">Paramètres</h2>
 
-<dl>
- <dt>array</dt>
- <dd>Un tableau {{domxref("Float32Array")}} dans lequel seront copiées les données du domaine temporel.</dd>
-</dl>
+## Paramètres
 
-<h2 id="Spécifications">Spécifications</h2>
+- array
+  - : Un tableau {{domxref("Float32Array")}} dans lequel seront copiées les données du domaine temporel.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AnalyserNode-getFloatTimeDomainData-void-Float32Array-array', 'getFloatTimeDomainData()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Spécifications
 
-<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+| Spécification                                                                                                                                                            | Statut                               | Commentaire |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
+| {{SpecName('Web Audio API', '#widl-AnalyserNode-getFloatTimeDomainData-void-Float32Array-array', 'getFloatTimeDomainData()')}} | {{Spec2('Web Audio API')}} |             |
 
-<p>{{Compat("api.AnalyserNode.getFloatTimeDomainData")}}</p>
+## Compatibilité navigateurs
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+{{Compat("api.AnalyserNode.getFloatTimeDomainData")}}
 
-<ul>
- <li><a href="/fr/docs/Web_Audio_API/Using_Web_Audio_API">Utiliser la Web Audio API</a></li>
-</ul>
+## Voir aussi
+
+- [Utiliser la Web Audio API](/fr/docs/Web_Audio_API/Using_Web_Audio_API)

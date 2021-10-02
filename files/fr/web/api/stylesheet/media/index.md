@@ -3,31 +3,27 @@ title: StyleSheet.media
 slug: Web/API/StyleSheet/media
 translation_of: Web/API/StyleSheet/media
 ---
-<div>{{APIRef ("CSSOM")}}</div>
+{{APIRef ("CSSOM")}}
 
-<p><strong>Media</strong> spécifie le support de destination prévu pour les informations de style.</p>
+**Media** spécifie le support de destination prévu pour les informations de style.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>Medium</em> = stylesheet.media
-Stylesheet.media = <em>medium</em>
-</pre>
+    Medium = stylesheet.media
+    Stylesheet.media = medium
 
-<h2 id="Parameters">Paramètres</h2>
+## Paramètres
 
-<ul>
- <li><code>medium</code> Est une chaîne décrivant un seul moyen ou une liste séparée par des virgules.</li>
-</ul>
+- `medium` Est une chaîne décrivant un seul moyen ou une liste séparée par des virgules.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre>&lt;Link rel = "StyleSheet" href = "document.css" type = "text / css" media = "screen" /&gt;
-</pre>
+    <Link rel = "StyleSheet" href = "document.css" type = "text / css" media = "screen" />
 
-<h2 id="Notes">Remarques</h2>
+## Remarques
 
-<p>La valeur par défaut pour les médias est "écran".</p>
+La valeur par défaut pour les médias est "écran".
 
-<h2 id="Specification">spécification</h2>
+## spécification
 
-<p>DOM Styles de niveau 2 - FEUILLE DE STYLES</p>
+DOM Styles de niveau 2 - FEUILLE DE STYLES

@@ -3,38 +3,25 @@ title: window.cancelIdleCallback()
 slug: Web/API/Window/cancelIdleCallback
 translation_of: Web/API/Window/cancelIdleCallback
 ---
-<div>{{APIRef}}{{SeeCompatTable}}</div>
+{{APIRef}}{{SeeCompatTable}}
 
-<p>La méthode <strong><code>window.cancelIdleCallback()</code></strong> annule une fonction précedemment planifiée via {{domxref("window.requestIdleCallback()")}}.</p>
+La méthode **`window.cancelIdleCallback()`** annule une fonction précedemment planifiée via {{domxref("window.requestIdleCallback()")}}.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">window.cancelIdleCallback(<em>idleCallbackId</em>);</pre>
+    window.cancelIdleCallback(idleCallbackId);
 
-<h3 id="Parameters">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>idleCallbackId</dt>
- <dd>L'entier long non-signé retourné par {{domxref("window.requestIdleCallback()")}}.</dd>
-</dl>
+- idleCallbackId
+  - : L'entier long non-signé retourné par {{domxref("window.requestIdleCallback()")}}.
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Spécification</th>
-   <th>Status</th>
-   <th>Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Background Tasks')}}</td>
-   <td>{{Spec2('Background Tasks')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                | Status                                   | Commentaire          |
+| -------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('Background Tasks')}} | {{Spec2('Background Tasks')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.cancelIdleCallback")}}</p>
+{{Compat("api.Window.cancelIdleCallback")}}

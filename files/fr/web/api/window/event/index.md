@@ -11,39 +11,24 @@ tags:
   - Window
 translation_of: Web/API/Window/event
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>L'événement de propriété {{domxref("Window")}} en lecture seule renvoie le {{domxref("Event")}} qui est actuellement géré par le code du site. En dehors du contexte d'un gestionnaire d'événements, la valeur est toujours <code>undefined</code>.</p>
+L'événement de propriété {{domxref("Window")}} en lecture seule renvoie le {{domxref("Event")}} qui est actuellement géré par le code du site. En dehors du contexte d'un gestionnaire d'événements, la valeur est toujours `undefined`.
 
-<p>Vous devez éviter d'utiliser cette propriété dans un nouveau code et utiliser à la place le {{domxref ("Event")}} transmis à la fonction de gestionnaire d'événements. Cette propriété n'est pas prise en charge universellement et même lorsqu'elle est prise en charge, elle introduit une fragilité potentielle dans votre code.</p>
+Vous devez éviter d'utiliser cette propriété dans un nouveau code et utiliser à la place le {{domxref ("Event")}} transmis à la fonction de gestionnaire d'événements. Cette propriété n'est pas prise en charge universellement et même lorsqu'elle est prise en charge, elle introduit une fragilité potentielle dans votre code.
 
-<div class="note">
-<p><strong>Note:</strong> Cette propriété peut être fragile, dans la mesure où il peut y avoir des situations dans lesquelles <code>l'événement</code> renvoyé n'est pas la valeur attendue. De plus, <code>Window.event</code> n'est pas précis pour les événements distribués dans {{Glossary("shadow tree", "shadow trees")}}.</p>
-</div>
+> **Note :** Cette propriété peut être fragile, dans la mesure où il peut y avoir des situations dans lesquelles `l'événement` renvoyé n'est pas la valeur attendue. De plus, `Window.event` n'est pas précis pour les événements distribués dans {{Glossary("shadow tree", "shadow trees")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', "#dom-window-event", "Window.event")}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                           | Commentaire          |
+| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('DOM WHATWG', "#dom-window-event", "Window.event")}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
 
-<h2 id="Browser_Compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.event")}}</p>
+{{Compat("api.Window.event")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>{{domxref("Event.srcElement")}}</li>
-</ul>
+- {{domxref("Event.srcElement")}}

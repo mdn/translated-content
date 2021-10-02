@@ -1,27 +1,27 @@
 ---
 title: HTMLIFrameElement.allowPaymentRequest
 slug: Web/API/HTMLIFrameElement/allowPaymentRequest
+translation_of: HTMLIFrameElement.allowPaymentRequest
 browser-compat: api.HTMLIFrameElement.allowPaymentRequest
-translation_of: 'HTMLIFrameElement.allowPaymentRequest'
 ---
-<p>{{APIRef("HTML DOM")}}{{deprecated_header}}{{non-standard_header}}</p>
+{{APIRef("HTML DOM")}}{{deprecated_header}}{{non-standard_header}}
 
-<p>La propriété <strong><code>allowPaymentRequest</code></strong> de l'interface {{domxref("HTMLIFrameElement")}} retourne une valeur booléenne indiquant si la <a href="/fr/docs/Web/API/Payment_Request_API"><i lang="en">Payment Request API</i></a> peut être invoquée sur une <i lang="en">iframe</i> utilisant une origine tierce.</p>
+La propriété **`allowPaymentRequest`** de l'interface {{domxref("HTMLIFrameElement")}} retourne une valeur booléenne indiquant si la [<i lang="en">Payment Request API</i>](/fr/docs/Web/API/Payment_Request_API) peut être invoquée sur une <i lang="en">iframe</i> utilisant une origine tierce.
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var allow = htmlIFrameElement.allowPaymentRequest</pre>
+```js
+var allow = htmlIFrameElement.allowPaymentRequest
+```
 
-<h3 id="value">Valeur</h3>
+### Valeur
 
-<p>Une valeur booléenne.</p>
+Une valeur booléenne.
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/API/Payment_Request_API">Payment Request API</a> </li>
-</ul>
+- [Payment Request API](/fr/docs/Web/API/Payment_Request_API)

@@ -12,125 +12,77 @@ tags:
   - TopicStub
 translation_of: Web/API/IDBKeyRange
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>L'interface <strong><code>IDBKeyRange</code></strong> de l'API <a href="/fr/docs/Web/API/API_IndexedDB">IndexedDB</a> représente un intervalle continue sur un type de donnée utilisé pour représenter des clés. Les enregistrements peuvent être récupérés depuis des objets {{domxref("IDBObjectStore")}} et {{domxref("IDBIndex")}} grâce à des clés ou à des intervalles de clé. Il est possible de préciser les bornes inférieure et supérieure de l'intervalle. Si les clés sont des chaînes de caractères, on pourrait ainsi parcourir l'ensemble des valeurs pour l'intervalle A–Z.</p>
+L'interface **`IDBKeyRange`** de l'API [IndexedDB](/fr/docs/Web/API/API_IndexedDB) représente un intervalle continue sur un type de donnée utilisé pour représenter des clés. Les enregistrements peuvent être récupérés depuis des objets {{domxref("IDBObjectStore")}} et {{domxref("IDBIndex")}} grâce à des clés ou à des intervalles de clé. Il est possible de préciser les bornes inférieure et supérieure de l'intervalle. Si les clés sont des chaînes de caractères, on pourrait ainsi parcourir l'ensemble des valeurs pour l'intervalle A–Z.
 
-<p>Un intervalle de clé peut être une seule valeur ou un intervalle avec des bornes inférieure et supérieure. Si l'intervalle possède ces deux bornes, il est dit borné. S'il n'a aucune borne, il est non-borné. Un intervalle de clé borné peut être ouvert (les bornes sont exclues) ou fermé (les bornes sont inclues). Pour récupérer les différentes clés d'un intervalle donné, on peut utiliser les fragments de code suivants :</p>
+Un intervalle de clé peut être une seule valeur ou un intervalle avec des bornes inférieure et supérieure. Si l'intervalle possède ces deux bornes, il est dit borné. S'il n'a aucune borne, il est non-borné. Un intervalle de clé borné peut être ouvert (les bornes sont exclues) ou fermé (les bornes sont inclues). Pour récupérer les différentes clés d'un intervalle donné, on peut utiliser les fragments de code suivants :
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Intervalle</th>
-   <th scope="col">Code</th>
-  </tr>
-  <tr>
-   <td>Toutes les clés ≤ <strong>x</strong></td>
-   <td>{{domxref("IDBKeyRange.upperBound")}}<code>(<strong>x</strong>)</code></td>
-  </tr>
-  <tr>
-   <td>Toutes les clés &lt; <strong>x</strong></td>
-   <td>{{domxref("IDBKeyRange.upperBound")}}<code>(<strong>x</strong>, true) </code></td>
-  </tr>
-  <tr>
-   <td>Toutes les clés ≥<strong> y</strong></td>
-   <td>{{domxref("IDBKeyRange.lowerBound")}}<code>(<strong>y</strong>)</code></td>
-  </tr>
-  <tr>
-   <td>Toutes les clés &gt;<strong> y</strong></td>
-   <td>{{domxref("IDBKeyRange.lowerBound")}}<code>(<strong>y</strong>, true)</code></td>
-  </tr>
-  <tr>
-   <td>Toutes les clés ≥ <strong>x</strong> &amp;&amp; ≤ <strong>y</strong></td>
-   <td>{{domxref("IDBKeyRange.bound")}}<code>(<strong>x</strong>, <strong>y</strong>)</code></td>
-  </tr>
-  <tr>
-   <td>Toutes les clés &gt; <strong>x</strong> &amp;&amp;&lt; <strong>y</strong></td>
-   <td>{{domxref("IDBKeyRange.bound")}}<code>(<strong>x</strong>, <strong>y</strong>, true, true)</code></td>
-  </tr>
-  <tr>
-   <td>Toutes les clés &gt; <strong>x</strong> &amp;&amp; ≤ <strong>y</strong></td>
-   <td>{{domxref("IDBKeyRange.bound")}}<code>(<strong>x</strong>, <strong>y</strong>, true, false)</code></td>
-  </tr>
-  <tr>
-   <td>Toutes les clés ≥ <strong>x</strong> &amp;&amp;&lt; <strong>y</strong></td>
-   <td>{{domxref("IDBKeyRange.bound")}}<code>(<strong>x</strong>, <strong>y</strong>, false, true)</code></td>
-  </tr>
-  <tr>
-   <td>La clé = <strong>z</strong></td>
-   <td>{{domxref("IDBKeyRange.only")}}<code>(<strong>z</strong>)</code></td>
-  </tr>
- </thead>
-</table>
+| Intervalle                         | Code                                                              |
+| ---------------------------------- | ----------------------------------------------------------------- |
+| Toutes les clés ≤ **x**            | {{domxref("IDBKeyRange.upperBound")}}`(x)`             |
+| Toutes les clés < **x**            | {{domxref("IDBKeyRange.upperBound")}}`(x, true)`       |
+| Toutes les clés ≥ **y**            | {{domxref("IDBKeyRange.lowerBound")}}`(y)`             |
+| Toutes les clés > **y**            | {{domxref("IDBKeyRange.lowerBound")}}`(y, true)`       |
+| Toutes les clés ≥ **x** && ≤ **y** | {{domxref("IDBKeyRange.bound")}}`(x, y)`              |
+| Toutes les clés > **x** &&< **y**  | {{domxref("IDBKeyRange.bound")}}`(x, y, true, true)`  |
+| Toutes les clés > **x** && ≤ **y** | {{domxref("IDBKeyRange.bound")}}`(x, y, true, false)` |
+| Toutes les clés ≥ **x** &&< **y**  | {{domxref("IDBKeyRange.bound")}}`(x, y, false, true)` |
+| La clé = **z**                     | {{domxref("IDBKeyRange.only")}}`(z)`                     |
 
-<p>Une clé est contenue dans un intervalle de clé lorsque les conditions suivantes sont réunies :</p>
+Une clé est contenue dans un intervalle de clé lorsque les conditions suivantes sont réunies :
 
-<ul>
- <li>La borne inférieure de l'intervalle de clé est :
-  <ul>
-   <li><code>undefined</code></li>
-   <li>Inférieure à la valeur de la clé</li>
-   <li>Égal à la valeur de la clé si <code>lowerOpen</code> est <code>false</code> (l'intervalle est fermé à gauche)</li>
-  </ul>
- </li>
- <li>La borne supérieure de l'intervalle de clé est :
-  <ul>
-   <li><code>undefined</code></li>
-   <li>Supérieure à la valeur de la clé</li>
-   <li>Égal à la valeur de la clé si <code>upperOpen</code> vaut <code>false</code> (l'intervalle est fermé à droite)</li>
-  </ul>
- </li>
-</ul>
+- La borne inférieure de l'intervalle de clé est :
 
-<p>{{AvailableInWorkers}}</p>
+  - `undefined`
+  - Inférieure à la valeur de la clé
+  - Égal à la valeur de la clé si `lowerOpen` est `false` (l'intervalle est fermé à gauche)
 
-<h2 id="Propriétés">Propriétés</h2>
+- La borne supérieure de l'intervalle de clé est :
 
-<dl>
- <dt>{{domxref("IDBKeyRange.lower")}} {{readonlyInline}}</dt>
- <dd>Cette propriété fournit la borne inférieure de l'intervalle de clé.</dd>
- <dt>{{domxref("IDBKeyRange.upper")}} {{readonlyInline}}</dt>
- <dd>Cette propriété fournit la borne supérieure de l'intervalle de clé.</dd>
- <dt>{{domxref("IDBKeyRange.lowerOpen")}} {{readonlyInline}}</dt>
- <dd>Cette méthode renvoie <code>false</code> si la borne inférieure est contenue dans l'intervalle de clé (autrement dit elle permet de vérifier si l'intervalle est ouvert à gauche).</dd>
- <dt>{{domxref("IDBKeyRange.upperOpen")}} {{readonlyInline}}</dt>
- <dd>Cette méthode renvoie <code>false</code> si la borne supérieure est contenue dans l'intervalle de clé (autrement dit elle permet de vérifier si l'intervalle est ouvert à droite).</dd>
-</dl>
+  - `undefined`
+  - Supérieure à la valeur de la clé
+  - Égal à la valeur de la clé si `upperOpen` vaut `false` (l'intervalle est fermé à droite)
 
-<h2 id="Méthodes">Méthodes</h2>
+{{AvailableInWorkers}}
 
-<h3 id="Méthodes_statiques">Méthodes statiques</h3>
+## Propriétés
 
-<dl>
- <dt>{{domxref("IDBKeyRange.bound()")}}</dt>
- <dd>Cette méthode permet de créer un nouvel intervalle de clé avec une borne inférieure et une borne supérieure.</dd>
- <dt>{{domxref("IDBKeyRange.only()")}}</dt>
- <dd>Cette méthode crée un nouvel intervalle de clé qui ne contient qu'une valeur.</dd>
- <dt>{{domxref("IDBKeyRange.lowerBound()")}}</dt>
- <dd>Cette méthode crée un nouvel intervalle de clé avec une borne inférieure.</dd>
- <dt>{{domxref("IDBKeyRange.upperBound()")}}</dt>
- <dd>Cette méthode crée un nouvel intervalle de clé avec une borne supérieure.</dd>
-</dl>
+- {{domxref("IDBKeyRange.lower")}} {{readonlyInline}}
+  - : Cette propriété fournit la borne inférieure de l'intervalle de clé.
+- {{domxref("IDBKeyRange.upper")}} {{readonlyInline}}
+  - : Cette propriété fournit la borne supérieure de l'intervalle de clé.
+- {{domxref("IDBKeyRange.lowerOpen")}} {{readonlyInline}}
+  - : Cette méthode renvoie `false` si la borne inférieure est contenue dans l'intervalle de clé (autrement dit elle permet de vérifier si l'intervalle est ouvert à gauche).
+- {{domxref("IDBKeyRange.upperOpen")}} {{readonlyInline}}
+  - : Cette méthode renvoie `false` si la borne supérieure est contenue dans l'intervalle de clé (autrement dit elle permet de vérifier si l'intervalle est ouvert à droite).
 
-<h3 id="Méthodes_des_instances">Méthodes des instances</h3>
+## Méthodes
 
+### Méthodes statiques
 
+- {{domxref("IDBKeyRange.bound()")}}
+  - : Cette méthode permet de créer un nouvel intervalle de clé avec une borne inférieure et une borne supérieure.
+- {{domxref("IDBKeyRange.only()")}}
+  - : Cette méthode crée un nouvel intervalle de clé qui ne contient qu'une valeur.
+- {{domxref("IDBKeyRange.lowerBound()")}}
+  - : Cette méthode crée un nouvel intervalle de clé avec une borne inférieure.
+- {{domxref("IDBKeyRange.upperBound()")}}
+  - : Cette méthode crée un nouvel intervalle de clé avec une borne supérieure.
 
-<dl>
- <dt>{{domxref("IDBKeyRange.includes()")}}</dt>
- <dd>Cette méthode renvoie un booléen qui indique si la clé passée en argument est contenue dans l'intervalle de clé.</dd>
-</dl>
+### Méthodes des instances
 
+- {{domxref("IDBKeyRange.includes()")}}
+  - : Cette méthode renvoie un booléen qui indique si la clé passée en argument est contenue dans l'intervalle de clé.
 
+<!---->
 
-<dl>
-</dl>
+## Exemples
 
-<h2 id="Exemples">Exemples</h2>
+Dans l'exemple qui suit, on montre comment utiliser un intervalle de clé. Ici, on déclare un objet `keyRangeValue` qui représente un intervalle pour les valeurs entre "A" et "F". On ouvre une transaction grâce à {{domxref("IDBTransaction")}}, on ouvre également un magasin d'objets puis un curseur avec la méthode {{domxref("IDBObjectStore.openCursor")}} pour lequel on indique que `keyRangeValue` est l'intervalle de clé à considérer. Cela signifie que le curseur récupèrera uniquement les enregistrements pour lesquels les clés sont contenues dans cet intervalle. Cet intervalle est fermé, il inclut les valeur "A" and "F" (on n'a pas indiqué que ces bornes étaient ouvertes). Si on avait utilisé `IDBKeyRange.bound("A", "F", true, true);`, l'intervalle serait ouvert et ne contiendrait pas "A" ou "F" mais uniquement les valeurs intermédiaires.
 
-<p>Dans l'exemple qui suit, on montre comment utiliser un intervalle de clé. Ici, on déclare un objet <code>keyRangeValue</code> qui représente un intervalle pour les valeurs entre "A" et "F". On ouvre une transaction grâce à {{domxref("IDBTransaction")}}, on ouvre également un magasin d'objets puis un curseur avec la méthode {{domxref("IDBObjectStore.openCursor")}} pour lequel on indique que <code>keyRangeValue</code> est l'intervalle de clé à considérer. Cela signifie que le curseur récupèrera uniquement les enregistrements pour lesquels les clés sont contenues dans cet intervalle. Cet intervalle est fermé, il inclut les valeur "A" and "F" (on n'a pas indiqué que ces bornes étaient ouvertes). Si on avait utilisé <code>IDBKeyRange.bound("A", "F", true, true);</code>, l'intervalle serait ouvert et ne contiendrait pas "A" ou "F" mais uniquement les valeurs intermédiaires.</p>
-
-<pre class="brush: js">function displayData() {
+```js
+function displayData() {
   var keyRangeValue = IDBKeyRange.bound("A", "F");
 
   var transaction = db.transaction(['fThings'], 'readonly');
@@ -140,7 +92,7 @@ translation_of: Web/API/IDBKeyRange
     var cursor = event.target.result;
       if(cursor) {
         var listItem = document.createElement('li');
-        listItem.innerHTML = '&lt;strong&gt;' + cursor.value.fThing + '&lt;/strong&gt;, ' + cursor.value.fRating;
+        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
         list.appendChild(listItem);
 
         cursor.continue();
@@ -148,48 +100,28 @@ translation_of: Web/API/IDBKeyRange
         console.log('Les éléments ont été affichés.');
       }
     };
-  };</pre>
+  };
+```
 
-<div class="note">
-<p><strong>Note :</strong> Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter <a href="https://github.com/mdn/IDBKeyRange-example">le dépôt GitHub IDBKeyRange-example</a> (<a href="https://mdn.github.io/IDBKeyRange-example/">ainsi que la démonstration associée</a>).</p>
-</div>
+> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/IDBKeyRange-example) ([ainsi que la démonstration associée](https://mdn.github.io/IDBKeyRange-example/)).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#idl-def-IDBKeyRange', 'IDBKeyRange')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB 2', '#keyrange', 'IDBKeyRange')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td>Ajout de <code>includes()</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                         | Commentaires           |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------- |
+| {{SpecName('IndexedDB', '#idl-def-IDBKeyRange', 'IDBKeyRange')}} | {{Spec2('IndexedDB')}} | Définition initiale.   |
+| {{SpecName('IndexedDB 2', '#keyrange', 'IDBKeyRange')}}             | {{Spec2('IndexedDB')}} | Ajout de `includes()`. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBKeyRange")}}</p>
+{{Compat("api.IDBKeyRange")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
- <li>Initier une connexion : {{domxref("IDBDatabase")}}</li>
- <li>Utiliser les transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
- <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
-</ul>
+- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Initier une connexion : {{domxref("IDBDatabase")}}
+- Utiliser les transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
+- Utiliser les curseurs {{domxref("IDBCursor")}}
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).

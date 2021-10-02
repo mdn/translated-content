@@ -3,57 +3,58 @@ title: CanvasRenderingContext2D.stroke()
 slug: Web/API/CanvasRenderingContext2D/stroke
 translation_of: Web/API/CanvasRenderingContext2D/stroke
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La méthode <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.stroke()</code></strong> de l'API Canvas 2D dessine le chemin actuel ou donné avec le style de trait actuel utilisant la règle d'enroulement non nulle.</p>
+La méthode **`CanvasRenderingContext2D`\*\***`.stroke()`\*\* de l'API Canvas 2D dessine le chemin actuel ou donné avec le style de trait actuel utilisant la règle d'enroulement non nulle.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var><em>ctx</em>.stroke();</var>
-void <var><em>ctx</em>.stroke(path);</var>
-</pre>
+    void ctx.stroke();
+    void ctx.stroke(path);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>path</code></dt>
- <dd>Un chemin {{domxref("Path2D")}} à dessiner.</dd>
-</dl>
+- `path`
+  - : Un chemin {{domxref("Path2D")}} à dessiner.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_de_la_méthode_stroke">Utilisation de la méthode <code>stroke</code></h3>
+### Utilisation de la méthode `stroke`
 
-<p>Il s'agit d'un extrait de code simple utilisant la méthode <code>stroke</code> pour tracer un chemin.</p>
+Il s'agit d'un extrait de code simple utilisant la méthode `stroke` pour tracer un chemin.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 ctx.rect(10, 10, 100, 100);
 ctx.stroke();
-</pre>
+```
 
-<p>Editer le code en dessous et voir vos modifications mises à jour en direct dans le canevas :</p>
+Editer le code en dessous et voir vos modifications mises à jour en direct dans le canevas :
 
-<h4 id="code_jouable">Code jouable</h4>
+#### Code jouable
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -76,33 +77,20 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
+{{ EmbedLiveSample('code_jouable', 700, 360) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-stroke", "CanvasRenderingContext2D.stroke")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                            | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-stroke", "CanvasRenderingContext2D.stroke")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_avec_les_navigateurs">Compatibilité avec les navigateurs</h2>
+## Compatibilité avec les navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.stroke")}}</p>
+{{Compat("api.CanvasRenderingContext2D.stroke")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface qui le définit, {{domxref("CanvasRenderingContext2D")}}.</li>
-</ul>
+- L'interface qui le définit, {{domxref("CanvasRenderingContext2D")}}.

@@ -3,39 +3,29 @@ title: Document.hidden
 slug: Web/API/Document/hidden
 translation_of: Web/API/Document/hidden
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>La propriété <code><strong>Document.hidden</strong></code> retourne un Booléen qui indique si la page est considérée cachée ou pas.</p>
+La propriété **`Document.hidden`** retourne un Booléen qui indique si la page est considérée cachée ou pas.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <em>boolean</em> = document.hidden</pre>
+    var boolean = document.hidden
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush:js;">document.addEventListener("visibilitychange", function() {
+```js
+document.addEventListener("visibilitychange", function() {
   console.log( document.hidden );
   // Modifier le comportement...
 });
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Page Visibility API','#dom-document-hidden', 'Document.hidden')}}</td>
-   <td>{{Spec2('Page Visibility API')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                                       | Comment            |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
+| {{SpecName('Page Visibility API','#dom-document-hidden', 'Document.hidden')}} | {{Spec2('Page Visibility API')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.Document.hidden")}}</p>
+{{Compat("api.Document.hidden")}}

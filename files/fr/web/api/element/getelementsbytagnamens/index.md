@@ -9,67 +9,47 @@ tags:
   - Reference
 translation_of: Web/API/Element/getElementsByTagNameNS
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La méthode <code><strong>Element.getElementsByTagNameNS()</strong></code> renvoie un objet {{domxref("HTMLCollection")}} avec le nom de balise donné appartenant à l'espace de noms donné. Elle est semblable à la méthode {{Domxref("Document.getElementsByTagNameNS")}} mais cette dernière recherche sur l'ensemble du document tandis que <code>getElementsByTagNameNS()</code> recherche parmi les descendants de l'élément courant.</p>
+La méthode **`Element.getElementsByTagNameNS()`** renvoie un objet {{domxref("HTMLCollection")}} avec le nom de balise donné appartenant à l'espace de noms donné. Elle est semblable à la méthode {{Domxref("Document.getElementsByTagNameNS")}} mais cette dernière recherche sur l'ensemble du document tandis que `getElementsByTagNameNS()` recherche parmi les descendants de l'élément courant.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>elements</em> =<em> element</em>.getElementsByTagNameNS(<em>namespaceURI</em>,<em>localName</em>);</pre>
+    elements = element.getElementsByTagNameNS(namespaceURI,localName);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>namespaceURI</code></dt>
- <dd>L'URI de l'espace de noms des éléments à rechercher (cf. <code><a href="/fr/docs/Web/API/Element/namespaceURI">namespaceURI</a></code>). Par exemple, si vous recherchez des éléments XHTML, utilisez l'URI d'espace de noms XHTML, <code>http://www.w3.org/1999/xhtml</code>.</dd>
- <dt><code>localName</code></dt>
- <dd>Le nom local des éléments à rechercher ou la valeur spéciale <code>"*"</code> (correspondant à tous les éléments). Voir {{domxref("Node.localName")}}.</dd>
-</dl>
+- `namespaceURI`
+  - : L'URI de l'espace de noms des éléments à rechercher (cf. [`namespaceURI`](/fr/docs/Web/API/Element/namespaceURI)). Par exemple, si vous recherchez des éléments XHTML, utilisez l'URI d'espace de noms XHTML, `http://www.w3.org/1999/xhtml`.
+- `localName`
+  - : Le nom local des éléments à rechercher ou la valeur spéciale `"*"` (correspondant à tous les éléments). Voir {{domxref("Node.localName")}}.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une collection {{domxref("HTMLCollection")}} des éléments trouvés, dans l'ordre d'apparition dans l'arbre du DOM.</p>
+Une collection {{domxref("HTMLCollection")}} des éléments trouvés, dans l'ordre d'apparition dans l'arbre du DOM.
 
-<h2 id="Exemple">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">// vérifie l'alignement d'une série de cellules d'un tableau dans un document XHTML.
+```js
+// vérifie l'alignement d'une série de cellules d'un tableau dans un document XHTML.
 var table = document.getElementById("forecast-table");
 var cells = table.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "td");
-for (var i = 0; i &lt; cells.length; i++) {
+for (var i = 0; i < cells.length; i++) {
   var axis = cells[i].getAttribute("axis");
   if (axis == "year") {
     // saisit les données
   }
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-getelementsbytagnamens', 'Element.getElementsByTagNameNS()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Modification du type de la valeur de retour : passage de {{domxref("NodeList")}} à {{domxref("HTMLCollection")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-A6C90942', 'Element.getElementsByTagNameNS()')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Aucune modification depuis {{SpecName('DOM2 Core')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-A6C90942', 'Element.getElementsByTagNameNS()')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                            | État                             | Commentaires                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-element-getelementsbytagnamens', 'Element.getElementsByTagNameNS()')}} | {{Spec2('DOM WHATWG')}} | Modification du type de la valeur de retour : passage de {{domxref("NodeList")}} à {{domxref("HTMLCollection")}}. |
+| {{SpecName('DOM3 Core', 'core.html#ID-A6C90942', 'Element.getElementsByTagNameNS()')}}                     | {{Spec2('DOM3 Core')}}     | Aucune modification depuis {{SpecName('DOM2 Core')}}.                                                                          |
+| {{SpecName('DOM2 Core', 'core.html#ID-A6C90942', 'Element.getElementsByTagNameNS()')}}                     | {{Spec2('DOM2 Core')}}     | Définition initiale.                                                                                                                  |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Element.getElementsByTagNameNS")}}</p>
+{{Compat("api.Element.getElementsByTagNameNS")}}

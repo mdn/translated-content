@@ -9,77 +9,60 @@ tags:
   - fragment
 translation_of: Web/API/DocumentFragment/querySelector
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>La méthode <strong><code>DocumentFragment.querySelector()</code></strong> renvoie le premier élément ou <code>null</code> si aucune correspondance n'est trouvée, dans le {{domxref("DocumentFragment")}} (en utilisant la traversée en profondeur des noeuds du document), avec le groupe spécifié de sélecteurs.</p>
+La méthode **`DocumentFragment.querySelector()`** renvoie le premier élément ou `null` si aucune correspondance n'est trouvée, dans le {{domxref("DocumentFragment")}} (en utilisant la traversée en profondeur des noeuds du document), avec le groupe spécifié de sélecteurs.
 
-<p>Si le sélecteur correspond à un ID (<em>identifiant</em>) et que cet ID est utilisé plusieurs fois par erreur dans le document, il renvoie le premier élément correspondant.</p>
+Si le sélecteur correspond à un ID (_identifiant_) et que cet ID est utilisé plusieurs fois par erreur dans le document, il renvoie le premier élément correspondant.
 
-<p>Si les sélecteurs spécifiés dans paramètre sont invalides une {{domxref("DOMException")}} avec une valeur <code>SYNTAX_ERR</code> est lancée.</p>
+Si les sélecteurs spécifiés dans paramètre sont invalides une {{domxref("DOMException")}} avec une valeur `SYNTAX_ERR` est lancée.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>element</em> = <em>documentfragment</em>.querySelector(<em>selectors</em>);</pre>
+    element = documentfragment.querySelector(selectors);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><em>selectors </em></dt>
- <dd>est une {{domxref("DOMString")}} (<em>chaîne de caractères</em>) contenant un ou plusieurs sélecteurs CSS séparés par des virgules.</dd>
-</dl>
+- _selectors_
+  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) contenant un ou plusieurs sélecteurs CSS séparés par des virgules.
 
-<h2 id="Example">Exemples</h2>
+## Exemples
 
-<h3 id="Exemple_de_base">Exemple de base</h3>
+### Exemple de base
 
-<p>Dans cet exemple de base, le premier élément dans le {{domxref("DocumentFragment")}} avec la classe "<code>myclass</code>" est renvoyé :</p>
+Dans cet exemple de base, le premier élément dans le {{domxref("DocumentFragment")}} avec la classe "`myclass`" est renvoyé :
 
-<pre class="brush: js">var el = documentfragment.querySelector(".myclass");
-</pre>
+```js
+var el = documentfragment.querySelector(".myclass");
+```
 
-<h3 id="Syntaxe_CSS_et_argument_de_la_méthode">Syntaxe CSS et argument de la méthode</h3>
+### Syntaxe CSS et argument de la méthode
 
-<p>L'argument chaîne transmis à <code>querySelector</code> doit suivre la syntaxe CSS. Pour faire correspondre un identifiant ou des sélecteurs qui ne suivent pas la syntaxe CSS (utilisant un point-virgule ou un espace inappropriés par exemple), il est obligatoire d'échapper les mauvais caractères avec une double barre oblique inverse :</p>
+L'argument chaîne transmis à `querySelector` doit suivre la syntaxe CSS. Pour faire correspondre un identifiant ou des sélecteurs qui ne suivent pas la syntaxe CSS (utilisant un point-virgule ou un espace inappropriés par exemple), il est obligatoire d'échapper les mauvais caractères avec une double barre oblique inverse :
 
-<pre class="brush: html">&lt;div id="foo\bar"&gt;&lt;/div&gt;
-&lt;div id="foo:bar"&gt;&lt;/div&gt;
+```html
+<div id="foo\bar"></div>
+<div id="foo:bar"></div>
 
-&lt;script&gt;
+<script>
 document.querySelector('#foo\bar')    // Ne correspond à rien
 document.querySelector('#foo\\\\bar') // Correspond au premier div
 document.querySelector('#foo:bar')     //  Ne correspond à rien
 document.querySelector('#foo\\:bar')   // Correspond au second div
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 2', '#queryselector', 'DocumentFragment.querySelector')}}</td>
-   <td>{{Spec2('Selectors API Level 2')}}</td>
-   <td>Pas de changement de {{SpecName('Selectors API Level 1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 1', '#queryselector', 'DocumentFragment.querySelector')}}</td>
-   <td>{{Spec2('Selectors API Level 1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | Statut                                       | Commentaire                                                           |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------------- |
+| {{SpecName('Selectors API Level 2', '#queryselector', 'DocumentFragment.querySelector')}} | {{Spec2('Selectors API Level 2')}} | Pas de changement de {{SpecName('Selectors API Level 1')}} |
+| {{SpecName('Selectors API Level 1', '#queryselector', 'DocumentFragment.querySelector')}} | {{Spec2('Selectors API Level 1')}} | Définition initiale.                                                  |
 
-<h2 id="Browser_Compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DocumentFragment.querySelector")}}</p>
+{{Compat("api.DocumentFragment.querySelector")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface {{domxref("DocumentFragment")}} à laquelle elle appartient.</li>
-</ul>
+- L'interface {{domxref("DocumentFragment")}} à laquelle elle appartient.

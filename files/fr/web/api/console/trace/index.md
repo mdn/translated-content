@@ -11,59 +11,49 @@ tags:
   - trace
 translation_of: Web/API/Console/trace
 ---
-<p>{{ APIRef("Console API") }}</p>
+{{ APIRef("Console API") }}
 
-<p>Affiche la <em>stack trace</em> dans la <a href="/fr/docs/Outils/Console_Web">Web Console</a>.</p>
+Affiche la _stack trace_ dans la [Web Console](/fr/docs/Outils/Console_Web).
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>Voir <a href="/fr/docs/Web/API/console#Stack_traces">Stack traces</a> dans la documentation de {{ domxref("console") }} pour plus de détails et d'exemples.</p>
+Voir [Stack traces](/fr/docs/Web/API/console#Stack_traces) dans la documentation de {{ domxref("console") }} pour plus de détails et d'exemples.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">console.trace();
-</pre>
+    console.trace();
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">function foo() {
+```js
+function foo() {
   function bar() {
     console.trace();
   }
   bar();
 }
 
-foo();</pre>
+foo();
+```
 
-<p>Dans la console, la trace suivante sera affichée :</p>
+Dans la console, la trace suivante sera affichée :
 
-<pre class="brush: html">bar
+```html
+bar
 foo
-&lt;anonymous&gt;</pre>
+<anonymous>
+```
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#trace", "console.trace()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Définition Initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | Statut                           | Commentaire         |
+| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName("Console API", "#trace", "console.trace()")}} | {{Spec2("Console API")}} | Définition Initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Console.trace")}}</p>
+{{Compat("api.Console.trace")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<p><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></p>
+[Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

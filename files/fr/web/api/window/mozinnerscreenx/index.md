@@ -10,38 +10,32 @@ tags:
   - Window
 translation_of: Web/API/Window/mozInnerScreenX
 ---
-<div>{{APIRef}}{{gecko_minversion_header("1.9.2")}}</div>
+{{APIRef}}{{gecko_minversion_header("1.9.2")}}
 
-<h2 id="Résumé">Résumé</h2>
+## Résumé
 
-<p>Obtient la coordonnée X du coin supérieur gauche de la fenêtre de la fenêtre, en coordonnées d'écran.</p>
+Obtient la coordonnée X du coin supérieur gauche de la fenêtre de la fenêtre, en coordonnées d'écran.
 
-<div class="note">
-  <p><strong>Note :</strong> Cette coordonnée est indiquée en pixels CSS et non en pixels matériels. Cela signifie qu'il peut être affecté par le niveau de zoom; pour calculer le nombre réel de pixels d'écran physiques, vous devez utiliser la propriété<a href="/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils"> <code>nsIDOMWindowUtils.screenPixelsPerCSSPixel</code></a>.</p>
-</div>
+> **Note :** Cette coordonnée est indiquée en pixels CSS et non en pixels matériels. Cela signifie qu'il peut être affecté par le niveau de zoom; pour calculer le nombre réel de pixels d'écran physiques, vous devez utiliser la propriété[ `nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>screenX</var> = window.mozInnerScreenX;</pre>
+    screenX = window.mozInnerScreenX;
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<ul>
- <li><var>screenX</var> stocke la valeur de la propriété <code>window.mozInnerScreenX</code>.</li>
- <li>La propriété <code>window.mozInnerScreenX</code> est une valeur en lecture seule à virgule flottante; il n'a pas de valeur par défaut.</li>
-</ul>
+- _screenX_ stocke la valeur de la propriété `window.mozInnerScreenX`.
+- La propriété `window.mozInnerScreenX` est une valeur en lecture seule à virgule flottante; il n'a pas de valeur par défaut.
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<p>Ne fait partie d'aucune spécification ou recommandation technique du W3C.</p>
+Ne fait partie d'aucune spécification ou recommandation technique du W3C.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.mozInnerScreenX")}}</p>
+{{Compat("api.Window.mozInnerScreenX")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>{{domxref("window.mozInnerScreenY")}}</li>
- <li><a href="/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils"><code>nsIDOMWindowUtils.screenPixelsPerCSSPixel</code></a></li>
-</ul>
+- {{domxref("window.mozInnerScreenY")}}
+- [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils)

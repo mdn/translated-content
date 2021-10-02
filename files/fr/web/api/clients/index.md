@@ -13,28 +13,27 @@ tags:
   - Workers
 translation_of: Web/API/Clients
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>L'interface <code>Clients</code> permet d'accéder aux objets <a href="/fr/docs/Web/API/Client"><code>Client</code></a>. On y accède via <code><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope"><code>self</code></a>.clients</code> au sein d'un <a href="/fr/docs/Web/API/Service_Worker_API">service worker</a>.</p>
+L'interface `Clients` permet d'accéder aux objets [`Client`](/fr/docs/Web/API/Client). On y accède via `self.clients` au sein d'un [service worker](/fr/docs/Web/API/Service_Worker_API).
 
-<h2 id="methods">Méthodes</h2>
+## Méthodes
 
-<dl>
-  <dt><a href="/fr/docs/Web/API/Clients/get"><code>Clients.get()</code></a></dt>
-  <dd>Retourne une <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a> (« <i>Promesse</i> ») pour un <a href="/fr/docs/Web/API/Client"><code>Client</code></a> correspondant à un <a href="/fr/docs/Web/API/Client/id"><code>id</code></a> donné.</dd>
-  <dt><a href="/fr/docs/Web/API/Clients/matchAll"><code>Clients.matchAll()</code></a></dt>
-  <dd>Retourne une <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a> (« <i>Promesse</i> ») pour un tableau d'objets <a href="/fr/docs/Web/API/Client"><code>Client</code></a>. L'argument options vous permet de contrôler les types de clients renvoyés.</dd>
-  <dt><a href="/fr/docs/Web/API/Clients/openWindow"><code>Clients.openWindow()</code></a></dt>
-  <dd>Ouvre une nouvelle fenêtre de navigateur pour une url donnée et renvoie une <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a> (« <i>Promesse</i> ») pour le nouveau <a href="/fr/docs/Web/API/WindowClient"><code>WindowClient</code></a>.</dd>
-  <dt><a href="/fr/docs/Web/API/Clients/claim"><code>Clients.claim()</code></a></dt>
-  <dd>Permet à un service worker actif de se définir comme le <a href="/fr/docs/Web/API/ServiceWorkerContainer/controller"><code>controller</code></a> (« <i>Controlleur</i> ») pour tous les clients dans son <a href="/fr/docs/Web/API/ServiceWorkerRegistration/scope"><code>scope</code></a> (« <i>sa portée</i> »).</dd>
-</dl>
+- [`Clients.get()`](/fr/docs/Web/API/Clients/get)
+  - : Retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) (« _Promesse_ ») pour un [`Client`](/fr/docs/Web/API/Client) correspondant à un [`id`](/fr/docs/Web/API/Client/id) donné.
+- [`Clients.matchAll()`](/fr/docs/Web/API/Clients/matchAll)
+  - : Retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) (« _Promesse_ ») pour un tableau d'objets [`Client`](/fr/docs/Web/API/Client). L'argument options vous permet de contrôler les types de clients renvoyés.
+- [`Clients.openWindow()`](/fr/docs/Web/API/Clients/openWindow)
+  - : Ouvre une nouvelle fenêtre de navigateur pour une url donnée et renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) (« _Promesse_ ») pour le nouveau [`WindowClient`](/fr/docs/Web/API/WindowClient).
+- [`Clients.claim()`](/fr/docs/Web/API/Clients/claim)
+  - : Permet à un service worker actif de se définir comme le [`controller`](/fr/docs/Web/API/ServiceWorkerContainer/controller) (« _Controlleur_ ») pour tous les clients dans son [`scope`](/fr/docs/Web/API/ServiceWorkerRegistration/scope) (« _sa portée_ »).
 
-<h2 id="exemple">Exemple</h2>
+## Exemple
 
-<p>L'exemple suivant montre une fenêtre de chat existante ou en crée une nouvelle lorsque l'utilisateur clique sur une notification.</p>
+L'exemple suivant montre une fenêtre de chat existante ou en crée une nouvelle lorsque l'utilisateur clique sur une notification.
 
-<pre class="brush: js">addEventListener('notificationclick', event =&gt; {
+```js
+addEventListener('notificationclick', event => {
   event.waitUntil(async function() {
     const allClients = await clients.matchAll({
       includeUncontrolled: true
@@ -63,35 +62,21 @@ translation_of: Web/API/Clients
     // Envoyez un message au client :
     chatClient.postMessage("Nouveaux messages !");
   }());
-});</pre>
+});
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Service Workers', '#clients', 'Clients')}}</td>
-      <td>{{Spec2('Service Workers')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                            | Statut                               | Commentaire          |
+| ------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('Service Workers', '#clients', 'Clients')}} | {{Spec2('Service Workers')}} | Définition initiale. |
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Clients")}}</p>
+{{Compat("api.Clients")}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers">Utiliser les Service Workers</a></li>
-  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Le ServiceWorker est-il prêt ?</a> <small>(en anglais)</small></li>
-  <li>L'objet <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a></li>
-</ul>
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Le ServiceWorker est-il prêt ?](https://jakearchibald.github.io/isserviceworkerready/) (en anglais)
+- L'objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)

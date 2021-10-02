@@ -7,150 +7,116 @@ tags:
 translation_of: Web/API/Window/unload_event
 original_slug: Web/Events/unload
 ---
-<p>L'événement <code>unload</code> est appelé lorsque le document ou une ressource enfant est en train d'être déchargé.</p>
+L'événement `unload` est appelé lorsque le document ou une ressource enfant est en train d'être déchargé.
 
-<p>Il est lancé après :</p>
+Il est lancé après :
 
-<ol>
- <li><a href="/en-US/docs/Mozilla_event_reference/beforeunload">beforeunload</a> (événement annulable)</li>
- <li><a href="/en-US/docs/Mozilla_event_reference/pagehide">pagehide</a></li>
-</ol>
+1.  [beforeunload](/en-US/docs/Mozilla_event_reference/beforeunload) (événement annulable)
+2.  [pagehide](/en-US/docs/Mozilla_event_reference/pagehide)
 
-<p>Le document se trouve alors dans un état particulier :</p>
+Le document se trouve alors dans un état particulier :
 
-<ul>
- <li>Toutes les ressources existent encore (img, iframe etc.)</li>
- <li>Plus rien n'est encore visible par l'utilisateur final</li>
- <li>Les intéractions avec l'interface sont désactivées (<code>window.open</code>, <code>alert</code>, <code>confirm</code>, etc.)</li>
- <li>Aucune erreur ne viendra interrompre le flux de déchargement.</li>
-</ul>
+- Toutes les ressources existent encore (img, iframe etc.)
+- Plus rien n'est encore visible par l'utilisateur final
+- Les intéractions avec l'interface sont désactivées (`window.open`, `alert`, `confirm`, etc.)
+- Aucune erreur ne viendra interrompre le flux de déchargement.
 
-<p>Veuiller noter que l'événement <code>unload</code> suit l'ordre du document : le cadre parent est déchargé <em>avant</em> le <code>unload</code> d'un cadre enfant (voir l'exemple ci-dessous).</p>
+Veuiller noter que l'événement `unload` suit l'ordre du document : le cadre parent est déchargé *avant* le `unload` d'un cadre enfant (voir l'exemple ci-dessous).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td>Événement propageable</td>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <td>Annulable</td>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <td>Objets cibles</td>
-   <td>defaultView, Document, Element</td>
-  </tr>
-  <tr>
-   <td>Interface</td>
-   <td>{{domxref("UIEvent")}} si généré depuis un élément de l'interface utilisateur, {{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <td>Action par défaut</td>
-   <td>Aucune</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>Événement propageable</td>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <td>Annulable</td>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <td>Objets cibles</td>
+      <td>defaultView, Document, Element</td>
+    </tr>
+    <tr>
+      <td>Interface</td>
+      <td>
+        {{domxref("UIEvent")}} si généré depuis un élément de l'interface
+        utilisateur, {{domxref("Event")}}
+      </td>
+    </tr>
+    <tr>
+      <td>Action par défaut</td>
+      <td>Aucune</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Propriété</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/EventTarget"><code>EventTarget</code></a></td>
-   <td>La cible de l'événement (la cible de plus haut niveau dans le DOM).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/DOMString"><code>DOMString</code></a></td>
-   <td>Le type d'événement.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/Boolean"><code>Boolean</code></a></td>
-   <td>Si l'événement remonte ou non.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/Boolean"><code>Boolean</code></a></td>
-   <td>Si l'événement est annulable ou non.</td>
-  </tr>
-  <tr>
-   <td><code>view</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/WindowProxy" rel="nofollow"><code>WindowProxy</code></a></td>
-   <td><a href="/en-US/docs/Web/API/Document/defaultView"><code>document.defaultView</code></a> (<code>fenêtre</code> du document)</td>
-  </tr>
-  <tr>
-   <td><code>detail</code> {{readonlyInline}}</td>
-   <td><code>long</code> (<code>float</code>)</td>
-   <td>0.</td>
-  </tr>
- </tbody>
-</table>
+| Propriété                             | Type                                             | Description                                                                                |
+| ------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `target` {{readonlyInline}}     | [`EventTarget`](/en-US/docs/Web/API/EventTarget) | La cible de l'événement (la cible de plus haut niveau dans le DOM).                        |
+| `type` {{readonlyInline}}       | [`DOMString`](/en-US/docs/Web/API/DOMString)     | Le type d'événement.                                                                       |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/en-US/docs/Web/API/Boolean)         | Si l'événement remonte ou non.                                                             |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/en-US/docs/Web/API/Boolean)         | Si l'événement est annulable ou non.                                                       |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/en-US/docs/Web/API/WindowProxy) | [`document.defaultView`](/en-US/docs/Web/API/Document/defaultView) (`fenêtre` du document) |
+| `detail` {{readonlyInline}}     | `long` (`float`)                                 | 0.                                                                                         |
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Cadre parent&lt;/title&gt;
-    &lt;script&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cadre parent</title>
+    <script>
       window.addEventListener('beforeunload', function(event) {
         console.log('Je suis le 1er.');
       });
       window.addEventListener('unload', function(event) {
         console.log('Je suis le 3ème.');
       });
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;iframe src="child-frame.html"&gt;&lt;/iframe&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+    </script>
+  </head>
+  <body>
+    <iframe src="child-frame.html"></iframe>
+  </body>
+</html>
+```
 
-<p>Ci-dessous, le contenu de <code>child-frame.html</code>:</p>
+Ci-dessous, le contenu de `child-frame.html`:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Cadre enfant&lt;/title&gt;
-    &lt;script&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cadre enfant</title>
+    <script>
       window.addEventListener('beforeunload', function(event) {
         console.log('Je suis le 2nd.');
       });
       window.addEventListener('unload', function(event) {
         console.log('Je suis le 4ème et dernier…');
       });
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+    </script>
+  </head>
+  <body>
       ☻
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+  </body>
+</html>
+```
 
-<p>Quand le cadre parent est déchargé, les événements sont lancés dans l'ordre décrit par les messages <code>console.log</code>.</p>
+Quand le cadre parent est déchargé, les événements sont lancés dans l'ordre décrit par les messages `console.log`.
 
-<h2 id="Événements_liés">Événements liés</h2>
+## Événements liés
 
-<ul>
- <li>{{event("DOMContentLoaded")}}</li>
- <li>{{event("readystatechange")}}</li>
- <li>{{event("load")}}</li>
- <li>{{event("beforeunload")}}</li>
- <li>{{event("unload")}}</li>
-</ul>
+- {{event("DOMContentLoaded")}}
+- {{event("readystatechange")}}
+- {{event("load")}}
+- {{event("beforeunload")}}
+- {{event("unload")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<ul>
- <li><a href="https://html.spec.whatwg.org/multipage/browsers.html#unloading-documents">Unloading Documents — unload a document</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-unload">Event Module Definition — unload</a></li>
-</ul>
+- [Unloading Documents — unload a document](https://html.spec.whatwg.org/multipage/browsers.html#unloading-documents)
+- [Event Module Definition — unload](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-unload)

@@ -9,46 +9,43 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/hasAttributeNS
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<h2 id="R.C3.A9sum.C3.A9">Résumé</h2>
+## Résumé
 
-<p><code>hasAttributeNS</code> renvoie une valeur booléenne indiquant si l'élément courant possède ou non l'attribut spécifié.</p>
+`hasAttributeNS` renvoie une valeur booléenne indiquant si l'élément courant possède ou non l'attribut spécifié.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">result =
+```js
+result =
 element.hasAttributeNS(
 namespace,
-localName)</pre>
+localName)
+```
 
-<dl>
- <dt><code>result</code></dt>
- <dd>Une valeur booléenne <code>true</code> ou <code>false</code>.</dd>
- <dt><code>namespace</code></dt>
- <dd>Une chaîne spécifiant l'espace de noms de l'attribut.</dd>
- <dt><code>localName</code></dt>
- <dd>Le nom de l'attribut.</dd>
-</dl>
+- `result`
+  - : Une valeur booléenne `true` ou `false`.
+- `namespace`
+  - : Une chaîne spécifiant l'espace de noms de l'attribut.
+- `localName`
+  - : Le nom de l'attribut.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="eval">// Vérifie que l'attribut existe
-// avant de définir une valeur
-var d = document.getElementById("div1");
-if (d.hasAttributeNS(
-        "http://www.mozilla.org/ns/specialspace/",
-        "special-align")) {
-   d.setAttribute("align", "center");
-}
-</pre>
+    // Vérifie que l'attribut existe
+    // avant de définir une valeur
+    var d = document.getElementById("div1");
+    if (d.hasAttributeNS(
+            "http://www.mozilla.org/ns/specialspace/",
+            "special-align")) {
+       d.setAttribute("align", "center");
+    }
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Sp.C3.A9cification">Spécification</h2>
+## Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttrNS">DOM Level 2 Core: hasAttributeNS (en)</a> <small>— <a href="http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElHasAttrNS">traduction en français</a> (non normative)</small></li>
-</ul>
+- [DOM Level 2 Core: hasAttributeNS (en)](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttrNS) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElHasAttrNS) (non normative)

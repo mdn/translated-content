@@ -9,47 +9,34 @@ tags:
   - Reference
 translation_of: Web/API/EventSource/onopen
 ---
-<div>{{APIRef('Server Sent Events')}}</div>
+{{APIRef('Server Sent Events')}}
 
-<p>La propriété <code><strong>onopen</strong></code> de l'interface {{domxref("EventSource")}} est un {{event("Event_handlers", "event handler")}} qui est appelé lorsqu'un est évènement {{event("open")}} est reçu, indiquant que la connexion vient d'être établie.</p>
+La propriété **`onopen`** de l'interface {{domxref("EventSource")}} est un {{event("Event_handlers", "event handler")}} qui est appelé lorsqu'un est évènement {{event("open")}} est reçu, indiquant que la connexion vient d'être établie.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">eventSource.onopen = function</pre>
+    eventSource.onopen = function
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">evtSource.onopen = function() {
+```js
+evtSource.onopen = function() {
   console.log("Connexion au serveur établie.");
-};</pre>
+};
+```
 
-<div class="note">
-<p><strong>Note :</strong> Vous pouvez trouver un exemple complet sur GitHub — voir <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE demo using PHP.</a></p>
-</div>
+> **Note :** Vous pouvez trouver un exemple complet sur GitHub — voir [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "comms.html#handler-eventsource-onopen", "onopen")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                           | Commentaires         |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('HTML WHATWG', "comms.html#handler-eventsource-onopen", "onopen")}} | {{Spec2('HTML WHATWG')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.EventSource.onopen")}}</p>
+{{Compat("api.EventSource.onopen")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("EventSource")}}</li>
-</ul>
+- {{domxref("EventSource")}}

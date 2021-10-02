@@ -3,65 +3,68 @@ title: XMLHttpRequest.readyState
 slug: Web/API/XMLHttpRequest/readyState
 translation_of: Web/API/XMLHttpRequest/readyState
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<p>La propriété XMLHttpRequest.readyState renvoie l'état dans lequel se trouve un client XMLHttpRequest.Un client <abbr>XHR</abbr> existe dans l'un des états suivants :</p>
+La propriété XMLHttpRequest.readyState renvoie l'état dans lequel se trouve un client XMLHttpRequest.Un client XHR existe dans l'un des états suivants :
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Value</td>
-   <td class="header">State</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
-   <td><code>0</code></td>
-   <td><code>UNSENT</code></td>
-   <td>Le client a été créé. open() n'a pas encore été appelé.</td>
-  </tr>
-  <tr>
-   <td><code>1</code></td>
-   <td><code>OPENED</code></td>
-   <td><code>open()</code>a été appelé.</td>
-  </tr>
-  <tr>
-   <td><code>2</code></td>
-   <td><code>HEADERS_RECEIVED</code></td>
-   <td><code>send()</code> a été appelé, et les en-têtes et le statut sont disponibles.</td>
-  </tr>
-  <tr>
-   <td><code>3</code></td>
-   <td><code>LOADING</code></td>
-   <td>Téléchargement; <code>responseText</code> contient des données partielles.</td>
-  </tr>
-  <tr>
-   <td><code>4</code></td>
-   <td><code>DONE</code></td>
-   <td>L'opération est terminée.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td class="header">Value</td>
+      <td class="header">State</td>
+      <td class="header">Description</td>
+    </tr>
+    <tr>
+      <td><code>0</code></td>
+      <td><code>UNSENT</code></td>
+      <td>Le client a été créé. open() n'a pas encore été appelé.</td>
+    </tr>
+    <tr>
+      <td><code>1</code></td>
+      <td><code>OPENED</code></td>
+      <td><code>open()</code>a été appelé.</td>
+    </tr>
+    <tr>
+      <td><code>2</code></td>
+      <td><code>HEADERS_RECEIVED</code></td>
+      <td>
+        <code>send()</code> a été appelé, et les en-têtes et le statut sont
+        disponibles.
+      </td>
+    </tr>
+    <tr>
+      <td><code>3</code></td>
+      <td><code>LOADING</code></td>
+      <td>
+        Téléchargement; <code>responseText</code> contient des données
+        partielles.
+      </td>
+    </tr>
+    <tr>
+      <td><code>4</code></td>
+      <td><code>DONE</code></td>
+      <td>L'opération est terminée.</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt>UNSENT</dt>
- <dd>Le client XMLHttpRequest a été créé, mais la méthode open() n'a pas encore été appelée.</dd>
- <dt>OPENED</dt>
- <dd>La méthode open() a été invoquée. Pendant cet état, les en-têtes de requête peuvent être définis à l'aide de la méthode <a href="/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader">setRequestHeader()</a>  et la méthode <a href="/en-US/docs/Web/API/XMLHttpRequest/send">send()</a>  peut être appelée, ce qui lancera la récupération.</dd>
- <dt>HEADERS_RECEIVED</dt>
- <dd>send() a été appelé et les en-têtes de réponse ont été reçus</dd>
- <dt>LOADING</dt>
- <dd>Le corps de la réponse est en cours de réception. Si <code><a href="/en-US/docs/Web/API/XMLHttpRequest/responseType">responseType</a></code> is "text"  ou une chaîne vide, <code><a href="/en-US/docs/Web/API/XMLHttpRequest/responseText">responseText</a></code> aura la réponse textuelle partielle au fur et à mesure de son chargement.</dd>
- <dt>DONE</dt>
- <dd>L'opération de récupération est terminée. Cela peut signifier que le transfert de données a été effectué avec succès ou a échoué.</dd>
-</dl>
+- UNSENT
+  - : Le client XMLHttpRequest a été créé, mais la méthode open() n'a pas encore été appelée.
+- OPENED
+  - : La méthode open() a été invoquée. Pendant cet état, les en-têtes de requête peuvent être définis à l'aide de la méthode [setRequestHeader()](/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader)  et la méthode [send()](/en-US/docs/Web/API/XMLHttpRequest/send)  peut être appelée, ce qui lancera la récupération.
+- HEADERS_RECEIVED
+  - : send() a été appelé et les en-têtes de réponse ont été reçus
+- LOADING
+  - : Le corps de la réponse est en cours de réception. Si [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) is "text"  ou une chaîne vide, [`responseText`](/en-US/docs/Web/API/XMLHttpRequest/responseText) aura la réponse textuelle partielle au fur et à mesure de son chargement.
+- DONE
+  - : L'opération de récupération est terminée. Cela peut signifier que le transfert de données a été effectué avec succès ou a échoué.
 
-<div class="note">
-<p><strong>Note :</strong> Les noms des états sont différents dans les versions d'Internet Explorer antérieures à 11. Au lieu de <code>UNSENT</code>, <code>OPENED</code>,<code> HEADERS_RECEIVED</code>,<code> LOADING</code> and <code>DONE</code>, the names <code>READYSTATE_UNINITIALIZED</code> (0), <code>READYSTATE_LOADING</code> (1), <code>READYSTATE_LOADED</code> (2), <code>READYSTATE_INTERACTIVE</code> (3) et <code>READYSTATE_COMPLETE</code> (4) sont utilisés.</p>
-</div>
+> **Note :** Les noms des états sont différents dans les versions d'Internet Explorer antérieures à 11. Au lieu de `UNSENT`, `OPENED`,` HEADERS_RECEIVED`,` LOADING` and `DONE`, the names `READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) et `READYSTATE_COMPLETE` (4) sont utilisés.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 console.log('UNSENT', xhr.readyState); // readyState will be 0
 
 xhr.open('GET', '/api', true);
@@ -76,25 +79,14 @@ xhr.onload = function () {
 };
 
 xhr.send(null);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#states')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                            | Statut                               | Comment                |
+| -------------------------------------------------------- | ------------------------------------ | ---------------------- |
+| {{SpecName('XMLHttpRequest', '#states')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.XMLHttpRequest.readyState")}}</p>
+{{Compat("api.XMLHttpRequest.readyState")}}

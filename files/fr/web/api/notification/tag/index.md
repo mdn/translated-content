@@ -12,44 +12,30 @@ tags:
   - tag
 translation_of: Web/API/Notification/tag
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>La propriété en lecture seule <code><strong>tag</strong></code> de l'interface {{domxref ("Notification")}} correspond à une balise d'identification pour la notification, comme définis à l'aide de l'option <code>tag</code> lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()" )}}.</p>
+La propriété en lecture seule **`tag`** de l'interface {{domxref ("Notification")}} correspond à une balise d'identification pour la notification, comme définis à l'aide de l'option `tag` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()" )}}.
 
-<p>L'idée des balises de notification est que plusieurs notifications peuvent partager la même balise, les reliant entre elles. Une notification peut ensuite être programmatiquement remplacée par une autre pour éviter que l'écran des utilisateurs ne soit rempli d'un grand nombre de notifications similaires.</p>
+L'idée des balises de notification est que plusieurs notifications peuvent partager la même balise, les reliant entre elles. Une notification peut ensuite être programmatiquement remplacée par une autre pour éviter que l'écran des utilisateurs ne soit rempli d'un grand nombre de notifications similaires.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>Notification</var>.tag
-</pre>
+    Notification.tag
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Une {{domxref("DOMString")}}.</p>
+Une {{domxref("DOMString")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table>
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-notification-tag','tag')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                                     | Commentaire     |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | --------------- |
+| {{SpecName('Web Notifications','#dom-notification-tag','tag')}} | {{Spec2('Web Notifications')}} | Living standard |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Notification.tag")}}</p>
+{{Compat("api.Notification.tag")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a></li>
-</ul>
+- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

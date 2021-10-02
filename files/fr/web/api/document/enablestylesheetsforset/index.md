@@ -10,50 +10,40 @@ tags:
   - Méthode
 translation_of: Web/API/Document/enableStyleSheetsForSet
 ---
-<p>{{ APIRef("DOM") }}{{ gecko_minversion_header("1.9") }}</p>
+{{ APIRef("DOM") }}{{ gecko_minversion_header("1.9") }}
 
-<p>Active les feuilles de styles correspondant au nom spécifié dans l'ensemble de feuilles de styles en cours et désactive toutes les autres (à l'exception de celles sans titre qui sont toujours activées).</p>
+Active les feuilles de styles correspondant au nom spécifié dans l'ensemble de feuilles de styles en cours et désactive toutes les autres (à l'exception de celles sans titre qui sont toujours activées).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval">document.enableStyleSheetsForSet(<em>name</em>)
-</pre>
+    document.enableStyleSheetsForSet(name)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Le nom des feuilles de styles à activer. Toutes les feuilles de styles dont le titre correspond à ce nom seront activées, tandis que toutes celles possédant un autre titre seront désactivées. Spécifiez une chaîne vide dans le paramètre <code>name</code> pour supprimer toutes les feuilles de styles alternatives et préférées (mais pas les feuilles de styles persistantes, c'est-à-dire, celles sans attribut <code>title</code> (<em>titre</em>)).</dd>
-</dl>
+- `name`
+  - : Le nom des feuilles de styles à activer. Toutes les feuilles de styles dont le titre correspond à ce nom seront activées, tandis que toutes celles possédant un autre titre seront désactivées. Spécifiez une chaîne vide dans le paramètre `name` pour supprimer toutes les feuilles de styles alternatives et préférées (mais pas les feuilles de styles persistantes, c'est-à-dire, celles sans attribut `title` (_titre_)).
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<ul>
- <li>Les correspondances de titre sont sensibles à la casse.</li>
- <li>L'appel de cette méthode avec un <code>name</code>  <code>null</code> n'a pas d'effet ; si vous voulez désactiver toutes les feuilles de styles alternatives et préférées, vous <strong>devez</strong> utiliser "",  la chaîne vide.</li>
- <li>Les feuilles de styles qui n'ont pas de titre ne sont jamais affectées par cette méthode.</li>
- <li>Cette méthode n'affecte jamais les valeurs de {{ domxref("document.lastStyleSheetSet") }} ou {{ domxref("document.preferredStyleSheetSet") }}.</li>
-</ul>
+- Les correspondances de titre sont sensibles à la casse.
+- L'appel de cette méthode avec un `name`  `null` n'a pas d'effet ; si vous voulez désactiver toutes les feuilles de styles alternatives et préférées, vous **devez** utiliser "",  la chaîne vide.
+- Les feuilles de styles qui n'ont pas de titre ne sont jamais affectées par cette méthode.
+- Cette méthode n'affecte jamais les valeurs de {{ domxref("document.lastStyleSheetSet") }} ou {{ domxref("document.preferredStyleSheetSet") }}.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre>document.enableStyleSheetsForSet("Some style sheet set name");
-</pre>
+    document.enableStyleSheetsForSet("Some style sheet set name");
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<ul>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets">HTML5 : Alternate Style Sheets</a></li>
-</ul>
+- [HTML5 : Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{ domxref("Stylesheet") }}</li>
- <li>{{ domxref("document.styleSheets") }}</li>
- <li>{{ domxref("document.lastStyleSheetSet") }}</li>
- <li>{{ domxref("document.preferredStyleSheetSet") }}</li>
- <li>{{ domxref("document.selectedStyleSheetSet") }}</li>
- <li>{{ domxref("document.enableStyleSheetsForSet()") }}</li>
- <li><a href="/fr/docs/Archive/Standards_du_Web/Utiliser_des_titres_corrects_avec_des_feuilles_de_styles_externes">Utiliser des titres corrects avec des feuilles de styles externes</a></li>
-</ul>
+- {{ domxref("Stylesheet") }}
+- {{ domxref("document.styleSheets") }}
+- {{ domxref("document.lastStyleSheetSet") }}
+- {{ domxref("document.preferredStyleSheetSet") }}
+- {{ domxref("document.selectedStyleSheetSet") }}
+- {{ domxref("document.enableStyleSheetsForSet()") }}
+- [Utiliser des titres corrects avec des feuilles de styles externes](/fr/docs/Archive/Standards_du_Web/Utiliser_des_titres_corrects_avec_des_feuilles_de_styles_externes)

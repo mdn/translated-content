@@ -6,35 +6,34 @@ tags:
   - DOM_0
 translation_of: Web/API/GlobalEventHandlers/onblur
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
+### Résumé
 
-<p>La propriété <strong>onblur</strong> renvoie le gestionnaire de l'évènement <code>blur</code> (perte de focus) pour l'élément courant.</p>
+La propriété **onblur** renvoie le gestionnaire de l'évènement `blur` (perte de focus) pour l'élément courant.
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval">element.onblur = nomFonctionUtilisateur;
-</pre>
+    element.onblur = nomFonctionUtilisateur;
 
-<ul>
- <li><code>nomFonctionUtilisateur</code> est le nom de la fonction utilisateur préalablement définie, sans les parenthèses ni aucun argument. Il est également possible de déclarer une « fonction anonyme », comme :</li>
-</ul>
+- `nomFonctionUtilisateur` est le nom de la fonction utilisateur préalablement définie, sans les parenthèses ni aucun argument. Il est également possible de déclarer une « fonction anonyme », comme :
 
-<pre class="eval">element.onblur = function() {
-    alert("Évènement onblur détecté");
-};
-</pre>
+<!---->
 
-<h3 id="Exemple">Exemple</h3>
+    element.onblur = function() {
+        alert("Évènement onblur détecté");
+    };
 
-<p>Lorsqu'une zone de saisie n'est plus active suite à une perte du « focus », une boîte de message (alert) est affichée.</p>
+### Exemple
 
-<pre class="brush: html">&lt;form&gt;
-	&lt;input type="text" id="foo" value="Allo!" /&gt;
-&lt;/form&gt;
+Lorsqu'une zone de saisie n'est plus active suite à une perte du « focus », une boîte de message (alert) est affichée.
 
-&lt;script type="text/javascript"&gt;
+```html
+<form>
+	<input type="text" id="foo" value="Allo!" />
+</form>
+
+<script type="text/javascript">
 
 var elem = document.getElementById("foo");
 
@@ -46,15 +45,15 @@ elem.onblur = afficherMessage;
 function afficherMessage() {
 	alert("Évènement onblur detecté!");
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p>L'évènement <code>blur</code> se déclenche lors de la perte de focus d'un élément.</p>
+L'évènement `blur` se déclenche lors de la perte de focus d'un élément.
 
-<p>Microsoft Internet Explorer déclenche l'évènement <code>blur</code> sur presque tous les éléments, contrairement aux navigateurs Gecko (dont Firefox) qui ne le déclencheront que sur un nombre limité d'éléments.</p>
+Microsoft Internet Explorer déclenche l'évènement `blur` sur presque tous les éléments, contrairement aux navigateurs Gecko (dont Firefox) qui ne le déclencheront que sur un nombre limité d'éléments.
 
-<h3 id="Sp.C3.A9cification">Spécification</h3>
+### Spécification
 
-<p>{{ DOM0() }}</p>
+{{ DOM0() }}

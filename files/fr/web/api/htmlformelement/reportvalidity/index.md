@@ -6,53 +6,37 @@ tags:
   - Méthode
 translation_of: Web/API/HTMLFormElement/reportValidity
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>La méthode  <strong><code>HTMLFormElement.reportValidity()</code></strong> renvoie true si les contrôles enfants de l'élément répondent à leurs contraintes de validation. Lorsque la valeur <code>false</code> est renvoyée, ,  les événements <code><a href="/en-US/docs/Web/Events/invalid">invalid</a></code> annulables sont déclenchés pour chaque enfant non valide et les problèmes de validation sont signalés à l'utilisateur. .</p>
+La méthode  **`HTMLFormElement.reportValidity()`** renvoie true si les contrôles enfants de l'élément répondent à leurs contraintes de validation. Lorsque la valeur `false` est renvoyée, ,  les événements [`invalid`](/en-US/docs/Web/Events/invalid) annulables sont déclenchés pour chaque enfant non valide et les problèmes de validation sont signalés à l'utilisateur. .
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>HTMLFormElement</em>.reportValidity()
-</pre>
+    HTMLFormElement.reportValidity()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>{{domxref("Boolean")}}</p>
+{{domxref("Boolean")}}
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">document.forms['myform'].addEventListener('invalid', function() {
+```js
+document.forms['myform'].addEventListener('invalid', function() {
   // Optional response here
 }, false);
 
 document.forms['myform'].addEventListener('submit', function() {
   document.forms['myform'].reportValidity();
-}, false);</pre>
+}, false);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "forms.html#dom-cva-reportvalidity", "HTMLFormElement.reportValidity()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "semantics.html#the-constraint-validation-api", "HTMLFormElement.reportValidity()")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                    | Status                           | Commentaire         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName("HTML WHATWG", "forms.html#dom-cva-reportvalidity", "HTMLFormElement.reportValidity()")}}             | {{Spec2("HTML WHATWG")}} |                     |
+| {{SpecName("HTML5.1", "semantics.html#the-constraint-validation-api", "HTMLFormElement.reportValidity()")}} | {{Spec2("HTML5.1")}}     | Définition initiale |
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.HTMLFormElement.reportValidity")}}</p>
+{{Compat("api.HTMLFormElement.reportValidity")}}

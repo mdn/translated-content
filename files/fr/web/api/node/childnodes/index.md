@@ -9,95 +9,68 @@ tags:
   - Propriétés
 translation_of: Web/API/Node/childNodes
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La propriété en lecture seule  <code><strong>Node.childNodes</strong></code> renvoie une {{domxref("NodeList")}} (<em>liste de noeuds</em>) de {{domxref("Node","noeuds")}} enfants de l'élément donné avec le premier noeud enfant affecté à l'index 0.</p>
+La propriété en lecture seule  **`Node.childNodes`** renvoie une {{domxref("NodeList")}} (_liste de noeuds_) de {{domxref("Node","noeuds")}} enfants de l'élément donné avec le premier noeud enfant affecté à l'index 0.
 
-<h2 id="Syntaxe_et_valeurs">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><a href="/fr/Référence_de_JavaScript_1.5_Core/Instructions/var">var</a> <var>collNoeuds</var> = elementDeReference.<a href="/fr/DOM/element.childNodes">childNodes</a>;
-</pre>
+    var collNoeuds = elementDeReference.childNodes;
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_simple">Utilisation simple</h3>
+### Utilisation simple
 
-<pre class="brush:js">// parg est une référence d'objet pour un élément &lt;p&gt;
+```js
+// parg est une référence d'objet pour un élément <p>
 
-// D'abord vérifier que l'élément a des noeuds enfants 
+// D'abord vérifier que l'élément a des noeuds enfants
 if (parg.hasChildNodes()) {
   var children = parg.childNodes;
 
-  for (var i = 0; i &lt; children.length; i++) {
+  for (var i = 0; i < children.length; i++) {
     // faire quelque chose avec chaque enfant[i]
     // NOTE: La liste est en ligne, l'ajout ou la suppression des enfants changera la liste
   }
-}</pre>
-
-<h3 id="Supprimer_tous_les_enfants_d'un_nom">Supprimer tous les enfants d'un nom</h3>
-
-<pre>// Voici une manière de supprimer tous les enfants d'un nœud
-// (boite est une référence à un élément ayant des enfants)
-<a href="/fr/Référence_de_JavaScript_1.5_Core/Instructions/while">while</a>( boite.<a href="/fr/DOM/element.firstChild">firstChild</a>) {
-    // La liste n'est pas une copie, elle sera donc réindexée à chaque appel
-    boite.<a href="/fr/DOM/element.removeChild">removeChild</a>( boite.<a href="/fr/DOM/element.firstChild">firstChild</a>);
 }
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+### Supprimer tous les enfants d'un nom
 
-<p>Les éléments de la collection de noeuds sont des objets et non des chaînes de caractères. Pour en obtenir les données, vous devez utiliser leurs propriétés (par exemple <code>elementNodeReference.childNodes[1].nodeName</code> pour obtenir son nom, etc.)</p>
+    // Voici une manière de supprimer tous les enfants d'un nœud
+    // (boite est une référence à un élément ayant des enfants)
+    while( boite.firstChild) {
+        // La liste n'est pas une copie, elle sera donc réindexée à chaque appel
+        boite.removeChild( boite.firstChild);
+    }
 
-<p>L'objet <a href="/fr/DOM/document"><code>document</code></a> lui-même a deux enfants : la déclaration <a href="/fr/DOM/document.doctype">Doctype</a> et l'élément racine, généralement appelés  <code>documentElement</code> . (Dans les documents (X)HTML il s'agit d'éléments  <a href="/fr/HTML/Element/html"><code>HTML</code></a>).</p>
+## Notes
 
-<p><code>childNodes</code>  inclut tous les noeuds enfants, y compris les noeuds qui ne sont pas des éléments comme les noeuds texte et commentaire. Pour obtenir une collection des seuls éléments, utilisez {{domxref("ParentNode.children")}} à la place.</p>
+Les éléments de la collection de noeuds sont des objets et non des chaînes de caractères. Pour en obtenir les données, vous devez utiliser leurs propriétés (par exemple `elementNodeReference.childNodes[1].nodeName` pour obtenir son nom, etc.)
 
-<p> </p>
+L'objet [`document`](/fr/DOM/document) lui-même a deux enfants : la déclaration [Doctype](/fr/DOM/document.doctype) et l'élément racine, généralement appelés  `documentElement` . (Dans les documents (X)HTML il s'agit d'éléments  [`HTML`](/fr/HTML/Element/html)).
 
-<h2 id="Spécification">Spécification</h2>
+`childNodes`  inclut tous les noeuds enfants, y compris les noeuds qui ne sont pas des éléments comme les noeuds texte et commentaire. Pour obtenir une collection des seuls éléments, utilisez {{domxref("ParentNode.children")}} à la place.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-node-childnodes', 'Node.childNodes')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Pas de changement</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-1451460987', 'Node.childNodes')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Pas de changement</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-1451460987', 'Node.childNodes')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Pas de changement</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-1451460987', 'Node.childNodes')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<p>{{Compat("api.Node.childNodes")}}</p>
+## Spécification
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+| Spécification                                                                                        | Statut                           | Commentaire         |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName('DOM WHATWG', '#dom-node-childnodes', 'Node.childNodes')}}         | {{Spec2('DOM WHATWG')}} | Pas de changement   |
+| {{SpecName('DOM3 Core', 'core.html#ID-1451460987', 'Node.childNodes')}}     | {{Spec2('DOM3 Core')}}     | Pas de changement   |
+| {{SpecName('DOM2 Core', 'core.html#ID-1451460987', 'Node.childNodes')}}     | {{Spec2('DOM2 Core')}}     | Pas de changement   |
+| {{SpecName('DOM1', 'level-one-core.html#ID-1451460987', 'Node.childNodes')}} | {{Spec2('DOM1')}}         | Définition initiale |
 
-<ul>
- <li>{{domxref("Node.firstChild")}}</li>
- <li>{{domxref("Node.lastChild")}}</li>
- <li>{{domxref("Node.nextSibling")}}</li>
- <li>{{domxref("Node.previousSibling")}}</li>
- <li>{{domxref("ParentNode.children")}}</li>
-</ul>
+## Compatibilité des navigateurs
+
+{{Compat("api.Node.childNodes")}}
+
+## Voir aussi
+
+- {{domxref("Node.firstChild")}}
+- {{domxref("Node.lastChild")}}
+- {{domxref("Node.nextSibling")}}
+- {{domxref("Node.previousSibling")}}
+- {{domxref("ParentNode.children")}}

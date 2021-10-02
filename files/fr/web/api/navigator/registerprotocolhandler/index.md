@@ -5,42 +5,36 @@ tags:
   - Firefox 3
 translation_of: Web/API/Navigator/registerProtocolHandler
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
+### Résumé
 
-<p>Permet aux sites web de s'enregistrer en tant que gestionnaires possibles pour des protocoles particuliers.</p>
+Permet aux sites web de s'enregistrer en tant que gestionnaires possibles pour des protocoles particuliers.
 
-<p>{{ Note("Un site web ne peut enregistrer de gestionnaires de protocoles que pour lui-même. Pour des raisons de sécurité, il n\'est pas possible pour une extension ou un site d\'enregistrer des gestionnaires de protocoles ciblant d\'autres sites.") }}</p>
+{{ Note("Un site web ne peut enregistrer de gestionnaires de protocoles que pour lui-même. Pour des raisons de sécurité, il n\'est pas possible pour une extension ou un site d\'enregistrer des gestionnaires de protocoles ciblant d\'autres sites.") }}
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval">window.navigator.registerProtocolHandler(<em>protocole</em>,<em>uri</em>,<em>titre</em>);
-</pre>
+    window.navigator.registerProtocolHandler(protocole,uri,titre);
 
-<ul>
- <li><code>protocole</code> est le protocole que le site désire gérer, sous la forme d'une chaîne.</li>
- <li><code>uri</code> est l'URI du gestionnaire sous la forme d'une chaîne. Il peut contenir « %s » pour indiquer où insérer l'URI échappée du document à gérer, comme montré dans l'exemple plus bas.</li>
- <li><code>titre</code> est le titre du gestionnaire présenté à l'utilisateur, sous la forme d'une chaîne.</li>
-</ul>
+- `protocole` est le protocole que le site désire gérer, sous la forme d'une chaîne.
+- `uri` est l'URI du gestionnaire sous la forme d'une chaîne. Il peut contenir « %s » pour indiquer où insérer l'URI échappée du document à gérer, comme montré dans l'exemple plus bas.
+- `titre` est le titre du gestionnaire présenté à l'utilisateur, sous la forme d'une chaîne.
 
-<h3 id="Exemple">Exemple</h3>
+### Exemple
 
-<p>Si votre application web est située à <code>http://www.example.com</code>, vous pouvez enregistrer un gestionnaire de protocole lui permettant de gérer « mailto » comme ceci :</p>
+Si votre application web est située à `http://www.example.com`, vous pouvez enregistrer un gestionnaire de protocole lui permettant de gérer « mailto » comme ceci :
 
-<pre class="eval">navigator.registerProtocolHandler("mailto",
-                                 "<a href="https://www.example.com/?to=%s">https://www.example.com/?to=%s</a>",
-                                 "Example Mail");
-</pre>
+    navigator.registerProtocolHandler("mailto",
+                                     "https://www.example.com/?to=%s",
+                                     "Example Mail");
 
-<p>Ceci crée un gestionnaire permettant aux liens <code>mailto</code> de diriger l'utilisateur vers l'application web, en insérant l'adresse spécifiée dans le lien dans l'URL.</p>
+Ceci crée un gestionnaire permettant aux liens `mailto` de diriger l'utilisateur vers l'application web, en insérant l'adresse spécifiée dans le lien dans l'URL.
 
-<h3 id="Sp.C3.A9cification">Spécification</h3>
+### Spécification
 
-<p>Spécifié dans le <a href="http://whatwg.org/specs/web-apps/current-work/#custom-handlers">brouillon de travail Web Applications 1.0</a> du WHATWG.</p>
+Spécifié dans le [brouillon de travail Web Applications 1.0](http://whatwg.org/specs/web-apps/current-work/#custom-handlers) du WHATWG.
 
-<h3 id="Voir_.C3.A9galement">Voir également</h3>
+### Voir également
 
-<ul>
- <li><a href="/fr/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers">Gestionnaires de protocoles web</a></li>
-</ul>
+- [Gestionnaires de protocoles web](/fr/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers)

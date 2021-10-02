@@ -8,35 +8,31 @@ tags:
   - Méthode
 translation_of: Web/API/Window/scrollByPages
 ---
-<p>{{ ApiRef() }}{{Non-standard_header}}</p>
+{{ ApiRef() }}{{Non-standard_header}}
 
-<p>Fait défiler le document du nombre de pages spécifié.</p>
+Fait défiler le document du nombre de pages spécifié.
 
-<h3 id="Syntax">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval">window.scrollByPages(<em>pages</em>)
-</pre>
+    window.scrollByPages(pages)
 
-<h3 id="Parameters">Paramètres</h3>
+### Paramètres
 
-<ul>
- <li><code>pages</code> est le nombre de pages à faire défiler.</li>
- <li><code>pages</code> peut être un entier positif ou négatif.</li>
-</ul>
+- `pages` est le nombre de pages à faire défiler.
+- `pages` peut être un entier positif ou négatif.
 
-<h3 id="Example">Exemples</h3>
+### Exemples
 
-<pre>// fait défiler le document d'une page vers le bas
-window.scrollByPages(1);
+    // fait défiler le document d'une page vers le bas
+    window.scrollByPages(1);
 
-// fait défiler le document d'une page vers le haut
-window.scrollByPages(-1);
-</pre>
+    // fait défiler le document d'une page vers le haut
+    window.scrollByPages(-1);
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p>Voir aussi <a href="/fr/docs/Web/API/Window/scrollByPages">window.scrollBy</a>, <a href="/fr/docs/Web/API/Window/scrollByPages">window.scrollByLines</a>, <a href="/fr/docs/Web/API/Window/scroll">window.scroll</a>, <a href="fr/docs/Web/API/Window/scrollTo">window.scrollTo</a>.</p>
+Voir aussi [window.scrollBy](/fr/docs/Web/API/Window/scrollByPages), [window.scrollByLines](/fr/docs/Web/API/Window/scrollByPages), [window.scroll](/fr/docs/Web/API/Window/scroll), [window.scrollTo](fr/docs/Web/API/Window/scrollTo).
 
-<h3 id="Specification">Spécification</h3>
+### Spécification
 
-<p>DOM Niveau 0. Ne fait pas partie de la spécification.</p>
+DOM Niveau 0. Ne fait pas partie de la spécification.

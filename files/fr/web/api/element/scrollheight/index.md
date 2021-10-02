@@ -3,34 +3,32 @@ title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
 translation_of: Web/API/Element/scrollHeight
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<p>L'attribut en lecture seule <strong><code>element.scrollHeight</code></strong> est une mesure de la hauteur du contenu d'un élément qui inclut le contenu débordant et non visible à l'écran. La valeur <code>scrollHeight</code> est égale à la hauteur minimum dont l'élément aurait besoin pour que le contenu rentre dans le viewpoint sans utiliser de barre de défilement. Cela inclut les marges internes mais pas les marges externes.</p>
+L'attribut en lecture seule **`element.scrollHeight`** est une mesure de la hauteur du contenu d'un élément qui inclut le contenu débordant et non visible à l'écran. La valeur `scrollHeight` est égale à la hauteur minimum dont l'élément aurait besoin pour que le contenu rentre dans le viewpoint sans utiliser de barre de défilement. Cela inclut les marges internes mais pas les marges externes.
 
-<div class="note">
-<p><strong>Note :</strong> Cette propriété arrondit la valeur à l'entier le plus proche. Si vous avez besoin d'une valeur précise, utilisez <a href="/fr/docs/DOM/element.getBoundingClientRect">element.getBoundingClientRect()</a>.</p>
-</div>
+> **Note :** Cette propriété arrondit la valeur à l'entier le plus proche. Si vous avez besoin d'une valeur précise, utilisez [element.getBoundingClientRect()](/fr/docs/DOM/element.getBoundingClientRect).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval">var intElemScrollHeight = document.getElementById(id_attribute_value).scrollHeight;
-</pre>
+    var intElemScrollHeight = document.getElementById(id_attribute_value).scrollHeight;
 
-<p><code>intElemScrollHeight</code> est une variable contenant un entier correspondant à la valeur en pixels de la hauteur défilable de l'élément. <code>scrollHeight</code> est une propriété en lecture seule.</p>
+`intElemScrollHeight` est une variable contenant un entier correspondant à la valeur en pixels de la hauteur défilable de l'élément. `scrollHeight` est une propriété en lecture seule.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h2>Exemple</h2>
+## Exemple
 
-<p>Avec l'évènement {{domxref("GlobalEventHandlers/onscroll", "onscroll")}}, cette équivalence peut s'avérer utile afin de déterminer si un utilisateur a lu du texte ou non (voir aussi les propriétés {{domxref("element.scrollTop")}} et {{domxref("element.clientHeight")}}).</p>
+Avec l'évènement {{domxref("GlobalEventHandlers/onscroll", "onscroll")}}, cette équivalence peut s'avérer utile afin de déterminer si un utilisateur a lu du texte ou non (voir aussi les propriétés {{domxref("element.scrollTop")}} et {{domxref("element.clientHeight")}}).
 
-<p>La case à cocher de la démo est désactivée et ne peut être cochée tant que l'ensemble du contenu n'a pas défilé.</p>
+La case à cocher de la démo est désactivée et ne peut être cochée tant que l'ensemble du contenu n'a pas défilé.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form name="registration"&gt;
-  &lt;p&gt;
-    &lt;textarea id="rules"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
+```html
+<form name="registration">
+  <p>
+    <textarea id="rules">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
 Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
 neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at
 velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus
@@ -52,18 +50,20 @@ ac mattis congue, quam neque mollis tortor, nec mollis nisl dolor a tortor. Maec
 interdum quis placerat metus posuere. Duis malesuada justo a diam vestibulum vel aliquam nisi ornare. Integer
 laoreet nisi a odio ornare non congue turpis eleifend. Cum sociis natoque penatibus et magnis dis parturient montes,
 nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci fermentum.
-    &lt;/textarea&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;input type="checkbox" id="agree" name="accept" /&gt;
-    &lt;label for="agree"&gt;I agree&lt;/label&gt;
-    &lt;input type="submit" id="nextstep" value="Next" /&gt;
-  &lt;/p&gt;
-&lt;/form&gt;</pre>
+    </textarea>
+  </p>
+  <p>
+    <input type="checkbox" id="agree" name="accept" />
+    <label for="agree">I agree</label>
+    <input type="submit" id="nextstep" value="Next" />
+  </p>
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#notice {
+```css
+#notice {
   display: inline-block;
   margin-bottom: 12px;
   border-radius: 5px;
@@ -78,11 +78,13 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
   padding: 5px;
   border: #2A9F00 solid 2px;
   border-radius: 5px;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function checkReading () {
+```js
+function checkReading () {
   if (checkReading.read) {
     return;
   }
@@ -100,28 +102,32 @@ onload = function () {
   oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
   oToBeRead.onscroll = checkReading;
   checkReading.call(oToBeRead);
-}</pre>
+}
+```
 
-<h3>Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemple', '640', '400')}}</p>
+{{EmbedLiveSample('Exemple', '640', '400')}}
 
-<h2 id="Sp.C3.A9cification">Problèmes et solutions</h2>
+## Problèmes et solutions
 
-<h3 id="Déterminer_si_un_élément_a_complètement_été_défilé">Déterminer si un élément a complètement été défilé</h3>
+### Déterminer si un élément a complètement été défilé
 
-<p>L'expression suivante renvoie <code>true</code> si l'élément est à la fin du défilement, <code>false</code> si ça ne l'est pas.</p>
+L'expression suivante renvoie `true` si l'élément est à la fin du défilement, `false` si ça ne l'est pas.
 
-<pre class="brush: js">element.scrollHeight - element.scrollTop === element.clientHeight</pre>
+```js
+element.scrollHeight - element.scrollTop === element.clientHeight
+```
 
-<p>Associée à l'événement <a href="/fr/docs/DOM/element.onscroll">element.onscroll</a>, l'expression peut être utile pour déterminer si un utilisateur a lu un texte ou non (voir aussi les propriétés <a href="/fr/docs/DOM/element.scrollTop">element.scrollTop</a> et <a href="/fr/docs/DOM/element.clientHeight">element.clientHeight</a>. Par exemple :</p>
+Associée à l'événement [element.onscroll](/fr/docs/DOM/element.onscroll), l'expression peut être utile pour déterminer si un utilisateur a lu un texte ou non (voir aussi les propriétés [element.scrollTop](/fr/docs/DOM/element.scrollTop) et [element.clientHeight](/fr/docs/DOM/element.clientHeight). Par exemple :
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
-&lt;title&gt;MDN Example&lt;/title&gt;
-&lt;script type="text/javascript"&gt;
+```html
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MDN Example</title>
+<script type="text/javascript">
 function checkReading () {
   if (checkReading.read) { return; }
   checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
@@ -140,49 +146,28 @@ onload = function () {
   oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
   oToBeRead.onscroll = checkReading;
   checkReading.call(oToBeRead);
-}</pre>
+}
+```
 
-<p><a href="/files/4589/readme-example.html">Voir l'exemple en action</a></p>
+[Voir l'exemple en action](/files/4589/readme-example.html)
 
-<h2 id="Sp.C3.A9cification">Spécification</h2>
+## Spécification
 
-<p><code>scrollHeight</code> fait partie du modèle objet <abbr>DHTML</abbr> de Microsoft Internet Explorer. Elle fait partie de la spécification : {{ SpecName("CSSOM View") }}.</p>
+`scrollHeight` fait partie du modèle objet DHTML de Microsoft Internet Explorer. Elle fait partie de la spécification : {{ SpecName("CSSOM View") }}.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Navigateur</th>
-   <th scope="col">Version</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Internet Explorer</td>
-   <td><strong>8.0</strong></td>
-  </tr>
-  <tr>
-   <td>Firefox (Gecko)</td>
-   <td><strong>3.0</strong> (1.9)</td>
-  </tr>
-  <tr>
-   <td>Opera</td>
-   <td>?</td>
-  </tr>
-  <tr>
-   <td>Safari | Chrome | Webkit</td>
-   <td><strong>4.0</strong> | <strong>4.0</strong> | ?</td>
-  </tr>
- </tbody>
-</table>
+| Navigateur                 | Version                 |
+| -------------------------- | ----------------------- |
+| Internet Explorer          | **8.0**                 |
+| Firefox (Gecko)            | **3.0** (1.9)           |
+| Opera                      | ?                       |
+| Safari \| Chrome \| Webkit | **4.0** \| **4.0** \| ? |
 
-<p><strong>Dans les versions inférieures à Firefox 21 :</strong> quand le contenu d'un élément ne génère pas de barre de défilement verticale, alors sa propriété <code>scrollHeight</code> est égale à sa propriété <code>clientHeight</code>. Cela signifie soit que le contenu est trop court pour avoir besoin d'une barre de défilement, soit que la propriété CSS<code> {{ cssxref("overflow") }}</code> de l'élément a pour valeur <code>visible</code>.</p>
+**Dans les versions inférieures à Firefox 21 :** quand le contenu d'un élément ne génère pas de barre de défilement verticale, alors sa propriété `scrollHeight` est égale à sa propriété `clientHeight`. Cela signifie soit que le contenu est trop court pour avoir besoin d'une barre de défilement, soit que la propriété CSS` {{ cssxref("overflow") }}` de l'élément a pour valeur `visible`.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)">MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9</a></li>
- <li><a href="/fr/docs/DOM/element.clientHeight">element.clientHeight</a></li>
- <li><a href="/fr/docs/DOM/element.offsetHeight">element.offsetHeight</a></li>
-</ul>
+- [MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
+- [element.clientHeight](/fr/docs/DOM/element.clientHeight)
+- [element.offsetHeight](/fr/docs/DOM/element.offsetHeight)

@@ -8,38 +8,38 @@ tags:
   - Propriétés
 translation_of: Web/API/Node/isConnected
 ---
-<p> </p>
+{{APIRef("DOM")}}
 
-<p>{{APIRef("DOM")}}</p>
+La propriété en lecture seule **`isConnected`** de l'interface {{domxref("Node")}} renvoie un booléen indiquant si le noeud est connecté (directement ou indirectement) à l'objet contexte, par exemple l'objet {{domxref("Document")}} dans le cas d'un DOM normal  ou l'objet {{domxref("ShadowRoot")}} dans le cas du DOM shadow.
 
-<p>La propriété en lecture seule <strong><code>isConnected</code></strong> de l'interface {{domxref("Node")}} renvoie un booléen indiquant si le noeud est connecté (directement ou indirectement) à l'objet contexte, par exemple l'objet {{domxref("Document")}} dans le cas d'un DOM normal  ou l'objet {{domxref("ShadowRoot")}} dans le cas du DOM shadow.</p>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
+    var isItConnected = nodeObjectInstance.isConnected
 
-<pre class="syntaxbox">var isItConnected = nodeObjectInstance.isConnected</pre>
+### Renvoie la valeur
 
-<h3 id="Renvoie_la_valeur">Renvoie la valeur</h3>
+Un {{domxref("Boolean")}} (_booléen_) — `true` (_vrai_) si le noeud est connecté à son objet contextuel pertinent et `false` (_faux_) sinon.
 
-<p>Un {{domxref("Boolean")}} (<em>booléen</em>) — <code>true</code> (<em>vrai</em>) si le noeud est connecté à son objet contextuel pertinent et <code>false</code> (<em>faux</em>) sinon.</p>
+## Exemples
 
-<h2 id="Exemples">Exemples</h2>
+Un exemple DOM standard :
 
-<p>Un exemple DOM standard :</p>
-
-<pre class="brush: js">let test = document.createElement('p');
-console.log(test.isConnected); // renvoie false (<em>faux</em>)
+```js
+let test = document.createElement('p');
+console.log(test.isConnected); // renvoie false (faux)
 document.body.appendChild(test);
-console.log(test.isConnected); // renvoie true (<em>vrai</em>)
-</pre>
+console.log(test.isConnected); // renvoie true (vrai)
+```
 
-<p>Un exemple DOM shadow :</p>
+Un exemple DOM shadow :
 
-<pre class="brush: js">// Crée une racine shadow
+```js
+// Crée une racine shadow
 var shadow = this.attachShadow({mode: 'open'});
 
 // Crée du CSS à appliquer au dom shadow
 var style = document.createElement('style');
-console.log(style.isConnected); // renvoie false (<em>faux</em>)
+console.log(style.isConnected); // renvoie false (faux)
 
 style.textContent = '.wrapper {' +
                        'position: relative;' +
@@ -64,33 +64,17 @@ style.textContent = '.wrapper {' +
 // attache l'élément de style créé au dom shadow
 
 shadow.appendChild(style);
-console.log(style.isConnected); // renvoie true (<em>vrai</em>)</pre>
-
-<p> </p>
-
-<h2 id="Spécifications">Spécifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-node-isconnected','isConnected')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<div>
-<div>
+console.log(style.isConnected); // renvoie true (vrai)
+```
 
 
-<p>{{Compat("api.Node.isConnected")}}</p>
-</div>
-</div>
+
+## Spécifications
+
+| Spécification                                                                        | Statut                           | Commentaire          |
+| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('DOM WHATWG','#dom-node-isconnected','isConnected')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+
+## Compatibilité des navigateurs
+
+{{Compat("api.Node.isConnected")}}

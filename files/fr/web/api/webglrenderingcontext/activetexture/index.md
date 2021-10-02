@@ -9,77 +9,60 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/activeTexture
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>La méthode <strong><code>WebGLRenderingContext.activeTexture()</code></strong> de l'<a href="/fr-FR/docs/Web/API/WebGL_API">API WebGL</a> indique quelle unité de texture doit être rendue active.</p>
+La méthode **`WebGLRenderingContext.activeTexture()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) indique quelle unité de texture doit être rendue active.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var><em>void gl</em>.activeTexture</var><var>(texture);</var>
-</pre>
+    void gl.activeTexture(texture);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>texture</code></dt>
- <dd>L'unité de texture à rendre active. La valueur est une <code>gl.TEXTURE<em>I</em></code> où <em>I</em> est dans la plage de 0 à<code>gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1</code>.</dd>
-</dl>
+- `texture`
+  - : L'unité de texture à rendre active. La valueur est une `gl.TEXTUREI` où *I* est dans la plage de 0 à`gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1`.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Aucune.</p>
+Aucune.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Si <em>texture</em> n'est pas l'une des <code>gl.TEXTURE<em>I</em></code>, où <em>I</em> est dans la plage de 0 à<code>gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1</code>, une erreur <code>gl.INVALID_ENUM</code> est déclenchée.</p>
+Si *texture* n'est pas l'une des `gl.TEXTUREI`, où *I* est dans la plage de 0 à`gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1`, une erreur `gl.INVALID_ENUM` est déclenchée.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>L'appel suivant choisit <code>gl.TEXTURE1</code> comme texture en cours. Les appels suivants qui modifient l'état de la texture affecteront cette texture.</p>
+L'appel suivant choisit `gl.TEXTURE1` comme texture en cours. Les appels suivants qui modifient l'état de la texture affecteront cette texture.
 
-<pre class="brush: js">gl.activeTexture(gl.TEXTURE1);
-</pre>
+```js
+gl.activeTexture(gl.TEXTURE1);
+```
 
-<p>Le nombre d'unités de texture dépend de l'implémentation, vous pouvez obtenir ce nombre à l'aide de la constante <code>MAX_COMBINED_TEXTURE_IMAGE_UNITS</code>. Il est, de par la spécification, d'au moins 8.</p>
+Le nombre d'unités de texture dépend de l'implémentation, vous pouvez obtenir ce nombre à l'aide de la constante `MAX_COMBINED_TEXTURE_IMAGE_UNITS`. Il est, de par la spécification, d'au moins 8.
 
-<pre class="brush: js">gl.getParameter(gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS);
-</pre>
+```js
+gl.getParameter(gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS);
+```
 
-<p>Pour obtenir la texture en cours, faire une requête sur la constante <code>ACTIVE_TEXTURE</code>.</p>
+Pour obtenir la texture en cours, faire une requête sur la constante `ACTIVE_TEXTURE`.
 
-<pre class="brush: js">gl.activeTexture(gl.TEXTURE0);
+```js
+gl.activeTexture(gl.TEXTURE0);
 gl.getParameter(gl.ACTIVE_TEXTURE);
 // retourne "33984" (0x84C0, valeur enum pour gl.TEXTURE0)
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statué</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.3", "activeTexture")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glActiveTexture.xml", "glActiveTexture")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>Page man de l'API OpenGL.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statué                               | Commentaire               |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------- |
+| {{SpecName('WebGL', "#5.14.3", "activeTexture")}}                                 | {{Spec2('WebGL')}}             | Définition initiale.      |
+| {{SpecName('OpenGL ES 2.0', "glActiveTexture.xml", "glActiveTexture")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WebGLRenderingContext.activeTexture")}}</p>
+{{Compat("api.WebGLRenderingContext.activeTexture")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getParameter()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getParameter()")}}

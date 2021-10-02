@@ -8,31 +8,29 @@ tags:
   - Méthodes
 translation_of: Web/API/Document/createRange
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Retourne un objet {{domxref("Range")}}.</p>
+Retourne un objet {{domxref("Range")}}.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">range = document.createRange();
-</pre>
+    range = document.createRange();
 
-<p><code>range</code> devient un objet {{domxref("Range")}}.</p>
+`range` devient un objet {{domxref("Range")}}.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">var range = document.createRange();
+```js
+var range = document.createRange();
 
 range.setStart(startNode, startOffset);
 range.setEnd(endNode, endOffset);
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Une fois un objet <code>Range</code> créé, il est nécessaire de spécifier les limites de départ et de fin avant de pouvoir utiliser la plupart des méthodes.</p>
+Une fois un objet `Range` créé, il est nécessaire de spécifier les limites de départ et de fin avant de pouvoir utiliser la plupart des méthodes.
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<ul>
- <li><a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Traversal-Range-20001113/ranges.html#Level-2-DocumentRange-idl">DOM Level 2 Range: DocumentRange.createRange</a></li>
-</ul>
+- [DOM Level 2 Range: DocumentRange.createRange](https://www.w3.org/TR/2000/REC-DOM-Level-2-Traversal-Range-20001113/ranges.html#Level-2-DocumentRange-idl)

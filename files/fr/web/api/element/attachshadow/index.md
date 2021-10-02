@@ -3,52 +3,35 @@ title: Element.attachShadow()
 slug: Web/API/Element/attachShadow
 translation_of: Web/API/Element/attachShadow
 ---
-<p>{{APIRef('Shadow DOM')}} {{SeeCompatTable}}</p>
+{{APIRef('Shadow DOM')}} {{SeeCompatTable}}
 
-<p>La méthode <strong><code>Element.attachShadow()</code></strong> attache un arbre Shadow DOM à un élément spécifié et retourne une référence à son <a href="/en-US/docs/Web/API/ShadowRoot"><code>ShadowRoot</code></a>.</p>
+La méthode **`Element.attachShadow()`** attache un arbre Shadow DOM à un élément spécifié et retourne une référence à son [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <em>shadowroot =</em><em> element</em>.attachShadow(<em>shadowRootInit</em>);
-</pre>
+    var shadowroot = element.attachShadow(shadowRootInit);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>shadowRootInit</code></dt>
- <dd>Un dictionnaire <code>ShadowRootInit</code>, avec les propriétés suivantes :
- <ul>
-  <li><code>mode </code>: une chaîne de caractères spécifiant le <em>mode d'encapsulation</em> de l'arbre du Shadow DOM, parmi les options suivantes :
-   <ul>
-    <li><code>open : </code>spécifie une encapsulation ouverte.</li>
-    <li><code>closed</code> : spécifie une encapsulation fermée.</li>
-   </ul>
-  </li>
- </ul>
- </dd>
-</dl>
+- `shadowRootInit`
 
-<h3 id="Retour">Retour</h3>
+  - : Un dictionnaire `ShadowRootInit`, avec les propriétés suivantes :
 
-<p>Retourne un {{domxref("ShadowRoot")}}.</p>
+    - `mode `: une chaîne de caractères spécifiant le *mode d'encapsulation* de l'arbre du Shadow DOM, parmi les options suivantes :
 
-<h2 id="Spécifications">Spécifications</h2>
+      - `open : `spécifie une encapsulation ouverte.
+      - `closed` : spécifie une encapsulation fermée.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Shadow DOM', '#widl-Element-attachShadow-ShadowRoot-ShadowRootInit-shadowRootInitDict', 'attachShadow()')}}</td>
-   <td>{{Spec2('Shadow DOM')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+### Retour
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Retourne un {{domxref("ShadowRoot")}}.
 
-<p>{{Compat("api.Element.attachShadow")}}</p>
+## Spécifications
+
+| Specification                                                                                                                                                    | Status                           | Comment              |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('Shadow DOM', '#widl-Element-attachShadow-ShadowRoot-ShadowRootInit-shadowRootInitDict', 'attachShadow()')}} | {{Spec2('Shadow DOM')}} | Définition initiale. |
+
+## Browser compatibility
+
+{{Compat("api.Element.attachShadow")}}

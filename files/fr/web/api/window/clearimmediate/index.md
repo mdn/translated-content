@@ -8,58 +8,41 @@ tags:
   - Window
 translation_of: Web/API/Window/clearImmediate
 ---
-<p>{{APIRef("HTML DOM")}}{{Non-standard_header}}</p>
+{{APIRef("HTML DOM")}}{{Non-standard_header}}
 
-<p>Cette méthode efface l'action spécifiée par {{DOMxRef("window.setImmediate")}}.</p>
+Cette méthode efface l'action spécifiée par {{DOMxRef("window.setImmediate")}}.
 
-<div class="note">
-<p><strong>Note :</strong> Cette méthode ne devrait pas devenir standard et n'est implémentée que par les versions récentes d'Internet Explorer et de Node.js 0.10+. Il rencontre la résistance à la fois de <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=686201">Gecko</a> (Firefox) et <a href="http://code.google.com/p/chromium/issues/detail?id=146172">Webkit</a> (Google/Apple).</p>
-</div>
+> **Note :** Cette méthode ne devrait pas devenir standard et n'est implémentée que par les versions récentes d'Internet Explorer et de Node.js 0.10+. Il rencontre la résistance à la fois de [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) et [Webkit](http://code.google.com/p/chromium/issues/detail?id=146172) (Google/Apple).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>window</var>.clearImmediate( <var>immediateID</var> )
-</pre>
+    window.clearImmediate( immediateID )
 
-<p>où immediateID est un ID retourné par {{DOMxRef("window.setImmediate")}}.</p>
+où immediateID est un ID retourné par {{DOMxRef("window.setImmediate")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">let immediateID = setImmediate(() =&gt; {
+```js
+let immediateID = setImmediate(() => {
   // Exécute du code
 }
 
 document.getElementById("bouton")
-  .addEventListener(() =&gt; {
+  .addEventListener(() => {
   clearImmediate(immediateID);
 });
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://w3c.github.io/setImmediate/#si-setImmediate">Efficient Script Yielding La définition de <code>setImmediate</code> dans cette spécification.</a></td>
-   <td>Editor's Draft</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                              | Statut         | Commentaire         |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | -------------- | ------------------- |
+| [Efficient Script Yielding La définition de `setImmediate` dans cette spécification.](https://w3c.github.io/setImmediate/#si-setImmediate) | Editor's Draft | Initial definition. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.clearImmediate")}}</p>
+{{Compat("api.Window.clearImmediate")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>{{DOMxRef("Window.setImmediate()")}}</li>
-</ul>
+- {{DOMxRef("Window.setImmediate()")}}

@@ -10,37 +10,24 @@ tags:
   - Property
 translation_of: Web/API/HTMLIFrameElement/featurePolicy
 ---
-<div>{{APIRef("Feature Policy API")}}{{SeeCompatTable}}</div>
+{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
-<p>La propriété en lecture seule <strong><code>featurePolicy</code></strong> de l'interface {{DOMxRef("HTMLIFrameElement")}} retourne l'interface {{DOMxRef("FeaturePolicy")}}, qui fournit une API simple pour consulter facilement les règles de fonctionnalités appliquées à un élément <code>&lt;iframe&gt;</code> spécifique.</p>
+La propriété en lecture seule **`featurePolicy`** de l'interface {{DOMxRef("HTMLIFrameElement")}} retourne l'interface {{DOMxRef("FeaturePolicy")}}, qui fournit une API simple pour consulter facilement les règles de fonctionnalités appliquées à un élément `<iframe>` spécifique.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var policy = <em>HTMLIFrameElement</em>.featurePolicy</pre>
+    var policy = HTMLIFrameElement.featurePolicy
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un objet <a href="/en-US/docs/Web/API/FeaturePolicy"><code>FeaturePolicy</code></a> pouvant être utilisé pour consulter les paramètres Feature Policy appliqués au cadre.</p>
+Un objet [`FeaturePolicy`](/en-US/docs/Web/API/FeaturePolicy) pouvant être utilisé pour consulter les paramètres Feature Policy appliqués au cadre.
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Feature Policy")}}</td>
-   <td>{{Spec2("Feature Policy")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                            | État                                 | Commentaire          |
+| ---------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName("Feature Policy")}} | {{Spec2("Feature Policy")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("api.HTMLIFrameElement.featurePolicy")}}</p>
+{{Compat("api.HTMLIFrameElement.featurePolicy")}}

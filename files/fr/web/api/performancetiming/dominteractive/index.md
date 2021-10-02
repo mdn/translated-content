@@ -14,48 +14,32 @@ tags:
   - domInteractive
 translation_of: Web/API/PerformanceTiming/domInteractive
 ---
-<p>{{APIRef("Navigation Timing")}}</p>
+{{APIRef("Navigation Timing")}}
 
-<div class="warning">
-  <p><strong>Attention :</strong> Cette interface est dépréciée dans la spécification <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2</a>. Veuillez utiliser la propriété <a href="/fr/docs/Web/API/PerformanceNavigationTiming/domInteractive"><code>PerformanceNavigationTiming.domInteractive</code></a> de l'interface <a href="/fr/docs/Web/API/PerformanceNavigationTiming"><code>PerformanceNavigationTiming</code></a> à la place.</p>
-</div>
+> **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.domInteractive`](/fr/docs/Web/API/PerformanceNavigationTiming/domInteractive) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
 
-<p>L'ancienne propriété en lecture seule <code><strong>domInteractive</code></strong> retourne un <code>unsigned long long</code> représentant le moment, en millisecondes depuis l'époque UNIX, où le parseur a terminé son travail sur le document principal, c'est-à-dire lorsque son <a href="/fr/docs/Web/API/Document/readyState"><code>Document.readyState</code></a> passe à <code>"interactive"</code> et que l'événement <a href="/fr/docs/Web/API/Document/readystatechange_event"><code>readystatechange</code></a> correspondant est lancé.</p>
+L'ancienne propriété en lecture seule **`domInteractive`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, où le parseur a terminé son travail sur le document principal, c'est-à-dire lorsque son [`Document.readyState`](/fr/docs/Web/API/Document/readyState) passe à `"interactive"` et que l'événement [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event) correspondant est lancé.
 
-<p>Cette propriété peut être utilisée pour mesurer la vitesse de chargement des sites Web que les utilisateurs <em>ressentent</em>. Néanmoins, il y a quelques mises en garde qui se produisent si des scripts bloquent le rendu et ne sont pas chargés de manière asynchrone ou avec des polices Web personnalisées. <a href="http://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/">Vérifiez si vous êtes dans l'un de ces cas</a> avant d'utiliser cette propriété comme un proxy pour l'expérience utilisateur de la vitesse de chargement d'un site Web.</p>
+Cette propriété peut être utilisée pour mesurer la vitesse de chargement des sites Web que les utilisateurs _ressentent_. Néanmoins, il y a quelques mises en garde qui se produisent si des scripts bloquent le rendu et ne sont pas chargés de manière asynchrone ou avec des polices Web personnalisées. [Vérifiez si vous êtes dans l'un de ces cas](http://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/) avant d'utiliser cette propriété comme un proxy pour l'expérience utilisateur de la vitesse de chargement d'un site Web.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">let <var>time</var> = <var>performanceTiming</var>.domInteractive;</pre>
+```js
+let time = performanceTiming.domInteractive;
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Navigation Timing', '#dom-performancetiming-dominteractive',
-        'PerformanceTiming.domInteractive')}}</td>
-      <td>{{Spec2('Navigation Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                                | Statut                                   | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
+| {{SpecName('Navigation Timing', '#dom-performancetiming-dominteractive',
+        'PerformanceTiming.domInteractive')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceTiming.domInteractive")}}</p>
+{{Compat("api.PerformanceTiming.domInteractive")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>L'interface <a href="/fr/docs/Web/API/PerformanceTiming"><code>PerformanceTiming</code></a> à laquelle elle appartient.</li>
-  <li>L'article « <a href="http://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/">
-    domInteractive: is it? really?</a> <small>(en)</small> » explique quand vous pouvez utiliser cette propriété comme un proxy pour l'expérience utilisateur du chargement d'un site Web.</li>
-</ul>
+- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.
+- L'article « [domInteractive: is it? really?](http://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/) (en) » explique quand vous pouvez utiliser cette propriété comme un proxy pour l'expérience utilisateur du chargement d'un site Web.

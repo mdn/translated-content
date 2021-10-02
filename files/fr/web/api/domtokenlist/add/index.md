@@ -10,66 +10,58 @@ tags:
   - Méthodes
 translation_of: Web/API/DOMTokenList/add
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La méthode <code><strong>add()</strong></code> de l'interface {{domxref("DOMTokenList")}} ajoute  le <em>token</em> (<em>marque</em>) à la liste.</p>
+La méthode **`add()`** de l'interface {{domxref("DOMTokenList")}} ajoute  le _token_ (_marque_) à la liste.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">tokenList.add(token1[, token2[, ...]]);</pre>
+    tokenList.add(token1[, token2[, ...]]);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>token</dt>
- <dd>Une {{domxref("DOMString")}} (<em>chaîne de caractères</em>) représentant la marque (<em>token</em>) que vous souhaitez ajouter à la liste.</dd>
-</dl>
+- token
+  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la marque (_token_) que vous souhaitez ajouter à la liste.
 
-<h3 id="Valeur_renvoyée">Valeur renvoyée</h3>
+### Valeur renvoyée
 
-<p>Vide.</p>
+Vide.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple suivant, nous récupérons une liste des classes définies sur un élément {{htmlelement("span")}} en tant que <code>DOMTokenList</code>, en utilisant {{domxref("Element.classList")}}. Nous ajoutons alors une nouvelle marque à la  liste et écrivons la liste dans un  {{domxref("Node.textContent")}} du <code>&lt;span&gt;</code>.</p>
+Dans l'exemple suivant, nous récupérons une liste des classes définies sur un élément {{htmlelement("span")}} en tant que `DOMTokenList`, en utilisant {{domxref("Element.classList")}}. Nous ajoutons alors une nouvelle marque à la  liste et écrivons la liste dans un  {{domxref("Node.textContent")}} du `<span>`.
 
-<p>Tout d'abord, le code HTML :</p>
+Tout d'abord, le code HTML :
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>Maintenant, le JavaScript :</p>
+Maintenant, le JavaScript :
 
-<pre class="brush: js">var span = document.querySelector("span");
+```js
+var span = document.querySelector("span");
 var classes = span.classList;
 classes.add("d");
 span.textContent = classes;
-</pre>
+```
 
-<p>La sortie ressemble à ceci :</p>
+La sortie ressemble à ceci :
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<p>Vous pouvez ajouter plusieurs <em>token</em> :</p>
+Vous pouvez ajouter plusieurs _token_ :
 
-<pre class="brush: js">span.classList.add("d", "e", "f");</pre>
+```js
+span.classList.add("d", "e", "f");
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-add','add()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | Statut                           | Commentaire         |
+| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName('DOM WHATWG','#dom-domtokenlist-add','add()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("api.DOMTokenList.add")}}</div>
+{{Compat("api.DOMTokenList.add")}}

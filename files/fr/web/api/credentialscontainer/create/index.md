@@ -10,79 +10,53 @@ tags:
   - WebAuthn
 translation_of: Web/API/CredentialsContainer/create
 ---
-<p>{{APIRef("Credential Management")}}{{SeeCompatTable}}</p>
+{{APIRef("Credential Management")}}{{SeeCompatTable}}
 
-<p>La méthode <strong><code>create()</code></strong>, rattachée à l'interface {{domxref("CredentialsContainer")}}, renvoie une promesse ({{jsxref("Promise")}}) qui est résolue en</p>
+La méthode **`create()`**, rattachée à l'interface {{domxref("CredentialsContainer")}}, renvoie une promesse ({{jsxref("Promise")}}) qui est résolue en
 
-<ul>
- <li>une nouvelle instance {{domxref("Credential")}} construite avec les options fournies</li>
- <li>{{jsxref("null")}} si aucun objet <code>Credential</code> ne peut être créé.</li>
-</ul>
+- une nouvelle instance {{domxref("Credential")}} construite avec les options fournies
+- {{jsxref("null")}} si aucun objet `Credential` ne peut être créé.
 
-<div class="note">
-<p><strong>Note :</strong> Cette méthode ne peut être utilisé que pour les contextes de navigation les plus hauts. Les appels lancés depuis une {{HTMLElement("iframe")}} résoudront la promesse sans aucun effet.</p>
-</div>
+> **Note :** Cette méthode ne peut être utilisé que pour les contextes de navigation les plus hauts. Les appels lancés depuis une {{HTMLElement("iframe")}} résoudront la promesse sans aucun effet.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var promise = CredentialsContainer.create([options])</pre>
+    var promise = CredentialsContainer.create([options])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>options</code></dt>
- <dd>Un objet de type {{domxref("CredentialCreationOptions")}} qui contient des options pour le nouvel objet <code>Credentials</code> demandé. Cet objet doit posséder au moins une des propriétés parmi <code>"password"</code>, <code>"federated"</code> ou <code>"publicKey"</code>. Les options sont :
- <ul>
-  <li>password: {{optional_inline}} un objet {{domxref("HTMLFormElement")}} ou un objet {{domxref("PasswordCredentialData")}}
-   <ul>
-    <li><code>id</code>: (obligatoire) {{domxref("USVString")}} hérité de {{domxref("CredentialData")}}.</li>
-    <li><code>name</code>: {{optional_inline}} {{domxref("USVString")}}</li>
-    <li><code>iconURL</code>: {{optional_inline}} {{domxref("USVString")}}</li>
-    <li><code>password</code>: (required) {{domxref("USVString")}}</li>
-   </ul>
-  </li>
-  <li>federated : {{optional_inline}} un objet {{domxref("FederatedCredentialInit")}}. Cet objet contient le nécessaire pour créer/obtenir des informations d'authentification fédérées. Les propriétés disponibles sont :
-   <ul>
-    <li><code>id</code>: (required) {{domxref("USVString")}} hérité de {{domxref("CredentialData")}}.</li>
-    <li><code>name</code>: {{optional_inline}} {{domxref("USVString")}}</li>
-    <li><code>iconURL</code>: {{optional_inline}} {{domxref("USVString")}}</li>
-    <li><code>provider</code>: (required) {{domxref("USVString")}}</li>
-    <li><code>protocol</code>: {{optional_inline}} {{domxref("USVString")}}</li>
-   </ul>
-  </li>
-  <li><code>publicKey</code> : {{optional_inline}} un objet {{domxref("PublicKeyCredentialCreationOptions")}} qui décrit les options pour créer une information d'authentification <a href="/fr/docs/Web/API/Web_Authentication_API">WebAuthn</a>.</li>
- </ul>
- </dd>
-</dl>
+- `options`
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+  - : Un objet de type {{domxref("CredentialCreationOptions")}} qui contient des options pour le nouvel objet `Credentials` demandé. Cet objet doit posséder au moins une des propriétés parmi `"password"`, `"federated"` ou `"publicKey"`. Les options sont :
 
-<p>Une promesse ({{jsxref("Promise")}}) dont la valeur de résolution est une instance {{domxref("Credential")}} telle que {{domxref("PasswordCredential")}}, {{domxref("FederatedCredential")}} ou {{domxref("PublicKeyCredential")}}.</p>
+    - password: {{optional_inline}} un objet {{domxref("HTMLFormElement")}} ou un objet {{domxref("PasswordCredentialData")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+      - `id`: (obligatoire) {{domxref("USVString")}} hérité de {{domxref("CredentialData")}}.
+      - `name`: {{optional_inline}} {{domxref("USVString")}}
+      - `iconURL`: {{optional_inline}} {{domxref("USVString")}}
+      - `password`: (required) {{domxref("USVString")}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Credential Management','#dom-credentialscontainer-get','get()')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebAuthn')}}</td>
-   <td>{{Spec2('WebAuthn')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+    - federated : {{optional_inline}} un objet {{domxref("FederatedCredentialInit")}}. Cet objet contient le nécessaire pour créer/obtenir des informations d'authentification fédérées. Les propriétés disponibles sont :
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+      - `id`: (required) {{domxref("USVString")}} hérité de {{domxref("CredentialData")}}.
+      - `name`: {{optional_inline}} {{domxref("USVString")}}
+      - `iconURL`: {{optional_inline}} {{domxref("USVString")}}
+      - `provider`: (required) {{domxref("USVString")}}
+      - `protocol`: {{optional_inline}} {{domxref("USVString")}}
 
-<p>{{Compat("api.CredentialsContainer.create")}}</p>
+    - `publicKey` : {{optional_inline}} un objet {{domxref("PublicKeyCredentialCreationOptions")}} qui décrit les options pour créer une information d'authentification [WebAuthn](/fr/docs/Web/API/Web_Authentication_API).
+
+### Valeur de retour
+
+Une promesse ({{jsxref("Promise")}}) dont la valeur de résolution est une instance {{domxref("Credential")}} telle que {{domxref("PasswordCredential")}}, {{domxref("FederatedCredential")}} ou {{domxref("PublicKeyCredential")}}.
+
+## Spécifications
+
+| Spécification                                                                                            | État                                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
+| {{SpecName('Credential Management','#dom-credentialscontainer-get','get()')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+| {{SpecName('WebAuthn')}}                                                                         | {{Spec2('WebAuthn')}}                 | Définition initiale. |
+
+## Compatibilité des navigateurs
+
+{{Compat("api.CredentialsContainer.create")}}

@@ -9,21 +9,22 @@ tags:
   - Reference
 translation_of: Web/API/Navigator/credentials
 ---
-<p>{{securecontext_header}}{{APIRef("")}}</p>
+{{securecontext_header}}{{APIRef("")}}
 
-<p>La propriété <strong><code>credentials</code></strong>, rattachée à l'interface {{domxref("Navigator")}}, renvoie l'interface {{domxref("CredentialsContainer")}} qui expose des méthodes pour demander des informations d'authentification. L'interface {{domxref("CredentialsContainer")}} notifie également l'agent utilisateur lorsqu'un évènement pertinent se produit (une connexion ou une déconnexion réussie par exemple). Cette propriété peut être utilisée pour détecter si la fonctionnalité est prise en charge ou non.</p>
+La propriété **`credentials`**, rattachée à l'interface {{domxref("Navigator")}}, renvoie l'interface {{domxref("CredentialsContainer")}} qui expose des méthodes pour demander des informations d'authentification. L'interface {{domxref("CredentialsContainer")}} notifie également l'agent utilisateur lorsqu'un évènement pertinent se produit (une connexion ou une déconnexion réussie par exemple). Cette propriété peut être utilisée pour détecter si la fonctionnalité est prise en charge ou non.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var credentialsContainer = navigator.credentials</pre>
+    var credentialsContainer = navigator.credentials
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>L'interface {{domxref("CredentialsContainer")}}.</p>
+L'interface {{domxref("CredentialsContainer")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">if ('credentials' in navigator) {
+```js
+if ('credentials' in navigator) {
   navigator.credentials.get({password: true})
   .then(function(creds) {
     // Gérer les informations d'authentification
@@ -31,27 +32,14 @@ translation_of: Web/API/Navigator/credentials
 } else {
   // Gérer la connexion comme avant
 };
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Credential Management')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                    | État                                         | Commentaires         |
+| ------------------------------------------------ | -------------------------------------------- | -------------------- |
+| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Navigator.credentials")}}</p>
+{{Compat("api.Navigator.credentials")}}

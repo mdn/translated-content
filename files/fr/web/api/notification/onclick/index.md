@@ -10,54 +10,38 @@ tags:
   - onclick
 translation_of: Web/API/Notification/onclick
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>La propriété <strong><code>onclick</code></strong>, rattachée à l'interface {{domxref("Notification")}}, définit un gestionnaire d'évènement à déclencher lorsque la notification recçoit un évènement {{event("click")}} (qui se produit lorsqu'un utilisateur clique sur la notification).</p>
+La propriété **`onclick`**, rattachée à l'interface {{domxref("Notification")}}, définit un gestionnaire d'évènement à déclencher lorsque la notification recçoit un évènement {{event("click")}} (qui se produit lorsqu'un utilisateur clique sur la notification).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>Notification</em>.onclick = function(event) { ... };
-</pre>
+    Notification.onclick = function(event) { ... };
 
-<p>Le comportement par défaut consiste à déplacer le focus sur la zone d'affichage (<em>viewport</em>) du <a href="https://html.spec.whatwg.org/multipage/browsers.html#browsing-context">contexte de navigation</a> de la notification. Pour éviter ce comportement, on pourra appeler la méthode <code><a href="/fr/docs/Web/API/Event/preventDefault">preventDefault()</a></code> sur l'objet représentant l'évènement.</p>
+Le comportement par défaut consiste à déplacer le focus sur la zone d'affichage (_viewport_) du [contexte de navigation](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context) de la notification. Pour éviter ce comportement, on pourra appeler la méthode [`preventDefault()`](/fr/docs/Web/API/Event/preventDefault) sur l'objet représentant l'évènement.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple qui suit, on utilise le gestionnaire d'évènement <code>onclick</code> pour ouvrir une page dans un nouvel onglet (avec le paramètre <code>'_blank'</code>) lorsqu'on clique sur la notification :</p>
+Dans l'exemple qui suit, on utilise le gestionnaire d'évènement `onclick` pour ouvrir une page dans un nouvel onglet (avec le paramètre `'_blank'`) lorsqu'on clique sur la notification :
 
-<pre class="brush: js">notification.onclick = function(event) {
+```js
+notification.onclick = function(event) {
   event.preventDefault(); // empêcher le navigateur de passer le focus sur l'onglet de la navigation
   window.open('http://www.mozilla.org', '_blank');
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-notification-onclick','onclick')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Standard évolutif</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                                     | Commentaires      |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------- |
+| {{SpecName('Web Notifications','#dom-notification-onclick','onclick')}} | {{Spec2('Web Notifications')}} | Standard évolutif |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.Notification.onclick")}}
 
+## Voir aussi
 
-<p>{{Compat("api.Notification.onclick")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{domxref("Notification")}}</li>
- <li><a href="/fr/docs/Web/API/notification/Using_Web_Notifications">Utiliser l'API Notifications</a></li>
-</ul>
+- {{domxref("Notification")}}
+- [Utiliser l'API Notifications](/fr/docs/Web/API/notification/Using_Web_Notifications)

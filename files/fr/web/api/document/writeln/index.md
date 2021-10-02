@@ -8,49 +8,49 @@ tags:
   - Reference
 translation_of: Web/API/Document/writeln
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>Écrit une chaine de caractères suivie d'un retour de ligne.</p>
+Écrit une chaine de caractères suivie d'un retour de ligne.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval">document.writeln(<em>ligne</em>);
-</pre>
+    document.writeln(ligne);
 
-<h3 id="Parameters">Paramètres</h3>
+### Paramètres
 
-<ul>
- <li><code>ligne</code> est la chaine de caractère contenant le texte.</li>
-</ul>
+- `ligne` est la chaine de caractère contenant le texte.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="notranslate">document.writeln("&lt;p&gt;Entrez votre mot de passe :&lt;/p&gt;");
-</pre>
+    document.writeln("<p>Entrez votre mot de passe :</p>");
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p><strong>document.writeln </strong>est identique à <a href="/en-US/docs/Web/API/Document/write">{{domxref("document.write")}}</a>, mais ajoute une nouvelle ligne.</p>
+**document.writeln** est identique à [{{domxref("document.write")}}](/en-US/docs/Web/API/Document/write), mais ajoute une nouvelle ligne.
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td><strong>Spécification</strong></td>
-   <td><strong>État</strong></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#dom-document-writeln", "document.writeln()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 HTML", "html.html#ID-35318390", "document.writeln()")}}</td>
-   <td>{{Spec2("DOM2 HTML")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><strong>Spécification</strong></td>
+      <td><strong>État</strong></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("HTML WHATWG", "#dom-document-writeln", "document.writeln()")}}
+      </td>
+      <td>{{Spec2("HTML WHATWG")}}</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("DOM2 HTML", "html.html#ID-35318390", "document.writeln()")}}
+      </td>
+      <td>{{Spec2("DOM2 HTML")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Document.writeln")}}</p>
+{{Compat("api.Document.writeln")}}

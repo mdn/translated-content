@@ -9,47 +9,44 @@ tags:
   - drag and drop
 translation_of: Web/API/DataTransfer/clearData
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>La méthode DataTransfer.clearData() retire l'opération de {{domxref("DataTransfer","glisser-déposer")}} pour le format donné. Si la donnée pour le format ciblé n'existe pas, cette méthode n'aura aucun effet.</p>
+La méthode DataTransfer.clearData() retire l'opération de {{domxref("DataTransfer","glisser-déposer")}} pour le format donné. Si la donnée pour le format ciblé n'existe pas, cette méthode n'aura aucun effet.
 
-<div class="note">
-  <p><strong>Note :</strong> Si cette méthode est appelée sans argument, ou que le format donné est une  {{domxref("DOMString","chaîne de caractères")}}  vide, les données de tous les formats seront retirées.</p>
-</div>
+> **Note :** Si cette méthode est appelée sans argument, ou que le format donné est une  {{domxref("DOMString","chaîne de caractères")}}  vide, les données de tous les formats seront retirées.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var>dataTransfer</var>.clearData([format]);
-</pre>
+    void dataTransfer.clearData([format]);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>format{{optional_inline}}</dt>
- <dd>Une {{domxref("DOMString","chaîne de caractères")}} représentant le format de donnée à retirer.</dd>
-</dl>
+- format{{optional_inline}}
+  - : Une {{domxref("DOMString","chaîne de caractères")}} représentant le format de donnée à retirer.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Void.</p>
+Void.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Cette exemple illustre l'utilisation des méthodes {{domxref("DataTransfer.getData()","getData()")}}, {{domxref("DataTransfer.setData()","setData()")}} et {{domxref("DataTransfer.clearData()","clearData()")}} de l'objet {{domxref("DataTransfer")}}.</p>
+Cette exemple illustre l'utilisation des méthodes {{domxref("DataTransfer.getData()","getData()")}}, {{domxref("DataTransfer.setData()","setData()")}} et {{domxref("DataTransfer.clearData()","clearData()")}} de l'objet {{domxref("DataTransfer")}}.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;span class="tweaked" id="source" draggable="true"&gt;
+```html
+<span class="tweaked" id="source" draggable="true">
   Sélectionnez cet élément, glissez-le et déposez-le dans la Zone de Dépose pour le déplacer.
-&lt;/span&gt;
-&lt;span class="tweaked" id="target"&gt;Zone de Dépose&lt;/span&gt;
-&lt;div&gt;Status: &lt;span id="status"&gt;Glissez pour démarrer&lt;/span&gt;&lt;/div&gt;
-&lt;div&gt;Data is: &lt;span id="data"&gt;non initialisé&lt;/span&gt;&lt;/div&gt;
-</pre>
+</span>
+<span class="tweaked" id="target">Zone de Dépose</span>
+<div>Status: <span id="status">Glissez pour démarrer</span></div>
+<div>Data is: <span id="data">non initialisé</span></div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">span.tweaked {
+```css
+span.tweaked {
   display: inline-block;
   margin: 1em 0;
   padding: 1em 2em;
@@ -63,11 +60,12 @@ translation_of: Web/API/DataTransfer/clearData
 #target {
   border: 1px solid black;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">window.addEventListener('DOMContentLoaded', function () {
+```js
+window.addEventListener('DOMContentLoaded', function () {
   // Séléctionner les éléments HTML
   var draggable = document.getElementById('source')
   var dropable = document.getElementById('target')
@@ -148,36 +146,21 @@ translation_of: Web/API/DataTransfer/clearData
     event.dataTransfer.clearData()
   }
 })
-</pre>
+```
 
-<p>{{EmbedLiveSample('Exemple', 300, 250)}}</p>
+{{EmbedLiveSample('Exemple', 300, 250)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-datatransfer-cleardata','DataTransfer.clearData()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'editing.html#dom-datatransfer-cleardata','DataTransfer.clearData()')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                            | Statut                           | Commentaire         |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName('HTML WHATWG', 'interaction.html#dom-datatransfer-cleardata','DataTransfer.clearData()')}} | {{Spec2('HTML WHATWG')}} |                     |
+| {{SpecName('HTML5.1', 'editing.html#dom-datatransfer-cleardata','DataTransfer.clearData()')}}             | {{Spec2('HTML5.1')}}     | Définition initiale |
 
-<h2 id="Compatibilité">Compatibilité</h2>
+## Compatibilité
 
-<p>{{Compat("api.DataTransfer.clearData")}}</p>
+{{Compat("api.DataTransfer.clearData")}}
 
-<h2 id="À_voir_également">À voir également</h2>
+## À voir également
 
-<p>{{page("/fr/docs/Web/API/DataTransfer", "See also")}}</p>
+{{page("/fr/docs/Web/API/DataTransfer", "See also")}}

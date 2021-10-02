@@ -3,62 +3,66 @@ title: 'Fetch : concepts de départ'
 slug: Web/API/Fetch_API/Basic_concepts
 translation_of: Web/API/Fetch_API/Basic_concepts
 ---
-<p>{{DefaultAPISidebar("Fetch API")}}{{draft}}</p>
+{{DefaultAPISidebar("Fetch API")}}{{draft}}
 
-<p>L'API <a href="/en-US/docs/Web/API/Fetch_API">Fetch </a>fournit une interface pour récupérer des ressources (y compris depuis le réseau). Elle paraîtra familière à quiconque aura déjà utilisé {{domxref("XMLHttpRequest")}}, mais elle fournit un jeu de fonctionnalités plus puissantes et plus souples. Cet article explique quelques uns des principes de base de l'API Fetch.</p>
+L'API [Fetch ](/en-US/docs/Web/API/Fetch_API)fournit une interface pour récupérer des ressources (y compris depuis le réseau). Elle paraîtra familière à quiconque aura déjà utilisé {{domxref("XMLHttpRequest")}}, mais elle fournit un jeu de fonctionnalités plus puissantes et plus souples. Cet article explique quelques uns des principes de base de l'API Fetch.
 
-<div class="note">
-<p><strong>Note :</strong> This article will be added to over time. If you find a Fetch concept that you feel needs explaining better, let someone know on the <a href="https://discourse.mozilla-community.org/c/mdn">MDN discussion forum</a>, or <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a> (#mdn room.)</p>
-</div>
+> **Note :** This article will be added to over time. If you find a Fetch concept that you feel needs explaining better, let someone know on the [MDN discussion forum](https://discourse.mozilla-community.org/c/mdn), or [Mozilla IRC](https://wiki.mozilla.org/IRC) (#mdn room.)
 
-<h2 id="In_a_nutshell">In a nutshell</h2>
+## In a nutshell
 
-<p>At the heart of Fetch are the Interface abstractions of HTTP {{domxref("Request")}}s, {{domxref("Response")}}s, {{domxref("Headers")}}, and {{domxref("Body")}} payloads, along with a {{domxref("GlobalFetch.fetch","global fetch")}} method for initiating asynchronous resource requests. Because the main components of HTTP are abstracted as JavaScript objects, it is easy for other APIs to make use of such functionality.</p>
+At the heart of Fetch are the Interface abstractions of HTTP {{domxref("Request")}}s, {{domxref("Response")}}s, {{domxref("Headers")}}, and {{domxref("Body")}} payloads, along with a {{domxref("GlobalFetch.fetch","global fetch")}} method for initiating asynchronous resource requests. Because the main components of HTTP are abstracted as JavaScript objects, it is easy for other APIs to make use of such functionality.
 
-<p><a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers</a> is an example of an API that makes heavy use of Fetch.</p>
+[Service Workers](/en-US/docs/Web/API/ServiceWorker_API) is an example of an API that makes heavy use of Fetch.
 
-<p>Fetch takes the asynchronous nature of such requests one step further. The API is completely {{jsxref("Promise")}}-based.</p>
+Fetch takes the asynchronous nature of such requests one step further. The API is completely {{jsxref("Promise")}}-based.
 
-<h2 id="Guard">Guard</h2>
+## Guard
 
-<p>Guard is a feature of {{domxref("Headers")}} objects, with possible values of <code>immutable</code>, <code>request</code>, <code>request-no-cors</code>, <code>response</code>, or <code>none</code>, depending on where the header is used.</p>
+Guard is a feature of {{domxref("Headers")}} objects, with possible values of `immutable`, `request`, `request-no-cors`, `response`, or `none`, depending on where the header is used.
 
-<p>When a new {{domxref("Headers")}} object is created using the {{domxref("Headers.Headers","Headers()")}} {{glossary("constructor")}}, its guard is set to <code>none</code> (the default). When a {{domxref("Request")}} or {{domxref("Response")}} object is created, it has an associated {{domxref("Headers")}} object whose guard is set as summarized below:</p>
+When a new {{domxref("Headers")}} object is created using the {{domxref("Headers.Headers","Headers()")}} {{glossary("constructor")}}, its guard is set to `none` (the default). When a {{domxref("Request")}} or {{domxref("Response")}} object is created, it has an associated {{domxref("Headers")}} object whose guard is set as summarized below:
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="row">new object's type</th>
-   <th scope="col">creating constructor</th>
-   <th scope="col">guard setting of associated {{domxref("Headers")}} object</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td rowspan="2">{{domxref("Request")}}</td>
-   <td>{{domxref("Request.Request","Request()")}}</td>
-   <td><code>request</code></td>
-  </tr>
-  <tr>
-   <td>{{domxref("Request.Request","Request()")}} with {{domxref("Request.mode","mode")}} of <code>no-cors</code></td>
-   <td><code>request-no-cors</code></td>
-  </tr>
-  <tr>
-   <td rowspan="2">{{domxref("Response")}}</td>
-   <td>{{domxref("Response.Response","Response()")}}</td>
-   <td><code>response</code></td>
-  </tr>
-  <tr>
-   <td>{{domxref("Response.error","error()")}} or {{domxref("Response.redirect","redirect()")}} methods</td>
-   <td><code>immutable</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="row">new object's type</th>
+      <th scope="col">creating constructor</th>
+      <th scope="col">
+        guard setting of associated {{domxref("Headers")}} object
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2">{{domxref("Request")}}</td>
+      <td>{{domxref("Request.Request","Request()")}}</td>
+      <td><code>request</code></td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("Request.Request","Request()")}} with
+        {{domxref("Request.mode","mode")}} of <code>no-cors</code>
+      </td>
+      <td><code>request-no-cors</code></td>
+    </tr>
+    <tr>
+      <td rowspan="2">{{domxref("Response")}}</td>
+      <td>{{domxref("Response.Response","Response()")}}</td>
+      <td><code>response</code></td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("Response.error","error()")}} or
+        {{domxref("Response.redirect","redirect()")}} methods
+      </td>
+      <td><code>immutable</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>A header's guard affects the {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, and {{domxref("Headers.append","append()")}} methods which change the header's contents. A <code>TypeError</code> is thrown if you try to modify a {{domxref("Headers")}} object whose guard is <code>immutable</code>. However, the operation will work if</p>
+A header's guard affects the {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, and {{domxref("Headers.append","append()")}} methods which change the header's contents. A `TypeError` is thrown if you try to modify a {{domxref("Headers")}} object whose guard is `immutable`. However, the operation will work if
 
-<ul>
- <li>guard is <code>request</code> and the header <var>name</var> isn't a {{Glossary("forbidden header name")}} .</li>
- <li>guard is <code>request-no-cors</code> and the header <var>name</var>/<var>value</var> is a {{Glossary("simple header")}} .</li>
- <li>guard is <code>response</code> and the header <var>name</var> isn't a {{Glossary("forbidden response header name")}} .</li>
-</ul>
+- guard is `request` and the header _name_ isn't a {{Glossary("forbidden header name")}} .
+- guard is `request-no-cors` and the header _name_/_value_ is a {{Glossary("simple header")}} .
+- guard is `response` and the header _name_ isn't a {{Glossary("forbidden response header name")}} .

@@ -10,27 +10,30 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceNavigationTiming/domContentLoadedEventStart
 ---
-<div>{{APIRef("Navigation Timing")}}{{SeeCompatTable}}</div>
+{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-<p>La propriété en lecture seule <strong><code>domContentLoadedEventStart</code></strong> retourne un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne déclenche l'événement <a href="/fr/docs/Web/API/Document/DOMContentLoaded_event"><code>DOMContentLoaded</code></a> du document actuel.</p>
+La propriété en lecture seule **`domContentLoadedEventStart`** retourne un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne déclenche l'événement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event) du document actuel.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:js"><var>perfEntry</var>.domContentLoadedEventStart;</pre>
+```js
+perfEntry.domContentLoadedEventStart;
+```
 
-<h3 id="Return_Value">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne déclenche l'événement <a href="/fr/docs/Web/API/Document/DOMContentLoaded_event"><code>DOMContentLoaded</code></a> du document actuel.</p>
+Un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne déclenche l'événement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event) du document actuel.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>L'exemple suivant illustre l'utilisation de cette propriété.</p>
+L'exemple suivant illustre l'utilisation de cette propriété.
 
-<pre class="brush:js">function print_nav_timing_data() {
+```js
+function print_nav_timing_data() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements de type "navigation".
   let perfEntries = performance.getEntriesByType("navigation");
 
-  for (let i = 0; i &lt; perfEntries.length; i++) {
+  for (let i = 0; i < perfEntries.length; i++) {
     console.log("= Entrée de navigation : entry[" + i + "]");
     let p = perfEntries[i];
     // propriétés du DOM
@@ -47,29 +50,16 @@ translation_of: Web/API/PerformanceNavigationTiming/domContentLoadedEventStart
     console.log("redirectCount = " + p.redirectCount);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Navigation Timing Level 2',
+| Spécification                                                                                                                                                                                            | Statut                                               | Commentaire          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------- |
+| {{SpecName('Navigation Timing Level 2',
         '#dom-performancenavigationtiming-domcontentloadedeventstart',
-        'domContentLoadedEventStart')}}</td>
-      <td>{{Spec2('Navigation Timing Level 2')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+        'domContentLoadedEventStart')}} | {{Spec2('Navigation Timing Level 2')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceNavigationTiming.domContentLoadedEventStart")}}</p>
+{{Compat("api.PerformanceNavigationTiming.domContentLoadedEventStart")}}

@@ -9,94 +9,66 @@ tags:
   - requestAnimationFrame
 translation_of: Web/API/Document/scroll_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>L’évènement <strong><code>scroll</code></strong> (défilement) est émis lorsque l’on fait défiler le document ou un élément.</p>
+L’évènement **`scroll`** (défilement) est émis lorsque l’on fait défiler le document ou un élément.
 
-<h2 id="Informations_générales">Informations générales</h2>
+## Informations générales
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bouillonne</th>
-   <td>Pas sur les éléments, mais bouillonne vers la defaultView si émis sur le document</td>
-  </tr>
-  <tr>
-   <th>Annulable</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("UIEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Cible</th>
-   <td>DefaultView, {{domxref("Document")}}, {{domxref("Element")}}</td>
-  </tr>
-  <tr>
-   <th>Action par défaut</th>
-   <td>Aucune</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bouillonne</th>
+      <td>
+        Pas sur les éléments, mais bouillonne vers la defaultView si émis sur le
+        document
+      </td>
+    </tr>
+    <tr>
+      <th>Annulable</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("UIEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Cible</th>
+      <td>
+        DefaultView, {{domxref("Document")}},
+        {{domxref("Element")}}
+      </td>
+    </tr>
+    <tr>
+      <th>Action par défaut</th>
+      <td>Aucune</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>Note :</strong> Sur iOS UIWebViews, les évènements <code>scroll</code> ne sont pas émis pendant le défilement, mais une fois que celui-ci est terminé. Voir <a href="https://github.com/twbs/bootstrap/issues/16202">Bootstrap issue #16202</a>. Safari et WKWebViews ne sont pas affectés par ce bogue.</p>
-</div>
+> **Note :** Sur iOS UIWebViews, les évènements `scroll` ne sont pas émis pendant le défilement, mais une fois que celui-ci est terminé. Voir [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202). Safari et WKWebViews ne sont pas affectés par ce bogue.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Propriété</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>La cible de l’évènement (la plus haute dans l’arbre DOM).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Le type d’évènement.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{domxref("Boolean")}}</td>
-   <td>Si l’évènement bouillonne ou non.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{domxref("Boolean")}}</td>
-   <td>Si l’évènement est annulable ou non.</td>
-  </tr>
-  <tr>
-   <td><code>view</code> {{readonlyInline}}</td>
-   <td>{{domxref("WindowProxy")}}</td>
-   <td>{{domxref("Document.defaultView")}} (objet <code>window</code> du document)</td>
-  </tr>
-  <tr>
-   <td><code>detail</code> {{readonlyInline}}</td>
-   <td><code>long</code> (<code>float</code>)</td>
-   <td>0.</td>
-  </tr>
- </tbody>
-</table>
+| Propriété                             | Type                                 | Description                                                                   |
+| ------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------- |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | La cible de l’évènement (la plus haute dans l’arbre DOM).                     |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | Le type d’évènement.                                                          |
+| `bubbles` {{readonlyInline}}    | {{domxref("Boolean")}}         | Si l’évènement bouillonne ou non.                                             |
+| `cancelable` {{readonlyInline}} | {{domxref("Boolean")}}         | Si l’évènement est annulable ou non.                                          |
+| `view` {{readonlyInline}}       | {{domxref("WindowProxy")}} | {{domxref("Document.defaultView")}} (objet `window` du document) |
+| `detail` {{readonlyInline}}     | `long` (`float`)                     | 0.                                                                            |
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="Temporisation_des_évènements_scroll">Temporisation des évènements scroll</h3>
+### Temporisation des évènements scroll
 
-<p>Comme les évènements <code>scroll</code> peuvent être émis à une fréquence élevée, le gestionnaire d’évènements ne devrait pas effectuer des opérations coûteuses en termes de puissance de calcul, telles que des modification du DOM. À la place, il est recommandé de temporiser l’évènement en utilisant {{domxref("window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{domxref("window.setTimeout()", "setTimeout()")}} ou un {{domxref("CustomEvent")}}, comme suit.</p>
+Comme les évènements `scroll` peuvent être émis à une fréquence élevée, le gestionnaire d’évènements ne devrait pas effectuer des opérations coûteuses en termes de puissance de calcul, telles que des modification du DOM. À la place, il est recommandé de temporiser l’évènement en utilisant {{domxref("window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{domxref("window.setTimeout()", "setTimeout()")}} ou un {{domxref("CustomEvent")}}, comme suit.
 
-<p>Notez, cependant, que les évènements d’interface utilisateur et les frames d’animation sont émises à peu près à la même fréquence, et ainsi l’optimisation qui suit est souvent superflue. Cet exemple optimise l’évènement <code>scroll</code> avec <code>requestAnimationFrame</code>.</p>
+Notez, cependant, que les évènements d’interface utilisateur et les frames d’animation sont émises à peu près à la même fréquence, et ainsi l’optimisation qui suit est souvent superflue. Cet exemple optimise l’évènement `scroll` avec `requestAnimationFrame`.
 
-<pre class="brush: js">// Référence: http://www.html5rocks.com/en/tutorials/speed/animations/
+```js
+// Référence: http://www.html5rocks.com/en/tutorials/speed/animations/
 
 var derniere_position_de_scroll_connue = 0;
 var ticking = false;
@@ -116,33 +88,32 @@ window.addEventListener('scroll', function(e) {
   }
 
   ticking = true;
-});</pre>
+});
+```
 
-<h3 id="Autres_exemples">Autres exemples</h3>
+### Autres exemples
 
-<p>Pour plus d’exemples similaires, voir l’évènement <a href="/en-US/docs/Web/Events/resize#Example">resize</a>.</p>
+Pour plus d’exemples similaires, voir l’évènement [resize](/en-US/docs/Web/Events/resize#Example).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td>Spécification</td>
-   <td>État</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#scrolling-events')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>Spécification</td>
+      <td>État</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSSOM View', '#scrolling-events')}}</td>
+      <td>{{Spec2('CSSOM View')}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Document.scroll_event")}}</p>
+{{Compat("api.Document.scroll_event")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("GlobalEventHandlers.onscroll")}}</li>
-</ul>
+- {{domxref("GlobalEventHandlers.onscroll")}}

@@ -2,35 +2,37 @@
 title: performance.clearResourceTimings()
 slug: Web/API/Performance/clearResourceTimings
 tags:
-- API
-- Method
-- Méthode
-- Reference
-- Performance web
+  - API
+  - Method
+  - Méthode
+  - Reference
+  - Performance web
 translation_of: Web/API/Performance/clearResourceTimings
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>La méthode <strong><code>clearResourceTimings()</code></strong> supprime toutes les {{domxref("PerformanceEntry", "entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType","entryType")}} de « <code>resource</code> » du tampon d'entrée de performance et fixe la taille du tampon de données de performance à zéro. Pour définir la taille du tampon de données de performance du navigateur, utilisez la méthode {{domxref("Performance.setResourceTimingBufferSize()")}}.</p>
+La méthode **`clearResourceTimings()`** supprime toutes les {{domxref("PerformanceEntry", "entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType","entryType")}} de « `resource` » du tampon d'entrée de performance et fixe la taille du tampon de données de performance à zéro. Pour définir la taille du tampon de données de performance du navigateur, utilisez la méthode {{domxref("Performance.setResourceTimingBufferSize()")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js"><em>performance</em>.clearResourceTimings();
-</pre>
+```js
+performance.clearResourceTimings();
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Return_Value">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Aucune.</p>
+Aucune.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">function load_resource() {
+```js
+function load_resource() {
   var image = new Image();
   image.src = "https://developer.mozilla.org/static/img/opengraph-logo.png";
 }
@@ -57,28 +59,15 @@ function clear_performance_timings() {
   else
     console.log("... Le tampon de données de performance n'a PAS été effacé !");
 }
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Resource Timing', '#dom-performance-clearresourcetimings',
-        'clearResourceTimings()')}}</td>
-      <td>{{Spec2('Resource Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                | Statut                               | Commentaire          |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('Resource Timing', '#dom-performance-clearresourcetimings',
+        'clearResourceTimings()')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Performance.clearResourceTimings")}}</p>
+{{Compat("api.Performance.clearResourceTimings")}}

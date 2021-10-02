@@ -9,58 +9,41 @@ tags:
   - Window
 translation_of: Web/API/Window/frameElement
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<p>La propriété <code><strong>Window.frameElement</strong></code> renvoie l'élément (tel que {{HTMLElement("iframe")}} ou {{HTMLElement("object")}}) dans lequel la fenêtre est intégrée.</p>
+La propriété **`Window.frameElement`** renvoie l'élément (tel que {{HTMLElement("iframe")}} ou {{HTMLElement("object")}}) dans lequel la fenêtre est intégrée.
 
-<div class="note">
-<p><strong>Note:</strong> Malgré le nom de cette propriété, elle fonctionne pour les documents intégrés dans n'importe quel point d'incorporation, y compris {{HTMLElement("object")}}, {{HTMLElement("iframe")}}, ou {{HTMLElement("embed")}}.</p>
-</div>
+> **Note :** Malgré le nom de cette propriété, elle fonctionne pour les documents intégrés dans n'importe quel point d'incorporation, y compris {{HTMLElement("object")}}, {{HTMLElement("iframe")}}, ou {{HTMLElement("embed")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">const <em>frameEl</em> = window.frameElement
-</pre>
+    const frameEl = window.frameElement
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>L'élément dans lequel la fenêtre est intégrée. Si la fenêtre n'est pas intégrée dans un autre document, ou si le document dans lequel elle est intégrée a un {{glossary("origin")}}, la valeur est {{jsxref("null")}} à la place.</p>
+L'élément dans lequel la fenêtre est intégrée. Si la fenêtre n'est pas intégrée dans un autre document, ou si le document dans lequel elle est intégrée a un {{glossary("origin")}}, la valeur est {{jsxref("null")}} à la place.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">const frameEl = window.frameElement;
+```js
+const frameEl = window.frameElement;
 // Si nous sommes incorporés, modifiez l'URL de l'élément contenant en 'http://mozilla.org/'
 if (frameEl) {
   frameEl.src = 'http://mozilla.org/';
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'browsers.html#dom-frameelement', 'Window.frameElement')}}</td>
-   <td>{{ Spec2('WebRTC 1.0') }}</td>
-   <td>Spécification initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | Statut                           | Commentaire             |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
+| {{SpecName('HTML WHATWG', 'browsers.html#dom-frameelement', 'Window.frameElement')}} | {{ Spec2('WebRTC 1.0') }} | Spécification initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.frameElement")}}</p>
+{{Compat("api.Window.frameElement")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>{{domxref("window.frames")}} renvoie un objet de type tableau, listant les sous-cadres directs de la fenêtre courante.</li>
- <li>{{domxref("window.parent")}} renvoie la fenêtre parente, qui est la fenêtre contenant le <code>frameElement</code> de la fenêtre enfant.</li>
-</ul>
+- {{domxref("window.frames")}} renvoie un objet de type tableau, listant les sous-cadres directs de la fenêtre courante.
+- {{domxref("window.parent")}} renvoie la fenêtre parente, qui est la fenêtre contenant le `frameElement` de la fenêtre enfant.

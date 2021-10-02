@@ -8,63 +8,55 @@ tags:
   - WebGL
 translation_of: Web/API/WebGL_API/By_example
 ---
-<div>{{IncludeSubnav("/fr/docs/Apprendre")}}</div>
+{{IncludeSubnav("/fr/docs/Apprendre")}}
 
-<p>{{Next("Apprendre/WebGL/Par_exemple/Détecter_WebGL")}}</p>
+{{Next("Apprendre/WebGL/Par_exemple/Détecter_WebGL")}}
 
-<p><em>WebGL par l'exemple</em> est une série d'articles illustrant les concepts et les possibilités offertes par WebGL. Chaque exemple est accompagné d'explications. Ces démonstrations sont triés par sujet et par niveau de difficulté. Les concepts abordés sont, entre autres, le contexte de rendu, la programmation avec les <em>shaders</em>, les textures, la géométrie et l'interaction avec les utilisateurs.</p>
+_WebGL par l'exemple_ est une série d'articles illustrant les concepts et les possibilités offertes par WebGL. Chaque exemple est accompagné d'explications. Ces démonstrations sont triés par sujet et par niveau de difficulté. Les concepts abordés sont, entre autres, le contexte de rendu, la programmation avec les _shaders_, les textures, la géométrie et l'interaction avec les utilisateurs.
 
-<h2 id="Les_exemples_par_catégorie">Les exemples, par catégorie</h2>
+## Les exemples, par catégorie
 
-<p>Les exemples de cette section sont triés par ordre de difficulté croissante. Plutôt que de les présenter sous la forme d'une longue liste, ils sont également répartis selon différentes catégories. Un sujet peut être abordé dans plusieurs exemples afin de couvrir des notions simples, intermédiaires ou avancées.</p>
+Les exemples de cette section sont triés par ordre de difficulté croissante. Plutôt que de les présenter sous la forme d'une longue liste, ils sont également répartis selon différentes catégories. Un sujet peut être abordé dans plusieurs exemples afin de couvrir des notions simples, intermédiaires ou avancées.
 
-<p>Plutôt que de manipuler des <em>shaders</em>, optimiser des géométrie et gérer la mémoire {{Glossary("GPU")}} dans le premier exemple, la progression se fera étape par étape afin que les exemples et les concepts puissent mieux être compris.</p>
+Plutôt que de manipuler des _shaders_, optimiser des géométrie et gérer la mémoire {{Glossary("GPU")}} dans le premier exemple, la progression se fera étape par étape afin que les exemples et les concepts puissent mieux être compris.
 
-<p>Les exemples sont expliqués, avec des commentaires dans le code et des paragraphes dédiés. Nous vous invitons à lire l'ensemble des commentaires au fur et à mesure, notamment pour les exemples plus avancés où ce qui a été vu auparavant ne sera pas expliqué à nouveau.</p>
+Les exemples sont expliqués, avec des commentaires dans le code et des paragraphes dédiés. Nous vous invitons à lire l'ensemble des commentaires au fur et à mesure, notamment pour les exemples plus avancés où ce qui a été vu auparavant ne sera pas expliqué à nouveau.
 
-<h3 id="Apprendre_à_connaître_le_contexte_de_rendu">Apprendre à connaître le contexte de rendu</h3>
+### Apprendre à connaître le contexte de rendu
 
-<dl>
- <dt><a href="/fr/docs/Apprendre/WebGL/Par_exemple/Détecter_WebGL">Détecter WebGL</a></dt>
- <dd>Dans cet exemple, on montre comment détecter un contexte de rendu {{Glossary("WebGL")}} et l'afficher pour l'utilisateur.</dd>
- <dt><a href="/fr/docs/Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs">Appliquer des couleurs</a></dt>
- <dd>Dans cet exemple, on illustre comment appliquer une couleur unie dans un contexte de rendu.</dd>
- <dt><a href="/fr/docs/Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris">Appliquer une couleur à la souris</a></dt>
- <dd>Ici, on montre comment combiner des interactions utilisateurs avec des opérations graphiques (là, on appliquera une couleur aléatoire dans le contexte à chaque clic de l'utilisateur).</dd>
- <dt><a href="/fr/docs/Apprendre/WebGL/Par_exemple/Créer_une_animation_colorée">Créer une animation colorée</a></dt>
- <dd>Dans cet exemple, on crée une animation simple avec des couleurs en appliquant chaque seconde une couleur aléatoire dans le contexte de rendu WebGL.</dd>
- <dt><a href="/fr/docs/Apprendre/WebGL/Par_exemple/Masque_de_couleur">Avoir un masque de couleur</a></dt>
- <dd>Modifier des couleurs aléatoires avec des masques de couleur pour limiter l'intervalle de couleurs qu'on souhaite utiliser.</dd>
- <dt><a href="/fr/docs/Apprendre/WebGL/Par_exemple/Appliquer_des_découpes_simples">Appliquer des découpes simples</a></dt>
- <dd>Dans cet exemple, on dessine des rectangles et des carrés simples grâce à des opérations de découpage (<em>scissoring</em>).</dd>
- <dt><a href="/fr/docs/Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL">La taille du canevas et WebGL</a></dt>
- <dd>Dans cet exemple, on observe ce qui se produit quand on définit (ou pas) la taille de l'élément <code>canvas</code> associé.</dd>
- <dt><a href="/fr/docs/Apprendre/WebGL/Par_exemple/Modèle_1">Modèle 1</a></dt>
- <dd>Dans cet exemple, on évoque les fragments de code qui seront utilisés pour les exemples qui suivent (et dans lesquels ils seront cachés car identiques). On définiera également une fonction JavaScript utilitaire pour initialiser WebGL plus facilement.</dd>
- <dt><a href="/fr/docs/Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique">Créer une animation avec du découpage et de l'applique</a></dt>
- <dd>Avec cet article, on illustre comment créer des animations grâce aux opérations de découpe et d'applique.</dd>
- <dt><a href="/fr/docs/Apprendre/WebGL/Par_exemple/Une_pluie_de_rectangle">Une pluie de rectangle</a></dt>
- <dd>On voit ici un jeu, simple, qui mélange les découpes, les animations et les interactions utilisateurs.</dd>
-</dl>
+- [Détecter WebGL](/fr/docs/Apprendre/WebGL/Par_exemple/Détecter_WebGL)
+  - : Dans cet exemple, on montre comment détecter un contexte de rendu {{Glossary("WebGL")}} et l'afficher pour l'utilisateur.
+- [Appliquer des couleurs](/fr/docs/Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs)
+  - : Dans cet exemple, on illustre comment appliquer une couleur unie dans un contexte de rendu.
+- [Appliquer une couleur à la souris](/fr/docs/Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris)
+  - : Ici, on montre comment combiner des interactions utilisateurs avec des opérations graphiques (là, on appliquera une couleur aléatoire dans le contexte à chaque clic de l'utilisateur).
+- [Créer une animation colorée](/fr/docs/Apprendre/WebGL/Par_exemple/Créer_une_animation_colorée)
+  - : Dans cet exemple, on crée une animation simple avec des couleurs en appliquant chaque seconde une couleur aléatoire dans le contexte de rendu WebGL.
+- [Avoir un masque de couleur](/fr/docs/Apprendre/WebGL/Par_exemple/Masque_de_couleur)
+  - : Modifier des couleurs aléatoires avec des masques de couleur pour limiter l'intervalle de couleurs qu'on souhaite utiliser.
+- [Appliquer des découpes simples](/fr/docs/Apprendre/WebGL/Par_exemple/Appliquer_des_découpes_simples)
+  - : Dans cet exemple, on dessine des rectangles et des carrés simples grâce à des opérations de découpage (_scissoring_).
+- [La taille du canevas et WebGL](/fr/docs/Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL)
+  - : Dans cet exemple, on observe ce qui se produit quand on définit (ou pas) la taille de l'élément `canvas` associé.
+- [Modèle 1](/fr/docs/Apprendre/WebGL/Par_exemple/Modèle_1)
+  - : Dans cet exemple, on évoque les fragments de code qui seront utilisés pour les exemples qui suivent (et dans lesquels ils seront cachés car identiques). On définiera également une fonction JavaScript utilitaire pour initialiser WebGL plus facilement.
+- [Créer une animation avec du découpage et de l'applique](/fr/docs/Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique)
+  - : Avec cet article, on illustre comment créer des animations grâce aux opérations de découpe et d'applique.
+- [Une pluie de rectangle](/fr/docs/Apprendre/WebGL/Par_exemple/Une_pluie_de_rectangle)
+  - : On voit ici un jeu, simple, qui mélange les découpes, les animations et les interactions utilisateurs.
 
-<div>
-<h3 id="Les_bases_de_la_programmation_avec_les_shaders">Les bases de la programmation avec les <em>shaders</em></h3>
+### Les bases de la programmation avec les _shaders_
 
-<dl>
- <dt><a href="/fr/docs/Apprendre/WebGL/Par_exemple/Hello_GLSL">Hello GLSL</a></dt>
- <dd>Un programme de manipulation des shaders simple qui dessine un carré.</dd>
- <dt><a href="/fr/docs/Apprendre/WebGL/Par_exemple/Introduction_aux_attributs_vertex">Introduction aux attributs de vertex</a></dt>
- <dd>Ici, on combine la programmation des shaders et les interactions utilisateurs grâce aux attributs de vertex.</dd>
- <dt><a href="/fr/docs/Apprendre/WebGL/Par_exemple/Générer_des_textures_avec_du_code">Générer des textures avec du code</a></dt>
- <dd>Une démonstration simple sur l'utilisation des <em>shaders</em> et des textures procédurales.</dd>
-</dl>
+- [Hello GLSL](/fr/docs/Apprendre/WebGL/Par_exemple/Hello_GLSL)
+  - : Un programme de manipulation des shaders simple qui dessine un carré.
+- [Introduction aux attributs de vertex](/fr/docs/Apprendre/WebGL/Par_exemple/Introduction_aux_attributs_vertex)
+  - : Ici, on combine la programmation des shaders et les interactions utilisateurs grâce aux attributs de vertex.
+- [Générer des textures avec du code](/fr/docs/Apprendre/WebGL/Par_exemple/Générer_des_textures_avec_du_code)
+  - : Une démonstration simple sur l'utilisation des _shaders_ et des textures procédurales.
 
-<h3 id="Divers_exemples_avancés">Divers exemples avancés</h3>
+### Divers exemples avancés
 
-<dl>
- <dt><a href="/fr/docs/Apprendre/WebGL/Par_exemple/Les_textures_vidéos">Les textures vidéos</a></dt>
- <dd>Dans cet exemple, on voit comment utiliser des fichiers vidéos comme des textures.</dd>
-</dl>
+- [Les textures vidéos](/fr/docs/Apprendre/WebGL/Par_exemple/Les_textures_vidéos)
+  - : Dans cet exemple, on voit comment utiliser des fichiers vidéos comme des textures.
 
-<p>{{Next("Apprendre/WebGL/Par_exemple/Détecter_WebGL")}}</p>
-</div>
+{{Next("Apprendre/WebGL/Par_exemple/Détecter_WebGL")}}

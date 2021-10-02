@@ -3,21 +3,24 @@ title: SharedWorkerGlobalScope.onconnect
 slug: Web/API/SharedWorkerGlobalScope/onconnect
 translation_of: Web/API/SharedWorkerGlobalScope/onconnect
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>La proriété <strong><code>onconnect</code></strong> de l'interface {{domxref("SharedWorkerGlobalScope")}} est un gestionnaire d'évènement pour l'évènement {{event("connect")}}, c'est à dire quand une connexion {{domxref("MessagePort")}} est ouverte entre le {{domxref("SharedWorker")}} et le <em>thread</em> principale.</p>
+La proriété **`onconnect`** de l'interface {{domxref("SharedWorkerGlobalScope")}} est un gestionnaire d'évènement pour l'évènement {{event("connect")}}, c'est à dire quand une connexion {{domxref("MessagePort")}} est ouverte entre le {{domxref("SharedWorker")}} et le _thread_ principale.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">onconnect = function() { ... };</pre>
+```js
+onconnect = function() { ... };
+```
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Cet exemple montre le gestionnaire d'évènement <code>onconnect</code> quand une connection depuis le thread principal vers un fichier de <em>worker</em> partagé via un {{domxref("MessagePort")}}. L'objet évènement est un {{domxref("MessageEvent")}}.</p>
+Cet exemple montre le gestionnaire d'évènement `onconnect` quand une connection depuis le thread principal vers un fichier de _worker_ partagé via un {{domxref("MessagePort")}}. L'objet évènement est un {{domxref("MessageEvent")}}.
 
-<p>Le port de connexion peut-être récupéré avec la propriété <code>ports</code> de l'objet évènement. Le port a un gestionnaire d'évènement <code>onmessage</code> pour gérer les évènement venant de cet port et la méthode <code>postMessage()</code> peut-être utilisée pour répondre au <em>thread</em> principale qui utilise le <em>worker</em>.</p>
+Le port de connexion peut-être récupéré avec la propriété `ports` de l'objet évènement. Le port a un gestionnaire d'évènement `onmessage` pour gérer les évènement venant de cet port et la méthode `postMessage()` peut-être utilisée pour répondre au _thread_ principale qui utilise le _worker_.
 
-<pre class="brush: js">onconnect = function(e) {
+```js
+onconnect = function(e) {
     var port = e.ports[0];
 
     port.onmessage = function(e) {
@@ -26,39 +29,23 @@ translation_of: Web/API/SharedWorkerGlobalScope/onconnect
     }
 
     port.start();
-}</pre>
+}
+```
 
-<p>Pour l'exemple complet en fonctionnement, voir <a href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a href="http://mdn.github.io/simple-shared-worker/">run shared worker</a>.)</p>
+Pour l'exemple complet en fonctionnement, voir [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](http://mdn.github.io/simple-shared-worker/).)
 
-<div class="note">
-<p><strong>Note :</strong> La propriété <code>data</code> de l'objet évènement est <code>null</code> dans Firefox. À partir de la version 65, elle est initialisée comme une chaîne vide, selon les spécifications ({{bug(1508824)}}).</p>
-</div>
+> **Note :** La propriété `data` de l'objet évènement est `null` dans Firefox. À partir de la version 65, elle est initialisée comme une chaîne vide, selon les spécifications ({{bug(1508824)}}).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#handler-sharedworkerglobalscope-onconnect', 'onconnect')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | Status                           | Commentaire |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', '#handler-sharedworkerglobalscope-onconnect', 'onconnect')}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Browser_Compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.SharedWorkerGlobalScope.onconnect")}}
 
+## Voir aussi
 
-<p>{{Compat("api.SharedWorkerGlobalScope.onconnect")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{domxref("SharedWorkerGlobalScope")}}</li>
-</ul>
+- {{domxref("SharedWorkerGlobalScope")}}

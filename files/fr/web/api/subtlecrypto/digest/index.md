@@ -3,73 +3,63 @@ title: SubtleCrypto.digest()
 slug: Web/API/SubtleCrypto/digest
 translation_of: Web/API/SubtleCrypto/digest
 ---
-<div>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</div>
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-<p>La méthode <code><strong>digest()</strong></code> de l'interface {{domxref("SubtleCrypto")}} génère un {{Glossary("digest")}} de la donnée fournie. Un condensé est une petite valeur de taille fixe issue d'une donnée de taille variable. Les condensés cryptographiques doivent résister à la collision, ce qui signifie qu'il doit être très difficile d'obtenir le même condensé à partir de deux entrés différentes.</p>
+La méthode **`digest()`** de l'interface {{domxref("SubtleCrypto")}} génère un {{Glossary("digest")}} de la donnée fournie. Un condensé est une petite valeur de taille fixe issue d'une donnée de taille variable. Les condensés cryptographiques doivent résister à la collision, ce qui signifie qu'il doit être très difficile d'obtenir le même condensé à partir de deux entrés différentes.
 
-<p>Il prend en argument un identifiant pour l'algorithme de condensé et les données à traiter. Il retourne une {{jsxref("Promise")}} qui contiendra le condensé.</p>
+Il prend en argument un identifiant pour l'algorithme de condensé et les données à traiter. Il retourne une {{jsxref("Promise")}} qui contiendra le condensé.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">const digest = <em>crypto</em><code>.subtle.digest(<em>algorithm</em>, <em>data</em>)</code>;
-</pre>
+    const digest = crypto.subtle.digest(algorithm, data);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<ul>
- <li><em><code>algorithm</code></em> est une {{domxref("DOMString")}} indiquant la fonction de condensé à utiliser. Les valeurs possibles sont:
+- _`algorithm`_ est une {{domxref("DOMString")}} indiquant la fonction de condensé à utiliser. Les valeurs possibles sont:
 
-  <ul>
-   <li><code>SHA-1</code> (ne pas utiliser pour des applications cryptographiques)</li>
-   <li><code>SHA-256</code></li>
-   <li><code>SHA-384</code></li>
-   <li><code>SHA-512</code>.</li>
-  </ul>
- </li>
- <li><em><code>data</code></em> est un {{jsxref("ArrayBuffer")}} ou un {{domxref("ArrayBufferView")}} contenant les données à traiter.</li>
-</ul>
+  - `SHA-1` (ne pas utiliser pour des applications cryptographiques)
+  - `SHA-256`
+  - `SHA-384`
+  - `SHA-512`.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+- _`data`_ est un {{jsxref("ArrayBuffer")}} ou un {{domxref("ArrayBufferView")}} contenant les données à traiter.
 
-<ul>
- <li><code><em>digest</em></code> est une {{jsxref("Promise")}} pour accéder {{jsxref("ArrayBuffer")}} au condensé.</li>
-</ul>
+### Valeur retournée
 
-<h2 id="Algorithmes_supportés">Algorithmes supportés</h2>
+- `digest` est une {{jsxref("Promise")}} pour accéder {{jsxref("ArrayBuffer")}} au condensé.
 
-<p>Les algorithmes de condensé, aussi connue sous le nom de <a href="/fr/docs/Glossaire/Fonction_de_hachage_cryptographique">fonctions de hachage cryptographique</a>, transforme un bloque de données de longueur arbitraire dans un résultat de taille fixe, souvent plus petit que l'entré. Ils ont de nombreuses utilisations en cryptographie.</p>
+## Algorithmes supportés
 
-<h3 id="SHA-1">SHA-1</h3>
+Les algorithmes de condensé, aussi connue sous le nom de [fonctions de hachage cryptographique](/fr/docs/Glossaire/Fonction_de_hachage_cryptographique), transforme un bloque de données de longueur arbitraire dans un résultat de taille fixe, souvent plus petit que l'entré. Ils ont de nombreuses utilisations en cryptographie.
 
-<p>Cet algorithme est spécifié dans <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.1, et produit un résultat de 160 bits de long.</p>
+### SHA-1
 
-<div class="warning">
-<p><strong>Attention :</strong> Cet algorithme est maintenant considérer comme vulnérable et ne doit pas être utilisé pour des applications cryptographiques.</p>
-</div>
+Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.1, et produit un résultat de 160 bits de long.
 
-<h3 id="SHA-256">SHA-256</h3>
+> **Attention :** Cet algorithme est maintenant considérer comme vulnérable et ne doit pas être utilisé pour des applications cryptographiques.
 
-<p>Cet algorithme est spécifié dans <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.2, et produit un résultat de 256 bits de long.</p>
+### SHA-256
 
-<h3 id="SHA-384">SHA-384</h3>
+Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.2, et produit un résultat de 256 bits de long.
 
-<p>Cet algorithme est spécifié dans <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.5, et produit un résultat de 384 bits de long.</p>
+### SHA-384
 
-<h3 id="SHA-512">SHA-512</h3>
+Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.5, et produit un résultat de 384 bits de long.
 
-<p>Cet algorithme est spécifié dans <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.4, et produit un résultat de 512 bits de long.</p>
+### SHA-512
 
-<div class="note">
-<p><strong>Note :</strong> Si vous cherchez à créer un condensé pour authentifié un message (<a href="/fr/docs/Glossary/HMAC">HMAC</a>), vous aurez plutôt besoin de <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">SubtleCrypto.sign()</a>.</p>
-</div>
+Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.4, et produit un résultat de 512 bits de long.
 
-<h2 id="Exemples">Exemples</h2>
+> **Note :** Si vous cherchez à créer un condensé pour authentifié un message ([HMAC](/fr/docs/Glossary/HMAC)), vous aurez plutôt besoin de [SubtleCrypto.sign()](/en-US/docs/Web/API/SubtleCrypto/sign#HMAC).
 
-<h3 id="Exemple_basique">Exemple basique</h3>
+## Exemples
 
-<p>Cet exemple encode un message, puis calcule le condensé avec SHA-256, enfin affiche la longueur du résultat.</p>
+### Exemple basique
 
-<pre class="brush: js">const text = 'Un obscur message venant du le système S-K, votre majesté. Ses habitants le nomment la planète Terre.';
+Cet exemple encode un message, puis calcule le condensé avec SHA-256, enfin affiche la longueur du résultat.
+
+```js
+const text = 'Un obscur message venant du le système S-K, votre majesté. Ses habitants le nomment la planète Terre.';
 
 async function digestMessage(message) {
   const encoder = new TextEncoder();
@@ -80,54 +70,40 @@ async function digestMessage(message) {
 
 const digestBuffer = await digestMessage(text);
 console.log(digestBuffer.byteLength);
-</pre>
+```
 
-<h3 id="Convertir_un_condensé_vers_une_chaîne_hexadécimale">Convertir un condensé vers une chaîne hexadécimale</h3>
+### Convertir un condensé vers une chaîne hexadécimale
 
-<p>Le condensé est retourné sous forme d'un <code>ArrayBuffer</code>, mais la comparaison et l'affichage se fait souvent avec des chaînes hexadécimales. Cet exemple calcule un condensé puis converti l'<code>ArrayBuffer</code> vers une chaîne hexadécimale.</p>
+Le condensé est retourné sous forme d'un `ArrayBuffer`, mais la comparaison et l'affichage se fait souvent avec des chaînes hexadécimales. Cet exemple calcule un condensé puis converti l'`ArrayBuffer` vers une chaîne hexadécimale.
 
-<pre class="brush: js">const text = 'Un obscur message venant du le système S-K, votre majesté. Ses habitants le nomment la planète Terre.';
+```js
+const text = 'Un obscur message venant du le système S-K, votre majesté. Ses habitants le nomment la planète Terre.';
 
 async function digestMessage(message) {
   const msgUint8 = new TextEncoder().encode(message);                           // encode comme (utf-8) Uint8Array
   const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // fait le condensé
   const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convertit le buffer en tableau d'octet
-  const hashHex = hashArray.map(b =&gt; b.toString(16).padStart(2, '0')).join(''); // convertit le tableau en chaîne hexadélimale
+  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convertit le tableau en chaîne hexadélimale
   return hashHex;
 }
 
 const digestHex = await digestMessage(text);
 console.log(digestHex);
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécifications</th>
-   <th scope="col">Statue</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-digest', 'SubtleCrypto.digest()')}}</td>
-   <td>{{Spec2('Web Crypto API')}}</td>
-   <td>Définition intiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécifications                                                                                                           | Statue                               | Commentaire        |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
+| {{SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-digest', 'SubtleCrypto.digest()')}} | {{Spec2('Web Crypto API')}} | Définition intiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.SubtleCrypto.digest")}}</p>
+{{Compat("api.SubtleCrypto.digest")}}
 
-<div class="note">
-<p><strong>Note :</strong> Dans Chrome 60, une fonctionnalité a été ajoutée qui désactive <strong>crypto.subtle</strong> pour les connexions non TLS.</p>
-</div>
+> **Note :** Dans Chrome 60, une fonctionnalité a été ajoutée qui désactive **crypto.subtle** pour les connexions non TLS.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features">(en) Chromium secure origins specification</a></li>
- <li><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf" rel="noopener">(en) FIPS 180-4</a> spécifie les algorithmes de condensé de la famille SHA.</li>
-</ul>
+- [(en) Chromium secure origins specification](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features)
+- [(en) FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf) spécifie les algorithmes de condensé de la famille SHA.

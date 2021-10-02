@@ -9,46 +9,34 @@ tags:
   - Window
 translation_of: Web/API/GlobalEventHandlers/onabort
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>Un gestionnaire d'évènement pour interrompre les événements envoyés à la fenêtre. (non disponible sur Firefox 2 ou Safari).</p>
+Un gestionnaire d'évènement pour interrompre les événements envoyés à la fenêtre. (non disponible sur Firefox 2 ou Safari).
 
-<p>Bien que le <a href="https://html.spec.whatwg.org/multipage/browsing-the-web.html#abort-a-document">standard pour l'abandon d'un chargement de document</a> soit défini, le problème HTML N° 3525 suggère que les navigateurs ne déclenchent pas pour l'instant l'événement "abort" sur une <code>window</code> qui déclencherait un appel à <code>onabort</code>.</p>
+Bien que le [standard pour l'abandon d'un chargement de document](https://html.spec.whatwg.org/multipage/browsing-the-web.html#abort-a-document) soit défini, le problème HTML N° 3525 suggère que les navigateurs ne déclenchent pas pour l'instant l'événement "abort" sur une `window` qui déclencherait un appel à `onabort`.
 
-<p>À FAIRE : définir ce qu'est "interrompre" : fermer la fenêtre via le gestionnaire de fenêtre ? Arrêter le chargement de la page ? Par quels moyens et pour quelles raisons (utilisateur, réseau/serveur) ? À quelle étape cela devrait-il se déclencher / être capturé ? Pour IE, onabort est seulement disponible pour les balises <code>img</code>.</p>
+À FAIRE : définir ce qu'est "interrompre" : fermer la fenêtre via le gestionnaire de fenêtre ? Arrêter le chargement de la page ? Par quels moyens et pour quelles raisons (utilisateur, réseau/serveur) ? À quelle étape cela devrait-il se déclencher / être capturé ? Pour IE, onabort est seulement disponible pour les balises `img`.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">window.onabort =<em> refFonc</em>
-</pre>
+    window.onabort = refFonc
 
-<ul>
- <li><code>refFonc</code> : référence à une fonction</li>
-</ul>
+- `refFonc` : référence à une fonction
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">window.onabort = function() {
+```js
+window.onabort = function() {
   alert("Chargement interrompu.");
-}</pre>
+}
+```
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onabort','onabort')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                           | Commentaire |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onabort','onabort')}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.GlobalEventHandlers.onabort")}}</p>
+{{Compat("api.GlobalEventHandlers.onabort")}}

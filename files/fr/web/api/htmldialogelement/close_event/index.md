@@ -11,61 +11,67 @@ tags:
   - fermeture
 translation_of: Web/API/HTMLDialogElement/close_event
 ---
-<p>{{ APIRef() }}</p>
+{{ APIRef() }}
 
-<p>L'événement <strong><code>close</code></strong> est déclenché sur un objet {{domxref ("HTMLDialogElement")}} lorsque la boîte de dialogue qu'il représente a été fermée.</p>
+L'événement **`close`** est déclenché sur un objet {{domxref ("HTMLDialogElement")}} lorsque la boîte de dialogue qu'il représente a été fermée.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bouillonnant</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Annulable</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Propriété du gestionnaire d'événements</th>
-   <td>{{domxref ("GlobalEventHandlers/onclose", "onclose")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bouillonnant</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Annulable</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Propriété du gestionnaire d'événements</th>
+      <td>
+        {{domxref ("GlobalEventHandlers/onclose", "onclose")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemple_concret">Exemple concret</h3>
+### Exemple concret
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;dialog class="example-dialog"&gt;
-  &lt;button class="close" type="reset"&gt;Close&lt;/button&gt;
-&lt;/dialog&gt;
+```html
+<dialog class="example-dialog">
+  <button class="close" type="reset">Close</button>
+</dialog>
 
-&lt;button class="open-dialog"&gt;Open dialog&lt;/button&gt;
+<button class="open-dialog">Open dialog</button>
 
-&lt;div class="result"&gt;&lt;/div&gt;</pre>
+<div class="result"></div>
+```
 
-<pre class="brush: css hidden">button, div {
+```css hidden
+button, div {
   margin: .5rem;
 }
-</pre>
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const result = document.querySelector('.result')
+```js
+const result = document.querySelector('.result')
 
 const dialog = document.querySelector('.example-dialog')
-dialog.addEventListener('close', (event) =&gt; {
+dialog.addEventListener('close', (event) => {
   result.textContent = 'dialog was closed'
 })
 
 const openDialog = document.querySelector('.open-dialog')
-openDialog.addEventListener('click', () =&gt; {
+openDialog.addEventListener('click', () => {
   if (typeof dialog.showModal === 'function') {
     dialog.showModal()
     result.textContent = ''
@@ -75,36 +81,25 @@ openDialog.addEventListener('click', () =&gt; {
 })
 
 const closeButton = document.querySelector('.close')
-closeButton.addEventListener('click', () =&gt; {
+closeButton.addEventListener('click', () => {
   dialog.close()
 })
-</pre>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{ EmbedLiveSample('Exemple_concret', '100%', '100px') }}</p>
+{{ EmbedLiveSample('Exemple_concret', '100%', '100px') }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', 'indices.html#event-close', 'close') }}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                             |
+| ---------------------------------------------------------------------------------------- | -------------------------------- |
+| {{ SpecName('HTML WHATWG', 'indices.html#event-close', 'close') }} | {{Spec2('HTML WHATWG')}} |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.HTMLDialogElement.close_event")}}</p>
+{{Compat("api.HTMLDialogElement.close_event")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>Élément HTML <code><a href="/en-US/docs/Web/HTML/Element/dialog">&lt;dialog&gt;</a></code></li>
-</ul>
+- Élément HTML [`<dialog>`](/en-US/docs/Web/HTML/Element/dialog)

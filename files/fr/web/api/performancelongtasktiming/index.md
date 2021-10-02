@@ -9,38 +9,23 @@ tags:
   - Reference
 translation_of: Web/API/PerformanceLongTaskTiming
 ---
-<p>{{SeeCompatTable}}{{APIRef("Long Tasks")}}</p>
+{{SeeCompatTable}}{{APIRef("Long Tasks")}}
 
-<p>L'interface <strong><code>PerformanceLongTaskTiming</code></strong> de <a href="/fr/docs/Web/API/Long_Tasks_API">l'API <i>Long Tasks</i></a> signale les instances de tâches longues.</p>
+L'interface **`PerformanceLongTaskTiming`** de [l'API _Long Tasks_](/fr/docs/Web/API/Long_Tasks_API) signale les instances de tâches longues.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Propriétés</h2>
+## Propriétés
 
-<dl>
-  <dt><a href="/fr/docs/Web/API/PerformanceLongTaskTiming"><code>PerformanceLongTaskTiming</code></a> <em>lecture seule</em> {{ExperimentalBadge}}</dt>
-  <dd>Retourne une séquence d'instances <a href="/fr/docs/Web/API/TaskAttributionTiming"><code>TaskAttributionTiming</code></a>.</dd>
-</dl>
+- [`PerformanceLongTaskTiming`](/fr/docs/Web/API/PerformanceLongTaskTiming) _lecture seule_ {{ExperimentalBadge}}
+  - : Retourne une séquence d'instances [`TaskAttributionTiming`](/fr/docs/Web/API/TaskAttributionTiming).
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Long Tasks','#sec-PerformanceLongTaskTiming','PerformanceLongTaskTiming')}}</td>
-      <td>{{Spec2('Long Tasks')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                        | Statut                           | Commentaire          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('Long Tasks','#sec-PerformanceLongTaskTiming','PerformanceLongTaskTiming')}} | {{Spec2('Long Tasks')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceLongTaskTiming")}}</p>
+{{Compat("api.PerformanceLongTaskTiming")}}

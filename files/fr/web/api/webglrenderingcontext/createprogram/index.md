@@ -9,28 +9,28 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/createProgram
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>La méthode <code><strong>WebGLRenderingContext.createProgram()</strong></code> de l'<a href="/fr-FR/docs/Web/API/WebGL_API">API WebGL</a> crée et initialise un objet {{domxref("WebGLProgram")}}.</p>
+La méthode **`WebGLRenderingContext.createProgram()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) crée et initialise un objet {{domxref("WebGLProgram")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">WebGLProgram <var>gl</var>.createProgram();
-</pre>
+    WebGLProgram gl.createProgram();
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Un objet {{domxref("WebGLProgram")}} qui est une combinaison de deux {{domxref("WebGLShader")}}s compilés, constitués d'un shader de sommet et d'un shader de fragment (tous deux écrits en GLSL). Ceux-ci sont ensuite liés en un programme utilisable.</p>
+Un objet {{domxref("WebGLProgram")}} qui est une combinaison de deux {{domxref("WebGLShader")}}s compilés, constitués d'un shader de sommet et d'un shader de fragment (tous deux écrits en GLSL). Ceux-ci sont ensuite liés en un programme utilisable.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Création_d'un_programme_WebGL">Création d'un programme WebGL</h3>
+### Création d'un programme WebGL
 
-<pre class="brush: js">var programme = gl.createProgram();
+```js
+var programme = gl.createProgram();
 
 // Attacher les shaders pré-existants
 gl.attachShader(programme, shaderDeSommet);
@@ -42,44 +42,27 @@ if ( !gl.getProgramParameter( programme, gl.LINK_STATUS) ) {
   var info = gl.getProgramInfoLog(program);
   throw 'Impossible de compiler le programme WebGL. \n\n' + info;
 }
-</pre>
+```
 
-<p>Voir {{domxref ("WebGLShader")}} pour plus d'informations sur la création du <code>shaderDeSommet</code> et du <code>shaderDeFragment</code> dans l'exemple ci-dessus.</p>
+Voir {{domxref ("WebGLShader")}} pour plus d'informations sur la création du `shaderDeSommet` et du `shaderDeFragment` dans l'exemple ci-dessus.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.9", "createProgram")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glCreateProgram.xml", "glCreateProgram")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>Page man de l'API OpenGL (similaire).</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                               | Commentaire                           |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------- |
+| {{SpecName('WebGL', "#5.14.9", "createProgram")}}                                 | {{Spec2('WebGL')}}             | Définition initiale.                  |
+| {{SpecName('OpenGL ES 2.0', "glCreateProgram.xml", "glCreateProgram")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL (similaire). |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WebGLRenderingContext.createProgram")}}</p>
+{{Compat("api.WebGLRenderingContext.createProgram")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.deleteProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.linkProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.useProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.validateProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getProgramInfoLog()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.deleteProgram()")}}
+- {{domxref("WebGLRenderingContext.isProgram()")}}
+- {{domxref("WebGLRenderingContext.linkProgram()")}}
+- {{domxref("WebGLRenderingContext.useProgram()")}}
+- {{domxref("WebGLRenderingContext.validateProgram()")}}
+- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
+- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}

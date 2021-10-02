@@ -9,49 +9,51 @@ tags:
 translation_of: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 original_slug: Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_W3C
 ---
-<p>Le DOM Level 1 Core du W3C est un modèle objet puissant permettant de modifier l'arbre de contenu de documents. Il est géré dans Mozilla (sur lequel Firefox et Netscape sont basés) et (pour la plus grande partie) dans Internet Explorer 5 pour Windows. Il s'agit d'une base essentielle du scripting sur le Web dans l'avenir.</p>
+Le DOM Level 1 Core du W3C est un modèle objet puissant permettant de modifier l'arbre de contenu de documents. Il est géré dans Mozilla (sur lequel Firefox et Netscape sont basés) et (pour la plus grande partie) dans Internet Explorer 5 pour Windows. Il s'agit d'une base essentielle du scripting sur le Web dans l'avenir.
 
-<h2 id="D.C3.A9finition_d.27un_arbre_de_contenu">Définition d'un arbre de contenu</h2>
+## Définition d'un arbre de contenu
 
-<p>Beaucoup d'auteurs HTML peuvent penser qu'HTML est quelque chose de plat — un gros amas de texte avec quelques balises au milieu. Cependant, c'est aussi beaucoup plus que ça. Tout document HTML (ou, par ailleurs, tout document SGML ou XML) forme une structure arborescente. Par exemple, le document et la structure arborescente qui suivent sont similaires (bien que non identiques — consultez les notes sur <a href="/fr/docs/Gestion_des_espaces_dans_le_DOM">les espaces dans le DOM</a>) :</p>
+Beaucoup d'auteurs HTML peuvent penser qu'HTML est quelque chose de plat — un gros amas de texte avec quelques balises au milieu. Cependant, c'est aussi beaucoup plus que ça. Tout document HTML (ou, par ailleurs, tout document SGML ou XML) forme une structure arborescente. Par exemple, le document et la structure arborescente qui suivent sont similaires (bien que non identiques — consultez les notes sur [les espaces dans le DOM](/fr/docs/Gestion_des_espaces_dans_le_DOM)) :
 
-<pre class="eval">&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Mon document&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Titre&lt;/h1&gt;
-  &lt;p&gt;Paragraphe&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    <html>
+    <head>
+      <title>Mon document</title>
+    </head>
+    <body>
+      <h1>Titre</h1>
+      <p>Paragraphe</p>
+    </body>
+    </html>
 
-<p><img src="using_the_w3c_dom_level_1_core-doctree.jpg"></p>
+![](using_the_w3c_dom_level_1_core-doctree.jpg)
 
-<p>Lorsque Mozilla examine un document, un arbre de contenu est construit et ensuite utilisé pour l'affichage.</p>
+Lorsque Mozilla examine un document, un arbre de contenu est construit et ensuite utilisé pour l'affichage.
 
-<p>Les termes utilisés pour décrire des arbres apparaissent souvent dans le DOM Level 1 Core. Chacune des boîtes dessinées dans l'arbre ci-dessus est un nœud dans l'arbre. La ligne au dessus d'un nœud représente une relation parent-enfant : le nœud supérieur est le parent, et le nœud inférieur est l'enfant. Deux enfants du même parent sont par conséquent des frères du même niveau. De même, on peut se référer à des ancêtres et des descendants. (Parler de cousins devient un peu compliqué par contre.)</p>
+Les termes utilisés pour décrire des arbres apparaissent souvent dans le DOM Level 1 Core. Chacune des boîtes dessinées dans l'arbre ci-dessus est un nœud dans l'arbre. La ligne au dessus d'un nœud représente une relation parent-enfant : le nœud supérieur est le parent, et le nœud inférieur est l'enfant. Deux enfants du même parent sont par conséquent des frères du même niveau. De même, on peut se référer à des ancêtres et des descendants. (Parler de cousins devient un peu compliqué par contre.)
 
-<h2 id="Ce_que_permet_le_DOM_Level_1_Core">Ce que permet le DOM Level 1 Core</h2>
+## Ce que permet le DOM Level 1 Core
 
-<p>Le DOM Level 1 permet de modifier l'arbre du contenu<em>selon vos désirs</em>. Il est suffisamment puissant pour construire n'importe quel document HTML depuis rien. Il permet aux auteurs de modifier quoi que ce soit dans le document, depuis un script, à n'importe quel moment. La manière la plus simple pour les auteurs de pages Web de modifier le DOM dynamiquement est d'utiliser JavaScript. En JavaScript, le document est accessible de la même manière qu'il l'était dans les navigateurs plus anciens : depuis la propriété <code>document</code> de l'objet global. Cet objet <code>document</code> implémente l'<a href="http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#i-Document">interface Document</a> de la spécification DOM Level 1 du W3C.</p>
+Le DOM Level 1 permet de modifier l'arbre du contenu*selon vos désirs*. Il est suffisamment puissant pour construire n'importe quel document HTML depuis rien. Il permet aux auteurs de modifier quoi que ce soit dans le document, depuis un script, à n'importe quel moment. La manière la plus simple pour les auteurs de pages Web de modifier le DOM dynamiquement est d'utiliser JavaScript. En JavaScript, le document est accessible de la même manière qu'il l'était dans les navigateurs plus anciens : depuis la propriété `document` de l'objet global. Cet objet `document` implémente l'[interface Document](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#i-Document) de la spécification DOM Level 1 du W3C.
 
-<h2 id="Un_exemple_simple">Un exemple simple</h2>
+## Un exemple simple
 
-<p>Supposons que l'auteur désire prendre le document présenté plus haut et changer le contenu du titre, ainsi qu'écrire deux paragraphes plutôt qu'un seul. Le script suivant le permettrait :</p>
+Supposons que l'auteur désire prendre le document présenté plus haut et changer le contenu du titre, ainsi qu'écrire deux paragraphes plutôt qu'un seul. Le script suivant le permettrait :
 
-<h3 id="Contenu_HTML">Contenu HTML</h3>
+### Contenu HTML
 
-<pre class="brush: html">&lt;body&gt;
-&lt;input type="button" value="Change this document." onclick="change()"&gt;
-&lt;h2&gt;Header&lt;/h2&gt;
-&lt;p&gt;Paragraph&lt;/p&gt;
-&lt;/body&gt;</pre>
+```html
+<body>
+<input type="button" value="Change this document." onclick="change()">
+<h2>Header</h2>
+<p>Paragraph</p>
+</body>
+```
 
-<h3 id="Contenu_JavaScript">Contenu JavaScript</h3>
+### Contenu JavaScript
 
-<pre class="brush: js">  function change() {
-    // document.getElementsByTagName ("H2") renvoie un NodeList du &lt;h2&gt;
+```js
+  function change() {
+    // document.getElementsByTagName ("H2") renvoie un NodeList du <h2>
     // éléments dans le document, et le premier est le nombre 0:
 
     var header = document.getElementsByTagName("H2").item(0);
@@ -71,14 +73,15 @@ original_slug: Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_
     // et pose le paragraphe à la fin du document en l'ajoutant
     // au BODY (qui est le parent de para)
     para.parentNode.appendChild(newElement);
-  }</pre>
+  }
+```
 
-<p>{{ EmbedLiveSample('A_simple_example', 800, 300) }}</p>
+{{ EmbedLiveSample('A_simple_example', 800, 300) }}
 
-<p>Vous pouvez voir ce script dans <a href="http://www.mozilla.org/docs/dom/technote/intro/example.html">un exemple complet</a>.</p>
+Vous pouvez voir ce script dans [un exemple complet](http://www.mozilla.org/docs/dom/technote/intro/example.html).
 
-<h3 id="Pour_en_savoir_plus">Pour en apprendre plus</h3>
+### Pour en apprendre plus
 
-<p>Maintenant que vous êtes familiarisé avec les concepts basiques du DOM, il existe un document expliquant <a href="/fr/docs/Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript">les méthodes fondamentales de DOM Level 1</a>. C'est la suite de ce document.</p>
+Maintenant que vous êtes familiarisé avec les concepts basiques du DOM, il existe un document expliquant [les méthodes fondamentales de DOM Level 1](/fr/docs/Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript). C'est la suite de ce document.
 
-<p>Consultez également la <a href="http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html">spécification DOM Level 1 Core</a> du W3C (traduction en français non normative). C'est une spécification relativement claire, même si elle est un peu formelle. Ce qui est surtout intéressant pour les auteurs, c'est la description des différents objets DOM et de toutes leurs propriétés et méthodes. Voyez encore notre <a href="/fr/docs/Web/API/Document_Object_Model">documentation complète sur le DOM</a>.</p>
+Consultez également la [spécification DOM Level 1 Core](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html) du W3C (traduction en français non normative). C'est une spécification relativement claire, même si elle est un peu formelle. Ce qui est surtout intéressant pour les auteurs, c'est la description des différents objets DOM et de toutes leurs propriétés et méthodes. Voyez encore notre [documentation complète sur le DOM](/fr/docs/Web/API/Document_Object_Model).

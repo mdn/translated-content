@@ -9,18 +9,27 @@ tags:
 translation_of: Web/API/WebRTC_API/Taking_still_photos
 original_slug: WebRTC/Prendre_des_photos_avec_la_webcam
 ---
-<h2 id="Introduction_et_demo">Introduction et demo</h2>
-<p>Ceci est un tutoriel rapide pour apprendre comment accéder à la caméra sur votre ordinateur et prendre des photos avec. Vous pouvez voir <a href="http://jsfiddle.net/codepo8/agaRe/4/">le code final en action dans JSFiddle</a>. Il y a aussi une version plus avancée pour charger des photos sur <strong>imgur</strong> en JavaScript, disponible en <a href="https://github.com/codepo8/interaction-cam/">code source sur GitHub</a> ou <a href="http://codepo8.github.com/interaction-cam/">en demo</a>.</p>
-<h2 id="Les_balises_HTML">Les balises HTML</h2>
-<p>La première chose dont vous avez besoin pour accéder à la webcam en utilisant WebRTC est un élément {{HTMLElement("video")}} et un élément {{HTMLElement("canvas")}} dans la page. L'élément video reçoit un flux de WebRTC et l'élément canvas est nécessaire pour capture l'image de la vidéo. Nous ajoutons aussi une image qui sera par la suite remplacée par la capture de la webcam.</p>
-<pre class="brush:html;">&lt;video id="video"&gt;&lt;/video&gt;
-&lt;button id="startbutton"&gt;Prendre une photo&lt;/button&gt;
-&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-&lt;img src="http://placekitten.com/g/320/261" id="photo" alt="photo"&gt;
-</pre>
-<h2 id="Le_script_complet">Le script complet</h2>
-<p>Voice le JavaScript complet en un seul morceau. Nous allons expliquer chaque section en détail ci-après.</p>
-<pre class="brush:js;">(function() {
+## Introduction et demo
+
+Ceci est un tutoriel rapide pour apprendre comment accéder à la caméra sur votre ordinateur et prendre des photos avec. Vous pouvez voir [le code final en action dans JSFiddle](http://jsfiddle.net/codepo8/agaRe/4/). Il y a aussi une version plus avancée pour charger des photos sur **imgur** en JavaScript, disponible en [code source sur GitHub](https://github.com/codepo8/interaction-cam/) ou [en demo](http://codepo8.github.com/interaction-cam/).
+
+## Les balises HTML
+
+La première chose dont vous avez besoin pour accéder à la webcam en utilisant WebRTC est un élément {{HTMLElement("video")}} et un élément {{HTMLElement("canvas")}} dans la page. L'élément video reçoit un flux de WebRTC et l'élément canvas est nécessaire pour capture l'image de la vidéo. Nous ajoutons aussi une image qui sera par la suite remplacée par la capture de la webcam.
+
+```html
+<video id="video"></video>
+<button id="startbutton">Prendre une photo</button>
+<canvas id="canvas"></canvas>
+<img src="http://placekitten.com/g/320/261" id="photo" alt="photo">
+```
+
+## Le script complet
+
+Voice le JavaScript complet en un seul morceau. Nous allons expliquer chaque section en détail ci-après.
+
+```js
+(function() {
 
   var streaming = false,
       video        = document.querySelector('#video'),
@@ -79,11 +88,17 @@ original_slug: WebRTC/Prendre_des_photos_avec_la_webcam
     ev.preventDefault();
   }, false);
 
-})();</pre>
-<h2 id="Les_explications_pas_à_pas.">Les explications pas à pas.</h2>
-<p>Voici ce qui se passe.</p>
-<h3 id="Fonction_anonyme">Fonction anonyme</h3>
-<pre class="brush:js;">(function() {
+})();
+```
+
+## Les explications pas à pas.
+
+Voici ce qui se passe.
+
+### Fonction anonyme
+
+```js
+(function() {
 
   var streaming = false,
       video        = document.querySelector('#video'),
@@ -92,19 +107,28 @@ original_slug: WebRTC/Prendre_des_photos_avec_la_webcam
       photo        = document.querySelector('#photo'),
       startbutton  = document.querySelector('#startbutton'),
       width = 320,
-      height = 0;</pre>
-<p>Afin d'éviter les variables globales, on encapsule le script dans une fonction anonyme. Nous capturons les éléments du HTML dont nous avons besoin et nous définissons une largeur de vidéo à 320 et une hauteur à 0. La hauteur appropriée sera calculée plus tard.</p>
-<div class="warning">
- <p><strong>Attention :</strong> À l'heure actuelle, il y a une différence dans les tailles de vidéo offertes par getUserMedia. Firefox Nightly utilise une résolution de 352x288 alors que Opera et Chrome utilisent une résolution de 640x400. Celà changera dans le futur, mais redimensionner avec le rapport comme nous le faisons nous épargnera des mauvaises surprises.</p>
-</div>
-<h3 id="Obtenir_la_vidéo">Obtenir la vidéo</h3>
-<p>Maintenant, nous devons récupérer la vidéo de la webcam. Pour l'instant c'est préfixé par les différents navigateurs, nous devons donc tester quelle forme est supportée:</p>
-<pre class="brush:js;">  navigator.getMedia = ( navigator.getUserMedia ||
+      height = 0;
+```
+
+Afin d'éviter les variables globales, on encapsule le script dans une fonction anonyme. Nous capturons les éléments du HTML dont nous avons besoin et nous définissons une largeur de vidéo à 320 et une hauteur à 0. La hauteur appropriée sera calculée plus tard.
+
+> **Attention :** À l'heure actuelle, il y a une différence dans les tailles de vidéo offertes par getUserMedia. Firefox Nightly utilise une résolution de 352x288 alors que Opera et Chrome utilisent une résolution de 640x400. Celà changera dans le futur, mais redimensionner avec le rapport comme nous le faisons nous épargnera des mauvaises surprises.
+
+### Obtenir la vidéo
+
+Maintenant, nous devons récupérer la vidéo de la webcam. Pour l'instant c'est préfixé par les différents navigateurs, nous devons donc tester quelle forme est supportée:
+
+```js
+  navigator.getMedia = ( navigator.getUserMedia ||
                          navigator.webkitGetUserMedia ||
                          navigator.mozGetUserMedia ||
-                         navigator.msGetUserMedia);</pre>
-<p>Nous demandons au navigateur de nous donner la vidéo sans le son et de récupérer le flux dans une fonction callback:</p>
-<pre class="brush:js;">  navigator.getMedia(
+                         navigator.msGetUserMedia);
+```
+
+Nous demandons au navigateur de nous donner la vidéo sans le son et de récupérer le flux dans une fonction callback:
+
+```js
+  navigator.getMedia(
     {
       video: true,
       audio: false
@@ -121,11 +145,17 @@ original_slug: WebRTC/Prendre_des_photos_avec_la_webcam
     function(err) {
       console.log("An error occured! " + err);
     }
-  );</pre>
-<p>Firefox Nightly nécessite de définir la propriété <code>mozSrcObject</code> de l'élément vidéo pour pouvoir le jouer; pour les autres navigateurs, définissez l'attribut <code>src</code>. Alors que Firefox peut utiliser les flux directement, Webkit et Opera ont besoin de créer un objet URL. Cela sera standardisé dans un futur proche.</p>
-<h3 id="Redimensionner_la_vidéo">Redimensionner la vidéo</h3>
-<p>Ensuite nous devons redimensionner la vidéo aux bonnes dimensions.</p>
-<pre class="brush:js;">  video.addEventListener('canplay', function(ev){
+  );
+```
+
+Firefox Nightly nécessite de définir la propriété `mozSrcObject` de l'élément vidéo pour pouvoir le jouer; pour les autres navigateurs, définissez l'attribut `src`. Alors que Firefox peut utiliser les flux directement, Webkit et Opera ont besoin de créer un objet URL. Cela sera standardisé dans un futur proche.
+
+### Redimensionner la vidéo
+
+Ensuite nous devons redimensionner la vidéo aux bonnes dimensions.
+
+```js
+  video.addEventListener('canplay', function(ev){
     if (!streaming) {
       height = video.videoHeight / (video.videoWidth/width);
       video.setAttribute('width', width);
@@ -134,17 +164,28 @@ original_slug: WebRTC/Prendre_des_photos_avec_la_webcam
       canvas.setAttribute('height', height);
       streaming = true;
     }
-  }, false);</pre>
-<p>Nous nous abonnons à l'évènement <code>canplay</code> de la vidéo et lisons ses dimensions en utilisant <code>videoHeight</code> et <code>videoWidth</code>. Elles ne sont pas disponibles de manière fiable avant que l'évènement ne soit déclenché. Nous positionnons <code>streaming</code> à true pour faire cette vérification une seule fois vu que l'évènement <code>canplay</code> se déclenchera à répétition.</p>
-<p>C'est tout ce qu'il faut pour jouer la vidéo.</p>
-<h3 id="Prendre_une_photo">Prendre une photo</h3>
-<p>Maintenant nous devons capturer la photo en utilisant le canvas. Nous assignons un gestionaire d'événements au bouton de démarrage pour appeler la fonction <code>takepicture</code> function.</p>
-<pre class="brush:js;">  startbutton.addEventListener('click', function(ev){
+  }, false);
+```
+
+Nous nous abonnons à l'évènement `canplay` de la vidéo et lisons ses dimensions en utilisant `videoHeight` et `videoWidth`. Elles ne sont pas disponibles de manière fiable avant que l'évènement ne soit déclenché. Nous positionnons `streaming` à true pour faire cette vérification une seule fois vu que l'évènement `canplay` se déclenchera à répétition.
+
+C'est tout ce qu'il faut pour jouer la vidéo.
+
+### Prendre une photo
+
+Maintenant nous devons capturer la photo en utilisant le canvas. Nous assignons un gestionaire d'événements au bouton de démarrage pour appeler la fonction `takepicture` function.
+
+```js
+  startbutton.addEventListener('click', function(ev){
       takepicture();
     ev.preventDefault();
-  }, false);</pre>
-<p>Dans cette fonction nous re-assignons la taille du canvas à la taille de la vidéo, ce qui l'efface,  et nous obtenons une image de la vidéo que nous copions sur le canvas. Ensuite nous devons transformer les données du canvas en une URI de données avec un entête PNG, et positionner l'attribut src de la photo à cette URL.</p>
-<pre class="brush:js;">  function takepicture() {
+  }, false);
+```
+
+Dans cette fonction nous re-assignons la taille du canvas à la taille de la vidéo, ce qui l'efface,  et nous obtenons une image de la vidéo que nous copions sur le canvas. Ensuite nous devons transformer les données du canvas en une URI de données avec un entête PNG, et positionner l'attribut src de la photo à cette URL.
+
+```js
+  function takepicture() {
     canvas.width = width;
     canvas.height = height;
     canvas.getContext('2d').drawImage(video, 0, 0, width, height);
@@ -152,11 +193,14 @@ original_slug: WebRTC/Prendre_des_photos_avec_la_webcam
     photo.setAttribute('src', data);
   }
 
-})();</pre>
-<p>C'est tout ce qu'il faut pour afficher un flux de la webcam et en prendre une photo, que ce soit sur Chrome, Opera ou Firefox.</p>
-<h2 id="Support">Support</h2>
-<p>Actuellement, l'accès à la caméra via WebRTC est supporté dans Chrome, Opera et Firefox Nightly 18. Activer WebRTC dans Firefox Nightly demande que vous positionnez une valeur dans la configuration:</p>
-<ul>
- <li>Entrez "about:config" dans la barre d'adresse et confirmez les changements</li>
- <li>Trouver l'entrée "media.navigator.enabled" et positionnez la à true</li>
-</ul>
+})();
+```
+
+C'est tout ce qu'il faut pour afficher un flux de la webcam et en prendre une photo, que ce soit sur Chrome, Opera ou Firefox.
+
+## Support
+
+Actuellement, l'accès à la caméra via WebRTC est supporté dans Chrome, Opera et Firefox Nightly 18. Activer WebRTC dans Firefox Nightly demande que vous positionnez une valeur dans la configuration:
+
+- Entrez "about:config" dans la barre d'adresse et confirmez les changements
+- Trouver l'entrée "media.navigator.enabled" et positionnez la à true

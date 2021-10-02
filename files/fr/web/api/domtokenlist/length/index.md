@@ -9,56 +9,48 @@ tags:
   - Propriétés
 translation_of: Web/API/DOMTokenList/length
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La propriété en lecture seule <code><strong>length</strong></code> (<em>longueur</em>) de l'interface {{domxref("DOMTokenList")}} est un <code>integer</code> (<em>entier</em>) représentant le nombre d'objets stockés dans la liste.</p>
+La propriété en lecture seule **`length`** (_longueur_) de l'interface {{domxref("DOMTokenList")}} est un `integer` (_entier_) représentant le nombre d'objets stockés dans la liste.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">tokenList.length;</pre>
+    tokenList.length;
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Un <code>integer</code> (<em>entier</em>).</p>
+Un `integer` (_entier_).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que <code>DOMTokenList</code> en utilisant {{domxref("Element.classList")}}, puis écrivons la longueur (<em>length</em>) de la liste dans le {{domxref("Node.textContent")}} du <code>&lt;span&gt;</code>.</p>
+Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}, puis écrivons la longueur (_length_) de la liste dans le {{domxref("Node.textContent")}} du `<span>`.
 
-<p>D'abord le HTML:</p>
+D'abord le HTML:
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>Maintenant le JavaScript:</p>
+Maintenant le JavaScript:
 
-<pre class="brush: js">var span = document.querySelector("span");
+```js
+var span = document.querySelector("span");
 var classes = span.classList;
 var length = classes.length;
 
 span.textContent = 'classList length = ' + length;
-</pre>
+```
 
-<p>La sortie ressemble à ceci :</p>
+La sortie ressemble à ceci :
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-length','length')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                           | Commentaire         |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('DOM WHATWG','#dom-domtokenlist-length','length')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("api.DOMTokenList.length")}}</div>
+{{Compat("api.DOMTokenList.length")}}

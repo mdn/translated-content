@@ -9,62 +9,44 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/deleteShader
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>La méthode <strong><code>WebGLRenderingContext.deleteShader()</code></strong> de l'API WebGL marque l'objet {{domxref("WebGLShader")}} indiqué pour suppression. Il sera ensuite supprimé dès que le shader ne sera plus utilisé. Cette méthode n'a aucun effet si le shader a déjà été supprimé, et le {{domxref ("WebGLShader")}} est automatiquement marqué pour la suppression lorsqu'il est détruit par le garbage collector.</p>
+La méthode **`WebGLRenderingContext.deleteShader()`** de l'API WebGL marque l'objet {{domxref("WebGLShader")}} indiqué pour suppression. Il sera ensuite supprimé dès que le shader ne sera plus utilisé. Cette méthode n'a aucun effet si le shader a déjà été supprimé, et le {{domxref ("WebGLShader")}} est automatiquement marqué pour la suppression lorsqu'il est détruit par le garbage collector.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var>gl</var>.deleteShader(<var>shader</var>);
-</pre>
+    void gl.deleteShader(shader);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>shader</dt>
- <dd>Un objet {{domxref("WebGLShader")}} à détruire.</dd>
-</dl>
+- shader
+  - : Un objet {{domxref("WebGLShader")}} à détruire.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Aucune.</p>
+Aucune.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Suppression_d'un_shader">Suppression d'un shader</h3>
+### Suppression d'un shader
 
-<pre class="brush: js">gl.deleteShader(shader);</pre>
+```js
+gl.deleteShader(shader);
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.9", "deleteShader")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glDeleteShader.xml", "glDeleteShader")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>Page man de l'API OpenGL (similaire).</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | Statut                               | Commentaire                           |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------- |
+| {{SpecName('WebGL', "#5.14.9", "deleteShader")}}                             | {{Spec2('WebGL')}}             | Définition initiale.                  |
+| {{SpecName('OpenGL ES 2.0', "glDeleteShader.xml", "glDeleteShader")}} | {{Spec2('OpenGL ES 2.0')}} | Page man de l'API OpenGL (similaire). |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WebGLRenderingContext.deleteShader")}}</p>
+{{Compat("api.WebGLRenderingContext.deleteShader")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.createShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getAttachedShaders()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createShader()")}}
+- {{domxref("WebGLRenderingContext.isShader()")}}
+- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}

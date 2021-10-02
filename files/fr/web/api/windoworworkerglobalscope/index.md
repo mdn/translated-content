@@ -13,98 +13,61 @@ tags:
   - WorkerGlobalScope
 translation_of: Web/API/WindowOrWorkerGlobalScope
 ---
-<div>{{ApiRef()}}</div>
+{{ApiRef()}}
 
-<p>Le mixin <strong><code>WindowOrWorkerGlobalScope</code></strong> décrit plusieurs fonctionnalités communes aux interfaces {{domxref("Window")}} et {{domxref("WorkerGlobalScope")}}. Chacune de ces interfaces peut, bien entendu, ajouter d'autres fonctionnalités en plus de celles listées ci-dessous.</p>
+Le mixin **`WindowOrWorkerGlobalScope`** décrit plusieurs fonctionnalités communes aux interfaces {{domxref("Window")}} et {{domxref("WorkerGlobalScope")}}. Chacune de ces interfaces peut, bien entendu, ajouter d'autres fonctionnalités en plus de celles listées ci-dessous.
 
-<div class="note">
-<p><strong>Note :</strong> <code>WindowOrWorkerGlobalScope</code> est un mixin et non une interface; vous ne pouvez pas réellement créer un objet de type <code>WindowOrWorkerGlobalScope</code>.</p>
-</div>
+> **Note :** `WindowOrWorkerGlobalScope` est un mixin et non une interface; vous ne pouvez pas réellement créer un objet de type `WindowOrWorkerGlobalScope`.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p>Ces propriétés sont définies sur le mixin {{domxref("WindowOrWorkerGlobalScope")}}, et implémentées par {{domxref("Window")}} et {{domxref("WorkerGlobalScope")}}.</p>
+Ces propriétés sont définies sur le mixin {{domxref("WindowOrWorkerGlobalScope")}}, et implémentées par {{domxref("Window")}} et {{domxref("WorkerGlobalScope")}}.
 
-<dl>
- <dt>{{domxref("WindowOrWorkerGlobalScope.caches")}} {{readOnlyinline}}</dt>
- <dd>Renvoie l'objet {{domxref("CacheStorage")}} associé au contexte actuel. Cet objet active des fonctionnalités telles que le stockage des actifs pour une utilisation hors ligne et la génération de réponses personnalisées aux demandes.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.indexedDB")}} {{readonlyInline}}</dt>
- <dd>Fournit un mécanisme permettant aux applications d'accéder de manière asynchrone aux capacités des bases de données indexées; renvoie un objet {{domxref ("IDBFactory")}}.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.isSecureContext")}} {{readOnlyinline}}</dt>
- <dd>Renvoie un booléen indiquant si le contexte actuel est sécurisé (<code>true</code>) ou non (<code>false</code>).</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.origin")}} {{readOnlyinline}}</dt>
- <dd>Renvoie l'origine de la portée globale, sérialisée sous forme de chaîne.</dd>
-</dl>
+- {{domxref("WindowOrWorkerGlobalScope.caches")}} {{readOnlyinline}}
+  - : Renvoie l'objet {{domxref("CacheStorage")}} associé au contexte actuel. Cet objet active des fonctionnalités telles que le stockage des actifs pour une utilisation hors ligne et la génération de réponses personnalisées aux demandes.
+- {{domxref("WindowOrWorkerGlobalScope.indexedDB")}} {{readonlyInline}}
+  - : Fournit un mécanisme permettant aux applications d'accéder de manière asynchrone aux capacités des bases de données indexées; renvoie un objet {{domxref ("IDBFactory")}}.
+- {{domxref("WindowOrWorkerGlobalScope.isSecureContext")}} {{readOnlyinline}}
+  - : Renvoie un booléen indiquant si le contexte actuel est sécurisé (`true`) ou non (`false`).
+- {{domxref("WindowOrWorkerGlobalScope.origin")}} {{readOnlyinline}}
+  - : Renvoie l'origine de la portée globale, sérialisée sous forme de chaîne.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p>Ces propriétés sont définies sur le mixin {{domxref("WindowOrWorkerGlobalScope")}}, et implémentées par {{domxref("Window")}} et {{domxref("WorkerGlobalScope")}}.</p>
+Ces propriétés sont définies sur le mixin {{domxref("WindowOrWorkerGlobalScope")}}, et implémentées par {{domxref("Window")}} et {{domxref("WorkerGlobalScope")}}.
 
-<dl>
- <dt>{{domxref("WindowOrWorkerGlobalScope.atob()")}}</dt>
- <dd>Décode une chaîne de données qui a été encodée à l'aide d'un encodage base 64.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.btoa()")}}</dt>
- <dd>Crée une chaîne ASCII encodée en base 64 à partir d'une chaîne de données binaires.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}</dt>
- <dd>Annule le jeu d'exécutions répétées ) l'aide de {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.clearTimeout()")}}</dt>
- <dd>Annule l'exécution différé définie à l'aide de {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.createImageBitmap()")}}</dt>
- <dd>Accepte une variété de sources d'images différentes et renvoie un {{domxref ("Promise")}} qui se résout en {{domxref ("ImageBitmap")}}. Facultativement, la source est rognée sur le rectangle de pixels originaire de (sx, sy) avec une largeur sw et une hauteur sh.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.fetch()")}}</dt>
- <dd>Démarre le processus de récupération d'une ressource sur le réseau.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.setInterval()")}}</dt>
- <dd>Planifie une fonction à exécuter chaque fois qu'un nombre donné de millisecondes s'écoule.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}</dt>
- <dd>Planifie une fonction à exécuter dans un laps de temps donné.</dd>
-</dl>
+- {{domxref("WindowOrWorkerGlobalScope.atob()")}}
+  - : Décode une chaîne de données qui a été encodée à l'aide d'un encodage base 64.
+- {{domxref("WindowOrWorkerGlobalScope.btoa()")}}
+  - : Crée une chaîne ASCII encodée en base 64 à partir d'une chaîne de données binaires.
+- {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}
+  - : Annule le jeu d'exécutions répétées ) l'aide de {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}.
+- {{domxref("WindowOrWorkerGlobalScope.clearTimeout()")}}
+  - : Annule l'exécution différé définie à l'aide de {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}.
+- {{domxref("WindowOrWorkerGlobalScope.createImageBitmap()")}}
+  - : Accepte une variété de sources d'images différentes et renvoie un {{domxref ("Promise")}} qui se résout en {{domxref ("ImageBitmap")}}. Facultativement, la source est rognée sur le rectangle de pixels originaire de (sx, sy) avec une largeur sw et une hauteur sh.
+- {{domxref("WindowOrWorkerGlobalScope.fetch()")}}
+  - : Démarre le processus de récupération d'une ressource sur le réseau.
+- {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}
+  - : Planifie une fonction à exécuter chaque fois qu'un nombre donné de millisecondes s'écoule.
+- {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}
+  - : Planifie une fonction à exécuter dans un laps de temps donné.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG",'webappapis.html#windoworworkerglobalscope-mixin', '<code>WindowOrWorkerGlobalScope</code> mixin')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>C'est là que le mixin principal est défini.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#fetch-method','fetch()')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Définition de la méthode <code>fetch()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#self-caches', 'caches')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition de la propriété <code>caches</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB 2', '#dom-windoworworkerglobalscope-indexeddb', 'indexedDB')}}</td>
-   <td>{{Spec2('IndexedDB 2')}}</td>
-   <td>Définition de la propriété <code>indexedDB</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Secure Contexts', 'webappapis.html#dom-origin', 'isSecureContext')}}</td>
-   <td>{{Spec2('Secure Contexts')}}</td>
-   <td>Définition de la propriété <code>isSecureContext</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                            | Statut                               | Commentaire                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------------------------------------- |
+| {{SpecName("HTML WHATWG",'webappapis.html#windoworworkerglobalscope-mixin', '<code>WindowOrWorkerGlobalScope</code> mixin')}} | {{Spec2('HTML WHATWG')}}     | C'est là que le mixin principal est défini.   |
+| {{SpecName('Fetch','#fetch-method','fetch()')}}                                                                                                         | {{Spec2('Fetch')}}             | Définition de la méthode `fetch()`.           |
+| {{SpecName('Service Workers', '#self-caches', 'caches')}}                                                                                             | {{Spec2('Service Workers')}} | Définition de la propriété `caches`.          |
+| {{SpecName('IndexedDB 2', '#dom-windoworworkerglobalscope-indexeddb', 'indexedDB')}}                                                         | {{Spec2('IndexedDB 2')}}     | Définition de la propriété `indexedDB`.       |
+| {{SpecName('Secure Contexts', 'webappapis.html#dom-origin', 'isSecureContext')}}                                                             | {{Spec2('Secure Contexts')}} | Définition de la propriété `isSecureContext`. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope")}}</p>
+{{Compat("api.WindowOrWorkerGlobalScope")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Window")}}</li>
- <li>{{domxref("WorkerGlobalScope")}}</li>
-</ul>
+- {{domxref("Window")}}
+- {{domxref("WorkerGlobalScope")}}

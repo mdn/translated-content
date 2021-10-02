@@ -9,47 +9,39 @@ tags:
   - Propriétés
 translation_of: Web/API/Document/selectedStyleSheetSet
 ---
-<p>{{ APIRef("DOM") }}{{ gecko_minversion_header("1.9") }}</p>
+{{ APIRef("DOM") }}{{ gecko_minversion_header("1.9") }}
 
-<p>Indique le nom du jeu de feuilles de styles actuellement utilisé.</p>
+Indique le nom du jeu de feuilles de styles actuellement utilisé.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>currentStyleSheetSet</em> = document.selectedStyleSheetSet
+    currentStyleSheetSet = document.selectedStyleSheetSet
 
-document.selectedStyleSheet = <em>newStyleSheetSet</em>
-</pre>
+    document.selectedStyleSheet = newStyleSheetSet
 
-<p>En retour, <code>currentStyleSheetSet</code> indique le nom du jeu de feuilles de styles en cours d'utilisation. Vous pouvez aussi définir celui-ci en utilisant cette propriété.</p>
+En retour, `currentStyleSheetSet` indique le nom du jeu de feuilles de styles en cours d'utilisation. Vous pouvez aussi définir celui-ci en utilisant cette propriété.
 
-<p>La définition de la valeur de cette propriété équivaut à appeler {{ domxref("document.enableStyleSheetsForSet()") }} avec la valeur de <code>currentStyleSheetSet</code>, puis de définir la valeur de <code>lastStyleSheetSet</code> sur cette valeur.</p>
+La définition de la valeur de cette propriété équivaut à appeler {{ domxref("document.enableStyleSheetsForSet()") }} avec la valeur de `currentStyleSheetSet`, puis de définir la valeur de `lastStyleSheetSet` sur cette valeur.
 
-<div class="note">
-  <p><strong>Note :</strong> Cette valeur d'attribut est directe : sa modification affectera la valeur de l'attribut.</p>
-</div>
+> **Note :** Cette valeur d'attribut est directe : sa modification affectera la valeur de l'attribut.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">console.log("Current style sheet set: " + document.selectedStyleSheetSet);
+```js
+console.log("Current style sheet set: " + document.selectedStyleSheetSet);
 
 document.selectedStyleSheetSet = "Some other style sheet";
-</pre>
+```
 
-<div class="note">
-  <p><strong>Note :</strong> Cet exemple vous aidera à comprendre la différence de comportement entre la définition de la valeur de <code>selectedStyleSheetSet</code> et l'appel de {{ domxref("document.enableStyleSheetsForSet()") }}.</p>
-</div>
+> **Note :** Cet exemple vous aidera à comprendre la différence de comportement entre la définition de la valeur de `selectedStyleSheetSet` et l'appel de {{ domxref("document.enableStyleSheetsForSet()") }}.
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{ domxref("document.lastStyleSheetSet") }}</li>
- <li>{{ domxref("document.preferredStyleSheetSet") }}</li>
- <li>{{ domxref("document.styleSheetSets") }}</li>
- <li>{{ domxref("document.enableStyleSheetsForSet()") }}</li>
-</ul>
+- {{ domxref("document.lastStyleSheetSet") }}
+- {{ domxref("document.preferredStyleSheetSet") }}
+- {{ domxref("document.styleSheetSets") }}
+- {{ domxref("document.enableStyleSheetsForSet()") }}
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<ul>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets">HTML5: Alternate Style Sheets</a></li>
-</ul>
+- [HTML5: Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)

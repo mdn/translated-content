@@ -3,164 +3,152 @@ title: Web Video Text Tracks Format (WebVTT)
 slug: Web/API/WebVTT_API
 translation_of: Web/API/WebVTT_API
 ---
-<div>{{DefaultAPISidebar("WebVTT")}}</div>
+{{DefaultAPISidebar("WebVTT")}}
 
-<p><strong>Web Video Text Tracks Format</strong> (<strong>WebVTT</strong>) est un format pour afficher du texte en fonction du temps (comme des sous-titres ou des légendes) en utilisant l'élément HTML {{HTMLElement("track")}}. L'objectif de ce format est d'afficher du texte sur {{HTMLElement("video")}}.</p>
+**Web Video Text Tracks Format** (**WebVTT**) est un format pour afficher du texte en fonction du temps (comme des sous-titres ou des légendes) en utilisant l'élément HTML {{HTMLElement("track")}}. L'objectif de ce format est d'afficher du texte sur {{HTMLElement("video")}}.
 
-<p> WebVTT est un format texte codé en {{Glossary("UTF-8")}}. On peut utiliser aussi bien des espaces que des tabulations. Il y a aussi une petite API capable de représenter et de modifier ces pistes ainsi que les données nécéssaires à la synchornisation du texte.</p>
+WebVTT est un format texte codé en {{Glossary("UTF-8")}}. On peut utiliser aussi bien des espaces que des tabulations. Il y a aussi une petite API capable de représenter et de modifier ces pistes ainsi que les données nécéssaires à la synchornisation du texte.
 
-<h2 id="Les_fichiers_WebVTT">Les fichiers WebVTT</h2>
+## Les fichiers WebVTT
 
-<p>Les fichiers WebVTT ont pour type MIME <code>text/vtt</code>.</p>
+Les fichiers WebVTT ont pour type MIME `text/vtt`.
 
-<p>Un fichier WebVTT (<code>.vtt</code>) contient les répliques qui peuvent être sur une ou plusieurs lignes.</p>
+Un fichier WebVTT (`.vtt`) contient les répliques qui peuvent être sur une ou plusieurs lignes.
 
-<pre class="notranslate">WEBVTT
+    WEBVTT
 
-00:01.000 --&gt; 00:04.000
-Ne jamais boire de l'azote liquide.
+    00:01.000 --> 00:04.000
+    Ne jamais boire de l'azote liquide.
 
-00:05.000 --&gt; 00:09.000
-- Cela peut perforer l'estomac.
-- On peut en mourir.
-</pre>
+    00:05.000 --> 00:09.000
+    - Cela peut perforer l'estomac.
+    - On peut en mourir.
 
-<h2 id="Le_corps_WebVTT">Le corps WebVTT</h2>
+## Le corps WebVTT
 
-<p>La structure d'un fichier WebVTT consiste en une série de composants, certains d'entre-eux sont optionnels. Dans l'ordre:</p>
+La structure d'un fichier WebVTT consiste en une série de composants, certains d'entre-eux sont optionnels. Dans l'ordre:
 
-<ul>
- <li>Indicateur d'ordre des octets {{optional_inline}}</li>
- <li>La chaîne de caractères "<code>WEBVTT</code>".</li>
- <li>Titre à droite de "<code>WEBVTT</code>". {{optional_inline}}
-  <ul>
-   <li>Il doit y avoir au moins un espace après "<code>WEBVTT</code>".</li>
-   <li>Vous pouvez l'utiliser pour mettre une description.</li>
-   <li>Vous pouvez utiliser n'importe quoi à part une nouvelle ligne ou la chaîne "<code>--&gt;</code>".</li>
-  </ul>
- </li>
- <li>Une ligne vide équivalente à deux lignes consécutives.</li>
- <li>Zéros ou plusieurs répliques ou commenatiaires.</li>
- <li>Zéro ou plusieurs lignes vides.</li>
-</ul>
+- Indicateur d'ordre des octets {{optional_inline}}
+- La chaîne de caractères "`WEBVTT`".
+- Titre à droite de "`WEBVTT`". {{optional_inline}}
 
-<h5 id="Exemple_1_-_Plus_petit_fichier_WebVTT">Exemple 1 - Plus petit fichier WebVTT</h5>
+  - Il doit y avoir au moins un espace après "`WEBVTT`".
+  - Vous pouvez l'utiliser pour mettre une description.
+  - Vous pouvez utiliser n'importe quoi à part une nouvelle ligne ou la chaîne "`-->`".
 
-<pre class="eval">WEBVTT
-</pre>
+- Une ligne vide équivalente à deux lignes consécutives.
+- Zéros ou plusieurs répliques ou commenatiaires.
+- Zéro ou plusieurs lignes vides.
 
-<h5 id="Exemple_2_-_Simple_fichier_WebVTT_contenant_un_entête">Exemple 2 - Simple fichier WebVTT contenant un entête</h5>
+##### Exemple 1 - Plus petit fichier WebVTT
 
-<pre class="eval">WEBVTT - Ce fichier ne possède pas de réplique.</pre>
+    WEBVTT
 
-<h5 id="Exemple_3_-_Fichier_WebVTT_courant_avec_un_entête_et_des_répliques">Exemple 3 - Fichier WebVTT courant avec un entête et des répliques</h5>
+##### Exemple 2 - Simple fichier WebVTT contenant un entête
 
-<pre class="eval">WEBVTT - Ce fichier possède des répliques.
+    WEBVTT - Ce fichier ne possède pas de réplique.
 
-14
-00:01:14.815 --&gt; 00:01:18.114
-- Quoi?
-- Où sommes-nous?
+##### Exemple 3 - Fichier WebVTT courant avec un entête et des répliques
 
-15
-00:01:18.171 --&gt; 00:01:20.991
-- C'est le pays des grandes chauves-souris.
+    WEBVTT - Ce fichier possède des répliques.
 
-16
-00:01:21.058 --&gt; 00:01:23.868
-- [ Cris perçant de chauves-souris ]
-- Elles ne veulent pas aller dans vos cheveux. Elles attrapent les insectes.
-</pre>
+    14
+    00:01:14.815 --> 00:01:18.114
+    - Quoi?
+    - Où sommes-nous?
 
-<h3 id="Structure_interne_dun_fichier_WebVTT">Structure interne d'un fichier WebVTT</h3>
+    15
+    00:01:18.171 --> 00:01:20.991
+    - C'est le pays des grandes chauves-souris.
 
-<p>Réexaminons le premier exemple, et observons la structure plus précisément.</p>
+    16
+    00:01:21.058 --> 00:01:23.868
+    - [ Cris perçant de chauves-souris ]
+    - Elles ne veulent pas aller dans vos cheveux. Elles attrapent les insectes.
 
-<pre class="notranslate">WEBVTT
+### Structure interne d'un fichier WebVTT
 
-00:01.000 --&gt; 00:04.000
-Ne jamais boire de l'azote liquide.
+Réexaminons le premier exemple, et observons la structure plus précisément.
 
-00:05.000 --&gt; 00:09.000
-- Cela peut perforer l'estomac.
-- On peut en mourir.
+    WEBVTT
 
-NOTE Cette ligne est la dernière ligne du fichier
-</pre>
+    00:01.000 --> 00:04.000
+    Ne jamais boire de l'azote liquide.
 
-<p>Dans chaque réplique:</p>
+    00:05.000 --> 00:09.000
+    - Cela peut perforer l'estomac.
+    - On peut en mourir.
 
-<ul>
- <li>La première ligne commence par un temps correspondant au moment où il apparait.</li>
- <li>Sur la même ligne nous avons une chaîne <code>--&gt;</code>.</li>
- <li>Nous finissions la ligne par un second temps indiquant la fin de l'affichage du texte.</li>
- <li>Nous pouvons alors afficher une ou plusieurs lignes commençant par un tiret (-), chacune contenant une partie du texte à afficher.</li>
-</ul>
+    NOTE Cette ligne est la dernière ligne du fichier
 
-<p>Nous pouvons aussi mettre des commentaires dans notre fichier <code>.vtt</code> afin de nous aider à nous remémorer des informations importantes à propos du fichier. Ils doivent être séparés par une ligne vide et commencer par <code>NOTE</code>. Nous en reparlerons dans la prochaine section.</p>
+Dans chaque réplique:
 
-<p>Il est important de ne pas utiliser de ligne vide sans réplique, par exemple entre la ligne indiquant le temps et le texte en lui même. WebVTT est basé sur les lignes, une ligne vide ferme la réplique.</p>
+- La première ligne commence par un temps correspondant au moment où il apparait.
+- Sur la même ligne nous avons une chaîne `-->`.
+- Nous finissions la ligne par un second temps indiquant la fin de l'affichage du texte.
+- Nous pouvons alors afficher une ou plusieurs lignes commençant par un tiret (-), chacune contenant une partie du texte à afficher.
 
-<h2 id="Les_commentaires_WebVTT">Les commentaires WebVTT</h2>
+Nous pouvons aussi mettre des commentaires dans notre fichier `.vtt` afin de nous aider à nous remémorer des informations importantes à propos du fichier. Ils doivent être séparés par une ligne vide et commencer par `NOTE`. Nous en reparlerons dans la prochaine section.
 
-<p>Les commentaires sont des composants optionels qui peuvent être utilisés pour ajouter des informations à un fichier WebVTT. Les commentaires sont prévus pour ceux qui liront le fichier, ils ne seront pas vus par les utilisateurs. Les commentaires peuvent contenir de nouvelles ligne mais ne peuvent pas contenir de ligne vide ce qui équivaut à deux nouvelles lignes. Une ligne vide correspond à la fin d'un commentaire.</p>
+Il est important de ne pas utiliser de ligne vide sans réplique, par exemple entre la ligne indiquant le temps et le texte en lui même. WebVTT est basé sur les lignes, une ligne vide ferme la réplique.
 
-<p>Un  commentaire ne peut contenir la chaîne "<code>--&gt;</code>", l'esperluette <code>&amp;</code> ou bien le symbole plus-petit que <code>&lt;</code>. Si vous voulez utiliser ces caractères, vous devez utiliser les caractères échapés comme <code>&amp;amp;</code>pour l'esperluette et <code>&amp;lt;</code> pour le plus petit que. Il est aussi recommandé <code>&amp;gt;</code> pour le plus grand que, afin d'éviter toutes confusions.</p>
+## Les commentaires WebVTT
 
-<p>Un commentaire est constitué de ces trois composants:</p>
+Les commentaires sont des composants optionels qui peuvent être utilisés pour ajouter des informations à un fichier WebVTT. Les commentaires sont prévus pour ceux qui liront le fichier, ils ne seront pas vus par les utilisateurs. Les commentaires peuvent contenir de nouvelles ligne mais ne peuvent pas contenir de ligne vide ce qui équivaut à deux nouvelles lignes. Une ligne vide correspond à la fin d'un commentaire.
 
-<ul>
- <li>La chaîne <code>NOTE</code>.</li>
- <li>Un espace ou une nouvelle ligne.</li>
- <li>Aucun ou plusieurs caractères sauf ceux indiqué ci-dessus.</li>
-</ul>
+Un  commentaire ne peut contenir la chaîne "`-->`", l'esperluette `&` ou bien le symbole plus-petit que `<`. Si vous voulez utiliser ces caractères, vous devez utiliser les caractères échapés comme `&amp;`pour l'esperluette et `&lt;` pour le plus petit que. Il est aussi recommandé `&gt;` pour le plus grand que, afin d'éviter toutes confusions.
 
-<h5 id="Exemple_4_-_Simple_commentaire_WebVTT">Exemple 4 - Simple commentaire WebVTT</h5>
+Un commentaire est constitué de ces trois composants:
 
-<pre class="eval">NOTE Ceci est un simple commentaire</pre>
+- La chaîne `NOTE`.
+- Un espace ou une nouvelle ligne.
+- Aucun ou plusieurs caractères sauf ceux indiqué ci-dessus.
 
-<h5 id="Exemple_5_-_Multi-line_comment">Exemple 5 - Multi-line comment</h5>
+##### Exemple 4 - Simple commentaire WebVTT
 
-<pre class="eval">NOTE
-Un autre commentaire qui est
-coupé sur plusieurs lignes.
+    NOTE Ceci est un simple commentaire
 
-NOTE Vous pouvez aussi faire un commentaire
-sur plusieurs lignes de cette façon.
-</pre>
+##### Exemple 5 - Multi-line comment
 
-<h5 id="Exemple_6_-_Usage_commun_des_commentaires">Exemple 6 - Usage commun des commentaires</h5>
+    NOTE
+    Un autre commentaire qui est
+    coupé sur plusieurs lignes.
 
-<pre class="eval">WEBVTT - Traduction de ce film que j'aime
+    NOTE Vous pouvez aussi faire un commentaire
+    sur plusieurs lignes de cette façon.
 
-NOTE
-Cette traduction a été faite par Kyle pour que
-ses amis puissent la voir avec leurs parents.
+##### Exemple 6 - Usage commun des commentaires
 
-1
-00:02:15.000 --&gt; 00:02:20.000
-- Ta en kopp varmt te.
-- Det är inte varmt.
+    WEBVTT - Traduction de ce film que j'aime
 
-2
-00:02:20.000 --&gt; 00:02:25.000
-- Har en kopp te.
-- Det smakar som te.
+    NOTE
+    Cette traduction a été faite par Kyle pour que
+    ses amis puissent la voir avec leurs parents.
 
-NOTE Cette dernière ligne n'est pas forcément bien traduite.
+    1
+    00:02:15.000 --> 00:02:20.000
+    - Ta en kopp varmt te.
+    - Det är inte varmt.
 
-3
-00:02:25.000 --&gt; 00:02:30.000
-- Ta en kopp
-</pre>
+    2
+    00:02:20.000 --> 00:02:25.000
+    - Har en kopp te.
+    - Det smakar som te.
 
-<h2 id="Styliser_les_répliques_WebTT">Styliser les répliques WebTT</h2>
+    NOTE Cette dernière ligne n'est pas forcément bien traduite.
 
-<p>Vous pouvez styliser des répliques WebVTT en cherchant les éléments qui correspondent à la pseudo-classe {{cssxref("::cue")}}.</p>
+    3
+    00:02:25.000 --> 00:02:30.000
+    - Ta en kopp
 
-<h3 id="Avec_du_CSS">Avec du CSS</h3>
+## Styliser les répliques WebTT
 
-<pre class="brush: css">video::cue {
+Vous pouvez styliser des répliques WebVTT en cherchant les éléments qui correspondent à la pseudo-classe {{cssxref("::cue")}}.
+
+### Avec du CSS
+
+```css
+video::cue {
   background-image: linear-gradient(to bottom, dimgray, lightgray);
   color: papayawhip;
 }
@@ -168,22 +156,24 @@ NOTE Cette dernière ligne n'est pas forcément bien traduite.
 video::cue(b) {
   color: peachpuff;
 }
-</pre>
+```
 
-<p>Here, all video elements are styled to use a gray linear gradient as their backgrounds, with a foreground color of <code>"papayawhip"</code>. In addition, text boldfaced using the {{HTMLElement("b")}} element are colored <code>"peachpuff"</code>.</p>
+Here, all video elements are styled to use a gray linear gradient as their backgrounds, with a foreground color of `"papayawhip"`. In addition, text boldfaced using the {{HTMLElement("b")}} element are colored `"peachpuff"`.
 
-<p>The HTML snippet below actually handles displaying the media itself.</p>
+The HTML snippet below actually handles displaying the media itself.
 
-<pre class="brush: html">&lt;video controls autoplay src="video.webm"&gt;
- &lt;track default src="track.vtt"&gt;
-&lt;/video&gt;
-</pre>
+```html
+<video controls autoplay src="video.webm">
+ <track default src="track.vtt">
+</video>
+```
 
-<h3 id="Within_the_WebVTT_file_itself">Within the WebVTT file itself</h3>
+### Within the WebVTT file itself
 
-<p>You can also define the style directly in the WebVTT file. In this case, you insert your CSS rules into the file with each rule preceded by the string <code>"STYLE"</code> all by itelf on a line of text, as shown below:</p>
+You can also define the style directly in the WebVTT file. In this case, you insert your CSS rules into the file with each rule preceded by the string `"STYLE"` all by itelf on a line of text, as shown below:
 
-<pre class="brush: plain">WEBVTT
+```plain
+WEBVTT
 
 STYLE
 ::cue {
@@ -199,644 +189,597 @@ STYLE
   color: peachpuff;
 }
 
-00:00:00.000 --&gt; 00:00:10.000
-- Hello &lt;b&gt;world&lt;/b&gt;.
+00:00:00.000 --> 00:00:10.000
+- Hello <b>world</b>.
 
-NOTE style blocks cannot appear after the first cue.</pre>
+NOTE style blocks cannot appear after the first cue.
+```
 
-<p>We can also use identifiers inside WebVTT file, which can be used for defining a new style for some particular cues in the file. The example where we wanted the transcription text to be red highlighted and the other part to remain normal, we can define it as follows using CSS. Where it must be noted that the CSS uses escape sequences the way they are used in HTML pages:</p>
+We can also use identifiers inside WebVTT file, which can be used for defining a new style for some particular cues in the file. The example where we wanted the transcription text to be red highlighted and the other part to remain normal, we can define it as follows using CSS. Where it must be noted that the CSS uses escape sequences the way they are used in HTML pages:
 
-<pre class="brush: plain">WEBVTT
+```plain
+WEBVTT
 
 1
-00:00.000 --&gt; 00:02.000
+00:00.000 --> 00:02.000
 That’s an, an, that’s an L!
 
 crédit de transcription
-00:04.000 --&gt; 00:05.000
+00:04.000 --> 00:05.000
 Transcrit par Célestes™
-</pre>
+```
 
-<pre class="brush: css">::cue(#\31) { color: lime; }
-::cue(#crédit\ de\ transcription) { color: red; }</pre>
+```css
+::cue(#\31) { color: lime; }
+::cue(#crédit\ de\ transcription) { color: red; }
+```
 
-<p>Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see {{anch("Cue settings")}} for more information):</p>
+Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see {{anch("Cue settings")}} for more information):
 
-<pre class="brush: plain">WEBVTT
+```plain
+WEBVTT
 
-00:00:00.000 --&gt; 00:00:04.000 position:10%,line-left align:left size:35%
+00:00:00.000 --> 00:00:04.000 position:10%,line-left align:left size:35%
 Where did he go?
 
-00:00:03.000 --&gt; 00:00:06.500 position:90% align:right size:35%
+00:00:03.000 --> 00:00:06.500 position:90% align:right size:35%
 I think he went down this lane.
 
-00:00:04.000 --&gt; 00:00:06.500 position:45%,line-right align:center size:35%
-What are you waiting for?</pre>
+00:00:04.000 --> 00:00:06.500 position:45%,line-right align:center size:35%
+What are you waiting for?
+```
 
-<h2 id="WebVTT_cues">WebVTT cues</h2>
+## WebVTT cues
 
-<p>A cue is a single subtitle block that has a single start time, end time, and textual payload. Example 6 consists of the header, a blank line, and then five cues separated by blank lines. A cue consists of five components:</p>
+A cue is a single subtitle block that has a single start time, end time, and textual payload. Example 6 consists of the header, a blank line, and then five cues separated by blank lines. A cue consists of five components:
 
-<ul>
- <li>An optional cue identifier followed by a newline.</li>
- <li>Cue timings.</li>
- <li>Optional cue settings with at least one space before the first and between each setting.</li>
- <li>A single newline.</li>
- <li>The cue payload text.</li>
-</ul>
+- An optional cue identifier followed by a newline.
+- Cue timings.
+- Optional cue settings with at least one space before the first and between each setting.
+- A single newline.
+- The cue payload text.
 
-<h5 id="Example_7_-_Example_of_a_cue">Example 7 - Example of a cue</h5>
+##### Example 7 - Example of a cue
 
-<pre class="brush: plain">1 - Title Crawl
-00:00:05.000 --&gt; 00:00:10.000 line:0 position:20% size:60% align:start
-Some time ago in a place rather distant....</pre>
+```plain
+1 - Title Crawl
+00:00:05.000 --> 00:00:10.000 line:0 position:20% size:60% align:start
+Some time ago in a place rather distant....
+```
 
-<h3 id="Cue_identifier">Cue identifier</h3>
+### Cue identifier
 
-<p>The identifier is a name that identifies the cue. It can be used to reference the cue from a script. It must not contain a newline and cannot contain the string "<code>--&gt;"</code>. It must end with a single newline. They do not have to be unique, although it is common to number them (e.g., 1, 2, 3, ...).</p>
+The identifier is a name that identifies the cue. It can be used to reference the cue from a script. It must not contain a newline and cannot contain the string "`-->"`. It must end with a single newline. They do not have to be unique, although it is common to number them (e.g., 1, 2, 3, ...).
 
-<h5 id="Example_8_-_Cue_identifier_from_Example_7">Example 8 - Cue identifier from Example 7</h5>
+##### Example 8 - Cue identifier from Example 7
 
-<pre class="brush: plain">1 - Title Crawl</pre>
+```plain
+1 - Title Crawl
+```
 
-<h5 id="Example_9_-_Common_usage_of_identifiers">Example 9 - Common usage of identifiers</h5>
+##### Example 9 - Common usage of identifiers
 
-<pre class="brush: plain">WEBVTT
+```plain
+WEBVTT
 
 1
-00:00:22.230 --&gt; 00:00:24.606
+00:00:22.230 --> 00:00:24.606
 This is the first subtitle.
 
 2
-00:00:30.739 --&gt; 00:00:34.074
+00:00:30.739 --> 00:00:34.074
 This is the second.
 
 3
-00:00:34.159 --&gt; 00:00:35.743
+00:00:34.159 --> 00:00:35.743
 Third
-</pre>
+```
 
-<h3 id="Cue_timings">Cue timings</h3>
+### Cue timings
 
-<p>A cue timing indicates when the cue is shown. It has a start and end time which are represented by timestamps. The end time must be greater than the start time, and the start time must be greater than or equal to all previous start times. Cues may have overlapping timings.</p>
+A cue timing indicates when the cue is shown. It has a start and end time which are represented by timestamps. The end time must be greater than the start time, and the start time must be greater than or equal to all previous start times. Cues may have overlapping timings.
 
-<p>If the WebVTT file is being used for chapters ({{HTMLElement("track")}} {{htmlattrxref("kind")}} is <code>chapters</code>) then the file cannot have overlapping timings.</p>
+If the WebVTT file is being used for chapters ({{HTMLElement("track")}} {{htmlattrxref("kind")}} is `chapters`) then the file cannot have overlapping timings.
 
-<p>Each cue timing contains five components:</p>
+Each cue timing contains five components:
 
-<ul>
- <li>Timestamp for start time.</li>
- <li>At least one space.</li>
- <li>The string "<code>--&gt;".</code></li>
- <li>At least one space.</li>
- <li>Timestamp for end time.
-  <ul>
-   <li>Which must be greater than the start time.</li>
-  </ul>
- </li>
-</ul>
+- Timestamp for start time.
+- At least one space.
+- The string "`-->".`
+- At least one space.
+- Timestamp for end time.
 
-<p>The timestamps must be in one of two formats:</p>
+  - Which must be greater than the start time.
 
-<ul>
- <li><code>mm:ss.ttt</code></li>
- <li><code>hh:mm:ss.ttt</code></li>
-</ul>
+The timestamps must be in one of two formats:
 
-<p>Where the components are defined as follows:</p>
+- `mm:ss.ttt`
+- `hh:mm:ss.ttt`
 
-<ul>
- <li><code>hh</code> is hours.
+Where the components are defined as follows:
 
-  <ul>
-   <li>Must be at least two digits.</li>
-   <li>Hours can be greater than two digits (e.g., 9999:00:00.000).</li>
-  </ul>
- </li>
- <li><code>mm</code> is minutes.
-  <ul>
-   <li>Must be between 00 and 59 inclusive.</li>
-  </ul>
- </li>
- <li><code>ss</code> is seconds.
-  <ul>
-   <li>Must be between 00 and 59 inclusive.</li>
-  </ul>
- </li>
- <li><code>ttt</code> is milliseconds.
-  <ul>
-   <li>Must be between 000 and 999 inclusive.</li>
-  </ul>
- </li>
-</ul>
+- `hh` is hours.
 
-<h5 id="Example_10_-_Basic_cue_timing_examples">Example 10 - Basic cue timing examples</h5>
+  - Must be at least two digits.
+  - Hours can be greater than two digits (e.g., 9999:00:00.000).
 
-<pre class="brush: plain">00:00:22.230 --&gt; 00:00:24.606
-00:00:30.739 --&gt; 00:00:34.074
-00:00:34.159 --&gt; 00:00:35.743
-00:00:35.827 --&gt; 00:00:40.122</pre>
+- `mm` is minutes.
 
-<h5 id="Example_11_-_Overlapping_cue_timing_examples">Example 11 - Overlapping cue timing examples</h5>
+  - Must be between 00 and 59 inclusive.
 
-<pre class="brush: plain">00:00:00.000 --&gt; 00:00:10.000
-00:00:05.000 --&gt; 00:01:00.000
-00:00:30.000 --&gt; 00:00:50.000</pre>
+- `ss` is seconds.
 
-<h5 id="Example_12_-_Non-overlapping_cue_timing_examples">Example 12 - Non-overlapping cue timing examples</h5>
+  - Must be between 00 and 59 inclusive.
 
-<pre class="brush: plain">00:00:00.000 --&gt; 00:00:10.000
-00:00:10.000 --&gt; 00:01:00.581
-00:01:00.581 --&gt; 00:02:00.100
-00:02:01.000 --&gt; 00:02:01.000</pre>
+- `ttt` is milliseconds.
 
-<h3 id="Cue_settings">Cue settings</h3>
+  - Must be between 000 and 999 inclusive.
 
-<p>Cue settings are optional components used to position where the cue payload text will be displayed over the video. This includes whether the text is displayed horizontally or vertically. There can be zero or more of them, and they can be used in any order so long as each setting is used no more than once.</p>
+##### Example 10 - Basic cue timing examples
 
-<p>The cue settings are added to the right of the cue timings. There must be one or more spaces between the cue timing and the first setting and between each setting. A setting's name and value are separated by a colon. The settings are case sensitive so use lower case as shown. There are five cue settings:</p>
+```plain
+00:00:22.230 --> 00:00:24.606
+00:00:30.739 --> 00:00:34.074
+00:00:34.159 --> 00:00:35.743
+00:00:35.827 --> 00:00:40.122
+```
 
-<ul>
- <li><strong>vertical</strong>
+##### Example 11 - Overlapping cue timing examples
 
-  <ul>
-   <li>Indicates that the text will be displayed vertically rather than horizontally, such as in some Asian languages.</li>
-  </ul>
+```plain
+00:00:00.000 --> 00:00:10.000
+00:00:05.000 --> 00:01:00.000
+00:00:30.000 --> 00:00:50.000
+```
+
+##### Example 12 - Non-overlapping cue timing examples
+
+```plain
+00:00:00.000 --> 00:00:10.000
+00:00:10.000 --> 00:01:00.581
+00:01:00.581 --> 00:02:00.100
+00:02:01.000 --> 00:02:01.000
+```
+
+### Cue settings
+
+Cue settings are optional components used to position where the cue payload text will be displayed over the video. This includes whether the text is displayed horizontally or vertically. There can be zero or more of them, and they can be used in any order so long as each setting is used no more than once.
+
+The cue settings are added to the right of the cue timings. There must be one or more spaces between the cue timing and the first setting and between each setting. A setting's name and value are separated by a colon. The settings are case sensitive so use lower case as shown. There are five cue settings:
+
+- **vertical**
+
+  - Indicates that the text will be displayed vertically rather than horizontally, such as in some Asian languages.
 
   <table>
-   <thead>
-    <tr>
-     <th colspan="2">Table 1 - vertical values</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-     <th><code>vertical:rl</code></th>
-     <td>writing direction is right to left</td>
-    </tr>
-    <tr>
-     <th><code>vertical:lr</code></th>
-     <td>writing direction is left to right</td>
-    </tr>
-   </tbody>
+    <thead>
+      <tr>
+        <th colspan="2">Table 1 - vertical values</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th><code>vertical:rl</code></th>
+        <td>writing direction is right to left</td>
+      </tr>
+      <tr>
+        <th><code>vertical:lr</code></th>
+        <td>writing direction is left to right</td>
+      </tr>
+    </tbody>
   </table>
- </li>
- <li><strong>line</strong>
-  <ul>
-   <li>Specifies where text appears vertically. If vertical is set, line specifies where text appears horizontally.</li>
-   <li>Value can be a line number.
-    <ul>
-     <li>The line height is the height of the first line of the cue as it appears on the video.</li>
-     <li>Positive numbers indicate top down.</li>
-     <li>Negative numbers indicate bottom up.</li>
-    </ul>
-   </li>
-   <li>Or value can be a percentage.
-    <ul>
-     <li>Must be an integer (i.e., no decimals) between 0 and 100 inclusive.</li>
-     <li>Must be followed by a percent sign (%).</li>
-    </ul>
-   </li>
-  </ul>
+
+- **line**
+
+  - Specifies where text appears vertically. If vertical is set, line specifies where text appears horizontally.
+  - Value can be a line number.
+
+    - The line height is the height of the first line of the cue as it appears on the video.
+    - Positive numbers indicate top down.
+    - Negative numbers indicate bottom up.
+
+  - Or value can be a percentage.
+
+    - Must be an integer (i.e., no decimals) between 0 and 100 inclusive.
+    - Must be followed by a percent sign (%).
 
   <table>
-   <thead>
-    <tr>
-     <th colspan="4">Table 2 - line examples</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-     <th></th>
-     <th><code>vertical</code> omitted</th>
-     <th><code>vertical:rl</code></th>
-     <th><code>vertical:lr</code></th>
-    </tr>
-    <tr>
-     <th><code>line:0</code></th>
-     <td>top</td>
-     <td>right</td>
-     <td>left</td>
-    </tr>
-    <tr>
-     <th><code>line:-1</code></th>
-     <td>bottom</td>
-     <td>left</td>
-     <td>right</td>
-    </tr>
-    <tr>
-     <th><code>line:0%</code></th>
-     <td>top</td>
-     <td>right</td>
-     <td>left</td>
-    </tr>
-    <tr>
-     <th><code>line:100%</code></th>
-     <td>bottom</td>
-     <td>left</td>
-     <td>right</td>
-    </tr>
-   </tbody>
+    <thead>
+      <tr>
+        <th colspan="4">Table 2 - line examples</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th></th>
+        <th><code>vertical</code> omitted</th>
+        <th><code>vertical:rl</code></th>
+        <th><code>vertical:lr</code></th>
+      </tr>
+      <tr>
+        <th><code>line:0</code></th>
+        <td>top</td>
+        <td>right</td>
+        <td>left</td>
+      </tr>
+      <tr>
+        <th><code>line:-1</code></th>
+        <td>bottom</td>
+        <td>left</td>
+        <td>right</td>
+      </tr>
+      <tr>
+        <th><code>line:0%</code></th>
+        <td>top</td>
+        <td>right</td>
+        <td>left</td>
+      </tr>
+      <tr>
+        <th><code>line:100%</code></th>
+        <td>bottom</td>
+        <td>left</td>
+        <td>right</td>
+      </tr>
+    </tbody>
   </table>
- </li>
- <li><strong>position</strong>
-  <ul>
-   <li>Specifies where the text will appear horizontally. If vertical is set, position specifies where the text will appear vertically.</li>
-   <li>Value is a percentage.</li>
-   <li>Must be an integer (no decimals) between 0 and 100 inclusive.</li>
-   <li>Must be followed by a percent sign (%).</li>
-  </ul>
+
+- **position**
+
+  - Specifies where the text will appear horizontally. If vertical is set, position specifies where the text will appear vertically.
+  - Value is a percentage.
+  - Must be an integer (no decimals) between 0 and 100 inclusive.
+  - Must be followed by a percent sign (%).
 
   <table>
-   <thead>
-    <tr>
-     <th colspan="4">Table 3 - position examples</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-     <th></th>
-     <th><code>vertical</code> omitted</th>
-     <th><code>vertical:rl</code></th>
-     <th><code>vertical:lr</code></th>
-    </tr>
-    <tr>
-     <th><code>position:0%</code></th>
-     <td>left</td>
-     <td>top</td>
-     <td>top</td>
-    </tr>
-    <tr>
-     <th><code>position:100%</code></th>
-     <td>right</td>
-     <td>bottom</td>
-     <td>bottom</td>
-    </tr>
-   </tbody>
+    <thead>
+      <tr>
+        <th colspan="4">Table 3 - position examples</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th></th>
+        <th><code>vertical</code> omitted</th>
+        <th><code>vertical:rl</code></th>
+        <th><code>vertical:lr</code></th>
+      </tr>
+      <tr>
+        <th><code>position:0%</code></th>
+        <td>left</td>
+        <td>top</td>
+        <td>top</td>
+      </tr>
+      <tr>
+        <th><code>position:100%</code></th>
+        <td>right</td>
+        <td>bottom</td>
+        <td>bottom</td>
+      </tr>
+    </tbody>
   </table>
- </li>
- <li><strong>size</strong>
-  <ul>
-   <li>Specifies the width of the text area. If vertical is set, size specifies the height of the text area.</li>
-   <li>Value is a percentage.</li>
-   <li>Must be an integer (i.e., no decimals) between 0 and 100 inclusive.</li>
-   <li>Must be followed by a percent sign (%).</li>
-  </ul>
+
+- **size**
+
+  - Specifies the width of the text area. If vertical is set, size specifies the height of the text area.
+  - Value is a percentage.
+  - Must be an integer (i.e., no decimals) between 0 and 100 inclusive.
+  - Must be followed by a percent sign (%).
 
   <table>
-   <thead>
-    <tr>
-     <th colspan="4">Table 4 - size examples</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-     <th></th>
-     <th><code>vertical</code> omitted</th>
-     <th><code>vertical:rl</code></th>
-     <th><code>vertical:lr</code></th>
-    </tr>
-    <tr>
-     <th><code>size:100%</code></th>
-     <td>full width</td>
-     <td>full height</td>
-     <td>full height</td>
-    </tr>
-    <tr>
-     <th><code>size:50%</code></th>
-     <td>half width</td>
-     <td>half height</td>
-     <td>half height</td>
-    </tr>
-   </tbody>
+    <thead>
+      <tr>
+        <th colspan="4">Table 4 - size examples</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th></th>
+        <th><code>vertical</code> omitted</th>
+        <th><code>vertical:rl</code></th>
+        <th><code>vertical:lr</code></th>
+      </tr>
+      <tr>
+        <th><code>size:100%</code></th>
+        <td>full width</td>
+        <td>full height</td>
+        <td>full height</td>
+      </tr>
+      <tr>
+        <th><code>size:50%</code></th>
+        <td>half width</td>
+        <td>half height</td>
+        <td>half height</td>
+      </tr>
+    </tbody>
   </table>
- </li>
- <li><strong>align</strong>
-  <ul>
-   <li>Specifies the alignment of the text. Text is aligned within the space given by the size cue setting if it is set.</li>
-  </ul>
+
+- **align**
+
+  - Specifies the alignment of the text. Text is aligned within the space given by the size cue setting if it is set.
 
   <table>
-   <thead>
-    <tr>
-     <th colspan="4">Table 5 - align values</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-     <th></th>
-     <th><code>vertical</code> omitted</th>
-     <th><code>vertical:rl</code></th>
-     <th><code>vertical:lr</code></th>
-    </tr>
-    <tr>
-     <th><code>align:start</code></th>
-     <td>left</td>
-     <td>top</td>
-     <td>top</td>
-    </tr>
-    <tr>
-     <th><code>align:center</code></th>
-     <td>centred horizontally</td>
-     <td>centred vertically</td>
-     <td>centred vertically</td>
-    </tr>
-    <tr>
-     <th><code>align:end</code></th>
-     <td>right</td>
-     <td>bottom</td>
-     <td>bottom</td>
-    </tr>
-   </tbody>
+    <thead>
+      <tr>
+        <th colspan="4">Table 5 - align values</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th></th>
+        <th><code>vertical</code> omitted</th>
+        <th><code>vertical:rl</code></th>
+        <th><code>vertical:lr</code></th>
+      </tr>
+      <tr>
+        <th><code>align:start</code></th>
+        <td>left</td>
+        <td>top</td>
+        <td>top</td>
+      </tr>
+      <tr>
+        <th><code>align:center</code></th>
+        <td>centred horizontally</td>
+        <td>centred vertically</td>
+        <td>centred vertically</td>
+      </tr>
+      <tr>
+        <th><code>align:end</code></th>
+        <td>right</td>
+        <td>bottom</td>
+        <td>bottom</td>
+      </tr>
+    </tbody>
   </table>
- </li>
-</ul>
 
-<h5 id="Example_13_-_Cue_setting_examples">Example 13 - Cue setting examples</h5>
+##### Example 13 - Cue setting examples
 
-<p>The first line demonstrates no settings. The second line might be used to overlay text on a sign or label. The third line might be used for a title. The last line might be used for an Asian language.</p>
+The first line demonstrates no settings. The second line might be used to overlay text on a sign or label. The third line might be used for a title. The last line might be used for an Asian language.
 
-<pre class="brush: plain">00:00:05.000 --&gt; 00:00:10.000
-00:00:05.000 --&gt; 00:00:10.000 line:63% position:72% align:start
-00:00:05.000 --&gt; 00:00:10.000 line:0 position:20% size:60% align:start
-00:00:05.000 --&gt; 00:00:10.000 vertical:rt line:-1 align:end
-</pre>
+```plain
+00:00:05.000 --> 00:00:10.000
+00:00:05.000 --> 00:00:10.000 line:63% position:72% align:start
+00:00:05.000 --> 00:00:10.000 line:0 position:20% size:60% align:start
+00:00:05.000 --> 00:00:10.000 vertical:rt line:-1 align:end
+```
 
-<h3 id="Cue_payload">Cue payload</h3>
+### Cue payload
 
-<p>The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.</p>
+The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.
 
-<p>A cue text payload cannot contain the string "<code>--&gt;"</code>, the ampersand character (&amp;), or the less-than sign (&lt;). Instead use the escape sequence "&amp;amp;" for ampersand and "&amp;lt;" for less-than. It is also recommended that you use the greater-than escape sequence "&amp;gt;" instead of the greater-than character (&gt;) to avoid confusion with tags. If you are using the WebVTT file for metadata these restrictions do not apply.</p>
+A cue text payload cannot contain the string "`-->"`, the ampersand character (&), or the less-than sign (<). Instead use the escape sequence "\&amp;" for ampersand and "\&lt;" for less-than. It is also recommended that you use the greater-than escape sequence "\&gt;" instead of the greater-than character (>) to avoid confusion with tags. If you are using the WebVTT file for metadata these restrictions do not apply.
 
-<p>In addition to the three escape sequences mentioned above, there are fours others. They are listed in the table below.</p>
+In addition to the three escape sequences mentioned above, there are fours others. They are listed in the table below.
 
 <table>
- <thead>
-  <tr>
-   <th colspan="3">Table 6 - Escape sequences</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th>Name</th>
-   <th>Character</th>
-   <th>Escape Sequence</th>
-  </tr>
-  <tr>
-   <td>Ampersand</td>
-   <td>&amp;</td>
-   <td><code>&amp;amp;</code></td>
-  </tr>
-  <tr>
-   <td>Less-than</td>
-   <td>&lt;</td>
-   <td><code>&amp;lt;</code></td>
-  </tr>
-  <tr>
-   <td>Greater-than</td>
-   <td>&gt;</td>
-   <td><code>&amp;gt;</code></td>
-  </tr>
-  <tr>
-   <td>Left-to-right mark</td>
-   <td></td>
-   <td><code>&amp;lrm;</code></td>
-  </tr>
-  <tr>
-   <td>Right-to-left mark</td>
-   <td></td>
-   <td><code>&amp;rlm;</code></td>
-  </tr>
-  <tr>
-   <td>Non-breaking space</td>
-   <td><code> </code></td>
-   <td><code>&amp;nbsp;</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th colspan="3">Table 6 - Escape sequences</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>Character</th>
+      <th>Escape Sequence</th>
+    </tr>
+    <tr>
+      <td>Ampersand</td>
+      <td>&#x26;</td>
+      <td><code>&#x26;amp;</code></td>
+    </tr>
+    <tr>
+      <td>Less-than</td>
+      <td>&#x3C;</td>
+      <td><code>&#x26;lt;</code></td>
+    </tr>
+    <tr>
+      <td>Greater-than</td>
+      <td>></td>
+      <td><code>&#x26;gt;</code></td>
+    </tr>
+    <tr>
+      <td>Left-to-right mark</td>
+      <td></td>
+      <td><code>&#x26;lrm;</code></td>
+    </tr>
+    <tr>
+      <td>Right-to-left mark</td>
+      <td></td>
+      <td><code>&#x26;rlm;</code></td>
+    </tr>
+    <tr>
+      <td>Non-breaking space</td>
+      <td><code></code></td>
+      <td><code>&#x26;nbsp;</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Cue_payload_text_tags">Cue payload text tags</h3>
+### Cue payload text tags
 
-<p>There are a number of tags, such as <code>&lt;bold&gt;</code>, that can be used. However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute {{htmlattrxref("kind")}} is <code>chapters</code> then you cannot use tags.</p>
+There are a number of tags, such as `<bold>`, that can be used. However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute {{htmlattrxref("kind")}} is `chapters` then you cannot use tags.
 
-<ul>
- <li><strong>Timestamp tag</strong>
+- **Timestamp tag**
 
-  <ul>
-   <li>The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp. The <em>active text</em> is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload. Any text before the <em>active text</em> in the payload is <em>previous text</em> . Any text beyond the <em>active text</em> is <em>future text</em> . This enables karaoke style captions.</li>
-  </ul>
+  - The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp. The _active text_ is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload. Any text before the _active text_ in the payload is _previous text_ . Any text beyond the _active text_ is _future text_ . This enables karaoke style captions.
 
-  <div>
-  <h5 id="Example_12_-_Karaoke_style_text">Example 12 - Karaoke style text</h5>
+  ##### Example 12 - Karaoke style text
 
-  <pre class="brush: plain">1
-00:16.500 --&gt; 00:18.500
-When the moon &lt;00:17.500&gt;hits your eye
+  ```plain
+  1
+  00:16.500 --> 00:18.500
+  When the moon <00:17.500>hits your eye
 
-1
-00:00:18.500 --&gt; 00:00:20.500
-Like a &lt;00:19.000&gt;big-a &lt;00:19.500&gt;pizza &lt;00:20.000&gt;pie
+  1
+  00:00:18.500 --> 00:00:20.500
+  Like a <00:19.000>big-a <00:19.500>pizza <00:20.000>pie
 
-1
-00:00:20.500 --&gt; 00:00:21.500
-That's &lt;00:00:21.000&gt;amore
-</pre>
-  </div>
- </li>
-</ul>
+  1
+  00:00:20.500 --> 00:00:21.500
+  That's <00:00:21.000>amore
+  ```
 
-<p>The following tags are the HTML tags allowed in a cue and require opening and closing tags (e.g., <code>&lt;b&gt;text&lt;/b&gt;</code>).</p>
+The following tags are the HTML tags allowed in a cue and require opening and closing tags (e.g., `<b>text</b>`).
 
-<ul>
- <li><strong>Class tag</strong> (<code>&lt;c&gt;&lt;/c&gt;</code>)
+- **Class tag** (`<c></c>`)
 
-  <ul>
-   <li>Style the contained text using a CSS class.</li>
-  </ul>
+  - Style the contained text using a CSS class.
 
-  <div>
-  <h5 id="Example_14_-_Class_tag">Example 14 - Class tag</h5>
+  ##### Example 14 - Class tag
 
-  <pre class="brush: html">&lt;c.classname&gt;text&lt;/c&gt;</pre>
-  </div>
- </li>
- <li><strong>Italics tag</strong> (<code>&lt;i&gt;&lt;/i&gt;</code>)
-  <ul>
-   <li>Italicize the contained text.</li>
-  </ul>
+  ```html
+  <c.classname>text</c>
+  ```
 
-  <div>
-  <h5 id="Example_15_-_Italics_tag">Example 15 - Italics tag</h5>
+- **Italics tag** (`<i></i>`)
 
-  <pre class="brush: html">&lt;i&gt;text&lt;/i&gt;</pre>
-  </div>
- </li>
- <li><strong>Bold tag</strong> (<code>&lt;b&gt;&lt;/b&gt;</code>)
-  <ul>
-   <li>Bold the contained text.</li>
-  </ul>
+  - Italicize the contained text.
 
-  <div>
-  <h5 id="Example_16_-_Bold_tag">Example 16 - Bold tag</h5>
+  ##### Example 15 - Italics tag
 
-  <pre class="brush: html">&lt;b&gt;text&lt;/b&gt;</pre>
-  </div>
- </li>
- <li><strong>Underline tag</strong> (<code>&lt;u&gt;&lt;/u&gt;</code>)
-  <ul>
-   <li>Underline the contained text.</li>
-  </ul>
+  ```html
+  <i>text</i>
+  ```
 
-  <div>
-  <h5 id="Example_17_-_Underline_tag">Example 17 - Underline tag</h5>
+- **Bold tag** (`<b></b>`)
 
-  <pre class="brush: html">&lt;u&gt;text&lt;/u&gt;</pre>
-  </div>
- </li>
- <li><strong>Ruby tag</strong> (<code>&lt;ruby&gt;&lt;/ruby&gt;</code>)
-  <ul>
-   <li>Used with ruby text tags to display <a href="https://en.wikipedia.org/wiki/Ruby_character">ruby characters</a> (i.e., small annotative characters above other characters).</li>
-  </ul>
+  - Bold the contained text.
 
-  <div>
-  <h5 id="Example_18_-_Ruby_tag">Example 18 - Ruby tag</h5>
+  ##### Example 16 - Bold tag
 
-  <pre class="brush: html">&lt;ruby&gt;WWW&lt;rt&gt;World Wide Web&lt;/rt&gt;oui&lt;rt&gt;yes&lt;/rt&gt;&lt;/ruby&gt;</pre>
-  </div>
- </li>
- <li><strong>Ruby text tag</strong> (<code>&lt;rt&gt;&lt;/rt&gt;</code>)
-  <ul>
-   <li>Used with ruby tags to display <a href="https://en.wikipedia.org/wiki/Ruby_character">ruby characters</a> (i.e., small annotative characters above other characters).</li>
-  </ul>
+  ```html
+  <b>text</b>
+  ```
 
-  <div>
-  <h5 id="Example_19_-_Ruby_text_tag">Example 19 - Ruby text tag</h5>
+- **Underline tag** (`<u></u>`)
 
-  <pre class="brush: html">&lt;ruby&gt;WWW&lt;rt&gt;World Wide Web&lt;/rt&gt;oui&lt;rt&gt;yes&lt;/rt&gt;&lt;/ruby&gt;</pre>
-  </div>
- </li>
- <li><strong>Voice tag</strong> (<code>&lt;v&gt;&lt;/v&gt;</code>)
-  <ul>
-   <li>Similar to class tag, also used to style the contained text using CSS.</li>
-  </ul>
+  - Underline the contained text.
 
-  <div>
-  <h5 id="Example_20_-_Voice_tag">Example 20 - Voice tag</h5>
+  ##### Example 17 - Underline tag
 
-  <pre class="brush: html">&lt;v Bob&gt;text&lt;/v&gt;</pre>
-  </div>
- </li>
-</ul>
+  ```html
+  <u>text</u>
+  ```
 
-<h2 id="Methods_and_properties">Methods and properties</h2>
+- **Ruby tag** (`<ruby></ruby>`)
 
-<p>The methods used in WebVTT are those which are used to alter the cue or region as the attributes for both interfaces are different. We can categorize them for better understanding relating to each interface in WebVTT:</p>
+  - Used with ruby text tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
 
-<ul>
- <li>
-  <h3 id="VTTCue">VTTCue</h3>
+  ##### Example 18 - Ruby tag
 
-  <ul>
-   <li>The methods which are available in this interface are:
-    <ul>
-     <li>GetCueAsHTML to get the HTML of that Cue.</li>
-     <li>VTT Constructor for creating new objects of Cues.</li>
-     <li>Autokeyword.</li>
-     <li>DirectionSetting: to set the direction of caption or text in a file.</li>
-     <li>LineAlignment: to adjust the line alignment.</li>
-     <li>PositionAlignSetting: to adjust the position of text.</li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li>
-  <h3 id="VTTRegion">VTTRegion</h3>
+  ```html
+  <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
+  ```
 
-  <ul>
-   <li>The methods used for region are listed below along with description of their functionality:
-    <ul>
-     <li>ScrollSetting: For adjusting the scrolling setting of all nodes present in given region.</li>
-     <li>VTT Region Constructor: for construction of new VTT Regions.</li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+- **Ruby text tag** (`<rt></rt>`)
 
-<h2 id="Tutorial_on_how_to_write_a_WebVTT_file">Tutorial on how to write a WebVTT file</h2>
+  - Used with ruby tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
 
-<p>There are few steps that can be followed to write a simple webVTT file. Before start, it must be noted that you can make use of a notepad and then save the file as ‘.vtt’ file. Steps are given below:</p>
+  ##### Example 19 - Ruby text tag
 
-<ol>
- <li>Open a notepad.</li>
- <li>The first line of WebVTT is standardized similar to the way some other languages require you to put headers as the file starts to indicate the file type. On the very first line you have to write:</li>
-</ol>
+  ```html
+  <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
+  ```
 
-<pre class="brush: plain">WEBVTT</pre>
+- **Voice tag** (`<v></v>`)
 
-<p>Leave the second line blank, and on the third line the time for first cue is to be specified. For example, for a first cue starting at time 1 second and ending at 5 seconds, it is written as:</p>
+  - Similar to class tag, also used to style the contained text using CSS.
 
-<pre class="brush: plain">00:01.000 --&gt; 00:05.000</pre>
+  ##### Example 20 - Voice tag
 
-<ol>
- <li>On the next line you can write the caption for this cue which will run from the first second to the fifth second, inclusive.</li>
- <li>Following the similar steps, a complete WebVTT file for specific video or audio file can be made.</li>
-</ol>
+  ```html
+  <v Bob>text</v>
+  ```
 
-<h2 id="CSS_pseudo-classes">CSS pseudo-classes</h2>
+## Methods and properties
 
-<p>CSS pseudo classes allow us to classify the type of object which we want to differentiate from other types of objects. It works in similar manner in WebVTT files as it works in HTML file.</p>
+The methods used in WebVTT are those which are used to alter the cue or region as the attributes for both interfaces are different. We can categorize them for better understanding relating to each interface in WebVTT:
 
-<p>It is one of the good features supported by WebVTT is the localization and use of class elements which can be used in same way they are used in HTML and CSS to classify the style for particular type of objects, but here these are used for styling and classifying the Cues as shown below:</p>
+- ### VTTCue
 
-<pre class="brush: plain">WEBVTT
+  - The methods which are available in this interface are:
 
-04:02.500 --&gt; 04:05.000
+    - GetCueAsHTML to get the HTML of that Cue.
+    - VTT Constructor for creating new objects of Cues.
+    - Autokeyword.
+    - DirectionSetting: to set the direction of caption or text in a file.
+    - LineAlignment: to adjust the line alignment.
+    - PositionAlignSetting: to adjust the position of text.
+
+- ### VTTRegion
+
+  - The methods used for region are listed below along with description of their functionality:
+
+    - ScrollSetting: For adjusting the scrolling setting of all nodes present in given region.
+    - VTT Region Constructor: for construction of new VTT Regions.
+
+## Tutorial on how to write a WebVTT file
+
+There are few steps that can be followed to write a simple webVTT file. Before start, it must be noted that you can make use of a notepad and then save the file as ‘.vtt’ file. Steps are given below:
+
+1.  Open a notepad.
+2.  The first line of WebVTT is standardized similar to the way some other languages require you to put headers as the file starts to indicate the file type. On the very first line you have to write:
+
+```plain
+WEBVTT
+```
+
+Leave the second line blank, and on the third line the time for first cue is to be specified. For example, for a first cue starting at time 1 second and ending at 5 seconds, it is written as:
+
+```plain
+00:01.000 --> 00:05.000
+```
+
+1.  On the next line you can write the caption for this cue which will run from the first second to the fifth second, inclusive.
+2.  Following the similar steps, a complete WebVTT file for specific video or audio file can be made.
+
+## CSS pseudo-classes
+
+CSS pseudo classes allow us to classify the type of object which we want to differentiate from other types of objects. It works in similar manner in WebVTT files as it works in HTML file.
+
+It is one of the good features supported by WebVTT is the localization and use of class elements which can be used in same way they are used in HTML and CSS to classify the style for particular type of objects, but here these are used for styling and classifying the Cues as shown below:
+
+```plain
+WEBVTT
+
+04:02.500 --> 04:05.000
 J’ai commencé le basket à l'âge de 13, 14 ans
 
-04:05.001 --&gt; 04:07.800
-Sur les &lt;i.foreignphrase&gt;&lt;lang en&gt;playground&lt;/lang&gt;&lt;/i&gt;, ici à Montpellier</pre>
+04:05.001 --> 04:07.800
+Sur les <i.foreignphrase><lang en>playground</lang></i>, ici à Montpellier
+```
 
-<p>In the above example it can be observed that we can use the identifier and pseudo class name for defining the language of caption, where <code>&lt;i&gt;</code> tag is for italics.</p>
+In the above example it can be observed that we can use the identifier and pseudo class name for defining the language of caption, where `<i>` tag is for italics.
 
-<p>The type of pseudo class is determined by the selector it is using and working is similar in nature as it works in HTML. Following CSS pseudo classes can be used:</p>
+The type of pseudo class is determined by the selector it is using and working is similar in nature as it works in HTML. Following CSS pseudo classes can be used:
 
-<ul>
- <li>Lang (Lanugage): e.g., p:lang(it).</li>
- <li>Link: e.g., a:link.</li>
- <li>Nth-last-child: e.g., p:nth-last-child(2).</li>
- <li>Nth-child(n): e.g., p:nth-child(2).</li>
-</ul>
+- Lang (Lanugage): e.g., p:lang(it).
+- Link: e.g., a:link.
+- Nth-last-child: e.g., p:nth-last-child(2).
+- Nth-child(n): e.g., p:nth-child(2).
 
-<p>Where p and a are the tags which are used in HTML for paragraph and link, respectively and they can be replaced by identifiers which are used for Cues in WebVTT file.</p>
+Where p and a are the tags which are used in HTML for paragraph and link, respectively and they can be replaced by identifiers which are used for Cues in WebVTT file.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
- <tbody>
-  <tr>
-   <th>Specification</th>
-  </tr>
-  <tr>
-   <td><a href="https://w3c.github.io/webvtt/">WebVTT: The Web Video Text Tracks Format</a></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                             |
+| ------------------------------------------------------------------------- |
+| [WebVTT: The Web Video Text Tracks Format](https://w3c.github.io/webvtt/) |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="VTTCue_interface_2"><code>VTTCue</code> interface</h3>
+### `VTTCue` interface
 
-<p>{{Compat("api.VTTCue", 0)}}</p>
+{{Compat("api.VTTCue", 0)}}
 
-<h3 id="TextTrack_interface"><code>TextTrack</code> interface</h3>
+### `TextTrack` interface
 
-<p>{{Compat("api.TextTrack", 0)}}</p>
+{{Compat("api.TextTrack", 0)}}
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p>Prior to Firefox 50, the <code>AlignSetting</code> enum (representing possible values for {{domxref("VTTCue.align")}}) incorrectly included the value <code>"middle"</code> instead of <code>"center"</code>. This has been corrected.</p>
+Prior to Firefox 50, the `AlignSetting` enum (representing possible values for {{domxref("VTTCue.align")}}) incorrectly included the value `"middle"` instead of `"center"`. This has been corrected.
 
-<p>WebVTT was implemented in Firefox 24 behind the preference {{pref("media.webvtt.enabled")}}, which is disabled by default; you can enable it by setting this preference to <code>true</code>. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to <code>false</code>.</p>
+WebVTT was implemented in Firefox 24 behind the preference {{pref("media.webvtt.enabled")}}, which is disabled by default; you can enable it by setting this preference to `true`. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to `false`.
 
-<p>Prior to Firefox 58, the <code>REGION</code> keyword was creating {{domxref("VTTRegion")}} objects, but they were not being used. Firefox 58 now fully supports <code>VTTRegion</code> and its use; however, this feature is disabled by default behind the preference <code>media.webvtt.regions.enabled</code>; set it to <code>true</code> to enable region support in Firefox 58. Regions are enabled by default starting in Firefox 59 (see bugs {{bug(1338030)}} and {{bug(1415805)}}).</p>
+Prior to Firefox 58, the `REGION` keyword was creating {{domxref("VTTRegion")}} objects, but they were not being used. Firefox 58 now fully supports `VTTRegion` and its use; however, this feature is disabled by default behind the preference `media.webvtt.regions.enabled`; set it to `true` to enable region support in Firefox 58. Regions are enabled by default starting in Firefox 59 (see bugs {{bug(1338030)}} and {{bug(1415805)}}).

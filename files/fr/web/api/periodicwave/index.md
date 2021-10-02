@@ -13,60 +13,39 @@ tags:
   - sinusoïde
 translation_of: Web/API/PeriodicWave
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>L'objet <strong><code>PeriodicWave</code></strong> permet de définir une forme d'onde personnalisée, pouvant être utilisée comme sortie d'un {{domxref("OscillatorNode")}}.</p>
-</div>
+L'objet **`PeriodicWave`** permet de définir une forme d'onde personnalisée, pouvant être utilisée comme sortie d'un {{domxref("OscillatorNode")}}.
 
-<p><code>PeriodicWave</code> n'a ni entrée ni sortie ; elle doit être créée avec {{domxref("AudioContext.createPeriodicWave()")}} et être assignée à un OscillatorNode avec {{domxref("OscillatorNode.setPeriodicWave()")}}.</p>
+`PeriodicWave` n'a ni entrée ni sortie ; elle doit être créée avec {{domxref("AudioContext.createPeriodicWave()")}} et être assignée à un OscillatorNode avec {{domxref("OscillatorNode.setPeriodicWave()")}}.
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{domxref("PeriodicWave.PeriodicWave()")}}</dt>
- <dd>Crée une <code>PeriodicWave</code> (onde périodique) avec toutes les valeurs optionelles mises par défaut. Pour établir des valeurs personnalisées, il faut utiliser le constructeur {{domxref("AudioContext.createPeriodicWave()")}}.</dd>
-</dl>
+- {{domxref("PeriodicWave.PeriodicWave()")}}
+  - : Crée une `PeriodicWave` (onde périodique) avec toutes les valeurs optionelles mises par défaut. Pour établir des valeurs personnalisées, il faut utiliser le constructeur {{domxref("AudioContext.createPeriodicWave()")}}.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Aucune; par ailleurs, <code>PeriodicWave</code> n'hérite d'aucune propriété.</em></p>
+_Aucune; par ailleurs, `PeriodicWave` n'hérite d'aucune propriété._
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Aucune; par ailleurs, <code>PeriodicWave</code> n'hérite d'aucune méthode.</em></p>
+_Aucune; par ailleurs, `PeriodicWave` n'hérite d'aucune méthode._
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>{{page("/fr/docs/Web/API/BaseAudioContext/createPeriodicWave","Exemple")}}</p>
+{{page("/fr/docs/Web/API/BaseAudioContext/createPeriodicWave","Exemple")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#periodicwave', 'PeriodicWave')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Status                               | Comment |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
+| {{SpecName('Web Audio API', '#periodicwave', 'PeriodicWave')}} | {{Spec2('Web Audio API')}} |         |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>
+{{Compat("api.PeriodicWave")}}
 
+## Voir aussi
 
-<p>{{Compat("api.PeriodicWave")}}</p>
-</div>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Utiliser l'API Web Audio</a></li>
-</ul>
+- [Utiliser l'API Web Audio](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)

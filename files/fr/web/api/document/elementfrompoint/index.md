@@ -7,44 +7,54 @@ translation_of: Web/API/DocumentOrShadowRoot/elementFromPoint
 translation_of_original: Web/API/Document/elementFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
-<p>Renvoie l'élément visible au point donné, spécifié relativement au point supérieur gauche visible dans le document.</p>
-<h3 id="Syntaxe">Syntaxe</h3>
-<pre class="eval"><i>element</i> = document.elementFromPoint(<i>x</i>,<i>y</i>);
-</pre>
-<p>where</p>
-<ul>
- <li><code>element</code> est un objet <a href="fr/DOM/element">element</a>.</li>
- <li><code>x</code> et <code>y</code> spécifient les coordonnées à vérifier.</li>
-</ul>
-<h3 id="Exemple">Exemple</h3>
-<pre class="brush: html">&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Exemple d'utilisation d'elementFromPoint&lt;/title&gt;
+{{ ApiRef() }}
 
-&lt;script type="text/javascript"&gt;
+### Résumé
+
+Renvoie l'élément visible au point donné, spécifié relativement au point supérieur gauche visible dans le document.
+
+### Syntaxe
+
+    element = document.elementFromPoint(x,y);
+
+where
+
+- `element` est un objet [element](fr/DOM/element).
+- `x` et `y` spécifient les coordonnées à vérifier.
+
+### Exemple
+
+```html
+<html>
+<head>
+<title>Exemple d'utilisation d'elementFromPoint</title>
+
+<script type="text/javascript">
 
 function changeColor(newColor)
 {
  elem = document.elementFromPoint(2, 2);
  elem.style.color = newColor;
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-&lt;p id="para1"&gt;Un peu de texte ici&lt;/p&gt;
-&lt;button onclick="changeColor('blue');"&gt;bleu&lt;/button&gt;
-&lt;button onclick="changeColor('red');"&gt;rouge&lt;/button&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-<h3 id="Notes">Notes</h3>
-<p>Si l'élément au point spécifié appartient à un autre document (par exemple, les sous-document d'un iframe), l'élément dans le DOM du document appelant (l'iframe lui-même) est renvoyé. Si l'élément au point donné est anonyme ou du contenu généré par XBL, comme la barre de défilement d'une boîte de texte, le premier élément parent non anonyme (par exemple, la boîte de texte) est renvoyé.</p>
-<p>Si le point spécifié est en dehors de la portion visible du document ou que l'une ou l'autre des coordonnées est négative, le résultat est <code>NULL</code>.</p>
-<p>{{ Note("Les appelants qui sont des documents XUL devraient attendre que l\'évènement <code>onload</code> se soit déclenché avant d\'appeler cette méthode.") }}</p>
-<h3 id="Sp.C3.A9cification">Spécification</h3>
-<ul>
- <li>Spécification préliminaire : <code><a href="http://dev.w3.org/csswg/cssom/#documentlayout-elementfrompoint">elementFromPoint</a></code></li>
-</ul>
+<body>
+<p id="para1">Un peu de texte ici</p>
+<button onclick="changeColor('blue');">bleu</button>
+<button onclick="changeColor('red');">rouge</button>
+</body>
+</html>
+```
+
+### Notes
+
+Si l'élément au point spécifié appartient à un autre document (par exemple, les sous-document d'un iframe), l'élément dans le DOM du document appelant (l'iframe lui-même) est renvoyé. Si l'élément au point donné est anonyme ou du contenu généré par XBL, comme la barre de défilement d'une boîte de texte, le premier élément parent non anonyme (par exemple, la boîte de texte) est renvoyé.
+
+Si le point spécifié est en dehors de la portion visible du document ou que l'une ou l'autre des coordonnées est négative, le résultat est `NULL`.
+
+{{ Note("Les appelants qui sont des documents XUL devraient attendre que l\'évènement <code>onload</code> se soit déclenché avant d\'appeler cette méthode.") }}
+
+### Spécification
+
+- Spécification préliminaire : [`elementFromPoint`](http://dev.w3.org/csswg/cssom/#documentlayout-elementfrompoint)

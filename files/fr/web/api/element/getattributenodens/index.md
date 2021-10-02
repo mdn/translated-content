@@ -3,38 +3,33 @@ title: element.getAttributeNodeNS
 slug: Web/API/Element/getAttributeNodeNS
 translation_of: Web/API/Element/getAttributeNodeNS
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
+### Résumé
 
-<p>Renvoie le nœud <code>Attr</code> pour l'attribut avec l'espace de noms et le nom donnés.</p>
+Renvoie le nœud `Attr` pour l'attribut avec l'espace de noms et le nom donnés.
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval"><em>attributeNode</em> = element.getAttributeNodeNS(<em>namespace</em>,<em>nodeName</em>)
-</pre>
+    attributeNode = element.getAttributeNodeNS(namespace,nodeName)
 
-<h3 id="Param.C3.A8tres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>attributeNode</code></dt>
- <dd>Le nœud pour l'attribut spécifié.</dd>
- <dt><code>namespace</code></dt>
- <dd>Une chaîne spécifiant l'espace de noms de l'attribut.</dd>
- <dt><code>nodeName</code></dt>
- <dd>Une chaîne spécifiant le nom de l'attribut.</dd>
-</dl>
+- `attributeNode`
+  - : Le nœud pour l'attribut spécifié.
+- `namespace`
+  - : Une chaîne spécifiant l'espace de noms de l'attribut.
+- `nodeName`
+  - : Une chaîne spécifiant le nom de l'attribut.
 
-<p>== Example == TBD The example needs to be fixed // html: &lt;div id="top" /&gt; t = document.getElementById("top"); specialNode = t.getAttributeNodeNS( "<a href="http://www.mozilla.org/ns/specialspace">http://www.mozilla.org/ns/specialspace</a>", "id"); // iNode.value = "full-top"</p>
+\== Example == TBD The example needs to be fixed // html: \<div id="top" /> t = document.getElementById("top"); specialNode = t.getAttributeNodeNS( "<http://www.mozilla.org/ns/specialspace>", "id"); // iNode.value = "full-top"
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p><code>getAttributeNodeNS</code> est plus spécifique que {{ domxref("Element.getAttributeNode") }} en ce qu'il permet de spécifier les attributs faisant partis d'un espace de noms particulier. La méthode de réglage correspondante est {{ domxref("Element.setAttributeNodeNS") }}.</p>
+`getAttributeNodeNS` est plus spécifique que {{ domxref("Element.getAttributeNode") }} en ce qu'il permet de spécifier les attributs faisant partis d'un espace de noms particulier. La méthode de réglage correspondante est {{ domxref("Element.setAttributeNodeNS") }}.
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h3 id="Sp.C3.A9cification">Spécification</h3>
+### Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS">DOM Level 2 Core: getAttributeNodeNS (en)</a> <small>— <a href="http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElGetAtNodeNS">traduction en français</a> (non normative)</small></li>
-</ul>
+- [DOM Level 2 Core: getAttributeNodeNS (en)](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElGetAtNodeNS) (non normative)

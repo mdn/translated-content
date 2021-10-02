@@ -5,51 +5,61 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/Window/closed
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
-<p>Cette propriété indique si la fenêtre référencée est fermée ou non.</p>
-<h3 id="Syntaxe">Syntaxe</h3>
-<pre>isClosed = window.closed;
-</pre>
-<p>Cette propriété est en lecture seule.</p>
-<h3 id="Valeur_renvoy.C3.A9e">Valeur renvoyée</h3>
-<dl>
- <dt>
-  <code>isClosed</code></dt>
- <dd>
-  Un booléen. Les valeurs possibles sont :</dd>
-</dl>
-<ul>
- <li><code>false</code> : La fenêtre est ouverte.</li>
- <li><code>true</code> : La fenêtre a été fermée.</li>
-</ul>
-<h3 id="Exemples">Exemples</h3>
-<h4 id="Chargement_d.27une_page_dans_la_fen.C3.AAtre_principale_depuis_un_popup">Chargement d'une page dans la fenêtre principale depuis un popup</h4>
-<p>L'exemple suivant montre comment un popup peut transmettre un choix de l'utilisateur à la fenêtre principale en y ouvrant une URL différente. Mais il faut d'abord vérifier que la fenêtre principale et encore ouverte.</p>
-<pre>if (!window.opener.closed) {
-  // La fenêtre principale est encore là,
-  // on peut donc y charger une autre page
-  window.opener.location.href = newURL;
-}
-</pre>
-<h4 id="Appel_d.27une_fonction_dans_un_popup_ouvert_pr.C3.A9c.C3.A9demment">Appel d'une fonction dans un popup ouvert précédemment</h4>
-<p>Dans cette exemple, la fonction <code>refreshPopupWindow()</code> appelle une fonction dans le popup pour rafraichir son contenu. Cependant, si le popup n'a pas encore été ouvert ou si l'utilisateur l'a fermé, un nouveau popup est ouvert.</p>
-<pre>var popupWindow = null;
+{{ ApiRef() }}
 
-function refreshPopupWindow() {
-  if (popupWindow &amp;&amp; !popupWindow.closed) {
-    // Le popup a déjà été ouvert et il l'est encore.
-    // On peut donc appeler sa fonction doRefresh().
-    popupWindow.doRefresh();
-  } else {
-    // Il est nécessaire d'ouvrir d'abord le popup.
-    popupWindow = window.open("popup.html");
-  }
-}
-</pre>
-<h3 id="Sp.C3.A9cification">Spécification</h3>
-<p>DOM Level 0. <code>window.closed</code> ne fait partie d'aucune spécification ou recommandation technique du W3C.</p>
-<h3 id="R.C3.A9f.C3.A9rence_suppl.C3.A9mentaire">Référence supplémentaire</h3>
-<ul>
- <li><a href="http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/reference/properties/closed.asp">window.closed sur MSDN</a></li>
-</ul>
+### Résumé
+
+Cette propriété indique si la fenêtre référencée est fermée ou non.
+
+### Syntaxe
+
+    isClosed = window.closed;
+
+Cette propriété est en lecture seule.
+
+### Valeur renvoyée
+
+- `isClosed`
+  - : Un booléen. Les valeurs possibles sont :
+
+<!---->
+
+- `false` : La fenêtre est ouverte.
+- `true` : La fenêtre a été fermée.
+
+### Exemples
+
+#### Chargement d'une page dans la fenêtre principale depuis un popup
+
+L'exemple suivant montre comment un popup peut transmettre un choix de l'utilisateur à la fenêtre principale en y ouvrant une URL différente. Mais il faut d'abord vérifier que la fenêtre principale et encore ouverte.
+
+    if (!window.opener.closed) {
+      // La fenêtre principale est encore là,
+      // on peut donc y charger une autre page
+      window.opener.location.href = newURL;
+    }
+
+#### Appel d'une fonction dans un popup ouvert précédemment
+
+Dans cette exemple, la fonction `refreshPopupWindow()` appelle une fonction dans le popup pour rafraichir son contenu. Cependant, si le popup n'a pas encore été ouvert ou si l'utilisateur l'a fermé, un nouveau popup est ouvert.
+
+    var popupWindow = null;
+
+    function refreshPopupWindow() {
+      if (popupWindow && !popupWindow.closed) {
+        // Le popup a déjà été ouvert et il l'est encore.
+        // On peut donc appeler sa fonction doRefresh().
+        popupWindow.doRefresh();
+      } else {
+        // Il est nécessaire d'ouvrir d'abord le popup.
+        popupWindow = window.open("popup.html");
+      }
+    }
+
+### Spécification
+
+DOM Level 0. `window.closed` ne fait partie d'aucune spécification ou recommandation technique du W3C.
+
+### Référence supplémentaire
+
+- [window.closed sur MSDN](http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/reference/properties/closed.asp)

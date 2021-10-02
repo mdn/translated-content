@@ -10,38 +10,32 @@ tags:
   - Suppression
 translation_of: Web/API/Element/removeAttribute
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><code>removeAttribute</code> supprime un attribut de l'élément spécifié.</p>
+`removeAttribute` supprime un attribut de l'élément spécifié.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>element</em>.removeAttribute(<em>nomAttribut</em>);
-</pre>
+    element.removeAttribute(nomAttribut);
 
-<ul>
- <li><code>nomAttribut</code> est une chaîne de caractères représentant le nom de l'attribut à enlever de l'<em>element</em> .</li>
-</ul>
+- `nomAttribut` est une chaîne de caractères représentant le nom de l'attribut à enlever de l'_element_ .
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre>// avant : &lt;div id="div1" align="left" width="200"&gt;
-document.getElementById("div1").removeAttribute("align");
-// maintenant : &lt;div id="div1" width="200"&gt;
-</pre>
+    // avant : <div id="div1" align="left" width="200">
+    document.getElementById("div1").removeAttribute("align");
+    // maintenant : <div id="div1" width="200">
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Il vaut mieux utiliser <code>removeAttribute</code> plutôt que de définir la valeur de l'attribut à <code>null</code> avec <a href="fr/DOM/element.setAttribute">setAttribute</a>.</p>
+Il vaut mieux utiliser `removeAttribute` plutôt que de définir la valeur de l'attribut à `null` avec [setAttribute](fr/DOM/element.setAttribute).
 
-<p>Tenter d'effacer un attribut que l'élément ne possède pas ne provoque aucune exception.</p>
+Tenter d'effacer un attribut que l'élément ne possède pas ne provoque aucune exception.
 
-<p><code>removeAttribute</code> ne renvoie rien, donc vous ne pouvez supprimer plusieurs attributs par enchaînement de cette méthode.</p>
+`removeAttribute` ne renvoie rien, donc vous ne pouvez supprimer plusieurs attributs par enchaînement de cette méthode.
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Sp.C3.A9cification">Spécification</h2>
+## Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6D6AC0F9">DOM Level 2 Core : removeAttribute</a> — <small><a href="http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-6D6AC0F9">traduction en français</a> (non normative)</small></li>
-</ul>
+- [DOM Level 2 Core : removeAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6D6AC0F9) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-6D6AC0F9) (non normative)

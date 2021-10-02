@@ -9,27 +9,28 @@ tags:
   - Reference
 translation_of: Web/API/IDBTransaction/db
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>La propriété <strong><code>db</code></strong> de l'interface {{domxref("IDBTransaction")}} renvoie la {{domxref("IDBDatabase","connexion","",1)}} à la base de donnée associée à la {{domxref("IDBTransaction","transaction","",1)}}.</p>
+La propriété **`db`** de l'interface {{domxref("IDBTransaction")}} renvoie la {{domxref("IDBDatabase","connexion","",1)}} à la base de donnée associée à la {{domxref("IDBTransaction","transaction","",1)}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var myDatabase = transaction.db;</pre>
+    var myDatabase = transaction.db;
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Une {{domxref("IDBDatabase","connexion","",1)}} à la base de données sous la forme d'un objet <code>IDBDatabase</code>.</p>
+Une {{domxref("IDBDatabase","connexion","",1)}} à la base de données sous la forme d'un objet `IDBDatabase`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans le fragment de code suivant, on ouvre une {{domxref("IDBDatabase","connexion","",1)}} à la base de donnée. Sur cette connexion on démarre une {{domxref("IDBTransaction","transaction","",1)}} en lecture/écriture pour {{domxref("IDBObjectStore","accéder au magasin d'objet","",1)}}  <code>"toDoList"</code> et y {{domxref("IDBObjectStore.add","ajouter","",1)}} un enregistrement. Notez également les gestionnaires d'événements {{domxref("IDBTransaction.oncomplete","oncomplete")}} et {{domxref("IDBTransaction.onerror","onerror")}} de la transaction qui affichent sur la page le résultat de la transaction.</p>
+Dans le fragment de code suivant, on ouvre une {{domxref("IDBDatabase","connexion","",1)}} à la base de donnée. Sur cette connexion on démarre une {{domxref("IDBTransaction","transaction","",1)}} en lecture/écriture pour {{domxref("IDBObjectStore","accéder au magasin d'objet","",1)}}  `"toDoList"` et y {{domxref("IDBObjectStore.add","ajouter","",1)}} un enregistrement. Notez également les gestionnaires d'événements {{domxref("IDBTransaction.oncomplete","oncomplete")}} et {{domxref("IDBTransaction.onerror","onerror")}} de la transaction qui affichent sur la page le résultat de la transaction.
 
-<p>À la fin, la méthode <strong><code>db</code></strong> sert à renvoyer la connexion à la base de données associée à la transaction.</p>
+À la fin, la méthode **`db`** sert à renvoyer la connexion à la base de données associée à la transaction.
 
-<pre class="brush: js">//Connexion à la base de données
+```js
+//Connexion à la base de données
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
@@ -52,11 +53,11 @@ function addData() {
 
   // En cas de succès de l'ouverture de la transaction
   transaction.oncomplete = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction complété : modification de la base de données terminée.&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction complété : modification de la base de données terminée.</li>';
   };
   // En  cas d'échec de l'ouverture de la transaction
   transaction.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Erreur transaction non ouverte, doublons interdits.&lt;/li&gt;';
+    note.innerHTML += '<li>Erreur transaction non ouverte, doublons interdits.</li>';
   };
 
   // Ouvrir l'accès au un magasin "toDoList" de la transaction
@@ -66,47 +67,33 @@ function addData() {
   var objectStoreRequest = objectStore.add(newItem[0]);
   objectStoreRequest.onsuccess = function(event) {
     // Signaler l'ajout de l'enregistrement
-    note.innerHTML += '&lt;li&gt;Enregistrement ajouté.&lt;/li&gt;';
+    note.innerHTML += '<li>Enregistrement ajouté.</li>';
   };
   // Renvoyer la connexion à la base de donnée
   //associée à cette transaction.
   transaction.db;
 };
- </pre>
 
-<div class="note">
-  <p><strong>Note :</strong> pour un exemple fonctionnel complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">application To-do</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple</a>).</p>
-</div>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+> **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/to-do-notifications/) ([exemple](https://mdn.github.io/to-do-notifications/)).
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBTransaction-db', 'db')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Spécifications
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+| Spécification                                                                | État                         | Commentaires |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBTransaction-db', 'db')}} | {{Spec2('IndexedDB')}} |              |
 
-<p>{{Compat("api.IDBTransaction.db")}}</p>
+## Compatibilité des navigateurs
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+{{Compat("api.IDBTransaction.db")}}
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
- <li>Initier une connexion : {{domxref("IDBDatabase")}}</li>
- <li>Utiliser les transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
- <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
-</ul>
+## Voir aussi
+
+- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Initier une connexion : {{domxref("IDBDatabase")}}
+- Utiliser les transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
+- Utiliser les curseurs {{domxref("IDBCursor")}}
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).

@@ -9,100 +9,90 @@ tags:
   - synthèse vocale
 translation_of: Web/API/Web_Speech_API
 ---
-<div>{{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}</div>
+{{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}
 
-<p>L'API <i lang="en">Web Speech</i> permet d'intégrer des données liées à la voix dans des applications web. L'API <i lang="en">Web Speech</i> se compose de deux parties : <i lang="en">SpeechSynthesis</i> (synthèse vocale) et <i lang="en">SpeechRecognition</i> (reconnaissance vocale asynchrone).</p>
+L'API <i lang="en">Web Speech</i> permet d'intégrer des données liées à la voix dans des applications web. L'API <i lang="en">Web Speech</i> se compose de deux parties : <i lang="en">SpeechSynthesis</i> (synthèse vocale) et <i lang="en">SpeechRecognition</i> (reconnaissance vocale asynchrone).
 
-<h2 id="Concepts_et_usages_de_lAPI_Web_Speech">Concepts et usages de l'API Web Speech</h2>
+## Concepts et usages de l'API Web Speech
 
-<p>L'API <i lang="en">Web Speech</i> rend les applications web capables de manipuler des données liées à la voix. Cette API se compose de deux parties :</p>
+L'API <i lang="en">Web Speech</i> rend les applications web capables de manipuler des données liées à la voix. Cette API se compose de deux parties :
 
-<ul>
- <li>La reconnaissance vocale (<i lang="en">Speech recognition</i>) est accessible via l'interface {{domxref("SpeechRecognition")}} qui fournit la capacité de reconnaitre la voix dans une source audio (normalement grâce à l'outil par défaut de reconnaissance vocale de l'appareil) et de réagir de façon pertinente. En général, on utilisera le constructeur de l'interface pour créer un nouvel objet {{domxref("SpeechRecognition")}} qui a un nombre de gestionnaires d'événements disponibles pour détecter lorsque de la parole arrive dans le micro de l'appareil. L'interface {{domxref("SpeechGrammar")}} représente un conteneur pour une série de règles de grammaire que votre application devrait reconnaître. La grammaire est définie en utilisant <a href="http://www.w3.org/TR/jsgf/">JSpeech Grammar Format</a> (<strong>JSGF</strong>).</li>
- <li>La synthèse vocale (<i lang="en">Speech synthesis</i>) est disponible via l'interface {{domxref("SpeechSynthesis")}}, un composant qui permet aux programmes de vocaliser leur contenu textuel (normalement grâce au synthétiseur vocal par défaut de l'appareil). Differents types de voix sont disponibles dans les objets {{domxref("SpeechSynthesisVoice")}}, et les différentes parties de texte à vocaliser sont interprétés par les objets {{domxref("SpeechSynthesisUtterance")}}. On peut les faire vocaliser en les passant à la méthode {{domxref("SpeechSynthesis.speak()")}}.</li>
-</ul>
+- La reconnaissance vocale (
 
-<p>Pour plus de détails concernant ces fonctionnalités, voir <a href="/fr/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API">Using the Web Speech API.</a></p>
+  <i lang="en">Speech recognition</i>
 
-<h2 id="Les_interfaces_de_lAPI_Web_Speech">Les interfaces de l'API Web Speech</h2>
+  ) est accessible via l'interface {{domxref("SpeechRecognition")}} qui fournit la capacité de reconnaitre la voix dans une source audio (normalement grâce à l'outil par défaut de reconnaissance vocale de l'appareil) et de réagir de façon pertinente. En général, on utilisera le constructeur de l'interface pour créer un nouvel objet {{domxref("SpeechRecognition")}} qui a un nombre de gestionnaires d'événements disponibles pour détecter lorsque de la parole arrive dans le micro de l'appareil. L'interface {{domxref("SpeechGrammar")}} représente un conteneur pour une série de règles de grammaire que votre application devrait reconnaître. La grammaire est définie en utilisant [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**).
 
-<h3 id="Le_reconnaissance_vocale">Le reconnaissance vocale</h3>
+- La synthèse vocale (
 
-<dl>
- <dt>{{domxref("SpeechRecognition")}}</dt>
- <dd>L'interface de contrôle de l'outil de reconnaissance; elle traite aussi le {{domxref("SpeechRecognitionEvent")}} reçu de l'outil de reconnaissance.</dd>
- <dt>{{domxref("SpeechRecognitionAlternative")}}</dt>
- <dd>Représente un mot unique qui a été reconnu par l'outil de reconnaissane vocale.</dd>
- <dt>{{domxref("SpeechRecognitionError")}}</dt>
- <dd>Répresente les messages d'erreur de l'outil de reconnaissance vocale.</dd>
- <dt>{{domxref("SpeechRecognitionEvent")}}</dt>
- <dd>L'objet événement pour les événements {{event("result")}} et {{event("nomatch")}}, et contient toutes les données associées avec un résultat de reconnaissance vocale intermédiaire ou définitif.</dd>
- <dt>{{domxref("SpeechGrammar")}}</dt>
- <dd>Les mots ou schémas de mots que l'on demande à l'outil de reconnaissance vocale de reconnaître.</dd>
- <dt>{{domxref("SpeechGrammarList")}}</dt>
- <dd>Répresente une liste des objets {{domxref("SpeechGrammar")}}.</dd>
- <dt>{{domxref("SpeechRecognitionResult")}}</dt>
- <dd>Répresente une unique reconnaissance réussie, qui peut contenir plusieurs objets {{domxref("SpeechRecognitionAlternative")}}.</dd>
- <dt>{{domxref("SpeechRecognitionResultList")}}</dt>
- <dd>Répresente une liste d'objets {{domxref("SpeechRecognitionResult")}}, ou bien un seul si les résultats sont récupérés en mode {{domxref("SpeechRecognition.continuous","continuous")}}.</dd>
-</dl>
+  <i lang="en">Speech synthesis</i>
 
-<h3 id="La_synthèse_vocale">La synthèse vocale</h3>
+  ) est disponible via l'interface {{domxref("SpeechSynthesis")}}, un composant qui permet aux programmes de vocaliser leur contenu textuel (normalement grâce au synthétiseur vocal par défaut de l'appareil). Differents types de voix sont disponibles dans les objets {{domxref("SpeechSynthesisVoice")}}, et les différentes parties de texte à vocaliser sont interprétés par les objets {{domxref("SpeechSynthesisUtterance")}}. On peut les faire vocaliser en les passant à la méthode {{domxref("SpeechSynthesis.speak()")}}.
 
-<dl>
- <dt>{{domxref("SpeechSynthesis")}}</dt>
- <dd>L'interface de contrôle de l'outil de vocalisation; elle peut être utiliser pour rechercher des informations concernant les voix de synthèse disponible dans l'appareil, le démarrage et l'interruption de la vocalisation, et les commandes complémentaires.</dd>
- <dt>{{domxref("SpeechSynthesisErrorEvent")}}</dt>
- <dd>Contient les informations concernant toutes les erreurs qui se produisent pendant le traitement des objets {{domxref("SpeechSynthesisUtterance")}} dans l'outil de synthèse vocale.</dd>
- <dt>{{domxref("SpeechSynthesisEvent")}}</dt>
- <dd>Contient les informations concernant l'état actuel des objets {{domxref("SpeechSynthesisUtterance")}} qui ont été traités par l'outil de synthèse vocale.</dd>
- <dt>{{domxref("SpeechSynthesisUtterance")}}</dt>
- <dd>Répresente une requête de synthèse vocale. Il contient le contenu que l'outil de synthèse vocale devrait vocaliser et les informations sur comment le vocaliser (e.g. langue, ton et volume).</dd>
-</dl>
+Pour plus de détails concernant ces fonctionnalités, voir [Using the Web Speech API.](/fr/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
 
-<dl>
- <dt>{{domxref("SpeechSynthesisVoice")}}</dt>
- <dd>Représente une voix qui est supportée par le système. Chaque <code>SpeechSynthesisVoice</code> a son propre outil de synthèse vocale incluant les informations concernant la langue, le nom et l'URI.</dd>
- <dt>{{domxref("Window.speechSynthesis")}}</dt>
- <dd>Spécifiée comme une partie de l'interface <code>[NoInterfaceObject]</code> intitulée <code>SpeechSynthesisGetter</code>, et implémentée par l'objet <code>Window</code>, la propriété <code>speechSynthesis</code> fournit l'accès au controleur {{domxref("SpeechSynthesis")}}, et de ce fait un point d'entrée à la fonctionnalité de synthèse vocale.</dd>
-</dl>
+## Les interfaces de l'API Web Speech
 
-<h2 id="Exemples">Exemples</h2>
+### Le reconnaissance vocale
 
-<p>Le <a href="https://github.com/mdn/web-speech-api/">Web Speech API repo</a> sur GitHub contient des démos qui illustrent la reconnaissance vocale et la synthèse vocale.</p>
+- {{domxref("SpeechRecognition")}}
+  - : L'interface de contrôle de l'outil de reconnaissance; elle traite aussi le {{domxref("SpeechRecognitionEvent")}} reçu de l'outil de reconnaissance.
+- {{domxref("SpeechRecognitionAlternative")}}
+  - : Représente un mot unique qui a été reconnu par l'outil de reconnaissane vocale.
+- {{domxref("SpeechRecognitionError")}}
+  - : Répresente les messages d'erreur de l'outil de reconnaissance vocale.
+- {{domxref("SpeechRecognitionEvent")}}
+  - : L'objet événement pour les événements {{event("result")}} et {{event("nomatch")}}, et contient toutes les données associées avec un résultat de reconnaissance vocale intermédiaire ou définitif.
+- {{domxref("SpeechGrammar")}}
+  - : Les mots ou schémas de mots que l'on demande à l'outil de reconnaissance vocale de reconnaître.
+- {{domxref("SpeechGrammarList")}}
+  - : Répresente une liste des objets {{domxref("SpeechGrammar")}}.
+- {{domxref("SpeechRecognitionResult")}}
+  - : Répresente une unique reconnaissance réussie, qui peut contenir plusieurs objets {{domxref("SpeechRecognitionAlternative")}}.
+- {{domxref("SpeechRecognitionResultList")}}
+  - : Répresente une liste d'objets {{domxref("SpeechRecognitionResult")}}, ou bien un seul si les résultats sont récupérés en mode {{domxref("SpeechRecognition.continuous","continuous")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+### La synthèse vocale
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+- {{domxref("SpeechSynthesis")}}
+  - : L'interface de contrôle de l'outil de vocalisation; elle peut être utiliser pour rechercher des informations concernant les voix de synthèse disponible dans l'appareil, le démarrage et l'interruption de la vocalisation, et les commandes complémentaires.
+- {{domxref("SpeechSynthesisErrorEvent")}}
+  - : Contient les informations concernant toutes les erreurs qui se produisent pendant le traitement des objets {{domxref("SpeechSynthesisUtterance")}} dans l'outil de synthèse vocale.
+- {{domxref("SpeechSynthesisEvent")}}
+  - : Contient les informations concernant l'état actuel des objets {{domxref("SpeechSynthesisUtterance")}} qui ont été traités par l'outil de synthèse vocale.
+- {{domxref("SpeechSynthesisUtterance")}}
+  - : Répresente une requête de synthèse vocale. Il contient le contenu que l'outil de synthèse vocale devrait vocaliser et les informations sur comment le vocaliser (e.g. langue, ton et volume).
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+<!---->
 
-<h3 id="SpeechRecognition"><i lang="en"><code>SpeechRecognition</code></i></h3>
+- {{domxref("SpeechSynthesisVoice")}}
+  - : Représente une voix qui est supportée par le système. Chaque `SpeechSynthesisVoice` a son propre outil de synthèse vocale incluant les informations concernant la langue, le nom et l'URI.
+- {{domxref("Window.speechSynthesis")}}
+  - : Spécifiée comme une partie de l'interface `[NoInterfaceObject]` intitulée `SpeechSynthesisGetter`, et implémentée par l'objet `Window`, la propriété `speechSynthesis` fournit l'accès au controleur {{domxref("SpeechSynthesis")}}, et de ce fait un point d'entrée à la fonctionnalité de synthèse vocale.
 
-<p>{{Compat("api.SpeechRecognition", 0)}}</p>
+## Exemples
 
-<h3 id="SpeechSynthesis"><i lang="en"><code>SpeechSynthesis</code></i></h3>
+Le [Web Speech API repo](https://github.com/mdn/web-speech-api/) sur GitHub contient des démos qui illustrent la reconnaissance vocale et la synthèse vocale.
 
-<p>{{Compat("api.SpeechSynthesis", 0)}}</p>
+## Spécifications
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+| Spécification                            | État                                 | Commentaire         |
+| ---------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName('Web Speech API')}} | {{Spec2('Web Speech API')}} | Définition initiale |
 
-<ul>
- <li><a href="/fr/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API">Using the Web Speech API</a></li>
- <li><a href="http://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/">Article sur le site SitePoint</a></li>
- <li><a href="http://updates.html5rocks.com/2014/01/Web-apps-that-talk---Introduction-to-the-Speech-Synthesis-API">Article HTML5Rocks</a></li>
- <li><a href="http://aurelio.audero.it/demo/speech-synthesis-api-demo.html">Demo</a> [aurelio.audero.it]</li>
-</ul>
+## Compatibilité des navigateurs
+
+### <i lang="en"><code>SpeechRecognition</code></i>
+
+{{Compat("api.SpeechRecognition", 0)}}
+
+### <i lang="en"><code>SpeechSynthesis</code></i>
+
+{{Compat("api.SpeechSynthesis", 0)}}
+
+## Voir aussi
+
+- [Using the Web Speech API](/fr/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
+- [Article sur le site SitePoint](http://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/)
+- [Article HTML5Rocks](http://updates.html5rocks.com/2014/01/Web-apps-that-talk---Introduction-to-the-Speech-Synthesis-API)
+- [Demo](http://aurelio.audero.it/demo/speech-synthesis-api-demo.html) \[aurelio.audero.it]

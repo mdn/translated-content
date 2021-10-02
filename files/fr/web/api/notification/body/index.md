@@ -11,42 +11,28 @@ tags:
   - Reference
 translation_of: Web/API/Notification/body
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>La propriété en lecture seule <strong><code>body</code></strong> de l'interface {{domxref ("Notification")}} est la chaîne de caractères qui correspond au corps de la notification, comme définis à l'aide de l'option <code>body</code> lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()" )}}.</p>
+La propriété en lecture seule **`body`** de l'interface {{domxref ("Notification")}} est la chaîne de caractères qui correspond au corps de la notification, comme définis à l'aide de l'option `body` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()" )}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>Notification</var>.body
-</pre>
+    Notification.body
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Une {{domxref("DOMString")}} contenant le corps de la notification.</p>
+Une {{domxref("DOMString")}} contenant le corps de la notification.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-notification-body','body')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                     | Commentaire          |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('Web Notifications','#dom-notification-body','body')}} | {{Spec2('Web Notifications')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Notification.body")}}</p>
+{{Compat("api.Notification.body")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a></li>
-</ul>
+- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

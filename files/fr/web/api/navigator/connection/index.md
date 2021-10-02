@@ -9,39 +9,24 @@ tags:
   - Propriété
 translation_of: Web/API/Navigator/connection
 ---
-<p>{{APIRef("Network Information API")}}{{SeeCompatTable}}</p>
+{{APIRef("Network Information API")}}{{SeeCompatTable}}
 
-<p><code><strong>Navigator.connection</strong></code> est une propriété en lecture seule, elle représente une {{domxref("NetworkInformation")}} qui contient les informations de la connexion du système, telles que la  bande passante actuelle du périphérique utilisateur ou si la connexion est mesurée. La propriété peut être utilisée pour sélectionner un contenu en haute ou basse définition, dépendant de la connexion de l'utilisateur.</p>
+**`Navigator.connection`** est une propriété en lecture seule, elle représente une {{domxref("NetworkInformation")}} qui contient les informations de la connexion du système, telles que la  bande passante actuelle du périphérique utilisateur ou si la connexion est mesurée. La propriété peut être utilisée pour sélectionner un contenu en haute ou basse définition, dépendant de la connexion de l'utilisateur.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>connexionInfo</em> = navigator.connection</pre>
+    connexionInfo = navigator.connection
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Network Information', '#h-the-connection-attribute', 'Navigator.connection')}}</td>
-   <td>{{Spec2('Network Information')}}</td>
-   <td>Spécification initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | État                                         | Commentaire            |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------------------- |
+| {{SpecName('Network Information', '#h-the-connection-attribute', 'Navigator.connection')}} | {{Spec2('Network Information')}} | Spécification initiale |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Navigator.connection")}}</p>
+{{Compat("api.Navigator.connection")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/API/NavigatorOnLine/Online_and_offline_events">Évènements online et offline</a></li>
-</ul>
+- [Évènements online et offline](/fr/docs/Web/API/NavigatorOnLine/Online_and_offline_events)

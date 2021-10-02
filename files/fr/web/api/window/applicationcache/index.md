@@ -3,33 +3,24 @@ title: Window.applicationCache
 slug: Web/API/Window/applicationCache
 translation_of: Web/API/Window/applicationCache
 ---
-<div class="warning">
-<p><strong>Attention :</strong> Le cache d'application est obsolète depuis Firefox 44, et n'est plus disponible dans un contexte non sécurisé depuis Firefox 60 ({{bug(1354175)}}, actuellemet Nightly/Beta seulement). Ne pas l'utiliser sur des sites hors lignes — envisager l'utilisation de <a href="/en-US/docs/Web/API/Service_Worker_API">service workers</a> à la place.</p>
-</div>
+> **Attention :** Le cache d'application est obsolète depuis Firefox 44, et n'est plus disponible dans un contexte non sécurisé depuis Firefox 60 ({{bug(1354175)}}, actuellemet Nightly/Beta seulement). Ne pas l'utiliser sur des sites hors lignes — envisager l'utilisation de [service workers](/en-US/docs/Web/API/Service_Worker_API) à la place.
 
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>Retourne une référence à l'objet du cache d'application pour la fenêtre.</p>
+Retourne une référence à l'objet du cache d'application pour la fenêtre.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>cache</var> = window.applicationCache
-</pre>
+    cache = window.applicationCache
 
-<h3 id="Parameters">Paramètres</h3>
+### Paramètres
 
-<ul>
- <li><code>cache</code> est une référence objet pour un {{domxref("OfflineResourceList")}}.</li>
-</ul>
+- `cache` est une référence objet pour un {{domxref("OfflineResourceList")}}.
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<ul>
- <li>{{spec("http://www.w3.org/TR/2008/WD-html5-20080122/#appcache","HTML 5","WD")}}</li>
-</ul>
+- {{spec("http://www.w3.org/TR/2008/WD-html5-20080122/#appcache","HTML 5","WD")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/HTML/Using_the_application_cache">Using Application Cache</a></li>
-</ul>
+- [Using Application Cache](/en-US/docs/HTML/Using_the_application_cache)

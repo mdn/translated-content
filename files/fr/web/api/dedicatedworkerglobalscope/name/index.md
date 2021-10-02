@@ -9,53 +9,44 @@ tags:
   - Worker
 translation_of: Web/API/DedicatedWorkerGlobalScope/name
 ---
-<div>{{APIRef("Web Workers API")}}</div>
+{{APIRef("Web Workers API")}}
 
-<p>La propriété en lecture seule <code><strong>name</strong></code> de l'interface {{domxref("DedicatedWorkerGlobalScope")}} renvoie le nom qui a été (facultativement) donné au  {{domxref("Worker")}} lors de sa création. C'est le nom que le constructeur {{domxref("Worker.Worker", "Worker()")}} peut transmettre pour obtenir une référence à {{domxref("DedicatedWorkerGlobalScope")}}.</p>
+La propriété en lecture seule **`name`** de l'interface {{domxref("DedicatedWorkerGlobalScope")}} renvoie le nom qui a été (facultativement) donné au  {{domxref("Worker")}} lors de sa création. C'est le nom que le constructeur {{domxref("Worker.Worker", "Worker()")}} peut transmettre pour obtenir une référence à {{domxref("DedicatedWorkerGlobalScope")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var nameObj = self.name;</pre>
+    var nameObj = self.name;
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Une {{domxref("DOMString")}} (<em>chaîne de caractères</em>).</p>
+Une {{domxref("DOMString")}} (_chaîne de caractères_).
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Un worker est créé en utilisant un constructeur avec une option de <code>name</code> :</p>
+Un worker est créé en utilisant un constructeur avec une option de `name` :
 
-<pre class="brush: js">var myWorker = new Worker("worker.js", { name : "myWorker" });</pre>
+```js
+var myWorker = new Worker("worker.js", { name : "myWorker" });
+```
 
-<p>le {{domxref("DedicatedWorkerGlobalScope")}} aura désormais le nom de "myWorker", qui peut être renvoyé pendant l'exécution</p>
+le {{domxref("DedicatedWorkerGlobalScope")}} aura désormais le nom de "myWorker", qui peut être renvoyé pendant l'exécution
 
-<pre class="brush: js">self.name</pre>
+```js
+self.name
+```
 
-<p>à l'intérieur du worker.</p>
+à l'intérieur du worker.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-dedicatedworkerglobalscope-name', 'name')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', '#dom-dedicatedworkerglobalscope-name', 'name')}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DedicatedWorkerGlobalScope.name")}}</p>
+{{Compat("api.DedicatedWorkerGlobalScope.name")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("DedicatedWorkerGlobalScope")}}</li>
-</ul>
+- {{domxref("DedicatedWorkerGlobalScope")}}

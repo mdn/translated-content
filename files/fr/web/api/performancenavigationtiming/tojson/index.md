@@ -10,28 +10,29 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceNavigationTiming/toJSON
 ---
-<div>{{APIRef("Navigation Timing")}}{{SeeCompatTable}}</div>
+{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-<p>La méthode <strong><code>toJSON()</code></strong> est un <em>sérialiseur</em> - elle renvoie une représentation JSON de l'objet <a href="/fr/docs/Web/API/PerformanceNavigationTiming"><code>PerformanceNavigationTiming</code></a>.</p>
+La méthode **`toJSON()`** est un _sérialiseur_ - elle renvoie une représentation JSON de l'objet [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:js">const <var>json</var> = <var>resourcePerfEntry</var>.toJSON();</pre>
+```js
+const json = resourcePerfEntry.toJSON();
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Return_value">Valeur de retour</h3>
+### Valeur de retour
 
-<dl>
-  <dt><code>json</code></dt>
-  <dd>Un objet JSON qui est la sérialisation de l'objet <a href="/fr/docs/Web/API/PerformanceNavigationTiming"><code>PerformanceNavigationTiming</code></a> comme une carte avec des entrées de l'interface héritée la plus proche et avec des entrées pour chacun des attributs sérialisables.</dd>
-</dl>
+- `json`
+  - : Un objet JSON qui est la sérialisation de l'objet [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) comme une carte avec des entrées de l'interface héritée la plus proche et avec des entrées pour chacun des attributs sérialisables.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">// Obtient une entrée de performance des ressources
+```js
+// Obtient une entrée de performance des ressources
 let perfEntries = performance.getEntriesByType("navigation");
 let entry = perfEntries[0];
 
@@ -39,28 +40,15 @@ let entry = perfEntries[0];
 let json = entry.toJSON();
 let s = JSON.stringify(json);
 console.log("PerformanceNavigationTiming.toJSON() = " + s);
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Navigation Timing Level 2',
-        '#dom-performancenavigationtiming-tojson', 'toJSON()')}}</td>
-      <td>{{Spec2('Navigation Timing Level 2')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                | Statut                                               | Commentaire          |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------- |
+| {{SpecName('Navigation Timing Level 2',
+        '#dom-performancenavigationtiming-tojson', 'toJSON()')}} | {{Spec2('Navigation Timing Level 2')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceNavigationTiming.toJSON")}}</p>
+{{Compat("api.PerformanceNavigationTiming.toJSON")}}

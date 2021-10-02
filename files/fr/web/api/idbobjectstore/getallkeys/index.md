@@ -9,98 +9,90 @@ tags:
   - Référence(2)
 translation_of: Web/API/IDBObjectStore/getAllKeys
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>La méthode <strong><code>getAllKeys()</code></strong>, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet  {{domxref("IDBRequest")}} qui permet de récupérer l'ensemble des clés pour les objets qui correspondent au critère passé en argument (ou les clés de tous les objets du magasin si aucun paramètre n'est fourni).</p>
+La méthode **`getAllKeys()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet  {{domxref("IDBRequest")}} qui permet de récupérer l'ensemble des clés pour les objets qui correspondent au critère passé en argument (ou les clés de tous les objets du magasin si aucun paramètre n'est fourni).
 
-<p>Si une valeur est trouvée, un clone structurelle sera créé et fourni comme résultat pour la requête.</p>
+Si une valeur est trouvée, un clone structurelle sera créé et fourni comme résultat pour la requête.
 
-<p>Cette méthode produira le même résultat pour :</p>
+Cette méthode produira le même résultat pour :
 
-<ul>
- <li>un enregistrement qui n'existe pas dans la base de données</li>
- <li>un enregistrement qui possède une valeur indéfinie</li>
-</ul>
+- un enregistrement qui n'existe pas dans la base de données
+- un enregistrement qui possède une valeur indéfinie
 
-<p>Pour différencier ces deux situations, on peut appeler la méthode {{domxref("IDBObjectStore.openCursor","openCursor()")}} avec la même clé. Cette méthode fournit un curseur si l'enregistrement existe et ne fournit aucun curseur s'il n'y a pas d'enregistrement.</p>
+Pour différencier ces deux situations, on peut appeler la méthode {{domxref("IDBObjectStore.openCursor","openCursor()")}} avec la même clé. Cette méthode fournit un curseur si l'enregistrement existe et ne fournit aucun curseur s'il n'y a pas d'enregistrement.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var request = <em>objectStore</em>.getAllKeys();
-var request = <em>objectStore</em>.getAllKeys(<em>query</em>);
-var request = <em>objectStore</em>.getAllKeys(<em>query</em>, <em>count</em>);</pre>
+    var request = objectStore.getAllKeys();
+    var request = objectStore.getAllKeys(query);
+    var request = objectStore.getAllKeys(query, count);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>query</code> {{optional_inline}}</dt>
- <dd>Une valeur qui est (ou se résoud) en un intervalle de clés ({{domxref("IDBKeyRange")}}).</dd>
- <dt><code>count</code> {{optional_inline}}</dt>
- <dd>Une valeur qui définit le nombre de valeurs à renvoyer si plusieurs correspondent. Cette valeur doit être supérieure à  <code>0</code> ou inférieure <code>à 2^32-1</code>, sinon une exception {{jsxref("TypeError")}} sera levée.</dd>
-</dl>
+- `query` {{optional_inline}}
+  - : Une valeur qui est (ou se résoud) en un intervalle de clés ({{domxref("IDBKeyRange")}}).
+- `count` {{optional_inline}}
+  - : Une valeur qui définit le nombre de valeurs à renvoyer si plusieurs correspondent. Cette valeur doit être supérieure à  `0` ou inférieure `à 2^32-1`, sinon une exception {{jsxref("TypeError")}} sera levée.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un objet {{domxref("IDBRequest")}} pour lequel seront déclenchés les différents évènements relatifs à l'opération.</p>
+Un objet {{domxref("IDBRequest")}} pour lequel seront déclenchés les différents évènements relatifs à l'opération.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Cette méthode peut déclencher une exception {{domxref("DOMException")}} ayant le type suivant :</p>
+Cette méthode peut déclencher une exception {{domxref("DOMException")}} ayant le type suivant :
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>TransactionInactiveError</code></td>
-   <td>Le magasin d'objets ({{domxref("IDBObjectStore")}}) associé à la transaction est inactif.</td>
-  </tr>
-  <tr>
-   <td><code>DataError</code></td>
-   <td>
-    <p>La clé ou l'intervalle de clé fourni contient une clé invalide ou est nul.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>Le magasin d'objets ({{domxref("IDBObjectStore")}}) a été supprimé ou retiré.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Exception</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>TransactionInactiveError</code></td>
+      <td>
+        Le magasin d'objets ({{domxref("IDBObjectStore")}}) associé à
+        la transaction est inactif.
+      </td>
+    </tr>
+    <tr>
+      <td><code>DataError</code></td>
+      <td>
+        <p>
+          La clé ou l'intervalle de clé fourni contient une clé invalide ou est
+          nul.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>InvalidStateError</code></td>
+      <td>
+        Le magasin d'objets ({{domxref("IDBObjectStore")}}) a été
+        supprimé ou retiré.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB 2', '#dom-idbobjectstore-getallkeys', 'getAll()')}}</td>
-   <td>{{Spec2('IndexedDB w')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                             | Commentaires         |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('IndexedDB 2', '#dom-idbobjectstore-getallkeys', 'getAll()')}} | {{Spec2('IndexedDB w')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBObjectStore.getAllKeys")}}</p>
+{{Compat("api.IDBObjectStore.getAllKeys")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
- <li>Initier une connexion : {{domxref("IDBDatabase")}}</li>
- <li>Utiliser les transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
- <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
-</ul>
+- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Initier une connexion : {{domxref("IDBDatabase")}}
+- Utiliser les transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
+- Utiliser les curseurs {{domxref("IDBCursor")}}
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).

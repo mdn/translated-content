@@ -8,117 +8,92 @@ tags:
   - Reference
 translation_of: Web/API/Element/getAttributeNS
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><strong><code>getAttributeNS()</code></strong> est une méthode de l'interface {{domxref("Element")}} qui renvoie la valeur chaîne de l'attribut avec l'espace de noms et le nom donnés. Si l'attribut nommé n'existe pas, cette valeur sera soit <code>null</code>, soit <code>""</code> (une chaîne vide) ; voir {{ Anch("Notes") }} pour plus de détails.</p>
+**`getAttributeNS()`** est une méthode de l'interface {{domxref("Element")}} qui renvoie la valeur chaîne de l'attribut avec l'espace de noms et le nom donnés. Si l'attribut nommé n'existe pas, cette valeur sera soit `null`, soit `""` (une chaîne vide) ; voir {{ Anch("Notes") }} pour plus de détails.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>attrVal</em> =<em>element</em>.getAttributeNS(<em>namespace</em>,<em>name</em>)
-</pre>
+    attrVal =element.getAttributeNS(namespace,name)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>namespace </code></dt>
- <dd>L'espace de noms dans lequel rechercher l'attribut spécifié.</dd>
- <dt><code>name </code></dt>
- <dd>Le nom de l'attribut à chercher.</dd>
-</dl>
+- `namespace`
+  - : L'espace de noms dans lequel rechercher l'attribut spécifié.
+- `name`
+  - : Le nom de l'attribut à chercher.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La valeur de chaîne de caractères de l'attribut spécifié. Si  l'attribut n'existe pas, le résultat est <code>null</code>.</p>
+La valeur de chaîne de caractères de l'attribut spécifié. Si  l'attribut n'existe pas, le résultat est `null`.
 
-<div class="note">
-<p><strong>Note :</strong> Les versions antérieures de la spécification DOM avaient cette méthode décrite comme renvoyant une chaîne vide pour des attributs inexistants, mais elle n'était généralement pas implémentée de cette façon, car null a plus de sens. La spécification DOM4 indique maintenant que cette méthode devrait retourner null pour les attributs inexistants.</p>
-</div>
+> **Note :** Les versions antérieures de la spécification DOM avaient cette méthode décrite comme renvoyant une chaîne vide pour des attributs inexistants, mais elle n'était généralement pas implémentée de cette façon, car null a plus de sens. La spécification DOM4 indique maintenant que cette méthode devrait retourner null pour les attributs inexistants.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Le document SVG suivant utilise une valeur d'attribut <code>foo</code> d'un espace de nom spécifique :</p>
+Le document SVG suivant utilise une valeur d'attribut `foo` d'un espace de nom spécifique :
 
-<pre class="brush: xml">&lt;svg xmlns="http://www.w3.org/2000/svg"
-    xmlns:test="http://www.example.com/2014/test" width="40" height="40"&gt;
+```xml
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:test="http://www.example.com/2014/test" width="40" height="40">
 
-  &lt;circle id="target" cx="12" cy="12" r="10" stroke="#444"
-      stroke-width="2" fill="none" test:foo="Hello namespaced attribute!"/&gt;
+  <circle id="target" cx="12" cy="12" r="10" stroke="#444"
+      stroke-width="2" fill="none" test:foo="Hello namespaced attribute!"/>
 
-  &lt;script type="text/javascript"&gt;
+  <script type="text/javascript">
     var ns = 'http://www.example.com/2014/test';
     var circle = document.getElementById( 'target' );
 
     console.log( 'attribute test:foo: "' + circle.getAttributeNS( ns, 'foo' ) + '"' );
-  &lt;/script&gt;
-&lt;/svg&gt;
-</pre>
+  </script>
+</svg>
+```
 
-<p>Dans un document HTML5, il faut utiliser <code>test:foo</code> pour accéder à l'attribut car les espaces de noms ne sont pas pris en charge.</p>
+Dans un document HTML5, il faut utiliser `test:foo` pour accéder à l'attribut car les espaces de noms ne sont pas pris en charge.
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;body&gt;
+```html
+<!DOCTYPE html>
+<html>
+<body>
 
-&lt;svg xmlns="http://www.w3.org/2000/svg"
-    xmlns:test="http://www.example.com/2014/test" width="40" height="40"&gt;
-  &lt;circle id="target" cx="12" cy="12" r="10" stroke="#444" stroke-width="2"
-      fill="none" test:foo="Foo value"/&gt;
-&lt;/svg&gt;
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:test="http://www.example.com/2014/test" width="40" height="40">
+  <circle id="target" cx="12" cy="12" r="10" stroke="#444" stroke-width="2"
+      fill="none" test:foo="Foo value"/>
+</svg>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   var ns = 'http://www.example.com/2014/test';
   var circle = document.getElementById( 'target' );
   console.log('Attribute value: ' + circle.getAttribute('test:foo'));
-&lt;/script&gt;
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</body>
+</html>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Les espaces de noms sont uniquement pris en charge dans les documents XML, Les documents HTML5 doivent utiliser à la place <code>getAttribute()</code> .</p>
+Les espaces de noms sont uniquement pris en charge dans les documents XML, Les documents HTML5 doivent utiliser à la place `getAttribute()` .
 
-<p>La méthode <code>getAttributeNS</code> diffère de {{domxref("element.getAttribute()", "getAttribute()")}} en ce qu'elle permet de spécifier les attributs faisant partie d'un espace de noms particulier, comme dans l'exemple précédent, où l'attribut fait partie d'un espace de noms fictif « specialspace » de mozilla.</p>
+La méthode `getAttributeNS` diffère de {{domxref("element.getAttribute()", "getAttribute()")}} en ce qu'elle permet de spécifier les attributs faisant partie d'un espace de noms particulier, comme dans l'exemple précédent, où l'attribut fait partie d'un espace de noms fictif « specialspace » de mozilla.
 
-<p>Avant la spécification DOM4, cette méthode était spécifiée pour renvoyer une chaîne vide plutôt que null pour les attributs inexistants. Cependant, la plupart des navigateurs ont renvoyé null. À partir de DOM4, la spécification dit maintenant de retourner null. Cependant, certains navigateurs plus anciens renvoient une chaîne vide. Pour cette raison, vous devez utiliser {{domxref("element.hasAttributeNS ()","hasAttributeNS ()")}} pour vérifier l'existence d'un attribut avant d'appeler <code>getAttributeNS()</code> s'il est possible que l'attribut demandé n'existe pas sur l'élément spécifié.</p>
+Avant la spécification DOM4, cette méthode était spécifiée pour renvoyer une chaîne vide plutôt que null pour les attributs inexistants. Cependant, la plupart des navigateurs ont renvoyé null. À partir de DOM4, la spécification dit maintenant de retourner null. Cependant, certains navigateurs plus anciens renvoient une chaîne vide. Pour cette raison, vous devez utiliser {{domxref("element.hasAttributeNS ()","hasAttributeNS ()")}} pour vérifier l'existence d'un attribut avant d'appeler `getAttributeNS()` s'il est possible que l'attribut demandé n'existe pas sur l'élément spécifié.
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-element-getattributens", "Element.getAttributeNS()")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Core", "#ID-ElGetAttrNS", "Element.getAttributeNS()")}}</td>
-   <td>{{Spec2("DOM3 Core")}}</td>
-   <td>Specifie qu'une exception <code>NOT_SUPPORTED_ERR</code>  est levée si l'agent utilisateur ne supporte pas la fonctionnalité <code>"XML"</code>. Spécifie également que <code>null</code> doit être passé pour n'avoir aucun espace de noms.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Core", "#ID-ElGetAttrNS", "Element.getAttributeNS()")}}</td>
-   <td>{{Spec2("DOM2 Core")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                             | Commentaire                                                                                                                                                                                                 |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName("DOM WHATWG", "#dom-element-getattributens", "Element.getAttributeNS()")}} | {{Spec2("DOM WHATWG")}} |                                                                                                                                                                                                             |
+| {{SpecName("DOM3 Core", "#ID-ElGetAttrNS", "Element.getAttributeNS()")}}                 | {{Spec2("DOM3 Core")}}     | Specifie qu'une exception `NOT_SUPPORTED_ERR`  est levée si l'agent utilisateur ne supporte pas la fonctionnalité `"XML"`. Spécifie également que `null` doit être passé pour n'avoir aucun espace de noms. |
+| {{SpecName("DOM2 Core", "#ID-ElGetAttrNS", "Element.getAttributeNS()")}}                 | {{Spec2("DOM2 Core")}}     | Définition initiale                                                                                                                                                                                         |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Element.getAttributeNS")}}</p>
+{{Compat("api.Element.getAttributeNS")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/Add-ons/Code_snippets/getAttributeNS">Code snippets:getAttributeNS</a></li>
-</ul>
+- [Code snippets:getAttributeNS](/fr/Add-ons/Code_snippets/getAttributeNS)

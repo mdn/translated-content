@@ -12,25 +12,24 @@ tags:
   - keys
 translation_of: Web/API/FormData/keys
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>La méthode <code>FormData.keys()</code> renvoie une {{jsxref("Les_protocoles_iteration", "itération")}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des objets {{domxref("USVString")}}.</p>
+La méthode `FormData.keys()` renvoie une {{jsxref("Les_protocoles_iteration", "itération")}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des objets {{domxref("USVString")}}.
 
-<div class="note">
-<p><strong>Note :</strong> Cette méthode est disponible dans les <a href="/fr/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note :** Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">formData.keys();</pre>
+    formData.keys();
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Retourne une {{jsxref("Les_protocoles_iteration", "itération")}}.</p>
+Retourne une {{jsxref("Les_protocoles_iteration", "itération")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">// Créer un object FormData test
+```js
+// Créer un object FormData test
 var formData = new FormData();
 formData.append('cle1', 'valeur1');
 formData.append('cle2', 'valeur2');
@@ -39,41 +38,26 @@ formData.append('cle2', 'valeur2');
 for (var key of formData.keys()) {
    console.log(key);
 }
-</pre>
+```
 
-<p>Le résultat est :</p>
+Le résultat est :
 
-<pre>cle1
-cle2</pre>
+    cle1
+    cle2
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest','#dom-formdata','keys() (as iterator&lt;&gt;)')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                               | Commentaire         |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName('XMLHttpRequest','#dom-formdata','keys() (as iterator&lt;&gt;)')}} | {{Spec2('XMLHttpRequest')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.FormData.keys")}}
 
+## Voir aussi
 
-<p>{{Compat("api.FormData.keys")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest">Utiliser XMLHttpRequest</a></li>
- <li><a href="/fr/docs/Web/API/FormData/Utilisation_objets_FormData">Utiliser les objets FormData</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest)
+- [Utiliser les objets FormData](/fr/docs/Web/API/FormData/Utilisation_objets_FormData)
+- {{HTMLElement("Form")}}

@@ -12,67 +12,48 @@ tags:
   - close
 translation_of: Web/API/EventSource/close
 ---
-<div>{{APIRef('WebSockets API')}}</div>
+{{APIRef('WebSockets API')}}
 
-<p>La fonction <code><strong>close()</strong></code> de l'interface {{domxref("EventSource")}} coupe la connection, si existante, et affecte à la variable {{domxref("EventSource.readyState")}} la valeur <code>2</code> (closed).</p>
+La fonction **`close()`** de l'interface {{domxref("EventSource")}} coupe la connection, si existante, et affecte à la variable {{domxref("EventSource.readyState")}} la valeur `2` (closed).
 
-<div class="note">
-<p><strong>Note :</strong> Si la connexion est déjà fermé, la fonction n'agit pas.</p>
-</div>
+> **Note :** Si la connexion est déjà fermé, la fonction n'agit pas.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">eventSource.close();</pre>
+    eventSource.close();
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Nulle.</p>
+Nulle.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var bouton = document.querySelector('button');
+```js
+var bouton = document.querySelector('button');
 var evtSource = new EventSource('sse.php');
 
 bouton.onclick = function() {
   console.log('Connection fermée');
   evtSource.close();
 }
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong> Vous pouvez trouver un exemple complet sur GitHub — voir <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Demo simple de SSE utilisant PHP.</a></p>
-</div>
+> **Note :** Vous pouvez trouver un exemple complet sur GitHub — voir [Demo simple de SSE utilisant PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "comms.html#dom-eventsource-close", "close()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                           | Comment            |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('HTML WHATWG', "comms.html#dom-eventsource-close", "close()")}} | {{Spec2('HTML WHATWG')}} | Initial definition |
 
-<ul>
-</ul>
+## Compatibilité des navigateurs
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+{{Compat("api.EventSource.close")}}
 
-<p>{{Compat("api.EventSource.close")}}</p>
+## Voir aussi
 
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{domxref("EventSource")}}</li>
-</ul>
+- {{domxref("EventSource")}}

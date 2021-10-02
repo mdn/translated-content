@@ -3,66 +3,49 @@ title: Navigator.share
 slug: Web/API/Navigator/share
 translation_of: Web/API/Navigator/share
 ---
-<div>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-<p>La méthode <strong><code>Navigator.share()</code></strong> invoque le mécanisme de partage natif de l'appareil. Celle-ci appartient à l'API Web Share. Si l'API Web Share n'est pas supportée, alors la méthode sera <code>undefined</code>.</p>
+La méthode **`Navigator.share()`** invoque le mécanisme de partage natif de l'appareil. Celle-ci appartient à l'API Web Share. Si l'API Web Share n'est pas supportée, alors la méthode sera `undefined`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var sharePromise = window.navigator.share(<var>data</var>);
-</pre>
+    var sharePromise = window.navigator.share(data);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><var>data</var></dt>
- <dd>Un objet contenant les données à partager. Au moins un des champs suivant doit être spécifié. Les champs possibles sont les suivant : </dd>
-</dl>
+- _data_
+  - : Un objet contenant les données à partager. Au moins un des champs suivant doit être spécifié. Les champs possibles sont les suivant :
 
-<ul>
- <li><code>url</code>: Un {{domxref("USVString")}} représentant l'URL à partager.</li>
- <li><code>text</code>: Un {{domxref("USVString")}} représentant le texte à partager.</li>
- <li><code>title</code>: Un {{domxref("USVString")}} représentant le titre à partager.</li>
-</ul>
+<!---->
 
-<dl>
-</dl>
+- `url`: Un {{domxref("USVString")}} représentant l'URL à partager.
+- `text`: Un {{domxref("USVString")}} représentant le texte à partager.
+- `title`: Un {{domxref("USVString")}} représentant le titre à partager.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+<!---->
 
-<p>Une {{domxref("Promise")}} qui sera résolue une fois que l'utilisateur aura finalisé son action de partage. Elle sera rejetée immédiatement si le paramètre <var>data</var> n'est pas correctement spécifié.</p>
+### Valeur retournée
 
-<p>Par exemple, sur Chrome pour Android, la <code>Promise</code> retournée sera résolue après que l'utilisateur ait choisi une application vers où partager ses données.</p>
+Une {{domxref("Promise")}} qui sera résolue une fois que l'utilisateur aura finalisé son action de partage. Elle sera rejetée immédiatement si le paramètre _data_ n'est pas correctement spécifié.
 
-<h2 id="Examples">Examples</h2>
+Par exemple, sur Chrome pour Android, la `Promise` retournée sera résolue après que l'utilisateur ait choisi une application vers où partager ses données.
 
-<pre class="brush: js">navigator.share({
+## Examples
+
+```js
+navigator.share({
   title: document.title,
   text: 'Hello World',
   url: 'https://developer.mozilla.org',
-}); // partage l'URL de MDN</pre>
+}); // partage l'URL de MDN
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Web Share API','#share-method','share()')}}</td>
-   <td>{{Spec2('Web Share API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                            | Status                               | Comment |
+| ------------------------------------------------------------------------ | ------------------------------------ | ------- |
+| {{SpecName('Web Share API','#share-method','share()')}} | {{Spec2('Web Share API')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-
-<p>{{Compat("api.Navigator.share")}}</p>
+{{Compat("api.Navigator.share")}}

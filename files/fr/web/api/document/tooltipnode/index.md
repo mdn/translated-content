@@ -9,17 +9,16 @@ tags:
   - XUL
 translation_of: Web/API/Document/tooltipNode
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>{{draft}}</p>
+{{draft}}
 
-<p>Renvoie le noeud qui est la cible de l'actuel {{ XULElem("tooltip") }}.</p>
+Renvoie le noeud qui est la cible de l'actuel {{ XULElem("tooltip") }}.
 
-<h2 id="Usage">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval">document.tooltipNode;
-</pre>
+    document.tooltipNode;
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<p>XUL-specific method. Not part of any specification. Defined in {{ Source("dom/public/idl/xul/nsIDOMXULDocument.idl#59", "nsIDOMXULDocument.idl") }}.</p>
+XUL-specific method. Not part of any specification. Defined in {{ Source("dom/public/idl/xul/nsIDOMXULDocument.idl#59", "nsIDOMXULDocument.idl") }}.

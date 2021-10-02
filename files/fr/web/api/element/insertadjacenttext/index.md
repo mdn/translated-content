@@ -10,118 +10,89 @@ tags:
   - Texte
 translation_of: Web/API/Element/insertAdjacentText
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La méthode <code>insertAdjacentText()</code> insère un noeud texte donné à une position donnée par rapport à l'élément sur lequel elle est appelé.</p>
+La méthode `insertAdjacentText()` insère un noeud texte donné à une position donnée par rapport à l'élément sur lequel elle est appelé.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre><em>element</em>.insertAdjacentText(<em>position</em>, <em>element</em>);</pre>
+    element.insertAdjacentText(position, element);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>position</dt>
- <dd>Une {{domxref("DOMString")}} (<em>chaîne de caractères</em>) représentant la position par rapport à l'<code>element</code> ; elle doit être l'une des chaînes suivantes :
- <ul>
-  <li><code>'beforebegin'</code> : avant l'<code>element</code> lui-même ;</li>
-  <li><code>'afterbegin'</code> : à l'intérieur de l'<code>element</code>, avant son premier enfant ;</li>
-  <li><code>'beforeend'</code> : à l'intérieur de l'<code>element</code>, avant son dernier enfant ;</li>
-  <li><code>'afterend'</code> : après l'<code>element</code> lui-même.</li>
- </ul>
- </dd>
- <dt>element</dt>
- <dd>Une {{domxref("DOMString")}} (<em>chaîne de caractères</em>) représentant le texte à insérer dans l'arbre.</dd>
-</dl>
+- position
 
-<h3 id="Valeur_renvoyée">Valeur renvoyée</h3>
+  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la position par rapport à l'`element` ; elle doit être l'une des chaînes suivantes :
 
-<p>Vide.</p>
+    - `'beforebegin'` : avant l'`element` lui-même ;
+    - `'afterbegin'` : à l'intérieur de l'`element`, avant son premier enfant ;
+    - `'beforeend'` : à l'intérieur de l'`element`, avant son dernier enfant ;
+    - `'afterend'` : après l'`element` lui-même.
 
-<h3 id="Exceptions">Exceptions</h3>
+- element
+  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant le texte à insérer dans l'arbre.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Explication</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>SyntaxError</code></td>
-   <td>La <code>position</code> indiquée n'est pas une valeur reconnue.</td>
-  </tr>
- </tbody>
-</table>
+### Valeur renvoyée
 
-<h3 id="Visualisation_des_noms_de_position">Visualisation des noms de position</h3>
+Vide.
 
-<pre>&lt;!-- beforebegin --&gt;
-&lt;p&gt;
-&lt;!-- afterbegin> --&gt;
-machin
-&lt;!-- beforeend --&gt;
-&lt;/p&gt;
-&lt;!-- afterend --&gt;</pre>
+### Exceptions
 
-<div class="note">
-  <p><strong>Note :</strong> Les positions <code>beforebegin</code> et <code>afterend</code> ne fonctionnent que si le noeud est dans l'arbre et possède un élément parent.</p>
-</div>
+| Exception     | Explication                                           |
+| ------------- | ----------------------------------------------------- |
+| `SyntaxError` | La `position` indiquée n'est pas une valeur reconnue. |
 
-<h2 id="Example">Exemple</h2>
+### Visualisation des noms de position
 
-<pre class="brush: js">beforeBtn.addEventListener('click', function() {
+    <!-- beforebegin -->
+    <p>
+    <!-- afterbegin> -->
+    machin
+    <!-- beforeend -->
+    </p>
+    <!-- afterend -->
+
+> **Note :** Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est dans l'arbre et possède un élément parent.
+
+## Exemple
+
+```js
+beforeBtn.addEventListener('click', function() {
   para.insertAdjacentText('afterbegin',textInput.value);
 });
 
 afterBtn.addEventListener('click', function() {
   para.insertAdjacentText('beforeend',textInput.value);
-});</pre>
+});
+```
 
-<p>Jetez un œil à notre démo <a href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html">insertAdjacentText.html</a> sur GitHub (voir le <a href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html">code source</a> aussi). Ici, nous avons un simple paragraphe. Vous pouvez entrer du texte dans l'élément de formulaire, puis presser les boutons <em>Insert before</em> (<em>insère avant</em>) et <em>Insert after</em> (<em>insère après</em>) pour l'insérer avant ou après le texte de paragraphe existant en utilisant <code>insertAdjacentText()</code>. Notez que le nœud texte existant n'y est pas ajouté — d'autres nœuds de texte sont créés contenant le nouvel ajout.</p>
+Jetez un œil à notre démo [insertAdjacentText.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html) sur GitHub (voir le [code source](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html) aussi). Ici, nous avons un simple paragraphe. Vous pouvez entrer du texte dans l'élément de formulaire, puis presser les boutons _Insert before_ (_insère avant_) et _Insert after_ (_insère après_) pour l'insérer avant ou après le texte de paragraphe existant en utilisant `insertAdjacentText()`. Notez que le nœud texte existant n'y est pas ajouté — d'autres nœuds de texte sont créés contenant le nouvel ajout.
 
-<h2 id="Émulation">Émulation</h2>
+## Émulation
 
-<p>Vous pouvez utiliser une émulation de la méthode <code>insertAdjacentText()</code> dans Internet Explorer 5.5 (et peut-être antérieur) et supérieur avec le code suivant :</p>
+Vous pouvez utiliser une émulation de la méthode `insertAdjacentText()` dans Internet Explorer 5.5 (et peut-être antérieur) et supérieur avec le code suivant :
 
-<pre>if (!Element.prototype.insertAdjacentText)
-  Element.prototype.insertAdjacentText = function(type, txt){
-    this.insertAdjacentHTML(
-      type,
-      (txt+'') // convertir en chaîne de caractères
-        .replace(/&amp;/g, '&amp;amp;') // intégrer des symboles d'esperluette
-        .replace(/&lt;/g, '&amp;lt;') // intégrer les symboles "plus petit que"
-    )
-  }
-</pre>
+    if (!Element.prototype.insertAdjacentText)
+      Element.prototype.insertAdjacentText = function(type, txt){
+        this.insertAdjacentHTML(
+          type,
+          (txt+'') // convertir en chaîne de caractères
+            .replace(/&/g, '&amp;') // intégrer des symboles d'esperluette
+            .replace(/</g, '&lt;') // intégrer les symboles "plus petit que"
+        )
+      }
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-insertadjacenttext', 'insertAdjacentText()')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('DOM WHATWG', '#dom-element-insertadjacenttext', 'insertAdjacentText()')}} | {{ Spec2('DOM WHATWG') }} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Element.insertAdjacentText")}}</p>
+{{Compat("api.Element.insertAdjacentText")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Element.insertAdjacentElement()")}}</li>
- <li>{{domxref("Element.insertAdjacentHTML()")}}</li>
-</ul>
+- {{domxref("Element.insertAdjacentElement()")}}
+- {{domxref("Element.insertAdjacentHTML()")}}

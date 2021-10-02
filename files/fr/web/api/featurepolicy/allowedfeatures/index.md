@@ -9,28 +9,28 @@ tags:
   - Reference
 translation_of: Web/API/FeaturePolicy/allowedFeatures
 ---
-<p>{{APIRef("Feature Policy API")}}{{SeeCompatTable}}</p>
+{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
-<p>La méthode <strong><code>allowedFeatures()</code></strong> de l'interface {{DOMxRef("FeaturePolicy")}} retourne la liste des noms des directives de fonctionnalités permises par ce Feature Policy. Elle permet l'introspection de directives spécifiques du Feature Policy sur lequel la méthode est appelée. Ainsi, la méthode <code>allowedFeatures()</code> retourne un sous-ensemble de la liste des noms de directives retournée par {{DOMxRef("FeaturePolicy.features", "features()")}}.</p>
+La méthode **`allowedFeatures()`** de l'interface {{DOMxRef("FeaturePolicy")}} retourne la liste des noms des directives de fonctionnalités permises par ce Feature Policy. Elle permet l'introspection de directives spécifiques du Feature Policy sur lequel la méthode est appelée. Ainsi, la méthode `allowedFeatures()` retourne un sous-ensemble de la liste des noms de directives retournée par {{DOMxRef("FeaturePolicy.features", "features()")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">const permissions = <em>FeaturePolicy</em>.allowedFeatures()
-</pre>
+    const permissions = FeaturePolicy.allowedFeatures()
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un tableau de chaines de caractères représentant les noms des directives Feature Policy dont l'utilisation de la fonctionnalité associée est permise par le Feature Policy sur laquel est appelée cette méthode.</p>
+Un tableau de chaines de caractères représentant les noms des directives Feature Policy dont l'utilisation de la fonctionnalité associée est permise par le Feature Policy sur laquel est appelée cette méthode.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>L'exemple suivant affiche toutes les directives permises pour le présent document. Notez que ces fonctionnalités pourraient être restreintes par l'API Permissions, si l'utilisateur n'a pas encore accordé les droits correspondants.</p>
+L'exemple suivant affiche toutes les directives permises pour le présent document. Notez que ces fonctionnalités pourraient être restreintes par l'API Permissions, si l'utilisateur n'a pas encore accordé les droits correspondants.
 
-<pre class="brush: js">// D'abord, récupère l'objet Feature Policy
+```js
+// D'abord, récupère l'objet Feature Policy
 const featurePolicy = document.featurePolicy
 
 // Puis demande la liste des foncitonnalités permises
@@ -38,27 +38,14 @@ const permissions = featurePolicy.allowedFeatures()
 
 for (const directive of permissions)
   console.log(directive)
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Feature Policy","","allowsFeature")}}</td>
-   <td>{{Spec2("Feature Policy")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                    | Statut                               | Commentaire         |
+| ---------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName("Feature Policy","","allowsFeature")}} | {{Spec2("Feature Policy")}} | Initial definition. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("api.FeaturePolicy.allowedFeatures")}}</p>
+{{Compat("api.FeaturePolicy.allowedFeatures")}}

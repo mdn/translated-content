@@ -10,57 +10,39 @@ tags:
   - Propriétés
 translation_of: Web/API/NodeIterator/filter
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>La méthode en lecture seule <strong><code>NodeIterator.filter</code></strong> renvoie un objet {{domxref("NodeFilter")}}, c'est-à-dire un objet implémentant la méthode <code>acceptNode(<em>node</em>)</code>, utilisée pour filtrer les noeuds.</p>
+La méthode en lecture seule **`NodeIterator.filter`** renvoie un objet {{domxref("NodeFilter")}}, c'est-à-dire un objet implémentant la méthode `acceptNode(node)`, utilisée pour filtrer les noeuds.
 
-<p>Lors de la création du {{domxref("NodeIterator")}}, l'objet filtre est transmis en 3ème paramètre et l'objet méthode <code>acceptNode(<em>node</em>)</code> est appelé sur chaque noeud pour déterminer s'il doit ou non l'accepter. Cette fonction doit renvoyer la constante <code>NodeFilter.FILTER_ACCEPT</code> quand le noeud doit être accepté et <code>NodeFilter.FILTER_REJECT</code> s'il doit être rejeté.</p>
+Lors de la création du {{domxref("NodeIterator")}}, l'objet filtre est transmis en 3ème paramètre et l'objet méthode `acceptNode(node)` est appelé sur chaque noeud pour déterminer s'il doit ou non l'accepter. Cette fonction doit renvoyer la constante `NodeFilter.FILTER_ACCEPT` quand le noeud doit être accepté et `NodeFilter.FILTER_REJECT` s'il doit être rejeté.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>nodeFilter</em> = <em>nodeIterator</em>.filter;
-</pre>
+    nodeFilter = nodeIterator.filter;
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var nodeIterator = document.createNodeIterator(
+```js
+var nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
-nodeFilter = nodeIterator.filter;</pre>
+nodeFilter = nodeIterator.filter;
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-nodeiterator-filter', 'NodeIterator.filter')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Pas de changement de {{SpecName('DOM2 Traversal_Range')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeIterator-filter', 'NodeIterator.filter')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                    | Statut                                       | Commentaire                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-nodeiterator-filter', 'NodeIterator.filter')}}                                         | {{Spec2('DOM WHATWG')}}             | Pas de changement de {{SpecName('DOM2 Traversal_Range')}}. |
+| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeIterator-filter', 'NodeIterator.filter')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                   |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.NodeIterator.filter")}}
 
+## Voir aussi
 
-<p>{{Compat("api.NodeIterator.filter")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>L'interface à laquelle cette propriété appartient : {{domxref("NodeIterator")}}.</li>
-</ul>
+- L'interface à laquelle cette propriété appartient : {{domxref("NodeIterator")}}.

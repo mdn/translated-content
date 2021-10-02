@@ -8,69 +8,46 @@ tags:
   - Reference
 translation_of: Web/API/Document/open
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<div> </div>
+La méthode **`document.open()`** ouvre un document pour [l'écriture](/fr/docs/Web/API/Document/write).
 
-<p>La méthode <strong><code>document.open()</code></strong> ouvre un document pour <a href="/fr/docs/Web/API/Document/write">l'écriture</a>.</p>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
+    document.open();
 
-<pre class="eval">document.open();
-</pre>
+## Exemple
 
-<h2 id="Exemple">Exemple</h2>
+    // Dans cet exemple, le contenu du document est
+    // écrasé au cours de la réinitialisation avec open()
+    document.write("<html><p>supprimez-moi</p></html>");
+    document.open();
+    // Le document est vide.
 
-<pre>// Dans cet exemple, le contenu du document est
-// écrasé au cours de la réinitialisation avec open()
-document.write("&lt;html&gt;&lt;p&gt;supprimez-moi&lt;/p&gt;&lt;/html&gt;");
-document.open();
-// Le document est vide.
-</pre>
+## Notes
 
-<h2 id="Notes">Notes</h2>
+Si un document existe dans la cible, cette méthode le supprime (voir l'exemple ci-dessus).
 
-<p>Si un document existe dans la cible, cette méthode le supprime (voir l'exemple ci-dessus).</p>
+Par ailleurs, un appel automatique à `document.open()` est réalisé lorsque [document.write()](/fr/docs/Web/API/Document/write) est appelé après que la page ait été chargée, bien que ce ne soit pas défini dans la spécification du W3C. documenter les paramètres à document.open ne figurant pas dans la spécification
 
-<p>Par ailleurs, un appel automatique à <code>document.open()</code> est réalisé lorsque <a href="/fr/docs/Web/API/Document/write">document.write()</a> est appelé après que la page ait été chargée, bien que ce ne soit pas défini dans la spécification du W3C. documenter les paramètres à document.open ne figurant pas dans la spécification</p>
+Cette méthode ne doit pas être confondue avec [window.open()](/fr/docs/Web/API/Window/open). `document.open` permet d'écrire par dessus le document courant ou d'y ajouter du contenu, alors que `window.open` fournit une manière d'ouvrir une nouvelle fenêtre laissant le document courant intact. Comme `window` est l'objet, si on appelle juste `open(...)`, il sera traité comme un appel à `window.open(...)`. Le document ouvert peut être fermé à l'aide de [document.close()](/fr/docs/Web/API/Document/close).
 
-<p>Cette méthode ne doit pas être confondue avec <a href="/fr/docs/Web/API/Window/open">window.open()</a>. <code>document.open</code> permet d'écrire par dessus le document courant ou d'y ajouter du contenu, alors que <code>window.open</code> fournit une manière d'ouvrir une nouvelle fenêtre laissant le document courant intact. Comme <code>window</code> est l'objet, si on appelle juste <code>open(...)</code>, il sera traité comme un appel à <code>window.open(...)</code>. Le document ouvert peut être fermé à l'aide de <a href="/fr/docs/Web/API/Document/close">document.close()</a>.</p>
+Voir [Security check basics](/fr/docs/Mozilla/Gecko/Script_security#Security_checks)  pour plus d'informations sur les principaux.
 
-<p>Voir <a href="/fr/docs/Mozilla/Gecko/Script_security#Security_checks">Security check basics</a>  pour plus d'informations sur les principaux.</p>
+Si vous ne voulez pas créer une entrée d'historique, remplacez `open()` par `open("text/html", "replace")`.
 
-<p>Si vous ne voulez pas créer une entrée d'historique, remplacez <code>open()</code> par <code>open("text/html", "replace")</code>.</p>
+## Spécifications
 
-<h2 id="Specifications">Spécifications</h2>
+| Spécification                                                                                | Status                           | Comment              |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName("HTML WHATWG", "#dom-document-open", "document.open()")}} | {{Spec2("HTML WHATWG")}} |                      |
+| {{SpecName("DOM2 HTML", "html.html#ID-72161170", "document.open()")}} | {{Spec2("DOM2 HTML")}}     | Définition initiale. |
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("HTML WHATWG", "#dom-document-open", "document.open()")}}</td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM2 HTML", "html.html#ID-72161170", "document.open()")}}</td>
-      <td>{{Spec2("DOM2 HTML")}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+## Compatibilité des navigateurs
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+{{Compat("api.Document.open")}}
 
-<p>{{Compat("api.Document.open")}}</p>
+## Voir aussi
 
-<h2 id="See_also">Voir aussi</h2>
-
-<ul>
-  <li>{{domxref("Document")}}</li>
-  <li>{{domxref("Window.open()")}}</li>
-</ul>
+- {{domxref("Document")}}
+- {{domxref("Window.open()")}}

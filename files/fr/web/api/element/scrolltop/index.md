@@ -8,51 +8,52 @@ tags:
   - Reference
 translation_of: Web/API/Element/scrollTop
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>La propriété <code><strong>Element.scrollTop</strong></code> permet d'obtenir ou de définir le nombre de pixels sur lesquels le contenu a défilé verticalement.</p>
+La propriété **`Element.scrollTop`** permet d'obtenir ou de définir le nombre de pixels sur lesquels le contenu a défilé verticalement.
 
-<p>La valeur <code>scrollTop</code> d'un élément correspond à la distance entre le haut de l'élément et la partie la plus haute de son contenu visible. Lorsque le contenu d'un élément n'entraîne pas la création d'une barre de défilement verticale, la valeur de <code>scrollTop</code> est <code>0</code>.</p>
+La valeur `scrollTop` d'un élément correspond à la distance entre le haut de l'élément et la partie la plus haute de son contenu visible. Lorsque le contenu d'un élément n'entraîne pas la création d'une barre de défilement verticale, la valeur de `scrollTop` est `0`.
 
-<p>Lorsque <code>scrollTop</code> est utilisé sur l'élément racine (c'est-à-dire l'élément <code>&lt;html&gt;</code>), c'est la valeur de <code>scrollY</code> pour la fenêtre qui est renvoyée. <a href="https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-scrolltop">Il s'agit d'un cas aux limites pour <code>scrollTop</code></a>.</p>
+Lorsque `scrollTop` est utilisé sur l'élément racine (c'est-à-dire l'élément `<html>`), c'est la valeur de `scrollY` pour la fenêtre qui est renvoyée. [Il s'agit d'un cas aux limites pour `scrollTop`](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-scrolltop).
 
-<div class="warning">
-<p><strong>Attention :</strong> Pour les systèmes qui utilisent un affichage mis à l'échelle (<i>display scaling</i>), <code>scrollTop</code> peut fournir une valeur décimale.</p>
+> **Attention :** Pour les systèmes qui utilisent un affichage mis à l'échelle (_display scaling_), `scrollTop` peut fournir une valeur décimale.
+
+## Syntaxe
+
+```js
+// Obtenir le nombre de pixels qui ont défilé.
+var intElemScrollTop = someElement.scrollTop;
+```
+
+Après avoir exécuté le code ci-dessus, `intElemScrollTop` sera un entier correspondant au nombre de pixels pour lesquels le contenu de l'élément a défilé vers le haut.
+
+```js
+// Définir le nombre de pixels à faire défiler.
+element.scrollTop = intValue;
+```
+
+`scrollTop` peut être défini avec n'importe quelle valeur entière. Cependant :
+
+- S'il n'est pas possible de faire défiler l'élément (s'il ne dépasse d'aucune façon ou si une de ses propriétés le fixe ainsi), `scrollTop` vaudra toujours `0`.
+- `scrollTop` ne permet pas d'utiliser des valeurs négatives. Il revient à `0`.
+- Si la valeur utilisée est supérieure à la valeur maximale possible pour l'élément, `scrollTop` prendra cette valeur maximale possible.
+
+## Exemple
+
+### HTML
+
+```html
+<div id="container">
+  <div id="content">Utilisez le bouton :) Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!!</div>
 </div>
 
-<h2 id="Syntax">Syntaxe</h2>
+<button id="slide" type="button">Défilez vers le bas</button>
+```
 
-<pre class="brush: js">// Obtenir le nombre de pixels qui ont défilé.
-var <var>intElemScrollTop</var> = someElement.scrollTop;
-</pre>
+### CSS
 
-<p>Après avoir exécuté le code ci-dessus, <code>intElemScrollTop</code> sera un entier correspondant au nombre de pixels pour lesquels le contenu de l'élément a défilé vers le haut.</p>
-
-<pre class="brush: js">// Définir le nombre de pixels à faire défiler.
-<var>element</var>.scrollTop = <var>intValue</var>;
-</pre>
-
-<p><code>scrollTop</code> peut être défini avec n'importe quelle valeur entière. Cependant :</p>
-
-<ul>
- <li>S'il n'est pas possible de faire défiler l'élément (s'il ne dépasse d'aucune façon ou si une de ses propriétés le fixe ainsi), <code>scrollTop</code> vaudra toujours <code>0</code>.</li>
- <li><code>scrollTop</code> ne permet pas d'utiliser des valeurs négatives. Il revient à <code>0</code>.</li>
- <li>Si la valeur utilisée est supérieure à la valeur maximale possible pour l'élément, <code>scrollTop</code> prendra cette valeur maximale possible.</li>
-</ul>
-
-<h2 id="Example">Exemple</h2>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div id="content"&gt;Utilisez le bouton :) Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!!&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;button id="slide" type="button"&gt;Défilez vers le bas&lt;/button&gt;</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">#container {
+```css
+#container {
   height: 100px;
   border: 1px solid #ccc;
   overflow-y: scroll;
@@ -60,47 +61,34 @@ var <var>intElemScrollTop</var> = someElement.scrollTop;
 
 #content {
   background-color: #ccc;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const button = document.getElementById('slide');
+```js
+const button = document.getElementById('slide');
 
 button.onclick = function () {
   document.getElementById('container').scrollTop += 20;
-};</pre>
+};
+```
 
-<h3 id="Result">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
+## Spécifications
 
-<h2 id="Specifications">Spécifications</h2>
+| Spécification                                                                            | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('CSSOM View', '#dom-element-scrolltop', 'scrollTop')}} | {{Spec2("CSSOM View")}} |             |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-element-scrolltop', 'scrollTop')}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## Compatibilité des navigateurs
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+{{Compat("api.Element.scrollTop")}}
 
-<p>{{Compat("api.Element.scrollTop")}}</p>
+## Voir aussi
 
-<h2 id="See_also">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/Web/API/Element/scrollLeft"><code>Element.scrollLeft</code></a></li>
- <li><a href="/fr/docs/Web/API/Element/scrollTo"><code>Element.scrollTo()</code></a></li>
-</ul>
+- [`Element.scrollLeft`](/fr/docs/Web/API/Element/scrollLeft)
+- [`Element.scrollTo()`](/fr/docs/Web/API/Element/scrollTo)

@@ -3,15 +3,19 @@ title: Document.applets
 slug: Web/API/Document/applets
 translation_of: Web/API/Document/applets
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<p><code>applets</code> retourne une liste ordonnée des applets contenus dans un document.</p>
-<h3 id="Syntax">Syntaxe</h3>
-<pre class="eval"><em>nodeList</em> = document.applets
-</pre>
-<h3 id="Example">Exemple</h3>
-<pre class="eval">// ( Si vous savez que le second applet est celui que vous voulez )
-my_java_app = document.applets[1];
-</pre>
-<h3 id="Specification">Spécification</h3>
-<p><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-85113862">DOM Level 2 HTML: applets</a></p>
+`applets` retourne une liste ordonnée des applets contenus dans un document.
+
+### Syntaxe
+
+    nodeList = document.applets
+
+### Exemple
+
+    // ( Si vous savez que le second applet est celui que vous voulez )
+    my_java_app = document.applets[1];
+
+### Spécification
+
+[DOM Level 2 HTML: applets](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-85113862)

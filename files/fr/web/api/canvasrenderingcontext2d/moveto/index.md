@@ -7,63 +7,64 @@ tags:
   - CanvasRenderingContext2D
 translation_of: Web/API/CanvasRenderingContext2D/moveTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La méthode <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.moveTo()</code></strong> de l'API Canvas 2D déplace le point de départ d'un nouveau sous-chemin vers les coordonnées <code>(x, y)</code>.</p>
+La méthode **`CanvasRenderingContext2D`\*\***`.moveTo()`\*\* de l'API Canvas 2D déplace le point de départ d'un nouveau sous-chemin vers les coordonnées `(x, y)`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var><em>ctx</em>.moveTo(x, y);</var>
-</pre>
+    void ctx.moveTo(x, y);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>x</code></dt>
- <dd>L'axe des x du point.</dd>
- <dt><code>y</code></dt>
- <dd>L'axe des y du point.</dd>
-</dl>
+- `x`
+  - : L'axe des x du point.
+- `y`
+  - : L'axe des y du point.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_la_méthode_moveTo">Utiliser la méthode <code>moveTo</code></h3>
+### Utiliser la méthode `moveTo`
 
-<p>Ceci est un simple snippet de code qui utilise la méthode <code>moveTo</code> pour déplacer le stylo à une position de départ pour dessiner une ligne.</p>
+Ceci est un simple snippet de code qui utilise la méthode `moveTo` pour déplacer le stylo à une position de départ pour dessiner une ligne.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.beginPath();
 ctx.moveTo(50, 50);
 ctx.lineTo(200, 50);
 ctx.stroke();
-</pre>
+```
 
-<p>Éditez le code ci-dessous pour voir vos changements mettre à jour le canvas en direct:</p>
+Éditez le code ci-dessous pour voir vos changements mettre à jour le canvas en direct:
 
-<h4 id="code_jouable">Code jouable</h4>
+#### Code jouable
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.moveTo(50,50);
 ctx.lineTo(200, 50);
-ctx.stroke()&lt;/textarea&gt;
-</pre>
+ctx.stroke()</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -86,35 +87,22 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
+{{ EmbedLiveSample('code_jouable', 700, 360) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-moveto", "CanvasRenderingContext2D.moveTo")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                            | Status                           | Comment |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-moveto", "CanvasRenderingContext2D.moveTo")}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.moveTo")}}</p>
+{{Compat("api.CanvasRenderingContext2D.moveTo")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface qui définit cette méthode, {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineTo()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.stroke()")}}</li>
-</ul>
+- L'interface qui définit cette méthode, {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.lineTo()")}}
+- {{domxref("CanvasRenderingContext2D.stroke()")}}

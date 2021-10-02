@@ -10,110 +10,106 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/bindTexture
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>La méthode <strong><code>WebGLRenderingContext.bindTexture()</code></strong> de l'API WebGL lie la {{domxref("WebGLTexture")}} donnée à une cible (point de liaison).</p>
+La méthode **`WebGLRenderingContext.bindTexture()`** de l'API WebGL lie la {{domxref("WebGLTexture")}} donnée à une cible (point de liaison).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var>gl</var>.bindTexture(<var>cible</var>, <var>texture</var>);
-</pre>
+    void gl.bindTexture(cible, texture);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>cible</dt>
- <dd>Un {{domxref ("GLenum")}} indiquant le point de liaison (cible). Valeurs possibles :
- <ul>
-  <li><code>gl.TEXTURE_2D</code> : une texture bidimensionnelle ;</li>
-  <li><code>gl.TEXTURE_CUBE_MAP</code> : une texture mappée sur un cube ;</li>
-  <li>lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, les valeurs suivantes sont en outre disponibles :
-   <ul>
-    <li><code>gl.TEXTURE_3D</code> : une texture tridimensionnelle ;</li>
-    <li><code>gl.TEXTURE_2D_ARRAY</code> : une texture en tableau bidimensionnelle.</li>
-   </ul>
-  </li>
- </ul>
- </dd>
- <dt>texture</dt>
- <dd>Un objet {{domxref ("WebGLTexture")}} à lier.</dd>
-</dl>
+- cible
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : Un {{domxref ("GLenum")}} indiquant le point de liaison (cible). Valeurs possibles :
 
-<p>Aucune.</p>
+    - `gl.TEXTURE_2D` : une texture bidimensionnelle ;
+    - `gl.TEXTURE_CUBE_MAP` : une texture mappée sur un cube ;
+    - lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, les valeurs suivantes sont en outre disponibles :
 
-<h3 id="Exceptions">Exceptions</h3>
+      - `gl.TEXTURE_3D` : une texture tridimensionnelle ;
+      - `gl.TEXTURE_2D_ARRAY` : une texture en tableau bidimensionnelle.
 
-<p>Une erreur <code>gl.INVALID_ENUM</code> est déclenchée si <code>cible</code> n'est pas <code>gl.TEXTURE_2D</code>, <code>gl.TEXTURE_CUBE_MAP</code>, <code>gl.TEXTURE_3D</code>, ou <code>gl.TEXTURE_2D_ARRAY</code>.</p>
+- texture
+  - : Un objet {{domxref ("WebGLTexture")}} à lier.
 
-<h2 id="Exemples">Exemples</h2>
+### Valeur retournée
 
-<h3 id="Liaison_d'une_texture">Liaison d'une texture</h3>
+Aucune.
 
-<pre class="brush: js">var canevas = document.getElementById('canevas');
+### Exceptions
+
+Une erreur `gl.INVALID_ENUM` est déclenchée si `cible` n'est pas `gl.TEXTURE_2D`, `gl.TEXTURE_CUBE_MAP`, `gl.TEXTURE_3D`, ou `gl.TEXTURE_2D_ARRAY`.
+
+## Exemples
+
+### Liaison d'une texture
+
+```js
+var canevas = document.getElementById('canevas');
 var gl = canevas.getContext('webgl');
 var texture = gl.createTexture();
 
 gl.bindTexture(gl.TEXTURE_2D, texture);
-</pre>
+```
 
-<h3 id="Obtention_des_liaisons_en_cours">Obtention des liaisons en cours</h3>
+### Obtention des liaisons en cours
 
-<p>Pour vérifier la liaison de texture en cours, interrogez les constantes <code>gl.TEXTURE_BINDING_2D</code> ou <code>gl.TEXTURE_BINDING_CUBE_MAP</code>.</p>
+Pour vérifier la liaison de texture en cours, interrogez les constantes `gl.TEXTURE_BINDING_2D` ou `gl.TEXTURE_BINDING_CUBE_MAP`.
 
-<pre class="brush: js">gl.getParameter(gl.TEXTURE_BINDING_2D);
-</pre>
+```js
+gl.getParameter(gl.TEXTURE_BINDING_2D);
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.8", "bindTexture")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>
-    <p>Définition initiale pour WebGL.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glBindTexture.xml", "glBindTexture")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>
-    <p>Page man de l’API OpenGL ES 2.0 (similaire).</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL2', "#3.7.1", "bindTexture")}}</td>
-   <td>{{Spec2('WebGL2')}}</td>
-   <td>Définition mise à jour pour WebGL 2.<br>
-    Ajoute : <code>gl.TEXTURE_3D</code> et  <code>gl.TEXTURE_2D_ARRAY</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 3.0', "glBindTexture.xhtml", "glBindTexture")}}</td>
-   <td>{{Spec2('OpenGL ES 3.0')}}</td>
-   <td>Page man de l’API OpenGL ES 3.0 (similaire).</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('WebGL', "#5.14.8", "bindTexture")}}</td>
+      <td>{{Spec2('WebGL')}}</td>
+      <td><p>Définition initiale pour WebGL.</p></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('OpenGL ES 2.0', "glBindTexture.xml", "glBindTexture")}}
+      </td>
+      <td>{{Spec2('OpenGL ES 2.0')}}</td>
+      <td><p>Page man de l’API OpenGL ES 2.0 (similaire).</p></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('WebGL2', "#3.7.1", "bindTexture")}}</td>
+      <td>{{Spec2('WebGL2')}}</td>
+      <td>
+        Définition mise à jour pour WebGL 2.<br />Ajoute :
+        <code>gl.TEXTURE_3D</code> et  <code>gl.TEXTURE_2D_ARRAY</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('OpenGL ES 3.0', "glBindTexture.xhtml", "glBindTexture")}}
+      </td>
+      <td>{{Spec2('OpenGL ES 3.0')}}</td>
+      <td>Page man de l’API OpenGL ES 3.0 (similaire).</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WebGLRenderingContext.bindTexture")}}</p>
+{{Compat("api.WebGLRenderingContext.bindTexture")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-</ul>
+<!---->
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.createTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createTexture()")}}
+- {{domxref("WebGLRenderingContext.deleteTexture()")}}
+- {{domxref("WebGLRenderingContext.isTexture()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}

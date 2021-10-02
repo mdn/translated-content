@@ -11,23 +11,20 @@ tags:
   - onclose
 translation_of: Web/API/Notification/onclose
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>La propriété <strong><code>onclose</code></strong> de l'interface {{domxref ("Notification")}} définit un écouteur d'événements pour recevoir les événements {{domxref ("HTMLDialogElement/close_event", "close")}}. Ces événements se produisent lorsqu'une {{domxref ("Notification")}} est fermée.</p>
+La propriété **`onclose`** de l'interface {{domxref ("Notification")}} définit un écouteur d'événements pour recevoir les événements {{domxref ("HTMLDialogElement/close_event", "close")}}. Ces événements se produisent lorsqu'une {{domxref ("Notification")}} est fermée.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>Notification</var>.onclose = function(event) { ... }
-Notification.onclose = (event) =&gt; { ... }
-</pre>
+    Notification.onclose = function(event) { ... }
+    Notification.onclose = (event) => { ... }
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Notification.onclose")}}</p>
+{{Compat("api.Notification.onclose")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>{{domxref("Notification")}}</li>
- <li><a href="/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a></li>
-</ul>
+- {{domxref("Notification")}}
+- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

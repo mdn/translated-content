@@ -11,42 +11,41 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceEntry/startTime
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>La propriété <strong><code>startTime</code></strong> renvoie le premier <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> enregistré pour l'<a href="/fr/docs/Web/API/PerformanceEntry">entrée de performance</a>.</p>
+La propriété **`startTime`** renvoie le premier [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) enregistré pour l'[entrée de performance](/fr/docs/Web/API/PerformanceEntry).
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>La valeur renvoyée par cette propriété dépend du <a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>type</code></a> de l'entrée de performance :</p>
+La valeur renvoyée par cette propriété dépend du [`type`](/fr/docs/Web/API/PerformanceEntry/entryType) de l'entrée de performance :
 
-<ul>
-  <li>« <code>frame</code> » - retourne le 
-    <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> quand l'affichage a été démarré.</li>
-  <li>« <code>mark</code> » - retourne le <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> lorsque le marquage a été créé par un appel de <a href="/fr/docs/Web/API/Performance/mark"><code>performance.mark()</code></a>.</li>
-  <li>« <code>measure</code> » - retourne le <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> lorsque la mesure a été créée par un appel à <a href="/fr/docs/Web/API/Performance/measure"><code>performance.measure()</code></a>.</li>
-  <li>« <code>navigation</code> » - retourne le <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> avec une valeur de "<code>0</code>".</li>
-  <li>« <code>resource</code> » - retourne le <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> immédiatement avant que le navigateur ne <a href="/fr/docs/Web/API/PerformanceResourceTiming/fetchStart">commence à récupérer la ressource</a>.</li>
-</ul>
+- « `frame` » - retourne le
+  [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) quand l'affichage a été démarré.
+- « `mark` » - retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) lorsque le marquage a été créé par un appel de [`performance.mark()`](/fr/docs/Web/API/Performance/mark).
+- « `measure` » - retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) lorsque la mesure a été créée par un appel à [`performance.measure()`](/fr/docs/Web/API/Performance/measure).
+- « `navigation` » - retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) avec une valeur de "`0`".
+- « `resource` » - retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne [commence à récupérer la ressource](/fr/docs/Web/API/PerformanceResourceTiming/fetchStart).
 
-<p>Cette propriété est en lecture seule.</p>
+Cette propriété est en lecture seule.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:js">entry.startTime;</pre>
+```js
+entry.startTime;
+```
 
-<h3 id="Return_Value">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un objet <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> représentant le premier horodatage lorsque l'<a href="/fr/docs/Web/API/PerformanceEntry">entrée de performance</a> a été créée.</p>
+Un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant le premier horodatage lorsque l'[entrée de performance](/fr/docs/Web/API/PerformanceEntry) a été créée.
 
-<div class="notecard note">
-  <p><strong>Note :</strong> Si l'entrée de performance a un <a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>entryType</code></a> "<code>resource</code>" (c'est-à-dire que l'entrée est un objet <a href="/fr/docs/Web/API/PerformanceResourceTiming"><code>PerformanceResourceTiming</code></a>), cette propriété renvoie la valeur de l'horodatage fournie par <a href="/fr/docs/Web/API/PerformanceResourceTiming/fetchStart"><code>PerformanceResourceTiming.fetchStart</code></a>.</p>
-</div>
+> **Note :** Si l'entrée de performance a un [`entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) "`resource`" (c'est-à-dire que l'entrée est un objet [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming)), cette propriété renvoie la valeur de l'horodatage fournie par [`PerformanceResourceTiming.fetchStart`](/fr/docs/Web/API/PerformanceResourceTiming/fetchStart).
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>L'exemple suivant montre l'utilisation de la propriété <code>startTime</code>.</p>
+L'exemple suivant montre l'utilisation de la propriété `startTime`.
 
-<pre class="brush:js">function run_PerformanceEntry() {
+```js
+function run_PerformanceEntry() {
   console.log("Support de PerformanceEntry ...");
 
   if (performance.mark === undefined) {
@@ -61,7 +60,7 @@ translation_of: Web/API/PerformanceEntry/startTime
 
   // Utilise getEntries() pour itérer à travers chaque entrée
   let p = performance.getEntries();
-  for (let i = 0; i &lt; p.length; i++) {
+  for (let i = 0; i < p.length; i++) {
     log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
@@ -70,7 +69,7 @@ function check_PerformanceEntry(obj) {
   let properties = ["name", "entryType", "startTime", "duration"];
   let methods = ["toJSON"];
 
-  for (let i = 0; i &lt; properties.length; i++) {
+  for (let i = 0; i < properties.length; i++) {
     // On vérifie chaque propriété
     let supported = properties[i] in obj;
     if (supported)
@@ -78,7 +77,7 @@ function check_PerformanceEntry(obj) {
     else
       log("..." + properties[i] + " = N'est pas pris en charge");
   }
-  for (let i = 0; i &lt; methods.length; i++) {
+  for (let i = 0; i < methods.length; i++) {
     // On vérifie chaque méthode
     let supported = typeof obj[methods[i]] == "function";
     if (supported) {
@@ -89,34 +88,17 @@ function check_PerformanceEntry(obj) {
     }
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceentry-starttime',
-        'startTime')}}</td>
-      <td>{{Spec2('Performance Timeline Level 2')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Performance Timeline', '#dom-performanceentry-starttime',
-        'startTime')}}</td>
-      <td>{{Spec2('Performance Timeline')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                        | Statut                                                   | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------------------- |
+| {{SpecName('Performance Timeline Level 2', '#dom-performanceentry-starttime',
+        'startTime')}} | {{Spec2('Performance Timeline Level 2')}} |                      |
+| {{SpecName('Performance Timeline', '#dom-performanceentry-starttime',
+        'startTime')}}         | {{Spec2('Performance Timeline')}}             | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceEntry.startTime")}}</p>
+{{Compat("api.PerformanceEntry.startTime")}}

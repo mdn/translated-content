@@ -9,59 +9,45 @@ tags:
   - Plein écran
 translation_of: Web/API/Document/exitFullscreen
 ---
-<div>{{ApiRef("Fullscreen API")}}</div>
+{{ApiRef("Fullscreen API")}}
 
-<p>La méthode <code><strong>Document.exitFullscreen()</strong></code> extrait le document du mode plein écran ; elle est utilisée pour inverser les effets d'un appel au mode plein écran réalisé avec la méthode {{domxref("Element.requestFullscreen()")}}.</p>
+La méthode **`Document.exitFullscreen()`** extrait le document du mode plein écran ; elle est utilisée pour inverser les effets d'un appel au mode plein écran réalisé avec la méthode {{domxref("Element.requestFullscreen()")}}.
 
-<div class="note">
-  <p><strong>Note :</strong> Si un autre élément était précédemment en mode plein écran lorsque l'élément en cours a été placé en mode plein écran, cet élément précédent reprend le mode plein écran. Une "pile" d'éléments en plein écran est maintenue par le navigateur à cette fin.</p>
-</div>
+> **Note :** Si un autre élément était précédemment en mode plein écran lorsque l'élément en cours a été placé en mode plein écran, cet élément précédent reprend le mode plein écran. Une "pile" d'éléments en plein écran est maintenue par le navigateur à cette fin.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">document.exitFullscreen();
-</pre>
+    document.exitFullscreen();
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">// Click bascule en mode plein écran
+```js
+// Click bascule en mode plein écran
 document.onclick = function (event) {
   if (document.fullscreenElement) {
     document.exitFullscreen()
   } else {
     document.documentElement.requestFullscreen()
   }
-};</pre>
+};
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Fullscreen", "#dom-document-exitfullscreen", "Document.exitFullscreen()")}}</td>
-   <td>{{Spec2("Fullscreen")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | Statut                           | Commentaire         |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName("Fullscreen", "#dom-document-exitfullscreen", "Document.exitFullscreen()")}} | {{Spec2("Fullscreen")}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Document.exitFullscreen")}}</p>
+{{Compat("api.Document.exitFullscreen")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/Guide/DOM/Using_full_screen_mode">Utiliser le mode plein écran</a></li>
- <li>{{ domxref("Element.requestFullscreen()") }}</li>
- <li>{{ domxref("Document.exitFullscreen()") }}</li>
- <li>{{ domxref("Document.fullscreen") }}</li>
- <li>{{ domxref("Document.fullscreenElement") }}</li>
- <li>{{ cssxref(":fullscreen") }}</li>
- <li>{{ HTMLAttrXRef("allowfullscreen", "iframe") }}</li>
-</ul>
+- [Utiliser le mode plein écran](/fr/docs/Web/Guide/DOM/Using_full_screen_mode)
+- {{ domxref("Element.requestFullscreen()") }}
+- {{ domxref("Document.exitFullscreen()") }}
+- {{ domxref("Document.fullscreen") }}
+- {{ domxref("Document.fullscreenElement") }}
+- {{ cssxref(":fullscreen") }}
+- {{ HTMLAttrXRef("allowfullscreen", "iframe") }}

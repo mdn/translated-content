@@ -10,21 +10,20 @@ tags:
   - Rendu
 translation_of: Web/API/Document/contentType
 ---
-<p>{{ ApiRef("DOM") }}{{Non-standard_header}}</p>
+{{ ApiRef("DOM") }}{{Non-standard_header}}
 
-<p>Renvoie le type MIME dans lequel le document est rendu. Il peut provenir d'en-têtes HTTP ou d'autres sources d'informations MIME et peut être affecté par les conversions automatiques de type effectuées par le navigateur ou les extensions.</p>
+Renvoie le type MIME dans lequel le document est rendu. Il peut provenir d'en-têtes HTTP ou d'autres sources d'informations MIME et peut être affecté par les conversions automatiques de type effectuées par le navigateur ou les extensions.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><var>contentType</var> = <var>document</var>.contentType;
-</pre>
+    contentType = document.contentType;
 
-<p><code>contentType</code> est une propriété en lecture seule.</p>
+`contentType` est une propriété en lecture seule.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>La  propriété n'est pas affectée par les balises META.</p>
+La  propriété n'est pas affectée par les balises META.
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<p>{{SpecName('DOM WHATWG','#dom-document-contenttype','Document.contenttype')}}</p>
+{{SpecName('DOM WHATWG','#dom-document-contenttype','Document.contenttype')}}

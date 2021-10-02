@@ -7,45 +7,29 @@ tags:
   - Reference
 translation_of: Web/API/DeviceMotionEvent/interval
 ---
-<p>{{apiref("Device Orientation Events")}}</p>
+{{apiref("Device Orientation Events")}}
 
-<p>La propriété <strong><code>interval</code></strong> renvoie la granularité temporelle, exprimée en millisecondes, avec laquelle les données relatives aux mouvements sont obtenues du matériel.</p>
+La propriété **`interval`** renvoie la granularité temporelle, exprimée en millisecondes, avec laquelle les données relatives aux mouvements sont obtenues du matériel.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var interval = <em>instanceOfDeviceMotionEvent</em>.interval;
-</pre>
+    var interval = instanceOfDeviceMotionEvent.interval;
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Device Orientation')}}</td>
-   <td>{{Spec2('Device Orientation')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                | État                                     | Commentaires |
+| -------------------------------------------- | ---------------------------------------- | ------------ |
+| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DeviceMotionEvent.interval")}}</p>
+{{Compat("api.DeviceMotionEvent.interval")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{ domxref("DeviceMotionEvent") }}</li>
- <li>{{ event("devicemotion") }}</li>
- <li>{{ domxref("window.ondevicemotion") }}</li>
- <li>{{ event("deviceorientation") }}</li>
- <li>{{ domxref("DeviceOrientationEvent") }}</li>
- <li><a href="/fr/docs/WebAPI/Detecting_device_orientation">Detecting device orientation</a></li>
-</ul>
+- {{ domxref("DeviceMotionEvent") }}
+- {{ event("devicemotion") }}
+- {{ domxref("window.ondevicemotion") }}
+- {{ event("deviceorientation") }}
+- {{ domxref("DeviceOrientationEvent") }}
+- [Detecting device orientation](/fr/docs/WebAPI/Detecting_device_orientation)

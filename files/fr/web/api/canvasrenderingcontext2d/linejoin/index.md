@@ -10,50 +10,47 @@ tags:
   - stroke
 translation_of: Web/API/CanvasRenderingContext2D/lineJoin
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La propriété <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.lineJoin</code></strong> de l'API Canvas 2D détermine la forme à utiliser pour joindre deux segments de ligne à leur intersection.</p>
+La propriété **`CanvasRenderingContext2D`\*\***`.lineJoin`\*\* de l'API Canvas 2D détermine la forme à utiliser pour joindre deux segments de ligne à leur intersection.
 
-<p>Cette propriété n'a aucun effet quand deux segments connectés ont la même direction, car aucune zone de jonction ne sera ajoutée dans ce cas. Les segments dégénérés d'une longueur de zéro (c'est à dire avec les extrémités à la même position) seront ignorés.</p>
+Cette propriété n'a aucun effet quand deux segments connectés ont la même direction, car aucune zone de jonction ne sera ajoutée dans ce cas. Les segments dégénérés d'une longueur de zéro (c'est à dire avec les extrémités à la même position) seront ignorés.
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> Les lignes peuvent être dessinées aves les méthodes  {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}} et {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}}.</p>
-</div>
+> **Note :** Les lignes peuvent être dessinées aves les méthodes  {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}} et {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>ctx</em>.lineJoin = "bevel" || "round" || "miter";
-</pre>
+    ctx.lineJoin = "bevel" || "round" || "miter";
 
-<h3 id="Options">Options</h3>
+### Options
 
-<p>Il y a trois valeurs possibles pour cette propriété: <code>"round"</code>, <code>"bevel"</code> et <code>"miter"</code>. Celle par défaut est <code>"miter"</code>.</p>
+Il y a trois valeurs possibles pour cette propriété: `"round"`, `"bevel"` et `"miter"`. Celle par défaut est `"miter"`.
 
-<p><img alt="" src="canvas_linejoin.png"></p>
+![](canvas_linejoin.png)
 
-<dl>
- <dt><code>"round"</code> (rond)</dt>
- <dd>Arrondit les coins d'une forme en remplissant un zone supplémentaire centré sur le point final commun des segments connectés. Le rayon de ces coins arrondis est égal à la largeur de la ligne .</dd>
- <dt><code>"bevel"</code> (biseau)</dt>
- <dd>Remplit une zone triangulaire supplémentaire entre les extrémités des segments connectés.</dd>
- <dt><code>"miter"</code> (onglet)</dt>
- <dd>Les segments raccordés  sont reliés entre eux en prolongeant leurs bors extérieurs en un seul point, ce qui a pour effet de remplir uen zone supplémentaire en forme de losange. Ce paramètre est affecté par la proriété {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}. Valeur par dafaut.</dd>
-</dl>
+- `"round"` (rond)
+  - : Arrondit les coins d'une forme en remplissant un zone supplémentaire centré sur le point final commun des segments connectés. Le rayon de ces coins arrondis est égal à la largeur de la ligne .
+- `"bevel"` (biseau)
+  - : Remplit une zone triangulaire supplémentaire entre les extrémités des segments connectés.
+- `"miter"` (onglet)
+  - : Les segments raccordés  sont reliés entre eux en prolongeant leurs bors extérieurs en un seul point, ce qui a pour effet de remplir uen zone supplémentaire en forme de losange. Ce paramètre est affecté par la proriété {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}. Valeur par dafaut.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Modifier_les_jointures_d'un_tracé">Modifier les jointures d'un tracé</h3>
+### Modifier les jointures d'un tracé
 
-<p>Cet exemple applique des jointures arrondies au tracé.</p>
+Cet exemple applique des jointures arrondies au tracé.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.lineWidth = 20;
@@ -64,23 +61,26 @@ ctx.lineTo(190, 100);
 ctx.lineTo(280, 20);
 ctx.lineTo(280, 150);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{ EmbedLiveSample('Changing_the_joins_in_a_path', 700, 180) }}</p>
+{{ EmbedLiveSample('Changing_the_joins_in_a_path', 700, 180) }}
 
-<h3 id="Comparaison_des_jointures_de_lignes">Comparaison des jointures de lignes</h3>
+### Comparaison des jointures de lignes
 
-<p>L'exemple dessine 3 tracés différents, illustrant chacune des trois valeurs de <code>lineJoin</code>.</p>
+L'exemple dessine 3 tracés différents, illustrant chacune des trois valeurs de `lineJoin`.
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js">var ctx = document.getElementById('canvas').getContext('2d');
+```js
+var ctx = document.getElementById('canvas').getContext('2d');
 var lineJoin = ['round', 'bevel', 'miter'];
 ctx.lineWidth = 10;
 
-for (let i = 0; i &lt; lineJoin.length; i++) {
+for (let i = 0; i < lineJoin.length; i++) {
   ctx.lineJoin = lineJoin[i];
   ctx.beginPath();
   ctx.moveTo(-5, 5 + i * 40);
@@ -90,44 +90,27 @@ for (let i = 0; i &lt; lineJoin.length; i++) {
   ctx.lineTo(155, 5 + i * 40);
   ctx.stroke();
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Comparison_of_line_joins", "180", "180", "canvas_linejoin.png")}}</p>
+{{EmbedLiveSample("Comparison_of_line_joins", "180", "180", "canvas_linejoin.png")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-linejoin", "CanvasRenderingContext2D.lineJoin")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                | Statut                           | Commentaire |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-linejoin", "CanvasRenderingContext2D.lineJoin")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_naviagateurs">Compatibilité des naviagateurs</h2>
+## Compatibilité des naviagateurs
 
+{{Compat("api.CanvasRenderingContext2D.lineJoin")}}
 
+### WebKit/Blink-notes particulières
 
-<p>{{Compat("api.CanvasRenderingContext2D.lineJoin")}}</p>
+- Dans les navigateurs basés sur WebKit et Blink, une méthode `ctx.setLineJoin()` non-standard et obsolète est implémentée en plus de cette propriété.
 
-<h3 id="WebKitBlink-notes_particulières">WebKit/Blink-notes particulières</h3>
+## Voir aussi
 
-<ul>
- <li>Dans les navigateurs basés sur WebKit et Blink, une méthode <code>ctx.setLineJoin()</code> non-standard et obsolète est implémentée en plus de cette propriété.</li>
-</ul>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>L'interface définissant cette propriété: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineCap")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineWidth")}}</li>
- <li><a href="/fr-FR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Ajout de styles et de couleurs</a></li>
-</ul>
+- L'interface définissant cette propriété: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.lineCap")}}
+- {{domxref("CanvasRenderingContext2D.lineWidth")}}
+- [Ajout de styles et de couleurs](/fr-FR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)

@@ -9,28 +9,26 @@ tags:
   - évènements
 translation_of: Web/API/Event/cancelable
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p>La propriété  <dfn><code>cancelable</code></dfn> (<em>annulable</em>) de "Event" Indique si l'événement peut être annulé et donc empêché, comme si l'événement ne s'était jamais produit. Si l'événement n'est pas annulable, alors sa propriété <code>cancelable</code> est à <code>false</code> (<em>faux</em>) et l'écouteur d'événement ne peut pas l'arrêter.</p>
+La propriété  _`cancelable`_ (_annulable_) de "Event" Indique si l'événement peut être annulé et donc empêché, comme si l'événement ne s'était jamais produit. Si l'événement n'est pas annulable, alors sa propriété `cancelable` est à `false` (_faux_) et l'écouteur d'événement ne peut pas l'arrêter.
 
-<p>L'appel de {{domxref("event.preventDefault", "preventDefault()")}} sur un évènement qui ne peut être annulé produit une erreur, aussi les écouteurs d'évènement qui gèrent de nombreux types d'évènements peuvent être vérifiés avec <code>cancelable</code> avant d'appeler leurs méthodes <code>preventDefault()</code>.</p>
+L'appel de {{domxref("event.preventDefault", "preventDefault()")}} sur un évènement qui ne peut être annulé produit une erreur, aussi les écouteurs d'évènement qui gèrent de nombreux types d'évènements peuvent être vérifiés avec `cancelable` avant d'appeler leurs méthodes `preventDefault()`.
 
-<p>La plupart des événements natifs du navigateur qui peuvent être annulés sont ceux qui résultent de l'interaction de l'utilisateur avec la page. L'annulation des événements <a href="/fr/docs/Web/Events/click">click</a>, <a href="/fr/docs/Web/Events/scroll">scroll</a> ou <a href="/fr/docs/Web/Events/beforeunload">beforeunload</a> empêcherait l'utilisateur de cliquer sur un élément, de faire défiler la page ou de la quitter, respectivement.</p>
+La plupart des événements natifs du navigateur qui peuvent être annulés sont ceux qui résultent de l'interaction de l'utilisateur avec la page. L'annulation des événements [click](/fr/docs/Web/Events/click), [scroll](/fr/docs/Web/Events/scroll) ou [beforeunload](/fr/docs/Web/Events/beforeunload) empêcherait l'utilisateur de cliquer sur un élément, de faire défiler la page ou de la quitter, respectivement.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>bool</var> = <em>event</em>.cancelable
-</pre>
+    bool = event.cancelable
 
-<ul>
- <li>Le résultat est un <code>booléen</code> qui est <code>true</code> (<em>vrai</em>) si l'événement peut être annulé.</li>
-</ul>
+- Le résultat est un `booléen` qui est `true` (_vrai_) si l'événement peut être annulé.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>Par exemple, les vendeurs de navigateurs proposent que l'<a href="/fr/docs/Web/Events/wheel">évènement wheel </a>puisse être annulable seulement  <a href="https://github.com/WICG/interventions/issues/33">la première fois que l'écouteur est appelé</a> (en) ; les évènements  <code>wheel</code> suivants ne peuvent être annulés.</p>
+Par exemple, les vendeurs de navigateurs proposent que l'[évènement wheel ](/fr/docs/Web/Events/wheel)puisse être annulable seulement  [la première fois que l'écouteur est appelé](https://github.com/WICG/interventions/issues/33) (en) ; les évènements  `wheel` suivants ne peuvent être annulés.
 
-<pre class="brush:js">function preventScrollWheel(event) {
+```js
+function preventScrollWheel(event) {
   if (typeof event.cancelable !== 'boolean' || event.cancelable) {
     // L'événement peut être annulé, alors nous le faisons.
     event.preventDefault();
@@ -42,47 +40,25 @@ translation_of: Web/API/Event/cancelable
   }
 }
 
-document.addEventListener('wheel', preventCancelableEvents);</pre>
-
-<p> </p>
-
-<h2 id="Notes">Notes</h2>
-
-<p>Si l'événement peut être annulé, ou non, est déterminé au moment de l'initialisation de celui-ci.</p>
-
-<p>Pour annuler un événement, utiliser la méthode {{domxref("event.preventDefault", "preventDefault()")}} sur celui-ci. Cela permet d'empêcher l'action par défaut associée à l'événement de s'exécuter.</p>
-
-<h2 id="Specifications">Spécifications</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-cancelable', 'Event.cancelable')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4', '#dom-event-cancelable', 'Event.cancelable')}}</td>
-   <td>{{ Spec2('DOM4') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events', '#Events-Event-canCancel', 'Event.cancelable')}}</td>
-   <td>{{ Spec2('DOM2 Events') }}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+document.addEventListener('wheel', preventCancelableEvents);
+```
 
 
 
-<p>{{Compat("api.Event.cancelable")}}</p>
+## Notes
+
+Si l'événement peut être annulé, ou non, est déterminé au moment de l'initialisation de celui-ci.
+
+Pour annuler un événement, utiliser la méthode {{domxref("event.preventDefault", "preventDefault()")}} sur celui-ci. Cela permet d'empêcher l'action par défaut associée à l'événement de s'exécuter.
+
+## Spécifications
+
+| Spécification                                                                                        | Statut                               | Commentaire          |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('DOM WHATWG', '#dom-event-cancelable', 'Event.cancelable')}}     | {{ Spec2('DOM WHATWG') }}     |                      |
+| {{SpecName('DOM4', '#dom-event-cancelable', 'Event.cancelable')}}             | {{ Spec2('DOM4') }}             |                      |
+| {{SpecName('DOM2 Events', '#Events-Event-canCancel', 'Event.cancelable')}} | {{ Spec2('DOM2 Events') }} | Définition initiale. |
+
+## Compatibilité des navigateurs
+
+{{Compat("api.Event.cancelable")}}

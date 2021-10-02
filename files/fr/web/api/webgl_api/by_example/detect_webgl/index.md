@@ -11,25 +11,25 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Detect_WebGL
 original_slug: Web/API/WebGL_API/By_example/Détecter_WebGL
 ---
-<div>{{IncludeSubnav("/fr/Apprendre")}}</div>
+{{IncludeSubnav("/fr/Apprendre")}}{{PreviousNext("Apprendre/WebGL/Par_exemple","Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs")}}
 
-<div>{{PreviousNext("Apprendre/WebGL/Par_exemple","Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs")}}</div>
+Dans cet exemple, on voit comment détecter un contexte de rendu {{Glossary("WebGL")}} et afficher le résultat à l'utilisateur.
 
-<p>Dans cet exemple, on voit comment détecter un contexte de rendu {{Glossary("WebGL")}} et afficher le résultat à l'utilisateur.</p>
+{{EmbedLiveSample("Détecter_le_support_WebGL",660,150)}}
 
-<p>{{EmbedLiveSample("Détecter_le_support_WebGL",660,150)}}</p>
+### Détecter le support WebGL
 
-<h3 id="Détecter_le_support_WebGL">Détecter le support WebGL</h3>
+Dans ce premier exemple, on vérifie si le navigateur prend en charge {{Glossary("WebGL")}}. Pour cela, on essaye d'obtenir le {{domxref("WebGLRenderingContext","contexte de rendu WebGL","",1)}} à partir d'un élément {{domxref("HTMLCanvasElement","canvas")}}. Le {{domxref("WebGLRenderingContext","contexte de rendu WebGL", "", 1)}} est une interface qui permet de connaître et de modifier l'état du moteur graphique WebGL, d'envoyer des données à WebGL et d'exécuter des commandes de dessin.
 
-<p>Dans ce premier exemple, on vérifie si le navigateur prend en charge {{Glossary("WebGL")}}. Pour cela, on essaye d'obtenir le {{domxref("WebGLRenderingContext","contexte de rendu WebGL","",1)}} à partir d'un élément {{domxref("HTMLCanvasElement","canvas")}}. Le {{domxref("WebGLRenderingContext","contexte de rendu WebGL", "", 1)}} est une interface qui permet de connaître et de modifier l'état du moteur graphique WebGL, d'envoyer des données à WebGL et d'exécuter des commandes de dessin.</p>
+La gestion d'une machine graphique au sein d'une seule interface n'est pas propre à {{Glossary("WebGL")}}. Les autres {̣{Glossary("API")}} graphiques comme {{domxref("CanvasRenderingContext2D","le contexte de rendu 2D du canevas", "", 1)}}. Cependant, les propriétés et variables qui peuvent être manipulées changent d'une API à l'autre.
 
-<p>La gestion d'une machine graphique au sein d'une seule interface n'est pas propre à {{Glossary("WebGL")}}. Les autres {̣{Glossary("API")}} graphiques comme {{domxref("CanvasRenderingContext2D","le contexte de rendu 2D du canevas", "", 1)}}. Cependant, les propriétés et variables qui peuvent être manipulées changent d'une API à l'autre.</p>
+```html
+<p>[ On affichera ici le résultat de la détection du support WebGL ]</p>
+<button>Cliquez ici pour détecter WebGLRenderingContext</button>
+```
 
-<pre class="brush: html">&lt;p&gt;[ On affichera ici le résultat de la détection du support WebGL ]&lt;/p&gt;
-&lt;button&gt;Cliquez ici pour détecter WebGLRenderingContext&lt;/button&gt;
-</pre>
-
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 button {
@@ -38,9 +38,10 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
+```
 
-<pre class="brush: js">// On exécute tout dans le gestionnaire d'événement
+```js
+// On exécute tout dans le gestionnaire d'événement
 // correspondant au chargement de la fenêtre. De cette
 // façon, le DOM est complètement chargé et mis en forme
 // avant de le manipuler.
@@ -64,7 +65,7 @@ window.addEventListener("load", function() {
       || canvas.getContext("experimental-webgl");
 
     // On affiche le résultat.
-    if (gl &amp;&amp; gl instanceof WebGLRenderingContext) {
+    if (gl && gl instanceof WebGLRenderingContext) {
       paragraph.innerHTML =
         "Félicitations, votre navigateur supporte WebGL.";
     } else {
@@ -73,8 +74,8 @@ window.addEventListener("load", function() {
     }
   }
 }, false);
-</pre>
+```
 
-<p>Le code source de cet exemple est également disponible sur <a href="https://github.com/idofilin/webgl-by-example/tree/master/detect-webgl">GitHub</a>.</p>
+Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/detect-webgl).
 
-<div>{{PreviousNext("Apprendre/WebGL/Par_exemple","Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs")}}</div>
+{{PreviousNext("Apprendre/WebGL/Par_exemple","Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs")}}

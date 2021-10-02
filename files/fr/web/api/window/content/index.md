@@ -5,22 +5,31 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/Window/content
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
-<p>Renvoie un objet <a href="fr/DOM/window">Window</a> pour la fenêtre de contenu principale. C'est utile pour les fenêtres XUL qui ont un <code>&lt;browser&gt;</code> (ou <code>tabbrowser</code> ou <code>&lt;iframe&gt;</code>) avec l'attribut <code>type="content-primary"</code> défini - l'exemple le plus célèbre étant la fenêtre principale de Firefox, <code>browser.xul</code>. Dans de tels cas, <code>content</code> renvoie une référence à l'objet <code>Window</code> pour le document actuellement affiché dans le navigateur. Il s'agit d'un raccourci pour <code><var>browserRef</var>.contentWindow</code>.</p>
-<p>Dans du contenu non privilégié (des pages Web), <code>content</code> est normalement équivalent à <a href="fr/DOM/window.top">top</a> (sauf dans le cas d'une page chargée dans un panneau latéral, où <code>content</code> se réfère à l'objet <code>Window</code> de l'onglet sélectionné).</p>
-<p>Certains exemples utilisent <code>_content</code> à la place de <code>content</code>. Cette forme est dépréciée depuis un long moment, et vous devriez toujours utiliser <code>content</code> dans du nouveau code.</p>
-<h3 id="Syntaxe">Syntaxe</h3>
-<pre class="eval">var <var>windowObject</var> = window.content;
-</pre>
-<h3 id="Exemple">Exemple</h3>
-<p>L'exécution du code suivant dans une fenêtre chrome XUL contenant un élement <code>&lt;browser type="content-primary"/&gt;</code> dessine une bordure rouge autour du premier élément div de la page actuellement affichée dans le navigateur :</p>
-<pre class="eval">content.document.getElementsByTagName("div")[0].style.border = "solid red 1px";
-</pre>
-<h3 id="Sp.C3.A9cification">Spécification</h3>
-<p>Ne fait partie d'aucune spécification du W3C.</p>
-<h3 id="Voir_aussi">Voir aussi</h3>
-<ul>
- <li><a href="fr/Travailler_avec_des_fen%c3%aatres_dans_le_chrome">Travailler avec des fenêtres dans le chrome</a></li>
- <li>Lorsque vous accédez à des documents depuis du code privilégié, faites attention aux <a href="fr/XPCNativeWrapper">XPCNativeWrapper</a>.</li>
-</ul>
+{{ ApiRef() }}
+
+### Résumé
+
+Renvoie un objet [Window](fr/DOM/window) pour la fenêtre de contenu principale. C'est utile pour les fenêtres XUL qui ont un `<browser>` (ou `tabbrowser` ou `<iframe>`) avec l'attribut `type="content-primary"` défini - l'exemple le plus célèbre étant la fenêtre principale de Firefox, `browser.xul`. Dans de tels cas, `content` renvoie une référence à l'objet `Window` pour le document actuellement affiché dans le navigateur. Il s'agit d'un raccourci pour `browserRef.contentWindow`.
+
+Dans du contenu non privilégié (des pages Web), `content` est normalement équivalent à [top](fr/DOM/window.top) (sauf dans le cas d'une page chargée dans un panneau latéral, où `content` se réfère à l'objet `Window` de l'onglet sélectionné).
+
+Certains exemples utilisent `_content` à la place de `content`. Cette forme est dépréciée depuis un long moment, et vous devriez toujours utiliser `content` dans du nouveau code.
+
+### Syntaxe
+
+    var windowObject = window.content;
+
+### Exemple
+
+L'exécution du code suivant dans une fenêtre chrome XUL contenant un élement `<browser type="content-primary"/>` dessine une bordure rouge autour du premier élément div de la page actuellement affichée dans le navigateur :
+
+    content.document.getElementsByTagName("div")[0].style.border = "solid red 1px";
+
+### Spécification
+
+Ne fait partie d'aucune spécification du W3C.
+
+### Voir aussi
+
+- [Travailler avec des fenêtres dans le chrome](fr/Travailler_avec_des_fen%c3%aatres_dans_le_chrome)
+- Lorsque vous accédez à des documents depuis du code privilégié, faites attention aux [XPCNativeWrapper](fr/XPCNativeWrapper).

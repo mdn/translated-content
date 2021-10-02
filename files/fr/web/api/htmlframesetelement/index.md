@@ -10,100 +10,70 @@ tags:
   - Reference
 translation_of: Web/API/HTMLFrameSetElement
 ---
-<div>{{APIRef("HTML DOM")}}{{Obsolete_header}}</div>
+{{APIRef("HTML DOM")}}{{Obsolete_header}}
 
-<p>L'interface <strong><code>HTMLFrameSetElement</code></strong> fournit des propriétés spéciales (au-delà de celles de l'interface standard {{domxref("HTMLElement")}} dont elles héritent aussi) pour manipuler les éléments {{HTMLELEment("frameset")}}.</p>
+L'interface **`HTMLFrameSetElement`** fournit des propriétés spéciales (au-delà de celles de l'interface standard {{domxref("HTMLElement")}} dont elles héritent aussi) pour manipuler les éléments {{HTMLELEment("frameset")}}.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Hérite des propriétés de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}.</em></p>
+_Hérite des propriétés de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
 
-<dl>
- <dt>{{domxref("HTMLFrameSetElement.cols")}} {{obsolete_inline}}</dt>
- <dd>Est un {{domxref("DOMString")}} structuré comme une liste séparée par des virgules spécifiant la largeur de chaque colonne à l'intérieur d'un jeu de cadres.</dd>
- <dt>{{domxref("HTMLFrameSetElement.rows")}} {{obsolete_inline}}</dt>
- <dd>Est un {{domxref("DOMString")}} structuré comme une liste séparée par des virgules spécifiant la hauteur de chaque colonne à l'intérieur d'un jeu de cadres.</dd>
-</dl>
+- {{domxref("HTMLFrameSetElement.cols")}} {{obsolete_inline}}
+  - : Est un {{domxref("DOMString")}} structuré comme une liste séparée par des virgules spécifiant la largeur de chaque colonne à l'intérieur d'un jeu de cadres.
+- {{domxref("HTMLFrameSetElement.rows")}} {{obsolete_inline}}
+  - : Est un {{domxref("DOMString")}} structuré comme une liste séparée par des virgules spécifiant la hauteur de chaque colonne à l'intérieur d'un jeu de cadres.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Pas de méthode spécifique; hérite des méthodes de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}</em><em>.</em></p>
+_Pas de méthode spécifique; hérite des méthodes de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}\*\*._
 
-<h2 id="Gestionnaires_dévénements">Gestionnaires d'événements</h2>
+## Gestionnaires d'événements
 
-<p><em>Aucun gestionnaire d'événements spécifique; hérite des gestionnairs d'événements de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}</em><em>.</em></p>
+_Aucun gestionnaire d'événements spécifique; hérite des gestionnairs d'événements de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}\*\*._
 
-<dl>
- <dt>{{domxref("WindowEventHandlers.onafterprint")}}</dt>
- <dd>Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("afterprint")}} est déclenché.</dd>
- <dt>{{domxref("WindowEventHandlers.onbeforeprint")}}</dt>
- <dd>Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("beforeprint")}} est déclenché.</dd>
- <dt>{{domxref("WindowEventHandlers.onbeforeunload")}}</dt>
- <dd>Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("beforeunload")}} est déclenché.</dd>
- <dt>{{domxref("WindowEventHandlers.onhashchange")}}</dt>
- <dd>Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("hashchange")}} est déclenché.</dd>
- <dt>{{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}</dt>
- <dd>Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("languagechange")}} est déclenché.</dd>
- <dt>{{domxref("WindowEventHandlers.onmessage")}}</dt>
- <dd>Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("message")}} est déclenché.</dd>
- <dt>{{domxref("WindowEventHandlers.onoffline")}}</dt>
- <dd>Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("offline")}} est déclenché.</dd>
- <dt>{{domxref("WindowEventHandlers.ononline")}}</dt>
- <dd>Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("online")}} est déclenché.</dd>
- <dt>{{domxref("WindowEventHandlers.onpagehide")}}</dt>
- <dd>Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("pagehide")}} est déclenché.</dd>
- <dt>{{domxref("WindowEventHandlers.onpageshow")}}</dt>
- <dd>Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("pageshow")}} est déclenché.</dd>
- <dt>{{domxref("WindowEventHandlers.onpopstate")}}</dt>
- <dd>Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("popstate")}} est déclenché.</dd>
- <dt>{{domxref("WindowEventHandlers.onresize")}}</dt>
- <dd>Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("resize")}} est déclenché.</dd>
- <dt>{{domxref("WindowEventHandlers.onstorage")}}</dt>
- <dd>Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("storage")}} est déclenché.</dd>
- <dt>{{domxref("WindowEventHandlers.onunload")}}</dt>
- <dd>Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("unload")}} est déclenché.</dd>
-</dl>
+- {{domxref("WindowEventHandlers.onafterprint")}}
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("afterprint")}} est déclenché.
+- {{domxref("WindowEventHandlers.onbeforeprint")}}
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("beforeprint")}} est déclenché.
+- {{domxref("WindowEventHandlers.onbeforeunload")}}
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("beforeunload")}} est déclenché.
+- {{domxref("WindowEventHandlers.onhashchange")}}
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("hashchange")}} est déclenché.
+- {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("languagechange")}} est déclenché.
+- {{domxref("WindowEventHandlers.onmessage")}}
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("message")}} est déclenché.
+- {{domxref("WindowEventHandlers.onoffline")}}
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("offline")}} est déclenché.
+- {{domxref("WindowEventHandlers.ononline")}}
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("online")}} est déclenché.
+- {{domxref("WindowEventHandlers.onpagehide")}}
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("pagehide")}} est déclenché.
+- {{domxref("WindowEventHandlers.onpageshow")}}
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("pageshow")}} est déclenché.
+- {{domxref("WindowEventHandlers.onpopstate")}}
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("popstate")}} est déclenché.
+- {{domxref("WindowEventHandlers.onresize")}}
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("resize")}} est déclenché.
+- {{domxref("WindowEventHandlers.onstorage")}}
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("storage")}} est déclenché.
+- {{domxref("WindowEventHandlers.onunload")}}
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("unload")}} est déclenché.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmlframesetelement", "HTMLFrameSetElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>À partir de l'instantané {{SpecName('HTML5 W3C')}}, l'interface {{domxref("WindowEventHandlers")}} a maintenant une propriété <code>onlanguagechange</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "obsolete.html#htmlframesetelement", "HTMLFrameSetElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Instantané d'un précédent {{SpecName('HTML WHATWG')}}<br>
-    Les cadres sont désormais obsolètes. Implémente {{domxref("WindowEventHandlers")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-ID-43829095', 'HTMLBodyElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>Aucun changement par rapport à {{SpecName("DOM1")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-43829095', 'HTMLBodyElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | Statut                           | Commentaire                                                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('HTML WHATWG', "#htmlframesetelement", "HTMLFrameSetElement")}}             | {{Spec2('HTML WHATWG')}} | À partir de l'instantané {{SpecName('HTML5 W3C')}}, l'interface {{domxref("WindowEventHandlers")}} a maintenant une propriété `onlanguagechange`. |
+| {{SpecName('HTML5 W3C', "obsolete.html#htmlframesetelement", "HTMLFrameSetElement")}} | {{Spec2('HTML5 W3C')}}     | Instantané d'un précédent {{SpecName('HTML WHATWG')}} Les cadres sont désormais obsolètes. Implémente {{domxref("WindowEventHandlers")}}.       |
+| {{SpecName('DOM2 HTML', 'html.html#ID-ID-43829095', 'HTMLBodyElement')}}                 | {{Spec2('DOM2 HTML')}}     | Aucun changement par rapport à {{SpecName("DOM1")}}.                                                                                                       |
+| {{SpecName('DOM1', 'level-one-html.html#ID-43829095', 'HTMLBodyElement')}}             | {{Spec2('DOM1')}}         | Définition initiale.                                                                                                                                               |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.HTMLFrameSetElement")}}</p>
+{{Compat("api.HTMLFrameSetElement")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Élément HTML implémentant cette interface : {{HTMLElement("frameset")}}</li>
- <li>L'équivalent de cet élément en dehors des cadres : {{domxref("HTMLBodyElement")}}.</li>
-</ul>
+- Élément HTML implémentant cette interface : {{HTMLElement("frameset")}}
+- L'équivalent de cet élément en dehors des cadres : {{domxref("HTMLBodyElement")}}.

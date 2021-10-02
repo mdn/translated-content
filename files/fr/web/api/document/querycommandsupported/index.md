@@ -10,63 +10,48 @@ tags:
   - editeur
 translation_of: Web/API/Document/queryCommandSupported
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>La méthode <code><strong>Document.queryCommandSupported()</strong></code> indique si la commande d'éditeur spécifiée est prise en charge par le navigateur.</p>
+La méthode **`Document.queryCommandSupported()`** indique si la commande d'éditeur spécifiée est prise en charge par le navigateur.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>isSupported</var> = document.queryCommandSupported(<var>command</var>);
-</pre>
+    isSupported = document.queryCommandSupported(command);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>command</code></dt>
- <dd>La commande pour laquelle on veut déterminer si elle est prise en charge.</dd>
-</dl>
+- `command`
+  - : La commande pour laquelle on veut déterminer si elle est prise en charge.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Renvoie un {{jsxref("Boolean")}} qui est <code>true</code> (<em>vrai</em>) si la commande est prise en charge et <code>false</code> (<em>faux</em>) sinon.</p>
+Renvoie un {{jsxref("Boolean")}} qui est `true` (_vrai_) si la commande est prise en charge et `false` (_faux_) sinon.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>La commande <code>'paste'</code> (<em>coller</em>) renvoie <code>false</code> (<em>faux</em>), pas seulement si la fonctionnalité n'est pas disponible, mais également si le script l'appelant a des privilèges insuffisants pour réaliser l'action <a href="#note1">[1]</a>.</p>
+La commande `'paste'` (_coller_) renvoie `false` (_faux_), pas seulement si la fonctionnalité n'est pas disponible, mais également si le script l'appelant a des privilèges insuffisants pour réaliser l'action [\[1\]](#note1).
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">var flg = document.queryCommandSupported("SelectAll");
+```js
+var flg = document.queryCommandSupported("SelectAll");
 
 if(flg) {
   // ...Faire quelque chose
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML Editing','#querycommandsupported()','querycommandsupported')}}</td>
-   <td>{{Spec2('HTML Editing')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                           | Commentaire          |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('HTML Editing','#querycommandsupported()','querycommandsupported')}} | {{Spec2('HTML Editing')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Document.queryCommandSupported")}}</p>
+{{Compat("api.Document.queryCommandSupported")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Document.execCommand()")}}</li>
- <li>{{domxref("Document.queryCommandEnabled()")}}</li>
-</ul>
+- {{domxref("Document.execCommand()")}}
+- {{domxref("Document.queryCommandEnabled()")}}

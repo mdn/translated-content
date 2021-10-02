@@ -9,60 +9,48 @@ tags:
   - Rectangle
 translation_of: Web/API/DOMRect/DOMRect
 ---
-<p>{{APIRef("DOM")}}{{ SeeCompatTable() }}</p>
+{{APIRef("DOM")}}{{ SeeCompatTable() }}
 
-<p>Le constructeur <strong><code>DOMRect()</code></strong> crée un nouvel objet {{domxref("DOMRect")}}.</p>
+Le constructeur **`DOMRect()`** crée un nouvel objet {{domxref("DOMRect")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var myDOMRect = new DOMRect(x, y, width, height);</pre>
+```js
+var myDOMRect = new DOMRect(x, y, width, height);
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>x</dt>
- <dd>La coordonnée <code>x</code> de l'orginie du <code>DOMRect</code>.</dd>
- <dt>y</dt>
- <dd>La coordonnée <code>y</code> de l'origine du <code>DOMRect</code>.</dd>
- <dt>width</dt>
- <dd>La largeur du <code>DOMRect</code>.</dd>
- <dt>height</dt>
- <dd>La hauteur du <code>DOMRect</code>.</dd>
-</dl>
+- x
+  - : La coordonnée `x` de l'orginie du `DOMRect`.
+- y
+  - : La coordonnée `y` de l'origine du `DOMRect`.
+- width
+  - : La largeur du `DOMRect`.
+- height
+  - : La hauteur du `DOMRect`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Pour créer un nouveau <code>DOMPoint</code>, vous pouvez exécuter une ligne de code telle que celle-ci :</p>
+Pour créer un nouveau `DOMPoint`, vous pouvez exécuter une ligne de code telle que celle-ci :
 
-<pre class="brush: js">myDOMRect = new DOMRect(0,0,100,100);
+```js
+myDOMRect = new DOMRect(0,0,100,100);
 // l'exécution de 'myDOMRect' dans la console devrait alors renvoyer
 // DOMRect { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
-</pre>
+```
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Geometry Interfaces', '#dom-domrectreadonly-domrectreadonlyx-y-width-height', 'DOMRect()')}}</td>
-   <td>{{Spec2('Geometry Interfaces')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                | Statut                                       | Commentaire          |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
+| {{SpecName('Geometry Interfaces', '#dom-domrectreadonly-domrectreadonlyx-y-width-height', 'DOMRect()')}} | {{Spec2('Geometry Interfaces')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DOMRect.DOMRect")}}</p>
+{{Compat("api.DOMRect.DOMRect")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("DOMPoint")}}</li>
- <li>{{domxref("DOMRect")}}</li>
-</ul>
+- {{domxref("DOMPoint")}}
+- {{domxref("DOMRect")}}

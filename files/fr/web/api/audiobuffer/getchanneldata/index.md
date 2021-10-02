@@ -3,24 +3,27 @@ title: AudioBuffer.getChannelData()
 slug: Web/API/AudioBuffer/getChannelData
 translation_of: Web/API/AudioBuffer/getChannelData
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>La méthode <code>getChannelData() </code>de l'interface {{ domxref("AudioBuffer") }} renvoie un {{domxref("Float32Array")}} contenant les données PCM associées au canal spécifié (0 correspondant au premier canal).</p>
+La méthode `getChannelData() `de l'interface {{ domxref("AudioBuffer") }} renvoie un {{domxref("Float32Array")}} contenant les données PCM associées au canal spécifié (0 correspondant au premier canal).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var tableauDonnees = contexteAudio.createBuffer(nombreCanaux, nombreFrames, contexteAudio.sampleRate);
-var tampon = tableauDonnees.getChannelData(canal);</pre>
+```js
+var tableauDonnees = contexteAudio.createBuffer(nombreCanaux, nombreFrames, contexteAudio.sampleRate);
+var tampon = tableauDonnees.getChannelData(canal);
+```
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un {{domxref("Float32Array")}}.</p>
+Un {{domxref("Float32Array")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans l'exemple suivant crée un buffer de 2 secondes, le remplit avec du bruit blanc puis le lit via un {{ domxref("AudioBufferSourceNode") }}. Vous pouvez aussi <a href="http://mdn.github.io/audio-buffer/">exécuter le code</a>, or <a href="https://github.com/mdn/audio-buffer">voir le code source</a>.</p>
+Dans l'exemple suivant crée un buffer de 2 secondes, le remplit avec du bruit blanc puis le lit via un {{ domxref("AudioBufferSourceNode") }}. Vous pouvez aussi [exécuter le code](http://mdn.github.io/audio-buffer/), or [voir le code source](https://github.com/mdn/audio-buffer).
 
-<pre class="brush: js">var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
 var bouton = document.querySelector('button');
 var preformate = document.querySelector('pre');
 var monScript = document.querySelector('script');
@@ -38,10 +41,10 @@ var tableauDonnees = contexteAudio.createBuffer(nombreCanaux, nombreFrames, cont
 bouton.onclick = function() {
   // remplit la mémoire tampon avec du bruit blanc
   // valeurs aléatoires entre -1.0 et 1.0
-  for (var canal = 0; canal &lt; nombreCanaux; canal++) {
+  for (var canal = 0; canal < nombreCanaux; canal++) {
     // génère le tableau contenant les données
     var tampon = tableauDonnees.getChannelData(canal);
-    for (var i = 0; i &lt; nombreFrames; i++) {
+    for (var i = 0; i < nombreFrames; i++) {
       // Math.random() donne une valeur comprise entre [0; 1.0]
       // l'audio doit être compris entre [-1.0; 1.0]
       tampon[i] = Math.random() * 2 - 1;
@@ -61,38 +64,24 @@ bouton.onclick = function() {
 
   // lance la lecture du so
   source.start();
-}</pre>
+}
+```
 
-<h2 id="Paramètres">Paramètres</h2>
+## Paramètres
 
-<dl>
- <dt>channel</dt>
- <dd>The channel property is an index representing the particular channel to get data for. An index value of 0 represents the first channel. If the <code>channel</code> index value is greater than of equal to {{domxref("AudioBuffer.numberOfChannels")}}, an <code>INDEX_SIZE_ERR</code> exception will be thrown.</dd>
-</dl>
+- channel
+  - : The channel property is an index representing the particular channel to get data for. An index value of 0 represents the first channel. If the `channel` index value is greater than of equal to {{domxref("AudioBuffer.numberOfChannels")}}, an `INDEX_SIZE_ERR` exception will be thrown.
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioBuffer-getChannelData-Float32Array-unsigned-long-channel', 'getChannelData')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                | Statut                               | Commentaire |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
+| {{SpecName('Web Audio API', '#widl-AudioBuffer-getChannelData-Float32Array-unsigned-long-channel', 'getChannelData')}} | {{Spec2('Web Audio API')}} |             |
 
-<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+## Compatibilité navigateurs
 
-<p>{{Compat("api.AudioBuffer.getChannelData")}}</p>
+{{Compat("api.AudioBuffer.getChannelData")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Utiliser la Web Audio API</a></li>
-</ul>
+- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

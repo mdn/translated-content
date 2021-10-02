@@ -8,49 +8,27 @@ tags:
   - WindowEventHandlers
 translation_of: Web/API/WindowEventHandlers/onunload
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>L'événement <strong><code>unload</code></strong> est déclenché lorsque le contenu et les ressources sont déchargés à la fermeture de la fenêtre. Le processus de suppression des ressources se fait <em>après</em> que l'événement <code>unload </code>a eu lieu.</p>
+L'événement **`unload`** est déclenché lorsque le contenu et les ressources sont déchargés à la fermeture de la fenêtre. Le processus de suppression des ressources se fait _après_ que l'événement `unload `a eu lieu.
 
-<p>Les navigateurs équipés d'un bloqueur de pop-up vont ignorer tout appel de <code>window.open()</code> lancé depuis onunload.</p>
+Les navigateurs équipés d'un bloqueur de pop-up vont ignorer tout appel de `window.open()` lancé depuis onunload.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">window.addEventListener("unload", function(event) { ... });
-window.onunload = function(event) { ... };
-</pre>
+    window.addEventListener("unload", function(event) { ... });
+    window.onunload = function(event) { ... };
 
-<p>Généralement, mieux vaut utiliser {{domxref("EventTarget.addEventListener", "window.addEventListener()")}} et l'événement {{event("unload")}} plutôt que <code>onunload</code>.</p>
+Généralement, mieux vaut utiliser {{domxref("EventTarget.addEventListener", "window.addEventListener()")}} et l'événement {{event("unload")}} plutôt que `onunload`.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#handler-window-onunload', 'onunload')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                             | Commentaires |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
+| {{SpecName('HTML WHATWG', '#handler-window-onunload', 'onunload')}}         | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}     | {{Spec2('HTML5.1')}}     |              |
+| {{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}} | {{Spec2('HTML5 W3C')}}     |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WindowEventHandlers.onunload")}}</p>
+{{Compat("api.WindowEventHandlers.onunload")}}

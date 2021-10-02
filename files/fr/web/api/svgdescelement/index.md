@@ -8,50 +8,31 @@ tags:
   - SVG DOM
 translation_of: Web/API/SVGDescElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>L'interface <strong><code>SVGDescElement</code></strong> correspond à l'élément {{SVGElement("desc")}}.</p>
+L'interface **`SVGDescElement`** correspond à l'élément {{SVGElement("desc")}}.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Cette interface hérite des propriétés fournies par son parent {{domxref("SVGGeometryElement")}}.</em></p>
+_Cette interface hérite des propriétés fournies par son parent {{domxref("SVGGeometryElement")}}._
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Cette interface n'a pas de méthode propre mais hérite des méthodes de son parent {{domxref("SVGGeometryElement")}}.</em></p>
+_Cette interface n'a pas de méthode propre mais hérite des méthodes de son parent {{domxref("SVGGeometryElement")}}._
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "struct.html#InterfaceSVGDescElement", "SVGDescElement")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Retrait de l'héritage depuis {{domxref("SVGLangSpace")}} et {{domxref("SVGStylable")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "struct.html#InterfaceSVGDescElement", "SVGDescElement")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                     | Commentaires                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------- |
+| {{SpecName("SVG2", "struct.html#InterfaceSVGDescElement", "SVGDescElement")}} | {{Spec2("SVG2")}} | Retrait de l'héritage depuis {{domxref("SVGLangSpace")}} et {{domxref("SVGStylable")}} |
+| {{SpecName("SVG1.1", "struct.html#InterfaceSVGDescElement", "SVGDescElement")}} | {{Spec2("SVG1.1")}} | Définition initiale.                                                                                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.SVGDescElement")}}</p>
+{{Compat("api.SVGDescElement")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{SVGElement("desc")}}</li>
-</ul>
+- {{SVGElement("desc")}}

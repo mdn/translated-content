@@ -12,69 +12,55 @@ tags:
   - fermeture
 translation_of: Web/API/Notification/close
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>La méthode <code>close()</code> de l'interface {{domxref("Notification")}} est utilisée pour fermer / supprimer une notification précédemment affichée.</p>
+La méthode `close()` de l'interface {{domxref("Notification")}} est utilisée pour fermer / supprimer une notification précédemment affichée.
 
-<div class="note">
-<p><strong>Note:</strong> Cette API ne doit pas être utilisée uniquement pour supprimer la notification de l'écran après un délai fixe, car cette méthode supprimera également la notification de toute barre de notification, empêchant ainsi les utilisateurs d'interagir avec elle après son affichage initial. Une utilisation valable de cette API serait de supprimer une notification qui n'est plus pertinente (par exemple, l'utilisateur a déjà lu la notification sur la page Web dans le cas d'une application de messagerie ou la chanson suivante est déjà en cours de lecture dans une application musicale).</p>
-</div>
+> **Note :** Cette API ne doit pas être utilisée uniquement pour supprimer la notification de l'écran après un délai fixe, car cette méthode supprimera également la notification de toute barre de notification, empêchant ainsi les utilisateurs d'interagir avec elle après son affichage initial. Une utilisation valable de cette API serait de supprimer une notification qui n'est plus pertinente (par exemple, l'utilisateur a déjà lu la notification sur la page Web dans le cas d'une application de messagerie ou la chanson suivante est déjà en cours de lecture dans une application musicale).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Notification.close()</pre>
+    Notification.close()
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Void.</p>
+Void.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'extrait de code suivant, nous avons une simple fonction qui, lorsqu'elle est appelée, crée un objet <code>options</code>, puis de celui-ci une nouvelle notification. À la fin de la fonction, elle appelle également <code>close()</code> dans une fonction {{domxref ("EventTarget.addEventListener", "addEventListener ()")}} pour supprimer la notification lorsque le contenu pertinent a été lu sur la page Web.</p>
+Dans l'extrait de code suivant, nous avons une simple fonction qui, lorsqu'elle est appelée, crée un objet `options`, puis de celui-ci une nouvelle notification. À la fin de la fonction, elle appelle également `close()` dans une fonction {{domxref ("EventTarget.addEventListener", "addEventListener ()")}} pour supprimer la notification lorsque le contenu pertinent a été lu sur la page Web.
 
-<pre class="brush:js">function spawnNotification(theBody, theIcon, theTitle) {
+```js
+function spawnNotification(theBody, theIcon, theTitle) {
   const options = {
     body: theBody,
     icon: theIcon
   }
 
   const n = new Notification(theTitle, options)
-  document.addEventListener('visibilitychange', () =&gt; {
+  document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') {
       // The tab has become visible so clear the now-stale Notification.
       n.close()
     }
   })
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                | Status                                   | Comment         |
+| -------------------------------------------- | ---------------------------------------- | --------------- |
+| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | Living standard |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Notification.close")}}</p>
+{{Compat("api.Notification.close")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a></li>
-</ul>
+- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

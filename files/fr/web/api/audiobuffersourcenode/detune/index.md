@@ -8,37 +8,38 @@ tags:
   - Web Audio API
 translation_of: Web/API/AudioBufferSourceNode/detune
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>La  propriété <code>detune</code> de l'interface {{ domxref("AudioBufferSourceNode") }} est un {{domxref("AudioParam")}} de type <a href="/fr/docs/DOM/AudioParam#k-rate">k-rate</a> représentant le désaccord des oscillations en <a href="http://en.wikipedia.org/wiki/Cent_%28music%29">cents</a>.</p>
+La  propriété `detune` de l'interface {{ domxref("AudioBufferSourceNode") }} est un {{domxref("AudioParam")}} de type [k-rate](/fr/docs/DOM/AudioParam#k-rate) représentant le désaccord des oscillations en [cents](http://en.wikipedia.org/wiki/Cent_%28music%29).
 
-<p>Ses valeur sont comprises entre -1200 et 1200.</p>
+Ses valeur sont comprises entre -1200 et 1200.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var source = contexteAudio.createBufferSource();
-source.detune.value = 100; // valeur en cents</pre>
+```js
+var source = contexteAudio.createBufferSource();
+source.detune.value = 100; // valeur en cents
+```
 
-<div class="note">
-<p><strong>Note:</strong> bien que l'<code>AudioParam</code> renvoyé soit en lecture seule, la valeur qu'il représente ne l'est pas.</p>
-</div>
+> **Note :** bien que l'`AudioParam` renvoyé soit en lecture seule, la valeur qu'il représente ne l'est pas.
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un {{domxref("AudioParam")}} de type <a href="/fr/docs/DOM/AudioParam#k-rate">k-rate</a>.</p>
+Un {{domxref("AudioParam")}} de type [k-rate](/fr/docs/DOM/AudioParam#k-rate).
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 
 var nbChan = 2;
 var nbFrames = audioCtx.sampleRate * 2.0;
 
 var audioBuffer = audioCtx.createBuffer(nbChan, nbFrames, audioCtx.sampleRate);
 
-for (var chan = 0; chan &lt; nbChan; chan++) {
+for (var chan = 0; chan < nbChan; chan++) {
   var chanData = audioBuffer.getChannelData(chan);
-  for (var i = 0; i &lt; nbFrames; i++) {
+  for (var i = 0; i < nbFrames; i++) {
     chanData[i] = Math.random() * 2 - 1;
   }
 }
@@ -48,33 +49,18 @@ source.buffer = audioBuffer;
 source.connect(audioCtx.destination);
 source.detune.value = 100; // valeur en cents
 source.start();
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-detune', 'detune')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                               | Commentaire |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
+| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-detune', 'detune')}} | {{Spec2('Web Audio API')}} |             |
 
-<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+## Compatibilité navigateurs
 
+{{Compat("api.AudioBufferSourceNode.detune")}}
 
+## Voir aussi
 
-<p>{{Compat("api.AudioBufferSourceNode.detune")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/Web_Audio_API/Using_Web_Audio_API">Utiliser la Web Audio API</a></li>
-</ul>
+- [Utiliser la Web Audio API](/fr/docs/Web_Audio_API/Using_Web_Audio_API)

@@ -13,58 +13,62 @@ tags:
   - addAll
 translation_of: Web/API/Cache/addAll
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>La méthode <strong><code>addAll()</code></strong> de l'interface {{domxref("Cache")}} accepte un tableau d'URLS, les récupères, et ajoute les objets réponse qui en résultent au cache en question. Les objets requêtes crées pendant la phase de récupération deviennent des clés vers les opérations de réponse stockées. </p>
+La méthode **`addAll()`** de l'interface {{domxref("Cache")}} accepte un tableau d'URLS, les récupères, et ajoute les objets réponse qui en résultent au cache en question. Les objets requêtes crées pendant la phase de récupération deviennent des clés vers les opérations de réponse stockées.
 
-<div class="note">
-<p><strong>Note :</strong> <code>addAll()</code> écrasera toute paire clé/valeur précedemment stockée en cache et qui correspond à une requête, mais échouera si l'opération <code>put() </code>ainsi créée devrait engendrer l'éffacement d'une entrée cache créée par la même méthode <code>addAll()</code>.</p>
-</div>
+> **Note :** `addAll()` écrasera toute paire clé/valeur précedemment stockée en cache et qui correspond à une requête, mais échouera si l'opération `put() `ainsi créée devrait engendrer l'éffacement d'une entrée cache créée par la même méthode `addAll()`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">cache.addAll(requests[]).then(function() {
+```js
+cache.addAll(requests[]).then(function() {
   //requests have been added to the cache
 });
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>requests</dt>
- <dd>Un tableau d'objets {{domxref("Request", "Requête")}} à ajouter au cache.</dd>
-</dl>
+- requests
+  - : Un tableau d'objets {{domxref("Request", "Requête")}} à ajouter au cache.
 
-<h3 id="Retour">Retour</h3>
+### Retour
 
-<p>Une {{jsxref("Promise", "Promesse")}} qui est résolue en void.</p>
+Une {{jsxref("Promise", "Promesse")}} qui est résolue en void.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"><strong>Exception</strong></th>
-   <th scope="col"><strong>Arrive quand</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>TypeError</code></td>
-   <td>
-    <p>Le schéma d'URL n'est pas <code>http</code> ou <code>https</code>.</p>
-
-    <p>Le statut de la réponse n'est pas dans les 200 (i.e., une requête qui a échoué.) Cela peut arriver si la requête échoue, mais également si la requête est une <em>cross-origin no-cors</em> (auquel cas le statut retourné est systématiquement 0.)</p>
-   </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col"><strong>Exception</strong></th>
+      <th scope="col"><strong>Arrive quand</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>TypeError</code></td>
+      <td>
+        <p>
+          Le schéma d'URL n'est pas <code>http</code> ou <code>https</code>.
+        </p>
+        <p>
+          Le statut de la réponse n'est pas dans les 200 (i.e., une requête qui
+          a échoué.) Cela peut arriver si la requête échoue, mais également si
+          la requête est une <em>cross-origin no-cors</em> (auquel cas le statut
+          retourné est systématiquement 0.)
+        </p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemples"><strong>Exemples</strong></h2>
+## **Exemples**
 
-<p>Ce bloc de code attends le déclenchement d'un {{domxref("InstallEvent")}}, puis lance {{domxref("ExtendableEvent.waitUntil","waitUntil")}} qui gère la phase d'installation de l'application. Cela consite à appeler {{domxref("CacheStorage.open")}} afin de créer un nouveau cache, puis à utiliser <code>addAll()</code> pour y ajouter une série de ressources.</p>
+Ce bloc de code attends le déclenchement d'un {{domxref("InstallEvent")}}, puis lance {{domxref("ExtendableEvent.waitUntil","waitUntil")}} qui gère la phase d'installation de l'application. Cela consite à appeler {{domxref("CacheStorage.open")}} afin de créer un nouveau cache, puis à utiliser `addAll()` pour y ajouter une série de ressources.
 
-<pre class="brush: js">this.addEventListener('install', function(event) {
+```js
+this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
@@ -82,33 +86,20 @@ translation_of: Web/API/Cache/addAll
     })
   );
 });
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-cache-addall', 'Cache: addAll')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | Statut                               | Commentaire          |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('Service Workers', '#dom-cache-addall', 'Cache: addAll')}} | {{Spec2('Service Workers')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Cache.addAll")}}</p>
+{{Compat("api.Cache.addAll")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers">Utiliser les Service Workers</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WorkerGlobalScope.caches")}}</li>
-</ul>
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WorkerGlobalScope.caches")}}

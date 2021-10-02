@@ -6,77 +6,78 @@ tags:
   - Window
 translation_of: Web/API/Window/message_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>L'événement <code>message</code> est déclenché sur un objet {{domxref('Window')}} lorsque la fenêtre reçoit un message, par exemple d'un appel a <code><a href="/en-US/docs/Web/API/Window/postMessage">Window.postMessage()</a></code> depuis un autre contexte de navigation.</p>
+L'événement `message` est déclenché sur un objet {{domxref('Window')}} lorsque la fenêtre reçoit un message, par exemple d'un appel a [`Window.postMessage()`](/en-US/docs/Web/API/Window/postMessage) depuis un autre contexte de navigation.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bulles</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Annulable</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MessageEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Propriété de gestionnaire d'événements</th>
-   <td><code><a href="/en-US/docs/Web/API/WindowEventHandlers/onmessage">onmessage</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bulles</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Annulable</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MessageEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Propriété de gestionnaire d'événements</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/WindowEventHandlers/onmessage"
+            >onmessage</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Supposons qu'un script envoie un message à un contexte de navigation différent, tel qu'un autre <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>, en utilisant un code comme celui-ci:</p>
+Supposons qu'un script envoie un message à un contexte de navigation différent, tel qu'un autre [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), en utilisant un code comme celui-ci:
 
-<pre class="brush: js">const targetFrame = window.top.frames[1];
+```js
+const targetFrame = window.top.frames[1];
 const targetOrigin = 'https://exemple.org';
 const windowMessageButton = document.querySelector('#window-message');
 
-windowMessageButton.addEventListener('click', () =&gt; {
+windowMessageButton.addEventListener('click', () => {
     targetFrame.postMessage('bonjour', targetOrigin);
-});</pre>
+});
+```
 
-<p>Le récepteur peut écouter le message en utilisant <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> avec un code comme celui-ci:</p>
+Le récepteur peut écouter le message en utilisant [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) avec un code comme celui-ci:
 
-<pre class="brush: js">window.addEventListener('message', (event) =&gt; {
+```js
+window.addEventListener('message', (event) => {
     console.log(`Message reçu: ${event.data}`);
-});</pre>
+});
+```
 
-<p>Alternativement l'écouteur peut utiliser la propriété du gestionnaire d'événements <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onmessage">onmessage</a></code>:</p>
+Alternativement l'écouteur peut utiliser la propriété du gestionnaire d'événements [`onmessage`](/en-US/docs/Web/API/WindowEventHandlers/onmessage):
 
-<pre class="brush: js">window.onmessage = (event) =&gt; {
+```js
+window.onmessage = (event) => {
     console.log(`Message reçu: ${event.data}`);
-};</pre>
+};
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'indices.html#event-message')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | Statut                           |
+| ---------------------------------------------------------------------------- | -------------------------------- |
+| {{SpecName('HTML WHATWG', 'indices.html#event-message')}} | {{Spec2('HTML WHATWG')}} |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.message_event")}}</p>
+{{Compat("api.Window.message_event")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>Événements liés: <code><a href="/docs/Web/API/Window/messageerror_event">messageerror</a></code>.</li>
- <li><code><a href="/en-US/docs/Web/API/Window/postMessage">Window.postMessage()</a></code>.</li>
-</ul>
+- Événements liés: [`messageerror`](/docs/Web/API/Window/messageerror_event).
+- [`Window.postMessage()`](/en-US/docs/Web/API/Window/postMessage).

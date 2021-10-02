@@ -11,45 +11,28 @@ tags:
   - Écran
 translation_of: Web/API/Window/screen
 ---
-<div>{{APIRef("CSSOM View")}}</div>
+{{APIRef("CSSOM View")}}Retourne une référence à l'objet `screen` associé à la fenêtre. L'object `screen`, qui implémente l'interface {{domxref("Screen")}}, est un objet spécial servant à examiner les propriétés de l'écran qui affiche la fenêtre courante.
 
-<div>Retourne une référence à l'objet <code>screen</code> associé à la fenêtre. L'object <code>screen</code>, qui implémente l'interface {{domxref("Screen")}}, est un objet spécial servant à examiner les propriétés de l'écran qui affiche la fenêtre courante.</div>
+## Syntaxe
 
-<h2 id="Syntax">Syntaxe</h2>
+    objetEcran = window.screen;
 
-<pre class="syntaxbox"><var>objetEcran</var> = <var>window</var>.screen;
-</pre>
+## Examples
 
-<h2 id="Example">Examples</h2>
-
-<pre class="brush:js">if (screen.pixelDepth &lt; 8) {
+```js
+if (screen.pixelDepth < 8) {
   // utiliser la page en colorisation réduite
 } else {
   // utiliser la page en coolorisation normale
 }
-</pre>
+```
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-window-screen', 'window.screen')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                             | Commentaires |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
+| {{SpecName('CSSOM View', '#dom-window-screen', 'window.screen')}} | {{Spec2('CSSOM View')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("api.Window.screen")}}</p>
+{{Compat("api.Window.screen")}}

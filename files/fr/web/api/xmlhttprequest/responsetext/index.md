@@ -3,34 +3,31 @@ title: XMLHttpRequest.responseText
 slug: Web/API/XMLHttpRequest/responseText
 translation_of: Web/API/XMLHttpRequest/responseText
 ---
-<div>{{draft}}</div>
+{{draft}}{{APIRef('XMLHttpRequest')}}
 
-<div>{{APIRef('XMLHttpRequest')}}</div>
+La lecture seule {{domxref("XMLHttpRequest")}} propriété **`responseText`** renvoie le texte reçu d'un serveur suite à l'envoi d'une requête.
 
-<p>La lecture seule {{domxref("XMLHttpRequest")}} propriété <strong><code>responseText</code></strong> renvoie le texte reçu d'un serveur suite à l'envoi d'une requête.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+    var resultText = XMLHttpRequest.responseText;
 
-<pre class="syntaxbox">var <var>resultText</var> = <var>XMLHttpRequest</var>.responseText;</pre>
+### Value
 
-<h3 id="Value">Value</h3>
+A {{domxref("DOMString")}} qui contient soit les données textuelles reçues à l'aide du`XMLHttpRequest` ou `null` si la demande a échoué ou `""` si la demande n'a pas encore été envoyée en appelant {{domxref("XMLHttpRequest.send", "send()")}}.
 
-<p>A {{domxref("DOMString")}} qui contient soit les données textuelles reçues à l'aide du<code>XMLHttpRequest</code> ou <code>null</code> si la demande a échoué ou <code>""</code> si la demande n'a pas encore été envoyée en appelant {{domxref("XMLHttpRequest.send", "send()")}}.</p>
+Lors du traitement d'une requête asynchrone, la valeur de `responseText` reçoit toujours le contenu actuel du serveur, même s'il est incomplet car les données n'ont pas encore été complètement reçues.
 
-<p>Lors du traitement d'une requête asynchrone, la valeur de <code>responseText</code> reçoit toujours le contenu actuel du serveur, même s'il est incomplet car les données n'ont pas encore été complètement reçues.</p>
+Vous savez que tout le contenu a été reçu lorsque la valeur de {{domxref("XMLHttpRequest.readyState", "readyState")}} deviens {{domxref("XMLHttpRequest.DONE", "XMLHttpRequest.DONE")}} (`4`), et {{domxref("XMLHttpRequest.status", "status")}} becomes 200 (`"OK"`).
 
-<p>Vous savez que tout le contenu a été reçu lorsque la valeur de {{domxref("XMLHttpRequest.readyState", "readyState")}} deviens {{domxref("XMLHttpRequest.DONE", "XMLHttpRequest.DONE")}} (<code>4</code>), et {{domxref("XMLHttpRequest.status", "status")}} becomes 200 (<code>"OK"</code>).</p>
+### Exceptions
 
-<h3 id="Exceptions">Exceptions</h3>
+- `InvalidStateError`
+  - : Le {{domxref("XMLHttpRequest.responseType")}} n'est défini ni sur la chaîne vide ni sur "texte". Étant donné que la propriété responseText n'est valide que pour le contenu texte, toute autre valeur est une condition d'erreur.
 
-<dl>
- <dt><code>InvalidStateError</code></dt>
- <dd>Le {{domxref("XMLHttpRequest.responseType")}} n'est défini ni sur la chaîne vide ni sur "texte". Étant donné que la propriété responseText n'est valide que pour le contenu texte, toute autre valeur est une condition d'erreur.</dd>
-</dl>
+## Example
 
-<h2 id="Example">Example</h2>
-
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 // If specified, responseType must be empty string or "text"
@@ -45,27 +42,15 @@ xhr.onload = function () {
     }
 };
 
-xhr.send(null);</pre>
+xhr.send(null);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#the-responsetext-attribute')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                               | Comment                |
+| -------------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
+| {{SpecName('XMLHttpRequest', '#the-responsetext-attribute')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.XMLHttpRequest.responseText")}}</p>
+{{Compat("api.XMLHttpRequest.responseText")}}

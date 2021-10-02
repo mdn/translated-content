@@ -3,69 +3,55 @@ title: Window.scrollY
 slug: Web/API/Window/scrollY
 translation_of: Web/API/Window/scrollY
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La propriété <code><strong>scrollY</strong></code> de l'objet {{domxref("Window")}} est une propriété en lecture seule. Elle retourne le nombre de pixels la page actuellement défilés verticalement. Dans les navigateurs modernes, cette valeur est précise au sous-pixel près. Ainsi, la valeur retournée n'est pas forcement un entier.</p>
+La propriété **`scrollY`** de l'objet {{domxref("Window")}} est une propriété en lecture seule. Elle retourne le nombre de pixels la page actuellement défilés verticalement. Dans les navigateurs modernes, cette valeur est précise au sous-pixel près. Ainsi, la valeur retournée n'est pas forcement un entier.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var y = window.scrollY;</pre>
+    var y = window.scrollY;
 
-<ul>
- <li><code>y</code> est le nombre de pixels verticaux défilés.</li>
-</ul>
+- `y` est le nombre de pixels verticaux défilés.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">// make sure and go down to the second page
+```js
+// make sure and go down to the second page
 if (window.scrollY) {
   window.scroll(0, 0);  // reset the scroll position to the top left of the document.
 }
 
-window.scrollByPages(1);</pre>
+window.scrollByPages(1);
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Utilisez cette propriété pour être sûre que le document n'as pas été défilé verticalement si vous utilisez les fonctions de défilement tels que {{domxref("window.scrollBy")}}, {{domxref("window.scrollByLines")}}, ou {{domxref("window.scrollByPages")}}.</p>
+Utilisez cette propriété pour être sûre que le document n'as pas été défilé verticalement si vous utilisez les fonctions de défilement tels que {{domxref("window.scrollBy")}}, {{domxref("window.scrollByLines")}}, ou {{domxref("window.scrollByPages")}}.
 
-<p>La propriété <code>pageYOffset</code> est un alias de la propriété <code>scrollY</code>:</p>
+La propriété `pageYOffset` est un alias de la propriété `scrollY`:
 
-<pre>window.pageYOffset == window.scrollY; // toujours vrai</pre>
+    window.pageYOffset == window.scrollY; // toujours vrai
 
-<p>Pour une compatibilité multi-navigateur, utilisez <code>window.pageYOffset</code> à la place de <code>window.scrollY</code>. <strong>En outre</strong>, les anciennes versions d'Internet Explorer (&lt; 9) ne supportent pas non plus la propriété et doit-être utilisé à l'aide d'autres propriétés qui ne sont pas standards. Un exemple entièrement compatible :</p>
+Pour une compatibilité multi-navigateur, utilisez `window.pageYOffset` à la place de `window.scrollY`. **En outre**, les anciennes versions d'Internet Explorer (< 9) ne supportent pas non plus la propriété et doit-être utilisé à l'aide d'autres propriétés qui ne sont pas standards. Un exemple entièrement compatible :
 
-<pre class="brush:js">var supportPageOffset = window.pageXOffset !== undefined;
+```js
+var supportPageOffset = window.pageXOffset !== undefined;
 var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
 
 var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
 var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
-</pre>
+```
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Commentaire(s)</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM View', '#dom-window-scrolly', 'window.scrollY') }}</td>
-   <td>{{ Spec2('CSSOM View') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | Status                           | Commentaire(s) |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------- |
+| {{ SpecName('CSSOM View', '#dom-window-scrolly', 'window.scrollY') }} | {{ Spec2('CSSOM View') }} |                |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.scrollY")}}</p>
+{{Compat("api.Window.scrollY")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>{{domxref("window.scrollX")}}</li>
-</ul>
+- {{domxref("window.scrollX")}}

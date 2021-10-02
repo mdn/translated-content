@@ -9,29 +9,30 @@ tags:
   - Reference
 translation_of: Web/API/IDBObjectStore/indexNames
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>La propriété <strong><code>indexNames</code></strong>, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie la liste des noms des index pour les objets du magasin d'objets courant.</p>
+La propriété **`indexNames`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie la liste des noms des index pour les objets du magasin d'objets courant.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var myindexNames = objectStore.indexNames;</pre>
+    var myindexNames = objectStore.indexNames;
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Une liste {{domxref("DOMStringList")}}.</p>
+Une liste {{domxref("DOMStringList")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple suivant, on initialise une transaction de lecture/écriture sur une base de données en ajoutant des données dans un magasin d'objets via la méthode <code>add()</code>. Une fois l'objet créé, on affiche <code>objectStore.indexNames</code> en sortie de la console. Pour un exemple complet et fonctionnel, vous pouvez utiliser notre application <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">tester la démo</a>).</p>
+Dans l'exemple suivant, on initialise une transaction de lecture/écriture sur une base de données en ajoutant des données dans un magasin d'objets via la méthode `add()`. Une fois l'objet créé, on affiche `objectStore.indexNames` en sortie de la console. Pour un exemple complet et fonctionnel, vous pouvez utiliser notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([tester la démo](https://mdn.github.io/to-do-notifications/)).
 
-<pre class="brush: js">// On commence par ouvrir la base de données
+```js
+// On commence par ouvrir la base de données
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Base de données initialisée.&lt;/li&gt;';
+  note.innerHTML += '<li>Base de données initialisée.</li>';
 
   // On enregistre le résultat de l'ouverture
   // dans la variable db afin de l'utiliser
@@ -55,12 +56,12 @@ function addData() {
 
   // On indique le succès de la transaction
   transaction.oncomplete = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction terminée : modification finie.&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction terminée : modification finie.</li>';
   };
 
 
   transaction.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction non-ouverte à cause d'une erreur. Les doublons ne sont pas autorisés.&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction non-ouverte à cause d'une erreur. Les doublons ne sont pas autorisés.</li>';
   };
 
   // On crée un magasin d'objet pour la transaction
@@ -74,39 +75,27 @@ function addData() {
   objectStoreRequest.onsuccess = function(event) {
     // On indique le succès de l'ajout de l'objet
     // dans la base de données
-    note.innerHTML += '&lt;li&gt;Un nouvel élément a été ajouté dans la base de données.&lt;/li&gt;';
+    note.innerHTML += '<li>Un nouvel élément a été ajouté dans la base de données.</li>';
   };
-};</pre>
+};
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBObjectStore-indexNames', 'indexNames')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-indexNames', 'indexNames')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBObjectStore.indexNames")}}</p>
+{{Compat("api.IDBObjectStore.indexNames")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
- <li>Initier une connexion : {{domxref("IDBDatabase")}}</li>
- <li>Utiliser les transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
- <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
-</ul>
+- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Initier une connexion : {{domxref("IDBDatabase")}}
+- Utiliser les transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
+- Utiliser les curseurs {{domxref("IDBCursor")}}
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).

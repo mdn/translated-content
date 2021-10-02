@@ -9,38 +9,37 @@ tags:
   - Reference
 translation_of: Web/API/CanvasGradient/addColorStop
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>La méthode CanvasGradient.addColorStop () ajoute un nouvel arrêt, défini par un <code>décalage</code> et une <code>couleur</code>, au dégradé. Si le décalage n'est pas compris entre 0 et 1, une erreur INDEX_SIZE_ERR est générée, si la couleur ne peut pas être analysée en tant que {{cssxref ("&lt;color&gt;")}} CSS, une erreur SYNTAX_ERR est générée.</p>
+La méthode CanvasGradient.addColorStop () ajoute un nouvel arrêt, défini par un `décalage` et une `couleur`, au dégradé. Si le décalage n'est pas compris entre 0 et 1, une erreur INDEX_SIZE_ERR est générée, si la couleur ne peut pas être analysée en tant que {{cssxref ("&lt;color&gt;")}} CSS, une erreur SYNTAX_ERR est générée.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var><em>gradient</em>.addColorStop(décalage, couleur);</var>
-</pre>
+    void gradient.addColorStop(décalage, couleur);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>décalage</dt>
- <dd>Un nombre entre 0 et 1. Une erreur INDEX_SIZE_ERR est générée, si le nombre n'est pas dans cette plage.</dd>
- <dt>couleur</dt>
- <dd>Une {{cssxref ("&lt;color&gt;")}} CSS. Une erreur SYNTAX_ERR est générée, si la valeur ne peut pas être analysée en tant que valeur &lt;color&gt; CSS.</dd>
-</dl>
+- décalage
+  - : Un nombre entre 0 et 1. Une erreur INDEX_SIZE_ERR est générée, si le nombre n'est pas dans cette plage.
+- couleur
+  - : Une {{cssxref ("&lt;color&gt;")}} CSS. Une erreur SYNTAX_ERR est générée, si la valeur ne peut pas être analysée en tant que valeur \<color> CSS.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_de_la_méthode_addColorStop">Utilisation de la méthode <code>addColorStop</code> </h3>
+### Utilisation de la méthode `addColorStop` 
 
-<p>Il s'agit seulement d'un simple fragment de code qui utilise la méthode <code>addColorStop</code> avec un objet {{domxref("CanvasGradient")}}.</p>
+Il s'agit seulement d'un simple fragment de code qui utilise la méthode `addColorStop` avec un objet {{domxref("CanvasGradient")}}.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canevas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canevas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canevas = document.getElementById('canevas');
+```js
+var canevas = document.getElementById('canevas');
 var ctx = canevas.getContext('2d');
 
 var degrade = ctx.createLinearGradient(0, 0, 200, 0);
@@ -48,26 +47,28 @@ degrade.addColorStop(0, 'green');
 degrade.addColorStop(1, 'white');
 ctx.fillStyle = degrade;
 ctx.fillRect(10, 10, 200, 100);
-</pre>
+```
 
-<p>Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct dans le canevas :</p>
+Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct dans le canevas :
 
-<h4 id="code_jouable">Code jouable</h4>
+#### Code jouable
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 var gradient = ctx.createLinearGradient(0,0,200,0);
 gradient.addColorStop(0,"green");
 gradient.addColorStop(1,"white");
 ctx.fillStyle = gradient;
-ctx.fillRect(10,10,200,100);&lt;/textarea&gt;
-</pre>
+ctx.fillRect(10,10,200,100);</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -90,35 +91,22 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
+{{ EmbedLiveSample('code_jouable', 700, 360) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-canvasgradient-addcolorstop", "CanvasGradient.addColorStop")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                    | Statut                           | Commentaire |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-canvasgradient-addcolorstop", "CanvasGradient.addColorStop")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CanvasGradient.addColorStop")}}</p>
+{{Compat("api.CanvasGradient.addColorStop")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface ladéfinissant, {{domxref("CanvasGradient")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.createLinearGradient()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.createRadialGradient()")}}</li>
-</ul>
+- L'interface ladéfinissant, {{domxref("CanvasGradient")}}
+- {{domxref("CanvasRenderingContext2D.createLinearGradient()")}}
+- {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}

@@ -11,36 +11,28 @@ tags:
   - frameType
 translation_of: Web/API/Client/frameType
 ---
-<p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>La propriété <code><strong>frameType</strong></code> (accessible en lecture seule) de l'interface {{domxref("Client")}} indique le type de contexte de navigation du {{domxref("Client")}} courant. Cette valeur peut être <code>auxiliary</code>, <code>top-level</code>, <code>nested</code>, ou <code>none</code>.</p>
+La propriété **`frameType`** (accessible en lecture seule) de l'interface {{domxref("Client")}} indique le type de contexte de navigation du {{domxref("Client")}} courant. Cette valeur peut être `auxiliary`, `top-level`, `nested`, ou `none`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var myFrameType = Client.frameType;</pre>
+```js
+var myFrameType = Client.frameType;
+```
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">TBD
-</pre>
+```js
+TBD
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#client-frametype', 'frameType')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | Statut                               | Commentaire          |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('Service Workers', '#client-frametype', 'frameType')}} | {{Spec2('Service Workers')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Client.frameType")}}</p>
+{{Compat("api.Client.frameType")}}

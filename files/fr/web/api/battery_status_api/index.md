@@ -8,26 +8,25 @@ tags:
   - Obsolete
 translation_of: Web/API/Battery_Status_API
 ---
-<p>{{DefaultAPISidebar("Battery API")}}{{Obsolete_Header}}</p>
+{{DefaultAPISidebar("Battery API")}}{{Obsolete_Header}}
 
-<p>L'<strong>API <em>Battery Status</em></strong>, souvent mentionnée sous le nom <strong>Battery API</strong>, fournit des informations sur le niveau de charge du système et permet d'envoyer des événements pour prévenir d'un changement du niveau de charge de la batterie. Cela peut être utilisé pour ajuster la consommation d'une application et la réduire pour réduire l'utilisation de la batterie lorsque son niveau de charge est bas ou encore de sauvegarder les données quand la batterie est bientôt vide.</p>
+L'**API _Battery Status_**, souvent mentionnée sous le nom **Battery API**, fournit des informations sur le niveau de charge du système et permet d'envoyer des événements pour prévenir d'un changement du niveau de charge de la batterie. Cela peut être utilisé pour ajuster la consommation d'une application et la réduire pour réduire l'utilisation de la batterie lorsque son niveau de charge est bas ou encore de sauvegarder les données quand la batterie est bientôt vide.
 
-<p>L'API Battery Status API étend l'interface {{domxref("window.navigator")}} avec la propriété {{domxref("window.navigator.battery")}}, méthode qui renvoie une promesse, résolue par l'objet {{domxref("BatteryManager")}}. Cet objet permet d'ajouter des nouveaux événements pour superviser l'état de la batterie.</p>
+L'API Battery Status API étend l'interface {{domxref("window.navigator")}} avec la propriété {{domxref("window.navigator.battery")}}, méthode qui renvoie une promesse, résolue par l'objet {{domxref("BatteryManager")}}. Cet objet permet d'ajouter des nouveaux événements pour superviser l'état de la batterie.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans cet exemple, on cherche à surveiller les changements, à la fois du statut de la charge (est-ce que l'équipement est branché et se recharge ou est ce que l'équipement est alimenté par sa batterie) et des changements du niveau de charge dans le temps.</p>
+Dans cet exemple, on cherche à surveiller les changements, à la fois du statut de la charge (est-ce que l'équipement est branché et se recharge ou est ce que l'équipement est alimenté par sa batterie) et des changements du niveau de charge dans le temps.
 
-<p>Cela se fait en surveillant les événements : </p>
+Cela se fait en surveillant les événements :
 
-<ul>
- <li>{{event("chargingchange")}}: changement de l'êtat de charge</li>
- <li>{{event("levelchange")}}: changement du niveau de batterie</li>
- <li>{{event("chargingtimechange")}}: évolution de l'estimation du temps de recharge</li>
- <li>{{event("dischargingtimechange")}}: évolution de l'estimation d'autonomie sur batterie</li>
-</ul>
+- {{event("chargingchange")}}: changement de l'êtat de charge
+- {{event("levelchange")}}: changement du niveau de batterie
+- {{event("chargingtimechange")}}: évolution de l'estimation du temps de recharge
+- {{event("dischargingtimechange")}}: évolution de l'estimation d'autonomie sur batterie
 
-<pre class="brush: js;">navigator.getBattery().then(function(battery) {
+```js
+navigator.getBattery().then(function(battery) {
   function updateAllBatteryInfo(){
     updateChargeInfo();
     updateLevelInfo();
@@ -69,36 +68,21 @@ translation_of: Web/API/Battery_Status_API
   }
 
 });
-</pre>
+```
 
-<p>Voir aussi <a href="http://www.w3.org/TR/battery-status/#examples">l'exemple de la spécification</a>.</p>
+Voir aussi [l'exemple de la spécification](http://www.w3.org/TR/battery-status/#examples).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Battery API")}}</td>
-   <td>{{Spec2("Battery API")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                        | État                             | Commentaires         |
+| ------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName("Battery API")}} | {{Spec2("Battery API")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.BatteryManager")}}</p>
+{{Compat("api.BatteryManager")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/Apps/Build/gather_and_modify_data/retrieving_battery_status_information">Récupérer les informations relatives à la batterie - article et démonstration</a></li>
- <li><a href="http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/">Billet de blog sur Hacks - Utiliser l'API Battery (en anglais)</a></li>
-</ul>
+- [Récupérer les informations relatives à la batterie - article et démonstration](/en-US/Apps/Build/gather_and_modify_data/retrieving_battery_status_information)
+- [Billet de blog sur Hacks - Utiliser l'API Battery (en anglais)](http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)

@@ -8,28 +8,26 @@ tags:
   - Propriétés
 translation_of: Web/API/Document/mozSyntheticDocument
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>Indique si le document est synthétique ou non ; c'est-à-dire un document représentant une image autonome, une vidéo, un son ou analogue.</p>
+Indique si le document est synthétique ou non ; c'est-à-dire un document représentant une image autonome, une vidéo, un son ou analogue.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval"><em>var isSynthetic</em> = <em>document</em>.mozSyntheticDocument;
-</pre>
+    var isSynthetic = document.mozSyntheticDocument;
 
-<p>En retour, <code>isSynthetic</code> est <code>true</code> (<em>vrai</em>) si le document est synthétique ; sinon, <code>false</code> (<em>faux</em>).</p>
+En retour, `isSynthetic` est `true` (_vrai_) si le document est synthétique ; sinon, `false` (_faux_).
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>Il peut être utile, si vous avez un élément de menu contextuel que vous souhaitez uniquement afficher pour les documents synthétiques (ou, inversement, pour les documents qui ne sont pas synthétiques).</p>
+Il peut être utile, si vous avez un élément de menu contextuel que vous souhaitez uniquement afficher pour les documents synthétiques (ou, inversement, pour les documents qui ne sont pas synthétiques).
 
-<pre class="eval">var isSynthetic = document.mozSyntheticDocument;
+    var isSynthetic = document.mozSyntheticDocument;
 
-if (isSynthetic) {
-  /* insert your menu item here */
-}
-</pre>
+    if (isSynthetic) {
+      /* insert your menu item here */
+    }
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<p>Ne fait partie d'aucune spécification.</p>
+Ne fait partie d'aucune spécification.

@@ -8,62 +8,63 @@ tags:
   - Méthode
 translation_of: Web/API/CanvasRenderingContext2D/rect
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La méthode <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.rect()</code></strong> de l'API Canvas 2D crée un chemin de rectangle à la position <em>(x, y)</em> et de dimensions <em>width</em> et <em>height</em>. Ces quatre points sont connectés par des lignes droites et le sous-chemin est directement fermé, vous pouvez donc utiliser <code>fill</code> ou <code>stroke</code> pour dessiner ce rectangle.</p>
+La méthode **`CanvasRenderingContext2D`\*\***`.rect()`\*_ de l'API Canvas 2D crée un chemin de rectangle à la position _(x, y)* et de dimensions *width* et *height\*. Ces quatre points sont connectés par des lignes droites et le sous-chemin est directement fermé, vous pouvez donc utiliser `fill` ou `stroke` pour dessiner ce rectangle.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var><em>ctx</em>.rect(x, y, width, height);</var>
-</pre>
+    void ctx.rect(x, y, width, height);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>x</code></dt>
- <dd>La coordonnée x pour le côté gauche du rectangle.</dd>
- <dt><code>y</code></dt>
- <dd>La coordonnée y pour le haut du rectangle.</dd>
- <dt><code>width</code></dt>
- <dd>La largeur du rectangle.</dd>
- <dt><code>height</code></dt>
- <dd>La hauteur du rectangle.</dd>
-</dl>
+- `x`
+  - : La coordonnée x pour le côté gauche du rectangle.
+- `y`
+  - : La coordonnée y pour le haut du rectangle.
+- `width`
+  - : La largeur du rectangle.
+- `height`
+  - : La hauteur du rectangle.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_la_méthode_rect">Utiliser la méthode <code>rect</code></h3>
+### Utiliser la méthode `rect`
 
-<p>Ceci est un simple bout de code qui utilise la méthode <code>rect</code> pour dessiner un chemin. Pour réellement dessiner ce chemin sur le canvas, vous devez utiliser la méthode {{domxref("CanvasRenderingContext2D.fill", "fill()")}} ou {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}. Voir également les méthodes {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} et {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}}, qui peuvent le faire en une seule étape.</p>
+Ceci est un simple bout de code qui utilise la méthode `rect` pour dessiner un chemin. Pour réellement dessiner ce chemin sur le canvas, vous devez utiliser la méthode {{domxref("CanvasRenderingContext2D.fill", "fill()")}} ou {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}. Voir également les méthodes {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} et {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}}, qui peuvent le faire en une seule étape.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
-</pre>
+```
 
-<p>Éditez le code ci-dessous pour voir vos mises à jour apportées au canvas directement:</p>
+Éditez le code ci-dessous pour voir vos mises à jour apportées au canvas directement:
 
-<h4 id="code_jouable">Code jouable</h4>
+#### Code jouable
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.fill();&lt;/textarea&gt;
-</pre>
+ctx.fill();</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -86,37 +87,24 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
+{{ EmbedLiveSample('code_jouable', 700, 360) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-rect", "CanvasRenderingContext2D.rect")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                        | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-rect", "CanvasRenderingContext2D.rect")}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.rect")}}</p>
+{{Compat("api.CanvasRenderingContext2D.rect")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface qui définit cette méthode, {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.fillRect")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.strokeRect()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.fill()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.stroke()")}}</li>
-</ul>
+- L'interface qui définit cette méthode, {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.fillRect")}}
+- {{domxref("CanvasRenderingContext2D.strokeRect()")}}
+- {{domxref("CanvasRenderingContext2D.fill()")}}
+- {{domxref("CanvasRenderingContext2D.stroke()")}}

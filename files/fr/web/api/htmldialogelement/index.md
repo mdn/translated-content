@@ -12,72 +12,67 @@ tags:
   - TopicStub
 translation_of: Web/API/HTMLDialogElement
 ---
-<div>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>HTMLDialogElement</code></strong> interface provides methods to manipulate {{HTMLElement("dialog")}} elements. It inherits properties and methods from the {{domxref("HTMLElement")}} interface.</p>
+The **`HTMLDialogElement`** interface provides methods to manipulate {{HTMLElement("dialog")}} elements. It inherits properties and methods from the {{domxref("HTMLElement")}} interface.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLDialogElement.open")}}</dt>
- <dd>A {{domxref("Boolean")}} reflecting the {{htmlattrxref("open", "dialog")}} HTML attribute, indicating whether the dialog is available for interaction.</dd>
- <dt>{{domxref("HTMLDialogElement.returnValue")}}</dt>
- <dd>A {{domxref("DOMString")}} that sets or returns the return value for the dialog.</dd>
-</dl>
+- {{domxref("HTMLDialogElement.open")}}
+  - : A {{domxref("Boolean")}} reflecting the {{htmlattrxref("open", "dialog")}} HTML attribute, indicating whether the dialog is available for interaction.
+- {{domxref("HTMLDialogElement.returnValue")}}
+  - : A {{domxref("DOMString")}} that sets or returns the return value for the dialog.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLDialogElement.close()")}}</dt>
- <dd>Closes the dialog. An optional {{domxref("DOMString")}} may be passed as an argument, updating the <code>returnValue</code> of the the dialog.</dd>
- <dt>{{domxref("HTMLDialogElement.show()")}}</dt>
- <dd>Displays the dialog modelessly, i.e. still allowing interaction with content outside of the dialog.</dd>
- <dt>{{domxref("HTMLDialogElement.showModal()")}}</dt>
- <dd>Displays the dialog as a modal, over the top of any other dialogs that might be present. Interaction outside the dialog is blocked.</dd>
-</dl>
+- {{domxref("HTMLDialogElement.close()")}}
+  - : Closes the dialog. An optional {{domxref("DOMString")}} may be passed as an argument, updating the `returnValue` of the the dialog.
+- {{domxref("HTMLDialogElement.show()")}}
+  - : Displays the dialog modelessly, i.e. still allowing interaction with content outside of the dialog.
+- {{domxref("HTMLDialogElement.showModal()")}}
+  - : Displays the dialog as a modal, over the top of any other dialogs that might be present. Interaction outside the dialog is blocked.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{domxref("HTMLDialogElement/close_event", "close")}}</dt>
- <dd>Fired when the dialog is closed.<br>
- Also available via the {{domxref("GlobalEventHandlers/onclose", "onclose")}} property.</dd>
-</dl>
+- {{domxref("HTMLDialogElement/close_event", "close")}}
+  - : Fired when the dialog is closed.
+    Also available via the {{domxref("GlobalEventHandlers/onclose", "onclose")}} property.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} containing a form via the {{domxref("HTMLDialogElement.showModal()")}} function. From there you can click the <em>Cancel</em> button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} function), or submit the form via the submit button.</p>
+The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} containing a form via the {{domxref("HTMLDialogElement.showModal()")}} function. From there you can click the _Cancel_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} function), or submit the form via the submit button.
 
-<pre class="brush: html">  &lt;!-- Simple pop-up dialog box, containing a form --&gt;
-  &lt;dialog id="favDialog"&gt;
-    &lt;form method="dialog"&gt;
-      &lt;section&gt;
-        &lt;p&gt;&lt;label for="favAnimal"&gt;Favorite animal:&lt;/label&gt;
-        &lt;select id="favAnimal" name="favAnimal"&gt;
-          &lt;option&gt;&lt;/option&gt;
-          &lt;option&gt;Brine shrimp&lt;/option&gt;
-          &lt;option&gt;Red panda&lt;/option&gt;
-          &lt;option&gt;Spider monkey&lt;/option&gt;
-        &lt;/select&gt;&lt;/p&gt;
-      &lt;/section&gt;
-      &lt;menu&gt;
-        &lt;button id="cancel" type="reset"&gt;Cancel&lt;/button&gt;
-        &lt;button type="submit"&gt;Confirm&lt;/button&gt;
-      &lt;/menu&gt;
-    &lt;/form&gt;
-  &lt;/dialog&gt;
+```html
+  <!-- Simple pop-up dialog box, containing a form -->
+  <dialog id="favDialog">
+    <form method="dialog">
+      <section>
+        <p><label for="favAnimal">Favorite animal:</label>
+        <select id="favAnimal" name="favAnimal">
+          <option></option>
+          <option>Brine shrimp</option>
+          <option>Red panda</option>
+          <option>Spider monkey</option>
+        </select></p>
+      </section>
+      <menu>
+        <button id="cancel" type="reset">Cancel</button>
+        <button type="submit">Confirm</button>
+      </menu>
+    </form>
+  </dialog>
 
-  &lt;menu&gt;
-    &lt;button id="updateDetails"&gt;Update details&lt;/button&gt;
-  &lt;/menu&gt;
+  <menu>
+    <button id="updateDetails">Update details</button>
+  </menu>
 
-  &lt;script&gt;
+  <script>
     (function() {
       var updateButton = document.getElementById('updateDetails');
       var cancelButton = document.getElementById('cancel');
@@ -105,44 +100,22 @@ translation_of: Web/API/HTMLDialogElement
       });
 
     })();
-  &lt;/script&gt;</pre>
+  </script>
+```
 
-<div class="note">
-<p><strong>Note :</strong> You can find this example on GitHub as <a href="https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html">htmldialogelement-basic</a> (<a href="https://mdn.github.io/dom-examples/htmldialogelement-basic/">see it live also</a>).</p>
-</div>
+> **Note :** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#htmldialogelement', 'HTMLDialogElement')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.2', 'interactive-elements.html#the-dialog-element', '&lt;dialog&gt;')}}</td>
-   <td>{{Spec2('HTML5.2')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                            | Status                           | Comment            |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('HTML WHATWG', '#htmldialogelement', 'HTMLDialogElement')}}                             | {{Spec2('HTML WHATWG')}} |                    |
+| {{SpecName('HTML5.2', 'interactive-elements.html#the-dialog-element', '&lt;dialog&gt;')}} | {{Spec2('HTML5.2')}}     | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.HTMLDialogElement")}}
 
+## See also
 
-<p>{{Compat("api.HTMLDialogElement")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("dialog") }}.</li>
-</ul>
+- The HTML element implementing this interface: {{ HTMLElement("dialog") }}.

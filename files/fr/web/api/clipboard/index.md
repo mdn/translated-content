@@ -13,68 +13,51 @@ tags:
   - Reference
 translation_of: Web/API/Clipboard
 ---
-<p>{{APIRef("Clipboard API")}}</p>
+{{APIRef("Clipboard API")}}
 
-<div class="note">
-<p><strong>Note :</strong> Le <strong>presse-papiers</strong> est un tampon de données utilisé pour le stockage ou le transfert à court terme de données, éventuellement entre documents ou applications. Il est généralement mis en œuvre sous la forme d’une {{interwiki("wikipedia", "Mémoire_tampon", "mémoire tampon")}} temporaire, parfois appelée « tampon de collage », qui peut être accédé par la plupart ou tous les programmes de l’environnement via des {{interwiki("wikipedia", "Interface_de_programmation", "interfaces de programmation")}} définies.</p>
+> **Note :** Le **presse-papiers** est un tampon de données utilisé pour le stockage ou le transfert à court terme de données, éventuellement entre documents ou applications. Il est généralement mis en œuvre sous la forme d’une {{interwiki("wikipedia", "Mémoire_tampon", "mémoire tampon")}} temporaire, parfois appelée « tampon de collage », qui peut être accédé par la plupart ou tous les programmes de l’environnement via des {{interwiki("wikipedia", "Interface_de_programmation", "interfaces de programmation")}} définies.
+>
+> Une application typique accède aux fonctionnalités du presse-papiers en associant des {{interwiki("wikipedia", "Entr%C3%A9es-sorties", "entrées utilisateur")}} telles que des {{interwiki("wikipedia", "Raccourci_clavier", "raccourcis clavier")}}, des éléments de {{interwiki("wikipedia", "Menu_(informatique)", "menus")}}, etc. à ces interfaces.
 
-<p>Une application typique accède aux fonctionnalités du presse-papiers en associant des {{interwiki("wikipedia", "Entr%C3%A9es-sorties", "entrées utilisateur")}} telles que des {{interwiki("wikipedia", "Raccourci_clavier", "raccourcis clavier")}}, des éléments de {{interwiki("wikipedia", "Menu_(informatique)", "menus")}}, etc. à ces interfaces.</p>
-</div>
+L’interface **`Clipboard`** implémente l’[API clipboard](/en-US/docs/Web/API/Clipboard_API), qui fournit — si l’utilisateur ou l’utilisatrice accorde sa permission — un accès en lecture et en écriture au contenu du presse-papiers du système. L’API clipboard peut être utilisée pour implémenter les fonctionnalités couper, copier et coller dans une application web.
 
-<p>L’interface <strong><code>Clipboard</code></strong> implémente l’<a href="/en-US/docs/Web/API/Clipboard_API">API clipboard</a>, qui fournit — si l’utilisateur ou l’utilisatrice accorde sa permission — un accès en lecture et en écriture au contenu du presse-papiers du système. L’API clipboard peut être utilisée pour implémenter les fonctionnalités couper, copier et coller dans une application web.</p>
+Le presse-papiers du système est exposé via la propriété globale {{domxref("Navigator.clipboard")}}.
 
-<p>Le presse-papiers du système est exposé via la propriété globale {{domxref("Navigator.clipboard")}}.</p>
+Les appels aux méthodes de l’objet `Clipboard` échoueront si l’utilisateur ou l’utilisatrice n’a pas accordé les permissions requises en utilisant l’[API permissions](/docs/Web/API/Permissions_API), et la permission `"clipboard-read"` ou `"clipboard-write"` selon le besoin.
 
-<p>Les appels aux méthodes de l’objet <code>Clipboard</code> échoueront si l’utilisateur ou l’utilisatrice n’a pas accordé les permissions requises en utilisant l’<a href="/docs/Web/API/Permissions_API">API permissions</a>, et la permission <code>"clipboard-read"</code> ou <code>"clipboard-write"</code> selon le besoin.</p>
+> **Note :** En réalité, actuellement, les prérequis des navigateurs pour accéder au presse-papiers varient significativement. Veuillez consulter la section {{anch("Clipboard availability")}} pour plus de détails.
 
-<div class="note">
-<p><strong>Note :</strong> En réalité, actuellement, les prérequis des navigateurs pour accéder au presse-papiers varient significativement. Veuillez consulter la section {{anch("Clipboard availability")}} pour plus de détails.</p>
-</div>
+Toutes les méthodes de l’API clipboard fonctionnent de manière asynchrone ; elles renvoient une {{jsxref("Promise")}} qui est résolue une fois que l’accès au presse-papiers a réussi. La promesse est rejetée si l’accès au presse-papiers est refusé.
 
-<p>Toutes les méthodes de l’API clipboard fonctionnent de manière asynchrone ; elles renvoient une {{jsxref("Promise")}} qui est résolue une fois que l’accès au presse-papiers a réussi. La promesse est rejetée si l’accès au presse-papiers est refusé.</p>
+## Méthodes
 
-<h2 id="Méthodes">Méthodes</h2>
+_`Clipboard` est basé sur l’interface {{domxref("EventTarget")}}, et inclut les méthodes de celle-ci._
 
-<p><em><code>Clipboard</code> est basé sur l’interface {{domxref("EventTarget")}}, et inclut les méthodes de celle-ci.</em></p>
+- {{domxref("Clipboard.read()","read()")}}
+  - : Demande des données arbitraires (telles que des images) depuis le presse-papiers, et renvoie une {{jsxref("Promise")}}. Quand les données ont été obtenues, la promesse est résolue avec un objet {{domxref("DataTransfer")}} qui fournit les données.
+- {{domxref("Clipboard.readText()","readText()")}}
+  - : Demande du texte depuis le presse-papiers du système ; renvoie une `Promise` qui est résolue avec une {{domxref("DOMString")}} contenant le texte du presse-papiers une fois disponible.
+- {{domxref("Clipboard.write()","write()")}}
+  - : Écrit des données arbitraires dans le presse-papiers du système. Cette opération asynchrone signale quand elle a terminé en résolvant la `Promise` renvoyée.
+- {{domxref("Clipboard.writeText()","writeText()")}}
+  - : Écrit du texte dans le presse-papiers du système, renvoyant une `Promise` qui est résolue une fois que le texte est entièrement copié dans le presse-papiers.
 
-<dl>
- <dt>{{domxref("Clipboard.read()","read()")}}</dt>
- <dd>Demande des données arbitraires (telles que des images) depuis le presse-papiers, et renvoie une {{jsxref("Promise")}}. Quand les données ont été obtenues, la promesse est résolue avec un objet {{domxref("DataTransfer")}} qui fournit les données.</dd>
- <dt>{{domxref("Clipboard.readText()","readText()")}}</dt>
- <dd>Demande du texte depuis le presse-papiers du système ; renvoie une <code>Promise</code> qui est résolue avec une {{domxref("DOMString")}} contenant le texte du presse-papiers une fois disponible.</dd>
- <dt>{{domxref("Clipboard.write()","write()")}}</dt>
- <dd>Écrit des données arbitraires dans le presse-papiers du système. Cette opération asynchrone signale quand elle a terminé en résolvant la <code>Promise</code> renvoyée.</dd>
- <dt>{{domxref("Clipboard.writeText()","writeText()")}}</dt>
- <dd>Écrit du texte dans le presse-papiers du système, renvoyant une <code>Promise</code> qui est résolue une fois que le texte est entièrement copié dans le presse-papiers.</dd>
-</dl>
+## Disponibilité du presse-papiers
 
-<h2 id="Disponibilité_du_presse-papiers">Disponibilité du presse-papiers</h2>
+L’API clipboard asynchrone est une addition relativement récente, et son processus de mise en œuvre dans les navigateurs n’est pas encore terminé. En raison de questions de sécurité et de complexités techniques, l’intégration de cette API se fait progressivement dans la plupart des navigateurs.
 
-<p>L’API clipboard asynchrone est une addition relativement récente, et son processus de mise en œuvre dans les navigateurs n’est pas encore terminé. En raison de questions de sécurité et de complexités techniques, l’intégration de cette API se fait progressivement dans la plupart des navigateurs.</p>
+Par exemple, Firefox ne supporte pas encore les permissions `"clipboard-read"` et `"clipboard-write"`, et l’accès aux méthodes pour lire et modifier le contenu du presse-papiers sont restreintes d’autres façons.
 
-<p>Par exemple, Firefox ne supporte pas encore les permissions <code>"clipboard-read"</code> et <code>"clipboard-write"</code>, et l’accès aux méthodes pour lire et modifier le contenu du presse-papiers sont restreintes d’autres façons.</p>
+Pour les WebExtensions, vous pouvez demander les permissions `"clipboardRead"` et `"clipboardWrite"` afin de pouvoir utiliser `clipboard.readText()` et `clipboard.writeText()`. Les {{Glossary("Content Script", "scripts de contenu")}} appliqués à des sites HTTP n’ont pas accès à l’objet `Clipboard`. Voir [extensions in Firefox 63](https://blog.mozilla.org/addons/2018/08/31/extensions-in-firefox-63/).
 
-<p>Pour les WebExtensions, vous pouvez demander les permissions <code>"clipboardRead"</code> et <code>"clipboardWrite"</code> afin de pouvoir utiliser <code>clipboard.readText()</code> et <code>clipboard.writeText()</code>. Les {{Glossary("Content Script", "scripts de contenu")}} appliqués à des sites HTTP n’ont pas accès à l’objet <code>Clipboard</code>. Voir <a href="https://blog.mozilla.org/addons/2018/08/31/extensions-in-firefox-63/">extensions in Firefox 63</a>.</p>
+De plus, {{domxref("Clipboard.read", "read()")}} et {{domxref("Clipboard.write", "write()")}} sont désactivées par défaut et requièrent de changer une préférence pour les activer. Consultez les tables de compatibilité de chaque méthode avant de les utiliser.
 
-<p>De plus, {{domxref("Clipboard.read", "read()")}} et {{domxref("Clipboard.write", "write()")}} sont désactivées par défaut et requièrent de changer une préférence pour les activer. Consultez les tables de compatibilité de chaque méthode avant de les utiliser.</p>
+## Spécifications
 
-<h2 id="Spécifications">Spécifications</h2>
+| Spécification                                                                        | Statut                               | Commentaire          |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('Clipboard API','#clipboard-interface','Clipboard')}} | {{Spec2('Clipboard API')}} | Définition initiale. |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Clipboard API','#clipboard-interface','Clipboard')}}</td>
-   <td>{{Spec2('Clipboard API')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilité des navigateurs
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p>{{Compat("api.Clipboard")}}</p>
+{{Compat("api.Clipboard")}}

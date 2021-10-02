@@ -14,44 +14,29 @@ tags:
   - loadEventStart
 translation_of: Web/API/PerformanceTiming/loadEventStart
 ---
-<p>{{APIRef("Navigation Timing")}}</p>
+{{APIRef("Navigation Timing")}}
 
-<div class="warning">
-  <p><strong>Attention :</strong> Cette interface est dépréciée dans la spécification <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2</a>. Veuillez utiliser la propriété <a href="/fr/docs/Web/API/PerformanceNavigationTiming/loadEventStart"><code>PerformanceNavigationTiming.loadEventStart</code></a> de l'interface <a href="/fr/docs/Web/API/PerformanceNavigationTiming"><code>PerformanceNavigationTiming</code></a> à la place.</p>
-</div>
+> **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.loadEventStart`](/fr/docs/Web/API/PerformanceNavigationTiming/loadEventStart) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
 
-<p>L'ancienne propriété en lecture seule <code><strong>loadEventStart</code></strong> retourne un <code>unsigned long long</code> représentant le moment, en millisecondes depuis l'époque UNIX, où l'événement <a href="/fr/docs/Web/API/Document/load_event"><code>load</code></a> a été envoyé pour le document actuel. Si cet événement n'a pas encore été envoyé, il retourne <code>0</code>.</p>
+L'ancienne propriété en lecture seule **`loadEventStart`** retourne un `unsigned long long` représentant le moment, en millisecondes depuis l'époque UNIX, où l'événement [`load`](/fr/docs/Web/API/Document/load_event) a été envoyé pour le document actuel. Si cet événement n'a pas encore été envoyé, il retourne `0`.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">let <var>time</var> = <var>performanceTiming</var>.loadEventStart;</pre>
+```js
+let time = performanceTiming.loadEventStart;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Navigation Timing', '#dom-performancetiming-loadeventstart',
-        'PerformanceTiming.loadEventStart')}}</td>
-      <td>{{Spec2('Navigation Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                                | Statut                                   | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
+| {{SpecName('Navigation Timing', '#dom-performancetiming-loadeventstart',
+        'PerformanceTiming.loadEventStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceTiming.loadEventStart")}}</p>
+{{Compat("api.PerformanceTiming.loadEventStart")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>L'interface <a href="/fr/docs/Web/API/PerformanceTiming"><code>PerformanceTiming</code></a> à laquelle elle appartient.</li>
-</ul>
+- L'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) à laquelle elle appartient.

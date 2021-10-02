@@ -10,99 +10,52 @@ tags:
   - Position
 translation_of: Web/API/Node/compareDocumentPosition
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>La méthode <code><strong>Node.compareDocumentPosition()</strong></code>compare la position du noeud courant par rapport à un autre noeud dans tout autre document.</p>
+La méthode **`Node.compareDocumentPosition()`**compare la position du noeud courant par rapport à un autre noeud dans tout autre document.
 
-<p>La valeur retournée est un masque de bits avec les valeurs suivantes :</p>
+La valeur retournée est un masque de bits avec les valeurs suivantes :
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Nom</th>
-   <th scope="col">Valeur</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>DOCUMENT_POSITION_DISCONNECTED</code></td>
-   <td>1</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_PRECEDING</code></td>
-   <td>2</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_FOLLOWING</code></td>
-   <td>4</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_CONTAINS</code></td>
-   <td>8</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_CONTAINED_BY</code></td>
-   <td>16</td>
-  </tr>
-  <tr>
-   <td><code>DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC</code></td>
-   <td>32</td>
-  </tr>
- </tbody>
-</table>
+| Nom                                         | Valeur |
+| ------------------------------------------- | ------ |
+| `DOCUMENT_POSITION_DISCONNECTED`            | 1      |
+| `DOCUMENT_POSITION_PRECEDING`               | 2      |
+| `DOCUMENT_POSITION_FOLLOWING`               | 4      |
+| `DOCUMENT_POSITION_CONTAINS`                | 8      |
+| `DOCUMENT_POSITION_CONTAINED_BY`            | 16     |
+| `DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC` | 32     |
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>node</em>.compareDocumentPosition( <em>otherNode</em> )
-</pre>
+    node.compareDocumentPosition( otherNode )
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">var head = document.getElementsByTagName('head').item(0);
+```js
+var head = document.getElementsByTagName('head').item(0);
 
-if (head.compareDocumentPosition(document.body) &amp; Node.DOCUMENT_POSITION_FOLLOWING) {
+if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWING) {
   console.log("well-formed document");
 } else {
-  console.log("&lt;head&gt; is not before &lt;body&gt;");
+  console.log("<head> is not before <body>");
 }
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong> Parce que le résultat renvoyé par<em> </em><code>compareDocumentPosition</code> est un masque de bits, des <a href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_binaires">opérateurs binaires</a> doivent être utilisés pour des résultats significatifs.</p>
-</div>
+> **Note :** Parce que le résultat renvoyé par\* \*`compareDocumentPosition` est un masque de bits, des [opérateurs binaires](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_binaires) doivent être utilisés pour des résultats significatifs.
 
-<div class="note">
-<p><strong>Note :</strong> La première instruction utilise l' <code>item(0)</code> de la méthode <a href="/en-US/docs/Web/API/NodeList/item">NodeList</a> , qui est l'équivalent de <code>getElementsByTagName('head')[0].</code></p>
-</div>
+> **Note :** La première instruction utilise l' `item(0)` de la méthode [NodeList](/en-US/docs/Web/API/NodeList/item) , qui est l'équivalent de `getElementsByTagName('head')[0].`
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-node-comparedocumentposition','Node.compareDocumentPosition()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core','core.html#Node3-compareDocumentPosition','Node.compareDocumentPosition()')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                        | Statut                           | Commentaire         |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('DOM WHATWG','#dom-node-comparedocumentposition','Node.compareDocumentPosition()')}}     | {{Spec2('DOM WHATWG')}} |                     |
+| {{SpecName('DOM3 Core','core.html#Node3-compareDocumentPosition','Node.compareDocumentPosition()')}} | {{Spec2('DOM3 Core')}}     | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Node.compareDocumentPosition")}}</p>
+{{Compat("api.Node.compareDocumentPosition")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><code><a href="/fr/docs/Web/API/Node/contains">Node.contains</a></code></li>
-</ul>
+- [`Node.contains`](/fr/docs/Web/API/Node/contains)

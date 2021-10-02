@@ -10,118 +10,112 @@ tags:
   - Interface
 translation_of: Web/API/HTMLFormElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>L'interface <strong><code>HTMLFormElement</code></strong> représente un élément  {{HTMLElement("form")}} dans le DOM ; il peut être utilisé pour accéder et, dans quelques cas, modifier l'aspect du formulaire, ainsi que pour accéder à ses éléments composants.</p>
+L'interface **`HTMLFormElement`** représente un élément  {{HTMLElement("form")}} dans le DOM ; il peut être utilisé pour accéder et, dans quelques cas, modifier l'aspect du formulaire, ainsi que pour accéder à ses éléments composants.
 
-<p>{{InheritanceDiagram(600,120)}}</p>
+{{InheritanceDiagram(600,120)}}
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Cette interface hérite aussi des propriétés de son parent {{domxref("HTMLElement")}}.</em></p>
+_Cette interface hérite aussi des propriétés de son parent {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLFormElement.elements")}}{{ReadOnlyInline}}</dt>
- <dd>Un élément {{domxref("HTMLFormControlsCollection")}} regroupant les différents contrôles associés à ce formulaire.</dd>
- <dt>{{domxref("HTMLFormElement.length")}}{{ReadOnlyInline}}</dt>
- <dd>Une valeur de type <code>long</code> indiquant le nombre de contrôles dans le formulaire.</dd>
- <dt>{{domxref("HTMLFormElement.name")}}</dt>
- <dd>Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("name", "form")}} pour ce formulaire et qui correspond au nom du formulaire.</dd>
- <dt>{{domxref("HTMLFormElement.method")}}</dt>
- <dd>Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("method", "form")}} pour ce formulaire et qui correspond à la méthode HTTP utilisée pour envoyer le formulaires. Seules certaines valeurs peuvent être utilisées avec cette propriété.</dd>
- <dt>{{domxref("HTMLFormElement.target")}}</dt>
- <dd>Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("target", "form")}} pour ce formulaire et qui indique l'emplacement où seront affichées les résultats après envoi du formulaire.</dd>
- <dt>{{domxref("HTMLFormElement.action")}}</dt>
- <dd>Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("action", "form")}} pour ce formulaire et qui contient l'URI d'un programme traitant les informations transmises via le formulaire.</dd>
- <dt>{{domxref("HTMLFormElement.encoding")}} ou {{domxref("HTMLFormElement.enctype")}}</dt>
- <dd>Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("enctype", "form")}} pour ce formulaire et qui correspond au type de contenu utilisé pour transmettre les données du formulaire vers le serveur. Seules certaines valeurs peuvent être utilisées pour cette propriété. Les deux noms indiqués pour la méthode sont synonymes.</dd>
- <dt>{{domxref("HTMLFormElement.acceptCharset")}}</dt>
- <dd>Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("accept-charset", "form")}} pour ce formulaire et qui correspond au jeu de caractères / à l'encodage pris en charge par le serveur.</dd>
- <dt>{{domxref("HTMLFormElement.autocomplete")}}</dt>
- <dd>Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("autocomplete", "form")}} pour ce formulaire et qui indique si les contrôles du formulaire sont automatiquement renseignés par le navigateur.</dd>
- <dt>{{domxref("HTMLFormElement.noValidate")}}</dt>
- <dd>Un booléen indiquant la valeur de l'attribut HTML {{htmlattrxref("novalidate", "form")}} pour ce formulaire et qui indique si le formulaire ne devrait pas être validé.</dd>
-</dl>
+- {{domxref("HTMLFormElement.elements")}}{{ReadOnlyInline}}
+  - : Un élément {{domxref("HTMLFormControlsCollection")}} regroupant les différents contrôles associés à ce formulaire.
+- {{domxref("HTMLFormElement.length")}}{{ReadOnlyInline}}
+  - : Une valeur de type `long` indiquant le nombre de contrôles dans le formulaire.
+- {{domxref("HTMLFormElement.name")}}
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("name", "form")}} pour ce formulaire et qui correspond au nom du formulaire.
+- {{domxref("HTMLFormElement.method")}}
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("method", "form")}} pour ce formulaire et qui correspond à la méthode HTTP utilisée pour envoyer le formulaires. Seules certaines valeurs peuvent être utilisées avec cette propriété.
+- {{domxref("HTMLFormElement.target")}}
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("target", "form")}} pour ce formulaire et qui indique l'emplacement où seront affichées les résultats après envoi du formulaire.
+- {{domxref("HTMLFormElement.action")}}
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("action", "form")}} pour ce formulaire et qui contient l'URI d'un programme traitant les informations transmises via le formulaire.
+- {{domxref("HTMLFormElement.encoding")}} ou {{domxref("HTMLFormElement.enctype")}}
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("enctype", "form")}} pour ce formulaire et qui correspond au type de contenu utilisé pour transmettre les données du formulaire vers le serveur. Seules certaines valeurs peuvent être utilisées pour cette propriété. Les deux noms indiqués pour la méthode sont synonymes.
+- {{domxref("HTMLFormElement.acceptCharset")}}
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("accept-charset", "form")}} pour ce formulaire et qui correspond au jeu de caractères / à l'encodage pris en charge par le serveur.
+- {{domxref("HTMLFormElement.autocomplete")}}
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML {{htmlattrxref("autocomplete", "form")}} pour ce formulaire et qui indique si les contrôles du formulaire sont automatiquement renseignés par le navigateur.
+- {{domxref("HTMLFormElement.noValidate")}}
+  - : Un booléen indiquant la valeur de l'attribut HTML {{htmlattrxref("novalidate", "form")}} pour ce formulaire et qui indique si le formulaire ne devrait pas être validé.
 
-<p>Les champs de saisie nommés sont ajoutés comme propriétés sur leurs formulaires associés. Ces propriétés peuvent surcharger les propriétés natives si elles utilisent le même nom ! Par exemple, un formulaire disposant d'un {{HTMLElement("&lt;input&gt;")}} nommé <code>action</code> surchargera la propriété native <code>action</code> et tout appel renverra le champ <code>input</code> plutôt que la valeur de l'attribut HTML {{htmlattrxref("action", "form")}}.</p>
+Les champs de saisie nommés sont ajoutés comme propriétés sur leurs formulaires associés. Ces propriétés peuvent surcharger les propriétés natives si elles utilisent le même nom ! Par exemple, un formulaire disposant d'un {{HTMLElement("&lt;input&gt;")}} nommé `action` surchargera la propriété native `action` et tout appel renverra le champ `input` plutôt que la valeur de l'attribut HTML {{htmlattrxref("action", "form")}}.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Cette interface hérite aussi des méthodes de son parent {{domxref("HTMLElement")}}.</em></p>
+_Cette interface hérite aussi des méthodes de son parent {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLFormElement.submit()")}}</dt>
- <dd>soumet le formulaire au serveur.</dd>
- <dt>{{domxref("HTMLFormElement.reset()")}}</dt>
- <dd>redéfinit le formulaire à son état initial.</dd>
- <dt>{{domxref("HTMLFormElement.checkValidity()")}}</dt>
- <dd>renvoie <code>true</code> si les contrôles du formulaire sont soumis à des contraintes de validation et les respectent. Elle renvoie <code>false</code> si certains contrôles ne respectent pas leurs contraintes. Elle déclenche un évènement {{event("invalid")}} pour chaque contrôle qui ne respecte pas ses contraintes. De tels contrôles sont considérés invalides si l'évènement n'est pas annulé. C'est au développeur de choisir comment réagir face à la valeur <code>false</code> produite par cette méthode.</dd>
- <dt>{{domxref("HTMLFormElement.reportValidity()")}}</dt>
- <dd>renvoie <code>true</code> si les contrôles du formulaire respectent leurs contraintes de validation. Lorsque <code>false</code> est renvoyé, des évènements annulables {{Event("invalid")}} sont déclenchés pour chaque contrôle invalide et les problèmes de validation sont rapportés à l'utilisateur.</dd>
- <dt>{{domxref("HTMLFormElement.requestAutocomplete()")}} {{obsolete_inline}}</dt>
- <dd>déclenche une interface native du navigateur afin d'aider les utilisateurs à remplir les champs pour lesquels <a href="https://html.spec.whatwg.org/#autofill-field-name">la valeur nommée du champ à remplissage automatique</a> ne vaut pas <code>off</code> ou <code>on</code>. Le formulaire reçoit un évènement lorsque l'utilisateur a fini d'intéragir avec l'interface, l'événement sera {{event("autocomplete")}} si les champs ont bien été remplis ou {{event("autocompleteerror")}} s'il y a eu un problème. <strong>Cette méthode a été retirée de Chrome et Firefox — cf. {{bug(1270740)}} pour plus d'informations et les raisons associées.</strong></dd>
-</dl>
+- {{domxref("HTMLFormElement.submit()")}}
+  - : soumet le formulaire au serveur.
+- {{domxref("HTMLFormElement.reset()")}}
+  - : redéfinit le formulaire à son état initial.
+- {{domxref("HTMLFormElement.checkValidity()")}}
+  - : renvoie `true` si les contrôles du formulaire sont soumis à des contraintes de validation et les respectent. Elle renvoie `false` si certains contrôles ne respectent pas leurs contraintes. Elle déclenche un évènement {{event("invalid")}} pour chaque contrôle qui ne respecte pas ses contraintes. De tels contrôles sont considérés invalides si l'évènement n'est pas annulé. C'est au développeur de choisir comment réagir face à la valeur `false` produite par cette méthode.
+- {{domxref("HTMLFormElement.reportValidity()")}}
+  - : renvoie `true` si les contrôles du formulaire respectent leurs contraintes de validation. Lorsque `false` est renvoyé, des évènements annulables {{Event("invalid")}} sont déclenchés pour chaque contrôle invalide et les problèmes de validation sont rapportés à l'utilisateur.
+- {{domxref("HTMLFormElement.requestAutocomplete()")}} {{obsolete_inline}}
+  - : déclenche une interface native du navigateur afin d'aider les utilisateurs à remplir les champs pour lesquels [la valeur nommée du champ à remplissage automatique](https://html.spec.whatwg.org/#autofill-field-name) ne vaut pas `off` ou `on`. Le formulaire reçoit un évènement lorsque l'utilisateur a fini d'intéragir avec l'interface, l'événement sera {{event("autocomplete")}} si les champs ont bien été remplis ou {{event("autocompleteerror")}} s'il y a eu un problème. **Cette méthode a été retirée de Chrome et Firefox — cf. {{bug(1270740)}} pour plus d'informations et les raisons associées.**
 
-<h2 id="Notes_d'utilisation">Notes d'utilisation</h2>
+## Notes d'utilisation
 
-<h3 id="Obtention_d'un_objet_élément_de_formulaire">Obtention d'un objet élément de formulaire</h3>
+### Obtention d'un objet élément de formulaire
 
-<p>Pour obtenir un objet <code>HTMLFormElement</code>, vous pouvez utiliser un <a href="/fr/docs/Web/CSS/S%C3%A9lecteurs_CSS">sélecteur CSS</a> avec {{domxref("ParentNode.querySelector", "querySelector()")}}  ou vous pouvez obtenir une liste de tous les formulaires du document utilisant sa propriété {{domxref("Document.forms", "forms")}}.</p>
+Pour obtenir un objet `HTMLFormElement`, vous pouvez utiliser un [sélecteur CSS](/fr/docs/Web/CSS/S%C3%A9lecteurs_CSS) avec {{domxref("ParentNode.querySelector", "querySelector()")}}  ou vous pouvez obtenir une liste de tous les formulaires du document utilisant sa propriété {{domxref("Document.forms", "forms")}}.
 
-<p>{{domxref("Document.forms")}} renvoie un tableau des objets <code>HTMLFormElement</code> listant chacun des formulaires de la page. Vous pouvez utiliser alors l'une des syntaxes suivantes pour obtenir un formulaire individuel :</p>
+{{domxref("Document.forms")}} renvoie un tableau des objets `HTMLFormElement` listant chacun des formulaires de la page. Vous pouvez utiliser alors l'une des syntaxes suivantes pour obtenir un formulaire individuel :
 
-<dl>
- <dt><code>document.forms[<em>index</em>]</code></dt>
- <dd>renvoie le formulaire à l'<code>index</code> spécifié dans le tableau du formulaire.</dd>
- <dt><code>document.forms[<em>id</em>]</code></dt>
- <dd>renvoie le formulaire dont l'ID (<em>identifiant</em>) est <code>id</code> .</dd>
- <dt><code>document.forms[<em>name</em>]</code></dt>
- <dd>renvoie le formulaire dont la valeur d'attribut de {{domxref("Element.name", "name")}} est <code>name</code>.</dd>
-</dl>
+- `document.forms[index]`
+  - : renvoie le formulaire à l'`index` spécifié dans le tableau du formulaire.
+- `document.forms[id]`
+  - : renvoie le formulaire dont l'ID (_identifiant_) est `id` .
+- `document.forms[name]`
+  - : renvoie le formulaire dont la valeur d'attribut de {{domxref("Element.name", "name")}} est `name`.
 
-<h3 id="Accès_aux_éléments_du_formulaire">Accès aux éléments du formulaire</h3>
+### Accès aux éléments du formulaire
 
-<p>Vous pouvez accéder à la liste des éléments contenant des données dans le formulaire en examinant la propriété {{domxref ("HTMLFormElement.elements", "elements")}}. Ceci retourne une {{domxref ("HTMLFormControlsCollection")}} listant tous les éléments d'entrée de données utilisateur du formulaire, aussi bien ceux qui sont des descendants du <code>&lt;form&gt;</code> que ceux déclarés membres du formulaire par leurs attributs.</p>
+Vous pouvez accéder à la liste des éléments contenant des données dans le formulaire en examinant la propriété {{domxref ("HTMLFormElement.elements", "elements")}}. Ceci retourne une {{domxref ("HTMLFormControlsCollection")}} listant tous les éléments d'entrée de données utilisateur du formulaire, aussi bien ceux qui sont des descendants du `<form>` que ceux déclarés membres du formulaire par leurs attributs.
 
-<h3 id="Éléments_considérés_comme_des_contrôles_de_formulaire">Éléments considérés comme des contrôles de formulaire</h3>
+### Éléments considérés comme des contrôles de formulaire
 
-<p>Les éléments qui sont inclus par <code>HTMLFormElement.elements</code> et  <code>HTMLFormElement.length</code> sont :</p>
+Les éléments qui sont inclus par `HTMLFormElement.elements` et  `HTMLFormElement.length` sont :
 
-<ul>
- <li>{{HTMLElement("button")}} (<em>bouton</em>)</li>
- <li>{{HTMLElement("fieldset")}} (<em>champ</em>s)</li>
- <li>{{HTMLElement("input")}} (<em>entrée</em>) (à l'exception de ceux dont {{htmlattrxref("type", "input")}} est <code>"image"</code> omis pour des raisons historiques)</li>
- <li>{{HTMLElement("object")}} (<em>objet</em>)</li>
- <li>{{HTMLElement("output")}} (<em>sortie</em>)</li>
- <li>{{HTMLElement("select")}} (<em>sélection</em>)</li>
- <li>{{HTMLElement("textarea")}} (<em>zone de texte</em>)</li>
-</ul>
+- {{HTMLElement("button")}} (_bouton_)
+- {{HTMLElement("fieldset")}} (*champ*s)
+- {{HTMLElement("input")}} (_entrée_) (à l'exception de ceux dont {{htmlattrxref("type", "input")}} est `"image"` omis pour des raisons historiques)
+- {{HTMLElement("object")}} (_objet_)
+- {{HTMLElement("output")}} (_sortie_)
+- {{HTMLElement("select")}} (_sélection_)
+- {{HTMLElement("textarea")}} (_zone de texte_)
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Crée un nouvel élément de formulaire, modifie ses attributs et l'envoie :</p>
+Crée un nouvel élément de formulaire, modifie ses attributs et l'envoie :
 
-<pre class="brush: js">var f = document.createElement("form"); // On crée un formulaire
+```js
+var f = document.createElement("form"); // On crée un formulaire
 document.body.appendChild(f);           // On l'ajoute au corps du document
 f.action = "/cgi-bin/some.cgi";         // On y ajoute des attributs action et method
 f.method = "POST"
 f.submit();                             // On appelle la méhtode submit pour l'envoyer
-</pre>
+```
 
-<p>Extrait des informations d'un élément de formulaire et définit quelques uns de ses attributs :</p>
+Extrait des informations d'un élément de formulaire et définit quelques uns de ses attributs :
 
-<pre class="brush: html">&lt;form name="formA" action="/cgi-bin/test" method="post"&gt;
- &lt;p&gt;Appuyez sur "Info" pour les détails du formulaire, ou "Définir" pour modifier ces détails.&lt;/p&gt;
- &lt;p&gt;
-  &lt;button type="button" onclick="getFormInfo();"&gt;Info&lt;/button&gt;
-  &lt;button type="button" onclick="setFormInfo(this.form);"&gt;Set&lt;/button&gt;
-  &lt;button type="reset"&gt;Reset&lt;/button&gt;
- &lt;/p&gt;
+```html
+<form name="formA" action="/cgi-bin/test" method="post">
+ <p>Appuyez sur "Info" pour les détails du formulaire, ou "Définir" pour modifier ces détails.</p>
+ <p>
+  <button type="button" onclick="getFormInfo();">Info</button>
+  <button type="button" onclick="setFormInfo(this.form);">Set</button>
+  <button type="reset">Reset</button>
+ </p>
 
- &lt;textarea id="form-info" rows="15" cols="20"&gt;&lt;/textarea&gt;
-&lt;/form&gt;
+ <textarea id="form-info" rows="15" cols="20"></textarea>
+</form>
 
-&lt;script&gt;
+<script>
   function getFormInfo(){
     // Obtenir une référence au formulaire par son nom
     var f = document.forms["formA"];
@@ -130,7 +124,7 @@ f.submit();                             // On appelle la méhtode submit pour l'
     // Itérer sur les propriétés en les transformant en une chaîne que nous pouvons afficher à l'utilisateur
     var info = properties.reduce(function(property) { return property + ": " + f[property] }, "").join("\n");
 
-    // Définir les &lt;textarea&gt; du formulaire pour en afficher les propriétés
+    // Définir les <textarea> du formulaire pour en afficher les propriétés
     document.forms["formA"].elements['form-info'].value = info;
   }
 
@@ -138,86 +132,62 @@ f.submit();                             // On appelle la méhtode submit pour l'
     f.action = "a-different-url.cgi";
     f.name   = "a-different-name";
   }
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>Envoi d'un formulaire dans une nouvelle fenêtre :</p>
+Envoi d'un formulaire dans une nouvelle fenêtre :
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset="utf-8"&gt;
-&lt;title&gt;Example new-window form submission&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
+```html
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Example new-window form submission</title>
+</head>
+<body>
 
-&lt;form action="test.php" target="_blank"&gt;
-  &lt;p&gt;&lt;label&gt;First name: &lt;input type="text" name="firstname"&gt;&lt;/label&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;label&gt;Last name: &lt;input type="text" name="lastname"&gt;&lt;/label&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;label&gt;&lt;input type="password" name="pwd"&gt;&lt;/label&gt;&lt;/p&gt;
+<form action="test.php" target="_blank">
+  <p><label>First name: <input type="text" name="firstname"></label></p>
+  <p><label>Last name: <input type="text" name="lastname"></label></p>
+  <p><label><input type="password" name="pwd"></label></p>
 
-  &lt;fieldset&gt;
-   &lt;legend&gt;Pet preference&lt;/legend&gt;
-    &lt;p&gt;&lt;label&gt;&lt;input type="radio" name="pet" value="cat"&gt; Cat&lt;/label&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;label&gt;&lt;input type="radio" name="pet" value="dog"&gt; Dog&lt;/label&gt;&lt;/p&gt;
-  &lt;/fieldset&gt;
+  <fieldset>
+   <legend>Pet preference</legend>
+    <p><label><input type="radio" name="pet" value="cat"> Cat</label></p>
+    <p><label><input type="radio" name="pet" value="dog"> Dog</label></p>
+  </fieldset>
 
-  &lt;fieldset&gt;
-    &lt;legend&gt;Owned vehicles&lt;/legend&gt;
+  <fieldset>
+    <legend>Owned vehicles</legend>
 
-    &lt;p&gt;&lt;label&gt;&lt;input type="checkbox" name="vehicle" value="Bike"&gt;I have a bike&lt;/label&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;label&gt;&lt;input type="checkbox" name="vehicle" value="Car"&gt;I have a car&lt;/label&gt;&lt;/p&gt;
-  &lt;/fieldset&gt;
+    <p><label><input type="checkbox" name="vehicle" value="Bike">I have a bike</label></p>
+    <p><label><input type="checkbox" name="vehicle" value="Car">I have a car</label></p>
+  </fieldset>
 
-  &lt;p&gt;&lt;button&gt;Submit&lt;/button&gt;&lt;/p&gt;
-&lt;/form&gt;
+  <p><button>Submit</button></p>
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</body>
+</html>
+```
 
-<h3 id="Envoi_de_formulaires_et_téléchargement_de_fichiers_en_utilisant_XMLHttpRequest">Envoi de formulaires et téléchargement de fichiers en utilisant <code>XMLHttpRequest</code></h3>
+### Envoi de formulaires et téléchargement de fichiers en utilisant `XMLHttpRequest`
 
-<p>Vous pouvez consulter <a href="/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest#Submitting_forms_and_uploading_files">ce paragraphe</a> si vous souhaitez en savoir plus pour sérialiser et envoyer un formulaire grâce à l'API {{domxref("XMLHttpRequest")}}.</p>
+Vous pouvez consulter [ce paragraphe](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest#Submitting_forms_and_uploading_files) si vous souhaitez en savoir plus pour sérialiser et envoyer un formulaire grâce à l'API {{domxref("XMLHttpRequest")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "forms.html#the-form-element", "HTMLFormElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Ajout de la méthode <code>requestAutocomplete()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "forms.html#the-form-element", "HTMLFormElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Les propriétés de l'élément renvoient un élément {{domxref("HTMLFormControlsCollection")}} plutôt qu'un {{domxref("HTMLCollection")}} (changement principalement technique). Ajout de la méthode <code>checkValidity()</code>. Ajout des propriétés <code>autocomplete</code>, <code>noValidate</code> et <code>encoding</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-40002357', 'HTMLFormElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-40002357', 'HTMLFormElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                             | Commentaires                                                                                                                                                                                                                                                                                                   |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "forms.html#the-form-element", "HTMLFormElement")}} | {{Spec2('HTML WHATWG')}} | Ajout de la méthode `requestAutocomplete()`.                                                                                                                                                                                                                                                                   |
+| {{SpecName('HTML5 W3C', "forms.html#the-form-element", "HTMLFormElement")}}     | {{Spec2('HTML5 W3C')}}     | Les propriétés de l'élément renvoient un élément {{domxref("HTMLFormControlsCollection")}} plutôt qu'un {{domxref("HTMLCollection")}} (changement principalement technique). Ajout de la méthode `checkValidity()`. Ajout des propriétés `autocomplete`, `noValidate` et `encoding`. |
+| {{SpecName('DOM2 HTML', 'html.html#ID-40002357', 'HTMLFormElement')}}             | {{Spec2('DOM2 HTML')}}     | Aucune modification.                                                                                                                                                                                                                                                                                           |
+| {{SpecName('DOM1', 'level-one-html.html#ID-40002357', 'HTMLFormElement')}}     | {{Spec2('DOM1')}}         | Définition initiale.                                                                                                                                                                                                                                                                                           |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.HTMLFormElement")}}
 
+## Voir aussi
 
-<p>{{Compat("api.HTMLFormElement")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>L'élément HTML qui implémente cette interface {{HTMLElement("form")}}.</li>
-</ul>
+- L'élément HTML qui implémente cette interface {{HTMLElement("form")}}.

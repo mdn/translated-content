@@ -3,33 +3,34 @@ title: WebSocket.onerror
 slug: Web/API/WebSocket/onerror
 browser-compat: api.WebSocket.onerror
 ---
-<div>{{APIRef("Web Sockets API")}}</div>
+{{APIRef("Web Sockets API")}}
 
-<p>La propriété <code><strong>onerror</strong></code> de l'interface <a href="/fr/docs/Web/API/WebSocket"><code>WebSocket</code></a> est un gestionnaire d'évènement qui est appelé lorsqu'une erreur se produit sur la connexion WebSocket.</p>
+La propriété **`onerror`** de l'interface [`WebSocket`](/fr/docs/Web/API/WebSocket) est un gestionnaire d'évènement qui est appelé lorsqu'une erreur se produit sur la connexion WebSocket.
 
-<p>Il est également possible d'ajouter un gestionnaire d'évènement <code>error</code> avec la méthode <a href="/fr/docs/Web/API/EventTarget/addEventListener"><code>addEventListener()</code></a>.</p>
+Il est également possible d'ajouter un gestionnaire d'évènement `error` avec la méthode [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener).
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
+```js
 webSocket.onerror = eventHandler;
-</pre>
+```
 
-<h3 id="value">Valeur</h3>
+### Valeur
 
-<p>Une fonction ou un <a href="/fr/docs/Web/Events/Event_handlers">gestionnaire d'évènement</a> qui est exécuté lorsqu'un évènement <code>error</code> se produit sur la connexion WebSocket.</p>
+Une fonction ou un [gestionnaire d'évènement](/fr/docs/Web/Events/Event_handlers) qui est exécuté lorsqu'un évènement `error` se produit sur la connexion WebSocket.
 
-<h2 id="example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">
+```js
 webSocket.onerror = function(event) {
   console.error("Erreur WebSocket observée :", event);
-};</pre>
+};
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}

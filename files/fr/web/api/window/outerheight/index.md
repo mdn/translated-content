@@ -3,60 +3,44 @@ title: Window.outerHeight
 slug: Web/API/Window/outerHeight
 translation_of: Web/API/Window/outerHeight
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code>Window.outerHeight</code> retourne la hauteur de la fenêtre (du navigateur) en pixels. La hauteur retournée prends en compte la fenêtre du navigateur entier, y compris la barre latérale, window chrome and window resizing borders/handles.</p>
+`Window.outerHeight` retourne la hauteur de la fenêtre (du navigateur) en pixels. La hauteur retournée prends en compte la fenêtre du navigateur entier, y compris la barre latérale, window chrome and window resizing borders/handles.
 
-<p>Cette propriété n'a pas de valeur par défaut.</p>
+Cette propriété n'a pas de valeur par défaut.
 
-<p>Syntaxe</p>
+Syntaxe
 
-<pre class="syntaxbox"><var>outWindowHeight</var> = window.outerHeight;
-</pre>
+    outWindowHeight = window.outerHeight;
 
-<p>La valeur retournée correspond à la hauteur extérieure de la fenêtre.</p>
+La valeur retournée correspond à la hauteur extérieure de la fenêtre.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Pour changer la taille de la fenêtre, utilisez {{domxref("window.resizeBy()")}} et {{domxref("window.resizeTo()")}}.</p>
+Pour changer la taille de la fenêtre, utilisez {{domxref("window.resizeBy()")}} et {{domxref("window.resizeTo()")}}.
 
-<p>Pour obtenir la hauteur intérieure de la fenêtre (la hauteur de la page actuelle), utilisez {{domxref("window.innerHeight")}}.</p>
+Pour obtenir la hauteur intérieure de la fenêtre (la hauteur de la page actuelle), utilisez {{domxref("window.innerHeight")}}.
 
-<h3 id="Graphical_example">Exemple illustré</h3>
+### Exemple illustré
 
-<p>La figure suivante montre la différence entre <code>outerHeight</code> et <code>innerHeight</code>.</p>
+La figure suivante montre la différence entre `outerHeight` et `innerHeight`.
 
-<p><img alt="innerHeight vs outerHeight illustration" src="FirefoxInnerVsOuterHeight2.png"></p>
+![innerHeight vs outerHeight illustration](FirefoxInnerVsOuterHeight2.png)
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('CSSOM View', '#dom-window-outerheight', 'Window.outerHeight') }}</td>
-      <td>{{ Spec2('CSSOM View') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                            | Statut                           | Commentaire |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{ SpecName('CSSOM View', '#dom-window-outerheight', 'Window.outerHeight') }} | {{ Spec2('CSSOM View') }} |             |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.outerHeight")}}</p>
+{{Compat("api.Window.outerHeight")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("window.innerHeight")}}</li>
- <li>{{domxref("window.innerWidth")}}</li>
- <li>{{domxref("window.outerWidth")}}</li>
- <li>{{domxref("window.resizeBy()")}}</li>
- <li>{{domxref("window.resizeTo()")}}</li>
-</ul>
+- {{domxref("window.innerHeight")}}
+- {{domxref("window.innerWidth")}}
+- {{domxref("window.outerWidth")}}
+- {{domxref("window.resizeBy()")}}
+- {{domxref("window.resizeTo()")}}

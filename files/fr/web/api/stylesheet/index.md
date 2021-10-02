@@ -9,59 +9,38 @@ tags:
   - StyleSheet
 translation_of: Web/API/StyleSheet
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>Un objet qui implémente l'interface <code>StyleSheet</code> représente une seule feuille de style. Les feuilles de style CSS implémenteront également l'interface plus spécialisée {{domxref("CSSStyleSheet")}}.</p>
+Un objet qui implémente l'interface `StyleSheet` représente une seule feuille de style. Les feuilles de style CSS implémenteront également l'interface plus spécialisée {{domxref("CSSStyleSheet")}}.
 
-<h2 id="Properties">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{domxref("StyleSheet.disabled")}}</dt>
- <dd>Un booléen ({{domxref("Boolean")}}) indiquant si la feuille de style est appliquée ou non.</dd>
- <dt>{{domxref("StyleSheet.href")}} {{readonlyInline}}</dt>
- <dd>Une chaîne de caractères ({{domxref("DOMString")}}) représentant l'emplacement de la feuille de style.</dd>
- <dt>{{domxref("StyleSheet.media")}} {{readonlyInline}}</dt>
- <dd>Une {{domxref("MediaList")}} représentant le média de destination pour les informations de style.</dd>
- <dt>{{domxref("StyleSheet.ownerNode")}} {{readonlyInline}}</dt>
- <dd>Un objet {{domxref("Node")}} qui représente le nœud associant cette feuille de style avec le document courant.</dd>
- <dt>{{domxref("StyleSheet.parentStyleSheet")}} {{readonlyInline}}</dt>
- <dd>Un objet {{domxref("StyleSheet")}} qui inclut l'objet courant si ce dernier possède un parent ou <code>null</code> s'il n'y en a pas.</dd>
- <dt>{{domxref("StyleSheet.title")}} {{readonlyInline}}</dt>
- <dd>Une chaîne de caractères ({{domxref("DOMString")}}) indiquant le titre indicatif de la feuille de style courante.</dd>
- <dt>{{domxref("StyleSheet.type")}} {{readonlyInline}}</dt>
- <dd>Une chaîne de caractères {{domxref("DOMString")}} indiquant le langage de représentation pour cette feuille de style.</dd>
-</dl>
+- {{domxref("StyleSheet.disabled")}}
+  - : Un booléen ({{domxref("Boolean")}}) indiquant si la feuille de style est appliquée ou non.
+- {{domxref("StyleSheet.href")}} {{readonlyInline}}
+  - : Une chaîne de caractères ({{domxref("DOMString")}}) représentant l'emplacement de la feuille de style.
+- {{domxref("StyleSheet.media")}} {{readonlyInline}}
+  - : Une {{domxref("MediaList")}} représentant le média de destination pour les informations de style.
+- {{domxref("StyleSheet.ownerNode")}} {{readonlyInline}}
+  - : Un objet {{domxref("Node")}} qui représente le nœud associant cette feuille de style avec le document courant.
+- {{domxref("StyleSheet.parentStyleSheet")}} {{readonlyInline}}
+  - : Un objet {{domxref("StyleSheet")}} qui inclut l'objet courant si ce dernier possède un parent ou `null` s'il n'y en a pas.
+- {{domxref("StyleSheet.title")}} {{readonlyInline}}
+  - : Une chaîne de caractères ({{domxref("DOMString")}}) indiquant le titre indicatif de la feuille de style courante.
+- {{domxref("StyleSheet.type")}} {{readonlyInline}}
+  - : Une chaîne de caractères {{domxref("DOMString")}} indiquant le langage de représentation pour cette feuille de style.
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM', '#stylesheet', 'StyleSheet')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td>Pas de changement depuis {{SpecName('DOM2 Style')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'stylesheets.html#StyleSheets-StyleSheet', 'StyleSheet')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                             | Commentaire                                                    |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------- |
+| {{SpecName('CSSOM', '#stylesheet', 'StyleSheet')}}                                             | {{Spec2('CSSOM')}}         | Pas de changement depuis {{SpecName('DOM2 Style')}}. |
+| {{SpecName('DOM2 Style', 'stylesheets.html#StyleSheets-StyleSheet', 'StyleSheet')}} | {{Spec2('DOM2 Style')}} | Définition initiale.                                           |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.StyleSheet")}}</p>
+{{Compat("api.StyleSheet")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("CSSStyleSheet")}}</li>
-</ul>
+- {{domxref("CSSStyleSheet")}}

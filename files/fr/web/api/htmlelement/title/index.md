@@ -9,66 +9,40 @@ tags:
   - Reference
 translation_of: Web/API/HTMLElement/title
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>La propriété <strong><code>HTMLElement.title</code></strong> représente le titre de l'élément, le texte habituellement affiché dans une fenêtre contextuelle d''info-bulle' lorsque la souris survole le nœud affiché.</p>
+La propriété **`HTMLElement.title`** représente le titre de l'élément, le texte habituellement affiché dans une fenêtre contextuelle d''info-bulle' lorsque la souris survole le nœud affiché.
 
-<div class="note">
-<p><strong>Note :</strong> Si un nœud n'a pas d'attribut <code>title</code>, alors l'action par défaut est de l'hériter de son nœud parent, qui peut à son tour l'hériter de son nœud parent, etc..</p>
+> **Note :** Si un nœud n'a pas d'attribut `title`, alors l'action par défaut est de l'hériter de son nœud parent, qui peut à son tour l'hériter de son nœud parent, etc..
+>
+>      <div title="InfoCool">
+>        <div title="">le survol de la souris ici fera apparaître "InfoCool"</div>
+>        <div title=" ">le survol de la souris ici ne fera rien apparaître</div>
+>      </div>
 
-<pre> &lt;div title="InfoCool"&gt;
-   &lt;div title=""&gt;le survol de la souris ici fera apparaître "InfoCool"&lt;/div&gt;
-   &lt;div title=" "&gt;le survol de la souris ici ne fera rien apparaître&lt;/div&gt;
- &lt;/div&gt;
-</pre>
-</div>
+## Syntaxe
 
-<h2 id="Syntax">Syntaxe</h2>
+    var chn = element.title;
+    element.title = chn;
 
-<pre class="eval">var <em>chn</em> = <em>element</em>.title;<em>
-</em>element.title = <em>chn</em>;
-</pre>
+## Exemple
 
-<h2 id="Example">Exemple</h2>
+```js
+ bouton1.title = "cliquer pour rafraîchir";
+```
 
-<pre class="brush: js"> bouton1.title = "cliquer pour rafraîchir";
-</pre>
+## Spécifications
 
-<h2 id="Specification">Spécifications</h2>
+| Spécification                                                                        | Statut                           | Commentaire                                                          |
+| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#dom-title', 'title')}}                 | {{Spec2('HTML WHATWG')}} | Pas de changement par rapport à la {{SpecName('DOM2 HTML')}}. |
+| {{SpecName('DOM2 HTML', 'html.html#ID-78276800', 'title')}}     | {{Spec2('DOM2 HTML')}}     | Pas de changement par rapport à la {{SpecName('DOM1')}}.     |
+| {{SpecName('DOM1', 'level-one-html.html#ID-78276800', 'title')}} | {{Spec2('DOM1')}}         | Définition initiale.                                                 |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-title', 'title')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Pas de changement par rapport à la {{SpecName('DOM2 HTML')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-78276800', 'title')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>Pas de changement par rapport à la {{SpecName('DOM1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-78276800', 'title')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilité des navigateurs
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+{{Compat("api.HTMLElement.title")}}
 
-<p>{{Compat("api.HTMLElement.title")}}</p>
+## Voir aussi
 
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>L'attribut HTML global <a href="/fr/docs/Web/HTML/Attributs_universels/title"><strong>title</strong></a>.</li>
-</ul>
+- L'attribut HTML global [**title**](/fr/docs/Web/HTML/Attributs_universels/title).

@@ -13,60 +13,47 @@ tags:
   - getNotifications
 translation_of: Web/API/ServiceWorkerRegistration/getNotifications
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>La méthode <strong><code>getNotifications()</code></strong> de l'interface {{domxref ("ServiceWorkerRegistration")}} renvoie une liste des notifications dans l'ordre dans lequel elles ont été créées à partir de l'origine actuelle via l'enregistrement actuel du service worker. Les origines peuvent avoir de nombreuses inscriptions de service worker actives mais de portée différente. Les notifications créées par un service worker sur la même origine ne seront pas disponibles pour les autres services workers actifs sur la même origine.</p>
+La méthode **`getNotifications()`** de l'interface {{domxref ("ServiceWorkerRegistration")}} renvoie une liste des notifications dans l'ordre dans lequel elles ont été créées à partir de l'origine actuelle via l'enregistrement actuel du service worker. Les origines peuvent avoir de nombreuses inscriptions de service worker actives mais de portée différente. Les notifications créées par un service worker sur la même origine ne seront pas disponibles pour les autres services workers actifs sur la même origine.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>s​erviceWorkerRegistration</em>.getNotifications(<em>options</em>)
-.then(function(<em>notificationsList</em>) { ... })</pre>
+    s​erviceWorkerRegistration.getNotifications(options)
+    .then(function(notificationsList) { ... })
 
-<h3 id="Paramétres">Paramétres</h3>
+### Paramétres
 
-<dl>
- <dt>options {{optional_inline}}</dt>
- <dd>Un objet contenant des options pour filtrer les notifications renvoyées. Les options disponibles sont:
- <ul>
-  <li><code>tag</code>: Un {{domxref ("DOMString")}} représentant un tag de notification. Si spécifié, seules les notifications contenant cette balise seront renvoyées.</li>
- </ul>
- </dd>
-</dl>
+- options {{optional_inline}}
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+  - : Un objet contenant des options pour filtrer les notifications renvoyées. Les options disponibles sont:
 
-<p>Une {{jsxref ("Promise", "Promesse")}} qui se résout en une liste d'objets {{domxref ("Notification")}}.</p>
+    - `tag`: Un {{domxref ("DOMString")}} représentant un tag de notification. Si spécifié, seules les notifications contenant cette balise seront renvoyées.
 
-<h2 id="Exemple">Exemple</h2>
+### Valeur de retour
 
-<pre class="brush: js">navigator.serviceWorker.register('sw.js')
+Une {{jsxref ("Promise", "Promesse")}} qui se résout en une liste d'objets {{domxref ("Notification")}}.
+
+## Exemple
+
+```js
+navigator.serviceWorker.register('sw.js')
 
 const options = { tag: 'user_alerts' }
 
-navigator.serviceWorker.ready.then((registration) =&gt; {
-  registration.getNotifications(options).then((notifications) =&gt; {
+navigator.serviceWorker.ready.then((registration) => {
+  registration.getNotifications(options).then((notifications) => {
     // do something with your notifications
   })
 })
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications', '#dom-serviceworkerregistration-getnotifications', 'ServiceWorkerRegistration.getNotifications()')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                                    | État                                     | Commentaire         |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
+| {{SpecName('Web Notifications', '#dom-serviceworkerregistration-getnotifications', 'ServiceWorkerRegistration.getNotifications()')}} | {{Spec2('Web Notifications')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.ServiceWorkerRegistration.getNotifications")}}</p>
+{{Compat("api.ServiceWorkerRegistration.getNotifications")}}

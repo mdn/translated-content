@@ -9,52 +9,37 @@ tags:
   - Reference
 translation_of: Web/API/CredentialsContainer/store
 ---
-<p>{{APIRef("")}}{{SeeCompatTable}}</p>
+{{APIRef("")}}{{SeeCompatTable}}
 
-<p>La méthode <strong><code>store()</code></strong>, rattachée à l'interface {{domxref("CredentialsContainer")}}, enregistre un ensemble d'informations d'authentification pour l'utilisateur dans une instance {{domxref("Credential")}} et renvoie cette instance au travers d'une promesse ({{domxref("Promise")}}).</p>
+La méthode **`store()`**, rattachée à l'interface {{domxref("CredentialsContainer")}}, enregistre un ensemble d'informations d'authentification pour l'utilisateur dans une instance {{domxref("Credential")}} et renvoie cette instance au travers d'une promesse ({{domxref("Promise")}}).
 
-<div class="note">
-<p><strong>Note :</strong> Cette méthode ne peut être utilisé que pour les contextes de navigation les plus hauts. Les appels lancés depuis une {{HTMLElement("iframe")}} résoudront la promesse sans aucun effet.</p>
-</div>
+> **Note :** Cette méthode ne peut être utilisé que pour les contextes de navigation les plus hauts. Les appels lancés depuis une {{HTMLElement("iframe")}} résoudront la promesse sans aucun effet.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">CredentialsContainer.store(cred).then(function(credRes) { ... } )</pre>
+    CredentialsContainer.store(cred).then(function(credRes) { ... } )
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>cred</code></dt>
- <dd>Une instance valide de {{domxref("Credential")}}.</dd>
-</dl>
+- `cred`
+  - : Une instance valide de {{domxref("Credential")}}.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une promesse ({{domxref("Promise")}}) qui sera résolue avec l'instance de {{domxref("Credential")}} passée en argument.</p>
+Une promesse ({{domxref("Promise")}}) qui sera résolue avec l'instance de {{domxref("Credential")}} passée en argument.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">// TBD</pre>
+```js
+// TBD
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Credential Management')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                    | État                                         | Commentaires         |
+| ------------------------------------------------ | -------------------------------------------- | -------------------- |
+| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CredentialsContainer.store")}}</p>
+{{Compat("api.CredentialsContainer.store")}}

@@ -9,43 +9,42 @@ tags:
   - Reference
 translation_of: Web/API/IDBObjectStore/name
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>La propriété <strong><code>name</code></strong>, rattachée à l'interface {{domxref("IDBObjectStore")}}, indique le nom du magasin d'objets courant.</p>
+La propriété **`name`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, indique le nom du magasin d'objets courant.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <em>nomDuMagasin</em> = <em>IDBObjectStore</em>.name;
-<em>IDBObjectStore</em>.name = <em>nouveauNom</em>;</pre>
+    var nomDuMagasin = IDBObjectStore.name;
+    IDBObjectStore.name = nouveauNom;
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Une chaîne de caractères qui contient le nom du magasin d'objet.</p>
+Une chaîne de caractères qui contient le nom du magasin d'objet.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Plusieurs exceptions peuvent être levées lorsqu'on tente de modifier le nom d'un magasin d'objets.</p>
+Plusieurs exceptions peuvent être levées lorsqu'on tente de modifier le nom d'un magasin d'objets.
 
-<dl>
- <dt><code>InvalidStateError</code></dt>
- <dd>Le magasin d'objets a été supprimé ou la transaction courante n'est pas une transaction de mise à jour : il est uniquemnet possible d'opérer un renommage lorsque le mode de la transaction est <code>"versionchange"</code>.</dd>
- <dt><code>TransactionInactiveError</code></dt>
- <dd>La transaction actuelle est inactive.</dd>
- <dt><code>ConstraintError</code></dt>
- <dd>Un magasin d'objets utilise déjà le nom qu'on souhaite employer.</dd>
-</dl>
+- `InvalidStateError`
+  - : Le magasin d'objets a été supprimé ou la transaction courante n'est pas une transaction de mise à jour : il est uniquemnet possible d'opérer un renommage lorsque le mode de la transaction est `"versionchange"`.
+- `TransactionInactiveError`
+  - : La transaction actuelle est inactive.
+- `ConstraintError`
+  - : Un magasin d'objets utilise déjà le nom qu'on souhaite employer.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans le fragment de code qui suit, on ouvre une transaction en lecture/écriture pour la base de données et on ajoute des données au magasin d'objets grâce à la méthode <code>add()</code>. Une fois que le magasin d'objets a été créé, on inscrit la valeur de <code>objectStore.name</code> dans la console. Pour un exemple complet, voir notre application <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> (cf. également <a href="https://mdn.github.io/to-do-notifications/">la démonstration <em>live</em></a>).</p>
+Dans le fragment de code qui suit, on ouvre une transaction en lecture/écriture pour la base de données et on ajoute des données au magasin d'objets grâce à la méthode `add()`. Une fois que le magasin d'objets a été créé, on inscrit la valeur de `objectStore.name` dans la console. Pour un exemple complet, voir notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/) (cf. également [la démonstration _live_](https://mdn.github.io/to-do-notifications/)).
 
-<pre class="brush: js">// On ouvre la base de données
+```js
+// On ouvre la base de données
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Initialisation de la base de données&lt;/li&gt;';
+  note.innerHTML += '<li>Initialisation de la base de données</li>';
 
   // On enregistre le résultat de l'ouverture dans la variable
   // db afin de l'utiliser ensuite.
@@ -66,11 +65,11 @@ function addData() {
 
   // On gère le cas où la transaction est effectuée correctement
   transaction.oncomplete = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction terminée : modification appliquée.&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction terminée : modification appliquée.</li>';
   };
 
   transaction.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction non ouverte. Les doublons sont interdits.&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction non ouverte. Les doublons sont interdits.</li>';
   };
 
   // On crée un magasin d'objets pour la transaction
@@ -82,39 +81,27 @@ function addData() {
 
   objectStoreRequest.onsuccess = function(event) {
     // On rapporte la réussite de l'ajout de l'objet en base
-    note.innerHTML += '&lt;li&gt;Nouvel élément ajouté dans la base de données.&lt;/li&gt;';
+    note.innerHTML += '<li>Nouvel élément ajouté dans la base de données.</li>';
   };
-};</pre>
+};
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBObjectStore-name', 'name')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                         | Commentaires |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-name', 'name')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBObjectStore.name")}}</p>
+{{Compat("api.IDBObjectStore.name")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
- <li>Initier une connexion : {{domxref("IDBDatabase")}}</li>
- <li>Utiliser les transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
- <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
-</ul>
+- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Initier une connexion : {{domxref("IDBDatabase")}}
+- Utiliser les transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
+- Utiliser les curseurs {{domxref("IDBCursor")}}
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).

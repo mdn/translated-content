@@ -3,81 +3,76 @@ title: 'Document: évènement transitionend'
 slug: Web/API/Document/transitionend_event
 translation_of: Web/API/Document/transitionend_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>L’évènement <strong><code>transitionend</code></strong> est émis quand une <a href="/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS">transition CSS</a> a terminé. Dans le cas où une transition est supprimée avant d’avoir terminé, comme lorsqu’une {{cssxref("transition-property")}} est supprimée ou lorsque {{cssxref("display")}} reçoit la valeur <code>none</code>, l’évènement n’est pas généré.</p>
+L’évènement **`transitionend`** est émis quand une [transition CSS](/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS) a terminé. Dans le cas où une transition est supprimée avant d’avoir terminé, comme lorsqu’une {{cssxref("transition-property")}} est supprimée ou lorsque {{cssxref("display")}} reçoit la valeur `none`, l’évènement n’est pas généré.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bouillonne</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th>Est annulable</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("TransitionEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Propriété gestionnaire d’évènement</th>
-   <td><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend">ontransitionend</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bouillonne</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th>Est annulable</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("TransitionEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Propriété gestionnaire d’évènement</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend"
+            >ontransitionend</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>L’évènement <code>transitionend</code> est émis dans les deux directions : quand la transition se termine vers l’état modifié, et quand elle est complètement retournée à l’état par défaut ou non modifié. S’il n’y a pas de délai ou de durée de transition, si les deux sont 0 s ou ne sont pas déclarés, il n’y a pas de transition, et aucun évènement de transition n’est émis. Si l’évènement <code>transitioncancel</code> est émis, l’évènement <code>transitionend</code> ne se produira pas.</p>
+L’évènement `transitionend` est émis dans les deux directions : quand la transition se termine vers l’état modifié, et quand elle est complètement retournée à l’état par défaut ou non modifié. S’il n’y a pas de délai ou de durée de transition, si les deux sont 0 s ou ne sont pas déclarés, il n’y a pas de transition, et aucun évènement de transition n’est émis. Si l’évènement `transitioncancel` est émis, l’évènement `transitionend` ne se produira pas.
 
-<p>La cible originale pour cet évènement est l’<code><a href="/en-US/docs/Web/API/Element">Element</a></code> sur lequel la transition est appliquée. Vous pouvez écouter cet évènement sur l’interface <code>Window</code> pour le gérer durant les phases de capture ou de bouillonnement. Pour plus de détails sur cet évènement, veuillez consulter la page <a href="/fr/docs/Web/Events/transitionend">HTMLElement: transitionend</a>.</p>
+La cible originale pour cet évènement est l’[`Element`](/en-US/docs/Web/API/Element) sur lequel la transition est appliquée. Vous pouvez écouter cet évènement sur l’interface `Window` pour le gérer durant les phases de capture ou de bouillonnement. Pour plus de détails sur cet évènement, veuillez consulter la page [HTMLElement: transitionend](/fr/docs/Web/Events/transitionend).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Le code suivant ajoute un gestionnaire sur l’évènement <code>transitionend</code> :</p>
+Le code suivant ajoute un gestionnaire sur l’évènement `transitionend` :
 
-<pre class="brush: js">document.addEventListener('transitionend', () =&gt; {
+```js
+document.addEventListener('transitionend', () => {
   console.log('Transition terminée');
-});</pre>
+});
+```
 
-<p>La même chose, mais en utilisant la propriété <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend">ontransitionend</a></code> au lieu de <code>addEventListener()</code> :</p>
+La même chose, mais en utilisant la propriété [`ontransitionend`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend) au lieu de `addEventListener()` :
 
-<pre class="brush: js">document.ontransitionend = () =&gt; {
+```js
+document.ontransitionend = () => {
   console.log('Transition terminée');
-};</pre>
+};
+```
 
-<p><a href="/en-US/docs/Web/API/HTMLElement/transitionend_event#Live_example">Voir un exemple en direct sur cet évènement.</a></p>
+[Voir un exemple en direct sur cet évènement.](/en-US/docs/Web/API/HTMLElement/transitionend_event#Live_example)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Transitions", "#transitionend", "transitionend")}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | Statut                                   | Commentaire          |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName("CSS3 Transitions", "#transitionend", "transitionend")}} | {{Spec2('CSS3 Transitions')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Document.transitionend_event")}}</p>
+{{Compat("api.Document.transitionend_event")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Le gestionnaire d’évènement {{domxref("GlobalEventHandlers.ontransitionend")}}</li>
- <li>L’interface {{domxref("TransitionEvent")}}</li>
- <li>Les propriétés CSS : {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}</li>
- <li>Des évènements associés : <code><a href="/en-US/docs/Web/API/Document/transitionrun_event">transitionrun</a></code>, <code><a href="/en-US/docs/Web/API/Document/transitionstart_event">transitionstart</a></code>, <code><a href="/en-US/docs/Web/API/Document/transitioncancel_event">transitioncancel</a></code></li>
- <li>Cet évènement sur les cibles <code><a href="/en-US/docs/Web/API/HTMLElement">HTMLElement</a></code> : <code><a href="/en-US/docs/Web/API/HTMLElement/transitionend_event">transitionend</a></code></li>
- <li>Cet évènement sur les cibles <code><a href="/en-US/docs/Web/API/Window">Window</a></code> : <code><a href="/en-US/docs/Web/API/Window/transitionend_event">transitionend</a></code></li>
-</ul>
+- Le gestionnaire d’évènement {{domxref("GlobalEventHandlers.ontransitionend")}}
+- L’interface {{domxref("TransitionEvent")}}
+- Les propriétés CSS : {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
+- Des évènements associés : [`transitionrun`](/en-US/docs/Web/API/Document/transitionrun_event), [`transitionstart`](/en-US/docs/Web/API/Document/transitionstart_event), [`transitioncancel`](/en-US/docs/Web/API/Document/transitioncancel_event)
+- Cet évènement sur les cibles [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) : [`transitionend`](/en-US/docs/Web/API/HTMLElement/transitionend_event)
+- Cet évènement sur les cibles [`Window`](/en-US/docs/Web/API/Window) : [`transitionend`](/en-US/docs/Web/API/Window/transitionend_event)

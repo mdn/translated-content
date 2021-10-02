@@ -8,61 +8,56 @@ tags:
   - Propriétés
 translation_of: Web/API/Node/textContent
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La propriété <code><strong>Node.textContent</strong></code>  représente le contenu textuel d'un nœud et de ses descendants.</p>
+La propriété **`Node.textContent`**  représente le contenu textuel d'un nœud et de ses descendants.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <em>text</em> = element.textContent;
-element.textContent = "ceci est un simple exemple de texte";
-</pre>
+    var text = element.textContent;
+    element.textContent = "ceci est un simple exemple de texte";
 
-<h2 id="Notes">Description</h2>
+## Description
 
-<ul>
- <li><code>textContent</code> renvoie <code>null</code> si l'élément est un <a href="/fr/docs/Web/API/document">document</a>, un type de document (doctype) ou une notation. Pour saisir toutes les données textuelles et CDATA pour l'ensemble du document, on peut utiliser <code> <a href="/fr/docs/Web/API/document/documentElement">document.documentElement</a>.textContent</code> .</li>
- <li>Si le nœud est une section CDATA, un commentaire, une instruction de traitement ou un nœud texte, <code>textContent</code> renvoie le texte à l'intérieur du nœud (la valeur <a href="/fr/docs/Web/API/Node/nodeValue">nodeValue</a>).</li>
- <li>Pour les autres types de nœuds, <code>textContent</code> renvoie la concaténation des valeurs de propriété <code>textContent</code> de chaque nœud enfant, à l'exception des commentaires et nœuds d'instructions de traitement. Si le nœud n'a pas d'enfants, il s'agira d'une chaîne vide.</li>
- <li>En définissant cette propriété sur un nœud, on enlève tous ses enfants et ceux-ci sont remplacés par un seul nœud texte avec la valeur donnée.</li>
-</ul>
+- `textContent` renvoie `null` si l'élément est un [document](/fr/docs/Web/API/document), un type de document (doctype) ou une notation. Pour saisir toutes les données textuelles et CDATA pour l'ensemble du document, on peut utiliser `document.documentElement.textContent` .
+- Si le nœud est une section CDATA, un commentaire, une instruction de traitement ou un nœud texte, `textContent` renvoie le texte à l'intérieur du nœud (la valeur [nodeValue](/fr/docs/Web/API/Node/nodeValue)).
+- Pour les autres types de nœuds, `textContent` renvoie la concaténation des valeurs de propriété `textContent` de chaque nœud enfant, à l'exception des commentaires et nœuds d'instructions de traitement. Si le nœud n'a pas d'enfants, il s'agira d'une chaîne vide.
+- En définissant cette propriété sur un nœud, on enlève tous ses enfants et ceux-ci sont remplacés par un seul nœud texte avec la valeur donnée.
 
-<h3 id="Différences_avec_innerText">Différences avec <code>innerText</code></h3>
+### Différences avec `innerText`
 
-<p>Internet Explorer a introduit une propriété {{domxref("node.innerText")}}. L'intention est similaire mais comporte les différences suivantes :</p>
+Internet Explorer a introduit une propriété {{domxref("node.innerText")}}. L'intention est similaire mais comporte les différences suivantes :
 
-<ul>
- <li><code>textContent</code> récupère le contenu de tous les éléments, y compris {{HTMLElement("script")}} et {{HTMLElement("style")}}, ce qui n'est pas le cas de <code>innerText</code>.</li>
- <li><code>innerText</code> prend en compte le style de l'élément et ne retournera rien pour les éléments cachés. Aussi, il déclenchera un reflow à l'inverse de <code>textContent</code>.</li>
- <li>Comme <code>innerText</code> reconnaît le style CSS, il déclenchera une refusion (<em>reflow</em>), alors que <code>textContent</code> ne le fera pas.</li>
- <li>Contrairement à <code>textContent</code>, la modification <code>innerText</code> dans Internet Explorer (jusqu'à la version 11 incluse), non seulement supprime les nœuds enfants de l'élément, mais détruit aussi définitivement tout nœud de texte descendant (il est donc impossible d'insérer à nouveau des nœuds dans un autre élément ou dans le même élément) .</li>
-</ul>
+- `textContent` récupère le contenu de tous les éléments, y compris {{HTMLElement("script")}} et {{HTMLElement("style")}}, ce qui n'est pas le cas de `innerText`.
+- `innerText` prend en compte le style de l'élément et ne retournera rien pour les éléments cachés. Aussi, il déclenchera un reflow à l'inverse de `textContent`.
+- Comme `innerText` reconnaît le style CSS, il déclenchera une refusion (_reflow_), alors que `textContent` ne le fera pas.
+- Contrairement à `textContent`, la modification `innerText` dans Internet Explorer (jusqu'à la version 11 incluse), non seulement supprime les nœuds enfants de l'élément, mais détruit aussi définitivement tout nœud de texte descendant (il est donc impossible d'insérer à nouveau des nœuds dans un autre élément ou dans le même élément) .
 
-<h3 id="Différences_avec_innerHTML">Différences avec <code>innerHTML</code></h3>
+### Différences avec `innerHTML`
 
-<p>{{domxref("Element.innerHTML")}} renvoie le HTML comme son nom l'indique. Souvent, pour récupérer ou écrire du texte dans un élément, les utilisateurs utilisent <code>innerHTML</code>. Cependant, <code>textContent</code> a souvent de meilleures performances car le texte n'est pas analysé en HTML. De plus, l'utilisation de <code>textContent</code> peut empêcher les attaques XSS.</p>
+{{domxref("Element.innerHTML")}} renvoie le HTML comme son nom l'indique. Souvent, pour récupérer ou écrire du texte dans un élément, les utilisateurs utilisent `innerHTML`. Cependant, `textContent` a souvent de meilleures performances car le texte n'est pas analysé en HTML. De plus, l'utilisation de `textContent` peut empêcher les attaques XSS.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="eval">// Étant donné le fragment de HTML suivant :
-//   &lt;div id="divA"&gt;Ceci est un &lt;span&gt;exemple de&lt;/span&gt; texte&lt;/div&gt;
+    // Étant donné le fragment de HTML suivant :
+    //   <div id="divA">Ceci est un <span>exemple de</span> texte</div>
 
-// On obtient le contenu textuel :
-var text = document.getElementById("divA").textContent;
-// |text| vaut "Ceci est un exemple de texte".
+    // On obtient le contenu textuel :
+    var text = document.getElementById("divA").textContent;
+    // |text| vaut "Ceci est un exemple de texte".
 
-// On définit le contenu textuel :
-document.getElementById("divA").textContent = "Ceci est un exemple de texte";
-// Le HTML pour divA est à présent &lt;div id="divA"&gt;Ceci est un exemple de texte&lt;/div&gt;
-</pre>
+    // On définit le contenu textuel :
+    document.getElementById("divA").textContent = "Ceci est un exemple de texte";
+    // Le HTML pour divA est à présent <div id="divA">Ceci est un exemple de texte</div>
 
-<h2 id="Polyfill_pour_IE8">Polyfill pour IE8</h2>
+## Polyfill pour IE8
 
-<pre class="brush: js">// Source: Eli Grey @ http://eligrey.com/blog/post/textcontent-in-ie8
+```js
+// Source: Eli Grey @ http://eligrey.com/blog/post/textcontent-in-ie8
 if (Object.defineProperty
-  &amp;&amp; Object.getOwnPropertyDescriptor
-  &amp;&amp; Object.getOwnPropertyDescriptor(Element.prototype, "textContent")
-  &amp;&amp; !Object.getOwnPropertyDescriptor(Element.prototype, "textContent").get) {
+  && Object.getOwnPropertyDescriptor
+  && Object.getOwnPropertyDescriptor(Element.prototype, "textContent")
+  && !Object.getOwnPropertyDescriptor(Element.prototype, "textContent").get) {
   (function() {
     var innerText = Object.getOwnPropertyDescriptor(Element.prototype, "innerText");
     Object.defineProperty(Element.prototype, "textContent",
@@ -78,48 +73,21 @@ if (Object.defineProperty
      }
    );
   })();
-}</pre>
+}
+```
 
-<ul>
-</ul>
+## Compatibilité des navigateurs
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+{{Compat("api.Node.textContent")}}
 
+## Spécifications
 
+| Spécification                                                                                        | Statut                           | Commentaire               |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------- |
+| {{SpecName('DOM WHATWG','#dom-node-textcontent','Node.textContent')}}         | {{Spec2('DOM WHATWG')}} | Pas de changement de DOM4 |
+| {{SpecName('DOM4','#dom-node-textcontent','Node.textContent')}}                 | {{Spec2('DOM4')}}         |                           |
+| {{SpecName('DOM3 Core','core.html#Node3-textContent','Node.textContent')}} | {{Spec2('DOM3 Core')}}     | Définition initiale.      |
 
-<p>{{Compat("api.Node.textContent")}}</p>
+## Voir aussi
 
-<h2 id="Sp.C3.A9cification">Spécifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-node-textcontent','Node.textContent')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Pas de changement de DOM4</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4','#dom-node-textcontent','Node.textContent')}}</td>
-   <td>{{Spec2('DOM4')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core','core.html#Node3-textContent','Node.textContent')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="http://perfectionkills.com/the-poor-misunderstood-innerText/">Plus sur les différences entre <code>innerText</code> et <code>textContent</code></a> (blog post en)</li>
-</ul>
-
-<p> </p>
+- [Plus sur les différences entre `innerText` et `textContent`](http://perfectionkills.com/the-poor-misunderstood-innerText/) (blog post en)

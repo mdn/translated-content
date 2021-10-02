@@ -11,25 +11,27 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Textures_from_code
 original_slug: Web/API/WebGL_API/By_example/Générer_des_textures_avec_du_code
 ---
-<div>{{draft}}{{IncludeSubnav("/fr/Apprendre")}}</div>
+{{draft}}{{IncludeSubnav("/fr/Apprendre")}}
 
-<p>{{PreviousNext("Apprendre/WebGL/Par_exemple/Introduction_aux_attributs_vertex","Apprendre/WebGL/Par_exemple/Les_textures_vidéos")}}</p>
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Introduction_aux_attributs_vertex","Apprendre/WebGL/Par_exemple/Les_textures_vidéos")}}
 
-<p>Dans cet article, on illustre simplement comment générer des textures procédurales avec des fragments de <em>shader</em><em>s</em>.</p>
+Dans cet article, on illustre simplement comment générer des textures procédurales avec des fragments de _shader\*\*s_.
 
-<p>{{EmbedLiveSample("Dessiner_des_textures_avec_du_code",660,350)}}</p>
+{{EmbedLiveSample("Dessiner_des_textures_avec_du_code",660,350)}}
 
-<h3 id="Dessiner_des_textures_avec_du_code">Dessiner des textures avec du  code</h3>
+### Dessiner des textures avec du  code
 
-<p>Il est possible d'appliquer des textures en effectuant des calculs pour chaque pixel du fragment de <em>shader</em>.</p>
+Il est possible d'appliquer des textures en effectuant des calculs pour chaque pixel du fragment de _shader_.
 
-<pre class="brush: html hidden">&lt;p&gt;Génération d'une texture à partir de code. Simple demonstration
-    de la génération de textures procédurale&lt;/p&gt;
-&lt;canvas&gt;Il semblerait que votre navigateur ne supporte
-    pas l'élément canvas.&lt;/canvas&gt;
-</pre>
+```html hidden
+<p>Génération d'une texture à partir de code. Simple demonstration
+    de la génération de textures procédurale</p>
+<canvas>Il semblerait que votre navigateur ne supporte
+    pas l'élément canvas.</canvas>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   text-align : center;
 }
 canvas {
@@ -46,19 +48,21 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;script type="x-shader/x-vertex" id="vertex-shader"&gt;
+```html
+<script type="x-shader/x-vertex" id="vertex-shader">
 #version 100
 precision highp float;
 void main() {
   gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
   gl_PointSize = 128.0;
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<pre class="brush: html">&lt;script type="x-shader/x-fragment" id="fragment-shader"&gt;
+```html
+<script type="x-shader/x-fragment" id="fragment-shader">
 #version 100
 precision mediump float;
 // On définit une variation radiale (à partir du centre)
@@ -71,13 +75,15 @@ void main() {
     0.1/distanceSqrd,
     0.0, 1.0 );
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<pre class="brush: js hidden">;(function(){
-</pre>
+```js hidden
+;(function(){
+```
 
-<pre class="brush: js">"use strict"
+```js
+"use strict"
 window.addEventListener("load", setupWebGL, false);
 var gl,
   program;
@@ -132,9 +138,10 @@ if (buffer)
 if (program)
   gl.deleteProgram(program);
 }
-</pre>
+```
 
-<pre class="brush: js hidden">function getRenderingContext() {
+```js hidden
+function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
@@ -154,8 +161,8 @@ if (program)
   return gl;
 }
 })();
-</pre>
+```
 
-<p>Le code source de cet exemple est également disponible sur <a href="https://github.com/idofilin/webgl-by-example/tree/master/textures-from-code">GitHub</a>.</p>
+Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/textures-from-code).
 
-<p>{{PreviousNext("Apprendre/WebGL/Par_exemple/Introduction_aux_attributs_vertex","Apprendre/WebGL/Par_exemple/Les_textures_vidéos")}}</p>
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Introduction_aux_attributs_vertex","Apprendre/WebGL/Par_exemple/Les_textures_vidéos")}}

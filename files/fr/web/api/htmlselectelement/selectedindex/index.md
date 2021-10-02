@@ -3,67 +3,54 @@ title: HTMLSelectElement.selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
 translation_of: Web/API/HTMLSelectElement/selectedIndex
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><code><strong>HTMLSelectElement.selectedIndex</strong></code> est un <code>long</code> qui représente l'index du premier élément sélectionné {{HTMLElement("option")}}. La valeur <code>-1</code> indique qu'aucun élément est sélectionné.</p>
+**`HTMLSelectElement.selectedIndex`** est un `long` qui représente l'index du premier élément sélectionné {{HTMLElement("option")}}. La valeur `-1` indique qu'aucun élément est sélectionné.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <var>index</var> = <var>selectElem</var>.selectedIndex;
-<em>selectElem<code>.selectedIndex = </code>index;</em>
-</pre>
+    var index = selectElem.selectedIndex;
+    selectElem.selectedIndex = index;
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="p"&gt;selectedIndex: 0&lt;/p&gt;
+```html
+<p id="p">selectedIndex: 0</p>
 
-&lt;select id="select"&gt;
-  &lt;option selected&gt;Option A&lt;/option&gt;
-  &lt;option&gt;Option B&lt;/option&gt;
-  &lt;option&gt;Option C&lt;/option&gt;
-  &lt;option&gt;Option D&lt;/option&gt;
-  &lt;option&gt;Option E&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+<select id="select">
+  <option selected>Option A</option>
+  <option>Option B</option>
+  <option>Option C</option>
+  <option>Option D</option>
+  <option>Option E</option>
+</select>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var selectElem = document.getElementById('select');
+```js
+var selectElem = document.getElementById('select');
 var pElem = document.getElementById('p');
 
-// Quand une nouvelle &lt;option&gt; est selectionnée
+// Quand une nouvelle <option> est selectionnée
 selectElem.addEventListener('change', function() {
   var index = selectElem.selectedIndex;
-  // Rapporter cette donnée au &lt;p&gt;
+  // Rapporter cette donnée au <p>
   pElem.innerHTML = 'selectedIndex: ' + index;
-})</pre>
+})
+```
 
-<p>{{EmbedLiveSample("Exemple", "200px", "80px")}}</p>
+{{EmbedLiveSample("Exemple", "200px", "80px")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-select-selectedindex', 'HTMLSelectElement')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Pas de changement depuis le snapshot précédent, {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#dom-select-selectedindex', 'HTMLSelectElement')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Définition initiale, snapshot de {{SpecName("HTML WHATWG")}}.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | Statut                           | Commentaire                                                                       |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#dom-select-selectedindex', 'HTMLSelectElement')}}         | {{Spec2('HTML WHATWG')}} | Pas de changement depuis le snapshot précédent, {{SpecName("HTML5 W3C")}}. |
+| {{SpecName('HTML5 W3C', 'forms.html#dom-select-selectedindex', 'HTMLSelectElement')}} | {{Spec2('HTML5 W3C')}}     | Définition initiale, snapshot de {{SpecName("HTML WHATWG")}}.            |
 
-<h2 id="Compatibilité_entre_les_navigateurs">Compatibilité entre les navigateurs</h2>
+## Compatibilité entre les navigateurs
 
-<p>{{Compat("api.HTMLSelectElement.selectedIndex")}}</p>
+{{Compat("api.HTMLSelectElement.selectedIndex")}}

@@ -3,29 +3,25 @@ title: HTMLFormElement.elements
 slug: Web/API/HTMLFormElement/elements
 translation_of: Web/API/HTMLFormElement/elements
 ---
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p>La propriété <code><strong>HTMLFormElement.elements</strong></code> retourne une {{domxref("HTMLFormControlsCollection")}} ({{ HTMLVersionInline(4) }} <code><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75708506">HTMLCollection</a></code>) de tous les contrôles de formulaire contenu dans l'élément FORM, à l'exception des éléments de type <a href="/fr-FR/docs/HTML/Element/Input">input</a> dont l'attribut <code>type</code> est égal à <code>image</code>.</p>
+La propriété **`HTMLFormElement.elements`** retourne une {{domxref("HTMLFormControlsCollection")}} ({{ HTMLVersionInline(4) }} [`HTMLCollection`](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75708506)) de tous les contrôles de formulaire contenu dans l'élément FORM, à l'exception des éléments de type [input](/fr-FR/docs/HTML/Element/Input) dont l'attribut `type` est égal à `image`.
 
-<p>Vous pouvez accéder à un élément particulier en utilisant soit un index soit le <code>name</code> ou l'<code>id</code> de l'élément.</p>
+Vous pouvez accéder à un élément particulier en utilisant soit un index soit le `name` ou l'`id` de l'élément.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>nodeList</em> = <em>HTMLFormElement</em>.elements
-</pre>
+    nodeList = HTMLFormElement.elements
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">var inputs = document.getElementById("form1").elements;
+```js
+var inputs = document.getElementById("form1").elements;
 var inputByIndex = inputs[2];
 var inputByName = inputs["login"];
-</pre>
+```
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/html5/forms.html#dom-form-elements">HTML5, Section 4.10.3, The form Element</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-76728479">DOM Level 2 HTML: elements</a></li>
-</ul>
+- [HTML5, Section 4.10.3, The form Element](http://www.w3.org/TR/html5/forms.html#dom-form-elements)
+- [DOM Level 2 HTML: elements](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-76728479)

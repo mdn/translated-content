@@ -11,33 +11,33 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceEntry/toJSON
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>La méthode <strong><code>toJSON()</code></strong> permet de sérialiser l'objet <a href="/fr/docs/Web/API/PerformanceEntry"><code>PerformanceEntry</code></a> courant et renvoie une représentation JSON de l'objet.</p>
+La méthode **`toJSON()`** permet de sérialiser l'objet [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) courant et renvoie une représentation JSON de l'objet.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:js">let jsonObj = perfEntry.toJSON();
-</pre>
+```js
+let jsonObj = perfEntry.toJSON();
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Return_value">Valeur de retour</h3>
+### Valeur de retour
 
-<dl>
-  <dt><code>json</code></dt>
-  <dd>Un objet JSON qui est la sérialisation de l'objet <a href="/fr/docs/Web/API/PerformanceEntry"><code>PerformanceEntry</code></a>.</dd>
-</dl>
+- `json`
+  - : Un objet JSON qui est la sérialisation de l'objet [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry).
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>L'exemple suivant montre l'utilisation de la méthode <code>toJSON()</code>.</p>
+L'exemple suivant montre l'utilisation de la méthode `toJSON()`.
 
-<pre class="brush:js">function run_PerformanceEntry() {
+```js
+function run_PerformanceEntry() {
   console.log("Support de PerformanceEntry ...");
 
   if (performance.mark === undefined) {
@@ -52,7 +52,7 @@ translation_of: Web/API/PerformanceEntry/toJSON
 
   // Utilise getEntries() pour itérer à travers chaque entrée.
   let p = performance.getEntries();
-  for (let i = 0; i &lt; p.length; i++) {
+  for (let i = 0; i < p.length; i++) {
     console.log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
@@ -61,7 +61,7 @@ function check_PerformanceEntry(obj) {
   let properties = ["name", "entryType", "startTime", "duration"];
   let methods = ["toJSON"];
 
-  for (let i = 0; i &lt; properties.length; i++) {
+  for (let i = 0; i < properties.length; i++) {
     // On vérifie chaque propriété
     let supported = properties[i] in obj;
     if (supported)
@@ -69,7 +69,7 @@ function check_PerformanceEntry(obj) {
     else
       console.log("..." + properties[i] + " = N'est pas pris en charge");
   }
-  for (let i = 0; i &lt; methods.length; i++) {
+  for (let i = 0; i < methods.length; i++) {
     // On vérifie chaque méthode
     let supported = typeof obj[methods[i]] == "function";
     if (supported) {
@@ -80,28 +80,15 @@ function check_PerformanceEntry(obj) {
     }
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceentry-tojson',
-        'toJSON')}}</td>
-      <td>{{Spec2('Performance Timeline Level 2')}}</td>
-      <td>Définition initiale de la méthode <code>toJSON()</code>.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                | Statut                                                   | Commentaire                                   |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | --------------------------------------------- |
+| {{SpecName('Performance Timeline Level 2', '#dom-performanceentry-tojson',
+        'toJSON')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale de la méthode `toJSON()`. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceEntry.toJSON")}}</p>
+{{Compat("api.PerformanceEntry.toJSON")}}

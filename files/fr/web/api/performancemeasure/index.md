@@ -9,68 +9,47 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceMeasure
 ---
-<div>{{APIRef("User Timing API")}}</div>
+{{APIRef("User Timing API")}}
 
-<p><code><strong>PerformanceMeasure</strong></code> est une interface <em>abstraite</em> pour les objets <a href="/fr/docs/Web/API/PerformanceEntry"><code>PerformanceEntry</code></a> ayant un <a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>entryType</code></a> « <code>measure</code> ». Les entrées de ce type sont créées en appelant <a href="/fr/docs/Web/API/Performance/measure"><code>measure()</code></a> pour ajouter un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> <em>nommé</em> (la <em>mesure</em>) entre deux <em>marqueurs</em> à la <em>chronologie des performances</em> du navigateur.</p>
+**`PerformanceMeasure`** est une interface _abstraite_ pour les objets [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) ayant un [`entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) « `measure` ». Les entrées de ce type sont créées en appelant [`measure()`](/fr/docs/Web/API/Performance/measure) pour ajouter un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) _nommé_ (la _mesure_) entre deux _marqueurs_ à la _chronologie des performances_ du navigateur.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Properties">Propriétés</h2>
+## Propriétés
 
-<p>Cette interface n'a pas de propriété mais elle étend les propriétés de <a href="/fr/docs/Web/API/PerformanceEntry"><code>PerformanceEntry</code></a> suivantes en restreignant les propriétés comme suit :</p>
+Cette interface n'a pas de propriété mais elle étend les propriétés de [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) suivantes en restreignant les propriétés comme suit :
 
-<dl>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry.entryType"><code>PerformanceEntry.entryType</code></a></dt>
-  <dd>Retourne « <code>measure</code> ».</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry.name"><code>PerformanceEntry.name</code></a></dt>
-  <dd>Retourne le nom donné à la mesure lorsqu'elle a été créée via un appel à <a href="/fr/docs/Web/API/Performance/measure()"><code>performance.measure()</code></a>.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry.startTime"><code>PerformanceEntry.startTime</code></a></dt>
-  <dd>Retourne un objet <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> associé à la mesure indiquant le moment où <a href="/fr/docs/Web/API/Performance/measure()"><code>performance.measure()</code></a> a été appelée.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry.duration"><code>PerformanceEntry.duration</code></a></dt>
-  <dd>Retourne un objet <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> correspondant à la durée de la mesure (généralement, l'horodatage de fin de la mesure moins l'horodatage de début).</dd>
-</dl>
+- [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry.entryType)
+  - : Retourne « `measure` ».
+- [`PerformanceEntry.name`](/fr/docs/Web/API/PerformanceEntry.name)
+  - : Retourne le nom donné à la mesure lorsqu'elle a été créée via un appel à [`performance.measure()`](</fr/docs/Web/API/Performance/measure()>).
+- [`PerformanceEntry.startTime`](/fr/docs/Web/API/PerformanceEntry.startTime)
+  - : Retourne un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) associé à la mesure indiquant le moment où [`performance.measure()`](</fr/docs/Web/API/Performance/measure()>) a été appelée.
+- [`PerformanceEntry.duration`](/fr/docs/Web/API/PerformanceEntry.duration)
+  - : Retourne un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) correspondant à la durée de la mesure (généralement, l'horodatage de fin de la mesure moins l'horodatage de début).
 
-<h2 id="Methods">Méthodes</h2>
+## Méthodes
 
-<p>Cette interface n'a pas de méthode.</p>
+Cette interface n'a pas de méthode.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>Voir l'exemple dans : <a href="/fr/docs/Web/API/User_Timing_API/Using_the_User_Timing_API">Utilisation de l'API <i>User Timing</i></a>.</p>
+Voir l'exemple dans : [Utilisation de l'API _User Timing_](/fr/docs/Web/API/User_Timing_API/Using_the_User_Timing_API).
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('User Timing Level 2', '#dom-performance-measure', 'PerformanceMeasure')}}</td>
-      <td>{{Spec2('User Timing Level 2')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('User Timing', '#performancemeasure', 'PerformanceMeasure')}}</td>
-      <td>{{Spec2('User Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                    | Statut                                       | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
+| {{SpecName('User Timing Level 2', '#dom-performance-measure', 'PerformanceMeasure')}} | {{Spec2('User Timing Level 2')}} |                      |
+| {{SpecName('User Timing', '#performancemeasure', 'PerformanceMeasure')}}                 | {{Spec2('User Timing')}}             | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceMeasure")}}</p>
+{{Compat("api.PerformanceMeasure")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/API/User_Timing_API">API <i>User Timing </i></a></li>
-  <li><a href="/fr/docs/Web/API/User_Timing_API/Using_the_User_Timing_API">Utilisation de l'API <i>User Timing</i></a></li>
-</ul>
+- [API _User Timing_](/fr/docs/Web/API/User_Timing_API)
+- [Utilisation de l'API _User Timing_](/fr/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)

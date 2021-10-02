@@ -9,53 +9,55 @@ tags:
   - temps
 translation_of: Web/API/Event/timeStamp
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>Retourne le temps (en millisecondes) à partir duquel l'événement a été créé.</p>
+Retourne le temps (en millisecondes) à partir duquel l'événement a été créé.
 
-<div class="note">
-<p><strong>Note :</strong> Cette propriété fonctionne seulement si le système d'évènements le prend en charge pour des évènements particuliers.</p>
-</div>
+> **Note :** Cette propriété fonctionne seulement si le système d'évènements le prend en charge pour des évènements particuliers.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">event.timeStamp
-</pre>
+    event.timeStamp
 
-<h3 id="Examples">Valeur</h3>
+### Valeur
 
-<p>Cette valeur est un nombre de millisecondes écoulées depuis le début du temps de vie du document courant jusqu'à la création de l'évènement.</p>
+Cette valeur est un nombre de millisecondes écoulées depuis le début du temps de vie du document courant jusqu'à la création de l'évènement.
 
-<p>Dans les nouvelles implémentations, la valeur est un {{domxref("DOMHighResTimeStamp")}} dont la précision est de 5 microsecondes (0,005 ms). Dans les implémentations plus anciennes, la valeur est un {{domxref("DOMTimeStamp")}} de précision d'une milliseconde.</p>
+Dans les nouvelles implémentations, la valeur est un {{domxref("DOMHighResTimeStamp")}} dont la précision est de 5 microsecondes (0,005 ms). Dans les implémentations plus anciennes, la valeur est un {{domxref("DOMTimeStamp")}} de précision d'une milliseconde.
 
-<h2 id="Examples">Exemple</h2>
+## Exemple
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   Focus this iframe and press any key to get the
   current timestamp for the keypress event.
-&lt;/p&gt;
-&lt;p&gt;timeStamp: &lt;span id="time"&gt;-&lt;/span&gt;&lt;/p&gt;</pre>
+</p>
+<p>timeStamp: <span id="time">-</span></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function getTime(event) {
+```js
+function getTime(event) {
   var time = document.getElementById("time");
   time.firstChild.nodeValue = event.timeStamp;
 }
-document.body.addEventListener("keypress", getTime);</pre>
+document.body.addEventListener("keypress", getTime);
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Example", "100%", 100)}}</p>
+{{EmbedLiveSample("Example", "100%", 100)}}
 
-<h2 id="Notes">Précision du temps réduite</h2>
+## Précision du temps réduite
 
-<p>Pour offrir une protection contre les attaques de synchronisation et les empreintes digitales, la précision de <code>event.timeStamp</code> peut être arrondie en fonction des paramètres du navigateur.<br>
- Dans Firefox, la préférence <code>privacy.reduceTimerPrecision</code> est activée et à 20 us par défaut dans Firefox 59 ; en version 60 ce sera 2 ms.</p>
+Pour offrir une protection contre les attaques de synchronisation et les empreintes digitales, la précision de `event.timeStamp` peut être arrondie en fonction des paramètres du navigateur.
+Dans Firefox, la préférence `privacy.reduceTimerPrecision` est activée et à 20 us par défaut dans Firefox 59 ; en version 60 ce sera 2 ms.
 
-<pre class="brush: js">// Précision du temps réduite (2ms) dans Firefox 60
+```js
+// Précision du temps réduite (2ms) dans Firefox 60
 event.timeStamp;
 // 1519211809934
 // 1519211810362
@@ -68,41 +70,19 @@ event.timeStamp;
 // 1519129853500
 // 1519129858900
 // 1519129864400
-// ...</pre>
+// ...
+```
 
-<p>Dans Firefox, vous pouvez aussi activer <code>privacy.resistFingerprinting</code>, la précision sera de 100 ms ou la valeur de <code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code>, selon la valeur la plus grande.</p>
+Dans Firefox, vous pouvez aussi activer `privacy.resistFingerprinting`, la précision sera de 100 ms ou la valeur de `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, selon la valeur la plus grande.
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-timestamp', 'Event.timeStamp')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4', '#dom-event-timestamp', 'Event.timeStamp')}}</td>
-   <td>{{ Spec2('DOM4') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events', '#Events-Event-timeStamp', 'Event.timeStamp')}}</td>
-   <td>{{ Spec2('DOM2 Events') }}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                               | Commentaire          |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('DOM WHATWG', '#dom-event-timestamp', 'Event.timeStamp')}}     | {{ Spec2('DOM WHATWG') }}     |                      |
+| {{SpecName('DOM4', '#dom-event-timestamp', 'Event.timeStamp')}}             | {{ Spec2('DOM4') }}             |                      |
+| {{SpecName('DOM2 Events', '#Events-Event-timeStamp', 'Event.timeStamp')}} | {{ Spec2('DOM2 Events') }} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("api.Event.timeStamp")}}</p>
+{{Compat("api.Event.timeStamp")}}

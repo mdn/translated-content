@@ -11,25 +11,28 @@ tags:
   - decodedBodySize
 translation_of: Web/API/PerformanceResourceTiming/decodedBodySize
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>La propriété en lecture seule <strong><code>decodedBodySize</code></strong> renvoie la taille (en octets) reçue de la récupération (HTTP ou cache) du corps du message, après suppression de tout codage de contenu appliqué. Si la ressource est récupérée à partir d'un cache d'application ou de ressources locales, elle renvoie la taille de la donnée utile après suppression de tous les codages de contenu appliqués.</p>
+La propriété en lecture seule **`decodedBodySize`** renvoie la taille (en octets) reçue de la récupération (HTTP ou cache) du corps du message, après suppression de tout codage de contenu appliqué. Si la ressource est récupérée à partir d'un cache d'application ou de ressources locales, elle renvoie la taille de la donnée utile après suppression de tous les codages de contenu appliqués.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js"><var>resource</var>.decodedBodySize;</pre>
+```js
+resource.decodedBodySize;
+```
 
-<h3 id="Return_Value">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La taille (en octets) reçue de l'extraction (HTTP ou cache) du corps du message, après suppression de tout codage de contenu appliqué.</p>
+La taille (en octets) reçue de l'extraction (HTTP ou cache) du corps du message, après suppression de tout codage de contenu appliqué.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>Dans l'exemple suivant, la valeur des propriétés de taille de tous les événements de <a href="/fr/docs/Web/API/PerformanceEntry/entryType">type</a> <code>"resource"</code> est enregistrée.</p>
+Dans l'exemple suivant, la valeur des propriétés de taille de tous les événements de [type](/fr/docs/Web/API/PerformanceEntry/entryType) `"resource"` est enregistrée.
 
-<pre class="brush: js">function log_sizes(<var>perfEntry</var>){
+```js
+function log_sizes(perfEntry){
   // Vérifie la prise en charge des propriétés *size et imprime leurs
   // valeurs si elles sont prises en charge.
   if ("decodedBodySize" in perfEntry) {
@@ -53,32 +56,19 @@ translation_of: Web/API/PerformanceResourceTiming/decodedBodySize
 function check_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
   let p = performance.getEntriesByType("resource");
-  for (let i = 0; i &lt; p.length; i++) {
+  for (let i = 0; i < p.length; i++) {
     log_sizes(p[i]);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Resource Timing 2',
-        '#dom-performanceresourcetiming-decodedbodysize', 'decodedBodySize')}}</td>
-      <td>{{Spec2('Resource Timing 2')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                        | Statut                                   | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('Resource Timing 2',
+        '#dom-performanceresourcetiming-decodedbodysize', 'decodedBodySize')}} | {{Spec2('Resource Timing 2')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceResourceTiming.decodedBodySize")}}</p>
+{{Compat("api.PerformanceResourceTiming.decodedBodySize")}}

@@ -10,81 +10,76 @@ tags:
   - openCursor
 translation_of: Web/API/IDBIndex/openCursor
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>La méthode <strong><code>openCursor()</code></strong> de l'interface {{domxref("IDBIndex")}} renvoie un objet {{domxref("IDBRequest")}} et, dans un <em>thread</em> séparé, crée <a href="/fr/docs/Web/API/IDBCursor">un curseur</a> sur l'intervalle de clé fourni en argument.</p>
+La méthode **`openCursor()`** de l'interface {{domxref("IDBIndex")}} renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, crée [un curseur](/fr/docs/Web/API/IDBCursor) sur l'intervalle de clé fourni en argument.
 
-<p>La méthode la positionne le curseur de façon approprié, selon la direction indiquée :</p>
+La méthode la positionne le curseur de façon approprié, selon la direction indiquée :
 
-<ul>
- <li>Si aucun intervalle de clé n'est spécifié ou qu'il vaut {{jsxref("null")}}, l'intervalle résultant contiendra l'ensemble des enregistrements</li>
- <li>L'évènement <code>success</code> est toujours déclenché :
-  <ul>
-   <li>Si un enregistrement est trouvé la propriété <code>result</code> de l'évènement contient le nouvel objet {{domxref("IDBCursor")}} et la valeur (<code>value</code>) de ce curseur est un clône de la valeur référencée</li>
-   <li>Si aucun enregistrement n'est trouvé la propriété <code>result</code> de l'évènement vaudra <code>null</code>.</li>
-  </ul>
- </li>
-</ul>
+- Si aucun intervalle de clé n'est spécifié ou qu'il vaut {{jsxref("null")}}, l'intervalle résultant contiendra l'ensemble des enregistrements
+- L'évènement `success` est toujours déclenché :
 
-<p>{{AvailableInWorkers}}</p>
+  - Si un enregistrement est trouvé la propriété `result` de l'évènement contient le nouvel objet {{domxref("IDBCursor")}} et la valeur (`value`) de ce curseur est un clône de la valeur référencée
+  - Si aucun enregistrement n'est trouvé la propriété `result` de l'évènement vaudra `null`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+{{AvailableInWorkers}}
 
-<pre class="syntaxbox">var request = myIndex.openCursor(keyRange,direction);</pre>
+## Syntaxe
 
-<h3 id="Paramètres">Paramètres</h3>
+    var request = myIndex.openCursor(keyRange,direction);
 
-<dl>
- <dt><code>keyRange</code> {{optional_inline}}</dt>
- <dd>L'intervalle de clé ({{domxref("IDBKeyRange")}}) sur lequel se déplace le curseur. Si aucun argument n'est passé, la valeur par défaut sera un intervalle qui englobe tous les enregistrements du magasin d'objets.</dd>
- <dt><code>direction</code> {{optional_inline}}</dt>
- <dd>La direction dans laquelle se déplace le curseur (la propriété <code>direction</code> de l'objet {{domxref("IDBCursor.direction")}}). La valeur par défaut est <code>"next"</code>.</dd>
-</dl>
+### Paramètres
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+- `keyRange` {{optional_inline}}
+  - : L'intervalle de clé ({{domxref("IDBKeyRange")}}) sur lequel se déplace le curseur. Si aucun argument n'est passé, la valeur par défaut sera un intervalle qui englobe tous les enregistrements du magasin d'objets.
+- `direction` {{optional_inline}}
+  - : La direction dans laquelle se déplace le curseur (la propriété `direction` de l'objet {{domxref("IDBCursor.direction")}}). La valeur par défaut est `"next"`.
 
-<p>Un objet {{domxref("IDBRequest")}} sur lequel les évènements associés à l'opération seront déclenchés.</p>
+### Valeur de retour
 
-<h3 id="Exceptions">Exceptions</h3>
+Un objet {{domxref("IDBRequest")}} sur lequel les évènements associés à l'opération seront déclenchés.
 
-<p>Cette méthode peut déclencher une {{domxref("DOMException")}} dont le type peut être l'un des suivant :</p>
+### Exceptions
+
+Cette méthode peut déclencher une {{domxref("DOMException")}} dont le type peut être l'un des suivant :
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Type d'exception</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>TransactionInactiveError</td>
-   <td>La transaction pour cet index est inactive.</td>
-  </tr>
-  <tr>
-   <td><code>TypeError</code></td>
-   <td>La valeur du paramètre pour la direction est invalide.</td>
-  </tr>
-  <tr>
-   <td>DataError</td>
-   <td>
-    <p>La clé ou l'intervalle de clé fourni contient une clé invalide.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>L'index a été supprimé ou déplacé.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Type d'exception</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TransactionInactiveError</td>
+      <td>La transaction pour cet index est inactive.</td>
+    </tr>
+    <tr>
+      <td><code>TypeError</code></td>
+      <td>La valeur du paramètre pour la direction est invalide.</td>
+    </tr>
+    <tr>
+      <td>DataError</td>
+      <td>
+        <p>La clé ou l'intervalle de clé fourni contient une clé invalide.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>InvalidStateError</code></td>
+      <td>L'index a été supprimé ou déplacé.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans l'exemple suivant, on ouvre une transaction puis un magasin d'objet et enfin l'index <code>lName</code>.</p>
+Dans l'exemple suivant, on ouvre une transaction puis un magasin d'objet et enfin l'index `lName`.
 
-<p>Ensuite, on parcourt les enregistrements pour insérer les données dans un tableau HTML. En utilisant la méthode {{domxref("IDBIndex.openCursor")}} qui travaille de la même façon que la méthode {{domxref("IDBObjectStore.openCursor")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet sauf que les enregistrements sont renvoyés dans l'ordre de l'index et non celui du magasin d'objet.</p>
+Ensuite, on parcourt les enregistrements pour insérer les données dans un tableau HTML. En utilisant la méthode {{domxref("IDBIndex.openCursor")}} qui travaille de la même façon que la méthode {{domxref("IDBObjectStore.openCursor")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet sauf que les enregistrements sont renvoyés dans l'ordre de l'index et non celui du magasin d'objet.
 
-<pre class="brush:js">function displayDataByIndex() {
+```js
+function displayDataByIndex() {
   tableEntry.innerHTML = '';
 
   //ouvre un transaction
@@ -101,14 +96,14 @@ translation_of: Web/API/IDBIndex/openCursor
     var cursor = request.result;
     if(cursor) {
       var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '&lt;td&gt;' + cursor.value.id + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.lName + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.fName + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.jTitle + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.company + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.eMail + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.phone + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.age + '&lt;/td&gt;';
+      tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
+                           + '<td>' + cursor.value.lName + '</td>'
+                           + '<td>' + cursor.value.fName + '</td>'
+                           + '<td>' + cursor.value.jTitle + '</td>'
+                           + '<td>' + cursor.value.company + '</td>'
+                           + '<td>' + cursor.value.eMail + '</td>'
+                           + '<td>' + cursor.value.phone + '</td>'
+                           + '<td>' + cursor.value.age + '</td>';
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
@@ -116,41 +111,27 @@ translation_of: Web/API/IDBIndex/openCursor
       console.log('Tous les enregistrements ont été affichés.');
     }
   };
-};</pre>
+};
+```
 
-<div class="note">
-  <p><strong>Note :</strong> pour un exemple fonctionnel complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">application To-do</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple</a>).</p>
-</div>
+> **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/to-do-notifications/) ([exemple](https://mdn.github.io/to-do-notifications/)).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBIndex-openCursor-IDBRequest-any-range-IDBCursorDirection-direction', 'openCursor()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                    | État                         | Commentaires |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBIndex-openCursor-IDBRequest-any-range-IDBCursorDirection-direction', 'openCursor()')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBIndex.openCursor")}}</p>
+{{Compat("api.IDBIndex.openCursor")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
- <li>Initier une connexion : {{domxref("IDBDatabase")}}</li>
- <li>Utiliser les transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
- <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
-</ul>
+- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Initier une connexion : {{domxref("IDBDatabase")}}
+- Utiliser les transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
+- Utiliser les curseurs {{domxref("IDBCursor")}}
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).

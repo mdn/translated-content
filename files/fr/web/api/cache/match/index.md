@@ -13,51 +13,48 @@ tags:
   - match
 translation_of: Web/API/Cache/match
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>La méthode <strong><code>match()</code></strong> de l'interface {{domxref("Cache")}} retourne une {{jsxref("Promise", "Promesse")}} qui est résolue en une {{domxref("Response", "Réponse")}} associée à la première requête qui match dans l'objet {{domxref("Cache")}}. Si aucune requête n'est trouvée, la {{jsxref("Promise", "Promesse")}} est résolue en {{jsxref("undefined")}}.</p>
+La méthode **`match()`** de l'interface {{domxref("Cache")}} retourne une {{jsxref("Promise", "Promesse")}} qui est résolue en une {{domxref("Response", "Réponse")}} associée à la première requête qui match dans l'objet {{domxref("Cache")}}. Si aucune requête n'est trouvée, la {{jsxref("Promise", "Promesse")}} est résolue en {{jsxref("undefined")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">cache.match(request,{options}).then(function(response) {
+```js
+cache.match(request,{options}).then(function(response) {
   // faire quelque chose avec la réponse
 });
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>request</dt>
- <dd>La {{domxref("Request")}} à trouver dans le {{domxref("Cache")}}.</dd>
- <dt>options {{optional_inline}}</dt>
- <dd>Un objet qui définit des options pour l'opération de <code>match</code>. Les options disponibles sont les suivantes :
- <ul>
-  <li><code>ignoreSearch</code>: Un {{domxref("Boolean")}} qui spécifie si le matching doit ignorer ou non la query string dans l'url.  Si mis à <code>true</code>, la partie <code>?value=bar</code> de l'url <code>http://foo.com/?value=bar</code> sera ignorée lors du matching. Est à <code>false</code> par défaut.</li>
-  <li><code>ignoreMethod</code>: Un {{domxref("Boolean")}} qui, quand mis à <code>true</code>, empêche les opérations de matching de valider la méthode <code>HTTP</code> de la {{domxref("Request", "Requête")}} (en temps normal, seules <code>GET</code> et <code>HEAD</code> sont autorisées.) Est à  <code>false</code> par défaut.</li>
-  <li><code>ignoreVary</code>: Un {{domxref("Boolean")}} qui, quand mis à <code>true,</code> indique à l'opération de matching de ne pas effectuer le matching <code>VARY</code> des header.  En d'autres termes, si l'URL correspond, un match sera obtenu peu importe que la {{domxref("Response", "Réponse")}} ait un header <code>VARY</code> ou non. Est à <code>false</code> par défaut.</li>
- </ul>
- </dd>
-</dl>
+- request
+  - : La {{domxref("Request")}} à trouver dans le {{domxref("Cache")}}.
+- options {{optional_inline}}
 
-<h3 id="Retour">Retour</h3>
+  - : Un objet qui définit des options pour l'opération de `match`. Les options disponibles sont les suivantes :
 
-<p>Une {{jsxref("Promise", "Promesse")}} qui est résolue en la première {{domxref("Response", "Réponse")}} qui match la requête, ou en {{jsxref("undefined")}} si aucune requête n'est trouvée.</p>
+    - `ignoreSearch`: Un {{domxref("Boolean")}} qui spécifie si le matching doit ignorer ou non la query string dans l'url.  Si mis à `true`, la partie `?value=bar` de l'url `http://foo.com/?value=bar` sera ignorée lors du matching. Est à `false` par défaut.
+    - `ignoreMethod`: Un {{domxref("Boolean")}} qui, quand mis à `true`, empêche les opérations de matching de valider la méthode `HTTP` de la {{domxref("Request", "Requête")}} (en temps normal, seules `GET` et `HEAD` sont autorisées.) Est à  `false` par défaut.
+    - `ignoreVary`: Un {{domxref("Boolean")}} qui, quand mis à `true,` indique à l'opération de matching de ne pas effectuer le matching `VARY` des header.  En d'autres termes, si l'URL correspond, un match sera obtenu peu importe que la {{domxref("Response", "Réponse")}} ait un header `VARY` ou non. Est à `false` par défaut.
 
-<div class="note">
-<p><strong>Note :</strong> <code>Cache.match()</code> est quasiment identique à {{domxref("Cache.matchAll()")}}, si ce n'est qu'elle est résolue en <code>response[0]</code> (la première réponse qui matche) plutôt que <code>response[]</code> (un tableau de toutes les réponses qui matchent).</p>
-</div>
+### Retour
 
-<h2 id="Exemples">Exemples</h2>
+Une {{jsxref("Promise", "Promesse")}} qui est résolue en la première {{domxref("Response", "Réponse")}} qui match la requête, ou en {{jsxref("undefined")}} si aucune requête n'est trouvée.
 
-<p>Cet exemple est extrait de l'exemple <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/custom-offline-page/service-worker.js">Page hors ligne custom</a> (<a href="https://googlechrome.github.io/samples/service-worker/custom-offline-page/index.html">demo</a>).</p>
+> **Note :** `Cache.match()` est quasiment identique à {{domxref("Cache.matchAll()")}}, si ce n'est qu'elle est résolue en `response[0]` (la première réponse qui matche) plutôt que `response[]` (un tableau de toutes les réponses qui matchent).
 
-<p>L'exemple suivant se sert d'un cache pour fournir les données demandées même quand une requête échoue. Une clause <code>catch()</code> est déclenchée quand l'appel à <code>fetch()</code> lève une exception. A l'intérieur de la clause <code>catch()</code>, <code>match()</code> est utilisée to pour retourner la réponse appropriée.</p>
+## Exemples
 
-<p>Dans cet exemple, nous avons décidé que seul les documents HTML récupérés via le verbe HTTP GET seront mis en cache. Si notre condition <code>if()</code> est false, le gestionnaire fetch n'intercepte pas la requête. Si d'autres gestionnaires fetch sont enregistrés, ils ont une occasion d'appeler <code>event.respondWith()</code>. Si aucun gestionnaire fetch ne décide d'appeler <code>event.respondWith()</code>, la requête sera gérée par le navigateur comme si les service workers n'avaient pas existé. Si <code>fetch()</code> retourne une réponse HTTP valide avec un code réponse dans les 4xx ou 5xx, la clause <code>catch()</code> ne sera PAS appelée. </p>
+Cet exemple est extrait de l'exemple [Page hors ligne custom](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/custom-offline-page/service-worker.js) ([demo](https://googlechrome.github.io/samples/service-worker/custom-offline-page/index.html)).
 
-<pre class="brush: js">self.addEventListener('fetch', function(event) {
+L'exemple suivant se sert d'un cache pour fournir les données demandées même quand une requête échoue. Une clause `catch()` est déclenchée quand l'appel à `fetch()` lève une exception. A l'intérieur de la clause `catch()`, `match()` est utilisée to pour retourner la réponse appropriée.
+
+Dans cet exemple, nous avons décidé que seul les documents HTML récupérés via le verbe HTTP GET seront mis en cache. Si notre condition `if()` est false, le gestionnaire fetch n'intercepte pas la requête. Si d'autres gestionnaires fetch sont enregistrés, ils ont une occasion d'appeler `event.respondWith()`. Si aucun gestionnaire fetch ne décide d'appeler `event.respondWith()`, la requête sera gérée par le navigateur comme si les service workers n'avaient pas existé. Si `fetch()` retourne une réponse HTTP valide avec un code réponse dans les 4xx ou 5xx, la clause `catch()` ne sera PAS appelée.
+
+```js
+self.addEventListener('fetch', function(event) {
   // We only want to call event.respondWith() if this is a GET request for an HTML document.
-  if (event.request.method === 'GET' &amp;&amp;
+  if (event.request.method === 'GET' &&
       event.request.headers.get('accept').indexOf('text/html') !== -1) {
     console.log('Handling fetch event for', event.request.url);
     event.respondWith(
@@ -69,33 +66,21 @@ translation_of: Web/API/Cache/match
       })
     );
   }
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-cache-match', 'Cache match')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Statut                               | Commentaire          |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('Service Workers', '#dom-cache-match', 'Cache match')}} | {{Spec2('Service Workers')}} | Définition initiale. |
 
-<h2 id="Compatibilités_des_navigateurs">Compatibilités des navigateurs</h2>
+## Compatibilités des navigateurs
 
-<p>{{Compat("api.Cache.match")}}</p>
+{{Compat("api.Cache.match")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers">Utiliser les Service Workers</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WorkerGlobalScope.caches")}}</li>
-</ul>
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WorkerGlobalScope.caches")}}

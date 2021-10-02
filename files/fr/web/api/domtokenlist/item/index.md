@@ -9,61 +9,52 @@ tags:
   - Méthodes
 translation_of: Web/API/DOMTokenList/item
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La méthode <code><strong>item()</strong></code> de l'interface {{domxref("DOMTokenList")}} renvoie un élément de la liste par son index.</p>
+La méthode **`item()`** de l'interface {{domxref("DOMTokenList")}} renvoie un élément de la liste par son index.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">tokenList.item(index);</pre>
+    tokenList.item(index);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>index</dt>
- <dd>Une {{domxref("DOMString")}} (<em>chaîne de caractères</em>) représentant l'index de l'élément dont on veut le retour.</dd>
-</dl>
+- index
+  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant l'index de l'élément dont on veut le retour.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une {{domxref("DOMString")}} (<em>chaîne de caractères</em>) représentant l'élément renvoyé. Le retour est <code>undefined</code> (<em>indéfini</em>) si le nombre est plus grand que ou égal à la longueur de la liste.</p>
+Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant l'élément renvoyé. Le retour est `undefined` (_indéfini_) si le nombre est plus grand que ou égal à la longueur de la liste.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que <code>DOMTokenList</code> en utilisant {{domxref("Element.classList")}}. Nous récupérons le dernier élément dans la liste en utilisant <em>item(length-1)</em> et l'écrivons dans le {{domxref("Node.textContent")}} du <code>&lt;span&gt;</code>.</p>
+Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Nous récupérons le dernier élément dans la liste en utilisant _item(length-1)_ et l'écrivons dans le {{domxref("Node.textContent")}} du `<span>`.
 
-<p>D'abord le code HTML :</p>
+D'abord le code HTML :
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>Maintenant le JavaScript :</p>
+Maintenant le JavaScript :
 
-<pre class="brush: js">var span = document.querySelector("span");
+```js
+var span = document.querySelector("span");
 var classes = span.classList;
 var item = classes.item(classes.length-1);
-span.textContent = item;</pre>
+span.textContent = item;
+```
 
-<p>La sortie ressemble à ceci :</p>
+La sortie ressemble à ceci :
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-item','item()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | Statut                           | Commentaire         |
+| -------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName('DOM WHATWG','#dom-domtokenlist-item','item()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("api.DOMTokenList.item")}}</div>
+{{Compat("api.DOMTokenList.item")}}

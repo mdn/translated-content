@@ -8,34 +8,31 @@ tags:
   - Reference
 translation_of: Web/API/Document/createComment
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code>createComment()</code> crée et retourne un nouveau noeud de type commentaire.</p>
+`createComment()` crée et retourne un nouveau noeud de type commentaire.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>CommentNode</em> = document.createComment(data)
-</pre>
+    CommentNode = document.createComment(data)
 
-<h3 id="Parameters">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>data</code></dt>
- <dd>Une chaîne de caractères représentant le contenu du commentaire.</dd>
-</dl>
+- `data`
+  - : Une chaîne de caractères représentant le contenu du commentaire.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">var docu = new DOMParser().parseFromString('&lt;xml&gt;&lt;/xml&gt;',  "application/xml");
+```js
+var docu = new DOMParser().parseFromString('<xml></xml>',  "application/xml");
 var comment = docu.createComment('Voici un commentaire pas très bien caché');
 
 docu.getElementsByTagName('xml')[0].appendChild(comment);
 
 alert(new XMLSerializer().serializeToString(docu));
-// Affiche: &lt;xml&gt;&lt;!--Voici un commentaire pas très bien caché--&gt;&lt;/xml&gt;</pre>
+// Affiche: <xml><!--Voici un commentaire pas très bien caché--></xml>
+```
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createComment">createComment</a></li>
-</ul>
+- [createComment](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createComment)

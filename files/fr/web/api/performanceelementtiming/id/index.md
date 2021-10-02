@@ -10,55 +10,47 @@ tags:
   - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/id
 ---
-<div>{{SeeCompatTable}}{{Non-Standard_Header}}{{APIRef("Element Timing API")}}</div>
+{{SeeCompatTable}}{{Non-Standard_Header}}{{APIRef("Element Timing API")}}
 
-<p>La propriété en lecture seule <strong><code>id</code></strong> de l'interface <a href="/fr/docs/Web/API/PerformanceElementTiming"><code>PerformanceElementTiming</code></a> renvoie l'<a href="/fr/docs/Web/HTML/Global_attributes#attr-id"><code>id</code></a> de l'élément associé.</p>
+La propriété en lecture seule **`id`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie l'[`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) de l'élément associé.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:js">var <var>id</var> = <var>PerformanceElementTiming</var>.id;</pre>
+```js
+var id = PerformanceElementTiming.id;
+```
 
-<h3>Valeur</h3>
-<p>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a>.</p>
+### Valeur
 
-<h2 id="Examples">Exemples</h2>
+Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString).
 
-<p>Dans cet exemple, l'appel à <code>entry.id</code> entraînera l'affichage dans la console du code <code>myImage</code>, qui est l'<a href="/fr/docs/Web/HTML/Global_attributes#attr-id"><code>id</code></a> de l'élément image.</p>
+## Exemples
 
-<pre class="brush:html">&lt;img src="image.jpg" alt="une belle image" elementtiming="big-image" id="myImage"&gt;</pre>
+Dans cet exemple, l'appel à `entry.id` entraînera l'affichage dans la console du code `myImage`, qui est l'[`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) de l'élément image.
 
-<pre class="brush:js">const observer = new PerformanceObserver((list) => {
+```html
+<img src="image.jpg" alt="une belle image" elementtiming="big-image" id="myImage">
+```
+
+```js
+const observer = new PerformanceObserver((list) => {
 let entries = list.getEntries().forEach(function (entry) {
     if (entry.identifier === "big-image") {
       console.log(entry.id);
     }
   });
 });
-observer.observe({ entryTypes: ["element"] });</pre>
+observer.observe({ entryTypes: ["element"] });
+```
 
-<div class="note">
-  <p><strong>Note :</strong> Cet exemple utilise l'interface <a href="/fr/docs/Web/API/PerformanceObserver"><code>PerformanceObserver</code></a> pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément <a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>entryType</code></a> <code>element</code> afin d'utiliser l'interface <code>PerformanceElementTiming</code>.</p>
-</div>
+> **Note :** Cet exemple utilise l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément [`entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) `element` afin d'utiliser l'interface `PerformanceElementTiming`.
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Element Timing API','#dom-performanceelementtiming-id','PerformanceElementTiming.id')}}</td>
-      <td>{{Spec2('Element Timing API')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                        | Statut                                   | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
+| {{SpecName('Element Timing API','#dom-performanceelementtiming-id','PerformanceElementTiming.id')}} | {{Spec2('Element Timing API')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceElementTiming.id")}}</p>
+{{Compat("api.PerformanceElementTiming.id")}}

@@ -7,47 +7,51 @@ tags:
   - Reference
 translation_of: Web/API/Canvas_API
 ---
-<div>{{IncludeSubnav("/fr/docs/Jeux")}} {{CanvasSidebar}}</div>
+{{IncludeSubnav("/fr/docs/Jeux")}} {{CanvasSidebar}}
 
-<p>Ajouté en <a href="/fr/docs/Web/Guide/HTML/HTML5">HTML5</a>, l'élément {{HTMLElement("canvas")}} est un nouvel élément qui peut être utilisé pour dessiner des graphismes via des scripts <a href="/fr/docs/JavaScript">JavaScript</a>. Par exemple, Il peut être utilisé pour dessiner des graphes, faire des compositions de photos, des animations, ou même faire du traitement ou de l'affichage de vidéos en temps réel.</p>
+Ajouté en [HTML5](/fr/docs/Web/Guide/HTML/HTML5), l'élément {{HTMLElement("canvas")}} est un nouvel élément qui peut être utilisé pour dessiner des graphismes via des scripts [JavaScript](/fr/docs/JavaScript). Par exemple, Il peut être utilisé pour dessiner des graphes, faire des compositions de photos, des animations, ou même faire du traitement ou de l'affichage de vidéos en temps réel.
 
-<p>Les applications Mozilla ont commencé à supporter &lt;canvas&gt; à partir de Gecko 1.8 (c'est-à-dire <a href="/fr/docs/Firefox_1.5_pour_les_développeurs">Firefox 1.5</a>). L'élément a été introduit à l'origine par Apple pour le <a href="http://www.apple.com/macosx/features/dashboard/">Dashboard d'OS X</a> et pour Safari. Internet Explorer supporte &lt;canvas&gt; depuis la version 9 et ultérieures, pour les versions précédentes d'IE, une page peut effectuer ce support de &lt;canvas&gt; en incluant un script depuis le projet <a href="http://excanvas.sourceforge.net/">Explorer Canvas  </a>de Google.</p>
+Les applications Mozilla ont commencé à supporter \<canvas> à partir de Gecko 1.8 (c'est-à-dire [Firefox 1.5](/fr/docs/Firefox_1.5_pour_les_développeurs)). L'élément a été introduit à l'origine par Apple pour le [Dashboard d'OS X](http://www.apple.com/macosx/features/dashboard/) et pour Safari. Internet Explorer supporte \<canvas> depuis la version 9 et ultérieures, pour les versions précédentes d'IE, une page peut effectuer ce support de \<canvas> en incluant un script depuis le projet [Explorer Canvas  ](http://excanvas.sourceforge.net/)de Google.
 
-<p>L'élément &lt;canvas&gt; est aussi utilisé par <a href="/fr/docs/Web/API/WebGL_API">WebGL</a> pour afficher des graphismes 3D avec accélération matérielle sur des pages web.</p>
+L'élément \<canvas> est aussi utilisé par [WebGL](/fr/docs/Web/API/WebGL_API) pour afficher des graphismes 3D avec accélération matérielle sur des pages web.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Voilà un simple extrait de code qui utilise la méthode {{domxref("CanvasRenderingContext2D.fillRect()")}}.</p>
+Voilà un simple extrait de code qui utilise la méthode {{domxref("CanvasRenderingContext2D.fillRect()")}}.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.fillStyle = 'green';
 ctx.fillRect(10, 10, 100, 100);
-</pre>
+```
 
-<p>Éditez le code ci-dessous pour voir les changements avoir lieu directement dans le canvas:</p>
+Éditez le code ci-dessous pour voir les changements avoir lieu directement dans le canvas:
 
-<h4 id="code_jouable">Code jouable</h4>
+#### Code jouable
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.fillStyle = 'green';
-ctx.fillRect(10, 10, 100, 100);&lt;/textarea&gt;
-</pre>
+ctx.fillRect(10, 10, 100, 100);</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById('canvas');
+```js hidden
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
@@ -70,95 +74,72 @@ edit.addEventListener('click', function() {
 
 textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
+{{ EmbedLiveSample('code_jouable', 700, 360) }}
 
-<h2 id="Références">Références</h2>
+## Références
 
-<ul>
- <li>{{domxref("HTMLCanvasElement")}}</li>
- <li>{{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasGradient")}}</li>
- <li>{{domxref("CanvasImageSource")}}</li>
- <li>{{domxref("CanvasPattern")}}</li>
- <li>{{domxref("ImageBitmap")}}</li>
- <li>{{domxref("ImageData")}}</li>
- <li>{{domxref("RenderingContext")}}</li>
- <li>{{domxref("TextMetrics")}}</li>
- <li>{{domxref("OffscreenCanvas")}}{{experimental_inline}}</li>
- <li>{{domxref("Path2D")}} {{experimental_inline}}{{domxref("ImageBitmapRenderingContext")}}{{experimental_inline}}</li>
-</ul>
+- {{domxref("HTMLCanvasElement")}}
+- {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasGradient")}}
+- {{domxref("CanvasImageSource")}}
+- {{domxref("CanvasPattern")}}
+- {{domxref("ImageBitmap")}}
+- {{domxref("ImageData")}}
+- {{domxref("RenderingContext")}}
+- {{domxref("TextMetrics")}}
+- {{domxref("OffscreenCanvas")}}{{experimental_inline}}
+- {{domxref("Path2D")}} {{experimental_inline}}{{domxref("ImageBitmapRenderingContext")}}{{experimental_inline}}
 
-<p>Les interfaces liées au <code>WebGLRenderingContext</code> sont référencées sous <a href="/en-US/docs/Web/WebGL">WebGL</a>.</p>
+Les interfaces liées au `WebGLRenderingContext` sont référencées sous [WebGL](/en-US/docs/Web/WebGL).
 
-<p>{{domxref("CanvasCaptureMediaStream")}} est lié.</p>
+{{domxref("CanvasCaptureMediaStream")}} est lié.
 
-<h2 id="Guides_et_tutoriels">Guides et tutoriels</h2>
+## Guides et tutoriels
 
-<dl>
- <dt><a href="/fr/docs/Tutoriel_canvas">Tutoriel canvas</a></dt>
- <dd>Un tutoriel complet qui couvre à la fois l'usage élémentaire de <code>&lt;canvas&gt;</code> mais aussi ses fonctionnalités avancées.</dd>
- <dt><a href="/fr/docs/Extraits_de_code/Canvas">Extraits de code : Canvas</a></dt>
- <dd>Quelques extraits de code orientés vers les développeurs d'extension qui utilisent <code>&lt;canvas&gt;</code>.</dd>
- <dt><a href="/fr/docs/Un_raycaster_basique_avec_canvas">Demo: Un raycaster basique avec canvas</a></dt>
- <dd>Une demonstration d'animation utilisant le ray-tracing dans un élément canvas.</dd>
- <dt><a href="/fr/docs/Web/HTML/Canvas/Dessiner_des_objets_DOM_dans_un_element_canvas">Dessiner des objets DOM dans un élément canvas</a></dt>
- <dd>Comment dessiner un contenu DOM, tel que des éléments HTML, dans un canvas.</dd>
- <dt><a href="/fr/docs/HTML/Manipulating_video_using_canvas">Manipulation vidéo avec la balise canvas</a></dt>
- <dd>Combiner {{HTMLElement("video")}} et {{HTMLElement("canvas")}} pour manipuler des données video en temps réel.</dd>
-</dl>
+- [Tutoriel canvas](/fr/docs/Tutoriel_canvas)
+  - : Un tutoriel complet qui couvre à la fois l'usage élémentaire de `<canvas>` mais aussi ses fonctionnalités avancées.
+- [Extraits de code : Canvas](/fr/docs/Extraits_de_code/Canvas)
+  - : Quelques extraits de code orientés vers les développeurs d'extension qui utilisent `<canvas>`.
+- [Demo: Un raycaster basique avec canvas](/fr/docs/Un_raycaster_basique_avec_canvas)
+  - : Une demonstration d'animation utilisant le ray-tracing dans un élément canvas.
+- [Dessiner des objets DOM dans un élément canvas](/fr/docs/Web/HTML/Canvas/Dessiner_des_objets_DOM_dans_un_element_canvas)
+  - : Comment dessiner un contenu DOM, tel que des éléments HTML, dans un canvas.
+- [Manipulation vidéo avec la balise canvas](/fr/docs/HTML/Manipulating_video_using_canvas)
+  - : Combiner {{HTMLElement("video")}} et {{HTMLElement("canvas")}} pour manipuler des données video en temps réel.
 
-<h2 id="Ressources">Ressources</h2>
+## Ressources
 
-<h3 id="Général">Général</h3>
+### Général
 
-<ul>
- <li><a href="http://joshondesign.com/p/books/canvasdeepdive/title.html">HTML5 Canvas Deep Dive</a> (en)</li>
- <li><a href="http://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html">Canvas Handbook</a> (en)</li>
-</ul>
+- [HTML5 Canvas Deep Dive](http://joshondesign.com/p/books/canvasdeepdive/title.html) (en)
+- [Canvas Handbook](http://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html) (en)
 
-<h3 id="Bibliothèques">Bibliothèques</h3>
+### Bibliothèques
 
-<ul>
- <li><a href="http://fabricjs.com">Fabric.js</a> est une bibliothèque open-source qui peut analyser du code SVG.</li>
- <li><a href="https://github.com/ericdrowell/KineticJS">Kinetic.js</a> est une bibliothèque open-source concentrée sur l'interactivité pour les applications mobiles et de bureau.</li>
- <li><a href="http://paperjs.org/">Paper.js</a> est une bibliothèque open-source qui rajoute un système de dessin vectoriel au canvas HTML5.</li>
- <li><a href="http://origamijs.com/docs/">Origami.js</a> est une bibliothèque légère open-source pour canvas.</li>
- <li><a href="http://libcanvas.github.com/">libCanvas</a> est un framework canvas puissant et léger.</li>
- <li><a href="http://processingjs.org">Processing.js</a> est un portage du langage de visuaisation Processing.</li>
- <li><a href="https://playcanvas.com/">PlayCanvas</a> est un moteur de jeu open-source.</li>
- <li><a href="http://www.pixijs.com/">Pixi.js</a> est un moteur de jeu open-source.</li>
- <li><a href="http://www.liquidx.net/plotkit/">PlotKit</a> est une bibliothèque permettant de réaliser des diagrammes et des graphiques.</li>
- <li><a href="https://github.com/jeremyckahn/rekapi">Rekapi</a> est une API d'animation par key-framing pour Canvas.</li>
- <li><a href="http://senchalabs.github.com/philogl/">PhiloGL</a> est un framework WebGL pour la visualisation de données, pour la programmation créative et pour le developpement de jeux.</li>
- <li><a href="http://thejit.org/">JavaScript InfoVis Toolkit</a> crée des visualisation de données interactives en 2D avec canvas pour le Web.</li>
- <li><a href="http://www.createjs.com/easeljs">EaselJS</a> est une bibliothèque gratuite/open-source qui facilite l'utilisation de canvas pour faire des jeux ou de l'art</li>
- <li><a href="http://scrawl.rikweb.org.uk/">Scrawl-canvas</a> est une autre bibliothèque open-source pour créer et manipuler des éléments 2D dans canvas</li>
- <li><a href="https://www.patrick-wied.at/static/heatmapjs/">heatmap.js</a> est une bibliothèque open-source pour créer des cartes thermiques basées sur canvas</li>
-</ul>
+- [Fabric.js](http://fabricjs.com) est une bibliothèque open-source qui peut analyser du code SVG.
+- [Kinetic.js](https://github.com/ericdrowell/KineticJS) est une bibliothèque open-source concentrée sur l'interactivité pour les applications mobiles et de bureau.
+- [Paper.js](http://paperjs.org/) est une bibliothèque open-source qui rajoute un système de dessin vectoriel au canvas HTML5.
+- [Origami.js](http://origamijs.com/docs/) est une bibliothèque légère open-source pour canvas.
+- [libCanvas](http://libcanvas.github.com/) est un framework canvas puissant et léger.
+- [Processing.js](http://processingjs.org) est un portage du langage de visuaisation Processing.
+- [PlayCanvas](https://playcanvas.com/) est un moteur de jeu open-source.
+- [Pixi.js](http://www.pixijs.com/) est un moteur de jeu open-source.
+- [PlotKit](http://www.liquidx.net/plotkit/) est une bibliothèque permettant de réaliser des diagrammes et des graphiques.
+- [Rekapi](https://github.com/jeremyckahn/rekapi) est une API d'animation par key-framing pour Canvas.
+- [PhiloGL](http://senchalabs.github.com/philogl/) est un framework WebGL pour la visualisation de données, pour la programmation créative et pour le developpement de jeux.
+- [JavaScript InfoVis Toolkit](http://thejit.org/) crée des visualisation de données interactives en 2D avec canvas pour le Web.
+- [EaselJS](http://www.createjs.com/easeljs) est une bibliothèque gratuite/open-source qui facilite l'utilisation de canvas pour faire des jeux ou de l'art
+- [Scrawl-canvas](http://scrawl.rikweb.org.uk/) est une autre bibliothèque open-source pour créer et manipuler des éléments 2D dans canvas
+- [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/) est une bibliothèque open-source pour créer des cartes thermiques basées sur canvas
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'scripting.html#the-canvas-element', '&lt;canvas&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'scripting.html#the-canvas-element', '&lt;canvas&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/Web/WebGL">WebGL</a></li>
-</ul>
+- [WebGL](/en-US/docs/Web/WebGL)

@@ -7,53 +7,46 @@ tags:
   - Reference
 translation_of: Web/API/EventSource
 ---
-<div>{{APIRef("Websockets API")}}</div>
+{{APIRef("Websockets API")}}
 
-<p>L'interface <strong><code>EventSource</code></strong> est utilisée afin de recevoir des évènements envoyés par le serveur. Elle se connecte à un serveur via HTTP et reçoit des évènements au format <code>text/event-stream</code> avant de clôturer la connexion.</p>
+L'interface **`EventSource`** est utilisée afin de recevoir des évènements envoyés par le serveur. Elle se connecte à un serveur via HTTP et reçoit des évènements au format `text/event-stream` avant de clôturer la connexion.
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{domxref("EventSource.EventSource", "EventSource()")}}</dt>
- <dd>Cette méthode crée un nouvel objet <code>EventSource</code> à partir de l'objet {{domxref("USVString")}} fourni.</dd>
-</dl>
+- {{domxref("EventSource.EventSource", "EventSource()")}}
+  - : Cette méthode crée un nouvel objet `EventSource` à partir de l'objet {{domxref("USVString")}} fourni.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Cette interface hérite également des propriétés fournies par l'objet parent : {{domxref("EventTarget")}}.</em></p>
+_Cette interface hérite également des propriétés fournies par l'objet parent : {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("EventSource.readyState")}} {{readonlyinline}}</dt>
- <dd>Un nombre qui représente l'état de la connexion. Les valeurs possibles sont <code>CONNECTING</code> (<code>0</code>) (connexion en cours), <code>OPEN</code> (<code>1</code>) (connexion ouverte), ou <code>CLOSED</code> (<code>2</code>) (connexion fermée).</dd>
- <dt>{{domxref("EventSource.url")}} {{readonlyinline}}</dt>
- <dd>Un objet {{domxref("DOMString")}} qui représente l'URL de la source.</dd>
- <dt>{{domxref("EventSource.withCredentials")}} {{readonlyinline}}</dt>
- <dd>Un booléen qui indique si l'objet <code>EventSource</code> a été instancié avec les paramètres d'authentification CORS (<code>true</code>) ou non (<code>false</code>, la valeur par défaut).</dd>
-</dl>
+- {{domxref("EventSource.readyState")}} {{readonlyinline}}
+  - : Un nombre qui représente l'état de la connexion. Les valeurs possibles sont `CONNECTING` (`0`) (connexion en cours), `OPEN` (`1`) (connexion ouverte), ou `CLOSED` (`2`) (connexion fermée).
+- {{domxref("EventSource.url")}} {{readonlyinline}}
+  - : Un objet {{domxref("DOMString")}} qui représente l'URL de la source.
+- {{domxref("EventSource.withCredentials")}} {{readonlyinline}}
+  - : Un booléen qui indique si l'objet `EventSource` a été instancié avec les paramètres d'authentification CORS (`true`) ou non (`false`, la valeur par défaut).
 
-<h3 id="Gestionnaires_dévènement">Gestionnaires d'évènement</h3>
+### Gestionnaires d'évènement
 
-<dl>
- <dt>{{domxref("EventSource.onerror")}}</dt>
- <dd>Un objet {{event("Event_handlers", "event handler")}} qui est appelé lorsqu'une erreur se produit et que l'évènement {{event("error")}} est envoyé à l'objet <code>EventSource</code>.</dd>
- <dt>{{domxref("EventSource.onmessage")}}</dt>
- <dd>Un objet {{event("Event_handlers", "event handler")}} qui est appelé lorsqu'un évènement {{event("message")}} est reçu (ce qui signifie qu'on a reçu un message de la source).</dd>
- <dt>{{domxref("EventSource.onopen")}}</dt>
- <dd>Un objet {{event("Event_handlers", "event handler")}} qui est appelé lorsqu'un évènement {{event("open")}} est reçu, ce qui indique que la connexion vient d'être ouverte.</dd>
-</dl>
+- {{domxref("EventSource.onerror")}}
+  - : Un objet {{event("Event_handlers", "event handler")}} qui est appelé lorsqu'une erreur se produit et que l'évènement {{event("error")}} est envoyé à l'objet `EventSource`.
+- {{domxref("EventSource.onmessage")}}
+  - : Un objet {{event("Event_handlers", "event handler")}} qui est appelé lorsqu'un évènement {{event("message")}} est reçu (ce qui signifie qu'on a reçu un message de la source).
+- {{domxref("EventSource.onopen")}}
+  - : Un objet {{event("Event_handlers", "event handler")}} qui est appelé lorsqu'un évènement {{event("open")}} est reçu, ce qui indique que la connexion vient d'être ouverte.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Cette interface hérite également de méthodes grâce à son objet parent : {{domxref("EventTarget")}}.</em></p>
+_Cette interface hérite également de méthodes grâce à son objet parent : {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("EventSource.close()")}}</dt>
- <dd>Cette méthode ferme la connexion s'il y en a une en cours et change la valeur de l'attribut <code>readyState</code> en <code>CLOSED</code>. Si la connexion est déjà fermée, la méthode ne fait rien.</dd>
-</dl>
+- {{domxref("EventSource.close()")}}
+  - : Cette méthode ferme la connexion s'il y en a une en cours et change la valeur de l'attribut `readyState` en `CLOSED`. Si la connexion est déjà fermée, la méthode ne fait rien.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var evtSource = new EventSource('sse.php');
+```js
+var evtSource = new EventSource('sse.php');
 var eventList = document.querySelector('ul');
 
 evtSource.onmessage = function(e) {
@@ -61,35 +54,21 @@ evtSource.onmessage = function(e) {
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note :</strong> Un exemple complet est disponible sur GitHub, <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">voir la démonstration SSE avec PHP</a>.</p>
-</div>
+> **Note :** Un exemple complet est disponible sur GitHub, [voir la démonstration SSE avec PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "comms.html#the-eventsource-interface", "EventSource")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                             | Commentaires |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
+| {{SpecName('HTML WHATWG', "comms.html#the-eventsource-interface", "EventSource")}} | {{Spec2('HTML WHATWG')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.EventSource")}}</p>
+{{Compat("api.EventSource")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Server-sent_events/Using_server-sent_events">Utiliser les évènements générés par le serveur</a></li>
-</ul>
+- [Utiliser les évènements générés par le serveur](/fr/docs/Server-sent_events/Using_server-sent_events)

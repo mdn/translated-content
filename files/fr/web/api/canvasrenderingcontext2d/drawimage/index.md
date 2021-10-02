@@ -9,92 +9,91 @@ tags:
   - Référence(2)
 translation_of: Web/API/CanvasRenderingContext2D/drawImage
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La méthode <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.drawImage()</code></strong> de l'API 2D des Canvas instaure différentes manières de dessiner des images dans les balises canvas.</p>
+La méthode **`CanvasRenderingContext2D`\*\***`.drawImage()`\*\* de l'API 2D des Canvas instaure différentes manières de dessiner des images dans les balises canvas.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var><em>ctx</em>.drawImage(image, dx, dy);</var>
-void <var><em>ctx</em>.drawImage(image, dx, dy, dLargeur, dHauteur);</var>
-void <var><em>ctx</em>.drawImage(image, sx, sy, sLargeur, sHauteur, dx, dy, dLargeur, dHauteur);</var>
-</pre>
+    void ctx.drawImage(image, dx, dy);
+    void ctx.drawImage(image, dx, dy, dLargeur, dHauteur);
+    void ctx.drawImage(image, sx, sy, sLargeur, sHauteur, dx, dy, dLargeur, dHauteur);
 
-<p><img alt="drawImage" src="canvas_drawimage.jpg"></p>
+![drawImage](canvas_drawimage.jpg)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>image</code></dt>
- <dd>Un élément à dessiner dans le contexte. La spécification autorise toute source d'image canvas ({{domxref("CanvasImageSource")}}), ainsi qu'une {{domxref("HTMLImageElement")}}, une {{domxref("HTMLVideoElement")}}, une {{domxref("HTMLCanvasElement")}} ou une {{domxref("ImageBitmap")}}.</dd>
- <dt><code>dx</code></dt>
- <dd>La coordonnée <code>x</code> dans le canvas de destination où placer le coin supérieur gauche de l'<code>image</code> source.</dd>
- <dt><code>dy</code></dt>
- <dd>La coordonnée <code>y</code> dans le canvas de destination où placer le coin supérieur gauche de l'<code>image</code> source.</dd>
- <dt><code>dLargeur</code></dt>
- <dd>La largeur de l'<code>image</code> dessinée dans le contexte de la balise canvas. Cela permet d'ajuster la taille de l'image. Si cet argument n'est pas spécifié, l'image prendra sa largeur normale.</dd>
- <dt>dHauteur</dt>
- <dd>La hauteur de l'<code>image</code> dessinée dans le contexte de la balise canvas. Cela permet d'ajuster la taille de l'image. Si cet argument n'est pas spécifié, l'image prendra sa hauteur normale.</dd>
- <dt><code>sx</code></dt>
- <dd>La coordonnée <code>x</code> du bord en haut à gauche de la partie de l'<code>image</code> source à dessiner dans le contexte du canvas.</dd>
- <dt><code>sy</code></dt>
- <dd>La coordonnée <code>y</code> du bord en haut à gauche de la partie de l'<code>image</code> source à dessiner dans le contexte du canvas.</dd>
- <dt><code>sLargeur</code></dt>
- <dd>La largeur de la partie de l'image source à dessiner dans le contexte. Si ce n'est pas spécifié, cet argument prend la valeur de la largeur de l'image moins <code>sx</code>, autrement dit l'image dessinée dans le contexte sera la partie de l'image d'origine à partir du point s de coordonnées (<code>sx</code> ; <code>sy</code>) et jusqu'au bord en bas à droite.</dd>
- <dt><code>sHauteur</code></dt>
- <dd>La hauteur de la partie de l'image source à dessiner dans le contexte. De la même manière que pour sLargeur, si aucune valeur n'est donnée cet argument prendra la valeur de la hauteur de l'image moins <code>sy</code>.</dd>
-</dl>
+- `image`
+  - : Un élément à dessiner dans le contexte. La spécification autorise toute source d'image canvas ({{domxref("CanvasImageSource")}}), ainsi qu'une {{domxref("HTMLImageElement")}}, une {{domxref("HTMLVideoElement")}}, une {{domxref("HTMLCanvasElement")}} ou une {{domxref("ImageBitmap")}}.
+- `dx`
+  - : La coordonnée `x` dans le canvas de destination où placer le coin supérieur gauche de l'`image` source.
+- `dy`
+  - : La coordonnée `y` dans le canvas de destination où placer le coin supérieur gauche de l'`image` source.
+- `dLargeur`
+  - : La largeur de l'`image` dessinée dans le contexte de la balise canvas. Cela permet d'ajuster la taille de l'image. Si cet argument n'est pas spécifié, l'image prendra sa largeur normale.
+- dHauteur
+  - : La hauteur de l'`image` dessinée dans le contexte de la balise canvas. Cela permet d'ajuster la taille de l'image. Si cet argument n'est pas spécifié, l'image prendra sa hauteur normale.
+- `sx`
+  - : La coordonnée `x` du bord en haut à gauche de la partie de l'`image` source à dessiner dans le contexte du canvas.
+- `sy`
+  - : La coordonnée `y` du bord en haut à gauche de la partie de l'`image` source à dessiner dans le contexte du canvas.
+- `sLargeur`
+  - : La largeur de la partie de l'image source à dessiner dans le contexte. Si ce n'est pas spécifié, cet argument prend la valeur de la largeur de l'image moins `sx`, autrement dit l'image dessinée dans le contexte sera la partie de l'image d'origine à partir du point s de coordonnées (`sx` ; `sy`) et jusqu'au bord en bas à droite.
+- `sHauteur`
+  - : La hauteur de la partie de l'image source à dessiner dans le contexte. De la même manière que pour sLargeur, si aucune valeur n'est donnée cet argument prendra la valeur de la hauteur de l'image moins `sy`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
- <dt><code>INDEX_SIZE_ERR</code></dt>
- <dd>Si la balise canvas ou la largeur ou hauteur du rectangle source vaut zero ou moins.</dd>
- <dt><code>INVALID_STATE_ERR</code></dt>
- <dd>L'image reçue n'en est pas une.</dd>
- <dt><code>TYPE_MISMATCH_ERR</code></dt>
- <dd>L'image reçue n'est pas supportée.</dd>
-</dl>
+- `INDEX_SIZE_ERR`
+  - : Si la balise canvas ou la largeur ou hauteur du rectangle source vaut zero ou moins.
+- `INVALID_STATE_ERR`
+  - : L'image reçue n'en est pas une.
+- `TYPE_MISMATCH_ERR`
+  - : L'image reçue n'est pas supportée.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_la_méthode_drawImage">Utiliser la méthode <code>drawImage</code></h3>
+### Utiliser la méthode `drawImage`
 
-<p>Ceci est un extrait de code utilisant la méthode <code>drawImage</code> :</p>
+Ceci est un extrait de code utilisant la méthode `drawImage` :
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-  &lt;img id="source" src="rhino.jpg"
-       width="300" height="227"&gt;
-&lt;/div&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+  <img id="source" src="rhino.jpg"
+       width="300" height="227">
+</div>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var image = document.getElementById("source");
 
 ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
-</pre>
+```
 
-<p>Éditez le code suivant pour voir les changements en direct dans la balise canvas:</p>
+Éditez le code suivant pour voir les changements en direct dans la balise canvas:
 
-<h4 id="code_jouable">Code jouable</h4>
+#### Code jouable
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-  &lt;img id="source" src="rhino.jpg" width="300" height="227"&gt;
-&lt;/div&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
-ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);&lt;/textarea&gt;
-</pre>
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+  <img id="source" src="rhino.jpg" width="300" height="227">
+</div>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
+ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var image = document.getElementById('source');
 var textarea = document.getElementById("code");
@@ -118,50 +117,33 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
+{{ EmbedLiveSample('code_jouable', 700, 360) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-drawimage", "CanvasRenderingContext2D.drawImage")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                    | Statut                           | Commentaire |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-drawimage", "CanvasRenderingContext2D.drawImage")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.drawImage")}}</p>
+{{Compat("api.CanvasRenderingContext2D.drawImage")}}
 
-<h2 id="Notes_concernant_la_compatibilité">Notes concernant la compatibilité</h2>
+## Notes concernant la compatibilité
 
-<ul>
- <li>Un support pour l'inversion de l'image pour les valeurs négatives pour <code>sLargeur</code> et <code>sHauteur</code> a été ajouté à Gecko 5.0 {{geckoRelease("5.0")}}.</li>
- <li>A partir de {{geckoRelease("5.0")}} <code>drawImage()</code> gère les arguments négatifs, conformément à la spécification, en inversant ces valeurs par rapport aux axes.</li>
- <li>Spécifier une image <code>null</code> ou <code>undefined</code> en appellant <code>drawImage()</code> correctement retournera une exception <code>TYPE_MISMATCH_ERR</code> à partir de {{geckoRelease("5.0")}}.</li>
- <li>Prior to Gecko 7.0 {{ geckoRelease("7.0") }}, Firefox ajoute une exception si une des coordonnées est nulle ou négative. Selon la spécification, cela ne durera pas.</li>
- <li>Gecko 9.0 {{ geckoRelease("9.0") }} supporte désormais correctement le CORS pour dessiner des images de domaines étrangers sans <a href="/fr/docs/Web/HTML/Images_avec_le_contr%C3%B4le_d_acc%C3%A8s_HTTP">corrompre le canvas</a>.</li>
- <li>Gecko 11.0 {{ geckoRelease("11.0") }} permet désormais de dessiner les images SVG dans le canvas sans <a href="/fr/docs/Web/HTML/Images_avec_le_contr%C3%B4le_d_acc%C3%A8s_HTTP">corrompre le canevas</a>.</li>
-</ul>
+- Un support pour l'inversion de l'image pour les valeurs négatives pour `sLargeur` et `sHauteur` a été ajouté à Gecko 5.0 {{geckoRelease("5.0")}}.
+- A partir de {{geckoRelease("5.0")}} `drawImage()` gère les arguments négatifs, conformément à la spécification, en inversant ces valeurs par rapport aux axes.
+- Spécifier une image `null` ou `undefined` en appellant `drawImage()` correctement retournera une exception `TYPE_MISMATCH_ERR` à partir de {{geckoRelease("5.0")}}.
+- Prior to Gecko 7.0 {{ geckoRelease("7.0") }}, Firefox ajoute une exception si une des coordonnées est nulle ou négative. Selon la spécification, cela ne durera pas.
+- Gecko 9.0 {{ geckoRelease("9.0") }} supporte désormais correctement le CORS pour dessiner des images de domaines étrangers sans [corrompre le canvas](/fr/docs/Web/HTML/Images_avec_le_contr%C3%B4le_d_acc%C3%A8s_HTTP).
+- Gecko 11.0 {{ geckoRelease("11.0") }} permet désormais de dessiner les images SVG dans le canvas sans [corrompre le canevas](/fr/docs/Web/HTML/Images_avec_le_contr%C3%B4le_d_acc%C3%A8s_HTTP).
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<ul>
- <li>drawImage() ne fonctionne correctement avec {{domxref("HTMLVideoElement")}} que si {{domxref("HTMLMediaElement.readyState")}}<strong> est supérieur à 1.</strong> (i.e, Chercher l'événement renvoyé après avoir mis la propriété currentTime)</li>
-</ul>
+- drawImage() ne fonctionne correctement avec {{domxref("HTMLVideoElement")}} que si {{domxref("HTMLMediaElement.readyState")}} **est supérieur à 1.** (i.e, Chercher l'événement renvoyé après avoir mis la propriété currentTime)
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface qui la définit, {{domxref("CanvasRenderingContext2D")}}.</li>
-</ul>
+- L'interface qui la définit, {{domxref("CanvasRenderingContext2D")}}.

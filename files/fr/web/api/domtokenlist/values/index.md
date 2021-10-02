@@ -10,61 +10,54 @@ tags:
   - Valeurs
 translation_of: Web/API/DOMTokenList/values
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La méthode <code><strong>values()</strong></code> (<em>valeurs</em>) de l'interface {{domxref("DOMTokenList")}} renvoie un {{jsxref("Les_protocoles_iteration",'itérateur')}} permettant aux développeurs de passer en revue toutes les valeurs contenues dans la <code>DOMTokenList</code>. Individuellement, les valeurs sont des objets {{domxref("DOMString")}} (<em>chaînes de caractères</em>).</p>
+La méthode **`values()`** (_valeurs_) de l'interface {{domxref("DOMTokenList")}} renvoie un {{jsxref("Les_protocoles_iteration",'itérateur')}} permettant aux développeurs de passer en revue toutes les valeurs contenues dans la `DOMTokenList`. Individuellement, les valeurs sont des objets {{domxref("DOMString")}} (_chaînes de caractères_).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">tokenList.values();</pre>
+    tokenList.values();
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}}.</p>
+Renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que <code>DOMTokenList</code> en utilisant {{domxref("Element.classList")}}. Si nous récupérons un itérateur contenant les valeurs en utilisant <code>values()</code>, nous les itérons alors en utilisant une boucle <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for ... of</a> et écrivons chacune dans le {{domxref("Node.textContent")}} du <code>&lt;span&gt;</code>.</p>
+Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Si nous récupérons un itérateur contenant les valeurs en utilisant `values()`, nous les itérons alors en utilisant une boucle [for ... of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) et écrivons chacune dans le {{domxref("Node.textContent")}} du `<span>`.
 
-<p>D'abord, le HTML :</p>
+D'abord, le HTML :
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>Maintenant le JavaScript :</p>
+Maintenant le JavaScript :
 
-<pre class="brush: js">var span = document.querySelector("span");
+```js
+var span = document.querySelector("span");
 var classes = span.classList;
 var iterator = classes.values();
 
 for(var value of iterator) {
   span.textContent += value + ' ++ ';
-}</pre>
+}
+```
 
-<p>La sortie ressemble à ceci :</p>
+La sortie ressemble à ceci :
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#interface-domtokenList','values() (as iterable&lt;Node&gt;)')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | Statut                           | Commentaire         |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('DOM WHATWG','#interface-domtokenList','values() (as iterable&lt;Node&gt;)')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("api.DOMTokenList.values")}}</div>
+{{Compat("api.DOMTokenList.values")}}

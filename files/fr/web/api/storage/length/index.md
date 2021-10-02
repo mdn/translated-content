@@ -9,57 +9,44 @@ tags:
   - Web Stockage
 translation_of: Web/API/Storage/length
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>La propriété en lecture seule de l'interface {{domxref("Storage")}} retourne un entier représentant le nombre d'items stockés dans l'objet <code>Storage</code>.</p>
+La propriété en lecture seule de l'interface {{domxref("Storage")}} retourne un entier représentant le nombre d'items stockés dans l'objet `Storage`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <em>aLength</em> = <em>storage</em>.length;</pre>
+    var aLength = storage.length;
 
-<h3 id="Retour">Retour</h3>
+### Retour
 
-<p>Un entier.</p>
+Un entier.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>La fonction suivante ajoute trois éléments au localStorage du domaine courant puis retourne le nombre d'éléments dans le storage:</p>
+La fonction suivante ajoute trois éléments au localStorage du domaine courant puis retourne le nombre d'éléments dans le storage:
 
-<pre class="brush: js">function populateStorage() {
+```js
+function populateStorage() {
   localStorage.setItem('bgcolor', 'yellow');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'cats.png');
 
   localStorage.length; // retourne 3 si localStorage est vide au préalable
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note :</strong> Pour voir ceci utilisé dans un exemple concret, regardez notre <a href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>.</p>
-</div>
+> **Note :** Pour voir ceci utilisé dans un exemple concret, regardez notre [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-length', 'Storage.length')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-length', 'Storage.length')}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Storage.length")}}</p>
+{{Compat("api.Storage.length")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Utilisation de l'API de stockage web</a></li>
-</ul>
+- [Utilisation de l'API de stockage web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

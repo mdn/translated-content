@@ -8,53 +8,36 @@ tags:
   - Reference
 translation_of: Web/API/Encoding_API
 ---
-<p>{{DefaultAPISidebar("Encoding API")}}{{SeeCompatTable}}</p>
+{{DefaultAPISidebar("Encoding API")}}{{SeeCompatTable}}
 
-<p>L'<code>API Encoding</code> fournit un mecanisme de traitement de texte dans plusieurs {{Glossary("character encoding", "character encodings")}}, incluant les encodings non-{{Glossary("UTF-8")}}.</p>
+L'`API Encoding` fournit un mecanisme de traitement de texte dans plusieurs {{Glossary("character encoding", "character encodings")}}, incluant les encodings non-{{Glossary("UTF-8")}}.
 
-<p>L'API fournit quatres interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEncoder")}}, {{domxref("TextDecoderStream")}} et {{domxref("TextEncoderStream")}}.</p>
+L'API fournit quatres interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEncoder")}}, {{domxref("TextDecoderStream")}} et {{domxref("TextEncoderStream")}}.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<ul>
- <li>{{DOMxRef("TextDecoder")}}</li>
- <li>{{DOMxRef("TextEncoder")}}</li>
- <li>{{DOMxRef("TextDecoderStream")}}</li>
- <li>{{DOMxRef("TextEncoderStream")}}</li>
-</ul>
+- {{DOMxRef("TextDecoder")}}
+- {{DOMxRef("TextEncoder")}}
+- {{DOMxRef("TextDecoderStream")}}
+- {{DOMxRef("TextEncoderStream")}}
 
-<h2 id="Tutoriels_Outils">Tutoriels &amp; Outils</h2>
+## Tutoriels & Outils
 
-<ul>
- <li>Un <a href="http://code.google.com/p/stringencoding/">shim</a> permettant d'utiliser cette interface dans les navigateurs ne le supportant pas.</li>
- <li><a href="/en-US/Add-ons/Code_snippets/StringView"><code>StringView</code></a> – une représentation de type C des chaînes basée sur des tableaux typés.</li>
-</ul>
+- Un [shim](http://code.google.com/p/stringencoding/) permettant d'utiliser cette interface dans les navigateurs ne le supportant pas.
+- [`StringView`](/en-US/Add-ons/Code_snippets/StringView) – une représentation de type C des chaînes basée sur des tableaux typés.
 
-<h2 id="Caracteristiques">Caracteristiques</h2>
+## Caracteristiques
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Caracteristiques</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Encoding")}}</td>
-   <td>{{Spec2("Encoding")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Caracteristiques                 | Statut                       | Commentaire          |
+| -------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName("Encoding")}} | {{Spec2("Encoding")}} | Définition initiale. |
 
-<h2 id="Compatibilité">Compatibilité</h2>
+## Compatibilité
 
+### `TextDecoder`
 
+{{Compat("api.TextDecoder")}}
 
-<h3 id="TextDecoder"><code>TextDecoder</code></h3>
+### `TextEncoder`
 
-<p>{{Compat("api.TextDecoder")}}</p>
-
-<h3 id="TextEncoder"><code>TextEncoder</code></h3>
-
-<p>{{Compat("api.TextEncoder")}}</p>
+{{Compat("api.TextEncoder")}}

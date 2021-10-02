@@ -3,61 +3,60 @@ title: window.getComputedStyle
 slug: Web/API/Window/getComputedStyle
 translation_of: Web/API/Window/getComputedStyle
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h2 id="Résumé">Résumé</h2>
+## Résumé
 
-<p><code>La méthode window.getComputedStyle() </code>donne la  <a href="/en/CSS/used_value">valeur calculée finale</a> de toutes les propriétés CSS sur un élément.</p>
+`La méthode window.getComputedStyle() `donne la  [valeur calculée finale](/en/CSS/used_value) de toutes les propriétés CSS sur un élément.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval">var <em>style</em> = window.getComputedStyle(<em>element</em>[, <em>pseudoElt</em>]);</pre>
+    var style = window.getComputedStyle(element[, pseudoElt]);
 
-<dl>
- <dt>element</dt>
- <dd>L’{{ domxref("Element") }} pour lequel vous voulez obtenir une valeur calculée.</dd>
- <dt>pseudoElt {{ optional_inline() }}</dt>
- <dd>Chaîne de caractère spécifiant le pseudo-élément à cibler. Doit être <code>null</code> (ou non spécifiée) pour les éléments communs.</dd>
-</dl>
+- element
+  - : L’{{ domxref("Element") }} pour lequel vous voulez obtenir une valeur calculée.
+- pseudoElt {{ optional_inline() }}
+  - : Chaîne de caractère spécifiant le pseudo-élément à cibler. Doit être `null` (ou non spécifiée) pour les éléments communs.
 
-<div class="note">
-  <p><strong>Note :</strong> Avant Gecko 2.0 {{ geckoRelease("2.0") }}, le paramètre <code>pseudoElt</code> était obligatoire. Aucun autre navigateur majeur ne requiert que ce paramètre soit renseigné si il est null. Gecko a été modifié pour se comporter comme les autres navigateurs.</p>
-</div>
+> **Note :** Avant Gecko 2.0 {{ geckoRelease("2.0") }}, le paramètre `pseudoElt` était obligatoire. Aucun autre navigateur majeur ne requiert que ce paramètre soit renseigné si il est null. Gecko a été modifié pour se comporter comme les autres navigateurs.
 
-<p>La valeur de retour <code>style</code> est un objet <a href="/en/DOM/CSSStyleDeclaration"><code>CSSStyleDeclaration</code></a>.</p>
+La valeur de retour `style` est un objet [`CSSStyleDeclaration`](/en/DOM/CSSStyleDeclaration).
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var elem1 = document.getElementById("elemId");
+```js
+var elem1 = document.getElementById("elemId");
 var style = window.getComputedStyle(elem1, null);
 
 // Ce qui équivaut à :
 // var style = document.defaultView.getComputedStyle(elem1, null);
-</pre>
+```
 
-<pre class="brush: html">&lt;style&gt;
+```html
+<style>
  #elem-container{
    position: absolute;
    left:     100px;
    top:      200px;
    height:   100px;
  }
-&lt;/style&gt;
+</style>
 
-&lt;div id="elem-container"&gt;dummy&lt;/div&gt;
-&lt;div id="output"&gt;&lt;/div&gt;
+<div id="elem-container">dummy</div>
+<div id="output"></div>
 
-&lt;script&gt;
+<script>
   function getTheStyle(){
     var elem = document.getElementById("elem-container");
     var theCSSprop = window.getComputedStyle(elem,null).getPropertyValue("height");
     document.getElementById("output").innerHTML = theCSSprop;
    }
   getTheStyle();
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<pre class="brush: js">function dumpComputedStyles(elem,prop) {
+```js
+function dumpComputedStyles(elem,prop) {
 
   var cs = window.getComputedStyle(elem,null);
   if (prop) {
@@ -65,52 +64,34 @@ var style = window.getComputedStyle(elem1, null);
     return;
   }
   var len = cs.length;
-  for (var i=0;i&lt;len;i++) {
+  for (var i=0;i<len;i++) {
 
     var style = cs[i];
     console.log(style+" : "+cs.getPropertyValue(style));
   }
 
-}</pre>
+}
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'objet retourné est du même type que celui de la propriété {{domxref("HTMLElement.style", "style")}} de l'élément ciblé. Toutefois les deux objets ont des buts distincts. L'objet retourné par la méthode <code>getComputedStyle</code> est en lecture seule et peut être utilisée pour inspecter le style de l'élément y compris ceux ajoutés via un élément <code>&lt;style&gt;</code> ou une feuille de style externe. L'objet <code>elt.style</code> doit quant à lui être utilisé pour mettre à jour une propriété de style sur un élément donné.</p>
+L'objet retourné est du même type que celui de la propriété {{domxref("HTMLElement.style", "style")}} de l'élément ciblé. Toutefois les deux objets ont des buts distincts. L'objet retourné par la méthode `getComputedStyle` est en lecture seule et peut être utilisée pour inspecter le style de l'élément y compris ceux ajoutés via un élément `<style>` ou une feuille de style externe. L'objet `elt.style` doit quant à lui être utilisé pour mettre à jour une propriété de style sur un élément donné.
 
-<p>Le premier argument doit être un Element, sinon, si par exemple un #text Node est utilisé, une exception sera lancée. Depuis la version 1.9.2 de Gecko {{geckoRelease("1.9.2")}}, les URLs renvoyées ont désormais des guillemets autour de celles-ci: <code>url("http://foo.com/bar.jpg")</code>.</p>
+Le premier argument doit être un Element, sinon, si par exemple un #text Node est utilisé, une exception sera lancée. Depuis la version 1.9.2 de Gecko {{geckoRelease("1.9.2")}}, les URLs renvoyées ont désormais des guillemets autour de celles-ci: `url("http://foo.com/bar.jpg")`.
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSSOM", "#dom-window-getcomputedstyle", "getComputedStyle()")}}</td>
-      <td>{{Spec2("CSSOM")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM2 Style", "#CSS-CSSview-getComputedStyle",
-        "getComputedStyle()")}}</td>
-      <td>{{Spec2("DOM2 Style")}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                            | Statut                           | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName("CSSOM", "#dom-window-getcomputedstyle", "getComputedStyle()")}}                     | {{Spec2("CSSOM")}}         |                      |
+| {{SpecName("DOM2 Style", "#CSS-CSSview-getComputedStyle",
+        "getComputedStyle()")}} | {{Spec2("DOM2 Style")}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.getComputedStyle")}}</p>
+{{Compat("api.Window.getComputedStyle")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>{{domxref("window.getDefaultComputedStyle")}}</li>
-  <li>{{cssxref("resolved_value", "Valeur résolue")}}</li>
-</ul>
+- {{domxref("window.getDefaultComputedStyle")}}
+- {{cssxref("resolved_value", "Valeur résolue")}}

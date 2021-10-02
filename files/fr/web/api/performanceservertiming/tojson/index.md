@@ -11,45 +11,31 @@ tags:
   - toJSON
 translation_of: Web/API/PerformanceServerTiming/toJSON
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>La méthode <strong><code>toJSON()</code></strong> de l'interface <a href="/fr/docs/Web/API/PerformanceServerTiming"><code>PerformanceServerTiming</code></a> retourne une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui est la représentation JSON de l'objet <a href="/fr/docs/Web/API/PerformanceServerTiming"><code>PerformanceServerTiming</code></a>.</p>
+La méthode **`toJSON()`** de l'interface [`PerformanceServerTiming`](/fr/docs/Web/API/PerformanceServerTiming) retourne une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) qui est la représentation JSON de l'objet [`PerformanceServerTiming`](/fr/docs/Web/API/PerformanceServerTiming).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">let <var>json</var> = PerformanceServerTiming.toJSON()</pre>
+```js
+let json = PerformanceServerTiming.toJSON()
+```
 
-<h3 id="Parameters">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Return_value">Valeur de retour</h3>
+### Valeur de retour
 
-<dl>
-  <dt><code>json</code></dt>
-  <dd>Une chaîne de caractères JSON qui est la sérialisation de l'objet <a href="/fr/docs/Web/API/PerformanceServerTiming"><code>PerformanceServerTiming</code></a>.</dd>
-</dl>
+- `json`
+  - : Une chaîne de caractères JSON qui est la sérialisation de l'objet [`PerformanceServerTiming`](/fr/docs/Web/API/PerformanceServerTiming).
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Server Timing','#dom-performanceservertiming-tojson','toJSON')}}
-      </td>
-      <td>{{Spec2('Server Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                        | Statut                               | Commentaire          |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('Server Timing','#dom-performanceservertiming-tojson','toJSON')}} | {{Spec2('Server Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceServerTiming.toJSON")}}</p>
+{{Compat("api.PerformanceServerTiming.toJSON")}}

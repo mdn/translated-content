@@ -13,79 +13,71 @@ tags:
   - localStorage
 translation_of: Web/API/Window/localStorage
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>La propriété <code>localStorage</code> vous permet d'accéder à un objet local {{domxref("Storage")}}. Le <code>localStorage</code> est similaire au <code><a href="/en-US/docs/Web/API/Window.sessionStorage">sessionStorage</a></code>. La seule différence : les données stockées dans le <code>localStorage</code> n'ont pas de délai d'expiration, alors que les données stockées dans le <code>sessionStorage</code> sont nettoyées quand la session navigateur prend fin — donc quand on ferme le navigateur.</p>
+La propriété `localStorage` vous permet d'accéder à un objet local {{domxref("Storage")}}. Le `localStorage` est similaire au [`sessionStorage`](/en-US/docs/Web/API/Window.sessionStorage). La seule différence : les données stockées dans le `localStorage` n'ont pas de délai d'expiration, alors que les données stockées dans le `sessionStorage` sont nettoyées quand la session navigateur prend fin — donc quand on ferme le navigateur.
 
-<p>Il convient de noter que les données stockées dans <code>localStorage</code> ou <code>sessionStorage</code> <strong>sont spécifiques au protocole de la page.</strong></p>
+Il convient de noter que les données stockées dans `localStorage` ou `sessionStorage` **sont spécifiques au protocole de la page.**
 
-<p>Les clés et les valeurs <strong>sont toujours</strong> des chaînes de caractères (à noter que, comme pour les objets, les clés entières seront automatiquement converties en chaînes de caractères).</p>
+Les clés et les valeurs **sont toujours** des chaînes de caractères (à noter que, comme pour les objets, les clés entières seront automatiquement converties en chaînes de caractères).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">monStockage = localStorage;</pre>
+```js
+monStockage = localStorage;
+```
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un objet {{DOMxRef("Storage")}} qui peut être utilisé pour accéder à l'espace de stockage local de l'origine actuelle.</p>
+Un objet {{DOMxRef("Storage")}} qui peut être utilisé pour accéder à l'espace de stockage local de l'origine actuelle.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
- <dt><code>SecurityError</code></dt>
- <dd>La demande viole une décision politique, ou l'origine n'est pas <a href="/fr/docs/Web/Security/Same_origin_policy_for_JavaScript">un schéma/hôte/port valide</a> (cela peut se produire si l'origine utilise le shéma <code>file:</code> ou <code>data:</code>, par exemple). Par exemple, l'utilisateur peut configurer son navigateur de manière à refuser la permission de conserver des données pour l'origine spécifiée.</dd>
-</dl>
+- `SecurityError`
+  - : La demande viole une décision politique, ou l'origine n'est pas [un schéma/hôte/port valide](/fr/docs/Web/Security/Same_origin_policy_for_JavaScript) (cela peut se produire si l'origine utilise le shéma `file:` ou `data:`, par exemple). Par exemple, l'utilisateur peut configurer son navigateur de manière à refuser la permission de conserver des données pour l'origine spécifiée.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>L'extrait de code suivant accède à l'objet local {{domxref("Storage")}} du domaine courant et lui ajoute une entrée en utilisant {{domxref("Storage.setItem()")}}.</p>
+L'extrait de code suivant accède à l'objet local {{domxref("Storage")}} du domaine courant et lui ajoute une entrée en utilisant {{domxref("Storage.setItem()")}}.
 
-<pre class="brush: js">localStorage.setItem('monChat', 'Tom');</pre>
+```js
+localStorage.setItem('monChat', 'Tom');
+```
 
-<p>La syntaxe pour la lecture de l'article <code>localStorage</code> est la suivante :</p>
+La syntaxe pour la lecture de l'article `localStorage` est la suivante :
 
-<pre class="brush: js">var cat = localStorage.getItem('myCat');</pre>
+```js
+var cat = localStorage.getItem('myCat');
+```
 
-<p>La syntaxe pour la suppression de l'élément <code>localStorage</code> est la suivante :</p>
+La syntaxe pour la suppression de l'élément `localStorage` est la suivante :
 
-<pre class="brush: js">localStorage.removeItem('myCat');</pre>
+```js
+localStorage.removeItem('myCat');
+```
 
-<p>La syntaxe pour supprimer tous les éléments de <code>localStorage</code> est la suivante :</p>
+La syntaxe pour supprimer tous les éléments de `localStorage` est la suivante :
 
-<pre class="brush: js">// Effacer tous les éléments
+```js
+// Effacer tous les éléments
 localStorage.clear();
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong> Se référer à l'article <a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a> pour voir un exemple complet.</p>
-</div>
+> **Note :** Se référer à l'article [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) pour voir un exemple complet.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "webstorage.html#dom-localstorage", "localStorage")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                           | Commentaire |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName("HTML WHATWG", "webstorage.html#dom-localstorage", "localStorage")}} | {{Spec2("HTML WHATWG")}} |             |
 
-<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+## Compatibilité navigateurs
 
-<p>{{Compat("api.Window.localStorage")}}</p>
+{{Compat("api.Window.localStorage")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></li>
- <li>{{domxref("Storage/LocalStorage")}}</li>
- <li>{{domxref("Window/SessionStorage")}}</li>
- <li>{{domxref("Window.sessionStorage")}}</li>
-</ul>
+- [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- {{domxref("Storage/LocalStorage")}}
+- {{domxref("Window/SessionStorage")}}
+- {{domxref("Window.sessionStorage")}}

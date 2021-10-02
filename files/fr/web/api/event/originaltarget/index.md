@@ -10,28 +10,26 @@ tags:
   - origine
 translation_of: Web/API/Event/originalTarget
 ---
-<div>{{ ApiRef("DOM") }} {{Non-standard_header}}</div>
+{{ ApiRef("DOM") }} {{Non-standard_header}}
 
-<p>La cible d'origine de l'évènement avant tout reciblage. (spécifique à Mozilla)</p>
+La cible d'origine de l'évènement avant tout reciblage. (spécifique à Mozilla)
 
-<p>En présence de contenu anonyme <a href="/fr/docs/XBL">XBL</a>, ce sera le nœud anonyme sur lequel l'événement a été déclenché à l'origine. Voir <a href="/fr/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting">Anonymous Content#Event_Flow_and_Targeting</a> pour plus de détails.</p>
+En présence de contenu anonyme [XBL](/fr/docs/XBL), ce sera le nœud anonyme sur lequel l'événement a été déclenché à l'origine. Voir [Anonymous Content#Event_Flow_and_Targeting](/fr/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting) pour plus de détails.
 
-<p><strong>Note :</strong> <code>originalTarget</code> peut aussi être un contenu anonyme natif  (voir {{Bug("208427")}}), dans ce cas, il est inutile pour le code non privilégié.</p>
+**Note :** `originalTarget` peut aussi être un contenu anonyme natif  (voir {{Bug("208427")}}), dans ce cas, il est inutile pour le code non privilégié.
 
-<p>Voir aussi <a href="/fr/docs/Web/API/Event/Comparaison_des_cibles_d_%C3%A9v%C3%A8nements">Comparaison des cibles d'évènements.</a></p>
+Voir aussi [Comparaison des cibles d'évènements.](/fr/docs/Web/API/Event/Comparaison_des_cibles_d_%C3%A9v%C3%A8nements)
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p><em>Besoin d'un exemple qui ait du sens ici. ^^</em></p>
+_Besoin d'un exemple qui ait du sens ici. ^^_
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<p>C'est une propriété propre à Mozilla. Définie dans {{Source("/dom/public/idl/events/nsIDOMNSEvent.idl")}}</p>
+C'est une propriété propre à Mozilla. Définie dans {{Source("/dom/public/idl/events/nsIDOMNSEvent.idl")}}
 
-<p>Cette propriété d'évènements <strong>n'est pas définie</strong> dans la spécification <a href="http://www.w3.org/TR/DOM-Level-2-Events/events.html">W3.org DOM niveau 2 Events</a></p>
+Cette propriété d'évènements **n'est pas définie** dans la spécification [W3.org DOM niveau 2 Events](http://www.w3.org/TR/DOM-Level-2-Events/events.html)
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("api.Event.originalTarget")}}</p>
+{{Compat("api.Event.originalTarget")}}

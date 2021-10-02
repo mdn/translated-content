@@ -9,53 +9,48 @@ tags:
   - EventTarget
   - Interface
   - Événements DOM
-browser-compat: api.EventTarget
 translation_of: Web/API/EventTarget
+browser-compat: api.EventTarget
 ---
-<div>{{ApiRef("DOM Events")}}</div>
+{{ApiRef("DOM Events")}}
 
-<p><code>EventTarget</code> est une interface DOM implémentée par des objets qui peuvent recevoir des événements et peuvent avoir des écouteurs pour eux.</p>
+`EventTarget` est une interface DOM implémentée par des objets qui peuvent recevoir des événements et peuvent avoir des écouteurs pour eux.
 
-<p>{{domxref ("Element")}}, {{domxref ("Document")}} et {{domxref ("Window")}} sont les cibles d'événements les plus fréquentes, mais d'autres objets peuvent également être des cibles d'événements. Par exemple {{domxref ("XMLHttpRequest")}}, {{domxref ("AudioNode")}}, {{domxref ("AudioContext")}} et autres.</p>
+{{domxref ("Element")}}, {{domxref ("Document")}} et {{domxref ("Window")}} sont les cibles d'événements les plus fréquentes, mais d'autres objets peuvent également être des cibles d'événements. Par exemple {{domxref ("XMLHttpRequest")}}, {{domxref ("AudioNode")}}, {{domxref ("AudioContext")}} et autres.
 
-<p>De nombreuses cibles d'événements (y compris des éléments, des documents et des fenêtres) supporte également la définition de <a href="/fr/docs/Web/Guide/DOM/Events/Event_handlers">gestionnaires d'événements</a> via les propriétés et attributs <code>onevent</code>.</p>
+De nombreuses cibles d'événements (y compris des éléments, des documents et des fenêtres) supporte également la définition de [gestionnaires d'événements](/fr/docs/Web/Guide/DOM/Events/Event_handlers) via les propriétés et attributs `onevent`.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{domxref("EventTarget.EventTarget()", "EventTarget()")}}</dt>
- <dd>Crée une nouvelle instance d'objet <code>EventTarget</code>.</dd>
-</dl>
+- {{domxref("EventTarget.EventTarget()", "EventTarget()")}}
+  - : Crée une nouvelle instance d'objet `EventTarget`.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{domxref("EventTarget.addEventListener()", "<var>EventTarget</var>.addEventListener()")}}</dt>
- <dd>Enregistre un gestionnaire d'événements d'un type d'événement spécifique sur <code>EventTarget</code>.</dd>
- <dt>{{domxref("EventTarget.removeEventListener()", "<var>EventTarget</var>.removeEventListener()")}}</dt>
- <dd>Supprime un écouteur d'événement de <code>EventTarget</code>.</dd>
- <dt>{{domxref("EventTarget.dispatchEvent()", "<var>EventTarget</var>.dispatchEvent()")}}</dt>
- <dd>Envoie un événement à cet <code>EventTarget</code>.</dd>
-</dl>
+- {{domxref("EventTarget.addEventListener()", "<var>EventTarget</var>.addEventListener()")}}
+  - : Enregistre un gestionnaire d'événements d'un type d'événement spécifique sur `EventTarget`.
+- {{domxref("EventTarget.removeEventListener()", "<var>EventTarget</var>.removeEventListener()")}}
+  - : Supprime un écouteur d'événement de `EventTarget`.
+- {{domxref("EventTarget.dispatchEvent()", "<var>EventTarget</var>.dispatchEvent()")}}
+  - : Envoie un événement à cet `EventTarget`.
 
-<h3 id="Méthodes_supplémentaires_dans_la_base_de_code_Chrome_de_Mozilla">Méthodes supplémentaires dans la base de code Chrome de Mozilla</h3>
+### Méthodes supplémentaires dans la base de code Chrome de Mozilla
 
-<p>Mozilla inclut quelques extensions à utiliser par les cibles d'événements implémentées par JS pour implémenter les propriétés <code>onevent</code>.</p>
+Mozilla inclut quelques extensions à utiliser par les cibles d'événements implémentées par JS pour implémenter les propriétés `onevent`.
 
-<p>Voir aussi <a href="/fr/docs/Mozilla/WebIDL_bindings">liaisons WebIDL</a>.</p>
+Voir aussi [liaisons WebIDL](/fr/docs/Mozilla/WebIDL_bindings).
 
-<ul>
- <li><code>void <strong>setEventHandler</strong>(DOMString <var>type</var>, EventHandler <var>handler</var>)</code> {{non-standard_inline}}</li>
- <li><code>EventHandler <strong>getEventHandler</strong>(DOMString <var>type</var>)</code> {{non-standard_inline}}</li>
-</ul>
+- `void setEventHandler(DOMString type, EventHandler handler)` {{non-standard_inline}}
+- `EventHandler getEventHandler(DOMString type)` {{non-standard_inline}}
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="Implémentation_simple_dEventTarget">Implémentation simple d'EventTarget</h3>
+### Implémentation simple d'EventTarget
 
-<pre class="brush: js">const EventTarget = function () {
+```js
+const EventTarget = function () {
   this.listeners = {}
 }
 
@@ -72,7 +67,7 @@ EventTarget.prototype.removeEventListener = function (type, callback) {
     return
   }
   const stack = this.listeners[type]
-  for (let i = 0, l = stack.length; i &lt; l; i++) {
+  for (let i = 0, l = stack.length; i < l; i++) {
     if (stack[i] === callback) {
       stack.splice(i, 1)
       return
@@ -86,25 +81,23 @@ EventTarget.prototype.dispatchEvent = function (event) {
   }
   const stack = this.listeners[event.type].slice()
 
-  for (let i = 0, l = stack.length; i &lt; l; i++) {
+  for (let i = 0, l = stack.length; i < l; i++) {
     stack[i].call(this, event)
   }
   return !event.defaultPrevented
 }
-</pre>
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatiblité des navigateurs</h2>
+## Compatiblité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/fr/docs/Web/Reference/Events">Référence d'événement</a> - les événements disponibles sur la plateforme.</li>
- <li><a href="/fr/docs/Web/Guide/DOM/Events">Guide du développeur d'événements</a></li>
- <li>{{domxref("Event")}} interface</li>
-</ul>
+- [Référence d'événement](/fr/docs/Web/Reference/Events) - les événements disponibles sur la plateforme.
+- [Guide du développeur d'événements](/fr/docs/Web/Guide/DOM/Events)
+- {{domxref("Event")}} interface

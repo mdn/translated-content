@@ -9,54 +9,41 @@ tags:
   - Reference
 translation_of: Web/API/FileReader/readAsText
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>La méthode <code>readAsText</code> est utilisée pour lire le contenu du {{domxref("Blob")}} ou {{domxref("File")}} spécifié en paramètre. Lorsque la lecture est terminée, l'état {{domxref("FileReader.readyState","readyState")}} passe à <code>DONE</code>, l'événement {{event("loadend")}} est lancé, et l'attribut {{domxref("FileReader.result","result")}} contient le contenu du fichier sous forme de chaîne de caractères.</p>
+La méthode `readAsText` est utilisée pour lire le contenu du {{domxref("Blob")}} ou {{domxref("File")}} spécifié en paramètre. Lorsque la lecture est terminée, l'état {{domxref("FileReader.readyState","readyState")}} passe à `DONE`, l'événement {{event("loadend")}} est lancé, et l'attribut {{domxref("FileReader.result","result")}} contient le contenu du fichier sous forme de chaîne de caractères.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>instanceOfFileReader</em>.readAsText(blob[, encoding]);</pre>
+    instanceOfFileReader.readAsText(blob[, encoding]);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>blob</code></dt>
- <dd>Le {{domxref("Blob")}} ou {{domxref("File")}} qui doit être lu.</dd>
- <dt>encoding {{optional_inline}}</dt>
- <dd>Une chaîne de caractères spécifiant l'encodage utilisé dans les données de retour. Par défaut, UTF-8 est utilisé lorsque le paramètre n'est pas spécifié.</dd>
-</dl>
+- `blob`
+  - : Le {{domxref("Blob")}} ou {{domxref("File")}} qui doit être lu.
+- encoding {{optional_inline}}
+  - : Une chaîne de caractères spécifiant l'encodage utilisé dans les données de retour. Par défaut, UTF-8 est utilisé lorsque le paramètre n'est pas spécifié.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var selectedFile = document.getElementById('input').files[0];
+```js
+var selectedFile = document.getElementById('input').files[0];
 var content = document.getElementById('content');
 var reader = new FileReader();
 reader.onload = function(event) { content.innerHTML = reader.result; };
-reader.readAsText(selectedFile);</pre>
+reader.readAsText(selectedFile);
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("File API", "#FileReader-interface", "FileReader")}}</td>
-   <td>{{Spec2("File API")}}</td>
-   <td>Définition initale</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | État                         | Commentaires       |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName("File API", "#FileReader-interface", "FileReader")}} | {{Spec2("File API")}} | Définition initale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.FileReader.readAsText")}}</p>
+{{Compat("api.FileReader.readAsText")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

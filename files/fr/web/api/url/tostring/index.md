@@ -9,53 +9,41 @@ tags:
   - toString()
 translation_of: Web/API/URL/toString
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p>La méthode <strong><code>URL.toString()</code></strong> retourne un {{domxref("USVString")}} contenant tout l'URL. C'est en effet, une version de {{domxref("URL.href")}} en lecture seule.</p>
+La méthode **`URL.toString()`** retourne un {{domxref("USVString")}} contenant tout l'URL. C'est en effet, une version de {{domxref("URL.href")}} en lecture seule.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>string</em> = <em>url</em>.toString();</pre>
+    string = url.toString();
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un {{domxref("USVString")}}.</p>
+Un {{domxref("USVString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+```js
+const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
 url.toString() // doit retourner l'URL en tant que chaîne
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#URL-stringification-behavior', 'stringifier')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | Statut               | Commentaire          |
+| ---------------------------------------------------------------------------------------- | -------------------- | -------------------- |
+| {{SpecName('URL', '#URL-stringification-behavior', 'stringifier')}} | {{Spec2('URL')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.URL.toString")}}</p>
+{{Compat("api.URL.toString")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface {{domxref("URL")}} à laquelle elle appartient.</li>
-</ul>
+- L'interface {{domxref("URL")}} à laquelle elle appartient.

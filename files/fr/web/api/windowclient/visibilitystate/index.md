@@ -3,26 +3,29 @@ title: WindowClient.visibilityState
 slug: Web/API/WindowClient/visibilityState
 translation_of: Web/API/WindowClient/visibilityState
 ---
-<p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>La propriété <strong><code>visibilityState</code></strong>,  en lecture seule de l'interface {{domxref("WindowClient")}} indique la visibilité du client courant. La valeur pourra être :  <code>hidden</code>, <code>visible</code>, <code>prerender</code>, or <code>unloaded</code>.</p>
+La propriété **`visibilityState`**,  en lecture seule de l'interface {{domxref("WindowClient")}} indique la visibilité du client courant. La valeur pourra être :  `hidden`, `visible`, `prerender`, or `unloaded`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">myVisState = WindowClient.visibilityState;</pre>
+```js
+myVisState = WindowClient.visibilityState;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>une  {{domxref("DOMString")}}.</p>
+une  {{domxref("DOMString")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">  event.waitUntil(clients.matchAll({
+```js
+  event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client) {
+      if (client.url == '/' && 'focus' in client) {
         if(visibilityState === 'hidden')
           return client.focus();
         }
@@ -31,25 +34,15 @@ translation_of: Web/API/WindowClient/visibilityState
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#window-client-interface', 'WindowClient')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                               | Comment             |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName('Service Workers', '#window-client-interface', 'WindowClient')}} | {{Spec2('Service Workers')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WindowClient.visibilityState")}}</p>
+{{Compat("api.WindowClient.visibilityState")}}

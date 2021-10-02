@@ -9,70 +9,53 @@ tags:
   - scrollTo
 translation_of: Web/API/Element/scrollTo
 ---
-<div>{{ APIRef }}</div>
+{{ APIRef }}
 
-<p>La méthode <code><strong>scrollTo()</strong></code><strong> </strong>de l'interface {{domxref("Element")}} permet de faire défiler le document jusqu'à un jeu de coordonnées particulier.</p>
+La méthode **`scrollTo()`\*\*** \*\*de l'interface {{domxref("Element")}} permet de faire défiler le document jusqu'à un jeu de coordonnées particulier.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">element.scrollTo(<em>x-coord</em>, <em>y-coord</em>)
-element.scrollTo(<em>options</em>)
-</pre>
+    element.scrollTo(x-coord, y-coord)
+    element.scrollTo(options)
 
-<h3 id="Parameters">Paramètres</h3>
+### Paramètres
 
-<ul>
- <li><code>x-coord</code> est le pixel le long de l'axe horizontal du document qui doit être affiché en haut à gauche.</li>
- <li><code>y-coord</code> est le pixel le long de l'axe vertical du document qui doit être affiché en haut à gauche.</li>
-</ul>
+- `x-coord` est le pixel le long de l'axe horizontal du document qui doit être affiché en haut à gauche.
+- `y-coord` est le pixel le long de l'axe vertical du document qui doit être affiché en haut à gauche.
 
-<p>- ou -</p>
+\- ou -
 
-<ul>
- <li><code>options</code> est un dictionnaire de type {{domxref("ScrollToOptions")}}.</li>
-</ul>
+- `options` est un dictionnaire de type {{domxref("ScrollToOptions")}}.
 
-<h2 id="Example">Exemples</h2>
+## Exemples
 
-<p>En utilisant des coordonnées :</p>
+En utilisant des coordonnées :
 
-<pre class="brush:js">element.scrollTo(0, 1000);
-</pre>
+```js
+element.scrollTo(0, 1000);
+```
 
-<p>Ou en utilisant <code>options</code> :</p>
+Ou en utilisant `options` :
 
-<pre class="brush: js">element.scrollTo({
+```js
+element.scrollTo({
   top: 100,
   left: 100,
   behavior: 'smooth'
-});</pre>
+});
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM View', '#dom-element-scrollto-options-options', 'element.scrollTo()') }}</td>
-   <td>{{ Spec2('CSSOM View') }}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | Statut                           | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{ SpecName('CSSOM View', '#dom-element-scrollto-options-options', 'element.scrollTo()') }} | {{ Spec2('CSSOM View') }} | Définition initiale. |
 
-<h2 id="Compatibilité">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Element.scrollTo")}}</p>
+{{Compat("api.Element.scrollTo")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Element.scrollTop")}}, {{domxref("Element.scrollLeft")}}</li>
- <li>{{domxref("Window.scrollTo()")}}</li>
-</ul>
+- {{domxref("Element.scrollTop")}}, {{domxref("Element.scrollLeft")}}
+- {{domxref("Window.scrollTo()")}}

@@ -9,68 +9,58 @@ tags:
   - Reference
 translation_of: Web/API/GlobalEventHandlers/onselect
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>La propriété <strong><code>onselect</code></strong> du mixin {{domxref("GlobalEventHandlers")}} est un {{event("Event_handlers", "event handler")}} qui traite les événements <a href="/fr-FR/docs/Web/API/Element/select_event"><code>select</code></a>.</p>
+La propriété **`onselect`** du mixin {{domxref("GlobalEventHandlers")}} est un {{event("Event_handlers", "event handler")}} qui traite les événements [`select`](/fr-FR/docs/Web/API/Element/select_event).
 
-<p>L'événement <code>select</code> n'est déclenché qu'après que du texte à l'intérieur d'un <code>{{HtmlElement('input/text', '&lt;input type="text"&gt;')}}</code> ou d'un {{HtmlElement("textarea")}} a été sélectionné.</p>
+L'événement `select` n'est déclenché qu'après que du texte à l'intérieur d'un `{{HtmlElement('input/text', '&lt;input type="text"&gt;')}}` ou d'un {{HtmlElement("textarea")}} a été sélectionné.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>target</em>.onselect = <em>functionRef</em>;
-</pre>
+    target.onselect = functionRef;
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p><code>réfFonction</code> est un nom de fonction ou une <a href="/fr-FR/docs/Web/JavaScript/Reference/Operators/function">expression retournant une fonction</a>. La fonction reçoit un objet {{domxref("UIEvent")}} comme unique argument.</p>
+`réfFonction` est un nom de fonction ou une [expression retournant une fonction](/fr-FR/docs/Web/JavaScript/Reference/Operators/function). La fonction reçoit un objet {{domxref("UIEvent")}} comme unique argument.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple enregistre le texte que vous sélectionnez à l'intérieur d'un élément {{HtmlElement("textarea")}}.</p>
+Cet exemple enregistre le texte que vous sélectionnez à l'intérieur d'un élément {{HtmlElement("textarea")}}.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;textarea&gt;Essayez de sélectionner du texte dans cet élément.&lt;/textarea&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<textarea>Essayez de sélectionner du texte dans cet élément.</textarea>
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function enregistrerSelection(event) {
+```js
+function enregistrerSelection(event) {
   const log = document.getElementById('log');
   const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
   log.textContent = `Vous avez sélectionné : ${selection}`;
 }
 
 const textarea = document.querySelector('textarea');
-textarea.onselect = enregistrerSelection;</pre>
+textarea.onselect = enregistrerSelection;
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onselect','onselect')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                           | Commentaire |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onselect','onselect')}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.GlobalEventHandlers.onselect")}}</p>
+{{Compat("api.GlobalEventHandlers.onselect")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'événement <a href="/fr-FR/docs/Web/API/Element/select_event"><code>select</code></a></li>
-</ul>
+- L'événement [`select`](/fr-FR/docs/Web/API/Element/select_event)

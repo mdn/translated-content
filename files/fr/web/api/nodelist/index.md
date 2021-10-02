@@ -9,111 +9,87 @@ tags:
   - Noeuds
 translation_of: Web/API/NodeList
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Les objets <strong><code>NodeList</code></strong> sont des collections de nœuds comme celles retournées par {{domxref("Node.childNodes")}} et la méthode {{domxref("document.querySelectorAll()")}}.</p>
+Les objets **`NodeList`** sont des collections de nœuds comme celles retournées par {{domxref("Node.childNodes")}} et la méthode {{domxref("document.querySelectorAll()")}}.
 
-<div class="note">
-<p><strong>Note :</strong> Bien que <code>NodeList</code> ne soit pas un tableau (<code>Array</code>), il est possible d'itérer dessus en utilisant <code>forEach()</code>. Il peut également être converti en tableau (<code>Array</code>) en utilisant {{jsxref("Array.from()")}}.</p>
+> **Note :** Bien que `NodeList` ne soit pas un tableau (`Array`), il est possible d'itérer dessus en utilisant `forEach()`. Il peut également être converti en tableau (`Array`) en utilisant {{jsxref("Array.from()")}}.
+>
+> Néanmoins certains vieux navigateurs n'ont pas encore implémenté `NodeList.forEach()` ni `Array.from()`. Mais ces limitations peuvent être contournées en utilisant {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} (plus dans ce document).
 
-<p>Néanmoins certains vieux navigateurs n'ont pas encore implémenté <code>NodeList.forEach()</code> ni <code>Array.from()</code>. Mais ces limitations peuvent être contournées en utilisant {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} (plus dans ce document).</p>
-</div>
+Dans certains cas, la `NodeList` est une collection en direct, ce qui signifie que les changements dans le DOM sont reflétés dans la collection. Par exemple,  {{domxref("Node.childNodes")}} est en direct :
 
-<p>Dans certains cas, la <code>NodeList</code> est une collection en direct, ce qui signifie que les changements dans le DOM sont reflétés dans la collection. Par exemple,  {{domxref("Node.childNodes")}} est en direct :</p>
-
-<pre class="brush: js">var parent = document.getElementById('parent');
+```js
+var parent = document.getElementById('parent');
 var child_nodes = parent.childNodes;
 console.log(child_nodes.length); // supposons "2"
 parent.appendChild(document.createElement('div'));
-console.log(child_nodes.length); // devrait afficher "3"</pre>
+console.log(child_nodes.length); // devrait afficher "3"
+```
 
-<p>Dans d'autres cas, la <code>NodeList</code> est une collection statique, ce qui signifie que tout changement dans le DOM n'affectera pas le contenu de la collection. {{domxref("document.querySelectorAll()")}}  renvoie une <code>NodeList</code> statique.</p>
+Dans d'autres cas, la `NodeList` est une collection statique, ce qui signifie que tout changement dans le DOM n'affectera pas le contenu de la collection. {{domxref("document.querySelectorAll()")}}  renvoie une `NodeList` statique.
 
-<p>Il est bon de garder cette distinction à l'esprit pour choisir la façon de parcourir les éléments de la liste des nœuds et, en particulier, pour mettre en cache la longueur de la liste.</p>
+Il est bon de garder cette distinction à l'esprit pour choisir la façon de parcourir les éléments de la liste des nœuds et, en particulier, pour mettre en cache la longueur de la liste.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{domxref("NodeList.length")}}</dt>
- <dd>Le nombre de nœuds dans la <code>NodeList</code>.</dd>
-</dl>
+- {{domxref("NodeList.length")}}
+  - : Le nombre de nœuds dans la `NodeList`.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{domxref("NodeList.item()")}}</dt>
- <dd>Retourne un élément de la liste par son index ou <code>null</code> si l'index est en dehors des limites. Équivalent à <code>nodeList[idx]</code> (qui renvoie à la place <code>undefined</code> quand  <code>idx</code> est hors des limites).</dd>
- <dt>{{domxref("NodeList.entries()")}}</dt>
- <dd>renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}} permettant de parcourir toutes les paires clé / valeur contenues dans cet objet.</dd>
- <dt>{{domxref("NodeList.forEach()")}}</dt>
- <dd>exécute une fonction fournie une fois par élément <code>NodeList</code>.</dd>
- <dt>{{domxref("NodeList.keys()")}}</dt>
- <dd>renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}} permettant de parcourir toutes les clés des paires clé / valeur contenues dans cet objet.</dd>
- <dt>{{domxref("NodeList.values()")}}</dt>
- <dd>renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}} permettant de parcourir toutes les valeurs des paires clé / valeur contenues dans cet objet.</dd>
-</dl>
+- {{domxref("NodeList.item()")}}
+  - : Retourne un élément de la liste par son index ou `null` si l'index est en dehors des limites. Équivalent à `nodeList[idx]` (qui renvoie à la place `undefined` quand  `idx` est hors des limites).
+- {{domxref("NodeList.entries()")}}
+  - : renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}} permettant de parcourir toutes les paires clé / valeur contenues dans cet objet.
+- {{domxref("NodeList.forEach()")}}
+  - : exécute une fonction fournie une fois par élément `NodeList`.
+- {{domxref("NodeList.keys()")}}
+  - : renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}} permettant de parcourir toutes les clés des paires clé / valeur contenues dans cet objet.
+- {{domxref("NodeList.values()")}}
+  - : renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}} permettant de parcourir toutes les valeurs des paires clé / valeur contenues dans cet objet.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Il est possible de boucler sur les éléments d'une <code>NodeList</code> en utilisant :</p>
+Il est possible de boucler sur les éléments d'une `NodeList` en utilisant :
 
-<pre class="brush: js">for (var i = 0; i &lt; myNodeList.length; ++i) {
+```js
+for (var i = 0; i < myNodeList.length; ++i) {
   var item = myNodeList[i];  // L'appel de myNodeList.item(i) n'est pas nécessaire en JavaScript
 }
-</pre>
+```
 
-<p>Ne soyez pas tenté d'utiliser <code><a href="/fr/docs/JavaScript/Reference/Instructions/for...in">for… in</a></code> ou <code><a href="/fr/docs/JavaScript/Reference/Instructions/for_each…in">for each… in</a></code> pour énumérer les éléments de la liste, car cela énumère également la taille (<code>length</code>) et les propriétés du <code>NodeList</code> et cause des erreurs si votre script ne gère que les objets de type {{domxref("element")}}. De plus, <code>for… in</code> ne garantit pas de visiter les propriétés dans un ordre particulier.</p>
+Ne soyez pas tenté d'utiliser [`for… in`](/fr/docs/JavaScript/Reference/Instructions/for...in) ou [`for each… in`](/fr/docs/JavaScript/Reference/Instructions/for_each…in) pour énumérer les éléments de la liste, car cela énumère également la taille (`length`) et les propriétés du `NodeList` et cause des erreurs si votre script ne gère que les objets de type {{domxref("element")}}. De plus, `for… in` ne garantit pas de visiter les propriétés dans un ordre particulier.
 
-<p>Les boucles <code><a href="/fr/docs/JavaScript/Référence_JavaScript/Instructions/for...of">for… of</a></code> boucleront correctement sur les objets <code>NodeList</code> :</p>
+Les boucles [`for… of`](/fr/docs/JavaScript/Référence_JavaScript/Instructions/for...of) boucleront correctement sur les objets `NodeList` :
 
-<pre class="brush: js">var list = document.querySelectorAll( 'input[type=checkbox]' );
+```js
+var list = document.querySelectorAll( 'input[type=checkbox]' );
 for (var item of list) {
   item.checked = true;
-}</pre>
+}
+```
 
-<p>Les navigateurs récents prennent également en charge les méthodes d'itérateur {{domxref("NodeList.forEach()", "forEach()")}}, aussi bien que {{domxref("NodeList.entries()", "entries()")}}, {{domxref("NodeList.values()", "values()")}} et {{domxref("NodeList.keys()", "keys()")}}.</p>
+Les navigateurs récents prennent également en charge les méthodes d'itérateur {{domxref("NodeList.forEach()", "forEach()")}}, aussi bien que {{domxref("NodeList.entries()", "entries()")}}, {{domxref("NodeList.values()", "values()")}} et {{domxref("NodeList.keys()", "keys()")}}.
 
-<p>Il y a aussi dans Internet Explorer une façon compatible d'utiliser {{jsxref("Array.forEach()", "Array.prototype.forEach")}} pour l'itération.</p>
+Il y a aussi dans Internet Explorer une façon compatible d'utiliser {{jsxref("Array.forEach()", "Array.prototype.forEach")}} pour l'itération.
 
-<pre class="brush: js">var list = document.querySelectorAll( 'input[type=checkbox]' );
+```js
+var list = document.querySelectorAll( 'input[type=checkbox]' );
 Array.prototype.forEach.call(list, function (item) {
   item.checked = true;
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-536297177', 'NodeList')}}</td>
-   <td>{{ Spec2('DOM3 Core') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-536297177', 'NodeList')}}</td>
-   <td>{{ Spec2('DOM2 Core') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-536297177', 'NodeList')}}</td>
-   <td>{{ Spec2('DOM1') }}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | Statut                           | Commentaire          |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}}             | {{ Spec2('DOM WHATWG') }} |                      |
+| {{SpecName('DOM3 Core', 'core.html#ID-536297177', 'NodeList')}}         | {{ Spec2('DOM3 Core') }} |                      |
+| {{SpecName('DOM2 Core', 'core.html#ID-536297177', 'NodeList')}}         | {{ Spec2('DOM2 Core') }} |                      |
+| {{SpecName('DOM1', 'level-one-core.html#ID-536297177', 'NodeList')}} | {{ Spec2('DOM1') }}         | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.NodeList")}}</p>
+{{Compat("api.NodeList")}}

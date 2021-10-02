@@ -10,30 +10,31 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceObserver/PerformanceObserver
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>Le constructeur <strong><code>PerformanceObserver()</code></strong> crée un nouvel objet <a href="/fr/docs/Web/API/PerformanceObserver"><code>PerformanceObserver</code></a> avec le <code>callback</code> d'observation donné. La fonction de rappel de l'observateur est invoquée lorsque des <a href="/fr/docs/Web/API/PerformanceEntry">événements d'entrée de performance</a> sont répertoriés pour les <a href="/fr/docs/Web/API/PerformanceEntry/entryType">types d'entrées</a> qui ont été enregistrés, via la méthode <a href="/fr/docs/Web/API/PerformanceObserver/observe"><code>observe()</code></a>.</p>
+Le constructeur **`PerformanceObserver()`** crée un nouvel objet [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) avec le `callback` d'observation donné. La fonction de rappel de l'observateur est invoquée lorsque des [événements d'entrée de performance](/fr/docs/Web/API/PerformanceEntry) sont répertoriés pour les [types d'entrées](/fr/docs/Web/API/PerformanceEntry/entryType) qui ont été enregistrés, via la méthode [`observe()`](/fr/docs/Web/API/PerformanceObserver/observe).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:js">const <var>observer</var> = new PerformanceObserver(<var>callback</var>);</pre>
+```js
+const observer = new PerformanceObserver(callback);
+```
 
-<h3 id="Parameters">Paramètres</h3>
+### Paramètres
 
-<dl>
-  <dt><code>callback</code></dt>
-  <dd>Une fonction de rappel qui sera invoquée lorsque des événements de performance <em>observés</em> sont enregistrés. Lorsque la fonction de rappel est invoquée, son premier paramètre est une <a href="/fr/docs/Web/API/PerformanceObserverEntryList">liste des entrées de l'observateur de performance</a> et le second paramètre est l'objet <a href="/fr/docs/Web/API/PerformanceObserver"><code>PerformanceObserver</code></a> courant.</dd>
-</dl>
+- `callback`
+  - : Une fonction de rappel qui sera invoquée lorsque des événements de performance _observés_ sont enregistrés. Lorsque la fonction de rappel est invoquée, son premier paramètre est une [liste des entrées de l'observateur de performance](/fr/docs/Web/API/PerformanceObserverEntryList) et le second paramètre est l'objet [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) courant.
 
-<h3 id="Return_value">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un nouvel objet <a href="/fr/docs/Web/API/PerformanceObserver"><code>PerformanceObserver</code></a> qui appellera le <code>callback</code> spécifiée lorsque des événements de performance observés se produisent.</p>
+Un nouvel objet [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) qui appellera le `callback` spécifiée lorsque des événements de performance observés se produisent.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">const observer = new PerformanceObserver(function(list, obj) {
+```js
+const observer = new PerformanceObserver(function(list, obj) {
   let entries = list.getEntries();
-  for (let i = 0; i &lt; entries.length; i++) {
+  for (let i = 0; i < entries.length; i++) {
     // Traiter les événements "mark" et "frame"
   }
 });
@@ -44,28 +45,15 @@ function perf_observer(list, observer) {
 }
 const observer2 = new PerformanceObserver(perf_observer);
 observer2.observe({entryTypes: ["measure"]});
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Performance Timeline Level 2',
-        '#idl-def-performanceobservercallback', 'PerformanceObserver()')}}</td>
-      <td>{{Spec2('Performance Timeline Level 2')}}</td>
-      <td>Définition initiale du constructeur <code>PerformanceObserver()</code>.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                                | Statut                                                   | Commentaire                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------------ |
+| {{SpecName('Performance Timeline Level 2',
+        '#idl-def-performanceobservercallback', 'PerformanceObserver()')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale du constructeur `PerformanceObserver()`. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceObserver.PerformanceObserver")}}</p>
+{{Compat("api.PerformanceObserver.PerformanceObserver")}}

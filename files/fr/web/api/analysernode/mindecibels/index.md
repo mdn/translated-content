@@ -3,32 +3,32 @@ title: AnalyserNode.minDecibels
 slug: Web/API/AnalyserNode/minDecibels
 translation_of: Web/API/AnalyserNode/minDecibels
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>La propriété <strong><code>minDecibels</code></strong> de l'objet {{ domxref("AnalyserNode") }} est un nombre flottant à double précision représentant la puissance maximum de l'intervalle pour l'analyse des données FFT, pour une conversion vers des valeurs non signées ou des nombres flottants — en d'autres termes, elle spécifie la valeur minimum pour l'intervalle de résultats des méthodes <code>getFloatFrequencyData()</code> et <code>getByteFrequencyData()</code>.</p>
+La propriété **`minDecibels`** de l'objet {{ domxref("AnalyserNode") }} est un nombre flottant à double précision représentant la puissance maximum de l'intervalle pour l'analyse des données FFT, pour une conversion vers des valeurs non signées ou des nombres flottants — en d'autres termes, elle spécifie la valeur minimum pour l'intervalle de résultats des méthodes `getFloatFrequencyData()` et `getByteFrequencyData()`.
 
-<p>Sa valeur par défaut est <code>-100</code>.</p>
+Sa valeur par défaut est `-100`.
 
-<div class="note">
-<p><strong>Note :</strong> Si une valeur inférieure à <code>AnalyserNode.minDecibels</code> est indiquée, une erreur <code>INDEX_SIZE_ERR</code> est levée.</p>
-</div>
+> **Note :** Si une valeur inférieure à `AnalyserNode.minDecibels` est indiquée, une erreur `INDEX_SIZE_ERR` est levée.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var contexteAudio = new AudioContext();
+```js
+var contexteAudio = new AudioContext();
 var analyseur = contexteAudio.createAnalyser();
 analyseur.maxDecibels = -90;
-</pre>
+```
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un nombre flottant à double précision.</p>
+Un nombre flottant à double précision.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>L'exemple suivant montre comment créer simplement un  <code>AnalyserNode</code> avec {{domxref("AudioContext")}}, puis utiliser  {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a>  (et en particulier <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a>).</p>
+L'exemple suivant montre comment créer simplement un  `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser  {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)  (et en particulier [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
-<pre class="brush: js">var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
 var analyseur = contexteAudio.createAnalyser();
 analyseur.minDecibels = -90;
 analyseur.maxDecibels = -10;
@@ -54,7 +54,7 @@ function dessiner() {
   var hauteurBarre;
   var x = 0;
 
-  for(var i = 0; i &lt; tailleMemoireTampon; i++) {
+  for(var i = 0; i < tailleMemoireTampon; i++) {
     hauteurBarre = tableauDonnees[i];
 
     canvasCtx.fillStyle = 'rgb(' + (hauteurBarre+100) + ',50,50)';
@@ -64,31 +64,19 @@ function dessiner() {
   }
 };
 
-dessiner();</pre>
+dessiner();
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AnalyserNode-maxDecibels', 'maxDecibels')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                               | Commentaire |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
+| {{SpecName('Web Audio API', '#widl-AnalyserNode-maxDecibels', 'maxDecibels')}} | {{Spec2('Web Audio API')}} |             |
 
-<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+## Compatibilité navigateurs
 
-<p>{{Compat("api.AnalyserNode.minDecibels")}}</p>
+{{Compat("api.AnalyserNode.minDecibels")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/fr/docs/Web_Audio_API/Using_Web_Audio_API">Utiliser la Web Audio API</a></li>
-</ul>
+- [Utiliser la Web Audio API](/fr/docs/Web_Audio_API/Using_Web_Audio_API)

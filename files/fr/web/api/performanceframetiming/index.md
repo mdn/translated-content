@@ -11,65 +11,48 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceFrameTiming
 ---
-<div>{{SeeCompatTable}}{{APIRef("Frame Timing API")}}</div>
+{{SeeCompatTable}}{{APIRef("Frame Timing API")}}
 
-<p><strong><code>PerformanceFrameTiming</code></strong> est une interface <em>abstraite</em> qui fournit des données d'horodatage de « <em>frame</em> » pour la boucle d'événements du navigateur. Une « <em>frame</em> » représente la quantité de travail qu'un navigateur effectue dans <a href="https://html.spec.whatwg.org/multipage/webappapis.html#processing-model-8">une itération de la boucle d'événements</a>, comme le traitement des événements DOM, le redimensionnement, le défilement, le rendu, les animations CSS, etc. Un <i>frame rate</i> de 60fps (images par seconde) pour un taux de rafraîchissement de 60Hz est l'objectif pour une expérience utilisateur réactive. Cela signifie que le navigateur doit traiter une image en environ 16,7 ms.</p>
+**`PerformanceFrameTiming`** est une interface _abstraite_ qui fournit des données d'horodatage de « _frame_ » pour la boucle d'événements du navigateur. Une « _frame_ » représente la quantité de travail qu'un navigateur effectue dans [une itération de la boucle d'événements](https://html.spec.whatwg.org/multipage/webappapis.html#processing-model-8), comme le traitement des événements DOM, le redimensionnement, le défilement, le rendu, les animations CSS, etc. Un _frame rate_ de 60fps (images par seconde) pour un taux de rafraîchissement de 60Hz est l'objectif pour une expérience utilisateur réactive. Cela signifie que le navigateur doit traiter une image en environ 16,7 ms.
 
-<p>Une application peut enregistrer un <a href="/fr/docs/Web/API/PerformanceObserver"><code>PerformanceObserver</code></a> pour une « <code>frame</code> » de <a href="/fr/docs/Web/API/PerformanceEntry">l'entrée de performance</a> et l'observateur peut récupérer des données sur la durée de chaque événement. Ces informations peuvent être utilisées pour aider à identifier les choses qui consomment trop de temps pour offrir une bonne expérience utilisateur.</p>
+Une application peut enregistrer un [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour une « `frame` » de [l'entrée de performance](/fr/docs/Web/API/PerformanceEntry) et l'observateur peut récupérer des données sur la durée de chaque événement. Ces informations peuvent être utilisées pour aider à identifier les choses qui consomment trop de temps pour offrir une bonne expérience utilisateur.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Propriétés</h2>
+## Propriétés
 
-<p>Cette interface n'a pas de propriétés mais elle étend les propriétés de <a href="/fr/docs/Web/API/PerformanceEntry"><code>PerformanceEntry</code></a> suivantes (c'est-à-dire quand le type de <a href="/fr/docs/Web/API/PerformanceEntry">l'entrée de performance</a> vaut « <code>frame</code> ») en restreignant les propriétés comme suit :</p>
+Cette interface n'a pas de propriétés mais elle étend les propriétés de [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) suivantes (c'est-à-dire quand le type de [l'entrée de performance](/fr/docs/Web/API/PerformanceEntry) vaut « `frame` ») en restreignant les propriétés comme suit :
 
-<dl>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>PerformanceEntry.entryType</code></a></dt>
-  <dd>Retourne « <code>frame</code> ».</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry/name"><code>PerformanceEntry.name</code></a></dt>
-  <dd>Renvoie l'adresse du <a href="https://dom.spec.whatwg.org/#concept-document-url">document</a>.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry/startTime"><code>PerformanceEntry.startTime</code></a></dt>
-  <dd>Retourne le <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> (moment) où le cadre a été lancé.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry/duration"><code>PerformanceEntry.duration</code></a></dt>
-  <dd>Retourne un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> indiquant la différence entre le <code>startTime</code> de deux images successives.</dd>
-</dl>
+- [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType)
+  - : Retourne « `frame` ».
+- [`PerformanceEntry.name`](/fr/docs/Web/API/PerformanceEntry/name)
+  - : Renvoie l'adresse du [document](https://dom.spec.whatwg.org/#concept-document-url).
+- [`PerformanceEntry.startTime`](/fr/docs/Web/API/PerformanceEntry/startTime)
+  - : Retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) (moment) où le cadre a été lancé.
+- [`PerformanceEntry.duration`](/fr/docs/Web/API/PerformanceEntry/duration)
+  - : Retourne un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) indiquant la différence entre le `startTime` de deux images successives.
 
-<h2 id="Methods">Méthodes</h2>
+## Méthodes
 
-<p>Cette interface n'a pas de méthodes.</p>
+Cette interface n'a pas de méthodes.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>Voir l'exemple dans l'article <a href="/fr/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API">Utilisation de l'API Frame Timing</a>.</p>
+Voir l'exemple dans l'article [Utilisation de l'API Frame Timing](/fr/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API).
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Frame Timing', '#performanceframetiming-interface', 'PerformanceFrameTiming')}}</td>
-      <td>{{Spec2('Frame Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                            | Statut                           | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('Frame Timing', '#performanceframetiming-interface', 'PerformanceFrameTiming')}} | {{Spec2('Frame Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceFrameTiming")}}</p>
+{{Compat("api.PerformanceFrameTiming")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/PerformanceObserver"><code>PerformanceObserver</code></a></li>
- <li><a href="/fr/docs/Tools/Performance/Frame_rate">Frame Rate (Firefox Performance Tool)</a></li>
- <li><a href="/fr/docs/Web/API/Frame_Timing">L'API <i>Frame Timing</i></a></li>
- <li><a href="/fr/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API">Utiliser l'API Frame Timing</a></li>
-</ul>
+- [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver)
+- [Frame Rate (Firefox Performance Tool)](/fr/docs/Tools/Performance/Frame_rate)
+- [L'API _Frame Timing_](/fr/docs/Web/API/Frame_Timing)
+- [Utiliser l'API Frame Timing](/fr/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API)

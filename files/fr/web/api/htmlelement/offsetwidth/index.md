@@ -3,38 +3,35 @@ title: element.offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
 translation_of: Web/API/HTMLElement/offsetWidth
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
+### Résumé
 
-<p>Renvoie la largeur totale d'un élément.</p>
+Renvoie la largeur totale d'un élément.
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval">var <em>offsetWidth</em> = <em>element</em>.offsetWidth;
-</pre>
+    var offsetWidth = element.offsetWidth;
 
-<p><code>offsetWidth</code> est une propriété en lecture seule.</p>
+`offsetWidth` est une propriété en lecture seule.
 
-<h3 id="Description">Description</h3>
+### Description
 
-<p>Typiquement, l'attribut <code>offsetWidth</code> est une mesure qui comprend les bordures de l'élément, ses marges internes horizontales (padding), la barre de défilement verticale si présente et affichée, et la largeur CSS de l'élément.</p>
+Typiquement, l'attribut `offsetWidth` est une mesure qui comprend les bordures de l'élément, ses marges internes horizontales (padding), la barre de défilement verticale si présente et affichée, et la largeur CSS de l'élément.
 
-<h2 id="exemple">Exemple</h2>
+## Exemple
 
-<p><img src="dimensions-offset.png"></p>
+![](dimensions-offset.png)
 
-<h3 id="Sp.C3.A9cification">Spécification</h3>
+### Spécification
 
-<p><code>offsetWidth</code> fait partie du modèle objet <abbr>DHTML</abbr> de Microsoft Internet Explorer. Elle ne fait partie d'aucune spécification ou recommandation technique du W3C.</p>
+`offsetWidth` fait partie du modèle objet DHTML de Microsoft Internet Explorer. Elle ne fait partie d'aucune spécification ou recommandation technique du W3C.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p><code>offsetWidth</code> est une propriété du modèle objet <abbr>DHTML</abbr> provenant de Microsoft Internet Explorer. On l'appelle parfois la largeur physique ou graphique d'un élément, ou sa largeur « border-box » (bordure et boîte).</p>
+`offsetWidth` est une propriété du modèle objet DHTML provenant de Microsoft Internet Explorer. On l'appelle parfois la largeur physique ou graphique d'un élément, ou sa largeur « border-box » (bordure et boîte).
 
-<h3 id="R.C3.A9f.C3.A9rences">Références</h3>
+### Références
 
-<ul>
- <li><a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/offsetwidth.asp?frame=true"><em>offsetWidth definition</em> sur MSDN</a></li>
- <li><a href="http://msdn.microsoft.com/workshop/author/om/measuring.asp"><em>Measuring Element Dimension and Location</em> sur MSDN</a></li>
-</ul>
+- [_offsetWidth definition_ sur MSDN](http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/offsetwidth.asp?frame=true)
+- [_Measuring Element Dimension and Location_ sur MSDN](http://msdn.microsoft.com/workshop/author/om/measuring.asp)

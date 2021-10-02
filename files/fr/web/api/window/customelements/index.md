@@ -11,58 +11,47 @@ tags:
   - custom elements
 translation_of: Web/API/Window/customElements
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La propriété en lecture seule <code>customElements</code> de l'interface {{domxref("Window")}} renvoie une référence à l'objet {{domxref("CustomElementRegistry")}}, qui peut être utilisée pour enregistrer de nouveaux <a href="/fr-FR/docs/Web/Web_Components/Using_custom_elements">éléments personnalisés</a> et obtenir des informations sur des éléments personnalisés enregistrés.</p>
+La propriété en lecture seule `customElements` de l'interface {{domxref("Window")}} renvoie une référence à l'objet {{domxref("CustomElementRegistry")}}, qui peut être utilisée pour enregistrer de nouveaux [éléments personnalisés](/fr-FR/docs/Web/Web_Components/Using_custom_elements) et obtenir des informations sur des éléments personnalisés enregistrés.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre>let registreElementsPersonnalises = window.customElements;</pre>
+    let registreElementsPersonnalises = window.customElements;
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une instance d'objet {{domxref("CustomElementRegistry")}} représentant le registre des éléments personnalisés pour la fenêtre en cours.</p>
+Une instance d'objet {{domxref("CustomElementRegistry")}} représentant le registre des éléments personnalisés pour la fenêtre en cours.
 
-<h2 id="Examples">Exemples</h2>
+## Exemples
 
-<p>L'exemple le plus courant d'utilisation de cette propriété que vous verrez sera d'obtenir l'accès à la méthode {{domxref ("CustomElementRegistry.define()")}} pour définir et enregistrer un nouvel élément personnalisé, par exemple :</p>
+L'exemple le plus courant d'utilisation de cette propriété que vous verrez sera d'obtenir l'accès à la méthode {{domxref ("CustomElementRegistry.define()")}} pour définir et enregistrer un nouvel élément personnalisé, par exemple :
 
-<pre>let registreElementsPersonnalises = window.customElements;
-registreElementsPersonnalises.define('mon-element-personnalise', MonElementPersonnalise);</pre>
+    let registreElementsPersonnalises = window.customElements;
+    registreElementsPersonnalises.define('mon-element-personnalise', MonElementPersonnalise);
 
-<p>Cependant, il est généralement raccourci en quelque chose comme :</p>
+Cependant, il est généralement raccourci en quelque chose comme :
 
-<pre>customElements.define('details-element',
-  class extends HTMLElement {
-    constructor() {
-      super();
-      const modele = document
-        .getElementById('modele-details-element')
-        .content;
-      const racineOmbre = this.attachShadow({mode: 'open'})
-        .appendChild(template.cloneNode(true));
-  }
-});</pre>
+    customElements.define('details-element',
+      class extends HTMLElement {
+        constructor() {
+          super();
+          const modele = document
+            .getElementById('modele-details-element')
+            .content;
+          const racineOmbre = this.attachShadow({mode: 'open'})
+            .appendChild(template.cloneNode(true));
+      }
+    });
 
-<p>Voir notre repo <a href="https://github.com/mdn/web-components-examples/">web-components-examples</a> pour davantage d'exemples d'utilisation.</p>
+Voir notre repo [web-components-examples](https://github.com/mdn/web-components-examples/) pour davantage d'exemples d'utilisation.
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "custom-elements.html#dom-window-customelements", "window.customElements")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                            | Statut                           | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName("HTML WHATWG", "custom-elements.html#dom-window-customelements", "window.customElements")}} | {{Spec2("HTML WHATWG")}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Window.customElements")}}</p>
+{{Compat("api.Window.customElements")}}

@@ -9,24 +9,20 @@ tags:
   - Éléments SRC
 translation_of: Web/API/Event/srcElement
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>{{ Non-standard_header() }}</p>
+{{ Non-standard_header() }}
 
-<p><strong><code>Event.srcElement</code></strong> est un alias propriétaire (implémenté dans Internet Explorer) pour la propriété standard {{domxref("Event.target")}} qui commence à être pris en charge dans d'autres navigateurs à des fins de compatibilité Web.</p>
+**`Event.srcElement`** est un alias propriétaire (implémenté dans Internet Explorer) pour la propriété standard {{domxref("Event.target")}} qui commence à être pris en charge dans d'autres navigateurs à des fins de compatibilité Web.
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<p>Ne fait partie d'aucune spécification.</p>
+Ne fait partie d'aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.Event.srcElement")}}
 
+## Voir aussi
 
-<p>{{Compat("api.Event.srcElement")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{domxref("Window.event")}}</li>
-</ul>
+- {{domxref("Window.event")}}

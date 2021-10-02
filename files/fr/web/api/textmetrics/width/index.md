@@ -9,53 +9,42 @@ tags:
   - TextMetrics
 translation_of: Web/API/TextMetrics/width
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>La propriété en lecture seule <strong>TextMetrics.width</strong> contient en pixels CSS la largeur d'avance du texte (la largeur de la boîte de ligne).</p>
+La propriété en lecture seule **TextMetrics.width** contient en pixels CSS la largeur d'avance du texte (la largeur de la boîte de ligne).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>readonly <em>metrics</em></var>.width;</pre>
+    readonly metrics.width;
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Étant donné cet élément {{HTMLElement("canvas")}} :</p>
+Étant donné cet élément {{HTMLElement("canvas")}} :
 
-<pre class="brush: html">&lt;canvas id="canevas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canevas"></canvas>
+```
 
-<p>vous pouvez obtenir un objet {{domxref("TextMetrics")}} en utilisant le code suivant :</p>
+vous pouvez obtenir un objet {{domxref("TextMetrics")}} en utilisant le code suivant :
 
-<pre class="brush: js">var canvas = document.getElementById("canevas");
+```js
+var canvas = document.getElementById("canevas");
 var ctx = canvas.getContext("2d");
 
 var texte = ctx.measureText("foo"); // objet TextMetrics
 texte.width; // 16;
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-textmetrics-width", "TextMetrics.width")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | Statut                           | Commentaire |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-textmetrics-width", "TextMetrics.width")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.TextMetrics.width")}}</p>
+{{Compat("api.TextMetrics.width")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("TextMetrics")}}</li>
-</ul>
+- {{domxref("TextMetrics")}}

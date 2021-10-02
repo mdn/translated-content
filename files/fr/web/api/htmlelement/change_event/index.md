@@ -11,63 +11,66 @@ tags:
   - Élément HTML
 translation_of: Web/API/HTMLElement/change_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>L'événement <strong>change</strong> est déclenché pour les éléments {{HTMLElement("input")}} <em>(entrée)</em>, {{HTMLElement("select")}} <em>(sélection)</em> et {{HTMLElement("textarea")}} <em>(zone de texte)</em> lorsqu'un changement de leur valeur est réalisé par l'utilisateur. Contrairement à l'événement {{event("input")}}, <strong>change</strong> n'est pas nécessairement déclenché pour chaque changement de valeur.</p>
+L'événement **change** est déclenché pour les éléments {{HTMLElement("input")}} _(entrée)_, {{HTMLElement("select")}} _(sélection)_ et {{HTMLElement("textarea")}} _(zone de texte)_ lorsqu'un changement de leur valeur est réalisé par l'utilisateur. Contrairement à l'événement {{event("input")}}, **change** n'est pas nécessairement déclenché pour chaque changement de valeur.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Propagation</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th scope="row">Annulable</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Gestionnaire d'événements</th>
-   <td>{{domxref("GlobalEventHandlers/onchange", "onchange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Propagation</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th scope="row">Annulable</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Gestionnaire d'événements</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onchange", "onchange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>En fonction du type d'élément de formulaire modifié et de la manière dont l'utilisateur interagit avec cet élément, l'événement <strong>change</strong> se déclenche à un moment différent :</p>
+En fonction du type d'élément de formulaire modifié et de la manière dont l'utilisateur interagit avec cet élément, l'événement **change** se déclenche à un moment différent :
 
-<ul>
- <li>Quand l'élément est activé (en cliquant ou en utilisant le clavier) pour <code>&lt;input type="radio"&gt;</code> et <code>&lt;input type="checkbox"&gt;</code><em>(case à cocher</em>).</li>
- <li>Quand l'utilisateur réalise le changement de manière explicite (par exemple, en sélectionnant une valeur venant d'un {{HTMLElement("select")}} d'un menu déroulant avec le clic d'une souris, en sélectionnant une date d'un "date picker" <em>(sélecteur de date)</em> pour <code>&lt;input type="date"&gt;</code>, en sélectionnant un fichier d'un "file picker" <em>(sélecteur de fichier)</em> pour <code>&lt;input type="file"&gt;</code>, etc.).</li>
- <li>Quand l'élément perd le focus après que sa valeur a été changée, mais pas validée (par exemple, après l'édition d'une valeur de {{HTMLElement("textarea")}} ou <code>&lt;input type="text"&gt;</code>).</li>
-</ul>
+- Quand l'élément est activé (en cliquant ou en utilisant le clavier) pour `<input type="radio">` et `<input type="checkbox">`_(case à cocher_).
+- Quand l'utilisateur réalise le changement de manière explicite (par exemple, en sélectionnant une valeur venant d'un {{HTMLElement("select")}} d'un menu déroulant avec le clic d'une souris, en sélectionnant une date d'un "date picker" _(sélecteur de date)_ pour `<input type="date">`, en sélectionnant un fichier d'un "file picker" _(sélecteur de fichier)_ pour `<input type="file">`, etc.).
+- Quand l'élément perd le focus après que sa valeur a été changée, mais pas validée (par exemple, après l'édition d'une valeur de {{HTMLElement("textarea")}} ou `<input type="text">`).
 
-<p>Les différents navigateurs ne sont pas toujours d'accord sur le fait que l'événement <strong>change</strong> doit être déclenché pour certains types d'interactions. Par exemple, la navigation avec le clavier dans les éléments {{HTMLElement("select")}} ne déclenche jamais l'événement dans Gecko jusqu'à ce que l'utilisateur appuie sur la touche Entrée ou déplace le focus en dehors du &lt;select&gt; (voir {{bug("126379")}}).</p>
+Les différents navigateurs ne sont pas toujours d'accord sur le fait que l'événement **change** doit être déclenché pour certains types d'interactions. Par exemple, la navigation avec le clavier dans les éléments {{HTMLElement("select")}} ne déclenche jamais l'événement dans Gecko jusqu'à ce que l'utilisateur appuie sur la touche Entrée ou déplace le focus en dehors du \<select> (voir {{bug("126379")}}).
 
-<p><a href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">La spécification HTML répertorie les types <code>&lt;input&gt;</code> qui doivent déclencher l'événement <code>change</code>.</a></p>
+[La spécification HTML répertorie les types `<input>` qui doivent déclencher l'événement `change`.](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply)
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Lélément_&lt;select>">L'élément &lt;select&gt;</h3>
+### L'élément \<select>
 
-<p>Le code suivant gère l'événement <strong>change</strong> sur {{HTMLElement("select")}} en appellant la fonction <code>changeEventHandler() </code>dans<code> l'attribut <em>onchange</em>. Il lit la valeur de la cible de l'événement et la montre dans une alerte.</code></p>
+Le code suivant gère l'événement **change** sur {{HTMLElement("select")}} en appellant la fonction `changeEventHandler() `dans` l'attribut onchange. Il lit la valeur de la cible de l'événement et la montre dans une alerte.`
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;label&gt;Choose an ice cream flavor:
-  &lt;select class="ice-cream" name="ice-cream"&gt;
-    &lt;option value=""&gt;Select One …&lt;/option&gt;
-    &lt;option value="chocolate"&gt;Chocolate&lt;/option&gt;
-    &lt;option value="sardine"&gt;Sardine&lt;/option&gt;
-    &lt;option value="vanilla"&gt;Vanilla&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/label&gt;
+```html
+<label>Choose an ice cream flavor:
+  <select class="ice-cream" name="ice-cream">
+    <option value="">Select One …</option>
+    <option value="chocolate">Chocolate</option>
+    <option value="sardine">Sardine</option>
+    <option value="vanilla">Vanilla</option>
+  </select>
+</label>
 
-&lt;div class="result"&gt;&lt;/div&gt;</pre>
+<div class="result"></div>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   display: grid;
   grid-template-areas: "select result";
 }
@@ -78,88 +81,67 @@ select {
 
 .result {
   grid-area: result;
-}</pre>
+}
+```
 
-<h4 id="Javascript">Javascript</h4>
+#### Javascript
 
-<pre class="brush: js">const selectElement = document.querySelector('.ice-cream');
+```js
+const selectElement = document.querySelector('.ice-cream');
 
-selectElement.addEventListener('change', (event) =&gt; {
+selectElement.addEventListener('change', (event) => {
   const result = document.querySelector('.result');
   result.textContent = `You like ${event.target.value}`;
-});</pre>
+});
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{ EmbedLiveSample('Lélément_&lt;select&gt;', '100%', '75px') }}</p>
+{{ EmbedLiveSample('Lélément_&lt;select&gt;', '100%', '75px') }}
 
-<h3 id="Lélément_dentrée_de_texte">L'élément d'entrée de texte</h3>
+### L'élément d'entrée de texte
 
-<p>Pour certains éléments, notamment <code>&lt;input type="text"&gt;</code>, l'événement de changement ne se déclenche pas tant que le contrôle ne perd pas le focus. Essayez de saisir quelque chose dans le champ ci-dessous, puis cliquez ailleurs pour déclencher l'événement.</p>
+Pour certains éléments, notamment `<input type="text">`, l'événement de changement ne se déclenche pas tant que le contrôle ne perd pas le focus. Essayez de saisir quelque chose dans le champ ci-dessous, puis cliquez ailleurs pour déclencher l'événement.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input placeholder="Enter some text" name="name"/&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<input placeholder="Enter some text" name="name"/>
+<p id="log"></p>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const input = document.querySelector('input');
+```js
+const input = document.querySelector('input');
 const log = document.getElementById('log');
 
 input.addEventListener('change', updateValue);
 
 function updateValue(e) {
   log.textContent = e.target.value;
-}</pre>
+}
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{ EmbedLiveSample('Lélément_dentrée_de_texte', '100%', '75px') }}</p>
+{{ EmbedLiveSample('Lélément_dentrée_de_texte', '100%', '75px') }}
 
-<ul>
-</ul>
+## Spécifications
 
-<h2 id="Spécifications">Spécifications</h2>
+| Spécification                                                                                        | Statut                           | Commentaire         |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName("HTML WHATWG", "indices.html#event-change", "change")}}             | {{Spec2("HTML WHATWG")}} |                     |
+| {{SpecName("HTML5 W3C", "webappapis.html#handler-onchange", "change")}}     | {{Spec2("HTML5 W3C")}}     |                     |
+| {{SpecName("DOM2 Events", "#Events-eventgroupings-htmlevents", "change")}} | {{Spec2("DOM2 Events")}} | Définition initiale |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "indices.html#event-change", "change")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "webappapis.html#handler-onchange", "change")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Events", "#Events-eventgroupings-htmlevents", "change")}}</td>
-   <td>{{Spec2("DOM2 Events")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilités navigateurs
 
-<h2 id="Compatibilités_navigateurs">Compatibilités navigateurs</h2>
+{{Compat("api.GlobalEventHandlers.onchange")}}
 
+## Voir aussi
 
+Cet événement est aussi déclenché dans plusieurs API non-standard:
 
-<p>{{Compat("api.GlobalEventHandlers.onchange")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<p>Cet événement est aussi déclenché dans plusieurs API non-standard:</p>
-
-<ul>
- <li>{{domxref("NetworkInformation.connection")}} déclenche l'événement <strong>change</strong> lorsque les informations de connexions changent.</li>
- <li>{{domxref("DeviceStorageChangeEvent")}} est déclenché à chaque fois qu'un fichier est créé, modifié, ou supprimé du système de stockage du périphérique.</li>
-</ul>
+- {{domxref("NetworkInformation.connection")}} déclenche l'événement **change** lorsque les informations de connexions changent.
+- {{domxref("DeviceStorageChangeEvent")}} est déclenché à chaque fois qu'un fichier est créé, modifié, ou supprimé du système de stockage du périphérique.

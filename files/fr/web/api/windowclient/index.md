@@ -12,35 +12,32 @@ tags:
   - WindowClient
 translation_of: Web/API/WindowClient
 ---
-<p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>L'interface <code>WindowClient</code> de l'<a href="/en-US/docs/Web/API/ServiceWorker_API">API ServiceWorker</a> représente la portée d'un client service worker lorsque celui-ci existe en tant que document dans un contexte navigateur, controlé par un worker actif. Le client sélectionne et utilise un service worker pour son propre chargement et celui de ses sous-ressources.</p>
+L'interface `WindowClient` de l'[API ServiceWorker](/en-US/docs/Web/API/ServiceWorker_API) représente la portée d'un client service worker lorsque celui-ci existe en tant que document dans un contexte navigateur, controlé par un worker actif. Le client sélectionne et utilise un service worker pour son propre chargement et celui de ses sous-ressources.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em><code>WindowClient</code> hérite certaines méthodes de son parent, {{domxref("Client")}}.</em></p>
+_`WindowClient` hérite certaines méthodes de son parent, {{domxref("Client")}}._
 
-<dl>
- <dt>{{domxref("WindowClient.focus()")}}</dt>
- <dd>Assigne le focus au client en cours.</dd>
- <dt>{{domxref("WindowClient.navigate()")}}</dt>
- <dd>Charge l'url spécifiée dans la page en cours.</dd>
-</dl>
+- {{domxref("WindowClient.focus()")}}
+  - : Assigne le focus au client en cours.
+- {{domxref("WindowClient.navigate()")}}
+  - : Charge l'url spécifiée dans la page en cours.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em><code>WindowClient</code> hérite certaines propriétés de son parent, {{domxref("Client")}}.</em></p>
+_`WindowClient` hérite certaines propriétés de son parent, {{domxref("Client")}}._
 
-<dl>
- <dt>{{domxref("WindowClient.focused")}} {{readonlyInline}}</dt>
- <dd>Un booléen qui indique si oui ou non le client en cours est focus.</dd>
- <dt>{{domxref("WindowClient.visibilityState")}} {{readonlyInline}}</dt>
- <dd>Indique la visibilité du client en cours. Peut prendre les valeures <code>hidden</code>, <code>visible</code>, <code>prerender</code>, ou <code>unloaded</code>.</dd>
-</dl>
+- {{domxref("WindowClient.focused")}} {{readonlyInline}}
+  - : Un booléen qui indique si oui ou non le client en cours est focus.
+- {{domxref("WindowClient.visibilityState")}} {{readonlyInline}}
+  - : Indique la visibilité du client en cours. Peut prendre les valeures `hidden`, `visible`, `prerender`, ou `unloaded`.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">self.addEventListener('notificationclick', function(event) {
+```js
+self.addEventListener('notificationclick', function(event) {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -49,44 +46,32 @@ translation_of: Web/API/WindowClient
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client)
+      if (client.url == '/' && 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#window-client-interface', 'WindowClient')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                                 | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('Service Workers', '#window-client-interface', 'WindowClient')}} | {{Spec2('Service Workers')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WindowClient")}}</p>
+{{Compat("api.WindowClient")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a></li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
- <li><a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</a></li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [Using web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)
+- [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API)

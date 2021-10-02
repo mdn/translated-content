@@ -10,32 +10,28 @@ tags:
 translation_of: Web/API/File/fileName
 original_slug: Web/API/File/fileName
 ---
-<p>{{APIRef("File API")}}{{non-standard_header}}</p>
+{{APIRef("File API")}}{{non-standard_header}}
 
-<p>{{obsolete_header(7.0)}}</p>
+{{obsolete_header(7.0)}}
 
-<h2 id="Résumé">Résumé</h2>
+## Résumé
 
-<p>Renvoie le nom du fichier. Pour des raisons de sécurité, le chemin est exclu de la propriété.</p>
+Renvoie le nom du fichier. Pour des raisons de sécurité, le chemin est exclu de la propriété.
 
-<div class="note">
-  <p><strong>Note :</strong> Cette propriété est dépréciée. Utilisez {{domxref("File.name")}} à la place.</p>
-</div>
+> **Note :** Cette propriété est dépréciée. Utilisez {{domxref("File.name")}} à la place.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre>var name = instanceOfFile.fileName</pre>
+    var name = instanceOfFile.fileName
 
-<h2 id="Valeur">Valeur</h2>
+## Valeur
 
-<p>Une chaîne de caractères.</p>
+Une chaîne de caractères.
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<p>Ne fait partie d'aucune spécification.</p>
+Ne fait partie d'aucune spécification.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("File.name")}}</li>
-</ul>
+- {{domxref("File.name")}}

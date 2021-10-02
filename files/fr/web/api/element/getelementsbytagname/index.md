@@ -9,68 +9,45 @@ tags:
   - Reference
 translation_of: Web/API/Element/getElementsByTagName
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La méthode <code><strong>Element.getElementsByTagName()</strong></code> retourne une liste des éléments portant le <a href="/fr/docs/Web/API/Element/tagName">nom de balise</a> donné. La recherche porte sur le sous-arbre de l'élément spécifié, à l'exception de cet élément lui-même. La liste retournée est <em>live</em>, c'est à dire qu'elle se met à jour automatiquement à chaque changement de l'arbre DOM. Par conséquent, il n'est pas nécessaire d'appeller plusieurs fois  <code>Element.getElementsByTagName()</code>  avec le même élément et les mêmes arguments.</p>
+La méthode **`Element.getElementsByTagName()`** retourne une liste des éléments portant le [nom de balise](/fr/docs/Web/API/Element/tagName) donné. La recherche porte sur le sous-arbre de l'élément spécifié, à l'exception de cet élément lui-même. La liste retournée est _live_, c'est à dire qu'elle se met à jour automatiquement à chaque changement de l'arbre DOM. Par conséquent, il n'est pas nécessaire d'appeller plusieurs fois `Element.getElementsByTagName()` avec le même élément et les mêmes arguments.
 
-<p>Quand elle est appelée sur un élément HTML dans un document HTML, <code>getElementsByTagName </code>place son argument en minuscule avant de continuer. Cela n'est pas souhaitable lorsque vous tentez de faire correspondre des éléments SVG " camel-cased"  dans une sous-arborescence dans un document HTML. {{domxref("Element.getElementsByTagNameNS()")}} fonctionne dans ce cas.</p>
+Quand elle est appelée sur un élément HTML dans un document HTML, `getElementsByTagName `place son argument en minuscule avant de continuer. Cela n'est pas souhaitable lorsque vous tentez de faire correspondre des éléments SVG " camel-cased" dans une sous-arborescence dans un document HTML. {{domxref("Element.getElementsByTagNameNS()")}} fonctionne dans ce cas.
 
-<p><code>Element.getElementsByTagName</code> est similaire à {{domxref("Document.getElementsByTagName()")}}, à part que sa recherche est limitée aux éléments qui sont des descendants de l'élément spécifié.</p>
+`Element.getElementsByTagName` est similaire à {{domxref("Document.getElementsByTagName()")}}, à part que sa recherche est limitée aux éléments qui sont des descendants de l'élément spécifié.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><code><em>elements</em> = <em>element</em>.getElementsByTagName(<em>tagName</em>)</code></pre>
+    elements = element.getElementsByTagName(tagName)
 
-<ul>
- <li><code>elements</code>  est une {{domxref("HTMLCollection")}} contenant les éléments trouvés, dans l'ordre dans lequel ils apparaissent dans le sous-arbre. Si aucun élément n'a été trouvé, la <code>HTMLCollection</code> est vide.</li>
- <li><code>element</code> est l'élément depuis lequel la recherche doit commencer. Notez que seuls les descendants de cet élément feront partie des résultats, mais pas l'élément lui-même.</li>
- <li><code>tagName</code>  est le nom qualifié à rechercher. La chaîne spéciale <code>"*"</code> représente tous les éléments possibles. Pour la compatibilité avec XHTML, les minuscules doivent être utilisées.</li>
-</ul>
+- `elements` est une {{domxref("HTMLCollection")}} contenant les éléments trouvés, dans l'ordre dans lequel ils apparaissent dans le sous-arbre. Si aucun élément n'a été trouvé, la `HTMLCollection` est vide.
+- `element` est l'élément depuis lequel la recherche doit commencer. Notez que seuls les descendants de cet élément feront partie des résultats, mais pas l'élément lui-même.
+- `tagName` est le nom qualifié à rechercher. La chaîne spéciale `"*"` représente tous les éléments possibles. Pour la compatibilité avec XHTML, les minuscules doivent être utilisées.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">// vérifie l'alignement sur un nombre de cellules dans un tableau. 
+```js
+// vérifie l'alignement sur un nombre de cellules dans un tableau.
 var table = document.getElementById("forecast-table");
 var cells = table.getElementsByTagName("td");
-for (var i = 0; i &lt; cells.length; i++) {
+for (var i = 0; i < cells.length; i++) {
     var status = cells[i].getAttribute("data-status");
     if ( status == "open" ) {
-        // saisit les données 
+        // saisit les données
     }
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-getelementsbytagname', 'Element.getElementsByTagName()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Change la valeur de retour de {{domxref("NodeList")}} à{{domxref("HTMLCollection")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-1938918D', 'Element.getElementsByTagName()')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Pas de changement par rapport à {{SpecName('DOM2 Core')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-1938918D', 'Element.getElementsByTagName()')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Pas de changement par rapport à {{SpecName('DOM1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-1938918D', 'Element.getElementsByTagName()')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                    | Statut                           | Commentaire                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#dom-element-getelementsbytagname', 'Element.getElementsByTagName()')}} | {{Spec2('DOM WHATWG')}} | Change la valeur de retour de {{domxref("NodeList")}} à{{domxref("HTMLCollection")}} |
+| {{SpecName('DOM3 Core', 'core.html#ID-1938918D', 'Element.getElementsByTagName()')}}                 | {{Spec2('DOM3 Core')}}     | Pas de changement par rapport à {{SpecName('DOM2 Core')}}                                         |
+| {{SpecName('DOM2 Core', 'core.html#ID-1938918D', 'Element.getElementsByTagName()')}}                 | {{Spec2('DOM2 Core')}}     | Pas de changement par rapport à {{SpecName('DOM1')}}                                             |
+| {{SpecName('DOM1', 'level-one-core.html#ID-1938918D', 'Element.getElementsByTagName()')}}         | {{Spec2('DOM1')}}         | Définition initiale                                                                                      |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Element.getElementsByTagName")}}</p>
+{{Compat("api.Element.getElementsByTagName")}}

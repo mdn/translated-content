@@ -11,88 +11,75 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/FormData/append
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>La méthode <code><strong>append()</strong></code> de l'interface {{domxref("FormData")}} ajoute une nouvelle valeur à une clé existante dans un objet <code>FormData</code>, ou rajoute cette clé et cette valeur quand elle n'existe pas.</p>
+La méthode **`append()`** de l'interface {{domxref("FormData")}} ajoute une nouvelle valeur à une clé existante dans un objet `FormData`, ou rajoute cette clé et cette valeur quand elle n'existe pas.
 
-<p>La différence entre {{domxref("FormData.set")}} et <code>append()</code> est que, quand la clé existe, {{domxref("FormData.set")}} va remplacer les valeurs existantes avec la nouvelle alors qu' <code>append()</code> va rajouter celle-ci à la fin de l'ensemble des valeurs existantes.</p>
+La différence entre {{domxref("FormData.set")}} et `append()` est que, quand la clé existe, {{domxref("FormData.set")}} va remplacer les valeurs existantes avec la nouvelle alors qu' `append()` va rajouter celle-ci à la fin de l'ensemble des valeurs existantes.
 
-<div class="note">
-<p><strong>Note :</strong> Cette méthode est disponible dans les <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note :** Cette méthode est disponible dans les [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Il y a deux versions de cette méthode : avec deux ou trois paramètres</p>
+Il y a deux versions de cette méthode : avec deux ou trois paramètres
 
-<pre class="brush: js">formData.append(name, value);
-formData.append(name, value, filename);</pre>
+```js
+formData.append(name, value);
+formData.append(name, value, filename);
+```
 
-<h3 id="append_Parameters">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Le nom de la clé dont les données sont contenues dans <code>value</code>.</dd>
- <dt><code>value</code></dt>
- <dd>La valeur du champ clé. Elle peut être une {{domxref("USVString")}} ou un {{domxref("Blob")}} (incluant les sous-classes comme {{domxref("File")}}).</dd>
- <dt><code>filename </code>{{optional_inline}}</dt>
- <dd>Le nom du fichier envoyé au serveur (a {{domxref("USVString")}}), quand un {{domxref("Blob")}} ou un {{domxref("File")}} est passé en second paramètre. Le nom du fichier par défaut pour des objets {{domxref("Blob")}} est "blob". Le nom du fichier par défaut pour des objets {{domxref("File")}} est le nom du fichier de l'objet.</dd>
-</dl>
+- `name`
+  - : Le nom de la clé dont les données sont contenues dans `value`.
+- `value`
+  - : La valeur du champ clé. Elle peut être une {{domxref("USVString")}} ou un {{domxref("Blob")}} (incluant les sous-classes comme {{domxref("File")}}).
+- `filename `{{optional_inline}}
+  - : Le nom du fichier envoyé au serveur (a {{domxref("USVString")}}), quand un {{domxref("Blob")}} ou un {{domxref("File")}} est passé en second paramètre. Le nom du fichier par défaut pour des objets {{domxref("Blob")}} est "blob". Le nom du fichier par défaut pour des objets {{domxref("File")}} est le nom du fichier de l'objet.
 
-<div class="note">
-<p><strong>Note:</strong> Si vous spécifiez un  {{domxref("Blob")}} comme donnée rattachée à un objet de type <code>FormData</code>, le nom de fichier envoyé au serveur sera dans l'entête "Content-Disposition" mais peut varier selon le navigateur.</p>
-</div>
+> **Note :** Si vous spécifiez un  {{domxref("Blob")}} comme donnée rattachée à un objet de type `FormData`, le nom de fichier envoyé au serveur sera dans l'entête "Content-Disposition" mais peut varier selon le navigateur.
 
-<h3 id="Retours">Retours</h3>
+### Retours
 
-<p>Void.</p>
+Void.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>La ligne suivante crée un objet <code>FormData</code> vide :</p>
+La ligne suivante crée un objet `FormData` vide :
 
-<pre class="brush: js">var formData = new FormData(); // Actuellement vide</pre>
+```js
+var formData = new FormData(); // Actuellement vide
+```
 
-<p>Vous pouvez rajouter des paires clé/valeur en utilisant {{domxref("FormData.append")}}:</p>
+Vous pouvez rajouter des paires clé/valeur en utilisant {{domxref("FormData.append")}}:
 
-<pre class="brush: js">formData.append('username', 'Chris');
-formData.append('userpic', myFileInput.files[0], 'chris.jpg');</pre>
+```js
+formData.append('username', 'Chris');
+formData.append('userpic', myFileInput.files[0], 'chris.jpg');
+```
 
-<p>Comme pour un formulaire classique, vous pouvez ajouter plusieurs valeurs pour la même clé. Par exemple ( et pour être en accord avec les conventions de nommage PHP, on ajoute [] au nom de la clé):</p>
+Comme pour un formulaire classique, vous pouvez ajouter plusieurs valeurs pour la même clé. Par exemple ( et pour être en accord avec les conventions de nommage PHP, on ajoute \[] au nom de la clé):
 
-<pre class="brush: js">formData.append('userpic[]', myFileInput.files[0], 'chris1.jpg');
-formData.append('userpic[]', myFileInput.files[1], 'chris2.jpg');</pre>
+```js
+formData.append('userpic[]', myFileInput.files[0], 'chris1.jpg');
+formData.append('userpic[]', myFileInput.files[1], 'chris2.jpg');
+```
 
-<p>Cette technique permet de simplement gérer l'envoi de plusieurs fichiers avec l'envoi d'une structure facilement itérable.</p>
+Cette technique permet de simplement gérer l'envoi de plusieurs fichiers avec l'envoi d'une structure facilement itérable.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest','#dom-formdata-append','append()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                               | Commentaire         |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
+| {{SpecName('XMLHttpRequest','#dom-formdata-append','append()')}} | {{Spec2('XMLHttpRequest')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.FormData.append")}}
 
+## Voir aussi
 
-<p>{{Compat("api.FormData.append")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest">Utiliser XMLHttpRequest</a></li>
- <li><a href="/fr/docs/Web/API/FormData/Utilisation_objets_FormData">Utiliser les objets FormData</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest)
+- [Utiliser les objets FormData](/fr/docs/Web/API/FormData/Utilisation_objets_FormData)
+- {{HTMLElement("Form")}}

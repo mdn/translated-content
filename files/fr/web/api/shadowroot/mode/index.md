@@ -10,23 +10,24 @@ tags:
   - shadow dom
 translation_of: Web/API/ShadowRoot/mode
 ---
-<div>{{APIRef("Shadow DOM")}}</div>
+{{APIRef("Shadow DOM")}}
 
-<p>La propriété <strong><code>mode</code></strong>, rattachée à l'interface {{domxref("ShadowRoot")}}, indique son mode. Celui-ci peut valoir <code>open</code> ou <code>closed</code> et indique si les fonctionnalités internes de la racine sont accessibles en JavaScript.</p>
+La propriété **`mode`**, rattachée à l'interface {{domxref("ShadowRoot")}}, indique son mode. Celui-ci peut valoir `open` ou `closed` et indique si les fonctionnalités internes de la racine sont accessibles en JavaScript.
 
-<p>Lorsque le mode d'une racine <em>shadow</em> vaut <code>closed</code>, les détails d'implémentation internes sont inaccessibles et inchangeables avec JavaScript (de la même façon que les détails du fonctionnement de l'élément {{HTMLElement("video")}} sont inaccessibles et inchangeables en JavaScript).</p>
+Lorsque le mode d'une racine _shadow_ vaut `closed`, les détails d'implémentation internes sont inaccessibles et inchangeables avec JavaScript (de la même façon que les détails du fonctionnement de l'élément {{HTMLElement("video")}} sont inaccessibles et inchangeables en JavaScript).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <em>mode</em> = <em>shadowRoot</em>.mode</pre>
+    var mode = shadowRoot.mode
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Une valeur définie via l'énumération <code><a href="https://dom.spec.whatwg.org/#enumdef-shadowrootmode">ShadowRootMode</a></code> : soit <code>open</code>, soit <code>closed</code>.</p>
+Une valeur définie via l'énumération [`ShadowRootMode`](https://dom.spec.whatwg.org/#enumdef-shadowrootmode) : soit `open`, soit `closed`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">let customElem = document.querySelector('mon-element-shadow-dom');
+```js
+let customElem = document.querySelector('mon-element-shadow-dom');
 let shadow = customElem.shadowRoot;
 
 // Une autre façon de vérifier si la racine est ouverte :
@@ -35,27 +36,15 @@ if(shadow) {
   // Si elle est ouverte, on ferme la racine pour
   // cacher ce qu'il y a à l'intérieur.
   shadow.mode = 'closed';
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-shadowroot-mode','ShadowRoot.mode')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                             | Commentaires |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
+| {{SpecName('DOM WHATWG','#dom-shadowroot-mode','ShadowRoot.mode')}} | {{Spec2('DOM WHATWG')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.ShadowRoot.mode")}}</p>
+{{Compat("api.ShadowRoot.mode")}}

@@ -11,23 +11,20 @@ tags:
   - onshow
 translation_of: Web/API/Notification/onshow
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>La propriété <strong><code>onshow</code></strong> de l'interface {{domxref ("Notification")}} définit un écouteur d'événements pour recevoir des événements {{domxref ("Element/show_event", "show")}}. Ces événements se produisent lorsqu'une {{domxref ("Notification")}} est affiché.</p>
+La propriété **`onshow`** de l'interface {{domxref ("Notification")}} définit un écouteur d'événements pour recevoir des événements {{domxref ("Element/show_event", "show")}}. Ces événements se produisent lorsqu'une {{domxref ("Notification")}} est affiché.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>Notification</var>.onshow = function() { ... }
-<var>Notification</var>.onshow = () =&gt; { ... }
-</pre>
+    Notification.onshow = function() { ... }
+    Notification.onshow = () => { ... }
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Notification.onshow")}}</p>
+{{Compat("api.Notification.onshow")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>{{domxref("Notification")}}</li>
- <li><a href="/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a></li>
-</ul>
+- {{domxref("Notification")}}
+- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

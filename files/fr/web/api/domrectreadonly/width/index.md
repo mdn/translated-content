@@ -10,41 +10,30 @@ tags:
   - Rectangle
 translation_of: Web/API/DOMRectReadOnly/width
 ---
-<p>{{APIRef("DOM")}}{{ SeeCompatTable() }}</p>
+{{APIRef("DOM")}}{{ SeeCompatTable() }}
 
-<p>La propriété en lecture seule <code><strong>width</strong></code> de l'interface <strong><code>DOMRectReadOnly</code></strong> représente la largeur du <code>DOMRect</code>.</p>
+La propriété en lecture seule **`width`** de l'interface **`DOMRectReadOnly`** représente la largeur du `DOMRect`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var recWidth = DOMRect.width;</pre>
+```js
+var recWidth = DOMRect.width;
+```
 
-<h3 id="Specification">Valeur</h3>
+### Valeur
 
-<p>Un double.</p>
+Un double.
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Geometry Interfaces', '#dom-domrectreadonly-width', 'width')}}</td>
-   <td>{{Spec2('Geometry Interfaces')}}</td>
-   <td>La dernière version de la spécification est un ED.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                                       | Comment                                            |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------- |
+| {{SpecName('Geometry Interfaces', '#dom-domrectreadonly-width', 'width')}} | {{Spec2('Geometry Interfaces')}} | La dernière version de la spécification est un ED. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DOMRectReadOnly.width")}}</p>
+{{Compat("api.DOMRectReadOnly.width")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("DOMRect")}}</li>
-</ul>
+- {{domxref("DOMRect")}}

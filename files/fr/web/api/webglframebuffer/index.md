@@ -7,57 +7,43 @@ tags:
   - WebGL
 translation_of: Web/API/WebGLFramebuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>L'interface <strong>WebGL Framebuffer</strong> fait partie de l'<a href="/fr-FR/docs/Web/API/WebGL_API">API WebGL</a> et représente une collection de tampons servant de destination de rendu.</p>
+L'interface **WebGL Framebuffer** fait partie de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) et représente une collection de tampons servant de destination de rendu.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'objet <code>WebGLFramebuffer</code> ne définit aucune méthode ou propriété en propre, et son contenu n'est pas directement accessible. Lorsque vous travaillez avec des objets <code>WebGLFramebuffer</code>, les méthodes suivantes du {{domxref("WebGLRenderingContext")}} sont utiles :</p>
+L'objet `WebGLFramebuffer` ne définit aucune méthode ou propriété en propre, et son contenu n'est pas directement accessible. Lorsque vous travaillez avec des objets `WebGLFramebuffer`, les méthodes suivantes du {{domxref("WebGLRenderingContext")}} sont utiles :
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindFramebuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createFramebuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteFramebuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isFramebuffer()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.createFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.isFramebuffer()")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Création_d'un_tampon_d'image">Création d'un tampon d'image</h3>
+### Création d'un tampon d'image
 
-<pre class="brush: js">var canevas = document.getElementById('canevas');
+```js
+var canevas = document.getElementById('canevas');
 var gl = canevas.getContext('webgl');
 var tampon = gl.createFramebuffer();
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.5", "WebGLFramebuffer")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                    | Statut                   | Commentaire          |
+| ---------------------------------------------------------------- | ------------------------ | -------------------- |
+| {{SpecName('WebGL', "#5.5", "WebGLFramebuffer")}} | {{Spec2('WebGL')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WebGLFramebuffer")}}</p>
+{{Compat("api.WebGLFramebuffer")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindFramebuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createFramebuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteFramebuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isFramebuffer()")}}</li>
- <li>Autres tampon : {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.createFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.isFramebuffer()")}}
+- Autres tampon : {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}

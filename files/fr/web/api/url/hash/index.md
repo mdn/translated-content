@@ -9,54 +9,40 @@ tags:
   - URL
 translation_of: Web/API/URL/hash
 ---
-<div>{{ APIRef("URL API") }}</div>
+{{ APIRef("URL API") }}
 
-<p>La propriété <strong><code>hash</code></strong> de l'interface {{domxref("URL")}} retourne un {{domxref("USVString")}} contenant le caractère <code>'#'</code> suivi par l'identificateur de fragment de URL.</p>
+La propriété **`hash`** de l'interface {{domxref("URL")}} retourne un {{domxref("USVString")}} contenant le caractère `'#'` suivi par l'identificateur de fragment de URL.
 
-<p>Le fragment n'est pas <a href="/en-US/docs/Glossary/percent-encoding">décodé en pourcent</a>. Si l'URL ne contient pas d'identificateur de fragment, la valeur de cette propriété est une chaîne de caractère vide — <code>""</code>.</p>
+Le fragment n'est pas [décodé en pourcent](/en-US/docs/Glossary/percent-encoding). Si l'URL ne contient pas d'identificateur de fragment, la valeur de cette propriété est une chaîne de caractère vide — `""`.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.hash;
-<em>object</em>.hash = <em>string</em>;
-</pre>
+    string = object.hash;
+    object.hash = string;
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un {{domxref("USVString")}}.</p>
+Un {{domxref("USVString")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: html">var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href#Examples');
-url.hash // Returns '#Examples'</pre>
+```html
+var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href#Examples');
+url.hash // Returns '#Examples'
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#dom-url-hash', 'URL.hash')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                    | Statut               | Commentaire         |
+| ---------------------------------------------------------------- | -------------------- | ------------------- |
+| {{SpecName('URL', '#dom-url-hash', 'URL.hash')}} | {{Spec2('URL')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.URL.hash")}}
 
+## A voir également
 
-<p>{{Compat("api.URL.hash")}}</p>
-
-<h2 id="A_voir_également">A voir également</h2>
-
-<ul>
- <li>L'interface {{domxref("URL")}} dont il est contenu.</li>
-</ul>
+- L'interface {{domxref("URL")}} dont il est contenu.

@@ -14,110 +14,77 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/btoa
 original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>La méthode <code>WindowOrWorkerGlobalScope.btoa()</code> crée une chaîne ASCII codée en base 64 à partir d'un objet {{jsxref ("String")}} dans lequel chaque caractère de la chaîne est traité comme un octet de données binaires.</p>
+La méthode `WindowOrWorkerGlobalScope.btoa()` crée une chaîne ASCII codée en base 64 à partir d'un objet {{jsxref ("String")}} dans lequel chaque caractère de la chaîne est traité comme un octet de données binaires.
 
-<div class="note">
-<p><strong>Note :</strong> étant donné que cette fonction traite chaque caractère comme un octet de données binaires, quel que soit le nombre d'octets composant le caractère, une exception <code>InvalidCharacterError</code> est déclenchée si le {{Glossary("code point")}} d'un caractère quelconque est en dehors de la plage 0x00 à 0xFF. Voir {{anch("Chaînes Unicode")}} pour un exemple montrant comment encoder des chaînes avec des caractères en dehors de la plage 0x00 à 0xFF.</p>
-</div>
+> **Note :** étant donné que cette fonction traite chaque caractère comme un octet de données binaires, quel que soit le nombre d'octets composant le caractère, une exception `InvalidCharacterError` est déclenchée si le {{Glossary("code point")}} d'un caractère quelconque est en dehors de la plage 0x00 à 0xFF. Voir {{anch("Chaînes Unicode")}} pour un exemple montrant comment encoder des chaînes avec des caractères en dehors de la plage 0x00 à 0xFF.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre>var donneesEncodees = scope.btoa(<em>chaineAEncoder</em>);
-</pre>
+    var donneesEncodees = scope.btoa(chaineAEncoder);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>chaineAEncoder</code></dt>
- <dd>Une chaîne dont les caractères représentent chacun un octet unique de données binaires à encoder en ASCII.</dd>
-</dl>
+- `chaineAEncoder`
+  - : Une chaîne dont les caractères représentent chacun un octet unique de données binaires à encoder en ASCII.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une chaîne contenant la représentation Base64 de la <code>chaineAEncoder</code>.</p>
+Une chaîne contenant la représentation Base64 de la `chaineAEncoder`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="eval">var donneesEncodees = window.btoa('Salut, monde'); // encode une chaîne<em>
-</em>var donneesDecodees = window.atob(donneesEncodees); // décode la chaîne
-</pre>
+    var donneesEncodees = window.btoa('Salut, monde'); // encode une chaîne
+    var donneesDecodees = window.atob(donneesEncodees); // décode la chaîne
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Vous pouvez utiliser cette méthode pour encoder des données qui, autrement, pourraient engendrer des problèmes de communication, les transmettre et utiliser alors la méthode {{domxref("WindowOrWorkerGlobalScope.atob","atob()")}} pour décoder les données à nouveau. Par exemple, vous pouvez encoder des caractères de contrôle tels que les valeurs ASCII de 0 à 31.</p>
+Vous pouvez utiliser cette méthode pour encoder des données qui, autrement, pourraient engendrer des problèmes de communication, les transmettre et utiliser alors la méthode {{domxref("WindowOrWorkerGlobalScope.atob","atob()")}} pour décoder les données à nouveau. Par exemple, vous pouvez encoder des caractères de contrôle tels que les valeurs ASCII de 0 à 31.
 
-<p><code>btoa()</code> est également disponible pour les composants XPCOM implémentés en JavaScript, même si {domxref("Window")}} n'est pas l'objet global dans les composants.</p>
+`btoa()` est également disponible pour les composants XPCOM implémentés en JavaScript, même si {domxref("Window")}} n'est pas l'objet global dans les composants.
 
-<h2 id="Chaînes_Unicode">Chaînes Unicode</h2>
+## Chaînes Unicode
 
-<p>Dans la plupart des navigateurs, l'appel de <code>btoa()</code> sur une chaîne Unicode engendrera une exception <code>InvalidCharacterError</code>.</p>
+Dans la plupart des navigateurs, l'appel de `btoa()` sur une chaîne Unicode engendrera une exception `InvalidCharacterError`.
 
-<p>Une option est d'échapper tous les caractères étendus, de telle sorte que la chaîne que vous voulez en fait encoder soit une représentation ASCII de l'original. Voyez cet exemple, noté par <a href="http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html">Johan Sundström</a> :</p>
+Une option est d'échapper tous les caractères étendus, de telle sorte que la chaîne que vous voulez en fait encoder soit une représentation ASCII de l'original. Voyez cet exemple, noté par [Johan Sundström](http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html) :
 
-<pre><code>// Chaîne ucs-2 en ascii encodé en base64
-function uena(chn) {
-    return window.btoa(unescape(encodeURIComponent(chn)));
-}
-// Ascii encodé en base64 en chaîne ucs-2
-function aenu(chn) {
-    return decodeURIComponent(escape(window.atob(chn)));
-}
-// Usage :
-uena('✓ à la mode'); // 4pyTIMOgIGxhIG1vZGU=
-aenu('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
+    // Chaîne ucs-2 en ascii encodé en base64
+    function uena(chn) {
+        return window.btoa(unescape(encodeURIComponent(chn)));
+    }
+    // Ascii encodé en base64 en chaîne ucs-2
+    function aenu(chn) {
+        return decodeURIComponent(escape(window.atob(chn)));
+    }
+    // Usage :
+    uena('✓ à la mode'); // 4pyTIMOgIGxhIG1vZGU=
+    aenu('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
 
-uena('I \u2661 Unicode!'); // SSDimaEgVW5pY29kZSE=
-aenu('SSDimaEgVW5pY29kZSE='); // "I ♡ Unicode!"</code></pre>
+    uena('I \u2661 Unicode!'); // SSDimaEgVW5pY29kZSE=
+    aenu('SSDimaEgVW5pY29kZSE='); // "I ♡ Unicode!"
 
-<p>Une solution meilleure, plus fiable et moins coûteuse consiste à <a href="/fr/docs/D%C3%A9coder_encoder_en_base64">utiliser des tableaux typés pour faire la conversion</a>.</p>
+Une solution meilleure, plus fiable et moins coûteuse consiste à [utiliser des tableaux typés pour faire la conversion](/fr/docs/D%C3%A9coder_encoder_en_base64).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-btoa', 'WindowOrWorkerGlobalScope.btoa()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Méthode déplacée dans le mixin <code>WindowOrWorkerGlobalScope</code> dans la spéc la plus récente.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-windowbase64-btoa', 'WindowBase64.btoa()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Pas de changement depuis le dernier instantané, {{SpecName("HTML5.1")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', '#dom-windowbase64-btoa', 'WindowBase64.btoa()')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Instantané de {{SpecName("HTML WHATWG")}}. Pas de changement.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "#dom-windowbase64-btoa", "WindowBase64.btoa()")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Instantané de {{SpecName("HTML WHATWG")}}. Création de <code>WindowBase64</code> (les propriétés se trouvaient sur la cible avant cela).</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | Statut                           | Commentaire                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'webappapis.html#dom-btoa', 'WindowOrWorkerGlobalScope.btoa()')}} | {{Spec2('HTML WHATWG')}} | Méthode déplacée dans le mixin `WindowOrWorkerGlobalScope` dans la spéc la plus récente.                                               |
+| {{SpecName('HTML WHATWG', '#dom-windowbase64-btoa', 'WindowBase64.btoa()')}}                     | {{Spec2('HTML WHATWG')}} | Pas de changement depuis le dernier instantané, {{SpecName("HTML5.1")}}.                                                      |
+| {{SpecName('HTML5.1', '#dom-windowbase64-btoa', 'WindowBase64.btoa()')}}                         | {{Spec2('HTML5.1')}}     | Instantané de {{SpecName("HTML WHATWG")}}. Pas de changement.                                                                 |
+| {{SpecName("HTML5 W3C", "#dom-windowbase64-btoa", "WindowBase64.btoa()")}}                     | {{Spec2('HTML5 W3C')}}     | Instantané de {{SpecName("HTML WHATWG")}}. Création de `WindowBase64` (les propriétés se trouvaient sur la cible avant cela). |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.btoa")}}</p>
+{{Compat("api.WindowOrWorkerGlobalScope.btoa")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">Base64 encoding and decoding</a></li>
- <li><a href="/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">Les URL de <code>données</code></a></li>
- <li>{{domxref("WindowOrWorkerGlobalScope.atob","atob()")}}</li>
- <li><a href="/en-US/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></li>
-</ul>
+- [Base64 encoding and decoding](/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)
+- [Les URL de `données`](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
+- {{domxref("WindowOrWorkerGlobalScope.atob","atob()")}}
+- [Components.utils.importGlobalProperties](/en-US/docs/Components.utils.importGlobalProperties)

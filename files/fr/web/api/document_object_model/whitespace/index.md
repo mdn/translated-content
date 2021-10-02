@@ -5,63 +5,63 @@ tags:
   - DOM
 translation_of: Web/API/Document_Object_Model/Whitespace
 ---
-<h2 id="Le_probl.C3.A8me">Le problème</h2>
+## Le problème
 
-<p>La présence d'espaces et de blancs dans le <a href="fr/DOM">DOM</a> peut rendre la manipulation de l'arbre de contenu difficile dans des aspects qu'on ne prévoit pas forcément. Dans Mozilla, tous les espaces et blancs dans le contenu texte du document original sont représentés dans le DOM (cela ne concerne pas les blancs à l'intérieur des balises). (C'est nécessaire en interne afin que l'éditeur puisse conserver le formatage des documents et que l'instruction <code>white-space: pre</code> en <a href="fr/CSS">CSS</a> fonctionne.) Cela signifie que :</p>
+La présence d'espaces et de blancs dans le [DOM](fr/DOM) peut rendre la manipulation de l'arbre de contenu difficile dans des aspects qu'on ne prévoit pas forcément. Dans Mozilla, tous les espaces et blancs dans le contenu texte du document original sont représentés dans le DOM (cela ne concerne pas les blancs à l'intérieur des balises). (C'est nécessaire en interne afin que l'éditeur puisse conserver le formatage des documents et que l'instruction `white-space: pre` en [CSS](fr/CSS) fonctionne.) Cela signifie que :
 
-<ul>
- <li>il y aura certains nœuds texte qui ne contiendront que du vide, et</li>
- <li>certains nœuds texte commenceront ou se termineront par des blancs.</li>
-</ul>
+- il y aura certains nœuds texte qui ne contiendront que du vide, et
+- certains nœuds texte commenceront ou se termineront par des blancs.
 
-<p>En d'autres termes, l'arbre DOM pour le document qui suit ressemblera à l'image ci-dessous (où « \n » représente un retour à la ligne) :</p>
+En d'autres termes, l'arbre DOM pour le document qui suit ressemblera à l'image ci-dessous (où « \n » représente un retour à la ligne) :
 
-<pre class="eval">&lt;!-- My document --&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;My Document&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Header&lt;/h1&gt;
-  &lt;p&gt;
-    Paragraph
-  &lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    <!-- My document -->
+    <html>
+    <head>
+      <title>My Document</title>
+    </head>
+    <body>
+      <h1>Header</h1>
+      <p>
+        Paragraph
+      </p>
+    </body>
+    </html>
 
-<p><img alt="Arbre du DOM équivalent à l'exemple HTML ci-avant" src="dom-string.png"></p>
+![Arbre du DOM équivalent à l'exemple HTML ci-avant](dom-string.png)
 
-<p>Ceci peut rendre les choses un peu plus difficiles pour les utilisateurs du DOM qui aimeraient parcourir le contenu, sans se préoccuper des blancs.</p>
+Ceci peut rendre les choses un peu plus difficiles pour les utilisateurs du DOM qui aimeraient parcourir le contenu, sans se préoccuper des blancs.
 
-<h2 id="Rendre_les_choses_plus_faciles">Rendre les choses plus faciles</h2>
+## Rendre les choses plus faciles
 
-<p>On peut formater leur code comme indiqué ci-dessous pour contourner le problème:</p>
+On peut formater leur code comme indiqué ci-dessous pour contourner le problème:
 
-<pre class="brush: html">&lt;!-- jolie impression conventionnelle
+```html
+<!-- jolie impression conventionnelle
      avec des espaces entre les balises:
- --&gt;
-&lt;div&gt;
- &lt;ul&gt;
-  &lt;li&gt;Position 1&lt;/li&gt;
-  &lt;li&gt;Position 2&lt;/li&gt;
-  &lt;li&gt;Position 3&lt;/li&gt;
- &lt;/ul&gt;
-&lt;/div&gt;
+ -->
+<div>
+ <ul>
+  <li>Position 1</li>
+  <li>Position 2</li>
+  <li>Position 3</li>
+ </ul>
+</div>
 
-&lt;!-- jolie impression adaptée au problème :
- --&gt;
-&lt;div
- &gt;&lt;ul
-  &gt;&lt;li&gt;Position 1&lt;/li
-  &gt;&lt;li&gt;Position 2&lt;/li
-  &gt;&lt;li&gt;Position 3&lt;/li
- &gt;&lt;/ul
-&gt;&lt;/div&gt;</pre>
+<!-- jolie impression adaptée au problème :
+ -->
+<div
+ ><ul
+  ><li>Position 1</li
+  ><li>Position 2</li
+  ><li>Position 3</li
+ ></ul
+></div>
+```
 
-<p>Le code JavaScript ci-dessous définit plusieurs fonctions facilitant la manipulation d'espaces dans le DOM :</p>
+Le code JavaScript ci-dessous définit plusieurs fonctions facilitant la manipulation d'espaces dans le DOM :
 
-<pre class="brush: js">/**
+```js
+/**
  * Tout au long, les espaces sont définis comme l'un des caractères
  *  "\t" TAB \u0009
  *  "\n" LF  \u000A
@@ -78,8 +78,8 @@ translation_of: Web/API/Document_Object_Model/Whitespace
  *
  * @param nod  Un nœud implémentant l'interface |CharacterData| (c'est-à-dire,
  *             un nœud |Text|, |Comment| ou |CDATASection|
- * @return     True <em>(vrai)</em> Si tout le contenu du texte du |nod| est un espace,
- *             sinon false <em>(faux)</em>.
+ * @return     True (vrai) Si tout le contenu du texte du |nod| est un espace,
+ *             sinon false (faux).
  */
 function is_all_ws( nod )
 {
@@ -92,16 +92,16 @@ function is_all_ws( nod )
  * Détermine si le nœud doit être ignoré par les fonctions d'itération.
  *
  * @param nod  Un objet implémentant l'interface DOM1 |Node|.
- * @return     true <em>(vrai)</em> si le nœud est :
+ * @return     true (vrai) si le nœud est :
  *                1) un nœud |Text| qui est tout en espace
  *                2) un nœud |Comment|
- *             et autrement false <em>(faux)</em>.
+ *             et autrement false (faux).
  */
 
 function is_ignorable( nod )
 {
   return ( nod.nodeType == 8) || // un nœud commentaire
-         ( (nod.nodeType == 3) &amp;&amp; is_all_ws(nod) ); // un nœud texte, tout espace
+         ( (nod.nodeType == 3) && is_all_ws(nod) ); // un nœud texte, tout espace
 }
 
 /**
@@ -204,13 +204,15 @@ function data_of( txt )
   if (data.charAt(data.length - 1) == " ")
     data = data.substring(0, data.length - 1);
   return data;
-}</pre>
+}
+```
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Le code qui suit montre l'utilisation des fonctions présentées plus haut. Il parcourt les enfants d'un élément (dont les enfants sont tous des éléments) pour trouver celui dont le texte est <code>"Ceci est le troisième paragraphe"</code>, et change ensuite l'attribut <code>class</code> et le contenu de ce paragraphe.</p>
+Le code qui suit montre l'utilisation des fonctions présentées plus haut. Il parcourt les enfants d'un élément (dont les enfants sont tous des éléments) pour trouver celui dont le texte est `"Ceci est le troisième paragraphe"`, et change ensuite l'attribut `class` et le contenu de ce paragraphe.
 
-<pre class="brush: js">var cur = first_child(document.getElementById("test"));
+```js
+var cur = first_child(document.getElementById("test"));
 while (cur)
 {
   if (data_of(cur.firstChild) == "This is the third paragraph.")
@@ -219,4 +221,5 @@ while (cur)
       cur.firstChild.textContent = "This is the magic paragraph.";
   }
   cur = node_after(cur);
-}</pre>
+}
+```

@@ -11,65 +11,48 @@ tags:
   - observers
 translation_of: Web/API/PerformanceObserver
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>L'interface <strong><code>PerformanceObserver</code></strong> est utilisée pour <em>observer</em> les événements de mesure des performances et être notifié des nouvelles <a href="/fr/docs/Web/API/PerformanceEntry">entréés de performance</a> lorsqu'elles sont enregistrées dans la <em>chronologie des performances</em> du navigateur.</p>
+L'interface **`PerformanceObserver`** est utilisée pour _observer_ les événements de mesure des performances et être notifié des nouvelles [entréés de performance](/fr/docs/Web/API/PerformanceEntry) lorsqu'elles sont enregistrées dans la _chronologie des performances_ du navigateur.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Constructor">Constructeur</h2>
+## Constructeur
 
-<dl>
-  <dt><a href="/fr/docs/Web/API/PerformanceObserver/PerformanceObserver"><code>PerformanceObserver()</code></a></dt>
-  <dd>Crée et retourne un nouvel objet <code>PerformanceObserver</code>.</dd>
-</dl>
+- [`PerformanceObserver()`](/fr/docs/Web/API/PerformanceObserver/PerformanceObserver)
+  - : Crée et retourne un nouvel objet `PerformanceObserver`.
 
-<h2 id="Methods">Méthodes</h2>
+## Méthodes
 
-<dl>
-  <dt><a href="/fr/docs/Web/API/PerformanceObserver/observe"><code>PerformanceObserver.observe()</code></a></dt>
-  <dd>Spécifie l'ensemble des <a href="/fr/docs/Web/API/PerformanceEntry/entryType">types d'entrées</a> à observer. La fonction de rappel de l'observateur de performances sera invoquée lorsqu'une <a href="/fr/docs/Web/API/PerformanceEntry">entrée de performance</a> est enregistrée pour l'un des <code>entryTypes</code> spécifiés.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceObserver/disconnect"><code>PerformanceObserver.disconnect()</code></a></dt>
-  <dd>Arrête l'observation des <a href="/fr/docs/Web/API/PerformanceEntry">entrées de performances</a>.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceObserver/takeRecords"><code>PerformanceObserver.takeRecords()</code></a> {{Experimental_Inline}}</dt>
-  <dd>Renvoie la liste actuelle des <a href="/fr/docs/Web/API/PerformanceEntry">entrées de performances</a> stockées dans l'observateur de performance, en la vidant.</dd>
-</dl>
+- [`PerformanceObserver.observe()`](/fr/docs/Web/API/PerformanceObserver/observe)
+  - : Spécifie l'ensemble des [types d'entrées](/fr/docs/Web/API/PerformanceEntry/entryType) à observer. La fonction de rappel de l'observateur de performances sera invoquée lorsqu'une [entrée de performance](/fr/docs/Web/API/PerformanceEntry) est enregistrée pour l'un des `entryTypes` spécifiés.
+- [`PerformanceObserver.disconnect()`](/fr/docs/Web/API/PerformanceObserver/disconnect)
+  - : Arrête l'observation des [entrées de performances](/fr/docs/Web/API/PerformanceEntry).
+- [`PerformanceObserver.takeRecords()`](/fr/docs/Web/API/PerformanceObserver/takeRecords) {{Experimental_Inline}}
+  - : Renvoie la liste actuelle des [entrées de performances](/fr/docs/Web/API/PerformanceEntry) stockées dans l'observateur de performance, en la vidant.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">function perf_observer(list, observer) {
+```js
+function perf_observer(list, observer) {
   // Traiter l'événement "measure".
 }
 const observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({entryTypes: ["measure"]});</pre>
+observer2.observe({entryTypes: ["measure"]});
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceobserver', 'PerformanceObserver')}}</td>
-      <td>{{Spec2('Performance Timeline Level 2')}}</td>
-      <td>Définition initiale de l'interface <code>PerformanceObserver</code>.</td>
-    </tr>
-   </tbody>
-</table>
+| Spécification                                                                                                                    | Statut                                                   | Commentaire                                               |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | --------------------------------------------------------- |
+| {{SpecName('Performance Timeline Level 2', '#dom-performanceobserver', 'PerformanceObserver')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale de l'interface `PerformanceObserver`. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceObserver")}}</p>
+{{Compat("api.PerformanceObserver")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/MutationObserver"><code>MutationObserver</code></a></li>
- <li><a href="/fr/docs/Web/API/ResizeObserver"><code>ResizeObserver</code></a></li>
- <li><a href="/fr/docs/Web/API/IntersectionObserver"><code>IntersectionObserver</code></a></li>
-</ul>
+- [`MutationObserver`](/fr/docs/Web/API/MutationObserver)
+- [`ResizeObserver`](/fr/docs/Web/API/ResizeObserver)
+- [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver)

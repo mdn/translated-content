@@ -13,42 +13,28 @@ tags:
   - vibrate
 translation_of: Web/API/Notification/vibrate
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>La propriété en lecture seule <strong><code>vibrate</code></strong> de l'interface {{domxref ("Notification")}} spécifie un modèle de vibration que le matériel de vibration de l'appareil doit émettre lorsque la notification se déclenche. Ceci est comme définis à l'aide de l'option <code>vibrate</code> lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification ()")}}.</p>
+La propriété en lecture seule **`vibrate`** de l'interface {{domxref ("Notification")}} spécifie un modèle de vibration que le matériel de vibration de l'appareil doit émettre lorsque la notification se déclenche. Ceci est comme définis à l'aide de l'option `vibrate` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification ()")}}.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>Notification</var>.vibrate
-</pre>
+    Notification.vibrate
 
-<h3 id="Return_Value">Valeur</h3>
+### Valeur
 
-<p>Un <a href="/fr/docs/Web/Guide/API/Vibration#Vibration_patterns">modèle de vibration</a>, tel que spécifié dans la spécification de l'{{domxref ("Vibration_API", "Api de Vibration")}}.</p>
+Un [modèle de vibration](/fr/docs/Web/Guide/API/Vibration#Vibration_patterns), tel que spécifié dans la spécification de l'{{domxref ("Vibration_API", "Api de Vibration")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-notification-vibrate','vibrate')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                                     | Commentaire     |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | --------------- |
+| {{SpecName('Web Notifications','#dom-notification-vibrate','vibrate')}} | {{Spec2('Web Notifications')}} | Living standard |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Notification.vibrate")}}</p>
+{{Compat("api.Notification.vibrate")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a></li>
-</ul>
+- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

@@ -10,51 +10,46 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceEntry
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>L'objet <strong><code>PerformanceEntry</code></strong> encapsule une seule mesure de performance qui fait partie de la <em>chronologie de performance</em>. Une <em>entrée de performance</em> peut être créée directement en faisant <em><a href="/fr/docs/Web/API/PerformanceMark">une marque</a></em> ou <em><a href="/fr/docs/Web/API/PerformanceMeasure">une mesure</a></em> (par exemple en appelant la méthode <a href="/fr/docs/Web/API/Performance/mark"><code>mark()</code></a>) à un point explicite d'une application. Les entrées de performance sont également créées de manière indirecte, par exemple en chargeant une ressource (telle qu'une image).</p>
+L'objet **`PerformanceEntry`** encapsule une seule mesure de performance qui fait partie de la _chronologie de performance_. Une _entrée de performance_ peut être créée directement en faisant _[une marque](/fr/docs/Web/API/PerformanceMark)_ ou _[une mesure](/fr/docs/Web/API/PerformanceMeasure)_ (par exemple en appelant la méthode [`mark()`](/fr/docs/Web/API/Performance/mark)) à un point explicite d'une application. Les entrées de performance sont également créées de manière indirecte, par exemple en chargeant une ressource (telle qu'une image).
 
-<p>Les instances <code>PerformanceEntry</code> auront toujours l'un des sous-types suivants :</p>
+Les instances `PerformanceEntry` auront toujours l'un des sous-types suivants :
 
-<ul>
-  <li><a href="/fr/docs/Web/API/PerformanceMark"><code>PerformanceMark</code></a></li>
-  <li><a href="/fr/docs/Web/API/PerformanceMeasure"><code>PerformanceMeasure</code></a></li>
-  <li><a href="/fr/docs/Web/API/PerformanceFrameTiming"><code>PerformanceFrameTiming</code></a></li>
-  <li><a href="/fr/docs/Web/API/PerformanceNavigationTiming"><code>PerformanceNavigationTiming</code></a></li>
-  <li><a href="/fr/docs/Web/API/PerformanceResourceTiming"><code>PerformanceResourceTiming</code></a></li>
-  <li><a href="/fr/docs/Web/API/PerformancePaintTiming"><code>PerformancePaintTiming</code></a></li>
-</ul>
+- [`PerformanceMark`](/fr/docs/Web/API/PerformanceMark)
+- [`PerformanceMeasure`](/fr/docs/Web/API/PerformanceMeasure)
+- [`PerformanceFrameTiming`](/fr/docs/Web/API/PerformanceFrameTiming)
+- [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming)
+- [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming)
+- [`PerformancePaintTiming`](/fr/docs/Web/API/PerformancePaintTiming)
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Properties">Propriétés</h2>
+## Propriétés
 
-<dl>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry/name"><code>PerformanceEntry.name</code></a> {{readonlyInline}}</dt>
-  <dd>Une valeur qui précise davantage la valeur renvoyée par la propriété <a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>PerformanceEntry.entryType</code></a>. La valeur des deux dépend du sous-type. Voir la page de la propriété pour les valeurs valides.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>PerformanceEntry.entryType</code></a> {{readonlyInline}}</dt>
-  <dd>Une chaîne de caractère <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> représentant le type de mesure de performance comme, par exemple, "<code>mark</code>". Voir la page des propriétés pour les valeurs valides.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry/startTime"><code>PerformanceEntry.startTime</code></a> {{readonlyInline}}</dt>
-  <dd>Un objet <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> représentant l'heure de départ de la mesure de performance.</dd>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry/duration"><code>PerformanceEntry.duration</code></a> {{readonlyInline}}</dt>
-  <dd>Un objet <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> représentant la valeur temporelle de la durée de l'événement de performance.</dd>
-</dl>
+- [`PerformanceEntry.name`](/fr/docs/Web/API/PerformanceEntry/name) {{readonlyInline}}
+  - : Une valeur qui précise davantage la valeur renvoyée par la propriété [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType). La valeur des deux dépend du sous-type. Voir la page de la propriété pour les valeurs valides.
+- [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) {{readonlyInline}}
+  - : Une chaîne de caractère [`DOMString`](/fr/docs/Web/API/DOMString) représentant le type de mesure de performance comme, par exemple, "`mark`". Voir la page des propriétés pour les valeurs valides.
+- [`PerformanceEntry.startTime`](/fr/docs/Web/API/PerformanceEntry/startTime) {{readonlyInline}}
+  - : Un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant l'heure de départ de la mesure de performance.
+- [`PerformanceEntry.duration`](/fr/docs/Web/API/PerformanceEntry/duration) {{readonlyInline}}
+  - : Un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle de la durée de l'événement de performance.
 
-<h2 id="Methods">Méthodes</h2>
+## Méthodes
 
-<dl>
-  <dt><a href="/fr/docs/Web/API/PerformanceEntry/toJSON"><code>PerformanceEntry.toJSON()</code></a></dt>
-  <dd>Renvoie une représentation JSON de l'objet <code>PerformanceEntry</code>.</dd>
-</dl>
+- [`PerformanceEntry.toJSON()`](/fr/docs/Web/API/PerformanceEntry/toJSON)
+  - : Renvoie une représentation JSON de l'objet `PerformanceEntry`.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>L'exemple suivant vérifie toutes les propriétés <code>PerformanceEntry</code> pour voir si le navigateur les prend en charge et, le cas échéant, écrit leurs valeurs dans la console.</p>
+L'exemple suivant vérifie toutes les propriétés `PerformanceEntry` pour voir si le navigateur les prend en charge et, le cas échéant, écrit leurs valeurs dans la console.
 
-<pre class="brush:js">function print_PerformanceEntries() {
+```js
+function print_PerformanceEntries() {
   // Utilise getEntries() pour obtenir une liste de toutes les entrées de performance.
   let p = performance.getEntries();
-  for (let i = 0; i &lt; p.length; i++) {
+  for (let i = 0; i < p.length; i++) {
     console.log("PerformanceEntry[" + i + "]");
     print_PerformanceEntry(p[i]);
   }
@@ -65,7 +60,7 @@ function print_PerformanceEntry(perfEntry) {
                     "startTime",
                     "duration"];
 
-  for (let i = 0; i &lt; properties.length; i++) {
+  for (let i = 0; i < properties.length; i++) {
     // Vérifie chaque propriété
     let supported = properties[i] in perfEntry;
     if (supported) {
@@ -76,72 +71,23 @@ function print_PerformanceEntry(perfEntry) {
     }
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Resource Timing 3')}}</td>
-      <td>{{Spec2('Resource Timing 3')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Resource Timing 2')}}</td>
-      <td>{{Spec2('Resource Timing 2')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Resource Timing')}}</td>
-      <td>{{Spec2('Resource Timing')}}</td>
-      <td>Ajoute l'interface <a href="/fr/docs/Web/API/PerformanceResourceTiming"><code>PerformanceResourceTiming</code></a> et la valeur <code>resource</code> pour <code>entryType</code>.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Navigation Timing Level 2')}}</td>
-      <td>{{Spec2('Navigation Timing Level 2')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Navigation Timing')}}</td>
-      <td>{{Spec2('Navigation Timing')}}</td>
-      <td>Ajoute l'interface <a href="/fr/docs/Web/API/PerformanceNavigationTiming"><code>PerformanceNavigationTiming</code></a> et la valeur <code>navigation</code> pour <code>entryType</code>.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('User Timing Level 2')}}</td>
-      <td>{{Spec2('User Timing Level 2')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('User Timing')}}</td>
-      <td>{{Spec2('User Timing')}}</td>
-      <td>Ajoute les interfaces <a href="/fr/docs/Web/API/PerformanceMark"><code>PerformanceMark</code></a> et <a href="/fr/docs/Web/API/PerformanceMeasure"><code>PerformanceMeasure</code></a> ainsi que les valeurs <code>mark</code> et <code>measure</code> pour <code>entryType</code>.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Frame Timing')}}</td>
-      <td>{{Spec2('Frame Timing')}}</td>
-      <td>Ajoute l'interface <a href="/fr/docs/Web/API/PerformanceFrameTiming"><code>PerformanceFrameTiming</code></a> et la valeur <code>frame</code> pour <code>entryType</code>.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceentry', 'PerformanceEntry')}}</td>
-      <td>{{Spec2('Performance Timeline Level 2')}}</td>
-      <td>Ajout de la méthode de sérialisation <code>toJSON()</code>.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Performance Timeline', '#dom-performanceentry', 'PerformanceEntry')}}</td>
-      <td>{{Spec2('Performance Timeline')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | Statut                                                   | Commentaire                                                                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('Resource Timing 3')}}                                                                             | {{Spec2('Resource Timing 3')}}                 |                                                                                                                                                                                                        |
+| {{SpecName('Resource Timing 2')}}                                                                             | {{Spec2('Resource Timing 2')}}                 |                                                                                                                                                                                                        |
+| {{SpecName('Resource Timing')}}                                                                                 | {{Spec2('Resource Timing')}}                     | Ajoute l'interface [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming) et la valeur `resource` pour `entryType`.                                                                 |
+| {{SpecName('Navigation Timing Level 2')}}                                                                 | {{Spec2('Navigation Timing Level 2')}}     |                                                                                                                                                                                                        |
+| {{SpecName('Navigation Timing')}}                                                                             | {{Spec2('Navigation Timing')}}                 | Ajoute l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) et la valeur `navigation` pour `entryType`.                                                           |
+| {{SpecName('User Timing Level 2')}}                                                                         | {{Spec2('User Timing Level 2')}}             |                                                                                                                                                                                                        |
+| {{SpecName('User Timing')}}                                                                                     | {{Spec2('User Timing')}}                         | Ajoute les interfaces [`PerformanceMark`](/fr/docs/Web/API/PerformanceMark) et [`PerformanceMeasure`](/fr/docs/Web/API/PerformanceMeasure) ainsi que les valeurs `mark` et `measure` pour `entryType`. |
+| {{SpecName('Frame Timing')}}                                                                                     | {{Spec2('Frame Timing')}}                         | Ajoute l'interface [`PerformanceFrameTiming`](/fr/docs/Web/API/PerformanceFrameTiming) et la valeur `frame` pour `entryType`.                                                                          |
+| {{SpecName('Performance Timeline Level 2', '#dom-performanceentry', 'PerformanceEntry')}} | {{Spec2('Performance Timeline Level 2')}} | Ajout de la méthode de sérialisation `toJSON()`.                                                                                                                                                       |
+| {{SpecName('Performance Timeline', '#dom-performanceentry', 'PerformanceEntry')}}             | {{Spec2('Performance Timeline')}}             | Définition initiale.                                                                                                                                                                                   |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceEntry")}}</p>
+{{Compat("api.PerformanceEntry")}}

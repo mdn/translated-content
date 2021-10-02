@@ -10,41 +10,26 @@ tags:
   - données
 translation_of: Web/API/BlobEvent/data
 ---
-<p>{{ apiref("Media Capture and Streams") }}</p>
+{{ apiref("Media Capture and Streams") }}
 
-<p>{{ SeeCompatTable() }}</p>
+{{ SeeCompatTable() }}
 
-<p>La propriété en lecture seule <code><strong>BlobEvent.data</strong></code> représente un {{domxref("Blob")}} associé à l'évènement.</p>
+La propriété en lecture seule **`BlobEvent.data`** représente un {{domxref("Blob")}} associé à l'évènement.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>associatedBlob</em> = <em>BlobEvent</em>.data</pre>
+    associatedBlob = BlobEvent.data
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('MediaStream Recording', '#widl-BlobEvent-data', 'BlobEvent.data')}}</td>
-   <td>{{Spec2('MediaStream Recording')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                                       | Commentaire          |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
+| {{SpecName('MediaStream Recording', '#widl-BlobEvent-data', 'BlobEvent.data')}} | {{Spec2('MediaStream Recording')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.BlobEvent.data")}}
 
+## Voir aussi
 
-<p>{{Compat("api.BlobEvent.data")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>L'interface {{domxref("BlobEvent")}} à laquelle elle appartient.</li>
-</ul>
+- L'interface {{domxref("BlobEvent")}} à laquelle elle appartient.

@@ -10,40 +10,44 @@ tags:
   - Reference
 translation_of: Web/API/Event/explicitOriginalTarget
 ---
-<div>{{ApiRef("DOM")}}{{Non-standard_header}}</div>
+{{ApiRef("DOM")}}{{Non-standard_header}}
 
-<p>Cette propriété représente la cible originale de l'évènement. Elle est spécifique à Mozilla.</p>
+Cette propriété représente la cible originale de l'évènement. Elle est spécifique à Mozilla.
 
-<p>Si l'évènement a été déporté pour une autre raison qu'une traverséee de frontière anonyme, cette propriété correspondra à la cible avant la déportation de l'évènement. Par exemples, les évènements de la souris sont déportés vers leur nœud parent lorsqu'ils se produisent sur des nœuds texte (cf. {{Bug(185889)}}). Dans ce cas <code><a href="/fr/docs/Web/API/Event/currentTarget">currentTarget</a></code> pointera vers le parent et <code>explicitOriginalTarget</code> vers le nœud texte.</p>
+Si l'évènement a été déporté pour une autre raison qu'une traverséee de frontière anonyme, cette propriété correspondra à la cible avant la déportation de l'évènement. Par exemples, les évènements de la souris sont déportés vers leur nœud parent lorsqu'ils se produisent sur des nœuds texte (cf. {{Bug(185889)}}). Dans ce cas [`currentTarget`](/fr/docs/Web/API/Event/currentTarget) pointera vers le parent et `explicitOriginalTarget` vers le nœud texte.
 
-<p>À la différence de <code><a href="/fr/docs/Web/API/Event/originalTarget">originalTarget</a></code>, <code>explicitOriginalTarget</code> ne contiendra jamais de contenu anonyme.</p>
+À la différence de [`originalTarget`](/fr/docs/Web/API/Event/originalTarget), `explicitOriginalTarget` ne contiendra jamais de contenu anonyme.
 
-<p>Voir aussi une <a href="/fr/docs/DOM/event/Comparison_of_Event_Targets">comparaison des cibles pour les évènements</a>.</p>
+Voir aussi une [comparaison des cibles pour les évènements](/fr/docs/DOM/event/Comparison_of_Event_Targets).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cette propriété peut être utiliséee avec <code>&lt;command&gt;</code> afin d'obtenir les détails de l'évènement de l'objet qui a invoqué la commande.</p>
+Cette propriété peut être utiliséee avec `<command>` afin d'obtenir les détails de l'évènement de l'objet qui a invoqué la commande.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;command id="my-cmd-anAction"
-         oncommand="myCommand(event);"/&gt;
-&lt;menulist&gt;
-  &lt;menupopup&gt;
-    &lt;menuitem label="Get my element name!"
-              command="my-cmd-anAction"/&gt;
-  &lt;/menupopup&gt;
-&lt;/menulist&gt;</pre>
+```html
+<command id="my-cmd-anAction"
+         oncommand="myCommand(event);"/>
+<menulist>
+  <menupopup>
+    <menuitem label="Get my element name!"
+              command="my-cmd-anAction"/>
+  </menupopup>
+</menulist>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function myCommand(ev) {
+```js
+function myCommand(ev) {
   console.log(ev.explicitOriginalTarget.nodeName);
   // affichera 'menuitem'
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété est spécifique à Mozilla. Elle est définie dans l'IDL {{Source("/dom/public/idl/events/nsIDOMNSEvent.idl")}}</p>
+Cette propriété est spécifique à Mozilla. Elle est définie dans l'IDL {{Source("/dom/public/idl/events/nsIDOMNSEvent.idl")}}
 
-<p>Cette propriété <strong>n'est pas définie</strong> dans la spécification <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html">DOM Level 2 Events</a></p>
+Cette propriété **n'est pas définie** dans la spécification [DOM Level 2 Events](https://www.w3.org/TR/DOM-Level-2-Events/events.html)

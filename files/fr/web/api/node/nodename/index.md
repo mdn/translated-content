@@ -9,103 +9,54 @@ tags:
   - Propriété
 translation_of: Web/API/Node/nodeName
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>La propriété en lecture seule <code><strong>Node.nodeName</strong></code> renvoie le nom du nœud courant dans une chaîne.</p>
+La propriété en lecture seule **`Node.nodeName`** renvoie le nom du nœud courant dans une chaîne.
 
-<p>Les valeurs retournées pour les différents types de noeuds sont :</p>
+Les valeurs retournées pour les différents types de noeuds sont :
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Interface</th>
-   <th>Valeur nodeName</th>
-  </tr>
-  <tr>
-   <td>{{domxref("Attr")}}</td>
-   <td>La valeur de {{domxref("Attr.name")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("CDATASection")}}</td>
-   <td><code>"#cdata-section"</code></td>
-  </tr>
-  <tr>
-   <td>{{domxref("Comment")}}</td>
-   <td><code>"#comment"</code></td>
-  </tr>
-  <tr>
-   <td>{{domxref("Document")}}</td>
-   <td><code>"#document"</code></td>
-  </tr>
-  <tr>
-   <td>{{domxref("DocumentFragment")}}</td>
-   <td><code>"#document-fragment"</code></td>
-  </tr>
-  <tr>
-   <td>{{domxref("DocumentType")}}</td>
-   <td>La valeur de {{domxref("DocumentType.name")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Element")}}</td>
-   <td>La valeur de {{domxref("Element.tagName")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Entity")}}</td>
-   <td>Le nom de l'entité</td>
-  </tr>
-  <tr>
-   <td>{{domxref("EntityReference")}}</td>
-   <td>Le nom de la référence d'entité</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Notation")}}</td>
-   <td>Le nom de notation</td>
-  </tr>
-  <tr>
-   <td>{{domxref("ProcessingInstruction")}}</td>
-   <td>La valeur de {{domxref("ProcessingInstruction.target")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Text")}}</td>
-   <td><code>"#text"</code></td>
-  </tr>
- </tbody>
-</table>
+| Interface                                        | Valeur nodeName                                                       |
+| ------------------------------------------------ | --------------------------------------------------------------------- |
+| {{domxref("Attr")}}                         | La valeur de {{domxref("Attr.name")}}                         |
+| {{domxref("CDATASection")}}             | `"#cdata-section"`                                                    |
+| {{domxref("Comment")}}                     | `"#comment"`                                                          |
+| {{domxref("Document")}}                 | `"#document"`                                                         |
+| {{domxref("DocumentFragment")}}         | `"#document-fragment"`                                                |
+| {{domxref("DocumentType")}}             | La valeur de {{domxref("DocumentType.name")}}             |
+| {{domxref("Element")}}                     | La valeur de {{domxref("Element.tagName")}}                 |
+| {{domxref("Entity")}}                     | Le nom de l'entité                                                    |
+| {{domxref("EntityReference")}}         | Le nom de la référence d'entité                                       |
+| {{domxref("Notation")}}                 | Le nom de notation                                                    |
+| {{domxref("ProcessingInstruction")}} | La valeur de {{domxref("ProcessingInstruction.target")}} |
+| {{domxref("Text")}}                         | `"#text"`                                                             |
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <em>str</em> = <em>node</em>.nodeName;
-</pre>
+    var str = node.nodeName;
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Avec le balisage suivant :</p>
+Avec le balisage suivant :
 
-<pre>&lt;div id="d1"&gt;hello world&lt;/div&gt;
-&lt;input type="text" id="t"/&gt;
-</pre>
+    <div id="d1">hello world</div>
+    <input type="text" id="t"/>
 
-<p>et le script suivant :</p>
+et le script suivant :
 
-<pre>var div1 = document.getElementById("d1");
-var text_field = document.getElementById("t");
-text_field.value = div1.nodeName;
-</pre>
+    var div1 = document.getElementById("d1");
+    var text_field = document.getElementById("t");
+    text_field.value = div1.nodeName;
 
-<p>En XHTML (ou tout autre format XML), la valeur de <code>text_field</code> sera « div ». Cependant, en HTML, la valeur de <code>text_field</code> sera « DIV », parce que <code>nodeName</code> et <code>tagName</code> renvoient en casse majuscule sur les éléments HTML dans les DOM marqués comme des documents HTML. En lire plus <a href="http://ejohn.org/blog/nodename-case-sensitivity/">détails sur la sensibilité à la casse de nodeName dans différents navigateurs</a> (en).</p>
+En XHTML (ou tout autre format XML), la valeur de `text_field` sera « div ». Cependant, en HTML, la valeur de `text_field` sera « DIV », parce que `nodeName` et `tagName` renvoient en casse majuscule sur les éléments HTML dans les DOM marqués comme des documents HTML. En lire plus [détails sur la sensibilité à la casse de nodeName dans différents navigateurs](http://ejohn.org/blog/nodename-case-sensitivity/) (en).
 
-<p>Notez que la propriété <code><a href="fr/DOM/element.tagName">tagName</a></code> aurait pu être uilisée à la place, puisque <code>nodeName</code> a la même valeur que <code>tagName</code> pour un élément. Souvenez vous cependant que <code>nodeName</code> renverra <code>#text</code> pour les nœuds texte tandis que <code>tagName</code> renverra <code>undefined</code>.</p>
+Notez que la propriété [`tagName`](fr/DOM/element.tagName) aurait pu être uilisée à la place, puisque `nodeName` a la même valeur que `tagName` pour un élément. Souvenez vous cependant que `nodeName` renverra `#text` pour les nœuds texte tandis que `tagName` renverra `undefined`.
 
-<h2 id="Sp.C3.A9cification">Spécification</h2>
+## Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D095">DOM Level 2 Core: Node.nodeName</a> <small>— <a href="http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-F68D095">traduction</a> (non normative)</small></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-F68D095">DOM Level 3 Core: Node.nodeName</a></li>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents">HTML 5: APIs in HTML documents</a></li>
-</ul>
+- [DOM Level 2 Core: Node.nodeName](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D095) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-F68D095) (non normative)
+- [DOM Level 3 Core: Node.nodeName](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-F68D095)
+- [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("api.Node.nodeName")}}</p>
+{{Compat("api.Node.nodeName")}}

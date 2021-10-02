@@ -1,61 +1,60 @@
 ---
 title: API Clipboard
 slug: Web/API/Clipboard_API
-translation_of: 'Web/API/Clipboard_API'
+translation_of: Web/API/Clipboard_API
 ---
-<div>{{DefaultAPISidebar("Clipboard API")}}</div>
+{{DefaultAPISidebar("Clipboard API")}}
 
-<p>L'<strong>API Clipboard</strong> (en français : API Presse-papiers) fournit la possibilité de répondre aux commandes du presse-papiers (couper, copier et coller) ainsi que de lire et écrire sur le presse-papiers système de façon asynchrone. L'accès aux contenus du presse-papiers est protégé par l'<a href="/fr/docs/Web/API/Permissions_API">API Permissions</a> : la permission <code>clipboard-write</code> est donnée automatiquement aux pages lorsqu'elles sont dans l'onglet actif. La permission <code>clipboard-read</code> doit quant à elle être demandée, ce que vous pouvez faire en tentant de lire les données du presse-papiers.</p>
+L'**API Clipboard** (en français : API Presse-papiers) fournit la possibilité de répondre aux commandes du presse-papiers (couper, copier et coller) ainsi que de lire et écrire sur le presse-papiers système de façon asynchrone. L'accès aux contenus du presse-papiers est protégé par l'[API Permissions](/fr/docs/Web/API/Permissions_API) : la permission `clipboard-write` est donnée automatiquement aux pages lorsqu'elles sont dans l'onglet actif. La permission `clipboard-read` doit quant à elle être demandée, ce que vous pouvez faire en tentant de lire les données du presse-papiers.
 
-<div class="note">
-<p><strong>Note :</strong> Cette API <em>n'est pas disponible</em> dans les <a href="/fr/docs/Web/API/Web_Workers_API">Web Workers</a> (elle n'est pas exposée via {{domxref("WorkerNavigator")}}).</p>
-</div>
+> **Note :** Cette API _n'est pas disponible_ dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API) (elle n'est pas exposée via {{domxref("WorkerNavigator")}}).
 
-<p>Cette API est conçue pour remplacer l'accès au presse-papiers précédemment proposé via {{domxref("document.execCommand()")}}.</p>
+Cette API est conçue pour remplacer l'accès au presse-papiers précédemment proposé via {{domxref("document.execCommand()")}}.
 
-<h2 id="accessing_the_clipboard">Accéder au presse-papier</h2>
+## Accéder au presse-papier
 
-<p>Au lieu de créer un objet <code>Clipboard</code> lors de l'instanciation, vous pouvez accéder au presse-papier du système avec la globale {{domxref("Navigator.clipboard")}} :</p>
+Au lieu de créer un objet `Clipboard` lors de l'instanciation, vous pouvez accéder au presse-papier du système avec la globale {{domxref("Navigator.clipboard")}} :
 
-<pre class="brush: js">navigator.clipboard.readText().then(
-  clipText =&gt; document.querySelector(".editor").innerText += clipText);</pre>
+```js
+navigator.clipboard.readText().then(
+  clipText => document.querySelector(".editor").innerText += clipText);
+```
 
-<p>Ce bout de code analyse le texte à partir du presse-papiers et l'insère après le premier élément trouvé comportant la classe <code>editor</code>. Puisque {{domxref("Clipboard.readText", "readText()")}} (sans oublier {{domxref("Clipboard.read", "read()")}}) retournent une chaîne vide si le contenu du presse-papier n'est pas textuel, ce code est sécurisé.</p>
+Ce bout de code analyse le texte à partir du presse-papiers et l'insère après le premier élément trouvé comportant la classe `editor`. Puisque {{domxref("Clipboard.readText", "readText()")}} (sans oublier {{domxref("Clipboard.read", "read()")}}) retournent une chaîne vide si le contenu du presse-papier n'est pas textuel, ce code est sécurisé.
 
-<h2 id="interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
-  <dt>{{domxref("Clipboard")}} {{securecontext_inline}}</dt>
-  <dd>Fournit une interface pour la lecture et l'écriture de texte et de données sur le presse-papiers du système. La spécification s'y réfère avec le terme "Async Clipboard API".</dd>
-  <dt>{{domxref("ClipboardEvent")}} {{securecontext_inline}}</dt>
-  <dd>Représente les évènements fournissant l'information relative à la modification du presse-papiers, qui peut être l'évènement {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}} ou {{domxref("Element/paste_event", "paste")}}. La spécification s'y réfère avec le terme "Clipboard Event API".</dd>
-  <dt>{{domxref("ClipboardItem")}} {{securecontext_inline}}</dt>
-  <dd>Représente un format de terme unique utilisé pour lire ou écrire des données.</dd>
-</dl>
+- {{domxref("Clipboard")}} {{securecontext_inline}}
+  - : Fournit une interface pour la lecture et l'écriture de texte et de données sur le presse-papiers du système. La spécification s'y réfère avec le terme "Async Clipboard API".
+- {{domxref("ClipboardEvent")}} {{securecontext_inline}}
+  - : Représente les évènements fournissant l'information relative à la modification du presse-papiers, qui peut être l'évènement {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}} ou {{domxref("Element/paste_event", "paste")}}. La spécification s'y réfère avec le terme "Clipboard Event API".
+- {{domxref("ClipboardItem")}} {{securecontext_inline}}
+  - : Représente un format de terme unique utilisé pour lire ou écrire des données.
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications("api.Clipboard")}}</p>
+{{Specifications("api.Clipboard")}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<h3 id="clipboard">Clipboard</h3>
+### Clipboard
 
-<p>{{Compat("api.Clipboard")}}</p>
+{{Compat("api.Clipboard")}}
 
-<h3 id="clipboardevent">ClipboardEvent</h3>
+### ClipboardEvent
 
-<p>{{Compat("api.ClipboardEvent")}}</p>
+{{Compat("api.ClipboardEvent")}}
 
-<h3 id="clipboarditem">ClipboardItem</h3>
+### ClipboardItem
 
-<p>{{Compat("api.ClipboardItem")}}</p>
+{{Compat("api.ClipboardItem")}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="https://async-clipboard-api.glitch.me/">Démonstration de l'API Async Clipboard sur Glitch (en anglais)</a></li>
-  <li><a href="https://web.dev/image-support-for-async-clipboard/"><i lang="en">Image support for Async Clipboard article</i> (en anglais)</a></li>
-  <li><a href="/fr/docs/Web/API/Permissions_API">API Permissions</a></li>
-  <li><a href="/fr/docs/Web/API/Permissions_API/Using_the_Permissions_API">Utiliser l'API Permissions</a></li>
-</ul>
+- [Démonstration de l'API Async Clipboard sur Glitch (en anglais)](https://async-clipboard-api.glitch.me/)
+- <i lang="en">Image support for Async Clipboard article</i>
+
+  [<i lang="en">Image support for Async Clipboard article</i> (en anglais)](https://web.dev/image-support-for-async-clipboard/)
+
+- [API Permissions](/fr/docs/Web/API/Permissions_API)
+- [Utiliser l'API Permissions](/fr/docs/Web/API/Permissions_API/Using_the_Permissions_API)

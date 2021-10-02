@@ -9,52 +9,37 @@ tags:
   - URL API
 translation_of: Web/API/URL/URL
 ---
-<p>{{APIRef("URL API")}}</p>
+{{APIRef("URL API")}}
 
-<p>Le constructeur <strong><code>URL()</code></strong> renvoie un nouvel objet {{domxref("URL")}} représentant l'URL définie par les paramètres.<br>
- <br>
- Si l'URL de base donnée ou l'URL résultante ne sont pas des URL valides, une {{domxref("DOMException")}} de type <code>SYNTAX_ERROR</code> est levée.</p>
+Le constructeur **`URL()`** renvoie un nouvel objet {{domxref("URL")}} représentant l'URL définie par les paramètres.
 
-<p>{{AvailableInWorkers}}</p>
+Si l'URL de base donnée ou l'URL résultante ne sont pas des URL valides, une {{domxref("DOMException")}} de type `SYNTAX_ERROR` est levée.
 
-<h2 id="Syntax">Syntax</h2>
+{{AvailableInWorkers}}
 
-<pre class="syntaxbox"><em>url</em> = new URL(<em>url</em>, [<em>base</em>])
-</pre>
+## Syntax
 
-<h3 id="Paramètres">Paramètres</h3>
+    url = new URL(url, [base])
 
-<dl>
- <dt><em>url</em></dt>
- <dd>Un {{domxref("USVString")}} représentant une URL absolue ou relative. Si l'URL est une URL relative, la base est obligatoire et sera utilisée comme URL de base. Si url est une URL absolue, une base donnée sera ignorée.</dd>
- <dt><em>base </em>{{optional_inline}}</dt>
- <dd>Un {{domxref("USVString")}} représentant l'URL de base à utiliser dans le cas où l'URL est une URL relative. Si non spécifié, il est par défaut à <code>''</code>.</dd>
-</dl>
+### Paramètres
 
-<div class="note">
-<p><strong>Note :</strong> Vous pouvez toujours utiliser un objet {{domxref ("URL")}} existant pour la base, qui se stringifie en attribut {{domxref ("DOMString.href", "href")}} de l'objet.</p>
-</div>
+- _url_
+  - : Un {{domxref("USVString")}} représentant une URL absolue ou relative. Si l'URL est une URL relative, la base est obligatoire et sera utilisée comme URL de base. Si url est une URL absolue, une base donnée sera ignorée.
+- _base_ {{optional_inline}}
+  - : Un {{domxref("USVString")}} représentant l'URL de base à utiliser dans le cas où l'URL est une URL relative. Si non spécifié, il est par défaut à `''`.
 
-<h3 id="Exceptions">Exceptions</h3>
+> **Note :** Vous pouvez toujours utiliser un objet {{domxref ("URL")}} existant pour la base, qui se stringifie en attribut {{domxref ("DOMString.href", "href")}} de l'objet.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Explication</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>TypeError</code></td>
-   <td>url (dans le cas d'URL absolues) ou base + URL (dans le cas d'URL relatives) n'est pas une URL valide.</td>
-  </tr>
- </tbody>
-</table>
+### Exceptions
 
-<h2 id="Exemple">Exemple</h2>
+| Exception   | Explication                                                                                            |
+| ----------- | ------------------------------------------------------------------------------------------------------ |
+| `TypeError` | url (dans le cas d'URL absolues) ou base + URL (dans le cas d'URL relatives) n'est pas une URL valide. |
 
-<pre class="brush: js">var a = new URL("/", "https://developer.mozilla.org"); // Crée une URL pointant vers 'https://developer.mozilla.org/'
+## Exemple
+
+```js
+var a = new URL("/", "https://developer.mozilla.org"); // Crée une URL pointant vers 'https://developer.mozilla.org/'
 var b = new URL("https://developer.mozilla.org");      // Crée une URL pointant vers 'https://developer.mozilla.org/'
 var c = new URL('en-US/docs', b);                      // Crée une URL pointant vers 'https://developer.mozilla.org/en-US/docs'
 var d = new URL('/en-US/docs', b);                     // Crée une URL pointant vers 'https://developer.mozilla.org/en-US/docs'
@@ -67,31 +52,18 @@ var j = new URL('/en-US/docs');                        // Déclenche une excepti
 var k = new URL('http://www.example.com', 'https://developers.mozilla.com');
                                                        // Crée une URL pointant vers 'http://www.example.com/'
 var l = new URL('http://www.example.com', b);          // Crée une URL pointant vers 'http://www.example.com/'
-</pre>
+```
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#constructors', 'URL.URL()')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>initialisation.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                    | Statut               | Commentaire     |
+| ---------------------------------------------------------------- | -------------------- | --------------- |
+| {{SpecName('URL', '#constructors', 'URL.URL()')}} | {{Spec2('URL')}} | initialisation. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.URL.URL")}}</p>
+{{Compat("api.URL.URL")}}
 
-<h2 id="À_voir_également">À voir également</h2>
+## À voir également
 
-<ul>
- <li>L'interface à laquelle il appartient : {{domxref("URL")}}.</li>
-</ul>
+- L'interface à laquelle il appartient : {{domxref("URL")}}.

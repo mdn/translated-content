@@ -13,75 +13,60 @@ tags:
   - matchAll
 translation_of: Web/API/Cache/matchAll
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>La méthode <strong><code>matchAll()</code></strong> de l'interface {{domxref("Cache")}} retourne une {{jsxref("Promise", "Promesse")}} qui est résolue en un tableau de toutes les requêtes qui matchent dans l'objet {{domxref("Cache")}}.</p>
+La méthode **`matchAll()`** de l'interface {{domxref("Cache")}} retourne une {{jsxref("Promise", "Promesse")}} qui est résolue en un tableau de toutes les requêtes qui matchent dans l'objet {{domxref("Cache")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">cache.matchAll(request,{options}).then(function(response) {
+```js
+cache.matchAll(request,{options}).then(function(response) {
   // faire quelque chose avec le tableau des réponses
 });
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>request</dt>
- <dd>La {{domxref("Request", "Requête")}} à trouver dans le {{domxref("Cache")}}.</dd>
- <dt>options {{optional_inline}}</dt>
- <dd><p>Un objet d'options vous permettant de définir des options de contrôle spécifiques pour la correspondance effectuée. Les options disponibles sont les suivantes :</p>
- <ul>
-  <li><code>ignoreSearch</code>: Un {{domxref("Boolean")}} qui spécifie si le matching doit ignorer ou non la query string dans l'url.  Si mis à <code>true</code>, la partie <code>?value=bar</code> de l'url <code>http://foo.com/?value=bar</code> sera ignorée lors du matching. Est à <code>false</code> par défaut.</li>
-  <li><code>ignoreMethod</code>: Un {{domxref("Boolean")}} qui, quand mis à <code>true</code>, empêche les opérations de matching de valider la méthode <code>HTTP</code> de la {{domxref("Request", "Requête")}} (en temps normal, seules <code>GET</code> et <code>HEAD</code> sont autorisées.) Est à  <code>false</code> par défaut.</li>
-  <li><code>ignoreVary</code>: Un {{domxref("Boolean")}} qui, quand mis à <code>true,</code> indique à l'opération de matching de ne pas effectuer le matching <code>VARY</code> des header.  En d'autres termes, si l'URL correspond, un match sera obtenu peu importe que la {{domxref("Response", "Réponse")}} ait un header <code>VARY</code> ou non. Est à <code>false</code> par défaut.</li>
- </ul>
- </dd>
-</dl>
+- request
+  - : La {{domxref("Request", "Requête")}} à trouver dans le {{domxref("Cache")}}.
+- options {{optional_inline}}
 
-<h3 id="Retour">Retour</h3>
+  - : Un objet d'options vous permettant de définir des options de contrôle spécifiques pour la correspondance effectuée. Les options disponibles sont les suivantes :
 
-<p>Une {{jsxref("Promise", "Promesse")}} qui est résolue en un tableau de toutes les requêtes qui matchent dans l'objet {{domxref("Cache")}}.</p>
+    - `ignoreSearch`: Un {{domxref("Boolean")}} qui spécifie si le matching doit ignorer ou non la query string dans l'url.  Si mis à `true`, la partie `?value=bar` de l'url `http://foo.com/?value=bar` sera ignorée lors du matching. Est à `false` par défaut.
+    - `ignoreMethod`: Un {{domxref("Boolean")}} qui, quand mis à `true`, empêche les opérations de matching de valider la méthode `HTTP` de la {{domxref("Request", "Requête")}} (en temps normal, seules `GET` et `HEAD` sont autorisées.) Est à  `false` par défaut.
+    - `ignoreVary`: Un {{domxref("Boolean")}} qui, quand mis à `true,` indique à l'opération de matching de ne pas effectuer le matching `VARY` des header.  En d'autres termes, si l'URL correspond, un match sera obtenu peu importe que la {{domxref("Response", "Réponse")}} ait un header `VARY` ou non. Est à `false` par défaut.
 
-<div class="note">
-<p><strong>Note :</strong> {{domxref("Cache.match()")}} est quasiment identique à <a href="/fr/docs/Web/API/Cache/matchAll"><code>Cache.matchAll()</code></a>, si ce n'est qu'elle est résolue en <code>response[0]</code> (la première réponse qui matche) plutôt que <code>response[]</code> (un tableau de toutes les réponses qui matchent).</p>
-</div>
+### Retour
 
-<h2 id="Exemples">Exemples</h2>
+Une {{jsxref("Promise", "Promesse")}} qui est résolue en un tableau de toutes les requêtes qui matchent dans l'objet {{domxref("Cache")}}.
 
-<pre class="brush: js">caches.open('v1').then(function(cache) {
+> **Note :** {{domxref("Cache.match()")}} est quasiment identique à [`Cache.matchAll()`](/fr/docs/Web/API/Cache/matchAll), si ce n'est qu'elle est résolue en `response[0]` (la première réponse qui matche) plutôt que `response[]` (un tableau de toutes les réponses qui matchent).
+
+## Exemples
+
+```js
+caches.open('v1').then(function(cache) {
   cache.matchAll('/images/').then(function(response) {
     response.forEach(function(element, index, array) {
       cache.delete(element);
     });
   });
-})</pre>
+})
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-cache-matchall', 'Cache: matchAll')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                               | Commentaire          |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('Service Workers', '#dom-cache-matchall', 'Cache: matchAll')}} | {{Spec2('Service Workers')}} | Définition initiale. |
 
-<h2 id="Compatibilités_des_navigateurs">Compatibilités des navigateurs</h2>
+## Compatibilités des navigateurs
 
-<p>{{Compat("api.Cache.matchAll")}}</p>
+{{Compat("api.Cache.matchAll")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers">Utiliser les Service Workers</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>
-</ul>
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WindowOrWorkerGlobalScope.caches")}}

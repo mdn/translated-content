@@ -6,14 +6,19 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/Document/body
 ---
-<div>
- {{ApiRef}}</div>
-<p>Retourne l'élément <code>&lt;body&gt;</code> ou <code>&lt;frameset&gt;</code> du document courant.</p>
-<h2 id="Syntax">Syntaxe</h2>
-<pre class="syntaxbox"><em>var objRef</em> = document.body;
-document.body = <em>objRef;</em></pre>
-<h2 id="Example">Exemple</h2>
-<pre class="brush:js">// dans le HTML: &lt;body id="ancienElementBody"&gt;&lt;/body&gt;
+{{ApiRef}}
+
+Retourne l'élément `<body>` ou `<frameset>` du document courant.
+
+## Syntaxe
+
+    var objRef = document.body;
+    document.body = objRef;
+
+## Exemple
+
+```js
+// dans le HTML: <body id="ancienElementBody"></body>
 alert(document.body.id); // "ancienElementBody"
 
 var unNouvelElementBody = document.createElement("body");
@@ -21,11 +26,14 @@ var unNouvelElementBody = document.createElement("body");
 unNouvelElementBody .id = "nouvelElementBody";
 document.body = unNouvelElementBody ;
 alert(document.body.id); // "nouvelElementBody"
-</pre>
-<h2 id="Notes">Notes</h2>
-<p><code>document.body</code> est l'élément dans lequel le contenu du document est situé. Dans les documents avec un élément <code>&lt;body&gt;</code> celui-ci est retourné, et dans les documents de type frameset l'élément <code>&lt;frameset&gt;</code> le plus extérieur est retourné.</p>
-<p>Même si body est modifiable, lui affecter une nouvelle valeur retire tous les éléments enfants du <code>&lt;body&gt;</code> existant.</p>
-<h2 id="Specification">Spécification</h2>
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201">DOM Level 2 HTML: HTMLDocument.body</a></li>
-</ul>
+```
+
+## Notes
+
+`document.body` est l'élément dans lequel le contenu du document est situé. Dans les documents avec un élément `<body>` celui-ci est retourné, et dans les documents de type frameset l'élément `<frameset>` le plus extérieur est retourné.
+
+Même si body est modifiable, lui affecter une nouvelle valeur retire tous les éléments enfants du `<body>` existant.
+
+## Spécification
+
+- [DOM Level 2 HTML: HTMLDocument.body](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201)

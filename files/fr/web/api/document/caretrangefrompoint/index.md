@@ -9,47 +9,47 @@ tags:
   - Méthode
 translation_of: Web/API/Document/caretRangeFromPoint
 ---
-<p>{{APIRef("DOM")}}{{Non-standard_header}} </p>
+{{APIRef("DOM")}}{{Non-standard_header}}
 
-<p>La méthode <code><strong>caretRangeFromPoint()</strong></code> de l'interface {{domxref("Document")}} renvoie un objet "Range" (<em>chaîne</em>) pour le fragment de document aux coordonnées spécifiées.</p>
+La méthode **`caretRangeFromPoint()`** de l'interface {{domxref("Document")}} renvoie un objet "Range" (_chaîne_) pour le fragment de document aux coordonnées spécifiées.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var <em>range</em> = <em>document</em>.caretRangeFromPoint(float <em>x</em>, float <em>y</em>);
-</pre>
+```js
+var range = document.caretRangeFromPoint(float x, float y);
+```
 
-<h3 id="Retourne">Retourne</h3>
+### Retourne
 
-<p>Une des réponses suivantes :</p>
+Une des réponses suivantes :
 
-<ul>
- <li>Un {{domxref("Range")}}.</li>
- <li><code>Null</code> si <strong>x</strong> ou <strong>y</strong> sont négatifs, hors de la fenêtre, ou s'il n'y a pas de noeud d'entrée de texte.</li>
-</ul>
+- Un {{domxref("Range")}}.
+- `Null` si **x** ou **y** sont négatifs, hors de la fenêtre, ou s'il n'y a pas de noeud d'entrée de texte.
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>x</dt>
- <dd>Une position horizontale dans la fenêtre courante.</dd>
- <dt>y</dt>
- <dd>Une position verticale dans la fenêtre courante.</dd>
-</dl>
+- x
+  - : Une position horizontale dans la fenêtre courante.
+- y
+  - : Une position verticale dans la fenêtre courante.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>Démonstration de base : lorsque vous cliquez dans un paragraphe, insérez un saut de ligne à la position du curseur :</p>
+Démonstration de base : lorsque vous cliquez dans un paragraphe, insérez un saut de ligne à la position du curseur :
 
-<h3 id="Contenu_HTML">Contenu HTML</h3>
+### Contenu HTML
 
-<pre class="brush: html">&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+```html
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
 sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
 sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;</pre>
+Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+```
 
-<h3 id="Contenu_JavaScript">Contenu JavaScript</h3>
+### Contenu JavaScript
 
-<pre class="brush: js">function insertBreakAtPoint(e) {
+```js
+function insertBreakAtPoint(e) {
 
     var range;
     var textNode;
@@ -66,8 +66,8 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
         offset = range.startOffset;
     }
 
-    // divise seulement les TEXT_NODE (<em>noeuds texte</em>)
-    if (textNode &amp;&amp; textNode.nodeType == 3) {
+    // divise seulement les TEXT_NODE (noeuds texte)
+    if (textNode && textNode.nodeType == 3) {
         var replacement = textNode.splitText(offset);
         var br = document.createElement('br');
         textNode.parentNode.insertBefore(br, replacement);
@@ -75,12 +75,13 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 }
 
 var paragraphs = document.getElementsByTagName("p");
-for (i=0 ; i &lt; paragraphs.length; i++) {
+for (i=0 ; i < paragraphs.length; i++) {
     paragraphs[i].addEventListener("click", insertBreakAtPoint, false);
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Example', '', '', '', 'Web/API/Document/caretRangeFromPoint') }}</p>
+{{ EmbedLiveSample('Example', '', '', '', 'Web/API/Document/caretRangeFromPoint') }}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Document.caretRangeFromPoint")}}</p>
+{{Compat("api.Document.caretRangeFromPoint")}}

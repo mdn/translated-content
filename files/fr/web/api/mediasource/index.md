@@ -16,79 +16,70 @@ tags:
   - Video
 translation_of: Web/API/MediaSource
 ---
-<p>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</p>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>L'interface <strong><code>MediaSource</code></strong> de l'<a href="/en-US/docs/Web/API/Media_Source_Extensions_API">API Media Source Extensions</a> représente une source de données multimédia pour un objet {{domxref("HTMLMediaElement")}}. Un objet <code>MediaSource</code> peut être attaché à un {{domxref("HTMLMediaElement")}} pour être lu dans l'agent utilisateur.</p>
+L'interface **`MediaSource`** de l'[API Media Source Extensions](/en-US/docs/Web/API/Media_Source_Extensions_API) représente une source de données multimédia pour un objet {{domxref("HTMLMediaElement")}}. Un objet `MediaSource` peut être attaché à un {{domxref("HTMLMediaElement")}} pour être lu dans l'agent utilisateur.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{domxref("MediaSource.MediaSource", "MediaSource()")}}</dt>
- <dd>Construit et renvoie un nouvel objet <code>MediaSource</code> sans tampon source associé.</dd>
-</dl>
+- {{domxref("MediaSource.MediaSource", "MediaSource()")}}
+  - : Construit et renvoie un nouvel objet `MediaSource` sans tampon source associé.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{domxref("MediaSource.sourceBuffers")}} {{readonlyInline}}</dt>
- <dd>Renvoie un objet {{domxref("SourceBufferList")}} contenant la liste des objets {{domxref("SourceBuffer")}} associés à ce <code>MediaSource</code>.</dd>
- <dt>{{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}</dt>
- <dd>Renvoie un objet {{domxref("SourceBufferList")}} contenant un sous-ensemble des objets {{domxref("SourceBuffer")}} contenus dans {{domxref("MediaSource.sourceBuffers")}} — la liste des objets fournissant la piste vidéo sélectionnée, pistes audio activées et pistes de texte affichées / masquées.</dd>
- <dt>{{domxref("MediaSource.readyState")}} {{readonlyInline}}</dt>
- <dd>Renvoie une énumération représentant l'état de la <code>MediaSource</code> actuelle, qu'elle ne soit pas actuellement attachée à un élément multimédia (<code>fermé</code>), attachée et prête à recevoir des objets {{domxref("SourceBuffer")}} (<code>ouvert</code>), ou attachée mais le flux a été terminé via {{domxref("MediaSource.endOfStream()")}} (<code>terminé</code>).</dd>
- <dt>{{domxref("MediaSource.duration")}}</dt>
- <dd>Obtient et définit la durée du média actuel présenté.</dd>
-</dl>
+- {{domxref("MediaSource.sourceBuffers")}} {{readonlyInline}}
+  - : Renvoie un objet {{domxref("SourceBufferList")}} contenant la liste des objets {{domxref("SourceBuffer")}} associés à ce `MediaSource`.
+- {{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}
+  - : Renvoie un objet {{domxref("SourceBufferList")}} contenant un sous-ensemble des objets {{domxref("SourceBuffer")}} contenus dans {{domxref("MediaSource.sourceBuffers")}} — la liste des objets fournissant la piste vidéo sélectionnée, pistes audio activées et pistes de texte affichées / masquées.
+- {{domxref("MediaSource.readyState")}} {{readonlyInline}}
+  - : Renvoie une énumération représentant l'état de la `MediaSource` actuelle, qu'elle ne soit pas actuellement attachée à un élément multimédia (`fermé`), attachée et prête à recevoir des objets {{domxref("SourceBuffer")}} (`ouvert`), ou attachée mais le flux a été terminé via {{domxref("MediaSource.endOfStream()")}} (`terminé`).
+- {{domxref("MediaSource.duration")}}
+  - : Obtient et définit la durée du média actuel présenté.
 
-<h3 id="Gestionnaires_dévénements">Gestionnaires d'événements</h3>
+### Gestionnaires d'événements
 
-<dl>
- <dt>{{domxref("MediaSource.onsourceclose")}}</dt>
- <dd>Le gestionnaire d'événements pour l'événement <code>sourceclose</code>.</dd>
- <dt>{{domxref("MediaSource.onsourceended")}}</dt>
- <dd>Le gestionnaire d'événements pour l'événement <code>sourceended</code>.</dd>
- <dt>{{domxref("MediaSource.onsourceopen")}}</dt>
- <dd>Le gestionnaire d'événements pour l'événement <code>sourceopen</code>.</dd>
-</dl>
+- {{domxref("MediaSource.onsourceclose")}}
+  - : Le gestionnaire d'événements pour l'événement `sourceclose`.
+- {{domxref("MediaSource.onsourceended")}}
+  - : Le gestionnaire d'événements pour l'événement `sourceended`.
+- {{domxref("MediaSource.onsourceopen")}}
+  - : Le gestionnaire d'événements pour l'événement `sourceopen`.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Hérite des méthodes de son interface parente, {{domxref("EventTarget")}}.</em></p>
+_Hérite des méthodes de son interface parente, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("MediaSource.addSourceBuffer()")}}</dt>
- <dd>Crée un nouveau {{domxref ("SourceBuffer")}} du type MIME donné et l'ajoute à la liste {{domxref ("MediaSource.sourceBuffers")}}.</dd>
- <dt>{{domxref("MediaSource.clearLiveSeekableRange()")}}</dt>
- <dd>Efface un ensemble privé de plage de recherche avec un appel à <code>setLiveSeekableRange()</code>.</dd>
- <dt>{{domxref("MediaSource.endOfStream()")}}</dt>
- <dd>Signale la fin du flux.</dd>
- <dt>{{domxref("MediaSource.removeSourceBuffer()")}}</dt>
- <dd>Supprime le {{domxref ("SourceBuffer")}} donné de la liste {{domxref ("MediaSource.sourceBuffers")}}.</dd>
- <dt>{{domxref("MediaSource.setLiveSeekableRange()")}}</dt>
- <dd>Définit la plage que l'utilisateur peut rechercher dans l'élément multimédia.</dd>
-</dl>
+- {{domxref("MediaSource.addSourceBuffer()")}}
+  - : Crée un nouveau {{domxref ("SourceBuffer")}} du type MIME donné et l'ajoute à la liste {{domxref ("MediaSource.sourceBuffers")}}.
+- {{domxref("MediaSource.clearLiveSeekableRange()")}}
+  - : Efface un ensemble privé de plage de recherche avec un appel à `setLiveSeekableRange()`.
+- {{domxref("MediaSource.endOfStream()")}}
+  - : Signale la fin du flux.
+- {{domxref("MediaSource.removeSourceBuffer()")}}
+  - : Supprime le {{domxref ("SourceBuffer")}} donné de la liste {{domxref ("MediaSource.sourceBuffers")}}.
+- {{domxref("MediaSource.setLiveSeekableRange()")}}
+  - : Définit la plage que l'utilisateur peut rechercher dans l'élément multimédia.
 
-<h2 id="Méthodes_statiques">Méthodes statiques</h2>
+## Méthodes statiques
 
-<dl>
- <dt>{{domxref("MediaSource.isTypeSupported()")}}</dt>
- <dd>Renvoie une valeur {{domxref ("Boolean")}} indiquant si le type MIME donné est pris en charge par l'agent utilisateur actuel - c'est-à-dire s'il parvient à créer des objets {{domxref ("SourceBuffer")}} pour ce type MIME .</dd>
-</dl>
+- {{domxref("MediaSource.isTypeSupported()")}}
+  - : Renvoie une valeur {{domxref ("Boolean")}} indiquant si le type MIME donné est pris en charge par l'agent utilisateur actuel - c'est-à-dire s'il parvient à créer des objets {{domxref ("SourceBuffer")}} pour ce type MIME .
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>L'exemple simple suivant charge une vidéo avec {{domxref ("XMLHttpRequest")}} et la lit dès que possible. Cet exemple a été écrit par Nick Desaulniers et peut être <a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">consulté en direct ici</a> (vous pouvez aussi <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">télécharger la source</a> pour une enquête plus approfondie).</p>
+L'exemple simple suivant charge une vidéo avec {{domxref ("XMLHttpRequest")}} et la lit dès que possible. Cet exemple a été écrit par Nick Desaulniers et peut être [consulté en direct ici](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (vous pouvez aussi [télécharger la source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) pour une enquête plus approfondie).
 
-<pre class="brush: js">var video = document.querySelector('video');
+```js
+var video = document.querySelector('video');
 
 var assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
+if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
   var mediaSource = new MediaSource();
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
@@ -120,32 +111,20 @@ function fetchAB (url, cb) {
     cb(xhr.response);
   };
   xhr.send();
-};</pre>
+};
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Source Extensions', '#mediasource', 'MediaSource')}}</td>
-   <td>{{Spec2('Media Source Extensions')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | Statut                                           | Commentaire          |
+| -------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
+| {{SpecName('Media Source Extensions', '#mediasource', 'MediaSource')}} | {{Spec2('Media Source Extensions')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.MediaSource")}}</p>
+{{Compat("api.MediaSource")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}

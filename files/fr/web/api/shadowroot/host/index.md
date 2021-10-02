@@ -9,47 +9,36 @@ tags:
   - shadow dom
 translation_of: Web/API/ShadowRoot/host
 ---
-<div>{{APIRef("Shadow DOM")}}</div>
+{{APIRef("Shadow DOM")}}
 
-<p>La propriété <strong><code>host</code></strong> est une propriété en lecture seule, rattachée à l'interface {{domxref("ShadowRoot")}} et qui représente une référence à l'élément du DOM auquel la racine <code>ShadowRoot</code> est attachée.</p>
+La propriété **`host`** est une propriété en lecture seule, rattachée à l'interface {{domxref("ShadowRoot")}} et qui représente une référence à l'élément du DOM auquel la racine `ShadowRoot` est attachée.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <em>element</em> = <em>shadowRoot</em>.host</pre>
+    var element = shadowRoot.host
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un élément du DOM sous la forme d'un objet {{domxref('Element')}}.</p>
+Un élément du DOM sous la forme d'un objet {{domxref('Element')}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">let customElem = document.querySelector('mon-element-shadow-dom');
+```js
+let customElem = document.querySelector('mon-element-shadow-dom');
 let shadow = customElem.shadowRoot;
 
   ...
 
 // renvoie l'élément hôte
-let hostElem = shadow.host;</pre>
+let hostElem = shadow.host;
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-shadowroot-host','ShadowRoot.host')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                             | Commentaires |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
+| {{SpecName('DOM WHATWG','#dom-shadowroot-host','ShadowRoot.host')}} | {{Spec2('DOM WHATWG')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.ShadowRoot.host")}}</p>
+{{Compat("api.ShadowRoot.host")}}

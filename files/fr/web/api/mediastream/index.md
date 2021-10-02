@@ -3,74 +3,55 @@ title: MediaStream
 slug: Web/API/MediaStream
 translation_of: Web/API/MediaStream
 ---
-<div>{{APIRef("Media Capture and Streams")}} {{SeeCompatTable}}</div>
+{{APIRef("Media Capture and Streams")}} {{SeeCompatTable}}
 
-<p>L'interface <code>MediaStream</code> représente le contenu d'un flux de média. Un flux est composé de plusieurs <em>pistes</em>, tel que des pistes vidéos ou audio.</p>
+L'interface `MediaStream` représente le contenu d'un flux de média. Un flux est composé de plusieurs *pistes*, tel que des pistes vidéos ou audio.
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<dl>
- <dt>{{domxref("MediaStream.id")}} {{readonlyInline}}</dt>
- <dd>{{domxref("DOMString")}} contenant 36 carractères correspondant à l'identifiant unique (GUID) de l'objet.</dd>
- <dt>{{domxref("MediaStream.ended")}} {{readonlyInline}}</dt>
- <dd>Booléen dont la valeur est <code>true</code> si l'évènement {{event("ended (MediaStream)", "ended")}} à été déclenché sur l'objet, signifiant que le flux à été complètement lu, ou <code>false</code> si la fin du flux n'à pas été atteinte.</dd>
-</dl>
+- {{domxref("MediaStream.id")}} {{readonlyInline}}
+  - : {{domxref("DOMString")}} contenant 36 carractères correspondant à l'identifiant unique (GUID) de l'objet.
+- {{domxref("MediaStream.ended")}} {{readonlyInline}}
+  - : Booléen dont la valeur est `true` si l'évènement {{event("ended (MediaStream)", "ended")}} à été déclenché sur l'objet, signifiant que le flux à été complètement lu, ou `false` si la fin du flux n'à pas été atteinte.
 
-<h3 id="Gestionnaire_d'évènements">Gestionnaire d'évènements</h3>
+### Gestionnaire d'évènements
 
-<dl>
- <dt>{{domxref("MediaStream.onaddtrack")}}</dt>
- <dd>Est un {{event("Event_handlers", "event handler")}} contenant l'action à exécuter lorsqu'un évènement {{event("addtrack")}} est déclenché sur l'objet, ce qui arrive lorsqu'un nouvel objet {{domxref("MediaStreamTrack")}} est ajouté.</dd>
- <dt>{{domxref("MediaStream.onended")}}</dt>
- <dd>Est un  {{event("Event_handlers", "event handler")}} contenant l'action à exécuter lorsqu'un évènement {{event("ended (MediaStream)","ended")}} est déclenché sur l'objet, ce qui arrive lorsque la diffusion est terminée.</dd>
- <dt>{{domxref("MediaStream.onremovetrack")}}</dt>
- <dd>Est un {{event("Event_handlers", "event handler")}} contenant l'action à exécuter lorsqu'un évènement {{event("removetrack")}} est délenché sur l'objet, ce qui arrive quand un objet  {{domxref("MediaStreamTrack")}} est retiré.</dd>
-</dl>
+- {{domxref("MediaStream.onaddtrack")}}
+  - : Est un {{event("Event_handlers", "event handler")}} contenant l'action à exécuter lorsqu'un évènement {{event("addtrack")}} est déclenché sur l'objet, ce qui arrive lorsqu'un nouvel objet {{domxref("MediaStreamTrack")}} est ajouté.
+- {{domxref("MediaStream.onended")}}
+  - : Est un  {{event("Event_handlers", "event handler")}} contenant l'action à exécuter lorsqu'un évènement {{event("ended (MediaStream)","ended")}} est déclenché sur l'objet, ce qui arrive lorsque la diffusion est terminée.
+- {{domxref("MediaStream.onremovetrack")}}
+  - : Est un {{event("Event_handlers", "event handler")}} contenant l'action à exécuter lorsqu'un évènement {{event("removetrack")}} est délenché sur l'objet, ce qui arrive quand un objet  {{domxref("MediaStreamTrack")}} est retiré.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{domxref("MediaStream.getTrackById()")}}</dt>
- <dd>Retourne la piste dont l'ID correspond à celui passé en paramètre, <code>trackid</code>. Si aucun paramètre n'est fourni, ou si aucune piste avec cet id existe, la fonction retourne <code>null</code>. Si plusieurs pistes ont le même id, elle retourne la première piste.</dd>
-</dl>
+- {{domxref("MediaStream.getTrackById()")}}
+  - : Retourne la piste dont l'ID correspond à celui passé en paramètre, `trackid`. Si aucun paramètre n'est fourni, ou si aucune piste avec cet id existe, la fonction retourne `null`. Si plusieurs pistes ont le même id, elle retourne la première piste.
 
-<dl>
- <dt>{{domxref("MediaStream.addTrack()")}}</dt>
- <dd>Stocke une copie de {{domxref("MediaStreamTrack")}} fourni en paramètre. Si la piste à déjà été ajouté à l'objet <code>MediaStream</code>, rien ne se passe; si la piste est au statut <code>finished</code>, c'est à dire qu'elle est terminée, l'exception <code>INVALID_STATE_RAISE</code> est levée.</dd>
- <dt>{{domxref("MediaStream.removeTrack()")}}</dt>
- <dd>Retire le the {{domxref("MediaStreamTrack")}} fourni comme argument. Si la piste ne fait pas parti du <code>MediaStream</code>, rien ne se passe; Si la piste est au statut <code>finished</code>, ce qui arrive lorsqu'elle est terminée, l'exception <code>INVALID_STATE_RAISE</code> est levée.</dd>
- <dt>{{domxref("MediaStream.getAudioTracks()")}}</dt>
- <dd>Retourne la liste des {{domxref("MediaStreamTrack")}} stockés dans l'objet <code>MediaStream</code> qui ont leur attribut <code>kind</code> défini à <code>"audio"</code>. L'ordre n'est pas défini, et peut varier d'un navigateur à l'autre, mais aussi d'un appel de la méthode à l'autre.</dd>
- <dt>{{domxref("MediaStream.getVideoTracks()")}}</dt>
- <dd>Retourne une liste des {{domxref("MediaStreamTrack")}} stockés dans l'objet <code>MediaStream</code> qui ont leur attribut <code>kind</code> défini à <code>"video"</code>. L'ordre n'est pas défini, et peut varier d'un navigateur à l'autre, mais aussi d'un appel de la méthode à l'autre.</dd>
-</dl>
+<!---->
 
-<h2 id="Spécifications">Spécifications</h2>
+- {{domxref("MediaStream.addTrack()")}}
+  - : Stocke une copie de {{domxref("MediaStreamTrack")}} fourni en paramètre. Si la piste à déjà été ajouté à l'objet `MediaStream`, rien ne se passe; si la piste est au statut `finished`, c'est à dire qu'elle est terminée, l'exception `INVALID_STATE_RAISE` est levée.
+- {{domxref("MediaStream.removeTrack()")}}
+  - : Retire le the {{domxref("MediaStreamTrack")}} fourni comme argument. Si la piste ne fait pas parti du `MediaStream`, rien ne se passe; Si la piste est au statut `finished`, ce qui arrive lorsqu'elle est terminée, l'exception `INVALID_STATE_RAISE` est levée.
+- {{domxref("MediaStream.getAudioTracks()")}}
+  - : Retourne la liste des {{domxref("MediaStreamTrack")}} stockés dans l'objet `MediaStream` qui ont leur attribut `kind` défini à `"audio"`. L'ordre n'est pas défini, et peut varier d'un navigateur à l'autre, mais aussi d'un appel de la méthode à l'autre.
+- {{domxref("MediaStream.getVideoTracks()")}}
+  - : Retourne une liste des {{domxref("MediaStreamTrack")}} stockés dans l'objet `MediaStream` qui ont leur attribut `kind` défini à `"video"`. L'ordre n'est pas défini, et peut varier d'un navigateur à l'autre, mais aussi d'un appel de la méthode à l'autre.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture', '#mediastream', 'MediaStream')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## Spécifications
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+| Spécification                                                                    | Statut                               | Commentaire |
+| -------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
+| {{SpecName('Media Capture', '#mediastream', 'MediaStream')}} | {{Spec2('Media Capture')}} |             |
 
-<p>{{Compat("api.MediaStream")}}</p>
+## Compatibilité des navigateurs
 
-<h2 id="See_also">Voir aussi</h2>
+{{Compat("api.MediaStream")}}
 
-<ul>
-  <li>Utilisation de l'API MediaStream</li>
-  <li><a href="/fr/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li><a href="/fr/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
-  <li>{{domxref("MediaStreamTrack")}}</li>
-</ul>
+## Voir aussi
+
+- Utilisation de l'API MediaStream
+- [WebRTC API](/fr/docs/Web/API/WebRTC_API)
+- [Web Audio API](/fr/docs/Web/API/Web_Audio_API)
+- {{domxref("MediaStreamTrack")}}

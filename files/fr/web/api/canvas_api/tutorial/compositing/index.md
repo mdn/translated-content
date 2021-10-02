@@ -8,47 +8,44 @@ tags:
 translation_of: Web/API/Canvas_API/Tutorial/Compositing
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Composition
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
-<p>Dans tous nos <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations">exemples précédents</a>, les formes étaient toutes dessinées les unes au dessus des autres. C'est plus que suffisant pour la plupart des situations, mais cela limite l'ordre dans lequel les formes composées sont construites. Nous pouvons cependant changer ce comportement en définissant la propriété <code>globalCompositeOperation</code>. En complément, la propriété <code>clip</code> nous permet de cacher les parties des formes que nous ne désirons pas.</p>
+Dans tous nos [exemples précédents](/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations), les formes étaient toutes dessinées les unes au dessus des autres. C'est plus que suffisant pour la plupart des situations, mais cela limite l'ordre dans lequel les formes composées sont construites. Nous pouvons cependant changer ce comportement en définissant la propriété `globalCompositeOperation`. En complément, la propriété `clip` nous permet de cacher les parties des formes que nous ne désirons pas.
 
-<h2 id="globalCompositeOperation"><code>globalCompositeOperation</code></h2>
+## `globalCompositeOperation`
 
-<p>Nous pouvons non seulement dessiner de nouvelles formes derrière des formes existantes mais nous pouvons aussi les utiliser pour masquer certaines zones, supprimer des sections du canvas (ce n'est pas limité aux rectangles comme pour la méthode {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}) et davantage.</p>
+Nous pouvons non seulement dessiner de nouvelles formes derrière des formes existantes mais nous pouvons aussi les utiliser pour masquer certaines zones, supprimer des sections du canvas (ce n'est pas limité aux rectangles comme pour la méthode {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}) et davantage.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}</dt>
- <dd>Cela configure le type d'opération de composition à appliquer lorsqu'on dessine de nouvelles formes, où le type correspond à une string qui fait référence à une des douze opérations de composition possibles.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}
+  - : Cela configure le type d'opération de composition à appliquer lorsqu'on dessine de nouvelles formes, où le type correspond à une string qui fait référence à une des douze opérations de composition possibles.
 
-<p>Reportez-vous aux <a href="/fr/docs/Tutoriel_canvas/Composition/Example">exemples de compositon</a> pour le code des exemples suivants.</p>
+Reportez-vous aux [exemples de compositon](/fr/docs/Tutoriel_canvas/Composition/Example) pour le code des exemples suivants.
 
-<p>{{EmbedLiveSample("Exemple_de_composition", 750, 6750, "" ,"/Tutoriel_canvas/Composition/Example")}}</p>
+{{EmbedLiveSample("Exemple_de_composition", 750, 6750, "" ,"/Tutoriel_canvas/Composition/Example")}}
 
-<h2 id="Clipping_paths">Détourage</h2>
+## Détourage
 
-<p>Un détourage (<em>clipping path</em> en anglais) est comme une forme de canvas standard, à la différence près qu'elle sert à masquer certaines parties du canvas. Voyez l'image de droite, la forme rouge (en étoile) est un détourage du canvas. Tout ce qui est en dehors du chemin n'est pas dessiné sur le canvas.</p>
+Un détourage (_clipping path_ en anglais) est comme une forme de canvas standard, à la différence près qu'elle sert à masquer certaines parties du canvas. Voyez l'image de droite, la forme rouge (en étoile) est un détourage du canvas. Tout ce qui est en dehors du chemin n'est pas dessiné sur le canvas.
 
-<img alt="" src="canvas_clipping_path.png">
+![](canvas_clipping_path.png)
 
-<p>Si nous comparons le détourage à la propriété <code>globalCompositeOperation</code> vue précédemment, nous voyons deux modes de composition qui ont plus ou moins les mémes effets qu'avec <code>source-in</code> et <code>source-atop</code>. La différence la plus significative entre les deux est que le détourage n'est jamais dessiné sur le canvas à proprement parler et il n'est jamais affecté par l'ajout de nouvelles formes. Ça le rend idéal pour dessiner plusieurs formes dans une zone restreinte.</p>
+Si nous comparons le détourage à la propriété `globalCompositeOperation` vue précédemment, nous voyons deux modes de composition qui ont plus ou moins les mémes effets qu'avec `source-in` et `source-atop`. La différence la plus significative entre les deux est que le détourage n'est jamais dessiné sur le canvas à proprement parler et il n'est jamais affecté par l'ajout de nouvelles formes. Ça le rend idéal pour dessiner plusieurs formes dans une zone restreinte.
 
-<p>Dans le chapitre "<a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">dessiner des formes avec le canevas</a>", nous n'avions mentionné que les méthodes <code>stroke()</code> et <code>fill()</code>, mais il y en a une troisième: <code>clip()</code> — elle permet de faire des détourages.</p>
+Dans le chapitre "[dessiner des formes avec le canevas](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)", nous n'avions mentionné que les méthodes `stroke()` et `fill()`, mais il y en a une troisième: `clip()` — elle permet de faire des détourages.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.clip", "clip()")}}</dt>
- <dd>Transforme le chemin en cours de création en détourage effectif.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.clip", "clip()")}}
+  - : Transforme le chemin en cours de création en détourage effectif.
 
-<p>Il faut utiliser <code>clip()</code> plutot que <code>closePath()</code> pour fermer un chemin et enfaire un détourage.</p>
+Il faut utiliser `clip()` plutot que `closePath()` pour fermer un chemin et enfaire un détourage.
 
-<p>Par défault, l'élément {{HTMLElement("canvas")}} possède un détourage aux mêmes dimensions que le canvas lui-même. Donc, par défaut aucune découpe n'est apparente.</p>
+Par défault, l'élément {{HTMLElement("canvas")}} possède un détourage aux mêmes dimensions que le canvas lui-même. Donc, par défaut aucune découpe n'est apparente.
 
-<h3 id="A_clip_example">Un exemple de <code>clip</code></h3>
+### Un exemple de `clip`
 
-<p>Dans cet exemple, nous allons utiliser un détourage circulaire pour restreindre le dessin d'un essemble d'étoiles aléatoires à une zone particulière (et circulaire...).</p>
+Dans cet exemple, nous allons utiliser un détourage circulaire pour restreindre le dessin d'un essemble d'étoiles aléatoires à une zone particulière (et circulaire...).
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.fillRect(0, 0, 150, 150);
   ctx.translate(75, 75);
@@ -67,7 +64,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Composition
   ctx.fillRect(-75, -75, 150, 150);
 
   // draw stars
-  for (var j = 1; j &lt; 50; j++) {
+  for (var j = 1; j < 50; j++) {
     ctx.save();
     ctx.fillStyle = '#fff';
     ctx.translate(75 - Math.floor(Math.random() * 150),
@@ -82,7 +79,7 @@ function drawStar(ctx, r) {
   ctx.save();
   ctx.beginPath();
   ctx.moveTo(r, 0);
-  for (var i = 0; i &lt; 9; i++) {
+  for (var i = 0; i < 9; i++) {
     ctx.rotate(Math.PI / 5);
     if (i % 2 === 0) {
       ctx.lineTo((r / 0.525731) * 0.200811, 0);
@@ -94,16 +91,20 @@ function drawStar(ctx, r) {
   ctx.fill();
   ctx.restore();
 }
-</pre>
+```
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js hidden">draw();</pre>
+```js hidden
+draw();
+```
 
-<p>Dans les premières lignes de code, nous dessinons un rectangle noir ayant la même taille que le canvas comme toile de fond puis nous déplaçons l'origine au centre de l'image. Ensuite, nous créons le détourage circulaire en dessinant un arc (complet) et en faisant appelle à <code>clip()</code>. Les détourages font aussi partie de l'état de sauvegarde des canvas. Si on voulait garder le détourage d'origine, on pourrait par exemple sauvegarder l'état du canvas au préalable.</p>
+Dans les premières lignes de code, nous dessinons un rectangle noir ayant la même taille que le canvas comme toile de fond puis nous déplaçons l'origine au centre de l'image. Ensuite, nous créons le détourage circulaire en dessinant un arc (complet) et en faisant appelle à `clip()`. Les détourages font aussi partie de l'état de sauvegarde des canvas. Si on voulait garder le détourage d'origine, on pourrait par exemple sauvegarder l'état du canvas au préalable.
 
-<p>Tout ce qui sera dessiné après la création du détourage n'apparaîtra qu'à l'intérieur de ce chemin. Vous pouvez voir ça clairement avec le dégradé linéaire qui est dessiné après. Ensuite, un ensemble de 50 étoiles aléatoires est dessiné, en utilisant la fonction <code>drawStar()</code>. Nous pouvons voir, une fois de plus, que les éléments (ici les étoiles) n'apparaissent qu'à l'intérieur du détourage.</p>
+Tout ce qui sera dessiné après la création du détourage n'apparaîtra qu'à l'intérieur de ce chemin. Vous pouvez voir ça clairement avec le dégradé linéaire qui est dessiné après. Ensuite, un ensemble de 50 étoiles aléatoires est dessiné, en utilisant la fonction `drawStar()`. Nous pouvons voir, une fois de plus, que les éléments (ici les étoiles) n'apparaissent qu'à l'intérieur du détourage.
 
-<p>{{EmbedLiveSample("A_clip_example", "180", "180", "canvas_clip.png")}}</p>
+{{EmbedLiveSample("A_clip_example", "180", "180", "canvas_clip.png")}}
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}</p>
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

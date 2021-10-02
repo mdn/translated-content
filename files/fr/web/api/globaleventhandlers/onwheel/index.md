@@ -10,38 +10,27 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onwheel
 original_slug: Web/API/Element/onwheel
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>La propriété <code>onwheel</code> renvoie le code du gestionnaire d'évènements <code>onwheel</code> de l'élément courrant.</p>
+La propriété `onwheel` renvoie le code du gestionnaire d'évènements `onwheel` de l'élément courrant.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">element.onwheel = function() { .. }</pre>
+```js
+element.onwheel = function() { .. }
+```
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onwheel','onwheel')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                           | Commentaire |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onwheel','onwheel')}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.GlobalEventHandlers.onwheel")}}</p>
+{{Compat("api.GlobalEventHandlers.onwheel")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/API/Document/wheel_event">Document: <code>wheel</code> event</a></li>
-  <li><a href="/fr/docs/Web/API/Element/wheel_event">Element: <code>wheel</code> event</a></li>
-</ul>
+- [Document: `wheel` event](/fr/docs/Web/API/Document/wheel_event)
+- [Element: `wheel` event](/fr/docs/Web/API/Element/wheel_event)

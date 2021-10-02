@@ -9,109 +9,81 @@ tags:
   - WheelEvent
 translation_of: Web/API/WheelEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>L'interface <strong><code>WheelEvent</code></strong> représente les évènements qui se produisent lorsque l'utilisateur déplace la molette de la souris ou un périphérique d'entrée similaire.</p>
+L'interface **`WheelEvent`** représente les évènements qui se produisent lorsque l'utilisateur déplace la molette de la souris ou un périphérique d'entrée similaire.
 
-<div class="warning">
-<p><strong>Attention :</strong> Il s'agit de l'interface d'évènement de roue standard à utiliser.  Les anciennes versions des navigateurs implémentaient les interfaces {{DOMxRef("MouseWheelEvent")}} et {{DOMxRef("MouseScrollEvent")}} non standard et non compatibles avec plusierus navigateurs. Utilisez cette interface et évitez les non standard.</p>
-</div>
+> **Attention :** Il s'agit de l'interface d'évènement de roue standard à utiliser. Les anciennes versions des navigateurs implémentaient les interfaces {{DOMxRef("MouseWheelEvent")}} et {{DOMxRef("MouseScrollEvent")}} non standard et non compatibles avec plusierus navigateurs. Utilisez cette interface et évitez les non standard.
 
-<div class="note">
-<p><strong>Note :</strong> Ne confondez pas l'évènement {{domxref("Element/wheel_event", "wheel")}} avec l'énénement {{domxref("Element/scroll_event", "scroll")}} :</strong> L'action par défaut d'un évènement <code>wheel</code> est définie par l'implantation. Ainsi, un évènement <code>wheel</code> ne distribue pas nécessairement un évènement <code>scroll</code>. Même lorsque c'est le cas, cela ne signifie pas que les valeurs <code>delta*</code> dans l'évènement <code>wheel</code> reflètent nécessairement la direction de défilement du contenu. Par conséquent, ne comptez pas sur les propriétés <code>delta*</code> pour obtenir la direction de défilement du contenu. Au lieu de cela, détectez les changements de valeurs de {{DOMxRef("Element.scrollLeft", "scrollLeft")}} et {{DOMxRef("Element.scrollTop", "scrollTop")}} de la cible dans l'évènement <code>scroll</code>.</p>
-</div>
+> **Note :** Ne confondez pas l'évènement {{domxref("Element/wheel_event", "wheel")}} avec l'énénement {{domxref("Element/scroll_event", "scroll")}} : L'action par défaut d'un évènement `wheel` est définie par l'implantation. Ainsi, un évènement `wheel` ne distribue pas nécessairement un évènement `scroll`. Même lorsque c'est le cas, cela ne signifie pas que les valeurs `delta*` dans l'évènement `wheel` reflètent nécessairement la direction de défilement du contenu. Par conséquent, ne comptez pas sur les propriétés `delta*` pour obtenir la direction de défilement du contenu. Au lieu de cela, détectez les changements de valeurs de {{DOMxRef("Element.scrollLeft", "scrollLeft")}} et {{DOMxRef("Element.scrollTop", "scrollTop")}} de la cible dans l'évènement `scroll`.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{DOMxRef("WheelEvent.WheelEvent", "WheelEvent()")}}</dt>
- <dd>Crée un objet <code>WheelEvent</code>.</dd>
-</dl>
+- {{DOMxRef("WheelEvent.WheelEvent", "WheelEvent()")}}
+  - : Crée un objet `WheelEvent`.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Cette interface hérite des propriétés de ses ancêtres, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, et {{DOMxRef("Event")}}.</em></p>
+_Cette interface hérite des propriétés de ses ancêtres, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, et {{DOMxRef("Event")}}._
 
-<dl>
- <dt>{{DOMxRef("WheelEvent.deltaX")}}{{ReadOnlyInline}}</dt>
- <dd>Renvoie un <code>double</code> représentant le montant du défilement horizontal.</dd>
- <dt>{{DOMxRef("WheelEvent.deltaY")}}{{ReadOnlyInline}}</dt>
- <dd>Renvoie un <code>double</code> représentant le montant du défilement vertical.</dd>
- <dt>{{DOMxRef("WheelEvent.deltaZ")}}{{ReadOnlyInline}}</dt>
- <dd>Renvoie un <code>double</code> représentant le montant du défilement pour l'axe z.</dd>
- <dt>{{DOMxRef("WheelEvent.deltaMode")}}{{ReadOnlyInline}}</dt>
- <dd>Revnoie un <code>unsigned long</code> représentant l'unité du montant de défilement des valeurs <code>delta*</code>. Les valeurs autorisées sont :
- <table class="standard-table">
-  <thead>
-   <tr>
-    <td class="header">Constant</td>
-    <td class="header">Valeur</td>
-    <td class="header">Description</td>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>WheelEvent.DOM_DELTA_PIXEL</code></td>
-    <td><code>0x00</code></td>
-    <td>Les valeurs <code>delta*</code> sont spécifiées en pixels.</td>
-   </tr>
-   <tr>
-    <td><code>WheelEvent.DOM_DELTA_LINE</code></td>
-    <td><code>0x01</code></td>
-    <td>Les valeurs <code>delta*</code> sont spécifiées en lignes.</td>
-   </tr>
-   <tr>
-    <td><code>WheelEvent.DOM_DELTA_PAGE</code></td>
-    <td><code>0x02</code></td>
-    <td>Les valeurs <code>delta*</code> sont spécifiées dans les pages.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
-</dl>
+- {{DOMxRef("WheelEvent.deltaX")}}{{ReadOnlyInline}}
+  - : Renvoie un `double` représentant le montant du défilement horizontal.
+- {{DOMxRef("WheelEvent.deltaY")}}{{ReadOnlyInline}}
+  - : Renvoie un `double` représentant le montant du défilement vertical.
+- {{DOMxRef("WheelEvent.deltaZ")}}{{ReadOnlyInline}}
+  - : Renvoie un `double` représentant le montant du défilement pour l'axe z.
+- {{DOMxRef("WheelEvent.deltaMode")}}{{ReadOnlyInline}}
 
-<h2 id="Méthodes">Méthodes</h2>
+  - : Revnoie un `unsigned long` représentant l'unité du montant de défilement des valeurs `delta*`. Les valeurs autorisées sont :
 
-<p><em>Cette interface ne définit aucune méthode spécifique, mais hérite des méthodes de ses ancêtres, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, et {{DOMxRef("Event")}}.</em></p>
+    <table class="standard-table">
+      <thead>
+        <tr>
+          <td class="header">Constant</td>
+          <td class="header">Valeur</td>
+          <td class="header">Description</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>WheelEvent.DOM_DELTA_PIXEL</code></td>
+          <td><code>0x00</code></td>
+          <td>Les valeurs <code>delta*</code> sont spécifiées en pixels.</td>
+        </tr>
+        <tr>
+          <td><code>WheelEvent.DOM_DELTA_LINE</code></td>
+          <td><code>0x01</code></td>
+          <td>Les valeurs <code>delta*</code> sont spécifiées en lignes.</td>
+        </tr>
+        <tr>
+          <td><code>WheelEvent.DOM_DELTA_PAGE</code></td>
+          <td><code>0x02</code></td>
+          <td>Les valeurs <code>delta*</code> sont spécifiées dans les pages.</td>
+        </tr>
+      </tbody>
+    </table>
 
-<h2 id="Spécifications">Spécifications</h2>
+## Méthodes
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("UI Events", "#interface-wheelevent", "The <code>WheelEvent</code> interface")}}</td>
-   <td>{{Spec2("UI Events")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#interface-wheelevent', 'WheelEvent')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+_Cette interface ne définit aucune méthode spécifique, mais hérite des méthodes de ses ancêtres, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, et {{DOMxRef("Event")}}._
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Spécifications
 
-<p>{{Compat("api.WheelEvent")}}</p>
+| Spécification                                                                                                            | Statut                           | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName("UI Events", "#interface-wheelevent", "The <code>WheelEvent</code> interface")}} | {{Spec2("UI Events")}}     |                      |
+| {{SpecName('DOM3 Events', '#interface-wheelevent', 'WheelEvent')}}                                 | {{Spec2('DOM3 Events')}} | Définition initiale. |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Compatibilité des navigateurs
 
-<ul>
- <li>Évènement {{domxref("Element/wheel_event", "wheel")}}</li>
- <li>Interfaces remplacées par celle-ci :
-  <ul>
-   <li>Objet d'évènement de roulette de souris hérité de Gecko: {{DOMxRef("MouseScrollEvent")}}</li>
-   <li>Objet d'évènement de roulette de souris hérité des navigateurs non gecko: {{DOMxRef("MouseWheelEvent")}}</li>
-  </ul>
- </li>
-</ul>
+{{Compat("api.WheelEvent")}}
+
+## Voir aussi
+
+- Évènement {{domxref("Element/wheel_event", "wheel")}}
+- Interfaces remplacées par celle-ci :
+
+  - Objet d'évènement de roulette de souris hérité de Gecko: {{DOMxRef("MouseScrollEvent")}}
+  - Objet d'évènement de roulette de souris hérité des navigateurs non gecko: {{DOMxRef("MouseWheelEvent")}}

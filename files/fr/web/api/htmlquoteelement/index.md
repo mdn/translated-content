@@ -6,25 +6,18 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/HTMLQuoteElement
 ---
-<p>{{ ApiRef() }}</p>
-<h2 id="Interface_des_éléments_HTML_de_citation">Interface des éléments HTML de citation</h2>
-<p>Les objets DOM quote expose l'interface <a href="http://www.w3.org/TR/html5/grouping-content.html#htmlquoteelement"><code>HTMLQuoteElement</code></a> (ou {{ HTMLVersionInline(4) }} <a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-70319763"><code>HTMLQuoteElement</code></a>), qui fournissent plusieurs propriétés pour manipuler les éléments de citation (et viennent s'ajouter aux propriétés habituelles pour un objet de l'interface {{domxref("element")}}, disponibles par héritage).</p>
-<h2 id="Propriétés">Propriétés</h2>
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Nom</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>cite</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Reflète l'attribut HTML {{ htmlattrxref("cite", "blockquote") }} contenant l'URL de la source de la citation.</td>
-  </tr>
- </tbody>
-</table>
-<h2 id="Voir_également">Voir également</h2>
-<p>Cette interface est supportée par les deux éléments HTML {{ HTMLElement("blockquote") }} et {{ HTMLElement("q") }}.</p>
+{{ ApiRef() }}
+
+## Interface des éléments HTML de citation
+
+Les objets DOM quote expose l'interface [`HTMLQuoteElement`](http://www.w3.org/TR/html5/grouping-content.html#htmlquoteelement) (ou {{ HTMLVersionInline(4) }} [`HTMLQuoteElement`](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-70319763)), qui fournissent plusieurs propriétés pour manipuler les éléments de citation (et viennent s'ajouter aux propriétés habituelles pour un objet de l'interface {{domxref("element")}}, disponibles par héritage).
+
+## Propriétés
+
+| Nom    | Type                             | Description                                                                                                               |
+| ------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `cite` | {{domxref("DOMString")}} | Reflète l'attribut HTML {{ htmlattrxref("cite", "blockquote") }} contenant l'URL de la source de la citation. |
+
+## Voir également
+
+Cette interface est supportée par les deux éléments HTML {{ HTMLElement("blockquote") }} et {{ HTMLElement("q") }}.

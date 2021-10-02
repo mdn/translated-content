@@ -3,62 +3,65 @@ title: 'Document: DOMContentLoaded event'
 slug: Web/API/Document/DOMContentLoaded_event
 translation_of: Web/API/Document/DOMContentLoaded_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>L'évènement <strong><code>DOMContentLoaded</code></strong> est déclenché quand le document HTML initiale est complètement chargé et analysé, sans attendre la fin du chargement des feuilles de styles, images et sous-document.</p>
+L'évènement **`DOMContentLoaded`** est déclenché quand le document HTML initiale est complètement chargé et analysé, sans attendre la fin du chargement des feuilles de styles, images et sous-document.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bouillonne</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th scope="row">Annulable</th>
-   <td>Oui (bien que spécifié comme évènement simple non annulable)</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Propriété de gestion de l’évènement</th>
-   <td>Aucune</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bouillonne</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th scope="row">Annulable</th>
+      <td>Oui (bien que spécifié comme évènement simple non annulable)</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Propriété de gestion de l’évènement</th>
+      <td>Aucune</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Un évènement différent, {{domxref("Window/load_event", "load")}} doit être utilisé pour détecter que la page entière est chargée. On utilise couramment à tord <code>load</code> là où <code>DOMContentLoaded</code> serait plus approprié.</p>
+Un évènement différent, {{domxref("Window/load_event", "load")}} doit être utilisé pour détecter que la page entière est chargée. On utilise couramment à tord `load` là où `DOMContentLoaded` serait plus approprié.
 
-<p>Du code JavaScript synchrone va mettre en pause la création du DOM. Si vous voulez charger le DOM le plus rapidement possible, vous pouvez faire votre code <a href="/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">(en) JavaScript asynchrone</a> et <a href="https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery">(en) optimiser le chargement des feuilles de styles</a>. Si vous chargez comme d'habitude, les feuilles de styles vont ralentir la création du DOM comme si elles étaient chargées en parallèle, en «volant» le trafique du document principale HTML.</p>
+Du code JavaScript synchrone va mettre en pause la création du DOM. Si vous voulez charger le DOM le plus rapidement possible, vous pouvez faire votre code [(en) JavaScript asynchrone](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) et [(en) optimiser le chargement des feuilles de styles](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery). Si vous chargez comme d'habitude, les feuilles de styles vont ralentir la création du DOM comme si elles étaient chargées en parallèle, en «volant» le trafique du document principale HTML.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Usage_simple">Usage simple</h3>
+### Usage simple
 
-<pre class="brush: js">document.addEventListener('DOMContentLoaded', (event) =&gt; {
+```js
+document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
 });
-</pre>
+```
 
-<h3 id="Retarde_DOMContentLoaded">Retarde DOMContentLoaded</h3>
+### Retarde DOMContentLoaded
 
-<pre class="brush: html">&lt;script&gt;
-  document.addEventListener('DOMContentLoaded', (event) =&gt; {
+```html
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
   });
 
-for( let i = 0; i &lt; 1000000000; i++)
+for( let i = 0; i < 1000000000; i++)
 {} // This synchronous script is going to delay parsing of the DOM,
    // so the DOMContentLoaded event is going to launch later.
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h3 id="Vérifie_que_le_contenu_si_le_chargement_est_déjà_fini">Vérifie que le contenu si le chargement est déjà fini</h3>
+### Vérifie que le contenu si le chargement est déjà fini
 
-<p>L'évènement <code>DOMContentLoaded</code> peut-être déclenché avant que le script soit exécuté, donc il vaut mieux vérifier avant d'ajouter un écouteur d'évènement.</p>
+L'évènement `DOMContentLoaded` peut-être déclenché avant que le script soit exécuté, donc il vaut mieux vérifier avant d'ajouter un écouteur d'évènement.
 
-<pre class="brush: js">function doSomething() {
+```js
+function doSomething() {
   console.info('DOM loaded');
 }
 
@@ -67,22 +70,25 @@ if (document.readyState === 'loading') {  // Loading hasn't finished yet
 } else {  // `DOMContentLoaded` has already fired
   doSomething();
 }
-</pre>
+```
 
-<h3 id="Démonstration">Démonstration</h3>
+### Démonstration
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="controls"&gt;
-  &lt;button id="reload" type="button"&gt;Reload&lt;/button&gt;
-&lt;/div&gt;
+```html
+<div class="controls">
+  <button id="reload" type="button">Reload</button>
+</div>
 
-&lt;div class="event-log"&gt;
-  &lt;label&gt;Event log:&lt;/label&gt;
-  &lt;textarea readonly class="event-log-contents" rows="8" cols="30"&gt;&lt;/textarea&gt;
-&lt;/div&gt;</pre>
+<div class="event-log">
+  <label>Event log:</label>
+  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+</div>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   display: grid;
   grid-template-areas: "control  log";
 }
@@ -109,72 +115,50 @@ label, button {
 #reload {
   height: 2rem;
 }
+```
 
-</pre>
+#### JS
 
-<h4 id="JS">JS</h4>
-
-<pre class="brush: js">const log = document.querySelector('.event-log-contents');
+```js
+const log = document.querySelector('.event-log-contents');
 const reload = document.querySelector('#reload');
 
-reload.addEventListener('click', () =&gt; {
+reload.addEventListener('click', () => {
   log.textContent ='';
-  window.setTimeout(() =&gt; {
+  window.setTimeout(() => {
       window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) =&gt; {
+window.addEventListener('load', (event) => {
     log.textContent = log.textContent + 'load\n';
 });
 
-document.addEventListener('readystatechange', (event) =&gt; {
+document.addEventListener('readystatechange', (event) => {
     log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) =&gt; {
+document.addEventListener('DOMContentLoaded', (event) => {
     log.textContent = log.textContent + `DOMContentLoaded\n`;
 });
+```
 
-</pre>
+#### Résultat
 
-<h4 id="Résultat">Résultat</h4>
+{{ EmbedLiveSample('Live_example', '100%', '160px') }}
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '160px') }}</p>
+## Spécifications
 
-<h2 id="Spécifications">Spécifications</h2>
+| Spécification                                                                                                                | Status                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', 'parsing.html#the-end:event-domcontentloaded', 'DOMContentLoaded')}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML5 W3C', 'syntax.html#the-end', 'DOMContentLoaded')}}                                 | {{Spec2('HTML5 W3C')}}     |             |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'parsing.html#the-end:event-domcontentloaded', 'DOMContentLoaded')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'syntax.html#the-end', 'DOMContentLoaded')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## Compatibilité des navigateurs
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+{{Compat("api.Document.DOMContentLoaded_event")}}
 
+## Voir aussi
 
-
-<p>{{Compat("api.Document.DOMContentLoaded_event")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>Évènements similaires: {{domxref("Window/load_event", "load")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/beforeunload_event", "beforeunload")}} et {{domxref("Window/unload_event", "unload")}}</li>
- <li>Cet évènement sur la cible {{domxref("Window")}}: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}</li>
-</ul>
+- Évènements similaires: {{domxref("Window/load_event", "load")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/beforeunload_event", "beforeunload")}} et {{domxref("Window/unload_event", "unload")}}
+- Cet évènement sur la cible {{domxref("Window")}}: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}

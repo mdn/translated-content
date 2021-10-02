@@ -7,65 +7,66 @@ tags:
   - CanvasRenderingContext2D
 translation_of: Web/API/CanvasRenderingContext2D/fill
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>La méthode <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fill()</code></strong> de l'API Canvas 2D remplit le chemin courant ou donné avec la couleur de fond en cours, en utilisant la règle de remplissage extérieur/intérieur non nul ou la règle de remplissage pair/impair.</p>
+La méthode **`CanvasRenderingContext2D`\*\***`.fill()`\*\* de l'API Canvas 2D remplit le chemin courant ou donné avec la couleur de fond en cours, en utilisant la règle de remplissage extérieur/intérieur non nul ou la règle de remplissage pair/impair.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">void <var><em>ctx</em>.fill([fillRule]);</var>
-void <var><em>ctx</em>.fill(path[, fillRule]);</var>
-</pre>
+    void ctx.fill([fillRule]);
+    void ctx.fill(path[, fillRule]);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>fillRule</code></dt>
- <dd>L'algorithme utilisé pour déterminer si un point est à l'intérieur ou à l'extérieur du chemin.<br>
- Valeurs possible:
- <ul>
-  <li><code><strong>"nonzero</strong></code>": La <a href="http://en.wikipedia.org/wiki/Nonzero-rule">règle de remplissage extérieur/intérieur non nul</a>, qui est la règle par défaut.</li>
-  <li><code><strong>"evenodd"</strong></code>: La <a href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">règle de remplissage pair/impair</a>.</li>
- </ul>
- </dd>
- <dt><code>path</code></dt>
- <dd>Un chemin {{domxref("Path2D")}} à remplir.</dd>
-</dl>
+- `fillRule`
 
-<h2 id="Exemples">Exemples</h2>
+  - : L'algorithme utilisé pour déterminer si un point est à l'intérieur ou à l'extérieur du chemin.
+    Valeurs possible:
 
-<h3 id="Utiliser_la_méthode_fill">Utiliser la méthode <code>fill</code></h3>
+    - **`"nonzero`**": La [règle de remplissage extérieur/intérieur non nul](http://en.wikipedia.org/wiki/Nonzero-rule), qui est la règle par défaut.
+    - **`"evenodd"`**: La [règle de remplissage pair/impair](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
-<p>Ceci est un simple snippet de code qui utilise la méthode <code>fill</code> pour remplir un chemin.</p>
+- `path`
+  - : Un chemin {{domxref("Path2D")}} à remplir.
 
-<h4 id="HTML">HTML</h4>
+## Exemples
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+### Utiliser la méthode `fill`
 
-<h4 id="JavaScript">JavaScript</h4>
+Ceci est un simple snippet de code qui utilise la méthode `fill` pour remplir un chemin.
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+#### HTML
+
+```html
+<canvas id="canvas"></canvas>
+```
+
+#### JavaScript
+
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
-</pre>
+```
 
-<p>Éditez le code ci-dessous pour voir vos changements apportés au canvas en direct:</p>
+Éditez le code ci-dessous pour voir vos changements apportés au canvas en direct:
 
-<h4 id="code_jouable">Code jouable</h4>
+#### Code jouable
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.fill();&lt;/textarea&gt;
-</pre>
+ctx.fill();</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -88,19 +89,22 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
+{{ EmbedLiveSample('code_jouable', 700, 360) }}
 
-<h3 id="Utiliser_l'option_fillRule">Utiliser l'option <code>fillRule</code></h3>
+### Utiliser l'option `fillRule`
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt; </pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -115,18 +119,20 @@ ctx.closePath();
 ctx.fillStyle = "lightblue";
 ctx.lineWidth = 2;
 ctx.fill("nonzero");
-ctx.stroke();</pre>
+ctx.stroke();
+```
 
-<p>Éditez le code ci-dessous pour voir vos changements apportés au canvas en direct:</p>
+Éditez le code ci-dessous pour voir vos changements apportés au canvas en direct:
 
-<h4 id="code_jouable_2">Code jouable 2</h4>
+#### Code jouable 2
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.moveTo(96.50,50.00);
 ctx.bezierCurveTo(96.50,62.84,0.22,99.82,50.74,47.17);
@@ -139,10 +145,11 @@ ctx.closePath();
 ctx.fillStyle = "lightblue";
 ctx.lineWidth = 2;
 ctx.fill("nonzero");
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -165,33 +172,20 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
+```
 
-<p>{{EmbedLiveSample('code_jouable_2', 700, 360)}}</p>
+{{EmbedLiveSample('code_jouable_2', 700, 360)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fill", "CanvasRenderingContext2D.fill")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                        | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fill", "CanvasRenderingContext2D.fill")}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.CanvasRenderingContext2D.fill")}}</p>
+{{Compat("api.CanvasRenderingContext2D.fill")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface qui définit cette méthode, {{domxref("CanvasRenderingContext2D")}}.</li>
-</ul>
+- L'interface qui définit cette méthode, {{domxref("CanvasRenderingContext2D")}}.

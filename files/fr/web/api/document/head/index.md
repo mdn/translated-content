@@ -7,63 +7,39 @@ tags:
   - HTML5
 translation_of: Web/API/Document/head
 ---
+Retourne l'élément {{HTMLElement("head")}} du document courant. S'il y a plus d'un élément \<head>, le premier est retourné.
 
-<p>Retourne l'élément {{HTMLElement("head")}} du document courant. S'il y a plus d'un élément &lt;head&gt;, le premier est retourné.</p>
+## Syntaxe
 
-<h2 id="Syntax">Syntaxe</h2>
+    var objRef = document.head;
 
-<pre class="syntaxbox"><em>var objRef</em> = document.head;
-</pre>
+## Exemple
 
-<h2 id="Example">Exemple</h2>
-
-<pre class="brush: js">// en HTML: &lt;head id="my-document-head"&gt;
+```js
+// en HTML: <head id="my-document-head">
 var aHead = document.head;
 
 alert(aHead.id); // "my-document-head";
 
 alert( document.head === document.querySelector("head") ); // true
-</pre>
+```
 
-<h2 id="Example">Notes</h2>
+## Notes
 
-<p><code>document.head</code> est en lecture seule. Essayer d'assigner une valeur à cettre propriété échouera en silence ou lancera une <code>TypeError</code> si le mode strict d'ECMAScript est activé dans un navigateur Gecko.</p>
+`document.head` est en lecture seule. Essayer d'assigner une valeur à cettre propriété échouera en silence ou lancera une `TypeError` si le mode strict d'ECMAScript est activé dans un navigateur Gecko.
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML5.1','dom.html#dom-document-head','Document.head')}}</td>
-      <td>{{Spec2('HTML5.1')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5 W3C','dom.html#dom-document-head','Document.head')}}</td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG','dom.html#dom-document-head','Document.head')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                    | Statut                           | Commentaire         |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('HTML5.1','dom.html#dom-document-head','Document.head')}}     | {{Spec2('HTML5.1')}}     |                     |
+| {{SpecName('HTML5 W3C','dom.html#dom-document-head','Document.head')}}     | {{Spec2('HTML5 W3C')}}     |                     |
+| {{SpecName('HTML WHATWG','dom.html#dom-document-head','Document.head')}} | {{Spec2('HTML WHATWG')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Document.head")}}</p>
+{{Compat("api.Document.head")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>{{domxref("document.body")}}</li>
-</ul>
+- {{domxref("document.body")}}

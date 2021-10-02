@@ -7,65 +7,38 @@ tags:
   - Méthodes
 translation_of: Web/API/DOMImplementation/hasFeature
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>{{deprecated_header()}}</p>
+{{deprecated_header()}}
 
-<p>La méthode <strong><code>DOMImplementation.hasFeature()</code></strong> renvoie un {{domxref("Boolean")}} (<em>booléen</em>) indiquant si une fonctionnalité donnée est prise en charge. Cette méthode est dépréciée et les navigateurs modernes renvoient <code>true</code> (<em>vrai</em>) dans tous les cas.</p>
+La méthode **`DOMImplementation.hasFeature()`** renvoie un {{domxref("Boolean")}} (_booléen_) indiquant si une fonctionnalité donnée est prise en charge. Cette méthode est dépréciée et les navigateurs modernes renvoient `true` (_vrai_) dans tous les cas.
 
-<p>Les différentes implémentations ont été assez divergentes quant au type de caractéristiques signalées. La dernière version de la spécification a décidé de forcer cette méthode à toujours renvoyer <code>true</code>, là où la fonctionnalité était précisée et utilisée.</p>
+Les différentes implémentations ont été assez divergentes quant au type de caractéristiques signalées. La dernière version de la spécification a décidé de forcer cette méthode à toujours renvoyer `true`, là où la fonctionnalité était précisée et utilisée.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>flag</em> = document.implementation.hasFeature(<em>feature</em>, <em>version</em>);</pre>
+    flag = document.implementation.hasFeature(feature, version);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><em>feature</em></dt>
- <dd>est une {{domxref("DOMString")}} (<em>chaîne de caractères</em>) représentant le nom de la fonctionnalité.</dd>
- <dt><em>version</em></dt>
- <dd>est une {{domxref("DOMString")}} (<em>chaîne de caractères</em>) représentant la version de la spécification définissant la fonctionnalité.</dd>
-</dl>
+- _feature_
+  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) représentant le nom de la fonctionnalité.
+- _version_
+  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la version de la spécification définissant la fonctionnalité.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-domimplementation-hasfeature', 'DOMImplementation.hasFeature')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Modifié pour toujours renvoyer <code>true</code> sauf pour les fonctionnalités SVG.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-5CED94D7', 'DOMImplementation.hasFeature')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Pas de modification de {{SpecName("DOM2 Core")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-5CED94D7', 'DOMImplementation.hasFeature')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Pas de modification de {{SpecName("DOM1")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-5CED94D7', 'DOMImplementation.hasFeature')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                    | Statut                           | Commentaire                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------ |
+| {{SpecName('DOM WHATWG', '#dom-domimplementation-hasfeature', 'DOMImplementation.hasFeature')}} | {{Spec2('DOM WHATWG')}} | Modifié pour toujours renvoyer `true` sauf pour les fonctionnalités SVG. |
+| {{SpecName('DOM3 Core', 'core.html#ID-5CED94D7', 'DOMImplementation.hasFeature')}}                     | {{Spec2('DOM3 Core')}}     | Pas de modification de {{SpecName("DOM2 Core")}}                  |
+| {{SpecName('DOM2 Core', 'core.html#ID-5CED94D7', 'DOMImplementation.hasFeature')}}                     | {{Spec2('DOM2 Core')}}     | Pas de modification de {{SpecName("DOM1")}}                      |
+| {{SpecName('DOM1', 'level-one-core.html#ID-5CED94D7', 'DOMImplementation.hasFeature')}}             | {{Spec2('DOM1')}}         | Définition initiale.                                                     |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DOMImplementation.hasFeature")}}</p>
+{{Compat("api.DOMImplementation.hasFeature")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface {{domxref("DOMImplementation")}} à laquelle elle est appartient.</li>
-</ul>
+- L'interface {{domxref("DOMImplementation")}} à laquelle elle est appartient.

@@ -9,52 +9,39 @@ tags:
   - IntersectionObserverEntry
 translation_of: Web/API/IntersectionObserverEntry
 ---
-<div>{{SeeCompatTable}}{{APIRef("Intersection Observer API")}}</div>
+{{SeeCompatTable}}{{APIRef("Intersection Observer API")}}
 
-<p>L'interface <code><strong>IntersectionObserverEntry</strong></code> de l'<a href="/en-US/docs/Web/API/Intersection_Observer_API">API Intersection Observer</a> décrit l'intersection entre l'élément cible et son conteneur (appelé racine) à un moment spécifique de transition.</p>
+L'interface **`IntersectionObserverEntry`** de l'[API Intersection Observer](/en-US/docs/Web/API/Intersection_Observer_API) décrit l'intersection entre l'élément cible et son conteneur (appelé racine) à un moment spécifique de transition.
 
-<p> Les instances de <code>IntersectionObserverEntry</code> sont délivrées à une fonction de rappel de l'{{domxref("IntersectionObserver")}} en tant que paramètres <code>entries</code> ; autrement, ces objets ne peuvent être obtenus qu'en appelant {{domxref("IntersectionObserver.takeRecords()")}}.</p>
+Les instances de `IntersectionObserverEntry` sont délivrées à une fonction de rappel de l'{{domxref("IntersectionObserver")}} en tant que paramètres `entries` ; autrement, ces objets ne peuvent être obtenus qu'en appelant {{domxref("IntersectionObserver.takeRecords()")}}.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{domxref("IntersectionObserverEntry.boundingClientRect")}} {{readonlyinline}}</dt>
- <dd>Retourne les limites de la zone couverte par l'élément cible comme {{domxref("DOMRectReadOnly")}}. Ces limites sont calculées comme décrit dans la documentation pour {{domxref("Element.getBoundingClientRect()")}}.</dd>
- <dt>{{domxref("IntersectionObserverEntry.intersectionRatio")}} {{readonlyinline}}</dt>
- <dd>Retourne le ratio de l'<code>intersectionRect</code> au <code>boundingClientRect</code>.</dd>
- <dt>{{domxref("IntersectionObserverEntry.intersectionRect")}} {{readonlyinline}}</dt>
- <dd>Retourne un {{domxref("DOMRectReadOnly")}} représentant la partie visible de l'élément cible.</dd>
- <dt>{{domxref("IntersectionObserverEntry.isIntersecting")}} {{ReadOnlyInline}}</dt>
- <dd>Retourne une valeur booléenne valant <code>true</code> si l'élément cible s'entrecoupe avec la zone d'intersection de l'élément racine. S'il vaut <code>true</code>, alors <code>IntersectionObserverEntry</code> décrit une transition vers un état d'intersection ;  S'il vaut <code>false</code>, alors la transition se fait d'un état d'intersection à un état de non-intersection.</dd>
- <dt>{{domxref("IntersectionObserverEntry.rootBounds")}} {{readonlyinline}}</dt>
- <dd>Retourne un {{domxref("DOMRectReadOnly")}} pour la zone d'intersection de l'élément racine.</dd>
- <dt>{{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}</dt>
- <dd>L'{{domxref("Element")}} dont l'intersection avec la racine a changé d'état.</dd>
- <dt>{{domxref("IntersectionObserverEntry.time")}} {{readonlyinline}}</dt>
- <dd>Un {{domxref("DOMHighResTimeStamp")}} indiquant l'instant auquel l'intersection a été enregistrée, relative au <a href="/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin">temps originel</a> de l'<code>IntersectionObserver</code>.</dd>
-</dl>
+- {{domxref("IntersectionObserverEntry.boundingClientRect")}} {{readonlyinline}}
+  - : Retourne les limites de la zone couverte par l'élément cible comme {{domxref("DOMRectReadOnly")}}. Ces limites sont calculées comme décrit dans la documentation pour {{domxref("Element.getBoundingClientRect()")}}.
+- {{domxref("IntersectionObserverEntry.intersectionRatio")}} {{readonlyinline}}
+  - : Retourne le ratio de l'`intersectionRect` au `boundingClientRect`.
+- {{domxref("IntersectionObserverEntry.intersectionRect")}} {{readonlyinline}}
+  - : Retourne un {{domxref("DOMRectReadOnly")}} représentant la partie visible de l'élément cible.
+- {{domxref("IntersectionObserverEntry.isIntersecting")}} {{ReadOnlyInline}}
+  - : Retourne une valeur booléenne valant `true` si l'élément cible s'entrecoupe avec la zone d'intersection de l'élément racine. S'il vaut `true`, alors `IntersectionObserverEntry` décrit une transition vers un état d'intersection ;  S'il vaut `false`, alors la transition se fait d'un état d'intersection à un état de non-intersection.
+- {{domxref("IntersectionObserverEntry.rootBounds")}} {{readonlyinline}}
+  - : Retourne un {{domxref("DOMRectReadOnly")}} pour la zone d'intersection de l'élément racine.
+- {{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}
+  - : L'{{domxref("Element")}} dont l'intersection avec la racine a changé d'état.
+- {{domxref("IntersectionObserverEntry.time")}} {{readonlyinline}}
+  - : Un {{domxref("DOMHighResTimeStamp")}} indiquant l'instant auquel l'intersection a été enregistrée, relative au [temps originel](/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin) de l'`IntersectionObserver`.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Cette interface n'a pas de méthode.</em></p>
+_Cette interface n'a pas de méthode._
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IntersectionObserver','#intersection-observer-entry','IntersectionObserverEntry')}}</td>
-   <td>{{Spec2('IntersectionObserver')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                    | Statut                                       | Commentaire         |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
+| {{SpecName('IntersectionObserver','#intersection-observer-entry','IntersectionObserverEntry')}} | {{Spec2('IntersectionObserver')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IntersectionObserverEntry")}}</p>
+{{Compat("api.IntersectionObserverEntry")}}

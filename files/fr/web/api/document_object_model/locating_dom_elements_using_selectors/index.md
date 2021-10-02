@@ -11,48 +11,42 @@ translation_of: Web/API/Document_object_model/Locating_DOM_elements_using_select
 original_slug: >-
   Web/API/Document_Object_Model/Localisation_des_éléments_DOM_avec_les_sélecteurs
 ---
-<div>{{ gecko_minversion_header("1.9.1") }}</div>
+{{ gecko_minversion_header("1.9.1") }}
 
-<p>L'API Selectors fournit des méthodes simples et rapides pour retrouver les noeuds <a href="/fr/docs/Web/API/element" ><code>Element</code></a> du DOM par correspondance avec un jeu de sélecteurs. C'est beaucoup plus rapide que les techniques passées, pour lesquelles il était nécessaire, par exemple, d'utiliser une boucle en code JavaScript pour localiser l'élément spécifique que l'on devait trouver.</p>
+L'API Selectors fournit des méthodes simples et rapides pour retrouver les noeuds [`Element`](/fr/docs/Web/API/element) du DOM par correspondance avec un jeu de sélecteurs. C'est beaucoup plus rapide que les techniques passées, pour lesquelles il était nécessaire, par exemple, d'utiliser une boucle en code JavaScript pour localiser l'élément spécifique que l'on devait trouver.
 
-<h2 id="L'interface_NodeSelector">L'interface NodeSelector</h2>
+## L'interface NodeSelector
 
-<p>Cette spécification ajoute deux nouvelles méthodes à tous les objets mettant en oeuvre les interfaces <a href="/fr/docs/Web/API/document" ><code>Document</code></a>, <a href="/fr/docs/Web/API/DocumentFragment" ><code>DocumentFragment</code></a> ou <a href="/fr/docs/Web/API/element" ><code>Element</code></a> :</p>
+Cette spécification ajoute deux nouvelles méthodes à tous les objets mettant en oeuvre les interfaces [`Document`](/fr/docs/Web/API/document), [`DocumentFragment`](/fr/docs/Web/API/DocumentFragment) ou [`Element`](/fr/docs/Web/API/element) :
 
-<dl>
- <dt><code>querySelector</code></dt>
- <dd>Renvoie le premier noeud <a href="/fr/docs/Web/API/element" ><code>Element</code></a> correspondant dans la sous-arborescence du noeud. Si aucun noeud correspondant n'est trouvé, <code>null</code> est renvoyé.</dd>
- <dt><code>querySelectorAll</code></dt>
- <dd>Renvoie une <a href="/fr/docs/Web/API/NodeList" ><code>NodeList</code></a> (<em>liste de noeuds</em>) contenant tous les noeuds <code>Element</code> correspondants dans la sous-arborescence du noeud, ou une <code>NodeList</code> vide si aucune correspondance n'a été trouvée.</dd>
-</dl>
+- `querySelector`
+  - : Renvoie le premier noeud [`Element`](/fr/docs/Web/API/element) correspondant dans la sous-arborescence du noeud. Si aucun noeud correspondant n'est trouvé, `null` est renvoyé.
+- `querySelectorAll`
+  - : Renvoie une [`NodeList`](/fr/docs/Web/API/NodeList) (_liste de noeuds_) contenant tous les noeuds `Element` correspondants dans la sous-arborescence du noeud, ou une `NodeList` vide si aucune correspondance n'a été trouvée.
 
-<div class="note">
-  <p><strong>Note :</strong> La <code><a href="/fr/docs/Web/API/NodeList" >NodeList</a></code> retournée par <code><a href="/fr/docs/Web/API/Element/querySelectorAll" >querySelectorAll()</a></code> n'est pas directe. À la différence des autres méthodes de requêtes DOM qui retournent une liste de noeuds directe.</p>
-</div>
+> **Note :** La [`NodeList`](/fr/docs/Web/API/NodeList) retournée par [`querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll) n'est pas directe. À la différence des autres méthodes de requêtes DOM qui retournent une liste de noeuds directe.
 
-<p>Vous pouvez trouver des exemples et des détails en lisant la documentation sur les méthodes <a href="/fr/docs/Web/API/Element/querySelector" ><code>querySelector()</code></a> et <a href="/fr/docs/Web/API/Element/querySelectorAll" ><code>querySelectorAll()</code></a>, ainsi que dans l'article <a href="/fr/docs/Archive/Add-ons/Code_snippets/QuerySelector" >Extraits de code pour querySelector</a>.</p>
+Vous pouvez trouver des exemples et des détails en lisant la documentation sur les méthodes [`querySelector()`](/fr/docs/Web/API/Element/querySelector) et [`querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll), ainsi que dans l'article [Extraits de code pour querySelector](/fr/docs/Archive/Add-ons/Code_snippets/QuerySelector).
 
-<h2 id="Sélecteurs">Sélecteurs</h2>
+## Sélecteurs
 
-<p>Les méthodes de Selector acceptent un ou plusieurs sélecteurs séparés par des virgules pour déterminer les éléments à renvoyer. Par exemple, pour sélectionner tous les éléments paragraphe (<code>p</code>) dans le document dont la classe CSS est soit <code>warning</code> soit <code>note</code>, vous pouvez utiliser ce qui suit :</p>
+Les méthodes de Selector acceptent un ou plusieurs sélecteurs séparés par des virgules pour déterminer les éléments à renvoyer. Par exemple, pour sélectionner tous les éléments paragraphe (`p`) dans le document dont la classe CSS est soit `warning` soit `note`, vous pouvez utiliser ce qui suit :
 
-<pre><code>var special = document.querySelectorAll( "p.warning, p.note" );</code></pre>
+    var special = document.querySelectorAll( "p.warning, p.note" );
 
-<p>Vous pouvez aussi interroger par l'ID (<em>identifiant</em>). Par exemple :</p>
+Vous pouvez aussi interroger par l'ID (_identifiant_). Par exemple :
 
-<pre><code>var el = document.querySelector( "#main, #basic, #exclamation" );</code></pre>
+    var el = document.querySelector( "#main, #basic, #exclamation" );
 
-<p>Après l'exécution du code ci-dessus, <code>el</code> contient le premier élément dans le document dont l'ID est <code>main</code>, <code>basic</code> ou <code>exclamation</code>.</p>
+Après l'exécution du code ci-dessus, `el` contient le premier élément dans le document dont l'ID est `main`, `basic` ou `exclamation`.
 
-<p>Vous pouvez utiliser tous les sélecteurs CSS avec les méthodes <code>querySelector()</code> et <code>querySelectorAll()</code>.</p>
+Vous pouvez utiliser tous les sélecteurs CSS avec les méthodes `querySelector()` et `querySelectorAll()`.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="http://www.w3.org/TR/selectors-api/">API Selectors</a> (en)</li>
- <li><a href="/fr/docs/Web/API/Element/querySelector" ><code>element.querySelector</code></a></li>
- <li><a href="/fr/docs/Web/API/Element/querySelectorAll" ><code>element.querySelectorAll</code></a></li>
- <li><a href="/fr/docs/Web/API/Document/querySelector" ><code>document.querySelector</code></a></li>
- <li><a href="/fr/docs/Web/API/Document/querySelectorAll" ><code>document.querySelectorAll</code></a></li>
- <li><a href="/en-US/docs/Code_snippets/QuerySelector" >Extraits de code pour querySelector</a></li>
-</ul>
+- [API Selectors](http://www.w3.org/TR/selectors-api/) (en)
+- [`element.querySelector`](/fr/docs/Web/API/Element/querySelector)
+- [`element.querySelectorAll`](/fr/docs/Web/API/Element/querySelectorAll)
+- [`document.querySelector`](/fr/docs/Web/API/Document/querySelector)
+- [`document.querySelectorAll`](/fr/docs/Web/API/Document/querySelectorAll)
+- [Extraits de code pour querySelector](/en-US/docs/Code_snippets/QuerySelector)

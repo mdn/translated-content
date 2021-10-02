@@ -6,65 +6,38 @@ tags:
   - DOM
 translation_of: Web/API/Comment
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>L'interface <code><strong>Comment</strong></code> représente des annotations textuelles au sein du balisage; même si elles ne sont généralement pas montrées, elles sont disponibles à la lecture dans le code source. Les commentaires sont représentés en HTML et XML avec du contenu entre cette balise '<code>&lt;!--</code>' et celle ci '<code>--&gt;</code>'. Pour XML, la séquence de caractère suivante '<code>--</code>' ne peut être utilisée dans un commentaire.</p>
+L'interface **`Comment`** représente des annotations textuelles au sein du balisage; même si elles ne sont généralement pas montrées, elles sont disponibles à la lecture dans le code source. Les commentaires sont représentés en HTML et XML avec du contenu entre cette balise '`<!--`' et celle ci '`-->`'. Pour XML, la séquence de caractère suivante '`--`' ne peut être utilisée dans un commentaire.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Cette interface ne possède pas de propriétés spécifiques, mais en hérite de ses parents, {{domxref("CharacterData")}} et indirectement de {{domxref("Node")}}.</em></p>
+_Cette interface ne possède pas de propriétés spécifiques, mais en hérite de ses parents, {{domxref("CharacterData")}} et indirectement de {{domxref("Node")}}._
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{ domxref("Comment.Comment()", "Comment()") }} {{experimental_inline}}</dt>
- <dd>Retourne un objet <code>Comment</code> avec son contenu textuel en paramètre.</dd>
-</dl>
+- {{ domxref("Comment.Comment()", "Comment()") }} {{experimental_inline}}
+  - : Retourne un objet `Comment` avec son contenu textuel en paramètre.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Cette interface ne possède pas de méthode spécifique, mais en hérite de ses parents, {{domxref("CharacterData")}} et indirectement de {{domxref("Node")}}.</em></p>
+_Cette interface ne possède pas de méthode spécifique, mais en hérite de ses parents, {{domxref("CharacterData")}} et indirectement de {{domxref("Node")}}._
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#comment', 'Comment')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Ajoute le constructeur.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-1728279322', 'Comment')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Pas de changement à partir de {{SpecName('DOM2 Core')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-1728279322', 'Comment')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Pas de changement à partir de {{SpecName('DOM1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-1728279322', 'Comment')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Définition initale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | Statut                           | Commentaire                                                    |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#comment', 'Comment')}}                             | {{Spec2('DOM WHATWG')}} | Ajoute le constructeur.                                        |
+| {{SpecName('DOM3 Core', 'core.html#ID-1728279322', 'Comment')}}         | {{Spec2('DOM3 Core')}}     | Pas de changement à partir de {{SpecName('DOM2 Core')}} |
+| {{SpecName('DOM2 Core', 'core.html#ID-1728279322', 'Comment')}}         | {{Spec2('DOM2 Core')}}     | Pas de changement à partir de {{SpecName('DOM1')}}     |
+| {{SpecName('DOM1', 'level-one-core.html#ID-1728279322', 'Comment')}} | {{Spec2('DOM1')}}         | Définition initale                                             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Comment")}}</p>
+{{Compat("api.Comment")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/DOM/DOM_Reference)

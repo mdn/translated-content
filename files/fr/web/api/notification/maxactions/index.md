@@ -11,53 +11,38 @@ tags:
   - actions
 translation_of: Web/API/Notification/maxActions
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>L'attribut <strong><code>maxActions</code></strong> de l'interface {{domxref ("Notification")}} renvoie le nombre maximal d'actions prises en charge par l'appareil et l'agent utilisateur. En effet, c'est le nombre maximum d'éléments dans le tableau {{domxref ("Notification.actions")}} qui seront respectés par l'agent utilisateur.</p>
+L'attribut **`maxActions`** de l'interface {{domxref ("Notification")}} renvoie le nombre maximal d'actions prises en charge par l'appareil et l'agent utilisateur. En effet, c'est le nombre maximum d'éléments dans le tableau {{domxref ("Notification.actions")}} qui seront respectés par l'agent utilisateur.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>Notification</var>.maxActions
-</pre>
+    Notification.maxActions
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un entier {{JSxRef ("Number")}} qui indique le plus grand nombre d'actions de notification pouvant être présentées à l'utilisateur par l'agent utilisateur et l'appareil.</p>
+Un entier {{JSxRef ("Number")}} qui indique le plus grand nombre d'actions de notification pouvant être présentées à l'utilisateur par l'agent utilisateur et l'appareil.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>L'extrait de code suivant enregistre le nombre maximal d'actions prises en charge.</p>
+L'extrait de code suivant enregistre le nombre maximal d'actions prises en charge.
 
-<pre class="brush: js">const { maxActions } = Notification
+```js
+const { maxActions } = Notification
 console.log(`This device can display at most ${maxActions} actions on each notification.`);
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Web Notifications")}}</td>
-   <td>{{Spec2("Web Notifications")}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                | Status                                   | Comment         |
+| -------------------------------------------- | ---------------------------------------- | --------------- |
+| {{SpecName("Web Notifications")}} | {{Spec2("Web Notifications")}} | Living standard |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Notification.maxActions")}}</p>
+{{Compat("api.Notification.maxActions")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a></li>
- <li>{{domxref("Notification.actions")}}</li>
-</ul>
+- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- {{domxref("Notification.actions")}}

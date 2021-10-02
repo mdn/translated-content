@@ -11,28 +11,31 @@ tags:
   - responseEnd
 translation_of: Web/API/PerformanceResourceTiming/responseEnd
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>La propriété en lecture seule <strong><code>responseEnd</code></strong> retourne un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> immédiatement après que le navigateur a reçu le dernier octet de la ressource ou immédiatement avant la fermeture de la connexion de transport, selon ce qui se produit en premier.</p>
+La propriété en lecture seule **`responseEnd`** retourne un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après que le navigateur a reçu le dernier octet de la ressource ou immédiatement avant la fermeture de la connexion de transport, selon ce qui se produit en premier.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js"><var>resource</var>.responseEnd;</pre>
+```js
+resource.responseEnd;
+```
 
-<h3 id="Return_Value">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> immédiatement après la réception par le navigateur du dernier octet de la ressource ou immédiatement avant la fermeture de la connexion de transport, selon ce qui arrive en premier.</p>
+Un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après la réception par le navigateur du dernier octet de la ressource ou immédiatement avant la fermeture de la connexion de transport, selon ce qui arrive en premier.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<p>Dans l'exemple suivant, la valeur des propriétés <code>*Start</code> et <code>*End</code> de tous les événements de <a href="/fr/docs/Web/API/PerformanceEntry/entryType">type</a> <code>"resource"</code> sont enregistrés.</p>
+Dans l'exemple suivant, la valeur des propriétés `*Start` et `*End` de tous les événements de [type](/fr/docs/Web/API/PerformanceEntry/entryType) `"resource"` sont enregistrés.
 
-<pre class="brush: js">function print_PerformanceEntries() {
+```js
+function print_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
   let p = performance.getEntriesByType("resource");
-  for (let i = 0; i &lt; p.length; i++) {
+  for (let i = 0; i < p.length; i++) {
     print_start_and_end_properties(p[i]);
   }
 }
@@ -46,7 +49,7 @@ function print_start_and_end_properties(perfEntry) {
                 "responseStart", "responseEnd",
                 "secureConnectionStart"];
 
-  for (let i = 0; i &lt; properties.length; i++) {
+  for (let i = 0; i < properties.length; i++) {
     // vérifie chaque propriété
     let supported = properties[i] in perfEntry;
     if (supported) {
@@ -57,28 +60,15 @@ function print_start_and_end_properties(perfEntry) {
     }
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Resource Timing', '#dom-performanceresourcetiming-responseend',
-        'responseEnd')}}</td>
-      <td>{{Spec2('Resource Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                        | Statut                               | Commentaire          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('Resource Timing', '#dom-performanceresourcetiming-responseend',
+        'responseEnd')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.PerformanceResourceTiming.responseEnd")}}</p>
+{{Compat("api.PerformanceResourceTiming.responseEnd")}}

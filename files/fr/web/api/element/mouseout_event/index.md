@@ -10,52 +10,56 @@ tags:
   - mouseout
 translation_of: Web/API/Element/mouseout_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>L'évènement <strong><code>mouseout</code></strong> est déclenché à partir d'un {{domxref("Element")}} lorsqu'un dispositif de pointage (ex. une souris) déplace le curseur en dehors de l'élément ou de l'un de ses fils. <code>mouseout</code> est également apporté à un élément si le curseur se déplace dans un élément fils car l'élément fils peut masquer la zone visible de l'élément.</p>
+L'évènement **`mouseout`** est déclenché à partir d'un {{domxref("Element")}} lorsqu'un dispositif de pointage (ex. une souris) déplace le curseur en dehors de l'élément ou de l'un de ses fils. `mouseout` est également apporté à un élément si le curseur se déplace dans un élément fils car l'élément fils peut masquer la zone visible de l'élément.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Se propage/remonte dans le DOM</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th scope="row">Annulable</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Propriété pour la gestion d'évènements</th>
-   <td>{{domxref("GlobalEventHandlers.onmouseout", "onmouseout")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Se propage/remonte dans le DOM</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th scope="row">Annulable</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Propriété pour la gestion d'évènements</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onmouseout", "onmouseout")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple suivant, on illustre la différence entre <code>mouseout</code> et <a href="/fr/docs/Web/API/Element/mouseleave_event"><code>mouseleave</code></a>. Ce dernier est ajouté à {{HTMLElement("ul")}} pour colorer la liste en violet lorsque la souris quitte <code>&lt;ul&gt;</code>. <code>mouseout</code> est ajouté à la liste pour colorer l'élément ciblé en orange lorsque la souris le quitte.</p>
+Dans l'exemple suivant, on illustre la différence entre `mouseout` et [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event). Ce dernier est ajouté à {{HTMLElement("ul")}} pour colorer la liste en violet lorsque la souris quitte `<ul>`. `mouseout` est ajouté à la liste pour colorer l'élément ciblé en orange lorsque la souris le quitte.
 
-<p>En essayant cet exemple, vous pourrez voir que <code>mouseout</code> est envoyé aux éléments individuels de la liste tandis que <code>mouseleave</code> est géré sur la liste entière. Cela provient de la hiérarchie des éléments et du fait que les éléments de la liste "masquent" la liste sous-jacente.</p>
+En essayant cet exemple, vous pourrez voir que `mouseout` est envoyé aux éléments individuels de la liste tandis que `mouseleave` est géré sur la liste entière. Cela provient de la hiérarchie des éléments et du fait que les éléments de la liste "masquent" la liste sous-jacente.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul id="test"&gt;
-  &lt;li&gt;élément 1&lt;/li&gt;
-  &lt;li&gt;élément 2&lt;/li&gt;
-  &lt;li&gt;élément 3&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul id="test">
+  <li>élément 1</li>
+  <li>élément 2</li>
+  <li>élément 3</li>
+</ul>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let test = document.getElementById("test");
+```js
+let test = document.getElementById("test");
 
 // On affiche la liste en violet lorsque le curseur quitte
-// l'élément &lt;ul&gt;
+// l'élément <ul>
 test.addEventListener("mouseleave", function( event ) {
   // on cible la cible de mouseleave
   event.target.style.color = "purple";
@@ -66,7 +70,7 @@ test.addEventListener("mouseleave", function( event ) {
   }, 1000);
 }, false);
 
-// On affiche les éléments &lt;li&gt; en orange lorsque la souris
+// On affiche les éléments <li> en orange lorsque la souris
 // les quitte
 test.addEventListener("mouseout", function( event ) {
   // on cible la cible de mouseout
@@ -76,50 +80,35 @@ test.addEventListener("mouseout", function( event ) {
   setTimeout(function() {
     event.target.style.color = "";
   }, 500);
-}, false);</pre>
+}, false);
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 640, 200)}}</p>
+{{EmbedLiveSample("Exemples", 640, 200)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('UI Events', '#event-type-mouseout', 'mouseout')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#event-type-mouseout', 'mouseout')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                             |
+| ------------------------------------------------------------------------------------ | -------------------------------- |
+| {{SpecName('UI Events', '#event-type-mouseout', 'mouseout')}}     | {{Spec2('UI Events')}}     |
+| {{SpecName('DOM3 Events', '#event-type-mouseout', 'mouseout')}} | {{Spec2('DOM3 Events')}} |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Element.mouseout_event")}}</p>
+{{Compat("api.Element.mouseout_event")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements">Une introduction aux évènements</a></li>
- <li>D'autres évènements connexes
-  <ul>
-   <li><a href="/fr/docs/Web/API/Element/mousedown_event"><code>mousedown</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/mouseup_event"><code>mouseup</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/mousemove_event"><code>mousemove</code></a></li>
-   <li><code><a href="/fr/docs/Web/API/Element/mouseover_event">mouseover</a></code></li>
-   <li><a href="/fr/docs/Web/API/Element/click_event"><code>click</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/dblclick_event"><code>dblclick</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/mouseenter_event"><code>mouseenter</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/mouseleave_event"><code>mouseleave</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/contextmenu_event"><code>contextmenu</code></a></li>
-  </ul>
- </li>
-</ul>
+- [Une introduction aux évènements](/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements)
+- D'autres évènements connexes
+
+  - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
+  - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
+  - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)
+  - [`mouseover`](/fr/docs/Web/API/Element/mouseover_event)
+  - [`click`](/fr/docs/Web/API/Element/click_event)
+  - [`dblclick`](/fr/docs/Web/API/Element/dblclick_event)
+  - [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)
+  - [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event)
+  - [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event)

@@ -11,61 +11,43 @@ tags:
   - axes
 translation_of: Web/API/DeviceMotionEvent/accelerationIncludingGravity
 ---
-<p>{{ ApiRef("Device Orientation Events") }}</p>
+{{ ApiRef("Device Orientation Events") }}
 
-<p>La propriété <strong><code>accelerationIncludingGravity</code></strong> renvoie la valeur d'accélération enregistrée par l'appareil, en <a href="https://fr.wikipedia.org/wiki/M%C3%A8tre_par_seconde_carr%C3%A9e">mètres par seconde au carré (m/s<sup>2</sup>)</a>. Contrairement à  {{domxref("DeviceMotionEvent.acceleration")}} qui compense pour tenir compte de l'influence de la gravité, sa valeur est la somme de l'accélération de l'appareil induite par l'utilisateur et de celle provoquée par la gravité.</p>
+La propriété **`accelerationIncludingGravity`** renvoie la valeur d'accélération enregistrée par l'appareil, en [mètres par seconde au carré (m/s<sup>2</sup>)](https://fr.wikipedia.org/wiki/M%C3%A8tre_par_seconde_carr%C3%A9e). Contrairement à  {{domxref("DeviceMotionEvent.acceleration")}} qui compense pour tenir compte de l'influence de la gravité, sa valeur est la somme de l'accélération de l'appareil induite par l'utilisateur et de celle provoquée par la gravité.
 
-<p>Cette valeur n'est pas  aussi utile que {{domxref("DeviceMotionEvent.acceleration")}}, mais elle peut être la seule disponible, par exemple pour un appareil qui ne peut supprimer la gravité des données d'accélération puisqu'il ne l'utilise pas, comme les périphériques sans gyroscope.</p>
+Cette valeur n'est pas  aussi utile que {{domxref("DeviceMotionEvent.acceleration")}}, mais elle peut être la seule disponible, par exemple pour un appareil qui ne peut supprimer la gravité des données d'accélération puisqu'il ne l'utilise pas, comme les périphériques sans gyroscope.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval">var acceleration = <em>instanceOfDeviceMotionEvent</em>.accelerationIncludingGravity;
-</pre>
+    var acceleration = instanceOfDeviceMotionEvent.accelerationIncludingGravity;
 
-<h2 id="Example">Valeur</h2>
+## Valeur
 
-<p>La propriété <code>accelerationIncludingGravity</code> est un objet fournissant une information sur l'accélération des 3 axes. Pour chacun d'eux, elle est représentée par leur propre propriété :</p>
+La propriété `accelerationIncludingGravity` est un objet fournissant une information sur l'accélération des 3 axes. Pour chacun d'eux, elle est représentée par leur propre propriété :
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Représente l'accélération sur l'axe x qui est l'axe est-ouest.</dd>
- <dt><code>y</code></dt>
- <dd>Représente l'accélération sur l'axe  y qui est l'axe nord-sud</dd>
- <dt><code>z</code></dt>
- <dd>Représente l'accélération sur l'axe z qui est l'axe haut-bas</dd>
-</dl>
+- `x`
+  - : Représente l'accélération sur l'axe x qui est l'axe est-ouest.
+- `y`
+  - : Représente l'accélération sur l'axe y qui est l'axe nord-sud
+- `z`
+  - : Représente l'accélération sur l'axe z qui est l'axe haut-bas
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Device Orientation')}}</td>
-   <td>{{Spec2('Device Orientation')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                | Statut                                   | Commentaire          |
+| -------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DeviceMotionEvent.accelerationIncludingGravity")}}</p>
+{{Compat("api.DeviceMotionEvent.accelerationIncludingGravity")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{ domxref("DeviceMotionEvent.acceleration") }}</li>
- <li>{{ event("devicemotion") }}</li>
- <li>{{ domxref("window.ondevicemotion") }}</li>
- <li>{{ event("deviceorientation") }}</li>
- <li>{{ domxref("DeviceOrientationEvent") }}</li>
- <li><a href="/fr/docs/WebAPI/Detecting_device_orientation#Accelerometer_values_explained">Détecter l'orientation de l'appareil</a></li>
- <li><a href="/fr/docs/Web/Guide/DOM/Events/Les_donn%C3%A9es_d_orientation_et_de_mouvement_expliqu%C3%A9es">Les données d'orientation et de mouvement expliquées</a></li>
-</ul>
+- {{ domxref("DeviceMotionEvent.acceleration") }}
+- {{ event("devicemotion") }}
+- {{ domxref("window.ondevicemotion") }}
+- {{ event("deviceorientation") }}
+- {{ domxref("DeviceOrientationEvent") }}
+- [Détecter l'orientation de l'appareil](/fr/docs/WebAPI/Detecting_device_orientation#Accelerometer_values_explained)
+- [Les données d'orientation et de mouvement expliquées](/fr/docs/Web/Guide/DOM/Events/Les_donn%C3%A9es_d_orientation_et_de_mouvement_expliqu%C3%A9es)

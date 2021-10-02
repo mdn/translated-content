@@ -9,49 +9,35 @@ tags:
   - toJSON()
 translation_of: Web/API/URL/toJSON
 ---
-<div>{{APIRef("URL API")}}</div>
+{{APIRef("URL API")}}
 
-<p>La méthode <strong><code>toJSON()</code></strong> de l'interface {{domxref("URL")}} retourne un {{domxref("USVString")}} contenant une version sérialisé de l'URL, même si dans la pratique, il semble avoir le même effet que {{domxref("URL.toString()")}}.</p>
+La méthode **`toJSON()`** de l'interface {{domxref("URL")}} retourne un {{domxref("USVString")}} contenant une version sérialisé de l'URL, même si dans la pratique, il semble avoir le même effet que {{domxref("URL.toString()")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">json = url.toJSON();</pre>
+    json = url.toJSON();
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre>const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
-url.toJSON()
-</pre>
+    const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+    url.toJSON()
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#dom-url-tojson', 'toJSON()')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | Statut               | Commentaire          |
+| -------------------------------------------------------------------- | -------------------- | -------------------- |
+| {{SpecName('URL', '#dom-url-tojson', 'toJSON()')}} | {{Spec2('URL')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("api.URL.toJSON")}}</p>
+{{Compat("api.URL.toJSON")}}

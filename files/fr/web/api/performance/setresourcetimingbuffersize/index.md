@@ -2,41 +2,40 @@
 title: performance.setResourceTimingBufferSize()
 slug: Web/API/Performance/setResourceTimingBufferSize
 tags:
-- API
-- Method
-- Méthode
-- Reference
-- Performance web
+  - API
+  - Method
+  - Méthode
+  - Reference
+  - Performance web
 translation_of: Web/API/Performance/setResourceTimingBufferSize
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>La méthode <strong><code>setResourceTimingBufferSize()</code></strong> définit la taille du tampon mémoire du navigateur dans lequel sont stockés les objets de mesures de performance de type <code>"resource"</code> (voir {{domxref("PerformanceEntry.entryType", "entryType")}}).</p>
+La méthode **`setResourceTimingBufferSize()`** définit la taille du tampon mémoire du navigateur dans lequel sont stockés les objets de mesures de performance de type `"resource"` (voir {{domxref("PerformanceEntry.entryType", "entryType")}}).
 
-<p>La taille recommandée du tampon de synchronisation des ressources d'un navigateur est au moins 150 objets <code>{{domxref("PerformanceEntry")}}</code>.</p>
+La taille recommandée du tampon de synchronisation des ressources d'un navigateur est au moins 150 objets `{{domxref("PerformanceEntry")}}`.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
-  <em>performance</em>.setResourceTimingBufferSize(maxSize);
-</pre>
+```js
+  performance.setResourceTimingBufferSize(maxSize);
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
-  <dt><code>maxSize</code></dt>
-  <dd>Un nombre (cf. {{jsxref("Number")}}) représentant le nombre maximal d'objets {{domxref("PerformanceEntry", "d'entrée de performance","",1)}} avec le type <code>"resource"</code> que le navigateur doit contenir dans le tampon correspondant.</dd>
-</dl>
+- `maxSize`
+  - : Un nombre (cf. {{jsxref("Number")}}) représentant le nombre maximal d'objets {{domxref("PerformanceEntry", "d'entrée de performance","",1)}} avec le type `"resource"` que le navigateur doit contenir dans le tampon correspondant.
 
-<h3 id="Return_Value">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Aucune.</p>
+Aucune.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">function setResourceTimingBufferSize(maxSize) {
+```js
+function setResourceTimingBufferSize(maxSize) {
   if (performance === undefined) {
     log("Le navigateur ne prend pas en charge les performances Web");
     return;
@@ -49,28 +48,15 @@ translation_of: Web/API/Performance/setResourceTimingBufferSize
     log("... Performance.setResourceTimingBufferSize() = NON pris en charge");
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Resource Timing', '#dom-performance-setresourcetimingbuffersize',
-        'setResourceTimingBufferSize()')}}</td>
-      <td>{{Spec2('Resource Timing')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                                                    | Statut                               | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('Resource Timing', '#dom-performance-setresourcetimingbuffersize',
+        'setResourceTimingBufferSize()')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Performance.setResourceTimingBufferSize")}}</p>
+{{Compat("api.Performance.setResourceTimingBufferSize")}}

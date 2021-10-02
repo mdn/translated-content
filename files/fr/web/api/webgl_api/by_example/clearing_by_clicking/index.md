@@ -11,30 +11,32 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Clearing_by_clicking
 original_slug: Web/API/WebGL_API/By_example/Appliquer_une_couleur_à_la_souris
 ---
-<div>{{IncludeSubnav("/fr/Apprendre")}}</div>
+{{IncludeSubnav("/fr/Apprendre")}}
 
-<p>{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs","Apprendre/WebGL/Par_exemple/Cr%C3%A9er_une_animation_color%C3%A9e")}}</p>
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs","Apprendre/WebGL/Par_exemple/Cr%C3%A9er_une_animation_color%C3%A9e")}}
 
-<p>Dans cet article, on voit comment combiner les interactions de l'utilisateur et les opérations graphiques. Plus précisément, dans cet exemple, chaque clic de l'utilisateur déclenchera l'application d'une couleur aléatoire dans le contexte de rendu.</p>
+Dans cet article, on voit comment combiner les interactions de l'utilisateur et les opérations graphiques. Plus précisément, dans cet exemple, chaque clic de l'utilisateur déclenchera l'application d'une couleur aléatoire dans le contexte de rendu.
 
-<p>{{EmbedLiveSample("Appliquer_des_couleurs_aléatoires_dans_le_contexte_de_rendu",660,410)}}</p>
+{{EmbedLiveSample("Appliquer_des_couleurs_aléatoires_dans_le_contexte_de_rendu",660,410)}}
 
-<h3 id="Appliquer_des_couleurs_aléatoires_dans_le_contexte_de_rendu">Appliquer des couleurs aléatoires dans le contexte de rendu</h3>
+### Appliquer des couleurs aléatoires dans le contexte de rendu
 
-<p>Cet exemple illustre simplement comment associer WebGL aux interactions utilisateur. Chaque fois que l'utilisateur cliquera sur le canevas ou sur le bouton, une couleur aléatoire sera appliquée sur le contexte de rendu.</p>
+Cet exemple illustre simplement comment associer WebGL aux interactions utilisateur. Chaque fois que l'utilisateur cliquera sur le canevas ou sur le bouton, une couleur aléatoire sera appliquée sur le contexte de rendu.
 
-<p>Ici, on montre comment on place les appels aux fonctions WebGL dans la fonction qui gère les événements :</p>
+Ici, on montre comment on place les appels aux fonctions WebGL dans la fonction qui gère les événements :
 
-<pre class="brush: html">&lt;p&gt;Un programme WebGL très simple qui affiche des couleurs
-    suite aux interactions utilisateur.&lt;/p&gt;
-&lt;p&gt;Vous pouvez cliquer sur le canevas ou sur le bouton pour
-    modifier la couleur.&lt;/p&gt;
-&lt;canvas id="canvas-view"&gt;Il semblerait que votre navigateur
-    ne supporte pas l'élément canvas.&lt;/canvas&gt;
-&lt;button id="color-switcher"&gt;Cliquez ici pour changer la couleur&lt;/button&gt;
-</pre>
+```html
+<p>Un programme WebGL très simple qui affiche des couleurs
+    suite aux interactions utilisateur.</p>
+<p>Vous pouvez cliquer sur le canevas ou sur le bouton pour
+    modifier la couleur.</p>
+<canvas id="canvas-view">Il semblerait que votre navigateur
+    ne supporte pas l'élément canvas.</canvas>
+<button id="color-switcher">Cliquez ici pour changer la couleur</button>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 button {
@@ -52,9 +54,10 @@ canvas {
   border : none;
   background-color : black;
 }
-</pre>
+```
 
-<pre class="brush: js">// On exécute tout dans le gestionnaire d'événement
+```js
+// On exécute tout dans le gestionnaire d'événement
 // correspondant au chargement de la fenêtre. De cette
 // façon, le DOM est complètement chargé et mis en forme
 // avant de le manipuler et d'encombrer la portée globale.
@@ -116,8 +119,8 @@ window.addEventListener("load", function setupWebGL (evt) {
   }
 
 }, false);
-</pre>
+```
 
-<p>Le code source de cet exemple est également disponible sur <a href="https://github.com/idofilin/webgl-by-example/tree/master/clearing-by-clicking">GitHub</a>.</p>
+Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/clearing-by-clicking).
 
-<div>{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs","Apprendre/WebGL/Par_exemple/Cr%C3%A9er_une_animation_color%C3%A9e")}}</div>
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs","Apprendre/WebGL/Par_exemple/Cr%C3%A9er_une_animation_color%C3%A9e")}}

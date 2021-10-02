@@ -10,50 +10,49 @@ tags:
   - Méthodes
 translation_of: Web/API/Document/createElement
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Dans un document <a href="/fr/docs/Web/HTML">HTML</a>, la méthode <strong><code>document.createElement()</code></strong> crée un élément HTML du type spécifié par <code>tagName</code> ou un {{domxref("HTMLUnknownElement")}} si <code>tagName</code> n’est pas reconnu.</p>
+Dans un document [HTML](/fr/docs/Web/HTML), la méthode **`document.createElement()`** crée un élément HTML du type spécifié par `tagName` ou un {{domxref("HTMLUnknownElement")}} si `tagName` n’est pas reconnu.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var element = document.createElement(tagName[, options]);</pre>
+    var element = document.createElement(tagName[, options]);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>tagName</dt>
- <dd>Une chaîne de caractères ({{domxref("DOMString")}}) spécifiant le type d’élément à créer. Le {{domxref("Node.nodeName", "nodeName")}} (<em>nom du noeud</em>) de l’élément créé est initialisé avec la valeur de <code>tagName</code>. N’utilisez pas le nom qualifié (comme <code>"html:a"</code>) avec cette méthode. Quand elle est appelée sur un document HTML, <code>createElement()</code> convertit <code>tagName</code> en minuscules avant de créer l’élément. Dans Firefox, Opera et Chrome, <code>createElement(null)</code> fonctionne comme <code>createElement("null")</code>.</dd>
- <dt>options{{optional_inline}}</dt>
- <dd>
- <p>Un objet <code>ElementCreationOptions</code> facultatif contenant une seule propriété nommée <code>is</code> dont la valeur est le nom de balise d’un élément personnalisé précédemment défini avec <code>customElements.define()</code>. Voir {{anch("Web component example")}} pour plus de détails.</p>
- </dd>
-</dl>
+- tagName
+  - : Une chaîne de caractères ({{domxref("DOMString")}}) spécifiant le type d’élément à créer. Le {{domxref("Node.nodeName", "nodeName")}} (_nom du noeud_) de l’élément créé est initialisé avec la valeur de `tagName`. N’utilisez pas le nom qualifié (comme `"html:a"`) avec cette méthode. Quand elle est appelée sur un document HTML, `createElement()` convertit `tagName` en minuscules avant de créer l’élément. Dans Firefox, Opera et Chrome, `createElement(null)` fonctionne comme `createElement("null")`.
+- options{{optional_inline}}
+  - : Un objet `ElementCreationOptions` facultatif contenant une seule propriété nommée `is` dont la valeur est le nom de balise d’un élément personnalisé précédemment défini avec `customElements.define()`. Voir {{anch("Web component example")}} pour plus de détails.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>L’objet {{domxref("Element")}} créé.</p>
+L’objet {{domxref("Element")}} créé.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemple_de_base">Exemple de base</h3>
+### Exemple de base
 
-<p>Ici est créé un nouveau <code>&lt;div&gt;</code> qui est inséré avant l’élément avec l’identifiant <code>"div1"</code>.</p>
+Ici est créé un nouveau `<div>` qui est inséré avant l’élément avec l’identifiant `"div1"`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;||Working with elements||&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div id="div1"&gt;The text above has been created dynamically.&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>||Working with elements||</title>
+</head>
+<body>
+  <div id="div1">The text above has been created dynamically.</div>
+</body>
+</html>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">document.body.onload = addElement;
+```js
+document.body.onload = addElement;
 
 function addElement () {
   // crée un nouvel élément div
@@ -66,15 +65,17 @@ function addElement () {
   // ajoute le nouvel élément créé et son contenu dans le DOM
   var currentDiv = document.getElementById('div1');
   document.body.insertBefore(newDiv, currentDiv);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Basic_example", 500, 50)}}</p>
+{{EmbedLiveSample("Basic_example", 500, 50)}}
 
-<h3 id="Exemple_de_composant_web">Exemple de composant web</h3>
+### Exemple de composant web
 
-<p>L’exemple de fragment suivant est extrait de notre exemple expanding-list-web-component (voir aussi en direct). Dans ce cas, notre élément personnalisé étend la {{domxref("HTMLUListElement")}} qui représente l’élément {{htmlelement("ul")}}.</p>
+L’exemple de fragment suivant est extrait de notre exemple expanding-list-web-component (voir aussi en direct). Dans ce cas, notre élément personnalisé étend la {{domxref("HTMLUListElement")}} qui représente l’élément {{htmlelement("ul")}}.
 
-<pre class="brush: js">// Crée une classe pour l’élément
+```js
+// Crée une classe pour l’élément
 class ExpandingList extends HTMLUListElement {
   constructor() {
     // Toujours appeler « super » en premier dans le constructeur
@@ -86,52 +87,38 @@ class ExpandingList extends HTMLUListElement {
 }
 
 // Définit le nouvel élément
-customElements.define('expanding-list', ExpandingList, { extends: 'ul' });</pre>
+customElements.define('expanding-list', ExpandingList, { extends: 'ul' });
+```
 
-<p>Si nous cherchons à créer une instance de cet élément par programmation, nous devons utiliser un appel tel que montré dans la ligne suivante :</p>
+Si nous cherchons à créer une instance de cet élément par programmation, nous devons utiliser un appel tel que montré dans la ligne suivante :
 
-<pre class="brush: js">let expandingList = document.createElement('ul', { is : 'expanding-list' })</pre>
+```js
+let expandingList = document.createElement('ul', { is : 'expanding-list' })
+```
 
-<p>Le nouvel élément donnera un attribut <code><a href="/docs/Web/HTML/Global_attributes/is">is</a></code> dont la valeur est la balise de nom de l’élément personnalisé.</p>
+Le nouvel élément donnera un attribut [`is`](/docs/Web/HTML/Global_attributes/is) dont la valeur est la balise de nom de l’élément personnalisé.
 
-<div class="note">
-<p><strong>Note :</strong> Pour la rétrocompatibilité avec les versions précédentes de la <a href="https://www.w3.org/TR/custom-elements/">spécification des éléments personnalisés</a>, quelques navigateurs permettent de passer une chaîne de caractères ici, à la place d’un objet, dont la valeur est la balise de nom de l’élément personnalisé.</p>
-</div>
+> **Note :** Pour la rétrocompatibilité avec les versions précédentes de la [spécification des éléments personnalisés](https://www.w3.org/TR/custom-elements/), quelques navigateurs permettent de passer une chaîne de caractères ici, à la place d’un objet, dont la valeur est la balise de nom de l’élément personnalisé.
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', "#dom-document-createelement", "Document.createElement")}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | Statut                           | Commentaire |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('DOM WHATWG', "#dom-document-createelement", "Document.createElement")}} | {{Spec2('DOM WHATWG')}} |             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Document.createElement")}}</p>
+{{Compat("api.Document.createElement")}}
 
-<h3 id="Notes_CSS_Quantum">Notes CSS Quantum</h3>
+### Notes CSS Quantum
 
-<ul>
- <li>Dans Gecko, quand vous voulez créer un sous-arbre détaché (par exemple, un {{htmlelement("div")}} créé avec <code>createElement()</code> qui n’est pas encore inséré dans le DOM), l’élément racine du sous-arbre est défini comme un élément de niveau bloc. Dans le nouveau moteur CSS parallèle de Firefox (aussi connu comme <a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> ou <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>, prévu pour être publié dans Firefox 57), il est défini comme "inline", ({{bug(1374994)}}) selon la spécification.</li>
-</ul>
+- Dans Gecko, quand vous voulez créer un sous-arbre détaché (par exemple, un {{htmlelement("div")}} créé avec `createElement()` qui n’est pas encore inséré dans le DOM), l’élément racine du sous-arbre est défini comme un élément de niveau bloc. Dans le nouveau moteur CSS parallèle de Firefox (aussi connu comme [Quantum CSS](https://wiki.mozilla.org/Quantum) ou [Stylo](https://wiki.mozilla.org/Quantum/Stylo), prévu pour être publié dans Firefox 57), il est défini comme "inline", ({{bug(1374994)}}) selon la spécification.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("Node.removeChild()")}}</li>
- <li>{{domxref("Node.replaceChild()")}}</li>
- <li>{{domxref("Node.appendChild()")}}</li>
- <li>{{domxref("Node.insertBefore()")}}</li>
- <li>{{domxref("Node.hasChildNodes()")}}</li>
- <li>{{domxref("document.createElementNS()")}} — pour spécifier explicitement l’URI de l’espace de noms de l’élément.</li>
-</ul>
+- {{domxref("Node.removeChild()")}}
+- {{domxref("Node.replaceChild()")}}
+- {{domxref("Node.appendChild()")}}
+- {{domxref("Node.insertBefore()")}}
+- {{domxref("Node.hasChildNodes()")}}
+- {{domxref("document.createElementNS()")}} — pour spécifier explicitement l’URI de l’espace de noms de l’élément.

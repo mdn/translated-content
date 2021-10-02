@@ -9,34 +9,31 @@ tags:
   - postMessage
 translation_of: Web/API/Window/postMessage
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<div></div>
+La méthode **`window.postMessage`** permet une communication inter-domaine en toute sécurité. Normalement, les scripts de différentes pages sont autorisés à accéder les uns aux autres si et seulement si les pages depuis lesquelles ils sont exécutés ont des URL de même [origine](/en-US/docs/Glossary/Origin), c'est-à-dire avec le même protocole (généralement `http` ou `https`), le même numéro de port (`80` étant le port par défaut pour  `http`), et le même nom d'hôte (à condition que [document.domain](/en-US/docs/DOM/document.domain) soit initialisé à la même valeur par les deux pages). `window.postMessage` fournit un mécanisme contrôlé pour contourner cette restriction d'une manière sécurisée si bien utilisée.
 
-<p>La méthode <strong><code>window.postMessage</code></strong> permet une communication inter-domaine en toute sécurité. Normalement, les scripts de différentes pages sont autorisés à accéder les uns aux autres si et seulement si les pages depuis lesquelles ils sont exécutés ont des URL de même <a href="/en-US/docs/Glossary/Origin">origine</a>, c'est-à-dire avec le même protocole (généralement <code>http</code> ou <code>https</code>), le même numéro de port (<code>80</code> étant le port par défaut pour  <code>http</code>), et le même nom d'hôte (à condition que <a href="/en-US/docs/DOM/document.domain">document.domain</a> soit initialisé à la même valeur par les deux pages). <code>window.postMessage</code> fournit un mécanisme contrôlé pour contourner cette restriction d'une manière sécurisée si bien utilisée.</p>
+La méthode `window.postMessage`, quand elle est appelée, provoque l'envoi d'un {{domxref("MessageEvent")}} à la fenêtre ciblée une fois que tout script en attente a terminé son exécution (par exemple, les gestionnaires d'évènements restants si `window.postMessage` est appelée depuis un gestionnaire d'évènement, des timeouts en attente enregistrées auparavant, etc.) Le {{domxref("MessageEvent")}} est de type `message`, a une propriété `data` qui est initialisée à la valeur du premier argument passé à` window.postMessage`, une propriété `origin` correspondant à l'origine du document principal de la fenêtre appelant `window.postMessage` au moment où `window.postMessage` a été appelée, et une propriété `source` qui est la fenêtre depuis laquelle `window.postMessage` est appelée. (les autres propriétés standard d'évènement sont présentes avec leurs valeurs attendues).
 
-<p>La méthode <code>window.postMessage</code>, quand elle est appelée, provoque l'envoi d'un {{domxref("MessageEvent")}} à la fenêtre ciblée une fois que tout script en attente a terminé son exécution (par exemple, les gestionnaires d'évènements restants si <code>window.postMessage</code> est appelée depuis un gestionnaire d'évènement, des timeouts en attente enregistrées auparavant, etc.) Le {{domxref("MessageEvent")}} est de type <code>message</code>, a une propriété <code>data</code> qui est initialisée à la valeur du premier argument passé à<code> window.postMessage</code>, une propriété <code>origin</code> correspondant à l'origine du document principal de la fenêtre appelant <code>window.postMessage</code> au moment où <code>window.postMessage</code> a été appelée, et une propriété <code>source</code> qui est la fenêtre depuis laquelle <code>window.postMessage</code> est appelée. (les autres propriétés standard d'évènement sont présentes avec leurs valeurs attendues).</p>
+## Syntaxe
 
-<h2 id="Syntax">Syntaxe</h2>
+    otherWindow.postMessage(message, targetOrigin, [transfer]);
 
-<pre class="syntaxbox"><em>otherWindow</em>.postMessage(<em>message</em>, <em>targetOrigin</em>, [<em>transfer</em>]);</pre>
+- `otherWindow`
+  - : Une référence à une autre fenêtre ; une telle référence peut être obtenue, par exemple, _via_ la propriété `contentWindow` d'un élément `iframe`, l'objet retourné par [window.open](/fr/docs/DOM/window.open), ou par index nommé ou numérique de [window.frames](/fr/docs/Web/API/window.frames).
+- `message`
+  - : La donnée à envoyer à l'autre fenêtre. Elle est sérialisée en utilisant [l'algorithme de clônage structuré](/fr/docs/Web/Guide/API/DOM/The_structured_clone_algorithm). Cela signifie que vous pouvez passer sereinement une large variété d'objets de données à la fenêtre de destination sans avoir à les sérialiser vous-mêmes. \[1]
+- `targetOrigin`
+  - : Indique quelle doit être l'origine de `otherWindow` pour l'évènement à envoyer, soit comme la chaîne littérale `"*"` (signifiant pas de préférence) soit comme une URI. Si, au moment où l'évènement est inscrit pour être envoyé, le protocole, le nom d'hôte ou le port du document de `otherWindow` ne correspond pas à ceux contenus dans `targetOrigin`,  l'évènement ne sera pas envoyé ; il ne le sera que si les trois correspondent. Ce mécanisme permet de contrôler où les messages sont envoyés ; par exemple, si `postMessage` était utilisé pour transmettre un mot de passe, il serait absolument vital que cet argument soit une URI dont l'origine est la même que le récepteur prévu du message contenant le mot de passe, afin de prévenir l'interception du mot de passe par une tierce-partie malicieuse. **Fournissez toujours une `targetOrigin` spécifique, jamais `*`, si vous savez où le document de l'autre fenêtre est censé se trouver. Ne pas fournir une cible spécifique expose les données que vous envoyez à tout site malicieux à l'écoute.**
+- `transfer` {{optional_Inline}}
+  - : Séquence d'objets {{domxref("Transferable")}} qui sera transmise avec le message. La possession de ces objets est cédée à la destination et ils ne sont plus utilisables du côté de l'expéditeur.
 
-<dl>
- <dt><code><em>otherWindow</em></code></dt>
- <dd>Une référence à une autre fenêtre ; une telle référence peut être obtenue, par exemple, <em>via</em> la propriété <code>contentWindow</code> d'un élément <code>iframe</code>, l'objet retourné par <a href="/fr/docs/DOM/window.open">window.open</a>, ou par index nommé ou numérique de <a href="/fr/docs/Web/API/window.frames">window.frames</a>.</dd>
- <dt><code><em>message</em></code></dt>
- <dd>La donnée à envoyer à l'autre fenêtre. Elle est sérialisée en utilisant <a href="/fr/docs/Web/Guide/API/DOM/The_structured_clone_algorithm">l'algorithme de clônage structuré</a>. Cela signifie que vous pouvez passer sereinement une large variété d'objets de données à la fenêtre de destination sans avoir à les sérialiser vous-mêmes. [1]</dd>
- <dt><code><em>targetOrigin</em></code></dt>
- <dd>Indique quelle doit être l'origine de <code>otherWindow</code> pour l'évènement à envoyer, soit comme la chaîne littérale <code>"*"</code> (signifiant pas de préférence) soit comme une URI. Si, au moment où l'évènement est inscrit pour être envoyé, le protocole, le nom d'hôte ou le port du document de <code>otherWindow</code> ne correspond pas à ceux contenus dans <code>targetOrigin</code>,  l'évènement ne sera pas envoyé ; il ne le sera que si les trois correspondent. Ce mécanisme permet de contrôler où les messages sont envoyés ; par exemple, si <code>postMessage</code> était utilisé pour transmettre un mot de passe, il serait absolument vital que cet argument soit une URI dont l'origine est la même que le récepteur prévu du message contenant le mot de passe, afin de prévenir l'interception du mot de passe par une tierce-partie malicieuse. <strong>Fournissez toujours une <code>targetOrigin</code> spécifique, jamais <code>*</code>, si vous savez où le document de l'autre fenêtre est censé se trouver. Ne pas fournir une cible spécifique expose les données que vous envoyez à tout site malicieux à l'écoute.</strong></dd>
- <dt><code><em><strong>transfer</strong></em></code> {{optional_Inline}}</dt>
- <dd>Séquence d'objets {{domxref("Transferable")}} qui sera transmise avec le message. La possession de ces objets est cédée à la destination et ils ne sont plus utilisables du côté de l'expéditeur.</dd>
-</dl>
+## L'évènement envoyé
 
-<h2 id="The_dispatched_event">L'évènement envoyé</h2>
+`otherWindow` peut surveiller les messages envoyés en exécutant le JavaScript suivant :
 
-<p><code>otherWindow</code> peut surveiller les messages envoyés en exécutant le JavaScript suivant :</p>
-
-<pre class="brush: js">window.addEventListener("message", receiveMessage, false);
+```js
+window.addEventListener("message", receiveMessage, false);
 
 function receiveMessage(event)
 {
@@ -45,34 +42,32 @@ function receiveMessage(event)
 
   // ...
 }
-</pre>
+```
 
-<p>Les propriétés du message envoyé sont :</p>
+Les propriétés du message envoyé sont :
 
-<dl>
- <dt><code>data</code></dt>
- <dd>L'objet passé depuis l'autre fenêtre.</dd>
- <dt><code>origin</code></dt>
- <dd>L'<a href="/en-US/docs/Origin">origine</a> de la fenêtre qui a envoyé le message au moment où <code>postMessage</code> a été appelée. Des exemples typiques d'origines sont <code>https://example.org</code> (sous-entendu port <code>443</code>), <code>http://example.net</code> (sous-entendu port <code>80</code>), et <code>http://example.com:8080</code>. Notez qu'il n'est pas garanti que cette origine soit l'origine actuelle ou future de cette fenêtre, qui peut avoir été naviguée vers une adresse différente depuis l'appel à <code>postMessage</code>.</dd>
- <dt><code>source</code></dt>
- <dd>Une référence à l'objet <code><a href="/fr/docs/DOM/window">window</a></code> qui a envoyé le message ; vous pouvez utiliser ceci pour établir une communication dans les deux sens entre deux fenêtres ayant différentes origines.</dd>
-</dl>
+- `data`
+  - : L'objet passé depuis l'autre fenêtre.
+- `origin`
+  - : L'[origine](/en-US/docs/Origin) de la fenêtre qui a envoyé le message au moment où `postMessage` a été appelée. Des exemples typiques d'origines sont `https://example.org` (sous-entendu port `443`), `http://example.net` (sous-entendu port `80`), et `http://example.com:8080`. Notez qu'il n'est pas garanti que cette origine soit l'origine actuelle ou future de cette fenêtre, qui peut avoir été naviguée vers une adresse différente depuis l'appel à `postMessage`.
+- `source`
+  - : Une référence à l'objet [`window`](/fr/docs/DOM/window) qui a envoyé le message ; vous pouvez utiliser ceci pour établir une communication dans les deux sens entre deux fenêtres ayant différentes origines.
 
-<dl>
-</dl>
+<!---->
 
-<h2 id="Security_concerns">Précautions de sécurité</h2>
+## Précautions de sécurité
 
-<p><strong>Si vous ne prévoyez pas de recevoir de messages depuis d'autres sites, n'ajoutez pas de gestionnaire d'évènement pour les évènements <code>message</code>.</strong> C'est un moyen sûr d'éviter les problèmes de sécurité.</p>
+**Si vous ne prévoyez pas de recevoir de messages depuis d'autres sites, n'ajoutez pas de gestionnaire d'évènement pour les évènements `message`.** C'est un moyen sûr d'éviter les problèmes de sécurité.
 
-<p>Si vous prévoyez de recevoir des messages depuis d'autres sites, <strong>vérifiez toujours l'identité de l'expéditeur</strong> à l'aide des propriétés <code>origin</code> et si possible <code>source</code>. Toute fenêtre (y compris, par exemple, <code>http://evil.example.com</code>) peut envoyer un message à toute autre fenêtre, et vous n'avez aucune garantie qu'un expéditeur inconnu ne va pas envoyer de message malicieux. Cependant, même si vous vérifiez l'identité, vous devriez <strong>toujours vérifier la syntaxe du message reçu</strong>. Dans le cas contraire, une faille de sécurité dans le site auquel vous faites confiance peut ouvrir une vulnérabilité XSS dans votre propre site.</p>
+Si vous prévoyez de recevoir des messages depuis d'autres sites, **vérifiez toujours l'identité de l'expéditeur** à l'aide des propriétés `origin` et si possible `source`. Toute fenêtre (y compris, par exemple, `http://evil.example.com`) peut envoyer un message à toute autre fenêtre, et vous n'avez aucune garantie qu'un expéditeur inconnu ne va pas envoyer de message malicieux. Cependant, même si vous vérifiez l'identité, vous devriez **toujours vérifier la syntaxe du message reçu**. Dans le cas contraire, une faille de sécurité dans le site auquel vous faites confiance peut ouvrir une vulnérabilité XSS dans votre propre site.
 
-<p><strong>Spécifiez toujours explicitement une origine de destination, jamais <code>*</code>, quand vous utilisez <code>postMessage</code> pour envoyer des données à d'autres fenêtres.</strong> Un site malicieux peut changer l'adresse de la fenêtre à votre insu, et ainsi intercepter les données envoyées à l'aide de <code>postMessage</code>.</p>
+**Spécifiez toujours explicitement une origine de destination, jamais `*`, quand vous utilisez `postMessage` pour envoyer des données à d'autres fenêtres.** Un site malicieux peut changer l'adresse de la fenêtre à votre insu, et ainsi intercepter les données envoyées à l'aide de `postMessage`.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">/*
- * Dans les scripts de la fenêtre A, avec A sur &lt;http://example.com:8080&gt;:
+```js
+/*
+ * Dans les scripts de la fenêtre A, avec A sur <http://example.com:8080>:
  */
 
 var popup = window.open(...popup details...);
@@ -98,10 +93,11 @@ function receiveMessage(event)
   // event.data est "hi there yourself!  the secret response is: rheeeeet!"
 }
 window.addEventListener("message", receiveMessage, false);
-</pre>
+```
 
-<pre class="brush: js">/*
- * Dans les scripts de la popup, sur &lt;http://example.org&gt;:
+```js
+/*
+ * Dans les scripts de la popup, sur <http://example.org>:
  */
 
 // Appelée quelques instants après que postMessage a été appelée
@@ -124,56 +120,37 @@ function receiveMessage(event)
 }
 
 window.addEventListener("message", receiveMessage, false);
-</pre>
+```
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p>Toute fenêtre peut accéder à cette méthode sur toute autre fenêtre, à tout moment, peu importe l'adresse du document dans la fenêtre, pour y envoyer un message. Par conséquent, tout gestionnaire d'évènement utilisé pour recevoir des messages <strong>doit</strong> d'abord vérifier l'identité de l'expéditeur du message, en utilisant les propriétés <code>origin</code> et si possible <code>source</code>. Cela ne peut pas être minimisé : <strong>ne pas vérifier les propriétés <code>origin</code> et si possible <code>source</code> permet des attaques inter-site.</strong></p>
+Toute fenêtre peut accéder à cette méthode sur toute autre fenêtre, à tout moment, peu importe l'adresse du document dans la fenêtre, pour y envoyer un message. Par conséquent, tout gestionnaire d'évènement utilisé pour recevoir des messages **doit** d'abord vérifier l'identité de l'expéditeur du message, en utilisant les propriétés `origin` et si possible `source`. Cela ne peut pas être minimisé : **ne pas vérifier les propriétés `origin` et si possible `source` permet des attaques inter-site.**
 
-<p>De même qu'avec les scripts exécutés de manière asynchrone (timeouts, evènements générés par l'utilisateur), il n'est pas possible pour l'appelant à <code>postMessage</code> de détecter quand un gestionnaire d'évènement écoutant des évènements envoyés par <code>postMessage</code> lance une exception.</p>
+De même qu'avec les scripts exécutés de manière asynchrone (timeouts, evènements générés par l'utilisateur), il n'est pas possible pour l'appelant à `postMessage` de détecter quand un gestionnaire d'évènement écoutant des évènements envoyés par `postMessage` lance une exception.
 
-<p>La valeur de la propriété <code>origin</code> de l'évènement envoyé n'est pas affectée par la valeur actuelle de <code>document.domain</code> dans la fenêtre appelante.</p>
+La valeur de la propriété `origin` de l'évènement envoyé n'est pas affectée par la valeur actuelle de `document.domain` dans la fenêtre appelante.
 
-<p>Pour les noms d'hôte IDN uniquement, la valeur de la propriété <code>origin</code> n'est pas systématiquement Unicode ou punycode ; pour la plus grande compatibilité, testez à la fois les valeurs IDN et punycode quand vous utilisez cette propriété si vous attendez des messages de sites IDN. Cette valeur sera systématiquement IDN à l'avenir, mais pour l'instant vous devriez gérer à la fois les formes IDN et punycode.</p>
+Pour les noms d'hôte IDN uniquement, la valeur de la propriété `origin` n'est pas systématiquement Unicode ou punycode ; pour la plus grande compatibilité, testez à la fois les valeurs IDN et punycode quand vous utilisez cette propriété si vous attendez des messages de sites IDN. Cette valeur sera systématiquement IDN à l'avenir, mais pour l'instant vous devriez gérer à la fois les formes IDN et punycode.
 
-<p>La valeur de la propriété <code>origin</code> quand la fenêtre expéditrice contient une URL <code>javascript:</code> ou <code>data:</code> est l'origin du script qui a chargé cette URL.</p>
+La valeur de la propriété `origin` quand la fenêtre expéditrice contient une URL `javascript:` ou `data:` est l'origin du script qui a chargé cette URL.
 
-<h3 id="Utiliser_window.postMessage_dans_les_extensions_Non-standard_inline">Utiliser window.postMessage dans les extensions {{Non-standard_inline}}</h3>
+### Utiliser window\.postMessage dans les extensions {{Non-standard_inline}}
 
-<p><code>window.postMessage</code> est disponible depuis le JavaScript exécuté en code chrome (par exemple dans les extensions et le code privilégié), mais la propriété <code>source</code> de l'évènement envoyé est toujours <code>null</code> par mesure de sécurité. (Les autres propriétés ont leurs valeurs usuelles.) L'argument <code>targetOrigin</code> pour un message envoyé à une fenêtre située à une URL<code> chrome:</code> est actuellement mal interprété, si bien que la seule valeur qui conduit à l'envoi d'un message est <code>"*"</code>. Comme cette valeur n'est pas sûre quand la fenêtre ciblée peut être naviguée n'importe où par un site malicieux, il est recommandé de ne pas utiliser <code>postMessage</code> pour communiquer avec des pages <code>chrome:</code> pour l'instant ; utilisez une méthode différente (comme une query string quand la fenêtre est ouverte) pour communiquer avec des fenêtres chrome. Enfin, poster un message à une page à une URL <code>file:</code> requiert actuellement que l'argument <code>targetOrigin</code> soit <code>"*"</code>. <code>file://</code> ne peut pas être utilisé comme restriction de sécurité ; cette restriction pourrait être modifiée à l'avenir.</p>
+`window.postMessage` est disponible depuis le JavaScript exécuté en code chrome (par exemple dans les extensions et le code privilégié), mais la propriété `source` de l'évènement envoyé est toujours `null` par mesure de sécurité. (Les autres propriétés ont leurs valeurs usuelles.) L'argument `targetOrigin` pour un message envoyé à une fenêtre située à une URL` chrome:` est actuellement mal interprété, si bien que la seule valeur qui conduit à l'envoi d'un message est `"*"`. Comme cette valeur n'est pas sûre quand la fenêtre ciblée peut être naviguée n'importe où par un site malicieux, il est recommandé de ne pas utiliser `postMessage` pour communiquer avec des pages `chrome:` pour l'instant ; utilisez une méthode différente (comme une query string quand la fenêtre est ouverte) pour communiquer avec des fenêtres chrome. Enfin, poster un message à une page à une URL `file:` requiert actuellement que l'argument `targetOrigin` soit `"*"`. `file://` ne peut pas être utilisé comme restriction de sécurité ; cette restriction pourrait être modifiée à l'avenir.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col"><strong>Spécification</strong></th>
-   <th scope="col"><strong>Status</strong></th>
-   <th scope="col"><strong>Comment</strong>aire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#dom-window-postmessage", "window.postMessage")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Pas de changement depuis {{SpecName('HTML5 Web Messaging')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 Web Messaging', '#dom-window-postmessage', 'window.postMessage')}}</td>
-   <td>{{Spec2('HTML5 Web Messaging')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| **Spécification**                                                                                                | **Status**                                   | **Comment**aire                                                           |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "#dom-window-postmessage", "window.postMessage")}}             | {{Spec2('HTML WHATWG')}}             | Pas de changement depuis {{SpecName('HTML5 Web Messaging')}} |
+| {{SpecName('HTML5 Web Messaging', '#dom-window-postmessage', 'window.postMessage')}} | {{Spec2('HTML5 Web Messaging')}} | Définition initiale.                                                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.Window.postMessage")}}
 
+## Voir aussi
 
-<p>{{Compat("api.Window.postMessage")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/en-US/docs/DOM/document.domain">Document.domain</a></li>
- <li><a href="/en-US/docs/Web/API/CustomEvent">CustomEvent</a></li>
- <li><a href="/en-US/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages">Interaction entre les pages privilégiées et non privilégiées</a></li>
-</ul>
+- [Document.domain](/en-US/docs/DOM/document.domain)
+- [CustomEvent](/en-US/docs/Web/API/CustomEvent)
+- [Interaction entre les pages privilégiées et non privilégiées](/en-US/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages)

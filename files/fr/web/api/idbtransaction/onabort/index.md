@@ -8,27 +8,30 @@ tags:
   - Reference
 translation_of: Web/API/IDBTransaction/onabort
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>Le gestionnaire d'événement <strong><code>onabort</code></strong>, rattaché à l'interface {{domxref("IDBTransaction")}}, s'exécute au déclenchement d'un événement <code><a href="/fr/docs/Web/Events/abort">abort</a></code>, lorsque la transaction a été annulée avec la méthode {{domxref("IDBTransaction.abort")}}.</p>
+Le gestionnaire d'événement **`onabort`**, rattaché à l'interface {{domxref("IDBTransaction")}}, s'exécute au déclenchement d'un événement [`abort`](/fr/docs/Web/Events/abort), lorsque la transaction a été annulée avec la méthode {{domxref("IDBTransaction.abort")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">transaction.onabort = function() { ... };</pre>
+```js
+transaction.onabort = function() { ... };
+```
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans le code suivant, on ouvre une connexion à la base de données. Sur cette connexion, on démarre une transaction avec {{domxref("IDBTransaction")}} en lecture/écriture pour accéder au magasin d'objets intitulé <code>"toDoList"</code> et y ajouter un enregistrement (grâce à la méthode {{domxref("IDBObjectStore.add")}}). On notera également l'utilisation des gestionnaires d'événement {{domxref("IDBTransaction.oncomplete")}} et {{domxref("IDBTransaction.onerror")}} qui affichent le résultat de la transaction sur la page.</p>
+Dans le code suivant, on ouvre une connexion à la base de données. Sur cette connexion, on démarre une transaction avec {{domxref("IDBTransaction")}} en lecture/écriture pour accéder au magasin d'objets intitulé `"toDoList"` et y ajouter un enregistrement (grâce à la méthode {{domxref("IDBObjectStore.add")}}). On notera également l'utilisation des gestionnaires d'événement {{domxref("IDBTransaction.oncomplete")}} et {{domxref("IDBTransaction.onerror")}} qui affichent le résultat de la transaction sur la page.
 
-<p>On voit ici le gestionnaire d'événement <strong><code>onabort</code></strong> qui est utilisé pour afficher un message sur la console du développeur.</p>
+On voit ici le gestionnaire d'événement **`onabort`** qui est utilisé pour afficher un message sur la console du développeur.
 
-<pre class="brush: js">// Connexion à la base de données
+```js
+// Connexion à la base de données
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Connexion établie.&lt;/li&gt;';
+  note.innerHTML += '<li>Connexion établie.</li>';
 
   // On affecte la connexion à la variable db.
   db = DBOpenRequest.result;
@@ -49,13 +52,13 @@ function addData() {
   // On utilise oncomplete en cas de succès de
   // l'ouverture de la transaction
   transaction.oncomplete = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction terminée : modification de la base de données OK.&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction terminée : modification de la base de données OK.</li>';
   };
 
   // En cas d'échec de l'ouverture, ce sera
   // le gestionnaire onerror qui interviendra
   transaction.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;L\'erreur: "' + transaction.error +'" s\'est produite, échec de la transaction.&lt;/li&gt;';
+    note.innerHTML += '<li>L\'erreur: "' + transaction.error +'" s\'est produite, échec de la transaction.</li>';
   };
 
   // On ouvre l'accès au un magasin "toDoList"
@@ -66,7 +69,7 @@ function addData() {
   var objectStoreRequest = objectStore.add(newItem[0]);
   objectStoreRequest.onsuccess = function(event) {
     // On signale l'ajout de l'enregistrement
-    note.innerHTML += '&lt;li&gt;Enregistrement ajouté.&lt;/li&gt;';
+    note.innerHTML += '<li>Enregistrement ajouté.</li>';
   };
 
   transaction.onabort = function() {
@@ -77,41 +80,27 @@ function addData() {
 
   // On abandonne la transaction qu'on vient de faire
   transaction.abort();
-};</pre>
+};
+```
 
-<div class="note">
-  <p><strong>Note :</strong> Pour un exemple fonctionnel complet, voir notre application <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em> disponible</a>).</p>
-</div>
+> **Note :** Pour un exemple fonctionnel complet, voir notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([exemple _live_ disponible](https://mdn.github.io/to-do-notifications/)).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBTransaction-onabort', 'onabort')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                         | Commentaires |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#widl-IDBTransaction-onabort', 'onabort')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBTransaction.onabort")}}</p>
+{{Compat("api.IDBTransaction.onabort")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Manipuler IndexedDB</a></li>
- <li>Démarrer des transactions : {{domxref("IDBDatabase")}}</li>
- <li>Manipuler des transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}</li>
- <li>Manipuler des curseurs : {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence pour IndexedDB : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a></li>
-</ul>
+- [Manipuler IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Démarrer des transactions : {{domxref("IDBDatabase")}}
+- Manipuler des transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
+- Manipuler des curseurs : {{domxref("IDBCursor")}}
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)

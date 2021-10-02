@@ -15,62 +15,47 @@ tags:
   - send
 translation_of: Web/API/XMLHttpRequest/send
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>La méthode  {{domxref("XMLHttpRequest")}} <code><strong>send()</strong></code> envoie la requête au serveur.  Si la requête est asynchrone (elle l'est par défaut), la méthode envoie un retour dés que la requête est partie et le résultat est intégré en utilisant les évènements. En cas de requête synchrone, elle ne renvoie rien tant que la réponse n'est pas retournée.</p>
+La méthode  {{domxref("XMLHttpRequest")}} **`send()`** envoie la requête au serveur.  Si la requête est asynchrone (elle l'est par défaut), la méthode envoie un retour dés que la requête est partie et le résultat est intégré en utilisant les évènements. En cas de requête synchrone, elle ne renvoie rien tant que la réponse n'est pas retournée.
 
-<p><code>send()</code> accepte un paramètre optionnel qui qui vous permet de spécifier le corps de la requête; c'est principalement utilisé pour les requêtes comme  {{HTTPMethod("PUT")}}. Si la méthode est {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}, le paramètre <code>body</code> est ignoré et le corps de la requête est fixé à <code>null</code>.</p>
+`send()` accepte un paramètre optionnel qui qui vous permet de spécifier le corps de la requête; c'est principalement utilisé pour les requêtes comme  {{HTTPMethod("PUT")}}. Si la méthode est {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}, le paramètre `body` est ignoré et le corps de la requête est fixé à `null`.
 
-<p>Si aucun "header"{{HTTPHeader("Accept")}} n'a été paramétré dans {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}, un "header" <code>Accept</code> avec le type <code>"*/*"</code> (tous types) est envoyé.</p>
+Si aucun "header"{{HTTPHeader("Accept")}} n'a été paramétré dans {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}, un "header" `Accept` avec le type `"*/*"` (tous types) est envoyé.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>XMLHttpRequest</var>.send(<var>body</var>)
-</pre>
+    XMLHttpRequest.send(body)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>body</code> {{optional_inline}}</dt>
- <dd>Le corps des données à envoyer dans la requête XHR. Cela peut être :
- <ul>
-  <li>Un {{domxref("Document")}}, dans quel cas il est sérialisé avant d'être envoyé.</li>
-  <li>Un  <code>XMLHttpRequestBodyInit</code> , dont le which <a href="https://fetch.spec.whatwg.org/#bodyinit">standard </a><a href="https://fetch.spec.whatwg.org/#bodyinit">Fetch</a> peut être un  {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, ou un objet  {{domxref("USVString")}} .</li>
-  <li><code>null</code></li>
- </ul>
- Si la valeur du corps n'est pas spécifiée, la valeur par défaut <code>null</code> est employée.</dd>
-</dl>
+- `body` {{optional_inline}}
 
-<p>La meilleure manière d'envoyer du contenu binaire (par exemple dans l'upload de fichiers) est d'utiliser un {{domxref("ArrayBufferView")}} ou  {{domxref("Blob")}} en conjonction avec la méthode <code>send()</code>.</p>
+  - : Le corps des données à envoyer dans la requête XHR. Cela peut être :
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+    - Un {{domxref("Document")}}, dans quel cas il est sérialisé avant d'être envoyé.
+    - Un `XMLHttpRequestBodyInit` , dont le which [standard ](https://fetch.spec.whatwg.org/#bodyinit)[Fetch](https://fetch.spec.whatwg.org/#bodyinit) peut être un  {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, ou un objet  {{domxref("USVString")}} .
+    - `null`
 
-<p><code>undefined</code>.</p>
+    Si la valeur du corps n'est pas spécifiée, la valeur par défaut `null` est employée.
 
-<h3 id="Exceptions">Exceptions</h3>
+La meilleure manière d'envoyer du contenu binaire (par exemple dans l'upload de fichiers) est d'utiliser un {{domxref("ArrayBufferView")}} ou  {{domxref("Blob")}} en conjonction avec la méthode `send()`.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td><code>send()</code> a déjà été invoquée pour la requête, et/ou celle-ci est incomplète.</td>
-  </tr>
-  <tr>
-   <td><code>NetworkError</code></td>
-   <td>Le type de ressource à récupérer est un <strong>BLOB</strong>, <em>(binary large object</em>) , et la méthode n'est pas <code>GET</code>.</td>
-  </tr>
- </tbody>
-</table>
+### Valeur de retour
 
-<h2 id="Exemple_GET">Exemple: GET</h2>
+`undefined`.
 
-<pre class="brush: js"><code>var xhr = new XMLHttpRequest();
+### Exceptions
+
+| Exception           | Description                                                                                                |
+| ------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `InvalidStateError` | `send()` a déjà été invoquée pour la requête, et/ou celle-ci est incomplète.                               |
+| `NetworkError`      | Le type de ressource à récupérer est un **BLOB**, _(binary large object_) , et la méthode n'est pas `GET`. |
+
+## Exemple: GET
+
+```js
+var xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 xhr.onload = function () {
@@ -79,55 +64,41 @@ xhr.onload = function () {
 
 xhr.send(null);
 // xhr.send('string');
-</code>// <code>xhr.send(new Blob());
+// xhr.send(new Blob());
 // xhr.send(new Int8Array());
-// xhr.send(document);</code>
-</pre>
+// xhr.send(document);
+```
 
-<h2 id="Example_POST">Example: POST</h2>
+## Example: POST
 
-<pre class="brush: js"><code>var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open("POST", '/server', true);
 
 //Envoie les informations du header adaptées avec la requête
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
 xhr.onreadystatechange = function() { //Appelle une fonction au changement d'état.
-    if (this.readyState === XMLHttpRequest.DONE &amp;&amp; this.status === 200) {
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
 // Requête finie, traitement ici.
     }
 }
-xhr.send("foo=bar&amp;lorem=ipsum");
+xhr.send("foo=bar&lorem=ipsum");
 // xhr.send(new Int8Array());
-// xhr.send(document);</code>
-</pre>
+// xhr.send(document);
+```
 
-<h2 id="Spécificités">Spécificités</h2>
+## Spécificités
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specificité</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#the-send()-method', 'send()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+| Specificité                                                                          | Statut                               | Commentaire            |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
+| {{SpecName('XMLHttpRequest', '#the-send()-method', 'send()')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
 
-<h2 id="Compatibilité_navigateur">Compatibilité navigateur</h2>
+## Compatibilité navigateur
 
-<div>{{Compat("api.XMLHttpRequest.send")}}</div>
+{{Compat("api.XMLHttpRequest.send")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest">L'utilisation de XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML dans XMLHttpRequest</a></li>
-</ul>
+- [L'utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest)
+- [HTML dans XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)

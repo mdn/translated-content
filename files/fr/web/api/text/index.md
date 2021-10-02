@@ -6,95 +6,57 @@ tags:
   - DOM
 translation_of: Web/API/Text
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>L'interface <strong><code>Text</code></strong> représente le contenu textuel d'un élément {{domxref("Element")}} ou d'un attribut {{domxref("Attr")}}. Si un élément n'a pas de balisage dans son contenu, il a un seul enfant implémentant <code>Text</code> qui contient le texte de l'élément.  Par contre, si l'élément contient un balisage, il est analysé par les éléments d'information et les noeuds <code>Text</code> qui sont ses enfants.</p>
+L'interface **`Text`** représente le contenu textuel d'un élément {{domxref("Element")}} ou d'un attribut {{domxref("Attr")}}. Si un élément n'a pas de balisage dans son contenu, il a un seul enfant implémentant `Text` qui contient le texte de l'élément.  Par contre, si l'élément contient un balisage, il est analysé par les éléments d'information et les noeuds `Text` qui sont ses enfants.
 
-<p>Un nouveau document a un unique noeud <code>Text</code> pour chaque bloc de texte. Au fil du temps, d'autres noeuds peuvent être créés <code>Text</code> en temps que modification du contenu du document.  La méthode {{domxref("Node.normalize()")}}  fusionne les objets <code>Text</code>  dans un seul noeud pour chaque bloc de texte.</p>
+Un nouveau document a un unique noeud `Text` pour chaque bloc de texte. Au fil du temps, d'autres noeuds peuvent être créés `Text` en temps que modification du contenu du document.  La méthode {{domxref("Node.normalize()")}}  fusionne les objets `Text`  dans un seul noeud pour chaque bloc de texte.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Methods">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt>{{domxref("Text.Text", "Text()")}} {{experimental_inline}}</dt>
- <dd>Retourne un noeud <code>Text</code> avec le paramètre comme contenu textuel.</dd>
-</dl>
+- {{domxref("Text.Text", "Text()")}} {{experimental_inline}}
+  - : Retourne un noeud `Text` avec le paramètre comme contenu textuel.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Hérite des propriétés de son parent {{domxref("CharacterData")}}.</em></p>
+_Hérite des propriétés de son parent {{domxref("CharacterData")}}._
 
-<dl>
- <dt>{{domxref("Text.isElementContentWhitespace")}} {{readonlyInline}}{{ obsolete_inline() }}</dt>
- <dd>
- <p>Renvoie une marque {{domxref("Boolean")}} indiquant si le noeud de texte contient uniquement des espaces.</p>
- </dd>
- <dt>{{domxref("Text.wholeText")}} {{readonlyInline}}</dt>
- <dd>Renvoie une {{domxref("DOMString")}} (<em>chaîne de caractères</em>) contenant le texte de tous les noeuds <code>Text</code> adjacents logiquement à ce {{domxref("Node")}}, concaténé dans l'ordre du document.</dd>
- <dt>{{domxref("Text.assignedSlot")}} {{readonlyinline}}</dt>
- <dd>Retourne l'objet {{domxref("HTMLSlotElement")}}  associé à l'élément.</dd>
-</dl>
+- {{domxref("Text.isElementContentWhitespace")}} {{readonlyInline}}{{ obsolete_inline() }}
+  - : Renvoie une marque {{domxref("Boolean")}} indiquant si le noeud de texte contient uniquement des espaces.
+- {{domxref("Text.wholeText")}} {{readonlyInline}}
+  - : Renvoie une {{domxref("DOMString")}} (_chaîne de caractères_) contenant le texte de tous les noeuds `Text` adjacents logiquement à ce {{domxref("Node")}}, concaténé dans l'ordre du document.
+- {{domxref("Text.assignedSlot")}} {{readonlyinline}}
+  - : Retourne l'objet {{domxref("HTMLSlotElement")}}  associé à l'élément.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Hérite des méthodes de son parent {{domxref("CharacterData")}}.</em></p>
+_Hérite des méthodes de son parent {{domxref("CharacterData")}}._
 
-<dl>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("Text.replaceWholeText")}} {{ obsolete_inline() }}</dt>
- <dd>Remplace le texte du noeud en cours et tous les noeuds logiquement adjacents avec le texte spécifié.</dd>
-</dl>
+- {{domxref("Text.replaceWholeText")}} {{ obsolete_inline() }}
+  - : Remplace le texte du noeud en cours et tous les noeuds logiquement adjacents avec le texte spécifié.
 
-<dl>
- <dt>{{domxref("Text.splitText")}}</dt>
- <dd>Fractionne le noeud en deux noeuds selon un décalage spécifié.</dd>
-</dl>
+<!---->
 
-<h2 id="Spécifications">Spécifications</h2>
+- {{domxref("Text.splitText")}}
+  - : Fractionne le noeud en deux noeuds selon un décalage spécifié.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#text', 'Text')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Suppression de la propriété <code>isElementContentWhitespace</code>.<br>
-    Suppression de la méthode <code>replaceWholeText()</code>.<br>
-    Ajout du constructeur <code>Text()</code>.<br>
-    Ajout de la propriété <code>assignedSlot</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-1312295772', 'Text')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Ajout des propriétés <code>isElementContentWhitespace</code> et <code>wholeText</code>.<br>
-    Ajout de la méthode <code>replaceWholeText()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-1312295772', 'Text')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Pas de changement depuis {{SpecName('DOM1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-1312295772', 'Text')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+## Spécifications
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+| Spécification                                                                            | Statut                           | Commentaire                                                                                                                                                                     |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('DOM WHATWG', '#text', 'Text')}}                                 | {{Spec2('DOM WHATWG')}} | Suppression de la propriété `isElementContentWhitespace`. Suppression de la méthode `replaceWholeText()`. Ajout du constructeur `Text()`. Ajout de la propriété `assignedSlot`. |
+| {{SpecName('DOM3 Core', 'core.html#ID-1312295772', 'Text')}}         | {{Spec2('DOM3 Core')}}     | Ajout des propriétés `isElementContentWhitespace` et `wholeText`. Ajout de la méthode `replaceWholeText()`.                                                                     |
+| {{SpecName('DOM2 Core', 'core.html#ID-1312295772', 'Text')}}         | {{Spec2('DOM2 Core')}}     | Pas de changement depuis {{SpecName('DOM1')}}.                                                                                                                          |
+| {{SpecName('DOM1', 'level-one-core.html#ID-1312295772', 'Text')}} | {{Spec2('DOM1')}}         | Définition initiale.                                                                                                                                                            |
 
-<p>{{Compat("api.Text")}}</p>
+## Compatibilité des navigateurs
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+{{Compat("api.Text")}}
 
-<ul>
- <li><a href="/fr/docs/Web/API/Document_Object_Model">Référence du DOM</a></li>
-</ul>
+## Voir aussi
+
+- [Référence du DOM](/fr/docs/Web/API/Document_Object_Model)

@@ -11,48 +11,33 @@ tags:
   - actions
 translation_of: Web/API/Notification/actions
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>La propriété <strong><code>actions</code></strong> en lecture seule de l'interface {{domxref ("Notification")}} renvoie la liste des {{domxref ("NotificationAction")}} objets définis à l'aide de l'option <code>actions</code> lors de la création de la notification à l'aide du constructeur {{domxref("Notification.Notification","Notification()")}}.</p>
+La propriété **`actions`** en lecture seule de l'interface {{domxref ("Notification")}} renvoie la liste des {{domxref ("NotificationAction")}} objets définis à l'aide de l'option `actions` lors de la création de la notification à l'aide du constructeur {{domxref("Notification.Notification","Notification()")}}.
 
-<p>Il s'agit d'une liste des actions définies par l'application que l'utilisateur peut choisir de prendre directement depuis le contexte d'une notification.</p>
+Il s'agit d'une liste des actions définies par l'application que l'utilisateur peut choisir de prendre directement depuis le contexte d'une notification.
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> Le périphérique et l'agent utilisateur peuvent ne pouvoir afficher qu'un nombre limité d'actions (en raison, par exemple, d'un espace d'écran limité). Cette limite peut être déduite de {{DOMxRef ("Notification.maxActions")}}.</p>
-</div>
+> **Note :** Le périphérique et l'agent utilisateur peuvent ne pouvoir afficher qu'un nombre limité d'actions (en raison, par exemple, d'un espace d'écran limité). Cette limite peut être déduite de {{DOMxRef ("Notification.maxActions")}}.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>Notification</var>.actions</pre>
+    Notification.actions
 
-<h3 id="Value">Valeur</h3>
+### Valeur
 
-<p>Un tableau en lecture seule d'objets {{domxref ("NotificationAction")}}, chacun décrivant une action unique que l'utilisateur peut choisir dans une notification.</p>
+Un tableau en lecture seule d'objets {{domxref ("NotificationAction")}}, chacun décrivant une action unique que l'utilisateur peut choisir dans une notification.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-notification-actions','actions')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                                     | Commentaire     |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | --------------- |
+| {{SpecName('Web Notifications','#dom-notification-actions','actions')}} | {{Spec2('Web Notifications')}} | Living standard |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Notification.actions")}}</p>
+{{Compat("api.Notification.actions")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li><a href="/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a></li>
- <li>{{DOMxRef("Notification.maxActions")}}</li>
-</ul>
+- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- {{DOMxRef("Notification.maxActions")}}

@@ -7,15 +7,20 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/HTMLElement/offsetParent
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
-<p>Renvoie une référence à l'objet qui est l'élément conteneur positionné le plus proche (dans la hiérarchie de positionnement). Si l'élément n'est pas positionné, c'est l'élément racine (html en mode de respect des standards ; body en mode de rendu quirks) qui est l'<b>offsetParent</b>.</p>
-<h3 id="Syntaxe">Syntaxe</h3>
-<pre class="eval"><i>objetParent</i> = element.offsetParent
-</pre>
-<h3 id="Param.C3.A8tres">Paramètres</h3>
-<ul>
- <li><code>objetParent</code> est une référence à l'élément dans lequel l'élément courant est positionné.</li>
-</ul>
-<h3 id="Sp.C3.A9cification">Spécification</h3>
-<p>{{ DOM0() }}</p>
+{{ ApiRef() }}
+
+### Résumé
+
+Renvoie une référence à l'objet qui est l'élément conteneur positionné le plus proche (dans la hiérarchie de positionnement). Si l'élément n'est pas positionné, c'est l'élément racine (html en mode de respect des standards ; body en mode de rendu quirks) qui est l'**offsetParent**.
+
+### Syntaxe
+
+    objetParent = element.offsetParent
+
+### Paramètres
+
+- `objetParent` est une référence à l'élément dans lequel l'élément courant est positionné.
+
+### Spécification
+
+{{ DOM0() }}

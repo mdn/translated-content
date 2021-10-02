@@ -9,60 +9,46 @@ tags:
   - Rectangle
 translation_of: Web/API/DOMRectReadOnly/DOMRectReadOnly
 ---
-<p>{{APIRef("DOM")}}{{ SeeCompatTable }}</p>
+{{APIRef("DOM")}}{{ SeeCompatTable }}
 
-<p>Le constructeur <strong><code>DOMRectReadOnly()</code></strong> crée un nouvel objet {{domxref("DOMRectReadOnly")}}.</p>
+Le constructeur **`DOMRectReadOnly()`** crée un nouvel objet {{domxref("DOMRectReadOnly")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var myDOMRectReadOnly = new DOMRectReadOnly(x, y, width, height);</pre>
+    var myDOMRectReadOnly = new DOMRectReadOnly(x, y, width, height);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>x</dt>
- <dd>La coordonnée <code>x</code> de l'origine d'un <code>DOMRectReadOnly</code>.</dd>
- <dt>y</dt>
- <dd>La coordonnée <code>y</code> de l'origine d'un <code>DOMRectReadOnly</code>.</dd>
- <dt>width</dt>
- <dd>La largeur d'un <code>DOMRectReadOnly</code>.</dd>
- <dt>height</dt>
- <dd>La hauteur d'un <code>DOMRectReadOnly</code>.</dd>
-</dl>
+- x
+  - : La coordonnée `x` de l'origine d'un `DOMRectReadOnly`.
+- y
+  - : La coordonnée `y` de l'origine d'un `DOMRectReadOnly`.
+- width
+  - : La largeur d'un `DOMRectReadOnly`.
+- height
+  - : La hauteur d'un `DOMRectReadOnly`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Pour créer un nouveau <code>DOMPoint</code>, vous pouvez exécuter une ligne de code comme celle-ci :</p>
+Pour créer un nouveau `DOMPoint`, vous pouvez exécuter une ligne de code comme celle-ci :
 
-<pre class="brush: js">myDOMRect = new DOMRectReadOnly(0,0,100,100);
+```js
+myDOMRect = new DOMRectReadOnly(0,0,100,100);
 // l'exécution de 'myDOMRect' dans la console devrait alors renvoyer
 // DOMRect { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Geometry Interfaces', '#DOMRect', 'DOMRect()')}}</td>
-   <td>{{Spec2('Geometry Interfaces')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | Statut                                       | Commentaire          |
+| -------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
+| {{SpecName('Geometry Interfaces', '#DOMRect', 'DOMRect()')}} | {{Spec2('Geometry Interfaces')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.DOMRectReadOnly.DOMRectReadOnly")}}</p>
+{{Compat("api.DOMRectReadOnly.DOMRectReadOnly")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("DOMPoint")}}</li>
- <li>{{domxref("DOMRect")}}</li>
-</ul>
+- {{domxref("DOMPoint")}}
+- {{domxref("DOMRect")}}

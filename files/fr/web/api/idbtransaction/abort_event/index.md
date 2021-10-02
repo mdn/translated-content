@@ -3,73 +3,42 @@ title: abort
 slug: Web/API/IDBTransaction/abort_event
 translation_of: Web/API/IDBTransaction/abort_event
 ---
-<p>Le gestionnaire<strong> </strong>d'arrêt est exécuté lorsqu'une transaction a été interrompue.</p>
+Le gestionnaire\*\* \*\*d'arrêt est exécuté lorsqu'une transaction a été interrompue.
 
-<h2 id="Informations_générales">Informations générales</h2>
+## Informations générales
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Spécification</dt>
- <dd style="margin: 0 0 0 120px;"><a href="http://www.w3.org/TR/IndexedDB/#request-api">IndexedDB</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">Event</dd>
- <dt style="float: left; text-align: right; width: 120px;">Propagation</dt>
- <dd style="margin: 0 0 0 120px;">Oui</dd>
- <dt style="float: left; text-align: right; width: 120px;">Annulable</dt>
- <dd style="margin: 0 0 0 120px;">Non</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cible</dt>
- <dd style="margin: 0 0 0 120px;">IDBTransaction</dd>
- <dt style="float: left; text-align: right; width: 120px;">Action par défaut</dt>
- <dd style="margin: 0 0 0 120px;">Aucune</dd>
-</dl>
+- Spécification
+  - : [IndexedDB](http://www.w3.org/TR/IndexedDB/#request-api)
+- Interface
+  - : Event
+- Propagation
+  - : Oui
+- Annulable
+  - : Non
+- Cible
+  - : IDBTransaction
+- Action par défaut
+  - : Aucune
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
- </tbody>
-</table>
+| Property                              | Type                                 | Description                                            |
+| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
 
-<h2 id="Evénements_liés">Evénements liés</h2>
+## Evénements liés
 
-<ul>
- <li>{{event("success")}}</li>
- <li>{{event("error")}}</li>
- <li>{{event("abort")}}</li>
- <li>{{event("complete")}}</li>
- <li>{{event("upgradeneeded")}}</li>
- <li>{{event("blocked")}}</li>
- <li>{{event("versionchange")}}</li>
-</ul>
+- {{event("success")}}
+- {{event("error")}}
+- {{event("abort")}}
+- {{event("complete")}}
+- {{event("upgradeneeded")}}
+- {{event("blocked")}}
+- {{event("versionchange")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/IndexedDB/Using_IndexedDB">Utilisation d'IndexedDB</a></li>
-</ul>
+- [Utilisation d'IndexedDB](/fr/docs/IndexedDB/Using_IndexedDB)

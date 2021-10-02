@@ -11,50 +11,32 @@ tags:
   - débogage
 translation_of: Web/API/Console/time
 ---
-<p>{{APIRef("Console API")}}</p>
+{{APIRef("Console API")}}
 
-<p>Chronomètre une opération. Chaque "timer" doit avoir un nom unique. Il peut y avoir jusqu'à 10000 "timers" sur une même page. En appelant {{ domxref("console.timeEnd()") }} avec le même nom, le navigateur affichera le temps d'execution en millisecondes dans la console.</p>
+Chronomètre une opération. Chaque "timer" doit avoir un nom unique. Il peut y avoir jusqu'à 10000 "timers" sur une même page. En appelant {{ domxref("console.timeEnd()") }} avec le même nom, le navigateur affichera le temps d'execution en millisecondes dans la console.
 
-<p>Voir <a href="/fr/docs/Web/API/console#Timers">Timers</a> dans la documentation de {{ domxref("console") }} pour plus de details et d'exemples.</p>
+Voir [Timers](/fr/docs/Web/API/console#Timers) dans la documentation de {{ domxref("console") }} pour plus de details et d'exemples.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">console.time(<em>label</em>);
-</pre>
+    console.time(label);
 
-<h2 id="Paramètres">Paramètres</h2>
+## Paramètres
 
-<dl>
- <dt><code>label</code></dt>
- <dd>Nom qui identifiera le nouveau "timer". Il faut utiliser le même nom pour {{ domxref("console.timeEnd()") }} pour arrêter le "timer" et afficher le temps dans la console.</dd>
-</dl>
+- `label`
+  - : Nom qui identifiera le nouveau "timer". Il faut utiliser le même nom pour {{ domxref("console.timeEnd()") }} pour arrêter le "timer" et afficher le temps dans la console.
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#time", "console.time()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | Statut                           | Commentaire         |
+| ------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName("Console API", "#time", "console.time()")}} | {{Spec2("Console API")}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité  des navigateurs</h2>
+## Compatibilité  des navigateurs
 
-<p>{{Compat("api.Console.time")}}</p>
+{{Compat("api.Console.time")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{ domxref("console.timeEnd()") }}</li>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-</ul>
+- {{ domxref("console.timeEnd()") }}
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

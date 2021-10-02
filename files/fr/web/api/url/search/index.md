@@ -9,53 +9,40 @@ tags:
   - URL
 translation_of: Web/API/URL/search
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p>La propriété <strong><code>search</code></strong> de l'interface {{domxref("URL")}} est une chaine d'interrogation, aussi appellée une chaine de recherche, c'est un {{domxref("USVString")}} contenant le caractère <code>'?'</code> suivi des paramètres de l'URL.</p>
+La propriété **`search`** de l'interface {{domxref("URL")}} est une chaine d'interrogation, aussi appellée une chaine de recherche, c'est un {{domxref("USVString")}} contenant le caractère `'?'` suivi des paramètres de l'URL.
 
-<p>Les navigateurs récents fournissent la propriété {{domxref("URL.searchParams")}} qui permet d'analyser plus facilement les paramètres passés à la chaîne de recherche.</p>
+Les navigateurs récents fournissent la propriété {{domxref("URL.searchParams")}} qui permet d'analyser plus facilement les paramètres passés à la chaîne de recherche.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>chaineDeCaractere</em> = <em>objet</em>.search;
-<em>object</em>.search = <em>chaineDeCaractere</em>;
-</pre>
+    chaineDeCaractere = objet.search;
+    object.search = chaineDeCaractere;
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>Un {{domxref("USVString")}}.</p>
+Un {{domxref("USVString")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/search?q=123');
+```js
+var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/search?q=123');
 var queryString = url.search; // Retourne:"?q=123"
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#dom-url-search', 'URL.search')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | État                 | Commentaire          |
+| -------------------------------------------------------------------- | -------------------- | -------------------- |
+| {{SpecName('URL', '#dom-url-search', 'URL.search')}} | {{Spec2('URL')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.URL.search")}}</p>
+{{Compat("api.URL.search")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'interface {{domxref("URL")}} associée.</li>
-</ul>
+- L'interface {{domxref("URL")}} associée.

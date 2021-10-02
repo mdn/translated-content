@@ -12,89 +12,92 @@ tags:
   - Écouteurs
 translation_of: Web/API/EventTarget/removeEventListener
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>La méthode <strong><code>EventTarget.removeEventListener()</code></strong> supprime d'une {{domxref("EventTarget")}} (<em>cible</em>) un écouteur d'évènements précédemment enregistré avec {{domxref("EventTarget.addEventListener()")}}. L'écouteur d'évènements à supprimer est identifié en utilisant la combinaison du type d'évènement, la fonction "event listener" elle-même et diverses options factultatives qui peuvent affecter le processus de correspondance ; voir la section <em>Correspondance utilisée pour la suppression d'écouteurs d'événements</em> ci-après.</p>
+La méthode **`EventTarget.removeEventListener()`** supprime d'une {{domxref("EventTarget")}} (_cible_) un écouteur d'évènements précédemment enregistré avec {{domxref("EventTarget.addEventListener()")}}. L'écouteur d'évènements à supprimer est identifié en utilisant la combinaison du type d'évènement, la fonction "event listener" elle-même et diverses options factultatives qui peuvent affecter le processus de correspondance ; voir la section _Correspondance utilisée pour la suppression d'écouteurs d'événements_ ci-après.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><code><em>target</em>.removeEventListener(<em>type</em>, <em>listener</em>[, <em>options</em>]);
-</code><em>target</em>.removeEventListener(<em>type</em>, <em>listener</em>[, <em>useCapture</em>]);
-</pre>
+    target.removeEventListener(type, listener[, options]);
+    target.removeEventListener(type, listener[, useCapture]);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>type</code></dt>
- <dd>Une chaîne représentant le type d'événement pour lequel supprimer un écouteur d'évènements.</dd>
- <dt><code>listener</code></dt>
- <dd>La fonction  {{domxref("EventListener")}}  du gestionnaire d'évènements à retirer de la cible d'évènements.</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>
- <p>Un objet d'options qui spécifie les caractéristiques de l'écouteur d'évènements. Les options disponibles sont :</p>
+- `type`
+  - : Une chaîne représentant le type d'événement pour lequel supprimer un écouteur d'évènements.
+- `listener`
+  - : La fonction  {{domxref("EventListener")}}  du gestionnaire d'évènements à retirer de la cible d'évènements.
+- `options` {{optional_inline}}
 
- <ul>
-  <li><code>capture</code> : un {{jsxref("Boolean")}} indiquant que les évènements de ce type seront envoyés au <code>listener</code> enregistré avant d'être distribués à tout <code>EventTarget</code> en-dessous dans l'arborescence du DOM.</li>
-  <li><code>passive</code> : un {{jsxref("Boolean")}} qui indique que le <code>listener</code> n'appellera jamais <code>preventDefault()</code>. S'il doit le faire, l'agent utilisateur l'ignorera et génèrera un avertissement dans la console.</li>
-  <li>{{non-standard_inline}} <code>mozSystemGroup</code> : Disponible seulement pour le code exécuté dans XBL ou dans le chrome de Firefox, c'est un {{jsxref("Boolean")}} indiquant que l'écouteur a été ajouté au groupe système.</li>
- </ul>
- </dd>
- <dt><code>useCapture</code> {{optional_inline}}</dt>
- <dd>Indique si l'{{domxref("EventListener")}} à retirer a été enregistré comme un<code> </code>écouteur capturant, ou non. Si le paramètre est absent, la valeur par défaut est <code>false</code> (<em>faux</em>).</dd>
-</dl>
+  - : Un objet d'options qui spécifie les caractéristiques de l'écouteur d'évènements. Les options disponibles sont :
 
-<p>Si un écouteur est enregistré deux fois, un avec capture et un sans, supprimez chacun séparément. La suppression d'un écouteur de capture n'affecte pas une version non capturante du même écouteur, et vice versa.</p>
+    - `capture` : un {{jsxref("Boolean")}} indiquant que les évènements de ce type seront envoyés au `listener` enregistré avant d'être distribués à tout `EventTarget` en-dessous dans l'arborescence du DOM.
+    - `passive` : un {{jsxref("Boolean")}} qui indique que le `listener` n'appellera jamais `preventDefault()`. S'il doit le faire, l'agent utilisateur l'ignorera et génèrera un avertissement dans la console.
+    - {{non-standard_inline}} `mozSystemGroup` : Disponible seulement pour le code exécuté dans XBL ou dans le chrome de Firefox, c'est un {{jsxref("Boolean")}} indiquant que l'écouteur a été ajouté au groupe système.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+- `useCapture` {{optional_inline}}
+  - : Indique si l'{{domxref("EventListener")}} à retirer a été enregistré comme un` `écouteur capturant, ou non. Si le paramètre est absent, la valeur par défaut est `false` (_faux_).
 
-<p><code>undefined</code>. (<em>indéfini</em>)</p>
+Si un écouteur est enregistré deux fois, un avec capture et un sans, supprimez chacun séparément. La suppression d'un écouteur de capture n'affecte pas une version non capturante du même écouteur, et vice versa.
 
-<h3 id="Correspondance_utilisée_pour_la_suppression_d'écouteurs_d'événements">Correspondance utilisée pour la suppression d'écouteurs d'événements</h3>
+### Valeur de retour
 
-<p>Étant donné qu'un écouteur d'événements a déjà été ajouté en appelant {{domxref("EventTarget.addEventListener","addEventListener()")}}, vous pouvez éventuellement arriver à un point auquel vous devez le supprimer. Vous devez alors spécifier le même <code>type</code> et les mêmes paramètres <code>listener</code> pour <code>removeEventListener()</code>, mais qu'en est-il des paramètres <code>options</code> ou <code>useCapture</code> ?</p>
+`undefined`. (_indéfini_)
 
-<p>Alors que <code>addEventListener()</code> vous permet d'ajouter le même écouteur plus d'une fois pour le même type si les options sont différentes, la seule option que <code>removeEventListener()</code> vérifie est l'indicateur <code>capture</code> / <code>useCapture</code>. Sa valeur doit correspondre pour que <code>removeEventListener()</code> corresponde, mais pas les autres valeurs.</p>
+### Correspondance utilisée pour la suppression d'écouteurs d'événements
 
-<p>Par exemple, considérons l'appel de <code>addEventListener()</code> :</p>
+Étant donné qu'un écouteur d'événements a déjà été ajouté en appelant {{domxref("EventTarget.addEventListener","addEventListener()")}}, vous pouvez éventuellement arriver à un point auquel vous devez le supprimer. Vous devez alors spécifier le même `type` et les mêmes paramètres `listener` pour `removeEventListener()`, mais qu'en est-il des paramètres `options` ou `useCapture` ?
 
-<pre class="brush: js">element.addEventListener("mousedown", handleMouseDown, true);</pre>
+Alors que `addEventListener()` vous permet d'ajouter le même écouteur plus d'une fois pour le même type si les options sont différentes, la seule option que `removeEventListener()` vérifie est l'indicateur `capture` / `useCapture`. Sa valeur doit correspondre pour que `removeEventListener()` corresponde, mais pas les autres valeurs.
 
-<p>Maintenant, voyons chacun des deux appels de <code>removeEventListener()</code> :</p>
+Par exemple, considérons l'appel de `addEventListener()` :
 
-<pre class="brush: js">element.removeEventListener("mousedown", handleMouseDown, false);     // Fails
-element.removeEventListener("mousedown", handleMouseDown, true);</pre>
+```js
+element.addEventListener("mousedown", handleMouseDown, true);
+```
 
-<p>Le premier appel échoue parce que la valeur de <code>useCapture</code> ne correspond pas. Le second réussit puisqu'il correspond pour <code>useCapture</code>.</p>
+Maintenant, voyons chacun des deux appels de `removeEventListener()` :
 
-<p>Maintenant, observez ceci :</p>
+```js
+element.removeEventListener("mousedown", handleMouseDown, false);     // Fails
+element.removeEventListener("mousedown", handleMouseDown, true);
+```
 
-<pre class="brush: js">element.addEventListener("mousedown", handleMouseDown, { passive: true });</pre>
+Le premier appel échoue parce que la valeur de `useCapture` ne correspond pas. Le second réussit puisqu'il correspond pour `useCapture`.
 
-<p>Ici, nous spécifions un objet <code>options</code> dans lequel <code>passive</code> est défini à <code>true</code>, tandis que les autres options sont laissées à la valeur par défaut de <code>false</code>.</p>
+Maintenant, observez ceci :
 
-<p>Maintenant, regardez chacun de ces appels successifs à <code>removeEventListener()</code>. N'importe lequel d'entre eux dans lequel <code>capture</code> ou <code>useCapture</code> est <code>true</code> (<em>vrai</em>) échoue ; tous les autres réussissent. Seul le paramètre de <code>capture</code> est important pour <code>removeEventListener()</code>.</p>
+```js
+element.addEventListener("mousedown", handleMouseDown, { passive: true });
+```
 
-<pre class="brush: js">element.removeEventListener("mousedown", handleMouseDown, { passive: true });     // Réussit
+Ici, nous spécifions un objet `options` dans lequel `passive` est défini à `true`, tandis que les autres options sont laissées à la valeur par défaut de `false`.
+
+Maintenant, regardez chacun de ces appels successifs à `removeEventListener()`. N'importe lequel d'entre eux dans lequel `capture` ou `useCapture` est `true` (_vrai_) échoue ; tous les autres réussissent. Seul le paramètre de `capture` est important pour `removeEventListener()`.
+
+```js
+element.removeEventListener("mousedown", handleMouseDown, { passive: true });     // Réussit
 element.removeEventListener("mousedown", handleMouseDown, { capture: false });    // Réussit
 element.removeEventListener("mousedown", handleMouseDown, { capture: true });     // Échoue
 element.removeEventListener("mousedown", handleMouseDown, { passive: false });    // Réussit
 element.removeEventListener("mousedown", handleMouseDown, false);                 // Réussit
 element.removeEventListener("mousedown", handleMouseDown, true);                  // Échoue
-</pre>
+```
 
-<p>Il est à noter que certaines versions du navigateur ont été incohérentes à ce sujet, et sauf si vous avez des raisons spécifiques, il est probablement sage d'utiliser les mêmes valeurs que pour l'appel à <code>addEventListener()</code> lors de l'appel de <code>removeEventListener()</code>.</p>
+Il est à noter que certaines versions du navigateur ont été incohérentes à ce sujet, et sauf si vous avez des raisons spécifiques, il est probablement sage d'utiliser les mêmes valeurs que pour l'appel à `addEventListener()` lors de l'appel de `removeEventListener()`.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Si un {{domxref("EventListener")}} est retiré d'un {{domxref("EventTarget")}} alors qu'il est en train de traiter un événement, il ne sera pas déclenché par les actions courantes. Les {{domxref("EventListener")}} ne peuvent jamais être invoqués après avoir été retirés.</p>
+Si un {{domxref("EventListener")}} est retiré d'un {{domxref("EventTarget")}} alors qu'il est en train de traiter un événement, il ne sera pas déclenché par les actions courantes. Les {{domxref("EventListener")}} ne peuvent jamais être invoqués après avoir été retirés.
 
-<p>L'appel de <code>removeEventListener()</code> avec des paramètres n'identifiant aucun {{domxref("EventListener")}} actuellement enregistré sur l'<code>EventTarget</code> n'a aucun effet.</p>
+L'appel de `removeEventListener()` avec des paramètres n'identifiant aucun {{domxref("EventListener")}} actuellement enregistré sur l'`EventTarget` n'a aucun effet.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple montre comment ajouter un écouteur d'évènements basé sur <code>click</code> et supprimer un écouteur d'évènements basé sur <code>mouseover</code>.</p>
+Cet exemple montre comment ajouter un écouteur d'évènements basé sur `click` et supprimer un écouteur d'évènements basé sur `mouseover`.
 
-<pre class="brush: js">var body = document.querySelector('body'),
+```js
+var body = document.querySelector('body'),
     clickTarget = document.getElementById('click-target'),
     mouseOverTarget = document.getElementById('mouse-over-target'),
     toggle = false;
@@ -123,52 +126,33 @@ mouseOverTarget.addEventListener('mouseover', function () {
         makeBackgroundYellow,
         false
     );
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Spécification</th>
-   <th>État</th>
-   <th>Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-eventtarget-removeeventlistener", "EventTarget.removeEventListener()")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-eventtarget-removeeventlistener", "EventTarget.removeEventListener()")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Events", "#Events-EventTarget-removeEventListener", "EventTarget.removeEventListener()")}}</td>
-   <td>{{Spec2("DOM2 Events")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                    | État                             | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName("DOM WHATWG", "#dom-eventtarget-removeeventlistener", "EventTarget.removeEventListener()")}}         | {{Spec2("DOM WHATWG")}} |                      |
+| {{SpecName("DOM4", "#dom-eventtarget-removeeventlistener", "EventTarget.removeEventListener()")}}                 | {{Spec2("DOM4")}}         |                      |
+| {{SpecName("DOM2 Events", "#Events-EventTarget-removeEventListener", "EventTarget.removeEventListener()")}} | {{Spec2("DOM2 Events")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.EventTarget.removeEventListener", 3)}}</p>
+{{Compat("api.EventTarget.removeEventListener", 3)}}
 
-<h2 id="Prothèse_(polyfill)_pour_la_prise_en_charge_des_navigateurs_anciens">Prothèse (<em>polyfill</em>) pour la prise en charge des navigateurs anciens</h2>
+## Prothèse (_polyfill_) pour la prise en charge des navigateurs anciens
 
-<p><code>addEventListener()</code> et <code>removeEventListener()</code> ne sont pas présents dans les anciens navigateurs. Vous pouvez contourner ce problème en insérant le code suivant au début de vos scripts, permettant l'utilisation de <code>addEventListener()</code> et <code>removeEventListener()</code> dans les implémentations qui ne le supportent pas nativement. Toutefois, cette méthode ne fonctionnera pas sur Internet Explorer 7 ou version antérieure, car l'extension du fichier Element.prototype n'a pas été prise en charge jusqu'à Internet Explorer 8.</p>
+`addEventListener()` et `removeEventListener()` ne sont pas présents dans les anciens navigateurs. Vous pouvez contourner ce problème en insérant le code suivant au début de vos scripts, permettant l'utilisation de `addEventListener()` et `removeEventListener()` dans les implémentations qui ne le supportent pas nativement. Toutefois, cette méthode ne fonctionnera pas sur Internet Explorer 7 ou version antérieure, car l'extension du fichier Element.prototype n'a pas été prise en charge jusqu'à Internet Explorer 8.
 
-<pre class="brush: js">if (!Element.prototype.addEventListener) {
+```js
+if (!Element.prototype.addEventListener) {
   var oListeners = {};
   function runListeners(oEvent) {
     if (!oEvent) { oEvent = window.event; }
-    for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId &lt; oEvtListeners.aEls.length; iElId++) {
+    for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId < oEvtListeners.aEls.length; iElId++) {
       if (oEvtListeners.aEls[iElId] === this) {
-        for (iLstId; iLstId &lt; oEvtListeners.aEvts[iElId].length; iLstId++) { oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent); }
+        for (iLstId; iLstId < oEvtListeners.aEvts[iElId].length; iLstId++) { oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent); }
         break;
       }
     }
@@ -176,7 +160,7 @@ mouseOverTarget.addEventListener('mouseover', function () {
   Element.prototype.addEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
     if (oListeners.hasOwnProperty(sEventType)) {
       var oEvtListeners = oListeners[sEventType];
-      for (var nElIdx = -1, iElId = 0; iElId &lt; oEvtListeners.aEls.length; iElId++) {
+      for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
         if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
       }
       if (nElIdx === -1) {
@@ -189,7 +173,7 @@ mouseOverTarget.addEventListener('mouseover', function () {
           aElListeners.splice(0);
           this["on" + sEventType] = runListeners;
         }
-        for (var iLstId = 0; iLstId &lt; aElListeners.length; iLstId++) {
+        for (var iLstId = 0; iLstId < aElListeners.length; iLstId++) {
           if (aElListeners[iLstId] === fListener) { return; }
         }
         aElListeners.push(fListener);
@@ -202,19 +186,18 @@ mouseOverTarget.addEventListener('mouseover', function () {
   Element.prototype.removeEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
     if (!oListeners.hasOwnProperty(sEventType)) { return; }
     var oEvtListeners = oListeners[sEventType];
-    for (var nElIdx = -1, iElId = 0; iElId &lt; oEvtListeners.aEls.length; iElId++) {
+    for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
       if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
     }
     if (nElIdx === -1) { return; }
-    for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId &lt; aElListeners.length; iLstId++) {
+    for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId < aElListeners.length; iLstId++) {
       if (aElListeners[iLstId] === fListener) { aElListeners.splice(iLstId, 1); }
     }
   };
-}</pre>
+}
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("EventTarget.addEventListener")}}</li>
- <li>{{non-standard_inline}}{{domxref("EventTarget.detachEvent()")}}.</li>
-</ul>
+- {{domxref("EventTarget.addEventListener")}}
+- {{non-standard_inline}}{{domxref("EventTarget.detachEvent()")}}.

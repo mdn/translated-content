@@ -12,39 +12,35 @@ tags:
   - open
 translation_of: Web/API/CacheStorage/open
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>La fonction <strong><code>open()</code></strong>de l'interface {{domxref("CacheStorage")}} retourne une {{jsxref("Promise", "Promesse")}} qui renvoie l'objet {{domxref("Cache")}} correspondant a un <code>cacheName</code>.</p>
+La fonction **`open()`**de l'interface {{domxref("CacheStorage")}} retourne une {{jsxref("Promise", "Promesse")}} qui renvoie l'objet {{domxref("Cache")}} correspondant a un `cacheName`.
 
-<p>Vous pouvez accéder à <code>CacheStorage</code> via la propriété globale {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}}.</p>
+Vous pouvez accéder à `CacheStorage` via la propriété globale {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}}.
 
-<div class="note">
-<p><strong>Note :</strong> Si le {{domxref("Cache")}} spécifié n'existe pas, un nouveau cache sera crée avec <code>cacheName</code> et retournera une {{jsxref("Promise", "Promesse")}} renvoyant le nouvel objet {{domxref("Cache")}}.</p>
-</div>
+> **Note :** Si le {{domxref("Cache")}} spécifié n'existe pas, un nouveau cache sera crée avec `cacheName` et retournera une {{jsxref("Promise", "Promesse")}} renvoyant le nouvel objet {{domxref("Cache")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">caches.open(<em>cacheName</em>).then(function(<em>cache</em>) {
-  // faire quelque-chose avec le cache
-});
-</pre>
+    caches.open(cacheName).then(function(cache) {
+      // faire quelque-chose avec le cache
+    });
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>cacheName</dt>
- <dd>Le nom du cache que vous voulez ouvrir.</dd>
-</dl>
+- cacheName
+  - : Le nom du cache que vous voulez ouvrir.
 
-<h3 id="Retour">Retour</h3>
+### Retour
 
-<p>Une {{jsxref("Promise", "Promesse")}} qui renvoie l'objet {{domxref("Cache")}} demandé.</p>
+Une {{jsxref("Promise", "Promesse")}} qui renvoie l'objet {{domxref("Cache")}} demandé.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple est tiré de l'<a href="https://github.com/mdn/sw-test/">exemple MDN sw-test</a> (voir <a href="https://mdn.github.io/sw-test/">sw-test en direct</a>). Ici, nous attendons qu'un {{domxref("InstallEvent")}} se déclenche, puis nous lançons {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} pour gérer le processus d'installation de l'application. Cela consiste à appeler <code>CacheStorage.open()</code> pour créer un nouveau cache, puis à utiliser {{domxref("Cache.addAll()")}} pour y ajouter une série d'éléments.</p>
+Cet exemple est tiré de l'[exemple MDN sw-test](https://github.com/mdn/sw-test/) (voir [sw-test en direct](https://mdn.github.io/sw-test/)). Ici, nous attendons qu'un {{domxref("InstallEvent")}} se déclenche, puis nous lançons {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} pour gérer le processus d'installation de l'application. Cela consiste à appeler `CacheStorage.open()` pour créer un nouveau cache, puis à utiliser {{domxref("Cache.addAll()")}} pour y ajouter une série d'éléments.
 
-<pre class="brush: js">self.addEventListener('install', function(event) {
+```js
+self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
@@ -59,35 +55,21 @@ translation_of: Web/API/CacheStorage/open
         '/sw-test/gallery/snowTroopers.jpg'
       ]);
     })
-  );</pre>
+  );
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-cachestorage-open', 'CacheStorage: open')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                               | Commentaire          |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('Service Workers', '#dom-cachestorage-open', 'CacheStorage: open')}} | {{Spec2('Service Workers')}} | Définition initiale. |
 
-<h2 id="Compatibilités_des_navigateurs">Compatibilités des navigateurs</h2>
+## Compatibilités des navigateurs
 
+{{Compat("api.CacheStorage.open")}}
 
+## Voir aussi
 
-<p>{{Compat("api.CacheStorage.open")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers">Utiliser les Service Workers</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WorkerGlobalScope.caches")}}</li>
-</ul>
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WorkerGlobalScope.caches")}}

@@ -8,95 +8,108 @@ tags:
   - Référence(2)
 translation_of: Web/API/IDBCursor
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>L'interface <strong><code>IDBCursor</code></strong> de l' <a href="/fr/docs/Web/API/API_IndexedDB">API IndexedDB</a> représente un <a href="/fr/docs/Web/API/API_IndexedDB/Basic_Concepts_Behind_IndexedDB#range">curseur</a> pour traverser ou itérer sur plusieurs enregistrements dans une base de données.</p>
+L'interface **`IDBCursor`** de l' [API IndexedDB](/fr/docs/Web/API/API_IndexedDB) représente un [curseur](/fr/docs/Web/API/API_IndexedDB/Basic_Concepts_Behind_IndexedDB#range) pour traverser ou itérer sur plusieurs enregistrements dans une base de données.
 
-<p>Le curseur possède une source qui indique l'index ou le magasin d'objets sur lequel il itère. Il est décrit par une position dans cet intervalle et par une direction dans laquelle il se déplace : dans l'ordre des clés d'enregistrement suivant le sens donné au curseur (montant ou descendant). Le curseur permet à une application de traiter de façon asynchrone tous les enregistrements de sa plage.</p>
+Le curseur possède une source qui indique l'index ou le magasin d'objets sur lequel il itère. Il est décrit par une position dans cet intervalle et par une direction dans laquelle il se déplace : dans l'ordre des clés d'enregistrement suivant le sens donné au curseur (montant ou descendant). Le curseur permet à une application de traiter de façon asynchrone tous les enregistrements de sa plage.
 
-<p>On peut avoir autant de curseurs qu'on souhaite en même temps. Ce sera toujours le même objet <code>IDBCursor</code> qui représentera un curseur donné. Les opérations sont effectuées à l’intérieur de l'index ou du magasin d'objet.</p>
+On peut avoir autant de curseurs qu'on souhaite en même temps. Ce sera toujours le même objet `IDBCursor` qui représentera un curseur donné. Les opérations sont effectuées à l’intérieur de l'index ou du magasin d'objet.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{domxref("IDBCursor.advance()")}}</dt>
- <dd>Définit le nombre d’itérations vers l'avant.</dd>
- <dt>{{domxref("IDBCursor.continue()")}}</dt>
- <dd>Avance le curseur sur la position suivante le long de sa direction, jusqu'à l'élément dont la clé correspond au paramètre (optionnel) passé à la fonction.</dd>
- <dt>{{domxref("IDBCursor.delete()")}}</dt>
- <dd>Retourne un objet {{domxref ("IDBRequest")}}, et, dans un thread séparé, supprime l'enregistrement à la position du curseur, sans changer la position du curseur. Ceci peut être utilisé pour supprimer des enregistrements spécifiques.</dd>
- <dt>{{domxref("IDBCursor.update()")}}</dt>
- <dd>Retourne un objet {{domxref("IDBRequest")}}, et, dans un thread séparé, met à jour la valeur à la position actuelle du curseur dans le magasin d'objets. Ceci peut être utilisé pour mettre à jour des enregistrements spécifiques.</dd>
-</dl>
+- {{domxref("IDBCursor.advance()")}}
+  - : Définit le nombre d’itérations vers l'avant.
+- {{domxref("IDBCursor.continue()")}}
+  - : Avance le curseur sur la position suivante le long de sa direction, jusqu'à l'élément dont la clé correspond au paramètre (optionnel) passé à la fonction.
+- {{domxref("IDBCursor.delete()")}}
+  - : Retourne un objet {{domxref ("IDBRequest")}}, et, dans un thread séparé, supprime l'enregistrement à la position du curseur, sans changer la position du curseur. Ceci peut être utilisé pour supprimer des enregistrements spécifiques.
+- {{domxref("IDBCursor.update()")}}
+  - : Retourne un objet {{domxref("IDBRequest")}}, et, dans un thread séparé, met à jour la valeur à la position actuelle du curseur dans le magasin d'objets. Ceci peut être utilisé pour mettre à jour des enregistrements spécifiques.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{domxref("IDBCursor.source")}} {{readonlyInline}}</dt>
- <dd>Renvoie le {{domxref("IDBObjectStore")}} ou {{domxref("IDBIndex")}} sur lequel le curseur itère. Cette fonction ne retourne jamais <code>null</code> et ne déclenche pas d’exception, même dans les cas ou le curseur est en train d'itérer, s'il a itéré en dehors la plage ou si la transaction n'est pas active.</dd>
- <dt>{{domxref("IDBCursor.direction")}} {{readonlyInline}}</dt>
- <dd>Renvoie la direction de parcours du curseur. Voir le paragraphe suivant, <a href="#constantes">Constantes</a>, pour les valeurs possibles.</dd>
- <dt>{{domxref("IDBCursor.key")}} {{readonlyInline}}</dt>
- <dd>Renvoie la clé de l'enregistrement à la position du curseur ou <code>undefined</code> si le curseur est en dehors de la plage. La clé peut être de n'importe quel type de données.</dd>
- <dt>{{domxref("IDBCursor.primaryKey")}} {{readonlyInline}}</dt>
- <dd>Renvoie la clé primaire effective actuelle du curseur ou <code>undefined</code> si le curseur est actuellement itéré ou a itéré en dehors de sa plage. La clé primaire du curseur peut être de tout type de données.</dd>
-</dl>
+- {{domxref("IDBCursor.source")}} {{readonlyInline}}
+  - : Renvoie le {{domxref("IDBObjectStore")}} ou {{domxref("IDBIndex")}} sur lequel le curseur itère. Cette fonction ne retourne jamais `null` et ne déclenche pas d’exception, même dans les cas ou le curseur est en train d'itérer, s'il a itéré en dehors la plage ou si la transaction n'est pas active.
+- {{domxref("IDBCursor.direction")}} {{readonlyInline}}
+  - : Renvoie la direction de parcours du curseur. Voir le paragraphe suivant, [Constantes](#constantes), pour les valeurs possibles.
+- {{domxref("IDBCursor.key")}} {{readonlyInline}}
+  - : Renvoie la clé de l'enregistrement à la position du curseur ou `undefined` si le curseur est en dehors de la plage. La clé peut être de n'importe quel type de données.
+- {{domxref("IDBCursor.primaryKey")}} {{readonlyInline}}
+  - : Renvoie la clé primaire effective actuelle du curseur ou `undefined` si le curseur est actuellement itéré ou a itéré en dehors de sa plage. La clé primaire du curseur peut être de tout type de données.
 
-<h2 id="Constantes">Constantes</h2>
+## Constantes
 
-<p>{{deprecated_header(13)}}</p>
+{{deprecated_header(13)}}
 
-<div class="warning">
-  <p><strong>Attention :</strong> Ces constantes ne sont plus disponibles - elles ont été retirées depuis Gecko 25. Les valeurs équivalentes en chaînes de caractères devraient être utilisées à la place (cf. {{bug(891944)}}).</p>
-</div>
+> **Attention :** Ces constantes ne sont plus disponibles - elles ont été retirées depuis Gecko 25. Les valeurs équivalentes en chaînes de caractères devraient être utilisées à la place (cf. {{bug(891944)}}).
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constante</th>
-   <th scope="col">Valeur</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>NEXT</code></td>
-   <td>
-    <p><code>"next"</code></p>
-   </td>
-   <td>Le curseur indique tous les enregistrements, y compris les doublons. Il commence à la limite inférieure de la plage de clé et se déplace vers le haut (en itérant dans l'ordre des clés).</td>
-  </tr>
-  <tr>
-   <td><code>NEXTUNIQUE</code></td>
-   <td>
-    <p><code>"nextunique"</code></p>
-   </td>
-   <td>Le curseur indique tous les enregistrements, à l'exclusion des doublons. Si plusieurs enregistrements existent avec la même clé, seule la première itération est récupérée. Il commence à la limite inférieure de la plage de clé et se déplace vers le haut.</td>
-  </tr>
-  <tr>
-   <td><code>PREV</code></td>
-   <td>
-    <p><code>"prev"</code></p>
-   </td>
-   <td>Le curseur indique tous les enregistrements, y compris les doublons. Il commence à la limite supérieure de la plage de clé et se déplace vers le bas (en itérant dans l'ordre inverse des clés).</td>
-  </tr>
-  <tr>
-   <td><code>PREVUNIQUE</code></td>
-   <td>
-    <p><code>"prevunique"</code></p>
-   </td>
-   <td>Le curseur indique tous les enregistrements, à l'exclusion des doublons. Si plusieurs enregistrements existent avec la même clé, seule la première itération est récupéré. Il commence à la limite supérieure de la plage de clé et se déplace vers le bas.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Constante</th>
+      <th scope="col">Valeur</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>NEXT</code></td>
+      <td>
+        <p><code>"next"</code></p>
+      </td>
+      <td>
+        Le curseur indique tous les enregistrements, y compris les doublons. Il
+        commence à la limite inférieure de la plage de clé et se déplace vers le
+        haut (en itérant dans l'ordre des clés).
+      </td>
+    </tr>
+    <tr>
+      <td><code>NEXTUNIQUE</code></td>
+      <td>
+        <p><code>"nextunique"</code></p>
+      </td>
+      <td>
+        Le curseur indique tous les enregistrements, à l'exclusion des doublons.
+        Si plusieurs enregistrements existent avec la même clé, seule la
+        première itération est récupérée. Il commence à la limite inférieure de
+        la plage de clé et se déplace vers le haut.
+      </td>
+    </tr>
+    <tr>
+      <td><code>PREV</code></td>
+      <td>
+        <p><code>"prev"</code></p>
+      </td>
+      <td>
+        Le curseur indique tous les enregistrements, y compris les doublons. Il
+        commence à la limite supérieure de la plage de clé et se déplace vers le
+        bas (en itérant dans l'ordre inverse des clés).
+      </td>
+    </tr>
+    <tr>
+      <td><code>PREVUNIQUE</code></td>
+      <td>
+        <p><code>"prevunique"</code></p>
+      </td>
+      <td>
+        Le curseur indique tous les enregistrements, à l'exclusion des doublons.
+        Si plusieurs enregistrements existent avec la même clé, seule la
+        première itération est récupéré. Il commence à la limite supérieure de
+        la plage de clé et se déplace vers le bas.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans ce fragment simple, nous créons une transaction, récupérons un magasin d'objets, puis utilisons un curseur pour parcourir tous les enregistrements du magasin d'objets. Le curseur ne nous oblige pas à sélectionner les données basées sur une clé, nous pouvons simplement travailler sur tout les enregistrements. Notez également que dans chaque itération de la boucle, vous pouvez récupérer les données de l'enregistrement en cours sous l'objet curseur à l'aide <code>curseur.value.toto</code>. Pour un exemple de travail complet, voir notre <a href="https://github.com/mdn/IDBcursor-example/">exemple IDBCursor</a> (<a href="https://mdn.github.io/IDBcursor-example/">l'exemple en <em>live</em></a>).</p>
+Dans ce fragment simple, nous créons une transaction, récupérons un magasin d'objets, puis utilisons un curseur pour parcourir tous les enregistrements du magasin d'objets. Le curseur ne nous oblige pas à sélectionner les données basées sur une clé, nous pouvons simplement travailler sur tout les enregistrements. Notez également que dans chaque itération de la boucle, vous pouvez récupérer les données de l'enregistrement en cours sous l'objet curseur à l'aide `curseur.value.toto`. Pour un exemple de travail complet, voir notre [exemple IDBCursor](https://github.com/mdn/IDBcursor-example/) ([l'exemple en _live_](https://mdn.github.io/IDBcursor-example/)).
 
-<pre class="brush: js">function afficheDonnee() {
+```js
+function afficheDonnee() {
   var transaction = db.transaction(['grandListAlbum'], "readonly");
   var objectStore = transaction.objectStore('grandListAlbum');
 
@@ -112,37 +125,25 @@ translation_of: Web/API/IDBCursor
       console.log('Entrées tous affichés.');
     }
   };
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#idl-def-IDBCursor', 'cursor')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                         | Commentaires |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------ |
+| {{SpecName('IndexedDB', '#idl-def-IDBCursor', 'cursor')}} | {{Spec2('IndexedDB')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBCursor")}}</p>
+{{Compat("api.IDBCursor")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Manipuler IndexedDB</a></li>
- <li>Démarrer des transactions : {{domxref("IDBDatabase")}}</li>
- <li>Manipuler des transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}</li>
- <li>Manipuler des curseurs: {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence pour IndexedDB : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a></li>
-</ul>
+- [Manipuler IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Démarrer des transactions : {{domxref("IDBDatabase")}}
+- Manipuler des transactions : {{domxref("IDBTransaction")}}
+- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
+- Manipuler des curseurs: {{domxref("IDBCursor")}}
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)

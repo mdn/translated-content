@@ -8,76 +8,63 @@ tags:
   - Stockage Web
 translation_of: Web/API/Storage/removeItem
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>La méthode <strong><code>removeItem()</code></strong> de l'interface {{domxref("Storage")}} , lorsque vous lui passez une clé en argument, va supprimer la ressource avec le nom de clé correspondant du storage. L'interface <strong><code>Storage</code></strong> de l'API <a href="/fr/docs/Web/API/Web_Storage_API">Web Storage API</a> fournit des accès particuliers dans les domaines des stockages locaux et de sessions.</p>
+La méthode **`removeItem()`** de l'interface {{domxref("Storage")}} , lorsque vous lui passez une clé en argument, va supprimer la ressource avec le nom de clé correspondant du storage. L'interface **`Storage`** de l'API [Web Storage API](/fr/docs/Web/API/Web_Storage_API) fournit des accès particuliers dans les domaines des stockages locaux et de sessions.
 
-<p>Si aucun élement n'est donné en paramètre <code>nomCle</code>, cette méthode ne fait rien.</p>
+Si aucun élement n'est donné en paramètre `nomCle`, cette méthode ne fait rien.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>storage</em>.removeItem(<em>nomCle</em>);</pre>
+    storage.removeItem(nomCle);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>nomCle</code></dt>
- <dd>Un {{domxref("DOMString")}} contenant le nom de la clé que vous voulez supprimer.</dd>
-</dl>
+- `nomCle`
+  - : Un {{domxref("DOMString")}} contenant le nom de la clé que vous voulez supprimer.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>La fonction suivante crée trois données dans le stockage local, puis va supprimer la donnée image.</p>
+La fonction suivante crée trois données dans le stockage local, puis va supprimer la donnée image.
 
-<pre class="brush: js">function populateStorage() {
+```js
+function populateStorage() {
   localStorage.setItem('bgcolor', 'red');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'myCat.png');
 
   localStorage.removeItem('image');
-}</pre>
+}
+```
 
-<p>Nous pouvons également faire ceci avec le stockage de session.</p>
+Nous pouvons également faire ceci avec le stockage de session.
 
-<pre class="brush: js">function populateStorage() {
-  <code>sessionStorage</code>.setItem('bgcolor', 'red');
-  <code>sessionStorage</code>.setItem('font', 'Helvetica');
-  <code>sessionStorage</code>.setItem('image', 'myCat.png');
+```js
+function populateStorage() {
+  sessionStorage.setItem('bgcolor', 'red');
+  sessionStorage.setItem('font', 'Helvetica');
+  sessionStorage.setItem('image', 'myCat.png');
 
-  <code>sessionStorage</code>.removeItem('image');
-}</pre>
+  sessionStorage.removeItem('image');
+}
+```
 
-<div class="note">
-<p><strong>Note :</strong> Pour voir ce code en fonctionnement, voir <a href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>.</p>
-</div>
+> **Note :** Pour voir ce code en fonctionnement, voir [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-removeitem', 'Storage.removeItem')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-removeitem', 'Storage.removeItem')}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("api.Storage.removeItem")}}
 
+## Voir aussi
 
-<p>{{Compat("api.Storage.removeItem")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<p><a href="/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Utilisation de l'API de stockage Web</a></p>
+[Utilisation de l'API de stockage Web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

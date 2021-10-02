@@ -12,48 +12,46 @@ tags:
   - Reference
 translation_of: Web/API/Document/domain
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<p>Retourne/définit la partie domaine de l'origine du document courant, telle qu'utilisée par la <a href="/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript">politique d'origine identique</a>.</p>
+Retourne/définit la partie domaine de l'origine du document courant, telle qu'utilisée par la [politique d'origine identique](/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <var>chaineDomaine</var> = document.domain; document.domain = <em>chaine</em>;
-</pre>
+    var chaineDomaine = document.domain; document.domain = chaine;
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<pre class="brush:js">// Pour le document www.example.xxx/good.html,
+```js
+// Pour le document www.example.xxx/good.html,
 // ce script ferme la fenêtre
 var mauvaisDomaine = "www.example.xxx";
 
 if (document.domain == mauvaisDomaine )
-   window.close(); // juste un exemple - window.close() n'a parfois aucun effet.</pre>
+   window.close(); // juste un exemple - window.close() n'a parfois aucun effet.
+```
 
-<pre class="brush:js">// Pour l'URI https://developer.mozilla.org/en-US/docs/Web, ce qui
+```js
+// Pour l'URI https://developer.mozilla.org/en-US/docs/Web, ce qui
 // suit définit le domaine comme étant la chaîne "developer.mozilla.org"
 var domaine = document.domain;
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Cette propriété retourne <code>null</code> si le domaine du document ne peut pas être identifié.</p>
+Cette propriété retourne `null` si le domaine du document ne peut pas être identifié.
 
-<p>Mozilla vous laissera la définir à un superdomaine de la valeur courante, contraint par son <a href="/en-US/docs/XPCOM_Interface_Reference/nsIEffectiveTLDService#getBaseDomain.28.29">domaine de base</a>. Par exemple, sur developer.mozilla.org, il est possible de la définir à "mozilla.org" mais pas à "mozilla.com" ou "org".</p>
+Mozilla vous laissera la définir à un superdomaine de la valeur courante, contraint par son [domaine de base](/en-US/docs/XPCOM_Interface_Reference/nsIEffectiveTLDService#getBaseDomain.28.29). Par exemple, sur developer.mozilla.org, il est possible de la définir à "mozilla.org" mais pas à "mozilla.com" ou "org".
 
-<p>Si cette propriété est définie avec succès, la partie "port" de l'origine est également définie à null.</p>
+Si cette propriété est définie avec succès, la partie "port" de l'origine est également définie à null.
 
-<p>Mozilla fait la distinction entre la propriété d'un <code>document.domain</code> qui n'a jamais été modifiée d'une explicitement définie avec le même domaine que l'URL du document, même si la propriété renvoie la même valeur dans les deux cas. Un document est autorisé à accéder à un autre si il ont tous deux défini <code>document.domain</code> à la même valeur, indiquant leur intention de coopérer, ou si aucun des deux n'a défini <code>document.domain</code> et que les domaines dans les URLs sont les mêmes (<a href="https://mxr.mozilla.org/mozilla-central/source/caps/nsPrincipal.cpp?rev=ecb7068b07a1&amp;mark=199-215#199">implementation</a>). Sans cette politique spéciale, chaque site serait sujet au Cross-Site-Scripting (XSS)  depuis ses sous-domaines (par exemple, <a href="https://bugzilla.mozilla.org">https://bugzilla.mozilla.org</a> pourrait être attaqué par des pièces jointes de bugs sur <a href="https://bug*.bugzilla.mozilla.org">https://bug*.bugzilla.mozilla.org</a>).</p>
+Mozilla fait la distinction entre la propriété d'un `document.domain` qui n'a jamais été modifiée d'une explicitement définie avec le même domaine que l'URL du document, même si la propriété renvoie la même valeur dans les deux cas. Un document est autorisé à accéder à un autre si il ont tous deux défini `document.domain` à la même valeur, indiquant leur intention de coopérer, ou si aucun des deux n'a défini `document.domain` et que les domaines dans les URLs sont les mêmes ([implementation](https://mxr.mozilla.org/mozilla-central/source/caps/nsPrincipal.cpp?rev=ecb7068b07a1&mark=199-215#199)). Sans cette politique spéciale, chaque site serait sujet au Cross-Site-Scripting (XSS)  depuis ses sous-domaines (par exemple, <https://bugzilla.mozilla.org> pourrait être attaqué par des pièces jointes de bugs sur <https://bug*.bugzilla.mozilla.org>).
 
-<h2 id="Specification">Spécification</h2>
+## Spécification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-2250147">DOM Level 2 HTML: document.domain</a> (le décrit comme étant en lecture-seule)</li>
- <li><a href="https://html.spec.whatwg.org/multipage/browsers.html#relaxing-the-same-origin-restriction">HTML5: document.domain</a> (décrit un comportement similaire à celui de Mozilla)</li>
-</ul>
+- [DOM Level 2 HTML: document.domain](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-2250147) (le décrit comme étant en lecture-seule)
+- [HTML5: document.domain](https://html.spec.whatwg.org/multipage/browsers.html#relaxing-the-same-origin-restriction) (décrit un comportement similaire à celui de Mozilla)
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript">Politique de même origine pour JavaScriptHTML</a></li>
-</ul>
+- [Politique de même origine pour JavaScriptHTML](/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript)

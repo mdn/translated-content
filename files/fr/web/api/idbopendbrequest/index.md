@@ -11,48 +11,45 @@ tags:
   - Stockage
 translation_of: Web/API/IDBOpenDBRequest
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<div>
-<p>L'interface <strong><code>IDBOpenDBRequest</code></strong> de l'API IndexedDB donne un accès aux résultats des requêtes permettant d'ouvrir ou  de supprimer des bases de donnée (Effectuée via {{domxref("IDBFactory.open")}} et {{domxref("IDBFactory.deleteDatabase")}}).</p>
-</div>
+L'interface **`IDBOpenDBRequest`** de l'API IndexedDB donne un accès aux résultats des requêtes permettant d'ouvrir ou  de supprimer des bases de donnée (Effectuée via {{domxref("IDBFactory.open")}} et {{domxref("IDBFactory.deleteDatabase")}}).
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<p><em>Hérite  des méthodes de ses parents {{domxref("IDBRequest")}} et {{domxref("EventTarget")}}</em>.</p>
+_Hérite  des méthodes de ses parents {{domxref("IDBRequest")}} et {{domxref("EventTarget")}}_.
 
-<h3 id="Évènements">Évènements</h3>
+### Évènements
 
-<dl>
- <dt>{{domxref("IDBOpenDBRequest.onblocked")}}</dt>
- <dd>Le gestionnaire d'événements pour événement bloqué . Cet événement est lancé lorsqu' un événement  <code>upgradeneeded </code>doit être déclenché en raison d'un changement de version, mais que la base de données est toujours en cours d'utilisation (c'est-à-dire, non fermée) quelque part, même après l'envoi de l'évènement <code>versionchange</code> .</dd>
- <dt>{{domxref("IDBOpenDBRequest.onupgradeneeded")}}</dt>
- <dd>Le gestionnaire d'évènement pour évènement <code>upgradeneeded</code> <em>(mise-à-jour nécessaire)</em>, lancé quand une base de données d'une version supérieure à celle de la base de données existante est chargé.</dd>
-</dl>
+- {{domxref("IDBOpenDBRequest.onblocked")}}
+  - : Le gestionnaire d'événements pour événement bloqué . Cet événement est lancé lorsqu' un événement  `upgradeneeded `doit être déclenché en raison d'un changement de version, mais que la base de données est toujours en cours d'utilisation (c'est-à-dire, non fermée) quelque part, même après l'envoi de l'évènement `versionchange` .
+- {{domxref("IDBOpenDBRequest.onupgradeneeded")}}
+  - : Le gestionnaire d'évènement pour évènement `upgradeneeded` _(mise-à-jour nécessaire)_, lancé quand une base de données d'une version supérieure à celle de la base de données existante est chargé.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p><em>Pas de méthodes, mais hérite des méthodes de ses parents {{domxref("IDBRequest")}} et {{domxref("EventTarget")}}.</em></p>
+_Pas de méthodes, mais hérite des méthodes de ses parents {{domxref("IDBRequest")}} et {{domxref("EventTarget")}}._
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Dans l'exemple ci-dessous,  le gestionnaire <code>onupgradeneeded</code> est utilisé pour mettre à jour la structure de la base de données, si une base plus récente est chargée. Pour voir un exemple complet, référez-vous à notre application <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">voir cet exemple réel</a>)</p>
+Dans l'exemple ci-dessous,  le gestionnaire `onupgradeneeded` est utilisé pour mettre à jour la structure de la base de données, si une base plus récente est chargée. Pour voir un exemple complet, référez-vous à notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([voir cet exemple réel](http://mdn.github.io/to-do-notifications/))
 
-<pre class="brush: js">var db;
+```js
+var db;
 
 // Ouvre la base de données.
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // Ces gestionnaires d'évènements agissent sur la base de données en cours d'ouverture.
-  note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+  note.innerHTML += '<li>Error loading database.</li>';
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // stocke le résultat de l'ouverture de la base de données dans la variable db .
   // Ceci est beaucoup moins utilisé.
@@ -72,7 +69,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
   var db = this.result;
 
   db.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+    note.innerHTML += '<li>Error loading database.</li>';
   };
 
   // Crée un objet de stockage pour cette base de données.
@@ -86,42 +83,26 @@ DBOpenRequest.onupgradeneeded = function(event) {
   objectStore.createIndex("month", "month", { unique: false });
   objectStore.createIndex("year", "year", { unique: false });
   objectStore.createIndex("notified", "notified", { unique: false });
-};</pre>
+};
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#idl-def-IDBOpenDBRequest', 'IDBOpenDBRequest')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td>Définition initiale</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#idbopendbrequest", "IDBOpenDBRequest")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | Statut                           | Commentaire         |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName('IndexedDB', '#idl-def-IDBOpenDBRequest', 'IDBOpenDBRequest')}} | {{Spec2('IndexedDB')}}     | Définition initiale |
+| {{SpecName("IndexedDB 2", "#idbopendbrequest", "IDBOpenDBRequest")}}         | {{Spec2("IndexedDB 2")}} |                     |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.IDBOpenDBRequest")}}</p>
+{{Compat("api.IDBOpenDBRequest")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
- <li>Démarrage de transactions : {{domxref("IDBDatabase")}}</li>
- <li>Utilisation de transactions : {{domxref("IDBTransaction")}}</li>
- <li>Définition un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
- <li>Récupération et modification des données : {{domxref("IDBObjectStore")}}</li>
- <li>Utilisation de curseurs : {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- Démarrage de transactions : {{domxref("IDBDatabase")}}
+- Utilisation de transactions : {{domxref("IDBTransaction")}}
+- Définition un intervalle de clés : {{domxref("IDBKeyRange")}}
+- Récupération et modification des données : {{domxref("IDBObjectStore")}}
+- Utilisation de curseurs : {{domxref("IDBCursor")}}
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

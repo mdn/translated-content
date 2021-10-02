@@ -10,77 +10,86 @@ tags:
   - mouseleave
 translation_of: Web/API/Element/mouseleave_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>L'évènement <strong><code>mouseleave</code></strong> est déclenché à partir d'un {{domxref("Element")}} lorsque le curseur d'un dispositif de pointage (ex. une souris) se déplace en dehors de cet élément.</p>
+L'évènement **`mouseleave`** est déclenché à partir d'un {{domxref("Element")}} lorsque le curseur d'un dispositif de pointage (ex. une souris) se déplace en dehors de cet élément.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Se propage/remonte dans le DOM</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Annulable</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Propriété pour la gestion d'évènement</th>
-   <td>{{domxref("GlobalEventHandlers.onmouseleave", "onmouseleave")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Se propage/remonte dans le DOM</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Annulable</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Propriété pour la gestion d'évènement</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onmouseleave", "onmouseleave")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p><code>mouseleave</code> et {{event('mouseout')}} se ressemblent mais <code>mouseleave</code> ne remonte pas dans le DOM tandis que <code>mouseout</code> remonte. <code>mouseleave</code> est donc déclenché lorsque le pointeur a quitté l'élément et tout ses descendants tandis que <code>mouseout</code> est déclenché lorsque le pointeur quitte l'élément ou l'un des descendants (quand bien même il serait toujours sur le parent).</p>
+`mouseleave` et {{event('mouseout')}} se ressemblent mais `mouseleave` ne remonte pas dans le DOM tandis que `mouseout` remonte. `mouseleave` est donc déclenché lorsque le pointeur a quitté l'élément et tout ses descendants tandis que `mouseout` est déclenché lorsque le pointeur quitte l'élément ou l'un des descendants (quand bien même il serait toujours sur le parent).
 
-<img src="mouseleave.png">
-<p>Un évènement <code>mouseleave</code> est envoyé à chaque élément de la hiérarchie lorsqu'on les quitte. Les quatre évènements sont envoyés chacun aux quatre élément de la hiérarchie lorsque le pointeur se déplace du texte à une zone en dehors du <code>&lt;div&gt;</code> le plus haut dans la hiérarchie.</p>
+![](mouseleave.png)
 
-<img src="mouseout.png">
-<p>Un seul évènement <code>mouseout</code> est envoyé à l'élément le plus profond du DOM puis remonte le long de la hiérarchie tant qu'il n'est pas annulé ou qu'il n'a pas atteint la racine.</p>
+Un évènement `mouseleave` est envoyé à chaque élément de la hiérarchie lorsqu'on les quitte. Les quatre évènements sont envoyés chacun aux quatre élément de la hiérarchie lorsque le pointeur se déplace du texte à une zone en dehors du `<div>` le plus haut dans la hiérarchie.
 
-<h2 id="Exemples">Exemples</h2>
+![](mouseout.png)
 
-<p>Voir la documentation de <a href="/fr/docs/Web/API/Element/mouseout_event"><code>mouseout</code></a> pour un exemple sur les différences entre <code>mouseout</code> et <code>mouseleave</code>.</p>
+Un seul évènement `mouseout` est envoyé à l'élément le plus profond du DOM puis remonte le long de la hiérarchie tant qu'il n'est pas annulé ou qu'il n'a pas atteint la racine.
 
-<p>Ici, on utilise l'évènement <code>mouseenter</code> pour modifier la bordure d'un élément <code>div</code> lorsque la souris rentre sur cet espace. Ensuite, on ajoute un élément à la liste avec le nombre d'évènements <code>mouseenter</code> et <code>mouseleave</code>.</p>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+Voir la documentation de [`mouseout`](/fr/docs/Web/API/Element/mouseout_event) pour un exemple sur les différences entre `mouseout` et `mouseleave`.
 
-<pre class="brush: html">&lt;div id='mouseTarget'&gt;
- &lt;ul id="unorderedList"&gt;
-  &lt;li&gt;Pas encore d'évènement !&lt;/li&gt;
- &lt;/ul&gt;
-&lt;/div&gt;</pre>
+Ici, on utilise l'évènement `mouseenter` pour modifier la bordure d'un élément `div` lorsque la souris rentre sur cet espace. Ensuite, on ajoute un élément à la liste avec le nombre d'évènements `mouseenter` et `mouseleave`.
 
-<h3 id="CSS">CSS</h3>
+### HTML
 
-<p>On met le <code>div</code> en forme afin de le rendre plus visible.</p>
+```html
+<div id='mouseTarget'>
+ <ul id="unorderedList">
+  <li>Pas encore d'évènement !</li>
+ </ul>
+</div>
+```
 
-<pre class="brush: css">#mouseTarget {
+### CSS
+
+On met le `div` en forme afin de le rendre plus visible.
+
+```css
+#mouseTarget {
   box-sizing: border-box;
   width:15rem;
   border:1px solid #333;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var enterEventCount = 0;
+```js
+var enterEventCount = 0;
 var leaveEventCount = 0;
 const mouseTarget = document.getElementById('mouseTarget');
 const unorderedList = document.getElementById('unorderedList');
 
-mouseTarget.addEventListener('mouseenter', e =&gt; {
+mouseTarget.addEventListener('mouseenter', e => {
   mouseTarget.style.border = '5px dotted orange';
   enterEventCount++;
   addListItem("Voici le nombre d'évènements mouseenter : " + enterEventCount + ".");
 });
 
-mouseTarget.addEventListener('mouseleave', e =&gt; {
+mouseTarget.addEventListener('mouseleave', e => {
   mouseTarget.style.border = '1px solid #333';
   leaveEventCount++;
   addListItem("Voici le nombre d'évènements mouseleave : " + leaveEventCount + ".");
@@ -98,50 +107,35 @@ function addListItem(text) {
 
   // On ajoute le nouvel élément à la liste
   unorderedList.appendChild(newListItem);
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples')}}</p>
+{{EmbedLiveSample('Exemples')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('UI Events', '#event-type-mouseleave', 'mouseleave')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#event-type-mouseleave', 'mouseleave')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                             |
+| ---------------------------------------------------------------------------------------- | -------------------------------- |
+| {{SpecName('UI Events', '#event-type-mouseleave', 'mouseleave')}} | {{Spec2('UI Events')}}     |
+| {{SpecName('DOM3 Events', '#event-type-mouseleave', 'mouseleave')}} | {{Spec2('DOM3 Events')}} |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.Element.mouseleave_event")}}</p>
+{{Compat("api.Element.mouseleave_event")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements">Une introduction aux évènements</a></li>
- <li>D'autres évènements connexes
-  <ul>
-   <li><a href="/fr/docs/Web/API/Element/mousedown_event"><code>mousedown</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/mouseup_event"><code>mouseup</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/mousemove_event"><code>mousemove</code></a></li>
-   <li><code><a href="/fr/docs/Web/API/Element/mouseover_event">mouseover</a></code></li>
-   <li><a href="/fr/docs/Web/API/Element/click_event"><code>click</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/dblclick_event"><code>dblclick</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/mouseout_event"><code>mouseout</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/mouseenter_event"><code>mouseenter</code></a></li>
-   <li><a href="/fr/docs/Web/API/Element/contextmenu_event"><code>contextmenu</code></a></li>
-  </ul>
- </li>
-</ul>
+- [Une introduction aux évènements](/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements)
+- D'autres évènements connexes
+
+  - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
+  - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
+  - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)
+  - [`mouseover`](/fr/docs/Web/API/Element/mouseover_event)
+  - [`click`](/fr/docs/Web/API/Element/click_event)
+  - [`dblclick`](/fr/docs/Web/API/Element/dblclick_event)
+  - [`mouseout`](/fr/docs/Web/API/Element/mouseout_event)
+  - [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)
+  - [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event)

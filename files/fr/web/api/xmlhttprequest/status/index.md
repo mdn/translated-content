@@ -3,15 +3,16 @@ title: XMLHttpRequest.status
 slug: Web/API/XMLHttpRequest/status
 translation_of: Web/API/XMLHttpRequest/status
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>La propriété en lecture seule XMLHttpRequest.status renvoie le code d'état HTTP numérique de la réponse de XMLHttpRequest.</p>
+La propriété en lecture seule XMLHttpRequest.status renvoie le code d'état HTTP numérique de la réponse de XMLHttpRequest.
 
-<p>Avant que la demande ne se termine, la valeur du statut est 0. Les navigateurs signalent également un statut de 0 en cas d'erreurs XMLHttpRequest.</p>
+Avant que la demande ne se termine, la valeur du statut est 0. Les navigateurs signalent également un statut de 0 en cas d'erreurs XMLHttpRequest.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 console.log('UNSENT: ', xhr.status);
 
 xhr.open('GET', '/server');
@@ -35,34 +36,19 @@ xhr.send();
  * LOADING: 200
  * DONE: 200
  */
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#the-status-attribute')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                            | Statut                               | Comment                |
+| ------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
+| {{SpecName('XMLHttpRequest', '#the-status-attribute')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("api.XMLHttpRequest.status")}}</p>
+{{Compat("api.XMLHttpRequest.status")}}
 
-<p>Voir aussi</p>
+Voir aussi
 
-<ul>
- <li>Liste des <a href="/en-US/docs/Web/HTTP/Response_codes">HTTP response codes</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- Liste des [HTTP response codes](/en-US/docs/Web/HTTP/Response_codes)
+- [HTTP](/en-US/docs/Web/HTTP)
