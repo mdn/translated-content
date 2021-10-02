@@ -3,59 +3,67 @@ title: widows
 slug: Web/CSS/widows
 tags:
   - CSS
+  - CSS Fragmentation
+  - CSS Multi-column Layout
   - CSS プロパティ
-  - CSS 断片化
-  - CSS 段組みレイアウト
-  - リファレンス
+  - Reference
+  - recipe:css-property
+browser-compat: css.properties.widows
 translation_of: Web/CSS/widows
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS" title="CSS">CSS</a> の <strong><code>widows</code></strong> プロパティは、<a href="/ja/docs/Web/CSS/Paged_Media">ページ</a>、領域、<a href="/ja/docs/Web/CSS/CSS_Columns">段</a>の<em>先頭</em>に表示されるブロックコンテナーの最小行数を設定します。</p>
+**`widows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[ページ](/ja/docs/Web/CSS/Paged_Media)、領域、[段](/ja/docs/Web/CSS/CSS_Columns)の*先頭*に表示されるブロックコンテナーの最小行数を設定します。</p>
 
-<pre class="brush:css no-line-numbers">/* &lt;integer&gt; 値 */
+```css
+/* <integer> 値 */
 widows: 2;
 widows: 3;
 
 /* グローバル値 */
 widows: inherit;
 widows: initial;
+widows: revert;
 widows: unset;
-</pre>
+```
 
-<div class="note">
-<p>組版において、 <em>widow</em> とは段落の最後の行がページの先頭に単独で現れることです。 (段落は前のページから続きます。)</p>
+組版において、ウィドウ (_widow_) とは (段落が前のページから続いている場合に) 段落の最後の行がページの先頭に単独で現れることです。
+
+{{cssinfo}}
+
+## 構文
+
+### 値
+
+- {{cssxref("&lt;integer&gt;")}}
+  - : 区切りの後の新しい断片の先頭に残すことができる最小行数です。値は正の数である必要があります。
+
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
+
+{{CSSSyntax}}
+
+## 例
+
+<h3 id="Controlling_column_widows">段の widow の制御</h3>
+
+#### HTML
+
+```html
+<div>
+  <p>これは幾らかのテキストを含む最初の段落です。</p>
+  <p>これは最初の段落よりも多くのテキストを含む第二の段落です。これはウィドウがどの様に動作するのかを示すために用います。</p>
+  <p>これは第三の段落です。これは最初の段落よりも少しだけ長いテキストを含んでいます。</p>
 </div>
+```
 
-<p>{{cssinfo}}</p>
+#### CSS
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<h3 id="Values" name="Values">値</h3>
-
-<dl>
- <dt>{{cssxref("&lt;integer&gt;")}}</dt>
- <dd>区切りの後の新しい断片の先頭に残すことができる最小行数です。値は正の数である必要があります。</dd>
-</dl>
-
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
-
-{{csssyntax}}
-
-<h2 id="Example" name="Example">例</h2>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;div&gt;
-  &lt;p&gt;これは幾らかのテキストを含む最初の段落です。&lt;/p&gt;
-  &lt;p&gt;これは最初の段落よりも多くのテキストを含む第二の段落です。これは widow がどの様に動作するのかを示すために用います。&lt;/p&gt;
-  &lt;p&gt;これは第三の段落です。これは最初の段落よりも少しだけ長いテキストを含んでいます。&lt;/p&gt;
-&lt;/div&gt;
-</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css; highlight[4]">div {
+```css
+div {
   background-color: #8cffa0;
   columns: 3;
   widows: 2;
@@ -68,50 +76,21 @@ p {
 p:first-child {
   margin-top: 0;
 }
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+#### 結果
 
-<p>{{EmbedLiveSample("Example", 400, 160)}}</p>
+{{EmbedLiveSample("Controlling_column_widows", 400, 160)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fragmentation', '#widows-orphans', 'widows')}}</td>
-   <td>{{Spec2('CSS3 Fragmentation')}}</td>
-   <td><code>widows</code> をページ、領域、段など、断片の種類によらず適用するように拡張</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol', '#filling-columns', 'widows')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td>段組みに関する <code>widows</code> の考慮の勧告</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'page.html#break-inside', 'widows')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("css.properties.widows")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{cssxref("orphans")}}</li>
- <li><a href="/ja/docs/Web/CSS/Paged_Media">ページ付きメディア</a></li>
-</ul>
+- {{cssxref("orphans")}}
+- [ページ付きメディア](/ja/docs/Web/CSS/Paged_Media)
