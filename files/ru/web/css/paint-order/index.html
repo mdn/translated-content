@@ -2,18 +2,22 @@
 title: paint-order
 slug: Web/CSS/paint-order
 tags:
-  - окраска
-  - отрисовка
-  - порядок окраски
+  - CSS
+  - Reference
+  - SVG
+  - Web
+  - recipe:css-property
 translation_of: Web/CSS/paint-order
+browser-compat: css.properties.paint-order
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a>-свойство <strong><code>paint-order</code></strong> позволяет вам контролировать порядок, в котором отрисовываются заливка и обводка (и нарисованные маркеры) текстового содержимого и фигур.</p>
+[CSS](/ru/docs/Web/CSS)-свойство **`paint-order`** позволяет вам контролировать порядок, в котором отрисовываются заливка и обводка (и нарисованные маркеры) текстового содержимого и фигур.
 
-<h2 id="Синтаксис">Синтаксис</h2>
+## Синтаксис
 
-<pre class="brush: css no-line-numbers">/* Нормальный */
+```css
+/* Нормальный */
 paint-order: normal;
 
 /* Единичное значение */
@@ -23,82 +27,79 @@ paint-order: markers; /* отрисовывает сначала маркеры,
 /* Множественные значения */
 paint-order: stroke fill; /* отрисовывает сначала обводку, затем заливку, затем маркеры */
 paint-order: markers stroke fill; /* отрисовывает маркеры, затем обводку, затем заливку */
-</pre>
 
-<p>Если значение не указано, значением по умолчанию является следующий порядок  <code>fill</code>, <code>stroke</code>, <code>markers</code>.</p>
+/* Глобальные значения */
+paint-order: inherit;
+paint-order: initial;
+paint-order: revert;
+paint-order: unset;
+```
 
-<p>Когда указано одно значение, то сначала отрисовывается оно, затем два других в дефолтном порядке друг относительно друга. Когда указано два значения, они будут отрисованы в указанном порядке, а затем будет отрисовано неопределённое значение.</p>
+Если значение не указано, значением по умолчанию является следующий порядок `fill`, `stroke`, `markers`.
 
-<div class="note">
-<p><strong>Примечание</strong>: В этом случае, маркеры отрисовываются только при рисовании форм SVG. включающих использование свойств <code>marker-*</code>  (например <code><a href="/en-US/docs/Web/SVG/Attribute/marker-start">marker-start</a></code>) и элемента <code><a href="/en-US/docs/Web/SVG/Element/marker">&lt;marker&gt;</a></code>. Они не применяются к тексту HTML, в этом случае, вы можете определить только порядок <code>stroke</code> и <code>fill</code>.</p>
-</div>
+Когда указано одно значение, то сначала отрисовывается оно, затем два других в дефолтном порядке друг относительно друга. Когда указано два значения, они будут отрисованы в указанном порядке, а затем будет отрисовано неопределённое значение.
 
-<h3 id="Значения">Значения</h3>
+> **Note:** В этом случае, маркеры отрисовываются только при рисовании форм SVG. включающих использование свойств `marker-*` (например [`marker-start`](/en-US/docs/Web/SVG/Attribute/marker-start)) и элемента [`<marker>`](/en-US/docs/Web/SVG/Element/marker). Они не применяются к тексту HTML, в этом случае, вы можете определить только порядок `stroke` и `fill`.
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Окрасит различные части в обычном порядке.</dd>
- <dt><code>stroke</code>,<br>
- <code>fill</code>,<br>
- <code>markers</code></dt>
- <dd>Указываются некоторые или все эти значения в том порядке, в котором вы хотите увидеть отрисовку.</dd>
-</dl>
+### Значения
 
-<h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
+- `normal`
+  - : Окрасит различные части в обычном порядке.
+- `stroke`,
+  `fill`,
+  `markers`
+  - : Указываются некоторые или все эти значения в том порядке, в котором вы хотите увидеть отрисовку.
 
-{{CSSSyntax}}
+## Формальное определение
 
-<h2 id="Примеры">Примеры</h2>
+{{cssinfo}}
 
-<h3 id="SVG">SVG</h3>
+## Формальный синтаксис
 
-<pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" width="400" height="200"&gt;
-  &lt;text x="10" y="75"&gt;stroke in front&lt;/text&gt;
-  &lt;text x="10" y="150" class="stroke-behind"&gt;stroke behind&lt;/text&gt;
-&lt;/svg&gt;</pre>
+{{csssyntax}}
 
-<h3 id="CSS">CSS</h3>
+## Примеры
 
-<pre class="brush: css">text {
-  font-family: sans-serif;
-  font-size: 50px;
-  font-weight: bold;
-  fill: black;
-  stroke: red;
-  stroke-width: 4px;
+### Изменение порядка отрисовки обводки и заливки на противоположный 
+
+#### SVG
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+  <text x="10" y="75">stroke in front</text>
+  <text x="10" y="150" class="stroke-behind">stroke behind</text>
+</svg>
+```
+
+#### CSS
+
+```css
+text {
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  fill: black;
+  stroke: red;
+  stroke-width: 4px;
 }
 
 .stroke-behind {
-  paint-order: stroke fill;
-}</pre>
+  paint-order: stroke fill;
+}
+```
 
-<h3 id="Результат">Результат</h3>
+#### Результат
 
-<p>{{EmbedLiveSample("Examples", "100%", 165)}}</p>
+{{EmbedLiveSample("Reversing_the_paint_order_of_stroke_and_fill", "100%", 165)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "painting.html#PaintOrder", "paint-order")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Первое определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p>{{CSSInfo}}</p>
+## Поддержка браузерами
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+{{Compat}}
 
+## Смотрите также
 
-
-<p>{{Compat("css.properties.paint-order")}}</p>
+- [CSS Tricks: paint-order](https://css-tricks.com/almanac/properties/p/paint-order/)
