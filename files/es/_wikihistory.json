@@ -8808,14 +8808,6 @@
       "julian3xl"
     ]
   },
-  "Web/API/Window/crypto": {
-    "modified": "2020-02-12T20:26:38.795Z",
-    "contributors": [
-      "joseluisq",
-      "AlePerez92",
-      "victorjavierss"
-    ]
-  },
   "Web/API/Window/devicePixelRatio": {
     "modified": "2019-03-23T22:33:20.853Z",
     "contributors": [
@@ -9236,6 +9228,14 @@
     "modified": "2020-10-15T22:14:17.553Z",
     "contributors": [
       "Bumxu"
+    ]
+  },
+  "Web/API/crypto_property": {
+    "modified": "2020-02-12T20:26:38.795Z",
+    "contributors": [
+      "joseluisq",
+      "AlePerez92",
+      "victorjavierss"
     ]
   },
   "Web/API/fetch": {

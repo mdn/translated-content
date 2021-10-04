@@ -1,0 +1,120 @@
+---
+title: MouseWheelEvent
+slug: conflicting/Web/API/WheelEvent
+translation_of: Web/API/MouseWheelEvent
+original_slug: Web/API/MouseWheelEvent
+---
+<p>{{APIRef("DOM Events")}}{{ Non-standard_header() }}{{deprecated_header}}</p>
+
+<p>{{ note("由于该事件对象是非标准的,所以Gecko并不准备实现它.") }}</p>
+
+<p><code>MouseWheelEvent</code>事件对象代表了当用户在滚动鼠标滚轮时触发的事件.</p>
+
+<p>要优先使用标准化过的<a href="https://developer.mozilla.org/zh-CN/docs/DOM/WheelEvent" title="https://developer.mozilla.org/zh-CN/docs/DOM/WheelEvent">WheelEvent</a>来代替该陈旧的事件对象.</p>
+
+<h2 id="属性">属性</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">名称</td>
+   <td class="header">类型</td>
+   <td class="header">描述</td>
+  </tr>
+  <tr>
+   <td><code>wheelDelta</code></td>
+   <td><code>long</code></td>
+   <td>滚动的距离,以像素为单位 (由MSDN定义,但实际的用法不同, 查看<a href="https://developer.mozilla.org/zh-CN/docs/DOM/DOM_event_reference/mousewheel" title="https://developer.mozilla.org/zh-CN/docs/DOM/DOM_event_reference/mousewheel">mousewheel</a>. <strong>只读.</strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">滚轮相关事件对比</h2>
+
+<table class="standard-table" style="width: 527px; height: 100px;">
+ <tbody>
+  <tr>
+   <td class="header">事件类型</td>
+   <td class="header">事件对象</td>
+   <td class="header">是否标准</td>
+   <td class="header">兼容性</td>
+  </tr>
+  <tr>
+   <td><a href="https://developer.mozilla.org/zh-CN/docs/DOM/DOM_event_reference/mousewheel" title="https://developer.mozilla.org/zh-CN/docs/DOM/DOM_event_reference/mousewheel">mousewheel</a></td>
+   <td><a href="https://developer.mozilla.org/zh-CN/docs/DOM/MouseWheelEvent" title="https://developer.mozilla.org/zh-CN/docs/DOM/MouseWheelEvent">MouseWheelEvent</a></td>
+   <td>非标准</td>
+   <td>只有Firefox不支持</td>
+  </tr>
+  <tr>
+   <td><a href="https://developer.mozilla.org/zh-CN/docs/DOM/DOM_event_reference/DOMMouseScroll" title="https://developer.mozilla.org/zh-CN/docs/DOM/DOM_event_reference/DOMMouseScroll">DOMMouseScroll</a></td>
+   <td><a href="https://developer.mozilla.org/zh-CN/docs/DOM/MouseScrollEvent" title="https://developer.mozilla.org/zh-CN/docs/DOM/MouseScrollEvent">MouseScrollEvent</a></td>
+   <td>非标准</td>
+   <td>只有Firefox支持</td>
+  </tr>
+  <tr>
+   <td><a href="https://developer.mozilla.org/zh-CN/docs/DOM/DOM_event_reference/wheel">wheel</a></td>
+   <td><a href="https://developer.mozilla.org/zh-CN/docs/DOM/WheelEvent" title="https://developer.mozilla.org/zh-CN/docs/DOM/WheelEvent">WheelEvent</a></td>
+   <td><a href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-wheel">DOM Level 3</a></td>
+   <td>Firefox 17+ ie9+</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容性</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatIE("6.0") }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+ <li>该事件对象所使用的事件类型 <a href="https://developer.mozilla.org/zh-CN/docs/DOM/DOM_event_reference/mousewheel" title="https://developer.mozilla.org/zh-CN/docs/DOM/DOM_event_reference/mousewheel">mousewheel</a></li>
+ <li>被标准化的鼠标滚轮事件对象: <a href="https://developer.mozilla.org/zh-CN/docs/DOM/WheelEvent" title="https://developer.mozilla.org/zh-CN/docs/DOM/WheelEvent">WheelEvent</a></li>
+ <li>Gecko中陈旧的非标准的鼠标滚轮事件对象: <a href="https://developer.mozilla.org/zh-CN/docs/DOM/MouseScrollEvent" title="https://developer.mozilla.org/zh-CN/docs/DOM/MouseScrollEvent">MouseScrollEvent</a></li>
+ <li>MSDN中关于该事件对象的文档: {{ spec("http://msdn.microsoft.com/en-us/library/ie/ff974345%28v=vs.85%29.aspx","MouseWheelEvent object") }}</li>
+</ul>
