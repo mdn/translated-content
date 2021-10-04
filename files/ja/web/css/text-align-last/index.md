@@ -3,23 +3,24 @@ title: text-align-last
 slug: Web/CSS/text-align-last
 tags:
   - CSS
-  - CSS Property
+  - CSS プロパティ
   - CSS テキスト
   - Experimental
   - Reference
+  - recipe:css-property
+browser-compat: css.properties.text-align-last
 translation_of: Web/CSS/text-align-last
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS の <strong><code>text-align-last</code></strong> プロパティは、ブロックの最後の行、あるいは強制的な改行の直前の行をどのように配置するかを設定します。</p>
+**`text-align-last`** は CSS のプロパティで、ブロックの最後の行、あるいは強制的な改行の直前の行をどのように配置するかを設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/text-align-last.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-align-last.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 text-align-last: auto;
 text-align-last: start;
 text-align-last: end;
@@ -31,74 +32,65 @@ text-align-last: justify;
 /* グローバル値 */
 text-align-last: inherit;
 text-align-last: initial;
+text-align-last: revert;
 text-align-last: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>{{cssxref("text-align")}} の値と同じ方向に配置されます。ただし {{cssxref("text-align")}} が <code>justify</code> である場合は、<code>text-align-last</code> に <code>start</code> を設定した場合と同じ効果になります。</dd>
- <dt><code>start</code></dt>
- <dd>文章の記述方向が左から右であれば <code>left</code>、右から左であれば <code>right</code> と同じです。</dd>
- <dt><code>end</code></dt>
- <dd>文章の記述方向が左から右であれば <code>right</code>、右から左であれば <code>left</code> と同じです。</dd>
- <dt><code>left</code></dt>
- <dd>インライン要素は行ボックスの左端に配置されます。</dd>
- <dt><code>right</code></dt>
- <dd>インライン要素は行ボックスの右端に配置されます。</dd>
- <dt><code>center</code></dt>
- <dd>インラインコンテンツは行ボックスの中央に配置されます。</dd>
- <dt><code>justify</code></dt>
- <dd>テキストは行末揃えになります。テキストは段落の左端から右端までに配置されるでしょう。</dd>
-</dl>
+- `auto`
+  - : {{cssxref("text-align")}} の値と同じ方向に配置されます。ただし {{cssxref("text-align")}} が `justify` である場合は、`text-align-last` に `start` を設定した場合と同じ効果になります。
+- `start`
+  - : 書字方向が左書きであれば `left`、右書きであれば `right` と同じです。
+- `end`
+  - : 書字方向が左書きであれば `right`、右書きであれば `left` と同じです。
+- `left`
+  - : インラインコンテンツが行ボックスの左端に配置されます。
+- `right`
+  - : インラインコンテンツが行ボックスの右端に配置されます。
+- `center`
+  - : インラインコンテンツが行ボックスの中央に配置されます。
+- `justify`
+  - : テキストは両端揃えになります。テキストは段落の左端から右端までに配置されます。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<div class="hidden">
-<pre class="brush: html">&lt;p&gt;Integer elementum massa at nulla placerat varius. Suspendisse in libero risus, in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque. Nullam est eros, suscipit sed dictum quis, accumsan a ligula.&lt;/p&gt;
-</pre>
-</div>
+<h3 id="Justifying_the_last_line">最後の行を中央揃えにする</h3>
 
-<pre class="brush: css">p {
+```html hidden
+<p>Integer elementum massa at nulla placerat varius. Suspendisse in libero risus, in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque. Nullam est eros, suscipit sed dictum quis, accumsan a ligula.</p>
+```
+
+#### CSS
+
+```css
+p {
   font-size: 1.4em;
   text-align: justify;
   text-align-last: center;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Example','560')}}</p>
+#### 結果s
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{EmbedLiveSample('Justifying_the_last_line','560')}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text', '#text-align-last-property', 'text-align-last')}}</td>
-   <td>{{Spec2('CSS3 Text')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<div>{{cssinfo}}</div>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.text-align-last")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{cssxref("text-align")}}</li>
-</ul>
+- {{cssxref("text-align")}}

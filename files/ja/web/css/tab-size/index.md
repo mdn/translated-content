@@ -3,94 +3,106 @@ title: tab-size
 slug: Web/CSS/tab-size
 tags:
   - CSS
-  - CSS Property
-  - CSS テキスト
   - CSS プロパティ
-  - Experimental
+  - CSS テキスト
   - Reference
+  - recipe:css-property
+browser-compat: css.properties.tab-size
 translation_of: Web/CSS/tab-size
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}
 
-<p>CSS の <strong><code>tab-size</code></strong> プロパティは、タブ文字 (<code>U+0009</code>) の表示幅の指定に用います。</p>
+CSS の **`tab-size`** プロパティは、タブ文字 (U+0009) の表示幅の指定に用います。
 
-<pre class="brush:css">/* &lt;integer&gt; 値 */
+## 構文
+
+```css
+/* <integer> 値 */
 tab-size: 4;
 tab-size: 0;
 
-/* &lt;length&gt; 値 */
+/* <length> 値 */
 tab-size: 10px;
 tab-size: 2em;
 
 /* グローバル値 */
 tab-size: inherit;
 tab-size: initial;
+tab-size: revert;
 tab-size: unset;
-</pre>
+```
 
-<p>{{CSSInfo}}</p>
+### 値
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+- {{CSSxRef("&lt;integer&gt;")}}
+  - : タブの幅として使用される空白文字（U+0020）の幅の倍数です。正の数でなければなりません。
+- {{CSSxRef("&lt;length&gt;")}}
+  - : タブの幅です。正の数でなければなりません。
 
-<h3 id="Values" name="Values">値</h3>
+## 公式定義
 
-<dl>
- <dt>{{CSSxRef("&lt;integer&gt;")}}</dt>
- <dd>タブの空白文字の文字数です。正の数でなければなりません。</dd>
- <dt>{{CSSxRef("&lt;length&gt;")}}</dt>
- <dd>タブの幅です。正の数でなければなりません。</dd>
-</dl>
+{{CSSInfo}}
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 形式文法
 
-{{csssyntax}}
+{{CSSSyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: css">pre {
+### 文字数による展開
+
+```css
+pre {
   tab-size: 4; /* スペース 4 つ分となります */
 }
-</pre>
+```
 
-<pre class="brush: css">pre {
+### タブの折り畳み
+
+```css
+pre {
   tab-size: 0; /* インデント除去 */
 }
-</pre>
+```
 
-<pre class="brush: css">pre {
-  tab-size: 2; /* タブの幅をスペース 2 個分に設定 */
+<h3 id="Comparing_to_the_default_size">既定の大きさの比較</h3>
+
+この例では、既定のタブの大きさとカスタムのタブの大きさを比較しています。タブがつぶれないように、 {{cssxref("white-space")}} を `pre` に設定していることに注意してください。
+
+#### HTML
+
+```html
+<p>no tab</p>
+<p>&#0009;default tab size of 8 characters wide</p>
+<p class="custom">&#0009;custom tab size of 3 characters wide</p>
+<p>&nbsp;&nbsp;&nbsp;3 spaces, equivalent to the custom tab size</p>
+```
+
+#### CSS
+
+```css
+p {
+  white-space: pre;
 }
-</pre>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+.custom {
+  tab-size: 3;
+  -moz-tab-size: 3;
+}
+```
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text', '#tab-size-property', 'tab-size')}}</td>
-   <td>{{Spec2('CSS3 Text')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+#### 結果
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+{{EmbedLiveSample('Comparing_to_the_default_size')}}
 
+## 仕様書
 
+{{Specifications}}
 
-<p>{{Compat("css.properties.tab-size")}}</p>
+## ブラウザーの互換性
 
-<p> </p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a class="external" href="https://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html"><cite>Controlling size of a tab character (U+0009)</cite></a> - Anne van Kesteren 氏 (Opera) からの CSSWG へのメール</li>
-</ul>
+- [Controlling size of a tab character (U+0009)](https://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html) - Anne van Kesteren 氏 (Opera) からの CSSWG へのメール
