@@ -4,23 +4,24 @@ slug: Web/CSS/text-underline-offset
 tags:
   - CSS
   - CSS Text Decoration
-  - CSS テキスト装飾
-  - Property
+  - プロパティ
   - Reference
+  - recipe:css-property
   - text-decoration
   - text-underline-offset
-  - プロパティ
+browser-compat: css.properties.text-underline-offset
 translation_of: Web/CSS/text-underline-offset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>text-underline-offset</code></strong> は <a href="/ja/docs/CSS">CSS</a> のプロパティで、 ({{cssxref("text-decoration")}} を使用して適用された) 下線のテキスト装飾線の本来の位置からのオフセット距離を設定します。</p>
+**`text-underline-offset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 ({{cssxref("text-decoration")}} を使用して適用された) 下線のテキスト装飾線の本来の位置からのオフセット距離を設定します。
 
-<p><code>text-underline-offset</code> は {{cssxref('text-decoration')}} の一括指定の一部ではありません。一つの要素が複数の <code>text-decoration</code> による線を持つため、 <code>text-underline-offset</code> は下線のみに影響し、 <code>overline</code> や <code>line-through</code> などの他の装飾線には影響<strong>しません</strong>。</p>
+`text-underline-offset` は {{cssxref('text-decoration')}} の一括指定の一部ではありません。一つの要素が複数の `text-decoration` による線を持つため、 `text-underline-offset` は下線のみに影響し、 `overline` や `line-through` などの他の装飾線には影響**しません**。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="brush:css no-line-numbers">/* 単一のキーワード */
+```css
+/* 単一のキーワード */
 text-underline-offset: auto;
 
 /* 長さ */
@@ -33,33 +34,41 @@ text-underline-offset: 20%;
 /* グローバル値 */
 text-underline-offset: inherit;
 text-underline-offset: initial;
+text-underline-offset: revert;
 text-underline-offset: unset;
-</pre>
+```
 
-<p><code>text-underline-offset</code> プロパティは、以下のリストのうち一つの値で指定します。</p>
+`text-underline-offset` プロパティは、以下のリストのうち一つの値で指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>ブラウザーが下線の適切なオフセットを選択します。</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>下線のオフセットを {{cssxref('length')}} で指定し、フォントファイルの提案やブラウザーの既定値を上書きします。オフセットがフォントサイズに合わせて変化するように、 <code>em</code> 単位を使用することを推奨します。</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>下線のオフセットを、要素のフォントにおける <strong>1 em</strong> に対する {{cssxref('percentage')}} で指定します。パーセント値はは相対値として継承されるため、フォントの変化に応じて変化します。このプロパティを適用した場合、オフセットは、フォントサイズや垂直方向の配置が異なる子要素があっても、下線が適用されているボックス全体で一定となります。</dd>
-</dl>
+- `auto`
+  - : ブラウザーが下線の適切なオフセットを選択します。
+- `<length>`
+  - : 下線のオフセットを {{cssxref('length')}} で指定し、フォントファイルの提案やブラウザーの既定値を上書きします。オフセットがフォントサイズに合わせて変化するように、 `em` 単位を使用することを推奨します。
+- `<percentage>`
+  - : 下線のオフセットを、要素のフォントにおける **1 em** に対する {{cssxref('percentage')}} で指定します。パーセント値はは相対値として継承されるため、フォントの変化に応じて変化します。このプロパティを適用した場合、オフセットは、フォントサイズや垂直方向の配置が異なる子要素があっても、下線が適用されているボックス全体で一定となります。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<pre class="brush: html">&lt;p class="oneline"&gt;Here's some text with an offset wavy red underline!&lt;/p&gt;
-&lt;br&gt;
-&lt;p class="twolines"&gt;This text has lines both above and below it. Only the bottom one is offset.&lt;/p&gt;</pre>
+### text-underline-offset のデモ
 
-<pre class="brush: css">p {
+```html
+<p class="oneline">Here's some text with an offset wavy red underline!</p>
+<br>
+<p class="twolines">This text has lines both above and below it. Only the bottom one is offset.</p>
+```
+
+```css
+p {
   text-decoration: underline wavy red;
   text-underline-offset: 1em;
 }
@@ -67,36 +76,20 @@ text-underline-offset: unset;
 .twolines {
   text-decoration-color: purple;
   text-decoration-line: underline overline;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Examples', '', '', '') }}</p>
+{{ EmbedLiveSample('Examples', '', '', '') }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Text Decoration', '#underline-offset', 'text-underline-offset')}}</td>
-   <td>{{Spec2('CSS4 Text Decoration')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.text-underline-offset")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{cssxref("text-decoration")}}</li>
- <li>{{cssxref("text-decoration-thickness")}}</li>
-</ul>
+- {{cssxref("text-decoration")}}
+- {{cssxref("text-decoration-thickness")}}
