@@ -4,22 +4,23 @@ slug: Web/CSS/text-orientation
 tags:
   - CSS
   - CSS プロパティ
-  - CSS 書字方向
+  - CSS Writing Modes
   - Reference
+  - recipe:css-property
   - 日本語処理
+browser-compat: css.properties.text-orientation
 translation_of: Web/CSS/text-orientation
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><strong><code>text-orientation</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、行内のテキストの向きを設定します。このプロパティは縦書きのテキスト ({{cssxref("writing-mode")}} が <code>horizontal-tb</code> 以外の場合) でのみ効果があります。</span>これは縦書きを使用する言語の表示を制御したり、縦書きの表見出しを作成したりするのに有用です。</p>
+**`text-orientation`** は [CSS](/ja/docs/Web/CSS) のプロパティで、行内のテキストの向きを設定します。このプロパティは縦書きのテキスト ({{cssxref("writing-mode")}} が `horizontal-tb` 以外の場合) でのみ効果があります。これは縦書きを使用する言語の表示を制御したり、縦書きの表見出しを作成したりするのに有用です。
 
-<div>{{EmbedInteractiveExample("pages/css/text-orientation.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-orientation.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css">/* キーワード値 */
+```css
+/* キーワード値 */
 text-orientation: mixed;
 text-orientation: upright;
 text-orientation: sideways-right;
@@ -29,77 +30,65 @@ text-orientation: use-glyph-orientation;
 /* グローバル値 */
 text-orientation: inherit;
 text-orientation: initial;
+text-orientation: initial;
 text-orientation: unset;
-</pre>
+```
 
-<p><code>text-orientation</code> プロパティは、以下のリストから単一のキーワードとして指定されます。</p>
+`text-orientation` プロパティは、以下のリストから単一のキーワードとして指定されます。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>mixed</code></dt>
- <dd>このキーワードは、横書きのみの文字を右に 90°回転させ、縦書き文字のグリフは自然にレイアウトされます。</dd>
- <dt><code>upright</code></dt>
- <dd>このキーワードは、横書きのみの文字を、縦書き文字と同様に自然にレイアウト (正立) させます。このキーワードは、すべての文字が ltr (左から右へ) で書かれているものとみなすので注意してください。これは、ユーザ側でどのように設定されていても、対象のテキストの {{cssxref("direction")}} に <code>ltr</code> が指定されているものとします。</dd>
- <dt><code>sideways</code></dt>
- <dd>このキーワードは、全行を横書きで書いて 90°回転したようにレイアウトします。{{cssxref("writing-mode")}} が <code>vertical-rl</code> の場合は右へ回転、<code>vertical-lr</code> の場合は左へ回転します。</dd>
- <dt><code>sideways-right</code></dt>
- <dd>これは、互換性を維持するためのキーワードであり、<code>sideways</code> の別名です。</dd>
- <dt><code>use-glyph-orientation</code></dt>
- <dd>SVG 要素上で、このキーワードは、非推奨の SVG プロパティ <code>glyph-orientation-vertical</code> と <code>glyph-orientation-horizontal</code> の値を使用します。</dd>
-</dl>
+- `mixed`
+  - : 横書き用の文字を右に 90° 回転させ、縦書き用の文字は自然に配置します。既定値です。
+- `upright`
+  - : 横書き用の文字を、縦書き用の字形と同様に自然に (正立で) 配置します。なお、このキーワードはすべての文字を左書きと見なします。 {{cssxref("direction")}} の使用値は `ltr` に強制されます。
+- `sideways`
+  - : 全行を横書きで書いて 90° 回転したように配置します。
+- `sideways-right`
+  - : `sideways` の別名です。これは互換性のために維持されています。
+- `use-glyph-orientation`
+  - : SVG 要素上で、非推奨の SVG プロパティ `glyph-orientation-vertical` と `glyph-orientation-horizontal` の値を使用します。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Lorem ipsum dolet semper quisquam.&lt;/p&gt;</pre>
+```html
+<p>Lorem ipsum dolet semper quisquam.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   writing-mode: vertical-rl;
   text-orientation: upright;
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Writing Modes', '#text-orientation', 'text-orientation')}}</td>
-   <td>{{Spec2('CSS3 Writing Modes')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p>{{cssinfo}}</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.text-orientation")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>他の縦書きに関連する CSS プロパティ: {{cssxref("writing-mode")}}, {{cssxref("text-combine-upright")}}, {{cssxref("unicode-bidi")}}</li>
- <li><a href="/ja/docs/Web/CSS/CSS_Logical_Properties">CSS 論理的プロパティ</a></li>
- <li><a href="https://www.w3.org/International/articles/vertical-text/">縦書きテキストのスタイル付け (中国語、日本語、韓国語、モンゴル語)</a></li>
- <li>広範なブラウザーの対応状況テキスト結果: <a href="https://w3c.github.io/i18n-tests/results/horizontal-in-vertical.html#text_orientation">https://w3c.github.io/i18n-tests/results/horizontal-in-vertical.html#text_orientation</a></li>
-</ul>
+- 他の縦書きに関連する CSS プロパティ: {{cssxref("writing-mode")}}, {{cssxref("text-combine-upright")}}, {{cssxref("unicode-bidi")}}
+- [CSS 論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties)
+- [縦書きテキストのスタイル付け (中国語、日本語、韓国語、モンゴル語)](https://www.w3.org/International/articles/vertical-text/)
+- 広範なブラウザーの対応状況のテスト結果: <https://w3c.github.io/i18n-tests/results/horizontal-in-vertical.html#text_orientation>
