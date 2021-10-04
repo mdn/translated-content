@@ -1,68 +1,65 @@
 ---
 title: DOMTokenList.toggle()
 slug: Web/API/DOMTokenList/toggle
-tags:
-  - API
-  - Basculement
-  - DOM
-  - Listes
-  - Méthodes
 translation_of: Web/API/DOMTokenList/toggle
+browser-compat: api.DOMTokenList.toggle
 ---
 {{APIRef("DOM")}}
 
-La méthode **`toggle()`** (_bascule_) de l'interface {{domxref("DOMTokenList")}} supprime une marque (_token)_ donnée de la liste et renvoie `false` (_faux_). Si _token_ n'existe pas, il est ajouté et la fonction renvoie `true`.
+La méthode **`toggle()`** (qui signifie _basculer_ en anglais) de l'interface [`DOMTokenList`](/fr/docs/Web/API/DOMTokenList) supprime un jeton (_token_) donné de la liste et renvoie `false`. Si _token_ n'existe pas, il est ajouté et la fonction renvoie `true`.
 
 ## Syntaxe
 
-    tokenList.toggle(token, force);
+```js
+tokenList.toggle(token [, force]);
+```
 
 ### Paramètres
 
 - token
-  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la marque que l'on veut activer.
+  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) représentant le jeton que l'on veut activer ou désactiver.
 - force {{optional_inline}}
-  - : Un {{domxref("Boolean")}} (_booléen_) qui, si inclus, transforme la bascule (toggle) en opération unique. Si elle est définie `false` (_faux_), la marque sera seulement supprimée et aucun ajout ne suivra. Si elle est définie `true` (_vrai_), la marque sera seulement ajoutée et pas supprimée après.
+  - : Un _booléen_ qui, s'il est inclus, transforme la bascule en opération à un seul sens. Si ce paramètre vaut `false`, le jeton sera seulement supprimé et aucun ajout ne suivra. S'il vaut `true`, le jeton sera seulement ajouté et pas supprimé.
 
-### Valeur retournée
+### Valeur de retour
 
-Un {{domxref("Boolean")}} (_booléen_) — `false` (_faux_) si la marque n'est pas dans la liste après l'appel ou `true` (_vrai_) si elle y est.
+Un booléen qui vaut `true` ou `false` selon que le jeton se trouve dans la liste après l'exécution de la fonction ou non.
 
 ## Exemples
 
-Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Nous remplaçons alors une marque dans la liste et écrivons la liste dans le {{domxref("Node.textContent")}} du `<span>`.
+Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément [`<span>`](/fr/docs/Web/HTML/Element/span) en tant que `DOMTokenList` en utilisant [`Element.classList`](/fr/docs/Web/API/Element/classList). Lors d'un clic sur le texte, nous remplaçons alors un jeton dans la liste et écrivons la liste dans le [`Node.textContent`](/fr/docs/Web/API/Node/textContent) du `<span>`.
 
-D'abord, le HTML :
+### HTML
 
 ```html
-<span class="a b">classList is 'a b'</span>
+<span class="a b">classList vaut 'a b'</span>
 ```
 
-Maintenant le JavaScript :
+### JavaScript
 
 ```js
-var span = document.querySelector("span");
-var classes = span.classList;
-span.onclick = function() {
-  var result = classes.toggle("c");
-  if(result) {
-    span.textContent = "'c' added; classList is now '" + classes + "'.";
+let span = document.querySelector("span");
+let classes = span.classList;
+
+span.addEventListener('click', function() {
+  let result = classes.toggle("c");
+
+  if (result) {
+    span.textContent = `'c' ajouté ; classList vaut désormais "${classes}".`;
   } else {
-    span.textContent = "'c' removed; classList is now '" + classes + "'.";
+    span.textContent = `'c' retiré ; classList vaut désormais "${classes}".`;
   }
-}
+})
 ```
 
-La sortie ressemble à ceci :
+### Résultat
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{EmbedLiveSample('Exemples', '100%', 60)}}
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG','#dom-domtokenlist-toggle','toggle()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.toggle")}}
+{{Compat}}
