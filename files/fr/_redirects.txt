@@ -3789,7 +3789,9 @@
 /fr/docs/Web/API/Window.showModalDialog	/fr/docs/Web/API/Window/showModalDialog
 /fr/docs/Web/API/Window/URL	/fr/docs/conflicting/Web/API/URL
 /fr/docs/Web/API/Window/caches	/fr/docs/Web/API/caches
+/fr/docs/Web/API/Window/crypto	/fr/docs/Web/API/crypto_property
 /fr/docs/Web/API/Window/gamepaddisconnected	/fr/docs/Web/API/Window/gamepaddisconnected_event
+/fr/docs/Web/API/Window/mozAnimationStartTime	/fr/docs/Web/API/Animation/startTime
 /fr/docs/Web/API/Window/ondevicelight	/fr/docs/orphaned/Web/API/Window/ondevicelight
 /fr/docs/Web/API/Window/onresize	/fr/docs/conflicting/Web/API/GlobalEventHandlers/onresize
 /fr/docs/Web/API/WindowBase64	/fr/docs/Web/API/WindowOrWorkerGlobalScope
@@ -5522,6 +5524,7 @@
 /fr/docs/Web/WebGL/Commencer_avec_le_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /fr/docs/Web/WebGL/Using_shaders_to_apply_color_in_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 /fr/docs/Web/WebGL/Utiliser_les_textures_avec_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+/fr/docs/Web/Web_Components/HTML_Imports	/fr/docs/conflicting/Web/Web_Components
 /fr/docs/Web/Web_Components/Shadow_DOM	/fr/docs/Web/Web_Components/Using_shadow_DOM
 /fr/docs/Web/Web_Components/Utilisation_des_templates_et_des_slots	/fr/docs/Web/Web_Components/Using_templates_and_slots
 /fr/docs/Web/XML/Introduction_à_XML	/fr/docs/Web/XML/XML_introduction

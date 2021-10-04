@@ -4099,12 +4099,6 @@
       "frickth"
     ]
   },
-  "Web/API/Window/performance": {
-    "modified": "2019-03-23T22:07:15.480Z",
-    "contributors": [
-      "amelzer"
-    ]
-  },
   "Web/API/Window/print": {
     "modified": "2020-10-15T21:39:45.899Z",
     "contributors": [
@@ -4224,6 +4218,12 @@
     "contributors": [
       "schlagi123",
       "mwsh2005"
+    ]
+  },
+  "Web/API/performance_property": {
+    "modified": "2019-03-23T22:07:15.480Z",
+    "contributors": [
+      "amelzer"
     ]
   },
   "Web/API/setTimeout": {
