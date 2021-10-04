@@ -3,23 +3,25 @@ title: word-break
 slug: Web/CSS/word-break
 tags:
   - CSS
-  - CSS テキスト
   - CSS プロパティ
   - Reference
+  - break-word
+  - recipe:css-property
+  - word-break
   - 日本語処理
+browser-compat: css.properties.word-break
 translation_of: Web/CSS/word-break
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>word-break</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、改行しなければテキストがコンテンツボックスからあふれる場合に、ブラウザーが改行を挿入するかどうかを指定します。</p>
+**`word-break`** は [CSS](/ja/docs/Web/CSS) のプロパティで、改行しなければテキストがコンテンツボックスからあふれる場合に、ブラウザーが改行を挿入するかどうかを指定します。
 
-<div>{{EmbedInteractiveExample("pages/css/word-break.html")}}</div>
+{{EmbedInteractiveExample("pages/css/word-break.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 word-break: normal;
 word-break: break-all;
 word-break: keep-all;
@@ -28,64 +30,63 @@ word-break: break-word; /* 非推奨 */
 /* グローバル値 */
 word-break: inherit;
 word-break: initial;
+word-break: revert;
 word-break: unset;
-</pre>
+```
 
-<p><code>word-break</code> プロパティは、下記のリストの中から 1 つを選んで指定します。</p>
+`word-break` プロパティは、下記のリストの中から 1 つを選んで指定します。
 
-<h3 class="brush:css" id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>既定の改行規則を使用します。</dd>
- <dt><code>break-all</code></dt>
- <dd>CJK (中国語、台湾語、日本語、韓国語) 以外のテキストにおいて、単語中などでの文字の改行に関する禁則処理を解除し、どの文字の間でも改行するようにします。
- <div class="hidden">翻訳メモ:<br>
- 英語版: 「Chinese/Japanese/Korean」 (3つ)<br>
- 日本語: 「中国語、台湾語、日本語、韓国語」 (4つ)<br>
- という翻訳が以前から続いているので、それに従うことにしました。</div>
- </dd>
- <dt><code>keep-all</code></dt>
- <dd>CJK テキストの改行を許可しません。 CJK 以外のテキストについては <code>normal</code> と同じ挙動となります。</dd>
- <dt><code>break-word</code> {{Deprecated_Inline}}</dt>
- <dd>{{cssxref("overflow-wrap")}} プロパティの値とは関係なく、 <code>word-break: normal</code> や <code>overflow-wrap: anywhere</code> と同じ効果になります。</dd>
-</dl>
+- `normal`
+  - : 既定の改行規則を使用します。
+- `break-all`
+  - : CJK (中国語、台湾語、日本語、韓国語) 以外のテキストにおいて、単語中などでの文字の改行に関する禁則処理を解除し、どの文字の間でも改行するようにします。
+- `keep-all`
+  - : CJK テキストの改行を許可しません。 CJK 以外のテキストについては `normal` と同じ挙動となります。
+- `break-word` {{Deprecated_Inline}}
+  - : {{cssxref("overflow-wrap")}} プロパティの値とは関係なく、 `word-break: normal` や `overflow-wrap: anywhere` と同じ効果になります。
 
-<div class="note">
-<p><strong>メモ:</strong> <code>word-break: break-word</code> および <code>overflow-wrap: break-word</code> ({{cssxref("overflow-wrap")}} を参照) とは対照的に、 <code>word-break: break-all</code> はテキストがコンテナーからちょうどあふれたところで (単語全体を次の行に送れば途中で改行を防ぐことができる場合であっても) 位置で改行を生成します。</p>
-</div>
+> **Note:** `word-break: break-word` および `overflow-wrap: break-word` ({{cssxref("overflow-wrap")}} を参照) とは対照的に、 `word-break: break-all` はテキストがコンテナーからちょうどあふれたところで (単語全体を次の行に送れば途中で改行を防ぐことができる場合であっても) 位置で改行を生成します。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;1. &lt;code&gt;word-break: normal&lt;/code&gt;&lt;/p&gt;
-&lt;p class="normal narrow"&gt;This is a long and
+```html
+<p>1. <code>word-break: normal</code></p>
+<p class="normal narrow">This is a long and
  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉&lt;/p&gt;
+ グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
 
-&lt;p&gt;2. &lt;code&gt;word-break: break-all&lt;/code&gt;&lt;/p&gt;
-&lt;p class="breakAll narrow"&gt;This is a long and
+<p>2. <code>word-break: break-all</code></p>
+<p class="breakAll narrow">This is a long and
  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉&lt;/p&gt;
+ グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
 
-&lt;p&gt;3. &lt;code&gt;word-break: keep-all&lt;/code&gt;&lt;/p&gt;
-&lt;p class="keepAll narrow"&gt;This is a long and
+<p>3. <code>word-break: keep-all</code></p>
+<p class="keepAll narrow">This is a long and
  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉&lt;/p&gt;
+ グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
 
-&lt;p&gt;4. &lt;code&gt;word-break: break-word&lt;/code&gt;&lt;/p&gt;
-&lt;p class="breakWord narrow"&gt;This is a long and
+<p>4. <code>word-break: break-word</code></p>
+<p class="breakWord narrow">This is a long and
   Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉&lt;/p&gt;</pre>
+ グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.narrow {
+```css
+.narrow {
   padding: 10px;
   border: 1px solid;
   width: 500px;
@@ -110,37 +111,20 @@ word-break: unset;
 .breakWord {
   word-break: break-word;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Examples', '100%', 600)}}</p>
+{{EmbedLiveSample('Examples', '100%', 600)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text', '#word-break-property', 'word-break')}}</td>
-   <td>{{Spec2('CSS3 Text')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<div>{{cssinfo}}</div>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.word-break")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{cssxref("overflow-wrap")}}</li>
-</ul>
+- {{cssxref("overflow-wrap")}}
+- {{cssxref("hyphens")}}
+- [テキストの分割と折り返しのガイド](/ja/docs/Web/CSS/CSS_Text/Wrapping_Text)

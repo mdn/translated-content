@@ -3,27 +3,31 @@ title: white-space
 slug: Web/CSS/white-space
 tags:
   - CSS
-  - CSS テキスト
   - CSS プロパティ
+  - CSS テキスト
   - Reference
+  - recipe:css-property
   - white-space
+browser-compat: css.properties.white-space
 translation_of: Web/CSS/white-space
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS の <strong><code>white-space</code></strong> プロパティは、要素内の{{Glossary("whitespace", "ホワイトスペース")}}をどのように扱うかを設定します。</p>
+**`white-space`** は CSS のプロパティで、要素内の{{Glossary("whitespace", "ホワイトスペース")}}をどのように扱うかを設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/white-space.html")}}</div>
+{{EmbedInteractiveExample("pages/css/white-space.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+このプロパティは 2 つのことを指定します。
 
-<div class="note">
-<p><strong>メモ:</strong> <em>要素の内部で</em>折り返しを行うには、代わりに {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}} を使用してください。</p>
-</div>
+- ホワイトスペースを折り畳むかどうか、およびその方法。
+- 行を自動折り返しの場面で折り返すことができるかどうか。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+> **Note:** *要素の内部で*折り返しを行うには、代わりに {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}} を使用してください。
 
-<pre class="brush: css no-line-numbers">/* キーワード値 */
+## 構文
+
+```css
+/* キーワード値 */
 white-space: normal;
 white-space: nowrap;
 white-space: pre;
@@ -34,136 +38,161 @@ white-space: break-spaces;
 /* グローバル値 */
 white-space: inherit;
 white-space: initial;
+white-space: revert;
 white-space: unset;
-</pre>
+```
 
-<p><code>white-space</code> プロパティは、以下の値の一覧から選択した単一のキーワードで指定します。</p>
+`white-space` プロパティは、以下の値の一覧から選択した単一のキーワードで指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>連続するホワイトスペースはまとめられます。ソース内の改行文字もホワイトスペースとして扱われます。行ボックスを埋めるために、必要なら行を折り返します。</dd>
- <dt><code>nowrap</code></dt>
- <dd><code>normal</code> と同じくホワイトスペースを詰めますが、行の折り返しは行いません。</dd>
- <dt><code>pre</code></dt>
- <dd>連続するホワイトスペースはそのまま残され、行の折り返しは、ソース内の改行文字と、 {{HTMLElement("br")}} 要素でのみ行います。</dd>
- <dt><code>pre-wrap</code></dt>
- <dd>連続するホワイトスペースはそのまま残されます。行の折り返しは、改行文字や {{HTMLElement("br")}} 要素のあるときか、行ボックスを埋めるのに必要なときに行います。</dd>
- <dt><code>pre-line</code></dt>
- <dd>連続するホワイトスペースは詰められて 1 つになります。行の折り返しは、改行文字や {{HTMLElement("br")}} 要素のあるときか、行ボックスを埋めるのに必要なときに行われます。</dd>
- <dt><code>break-spaces</code></dt>
- <dd>下記の点を除いて、動作は <code>pre-wrap</code> と同じです。
- <ul>
-  <li>そのまま残された連続するホワイトスペースは、行末にあるものを含め、空間を占有します。</li>
-  <li>残されたそれぞれのホワイトスペースの後で、ホワイトスペースの間を含め、改行する可能性があります。</li>
-  <li>そのような残された空白は空間を占有し、ぶら下がらず、ボックスの固有の寸法に (min-content size および max-content size に) 影響します。</li>
- </ul>
- </dd>
-</dl>
+- `normal`
+  - : 連続するホワイトスペースがまとめられます。ソース内の改行文字もホワイトスペースとして扱われます。行ボックスを埋めるために、必要なら行を折り返します。
+- `nowrap`
+  - : `normal` と同じくホワイトスペースを詰めますが、行の折り返しは行いません。
+- `pre`
+  - : 連続するホワイトスペースはそのまま残され、行の折り返しは、ソース内の改行文字と、 {{HTMLElement("br")}} 要素でのみ行います。
+- `pre-wrap`
+  - : 連続するホワイトスペースはそのまま残されます。行の折り返しは、改行文字や {{HTMLElement("br")}} 要素のあるときか、行ボックスを埋めるのに必要なときに行います。
+- `pre-line`
+  - : 連続するホワイトスペースは詰められて 1 つになります。行の折り返しは、改行文字や {{HTMLElement("br")}} 要素のあるときか、行ボックスを埋めるのに必要なときに行われます。
+- `break-spaces`
 
-<p>次の表に、<code>white-space</code> 値の動作をまとめます。</p>
+  - : 下記の点を除いて、動作は `pre-wrap` と同じです。
+
+    - そのまま残された連続するホワイトスペースは、行末にあるものを含め、空間を占有します。
+    - 残されたそれぞれのホワイトスペースの後で、ホワイトスペースの間を含め、改行する可能性があります。
+    - そのような残された空白は空間を占有し、ぶら下がらず、ボックスの内在の寸法 (min-content および max-content の大きさ) に影響します。
+
+次の表に、`white-space` 値の動作をまとめます。
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th></th>
-   <th>改行</th>
-   <th>空白とタブ文字</th>
-   <th>テキストの折り返し</th>
-   <th>行末の空白</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th><code>normal</code></th>
-   <td>まとめる</td>
-   <td>まとめる</td>
-   <td>折り返す</td>
-   <td>除去</td>
-  </tr>
-  <tr>
-   <th><code>nowrap</code></th>
-   <td>まとめる</td>
-   <td>まとめる</td>
-   <td>折り返さない</td>
-   <td>除去</td>
-  </tr>
-  <tr>
-   <th><code>pre</code></th>
-   <td>そのまま</td>
-   <td>そのまま</td>
-   <td>折り返さない</td>
-   <td>そのまま</td>
-  </tr>
-  <tr>
-   <th><code>pre-wrap</code></th>
-   <td>そのまま</td>
-   <td>そのまま</td>
-   <td>折り返す</td>
-   <td>ぶら下げ</td>
-  </tr>
-  <tr>
-   <th><code>pre-line</code></th>
-   <td>そのまま</td>
-   <td>まとめる</td>
-   <td>折り返す</td>
-   <td>除去</td>
-  </tr>
-  <tr>
-   <th><code>break-spaces</code></th>
-   <td>そのまま</td>
-   <td>そのまま</td>
-   <td>折り返す</td>
-   <td>折り返す</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th></th>
+      <th>改行</th>
+      <th>空白とタブ文字</th>
+      <th>テキストの折り返し</th>
+      <th>行末の空白</th>
+      <th>行末のその他の空白区切り</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th><code>normal</code></th>
+      <td>まとめる</td>
+      <td>まとめる</td>
+      <td>折り返す</td>
+      <td>除去</td>
+      <td>ぶら下げる</td>
+    </tr>
+    <tr>
+      <th><code>nowrap</code></th>
+      <td>まとめる</td>
+      <td>まとめる</td>
+      <td>折り返さない</td>
+      <td>除去</td>
+      <td>ぶら下げる</td>
+    </tr>
+    <tr>
+      <th><code>pre</code></th>
+      <td>そのまま</td>
+      <td>そのまま</td>
+      <td>折り返さない</td>
+      <td>そのまま</td>
+      <td>折り返さない</td>
+    </tr>
+    <tr>
+      <th><code>pre-wrap</code></th>
+      <td>そのまま</td>
+      <td>そのまま</td>
+      <td>折り返す</td>
+      <td>ぶら下げる</td>
+      <td>ぶら下げる</td>
+    </tr>
+    <tr>
+      <th><code>pre-line</code></th>
+      <td>そのまま</td>
+      <td>まとめる</td>
+      <td>折り返す</td>
+      <td>除去</td>
+      <td>ぶら下げる</td>
+    </tr>
+    <tr>
+      <th><code>break-spaces</code></th>
+      <td>そのまま</td>
+      <td>そのまま</td>
+      <td>折り返す</td>
+      <td>折り返す</td>
+      <td>折り返す</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+> **Note:** **空白**と**その他の空白区切り**には違いがあります。以下のように定義されています。
+>
+> - 空白
+>   - : 空白 (U+0020)、タブ (U+0009)、区切り文字 (改行など)。
+> - その他の空白区切り
+>   - : Unicode で定義されているその他の区切り文字で、空白として定義されているもの意外。
+>
+> ホワイトスペースが*ぶら下げる*とある場合、内在サイズを計算するときにボックスの大きさに影響することがあります。
+
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{CSSSyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Basic_example" name="Basic_example">基本的な例</h3>
+### 基本的な例
 
-<pre class="brush: css">code {
+```css
+code {
   white-space: pre;
-}</pre>
+}
+```
 
-<h3 id="Line_breaks_inside_pre_elements" name="Line_breaks_inside_pre_elements">&lt;pre&gt; 要素内での改行</h3>
+### \<pre> 要素内での改行
 
-<pre class="brush: css">pre {
-  word-wrap: break-word;      /* IE 5.5-7 */
-  white-space: pre-wrap;      /* 現行ブラウザー */
-}</pre>
+```css
+pre {
+  white-space: pre-wrap;
+}
+```
 
-<h2 id="See_it_in_action" name="See_it_in_action">操作して確認する</h2>
+<h3 id="In_action">操作</h3>
 
-<div class="hidden" id="See_it_in_action_LiveSample">
-<pre class="brush: html">&lt;div id="css-code" class="box"&gt;
+#### HTML
+
+```html hidden
+<div id="css-code" class="box">
   p { white-space:
-  &lt;select&gt;
-    &lt;option&gt;normal&lt;/option&gt;
-    &lt;option&gt;nowrap&lt;/option&gt;
-    &lt;option&gt;pre&lt;/option&gt;
-    &lt;option&gt;pre-wrap&lt;/option&gt;
-    &lt;option&gt;pre-line&lt;/option&gt;
-    &lt;option&gt;break-spaces&lt;/option&gt;
-  &lt;/select&gt; }
-&lt;/div&gt;
-&lt;div id="results" class="box"&gt;
-  &lt;p&gt;    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  <select>
+    <option>normal</option>
+    <option>nowrap</option>
+    <option>pre</option>
+    <option>pre-wrap</option>
+    <option>pre-line</option>
+    <option>break-spaces</option>
+  </select> }
+</div>
+<div id="results" class="box">
+  <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-&lt;/div&gt;</pre>
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+```
 
-<pre class="brush: css">.box {
+```css hidden
+.box {
   width: 300px;
   padding: 16px;
   border-radius: 10px;
@@ -185,62 +214,33 @@ white-space: unset;
   height: 400px;
   white-space: normal;
   font-size: 14px;
-}</pre>
+}
+```
 
-<pre class="brush: js">var select  = document.querySelector("#css-code select");
+```js hidden
+var select  = document.querySelector("#css-code select");
 var results = document.querySelector("#results p");
 select.addEventListener("change", function(e) {
   results.setAttribute("style", "white-space: "+e.target.value);
-})</pre>
-</div>
+})
+```
 
-<h3 id="Source" name="Source">ソース</h3>
+```html
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+```
 
-<pre class="brush: html">&lt;p&gt;    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+#### 結果
 
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+{{EmbedLiveSample("In_action", "100%", 500)}}
 
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+## 仕様書
 
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</pre>
+{{Specifications}}
 
-<h3 id="CSS_Result" name="CSS_Result">CSS を加えた結果</h3>
+## ブラウザーの互換性
 
-<p>{{EmbedLiveSample("See_it_in_action_LiveSample", "100%", 500)}}</p>
+{{Compat}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 関連情報
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Text", "#propdef-white-space", "white-space")}}</td>
-   <td>{{Spec2("CSS3 Text")}}</td>
-   <td>折り返しアルゴリズムの詳細を記述。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "text.html#white-space-prop", "white-space")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
-
-<p>{{CSSInfo}}</p>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p>{{Compat("css.properties.white-space")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><em>内部での</em>折り返しを定義するプロパティ: {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}</li>
-</ul>
+- *内部での*折り返しを定義するプロパティ: {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}
