@@ -9,7 +9,6 @@ tags:
   - Reference
 translation_of: Web/API/URL/hash
 ---
-
 {{ APIRef("URL API") }}
 
 Свойство **`hash`** интерфейса {{domxref("URL")}} — это строка типа {{domxref("USVString")}},
