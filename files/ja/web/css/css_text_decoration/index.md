@@ -9,45 +9,36 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Text_Decoration
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><ruby><strong>CSS テキスト装飾</strong><rp> (</rp><rt>Text Decoration</rt><rp>) </rp></ruby>は CSS のモジュールの一つで、下線、テキストの影、圏点など、テキスト装飾に関連する機能を定義します。</p>
+**CSS テキスト装飾** (CSS Text Decoration) は CSS のモジュールの一つで、下線、テキストの影、圏点など、テキスト装飾に関連する機能を定義します。</p>
 
-<h2 id="Reference" name="Reference">リファレンス</h2>
+## リファレンス
 
-<h3 id="Properties" name="Properties">プロパティ</h3>
+### プロパティ
 
-<div class="index">
-<ul>
- <li>{{cssxref("letter-spacing")}}</li>
- <li>{{cssxref("text-align")}}</li>
- <li>{{cssxref("text-decoration")}}</li>
- <li>{{cssxref("text-decoration-color")}}</li>
- <li>{{cssxref("text-decoration-line")}}</li>
- <li>{{cssxref("text-decoration-offset")}}</li>
- <li>{{cssxref("text-decoration-skip-ink")}}</li>
- <li>{{cssxref("text-decoration-style")}}</li>
- <li>{{cssxref("text-decoration-thickness")}}</li>
- <li>{{cssxref("text-emphasis")}}</li>
- <li>{{cssxref("text-emphasis-color")}}</li>
- <li>{{cssxref("text-emphasis-position")}}</li>
- <li>{{cssxref("text-emphasis-style")}}</li>
- <li>{{cssxref("text-indent")}}</li>
- <li>{{cssxref("text-rendering")}}</li>
- <li>{{cssxref("text-shadow")}}</li>
- <li>{{cssxref("text-transform")}}</li>
- <li>{{cssxref("white-space")}}</li>
- <li>{{cssxref("word-spacing")}}</li>
-</ul>
-</div>
+- {{cssxref("text-decoration")}}
+- {{cssxref("text-decoration-color")}}
+- {{cssxref("text-decoration-line")}}
+- {{cssxref("text-decoration-skip-ink")}}
+- {{cssxref("text-decoration-style")}}
+- {{cssxref("text-decoration-thickness")}}
+- {{cssxref("text-emphasis")}}
+- {{cssxref("text-emphasis-color")}}
+- {{cssxref("text-emphasis-position")}}
+- {{cssxref("text-emphasis-style")}}
+- {{cssxref("text-shadow")}}
+- {{cssxref("text-underline-offset")}}
+- {{cssxref("text-underline-position")}}
 
-<h2 id="Guides" name="Guides">ガイド</h2>
+### ガイド
 
-<p><em>なし。</em></p>
+_なし。_
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<pre class="brush: css notranslate">.under {
+```css
+.under {
   text-decoration: underline red;
 }
 
@@ -74,53 +65,25 @@ translation_of: Web/CSS/CSS_Text_Decoration
 .blink {
   text-decoration: blink;
 }
-</pre>
+```
 
-<pre class="brush: html notranslate">&lt;p class="under"&gt;This text has a line underneath it.&lt;/p&gt;
-&lt;p class="over"&gt;This text has a line over it.&lt;/p&gt;
-&lt;p class="line"&gt;This text has a line going through it.&lt;/p&gt;
-&lt;p&gt;This &lt;a class="plain" href="#"&gt;link will not be underlined&lt;/a&gt;,
-    as links generally are by default. Be careful when removing
-    the text decoration on anchors since users often depend on
-    the underline to denote hyperlinks.&lt;/p&gt;
-&lt;p class="underover"&gt;This text has lines above &lt;em&gt;and&lt;/em&gt; below it.&lt;/p&gt;
-&lt;p class="thick"&gt;This text has a really thick purple underline in supporting browsers.&lt;/p&gt;
-&lt;p class="blink"&gt;This text might blink for you,
-    depending on the browser you use.&lt;/p&gt;
-</pre>
+```html
+<p class="under">このテキストには下付近に 1 本の線があります。</p>
+<p class="over">このテキストの上に線があります。</p>
+<p class="line">このテキストには取り消し線があります。</p>
+<p>この<a class="plain" href="#">リンクには下線が引かれていません</a>が、リンクは一般的には既定で下線があります。ユーザーはハイパーリンクを示すアンダーラインを頼りにしていることが多いので、アンカーの文字装飾を削除する場合は注意が必要です。</p>
+<p class="underover">このテキストには上<em>と</em>下に線があります。</p>
+<p class="thick">対応しているブラウザーでは、このテキストは実に太い紫色の下線があります。</p>
+<p class="blink">使用しているブラウザーによっては、このテキストは点滅しているかもしれません。</p>
+```
 
-<p>{{EmbedLiveSample('Examples','auto','320')}}</p>
+{{EmbedLiveSample('Examples','auto','320')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Text Decoration')}}</td>
-   <td>{{Spec2('CSS4 Text Decoration')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Text Decoration')}}</td>
-   <td>{{Spec2('CSS3 Text Decoration')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'text.html')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                    | 状態                                       | 備考            |
+| ------------------------------------------------ | -------------------------------------------- | ------------------ |
+| {{SpecName('CSS4 Text Decoration')}} | {{Spec2('CSS4 Text Decoration')}} |                    |
+| {{SpecName('CSS3 Text Decoration')}} | {{Spec2('CSS3 Text Decoration')}} |                    |
+| {{SpecName('CSS2.1', 'text.html')}} | {{Spec2('CSS2.1')}}                     |                    |
+| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}                     | 初回定義 |
