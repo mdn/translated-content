@@ -33,7 +33,7 @@ browser-compat: html.elements.audio
 <p>Cet élément inclut les <a href="/fr/docs/Web/HTML/Global_attributes">attributs universels</a>.</p>
 
 <dl>
-  <dt><strong id="attr-autoplay"><code>autoplay</code></strong></dt>
+  <dt><strong><code>autoplay</code></strong></dt>
   <dd>Un attribut booléen : s'il est spécifié, l'audio commencera automatiquement la lecture dès qu'il pourra le faire, sans attendre la fin du téléchargement de l'ensemble du fichier audio.
 
     <div class="notecard note">
@@ -41,9 +41,9 @@ browser-compat: html.elements.audio
       <p>Les sites qui diffusent automatiquement de l'audio (ou des vidéos avec une piste audio) peuvent s'avérer désagréables pour les utilisateurs et doivent donc être évités dans la mesure du possible. Si vous devez offrir une fonctionnalité de lecture automatique, vous devez la soumettre au choix de l'utilisateur. Cependant, cela peut être utile lors de la création d'éléments médias dont la source sera définie ultérieurement, sous le contrôle de l'utilisateur. Consultez notre <a href="/fr/docs/Web/Media/Autoplay_guide">guide sur la lecture automatique</a> pour obtenir des informations supplémentaires sur la manière d'utiliser correctement la fonction <i>autoplay</i>.</p>
     </div>
   </dd>
-  <dt><strong id="attr-controls"><code>controls</code></strong></dt>
+  <dt><strong><code>controls</code></strong></dt>
   <dd>Si l'attribut est présent, le navigateur affichera des contrôles pour que l'utilisateur puisse gérer la lecture, le volume, et le déplacement du curseur de lecture.</dd>
-  <dt><strong id="attr-crossorigin"><code>crossorigin</code></strong></dt>
+  <dt><strong><code>crossorigin</code></strong></dt>
   <dd>Cet attribut à valeur contrainte indique comment le CORS doit être utilisé afin de récupérer la ressource. <a href="/fr/docs/Web/HTML/CORS_enabled_image">Les ressources utilisant le CORS</a> peuvent être réutilisées dans un élément <a href="/fr/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a> sans corrompre celui-ci. Les valeurs autorisées pour cet attribut sont :
   <dl>
     <dt><code>anonymous</code></dt>
@@ -52,18 +52,18 @@ browser-compat: html.elements.audio
     <dd>Une requête multi-origine est envoyée avec une information d'authentification (c'est-à-dire avec un en-tête HTTP <code>Origin:</code> qui contient un cookie, un certificat ou effectuant une authentification HTTP).</dd>
   </dl>
   Lorsque cet attribut n'est pas présent, la ressource est récupérée sans requête CORS et empêche ainsi d'utiliser la ressource dans un <a href="/fr/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a>. Si la valeur fournie est invalide, elle sera considérée comme <code>anonymous</code>. Voir <a href="/fr/docs/Web/HTML/Attributes/crossorigin">Paramétrage des attributs relatifs au CORS</a> pour plus d'informations.</dd>
-  <dt><strong id="attr-disableRemotePlayback"><code>disableRemotePlayback</code></strong> {{experimental_inline}}</dt>
+  <dt><strong><code>disableRemotePlayback</code></strong> {{experimental_inline}}</dt>
   <dd>Un attribut booléen utilisé pour désactiver la capacité de lecture à distance dans les appareils qui sont connectés à l'aide de câbles (HDMI, DVI, etc.) et sans fil (Miracast, Chromecast, DLNA, AirPlay, etc.). Voir <a href="https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute">cette proposition de spécification</a> pour plus d'informations.
     <div class="notecard note">
       <p><b>Note :</b></p>
       <p>Dans Safari, vous pouvez utiliser <a href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html"><code>x-webkit-airplay="deny"</code></a> comme solution de repli.</p>
     </div>
   </dd>
-  <dt><strong id="attr-loop"><code>loop</code></strong></dt>
+  <dt><strong><code>loop</code></strong></dt>
   <dd>Un attribut booléen. S'il est renseigné, la lecture du fichier se fera en boucle.</dd>
-  <dt><strong id="attr-muted"><code>muted</code></strong></dt>
+  <dt><strong><code>muted</code></strong></dt>
   <dd>Un attribut booléen, indiquant si le son de l'élément audio est initialement coupé. Sa valeur par défaut est <code>false</code>.</dd>
-  <dt><strong id="attr-preload"><code>preload</code></strong></dt>
+  <dt><strong><code>preload</code></strong></dt>
   <dd>Cet attribut indique au navigateur ce que l'auteur du code html pense de l'utilisation optimale de cet élément. Il accepte uniquement les valeurs suivantes :<br>
 
     <ul>
@@ -83,7 +83,7 @@ browser-compat: html.elements.audio
        </ul>
     </div>
   </dd>
-  <dt><strong id="attr-src"><code>src</code></strong></dt>
+  <dt><strong><code>src</code></strong></dt>
   <dd>L'URL du fichier audio à intégrer. Cet élément est soumis aux <a href="/fr/docs/Web/HTTP/CORS">contrôles d'accès HTTP</a>. Cet attribut est facultatif ; vous pouvez utiliser l'élément <a href="/fr/docs/Web/HTML/Element/Source"><code>&lt;source&gt;</code></a> dans le bloc audio pour spécifier l'audio à intégrer.</dd>
 </dl>
 

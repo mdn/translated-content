@@ -99,18 +99,18 @@ translation_of: Web/HTML/Element/input/range
 
 <p>Par défaut, la granularité vaut 1, ce qui signifie que la valeur est toujours un entier. Cela peut être modifié grâce à l'attribut {{htmlattrxref("step")}} qui permet de contrôler la granularité. Ainsi, si on souhaite une valeur comprise entre 5 et 10 et précise avec deux chiffres après la virgule, on pourra utiliser l'attribut <code>step</code> avec la valeur 0.01 :</p>
 
-<div id="Granularity_sample1">
+<h4 id="Exemple_1">Exemple 1</h4>
 <pre class="brush: html">&lt;input type="range" min="5" max="10" step="0.01"&gt;</pre>
 
-<p>{{EmbedLiveSample("Granularity_sample1", 600, 40)}}</p>
-</div>
+<p>{{EmbedLiveSample("Exemple_1", 600, 40)}}</p>
+
+<h4 id="Exemple_2">Exemple 2</h4>
 
 <p>Si on souhaite prendre en charge n'importe quelle valeur, quel que soit le nombre de décimales, on pourra utiliser la valeur <code>any</code> pour l'attribut <code>step</code> :</p>
 
-<div id="Granularity_sample2">
 <pre class="brush: html">&lt;input type="range" min="0" max="3.14" step="any"&gt;</pre>
 
-<p>{{EmbedLiveSample("Granularity_sample2", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Exemple_2", 600, 40)}}</p>
 
 <p>Cet exemple permet à l'utilisateur de choisir une valeur entre 0 et 3.14 sans aucune restriction quant à la partie décimale.</p>
 </div>
@@ -221,38 +221,39 @@ translation_of: Web/HTML/Element/input/range
 
 <p>Par exemple :</p>
 
-<div id="Orientation_sample1">
-<pre class="brush: html">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
-</div>
+<h4 id="horizontal">Horizontal</h4>
 
-<p>{{EmbedLiveSample("Orientation_sample1", 200, 200, "https://mdn.mozillademos.org/files/14983/Orientation_sample1.png")}}</p>
+<pre class="brush: html">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
+
+<p>{{EmbedLiveSample("horizontal", 200, 200, "https://mdn.mozillademos.org/files/14983/Orientation_sample1.png")}}</p>
 
 <p>Le contrôle est ici horizontal, pour le rendre vertical, on pourra utiliser un peu de CSS afin de le rendre plus haut que large :</p>
 
-<div id="Orientation_sample2">
-<h4 id="CSS">CSS</h4>
+<h4 id="vertical">Vertical</h4>
+
+<h5 id="CSS">CSS</h5>
 
 <pre class="brush: css">#volume {
   height: 150px;
   width: 50px;
 }</pre>
 
-<h4 id="HTML">HTML</h4>
+<h5 id="HTML">HTML</h5>
 
 <pre class="brush: html">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
 
-<h4 id="Result">Result</h4>
+<h5 id="Result">Résultat</h5>
 
-<p>{{EmbedLiveSample("Orientation_sample2", 200, 200, "https://mdn.mozillademos.org/files/14985/Orientation_sample2.png")}}</p>
+<p>{{EmbedLiveSample("vertical", 200, 200, "https://mdn.mozillademos.org/files/14985/Orientation_sample2.png")}}</p>
 
 <p><strong>Currently, no major browsers support creating vertical range inputs using CSS this way, even though it's the way the specification recommends they do it.</strong></p>
-</div>
-</div>
+
 
 <p>La spécification HTML recommande de dessiner les contrôles verticalement lorsque la hauteur de celui-ci est supérieure à la largeur. Malheureusement, aucun navigateur ne prend actuellement en charge cette fonctionnalité directement. On peut toutefois dessiner un contrôle vertical en appliquant une rotation sur un contrôle horizontal avec du code CSS et notamment {{cssxref("transform")}} pour tourner l'élément.</p>
 
-<div id="Orientation_sample3">
-<h4 id="HTML_2">HTML</h4>
+<h4 id="Autre_exemple">Autre exemple</h4>
+
+<h5 id="HTML_2">HTML</h5>
 
 <p>Il est nécessaire de placer l'élément {{HTMLElement("input")}} dans un élément {{HTMLElement("div")}} afin de corriger la disposition une fois la transformation appliquée :</p>
 
@@ -260,7 +261,7 @@ translation_of: Web/HTML/Element/input/range
   &lt;input type="range" min="0" max="11" value="7" step="1"&gt;
 &lt;/div&gt;</pre>
 
-<h4 id="CSS_2">CSS</h4>
+<h5 id="CSS_2">CSS</h5>
 
 <p>Ensuite, on applique quelques règles CSS. Voici la règle CSS pour l'élément <code>div</code> qui indique le mode d'affichage et la taille qu'on souhaite avoir pour que la page soit correctement organisée..</p>
 
@@ -283,10 +284,9 @@ Ensuite, on applique une transformation sur l'élément <code>&lt;input&gt;</cod
 
 <p>Le contrôle mesure alors 150 pixels de long et 20 pixels de haut. Les marges sont nulles et {{cssxref("transform-origin")}} est décalé vers le milieu du contrôle. Le contrôle mesurant 150 pixels de large, décaler le centre de rotation permet d'avoir la zone de destination centrée avec 75 pixels de chaque côté.</p>
 
-<h4 id="Résultat">Résultat</h4>
+<h5 id="Résultat">Résultat</h5>
 
-<p>{{EmbedLiveSample("Orientation_sample3", 200, 200, "https://mdn.mozillademos.org/files/14987/Orientation_sample3.png")}}</p>
-</div>
+<p>{{EmbedLiveSample("Autre_exemple", 200, 200, "https://mdn.mozillademos.org/files/14987/Orientation_sample3.png")}}</p>
 
 <h2 id="Validation">Validation</h2>
 

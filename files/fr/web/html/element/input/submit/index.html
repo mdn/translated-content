@@ -13,11 +13,11 @@ translation_of: Web/HTML/Element/input/submit
 
 <p>Les éléments {{HTMLElement("input")}} dont l'attribut <code>type</code> vaut <strong><code>"submit"</code></strong> sont affichés comme des boutons permettant d'envoyer les données d'un formulaire. Cliquer sur un tel bouton déclenchera l'envoi des données du formulaire vers le serveur.</p>
 
-<div id="summary-example2">
-<pre class="brush: html">&lt;input type="submit" value="Envoyer le formulaire"&gt;</pre>
-</div>
+<h2 id="Exemple_simple">Exemple simple</h2>
 
-<p>{{EmbedLiveSample("summary-example2", 650, 30)}}</p>
+<pre class="brush: html">&lt;input type="submit" value="Envoyer le formulaire"&gt;</pre>
+
+<p>{{EmbedLiveSample("Exemple_simple", 650, 30)}}</p>
 
 <h2 id="Valeur">Valeur</h2>
 
@@ -25,11 +25,11 @@ translation_of: Web/HTML/Element/input/submit
 
 <p>Si on n'indique aucune valeur, ce sera un texte par défaut (dépendant du navigateur) qui sera utilisé ainsi que du système d'éxploitation:</p>
 
-<div id="summary-example1">
-<pre class="brush: html">&lt;input type="submit"&gt;</pre>
-</div>
+<h3 id="Exemple_avec_valeur_par_défaut">Exemple avec valeur par défaut</h3>
 
-<p>{{EmbedLiveSample("summary-example1", 650, 30)}}</p>
+<pre class="brush: html">&lt;input type="submit"&gt;</pre>
+
+<p>{{EmbedLiveSample("Exemple_avec_valeur_par_défaut", 650, 30)}}</p>
 
 <h2 id="Attributs_supplémentaires">Attributs supplémentaires</h2>
 
@@ -185,9 +185,7 @@ translation_of: Web/HTML/Element/input/submit
 
 <p>Si on souhaite désactiver un bouton, il sufft d'utiliser l'attribut booléen universel {{htmlattrxref("disabled")}} :</p>
 
-<div id="disable-example1">
 <pre class="brush: html">&lt;input type="submit" value="Disabled" disabled&gt;</pre>
-</div>
 
 <p>Pour activer / désactiver le bouton dynamiquement, on pourra manipuler l'attribut DOM <code>disabled</code> avec la valeur <code>true</code> ou <code>false</code> en JavaScript (avec une instruction similaire à <code>btn.disabled = true</code>).</p>
 

@@ -22,19 +22,18 @@ translation_of: Web/HTML/Element/input/reset
 
 <p>La valeur de l'attribut <code>value</code> d'un élément <code>&lt;input type="reset"&gt;</code> contient une chaîne de caractères ({{domxref("DOMString")}}) utilisée comme texte sur le bouton.</p>
 
-<div id="summary-example3">
+<h3 id="Exemple_1">Exemple 1</h3>
 <pre class="brush: html">&lt;input type="reset" value="Réinitialiser le formulaire"&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("summary-example3", 650, 30)}}</p>
+<p>{{EmbedLiveSample("Exemple_1", 650, 30)}}</p>
 
 <p>Si aucune valeur n'est indiquée, le bouton aura le texte par défaut « Réinitialiser » :</p>
 
-<div id="summary-example1">
-<pre class="brush: html">&lt;input type="reset"&gt;</pre>
-</div>
+<h3 id="Exemple_2">Exemple 2</h3>
 
-<p>{{EmbedLiveSample("summary-example1", 650, 30)}}</p>
+<pre class="brush: html">&lt;input type="reset"&gt;</pre>
+
+<p>{{EmbedLiveSample("Exemple_2", 650, 30)}}</p>
 
 <h2 id="Utiliser_les_boutons_de_réinitialisation">Utiliser les boutons de réinitialisation</h2>
 
@@ -88,9 +87,7 @@ translation_of: Web/HTML/Element/input/reset
 
 <p>Pour désactiver un bouton de réinitialisation, il suffit d'appliquer l'attribut {{htmlattrxref("disabled")}} sur l'élément :</p>
 
-<div id="disable-example1">
 <pre class="brush: html">&lt;input type="reset" value="Désactivé" disabled&gt;</pre>
-</div>
 
 <p>On peut activer/désactiver le bouton lors de la navigation sur la page avec JavaScript en modifiant la valeur de l'attribut <code>disabled</code> pour la passer de <code>true</code> à <code>false</code> et <em>vice versa</em> (par exemple avec une instruction telle que <code>btn.disabled = true</code>).</p>
 

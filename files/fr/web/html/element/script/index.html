@@ -36,7 +36,7 @@ translation_of: Web/HTML/Element/script
  <dd>Cet attribut booléen indique que le script ne doit pas être exécuté dans le navigateur si celui prend en charge <a href="https://tech.mozfr.org/post/2015/08/21/ES6-en-details-%3A-les-modules">les modules ES6</a>. En pratique, de tels scripts seront utilisés pour couvrir les cas où le navigateur ne prend pas en charge les modules JavaScript.</dd>
  <dt>{{htmlattrdef("nonce")}}</dt>
  <dd>Un <em>nonce</em> cryptographique utilisé pour inscrire les scripts en ligne sur une liste blanche pour la règle <code>script-src</code> de la CSP (<em>Content Security Policy</em>). Le serveur doit générer un nonce unique chaque fois qu'il transmet une règle de sécurité. Ce nonce ne doit pas pouvoir être deviné car sinon, il devient trivial d'outrepasser la règle de sécurité.</dd>
- <dt id="attr-referrer">{{htmlattrdef("referrerpolicy")}}</dt>
+ <dt>{{htmlattrdef("referrerpolicy")}}</dt>
  <dd>Une chaîne de caractères qui indique le référent (<em>referrer</em>) à utiliser lors de la récupération du script :
  <ul>
   <li><code>no-referrer</code> signifie que l'en-tête {{HTTPHeader("Referer")}} ne sera pas envoyé.</li>

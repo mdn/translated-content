@@ -27,7 +27,7 @@ browser-compat: html.elements.a
 <p>Cet élément inclut les <a href="/fr/docs/Web/HTML/Global_attributes">attributs universels</a>.</p>
 
 <dl>
-  <dt><strong id="attr-download"><code>download</code></strong></dt>
+  <dt><strong><code>download</code></strong></dt>
   <dd>
     <ul>
       <li>Sans valeur, le navigateur proposera un nom de fichier/extension, généré à partir de diverses sources :
@@ -53,7 +53,7 @@ browser-compat: html.elements.a
       </ul>
     </div>
   </dd>
-  <dt><strong id="attr-href"><code>href</code></strong></dt>
+  <dt><strong><code>href</code></strong></dt>
   <dd>
     <p>L'URL vers laquelle pointe l'hyperlien. Les liens ne sont pas limités aux URL basées sur HTTP - ils peuvent utiliser n'importe quel schéma d'URL pris en charge par les navigateurs :</p>
     <ul>
@@ -64,15 +64,15 @@ browser-compat: html.elements.a
       <li>Bien que les navigateurs web puissent ne pas prendre en charge d'autres schémas d'URL, les sites web le peuvent avec <a href="/fr/docs/Web/API/Navigator/registerProtocolHandler"><code>registerProtocolHandler()</code></a>.</li>
     </ul>
   </dd>
-  <dt><strong id="attr-hreflang"><code>hreflang</code></strong></dt>
+  <dt><strong><code>hreflang</code></strong></dt>
   <dd>Donne des indications sur le langage humain de l'URL liée. Aucune fonctionnalité intégrée. Les valeurs autorisées sont les mêmes que <a href="/fr/docs/Web/HTML/Global_attributes/lang">l'attribut global <code>lang</code></a>.</dd>
-  <dt><strong id="attr-ping"><code>ping</code></strong></dt>
+  <dt><strong><code>ping</code></strong></dt>
   <dd>Contient une liste d'URL séparées par des espaces vers lesquelles sont envoyées des requêtes <a href="/fr/docs/Web/HTTP/Methods/POST"><code>POST</code></a> avec le corps <code>PING</code> lorsque l'utilisateur suit le lien. Cet attribut est généralement utilisé pour tracer un utilisateur.</dd>
-  <dt><strong id="attr-referrerpolicy"><code>referrerpolicy</code></strong> {{experimental_inline}}</dt>
+  <dt><strong><code>referrerpolicy</code></strong> {{experimental_inline}}</dt>
   <dd>La portion du <a href="/fr/docs/Web/HTTP/Headers/Referer">referrer</a> envoyer lors du suivi du lien. Voir <a href="/fr/docs/Web/HTTP/Headers/Referrer-Policy"><code>Referrer-Policy</code></a> pour les valeurs possibles et leurs effets.</dd>
-  <dt><strong id="attr-rel"><code>rel</code></strong></dt>
+  <dt><strong><code>rel</code></strong></dt>
   <dd>Cet attribut indique la relation entre la cible du lien et l'objet faisant le lien. La valeur est une liste de <a href="/fr/docs/Web/HTML/Link_types">types de liens</a> séparés par des espaces.</dd>
-  <dt><strong id="attr-target"><code>target</code></strong></dt>
+  <dt><strong><code>target</code></strong></dt>
   <dd>Où afficher l'URL liée, comme nom d'un <em>contexte de navigation</em> (un onglet, une fenêtre ou un <a href="/fr/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a>). Les mots-clés suivants ont des significations spéciales pour l'endroit où charger l'URL :
     <ul>
       <li><code>_self</code> : le contexte de navigation actuel. (Par défaut)</li>
@@ -85,32 +85,32 @@ browser-compat: html.elements.a
       <p>Définir <code>target="_blank"</code> sur les éléments <code>&lt;a&gt;</code> fournit implicitement le même comportement <code>rel</code> que définir <a href="/fr/docs/Web/HTML/Link_types/noopener"><code>rel="noopener"</code></a> qui ne définit pas <code>window.opener</code>. Voir la <a href="#browser_compatibility">compatibilité des navigateurs</a> pour le support.</p>
     </div>
   </dd>
-  <dt><strong id="attr-type"><code>type</code></strong></dt>
+  <dt><strong><code>type</code></strong></dt>
   <dd>Donne des indications sur le format de l'URL liée avec un <a href="/fr/docs/Glossary/MIME_type">Type MIME</a>. Aucune fonctionnalité intégrée.</dd>
 </dl>
 
 <h3 id="deprecated_attributes">Attributs obsolètes</h3>
 
 <dl>
-  <dt id="charset"><strong id="attr-charset"><code>charset</code></strong> {{Deprecated_Inline}}</dt>
+  <dt><strong><code>charset</code></strong> {{Deprecated_Inline}}</dt>
   <dd>Fait allusion aux <a href="/fr/docs/Glossary/character_encoding">encodages des caractères</a> de l'URL liée.
     <div class="notecard note">
       <p><b>Note :</b></p>
       <p>Cet attribut est déprécié et <strong>ne doit pas être utilisé par les auteurs</strong>. Utilisez l'en-tête HTTP <a href="/fr/docs/Web/HTTP/Headers/Content-Type"><code>Content-Type</code></a> sur l'URL liée.</p>
     </div>
   </dd>
-  <dt id="coords"><strong id="attr-coords"><code>coords</code></strong> {{Deprecated_Inline}}</dt>
+  <dt><strong><code>coords</code></strong> {{Deprecated_Inline}}</dt>
   <dd>Utilisé avec <a href="#shape">l'attribut <code>shape</code></a>. Une liste de coordonnées séparées par des virgules.</dd>
-  <dt id="name"><strong id="attr-name"><code>name</code></strong> {{Deprecated_Inline}}</dt>
+  <dt><strong><code>name</code></strong> {{Deprecated_Inline}}</dt>
   <dd>Était nécessaire pour définir un emplacement cible possible dans une page. En HTML 4.01, <code>id</code> et <code>name</code> pouvaient tous deux être utilisés sur <code>&lt;a&gt;</code>, pour autant qu'ils aient des valeurs identiques.
     <div class="notecard note">
       <p><b>Note :</b></p>
       <p>Utilisez l'attribut universel <a href="/fr/docs/Web/HTML/Global_attributes#attr-id"><code>id</code></a> à la place.</p>
     </div>
   </dd>
-  <dt id="rev"><strong id="attr-rev"><code>rev</code></strong> {{Deprecated_Inline}}</dt>
+  <dt><strong><code>rev</code></strong> {{Deprecated_Inline}}</dt>
   <dd>Spécifiait un lien inverse ; l'opposé de <a href="#rel">l'attribut <code>rel</code></a>. Déprécié pour avoir été très confus.</dd>
-  <dt id="shape"><strong id="attr-shape"><code>shape</code></strong> {{Deprecated_Inline}}</dt>
+  <dt><strong><code>shape</code></strong> {{Deprecated_Inline}}</dt>
   <dd>La forme de la région de l'hyperlien dans une carte d'image.
     <div class="notecard note">
       <p><b>Note :</b></p>

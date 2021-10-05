@@ -79,14 +79,12 @@ translation_of: Web/HTML/Element/input/number
 
 <h3 id="htmlattrdef(step)">{{htmlattrdef("step")}}</h3>
 
-<div id="step-include">
 <p>L'attribut <code>step</code> est un nombre qui définit la granularité de la valeur ou le mot-clé <code>any</code>. Seule les valeurs qui sont des multiples de cet attribut depuis le seuil <code>{{anch("min")}}</code> sont valides.</p>
 
 <p>Lorsque la chaîne de caractères <code>any</code> est utilisée, cela indique qu'aucun incrément spécifique n'est défini et que toute valeur (comprise entre <code>{{anch("min")}}</code> et <code>{{anch("max")}}</code>) est valide.</p>
 
 <div class="note">
 <p><strong>Note :</strong> Lorsque les données saisies par l'utilisateur ne correspondent pas à l'incrément indiqué, l'agent utilisateur pourra arrondir à la valeur valide la plus proche (en choisissant les nombres les plus grands lorsque deux sont équidistants.</p>
-</div>
 </div>
 
 <p>Pour les champs <code>number</code>, l'incrément par défaut est 1 et ne permet donc que de saisir des entiers si la valeur de base est entière. Ainsi, si on a <code>min</code> qui vaut -10 et <code>value</code> qui vaut 1.5, si on a <code>step</code> qui vaut 1, seules les valeurs 1.5, 2.5, 3.5,... -0.5, -1.5, -2.5,... seront valides.</p>
