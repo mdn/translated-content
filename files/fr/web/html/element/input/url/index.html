@@ -14,8 +14,6 @@ translation_of: Web/HTML/Element/input/url
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <p>La valeur saisie est automatiquement validée par le navigateur qui vérifie qu'elle est vide ou formatée correctement avant que le formulaire puisse être envoyé. Les pseudo-classes {{cssxref(":valid")}} et {{cssxref(":invalid")}} sont appliquées auomatiquement selon le cas de figure.</p>
 
 <div class="note">
@@ -259,8 +257,7 @@ translation_of: Web/HTML/Element/input/url
 
 <p>Les contrôles de type <code>"url"</code> utilisant la validation native pour vérifier que c'est une URL bien formée et une validation spécifique via l'attribut {{htmlattrxref("pattern", "input")}}, on peut implémenter cette contrainte facilement :</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
   }
@@ -282,8 +279,8 @@ translation_of: Web/HTML/Element/input/url
     position: absolute;
     content: '✓';
     padding-left: 5px;
-  }</pre>
-</div>
+  }
+</pre>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;div&gt;

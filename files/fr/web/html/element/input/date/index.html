@@ -15,8 +15,6 @@ translation_of: Web/HTML/Element/input/date
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <p>L'apparence du contrôle affiché dépend du navigateur utilisé et la prise en charge de cette fonctionnalité est hétérogène (cf. la section {{anch("Compatibilité des navigateurs")}} pour plus de détails). Pour les navigateurs qui ne prennent pas en charge ce type d'élément <code>&lt;input&gt;</code>, c'est un simple <code><a href="/fr/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> qui sera affiché.</p>
 
 <p>Si votre navigateur actuel prend en charge cette fonctionnalité, voici ce à quoi ressemble le contrôle sous Chrome/Opera :</p>
@@ -234,8 +232,7 @@ input:valid+span:after {
 
 <p>Si vous tentez d'envoyer ce formulaire, vous pourrez voir que le navigateur affiche un message d'erreur et met en évidence la valeur invalide si la valeur saisie ne correspond pas au motif <code>nnnn-nn-nn</code> (avec <code>n</code> un chiffre entre 0 et 9). Bien entendu, cela n'empêche pas de saisir des dates invalides ou mal formatées (par exemple avec le motif <code>yyyy-dd-mm</code> alors qu'on souhaiterait avoir <code>yyyy-mm-dd</code>). Il reste donc un problème.</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
 }
 
@@ -258,7 +255,6 @@ input:valid + span:after {
   position: absolute;
   right: -18px;
 }</pre>
-</div>
 
 <p>C'est pour cela que la meilleure solution consiste à avoir trois champs de saisie distincts à destination de l'utilisateur : un pour saisir les jours, le deuxième pour les mois et un troisième pour l'année (chacun avec un élément ({{htmlelement("select")}}). On peut également opter pour l'utilisation d'un bibliothèque JavaScript telle que <a href="https://jqueryui.com/datepicker/">le sélecteur de date jQuery (jQuery date picker)</a>.</p>
 
@@ -310,8 +306,7 @@ input:valid + span:after {
 
 <p>Les mois sont écrits « en dur » (ce sont toujours les mêmes) alors que les valeurs pour les jours et les années sont générées dynamiquement en fonction du mois et de l'année sélectionnées (voir les commentaires ci-après qui expliquent le détail des fonctions).</p>
 
-<div class="hidden">
-<pre class="brush: css">input:invalid+span:after {
+<pre class="brush: css hidden">input:invalid+span:after {
   content: '✖';
   padding-left: 5px;
 }
@@ -320,7 +315,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <p>Une autre partie intéressante est celle où on détecte si le navigateur prend charge la fonctionnalité native <code>&lt;input type="date"&gt;</code>. Pour cela, on crée un nouvelle élément {{htmlelement("input")}} et on change son type en <code>date</code> puis ensuite, on vérifie immédiatement la valeur de son type : pour les navigateurs qui ne prennent pas en charge l'élément natif, ils renverront la valeur <code>text</code> car l'élément natif aura été « converti ». Dans ce cas, on masque le sélecteur natif et on affiche le sélecteur alternatif (celui qui contient les éléments {{htmlelement("select")}}).</p>
 

@@ -301,8 +301,7 @@ input:valid+span:after {
 
 <p>Il reste donc un problème.</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -326,7 +325,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <p>Actuellement, la meilleure façon de gérer ce type de saisie pour les différents navigateurs consiste à utiliser deux contrôles (le premier pour la saisie des heures et le second pour la saisie des minutes) avec deux éléments {{htmlelement("select")}} (cf. ci-après) ou d'utiliser certaines bibliothèques JavaScript telles que <a href="https://jqueryui.com/datepicker/">jQuery date picker</a> ou encore <a href="http://timepicker.co/">jQuery timepicker plugin</a>.</p>
 
@@ -364,8 +362,7 @@ input:valid+span:after {
 
 <p>Les valeurs pour les heures et les minutes seront générées dynamiquement en JavaScript.</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -389,7 +386,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <p>La partie la plus intéressante du code est celle qui permet de détecter si le contrôle natif est pris en charge. Pour cela, on crée un nouvel élément {{htmlelement("input")}} et on modifie son attribut <code>type</code> afin qu'il vaille <code>time</code>, immédiatement après, on vérifie la valeur du type. Si le navigateur ne prend pas en charge l'élément, il renverra <code>text</code> car l'élément a été transformé en <code>&lt;input type="text"&gt;</code>, dans ce cas, on masque le sélecteur natif et on affiche l'interface alternative avec les deux éléments {{htmlelement("select")}}.</p>
 

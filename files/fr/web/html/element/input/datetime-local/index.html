@@ -16,8 +16,6 @@ translation_of: Web/HTML/Element/input/datetime-local
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}</div>
 
-<div class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</div>
-
 <p>L'interface utilisateur du contrôle varie selon les navigateurs. La prise en charge de cette fonctionnalité est hétérogène : Chrome/Opera et Edge l'implémentent pour les navigateurs de bureau et la plupart des navigateurs mobiles l'implémentent. Pour les navigateurs qui n'implémentent pas cette fonctionnalité, le contrôle utilisé est celui de <code><a href="/fr/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
 
 <p>Les secondes ne sont pas prises en charge.</p>
@@ -277,8 +275,7 @@ input:valid+span:after {
 
 <p>Bref, il y a toujours un problème.</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
 }
 
@@ -301,7 +298,6 @@ input:valid + span:after {
   position: absolute;
   right: -18px;
 }</pre>
-</div>
 
 <p>Actuellement, la meilleure façon de gérer les dates/heures d'une façon homogène pour les différents navigateurs est d'utiliser différents contrôles (via des éléments {{htmlelement("select")}}) pour sélectionner l'année, le jour, le mois, la date et l'heure. Il existe également des bibliothèques JavaScript telles que <a href="https://jqueryui.com/datepicker/">le sélecteur de date jQuery</a> et <a href="https://timepicker.co/">le sélecteur d'heure jQuery</a>.</p>
 
@@ -367,8 +363,7 @@ input:valid + span:after {
 
 <p>Les mois disponibles sont codés de façon statique (ce sont toujours les mêmes). En revanche, les valeurs pour les jours et les années sont générées dynamiquement selon le mois et l'année courante (voir les commentaires du script ci-après). Les heures et les minutes sont également générées dynamiquement.</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -392,7 +387,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <p>Une partie intéressante du code est celle où on détecte la prise en charge de la fonctionnalité. Pour cela, dans le script, on crée un nouvel élément {{htmlelement("input")}} auquel on attribut le type <code>datetime-local</code> puis on vérifie son type juste après. Pour les navigateurs qui ne prennent pas en charge ce type de contrôle, le type aura changé et sera <code>text</code>. Si c'est le cas, on masque le contrôle natif et on utilise l'interface utilisateur alternative (composée avec les éléments ({{htmlelement("select")}})).</p>
 

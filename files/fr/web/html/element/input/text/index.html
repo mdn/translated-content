@@ -14,8 +14,6 @@ translation_of: Web/HTML/Element/input/text
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-standard")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <h2 id="Valeur">Valeur</h2>
 
 <p>L'attribut {{htmlattrxref("value", "input")}} d'un tel élément contient une chaîne de caractères ({{domxref("DOMString")}}) qui correspond à la valeur contenue dans le champ texte. En JavaScript, cette valeur peut être récupérée avec la propriété JavaScript {{domxref("HTMLInputElement.value","value")}}.</p>
@@ -295,9 +293,7 @@ input:valid+span:after {
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
-</div>
+<pre class="brush: css hidden">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
 
 <p>Ce qui produira ce résultat :</p>
 
@@ -324,9 +320,7 @@ input:valid+span:after {
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
-</div>
+<pre class="brush: css hidden">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
 
 <p>Voici le résultat qui est alors obtenu :</p>
 
