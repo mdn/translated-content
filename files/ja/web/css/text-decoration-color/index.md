@@ -13,24 +13,24 @@ tags:
   - Styling text
   - color
   - colors
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.text-decoration-color
 translation_of: Web/CSS/text-decoration-color
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p><strong><code>text-decoration-color</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、 {{ cssxref("text-decoration-line") }} でテキストに追加された装飾の色を設定します。</p>
+**`text-decoration-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{ cssxref("text-decoration-line") }} でテキストに追加された装飾の色を設定します。
 
-<p>色はプロパティ値のスコープにある装飾、すなわち下線、上線、打消し線、それにスペルミスに印をつけるために使われるような波線などに適用されます。</p>
+色はプロパティ値のスコープにある装飾、すなわち下線、上線、打消し線、それにスペルミスに印をつけるために使われるような波線などに適用されます。
 
-<div>{{EmbedInteractiveExample("pages/css/text-decoration-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-decoration-color.html")}}
 
+CSS はそれぞれの線種ごとに固有の色を指定する仕組みを直接は持っていません。しかしながら、この効果は要素を入れ子にして、それぞれの要素毎に ({{cssxref("text-decoration-line")}} プロパティで) 異なる線種を適用し、 (`text-decoration-color` で) 線の色を指定することで実現できます。
 
-<p>CSS はそれぞれの線種ごとに固有の色を指定する仕組みを直接は持っていません。しかしながら、この効果は要素を入れ子にして、それぞれの要素毎に ({{cssxref("text-decoration-line")}} プロパティで) 異なる線種を適用し、 (code&gt;text-decoration-color で) 線の色を指定することで実現できます。</p>
+## 構文
 
-<h2 id="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;color&gt; 値 */
+```css
+/* <color> 値 */
 text-decoration-color: currentcolor;
 text-decoration-color: red;
 text-decoration-color: #00ff00;
@@ -42,43 +42,42 @@ text-decoration-color: inherit;
 text-decoration-color: initial;
 text-decoration-color: revert;
 text-decoration-color: unset;
-</pre>
+```
 
-<h3 id="Values">値</h3>
+### 値
 
-<dl>
-	<dt>{{cssxref("&lt;color&gt;")}}</dt>
-	<dd>装飾線の色です。</dd>
-</dl>
+- {{cssxref("&lt;color&gt;")}}
+  - : 装飾線の色です。
 
-<h2 id="Accessibility_concerns">アクセシビリティの考慮</h2>
+## アクセシビリティの考慮
 
-<p>テキストの色、テキストが置かれている背景、テキストの装飾線の間のコントラスト比が、弱視の人がページの内容を読むことができるように十分に高いことを確認ことが重要です。色のコントラスト比は、テキストと背景の色の輝度を比較して決定されます。</p>
+テキストの色、テキストが置かれている背景、テキストの装飾線の間のコントラスト比が、弱視の人がページの内容を読むことができるように十分に高いことを確認ことが重要です。色のコントラスト比は、テキストと背景の色の輝度を比較して決定されます。
 
-<p>色だけで意味を伝えるべきではありません。例えば、テキストの色と text-decoration-color の変更だけでは、リンクにフォーカスがあることを示すのに十分ではありません。</p>
+色だけで意味を伝えるべきではありません。例えば、テキストの色と text-decoration-color の変更だけでは、リンクにフォーカスがあることを示すのに十分ではありません。
 
-<ul>
-	<li><a href="https://webaim.org/resources/contrastchecker/">WebAIM: Color Contrast Checker</a></li>
-	<li><a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN "WCAG を理解する ― ガイドライン 1.4 の解説"</a></li>
-	<li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-<h2 id="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h3 id="Formal_syntax">形式文法</h3>
+## 形式文法
 
 {{csssyntax}}
 
 <h2 id="Examples">例</h2>
 
-<h3 id="Basic_example">基本的な例</h3>
+### 基本的な例
 
-<pre class="brush: html">&lt;p&gt;This paragraph has &lt;s&gt;some erroneous text&lt;/s&gt;
-    inside it that I want to call attention to.&lt;/p&gt;</pre>
+```html
+<p>This paragraph has <s>some erroneous text</s>
+    inside it that I want to call attention to.</p>
+```
 
-<pre class="brush: css">p {
+```css
+p {
   text-decoration-line: underline;
   text-decoration-color: cyan;
 }
@@ -87,23 +86,22 @@ s {
   text-decoration-line: line-through;
   text-decoration-color: red;
   text-decoration-style: wavy;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Examples') }}</p>
+{{ EmbedLiveSample('Examples') }}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>複数の行内装飾プロパティを一度に設定するときは、代わりに一括指定の {{cssxref("text-decoration")}} プロパティを使った方が便利かもしれません。</li>
- <li>{{cssxref("&lt;color&gt;")}} データ型</li>
- <li>色に関する他のプロパティ: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}</li>
- <li><a href="/ja/docs/Web/HTML/Applying_color">CSS を使用した HTML 要素への色の適用</a></li>
-</ul>
+- 複数の行内装飾プロパティを一度に設定するときは、代わりに一括指定の {{cssxref("text-decoration")}} プロパティを使った方が便利かもしれません。
+- {{cssxref("&lt;color&gt;")}} データ型
+- 色に関する他のプロパティ: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}
+- [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/HTML/Applying_color)

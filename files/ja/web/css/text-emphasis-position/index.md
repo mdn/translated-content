@@ -3,16 +3,19 @@ title: text-emphasis-position
 slug: Web/CSS/text-emphasis-position
 tags:
   - CSS
-  - CSS テキスト装飾
   - CSS プロパティ
+  - CSS テキスト装飾
   - Reference
+  - recipe:css-property
+browser-compat: css.properties.text-emphasis-position
 translation_of: Web/CSS/text-emphasis-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS" title="CSS">CSS</a> の <strong><code>text-emphasis-position</code></strong> プロパティは、圏点が描かれる位置を設定します。ルビテキストと同様、圏点のために十分な空間がない場合は、行の高さが広げられます。</p>
+**`text-emphasis-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点が描かれる位置を設定します。ルビのテキストと同様、圏点のために十分な空間がない場合は、行の高さが広げられます。
 
-<pre class="brush:css no-line-numbers">/* 初期値 */
+```css
+/* 初期値 */
 text-emphasis-position: over right;
 
 /* キーワード値 */
@@ -27,115 +30,129 @@ text-emphasis-position: left under;
 /* グローバル値 */
 text-emphasis-position: inherit;
 text-emphasis-position: initial;
+text-emphasis-postition: revert;
 text-emphasis-position: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+## 構文
 
-<h2 id="Preferred_position" name="Preferred_position">望ましい位置</h2>
+### 値
 
-<p>圏点の望ましい位置は言語に依存します。例えば日本語では、望ましい位置は <span class="css">over right</span> です。一方中国語では、望ましい位置は <span class="css">under right</span> となります。下記の情報の表は、日本語、モンゴル語、中国語における望ましい圏点の位置を要約するものです。</p>
+- `over`
+  - : 横書きモードでテキストの上に圏点を描きます。
+- `under`
+  - : 横書きモードでテキストの下に圏点を描きます。
+- `right`
+  - : 縦書きモードでテキストの右に圏点を描きます。
+- `left`
+  - : 縦書きモードでテキストの左に圏点を描きます。
+
+## Description
+
+圏点の望ましい位置は言語に依存します。例えば日本語では、望ましい位置は `over right` です。一方、中国語では、望ましい位置は `under right` となります。下記の情報の表は、日本語、モンゴル語、中国語における望ましい圏点の位置をまとめたものです。
 
 <table>
- <caption>望ましい圏点とルビの位置</caption>
- <thead>
-  <tr>
-   <th rowspan="2" scope="col">言語</th>
-   <th colspan="2" scope="col">望ましい位置</th>
-   <th colspan="2" rowspan="2" scope="col">説明</th>
-  </tr>
-  <tr>
-   <th>横書き</th>
-   <th>縦書き</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>日本語</td>
-   <td rowspan="2">over</td>
-   <td rowspan="2">right</td>
-   <td rowspan="2"><img alt="日本語の横書きテキストでは、圏点は強調される各文字の上に表示されます。" src="https://drafts.csswg.org/css-text-decor-3/images/text-emphasis-ja.png" style="height: 28px; width: 225px;" title="日本語のテキストの上に適用された圏点 (分かりやすいよう青で表示)"></td>
-   <td rowspan="3"><img alt="日本語の縦書きテキストでは、圏点が強調される各文字の右に表示されます。" src="https://drafts.csswg.org/css-text-decor-3/images/text-emphasis-v.gif" style="height: 89px; width: 34px;" title="日本語のテキストの右に適用された圏点"></td>
-  </tr>
-  <tr>
-   <td>モンゴル語</td>
-  </tr>
-  <tr>
-   <td>中国語</td>
-   <td>under</td>
-   <td>right</td>
-   <td><img alt="中国語簡体字の横書きテキストでは、圏点は強調される各文字の下に表示されます。" src="https://drafts.csswg.org/css-text-decor-3/images/text-emphasis-zh.gif" style="height: 28px; width: 133px;" title="中国語のテキストの下に適用された圏点 (分かりやすいよう青で表示)"></td>
-  </tr>
- </tbody>
+  <caption>
+    望ましい圏点とルビの位置
+  </caption>
+  <thead>
+    <tr>
+      <th rowspan="2" scope="col">言語</th>
+      <th colspan="2" scope="col">望ましい位置</th>
+      <th colspan="2" rowspan="2" scope="col">図</th>
+    </tr>
+    <tr>
+      <th>横書き</th>
+      <th>縦書き</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>日本語</td>
+      <td rowspan="3">over</td>
+      <td rowspan="3">right</td>
+      <td rowspan="3">
+        <img
+          alt="日本語の横書きテキストでは、圏点は強調される各文字の上に表示されます。"
+          src="text-emphasis-ja.png"
+          title="日本語のテキストの上に適用された圏点 (分かりやすいよう青で表示)"
+        />
+      </td>
+      <td rowspan="4">
+        <img
+          alt="日本語の縦書きテキストでは、圏点が強調される各文字の右に表示されます。"
+          src="text-emphasis-v.gif"
+          title="日本語のテキストの右に適用された圏点"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>韓国語</td>
+    </tr>
+    <tr>
+      <td>モンゴル語</td>
+    </tr>
+    <tr>
+      <td>中国語</td>
+      <td>under</td>
+      <td>right</td>
+      <td>
+        <img
+          alt="中国語簡体字の横書きテキストでは、圏点は強調される各文字の下に表示されます。"
+          src="text-emphasis-zh.gif"
+          title="中国語のテキストの下に適用された圏点 (分かりやすいよう青で表示)"
+        />
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>メモ</strong>: {{cssxref("text-emphasis")}} 一括指定プロパティを使用して、 <code>text-emphasis-position</code> を設定することはできず、また初期化されることもありません。</p>
-</div>
+> **Note:** {{cssxref("text-emphasis")}} 一括指定プロパティを使用して、 `text-emphasis-position` を設定することはできず、また初期化されることもありません。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 公式定義
 
-<h3 id="Values" name="Values">値</h3>
+{{CSSInfo}}
 
-<dl>
- <dt><code><dfn>over</dfn></code></dt>
- <dd>横書きモードでテキストの上に圏点を描きます。</dd>
- <dt><code><dfn>under</dfn></code></dt>
- <dd>横書きモードでテキストの下に圏点を描きます。</dd>
- <dt><code><dfn>right</dfn></code></dt>
- <dd>縦書きモードでテキストの右に圏点を描きます。</dd>
- <dt><code><dfn>left</dfn></code></dt>
- <dd>縦書きモードでテキストの左に圏点を描きます。</dd>
-</dl>
-
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## Examples
 
-<p>編集者によっては、ルビと競合する場合に圏点を隠すことを好みます。 HTML では、これは次のスタイル規則で実現できます。</p>
+### ルビを圏点より優先させる場合
 
-<pre class="brush: css">ruby {
+編集者によっては、ルビと競合する場合に圏点を隠すことを好みます。 HTML では、これは次のスタイル規則で実現できます。
+
+```css
+ruby {
+  -webkit-text-emphasis: none;
   text-emphasis: none;
 }
-</pre>
+```
 
-<p>編集者によっては、圏点と競合する場合にルビを隠すことを好みます。 HTML では、これは次のパターンで実現できます。</p>
+### 圏点よりルビを優先させる場合
 
-<pre class="brush: css">em {
-  text-emphasis: dot; /* &lt;em&gt; 要素に text-emphasis を設定 */
+編集者によっては、圏点と競合する場合にルビを隠すことを好みます。 HTML では、これは次のパターンで実現できます。
+
+```css
+em {
+  -webkit-text-emphasis: dot;
+  text-emphasis: dot; /* text-emphasis を <em> 要素に設定 */
 }
 
 em rt {
-  display: none; /* &lt;em&gt; 要素内のルビを隠す */
-}</pre>
+  display: none; /* <em> 要素内のルビを隠す */
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text Decoration', '#text-emphasis-position-property', 'text-emphasis')}}</td>
-   <td>{{Spec2('CSS3 Text Decoration')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.text-emphasis-position")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>個別指定プロパティ {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}} および対応する一括指定プロパティ {{cssxref("text-emphasis")}}</li>
-</ul>
+- 個別指定プロパティ {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}} および対応する一括指定プロパティ {{cssxref("text-emphasis")}}

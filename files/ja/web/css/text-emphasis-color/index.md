@@ -3,26 +3,27 @@ title: text-emphasis-color
 slug: Web/CSS/text-emphasis-color
 tags:
   - CSS
+  - CSS プロパティ
   - CSS スタイル
   - CSS テキスト装飾
-  - CSS プロパティ
   - HTML 色
   - Reference
-  - Styling HTML
-  - Text Emphasis
-  - 'recipe:css-property'
+  - HTML のスタイル付け
+  - テキストの強調
+  - recipe:css-property
   - text-decoration-color
 browser-compat: css.properties.text-emphasis-color
 translation_of: Web/CSS/text-emphasis-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>text-emphasis-color</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、圏点の色を設定します。この値は一括指定の {{cssxref("text-emphasis")}} を使用して設定することもできます。</p>
+**`text-emphasis-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点の色を設定します。この値は一括指定の {{cssxref("text-emphasis")}} を使用して設定することもできます。
 
-<pre class="brush:css no-line-numbers">/* 初期値 */
+```css
+/* 初期値 */
 text-emphasis-color: currentcolor;
 
-/* &lt;color&gt; */
+/* <color> */
 text-emphasis-color: #555;
 text-emphasis-color: blue;
 text-emphasis-color: rgba(90, 200, 160, 0.8);
@@ -33,60 +34,61 @@ text-emphasis-color: inherit;
 text-emphasis-color: initial;
 text-emphasis-color: revert;
 text-emphasis-color: unset;
-</pre>
+```
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<h3 id="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>記号の色を定義します。 color が存在しない場合、既定で <code>currentcolor</code> になります。</dd>
-</dl>
+- `<color>`
+  - : 記号の色を定義します。 color が存在しない場合、既定で `currentcolor` になります。
 
-<h2 id="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h3 id="Formal_syntax">形式文法</h3>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## Examples
 
 <h3 id="Emphasis_with_a_color_and_custom_character">色と固有の文字で強調</h3>
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">em {
+```css
+em {
+  -webkit-text-emphasis-color: green;
   text-emphasis-color: green;
+  -webkit-text-emphasis-style: "*";
   text-emphasis-style: "*";
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Here's an example:&lt;/p&gt;
+```html
+<p>例:</p>
 
-&lt;em&gt;This has emphasis marks!&lt;/em&gt;
-</pre>
+<em>これには圏点があります！</em>
+```
 
-<h4 id="Result">結果</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Emphasis_with_a_color_and_custom_character", 450, 100)}}</p>
+{{EmbedLiveSample("Emphasis_with_a_color_and_custom_character", 450, 100)}}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{cssxref("&lt;color&gt;")}} データ型</li>
- <li>他の強調記号に関するプロパティ: {{cssxref('text-emphasis-style')}}, {{cssxref('text-emphasis')}}, {{cssxref("text-emphasis-position")}}.</li>
- <li>色に関する他のプロパティ: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}</li>
- <li><a href="/ja/docs/Web/HTML/Applying_color">CSS を使用した HTML 要素への色の適用</a></li>
-</ul>
+- {{cssxref("&lt;color&gt;")}} データ型
+- 他の強調記号に関するプロパティ: {{cssxref('text-emphasis-style')}}, {{cssxref('text-emphasis')}}, {{cssxref("text-emphasis-position")}}.
+- 色に関する他のプロパティ: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}
+- [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/HTML/Applying_color)

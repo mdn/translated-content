@@ -3,20 +3,22 @@ title: text-emphasis-style
 slug: Web/CSS/text-emphasis-style
 tags:
   - CSS
-  - CSS テキスト装飾
   - CSS プロパティ
+  - CSS テキスト装飾
   - Reference
-  - text-emphasis
+  - recipe:css-property
+browser-compat: css.properties.text-emphasis-style
 translation_of: Web/CSS/text-emphasis-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>text-emphasis-style</code></strong> プロパティは、圏点の表示を設定します。設定や解除に一括指定の {{cssxref("text-emphasis")}} を使用することもできます。</p>
+**`text-emphasis-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点の表示を設定します。設定やリセットに一括指定の {{cssxref("text-emphasis")}} を使用することもできます。
 
-<pre class="brush:css no-line-numbers">/* 初期値 */
+```css
+/* 初期値 */
 text-emphasis-style: none; /* 圏点なし */
 
-/* &lt;string&gt; 値 */
+/* <string> 値 */
 text-emphasis-style: 'x';
 text-emphasis-style: '点';
 text-emphasis-style: '\25B2';
@@ -36,72 +38,61 @@ text-emphasis-style: open sesame;
 /* グローバル値 */
 text-emphasis-style: inherit;
 text-emphasis-style: initial;
+text-emphasis-style: revert;
 text-emphasis-style: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
+- `none`
+  - : 圏点なし。
+- `filled`
+  - : 図形は単色で塗りつぶされます。 `filled` も `open` も指定されない場合は、これが既定値です。
+- `open`
+  - : 図形は中抜きになります。
+- `dot`
+  - : 記号として小さな円を表示します。 filled dot は `'•'` (`U+2022`)、 open dot は `'◦'` (`U+25E6`) です。
+- `circle`
+  - : 記号として大きな円を表示します。 filled circle は `'●'` (`U+25CF`)、 open circle は `'○'` (`U+25CB`) です。
+- `double-circle`
+  - : 記号として二重丸を表示します。 filled double-circle は `'◉'` (`U+25C9`)、 open double-circle は `'◎'` (`U+25CE`) です。
+- `triangle`
+  - : 記号として三角形を表示します。 filled triangle は `'▲'` (`U+25B2`)、 open triangle は `'△'` (`U+25B3`) です。
+- `sesame`
+  - : 記号としてゴマを表示します。 filled sesame は `'﹅'` (`U+FE45`)、 open sesame は `'﹆'` (`U+FE46`) です。
+- `<string>`
+  - : 記号として文字列を表示します。`<string>` には 1 *文字*を超える文字列を指定しないでください。ユーザーエージェントは、2 文字以上の書記素クラスターから構成される文字列を短縮したり無視したりする可能性があります。
 
-<dl>
- <dt><code>none</code></dt>
- <dd>圏点なし。</dd>
- <dt><code>filled</code></dt>
- <dd>図形は単色で塗りつぶされます。 <code>filled</code> も <code>open</code> も指定されない場合は、これが既定値です。</dd>
- <dt><code>open</code></dt>
- <dd>図形は中抜きになります。</dd>
- <dt><code>dot</code></dt>
- <dd>記号として小さな円を表示します。 filled dot は <code>'•'</code> (<code>U+2022</code>)、 open dot は <code>'◦'</code> (<code>U+25E6</code>) です。</dd>
- <dt><code>circle</code></dt>
- <dd>記号として大きな円を表示します。 filled circle は <code>'●'</code> (<code>U+25CF</code>)、 open circle は <code>'○'</code> (<code>U+25CB</code>) です。</dd>
- <dt><code>double-circle</code></dt>
- <dd>記号として二重丸を表示します。 filled double-circle は <code>'◉'</code> (<code>U+25C9</code>)、 open double-circle は <code>'◎'</code> (<code>U+25CE</code>) です。</dd>
- <dt><code>triangle</code></dt>
- <dd>記号として三角形を表示します。 filled triangle は <code>'▲'</code> (<code>U+25B2</code>)、 open triangle は <code>'△'</code> (<code>U+25B3</code>) です。</dd>
- <dt><code>sesame</code></dt>
- <dd>記号としてゴマを表示します。 filled sesame は <code>'﹅'</code> (<code>U+FE45</code>)、 open sesame は <code>'﹆'</code> (<code>U+FE46</code>) です。</dd>
- <dt><code>&lt;string&gt;</code></dt>
- <dd>記号として文字列を表示します。 <code>&lt;string&gt;</code> には1<em>文字</em>を超える文字列を指定しないでください。ユーザーエージェントは、1つより多い書記素クラスターから構成される文字列を短縮したり無視したりする可能性があります。</dd>
-</dl>
+## 公式定義
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+{{CSSInfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## Examples
 
-<pre><code>h2 {
+### 基本的な例
+
+```css
+h2 {
+  -webkit-text-emphasis-style: sesame;
   text-emphasis-style: sesame;
-}</code></pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text Decoration', '#text-emphasis-style-property', 'text-emphasis')}}</td>
-   <td>{{Spec2('CSS3 Text Decoration')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.text-emphasis-color")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>関連プロパティ: {{cssxref('text-emphasis-color')}}, {{cssxref('text-emphasis')}}</li>
- <li>圏点の位置の定義を可能にする {{cssxref('text-emphasis-position')}} プロパティ。</li>
-</ul>
+- 関連プロパティ: {{cssxref('text-emphasis-color')}}, {{cssxref('text-emphasis')}}
+- 圏点の位置の定義を可能にする {{cssxref('text-emphasis-position')}} プロパティ
