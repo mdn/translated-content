@@ -48,7 +48,7 @@ translation_of: Web/HTML/Element/input/datetime-local
 <p>On notera ici que le format de la date affichée n'est pas celui utilisé pour écrire la valeur de l'attribut <code>value</code>. Le format d'affichage de la date sera choisi en fonction de la locale du système d'exploitation de l'utilisateur. En revanche, l'attribut <code>value</code> sera toujours formaté de la façon suivante : <code>yyyy-MM-ddThh:mm</code>. Lorsque la valeur est envoyée au serveur, elle aura donc ce format : <code>partydate=2017-06-01T08:30</code>.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Attention si les données sont envoyées avec la méthode HTTP <code><a href="/fr/docs/HTTP/Méthode/GET">GET</a></code>, les deux points (:) devront être échappés pour être intégrés dans les paramètres de l'URL. Avec l'exemple précédent, cela signifie qu'on enverra <code>partydate=2017-06-01T08%3A30</code>. Si on souhaite échapper une chaîne de caractères de la même façon en JavaScript, on pourra utiliser {{jsxref("Objets_globaux/encodeURI", "encodeURI()")}}.</p>
+<p><strong>Note :</strong> Attention si les données sont envoyées avec la méthode HTTP <code><a href="/fr/docs/HTTP/Méthode/GET">GET</a></code>, les deux points (:) devront être échappés pour être intégrés dans les paramètres de l'URL. Avec l'exemple précédent, cela signifie qu'on enverra <code>partydate=2017-06-01T08%3A30</code>. Si on souhaite échapper une chaîne de caractères de la même façon en JavaScript, on pourra utiliser {{jsxref("Objets_globaux/encodeURI", "encodeURI()")}}.</p>
 </div>
 
 <p>En JavaScript, Il est également possible de définir la valeur de la date utilisée dans le contrôle via la propriété {{domxref("HTMLInputElement.value")}}. Par exemple :</p>
@@ -141,7 +141,7 @@ date.value = '2017-06-01T08:30';</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong> : L'attribut {{htmlattrxref("step", "input")}} devrait pouvoir être utilisé afin de faire varier l'incrément, en jours, pour sélectionner la date (par exemple afin de ne pouvoir sélectionner que les samedi). En revanche, à l'heure où nous rédigeons cet article, aucune implémentation ne semble proposer cette fonctionnalité.</p>
+<p><strong>Note :</strong> L'attribut {{htmlattrxref("step", "input")}} devrait pouvoir être utilisé afin de faire varier l'incrément, en jours, pour sélectionner la date (par exemple afin de ne pouvoir sélectionner que les samedi). En revanche, à l'heure où nous rédigeons cet article, aucune implémentation ne semble proposer cette fonctionnalité.</p>
 </div>
 
 <h3 id="Contrôler_la_taille_du_champ">Contrôler la taille du champ</h3>
@@ -173,7 +173,7 @@ date.value = '2017-06-01T08:30';</pre>
 <p>Dans ces deux situations, le fuseau horaire et la date sont transmis au serveur séparément (c'est côté serveur que le choix de la représentation pour le stockage est effectué).</p>
 
 <div class="note">
-<p><strong>Note</strong> : Le fragment de code précédent est tiré de <a href="https://gist.github.com/nodesocket/3919205">Tous les fuseaux horaires du monde dans un élément <code>&lt;select&gt;</code></a>.</p>
+<p><strong>Note :</strong> Le fragment de code précédent est tiré de <a href="https://gist.github.com/nodesocket/3919205">Tous les fuseaux horaires du monde dans un élément <code>&lt;select&gt;</code></a>.</p>
 </div>
 
 <h2 id="Validation">Validation</h2>

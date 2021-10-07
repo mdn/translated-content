@@ -16,8 +16,8 @@ translation_of: Web/HTML/Element/meta
 
 <p>Comme tous les autres éléments, cet élément inclut <a href="/fr/docs/Web/HTML/Attributs_universels">les attributs universels</a>.</p>
 
-<div class="blockIndicator note">
-<p><strong>Note :  </strong>Il faut préciser que l'attribut {{htmlattrxref("name", "meta")}} possède une signification spécifique à l'élément {{HTMLElement("meta")}} et que l'attribut {{htmlattrxref("itemprop")}} ne doit pas être utilisé quand l'un de ces attributs est déjà utilisé : {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("charset", "meta")}}.</p>
+<div class="note">
+<p><strong>Note :</strong> Il faut préciser que l'attribut {{htmlattrxref("name", "meta")}} possède une signification spécifique à l'élément {{HTMLElement("meta")}} et que l'attribut {{htmlattrxref("itemprop")}} ne doit pas être utilisé quand l'un de ces attributs est déjà utilisé : {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("charset", "meta")}}.</p>
 </div>
 
 <dl>
@@ -28,24 +28,24 @@ translation_of: Web/HTML/Element/meta
   <li>Les auteurs ne devraient pas utiliser d'encodage incompatible avec l'ASCII (c'est à dire ceux dont les codes 8-bits de 0x20 à 0x7E ne correspondent pas, de manière respective, aux codes Unicode 0x0020 à 0x007E) car ceux-ci représentent un risque de sécurité, les navigateurs ne les supportant pas pouvant traduire du contenu bénin en des éléments HTML. Ceci est le cas pour les jeux de caractères suivants : <code>JIS_C6226-1983</code>, <code>JIS_X0212-1990</code>, <code>HZ-GB-2312</code>, <code>JOHAB</code>, la famille d'encodage <code>ISO-2022</code> et la famille d'encodage <code>EBCDIC</code>.</li>
   <li>
    <div class="warning">
-   <p>Les auteurs ne doivent pas utiliser <code>CESU-8</code>, <code>UTF-7</code>, <code>BOCU-1</code> et <code>SCSU</code>. Ceux-ci rejoignent le cas précédents et n'ont pas été conçus pour être utilisés sur le web. Certaines attaques de types XSS (<em>Cross-site scripting</em>) ont pu être recensées avec ces encodages.</p>
+   <p><strong>Attention :</strong> Les auteurs ne doivent pas utiliser <code>CESU-8</code>, <code>UTF-7</code>, <code>BOCU-1</code> et <code>SCSU</code>. Ceux-ci rejoignent le cas précédents et n'ont pas été conçus pour être utilisés sur le web. Certaines attaques de types XSS (<em>Cross-site scripting</em>) ont pu être recensées avec ces encodages.</p>
    </div>
   </li>
   <li>
    <div class="warning">
-   <p>Les auteurs ne devraient pas utiliser <code>UTF-32</code> car certains algorithmes d'encodage HTML5 ne peuvent différiencer <code>UTF-32</code> de <code>UTF-16</code>.</p>
+   <p><strong>Attention :</strong> Les auteurs ne devraient pas utiliser <code>UTF-32</code> car certains algorithmes d'encodage HTML5 ne peuvent différiencer <code>UTF-32</code> de <code>UTF-16</code>.</p>
    </div>
   </li>
  </ul>
 
- <div class="note"><strong>Notes :</strong>
+ <div class="note"><p><strong>Note :</strong></p>
 
  <ul>
   <li>Le jeux de caractères déclaré doit correspondre à celui utilisé dans la page. Il est inutile de déclarer un jeu de caractères incorrect (cela entraînant également une mauvaise expérience utilisateur).</li>
   <li>L'élément {{HTMLElement("meta")}} doit appartenir à l'élément {{HTMLElement("head")}} et doit apparaître parmi les <strong>512 premiers octets de la page</strong>. En effet, certains navigateurs ne consultent seulement ces premiers octets pour déterminer l'encodage utilisé pour la page.</li>
   <li>L'élément {{HTMLElement("meta")}} ne représente qu'une partie de l'<a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/parsing.html#encoding-sniffing-algorithm">algorithme déterminant le jeu de caractères</a> à appliquer sur la page par le navigateur. Ainsi, l'en-tête HTTP Content-Type et tous les éléments BOM auront une priorité supérieure à cet élément.</li>
   <li>Définir le jeu de caractères utilisé grâce à cet attribut représente une bonne pratique et est fortement recommandé. Si aucun encodage n'est défini pour la page, plusieurs techniques XSS peuvent porter atteinte à l'utilisateur (voir l'exemple de la <a class="external" href="https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7">technique XSS de recours à UTF-7</a>). Toujours renseigner cet élément meta protégera contre ces dangers.</li>
-  <li>L'élément {{HTMLElement("meta")}} est un synonyme de <code>&lt;meta http-equiv="Content-Type" content="text/html; charset=<em>IANAcharset</em>"&gt;</code> utilisé avant HTML5. Ici <em><code>IANAcharset</code> </em>correspond à la valeur de l'attribut  {{htmlattrxref("charset", "meta")}} correspondant. Bien qu'elle soit obsolète et qu'elle ne soit plus recommandée, cette syntaxe est toujours autorisée.</li>
+  <li>L'élément {{HTMLElement("meta")}} est un synonyme de <code>&lt;meta http-equiv="Content-Type" content="text/html; charset=<em>IANAcharset</em>"&gt;</code> utilisé avant HTML5. Ici <em><code>IANAcharset</code> </em>correspond à la valeur de l'attribut {{htmlattrxref("charset", "meta")}} correspondant. Bien qu'elle soit obsolète et qu'elle ne soit plus recommandée, cette syntaxe est toujours autorisée.</li>
  </ul>
  </div>
  </dd>
@@ -56,13 +56,13 @@ translation_of: Web/HTML/Element/meta
  <dl>
   <dt><code>content-language</code> {{obsolete_inline}}</dt>
   <dd>Définit la langue par défaut utilisée par une page
-  <div class="warning"><strong>Attention !</strong> Cette valeur n'est plus recommandée et ne doit donc plus être utilisée. L'attribut <code><strong>lang</strong></code> de l'élément {{HTMLElement("body")}} doit être utilisé pour remplir cette fonction.</div>
+  <div class="warning"><p><strong>Attention :</strong> Cette valeur n'est plus recommandée et ne doit donc plus être utilisée. L'attribut <code><strong>lang</strong></code> de l'élément {{HTMLElement("body")}} doit être utilisé pour remplir cette fonction.</p></div>
   </dd>
   <dt><code>Content-Security-Policy</code></dt>
   <dd>Cette valeur permet aux administrateurs de sites web de définir des règles de gestion de contenu pour les ressources qui sont servies. Cela permet notamment d'indiquer les origines valides et les points d'accès aux scripts afin de protéger contre les attaques XSS.</dd>
   <dt><code>content-type</code> {{obsolete_inline}}</dt>
   <dd>Ce champ d'attribut définit le <a href="/fr/docs/Glossaire/Type_MIME">type MIME</a> du document et peut être suivi par son jeu de caractères. Il respecte la même syntaxe que le champ <code>content-type</code> appartenant à l'en-tête HTTP. Cet attribut faisant, lui, partie d'un élément HTML, il n'est pas possible d'utiliser la plupart des valeurs. La syntaxe correcte pour son contenu est donc la chaîne de caractère <code>'text/html</code>' éventuellement suivie par un jeu de caractères avec la syntaxe suivante : '<code>; charset=</code><em><code>IANAcharset</code></em>' où <code>IANAcharset</code> est l'appellation MIME du jeu de caractères, <a class="external" href="https://www.iana.org/assignments/character-sets">présentée par l'IANA</a>
-  <div class="warning"><strong>Notes d'utilisation</strong>
+  <div class="warning"><p><strong>Attention :</strong></p>
   <ul>
    <li>Ce champ n'est plus recommandé et ne donc doit pas être utilisé. L'attribut {{htmlattrxref("charset", "meta")}} de l'élément {{HTMLElement("meta")}} doit être utilisé à la place.</li>
    <li>Étant donné que l'élément {{HTMLElement("meta")}} peut ne pas être utilisé pour changer le type d'un document XHTML, ou d'un document HTML5 précédé par une syntaxe XHTML, il ne faut pas utiliser ce champs pour définir un type MIME étant un type MIME XHTML. Cela serait incorrect.</li>
@@ -79,16 +79,16 @@ translation_of: Web/HTML/Element/meta
   </dd>
   <dt><code>set-cookie</code> {{obsolete_inline}}{{non-standard_inline}}</dt>
   <dd>Ce champ définit un cookie pour la page. Son contenu doit respecter la syntaxe énoncée par la <a class="external" href="https://tools.ietf.org/html/draft-ietf-httpstate-cookie-14">IETF HTTP Cookie Specification</a>.
-  <div class="warning"><strong>Attention !</strong> Ce champ est désormais obsolète et ne doit donc pas être utilisé. L'en-tête HTTP <a href="/fr/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie</a> doit être utilisée à la place.  Cette valeur a été retirée du standard et n'est plus prise en charge à partir de <a href="https://www.fxsitecompat.dev/en-CA/docs/2019/setting-cookies-with-meta-http-equiv-is-no-longer-allowed/">Firefox 68</a> et de <a href="https://www.chromestatus.com/feature/6170540112871424">Chrome 65</a>.</div>
+  <div class="warning"><p><strong>Attention :</strong> Ce champ est désormais obsolète et ne doit donc pas être utilisé. L'en-tête HTTP <a href="/fr/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie</a> doit être utilisée à la place. Cette valeur a été retirée du standard et n'est plus prise en charge à partir de <a href="https://www.fxsitecompat.dev/en-CA/docs/2019/setting-cookies-with-meta-http-equiv-is-no-longer-allowed/">Firefox 68</a> et de <a href="https://www.chromestatus.com/feature/6170540112871424">Chrome 65</a>.</p></div>
   </dd>
  </dl>
  </dd>
  <dt>{{htmlattrdef("name")}}</dt>
- <dd>Cet attribut définit le nom d'un métadonnée au niveau du document. Il ne doit pas être utilisé si l'un des attributs  {{htmlattrxref("itemprop", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("charset", "meta")}} est utilisé.<br>
+ <dd>Cet attribut définit le nom d'un métadonnée au niveau du document. Il ne doit pas être utilisé si l'un des attributs {{htmlattrxref("itemprop", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("charset", "meta")}} est utilisé.<br>
  Le nom de la métadonnée document est associé à une valeur contenue dans l'attribut {{htmlattrxref("content", "meta")}}. Les noms possibles et la signification de leurs valeurs (contenues dans l'attribut {{htmlattrxref("content", "meta")}}) sont :
  <ul>
   <li><code>application-name</code>, qui définit le nom de l'application web utilisée dans la page
-   <div class="note"><strong>Notes :</strong>
+   <div class="note"><p><strong>Note :</strong></p>
    <ul>
     <li>Les navigateurs peuvent l'utiliser pour identifier l'application. Il est à distinguer de l'élément {{HTMLElement("title")}} qui contient généralement le nom de l'application mais qui contient aussi des informations comme le nom du document ou un statut</li>
     <li>Les pages web simples ne devraient pas utiliser cet attribut de métadonnée.</li>
@@ -139,11 +139,11 @@ translation_of: Web/HTML/Element/meta
    </table>
 
    <div class="note">
-   <p><strong>Notes:</strong></p>
+   <p><strong>Note :</strong></p>
 
    <ul>
     <li>Certains navigateurs prennent en charge les valeurs dépréciées <code>always</code>, <code>default</code> et <code>never</code>.</li>
-    <li>L'insertion dynamique de <code>&lt;meta name="referrer"&gt;</code> (grâce à  <a href="/fr/docs/Web/API/Document/write"><code>document.write</code></a> ou <a href="/fr/docs/Web/API/Node/appendChild"><code>appendChild</code></a>) rend le comportement imprévisible.</li>
+    <li>L'insertion dynamique de <code>&lt;meta name="referrer"&gt;</code> (grâce à <a href="/fr/docs/Web/API/Document/write"><code>document.write</code></a> ou <a href="/fr/docs/Web/API/Node/appendChild"><code>appendChild</code></a>) rend le comportement imprévisible.</li>
     <li>Lorsque plusieurs règles conflictuelles sont définies, c'est la règle <code>no-referrer</code> qui est appliquée.</li>
    </ul>
    </div>
@@ -253,7 +253,7 @@ translation_of: Web/HTML/Element/meta
     </tbody>
    </table>
 
-   <div class="note"><strong>Notes :</strong>
+   <div class="note"><p><strong>Note :</strong></p>
 
    <ul>
     <li>Seuls les robots « respectueux » suivront ces règles. Il ne faut pas considérer cela comme une manière efficace de blocage (robots indexeurs cherchant des adresses e-mails pour le spam notamment)</li>
@@ -310,13 +310,13 @@ translation_of: Web/HTML/Element/meta
      </tr>
      <tr>
       <td><code>user-scalable</code></td>
-      <td>un booléen  (<code>yes</code> ou <code>no</code>)</td>
+      <td>un booléen (<code>yes</code> ou <code>no</code>)</td>
       <td>Si la valeur est <code>no</code>, l'utilisateur ne pourra pas zoomer sur le document. Par défaut, la valeur est <code>yes</code>.</td>
      </tr>
     </tbody>
    </table>
 
-   <div class="warning"><strong>Attention !</strong>
+   <div class="warning"><p><strong>Attention :</strong></p>
 
    <ul>
     <li>Bien qu'il ne fasse pas partie du standard, cet attribut est utilisé par plusieurs navigateurs mobiles comme Safari Mobile, Firefox pour Mobile ou Opera Mobile.</li>
@@ -329,7 +329,7 @@ translation_of: Web/HTML/Element/meta
  </dd>
  <dt>{{htmlattrdef("scheme")}} {{obsolete_inline}}</dt>
  <dd>Cet attribut définit le schéma dans lequel la métadonnée est décrite. Un schéma, de la même manière qu'un format, est un contexte permettant d'interpréter correctement la valeur de l'attribut {{htmlattrxref("content", "meta")}}.
- <div class="warning"><strong>Attention !</strong> Cet attribut a été déprécié et ne doit donc plus être utilisé. Il n'y pas d'attributs ou d'éléments remplaçant sa fonction car cet attribut n'était pas usité.</div>
+ <div class="warning"><p><strong>Attention :</strong> Cet attribut a été déprécié et ne doit donc plus être utilisé. Il n'y pas d'attributs ou d'éléments remplaçant sa fonction car cet attribut n'était pas usité.</p></div>
  </dd>
 </dl>
 

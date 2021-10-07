@@ -25,8 +25,8 @@ browser-compat: html.elements.iframe
 
 <p>Chaque contexte de navigation possède son propre <a href="/fr/docs/Web/API/History">historique</a> et son propre <a href="/fr/docs/Web/API/Document">document actif</a>. Le contexte de navigation qui contient le contenu intégré est appelé « contexte de navigation parent ». Le contexte de navigation le plus élevé (qui n'a pas de contexte parent) correspond généralement à la fenêtre du navigateur (cf. <a href="/fr/docs/Web/API/Window"><code>Window</code></a>).</p>
 
-<div class="notecard warning">
-  <p>Chaque contexte de navigation créé par un élément <code>&lt;iframe&gt;</code> représente un document à part entière et cela peut donc augmenter les ressources nécessaires à l'utilisation de la page. Aussi, bien qu'en théorie on puisse ajouter autant d'<em>iframes</em> que possible sur autant de niveaux d'imbrication que voulus, on gardera à l'esprit que cela peut nuire aux performances.</p>
+<div class="warning">
+  <p><strong>Attention :</strong> Chaque contexte de navigation créé par un élément <code>&lt;iframe&gt;</code> représente un document à part entière et cela peut donc augmenter les ressources nécessaires à l'utilisation de la page. Aussi, bien qu'en théorie on puisse ajouter autant d'<em>iframes</em> que possible sur autant de niveaux d'imbrication que voulus, on gardera à l'esprit que cela peut nuire aux performances.</p>
 </div>
 
 <table class="properties">
@@ -126,7 +126,7 @@ browser-compat: html.elements.iframe
       <li><code>allow-top-navigation-by-user-activation</code> : le contexte de navigation peut charger du contenu depuis le contexte de plus haut niveau uniquement si l'action provient de l'utilisateur. Si ce mot-clé est absent, cette opération n'est pas autorisée.</li>
     </ul>
     <div class="note">
-      <p><b>Notes :</b></p>
+      <p><strong>Note :</strong></p>
       <ul>
         <li>Lorsque le document intégré possède la même origine que la page principale, il est <strong>fortement déconseillé</strong> d'employer <code>allow-scripts</code> et <code>allow-same-origin</code> simultanément, car cela permet de retirer l'attribut <code>sandbox</code> via un programme, c'est donc aussi sûr que de ne pas utiliser l'attribut <code>sandbox</code>.</li>
         <li>La mise en bac à sable (<em>sandboxing</em>) est d'une aide minime si un attaquant peut faire en sorte qu'un contenu potentiellement hostile soit affiché dans le navigateur de l'utilisateur en dehors d'un <i>iframe</i> sous sandbox. Aussi, il est recommandé de diffuser le contenu depuis un domaine dédié séparé, afin de limiter les éventuels dommages.</li>

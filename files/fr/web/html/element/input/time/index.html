@@ -14,8 +14,6 @@ translation_of: Web/HTML/Element/input/time
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuer à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <p>L'interface utilisateur affichée pour le contrôle peut varier d'un navigateur à l'autre. À l'heure où nous écrivons ces lignes, seul Safari ne prend pas en charge ce type de contrôle. Pour ce dernier, l'élément sera transformé en simple <code><a href="/fr/docs/Web/HTML/Element/Input/text">&lt;input type="text"&gt;</a></code>.</p>
 
 <h2 id="Apparence">Apparence</h2>
@@ -119,7 +117,9 @@ startTime.addEventListener("input", function() {
  </tbody>
 </table>
 
-<div class="note"><strong>Note :</strong> À la différence d'autres types de donnée, les valeurs pour les heures sont sur un domaine <strong>périodique</strong>. Cela signifie qu'une fois la valeur maximale dépassée, on revient à la valeur minimale (autrement dit, on fait le tour de l'horloge). Ainsi, si on indique <code>min</code> avec la valeur <code>"14:00"</code> et <code>max</code> avec la valeur <code>"2:00"</code>, cela signifie que les valeurs autorisées sont comprises entre 2 heures de l'après-midi et jusqu'à 2 heures du matin le jour suivant.</div>
+<div class="note">
+  <p><strong>Note :</strong> À la différence d'autres types de donnée, les valeurs pour les heures sont sur un domaine <strong>périodique</strong>. Cela signifie qu'une fois la valeur maximale dépassée, on revient à la valeur minimale (autrement dit, on fait le tour de l'horloge). Ainsi, si on indique <code>min</code> avec la valeur <code>"14:00"</code> et <code>max</code> avec la valeur <code>"2:00"</code>, cela signifie que les valeurs autorisées sont comprises entre 2 heures de l'après-midi et jusqu'à 2 heures du matin le jour suivant.</p>
+</div>
 
 <h3 id="htmlattrdef(max)">{{htmlattrdef("max")}}</h3>
 
@@ -255,7 +255,7 @@ input:valid+span:after {
 <p><img alt="" src="https://mdn.mozillademos.org/files/15405/firefox-validation-message.png" style="display: block; margin: 0 auto;"></p>
 
 <div class="warning">
-<p><strong>Attention !</strong> Il est également important de vérifier le format de la valeur saisie côté serveur ! En effet, il est tout à fait possible pour un utilisateur de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.</p>
+<p><strong>Attention :</strong> Il est également important de vérifier le format de la valeur saisie côté serveur ! En effet, il est tout à fait possible pour un utilisateur de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.</p>
 </div>
 
 <h2 id="Gérer_la_prise_en_charge_des_navigateurs">Gérer la prise en charge des navigateurs</h2>

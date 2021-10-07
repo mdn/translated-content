@@ -16,7 +16,7 @@ translation_of: Web/HTML/Element/input/checkbox
 <div>{{EmbedInteractiveExample("pages/tabbed/input-checkbox.html", "tabbed-standard")}}</div>
 
 <div class="note">
-<p><strong>Note </strong>: <a href="/fr/docs/Web/HTML/Element/input/radio">Les boutons radio</a> sont semblables aux cases à cocher mais il existe une différence importante : les boutons radio permettent de sélectionner une seule valeur parmi plusieurs alors que les cases à cocher permettent de cocher/décocher plusieurs valeurs d'un groupe.</p>
+<p><strong>Note :</strong> <a href="/fr/docs/Web/HTML/Element/input/radio">Les boutons radio</a> sont semblables aux cases à cocher mais il existe une différence importante : les boutons radio permettent de sélectionner une seule valeur parmi plusieurs alors que les cases à cocher permettent de cocher/décocher plusieurs valeurs d'un groupe.</p>
 </div>
 
 <h2 id="Valeur">Valeur</h2>
@@ -40,7 +40,7 @@ translation_of: Web/HTML/Element/input/checkbox
 <p>Si l'attribut <code>value</code> n'était pas renseigné, la valeur par défaut sera <code>on</code> (dans l'exemple, les données envoyées au serveur auraient la forme <code>subscribe=on</code>).</p>
 
 <div class="note">
-<p><strong>Note</strong> : Si la case à cocher n'est pas cochée lorsque le formulaire est envoyé, aucune valeur n'est envoyée au serveur pour indiquer cet état (autrement dit, le client n'envoie pas quelque chose comme <code>value=unchecked</code>) ; la valeur n'est pas transmise au serveur du tout.</p>
+<p><strong>Note :</strong> Si la case à cocher n'est pas cochée lorsque le formulaire est envoyé, aucune valeur n'est envoyée au serveur pour indiquer cet état (autrement dit, le client n'envoie pas quelque chose comme <code>value=unchecked</code>) ; la valeur n'est pas transmise au serveur du tout.</p>
 </div>
 
 <h2 id="Attributs_supplémentaires">Attributs supplémentaires</h2>
@@ -102,7 +102,7 @@ translation_of: Web/HTML/Element/input/checkbox
 
 <p>{{EmbedLiveSample('Gérer_plusieurs_cases_à_cocher', 600, 100)}}</p>
 
-<p>Dans cet exemple on voit que chaque case à cocher utilise le même attribut <code>name</code>. Si les deux cases sont cochées lorsque le formulaire est envoyé, la chaîne des paires nom/valeur qui sera envoyée au serveur sera : <code>interest=coding&amp;interest=music</code>. Lorsque les données parviennent au serveur, on peut ainsi récupérer un tableau des valeurs sélctionnées (voir <a class="question-hyperlink" href="https://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable">Gérer plusieurs cases à cocher avec une seule variable côté serveur</a> par exemple).</p>
+<p>Dans cet exemple on voit que chaque case à cocher utilise le même attribut <code>name</code>. Si les deux cases sont cochées lorsque le formulaire est envoyé, la chaîne des paires nom/valeur qui sera envoyée au serveur sera : <code>interest=coding&amp;interest=music</code>. Lorsque les données parviennent au serveur, on peut ainsi récupérer un tableau des valeurs sélctionnées (voir <a href="https://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable">Gérer plusieurs cases à cocher avec une seule variable côté serveur</a> par exemple).</p>
 
 <h3 id="Cocher_certaines_cases_par_défaut">Cocher certaines cases par défaut</h3>
 
@@ -181,7 +181,7 @@ function updateDisplay() {
 <p>{{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}</p>
 
 <div class="note">
-<p><strong>Note</strong> : Si vous envoyez un formulaire avec une case à cocher dans un état indéterminé, le résultat obtenu est le même que si la case avait été décochée : aucune donnée n'est envoyée au serveur.</p>
+<p><strong>Note :</strong> Si vous envoyez un formulaire avec une case à cocher dans un état indéterminé, le résultat obtenu est le même que si la case avait été décochée : aucune donnée n'est envoyée au serveur.</p>
 </div>
 
 <h2 id="Validation">Validation</h2>
