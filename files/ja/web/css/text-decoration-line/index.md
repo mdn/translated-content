@@ -3,24 +3,25 @@ title: text-decoration-line
 slug: Web/CSS/text-decoration-line
 tags:
   - CSS
-  - CSS テキスト装飾
   - CSS プロパティ
+  - CSS テキスト装飾
   - Reference
+  - recipe:css-property
+browser-compat: css.properties.text-decoration-line
 translation_of: Web/CSS/text-decoration-line
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>text-decoration-line</code></strong> プロパティは、下線や上線など、要素内の文字列に使われる装飾の種類を設定します。</p>
+**`text-decoration-line`** は [CSS](/ja/docs/Web/CSS) のプロパティで、下線や上線など、要素内の文字列に使われる装飾の種類を設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/text-decoration-line.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-decoration-line.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+複数の line-decoration に関するプロパティを一度に設定するときは、代わりに一括指定の {{cssxref("text-decoration")}} プロパティを使用したほうが便利かもしれません。
 
-<p>複数の line-decoration に関するプロパティを一度に設定するときは、代わりに一括指定の {{cssxref("text-decoration")}} プロパティを使用したほうが便利かもしれません。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* 単一のキーワード */
+```css
+/* 単一のキーワード */
 text-decoration-line: none;
 text-decoration-line: underline;
 text-decoration-line: overline;
@@ -28,42 +29,50 @@ text-decoration-line: line-through;
 text-decoration-line: blink;
 
 /* 複数のキーワード */
-text-decoration-line: underline overline;               /* 2つの装飾線 */
+text-decoration-line: underline overline;               /* 2 つの装飾線 */
 text-decoration-line: overline underline line-through;  /* 複数の装飾線 */
 
 /* グローバル値 */
 text-decoration-line: inherit;
 text-decoration-line: initial;
+text-decoration-line: revert;
 text-decoration-line: unset;
-</pre>
+```
 
-<p><code>text-decoration-line</code> プロパティは <code>none</code> または以下のリストにある<strong>1つ以上の</strong>空白で区切られた値を指定します。</p>
+`text-decoration-line` プロパティは `none` または以下のリストにある **1 つ以上の**空白で区切られた値を指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>none</code></dt>
- <dd>テキストの装飾を行いません。</dd>
- <dt><code>underline</code></dt>
- <dd>テキストの各行に下線を引きます。</dd>
- <dt><code>overline</code></dt>
- <dd>テキストの各行の上線を引きます。</dd>
- <dt><code>line-through</code></dt>
- <dd>テキストの各行の中央を貫く線を引きます。</dd>
- <dt><code>blink</code> {{deprecated_inline}}</dt>
- <dd>テキストが点滅します (表示と非表示を交互に繰り返します)。準拠するユーザーエージェントはテキストを点滅させないかもしれません。この値は<strong>非推奨</strong>であり、 <a href="/ja/docs/Web/CSS/animation">CSS アニメーション</a>に取って代わりました。</dd>
-</dl>
+- `none`
+  - : テキストの装飾を行いません。
+- `underline`
+  - : テキストの各行に下線を引きます。
+- `overline`
+  - : テキストの各行の上線を引きます。
+- `line-through`
+  - : テキストの各行の中央を貫く線を引きます。
+- `blink` {{deprecated_inline}}
+  - : テキストが点滅します (表示と非表示を交互に繰り返します)。準拠するユーザーエージェントはテキストを点滅させないかもしれません。この値は**非推奨**であり、 [CSS アニメーション](/ja/docs/Web/CSS/animation)に取って代わりました。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<pre class="brush: html">&lt;p class="wavy"&gt;Here's some text with wavy red underline!&lt;/p&gt;
-&lt;p class="both"&gt;This text has lines both above and below it.&lt;/p&gt;</pre>
+### 基本的な例
 
-<pre class="brush: css">.wavy {
+```html
+<p class="wavy">こちらのテキストには赤い波線の下線が付いています。</p>
+<p class="both">このテキストには上線と下線がついています。</p>
+```
+
+```css
+.wavy {
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: red;
@@ -71,37 +80,19 @@ text-decoration-line: unset;
 
 .both {
   text-decoration-line: underline overline;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Examples', '', '', '') }}</p>
+{{ EmbedLiveSample('Examples', '', '', '') }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text Decoration', '#text-decoration-line', 'text-decoration-line')}}</td>
-   <td>{{Spec2('CSS3 Text Decoration')}}</td>
-   <td>初回定義。 {{cssxref("text-decoration")}} プロパティが複数の関連するプロパティを定義する一括指定になりました。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p>{{cssinfo}}</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.text-decoration-line")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>複数の行内装飾プロパティを一度に設定するときは、代わりに一括指定の {{cssxref("text-decoration")}} プロパティを使った方が便利かもしれません。</li>
-</ul>
+- 複数の行内装飾プロパティを一度に設定するときは、代わりに一括指定の {{cssxref("text-decoration")}} プロパティを使った方が便利かもしれません。
