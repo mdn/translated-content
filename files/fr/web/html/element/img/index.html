@@ -49,7 +49,7 @@ browser-compat: html.elements.img
 
 <p>{{page("/fr/docs/Web/Media/Formats/Types_des_images", "table-of-image-file-types")}}</p>
 
-<div class="notecard note">
+<div class="note">
   <p><b>Astuce :</b></p>
   <p>Voir le <a href="/fr/docs/Web/Media/Formats/Image_types">Guide des types et formats de fichiers image</a> pour des informations plus complètes sur les formats d'image pris en charge par les navigateurs web. Cela inclut les formats d'image pris en charge mais non recommandés pour le contenu web (par exemple, ICO, BMP, etc.).</p>
 </div>
@@ -73,8 +73,8 @@ browser-compat: html.elements.img
 <dl>
   <dt><code>alt</code></dt>
   <dd>Cet attribut définit le texte alternatif utilisé lorsqu'il est impossible d'afficher l'image (par exemple si l'URL est incorrecte ou si l'image n'est pas encore téléchargée).
-    <div class="notecard note">
-      <p><b>Note :</b></p>
+    <div class="note">
+      <p><strong>Note :</strong></p>
 			<p>Les navigateurs n'affichent pas toujours les images. Il existe un certain nombre de situations dans lesquelles un navigateur peut ne pas afficher les images, par exemple :</p>
 			<ul>
 				<li>Navigateurs non visuels (tels que ceux utilisés par les personnes souffrant de déficiences visuelles)</li>
@@ -124,9 +124,8 @@ browser-compat: html.elements.img
   <dd>Cet attribut indique au navigateur d'ignorer la taille intrinsèque réelle de l'image et d'utiliser la taille fournie par les attributs. La matrice contenant l'image aurait donc ces dimensions et calculer <code>naturalWidth</code>/<code>naturalHeight</code> sur de telles images renverrait les valeurs de cet attribut. <a href="https://github.com/ojanvafai/intrinsicsize-attribute">Explications</a>, <a href="https://googlechrome.github.io/samples/intrinsic-size/index.html">exemples</a>.</dd>
   <dt><code>ismap</code></dt>
   <dd>Un attribut booléen dont la valeur indique si l'image fait partie d'une carte cliquable. Si c'est le cas, les coordonnées du clic seront envoyées au serveur.
-    <div class="notecard note">
-      <p><b>Note :</b></p>
-      <p>Cet attribut est uniquement autorisé si l'élément <code>&lt;img&gt;</code> descend d'un élément <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a> dont l'attribut <a href="/fr/docs/Web/HTML/Element/a#attr-href"><code>href</code></a> est valide.</p>
+    <div class="note">
+      <p><strong>Note :</strong>Cet attribut est uniquement autorisé si l'élément <code>&lt;img&gt;</code> descend d'un élément <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a> dont l'attribut <a href="/fr/docs/Web/HTML/Element/a#attr-href"><code>href</code></a> est valide.</p>
     </div>
   </dd>
   <dt><code>loading</code> {{experimental_inline}}</dt>
@@ -134,9 +133,8 @@ browser-compat: html.elements.img
     <ul>
       <li><code>eager</code> : Charge l'image immédiatement, que l'image se trouve ou non dans le viewport visible (c'est la valeur par défaut).</li>
       <li><code>lazy</code> : Diffère le chargement de l'image au moment où elle atteint une certaine distance de la fenêtre de visualisation, telle que définie par le navigateur. Le but est d'éviter que le réseau et la zone de stockage nécessaires à la manipulation de l'image ne soient utilisés tant qu'il n'est pas relativement sûr que celle-ci sera nécessaire. Cela permet généralement d'améliorer les performances du contenu dans la plupart des cas d'utilisation typiques.
-        <div class="notecard note">
-          <p><b>Note :</b></p>
-          <p>Le chargement n'est différé que lorsque JavaScript est activé. Il s'agit d'une mesure anti-pistage, car si un agent utilisateur prenait en charge le chargement différé lorsque les scripts sont désactivés, il serait toujours possible pour un site de suivre la position de défilement approximative d'un utilisateur tout au long d'une session, en plaçant stratégiquement des images dans le balisage d'une page de sorte qu'un serveur puisse suivre le nombre d'images demandées et le moment où elles le sont.</p>
+        <div class="note">
+          <p><strong>Note :</strong>Le chargement n'est différé que lorsque JavaScript est activé. Il s'agit d'une mesure anti-pistage, car si un agent utilisateur prenait en charge le chargement différé lorsque les scripts sont désactivés, il serait toujours possible pour un site de suivre la position de défilement approximative d'un utilisateur tout au long d'une session, en plaçant stratégiquement des images dans le balisage d'une page de sorte qu'un serveur puisse suivre le nombre d'images demandées et le moment où elles le sont.</p>
         </div>
       </li>
     </ul>
@@ -187,8 +185,7 @@ browser-compat: html.elements.img
   <dt><code>usemap</code></dt>
   <dd>Le fragment d'URL (commençant avec #) d'une <a href="/fr/docs/Web/HTML/Element/map">carte d'images</a> associée à cet élément.
     <div class="note">
-      <p><b>Note :</b></p>
-      <p>Cet attribut ne peut pas être utilisé si l'élément <code>&lt;img&gt;</code> est un descendant d'un élément <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a> ou d'un élément <a href="/fr/docs/Web/HTML/Element/Button"><code>&lt;button&gt;</code></a>.</p>
+      <p><strong>Note :</strong>Cet attribut ne peut pas être utilisé si l'élément <code>&lt;img&gt;</code> est un descendant d'un élément <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a> ou d'un élément <a href="/fr/docs/Web/HTML/Element/Button"><code>&lt;button&gt;</code></a>.</p>
     </div>
   </dd>
 </dl>
@@ -218,9 +215,8 @@ browser-compat: html.elements.img
   <dd>Le nombre de pixels blancs à insérer à droite et à gauche de l'image. En HTML5, on privilégiera la propriété CSS <a href="/fr/docs/Web/CSS/margin"><code>margin</code></a>.</dd>
   <dt><code>longdesc</code> {{deprecated_inline}}</dt>
   <dd>Un lien vers une description plus détaillée de l'image. Les valeurs possibles sont une URL ou un identifiant (<a href="/fr/docs/Web/HTML/Global_attributes#attr-id"><code>id</code></a>) d'un élément.
-    <div class="notecard note">
-      <p><b>Note :</b></p>
-      <p>Cet attribut est mentionné dans la dernière version du <a href="/fr/docs/Glossary/W3C">W3C</a>, <a href="https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc">HTML 5.2</a>, mais a été supprimé du <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">HTML Living Standard</a> du <a href="/fr/docs/Glossary/WHATWG">WHATWG</a>. Son avenir est incertain ; les auteurs devraient utiliser une alternative <a href="/fr/docs/Glossary/WAI">WAI</a>-<a href="/fr/docs/Glossary/ARIA">ARIA</a> telle que <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby"><code>aria-describedby</code></a> ou <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-details"><code>aria-details</code></a>.</p>
+    <div class="note">
+      <p><strong>Note :</strong>Cet attribut est mentionné dans la dernière version du <a href="/fr/docs/Glossary/W3C">W3C</a>, <a href="https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc">HTML 5.2</a>, mais a été supprimé du <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">HTML Living Standard</a> du <a href="/fr/docs/Glossary/WHATWG">WHATWG</a>. Son avenir est incertain ; les auteurs devraient utiliser une alternative <a href="/fr/docs/Glossary/WAI">WAI</a>-<a href="/fr/docs/Glossary/ARIA">ARIA</a> telle que <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby"><code>aria-describedby</code></a> ou <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-details"><code>aria-details</code></a>.</p>
     </div>
   </dd>
   <dt><code>name</code> {{deprecated_inline}}</dt>
@@ -282,9 +278,8 @@ browser-compat: html.elements.img
 
 <p>{{EmbedLiveSample("using_the_srcset_and_sizes_attributes", "100%", 450)}}</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Pour observer l'effet du redimensionnement, vous devrez consulter <a href="/fr/docs/Web/HTML/Element/img/Using_the_srcset_and_sizes_attributes">l'exemple sur une page séparée</a> afin de pouvoir modifier la taille de la zone.</p>
+<div class="note">
+  <p><strong>Note :</strong>Pour observer l'effet du redimensionnement, vous devrez consulter <a href="/fr/docs/Web/HTML/Element/img/Using_the_srcset_and_sizes_attributes">l'exemple sur une page séparée</a> afin de pouvoir modifier la taille de la zone.</p>
 </div>
 
 <h2 id="security_and_privacy_concerns">Sécurité et vie privée</h2>

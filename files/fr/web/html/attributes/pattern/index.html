@@ -20,9 +20,8 @@ original_slug: Web/HTML/Attributs/pattern
 
 <p>Si le motif n'est pas indiqué ou est invalide, aucune expression rationnelle ne sera appliquée et l'attribut sera ignoré.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>On pourra utiliser l'attribut <a href="/fr/docs/Web/HTML/Element/Input#attr-title"><code>title</code></a> afin de fournir aux utilisateurs des explications quant aux règles à respecter pour que la valeur soit valide. Attention, on ne doit pas utiliser uniquement cet attribut pour fournir ces explications. Voir ci-après quant à l'utilisabilité.</p>
+<div class="note">
+  <p><strong>Note :</strong>On pourra utiliser l'attribut <a href="/fr/docs/Web/HTML/Element/Input#attr-title"><code>title</code></a> afin de fournir aux utilisateurs des explications quant aux règles à respecter pour que la valeur soit valide. Attention, on ne doit pas utiliser uniquement cet attribut pour fournir ces explications. Voir ci-après quant à l'utilisabilité.</p>
 </div>
 
 <p>Certains types d'<code>&lt;input&gt;</code> qui prennent en charge l'attribut <code>pattern</code> (notamment <a href="/fr/docs/Web/HTML/Element/Input/email"><code>email</code></a> et <a href="/fr/docs/Web/HTML/Element/Input/url"><code>url</code></a>) ont des contraintes particulières qui doivent également être respectées. Si l'attribut <code>pattern</code> n'est pas présent et que la valeur saisie ne respecte pas la syntaxe attendue pour ce type de champ, la propriété en lecture seule <a href="/fr/docs/Web/API/ValidityState/typeMismatch"><code>typeMismatch</code></a> vaudra <code>true</code>.</p>

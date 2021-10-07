@@ -218,9 +218,8 @@ translation_of: Web/HTML/Attributes/rel
 
 <p><b>Note :</b> L'iOS d'Apple n'utilise pas ce type de lien, ni l'attribut <a href="sizes"><code>sizes</code></a>, comme le font d'autres navigateurs mobiles, pour sélectionner une icône de page Web pour Web Clip ou un espace réservé au démarrage. Au lieu de cela, il utilise les attributs non standard <a href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"><code>apple-touch-icon</code></a> et <a href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6"><code>apple-touch-startup-image</code></a> respectivement.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Le type de lien <code>shortcut</code> est souvent vu avant <code>icon</code>, mais ce type de lien est non conforme, ignoré et <strong>les auteurs web ne doivent plus l'utiliser</strong>.</p>
+<div class="note">
+  <p><strong>Note :</strong>Le type de lien <code>shortcut</code> est souvent vu avant <code>icon</code>, mais ce type de lien est non conforme, ignoré et <strong>les auteurs web ne doivent plus l'utiliser</strong>.</p>
 </div>
 
 <dl>
@@ -242,9 +241,8 @@ translation_of: Web/HTML/Attributes/rel
 &lt;link rel="alternate" href="/fr/pdf" hreflang="fr" type=application/pdf title="PDF Français"&gt;</pre>
       </li>
     </ul>
-    <div class="notecard note">
-      <p><b>Note :</b></p>
-      <p>L'attribut obsolète <code>rev="made"</code> est traité comme <code>rel="alternate"</code>.</p>
+    <div class="note">
+      <p><strong>Note :</strong>L'attribut obsolète <code>rev="made"</code> est traité comme <code>rel="alternate"</code>.</p>
     </div>
   </dd>
   <dt><code>author</code></dt>
@@ -269,9 +267,8 @@ translation_of: Web/HTML/Attributes/rel
 
     <p>S'il existe plusieurs <code>&lt;link rel="icon"&gt;</code>, le navigateur utilise leurs attributs <a href="media"><code>media</code></a>, <a href="type"><code>type</code></a>, et <a href="sizes"><code>sizes</code></a> pour sélectionner l'icône la plus appropriée. Si plusieurs icônes sont également appropriées, la dernière est utilisée. Si l'icône la plus appropriée s'avère ultérieurement inappropriée, par exemple parce qu'elle utilise un format non pris en charge, le navigateur passe à l'icône suivante la plus appropriée, et ainsi de suite.</p>
 
-    <div class="notecard note">
-      <p><b>Note :</b></p>
-      <p>Avant Firefox 83, l'attribut <a href="/fr/docs/Web/HTML/Attributes/crossorigin">crossorigin</a> n'était pas pris en charge pour <code>rel="icon"</code> ; il existe également <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1121645">un problème pour Chrome</a>.</p>
+    <div class="note">
+      <p><strong>Note :</strong>Avant Firefox 83, l'attribut <a href="/fr/docs/Web/HTML/Attributes/crossorigin">crossorigin</a> n'était pas pris en charge pour <code>rel="icon"</code> ; il existe également <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1121645">un problème pour Chrome</a>.</p>
       
       <p>L'iOS d'Apple n'utilise pas ce type de lien, ni l'attribut <a href="sizes"><code>sizes</code></a>, comme le font d'autres navigateurs mobiles, pour sélectionner une icône de page Web pour Web Clip ou un espace réservé au démarrage. Au lieu de cela, il utilise respectivement le type non standard <a href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"><code>apple-touch-icon</code></a> et <a href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6"><code>apple-touch-startup-image</code></a>.</p>
       
@@ -284,9 +281,8 @@ translation_of: Web/HTML/Attributes/rel
 
     <pre class="brush: html">&lt;link rel="license" href="#license"&gt;</pre>
 
-    <div class="notecard note">
-      <p><b>Note :</b></p>
-      <p>Bien que reconnu, le synonyme <code>copyright</code> est incorrect et doit être évité.</p>
+    <div class="note">
+      <p><strong>Note :</strong>Bien que reconnu, le synonyme <code>copyright</code> est incorrect et doit être évité.</p>
     </div>
   </dd>
   <dt><code>manifest</code></dt>
@@ -319,9 +315,8 @@ translation_of: Web/HTML/Attributes/rel
   <dd>
     <p>Similaire au mot-clé <a href="#next">next</a>, pertinent pour les éléments <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/area"><code>&lt;area&gt;</code></a>, les valeurs <code>prev</code> indiquent que le document actuel fait partie d'une série, et que le lien renvoie à un document précédent de la série est le document référencé.</p>
 
-    <div class="notecard note">
-      <p><b>Note :</b></p>
-      <p>Le synonyme <code>previous</code> est incorrect et ne doit pas être utilisé.</p>
+    <div class="note">
+      <p><strong>Note :</strong>Le synonyme <code>previous</code> est incorrect et ne doit pas être utilisé.</p>
     </div>
   </dd>
   <dt><code>search</code></dt>

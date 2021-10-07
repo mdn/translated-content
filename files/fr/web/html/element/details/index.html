@@ -21,9 +21,8 @@ browser-compat: html.elements.details
 
 <div>{{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-standard")}}</div>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>L'utilisation courante d'un triangle qui tourne ou s'enroule pour représenter l'ouverture ou la fermeture du widget explique pourquoi on les appelle parfois « twisties » en anglais.</p>
+<div class="note">
+  <p><strong>Note :</strong>L'utilisation courante d'un triangle qui tourne ou s'enroule pour représenter l'ouverture ou la fermeture du widget explique pourquoi on les appelle parfois « twisties » en anglais.</p>
 </div>
 
 <p>Un widget <code>&lt;details&gt;</code> peut être dans l'un des deux états suivants. L'état par défaut <em>fermé</em> affiche uniquement le triangle et l'étiquette à l'intérieur du <code>&lt;summary&gt;</code> (ou une chaîne par défaut définie par <a href="/fr/docs/Glossary/User_agent">l'agent utilisateur</a> si aucun <code>&lt;summary&gt;</code>). Cela peut ressembler à ce qui suit :</p>
@@ -38,9 +37,8 @@ browser-compat: html.elements.details
 
 <p>Par défaut, lorsqu'il est fermé, le widget est seulement assez haut pour afficher le triangle de divulgation et le résumé. Lorsqu'il est ouvert, il s'étend pour afficher les détails qu'il contient.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Malheureusement, à l'heure actuelle, il n'existe aucun moyen intégré d'animer la transition entre l'ouverture et la fermeture.</p>
+<div class="note">
+  <p><strong>Note :</strong>Malheureusement, à l'heure actuelle, il n'existe aucun moyen intégré d'animer la transition entre l'ouverture et la fermeture.</p>
 </div>
 
 <p>Les implémentations entièrement conformes aux normes appliquent automatiquement le code CSS <code><a href="/fr/docs/Web/CSS/display">display</a>: list-item</code> à l'élément <a href="/fr/docs/Web/HTML/Element/summary"><code>&lt;summary&gt;</code></a>. Vous pouvez l'utiliser pour personnaliser davantage son apparence. Voir <a href="#customizing_the_disclosure_widget">personnaliser le marqueur de révélation</a> pour plus de détails.</p>
@@ -88,8 +86,7 @@ browser-compat: html.elements.details
     <p>Cet attribut booléen indique si les détails — c'est-à-dire le contenu de l'élément <code>&lt;details&gt;</code> — sont actuellement visibles ou non. Les détails sont affichés lorsque cet attribut existe, ou cachés lorsque cet attribut est absent. Par défaut, cet attribut est absent, ce qui signifie que les détails ne sont pas visibles.</p>
 
     <div class="note">
-      <p><b>Note :</b></p>
-      <p>Vous devez supprimer entièrement cet attribut pour que les détails soient cachés. Attention, <code>open="false"</code> rend les détails visibles, car cet attribut est booléen.</p>
+      <p><strong>Note :</strong>Vous devez supprimer entièrement cet attribut pour que les détails soient cachés. Attention, <code>open="false"</code> rend les détails visibles, car cet attribut est booléen.</p>
     </div>
   </dd>
 </dl>

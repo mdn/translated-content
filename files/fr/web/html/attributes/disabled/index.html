@@ -17,9 +17,8 @@ translation_of: Web/HTML/Attributes/disabled
 
 <p>Cet attribut booléen indique que l'utilisateur ne peut pas interagir avec le contrôle ou ses contrôles descendants. Si cet attribut n'est pas spécifié, le contrôle hérite ce paramètre de l'élément contenant, par exemple <code>fieldset</code> ; s'il n'y a pas d'élément contenant avec l'attribut <code>disabled</code> défini, et que le contrôle lui-même ne possède pas cet attribut, alors le contrôle est activé. S'il est déclaré sur un <a href="/fr/docs/Web/HTML/Element/Optgroup"><code>&lt;optgroup&gt;</code></a>, le sélecteur est toujours interactif (sauf s'il est désactivé autrement), mais aucun des éléments du groupe d'options n'est sélectionnable.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Si un <a href="/fr/docs/Web/HTML/Element/Fieldset"><code>&lt;fieldset&gt;</code></a> est désactivé, les contrôles de formulaire descendants sont tous désactivés, à l'exception des contrôles de formulaire dans la légende (<a href="/fr/docs/Web/HTML/Element/Legend"><code>&lt;legend&gt;</code></a>).</p>
+<div class="note">
+  <p><strong>Note :</strong>Si un <a href="/fr/docs/Web/HTML/Element/Fieldset"><code>&lt;fieldset&gt;</code></a> est désactivé, les contrôles de formulaire descendants sont tous désactivés, à l'exception des contrôles de formulaire dans la légende (<a href="/fr/docs/Web/HTML/Element/Legend"><code>&lt;legend&gt;</code></a>).</p>
 </div>
 
 <p>Lorsqu'un élément de support a l'attribut <code>disabled</code> est appliqué, la pseudo-classe <a href="/fr/docs/Web/CSS/:disabled"><code>:disabled</code></a> s'y applique également. Inversement, les éléments qui prennent en charge l'attribut <code>disabled</code> mais qui n'ont pas l'attribut défini correspondent à la pseudo-classe <a href="/fr/docs/Web/CSS/:enabled"><code>:enabled</code></a>.</p>
@@ -34,9 +33,8 @@ translation_of: Web/HTML/Attributes/disabled
 
 <p>Étant donné qu'un champ désactivé ne peut pas voir sa valeur modifiée, <a href="/fr/docs/Web/HTML/Attributes/required"><code>required</code></a> n'a aucun effet sur les entrées dont l'attribut <code>disabled</code> est également spécifié. De plus, puisque les éléments deviennent immuables, la plupart des autres attributs, tels que <a href="/fr/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a>, n'ont aucun effet, tant que le contrôle n'est pas activé.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>L'attribut <code>required</code> n'est pas autorisé sur les entrées pour lesquelles l'attribut <code>disabled</code> est spécifié.</p>
+<div class="note">
+  <p><strong>Note :</strong>L'attribut <code>required</code> n'est pas autorisé sur les entrées pour lesquelles l'attribut <code>disabled</code> est spécifié.</p>
 </div>
 
 <h3 id="usability">Utilisation</h3>

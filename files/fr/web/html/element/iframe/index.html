@@ -71,16 +71,14 @@ browser-compat: html.elements.iframe
   <dd>L'attribut <code>allow</code> permet de définir une <a href="/fr/docs/Web/HTTP/Feature_Policy">politique de fonctionnalité</a> pour l'<i>iframe</i>. Cette politique définit les fonctionnalités disponibles au sein de l'<i>iframe</i> selon l'origine de la requête (les fonctionnalités peuvent être l'accès au micro, à la caméra, aux informations de batterie, etc.). Pour plus d'informations, voir <a href="/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy#the_iframe_allow_attribute">l'article sur l'utilisation de <code>Feature-Policy</code></a>.</dd>
   <dt><code>allowfullscreen</code></dt>
   <dd>Cet attribut, lorsqu'il vaut <code>true</code>, indique que l'<i>iframe</i> intégrée peut être passée en plein écran via la méthode<a href="/fr/docs/Web/API/Element/requestFullScreen"><code>Element.requestFullscreen()</code></a>.
-    <div class="notecard note">
-      <p><b>Note :</b></p>
-      <p>Cet attribut est considéré comme historique et a été redéfini avec <code>allow="fullscreen"</code>.</p>
+    <div class="note">
+      <p><strong>Note :</strong>Cet attribut est considéré comme historique et a été redéfini avec <code>allow="fullscreen"</code>.</p>
     </div>
   </dd>
   <dt><code>allowpaymentrequest</code></dt>
   <dd>Cet attribut, lorsqu'il vaut <code>true</code>, permet à l'<i>iframe</i> intégrée d'appeler l'API <a href="/fr/docs/Web/API/Payment_Request_API">Payment Request</a>.
-    <div class="notecard note">
-      <p><b>Note :</b></p>
-      <p>Cet attribut est considéré comme historique et a été redéfini avec <code>allow="payment"</code>.</p>
+    <div class="note">
+      <p><strong>Note :</strong>Cet attribut est considéré comme historique et a été redéfini avec <code>allow="payment"</code>.</p>
     </div>
   </dd>
   <dt><code>csp</code> {{experimental_inline}}</dt>
@@ -127,7 +125,7 @@ browser-compat: html.elements.iframe
       <li><code>allow-top-navigation</code> : le contexte de navigation peut charger du contenu depuis le contexte de navigation de plus haut niveau. Si ce mot-clé est absent, cette opération n'est pas autorisée.</li>
       <li><code>allow-top-navigation-by-user-activation</code> : le contexte de navigation peut charger du contenu depuis le contexte de plus haut niveau uniquement si l'action provient de l'utilisateur. Si ce mot-clé est absent, cette opération n'est pas autorisée.</li>
     </ul>
-    <div class="notecard note">
+    <div class="note">
       <p><b>Notes :</b></p>
       <ul>
         <li>Lorsque le document intégré possède la même origine que la page principale, il est <strong>fortement déconseillé</strong> d'employer <code>allow-scripts</code> et <code>allow-same-origin</code> simultanément, car cela permet de retirer l'attribut <code>sandbox</code> via un programme, c'est donc aussi sûr que de ne pas utiliser l'attribut <code>sandbox</code>.</li>
