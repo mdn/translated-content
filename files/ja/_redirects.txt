@@ -696,7 +696,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/length	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/length
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/map	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/pop	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
-/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/prototype	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype
+/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/push	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/reverse	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/shift	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
@@ -937,7 +937,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:length	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/length
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:map	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:pop	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
-/ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:prototype	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype
+/ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:push	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:reverse	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:shift	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
@@ -1469,7 +1469,7 @@
 /ja/docs/DOM/window.confirm-redirect-1	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM/window.content	/ja/docs/Web/API/Window/content
 /ja/docs/DOM/window.controllers	/ja/docs/Web/API/Window/controllers
-/ja/docs/DOM/window.crypto	/ja/docs/Web/API/Window/crypto
+/ja/docs/DOM/window.crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/DOM/window.defaultStatus	/ja/docs/Web/API/Window/defaultStatus
 /ja/docs/DOM/window.directories	/ja/docs/Web/API/Window/directories
 /ja/docs/DOM/window.document	/ja/docs/Web/API/Window/document
@@ -1695,7 +1695,7 @@
 /ja/docs/DOM:window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM:window.content	/ja/docs/Web/API/Window/content
 /ja/docs/DOM:window.controllers	/ja/docs/Web/API/Window/controllers
-/ja/docs/DOM:window.crypto	/ja/docs/Web/API/Window/crypto
+/ja/docs/DOM:window.crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/DOM:window.defaultStatus	/ja/docs/Web/API/Window/defaultStatus
 /ja/docs/DOM:window.directories	/ja/docs/Web/API/Window/directories
 /ja/docs/DOM:window.document	/ja/docs/Web/API/Window/document
@@ -2259,7 +2259,7 @@
 /ja/docs/JavaScript/Reference/Global_Objects/Array/map-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 /ja/docs/JavaScript/Reference/Global_Objects/Array/pop	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
 /ja/docs/JavaScript/Reference/Global_Objects/Array/pop-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
-/ja/docs/JavaScript/Reference/Global_Objects/Array/prototype	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype
+/ja/docs/JavaScript/Reference/Global_Objects/Array/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
 /ja/docs/JavaScript/Reference/Global_Objects/Array/push	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 /ja/docs/JavaScript/Reference/Global_Objects/Array/push-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 /ja/docs/JavaScript/Reference/Global_Objects/Array/reduce	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
@@ -2739,9 +2739,7 @@
 /ja/docs/MDN/Contribute/Structures/Live_samples/Simple_live_sample_demo	/ja/docs/orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo
 /ja/docs/MDN/Contribute/Structures/Macros	/ja/docs/MDN/Structures/Macros
 /ja/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros	/ja/docs/MDN/Structures/Macros/Commonly-used_macros
-/ja/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros/creating_templates_for_multi-languages	/ja/docs/orphaned/MDN/Structures/Macros/Commonly-used_macros/creating_templates_for_multi-languages
 /ja/docs/MDN/Contribute/Structures/Macros/Project:Custom_Templates	/ja/docs/MDN/Structures/Macros/Commonly-used_macros
-/ja/docs/MDN/Contribute/Structures/Macros/Project:Custom_Templates/creating_templates_for_multi-languages	/ja/docs/orphaned/MDN/Structures/Macros/Commonly-used_macros/creating_templates_for_multi-languages
 /ja/docs/MDN/Contribute/Structures/Page_types	/ja/docs/MDN/Structures/Page_types
 /ja/docs/MDN/Contribute/Structures/Page_types/API_event_subpage_template	/ja/docs/MDN/Structures/Page_types/API_event_subpage_template
 /ja/docs/MDN/Contribute/Structures/Page_types/API_method_subpage_template	/ja/docs/MDN/Structures/Page_types/API_method_subpage_template
@@ -2763,7 +2761,6 @@
 /ja/docs/MDN/Structures/API_references/API_reference_sidebars	/ja/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars
 /ja/docs/MDN/Structures/API_references/What_does_an_API_reference_need	/ja/docs/orphaned/MDN/Structures/API_references/What_does_an_API_reference_need
 /ja/docs/MDN/Structures/Live_samples/Simple_live_sample_demo	/ja/docs/orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo
-/ja/docs/MDN/Structures/Macros/Commonly-used_macros/creating_templates_for_multi-languages	/ja/docs/orphaned/MDN/Structures/Macros/Commonly-used_macros/creating_templates_for_multi-languages
 /ja/docs/MDN/Tools/Document_parameters	/ja/docs/MDN/Tools/Unsupported_GET_API
 /ja/docs/MDN/User_guide	/ja/docs/MDN/Tools
 /ja/docs/MDN/User_guide/Linking_to_MDN	/ja/docs/orphaned/MDN/About/Linking_to_MDN
@@ -3081,7 +3078,7 @@
 /ja/docs/Web/API/Element/name	/ja/docs/Web/API
 /ja/docs/Web/API/Event/button	/ja/docs/Web/API/MouseEvent/button
 /ja/docs/Web/API/Event/createEvent	/ja/docs/Web/API/Document/createEvent
-/ja/docs/Web/API/EventHandler	/ja/docs/orphaned/Web/Guide/Events/Event_handlers
+/ja/docs/Web/API/EventHandler	/ja/docs/Web/Events/Event_handlers
 /ja/docs/Web/API/EventTarget.addEventListener	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/EventTarget.dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/EventTarget.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener
@@ -3286,6 +3283,7 @@
 /ja/docs/Web/API/Window.onafterprint	/ja/docs/Web/API/WindowEventHandlers/onafterprint
 /ja/docs/Web/API/Window/URL	/ja/docs/Web/API/URL
 /ja/docs/Web/API/Window/arguments	/ja/docs/orphaned/Working_with_windows_in_chrome_code
+/ja/docs/Web/API/Window/crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/Web/API/Window/dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/Window/escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
 /ja/docs/Web/API/Window/getAttention	/ja/docs/orphaned/Web/API/Window/getAttention
@@ -3302,6 +3300,7 @@
 /ja/docs/Web/API/Window/onmouseup	/ja/docs/Web/API/GlobalEventHandlers/onmouseup
 /ja/docs/Web/API/Window/onreset	/ja/docs/Web/API/GlobalEventHandlers/onreset
 /ja/docs/Web/API/Window/onresize	/ja/docs/Web/API/GlobalEventHandlers/onresize
+/ja/docs/Web/API/Window/performance	/ja/docs/Web/API/performance_property
 /ja/docs/Web/API/Window/restore	/ja/docs/Web/API/Window/moveTo
 /ja/docs/Web/API/Window/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/Window/setTimeout	/ja/docs/Web/API/setTimeout
@@ -3456,7 +3455,7 @@
 /ja/docs/Web/API/window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/Web/API/window.content	/ja/docs/Web/API/Window/content
 /ja/docs/Web/API/window.controllers	/ja/docs/Web/API/Window/controllers
-/ja/docs/Web/API/window.crypto	/ja/docs/Web/API/Window/crypto
+/ja/docs/Web/API/window.crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/Web/API/window.defaultStatus	/ja/docs/Web/API/Window/defaultStatus
 /ja/docs/Web/API/window.dialogArguments	/ja/docs/Web/API/Window/dialogArguments
 /ja/docs/Web/API/window.directories	/ja/docs/Web/API/Window/directories
@@ -3895,7 +3894,7 @@
 /ja/docs/Web/Guide/DOM/Using_full_screen_mode	/ja/docs/Web/API/Fullscreen_API
 /ja/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/ja/docs/Web/API/Document_Object_Model/Whitespace
 /ja/docs/Web/Guide/Events	/ja/docs/orphaned/Web/Guide/Events
-/ja/docs/Web/Guide/Events/Event_handlers	/ja/docs/orphaned/Web/Guide/Events/Event_handlers
+/ja/docs/Web/Guide/Events/Event_handlers	/ja/docs/Web/Events/Event_handlers
 /ja/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/ja/docs/Web/Events/Orientation_and_motion_data_explained
 /ja/docs/Web/Guide/Events/Overview_of_Events_and_Handlers	/ja/docs/orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers
 /ja/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas	/ja/docs/Web/API/Canvas_API/Tutorial
@@ -4162,7 +4161,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/flat
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Array/index	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Array/input	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
-/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype	/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBuffer
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBufferView_temp	/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBuffer
@@ -4388,6 +4387,7 @@
 /ja/docs/Web/WebGL/Using_textures_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /ja/docs/Web/WebGL/WebGL_best_practices	/ja/docs/Web/API/WebGL_API/WebGL_best_practices
 /ja/docs/Web/Web_Components/Custom_Elements	/ja/docs/Web/Web_Components/Using_custom_elements
+/ja/docs/Web/Web_Components/HTML_Imports	/ja/docs/conflicting/Web/Web_Components
 /ja/docs/Web/Web_Components/Status_in_Firefox	/ja/docs/orphaned/Web/Web_Components/Status_in_Firefox
 /ja/docs/Web/XSLT/Elements	/ja/docs/Web/XSLT/Element
 /ja/docs/Web/XSLT/Elements/apply-imports	/ja/docs/Web/XSLT/Element/apply-imports
@@ -4684,7 +4684,7 @@
 /ja/docs/dummySlug/Reference/Global_Objects/Array/length	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/length
 /ja/docs/dummySlug/Reference/Global_Objects/Array/map	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 /ja/docs/dummySlug/Reference/Global_Objects/Array/pop	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
-/ja/docs/dummySlug/Reference/Global_Objects/Array/prototype	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype
+/ja/docs/dummySlug/Reference/Global_Objects/Array/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
 /ja/docs/dummySlug/Reference/Global_Objects/Array/push	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 /ja/docs/dummySlug/Reference/Global_Objects/Array/reduce	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 /ja/docs/dummySlug/Reference/Global_Objects/Array/reduceRight	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight

@@ -6643,13 +6643,6 @@
       "fabreu"
     ]
   },
-  "Web/API/Window/crypto": {
-    "modified": "2019-03-23T22:12:19.817Z",
-    "contributors": [
-      "Hikashii",
-      "AlexandreBarros"
-    ]
-  },
   "Web/API/Window/document": {
     "modified": "2019-03-23T22:49:44.918Z",
     "contributors": [
@@ -6736,12 +6729,6 @@
       "saulodecarlo",
       "teoli",
       "perrucho"
-    ]
-  },
-  "Web/API/Window/performance": {
-    "modified": "2019-03-23T22:44:28.136Z",
-    "contributors": [
-      "augustoclaro"
     ]
   },
   "Web/API/Window/popstate_event": {
@@ -7002,10 +6989,23 @@
       "Willkuns"
     ]
   },
+  "Web/API/crypto_property": {
+    "modified": "2019-03-23T22:12:19.817Z",
+    "contributors": [
+      "Hikashii",
+      "AlexandreBarros"
+    ]
+  },
   "Web/API/fetch": {
     "modified": "2019-03-23T22:06:21.567Z",
     "contributors": [
       "dowgssss"
+    ]
+  },
+  "Web/API/performance_property": {
+    "modified": "2019-03-23T22:44:28.136Z",
+    "contributors": [
+      "augustoclaro"
     ]
   },
   "Web/API/setInterval": {

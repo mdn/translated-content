@@ -1579,6 +1579,7 @@
 /es/docs/Web/API/Window.navigator	/es/docs/Web/API/Window/navigator
 /es/docs/Web/API/Window.onbeforeunload	/es/docs/Web/API/WindowEventHandlers/onbeforeunload
 /es/docs/Web/API/Window.setTimeout	/es/docs/Web/API/setTimeout
+/es/docs/Web/API/Window/crypto	/es/docs/Web/API/crypto_property
 /es/docs/Web/API/WindowBase64.atob	/es/docs/Web/API/atob
 /es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando	/es/docs/Glossary/Base64
 /es/docs/Web/API/WindowBase64/atob	/es/docs/Web/API/atob

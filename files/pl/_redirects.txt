@@ -443,7 +443,7 @@
 /pl/docs/DOM/window.clearTimeout	/pl/docs/Web/API/clearTimeout
 /pl/docs/DOM/window.closed	/pl/docs/Web/API/Window/closed
 /pl/docs/DOM/window.controllers	/pl/docs/Web/API/Window/controllers
-/pl/docs/DOM/window.crypto	/pl/docs/Web/API/Window/crypto
+/pl/docs/DOM/window.crypto	/pl/docs/Web/API/crypto_property
 /pl/docs/DOM/window.defaultStatus	/pl/docs/Web/API/Window/defaultStatus
 /pl/docs/DOM/window.directories	/pl/docs/Web/API/Window/directories
 /pl/docs/DOM/window.document	/pl/docs/Web/API/Window/document
@@ -675,7 +675,7 @@
 /pl/docs/DOM:window.alert	/pl/docs/Web/API/Window/alert
 /pl/docs/DOM:window.closed	/pl/docs/Web/API/Window/closed
 /pl/docs/DOM:window.controllers	/pl/docs/Web/API/Window/controllers
-/pl/docs/DOM:window.crypto	/pl/docs/Web/API/Window/crypto
+/pl/docs/DOM:window.crypto	/pl/docs/Web/API/crypto_property
 /pl/docs/DOM:window.defaultStatus	/pl/docs/Web/API/Window/defaultStatus
 /pl/docs/DOM:window.directories	/pl/docs/Web/API/Window/directories
 /pl/docs/DOM:window.document	/pl/docs/Web/API/Window/document
@@ -1503,6 +1503,7 @@
 /pl/docs/Web/API/UIEvent/pageY	/pl/docs/Web/API/MouseEvent/pageY
 /pl/docs/Web/API/Window/clearInterval	/pl/docs/Web/API/clearInterval
 /pl/docs/Web/API/Window/clearTimeout	/pl/docs/Web/API/clearTimeout
+/pl/docs/Web/API/Window/crypto	/pl/docs/Web/API/crypto_property
 /pl/docs/Web/API/Window/onload	/pl/docs/Web/API/GlobalEventHandlers/onload
 /pl/docs/Web/API/Window/setInterval	/pl/docs/Web/API/setInterval
 /pl/docs/Web/API/Window/setTimeout	/pl/docs/Web/API/setTimeout
