@@ -26,16 +26,6 @@ translation_of: Web/HTML/Element/input/datetime-local
 
 <p>Certains navigateurs pourront utiliser un contrôle avec un texte simple et vérifier que la valeur date/heure est correcte avant de l'envoyer au serveur. Toutefois, ce contrôle ayant lieu côté client, vous devrez nécessairement vérifier le bon format de la donnée côté serveur.</p>
 
-<p>Voici, ci-après, un aperçu du contrôle obtenu dans un navigateur fonctionnel. En cliquant sur la flèche vers le bas, cela fait apparaître un sélecteur de date et il faut ensuite saisir l'heure manuellement. Pour Chrome / Opera :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14949/datetime-local-chrome.png" style="display: block; height: 224px; margin: 0px auto; width: 280px;"></p>
-
-<p>Pour Edge, le contrôle associé à <code>datetime-local</code> se décompose en deux sélecteurs : un pour la date et un pour l'heure qui apparaissent quand on clique sur les éléments respectifs du champ :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14953/datetime-local-picker-edge1.png" style="display: block; height: 398px; margin: 0px auto; width: 320px;"></p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14955/datetime-local-picker-edge2.png" style="display: block; height: 394px; margin: 0px auto; width: 264px;"></p>
-
 <h2 id="Valeur">Valeur</h2>
 
 <p>Une chaîne de caractères ({{domxref("DOMString")}}) qui représente la valeur de la date saisie dans le contrôle. Le format utilisable est décrit dans <a href="/fr/docs/Web/HTML/Formats_date_heure_HTML#Représentation_des_dates_et_heures_locales">cette section de l'article sur les formats</a>. Il est possible d'indiquer une date par défaut grâce à l'attribut {{htmlattrxref("value", "input")}} :</p>
@@ -199,9 +189,6 @@ date.value = '2017-06-01T08:30';</pre>
 
 <p>{{EmbedLiveSample('Validation', 600, 120)}}</p>
 
-<p>Voici une capture d'écran illustrant un message d'erreur dans un navigateur qui prend en charge cette fonctionnalité :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14957/datetime-local-error.png" style="display: block; height: 100px; margin: 0px auto; width: 558px;"></p>
 
 <p>Vous trouverez ensuite la feuille de style CSS utilisée pour l'exemple. On utilise les pseudo-classes {{cssxref(":valid")}} et {{cssxref(":invalid")}} afin de mettre en forme le contrôle selon que sa valeur est valide ou non. Les icônes indicatives sont placées dans un élément {{htmlelement("span")}} séparé car, sous Chrome, le contenu généré automatiquement est placé à l'intériur du contrôle et ne peut pas être affiché/mis en forme efficacement.</p>
 
@@ -232,9 +219,8 @@ input:valid+span:after {
 
 <h2 id="Gérer_la_prise_en_charge_des_navigateurs">Gérer la prise en charge des navigateurs</h2>
 
-<p>Comme indiqué ci-avant, le principal problème qu'on rencontre avec ces contrôles est la prise en charge hétérogène des différents navigateurs : seuls Opera et Chrome implémentent cette fonctionnalité parmi les navigateurs de bureau et la plupart des navigateurs mobiles la prennent en charge. Voici, par exemple, l'interface utilisateur du sélecteur <code>datetime-local</code> de Firefox pour Android :</p>
+<p>Comme indiqué ci-avant, le principal problème qu'on rencontre avec ces contrôles est la prise en charge hétérogène des différents navigateurs : seuls Opera et Chrome implémentent cette fonctionnalité parmi les navigateurs de bureau et la plupart des navigateurs mobiles la prennent en charge.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14951/datetime-local-fxa.png" style="display: block; height: 640px; margin: 0px auto; width: 360px;"></p>
 
 <p>Les navigateurs qui n'implémentent pas cette fonctionnalité afficheront un contrôle de saisie textuelle. Toutefois, cela entraîne des problème de cohérence d'interface graphique d'une part et de représentation des données d'autre part.</p>
 

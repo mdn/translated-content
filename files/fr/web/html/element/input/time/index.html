@@ -22,23 +22,25 @@ translation_of: Web/HTML/Element/input/time
 
 <p>Pour Chrome/Opera, le contrôle <code>time</code> possède deux cases permettant de saisir les heures d'une part et les minutes d'autre part (sur 12 ou 24 heures selon la locale de l'ordinateur), deux flèches pour augmenter ou réduire la valeur et une croix permettant de supprimer la valeur.</p>
 
-<p><img alt="Contrôle Chrome pour une saisie avec une locale sur 24h" src="https://mdn.mozillademos.org/files/15399/chrome-time.png" style="display: block; height: 31px; margin: 0px auto; width: 82px;"><img alt="Contrôle de Chrome pour une saisie avec une locale sur 12h" src="https://mdn.mozillademos.org/files/16417/chrome_time.PNG" style="display: block; height: 31px; margin: 0px auto; width: 82px;"></p>
+<p><img alt="Contrôle Chrome pour une heure sur 12 heures" src="chrome_time.png">12 heures</p>
+
+<p><img alt="Contrôle Chrome pour une heure sur 24 heures" src="chrome-time.png">24 heures</p>
 
 <h3 id="Firefox">Firefox</h3>
 
 <p>Pour Firefox, l'aspect du contrôle est similaire mais il ne possède pas les flèches d'incrément. L'horloge peut également s'utiliser sur un format 12 heures ou 24 heures (selon la locale du système). Un bouton rond avec une croix permet de réinitialiser la valeur du contrôle.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15403/firefox-time.png" style="display: block; height: 29px; margin: 0px auto; width: 106px;"></p>
+<p><img alt="Contrôle Firefox pour une heure sur 12 heures" src="firefox-time.png">12 heures</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16461/firefox-time-24.png" style="display: block; height: 29px; margin: 0px auto; width: 106px;"></p>
+<p><img alt="Contrôle Firefox pour une heure sur 24 heures" src="firefox-time-24.png">24 heures</p>
 
 <h3 id="Edge">Edge</h3>
 
 <p>Pour Edge, le contrôle affiché est un plus élaboré : il affiche un sélecteur avec deux bandes déroulantes pour choisir l'heure et les minutes (sur 12 ou 24 heures selon la locale) :</p>
 
-<p><img alt="Contrôle Edge pour la saisie sur 24h" src="https://mdn.mozillademos.org/files/15401/edge-time.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="Contrôle Edge pour la saisie sur 12 heures" src="edge_time.png">12 heures</p>
 
-<p><img alt="Contrôle Edge pour la saisie sur 12 heures" src="https://mdn.mozillademos.org/files/16418/edge_time.PNG" style="display: block; height: 360px; margin: 0px auto; width: 233px;"></p>
+<p><img alt="Contrôle Edge pour la saisie sur 24 heures" src="edge-time.png">24 heures</p>
 
 <h2 id="Valeur">Valeur</h2>
 
@@ -249,11 +251,6 @@ input:valid+span:after {
 <p>Si vous essayez de soumettre le formulaire sans avoir saisi de valeur (ou avec une heure en dehors des heures d'ouverture indiquées), le navigateur affichera une erreur. Vous pouvez manipuler le résultat obtenu :</p>
 
 <p>{{EmbedLiveSample('Rendre_la_saisie_obligatoire', 600, 120)}}</p>
-
-<p>Voici une capture d'écran (en anglais) si votre navigateur ne prend pas en charge cete fonctionnalité :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/15405/firefox-validation-message.png" style="display: block; margin: 0 auto;"></p>
-
 <div class="warning">
 <p><strong>Attention :</strong> Il est également important de vérifier le format de la valeur saisie côté serveur ! En effet, il est tout à fait possible pour un utilisateur de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.</p>
 </div>
@@ -264,7 +261,7 @@ input:valid+span:after {
 
 <p>Pour les plateformes mobiles (Android et iOS par exemple), les systèmes d'exploitation fournissent des interfaces particulièrement adaptées aux environnements tactiles. Voici par exemple le sélecteur d'heure pour Chrome sur Android :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15407/chrome-android-time.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="chrome-android-time.png"></p>
 
 <p>Lorsqu'un navigateur ne prend pas en charge ce type d'élément, il utilise un champ texte (<code>&lt;input type="text"&gt;</code>) à la place. Mais cela crée des problèmes, tant au niveau de l'interface utilisateur que de la cohérence des données et du format.</p>
 

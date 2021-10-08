@@ -55,23 +55,9 @@ function watchColorPicker(event) {
 
 <h3 id="Sélectionner_la_valeur">Sélectionner la valeur</h3>
 
-<p>Si l'implémentation du navigateur n'affiche pas de sélecteur de couleur mais un champ texte, il est possible de sélectionner la valeur du texte avec la méthode {{domxref("HTMLInputElement.select", "select()")}}. Si le navigateur affiche un sélecteur de couleur, <code>select()</code> ne fera rien.</p>
+<p>Si l'implémentation du navigateur n'affiche pas de sélecteur de couleur mais un champ texte, il est possible de sélectionner la valeur du texte avec la méthode {{domxref("HTMLInputElement.select", "select()")}}. Si le navigateur affiche un sélecteur de couleur, <code>select()</code> ne fera rien. Soyez conscient⋅e de ce comportement afin d'adapter votre code à ce cas.</p>
 
 <pre class="brush: js">colorWell.select();</pre>
-
-<h3 id="Différences_daspect">Différences d'aspect</h3>
-
-<p>Comme mentionné précédemment, lorsqu'un navigateur ne prend pas en charge l'affichage d'un sélecteur de couleur, c'est un champ texte qui sera affiché. Par exemple, sous Safari 10.1, on peut voir le résultat suivant :</p>
-
-<p><img alt="Screenshot of the example taken in Safari." src="https://mdn.mozillademos.org/files/14899/input-color-safari.png" style="border-style: solid; border-width: 1px; height: 160px; width: 598px;"></p>
-
-<p>Avec Firefox Firefox 55, on aura cet affichage :</p>
-
-<p><img alt="Screenshot of the example taken in Firefox 55 for macOS" src="https://mdn.mozillademos.org/files/14901/input-color-firefox.png" style="border-style: solid; border-width: 1px; height: 160px; width: 598px;"></p>
-
-<p>Pour ce deuxième cas, en cliquant sur le carré coloré, cela ouvrira le sélecteur de couleur natif du système d'exploitation :</p>
-
-<p><img alt="Screenshot of the element with the color picker open in Firefox Mac." src="https://mdn.mozillademos.org/files/14903/input-with-picker-firefox-mac.png" style="border-style: solid; border-width: 1px; height: 405px; width: 682px;"></p>
 
 <h2 id="Validation">Validation</h2>
 

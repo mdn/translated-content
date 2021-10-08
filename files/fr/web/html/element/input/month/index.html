@@ -17,11 +17,11 @@ translation_of: Web/HTML/Element/input/month
 
 <p>Si votre navigateur ne prend pas en charge ce type d'élément, voici ensuite une capture d'écran de Chrome : cliquer sur la flèche vers le bas permettra de faire apparaître un sélecteur de date qui permettra de choisir le mois et l'année.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15391/month-control-chrome.png" style="display: block; height: 216px; margin: 0px auto; width: 273px;"></p>
+<p><img alt="" src="month-control-chrome.png"></p>
 
 <p>Voici un aperçu du contrôle sous Edge :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15393/month-control-edge.png" style="display: block; height: 389px; margin: 0px auto; width: 227px;"></p>
+<p><img alt="" src="month-control-edge.png"></p>
 
 <h2 id="Valeur">Valeur</h2>
 
@@ -180,7 +180,7 @@ monthControl.value = '1978-06';</pre>
 
 <p>Voici une capture d'écran qui illustre le résultat obtenu avec un navigateur prenant en charge cette fonctionnalité :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15395/month-required.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="month-required.png"></p>
 
 <p>Voici ensuite la feuille de style CSS utilisée dans l'exemple précédent. On utilise {{cssxref(":valid")}} et {{cssxref(":invalid")}} afin de mettre en forme le contrôle selon que la valeur saisie est invalide. Les icônes ajoutées sont placées dans un élément {{htmlelement("span")}} à part car Chrome ne permet pas de gérer du contenu généré à même le contrôle ni de mettre en forme ce contenu généré.</p>
 
@@ -217,7 +217,7 @@ input:valid+span:after {
 
 <p>Comme évoqué plus haut, le problème principal relatif à ces contrôles est l'absence partielle de prise en charge des navigateurs. Seuls Chrome, Opera et Edge supportent ce type de contrôle sur ordinateurs et la plupart des navigateurs mobiles le prennent en charge. À titre d'exemple, voici une capture d'écran du contrôle sous Chrome pour Android :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15397/month-android.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="month-android.png"></p>
 
 <p>Les navigateurs qui ne prennent pas en charge cette fonctionnalité basculent sur un contrôle textuel classique mais cela pose problème à la fois en termes de cohérence de l'interface utilisateur et aussi par rapport à la gestion des données.</p>
 

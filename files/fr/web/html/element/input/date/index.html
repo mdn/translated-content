@@ -17,18 +17,6 @@ translation_of: Web/HTML/Element/input/date
 
 <p>L'apparence du contrôle affiché dépend du navigateur utilisé et la prise en charge de cette fonctionnalité est hétérogène (cf. la section {{anch("Compatibilité des navigateurs")}} pour plus de détails). Pour les navigateurs qui ne prennent pas en charge ce type d'élément <code>&lt;input&gt;</code>, c'est un simple <code><a href="/fr/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> qui sera affiché.</p>
 
-<p>Si votre navigateur actuel prend en charge cette fonctionnalité, voici ce à quoi ressemble le contrôle sous Chrome/Opera :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14909/date-picker-chrome.png" style="display: block; height: 220px; margin: 0px auto; width: 275px;"></p>
-
-<p>et pour Edge :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14911/date-picker-edge.png" style="display: block; margin: 0 auto;"></p>
-
-<p>Le contrôle de sélection de date pour Firefox ressemble à :</p>
-
-<p><img alt="Interface utilisateur du sélecteur de date dans Firefox" src="https://mdn.mozillademos.org/files/15644/firefox_datepicker.png" style="display: block; margin: 0 auto;"></p>
-
 <h2 id="Valeur">Valeur</h2>
 
 <p>Une chaîne de caractères qui représente la valeur de la date saisie dans le contrôle. Le format à respecter est décrit dans dans <a href="/fr/docs/Web/HTML/Formats_date_heure_HTML#Représentation_des_dates">cette section de l'article sur les formats</a>. Il est possible de fournir une valeur par défaut en renseignant l'attribut {{htmlattrxref("value", "input")}} :</p>
@@ -166,10 +154,6 @@ dateControl.value = '2017-06-01';</pre>
 
 <p>{{EmbedLiveSample('Validation', 600, 100)}}</p>
 
-<p>Voici une capture d'écran illustrant ce qui se produit dans un navigateur qui implémente cette fonctionnalité :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14913/date-picker-chrome-error-message.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
-
 <p>Voici la feuille de style utilisée pour l'exemple. On utilise les pseudo-classes {{cssxref(":valid")}} et {{cssxref(":invalid")}} afin de mettre en forme un indicateur selon que la valeur est valide ou non. On place cet indicateur dans un élément {{htmlelement("span")}} séparé car pour Chrome, le contenu généré dans les pseudo-classes est intégré dans le contrôle du formulaire et ne peut être mis en forme ou affiché correctement.</p>
 
 <pre class="brush: css">div {
@@ -199,9 +183,7 @@ input:valid+span:after {
 
 <h2 id="Gérer_la_prise_en_charge_des_navigateurs">Gérer la prise en charge des navigateurs</h2>
 
-<p>Comme indiqué ci-avant, le principal problème qu'on rencontre avec ces contrôles est l'hétérogénéité de la prise en charge par les différents navigateurs. Par exemple, le sélecteur de date implémenté dans Firefox pour Android ressemblera à :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14915/date-picker-fxa.png" style="display: block; margin: 0 auto;"></p>
+<p>Comme indiqué ci-avant, le principal problème qu'on rencontre avec ces contrôles est l'hétérogénéité de la prise en charge par les différents navigateurs.</p>
 
 <p>Les navigateurs qui ne prennent pas en charge ces contrôles utiliseront à la place des champs texte. Toutefois, cette solution de contournement entraîne deux problèmes : le premier concerne l'homogénéité de l'interface utilisateur (le contrôle affiché ne sera pas le même) et le second concerne la gestion des données.</p>
 
