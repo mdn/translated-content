@@ -29,16 +29,13 @@ browser-compat: html.elements.a
 <dl>
   <dt><strong><code>download</code></strong></dt>
   <dd>
-    <ul>
-      <li>Sans valeur, le navigateur proposera un nom de fichier/extension, généré à partir de diverses sources :
+    <p>Sans valeur, le navigateur proposera un nom de fichier/extension, généré à partir de diverses sources :</p>
       <ul>
           <li>L'en-tête HTTP <a href="/fr/docs/Web/HTTP/Headers/Content-Disposition"><code>Content-Disposition</code></a></li>
           <li>Le segment final dans l'URL : <a href="/fr/docs/Web/API/URL/pathname">path</a></li>
           <li>Le <a href="/fr/docs/Glossary/MIME_type">Type MIME</a> (de l'en-tête <a href="/fr/docs/Web/HTTP/Headers/Content-Type"><code>Content-Type</code></a>, le début d'une URL <a href="/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code></a>, ou <a href="/fr/docs/Web/API/Blob/type"><code>Blob.type</code></a> pour une URL <a href="/fr/docs/Web/API/URL/createObjectURL"><code>blob:</code></a>).</li>
       </ul>
-      </li>
-      <li>La définition d'une valeur la suggère comme nom de fichier. Les caractères <code>/</code> et <code>\</code> sont convertis en caractères de soulignement (<code>_</code>). Les systèmes de fichiers peuvent interdire d'autres caractères dans les noms de fichiers, les navigateurs ajusteront donc le nom suggéré si nécessaire.</li>
-    </ul>
+      <p>La définition d'une valeur la suggère comme nom de fichier. Les caractères <code>/</code> et <code>\</code> sont convertis en caractères de soulignement (<code>_</code>). Les systèmes de fichiers peuvent interdire d'autres caractères dans les noms de fichiers, les navigateurs ajusteront donc le nom suggéré si nécessaire.</p>
     <div class="note">
       <p><strong>Note :</strong></p>
       <ul>

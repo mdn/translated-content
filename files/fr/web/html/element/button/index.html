@@ -70,7 +70,7 @@ browser-compat: html.elements.button
   <dt><strong><code>formaction</code></strong></dt>
   <dd>L'URL qui traite les informations soumises par le bouton. Remplace l'attribut <a href="/fr/docs/Web/HTML/Element/Form#attr-action"><code>action</code></a> du formulaire rattaché au bouton. Il ne fait rien s'il n'y a pas de formulaire rattaché.</dd>
   <dt><strong><code>formenctype</code></strong></dt>
-  <dd>Lorsque l'attribut <code><strong>type</strong></code> possède la valeur <code>submit</code>, cet attribut définit le <a class="external" href="https://fr.wikipedia.org/wiki/Type_MIME">type MIME</a> qui sera utilisée pour encoder les données envoyées au serveur. C'est un attribut à valeur contrainte qui peut prendre les valeurs suivantes :
+  <dd><p>Lorsque l'attribut <code><strong>type</strong></code> possède la valeur <code>submit</code>, cet attribut définit le <a class="external" href="https://fr.wikipedia.org/wiki/Type_MIME">type MIME</a> qui sera utilisée pour encoder les données envoyées au serveur. C'est un attribut à valeur contrainte qui peut prendre les valeurs suivantes :</p>
     <ul>
       <li><code>application/x-www-form-urlencoded</code> : La valeur par défaut.</li>
       <li><code>multipart/form-data</code> : Utilisé pour soumettre des éléments <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> dont les attributs <a href="/fr/docs/Web/HTML/Element/Input#attr-type"><code>type</code></a> sont définis sur <code>file</code>.</li>
@@ -80,7 +80,7 @@ browser-compat: html.elements.button
     <p>Si cet attribut est spécifié, il remplace l'attribut <a href="/fr/docs/Web/HTML/Element/Form#attr-enctype"><code>enctype</code></a> du formulaire rattaché au bouton.</p>
   </dd>
   <dt><strong><code>formmethod</code></strong></dt>
-  <dd>Lorsque l'attribut <code><strong>type</strong></code> possède la valeur <code>submit</code> (explicitement ou comme valeur par défaut), cet attribut définit la <a href="/fr/docs/Web/HTTP/Methods">méthode HTTP</a> qui sera utilisée pour envoyer les données au serveur. C'est un attribut à valeur contrainte qui peut prendre les valeurs suivantes :
+  <dd><p>Lorsque l'attribut <code><strong>type</strong></code> possède la valeur <code>submit</code> (explicitement ou comme valeur par défaut), cet attribut définit la <a href="/fr/docs/Web/HTTP/Methods">méthode HTTP</a> qui sera utilisée pour envoyer les données au serveur. C'est un attribut à valeur contrainte qui peut prendre les valeurs suivantes :</p>
   <ul>
     <li><code>post</code> : Les données du formulaire sont incluses dans le corps de la requête HTTP lorsqu'elles sont envoyées au serveur. À utiliser lorsque le formulaire contient des informations qui ne devraient pas être publiques, comme les identifiants de connexion.</li>
     <li><code>get</code> : Les données du formulaire sont ajoutées à l'URL <code>action</code> du formulaire, avec un <code>?</code> comme séparateur, et l'URL résultante est envoyée au serveur. Utilisez cette méthode lorsque le formulaire <a href="/fr/docs/Glossary/Idempotent">n'a pas d'effets secondaires</a>, comme les formulaires de recherche.</li>
@@ -89,8 +89,7 @@ browser-compat: html.elements.button
   <p>S'il est spécifié, cet attribut remplace l'attribut <a href="/fr/docs/Web/HTML/Element/Form#attr-method"><code>method</code></a> du formulaire rattaché au bouton.</p>
   </dd>
   <dt><strong><code>formnovalidate</code></strong></dt>
-  <dd>Si le bouton est un bouton de soumission (<code>type</code> non défini ou défini avec la valeur <code>"submit"</code>), cet attribut booléen spécifie que le formulaire ne doit pas être <a href="/fr/docs/Learn/Forms/Form_validation">validé</a> lorsqu'il est soumis. Si cet attribut est spécifié, il remplace l'attribut <a href="/fr/docs/Web/HTML/Element/Form#attr-novalidate"><code>novalidate</code></a> du formulaire rattaché au bouton.</dd>
-  <dd>Cet attribut est également disponible sur les éléments <code><a href="/fr/docs/Web/HTML/Element/Input/image">&lt;input type="image"&gt;</a></code> et <code><a href="/fr/docs/Web/HTML/Element/Input/submit">&lt;input type="submit"&gt;</a></code>.</p>
+  <dd>Si le bouton est un bouton de soumission (<code>type</code> non défini ou défini avec la valeur <code>"submit"</code>), cet attribut booléen spécifie que le formulaire ne doit pas être <a href="/fr/docs/Learn/Forms/Form_validation">validé</a> lorsqu'il est soumis. Si cet attribut est spécifié, il remplace l'attribut <a href="/fr/docs/Web/HTML/Element/Form#attr-novalidate"><code>novalidate</code></a> du formulaire rattaché au bouton. Cet attribut est également disponible sur les éléments <code><a href="/fr/docs/Web/HTML/Element/Input/image">&lt;input type="image"&gt;</a></code> et <code><a href="/fr/docs/Web/HTML/Element/Input/submit">&lt;input type="submit"&gt;</a></code>.</p>
   </dd>
   <dt><strong><code>formtarget</code></strong></dt>
   <dd>Lorsque l'attribut <code><strong>type</strong></code> possède la valeur <code>submit</code>, cet attribut indique le contexte de navigation (onglet, fenêtre, frame) associé avec le formulaire, sa cible. Outre un attribut <code><strong>id </strong></code>valide du document, il peut prendre l'une de ces valeurs particulières:
@@ -104,7 +103,7 @@ browser-compat: html.elements.button
   <dt><strong><code>name</code></strong></dt>
   <dd>Le nom du bouton, soumis en tant que paire avec la <code>valeur</code> du bouton comme partie des données du formulaire.</dd>
   <dt><strong><code>type</code></strong></dt>
-  <dd>Le comportement par défaut du bouton. Les valeurs possibles sont :
+  <dd><p>Le comportement par défaut du bouton. Les valeurs possibles sont :</p>
     <ul>
       <li><code>submit</code> : Le bouton soumet les données du formulaire au serveur. C'est la valeur par défaut si l'attribut n'est pas spécifié pour les boutons associés à un <code>&lt;form&gt;</code>, ou si l'attribut est une valeur vide ou invalide.</li>
       <li><code>reset</code> : Le bouton réinitialise tous les contrôles à leur valeur initiale, comme <a href="/fr/docs/Web/HTML/Element/Input/reset">&lt;input type="reset"&gt;</a>. (Ce comportement a tendance à agacer les utilisateurs).</li>

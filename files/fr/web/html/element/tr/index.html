@@ -22,7 +22,7 @@ browser-compat: html.elements.tr
 
 <dl>
  <dt><strong><code>align</code></strong>{{deprecated_inline}}</dt>
- <dd>Une chaîne de caractère qui définit l'alignement horizontal pour le contenu de chaque cellule. C'est un raccourci pour définir l'alignement sur l'ensemble de la ligne plutôt que pour chaque cellule. Les valeurs possibles sont :
+ <dd><p>Une chaîne de caractère qui définit l'alignement horizontal pour le contenu de chaque cellule. C'est un raccourci pour définir l'alignement sur l'ensemble de la ligne plutôt que pour chaque cellule. Les valeurs possibles sont :</p>
  <dl>
   <dt><code>left</code></dt>
   <dd>Le contenu de la cellule est aligné à gauche de la cellule.</dd>
@@ -47,16 +47,15 @@ browser-compat: html.elements.tr
  </div>
  </dd>
  <dt><strong><code>bgcolor</code></strong> {{deprecated_inline}}</dt>
- <dd>Une chaîne de caractères qui définit la couleur d'arrière-plan de toutes les cellules de la colonne. Il peut s'agit d'une <a href="/fr/docs/Web/CSS/color_value#rgb()">notation hexadécimale #RRGGGBB ou #RGB</a> ou bien d'un <a href="/fr/docs/Web/CSS/color_value#color_keywords">mot-clé</a> pour une couleur. L'absence de cet attribut (ou sa déclaration à <code>null</code> en JavaScript) fera que la couleur des cellules de la ligne sera héritée de la couleur d'arrière-plan de l'élément parent.
+ <dd><p>Une chaîne de caractères qui définit la couleur d'arrière-plan de toutes les cellules de la colonne. Il peut s'agit d'une <a href="/fr/docs/Web/CSS/color_value#rgb()">notation hexadécimale #RRGGGBB ou #RGB</a> ou bien d'un <a href="/fr/docs/Web/CSS/color_value#color_keywords">mot-clé</a> pour une couleur. L'absence de cet attribut (ou sa déclaration à <code>null</code> en JavaScript) fera que la couleur des cellules de la ligne sera héritée de la couleur d'arrière-plan de l'élément parent.</p>
  <div class="note"><p><strong>Note :</strong> L'élément <code>&lt;tr&gt;</code> doit être mis en forme grâce au <a href="/fr/docs/Web/CSS">CSS</a>. Pour fournir un effet semblable à celui achevé par l'attribut <code>bgcolor</code>, il est possible d'utiliser la propriété CSS <a href="/fr/docs/Web/CSS/background-color"><code>background-color</code></a>.</p></div>
  </dd>
  <dt><strong><code>char</code></strong>{{deprecated_inline}}</dt>
- <dd>Une chaîne de caractère qui définit le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point ou une virgule pour aligner des nombres ou des valeurs monétaires. Si l'attribut <a href="#attr-align"><code>align</code></a> ne vaut pas <code>char</code>, l'attribut est ignoré.</dd>
- <dd>
+ <dd><p>Une chaîne de caractère qui définit le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point ou une virgule pour aligner des nombres ou des valeurs monétaires. Si l'attribut <a href="#attr-align"><code>align</code></a> ne vaut pas <code>char</code>, l'attribut est ignoré.</p>
  <div class="note"><p><strong>Note :</strong> Cet attribut est obsolète et peu implémenté : il est donc fortement déconseillé de l'utiliser. Pour réaliser le même effet qu'avec <a href="#attr-char"><code>char</code></a>, il faut utiliser la propriété CSS <a href="/fr/docs/Web/CSS/text-align"><code>text-align</code></a>.</p></div>
  </dd>
  <dt><strong><code>charoff</code></strong> {{deprecated_inline}}</dt>
- <dd>Une chaîne de caractères utilisée pour indiquer le nombre de caractères à afficher après le caractère défini par l'attribut <code>char</code>. Cela peut par exemple servir à indiquer qu'on souhaite afficher deux chiffres après la virgule pour les valeurs monétaires afin d'indiquer les centimes.
+ <dd><p>Une chaîne de caractères utilisée pour indiquer le nombre de caractères à afficher après le caractère défini par l'attribut <code>char</code>. Cela peut par exemple servir à indiquer qu'on souhaite afficher deux chiffres après la virgule pour les valeurs monétaires afin d'indiquer les centimes.</p>
  <div class="note"><p><strong>Note :</strong> Cet attribut ne doit plus être utilisé, car il est maintenant obsolète et que sa compatibilité n'était pas répandue.</p></div>
  </dd>
  <dt><strong><code>valign</code></strong> {{deprecated_inline}}</dt>
@@ -72,7 +71,7 @@ browser-compat: html.elements.tr
   <dd>Place le texte au plus haut de la cellule.</dd>
  </dl>
 
- <div class="note"><p><strong>Note: </strong>Cet attribut est obsolète dans le dernier standard, la propriété CSS <a href="/fr/docs/Web/CSS/vertical-align"><code>vertical-align</code></a> doit être utilisée à la place.</p></div>
+ <div class="note"><p><strong>Note :</strong> Cet attribut est obsolète dans le dernier standard, la propriété CSS <a href="/fr/docs/Web/CSS/vertical-align"><code>vertical-align</code></a> doit être utilisée à la place.</p></div>
  </dd>
 </dl>
 

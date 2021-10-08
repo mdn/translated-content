@@ -34,11 +34,11 @@ translation_of: Web/HTML/Element/td
 
 <dl>
  <dt>{{htmlattrdef("abbr")}} {{obsolete_inline("html5")}}</dt>
- <dd>Cet attribut contient une description courte et abrégée du contenu de la cellule. Certains outils utilisateurs, comme la synthèse vocale, peuvent décrire cette information avant le contenu lui-même.
+ <dd><p>Cet attribut contient une description courte et abrégée du contenu de la cellule. Certains outils utilisateurs, comme la synthèse vocale, peuvent décrire cette information avant le contenu lui-même.</p>
  <div class="note"><p><strong>Note :</strong> Cet attribut est obsolète dans le dernier standard et ne doit donc plus être utilisé. Il faut dans ces cas introduire la description au sein de la cellule comme un élément {{HTMLElement("abbr")}} indépendant ou utiliser l'attribut <code><strong>title</strong></code> de la cellule pour représenter le contenu et la cellule elle-même pour représenter le contenu abrégé.</p></div>
  </dd>
  <dt>{{htmlattrdef("align")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}</dt>
- <dd>Cet attribut à valeurs définit l'alignement horizontal pour le contenu de chaque cellule de la colonne. Les valeurs possibles sont :
+ <dd><p>Cet attribut à valeurs définit l'alignement horizontal pour le contenu de chaque cellule de la colonne. Les valeurs possibles sont :</p>
  <ul>
   <li><code>left </code>: le contenu de la cellule est alligné à gauche de la cellule</li>
   <li><code>center</code> : le contenu de la cellule est centré horizontalement</li>
@@ -58,12 +58,11 @@ translation_of: Web/HTML/Element/td
  </div>
  </dd>
  <dt>{{htmlattrdef("axis")}} {{obsolete_inline("html5")}}</dt>
- <dd>Cet attribut contient une liste de chaîne de caractères (séparées par des espaces). Chaque chaîne de caractère est l'identifiant d'un groupe de cellule auquel cet en-tête s'applique.</dd>
- <dd>
+ <dd><p>Cet attribut contient une liste de chaîne de caractères (séparées par des espaces). Chaque chaîne de caractère est l'identifiant d'un groupe de cellule auquel cet en-tête s'applique.</p>
  <div class="note"><p><strong>Note :</strong> Cet attribut est obsolète dans le dernier standard et ne doit donc plus être utilisé. L'attribut {{htmlattrxref("scope", "td")}} doit être utilisé pour le remplacer.</p></div>
  </dd>
  <dt>{{htmlattrdef("bgcolor")}} {{Non-standard_inline}}</dt>
- <dd>Cet attribut définit la couleur d'arrière-plan de toutes les cellules de la colonne. C'est un code à 6 chiffres hexadécimaux comme défini par le <a class="external" href="https://www.w3.org/Graphics/Color/sRGB">sRGB</a>. Il est précédé d'un '#'. Un de ces seize mot-clé peut également être utilisé.
+ <dd><p>Cet attribut définit la couleur d'arrière-plan de toutes les cellules de la colonne. C'est un code à 6 chiffres hexadécimaux comme défini par le <a class="external" href="https://www.w3.org/Graphics/Color/sRGB">sRGB</a>. Il est précédé d'un '#'. Un de ces seize mot-clé peut également être utilisé.</p>
  <table>
   <tbody>
    <tr>
@@ -121,20 +120,16 @@ translation_of: Web/HTML/Element/td
 
  <div class="note"><p><strong>Note :</strong> Il est fortement conseillé de ne pas utiliser cet attribut car celui-ci n'est pas un attribut standard et n'a été implémentée que sous certaines versions d'Internet Explorer. L'élément {{HTMLElement("td")}} doit être mis en forme grâce au <a href="/fr/docs/CSS">CSS</a>. Pour fournir un effet semblable à celui achevé par l'attribut <code><strong>bgcolor</strong></code>, il est possible d'utiliser la propriété CSS {{cssxref("background-color")}}.</p></div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("char")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}</dt>
- <dd>Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut {{htmlattrxref("align", "td")}} ne vaut pas <code>char</code>, l'attribut est ignoré.</dd>
- <dd>
+ <dd><p>Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut {{htmlattrxref("align", "td")}} ne vaut pas <code>char</code>, l'attribut est ignoré.</p>
  <div class="note"><p><strong>Note :</strong> Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec {{htmlattrxref("char", "td")}}, il faut utiliser CSS3 en attribuant la même valeur à la propriété {{cssxref("text-align")}}.{{unimplemented_inline}}.</p></div>
  </dd>
  <dt>{{htmlattrdef("charoff")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}</dt>
- <dd>Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut<strong> char</strong> à appliquer au contenu des cellules.
+ <dd><p>Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut<strong> char</strong> à appliquer au contenu des cellules.</p>
  <div class="note"><p><strong>Note :</strong> Cet attribut ne doit plus être utilisé car il est maintenant obsolète et n'est plus supporté dans le dernier standard.</p></div>
  </dd>
  <dt>{{htmlattrdef("valign")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}</dt>
- <dd>Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles de cet attribut sont :
+ <dd><p>Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles de cet attribut sont :</p>
  <ul>
   <li><code>baseline</code> qui alignera le texte à la ligne la plus basse possible en utilisant la <a class="external" href="https://fr.wikipedia.org/wiki/Ligne_de_base_%28typographie%29">ligne de base</a> des caractères. Si les caractères ont tous la même taille, cela aura le même effet que la valeur <code>bottom</code>.</li>
   <li><code>bottom</code> qui placera le texte au plus bas de la cellule</li>
@@ -145,7 +140,7 @@ translation_of: Web/HTML/Element/td
  <div class="note"><p><strong>Note :</strong> Cet attribut est obsolète dans le dernier standard, la propriété CSS {{cssxref("vertical-align")}} doit être utilisée à la place.</p></div>
  </dd>
  <dt>{{htmlattrdef("width")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}</dt>
- <dd>Cet attribut est utilisé afin de définir la largeur recommandée pour une cellule. Les propriétés <code><a href="/fr/docs/Web/API/HTMLTableElement/cellSpacing">cellspacing</a></code> et <code><a href="/fr/docs/Web/API/HTMLTableElement/cellPadding">cellpadding</a></code> peuvent être utilisées pour ajouter un espace supplémentaire et la largeur de l'élément {{HTMLElement("col")}} peut avoir un effet. En général, si la largeur d'une colonne est trop étroite pour afficher une cellule correctement, elle sera élargie lors de l'affichage.
+ <dd><p>Cet attribut est utilisé afin de définir la largeur recommandée pour une cellule. Les propriétés <code><a href="/fr/docs/Web/API/HTMLTableElement/cellSpacing">cellspacing</a></code> et <code><a href="/fr/docs/Web/API/HTMLTableElement/cellPadding">cellpadding</a></code> peuvent être utilisées pour ajouter un espace supplémentaire et la largeur de l'élément {{HTMLElement("col")}} peut avoir un effet. En général, si la largeur d'une colonne est trop étroite pour afficher une cellule correctement, elle sera élargie lors de l'affichage.</p>
  <div class="note"><p><strong>Note :</strong> Cet attribut est obsolète dans le dernier standard, la propriété CSS {{cssxref("width")}} doit être utilisée à la place.</p></div>
  </dd>
 </dl>
