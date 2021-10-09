@@ -6,21 +6,20 @@ tags:
   - CSS プロパティ
   - CSS 表
   - Reference
-  - ウェブ
-  - レイアウト
+  - recipe:css-property
+browser-compat: css.properties.table-layout
 translation_of: Web/CSS/table-layout
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS の <strong><code>table-layout</code></strong> プロパティは、 {{htmlelement("table")}} のセル、行、列のレイアウトに使用されるアルゴリズムを設定します。</p>
+**`table-layout`** は CSS のプロパティで、{{htmlelement("table")}} のセル、行、列のレイアウトに使用されるアルゴリズムを設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/table-layout.html")}}</div>
+{{EmbedInteractiveExample("pages/css/table-layout.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 table-layout: auto;
 table-layout: fixed;
 
@@ -28,77 +27,73 @@ table-layout: fixed;
 table-layout: inherit;
 table-layout: initial;
 table-layout: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt>{{Cssxref("auto")}}</dt>
- <dd>既定値で、ほとんどのブラウザーが表の自動レイアウトアルゴリズムを使用します。表とセルの幅は中身に合うように調整されます。</dd>
- <dt><code>fixed</code></dt>
- <dd>表と列の幅は <code>table</code> 要素と <code>col</code> 要素の幅によって、または最初の行のセルの幅によって設定されます。後続する行のセルは列幅の設定に影響しません。</dd>
- <dd>"fixed" レイアウト方法に於いては、一度テーブルの一行目のみをダウンロードして解析した後、テーブル全体をレンダリングします。これは自動テーブルレイアウトアルゴリズムよりレンダリング速度を速くする事が出来ますが、後続するセルのコンテンツが用意された列幅に収まらないかもしれません。セルは {{Cssxref("overflow")}} プロパティを使用して、表の幅が分かっている場合、はみ出すコンテンツを切り取るかどうかを定めます。そうでなければ、セルははみ出しません。</dd>
+- `auto`
+  - : 既定値で、ほとんどのブラウザーが表の自動レイアウトアルゴリズムを使用します。表とセルの幅は中身に合うように調整されます。
+- `fixed`
+
+  - : 表と列の幅は `table` 要素と `col` 要素の幅によって、または最初の行のセルの幅によって設定されます。後続する行のセルは列の幅に影響しません。
+
+    「固定」("fixed") レイアウト方式においては、表の 1 行目がダウンロードされ解析された時点で表全体がレンダリングできるようになります。これは「自動」レイアウト方式よりもレンダリング時間を高速にすることができますが、後続するセルのコンテンツが列の幅に合わなくなる可能性があります。各セルでは表の幅が分かっている場合、{{Cssxref("overflow")}} プロパティを使用して、はみ出すコンテンツを切り取るかどうかを決めます。それ以外の場合、セルからはみ出すことはありません。
 </dl>
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この例は表の固定レイアウトを使用し、 {{cssxref("width")}} プロパティとの組み合わせで、表の幅を制限しています。 {{cssxref("text-overflow")}} プロパティを使用して、語が長すぎる場合は省略記号を使用するようにしています。</p>
+<h3 id="Fixed-width_tables_with_text-overflow">固定幅の表に text-overflow を付けた場合</h3>
 
-<p>表のレイアウトが <code>auto</code> である場合、表は指定された <code>width</code> よりも内容に合わせて広がります。</p>
+この例は表の固定レイアウトを使用し、{{cssxref("width")}} プロパティとの組み合わせで、表の幅を制限しています。{{cssxref("text-overflow")}} プロパティを使用して、語が長すぎる場合は省略記号を使用するようにしています。表のレイアウトが `auto` である場合、表は指定された `width` よりも内容に合わせて広がります。
 
-<h3 id="HTML">HTML</h3>
+#### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;&lt;td&gt;Ed&lt;/td&gt;&lt;td&gt;Wood&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;Albert&lt;/td&gt;&lt;td&gt;Schweitzer&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;Jane&lt;/td&gt;&lt;td&gt;Fonda&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;William&lt;/td&gt;&lt;td&gt;Shakespeare&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <tr><td>Ed</td><td>Wood</td></tr>
+  <tr><td>Albert</td><td>Schweitzer</td></tr>
+  <tr><td>Jane</td><td>Fonda</td></tr>
+  <tr><td>William</td><td>Shakespeare</td></tr>
+</table>
+```
 
-<h3 id="CSS">CSS</h3>
+#### CSS
 
-<pre class="brush: css">table {
+```css
+table {
   table-layout: fixed;
   width: 120px;
   border: 1px solid red;
 }
 
 td {
-  border: 1px solid blue;
+  border: 1px solid blue;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}</pre>
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+```
 
-<h3 id="Result">Result</h3>
+#### 結果
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Fixed-width_tables_with_text-overflow')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'tables.html#width-layout', 'table-layout')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p>{{cssinfo}}</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.table-layout")}}</p>
+## 関連情報
+
+- [`<table>`](/ja/docs/Web/HTML/Element/table)
