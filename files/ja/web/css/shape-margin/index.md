@@ -2,72 +2,81 @@
 title: shape-margin
 slug: Web/CSS/shape-margin
 tags:
-  - CSS
-  - CSS シェイプ
-  - CSS プロパティ
-  - Reference
-  - float
-  - margin
-  - shape-margin
-  - シェイプ
-  - プロパティ
   - 境界
+  - CSS
+  - CSS プロパティ
+  - CSS シェイプ
   - 浮動領域
+  - プロパティ
+  - Reference
+  - シェイプ
+  - float
+  - マージン
+  - recipe:css-property
+  - shape-margin
+browser-compat: css.properties.shape-margin
 translation_of: Web/CSS/shape-margin
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>shape-margin</code></strong> プロパティは、 {{cssxref("shape-outside")}} を使用して作成された CSS シェイプのマージンを設定します。</span></p>
+**`shape-margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("shape-outside")}} を使用して作成された CSS シェイプのマージンを設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/shape-margin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/shape-margin.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+マージンで、シェイプ (**浮動要素**) の縁と周囲のコンテンツとの間隔を調整することができます。
 
-<p>マージンで、シェイプ (<strong>浮動要素</strong>) の縁と周囲のコンテンツとの間隔を調整することができます。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; 値 */
+```css
+/* <length> 値 */
 shape-margin: 10px;
 shape-margin: 20mm;
 
-/* &lt;percentage&gt; 値 */
+/* <percentage> 値 */
 shape-margin: 60%;
 
 /* グローバル値 */
 shape-margin: inherit;
 shape-margin: initial;
+shape-margin: revert;
 shape-margin: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>シェイプのマージンを {{cssxref("&lt;length&gt;")}} 値又は要素の内包ブロックの幅に対する {{cssxref("&lt;percentage&gt;")}} で設定します。</dd>
-</dl>
+- `<length-percentage>`
+  - : シェイプのマージンを {{cssxref("&lt;length&gt;")}} 値または要素の包含ブロックの幅に対する {{cssxref("&lt;percentage&gt;")}} で設定します。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+<h3 id="Adding_a_margin_to_a_polygon">多角形にマージンを追加</h3>
 
-<pre class="brush: html">&lt;section&gt;
-&lt;div class="shape"&gt;&lt;/div&gt;
+#### HTML
+
+```html
+<section>
+<div class="shape"></div>
 We are not quite sure of any one thing in biology; our knowledge of geology
 is relatively very slight, and the economic laws of society are
 uncertain to every one except some individual who attempts to set them
 forth; but before the world was fashioned the square on the hypotenuse
 was equal to the sum of the squares on the other two sides of a right
 triangle, and it will be so after this world is dead; and the inhabitant
-of Mars, if he exists, probably knows its truth as we know it.&lt;/section&gt;</pre>
+of Mars, if one exists, probably knows its truth as we know it.</section>
+```
 
-<h3 id="CSS">CSS</h3>
+#### CSS
 
-<pre class="brush: css">section {
+```css
+section {
   max-width: 400px;
 }
 
@@ -79,45 +88,25 @@ of Mars, if he exists, probably knows its truth as we know it.&lt;/section&gt;</
   clip-path: polygon(0 0, 150px 150px, 0 150px);
   shape-outside: polygon(0 0, 150px 150px, 0 150px);
   shape-margin: 20px;
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+#### 結果
 
-<p>{{EmbedLiveSample("Example", 500, 250)}}</p>
+{{EmbedLiveSample("Adding_a_margin_to_a_polygon", 500, 250)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Shapes', '#shape-margin-property', 'shape-margin')}}</td>
-   <td>{{Spec2('CSS Shapes')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p>{{cssinfo}}</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat}}
 
-<div>
-<p>{{Compat("css.properties.shape-margin")}}</p>
-</div>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Shapes">CSS シェイプ</a></li>
- <li><a href="/ja/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes">CSS シェイプの概要</a></li>
- <li>{{cssxref("shape-outside")}}</li>
- <li>{{cssxref("shape-image-threshold")}}</li>
- <li>{{cssxref("&lt;basic-shape&gt;")}}</li>
-</ul>
+- [CSS シェイプ](/ja/docs/Web/CSS/CSS_Shapes)
+- [CSS シェイプの概要](/ja/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
+- {{cssxref("shape-outside")}}
+- {{cssxref("shape-image-threshold")}}
+- {{cssxref("&lt;basic-shape&gt;")}}
