@@ -3,89 +3,96 @@ title: scroll-snap-coordinate
 slug: Web/CSS/scroll-snap-coordinate
 tags:
   - CSS
-  - CSS スクロールスナップ
   - CSS プロパティ
-  - Deprecated
+  - CSS スクロールスナップ
+  - 非推奨
   - Reference
-  - scroll-snap-coordinate
+  - recipe:css-property
+browser-compat: css.properties.scroll-snap-coordinate
 translation_of: Web/CSS/scroll-snap-coordinate
 ---
-<div>{{CSSRef}}{{deprecated_header}}</div>
+{{CSSRef}}{{deprecated_header}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>scroll-snap-coordinate</code></strong> プロパティは、このプロパティは、最も近い祖先のスクロールコンテナーの {{cssxref("scroll-snap-destination")}} に配置される要素内の X 座標と Y 座標の位置をそれぞれの軸で定義します。</p>
+**`scroll-snap-coordinate`** は [CSS](/ja/docs/Web/CSS)のプロパティで、このプロパティは、最も近い祖先のスクロールコンテナーの {{cssxref("scroll-snap-destination")}} に配置される要素内の X 座標と Y 座標の位置をそれぞれの軸で定義します。
 
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 scroll-snap-coordinate: none;
 
-/* &lt;position&gt; 値 */
+/* <position> 値 */
 scroll-snap-coordinate: 50px 50px;                   /* 単一の座標 */
 scroll-snap-coordinate: 100px 100px, 100px bottom;   /* 複数の座標 */
 
 /* グローバル値 */
 scroll-snap-coordinate: inherit;
 scroll-snap-coordinate: initial;
-scroll-snap-coordinate: unset;</pre>
+scroll-snap-coordinate: unset;
+```
 
-<p>要素が変形されていた場合は、スナップ座標はそのように変換されるので、スナップ点の配置は要素が表示された時に行われます。</p>
+要素が変換されていた場合は、スナップ座標はそのように変換されるので、スナップ点の配置は要素が表示された時に行われます。
 
-<div>{{cssinfo}}</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
+- `none`
+  - : 要素がスナップ点を提供しないことを示します。
+- {{cssxref("&lt;position&gt;")}}
+  - : スナップ座標を要素の境界ボックスの開始側の辺からのオフセットで示します。それぞれの組は、最初の値がスナップ座標の X 座標で、二番目の値は Y 座標です。
 
-<dl>
- <dt><code>none</code></dt>
- <dd>要素がスナップ点を提供しないことを示します。</dd>
- <dt>{{cssxref("&lt;position&gt;")}}</dt>
- <dd>スナップ座標を要素の境界ボックスの開始側の辺からのオフセットで示します。それぞれの組は、最初の値がスナップ座標の X 座標で、二番目の値は Y 座標です。</dd>
-</dl>
+## 公式定義
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+<h3 id="Setting_scroll_snap_coordinates">スクロールスナップ座標の設定</h3>
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div&gt;
-    &lt;p&gt;At coordinate (0, 0)&lt;/p&gt;
-    &lt;div class="scrollContainer coordinate0"&gt;
-      &lt;div&gt;1&lt;/div&gt;
-      &lt;div&gt;2&lt;/div&gt;
-      &lt;div&gt;3&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+#### HTML
 
-  &lt;div&gt;
-    &lt;p&gt;At coordinate (25, 0)&lt;/p&gt;
-    &lt;div class="scrollContainer coordinate25"&gt;
-      &lt;div&gt;1&lt;/div&gt;
-      &lt;div&gt;2&lt;/div&gt;
-      &lt;div&gt;3&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+```html
+<div id="container">
+  <div>
+    <p>At coordinate (0, 0)</p>
+    <div class="scrollContainer coordinate0">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
 
-  &lt;div&gt;
-    &lt;p&gt;At coordinate (50, 0)&lt;/p&gt;
-    &lt;div class="scrollContainer coordinate50"&gt;
-      &lt;div&gt;1&lt;/div&gt;
-      &lt;div&gt;2&lt;/div&gt;
-      &lt;div&gt;3&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+  <div>
+    <p>At coordinate (25, 0)</p>
+    <div class="scrollContainer coordinate25">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
 
-<h3 id="CSS">CSS</h3>
+  <div>
+    <p>At coordinate (50, 0)</p>
+    <div class="scrollContainer coordinate50">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
+</div>
+```
 
-<pre class="brush: css">#container {
+#### CSS
+
+```css
+#container {
   display: flex;
 }
 
-#container &gt; div:nth-child(-n+2) {
+#container > div:nth-child(-n+2) {
   margin-right: 20px;
 }
 
@@ -97,7 +104,7 @@ scroll-snap-coordinate: unset;</pre>
   font-size: 0;
 }
 
-.scrollContainer &gt; div {
+.scrollContainer > div {
   width: 100px;
   height: 100px;
   display: inline-block;
@@ -106,49 +113,40 @@ scroll-snap-coordinate: unset;</pre>
   font-size: 50px;
 }
 
-.coordinate0 &gt; div {
+.coordinate0 > div {
   scroll-snap-coordinate: 0 0;
 }
 
-.coordinate25 &gt; div {
+.coordinate25 > div {
   scroll-snap-coordinate: 25px 0;
 }
 
-.coordinate50 &gt; div {
+.coordinate50 > div {
   scroll-snap-coordinate: 50px 0;
 }
 
-.scrollContainer &gt; div:nth-child(even) {
+.scrollContainer > div:nth-child(even) {
   background-color: #87ea87;
 }
 
-.scrollContainer &gt; div:nth-child(odd) {
+.scrollContainer > div:nth-child(odd) {
   background-color: #87ccea;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+#### 結果
 
-<p>{{EmbedLiveSample("Example", "100%", "170")}}</p>
+{{EmbedLiveSample("Setting_scroll_snap_coordinates", "100%", "170")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-coordinate", "scroll-snap-coordinate")}}</td>
-   <td>{{Spec2("CSS Scroll Snap Points")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+どの標準にも含まれていません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.scroll-snap-coordinate")}}</p>
+{{Compat}}
+
+## 関連情報
+
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_Scroll_Snap)
+- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
