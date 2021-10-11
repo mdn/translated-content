@@ -3,32 +3,38 @@ title: scroll-padding-inline
 slug: Web/CSS/scroll-padding-inline
 tags:
   - CSS
-  - CSS Property
+  - CSS プロパティ
   - Reference
   - Web
+  - recipe:css-shorthand-property
   - scroll-padding-inline
   - scroll-padding-inline-end
   - scroll-padding-inline-start
+browser-compat: css.properties.scroll-padding-inline
 translation_of: Web/CSS/scroll-padding-inline
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><code>scroll-padding-inline</code> プロパティは、インライン方向の scroll-padding の個別指定を設定する一括指定プロパティです。</p>
+`scroll-padding-inline` プロパティは、インライン方向の scroll-padding の個別指定を設定する一括指定プロパティです。
 
-<div>{{EmbedInteractiveExample("pages/css/scroll-padding-inline.html")}}</div>
+{{EmbedInteractiveExample("pages/css/scroll-padding-inline.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+scroll-padding 系のプロパティは、スクロールポートの*最適表示領域*のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
 
-<p>scroll-padding 系のプロパティは、スクロールポートの<dfn>最適表示領域</dfn>のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。</p>
+## 構成要素のプロパティ
 
-<p>{{cssinfo}}</p>
+このプロパティは以下の CSS プロパティの一括指定です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+- [`scroll-padding-inline-end`](/ja/docs/Web/CSS/scroll-padding-inline-end)
+- [`scroll-padding-inline-start`](/ja/docs/Web/CSS/scroll-padding-inline-start)
 
-<pre class="brush: css">/* キーワード値 */
+## 構文
+
+```css
+/* キーワード値 */
 scroll-padding-inline: auto;
 
-/* &lt;length&gt; 値 */
+/* <length> 値 */
 scroll-padding-inline: 10px;
 scroll-padding-inline: 1em .5em;
 scroll-padding-inline: 10%;
@@ -36,41 +42,34 @@ scroll-padding-inline: 10%;
 /* グローバル値 */
 scroll-padding-inline: inherit;
 scroll-padding-inline: initial;
+scroll-padding-inline: revert;
 scroll-padding-inline: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code><var>&lt;length-percentage&gt;</var></code></dt>
- <dd>スクロールポートの対応する辺からのオフセットで、有効な長さまたはパーセント値です。</dd>
- <dt><code>auto</code></dt>
- <dd>オフセットはユーザーエージェントによって特定されます。これは一般に 0px になりますが、ゼロ以外の値がもっと適切である場合を検出して他のことを行うことができます。</dd>
-</dl>
+- `<length-percentage>`
+  - : スクロールポートの対応する辺からのオフセットで、有効な長さまたはパーセント値です。
+- `auto`
+  - : オフセットはユーザーエージェントによって特定されます。これは一般に 0px になりますが、ゼロ以外の値がもっと適切である場合を検出して他のことを行うことができます。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Scroll Snap Points", "#propdef-scroll-padding-inline", "scroll-padding-inline")}}</td>
-   <td>{{Spec2("CSS Scroll Snap Points")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.scroll-padding-inline")}}</p>
+{{Compat}}
+
+## 関連情報
+
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_Scroll_Snap)
+- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)

@@ -5,15 +5,18 @@ tags:
   - CSS
   - CSS スクロールスナップ
   - Reference
+  - Web
+  - recipe:css-property
   - scroll-snap-stop
-  - ウェブ
+browser-compat: css.properties.scroll-snap-stop
 translation_of: Web/CSS/scroll-snap-stop
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>scroll-snap-stop</code></strong> プロパティは、スクロールコンテナーが可能なスナップ位置を「通り過ぎる」ことを許可するかどうかを定義します。</p>
+**`scroll-snap-stop`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロールコンテナーが可能なスナップ位置を「通り過ぎる」ことを許可するかどうかを定義します。
 
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 scroll-snap-stop: normal;
 scroll-snap-stop: always;
 
@@ -21,32 +24,35 @@ scroll-snap-stop: always;
 scroll-snap-type: inherit;
 scroll-snap-type: initial;
 scroll-snap-type: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
+- `normal`
+  - : スクロールコンテナーの視覚{{Glossary("viewport", "ビューポート")}}がスクロールされた時、可能なスナップ位置を「通り過ぎる」ことを許可します。
+- `always`
+  - : スクロールコンテナーは可能なスナップ位置を「通り過ぎる」ことを許可しません。最初の要素のスナップ位置にスナップします。
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>スクロールコンテナーの視覚的な{{Glossary("viewport", "ビューポート")}}がスクロールされた時、可能なスナップ位置を「通り過ぎる」ことがあります。</dd>
- <dt><code>always</code></dt>
- <dd>スクロールコンテナーは可能なスナップ位置を「通り過ぎる」ことはありません。最初の要素のスナップ位置にスナップします。</dd>
-</dl>
+## 公式定義
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+{{CSSInfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この例は {{cssxref("scroll-snap-type")}} から複製したものに多少の修正を加えたものです。</p>
+<h3 id="Snapping_in_different_axes">様々な軸でのスナップ</h3>
 
-<h3 id="CSS">CSS</h3>
+この例は {{cssxref("scroll-snap-type")}} から複製したものに多少の修正を加えたものです。
 
-<pre class="brush: css">/* setup */
+#### CSS
+
+```css
+/* setup */
 :root, body {
   height: 100%;
   display: flex;
@@ -74,10 +80,10 @@ scroll-snap-type: unset;
   flex-flow: column nowrap;
 }
 /* definite scroll snap */
-.mandatory-scroll-snapping {
+.mandatory-scroll-snapping > div {
   scroll-snap-stop: always;
 }
-.proximity-scroll-snapping {
+.proximity-scroll-snapping > div {
   scroll-snap-stop: normal;
 }
 /* scroll-snap */
@@ -97,128 +103,121 @@ scroll-snap-type: unset;
   scroll-snap-type: y proximity;
 }
 
-.container &gt; div {
+.container > div {
   text-align: center;
   scroll-snap-align: center;
   flex: none;
 }
 
-.x.container &gt; div {
+.x.container > div {
   line-height: 128px;
   font-size: 64px;
   width: 100%;
   height: 128px;
 }
 
-.y.container &gt; div {
+.y.container > div {
   line-height: 256px;
   font-size: 128px;
   width: 256px;
   height: 256px;
 }
 /* appearance fixes */
-.y.container &gt; div:first-child {
+.y.container > div:first-child {
   line-height: 1.3;
   font-size: 64px;
 }
 /* coloration */
-.container &gt; div:nth-child(even) {
+.container > div:nth-child(even) {
   background-color: #87EA87;
 }
 
-.container &gt; div:nth-child(odd) {
+.container > div:nth-child(odd) {
   background-color: #87CCEA;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+#### HTML
 
-<pre class="brush: html">&lt;div class="container x mandatory-scroll-snapping" dir="ltr"&gt;
-  &lt;div&gt;X Mand. LTR &lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+```html
+<div class="container x mandatory-scroll-snapping" dir="ltr">
+  <div>X Mand. LTR </div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container x proximity-scroll-snapping" dir="ltr"&gt;
-  &lt;div&gt;X Proximity LTR&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+<div class="container x proximity-scroll-snapping" dir="ltr">
+  <div>X Proximity LTR</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container y mandatory-scroll-snapping" dir="ltr"&gt;
-  &lt;div&gt;Y Mand. LTR&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+<div class="container y mandatory-scroll-snapping" dir="ltr">
+  <div>Y Mand. LTR</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container y proximity-scroll-snapping" dir="ltr"&gt;
-  &lt;div&gt;Y Prox. LTR&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+<div class="container y proximity-scroll-snapping" dir="ltr">
+  <div>Y Prox. LTR</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container x mandatory-scroll-snapping" dir="rtl"&gt;
-  &lt;div&gt;X Mandatory RTL&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+<div class="container x mandatory-scroll-snapping" dir="rtl">
+  <div>X Mandatory RTL</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container x proximity-scroll-snapping" dir="rtl"&gt;
-  &lt;div&gt;X Proximity RTL&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+<div class="container x proximity-scroll-snapping" dir="rtl">
+  <div>X Proximity RTL</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container y mandatory-scroll-snapping" dir="rtl"&gt;
-  &lt;div&gt;Y Mand. RTL&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+<div class="container y mandatory-scroll-snapping" dir="rtl">
+  <div>Y Mand. RTL</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container y proximity-scroll-snapping" dir="rtl"&gt;
-  &lt;div&gt;Y Prox. RTL&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+<div class="container y proximity-scroll-snapping" dir="rtl">
+  <div>Y Prox. RTL</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+```
 
-<p>{{EmbedLiveSample("Example", "100%", "1630")}}</p>
+#### 結果
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+{{EmbedLiveSample("Snapping_in_different_axes", "100%", "1630")}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-stop", "scroll-snap-stop")}}</td>
-   <td>{{Spec2("CSS Scroll Snap Points")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+{{Specifications}}
 
-<p>{{Compat("css.properties.scroll-snap-stop")}}</p>
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_Scroll_Snap)
+- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)

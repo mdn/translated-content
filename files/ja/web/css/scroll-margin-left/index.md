@@ -3,67 +3,58 @@ title: scroll-margin-left
 slug: Web/CSS/scroll-margin-left
 tags:
   - CSS
-  - CSS Property
   - CSS プロパティ
   - Reference
   - Scroll margin left
   - Web
+  - recipe:css-property
   - scroll-margin
   - scroll-margin-left
+browser-compat: css.properties.scroll-margin-left
 translation_of: Web/CSS/scroll-margin-left
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><code>scroll-margin-left</code> プロパティは、スクロールスナップ領域の左側のマージンを定義し、このボックスをスナップポートにスナップするために使用されます。スクロールスナップ領域は変換された境界ボックスによって定義され、四角形の囲みボックスを探して (スクロールコンテナーの座標空間における軸に合わせられ)、それから指定された外部距離が追加されます。</p>
+`scroll-margin-left` プロパティは、スクロールスナップ領域の左側のマージンを定義し、このボックスをスナップポートにスナップするために使用されます。スクロールスナップ領域は変換された境界ボックスによって定義され、四角形の囲みボックスを探して (スクロールコンテナーの座標空間における軸に合わせられ)、それから指定された外部距離が追加されます。
 
-<div>{{EmbedInteractiveExample("pages/css/scroll-margin-left.html")}}</div>
+{{EmbedInteractiveExample("pages/css/scroll-margin-left.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<p>{{cssinfo}}</p>
-
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush: css">/* &lt;length&gt; 値 */
+```css
+/* <length> 値 */
 scroll-margin-left: 10px;
 scroll-margin-left: 1em;
 
 /* グローバル値 */
 scroll-margin-left: inherit;
 scroll-margin-left: initial;
+scroll-margin-left: revert;
 scroll-margin-left: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code><var>&lt;length&gt;</var></code></dt>
- <dd>スクロールコンテナーの左側の辺からみた外部の距離です。</dd>
-</dl>
+- `<length>`
+  - : スクロールコンテナーの左側の辺からみた外部の距離です。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Scroll Snap Points", "#propdef-scroll-margin-left", "scroll-margin-left")}}</td>
-   <td>{{Spec2("CSS Scroll Snap Points")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.scroll-margin-left")}}</p>
+{{Compat}}
+
+## 関連情報
+
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_Scroll_Snap)
+- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)

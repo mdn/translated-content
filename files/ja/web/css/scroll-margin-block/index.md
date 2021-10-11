@@ -9,21 +9,21 @@ browser-compat: css.properties.scroll-margin-block
 ---
 {{CSSRef}}
 
-The `scroll-margin-block` [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the scroll margins of an element in the block dimension.
+`scroll-margin-block` は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、ブロック方向のスクロールマージンを設定します。
 
 {{EmbedInteractiveExample("pages/css/scroll-margin-block.html")}}
 
-## Constituent properties
+## 構成要素のプロパティ
 
-This property is a shorthand for the following CSS properties:
+このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`scroll-margin-block-end`](/en-US/docs/Web/CSS/scroll-margin-block-end)
-- [`scroll-margin-block-start`](/en-US/docs/Web/CSS/scroll-margin-block-start)
+- [`scroll-margin-block-end`](/ja/docs/Web/CSS/scroll-margin-block-end)
+- [`scroll-margin-block-start`](/ja/docs/Web/CSS/scroll-margin-block-start)
 
-## Syntax
+## 構文
 
 ```css
-/* <length> values */
+/* <length> 値 */
 scroll-margin-block: 10px;
 scroll-margin-block: 1em .5em ;
 
@@ -34,32 +34,32 @@ scroll-margin-block: revert;
 scroll-margin-block: unset;
 ```
 
-### Values
+### 値
 
 - `<length>`
-  - : An outset from the corresponding edge of the scroll container.
+  - : スクロールコンテナーの対応する辺からの距離です。
 
-## Description
+## 解説
 
-The scroll-margin values represent outsets defining the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
+`scroll-margin` の値はこのボックスをスナップポートに割り当てるために使用されるスクロールスナップ領域の定義の張り出し部分を表します。スクロールスナップ領域は、変換された境界ボックスを取り、その矩形の境界ボックス (スクロールコンテナーの座標空間内で軸方向に配置) を割り当てて、指定された張り出し部分を追加することによって決定されます。
 
-## Formal definition
+## 公式定義
 
 {{cssinfo}}
 
-## Formal syntax
+## 形式文法
 
 {{csssyntax}}
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_Scroll_Snap)
 - [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
