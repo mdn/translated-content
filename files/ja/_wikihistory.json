@@ -20406,13 +20406,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/PositionOptions": {
-    "modified": "2019-03-23T22:19:48.329Z",
-    "contributors": [
-      "Uemmra3",
-      "unarist"
-    ]
-  },
   "Web/API/ProgressEvent": {
     "modified": "2019-03-23T22:24:26.847Z",
     "contributors": [
@@ -22179,27 +22172,6 @@
     "contributors": [
       "SaekiTominaga",
       "yyss"
-    ]
-  },
-  "Web/API/StorageEstimate": {
-    "modified": "2020-10-15T22:20:05.823Z",
-    "contributors": [
-      "Uemmra3",
-      "Wind1808"
-    ]
-  },
-  "Web/API/StorageEstimate/quota": {
-    "modified": "2020-10-15T22:20:08.643Z",
-    "contributors": [
-      "Uemmra3",
-      "Wind1808"
-    ]
-  },
-  "Web/API/StorageEstimate/usage": {
-    "modified": "2020-10-15T22:20:08.494Z",
-    "contributors": [
-      "Uemmra3",
-      "Wind1808"
     ]
   },
   "Web/API/StorageEvent": {
@@ -48610,6 +48582,34 @@
       "mfuji09",
       "fscholz",
       "ethertank"
+    ]
+  },
+  "conflicting/Web/API/Geolocation/getCurrentPosition": {
+    "modified": "2019-03-23T22:19:48.329Z",
+    "contributors": [
+      "Uemmra3",
+      "unarist"
+    ]
+  },
+  "conflicting/Web/API/StorageManager/estimate": {
+    "modified": "2020-10-15T22:20:05.823Z",
+    "contributors": [
+      "Uemmra3",
+      "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/StorageManager/estimate_78aa4ffd4dfacc8f94d5c05d150d36ac": {
+    "modified": "2020-10-15T22:20:08.643Z",
+    "contributors": [
+      "Uemmra3",
+      "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/StorageManager/estimate_9ffeea37c30a26922d3f1621912db8d8": {
+    "modified": "2020-10-15T22:20:08.494Z",
+    "contributors": [
+      "Uemmra3",
+      "Wind1808"
     ]
   },
   "conflicting/Web/API/Window/scroll": {

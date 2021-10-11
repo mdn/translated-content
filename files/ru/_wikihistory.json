@@ -9935,13 +9935,6 @@
       "hisbvdis"
     ]
   },
-  "Web/API/PositionOptions": {
-    "modified": "2019-03-23T22:21:01.208Z",
-    "contributors": [
-      "Casus",
-      "devkudasov"
-    ]
-  },
   "Web/API/Presentation": {
     "modified": "2019-03-18T21:46:12.982Z",
     "contributors": [
@@ -24188,6 +24181,13 @@
     "modified": "2019-03-23T22:43:32.725Z",
     "contributors": [
       "AlexAlex"
+    ]
+  },
+  "conflicting/Web/API/Geolocation/getCurrentPosition": {
+    "modified": "2019-03-23T22:21:01.208Z",
+    "contributors": [
+      "Casus",
+      "devkudasov"
     ]
   },
   "conflicting/Web/API/HTMLMediaElement/abort_event": {

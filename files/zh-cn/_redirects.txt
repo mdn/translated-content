@@ -1447,6 +1447,8 @@
 /zh-CN/docs/Web/API/Position	/zh-CN/docs/Web/API/GeolocationPosition
 /zh-CN/docs/Web/API/Position/coords	/zh-CN/docs/Web/API/GeolocationPosition/coords
 /zh-CN/docs/Web/API/PositionError	/zh-CN/docs/Web/API/GeolocationPositionError
+/zh-CN/docs/Web/API/PositionOptions	/zh-CN/docs/conflicting/Web/API/Geolocation/getCurrentPosition
+/zh-CN/docs/Web/API/PositionOptions/timeout	/zh-CN/docs/conflicting/Web/API/Geolocation/getCurrentPosition_058087067b28ad25fff974fd59827fb6
 /zh-CN/docs/Web/API/RandomSource/getRandomValues	/zh-CN/docs/Web/API/Crypto/getRandomValues
 /zh-CN/docs/Web/API/Response/克隆	/zh-CN/docs/Web/API/Response/clone
 /zh-CN/docs/Web/API/SVGPathElement/getTotalLength	/zh-CN/docs/Web/API/SVGGeometryElement/getTotalLength
@@ -1467,6 +1469,7 @@
 /zh-CN/docs/Web/API/Selection.isCollapsed	/zh-CN/docs/Web/API/Selection/isCollapsed
 /zh-CN/docs/Web/API/Selection.removeRange	/zh-CN/docs/Web/API/Selection/removeRange
 /zh-CN/docs/Web/API/Selection/从Document中删除	/zh-CN/docs/Web/API/Selection/deleteFromDocument
+/zh-CN/docs/Web/API/StorageEstimate	/zh-CN/docs/conflicting/Web/API/StorageManager/estimate
 /zh-CN/docs/Web/API/Streams_API/使用可读文件流	/zh-CN/docs/Web/API/Streams_API/Using_readable_streams
 /zh-CN/docs/Web/API/Streams_API/概念	/zh-CN/docs/Web/API/Streams_API/Concepts
 /zh-CN/docs/Web/API/Text.isElementContentWhitespace	/zh-CN/docs/Web/API/Text/isElementContentWhitespace

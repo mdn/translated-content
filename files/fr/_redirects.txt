@@ -3710,6 +3710,10 @@
 /fr/docs/Web/API/PasswordCredential/passwordName	/fr/docs/conflicting/Web/API/PasswordCredential_bc57d5dfa87242b4fb83497887124f41
 /fr/docs/Web/API/Performance.now()	/fr/docs/Web/API/Performance/now
 /fr/docs/Web/API/Pointer_events/gestes_pincer_zoom	/fr/docs/Web/API/Pointer_events/Pinch_zoom_gestures
+/fr/docs/Web/API/PositionOptions	/fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition_5852407122355d2ab39863042583c266
+/fr/docs/Web/API/PositionOptions/enableHighAccuracy	/fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition
+/fr/docs/Web/API/PositionOptions/maximumAge	/fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition_c2c285f72be001586cb95d7989ba1b54
+/fr/docs/Web/API/PositionOptions/timeout	/fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition_058087067b28ad25fff974fd59827fb6
 /fr/docs/Web/API/RandomSource.getRandomValues	/fr/docs/Web/API/Crypto/getRandomValues
 /fr/docs/Web/API/RandomSource/getRandomValues	/fr/docs/Web/API/Crypto/getRandomValues
 /fr/docs/Web/API/Référence_du_DOM_Gecko	/fr/docs/Web/API/Document_Object_Model
@@ -3725,6 +3729,7 @@
 /fr/docs/Web/API/Selection_API	/fr/docs/conflicting/Web/API/Selection
 /fr/docs/Web/API/ServiceWorkerState	/fr/docs/orphaned/Web/API/ServiceWorkerState
 /fr/docs/Web/API/Storage/LocalStorage	/fr/docs/conflicting/Web/API/Window/localStorage
+/fr/docs/Web/API/StorageEstimate	/fr/docs/conflicting/Web/API/StorageManager/estimate
 /fr/docs/Web/API/ULongRange	/fr/docs/conflicting/Web/API/MediaTrackConstraints
 /fr/docs/Web/API/URL.createObjectURL	/fr/docs/Web/API/URL/createObjectURL
 /fr/docs/Web/API/URLUtilsReadOnly	/fr/docs/orphaned/Web/API/URLUtilsReadOnly

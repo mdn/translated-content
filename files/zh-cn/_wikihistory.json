@@ -18744,20 +18744,6 @@
       "ldwformat"
     ]
   },
-  "Web/API/PositionOptions": {
-    "modified": "2019-03-23T22:19:15.525Z",
-    "contributors": [
-      "paigextl",
-      "hmzll",
-      "leolux"
-    ]
-  },
-  "Web/API/PositionOptions/timeout": {
-    "modified": "2019-03-23T22:19:18.285Z",
-    "contributors": [
-      "kameii"
-    ]
-  },
   "Web/API/ProgressEvent": {
     "modified": "2020-10-15T21:52:17.661Z",
     "contributors": [
@@ -20223,12 +20209,6 @@
       "imbriansun",
       "zhangchen",
       "AlexChao"
-    ]
-  },
-  "Web/API/StorageEstimate": {
-    "modified": "2019-03-18T21:31:04.064Z",
-    "contributors": [
-      "hhxxhg"
     ]
   },
   "Web/API/StorageEvent": {
@@ -47121,6 +47101,20 @@
       "teoli"
     ]
   },
+  "conflicting/Web/API/Geolocation/getCurrentPosition": {
+    "modified": "2019-03-23T22:19:15.525Z",
+    "contributors": [
+      "paigextl",
+      "hmzll",
+      "leolux"
+    ]
+  },
+  "conflicting/Web/API/Geolocation/getCurrentPosition_058087067b28ad25fff974fd59827fb6": {
+    "modified": "2019-03-23T22:19:18.285Z",
+    "contributors": [
+      "kameii"
+    ]
+  },
   "conflicting/Web/API/GlobalEventHandlers/ongotpointercapture": {
     "modified": "2019-03-18T21:45:48.501Z",
     "contributors": [
@@ -47257,6 +47251,12 @@
       "vankai",
       "xgqfrms-GitHub",
       "hibernake"
+    ]
+  },
+  "conflicting/Web/API/StorageManager/estimate": {
+    "modified": "2019-03-18T21:31:04.064Z",
+    "contributors": [
+      "hhxxhg"
     ]
   },
   "conflicting/Web/API/UIEvent/which": {

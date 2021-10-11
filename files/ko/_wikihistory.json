@@ -6085,13 +6085,6 @@
       "JinSeungHo"
     ]
   },
-  "Web/API/PositionOptions": {
-    "modified": "2020-10-15T22:02:42.878Z",
-    "contributors": [
-      "alattalatta",
-      "Saem"
-    ]
-  },
   "Web/API/Proximity_Events": {
     "modified": "2019-03-23T23:26:46.443Z",
     "contributors": [
@@ -17542,6 +17535,13 @@
     "modified": "2019-03-23T23:26:56.400Z",
     "contributors": [
       "Sheppy"
+    ]
+  },
+  "conflicting/Web/API/Geolocation/getCurrentPosition": {
+    "modified": "2020-10-15T22:02:42.878Z",
+    "contributors": [
+      "alattalatta",
+      "Saem"
     ]
   },
   "conflicting/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL": {

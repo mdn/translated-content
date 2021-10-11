@@ -3219,6 +3219,7 @@
 /ja/docs/Web/API/NonDocumentTypeChildNode	/ja/docs/Web/API/Element
 /ja/docs/Web/API/Position	/ja/docs/Web/API/GeolocationPosition
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
+/ja/docs/Web/API/PositionOptions	/ja/docs/conflicting/Web/API/Geolocation/getCurrentPosition
 /ja/docs/Web/API/Push_API/Using_the_Push_API	/ja/docs/Web/API/Push_API
 /ja/docs/Web/API/RTCIdentityErrorEvent	/ja/docs/orphaned/Web/API/RTCIdentityErrorEvent
 /ja/docs/Web/API/RTCIdentityEvent	/ja/docs/orphaned/Web/API/RTCIdentityEvent
@@ -3244,6 +3245,9 @@
 /ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers
 /ja/docs/Web/API/Slotable	/ja/docs/Web/API/Element
 /ja/docs/Web/API/SourceBufferList/SourceBuffer	/ja/docs/orphaned/Web/API/SourceBufferList/SourceBuffer
+/ja/docs/Web/API/StorageEstimate	/ja/docs/conflicting/Web/API/StorageManager/estimate
+/ja/docs/Web/API/StorageEstimate/quota	/ja/docs/conflicting/Web/API/StorageManager/estimate_78aa4ffd4dfacc8f94d5c05d150d36ac
+/ja/docs/Web/API/StorageEstimate/usage	/ja/docs/conflicting/Web/API/StorageManager/estimate_9ffeea37c30a26922d3f1621912db8d8
 /ja/docs/Web/API/TouchList.length	/ja/docs/Web/API/TouchList/length
 /ja/docs/Web/API/UserProximityEvent.near	/ja/docs/Web/API/UserProximityEvent
 /ja/docs/Web/API/UserProximityEvent/near	/ja/docs/Web/API/UserProximityEvent

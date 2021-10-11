@@ -7906,14 +7906,6 @@
       "joredjs"
     ]
   },
-  "Web/API/PositionOptions": {
-    "modified": "2019-03-23T23:16:28.831Z",
-    "contributors": [
-      "fscholz",
-      "LeoHirsch",
-      "lupomontero"
-    ]
-  },
   "Web/API/PushManager": {
     "modified": "2019-03-23T22:40:00.540Z",
     "contributors": [
@@ -21366,6 +21358,14 @@
     "modified": "2019-03-23T23:01:31.642Z",
     "contributors": [
       "fscholz"
+    ]
+  },
+  "conflicting/Web/API/Geolocation/getCurrentPosition": {
+    "modified": "2019-03-23T23:16:28.831Z",
+    "contributors": [
+      "fscholz",
+      "LeoHirsch",
+      "lupomontero"
     ]
   },
   "conflicting/Web/API/HTML_Drag_and_Drop_API": {

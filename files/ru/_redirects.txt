@@ -360,6 +360,7 @@
 /ru/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/ru/docs/Web/API/Element/previousElementSibling
 /ru/docs/Web/API/ParentNode/childElementCount	/ru/docs/Web/API/Element/childElementCount
 /ru/docs/Web/API/PositionError	/ru/docs/Web/API/GeolocationPositionError
+/ru/docs/Web/API/PositionOptions	/ru/docs/conflicting/Web/API/Geolocation/getCurrentPosition
 /ru/docs/Web/API/RandomSource/getRandomValues	/ru/docs/Web/API/Crypto/getRandomValues
 /ru/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/ru/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ru/docs/Web/API/WebGL_API/Animating_objects_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL

@@ -18923,33 +18923,6 @@
       "insomniaqc"
     ]
   },
-  "Web/API/PositionOptions": {
-    "modified": "2019-08-26T09:46:33.509Z",
-    "contributors": [
-      "ReinWired",
-      "guizmo51",
-      "JeanLucB"
-    ]
-  },
-  "Web/API/PositionOptions/enableHighAccuracy": {
-    "modified": "2019-03-18T21:37:11.224Z",
-    "contributors": [
-      "JeanLucB"
-    ]
-  },
-  "Web/API/PositionOptions/maximumAge": {
-    "modified": "2019-03-18T21:37:16.913Z",
-    "contributors": [
-      "JeanLucB"
-    ]
-  },
-  "Web/API/PositionOptions/timeout": {
-    "modified": "2020-10-15T22:03:34.783Z",
-    "contributors": [
-      "Arzak656",
-      "JeanLucB"
-    ]
-  },
   "Web/API/ProcessingInstruction": {
     "modified": "2019-03-18T21:40:23.342Z",
     "contributors": [
@@ -19471,12 +19444,6 @@
       "JNa0",
       "Axnyff",
       "rmNyro"
-    ]
-  },
-  "Web/API/StorageEstimate": {
-    "modified": "2020-10-15T22:17:55.065Z",
-    "contributors": [
-      "Watilin"
     ]
   },
   "Web/API/StorageManager": {
@@ -43156,6 +43123,33 @@
       "jean-pierre.gay"
     ]
   },
+  "conflicting/Web/API/Geolocation/getCurrentPosition": {
+    "modified": "2019-03-18T21:37:11.224Z",
+    "contributors": [
+      "JeanLucB"
+    ]
+  },
+  "conflicting/Web/API/Geolocation/getCurrentPosition_058087067b28ad25fff974fd59827fb6": {
+    "modified": "2020-10-15T22:03:34.783Z",
+    "contributors": [
+      "Arzak656",
+      "JeanLucB"
+    ]
+  },
+  "conflicting/Web/API/Geolocation/getCurrentPosition_5852407122355d2ab39863042583c266": {
+    "modified": "2019-08-26T09:46:33.509Z",
+    "contributors": [
+      "ReinWired",
+      "guizmo51",
+      "JeanLucB"
+    ]
+  },
+  "conflicting/Web/API/Geolocation/getCurrentPosition_c2c285f72be001586cb95d7989ba1b54": {
+    "modified": "2019-03-18T21:37:16.913Z",
+    "contributors": [
+      "JeanLucB"
+    ]
+  },
   "conflicting/Web/API/GlobalEventHandlers/onresize": {
     "modified": "2019-03-23T23:03:02.343Z",
     "contributors": [
@@ -43224,6 +43218,12 @@
   },
   "conflicting/Web/API/Selection": {
     "modified": "2019-03-18T21:28:44.424Z",
+    "contributors": [
+      "Watilin"
+    ]
+  },
+  "conflicting/Web/API/StorageManager/estimate": {
+    "modified": "2020-10-15T22:17:55.065Z",
     "contributors": [
       "Watilin"
     ]

@@ -1566,6 +1566,7 @@
 /es/docs/Web/API/Notifications_API/Usando_la_API_de_Notificaciones	/es/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /es/docs/Web/API/ParentNode/childElementCount	/es/docs/Web/API/Element/childElementCount
 /es/docs/Web/API/Position	/es/docs/Web/API/GeolocationPosition
+/es/docs/Web/API/PositionOptions	/es/docs/conflicting/Web/API/Geolocation/getCurrentPosition
 /es/docs/Web/API/RandomSource/Obtenervaloresaleatorios	/es/docs/Web/API/Crypto/getRandomValues
 /es/docs/Web/API/SubtleCrypto/encrypt	/es/docs/Web/HTTP/Headers/Digest
 /es/docs/Web/API/UIEvent/pageX	/es/docs/Web/API/MouseEvent/pageX
