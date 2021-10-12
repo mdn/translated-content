@@ -1,47 +1,49 @@
 ---
 title: ':first'
-slug: 'Web/CSS/:first'
+slug: Web/CSS/:first
 tags:
   - '@page'
   - CSS
-  - CSS ページ化メディア
-  - Layout
-  - Pseudo-class
+  - レイアウト
+  - 擬似クラス
   - Reference
-  - Selector
+  - セレクター
   - Web
-translation_of: 'Web/CSS/:first'
+browser-compat: css.selectors.first
+translation_of: Web/CSS/:first
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><strong><code>:first</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/Pseudo-classes">擬似クラス</a>で {{cssxref("@page")}} <a href="/ja/docs/Web/CSS/At-rule">アット規則</a>で使用され、印刷文書の最初のページを表します。</span> (一般的なノードの最初の要素については {{cssxref(":first-child")}} を参照してください。)</p>
+**`:first`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/At-rule)で使用され、印刷文書の最初のページを表します。 (一般的なノードの最初の要素については {{cssxref(":first-child")}} を参照してください。)
 
-<pre class="brush: css no-line-numbers notranslate">/* 印刷時に最初のページを選択 */
+```css
+/* 印刷時に最初のページを選択 */
 @page :first {
   margin-left: 50%;
   margin-top: 50%;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>メモ:</strong> この擬似クラスを使用してすべての CSS プロパティを変更できるわけではありません。変更できるのは文書のマージン、 {{cssxref("orphans")}}、 {{cssxref("widows")}}、 ページ区切りのみです。さらに、マージンを定義するときには<a href="/ja/docs/Web/CSS/length#Absolute_length_units">絶対的な長さ</a>の単位のみしか使用できません。他のすべてのプロパティは無視されます。</p>
-</div>
+> **Note:** この擬似クラスを使用してすべての CSS プロパティを変更できるわけではありません。変更できるのは文書のマージン、 {{cssxref("orphans")}}、{{cssxref("widows")}}、ページ区切りのみです。さらに、マージンを定義するときには[絶対的な長さ](/ja/docs/Web/CSS/length#absolute_length_units)の単位のみしか使用できません。他のすべてのプロパティは無視されます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;最初のページです。&lt;/p&gt;
-&lt;p&gt;2枚目のページです。&lt;/p&gt;
-&lt;button&gt;印刷&lt;/button&gt;
-</pre>
+```html
+<p>最初のページです。</p>
+<p>2 枚目のページです。</p>
+<button>印刷</button>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">@page :first {
+```css
+@page :first {
   margin-left: 50%;
   margin-top: 50%;
 }
@@ -49,52 +51,31 @@ translation_of: 'Web/CSS/:first'
 p {
   page-break-after: always;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">document.querySelector("button").addEventListener('click', () =&gt; {
+```js
+document.querySelector("button").addEventListener('click', () => {
   window.print();
 });
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>［印刷］ボタンを押すと、例を印刷します。最初のページの言葉は中央付近に印刷されますが、他のページのコンテンツは既定の位置に印刷されます。</p>
+［印刷］ボタンを押すと、例を印刷します。最初のページの言葉は中央付近に印刷されますが、他のページのコンテンツは既定の位置に印刷されます。
 
-<p>{{ EmbedLiveSample('Examples', '80%', '150px') }}</p>
+{{ EmbedLiveSample('Examples', '80%', '150px') }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Paged Media', '#left-right-first', ':first')}}</td>
-   <td>{{Spec2('CSS3 Paged Media')}}</td>
-   <td>変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'page.html#page-selectors', ':first')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.selectors.first")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{Cssxref("@page")}}</li>
- <li>ページに関する他の擬似クラス: {{Cssxref(":left")}}, {{Cssxref(":right")}}</li>
-</ul>
+- {{Cssxref("@page")}}
+- ページに関する他の擬似クラス: {{Cssxref(":left")}}, {{Cssxref(":right")}}
