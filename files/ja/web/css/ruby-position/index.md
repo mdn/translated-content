@@ -5,111 +5,131 @@ tags:
   - CSS
   - CSS プロパティ
   - CSS ルビ
-  - リファレンス
+  - Reference
+  - recipe:css-property
+browser-compat: css.properties.ruby-position
 translation_of: Web/CSS/ruby-position
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}
 
-<p>CSS の <code><strong>ruby-position</strong></code> プロパティは、ベース要素に対するルビ要素の位置を定義します。要素の上方 (<code>over</code>)、下方 (<code>under</code>)、文字の間の右側 (<code>inter-character</code>) に配置できます。</p>
+**`ruby-position`** は CSS のプロパティで、ベース要素に対するルビ要素の位置を定義します。要素の上方 (`over`)、下方 (`under`)、文字の間の右側 (`inter-character`) に配置できます。
 
-<pre class="brush:css">/* キーワード値 */
+## 構文
+
+```css
+/* キーワード値 */
 ruby-position: over;
 ruby-position: under;
 ruby-position: inter-character;
+ruby-position: alternate;
 
 /* グローバル値 */
 ruby-position: inherit;
 ruby-position: initial;
+ruby-position: revert;
 ruby-position: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+### 値
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+- `over`
+  - : ![over の例](screen_shot_2015-03-04_at_13.02.20.png)ルビを主テキストの上 (横書きの場合) または右 (縦書きの場合) に配置することを示すキーワードです。
+- `under`
+  - : ![under の例](screen_shot_2015-03-04_at_13.02.07.png)ルビを主テキストの下 (横書きの場合) または左 (縦書きの場合) に配置することを示すキーワードです。
+- `inter-character`
+  - : ルビをそれぞれの文字の間に配置することを示すキーワードです。
+- `alternate`
+  - : 複数のレベルの注釈があった場合に、ルビが上と下の間で交互に表示されることを示すキーワードです。
 
-<h3 id="Values" name="Values">値</h3>
+## 公式定義
 
-<dl>
- <dt><code>over</code></dt>
- <dd><img alt="over の例" src="https://mdn.mozillademos.org/files/10251/Screen%20Shot%202015-03-04%20at%2013.02.20.png" style="height: 31px; width: 77px;">ルビをメインテキストの上 (横書きの場合) または右 (縦書きの場合) に配置することを示すキーワードです。</dd>
- <dt><code>under</code></dt>
- <dd><img alt="under の例" src="https://mdn.mozillademos.org/files/10249/Screen%20Shot%202015-03-04%20at%2013.02.07.png" style="height: 34px; width: 78px;">ルビをメインテキストの下 (横書きの場合) または左 (縦書きの場合) に配置することを示すキーワードです。</dd>
- <dt><code>inter-character</code></dt>
- <dd>ルビをそれぞれの文字の間に配置することを示すキーワードです。</dd>
-</dl>
+{{cssinfo}}
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>この HTML は、 <code>ruby-position</code> のそれぞれの値でレンダリングします。</p>
+<h3 id="Ruby_positioned_over_the_text">テキストの上に配置したルビ</h3>
 
-<pre class="brush: html">&lt;ruby&gt;
-  &lt;rb&gt;超電磁砲&lt;/rb&gt;
-  &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;レールガン&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
-&lt;/ruby&gt;
-</pre>
+#### HTML
 
-<h3 id="Ruby_positioned_over_the_text" name="Ruby_positioned_over_the_text">テキストの上に配置したルビ</h3>
+```html
+<ruby>
+  <rb>超電磁砲</rb>
+  <rp>（</rp><rt>レールガン</rt><rp>）</rp>
+</ruby>
+```
 
-<pre class="brush: html" style="display: none;">&lt;ruby&gt;
-  &lt;rb&gt;超電磁砲&lt;/rb&gt;
-  &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;レールガン&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
-&lt;/ruby&gt;
-</pre>
+#### CSS
 
-<pre class="brush: css">ruby {
-    ruby-position:over;
-}</pre>
+```css
+ruby {
+    ruby-position:over;
+}
+```
 
-<p>結果は以下のとおりです。</p>
+#### 結果
 
-<p>{{EmbedLiveSample("Ruby_positioned_over_the_text", 100, 40)}}</p>
+{{EmbedLiveSample("Ruby_positioned_over_the_text", 100, 40)}}
 
-<h3 id="Ruby_positioned_under_the_text" name="Ruby_positioned_under_the_text">テキストの下に配置したルビ</h3>
+<h3 id="Ruby_positioned_under_the_text">テキストの下に配置したルビ</h3>
 
-<pre class="brush: html" style="display: none;">&lt;ruby&gt;
-  &lt;rb&gt;超電磁砲&lt;/rb&gt;
-  &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;レールガン&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
-&lt;/ruby&gt;
-</pre>
+#### HTML
 
-<pre class="brush: css">ruby {
-    ruby-position:under;
-}</pre>
+```html
+<ruby>
+  <rb>超電磁砲</rb>
+  <rp>（</rp><rt>レールガン</rt><rp>）</rp>
+</ruby>
+```
 
-<p>結果は以下のとおりです。</p>
+#### CSS
 
-<p>{{EmbedLiveSample("Ruby_positioned_under_the_text", 100, 40)}}</p>
+```css
+ruby {
+    ruby-position:under;
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+#### 結果
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Ruby', '#rubypos', 'ruby-position')}}</td>
-   <td>{{Spec2('CSS3 Ruby')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{EmbedLiveSample("Ruby_positioned_under_the_text", 100, 40)}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+<h3 id="Ruby_alternate">交互のルビ</h3>
 
-<p>{{Compat("css.properties.ruby-position")}}</p>
+#### HTML
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+```html
+<ruby>
+  <rb>A<rb>B<rb>C</rb>
+  <rtc>Above</rtc>
+  <rtc>Below</rtc>
+</ruby>
+```
 
-<ul>
- <li>HTML のルビ関連要素: {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, {{HTMLElement("rtc")}}</li>
- <li>CSS のルビ関連プロパティ: {{cssxref("ruby-align")}}, {{cssxref("ruby-merge")}}</li>
-</ul>
+#### CSS
+
+```css
+ruby {
+    ruby-position: alternate; /* 初期値でもある */
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample("Ruby_alternate", 100, 40)}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- HTML のルビ関連要素: {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, {{HTMLElement("rtc")}}
+- CSS のルビ関連プロパティ: {{cssxref("ruby-align")}}, {{cssxref("ruby-merge")}}
