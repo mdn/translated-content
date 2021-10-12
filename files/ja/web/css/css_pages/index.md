@@ -1,75 +1,41 @@
 ---
-title: CSS ページ化メディア
+title: CSS ページメディア
 slug: Web/CSS/CSS_Pages
 tags:
   - CSS
-  - CSS ページ付きメディア
-  - CSS ページ化メディア
-  - Reference
+  - CSS ページメディア
+  - ガイド
   - 概要
+  - Reference
 translation_of: Web/CSS/CSS_Pages
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><ruby><strong>CSS ページ化メディア</strong><rp> (</rp><rt>CSS Paged Media</rt><rp>) </rp></ruby>は、ページ切り替えを扱う方法を定義する CSS のモジュールです。</p>
+**CSS ページメディア**は CSS のモジュールの一つで、ページ切り替えをどのように扱うかを定義します。
 
-<h2 id="Reference" name="Reference">リファレンス</h2>
+## リファレンス
 
-<h3 id="CSS_properties" name="CSS_properties">CSS プロパティ</h3>
+### CSS プロパティ
 
-<div class="index">
-<ul>
- <li>{{cssxref("page-break-after")}}</li>
- <li>{{cssxref("page-break-before")}}</li>
- <li>{{cssxref("page-break-inside")}}</li>
- <li> </li>
-</ul>
-</div>
+- {{cssxref("page-break-after")}}
+- {{cssxref("page-break-before")}}
+- {{cssxref("page-break-inside")}}
 
-<h3 id="At-rules" name="At-rules">@-規則</h3>
+### アットルール
 
-<div class="index">
-<ul>
- <li>{{cssxref('@page')}}</li>
-</ul>
-</div>
+- {{cssxref('@page')}}
 
-<h3 id="Pseudo-classes" name="Pseudo-classes">疑似クラス</h3>
+### 擬似クラス
 
-<div class="index">
-<ul>
- <li>{{cssxref(':blank')}}</li>
- <li>{{cssxref(':first')}}</li>
- <li>{{cssxref(':left')}}</li>
- <li>{{cssxref(':right')}}</li>
-</ul>
-</div>
+- {{cssxref(':blank')}}
+- {{cssxref(':first')}}
+- {{cssxref(':left')}}
+- {{cssxref(':right')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Paged Media')}}</td>
-   <td>{{Spec2('CSS3 Paged Media')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Fragmentation')}}</td>
-   <td>{{Spec2('CSS3 Fragmentation')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                             | 状態                            | 備考    |
+| ---------------------------------- | ------------------------------- | ------- |
+| {{SpecName('CSS3 Paged Media')}}   | {{Spec2('CSS3 Paged Media')}}   |         |
+| {{SpecName('CSS3 Fragmentation')}} | {{Spec2('CSS3 Fragmentation')}} |         |
+| {{SpecName('CSS2.1')}}             | {{Spec2('CSS2.1')}}             |         |

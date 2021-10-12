@@ -5,104 +5,66 @@ tags:
   - '@page'
   - At-rule
   - CSS
-  - Layout
+  - レイアウト
   - Reference
   - Web
+browser-compat: css.at-rules.page
 translation_of: Web/CSS/@page
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>@page</code></strong> は CSS のアット規則で、文書を印刷するときに一部の CSS プロパティを変更するために使用します。</p>
+**`@page`** は CSS のアットルールで、文書を印刷するときに一部の CSS プロパティを変更するために使用します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: css no-line-numbers notranslate">@page {
+```css
+@page {
   margin: 1cm;
 }
 
 @page :first {
   margin: 2cm;
-}</pre>
+}
+```
 
-<h3 id="Descriptors" name="Descriptors">記述子</h3>
+### 記述子
 
-<dl>
- <dt><a href="/ja/docs/Web/CSS/@page/size"><code>size</code></a></dt>
- <dd>対象となるページボックスの包含ブロックの寸法と向きを指定します。一般的な場合、1つのページボックスが1枚の用紙に印刷され、対象となる用紙の寸法を示します。</dd>
-</dl>
+- [`size`](/ja/docs/Web/CSS/@page/size)
+  - : 対象となるページボックスの包含ブロックの寸法と向きを指定します。一般的な場合、1つのページボックスが1枚の用紙に印刷され、対象となる用紙の寸法を示します。
 
-<dl>
- <dt><a href="/ja/docs/Web/CSS/@page/marks"><code>marks</code></a></dt>
- <dd>クロップや登録マークを文書に追加します。</dd>
-</dl>
+## 解説
 
-<dl>
- <dt><a href="/ja/docs/Web/CSS/@page/bleed"><code>bleed</code></a></dt>
- <dd>ページのレンダリングがクリップされた場合の、ページボックス間の距離を示します。</dd>
-</dl>
+`@page` ですべての CSS プロパティを変更できるわけではありません。変更できるのは、マージン、orphans、widows と、文書のページ区切りだけです。これ以外の CSS プロパティを変えようとしても、無視されます。
 
-<h2 id="Description" name="Description">解説</h2>
+`@page` アットルールには、 CSS オブジェクトモデルインターフェイスの {{domxref("CSSPageRule")}} からアクセスできます。
 
-<p><code>@page</code> ですべての CSS プロパティを変更できるわけではありません。変更できるのは、 margin, orphans, widows と、文書のページ区切りだけです。これ以外の CSS プロパティを変えようとしても、無視されます。</p>
+> **Note:** W3C は、ビューポートに関する {{cssxref("&lt;length&gt;")}} の単位、`vh`、`vw`、`vmin`、`vmax` の取り扱い方について議論中です。差し当たっては、これらを `@page` アットルールの中で使わないでください。
 
-<p><code>@page</code> アット規則は、 CSS オブジェクトモデルインターフェイス {{domxref("CSSPageRule")}} からアクセスできます。</p>
-
-<div class="note"><strong>注:</strong> W3C は、ビューポートに関する {{cssxref("&lt;length&gt;")}} の単位、 <code>vh</code>, <code>vw</code>, <code>vmin</code>, <code>vmax</code> の取り扱い方について議論中です。差し当たっては、これらを <code>@page</code> アット規則の中で使わないでください。</div>
-
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="page_pseudo-class_examples" name="page_pseudo-class_examples">@page 擬似クラスの例</h3>
+### @page 擬似クラスの例
 
-<p><code>@page</code> の さまざまな<a href="/ja/docs/Web/CSS/Pseudo-classes" title="Pseudo-classes">擬似クラス</a>のページにある例を参照してください。</p>
+さまざまな `@page` の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)のページにある例を参照してください。
 
-<ul>
- <li>{{Cssxref(":blank")}}</li>
- <li>{{Cssxref(":first")}}</li>
- <li>{{Cssxref(":left")}}</li>
- <li>{{Cssxref(":right")}}</li>
- <li>{{Cssxref(":recto")}} {{experimental_inline}}</li>
- <li>{{Cssxref(":verso")}} {{experimental_inline}}</li>
-</ul>
+- {{Cssxref(":blank")}}
+- {{Cssxref(":first")}}
+- {{Cssxref(":left")}}
+- {{Cssxref(":right")}}
+- {{Cssxref(":recto")}} {{experimental_inline}}
+- {{Cssxref(":verso")}} {{experimental_inline}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Logical Properties', '#page', ':recto and :verso')}}</td>
-   <td>{{Spec2('CSS Logical Properties')}}</td>
-   <td><code>:recto</code> 及び <code>:verso</code> ページセレクターを追加</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Paged Media', '#at-page-rule', '@page')}}</td>
-   <td>{{Spec2('CSS3 Paged Media')}}</td>
-   <td>{{SpecName('CSS2.1')}} から変更はないが、 <code>@page</code> 内でより多くの＠規則が利用できるようになった。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'page.html#page-selectors', '@page')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.at-rules.page")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>この件 (ページベースのカウンターなど) に関する進捗の追跡は、 Bugzilla のチケット <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=286443">[META] CSS Paged Media Module Level 3</a> をご覧ください。</li>
-</ul>
+- この件 (ページベースのカウンターなど) に関する進捗の追跡は、 Bugzilla のチケット [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) を参照してください。

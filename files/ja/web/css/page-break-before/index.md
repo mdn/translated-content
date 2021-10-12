@@ -4,20 +4,22 @@ slug: Web/CSS/page-break-before
 tags:
   - CSS
   - CSS プロパティ
-  - CSS ページ付きメディア
-  - Reference
   - 改ページ
+  - Reference
+  - recipe:css-property
+browser-compat: css.properties.page-break-before
 translation_of: Web/CSS/page-break-before
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<div class="blockIndicator warning">このプロパティは {{cssxref("break-before")}} プロパティによって置き換えられました。</div>
+> **Warning:** このプロパティは {{cssxref("break-before")}} プロパティによって置き換えられました。
 
-<p><strong><code>page-break-before</code></strong> CSS プロパティは、現在の要素の<em>前で</em>改ページが行われるように調整します。</p>
+**`page-break-before`** CSS プロパティは、現在の要素の*前で*改ページが行われるように調整します。
 
-<p>このプロパティは、ボックスを生成するブロックレベル要素に適用されます。ボックスを生成しない空の {{HTMLElement("div")}} には適用されません。</p>
+このプロパティは、ボックスを生成するブロックレベル要素に適用されます。ボックスを生成しない空の {{ HTMLElement("div") }} には適用されません。
 
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 page-break-before: auto;
 page-break-before: always;
 page-break-before: avoid;
@@ -29,118 +31,72 @@ page-break-before: verso;
 /* グローバル値 */
 page-break-before: inherit;
 page-break-before: initial;
+page-break-before: revert;
 page-break-before: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+## 構文
 
-<h2 id="Page_break_aliases" name="Page_break_aliases">改ページの別名</h2>
+### 値
 
-<p><code>page-break-before</code> プロパティは古いプロパティとなり、 {{cssxref("break-before")}} によって置き換えられました。</p>
+- `auto`
+  - : 初期値です。自動的な改ページが行われます (強制や禁止の機能は持ちません)。
+- `always`
+  - : 要素の前で必ず改ページが行われるように強制します。
+- `avoid`
+  - : 要素の前で改ページされないようにします。
+- `left`
+  - : 要素の前における改ページを強制し、次のページが左ページとして整形されるようにします。
+- `right`
+  - : 要素の前における改ページを強制し、次のページが右ページとして整形されるようにします。
+- `recto` {{experimental_inline}}
+  - : 左から右に読むページにおいて `right` と同じ動作をします。右から左に読むページであれば `left` と同じ働きをします。
+- `verso` {{experimental_inline}}
+  - : 左から右に読むページにおいて `left` と同じ動作をします。右から左に読むページであれば `right` と同じ働きをします。
 
-<p>互換性のため、 <code>page-break-before</code> はブラウザーから <code>break-before</code> の別名として扱われます。これにより、 <code>page-break-before</code> を使用しているサイトが引き続き設計通りに動作することを保証します。値のサブセットは次のような別名になります。</p>
+## 改ページの別名
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">page-break-before</th>
-   <th scope="col">break-before</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>auto</code></td>
-   <td><code>auto</code></td>
-  </tr>
-  <tr>
-   <td><code>left</code></td>
-   <td><code>left</code></td>
-  </tr>
-  <tr>
-   <td><code>right</code></td>
-   <td><code>right</code></td>
-  </tr>
-  <tr>
-   <td><code>avoid</code></td>
-   <td><code>avoid</code></td>
-  </tr>
-  <tr>
-   <td><code>always</code></td>
-   <td><code>page</code></td>
-  </tr>
- </tbody>
-</table>
+`page-break-before` プロパティは古いプロパティとなり、 {{cssxref("break-before")}} によって置き換えられました。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+互換性のため、 `page-break-before` はブラウザーから `break-before` の別名として扱われます。これにより、 `page-break-before` を使用しているサイトが引き続き設計通りに動作することを保証します。値のサブセットは次のような別名になります。
 
-<h3 id="Values" name="Values">値</h3>
+| page-break-before | break-before |
+| ----------------- | ------------ |
+| `auto`            | `auto`       |
+| `left`            | `left`       |
+| `right`           | `right`      |
+| `avoid`           | `avoid`      |
+| `always`          | `page`       |
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>初期値です。自動的な改ページが行われます (強制や禁止の機能は持ちません)。</dd>
- <dt><code>always</code></dt>
- <dd>要素の前で必ず改ページが行われるように強制します。</dd>
- <dt><code>avoid</code></dt>
- <dd>要素の前で改ページされないようにします。</dd>
- <dt><code>left</code></dt>
- <dd>要素の前における改ページを強制し、次のページが左ページとして整形されるようにします。</dd>
- <dt><code>right</code></dt>
- <dd>要素の前における改ページを強制し、次のページが右ページとして整形されるようにします。</dd>
- <dt><code>recto</code> {{experimental_inline}}</dt>
- <dd>左から右に読むページにおいて <code>right</code> と同じ動作をします。右から左に読むページであれば <code>left</code> と同じ働きをします。</dd>
- <dt><code>verso</code> {{experimental_inline}}</dt>
- <dd>左から右に読むページにおいて <code>left</code> と同じ動作をします。右から左に読むページであれば <code>right</code> と同じ働きをします。</dd>
-</dl>
+## 公式定義
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: css">/* div の前で改ページされないようにします */
+### ある要素の前で改ページを防ぐ
+
+```css
+/* div の前で改ページされないようにします */
 div.note {
     page-break-before: avoid;
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Logical Properties', '#page', 'recto and verso')}}</td>
-   <td>{{Spec2('CSS Logical Properties')}}</td>
-   <td><code>recto</code> と <code>verso</code> の追加</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Paged Media', '#page-break-before', 'page-break-before')}}</td>
-   <td>{{Spec2('CSS3 Paged Media')}}</td>
-   <td>プロパティが適用される要素を table rows と table row groups に拡張</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'page.html#propdef-page-break-before', 'page-break-before')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.page-break-before")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{cssxref("break-before")}}, {{cssxref("break-after")}}, {{cssxref("break-inside")}}</li>
- <li>{{cssxref("page-break-after")}}, {{cssxref("page-break-inside")}}</li>
- <li>{{cssxref("orphans")}}, {{cssxref("widows")}}</li>
-</ul>
+- {{cssxref("break-before")}}, {{cssxref("break-after")}}, {{cssxref("break-inside")}}
+- {{cssxref("page-break-after")}}, {{cssxref("page-break-inside")}}
+- {{cssxref("orphans")}}, {{cssxref("widows")}}
