@@ -16,7 +16,7 @@ O método **`has()`** retorna um booleano indicando se o elemento com a chave es
 
 {{EmbedInteractiveExample("pages/js/map-prototype-has.html")}}
 
-## Sintáxe
+## Sintaxe
 
 ```js
 has(key)

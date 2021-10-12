@@ -10,19 +10,19 @@ browser-compat: javascript.builtins.Map.@@species
 ---
 {{JSRef}}
 
-A propiedade acessora **`Map[@@species]`** retorna o construtor do `Map`.
+O Acessor de propriedade **`Map[@@species]`** retorna o construtor do `Map`.
 
 ## Descrição
 
 O acessor `species` retorna o valor padrão do construtor dos objetos `Map`
-Subclasses de construtores devem sobrescrever isso para mudar o construtor atríbuido.
+Subclasses de construtores podem sobrescrever isso para mudar o construtor atribuído.
 
 
 ## Exemplos
 
 ### Species em objetos ordinários
 
-A propiedade *species* retorna a função padrão do construtor, que é o construtor `Map` para objetos `Map`.
+A propriedade *species* retorna a função padrão do construtor, que é o construtor `Map` para objetos `Map`.
 
 ```js
 Map[Symbol.species]; // function Map()

@@ -16,7 +16,7 @@ O método **`set()`** adiciona ou atualiza um elemento com a chave especificada 
 
 {{EmbedInteractiveExample("pages/js/map-prototype-set.html")}}
 
-## Sintáxe
+## Sintaxe
 
 ```js
 set(key, value)
@@ -25,7 +25,7 @@ set(key, value)
 ### Parâmetros
 
 - `key`
-  - : A chave do elemento para adicionar ao objeto `Map`.
+  - : A chave do elemento que será adicionado ao objeto `Map`.
 - `value`
   - : O valor do elemento que será adicionado ao objeto `Map`.
 

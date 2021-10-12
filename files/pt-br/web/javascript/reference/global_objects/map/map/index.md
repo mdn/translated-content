@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Map.Map
 
 O **construtor `Map()`** cria objetos {{jsxref("Map")}}.  
 
-## Sintáxe
+## Sintaxe
 
 ```js
 new Map()
@@ -24,7 +24,7 @@ new Map(iterable)
 
 - `iterable` {{optional_inline}}
   - : Um {{jsxref("Array")}} ou outro
-    objeto [iterável](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) 
+    objeto [iterável](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols) 
     dos quais os elementos são pares chave-valor. (Por exemplo, arrays com dois elementos como `[[ 1, 'one' ],[ 2, 'two' ]]`.).
     Cada par chave-valor é adicionado ao novo `Map`.
 

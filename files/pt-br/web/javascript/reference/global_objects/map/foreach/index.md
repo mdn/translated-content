@@ -12,11 +12,11 @@ browser-compat: javascript.builtins.Map.forEach
 ---
 {{JSRef}}
 
-O método **`forEach()`** executa a função que foi provida uma vez para cada par de chave-valor no objeto `Map`, ma order em que foram inseridos.
+O método **`forEach()`** executa a função que foi provida uma vez para cada par de chave-valor no objeto `Map`, na order em que foram inseridos.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-foreach.html")}}
 
-## Sintáxe
+## Sintaxe
 
 ```js
 // Arrow function
@@ -56,33 +56,32 @@ forEach(function callbackFn(value, key, map) { ... }, thisArg)
 
 ## Descrição
 
-O método `forEach` executa o `callback` provido uma vez para cada chave do map
+O método `forEach` executa o `callback` fornecido uma vez para cada chave do map
 que realmente existe. 
 Ele não é invocado para chaves que foram deletadas. 
-Porém, é executados para valores que estão presentes mesmo tendo o valor `undefined`.
+Porém, é executado para valores que estão presentes mesmo tendo o valor `undefined`.
 
 O `callback` é invocado com **três argumentos**:
 
 - O `value` de entrada
 - A `key` de entrada
-- o **objeto `Map`** que esta sendo percorrido
+- o **objeto `Map`** que está sendo percorrido
 
-Se o parâmetro `thisArg` for provido para o `forEach`, ele será passado para o 
+Se o parâmetro `thisArg` for fornecido para o `forEach`, ele será passado para o 
 `callback` quando for invocado, para ser usado como o valor de `this`. De outra forma,
-o valor `undefined` será usado como valor de `this`. o valor de `this` será 
+o valor `undefined` será usado como valor de `this`. O valor de `this` será 
 observado pelo `callback` em última análise e será determinado de acordo com
-If a `thisArg` parameter is provided to `forEach`, it will be passed to
-[as regras usuais para a determinação do `this` visto por uma função](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+[as regras usuais para a determinação do `this` visto por uma função](/pt-BR/docs/Web/JavaScript/Reference/Operators/this).
 
-Cada valor será visitado uma vez, exceto no caso em que foram deletados e adicionados novamento
-antes do `forEach` ser finalizado. o `callback` não é invocado para valores que foram removidos antes de 
+Cada valor será visitado uma vez, exceto no caso em que foram deletados e adicionados novamente
+antes do `forEach` ser finalizado. O `callback` não é invocado para valores que foram removidos antes de 
 terem sidos visitados. Novos valores adicionados antes do `forEach` terminar serão visitados.
 
 ## Exemplos
 
 ### Exibindo o conteúdo de um objeto Map
 
-O código a seguir registra um linha para cada elemento do objeto `Map`:
+O código a seguir imprime uma linha para cada elemento do objeto `Map`:
 
 ```js
 function logMapElements(value, key, map) {

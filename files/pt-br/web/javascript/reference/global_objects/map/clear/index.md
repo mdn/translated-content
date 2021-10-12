@@ -16,7 +16,7 @@ O método **`clear()`** remove todos os elementos de um objeto `Map`.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-clear.html")}}
 
-## Sintáxe
+## Sintaxe
 
 ```js
 clear()

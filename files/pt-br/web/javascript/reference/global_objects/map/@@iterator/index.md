@@ -14,14 +14,14 @@ browser-compat: javascript.builtins.Map.@@iterator
 {{JSRef}}
 
 
-<p class="seoSummary">O valor inicial da propiedade <strong><code>@@iterator</code></strong>
- é a mesmo objeto função como o valor inicial do método {{jsxref("Map.prototype.entries()", "entries")}} 
+<p class="seoSummary">O valor inicial da propriedade <strong><code>@@iterator</code></strong>
+ é o mesmo objeto função que o valor inicial do método {{jsxref("Map.prototype.entries()", "entries")}} 
 </p>
 
 
 {{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}
 
-## Sintáxe
+## Sintaxe
 
 ```js
 myMap[Symbol.iterator]
@@ -29,7 +29,7 @@ myMap[Symbol.iterator]
 
 ### Valor retornado
 
-A função iterativa do map, que é a {{jsxref("Map.prototype.entries()", "entries()")}}  por padrao 
+A função iterativa do map, que é a {{jsxref("Map.prototype.entries()", "entries()")}}  por padrão 
 
 ## Exemplos
 
@@ -75,7 +75,7 @@ for (const [key, value] of myMap) {
 
 {{Specifications}}
 
-## Compatiblidade com navegadores
+## Compatibilidade com navegadores
 
 {{Compat}}
 

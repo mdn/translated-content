@@ -12,11 +12,11 @@ browser-compat: javascript.builtins.Map.@@toStringTag
 ---
 {{JSRef}}
 
-A propiedade **`Map[@@toStringTag]`** tem o valor inicial do `Map`.
+A propriedade **`Map[@@toStringTag]`** tem o valor inicial do `Map`.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-@@tostringtag.html","shorter")}}{{js_property_attributes(0,0,1)}}
 
-## Sintáxe
+## Sintaxe
 
 ```js
 Map[Symbol.toStringTag]
