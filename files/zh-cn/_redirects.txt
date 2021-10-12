@@ -1391,6 +1391,9 @@
 /zh-CN/docs/Web/API/MediaStream.addTrack	/zh-CN/docs/Web/API/MediaStream/addTrack
 /zh-CN/docs/Web/API/MouseEvent/which	/zh-CN/docs/conflicting/Web/API/UIEvent/which
 /zh-CN/docs/Web/API/MouseWheelEvent	/zh-CN/docs/conflicting/Web/API/WheelEvent
+/zh-CN/docs/Web/API/MutationObserverInit	/zh-CN/docs/conflicting/Web/API/MutationObserver/observe_2f2addbfa1019c23a6255648d6526387
+/zh-CN/docs/Web/API/MutationObserverInit/attributeFilter	/zh-CN/docs/conflicting/Web/API/MutationObserver/observe
+/zh-CN/docs/Web/API/MutationObserverInit/childList	/zh-CN/docs/conflicting/Web/API/MutationObserver/observe_7e3ecc5c48e14f4ecfdbe7d3aa534870
 /zh-CN/docs/Web/API/Navigator.battery	/zh-CN/docs/Web/API/Navigator/battery
 /zh-CN/docs/Web/API/Navigator.buildID	/zh-CN/docs/Web/API/Navigator/buildID
 /zh-CN/docs/Web/API/Navigator.cookieEnabled	/zh-CN/docs/Web/API/Navigator/cookieEnabled
