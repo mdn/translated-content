@@ -6,13 +6,16 @@ tags:
   - CSS プロパティ
   - CSS ルビ
   - Reference
+  - recipe:css-property
+browser-compat: css.properties.ruby-align
 translation_of: Web/CSS/ruby-align
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}
 
-<p>CSS の <code><strong>ruby-align</strong></code> プロパティは、ベースに対するさまざまなルビの配分を定義します。</p>
+**`ruby-align`** は CSS のプロパティで、ベースに対するさまざまなルビの配分を定義します。
 
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 ruby-align: start;
 ruby-align: center;
 ruby-align: space-between;
@@ -21,130 +24,134 @@ ruby-align: space-around;
 /* グローバル値 */
 ruby-align: inherit;
 ruby-align: initial;
+ruby-align: revert;
 ruby-align: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
+- `start`
+  - : ルビをベーステキストの始点に揃えることを示すキーワードです。
+- `center`
+  - : ルビをベーステキストの中央に揃えることを示すキーワードです。
+- `space-between`
+  - : ルビの要素の範囲内に配分するよう、スペースを付加することを示すキーワードです。
+- `space-around`
+  - : ルビの要素の範囲内に配分するよう、スペースを付加することを示すキーワードです。また、ルビの周囲にもスペースを付加します。
 
-<dl>
- <dt><code>start</code></dt>
- <dd>ルビをベーステキストの始点に揃えることを示すキーワードです。</dd>
- <dt><code>center</code></dt>
- <dd>ルビをベーステキストの中央に揃えることを示すキーワードです。</dd>
- <dt><code>space-between</code></dt>
- <dd>ルビの要素の範囲内に配分するよう、スペースを付加することを示すキーワードです。</dd>
- <dt><code>space-around</code></dt>
- <dd>ルビの要素の範囲内に配分するよう、スペースを付加することを示すキーワードです。また、ルビの周囲にもスペースを付加します。</dd>
-</dl>
+## 公式定義
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>この HTML を、<code>ruby-align</code> のそれぞれの値でレンダリングします。</p>
+<h3 id="Ruby_aligned_at_the_start_of_the_base_text">ルビをベーステキストの先頭に揃える</h3>
 
-<pre class="brush: html">&lt;ruby&gt;
-  &lt;rb&gt;確認用の長いテキスト&lt;/rb&gt;
-  &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;短いルビ&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
-&lt;/ruby&gt;
-</pre>
+#### HTML
 
-<h3 id="Ruby_aligned_at_the_start_of_the_base_text" name="Ruby_aligned_at_the_start_of_the_base_text">ルビをベーステキストの始点に揃える</h3>
+```html
+<ruby>
+  <rb>確認用の長いテキスト</rb>
+  <rp>（</rp><rt>短いルビ</rt><rp>）</rp>
+</ruby>
+```
 
-<pre class="brush: html" style="display: none;">&lt;ruby&gt;
-  &lt;rb&gt;確認用の長いテキスト&lt;/rb&gt;
-  &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;短いルビ&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
-&lt;/ruby&gt;
-</pre>
+#### CSS
 
-<pre class="brush: css">ruby {
+```css
+ruby {
   ruby-align: start;
-}</pre>
+}
+```
 
-<p>結果は以下のとおりです。</p>
+#### 結果
 
-<p>{{EmbedLiveSample("Ruby_aligned_at_the_start_of_the_base_text", 180, 40)}}</p>
+{{EmbedLiveSample("Ruby_aligned_at_the_start_of_the_base_text", 180, 40)}}
 
-<h3 id="Ruby_aligned_at_the_center_of_the_base_text" name="Ruby_aligned_at_the_center_of_the_base_text">ルビをベーステキストの中央に揃える</h3>
+<h3 id="Ruby_aligned_at_the_center_of_the_base_text">ルビをベーステキストの中央に揃える</h3>
 
-<pre class="brush: html" style="display: none;">&lt;ruby&gt;
-  &lt;rb&gt;確認用の長いテキスト&lt;/rb&gt;
-  &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;短いルビ&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
-&lt;/ruby&gt;
-</pre>
+#### HTML
 
-<pre class="brush: css">ruby {
+```html
+<ruby>
+  <rb>確認用の長いテキスト</rb>
+  <rp>（</rp><rt>短いルビ</rt><rp>）</rp>
+</ruby>
+```
+
+#### CSS
+
+```css
+ruby {
   ruby-align: center;
-}</pre>
+}
+```
 
-<p>結果は以下のとおりです。</p>
+#### 結果
 
-<p>{{EmbedLiveSample("Ruby_aligned_at_the_center_of_the_base_text", 180, 40)}}</p>
+{{EmbedLiveSample("Ruby_aligned_at_the_center_of_the_base_text", 180, 40)}}
 
-<h3 id="Extra_space_distributed_between_ruby_elements" name="Extra_space_distributed_between_ruby_elements">ルビ要素の範囲内にスペースを配分する</h3>
+<h3 id="Extra_space_distributed_between_ruby_elements">ルビ要素の範囲内にスペースを配分する</h3>
 
-<pre class="brush: html" style="display: none;">&lt;ruby&gt;
-  &lt;rb&gt;確認用の長いテキスト&lt;/rb&gt;
-  &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;短いルビ&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
-&lt;/ruby&gt;
-</pre>
+#### HTML
 
-<pre class="brush: css">ruby {
+```html
+<ruby>
+  <rb>確認用の長いテキスト</rb>
+  <rp>（</rp><rt>短いルビ</rt><rp>）</rp>
+</ruby>
+```
+
+#### CSS
+
+```css
+ruby {
   ruby-align: space-between;
-}</pre>
+}
+```
 
-<p>結果は以下のとおりです。</p>
+#### 結果
 
-<p>{{EmbedLiveSample("Extra_space_distributed_between_ruby_elements", 180, 40)}}</p>
+{{EmbedLiveSample("Extra_space_distributed_between_ruby_elements", 180, 40)}}
 
-<h3 id="Extra_space_distributed_between_and_around_ruby_elements" name="Extra_space_distributed_between_and_around_ruby_elements">ルビ要素内および周囲にスペースを配分する</h3>
+<h3 id="Extra_space_distributed_between_and_around_ruby_elements">ルビ要素内および周囲にスペースを配分する</h3>
 
-<pre class="brush: html" style="display: none;">&lt;ruby&gt;
-  &lt;rb&gt;確認用の長いテキスト&lt;/rb&gt;
-  &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;短いルビ&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
-&lt;/ruby&gt;
-</pre>
+#### HTML
 
-<pre class="brush: css">ruby {
+```html
+<ruby>
+  <rb>確認用の長いテキスト</rb>
+  <rp>（</rp><rt>短いルビ</rt><rp>）</rp>
+</ruby>
+```
+
+#### CSS
+
+```css
+ruby {
   ruby-align: space-around;
-}</pre>
+}
+```
 
-<p>結果は以下のとおりです。</p>
+#### 結果
 
-<p>{{EmbedLiveSample("Extra_space_distributed_between_and_around_ruby_elements", 180, 40)}}</p>
+{{EmbedLiveSample("Extra_space_distributed_between_and_around_ruby_elements", 180, 40)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Ruby', '#ruby-align-property', 'ruby-align')}}</td>
-   <td>{{Spec2('CSS3 Ruby')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.ruby-align")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>HTML のルビ関連要素: {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, {{HTMLElement("rtc")}}</li>
- <li>CSS のルビ関連プロパティ: {{cssxref("ruby-position")}}, {{cssxref("ruby-merge")}}</li>
-</ul>
+- HTML のルビ関連要素: {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, {{HTMLElement("rtc")}}
+- CSS のルビ関連プロパティ: {{cssxref("ruby-position")}}, {{cssxref("ruby-merge")}}
