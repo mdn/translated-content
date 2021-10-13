@@ -13,7 +13,7 @@ browser-compat: html.elements.col
 ---
 <div>{{HTMLRef}}</div>
 
-<p class="summary">L'élément HTML <strong><code>&lt;col&gt;</code></strong> définit une colonne appartenant à un tableau et est utilisé afin de définir la sémantique commune à toutes ses cellules. On trouve généralement cet élément au sein d'un élément <a href="/fr/docs/Web/HTML/Element/colgroup"><code>&lt;colgroup&gt;</code></a>.</p>
+<p>L'élément HTML <strong><code>&lt;col&gt;</code></strong> définit une colonne appartenant à un tableau et est utilisé afin de définir la sémantique commune à toutes ses cellules. On trouve généralement cet élément au sein d'un élément <a href="/fr/docs/Web/HTML/Element/colgroup"><code>&lt;colgroup&gt;</code></a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/col.html","tabbed-taller")}}</div>
 
@@ -55,7 +55,7 @@ browser-compat: html.elements.col
  <p>Cet élément inclut les <a href="/fr/docs/Web/HTML/Global_attributes">attributs universels</a>.</p>
  
  <dl>
-  <dt><strong id="attr-span"><code>span</code></strong></dt>
+  <dt><strong><code>span</code></strong></dt>
   <dd>Cet attribut contient un nombre entier positif indiquant le nombre de colonnes consécutives que l'élément <code>&lt;col&gt;</code> couvre. S'il n'est pas présent, sa valeur par défaut est <code>1</code>.</dd>
  </dl>
  
@@ -64,7 +64,7 @@ browser-compat: html.elements.col
  <p>Les attributs suivants sont dépréciés et ne doivent pas être utilisés. Ils sont documentés ci-dessous à titre de référence lors de la mise à jour du code existant et uniquement pour des raisons historiques.</p>
  
  <dl>
-  <dt><strong id="attr-align"><code>align</code></strong> {{deprecated_inline}}</dt>
+  <dt><strong><code>align</code></strong> {{deprecated_inline}}</dt>
   <dd>Cet attribut de type énumératif indique comment l'alignement horizontal du contenu des cellules de chaque colonne sera traité. Les valeurs possibles sont :
   <ul>
     <li><code>left</code>, aligner le contenu à gauche de la cellule</li>
@@ -75,8 +75,8 @@ browser-compat: html.elements.col
  
   <p>Si cet attribut n'est pas défini, sa valeur est héritée du <a href="/fr/docs/Web/HTML/Element/colgroup#attr-align"><code>align</code></a> de l'élément <a href="/fr/docs/Web/HTML/Element/colgroup"><code>&lt;colgroup&gt;</code></a> auquel appartient cet <code>&lt;col&gt;</code>. S'il n'y en a pas, la valeur <code>left</code> est supposée.</p>
 
-  <div class="notecard note">
-    <p><b>Note :</b></p>
+  <div class="note">
+    <p><strong>Note :</strong></p>
 
     <ul>
       <li>Pour obtenir le même effet que les valeurs <code>left</code>, <code>center</code>, <code>right</code> ou <code>justify</code> :
@@ -90,17 +90,17 @@ browser-compat: html.elements.col
     </ul>
   </div>
   </dd>
-  <dt><strong id="attr-bgcolor"><code>bgcolor</code></strong> {{deprecated_inline}}</dt>
+  <dt><strong><code>bgcolor</code></strong> {{deprecated_inline}}</dt>
   <dd>
   <p>La couleur de fond du tableau. Il s'agit d'un <a href="/fr/docs/Web/CSS/color_value#rgb_colors">code RVB hexadécimal à 6 chiffres</a>, préfixé par un « <code>#</code> ». L'un des <a href="/fr/docs/Web/CSS/color_value#color_keywords">mots-clés de couleur</a> prédéfinis peut également être utilisé.</p>
  
   <p>Pour obtenir un effet similaire, utilisez la propriété CSS <a href="/fr/docs/Web/CSS/background-color"><code>background-color</code></a>.</p>
   </dd>
-  <dt><strong id="attr-char"><code>char</code></strong> {{deprecated_inline}}</dt>
+  <dt><strong><code>char</code></strong> {{deprecated_inline}}</dt>
   <dd>Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs typiques de cet attribut incluent un point (.) lorsqu'on tente d'aligner des nombres ou des valeurs monétaires. Si <a href="#attr-align"><code>align</code></a> n'est pas défini sur <code>char</code>, cet attribut est ignoré.</dd>
-  <dt><strong id="attr-charoff"><code>charoff</code></strong> {{deprecated_inline}}</dt>
+  <dt><strong><code>charoff</code></strong> {{deprecated_inline}}</dt>
   <dd>Cet attribut est utilisé pour indiquer le nombre de caractères pour décaler les données de la colonne par rapport aux caractères d'alignement spécifiés par l'attribut <code>char</code>.</dd>
-  <dt><strong id="attr-valign"><code>valign</code></strong> {{deprecated_inline}}</dt>
+  <dt><strong><code>valign</code></strong> {{deprecated_inline}}</dt>
   <dd>Cet attribut spécifie l'alignement vertical du texte dans chaque cellule de la colonne. Les valeurs possibles de cet attribut sont les suivantes :
     <ul>
       <li><code>baseline</code>, mettra le texte aussi près du bas de la cellule que possible, mais l'alignera sur la <a href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">base</a> des caractères au lieu du bas de ceux-ci. Si les caractères sont tous de la même taille, cela a le même effet que <code>bottom</code> ;</li>
@@ -109,8 +109,8 @@ browser-compat: html.elements.col
       <li>and <code>top</code>, placera le texte aussi près du haut de la cellule que possible.</li>
     </ul>
   
-    <div class="notecard note">
-      <p><b>Note :</b></p>
+    <div class="note">
+      <p><strong>Note :</strong></p>
   
       <ul>
         <li>N'essayez pas de définir la propriété <a href="/fr/docs/Web/CSS/vertical-align"><code>vertical-align</code></a> sur un sélecteur donnant un élément <code>&lt;col&gt;</code>. Comme les éléments <a href="/fr/docs/Web/HTML/Element/td"><code>&lt;td&gt;</code></a> ne sont pas des descendants de l'élément <code>&lt;col&gt;</code>, ils n'en hériteront pas.</li>
@@ -119,7 +119,7 @@ browser-compat: html.elements.col
       </ul>
     </div>
   </dd>
-  <dt><strong id="attr-width"><code>width</code></strong> {{deprecated_inline}}</dt>
+  <dt><strong><code>width</code></strong> {{deprecated_inline}}</dt>
   <dd>Cet attribut spécifie une largeur par défaut pour chaque colonne du groupe de colonnes actuel. En plus des valeurs standard en pixels et en pourcentage, cet attribut peut prendre la forme spéciale <code>0*</code>, ce qui signifie que la largeur de chaque colonne du groupe doit être la largeur minimale nécessaire pour contenir le contenu de la colonne. Des largeurs relatives telles que <code>5*</code> peuvent également être utilisées.</dd>
  </dl>
 

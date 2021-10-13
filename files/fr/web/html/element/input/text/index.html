@@ -10,11 +10,9 @@ translation_of: Web/HTML/Element/input/text
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">Les éléments {{HTMLElement("input")}} dont l'attribut <code>type</code> vaut <code><strong>"text"</strong></code> permettent de créer des champs de saisie avec du texte sur une seule ligne.</span></p>
+<p>Les éléments {{HTMLElement("input")}} dont l'attribut <code>type</code> vaut <code><strong>"text"</strong></code> permettent de créer des champs de saisie avec du texte sur une seule ligne.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-standard")}}</div>
-
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
 
 <h2 id="Valeur">Valeur</h2>
 
@@ -82,14 +80,12 @@ translation_of: Web/HTML/Element/input/text
 
 <h3 id="htmlattrdef(pattern)">{{htmlattrdef("pattern")}}</h3>
 
-<div id="pattern-include">
 <p>L'attribut <code>pattern</code> est une expression rationnelle que doit respecter la valeur ({{htmlattrxref("value")}}) du champ afin d'être <a href="/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation">valide</a>. Cette expression rationnelle doit être une expression rationnelle valide pour JavaScript (telle qu'utilisée par {{jsxref("RegExp")}} et telle que documentée dans <a href="/fr/docs/Web/JavaScript/Guide/Expressions_régulières">ce guide</a>). Le marqueur <code>'u'</code> est fourni par le navigateur lors de la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode plutôt que comme des caractères ASCII. Aucune barre oblique (/) ne devrait être utilisée autour du motif.</p>
 
 <p>Si l'expression rationnelle est invalide ou que cet attribut n'est pas défini, l'attribut est ignoré.</p>
 
 <div class="note">
 <p><strong>Note :</strong> L'attribut {{htmlattrxref("title", "input")}} pourra être utilisé afin d'afficher une bulle d'informations qui explique les conditions à respecter. Il est également conseillé d'inclure un texte explicatif à proximité du champ.</p>
-</div>
 </div>
 
 <p>Voir <a href="#format">la section sur l'utilisation de cet attribut ci-après</a> pour plus d'exemples.</p>
@@ -120,7 +116,6 @@ translation_of: Web/HTML/Element/input/text
 
 <h3 id="htmlattrdef(spellcheck)">{{htmlattrdef("spellcheck")}}</h3>
 
-<div id="spellcheck-include">
 <p><code>spellcheck</code> est un attribut universel qui est utilisé afin d'indiquer si la vérification orthographique doit être utilisée pour un élément. Il peut être utilisé pour n'importe quel contenu éditable mais possède certaines spécificités pour les éléments {{HTMLElement("input")}}. Les valeurs autorisées pour cet attribut sont :</p>
 
 <dl>
@@ -135,7 +130,6 @@ translation_of: Web/HTML/Element/input/text
 <p>Un champ de saisie peut avoir la vérification orthographique activée s'il ne possède pas l'attribut {{anch("readonly")}} et qu'il n'est pas désactivé.</p>
 
 <p>La valeur renvoyée par l'attribut <code>spellcheck</code> peut ne pas refléter l'état réel de la vérification ortographique si certaines préférences de l'agent utilisateur surchargent le paramétrage par défaut.</p>
-</div>
 
 <h2 id="Attributs_non-standard">Attributs non-standard</h2>
 
@@ -162,7 +156,6 @@ translation_of: Web/HTML/Element/input/text
 
 <h3 id="htmlattrdef(autocorrect)_non-standard_inline">{{htmlattrdef("autocorrect")}} {{non-standard_inline}}</h3>
 
-<div id="autocorrect-include">
 <p>Un attribut spécifique à Safari, sous la forme d'une chaîne de caractères, qui indique si la correction automatique doit être appliquée lors de l'édition du champ. Les valeurs autorisées pour cet attribut sont :</p>
 
 <dl>
@@ -171,11 +164,9 @@ translation_of: Web/HTML/Element/input/text
  <dt><code>off</code></dt>
  <dd>Toute correction automatique et tout remplacement de texte est désactivé.</dd>
 </dl>
-</div>
 
 <h3 id="htmlattrdef(mozactionhint)_non-standard_inline">{{htmlattrdef("mozactionhint")}} {{non-standard_inline}}</h3>
 
-<div id="mozactionhint-include">
 <p>Un attribut spécifique à Mozilla (et plus particulièrement Firefox pour Android) qui fournit une indication quant au type d'action effectuée lorsque l'utilisateur appuie sur la touche <kbd>Entrée</kbd> ou <kbd>Retour</kbd> lors de l'édition. Cette information pourra être utilisée afin de choisir le libellé à afficher sur la touche <kbd>Entrée</kbd> du clavier virtuel.</p>
 
 <div class="note">
@@ -183,7 +174,6 @@ translation_of: Web/HTML/Element/input/text
 </div>
 
 <p>Les valeurs autorisées pour cet attribut sont : <code>go</code>, <code>done</code>, <code>next</code>, <code>search</code> et <code>send</code>. Le navigateur décide alors, selon la valeur, quel libellé utiliser pour la touche Entrée.</p>
-</div>
 
 <h2 id="Utiliser_&lt;input_typetext>">Utiliser <code>&lt;input type="text"&gt;</code></h2>
 
@@ -251,7 +241,7 @@ translation_of: Web/HTML/Element/input/text
 <p>Les éléments <code>&lt;input&gt;</code> de type <code>text</code> ne possède pas de mécanisme de validation automatique. En revanche, il est possible d'ajouter certaines contraintes qui seront vérifiées côté client et que nous allons voir ici.</p>
 
 <div class="warning">
-<p><strong>Attention !</strong> Il est également important de vérifier le format de la valeur saisie côté serveur ! En effet, il est tout à fait possible pour un utilisateur de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.</p>
+<p><strong>Attention :</strong> Il est également important de vérifier le format de la valeur saisie côté serveur ! En effet, il est tout à fait possible pour un utilisateur de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.</p>
 </div>
 
 <h3 id="Un_aparté_sur_la_mise_en_forme">Un aparté sur la mise en forme</h3>
@@ -295,9 +285,7 @@ input:valid+span:after {
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
-</div>
+<pre class="brush: css hidden">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
 
 <p>Ce qui produira ce résultat :</p>
 
@@ -324,9 +312,7 @@ input:valid+span:after {
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
-</div>
+<pre class="brush: css hidden">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
 
 <p>Voici le résultat qui est alors obtenu :</p>
 
@@ -338,7 +324,7 @@ input:valid+span:after {
 <p><strong>Note :</strong> Si on indique <code>minlength</code> mais pas <code>required</code>, la valeur saisie est considérée comme valide car l'utilisateur peut ne pas saisir de valeur.</p>
 </div>
 
-<h3 id="Contraindre_un_format_spécifique_-_expression_rationnelle"><a id="format" name="format">Contraindre un format spécifique - expression rationnelle</a></h3>
+<h3 id="Contraindre_un_format_spécifique_-_expression_rationnelle">Contraindre un format spécifique - expression rationnelle</h3>
 
 <p>L'attribut {{htmlattrxref("pattern","input")}} permet d'indiquer une expression rationnelle que devra respecter la valeur saisie afin d'être valide (cf. <a href="/en-US/docs/Learn/HTML/Forms/Form_validation#Validating_against_a_regular_expression">Valider un champ par rapport à une expression rationnelle</a> pour une introduction).</p>
 

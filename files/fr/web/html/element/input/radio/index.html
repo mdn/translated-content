@@ -14,12 +14,10 @@ translation_of: Web/HTML/Element/input/radio
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-radio.html", "tabbed-standard")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <p>On les appelle boutons radios par analogie avec les boutons qui étaient utilisés sur les anciens postes de radios.</p>
 
 <div class="note">
-<p><strong>Note</strong> : <a href="/fr/docs/Web/HTML/Element/input/checkbox">Les cases à cocher (<em>checkboxes</em>)</a> ressemblent aux boutons radios. Toutefois, il existe une différence fondamentale : les boutons radio ne permettent de sélectionner qu'une seule option au sein d'un groupe alors que les cases à cocher permettent d'en sélectionner plusieurs.</p>
+<p><strong>Note :</strong> <a href="/fr/docs/Web/HTML/Element/input/checkbox">Les cases à cocher (<em>checkboxes</em>)</a> ressemblent aux boutons radios. Toutefois, il existe une différence fondamentale : les boutons radio ne permettent de sélectionner qu'une seule option au sein d'un groupe alors que les cases à cocher permettent d'en sélectionner plusieurs.</p>
 </div>
 
 <h2 id="Valeur">Valeur</h2>
@@ -69,7 +67,7 @@ translation_of: Web/HTML/Element/input/radio
 <p>Si l'attribut <code>value</code> n'est pas fourni dans le document HTML, la valeur par défaut utilisée sera <code>on</code> pour l'ensemble du groupe. Si c'était le cas avec notre exemple précédent et que l'utilisateur avait cliqué sur l'option « Téléphone » et envoyé le formulaire, les données envoyées auraient contenu <code>"contact=on"</code> ce qui ne s'avère pas très utile. Aussi, mieux vaut ne pas oublier les attributs <code>value</code> !</p>
 
 <div class="note">
-<p><strong>Note</strong> : Si aucun bouton radio n'est sélectionné au moment de l'envoi du formulaire, le groupe radio n'est pas inclus dans les données envoyées par le formulaire car il n'y a aucune valeur à fournir.</p>
+<p><strong>Note :</strong> Si aucun bouton radio n'est sélectionné au moment de l'envoi du formulaire, le groupe radio n'est pas inclus dans les données envoyées par le formulaire car il n'y a aucune valeur à fournir.</p>
 </div>
 
 <p>Généralement, on souhaite qu'au moins une option soit sélectionné parmi les boutons d'un groupe et on inclue donc souvent un attribut <code>checked</code> sur l'un des boutons afin d'avoir une option sélectionnée par défaut.</p>
@@ -143,7 +141,7 @@ form.addEventListener("submit", function(event) {
 
 <h3 id="htmlattrdef(checked)">{{htmlattrdef("checked")}}</h3>
 
-<p>Un attribut booléen qui indique si c'est ce champ radio qui est sélectionné parmi le groupe.<span><a id="cke_1832" title="Delete Rows"></a></span></p>
+<p>Un attribut booléen qui indique si c'est ce champ radio qui est sélectionné parmi le groupe.</p>
 
 <p>À la différence des autres navigateurs, Firefox conservera <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">l'état coché dynamique</a> d'un bouton radio au fur et à mesure des chargements de la page. On pourra utiliser l'attribut {{htmlattrxref("autocomplete","input")}} afin de contrôler cette fonctionnalité.</p>
 
@@ -184,7 +182,7 @@ form.addEventListener("submit", function(event) {
 <p>Ici, c'est le premier bouton radio qui sera sélectionné par défaut.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Si l'attribut <code>checked</code> est placé sur plus d'un bouton, c'est le dernier bouton contenant l'attribut qui sera sélectionné. C'est donc l'ordre des valeurs qui déterminera la valeur par défaut. Pour rappel, il ne peut y avoir qu'un seul bouton radio du groupe qui soit sélectionné à un instant donné.</p>
+<p><strong>Note :</strong> Si l'attribut <code>checked</code> est placé sur plus d'un bouton, c'est le dernier bouton contenant l'attribut qui sera sélectionné. C'est donc l'ordre des valeurs qui déterminera la valeur par défaut. Pour rappel, il ne peut y avoir qu'un seul bouton radio du groupe qui soit sélectionné à un instant donné.</p>
 </div>
 
 <h3 id="Fournir_une_plus_grande_zone_de_sélection">Fournir une plus grande zone de sélection</h3>

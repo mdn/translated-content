@@ -15,21 +15,7 @@ translation_of: Web/HTML/Element/input/date
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <p>L'apparence du contrôle affiché dépend du navigateur utilisé et la prise en charge de cette fonctionnalité est hétérogène (cf. la section {{anch("Compatibilité des navigateurs")}} pour plus de détails). Pour les navigateurs qui ne prennent pas en charge ce type d'élément <code>&lt;input&gt;</code>, c'est un simple <code><a href="/fr/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> qui sera affiché.</p>
-
-<p>Si votre navigateur actuel prend en charge cette fonctionnalité, voici ce à quoi ressemble le contrôle sous Chrome/Opera :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14909/date-picker-chrome.png" style="display: block; height: 220px; margin: 0px auto; width: 275px;"></p>
-
-<p>et pour Edge :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14911/date-picker-edge.png" style="display: block; margin: 0 auto;"></p>
-
-<p>Le contrôle de sélection de date pour Firefox ressemble à :</p>
-
-<p><img alt="Interface utilisateur du sélecteur de date dans Firefox" src="https://mdn.mozillademos.org/files/15644/firefox_datepicker.png" style="display: block; margin: 0 auto;"></p>
 
 <h2 id="Valeur">Valeur</h2>
 
@@ -136,7 +122,7 @@ dateControl.value = '2017-06-01';</pre>
 <p>On ne peut donc ici que sélectionner une date en avril 2017. Seule la partie du contrôle consacrée aux jours sera éditable et on ne pourra pas sélectionner d'autres mois ou années..</p>
 
 <div class="note">
-<p><strong>Note </strong>: On devrait également pouvoir utiliser l'attribut {{htmlattrxref("step", "input")}} afin de faire varier le nombre de jours pour l'incrément de la date (par exemple afin de ne pouvoir sélectionner que les samedis). Cependant, cette fonctionnalité ne semble être présente dans aucune implémentation au moment où nous écrivons ces lignes.</p>
+<p><strong>Note :</strong> On devrait également pouvoir utiliser l'attribut {{htmlattrxref("step", "input")}} afin de faire varier le nombre de jours pour l'incrément de la date (par exemple afin de ne pouvoir sélectionner que les samedis). Cependant, cette fonctionnalité ne semble être présente dans aucune implémentation au moment où nous écrivons ces lignes.</p>
 </div>
 
 <h3 id="Contrôler_la_taille_du_champ_de_saisie">Contrôler la taille du champ de saisie</h3>
@@ -168,10 +154,6 @@ dateControl.value = '2017-06-01';</pre>
 
 <p>{{EmbedLiveSample('Validation', 600, 100)}}</p>
 
-<p>Voici une capture d'écran illustrant ce qui se produit dans un navigateur qui implémente cette fonctionnalité :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14913/date-picker-chrome-error-message.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
-
 <p>Voici la feuille de style utilisée pour l'exemple. On utilise les pseudo-classes {{cssxref(":valid")}} et {{cssxref(":invalid")}} afin de mettre en forme un indicateur selon que la valeur est valide ou non. On place cet indicateur dans un élément {{htmlelement("span")}} séparé car pour Chrome, le contenu généré dans les pseudo-classes est intégré dans le contrôle du formulaire et ne peut être mis en forme ou affiché correctement.</p>
 
 <pre class="brush: css">div {
@@ -196,14 +178,12 @@ input:valid+span:after {
 }</pre>
 
 <div class="warning">
-<p><strong>Attention !</strong> La validation des valeurs du formulaire HTML par le client ne remplace pas la validation côté serveur afin de vérifier que le format est bien celui attendu. Il est tout à fait possible de modifier le code HTML afin d'outrepasser ces mécanismes de validation ou d'envoyer directement des données au serveur. Il est donc nécessaire de valider les données lorsque celles-ci parviennent au serveur afin d'éviter les effets indésirables entraînés par l'injection de données mal formatées ou malveillantes.</p>
+<p><strong>Attention :</strong> La validation des valeurs du formulaire HTML par le client ne remplace pas la validation côté serveur afin de vérifier que le format est bien celui attendu. Il est tout à fait possible de modifier le code HTML afin d'outrepasser ces mécanismes de validation ou d'envoyer directement des données au serveur. Il est donc nécessaire de valider les données lorsque celles-ci parviennent au serveur afin d'éviter les effets indésirables entraînés par l'injection de données mal formatées ou malveillantes.</p>
 </div>
 
 <h2 id="Gérer_la_prise_en_charge_des_navigateurs">Gérer la prise en charge des navigateurs</h2>
 
-<p>Comme indiqué ci-avant, le principal problème qu'on rencontre avec ces contrôles est l'hétérogénéité de la prise en charge par les différents navigateurs. Par exemple, le sélecteur de date implémenté dans Firefox pour Android ressemblera à :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14915/date-picker-fxa.png" style="display: block; margin: 0 auto;"></p>
+<p>Comme indiqué ci-avant, le principal problème qu'on rencontre avec ces contrôles est l'hétérogénéité de la prise en charge par les différents navigateurs.</p>
 
 <p>Les navigateurs qui ne prennent pas en charge ces contrôles utiliseront à la place des champs texte. Toutefois, cette solution de contournement entraîne deux problèmes : le premier concerne l'homogénéité de l'interface utilisateur (le contrôle affiché ne sera pas le même) et le second concerne la gestion des données.</p>
 
@@ -234,8 +214,7 @@ input:valid+span:after {
 
 <p>Si vous tentez d'envoyer ce formulaire, vous pourrez voir que le navigateur affiche un message d'erreur et met en évidence la valeur invalide si la valeur saisie ne correspond pas au motif <code>nnnn-nn-nn</code> (avec <code>n</code> un chiffre entre 0 et 9). Bien entendu, cela n'empêche pas de saisir des dates invalides ou mal formatées (par exemple avec le motif <code>yyyy-dd-mm</code> alors qu'on souhaiterait avoir <code>yyyy-mm-dd</code>). Il reste donc un problème.</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
 }
 
@@ -258,7 +237,6 @@ input:valid + span:after {
   position: absolute;
   right: -18px;
 }</pre>
-</div>
 
 <p>C'est pour cela que la meilleure solution consiste à avoir trois champs de saisie distincts à destination de l'utilisateur : un pour saisir les jours, le deuxième pour les mois et un troisième pour l'année (chacun avec un élément ({{htmlelement("select")}}). On peut également opter pour l'utilisation d'un bibliothèque JavaScript telle que <a href="https://jqueryui.com/datepicker/">le sélecteur de date jQuery (jQuery date picker)</a>.</p>
 
@@ -310,8 +288,7 @@ input:valid + span:after {
 
 <p>Les mois sont écrits « en dur » (ce sont toujours les mêmes) alors que les valeurs pour les jours et les années sont générées dynamiquement en fonction du mois et de l'année sélectionnées (voir les commentaires ci-après qui expliquent le détail des fonctions).</p>
 
-<div class="hidden">
-<pre class="brush: css">input:invalid+span:after {
+<pre class="brush: css hidden">input:invalid+span:after {
   content: '✖';
   padding-left: 5px;
 }
@@ -320,7 +297,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <p>Une autre partie intéressante est celle où on détecte si le navigateur prend charge la fonctionnalité native <code>&lt;input type="date"&gt;</code>. Pour cela, on crée un nouvelle élément {{htmlelement("input")}} et on change son type en <code>date</code> puis ensuite, on vérifie immédiatement la valeur de son type : pour les navigateurs qui ne prennent pas en charge l'élément natif, ils renverront la valeur <code>text</code> car l'élément natif aura été « converti ». Dans ce cas, on masque le sélecteur natif et on affiche le sélecteur alternatif (celui qui contient les éléments {{htmlelement("select")}}).</p>
 
