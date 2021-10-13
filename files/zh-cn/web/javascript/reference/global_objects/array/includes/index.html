@@ -38,17 +38,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
 
 <h3 id="返回值">返回值</h3>
 
-<p>A {{jsxref("Boolean")}} which is <code>true</code> if the value <code>valueToFind</code> is found within the array (or the part of the array indicated by the index <code>fromIndex</code>, if specified). Values of zero are all considered to be equal regardless of sign (that is, -0 is considered to be equal to both 0 and +0), but <code>false</code> is not considered to be the same as 0.</p>
-
 <p>
   返回一个布尔值 {{jsxref("Boolean")}} 。<br>
   如果在数组中（或 <code>fromIndex</code> 指定的范围中）找到了 <code>valueToFind</code>，则返回 <code>true</code>，否则返回 <code>false</code>。
 </p>
 
+<p>0 的值将全部视为相等，与符号无关（即 -0 与 0 和 +0 相等），但 <code>false</code> 不被认为与 0 相等。</p>
+
 <div class="note">
 <p>
   <strong>Note:</strong>
-  0 的值将不考虑符号，即 -0 与 0 和 +0 相等，但 <code>false</code> 不被认为与 0 相等。<br>
   技术上来讲，<code>includes()</code> 使用 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#%E9%9B%B6%E5%80%BC%E7%9B%B8%E7%AD%89">零值相等</a></code> 算法来确定是否找到给定的元素。</p>
 </div>
 
