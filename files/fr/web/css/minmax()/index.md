@@ -50,7 +50,7 @@ minmax(auto, 300px)
 
 Chaque paramètre peut être une longueur (type `<length>`), un pourcentage (type `<percentage>`), une valeur de type `<flex>` ou l'un des mots-clés `max-content`, `min-content`, ou `auto`.
 
-Si _max_ est supérieur à _min_, alors _max_ sera ignoré et `minmax(min,max)` sera considéré comme _min_. Utilisée comme valeur maximale, une valeur de type {{cssxref("flex_value","&lt;flex&gt;")}} définit le facteur de flexibilité de la piste de la grille ; une telle valeur ne peut pas être utilisée comme minimum.
+Si _max_ est inférieur à _min_, alors _max_ sera ignoré et `minmax(min,max)` sera considéré comme _min_. Utilisée comme valeur maximale, une valeur de type {{cssxref("flex_value","&lt;flex&gt;")}} définit le facteur de flexibilité de la piste de la grille ; une telle valeur ne peut pas être utilisée comme minimum.
 
 ### Valeurs
 
