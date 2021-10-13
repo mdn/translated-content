@@ -123,7 +123,7 @@ Les éléments listés ici permettent de créer et de gérer des données tabula
 
 HTML fournit un certain nombre d'éléments qui peuvent être utilisés ensemble pour créer des formulaires que l'utilisateur peut remplir et soumettre au site Web ou à l'application. De nombreuses informations complémentaires à ce sujet sont disponibles dans le [guide des formulaires HTML](/fr/docs/Learn/Forms).
 
-{{HTMLRefTable({"include": \["HTML forms"], "exclude":\["Deprecated"]})}}
+{{HTMLRefTable({"include": ["HTML forms"], "exclude":["Deprecated"]})}}
 
 ## Éléments interactifs
 
@@ -135,10 +135,10 @@ HTML fournit différents éléments qui permettent de créer des interfaces util
 
 Les composants web (ou « _Web Components_ ») permettent de créer et d'utiliser des éléments personnalisés comme s'ils étaient des éléments HTML classiques. Cela permet également de créer ses propres versions des éléments standards HTML.
 
-{{HTMLRefTable({"include":\["Web Components"],"exclude":\["Deprecated", "Obsolete"]})}}
+{{HTMLRefTable({"include":["Web Components"],"exclude":["Deprecated", "Obsolete"]})}}
 
 ## Éléments obsolètes ou dépréciés
 
 > **Attention :** Ces éléments sont d'anciens éléments HTML qui sont désormais dépréciés et qui ne devraient plus être utilisés. **Ces éléments ne doivent pas être utilisés dans de nouveaux projets et doivent être remplacés dans les anciens projets dès que possible.** Ces éléments uniquement sont listés ici à des fins d'information.
 
-{{HTMLRefTable({"include":\["Deprecated","Obsolete"]})}}
+{{HTMLRefTable({"include":["Deprecated","Obsolete"]})}}
