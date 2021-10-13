@@ -22,35 +22,65 @@ tags:
 translation_of: Web/HTML/Element/bdo
 browser-compat: html.elements.bdo
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>L'élément HTML <strong><code>&lt;bdo&gt;</code></strong> (pour élément de remplacement du texte bidirectionnel) est utilisé afin d'outrepasser la direction du texte. Cela permet d'imposer une direction donnée à un texte. L'orientation du texte est inversée mais pas celle des caractères.</p>
+L'élément HTML **`<bdo>`** (pour élément de remplacement du texte bidirectionnel) est utilisé afin d'outrepasser la direction du texte. Cela permet d'imposer une direction donnée à un texte. L'orientation du texte est inversée mais pas celle des caractères.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/bdo.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/bdo.html", "tabbed-standard")}}
 
-<p>Les caractères du texte sont dessinés à partir du point de départ dans la direction donnée ; l'orientation des caractères individuels n'est pas affectée (les caractères ne sont donc pas dessinés vers l'arrière, par exemple).</p>
+Les caractères du texte sont dessinés à partir du point de départ dans la direction donnée ; l'orientation des caractères individuels n'est pas affectée (les caractères ne sont donc pas dessinés vers l'arrière, par exemple).
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row"><a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a></th>
-      <td><a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">Contenu de flux</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content">contenu phrasé</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content">contenu tangible</a>.</td>
+      <th scope="row">
+        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
+          >Catégories de contenu</a
+        >
+      </th>
+      <td>
+        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Contenu de flux</a
+        >,
+        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >contenu phrasé</a
+        >,
+        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
+          >contenu tangible</a
+        >.
+      </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
-      <td><a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content">Contenu phrasé</a>.</td>
+      <td>
+        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >Contenu phrasé</a
+        >.
+      </td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
+      <td>
+        Aucune, la balise d'ouverture et la balise de fermeture sont
+        obligatoires.
+      </td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
-      <td>Tout élément acceptant du <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content">contenu phrasé</a>.</td>
+      <td>
+        Tout élément acceptant du
+        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          >contenu phrasé</a
+        >.
+      </td>
     </tr>
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Pas de rôle correspondant</a></td>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant</a
+        >
+      </td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
@@ -58,49 +88,54 @@ browser-compat: html.elements.bdo
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td><a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a>. Auparavant et jusqu'à Gecko 1.9.2 (Firefox 4) inclus, Firefox implémente l'interface <a href="/fr/docs/Web/API/HTMLSpanElement"><code>HTMLSpanElement</code></a> pour cet élément.</td>
+      <td>
+        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a
+        >. Auparavant et jusqu'à Gecko 1.9.2 (Firefox 4) inclus, Firefox
+        implémente l'interface
+        <a href="/fr/docs/Web/API/HTMLSpanElement"
+          ><code>HTMLSpanElement</code></a
+        >
+        pour cet élément.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="attributes">Attributs</h2>
+## Attributs
 
-<p>Comme pour tous les éléments, on peut appliquer <a href="/fr/docs/Web/HTML/Global_attributes">les attributs universels</a>.</p>
+Comme pour tous les éléments, on peut appliquer [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
-<dl>
-  <dt><strong><code>dir</code></strong></dt>
-  <dd>La direction du texte au sein de l'élément. Cet attribut peut valoir :
-  <ul>
-    <li><code>ltr</code> : pour un texte allant de gauche à droite (<i>left-to-right</i>).</li>
-    <li><code>rtl</code> : pour un texte allant de droite à gauche (<i>right-to-left</i>).</li>
-  </ul>
-  </dd>
-</dl>
+- **`dir`**
 
-<h2 id="examples">Exemples</h2>
+  - : La direction du texte au sein de l'élément. Cet attribut peut valoir :
 
-<pre class="brush: html">&lt;!-- Change la direction du texte --&gt;
-&lt;p&gt;Ce texte se lit de gauche à droite.&lt;/p&gt;
-&lt;p&gt;&lt;bdo dir="rtl"&gt;Ce texte se lit de droite à gauche.&lt;/bdo&gt;&lt;/p&gt;</pre>
+    - `ltr` : pour un texte allant de gauche à droite (_left-to-right_).
+    - `rtl` : pour un texte allant de droite à gauche (_right-to-left_).
 
-<h3 id="result">Résultat</h3>
+## Exemples
 
-<p>{{EmbedLiveSample("examples","100%",120)}}</p>
+```html
+<!-- Change la direction du texte -->
+<p>Ce texte se lit de gauche à droite.</p>
+<p><bdo dir="rtl">Ce texte se lit de droite à gauche.</bdo></p>
+```
 
-<h2 id="notes">Notes</h2>
+### Résultat
 
-<p>La spécification HTML 4 ne définissait pas d'évènement pour cet élément. Ils ont été ajoutés en XHTML. Ceci était probablement un oubli de la spécification HTML 4.</p>
+{{EmbedLiveSample("examples","100%",120)}}
 
-<h2 id="specifications">Spécifications</h2>
+## Notes
 
-<p>{{Specifications}}</p>
+La spécification HTML 4 ne définissait pas d'évènement pour cet élément. Ils ont été ajoutés en XHTML. Ceci était probablement un oubli de la spécification HTML 4.
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Spécifications
 
-<p>{{Compat}}</p>
+{{Specifications}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Compatibilité des navigateurs
 
-<ul>
-  <li>Élément HTML associé : <a href="/fr/docs/Web/HTML/Element/bdi"><code>&lt;bdi&gt;</code></a></li>
-</ul>
+{{Compat}}
+
+## Voir aussi
+
+- Élément HTML associé : [`<bdi>`](/fr/docs/Web/HTML/Element/bdi)

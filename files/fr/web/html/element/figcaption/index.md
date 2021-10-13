@@ -9,63 +9,90 @@ tags:
 translation_of: Web/HTML/Element/figcaption
 browser-compat: html.elements.figcaption
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>L'élément HTML <strong><code>&lt;figcaption&gt;</code></strong> représente une légende décrivant le reste du contenu de son élément parent <a href="/fr/docs/Web/HTML/Element/figure"><code>&lt;figure&gt;</code></a>.</p>
+L'élément HTML **`<figcaption>`** représente une légende décrivant le reste du contenu de son élément parent [`<figure>`](/fr/docs/Web/HTML/Element/figure).
 
-<div>{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row"><a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a></th>
+      <th scope="row">
+        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
+          >Catégories de contenu</a
+        >
+      </th>
       <td>Aucune.</td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
-      <td><a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux">Contenu de flux</a>.</td>
+      <td>
+        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux"
+          >Contenu de flux</a
+        >.
+      </td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires</td>
+      <td>
+        Aucune, la balise d'ouverture et la balise de fermeture sont
+        obligatoires
+      </td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
-      <td>Un élément <a href="/fr/docs/Web/HTML/Element/figure"><code>&lt;figure&gt;</code></a>, l'élément <code>&lt;figcaption&gt;</code> doit être le premier ou le dernier élément fils pour cet élément <code>&lt;figure&gt;</code>.</td>
+      <td>
+        Un élément
+        <a href="/fr/docs/Web/HTML/Element/figure"><code>&#x3C;figure></code></a
+        >, l'élément <code>&#x3C;figcaption></code> doit être le premier ou le
+        dernier élément fils pour cet élément <code>&#x3C;figure></code>.
+      </td>
     </tr>
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Pas de rôle correspondant</a></td>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant</a
+        >
+      </td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td><a href="https://w3c.github.io/aria/#group"><code>group</code></a>, <a href="https://w3c.github.io/aria/#none"><code>none</code></a>, <a href="https://w3c.github.io/aria/#presentation"><code>presentation</code></a></td>
+      <td>
+        <a href="https://w3c.github.io/aria/#group"><code>group</code></a
+        >, <a href="https://w3c.github.io/aria/#none"><code>none</code></a
+        >,
+        <a href="https://w3c.github.io/aria/#presentation"
+          ><code>presentation</code></a
+        >
+      </td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td><a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a></td>
+      <td>
+        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a>
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="attributes">Attributs</h2>
+## Attributs
 
-<p>Cet élément prend uniquement en charge <a href="/fr/docs/Web/HTML/Global_attributes">les attributs universels</a>.</p>
+Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
-<h2 id="examples">Exemple</h2>
+## Exemple
 
-<p>Veuillez consulter la page <a href="/fr/docs/Web/HTML/Element/figure"><code>&lt;figure&gt;</code></a> pour des exemples sur <code>&lt;figcaption&gt;</code>.</p>
+Veuillez consulter la page [`<figure>`](/fr/docs/Web/HTML/Element/figure) pour des exemples sur `<figcaption>`.
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>L'élément <a href="/fr/docs/Web/HTML/Element/figure"><code>&lt;figure&gt;</code></a></li>
-</ul>
+- L'élément [`<figure>`](/fr/docs/Web/HTML/Element/figure)

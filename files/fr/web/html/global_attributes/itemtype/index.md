@@ -11,102 +11,81 @@ tags:
 translation_of: Web/HTML/Global_attributes/itemtype
 original_slug: Web/HTML/Attributs_universels/itemtype
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>L'<a href="/fr/docs/Web/HTML/Attributs_universels">attribut universel</a> <strong><code>itemtype</code> </strong>définit l'URL du vocabulaire qui sera utilisé pour définir les propriétés des objets dans la structure de données. <code>itemscope</code> est utilisé afin de définir la portée, dans le document, où le vocabulaire défini sera actif.</p>
+L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`itemtype` **définit l'URL du vocabulaire qui sera utilisé pour définir les propriétés des objets dans la structure de données. `itemscope` est utilisé afin de définir la portée, dans le document, où le vocabulaire défini sera actif.
 
-<p>L'attribut <code>itemtype</code> doit avoir une valeur qui est un ensemble non ordonné de fragments uniques, sensible à la casse. Chaque fragment doit être une URL absolue valide et tous les fragments participent à la définition du même vocabulaire. La valeur de l'attribut doit avoir au moins un fragment.</p>
+L'attribut `itemtype` doit avoir une valeur qui est un ensemble non ordonné de fragments uniques, sensible à la casse. Chaque fragment doit être une URL absolue valide et tous les fragments participent à la définition du même vocabulaire. La valeur de l'attribut doit avoir au moins un fragment.
 
-<p>Les types d'objet doivent tous être définis dans des spécifications de vocabulaire (comme <a href="http://schema.org/">schema.org</a>) et doivent tous être définis avec le même vocabulaire.</p>
+Les types d'objet doivent tous être définis dans des spécifications de vocabulaire (comme [schema.org](http://schema.org/)) et doivent tous être définis avec le même vocabulaire.
 
-<p>L'attribut <code>itemtype</code> peut uniquement être défini pour les éléments qui ont un attribut <code>itemscope</code>.</p>
+L'attribut `itemtype` peut uniquement être défini pour les éléments qui ont un attribut `itemscope`.
 
-<p>Google et les autres moteurs de recherche participent au vocabulaire défini par <a href="http://schema.org/">schema.org</a> pour structurer les données. Ce vocabulaire définit un ensemble standard de types et de noms de propriétés. Par exemple <code><a href="http://schema.org/MusicEvent">MusicEvent</a></code> indique un événement musical dont les propriétés <code><a href="http://schema.org/startDate">startDate</a></code> et <code><a href="http://schema.org/location">location</a></code> utilisées pour définir les détails du concert. Dans ce cas, l'URL <code><a href="http://schema.org/MusicEvent">http://schema.org/MusicEvent</a></code> sera l'URL utilisée pour l'attribut <code>itemtype</code> et les propriétés <code>startDate</code> et <code>location</code> seront les propriétés utilisées, définies par <code><a href="http://schema.org/MusicEvent">http://schema.org/MusicEvent</a></code>.</p>
+Google et les autres moteurs de recherche participent au vocabulaire défini par [schema.org](http://schema.org/) pour structurer les données. Ce vocabulaire définit un ensemble standard de types et de noms de propriétés. Par exemple [`MusicEvent`](http://schema.org/MusicEvent) indique un événement musical dont les propriétés [`startDate`](http://schema.org/startDate) et [`location`](http://schema.org/location) utilisées pour définir les détails du concert. Dans ce cas, l'URL [`http://schema.org/MusicEvent`](http://schema.org/MusicEvent) sera l'URL utilisée pour l'attribut `itemtype` et les propriétés `startDate` et `location` seront les propriétés utilisées, définies par [`http://schema.org/MusicEvent`](http://schema.org/MusicEvent).
 
-<div class="note">
-<p><strong>Note :</strong> Vous pourrez trouver plus d'informations sur l'attribut itemtype sur <a href="http://schema.org/Thing">http://schema.org/Thing</a></p>
+> **Note :** Vous pourrez trouver plus d'informations sur l'attribut itemtype sur <http://schema.org/Thing>
+
+## Syntaxe
+
+### Syntaxe formelle
+
+    itemtype = URL
+
+### Exemple simple
+
+#### HTML
+
+```html
+<div itemscope itemtype="http://schema.org/Product">
+  <span itemprop="brand">ACME</span>
+  <span itemprop="name">Executive Anvil</span>
 </div>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
-
-<pre class="syntaxbox">itemtype = URL</pre>
-
-<h3 id="Exemple_simple">Exemple simple</h3>
-
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;div itemscope itemtype="http://schema.org/Product"&gt;
-  &lt;span itemprop="brand"&gt;ACME&lt;/span&gt;
-  &lt;span itemprop="name"&gt;Executive Anvil&lt;/span&gt;
-&lt;/div&gt;</pre>
-
-<h4 id="Structure_de_données">Structure de données</h4>
+#### Structure de données
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td rowspan="4"><code>itemscope</code></td>
-   <td><code>itemtype</code></td>
-   <td colspan="2" rowspan="1">http://schema.org/Product</td>
-  </tr>
-  <tr>
-   <td><code>itemprop</code></td>
-   <td><code>name</code></td>
-   <td>Executive Anvil</td>
-  </tr>
-  <tr>
-   <td><code>itemprop</code></td>
-   <td colspan="2" rowspan="1"><code>brand [Thing]</code></td>
-  </tr>
-  <tr>
-   <td><code>itemprop</code></td>
-   <td><code>name</code></td>
-   <td>ACME</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td rowspan="4"><code>itemscope</code></td>
+      <td><code>itemtype</code></td>
+      <td colspan="2" rowspan="1">http://schema.org/Product</td>
+    </tr>
+    <tr>
+      <td><code>itemprop</code></td>
+      <td><code>name</code></td>
+      <td>Executive Anvil</td>
+    </tr>
+    <tr>
+      <td><code>itemprop</code></td>
+      <td colspan="2" rowspan="1"><code>brand [Thing]</code></td>
+    </tr>
+    <tr>
+      <td><code>itemprop</code></td>
+      <td><code>name</code></td>
+      <td>ACME</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML Microdata', "#dfn-itemtype", "itemtype")}}</td>
-   <td>{{Spec2('HTML Microdata')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "microdata.html#attr-itemtype", "itemprop")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                                 | Commentaires |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------ |
+| {{SpecName('HTML Microdata', "#dfn-itemtype", "itemtype")}}                 | {{Spec2('HTML Microdata')}} |              |
+| {{SpecName('HTML WHATWG', "microdata.html#attr-itemtype", "itemprop")}} | {{Spec2('HTML WHATWG')}}     |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.global_attributes.itemtype")}}</p>
+{{Compat("html.global_attributes.itemtype")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/HTML/Attributs_universels">Les différents attributs universels</a></li>
- <li>Les autres attributs universels relatifs aux microdonnées :
-  <ul>
-   <li>{{htmlattrxref("itemid")}}</li>
-   <li>{{htmlattrxref("itemprop")}}</li>
-   <li>{{htmlattrxref("itemref")}}</li>
-   <li>{{htmlattrxref("itemscope")}}</li>
-   <li>{{htmlattrxref("itemtype")}}</li>
-  </ul>
- </li>
-</ul>
+- [Les différents attributs universels](/fr/docs/Web/HTML/Attributs_universels)
+- Les autres attributs universels relatifs aux microdonnées :
+
+  - {{htmlattrxref("itemid")}}
+  - {{htmlattrxref("itemprop")}}
+  - {{htmlattrxref("itemref")}}
+  - {{htmlattrxref("itemscope")}}
+  - {{htmlattrxref("itemtype")}}

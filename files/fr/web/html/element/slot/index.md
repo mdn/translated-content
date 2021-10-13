@@ -10,24 +10,25 @@ tags:
   - shadow dom
 translation_of: Web/HTML/Element/slot
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>L'élément HTML <strong><code>&lt;slot&gt;</code></strong> représente un emplacement d'un composant web qu'on peut remplir avec son propre balisage. On peut ainsi obtenir un document construit avec différents arbres DOM. Cet élément fait partie des outils relatifs <a href="/fr/docs/Web/Web_Components">aux composants web (Web Components)</a>.</p>
+L'élément HTML **`<slot>`** représente un emplacement d'un composant web qu'on peut remplir avec son propre balisage. On peut ainsi obtenir un document construit avec différents arbres DOM. Cet élément fait partie des outils relatifs [aux composants web (Web Components)](/fr/docs/Web/Web_Components).
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<p>Cet élément inclut <a href="/fr/docs/Web/HTML/Attributs_universels">les attributs universels</a>.</p>
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-<dl>
- <dt>{{htmlattrdef("name")}}</dt>
- <dd><p>Le nom de l'emplacement créé.</p>
- <p>Un <strong><dfn>« slot » nommé</dfn></strong> est un élément <code>&lt;slot&gt;</code> avec un attribut <code>name</code>.</p></dd>
-</dl>
+- {{htmlattrdef("name")}}
 
-<h2 id="Exemples">Exemples</h2>
+  - : Le nom de l'emplacement créé.
 
-<pre class="brush: html">&lt;template id="element-details-template"&gt;
-  &lt;style&gt;
+    Un **_« slot » nommé_** est un élément `<slot>` avec un attribut `name`.
+
+## Exemples
+
+```html
+<template id="element-details-template">
+  <style>
     details {font-family: "Open Sans Light", Helvetica, Arial, sans-serif }
     .name {font-weight: bold; color: #217ac0; font-size: 120% }
     h4 {
@@ -40,89 +41,90 @@ translation_of: Web/HTML/Element/slot
     }
     .attributes { margin-left: 22px; font-size: 90% }
     .attributes p { margin-left: 16px; font-style: italic }
-  &lt;/style&gt;
-  &lt;details&gt;
-    &lt;summary&gt;
-      &lt;code class="name"&gt;&amp;lt;&lt;slot name="element-name"&gt;Remplacer ce nom&lt;/slot&gt;&amp;gt;&lt;/code&gt;
-      &lt;i class="desc"&gt;&lt;slot name="description"&gt;Remplacer cette description&lt;/slot&gt;&lt;/i&gt;
-    &lt;/summary&gt;
-    &lt;div class="attributes"&gt;
-      &lt;h4&gt;Attributs&lt;/h4&gt;
-      &lt;slot name="attributes"&gt;&lt;p&gt;Aucun&lt;/p&gt;&lt;/slot&gt;
-    &lt;/div&gt;
-  &lt;/details&gt;
-  &lt;hr&gt;
-&lt;/template&gt;</pre>
+  </style>
+  <details>
+    <summary>
+      <code class="name">&lt;<slot name="element-name">Remplacer ce nom</slot>&gt;</code>
+      <i class="desc"><slot name="description">Remplacer cette description</slot></i>
+    </summary>
+    <div class="attributes">
+      <h4>Attributs</h4>
+      <slot name="attributes"><p>Aucun</p></slot>
+    </div>
+  </details>
+  <hr>
+</template>
+```
 
-<div class="note">
-<p><strong>Note :</strong> Vous pouvez retrouver cet exemple sur <a href="https://github.com/mdn/web-components-examples/tree/master/element-details">ce dépôt GitHub</a> et observer <a href="https://mdn.github.io/web-components-examples/element-details/">son fonctionnement en live ici</a>. Une explication plus détaillée est également disponible avec l'article <a href="/fr/docs/Web/Web_Components/Using_templates_and_slots">Manipuler <code>template</code> et <code>slot</code></a>.</p>
-</div>
+> **Note :** Vous pouvez retrouver cet exemple sur [ce dépôt GitHub](https://github.com/mdn/web-components-examples/tree/master/element-details) et observer [son fonctionnement en live ici](https://mdn.github.io/web-components-examples/element-details/). Une explication plus détaillée est également disponible avec l'article [Manipuler `template` et `slot`](/fr/docs/Web/Web_Components/Using_templates_and_slots).
 
-<h2 id="Résumé_technique">Résumé technique</h2>
+## Résumé technique
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/fr/docs/Web/HTML/Catégorie_de_contenu">Catégories de contenu</a></th>
-   <td><a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux">Contenu de flux</a>, <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé">contenu phrasé</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Contenu autorisé</th>
-   <td><a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Modèle_de_contenu_transparent">Contenu transparent</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Évènements</th>
-   <td>{{event("slotchange")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Omission de balises</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Parents autorisés</th>
-   <td>Tout élément qui accepte du <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"> contenu phrasé</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Rôles ARIA autorisés</th>
-   <td>Aucun.</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface DOM</th>
-   <td>{{domxref("HTMLSlotElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
+          >Catégories de contenu</a
+        >
+      </th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+          >Contenu de flux</a
+        >,
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+          >contenu phrasé</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>
+        <a
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Modèle_de_contenu_transparent"
+          >Contenu transparent</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Évènements</th>
+      <td>{{event("slotchange")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balises</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>
+        Tout élément qui accepte du
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+          >contenu phrasé</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>Aucun.</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{domxref("HTMLSlotElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','scripting.html#the-slot-element','&lt;slot&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#shadow-tree-slots','Slots')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                             | Commentaires |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
+| {{SpecName('HTML WHATWG','scripting.html#the-slot-element','&lt;slot&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('DOM WHATWG','#shadow-tree-slots','Slots')}}                             | {{Spec2('DOM WHATWG')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.elements.slot")}}</p>
+{{Compat("html.elements.slot")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTMLElement("template")}}</li>
-</ul>
+- {{HTMLElement("template")}}

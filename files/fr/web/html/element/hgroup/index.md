@@ -8,134 +8,144 @@ tags:
   - Web
 translation_of: Web/HTML/Element/hgroup
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>L'élément HTML <strong><code>&lt;hgroup&gt;</code></strong> représente un titre de plusieurs niveaux pour une section d'un document. Il regroupe un ensemble d'éléments <code><a href="/fr/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code>.</p>
+L'élément HTML **`<hgroup>`** représente un titre de plusieurs niveaux pour une section d'un document. Il regroupe un ensemble d'éléments [`<h1>–<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements).
 
-<div>{{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<p>Cet élément inclut uniquement <a href="/fr/docs/Web/HTML/Attributs_universels">les attributs universels</a>.</p>
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-<h2 id="Notes_d'utilisation">Notes d'utilisation</h2>
+## Notes d'utilisation
 
-<div class="note">
-<p><strong>Note :</strong> l'élement <code>&lt;hgroup&gt;</code> a été retiré de la spécification HTML5 (W3C) mais est toujours inscrit dans la version WHATWG de HTML. Il est partiellement implémenté dans la plupart des navigateurs et à ce titre, il est peu probable qu'il disparaisse.<br>
- Cependant, le but d'un élément <code>&lt;hgroup&gt;</code> est d'affecter la façon dont les titres sont affichés <a href="/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm">par l'algorithme de mise en plan défini dans la spécification HTML</a>. <strong>Cet algorithme n'est pas implémenté dans la plupart des navigateurs </strong>et la sémantique de l'élément <code>&lt;hgroup&gt;</code> est donc uniquement théorique.<br>
- La spécification HTML5 (W3C) fournit quelques indications pour baliser <a href="https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements">les sous-titres et les titres alternatifs</a> sans requérir à <code>&lt;hgroup&gt;</code>.</p>
-</div>
+> **Note :** l'élement `<hgroup>` a été retiré de la spécification HTML5 (W3C) mais est toujours inscrit dans la version WHATWG de HTML. Il est partiellement implémenté dans la plupart des navigateurs et à ce titre, il est peu probable qu'il disparaisse.
+> Cependant, le but d'un élément `<hgroup>` est d'affecter la façon dont les titres sont affichés [par l'algorithme de mise en plan défini dans la spécification HTML](/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm). **Cet algorithme n'est pas implémenté dans la plupart des navigateurs** et la sémantique de l'élément `<hgroup>` est donc uniquement théorique.
+> La spécification HTML5 (W3C) fournit quelques indications pour baliser [les sous-titres et les titres alternatifs](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements) sans requérir à `<hgroup>`.
 
-<p>L'élément <code>&lt;hgroup&gt;</code> permet de regrouper le titre principal d'une section avec son (ou ses) sous-titre(s) afin d'obtenir un titre sur plusieurs niveaux sémantiques.</p>
+L'élément `<hgroup>` permet de regrouper le titre principal d'une section avec son (ou ses) sous-titre(s) afin d'obtenir un titre sur plusieurs niveaux sémantiques.
 
-<p>Autrement dit, l'élément <code>&lt;hgroup&gt;</code> évite que l'utilisation d'éléments <code><a href="/fr/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> secondaires crée différentes sections dans le plan (ce qui est le résultat obtenu normalement lorsque <code><a href="/fr/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> sont utilisés hors d'un <code>&lt;hgroup&gt;</code>).</p>
+Autrement dit, l'élément `<hgroup>` évite que l'utilisation d'éléments [`<h1>–<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements) secondaires crée différentes sections dans le plan (ce qui est le résultat obtenu normalement lorsque [`<h1>–<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements) sont utilisés hors d'un `<hgroup>`).
 
-<p>Dans le plan d'un document, obtenu par <a href="/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm">l'algorithme défini dans la spécification HTML</a>, l'élément <code>&lt;hgroup&gt;</code> forme une seule entité logique contenant l'ensemble des éléments-fils <code><a href="/fr/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> du <code>&lt;hgroup&gt;</code> et qui fait donc apparaître une seule section pour ce groupe de titres dans le plan.</p>
+Dans le plan d'un document, obtenu par [l'algorithme défini dans la spécification HTML](/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm), l'élément `<hgroup>` forme une seule entité logique contenant l'ensemble des éléments-fils [`<h1>–<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements) du `<hgroup>` et qui fait donc apparaître une seule section pour ce groupe de titres dans le plan.
 
-<p>Pour afficher le contenu d'un tel titre, l'agent utilisateur doit choisir comment représenter l'élément <code>&lt;hgroup&gt;</code> afin d'exprimer notamment les différents niveaux. Voici quelques exemples des approches qui seraient possibles :</p>
+Pour afficher le contenu d'un tel titre, l'agent utilisateur doit choisir comment représenter l'élément `<hgroup>` afin d'exprimer notamment les différents niveaux. Voici quelques exemples des approches qui seraient possibles :
 
-<ul>
- <li>Un élément <code>&lt;hgroup&gt;</code> peut afficher un titre où les deux points (:) sont utilisés comme séparateur entre le titre principal et le premier titre secondaire</li>
- <li>Un élément <code>&lt;hgroup&gt;</code> peut afficher le titre principal, suivi du/des titre(s) secondaires entre parenthèses</li>
-</ul>
+- Un élément `<hgroup>` peut afficher un titre où les deux points (:) sont utilisés comme séparateur entre le titre principal et le premier titre secondaire
+- Un élément `<hgroup>` peut afficher le titre principal, suivi du/des titre(s) secondaires entre parenthèses
 
-<p>Prenons ce document HTML par exemple :</p>
+Prenons ce document HTML par exemple :
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;title&gt;HTML Standard&lt;/title&gt;
-&lt;body&gt;
-  &lt;hgroup id="document-title"&gt;
-    &lt;h1&gt;HTML&lt;/h1&gt;
-    &lt;h2&gt;Living Standard — Last Updated 12 August 2016&lt;/h2&gt;
-  &lt;/hgroup&gt;
-  &lt;p&gt;Some intro to the document.&lt;/p&gt;
-  &lt;h2&gt;Table of contents&lt;/h2&gt;
-  &lt;ol id=toc&gt;...&lt;/ol&gt;
-  &lt;h2&gt;First section&lt;/h2&gt;
-  &lt;p&gt;Some intro to the first section.&lt;/p&gt;
-&lt;/body&gt;</pre>
+```html
+<!DOCTYPE html>
+<title>HTML Standard</title>
+<body>
+  <hgroup id="document-title">
+    <h1>HTML</h1>
+    <h2>Living Standard — Last Updated 12 August 2016</h2>
+  </hgroup>
+  <p>Some intro to the document.</p>
+  <h2>Table of contents</h2>
+  <ol id=toc>...</ol>
+  <h2>First section</h2>
+  <p>Some intro to the first section.</p>
+</body>
+```
 
-<p>Le rendu de ce document pourrait être :</p>
+Le rendu de ce document pourrait être :
 
-<p><img alt="" src="outline-colon.png"></p>
+![](outline-colon.png)
 
-<p>Où on voit que le titre principal est suivi de deux points puis d'un espace avant le titre secondaire, <em>Living Standard — Last Updated 12 August 2016</em>.</p>
+Où on voit que le titre principal est suivi de deux points puis d'un espace avant le titre secondaire, _Living Standard — Last Updated 12 August 2016_.
 
-<p>On pourrait également avoir cet affichage :</p>
+On pourrait également avoir cet affichage :
 
-<p><img alt="Plan rendu en incluant un élément &lt;hgroup&gt;, avec des parenthèses autour du titre secondaire" src="outline-paren.png"></p>
+![Plan rendu en incluant un élément <hgroup>, avec des parenthèses autour du titre secondaire](outline-paren.png)
 
-<p>Ici, le titre secondaire est placé entre parenthèses après le titre principal.</p>
+Ici, le titre secondaire est placé entre parenthèses après le titre principal.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;hgroup id="document-title"&gt;
-  &lt;h1&gt;HTML&lt;/h1&gt;
-  &lt;h2&gt;Living Standard — dernière mise à jour le 12 août 2016&lt;/h2&gt;
-&lt;/hgroup&gt;
-</pre>
+```html
+<hgroup id="document-title">
+  <h1>HTML</h1>
+  <h2>Living Standard — dernière mise à jour le 12 août 2016</h2>
+</hgroup>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
-<h2 id="Résumé_technique">Résumé technique</h2>
+{{EmbedLiveSample("Exemples")}}
+
+## Résumé technique
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/fr/docs/Web/HTML/Catégorie_de_contenu">Catégories de contenu</a></th>
-   <td><a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux">Contenu de flux</a>, <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_titre">contenu de titre</a>, <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_tangible">contenu tangible</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Contenu autorisé</th>
-   <td>Un ou plusieurs éléments {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omission de balise</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Parents autorisés</th>
-   <td>Tout élément qui accepte du <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux">contenu de flux</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Rôles ARIA autorisés</th>
-   <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface DOM</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
+          >Catégories de contenu</a
+        >
+      </th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+          >Contenu de flux</a
+        >,
+        <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_titre"
+          >contenu de titre</a
+        >,
+        <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_tangible"
+          >contenu tangible</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>
+        Un ou plusieurs éléments {{HTMLElement("h1")}},
+        {{HTMLElement("h2")}}, {{HTMLElement("h3")}},
+        {{HTMLElement("h4")}}, {{HTMLElement("h5")}},
+        {{HTMLElement("h6")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balise</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>
+        Tout élément qui accepte du
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+          >contenu de flux</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
-<h2 id="Spécifications">Spécifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-hgroup-element', '&lt;hgroup&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Spécifications
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+| Spécification                                                                                                | État                             | Commentaires |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-hgroup-element', '&lt;hgroup&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
 
-<p>{{Compat("html.elements.hgroup")}}</p>
+## Compatibilité des navigateurs
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+{{Compat("html.elements.hgroup")}}
 
-<ul>
- <li>Les autres éléments HTML relatifs aux sections du document : {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}</li>
- <li><a href="/fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document">Les sections et le plan d'un document HTML5</a></li>
-</ul>
+## Voir aussi
+
+- Les autres éléments HTML relatifs aux sections du document : {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
+- [Les sections et le plan d'un document HTML5](/fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document)

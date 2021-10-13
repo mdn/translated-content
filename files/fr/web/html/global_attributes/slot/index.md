@@ -9,40 +9,23 @@ tags:
 translation_of: Web/HTML/Global_attributes/slot
 original_slug: Web/HTML/Attributs_universels/slot
 ---
-<div>{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}</div>
+{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
 
-<p>L'attribut HTML universel <code><strong>slot</strong></code> permet d'affecter un créneau d'un <em><a href="/fr/docs/Web/Web_Components/Shadow_DOM">shadow DOM</a></em> à un élément. Un élément avec un attribut <code>slot</code> est affecté au créneau créé par l'élément {{HTMLElement("slot")}} dont la valeur de l'attribut {{htmlattrxref("name", "slot")}} correspond à celle de l'attribut <code>slot</code>.</p>
+L'attribut HTML universel **`slot`** permet d'affecter un créneau d'un _[shadow DOM](/fr/docs/Web/Web_Components/Shadow_DOM)_ à un élément. Un élément avec un attribut `slot` est affecté au créneau créé par l'élément {{HTMLElement("slot")}} dont la valeur de l'attribut {{htmlattrxref("name", "slot")}} correspond à celle de l'attribut `slot`.
 
-<p>Pour des exemples d'application, consulter le guide <a href="/fr/docs/Web/Web_Components/Using_templates_and_slots">Utiliser les modèles (<em>templates</em>) et les emplacements (<em>slots</em>)</a>.</p>
+Pour des exemples d'application, consulter le guide [Utiliser les modèles (_templates_) et les emplacements (_slots_)](/fr/docs/Web/Web_Components/Using_templates_and_slots).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "dom.html#attr-slot", "slot attribute")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', "#dom-element-slot", "slot attribute")}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                             | Commentaires |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
+| {{SpecName('HTML WHATWG', "dom.html#attr-slot", "slot attribute")}} | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('DOM WHATWG', "#dom-element-slot", "slot attribute")}} | {{Spec2('DOM WHATWG')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.global_attributes.slot")}}</p>
+{{Compat("html.global_attributes.slot")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/HTML/Attributs_universels">Les autres attributs universels</a></li>
-</ul>
+- [Les autres attributs universels](/fr/docs/Web/HTML/Attributs_universels)

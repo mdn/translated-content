@@ -8,143 +8,140 @@ tags:
   - Web
 translation_of: Web/HTML/Element/summary
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>L'élément HTML <strong><code>&lt;summary&gt;</code></strong> représente une boîte permettant de révéler le contenu d'un résumé ou d'une légende pour le contenu d'un élément {{HTMLElement("details")}}. En cliquant sur l'élément <code>&lt;summary&gt;</code>, on passe de l'état affiché à l'état masqué (et vice versa) de l'élément <code>&lt;details&gt;</code> parent.</p>
+L'élément HTML **`<summary>`** représente une boîte permettant de révéler le contenu d'un résumé ou d'une légende pour le contenu d'un élément {{HTMLElement("details")}}. En cliquant sur l'élément `<summary>`, on passe de l'état affiché à l'état masqué (et vice versa) de l'élément `<details>` parent.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<p>Cet élément inclut uniquement <a href="/fr/docs/Web/HTML/Attributs_universels">les attributs universels</a>.</p>
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-<h2 id="Notes_dutilisation">Notes d'utilisation</h2>
+## Notes d'utilisation
 
-<p>Un élément <code>&lt;summary&gt;</code> peut contenir des éléments de titre, du texte simple ou tout contenu HTML pouvant être placé au sein d'un paragraphe.</p>
+Un élément `<summary>` peut contenir des éléments de titre, du texte simple ou tout contenu HTML pouvant être placé au sein d'un paragraphe.
 
-<p>Un élément <code>&lt;summary&gt;</code> peut uniquement être utilisé comme le premier élément fils d'un élément <code>&lt;details&gt;</code>. Lorsque l'utilisateur clique sur le résumé, l'élément <code>&lt;details&gt;</code> parent change d'état (affiché ou masqué) et un évènement {{event("toggle")}} est envoyé à l'élément <code>&lt;details&gt;</code> (ce qui permet de détecter un changement d'état via un script).</p>
+Un élément `<summary>` peut uniquement être utilisé comme le premier élément fils d'un élément `<details>`. Lorsque l'utilisateur clique sur le résumé, l'élément `<details>` parent change d'état (affiché ou masqué) et un évènement {{event("toggle")}} est envoyé à l'élément `<details>` (ce qui permet de détecter un changement d'état via un script).
 
-<h3 id="Libellé_par_défaut">Libellé par défaut</h3>
+### Libellé par défaut
 
-<p>Si l'élément <code>&lt;summary&gt;</code> est absent au sein d'un élément <code>&lt;details&gt;</code>, c'est le titre contenu dans l'élément {{HTMLElement("details")}} qui sera utilisé.</p>
+Si l'élément `<summary>` est absent au sein d'un élément `<details>`, c'est le titre contenu dans l'élément {{HTMLElement("details")}} qui sera utilisé.
 
-<h3 id="Mise_en_forme_par_défaut">Mise en forme par défaut</h3>
+### Mise en forme par défaut
 
-<p>La mise en forme par défaut pour <code>&lt;summary&gt;</code> est <code>display: list-item</code>, tel qu'indiqué dans <a href="https://html.spec.whatwg.org/multipage/rendering.html#the-details-and-summary-elements">le standard HTML</a>. Cela permet de modifier ou de retirer l'icône affiché pour le contrôle d'affichage/masquage. Par défaut, cette icône est généralement un triangle.</p>
+La mise en forme par défaut pour `<summary>` est `display: list-item`, tel qu'indiqué dans [le standard HTML](https://html.spec.whatwg.org/multipage/rendering.html#the-details-and-summary-elements). Cela permet de modifier ou de retirer l'icône affiché pour le contrôle d'affichage/masquage. Par défaut, cette icône est généralement un triangle.
 
-<p>Si la mise en forme est surchargée avec <code>display: block</code>, l'icône triangulaire qui révèle le contenu sera masquée.</p>
+Si la mise en forme est surchargée avec `display: block`, l'icône triangulaire qui révèle le contenu sera masquée.
 
-<p>Voir la section ci-après sur la compatibilité des navigateurs à ce sujet car certains navigateurs ne prennent pas en charge tout ces aspects.</p>
+Voir la section ci-après sur la compatibilité des navigateurs à ce sujet car certains navigateurs ne prennent pas en charge tout ces aspects.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemple_simple">Exemple simple</h3>
+### Exemple simple
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;details open&gt;
-  &lt;summary&gt;Détails produit&lt;/summary&gt;
-  &lt;p&gt;Ce produit a été fabriqué par
-  ACME et respecte les pandas.&lt;/p&gt;
-&lt;/details&gt;</pre>
+```html
+<details open>
+  <summary>Détails produit</summary>
+  <p>Ce produit a été fabriqué par
+  ACME et respecte les pandas.</p>
+</details>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Exemple_simple","100%","160")}}</p>
+{{EmbedLiveSample("Exemple_simple","100%","160")}}
 
-<h3 id="Utilisation_de_titres">Utilisation de titres</h3>
+### Utilisation de titres
 
-<p>Il est possible d'utiliser des titres au sein d'un résumé.</p>
+Il est possible d'utiliser des titres au sein d'un résumé.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;details open&gt;
-  &lt;summary&gt;&lt;h4&gt;Détails produit&lt;/h4&gt;&lt;/summary&gt;
-  &lt;ol&gt;
-    &lt;li&gt;Date de fabrication : 01 janvier 2018&lt;/li&gt;
-    &lt;li&gt;Numéro de lot : LMA2542501&lt;/li&gt;
-    &lt;li&gt;Date limite de consommation : 31 août 2018&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/details&gt;</pre>
+```html
+<details open>
+  <summary><h4>Détails produit</h4></summary>
+  <ol>
+    <li>Date de fabrication : 01 janvier 2018</li>
+    <li>Numéro de lot : LMA2542501</li>
+    <li>Date limite de consommation : 31 août 2018</li>
+  </ol>
+</details>
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Utilisation_de_titres", 650, 120)}}</p>
+{{EmbedLiveSample("Utilisation_de_titres", 650, 120)}}
 
-<h3 id="Utiliser_avec_divers_éléments_HTML">Utiliser avec divers éléments HTML</h3>
+### Utiliser avec divers éléments HTML
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;details open&gt;
-  &lt;summary&gt;&lt;strong&gt;Détails&lt;/strong&gt;&lt;/summary&gt;
-  &lt;ol&gt;
-    &lt;li&gt;Date de fabrication : 01 janvier 2018&lt;/li&gt;
-    &lt;li&gt;Numéro de lot : LMA2542501&lt;/li&gt;
-    &lt;li&gt;Date limite de consommation : 31 août 2018&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/details&gt;</pre>
+```html
+<details open>
+  <summary><strong>Détails</strong></summary>
+  <ol>
+    <li>Date de fabrication : 01 janvier 2018</li>
+    <li>Numéro de lot : LMA2542501</li>
+    <li>Date limite de consommation : 31 août 2018</li>
+  </ol>
+</details>
+```
 
-<h4 id="Résultat_3">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Utiliser_avec_divers_éléments_HTML", 650, 120)}}</p>
+{{EmbedLiveSample("Utiliser_avec_divers_éléments_HTML", 650, 120)}}
 
-<h2 id="Résumé_technique">Résumé technique</h2>
+## Résumé technique
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Contenu autorisé</th>
-   <td><a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9">Contenu phrasé</a> ou un élément décrivant du <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_titre">contenu de titre</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omission de balises</th>
-   <td>Aucune, la balise ouvrante et la balise fermante sont obligatoires.</td>
-  </tr>
-  <tr>
-   <th scope="row">Parents autorisés</th>
-   <td>Un élément {{HTMLElement("details")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Rôles ARIA autorisés</th>
-   <td>{{ARIARole("button")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface DOM</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          >Contenu phrasé</a
+        >
+        ou un élément décrivant du
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_titre"
+          >contenu de titre</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balises</th>
+      <td>
+        Aucune, la balise ouvrante et la balise fermante sont obligatoires.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>Un élément {{HTMLElement("details")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>{{ARIARole("button")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interactive-elements.html#the-summary-element', '&lt;summary&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'interactive-elements.html#the-summary-element', '&lt;summary&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                    | État                             | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('HTML WHATWG', 'interactive-elements.html#the-summary-element', '&lt;summary&gt;')}} | {{Spec2('HTML WHATWG')}} |                      |
+| {{SpecName('HTML5.1', 'interactive-elements.html#the-summary-element', '&lt;summary&gt;')}}         | {{Spec2('HTML5.1')}}     | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.elements.summary")}}</p>
+{{Compat("html.elements.summary")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTMLElement("details")}}</li>
-</ul>
+- {{HTMLElement("details")}}

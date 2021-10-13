@@ -10,15 +10,13 @@ tags:
   - Web
 translation_of: Web/HTML/Element/input/datetime
 ---
-<div>{{HTMLRef}}{{obsolete_header}}</div>
+{{HTMLRef}}{{obsolete_header}}
 
-<p>L'élément HTML <code>&lt;input type="datetime"&gt;</code> représentait un contrôle permettant de saisir une date, une heure (avec heures, minutes, secondes et fractions de seconde) ainsi qu'un fuseau horaire. <strong>Cette fonctionnalité a été <a href="https://github.com/whatwg/html/issues/336">retirée de la spécification HTML WHATWG</a></strong> et n'est plus prise en charge par les navigateurs.</p>
+L'élément HTML `<input type="datetime">` représentait un contrôle permettant de saisir une date, une heure (avec heures, minutes, secondes et fractions de seconde) ainsi qu'un fuseau horaire. **Cette fonctionnalité a été [retirée de la spécification HTML WHATWG](https://github.com/whatwg/html/issues/336)** et n'est plus prise en charge par les navigateurs.
 
-<p>Afin de remplacer cette fonctionnalité, les navigateurs implémentent (ou développent) l'élément <code>&lt;input&gt;</code> de type <code><a href="/fr/docs/Web/HTML/Element/input/datetime-local">datetime-local</a></code> qui doit être utilisé à la place. Le format utilisé pour ces champs est décrit dans <a href="/fr/docs/Web/HTML/Formats_date_heure_HTML#Représentation_des_dates_et_heures_universelles">cette section de l'article sur les formats</a>.</p>
+Afin de remplacer cette fonctionnalité, les navigateurs implémentent (ou développent) l'élément `<input>` de type [`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local) qui doit être utilisé à la place. Le format utilisé pour ces champs est décrit dans [cette section de l'article sur les formats](/fr/docs/Web/HTML/Formats_date_heure_HTML#Représentation_des_dates_et_heures_universelles).
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTMLElement("input")}} element</li>
- <li><a href="/fr/docs/Web/HTML/Formats_date_heure_HTML">Les formats de date et d'heure utilisés en HTML</a></li>
-</ul>
+- {{HTMLElement("input")}} element
+- [Les formats de date et d'heure utilisés en HTML](/fr/docs/Web/HTML/Formats_date_heure_HTML)

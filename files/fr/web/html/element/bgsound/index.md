@@ -14,53 +14,47 @@ tags:
 translation_of: Web/HTML/Element/bgsound
 browser-compat: html.elements.bgsound
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<div class="warning">
-  <p><strong>Attention :</strong> Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications Web l'utilisant peuvent cesser de fonctionner à tout moment.</p>
-</div>
+> **Attention :** Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications Web l'utilisant peuvent cesser de fonctionner à tout moment.
 
-<p>L'élément HTML <strong><code>&lt;bgsound&gt;</code></strong> (pour <em>background sound</em> ou « son d'arrière-plan ») est un élément défini par Internet Explorer qui permet d'associer un son d'ambiance à une page.</p>
+L'élément HTML **`<bgsound>`** (pour _background sound_ ou « son d'arrière-plan ») est un élément défini par Internet Explorer qui permet d'associer un son d'ambiance à une page.
 
-<div class="warning">
-  <p><strong>Attention :</strong> Cet élément n'est pas standard et ne doit pas être utilisé ! Pour intégrer du son à une page web, on utilisera l'élément <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a>.</p>
-</div>
+> **Attention :** Cet élément n'est pas standard et ne doit pas être utilisé ! Pour intégrer du son à une page web, on utilisera l'élément [`<audio>`](/fr/docs/Web/HTML/Element/audio).
 
-<h2 id="attributes">Attributs</h2>
+## Attributs
 
-<dl>
- <dt><strong><code>balance</code></strong></dt>
- <dd>Cet attribut accepte un nombre entre -10 000 et +10 000, qui déterminera comment le volume sera réparti entre les hauts-parleurs (ou les écouteurs).</dd>
- <dt><strong><code>loop</code></strong></dt>
- <dd>Cet attribut indique le nombre de fois que le son doit être joué, grâce à une valeur numérique ou avec le mot-clé <code>infinite</code> (infini).</dd>
- <dt><strong><code>src</code></strong></dt>
- <dd>Cet attribut indique l'URL du fichier sonore qui doit être joué. Il doit être d'un des types suivants : .wav, .au, ou .mid.</dd>
- <dt><strong><code>volume</code></strong></dt>
- <dd>Cet attribut accepte un nombre entre -10 000 et 0 qui déterminera le volume du son.</dd>
-</dl>
+- **`balance`**
+  - : Cet attribut accepte un nombre entre -10 000 et +10 000, qui déterminera comment le volume sera réparti entre les hauts-parleurs (ou les écouteurs).
+- **`loop`**
+  - : Cet attribut indique le nombre de fois que le son doit être joué, grâce à une valeur numérique ou avec le mot-clé `infinite` (infini).
+- **`src`**
+  - : Cet attribut indique l'URL du fichier sonore qui doit être joué. Il doit être d'un des types suivants : .wav, .au, ou .mid.
+- **`volume`**
+  - : Cet attribut accepte un nombre entre -10 000 et 0 qui déterminera le volume du son.
 
-<h2 id="example">Exemple</h2>
+## Exemple
 
-<pre class="brush:html">&lt;bgsound src="son1.mid"&gt;
+```html
+<bgsound src="son1.mid">
 
-&lt;bgsound src="son2.au" loop="infinite"&gt;</pre>
+<bgsound src="son2.au" loop="infinite">
+```
 
-<h2 id="usage_notes">Notes d'utilisation</h2>
+## Notes d'utilisation
 
-<p>Une fonctionnalité similaire pouvait être obtenue dans d'autres navigateurs grâce à l'élément <a href="/fr/docs/Web/HTML/Element/embed"><code>&lt;embed&gt;</code></a> afin d'invoquer un lecteur audio. Cet élément étant également obsolète, il est préférable d'utiliser <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a>.</p>
+Une fonctionnalité similaire pouvait être obtenue dans d'autres navigateurs grâce à l'élément [`<embed>`](/fr/docs/Web/HTML/Element/embed) afin d'invoquer un lecteur audio. Cet élément étant également obsolète, il est préférable d'utiliser [`<audio>`](/fr/docs/Web/HTML/Element/audio).
 
-<p>On peut écrire <code>bgsound</code> avec une balise auto-fermante <code>&lt;bgsound /&gt;</code>. Cependant, puisque cet élément ne fait pas partie du standard, le transformer en XHTML ne le rendra pas valide.</p>
+On peut écrire `bgsound` avec une balise auto-fermante `<bgsound />`. Cependant, puisque cet élément ne fait pas partie du standard, le transformer en XHTML ne le rendra pas valide.
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>L'élément standard <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a> qui permet d'ajouter du son dans un document HTML.</li>
-</ul>
+- L'élément standard [`<audio>`](/fr/docs/Web/HTML/Element/audio) qui permet d'ajouter du son dans un document HTML.

@@ -10,55 +10,51 @@ tags:
 translation_of: Web/HTML/Element/frame
 browser-compat: html.elements.frame
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<div class="warning">
-  <p><strong>Attention :</strong> Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications web l'utilisant peuvent cesser de fonctionner à tout moment.</p>
-</div>
+> **Attention :** Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications web l'utilisant peuvent cesser de fonctionner à tout moment.
 
-<p>L'élément HTML <strong><code>&lt;frame&gt;</code></strong> définit une zone particulière dans laquelle un autre document HTML est affiché. Une <code>&lt;frame&gt;</code> (un « cadre ») doit être utilisée dans un élément <a href="/fr/docs/Web/HTML/Element/frameset"><code>&lt;frameset&gt;</code></a>.</p>
+L'élément HTML **`<frame>`** définit une zone particulière dans laquelle un autre document HTML est affiché. Une `<frame>` (un « cadre ») doit être utilisée dans un élément [`<frameset>`](/fr/docs/Web/HTML/Element/frameset).
 
-<p>Utiliser l'élément <code>&lt;frame&gt;</code> est déconseillé en raison de certains inconvénients tels que des problèmes de performance, et un manque d'accessibilité pour les utilisateurs de lecteurs d'écran.</p>
+Utiliser l'élément `<frame>` est déconseillé en raison de certains inconvénients tels que des problèmes de performance, et un manque d'accessibilité pour les utilisateurs de lecteurs d'écran.
 
-<h2 id="attributes">Attributs</h2>
+## Attributs
 
-<p>Comme tous les autres éléments HTML, cet élément prend en charge les <a href="/fr/docs/Web/HTML/Global_attributes">attributs universels</a>.</p>
+Comme tous les autres éléments HTML, cet élément prend en charge les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
-<dl>
-  <dt><code>src</code></dt>
-  <dd>Cet attribut indique le document qui doit être affiché dans la frame.</dd>
-  <dt><code>name</code></dt>
-  <dd>Cet attribut sert à nommer les frames. Sans nommage, tous les liens seront ouverts dans la frame où ils se trouvent. Voir <a href="/fr/docs/Web/HTML/Element/a#attr-target"><code>target</code></a> pour plus d'informations.</dd>
-  <dt><code>noresize</code></dt>
-  <dd>Cet attribut empêche aux utilisateurs de redimensionner les frames.</dd>
-  <dt><code>scrolling</code></dt>
-  <dd>Cet attribut définit l'existence des barres de défilement. Si cet attribut n'est pas utilisé, le navigateur mettre une barre de défilement si nécessaire. Il y a deux options : <code>yes</code> pour afficher les barres de défilement même quand ce n'est pas nécessaire, et <code>no</code> pour ne pas afficher les barres de défilement même quand c'est nécessaire.</dd>
-  <dt><code>marginheight</code></dt>
-  <dd>Cet attribut définit la hauteur des marges entre les frames.</dd>
-  <dt><code>marginwidth</code></dt>
-  <dd>Cet attribut définit la largeur des marges entre les frames.</dd>
-  <dt><code>frameborder</code></dt>
-  <dd>Cet attribut permet de mettre des bordures à la frame.</dd>
-</dl>
+- `src`
+  - : Cet attribut indique le document qui doit être affiché dans la frame.
+- `name`
+  - : Cet attribut sert à nommer les frames. Sans nommage, tous les liens seront ouverts dans la frame où ils se trouvent. Voir [`target`](/fr/docs/Web/HTML/Element/a#attr-target) pour plus d'informations.
+- `noresize`
+  - : Cet attribut empêche aux utilisateurs de redimensionner les frames.
+- `scrolling`
+  - : Cet attribut définit l'existence des barres de défilement. Si cet attribut n'est pas utilisé, le navigateur mettre une barre de défilement si nécessaire. Il y a deux options : `yes` pour afficher les barres de défilement même quand ce n'est pas nécessaire, et `no` pour ne pas afficher les barres de défilement même quand c'est nécessaire.
+- `marginheight`
+  - : Cet attribut définit la hauteur des marges entre les frames.
+- `marginwidth`
+  - : Cet attribut définit la largeur des marges entre les frames.
+- `frameborder`
+  - : Cet attribut permet de mettre des bordures à la frame.
 
-<h2 id="example">Exemple</h2>
+## Exemple
 
-<pre class="brush: html">&lt;frameset cols="50%,50%"&gt;
-  &lt;frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/iframe" /&gt;
-  &lt;frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frame" /&gt;
-&lt;/frameset&gt;</pre>
+```html
+<frameset cols="50%,50%">
+  <frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/iframe" />
+  <frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frame" />
+</frameset>
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>L'élément <a href="/fr/docs/Web/HTML/Element/frameset"><code>&lt;frameset&gt;</code></a></li>
-  <li>L'élément <a href="/fr/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a></li>
-</ul>
+- L'élément [`<frameset>`](/fr/docs/Web/HTML/Element/frameset)
+- L'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)

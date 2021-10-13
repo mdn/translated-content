@@ -8,75 +8,49 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/strike
 ---
-<div>{{Obsolete_header}}{{HTMLRef}}</div>
+{{Obsolete_header}}{{HTMLRef}}
 
-<p>L'élément HTML <strong><code>&lt;strike&gt;</code></strong> permet de représenter du texte barré ou avec une ligne le traversant.</p>
+L'élément HTML **`<strike>`** permet de représenter du texte barré ou avec une ligne le traversant.
 
-<div class="note">
-  <p><strong>Note :</strong> Comme tous les éléments se limitant à la présentation, {{HTMLElement("strike")}} a été déprécié en HTML 4 et XHTML 1, et rendu obsolète dans HTML5. Si on souhaite représente du contenu <em>supprimé</em>, on utilisera l'élément {{HTMLElement("del")}} ; dans les autres cas, on utilisera un élément {{HTMLElement("s")}}.</p>
-</div>
+> **Note :** Comme tous les éléments se limitant à la présentation, {{HTMLElement("strike")}} a été déprécié en HTML 4 et XHTML 1, et rendu obsolète dans HTML5. Si on souhaite représente du contenu _supprimé_, on utilisera l'élément {{HTMLElement("del")}} ; dans les autres cas, on utilisera un élément {{HTMLElement("s")}}.
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<p>Cet élément n'a aucun autre attribut en dehors <a href="/fr/docs/Web/HTML/Attributs_universels">des attributs universels</a>, communs à tous les éléments.</p>
+Cet élément n'a aucun autre attribut en dehors [des attributs universels](/fr/docs/Web/HTML/Attributs_universels), communs à tous les éléments.
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface {{domxref("HTMLElement")}}.</p>
+Cet élément implémente l'interface {{domxref("HTMLElement")}}.
 
-<div class="note">
-<p><strong>Note :</strong> Jusqu'à Gecko 1.9.2 inclus, Firefox implémente l'interface {{domxref("HTMLSpanElement")}} pour cet élément.</p>
-</div>
+> **Note :** Jusqu'à Gecko 1.9.2 inclus, Firefox implémente l'interface {{domxref("HTMLSpanElement")}} pour cet élément.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: html">&lt;strike&gt;
+```html
+<strike>
   Plat du jour : Saumon
-&lt;/strike&gt;
+</strike>
 ÉPUISÉ
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","100%","140")}}</p>
+{{EmbedLiveSample("Exemples","100%","140")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "obsolete.html#strike", "&lt;strike&gt;")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Rendu obsolète et remplacé par {{HTMLElement("del")}} et {{HTMLElement("s")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "obsolete.html#strike", "&lt;strike&gt;")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Rendu obsolète et remplacé par {{HTMLElement("del")}} et {{HTMLElement("s")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML4.01", "/present/graphics.html#edef-STRIKE", "&lt;strike&gt;")}}</td>
-   <td>{{Spec2("HTML4.01")}}</td>
-   <td>Rendu déprécié pour être remplacé par {{HTMLElement("del")}} et {{HTMLElement("s")}}.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                             | Commentaires                                                                                        |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------- |
+| {{SpecName("HTML WHATWG", "obsolete.html#strike", "&lt;strike&gt;")}}                 | {{Spec2("HTML WHATWG")}} | Rendu obsolète et remplacé par {{HTMLElement("del")}} et {{HTMLElement("s")}}.        |
+| {{SpecName("HTML5 W3C", "obsolete.html#strike", "&lt;strike&gt;")}}                     | {{Spec2("HTML5 W3C")}}     | Rendu obsolète et remplacé par {{HTMLElement("del")}} et {{HTMLElement("s")}}.        |
+| {{SpecName("HTML4.01", "/present/graphics.html#edef-STRIKE", "&lt;strike&gt;")}} | {{Spec2("HTML4.01")}}     | Rendu déprécié pour être remplacé par {{HTMLElement("del")}} et {{HTMLElement("s")}}. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.elements.strike")}}</p>
+{{Compat("html.elements.strike")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'élément {{HTMLElement("s")}}, proche de {{HTMLElement("strike")}}, également obsolète</li>
- <li>L'élément {{HTMLElement("del")}} qui doit être utilisé lorsque le contenu a été <em>supprimé</em></li>
- <li>La propriété CSS {{cssxref("text-decoration")}} qui permet d'obtenir le même effet visuel que l'élément {{HTMLElement("strike")}}</li>
-</ul>
+- L'élément {{HTMLElement("s")}}, proche de {{HTMLElement("strike")}}, également obsolète
+- L'élément {{HTMLElement("del")}} qui doit être utilisé lorsque le contenu a été _supprimé_
+- La propriété CSS {{cssxref("text-decoration")}} qui permet d'obtenir le même effet visuel que l'élément {{HTMLElement("strike")}}

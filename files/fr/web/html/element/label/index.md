@@ -9,198 +9,213 @@ tags:
   - Web
 translation_of: Web/HTML/Element/label
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>L'élément HTML <strong><code>&lt;label&gt;</code></strong> représente une légende pour un objet d'une interface utilisateur. Il peut être associé à un contrôle en utilisant l'attribut <code>for</code> ou en plaçant l'élément du contrôle à l'intérieur de l'élément <code>&lt;label&gt;</code>. Un tel contrôle est appelé <em>contrôle étiqueté</em> par l'élément <code>&lt;label&gt;</code>.</p>
+L'élément HTML **`<label>`** représente une légende pour un objet d'une interface utilisateur. Il peut être associé à un contrôle en utilisant l'attribut `for` ou en plaçant l'élément du contrôle à l'intérieur de l'élément `<label>`. Un tel contrôle est appelé _contrôle étiqueté_ par l'élément `<label>`.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}
 
-<p>Rattacher un libellé à un élément de saisie ({{HTMLElement("input")}}) offre différents avantages :</p>
+Rattacher un libellé à un élément de saisie ({{HTMLElement("input")}}) offre différents avantages :
 
-<ul>
- <li>Le texte du libellé n'est pas seulement associé visuellement au champ, il est <em>techniquement</em> associé avec le champ. Ainsi, lorsque l'utilisateur a le focus sur le champ, un lecteur d'écran pourra énoncer le contenu du libellé et permettre à l'utilisateur de disposer d'un meilleur contexte.</li>
- <li>Vous pouvez cliquer sur le libellé pour passer le focus voire activer le champ. De cette façon, on dispose d'une meilleure ergonomie car la surface d'utilisation du champ est agrandie, ce qui s'avère utile sur les petits appareils comme les téléphones portables.</li>
-</ul>
+- Le texte du libellé n'est pas seulement associé visuellement au champ, il est _techniquement_ associé avec le champ. Ainsi, lorsque l'utilisateur a le focus sur le champ, un lecteur d'écran pourra énoncer le contenu du libellé et permettre à l'utilisateur de disposer d'un meilleur contexte.
+- Vous pouvez cliquer sur le libellé pour passer le focus voire activer le champ. De cette façon, on dispose d'une meilleure ergonomie car la surface d'utilisation du champ est agrandie, ce qui s'avère utile sur les petits appareils comme les téléphones portables.
 
-<p>Pour associer un élément <code>&lt;label&gt;</code> avec un élément <code>&lt;input&gt;</code>, il faut fournir un identifiant à l'élément <code>&lt;input&gt;</code> sous la forme d'un attribut <code>id</code>. Ensuite, on peut renseigner l'attribut <code>for</code> de l'élément <code>&lt;label&gt;</code> avec la valeur de cet identifiant.</p>
+Pour associer un élément `<label>` avec un élément `<input>`, il faut fournir un identifiant à l'élément `<input>` sous la forme d'un attribut `id`. Ensuite, on peut renseigner l'attribut `for` de l'élément `<label>` avec la valeur de cet identifiant.
 
-<p>On peut également créer un lien implicite en imbriquant l'élément <code>&lt;input&gt;</code> directement au sein d'un élément <code>&lt;label&gt;</code> . Dans ce cas, les attributs <code>for</code> et <code>id</code> ne sont plus nécessaires.</p>
+On peut également créer un lien implicite en imbriquant l'élément `<input>` directement au sein d'un élément `<label>` . Dans ce cas, les attributs `for` et `id` ne sont plus nécessaires.
 
-<pre class="brush: html">&lt;label&gt;Aimez-vous les petits pois ?
-  &lt;input type="checkbox" name="petits_pois"&gt;
-&lt;/label&gt;
-</pre>
+```html
+<label>Aimez-vous les petits pois ?
+  <input type="checkbox" name="petits_pois">
+</label>
+```
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<p>Cet élément inclut <a href="/fr/docs/Web/HTML/Attributs_universels">les attributs universels</a>.</p>
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-<dl>
- <dt>{{htmlattrdef("for")}}</dt>
- <dd><p>L'identifiant (la valeur de l'attribut {{htmlattrxref("id")}}) de l'élément de formulaire associé, appartenant au même document que l'élément label. Le premier élément du document dont l'identifiant correspond est alors le contrôle étiqueté par l'élément.</p>
-   <div class="note">
-     <p><strong>Note :</strong> Un élément label peut simultanément avoir un attribut <code>for</code> et contenir un élément de contrôle tant que l'attribut <code>for</code> pointe vers l'élément contenu.</p>
-   </div>
- </dd>
- <dt>{{htmlattrdef("form")}}</dt>
- <dd><p>L'élément de formulaire auquel l'élément label est associé (son formulaire propriétaire). La valeur de cet attribut doit être l'identifiant d'un élément {{HTMLElement("form")}} contenu au sein du même document. Si l'attribut n'est pas renseigné, cet élément &lt;label&gt; doit être le descendant d'un élément {{HTMLElement("form")}}. Cet attribut permet de placer des éléments label dans le document sans qu'ils soient nécessairement imbriqués dans un formulaire.</p>
- <div class="note">
-   <p><strong>Note :</strong> La spécification HTML a été mise à jour le 28 avril 2016 afin de déprécier l'attribut {{htmlattrxref("form")}}. Celui-ci est toujours disponible dans les scripts mais sa définition a changé, il renvoie désormais le contrôle associé au formulaire ou <code>null</code> s'il n'y a pas de contrôle associé (autrement dit si {{domxref("HTMLLabelElement.control")}} vaut <code>null</code>).</p>
- </div>
- </dd>
-</dl>
+- {{htmlattrdef("for")}}
 
-<h2 id="Notes_d'utilisation">Notes d'utilisation</h2>
+  - : L'identifiant (la valeur de l'attribut {{htmlattrxref("id")}}) de l'élément de formulaire associé, appartenant au même document que l'élément label. Le premier élément du document dont l'identifiant correspond est alors le contrôle étiqueté par l'élément.
 
-<ul>
- <li>Un élément <code>&lt;label&gt;</code> peut être associé à un contrôle en plaçant l'élément du contrôle dans l'élément <code>&lt;label&gt;</code> ou en utilisant l'attribut {{htmlattrxref("for")}}. Un tel contrôle sera appelé le contrôle <em>étiqueté</em> par l'élément <code>&lt;label&gt;</code>. Un contrôle peut être associé à plusieurs <code>&lt;label&gt;</code>.</li>
- <li>Les étiquettes ne sont pas directement associées aux formulaires. Elles le sont indirectement via le contrôle auquel elles sont rattachées.</li>
- <li>Lorsqu'on clique ou touche un élément <code>&lt;label&gt;</code> et que celui-ci est associé à un contrôle d'un formulaire, l'évènement <code>click</code> est également déclenché pour le contrôle.</li>
-</ul>
+    > **Note :** Un élément label peut simultanément avoir un attribut `for` et contenir un élément de contrôle tant que l'attribut `for` pointe vers l'élément contenu.
 
-<h2 id="Mise_en_forme_avec_CSS">Mise en forme avec CSS</h2>
+- {{htmlattrdef("form")}}
 
-<p>Il n'existe pas de spécificité relative à la mise en forme des éléments <code>&lt;label&gt;</code>. Par défaut, ce sont des éléments <em>inline</em> et ils peuvent être mis en forme de la même façon que {{HTMLElement("span")}} et {{HTMLElement("a")}}.</p>
+  - : L'élément de formulaire auquel l'élément label est associé (son formulaire propriétaire). La valeur de cet attribut doit être l'identifiant d'un élément {{HTMLElement("form")}} contenu au sein du même document. Si l'attribut n'est pas renseigné, cet élément \<label> doit être le descendant d'un élément {{HTMLElement("form")}}. Cet attribut permet de placer des éléments label dans le document sans qu'ils soient nécessairement imbriqués dans un formulaire.
 
-<h2 id="Exemples">Exemples</h2>
+    > **Note :** La spécification HTML a été mise à jour le 28 avril 2016 afin de déprécier l'attribut {{htmlattrxref("form")}}. Celui-ci est toujours disponible dans les scripts mais sa définition a changé, il renvoie désormais le contrôle associé au formulaire ou `null` s'il n'y a pas de contrôle associé (autrement dit si {{domxref("HTMLLabelElement.control")}} vaut `null`).
 
-<h3 id="Exemple_simple">Exemple simple</h3>
+## Notes d'utilisation
 
-<h4 id="HTML">HTML</h4>
+- Un élément `<label>` peut être associé à un contrôle en plaçant l'élément du contrôle dans l'élément `<label>` ou en utilisant l'attribut {{htmlattrxref("for")}}. Un tel contrôle sera appelé le contrôle _étiqueté_ par l'élément `<label>`. Un contrôle peut être associé à plusieurs `<label>`.
+- Les étiquettes ne sont pas directement associées aux formulaires. Elles le sont indirectement via le contrôle auquel elles sont rattachées.
+- Lorsqu'on clique ou touche un élément `<label>` et que celui-ci est associé à un contrôle d'un formulaire, l'évènement `click` est également déclenché pour le contrôle.
 
-<pre class="brush: html">&lt;label&gt;Cliquez ici&lt;input type="text" id="Utilisateur" name="Nom" /&gt;&lt;/label&gt;</pre>
+## Mise en forme avec CSS
 
-<h4 id="Résultat">Résultat</h4>
+Il n'existe pas de spécificité relative à la mise en forme des éléments `<label>`. Par défaut, ce sont des éléments _inline_ et ils peuvent être mis en forme de la même façon que {{HTMLElement("span")}} et {{HTMLElement("a")}}.
 
-<p>{{EmbedLiveSample('Exemple_simple', '200', '50', '')}}</p>
+## Exemples
 
-<h3 id="Utiliser_l’attribut_for">Utiliser l’attribut <code>for</code></h3>
+### Exemple simple
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;label for="Utilisateur"&gt;Cliquez ici&lt;/label&gt;
-&lt;input type="text" id="Utilisateur" name="Nom" /&gt;</pre>
+```html
+<label>Cliquez ici<input type="text" id="Utilisateur" name="Nom" /></label>
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Utiliser_l’attribut_for", '200', '50', '')}}</p>
+{{EmbedLiveSample('Exemple_simple', '200', '50', '')}}
 
-<h2 id="Accessibilité">Accessibilité</h2>
+### Utiliser l’attribut `for`
 
-<h3 id="Contenu_interactif">Contenu interactif</h3>
+#### HTML
 
-<p>Il ne faut pas placer d'éléments interactifs (tels que les ancres ({{HTMLElement("a")}}) ou les boutons ({{HTMLElement("button")}})) dans un élément <code>label</code> sinon il sera difficile d'activer le contrôle associé à ce libellé.</p>
+```html
+<label for="Utilisateur">Cliquez ici</label>
+<input type="text" id="Utilisateur" name="Nom" />
+```
 
-<h4 id="Mauvaise_pratique">Mauvaise pratique</h4>
+#### Résultat
 
-<pre class="brush: html example-bad">&lt;label for="tac"&gt;
-  &lt;input id="tac" type="checkbox" name="terms-and-conditions"&gt;
-  J'accepte &lt;a href="terms-and-conditions.html"&gt;les conditions d'utilisation&lt;/a&gt;
-&lt;/label&gt;
-</pre>
+{{EmbedLiveSample("Utiliser_l’attribut_for", '200', '50', '')}}
 
-<h4 id="Bonne_pratique">Bonne pratique</h4>
+## Accessibilité
 
-<pre class="brush: html example-good">&lt;label for="tac"&gt;
-  &lt;input id="tac" type="checkbox" name="terms-and-conditions"&gt;
+### Contenu interactif
+
+Il ne faut pas placer d'éléments interactifs (tels que les ancres ({{HTMLElement("a")}}) ou les boutons ({{HTMLElement("button")}})) dans un élément `label` sinon il sera difficile d'activer le contrôle associé à ce libellé.
+
+#### Mauvaise pratique
+
+```html example-bad
+<label for="tac">
+  <input id="tac" type="checkbox" name="terms-and-conditions">
+  J'accepte <a href="terms-and-conditions.html">les conditions d'utilisation</a>
+</label>
+```
+
+#### Bonne pratique
+
+```html example-good
+<label for="tac">
+  <input id="tac" type="checkbox" name="terms-and-conditions">
   J'accepte les conditions d'utilisation
-&lt;/label&gt;
-&lt;p&gt;
-  &lt;a href="terms-and-conditions.html"&gt;Lire les conditions d'utilisation&lt;/a&gt;
-&lt;/p&gt;
-</pre>
+</label>
+<p>
+  <a href="terms-and-conditions.html">Lire les conditions d'utilisation</a>
+</p>
+```
 
-<h3 id="Titres">Titres</h3>
+### Titres
 
-<p>Placer des <a href="/fr/docs/Web/HTML/Element/Heading_Elements">éléments de titres</a> à l'intérieur d'un élément <code>label</code> causera des interférences avec de nombreux outils d'assistance car les titres sont généralement utilisés comme <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#Navigation">une aide à la navigation</a>. Si le texte du libellé doit être ajusté visuellement, on utilisera une mise en forme via CSS.</p>
+Placer des [éléments de titres](/fr/docs/Web/HTML/Element/Heading_Elements) à l'intérieur d'un élément `label` causera des interférences avec de nombreux outils d'assistance car les titres sont généralement utilisés comme [une aide à la navigation](/en-US/docs/Web/HTML/Element/Heading_Elements#Navigation). Si le texte du libellé doit être ajusté visuellement, on utilisera une mise en forme via CSS.
 
-<p>S'il faut associer un titre à un formulaire ou à une section d'un formulaire, on utilisera l'élément {{HTMLElement("legend")}} au sein d'un élément {{HTMLElement("fieldset")}}.</p>
+S'il faut associer un titre à un formulaire ou à une section d'un formulaire, on utilisera l'élément {{HTMLElement("legend")}} au sein d'un élément {{HTMLElement("fieldset")}}.
 
-<h4 id="Mauvaise_pratique_2">Mauvaise pratique</h4>
+#### Mauvaise pratique
 
-<pre class="brush: html example-bad">&lt;label for="votre-nom"&gt;
-  &lt;h3&gt;Votre nom&lt;/h3&gt;
-  &lt;input id="votre-nom" name="votre-nom" type="text"&gt;
-&lt;/label&gt;
-</pre>
+```html example-bad
+<label for="votre-nom">
+  <h3>Votre nom</h3>
+  <input id="votre-nom" name="votre-nom" type="text">
+</label>
+```
 
-<h4 id="Bonne_pratique_2">Bonne pratique</h4>
+#### Bonne pratique
 
-<pre class="brush: html example-good">&lt;label class="label-grand" for="votre-nom"&gt;
+```html example-good
+<label class="label-grand" for="votre-nom">
   Votre nom
-  &lt;input id="votre-nom" name="votre-nom" type="text"&gt;
-&lt;/label&gt; </pre>
+  <input id="votre-nom" name="votre-nom" type="text">
+</label>
+```
 
-<h3 id="Boutons">Boutons</h3>
+### Boutons
 
-<p>Un élément {{HTMLElement("input")}} avec <code>type="button"</code> et un attribut <code>value</code> valide ne nécessite pas l'ajout d'un libellé. Rajouter un libellé inutile pourra créer des interférences avec les outils d'assistance. Il en va de même pour l'élément {{HTMLElement("button")}}.</p>
+Un élément {{HTMLElement("input")}} avec `type="button"` et un attribut `value` valide ne nécessite pas l'ajout d'un libellé. Rajouter un libellé inutile pourra créer des interférences avec les outils d'assistance. Il en va de même pour l'élément {{HTMLElement("button")}}.
 
-<h2 id="Résumé_technique">Résumé technique</h2>
+## Résumé technique
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><dfn><a href="/fr/docs/Web/HTML/Catégorie_de_contenu">Catégories de contenu</a></dfn></th>
-   <td><a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux">Contenu de flux</a>, <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9">contenu phrasé</a>, <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_associ.C3.A9_aux_formulaires">contenu associé aux formulaires</a> (listed, submittable, resettable), <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible">contenu tangible</a>, contenu interactif.</td>
-  </tr>
-  <tr>
-   <th scope="row">Contenu autorisé</th>
-   <td><a href="/fr/docs/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9">Contenu phrasé</a> sans éléments <code>label</code> descendants. À l'exception du contrôle lié à la légende, pas d'autres éléments pouvant contenir un élément <code>label</code>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omission de balise</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Parents autorisés</th>
-   <td>Tout élément acceptant du <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9">contenu phrasé</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Rôles ARIA autorisés</th>
-   <td>Aucun.</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface DOM</th>
-   <td>{{domxref("HTMLLabelElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <dfn
+          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
+            >Catégories de contenu</a
+          ></dfn
+        >
+      </th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+          >Contenu de flux</a
+        >,
+        <a
+          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          >contenu phrasé</a
+        >,
+        <a
+          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_associ.C3.A9_aux_formulaires"
+          >contenu associé aux formulaires</a
+        >
+        (listed, submittable, resettable),
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
+          >contenu tangible</a
+        >, contenu interactif.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>
+        <a href="/fr/docs/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          >Contenu phrasé</a
+        >
+        sans éléments <code>label</code> descendants. À l'exception du contrôle
+        lié à la légende, pas d'autres éléments pouvant contenir un élément
+        <code>label</code>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balise</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>
+        Tout élément acceptant du
+        <a
+          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          >contenu phrasé</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>Aucun.</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{domxref("HTMLLabelElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-label-element', '&lt;label&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#the-label-element', '&lt;label&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.9.1', '&lt;label&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                             | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('HTML WHATWG', 'forms.html#the-label-element', '&lt;label&gt;')}} | {{Spec2('HTML WHATWG')}} |                      |
+| {{SpecName('HTML5 W3C', 'forms.html#the-label-element', '&lt;label&gt;')}} | {{Spec2('HTML5 W3C')}}     |                      |
+| {{SpecName('HTML4.01', 'interact/forms.html#h-17.9.1', '&lt;label&gt;')}}     | {{Spec2('HTML4.01')}}     | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.elements.label")}}</p>
+{{Compat("html.elements.label")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.</li>
-</ul>
+- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.

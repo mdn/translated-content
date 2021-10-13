@@ -10,81 +10,54 @@ tags:
   - HTML
 translation_of: Web/HTML/Attributes/capture
 ---
-<p>{{HTMLSidebar}}</p>
+{{HTMLSidebar}}
 
-<p>L'attribut <strong><code>capture</code></strong> spécifie que, facultativement, un nouveau fichier doit être capturé, et le périphérique qui devrait être utilisé pour capturer ce nouveau média d'un type défini par l'attribut <code><a href="accept">accept</a></code>. Les valeurs comprennent <code>user</code> et <code>environment</code>. L'attribut capture est pris en charge sur les champs de formulaire de type <a href="/fr/docs/Web/HTML/Element/Input/file"><code>file</code></a>.</p>
+L'attribut **`capture`** spécifie que, facultativement, un nouveau fichier doit être capturé, et le périphérique qui devrait être utilisé pour capturer ce nouveau média d'un type défini par l'attribut [`accept`](accept). Les valeurs comprennent `user` et `environment`. L'attribut capture est pris en charge sur les champs de formulaire de type [`file`](/fr/docs/Web/HTML/Element/Input/file).
 
-<p>L'attribut <code>capture</code> prend pour valeur une chaîne de caractères qui spécifie quelle caméra utiliser pour la capture des données d'image ou de vidéo, si l'attribut <a href="accept"><code>accept</code></a> indique que l'entrée doit être de l'un de ces types.</p>
+L'attribut `capture` prend pour valeur une chaîne de caractères qui spécifie quelle caméra utiliser pour la capture des données d'image ou de vidéo, si l'attribut [`accept`](accept) indique que l'entrée doit être de l'un de ces types.
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Valeur</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>user</code></td>
-      <td>La caméra et/ou le microphone faisant face à l'utilisateur devraient être utilisés.</td>
-    </tr>
-    <tr>
-      <td><code>environment</code></td>
-      <td>La caméra et/ou le microphone orientés vers l'extérieur devraient être utilisés.</td>
-    </tr>
-  </tbody>
-</table>
+| Valeur        | Description                                                                         |
+| ------------- | ----------------------------------------------------------------------------------- |
+| `user`        | La caméra et/ou le microphone faisant face à l'utilisateur devraient être utilisés. |
+| `environment` | La caméra et/ou le microphone orientés vers l'extérieur devraient être utilisés.    |
 
-<div class="note">
-  <p><strong>Note :</strong> Capture était auparavant un attribut booléen qui, lorsqu'il était présent, indiqué que les périphériques de capture de l'appareil (comme la caméra ou le micro) devaient être utilisés plutôt que de demander à l'utilisateur de sélectionner un fichier.</p>
-</div>
+> **Note :** Capture était auparavant un attribut booléen qui, lorsqu'il était présent, indiqué que les périphériques de capture de l'appareil (comme la caméra ou le micro) devaient être utilisés plutôt que de demander à l'utilisateur de sélectionner un fichier.
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<p>Lorsqu'ils sont définis sur un type d'entrée de fichier, les systèmes d'exploitation dotés de microphones et de caméras affichent une interface utilisateur permettant la sélection à partir d'un fichier existant ou la création d'un nouveau fichier.</p>
+Lorsqu'ils sont définis sur un type d'entrée de fichier, les systèmes d'exploitation dotés de microphones et de caméras affichent une interface utilisateur permettant la sélection à partir d'un fichier existant ou la création d'un nouveau fichier.
 
-<pre class="brush: html">&lt;p&gt;
-  &lt;label for="soundFile"&gt;Quel est le son de votre voix ?&lt;/label&gt;
-  &lt;input type="file" id="soundFile" capture="user" accept="audio/*"&gt;
-&lt;/p&gt;
-&lt;p&gt;
-  &lt;label for="videoFile"&gt;Téléchargez une vidéo :&lt;/label&gt;
-  &lt;input type="file" id="videoFile" capture="environment" accept="video/*"&gt;
-&lt;/p&gt;
-&lt;p&gt;
-  &lt;label for="imageFile"&gt;Téléchargez une photo de vous :&lt;/label&gt;
-  &lt;input type="file" id="imageFile" capture="user" accept="image/*"&gt;
-&lt;/p&gt;</pre>
+```html
+<p>
+  <label for="soundFile">Quel est le son de votre voix ?</label>
+  <input type="file" id="soundFile" capture="user" accept="audio/*">
+</p>
+<p>
+  <label for="videoFile">Téléchargez une vidéo :</label>
+  <input type="file" id="videoFile" capture="environment" accept="video/*">
+</p>
+<p>
+  <label for="imageFile">Téléchargez une photo de vous :</label>
+  <input type="file" id="imageFile" capture="user" accept="image/*">
+</p>
+```
 
-<p>{{EmbedLiveSample('examples', '', 200)}}</p>
+{{EmbedLiveSample('examples', '', 200)}}
 
-<p>Notez que ceux-ci fonctionnent mieux sur les appareils mobiles ; si votre appareil est un ordinateur de bureau, vous obtiendrez probablement un sélecteur de fichiers classique.</p>
+Notez que ceux-ci fonctionnent mieux sur les appareils mobiles ; si votre appareil est un ordinateur de bureau, vous obtiendrez probablement un sélecteur de fichiers classique.
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML Media Capture', '#the-capture-attribute','capture attribute')}}</td>
-      <td>{{Spec2('HTML Media Capture')}}</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                | Statut                                   |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- |
+| {{SpecName('HTML Media Capture', '#the-capture-attribute','capture attribute')}} | {{Spec2('HTML Media Capture')}} |
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.elements.attribute.capture")}}</p>
+{{Compat("html.elements.attribute.capture")}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/API/File/Using_files_from_web_applications">Utilisation de fichiers à partir d'applications web</a></li>
-  <li><a href="/fr/docs/Web/API/File">File API</a></li>
-  <li>La propriété <a href="/fr/docs/Web/API/HTMLInputElement"><code>HTMLInputElement.files</code></a></li>
-</ul>
+- [Utilisation de fichiers à partir d'applications web](/fr/docs/Web/API/File/Using_files_from_web_applications)
+- [File API](/fr/docs/Web/API/File)
+- La propriété [`HTMLInputElement.files`](/fr/docs/Web/API/HTMLInputElement)
