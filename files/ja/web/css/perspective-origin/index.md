@@ -11,15 +11,15 @@ tags:
   - リファレンス
 translation_of: Web/CSS/perspective-origin
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>perspective-origin</code></strong> プロパティは、閲覧者の視点の位置を決めます。これは {{cssxref("perspective")}} プロパティによって<em>消失点</em>として使われます。</p>
+[CSS](/ja/docs/Web/CSS) の **`perspective-origin`** プロパティは、閲覧者の視点の位置を決めます。これは {{cssxref("perspective")}} プロパティによって<em>消失点</em>として使われます。
 
-<div>{{EmbedInteractiveExample("pages/css/perspective-origin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/perspective-origin.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) をクローンしてプルリクエストを送信してください。</p>
 
-<p><strong><code>perspective-origin</code></strong> および {{cssxref('perspective')}} の各プロパティは、三次元空間で変換される子の親に設定するものであり、変換される要素に設定される {{cssxref("transform-function/perspective", "perspective()")}} 変換関数とは異なります。</p>
+**`perspective-origin`** および {{cssxref('perspective')}} の各プロパティは、三次元空間で変換される子の親に設定するものであり、変換される要素に設定される {{cssxref("transform-function/perspective", "perspective()")}} 変換関数とは異なります。
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -41,26 +41,24 @@ perspective-origin: unset;
 
 <h3 id="Values" name="Values">値</h3>
 
-<dl>
- <dt><em>x-position</em></dt>
+- <em>x-position</em>
  <dd><em>消失点</em>の横座標上の位置を示します。次のいずれかの値です。
  <ul>
   <li>{{cssxref("&lt;length-percentage&gt;")}} は、絶対的な length 値、又は要素の幅に対する相対値で位置を示します。負の数も使えます。</li>
-  <li><code>left</code> キーワードは、 length 値 <code>0</code> を示すショートカットです。</li>
-  <li><code>center</code> キーワードは、パーセント値 <code>50%</code> を示すショートカットです。</li>
-  <li><code>right</code> キーワードは、パーセント値 <code>100%</code> を示すショートカットです。</li>
+  <li>`left` キーワードは、 length 値 `0` を示すショートカットです。</li>
+  <li>`center` キーワードは、パーセント値 `50%` を示すショートカットです。</li>
+  <li>`right` キーワードは、パーセント値 `100%` を示すショートカットです。</li>
  </ul>
  </dd>
- <dt><em>y-position</em></dt>
+- <em>y-position</em>
  <dd><em>消失点</em>の縦座標上の位置を示します。次のいずれかの値です。
  <ul>
   <li>{{cssxref("&lt;length&gt;")}} は、絶対的な length 値、又は要素の高さに対する相対値で位置を示します。負の数も使えます。</li>
-  <li><code>top</code> キーワードは、 length 値 <code>0</code> を示すショートカットです。</li>
-  <li><code>center</code> キーワードは、パーセント値 <code>50%</code> を示すショートカットです。</li>
-  <li><code>bottom</code> キーワードは、パーセント値 <code>100%</code> を示すキーワードです。</li>
+  <li>`top` キーワードは、 length 値 `0` を示すショートカットです。</li>
+  <li>`center` キーワードは、パーセント値 `50%` を示すショートカットです。</li>
+  <li>`bottom` キーワードは、パーセント値 `100%` を示すキーワードです。</li>
  </ul>
  </dd>
-</dl>
 
 <h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
 
@@ -70,11 +68,11 @@ perspective-origin: unset;
 
 <h3 id="Changing_the_perspective_origin" name="Changing_the_perspective_origin">視点の変更</h3>
 
-<p>この例は主要な <code>perspective-origin</code> 値で立方体を表示します。</p>
+この例は主要な `perspective-origin` 値で立方体を表示します。
 
 <h4 id="Result" name="Result">結果</h4>
 
-<p>{{EmbedLiveSample('Changing_the_perspective_origin', '100%', 700)}}</p>
+{{EmbedLiveSample('Changing_the_perspective_origin', '100%', 700)}}
 
 <h4 id="HTML">HTML</h4>
 
@@ -374,20 +372,20 @@ section {
  </tbody>
 </table>
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
 <div>
-<p>{{Compat("css.properties.perspective-origin")}}</p>
+{{Compat("css.properties.perspective-origin")}}
 </div>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
 <ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">CSS 変形の利用</a></li>
+ <li>[CSS 変形の利用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)</li>
  <li>{{cssxref('transform-style')}}</li>
  <li>{{cssxref('transform-function')}}</li>
  <li>{{cssxref('perspective')}}</li>
- <li><code><a href="/ja/docs/Web/CSS/transform-function/perspective">transform: perspective()</a></code> 関数</li>
+ <li>`[transform: perspective()](/ja/docs/Web/CSS/transform-function/perspective)` 関数</li>
 </ul>

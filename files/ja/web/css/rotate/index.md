@@ -8,9 +8,9 @@ tags:
   - Transforms
 translation_of: Web/CSS/rotate
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>rotate</code></strong> プロパティは、 {{CSSxRef("transform")}} とは個別に独立して回転変換を指定することができます。これは一般のユーザーインターフェイスの利用においてはより適しており、 <code>transform</code> の値で変形関数を指定する実際の順序を覚えておく手間を軽減します。</p>
+[CSS](/ja/docs/Web/CSS) の **`rotate`** プロパティは、 {{CSSxRef("transform")}} とは個別に独立して回転変換を指定することができます。これは一般のユーザーインターフェイスの利用においてはより適しており、 `transform` の値で変形関数を指定する実際の順序を覚えておく手間を軽減します。
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -32,16 +32,14 @@ rotate: 1 1 1 90deg;</pre>
 
 <h3 id="Values" name="Values">値</h3>
 
-<dl>
- <dt>角度値</dt>
- <dd>{{CSSxRef("&lt;angle&gt;")}} で、 z 軸の周囲を該当する要素を貫いて回転させる角度を指定します。<code>rotate()</code> (2次元回転) 関数と等価です。</dd>
- <dt>x, y, z 軸と角度値</dt>
- <dd>該当する要素を回転する軸の名前 (<code>"x"</code>, "<code>y</code>", "<code>z"</code>) と、要素を貫いて回転する角度を指定する {{CSSxRef("&lt;angle&gt;")}} です。 <code>rotateX()</code>/<code>rotateY()</code>/<code>rotateZ()</code> (3次元回転) 関数と等価です。</dd>
- <dt>ベクトルと角度値</dt>
- <dd>要素を回転させたい直線を表す原点を中心としたベクトルを表す三つの数値 {{CSSxRef("&lt;number&gt;")}} と、要素を貫いて回転する角度を指定する {{CSSxRef("&lt;angle&gt;")}} です。 <code>rotate3d()</code> (3次元回転) 関数と等価です。</dd>
- <dt id="none"><code>none</code></dt>
- <dd>回転を適用しないことを表します。</dd>
-</dl>
+- 角度値
+  - : {{CSSxRef("&lt;angle&gt;")}} で、 z 軸の周囲を該当する要素を貫いて回転させる角度を指定します。`rotate()` (2次元回転) 関数と等価です。
+- x, y, z 軸と角度値
+  - : 該当する要素を回転する軸の名前 (`"x"`, "`y`", "`z"`) と、要素を貫いて回転する角度を指定する {{CSSxRef("&lt;angle&gt;")}} です。 `rotateX()`/`rotateY()`/`rotateZ()` (3次元回転) 関数と等価です。
+- ベクトルと角度値
+  - : 要素を回転させたい直線を表す原点を中心としたベクトルを表す三つの数値 {{CSSxRef("&lt;number&gt;")}} と、要素を貫いて回転する角度を指定する {{CSSxRef("&lt;angle&gt;")}} です。 `rotate3d()` (3次元回転) 関数と等価です。
+ <dt id="none">`none`</dt>
+  - : 回転を適用しないことを表します。
 
 <h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
 
@@ -92,7 +90,7 @@ div:hover .rotate {
 
 <h3 id="Result" name="Result">結果</h3>
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
 
@@ -113,8 +111,8 @@ div:hover .rotate {
  </tbody>
 </table>
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
 
-<p>{{Compat("css.properties.rotate")}}</p>
+{{Compat("css.properties.rotate")}}

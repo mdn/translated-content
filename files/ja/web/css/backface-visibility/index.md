@@ -9,15 +9,15 @@ tags:
   - 'recipe:css-property'
 translation_of: Web/CSS/backface-visibility
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>backface-visibility</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、要素がユーザーに対して裏側を向いたときに、裏面を可視にするかどうかを設定します。</p>
+**`backface-visibility`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がユーザーに対して裏側を向いたときに、裏面を可視にするかどうかを設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/backface-visibility.html")}}</div>
+{{EmbedInteractiveExample("pages/css/backface-visibility.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) をクローンしてプルリクエストを送信してください。</p>
 
-<p>要素の裏面は表面の鏡像です。裏面は二次元では可視ではありませんが、三次元空間で要素に回転の変換が行われたときに、背面を見ることができます。 (このプロパティは、遠近感を持たない二次元の変換では効果がありません。)</p>
+要素の裏面は表面の鏡像です。裏面は二次元では可視ではありませんが、三次元空間で要素に回転の変換が行われたときに、背面を見ることができます。 (このプロパティは、遠近感を持たない二次元の変換では効果がありません。)
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -30,20 +30,18 @@ backface-visibility: inherit;
 backface-visibility: initial;
 backface-visibility: unset;</pre>
 
-<p><code>backface-visibility</code> プロパティは、以下に挙げたキーワードのうちの一つで指定します。</p>
+`backface-visibility` プロパティは、以下に挙げたキーワードのうちの一つで指定します。
 
 <h3 id="Values" name="Values">値</h3>
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>ユーザーに対して裏を向いたとき、背面が可視になります。</dd>
- <dt><code>hidden</code></dt>
- <dd>背面が非表示になり、要素がユーザーに対して反対を向いたときに不可視にするのに便利です。</dd>
-</dl>
+- `visible`
+  - : ユーザーに対して裏を向いたとき、背面が可視になります。
+- `hidden`
+  - : 背面が非表示になり、要素がユーザーに対して反対を向いたときに不可視にするのに便利です。
 
 <h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
 <h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
 
@@ -53,7 +51,7 @@ backface-visibility: unset;</pre>
 
 <h3 id="Cube_with_transparent_and_opaque_faces" name="Cube_with_transparent_and_opaque_faces">透明な面と不透明な面を持った立方体</h3>
 
-<p>この例は、透明な面と不透明な面を持つ立方体を表示します。</p>
+この例は、透明な面と不透明な面を持つ立方体を表示します。
 
 <h4 id="HTML">HTML</h4>
 
@@ -181,7 +179,7 @@ th, p, td {
 
 <h4 id="Result" name="Result">結果</h4>
 
-<p>{{EmbedLiveSample('Cube_with_transparent_and_opaque_faces', '100%', 360)}}</p>
+{{EmbedLiveSample('Cube_with_transparent_and_opaque_faces', '100%', 360)}}
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
 
@@ -204,10 +202,10 @@ th, p, td {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("css.properties.backface-visibility")}}</p>
+{{Compat("css.properties.backface-visibility")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
 <ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">CSS 変形の使用</a></li>
+ <li>[CSS 変形の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)</li>
 </ul>

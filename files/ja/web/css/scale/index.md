@@ -9,9 +9,9 @@ tags:
   - 'recipe:css-property'
 translation_of: Web/CSS/scale
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>scale</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、 {{CSSxRef("transform")}} とは個別に独立して倍率変換を指定することができます。これは一般のユーザーインターフェイスの利用においてはより適しており、 <code>transform</code> の値で変換関数を指定する実際の順序を思い出す手間を軽減します。</p>
+**`scale`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{CSSxRef("transform")}} とは個別に独立して倍率変換を指定することができます。これは一般のユーザーインターフェイスの利用においてはより適しており、 `transform` の値で変換関数を指定する実際の順序を思い出す手間を軽減します。
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -32,20 +32,18 @@ scale: 2 0.5 2;</pre>
 
 <h3 id="Values" name="Values">値</h3>
 
-<dl>
- <dt>１つの数値</dt>
- <dd>該当する要素の拡大率を指定する {{CSSxRef("&lt;number&gt;")}} であり、 X 及び Y 軸で同じ倍率になります。 <code>scale()</code> (2D 倍率) 関数に１つの値を指定した場合と等価です。</dd>
- <dt>２つの長さ/パーセント値</dt>
- <dd>２つの {{CSSxRef("&lt;number&gt;")}} 値で、 2D 倍率における X 軸と Y 軸の拡大率を (それぞれ) 指定します。 <code>scale()</code> (2D 倍率) 関数に２つの値を指定した場合と等価です。</dd>
- <dt>３つの長さ/パーセント値</dt>
- <dd>３つの {{CSSxRef("&lt;number&gt;")}} 値で、 3D 倍率における X 軸と Y 軸と Z 軸の拡大率を (それぞれ) 指定します。 <code>translate3d()</code> (3D 倍率) 関数と等価です。</dd>
- <dt id="none"><code>none</code></dt>
- <dd>拡大率が適用されないことを示します。</dd>
-</dl>
+- １つの数値
+  - : 該当する要素の拡大率を指定する {{CSSxRef("&lt;number&gt;")}} であり、 X 及び Y 軸で同じ倍率になります。 `scale()` (2D 倍率) 関数に１つの値を指定した場合と等価です。
+- ２つの長さ/パーセント値
+  - : ２つの {{CSSxRef("&lt;number&gt;")}} 値で、 2D 倍率における X 軸と Y 軸の拡大率を (それぞれ) 指定します。 `scale()` (2D 倍率) 関数に２つの値を指定した場合と等価です。
+- ３つの長さ/パーセント値
+  - : ３つの {{CSSxRef("&lt;number&gt;")}} 値で、 3D 倍率における X 軸と Y 軸と Z 軸の拡大率を (それぞれ) 指定します。 `translate3d()` (3D 倍率) 関数と等価です。
+ <dt id="none">`none`</dt>
+  - : 拡大率が適用されないことを示します。
 
 <h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
 <h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
 
@@ -96,7 +94,7 @@ div:hover .scale {
 
 <h4 id="Result" name="Result">結果</h4>
 
-<p>{{EmbedLiveSample("Scaling_an_element_on_hover")}}</p>
+{{EmbedLiveSample("Scaling_an_element_on_hover")}}
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
 
@@ -119,9 +117,9 @@ div:hover .scale {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("css.properties.scale")}}</p>
+{{Compat("css.properties.scale")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
 <ul>
  <li>{{cssxref('translate')}}</li>
@@ -129,4 +127,4 @@ div:hover .scale {
  <li>{{cssxref('transform')}}</li>
 </ul>
 
-<p>注: skew は独立した変形値ではありません</p>
+注: skew は独立した変形値ではありません
