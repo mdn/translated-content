@@ -11,15 +11,15 @@ tags:
   - transform-origin
 translation_of: Web/CSS/transform-origin
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p><strong><code>transform-origin</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、要素の<ruby>変形<rp> (</rp><rt>transform</rt><rp>) </rp></ruby>における原点を設定します。</p>
+**`transform-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の<ruby>変形<rp> (</rp><rt>transform</rt><rp>) </rp></ruby>における原点を設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/transform-origin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transform-origin.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) をクローンしてプルリクエストを送信してください。</p>
 
-<p>変形の原点とは、それを中心に変形が適用される点です。例えば、 <code><a href="/ja/docs/Web/CSS/transform-function/rotate">rotate()</a></code> 関数における変形の原点は、回転の中心です。</p>
+変形の原点とは、それを中心に変形が適用される点です。例えば、 `[rotate()](/ja/docs/Web/CSS/transform-function/rotate)` 関数における変形の原点は、回転の中心です。
 
 <p>このプロパティは最初にプロパティ値の反対に平行移動し、それから要素の変形を適用し、プロパティ値の分だけ平行移動する形でで適用されます。<br>
  すなわち、</p>
@@ -28,12 +28,12 @@ translation_of: Web/CSS/transform-origin
 transform: rotate(45deg);
 </pre>
 
-<p>この定義は以下の変形と同じです。</p>
+この定義は以下の変形と同じです。
 
 <pre class="brush: css notranslate">transform-origin: 0 0;
 transform: translate(-100%, 50%) rotate(45deg) translate(100%, -50%);</pre>
 
-<p>既定で、変形の原点は <code>center</code> です。</p>
+既定で、変形の原点は `center` です。
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -71,20 +71,20 @@ transform-origin: initial;
 transform-origin: unset;
 </pre>
 
-<p><code>transform-origin</code> プロパティは、オフセットを表す１～３つの値を使用して指定することができます。明示的に定義されなかったオフセットは、それぞれの対応する<a href="/ja/docs/Web/CSS/initial_value">初期値</a>にリセットされます。</p>
+`transform-origin` プロパティは、オフセットを表す１～３つの値を使用して指定することができます。明示的に定義されなかったオフセットは、それぞれの対応する[初期値](/ja/docs/Web/CSS/initial_value)にリセットされます。
 
-<p>２つ以上の値が定義され、どちらもの値もキーワードでない場合、または使われているキーワードが <code>center</code> だけであった場合、最初の値は水平方向のオフセットであり、二番目の値は垂直方向のオフセットです。</p>
+２つ以上の値が定義され、どちらもの値もキーワードでない場合、または使われているキーワードが `center` だけであった場合、最初の値は水平方向のオフセットであり、二番目の値は垂直方向のオフセットです。
 
 <ul>
  <li>値１つの構文:
   <ul>
-   <li>値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, 又は <code>left</code>, <code>center</code>, <code>right</code>, <code>top</code>, <code>bottom</code> のうちの１つでなければなりません。</li>
+   <li>値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, 又は `left`, `center`, `right`, `top`, `bottom` のうちの１つでなければなりません。</li>
   </ul>
  </li>
  <li>値２つの構文:
   <ul>
-   <li>一方の値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, 又はキーワードの <code>left</code>, <code>center</code>, <code>right</code> のうちの１つでなければなりません。</li>
-   <li>もう一方の値は、 {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, 又はキーワードの <code>top</code>, <code>center</code>, <code>bottom</code> のうちの１つでなければなりません。</li>
+   <li>一方の値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, 又はキーワードの `left`, `center`, `right` のうちの１つでなければなりません。</li>
+   <li>もう一方の値は、 {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, 又はキーワードの `top`, `center`, `bottom` のうちの１つでなければなりません。</li>
   </ul>
  </li>
  <li>値３つの構文:
@@ -97,22 +97,20 @@ transform-origin: unset;
 
 <h3 id="Values" name="Values">値</h3>
 
-<dl>
- <dt><var>x-offset</var></dt>
- <dd>{{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} の、ボックスの左端から変形の原点までの距離を示す値です。</dd>
- <dt><var>offset-keyword</var></dt>
- <dd><code>left</code>, <code>right</code>, <code>top</code>, <code>bottom</code>, <code>center</code> のいずれかのキーワードで、対応するオフセットを表します。</dd>
- <dt><var>y-offset</var></dt>
- <dd>{{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} の、ボックスの右端から変形の原点までの距離を示す値です。</dd>
- <dt><var>x-offset-keyword</var></dt>
- <dd><code>left</code>, <code>right</code>, <code>center</code> のいずれかのキーワードで、ボックスの左端から変形の原点までの距離を示します。</dd>
- <dt><var>y-offset-keyword</var></dt>
- <dd><code>top</code>, <code>bottom</code>, <code>center</code> のいずれかのキーワードで、ボックスの上端から変形の原点までの距離を示します。</dd>
- <dt><var>z-offset</var></dt>
- <dd>{{cssxref("&lt;length&gt;")}} 値 ({{cssxref("&lt;percentage&gt;")}} を指定すると文が無効になります) で、ユーザーの視点と z=0 原点の距離を示します。</dd>
-</dl>
+- <var>x-offset</var>
+  - : {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} の、ボックスの左端から変形の原点までの距離を示す値です。
+- <var>offset-keyword</var>
+  - : `left`, `right`, `top`, `bottom`, `center` のいずれかのキーワードで、対応するオフセットを表します。
+- <var>y-offset</var>
+  - : {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} の、ボックスの右端から変形の原点までの距離を示す値です。
+- <var>x-offset-keyword</var>
+  - : `left`, `right`, `center` のいずれかのキーワードで、ボックスの左端から変形の原点までの距離を示します。
+- <var>y-offset-keyword</var>
+  - : `top`, `bottom`, `center` のいずれかのキーワードで、ボックスの上端から変形の原点までの距離を示します。
+- <var>z-offset</var>
+  - : {{cssxref("&lt;length&gt;")}} 値 ({{cssxref("&lt;percentage&gt;")}} を指定すると文が無効になります) で、ユーザーの視点と z=0 原点の距離を示します。
 
-<p>キーワードは便利な速記であり、次の {{cssxref("&lt;percentage&gt;")}} 値に相当します。</p>
+キーワードは便利な速記であり、次の {{cssxref("&lt;percentage&gt;")}} 値に相当します。
 
 <table class="standard-table">
  <thead>
@@ -123,31 +121,31 @@ transform-origin: unset;
  </thead>
  <tbody>
   <tr>
-   <td><code>left</code></td>
-   <td><code>0%</code></td>
+   <td>`left`</td>
+   <td>`0%`</td>
   </tr>
   <tr>
-   <td><code>center</code></td>
-   <td><code>50%</code></td>
+   <td>`center`</td>
+   <td>`50%`</td>
   </tr>
   <tr>
-   <td><code>right</code></td>
-   <td><code>100%</code></td>
+   <td>`right`</td>
+   <td>`100%`</td>
   </tr>
   <tr>
-   <td><code>top</code></td>
-   <td><code>0%</code></td>
+   <td>`top`</td>
+   <td>`0%`</td>
   </tr>
   <tr>
-   <td><code>bottom</code></td>
-   <td><code>100%</code></td>
+   <td>`bottom`</td>
+   <td>`100%`</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
 <h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
 
@@ -163,7 +161,7 @@ transform-origin: unset;
   </tr>
   <tr>
    <td>
-    <p><code>transform: none;</code></p>
+    `transform: none;`
    </td>
    <td>
     <div class="hidden" id="transform_none">
@@ -184,12 +182,12 @@ transform: none;
 </pre>
     </div>
 
-    <div>{{EmbedLiveSample('transform_none', '', 120, '', '', 'no-button') }}</div>
+    {{EmbedLiveSample('transform_none', '', 120, '', '', 'no-button') }}
    </td>
   </tr>
   <tr>
    <td>
-    <p><code>transform: rotate(30deg);</code></p>
+    `transform: rotate(30deg);`
    </td>
    <td>
     <div class="hidden" id="transform_rotate_only">
@@ -210,7 +208,7 @@ transform: rotate(30deg);
 </pre>
     </div>
 
-    <div>{{EmbedLiveSample('transform_rotate_only', '', 120, '', '', 'no-button') }}</div>
+    {{EmbedLiveSample('transform_rotate_only', '', 120, '', '', 'no-button') }}
    </td>
   </tr>
   <tr>
@@ -239,7 +237,7 @@ transform: rotate(30deg);
 </pre>
     </div>
 
-    <div>{{EmbedLiveSample('transform_rotate', '', 120, '', '', 'no-button') }}</div>
+    {{EmbedLiveSample('transform_rotate', '', 120, '', '', 'no-button') }}
    </td>
   </tr>
   <tr>
@@ -268,7 +266,7 @@ transform: rotate(30deg);
 </pre>
     </div>
 
-    <div>{{EmbedLiveSample('transform_rotate_with_percentage', '', 120, '', '', 'no-button') }}</div>
+    {{EmbedLiveSample('transform_rotate_with_percentage', '', 120, '', '', 'no-button') }}
    </td>
   </tr>
   <tr>
@@ -297,12 +295,12 @@ transform: rotate(30deg);
 </pre>
     </div>
 
-    <div>{{EmbedLiveSample('transform_rotate_with_em', '', 120, '', '', 'no-button') }}</div>
+    {{EmbedLiveSample('transform_rotate_with_em', '', 120, '', '', 'no-button') }}
    </td>
   </tr>
   <tr>
    <td>
-    <p><code>transform: scale(1.7);</code></p>
+    `transform: scale(1.7);`
    </td>
    <td>
     <div class="hidden" id="transform_scale_only">
@@ -317,13 +315,13 @@ width: 3em;
 height: 3em;
 border: solid 1px;
 background-color: palegreen;
-transform: scale(<code>1.7</code>);
--webkit-transform: scale(<code>1.7</code>);
+transform: scale(`1.7`);
+-webkit-transform: scale(`1.7`);
 }
 </pre>
     </div>
 
-    <div>{{EmbedLiveSample('transform_scale_only', '', 120, '', '', 'no-button') }}</div>
+    {{EmbedLiveSample('transform_scale_only', '', 120, '', '', 'no-button') }}
    </td>
   </tr>
   <tr>
@@ -344,15 +342,15 @@ width: 3em;
 height: 3em;
 border: solid 1px;
 background-color: palegreen;
-transform: scale(<code>1.7</code>);
--webkit-transform: scale(<code>1.7</code>);
+transform: scale(`1.7`);
+-webkit-transform: scale(`1.7`);
 transform-origin: 0 0;
 -webkit-transform-origin: 0 0;
 }
 </pre>
     </div>
 
-    <div>{{EmbedLiveSample('transform_scale_without_origin', '', 120, '', '', 'no-button') }}</div>
+    {{EmbedLiveSample('transform_scale_without_origin', '', 120, '', '', 'no-button') }}
    </td>
   </tr>
   <tr>
@@ -373,15 +371,15 @@ width: 3em;
 height: 3em;
 border: solid 1px;
 background-color: palegreen;
-transform: scale(<code>1.7</code>);
--webkit-transform: scale(<code>1.7</code>);
+transform: scale(`1.7`);
+-webkit-transform: scale(`1.7`);
 transform-origin: 100% -30%;
 -webkit-transform-origin: 100% -30%;
 }
 </pre>
     </div>
 
-    <div>{{EmbedLiveSample('transform_scale', '', 120, '', '', 'no-button') }}</div>
+    {{EmbedLiveSample('transform_scale', '', 120, '', '', 'no-button') }}
    </td>
   </tr>
   <tr>
@@ -410,7 +408,7 @@ transform-origin: 100% -30%;
 </pre>
     </div>
 
-    <div>{{EmbedLiveSample('transform_skew_x', '', 120, '', '', 'no-button') }}</div>
+    {{EmbedLiveSample('transform_skew_x', '', 120, '', '', 'no-button') }}
    </td>
   </tr>
   <tr>
@@ -439,7 +437,7 @@ transform-origin: 100% -30%;
 </pre>
     </div>
 
-    <div>{{EmbedLiveSample('transform_skew_y', '', 120, '', '', 'no-button') }}</div>
+    {{EmbedLiveSample('transform_skew_y', '', 120, '', '', 'no-button') }}
    </td>
   </tr>
  </tbody>
@@ -466,11 +464,11 @@ transform-origin: 100% -30%;
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("css.properties.transform-origin")}}</p>
+{{Compat("css.properties.transform-origin")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
 <ul>
- <li><a href="/ja/docs/Web/CSS/Using_CSS_transforms">CSS 変形の使用</a></li>
- <li><a href="https://css-tricks.com/almanac/properties/t/transform-origin/">https://css-tricks.com/almanac/properties/t/transform-origin/</a></li>
+ <li>[CSS 変形の使用](/ja/docs/Web/CSS/Using_CSS_transforms)</li>
+ <li>[https://css-tricks.com/almanac/properties/t/transform-origin/](https://css-tricks.com/almanac/properties/t/transform-origin/)</li>
 </ul>

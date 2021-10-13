@@ -11,19 +11,19 @@ tags:
   - 距離
 translation_of: Web/CSS/perspective
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><strong><code>perspective</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、 z=0 の平面とユーザーとの間の距離を定めて三次元に配置された要素に遠近感を与えます。</span> z&gt;0 である三次元要素はより大きく、 z&lt;0 である三次元要素はより小さくなります。効果の強度はこのプロパティの値から決められます。</p>
+<span class="seoSummary">**`perspective`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 z=0 の平面とユーザーとの間の距離を定めて三次元に配置された要素に遠近感を与えます。</span> z&gt;0 である三次元要素はより大きく、 z&lt;0 である三次元要素はより小さくなります。効果の強度はこのプロパティの値から決められます。
 
-<div>{{EmbedInteractiveExample("pages/css/perspective.html")}}</div>
+{{EmbedInteractiveExample("pages/css/perspective.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) をクローンしてプルリクエストを送信してください。</p>
 
-<p>ユーザーの背後にある 3D 要素の部品、つまり z 軸座標が CSS の <code>perspective</code> プロパティの値より大きい要素は描画されません。</p>
+ユーザーの背後にある 3D 要素の部品、つまり z 軸座標が CSS の `perspective` プロパティの値より大きい要素は描画されません。
 
-<p><em>消失点</em>は既定で要素の中心に置かれますが、この位置は {{cssxref("perspective-origin")}} プロパティで変更できます。</p>
+<em>消失点</em>は既定で要素の中心に置かれますが、この位置は {{cssxref("perspective-origin")}} プロパティで変更できます。
 
-<p>このプロパティを <code>0</code> と <code>none</code> 以外の値で使用すると、新たな<a href="/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">重ね合わせコンテキスト</a>を生成します。また、その場合、オブジェクトはそれを含む <code>position: fixed</code> の要素の包含ブロックとして動作します。</p>
+このプロパティを `0` と `none` 以外の値で使用すると、新たな[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)を生成します。また、その場合、オブジェクトはそれを含む `position: fixed` の要素の包含ブロックとして動作します。
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -42,12 +42,10 @@ perspective: unset;
 
 <h3 id="Values" name="Values">値</h3>
 
-<dl>
- <dt><code>none</code></dt>
- <dd>立体的な変形を一切適用しないことを示すキーワードです。</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>ユーザーと z=0 平面間の距離を表す {{cssxref("&lt;length&gt;")}} です。立体的な変形を要素とその内容に適用するときに使います。 <code>0</code> や負の値ならば、立体的な変形は適用されません。</dd>
-</dl>
+- `none`
+  - : 立体的な変形を一切適用しないことを示すキーワードです。
+- `&lt;length&gt;`
+  - : ユーザーと z=0 平面間の距離を表す {{cssxref("&lt;length&gt;")}} です。立体的な変形を要素とその内容に適用するときに使います。 `0` や負の値ならば、立体的な変形は適用されません。
 
 <h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
 
@@ -57,15 +55,15 @@ perspective: unset;
 
 <h3 id="Setting_perspective" name="Setting_perspective">視点の設定</h3>
 
-<p>この例は様々な位置に視点が設定された立方体を表示します。どのように立方体が早く縮まるかは、 {{ cssxref("perspective") }} プロパティで定義されます。小さい値ほど、視点は近くなります。</p>
+この例は様々な位置に視点が設定された立方体を表示します。どのように立方体が早く縮まるかは、 {{ cssxref("perspective") }} プロパティで定義されます。小さい値ほど、視点は近くなります。
 
 <h4 id="Result" name="Result">結果</h4>
 
-<p>{{EmbedLiveSample('Setting_perspective', 660, 700)}}</p>
+{{EmbedLiveSample('Setting_perspective', 660, 700)}}
 
 <h4 id="HTML">HTML</h4>
 
-<p>以下の HTML は、４つの同じボックスのコピーを、様々な値の視点を設定して作成します。</p>
+以下の HTML は、４つの同じボックスのコピーを、様々な値の視点を設定して作成します。
 
 <pre class="brush: html">&lt;table&gt;
   &lt;tbody&gt;
@@ -139,7 +137,7 @@ perspective: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<p>様々な距離の遠近法を設定するために使用することができる CSS のクラスです。コンテナーボックスや立方体自身、それぞれの面のためのクラスも含みます。</p>
+様々な距離の遠近法を設定するために使用することができる CSS のクラスです。コンテナーボックスや立方体自身、それぞれの面のためのクラスも含みます。
 
 <pre class="brush: css">/* さまざまな perspective の値のためのショートハンドクラス */
 .pers250 {
@@ -246,14 +244,14 @@ th, p, td {
  </tbody>
 </table>
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-<p>{{Compat("css.properties.perspective")}}</p>
+{{Compat("css.properties.perspective")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
 <ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">CSS 変形の使用</a></li>
+ <li>[CSS 変形の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)</li>
 </ul>

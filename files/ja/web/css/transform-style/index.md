@@ -10,17 +10,17 @@ tags:
   - 'recipe:css-property'
 translation_of: Web/CSS/transform-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><strong><code>transform-style</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、要素の子要素を 3D 空間に配置するのか、平面化して要素の平面に配置するのかを設定します。</span></p>
+<span class="seoSummary">**`transform-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の子要素を 3D 空間に配置するのか、平面化して要素の平面に配置するのかを設定します。</span>
 
-<div>{{EmbedInteractiveExample("pages/css/transform-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transform-style.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) をクローンしてプルリクエストを送信してください。</p>
 
-<p>平面化した場合、子要素は自身の 3D 空間に存在しなくなります。</p>
+平面化した場合、子要素は自身の 3D 空間に存在しなくなります。
 
-<p>このプロパティは継承されないため、葉要素以外のすべての子孫要素で設定する必要があります。</p>
+このプロパティは継承されないため、葉要素以外のすべての子孫要素で設定する必要があります。
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -36,16 +36,14 @@ transform-style: unset;
 
 <h3 id="Values" name="Values">値</h3>
 
-<dl>
- <dt><code>flat</code></dt>
- <dd>要素の子要素を要素自身の平面上に配置することを示します。</dd>
- <dt><code>preserve-3d</code></dt>
- <dd>要素の子要素を 3D 空間に配置することを示します。</dd>
-</dl>
+- `flat`
+  - : 要素の子要素を要素自身の平面上に配置することを示します。
+- `preserve-3d`
+  - : 要素の子要素を 3D 空間に配置することを示します。
 
 <h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
 <h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
 
@@ -55,9 +53,9 @@ transform-style: unset;
 
 <h3 id="Transform_style_demonstration" name="Transform_style_demonstration">変換スタイルのデモ</h3>
 
-<p>この例では、変換を使用して 3D の立方体を作成しています。立方体の面の親コンテナーには、既定で <code>transform-style: preserve-3d</code> が設定されているため、3D 空間で変換され、意図したとおりに表示されます。</p>
+この例では、変換を使用して 3D の立方体を作成しています。立方体の面の親コンテナーには、既定で `transform-style: preserve-3d` が設定されているため、3D 空間で変換され、意図したとおりに表示されます。
 
-<p>また、これと <code>transform-style: flat</code> の間で切り替えられるチェックボックスも用意されています。この別な状態では、立方体の面はすべて親の平面上に平坦化され、使用しているブラウザーによっては全く表示されない場合があります。</p>
+また、これと `transform-style: flat` の間で切り替えられるチェックボックスも用意されています。この別な状態では、立方体の面はすべて親の平面上に平坦化され、使用しているブラウザーによっては全く表示されない場合があります。
 
 <h4 id="HTML">HTML</h4>
 
@@ -142,7 +140,7 @@ checkbox.addEventListener('change', () =&gt; {
 
 <h4 id="Result" name="Result">結果</h4>
 
-<p>{{EmbedLiveSample('Transform_style_demonstration', '100%', 260)}}</p>
+{{EmbedLiveSample('Transform_style_demonstration', '100%', 260)}}
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
 
@@ -165,10 +163,10 @@ checkbox.addEventListener('change', () =&gt; {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("css.properties.transform-style")}}</p>
+{{Compat("css.properties.transform-style")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
 <ul>
- <li><a href="/ja/docs/CSS/Using_CSS_transforms">CSS 変形の使用</a></li>
+ <li>[CSS 変形の使用](/ja/docs/CSS/Using_CSS_transforms)</li>
 </ul>
