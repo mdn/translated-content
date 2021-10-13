@@ -7,9 +7,13 @@ translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 
 <p>{{SeeCompatTable}}</p>
 
-<p><strong>optional chaining</strong> 연산자 <strong><code>?.</code></strong> 는 체인의 각 참조가 유효한지 명시적으로 검증하지 않고, 연결된 객체 체인 내에 깊숙이 위치한 속성 값을 읽을 수 있다. <span class="seoSummary"><code>?.</code> 연산자는 <code>.</code> 체이닝 연산자와 유사하게 작동하지만, 만약 참조가 {{glossary("nullish")}} ({{JSxRef("null")}} 또는 {{JSxRef("undefined")}})이라면, 에러가 발생하는 것 대신에 표현식의 리턴 값은 <code>undefined</code>로 단락된다.</span> 함수 호출에서 사용될 때, 만약 주어진 함수가 존재하지 않는다면, <code>undefined</code>를 리턴한다.</p>
+<p><strong>optional chaining</strong> 연산자 <strong><code>?.</code></strong> 는 체인의 각 참조가 유효한지 명시적으로 검증하지 않고, 연결된 객체 체인 내에 깊숙이 위치한 속성 값을 읽을 수 있다.</p>
+  
+<p><code>?.</code> 연산자는 <code>.</code> 체이닝 연산자와 유사하게 작동하지만, 만약 참조가 {{glossary("nullish")}} ({{JSxRef("null")}} 또는 {{JSxRef("undefined")}})이라면, 에러가 발생하는 것 대신에 표현식의 리턴 값은 <code>undefined</code>로 단락된다. 함수 호출에서 사용될 때, 만약 주어진 함수가 존재하지 않는다면, <code>undefined</code>를 리턴한다.</p>
 
-<p>이것은 참조가 누락될 가능성이 있는 경우 연결된 속성으로 접근할 때 더 짧고 간단한 표현식이 생성된다. 어떤 속성이 필요한지에 대한 보증이 확실하지 않는 경우 객체의 내용을 탐색하는 동안 도움이 될 수 있다.</p>
+<p>따라서 참조가 누락될 가능성이 있는 경우 연결된 속성으로 접근할 때 더 짧고 간단한 표현식이 생성된다. 어떤 속성이 필요한지에 대한 보증이 확실하지 않는 경우 객체의 내용을 탐색하는 동안 도움이 될 수 있다.</p>
+
+<p>optional chaining은 선언되지 않은 루트 객체에 사용할 수 없지만, 정의되지 않은 루트 객체와는 함께 사용할 수 있습니다.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html")}}</div>
 
@@ -55,7 +59,7 @@ translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 
 <h4 id="optional_callbacks과_event_handlers_다루기">optional callbacks과 event handlers 다루기</h4>
 
-<p>만약 객체에서 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring">destructuring assignment</a>로 callbacks 또는 fetch 메서드를 사용한다면, 그 존재 여부를 테스트하지 않으면 함수로 호출할 수 없는 존재 하지 않는 값을 가질 수 있다. <code>?.</code>을 사용하면, 다음 추가 테스트를 피할 수 있다:</p>
+<p>만약 객체에서 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring">destructuring assignment</a>로 callbacks 또는 fetch 메서드를 사용한다면, 그 존재 여부를 테스트하지 않으면 함수로 호출할 수 없는 존재 하지 않는 값을 가질 수 있다. <code>?.</code>을 사용하면, 다음 추가 테스트를 피할 수 있다:</p>
 
 <pre class="brush: js">// Written as of ES2019
 function doSomething(onContent, onError) {
@@ -83,7 +87,7 @@ function doSomething(onContent, onError) {
 
 <h3 id="표현식에서_Optional_chaining">표현식에서 Optional chaining</h3>
 
-<p>optional chaining 연산자를 속성에 표현식으로 접근할 때 대괄호 표기법(<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation">the bracket notation of the property accessor</a>)을 사용할 수 있다:</p>
+<p>optional chaining 연산자를 속성에 표현식으로 접근할 때 대괄호 표기법(<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation">the bracket notation of the property accessor</a>)을 사용할 수 있다:</p>
 
 <pre class="brush: js">let nestedProp = obj?.['prop' + 'Name'];
 </pre>
