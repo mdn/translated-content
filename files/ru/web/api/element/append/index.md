@@ -13,7 +13,7 @@ translation_of: Web/API/Element/append
 ---
 {{APIRef("DOM")}}
 
-Метод **`Element.append()`** вставляет один или несколько {{domxref("Node", "узлов")}} или {{domxref("DOMString", "строк с текстом")}} в конец `Element`. {{domxref("DOMString", "Строки с текстом")}} вставляются как {{domxref("Text", "текстовое содержимое")}}.
+Метод **`Element.append()`** вставляет {{domxref("Node", "узлы")}} или {{domxref("DOMString", "строки с текстом")}} в конец `Element`. {{domxref("DOMString", "Строки с текстом")}} вставляются как {{domxref("Text", "текстовое содержимое")}}.
 
 Отличия от метода {{domxref("Node.appendChild()")}}:
 
