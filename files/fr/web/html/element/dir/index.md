@@ -14,53 +14,42 @@ tags:
 translation_of: Web/HTML/Element/dir
 browser-compat: html.elements.dir
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<div class="warning">
-  <p><strong>Attention :</strong> Cette fonctionnalité est obsolète. Bien qu'encore supportée par des navigateurs, son utilisation est découragée pour tout nouveau projet. Évitez de l'utiliser.</p>
-</div>
+> **Attention :** Cette fonctionnalité est obsolète. Bien qu'encore supportée par des navigateurs, son utilisation est découragée pour tout nouveau projet. Évitez de l'utiliser.
 
-<p>L'élément HTML <strong><code>&lt;dir&gt;</code></strong> (pour <em>directory</em>) est utilisé comme un conteneur pour un répertoire (c'est-à-dire un ensemble de fichiers). Des styles et icônes peuvent être appliqués par l'agent utilisateur. Cet élément obsolète ne doit pas être utilisé, il peut être remplacé par l'élément <a href="/fr/docs/Web/HTML/Element/ul"><code>&lt;ul&gt;</code></a> qui permet de représenter des listes et, entre autres, des listes de fichiers.</p>
+L'élément HTML **`<dir>`** (pour _directory_) est utilisé comme un conteneur pour un répertoire (c'est-à-dire un ensemble de fichiers). Des styles et icônes peuvent être appliqués par l'agent utilisateur. Cet élément obsolète ne doit pas être utilisé, il peut être remplacé par l'élément [`<ul>`](/fr/docs/Web/HTML/Element/ul) qui permet de représenter des listes et, entre autres, des listes de fichiers.
 
-<div class="warning">
-  <p><strong>Attention :</strong> Cet élément ne doit pas être utilisé. Bien que présent dans les premières spécifications HTML, il a été déprécié dans HTML 4, et rendu obsolète avec HTML5. Il faudra privilégier l'élément <a href="/fr/docs/Web/HTML/Element/ul"><code>&lt;ul&gt;</code></a>. De plus, aucun navigateur majeur ne prend en charge cet élément.</p>
-</div>
+> **Attention :** Cet élément ne doit pas être utilisé. Bien que présent dans les premières spécifications HTML, il a été déprécié dans HTML 4, et rendu obsolète avec HTML5. Il faudra privilégier l'élément [`<ul>`](/fr/docs/Web/HTML/Element/ul). De plus, aucun navigateur majeur ne prend en charge cet élément.
 
-<h2 id="dom_interface">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface <a href="/fr/docs/Web/API/HTMLDirectoryElement"><code>HTMLDirectoryElement</code></a>.</p>
+Cet élément implémente l'interface [`HTMLDirectoryElement`](/fr/docs/Web/API/HTMLDirectoryElement).
 
-<h2 id="attributes">Attributs</h2>
+## Attributs
 
-<p>Comme pour tous les autres éléments HTML, on peut utiliser <a href="/fr/docs/Web/HTML/Global_attributes">les attributs universels</a> sur cet élément.</p>
+Comme pour tous les autres éléments HTML, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur cet élément.
 
-<dl>
-  <dt><code>compact</code></dt>
-  <dd>Cet attribut booléen indique que la liste doit être rendue avec un affichage compact. L'interprétation de cet attribut dépend de l'agent utilisateur. Il ne fonctionne pas dans tous les navigateurs.
-  <div class="warning">
-    <p><strong>Attention :</strong> Cet attribut ne doit pas être utilisé, car il a été déprécié. L'élément <a href="/fr/docs/Web/HTML/Element/dir"><code>&lt;dir&gt;</code></a> doit être mis en forme en utilisant <a href="/fr/docs/Web/CSS">CSS</a>. Pour obtenir un effect visuel similaire à l'attribut <code>compact</code>, la propriété CSS <a href="/fr/docs/Web/CSS/line-height"><code>line-height</code></a> peut être utilisé avec la valeur <code>80%</code>.</p>
-  </div>
-  </dd>
-</dl>
+- `compact`
 
-<h2 id="specifications">Spécifications</h2>
+  - : Cet attribut booléen indique que la liste doit être rendue avec un affichage compact. L'interprétation de cet attribut dépend de l'agent utilisateur. Il ne fonctionne pas dans tous les navigateurs.
 
-<p>Ne fait pas partie des spécifications actuelles.</p>
+    > **Attention :** Cet attribut ne doit pas être utilisé, car il a été déprécié. L'élément [`<dir>`](/fr/docs/Web/HTML/Element/dir) doit être mis en forme en utilisant [CSS](/fr/docs/Web/CSS). Pour obtenir un effect visuel similaire à l'attribut `compact`, la propriété CSS [`line-height`](/fr/docs/Web/CSS/line-height) peut être utilisé avec la valeur `80%`.
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Spécifications
 
-<p>{{Compat}}</p>
+Ne fait pas partie des spécifications actuelles.
 
-<h2 id="see_also">Voir aussi</h2>
+## Compatibilité des navigateurs
 
-<ul>
-  <li>Les autres éléments HTML utilisés pour les listes : <a href="/fr/docs/Web/HTML/Element/ol"><code>&lt;ol&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/ul"><code>&lt;ul&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a>, and <a href="/fr/docs/Web/HTML/Element/menu"><code>&lt;menu&gt;</code></a>;</li>
-  <li>Les propriétés CSS qui peuvent être utilisées pour mettre en forme l'élément <code>&lt;dir&gt;</code> :
-    <ul>
-      <li>La propriété <a href="/fr/docs/Web/CSS/list-style"><code>list-style</code></a> est utile pour choisir l'apparence des puces.</li>
-      <li><a href="/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">Les compteurs CSS</a> sont utiles pour gérer des listes imbriquées complexes.</li>
-      <li>La propriété <a href="/fr/docs/Web/CSS/line-height"><code>line-height</code></a> est utile pour reproduire l'attribut déprécié <a href="/fr/docs/Web/HTML/Element/dir#attr-compact"><code>compact</code></a>.</li>
-      <li>La propriété <a href="/fr/docs/Web/CSS/margin"><code>margin</code></a> est utile pour contrôler l'indentation de la liste.</li>
-    </ul>
-  </li>
-</ul>
+{{Compat}}
+
+## Voir aussi
+
+- Les autres éléments HTML utilisés pour les listes : [`<ol>`](/fr/docs/Web/HTML/Element/ol), [`<ul>`](/fr/docs/Web/HTML/Element/ul), [`<li>`](/fr/docs/Web/HTML/Element/li), and [`<menu>`](/fr/docs/Web/HTML/Element/menu);
+- Les propriétés CSS qui peuvent être utilisées pour mettre en forme l'élément `<dir>` :
+
+  - La propriété [`list-style`](/fr/docs/Web/CSS/list-style) est utile pour choisir l'apparence des puces.
+  - [Les compteurs CSS](/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters) sont utiles pour gérer des listes imbriquées complexes.
+  - La propriété [`line-height`](/fr/docs/Web/CSS/line-height) est utile pour reproduire l'attribut déprécié [`compact`](/fr/docs/Web/HTML/Element/dir#attr-compact).
+  - La propriété [`margin`](/fr/docs/Web/CSS/margin) est utile pour contrôler l'indentation de la liste.

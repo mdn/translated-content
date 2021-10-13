@@ -12,22 +12,25 @@ tags:
   - textarea
 translation_of: Web/HTML/Attributes/minlength
 ---
-<p>{{HTMLSidebar}}</p>
+{{HTMLSidebar}}
 
-<p>L'attribut <strong><code>minlength</code></strong> définit le nombre minimal de caractères (sous forme d'unités de code UTF-16) que l'utilisateur peut saisir dans un élément <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/Textarea"><code>&lt;textarea&gt;</code></a>. Il doit s'agir d'une valeur entière égale ou supérieure à 0. Si aucune longueur minimale n'est spécifiée, ou si une valeur invalide est spécifiée, l'entrée n'a pas de longueur minimale. Cette valeur doit être inférieure ou égale à la valeur de <a href="/fr/docs/Web/HTML/Attributes/maxlength"><code>maxlength</code></a>, sinon la valeur ne sera jamais valide, car il est impossible de satisfaire aux deux critères.</p>
+L'attribut **`minlength`** définit le nombre minimal de caractères (sous forme d'unités de code UTF-16) que l'utilisateur peut saisir dans un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) ou [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea). Il doit s'agir d'une valeur entière égale ou supérieure à 0. Si aucune longueur minimale n'est spécifiée, ou si une valeur invalide est spécifiée, l'entrée n'a pas de longueur minimale. Cette valeur doit être inférieure ou égale à la valeur de [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength), sinon la valeur ne sera jamais valide, car il est impossible de satisfaire aux deux critères.
 
-<p>L'entrée échouera à la validation des contraintes si la longueur de la valeur textuelle du champ est inférieure à <code>minlength</code> unités de code UTF-16, avec <a href="/fr/docs/Web/API/validityState/tooShort"><code>validityState.tooShort</code></a> retournant <code>true</code>. La validation des contraintes n'est appliquée que lorsque la valeur est modifiée par l'utilisateur. En cas d'échec de la soumission, certains navigateurs affichent un message d'erreur indiquant la longueur minimale requise et la longueur actuelle.</p>
+L'entrée échouera à la validation des contraintes si la longueur de la valeur textuelle du champ est inférieure à `minlength` unités de code UTF-16, avec [`validityState.tooShort`](/fr/docs/Web/API/validityState/tooShort) retournant `true`. La validation des contraintes n'est appliquée que lorsque la valeur est modifiée par l'utilisateur. En cas d'échec de la soumission, certains navigateurs affichent un message d'erreur indiquant la longueur minimale requise et la longueur actuelle.
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<p>En ajoutant <code>minlength="5"</code>, la valeur doit soit être vide, soit comporter cinq caractères ou plus pour être valide.</p>
+En ajoutant `minlength="5"`, la valeur doit soit être vide, soit comporter cinq caractères ou plus pour être valide.
 
-<pre class="brush: html">&lt;label for="fruit"&gt;Entrez un nom de fruit d'au moins 5 lettres.&lt;/label&gt;
-&lt;input type="text" minlength="5" id="fruit"&gt;</pre>
+```html
+<label for="fruit">Entrez un nom de fruit d'au moins 5 lettres.</label>
+<input type="text" minlength="5" id="fruit">
+```
 
-<p>Nous pouvons utiliser des pseudo-classes pour donner un style à l'élément en fonction de la validité de la valeur. La valeur sera valide tant qu'elle sera soit nulle (vide), soit longue de cinq caractères ou plus. <em>Vert</em> est invalide, <em>Citron</em> est valide.</p>
+Nous pouvons utiliser des pseudo-classes pour donner un style à l'élément en fonction de la validité de la valeur. La valeur sera valide tant qu'elle sera soit nulle (vide), soit longue de cinq caractères ou plus. _Vert_ est invalide, _Citron_ est valide.
 
-<pre class="brush: css">input {
+```css
+input {
   border: 2px solid currentcolor;
 }
 input:invalid {
@@ -35,42 +38,27 @@ input:invalid {
 }
 input:invalid:focus {
   background-image: linear-gradient(pink, lightgreen);
-}</pre>
+}
+```
 
-<div>{{EmbedLiveSample('examples', '', 40)}}</div>
+{{EmbedLiveSample('examples', '', 40)}}
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', 'input.html#attr-input-minlength', 'l\'attribut minlength')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5.1', 'input.html#attr-minlength-accept', 'l\'attribut minlength')}}</td>
-      <td>{{Spec2('HTML5.1')}}</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                        | Statut                           |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| {{SpecName('HTML WHATWG', 'input.html#attr-input-minlength', 'l\'attribut minlength')}} | {{Spec2('HTML WHATWG')}} |
+| {{SpecName('HTML5.1', 'input.html#attr-minlength-accept', 'l\'attribut minlength')}}     | {{Spec2('HTML5.1')}}     |
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.elements.attribute.minlength")}}</p>
+{{Compat("html.elements.attribute.minlength")}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>L'attribut <a href="/fr/docs/Web/HTML/Attributes/maxlength"><code>maxlength</code></a></li>
-  <li>L'attribut <a href="/fr/docs/Web/HTML/Attributes/size"><code>size</code></a></li>
-  <li>L'attribut <a href="/fr/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a></li>
-  <li><a href="/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation">Validation des contraintes</a></li>
-  <li>L'API <a href="/fr/docs/Web/API/Constraint_validation">Constraint validation</a></li>
-  <li>L'élément <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a></li>
-</ul>
+- L'attribut [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength)
+- L'attribut [`size`](/fr/docs/Web/HTML/Attributes/size)
+- L'attribut [`pattern`](/fr/docs/Web/HTML/Attributes/pattern)
+- [Validation des contraintes](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- L'API [Constraint validation](/fr/docs/Web/API/Constraint_validation)
+- L'élément [`<input>`](/fr/docs/Web/HTML/Element/Input)

@@ -9,42 +9,27 @@ tags:
   - Web
 translation_of: Web/HTML/Element/nobr
 ---
-<div>{{HTMLRef}}{{obsolete_header}}{{non-standard_header}}</div>
+{{HTMLRef}}{{obsolete_header}}{{non-standard_header}}
 
-<p>L'élément HTML <strong><code>&lt;nobr&gt;</code></strong> évite qu'un texte soit coupé par un retour à la ligne automatique ; il est donc affiché sur une seule ligne. Il peut être alors nécessaire d'utiliser les barres de défilement pour lire le texte en intégralité.</p>
+L'élément HTML **`<nobr>`** évite qu'un texte soit coupé par un retour à la ligne automatique ; il est donc affiché sur une seule ligne. Il peut être alors nécessaire d'utiliser les barres de défilement pour lire le texte en intégralité.
 
-<div class="warning">
-<p><strong>Attention :</strong> Cet élément n'est pas standard en HTML et ne doit donc pas être utilisé. <strong>C'est la propriété CSS {{cssxref("white-space")}} doit être utilisée à la place</strong>, de cette manière :</p>
-</div>
+> **Attention :** Cet élément n'est pas standard en HTML et ne doit donc pas être utilisé. **C'est la propriété CSS {{cssxref("white-space")}} doit être utilisée à la place**, de cette manière :
 
-<pre class="brush: html">&lt;span style="white-space: nowrap"&gt;Un texte long sans retour à la ligne.&lt;/span&gt;</pre>
+```html
+<span style="white-space: nowrap">Un texte long sans retour à la ligne.</span>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "obsolete.html#nobr", "&lt;nobr&gt;")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Rendu obsolète et remplacé par {{CSSxRef("white-space")}}.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                             | Commentaires                                                         |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------- |
+| {{SpecName("HTML WHATWG", "obsolete.html#nobr", "&lt;nobr&gt;")}} | {{Spec2("HTML WHATWG")}} | Rendu obsolète et remplacé par {{CSSxRef("white-space")}}. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("html.elements.nobr")}}</div>
+{{Compat("html.elements.nobr")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("white-space")}}</li>
- <li>{{cssxref("overflow")}}</li>
-</ul>
+- {{cssxref("white-space")}}
+- {{cssxref("overflow")}}

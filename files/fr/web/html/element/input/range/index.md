@@ -8,364 +8,373 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/input/range
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>Les éléments {{HTMLElement("input")}} dont l'attribut <code>type</code> vaut <code><strong>range</strong></code> permettent à l'utilisateur d'indiquer une valeur numérique comprise entre deux bornes. La valeur précise n'est pas considérée comme importante. Ces éléments sont généralement représenté avec un curseur sur une ligne ou comme un bouton de potentiel. Ce genre de <em>widget</em> n'étant pas précis, ce type ne devrait pas être utilisé lorsque la valeur exacte fournie par l'utilisateur est importante.</p>
+Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`range`** permettent à l'utilisateur d'indiquer une valeur numérique comprise entre deux bornes. La valeur précise n'est pas considérée comme importante. Ces éléments sont généralement représenté avec un curseur sur une ligne ou comme un bouton de potentiel. Ce genre de _widget_ n'étant pas précis, ce type ne devrait pas être utilisé lorsque la valeur exacte fournie par l'utilisateur est importante.
 
-<p>{{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}</p>
+{{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}
 
-<p>Si le navigateur de l'utilisateur ne prend pas en charge le type <code>range</code>, il utilisera le type <code><a href="/fr/docs/Web/HTML/Element/input/text">text</a></code> à la place.</p>
+Si le navigateur de l'utilisateur ne prend pas en charge le type `range`, il utilisera le type [`text`](/fr/docs/Web/HTML/Element/input/text) à la place.
 
-<h2 id="Valeur">Valeur</h2>
+## Valeur
 
-<p>L'attribut {{htmlattrxref("value", "input")}} contient une chaîne de caractères {{domxref("DOMString")}} qui correspond à la représentation textuelle du nombre sélectionnée. La valeur n'est jamais une chaîne vide (<code>""</code>). La valeur par défaut est celle médiane entre le minimum et le maximum (sauf si la valeur maximale indiquée est inférieure à la valeur minimale, auquel cas la valeur par défaut est celle de l'attribut <code>min</code>).  Voici un fragment de code illustrant cet algorithme pour le choix de la valeur par défaut :</p>
+L'attribut {{htmlattrxref("value", "input")}} contient une chaîne de caractères {{domxref("DOMString")}} qui correspond à la représentation textuelle du nombre sélectionnée. La valeur n'est jamais une chaîne vide (`""`). La valeur par défaut est celle médiane entre le minimum et le maximum (sauf si la valeur maximale indiquée est inférieure à la valeur minimale, auquel cas la valeur par défaut est celle de l'attribut `min`).  Voici un fragment de code illustrant cet algorithme pour le choix de la valeur par défaut :
 
-<pre class="brush: js">defaultValue = (rangeElem.max &lt; rangeElem.min) ? rangeElem.min
-               : rangeElem.min + (rangeElem.max - rangeElem.min)/2;</pre>
+```js
+defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
+               : rangeElem.min + (rangeElem.max - rangeElem.min)/2;
+```
 
-<p>Si on essaie d'obtenir une valeur inférieure au minimum, alors la valeur sera ramenée au minimum (de même si on essaye de dépasser le maximum).</p>
+Si on essaie d'obtenir une valeur inférieure au minimum, alors la valeur sera ramenée au minimum (de même si on essaye de dépasser le maximum).
 
-<h2 id="Attributs_supplémentaires">Attributs supplémentaires</h2>
+## Attributs supplémentaires
 
-<p>En complément des attributs communs à l'ensemble des éléments {{HTMLElement("input")}}, les champs pour les intervalles peuvent utiliser les attributs suivants :</p>
+En complément des attributs communs à l'ensemble des éléments {{HTMLElement("input")}}, les champs pour les intervalles peuvent utiliser les attributs suivants :
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribut</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("max")}}</code></td>
-   <td>La valeur maximale autorisée.</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("min")}}</code></td>
-   <td>La valeur minimale autorisée.</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("step")}}</code></td>
-   <td>Le pas utilisé pour incrémenter la valeur du champ. Cette valeur est utilisée pour l'interface utilisateur du contrôle et pour la validation de la valeur.</td>
-  </tr>
- </tbody>
-</table>
+| Attribut               | Description                                                                                                                                                |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `{{anch("max")}}` | La valeur maximale autorisée.                                                                                                                              |
+| `{{anch("min")}}` | La valeur minimale autorisée.                                                                                                                              |
+| `{{anch("step")}}` | Le pas utilisé pour incrémenter la valeur du champ. Cette valeur est utilisée pour l'interface utilisateur du contrôle et pour la validation de la valeur. |
 
-<h3 id="htmlattrdef(max)">{{htmlattrdef("max")}}</h3>
+### {{htmlattrdef("max")}}
 
-<p>La plus grande valeur autorisée sur l'intervalle. Si la valeur saisie dans le champ (représentée par l'attribut {{htmlattrxref("value", "input")}}) dépasse ce seuil, <a href="/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation">la validation échouera</a>. Si la valeur fournie n'est pas un nombre, aucun maximum ne sera fixé pour la valeur du contrôle.</p>
+La plus grande valeur autorisée sur l'intervalle. Si la valeur saisie dans le champ (représentée par l'attribut {{htmlattrxref("value", "input")}}) dépasse ce seuil, [la validation échouera](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation). Si la valeur fournie n'est pas un nombre, aucun maximum ne sera fixé pour la valeur du contrôle.
 
-<p>Cette valeur doit être supérieure ou égale à celle indiquée par l'attribut <code>min</code>.</p>
+Cette valeur doit être supérieure ou égale à celle indiquée par l'attribut `min`.
 
-<h3 id="htmlattrdef(min)">{{htmlattrdef("min")}}</h3>
+### {{htmlattrdef("min")}}
 
-<p>La plus petite valeur autorisée sur l'intervalle. Si la valeur saisie dans le champ (représentée par l'attribut {{htmlattrxref("value", "input")}}) est inférieure à ce seuil, <a href="/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation">la validation échouera</a>. Si la valeur fournie n'est pas un nombre, aucun minimum ne sera fixé pour la valeur du contrôle.</p>
+La plus petite valeur autorisée sur l'intervalle. Si la valeur saisie dans le champ (représentée par l'attribut {{htmlattrxref("value", "input")}}) est inférieure à ce seuil, [la validation échouera](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation). Si la valeur fournie n'est pas un nombre, aucun minimum ne sera fixé pour la valeur du contrôle.
 
-<p>Cette valeur doit être inférieure ou égale à celle indiquée par l'attribut <code>max</code>.</p>
+Cette valeur doit être inférieure ou égale à celle indiquée par l'attribut `max`.
 
-<h3 id="htmlattrdef(step)">{{htmlattrdef("step")}}</h3>
+### {{htmlattrdef("step")}}
 
-<p>{{page("/fr/docs/Web/HTML/Element/input/number", "step-include")}}</p>
+{{page("/fr/docs/Web/HTML/Element/input/number", "step-include")}}
 
-<p>Par défaut, l'incrément utilisé pour les champs de type <code>number</code> vaut 1 et on ne peut alors saisir que des entiers à momins que la valeur de base ne soit pas entière. Ainsi, si on définit <code>min</code> avec -10 et <code>value</code> avec 1.5, un attribut <code>step</code> qui vaut 1 permettra de saisir les valeurs positives 1.5, 2.5, 3.5, etc. et les valeurs négatives -0.5, -1.5, -2.5, etc.</p>
+Par défaut, l'incrément utilisé pour les champs de type `number` vaut 1 et on ne peut alors saisir que des entiers à momins que la valeur de base ne soit pas entière. Ainsi, si on définit `min` avec -10 et `value` avec 1.5, un attribut `step` qui vaut 1 permettra de saisir les valeurs positives 1.5, 2.5, 3.5, etc. et les valeurs négatives -0.5, -1.5, -2.5, etc.
 
-<h2 id="Utiliser_les_intervalles">Utiliser les intervalles</h2>
+## Utiliser les intervalles
 
-<p>Bien que le type <code>"number"</code> permette à l'utilisateur de saisir un nombre avec certaines contraintes optionnelles (par exemple pour que la valeur soit comprise entre un minimum et un maximum), ce type nécessite de saisir une valeur spécifique. Le type <code>"range"</code> permet de saisir une valeur lorsque l'exactitude de celle-ci importe peu.</p>
+Bien que le type `"number"` permette à l'utilisateur de saisir un nombre avec certaines contraintes optionnelles (par exemple pour que la valeur soit comprise entre un minimum et un maximum), ce type nécessite de saisir une valeur spécifique. Le type `"range"` permet de saisir une valeur lorsque l'exactitude de celle-ci importe peu.
 
-<p>Voici quelques scénarios où un intervalle de saisie est plus pertinent :</p>
+Voici quelques scénarios où un intervalle de saisie est plus pertinent :
 
-<ul>
- <li>Les contrôles relatis à l'audio pour le volume, la balance ou les filtres.</li>
- <li>Les contrôles relatifs à la configuration des couleurs (canaux, transparence, luminosité, etc.)</li>
- <li>Les contrôles relatifs à la configuration de jeux vidéos (difficulté, distance de visibilité, taille du monde généré, etc.)</li>
- <li>La longueur du mot de passe pour les mots de passe générés par un gestionnaire de mots de passe.</li>
-</ul>
+- Les contrôles relatis à l'audio pour le volume, la balance ou les filtres.
+- Les contrôles relatifs à la configuration des couleurs (canaux, transparence, luminosité, etc.)
+- Les contrôles relatifs à la configuration de jeux vidéos (difficulté, distance de visibilité, taille du monde généré, etc.)
+- La longueur du mot de passe pour les mots de passe générés par un gestionnaire de mots de passe.
 
-<p>De façon générale, si un utilisateur est plutôt intéressé dans un pourcentage représentant la distance entre la borne minimale et la borne maximale, un intervalle de saisie sera plus pertinent (par exemple, pour le volume, on pensera plutôt « augmenter le volume jusqu'à la moitié du maximum » que « mettre le volume à 0.5 »).</p>
+De façon générale, si un utilisateur est plutôt intéressé dans un pourcentage représentant la distance entre la borne minimale et la borne maximale, un intervalle de saisie sera plus pertinent (par exemple, pour le volume, on pensera plutôt « augmenter le volume jusqu'à la moitié du maximum » que « mettre le volume à 0.5 »).
 
-<h3 id="Indiquer_le_minimum_et_le_maximum">Indiquer le minimum et le maximum</h3>
+### Indiquer le minimum et le maximum
 
-<p>Par défaut, le minimum vaut 0 et le maximum vaut 100. Si ces bornes ne conviennent pass, on peut facilement les changer via les attributs {{htmlattrxref("min", "input")}} et/ou {{htmlattrxref("max", "input")}}. Ces attributs acceptent des nombres décimaux.</p>
+Par défaut, le minimum vaut 0 et le maximum vaut 100. Si ces bornes ne conviennent pass, on peut facilement les changer via les attributs {{htmlattrxref("min", "input")}} et/ou {{htmlattrxref("max", "input")}}. Ces attributs acceptent des nombres décimaux.
 
-<p>Par exemple, afin de demander à un utilisateur de choisir une valeur approximative dans l'intervalle [-10 , 10], on pourra utiliser :</p>
+Par exemple, afin de demander à un utilisateur de choisir une valeur approximative dans l'intervalle \[-10 , 10], on pourra utiliser :
 
-<pre class="brush: html">&lt;input type="range" min="-10" max="10"&gt;</pre>
+```html
+<input type="range" min="-10" max="10">
+```
 
-<p>{{EmbedLiveSample("Indiquer_le_minimum_et_le_maximum", 600, 40)}}</p>
+{{EmbedLiveSample("Indiquer_le_minimum_et_le_maximum", 600, 40)}}
 
-<h3 id="Définir_la_granularité">Définir la granularité</h3>
+### Définir la granularité
 
-<p>Par défaut, la granularité vaut 1, ce qui signifie que la valeur est toujours un entier. Cela peut être modifié grâce à l'attribut {{htmlattrxref("step")}} qui permet de contrôler la granularité. Ainsi, si on souhaite une valeur comprise entre 5 et 10 et précise avec deux chiffres après la virgule, on pourra utiliser l'attribut <code>step</code> avec la valeur 0.01 :</p>
+Par défaut, la granularité vaut 1, ce qui signifie que la valeur est toujours un entier. Cela peut être modifié grâce à l'attribut {{htmlattrxref("step")}} qui permet de contrôler la granularité. Ainsi, si on souhaite une valeur comprise entre 5 et 10 et précise avec deux chiffres après la virgule, on pourra utiliser l'attribut `step` avec la valeur 0.01 :
 
-<h4 id="Exemple_1">Exemple 1</h4>
-<pre class="brush: html">&lt;input type="range" min="5" max="10" step="0.01"&gt;</pre>
+#### Exemple 1
 
-<p>{{EmbedLiveSample("Exemple_1", 600, 40)}}</p>
+```html
+<input type="range" min="5" max="10" step="0.01">
+```
 
-<h4 id="Exemple_2">Exemple 2</h4>
+{{EmbedLiveSample("Exemple_1", 600, 40)}}
 
-<p>Si on souhaite prendre en charge n'importe quelle valeur, quel que soit le nombre de décimales, on pourra utiliser la valeur <code>any</code> pour l'attribut <code>step</code> :</p>
+#### Exemple 2
 
-<pre class="brush: html">&lt;input type="range" min="0" max="3.14" step="any"&gt;</pre>
+Si on souhaite prendre en charge n'importe quelle valeur, quel que soit le nombre de décimales, on pourra utiliser la valeur `any` pour l'attribut `step` :
 
-<p>{{EmbedLiveSample("Exemple_2", 600, 40)}}</p>
+```html
+<input type="range" min="0" max="3.14" step="any">
+```
 
-<p>Cet exemple permet à l'utilisateur de choisir une valeur entre 0 et 3.14 sans aucune restriction quant à la partie décimale.</p>
-</div>
+{{EmbedLiveSample("Exemple_2", 600, 40)}}
 
-<h3 id="Ajouter_des_marques_et_des_étiquettes">Ajouter des marques et des étiquettes</h3>
+Cet exemple permet à l'utilisateur de choisir une valeur entre 0 et 3.14 sans aucune restriction quant à la partie décimale.
 
-<p>La spécification HTML fournit une certaine flexibilité aux navigateurs pour représenter le contrôle de saisie. La spécification indique comment ajouter des informations pour certains niveaux de l'intervalle grâce à l'attribut  {{htmlattrxref("list", "input")}} et à un élément {{HTMLElement("datalist")}}. En revanche, il n'y a pas de spécifications précises quant aux marques (tirets) positionnés le long du contrôle.</p>
+### Ajouter des marques et des étiquettes
 
-<h4 id="Aperçus">Aperçus</h4>
+La spécification HTML fournit une certaine flexibilité aux navigateurs pour représenter le contrôle de saisie. La spécification indique comment ajouter des informations pour certains niveaux de l'intervalle grâce à l'attribut  {{htmlattrxref("list", "input")}} et à un élément {{HTMLElement("datalist")}}. En revanche, il n'y a pas de spécifications précises quant aux marques (tirets) positionnés le long du contrôle.
 
-<p>La plupart des navigateurs prennent partiellement en charge ces fonctionnalités. Voici donc quelques aperçus du résultat qui peut être obtenu sur macOS avec un navigateur qui prend en charge chacune des fonctionnalités.</p>
+#### Aperçus
 
-<h5 id="Un_contrôle_sans_marque">Un contrôle sans marque</h5>
+La plupart des navigateurs prennent partiellement en charge ces fonctionnalités. Voici donc quelques aperçus du résultat qui peut être obtenu sur macOS avec un navigateur qui prend en charge chacune des fonctionnalités.
 
-<p>Voici ce qu'on option lorsque le navigateur ne prend pas en charge cette fonctionnalité ou que l'attribut {{htmlattrxref("list", "input")}} est absent.</p>
+##### Un contrôle sans marque
+
+Voici ce qu'on option lorsque le navigateur ne prend pas en charge cette fonctionnalité ou que l'attribut {{htmlattrxref("list", "input")}} est absent.
 
 <table class="fullwidth standard-table">
- <tbody>
-  <tr>
-   <th>HTML</th>
-   <th>Aperçu</th>
-  </tr>
-  <tr>
-   <td>
-    <pre class="brush: html">
-&lt;input type="range"&gt;</pre>
-   </td>
-   <td><img alt="Capture d'écran d'un contrôle curseur sur macOS" src="macslider-plain.png"></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>HTML</th>
+      <th>Aperçu</th>
+    </tr>
+    <tr>
+      <td><pre class="brush: html">&#x3C;input type="range"></pre></td>
+      <td>
+        <img
+          alt="Capture d&#x27;écran d&#x27;un contrôle curseur sur macOS"
+          src="macslider-plain.png"
+        />
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h5 id="Un_contrôle_avec_des_marques">Un contrôle avec des marques</h5>
+##### Un contrôle avec des marques
 
-<p>Dans l'exemple qui suit, le contrôle utilise un attribut <code>list</code> qui indique l'identifiant d'un élément {{HTMLElement("datalist")}} qui définit un ensemble de marques à appliquer sur le contrôle. Il y en a ici 11 : une marque pour 0% puis une marque tous les 10%. Chaque point pour lequel on souhaite afficher une marque est représenté par un élément {{HTMLElement("option")}} dont la valeur de l'attribut {{htmlattrxref("value", "option")}} correspond à l'emplacement de la marque.</p>
+Dans l'exemple qui suit, le contrôle utilise un attribut `list` qui indique l'identifiant d'un élément {{HTMLElement("datalist")}} qui définit un ensemble de marques à appliquer sur le contrôle. Il y en a ici 11 : une marque pour 0% puis une marque tous les 10%. Chaque point pour lequel on souhaite afficher une marque est représenté par un élément {{HTMLElement("option")}} dont la valeur de l'attribut {{htmlattrxref("value", "option")}} correspond à l'emplacement de la marque.
 
 <table class="fullwidth standard-table">
- <tbody>
-  <tr>
-   <th>HTML</th>
-   <th>Aperçu</th>
-  </tr>
-  <tr>
-   <td>
-    <pre class="brush: html">
-&lt;input type="range" list="tickmarks"&gt;
+  <tbody>
+    <tr>
+      <th>HTML</th>
+      <th>Aperçu</th>
+    </tr>
+    <tr>
+      <td>
+        <pre class="brush: html">
+&#x3C;input type="range" list="tickmarks">
 
-&lt;datalist id="tickmarks"&gt;
-  &lt;option value="0"&gt;
-  &lt;option value="10"&gt;
-  &lt;option value="20"&gt;
-  &lt;option value="30"&gt;
-  &lt;option value="40"&gt;
-  &lt;option value="50"&gt;
-  &lt;option value="60"&gt;
-  &lt;option value="70"&gt;
-  &lt;option value="80"&gt;
-  &lt;option value="90"&gt;
-  &lt;option value="100"&gt;
-&lt;/datalist&gt;
-</pre>
-   </td>
-   <td><img alt="Capture d'écran un contrôle curseur sur macOS" src="macslider-ticks.png"></td>
-  </tr>
- </tbody>
+&#x3C;datalist id="tickmarks">
+&#x3C;option value="0">
+&#x3C;option value="10">
+&#x3C;option value="20">
+&#x3C;option value="30">
+&#x3C;option value="40">
+&#x3C;option value="50">
+&#x3C;option value="60">
+&#x3C;option value="70">
+&#x3C;option value="80">
+&#x3C;option value="90">
+&#x3C;option value="100">
+&#x3C;/datalist>
+
+</pre
+        >
+      </td>
+      <td>
+        <img
+          alt="Capture d&#x27;écran un contrôle curseur sur macOS"
+          src="macslider-ticks.png"
+        />
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h5 id="Un_contrôle_avec_des_marques_et_des_étiquettes">Un contrôle avec des marques et des étiquettes</h5>
+##### Un contrôle avec des marques et des étiquettes
 
-<p>Il est possible d'ajouter des étiquettes grâce à l'attribut {{htmlattrxref("label", "option")}} des éléments {{HTMLElement("option")}} correspondants aux marques.</p>
+Il est possible d'ajouter des étiquettes grâce à l'attribut {{htmlattrxref("label", "option")}} des éléments {{HTMLElement("option")}} correspondants aux marques.
 
 <table class="fullwidth standard-table">
- <tbody>
-  <tr>
-   <th>HTML</th>
-   <th>Aperçu</th>
-  </tr>
-  <tr>
-   <td>
-    <pre class="brush: html">
-&lt;input type="range" list="tickmarks"&gt;
+  <tbody>
+    <tr>
+      <th>HTML</th>
+      <th>Aperçu</th>
+    </tr>
+    <tr>
+      <td>
+        <pre class="brush: html">
+&#x3C;input type="range" list="tickmarks">
 
-&lt;datalist id="tickmarks"&gt;
-  &lt;option value="0" label="0%"&gt;
-  &lt;option value="10"&gt;
-  &lt;option value="20"&gt;
-  &lt;option value="30"&gt;
-  &lt;option value="40"&gt;
-  &lt;option value="50" label="50%"&gt;
-  &lt;option value="60"&gt;
-  &lt;option value="70"&gt;
-  &lt;option value="80"&gt;
-  &lt;option value="90"&gt;
-  &lt;option value="100" label="100%"&gt;
-&lt;/datalist&gt;
-</pre>
-   </td>
-   <td><img alt="Capture d'écran un contrôle curseur sur macOS" src="macslider-labels.png"></td>
-  </tr>
- </tbody>
+&#x3C;datalist id="tickmarks">
+&#x3C;option value="0" label="0%">
+&#x3C;option value="10">
+&#x3C;option value="20">
+&#x3C;option value="30">
+&#x3C;option value="40">
+&#x3C;option value="50" label="50%">
+&#x3C;option value="60">
+&#x3C;option value="70">
+&#x3C;option value="80">
+&#x3C;option value="90">
+&#x3C;option value="100" label="100%">
+&#x3C;/datalist>
+
+</pre
+        >
+      </td>
+      <td>
+        <img
+          alt="Capture d&#x27;écran un contrôle curseur sur macOS"
+          src="macslider-labels.png"
+        />
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>Note :</strong> Actuellement, aucun navigateur ne prend en charge l'ensemble de ces fonctionnalités. Firefox n'affiche aucune marque ni étiquette et Chrome affiche uniquement les marques mais pas les étiquettes. La version 66 (66.0.3359.181) de Chrome prendre en charge les étiquettes mais par défaut l'élément {{HTMLElement("datalist")}} est mis en forme avec CSS et {{cssxref("display")}}<code>: none;</code> , ce qui le masque. Il faut donc rajouter des règles de mises en forme spécifiques.</p>
-</div>
+> **Note :** Actuellement, aucun navigateur ne prend en charge l'ensemble de ces fonctionnalités. Firefox n'affiche aucune marque ni étiquette et Chrome affiche uniquement les marques mais pas les étiquettes. La version 66 (66.0.3359.181) de Chrome prendre en charge les étiquettes mais par défaut l'élément {{HTMLElement("datalist")}} est mis en forme avec CSS et {{cssxref("display")}}`: none;` , ce qui le masque. Il faut donc rajouter des règles de mises en forme spécifiques.
 
-<h3 id="Modifier_l'orientation_du_curseur">Modifier l'orientation du curseur</h3>
+### Modifier l'orientation du curseur
 
-<p>Par exemple :</p>
+Par exemple :
 
-<h4 id="horizontal">Horizontal</h4>
+#### Horizontal
 
-<pre class="brush: html">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
+```html
+<input type="range" id="volume" min="0" max="11" value="7" step="1">
+```
 
-<p>{{EmbedLiveSample("horizontal", 200, 200, "orientation_sample1.png")}}</p>
+{{EmbedLiveSample("horizontal", 200, 200, "orientation_sample1.png")}}
 
-<p>Le contrôle est ici horizontal, pour le rendre vertical, on pourra utiliser un peu de CSS afin de le rendre plus haut que large :</p>
+Le contrôle est ici horizontal, pour le rendre vertical, on pourra utiliser un peu de CSS afin de le rendre plus haut que large :
 
-<h4 id="vertical">Vertical</h4>
+#### Vertical
 
-<h5 id="CSS">CSS</h5>
+##### CSS
 
-<pre class="brush: css">#volume {
+```css
+#volume {
   height: 150px;
   width: 50px;
-}</pre>
+}
+```
 
-<h5 id="HTML">HTML</h5>
+##### HTML
 
-<pre class="brush: html">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
+```html
+<input type="range" id="volume" min="0" max="11" value="7" step="1">
+```
 
-<h5 id="Result">Résultat</h5>
+##### Résultat
 
-<p>{{EmbedLiveSample("vertical", 200, 200, "orientation_sample2.png")}}</p>
+{{EmbedLiveSample("vertical", 200, 200, "orientation_sample2.png")}}
 
-<p><strong>Currently, no major browsers support creating vertical range inputs using CSS this way, even though it's the way the specification recommends they do it.</strong></p>
+**Currently, no major browsers support creating vertical range inputs using CSS this way, even though it's the way the specification recommends they do it.**
 
+La spécification HTML recommande de dessiner les contrôles verticalement lorsque la hauteur de celui-ci est supérieure à la largeur. Malheureusement, aucun navigateur ne prend actuellement en charge cette fonctionnalité directement. On peut toutefois dessiner un contrôle vertical en appliquant une rotation sur un contrôle horizontal avec du code CSS et notamment {{cssxref("transform")}} pour tourner l'élément.
 
-<p>La spécification HTML recommande de dessiner les contrôles verticalement lorsque la hauteur de celui-ci est supérieure à la largeur. Malheureusement, aucun navigateur ne prend actuellement en charge cette fonctionnalité directement. On peut toutefois dessiner un contrôle vertical en appliquant une rotation sur un contrôle horizontal avec du code CSS et notamment {{cssxref("transform")}} pour tourner l'élément.</p>
+#### Autre exemple
 
-<h4 id="Autre_exemple">Autre exemple</h4>
+##### HTML
 
-<h5 id="HTML_2">HTML</h5>
+Il est nécessaire de placer l'élément {{HTMLElement("input")}} dans un élément {{HTMLElement("div")}} afin de corriger la disposition une fois la transformation appliquée :
 
-<p>Il est nécessaire de placer l'élément {{HTMLElement("input")}} dans un élément {{HTMLElement("div")}} afin de corriger la disposition une fois la transformation appliquée :</p>
+```html
+<div class="slider-wrapper">
+  <input type="range" min="0" max="11" value="7" step="1">
+</div>
+```
 
-<pre class="brush: html">&lt;div class="slider-wrapper"&gt;
-  &lt;input type="range" min="0" max="11" value="7" step="1"&gt;
-&lt;/div&gt;</pre>
+##### CSS
 
-<h5 id="CSS_2">CSS</h5>
+Ensuite, on applique quelques règles CSS. Voici la règle CSS pour l'élément `div` qui indique le mode d'affichage et la taille qu'on souhaite avoir pour que la page soit correctement organisée..
 
-<p>Ensuite, on applique quelques règles CSS. Voici la règle CSS pour l'élément <code>div</code> qui indique le mode d'affichage et la taille qu'on souhaite avoir pour que la page soit correctement organisée..</p>
-
-<pre class="brush: css">.slider-wrapper {
+```css
+.slider-wrapper {
   display: inline-block;
   width: 20px;
   height: 150px;
   padding: 0;
 }
-</pre>
-Ensuite, on applique une transformation sur l'élément <code>&lt;input&gt;</code> au sein de l'espace réservé par le <code>&lt;div&gt;</code> :
+```
 
-<pre class="brush: css">.slider-wrapper input {
+Ensuite, on applique une transformation sur l'élément `<input>` au sein de l'espace réservé par le `<div>` :
+
+```css
+.slider-wrapper input {
   width: 150px;
   height: 20px;
   margin: 0;
   transform-origin: 75px 75px;
   transform: rotate(-90deg);
-}</pre>
+}
+```
 
-<p>Le contrôle mesure alors 150 pixels de long et 20 pixels de haut. Les marges sont nulles et {{cssxref("transform-origin")}} est décalé vers le milieu du contrôle. Le contrôle mesurant 150 pixels de large, décaler le centre de rotation permet d'avoir la zone de destination centrée avec 75 pixels de chaque côté.</p>
+Le contrôle mesure alors 150 pixels de long et 20 pixels de haut. Les marges sont nulles et {{cssxref("transform-origin")}} est décalé vers le milieu du contrôle. Le contrôle mesurant 150 pixels de large, décaler le centre de rotation permet d'avoir la zone de destination centrée avec 75 pixels de chaque côté.
 
-<h5 id="Résultat">Résultat</h5>
+##### Résultat
 
-<p>{{EmbedLiveSample("Autre_exemple", 200, 200, "orientation_sample3.png")}}</p>
+{{EmbedLiveSample("Autre_exemple", 200, 200, "orientation_sample3.png")}}
 
-<h2 id="Validation">Validation</h2>
+## Validation
 
-<p>Il n'existe pas de motif de validation. Cependant, voici les formes de validation automatiques qui sont appliquées :</p>
+Il n'existe pas de motif de validation. Cependant, voici les formes de validation automatiques qui sont appliquées :
 
-<ul>
- <li>Si la valeur de l'attribut {{htmlattrxref("value", "input")}} est quelque chose qui ne peut pas être converti en nombre décimal, la validation échoue.</li>
- <li>La valeur ne doit pas être inférieure à {{htmlattrxref("min", "input")}}. La valeur minimale par défaut est 0.</li>
- <li>La valeur ne doit pas être supérieure à {{htmlattrxref("max", "input")}}. La valeur maximale par défaut est 0.</li>
- <li>La valeur doit être un multiple de {{htmlattrxref("step", "input")}}. La valeur par défaut est 1.</li>
-</ul>
+- Si la valeur de l'attribut {{htmlattrxref("value", "input")}} est quelque chose qui ne peut pas être converti en nombre décimal, la validation échoue.
+- La valeur ne doit pas être inférieure à {{htmlattrxref("min", "input")}}. La valeur minimale par défaut est 0.
+- La valeur ne doit pas être supérieure à {{htmlattrxref("max", "input")}}. La valeur maximale par défaut est 0.
+- La valeur doit être un multiple de {{htmlattrxref("step", "input")}}. La valeur par défaut est 1.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Pour compléter les exemples précédents, on pourra consulter l'article suivant :</p>
+Pour compléter les exemples précédents, on pourra consulter l'article suivant :
 
-<ul>
- <li><a href="/fr/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode">Contrôler plusieurs paramètres grâce à <code>ConstantSourceNode</code> (en anglais)</a></li>
-</ul>
+- [Contrôler plusieurs paramètres grâce à `ConstantSourceNode` (en anglais)](/fr/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 
-<h2 id="Résumé_technique">Résumé technique</h2>
+## Résumé technique
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td><strong>{{anch("Valeur")}}</strong></td>
-   <td>Une chaîne de caractères ({{domxref("DOMString")}}) qui contient la représentation textuelle de la valeur numérique sélectionnée. On utilisera la méthode {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}} afin d'obtenir la valeur sous forme numérique (type {{jsxref("Number")}}).</td>
-  </tr>
-  <tr>
-   <td><strong>Évènements</strong></td>
-   <td>{{event("change")}} et {{event("input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>Attributs pris en charge</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("max", "input")}}, {{htmlattrxref("min", "input")}} et {{htmlattrxref("step", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>Attributs IDL</strong></td>
-   <td><code>list</code>, <code>value</code> et <code>valueAsNumber</code></td>
-  </tr>
-  <tr>
-   <td><strong>Méthodes</strong></td>
-   <td>{{domxref("HTMLInputElement.stepDown", "stepDown()")}} et {{domxref("HTMLInputElement.stepUp", "stepUp()")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td>
+        Une chaîne de caractères ({{domxref("DOMString")}}) qui contient
+        la représentation textuelle de la valeur numérique sélectionnée. On
+        utilisera la méthode
+        {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}}
+        afin d'obtenir la valeur sous forme numérique (type
+        {{jsxref("Number")}}).
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Évènements</strong></td>
+      <td>{{event("change")}} et {{event("input")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Attributs pris en charge</strong></td>
+      <td>
+        {{htmlattrxref("autocomplete", "input")}},
+        {{htmlattrxref("list", "input")}},
+        {{htmlattrxref("max", "input")}},
+        {{htmlattrxref("min", "input")}} et
+        {{htmlattrxref("step", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Attributs IDL</strong></td>
+      <td>
+        <code>list</code>, <code>value</code> et <code>valueAsNumber</code>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Méthodes</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
+        et {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#range-state-(type=range)', '&lt;input type="range"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'sec-forms.html#range-state-typerange', '&lt;input type="range"&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                    | État                             | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('HTML WHATWG', 'forms.html#range-state-(type=range)', '&lt;input type="range"&gt;')}} | {{Spec2('HTML WHATWG')}} | Définition initiale. |
+| {{SpecName('HTML5.1', 'sec-forms.html#range-state-typerange', '&lt;input type="range"&gt;')}}     | {{Spec2('HTML5.1')}}     | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.elements.input.input-range")}}</p>
+{{Compat("html.elements.input.input-range")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires">Les formulaires HTML</a></li>
- <li>{{HTMLElement("input")}} et l'interface {{domxref("HTMLInputElement")}}</li>
- <li><code><a href="/fr/docs/Web/HTML/Element/input/number">&lt;input type="number"&gt;</a></code></li>
-</ul>
+- [Les formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires)
+- {{HTMLElement("input")}} et l'interface {{domxref("HTMLInputElement")}}
+- [`<input type="number">`](/fr/docs/Web/HTML/Element/input/number)

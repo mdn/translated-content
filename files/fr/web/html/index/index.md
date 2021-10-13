@@ -6,4 +6,4 @@ tags:
   - Index
 translation_of: Web/HTML/Index
 ---
-<p>{{Index("/fr/docs/Web/HTML")}}</p>
+{{Index("/fr/docs/Web/HTML")}}

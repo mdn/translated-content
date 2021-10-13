@@ -9,74 +9,41 @@ tags:
 translation_of: Web/HTML/Global_attributes/contenteditable
 original_slug: Web/HTML/Attributs_universels/contenteditable
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>L'<a href="/fr/docs/Web/HTML/Attributs_universels">attribut universel</a> <code><strong>contenteditable</strong></code> est un attribut à valeur contrainte qui indique si l'élément courant doit pouvoir être édité par l'utilisateur ou non. Lorsque c'est le cas, des éléments de l'interface du navigateur (ou de l'agent utilisateur) sont modifiés afin de permettre l'édition.</p>
+L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`contenteditable`** est un attribut à valeur contrainte qui indique si l'élément courant doit pouvoir être édité par l'utilisateur ou non. Lorsque c'est le cas, des éléments de l'interface du navigateur (ou de l'agent utilisateur) sont modifiés afin de permettre l'édition.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/attribute-contenteditable.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/attribute-contenteditable.html","tabbed-shorter")}}
 
-<p>Les valeurs autorisées pour cet attribut sont :</p>
+Les valeurs autorisées pour cet attribut sont :
 
-<ul>
- <li><code>true</code> ou la chaîne de caractères vide qui indiquent que l'élément est éditable</li>
- <li><code>false</code> qui indique que l'élément ne peut pas être édité.</li>
-</ul>
+- `true` ou la chaîne de caractères vide qui indiquent que l'élément est éditable
+- `false` qui indique que l'élément ne peut pas être édité.
 
-<p>Si cet attribut n'est pas défini, sa valeur est héritée depuis son élément parent.</p>
+Si cet attribut n'est pas défini, sa valeur est héritée depuis son élément parent.
 
-<p>Cet attribut n'est pas un attribut booléen ! Cela signifie qu'une valeur explicite est nécessaire pour son fonctionnement. Toute forme telle que <code>&lt;label contenteditable&gt;Exemple&lt;/label&gt;</code> n'est pas autorisée. La version correcte sera <code>&lt;label contenteditable="true"&gt;Exemple&lt;/label&gt;</code>.</p>
+Cet attribut n'est pas un attribut booléen ! Cela signifie qu'une valeur explicite est nécessaire pour son fonctionnement. Toute forme telle que `<label contenteditable>Exemple</label>` n'est pas autorisée. La version correcte sera `<label contenteditable="true">Exemple</label>`.
 
-<p>Il est possible de modifier la couleur du symbole d'insertion grâce à la propriété CSS {{cssxref("caret-color")}}.</p>
+Il est possible de modifier la couleur du symbole d'insertion grâce à la propriété CSS {{cssxref("caret-color")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML Editing", "contentEditable.html#contenteditable", "contenteditable")}}</td>
-   <td>{{Spec2("HTML Editing")}}</td>
-   <td>Ajout de <code>"events"</code>, <code>"caret"</code>, <code>"typing"</code>, <code>"plaintext-only"</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "editing.html#attr-contenteditable", "contenteditable")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Aucune modification depuis la dernière dérivation, {{SpecName("HTML5.2")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.2", "editing.html#making-document-regions-editable-the-contenteditable-content-attribute", "contenteditable")}}</td>
-   <td>{{Spec2("HTML5.2")}}</td>
-   <td>Dérivation de {{SpecName("HTML WHATWG")}}, aucune modification depuis {{SpecName("HTML5.1")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "editing.html#making-document-regions-editable-the-contenteditable-content-attribute", "contenteditable")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>Dérivation de {{SpecName("HTML WHATWG")}}, aucune modification depuis {{SpecName("HTML5 W3C")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "editing.html#attr-contenteditable", "contenteditable")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Dérivation de {{SpecName("HTML WHATWG")}}, définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                                | État                             | Commentaires                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| {{SpecName("HTML Editing", "contentEditable.html#contenteditable", "contenteditable")}}                                                         | {{Spec2("HTML Editing")}} | Ajout de `"events"`, `"caret"`, `"typing"`, `"plaintext-only"`.                                                 |
+| {{SpecName("HTML WHATWG", "editing.html#attr-contenteditable", "contenteditable")}}                                                             | {{Spec2("HTML WHATWG")}} | Aucune modification depuis la dernière dérivation, {{SpecName("HTML5.2")}}                             |
+| {{SpecName("HTML5.2", "editing.html#making-document-regions-editable-the-contenteditable-content-attribute", "contenteditable")}} | {{Spec2("HTML5.2")}}     | Dérivation de {{SpecName("HTML WHATWG")}}, aucune modification depuis {{SpecName("HTML5.1")}} |
+| {{SpecName("HTML5.1", "editing.html#making-document-regions-editable-the-contenteditable-content-attribute", "contenteditable")}} | {{Spec2("HTML5.1")}}     | Dérivation de {{SpecName("HTML WHATWG")}}, aucune modification depuis {{SpecName("HTML5 W3C")}} |
+| {{SpecName("HTML5 W3C", "editing.html#attr-contenteditable", "contenteditable")}}                                                                 | {{Spec2("HTML5 W3C")}}     | Dérivation de {{SpecName("HTML WHATWG")}}, définition initiale.                                        |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.global_attributes.contenteditable")}}</p>
+{{Compat("html.global_attributes.contenteditable")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/HTML/Contenu_editable">Rendre le contenu éditable</a></li>
- <li><a href="/fr/docs/Web/HTML/Attributs_universels">Tous les attributs universels</a></li>
- <li>{{domxref("HTMLElement.contentEditable")}} et {{domxref("HTMLElement.isContentEditable")}}</li>
- <li>{{cssxref("caret-color")}}</li>
- <li><a href="/fr/docs/Web/API/HTMLElement/input_event">L'évènement <code>input</code> pour l'objet DOM <code>HTMLElement</code></a></li>
-</ul>
+- [Rendre le contenu éditable](/fr/docs/Web/HTML/Contenu_editable)
+- [Tous les attributs universels](/fr/docs/Web/HTML/Attributs_universels)
+- {{domxref("HTMLElement.contentEditable")}} et {{domxref("HTMLElement.isContentEditable")}}
+- {{cssxref("caret-color")}}
+- [L'évènement `input` pour l'objet DOM `HTMLElement`](/fr/docs/Web/API/HTMLElement/input_event)

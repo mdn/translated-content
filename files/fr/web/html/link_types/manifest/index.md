@@ -1,15 +1,15 @@
 ---
-title: 'Types de liens : manifest'
+title: "Types de liens\_: manifest"
 slug: Web/HTML/Link_types/manifest
+translation_of: Web/HTML/Link_types/manifest
 browser-compat: html.elements.link.rel.manifest
-translation_of: 'Web/HTML/Link_types/manifest'
 ---
-<p>Le mot-clé <strong><code>manifest</code></strong> de l'attribut {{HTMLAttrxRef("rel", "link")}} de l'élément {{HTMLElement("link")}} est une information indiquant que la ressource ciblée est un <a href="/fr/docs/Web/Manifest">manifeste d'application web</a>.</p>
+Le mot-clé **`manifest`** de l'attribut {{HTMLAttrxRef("rel", "link")}} de l'élément {{HTMLElement("link")}} est une information indiquant que la ressource ciblée est un [manifeste d'application web](/fr/docs/Web/Manifest).
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}

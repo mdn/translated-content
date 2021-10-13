@@ -9,72 +9,53 @@ tags:
   - Web
 translation_of: Web/HTML/Element/noframes
 ---
-<div>{{HTMLRef}}{{Obsolete_header}}</div>
+{{HTMLRef}}{{Obsolete_header}}
 
-<p>L'élément HTML obsolète <strong><code>&lt;noframes&gt;</code></strong> est utilisé par les navigateurs qui ne supportent pas les éléments {{HTMLElement("frame")}}, ou qui sont configurés afin de ne pas les supporter.</p>
+L'élément HTML obsolète **`<noframes>`** est utilisé par les navigateurs qui ne supportent pas les éléments {{HTMLElement("frame")}}, ou qui sont configurés afin de ne pas les supporter.
 
-<p><code>&lt;noframes&gt;</code> accepte n'importe quel élément HTML valide dans un élément {{HTMLElement("body")}}, à l'exception des éléments {{HTMLElement("frameset")}} et {{HTMLElement("frame")}}.</p>
+`<noframes>` accepte n'importe quel élément HTML valide dans un élément {{HTMLElement("body")}}, à l'exception des éléments {{HTMLElement("frameset")}} et {{HTMLElement("frame")}}.
 
-<p>Cet élément pouvait être utilisé afin d'afficher un message explicatif, destiné à l'utilisateur. Idéalement, le contenu devait présenter des fonctionnalités analogues à la <em>frame</em> qui n'était pas prise en charge.</p>
+Cet élément pouvait être utilisé afin d'afficher un message explicatif, destiné à l'utilisateur. Idéalement, le contenu devait présenter des fonctionnalités analogues à la _frame_ qui n'était pas prise en charge.
 
-<div class="note">
-  <p><strong>Note :</strong> Cet élément est aussi entièrement obsolète en HTML5, et doit être evité pour se conformer au standard.</p>
-</div>
+> **Note :** Cet élément est aussi entièrement obsolète en HTML5, et doit être evité pour se conformer au standard.
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<p>Comme tous les autres éléments HTML, cet élément inclut <a href="/fr/docs/Web/HTML/Attributs_universels">les attributs universels</a>.</p>
+Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;frameset cols="50%,50%"&gt;
-  &lt;frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frameset"/&gt;
-  &lt;frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frame"/&gt;
-  &lt;noframes&gt;
-    &lt;p&gt;
+```html
+<frameset cols="50%,50%">
+  <frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frameset"/>
+  <frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frame"/>
+  <noframes>
+    <p>
       Il semblerait que votre navigateur ne supporte pas les frames,
       ou qu'il est configuré pour ne pas les autoriser.
-    &lt;/p&gt;
-  &lt;/noframes&gt;
-&lt;/frameset&gt;</pre>
+    </p>
+  </noframes>
+</frameset>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","100%","100%")}}</p>
+{{EmbedLiveSample("Exemples","100%","100%")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', '#noframes', 'noframes')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'frames.html#edef-NOFRAMES', '&lt;noframes&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                         | Commentaires |
+| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
+| {{SpecName('HTML5 W3C', '#noframes', 'noframes')}}                             | {{Spec2('HTML5 W3C')}} |              |
+| {{SpecName('HTML4.01', 'frames.html#edef-NOFRAMES', '&lt;noframes&gt;')}} | {{Spec2('HTML4.01')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.elements.noframes")}}</p>
+{{Compat("html.elements.noframes")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTMLElement("frameset")}}</li>
- <li>{{HTMLElement("frame")}}</li>
-</ul>
+- {{HTMLElement("frameset")}}
+- {{HTMLElement("frame")}}

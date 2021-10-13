@@ -9,144 +9,130 @@ tags:
   - Web
 translation_of: Web/HTML/Element/input/checkbox
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>Les éléments {{htmlelement("input")}} de type <strong><code>checkbox</code></strong> sont affichés sous la forme de boîtes à cocher qui sont cochées lorsqu'elles sont activées. Elles permettent de sélectionner une ou plusieurs valeurs dans un formulaire.</p>
+Les éléments {{htmlelement("input")}} de type **`checkbox`** sont affichés sous la forme de boîtes à cocher qui sont cochées lorsqu'elles sont activées. Elles permettent de sélectionner une ou plusieurs valeurs dans un formulaire.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/input-checkbox.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/input-checkbox.html", "tabbed-standard")}}
 
-<div class="note">
-<p><strong>Note :</strong> <a href="/fr/docs/Web/HTML/Element/input/radio">Les boutons radio</a> sont semblables aux cases à cocher mais il existe une différence importante : les boutons radio permettent de sélectionner une seule valeur parmi plusieurs alors que les cases à cocher permettent de cocher/décocher plusieurs valeurs d'un groupe.</p>
-</div>
+> **Note :** [Les boutons radio](/fr/docs/Web/HTML/Element/input/radio) sont semblables aux cases à cocher mais il existe une différence importante : les boutons radio permettent de sélectionner une seule valeur parmi plusieurs alors que les cases à cocher permettent de cocher/décocher plusieurs valeurs d'un groupe.
 
-<h2 id="Valeur">Valeur</h2>
+## Valeur
 
-<p>Une chaîne de caractères ({{domxref("DOMString")}}) qui représente la valeur de la case à cocher. Cette chaîne de caractères n'est pas affichée côté client mais est envoyée au serveur comme valeur associée à la donnée envoyée avec le nom de la case à cocher. Par exemple :</p>
+Une chaîne de caractères ({{domxref("DOMString")}}) qui représente la valeur de la case à cocher. Cette chaîne de caractères n'est pas affichée côté client mais est envoyée au serveur comme valeur associée à la donnée envoyée avec le nom de la case à cocher. Par exemple :
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter"&gt;
-    &lt;label for="subscribeNews"&gt;Souhaitez-vous vous abonner à la newsletter ?&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button type="submit"&gt;S'abonner&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
+    <label for="subscribeNews">Souhaitez-vous vous abonner à la newsletter ?</label>
+  </div>
+  <div>
+    <button type="submit">S'abonner</button>
+  </div>
+</form>
+```
 
-<p>{{EmbedLiveSample('Valeur', 600, 60)}}</p>
+{{EmbedLiveSample('Valeur', 600, 60)}}
 
-<p>Dans cet exemple, on a le nom (l'attribut <code>name</code>) <code>subscribe</code> utilisé pour la case à cocher avec une valeur (l'attribut <code>value</code>) qui est <code>newsletter</code>. Lorsque le formulaire est envoyé, les données seront transmises sous la forme <code>subscribe=newsletter</code>.</p>
+Dans cet exemple, on a le nom (l'attribut `name`) `subscribe` utilisé pour la case à cocher avec une valeur (l'attribut `value`) qui est `newsletter`. Lorsque le formulaire est envoyé, les données seront transmises sous la forme `subscribe=newsletter`.
 
-<p>Si l'attribut <code>value</code> n'était pas renseigné, la valeur par défaut sera <code>on</code> (dans l'exemple, les données envoyées au serveur auraient la forme <code>subscribe=on</code>).</p>
+Si l'attribut `value` n'était pas renseigné, la valeur par défaut sera `on` (dans l'exemple, les données envoyées au serveur auraient la forme `subscribe=on`).
 
-<div class="note">
-<p><strong>Note :</strong> Si la case à cocher n'est pas cochée lorsque le formulaire est envoyé, aucune valeur n'est envoyée au serveur pour indiquer cet état (autrement dit, le client n'envoie pas quelque chose comme <code>value=unchecked</code>) ; la valeur n'est pas transmise au serveur du tout.</p>
-</div>
+> **Note :** Si la case à cocher n'est pas cochée lorsque le formulaire est envoyé, aucune valeur n'est envoyée au serveur pour indiquer cet état (autrement dit, le client n'envoie pas quelque chose comme `value=unchecked`) ; la valeur n'est pas transmise au serveur du tout.
 
-<h2 id="Attributs_supplémentaires">Attributs supplémentaires</h2>
+## Attributs supplémentaires
 
-<p>En plus des attributs qui sont partagés par l'ensemble des éléments {{HTMLElement("input")}}, les champs de type <code>"checkbox"</code> prennent aussi en charge les attributs suivants :</p>
+En plus des attributs qui sont partagés par l'ensemble des éléments {{HTMLElement("input")}}, les champs de type `"checkbox"` prennent aussi en charge les attributs suivants :
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribut</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("checked")}}</code></td>
-   <td>Un attribut booléen. Si celui-ci est présent, la case à cocher sera cochée.</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("value")}}</code></td>
-   <td>La chaîne de caractères qui sera utilisée pour représenter la valeur lorsque celle-ci sera envoyée au serveur si la case est cochée.</td>
-  </tr>
- </tbody>
-</table>
+| Attribut                   | Description                                                                                                                          |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `{{anch("checked")}}` | Un attribut booléen. Si celui-ci est présent, la case à cocher sera cochée.                                                          |
+| `{{anch("value")}}` | La chaîne de caractères qui sera utilisée pour représenter la valeur lorsque celle-ci sera envoyée au serveur si la case est cochée. |
 
-<h3 id="htmlattrdefchecked">{{htmlattrdef("checked")}}</h3>
+### {{htmlattrdef("checked")}}
 
-<p>Un attribut booléen qui indique si la case est cochée. Cet attribut n'indique pas si la case est actuellement cochée : si l'état a été modifié, l'attribut dans le document ne reflètera pas cette modification (seul l'attribut IDL <code>checked</code>de l'objet {{domxref("HTMLInputElement")}} est mis à jour).</p>
+Un attribut booléen qui indique si la case est cochée. Cet attribut n'indique pas si la case est actuellement cochée : si l'état a été modifié, l'attribut dans le document ne reflètera pas cette modification (seul l'attribut IDL `checked`de l'objet {{domxref("HTMLInputElement")}} est mis à jour).
 
-<div class="note">
-<p><strong>Note :</strong> À la différence des autres champs, les valeurs des cases à cocher ne sont envoyées au serveur que lorsqu'elles sont cochées. Lorsque c'est le cas, c'est la valeur de l'attribut <code>value</code> qui est envoyé.</p>
-</div>
+> **Note :** À la différence des autres champs, les valeurs des cases à cocher ne sont envoyées au serveur que lorsqu'elles sont cochées. Lorsque c'est le cas, c'est la valeur de l'attribut `value` qui est envoyé.
 
-<p>À la différence des autres navigateurs, Firefox <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">conserve l'état coché placé dynamiquement</a> d'un champ <code>&lt;input&gt;</code> après les rechargements de la page. L'attribut {{htmlattrxref("autocomplete","input")}} peut être utilisé afin de contrôler cette fonctionnalité.</p>
+À la différence des autres navigateurs, Firefox [conserve l'état coché placé dynamiquement](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un champ `<input>` après les rechargements de la page. L'attribut {{htmlattrxref("autocomplete","input")}} peut être utilisé afin de contrôler cette fonctionnalité.
 
-<h3 id="htmlattrdefvalue">{{htmlattrdef("value")}}</h3>
+### {{htmlattrdef("value")}}
 
-<p>L'attribut <code>value</code> est partagé par l'ensemble des éléments <code>&lt;input&gt;</code> mais il a un rôle spécifique pour les champs de type <code>checkbox</code> : lorsqu'un formulaire est envoyé, seules les cases à cocher qui sont cochées sont envoyées au serveur et c'est la valeur de l'attribut <code>value</code> qui est envoyée. Si l'attribut <code>value</code> n'est pas renseigné, ce sera la chaîne de caractères <code>"on"</code> qui sera envoyée par défaut.</p>
+L'attribut `value` est partagé par l'ensemble des éléments `<input>` mais il a un rôle spécifique pour les champs de type `checkbox` : lorsqu'un formulaire est envoyé, seules les cases à cocher qui sont cochées sont envoyées au serveur et c'est la valeur de l'attribut `value` qui est envoyée. Si l'attribut `value` n'est pas renseigné, ce sera la chaîne de caractères `"on"` qui sera envoyée par défaut.
 
-<h2 id="Utiliser_les_cases_à_cocher">Utiliser les cases à cocher</h2>
+## Utiliser les cases à cocher
 
-<h3 id="Gérer_plusieurs_cases_à_cocher">Gérer plusieurs cases à cocher</h3>
+### Gérer plusieurs cases à cocher
 
-<p>Dans l'exemple précédent, il n'y a qu'une seule case à cocher. Dans un scénario réaliste, on aura vraisemblablement plusieurs cases à cocher. Si celles-ci n'ont pas de rapport entre elles, il est possible de les gérer de façon séparée avec des cases à cocher « unitaires » comme illustré précédemment. Toutefois, si les valeurs sont liées entre elles, il est alors nécessaire d'indiquer ce lien.</p>
+Dans l'exemple précédent, il n'y a qu'une seule case à cocher. Dans un scénario réaliste, on aura vraisemblablement plusieurs cases à cocher. Si celles-ci n'ont pas de rapport entre elles, il est possible de les gérer de façon séparée avec des cases à cocher « unitaires » comme illustré précédemment. Toutefois, si les valeurs sont liées entre elles, il est alors nécessaire d'indiquer ce lien.
 
-<p>Dans l'exemple qui suit, on affiche différentes cases à cocher pour représenter les intérets d'un utilisateur (voir l'exemple complet dans la section {{anch("Exemples")}}).</p>
+Dans l'exemple qui suit, on affiche différentes cases à cocher pour représenter les intérets d'un utilisateur (voir l'exemple complet dans la section {{anch("Exemples")}}).
 
-<pre class="brush: html">&lt;fieldset&gt;
-  &lt;legend&gt;Veuillez sélectionner vos intérêts :&lt;/legend&gt;
-  &lt;div&gt;
-    &lt;input type="checkbox" id="coding" name="interest" value="coding"&gt;
-    &lt;label for="coding"&gt;Développement&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;input type="checkbox" id="music" name="interest" value="music"&gt;
-    &lt;label for="music"&gt;Musique&lt;/label&gt;
-  &lt;/div&gt;
-&lt;/fieldset&gt;</pre>
+```html
+<fieldset>
+  <legend>Veuillez sélectionner vos intérêts :</legend>
+  <div>
+    <input type="checkbox" id="coding" name="interest" value="coding">
+    <label for="coding">Développement</label>
+  </div>
+  <div>
+    <input type="checkbox" id="music" name="interest" value="music">
+    <label for="music">Musique</label>
+  </div>
+</fieldset>
+```
 
-<p>{{EmbedLiveSample('Gérer_plusieurs_cases_à_cocher', 600, 100)}}</p>
+{{EmbedLiveSample('Gérer_plusieurs_cases_à_cocher', 600, 100)}}
 
-<p>Dans cet exemple on voit que chaque case à cocher utilise le même attribut <code>name</code>. Si les deux cases sont cochées lorsque le formulaire est envoyé, la chaîne des paires nom/valeur qui sera envoyée au serveur sera : <code>interest=coding&amp;interest=music</code>. Lorsque les données parviennent au serveur, on peut ainsi récupérer un tableau des valeurs sélctionnées (voir <a href="https://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable">Gérer plusieurs cases à cocher avec une seule variable côté serveur</a> par exemple).</p>
+Dans cet exemple on voit que chaque case à cocher utilise le même attribut `name`. Si les deux cases sont cochées lorsque le formulaire est envoyé, la chaîne des paires nom/valeur qui sera envoyée au serveur sera : `interest=coding&interest=music`. Lorsque les données parviennent au serveur, on peut ainsi récupérer un tableau des valeurs sélctionnées (voir [Gérer plusieurs cases à cocher avec une seule variable côté serveur](https://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable) par exemple).
 
-<h3 id="Cocher_certaines_cases_par_défaut">Cocher certaines cases par défaut</h3>
+### Cocher certaines cases par défaut
 
-<p>Afin qu'une case à cocher soit sélectionnée par défaut, il suffit de placer l'attribut booléen <code>checked</code>. Voir l'exemple qui suit :</p>
+Afin qu'une case à cocher soit sélectionnée par défaut, il suffit de placer l'attribut booléen `checked`. Voir l'exemple qui suit :
 
-<pre class="brush: html">&lt;fieldset&gt;
-  &lt;legend&gt;Veuillez sélectionner vos intérêts&lt;/legend&gt;
-  &lt;div&gt;
-    &lt;input type="checkbox" id="coding" name="interest" value="coding" checked&gt;
-    &lt;label for="coding"&gt;Développement&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;input type="checkbox" id="music" name="interest" value="music"&gt;
-    &lt;label for="music"&gt;Musique&lt;/label&gt;
-  &lt;/div&gt;
-&lt;/fieldset&gt;</pre>
+```html
+<fieldset>
+  <legend>Veuillez sélectionner vos intérêts</legend>
+  <div>
+    <input type="checkbox" id="coding" name="interest" value="coding" checked>
+    <label for="coding">Développement</label>
+  </div>
+  <div>
+    <input type="checkbox" id="music" name="interest" value="music">
+    <label for="music">Musique</label>
+  </div>
+</fieldset>
+```
 
-<p>{{EmbedLiveSample('Cocher_certaines_cases_par_défaut', 600, 100)}}</p>
+{{EmbedLiveSample('Cocher_certaines_cases_par_défaut', 600, 100)}}
 
-<h3 id="Fournir_une_zone_cliquable_plus_grande">Fournir une zone cliquable plus grande</h3>
+### Fournir une zone cliquable plus grande
 
-<p>Dans les exemples précédents, vous avez peut-être remarqué qu'il était possible de cocher une case en cliquant sur l'élément {{htmlelement("label")}} associé. Il s'agit d'une fonctionnalité particulièrement utile des étiquettes de formulaire HTML : il y a ainsi plus d'espace qui peut être utilisé pour sélectionner les options voulues (notamment sur les petits écrans).</p>
+Dans les exemples précédents, vous avez peut-être remarqué qu'il était possible de cocher une case en cliquant sur l'élément {{htmlelement("label")}} associé. Il s'agit d'une fonctionnalité particulièrement utile des étiquettes de formulaire HTML : il y a ainsi plus d'espace qui peut être utilisé pour sélectionner les options voulues (notamment sur les petits écrans).
 
-<p>En plus des raisons liées à l'accessibilité, il s'agit d'une bonne raison pour indiquer correctement des éléments <code>&lt;label&gt;</code> dans vos formulaires.</p>
+En plus des raisons liées à l'accessibilité, il s'agit d'une bonne raison pour indiquer correctement des éléments `<label>` dans vos formulaires.
 
-<h3 id="Gérer_un_état_indéterminé">Gérer un état indéterminé</h3>
+### Gérer un état indéterminé
 
-<p>Il existe un état indéterminé pour les cases à cocher qui indique que la case n'est ni cochée, ni décochée mais indéterminéee. Cet état peut être obtenu via la propriété <code>indeterminate</code> d'un élément {{domxref("HTMLInputElement")}} en JavaScript (il est impossible d'obtenir cet état en utilisant uniquement du HTML) :</p>
+Il existe un état indéterminé pour les cases à cocher qui indique que la case n'est ni cochée, ni décochée mais indéterminéee. Cet état peut être obtenu via la propriété `indeterminate` d'un élément {{domxref("HTMLInputElement")}} en JavaScript (il est impossible d'obtenir cet état en utilisant uniquement du HTML) :
 
-<pre class="brush: js">inputInstance.indeterminate = true;</pre>
+```js
+inputInstance.indeterminate = true;
+```
 
-<p>Dans la plupart des navigateurs, une case à cocher dans un état indéterminé est représentée avec une ligne horizontale en travers de la case.</p>
+Dans la plupart des navigateurs, une case à cocher dans un état indéterminé est représentée avec une ligne horizontale en travers de la case.
 
-<p>Voici un exemple d'utilisation de cet état (tiré de <a href="https://css-tricks.com/indeterminate-checkboxes/">CSS Tricks</a>) où on tient le compte des ingrédients qu'on possède pour une recette. Lorsqu'on coche ou décoche une case d'un ingrédient, une fonction JavaScript vérifie le nombre d'ingrédients possédés (c'est-à-dire cochés) :</p>
+Voici un exemple d'utilisation de cet état (tiré de [CSS Tricks](https://css-tricks.com/indeterminate-checkboxes/)) où on tient le compte des ingrédients qu'on possède pour une recette. Lorsqu'on coche ou décoche une case d'un ingrédient, une fonction JavaScript vérifie le nombre d'ingrédients possédés (c'est-à-dire cochés) :
 
-<ul>
- <li>Si aucun n'est coché, la case associée à la recette est décochée.</li>
- <li>Si un ou deux éléments sont cochés, la case associée à la recette est dans un état indéterminé.</li>
- <li>Si les trois ingrédients sont cochés, la case associée à la recette est cochée.</li>
-</ul>
+- Si aucun n'est coché, la case associée à la recette est décochée.
+- Si un ou deux éléments sont cochés, la case associée à la recette est dans un état indéterminé.
+- Si les trois ingrédients sont cochés, la case associée à la recette est cochée.
 
-<p>Dans cet exemple, l'état <code>indeterminate</code> est utilisé afin d'indiquer qu'on possède certains ingrédients mais pas suffisamment pour une recette.</p>
+Dans cet exemple, l'état `indeterminate` est utilisé afin d'indiquer qu'on possède certains ingrédients mais pas suffisamment pour une recette.
 
-<pre class="brush: js">
+```js
 var overall = document.querySelector('input[id="EnchTbl"]');
 var ingredients = document.querySelectorAll('ul input');
 
@@ -154,13 +140,13 @@ overall.addEventListener('click', function(e) {
   e.preventDefault();
 });
 
-for(var i = 0; i &lt; ingredients.length; i++) {
+for(var i = 0; i < ingredients.length; i++) {
   ingredients[i].addEventListener('click', updateDisplay);
 }
 
 function updateDisplay() {
   var checkedCount = 1;
-  for(var i = 0; i &lt; ingredients.length; i++) {
+  for(var i = 0; i < ingredients.length; i++) {
     if(ingredients[i].checked) {
       checkedCount++;
     }
@@ -176,57 +162,58 @@ function updateDisplay() {
     overall.indeterminate = true;
   }
 }
-</pre>
+```
 
-<p>{{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}</p>
+{{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
 
-<div class="note">
-<p><strong>Note :</strong> Si vous envoyez un formulaire avec une case à cocher dans un état indéterminé, le résultat obtenu est le même que si la case avait été décochée : aucune donnée n'est envoyée au serveur.</p>
-</div>
+> **Note :** Si vous envoyez un formulaire avec une case à cocher dans un état indéterminé, le résultat obtenu est le même que si la case avait été décochée : aucune donnée n'est envoyée au serveur.
 
-<h2 id="Validation">Validation</h2>
+## Validation
 
-<p>Il n'y a pas de mécanisme de validation natif pour la valeur d'une case à cocher.</p>
+Il n'y a pas de mécanisme de validation natif pour la valeur d'une case à cocher.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple suivant, on développe l'exemple vu précédemment avec les groupes de cases à cocher : il y a cette fois plus d'options et un champ texte libre qui permet de saisir une autre valeur. Pour cela on utilise un bloc de code JavaScript et quelques règles CSS pour la mise en forme.</p>
+Dans l'exemple suivant, on développe l'exemple vu précédemment avec les groupes de cases à cocher : il y a cette fois plus d'options et un champ texte libre qui permet de saisir une autre valeur. Pour cela on utilise un bloc de code JavaScript et quelques règles CSS pour la mise en forme.
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;fieldset&gt;
-  &lt;legend&gt;Veuillez sélectionner vos intérêts&lt;/legend&gt;
-    &lt;div&gt;
-      &lt;input type="checkbox" id="coding" name="interest" value="coding"&gt;
-      &lt;label for="coding"&gt;Développement&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;input type="checkbox" id="music" name="interest" value="music"&gt;
-      &lt;label for="music"&gt;Musique&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;input type="checkbox" id="art" name="interest" value="art"&gt;
-      &lt;label for="art"&gt;Art&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;input type="checkbox" id="sports" name="interest" value="sports"&gt;
-      &lt;label for="sports"&gt;Sports&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;input type="checkbox" id="cooking" name="interest" value="cooking"&gt;
-      &lt;label for="cooking"&gt;Cuisine&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;input type="checkbox" id="other" name="interest" value="other"&gt;
-      &lt;label for="other"&gt;Autre&lt;/label&gt;
-      &lt;input type="text" id="otherValue" name="other"&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;button type="submit"&gt;Envoyer le formulaire&lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <fieldset>
+  <legend>Veuillez sélectionner vos intérêts</legend>
+    <div>
+      <input type="checkbox" id="coding" name="interest" value="coding">
+      <label for="coding">Développement</label>
+    </div>
+    <div>
+      <input type="checkbox" id="music" name="interest" value="music">
+      <label for="music">Musique</label>
+    </div>
+    <div>
+      <input type="checkbox" id="art" name="interest" value="art">
+      <label for="art">Art</label>
+    </div>
+    <div>
+      <input type="checkbox" id="sports" name="interest" value="sports">
+      <label for="sports">Sports</label>
+    </div>
+    <div>
+      <input type="checkbox" id="cooking" name="interest" value="cooking">
+      <label for="cooking">Cuisine</label>
+    </div>
+    <div>
+      <input type="checkbox" id="other" name="interest" value="other">
+      <label for="other">Autre</label>
+      <input type="text" id="otherValue" name="other">
+    </div>
+    <div>
+      <button type="submit">Envoyer le formulaire</button>
+    </div>
+  </fieldset>
+</form>
+```
 
-<pre class="brush: css">html {
+```css
+html {
   font-family: sans-serif;
 }
 
@@ -259,11 +246,12 @@ legend {
 {
   display: inline-block;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var otherCheckbox = document.querySelector('input[value="other"]');
+```js
+var otherCheckbox = document.querySelector('input[value="other"]');
 var otherText = document.querySelector('input[id="otherValue"]');
 otherText.style.visibility = 'hidden';
 
@@ -274,69 +262,56 @@ otherCheckbox.onchange = function() {
   } else {
     otherText.style.visibility = 'hidden';
   }
-};</pre>
+};
+```
 
-<p>{{EmbedLiveSample('Exemples', '100%', 300)}}</p>
+{{EmbedLiveSample('Exemples', '100%', 300)}}
 
-<h2 id="Résumé_technique">Résumé technique</h2>
+## Résumé technique
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td><strong>{{anch("Valeur")}}</strong></td>
-   <td>Une chaîne de caractères ({{domxref("DOMString")}}) qui représente la valeur de la case à cocher.</td>
-  </tr>
-  <tr>
-   <td><strong>Évènements</strong></td>
-   <td>{{event("change")}} et {{event("input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>Attributs pris en charge</strong></td>
-   <td><code>checked</code></td>
-  </tr>
-  <tr>
-   <td><strong>Attributs IDL</strong></td>
-   <td><code>checked</code> et <code>value</code></td>
-  </tr>
-  <tr>
-   <td><strong>Méthodes</strong></td>
-   <td>{{domxref("HTMLInputElement.select", "select()")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td>
+        Une chaîne de caractères ({{domxref("DOMString")}}) qui
+        représente la valeur de la case à cocher.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Évènements</strong></td>
+      <td>{{event("change")}} et {{event("input")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Attributs pris en charge</strong></td>
+      <td><code>checked</code></td>
+    </tr>
+    <tr>
+      <td><strong>Attributs IDL</strong></td>
+      <td><code>checked</code> et <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>Méthodes</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#checkbox-state-(type=checkbox)', '&lt;input type="checkbox"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#checkbox-state-(type=checkbox)', '&lt;input type="checkbox"&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                | État                             | Commentaires |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
+| {{SpecName('HTML WHATWG', 'forms.html#checkbox-state-(type=checkbox)', '&lt;input type="checkbox"&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5 W3C', 'forms.html#checkbox-state-(type=checkbox)', '&lt;input type="checkbox"&gt;')}}     | {{Spec2('HTML5 W3C')}}     |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.elements.input.input-checkbox")}}</p>
+{{Compat("html.elements.input.input-checkbox")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'élément {{HTMLElement("input")}} et l'interface DOM qu'il implémente : {{domxref("HTMLInputElement")}}.</li>
- <li>{{cssxref(":checked")}}</li>
- <li>{{cssxref("indeterminate")}}</li>
-</ul>
+- L'élément {{HTMLElement("input")}} et l'interface DOM qu'il implémente : {{domxref("HTMLInputElement")}}.
+- {{cssxref(":checked")}}
+- {{cssxref("indeterminate")}}

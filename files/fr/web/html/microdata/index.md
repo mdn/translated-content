@@ -12,93 +12,89 @@ tags:
 translation_of: Web/HTML/Microdata
 original_slug: Web/HTML/Microdonnées
 ---
-<p>Les microdonnées (<em>microdata</em>) sont une partie de la spécification HTML du <a href="/fr/docs/Glossary/WHATWG">WHATWG</a> qui est utilisée afin de fournir des métadonnées sur le contenu des pages web. Les moteurs de recherche, les robots (<em>crawlers</em>) d'analyse peuvent traiter les microdonnées d'une page web pour améliorer l'expérience de navigation. Les moteurs de recherches peuvent tirer parti des informations pour obtenir une meilleure pertinence. Les microdonnées sont structurées grâce à un vocabulaire permettant de décrire des objets qui sont des groupes de paires de noms/valeurs. Le but des microdonnées est de faciliter l'annotation des éléments HTML et d'être plus simple à utiliser que RDFa ou les microformats.</p>
+Les microdonnées (_microdata_) sont une partie de la spécification HTML du [WHATWG](/fr/docs/Glossary/WHATWG) qui est utilisée afin de fournir des métadonnées sur le contenu des pages web. Les moteurs de recherche, les robots (_crawlers_) d'analyse peuvent traiter les microdonnées d'une page web pour améliorer l'expérience de navigation. Les moteurs de recherches peuvent tirer parti des informations pour obtenir une meilleure pertinence. Les microdonnées sont structurées grâce à un vocabulaire permettant de décrire des objets qui sont des groupes de paires de noms/valeurs. Le but des microdonnées est de faciliter l'annotation des éléments HTML et d'être plus simple à utiliser que RDFa ou les microformats.
 
-<p>Les microdonnées sont des groupes de paires nom-valeur. Ces groupes sont appelés des objets (<em>items</em>) et chaque paire nom-valeur est une propriété. Les objets et les propriétés s'inscrivent dans des éléments HTML classiques :</p>
+Les microdonnées sont des groupes de paires nom-valeur. Ces groupes sont appelés des objets (_items_) et chaque paire nom-valeur est une propriété. Les objets et les propriétés s'inscrivent dans des éléments HTML classiques :
 
-<ul>
-  <li>Pour créer un objet, on utilise l'attribut <strong><code>itemscope</code></strong></li>
-  <li>Pour ajouter une propriété, on utilise l'attribut <strong><code>itemprop</code></strong> sur l'un des descendants.</li>
-</ul>
+- Pour créer un objet, on utilise l'attribut **`itemscope`**
+- Pour ajouter une propriété, on utilise l'attribut **`itemprop`** sur l'un des descendants.
 
-<h2 id="Vocabularies">Vocabulaires</h2>
+## Vocabulaires
 
-<p>Google et les autres moteurs de recherches participent au vocabulaire défini par <a href="https://schema.org/">schema.org</a> pour structurer les données. Ce vocabulaire définit un ensemble standard de types et de noms de propriétés. Par exemple <code><a href="https://schema.org/MusicEvent">MusicEvent</a></code> indique un événement musical dont les propriétés <code><a href="https://schema.org/startDate">startDate</a></code> et <code><a href="https://schema.org/location">location</a></code> utilisées pour définir les détails du concert. Dans ce cas, l'URL <code><a href="https://schema.org/MusicEvent">https://schema.org/MusicEvent</a></code> sera l'URL utilisée pour l'attribut <code>itemtype</code> et les propriétés <code>startDate</code> et <code>location</code> seront les propriétés utilisées, définies par <code><a href="https://schema.org/MusicEvent">https://schema.org/MusicEvent</a></code>.</p>
+Google et les autres moteurs de recherches participent au vocabulaire défini par [schema.org](https://schema.org/) pour structurer les données. Ce vocabulaire définit un ensemble standard de types et de noms de propriétés. Par exemple [`MusicEvent`](https://schema.org/MusicEvent) indique un événement musical dont les propriétés [`startDate`](https://schema.org/startDate) et [`location`](https://schema.org/location) utilisées pour définir les détails du concert. Dans ce cas, l'URL [`https://schema.org/MusicEvent`](https://schema.org/MusicEvent) sera l'URL utilisée pour l'attribut `itemtype` et les propriétés `startDate` et `location` seront les propriétés utilisées, définies par [`https://schema.org/MusicEvent`](https://schema.org/MusicEvent).
 
-<div class="note">
-  <p><strong>Note :</strong> Pour en savoir plus sur les attributs <code>itemtype</code>, consultez le site <a href="http://schema.org/Thing">http://schema.org/Thing</a>.</p>
-</div>
+> **Note :** Pour en savoir plus sur les attributs `itemtype`, consultez le site <http://schema.org/Thing>.
 
-<p>Les vocabulaires de microdonnées fournissent la sémantique ou la signification d'un élément. Les développeurs Web peuvent concevoir un vocabulaire personnalisé ou utiliser des vocabulaires disponibles sur le Web, tels que le vocabulaire largement utilisé <a href="http://schema.org">schema.org</a>. Une collection de vocabulaires de balisage couramment utilisés est fournie par Schema.org.</p>
+Les vocabulaires de microdonnées fournissent la sémantique ou la signification d'un élément. Les développeurs Web peuvent concevoir un vocabulaire personnalisé ou utiliser des vocabulaires disponibles sur le Web, tels que le vocabulaire largement utilisé [schema.org](http://schema.org). Une collection de vocabulaires de balisage couramment utilisés est fournie par Schema.org.
 
-<p>Vocabulaires couramment utilisés :</p>
+Vocabulaires couramment utilisés :
 
-<ul>
-  <li>Œuvres créatives : <a href="http://schema.org/CreativeWork">CreativeWork</a>, <a href="http://schema.org/Book">Book</a>, <a href="http://schema.org/Movie">Movie</a>, <a href="http://schema.org/MusicRecording">MusicRecording</a>, <a href="http://schema.org/Recipe">Recipe</a>, <a href="http://schema.org/TVSeries">TVSeries</a></li>
-  <li>Objets non textuels incorporés : <a href="http://schema.org/AudioObject">AudioObject</a>, <a href="http://schema.org/ImageObject">ImageObject</a>, <a href="http://schema.org/VideoObject">VideoObject</a></li>
-  <li><a href="http://schema.org/Event">Event</a></li>
-  <li><a href="http://schema.org/docs/meddocs.html">Health and medical types</a> : Notes sur les types de santé et médicaux sous <a href="http://schema.org/MedicalEntity">MedicalEntity</a></li>
-  <li><a href="http://schema.org/Organization">Organization</a></li>
-  <li><a href="http://schema.org/Person">Person</a></li>
-  <li><a href="http://schema.org/Place">Place</a>, <a href="http://schema.org/LocalBusiness">LocalBusiness</a>, <a href="http://schema.org/Restaurant">Restaurant</a></li>
-  <li><a href="http://schema.org/Product">Product</a>, <a href="http://schema.org/Offer">Offer</a>, <a href="http://schema.org/AggregateOffer">AggregateOffer</a></li>
-  <li><a href="http://schema.org/Review">Review</a>, <a href="http://schema.org/AggregateRating">AggregateRating</a></li>
-  <li><a href="http://schema.org/Action">Action</a></li>
-  <li><a href="http://schema.org/Thing">Thing</a></li>
-  <li><a href="http://schema.org/Intangible">Intangible</a></li>
-</ul>
+- Œuvres créatives : [CreativeWork](http://schema.org/CreativeWork), [Book](http://schema.org/Book), [Movie](http://schema.org/Movie), [MusicRecording](http://schema.org/MusicRecording), [Recipe](http://schema.org/Recipe), [TVSeries](http://schema.org/TVSeries)
+- Objets non textuels incorporés : [AudioObject](http://schema.org/AudioObject), [ImageObject](http://schema.org/ImageObject), [VideoObject](http://schema.org/VideoObject)
+- [Event](http://schema.org/Event)
+- [Health and medical types](http://schema.org/docs/meddocs.html) : Notes sur les types de santé et médicaux sous [MedicalEntity](http://schema.org/MedicalEntity)
+- [Organization](http://schema.org/Organization)
+- [Person](http://schema.org/Person)
+- [Place](http://schema.org/Place), [LocalBusiness](http://schema.org/LocalBusiness), [Restaurant](http://schema.org/Restaurant)
+- [Product](http://schema.org/Product), [Offer](http://schema.org/Offer), [AggregateOffer](http://schema.org/AggregateOffer)
+- [Review](http://schema.org/Review), [AggregateRating](http://schema.org/AggregateRating)
+- [Action](http://schema.org/Action)
+- [Thing](http://schema.org/Thing)
+- [Intangible](http://schema.org/Intangible)
 
-<p>Les principaux opérateurs de moteurs de recherche comme Google, Microsoft et Yahoo ! s'appuient sur le vocabulaire <a href="http://schema.org/">schema.org</a> pour améliorer les résultats de recherche. Pour certains usages, un vocabulaire ad-hoc est adéquat. Pour d'autres, un vocabulaire devra être conçu. Dans la mesure du possible, les auteurs sont encouragés à réutiliser les vocabulaires existants, car cela facilite la réutilisation du contenu.</p>
+Les principaux opérateurs de moteurs de recherche comme Google, Microsoft et Yahoo ! s'appuient sur le vocabulaire [schema.org](http://schema.org/) pour améliorer les résultats de recherche. Pour certains usages, un vocabulaire ad-hoc est adéquat. Pour d'autres, un vocabulaire devra être conçu. Dans la mesure du possible, les auteurs sont encouragés à réutiliser les vocabulaires existants, car cela facilite la réutilisation du contenu.
 
-<h2 id="Localization">Localisation</h2>
+## Localisation
 
-<p>Dans certains cas, les moteurs de recherche couvrent un public régional. Certaines extensions sont donc ajoutées aux microdonnées pour fournir du contenu spécifique. Ainsi, <a href="https://www.yandex.com/">Yandex</a> qui est un moteur de recherche très présent en Russie supporte des microformats comme <em>hCard</em>, <em>hRecipe</em>, <em>hReview</em> et <em>hProduct</em> et fournit son propre format pour dédfinir les termes et les articles encyclopédiques. Cette extension a été construite afin de résoudre les problèmes de translitération entre les alphabets cyrillique et latin.</p>
+Dans certains cas, les moteurs de recherche couvrent un public régional. Certaines extensions sont donc ajoutées aux microdonnées pour fournir du contenu spécifique. Ainsi, [Yandex](https://www.yandex.com/) qui est un moteur de recherche très présent en Russie supporte des microformats comme _hCard_, _hRecipe_, _hReview_ et _hProduct_ et fournit son propre format pour dédfinir les termes et les articles encyclopédiques. Cette extension a été construite afin de résoudre les problèmes de translitération entre les alphabets cyrillique et latin.
 
-<h2 id="Global_attributes">Attributs globaux liés aux microdonnées</h2>
+## Attributs globaux liés aux microdonnées
 
-<dl>
- <dt><a href="/fr/docs/Web/HTML/Global_attributes/itemid"><code>itemid</code></a></dt>
- <dd>Cet attribut est l'identifiant unique d'un objet.</dd>
- <dt><a href="/fr/docs/Web/HTML/Global_attributes/itemprop"><code>itemprop</code></a></dt>
- <dd>Cet attribut est utilisé afin d'ajouter des propriétés à un élément.</dd>
- <dt><a href="/fr/docs/Web/HTML/Global_attributes/itemref"><code>itemref</code></a></dt>
- <dd>Cet attribut permet de faire référence à d'autres éléments HTML décrivant le même objet.</dd>
- <dt><a href="/fr/docs/Web/HTML/Global_attributes/itemscope"><code>itemscope</code></a></dt>
- <dd>Cet attribut définit la portée du vocabulaire déclaré par <code>itemtype</code> et englobe généralement un objet.</dd>
- <dt><a href="/fr/docs/Web/HTML/Global_attributes/itemtype"><code>itemtype</code></a></dt>
- <dd>Cet attribut définit l'URL du vocabulaire qui spécifie le modèle de données utilisé pour décrire les objets.</dd>
-</dl>
+- [`itemid`](/fr/docs/Web/HTML/Global_attributes/itemid)
+  - : Cet attribut est l'identifiant unique d'un objet.
+- [`itemprop`](/fr/docs/Web/HTML/Global_attributes/itemprop)
+  - : Cet attribut est utilisé afin d'ajouter des propriétés à un élément.
+- [`itemref`](/fr/docs/Web/HTML/Global_attributes/itemref)
+  - : Cet attribut permet de faire référence à d'autres éléments HTML décrivant le même objet.
+- [`itemscope`](/fr/docs/Web/HTML/Global_attributes/itemscope)
+  - : Cet attribut définit la portée du vocabulaire déclaré par `itemtype` et englobe généralement un objet.
+- [`itemtype`](/fr/docs/Web/HTML/Global_attributes/itemtype)
+  - : Cet attribut définit l'URL du vocabulaire qui spécifie le modèle de données utilisé pour décrire les objets.
 
-<h2 id="Example">Exemple</h2>
+## Exemple
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div itemscope itemtype="https://schema.org/SoftwareApplication"&gt;
-  &lt;span itemprop="name"&gt;Angry Birds&lt;/span&gt; -
+```html
+<div itemscope itemtype="https://schema.org/SoftwareApplication">
+  <span itemprop="name">Angry Birds</span> -
 
-  NÉCESSITE &lt;span itemprop="operatingSystem"&gt;ANDROID&lt;/span&gt;&lt;br&gt;
-  &lt;link itemprop="applicationCategory" href="https://schema.org/GameApplication"/&gt;
+  NÉCESSITE <span itemprop="operatingSystem">ANDROID</span><br>
+  <link itemprop="applicationCategory" href="https://schema.org/GameApplication"/>
 
-  &lt;div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"&gt;
+  <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
   ÉVALUATION :
-    &lt;span itemprop="ratingValue"&gt;4.6&lt;/span&gt; (
-    &lt;span itemprop="ratingCount"&gt;8864&lt;/span&gt; notes )
-  &lt;/div&gt;
+    <span itemprop="ratingValue">4.6</span> (
+    <span itemprop="ratingCount">8864</span> notes )
+  </div>
 
-  &lt;div itemprop="offers" itemscope itemtype="https://schema.org/Offer"&gt;
-    Prix : &lt;span itemprop="price"&gt;1.00&lt;/span&gt;$
-    &lt;meta itemprop="priceCurrency" content="USD" /&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    Prix : <span itemprop="price">1.00</span>$
+    <meta itemprop="priceCurrency" content="USD" />
+  </div>
+</div>
+```
 
-<h3 id="Structured_data">Données structurées</h3>
+### Données structurées
 
 <table class="standard-table">
   <tbody>
     <tr>
       <td rowspan="4">itemscope</td>
       <td>itemtype</td>
-      <td colspan="2">SoftwareApplication (https://schema.org/SoftwareApplication)</td>
+      <td colspan="2">
+        SoftwareApplication (https://schema.org/SoftwareApplication)
+      </td>
     </tr>
     <tr>
       <td>itemprop</td>
@@ -148,22 +144,18 @@ original_slug: Web/HTML/Microdonnées
   </tbody>
 </table>
 
-<h3 id="Result">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("HTML", "", "100")}}</p>
+{{EmbedLiveSample("HTML", "", "100")}}
 
-<div class="note">
-  <p><strong>Note :</strong> Un outil pratique pour extraire les structures de microdonnées du HTML est l'<a href="https://developers.google.com/search/docs/guides/intro-structured-data">outil de test des données structurées</a> de Google. Essayez-le sur le HTML présenté ci-dessus.</p>
-</div>
+> **Note :** Un outil pratique pour extraire les structures de microdonnées du HTML est l'[outil de test des données structurées](https://developers.google.com/search/docs/guides/intro-structured-data) de Google. Essayez-le sur le HTML présenté ci-dessus.
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>Fonctionnalité ajoutée dans Firefox 16 et retirée dans Firefox 49.</p>
+Fonctionnalité ajoutée dans Firefox 16 et retirée dans Firefox 49.
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/HTML/Global_attributes">Les attributs universels</a></li>
-</ul>
+- [Les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/HTML")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/HTML")}}

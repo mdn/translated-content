@@ -9,109 +9,121 @@ tags:
   - Web
 translation_of: Web/HTML/Element/ruby
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>L'élément HTML <strong><code>&lt;ruby&gt;</code></strong> représente une annotation ruby. Les annotations Ruby servent à afficher la prononciation des caractères d'Asie orientale.</p>
+L'élément HTML **`<ruby>`** représente une annotation ruby. Les annotations Ruby servent à afficher la prononciation des caractères d'Asie orientale.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/ruby.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/ruby.html", "tabbed-shorter")}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<p>Cet élément inclut uniquement les <a href="/fr/docs/Web/HTML/Global_attributes">attributs globaux</a>.</p>
+Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Global_attributes).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Annoter_un_caractère">Annoter un caractère</h3>
+### Annoter un caractère
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush:html">&lt;ruby&gt;
-  漢 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;Kan&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-  字 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;ji&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-&lt;/ruby&gt;</pre>
+```html
+<ruby>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Annoter_un_caractère")}}</p>
+{{EmbedLiveSample("Annoter_un_caractère")}}
 
-<h3 id="Annoter_un_mot">Annoter un mot</h3>
+### Annoter un mot
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush:html">&lt;ruby&gt;
-  明日 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;Ashita&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-&lt;/ruby&gt;</pre>
+```html
+<ruby>
+  明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp>
+</ruby>
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Annoter_un_mot")}}</p>
+{{EmbedLiveSample("Annoter_un_mot")}}
 
-<h2 id="Résumé_technique">Résumé technique</h2>
+## Résumé technique
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><dfn><a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu">Catégories de contenu</a></dfn></th>
-   <td><a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux">Contenu de flux</a>, <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9">contenu de phrasé</a>, <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible">contenu tangible</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Contenu autorisé</th>
-   <td><a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9">Contenu de phrasé</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omission de balises</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Parents autorisés</th>
-   <td>Tout élément qui accepte du <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9">contenu de phrasé</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Rôles ARIA autorisés</th>
-   <td>Tous les rôles sont autorisés.</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface DOM</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <dfn
+          ><a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu"
+            >Catégories de contenu</a
+          ></dfn
+        >
+      </th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+          >Contenu de flux</a
+        >,
+        <a
+          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          >contenu de phrasé</a
+        >,
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
+          >contenu tangible</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>
+        <a
+          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          >Contenu de phrasé</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balises</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>
+        Tout élément qui accepte du <a
+          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          >contenu de phrasé</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>Tous les rôles sont autorisés.</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-ruby-element', '&lt;ruby&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-ruby-element', '&lt;ruby&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                             | Commentaires |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-ruby-element', '&lt;ruby&gt;')}}             | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-ruby-element', '&lt;ruby&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.elements.ruby")}}</p>
+{{Compat("html.elements.ruby")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTMLElement("rt")}}</li>
- <li>{{HTMLElement("rp")}}</li>
- <li>{{HTMLElement("rb")}}</li>
- <li>{{HTMLElement("rtc")}}</li>
- <li>{{HTMLElement("rbc")}}</li>
- <li>{{CSSXRef("text-transform", "text-transform: full-size-kana")}}</li>
-</ul>
+- {{HTMLElement("rt")}}
+- {{HTMLElement("rp")}}
+- {{HTMLElement("rb")}}
+- {{HTMLElement("rtc")}}
+- {{HTMLElement("rbc")}}
+- {{CSSXRef("text-transform", "text-transform: full-size-kana")}}

@@ -9,81 +9,54 @@ tags:
 translation_of: Web/HTML/Global_attributes/style
 original_slug: Web/HTML/Attributs_universels/style
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>L'<a href="/fr/docs/Web/HTML/Attributs_universels">attribut universel</a> <code><strong>style</strong></code> contient des déclarations <a href="/fr/docs/Web/CSS">CSS</a> afin de mettre en forme l'élément. Attention, il est recommandé de définir les règles de mise en forme dans un ou plusieurs fichiers séparés. Cet attribut, ainsi que l'élément {{HTMLElement("style")}} ont simplement pour but de permettre une mise en forme rapide, notamment pour tester.</p>
+L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`style`** contient des déclarations [CSS](/fr/docs/Web/CSS) afin de mettre en forme l'élément. Attention, il est recommandé de définir les règles de mise en forme dans un ou plusieurs fichiers séparés. Cet attribut, ainsi que l'élément {{HTMLElement("style")}} ont simplement pour but de permettre une mise en forme rapide, notamment pour tester.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/attribute-style.html","tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/attribute-style.html","tabbed-shorter")}}
 
-<div class="note">
-<p><strong>Note :</strong> Cet attribut ne doit pas être utilisé à des fins sémantiques. En effet, si toute mise en forme est retirée, toute page doit rester correcte d'un point de vue sémantique. On ne devrait pas, notamment, utiliser cet attribut afin de cacher des informations qui ne seraient pas pertinentes (cela devrait être réalisé avec l'attribut {{htmlattrxref("hidden")}}.</p>
-</div>
+> **Note :** Cet attribut ne doit pas être utilisé à des fins sémantiques. En effet, si toute mise en forme est retirée, toute page doit rester correcte d'un point de vue sémantique. On ne devrait pas, notamment, utiliser cet attribut afin de cacher des informations qui ne seraient pas pertinentes (cela devrait être réalisé avec l'attribut {{htmlattrxref("hidden")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p style="color: rgb(255, 0, 0)"&gt;
+```html
+<p style="color: rgb(255, 0, 0)">
   Cette méthode n'est pas vraiment recommandée
-&lt;/p&gt;
+</p>
 
-&lt;p class="toto"&gt;
+<p class="toto">
   Alors que ça, c'est mieux.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.toto {
+```css
+.toto {
   color: rgb(0, 255, 0);
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","300","300")}}</p>
+{{EmbedLiveSample("Exemples","300","300")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "dom.html#the-style-attribute", "style")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Aucune modification depuis la dernière dérivation de {{SpecName('HTML5.1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "dom.html#the-style-attribute", "style")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Dérivée de {{SpecName('HTML WHATWG')}}, aucune modification depuis {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "dom.html#the-style-attribute", "style")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Dérivée de {{SpecName('HTML WHATWG')}}. Depuis {{SpecName("HTML4.01")}}, cet attribut est désormais un attribut universel.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'present/styles.html#h-14.2.2', 'style')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Cet attribut est pris en charge par tous les éléments à l'exception de {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, et {{HTMLElement("title")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Style", "", "")}}</td>
-   <td>{{Spec2("CSS3 Style")}}</td>
-   <td>Définition du contenu pour l'attribut <code>style</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                             | Commentaires                                                                                                                                                                                                                                                                                                                                                                                    |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "dom.html#the-style-attribute", "style")}} | {{Spec2('HTML WHATWG')}} | Aucune modification depuis la dernière dérivation de {{SpecName('HTML5.1')}}                                                                                                                                                                                                                                                                                                           |
+| {{SpecName('HTML5.1', "dom.html#the-style-attribute", "style")}}         | {{Spec2('HTML5.1')}}     | Dérivée de {{SpecName('HTML WHATWG')}}, aucune modification depuis {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                                                                                                    |
+| {{SpecName('HTML5 W3C', "dom.html#the-style-attribute", "style")}}     | {{Spec2('HTML5 W3C')}}     | Dérivée de {{SpecName('HTML WHATWG')}}. Depuis {{SpecName("HTML4.01")}}, cet attribut est désormais un attribut universel.                                                                                                                                                                                                                                                     |
+| {{SpecName('HTML4.01', 'present/styles.html#h-14.2.2', 'style')}}     | {{Spec2('HTML4.01')}}     | Cet attribut est pris en charge par tous les éléments à l'exception de {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, et {{HTMLElement("title")}}. |
+| {{SpecName("CSS3 Style", "", "")}}                                                 | {{Spec2("CSS3 Style")}} | Définition du contenu pour l'attribut `style`.                                                                                                                                                                                                                                                                                                                                                  |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.global_attributes.style")}}</p>
+{{Compat("html.global_attributes.style")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/HTML/Attributs_universels">Les différents attributs universels</a></li>
-</ul>
+- [Les différents attributs universels](/fr/docs/Web/HTML/Attributs_universels)

@@ -9,53 +9,53 @@ tags:
 translation_of: Web/HTML/Global_attributes/contextmenu
 original_slug: Web/HTML/Attributs_universels/contextmenu
 ---
-<div>{{HTMLSidebar("Global_attributes")}}{{obsolete_header}}</div>
+{{HTMLSidebar("Global_attributes")}}{{obsolete_header}}
 
-<div class="warning">
-<p><strong>Attention :</strong> Cet attribut est <a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu">obsolète</a> et sera retiré de l'ensemble des navigateurs.</p>
-</div>
+> **Attention :** Cet attribut est [obsolète](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu) et sera retiré de l'ensemble des navigateurs.
 
-<p>L'<a href="/fr/docs/Web/HTML/Attributs_universels">attribut universel</a> <code><strong>contextmenu</strong></code> correspond à l'{{htmlattrxref("id","","identifiant",1)}} d'un élément {{HTMLElement("menu")}} qu'on souhaite utiliser comme menu contextuel pour l'élément courant.</p>
+L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`contextmenu`** correspond à l'{{htmlattrxref("id","","identifiant",1)}} d'un élément {{HTMLElement("menu")}} qu'on souhaite utiliser comme menu contextuel pour l'élément courant.
 
-<p>Un menu contextuel est un menu qui apparaît suite à une action utilisateur (par exemple un clic-droit). HTML5 permet désormais de personnaliser ce menu.</p>
+Un menu contextuel est un menu qui apparaît suite à une action utilisateur (par exemple un clic-droit). HTML5 permet désormais de personnaliser ce menu.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Voici quelques exemples de personnalisations de menus. Le code HTML pourra être :</p>
+Voici quelques exemples de personnalisations de menus. Le code HTML pourra être :
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;body contextmenu="share"&gt;
-  &lt;menu type="context" id="share"&gt;
-    &lt;menu label="Partager"&gt;
-      &lt;menuitem label="Twitter" onclick="shareViaTwitter()"&gt;&lt;/menuitem&gt;
-      &lt;menuitem label="Facebook" onclick="shareViaFacebook()"&gt;&lt;/menuitem&gt;
-    &lt;/menu&gt;
-  &lt;/menu&gt;
-  &lt;ol&gt;
-    &lt;li&gt;
+```html
+<body contextmenu="share">
+  <menu type="context" id="share">
+    <menu label="Partager">
+      <menuitem label="Twitter" onclick="shareViaTwitter()"></menuitem>
+      <menuitem label="Facebook" onclick="shareViaFacebook()"></menuitem>
+    </menu>
+  </menu>
+  <ol>
+    <li>
       Dans cet exemple, vous pouvez partager un lien vers
       cette page sur Facebook et/ou Twitter via le groupe Partager
       du menu contextuel
-    &lt;/li&gt;
-    &lt;li&gt;Sur cette ligne : on peut partager la page sur Twitter ou Facebook grâce au menu Partager du menu contextuel.&lt;/li&gt;
-    &lt;li&gt;&lt;pre contextmenu="changeFont" id="fontSizing"&gt;Sur cette ligne : on peut changer la taille de la police en utilisant les options "Augmenter/Réduire la taille de la police" du menu contextuel&lt;/pre&gt;&lt;/li&gt;
-    &lt;menu type="context" id="changeFont"&gt;
-      &lt;menuitem label="Augmenter la taille de la police" onclick="incFont()"&gt;&lt;/menuitem&gt;
-      &lt;menuitem label="Réduire la taille de la police" onclick="decFont()"&gt;&lt;/menuitem&gt;
-    &lt;/menu&gt;
-    &lt;li contextmenu="ChangeImage" id="changeImage"&gt;Sur cette ligne : on peut  utiliser l'option "Changer l'image" du menu.&lt;/li&gt;&lt;br /&gt;
-    &lt;img src="https://developer.mozilla.org/media/img/promote/promobutton_mdn5.png" contextmenu="ChangeImage" id="promoButton" /&gt;
-    &lt;menu type="context" id="ChangeImage"&gt;
-      &lt;menuitem label="Changer l'image" onclick="changeImage()"&gt;&lt;/menuitem&gt;
-    &lt;/menu&gt;
-  &lt;/ol&gt;
-&lt;/body&gt;
-</pre>
+    </li>
+    <li>Sur cette ligne : on peut partager la page sur Twitter ou Facebook grâce au menu Partager du menu contextuel.</li>
+    <li><pre contextmenu="changeFont" id="fontSizing">Sur cette ligne : on peut changer la taille de la police en utilisant les options "Augmenter/Réduire la taille de la police" du menu contextuel</pre></li>
+    <menu type="context" id="changeFont">
+      <menuitem label="Augmenter la taille de la police" onclick="incFont()"></menuitem>
+      <menuitem label="Réduire la taille de la police" onclick="decFont()"></menuitem>
+    </menu>
+    <li contextmenu="ChangeImage" id="changeImage">Sur cette ligne : on peut  utiliser l'option "Changer l'image" du menu.</li><br />
+    <img src="https://developer.mozilla.org/media/img/promote/promobutton_mdn5.png" contextmenu="ChangeImage" id="promoButton" />
+    <menu type="context" id="ChangeImage">
+      <menuitem label="Changer l'image" onclick="changeImage()"></menuitem>
+    </menu>
+  </ol>
+</body>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush:js">function shareViaTwitter() {
+```js
+function shareViaTwitter() {
   window.open("https://twitter.com/intent/tweet?text=" +
       "Je découvre ContextMenu avec MDN.");
 }
@@ -75,41 +75,25 @@ function decFont(){
 function changeImage(){
   var j = Math.ceil((Math.random()*39)+1);
   document.images[0].src="https://developer.mozilla.org/media/img/promote/promobutton_mdn" + j + ".png";
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<div>{{EmbedLiveSample("Exemples",600,500)}}</div>
+{{EmbedLiveSample("Exemples",600,500)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "obsolete.html#attr-contextmenu", "contextmenu")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Rendu obsolète</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "interactive-elements.html#context-menus", "contextmenu")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Dérivation de {{SpecName('HTML WHATWG')}}, définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                             | Commentaires                                                             |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------ |
+| {{SpecName("HTML WHATWG", "obsolete.html#attr-contextmenu", "contextmenu")}}         | {{Spec2('HTML WHATWG')}} | Rendu obsolète                                                           |
+| {{SpecName('HTML5.1', "interactive-elements.html#context-menus", "contextmenu")}} | {{Spec2('HTML5.1')}}     | Dérivation de {{SpecName('HTML WHATWG')}}, définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.global_attributes.contextmenu")}}</p>
+{{Compat("html.global_attributes.contextmenu")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/HTML/Attributs_universels">Les différents attributs universels</a></li>
- <li>{{domxref("HTMLElement.contextMenu")}}</li>
-</ul>
+- [Les différents attributs universels](/fr/docs/Web/HTML/Attributs_universels)
+- {{domxref("HTMLElement.contextMenu")}}

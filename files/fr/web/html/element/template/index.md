@@ -8,47 +8,49 @@ tags:
   - Web
 translation_of: Web/HTML/Element/template
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>L'élément HTML <strong><code>&lt;template&gt;</code></strong> (ou <em><strong>Template Content</strong></em> ou modèle de contenu) est un mécanisme utilisé pour stocker du contenu HTML (côté client) qui ne doit pas être affiché lors du chargement de la page mais qui peut être instancié et affiché par la suite grâce à un script JavaScript.</p>
+L'élément HTML **`<template>`** (ou **_Template Content_** ou modèle de contenu) est un mécanisme utilisé pour stocker du contenu HTML (côté client) qui ne doit pas être affiché lors du chargement de la page mais qui peut être instancié et affiché par la suite grâce à un script JavaScript.
 
-<p>Cet élément est un fragment de contenu mis de côté pour être utilisé par la suite dans le document. Lorsque le moteur traite le contenu de l'élément <code>&lt;template&gt;</code> lors du chargement de la page, il ne fait que vérifier la validité du contenu, ce dernier n'est pas affiché.</p>
+Cet élément est un fragment de contenu mis de côté pour être utilisé par la suite dans le document. Lorsque le moteur traite le contenu de l'élément `<template>` lors du chargement de la page, il ne fait que vérifier la validité du contenu, ce dernier n'est pas affiché.
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<p>Cet élément inclut uniquement <a href="/fr/docs/Web/HTML/Attributs_universels">les attributs universels</a>.</p>
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;table id="producttable"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;td&gt;UPC_Code&lt;/td&gt;
-      &lt;td&gt;Product_Name&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;!-- existing data could optionally be included here --&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+```html
+<table id="producttable">
+  <thead>
+    <tr>
+      <td>UPC_Code</td>
+      <td>Product_Name</td>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- existing data could optionally be included here -->
+  </tbody>
+</table>
 
-&lt;template id="productrow"&gt;
-  &lt;tr&gt;
-    &lt;td class="record"&gt;&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/template&gt;
-</pre>
+<template id="productrow">
+  <tr>
+    <td class="record"></td>
+    <td></td>
+  </tr>
+</template>
+```
 
-<p>Au début, on a un tableau HTML pour lequel on insèrera du contenu plus tard grâce à l'aide d'un script JavaScript. Ensuite, on a le <em>template</em> qui décrit la structure du fragment HTML représentant une ligne de tableau.</p>
+Au début, on a un tableau HTML pour lequel on insèrera du contenu plus tard grâce à l'aide d'un script JavaScript. Ensuite, on a le _template_ qui décrit la structure du fragment HTML représentant une ligne de tableau.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>Avec le tableau créé et le template défini, on utilise JavaScript pour insérer des lignes dans le tableau dont chacune est construite à partir du <em>template</em>.</p>
+Avec le tableau créé et le template défini, on utilise JavaScript pour insérer des lignes dans le tableau dont chacune est construite à partir du _template_.
 
-<pre class="brush:js;">// On vérifie si le navigateur prend en charge
+```js
+// On vérifie si le navigateur prend en charge
 // l'élément HTML template en vérifiant la présence
 // de l'attribut content pour l'élément template.
 if ("content" in document.createElement("template")) {
@@ -78,84 +80,101 @@ if ("content" in document.createElement("template")) {
   // Une autre méthode pour ajouter les lignes
   // car l'élément HTML n'est pas pris en charge.
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>Le résultat correspond au tableau HTML original avec deux lignes supplémentaires qui ont été ajoutées grâce au code JavaScript :</p>
+Le résultat correspond au tableau HTML original avec deux lignes supplémentaires qui ont été ajoutées grâce au code JavaScript :
 
-<pre class="brush: css hidden">table {
+```css hidden
+table {
   background: #000;
 }
 table td {
   background: #fff;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Exemples", 500, 120)}}</p>
+{{EmbedLiveSample("Exemples", 500, 120)}}
 
-<h2 id="Résumé_technique">Résumé technique</h2>
+## Résumé technique
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/fr/docs/Web/HTML/Catégorie_de_contenu">Catégories de contenu</a></th>
-   <td><a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_m%C3%A9ta-donn%C3%A9es">Contenu de méta-données</a>, <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux">contenu de flux</a>, <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9">contenu phrasé</a>, <a href="/fr/docs/Web/Guide/HTML/Catégories_de_contenu#Éléments_supports_de_script">élément destiné aux scripts</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Contenu autorisé</th>
-   <td>Pas de restriction.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omission de balises</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Parents autorisés</th>
-   <td>Tout élément qui accepte du <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_m%C3%A9ta-donn%C3%A9es">Contenu de méta-données</a>, du <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9">contenu phrasé</a>, ou <a href="/fr/docs/Web/Guide/HTML/Catégories_de_contenu#Éléments_supports_de_script">des éléments destinés aux scripts</a>. L'élément {{HTMLElement("colgroup")}} est également autorisé s'il n'a pas l'attribut {{htmlattrxref("span", "colgroup")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Rôles ARIA autorisés</th>
-   <td>Aucun.</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface DOM</th>
-   <td>{{domxref("HTMLTemplateElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
+          >Catégories de contenu</a
+        >
+      </th>
+      <td>
+        <a
+          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_m%C3%A9ta-donn%C3%A9es"
+          >Contenu de méta-données</a
+        >,
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+          >contenu de flux</a
+        >,
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          >contenu phrasé</a
+        >,
+        <a
+          href="/fr/docs/Web/Guide/HTML/Catégories_de_contenu#Éléments_supports_de_script"
+          >élément destiné aux scripts</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>Pas de restriction.</td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balises</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>
+        Tout élément qui accepte du
+        <a
+          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_m%C3%A9ta-donn%C3%A9es"
+          >Contenu de méta-données</a
+        >, du
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          >contenu phrasé</a
+        >, ou
+        <a
+          href="/fr/docs/Web/Guide/HTML/Catégories_de_contenu#Éléments_supports_de_script"
+          >des éléments destinés aux scripts</a
+        >. L'élément {{HTMLElement("colgroup")}} est également autorisé
+        s'il n'a pas l'attribut
+        {{htmlattrxref("span", "colgroup")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>Aucun.</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{domxref("HTMLTemplateElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','scripting.html#the-template-element','template element')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C','/scripting-1.html#the-template-element','template element')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                             | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('HTML WHATWG','scripting.html#the-template-element','template element')}} | {{Spec2('HTML WHATWG')}} |                      |
+| {{SpecName('HTML5 W3C','/scripting-1.html#the-template-element','template element')}} | {{Spec2('HTML5 W3C')}}     | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.elements.template")}}</p>
+{{Compat("html.elements.template")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTMLElement("slot")}}</li>
- <li><a href="/fr/docs/Web/Web_Components/Using_templates_and_slots">Utiliser les gabarits et les emplacements (<em>templates and slots</em>)</a></li>
- <li>{{HTMLElement("shadow")}} {{obsolete_inline}}</li>
-</ul>
+- {{HTMLElement("slot")}}
+- [Utiliser les gabarits et les emplacements (_templates and slots_)](/fr/docs/Web/Web_Components/Using_templates_and_slots)
+- {{HTMLElement("shadow")}} {{obsolete_inline}}

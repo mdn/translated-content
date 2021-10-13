@@ -1,15 +1,15 @@
 ---
-title: 'Types de liens : noreferrer'
+title: "Types de liens\_: noreferrer"
 slug: Web/HTML/Link_types/noreferrer
+translation_of: Web/HTML/Link_types/noreferrer
 browser-compat: html.elements.a.rel.noreferrer
-translation_of: 'Web/HTML/Link_types/noreferrer'
 ---
-<p>Le mot-clé <strong><code>noreferrer</code></strong> de l'attribut <code><a href="/fr/docs/Web/HTML/Attributes/rel">rel</a></code> des éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} et {{HTMLElement("form")}} indique au navigateur, lorsque celui-ci ouvre la ressource cible, d'omettre l'en-tête {{HTTPHeader("Referer")}} et de ne divulguer aucune information de <i lang="en">referrer</i>. Lorsque <code>noreferrer</code> est indiqué, le navigateur se comporte également comme si le mot-clé <code>noopener</code> avait été spécifié (il n'est donc pas utile d'indiquer les deux).</p>
+Le mot-clé **`noreferrer`** de l'attribut [`rel`](/fr/docs/Web/HTML/Attributes/rel) des éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} et {{HTMLElement("form")}} indique au navigateur, lorsque celui-ci ouvre la ressource cible, d'omettre l'en-tête {{HTTPHeader("Referer")}} et de ne divulguer aucune information de <i lang="en">referrer</i>. Lorsque `noreferrer` est indiqué, le navigateur se comporte également comme si le mot-clé `noopener` avait été spécifié (il n'est donc pas utile d'indiquer les deux).
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité navigateur</h2>
+## Compatibilité navigateur
 
-<p>{{Compat}}</p>
+{{Compat}}

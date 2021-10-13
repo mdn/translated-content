@@ -9,32 +9,19 @@ tags:
   - Web
 translation_of: Web/HTML/Element/noembed
 ---
-<div>{{HTMLRef}}{{Non-standard_header}}{{obsolete_header}}</div>
+{{HTMLRef}}{{Non-standard_header}}{{obsolete_header}}
 
-<p>L'élément <code><strong>&lt;noembed&gt;</strong></code> est une façon obsolète et non standardisée de fournir une alternative de contenu pour les navigateurs ne supportant pas l'élément {{HTMLElement("embed")}} ou des <a href="/fr/docs/Web/HTML/Catégorie_de_contenu">catégories de contenu</a> qu'un auteur aimerait utiliser.<br>
- Cet élément a été rendu obsolète à partir de la version HTML 4.01 et a été remplacé par {{HTMLElement("object")}}. Le contenu alternatif doit être inséré entre la balise d'ouverture et celle de fermeture de {{HTMLElement("object")}}</p>
+L'élément **`<noembed>`** est une façon obsolète et non standardisée de fournir une alternative de contenu pour les navigateurs ne supportant pas l'élément {{HTMLElement("embed")}} ou des [catégories de contenu](/fr/docs/Web/HTML/Catégorie_de_contenu) qu'un auteur aimerait utiliser.
+Cet élément a été rendu obsolète à partir de la version HTML 4.01 et a été remplacé par {{HTMLElement("object")}}. Le contenu alternatif doit être inséré entre la balise d'ouverture et celle de fermeture de {{HTMLElement("object")}}
 
-<div class="note">
-<p><strong>Note :</strong> Bien que cet élément soit toujours supporté dans plusieurs navigateurs, il a été rendu obsolète et ne devrait pas être utilisé. Utilisez plutôt {{HTMLElement("object")}}</p>
-</div>
+> **Note :** Bien que cet élément soit toujours supporté dans plusieurs navigateurs, il a été rendu obsolète et ne devrait pas être utilisé. Utilisez plutôt {{HTMLElement("object")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#noembed', '&lt;noembed&gt;')}}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td>Indication que la fonctionnalité n'est pas conforme.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                                 | Commentaires                                         |
+| ---------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#noembed', '&lt;noembed&gt;')}} | {{ Spec2('HTML WHATWG') }} | Indication que la fonctionnalité n'est pas conforme. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.elements.noembed")}}</p>
+{{Compat("html.elements.noembed")}}

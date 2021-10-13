@@ -9,143 +9,143 @@ tags:
   - Web
 translation_of: Web/HTML/Element/tt
 ---
-<div>{{obsolete_header}}{{HTMLRef}}</div>
+{{obsolete_header}}{{HTMLRef}}
 
-<p>L'élément HTML <strong><code>&lt;tt&gt;</code></strong> (pour <em>Teletype Text</em>) crée un élément en ligne, écrit dans la police à chasse fixe par défaut du navigateur. Cet élément a été conçu pour mettre en forme du texte comme s'il apparaissait sur un affichage à largeur fixe tel qu'un téléscripteur.</p>
+L'élément HTML **`<tt>`** (pour _Teletype Text_) crée un élément en ligne, écrit dans la police à chasse fixe par défaut du navigateur. Cet élément a été conçu pour mettre en forme du texte comme s'il apparaissait sur un affichage à largeur fixe tel qu'un téléscripteur.
 
-<p>Cet élément est désormais obsolète et un élément {{HTMLElement("code")}}, {{HTMLElement("kbd")}}, {{HTMLElement("samp")}} ou {{HTMLElement("var")}} pourra être utilisé à la place s'il faut afficher du texte en incise avec une police à chasse fixe. On pourra utiliser l'élément {{HTMLElement("pre")}} pour afficher un bloc de contenu préformaté (également généralement affiché dans une police à chasse fixe).</p>
+Cet élément est désormais obsolète et un élément {{HTMLElement("code")}}, {{HTMLElement("kbd")}}, {{HTMLElement("samp")}} ou {{HTMLElement("var")}} pourra être utilisé à la place s'il faut afficher du texte en incise avec une police à chasse fixe. On pourra utiliser l'élément {{HTMLElement("pre")}} pour afficher un bloc de contenu préformaté (également généralement affiché dans une police à chasse fixe).
 
-<div class="note">
-  <p><strong>Note :</strong> Si aucun de ces éléments ne correspond à la sémantique portée par votre contenu (lorsque, par exemple, il ne s'agit que d'un effet de mise en forme), vous pouvez utiliser un élément {{HTMLElement("span")}} mis en forme avec CSS (par exemple la propriété {{cssxref("font-family")}}).</p>
-</div>
+> **Note :** Si aucun de ces éléments ne correspond à la sémantique portée par votre contenu (lorsque, par exemple, il ne s'agit que d'un effet de mise en forme), vous pouvez utiliser un élément {{HTMLElement("span")}} mis en forme avec CSS (par exemple la propriété {{cssxref("font-family")}}).
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<p>Cet élément inclut uniquement <a href="/fr/docs/Web/HTML/Attributs_universels">les attributs universels</a>.</p>
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemple_simple">Exemple simple</h3>
+### Exemple simple
 
-<p>Cet exemple utilise <code>&lt;tt&gt;</code> afin d'afficher le texte affiché et saisi dans un terminal.</p>
+Cet exemple utilise `<tt>` afin d'afficher le texte affiché et saisi dans un terminal.
 
-<pre class="brush:html">&lt;p&gt;
+```html
+<p>
   Veuillez saisir la commande telnet suivante :
-  &lt;code&gt;set localecho&lt;/code&gt;&lt;br /&gt;
+  <code>set localecho</code><br />
   Le client telnet devrait alors afficher :
-  &lt;tt&gt;Local Echo is on&lt;/tt&gt;
-&lt;/p&gt;
-</pre>
+  <tt>Local Echo is on</tt>
+</p>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Exemple_simple", 650, 80)}}</p>
+{{EmbedLiveSample("Exemple_simple", 650, 80)}}
 
-<h3 id="Surcharger_la_police_par_défaut">Surcharger la police par défaut</h3>
+### Surcharger la police par défaut
 
-<p>Il est possible de surcharger la police par défaut utilisée pour cet élément grâce à CSS :</p>
+Il est possible de surcharger la police par défaut utilisée pour cet élément grâce à CSS :
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">tt {
+```css
+tt {
   font-family: "Lucida Console", "Menlo", "Monaco", "Courier",
                monospace;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush:html">&lt;p&gt;
+```html
+<p>
   Veuillez saisir la commande telnet suivante :
-  &lt;code&gt;set localecho&lt;/code&gt;&lt;br /&gt;
+  <code>set localecho</code><br />
   Le client telnet devrait alors afficher :
-  &lt;tt&gt;Local Echo is on&lt;/tt&gt;
-&lt;/p&gt;
-</pre>
+  <tt>Local Echo is on</tt>
+</p>
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Surcharger_la_police_par_défaut", 650, 80)}}</p>
+{{EmbedLiveSample("Surcharger_la_police_par_défaut", 650, 80)}}
 
-<h2 id="Notes_d'utilisation">Notes d'utilisation</h2>
+## Notes d'utilisation
 
-<p>Par défaut, le contenu de l'élément <code>&lt;tt&gt;</code> est affiché avec la police à chasse fixe par défaut du navigateur. Comme vu dans l'exemple précédent, il est possible de surcharger cette police.</p>
+Par défaut, le contenu de l'élément `<tt>` est affiché avec la police à chasse fixe par défaut du navigateur. Comme vu dans l'exemple précédent, il est possible de surcharger cette police.
 
-<div class="note">
-<p><strong>Note :</strong> Les règles de style propres à l'utilisateur sont prioritaires par rapport aux feuilles de style d'un site ou d'une application web.</p>
-</div>
+> **Note :** Les règles de style propres à l'utilisateur sont prioritaires par rapport aux feuilles de style d'un site ou d'une application web.
 
-<p>Bien que cet élément n'ait pas été officiellement déprécié en HTML 4.01, son utilisation a été déconseillée pour privilégier d'autres éléments HTML ou une mise en forme via CSS. L'élément <code>&lt;tt&gt;</code> est désormais obsolète en HTML5.</p>
+Bien que cet élément n'ait pas été officiellement déprécié en HTML 4.01, son utilisation a été déconseillée pour privilégier d'autres éléments HTML ou une mise en forme via CSS. L'élément `<tt>` est désormais obsolète en HTML5.
 
-<h2 id="Résumé_technique">Résumé technique</h2>
+## Résumé technique
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/fr/docs/Web/HTML/Catégorie_de_contenu">Catégories de contenu</a></th>
-   <td><a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux">Contenu de flux</a>, <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé">contenu phrasé</a>, <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible">contenu tangible</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Contenu autorisé</th>
-   <td><a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9">Contenu phrasé</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omission de balises</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Parents autorisés</th>
-   <td>Tout élément qui accepte du <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9">contenu phrasé</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Rôles ARIA autorisés</th>
-   <td>Tous les rôles sont autorisés.</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface DOM</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
+          >Catégories de contenu</a
+        >
+      </th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+          >Contenu de flux</a
+        >,
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+          >contenu phrasé</a
+        >,
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
+          >contenu tangible</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          >Contenu phrasé</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balises</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>
+        Tout élément qui accepte du
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          >contenu phrasé</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>Tous les rôles sont autorisés.</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'obsolete.html#tt', '&lt;tt&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'obsolete.html#elementdef-tt', '&lt;tt&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'present/graphics.html#h-15.2.1', '&lt;tt&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                             | Commentaires |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
+| {{SpecName('HTML WHATWG', 'obsolete.html#tt', '&lt;tt&gt;')}}                 | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5 W3C', 'obsolete.html#elementdef-tt', '&lt;tt&gt;')}}     | {{Spec2('HTML5 W3C')}}     |              |
+| {{SpecName('HTML4.01', 'present/graphics.html#h-15.2.1', '&lt;tt&gt;')}} | {{Spec2('HTML4.01')}}     |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.elements.tt")}}</p>
+{{Compat("html.elements.tt")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTMLElement("code")}}</li>
- <li>{{HTMLElement("var")}}</li>
- <li>{{HTMLElement("kbd")}}</li>
- <li>{{HTMLElement("samp")}}</li>
- <li>{{HTMLElement("pre")}}</li>
-</ul>
+- {{HTMLElement("code")}}
+- {{HTMLElement("var")}}
+- {{HTMLElement("kbd")}}
+- {{HTMLElement("samp")}}
+- {{HTMLElement("pre")}}

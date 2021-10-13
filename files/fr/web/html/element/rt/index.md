@@ -9,85 +9,70 @@ tags:
   - Web
 translation_of: Web/HTML/Element/rt
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>L'élément HTML <strong><code>&lt;rt&gt;</code></strong> indique la composante texte d'une annotation Ruby, il est notamment utilisé pour la prononciation, la traduction ou la translitération des caractères d'Asie orientale. Cet élément est toujours contenu dans un élément {{HTMLElement("ruby")}}.</p>
+L'élément HTML **`<rt>`** indique la composante texte d'une annotation Ruby, il est notamment utilisé pour la prononciation, la traduction ou la translitération des caractères d'Asie orientale. Cet élément est toujours contenu dans un élément {{HTMLElement("ruby")}}.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/rt.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/rt.html", "tabbed-shorter")}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<p>Cet élément inclut uniquement <a href="/fr/docs/Web/HTML/Attributs_universels">les attributs universels</a>.</p>
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Avec_prise_en_charge_de_ruby">Avec prise en charge de ruby</h3>
+### Avec prise en charge de ruby
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ruby&gt;
-  漢 &lt;rt&gt;Kan&lt;/rt&gt;
-  字 &lt;rt&gt;ji&lt;/rt&gt;
-&lt;/ruby&gt;
-</pre>
+```html
+<ruby>
+  漢 <rt>Kan</rt>
+  字 <rt>ji</rt>
+</ruby>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   font-size: 22px;
 }
-</pre>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Avec_prise_en_charge_de_ruby","100%","130")}}</p>
+{{EmbedLiveSample("Avec_prise_en_charge_de_ruby","100%","130")}}
 
-<h3 id="Sans_prise_en_charge_de_ruby">Sans prise en charge de ruby</h3>
+### Sans prise en charge de ruby
 
-<p>Pour un navigateur sans prise en charge de Ruby, on aurait le résultat suivant :</p>
+Pour un navigateur sans prise en charge de Ruby, on aurait le résultat suivant :
 
-<pre class="brush: html hidden">漢 Kan 字 ji</pre>
+```html hidden
+漢 Kan 字 ji
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   font-size: 22px;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Sans_prise_en_charge_de_ruby", 600, 60)}}</p>
+{{EmbedLiveSample("Sans_prise_en_charge_de_ruby", 600, 60)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'text-level-semantics.html#the-rt-element', '&lt;rt&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-rt-element', '&lt;rt&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                             | Commentaires |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
+| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-rt-element', '&lt;rt&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-rt-element', '&lt;rt&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("html.elements.rt")}}</p>
+{{Compat("html.elements.rt")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTMLElement("ruby")}}</li>
- <li>{{HTMLElement("rp")}}</li>
- <li>{{HTMLElement("rb")}}</li>
- <li>{{HTMLElement("rtc")}}</li>
- <li>{{CSSXRef("text-transform", "text-transform: full-size-kana")}}</li>
-</ul>
-</div>
+- {{HTMLElement("ruby")}}
+- {{HTMLElement("rp")}}
+- {{HTMLElement("rb")}}
+- {{HTMLElement("rtc")}}
+- {{CSSXRef("text-transform", "text-transform: full-size-kana")}}
