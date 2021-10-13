@@ -14,7 +14,7 @@ original_slug: Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page
  <tbody>
   <tr>
    <th scope="row">Prérequis&nbsp;:</th>
-   <td>Vous devriez savoir <a href="/fr/docs/Apprendre/HTML/Write_a_simple_page_in_HTML">comment créer un document HTML simple</a> et <a href="/fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">comment ajouter des images statiques à une page web.</a></td>
+   <td>Vous devriez connaître <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">les fondamentaux de HTML</a> et <a href="/fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">comment ajouter des images statiques à une page web</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objectifs&nbsp;:</th>
@@ -69,13 +69,14 @@ original_slug: Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page
 
 <p>Mais il est possible d'utiliser deux nouveaux attributs — <a href="/fr/docs/Web/HTML/Element/Img#attr-srcset"><code>srcset</code></a> et <a href="/fr/docs/Web/HTML/Element/Img#attr-sizes"><code>sizes</code></a> — permettant de fournir plusieurs images source avec des indications pour permettre au navigateur de faire le bon choix. Vous trouverez un exemple de cela dans le fichier <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html">responsive.html</a> sur GitHub (voyez aussi le <a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html">code source</a>)&nbsp;:</p>
 
-<pre class="brush: html">&lt;img srcset="elva-fairy-320w.jpg 320w,
-             elva-fairy-480w.jpg 480w,
+<pre class="brush: html">
+&lt;img srcset="elva-fairy-480w.jpg 480w,
              elva-fairy-800w.jpg 800w"
-     sizes="(max-width: 320px) 280px,
-            (max-width: 480px) 440px,
+     sizes="(max-width: 600px) 480px,
             800px"
-     src="elva-fairy-800w.jpg" alt="Elva habillée en fée"&gt;</pre>
+     src="elva-fairy-800w.jpg"
+     alt="Elva dressed as a fairy"&gt;
+</pre>
 
 <p>Les attributs <code>srcset</code> et <code>sizes</code> paraissent complexes, mais ils ne sont pas difficiles à comprendre si vous les formatez comme indiqué ci-dessus, avec une partie différente de la valeur de l'attribut sur chaque ligne. Chaque valeur contient une liste séparée par des virgules et chaque partie de la liste est composée de trois sous-parties. Passons maintenant en revue leur contenu.</p>
 
@@ -96,7 +97,7 @@ original_slug: Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page
 </ol>
 
 <div class="note">
-<p><strong>Note&nbsp;:</strong> pour définir une largeur d'emplacement, vous pouvez indiquer une taille absolue (<code>px</code>, <code>em</code>) ou relative au viewport (vw), mais pas en pourcentage. Vous avez peut‑être noté que la dernière largeur d'emplacement ne comporte pas d'indication pour le média — c'est la valeur par défaut retenue quand aucune des conditions n'est vraie). Le navigateur ignore tout ce qui suit dès la première condition concordante&nbsp;; donc soyez attentif à l'ordre de ces conditions pour le média.</p>
+<p><strong>Note&nbsp;:</strong> pour définir une largeur d'emplacement, vous pouvez indiquer une taille absolue (<code>px</code>, <code>em</code>) ou relative au viewport (<code>vw</code>), mais pas en pourcentage. Vous avez peut‑être noté que la dernière largeur d'emplacement ne comporte pas d'indication pour le média — c'est la valeur par défaut retenue quand aucune des conditions n'est vraie). Le navigateur ignore tout ce qui suit dès la première condition concordante&nbsp;; donc soyez attentif à l'ordre de ces conditions pour le média.</p>
 </div>
 
 <p>Ainsi, une fois ces attributs en place, le navigateur va&nbsp;:</p>
@@ -110,22 +111,17 @@ original_slug: Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page
 
 <p>Et c'est tout&nbsp;! Donc à ce stade, si un navigateur prenant en charge une largeur de vue de 480 px charge la page, la condition pour le média <code>(max-width: 480px)</code> sera vraie, donc une largeur d'emplacement de 440px sera choisie, donc le fichier <code>elva-fairy-480w.jpg</code> sera chargé, car sa largeur intrinsèque (<code>480w</code>) est celle qui est la plus proche de <code>440px</code>. L'image 800 px a une taille de 128 Ko sur disque alors que la version 480 px n'occupe que 63 Ko — une économie de 65Ko. Imaginez maintenant qu'il s'agisse d'une page avec beaucoup d'images. L'utilisation de cette technique peut permettre aux personnes naviguant sur mobile d'économiser beaucoup de bande passante.</p>
 
+<div class="note">
+  <p><strong>Note&nbsp;:</strong> lorsque vous testez cela avec un navigateur de bureau, si ce dernier échoue à charger l'image la plus étroite alors que vous avez réduit la largeur de la fenêtre au maximum, regardez la taille du <i lang="en">viewport</i> (dont vous pouvez avoir une approximation via l'instruction <code>document.querySelector("html").clientWidth</code> dans la console JavaScript). Selon les navigateurs, il existe différentes tailles minimales au-delà desquelles on ne pourra pas plus réduire la fenêtre (tailles minimales qui pourraient être plus larges qu'on ne le pense). Lorsque vous testez avec un navigateur mobile, vous pouvez utiliser les outils comme la page <code>about:debugging</code> de Firefox pour inspecter la page chargée sur le mobile à l'aide des outils de développement pour navigateur de bureau.</p>
+  <p>Pour observer les images chargées, vous pouvez utiliser l'onglet <a href="/fr/docs/Tools/Network_Monitor">Moniteur réseau</a> dans les outils de développement de Firefox.</p>
+</div>
+
 <p>Les navigateurs les plus anciens qui ne prennent pas en charge ces fonctionnalités les ignorent; poursuivent et chargent normalement l'image référencée dans l'attribut <a href="/fr/docs/Web/HTML/Element/Img#attr-src"><code>src</code></a>.</p>
 
 <div class="note">
-<p><strong>Note&nbsp;:</strong> dans l'élément <a href="/fr/docs/Web/HTML/Element/head"><code>&lt;head&gt;</code></a> du document, vous trouvez la ligne <code>&lt;meta name="viewport" content="width=device-width"&gt;</code>&nbsp;: ceci force les navigateurs mobiles de prendre la largeur réelle de leur vue pour charger des pages web (certains navigateurs mobiles mentent à propos de la largeur de leur vue, et à la place chargent des pages pour une vue plus large, puis rétrécissent la page chargée, ce qui n'est pas vraiment une aide pour les pages adaptatives ou pour la conception. Nous vous en dirons plus à ce propos dans un module à venir.)</p>
+<p><strong>Note&nbsp;:</strong> dans l'élément <a href="/fr/docs/Web/HTML/Element/head"><code>&lt;head&gt;</code></a> du document, vous trouvez la ligne <code>&lt;meta name="viewport" content="width=device-width"&gt;</code>&nbsp;: ceci force les navigateurs mobiles de prendre la largeur réelle de leur vue pour charger des pages web (certains navigateurs mobiles mentent à propos de la largeur de leur vue, et à la place chargent des pages pour une vue plus large, puis rétrécissent la page chargée, ce qui n'est pas vraiment une aide pour les pages adaptatives ou pour la conception).</p>
 </div>
 
-<p>Il y a quelques outils de développement utiles dans les navigateurs pour vous aider à déterminer les largeurs d'affichage nécessaires, etc, que vous devez utiliser. Pour les déterminer, nous avons d'abord chargé la version non adaptative de l'exemple (<code>not‑responsive.html</code>), puis nous sommes allés dans <a href="/fr/docs/Tools/Responsive_Design_Mode">Responsive Design View </a>(<em>Outils &gt; Développement web &gt; Vue adaptative</em>), qui permet de regarder les mises en page web comme si elles étaient visualisées à travers un éventail de tailles d'écran d'appareils différents.</p>
-
-<p>Nous avons réglé la largeur de la fenêtre à 320px puis 480px&nbsp;; pour chacun, nous sommes allés dans l'<a href="/fr/docs/Tools/Page_Inspector">inspecteur DOM</a>, j'ai cliqué sur l'élément <a href="/fr/docs/Web/HTML/Element/Img"><code>&lt;img&gt;</code></a>} qui nous intéresse, puis j'ai regardé sa taille dans l'onglet <i lang="en">Box Model View</i> sur le côté droit de l'écran. Cela devrait vous donner les largeurs intrinsèques d'image dont vous avez besoin.</p>
-
-
-<p>Ensuite, vous pouvez vérifier si <code>srcset</code> fonctionne en réglant la largeur de la fenêtre sur ce que vous voulez (par exemple une largeur étroite), en ouvrant <i lang="en">Network Inspector</i> (<em>Outils &gt; Développement web &gt; Réseau</em>), puis en rechargeant la page. Ceci devrait vous donner une liste des ressources téléchargées pour dresser la page web, et ici vous pouvez vérifier quel fichier image a été choisi pour le téléchargement.</p>
-
-<div class="note">
-<p><strong>Note&nbsp;:</strong> utilisez Mozilla Firefox pour tester <code>srcset</code>. Chrome charge la meilleure image dans le cache du navigateur, ce qui empêche de la tester dans les outils de développement.</p>
-</div>
 
 <h3 id="Commutation_de_résolution_même_taille_résolutions_differentes">Commutation de résolution&nbsp;: même taille, résolutions différentes</h3>
 
@@ -202,21 +198,9 @@ original_slug: Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page
  <li>Comme précédemment, il n'y a pas d'inconvénient à utiliser des listes avec une virgule comme séparateur avec <code>srcset</code> et <code>sizes</code>, selon les besoins.</li>
 </ul>
 
-<h2 id="Apprentissage_actif_mise_en_œuvre_de_vos_images_adaptatives">Apprentissage actif&nbsp;: mise en œuvre de vos images adaptatives</h2>
+<h2 id="Testez_vos_compétences">Testez vos compétences&nbsp;!</h2>
 
-<p>Pour cet apprentissage actif, vous devrez mettre en pratique les conseils qui vous sont donnés. C'est à vous de prendre les décisions artistiques en mettant en place vos propres solutions sur petits écrans et écrans larges en utilisant &lt;image&gt;, et un exemple de commutation de résolution en utilisant <code>srcset</code>.</p>
-
-<ol>
- <li>Écrivez un HTML simple contenant votre code (utilisez <code>not-responsive.html</code> comme point de départ si vous voulez)</li>
- <li>Trouvez une jolie image de paysage de grande largeur avec quelques détails à l'intérieur. Créez une version taille web de cette dernière avec un éditeur graphique, puis découpez en une partie plus petite qui zoome sur un des détails, et créez une deuxième image (une largeur de l'ordre de 480 px conviendra parfaitement).</li>
- <li>Utilisez l'élément <code>&lt;picture&gt;</code> pour implémenter une bascule d'image en décision artistique !</li>
- <li>Créez plusieurs fichiers image de tailles différentes, chacun montrant la même image.</li>
- <li>Utilisez <code>srcset</code>/<code>size</code> pour créer un exemple de commutateur de résolution, soit pour servir une image de même taille avec différentes résolutions, ou diverses tailles d'images avec diverses largeur de vue.</li>
-</ol>
-
-<div class="note">
-<p><strong>Note&nbsp;:</strong> utilisez les outils de développement du navigateur pour vous aider dans le choix des tailles dont vous avez besoin, comme mentionné plus haut.</p>
-</div>
+<p>Et vous voici à la fin de cet article, mais saurez-vous vous rappeler les informations les plus importantes&nbsp;? Vous pourrez trouver une évaluation détaillée pour tester ces compétences à la fin du module&nbsp;: voir <a href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Créer une page de présentation de Mozilla</a>.</p>
 
 <h2 id="Résumé">Résumé</h2>
 
@@ -233,7 +217,7 @@ original_slug: Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page
 
 <ul>
  <li><a href="http://blog.cloudfour.com/responsive-images-101-definitions">L'excellente introduction aux images adaptatives de Jason Grigsby</a></li>
- <li><a href="https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/">Images adaptatives&nbsp;: si vous changez juste de résolution, utilisez srcset</a> — comporte plus d'explications sur la façon dont le navigateur retravaille l'image à utiliser</li>
+ <li><a href="https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/">Images adaptatives&nbsp;: si vous changez juste de résolution, utilisez <code>srcset</code></a> — comporte plus d'explications sur la façon dont le navigateur retravaille l'image à utiliser</li>
  <li><a href="/fr/docs/Web/HTML/Element/Img"><code>&lt;img&gt;</code></a></li>
  <li><a href="/fr/docs/Web/HTML/Element/picture"><code>&lt;picture&gt;</code></a></li>
  <li><a href="/fr/docs/Web/HTML/Element/Source"><code>&lt;source&gt;</code></a></li>
@@ -246,8 +230,7 @@ original_slug: Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page
 <ul>
  <li><a href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images en HTML</a></li>
  <li><a href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Contenus audio et video</a></li>
- <li><a href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">De &lt;object&gt; à &lt;iframe&gt; — autres techniques d'intégration</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">De <code>&lt;object&gt;</code> à <code>&lt;iframe&gt;</code> — autres techniques d'intégration</a></li>
  <li><a href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Ajout de graphiques vectoriels dans le web</a></li>
- <li><a href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Images adaptatives</a></li>
  <li><a href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Écran d'accueil Mozilla</a></li>
 </ul>
