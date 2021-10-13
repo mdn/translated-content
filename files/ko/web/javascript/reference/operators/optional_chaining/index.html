@@ -91,6 +91,13 @@ function doSomething(onContent, onError) {
 <pre class="brush: js">let nestedProp = obj?.['prop' + 'Name'];
 </pre>
 
+<h3 id="표현식에서_Optional_chaining">Optional chaining은 할당자 왼쪽에서 유효하지 않습니다.</h3>
+
+<pre class="brush: js">
+let object = {};
+object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignment
+</pre>
+
 <h3 id="Optional_chaining으로_배열_항목에_접근하기">Optional chaining으로 배열 항목에 접근하기</h3>
 
 <pre class="brush: js">let arrayItem = arr?.[42];</pre>
