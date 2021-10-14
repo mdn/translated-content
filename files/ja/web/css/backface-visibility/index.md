@@ -3,10 +3,11 @@ title: backface-visibility
 slug: Web/CSS/backface-visibility
 tags:
   - CSS
-  - CSS Property
-  - CSS Transforms
+  - CSS プロパティ
+  - CSS 座標変換
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
+browser-compat: css.properties.backface-visibility
 translation_of: Web/CSS/backface-visibility
 ---
 {{CSSRef}}
@@ -15,90 +16,95 @@ translation_of: Web/CSS/backface-visibility
 
 {{EmbedInteractiveExample("pages/css/backface-visibility.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) をクローンしてプルリクエストを送信してください。</p>
+要素の裏面は表面の鏡像です。裏面は二次元では可視ではありませんが、三次元空間で要素に回転変換が行われたときに、背面を見ることができます。 (このプロパティは、視点を持たない二次元の座標変換では効果がありません。)
 
-要素の裏面は表面の鏡像です。裏面は二次元では可視ではありませんが、三次元空間で要素に回転の変換が行われたときに、背面を見ることができます。 (このプロパティは、遠近感を持たない二次元の変換では効果がありません。)
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* キーワード値 */
+```css
+/* キーワード値 */
 backface-visibility: visible;
 backface-visibility: hidden;
 
 /* グローバル値 */
 backface-visibility: inherit;
 backface-visibility: initial;
-backface-visibility: unset;</pre>
+backface-visibility: revert;
+backface-visibility: unset;
+```
 
 `backface-visibility` プロパティは、以下に挙げたキーワードのうちの一つで指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
 - `visible`
   - : ユーザーに対して裏を向いたとき、背面が可視になります。
 - `hidden`
   - : 背面が非表示になり、要素がユーザーに対して反対を向いたときに不可視にするのに便利です。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 公式定義
 
 {{cssinfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Cube_with_transparent_and_opaque_faces" name="Cube_with_transparent_and_opaque_faces">透明な面と不透明な面を持った立方体</h3>
+<h3 id="Cube_with_transparent_and_opaque_faces">透明な面と不透明な面を持った立方体</h3>
 
 この例は、透明な面と不透明な面を持つ立方体を表示します。
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;&lt;code&gt;backface-visibility: visible;&lt;/code&gt;&lt;/th&gt;
-    &lt;th&gt;&lt;code&gt;backface-visibility: hidden;&lt;/code&gt;&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;
-      &lt;div class="container"&gt;
-        &lt;div class="cube showbf"&gt;
-          &lt;div class="face front"&gt;1&lt;/div&gt;
-          &lt;div class="face back"&gt;2&lt;/div&gt;
-          &lt;div class="face right"&gt;3&lt;/div&gt;
-          &lt;div class="face left"&gt;4&lt;/div&gt;
-          &lt;div class="face top"&gt;5&lt;/div&gt;
-          &lt;div class="face bottom"&gt;6&lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;p&gt;
+#### HTML
+
+```html
+<table>
+  <tr>
+    <th><code>backface-visibility: visible;</code></th>
+    <th><code>backface-visibility: hidden;</code></th>
+  </tr>
+  <tr>
+    <td>
+      <div class="container">
+        <div class="cube showbf">
+          <div class="face front">1</div>
+          <div class="face back">2</div>
+          <div class="face right">3</div>
+          <div class="face left">4</div>
+          <div class="face top">5</div>
+          <div class="face bottom">6</div>
+        </div>
+      </div>
+      <p>
         すべての面が透明であり、
         裏面 (2, 4, 5) が 表面 (1, 3, 6) を通して表示されます。
-      &lt;/p&gt;
-    &lt;/td&gt;
-    &lt;td&gt;
-      &lt;div class="container"&gt;
-        &lt;div class="cube hidebf"&gt;
-          &lt;div class="face front"&gt;1&lt;/div&gt;
-          &lt;div class="face back"&gt;2&lt;/div&gt;
-          &lt;div class="face right"&gt;3&lt;/div&gt;
-          &lt;div class="face left"&gt;4&lt;/div&gt;
-          &lt;div class="face top"&gt;5&lt;/div&gt;
-          &lt;div class="face bottom"&gt;6&lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;p&gt;
+      </p>
+    </td>
+    <td>
+      <div class="container">
+        <div class="cube hidebf">
+          <div class="face front">1</div>
+          <div class="face back">2</div>
+          <div class="face right">3</div>
+          <div class="face left">4</div>
+          <div class="face top">5</div>
+          <div class="face bottom">6</div>
+        </div>
+      </div>
+      <p>
         背後の3面 (2, 4, 5) は非表示です。
-      &lt;/p&gt;
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+      </p>
+    </td>
+  </tr>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">/* Classes that will show or hide the
-   three back faces of the "cube" */
+```css
+/* 「立方体」の 3 つの背面を表示または非表示にするクラス */
 .showbf div {
   backface-visibility: visible;
 }
@@ -175,37 +181,21 @@ th, p, td {
   padding: 6px;
   font-family: sans-serif;
   text-align: left;
-}</pre>
+}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
 {{EmbedLiveSample('Cube_with_transparent_and_opaque_faces', '100%', 360)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Transforms 2', '#propdef-backface-visibility', 'backface-visibility')}}</td>
-   <td>{{Spec2('CSS Transforms 2')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-{{Compat("css.properties.backface-visibility")}}
+{{Compat}}
 
 ## 関連情報
 
-<ul>
- <li>[CSS 変形の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)</li>
-</ul>
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)

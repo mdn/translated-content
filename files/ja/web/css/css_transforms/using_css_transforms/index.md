@@ -1,15 +1,15 @@
 ---
-title: CSS 変換の使用
+title: CSS 座標変換の使用
 slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
 tags:
   - 3D
   - Advanced
   - CSS
-  - CSS Transforms
-  - Graphics
+  - CSS 座標変換
+  - グラフィック
   - ガイド
-  - Rotate
-  - Scale
+  - 回転
+  - 拡大縮小
   - Scaling
   - perspective
   - rotation
@@ -17,24 +17,24 @@ translation_of: Web/CSS/CSS_Transforms/Using_CSS_transforms
 ---
 {{CSSRef}}
 
-**CSS 変換** (transform) は、座標空間を編集することで、通常のフロー処理を混乱させずに影響下にあるコンテンツの形状や位置を変えることができます。このガイドは変換の使用についての解説を行ないます。
+**CSS 座標変換** (transform) は、座標空間を編集することで、通常のフロー処理を混乱させずに影響下にあるコンテンツの形状や位置を変えることができます。このガイドは座標変換の使用についての解説を行ないます。
 
-CSS 変換は、アフィン線形変換を HTML 要素に対して適用する一連の CSS プロパティによって実現されます。変換には、二次元と三次元空間の両方について回転 (rotation)、傾斜 (skewing)、拡大縮小 (scaling)、平行移動 (translation) があります。
+CSS 座標変換は、アフィン線形変換を HTML 要素に対して適用する一連の CSS プロパティによって実現されます。座標変換には、二次元と三次元空間の両方について回転 (rotation)、傾斜 (skewing)、拡大縮小 (scaling)、平行移動 (translation) があります。
 
 > **Warning:** [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model)によって配置された要素に対してのみ `transform` を実行することができます。言うまでもなく、 `display: block` である要素がボックスモデルで配置されます。
 
-## CSS 変換のプロパティ
+## CSS 座標変換のプロパティ
 
-CSS 変換の定義に使われる重要なプロパティが 2 つあります。 {{cssxref("transform")}} と {{cssxref("transform-origin")}} です。
+CSS 座標変換の定義に使われる重要なプロパティが 2 つあります。 {{cssxref("transform")}} と {{cssxref("transform-origin")}} です。
 
 - {{cssxref("transform-origin")}}
-  - : 原点位置を指定します。既定では、これは要素の中央ですが、移動することができます。回転、拡大縮小や傾斜など決まった点が引数として必要な変換で使用されれます。
+  - : 原点位置を指定します。既定では、これは要素の中央ですが、移動することができます。特定の点を引数として必要とする回転、拡大縮小や傾斜などの座標変換で使用されます。
 - {{cssxref("transform")}}
-  - : 要素に適用する変換を指定します。変換の空白区切りのリストで、合成操作の要求された順番で適用されます。変換の合成は右から左の順に適用されます。
+  - : 要素に適用する座標変換を指定します。座標変換の空白区切りのリストで、合成操作の要求された順番で適用されます。座標変換の合成は右から左の順に適用されます。
 
 ## 例
 
-これが変換前の MDN ロゴの画像です。
+これが座標変換前の MDN ロゴの画像です。
 
 ![MDN ロゴ](logo.png)
 
@@ -64,15 +64,15 @@ CSS 変換の定義に使われる重要なプロパティが 2 つあります�
 
 ## 3D 特有の CSS プロパティ
 
-立体空間で CSS 変換 を行うのは、もう少し複雑になります。遠近感を与えて 3D 空間の環境設定を行うことから始める必要があり、それから 2D の要素がその空間でとる挙動を設定しなければなりません。
+立体空間で CSS 座標変換 を行うには、もう少し複雑になります。視点を与えて 3D 空間の環境設定を行うことから始める必要があり、それから 2D の要素がその空間でとる挙動を設定しなければなりません。
 
-<h3 id="Perspective">遠近感</h3>
+<h3 id="Perspective">視点</h3>
 
-設定する最初の要素は遠近感 (perspective) です。遠近感は 3D の印象を与えるものです。見る人から遠ざかるほど、ものが小さくなります。
+設定する最初の要素は視点 (perspective) です。視点は 3D の印象を与えるものです。見る人から遠ざかるほど、ものが小さくなります。
 
 {{page("/ja/docs/Web/CSS/perspective", "Setting perspective", 0, 0, 3)}}
 
-二つ目の設定要素は見る人の位置で、 {{cssxref("perspective-origin")}} プロパティを使います。既定では遠近感は見る人の中央に合わせられますが、いつも妥当であるとは限りません。
+二つ目の設定要素は見る人の位置で、 {{cssxref("perspective-origin")}} プロパティを使います。既定では視点は見る人の中央に合わせられますが、いつも妥当であるとは限りません。
 
 {{page("/ja/docs/Web/CSS/perspective-origin", "Changing the perspective origin", 0, 0, 3)}}
 
@@ -80,6 +80,6 @@ CSS 変換の定義に使われる重要なプロパティが 2 つあります�
 
 ## 関連情報
 
-- [端末の向きと 3D 変換の併用](/ja/docs/Web/Events/Using_device_orientation_with_3D_transforms)
+- [端末の向きと 3D 座標変換の併用](/ja/docs/Web/Events/Using_device_orientation_with_3D_transforms)
 - [Intro to CSS 3D transforms](http://desandro.github.com/3dtransforms/) (David DeSandro によるブログ記事)
-- [CSS Transform Playground](https://css-transform.moro.es/) (CSS 変換機能を視覚化するオンラインツール)
+- [CSS Transform Playground](https://css-transform.moro.es/) (CSS 座標変換機能を視覚化するオンラインツール)

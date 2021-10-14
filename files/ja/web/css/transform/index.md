@@ -4,27 +4,26 @@ slug: Web/CSS/transform
 tags:
   - CSS
   - CSS プロパティ
-  - CSS 変形
   - Reference
+  - 座標変換
+  - recipe:css-property
+browser-compat: css.properties.transform
 translation_of: Web/CSS/transform
 ---
 {{CSSRef}}
 
-[CSS](/ja/docs/Web/CSS) のプロパティ **`transform`** は、与えられた要素を回転、拡大縮小、傾斜、移動することできます。これは、 CSS の[視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)の座標空間を変更します。
+**`transform`** は [CSS](/ja/docs/Web/CSS) のプロパティで、与えられた要素を回転、拡大縮小、傾斜、移動することできます。これは、 CSS の[視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)の座標空間を変更します。
 
 {{EmbedInteractiveExample("pages/css/transform.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) をクローンしてプルリクエストを送信してください。</p>
+このプロパティに `none` 以外の値が設定されていると、[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)が作成されます。この場合、その要素はその中に含まれる `position: fixed;` または `position: absolute;` であるすべての要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)として扱われます。
 
-このプロパティに `none` 以外の値が設定されていると、[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) が作成されます。この場合、その要素はその中に含まれる `position: fixed;` または `position: absolute;` である要素すべての[包含ブロック](/ja/docs/Web/CSS/Containing_block)として扱われます。
+> **Warning:** 座標変換可能な要素のみが `transform` の対象になります。つまり、レイアウトが CSS ボックスモデルによって管理される、[置換要素でないインラインボックス](/ja/docs/Web/CSS/Visual_formatting_model#inline-level_elements_and_inline_boxes)、[表の列ボックス](/ja/docs/Web/HTML/Element/col)、[表の列グループボックス](/ja/docs/Web/HTML/Element/colgroup)を除くすべての要素です。
 
-<div class="warning">
-変形可能な要素のみが `transform` の対象になります。つまり、レイアウトが CSS ボックスモデルによって管理される、[非置換インラインボックス](/ja/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes)、[表の列ボックス](/ja/docs/Web/HTML/Element/col)、[表の列グループボックス](/ja/docs/Web/HTML/Element/colgroup)を除くすべての要素です。
-</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush: css">/* キーワード値 */
+```css
+/* キーワード値 */
 transform: none;
 
 /* 関数値 */
@@ -57,92 +56,79 @@ transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
 /* グローバル値 */
 transform: inherit;
 transform: initial;
+transform: revert;
 transform: unset;
-</pre>
+```
 
-`transform` プロパティには、キーワード値 `[none](#none)` か `[&lt;transform-function&gt;](#&lt;transform-function>)` の値のいずれかが指定されます。
+`transform` プロパティには、キーワード値 `none` か 1 つ以上の `<transform-function>` の値のいずれかが指定されます。
 
-<h3 id="Values" name="Values">値</h3>
+複数の関数値に {{cssxref("transform-function/perspective()", "perspective()")}} が含まれる場合は、先頭に置く必要があります。
 
- <dt id="&lt;transform-function>">{{cssxref("&lt;transform-function&gt;")}}</dt>
-  - : 適用される 1 つ以上の [CSS 変形関数](/ja/docs/Web/CSS/transform-function)です。変形関数は、左から右へ順に重ねられ、つまり右から左の順に変形の混合の効果が適用されます。
- <dt id="none">`none`</dt>
-  - : 変形を何も適用しないことを指定します。
+### 値
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+- {{cssxref("&lt;transform-function&gt;")}}
+  - : 適用される 1 つ以上の [CSS 座標変換関数](/ja/docs/Web/CSS/transform-function)です。座標変換関数は、左から右へ順に重ねられ、つまり右から左の順に座標変換の合成の効果が適用されます。
+- `none`
+  - : 座標変換を何も適用しないことを指定します。
+
+## アクセシビリティの考慮
+
+拡大や縮小のアニメーションは、特定の種類の偏頭痛を引き起こす原因になりやすいので、アクセシビリティの問題になることがあります。ウェブサイトにこのようなアニメーションを含める必要がある場合は、できればサイト全体で、ユーザーがアニメーションを止める制御ができるようしてください。
+
+また、 {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} メディア特性を使用することを検討してください。これを使用して[メディアクエリー](/ja/docs/Web/CSS/Media_queries)を書けば、ユーザーがシステムの設定でアニメーションを減らすよう指定した場合にアニメーションを止めることができます。
+
+詳しくは以下の文書を参照してください。
+
+- [MDN WCAG の理解、ガイドライン 2.3 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.3_%E2%80%94_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [Understanding Success Criterion 2.3.3 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
+
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-{{cssxref("transform-function/perspective", "perspective()")}} を複数の関数の中で使用する場合は、最初に配置しなければなりません。
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+<h3 id="Translating_and_rotating_an_element">要素の移動と回転</h3>
 
-<h3 id="HTML">HTML</h3>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;Transformed element&lt;/div&gt;</pre>
+```html
+<div>Transformed element</div>
+```
 
-<h3 id="CSS">CSS</h3>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   border: solid red;
   transform: translate(30px, 20px) rotate(20deg);
   width: 140px;
   height: 60px;
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+#### 結果
 
-{{EmbedLiveSample("Examples", "400", "160")}}
+{{EmbedLiveSample("Translating_and_rotating_an_element", "400", "160")}}
 
-その他の例は、[CSS Transforms の利用](/ja/docs/Web/Guide/CSS/Using_CSS_transforms) および {{cssxref("&lt;transform-function&gt;")}} をご覧ください。
+### その他の例
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮事項</h2>
+その他の例は、[CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)および {{cssxref("&lt;transform-function&gt;")}} をご覧ください。
 
-拡大や縮小のアニメーションは、特定の種類の偏頭痛を引き起こす原因になりやすいので、アクセシビリティの問題になることがあります。ウェブサイトにこのようなアニメーションを含める必要がある場合は、できればサイト全体で、ユーザーがアニメーションを止める制御ができるようしてください。
+## 仕様書
 
-また、 {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} メディア特性を使用することを検討してください。これを使用して[メディアクエリ](/ja/docs/Web/CSS/Media_Queries)を書けば、ユーザーがシステムの設定でアニメーションを減らすよう指定した場合にアニメーションを止めることができます。
+{{Specifications}}
 
-詳しくは以下の文書を参照してください。
+## ブラウザーの互換性
 
-<ul>
- <li>[MDN WCAG の理解、ガイドライン 2.3 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.3_%E2%80%94_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)</li>
- <li>[Understanding Success Criterion 2.3.3 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)</li>
-</ul>
-
-<h2 id="Specifications" name="Specifications">仕様書</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Transforms 2', '#transform-functions', 'transform')}}</td>
-   <td>{{Spec2('CSS Transforms 2')}}</td>
-   <td>3D 変換関数を追加。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transforms', '#transform-property', 'transform')}}</td>
-   <td>{{Spec2('CSS3 Transforms')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
-
-{{cssinfo}}
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-{{Compat("css.properties.transform")}}
+{{Compat}}
 
 ## 関連情報
 
-<ul>
- <li>[CSS 変形の使用](/ja/docs/Web/CSS/Using_CSS_transforms)</li>
- <li>{{cssxref("&lt;transform-function&gt;")}} データ型にすべての変形関数の説明があります</li>
- <li>CSS 変形機能を視覚化するオンラインツール: [CSS Transform Playground](https://css-transform.moro.es/)</li>
-</ul>
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- {{cssxref("&lt;transform-function&gt;")}} データ型にすべての座標変換関数の説明があります
+- CSS 座標変換機能を視覚化するオンラインツール: [CSS Transform Playground](https://css-transform.moro.es/)
