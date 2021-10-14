@@ -144,7 +144,7 @@ typeof maFonction; // renverra "function"
 
 var maDonnee = 99;
 
-typeof maDonnee + 'Toto';   // renverra 'number Toto'
+typeof maDonnee + ' Toto';   // renverra 'number Toto'
 typeof (maDonnee + 'Toto'); // renverra 'string'
 ```
 
