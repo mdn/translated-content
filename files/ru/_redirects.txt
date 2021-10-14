@@ -319,6 +319,7 @@
 /ru/docs/Web/API/Document/domConfig	/ru/docs/Web/API/Document
 /ru/docs/Web/API/DocumentOrShadowRoot/activeElement	/ru/docs/Web/API/Document/activeElement
 /ru/docs/Web/API/DocumentOrShadowRoot/getSelection	/ru/docs/Web/API/Document/getSelection
+/ru/docs/Web/API/EffectTiming	/ru/docs/Web/API/KeyframeEffect/KeyframeEffect
 /ru/docs/Web/API/Element.getBoundingClientRect	/ru/docs/Web/API/Element/getBoundingClientRect
 /ru/docs/Web/API/Element.insertAdjacentHTML	/ru/docs/Web/API/Element/insertAdjacentHTML
 /ru/docs/Web/API/Element/accessKey	/ru/docs/Web/API/HTMLElement/accessKey

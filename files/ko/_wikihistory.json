@@ -6112,12 +6112,6 @@
       "younheeJang"
     ]
   },
-  "Web/API/RTCConfiguration": {
-    "modified": "2020-10-15T22:21:34.262Z",
-    "contributors": [
-      "chansbro"
-    ]
-  },
   "Web/API/RTCDataChannelEvent": {
     "modified": "2020-10-15T22:21:45.154Z",
     "contributors": [
@@ -16248,13 +16242,6 @@
       "cs09g"
     ]
   },
-  "Web/Progressive_web_apps/Responsive/Media_types": {
-    "modified": "2019-03-23T23:33:02.082Z",
-    "contributors": [
-      "teoli",
-      "SpikeYou"
-    ]
-  },
   "Web/SVG": {
     "modified": "2019-11-05T05:19:15.768Z",
     "contributors": [
@@ -17544,6 +17531,12 @@
       "Saem"
     ]
   },
+  "conflicting/Web/API/RTCPeerConnection/RTCPeerConnection": {
+    "modified": "2020-10-15T22:21:34.262Z",
+    "contributors": [
+      "chansbro"
+    ]
+  },
   "conflicting/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL": {
     "modified": "2019-03-23T22:54:05.275Z",
     "contributors": [
@@ -17578,6 +17571,13 @@
       "teoli",
       "Inyoung",
       "jaemin_jo"
+    ]
+  },
+  "conflicting/Web/CSS/Media_Queries/Using_media_queries": {
+    "modified": "2019-03-23T23:33:02.082Z",
+    "contributors": [
+      "teoli",
+      "SpikeYou"
     ]
   },
   "conflicting/Web/Guide": {

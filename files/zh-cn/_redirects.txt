@@ -121,7 +121,7 @@
 /zh-CN/docs/CSS/动画	/zh-CN/docs/Web/CSS/animation
 /zh-CN/docs/CSS/开始/Content	/zh-CN/docs/Learn/CSS/Howto/Generated_content
 /zh-CN/docs/CSS/开始/SVG_and_CSS	/zh-CN/docs/Web/SVG/Tutorial/SVG_and_CSS
-/zh-CN/docs/CSS/开始/媒体	/zh-CN/docs/Web/Progressive_web_apps/Responsive/Media_types
+/zh-CN/docs/CSS/开始/媒体	/zh-CN/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /zh-CN/docs/CSS:Getting_Started:Content	/zh-CN/docs/Learn/CSS/Howto/Generated_content
 /zh-CN/docs/CSS:Media:Visual	/zh-CN/docs/Web/CSS/@media
 /zh-CN/docs/CSS:background	/zh-CN/docs/Web/CSS/background
@@ -1270,6 +1270,8 @@
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/getSelection	/zh-CN/docs/Web/API/Document/getSelection
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/zh-CN/docs/Web/API/Document/pointerLockElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/styleSheets	/zh-CN/docs/Web/API/Document/styleSheets
+/zh-CN/docs/Web/API/EffectTiming	/zh-CN/docs/conflicting/Web/API/KeyframeEffect/KeyframeEffect
+/zh-CN/docs/Web/API/EffectTiming/easing	/zh-CN/docs/Web/API/KeyframeEffect/KeyframeEffect
 /zh-CN/docs/Web/API/Element.classList	/zh-CN/docs/Web/API/Element/classList
 /zh-CN/docs/Web/API/Element.className	/zh-CN/docs/Web/API/Element/className
 /zh-CN/docs/Web/API/Element.clientLeft	/zh-CN/docs/Web/API/Element/clientLeft
@@ -1452,6 +1454,7 @@
 /zh-CN/docs/Web/API/PositionError	/zh-CN/docs/Web/API/GeolocationPositionError
 /zh-CN/docs/Web/API/PositionOptions	/zh-CN/docs/conflicting/Web/API/Geolocation/getCurrentPosition
 /zh-CN/docs/Web/API/PositionOptions/timeout	/zh-CN/docs/conflicting/Web/API/Geolocation/getCurrentPosition_058087067b28ad25fff974fd59827fb6
+/zh-CN/docs/Web/API/RTCConfiguration	/zh-CN/docs/conflicting/Web/API/RTCPeerConnection/RTCPeerConnection
 /zh-CN/docs/Web/API/RandomSource/getRandomValues	/zh-CN/docs/Web/API/Crypto/getRandomValues
 /zh-CN/docs/Web/API/Response/克隆	/zh-CN/docs/Web/API/Response/clone
 /zh-CN/docs/Web/API/SVGPathElement/getTotalLength	/zh-CN/docs/Web/API/SVGGeometryElement/getTotalLength
@@ -1789,7 +1792,7 @@
 /zh-CN/docs/Web/CSS/实际值	/zh-CN/docs/Web/CSS/actual_value
 /zh-CN/docs/Web/CSS/开始/Content	/zh-CN/docs/Learn/CSS/Howto/Generated_content
 /zh-CN/docs/Web/CSS/开始/SVG_and_CSS	/zh-CN/docs/Web/SVG/Tutorial/SVG_and_CSS
-/zh-CN/docs/Web/CSS/开始/媒体	/zh-CN/docs/Web/Progressive_web_apps/Responsive/Media_types
+/zh-CN/docs/Web/CSS/开始/媒体	/zh-CN/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /zh-CN/docs/Web/CSS/整型	/zh-CN/docs/Web/CSS/integer
 /zh-CN/docs/Web/CSS/文本修饰	/zh-CN/docs/Web/CSS/text-decoration
 /zh-CN/docs/Web/CSS/文本装饰线厚度(粗细)	/zh-CN/docs/Web/CSS/text-decoration-thickness
@@ -1890,9 +1893,9 @@
 /zh-CN/docs/Web/Guide/CSS/Consistent_list_indentation	/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 /zh-CN/docs/Web/Guide/CSS/Counters	/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 /zh-CN/docs/Web/Guide/CSS/Getting_started/Content	/zh-CN/docs/Learn/CSS/Howto/Generated_content
-/zh-CN/docs/Web/Guide/CSS/Getting_started/Media	/zh-CN/docs/Web/Progressive_web_apps/Responsive/Media_types
+/zh-CN/docs/Web/Guide/CSS/Getting_started/Media	/zh-CN/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /zh-CN/docs/Web/Guide/CSS/Getting_started/SVG_and_CSS	/zh-CN/docs/Web/SVG/Tutorial/SVG_and_CSS
-/zh-CN/docs/Web/Guide/CSS/Getting_started/媒体	/zh-CN/docs/Web/Progressive_web_apps/Responsive/Media_types
+/zh-CN/docs/Web/Guide/CSS/Getting_started/媒体	/zh-CN/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /zh-CN/docs/Web/Guide/CSS/Media_queries	/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries
 /zh-CN/docs/Web/Guide/CSS/Testing_media_queries	/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries
 /zh-CN/docs/Web/Guide/CSS/Understanding_z_index	/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index
@@ -2183,6 +2186,7 @@
 /zh-CN/docs/Web/JavaScript/重新认识js	/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /zh-CN/docs/Web/Media/Formats/视频编解码器	/zh-CN/docs/Web/Media/Formats/Video_codecs
 /zh-CN/docs/Web/Performance/浏览器渲染页面的工作原理	/zh-CN/docs/Web/Performance/How_browsers_work
+/zh-CN/docs/Web/Progressive_web_apps/Responsive/Media_types	/zh-CN/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /zh-CN/docs/Web/Progressive_web_apps/加载	/zh-CN/docs/Web/Progressive_web_apps/Loading
 /zh-CN/docs/Web/Progressive_web_apps/添加到主屏幕	/zh-CN/docs/Web/Progressive_web_apps/Add_to_home_screen
 /zh-CN/docs/Web/SVG/Attribute/文本锚点	/zh-CN/docs/Web/SVG/Attribute/text-anchor

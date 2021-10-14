@@ -20376,12 +20376,6 @@
       "Nachec"
     ]
   },
-  "Web/Progressive_web_apps/Responsive/Media_types": {
-    "modified": "2019-03-18T21:15:11.297Z",
-    "contributors": [
-      "luismj"
-    ]
-  },
   "Web/SVG": {
     "modified": "2019-03-23T23:44:20.243Z",
     "contributors": [
@@ -21527,6 +21521,12 @@
     "modified": "2019-03-23T22:31:07.427Z",
     "contributors": [
       "miguelsp"
+    ]
+  },
+  "conflicting/Web/CSS/Media_Queries/Using_media_queries": {
+    "modified": "2019-03-18T21:15:11.297Z",
+    "contributors": [
+      "luismj"
     ]
   },
   "conflicting/Web/CSS/cursor": {

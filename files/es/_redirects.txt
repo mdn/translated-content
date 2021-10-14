@@ -1670,7 +1670,7 @@
 /es/docs/Web/CSS/Gradiente	/es/docs/Web/CSS/gradient
 /es/docs/Web/CSS/Herramientas	/es/docs/conflicting/Web/CSS
 /es/docs/Web/CSS/Introducción/Content	/es/docs/Learn/CSS/Howto/Generated_content
-/es/docs/Web/CSS/Introducción/Media	/es/docs/Web/Progressive_web_apps/Responsive/Media_types
+/es/docs/Web/CSS/Introducción/Media	/es/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /es/docs/Web/CSS/Preguntas_frecuentes_sobre_CSS	/es/docs/Learn/CSS/Howto/CSS_FAQ
 /es/docs/Web/CSS/Pseudoelementos	/es/docs/Web/CSS/Pseudo-elements
 /es/docs/Web/CSS/Referencia_CSS	/es/docs/Web/CSS/Reference
@@ -2497,6 +2497,7 @@
 /es/docs/Web/Performance/mejorando_rendimienot_inicial	/es/docs/Web/Performance/Optimizing_startup_performance
 /es/docs/Web/Progressive_web_apps/Developer_guide/Instalar	/es/docs/Web/Progressive_web_apps/Installing
 /es/docs/Web/Progressive_web_apps/Developer_guide/Installing	/es/docs/Web/Progressive_web_apps/Installing
+/es/docs/Web/Progressive_web_apps/Responsive/Media_types	/es/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /es/docs/Web/Reference/Events	/es/docs/Web/Events
 /es/docs/Web/Reference/Events/animationend	/es/docs/Web/API/HTMLElement/animationend_event
 /es/docs/Web/Reference/Events/beforeunload	/es/docs/Web/API/Window/beforeunload_event
