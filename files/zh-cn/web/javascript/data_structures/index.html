@@ -26,7 +26,7 @@ foo = true;  // foo is a Boolean now
 <p>最新的 ECMAScript 标准定义了 8 种数据类型:</p>
 
 <ul>
- <li>6 种{{Glossary("Primitive", "原始类型")}}，使用 {{Glossary("typeof")}} 运算符检查:
+ <li>7 种{{Glossary("Primitive", "原始类型")}}，使用 {{Glossary("typeof")}} 运算符检查:
   <ul>
    <li>{{Glossary("undefined")}}：<code>typeof instance === "undefined"</code></li>
    <li>{{Glossary("Boolean")}}：<code>typeof instance === "boolean"</code></li>
@@ -34,9 +34,9 @@ foo = true;  // foo is a Boolean now
    <li>{{Glossary("String")}}：<code>typeof instance === "string</code></li>
    <li>{{Glossary("BigInt")}}：<code>typeof instance === "bigint"</code></li>
    <li>{{Glossary("Symbol")}} ：<code>typeof instance === "symbol"</code></li>
+   <li>{{Glossary("null")}}：<code>typeof instance === "object"</code>。</li>
   </ul>
  </li>
- <li>{{Glossary("null")}}：<code>typeof instance === "object"</code>。</li>
  <li>{{Glossary("Object")}}：<code>typeof instance === "object"</code>。任何 {{Glossary("constructed")}} 对象实例的特殊非数据结构类型，也用做数据结构：new {{Glossary("Object")}}，new {{Glossary("Array")}}，new {{Glossary("Map")}}，new {{Glossary("Set")}}，new {{Glossary("WeakMap")}}，new {{Glossary("WeakSet")}}，new {{Glossary("Date")}}，和几乎所有通过 {{Glossary("new keyword")}} 创建的东西。</li>
 </ul>
 
@@ -70,11 +70,11 @@ foo = true;  // foo is a Boolean now
 42 / -0; // -Infinity
 </pre>
 
-<p>尽管一个数字常常仅代表它本身的值，但JavaScript提供了一些<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="en/JavaScript/Reference/Operators/Bitwise_Operators">位运算符</a>。 这些位运算符和一个单一数字通过位操作可以用来表现一些布尔值。然而自从 JavaScript 提供其他的方式来表示一组布尔值（如一个布尔值数组或一个布尔值分配给命名属性的对象）后，这种方式通常被认为是不好的。位操作也容易使代码难以阅读，理解和维护， 在一些非常受限的情况下，可能需要用到这些技术，比如试图应付本地存储的存储限制。 位操作只应该是用来优化尺寸的最后选择。</p>
+<p>尽管一个数字常常仅代表它本身的值，但 JavaScript 提供了一些 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="en/JavaScript/Reference/Operators/Bitwise_Operators"> 位运算符</a>。 这些位运算符和一个单一数字通过位操作可以用来表现一些布尔值。然而自从 JavaScript 提供其他的方式来表示一组布尔值（如一个布尔值数组或一个布尔值分配给命名属性的对象）后，这种方式通常被认为是不好的。位操作也容易使代码难以阅读，理解和维护， 在一些非常受限的情况下，可能需要用到这些技术，比如试图应付本地存储的存储限制。 位操作只应该是用来优化尺寸的最后选择。</p>
 
 <h3 id="BigInt_类型">BigInt 类型</h3>
 
-<p>{{jsxref("BigInt")}}类型是 JavaScript 中的一个基础的数值类型，可以用任意精度表示整数。使用 BigInt，您可以安全地存储和操作大整数，甚至可以超过数字的安全整数限制。BigInt是通过在整数末尾附加 <code>n </code>或调用构造函数来创建的。</p>
+<p>{{jsxref("BigInt")}}类型是 JavaScript 中的一个基础的数值类型，可以用任意精度表示整数。使用 BigInt，您可以安全地存储和操作大整数，甚至可以超过数字的安全整数限制。BigInt 是通过在整数末尾附加 <code>n </code>或调用构造函数来创建的。</p>
 
 <p>通过使用常量{{jsxref("Number.MAX_SAFE_INTEGER")}}，您可以获得可以用数字递增的最安全的值。通过引入 BigInt，您可以操作超过{{jsxref("Number.MAX_SAFE_INTEGER")}}的数字。您可以在下面的示例中观察到这一点，其中递增{{jsxref("Number.MAX_SAFE_INTEGER")}}会返回预期的结果:</p>
 
@@ -92,7 +92,7 @@ foo = true;  // foo is a Boolean now
 
 <h3 id="字符串类型">字符串类型</h3>
 
-<p>JavaScript的字符串类型用于表示文本数据。它是一组16位的无符号整数值的“元素”。在字符串中的每个元素占据了字符串的位置。第一个元素的索引为0，下一个是索引1，依此类推。字符串的长度是它的元素的数量。</p>
+<p>JavaScript 的字符串类型用于表示文本数据。它是一组16位的无符号整数值的“元素”。在字符串中的每个元素占据了字符串的位置。第一个元素的索引为 0，下一个是索引 1，依此类推。字符串的长度是它的元素的数量。</p>
 
 <p>不同于类 C 语言，JavaScript 字符串是不可更改的。这意味着字符串一旦被创建，就不能被修改。但是，可以基于对原始字符串的操作来创建新的字符串。例如：</p>
 
@@ -108,7 +108,7 @@ foo = true;  // foo is a Boolean now
 <ul>
  <li>容易连接构造复杂的字串符</li>
  <li>字符串容易被调试(你看到的往往在字符串里)</li>
- <li>字符串通常是许多APIs的常见标准 (<a href="/en/DOM/HTMLInputElement" title="HTMLInputElement">input fields</a>, <a href="/en/Storage" title="Storage">local storage</a> values, {{ domxref("XMLHttpRequest") }}当使用<code>responseText等</code>的时候回应) 而且他只能与字符串一同使用。</li>
+ <li>字符串通常是许多 APIs 的常见标准 (<a href="/en/DOM/HTMLInputElement" title="HTMLInputElement">input fields</a>, <a href="/en/Storage" title="Storage">local storage</a> values, {{ domxref("XMLHttpRequest") }}当使用<code>responseText等</code>的时候回应) 而且他只能与字符串一同使用。</li>
 </ul>
 
 <p>使用约定，字符串一般可以用来表达任何数据结构。这不是一个好主意。例如，使用一个分隔符，可以模拟一个列表（而 JavaScript 数组可能更适合）。不幸的是，当分隔符用于列表中的元素时，列表就会被破坏。 可以选择转义字符，等等。所有这些都需要约定，并造成不必要的维护负担。</p>
@@ -117,7 +117,7 @@ foo = true;  // foo is a Boolean now
 
 <h3 id="符号类型">符号类型</h3>
 
-<p>符号(Symbols)是ECMAScript 第6版新定义的。符号类型是唯一的并且是不可修改的, 并且也可以用来作为Object的key的值(如下). 在某些语言当中也有类似的原子类型(Atoms). 你也可以认为为它们是C里面的枚举类型. 更多细节请看 {{Glossary("Symbol")}} 和 {{jsxref("Symbol")}} 。</p>
+<p>符号(Symbols)是 ECMAScript 第6版新定义的。符号类型是唯一的并且是不可修改的, 并且也可以用来作为 Object 的 key 的值(如下). 在某些语言当中也有类似的原子类型(Atoms). 你也可以认为为它们是 C 里面的枚举类型. 更多细节请看 {{Glossary("Symbol")}} 和 {{jsxref("Symbol")}} 。</p>
 
 <h2 id="对象">对象</h2>
 
@@ -125,9 +125,9 @@ foo = true;  // foo is a Boolean now
 
 <h3 id="属性">属性</h3>
 
-<p>在 Javascript 里，对象可以被看作是一组属性的集合。用<a href="/en/JavaScript/Guide/Values,_variables,_and_literals#Object_literals">对象字面量语法</a>来定义一个对象时，会自动初始化一组属性。（也就是说，你定义一个var a = "Hello"，那么a本身就会有a.substring这个方法，以及a.length这个属性，以及其它；如果你定义了一个对象，var a = {}，那么a就会自动有a.hasOwnProperty及a.constructor等属性和方法。）而后，这些属性还可以被增减。属性的值可以是任意类型，包括具有复杂数据结构的对象。属性使用键来标识，它的键值可以是一个字符串或者符号值（Symbol）。</p>
+<p>在 JavaScript 里，对象可以被看作是一组属性的集合。用 <a href="/en/JavaScript/Guide/Values,_variables,_and_literals#Object_literals">对象字面量语法</a> 来定义一个对象时，会自动初始化一组属性。（也就是说，你定义一个var a = "Hello"，那么a本身就会有a.substring这个方法，以及a.length这个属性，以及其它；如果你定义了一个对象，var a = {}，那么 a 就会自动有 a.hasOwnProperty 及 a.constructor 等属性和方法。）而后，这些属性还可以被增减。属性的值可以是任意类型，包括具有复杂数据结构的对象。属性使用键来标识，它的键值可以是一个字符串或者符号值（Symbol）。</p>
 
-<p>ECMAScript定义的对象中有两种属性：数据属性和访问器属性。</p>
+<p>ECMAScript 定义的对象中有两种属性：数据属性和访问器属性。</p>
 
 <h4 id="数据属性">数据属性</h4>
 
@@ -242,7 +242,7 @@ foo = true;  // foo is a Boolean now
 
 <h3 id="标准的_对象_和函数">"标准的" 对象, 和函数</h3>
 
-<p>一个 Javascript 对象就是键和值之间的映射.。键是一个字符串（或者 {{jsxref("Symbol")}}） ，值可以是任意类型的值。 这使得对象非常符合 <a class="external" href="http://en.wikipedia.org/wiki/Hash_table">哈希表</a>。</p>
+<p>一个 JavaScript 对象就是键和值之间的映射。键是一个字符串（或者 {{jsxref("Symbol")}}），值可以是任意类型的值。 这使得对象非常符合 <a class="external" href="http://en.wikipedia.org/wiki/Hash_table">哈希表</a>。</p>
 
 <p>函数是一个附带可被调用功能的常规对象。</p>
 
@@ -252,19 +252,19 @@ foo = true;  // foo is a Boolean now
 
 <h3 id="有序集_数组和类型数组">有序集: 数组和类型数组</h3>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="Array">数组</a>是一种使用整数作为键(integer-key-ed)属性和长度(length)属性之间关联的常规对象。此外，数组对象还继承了 Array.prototype 的一些操作数组的便捷方法。例如, <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf" title="en/JavaScript/Reference/Global_Objects/Array/indexOf">indexOf</a></code> (搜索数组中的一个值) or <code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/push" title="en/JavaScript/Reference/Global_Objects/Array/push">push</a></code> (向数组中添加一个元素)，等等。 这使得数组是表示列表或集合的最优选择。</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="Array">数组</a>是一种使用整数作为键(integer-key-ed)属性和长度(length)属性之间关联的常规对象。此外，数组对象还继承了 Array.prototype 的一些操作数组的便捷方法。例如, <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf" title="en/JavaScript/Reference/Global_Objects/Array/indexOf">indexOf</a></code> (搜索数组中的一个值) or <code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/push" title="en/JavaScript/Reference/Global_Objects/Array/push">push</a></code> (向数组中添加一个元素），等等。 这使得数组是表示列表或集合的最优选择。</p>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays">类型数组(Typed Arrays)</a>是ECMAScript Edition 6中新定义的 JavaScript 内建对象，提供了一个基本的二进制数据缓冲区的类数组视图。下面的表格能帮助你找到对等的 C 语言数据类型：</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays">类型数组(Typed Arrays)</a>是 ECMAScript Edition 6 中新定义的 JavaScript 内建对象，提供了一个基本的二进制数据缓冲区的类数组视图。下面的表格能帮助你找到对等的 C 语言数据类型：</p>
 
 <p>{{page("/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects", "", 0, 3)}}</p>
 
 <h3 id="键控集_Maps_Sets_WeakMaps_WeakSets">键控集: Maps, Sets, WeakMaps, WeakSets</h3>
 
-<p>这些数据结构把对象的引用当作键，其在ECMAScript第6版中有介绍。当 {{jsxref("Map")}} 和 {{jsxref("WeakMap")}} 把一个值和对象关联起来的时候， {{jsxref("Set")}} 和 {{jsxref("WeakSet")}} 表示一组对象。 Map和WeakMaps之间的差别在于，在前者中，对象键是可枚举的。这允许垃圾收集器优化后面的枚举(This allows garbage collection optimizations in the latter case)。</p>
+<p>这些数据结构把对象的引用当作键，其在 ECMAScript 第6版中有介绍。当 {{jsxref("Map")}} 和 {{jsxref("WeakMap")}} 把一个值和对象关联起来的时候， {{jsxref("Set")}} 和 {{jsxref("WeakSet")}} 表示一组对象。 Map 和 WeakMaps 之间的差别在于，在前者中，对象键是可枚举的。这允许垃圾收集器优化后面的枚举(This allows garbage collection optimizations in the latter case)。</p>
 
-<p>在纯ECMAScript 5下可以实现Maps和Sets。然而，因为对象并不能进行比较（就对象“小于”示例来讲），所以查询必定是线性的。他们本地实现（包括WeakMaps）查询所花费的时间可能是对数增长。</p>
+<p>在纯 ECMAScript 5 下可以实现 Maps 和 Sets 。然而，因为对象并不能进行比较（就对象“小于”示例来讲），所以查询必定是线性的。他们本地实现（包括WeakMaps）查询所花费的时间可能是对数增长。</p>
 
-<p>通常，可以通过直接在对象上设置属性或着使用data-*属性，来绑定数据到DOM节点。然而缺陷是在任何的脚本里，数据都运行在同样的上下文中。Maps和WeakMaps方便将数据私密的绑定到一个对象。 </p>
+<p>通常，可以通过直接在对象上设置属性或着使用 data-*属性，来绑定数据到 DOM 节点。然而缺陷是在任何的脚本里，数据都运行在同样的上下文中。Maps 和 WeakMaps 方便将数据私密的绑定到一个对象。 </p>
 
 <h3 id="结构化数据_JSON">结构化数据: JSON</h3>
 
@@ -272,7 +272,7 @@ foo = true;  // foo is a Boolean now
 
 <h3 id="标准库中更多的对象">标准库中更多的对象</h3>
 
-<p>JavaScript 有一个内置对象的标准库。请查看<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">参考</a>来了解更多对象。</p>
+<p>JavaScript 有一个内置对象的标准库。请查看 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">参考</a> 来了解更多对象。</p>
 
 <h2 id="使用_typeof_操作符判断对象类型">使用 typeof 操作符判断对象类型</h2>
 

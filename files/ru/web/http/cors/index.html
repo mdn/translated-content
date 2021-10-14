@@ -46,7 +46,7 @@ translation_of: Web/HTTP/CORS
 
 <p>Здесь мы рассмотрим три сценария, которые иллюстрируют как Cross-Origin Resource Sharing работает. Каждый сценарий использует объект {{domxref("XMLHttpRequest")}}, который может быть использован для межсайтового взаимодействия, в любом, поддерживающем данный объект, браузере.</p>
 
-<p>Фрагменты JavaScript кода, включённые в эти секции (а также фрагменты кода, отвечающие за корректную обработку межсерверных запросов, которые запускаются на сервере) могут быть испытаны "в действии" на <a class="external" href="http://arunranga.com/examples/access-control/">http://arunranga.com/examples/access-control/</a>, и будут работать в браузерах, которые поддерживают {{domxref("XMLHttpRequest")}}.</p>
+<p>Фрагменты JavaScript-кода, включённые в эти секции (а также фрагменты кода, отвечающие за корректную обработку межсерверных запросов, которые запускаются на сервере) могут быть испытаны "в действии" на <a class="external" href="http://arunranga.com/examples/access-control/">http://arunranga.com/examples/access-control/</a>, и будут работать в браузерах, которые поддерживают {{domxref("XMLHttpRequest")}}.</p>
 
 <p>Обсуждение Cross-Origin Resource Sharing с точки зрения сервера (включая фрагменты кода на PHP) может быть найдено в статье <a class="internal" href="/en-US/docs/Web/HTTP/Server-Side_Access_Control">Server-Side Access Control (CORS)</a>.</p>
 
@@ -68,11 +68,6 @@ translation_of: Web/HTTP/CORS
    <li>{{HTTPHeader("Accept-Language")}}</li>
    <li>{{HTTPHeader("Content-Language")}}</li>
    <li>{{HTTPHeader("Content-Type")}} (но учитывайте примечание ниже)</li>
-   <li>{{HTTPHeader("Last-Event-ID")}}</li>
-   <li><code><a href="http://httpwg.org/http-extensions/client-hints.html#dpr">DPR</a></code></li>
-   <li><code><a href="http://httpwg.org/http-extensions/client-hints.html#save-data">Save-Data</a></code></li>
-   <li><code><a href="http://httpwg.org/http-extensions/client-hints.html#viewport-width">Viewport-Width</a></code></li>
-   <li><code><a href="http://httpwg.org/http-extensions/client-hints.html#width">Width</a></code></li>
   </ul>
  </li>
  <li>Допустимыми значениями заголовка {{HTTPHeader("Content-Type")}} являются:

@@ -2595,12 +2595,6 @@
       "BobChao"
     ]
   },
-  "Mozilla/Firefox/Releases/68": {
-    "modified": "2020-05-02T05:45:42.258Z",
-    "contributors": [
-      "abc52090241"
-    ]
-  },
   "Mozilla/Firefox/Releases/7": {
     "modified": "2019-04-23T05:35:00.727Z",
     "contributors": [
@@ -2880,7 +2874,7 @@
       "fscholz"
     ]
   },
-  "Web/API/AnimationEvent/initAnimationEvent": {
+  "Web/API/AnimationEvent/AnimationEvent": {
     "modified": "2019-03-23T22:58:50.823Z",
     "contributors": [
       "teoli",
@@ -3660,7 +3654,7 @@
       "orinx"
     ]
   },
-  "Web/API/File/fileName": {
+  "Web/API/File/name": {
     "modified": "2019-03-23T22:06:22.686Z",
     "contributors": [
       "lynn456"
@@ -4014,12 +4008,6 @@
       "NoobTW"
     ]
   },
-  "Web/API/HTMLOrForeignElement/dataset": {
-    "modified": "2019-03-18T21:38:45.005Z",
-    "contributors": [
-      "willynpi"
-    ]
-  },
   "Web/API/HTMLSelectElement": {
     "modified": "2019-03-23T22:18:47.753Z",
     "contributors": [
@@ -4213,20 +4201,6 @@
       "Coolcd"
     ]
   },
-  "Web/API/NavigatorOnLine": {
-    "modified": "2019-03-23T22:02:07.853Z",
-    "contributors": [
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2019-03-23T23:51:04.713Z",
-    "contributors": [
-      "chrisdavidmills",
-      "teoli",
-      "Coolcd"
-    ]
-  },
   "Web/API/Network_Information_API": {
     "modified": "2019-03-23T23:26:00.923Z",
     "contributors": [
@@ -4349,34 +4323,6 @@
       "fscholz",
       "jackblackevo",
       "MashKao"
-    ]
-  },
-  "Web/API/PositionOptions": {
-    "modified": "2019-03-23T22:36:10.505Z",
-    "contributors": [
-      "alphan_chen",
-      "yachiehwu"
-    ]
-  },
-  "Web/API/PositionOptions/enableHighAccuracy": {
-    "modified": "2019-03-23T22:36:14.585Z",
-    "contributors": [
-      "alphan_chen",
-      "yachiehwu"
-    ]
-  },
-  "Web/API/PositionOptions/maximumAge": {
-    "modified": "2019-03-23T22:36:18.389Z",
-    "contributors": [
-      "alphan_chen",
-      "yachiehwu"
-    ]
-  },
-  "Web/API/PositionOptions/timeout": {
-    "modified": "2019-03-23T22:36:20.985Z",
-    "contributors": [
-      "alphan_chen",
-      "yachiehwu"
     ]
   },
   "Web/API/ProgressEvent": {
@@ -4748,18 +4694,6 @@
       "mfuji09"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope/btoa": {
-    "modified": "2020-10-15T22:35:15.820Z",
-    "contributors": [
-      "evo938evo938"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/setInterval": {
-    "modified": "2020-10-15T22:29:07.467Z",
-    "contributors": [
-      "chrischi0922s"
-    ]
-  },
   "Web/API/XMLHttpRequest": {
     "modified": "2020-10-15T21:21:13.079Z",
     "contributors": [
@@ -4832,6 +4766,12 @@
       "jackblackevo"
     ]
   },
+  "Web/API/btoa": {
+    "modified": "2020-10-15T22:35:15.820Z",
+    "contributors": [
+      "evo938evo938"
+    ]
+  },
   "Web/API/console/assert": {
     "modified": "2020-10-15T22:03:27.482Z",
     "contributors": [
@@ -4846,6 +4786,12 @@
       "bros0215",
       "SphinxKnight",
       "Shiyou"
+    ]
+  },
+  "Web/API/setInterval": {
+    "modified": "2020-10-15T22:29:07.467Z",
+    "contributors": [
+      "chrischi0922s"
     ]
   },
   "Web/API/window/requestAnimationFrame": {
@@ -5408,7 +5354,7 @@
       "yutzuch"
     ]
   },
-  "Web/Demos_of_open_web_technologies": {
+  "Web/Demos": {
     "modified": "2019-03-23T22:08:13.863Z",
     "contributors": [
       "h223449961",
@@ -8067,6 +8013,34 @@
       "jackblackevo"
     ]
   },
+  "conflicting/Web/API/Geolocation/getCurrentPosition": {
+    "modified": "2019-03-23T22:36:14.585Z",
+    "contributors": [
+      "alphan_chen",
+      "yachiehwu"
+    ]
+  },
+  "conflicting/Web/API/Geolocation/getCurrentPosition_058087067b28ad25fff974fd59827fb6": {
+    "modified": "2019-03-23T22:36:20.985Z",
+    "contributors": [
+      "alphan_chen",
+      "yachiehwu"
+    ]
+  },
+  "conflicting/Web/API/Geolocation/getCurrentPosition_5852407122355d2ab39863042583c266": {
+    "modified": "2019-03-23T22:36:10.505Z",
+    "contributors": [
+      "alphan_chen",
+      "yachiehwu"
+    ]
+  },
+  "conflicting/Web/API/Geolocation/getCurrentPosition_c2c285f72be001586cb95d7989ba1b54": {
+    "modified": "2019-03-23T22:36:18.389Z",
+    "contributors": [
+      "alphan_chen",
+      "yachiehwu"
+    ]
+  },
   "conflicting/Web/API/HTML_Drag_and_Drop_API": {
     "modified": "2019-01-16T13:26:51.358Z",
     "contributors": [
@@ -8663,6 +8637,12 @@
       "jackblackevo"
     ]
   },
+  "orphaned/Web/API/HTMLOrForeignElement/dataset": {
+    "modified": "2019-03-18T21:38:45.005Z",
+    "contributors": [
+      "willynpi"
+    ]
+  },
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
     "modified": "2019-03-18T20:39:41.131Z",
     "contributors": [
@@ -8671,6 +8651,20 @@
       "birdca",
       "foxbrush",
       "thomaschen"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine": {
+    "modified": "2019-03-23T22:02:07.853Z",
+    "contributors": [
+      "chrisdavidmills"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine/Online_and_offline_events": {
+    "modified": "2019-03-23T23:51:04.713Z",
+    "contributors": [
+      "chrisdavidmills",
+      "teoli",
+      "Coolcd"
     ]
   },
   "orphaned/Web/API/ParentNode": {

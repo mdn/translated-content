@@ -1,0 +1,48 @@
+---
+title: MouseEvent.which
+slug: conflicting/Web/API/UIEvent/which
+tags:
+  - API
+  - "События\_DOM"
+translation_of: Web/API/MouseEvent/which
+original_slug: Web/API/MouseEvent/which
+---
+<p>{{APIRef("DOM Events")}}</p>
+
+<p>{{Non-standard_header}}</p>
+
+<p><strong><code>MouseEvent.which</code></strong> это свойство только для чтения которое показывает какая именно кнопка мыши вызвала событие MouseEvent. Стандартная альтернатива этому свойству – {{ domxref("MouseEvent.button") }} и {{ domxref("MouseEvent.buttons") }}.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">var <em>buttonPressed</em> = <em>instanceOfMouseEvent</em>.which
+</pre>
+
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
+
+<p>Значения соответствующие кнопкам:</p>
+
+<ul>
+ <li><code>0</code>: Нет кнопки</li>
+ <li><code>1</code>: Левая кнопка</li>
+ <li><code>2</code>: Средняя (если есть)</li>
+ <li><code>3</code>: Права кнопка</li>
+</ul>
+
+<p>Для мыши настроенной для левшей порядок значений будет изменён. В этом случае значению <code>1</code> будет соответствовать правая кнопка, а <code>3</code> – левая.</p>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<p>Это свойство не является частью спецификации.</p>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+
+
+<p>{{Compat("api.MouseEvent.which")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{ domxref("MouseEvent") }}</li>
+</ul>

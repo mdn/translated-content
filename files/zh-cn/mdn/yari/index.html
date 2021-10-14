@@ -1,25 +1,25 @@
 ---
-title: 'Kuma: MDN 的 wiki 平台'
+title: "Yari: MDN's rendering platform"
 slug: MDN/Yari
 tags:
-  - Kuma
-  - wiki
-  - 平台
-translation_of: MDN/Kuma
-original_slug: MDN/Kuma
+  - Yari
+  - Landing
+  - MDN Meta
 ---
-<div>{{MDNSidebar}}{{IncludeSubnav("/en-US/docs/MDN")}}</div>
+<div>{{MDNSidebar}}</div>
 
-<p>Kuma 是驱动 MDN Web Docs 的 Django 程序。</p>
+<p class="summary">Yari is the code that renders MDN Web Docs. It takes a <a href="https://jamstack.org/">JAMStack</a> approach, which involves taking the MDN content stored as flat source files in a GitHub repo (which include front matter and macro calls), rendering them out to static HTML files, and serving those as quickly and efficiently as possible.</p>
 
-<p>{{SubpagesWithSummaries}}</p>
-
-<h2 id="了解Kuma">了解Kuma</h2>
-
-<p>想要了解Kuma，你可以：</p>
+<p>The core MDN platform now actually consists of two GitHub repos:</p>
 
 <ul>
- <li>查看 <a href="https://github.com/mozilla/kuma">Github 上的 Kuma 项目</a>。</li>
- <li>查看 <a href="https://github.com/mozilla/kuma/blob/master/CONTRIBUTING.md">贡献指南</a>。</li>
- <li>如果需要的话，深入了解 <a href="http://kuma.readthedocs.org/en/latest/">Kuma 的完整文档</a>。</li>
+  <li><a href="https://github.com/mdn/content">The MDN content repo</a> — this is where the MDN content is stored, along with information such as contributor history and redirects. Visit this repo if you want to contribute to the MDN content.</li>
+  <li><a href="https://github.com/mdn/yari">The Yari project</a> — this is the platform code that renders and displays the MDN content, and deals with associated services such as user accounts. Visit this repo if you want to contribute to the MDN platform.</li>
+</ul>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="https://hacks.mozilla.org/2020/10/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/">MDN Web Docs evolves! Lowdown on the upcoming new platform</a> — explanation of the need for a platform change, and the new architecture.</li>
+ <li>As needed, take a deep dive into the <a href="https://hacks.mozilla.org/2020/12/welcome-yari-mdn-web-docs-has-a-new-platform/">Welcome Yari: MDN Web Docs has a new platform</a> — formal announcement of the new platform launch.</li>
 </ul>

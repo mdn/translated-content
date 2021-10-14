@@ -17,7 +17,7 @@ translation_of: Learn/CSS/Building_blocks/Styling_tables
  <tbody>
   <tr>
    <th scope="row">Необходимые знания:</th>
-   <td>Базовый HTML (<a href="/ru/docs/Learn/HTML/Introduction_to_HTML">Введение в HTML</a>), HTML таблицы (смотрите раздел HTML таблицы (TBD)), и представление о том как работает CSS (<a href="/ru/docs/Learn/CSS/Introduction_to_CSS">Введение в CSS</a>).</td>
+   <td>Базовый HTML (<a href="/ru/docs/Learn/HTML/Introduction_to_HTML">Введение в HTML</a>), HTML таблицы (смотрите раздел HTML таблицы (TBD)), и представление о том как работает CSS (<a href="/ru/docs/Learn/CSS/First_steps">Введение в CSS</a>).</td>
   </tr>
   <tr>
    <th scope="row">Цель:</th>
@@ -71,9 +71,9 @@ translation_of: Learn/CSS/Building_blocks/Styling_tables
   &lt;/tfoot&gt;
 &lt;/table&gt;</pre>
 
-<p>Таблица размечена, немного стилизована и понятна, благодаря использованию таких свойств как {{htmlattrxref("scope","th")}}, {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}} и т.д. К сожалению при просмотре в браузере она не очень хорошо выглядит (посмотреть можно здесь <a href="http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html">punk-bands-unstyled.html</a>):</p>
+<p>Таблица размечена, немного стилизована и понятна, благодаря использованию таких свойств как {{htmlattrxref("scope","th")}}, {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}} и т.д. К сожалению при просмотре в браузере она не очень хорошо выглядит (посмотреть можно здесь <a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html">punk-bands-unstyled.html</a>):</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13064/table-unstyled.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="table-unstyled.png" style="display: block; margin: 0 auto;"></p>
 
 <p>Это выглядит достаточно грубо, трудно читаемо и скучно. Нам нужно использовать немного CSS чтобы все исправить.</p>
 
@@ -128,14 +128,14 @@ th, td {
  <li>Свойство {{cssxref("table-layout")}} со значением <code>fixed</code> как правило полезно использовать для вашей таблицы, это делает поведение таблицы немного более предсказуемым, чем значение по умолчанию. Обычно столбцы таблицы имеют размер в зависимости от того сколько в них контента, что приводит иногда к некоторым странным результатам. Когда <code>table-layout: fixed</code>, размер ваших столбцов определяется шириной их заголовков и делает их контент соответствующего размера. Вот почему вы выбрали четыре разных заголовка с помощью селектора <code>thead th:nth-child(<em>n</em>)</code> ({{cssxref(":nth-child")}}) ("Выберите <em>n-ый</em> дочерний элемент {{htmlelement("th")}} в последовательности, внутри элемента {{htmlelement("thead")}}") и задать им заданную в процентах ширину. Ширина колонки соответствует ширине её заголовка, это правильное решение при определении размеров колонок таблицы. Крис Койер (Chris Coyier) более подробно рассматривает эту технику в статье <a href="https://css-tricks.com/fixing-tables-long-strings/">Fixed Table Layouts</a>.<br>
   <br>
   Мы также использовали {{cssxref("width")}} 100%, что означает, что таблица заполнит любой контейнер и будет отзывчивой (хотя для этого потребуется ещё некоторая работа для правильного отображения на экранах небольших размеров).</li>
- <li>Свойство {{cssxref("border-collapse")}} со значением <code>collapse</code> это стандартная практика при стилизации любой таблицы. По умолчанию, когда вы задали рамки для элементов таблицы, все они будут иметь пробелы между собой, как показано на рисунке ниже: <img alt="" src="https://mdn.mozillademos.org/files/13068/no-border-collapse.png" style="display: block; margin: 0 auto;">Это не очень хорошо выглядит (хотя может это то что вам нужно, кто знает?). Если установить <code>border-collapse: collapse;</code>  рамки схлопываются в одну и так выглядит намного лучше: <img alt="" src="https://mdn.mozillademos.org/files/13066/border-collapse.png" style="display: block; margin: 0 auto;"></li>
+ <li>Свойство {{cssxref("border-collapse")}} со значением <code>collapse</code> это стандартная практика при стилизации любой таблицы. По умолчанию, когда вы задали рамки для элементов таблицы, все они будут иметь пробелы между собой, как показано на рисунке ниже: <img alt="" src="no-border-collapse.png" style="display: block; margin: 0 auto;">Это не очень хорошо выглядит (хотя может это то что вам нужно, кто знает?). Если установить <code>border-collapse: collapse;</code>  рамки схлопываются в одну и так выглядит намного лучше: <img alt="" src="border-collapse.png" style="display: block; margin: 0 auto;"></li>
  <li>Мы установили {{cssxref("border")}} вокруг всей таблицы, это понадобится когда чуть позже мы будет устанавливать рамки вокруг header и footer таблицы — когда по периметру всей таблицы нет рамки и граница заканчивается просто отступом, таблица выглядит странно и разрозненно.</li>
  <li>Мы установили {{cssxref("padding")}} на элементах {{htmlelement("th")}} и {{htmlelement("td")}} — это создаёт в талице воздух, который позволяет ей дышать, делая её более понятной.</li>
 </ul>
 
 <p>На этом этапе наша таблица выглядит уже гораздо лучше:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13070/table-with-spacing.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="table-with-spacing.png" style="display: block; margin: 0 auto;"></p>
 
 <h3 id="Немного_простой_типографики">Немного простой типографики</h3>
 
@@ -186,7 +186,7 @@ tfoot th {
 
 <p>В результате таблица выглядит немного аккуратнее:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13072/table-with-typography.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="table-with-typography.png" style="display: block; margin: 0 auto;"></p>
 
 <h3 id="Графика_и_цвета">Графика и цвета</h3>
 
@@ -210,7 +210,7 @@ thead th, tfoot th, tfoot td {
 
 <p>Мы добавили {{cssxref("background-image")}} в {{htmlelement("thead")}}, {{htmlelement("tfoot")}} и изменили {{cssxref("color")}} для всего текста внутри header и footer на белый (и ещё {{cssxref("text-shadow")}}) для лучшей читаемости. Вы должны всегда быть уверены что ваш текст хорошо контрастирует с фоном, для обеспечения читаемости.</p>
 
-<p>Также мы добавили линейный градиент для {{htmlelement("th")}} и {{htmlelement("td")}} элементов внутри header и footer для придания лёгкой приятной текстуры, а также установили этим элементам яркие пурпурные границы. Полезно иметь несколько вложенных элементов, это позволяет накладывать несколько стилей друг на друга. Да, мы могли бы установить и фоновое изображение, и линейный градиент на {{htmlelement("thead")}} и {{htmlelement("tfoot")}} элементы используя множественные фоновые изображения, но мы решили сделать это отдельно для старых браузеров, которые не поддерживают <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds">несколько фоновых изображений</a> и <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient">линейные градиенты</a>.</p>
+<p>Также мы добавили линейный градиент для {{htmlelement("th")}} и {{htmlelement("td")}} элементов внутри header и footer для придания лёгкой приятной текстуры, а также установили этим элементам яркие пурпурные границы. Полезно иметь несколько вложенных элементов, это позволяет накладывать несколько стилей друг на друга. Да, мы могли бы установить и фоновое изображение, и линейный градиент на {{htmlelement("thead")}} и {{htmlelement("tfoot")}} элементы используя множественные фоновые изображения, но мы решили сделать это отдельно для старых браузеров, которые не поддерживают <a href="/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds">несколько фоновых изображений</a> и <a href="/en-US/docs/Web/CSS/gradient/linear-gradient()">линейные градиенты</a>.</p>
 
 <h4 id="Полосатая_зебра">Полосатая зебра</h4>
 
@@ -240,7 +240,7 @@ table {
 
 <p>Этот взрыв цвета выглядит следующим образом:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13074/table-with-color.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="table-with-color.png" style="display: block; margin: 0 auto;"></p>
 
 <p>То что получилось может быть не в вашем вкусе, но основная идея была в том, что мы попытались сделать таблицу которая не будет скучной и академической.</p>
 
@@ -258,9 +258,9 @@ table {
   letter-spacing: 1px;
 }</pre>
 
-<p>Здесь нет ничего особенного, кроме свойства {{cssxref("caption-side")}}, которое имеет значение <code>bottom</code>. В этом случае заголовок будет размещён внизу таблицы и это вместе со всем остальным обеспечивает нашей таблице окончательный вид (можно посмотреть по ссылке <a href="http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html">punk-bands-complete.html</a>):</p>
+<p>Здесь нет ничего особенного, кроме свойства {{cssxref("caption-side")}}, которое имеет значение <code>bottom</code>. В этом случае заголовок будет размещён внизу таблицы и это вместе со всем остальным обеспечивает нашей таблице окончательный вид (можно посмотреть по ссылке <a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html">punk-bands-complete.html</a>):</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13076/table-with-caption.png" style="display: block; height: 357px; margin: 0px auto; width: 723px;"></p>
+<p><img alt="" src="table-with-caption.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Активное_обучение_Стилизация_вашей_собственной_таблицы">Активное обучение: Стилизация вашей собственной таблицы</h2>
 
@@ -290,13 +290,13 @@ table {
 <h2 id="В_этом_блоке">В этом блоке</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/CSS/Styling_boxes/Box_model_recap">Box model recap</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_boxes/Backgrounds">Backgrounds</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_boxes/Borders">Borders</a></li>
- <li><a href="/ru/docs/Learn/CSS/Styling_boxes/Styling_tables">Стилизация таблиц</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_boxes/Advanced_box_effects">Advanced box effects</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper">Creating fancy letterheaded paper</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_boxes/A_cool_looking_box">A cool looking box</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">Box model recap</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Borders</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Styling_tables">Стилизация таблиц</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Advanced_styling_effects">Advanced box effects</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper">Creating fancy letterheaded paper</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box">A cool looking box</a></li>
 </ul>
 
 <p> </p>

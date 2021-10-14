@@ -24,7 +24,7 @@ translation_of: Web/HTML/Element/link
 
 <pre class="brush: html no-line-numbers">&lt;link href="main.css" rel="stylesheet"&gt;</pre>
 
-<p>Ten prosty przykład podaje ścieżkę do arkusza stylów wewnątrz atrybutu <code>href</code> oraz atrybut <code>rel</code> z wartością <code>stylesheet</code>. <code>rel</code> oznacza "relację" i jest prawdopodobnie jedną z kluczowych cech elementu <code>&lt;link&gt;</code> - wartość oznacza sposób, w jaki element, z którym jest powiązany, jest powiązany z dokumentem źródłowym. Jak zobaczysz z naszego odwołania do <a href="https://wiki.developer.mozilla.org/pl/docs/Web/HTML/Link_types">typów odnośników</a>, istnieje wiele różnych rodzajów relacji.</p>
+<p>Ten prosty przykład podaje ścieżkę do arkusza stylów wewnątrz atrybutu <code>href</code> oraz atrybut <code>rel</code> z wartością <code>stylesheet</code>. <code>rel</code> oznacza "relację" i jest prawdopodobnie jedną z kluczowych cech elementu <code>&lt;link&gt;</code> - wartość oznacza sposób, w jaki element, z którym jest powiązany, jest powiązany z dokumentem źródłowym. Jak zobaczysz z naszego odwołania do <a href="/pl/docs/Web/HTML/Link_types">typów odnośników</a>, istnieje wiele różnych rodzajów relacji.</p>
 
 <p>Jest wiele innych popularnych typów, na które można się natknąć. Na przykład link do favicon na stronie:</p>
 
@@ -47,13 +47,13 @@ translation_of: Web/HTML/Element/link
 <pre class="brush: html no-line-numbers">&lt;link rel="preload" href="myFont.woff2" as="font"
       type="font/woff2" crossorigin="anonymous"&gt;</pre>
 
-<p>Wartość <code>rel</code> dla <code>preload</code> wskazuje, że przeglądarka powinna wstępnie załadować ten zasób (więcej szczegółów w sekcji <a href="https://wiki.developer.mozilla.org/pl/docs/Web/HTML/Preloading_content">Wstępne załadowanie zawartości z rel="preload"</a>), z atrybutem <code>as</code> wskazującym konkretną klasę pobieranej zawartości. Atrybut crossorigin wskazuje, czy zasób powinien być pobierany z żądaniem {{Glossary("CORS")}}.</p>
+<p>Wartość <code>rel</code> dla <code>preload</code> wskazuje, że przeglądarka powinna wstępnie załadować ten zasób (więcej szczegółów w sekcji <a href="/pl/docs/Web/HTML/Preloading_content">Wstępne załadowanie zawartości z rel="preload"</a>), z atrybutem <code>as</code> wskazującym konkretną klasę pobieranej zawartości. Atrybut crossorigin wskazuje, czy zasób powinien być pobierany z żądaniem {{Glossary("CORS")}}.</p>
 
 <p>Pozostałe uwagi dotyczące zastosowania:</p>
 
 <ul>
  <li>Element <code>&lt;link&gt;</code> może występować w elemencie {{HTMLElement("head")}} lub {{HTMLElement("body")}}, w zależności od tego, czy ma on <a href="https://html.spec.whatwg.org/multipage/links.html#body-ok">typ połączenia</a>, który jest <strong>body-ok</strong>. Na przykład, typ linku <code>stylesheet</code> jest body-ok, a zatem <code>&lt;link rel="stylesheet"&gt;</code> jest dozwolony w body. Jednakże nie jest to dobra praktyka do naśladowania; bardziej sensowne jest oddzielenie elementów <code>&lt;link&gt;</code> od zawartości, umieszczając je w <code>&lt;head&gt;</code>.</li>
- <li>Kiedy używasz <code>&lt;link&gt;</code> do utworzenia favicon dla witryny, a Twoja strona używa Content Security Policy (CSP) w celu zwiększenia jej bezpieczeństwa, polityka ta ma zastosowanie do favicon. Jeśli napotkasz problemy z załadowaniem favicon, sprawdź, czy dyrektywa <a href="https://wiki.developer.mozilla.org/pl/docs/Web/HTTP/Headers/Content-Security-Policy/img-src">dyrektywa <code>img-src</code></a> nagłówka {{HTTPHeader("Content-Security-Policy")}} nie uniemożliwia dostępu do niego.</li>
+ <li>Kiedy używasz <code>&lt;link&gt;</code> do utworzenia favicon dla witryny, a Twoja strona używa Content Security Policy (CSP) w celu zwiększenia jej bezpieczeństwa, polityka ta ma zastosowanie do favicon. Jeśli napotkasz problemy z załadowaniem favicon, sprawdź, czy dyrektywa <a href="/pl/docs/Web/HTTP/Headers/Content-Security-Policy/img-src">dyrektywa <code>img-src</code></a> nagłówka {{HTTPHeader("Content-Security-Policy")}} nie uniemożliwia dostępu do niego.</li>
  <li>Specyfikacje HTML i XHTML definiują obsługę zdarzeń dla elementu <code>&lt;link&gt;</code>, ale nie jest jasne, jak miałyby być one wykorzystywane.</li>
  <li>W XHTML 1.0 puste elementy, takie jak <code>&lt;link&gt;</code> wymagają ukośnika: <code>&lt;link /&gt;</code>.</li>
  <li>WebTV wspiera użycie wartości <code>next</code> dla atrybutu <code>rel</code>, w celu wstępnego załadowania następnej strony w serii dokumentów.</li>
@@ -239,7 +239,7 @@ translation_of: Web/HTML/Element/link
 
 <dl>
  <dt>charset</dt>
- <dd>Ten atrybut określa zestaw znaków używanych przez linkowany dokument. Dozwolonymi wartościami dla tego atrybutu są nazwy zestawu znaków, takie jak EUC-JP, zdefiniowane w <a class="external" href="http://tools.ietf.org/html/rfc2045" title="http://tools.ietf.org/html/rfc2045">RFC 2045</a>.</dd>
+ <dd>Ten atrybut określa zestaw znaków używanych przez linkowany dokument. Dozwolonymi wartościami dla tego atrybutu są nazwy zestawu znaków, takie jak EUC-JP, zdefiniowane w <a class="external" href="http://tools.ietf.org/html/rfc2045">RFC 2045</a>.</dd>
 </dl>
 
 <dl>

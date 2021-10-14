@@ -43,7 +43,7 @@ target</em>.addEventListener(<em>type</em>, <em>listener</em>[, <em>useCapture</
  </ul>
  </dd>
  <dt><code>useCapture</code> {{optional_inline}}</dt>
- <dd>Если равно <code>true</code>, <code>useCapture</code> указывает, что пользователь желает начать захват. После инициализации захвата все события указанного типа будут отправлены в зарегистрированный <code>listener</code> перед отправкой в какой-либо <code>EventTarget</code> под ним в дереве DOM. События, восходящие вверх по дереву, не будут вызывать обработчиков, которым назначено использовать захват. Смотрите <a href="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow" title="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow">DOM Level 3 Events</a> для более детального объяснения. Значение <code>useCapture</code> по умолчанию равно <code>false</code>.
+ <dd>Если равно <code>true</code>, <code>useCapture</code> указывает, что пользователь желает начать захват. После инициализации захвата все события указанного типа будут отправлены в зарегистрированный <code>listener</code> перед отправкой в какой-либо <code>EventTarget</code> под ним в дереве DOM. События, восходящие вверх по дереву, не будут вызывать обработчиков, которым назначено использовать захват. Смотрите <a href="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow">DOM Level 3 Events</a> для более детального объяснения. Значение <code>useCapture</code> по умолчанию равно <code>false</code>.
  <div class="note"><strong>Note: </strong>Для обработчиков событий прикреплённых к цели события, событие  находиться в целевой фазе, а не в фазах захвата или всплытия. События в целевой фазе инициируют все обработчики на элементе в том порядке, в котором они были зарегистрированы независимо от параметра <code>useCapture</code>.</div>
 
  <div class="note"><strong>Note:</strong> <code>useCapture</code> не всегда был опциональным. Лучше указывать данный параметр для повышения совместимости.</div>
@@ -214,7 +214,7 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);</pre>
 <ul>
  <li>Позволяет добавлять множество обработчиков для одного события. Это особенно полезно для <a href="/en-US/docs/DHTML" title="DHTML">DHTML</a> библиотек или <a href="/en-US/docs/Extensions" title="Extensions">Mozilla extensions</a>, которые должны работать в условиях использования сторонних библиотек/расширений.</li>
  <li>Предоставляет точный контроль фазы срабатывания(вызова) обработчика (захват или всплытие)</li>
- <li>Срабатывает на любом DOM элементе, а не только на HTML элементах.</li>
+ <li>Срабатывает на любом DOM-элементе, а не только на HTML-элементах.</li>
 </ul>
 
 <p>Ниже описан другой, <a href="#Older_way_to_register_event_listeners">более старый способ регистрации обработчиков</a>.</p>

@@ -3,7 +3,7 @@ title: Android 版 Firefox のリモートデバッグ
 slug: Tools/Remote_Debugging/Firefox_for_Android
 translation_of: Tools/Remote_Debugging/Firefox_for_Android
 ---
-<div>{{ToolsSidebar}}</div><p>このガイドでは、<a href="/ja/docs/Mozilla/Firefox_for_Android">Android 版 Firefox</a> で実行しているコードを USB 経由で調査あるいはデバッグするために、<a href="/docs/Tools/Remote_Debugging">リモートデバッグ</a>を使用する方法を説明します。</p>
+<div>{{ToolsSidebar}}</div><p>このガイドでは、<a href="/ja/docs/Mozilla/Firefox_for_Android">Android 版 Firefox</a> で実行しているコードを USB 経由で調査あるいはデバッグするために、<a href="/ja/docs/Tools/Remote_Debugging">リモートデバッグ</a>を使用する方法を説明します。</p>
 
 <div class="note">
 <p>最近、Android 版 Firefox に開発ツールを接続する方法を大幅にシンプル化しました。デスクトップ版 の Firefox 36 以降および Android 版の Firefox 35 以降を使用している場合は、本記事の代わりに<a href="/ja/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE">新しい方法をご確認ください</a>。</p>
@@ -19,26 +19,26 @@ translation_of: Tools/Remote_Debugging/Firefox_for_Android
 
 <ul>
  <li>Firefox 15 以降を実行するデスクトップまたはノート型コンピュータ</li>
- <li>Android 版 Firefox 15 以降を実行している、<a href="https://support.mozilla.org/ja/kb/will-firefox-work-my-mobile-device" title="https://support.mozilla.org/ja/kb/will-firefox-work-my-mobile-device">Android 版 Firefox が動作する</a> Android デバイス</li>
+ <li>Android 版 Firefox 15 以降を実行している、<a href="https://support.mozilla.org/ja/kb/will-firefox-work-my-mobile-device">Android 版 Firefox が動作する</a> Android デバイス</li>
  <li>2 つのデバイスを接続する USB ケーブル</li>
 </ul>
 
 <h3 id="ADB_setup" name="ADB_setup">ADB のセットアップ</h3>
 
-<p>次に <a href="https://developer.android.com/tools/help/adb.html" title="https://developer.android.com/tools/help/adb.html">adb</a> コマンドラインツールを使用して、デスクトップと Android デバイスが相互に対話できるようにしなければなりません。</p>
+<p>次に <a href="https://developer.android.com/tools/help/adb.html">adb</a> コマンドラインツールを使用して、デスクトップと Android デバイスが相互に対話できるようにしなければなりません。</p>
 
 <h4 class="note" id="Android_デバイスで行う作業">Android デバイスで行う作業</h4>
 
 <ul>
- <li><a href="http://developer.android.com/guide/developing/device.html#setting-up" title="http://developer.android.com/guide/developing/device.html#setting-up">USB デバッグの有効化 (このリンクのステップ 2 のみ実施)</a>。</li>
+ <li><a href="http://developer.android.com/guide/developing/device.html#setting-up">USB デバッグの有効化 (このリンクのステップ 2 のみ実施)</a>。</li>
  <li>USB 経由で Android デバイスとデスクトップを接続します。</li>
 </ul>
 
 <h4 class="note" id="デスクトップで行う作業">デスクトップで行う作業</h4>
 
 <ul>
- <li>デバイスに合うバージョンの <a href="http://developer.android.com/sdk/index.html" title="http://developer.android.com/sdk/index.html">Android SDK</a> をインストールします。</li>
- <li>Android SDK を使用して、<a href="http://developer.android.com/sdk/installing.html#components" title="http://developer.android.com/sdk/installing.html#components">Android Platform Tools</a> をインストールします。</li>
+ <li>デバイスに合うバージョンの <a href="http://developer.android.com/sdk/index.html">Android SDK</a> をインストールします。</li>
+ <li>Android SDK を使用して、<a href="http://developer.android.com/sdk/installing.html#components">Android Platform Tools</a> をインストールします。</li>
  <li>Android Platform Tools が、Android SDK をインストールしたディレクトリ配下の "platform-tools" ディレクトリ内に、adb をインストールします。"platform-tools" ディレクトリにパスを通すようにしてください。</li>
 </ul>
 

@@ -19,7 +19,7 @@ translation_of: Learn/CSS/Building_blocks/Debugging_CSS
  <tbody>
   <tr>
    <th scope="row">前提条件:</th>
-   <td>基本的なコンピューターリテラシー、<a href="https://developer.mozilla.org/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアがインストールされている</a>こと、<a href="https://developer.mozilla.org/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a>、HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>）および CSS に関するアイデア（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>）に関する基本的な知識を得ている。</td>
+   <td>基本的なコンピューターリテラシー、<a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアがインストールされている</a>こと、<a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a>、HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>）および CSS に関するアイデア（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>）に関する基本的な知識を得ている。</td>
   </tr>
   <tr>
    <th scope="row">目的:</th>
@@ -38,7 +38,7 @@ translation_of: Learn/CSS/Building_blocks/Debugging_CSS
 
 <h2 id="The_DOM_versus_view_source" name="The_DOM_versus_view_source">DOM とソース表示の違い</h2>
 
-<p>DevTools を初めて使用する人が困るのは、Web ページの<a href="https://wiki.developer.mozilla.org/ja/docs/Tools/View_source">ソースを表示</a>したとき、またはサーバーに配置した HTML ファイルを見たときに表示されるものと、DevTools の <a href="/ja/docs/Tools/Page_Inspector/UI_Tour#HTML_pane">HTML ペイン</a>に表示されるものが異なることです。「ソースの表示」で表示されるものとほぼ同じように見えますが、いくつかの違いがあります。</p>
+<p>DevTools を初めて使用する人が困るのは、Web ページの<a href="/ja/docs/Tools/View_source">ソースを表示</a>したとき、またはサーバーに配置した HTML ファイルを見たときに表示されるものと、DevTools の <a href="/ja/docs/Tools/Page_Inspector/UI_Tour#HTML_pane">HTML ペイン</a>に表示されるものが異なることです。「ソースの表示」で表示されるものとほぼ同じように見えますが、いくつかの違いがあります。</p>
 
 <p>レンダリングされた DOM では、ブラウザはあなたのために書き方の悪い HTML を修正しているかもしれません。例えば <code>&lt;h2&gt;</code> を開いて <code>&lt;h3&gt;</code> で閉じるといったように、要素を誤って閉じてしまった場合、ブラウザはあなたが何をしようとしていたのかを理解し、DOM の HTML は開いていた <code>&lt;h2&gt;</code> を正しく <code>&lt;h2&gt;</code> で閉じるようになります。ブラウザはすべての HTML を正規化し、DOM は JavaScript によって行われた変更も表示します。</p>
 

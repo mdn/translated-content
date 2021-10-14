@@ -111,7 +111,7 @@ translation_of: Mozilla/Firefox/Releases/59
 <ul>
  <li><code>data:</code> URI へのトップナビゲーションはブロックされます({{bug(1401895)}})。詳しくは <a href="https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/">Blocking Top-Level Navigations to data URLs for Firefox 59</a> をご覧ください。</li>
  <li>{{httpheader("X-Frame-Options")}} ヘッダーの <code>SAMEORIGIN</code> ディレクティブが、トップレベルのインラインフレームが同一オリジンであるかだけでなく、すべての祖先も同様であるかを確認するようになりました ({{bug(725490)}})。</li>
- <li>異なるオリジンから現在のドキュメントに読み込まれる画像リソースが、HTTP 認証ダイアログを表示させることができなくなりました。 ({{bug(1423146)}})。詳しくは <a href="https://www.fxsitecompat.com/en-CA/docs/2017/http-auth-dialog-can-no-longer-be-triggered-by-cross-origin-images/">HTTP auth dialog can no longer be triggered by cross-origin images</a> をご覧ください。</li>
+ <li>異なるオリジンから現在のドキュメントに読み込まれる画像リソースが、HTTP 認証ダイアログを表示させることができなくなりました。 ({{bug(1423146)}})。</li>
  <li>ほかのブラウザーに合わせるため、および {{bug(1419658)}} で説明されている潜在的な問題を避けるため、HTTP 認証でユーザー名やパスワードに (<code>ISO-8859-1</code> ではなく) <code>utf-8</code> エンコーディングを使用するようになりました。</li>
  <li><a href="https://searchfox.org/mozilla-central/source/security/manager/ssl/nsSTSPreloadList.inc">HSTS プリロードリスト</a>は Google によって毎日更新されています。いつもの更新であれば注意する必要はないのですが、このリリースから新しい TLD が追加されました。このうち具体的に注目したいのが <code>.app</code> と <code>.dev</code> です。これらの新しい TLD を知らず、ローカルの開発環境に使用した場合、予期しない挙動となるかもしれません。なお、ローカルでの開発には<a href="https://tools.ietf.org/html/rfc2606">予約済み TLD</a> を使うべきとされています。</li>
 </ul>
@@ -180,10 +180,10 @@ translation_of: Mozilla/Firefox/Releases/59
  </li>
  <li>新しい <a href="/ja/Add-ons/WebExtensions/API/browserSettings">ブラウザー設定</a>:
   <ul>
-   <li><a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/contextMenuShowEvent"><code>contextMenuShowEvent</code></a></li>
-   <li><a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs"><code>openBookmarksInNewTabs</code></a></li>
-   <li><a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs"><code>openSearchResultsInNewTabs</code></a></li>
-   <li><a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/proxyConfig"><code>proxyConfig</code></a></li>
+   <li><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/contextMenuShowEvent"><code>contextMenuShowEvent</code></a></li>
+   <li><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs"><code>openBookmarksInNewTabs</code></a></li>
+   <li><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs"><code>openSearchResultsInNewTabs</code></a></li>
+   <li><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/proxyConfig"><code>proxyConfig</code></a></li>
   </ul>
  </li>
  <li>新しい <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs">tabs</a></code> の API:
@@ -218,7 +218,6 @@ translation_of: Mozilla/Firefox/Releases/59
 
 <ul>
  <li><a href="https://www.mozilla.org/firefox/59.0/releasenotes/">Firefox — Notes (59.0)</a></li>
- <li><a href="https://www.fxsitecompat.com/ja/versions/59/">Firefox 59 サイト互換性情報</a></li>
 </ul>
 
 <h2 id="Older_versions" name="Older_versions">過去のバージョン</h2>

@@ -27,7 +27,7 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
  <tbody>
   <tr>
    <th scope="row">前提条件:</th>
-   <td>基本的なコンピューターの知識および HTML と CSS への理解、<a href="https://developer.mozilla.org/ja/docs/Learn/JavaScript/First_steps">JavaScript の第一歩</a>。</td>
+   <td>基本的なコンピューターの知識および HTML と CSS への理解、<a href="/ja/docs/Learn/JavaScript/First_steps">JavaScript の第一歩</a>。</td>
   </tr>
   <tr>
    <th scope="row">目的:</th>
@@ -383,12 +383,12 @@ btn.addEventListener('click', function() {
 <ol>
  <li>コードの先頭で、いくつか変数を宣言しています。その中に、連絡先の情報を持った配列があり、各要素は名前と電話番号をコロンで区切った文字列となっています。</li>
  <li>次に、ボタン (<code>btn</code>) にイベントリスナーを設定しています。ボタンが押されたときに検索結果が戻ってくるようになっています。</li>
- <li>テキスト入力欄に入力された値を <code>searchName</code> という変数に格納してから、次の検索に備え、入力欄をクリアし、フォーカスを設定しています。検索に大文字小文字を気にしないよう、文字列に <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">toLowerCase()</a></code> を実行しているのに注意してください。</li>
+ <li>テキスト入力欄に入力された値を <code>searchName</code> という変数に格納してから、次の検索に備え、入力欄をクリアし、フォーカスを設定しています。検索に大文字小文字を気にしないよう、文字列に <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">toLowerCase()</a></code> を実行しているのに注意してください。</li>
  <li>ここからが本題の for ループです。
   <ol>
    <li>カウンター変数を <code>0</code> から始め、<code>contacts.length</code> より小さくなくなるまで、ループの繰り返しの度に <code>i</code> を 1 増やしていきます。</li>
    <li>ループの内側では、まず現在の連絡先 (<code>contacts[i]</code>) をコロンの文字で分割し、<code>splitContact</code> という配列に格納します。</li>
-   <li>それから、条件文を用いて、<code>splitContact[0]</code> (連絡先の名前) が入力された <code>searchName</code> にまた <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">toLowerCase()</a></code> を使って小文字化したものと等しいかを判定します。もし等しければ、連絡先の電話番号を段落 ({{htmlelement("p")}} 要素) に表示し、<code>break</code> を使用してループを終了しています。</li>
+   <li>それから、条件文を用いて、<code>splitContact[0]</code> (連絡先の名前) が入力された <code>searchName</code> にまた <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">toLowerCase()</a></code> を使って小文字化したものと等しいかを判定します。もし等しければ、連絡先の電話番号を段落 ({{htmlelement("p")}} 要素) に表示し、<code>break</code> を使用してループを終了しています。</li>
   </ol>
  </li>
  <li>  <code>(contacts.length-1)</code> 回目の繰り返しの後に、もし連絡先の名前が入力された検索語に一致しなければ、段落に「連絡先が見つかりません。」という文字列を表示し、条件が true では無くなるまでループを継続します。</li>
@@ -726,7 +726,7 @@ textarea.onkeyup = function(){
  <li><code>admitted.textContent +=</code> — <code>admitted.textContent</code> の後に文字を連結する開始行</li>
 </ul>
 
-<p>特別ボーナス問題 — 上のタスクを正常に完了すると、カンマで区切られた 2 つの名前リストが残されますが、それらは整頓されません。それぞれの末尾にカンマがあります。それぞれの場合に最後のカンマを切り取り、末尾にピリオドを追加した行をどのように書くかという問題を解決出来ますか？ヘルプのため<a href="https://wiki.developer.mozilla.org/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods">便利な文字列メソッド</a>の記事を見てみてください。<br>
+<p>特別ボーナス問題 — 上のタスクを正常に完了すると、カンマで区切られた 2 つの名前リストが残されますが、それらは整頓されません。それぞれの末尾にカンマがあります。それぞれの場合に最後のカンマを切り取り、末尾にピリオドを追加した行をどのように書くかという問題を解決出来ますか？ヘルプのため<a href="/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods">便利な文字列メソッド</a>の記事を見てみてください。<br>
  <br>
  間違えた場合は、「リセット」ボタンを使用してこの例をいつでもリセットできます。あなたが本当に立ち往生したら、"ソリューションを表示"を押して解決策を見てください。</p>
 
@@ -893,12 +893,12 @@ do {
 <p>少なくとも最初は <code>for</code> から始めることをお勧めします。すべてを覚えておくことが簡単だからです。初期化処理、条件、最後の式をすべて括弧内にきちんと入れなければならないので、それらがどこにあるかや見落としていないことの確認が簡単です。</p>
 
 <div class="note">
-<p><strong>注</strong>: 高度な/特殊な状況やこの記事の範囲を超えて有用な、他のループタイプ/機能もあります。ループ学習をさらに進めたい場合は、高度な<a href="https://wiki.developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Loops_and_iteration">ループと反復処理ガイド</a>をお読みください。</p>
+<p><strong>注</strong>: 高度な/特殊な状況やこの記事の範囲を超えて有用な、他のループタイプ/機能もあります。ループ学習をさらに進めたい場合は、高度な<a href="/ja/docs/Web/JavaScript/Guide/Loops_and_iteration">ループと反復処理ガイド</a>をお読みください。</p>
 </div>
 
 <h2 id="スキルをテストしよう!">スキルをテストしよう!</h2>
 
-<p>この記事の最後に到達しましたが、最も大事な情報を覚えていますか？移動する前に、情報を維持しているか検証するテストを見ることができます — <a href="https://wiki.developer.mozilla.org/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Loops">Test your skills: Loops</a> を見てください。</p>
+<p>この記事の最後に到達しましたが、最も大事な情報を覚えていますか？移動する前に、情報を維持しているか検証するテストを見ることができます — <a href="/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Loops">Test your skills: Loops</a> を見てください。</p>
 
 <h2 id="Conclusion" name="Conclusion">まとめ</h2>
 

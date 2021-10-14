@@ -32,7 +32,7 @@ init();</pre>
 
 <p><code>init()</code> 関数はローカル変数 <code>name</code> を作成し、それから関数 <code>displayName()</code> を定義しています。<code>displayName()</code> は <code>init()</code> の中で定義されている内部関数で、その関数本体の内部でしか利用できません。<code>displayName()</code> 自体はローカル変数を持っていませんが、外側の関数で宣言された変数にアクセスできるので、<code>displayName()</code> では親関数 <code>init()</code> で宣言された変数 <code>name</code> を使用できます。しかし、 <code>displayName()</code> に同じローカル変数があればそれが使われます。</p>
 
-<p>コードを <a href="http://jsfiddle.net/xAFs9/3/" title="http://jsfiddle.net/xAFs9/">JSFiddle で実行</a>して、<code>displayName()</code> 関数の <code>alert()</code> 文が、親関数で定義された <code>name</code> 変数の値を表示するのを確認してください。これは<em>レキシカルスコープ</em>、つまり関数がネストされている時にパーサーが変数名を解決する方法を示す例です。<em>レキシカル</em>という言葉の触れるところは、変数のスコープはソースコード内の位置によって決定され、ネストされた関数は外側のスコープで宣言された変数にアクセスすることができます。</p>
+<p>コードを <a href="http://jsfiddle.net/xAFs9/3/">JSFiddle で実行</a>して、<code>displayName()</code> 関数の <code>alert()</code> 文が、親関数で定義された <code>name</code> 変数の値を表示するのを確認してください。これは<em>レキシカルスコープ</em>、つまり関数がネストされている時にパーサーが変数名を解決する方法を示す例です。<em>レキシカル</em>という言葉の触れるところは、変数のスコープはソースコード内の位置によって決定され、ネストされた関数は外側のスコープで宣言された変数にアクセスすることができます。</p>
 
 <h2 id="Closure" name="Closure">クロージャ</h2>
 
@@ -134,7 +134,7 @@ document.getElementById('size-16').onclick = size16;</pre>
 
 <p>JavaScript にはこういった機能は組み込まれていませんが、クロージャを使うとプライベートメソッドを模倣する事ができます。プライベートメソッドはコードへのアクセスを制限するのに役立つだけではなく、コードのパブリックインターフェイスが不要なメソッドでいっぱいになるのを防ぐため、グローバル名前空間を管理するのに非常に有効です。</p>
 
-<p><a href="http://www.google.com/search?q=javascript+module+pattern" title="http://www.google.com/search?q=javascript+module+pattern">モジュールパターン</a>としても知られる、クロージャを使って、プライベートな関数と変数にアクセスできるパブリック関数を定義するにはこのようにします。</p>
+<p><a href="http://www.google.com/search?q=javascript+module+pattern">モジュールパターン</a>としても知られる、クロージャを使って、プライベートな関数と変数にアクセスできるパブリック関数を定義するにはこのようにします。</p>
 
 <pre class="brush: js notranslate">var counter = (function() {
   var privateCounter = 0;
@@ -367,7 +367,7 @@ function setupHelp() {
 
 setupHelp();</pre>
 
-<p>これ以上クロージャを使いたくない場合、ES2015 で導入された <code><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/let">let</a></code> キーワードも使用できます:</p>
+<p>これ以上クロージャを使いたくない場合、ES2015 で導入された <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/let">let</a></code> キーワードも使用できます:</p>
 
 <pre class="brush: js notranslate">function showHelp(help) {
   document.getElementById('help').innerHTML = help;

@@ -14,7 +14,7 @@ original_slug: DOM/window.requestAnimationFrame
 
 <p>Вы должны вызывать этот метод всякий раз, когда готовы обновить анимацию на экране, чтобы запросить планирование анимации. Обычно запросы происходят 60 раз в секунду, но чаще всего совпадают с частотой обновления экрана. В большинстве браузеров в фоновых вкладках или скрытых <code>&lt;iframe&gt;</code>, вызовы <code>requestAnimationFrame()</code> приостанавливаются, для того, чтобы повысить производительность и время работы батареи.</p>
 
-<p>Callback методу передаётся один аргумент, {{domxref("DOMHighResTimeStamp")}}, который содержит текущее время (количество миллисекунд, прошедших с момента <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin">time origin</a>). Когда колбэки, отправленные в очередь с помощью <code>requestAnimationFrame()</code> начинают вызывать несколько колбэков в одном кадре, каждый получает одинаковый timestamp, хотя для вычисления каждого callback было затрачено время. Этот timestamp - десятичное число в миллисекундах, но с минимальной точностью в 1ms (1000 µs).</p>
+<p>Callback методу передаётся один аргумент, {{domxref("DOMHighResTimeStamp")}}, который содержит текущее время (количество миллисекунд, прошедших с момента <a href="/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin">time origin</a>). Когда колбэки, отправленные в очередь с помощью <code>requestAnimationFrame()</code> начинают вызывать несколько колбэков в одном кадре, каждый получает одинаковый timestamp, хотя для вычисления каждого callback было затрачено время. Этот timestamp - десятичное число в миллисекундах, но с минимальной точностью в 1ms (1000 µs).</p>
 
 <h2 id="Syntax" name="Syntax">Синтаксис</h2>
 
@@ -89,5 +89,4 @@ window.requestAnimationFrame(step);</pre>
  <li><a class="external" href="http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html">mozRequestAnimationFrame</a> - Blog post</li>
  <li><a class="external" href="http://paulirish.com/2011/requestanimationframe-for-smart-animating/">requestAnimationFrame for smart animating</a> - Blog post</li>
  <li><a class="external" href="http://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/">Animating with javascript: from setInterval to requestAnimationFrame</a> - Blog post</li>
- <li><a class="external" href="http://blogs.msdn.com/b/ie/archive/2011/07/05/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-1.aspx">Using PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 1</a> - Blog post</li>
 </ul>

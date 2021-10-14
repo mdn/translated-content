@@ -67,7 +67,7 @@ class Server {
 <p>メソッド:</p>
 
 <ul>
- <li><code>System.Net.Sockets.<a href="http://msdn.microsoft.com/ja-jp/library/system.net.sockets.networkstream.aspx" title="http://msdn.microsoft.com/en-us/library/system.net.sockets.networkstream.aspx">NetworkStream</a> GetStream()</code><br>
+ <li><code>System.Net.Sockets.<a href="http://msdn.microsoft.com/ja-jp/library/system.net.sockets.networkstream.aspx">NetworkStream</a> GetStream()</code><br>
   通信チャネルであるストリームを取得します。チャンネルの両側には読み書き機能があります。</li>
 </ul>
 
@@ -133,7 +133,7 @@ if (Regex.IsMatch(data, "^GET")) {
 
 }</pre>
 
-<p>リクエストは簡単に作成できますが、理解するのは少し難しいかもしれません。サーバーのハンドシェイクの完全な説明は <a href="https://developer.mozilla.org/ja/docs/Web/API/WebSockets_API/RFC%206455,%20section%204.2.2">RFC 6455、セクション4.2.2</a> にあります。私たちの目的のために、簡単なレスポンスを作成します。</p>
+<p>リクエストは簡単に作成できますが、理解するのは少し難しいかもしれません。サーバーのハンドシェイクの完全な説明は <a href="/ja/docs/Web/API/WebSockets_API/RFC%206455,%20section%204.2.2">RFC 6455、セクション4.2.2</a> にあります。私たちの目的のために、簡単なレスポンスを作成します。</p>
 
 <p>やらなければならないのは:</p>
 
@@ -215,7 +215,7 @@ if (Regex.IsMatch(data, "^GET")) {
 <ul>
  <li>FIN ビット: このビットは完全なメッセージがクライアントから送信されたかどうかを示します。メッセージはフレームで送信されるかもしれませんが、今のところ単純なものにします。</li>
  <li>RSV1, RSV2, RSV3: エクステンションがネゴシエートされない限り、これらのビットは 0 でなくてはなりません。</li>
- <li><span style="line-height: 1.572;">Opcode: </span>これらのビットは受信したメッセージのタイプを記述します。<span style="line-height: 1.572;">Opcode</span> 0x1 は、これがテキストメッセージであることを意味します。<span style="line-height: 1.572;"> </span><a href="http://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;" title="http://tools.ietf.org/html/rfc6455#section-5.2">Opcode の完全なリスト</a></li>
+ <li><span style="line-height: 1.572;">Opcode: </span>これらのビットは受信したメッセージのタイプを記述します。<span style="line-height: 1.572;">Opcode</span> 0x1 は、これがテキストメッセージであることを意味します。<span style="line-height: 1.572;"> </span><a href="http://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;">Opcode の完全なリスト</a></li>
 </ul>
 
 <p>現在 131 の値を持つ 2 番目のバイトは、次のように分解する別のビットフィールドです。</p>
@@ -269,5 +269,3 @@ for (int i = 0; i &lt; encoded.Length; i++) {
 <ul>
  <li><a href="/ja/docs/WebSockets-840092-dup/Writing_WebSocket_servers">Writing WebSocket servers</a></li>
 </ul>
-
-<div id="cke_pastebin" style="position: absolute; top: 2209.23px; width: 1px; height: 1px; overflow: hidden; left: -1000px;"><em> </em></div>

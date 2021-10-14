@@ -17,7 +17,7 @@ original_slug: Web/API/WebGL_API/Tutorial/Adicionando_conteudo_2D_a_um_contexto_
 
 <h3 id="Inicializando_os_shaders">Inicializando os shaders</h3>
 
-<p>Shaders são especificados ao usar a <a class="external" href="http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf" title="http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf">Linguagem de Shading OpenGL ES</a>. Com o intuito de tornar mais fácil para manter e atualizar nosso conteúdo, nós podemos escrever nosso código que carrega os shaders para buscá-los no documento HTML, ao invés de termos de criar tudo em JavaScript. Vamos dar uma olhada na nossa rotina <code>initShaders()</code>, que cuida dessa tarefa:</p>
+<p>Shaders são especificados ao usar a <a class="external" href="http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf">Linguagem de Shading OpenGL ES</a>. Com o intuito de tornar mais fácil para manter e atualizar nosso conteúdo, nós podemos escrever nosso código que carrega os shaders para buscá-los no documento HTML, ao invés de termos de criar tudo em JavaScript. Vamos dar uma olhada na nossa rotina <code>initShaders()</code>, que cuida dessa tarefa:</p>
 
 <pre class="brush: js">function initShaders() {
   var fragmentShader = getShader(gl, "shader-fs");
@@ -190,7 +190,7 @@ function initBuffers() {
 
 <h2 id="Operações_úteis_da_Matrix">Operações úteis da Matrix</h2>
 
-<p>Matrix operations are complicated enough. Nobody really wants to write all the code needed to handle them on their own. Fortunately, there's <a class="external" href="http://sylvester.jcoglan.com/" title="http://sylvester.jcoglan.com/">Sylvester</a>, a very handy library for handling vector and matrix operations from JavaScript.</p>
+<p>Matrix operations are complicated enough. Nobody really wants to write all the code needed to handle them on their own. Fortunately, there's <a class="external" href="http://sylvester.jcoglan.com/">Sylvester</a>, a very handy library for handling vector and matrix operations from JavaScript.</p>
 
 <p>The <code>glUtils.js</code> file used by this demo is used by a number of WebGL demos floating around on the Web. Nobody seems entirely clear on where it came from, but it does simplify the use of Sylvester even further by adding methods for building special types of matrices, as well as outputting HTML for displaying them.</p>
 
@@ -220,8 +220,8 @@ function setMatrixUniforms() {
 <h2 id="Ver_Também">Ver Também</h2>
 
 <ul>
- <li><a class="external" href="http://mathworld.wolfram.com/Matrix.html" title="http://mathworld.wolfram.com/Matrix.html">Matrices</a> on Wolfram MathWorld</li>
- <li><a class="external" href="http://en.wikipedia.org/wiki/Matrix_(mathematics)" title="http://en.wikipedia.org/wiki/Matrix_(mathematics)">Matriz</a> na Wikipedia</li>
+ <li><a class="external" href="http://mathworld.wolfram.com/Matrix.html">Matrices</a> on Wolfram MathWorld</li>
+ <li><a class="external" href="http://en.wikipedia.org/wiki/Matrix_(mathematics)">Matriz</a> na Wikipedia</li>
 </ul>
 
 <p>{{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}</p>

@@ -1,66 +1,68 @@
 ---
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
+tags:
+  - API
+  - CSSOM
+  - CSSRule
+  - Interface
+  - Reference
+browser-compat: api.CSSStyleDeclaration
 translation_of: Web/API/CSSStyleDeclaration
 ---
 <div>{{APIRef("CSSOM")}}</div>
 
-<p><strong><code>CSSStyleDeclaration</code></strong>インターフェースはCSS宣言ブロックオブジェクトを表し、スタイル情報やスタイル関連のメソッド、プロパティを提供します。</p>
+<p><strong><code>CSSStyleDeclaration</code></strong> インターフェースは CSS 宣言ブロックのオブジェクトを表し、スタイル情報や様々なスタイルに関するメソッドやプロパティを提供します。</p>
 
-<p><code>CSSStyleDeclaration</code> オブジェクトは下記の３つのAPIによって使用されます。</p>
+<p><code>CSSStyleDeclaration</code> オブジェクトは、下記の 3 つの API によって使用されます。</p>
 
 <ul>
- <li>{{DOMxRef("HTMLElement.style")}}。<br>
-  DOM要素をインラインスタイルで扱う際。(例, <code>&lt;div style="..."&gt;</code>).</li>
- <li>{{DOMxRef("CSSStyleSheet")}} API。<br>
-  例えば<code>document.styleSheets[0].cssRules[0].style</code> は、<code>CSSStyleDeclaration</code> を返します。</li>
- <li>{{DOMxRef("Window.getComputedStyle()")}}。<br>
-  これは読み取り専用インターフェースとして、<code>CSSStyleDeclaration</code> オブジェクトを返します。</li>
+ <li>単一の要素のインラインスタイルを扱う {{DOMxRef("HTMLElement.style")}} から (例: <code>&lt;div style="..."&gt;</code>)。</li>
+ <li>{{DOMxRef("CSSStyleSheet")}} API から。例えば <code>document.styleSheets[0].cssRules[0].style</code> は、その文書の最初のスタイルシートの最初の CSS 規則を <code>CSSStyleDeclaration</code> を返します。</li>
+ <li>{{DOMxRef("Window.getComputedStyle()")}} で、 <code>CSSStyleDeclaration</code> オブジェクトを<strong>読み取り専用</strong>インターフェイスとして返します。</li>
 </ul>
 
 <h2 id="属性">属性</h2>
 
 <dl>
  <dt>{{DOMxRef("CSSStyleDeclaration.cssText")}}</dt>
- <dd>Textual representation of the declaration block. Setting this attribute changes the style.<br>
- CSSブロック宣言をテキスト表示する。この属性を与えることでスタイルを変化させることが可能。</dd>
+ <dd>宣言ブロックのテキスト表現です。この属性を設定すると、スタイルが変化します。</dd>
  <dt>{{DOMxRef("CSSStyleDeclaration.length")}}{{ReadOnlyInline}}</dt>
- <dd>プロパティの数を表す。後述の{{DOMxRef("CSSStyleDeclaration.item()", 'item()')}}メソッドを参照のこと。<br>
-  </dd>
+ <dd>プロパティの数を表します。後述の {{DOMxRef("CSSStyleDeclaration.item()", 'item()')}} メソッドを参照のこと。</dd>
  <dt>{{DOMxRef("CSSStyleDeclaration.parentRule")}}{{ReadOnlyInline}}</dt>
- <dd>{{DOMxRef("CSSRule")}}を含むコンテナを表す。</dd>
+ <dd>所属する {{DOMxRef("CSSRule")}} を表します。</dd>
 </dl>
 
-<h3 id="CSS_プロパティ">CSS プロパティ</h3>
+<h3 id="CSS_Properties">CSS プロパティ</h3>
 
 <dl>
- <dt>{{DOMxRef("CSSStyleDeclaration.named_properties", "CSSStyleDeclaration.cssFloat")}}</dt>
- <dd>{{CSSxRef("float")}} CSSプロパティのエイリアス。</dd>
- <dt>{{DOMxRef("CSSStyleDeclaration.named_properties", '<code>CSSStyleDeclaration</code> named properties', "", 1)}}</dt>
- <dd>全てのCSSプロパティに対して、その値を取得する。</dd>
+ <dt>{{DOMxRef("CSSStyleDeclaration.cssFloat", "CSSStyleDeclaration.cssFloat")}}</dt>
+ <dd>CSS の {{CSSxRef("float")}} プロパティのエイリアスです。</dd>
+ <dt>{{DOMxRef("CSSStyleDeclaration.named_properties", '<code>CSSStyleDeclaration</code> の名前付きプロパティ', "", 1)}}</dt>
+ <dd>対応するすべての CSS プロパティを、ダッシュおよびキャメルケースにした属性です。</dd>
 </dl>
 
-<h2 id="メソッド">メソッド</h2>
+<h2 id="Methods">メソッド</h2>
 
 <dl>
  <dt>{{DOMxRef("CSSStyleDeclaration.getPropertyPriority()")}}</dt>
- <dd>Returns the optional priority, "important".</dd>
+ <dd>オプションの優先度、 "important" を返します。</dd>
  <dt>{{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}}</dt>
- <dd>Returns the property value given a property name.</dd>
+ <dd>指定されたプロパティ名のプロパティ値を返します。</dd>
  <dt>{{DOMxRef("CSSStyleDeclaration.item()")}}</dt>
- <dd>Returns a CSS property name by its index, or the empty string if the index is out-of-bounds.</dd>
- <dd>An alternative to accessing <code>nodeList[<var>i</var>]</code> (which instead returns <code>undefined</code> when <code><var>i</var></code> is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.</dd>
+ <dd>位置から CSS プロパティ名を返します。位置が範囲を超えていた場合は空文字列を返します。</dd>
+ <dd>代替方法は <code>nodeList[<var>i</var>]</code> にアクセスすることです (これは <code><var>i</var></code> が範囲外であった場合は <code>undefined</code> を返します)。これは JavaScript 以外の DOM 実装の多くで最も有用です。</dd>
  <dt>{{DOMxRef("CSSStyleDeclaration.removeProperty()")}}</dt>
- <dd>Removes a property from the CSS declaration block.</dd>
+ <dd>CSS 宣言ブロックからプロパティを削除します。</dd>
  <dt>{{DOMxRef("CSSStyleDeclaration.setProperty()")}}</dt>
- <dd>Modifies an existing CSS property or creates a new CSS property in the declaration block.</dd>
- <dt>{{DOMxRef("CSSStyleDeclaration.getPropertyCSSValue()")}} {{Obsolete_Inline}}</dt>
- <dd><strong>Only supported via getComputedStyle in Firefox.</strong> Returns the property value as a {{DOMxRef("CSSPrimitiveValue")}} or <code>null</code> for <a href="/en-US/docs/Web/CSS/Shorthand_properties" title="en/Guide to Shorthand CSS">shorthand properties</a>.</dd>
+ <dd>宣言ブロック内の既存の CSS プロパティを変更するか、新しい CSS プロパティを生成するかします。</dd>
+ <dt>{{DOMxRef("CSSStyleDeclaration.getPropertyCSSValue()")}} {{deprecated_inline}}</dt>
+ <dd><strong>Firefox の getComputedStyle のみ対応</strong> プロパティの値を {{DOMxRef("CSSPrimitiveValue")}} として、または<a href="/ja/docs/Web/CSS/Shorthand_properties">一括指定プロパティ</a>では <code>null</code> を返します。</dd>
 </dl>
 
-<h2 id="例">例</h2>
+<h2 id="Example">例</h2>
 
-<pre class="brush: js notranslate">var styleObj = document.styleSheets[0].cssRules[0].style;
+<pre class="brush: js">var styleObj = document.styleSheets[0].cssRules[0].style;
 console.log(styleObj.cssText);
 
 for (var i = styleObj.length; i--;) {
@@ -70,52 +72,16 @@ for (var i = styleObj.length; i--;) {
 
 console.log(styleObj.cssText);</pre>
 
-<h2 id="仕様">仕様</h2>
+<h2 id="Specifications">仕様書</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM', '#the-cssstyledeclaration-interface', 'CSSStyleDeclaration')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td>Merged the <strong>DOM Level 2 Style</strong> <code>CSS2Properties</code> interface into <code>CSSStyleDeclaration</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleDeclaration', 'CSSStyleDeclaration')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
+<p>{{Compat}}</p>
 
-
-<p>{{Compat("api.CSSStyleDeclaration")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Properties_Reference" title="/en-US/docs/Web/CSS/CSS_Properties_Reference">CSS Properties Reference</a></li>
+ <li><a href="/ja/docs/Web/CSS/CSS_Properties_Reference">CSS Properties Reference</a></li>
 </ul>
-
-<div class="jfk-bubble gtx-bubble">
-<div class="jfk-bubble-content-id" id="bubble-8">
-<div id="gtx-host" style="max-width: 400px;"></div>
-</div>
-
-<div class="jfk-bubble-closebtn-id jfk-bubble-closebtn"></div>
-
-<div class="jfk-bubble-arrow-id jfk-bubble-arrow jfk-bubble-arrowup" style="left: 163.5px;">
-<div class="jfk-bubble-arrowimplbefore"></div>
-
-<div class="jfk-bubble-arrowimplafter"></div>
-</div>
-</div>

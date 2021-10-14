@@ -85,11 +85,11 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <p>Developers should use ARIA states to indicate the state of UI widget elements and use CSS attribute selectors to alter the visual appearance based on the state changes (rather than using script to change a class name on the element).</p>
 
-<p>The Open Ajax Alliance website provides <a class="external" href="http://web.archive.org/web/20160303012540/http://oaa-accessibility.org/example/25/" title="http://www.oaa-accessibility.org/example/25/">an example of CSS attribute selectors based on ARIA states</a>. The example shows a WYSIWYG editor interface with a dynamic menu system. Items currently selected in a menu, such as the font face, are visually distinguished from other items. The relevant parts of the example are explained below.</p>
+<p>The Open Ajax Alliance website provides an example of CSS attribute selectors based on ARIA states. The example shows a WYSIWYG editor interface with a dynamic menu system. Items currently selected in a menu, such as the font face, are visually distinguished from other items. The relevant parts of the example are explained below.</p>
 
 <p>In this example, the HTML for a menu has the form shown in Example 1a. Note how, on lines 7 and 13, the <strong><code>aria-checked</code></strong> property is used to declare the selection state of the menu items.</p>
 
-<p><em>Example 1a. HTML for a selectable menu (adapted from <a class="external" href="http://www.oaa-accessibility.org/example/25/" rel="freelink">http://www.oaa-accessibility.org/example/25/</a>).</em></p>
+<p><em>Example 1a. HTML for a selectable menu.</em></p>
 
 <pre class="brush: html">&lt;ul id="fontMenu" class="menu" role="menu" aria-hidden="true"&gt;
   &lt;li id="sans-serif"
@@ -109,7 +109,7 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <p>The CSS that is used to alter the visual appearance of the selected item is shown in Example 1b. Note that there is no custom classname used, only the status of the <strong><code>aria-checked</code></strong> attribute on line 1.</p>
 
-<p><em>Example 1b. Attribute-based selector for indicating state (from <a class="external" href="http://www.oaa-accessibility.org/example/25/" rel="freelink">http://www.oaa-accessibility.org/example/25/</a>).</em></p>
+<p><em>Example 1b. Attribute-based selector for indicating state.</em></p>
 
 <pre class="brush: css">li[aria-checked="true"] {
   font-weight: bold;
@@ -121,7 +121,7 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <p>The JavaScript to update the <strong><code>aria-checked</code></strong> property has the form shown in Example 1c. Note that the script only updates the <strong><code>aria-checked</code></strong> attribute (lines 3 and 8); it does not need to also add or remove a custom classname.</p>
 
-<p><em>Example 1c. JavaScript to update the aria-checked attribute (based on <a class="external" href="http://www.oaa-accessibility.org/example/25/" rel="freelink">http://www.oaa-accessibility.org/example/25/</a>)</em>.</p>
+<p><em>Example 1c. JavaScript to update the aria-checked attribute</em>.</p>
 
 <pre class="brush: javascript">var processMenuChoice = function(item) {
   // 'check' the selected item
@@ -140,11 +140,11 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <p>When content visibility is changed (i.e., an element is hidden or shown), developers should change the <strong><code>aria-hidden</code></strong> property value. The techniques described above should be used to declare CSS to visually hide an element using <code>display:none</code>.</p>
 
-<p>The Open Ajax Alliance website provides <a class="external" href="http://www.oaa-accessibility.org/example/39/" title="http://www.oaa-accessibility.org/example/39/">an example of a tooltip that uses <strong><code>aria-hidden</code></strong> to control the visibility of the tooltip</a>. The example shows a simple web form with tooltips containing instructions associated with the entry fields. The relevant parts of the example are explained below.</p>
+<p>The Open Ajax Alliance website provides an example of a tooltip that uses <strong><code>aria-hidden</code></strong> to control the visibility of the tooltip. The example shows a simple web form with tooltips containing instructions associated with the entry fields. The relevant parts of the example are explained below.</p>
 
 <p>In this example, the HTML for the tooltip has the form shown in Example 2a. Line 9 sets the <strong><code>aria-hidden</code></strong> state to <code>true</code>.</p>
 
-<p><em>Example 2a. HTML for a tooltip (adapted from <a class="external" href="http://www.oaa-accessibility.org/example/39/" rel="freelink">http://www.oaa-accessibility.org/example/39/</a>).</em></p>
+<p><em>Example 2a. HTML for a tooltip.</em></p>
 
 <pre class="brush: html">&lt;div class="text"&gt;
     &lt;label id="tp1-label" for="first"&gt;First Name:&lt;/label&gt;
@@ -160,7 +160,7 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <p>The CSS for this markup is shown in Example 2b. Note that there is no custom classname used, only the status of the <strong><code>aria-hidden</code></strong> attribute on line 1.</p>
 
-<p><em>Example 2b. Attribute-based selector for indicating state (from <a class="external" href="http://www.oaa-accessibility.org/example/39/" rel="freelink">http://www.oaa-accessibility.org/example/39/</a>).</em></p>
+<p><em>Example 2b. Attribute-based selector for indicating state.</em></p>
 
 <pre class="brush: css">div.tooltip[aria-hidden="true"] {
   display: none;
@@ -169,7 +169,7 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <p>The JavaScript to update the <strong><code>aria-hidden</code></strong> property has the form shown in Example 2c. Note that the script only updates the <strong><code>aria-hidden</code></strong> attribute (line 2); it does not need to also add or remove a custom classname.</p>
 
-<p><em>Example 2c. JavaScript to update the aria-checked attribute (based on <a class="external" href="http://www.oaa-accessibility.org/example/39/" rel="freelink">http://www.oaa-accessibility.org/example/39/</a>).</em></p>
+<p><em>Example 2c. JavaScript to update the aria-checked attribute.</em></p>
 
 <pre class="brush: javascript">var showTip = function(el) {
   el.setAttribute('aria-hidden', 'false');

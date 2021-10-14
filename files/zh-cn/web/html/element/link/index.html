@@ -23,23 +23,23 @@ translation_of: Web/HTML/Element/link
 
 <p>这里有一些你经常遇到的其它类型。例如，这里是一个网站图标的链接：</p>
 
-<pre class="notranslate"><code>&lt;link rel="icon" href="favicon.ico"&gt;</code></pre>
+<pre class="brush: html notranslate"><code>&lt;link rel="icon" href="favicon.ico"&gt;</code></pre>
 
 <p>还有一些其它的与图标相关的<code>rel</code>值，主要用于表示不同移动平台上特殊的图标类型，例如：</p>
 
-<pre class="notranslate"><code>&lt;link rel="apple-touch-icon-precomposed" sizes="114x114"
+<pre class="brush: html notranslate"><code>&lt;link rel="apple-touch-icon-precomposed" sizes="114x114"
       href="apple-icon-114.png" type="image/png"&gt;</code></pre>
 
 <p><code>sizes</code>属性表示图标大小，<code>type</code>属性包含了链接资源的MIME类型。这些属性为浏览器选择最合适的图标提供了有用的提示。</p>
 
 <p>你也可以提供一个媒体类型，或者在<code>media</code>属性内部进行查询；这种资源将只在满足媒体条件的情况下才被加载进来。例如：</p>
 
-<pre class="notranslate"><code>&lt;link href="print.css" rel="stylesheet" media="print"&gt;
+<pre class="brush: html notranslate"><code>&lt;link href="print.css" rel="stylesheet" media="print"&gt;
 &lt;link href="mobile.css" rel="stylesheet" media="screen and (max-width: 600px)"&gt;</code></pre>
 
 <p><code>&lt;link&gt;</code>也加入了一些新的有意思的性能和安全特性。举例如下：</p>
 
-<pre class="notranslate"><code>&lt;link rel="preload" href="myFont.woff2" as="font"
+<pre class="brush: html notranslate"><code>&lt;link rel="preload" href="myFont.woff2" as="font"
       type="font/woff2" crossorigin="anonymous"&gt;</code></pre>
 
 <p>将<code>rel</code>设定为<code>preload</code>，表示浏览器应该预加载该资源 (更多细节见<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content">使用rel="preload"预加载内容</a>) 。<code>as</code>属性表示获取特定的内容类。<code>crossorigin</code>属性表示该资源是否应该使用一个{{Glossary("CORS")}}请求来获取。</p>
@@ -60,7 +60,7 @@ translation_of: Web/HTML/Element/link
 
 <dl>
  <dt>{{htmlattrdef("as")}}</dt>
- <dd>该属性仅在<code>&lt;link&gt;</code>元素设置了 <code>rel="preload"</code> 时才能使用。它规定了<code>&lt;link&gt;元素</code>加载的内容的类型，对于内容的优先级、请求匹配、正确的<a href="/zh-CN/docs/Web/HTTP/CSP">内容安全策略</a>的选择以及正确的 {{httpheader("Accept")}}请求头的设置，这个属性是必需的。</dd>
+ <dd>该属性仅在<code>&lt;link&gt;</code>元素设置了 <code>rel="preload"</code> 或者 <code>rel="prefetch"</code> 时才能使用。它规定了<code>&lt;link&gt;元素</code>加载的内容的类型，对于内容的优先级、请求匹配、正确的<a href="/zh-CN/docs/Web/HTTP/CSP">内容安全策略</a>的选择以及正确的 {{httpheader("Accept")}}请求头的设置，这个属性是必需的。</dd>
  <dt>
  <table>
   <thead>
@@ -198,7 +198,7 @@ translation_of: Web/HTML/Element/link
  </div>
  </dd>
  <dt>{{HTMLAttrDef("title")}}</dt>
- <dd>属性在<code>&lt;link&gt;</code>元素上有特殊的语义。当用于<code>&lt;link rel="stylesheet"&gt;</code>时，它定义了一个<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Alternative_style_sheets">首选样式表或备用样式表</a>。不正确地使用它可能会导致<a href="https://wiki.developer.mozilla.org/en-US/docs/Correctly_Using_Titles_With_External_Stylesheets">样式表被忽略</a>。</dd>
+ <dd>属性在<code>&lt;link&gt;</code>元素上有特殊的语义。当用于<code>&lt;link rel="stylesheet"&gt;</code>时，它定义了一个<a href="/zh-CN/docs/Web/CSS/Alternative_style_sheets">首选样式表或备用样式表</a>。不正确地使用它可能会导致<a href="/zh-CN/docs/Correctly_Using_Titles_With_External_Stylesheets">样式表被忽略</a>。</dd>
  <dt>{{htmlattrdef("type")}}</dt>
  <dd>这个属性被用于定义链接的内容的类型。这个属性的值应该是像text/html，text/css等MIME类型。这个属性常用的用法是定义链接的样式表，最常用的值是表明了CSS的text/css。</dd>
  <dt></dt>
@@ -221,7 +221,7 @@ translation_of: Web/HTML/Element/link
  </div>
  </dd>
  <dt>{{htmlattrdef("rev")}}{{obsolete_inline}}</dt>
- <dd>此属性的值显示了 {{HTMLAttrxRef("href", "link")}} 属性所定义的当前文档与链接文档的关系。 因此，该属性定义了与rel属性的值相比的反向关系。 该属性的<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Link_types">Link type value</a>类似于{{HTMLAttrxRef("rel", "link")}}的可能值。</dd>
+ <dd>此属性的值显示了 {{HTMLAttrxRef("href", "link")}} 属性所定义的当前文档与链接文档的关系。 因此，该属性定义了与rel属性的值相比的反向关系。 该属性的<a href="/zh-CN/docs/Web/HTML/Link_types">Link type value</a>类似于{{HTMLAttrxRef("rel", "link")}}的可能值。</dd>
  <dd>
  <div class="blockIndicator note">
  <p><strong>Note:</strong> WHATWG HTML生活标准（MDN将其视为规范的规范）认为该属性已过时。 但是，值得注意的是，rev在W3C规范中并未过时。 就是说，鉴于不确定性，依靠rev是不明智的。</p>
@@ -255,7 +255,7 @@ translation_of: Web/HTML/Element/link
 
 <p>您可以在同一页面上包含指向多个不同图标的链接，浏览器将使用<code>rel</code>和<code>sizes</code> 值作为提示来选择最适合其特定上下文的图标。</p>
 
-<pre class="notranslate"><code>&lt;!-- third-generation iPad with high-resolution Retina display: --&gt;
+<pre class="brush: html notranslate"><code>&lt;!-- third-generation iPad with high-resolution Retina display: --&gt;
 &lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon144.png"&gt;
 &lt;!-- iPhone with high-resolution Retina display: --&gt;
 &lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png"&gt;
@@ -270,7 +270,7 @@ translation_of: Web/HTML/Element/link
 
 <p>您可以在<code>media</code>属性中提供媒体类型或查询; 然后，只有在媒体条件为true时，才会加载此资源。 例如：</p>
 
-<pre class="notranslate"><code>&lt;link href="print.css" rel="stylesheet" media="print"&gt;
+<pre class="brush: html notranslate"><code>&lt;link href="print.css" rel="stylesheet" media="print"&gt;
 &lt;link href="mobile.css" rel="stylesheet" media="all"&gt;
 &lt;link href="desktop.css" rel="stylesheet" media="screen and (min-width: 600px)"&gt;
 &lt;link href="highres.css" rel="stylesheet" media="screen and (min-resolution: 300dpi)"&gt;</code></pre>

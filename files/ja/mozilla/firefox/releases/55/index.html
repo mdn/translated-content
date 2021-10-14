@@ -24,7 +24,7 @@ translation_of: Mozilla/Firefox/Releases/55
 <h3 id="HTML" name="HTML">HTML</h3>
 
 <ul>
- <li>{{htmlattrxref("contenteditable")}} を <code>true</code> に設定した要素で、テキストの別の行を分けるために {{htmlelement("div")}} 要素を使用するようになりました。これは、他の現行ブラウザーに Firefox を合わせるためです ({{bug(1297414)}})。詳しくは <a href="/en-US/docs/Web/Guide/HTML/Editable_content#Differences_in_markup_generation">Differences in markup generation</a> をご覧ください。</li>
+ <li>{{htmlattrxref("contenteditable")}} を <code>true</code> に設定した要素で、テキストの別の行を分けるために {{htmlelement("div")}} 要素を使用するようになりました。これは、他の現行ブラウザーに Firefox を合わせるためです ({{bug(1297414)}})。詳しくは <a href="/ja/docs/Web/Guide/HTML/Editable_content#Differences_in_markup_generation">Differences in markup generation</a> をご覧ください。</li>
  <li>Nightly で、<code>dom.forms.datetime</code> をデフォルトで有効にしました ({{bug(1366188)}})。</li>
 </ul>
 
@@ -76,7 +76,7 @@ translation_of: Mozilla/Firefox/Releases/55
 <ul>
  <li>{{domxref("Window")}} の {{domxref("Window.scrollX", "scrollX")}} および {{domxref("Window.scrollY", "scrollY")}} プロパティ (別名である {{domxref("Window.pageXOffset", "pageXOffset")}} および {{domxref("Window.pageYOffset", "pageYOffset")}} も同様) を、サブピクセル精度に更新しました。戻り値が整数ではなく、サブピクセル精度のディスプレイでスクロール位置をより正確に示す浮動小数点数値になります ({{bug(1151421)}})。必要に応じて、整数に変換する {{jsxref("Math.round()")}} を使用できます。</li>
  <li>{{domxref("MediaQueryList")}} (および他の関連機能) を、最新の仕様に合わせて更新しました。{{bug("1354441")}}、{{domxref("MediaQueryList")}}、{{domxref("MediaQueryListEvent")}} をご覧ください。</li>
- <li>リストの値を変更する {{domxref("DOMTokenList")}} のメソッドが、自動的にホワイトスペースの切りつめと重複する値の削除を行うようになりました ({{bug("869788")}}、<a href="/en-us/docs/Web/API/DOMTokenList#Trimming_of_whitespace_and_removal_of_duplicates">Trimming of whitespace and removal of duplicates</a> をご覧ください)。</li>
+ <li>リストの値を変更する {{domxref("DOMTokenList")}} のメソッドが、自動的にホワイトスペースの切りつめと重複する値の削除を行うようになりました ({{bug("869788")}}、<a href="/ja/docs/Web/API/DOMTokenList#Trimming_of_whitespace_and_removal_of_duplicates">Trimming of whitespace and removal of duplicates</a> をご覧ください)。</li>
  <li>{{domxref("HTMLInputElement")}} の <code>maxLength</code> プロパティを、同等の HTML が生成された後に JavaScript で動的に変更することが可能になりました ({{bug(1352799)}})。</li>
  <li>{{domxref("URL.URL", "URL()")}} コンストラクターの base (第 2 引数) が {{domxref("DOMString")}} を受け入れないようになりました。{{domxref("USVString")}} のみ受け入れます。既存の {{domxref("URL")}} オブジェクトを base に使用することは可能であり、それ自体をオブジェクトの {{domxref("DOMString.href","href")}} 属性に文字列化します ({{bug(1368950)}})。</li>
 </ul>
@@ -92,7 +92,7 @@ translation_of: Mozilla/Firefox/Releases/55
 <h4 id="Selection_API" name="Selection_API">Selection API</h4>
 
 <ul>
- <li>内部で選択範囲が動いたときに editing hosts がどのようにフォーカスを得るかについて、他のブラウザーへ合わせるために <a href="/ja/docs/Web/API/Selection_API">Selection API</a> を更新しました ({{bug("1318312")}})。詳しくは <a href="/en-US/docs/Web/API/Selection#Behavior_of_Selection_API_in_terms_of_editing_host_focus_changes">Behavior of Selection API in terms of editing host focus changes</a> をご覧ください。</li>
+ <li>内部で選択範囲が動いたときに editing hosts がどのようにフォーカスを得るかについて、他のブラウザーへ合わせるために <a href="/ja/docs/Web/API/Selection_API">Selection API</a> を更新しました ({{bug("1318312")}})。詳しくは <a href="/ja/docs/Web/API/Selection#Behavior_of_Selection_API_in_terms_of_editing_host_focus_changes">Behavior of Selection API in terms of editing host focus changes</a> をご覧ください。</li>
  <li>最近の仕様の変更に合致するよう、{{domxref("Selection")}} API を更新しました ({{bug(1359371)}}):
   <ul>
    <li>{{domxref("Selection.collapse", "collapse()")}} および {{domxref("Selection.extend", "extend()")}} メソッドの <code>offset</code> 引数を省略可能にしました。</li>
@@ -109,7 +109,7 @@ translation_of: Mozilla/Firefox/Releases/55
 
 <ul>
  <li>Worker および Shared Worker を、識別用の <code>name</code> プロパティをつけて作成できるようになりました。{{domxref("Worker.Worker", "Worker()")}} および {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} コンストラクター、{{domxref("DedicatedWorkerGlobalScope")}} および {{domxref("SharedWorkerGlobalScope")}} インターフェイスをご覧ください ({{bug(1364297)}})。</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout","setTimeout()")}} および {{domxref("WindowOrWorkerGlobalScope.setInterval","setInterval()")}} が、バックグラウンドのタブでトラッキングスクリプトに対して最小間隔の調整を課すようになりました。<a href="/en-us/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Throttling_of_tracking_timeout_scripts">Throttling of tracking timeout scripts</a> をご覧ください ({{bug(1355311)}})。</li>
+ <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout","setTimeout()")}} および {{domxref("WindowOrWorkerGlobalScope.setInterval","setInterval()")}} が、バックグラウンドのタブでトラッキングスクリプトに対して最小間隔の調整を課すようになりました。<a href="/ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Throttling_of_tracking_timeout_scripts">Throttling of tracking timeout scripts</a> をご覧ください ({{bug(1355311)}})。</li>
 </ul>
 
 <h4 id="Service_WorkersPush" name="Service_WorkersPush">Service Workers/Push</h4>
@@ -178,9 +178,9 @@ translation_of: Mozilla/Firefox/Releases/55
 <h3 id="HTML_2" name="HTML_2">HTML</h3>
 
 <ul>
- <li><code>xml:base</code> 属性を、{{htmlattrxref("style")}} 属性内に現れるパスのベース URL として使用できなくなりました。 例えば <code>&lt;div xml:base="https://example.com/" style="background:url(picture.jpg)"&gt;&lt;/div&gt;</code> のような使い方です ({{bug(1350521)}})。<a href="https://www.fxsitecompat.com/ja/docs/2017/xml-base-for-style-attribute-has-been-disabled/">style 属性向け xml:base が無効化されました</a> もご覧ください。</li>
+ <li><code>xml:base</code> 属性を、{{htmlattrxref("style")}} 属性内に現れるパスのベース URL として使用できなくなりました。 例えば <code>&lt;div xml:base="https://example.com/" style="background:url(picture.jpg)"&gt;&lt;/div&gt;</code> のような使い方です ({{bug(1350521)}})。style 属性向け xml:base が無効化されました。</li>
  <li>他のブラウザーがサポートしていないため、Firefox 55 から content ドキュメントでは {{htmlelement("style")}} 要素の {{htmlattrxref("scoped","style")}} 属性を設定 (<code>layout.css.scoped-style.enabled</code>) で無効化しました。</li>
- <li>{{htmlelement("meta")}} 要素の {{htmlattrxref("http-equiv","meta")}} 属性で、不明瞭な値である <code>MSThemeCompatible</code> のサポートを Gecko から削除しました。他にサポートする現行ブラウザーがなく、また <a href="https://www.fxsitecompat.com/ja/docs/2017/checkboxes-and-radio-buttons-are-not-displayed-when-msthemecompatible-is-no/">互換性の問題が発生しました</a> ({{bug("966240")}})。</li>
+ <li>{{htmlelement("meta")}} 要素の {{htmlattrxref("http-equiv","meta")}} 属性で、不明瞭な値である <code>MSThemeCompatible</code> のサポートを Gecko から削除しました。他にサポートする現行ブラウザーがなく、また互換性の問題が発生していました ({{bug("966240")}})。</li>
 </ul>
 
 <h3 id="CSS_2" name="CSS_2">CSS</h3>
@@ -216,14 +216,13 @@ translation_of: Mozilla/Firefox/Releases/55
  <li><a href="/ja/Add-ons/WebExtensions/API/proxy">proxy API</a></li>
  <li><a href="/ja/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides">chrome_settings_overrides キーで、ブラウザーのホームページをオーバーライドできます。</a></li>
  <li>browser_style プロパティで、<a href="/ja/Add-ons/WebExtensions/manifest.json/browser_action">ブラウザーアクションポップアップ</a>、<a href="/ja/Add-ons/WebExtensions/manifest.json/sidebar_action">サイドバー</a>、<a href="/ja/Add-ons/WebExtensions/manifest.json/options_ui">オプションページ</a> にブラウザーライクなスタイルを適用できます。</li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/permissions">permissions API</a></li>
+ <li><a href="/ja/Add-ons/WebExtensions/API/permissions">permissions API</a></li>
 </ul>
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 
 <ul>
  <li><a href="https://www.mozilla.jp/firefox/55.0/releasenotes/">Firefox 55.0 リリースノート</a></li>
- <li><a href="https://www.fxsitecompat.com/ja/versions/55/">Firefox 55 サイト互換性情報</a></li>
 </ul>
 
 <h2 id="Older_versions" name="Older_versions">過去のバージョン</h2>

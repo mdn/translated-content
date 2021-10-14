@@ -11,7 +11,7 @@ translation_of: Web/API/Window/requestIdleCallback
 ---
 <p>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</p>
 
-<p><strong><code>window.requestIdleCallback()</code></strong>方法将在浏览器的空闲时段内调用的函数排队。这使开发者能够在主事件循环上执行后台和低优先级工作，而不会影响延迟关键事件，如动画和输入响应。函数一般会按先进先调用的顺序执行，然而，如果回调函数指定了执行超时时间<code>timeout</code>，则有可能为了在超时前执行函数而打乱执行顺序。</p>
+<p><strong><code>window.requestIdleCallback()</code></strong>方法插入一个函数，这个函数将在浏览器空闲时期被调用。这使开发者能够在主事件循环上执行后台和低优先级工作，而不会影响延迟关键事件，如动画和输入响应。函数一般会按先进先调用的顺序执行，然而，如果回调函数指定了执行超时时间<code>timeout</code>，则有可能为了在超时前执行函数而打乱执行顺序。</p>
 
 <p>你可以在<span title="idle">空闲</span>回调函数中调用<code><strong>requestIdleCallback()</strong></code>，以便在下一次通过事件循环之前调度另一个回调。</p>
 
@@ -35,14 +35,14 @@ translation_of: Web/API/Window/requestIdleCallback
  <dt><code>options</code> {{optional_inline}}</dt>
  <dd>包括可选的配置参数。具有如下属性：
  <ul>
-  <li><code>timeout</code>：如果指定了timeout并具有一个正值，并且尚未通过超时毫秒数调用回调，那么回调会在下一次空闲时期被强制执行，尽管这样很可能会对性能造成负面影响。</li>
+  <li><code>timeout</code>： 如果指定了timeout，并且有一个正值，而回调在timeout毫秒过后还没有被调用，那么回调任务将放入事件循环中排队，即使这样做有可能对性能产生负面影响。</li>
  </ul>
  </dd>
 </dl>
 
 <h2 id="Example" name="Example">Example</h2>
 
-<p>See our <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API#Example">complete example</a> in the article <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling of Background Tasks API</a>.</p>
+<p>See our <a href="/zh-CN/docs/Web/API/Background_Tasks_API#Example">complete example</a> in the article <a href="/zh-CN/docs/Web/API/Background_Tasks_API">Cooperative Scheduling of Background Tasks API</a>.</p>
 
 <h2 id="规范">规范</h2>
 

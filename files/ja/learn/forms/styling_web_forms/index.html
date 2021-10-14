@@ -14,14 +14,14 @@ original_slug: Learn/Forms/Styling_HTML_forms
 ---
 <p>{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}</p>
 
-<p class="summary">前の記事ではウェブフォームを構築するのに必要な HTML のすべてを見てきました。この記事ではフォームコントロールにスタイル設定する <a href="https://wiki.developer.mozilla.org/ja/docs/CSS" title="/ja/docs/CSS">CSS</a> の使い方に進みます。これは歴史的に難しかったです — フォームコントロールは大きく変わり CSS を使ったフォームのカスタマイズは簡単になりました— しかし古いブラウザーが引退してモダンブラウザーが多くの機能を与えるため、より簡単になりました。</p>
+<p class="summary">前の記事ではウェブフォームを構築するのに必要な HTML のすべてを見てきました。この記事ではフォームコントロールにスタイル設定する <a href="/ja/docs/CSS" title="/ja/docs/CSS">CSS</a> の使い方に進みます。これは歴史的に難しかったです — フォームコントロールは大きく変わり CSS を使ったフォームのカスタマイズは簡単になりました— しかし古いブラウザーが引退してモダンブラウザーが多くの機能を与えるため、より簡単になりました。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">前提条件:</th>
    <td>
-    <p>基本的なコンピューターリテラシーと、<a href="https://wiki.developer.mozilla.org/ja/docs/Learn/HTML/Introduction_to_HTML">HTML</a> と <a href="https://wiki.developer.mozilla.org/ja/docs/Learn/CSS/First_steps">CSS</a> の基本的な理解。</p>
+    <p>基本的なコンピューターリテラシーと、<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML</a> と <a href="/ja/docs/Learn/CSS/First_steps">CSS</a> の基本的な理解。</p>
    </td>
   </tr>
   <tr>
@@ -33,7 +33,7 @@ original_slug: Learn/Forms/Styling_HTML_forms
 
 <h2 id="Why_is_it_so_hard_to_style_form_widgets_with_CSS" name="Why_is_it_so_hard_to_style_form_widgets_with_CSS">なぜ CSS によるフォームウィジェットへのスタイル設定は困難であるか?</h2>
 
-<p>1995年頃に <a href="http://www.ietf.org/rfc/rfc1866.txt" rel="extrenal" title="http://www.ietf.org/rfc/rfc1866.txt">HTML 2 仕様</a>へフォームコントロールが追加されました。CSS は 1996年までリリースされず、その後も少しのブラウザーによって十分サポートされませんでした。ブラウザーはフォームコントロールの管理や表示について下層の OS に頼ることを選択しました。</p>
+<p>1995年頃に <a href="http://www.ietf.org/rfc/rfc1866.txt" rel="extrenal">HTML 2 仕様</a>へフォームコントロールが追加されました。CSS は 1996年までリリースされず、その後も少しのブラウザーによって十分サポートされませんでした。ブラウザーはフォームコントロールの管理や表示について下層の OS に頼ることを選択しました。</p>
 
 <p>CSS が HTML のスタイル設定できるようになってからも、ユーザーは各プラットフォームの視覚的な外見に慣れていましたので、ブラウザーベンダーはフォームコントロールをスタイル付け可能にすることに乗り気ではありませんでした。しかしこれは変わりました。ウェブサイトのオーナーはこれまでよりも、サイト全体に適するスタイルを欲しており、ウェブプラットフォームはこれを実現可能にしました。</p>
 
@@ -50,7 +50,7 @@ original_slug: Learn/Forms/Styling_HTML_forms
 <ol>
  <li>{{HTMLElement("form")}}</li>
  <li>{{HTMLElement("fieldset")}} と {{HTMLElement("legend")}}</li>
- <li>単一行のテキスト {{HTMLElement("input")}} (例 text, url, email...のタイプ) <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/search">&lt;input type="search"&gt;</a></code>を除く</li>
+ <li>単一行のテキスト {{HTMLElement("input")}} (例 text, url, email...のタイプ) <code><a href="/ja/docs/Web/HTML/Element/input/search">&lt;input type="search"&gt;</a></code>を除く</li>
  <li>複数行の {{HTMLElement("textarea")}}</li>
  <li>ボタン ({{HTMLElement("input")}} と {{HTMLElement("button")}}の両方)</li>
  <li>{{HTMLElement("label")}}</li>
@@ -63,7 +63,7 @@ original_slug: Learn/Forms/Styling_HTML_forms
 
 <ol>
  <li>チェックボックスとラジオボタン</li>
- <li><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/search">&lt;input type="search"&gt;</a></code></li>
+ <li><code><a href="/ja/docs/Web/HTML/Element/input/search">&lt;input type="search"&gt;</a></code></li>
 </ol>
 
 <p>これら特殊なケースをどのように扱うかについては、<a href="/ja/docs/Advanced_styling_for_HTML_forms" title="Advanced_styling_for_HTML_forms">HTML フォームへの高度なスタイル設定</a>の記事で見ていきます。</p>
@@ -73,10 +73,10 @@ original_slug: Learn/Forms/Styling_HTML_forms
 <p>一部の要素は、CSS でスタイルを設定できません。たとえば次のもの:</p>
 
 <ul>
- <li><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/color">&lt;input type="color"&gt;</a></code></li>
- <li><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code>のような日付関連コントロール</li>
- <li><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/range">&lt;input type="range"&gt;</a></code></li>
- <li><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/file">&lt;input type="file"&gt;</a></code></li>
+ <li><code><a href="/ja/docs/Web/HTML/Element/input/color">&lt;input type="color"&gt;</a></code></li>
+ <li><code><a href="/ja/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code>のような日付関連コントロール</li>
+ <li><code><a href="/ja/docs/Web/HTML/Element/input/range">&lt;input type="range"&gt;</a></code></li>
+ <li><code><a href="/ja/docs/Web/HTML/Element/input/file">&lt;input type="file"&gt;</a></code></li>
  <li>ドロップダウンウィジェットの作成に含まれる要素、{{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("datalist")}}を含む。</li>
  <li>{{HTMLElement("progress")}} と {{HTMLElement("meter")}}</li>
 </ul>
@@ -95,7 +95,7 @@ original_slug: Learn/Forms/Styling_HTML_forms
 
 <p>CSS での<a href="/ja/docs/HTML/Forms/Styling_HTML_forms#The_good" title="HTML/Forms/Styling_HTML_forms#The_good">スタイル設定が容易な要素</a>は、振る舞いが他の HTML 要素とほとんど同じであるため、問題に直面することはないでしょう。ただし、ブラウザー間でユーザーエージェントのスタイルシートが若干矛盾するかもしれませんので、より簡単にスタイルを設定できるようにするためのトリックがあります。</p>
 
-<p>上記で述べた基本的な CSS ツールと同じく、いくつかのセレクターが与えられます — UI 疑似クラス — これにより現在の UI の状態に基づくスタイル設定ができます。これは次の記事である、<a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/UI_pseudo-classes">UI 疑似クラス</a>で扱います。</p>
+<p>上記で述べた基本的な CSS ツールと同じく、いくつかのセレクターが与えられます — UI 疑似クラス — これにより現在の UI の状態に基づくスタイル設定ができます。これは次の記事である、<a href="/ja/docs/Learn/Forms/UI_pseudo-classes">UI 疑似クラス</a>で扱います。</p>
 
 <p>この記事の最後で基本的なフォームコントロールのスタイル設定と配置について理解できる実例を詳しく見ていきます。しかしその前に、知っておくと良いフォームスタイル設定の特定の面をいくつか述べておきます。</p>
 
@@ -205,9 +205,9 @@ legend {
 <p>ここからがおもしろいところです! コードを書き始める前に、ここでは 3 つの追加要素が必要です:</p>
 
 <ol>
- <li>はがきの<a href="https://developer.mozilla.org/files/4151/background.jpg" title="The postcard background">背景</a> — この画像をダウンロードして作業している HTML ファイルと同じディレクトリーに保存します。</li>
- <li>タイプライター風フォント: <a href="http://www.fontsquirrel.com/fonts/Secret-Typewriter" rel="external" title="http://www.fontsquirrel.com/fonts/Secret-Typewriter">fontsquirrel.com の "Secret Typewriter" </a>  — TTF ファイルを上記と同じディレクトリーにダウンロードします。</li>
- <li>手書き風フォント: <a href="http://www.fontsquirrel.com/fonts/Journal" rel="external" title="http://www.fontsquirrel.com/fonts/Journal">fontsquirrel.com の "Journal" </a> — TTF ファイルを上記と同じディレクトリーにダウンロードします。</li>
+ <li>はがきの<a href="/files/4151/background.jpg" title="The postcard background">背景</a> — この画像をダウンロードして作業している HTML ファイルと同じディレクトリーに保存します。</li>
+ <li>タイプライター風フォント: <a href="http://www.fontsquirrel.com/fonts/Secret-Typewriter" rel="external">fontsquirrel.com の "Secret Typewriter" </a>  — TTF ファイルを上記と同じディレクトリーにダウンロードします。</li>
+ <li>手書き風フォント: <a href="http://www.fontsquirrel.com/fonts/Journal" rel="external">fontsquirrel.com の "Journal" </a> — TTF ファイルを上記と同じディレクトリーにダウンロードします。</li>
 </ol>
 
 <p>始める前にフォントの処理が必要です:</p>
@@ -216,7 +216,7 @@ legend {
  <li>fontsquirrel <a href="https://www.fontsquirrel.com/tools/webfont-generator">Webfont Generator</a> に移動します。</li>
  <li>フォームを使って、両方のフォントファイルをアップロードして webfont キットを生成します。キットをコンピューターにダウンロードします。</li>
  <li>zip ファイルを展開します。</li>
- <li>展開した中身には 2 つの <code>.woff</code> ファイルと 2 つの <code>.woff2</code> ファイルがあります。このファイルを、前と同じ fonts というディレクトリーにコピーします。各フォントの 2 つのファイルはブラウザー互換性を最大化するのに使います; より詳しい情報は <a href="https://developer.mozilla.org/ja/docs/Learn/CSS/Styling_text/Web_fonts">Web fonts</a> の記事を見てください。</li>
+ <li>展開した中身には 2 つの <code>.woff</code> ファイルと 2 つの <code>.woff2</code> ファイルがあります。このファイルを、前と同じ fonts というディレクトリーにコピーします。各フォントの 2 つのファイルはブラウザー互換性を最大化するのに使います; より詳しい情報は <a href="/ja/docs/Learn/CSS/Styling_text/Web_fonts">Web fonts</a> の記事を見てください。</li>
 </ol>
 
 <h3 id="The_CSS" name="The_CSS">CSS</h3>
@@ -266,7 +266,7 @@ form {
   grid-template-rows    : 10em 1em 1em 1em;
 }</pre>
 
-<p>注意として、フォームをレイアウトするのに <a href="https://wiki.developer.mozilla.org/ja/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a> と <a href="https://wiki.developer.mozilla.org/ja/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a> を使っています。これで、タイトルやフォーム要素といった各要素を配置できます:</p>
+<p>注意として、フォームをレイアウトするのに <a href="/ja/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a> と <a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a> を使っています。これで、タイトルやフォーム要素といった各要素を配置できます:</p>
 
 <pre class="brush: css notranslate">h1 {
   font : 1em "typewriter", monospace;
@@ -364,7 +364,7 @@ button:focus {
 
 <h2 id="スキルを試しましょう！​"><strong>スキルを試しましょう！​</strong></h2>
 
-<p>この記事の終わりまで到達しました。しかし、肝要な点を思い起こせるでしょうか？次に進む前に、テストによって知識の定着を試すことができます——<a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Forms/Test_your_skills:_Styling_basics">スキルテスト：スタイリングの基本</a>をご覧ください。</p>
+<p>この記事の終わりまで到達しました。しかし、肝要な点を思い起こせるでしょうか？次に進む前に、テストによって知識の定着を試すことができます——<a href="/ja/docs/Learn/Forms/Test_your_skills:_Styling_basics">スキルテスト：スタイリングの基本</a>をご覧ください。</p>
 
 <h2 id="Conclusion" name="Conclusion">まとめ</h2>
 
@@ -374,27 +374,27 @@ button:focus {
 
 <h2 id="In_this_module" name="In_this_module">このモジュール</h2>
 
-<h2 id="In_this_module" name="In_this_module"><a class="button section-edit only-icon" href="https://wiki.developer.mozilla.org/ja/docs/Learn/HTML/Forms/Other_form_controls$edit#In_this_module" rel="nofollow, noindex"><span>E</span></a></h2>
+<h2 id="In_this_module" name="In_this_module"><a class="button section-edit only-icon" href="/ja/docs/Learn/HTML/Forms/Other_form_controls$edit#In_this_module" rel="nofollow, noindex"><span>E</span></a></h2>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Your_first_form">初めてのフォーム</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/How_to_structure_a_web_form">フォームの構築方法</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Basic_native_form_controls">ネイティブフォームウィジェット</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/HTML5_input_types" rel="noopener">The HTML5 input types</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Other_form_controls" rel="noopener">Other form controls</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Styling_web_forms">フォームへのスタイル設定</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Advanced_form_styling">フォームへの高度なスタイル設定</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/UI_pseudo-classes" rel="noopener">UI pseudo-classes</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Form_validation">フォームデータの検証</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">フォームデータの送信</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Your_first_form">初めてのフォーム</a></li>
+ <li><a href="/ja/docs/Learn/Forms/How_to_structure_a_web_form">フォームの構築方法</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Basic_native_form_controls">ネイティブフォームウィジェット</a></li>
+ <li><a href="/ja/docs/Learn/Forms/HTML5_input_types" rel="noopener">The HTML5 input types</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Other_form_controls" rel="noopener">Other form controls</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Styling_web_forms">フォームへのスタイル設定</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Advanced_form_styling">フォームへの高度なスタイル設定</a></li>
+ <li><a href="/ja/docs/Learn/Forms/UI_pseudo-classes" rel="noopener">UI pseudo-classes</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Form_validation">フォームデータの検証</a></li>
+ <li><a href="/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">フォームデータの送信</a></li>
 </ul>
 
 <h3 class="highlight-spanned" id="Advanced_Topics" name="Advanced_Topics"><span class="highlight-span">上級トピック</span></h3>
 
-<h3 class="highlight-spanned" id="Advanced_Topics" name="Advanced_Topics"><a class="local-anchor" href="https://wiki.developer.mozilla.org/ja/docs/Learn/HTML/Forms/Other_form_controls#Advanced_Topics"><span>セクション</span></a></h3>
+<h3 class="highlight-spanned" id="Advanced_Topics" name="Advanced_Topics"><a class="local-anchor" href="/ja/docs/Learn/HTML/Forms/Other_form_controls#Advanced_Topics"><span>セクション</span></a></h3>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/How_to_build_custom_form_controls" rel="noopener">カスタムフォームコントロールの作成方法</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Sending_forms_through_JavaScript" rel="noopener">JavaScript によるフォームの送信</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets" rel="noopener">フォームウィジェット向けプロパティ実装状況一覧</a></li>
+ <li><a href="/ja/docs/Learn/Forms/How_to_build_custom_form_controls" rel="noopener">カスタムフォームコントロールの作成方法</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Sending_forms_through_JavaScript" rel="noopener">JavaScript によるフォームの送信</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets" rel="noopener">フォームウィジェット向けプロパティ実装状況一覧</a></li>
 </ul>

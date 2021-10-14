@@ -10,14 +10,12 @@ translation_of: Web/HTML/Element/input/number
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">Les éléments {{HTMLElement("input")}} dont l'attribut <code>type</code> vaut <code><strong>number</strong></code> permettent à un utilisateur de saisir des nombres dans un formulaires. De tels contrôles incluent des mécanismes de validation natifs afin de rejeter les valeurs non-numériques.</span> Le navigateur peut agrémenter le contrôle avec des flèches afin d'incrémenter/décrémenter la valeur grâce à la souris ou avec le doigt.</p>
+<p>Les éléments {{HTMLElement("input")}} dont l'attribut <code>type</code> vaut <code><strong>number</strong></code> permettent à un utilisateur de saisir des nombres dans un formulaires. De tels contrôles incluent des mécanismes de validation natifs afin de rejeter les valeurs non-numériques. Le navigateur peut agrémenter le contrôle avec des flèches afin d'incrémenter/décrémenter la valeur grâce à la souris ou avec le doigt.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-number.html", "tabbed-shorter")}}</div>
 
-<div class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</div>
-
 <div class="note">
-<p><strong>Note </strong>: Si un navigateur ne prend pas en charge le type <code>number</code>, le contrôle affiché sera le contrôle standard pour la saisie d'un texte (cf. <code><a href="/fr/docs/Web/HTML/Element/input/text">text</a></code>).</p>
+<p><strong>Note :</strong> Si un navigateur ne prend pas en charge le type <code>number</code>, le contrôle affiché sera le contrôle standard pour la saisie d'un texte (cf. <code><a href="/fr/docs/Web/HTML/Element/input/text">text</a></code>).</p>
 </div>
 
 <h2 id="Valeur">Valeur</h2>
@@ -81,14 +79,12 @@ translation_of: Web/HTML/Element/input/number
 
 <h3 id="htmlattrdef(step)">{{htmlattrdef("step")}}</h3>
 
-<div id="step-include">
 <p>L'attribut <code>step</code> est un nombre qui définit la granularité de la valeur ou le mot-clé <code>any</code>. Seule les valeurs qui sont des multiples de cet attribut depuis le seuil <code>{{anch("min")}}</code> sont valides.</p>
 
 <p>Lorsque la chaîne de caractères <code>any</code> est utilisée, cela indique qu'aucun incrément spécifique n'est défini et que toute valeur (comprise entre <code>{{anch("min")}}</code> et <code>{{anch("max")}}</code>) est valide.</p>
 
 <div class="note">
 <p><strong>Note :</strong> Lorsque les données saisies par l'utilisateur ne correspondent pas à l'incrément indiqué, l'agent utilisateur pourra arrondir à la valeur valide la plus proche (en choisissant les nombres les plus grands lorsque deux sont équidistants.</p>
-</div>
 </div>
 
 <p>Pour les champs <code>number</code>, l'incrément par défaut est 1 et ne permet donc que de saisir des entiers si la valeur de base est entière. Ainsi, si on a <code>min</code> qui vaut -10 et <code>value</code> qui vaut 1.5, si on a <code>step</code> qui vaut 1, seules les valeurs 1.5, 2.5, 3.5,... -0.5, -1.5, -2.5,... seront valides.</p>
@@ -98,16 +94,14 @@ translation_of: Web/HTML/Element/input/number
 <p>Les éléments <code>&lt;input type="number"&gt;</code> simplifient la saisie de valeurs numériques dans un formulaire. Lorsqu'on crée un tel contrôle, des mécanismes de validation automatiques sont appliqués afin de vérifier que le texte saisi est bien un nombre. Généralement un contrôle de saisie numérique incluera des boutons avec des curseurs pour augmenter/réduire la valeur.</p>
 
 <div class="warning">
-<p><strong>Attention !</strong> On notera qu'un utilisateur peut toujours saisir des valeurs qui ne sont pas numériques dans de tels champs (par exemple avec un navigateur de bureau). Toutefois, ce comportement semble différer selon les navigateurs (voir {{bug(1398528)}}). Les valeurs non-numériques seront considérées comme invalide (cf. {{anch("Validation")}} ci-après).</p>
+<p><strong>Attention :</strong> On notera qu'un utilisateur peut toujours saisir des valeurs qui ne sont pas numériques dans de tels champs (par exemple avec un navigateur de bureau). Toutefois, ce comportement semble différer selon les navigateurs (voir {{bug(1398528)}}). Les valeurs non-numériques seront considérées comme invalide (cf. {{anch("Validation")}} ci-après).</p>
 </div>
 
 <div class="note">
-<p><strong>Note </strong>: Il est important de rappeler qu'un utilisateur peut tout à fait modifier le code HTML qui est utilisé. Le site ne doit donc pas se reposer sur les mécanismes de validation qui existent côté client pour considérer qu'une valeur est saine. Pour des raisons de contrôle et de sécurité, les valeurs envoyées via un formulaire doivent être vérifiées côté serveur.</p>
+<p><strong>Note :</strong> Il est important de rappeler qu'un utilisateur peut tout à fait modifier le code HTML qui est utilisé. Le site ne doit donc pas se reposer sur les mécanismes de validation qui existent côté client pour considérer qu'une valeur est saine. Pour des raisons de contrôle et de sécurité, les valeurs envoyées via un formulaire doivent être vérifiées côté serveur.</p>
 </div>
 
 <p>De plus, les navigateurs mobiles peuvent adapter leur ergonomie en affichant un clavier adapté à la saisie de valeur numérique lorsque l'utilisateur appuie sur un tel contrôle. Voici le résultat qu'on obtient par exemple avec Firefox pour Android :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14963/number-keyboard-fxa.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h3 id="Un_contrôle_simple">Un contrôle simple</h3>
 
@@ -121,7 +115,7 @@ translation_of: Web/HTML/Element/input/number
 <p>Un contrôle de saisie numérique considère que la valeur est valide si elle est vide ou quand un nombre est saisi. Dans les autres cas, la valeur est considérée invalide. Si l'attribut {{htmlattrxref("required", "input")}} est utilisé, la valeur vide n'est plus considérée valide.</p>
 
 <div class="note">
-<p><strong>Note </strong>: N'importe quel nombre est valide tant que c'est un nombre qui peut être représenté <a href="https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number">comme un nombre à virgule flottante</a> (autrement dit, un nombre qui n'est pas {{jsxref("NaN")}} ou {{jsxref("Infinity")}}).</p>
+<p><strong>Note :</strong> N'importe quel nombre est valide tant que c'est un nombre qui peut être représenté <a href="https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number">comme un nombre à virgule flottante</a> (autrement dit, un nombre qui n'est pas {{jsxref("NaN")}} ou {{jsxref("Infinity")}}).</p>
 </div>
 
 <h3 id="Indicateurs_de_saisie_-_placeholders">Indicateurs de saisie - <em>placeholders</em></h3>
@@ -249,7 +243,7 @@ input:valid+span:after {
 <p>Ici, on a utilisé les pseudo-classes {{cssxref(":invalid")}} et {{cssxref(":valid")}} afin d'afficher une icône selon le cas, à côté de l'élément {{htmlelement("span")}} ajdacent. On utilise un élément <code>&lt;span&gt;</code> séparé pour plus de flexibilité : certains navigateurs n'affichent pas le contenu généré par les pseudo-classes pour certains types de contrôle (cf. <a href="/fr/docs/Web/HTML/Element/input/date#Validation"><code>&lt;input type="date"&gt;</code></a>).</p>
 
 <div class="warning">
-<p><strong>Important </strong>: la validation des données des formulaires par le navigateur (côté client) doit toujours être complétée d'une validation des données côté serveur (l'utilisateur peut toujours modifier le HTML et envoyer les données au serveur).</p>
+<p><strong>Attention :</strong> la validation des données des formulaires par le navigateur (côté client) doit toujours être complétée d'une validation des données côté serveur (l'utilisateur peut toujours modifier le HTML et envoyer les données au serveur).</p>
 </div>
 
 <h3 id="Utilisation_d'un_motif_de_validation">Utilisation d'un motif de validation</h3>

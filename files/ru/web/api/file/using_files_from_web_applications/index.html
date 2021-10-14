@@ -21,14 +21,14 @@ translation_of: Web/API/File/Using_files_from_web_applications
 
 <pre class="brush: js notranslate">const selectedFile = document.getElementById('input').files[0];</pre>
 
-<p>Обращение к одному выбранному файлу через <a href="http://jquery.com/" title="http://jquery.com/">jQuery</a>:</p>
+<p>Обращение к одному выбранному файлу через <a href="http://jquery.com/">jQuery</a>:</p>
 
 <pre class="brush: js notranslate">var selectedFile = $('#input').get(0).files[0];
 
 var selectedFile = $('#input')[0].files[0];</pre>
 
 <div class="note">
-<p>Если вы получили ошибку "files is undefined", значит вы выбрали не один HTML-элемент, а список элементов, который возвращает jQuery. Нужно уточнить, у какого именно элемента необходимо вызвать метод "files"</p>
+<p>Ошибка "files is undefined" означает что был выбран не один HTML-элемент, а список элементов, возвращаемый jQuery. Необходимо уточнить, у какого именно элемента требуется вызвать метод "files"</p>
 </div>
 
 <h3 id="Доступ_к_выбранным_файлам_через_событие_change">Доступ к выбранным файлам через событие change</h3>
@@ -455,7 +455,7 @@ window.URL.revokeObjectURL(obj_url);</pre>
 
 <ul>
  <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#file-upload-state-%28type=file%29" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected">File upload state</a> (Рабочие материалы HTML 5)</li>
- <li><a href="http://www.w3.org/TR/FileAPI/" title="http://www.w3.org/TR/FileAPI/">File API</a></li>
+ <li><a href="http://www.w3.org/TR/FileAPI/">File API</a></li>
 </ul>
 
 <h2 id="Дополнительные_ссылки">Дополнительные ссылки</h2>
@@ -468,5 +468,5 @@ window.URL.revokeObjectURL(obj_url);</pre>
  <li>{{DOMxRef("XMLHttpRequest")}}</li>
  <li><a href="/en/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="En/Using XMLHttpRequest">Using XMLHttpRequest</a></li>
  <li><a href="/en/Extensions/Using_the_DOM_File_API_in_chrome_code" title="en/Extensions/Using the DOM File API in chrome code">Using the DOM File API in chrome code</a></li>
- <li><a class="external" href="http://www.jquery.com/" title="http://www.jquery.com/">jQuery</a> JavaScript library</li>
+ <li><a class="external" href="http://www.jquery.com/">jQuery</a> JavaScript library</li>
 </ul>

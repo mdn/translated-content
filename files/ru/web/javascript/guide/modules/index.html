@@ -9,15 +9,15 @@ translation_of: Web/JavaScript/Guide/Modules
 
 <h2 id="Модули_история_вопроса">Модули: история вопроса</h2>
 
-<p>Сначала программы на JavaSctipt были небольшими — в прежние времена они использовались для изолированных задач, добавляя при необходимости немного интерактивности веб-страница, так что большие скрипты в основном не требовались. Прошло несколько лет, и вот уже мы видим полномасштабные приложения, работающие в броузерах и содержащие массу кода на JavaScript; кроме того, язык стал использоваться и в других контекстах (например, <a href="/en-US/docs/Glossary/Node.js">Node.js</a>).</p>
+<p>Сначала программы на JavaScript были небольшими — в прежние времена они использовались для изолированных задач, добавляя при необходимости немного интерактивности веб-страницам, так что большие скрипты в основном не требовались. Прошло несколько лет, и вот мы уже видим полномасштабные приложения, работающие в браузерах и содержащие массу кода на JavaScript; кроме того, язык стал использоваться и в других контекстах (например, <a href="/en-US/docs/Glossary/Node.js">Node.js</a>).</p>
 
-<p>Таким образом, в последние годы появились причины на то, чтобы подумать о механизмах деления программ на JavaScript на отдельные модули, которые можно импортировать по мере нужды. Node.js включала такую возможность уже давно, кроме того, некоторые библиотеки и фреймворки JavaSctipt разрешали использование модулей (например, <a href="https://en.wikipedia.org/wiki/CommonJS">CommonJS</a> и основанные на <a href="https://github.com/amdjs/amdjs-api/blob/master/AMD.md">AMD</a> системы модулей типа <a href="https://requirejs.org/">RequireJS</a>, а позднее также <a href="https://webpack.github.io/">Webpack</a> и <a href="https://babeljs.io/">Babel</a>).</p>
+<p>Таким образом, в последние годы появились причины на то, чтобы подумать о механизмах деления программ на JavaScript на отдельные модули, которые можно импортировать по мере необходимости. Node.js включал такую возможность уже давно, кроме того, некоторые библиотеки и фреймворки JavaScript разрешали использование модулей (например, <a href="https://en.wikipedia.org/wiki/CommonJS">CommonJS</a> и основанные на <a href="https://github.com/amdjs/amdjs-api/blob/master/AMD.md">AMD</a> системы модулей типа <a href="https://requirejs.org/">RequireJS</a>, а позднее также <a href="https://webpack.github.io/">Webpack</a> и <a href="https://babeljs.io/">Babel</a>).</p>
 
-<p>К счастью, современные броузера стали сами поддерживать функциональность модулей, о чем и рассказывает эта статья. Этому можно только порадоваться — броузеры могут оптимизировать загрузку модулей, что было бы гораздо эффективнее использования библиотеки, и взять на себя обработку на стороне клиента и прочие накладные расходы.</p>
+<p>К счастью, современные браузеры стали сами поддерживать функциональность модулей, о чем и рассказывает эта статья. Этому можно только порадоваться — браузеры могут оптимизировать загрузку модулей, что было бы гораздо эффективнее использования библиотеки, и взять на себя обработку на стороне клиента и прочие накладные расходы.</p>
 
-<h2 id="Поддержка_в_броузерах">Поддержка в броузерах</h2>
+<h2 id="Поддержка_в_браузерах">Поддержка в браузерах</h2>
 
-<p>Встроенная обработка модулей JavaScript связана с функциями {{JSxRef("Statements/import", "import")}} и {{JSxRef("Statements/export", "export")}}, которые поддерживаются броузерами следующим образом:</p>
+<p>Встроенная обработка модулей JavaScript связана с функциями {{JSxRef("Statements/import", "import")}} и {{JSxRef("Statements/export", "export")}}, которые поддерживаются браузерами следующим образом:</p>
 
 <h3 id="import">import</h3>
 
@@ -82,7 +82,7 @@ modules/
 
 <p>However, we decided to keep to using <code>.js</code>, at least for the moment. To get modules to work correctly in a browser, you need to make sure that your server is serving them with a <code>Content-Type</code> header that contains a JavaScript MIME type such as <code>text/javascript</code>. If you don't, you'll get a strict MIME type checking error along the lines of "The server responded with a non-JavaScript MIME type" and the browser won't run your JavaScript. Most servers already set the correct type for <code>.js</code> files, but not yet for <code>.mjs</code> files. Servers that already serve <code>.mjs</code> files correctly include <a href="https://pages.github.com/">GitHub Pages</a> and <code><a href="https://github.com/http-party/http-server#readme">http-server</a></code> for Node.js.</p>
 
-<p>This is OK if you are using such an environment already, or if you aren't but you know what you are doing and have access (i.e. you can configure your server to set the correct <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code> for <code>.mjs</code> files). It could however cause confusion if you don't control the server you are serving files from, or are publishing files for public use, as we are here.</p>
+<p>This is OK if you are using such an environment already, or if you aren't but you know what you are doing and have access (i.e. you can configure your server to set the correct <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code> for <code>.mjs</code> files). It could however cause confusion if you don't control the server you are serving files from, or are publishing files for public use, as we are here.</p>
 
 <p>For learning and portability purposes, we decided to keep to <code>.js</code>.</p>
 

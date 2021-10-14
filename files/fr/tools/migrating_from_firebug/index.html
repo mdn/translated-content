@@ -1,12 +1,12 @@
 ---
-title: Migrating from Firebug
+title: Migration depuis Firebug
 slug: Tools/Migrating_from_Firebug
 translation_of: Tools/Migrating_from_Firebug
 original_slug: Outils/Migrating_from_Firebug
 ---
 <div>{{ToolsSidebar}}</div>
 
-<p class="summary">Pendant la migration de Firebug vers les outils de développement de Firefox, vous vous demanderez certainement ou sont vos fonctionnalités adorés. Et bien, cette liste est faite pour vous.</p>
+<p class="summary">Pendant la migration de Firebug vers les outils de développement de Firefox, vous vous demanderez certainement où sont vos fonctionnalités favorites. Et bien, cette liste est faite pour vous.</p>
 
 <hr>
 <div class="column-container">
@@ -15,9 +15,9 @@ original_slug: Outils/Migrating_from_Firebug
 <div class="column-third">
 <p><img alt="" src="https://mdn.mozillademos.org/files/15588/logo-developer-quantum.png" style="display: block; margin: 0px auto;"></p>
 
-<p style="text-align: center;">Pour avoir la dernière version des outils de développement, il y a : Firefox Developer Edition</p>
+<p style="text-align: center;">Pour obtenir la dernière version des outils de développement, utilisez <i lang="en">Firefox Developer Edition</i>.</p>
 
-<p><a href="https://www.mozilla.org/fr/firefox/developer/" style="width: 280px; display: block; margin-left: auto; margin-right: auto; padding: 10px; text-align: center; border-radius: 4px; background-color: #81BC2E; white-space: nowrap; color: white; text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25); box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2), 0px -1px 0px 0px rgba(0, 0, 0, 0.3) inset;">Télécharger Firefox Developer Edition</a></p>
+<p><a href="https://www.mozilla.org/fr/firefox/developer/" style="width: 280px; display: block; margin-left: auto; margin-right: auto; padding: 10px; text-align: center; border-radius: 4px; background-color: #81BC2E; white-space: nowrap; color: white; text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25); box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2), 0px -1px 0px 0px rgba(0, 0, 0, 0.3) inset;">Télécharger <i lang="en">Firefox Developer Edition</i></a>.</p>
 </div>
 
 <div class="column-third"> </div>
@@ -28,244 +28,240 @@ original_slug: Outils/Migrating_from_Firebug
 
 <h3 id="Activation">Activation</h3>
 
-<p><a href="https://getfirebug.com/wiki/index.php/Activation">L'activation de Firebug</a> est basé sur des URL respectant la "<a href="https://en.wikipedia.org/wiki/Same_origin_policy">same origin policy</a>". Cela signifie que si vous ouvrez  une page de la même origine dans un onglet  différent, Firefbug s'ouvre automatiquement. Et lorsque une page d'une origine différente dans le même onglet, il se ferme automatiquement. L'activation des devtools sont eux basé sur les onglets. Par exemple, si vous ouvrez les devtools dans onglet, ils restent ouvert même si vous naviguez vers d'autres sites. Lorsque vous ouvrez un nouvel onglet, les devtools se ferment.</p>
+<p><a href="https://getfirebug.com/wiki/index.php/Activation">L'activation de Firebug</a> était basée sur des URL respectant la "<a href="https://en.wikipedia.org/wiki/Same_origin_policy">same origin policy</a>". Cela signifie que si vous ouvriez  une page de la même origine dans un onglet différent, Firebug s'ouvrait automatiquement. Et lorsque vous ouvriez une page d'une origine différente dans le même onglet, firebug se fermait automatiquement. L'activation des outils de développement est quant à elle basée sur les onglets. Par exemple, si vous ouvrez les outils dans un onglet, ils restent ouvert même si vous naviguez vers d'autres sites. Lorsque vous ouvrez un nouvel onglet, les outils de développement se ferment.</p>
 
 <h3 id="Ouvrir_les_outils">Ouvrir les outils</h3>
 
-<p>Firebug peut être ouvert avec F12. Pour l'ouvrir pour inspecter un élément il est possible d'utiliser le raccourci clavier  <kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>C</kbd> / <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>C</kbd>. Les DevTools partagent les mêmes raccourcis, mais fournissent également des <a href="/fr/docs/Tools/Keyboard_shortcuts#Opening_and_closing_tools">raccourcis pour les différent panneaux</a>. Le <a href="/fr/docs/Tools/Network_Monitor">Moniteur Réseau</a> peut être ouvert avec  <kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>Q</kbd> / <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>Q</kbd>, la <a href="/fr/docs/Tools/Web_Console">Console</a> via <kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>K</kbd> / <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>K</kbd> et le Déboguer avec <kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>S</kbd> / <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>S</kbd>.</p>
+<p>Firebug pouvait être ouvert avec F12. Pour l'ouvrir pour inspecter un élément il était possible d'utiliser le raccourci clavier <kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>C</kbd> / <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>C</kbd>. Les DevTools partagent les mêmes raccourcis, mais fournissent également des <a href="/fr/docs/Tools/Keyboard_shortcuts#Opening_and_closing_tools">raccourcis pour les différent panneaux</a>. Le <a href="/fr/docs/Tools/Network_Monitor">Moniteur Réseau</a> peut être ouvert avec <kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>Q</kbd> / <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>Q</kbd>, la <a href="/fr/docs/Tools/Web_Console">Console</a> via <kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>K</kbd> / <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>K</kbd> et le Débogueur avec <kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>S</kbd> / <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>S</kbd>.</p>
 
 <h2 id="Console">Console</h2>
 
-<p>La <a href="/fr/docs/Tools/Web_Console">Console</a> est l'équivalent du panneau <a href="https://getfirebug.com/wiki/index.php/Console_Panel">Console</a> de Firebug. Elle affiche les log associé à une page web et permet d'exécuter des expressions JavaScript via sa <a href="/fr/docs/Tools/Web_Console/The_command_line_interpreter">ligne de commande</a>. L'affichage est différent. Le {{bug(1269730)}} changera peut être cela.</p>
+<p>La <a href="/fr/docs/Tools/Web_Console">Console</a> est l'équivalent du panneau <a href="https://getfirebug.com/wiki/index.php/Console_Panel">Console</a> de Firebug. Elle affiche les logs associés à une page web et permet d'exécuter des expressions JavaScript via sa <a href="/fr/docs/Tools/Web_Console/The_command_line_interpreter">ligne de commande</a>. L'affichage est différent. Le {{bug(1269730)}} changera peut être cela.</p>
 
 <h3 id="Filtrer_les_log">Filtrer les log</h3>
 
-<p>Firebug offre deux façons de filtrer les messages de log, via le <a href="https://getfirebug.com/wiki/index.php/Console_Panel#Options_Menu">menu des options</a> et via les <a href="https://getfirebug.com/wiki/index.php/Console_Panel#Filter_buttons"> boutons des filtres</a> dans la barre d'outils. La Console des devtools offre une fonctionnalité similaire via les <a href="/fr/docs/Tools/Web_Console/Console_messages#Filtering_by_category">buttons de filtre dans sa barre d'outils</a> — le tout centralisé à un seul endroit.</p>
+<p>Firebug offrait deux façons de filtrer les messages de log, via le <a href="https://getfirebug.com/wiki/index.php/Console_Panel#Options_Menu">menu des options</a> et via les <a href="https://getfirebug.com/wiki/index.php/Console_Panel#Filter_buttons">boutons des filtres</a> dans la barre d'outils. La Console des outils de développement offre une fonctionnalité similaire via les <a href="/fr/docs/Tools/Web_Console/Console_messages#Filtering_by_category">boutons de filtre dans sa barre d'outils</a> — le tout centralisé à un seul endroit.</p>
 
 <h3 id="API_de_ligne_de_commande">API de ligne de commande</h3>
 
-<p>L'<a href="https://getfirebug.com/wiki/index.php/Command_Line_API">API de ligne de commande dans Firebug </a>fournit des fonction spéciales pour votre confort. La ligne de commande des outils de développement, à <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter#Helper_commands">quelques fonctions en commun</a>, mais possède également des fonction supplémentaires et n'a pas certaines fonction de Firefbug.</p>
+<p>L'<a href="https://getfirebug.com/wiki/index.php/Command_Line_API">API de ligne de commande dans Firebug </a>fournissait des fonction spéciales pour votre confort. La ligne de commande des outils de développement possède <a href="/fr/docs/Tools/Web_Console/The_command_line_interpreter#Helper_commands">quelques fonctions identiques</a>, en offre de nouvelles autres et certaines, enfin, n'ont pas été reprises de Firebug.</p>
 
 <h3 id="API_de_la_Console">API de la Console</h3>
 
-<p>Pour loguer des choses dans la consoles depuis une page web, Firebug rend disponible une <a href="https://getfirebug.com/wiki/index.php/Console_API">API Console</a> dans la page. Les outils de développement partagent la <a href="/fr/docs/Web/API/console">même API</a>, donc vos expressions <code>"console.*</code> continueront de fonctionner.</p>
+<p>Pour loguer des choses dans la consoles depuis une page web, Firebug rendait disponible une <a href="https://getfirebug.com/wiki/index.php/Console_API">API Console</a> dans sa page. Les outils de développement partagent la <a href="/fr/docs/Web/API/console">même API</a>, donc vos expressions <code>"console.*</code> continueront de fonctionner.</p>
 
 <h3 id="Logs_persistants">Logs persistants</h3>
 
-<p>Dans Firebug, il est possible de cliquer sur <a href="https://getfirebug.com/wiki/index.php/Console_Panel#Persist">bouton "Persist"</a> dans la barre d'outils pour garder les messages de log entre différent navigations de pages et entre les rechargements. Dans les outils de développemnt, cette option est appelée <em><a href="/fr/docs/Tools/Settings#Common_preferences">Activer les journaux persistants</a></em> et est disponible dans les options de la boîte à outils.</p>
+<p>Dans Firebug, il était possible de cliquer sur <a href="https://getfirebug.com/wiki/index.php/Console_Panel#Persist">bouton "Persist"</a> dans la barre d'outils pour garder les messages de log entre différent navigations de pages et entre les rechargements. Dans les outils de développement, cette option est appelée <em><a href="/fr/docs/Tools/Settings#Common_preferences">Activer les journaux persistants</a></em> et est disponible dans les options de la boîte à outils.</p>
 
 <h3 id="Logs_de_serveur">Logs de serveur</h3>
 
-<p>Les extension Firebug tels que <a href="https://addons.mozilla.org/en-US/firefox/addon/firephp/">FirePHP</a> permettent d'afficher des messages du serveur dans la console Firefbug. Cette fonctionnalité est déja <a href="/fr/docs/Tools/Web_Console/Console_messages#Server">intégrée dans les outils de développement</a> en utilisant le protocole <a href="https://craig.is/writing/chrome-logger">ChromeLogger</a> et ne nécessite pas d'autres extensions pour être installé.</p>
+<p>Les extension Firebug tels que <a href="https://addons.mozilla.org/fr/firefox/addon/firephp/">FirePHP</a> permettaient d'afficher des messages du serveur dans la console Firefbug. Cette fonctionnalité est déja <a href="/fr/docs/Tools/Web_Console/Console_messages#Server">intégrée dans les outils de développement</a> en utilisant le protocole <a href="https://craig.is/writing/chrome-logger">ChromeLogger</a> et ne nécessite pas d'autres extensions pour être utilisée.</p>
 
 <h3 id="Historique_de_commande">Historique de commande</h3>
 
-<p><a href="https://getfirebug.com/wiki/index.php/Command_Line#Command_History">L'historique de commande</a> disponible grâce à un bouton dans la ligne de commande de Firebug est disponible en utilisant les touches <a href="/fr/docs/Tools/Web_Console/The_command_line_interpreter#Command_history"><kbd>↑</kbd>/<kbd>↓</kbd> dans la ligne de commande de la Console</a></p>
+<p><a href="https://getfirebug.com/wiki/index.php/Command_Line#Command_History">L'historique de commande</a> qui était disponible grâce à un bouton dans la ligne de commande de Firebug reste disponible en utilisant les touches <a href="/fr/docs/Tools/Web_Console/The_command_line_interpreter#Command_history"><kbd>↑</kbd>/<kbd>↓</kbd> dans la ligne de commande de la Console</a></p>
 
 <h3 id="Inspecter_les_propriétés_des_objets">Inspecter les propriétés des objets</h3>
 
-<p>En cliquant sur objet logué dans la console, il est possible d'inspecter les propriétés de l'objet grâce au panneau DOM. Dans les outils de développement de Firefox, il est aussi possible d'inspecter les objets. La différence est qu'ils montrent <a href="/fr/docs/Tools/Web_Console/Rich_output#Examining_object_properties">les propriétés et les méthodes dans un panneau annexe dans la Console.</a></p>
+<p>En cliquant sur objet logué dans la console, il était possible d'inspecter ses propriétés grâce au panneau DOM. Dans les outils de développement de Firefox, il est également possible d'inspecter les objets. La différence est que <a href="/fr/docs/Tools/Web_Console/Rich_output#Examining_object_properties">ces propriétés et les méthodes sont affichées dans un panneau annexe de la Console.</a></p>
 
 <h3 id="Afficher_les_requêtes_réseau">Afficher les requêtes réseau</h3>
 
-<p>Le panneau Console dans Firebug permet d'afficher les requêtes {{Glossary("AJAX")}} (aka {{Glossary("XMLHttpRequest", "XMLHttpRequests")}}). Cette option est également disponible dans la Console des outils de developpement, grâce au filtre <em>XHR</em>. De plus, la Console permet d'afficher tous les autres types de requêtes résseau grace au filtre <em>Requêtes.</em></p>
+<p>Le panneau Console dans Firebug permettait d'afficher les requêtes {{Glossary("AJAX")}} (aka {{Glossary("XMLHttpRequest", "XMLHttpRequests")}}). Cette option est également disponible dans la Console des outils de développement, grâce au filtre <em>XHR</em>. De plus, la Console permet d'afficher tous les autres types de requêtes réseau grâce au filtre <em>Requêtes</em>.</p>
 
 <h3 id="Afficher_les_structures_JSON_et_XML">Afficher les structures JSON et XML</h3>
 
-<p>Pour afficher les réponses JSON et XML des requêtes {{Glossary("AJAX")}}, Firebug a des onglets spéciaux lors de l'expension d'une requête dans son panneau Console. La Cosnsole des outils de developpement affiche ces structures directement dans l'onglet "Réponses".</p>
+<p>Pour afficher les réponses JSON et XML des requêtes {{Glossary("AJAX")}}, Firebug avait des onglets spéciaux accessible en développant la requête dans son panneau Console. La Console des outils de développement affiche ces structures directement dans l'onglet "Réponses".</p>
 
-<h3 id="Multi-line_command_line">Multi-line command line</h3>
+<h3 id="Multi-line_command_line">Interface en ligne de commande multi-lignes</h3>
 
-<p>La Console Firebug a une ligne de commande multi-ligne appelée <a href="https://getfirebug.com/wiki/index.php/Command_Editor">Command Editor</a>. Les outils de développment n'ont pas un panneau comme le Command Editor (ce qui a déja été demandé dans le {{bug(1133849)}}), mais possède en revanche un outil séparé nommé <a href="/fr/docs/Tools/Scratchpad">Ardoise JavaScript</a>, qui peut être <a href="/fr/docs/Tools/Settings#Default_Firefox_Developer_Tools">ajouté comme panneau dans la boite à outils</a> ou ouvert dans une fenêtre séparée, via le menu Firefox &gt; Développement web &gt; Ardoise, ou avec <kbd>Maj</kbd> + <kbd>F4</kbd>. Il est également bon à savoir que la ligne de commande normale ajoutte intélligement des retour à la ligne lorsqu'elle reconait une commande incomplete, <code>document.</code> et ensuite appuyer sur <kbd>Entrée</kbd>. Il est également possible de faire un retour à la ligne manuel avec <kbd>Maj</kbd> + <kbd>Entrée</kbd>.</p>
+<p>La Console Firebug avait une interface en ligne de commande multi-lignes appelée <a href="https://getfirebug.com/wiki/index.php/Command_Editor">Command Editor</a>. Les outils de développment n'ont pas de panneau équivaleur à ceCommand Editor (ce qui a déja été demandé dans le {{bug(1133849)}}), mais possède en revanche un outil séparé nommé <a href="/fr/docs/Tools/Web_Console/The_command_line_interpreter#le_mode_%C3%A9diteur_multiligne">éditeur multiligne</a>. Il est également bon à savoir que la ligne de commande normale ajoute intelligemment des retour à la ligne lorsqu'elle reconnaît une commande incomplète telle que <code>document.</code> suivi d'un appui sur <kbd>Entrée</kbd>. Il est également possible de faire un retour à la ligne manuellement avec <kbd>Maj</kbd> + <kbd>Entrée</kbd>.</p>
 
-<h3 id="Prévisualisation_de_réponse">Prévisualisation de réponse</h3>
+<h3 id="Prévisualisation_de_réponse">Prévisualisation des réponses</h3>
 
-<p>Il y a un onglet <em>Preview</em> lors de l'expensin d'une requête réseau affiché dans Firebug. La Console web affiche une prévisualisation dasn l'onget <em>Réponse</em>. Pour le moment, la prévisualisation pour le HTML, le XML et le SVG, est cependant manquant. Vous pouvez suivre l'historque dans le {{bug(1247392)}} et le {{bug(1262796)}}. Mais lors d'un clic sur l'URL de la requête, les outils de développement passent au <a href="/fr/docs/Tools/Network_Monitor">Moniteur Réseau</a>, qui lui a un onglet <em>Preview</em>.</p>
+<p>Il y avait un onglet <em>Preview</em> lors de l'expansion d'une requête réseau affichée dans Firebug. La Console web affiche une prévisualisation dasn l'onget <em>Réponse</em>. Pour le moment, la prévisualisation pour le HTML, le XML et le SVG manquent encore. Vous pouvez suivre l'historique dans le {{bug(1247392)}} et le {{bug(1262796)}}. Toutefois, lors d'un clic sur l'URL de la requête, les outils de développement basculent sur le <a href="/fr/docs/Tools/Network_Monitor">Moniteur Réseau</a>, qui, lui, dispose d'un onglet <em>Preview</em>.</p>
 
 <h2 id="Inspecteur">Inspecteur</h2>
 
-<p>Firebug a un <a href="https://getfirebug.com/wiki/index.php/HTML_Panel">panneau HTML</a>, qui permet d'éditer le HTML/XML/SVG et le CSS en relation. Dans les outils de développement, cette fonctionalitée est assurée par l'<a href="/fr/docs/Tools/Page_Inspector">Inspecteur</a>.</p>
+<p>Firebug avait un <a href="https://getfirebug.com/wiki/index.php/HTML_Panel">panneau HTML</a>, qui permettait d'éditer le HTML/XML/SVG et le CSS associé. Dans les outils de développement, cette fonctionalitée est assurée par l'<a href="/fr/docs/Tools/Page_Inspector">Inspecteur</a>.</p>
 
-<h3 id="Editer_l'HTML">Editer l'HTML</h3>
+<h3 id="Editer_l'HTML">Editer le HTML</h3>
 
 <p>Dans l'Inspecteur, les attributs des balises et leur contenu peuvent être édités, tout comme dans Firebug. Il permet en plus d'éditer également les balises elles-même.</p>
 
-<p>Il est également possible d'éditer l'HTML directement. Dans Firebug, il faut faire clic-droit sur un noeud puis cliquer sur <a href="https://getfirebug.com/wiki/index.php/HTML_Panel#Edit">Edit HTML...</a> dans le menu contextuel. Dans les outils de développement la même option est également dispobible dans le menu contextuel. Elle est nommée <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Editing_HTML_2">Éditer en tant qu'HTML</a>. Seul la prévisualtisation des changements en temps réel est maquante, voir {{bug(1067318)}} et {{bug(815464)}}.</p>
+<p>Il est également possible d'éditer l'HTML directement. Dans Firebug, il fallait faire clic-droit sur un noeud puis cliquer sur <a href="https://getfirebug.com/wiki/index.php/HTML_Panel#Edit">Edit HTML…</a> dans le menu contextuel. Dans les outils de développement, cette même option est également disponible via le menu contextuel. Elle est nommée <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Editing_HTML_2">Éditer en tant qu'HTML</a>. Seule la prévisualisation des changements en temps réel est maquante, voir {{bug(1067318)}} et {{bug(815464)}}.</p>
 
-<h3 id="Copier_l'HTML_et_les_informations_en_relation">Copier l'HTML et les informations en relation</h3>
+<h3 id="Copier_l'HTML_et_les_informations_en_relation">Copier le HTML et les informations en relation</h3>
 
-<p>Le panneau HTML de Firebug permet de copier l'interieur ou l'exterieur d'un élément HTML, ainsi que le CSS et le XPath via le menu contextuel d'un élément. L'inspecteur fournit les même fonctionalités, sauf pour la copie des XPaths. Voir {{bug(987877)}}.</p>
+<p>Le panneau HTML de Firebug permettait de copier l'intérieur ou l'extérieur d'un élément HTML, ainsi que le CSS et le XPath via le menu contextuel d'un élément. L'inspecteur fournit les même fonctionalités, sauf pour la copie des XPaths. Voir {{bug(987877)}}.</p>
 
 <h3 id="Éditer_le_CSS">Éditer le CSS</h3>
 
-<p>Les deux outils permètent de voir et d'éditer les règles CSS des éléments sélectionnés dans la vue du noeud de façon similaire. Firebug possède le panneau <a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel">Style</a> pour ça, les outils de developpement eux ont le panneau <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS">Règles</a>.</p>
+<p>Les deux outils permettent de voir et d'éditer les règles CSS des éléments sélectionnés dans la vue du noeud d'une façon similaire. Firebug possèdait le panneau <a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel">Style</a> pour ce faire, tandis que les outils de développement disposent du panneau <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS">Règles</a>.</p>
 
-<p>Dans Firebug il est possible d'ajouter des règles en effectuant un clic-droit puis en sélectionant <em><a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel#Context_Menu">Add Rule...</a></em> dans le menu contextuel. Les outils de developpement eux ont une option dans le menu contextuelle nommée <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Add_rules"><em>Ajouter une règle</em></a> ainsi qu'un <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Add_rules">bouton +</a> dans la barre d'outils de l'onglet Règles.</p>
+<p>Dans Firebug, il était possible d'ajouter des règles en effectuant un clic-droit puis en sélectionnant <em><a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel#Context_Menu">Add Rule…</a></em> dans le menu contextuel. Les outils de développement disposent quant à eux d'une option dans le menu contextuel nommée <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Add_rules"><em>Ajouter une règle</em></a> ainsi qu'un <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Add_rules">bouton +</a> dans la barre d'outils de l'onglet Règles.</p>
 
-<p>Pour éditer le style des élements (les propriétés CSS de l'attribut {{htmlattrxref("style")}} d'un élément), dans Firebug il faut faire un clic-droit dans l'onglet Style et sélectionner <a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel#Context_Menu">Edit Element Style...</a> dans le menu contextuel. Les outils de développement affichent une <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#element_rule">règle element {}</a> pour ceci. Ainsi un simple clic sur cette règle permet de commencer à éditer les propriétés.</p>
+<p>Pour éditer le style des élements (les propriétés CSS de l'attribut {{htmlattrxref("style")}} d'un élément), dans Firebug, il fallait faire un clic-droit dans l'onglet Style et sélectionner <a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel#Context_Menu">Edit Element Style...</a> dans le menu contextuel. Les outils de développement affichent pour leur part une <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#element_rule">règle element {}</a> pour faire la même chose. Ainsi, un simple clic sur cette règle permet de commencer à éditer les propriétés.</p>
 
 <h3 id="Auto-completion_du_CSS">Auto-completion du CSS</h3>
 
-<p>Tout comme dans Firebug, l'onglet des règles fournit de l'auto-complétion pour les propriétés CSS et leurs valeurs. Quelques propriétés ne sont pas complétés, elles sont listés dans le {{bug(1337918)}}.</p>
+<p>Tout comme dans Firebug, l'onglet des règles fournit de l'auto-complétion pour les propriétés CSS et leurs valeurs. Quelques propriétés ne sont toutefois pas complétés, elles sont listés dans le {{bug(1337918)}}.</p>
 
 <h3 id="Copier_coller_du_CSS">Copier &amp; coller du CSS</h3>
 
-<p>L'onglet Style de Firebug ainsi que l'onglet Règles des outils de developpement fournissent tous deux l'option dans leurs menu contextuels de copier/coller les règles CSS. Les outils de développement fournissent en plus une option pour copier le sélecteur d'une règle et de copier les règles désactivé comme du code commenté. Il manque par contre les options por copier la déclaration de style entière. Cependant cela peut être fait en sélectionant les règles dans l'onglet et copier la sélection avec <kbd>Ctrl</kbd> + <kbd>C</kbd> ou via le menu contextuel.</p>
+<p>L'onglet Style de Firebug ainsi que l'onglet Règles des outils de développement fournissent tous deux l'option via leurs menus contextuels de copier/coller des règles CSS. Les outils de développement fournissent en plus une option pour copier le sélecteur d'une règle et copier les règles désactivées via des commentaires. Il manque par contre les options pour copier la déclaration de style entière. Cependant cela peut être fait en sélectionnant les règles dans l'onglet puis en copiant la sélection avec <kbd>Ctrl</kbd> + <kbd>C</kbd> ou via le menu contextuel.</p>
 
-<p>L'onglet des règles des outils de developpement est plus intélligent quand il s'agit de coller du CSS dedans. Il est possible de coller des déclarations de style entière dans des règles existantes. Et les règles commenté sont directement désactivées.</p>
+<p>L'onglet des règles des outils de développement est plus intelligent quand il s'agit d'y coller du CSS. Il est en effet possible de coller des déclarations de style entières dans des règles existantes. Et les règles commentées sont directement désactivées.</p>
 
 <h3 id="Afficher_les_pseudo-classes">Afficher les pseudo-classes</h3>
 
-<p>Firebug permet d'afficher les <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> CSS {{cssxref(":hover")}}, {{cssxref(":active")}} et {{cssxref(":focus")}} d'un élément, grâce aux options <a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel#Options_Menu">options du menu du panneu latéral Style</a>. Dans les outils de développement, il y a deux façons de faire de même. La première est de les activer via <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Setting_hover_active_focus">l'onglet pseudo-class dans le panneau des Règles</a>. La seconde est de faire un clic droit sur un élément dans la vue des noeuds et d'affichier les pseudo-classes via le <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Context_menu_reference">menu contextuel</a>.</p>
+<p>Firebug permettait d'afficher les <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> CSS {{cssxref(":hover")}}, {{cssxref(":active")}} et {{cssxref(":focus")}} d'un élément, grâce aux <a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel#Options_Menu">options du menu du panneau latéral Style</a>. Dans les outils de développement, il y a deux façons de faire de même. La première est de les activer via <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Setting_hover_active_focus">l'onglet pseudo-class dans le panneau des Règles</a>. La seconde est de faire un clic droit sur un élément dans la vue des noeuds et d'afficher les pseudo-classes via le <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Context_menu_reference">menu contextuel</a>.</p>
 
-<h3 id="Examiner_les_raccourcis_de_propriétés_CSS">Examiner les raccourcis de propriétés CSS</h3>
+<h3 id="Examiner_les_raccourcis_de_propriétés_CSS">Examiner les abréviations de propriétés CSS</h3>
 
-<p>Les <a href="/fr/docs/Web/CSS/Shorthand_properties">raccourcis de propriétés CSS</a> peuvent être converties dans leur version complète en sélectionnant l'option <em><a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel#Options_Menu">Étendre les propriétés raccouricies </a></em>dans le panneau latéral Style. Le panneau des Règles des outils de developpement est plus malin et permet de les étendre en cliquant sur les acolades entre.</p>
+<p>Les <a href="/fr/docs/Web/CSS/Shorthand_properties">abréviations des propriétés CSS</a> pouvaient être converties dans leur version complète en sélectionnant l'option <em><a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel#Options_Menu">Étendre les propriétés raccourcies </a></em>dans le panneau latéral Style. Le panneau des Règles des outils de développement est plus malin et permet de les étendre en cliquant sur les accolades entourantes.</p>
 
 <h3 id="Afficher_uniquement_les_styles_appliqués">Afficher uniquement les styles appliqués</h3>
 
-<p>Le <a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel#Options_Menu">panneau latéral Style de Firebug a une option</a> pour afficher uniquement les propriétés CSS d'une règle qui sont appliqué à l'élement sélectionné, et cache alors toutes les règles surchargées. Cette fonctionalité n'est pas présente dans les outils de développement. Mais elle a déja été demandée dans le {{bug(1335327)}}.</p>
+<p>Le <a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel#Options_Menu">panneau latéral Style de Firebug avait une option</a> pour afficher uniquement les propriétés CSS d'une règle qui sont appliquées à l'élement sélectionné, masquant alors toutes les règles surchargées. Cette fonctionalité n'est pas présente dans les outils de développement, mais elle a déja été demandée dans le {{bug(1335327)}}.</p>
 
-<h3 id="Inspecter_le_modèle_de_boite">Inspecter le modèle de boite</h3>
+<h3 id="Inspecter_le_modèle_de_boite">Inspecter le modèle de boîtes</h3>
 
-<p>Dans Firebug the <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model">box model</a> can be inspected via the <a href="https://getfirebug.com/wiki/index.php/Layout_Side_Panel">Layout side panel</a>. In the DevTools the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model">box model is part of the Computed side panel</a>. Both tools highlight the different parts of the box model within the page when hovering them in the box model view. Also, both tools allow you to edit the different values inline via a click on them.</p>
+<p>Dans Firebug, le <a href="/fr/docs/Learn/CSS/Introduction_to_CSS/Box_model">modèle de boîtes</a> pouvait être examiné à l'aide du <a href="https://getfirebug.com/wiki/index.php/Layout_Side_Panel">panneau latéral d'agencement</a>. Dans les outils de développement, le <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model">modèle en boîtes est intégré dans le panneau latéral calculé</a>. Les deux outils mettent en évidence les différentes parties du modèle en boîtes directement dans la page lorsqu'on les survole dans la vue du modèle en boîte. De même, les deux outils permettent de modifier directement les valeurs en cliquant sur elles.</p>
 
 <h3 id="Inspecter_les_styles_calculés">Inspecter les styles calculés</h3>
 
-<p> </p>
-
-<p>Les valeurs calculées des propriétés CSS sont affichées dans le <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Examine_computed_CSS">panneau latéral "Calculé"</a> des outils de développement exactement comme elle le sont dans le <a href="https://getfirebug.com/wiki/index.php/Computed_Side_Panel">panneau latéral "Calculé"</a> de Firebug. La différence est que dans outils de développement les propriétés sont toujours listées par ordre alphabétique et non groupées (voir {{bug(977128)}}) et il n'y a pas d'option pour cacher les styles spécifiques à Mozilla, mais il y a un champ de saisie permettant de filtrer les propriétés.</p>
+<p>Les valeurs calculées des propriétés CSS sont affichées dans le <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Examine_computed_CSS">panneau latéral "Calculé"</a> des outils de développement exactement comme elles l'étaient dans le <a href="https://getfirebug.com/wiki/index.php/Computed_Side_Panel">panneau latéral "Calculé"</a> de Firebug. La différence est que dans outils de développement les propriétés sont toujours listées par ordre alphabétique et non groupées (voir {{bug(977128)}}) et qu'il n'y a pas d'option pour cacher les styles spécifiques à Mozilla, remplacé par le champ de saisie permettant de filtrer les propriétés.</p>
 
 <h3 id="Inspecter_les_évènements">Inspecter les évènements</h3>
 
-<p> </p>
+<p>Les événements affectés à un élément étaient affichés dans le <a href="https://getfirebug.com/wiki/index.php/Events_Side_Panel">panneau latéral Événements</a> de Firebug. Dans les outils de développement, ils sont affichés en cliquant sur la petite icône 'ev' à côté d'un élément dans la vue du noeud. Les deux outils permettent d'afficher les écouteurs d'événements "wrapped" (par exemple les écouteurs "wrapped" dans des fonctions jQuery). Pour améliorer l'interface utilisateur des outils de développement, il a été demandé d'ajouter un panneau latéral Événements identique à celui de Firebug (voir {{bug(1226640)}}).</p>
 
-<p>Les événements affectés à un élément sont affichés dans le <a href="https://getfirebug.com/wiki/index.php/Events_Side_Panel">panneau latéral Événements</a> de Firebug. Dans les outils de développement, ils sont affichés en cliquant sur la petite icône 'ev' à côté d'un élément dans la vue du noeud. Les deux outils permettent d'afficher les écouteurs d'événements "wrapped" (par exemple les écouteurs "wrapped" dans des fonctions jQuery). Pour améliorer l'interface utilisateur des outils de développement, il y a aussi une demande d'ajout d'un panneau latéral Événements comme celui de Firebug (voir {{bug(1226640)}}).</p>
+<h3 id="Stopper_l'exécution_sur_des_mutations_DOM">Stopper l'exécution sur des mutations DOM</h3>
 
-<h3 id="Stoper_l'exécution_sur_des_mutations_DOM">Stoper l'exécution sur des mutations DOM</h3>
-
-<p> </p>
-
-<p>Dans Firebug il est possible de s’arrêter sur les mutations DOM, ce qui signifie que lorsqu'un élément est modifié, l'exécution du script est arrêtée à la ligne correspondante dans le fichier JavaScript, ce qui a causé le changement. Cette fonction peut être activée globalement via le bouton <a href="https://getfirebug.com/wiki/index.php/HTML_Panel#Break_On_Mutate">"<em>Break On Mutate</em>"</a>, ou <a href="https://getfirebug.com/wiki/index.php/HTML_Panel#Context_Menu">individuellement pour chaque élément</a> et pour différents types de changements comme les changements d'attributs, les changements de contenu ou la suppression d'éléments. Malheureusement, les outils de développement n'ont pas encore cette fonctionnalité (voir {{bug(1004678)}}). Pour arrêter l'exécution du script, il est nécessaire de définir un point d'arrêt sur la ligne avec la modification dans le <a href="/fr/docs/Tools/Debugger">Débogueur</a>.</p>
+<p>Avec Firebug il était possible de s’arrêter sur des mutations DOM, ce qui signifie que lorsqu'un élément était modifié, l'exécution du script était arrêtée à la ligne correspondante dans le fichier JavaScript ayant provoqué le changement. Cette fonction pouvait être activée globalement via le bouton <a href="https://getfirebug.com/wiki/index.php/HTML_Panel#Break_On_Mutate">"<em>Break On Mutate</em>"</a>, ou <a href="https://getfirebug.com/wiki/index.php/HTML_Panel#Context_Menu">individuellement pour chaque élément</a> et pour différents types de changements comme les changements d'attributs, les changements de contenu ou la suppression d'éléments. Malheureusement, les outils de développement n'ont pas encore cette fonctionnalité (voir {{bug(1004678)}}). Pour arrêter l'exécution du script, il est donc nécessaire de définir un point d'arrêt sur la ligne induisant la modification dans le <a href="/fr/docs/Tools/Debugger">Débogueur</a>.</p>
 
 <h3 id="Chercher_des_éléments_par_sélecteurs_CSS_ou_XPaths">Chercher des éléments par sélecteurs CSS ou XPaths</h3>
 
-<p>Firebug permet de <a href="https://getfirebug.com/wiki/index.php/HTML_Panel#Search">rechercher des élément de le panneau HTML par sélecteur CSS ou XPaths</a>. Les outils de développement permentent également de <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Searching">rechercher par sélecteur CSS</a>. Ils affichent même les IDs et classes correspondantes. Rechercher par XPaths n'est pas encore implémenté (voir {{bug(963933)}}.</p>
+<p>Firebug permettait de <a href="https://getfirebug.com/wiki/index.php/HTML_Panel#Search">rechercher des élément du panneau HTML avec des sélecteurs CSS ou XPaths</a>. Les outils de développement permettent également de <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Searching">rechercher avec des sélecteurs CSS</a>. Ils affichent même les IDs et les classes correspondants. La recherche avec des sélecteurs XPath n'est pas encore implémentée (voir {{bug(963933)}}.</p>
 
 <h2 id="Debugger">Debugger</h2>
 
-<p>What's the <a href="https://getfirebug.com/wiki/index.php/Script_Panel">Script panel</a> in Firebug, is the <a href="/en-US/docs/Tools/Debugger">Debugger panel</a> in the DevTools. Both allow you to debug JavaScript code executed on a website.</p>
+<p>Le <a href="https://getfirebug.com/wiki/index.php/Script_Panel">panneau Script</a> de Firebug est devenu le <a href="/fr/docs/Tools/Debugger">panneau Debugger panel</a> des outils de développement. Les deux permettent de débugger le code JavaScript exécuté sur un site web.</p>
 
-<h3 id="Switch_between_sources">Switch between sources</h3>
+<h3 id="Switch_between_sources">Naviguer entre les différents codes source</h3>
 
-<p>Firebug has a <a href="https://getfirebug.com/wiki/index.php/Script_Panel#Script_Location_Menu">Script Location Menu</a> listing all JavaScript sources related to the website. Those sources can be static, i.e. files, or they can be dynamically generated (i.e. scripts executed via event handlers, <code>eval()</code>, <code>new Function()</code>, etc.). In the DevTools' Debugger panel the scripts are listed at the left side within the <a href="/en-US/docs/Tools/Debugger/UI_Tour#Source_list_pane">Sources side panel</a>. Dynamically generated scripts are only listed there when they are <a href="/en-US/docs/Tools/Debugger/How_to/Debug_eval_sources">named via a <code>//# sourceURL</code> comment</a>.</p>
+<p>Firebug possèdait un <a href="https://getfirebug.com/wiki/index.php/Script_Panel#Script_Location_Menu">Menu d'emplacement des scripts Location Menu</a> listant toutes les sources JavaScript liées au site web. Ces sources peuvent être statiques (fichiers), ou être dynamiquement générés (des scripts exécutés par des gestionnaires d'événements, <code>eval()</code>, <code>new Function()</code>, etc.). Dans le panneau Debugger des outils de développement, les scripts sont listés sur le côté gauche dans le <a href="/fr/docs/Tools/Debugger/UI_Tour#Source_list_pane">panneau latéral des Sources</a>. Les scripts générés dynamiquement ne sont listés que s'ils sont <a href="/fr/docs/Tools/Debugger/How_to/Debug_eval_sources">nommés par un <code>//# sourceURL</code> commentaire</a>.</p>
 
-<h3 id="Managing_breakpoints">Managing breakpoints</h3>
+<h3 id="Managing_breakpoints">Gestion des points d'arrêts</h3>
 
-<p>In Firebug you can set different types of breakpoints, which are all listed within the <a href="https://getfirebug.com/wiki/index.php/Breakpoints_Side_Panel">Breakpoints side panel</a>. In the DevTools the breakpoints are shown below each script source within the <a href="/en-US/docs/Tools/Debugger/UI_Tour#Source_list_pane">Sources side panel</a>. Those panels allow you to enable and disable single or all breakpoints and to remove single breakpoints or all of them at once. They do currently only allow to set script breakpoints. XHR, DOM, Cookie and Error breakpoints are not supported yet (see {{bug(821610)}}, {{bug(1004678)}}, {{bug(895893)}} and {{bug(1165010)}}). While there are no breakpoints for single JavaScript errors, there is a setting <em>Pause on Exceptions</em> within the <a href="/en-US/docs/Tools/Debugger/Settings">Debugger panel options</a>.</p>
+<p>Dans Firebug, vous pouviez positionner différents types de points d'arrêt tous listés dans le <a href="https://getfirebug.com/wiki/index.php/Breakpoints_Side_Panel">panneau latéral des points d'arrêt</a>. Dans les outils de développement, les points d'arrêts sont affichés sous chaque code source de script dans le <a href="/fr/docs/Tools/Debugger/UI_Tour#Source_list_pane">panneau latéral des sources</a>. Ces panneaux vous permettent d'activer ou de désactiver un point d'arrêt spécifique ou tous les points d'arrêt à la fois. Ils ne permettent actuellement que de positionner des points d'arrêt dans les scripts. Les points d'arrêt pour le XHR, le DOM, les Cookies et les erreurs ne sont pas encore pris en charge (voir {{bug(821610)}}, {{bug(1004678)}}, {{bug(895893)}} et {{bug(1165010)}}). Bien qu'il n'y ait pas de points d'arrêt pour des erreurs JavaScript spécifiques, il existe un réglage <em>Pause sur Exception</em> dans les <a href="/fr/docs/Tools/Debugger/Settings">options du panneau de déboguage</a>.</p>
 
-<h3 id="Step_through_code">Step through code</h3>
+<h3 id="Step_through_code">Naviguer dans le code</h3>
 
-<p>Once the script execution is stopped, you can step through the code using the Continue (<kbd>F8</kbd>), Step Over (<kbd>F10</kbd>), Step Into (<kbd>F11</kbd>) and Step Out (<kbd>Shift</kbd>+<kbd>F11</kbd>) options. They work the same in both tools.</p>
+<p>Une fois que l'exécution du script est stoppée, vous pouvez naviguer dans le code en utilisant les options Continue (<kbd>F8</kbd>), Passer au suivant (<kbd>F10</kbd>), Avancer dans (<kbd>F11</kbd>) et Avancer hors (<kbd>Shift</kbd>+<kbd>F11</kbd>). Le fonctionnement est identique dans les deux outils.</p>
 
-<h3 id="Examine_call_stack">Examine call stack</h3>
+<h3 id="Examine_call_stack">Examiner la pile d'appels</h3>
 
-<p>When the script execution is paused, Firebug displays the function call stack within its <a href="https://getfirebug.com/wiki/index.php/Stack_Side_Panel">Stack side panel</a>. In there the functions are listed together with their call parameters. In the DevTools the function call stack is shown within the <a href="/en-US/docs/Tools/Debugger/UI_Tour#Call_stack_pane">Call Stack side panel</a>. To see the call parameters in the DevTools, you need to have a look at the <a href="/en-US/docs/Tools/Debugger/How_to/Examine,_modify,_and_watch_variables#Examine_variables">Variables side panel</a>.</p>
+<p>Lorsque l'exécution du script était mise en pause, Firebug affichait la pile d'appel des fonctions dans le <a href="https://getfirebug.com/wiki/index.php/Stack_Side_Panel">panneau latéral de la pile</a>. Dans celui-ci, les fonctions étaient listées ensembles avec leurs paramètres d'appel. Dans les outils de développement, la pile d'appel des fonctions est affichée dans le <a href="/fr/docs/Tools/Debugger/UI_Tour#Call_stack_pane">panneau latéral de la pile d'appels</a>. Pour voir les paramètres d'appel dans les outils de développement, vous devez regarder le <a href="/fr/docs/Tools/Debugger/How_to/Examine,_modify,_and_watch_variables#Examine_variables">panneau latéral des variables</a>.</p>
 
-<h3 id="Examine_variables">Examine variables</h3>
+<h3 id="Examine_variables">Examiner les variables</h3>
 
-<p>The <a href="https://getfirebug.com/wiki/index.php/Watch_Side_Panel">Watch side panel</a> in Firebug displays the {{domxref("window")}} object (the global scope) by default. With the script execution halted it shows the different variable scopes available within the current call stack frame. Furthermore, it allows you to add and manipulate watch expressions. The DevTools have a <a href="/en-US/docs/Tools/Debugger/How_to/Examine,_modify,_and_watch_variables">Variables side panel</a>, which works basically the same. The main difference is that it is empty when the script execution is not stopped, i.e. it doesn't display the <code>window</code> object. Though you can inspect that object either via the <a href="/en-US/docs/Tools/DOM_Property_Viewer">DOM property viewer</a> or via the <a href="/en-US/docs/Tools/Web_Console">Web Console</a>.</p>
+<p>Le <a href="https://getfirebug.com/wiki/index.php/Watch_Side_Panel">panneau latéral Watch</a> de Firebug affichait l'objet {{domxref("window")}} (le scope global) par défaut. Lorsque l'exécution du script était arrêtée, il affichait les différents scopes des variables disponibles dans le cadre de la pile d'appels actuelle. De plus, il vous permettait d'ajouter et de manipuler des expressions à observer. Les outils de développement ont un <a href="/fr/docs/Tools/Debugger/How_to/Examine,_modify,_and_watch_variables">panneau latéral des Variables</a> qui fonctionne en gros de la même façon. La principale différence est qu'il est vide lorsque l'exécution du script n'est pas stoppée, c'est à dire qu'il n'affiche pas l'objet <code>window</code>. Bien que vous puissiez inspecter cet objet soit via le <a href="/fr/docs/Tools/DOM_Property_Viewer">visualisateur des propriétés du DOM</a>, soit via la <a href="/fr
+  /docs/Tools/Web_Console">Console Web</a>.</p>
 
-<h2 id="Style_Editor">Style Editor</h2>
+<h2 id="Style_Editor">Editeur de styles</h2>
 
-<p>The <a href="/en-US/docs/Tools/Style_Editor">Style Editor</a> in the Firefox DevTools allows you to examine and edit the different CSS style sheets of a page like Firebug's <a href="https://getfirebug.com/wiki/index.php/CSS_Panel">CSS panel</a> does it. In addition to that it allows to create new style sheets and to import existing style sheets and apply them to the page. It also allows you to toggle individual style sheets.</p>
+<p>L'<a href="/fr/docs/Tools/Style_Editor">éditeur de styles</a> des outils de développement de Firefox vous permet d'examiner et de modifier les différentes feuilles de styles CSS d'une page de la même façon que le <a href="https://getfirebug.com/wiki/index.php/CSS_Panel">panneau CSS</a> de Firebug le permettait. En plus de celà, il permet de créer de nouvelles feuilles de styles et d'en importer des existantes et de les appliquer à la page. Il vous permet également d'activer ou de désactiver une feuille de styles en particulier.</p>
 
-<h3 id="Switch_between_sources_2">Switch between sources</h3>
+<h3 id="Switch_between_sources_2">Permuter des sources</h3>
 
-<p>The CSS panel of Firebug allows to switch between different CSS sources using the <a href="https://getfirebug.com/wiki/index.php/CSS_Panel#CSS_Location_Menu">CSS Location Menu</a>. The Style Editor has a <a href="/en-US/docs/Tools/Style_Editor#The_style_sheet_pane">sidebar</a> for this purpose.</p>
+<p>Le panneau CSS de Firebug permettait de permuter différentes sources CSS en utilisant le <a href="https://getfirebug.com/wiki/index.php/CSS_Panel#CSS_Location_Menu">menu d'emplacement CSS</a>. L'éditeur de style possède une <a href="/fr/docs/Tools/Style_Editor#The_style_sheet_pane">barre latérale</a> à cet effet.</p>
 
-<h3 id="Edit_a_style_sheet">Edit a style sheet</h3>
+<h3 id="Edit_a_style_sheet">Editer une feuille de styles</h3>
 
-<p>Firebug's <a href="https://getfirebug.com/wiki/index.php/CSS_Panel">CSS panel</a> offers three different ways for editing style sheets. The default one is to edit them inline like within the <a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel">Style side panel</a>. Furthermore it has a <a href="https://getfirebug.com/wiki/index.php/CSS_Panel#Edit_Button">Source and a Live Edit mode</a>, which allow to edit the selected style sheet like within a text editor. The Style Editor of the DevTools only has one way to edit style sheets, which corresponds to Firebug's Live Edit mode.</p>
+<p>Le <a href="https://getfirebug.com/wiki/index.php/CSS_Panel">panneau CSS</a> offrait trois façons différentes d'éditer des feuilles de styles. Celle par défaut était de les modifier en ligne dans le <a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel">panneau latéral des styles</a>. De plus, il existait un <a href="https://getfirebug.com/wiki/index.php/CSS_Panel#Edit_Button">source et d'édition en direct</a> qui permettait de modifier la feuille de styles choisie comme dans un éditeur de texte. L'éditeur de styles des outils de développement ne possède qu'une seule façon de modifier les feuilles de styles équivalente au mode d'édition en direct de Firebug.</p>
 
-<h3 id="Try_out_CSS_selectors">Try out CSS selectors</h3>
+<h3 id="Try_out_CSS_selectors">Essayer les sélecteurs CSS</h3>
 
-<p>Firebug's Selectors side panel provides a way to validate a CSS selector. It lists all elements matching the entered selector. The DevTools don't have this feature yet, but it's requested in {{bug(1323746)}}.</p>
+<p>Le panneau latéral Sélecteurs de Firebug fournissait un moyen de valider un sélecteur CSS. Il listait tous les éléments correspondant au sélecteur qui avait été saisi. Les outils de développement ne diposent pas encore de cette fonctionnalité, mais elle a été demandée dans {{bug(1323746)}}.</p>
 
-<h3 id="Searching_within_the_style_sheets">Searching within the style sheets</h3>
+<h3 id="Searching_within_the_style_sheets">Chercher dans les feuilles de styles</h3>
 
-<p>Firebug allows to search within the style sheets via the search field. The Style Editor in the DevTools also provides a way to search within a style sheet, though there is currently no option to search within multiple sheets (see {{bug(889571)}}) and also not via a regular expression (see {{bug(1362030)}}.</p>
+<p>Firebug permettait de chercher dans les feuilles de styles via le champ de recherche. L'éditeur de styles des outils de développement fournit également un moyen de chercher dans une feuille de styles, bien qu'il n'existe actuellement aucune option pour chercher dans plusieurs feuilles de styles à la fois (voir {{bug(889571)}}) ni pour utiliser une expression rationnelle (voir {{bug(1362030)}}.</p>
 
-<h2 id="Performance_Tool">Performance Tool</h2>
+<h2 id="Performance_Tool">Outil de mesure des performances</h2>
 
-<p>Firebug allows to profile JavaScript performance via the <a href="https://getfirebug.com/wiki/index.php/Console_Panel#Profile">"Profile" button within the Console panel</a> or the <code><a href="https://getfirebug.com/wiki/index.php/Console.profile">console.profile()</a></code> and <code><a href="https://getfirebug.com/wiki/index.php/Console.profileEnd">console.profileEnd()</a></code> commands. The DevTools provide advanced tooling regarding performance profiling. A profile can be created via <code><a href="/en-US/docs/Web/API/Console/profile">console.profile()</a></code> and <code><a href="/en-US/docs/Web/API/Console/profileEnd">console.profileEnd()</a></code> like in Firebug or via the "Start Recording Performance" button in the <a href="/en-US/docs/Tools/Performance">Performance Tool</a>. The output of the <a href="/en-US/docs/Tools/Performance/Call_Tree">Call Tree</a> is the one that comes nearest to the output in Firebug, but the Performance panel provides much more information than just the JavaScript performance. E.g. it also provides information about HTML parsing or layout.</p>
+<p>Firebug permettait de déterminer les perfomances JavaScript via le <a href="https://getfirebug.com/wiki/index.php/Console_Panel#Profile">bouton "Profile" dans le panneau de la Console</a> ou à l'aide des commandes <code><a href="https://getfirebug.com/wiki/index.php/Console.profile">console.profile()</a></code> et <code><a href="https://getfirebug.com/wiki/index.php/Console.profileEnd">console.profileEnd()</a></code>. Les outils de développement fournissent un outillage avancé en matière de détermination des performances. Un profil peut être créé via <code><a href="/fr/docs/Web/API/Console/profile">console.profile()</a></code> et <code><a href="/fr/docs/Web/API/Console/profileEnd">console.profileEnd()</a></code> comme avec Firebug ou via le bouton "Lancer l'enregistrement des performances" dans l'<a href="/fr/docs/Tools/Performance">outil de performance</a>. Le résultat de l'<a href="/fr/docs/Tools/Performance/Call_Tree">arbre d'appels</a> est celui qui se rapproche le plus de celui produit par Firebug, mais le panneau des Performances fournit plus d'informations que simplement les performances du JavaScript. Par exemple, il fournit également des informations concernant l'analyse du HTML ou l'agencement.</p>
 
-<p>This is the part where Firebug and the DevTools differ the most, because the outputs are completely different. While Firebug focuses on JavaScript performance and provides detailed information about JavaScript function calls during the profiling session, the Performance Tool in the DevTools offers a broad spectrum of information regarding a website's performance but doesn't go into detail regarding JavaScript function calls.</p>
+<p>Ceci est la partie où Firebug et les outils de développement divergent le plus, parce que les résultats produits sont complètement différents. Alors que Firebug se concentre sur la performance du JavaScript et fournit des informations détaillées concernant les appels de fonctions durant la session de profilage, l'outil de performance des outils de développement offrent un large spectre d'informations concernant les performances d'un site web mais n'entre pas dans les détails en ce qui concerne les appels des fonctions JavaScript.</p>
 
-<h3 id="View_JavaScript_call_performance">View JavaScript call performance</h3>
+<h3 id="View_JavaScript_call_performance">Voir les performances des appels JavaScript</h3>
 
-<p>What comes nearest to Firebug's <a href="https://getfirebug.com/wiki/index.php/Profiler">profiler output</a> is the <a href="/en-US/docs/Tools/Performance/Call_Tree">Call Tree view</a> in the Performance panel. Like in Firebug it lists the total execution time of each function call under <em>Total Time</em> as well as the number of calls under <em>Samples</em>, the time spent within the function under <em>Self Time</em> and the related percentages in reference to the total execution time.</p>
+<p>Ce qui se rapproche le plus des <a href="https://getfirebug.com/wiki/index.php/Profiler">résultats de profilage</a> de Firebug est la <a href="/fr/docs/Tools/Performance/Call_Tree">vue de l'arbre des appels</a> dans le panneau Performance. Comme dans Firebug, il liste le temps d'exécution de chaque appel de fonction dans <em>Temps total</em> ainsi que le nombre d'appels sous <em>Echantillons</em>, le temps passé dans la fonction dans <em>Temps propre</em> et les pourcentages correspondants par rapport au temps total d'éxecution.</p>
 
 <div class="note">
-<p><strong>Note:</strong> The times and percentages listed in the DevTools' Call Tree view is not equivalent to the ones shown in Firebug, because it uses different APIs sampling the execution of the JavaScript code.</p>
+<p><strong>Note:</strong> Les temps et pourcentages listés dans la vue de l'arbre d'appel des outils de développement n'est pas équivalent à ceux affichés dans Firebug, parce qu'ils utilisent des API différentes échantillonnant l'exécution du code JavaScript.</p>
 </div>
 
-<h3 id="Jump_to_function_declaration">Jump to function declaration</h3>
+<h3 id="Jump_to_function_declaration">Atteindre les déclarations des fonctions</h3>
 
-<p>Like in Firebug's profiler output the <a href="/en-US/docs/Tools/Performance/Call_Tree">Call Tree view</a> of the DevTools' Performance Tool allows to jump to the line of code where the called JavaScript function is defined. In Firebug the source link to the function is located at the right side of the <a href="https://getfirebug.com/wiki/index.php/Console_Panel">Console panel</a> output while within the DevTools the link is placed on the right side within the Call Tree View.</p>
+<p>Comme dans le résultat du profileur de Firebug, la <a href="/fr/docs/Tools/Performance/Call_Tree">vue de l'arbre d'appels</a> de l'outil Performance des outils de développement permet de sauter à la ligne de code où la fonction JavaScript appellée est définie. Dans Firebug, le lien source vers la fonction est localisé du côté droit de la sortie du <a href="https://getfirebug.com/wiki/index.php/Console_Panel">panneau de la Console</a> tandis que dans les outils de développement, le lien est placé du côté droit dans la vue de l'arbre des appels.</p>
 
-<h2 id="Network_Monitor">Network Monitor</h2>
+<h2 id="Network_Monitor">Surveillance réseau</h2>
 
-<p>To monitor network requests Firebug provides a <a href="https://getfirebug.com/wiki/index.php/Net_Panel">Net panel</a>. The Firefox DevTools allow to inspect the network traffic using the <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a>. Both tools provide similar information including a timeline showing the request and response times of the network requests.</p>
+<p>Pour surveiller les requêtes réseau, Firebug fournit un <a href="https://getfirebug.com/wiki/index.php/Net_Panel">panneau Réseau</a>. Les outils de développement de Firefox permettent d'inspecter le trafic réseau en utilisant <a href="/fr/docs/Tools/Network_Monitor">Moniteur Réseau</a>. Les deux outils fournissent des informations similaires dont une frise chronologique affichant les requêtes et les temps de réponse des requêtes réseau.</p>
 
-<h3 id="Inspect_request_information">Inspect request information</h3>
+<h3 id="Inspect_request_information">Examen des informations des requêtes</h3>
 
-<p>Both Firebug and the Firefox DevTools' Network Monitor allow you to inspect the information about a request by clicking on it. The only difference is that Firebug shows the information below the request while the Network Monitor displays it within a side panel.</p>
+<p>Firebug et les outils de développement de surveillance réseau de Firefox permettent tous les deux d'inspecter les informations concernant une requête en cliquant dessus. La seule différence est que Firebug affiche les informations sous la requête alors que le Moniteur réseau les affiche dans un panneau latéral.</p>
 
-<p>In both tools there are different tabs containing different kinds of information for the selected request. They contain a <em>Headers</em>, <em>Params</em>, <em>Response</em> and <em>Cookies</em> panel. A preview of the response is shown within specifically named panels like <em>HTML</em>. The Network Monitor has a <em>Preview</em> panel for this purpose. It doesn't provide information about the cached data yet (see {{bug(859051)}}), but provides a <em>Security</em> tab in addition to Firebug's information and a <em>Timings</em> tab showing detailed information about the network timings.</p>
+<p>Dans les deux outils, il y a différents onglets contenant différents types d'informations pour la requête choisie. Ils contiennent des panneaux <em>En-tête</em>, <em>Paramètres</em>, <em>Réponse</em> et <em>Cookies</em>. Un aperçu de la réponse est affiché dans des panneaux spécifiquement nommés tels que <em>HTML</em>. Le Moniteur Réseau dispose d'un panneau <em>Prévisualisation</em> à cet effet. Il ne fournit pas encore d'informations concernant les données en cache (voir {{bug(859051)}}), mais fournit un onglet <em>Sécurité</em> en complément des informations de Firebug et un onglet <em>Timings</em> affichant des informations détaillées concernant les temps réseau.</p>
 
-<h3 id="View_request_timings">View request timings</h3>
+<h3 id="View_request_timings">Voir les temps des requêtes</h3>
 
-<p>Firebug offers detailed information about the network timings related to a request by hovering the <a href="https://getfirebug.com/wiki/index.php/Net_Panel#Timeline">Timeline column within its Net panel</a>. The Network Monitor shows this information within a <a href="/en-US/docs/Tools/Network_Monitor#Timings">Timings side panel</a> when you select a request.</p>
+<p>Firebug offrait des informations détaillées concernant les timings réseau liés à une requête en survolant la <a href="https://getfirebug.com/wiki/index.php/Net_Panel#Timeline">colonne Timeline dans son panneau Réseau</a>. Le Moniteur Réseau affiche cette information dans le <a href="/fr/docs/Tools/Network_Monitor#Timings">panneau latéral Timings</a> quand une requête est choisie.</p>
 
-<h3 id="View_remote_address">View remote address</h3>
+<h3 id="View_remote_address">Vue adresses distantes</h3>
 
-<p>The remote address of a request is shown within the Remote IP column within Firebug. In the Network Monitor the address is shown at <em>Remote Address</em> in the <em>Headers</em> tab when a request is selected.</p>
+<p>L'adresse distante d'une requête était affichée dans la colonne IP distante dans Firebug. Dans le Moniteur Réseau, l'adresse est affichée dans <em>Adresse distante</em> dans l'onglet <em>En-têtes</em> quand une requête est sélectionnée.</p>
 
-<h3 id="Search_within_requests">Search within requests</h3>
+<h3 id="Search_within_requests">Recherche dans les requêtes</h3>
 
-<p>The search field within Firebug allows to search within the requests. The search field in the Firefox DevTools filters the requests by the entered string.</p>
+<p>Le champ de recherche de Firebug permettait de chercher dans les requêtes. Le champ de recherche dans les outils de développement de Firefox filtrent les requêtes selon la chaîne saisie.</p>
 
-<p>Firebug allowed to search within the response body of the network requests by checking <em>Response Bodies</em> within its <a href="https://getfirebug.com/wiki/index.php/Search_Field#Options">search field options</a>. This feature is not available yet within the Network Monitor, but it's requested in {{bug(1334408)}}. While response bodies can't be searched yet, the Network Monitor allows to<a href="/en-US/docs/Tools/Network_Monitor#Filtering_by_properties"> filter by different request properties</a>.</p>
+<p>Firebug permettait de chercher dans le corps de la réponse des requêtes réseau en vérifiant les <em>Corps des réponses</em> dans ses <a href="https://getfirebug.com/wiki/index.php/Search_Field#Options">options du champ de recherche</a>. Cette fonction n'est pas encore disponible dans le Moniteur Réseau mais elle a été demandée dans {{bug(1334408)}}. Bien qu'on ne puisse pas encore chercher dans les corps des réponses, le Moniteur Réseau permet de <a href="/fr/docs/Tools/Network_Monitor#Filtering_by_properties"> filtrer selon différentes propriétés des requêtes</a>.</p>
 
-<h2 id="Storage_Inspector">Storage Inspector</h2>
+<h2 id="Storage_Inspector">Inspecteur de stockage</h2>
 
-<p>The <a href="https://getfirebug.com/wiki/index.php/Cookies_Panel">Cookies panel</a> in Firebug displays information related to the cookies created by a page and allows to manipulate the information they store. Within the DevTools this functionality is located within the <a href="/en-US/docs/Tools/Storage_Inspector">Storage Inspector</a>. In contrast to Firebug the Storage Inspector not only allows to inspect cookies but also other kinds of storages like the local and session storage, the cache and <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> databases.</p>
+<p>Le <a href="https://getfirebug.com/wiki/index.php/Cookies_Panel">panneau des Cookies</a> dans Firebug affichait des informations liées aux cookies créés par une page et permettait de manipuler les informations qu'ils contiennent. Dans les outils de développement, cette fonction est présente dans l'<a href="/fr/docs/Tools/Storage_Inspector">Inspecteur de stockager</a>. Contrairement à Firebug, l'inspecteur de stockage ne permet pas seulement d'inspecter les cookies mais aussi les autres types de stockage tels que le stockage local et celui de session, le cache et la base de données <a href="/fr/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
 
-<h3 id="Inspect_cookies">Inspect cookies</h3>
+<h3 id="Inspect_cookies">Inspecter les cookies</h3>
 
-<p>All cookies related to a website are listed inside the <a href="https://getfirebug.com/wiki/index.php/Cookies_Panel">Cookies panel</a> in Firebug. Inside the DevTools, the cookies are grouped by domain under the Cookies section within the <a href="/en-US/docs/Tools/Storage_Inspector">Storage Inspector</a>. Both show pretty much the same information per cookie, i.e. the name, value, domain, path, expiration date and whether the cookie is HTTP-only.</p>
+<p>Tous les cookies liés à un site web étaient listés dans le <a href="https://getfirebug.com/wiki/index.php/Cookies_Panel">panneau des Cookies</a> dans Firebug. Dans les outils de développement, les cookies sont groupés par domaine dans la section Cookies de <a href="/fr/docs/Tools/Storage_Inspector">l'inspecteur de stockage</a>. Les deux présentent à peu près les mêmes informations par cookie, c'est à dire
+  le nom, la valeur, le domaine, le chemin, la date d'expiration et si le cookie est HTTP-seulement.</p>
 
-<p>The DevTools don't show by default whether a cookie is secure, but this can be enabled by right-clicking the table header and checking <em>Secure</em> from the context menu. Additionally, the DevTools allow to display the creation date of a cookie as well as when it was last accessed and whether it is host-only.</p>
+<p>Les outils de développement n'affichent pas par défaut si un cookie est sécurisé, mais ceci peut être activé en faisant un clic droit sur l'en-tête de la table et en cochant <em>Secure</em> dans le menu contextuel. Additionnelement, les outils de développement permettent d'afficher la date de création d'un cookie ainsi que la dernière fois qu'on y a accédé et si il est spécifique à un hôte.</p>
 
-<h3 id="Edit_cookies">Edit cookies</h3>
+<h3 id="Edit_cookies">Modifier les cookies</h3>
 
-<p>To edit a cookie in Firebug you have to right-click the cookie and choose <em>Edit</em> from the context menu. Then a dialog pops up allowing you to edit the data of the cookie and save it. Inside the Storage Inspector you just have to double-click the data you want to edit. Then an inline editor allows you to edit the value.</p>
+<p>Pour modifier un cookie dans Firebug, vous deviez faire un clic droit sur le cookie et choisir <em>Modifier</em> dans le menu contextuel. Une fenêtre de dialogue apparaissait alors permettant de modifier les données et de les enregistrer. Dans l'inspecteur de stockage, il suffit de double-cliquer sur les données à modifier. Puis un éditeur en ligne permet de modifier la valeur correspondante.</p>
 
-<h3 id="Delete_cookies">Delete cookies</h3>
+<h3 id="Delete_cookies">Suppression des cookies</h3>
 
-<p>Firebug's Cookies panel allows you to delete all cookies of a website via the menu option <em><a href="https://getfirebug.com/wiki/index.php/Cookies_Panel#Cookies">Cookies</a></em> &gt; <em>Remove Cookies</em> or by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd>. It also allows you to only remove session cookies via <em>Cookies</em> &gt; <em>Remove Session Cookies</em> and to remove single cookies by right-clicking them and choosing <em>Delete</em>. The DevTools Storage Inspector allows to remove all cookies and a single one by right-clicking on a cookie and choosing <em>Delete All</em> resp. <em>Delete "&lt;cookie name&gt;"</em>. Additionally, it allows to delete all cookies from a specific domain via the context menu option <em>Delete All From "&lt;domain name&gt;"</em>. It currently does not allow to only delete session cookies (see {{bug(1336934)}}).</p>
+<p>Le panneau des cookies de Firebug permettait de supprimer tous les cookies d'un site web via l'option de menu <em><a href="https://getfirebug.com/wiki/index.php/Cookies_Panel#Cookies">Cookies</a></em> &gt; <em>Supprimer les Cookies</em> ou en appuyant sur <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd>. Il permettait également de ne supprimer que les cookies de session via <em>Cookies</em> &gt; <em>Supprimer les cookies de session</em> et de supprimer des cookies spécifiques en faisant un clic droit dessus et en choisissant <em>Supprimer</em>. L'inspecteur de stockage des outils de développement permet de supprimer tous les cookies ou des cookies particuliers en faisant un clic droit sur un cookie et en choisissant respectivement <em>Supprimer Tout</em> ou <em>Supprimer "&lt;nom du cookie&gt;"</em>. Additionnellement, il permet de supprimer tous les cookies d'un domaine en particulier via l'option du menu contextuel <em>Tout supprimer dans "&lt;nom du domaine&gt;"</em>. Il ne permet pas actuellement de ne supprimer que les cookies de session (voie {{bug(1336934)}}).</p>
 
-<h2 id="Developer_Toolbar">Developer Toolbar</h2>
+<h2 id="Developer_Toolbar">Barre d'outils du développeur</h2>
 
-<h3 id="Display_of_error_count">Display of error count</h3>
+<h3 id="Display_of_error_count">Affichage du nombre d'erreurs</h3>
 
-<p>When there are JavaScript errors on a page, the <a href="https://getfirebug.com/wiki/index.php/Start_Button#Error_info">Firebug Start Button shows a badge</a> with their number. The DevTools show the number of errors in the <a href="/en-US/docs/Tools/GCLI">Developer Toolbar</a>.</p>
+<p>Quand il y a des erreurs JavaScript sur une page, le <a href="https://getfirebug.com/wiki/index.php/Start_Button#Error_info">Bouton Démarrer de Firebug affichait un symbole</a> avec leur nombre. Les outils de développement affichent le nombre d'erreurs dans la <a href="/fr/docs/Tools/GCLI">barre d'outils du développeur</a>.</p>
 
-<h3 id="Command_API">Command API</h3>
+<h3 id="Command_API">API des commandes</h3>
 
-<p>Firebug offers a great variety of <a href="https://getfirebug.com/wiki/index.php/Command_Line_API">commands</a>, which can be executed within its command line. The Developer Toolbar also provides an <a href="/en-US/docs/Tools/GCLI#Commands">API with a lot of different commands</a> to control the DevTools and execute different tasks.</p>
+<p>Firebug offrait une grande variété de <a href="https://getfirebug.com/wiki/index.php/Command_Line_API">commandes</a>, qui pouvaient être exécutées dans la ligne de commandes. La barre d'outils de développement fournit également une <a href="/fr/docs/Tools/GCLI#Commands">API avec différentes commandes</a> pour contrôler les outils de développement et exécuter différentes tâches.</p>
 
-<h2 id="Feedback">Feedback</h2>
+<h2 id="Feedback">Réactions</h2>
 
-<p>We are always happy to respond to feedback and questions. If you have any queries or points of view, feel free to share them on our <a href="https://discourse.mozilla.org/c/devtools">DevTools Discourse Forum</a>.</p>
+<p>Nous sommes toujours heureux de répondre aux réactions et aux questions. Si vous avez une quelconque requête ou un point de vue à exprimer, sentez-vous libres de les partager sur notre <a href="https://discourse.mozilla.org/c/devtools">Forum des discussions relatives aux outils de développement</a>.</p>

@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Guide/Modules
 
 <h2 id="Browser_support" name="Browser_support">ブラウザーのサポート状況</h2>
 
-<p>ネイティブの JavaScript モジュール機能は、<code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import">import</a></code> と <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/export">export</a></code> 文を利用します。これらに対するブラウザーの互換性は次のとおりです。</p>
+<p>ネイティブの JavaScript モジュール機能は、<code><a href="/ja/docs/Web/JavaScript/Reference/Statements/import">import</a></code> と <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/export">export</a></code> 文を利用します。これらに対するブラウザーの互換性は次のとおりです。</p>
 
 <h3 id="import" name="import">import</h3>
 
@@ -88,7 +88,7 @@ modules/
 
 <p>しかし、少なくとも今のところは <code>.js</code> を使い続けることにしました。ブラウザでモジュールを正しく動作させるためには、サーバーが <code>text/javascript</code> などの JavaScript MIME タイプを含む <code>Content-Type</code> ヘッダでモジュールを提供していることを確認する必要があります。そうしないと、"The server responded with a non-JavaScript MIME type" のような厳格な MIME タイプチェックエラーが表示され、ブラウザは JavaScript を実行しません。ほとんどのサーバーでは、<code>.js</code> ファイルにはすでに正しい MIME タイプが設定されていますが、<code>.mjs</code> ファイルにはまだ設定されていません。すでに <code>.mjs</code> ファイルを正しく提供しているサーバーには、<a href="https://pages.github.com/">GitHub Pages</a> や Node.js の <code><a href="https://github.com/http-party/http-server#readme">http-server</a></code> などがあります。</p>
 
-<p>これは、すでにそのような環境を使用している場合や、今はまだ使用していないが、何をしているか知っていてアクセスできる場合には問題ありません(つまり、<code>.mjs</code> ファイルに正しい <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code> を設定するようにサーバーを設定することができます)。しかし、あなたがファイルを提供しているサーバーを制御できない場合には、混乱を引き起こす可能性があります。</p>
+<p>これは、すでにそのような環境を使用している場合や、今はまだ使用していないが、何をしているか知っていてアクセスできる場合には問題ありません(つまり、<code>.mjs</code> ファイルに正しい <code><a href="/ja/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code> を設定するようにサーバーを設定することができます)。しかし、あなたがファイルを提供しているサーバーを制御できない場合には、混乱を引き起こす可能性があります。</p>
 
 <p>この記事では学習と移植性を考慮して、<code>.js</code> を使用することにしました。</p>
 
@@ -133,7 +133,7 @@ export function draw(ctx, length, x, y, color) {
 
 <pre class="brush: js; notranslate">import { name, draw, reportArea, reportPerimeter } from './modules/square.js';</pre>
 
-<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import">import</a></code> 文の後ろに、中かっこで囲まれたインポートしたい機能のカンマ区切りリストを続け、その後ろに from キーワードと、モジュールファイルへのパスを続けます。このパスは、サイトのルートからの相対パスであり、<code>basic-modules</code> の場合は <code>/js-examples/modules/basic-modules</code> です。</p>
+<p><code><a href="/ja/docs/Web/JavaScript/Reference/Statements/import">import</a></code> 文の後ろに、中かっこで囲まれたインポートしたい機能のカンマ区切りリストを続け、その後ろに from キーワードと、モジュールファイルへのパスを続けます。このパスは、サイトのルートからの相対パスであり、<code>basic-modules</code> の場合は <code>/js-examples/modules/basic-modules</code> です。</p>
 
 <p>しかし、この例ではパスの書き方が少し異なっています。「現在の位置」を意味するドット (<code>.</code>) 記法を使っており、その後ろに見つけようとするファイルへのパスを続けています。これは、完全な相対パスを毎回記述するよりも短くてすむためとてもよい方法であり、URL の可搬性もあるため、サイト階層構造の異なる場所に移動させた場合でも動作するでしょう。</p>
 

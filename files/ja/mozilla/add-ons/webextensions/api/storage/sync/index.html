@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/sync
 
 <p>Firefox の場合、ユーザーは <code>"about:preferences"</code> の "Sync 設定" オプションの下にある "アドオン" ボックスにチェックを入れる必要があります。</p>
 
-<p><code>storage.sync</code> の実装はアドオン ID に依存していることに注意してください。もし <code>storage.sync</code> を使うのであれば、 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> manifest.json キーを使用して拡張機能に ID を設定する必要があります。</p>
+<p><code>storage.sync</code> の実装はアドオン ID に依存していることに注意してください。もし <code>storage.sync</code> を使うのであれば、 <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> manifest.json キーを使用して拡張機能に ID を設定する必要があります。</p>
 
 <p>この API の主な利用例は拡張機能の設定を格納し、異なるプロファイル間で同期させることです。この API は最大100 KB までデータを格納できます。それ以上格納しようとするとエラーメッセージを返して失敗します。 この API は稼働時間やパフォーマンスを保証しません。</p>
 

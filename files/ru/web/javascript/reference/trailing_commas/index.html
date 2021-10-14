@@ -89,7 +89,7 @@ Math.max(10, 20,);
 
 <h3 id="Недопустимые_висящие_запятые">Недопустимые висящие запятые</h3>
 
-<p>Определение параметров функции или вызов функции, содержащих только запятую будет генерировать {{Jsxref("SyntaxError")}}. Кроме того, при использовании <a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">оставшихся параметров</a> не допускается использовать висящие запятые:</p>
+<p>Определение параметров функции или вызов функции, содержащих только запятую будет генерировать {{Jsxref("SyntaxError")}}. Кроме того, при использовании <a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">остаточных параметров</a> не допускается использовать висящие запятые:</p>
 
 <pre class="brush: js example-bad">function f(,) {} // SyntaxError: missing formal parameter
 (,) =&gt; {};       // SyntaxError: expected expression, got ','

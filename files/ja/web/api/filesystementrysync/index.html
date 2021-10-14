@@ -25,7 +25,7 @@ translation_of: Web/API/FileSystemEntrySync
 
 <h2 id="basic" name="basic">基本のコンセプト</h2>
 
-<p><code>FileSystemEntrySync</code> インターフェイスには、ファイルやディレクトリの操作に必要なメソッドが含まれていますが、<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystemEntrySync$translate?tolocale=ja#toURL">toURL()</a></code>というエントリの URL を取得するための便利なメソッドもあります。 また新しい URL スキーム <code>filesystem:</code> を紹介します。</p>
+<p><code>FileSystemEntrySync</code> インターフェイスには、ファイルやディレクトリの操作に必要なメソッドが含まれていますが、<code><a href="/ja/docs/Web/API/FileSystemEntrySync$translate?tolocale=ja#toURL">toURL()</a></code>というエントリの URL を取得するための便利なメソッドもあります。 また新しい URL スキーム <code>filesystem:</code> を紹介します。</p>
 
 <p>Google Chromeで <code>filesystem:</code> スキームを使用すると、アプリのルートに保存されているすべてのファイルとフォルダを表示できます。 アプリの起源のルートディレクトリに <code>filesystem:</code> スキームを使用するだけです。たとえば、アプリが <code><a class="external external-icon" href="http://ww.html5rocks.com" rel="freelink">http://ww.html5rocks.com</a></code> にある場合は、 <code>filesystem:<a class="external external-icon" href="http://www.html5rocks.com/temporary/" rel="freelink">http://www.html5rocks.com/temporary/</a></code> をタブで開きます。Chrome は、アプリのオリジンに保存されているすべてのファイルとフォルダの読み取り専用リストを表示します。</p>
 
@@ -34,19 +34,19 @@ translation_of: Web/API/FileSystemEntrySync
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>Metadata <a href="#getMetada" title="#getMetada">getMetadata</a> () raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>Metadata <a href="#getMetada" title="#getMetada">getMetadata</a> () raises (<a href="/ja/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>FileSystemEntrySync <a href="#moveTo" title="#moveTo">moveTo</a> (in <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync" title="en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>FileSystemEntrySync <a href="#moveTo" title="#moveTo">moveTo</a> (in <a href="/ja/DOM/File_API/File_System_API/DirectoryEntrySync" title="en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/ja/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>FileSystemEntrySync <a href="#copyTo" title="#copyTo">copyTo</a>(in <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync" title="en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>FileSystemEntrySync <a href="#copyTo" title="#copyTo">copyTo</a>(in <a href="/ja/DOM/File_API/File_System_API/DirectoryEntrySync" title="en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/ja/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
    <td><code>DOMString <a href="#toURL" title="#toURL">toURL</a>();</code></td>
   </tr>
   <tr>
-   <td><code>void <a href="#remove" title="#remove">remove</a>() raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>void <a href="#remove" title="#remove">remove</a>() raises (<a href="/ja/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
    <td><code>DirectoryEntrySync <a href="#getParent" title="#getParent">getParent</a>();</code></td>
@@ -104,7 +104,7 @@ translation_of: Web/API/FileSystemEntrySync
 <p>このエントリに関するメタデータを検索します。 [ todo: どのような種類のメタデータを指定するか]</p>
 
 <pre>Metadata getMetada ()
-  raises <code>(<a href="https://developer.mozilla.org/en/DOM/File_API/File_System_API/FileException">FileException</a>)</code>;</pre>
+  raises <code>(<a href="/ja/DOM/File_API/File_System_API/FileException">FileException</a>)</code>;</pre>
 
 <h5 id="引数">引数</h5>
 
@@ -158,7 +158,7 @@ translation_of: Web/API/FileSystemEntrySync
 
 <pre>FileSystemEntrySync moveTo (
   in DirectoryEntrySync <em>parent</em>, optional DOMString <em>newName</em>
-) raises (<a href="https://developer.mozilla.org/en/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
+) raises (<a href="/ja/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
 
 <h5 id="引数_2">引数</h5>
 
@@ -220,7 +220,7 @@ translation_of: Web/API/FileSystemEntrySync
 
 <pre>void copyTo (
   in DirectoryEntrySync <em>parent</em>, optional DOMString <em>newName</em>
-) raises (<a href="https://developer.mozilla.org/en/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
+) raises (<a href="/ja/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
 
 <h5 id="引数_3">引数</h5>
 
@@ -312,7 +312,7 @@ translation_of: Web/API/FileSystemEntrySync
 <p>ファイルまたはディレクトリを削除します。 空のディレクトリやファイルシステムのルートディレクトリは削除できません。 空のディレクトリを削除する場合は、代わりに <a href="/ja/docs/Web/API/DirectoryEntrySync#removeRecursively()" rel="internal" title="https://developer.mozilla.org/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()"><code>removeRecursively()</code></a> を使用してください。</p>
 
 <pre>void remove (
-) raises (<a href="https://developer.mozilla.org/en/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
+) raises (<a href="/ja/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
 
 <h5 id="引数_5">引数</h5>
 
@@ -376,14 +376,12 @@ translation_of: Web/API/FileSystemEntrySync
 
 <h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-<div class="hidden">このページの互換表は構造化データから生成されます。データに貢献したい場合は <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックし、プルリクエストを送信してください。</div>
-
 <p>{{Compat("api.FileSystemEntrySync")}}</p>
 
 <h2 id="あわせて参照">あわせて参照</h2>
 
 <p>仕様:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}</p>
 
-<p>リファレンス: <a href="/en/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_API">File System API</a></p>
+<p>リファレンス: <a href="/ja/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_API">File System API</a></p>
 
-<p>イントロダクション: <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API" title="en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>
+<p>イントロダクション: <a href="/ja/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API" title="en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>

@@ -20,7 +20,7 @@ translation_of: Web/HTTP/Connection_management_in_HTTP_1.x
 
 <p>HTTP/1.1 で、新たなモデルを 2 種類導入しました。持続的なコネクションモデルは、連続したリクエストの間はコネクションを開き続けておくことで、新たなコネクションを開始するために必要な時間を削減します。 HTTP パイプラインモデルはさらに 1 歩進んで、回答を待っている間も複数の連続したリクエストを送信して、ネットワークの遅延の大部分を削減します。</p>
 
-<p><img alt="HTTP/1.x の3つのコネクションモデルにおけるパフォーマンスの比較: 短命なコネクション、持続的なコネクション、 HTTP パイプライン" src="https://mdn.mozillademos.org/files/13727/HTTP1_x_Connections.png" style="height: 538px; width: 813px;"></p>
+<p><img alt="HTTP/1.x の3つのコネクションモデルにおけるパフォーマンスの比較: 短命なコネクション、持続的なコネクション、 HTTP パイプライン" src="http1_x_connections.png"></p>
 
 <div class="note">
 <p>HTTP/2 では、コネクションの管理モデルをさらに追加しました。</p>
@@ -28,7 +28,7 @@ translation_of: Web/HTTP/Connection_management_in_HTTP_1.x
 
 <p>特筆すべき重要なポイントとして、 HTTP のコネクション管理は隣接したノードの間のコネクション、すなわち<a href="/ja/docs/Web/HTTP/Headers#e2e">エンドツーエンド</a>ではなく<a href="/ja/docs/Web/HTTP/Headers#hbh">ホップバイホップ</a>に適用されることがあります。クライアントと最初のプロキシの間で使用するモデルと、プロキシと宛先サーバー (または任意の中間プロキシ) の間で使用するモデルが異なることもあります。{{HTTPHeader("Connection")}} や {{HTTPHeader("Keep-Alive")}} といったコネクションモデルの定義にかかわる HTTP ヘッダーは、中間のノードが値を変更できる <a href="/ja/docs/Web/HTTP/Headers#hbh">ホップバイホップ</a> ヘッダーです。</p>
 
-<p>関連するトピックとしては、 HTTP コネクションのアップグレードの概念、つまり HTTP/1.1 コネクションが TLS/1.0、 WebSocket、 又は平文の HTTP/2 のような異なるプロトコルにアップグレードされたことが挙げられます。この<a href="/docs/Web/HTTP/Protocol_upgrade_mechanism">プロトコルのアップグレードメカニズム</a>は他の場所でもっと詳しく文書化されています。</p>
+<p>関連するトピックとしては、 HTTP コネクションのアップグレードの概念、つまり HTTP/1.1 コネクションが TLS/1.0、 WebSocket、 又は平文の HTTP/2 のような異なるプロトコルにアップグレードされたことが挙げられます。この<a href="/ja/docs/Web/HTTP/Protocol_upgrade_mechanism">プロトコルのアップグレードメカニズム</a>は他の場所でもっと詳しく文書化されています。</p>
 
 <h2 id="Short-lived_connections" name="Short-lived_connections">短命なコネクション</h2>
 
@@ -68,11 +68,11 @@ translation_of: Web/HTTP/Connection_management_in_HTTP_1.x
 <p>これらの理由により、パイプラインはよりよいアルゴリズムである<em>多重化</em>に置き換えられました。こちらは HTTP/2 で使用されています。</p>
 </div>
 
-<p>既定で、<a href="/ja/docs/Web/HTTP" title="HTTP">HTTP</a> リクエストは順次発行されます。次のリクエストは、現在のリクエストのレスポンスが到着してから発行されます。これはネットワークの遅延や帯域の制約を受けるため、次のリクエストがサーバーで<em>見える</em>ようになるまでにかなりの遅延が発生する可能性があります。</p>
+<p>既定で、<a href="/ja/docs/Web/HTTP">HTTP</a> リクエストは順次発行されます。次のリクエストは、現在のリクエストのレスポンスが到着してから発行されます。これはネットワークの遅延や帯域の制約を受けるため、次のリクエストがサーバーで<em>見える</em>ようになるまでにかなりの遅延が発生する可能性があります。</p>
 
 <p>パイプラインは連続したリクエストを同一の持続的なコネクションで、回答を待たずに処理します。これは、コネクションの遅延を回避します。理論上は、2 つのリクエストを同じ TCP メッセージに収めた場合でもパフォーマンスが向上するでしょう。典型的な <a href="https://ja.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E3%82%BB%E3%82%B0%E3%83%A1%E3%83%B3%E3%83%88%E3%82%B5%E3%82%A4%E3%82%BA">MSS</a> (最大セグメントサイズ) は複数のシンプルをリクエストを収めるには十分な大きさですが、 HTTP リクエストのサイズの需要は増え続けています。</p>
 
-<p>パイプライン化できない HTTP リクエストもあります。 {{glossary("idempotent","べき等")}} なメソッドである {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}} だけが安全に再実行できます。これらは失敗しても、パイプラインの内容を単純に再実行できます。</p>
+<p>パイプライン化できない HTTP リクエストもあります。 {{glossary("idempotent","べき等")}} なメソッドである {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}} だけが安全に再実行できます。これらは失敗しても、パイプラインの内容を再実行できます。</p>
 
 <p>現在、すべての HTTP/1.1 に準拠するプロキシやサーバーはパイプラインをサポートしているはずですが、実際は多くの制限があります。さまざまな理由で、現行のブラウザーはパイプラインを既定で有効化していません。</p>
 
@@ -86,7 +86,7 @@ translation_of: Web/HTTP/Connection_management_in_HTTP_1.x
 
 <p>サーバーがウェブサイトやウェブアプリケーションのレスポンスを早くしたい場合、より多くのコネクションを開かせることが考えられます。例えば、すべてのリソースを同じドメイン <code>www.example.com</code> で持つのではなく、<code>www1.example.com</code>、<code>www2.example.com</code>、<code>www3.example.com</code> といった複数のドメインに分散させることができます。それぞれのドメインは<em>同じ</em>サーバーに名前解決されて、ウェブブラウザーーはドメインごとに 6 つのコネクションを開きます (この例では、コネクション数が 18 に増加します)。この技術は<em>ドメインシャーディング</em>と呼ばれます。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13783/HTTPSharding.png" style="height: 727px; width: 463px;"></p>
+<p><img alt="" src="httpsharding.png"></p>
 
 <h2 id="Conclusion" name="Conclusion">まとめ</h2>
 

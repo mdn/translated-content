@@ -3,7 +3,7 @@ title: Firefox 3.6 for developers
 slug: Mozilla/Firefox/Releases/3.6
 translation_of: Mozilla/Firefox/Releases/3.6
 ---
-<div><section class="Quick_links" id="Quick_Links">
+<div><section id="Quick_links">
   <ol>
     <li class="toggle">
         <details>
@@ -57,7 +57,7 @@ translation_of: Mozilla/Firefox/Releases/3.6
         </details>
     </li>
   </ol>
-</section></div><p><a class="external" href="http://www.firefox.com/" title="http://www.firefox.com/">Firefox 3.6</a> offers support for new and developing web standards, increased performance, and an overall better experience for web users and developers. This page provides links to articles covering the new capabilities of Firefox 3.6.</p>
+</section></div><p><a class="external" href="http://www.firefox.com/">Firefox 3.6</a> offers support for new and developing web standards, increased performance, and an overall better experience for web users and developers. This page provides links to articles covering the new capabilities of Firefox 3.6.</p>
 
 <h2 id="For_web_site_and_application_developers">For web site and application developers</h2>
 
@@ -71,7 +71,7 @@ translation_of: Mozilla/Firefox/Releases/3.6
  <dt><a href="/zh-cn/CSS/Media_queries#Mozilla-specific_media_features" title="zh-cn/CSS/Media queries#Mozilla-specific media features">Mozilla-specific media features</a></dt>
  <dd>Media features have been added for Mozilla-specific system metrics, so that <a href="/zh-cn/CSS/Media_queries" title="zh-cn/CSS/Media queries">media queries</a> can be used to more safely check on the availability of features such as touch support.</dd>
  <dt><a href="/zh-cn/CSS/Scaling_background_images" title="zh-cn/CSS/Scaling background images">Scaling background images</a></dt>
- <dd>The <code>background-size </code>property from the <a class="external" href="http://dev.w3.org/csswg/css3-background/" title="http://dev.w3.org/csswg/css3-background/#the-background-size-property">CSS 3 Backgrounds and Borders draft</a> is now supported under the name <a href="/zh-CN/docs/Web/CSS/-moz-background-size" title="此页面仍未被本地化, 期待您的翻译!"><code>-moz-background-size</code></a>.</dd>
+ <dd>The <code>background-size </code>property from the <a class="external" href="http://dev.w3.org/csswg/css3-background/">CSS 3 Backgrounds and Borders draft</a> is now supported under the name <a href="/zh-CN/docs/Web/CSS/-moz-background-size" title="此页面仍未被本地化, 期待您的翻译!"><code>-moz-background-size</code></a>.</dd>
  <dt><a href="/zh-cn/WOFF" title="zh-cn/About WOFF">WOFF font support</a></dt>
  <dd><a href="/zh-CN/docs/Web/CSS/@font-face" title="这是一个叫做@font-face 的CSS @规则 ，它允许网页开发者为其网页指定在线字体。 通过这种作者自备字体的方式，@font-face 可以消除对用户电脑字体的依赖。 @font-face 不仅可以放在在CSS的最顶层, 也可以放在 @规则 的 条件规则组 中。"><code>@font-face</code></a> now supports the WOFF downloadable font file format.</dd>
  <dt><a href="/zh-cn/CSS/pointer-events" title="zh-cn/CSS/pointer-events">Pointer events</a></dt>
@@ -81,7 +81,7 @@ translation_of: Mozilla/Firefox/Releases/3.6
 <h4 id="Miscellaneous_CSS_changes">Miscellaneous CSS changes</h4>
 
 <ul>
- <li>The <a href="/zh-cn/CSS/length#Relative_length_units" title="zh-cn/CSS/length#Relative length units"><code>rem</code></a> length unit from <a class="external" href="http://www.w3.org/TR/css3-values/#lengths" title="http://www.w3.org/TR/css3-values/#lengths">CSS3 Values and Units</a> is now supported. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=472195" title="FIXED: support css3 root em ('rem' or 're') units">bug 472195</a></li>
+ <li>The <a href="/zh-cn/CSS/length#Relative_length_units" title="zh-cn/CSS/length#Relative length units"><code>rem</code></a> length unit from <a class="external" href="http://www.w3.org/TR/css3-values/#lengths">CSS3 Values and Units</a> is now supported. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=472195" title="FIXED: support css3 root em ('rem' or 're') units">bug 472195</a></li>
  <li><a href="/zh-CN/docs/Web/CSS/image-rendering" title="image-rendering CSS 属性决定浏览器对缩放图像采取的缩放算法.它适用于元素本身和有其他属性的图像.它对非缩放图像没有影响。"><code>image-rendering</code></a> is supported for images, background images, videos and canvases. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=423756" title="FIXED: Request: Switch for authors to turn on/off bilinear filtering when enlarging images">bug 423756</a></li>
  <li><a href="/zh-CN/docs/Web/CSS/text-align" title="text-align CSS属性定义行内内容（例如文字）如何相对它的块父元素对齐。text-align 并不控制块元素自己的对齐，只控制它的行内内容的对齐。"><code>text-align</code></a>:end is now supported. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=299837" title="FIXED: [FIX]add support for text-align: end">bug 299837</a></li>
  <li>DOM changes to elements using the table <a href="/zh-CN/docs/Web/CSS/display" title="display CSS 属性指定了元素的显示类型，它包含两类基础特征，用于指定元素怎样生成盒模型——外部显示类型定义了元素怎样参与流式布局的处理，内部显示类型定义了元素内子元素的布局方式。"><code>display</code></a> types now work much better.</li>
@@ -137,7 +137,7 @@ translation_of: Mozilla/Firefox/Releases/3.6
 <h4 id="Miscellaneous_DOM_changes">Miscellaneous DOM changes</h4>
 
 <ul>
- <li>The <code>getBoxObjectFor()</code> method has been <strong>removed</strong>, as it was non-standard and exposed even more non-standard stuff to the web. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=340571" title="FIXED: getBoxObjectFor leaking-onto-the-Web disaster">bug 340571</a>. Also affects <a class="external" href="http://mootools.net/" title="http://mootools.net/">MooTools</a> which uses this call for Gecko detection; this has been fixed in the latest version of MooTools, so be sure to update.</li>
+ <li>The <code>getBoxObjectFor()</code> method has been <strong>removed</strong>, as it was non-standard and exposed even more non-standard stuff to the web. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=340571" title="FIXED: getBoxObjectFor leaking-onto-the-Web disaster">bug 340571</a>. Also affects <a class="external" href="http://mootools.net/">MooTools</a> which uses this call for Gecko detection; this has been fixed in the latest version of MooTools, so be sure to update.</li>
  <li>The new <a class="internal" href="/zh-cn/DOM/window.mozInnerScreenX" title="zh-cn/DOM/window.mozInnerScreenX"><code>mozInnerScreenX</code></a> and <a class="internal" href="/zh-cn/DOM/window.mozInnerScreenY" title="zh-cn/DOM/window.mozInnerScreenY"><code>mozInnerScreenY</code></a> properties on DOM windows have been added; these return the screen coordinates of the top-left corner of the window's viewport.</li>
  <li>The new <code>mozScreenPixelsPerCSSPixel</code> attribute on the <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils" title="">nsIDOMWindowUtils</a></code> interface, accessible only to chrome, provides a conversion factor between CSS pixels and screen pixels; this value can vary based on the zoom level of the content.</li>
  <li>When the page's URI's document fragment identifier (the part after the "#" (hash) character) changes, a new <code>hashchange</code> event is sent to the page. See <a class="internal" href="/zh-cn/DOM/window.onhashchange" title="window.onhashchange">window.onhashchange</a> for more information. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=385434" title="FIXED: Add support for HTML5 onhashchange (event for named anchor changes)">bug 385434</a></li>
@@ -203,7 +203,7 @@ translation_of: Mozilla/Firefox/Releases/3.6
 
 <dl>
  <dt><a href="/zh-cn/Themes/Lightweight_themes" title="zh-cn/Themes/Lightweight themes">Lightweight themes</a></dt>
- <dd>Firefox 3.6 supports lightweight themes; these are easy-to-create themes that simply apply a background to the top (URL bar and button bar) and bottom (status bar) of browser windows. This is an integration of the existing <a class="external" href="http://www.getpersonas.com/" title="http://www.getpersonas.com/">Personas</a> theme architecture into Firefox.</dd>
+ <dd>Firefox 3.6 supports lightweight themes; these are easy-to-create themes that simply apply a background to the top (URL bar and button bar) and bottom (status bar) of browser windows. This is an integration of the existing <a class="external" href="http://www.getpersonas.com/">Personas</a> theme architecture into Firefox.</dd>
 </dl>
 
 <h3 id="Miscellaneous">Miscellaneous</h3>

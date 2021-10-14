@@ -17,79 +17,79 @@ tags:
   - Web Performance
 translation_of: Web/Performance
 ---
-<p><span class="seoSummary">ウェブパフォーマンスは客観的な測定値であり、読み込み時間とランタイムに関するユーザーエクスペリエンスの認知度です。ウェブパフォーマンスとは、サイトが読み込まれ、対話や応答ができるようになるまでの時間と、ユーザーとの対話中にコンテンツがどの程度スムーズになるかです </span>- スクロールはスムーズですか？ ボタンはクリック可能ですか？ ポップアップはすばやく開くことができますか？ また、ポップアップはスムーズに動作しますか？ウェブパフォーマンスには、読み込み時間、 1 秒あたりのフレーム数、対話時間までの客観的な測定値と、コンテンツの読み込みに要した時間の主観的な経験の両方が含まれます。</p>
+<p><span class="seoSummary">ウェブパフォーマンスは客観的な測定値と、読み込み時や実行時のユーザーエクスペリエンスの知覚状況から成ります。ウェブパフォーマンスとは、サイトが読み込まれるまでの時間、操作可能・応答可能になるまでの時間、そしてユーザーが操作する際のコンテンツのスムーズさを意味します。</span>スクロールはスムーズか、ボタンはクリックしやすいか、ポップアップはすぐに読み込まれて表示されるか、表示の際にスムーズにアニメーションするか。ウェブパフォーマンスには、読み込み時間、 1 秒あたりのフレーム数、操作可能になるまでの時間などの客観的な測定値と、コンテンツが読み込まれるまでにどのくらいの時間がかかったように感じたかという主観的な体験の両方が含まれます。</p>
 
-<p>サイトが応答するまでの時間が長ければ長いほど、ユーザーはそのサイトを放棄することになります。読み込み時間と応答時間を最小限に抑え、さらに機能を追加して遅延を隠すことで、できるだけ早く、できるだけ利用可能でインタラクティブな体験を提供し、一方で、体験のロングテール部分では非同期的に読み込みを行うことが重要です。</p>
+<p>サイトが応答するまでの時間が長ければ長いほど、ユーザーはそのサイトを放棄する傾向があります。読み込み時間と応答時間を最小限に抑え、さらに機能を追加して遅延を隠すことで、できるだけ早く、できるだけ利用可能でインタラクティブな体験を提供し、一方で、体験のロングテール部分では非同期的に読み込みを行うことが重要です。</p>
 
-<p>ウェブパフォーマンスの測定と改善に役立つツール、API、およびベストプラクティスがあります。 このセクションでそれらをカバーします。</p>
+<p>ウェブパフォーマンスの測定と改善に役立つツール、API、およびベストプラクティスがあります。 この章でそれらをカバーします。</p>
 
-<h2 id="Key_performance_guides">Key performance guides</h2>
+<h2 id="Key_performance_guides">キーパフォーマンスガイド</h2>
 
 <p>{{LandingPageListSubpages}}</p>
 
 <div class="cleared topicpage-table">
 <div class="section">
-<h2 id="Beginners_tutorials">Beginner's tutorials</h2>
+<h2 id="Beginners_tutorials">初心者向けチュートリアル</h2>
 
-<p>The MDN <a href="/en-US/docs/Learn/Performance">Web Performance Learning Area</a> contains modern, up-to-date tutorials covering Performance essentials. Start here if you are a newcomer to performance:</p>
+<p>MDN の<a href="/ja/docs/Learn/Performance">ウェブパフォーマンスの学習領域</a>には、パフォーマンスの基礎をカバーする最新のチュートリアルが含まれています。パフォーマンスについての初心者は、ここから始めてください。</p>
 
 <dl>
- <dt><a href="/en-US/docs/Learn/Performance/What_is_web_performance">Web performance: brief overview</a></dt>
- <dd>Overview of the web performance learning path. Start your journey here.</dd>
- <dt><a href="/en-US/docs/Learn/Performance/What_is_web_performance">What is web performance?</a></dt>
- <dd>This article starts the module off with a good look at what performance actually is — this includes the tools, metrics, APIs, networks, and groups of people we need to consider when thinking about performance, and how we can make performance part of our web development workflow.</dd>
- <dt><a href="/en-US/docs/Learn/Performance/Perceived_performance">How do users perceive performance?</a></dt>
+ <dt><a href="/ja/docs/Learn/Performance/What_is_web_performance">ウェブパフォーマンス: 短い概要</a></dt>
+ <dd>ウェブパフォーマンスの学習経路の概要です。ここから旅を始めましょう。</dd>
+ <dt><a href="/ja/docs/Learn/Performance/What_is_web_performance">ウェブパフォーマンスとは</a></dt>
+ <dd>この記事では、パフォーマンスとは何かをよく理解することからモジュールを始めます。パフォーマンスについて考えるときに考慮すべきツール、指標、API、ネットワーク、人々のグループ、そしてウェブ開発のワークフローの一部としてパフォーマンスを活用する方法などを紹介します。</dd>
+ <dt><a href="/ja/docs/Learn/Performance/perceived_performance">ユーザーはパフォーマンスをどう知覚するのか</a></dt>
  <dd>
- <p>More important than how fast your website is in milliseconds, is how fast your users perceive your site to be. These perceptions are impacted by actual p<span style="letter-spacing: -0.00278rem;">age load time, idling, responsiveness to user interaction, and the smoothness of scrolling and other animations. In this article, we discuss the various loading metrics, animation, and responsiveness metrics, along with best practices to improve user perception, if not the actual timings.</span></p>
+ <p>ウェブサイトの速さをミリ秒単位で示すことよりも重要なのは、ユーザーがサイトの速さをどのように認識しているかということです。これらの認識は、実際のページロード時間、アイドリング、ユーザーインタラクションへの応答性、スクロールやその他のアニメーションのスムーズさに影響されます。この記事では、様々なロードメトリクス、アニメーション、応答性のメトリクスと、実際の時間ではなくてもユーザーの認識を改善するためのベストプラクティスについて説明します。</p>
  </dd>
- <dt><a href="/en-US/docs/Learn/Performance/Web_Performance_Basics">Web performance basics</a></dt>
- <dd>In addition to the front end components of HTML, CSS, JavaScript, and media files, there are features that can make applications slower and features that can make applications subjectively and objectively faster. There are many APIs, developer tools, best practices, and bad practices relating to web performance. Here we'll introduce many of these features ad the basic level and provide links to deeper dives to improve performance for each topic.</dd>
- <dt><a href="/en-US/docs/Learn/Performance/HTML">HTML performance features</a></dt>
- <dd>Some attributes and the source order of your mark-up can impact the performance or your website. By minimizing the number of DOM nodes, making sure the best order and attributes are used for including content such as styles, scripts, media, and third-party scripts, you can drastically improve the user experience. This article looks in detail at how HTML can be used to ensure maximum performance.</dd>
- <dt><a href="/en-US/docs/Learn/Performance/Multimedia">Multimedia: images and video</a></dt>
- <dd>The lowest hanging fruit of web performance is often media optimization. Serving different media files based on each user agent's capability, size, and pixel density is possible. Additional tips like removing audio tracks from background videos can improve performance even further. In this article we discuss the impact video, audio, and image content has on performance, and the methods to ensure that impact is as minimal as possible.</dd>
- <dt><a href="/en-US/docs/Learn/Performance/CSS">CSS performance features</a></dt>
- <dd>CSS may be a less important optimization focus for improved performance, but there are some CSS features that impact performance more than others. In this article we look at some CSS properties that impact performance and suggested ways of handling styles to ensure performance is not negatively impacted.</dd>
- <dt><a href="/en-US/docs/Learn/Performance/JavaScript">JavaScript performance best practices</a></dt>
- <dd>JavaScript, when used properly, can allow for interactive and immersive web experiences — or it can significantly harm download time, render time, in-app performance, battery life, and user experience. This article outlines some JavaScript best practices that should be considered to ensure even complex content is as performant as possible.</dd>
- <dt><a href="/en-US/docs/Learn/Performance/Mobile">Mobile performance</a></dt>
- <dd>With web access on mobile devices being so popular, and all mobile platforms having fully-fledged web browsers, but possibly limited bandwidth, CPU and battery life, it is important to consider the performance of your web content on these platforms. This article looks at mobile-specific performance considerations.</dd>
+ <dt><a href="/ja/docs/Learn/Performance/Web_Performance_Basics">ウェブパフォーマンスの基本</a></dt>
+ <dd>HTML、CSS、JavaScript、メディアファイルなどのフロントエンド部品に加えて、アプリケーションを遅くする機能と、主観的・客観的にアプリケーションを速くする機能があります。ウェブパフォーマンスに関連する API、開発者ツール、ベストプラクティス、バッドプラクティスは数多くあります。ここでは、これらの機能の多くを基本的なレベルで紹介し、それぞれのトピックについて、パフォーマンスを向上させるためのより深い考察へのリンクを提供します。</dd>
+ <dt><a href="/ja/docs/Learn/Performance/HTML">HTML のパフォーマンス特性</a></dt>
+ <dd>マークアップの属性やソースの順序によっては、ウェブサイトのパフォーマンスに影響を与えることがあります。 DOM ノードの数を最小限に抑え、スタイル、スクリプト、メディア、サードパーティのスクリプトなどのコンテンツを含むために、最適な順序と属性を使用することで、ユーザーエクスペリエンスを劇的に向上させることができます。この記事では、最大限のパフォーマンスを確保するために HTML をどのように使用すればよいかを詳しく見ていきます。</dd>
+ <dt><a href="/ja/docs/Learn/Performance/Multimedia">マルチメディア: 画像と動画</a></dt>
+ <dd>ウェブパフォーマンスの中で最も身近な位置にあるのは、メディアの最適化です。各ユーザーエージェントの能力、サイズ、ピクセル密度に応じて、異なるメディアファイルを提供することが可能です。また、バックグラウンドのビデオからオーディオトラックを削除するなどのヒントを加えると、さらにパフォーマンスが向上します。この記事では、動画、音声、画像のコンテンツがパフォーマンスに与える影響と、その影響をできるだけ小さくするための方法について説明します。</dd>
+ <dt><a href="/ja/docs/Learn/Performance/CSS">CSS パフォーマンス特性</a></dt>
+ <dd>CSS は、パフォーマンス向上のための最適化の焦点としてはあまり重要ではないかもしれませんが、パフォーマンスに影響を与える CSS の機能はいくつかあります。この記事では、パフォーマンスに影響を与えるいくつかの CSS プロパティと、パフォーマンスに悪影響を与えないためのスタイルの処理方法を提案します。</dd>
+ <dt><a href="/ja/docs/Learn/Performance/JavaScript">JavaScript パフォーマンスのベストプラクティス</a></dt>
+ <dd>JavaScript は、適切に使用すればインタラクティブで没入感のあるウェブ体験を実現できますが、ダウンロード時間、レンダリング時間、アプリ内のパフォーマンス、バッテリー寿命、ユーザーエクスペリエンスを大きく損なう可能性があります。この記事では、複雑なコンテンツであっても可能な限りパフォーマンスを向上させるために考慮すべき JavaScript のベストプラクティスを紹介します。</dd>
+ <dt><a href="/ja/docs/Learn/Performance/Mobile">モバイルパフォーマンス</a></dt>
+ <dd>モバイル端末でのウェブアクセスは非常に人気があり、すべてのモバイルプラットフォームには本格的なウェブブラウザーが搭載されていますが、帯域幅、CPU、バッテリーの寿命が限られている可能性があるため、これらのプラットフォームでのウェブコンテンツのパフォーマンスを考慮することが重要です。この記事では、モバイルに特化したパフォーマンスの考慮点について説明します。</dd>
 </dl>
 
 </div>
 
 <div class="section">
-<h2 id="Using_Performance_APIs">Using Performance APIs</h2>
+<h2 id="Using_Performance_APIs">パフォーマンス API の使用</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/API/Performance_API/Using_the_Performance_API">Performance API</a></dt>
- <dd>This guide describes how to use the <a href="/en-US/docs/Web/API/Performance" title="The Performance interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API."><code>Performance</code></a> interfaces that are defined in the <a class="external external-icon" href="https://w3c.github.io/hr-time/" rel="noopener">High-Resolution Time</a> standard.</dd>
- <dt><a href="/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API">Resource Timing API</a></dt>
- <dd><a href="/en-US/docs/Web/API/Resource_Timing_API">Resource loading and timing</a> the loading of those resources, including managing the resource buffer and coping with CORS</dd>
- <dt><a href="/en-US/docs/Web/API/Performance_Timeline/Using_Performance_Timeline">The performance timeline</a></dt>
- <dd>The <a href="/en-US/docs/Web/API/Performance_Timeline">Performance Timeline</a> standard defines extensions to the <a href="/en-US/docs/Web/API/Performance" title="The Performance interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API."><code>Performance</code></a> interface to support client-side latency measurements within applications. Together, these interfaces can be used to help identify an application's performance bottlenecks.</dd>
- <dt><a href="/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API">User Timing API</a></dt>
- <dd>Create application specific timestamps using the <a href="/en-US/docs/Web/API/User_Timing_API">user timing API</a>'s "mark" and "measure" entry types - that are part of the browser's performance timeline.</dd>
- <dt><a href="/en-US/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API">Frame Timing API</a></dt>
- <dd>The <code><a href="/en-US/docs/Web/API/PerformanceFrameTiming">PerformanceFrameTiming</a></code> interface provides <em>frame</em> timing data about the browser's event loop.</dd>
- <dt><a href="/en-US/docs/Web/API/Beacon_API">Beacon API</a></dt>
- <dd><small>The <a href="/en-US/docs/Web/API/Beacon_API">Beacon</a> interface schedules an asynchronous and non-blocking request to a web server.</small></dd>
- <dt><a href="/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility">Intersection Observer API</a></dt>
- <dd>Learn to time element visibility with the <a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> and be asynchronously notified when elements of interest becomes visible.</dd>
+ <dt><a href="/ja/docs/Web/API/Performance_API/Using_the_Performance_API">Performance API</a></dt>
+ <dd>このガイドでは、 <a href="/ja/docs/Web/API/Performance" title="Performance インターフェイスは、現在のページのパフォーマンス関連情報へのアクセスを提供します。これは、 High Resolution Time API の一部ですが、Performance Timeline API、Navigation Timing API、User Timing API、Resource Timing API によって拡張されています。"><code>Performance</code></a> インターフェイスの使い方を説明します。これは <a class="external external-icon" href="https://w3c.github.io/hr-time/" rel="noopener">High-Resolution Time</a> 標準で定義されているものです。</dd>
+ <dt><a href="/ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API">Resource Timing API</a></dt>
+ <dd><a href="/ja/docs/Web/API/Resource_Timing_API">リソースの読み込みとそのタイミング</a>です。リソースバッファの管理や CORS への対応なども含みます。</dd>
+ <dt><a href="/ja/docs/Web/API/Performance_Timeline/Using_Performance_Timeline">パフォーマンスタイムライン</a></dt>
+ <dd><a href="/ja/docs/Web/API/Performance_Timeline">Performance Timeline</a> 標準は、アプリケーション内のクライアントサイドのレイテンシー測定をサポートする <a href="/ja/docs/Web/API/Performance" title="Performance インターフェイスは、現在のページのパフォーマンス関連情報へのアクセスを提供します。これは、 High Resolution Time API の一部ですが、Performance Timeline API、Navigation Timing API、User Timing API、Resource Timing API によって拡張されています。"><code>Performance</code></a> インターフェイスの拡張機能を定義しています。これらのインターフェイスを併用することで、アプリケーションのパフォーマンスのボトルネックを特定するのに役立ちます。</dd>
+ <dt><a href="/ja/docs/Web/API/User_Timing_API/Using_the_User_Timing_API">User Timing API</a></dt>
+ <dd>アプリケーション固有のタイムスタンプを生成するために、 <a href="/ja/docs/Web/API/User_Timing_API">user timing API</a> の "mark" および "measure" の種類の項目を使用します。これらはブラウザーのパフォーマンスタイムラインの一部です。</dd>
+ <dt><a href="/ja/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API">Frame Timing API</a></dt>
+ <dd><code><a href="/ja/docs/Web/API/PerformanceFrameTiming">PerformanceFrameTiming</a></code> インターフェイスは、ブラウザーのイベントループに関する<em>フレーム</em>のタイミングデータを提供します。</dd>
+ <dt><a href="/ja/docs/Web/API/Beacon_API">Beacon API</a></dt>
+ <dd><a href="/ja/docs/Web/API/Beacon_API">Beacon</a> インターフェイスは、ウェブサーバーへの非同期かつブロックされないリクエストをスケジューリングします。</dd>
+ <dt><a href="/ja/docs/Web/API/Intersection_Observer_API/Timing_element_visibility">Intersection Observer API</a></dt>
+ <dd><a href="/ja/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> を使って要素が見えるようになることを時間的に測定し、関心のある要素が可視化されたときに非同期に通知を受けることができます。</dd>
 </dl>
 
-<h2 id="Other_documentation">Other documentation</h2>
+<h2 id="Other_documentation">その他の文書</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Tools/Performance">Developer Tools Performance Features</a></dt>
- <dd>This section provides information on how to use and understand the performance features in your developer tools, including <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a>, <a href="/en-US/docs/Tools/Performance/Call_Tree">Call Tree</a>, and <a href="/en-US/docs/Tools/Performance/Flame_Chart">Flame Charts</a>.</dd>
- <dt><a href="/en-US/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler">Profiling with the built-in profiler</a></dt>
+ <dt><a href="/ja/docs/Tools/Performance">開発者ツールのパフォーマンス機能</a></dt>
+ <dd>この節では、<a href="/ja/docs/Tools/Performance/Waterfall">ウォーターフォール</a>、<a href="/ja/docs/Tools/Performance/Call_Tree">コールツリー</a>、<a href="/ja/docs/Tools/Performance/Flame_Chart">フレイムチャート</a>など、開発者ツールのパフォーマンス機能の使い方と理解について説明します。</dd>
+ <dt><a href="/ja/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler">組み込みプロファイラーによるプロファイル</a></dt>
  <dd>Learn how to profile app performance with Firefox's built-in profiler.</dd>
 </dl>
 </div>
 </div>
 
-<h2 id="Glossary_Terms">Glossary Terms</h2>
+<h2 id="Glossary_Terms">用語集の用語</h2>
 
 <div class="index">
 <ul class="index">
@@ -145,12 +145,12 @@ translation_of: Web/Performance
 </ul>
 </div>
 
-<h2 id="Documents_yet_to_be_written">Documents yet to be written</h2>
+<h2 id="Documents_yet_to_be_written">まだ書かれていない文書</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Learn/Performance/JavaScript">JavaScript performance best practices</a></dt>
+ <dt><a href="/ja/docs/Learn/Performance/JavaScript">JavaScript performance best practices</a></dt>
  <dd>JavaScript, when used properly, can allow for interactive and immersive web experiences ... or it can significantly harm download time, render time, in app performance, battery life, and user experience. This article outlines some JavaScript best practices that can ensure even complex content's performance is the highest possible.</dd>
- <dt><a href="/en-US/docs/Learn/Performance/Mobile">Mobile performance</a></dt>
+ <dt><a href="/ja/docs/Learn/Performance/Mobile">Mobile performance</a></dt>
  <dd>With web access on mobile devices being so popular, and all mobile platforms having fully-fledged web browsers, but possibly limited bandwidth, CPU, and battery life, it is important to consider the performance of your web content on these platforms. This article also looks at mobile-specific performance considerations.</dd>
  <dt>Web font performance</dt>
  <dd>An often overlooked aspect of performance landscape are web fonts. Web fonts are more prominent in web design than ever, yet many developers embed them from a third party service and think nothing of it. In this article, we'll covers methods for getting your font files as small as possible with efficient file formats and sub setting. From there, we'll go on to talk about how browsers text, and how you can use CSS and JavaScript features to ensure your fonts render quickly, and with minimal disruption to the user experience.</dd>
@@ -161,119 +161,119 @@ translation_of: Web/Performance
  <dt>The role of TLS in performance</dt>
  <dd>TLS—or HTTPS as we tend to call it—is crucial in creating secure and safe user experiences. While hardware has reduced the negative impacts TLS has had on server performance, it still represents a substantial slice of the time we spend waiting for browsers to connect to servers. This article explains the TLS handshake process, and offers some tips for reducing this time, such as OCSP stapling, HSTS preload headers, and the potential role of resource hints in masking TLS latency for third parties.</dd>
  <dt>Reading performance charts</dt>
- <dd>Developer tools provide information on performance, memory, and network requests. Knowing how to read <a href="/en-US/docs/Tools/Performance/Waterfall">waterfall</a> charts, <a href="/en-US/docs/Tools/Performance/Call_Tree">call trees</a>, traces, <a href="/en-US/docs/Tools/Performance/Flame_Chart">flame charts</a> , and <a href="/en-US/docs/Tools/Performance/Allocations">allocations</a> in your browser developer tools will help you understand waterfall and flame charts in other performance tools.</dd>
+ <dd>Developer tools provide information on performance, memory, and network requests. Knowing how to read <a href="/ja/docs/Tools/Performance/Waterfall">waterfall</a> charts, <a href="/ja/docs/Tools/Performance/Call_Tree">call trees</a>, traces, <a href="/ja/docs/Tools/Performance/Flame_Chart">flame charts</a> , and <a href="/ja/docs/Tools/Performance/Allocations">allocations</a> in your browser developer tools will help you understand waterfall and flame charts in other performance tools.</dd>
  <dt>Alternative media formats</dt>
  <dd>When it comes to images and videos, there are more formats than you're likely aware of. Some of these formats can take your highly optimized media-rich pages even further by offering additional reductions in file size. In this guide we'll discuss some alternative media formats, how to use them responsibly so that non-supporting browsers don't get left out in the cold, and some advanced guidance on transcoding your existing assets to them.</dd>
  <dt>Analyzing JavaScript bundles</dt>
  <dd>No doubt, JavaScript is a big part of modern web development. While you should always strive to reduce the amount of JavaScript you use in your applications, it can be difficult to know where to start. In this guide, we'll show you how to analyze your application's script bundles, so you know <em>what</em> you're using, as well how to detect if your app contains duplicated scripts between bundles.</dd>
- <dt><a href="/en-US/docs/Web/Performance/Lazy_loading">Lazy loading</a></dt>
+ <dt><a href="/ja/docs/Web/Performance/Lazy_loading">Lazy loading</a></dt>
  <dd>It isn't always necessary to load all of a web applications assets on initial page load. Lazy Loading is deferring the loading of assets on a page, such as scripts, images, etc., on a page to a later point in time i.e when those assets are actually needed.</dd>
  <dt>Lazy-loading JavaScript with dynamic imports</dt>
  <dd>When developers hear the term "lazy loading", they immediately think of below-the-fold imagery that loads when it scrolls into the viewport. But did you know you can lazy load JavaScript as well? In this guide we'll talk about the dynamic import() statement, which is a feature in modern browsers that loads a JavaScript module on demand. Of course, since this feature isn't available everywhere, we'll also show you how you can configure your tooling to use this feature in a widely compatible fashion.</dd>
- <dt><a href="/en-US/docs/Web/Performance/Controlling_resource_delivery_with_resource_hints">Controlling resource delivery with resource hints</a></dt>
+ <dt><a href="/ja/docs/Web/Performance/Controlling_resource_delivery_with_resource_hints">Controlling resource delivery with resource hints</a></dt>
  <dd>Browsers often know better than we do when it comes to resource prioritization and delivery however they're far from clairyovant. Native browser features enable us to hint to the browser when it should connect to another server, or preload a resource before the browser knows it ever needs it. When used judiciously, this can make fast experience seem even faster. In this article, we cover native browser features like rel=preconnect, rel=dns-prefetch, rel=prefetch, and rel=preload, and how to use them to your advantage.</dd>
- <dt><a href="/en-US/docs/Web/Performance/Performance_budgets">Performance Budgets</a></dt>
+ <dt><a href="/ja/docs/Web/Performance/Performance_budgets">Performance Budgets</a></dt>
  <dd>Marketing, design, and sales needs, and developer experience, often ad bloat, third-party scripts, and other features that can slow down web performance. To help set priorities, it is helpful to set a performance budget: a set of restrictions to not exceed during the development phase. In this article, we'll discuss creating and sticking to a performance budget. </dd>
- <dt><a href="/en-US/docs/Web/Performance/Checklist">Web performance checklist</a></dt>
+ <dt><a href="/ja/docs/Web/Performance/Checklist">Web performance checklist</a></dt>
  <dd>A performance checklist of features to consider when developing applications with links to tutorials on how to implement each feature, include service workers, diagnosing performance problems, font loading best practices, client hints, creating performant animations, etc.</dd>
- <dt><a href="/en-US/docs/Web/Performance/Mobile_performance_checklist">Mobile performance checklist</a></dt>
+ <dt><a href="/ja/docs/Web/Performance/Mobile_performance_checklist">Mobile performance checklist</a></dt>
  <dd>A concise checklist of performance considerations impacting mobile network users on hand-held, battery operated devices.</dd>
 </dl>
 
-<h2 id="See_also">See also</h2>
+<h2 id="See_also">関連情報</h2>
 
 <p>HTML</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTML/Element/picture">The <code>&lt;picture&gt;</code> Element</a></li>
- <li><a href="/en-US/docs/Web/HTML/Element/video">The <code>&lt;video&gt;</code> Element</a></li>
- <li><a href="/en-US/docs/Web/HTML/Element/source">The <code>&lt;source&gt;</code> Element</a></li>
- <li><a href="/en-US/docs/Web/HTML/Element/img#attributes">The <code>&lt;img&gt; srcset</code> attribute</a>
+ <li><a href="/ja/docs/Web/HTML/Element/picture"><code>&lt;picture&gt;</code> 要素</a></li>
+ <li><a href="/ja/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code> 要素</a></li>
+ <li><a href="/ja/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code> 要素</a></li>
+ <li><a href="/ja/docs/Web/HTML/Element/img#attributes"><code>&lt;img&gt; srcset</code> 属性</a>
   <ul>
-   <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li>
+   <li><a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">レスポンシブ画像</a></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/Web/HTML/Preloading_content">Preloading content with <code>rel="preload"</code></a> - <a href="https://w3c.github.io/preload/">(https://w3c.github.io/preload/ </a>)</li>
+ <li><a href="/ja/docs/Web/HTML/Link_types/preload"><code>rel="preload"</code> によるコンテンツの先読み</a> - <a href="https://w3c.github.io/preload/">(https://w3c.github.io/preload/ </a>)</li>
 </ul>
 
 <p>CSS</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/will-change">will-change</a></li>
+ <li><a href="/ja/docs/Web/CSS/will-change">will-change</a></li>
  <li>GPU v CPU</li>
- <li>Measuring layout</li>
- <li>Font-loading best practices</li>
+ <li>レイアウトの測定</li>
+ <li>フォント読み込みのベストプラクティス</li>
 </ul>
 
 <p>JavaScript</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Window/DOMContentLoaded_event">DOMContentLoaded</a></li>
- <li><a href="/en-US/docs/Glossary/Garbage_collection">Garbage collection</a></li>
- <li><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame</a></li>
+ <li><a href="/ja/docs/Web/API/Window/DOMContentLoaded_event">DOMContentLoaded</a></li>
+ <li><a href="/ja/docs/Glossary/Garbage_collection">ガベージコレクション</a></li>
+ <li><a href="/ja/docs/Web/API/Window/requestAnimationFrame">requestAnimationFrame</a></li>
 </ul>
 
-<p>APIs</p>
+<p>API</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Performance_API">Performance API</a></li>
- <li><a href="/en-US/docs/Web/API/Navigation_timing_API">Navigation Timing API</a></li>
- <li><a href="/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API">Media Capabilities API</a></li>
- <li><a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a></li>
- <li><a href="/en-US/docs/Web/API/PerformanceNavigationTiming">PerformanceNavigationTiming</a></li>
- <li><a href="/en-US/docs/Web/API/Battery_Status_API">Battery Status API</a></li>
- <li><a href="/en-US/docs/Web/API/Navigator/deviceMemory">Navigator.deviceMemory</a></li>
- <li><a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer</a></li>
- <li><a href="/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API">Using the User Timing AP</a>I</li>
- <li><a href="/en-US/docs/Web/API/Long_Tasks_API">Long Tasks API</a></li>
- <li><a href="/en-US/docs/Web/API/DOMHighResTimeStamp">High Resolution Timing API</a> (<a href="https://w3c.github.io/hr-time/">https://w3c.github.io/hr-time/)</a></li>
- <li><a href="/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API">Resource Timing API</a></li>
- <li><a href="/en-US/docs/Web/API/Page_Visibility_API">Page Visibility</a></li>
- <li><a href="/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling of Background Tasks API</a>
+ <li><a href="/ja/docs/Web/API/Performance_API">Performance API</a></li>
+ <li><a href="/ja/docs/Web/API/Navigation_timing_API">Navigation Timing API</a></li>
+ <li><a href="/ja/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API">Media Capabilities API</a></li>
+ <li><a href="/ja/docs/Web/API/Network_Information_API">Network Information API</a></li>
+ <li><a href="/ja/docs/Web/API/PerformanceNavigationTiming">PerformanceNavigationTiming</a></li>
+ <li><a href="/ja/docs/Web/API/Battery_Status_API">Battery Status API</a></li>
+ <li><a href="/ja/docs/Web/API/Navigator/deviceMemory">Navigator.deviceMemory</a></li>
+ <li><a href="/ja/docs/Web/API/Intersection_Observer_API">Intersection Observer</a></li>
+ <li><a href="/ja/docs/Web/API/User_Timing_API/Using_the_User_Timing_API">Using the User Timing API</a></li>
+ <li><a href="/ja/docs/Web/API/Long_Tasks_API">Long Tasks API</a></li>
+ <li><a href="/ja/docs/Web/API/DOMHighResTimeStamp">High Resolution Timing API</a> (<a href="https://w3c.github.io/hr-time/">https://w3c.github.io/hr-time/)</a></li>
+ <li><a href="/ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API">Resource Timing API</a></li>
+ <li><a href="/ja/docs/Web/API/Page_Visibility_API">Page Visibility</a></li>
+ <li><a href="/ja/docs/Web/API/Background_Tasks_API">Background Tasks API の協調スケジューリング</a>
   <ul>
-   <li style="margin-top: 0.25em;"><a href="/en-US/docs/Web/API/Window/requestIdleCallback">requestIdleCallback() </a></li>
+   <li><a href="/ja/docs/Web/API/Window/requestIdleCallback">requestIdleCallback()</a></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/Web/API/Beacon_API">Beacon API</a></li>
- <li>Resource Hints - <a href="/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control">dns-prefetch</a>, preconnect, <a href="/en-US/docs/Web/HTTP/Link_prefetching_FAQ">prefetch</a>, and prerender</li>
- <li><a href="/en-US/docs/Web/API/FetchEvent/navigationPreload">Fetchevent.navigationPreload</a></li>
- <li><a href="/en-US/docs/Web/API/PerformanceServerTiming">Performance Server Timing API</a></li>
+ <li><a href="/ja/docs/Web/API/Beacon_API">Beacon API</a></li>
+ <li>リソースのヒント - <a href="/ja/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control">dns-prefetch</a>, preconnect, <a href="/ja/docs/Web/HTTP/Link_prefetching_FAQ">prefetch</a>, prerender</li>
+ <li><a href="/ja/docs/Web/API/FetchEvent/PreloadResponse">FetchEvent.preloadResponse</a></li>
+ <li><a href="/ja/docs/Web/API/PerformanceServerTiming">Performance Server Timing API</a></li>
 </ul>
 
-<p>Headers</p>
+<p>ヘッダー</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTTP/Headers/Content-Encoding">Content-encoding</a></li>
+ <li><a href="/ja/docs/Web/HTTP/Headers/Content-Encoding">Content-encoding</a></li>
  <li>HTTP/2</li>
- <li><a href="/en-US/docs/Glossary/GZip_compression">gZip</a></li>
- <li>Client Hints</li>
+ <li><a href="/ja/docs/Glossary/GZip_compression">gZip</a></li>
+ <li>クライアントヒント</li>
 </ul>
 
-<p>Tools</p>
+<p>ツール</p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Performance">Performance in Firefox Developer Tools</a></li>
- <li>Flame charts</li>
- <li>The Network panel</li>
- <li>Waterfall charts</li>
+ <li><a href="/ja/docs/Tools/Performance">Firefox 開発者ツールのパフォーマンス</a></li>
+ <li>フレイムチャート</li>
+ <li>ネットワークパネル</li>
+ <li>ウォーターフォールチャート</li>
 </ul>
 
-<p>Additional Metrics</p>
+<p>その他の指標</p>
 
 <ul>
- <li>Speed Index and Perceptual Speed Index</li>
+ <li>スピードインデックスと知覚的スピードインデックス</li>
 </ul>
 
-<p>Best Practices</p>
+<p>ベストプラクティス</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using Web Workers</a>
+ <li><a href="/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers">サービスワーカーの使用</a></li>
+ <li><a href="/ja/docs/Web/API/Web_Workers_API/Using_web_workers">ウェブワーカーの使用</a>
   <ul>
-   <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a></li>
+   <li><a href="/ja/docs/Web/API/Web_Workers_API">Web Workers API</a></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers">PWA</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Caching">Caching</a></li>
- <li>Content Delivery Networks (CDN)</li>
+ <li><a href="/ja/docs/Web/Progressive_web_apps/Offline_Service_workers">PWA</a></li>
+ <li><a href="/ja/docs/Web/HTTP/Caching">キャッシュ</a></li>
+ <li>コンテンツ配信ネットワーク (CDN)</li>
 </ul>

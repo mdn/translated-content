@@ -10,33 +10,30 @@ translation_of: Web/HTML/Element/input/reset
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">Les éléments {{HTMLElement("input")}} de type <strong><code>"reset"</code></strong> sont affichés sous la forme de boutons permettant de réiniatiliser l'ensemble des champs du formulaire avec leurs valeurs initiales.</span></p>
+<p>Les éléments {{HTMLElement("input")}} de type <strong><code>"reset"</code></strong> sont affichés sous la forme de boutons permettant de réiniatiliser l'ensemble des champs du formulaire avec leurs valeurs initiales.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <div class="note">
-<p><strong>Note </strong>: Il est généralement peu recommandé d'inclure des boutons de réinitialisation dans les formulaires. En effet, ils sont rarement utiles et peuvent être source de frustration lorsqu'on appuie dessus involontairement.</p>
+<p><strong>Note :</strong> Il est généralement peu recommandé d'inclure des boutons de réinitialisation dans les formulaires. En effet, ils sont rarement utiles et peuvent être source de frustration lorsqu'on appuie dessus involontairement.</p>
 </div>
 
 <h2 id="Valeur">Valeur</h2>
 
 <p>La valeur de l'attribut <code>value</code> d'un élément <code>&lt;input type="reset"&gt;</code> contient une chaîne de caractères ({{domxref("DOMString")}}) utilisée comme texte sur le bouton.</p>
 
-<div id="summary-example3">
+<h3 id="Exemple_1">Exemple 1</h3>
 <pre class="brush: html">&lt;input type="reset" value="Réinitialiser le formulaire"&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("summary-example3", 650, 30)}}</p>
+<p>{{EmbedLiveSample("Exemple_1", 650, 30)}}</p>
 
 <p>Si aucune valeur n'est indiquée, le bouton aura le texte par défaut « Réinitialiser » :</p>
 
-<div id="summary-example1">
-<pre class="brush: html">&lt;input type="reset"&gt;</pre>
-</div>
+<h3 id="Exemple_2">Exemple 2</h3>
 
-<p>{{EmbedLiveSample("summary-example1", 650, 30)}}</p>
+<pre class="brush: html">&lt;input type="reset"&gt;</pre>
+
+<p>{{EmbedLiveSample("Exemple_2", 650, 30)}}</p>
 
 <h2 id="Utiliser_les_boutons_de_réinitialisation">Utiliser les boutons de réinitialisation</h2>
 
@@ -83,25 +80,23 @@ translation_of: Web/HTML/Element/input/reset
 <p>{{EmbedLiveSample("Ajouter_un_raccourci_au_bouton", 650, 100)}}</p>
 
 <div class="note">
-<p><strong>Note </strong>: Le problème d'un tel raccourci est que l'utilisateur ne saura pas quelle touche clavier correspond au raccourci. Dans une situation réaliste, il est nécessaire de fournir l'information via un autre biais (sans interférer avec le <em>design</em> du site), par exemple grâce à un lien qui pointe vers la liste des différents raccourcis utilisés sur le site.</p>
+<p><strong>Note :</strong> Le problème d'un tel raccourci est que l'utilisateur ne saura pas quelle touche clavier correspond au raccourci. Dans une situation réaliste, il est nécessaire de fournir l'information via un autre biais (sans interférer avec le <em>design</em> du site), par exemple grâce à un lien qui pointe vers la liste des différents raccourcis utilisés sur le site.</p>
 </div>
 
 <h3 id="DésactiverActiver_un_bouton">Désactiver/Activer un bouton</h3>
 
 <p>Pour désactiver un bouton de réinitialisation, il suffit d'appliquer l'attribut {{htmlattrxref("disabled")}} sur l'élément :</p>
 
-<div id="disable-example1">
 <pre class="brush: html">&lt;input type="reset" value="Désactivé" disabled&gt;</pre>
-</div>
 
 <p>On peut activer/désactiver le bouton lors de la navigation sur la page avec JavaScript en modifiant la valeur de l'attribut <code>disabled</code> pour la passer de <code>true</code> à <code>false</code> et <em>vice versa</em> (par exemple avec une instruction telle que <code>btn.disabled = true</code>).</p>
 
 <div class="note">
-<p><strong>Note </strong>: Pour plus d'exemples concernant l'activation/la désactivation de bouton, vous pouvez consulter la page <code><a href="/fr/docs/Web/HTML/Element/Input/button#Désactiver_et_activer_un_bouton">&lt;input type="button"&gt;</a></code>.</p>
+<p><strong>Note :</strong> Pour plus d'exemples concernant l'activation/la désactivation de bouton, vous pouvez consulter la page <code><a href="/fr/docs/Web/HTML/Element/Input/button#Désactiver_et_activer_un_bouton">&lt;input type="button"&gt;</a></code>.</p>
 </div>
 
 <div class="note">
-<p><strong>Note </strong>: À la différence des autres navigateurs, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée</a>. L'attribut {{htmlattrxref("autocomplete","button")}} peut être utilisé afin de contrôler cette fonctionnalité.</p>
+<p><strong>Note :</strong> À la différence des autres navigateurs, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée</a>. L'attribut {{htmlattrxref("autocomplete","button")}} peut être utilisé afin de contrôler cette fonctionnalité.</p>
 </div>
 
 <h2 id="Validation">Validation</h2>

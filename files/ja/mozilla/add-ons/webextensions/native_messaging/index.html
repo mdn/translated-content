@@ -74,7 +74,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_messaging
 
 <p>アプリマニフェストファイルはネイティブアプリケーションと一緒にインストールする必要があります。ブラウザーはアプリマニフェストファイルを読み込み、検証を行いますが、インストールや管理は行いません。したがって、app manifest ファイルがインストール・アップデートされた時期や方法についてのセキュリティモデルは、WebExtension を使う拡張機能に対してのものというよりはネイティブアプリケーションに対してのものです。</p>
 
-<p>native アプリマニフェストの文法と場所については、<a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests">Native manifests</a> を見てください。</p>
+<p>native アプリマニフェストの文法と場所については、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests">Native manifests</a> を見てください。</p>
 
 <p>例として、"ping_pong"ネイティブアプリケーションの manifest を以下に示します。</p>
 
@@ -112,7 +112,7 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"</code></pre>
 
 <h3 id="Extension_side" name="Extension_side">拡張機能側</h3>
 
-<p>ネイティブメッセージはコンテンツスクリプトで直接使うことはできません; <a href="https://wiki.developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">バックグラウンドスクリプトで間接的にやりとりする</a>必要があります。</p>
+<p>ネイティブメッセージはコンテンツスクリプトで直接使うことはできません; <a href="/ja/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">バックグラウンドスクリプトで間接的にやりとりする</a>必要があります。</p>
 
 <p>これを使うには2つのパターンがあります:ネクションベースのメッセージングとコネクションレスメッセージングです。</p>
 
@@ -124,7 +124,7 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"</code></pre>
 
 <ul>
  <li>アプリマニフェストの完全パス</li>
- <li>(Firefox 55 以降で) 起動元のアドオンの ID (manifest.json の <a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> キーにて指定)</li>
+ <li>(Firefox 55 以降で) 起動元のアドオンの ID (manifest.json の <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> キーにて指定)</li>
 </ul>
 
 <div class="note">
@@ -176,7 +176,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <ul>
  <li>アプリマニフェストの完全パス</li>
- <li>(Firefox 55 以降で) 起動元のアドオンの ID (manifest.json の <a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> キーにて指定)</li>
+ <li>(Firefox 55 以降で) 起動元のアドオンの ID (manifest.json の <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> キーにて指定)</li>
 </ul>
 
 <p>アプリからの最初のメッセージは <code>sendNativeMessage()</code> 呼び出しの応答として扱われ、コールバックに渡されます。</p>
@@ -355,7 +355,7 @@ while True:
 <ul>
  <li> <code>runtime.connectNative()</code> に渡した名前がアプリマニフェスト中の名前と一致しているか確認してください</li>
  <li>OS X/Linux: アプリマニフェストのファイル名が &lt;name&gt;.json となっていることを確認してください</li>
- <li>OS X/Linux: ネイティブアプリのマニフェストの場所が<a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#Mac_OS_X">ここ</a>で述べているところにあるのを確認してください</li>
+ <li>OS X/Linux: ネイティブアプリのマニフェストの場所が<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#Mac_OS_X">ここ</a>で述べているところにあるのを確認してください</li>
  <li>Windows: レジストリキーが正しい場所にあり、その名前がアプリマニフェスト中の名前と一致していることを確認してください</li>
  <li>Windows: レジストリキーに指定されたパスがアプリマニフェストを指していることを確認してください</li>
 </ul>

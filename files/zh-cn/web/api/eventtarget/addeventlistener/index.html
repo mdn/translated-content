@@ -45,7 +45,7 @@ Non-standard_inline}});  // Gecko/Mozilla only
  </ul>
  </dd>
  <dt><code>useCapture</code>  {{optional_inline}}</dt>
- <dd>{{jsxref("Boolean")}}，在DOM树中，注册了listener的元素， 是否要先于它下面的EventTarget，调用该listener。 当useCapture(设为true) 时，沿着DOM树向上冒泡的事件，不会触发listener。当一个元素嵌套了另一个元素，并且两个元素都对同一事件注册了一个处理函数时，所发生的事件冒泡和事件捕获是两种不同的事件传播方式。事件传播模式决定了元素以哪个顺序接收事件。进一步的解释可以查看 <a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow" title="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow">事件流</a> 及 <a href="http://www.quirksmode.org/js/events_order.html#link4">JavaScript Event order</a> 文档。 如果没有指定， <code>useCapture</code> 默认为 false 。 </dd>
+ <dd>{{jsxref("Boolean")}}，在DOM树中，注册了listener的元素， 是否要先于它下面的EventTarget，调用该listener。 当useCapture(设为true) 时，沿着DOM树向上冒泡的事件，不会触发listener。当一个元素嵌套了另一个元素，并且两个元素都对同一事件注册了一个处理函数时，所发生的事件冒泡和事件捕获是两种不同的事件传播方式。事件传播模式决定了元素以哪个顺序接收事件。进一步的解释可以查看 <a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow">事件流</a> 及 <a href="http://www.quirksmode.org/js/events_order.html#link4">JavaScript Event order</a> 文档。 如果没有指定， <code>useCapture</code> 默认为 false 。 </dd>
 </dl>
 
 <div class="note"><strong>注意:</strong> 对于事件目标上的事件监听器来说，事件会处于“目标阶段”，而不是冒泡阶段或者捕获阶段。在目标阶段的事件会触发该元素（即事件目标）上的所有监听器，而不在乎这个监听器到底在注册时<code>useCapture</code> 参数值是true还是false。</div>
@@ -606,7 +606,7 @@ elem.addEventListener('<code>touchmove</code>', function listener() { /* do some
 <p>您可以通过将<code>passive</code>的值显式设置为<code>false</code>来覆盖此行为，如下所示：</p>
 
 <pre class="notranslate"><code>/* Feature detection */
-/*特诊检测*/
+/*特征检测*/
 var passiveIfSupported = false;
 
 try {
@@ -661,7 +661,7 @@ window.addEventListener('scroll', function(event) {
 <ul>
  <li>{{domxref("EventTarget.removeEventListener()")}}</li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering custom events</a></li>
- <li><a class="external" href="http://www.quirksmode.org/js/this.html" title="http://www.quirksmode.org/js/this.html">More details on the use of <code>this</code> in event handlers</a></li>
+ <li><a class="external" href="http://www.quirksmode.org/js/this.html">More details on the use of <code>this</code> in event handlers</a></li>
 </ul>
 
 <div class="content-27EWd_0" id="translate-man-app">

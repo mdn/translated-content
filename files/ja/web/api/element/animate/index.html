@@ -24,7 +24,7 @@ translation_of: Web/API/Element/animate
 </ol>
 
 <dl>
- <dd>のどちらかを指定します。keyframes 形式の詳細については <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats">Keyframe Formats</a> で確認できます。</dd>
+ <dd>のどちらかを指定します。keyframes 形式の詳細については <a href="/ja/docs/Web/API/Web_Animations_API/Keyframe_Formats">Keyframe Formats</a> で確認できます。</dd>
  <dd>
  <ol>
   <li>変化させたい CSS プロパティをキーとし、そのプロパティ値を遷移の順番に並べた配列を値としたオブジェクト
@@ -49,7 +49,7 @@ translation_of: Web/API/Element/animate
  </ol>
  </dd>
  <dt><code>options</code></dt>
- <dd>アニメーションの再生時間を表す ms 単位の整数値、または  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Animation_timing_options">animation timing options</a> を含むオブジェクトを渡す必要があります。後者の場合、<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Animation_timing_options">animation timing options</a> のプロパティに加え、以下のようなプロパティも追加して <code>animate()</code> に渡すことができます。</dd>
+ <dd>アニメーションの再生時間を表す ms 単位の整数値、または  <a href="/ja/docs/Web/API/Web_Animations_API/Animation_timing_options">animation timing options</a> を含むオブジェクトを渡す必要があります。後者の場合、<a href="/ja/docs/Web/API/Web_Animations_API/Animation_timing_options">animation timing options</a> のプロパティに加え、以下のようなプロパティも追加して <code>animate()</code> に渡すことができます。</dd>
 </dl>
 
 <h4 id="keyframeOptions_に追加できるプロパティ">keyframeOptions に追加できるプロパティ</h4>
@@ -70,32 +70,6 @@ translation_of: Web/API/Element/animate
  </dd>
  <dt><code>iterationComposite</code></dt>
  <dd>Defines the way animation values build from iteration to iteration. <code>accumulate</code> または <code>replace</code> を指定できます（上記参照）。デフォルト値は <code>replace</code> です。</dd>
- <dt><code>spacing</code></dt>
- <dd>アニメーションの再生時間内にわたって、時間軸上におけるキーフレームの配置方法を指定します。ただし、時間のオフセットは指定されていないものと仮定して計算が行われます。デフォルト値は <code>distribute</code> です。
- <ul>
-  <li><code>distribute</code> を指定した場合、キーフレーム間の時間間隔が等しくなるように配置されます。</li>
-  <li><code>paced</code> を指定した場合、キーフレーム間のアニメーションにおける時間変化の割合（下図におけるグラフの傾き）が等しくなるように配置されます。</li>
- </ul>
-
- <p>以下の例では、CSS の left プロパティに関する 4 つのキーフレームを指定したアニメーションについて、spacing プロパティの働きを示しています（ここでは<a href="https://w3c.github.io/web-animations/#spacing-keyframes">仕様書の例</a>を参考にしています）。</p>
-
- <pre class="brush: js">/* 左のグラフ */
-elem.animate([ { left:   '0px' },
-               { left: '-20px' },
-               { left: '100px' },
-               { left:  '50px' }
-             ], 1000);  /* spacing はデフォルト値 "distribute" */
-</pre>
-
- <pre class="brush: js">/* 右のグラフ */
-elem.animate([ { left:   '0px' },
-               { left: '-20px' },
-               { left: '100px' },
-               { left:  '50px' }
-             ], { duration: 1000, spacing: "paced(left)" });</pre>
-
- <p><img alt="" src="https://w3c.github.io/web-animations/img/spacing-distribute.svg" style="height: 210px; width: 200px;"> <img alt=" " src="https://w3c.github.io/web-animations/img/spacing-paced.svg" style="height: 210px; width: 200px;"></p>
- </dd>
 </dl>
 
 <h3 id="戻り値">戻り値</h3>

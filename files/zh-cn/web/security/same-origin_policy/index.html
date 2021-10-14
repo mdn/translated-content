@@ -104,14 +104,14 @@ translation_of: Web/Security/Same-origin_policy
 <ul>
  <li>跨域<em><strong>写操作</strong>（Cross-origin writes）</em>一般是被允许的<em>。</em>例如链接（links），重定向以及表单提交。特定少数的HTTP请求需要添加 <a href="https://developer.mozilla.org/zh-CN/docs/HTTP/Access_control_CORS#Preflighted_requests" title="HTTP/Access_control_CORS#Preflighted_requests">preflight</a>。</li>
  <li>跨域<em><strong>资源嵌入</strong>（Cross-origin embedding）</em>一般是被允许（后面会举例说明）。</li>
- <li>跨域<em><strong>读操作</strong>（Cross-origin reads）</em>一般是不被允许的<em>，</em>但常可以通过内嵌资源来巧妙的进行读取访问。例如，你可以读取嵌入图片的高度和宽度，调用内嵌脚本的方法，或<a href="https://grepular.com/Abusing_HTTP_Status_Codes_to_Expose_Private_Information" title="https://grepular.com/Abusing_HTTP_Status_Codes_to_Expose_Private_Information">availability of an embedded resource</a>.</li>
+ <li>跨域<em><strong>读操作</strong>（Cross-origin reads）</em>一般是不被允许的<em>，</em>但常可以通过内嵌资源来巧妙的进行读取访问。例如，你可以读取嵌入图片的高度和宽度，调用内嵌脚本的方法，或<a href="https://grepular.com/Abusing_HTTP_Status_Codes_to_Expose_Private_Information">availability of an embedded resource</a>.</li>
 </ul>
 
 <p>以下是可能嵌入跨源的资源的一些示例：</p>
 
 <ul>
  <li><code>&lt;script src="..."&gt;&lt;/script&gt;</code> 标签嵌入跨域脚本。语法错误信息只能被同源脚本中捕捉到。</li>
- <li><code>&lt;link rel="stylesheet" href="..."&gt;</code> 标签嵌入CSS。由于CSS的<a href="http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html">松散的语法规则</a>，CSS的跨域需要一个设置正确的 HTTP 头部 <code>Content-Type</code> 。不同浏览器有不同的限制：<span> </span><a href="http://msdn.microsoft.com/zh-CN/library/ie/gg622939%28v=vs.85%29.aspx" title="http://msdn.microsoft.com/zh-CN/library/ie/gg622939%28v=vs.85%29.aspx">IE</a><span>, </span><a href="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html" title="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html">Firefox</a><span>, </span><a href="http://code.google.com/p/chromium/issues/detail?id=9877" title="http://code.google.com/p/chromium/issues/detail?id=9877">Chrome</a><span>, </span><a href="http://support.apple.com/kb/HT4070" title="http://support.apple.com/kb/HT4070">Safari</a><span> (跳至CVE-2010-0051)部分 和 </span><a href="http://www.opera.com/support/kb/view/943/" title="http://www.opera.com/support/kb/view/943/">Opera</a>。</li>
+ <li><code>&lt;link rel="stylesheet" href="..."&gt;</code> 标签嵌入CSS。由于CSS的<a href="http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html">松散的语法规则</a>，CSS的跨域需要一个设置正确的 HTTP 头部 <code>Content-Type</code> 。不同浏览器有不同的限制：<span> </span><a href="http://msdn.microsoft.com/zh-CN/library/ie/gg622939%28v=vs.85%29.aspx">IE</a><span>, </span><a href="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html" title="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html">Firefox</a><span>, </span><a href="http://code.google.com/p/chromium/issues/detail?id=9877" title="http://code.google.com/p/chromium/issues/detail?id=9877">Chrome</a><span>, </span><a href="http://support.apple.com/kb/HT4070">Safari</a><span> (跳至CVE-2010-0051)部分 和 </span><a href="http://www.opera.com/support/kb/view/943/">Opera</a>。</li>
  <li>通过 {{htmlelement("img")}} 展示的图片。支持的图片格式包括PNG,JPEG,GIF,BMP,SVG,...</li>
  <li>通过 {{htmlelement("video")}} 和 {{htmlelement("audio")}} 播放的多媒体资源。</li>
  <li>通过 <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/object" title="HTML/Element/object">&lt;object&gt;</a></code>、 <a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/embed" title="HTML/Element/embed"><code>&lt;embed&gt;</code></a> 和 <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/applet" title="HTML/Element/applet">&lt;applet&gt;</a></code> 嵌入的插件。</li>
@@ -126,14 +126,14 @@ translation_of: Web/Security/Same-origin_policy
 <h3 id="如何阻止跨源访问"><strong>如何阻止跨源访问</strong></h3>
 
 <ul>
- <li>阻止跨域写操作，只要检测请求中的一个不可推测的标记(CSRF token)即可，这个标记被称为 <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29" title="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29">Cross-Site Request Forgery (CSRF)</a><span> 标记。你必须使用这个标记来阻止页面的跨站读操作。</span></li>
+ <li>阻止跨域写操作，只要检测请求中的一个不可推测的标记(CSRF token)即可，这个标记被称为 <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29">Cross-Site Request Forgery (CSRF)</a><span> 标记。你必须使用这个标记来阻止页面的跨站读操作。</span></li>
  <li><span>阻止资源的跨站读取，需要保证该资源是不可嵌入的。阻止嵌入行为是必须的，因为嵌入资源通常向其暴露信息。</span></li>
  <li><span>阻止跨站嵌入，需要确保你的资源不能通过以上列出的可嵌入资源格式使用。浏览器可能不会遵守 <code>Content-Type</code> 头部定义的类型。例如，如果您在HTML文档中指定 <code>&lt;script&gt;</code> 标记，则浏览器将尝试将标签内部的 HTML 解析为JavaScript。 当您的资源不是您网站的入口点时，您还可以使用CSRF令牌来防止嵌入。</span></li>
 </ul>
 
 <h2 id="跨源脚本API访问">跨源脚本API访问</h2>
 
-<p>JavaScript 的 API 中，如<span> </span><code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/HTMLIFrameElement" title="DOM/HTMLIFrameElement">iframe.contentWindow</a></code>、<span> {{domxref("window.parent")}}、{{domxref("window.open")}} 和 {{domxref("window.opener")}} 允许文档间直接相互引用。当两个文档的源不同时，这些引用方式将对</span><span> </span><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window">Window</a><span> 和 </span><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location">Location</a>对象的访问添加限制，如下两节所述。</p>
+<p>JavaScript 的 API 中，如<span> </span><code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/HTMLIFrameElement" title="DOM/HTMLIFrameElement">iframe.contentWindow</a></code>、<span> {{domxref("window.parent")}}、{{domxref("window.open")}} 和 {{domxref("window.opener")}} 允许文档间直接相互引用。当两个文档的源不同时，这些引用方式将对</span><span> </span><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window">Window</a><span> 和 </span><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location">Location</a>对象的访问添加限制，如下两节所述。</p>
 
 <p>为了能让不同源中文档进行交流，可以使用 {{domxref("window.postMessage")}}。</p>
 
@@ -257,7 +257,7 @@ translation_of: Web/Security/Same-origin_policy
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="http://www.w3.org/Security/wiki/Same_Origin_Policy" title="http://www.w3.org/Security/wiki/Same_Origin_Policy">Same-Origin Policy at W3C</a></li>
+ <li><a href="http://www.w3.org/Security/wiki/Same_Origin_Policy">Same-Origin Policy at W3C</a></li>
  <li><a href="http://web.dev/secure/same-origin-policy">http://web.dev/secure/same-origin-policy</a></li>
 </ul>
 

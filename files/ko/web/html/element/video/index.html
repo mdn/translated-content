@@ -31,7 +31,10 @@ translation_of: Web/HTML/Element/video
 
 <dl>
  <dt>{{htmlattrdef("autoplay")}}</dt>
- <dd>부울(boolean) 속성. 이 값이 설정되면, 데이터 로딩이 완료되지 않더라도 재생 가능한 시점에 자동으로 재생이 시작됩니다.</dd>
+ <dd>부울 속성(boolean); 해당 속성이 지정된 경우 비디오가 데이터 로드를 완료하기 위해 중지하지 않고 재생할 수 있는 가장 빠른 시점에 재생되기 시작합니다.<br/>
+autoplay를 비활성화시킬 때 autoplay="false"는 동작하지 않습니다. <code>&lt;video&gt;</code>태그 내부에 autoplay 속성이 존재한다면 비디오가 자동재생 됩니다. autoplay를 비활성화하려면 해당 속성을 완전히 제거해야 합니다.
+</dd>
+ 
  <dt>{{htmlattrdef("buffered")}}</dt>
  <dd>미디어의 어느 시간대가 버퍼에 들어 있는지 확인할 수 있는 속성입니다. 이 속성은 {{domxref("TimeRanges")}} 객체를 포함합니다.</dd>
  <dt>{{htmlattrdef("controls")}}</dt>
@@ -139,7 +142,7 @@ AddType video/ogg .ogg
  <li><a href="/en-US/docs/Using_HTML5_audio_and_video" title="Using audio and video in Firefox">Using HTML5 audio and video</a></li>
  <li><a href="/en-US/docs/Manipulating_video_using_canvas" title="Manipulating video using canvas">Manipulating video using canvas</a></li>
  <li><a href="/en-US/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" title="NsIDOMHTMLMediaElement"><code>nsIDOMHTMLMediaElement</code></a></li>
- <li><a class="external" href="http://tinyvid.tv/" title="http://tinyvid.tv/">TinyVid</a> - examples using ogg files in HTML5.</li>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#video" title="http://www.whatwg.org/specs/web-apps/current-work/#video">The <code>video</code> element</a> (HTML5 specification)</li>
+ <li><a class="external" href="http://tinyvid.tv/">TinyVid</a> - examples using ogg files in HTML5.</li>
+ <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#video">The <code>video</code> element</a> (HTML5 specification)</li>
  <li><a href="/en-US/docs/Configuring_servers_for_Ogg_media" title="Configuring servers for Ogg media">Configuring servers for Ogg media</a></li>
 </ul>

@@ -7,9 +7,7 @@ tags:
   - Accessibility
 translation_of: Web/Accessibility/ARIA/Roles/Rowgroup_Role
 ---
-<div>\{{ariaref}}</div>
-
-<p>role="rowgroup" を持つ要素は、表構造内の行（<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a></code>）のグループです。 行グループ（<code>rowgroup</code>）には、グリッド(<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a></code>)、表（<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Table_Role">table</a></code>）、またはツリーグリッド（<code>treegrid</code>）内のセル（<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Cell_Role">cell</a></code>）、グリッドセル（<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role">gridcell</a></code>）、列ヘッダー（<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">columnheader</a></code>）、または行ヘッダー（<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_Role">rowheader</a></code>）の1つ以上の行が含まれます。</p>
+<p>行グループロール (<code>role="rowgroup"</code>) を持つ要素は、表形式の構造内の行 (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a></code>) のグループです。 行グループ (<code>rowgroup</code>) には、グリッド  (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a></code>)、表 (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Table_Role">table</a></code>)、ツリーグリッド (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role">treegrid</a></code>) 内のセル (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Cell_Role">cell</a></code>)、グリッドセル (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_role">gridcell</a></code>)、列ヘッダー (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">columnheader</a></code>)、行ヘッダー (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_Role">rowheader</a></code>) の行が1つ以上含まれます。</p>
 
 <pre class="brush: html">&lt;div role="table" aria-label="人口" aria-describedby="country_population_desc"&gt;
    &lt;div id="country_population_desc"&gt;国別世界人口&lt;/div&gt;
@@ -32,49 +30,49 @@ translation_of: Web/Accessibility/ARIA/Roles/Rowgroup_Role
 &lt;/div&gt;
 </pre>
 
-<h2 id="Description" name="Description">説明</h2>
+<h2 id="Description">説明</h2>
 
-<p>行グループ（<code>rowgroup</code>）は、所有する行（row）の要素間の関係を確立し、HTML の表ヘッダー（{{htmlelement("thead")}}）、表フッター（{{htmlelement("tfoot")}}） 、および表本体（{{htmlelement("tbody")}}）の要素と構造的に同等です。 ただし、異なる種類の行グループを区別することはできません。 それらの要素は、表（<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Table_Role">table</a></code>）またはグリッド（<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a></code>）のロールを持つ要素に含まれているか、またはそれらの要素によって所有されている必要があります。 可能な限り、ネイティブの {{htmlelement("thead")}}、{{htmlelement("tfoot")}} 、および {{htmlelement("tbody")}} HTML 要素を使用することを強くお勧めします。</p>
+<p>行グループ (<code>rowgroup</code>) は、所有する行の要素間の関係を確立し、HTML の表ヘッダー (<code><a href="/ja/docs/Web/HTML/Element/thead">&lt;thead&gt;</a></code>)、表フッター (<code><a href="/ja/docs/Web/HTML/Element/tfoot">&lt;tfoot&gt;</a></code>) 、および表本体  (<code><a href="/ja/docs/Web/HTML/Element/tbody">&lt;tbody&gt;</a></code>) の要素と構造的に同等です。 ただし、異なる種類の行グループ間には区別がありません。 それらの要素は、表 (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Table_Role">table</a></code>) やグリッド (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a></code>) のロールを持つ要素に含まれているか、またはそれらの要素によって所有されている必要があります。 可能な限り、ネイティブな HTML の <code><a href="/ja/docs/Web/HTML/Element/thead">&lt;thead&gt;</a></code>、<code><a href="/ja/docs/Web/HTML/Element/tfoot">&lt;tfoot&gt;</a></code>、<code><a href="/ja/docs/Web/HTML/Element/tbody">&lt;tbody&gt;</a></code> の要素を使用することを強く推奨します。</p>
 
-<p>ARIA の表ヘッダー、表フッター、または表本体を作成するには、<code>role="rowgroup"</code> を要素に追加します。 その行グループは、1つ以上の行のグループを含むグリッド、表、またはツリーグリッド内にネストする必要があります。 各行には子セルが含まれています。 これらのセルは、列ヘッダーか行ヘッダーか、プレーンなセルかグリッドセルかによって、さまざまなタイプにすることができます。</p>
+<p>ARIA の表ヘッダー、表フッター、表本体を作成するには、行グループロール (<code>role="rowgroup"</code>) を要素に追加します。 その行グループは、1つ以上の行のグループを含むグリッド、表、またはツリーグリッド内にネストするべきです。 各行には子のセルが含まれています。 これらのセルには、列や行のヘッダー、プレーンなセルやグリッドセルとさまざまな種類のセルがあります。</p>
 
 <div class="note">
-<p><strong>注</strong>: 可能であれば、ネイティブの HTML 表要素（<code>&lt;table&gt;</code>）を表ヘッダー（<code>&lt;thead&gt;</code>）、表フッター（<code>&lt;tfoot&gt;</code>）、および表本体（<code>&lt;tbody&gt;</code>）の要素と共に使用することを強くお勧めします。</p>
+<p><strong>注</strong>: 可能な限り、ネイティブな HTML の表要素（<code>&lt;table&gt;</code>）を表ヘッダー（<code>&lt;thead&gt;</code>）、表フッター（<code>&lt;tfoot&gt;</code>）、表本体（<code>&lt;tbody&gt;</code>）の要素と共に使用することを強く推奨します。</p>
 </div>
 
-<h3 id="Associated_WAI-ARIA_Roles_States_and_Properties" name="Associated_WAI-ARIA_Roles_States_and_Properties">関連する WAI-ARIA のロール、ステート、プロパティ</h3>
+<h3 id="Associated_WAI-ARIA_Roles_States_and_Properties">関連する WAI-ARIA のロール、ステート、プロパティ</h3>
 
-<h4 id="Context_Roles" name="Context_Roles">コンテキストロール</h4>
+<h4 id="Context_Roles">コンテキストロール</h4>
 
 <dl>
  <dt><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Table_Role">role="table"</a></dt>
- <dd>行を見つけることができる3つのコンテキスト（グリッドとツリーグリッドを含む）の1つで、ネイティブの <code>&lt;table&gt;</code> HTML 要素と同様に、行と列に配列されたデータを含む非インタラクティブな表構造の一部として行を識別します。</dd>
+ <dd>グリッドとツリーグリッドと並んで、行を見つけることができる3つのコンテキストの1つです。 ネイティブな HTML の <code><a href="/ja/docs/Web/HTML/Element/table">&lt;table&gt;</a></code> 要素と同様に、行と列に配置されたデータを含むインタラクティブでない表構造の一部として行を識別します。</dd>
  <dt><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role">role="grid"</a></dt>
- <dd>行を見つけることができる3つのコンテキスト（表とツリーグリッドを含む）の1つで、ネイティブの <code>&lt;table&gt;</code> HTML 要素と同様に、行と列に配列されたデータを含む非インタラクティブな表構造の一部として行を識別します。</dd>
+ <dd>表とツリーグリッドと並んで、行を見つけることができる3つのコンテキストの1つです。 ネイティブな HTML の <code><a href="/ja/docs/Web/HTML/Element/table">&lt;table&gt;</a></code> 要素と同様に、行と列に配置されたデータを含むインタラクティブでない表構造の一部として行を識別します。</dd>
  <dt><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role">role="treegrid"</a></dt>
- <dd>グリッドと似ていますが、ツリーの場合と同じ方法で行を展開したり折りたたんだりすることができます。</dd>
+ <dd>グリッドに似ていますが、ツリー (<code>tree</code>) と同じ方法で展開と折りたたみができる行があります (訳注: <a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/treegrid/treegrid-1.html">W3C のツリーグリッドによるメール受信ボックスの例</a>では、行単位でのインタラクションも可能となっています) 。</dd>
 </dl>
 
-<h4 id="Descendant_Roles" name="Descendant_Roles">子孫のロール</h4>
+<h4 id="Descendant_Roles">子孫のロール</h4>
 
 <dl>
  <dt><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role">role="row"</a></dt>
- <dd>表構造内のセルの行。 行には、1つ以上のセル（<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Cell_Role">cell</a></code>）、グリッドセル（<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role">gridcell</a></code>）、または列ヘッダー（<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">columnheader</a></code>）が含まれ、場合によっては行ヘッダー（<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_Role">rowheader</a></code>）も含まれます。</dd>
+ <dd>表形式の構造内のセルの一行。 行には、1つ以上のセル（<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Cell_Role">cell</a></code>）、グリッドセル（<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_role">gridcell</a></code>）、または列ヘッダー（<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">columnheader</a></code>）が含まれ、場合によっては行ヘッダー（<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_Role">rowheader</a></code>）も含まれます。</dd>
 </dl>
 
-<h3 id="Keyboard_Interactions" name="Keyboard_Interactions">キーボードインタラクション</h3>
+<h3 id="Keyboard_Interactions">キーボードインタラクション</h3>
 
 <p>無し</p>
 
-<h3 id="Required_JavaScript_features" name="Required_JavaScript_features">必要な JavaScript 機能</h3>
+<h3 id="Required_JavaScript_features">必要な JavaScript 機能</h3>
 
 <p>無し。</p>
 
 <div class="note">
-<p>ARIA の最初のルールは、要素を再定義し、ARIA のロール、ステート、プロパティを<strong>追加して</strong>アクセス可能にするのではなく、すでに組み込まれている意味論と挙動を持つネイティブな機能を使用できることです。 可能な限り、ARIA の <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Table_Role">table</a></code> ロールの代わりに HTML の {{htmlelement("table")}} 要素を使用してください。</p>
+<p>ARIA の使用の第一のルールは、要素を転用して ARIA のロール、ステート、プロパティを<strong>追加する</strong>ことでアクセス可能にするのではなく、必要としている意味論と振る舞いがすでに組み込まれているネイティブな機能を使用できることです。 可能な限り、ARIA の表ロールの代わりに HTML の <code>&lt;table&gt;</code> 要素を使用してください。</p>
 </div>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
 <pre class="brush: html">&lt;div role="table" aria-label="意味論的な要素" aria-describedby="semantic_elements_table_desc" aria-rowcount="81"&gt;
   &lt;div id="semantic_elements_table_desc"&gt;ARIA のロールの代わりに使用する意味論的な要素&lt;/div&gt;
@@ -105,11 +103,11 @@ translation_of: Web/Accessibility/ARIA/Roles/Rowgroup_Role
 &lt;/div&gt;
 </pre>
 
-<p>上記は、表ヘッダーと表本体を持つ非意味論的な ARIA の表で、DOM には81行のうち5行が含まれています。 表ヘッダー内に1行、表本体内に4行あります。 ヘッダー行は、ヘッダーの行グループに単独であり、2つの列ヘッダーを持ちます。 <code>aria-sort</code> プロパティで示されるように、列はソート可能ですが、現在はソートされていません。 表本体は独立した行グループで、現在 DOM には4行あります。 すべての行が DOM 内にあるわけではないので、すべての行に <code>aria-rowindex</code> プロパティを含めました。</p>
+<p>上記は、表のヘッダーと表の本体を備えた意味論的でない ARIA の表であり、DOM 内には 81 行のうち 5 行が存在しています。 表のヘッダー内に 1 行、表の本体内に 4 行あります。 ヘッダー行は、ヘッダーの行グループ内に単独であり、2 つの列ヘッダーを持ちます。 列はソート可能ですが、<code>aria-sort</code> プロパティで示されているように、現在はソートされていません。 表の本体は別の行グループにあり、現在 DOM 内に 4 行あります。 全ての行が DOM 内にあるわけではないため、全ての行に <code>aria-rowindex</code> プロパティを含めています。</p>
 
-<h2 id="Best_practices" name="Best_practices">ベストプラクティス</h2>
+<h2 id="Best_practices">ベストプラクティス</h2>
 
-<p>データ表構造には、{{htmlelement("table")}}、{{htmlelement("tbody")}}、{{htmlelement("thead")}}、{{htmlelement("tr")}}、{{htmlelement("th")}}、{{htmlelement("td")}} などのみを使用します。 アクセシビリティを確保するために ARIA のロールを追加し、例えば CSS で表のネイティブな意味論を削除するべきです。 ARIA の <code>table</code> ロールの関連するユースケースは、<code>display: grid</code> など、CSS の {{cssxref("display")}} プロパティによって表のネイティブな意味論がオーバーライドされる場合です。 この場合、ARIA の <code>table</code> ロールを使用して意味論を戻すことができます。</p>
+<p>データ表構造には、<code>&lt;table&gt;</code>、<code>&lt;tbody&gt;</code>、<code>&lt;thead&gt;</code>、<code>&lt;tr&gt;</code>、<code>&lt;th&gt;</code>、<code>&lt;td&gt;</code> などのみを使用してください。 これらに ARIA ロールを追加することで、CSS などで表のネイティブな意味論が取り除かれても、アクセシビリティを確保することができます。 ARIA の表ロールの関連するユースケースは、<code>display: grid</code> など、CSS の <code>display</code> プロパティによって表のネイティブな意味論がオーバーライドされる場合です。 この場合、ARIA の表ロールを使用して意味論を追加し直すことができます。</p>
 
 <pre class="brush: html">&lt;table role="table" aria-label="意味論的な要素" aria-describedby="semantic_elements_table_desc" aria-rowcount="81"&gt;
   &lt;caption id="semantic_elements_table_desc"&gt;ARIA のロールの代わりに使用する意味論的な要素&lt;/caption&gt;
@@ -131,14 +129,13 @@ translation_of: Web/Accessibility/ARIA/Roles/Rowgroup_Role
    &lt;/tbody&gt;
  &lt;/table&gt;</pre>
 
-<p>上記は表を書く意味論的な方法です。 ARIA のロールは、表のネイティブな意味論の場合にのみ必要です。 したがって、<a href="/ja/docs/Web/CSS/display#Accessibility_concerns"><code>display</code> プロパティを <code>flex</code> または <code>grid</code> に</a>設定すると表の行が消されます。<br>
-  </p>
+<p>上記は、表の意味論的な書き方です。 ARIA のロールが必要になるのは、<a href="/ja/docs/Web/CSS/display#accessibility_concerns"><code>display</code> プロパティを <code>flex</code> や <code>grid</code></a> に設定するなどして、表のネイティブな意味論、つまり表の行が完全に破壊されてしまう場合だけです (訳注: ここでの grid は、CSS グリッドレイアウトというグリッドロールとは全く別のものであることに注意してください) 。</p>
 
-<h3 id="Added_benefits" name="Added_benefits">追加された利点</h3>
+<h3 id="Added_benefits">追加された利点</h3>
 
 <p>無し</p>
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+<h2 id="Specifications">仕様</h2>
 
 <table class="standard-table">
  <tbody>
@@ -153,7 +150,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Rowgroup_Role
  </tbody>
 </table>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li><a href="/ja/docs/Web/HTML/Element/table">HTML の表</a></li>
@@ -161,3 +158,9 @@ translation_of: Web/Accessibility/ARIA/Roles/Rowgroup_Role
  <li><a href="/ja/docs/Web/HTML/Element/tfoot">HTML の表フッター</a></li>
  <li><a href="/ja/docs/Web/HTML/Element/thead">HTML の表ヘッダー</a></li>
 </ul>
+
+<section id="Quick_links">
+    <ol>
+        <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA ロール</strong></a>{{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}</li>
+    </ol>
+</section>

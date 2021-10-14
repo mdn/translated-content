@@ -18,11 +18,11 @@ translation_of: Web/API/Web_Workers_API
 
 <p>使用构造函数（例如,{{domxref("Worker.Worker", "Worker()")}}）创建一个<strong> worker</strong> 对象, 构造函数接受一个 JavaScript文件URL — 这个文件包含了将在 worker 线程中运行的代码。worker 将运行在与当前 {{domxref("window")}}不同的另一个全局上下文中，这个上下文由一个对象表示，标准情况下为{{domxref("DedicatedWorkerGlobalScope")}} （标准 workers 由单个脚本使用; 共享workers使用{{domxref("SharedWorkerGlobalScope")}}）。</p>
 
-<p>你可以在worker 线程中运行任意的代码，但注意存在一些例外：直接在 worker 线程中操纵 DOM 元素；或使用{{domxref("window")}} 对象中的某些方法和属性。大部分 window 对象的方法和属性是可以使用的，包括 <a href="/en-US/docs/WebSockets">WebSockets</a>，以及诸如 <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> 和 FireFox OS 中独有的 <a href="/en-US/docs/Web/API/Data_Store_API">Data Store API</a> 这一类数据存储机制。更多信息请参见： <a href="/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers">Functions and classes available to workers</a> 。</p>
+<p>你可以在worker 线程中运行任意的代码，但注意存在一些例外：你不能直接在 worker 线程中操纵 DOM 元素；或使用{{domxref("window")}} 对象中的某些方法和属性。大部分 window 对象的方法和属性是可以使用的，包括 <a href="/en-US/docs/WebSockets">WebSockets</a>，以及诸如 <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> 和 FireFox OS 中独有的 <a href="/en-US/docs/Web/API/Data_Store_API">Data Store API</a> 这一类数据存储机制。更多信息请参见： <a href="/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers">Functions and classes available to workers</a> 。</p>
 
 <p>主线程和 worker 线程相互之间使用 <code>postMessage()</code> 方法来发送信息, 并且通过 <code>onmessage</code> 这个 event handler来接收信息（传递的信息包含在 {{event("Message")}} 这个事件的<code>data</code>属性内) 。数据的交互方式为传递副本，而不是直接共享数据。</p>
 
-<p>worker 可以另外生成新的 worker，这些 worker 与它们父页面的宿主相同。 此外，worker 可以通过 <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> 来访问网络，只不过 <code>XMLHttpRequest</code> 的 <code>responseXML</code> 和 <code>channel</code> 这两个属性的值将总是 <code>null 。</code></p>
+<p>worker 可以另外生成新的 worker，这些 worker 与它们父页面的宿主相同。 此外，worker 可以通过 <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> 来访问网络，只不过 <code>XMLHttpRequest</code> 的 <code>responseXML</code> 和 <code>channel</code> 这两个属性的值将总是 <code>null</code> 。</p>
 
 <p>除了专用 worker 之外，还有一些其他种类的 worker ：</p>
 

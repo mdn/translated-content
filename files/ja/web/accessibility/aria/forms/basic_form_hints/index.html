@@ -39,11 +39,9 @@ translation_of: Web/Accessibility/ARIA/forms/Basic_form_hints
 
 <h2 id="Labeling_with_ARIA" name="Labeling_with_ARIA">ARIA でラベルをつける</h2>
 
-<p>HTML の {{HTMLElement("label")}} 要素はフォーム関連の要素にふさわしいのですが、多くのフォームコントロールは {{HTMLElement("div")}} や {{HTMLElement("span")}} を使用した、動的な JavaScript ウィジェットとして実装されています。W3C の <a href="http://www.w3.org/WAI/" title="http://www.w3.org/WAI/">Web Accessibility Initiative</a> から生まれた <a href="http://www.w3.org/WAI/intro/aria.php" title="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a> こと <strong>Accessible Rich Internet Applications</strong> 仕様は、このような場合のために <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby" title="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby"><strong>aria-labelledby</strong></a> 属性を用意しています。</p>
+<p>HTML の {{HTMLElement("label")}} 要素はフォーム関連の要素にふさわしいのですが、多くのフォームコントロールは {{HTMLElement("div")}} や {{HTMLElement("span")}} を使用した、動的な JavaScript ウィジェットとして実装されています。W3C の <a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a> から生まれた <a href="http://www.w3.org/WAI/intro/aria.php" title="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a> こと <strong>Accessible Rich Internet Applications</strong> 仕様は、このような場合のために <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby"><strong>aria-labelledby</strong></a> 属性を用意しています。</p>
 
 <p>以下の例では、順不同リストを使用して実装したラジオボタングループを示しています。3 行目で {{HTMLElement("li")}} 要素の <strong>aria-labelledby</strong> 属性に、1 行目の {{HTMLElement("h3")}} 要素の <strong>id</strong> である "rg1_label" を設定しており、h3 要素がラジオボタングループのラベルです。</p>
-
-<p><em>例 2. 順不同リストを使用して実装したラジオボタングループ (<a href="http://www.oaa-accessibility.org/examplep/radio1/">http://www.oaa-accessibility.org/examplep/radio1/</a> をもとに改作)</em></p>
 
 <pre class="brush: html">&lt;h3 id="rg1_label"&gt;Lunch Options&lt;/h3&gt;
 
@@ -62,7 +60,7 @@ translation_of: Web/Accessibility/ARIA/forms/Basic_form_hints
 
 <h2 id="Describing_with_ARIA" name="Describing_with_ARIA">ARIA で説明する</h2>
 
-<p>フォームコントロールはラベルに加えて、説明文が結びつけられることがあります。ARIA には、説明文とコントロールを直接結びつけるための <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-describedby" title="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-describedby"><strong>aria-describedby</strong></a> 属性があります。</p>
+<p>フォームコントロールはラベルに加えて、説明文が結びつけられることがあります。ARIA には、説明文とコントロールを直接結びつけるための <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-describedby"><strong>aria-describedby</strong></a> 属性があります。</p>
 
 <p>以下の例では別の {{HTMLElement("div")}} 要素内の文で説明されている、{{HTMLElement("button")}} 要素を示しています。{{HTMLElement("button")}} 要素の <strong>aria-describedby</strong> 属性は {{HTMLElement("div")}} 要素の <strong>id</strong> を参照しています。</p>
 
@@ -79,8 +77,8 @@ translation_of: Web/Accessibility/ARIA/forms/Basic_form_hints
 <p>一般的に Web 開発者は、必須のフィールドや正しくないフィールドを示すために視覚的な方法を使用します。しかし、支援技術 (AT) は必ずしもその表示から情報を推測できるわけではありません。ARIA は、コントロールが必須あるいは正しくないことを示すための属性を用意しています:</p>
 
 <ul>
- <li>フォーム要素は入力が必須であることを AT に示すために、<a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-required" title="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-required"><strong>aria-required</strong></a> プロパティを適用できます。</li>
- <li>データフィールドに正しくないデータがあることを AT に知らせるために、プログラムで <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-invalid" title="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-invalid"><strong>aria-invalid</strong></a> 状態を適用することで、ユーザは正しくないデータを入力したことを知ります。</li>
+ <li>フォーム要素は入力が必須であることを AT に示すために、<a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-required"><strong>aria-required</strong></a> プロパティを適用できます。</li>
+ <li>データフィールドに正しくないデータがあることを AT に知らせるために、プログラムで <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-invalid"><strong>aria-invalid</strong></a> 状態を適用することで、ユーザは正しくないデータを入力したことを知ります。</li>
 </ul>
 
 <p>以下の例では、3 つのフィールドを持つシンプルなフォームを示しています。4 行目から 12 行目で、name および email フィールドは入力必須であることを示すために (ラベルの隣にアスタリスクを置くのに加えて) <strong>aria-required</strong> 属性を true に設定しています。2 番目の例は電子メールの形式を検証して、その結果に応じて email フィールド (HTML の 12 行目) の (要素を視覚的に変化させるのに加えて) <strong>aria-invalid</strong> 属性を設定する JavaScript コードスニペットです。</p>
@@ -118,4 +116,4 @@ translation_of: Web/Accessibility/ARIA/forms/Basic_form_hints
 
 <div class="note">TBD: ひとつの記事にまとめるか、テクニックを分けるか、あるいはその両方を行うとよいでしょう。また ARIA のマークアップは、サーバサイドの検証の後に読み込まれたページ内のエラーメッセージにふさわしいのでしょうか?</div>
 
-<p>フォームのアクセシビリティのために ARIA を使用する際のさらなるガイドラインについては、<a href="http://www.w3.org/TR/wai-aria-practices/" title="http://www.w3.org/TR/wai-aria-practices/">WAI-ARIA Authoring Practices</a> のドキュメントをご覧ください。</p>
+<p>フォームのアクセシビリティのために ARIA を使用する際のさらなるガイドラインについては、<a href="http://www.w3.org/TR/wai-aria-practices/">WAI-ARIA Authoring Practices</a> のドキュメントをご覧ください。</p>

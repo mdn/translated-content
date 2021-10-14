@@ -13,10 +13,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fontsize
 ---
 <div>{{JSRef}} {{deprecated_header}}</div>
 
-<p>O método <code>fontsize()</code> cria um elemento HTML <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/font" title="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/font">&lt;font&gt;</a> que faz com que uma string seja exibida no tamanho da fonte especificada.</p>
+<p>O método <code>fontsize()</code> cria um elemento HTML <a href="/en-US/docs/Web/HTML/Element/font">&lt;font&gt;</a> que faz com que uma string seja exibida no tamanho da fonte especificada.</p>
 
 <div class="note">
-<p><strong>Nota de uso:</strong> O elemento <code>&lt;font&gt;</code> foi removido do <a href="https://wiki.developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5" title="https://wiki.developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5">HTML5</a> e não deve mais ser usado. Em vez disso, web developers devem usar a <a href="https://wiki.developer.mozilla.org/pt-BR/docs/Web/CSS/font-size" title="https://wiki.developer.mozilla.org/pt-BR/docs/Web/CSS/font-size">propriedade CSS correspondente</a>.</p>
+<p><strong>Nota de uso:</strong> O elemento <code>&lt;font&gt;</code> foi removido do <a href="/pt-BR/docs/Web/HTML/HTML5">HTML5</a> e não deve mais ser usado. Em vez disso, web developers devem usar a <a href="/pt-BR/docs/Web/CSS/font-size">propriedade CSS correspondente</a>.</p>
 </div>
 
 <h2 id="Sintaxe">Sintaxe</h2>
@@ -32,11 +32,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fontsize
 
 <h3 id="Valor_retornado">Valor retornado</h3>
 
-<p>Uma string contendo um elemento HTML <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/font" title="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/font">&lt;font&gt;</a>.</p>
+<p>Uma string contendo um elemento HTML <a href="/en-US/docs/Web/HTML/Element/font">&lt;font&gt;</a>.</p>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Ao especificar o tamanho como um inteiro, você define o tamanho da fonte do texto para um dos 7 tamanhos definidos. Ao especificar <code>size</code> como uma string como "-2", você ajusta o tamanho da fonte do texto em relação ao tamanho definido na tag <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/basefont" title="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/basefont">&lt;basefont&gt;</a>.</p>
+<p>Ao especificar o tamanho como um inteiro, você define o tamanho da fonte do texto para um dos 7 tamanhos definidos. Ao especificar <code>size</code> como uma string como "-2", você ajusta o tamanho da fonte do texto em relação ao tamanho definido na tag <a href="/en-US/docs/Web/HTML/Element/basefont">&lt;basefont&gt;</a>.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -51,7 +51,7 @@ console.log(worldString.big());       // &lt;big&gt;Olá, mundo&lt;/big&gt;
 console.log(worldString.fontsize(7)); // &lt;font size="7"&gt;Olá, mundo&lt;/fontsize&gt;
 </pre>
 
-<p>Com o objeto <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style" title="https://wiki.developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style">element.style</a></code> você pode obter o atributo <code>style</code> do elemento e manipulá-lo de forma mais genérica, por exemplo:</p>
+<p>Com o objeto <code><a href="/en-US/docs/Web/API/ElementCSSInlineStyle/style">element.style</a></code> você pode obter o atributo <code>style</code> do elemento e manipulá-lo de forma mais genérica, por exemplo:</p>
 
 <pre class="brush: js notranslate">document.getElementById('#oIdDoElemento').style.fontSize = '0.7em';
 </pre>

@@ -24,21 +24,21 @@ translation_of: Mozilla/Firefox/Releases/14
 <h3 id="DOM">DOM</h3>
 
 <ul>
- <li><a href="/ja/DOM/DOM_event_reference/input" title="ja/DOM/DOM_event_reference/input">input</a> イベントが <a href="/en/DOM/Element.contentEditable" title="en/DOM/Element.contentEditable">contenteditable</a> エディタをホストしている要素および <a href="/en/DOM/document.designMode" title="document.designMode">designMode</a> エディタのルート要素上での編集でも発生するようになりました。</li>
+ <li><a href="/ja/DOM/DOM_event_reference/input">input</a> イベントが <a href="/ja/DOM/Element.contentEditable" title="en/DOM/Element.contentEditable">contenteditable</a> エディタをホストしている要素および <a href="/ja/DOM/document.designMode" title="document.designMode">designMode</a> エディタのルート要素上での編集でも発生するようになりました。</li>
  <li>{{ domxref("DOMException", "DOMException.code") }} は最新の DOM Level 4 仕様に従って非推奨になりました。</li>
  <li>{{ domxref("Range.insertNode()") }} が 折り畳まれた (collapsed) 範囲上で用いられたときに正しく動作するようになりました。</li>
  <li>{{ domxref("BlobBuilder", "MozBlobBuilder") }} インタフェースが {{ domxref("Blob") }} コンストラクタの利用を促すために非推奨になりました。<code>MozBlobBuilder</code> を利用した場合、Web コンソールに警告が表示されます。</li>
  <li>{{ domxref("DOM_Mutation_Observers","MutationObserver") }} のサポートが導入されました。これは、パフォーマンスに関する多くの問題がある DOM3  の Mutation Events の置き換えとして設計されました。</li>
  <li>{{ domxref("HTMLImageElement") }} インタフェースの <code>x</code> <code><code>プロパティおよび </code>y</code> プロパティは Gecko 7.0 で削除されましたが、互換性の理由でこのリリースから復活しました。</li>
  <li>{{ domxref("Document") }} のメソッドである <code>execCommandShowHelp()<code><code> と<code><code> </code></code></code></code></code><code>queryCommandText() は、今まで何もしませんでしたが、削除されました。</code></li>
- <li><code>GeoPositionAddress</code> インタフェースは、<a href="/Ja/Using_geolocation" title="Ja/Using_geolocation">Geolocation</a> API で廃止された仕様の一部であり、削除されました。</li>
+ <li><code>GeoPositionAddress</code> インタフェースは、<a href="/Ja/Using_geolocation">Geolocation</a> API で廃止された仕様の一部であり、削除されました。</li>
  <li>{{ domxref("Storage", "localStorage/sessionStorage") }} がプロパティアクセスを通した宣言されていないキーに対して <code>null</code> ではなく<code> undefined</code> を正しく返すようになりました。</li>
 </ul>
 
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li>{{ cssxref("text-transform") }} と {{ cssxref("font-variant") }} CSS プロパティが <code>i</code> → <code>İ</code> および <code>ı</code> → <code>I </code>という <a class="external" href="http://en.wikipedia.org/wiki/Turkic_languages" title="http://en.wikipedia.org/wiki/Turkic_languages">テュルク諸語</a> (<a class="external" href="http://ja.wikipedia.org/wiki/%E3%83%86%E3%83%A5%E3%83%AB%E3%82%AF%E8%AB%B8%E8%AA%9E" title="http://ja.wikipedia.org/wiki/%E3%83%86%E3%83%A5%E3%83%AB%E3%82%AF%E8%AB%B8%E8%AA%9E">日本語版</a>) 固有の文字対応の組を正しく扱うように修正されました。</li>
+ <li>{{ cssxref("text-transform") }} と {{ cssxref("font-variant") }} CSS プロパティが <code>i</code> → <code>İ</code> および <code>ı</code> → <code>I </code>という <a class="external" href="http://en.wikipedia.org/wiki/Turkic_languages">テュルク諸語</a> (<a class="external" href="http://ja.wikipedia.org/wiki/%E3%83%86%E3%83%A5%E3%83%AB%E3%82%AF%E8%AB%B8%E8%AA%9E">日本語版</a>) 固有の文字対応の組を正しく扱うように修正されました。</li>
  <li>オランダ語の IJ という連字が <code>text-transform: capitalization<code> </code></code>で正しく扱われるようになりました。類似のものとして、ギリシャ文字の <code>Σ</code> には、2つの小文字 <code>σ</code> と <code>ς</code> がありますが、これらが<code> text-transform: lowercase</code> で正しく扱われるようになりました。</li>
  <li>ドラフト標準から削除されたため、<code>skew()</code> 関数のサポートが {{ cssxref("transform") }} プロパティから削除されました。</li>
 </ul>
@@ -51,7 +51,7 @@ translation_of: Mozilla/Firefox/Releases/14
 
 <h3 id="HTTP">HTTP</h3>
 
-<p>Gecko で新しい <a href="/en/HTTP" title="HTTP">HTTP</a> <a href="/en/HTTP/HTTP_response_codes#308" title="https://developer.mozilla.org/en/HTTP/HTTP_response_codes#308"><code>308 Permanent Redirect</code></a> ステータスコードがサポートされます。Gecko は永続的リダイレクトと一時的リダイレクトを区別しないので、308 ステータスコードは <a href="/en/HTTP/HTTP_response_codes#307" title="https://developer.mozilla.org/en/HTTP/HTTP_response_codes#307"><code>307 Temporary Redirect</code></a> コードのように振る舞います。307 同様に、ユーザエージェントが 2 つのリクエスト間で HTTP メソッドを変更することは禁止されます (<code>POST</code> は <code>POST のままであり、</code><code>GET</code> は <code>GET のままです</code>)。</p>
+<p>Gecko で新しい <a href="/ja/HTTP" title="HTTP">HTTP</a> <a href="/ja/HTTP/HTTP_response_codes#308" title="https://developer.mozilla.org/en/HTTP/HTTP_response_codes#308"><code>308 Permanent Redirect</code></a> ステータスコードがサポートされます。Gecko は永続的リダイレクトと一時的リダイレクトを区別しないので、308 ステータスコードは <a href="/ja/HTTP/HTTP_response_codes#307" title="https://developer.mozilla.org/en/HTTP/HTTP_response_codes#307"><code>307 Temporary Redirect</code></a> コードのように振る舞います。307 同様に、ユーザエージェントが 2 つのリクエスト間で HTTP メソッドを変更することは禁止されます (<code>POST</code> は <code>POST のままであり、</code><code>GET</code> は <code>GET のままです</code>)。</p>
 
 <h2 id="Mozilla_開発者とアドオン開発者向けの変更点">Mozilla 開発者とアドオン開発者向けの変更点</h2>
 
@@ -62,7 +62,7 @@ translation_of: Mozilla/Firefox/Releases/14
 <ul>
  <li>現在の選択範囲をコメントアウトする、もしくは、コメントアウトを解除するためのキーボードショートカットが追加されました（Ctrl-/ もしくは Mac OS X では Cmd-/）。</li>
  <li>現在のブロックの開始と終端にテキスト入力位置を移動するための Ctrl-[ および Ctrl-]  キーボードショートカットが追加されました。</li>
- <li>新しく <a href="/en/JavaScript_code_modules/source-editor.jsm#getLineStart%28%29" title="en/JavaScript_code_modules/source-editor.jsm#getLineStart%28%29"><code>getLineStart()</code></a> <code>および </code><a href="/en/JavaScript_code_modules/source-editor.jsm#getLineEnd%28%29" title="en/JavaScript_code_modules/source-editor.jsm#getLineEnd%28%29"><code>getLineEnd()</code></a> メソッドが追加されました。</li>
+ <li>新しく <a href="/ja/JavaScript_code_modules/source-editor.jsm#getLineStart%28%29" title="en/JavaScript_code_modules/source-editor.jsm#getLineStart%28%29"><code>getLineStart()</code></a> <code>および </code><a href="/ja/JavaScript_code_modules/source-editor.jsm#getLineEnd%28%29" title="en/JavaScript_code_modules/source-editor.jsm#getLineEnd%28%29"><code>getLineEnd()</code></a> メソッドが追加されました。</li>
 </ul>
 
 <h3 id="XUL">XUL</h3>
@@ -74,15 +74,15 @@ translation_of: Mozilla/Firefox/Releases/14
 <h3 class="editable" id="インタフェース"><span>インタフェース</span></h3>
 
 <ul>
- <li>{{ interface("nsILocalFile") }} インタフェースは {{ interface("nsIFile") }} にマージされました。 (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=682360" title="https://bugzilla.mozilla.org/show_bug.cgi?id=682360">bug 682360</a>).</li>
- <li>ブックマークをインポートするための {{ interface("nsIPlacesImportExportService") }} におけるメソッドは <code><a href="/en/JavaScript_code_modules/BookmarkHTMLUtils.jsm" title="en/JavaScript_code_modules/BookmarkHTMLUtils.jsm">BookmarkHTMLUtils.jsm</a></code> JavaScript コードモジュールの利用を促すために削除されました。</li>
+ <li>{{ interface("nsILocalFile") }} インタフェースは {{ interface("nsIFile") }} にマージされました。 (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=682360">bug 682360</a>).</li>
+ <li>ブックマークをインポートするための {{ interface("nsIPlacesImportExportService") }} におけるメソッドは <code><a href="/ja/JavaScript_code_modules/BookmarkHTMLUtils.jsm" title="en/JavaScript_code_modules/BookmarkHTMLUtils.jsm">BookmarkHTMLUtils.jsm</a></code> JavaScript コードモジュールの利用を促すために削除されました。</li>
  <li>{{ interface("nsIDOMGeoPositionAddress") }} インターフェースは削除されました。</li>
 </ul>
 
 <h3 id="スペルチェック">スペルチェック</h3>
 
 <ul>
- <li>辞書の名前が完全な <a class="external" href="http://tools.ietf.org/html/bcp47" title="http://tools.ietf.org/html/bcp47">BCP 47</a> 言語タグで解釈されるようになりました (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=730209" title="https://bugzilla.mozilla.org/show_bug.cgi?id=730209">bug 730209</a>, <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=741842" title="https://bugzilla.mozilla.org/show_bug.cgi?id=741842">bug 741842</a>)。開発者は辞書名での言語名をハードコーディングしないようにしてください。</li>
+ <li>辞書の名前が完全な <a class="external" href="http://tools.ietf.org/html/bcp47">BCP 47</a> 言語タグで解釈されるようになりました (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=730209">bug 730209</a>, <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=741842">bug 741842</a>)。開発者は辞書名での言語名をハードコーディングしないようにしてください。</li>
 </ul>
 
 <h2 id="See_also" name="See_also">関連記事</h2>

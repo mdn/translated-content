@@ -16,12 +16,11 @@ browser-compat: html.elements.basefont
 ---
 <div>{{HTMLRef}}</div>
 
-<div class="notecard deprecated">
-  <p><b>Obsolète</b></p>
-  <p>Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications Web l'utilisant peuvent cesser de fonctionner à tout moment.</p>
+<div class="warning">
+  <p><strong>Attention :</strong> Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications Web l'utilisant peuvent cesser de fonctionner à tout moment.</p>
 </div>
 
-<p class="summary">L'élément HTML <strong><code>&lt;basefont&gt;</code></strong> définit la police par défaut (taille, fonte, couleur) pour les éléments qui sont des descendants de cet élément. La taille de la police utilisée peut ensuite varier relativement à cette taille de base grâce à l'élément <a href="/fr/docs/Web/HTML/Element/font"><code>&lt;font&gt;</code></a>.</p>
+<p>L'élément HTML <strong><code>&lt;basefont&gt;</code></strong> définit la police par défaut (taille, fonte, couleur) pour les éléments qui sont des descendants de cet élément. La taille de la police utilisée peut ensuite varier relativement à cette taille de base grâce à l'élément <a href="/fr/docs/Web/HTML/Element/font"><code>&lt;font&gt;</code></a>.</p>
 
 <p>N'utilisez pas cet élément, mais plutôt les propriétés CSS telles que <a href="/fr/docs/Web/CSS/font"><code>font</code></a>, <a href="/fr/docs/Web/CSS/font-family"><code>font-family</code></a>, <a href="/fr/docs/Web/CSS/font-size"><code>font-size</code></a> et <a href="/fr/docs/Web/CSS/color"><code>color</code></a> pour modifier la configuration de la police d'un élément et de son contenu.</p>
 
@@ -30,11 +29,11 @@ browser-compat: html.elements.basefont
 <p>Comme tous les autres éléments HTML, cet élément prend en charge <a href="/fr/docs/Web/HTML/Global_attributes">les attributs universels</a>.</p>
 
 <dl>
-  <dt><strong id="attr-color"><code>color</code></strong></dt>
+  <dt><strong><code>color</code></strong></dt>
   <dd>Cet attribut définit la couleur du texte grâce à une couleur nommée ou à une couleur définie dans un format hexadécimal #RRGGBB.</dd>
-  <dt><strong id="attr-face"><code>face</code></strong></dt>
+  <dt><strong><code>face</code></strong></dt>
   <dd>Cet attribut contient une liste d'un ou plusieurs noms de police. Le texte du document, dans son style par défaut, est rendu avec la première police prise en charge par le navigateur du client. Si aucune police listée ne se trouve sur le système local, le navigateur utilise la police proportionnelle ou à largeur fixe du système.</dd>
-  <dt><strong id="attr-size"><code>size</code></strong></dt>
+  <dt><strong><code>size</code></strong></dt>
   <dd>Cet attribut définit la taille de la police avec une valeur numérique ou relative. Les valeurs numériques vont de 1 à 7 ; 1 étant la plus petite et 3 la taille par défaut.</dd>
 </dl>
 

@@ -1,0 +1,103 @@
+---
+title: HTMLElement.dataset
+slug: orphaned/Web/API/HTMLOrForeignElement/dataset
+tags:
+  - API
+  - HTML DOM
+  - HTMLElement
+  - Propriété
+  - Référence(2)
+  - dataset
+translation_of: Web/API/HTMLOrForeignElement/dataset
+original_slug: Web/API/HTMLOrForeignElement/dataset
+---
+<p>{{ APIRef }}</p>
+
+<p>La propriété <code><strong>HTMLElement.dataset</strong></code> fournit un accès en mode lecture et écriture, à tous les <a href="/fr/docs/Web/HTML/Attributs_globaux/data-*" title="https://developer.mozilla.org/fr/docs/Web/HTML/Attributs_globaux/data-*">attributs de données sur mesure</a> (<em>data-*</em>) définis sur l'élément. C'est un <a href="/en/DOM/DOMStringMap" title="en/DOM/DOMStringMap">tableau associatif de DOMString</a>, qui associe à chaque nom d'attribut de données sur mesure la valeur qu'il contient.</p>
+
+<p>Le nom d'un attribut de données sur mesure commence par <code>data-</code>. Il ne doit contenir que des lettres, des nombres et les caractères suivants : tiret (<code>-</code>), point (<code>.</code>), deux-points (<code>:</code>), tiret bas (<code>_</code>). De plus, il ne doit pas contenir des lettres majuscules ASCII (<code>A</code> à <code>Z</code>).</p>
+
+<p>Un nom d'attribut de données sur mesure est transformé en clef pour l'entrée de la {{ domxref("DOMStringMap") }} avec les règles suivantes :</p>
+
+<ul>
+ <li>le préfixe <code>data-</code> est enlevé (y compris le tiret) ;</li>
+ <li>pour tout tiret (<code>U+002D</code>) suivi par une <span style="line-height: 1.5;"> lettre minuscule ASCII</span><code> a</code><span style="line-height: 1.5;"> à </span><code>z</code><span style="line-height: 1.5;">, le tiret est enlevé et la lettre est transformée en la majuscule correspondante ;</span></li>
+ <li>les autres caractères (y compris les autres tirets) ne sont pas modifiés.</li>
+</ul>
+
+<p>La transformation opposée, qui associe un nom d'attribut à une clef, utilise les règles suivantes :</p>
+
+<ul>
+ <li>Restriction : Aucun tiret ne doit être immédiatement suivi d'une lettre minuscule ASCII <code>a</code> à <code>z</code> (avant la transformation) ;</li>
+ <li>un préfixe <code>data-</code> est ajouté ;</li>
+ <li>toute lettre majuscule ASCII <code>A</code> à <code>Z</code> est transformée en un tiret suivi de la minuscule correspondante ;</li>
+ <li>les autres caractères ne sont pas modifiés.</li>
+</ul>
+
+<p>La restriction dans les règles ci-dessus garantit que les deux transformations sont bien l'inverse l'une de l'autre.</p>
+
+<p>Par exemple, l'attribut nommé <code>data-abc-def</code> correspond à la clef <code>abcDef</code>.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox"><em>chaîne</em> = <em>element</em>.dataset.<em>nomEnCamelCase</em>;
+<em>element.</em>dataset.<em>nomEnCamelCase</em> = <em>chaîne</em>;</pre>
+
+<h2 id="Exemples">Exemples</h2>
+
+<pre class="brush: js">&lt;div id="utilisateur" data-id="1234567890" data-utilisateur="Monsieur Tartempion" data-date-de-naissance&gt;Monsieur Tartempion
+&lt;/div&gt;
+
+var el = document.querySelector('#utilisateur');
+
+// el.id == 'utilisateur'
+// el.dataset.id === '1234567890'
+// el.dataset.utilisateur === 'Monsieur Tartempion'
+// el.dataset.dateDeNaissance === ''
+
+el.dataset.dateDeNaissance = '1960-10-03'; // renseigne la date de naissance.
+
+// 'unAttributDeDonnees' in el.dataset === false
+
+el.dataset.unAttributDeDonnees = 'mes données';
+// 'unAttributDeDonnees' in el.dataset === true
+</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">Statut</th>
+   <th scope="col">Commentaire</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "dom.html#dom-dataset", "HTMLElement.dataset")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Pas de changement depuis le dernier instantané (snapshot), {{SpecName('HTML5.1')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', "dom.html#dom-dataset", "HTMLElement.dataset")}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td>Instantané de {{SpecName('HTML WHATWG')}}, pas de changement depuis {{SpecName('HTML5 W3C')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', "dom.html#dom-dataset", "HTMLElement.dataset")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Instantané de {{SpecName('HTML WHATWG')}}, définition initiale.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+
+
+<p>{{Compat("api.HTMLElement.dataset")}}</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>La classe des attributs globaux HTML <a href="/fr/docs/Web/HTML/Attributs_globaux/data-*"><strong>data-*</strong></a>.</li>
+</ul>

@@ -67,7 +67,7 @@ console.log(eArr.next().value); // e
 
 <h3 id="Use_Case_for_brace_notation" name="Use_Case_for_brace_notation">括弧表記の使用法</h3>
 
-<p>この構文をドット記法 (<code>Array.prototype.values()</code>) よりも優先して使用する場合は、事前にどのようなオブジェクトになるのかが分からない場合です。イテレータを受け取り、その値を反復処理する関数があるが、そのオブジェクトが [Iterable].prototype.values メソッドを持っているかどうかわからない場合です。これはStringオブジェクトのような組み込みオブジェクトでも、カスタムオブジェクトでもよいでしょう。これは <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator">String</a> オブジェクトのような組込みオブジェクトや、独自オブジェクトである可能性があります。</p>
+<p>この構文をドット記法 (<code>Array.prototype.values()</code>) よりも優先して使用する場合は、事前にどのようなオブジェクトになるのかが分からない場合です。イテレータを受け取り、その値を反復処理する関数があるが、そのオブジェクトが [Iterable].prototype.values メソッドを持っているかどうかわからない場合です。これはStringオブジェクトのような組み込みオブジェクトでも、カスタムオブジェクトでもよいでしょう。これは <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator">String</a> オブジェクトのような組込みオブジェクトや、独自オブジェクトである可能性があります。</p>
 
 <pre class="brush: js notranslate">function logIterable(it) {
   var iterator = it[Symbol.iterator]();
@@ -109,8 +109,6 @@ logIterable('abc');
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
 <p>{{Compat("javascript.builtins.Array.@@iterator")}}</p>
 

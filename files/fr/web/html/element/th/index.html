@@ -15,8 +15,6 @@ translation_of: Web/HTML/Element/th
 
 <div>{{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <h2 id="Attributs">Attributs</h2>
 
 <p>Cet élément inclut <a href="/fr/docs/Web/HTML/Attributs_universels">les attributs universels</a>.</p>
@@ -57,7 +55,8 @@ translation_of: Web/HTML/Element/th
 
  <p>Si cet attribut n'est pas renseigné, la valeur <code>left</code> est prise par défaut.</p>
 
- <div class="note"><strong>Notes : </strong>Cet attribut est devenu obsolète dans le dernier standard et ne doit donc plus être utilisé.
+ <div class="note">
+   <p><strong>Note :</strong> Cet attribut est devenu obsolète dans le dernier standard et ne doit donc plus être utilisé.</p>
 
  <ul>
   <li>Pour réaliser les mêmes effets que les valeurs <code>left</code>, <code>center</code>, <code>right</code> ou <code>justify</code>, il faut utiliser la propriété CSS {{cssxref("text-align")}} sur l'élément</li>
@@ -65,91 +64,22 @@ translation_of: Web/HTML/Element/th
  </ul>
  </div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("axis")}} {{obsolete_inline}} en {{HTMLVersionInline("5")}}</dt>
- <dd>Cet attribut contient une liste de chaîne de caractères (séparées par des espaces). Chaque chaîne de caractère est l'identifiant d'un groupe de cellule auquel cet en-tête s'applique.</dd>
- <dd>
- <div class="note"><strong>Note : </strong>Cet attribut est obsolète dans le dernier standard et ne doit donc plus être utilisé. L'attribut {{htmlattrxref("scope", "td")}} doit être utilisé pour le remplacer.</div>
+ <dd><p>Cet attribut contient une liste de chaîne de caractères (séparées par des espaces). Chaque chaîne de caractère est l'identifiant d'un groupe de cellule auquel cet en-tête s'applique.</p>
+ <div class="note"><p><strong>Note :</strong> Cet attribut est obsolète dans le dernier standard et ne doit donc plus être utilisé. L'attribut {{htmlattrxref("scope", "td")}} doit être utilisé pour le remplacer.</p></div>
  </dd>
  <dt>{{htmlattrdef("bgcolor")}} {{Non-standard_inline}}</dt>
- <dd>Cet attribut définit la couleur d'arrière-plan de toutes les cellules de la colonne. C'est un code à 6 chiffres hexadécimaux comme défini par le <a class="external" href="https://www.w3.org/Graphics/Color/sRGB">sRGB</a>. Il est précédé d'un '#'. Un de ces seize mot-clé peut également être utilisé.
- <table style="width: 80%;">
-  <tbody>
-   <tr>
-    <td style="background-color: black; width: 24px; height: 24px; border: 1px solid black;"> </td>
-    <td><code>black</code> = "#000000"</td>
-    <td style="background-color: green; width: 24px; height: 24px; border: 1px solid black;"> </td>
-    <td><code>green</code> = "#008000"</td>
-   </tr>
-   <tr>
-    <td style="background-color: silver; width: 24px; height: 24px; border: 1px solid black;"> </td>
-    <td><code>silver</code> = "#C0C0C0"</td>
-    <td style="background-color: lime; width: 24px; height: 24px; border: 1px solid black;"> </td>
-    <td><code>lime</code> = "#00FF00"</td>
-   </tr>
-   <tr>
-    <td style="background-color: gray; width: 24px; height: 24px; border: 1px solid black;"> </td>
-    <td><code>gray</code> = "#808080"</td>
-    <td style="background-color: olive; width: 24px; height: 24px; border: 1px solid black;"> </td>
-    <td><code>olive</code> = "#808000"</td>
-   </tr>
-   <tr>
-    <td style="background-color: white; width: 24px; height: 24px; border: 1px solid black;"> </td>
-    <td><code>white</code> = "#FFFFFF"</td>
-    <td style="background-color: yellow; width: 24px; height: 24px; border: 1px solid black;"> </td>
-    <td><code>yellow</code> = "#FFFF00"</td>
-   </tr>
-   <tr>
-    <td style="background-color: maroon; width: 24px; height: 24px; border: 1px solid black;"> </td>
-    <td><code>maroon</code> = "#800000"</td>
-    <td style="background-color: navy; width: 24px; height: 24px; border: 1px solid black;"> </td>
-    <td><code>navy</code> = "#000080"</td>
-   </tr>
-   <tr>
-    <td style="background-color: red; width: 24px; height: 24px; border: 1px solid black;"> </td>
-    <td><code>red</code> = "#FF0000"</td>
-    <td style="background-color: blue; width: 24px; height: 24px; border: 1px solid black;"> </td>
-    <td><code>blue</code> = "#0000FF"</td>
-   </tr>
-   <tr>
-    <td style="background-color: purple; width: 24px; height: 24px; border: 1px solid black;"> </td>
-    <td><code>purple</code> = "#800080"</td>
-    <td style="background-color: teal; width: 24px; height: 24px; border: 1px solid black;"> </td>
-    <td><code>teal</code> = "#008080"</td>
-   </tr>
-   <tr>
-    <td style="background-color: fuchsia; width: 24px; height: 24px; border: 1px solid black;"> </td>
-    <td><code>fuchsia</code> = "#FF00FF"</td>
-    <td style="background-color: aqua; width: 24px; height: 24px; border: 1px solid black;"> </td>
-    <td>
-     <p><code>aqua</code> = "#00FFFF"</p>
-    </td>
-   </tr>
-  </tbody>
- </table>
-
- <div class="note"><strong>Note d'utilisation : </strong>Il est fortement conseillé de ne pas utiliser cet attribut car celui-ci n'est pas un attribut standard et n'a été implémentée que sous certaines versions d'Internet Explorer. L'élément {{HTMLElement("th")}} doit être mis en forme grâce au <a href="/fr/docs/CSS">CSS</a>. Pour fournir un effet semblable à celui achevé par l'attribut <code><strong>bgcolor</strong></code>, il est possible d'utiliser la propriété CSS {{cssxref("background-color")}}.</div>
+ <dd><p>Cet attribut définit la couleur d'arrière-plan de toutes les cellules de la colonne. C'est un code à 6 chiffres hexadécimaux comme défini par le <a class="external" href="https://www.w3.org/Graphics/Color/sRGB">sRGB</a>. Il est précédé d'un '#'. Un des <a href="/fr/docs/Web/CSS/color_value#color_keywords">mots-clés préfédinis pour les couleurs</a> peut également être utilisé.</p>
+ <div class="note"><p><strong>Note :</strong> Il est fortement conseillé de ne pas utiliser cet attribut car celui-ci n'est pas un attribut standard et n'a été implémentée que sous certaines versions d'Internet Explorer. L'élément {{HTMLElement("th")}} doit être mis en forme grâce au <a href="/fr/docs/CSS">CSS</a>. Pour fournir un effet semblable à celui achevé par l'attribut <code><strong>bgcolor</strong></code>, il est possible d'utiliser la propriété CSS {{cssxref("background-color")}}.</p></div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("char")}} {{obsolete_inline}} {{HTMLVersionInline("5")}}</dt>
- <dd>Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut {{htmlattrxref("align", "th")}} ne vaut pas <code>char</code>, l'attribut est ignoré.</dd>
- <dd>
- <div class="note"><strong>Note d'utilisation : </strong>Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec {{htmlattrxref("char", "th")}}, on peut utiliser CSS3 en attribuant la même valeur à la propriété {{cssxref("text-align")}}.{{unimplemented_inline}}.</div>
+ <dd><p>Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut {{htmlattrxref("align", "th")}} ne vaut pas <code>char</code>, l'attribut est ignoré.</p>
+ <div class="note"><p><strong>Note :</strong> Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec {{htmlattrxref("char", "th")}}, on peut utiliser CSS3 en attribuant la même valeur à la propriété {{cssxref("text-align")}}.{{unimplemented_inline}}.</p></div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("charoff")}} {{obsolete_inline}} {{HTMLVersionInline("5")}}</dt>
- <dd>Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut<strong> char</strong> à appliquer au contenu des cellules.
- <div class="note"><strong>Note d'utilisation: </strong>Cet attribut ne doit plus être utilisé car il est maintenant obsolète et n'est plus supporté dans le dernier standard.</div>
+ <dd><p>Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut<strong> char</strong> à appliquer au contenu des cellules.</p>
+ <div class="note"><p><strong>Note :</strong> Cet attribut ne doit plus être utilisé car il est maintenant obsolète et n'est plus supporté dans le dernier standard.</p></div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("valign")}} {{Deprecated_inline}} en {{HTMLVersionInline("4")}}, {{obsolete_inline}} en {{HTMLVersionInline("5")}}</dt>
  <dd>Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles de cet attribut sont :
  <ul>
@@ -159,7 +89,7 @@ translation_of: Web/HTML/Element/th
   <li><code>top</code> qui placera le texte au plus haut de la cellule.</li>
  </ul>
 
- <div class="note"><strong>Note: </strong>Cet attribut est obsolète dans le dernier standard, la propriété CSS {{cssxref("vertical-align")}} doit être utilisée à la place.</div>
+ <div class="note"><p><strong>Note :</strong> Cet attribut est obsolète dans le dernier standard, la propriété CSS {{cssxref("vertical-align")}} doit être utilisée à la place.</p></div>
  </dd>
 </dl>
 
@@ -204,7 +134,7 @@ translation_of: Web/HTML/Element/th
    <th scope="row">Contenu autorisé</th>
    <td>
     <div class="content-models">
-    <div id="table-mdls"><a href="/fr/docs/Web/Guide/HTML/Catégories_de_contenu#Contenu_de_flux">Contenu de flux</a> sans titre, pied de page, contenu sectionnant ou descendants d'un élément de titre.</div>
+    <div><a href="/fr/docs/Web/Guide/HTML/Catégories_de_contenu#Contenu_de_flux">Contenu de flux</a> sans titre, pied de page, contenu sectionnant ou descendants d'un élément de titre.</div>
     </div>
    </td>
   </tr>

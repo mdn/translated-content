@@ -64,10 +64,10 @@ console.log(z); // 2
 
 <pre class="brush: js">var foo = ["one", "two", "three"];
 
-var [one, two, three] = foo;
-console.log(one); // "one"
-console.log(two); // "two"
-console.log(three); // "three"
+var [red, yellow, green] = foo;
+console.log(red); // "one"
+console.log(yellow); // "two"
+console.log(green); // "three"
 </pre>
 
 <h3 id="선언에서_분리한_할당">선언에서 분리한 할당</h3>
@@ -341,7 +341,7 @@ whois(user); // "jdoe is John"</pre>
 
 <h3 id="계산된_속성_이름과_구조_분해">계산된 속성 이름과 구조 분해</h3>
 
-<p>계산된 속성 이름(computed property name)은, <a href="/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names" title="object literals">객체 리터럴</a>과 비슷하게 구조 분해에도 사용될 수 있습니다.</p>
+<p>계산된 속성 이름(computed property name)은, <a href="/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names">객체 리터럴</a>과 비슷하게 구조 분해에도 사용될 수 있습니다.</p>
 
 <pre class="brush: js">let key = "z";
 let { [key]: foo } = { z: "bar" };
@@ -404,6 +404,6 @@ console.log(fizzBuzz); // "true"
 <h2 id="같이_보기">같이 보기</h2>
 
 <ul>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Assignment_Operators" title="Assignment operators">할당 연산자</a></li>
+ <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">할당 연산자</a></li>
  <li><a href="https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/">"ES6 in Depth: Destructuring" on hacks.mozilla.org</a></li>
 </ul>

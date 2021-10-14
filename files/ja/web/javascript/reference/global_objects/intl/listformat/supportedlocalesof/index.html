@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supporte
 
 <h2 id="Description" name="Description">解説</h2>
 
-<p><code>locales</code> で提供されている言語タグのサブセットを含む配列を返します。返される言語タグは、ランタイムが日時のロケールに対応しているもので、使用しているロケール一致アルゴリズムで一致しているとみなされているものです。</p>
+<p><code>locales</code> で提供されている言語タグのサブセットを含む配列を返します。返される言語タグは、ランタイムが日時のロケールに対応しているもので、使用しているロケール照合アルゴリズムで一致しているとみなされているものです。</p>
 
 <h2 id="Examples" name="Examples">例</h2>
 
@@ -72,8 +72,6 @@ console.log(Intl.ListFormat.supportedLocalesOf(locales, options).join(', '));
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
 <div>
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
-
 <p>{{Compat("javascript.builtins.Intl.ListFormat.supportedLocalesOf")}}</p>
 </div>
 

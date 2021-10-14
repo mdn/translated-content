@@ -32,7 +32,7 @@ translation_of: Web/HTTP/CSP
 
 <h3 id="Mitigating_packet_sniffing_attacks" name="Mitigating_packet_sniffing_attacks">パケット盗聴攻撃の軽減</h3>
 
-<p>取得するコンテンツのドメインを制限することに加えて、サーバーは通信に使うプロトコルを指定することも可能です。例えば、 (セキュリティの観点からはこれが理想的ですが) すべてのコンテンツを HTTPS で取得されるようにサーバーから指定することが出来ます。データ通信におけるセキュリティ戦略を完全なものとするには、HTTPS 通信を強制するだけではなく、すべての <a href="https://developer.mozilla.org/ja/docs/Web/HTTP/Cookies">Cookie に secure フラグ</a> を付けたり、HTTP ページから対応する HTTPS ページへの自動リダイレクトを整備することも必要です。また、ブラウザーが暗号化された通信路のみを用いてサイトに接続することを保証するため、{{HTTPHeader("Strict-Transport-Security")}} HTTP ヘッダーを利用することも可能です。</p>
+<p>取得するコンテンツのドメインを制限することに加えて、サーバーは通信に使うプロトコルを指定することも可能です。例えば、 (セキュリティの観点からはこれが理想的ですが) すべてのコンテンツを HTTPS で取得されるようにサーバーから指定することが出来ます。データ通信におけるセキュリティ戦略を完全なものとするには、HTTPS 通信を強制するだけではなく、すべての <a href="/ja/docs/Web/HTTP/Cookies">Cookie に secure フラグ</a> を付けたり、HTTP ページから対応する HTTPS ページへの自動リダイレクトを整備することも必要です。また、ブラウザーが暗号化された通信路のみを用いてサイトに接続することを保証するため、{{HTTPHeader("Strict-Transport-Security")}} HTTP ヘッダーを利用することも可能です。</p>
 
 <h2 id="Using_CSP" name="Using_CSP">CSP の適用</h2>
 
@@ -178,8 +178,6 @@ translation_of: Web/HTTP/CSP
 <p>ご覧の通り、<code>blocked-uri</code> には違反の原因となったリソースのフルパスが記録されています。ただし、必ずフルパスが記録されるとは限りません。例えば、 <code>signup.html</code> が <code>http://anothercdn.example.com/stylesheet.css</code> から CSS を読み込もうとした場合、<code>blocked-uri</code> にはフルパスではなくオリジンのみ (<code>http://anothercdn.example.com</code>) が記録されます。この一見不思議な挙動は CSP の仕様書に <a href="http://www.w3.org/TR/CSP/#violation-reports">説明されています</a>。手短に言うと、この挙動はクロスオリジンのリソースに関する機密情報の漏えいを防ぐために規定されています。</p>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p class="hidden">このページの互換性一覧表は構造化データから生成されます。データに貢献したいのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</p>
 
 <p>{{Compat("http.headers.csp")}}</p>
 

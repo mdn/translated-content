@@ -8,15 +8,19 @@ tags:
   - CSS プロパティ
   - HTML 色
   - Reference
-  - 文字列強調
+  - Styling HTML
+  - Text Emphasis
+  - 'recipe:css-property'
+  - text-decoration-color
+browser-compat: css.properties.text-emphasis-color
 translation_of: Web/CSS/text-emphasis-color
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary"><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>text-emphasis-color</code></strong> プロパティは、圏点の色を設定します。この値は一括指定の {{cssxref("text-emphasis")}} を使用して設定することもできます。</span></p>
+<p><strong><code>text-emphasis-color</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、圏点の色を設定します。この値は一括指定の {{cssxref("text-emphasis")}} を使用して設定することもできます。</p>
 
 <pre class="brush:css no-line-numbers">/* 初期値 */
-text-emphasis-color: currentColor;
+text-emphasis-color: currentcolor;
 
 /* &lt;color&gt; */
 text-emphasis-color: #555;
@@ -27,70 +31,58 @@ text-emphasis-color: transparent;
 /* グローバル値 */
 text-emphasis-color: inherit;
 text-emphasis-color: initial;
+text-emphasis-color: revert;
 text-emphasis-color: unset;
 </pre>
 
-<p>{{cssinfo}}</p>
+<h2 id="Syntax">構文</h2>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<h3 id="Values" name="Values">値</h3>
+<h3 id="Values">値</h3>
 
 <dl>
  <dt><code>&lt;color&gt;</code></dt>
- <dd>記号の色を定義します。 color が存在しない場合、既定で <code>currentColor</code> になります。</dd>
+ <dd>記号の色を定義します。 color が存在しない場合、既定で <code>currentcolor</code> になります。</dd>
 </dl>
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+<h2 id="Formal_definition">公式定義</h2>
+
+<p>{{CSSInfo}}</p>
+
+<h3 id="Formal_syntax">形式文法</h3>
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="CSS">CSS</h3>
+<h3 id="Emphasis_with_a_color_and_custom_character">色と固有の文字で強調</h3>
 
-<pre class="brush: css">h3 {
-  text-emphasis-color: #555;
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css">em {
+  text-emphasis-color: green;
   text-emphasis-style: "*";
 }</pre>
 
-<h3 id="HTML">HTML</h3>
+<h4 id="HTML">HTML</h4>
 
 <pre class="brush: html">&lt;p&gt;Here's an example:&lt;/p&gt;
 
-&lt;h3&gt;This has emphasis marks!&lt;/h3&gt;
+&lt;em&gt;This has emphasis marks!&lt;/em&gt;
 </pre>
 
-<h3 id="Result" name="Result">結果</h3>
+<h4 id="Result">結果</h4>
 
-<p>{{EmbedLiveSample("Examples", 450, 100)}}</p>
+<p>{{EmbedLiveSample("Emphasis_with_a_color_and_custom_character", 450, 100)}}</p>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text Decoration', '#text-emphasis-color-property', 'text-emphasis')}}</td>
-   <td>{{Spec2('CSS3 Text Decoration')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</p>
+<p>{{Compat}}</p>
 
-<p>{{Compat("css.properties.text-emphasis-color")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li>{{cssxref("&lt;color&gt;")}} データ型</li>

@@ -17,11 +17,11 @@ translation_of: Tools/Web_Console/remoting
 
 <h2 id="WebConsoleActor_と_WebConsoleClient"><code>WebConsoleActor</code> と <code>WebConsoleClient</code></h2>
 
-<p><code>WebConsoleActor</code> は、<a href="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/" title="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/"><code>toolkit/devtools/webconsole</code></a> フォルダの <a href="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/dbg-webconsole-actors.js" title="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/dbg-webconsole-actors.js"><code>dbg-webconsole-actors.js</code></a> にあります。</p>
+<p><code>WebConsoleActor</code> は、<a href="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/"><code>toolkit/devtools/webconsole</code></a> フォルダの <a href="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/dbg-webconsole-actors.js"><code>dbg-webconsole-actors.js</code></a> にあります。</p>
 
-<p><code>WebConsoleClient</code> は (<a href="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/" title="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/"><code>toolkit/devtools/webconsole</code></a> の) <a href="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/WebConsoleClient.jsm" title="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/WebConsoleClient.jsm"><code>WebConsoleClient.jsm</code></a> にあり、Web コンソールアクターで作業するときにWeb コンソールで使用されます。</p>
+<p><code>WebConsoleClient</code> は (<a href="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/"><code>toolkit/devtools/webconsole</code></a> の) <a href="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/WebConsoleClient.jsm"><code>WebConsoleClient.jsm</code></a> にあり、Web コンソールアクターで作業するときにWeb コンソールで使用されます。</p>
 
-<p>デバッガが Web コンソールコードでどのように使用されているかを確認するには、<a href="http://mxr.mozilla.org/mozilla-central/source/browser/devtools/webconsole/webconsole.js" title="http://mxr.mozilla.org/mozilla-central/source/browser/devtools/webconsole/webconsole.js"><code>browser/devtools/webconsole/webconsole.js</code></a> を開き、<code>WebConsoleConnectionProxy</code> を検索します。</p>
+<p>デバッガが Web コンソールコードでどのように使用されているかを確認するには、<a href="http://mxr.mozilla.org/mozilla-central/source/browser/devtools/webconsole/webconsole.js"><code>browser/devtools/webconsole/webconsole.js</code></a> を開き、<code>WebConsoleConnectionProxy</code> を検索します。</p>
 
 <p>新しい Web コンソールアクターは次のとおりです。</p>
 
@@ -109,7 +109,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 <p>タブナビゲーションイベントを待ち受けるには、指定したタブのタブアクターにアタッチする必要もあります。<code>tabNavigated</code> 通知はタブのアクターから来ます。</p>
 
 <div class="warning">
-<p>Firefox 20 以前では、Web コンソールの実行者は<code>LocationChange</code>リスナを提供し、<code>locationChanged</code> 通知を関連付けました。これはもはや当てはまりません。Web コンソールクライアントが <code>tabNavigated</code> 通知を再利用 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=792062" title="https://bugzilla.mozilla.org/show_bug.cgi?id=792062">bug 792062</a>) できるように変更しました。</p>
+<p>Firefox 20 以前では、Web コンソールの実行者は<code>LocationChange</code>リスナを提供し、<code>locationChanged</code> 通知を関連付けました。これはもはや当てはまりません。Web コンソールクライアントが <code>tabNavigated</code> 通知を再利用 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=792062">bug 792062</a>) できるように変更しました。</p>
 </div>
 
 <p>ページナビゲーションが開始されると、次のパケットがタブアクターから送信されます。</p>
@@ -262,7 +262,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 
 <h2 id="ページエラー">ページエラー</h2>
 
-<p>ページエラーは <a href="/ja/docs/XPCOM_Interface_Reference/nsIConsoleService" title="/en-US/docs/XPCOM_Interface_Reference/nsIConsoleService"><code>nsIConsoleService</code></a> から発生します。許可される各ページエラーは <a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIScriptError" title="/en-US/docs/XPCOM_Interface_Reference/nsIScriptError"><code>nsIScriptError</code></a> オブジェクトです。</p>
+<p>ページエラーは <a href="/ja/docs/XPCOM_Interface_Reference/nsIConsoleService" title="/en-US/docs/XPCOM_Interface_Reference/nsIConsoleService"><code>nsIConsoleService</code></a> から発生します。許可される各ページエラーは <a href="/ja/docs/XPCOM_Interface_Reference/nsIScriptError" title="/en-US/docs/XPCOM_Interface_Reference/nsIScriptError"><code>nsIScriptError</code></a> オブジェクトです。</p>
 
 <p><code>pageError</code> パケットは次のとおりです。</p>
 
@@ -296,13 +296,13 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 
 <p><a href="/ja/docs/Web/API/console"><code>window.console</code> API</a> 呼び出しは、Gecko を通して内部メッセージを送信します。これにより、各呼び出しに必要な処理を実行できます。Web コンソールのアクターは、これらのメッセージをリモートデバッグクライアントに送信します。</p>
 
-<p><a href="https://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/debugger/server/dbg-script-actors.js" title="https://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/debugger/server/dbg-script-actors.js">dbg-script-actors.js</a> の <code>ObjectActor</code> を <code>ThreadActor</code> なしで使用すると、ページスクリプトの速度低下を避けることができます。デバッガはターゲットページで JavaScript の実行を非最適化します。Web コンソールの<a href="https://searchfox.org/mozilla-central/source/devtools/docs/backend/protocol.md">オブジェクトアクタの有効期間</a>は、デバッガ内のこれらのオブジェクトの存続期間とは異なります。通常、一時停止またはスレッドごとです。 Web コンソールは <code>ObjectActors</code> の有効期間を手動で管理します。</p>
+<p><a href="https://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/debugger/server/dbg-script-actors.js">dbg-script-actors.js</a> の <code>ObjectActor</code> を <code>ThreadActor</code> なしで使用すると、ページスクリプトの速度低下を避けることができます。デバッガはターゲットページで JavaScript の実行を非最適化します。Web コンソールの<a href="https://searchfox.org/mozilla-central/source/devtools/docs/backend/protocol.md">オブジェクトアクタの有効期間</a>は、デバッガ内のこれらのオブジェクトの存続期間とは異なります。通常、一時停止またはスレッドごとです。 Web コンソールは <code>ObjectActors</code> の有効期間を手動で管理します。</p>
 
 <div class="warning">
-<p>Firefox 23以前は、プロトコルを通じてJavaScriptオブジェクトを操作するために、別のアクタ<code>(WebConsoleObjectActor</code>)を使用しました。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=783499" title="https://bugzilla.mozilla.org/show_bug.cgi?id=783499">bug 783499</a>では、デバッガから<code>ObjectActor</code>を再利用するためにいくつかの変更を行いました。</p>
+<p>Firefox 23以前は、プロトコルを通じてJavaScriptオブジェクトを操作するために、別のアクタ<code>(WebConsoleObjectActor</code>)を使用しました。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=783499">bug 783499</a>では、デバッガから<code>ObjectActor</code>を再利用するためにいくつかの変更を行いました。</p>
 </div>
 
-<p>コンソール API メッセージは <a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIObserverService" title="/en-US/docs/XPCOM_Interface_Reference/nsIObserverService"><code>nsIObserverService</code></a> を経由します。コンソールオブジェクトの実装は <a href="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js" title="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js"><code>dom/base/ConsoleAPI.js</code></a> にあります。</p>
+<p>コンソール API メッセージは <a href="/ja/docs/XPCOM_Interface_Reference/nsIObserverService" title="/en-US/docs/XPCOM_Interface_Reference/nsIObserverService"><code>nsIObserverService</code></a> を経由します。コンソールオブジェクトの実装は <a href="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js"><code>dom/base/ConsoleAPI.js</code></a> にあります。</p>
 
 <p>サーバーで受信したコンソールメッセージごとに、次の <code>consoleAPICall</code> パケットをクライアントに送信します。</p>
 
@@ -336,7 +336,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 
 <p><code>private</code> フラグは、コンソール API 呼び出しがプライベートウィンドウ/タブ (Firefox 24 で追加されたもの) から来ているかどうかを示します。</p>
 
-<p>オブザーバーサービスから受け取ったコンソールイベントオブジェクトには小さな違いがあるように、コンソール API 呼び出しメソッドに応じて、オブジェクトの小さなバリエーションがあります。これらの相違点を確認するには、コンソール API 実装の <a href="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js" title="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js">dom/base/ConsoleAPI.js</a> を参照してください。</p>
+<p>オブザーバーサービスから受け取ったコンソールイベントオブジェクトには小さな違いがあるように、コンソール API 呼び出しメソッドに応じて、オブジェクトの小さなバリエーションがあります。これらの相違点を確認するには、コンソール API 実装の <a href="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js">dom/base/ConsoleAPI.js</a> を参照してください。</p>
 
 <h3 id="JavaScript_評価">JavaScript 評価</h3>
 
@@ -594,7 +594,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 </pre>
 
 <div class="note">
-<p>Firefox19より提供開始：上記のパケットのすべてのヘッダーとCookieの値に対して、値が非常に長い場合は<a href="https://wiki.mozilla.org/Remote_Debugging_Protocol#Objects" title="https://wiki.mozilla.org/Remote_Debugging_Protocol#Objects"><code>LongStringActor</code> grips</a>を使用します。 これにより、ネットワーク帯域幅の使い過ぎを避けることができます。</p>
+<p>Firefox19より提供開始：上記のパケットのすべてのヘッダーとCookieの値に対して、値が非常に長い場合は<a href="https://wiki.mozilla.org/Remote_Debugging_Protocol#Objects"><code>LongStringActor</code> grips</a>を使用します。 これにより、ネットワーク帯域幅の使い過ぎを避けることができます。</p>
 </div>
 
 <p><code>getRequestPostData</code> パケット:</p>
@@ -668,9 +668,9 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 
 <ul>
  <li>Firefox 18: 初期バージョン。</li>
- <li>Firefox 19: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=787981" title="https://bugzilla.mozilla.org/show_bug.cgi?id=787981">bug 787981</a> - いくつかの場所で <code>LongStringActor</code> の使用法を追加しました。</li>
- <li>Firefox 20: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=792062" title="https://bugzilla.mozilla.org/show_bug.cgi?id=792062">bug 792062</a> - removed <code>locationChanged</code> packet and updated the <code>tabNavigated</code> packet for tab actors.</li>
- <li>Firefox 23: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=783499" title="https://bugzilla.mozilla.org/show_bug.cgi?id=783499">bug 783499</a> - removed the <code>WebConsoleObjectActor</code>. Now the Web Console uses the JavaScript debugger API and the <code>ObjectActor</code>.</li>
+ <li>Firefox 19: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=787981">bug 787981</a> - いくつかの場所で <code>LongStringActor</code> の使用法を追加しました。</li>
+ <li>Firefox 20: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=792062">bug 792062</a> - removed <code>locationChanged</code> packet and updated the <code>tabNavigated</code> packet for tab actors.</li>
+ <li>Firefox 23: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=783499">bug 783499</a> - removed the <code>WebConsoleObjectActor</code>. Now the Web Console uses the JavaScript debugger API and the <code>ObjectActor</code>.</li>
  <li>Firefox 23: added the <code>bindObjectActor</code> and <code>frameActor</code> options to the <code>evaluateJS</code> request packet.</li>
  <li>Firefox 24: new <code>private</code> flags for the console actor notifications, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=874061">bug 874061</a>. Also added the <code>lastPrivateContextExited</code> notification for the global console actor.</li>
  <li>Firefox 24: new <code>isXHR</code> flag for the <code>networkEvent</code> notification, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=859046">bug 859046</a>.</li>
@@ -681,6 +681,6 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 
 <h2 id="まとめ">まとめ</h2>
 
-<p>この文書の執筆時点では、この文書は <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=768096" title="https://bugzilla.mozilla.org/show_bug.cgi?id=768096">バグ 768096</a> で行った作業とそれに続く変更をまとめたものです。このドキュメントを最新の状態に保つよう努めています。これがあなたの役立つことを願っています。</p>
+<p>この文書の執筆時点では、この文書は <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=768096">バグ 768096</a> で行った作業とそれに続く変更をまとめたものです。このドキュメントを最新の状態に保つよう努めています。これがあなたの役立つことを願っています。</p>
 
 <p>Webコンソールサーバーを変更する場合は、このドキュメントを更新してください。 ありがとうございました！</p>

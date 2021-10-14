@@ -1,0 +1,85 @@
+---
+title: 색각 시뮬레이션
+slug: Tools/Accessibility_inspector/Simulation
+tags:
+  - Accessibility
+  - Accessibility inspector
+  - DevTools
+  - Guide
+  - Tools
+translation_of: Tools/Accessibility_inspector/Simulation
+---
+<div>{{toolssidebar}}</div>
+
+<p><span class="seoSummary">Firefox 개발자 도구의 <a href="/ko/docs/Tools/Accessibility_inspector">접근성 검사기</a>의 시뮬레이션은 각각 다양한 <em>색각 이상</em>(색맹으로 잘 알려져 있습니다)이나 <em>대비감도 이상</em>이 있는 사용자들이 웹 페이지를 어떻게 볼지 시뮬레이션해줍니다.</span></p>
+
+<p>"색맹"은 엄밀히 말하면 부적절한 단어입니다. 색각 이상을 가지고 있는 사람들 대부분 색을 볼 수 있고 다른 사람들과 색을 다르게 구분합니다. 색각 이상은 단순히 빨강이나 초록처럼 특정한 색에 영향을 미치는 것이 아니라 색 범위의 관점에 영향을 미칩니다. 남성의 8%, 여성의 0.5%에서 색각 이상이 나타납니다. 제일 흔한 색각 이상(주로 적록색맹이라고 합쳐 부릅니다)은 X염색체의 변이 때문에 나타나는데 남자는 X염색체를 하나만 가지고 있어 여성보다 남성에게서 흔하게 나타납니다.</p>
+
+<p>대비감도 이상은 백내장, 녹내장, 당뇨병성 망막증, 등의 망막 이상에 의해서 일어납니다. 나이와 관련이 있을 수 있거나, 선천적이거나, 부상에 의해 일어납니다.</p>
+
+<div class="notecard note">
+<p>이 기능은 웹렌더에 의존하는 실험적 기능으로 모든 플랫폼에서 지원하지 않습니다. <a href="https://support.mozilla.org/ko/kb/about-config-editor-firefox">설정 편집기</a>의 <code>gfx.webrender.all</code>의 값을 <code>true</code>로 변경해서 강제로 적용할 수 있습니다(웹렌더가 기본적으로 켜져 있는 플랫폼의 경우 아무런 영향도 없습니다).</p>
+</div>
+
+<p>컬러 시뮬레이션은 다음과 같은 <strong>시뮬레이션</strong>을 선택해서 설정할 수 있습니다.<br>
+ <img alt="접근성 창의 시뮬레이션 메뉴. 없음, 적색맹 (빨간색 없음), 녹색맹 (초록색 없음), 청색맹 (파란색 없음), 완전색맹 (색 없음), 감도 낮춤을 선택할 수 있습니다" src="accessibily_color_simulation_menu.jpg"></p>
+
+<p>다음의 표는 다양한 색의 고양이 그림이 각 시뮬레이션마다 어떻게 보일지 시뮬레이션한 결과입니다.</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">시물레이션</th>
+   <th scope="col">표시 이미지</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>없음<br>
+    (원래 색을 표시합니다)</td>
+   <td><img alt="변형하지 않은 다양한 색의 고양이 그림" src="28369550088_617db0d6f2_m.jpg"></td>
+  </tr>
+  <tr>
+   <td>적색맹 (빨간색 없음)</td>
+   <td><img alt="적색맹을 시뮬레이션한 다양한 색의 고양이 그림" src="colorcat_protanopia.png"></td>
+  </tr>
+  <tr>
+   <td>녹색맹 (초록색 없음)</td>
+   <td><img alt="녹색맹을 시뮬레이션한 다양한 색의 고양이 그림" src="colorcat_deuteranopia.png"></td>
+  </tr>
+  <tr>
+   <td>청색맹 (파란색 없음)</td>
+   <td><img alt="청색맹을 시뮬레이션한 다양한 색의 고양이 그림" src="colorcat_tritanopia.png"></td>
+  </tr>
+  <tr>
+   <td>완전색맹 (색 없음)</td>
+   <td><img alt="완전색맹을 시뮬레이션한 다양한 색의 고양이 그림" src="colorcat_achromatopsia.png"></td>
+  </tr>
+  <tr>
+   <td>감도 낮춤</td>
+   <td>
+    <p><img alt="대비감도 이상을 시뮬레이션한 다양한 색의 고양이 그림" src="colorcat_contrastloss.png"></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="notecard note">
+<p>시뮬레이션의 변형 수치는 다음 논문을 기초로 하였습니다: <a href="https://www.inf.ufrgs.br/~oliveira/pubs_files/CVD_Simulation/CVD_Simulation.html">A Physiologically-based Model for Simulation of Color Vision Deficiency</a>, Gustavo M. Machado, Manuel M. Oliveira Leandro A. F. Fernandes, IEEE Transactions on Visualization and Computer Graphics, Volume 15 (2009).</p>
+</div>
+
+<div class="notecard note">
+<p>Firefox 81에서 불필요한 <em>적색약</em>, <em>녹색약</em>, and <em>청색약</em> 시뮬레이션을 삭제하고, <em>완정 색맹</em> (색상 없음) 시뮬레이션을 추가했습니다.</p>
+</div>
+
+<h2 id="See_also">같이 보기</h2>
+
+<ul>
+ <li><a href="https://www.color-blindness.com/types-of-color-blindness/">Types of color blindness</a></li>
+ <li><a href="https://www.color-blindness.com/coblis-color-blindness-simulator/">Color blindness simulator</a></li>
+ <li><a href="http://www.vision-and-eye-health.com/contrast-sensitivity.html">Contrast sensitivity</a></li>
+ <li><a href="http://mkweb.bcgsc.ca/colorblind/">Color palettes for color blindness</a></li>
+ <li><a href="https://jfly.uni-koeln.de/color/">Color universal design</a></li>
+ <li><a href="https://www.w3.org/TR/WCAG21/#use-of-color">WCAG success criterion 1.4.1: Use of color</a></li>
+ <li><a href="https://www.w3.org/TR/WCAG21/#non-text-contrast">WCAG success criterion 1.4.11: Non-text contrast</a></li>
+</ul>

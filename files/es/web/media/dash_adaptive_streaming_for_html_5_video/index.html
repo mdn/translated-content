@@ -17,7 +17,7 @@ original_slug: Web/HTML/Transision_adaptativa_DASH
 <p>Lo primero que necesitas es convertir tu video WebM en un manifiesto DASH con todos los archivos en los diferentes bitrates. Para comenzar necesitas:</p>
 
 <ul>
- <li>ffpmeg - con libvpx y libvorbis activado para dar soporte al audio y video de WebM (<a href="http://www.ffmpeg.org/" title="http://www.ffmpeg.org/">ffmpeg.org</a>).</li>
+ <li>ffpmeg - con libvpx y libvorbis activado para dar soporte al audio y video de WebM (<a href="http://www.ffmpeg.org/">ffmpeg.org</a>).</li>
  <li>libwebm - concretamente para la herramienta samplemuxer (<span style="text-align: -webkit-auto;"><span style="white-space: pre-wrap;">git clone <a href="https://gerrit.chromium.org/gerrit/p/webm/libwebm.git">https://gerrit.chromium.org/gerrit/p/webm/libwebm.git</a>)</span></span>.</li>
  <li>webm-tools - concretamente para la herramienta de creación de manifiestos, webm_dash_manifest (<span style="text-align: -webkit-auto;"><span style="white-space: pre-wrap;">git clone <a href="https://gerrit.chromium.org/gerrit/p/webm/webm-tools.git">https://gerrit.chromium.org/gerrit/p/webm/webm-tools.git</a>)</span></span>.</li>
 </ul>
@@ -73,6 +73,6 @@ ffmpeg -i my_master_file.webm -vcodec libvpx -vb 50k -keyint_min 150 -g 150 -an 
 
 <h2 id="Links">Links</h2>
 
-<p><a href="http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification" title="http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification">WebM DASH Specification at The WebM Project</a></p>
+<p><a href="http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification">WebM DASH Specification at The WebM Project</a></p>
 
-<p><a href="http://dashif.org/" title="http://dashif.org/">DASH Industry Forum</a></p>
+<p><a href="http://dashif.org/">DASH Industry Forum</a></p>

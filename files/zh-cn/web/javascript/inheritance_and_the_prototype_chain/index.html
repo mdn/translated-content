@@ -17,9 +17,9 @@ translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 ---
 <div>{{jsSidebar("Advanced")}}</div>
 
-<p>对于使用过基于类的语言 (如 Java 或 C++) 的开发人员来说，JavaScript 有点令人困惑，因为它是动态的，并且本身不提供一个 <code>class</code> 实现。（在 ES2015/ES6 中引入了 <code>class</code> 关键字，但那只是语法糖，JavaScript 仍然是基于原型的）。</p>
+<p>对于使用过基于类的语言 (如 Java 或 C++) 的开发者们来说，JavaScript 实在是有些令人困惑 —— JavaScript 是动态的，本身不提供一个 <code>class</code> 的实现。即便是在 ES2015/ES6 中引入了 <code>class</code> 关键字，但那也只是语法糖，JavaScript 仍然是基于原型的。</p>
 
-<p>当谈到继承时，JavaScript 只有一种结构：对象。每个实例对象（ object ）都有一个私有属性（称之为 __proto__ ）指向它的构造函数的原型对象（<strong>prototype </strong>）。该原型对象也有一个自己的原型对象( __proto__ ) ，层层向上直到一个对象的原型对象为 <code>null</code>。根据定义，<code>null</code> 没有原型，并作为这个<strong>原型链</strong>中的最后一个环节。</p>
+<p>当谈到继承时，JavaScript 只有一种结构：对象。每个实例对象（object）都有一个私有属性（称之为 __proto__ ）指向它的构造函数的原型对象（<strong>prototype</strong>）。该原型对象也有一个自己的原型对象（__proto__），层层向上直到一个对象的原型对象为 <code>null</code>。根据定义，<code>null</code> 没有原型，并作为这个<strong>原型链</strong>中的最后一个环节。</p>
 
 <p>几乎所有 JavaScript 中的对象都是位于原型链顶端的 {{jsxref("Object")}} 的实例。</p>
 

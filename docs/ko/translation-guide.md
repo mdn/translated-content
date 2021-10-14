@@ -84,6 +84,21 @@ EDITOR=code
 
 일반적으로 소스 코드에서 이와 같은 줄 바꿈을 사용하지 않으므로 원하는 경우 자유롭게 제거 할 수 있으며 새 번역을 만들 때 추가하지 마십시오. 그러나 최종 렌더링 결과에 영향을 미치지 않으므로 이를 제거하는 데 너무 많은 시간을 소비하지 마십시오.
 
+### 역주/역자주 
+
+그동안의 MDN 문서에서는 역주로인한 자의적인 해석이 많았고, 전체적인 문서의 품질을 낮췄습니다. 역주가 꼭 필요한 상황이 아니라면 역주는 남기지 않으며, 남기더라도 따로 역주를 표시하지 않고 본문에 포함합니다.
+예시: [다음 링크 참고](https://github.com/mdn/translated-content/pull/1385#discussion_r667509255)
+
+### 기울임꼴
+
+한글은 기울임꼴에 적합하지 않습니다. 전용 이탤릭체가 없다는 것이 첫 이유이고, 문자의 조형이 (정)사각형인 것이 두 번째 이유입니다. [세부 내용 다음 링크 참고](https://github.com/mdn/translated-content/issues/1537)
+
+- 기본 방침은 생략하며, 기여자에 재량에 따라 아래 두 가지 규칙을 따른다.
+  - 한글일 경우 '' 를 tag 대신에 기입한다.
+  - 한글이 아닐 경우 생략한다.
+
+다만 진짜 강조를 해야하는 상황에는, 따옴표로 강조하고 PR로 소명합니다.
+
 ## 용어 지침
 
 ### 공통
@@ -109,9 +124,11 @@ EDITOR=code
 | 용어 | 번역 | 기타 |
 | --- | --- | --- |
 | Accessibility concerns | 접근성 고려사항 | Heading |
+| Application | 애플리케이션 | |
 | Attribute | 특성 | |
 | Boolean | 불리언 | |
 | Class | 클래스 | |
+| Contact us | 문의하기 | |
 | Content(s) | 콘텐츠 | |
 | Context | 맥락 | |
 | Document | 문서 | |
@@ -120,12 +137,18 @@ EDITOR=code
 | Enumerated | 열거형 | |
 | Example | 예제 | Heading |
 | Expression | 표현식 또는 식 | |
+| Framework | 프레임워크 | |
 | Global | 전역 | |
 | Glossary | 용어 사전 | |
 | Grammar | 문법 | |
+| Guides (헤딩) | 가이드 | | | 
 | Literal | 리터럴 | |
 | Method | 메서드 | |
+| Module | 모듈 | ESM에서 명시하는 모듈의 경우 '모듈'로 변역한다. | | 
+| Module | 과정 | 어떠한 교육 과정, 단위에 의한 표현은 '과정'으로 번역한다. (예: In this module) | | 
+| Note (안내문구) | 참고	 | | | 
 | Object | 객체 | |
+| Objective (안내문구) | 목표 | | |
 | Origin | 출처 | |
 | Override | 재정의 | |
 | Primitive | 원시 (값) | |
@@ -180,6 +203,7 @@ EDITOR=code
 | 용어 | 번역 | 기타 | 참고 링크 |
 | --- | --- | --- | ------ |
 | Argument | 매개변수 | | | 
+| Blocking operation | 블로킹 연산 | | | 
 | Callback | 콜백 | | | 
 | Fulfilled | 이행(함) | | | 
 | Handler | 처리기 | 이벤트 처리기 | | 
@@ -187,9 +211,13 @@ EDITOR=code
 | Iterate | 순회 | | | 
 | Listener | 수신기 | 이벤트 수신기 | | 
 | Mixin | 믹스인 | | | 
+| Non-blocking operation | 논블로킹 연산 | | | 
 | Parameter | 매개변수 | | | 
 | Pending | 대기 | | | 
-| Prototype | 프로토타입 | | | 
+| Prerequisites | 필요한 사전 지식 | | | 
+| Promise | 프로미스 | | [해당 링크 참고](https://github.com/mdn/translated-content/pull/1081#issuecomment-878333558) | 
+| Promise chaining | 프로미스 체이닝 | | | 
+| Prototype | 프로토타입 | | |
 | Reject | 거부 | | | 
 | Resolve | 이행 | | | 
 | Settled | 처리 | | | 

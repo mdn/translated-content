@@ -15,8 +15,6 @@ translation_of: Web/HTML/Element/input/password
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-password.html", "tabbed-standard")}}</div>
 
-<div class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</div>
-
 <p>La façon dont le texte saisi est traité dépend du navigateur utilisé. Sur les appareils mobiles, par exemple, le caractère tapé est souvent laissé affiché un court instant afin que l'utilisateur puisse contrôler que c'est bien le bon caractère. Ainsi, même si le clavier est petit et viruel, on peut éviter de faire trop d'erreurs.</p>
 
 <div class="note">
@@ -30,7 +28,7 @@ translation_of: Web/HTML/Element/input/password
 <p>Si l'attribut {{htmlattrxref("pattern", "input")}} est indiqué, le contenu du contrôle doit respecter l'expression rationnelle indiquée par l'attribut. Pour plus d'informations, voir la section {{anch("Validation")}} ci-après.</p>
 
 <div class="note">
-<p>Note : Il n'est pas possible d'utiliser les caractères de fin de ligne (<em>Line Feed</em>) (code U+000A) et de retour chariot (<em>Carriage Return</em>) (code U+000D) dans la valeur d'un champ <code>"password"</code>. Lorsqu'on saisit la valeur, ces caractères sont retirés si besoin.</p>
+<p><strong>Note :</strong> Il n'est pas possible d'utiliser les caractères de fin de ligne (<em>Line Feed</em>) (code U+000A) et de retour chariot (<em>Carriage Return</em>) (code U+000D) dans la valeur d'un champ <code>"password"</code>. Lorsqu'on saisit la valeur, ces caractères sont retirés si besoin.</p>
 </div>
 
 <h2 id="Attributs_supplémentaires">Attributs supplémentaires</h2>
@@ -115,7 +113,7 @@ translation_of: Web/HTML/Element/input/password
 
 <p>{{EmbedLiveSample("Un_contrôle_basique", 600, 40)}}</p>
 
-<h3 id="Paramétrer_l’autocomplétion">Paramétrer l’autocomplétion</h3>
+<h3 id="Paramétrer_l'autocomplétion">Paramétrer l'autocomplétion</h3>
 
 <p>Afin de permettre au gestionnaire de mots de passe de saisir automatiquement le mot de passe, on pourra utiliser l'attribut {{htmlattrxref("autocomplete", "input")}}. Pour les mots de passe, celui-ci aura l'une des valeurs suivantes :</p>
 
@@ -130,12 +128,10 @@ translation_of: Web/HTML/Element/input/password
  <dd>Cette valeur indique au navigateur ou au gestionnaire de mots de passe qu'il faut générer un nouveau mot de passe et utiliser ce dernier pour remplir le champ. La génération automatique du mot de passe peut alors utiliser les autres attributs de l'élément. Cette valeur peut également être indiquée pour que le navigateur indique cette information d'un façon ou d'une autre.</dd>
 </dl>
 
-<div id="Autocomplete_sample1">
 <pre class="brush: html">&lt;label for="userPassword"&gt;Mot de passe :&lt;/label&gt;
 &lt;input id="userPassword" type="password" autocomplete="current-password"&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("Paramétrer_l’autocomplétion", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Paramétrer_l'autocomplétion", 600, 40)}}</p>
 
 <h3 id="Rendre_le_champ_obligatoire">Rendre le champ obligatoire</h3>
 
@@ -194,12 +190,10 @@ translation_of: Web/HTML/Element/input/password
 
 <p>Dans cet exemple, il n'est possible de saisir qu'une valeur qui contient entre 4 et 8 caractères qui sont des caractères hexadécimaux.</p>
 
-<div id="Validation_sample1">
 <pre class="brush: html">&lt;label for="hexId"&gt;Identifiant Hexa :&lt;/label&gt;
 &lt;input id="hexId" type="password" pattern="[0-9a-fA-F]{4,8}"
        title="Veuillez saisir un identifiant avec 4 à 8 chiffres hexadécimaux."
        autocomplete="nouveau-mot-de-passe"&gt;</pre>
-</div>
 
 <p>{{EmbedLiveSample("Validation", 600, 40)}}</p>
 

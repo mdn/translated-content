@@ -38,11 +38,11 @@ original_slug: Web/Accessibility/ARIA/forms/Dicas_básicas_de_form
 
 <h2 id="Labeling_with_ARIA" name="Labeling_with_ARIA">Rotulando com ARIA</h2>
 
-<p>O elemento HTML {{HTMLElement("label")}} é apropriado para elementos relacionados com form, mas muitos controles de form são implementados como widget JavaScript dinâmico, usando {{HTMLElement("div")}}s ou {{HTMLElement("span")}}s. <a href="http://www.w3.org/WAI/intro/aria.php" title="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a>, a especificação de <strong>Aplicações Internet Ricas em Acessibilidade</strong> da W3C <a href="http://www.w3.org/WAI/" title="http://www.w3.org/WAI/">Iniciativa de Acessibilidade Web</a>, fornece o atributo <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby" title="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby"><strong>aria-labelledby</strong></a> para esses casos.</p>
+<p>O elemento HTML {{HTMLElement("label")}} é apropriado para elementos relacionados com form, mas muitos controles de form são implementados como widget JavaScript dinâmico, usando {{HTMLElement("div")}}s ou {{HTMLElement("span")}}s. <a href="http://www.w3.org/WAI/intro/aria.php" title="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a>, a especificação de <strong>Aplicações Internet Ricas em Acessibilidade</strong> da W3C <a href="http://www.w3.org/WAI/">Iniciativa de Acessibilidade Web</a>, fornece o atributo <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby"><strong>aria-labelledby</strong></a> para esses casos.</p>
 
 <p>O exemplo abaixo mostra um grupo de botões rádio usando um lista não ordenada. Note que na linha 3, o elemento {{HTMLElement("li")}} seta o atributo <strong>aria-labelledby</strong> para "rg1_label," o <strong>id</strong> do elemento {{HTMLElement("h3")}} na linha 1, que é o label para o grupo rádio.</p>
 
-<p><em>Exemplo 2. Um grupo rádio implementado usando uma lista não ordenada (adaptado de <a href="http://www.oaa-accessibility.org/examplep/radio1/">http://www.oaa-accessibility.org/examplep/radio1/</a>)</em></p>
+<p><em>Exemplo 2. Um grupo rádio implementado usando uma lista não ordenada</em></p>
 
 <pre class="brush: html">&lt;h3 id="rg1_label"&gt;Lunch Options&lt;/h3&gt;
 
@@ -61,7 +61,7 @@ original_slug: Web/Accessibility/ARIA/forms/Dicas_básicas_de_form
 
 <h2 id="Describing_with_ARIA" name="Describing_with_ARIA">Descrevendo com ARIA</h2>
 
-<p>Controles form às vezes tem uma descrição associada com eles, em adição ao label. ARIA fornece o atributo <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-describedby" title="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-describedby"><strong>aria-describedby</strong></a> para diretamente associar a descrição com o controle.</p>
+<p>Controles form às vezes tem uma descrição associada com eles, em adição ao label. ARIA fornece o atributo <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-describedby"><strong>aria-describedby</strong></a> para diretamente associar a descrição com o controle.</p>
 
 <p>O exemplo abaixo mostra um elemento {{HTMLElement("button")}} que é descrito por uma sentença num elemento {{HTMLElement("div")}} separado. O atributo <strong>aria-describedby</strong> no {{HTMLElement("button")}} referencia o <strong>id</strong> de {{HTMLElement("div")}}.</p>
 
@@ -77,8 +77,8 @@ original_slug: Web/Accessibility/ARIA/forms/Dicas_básicas_de_form
 <p>Web developers tipicamente usam estratégias de apresentação para indicar campos obrigatórios ou campos inválidos, mas tecnologias assistivas (TAs) não podem necessariamente inferir essa informação a partir da apresentação. ARIA fornece atributos para indicar que os controles do form são obrigatórios ou inválidos:</p>
 
 <ul>
- <li>A propriedade <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-required" title="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-required"><strong>aria-required</strong></a> pode ser aplicada a um elemento form para indicar para uma TA que é obrigatório preencher o formulário.</li>
- <li>O estado <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-invalid" title="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-invalid"><strong>aria-invalid</strong></a> pode ser programaticamente aplicado para indicar para uma TA quais campos de dados têm dados incorretos, então o usuário sabe que ele entrou um dado inválido.</li>
+ <li>A propriedade <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-required"><strong>aria-required</strong></a> pode ser aplicada a um elemento form para indicar para uma TA que é obrigatório preencher o formulário.</li>
+ <li>O estado <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-invalid"><strong>aria-invalid</strong></a> pode ser programaticamente aplicado para indicar para uma TA quais campos de dados têm dados incorretos, então o usuário sabe que ele entrou um dado inválido.</li>
 </ul>
 
 <p>O exemplo abaixo mostra um form simples com três campos. Nas linhas 4 e 12, o atributo <strong>aria-required</strong> é setado para true (em adição aos asteriscos próximos aos labels) indicando que os campos de nome e e-mail são obrigatórios. A segunda parte do exemplo é um trecho de JavaScript que valida o e-mail e seta o atributo <strong>aria-invalid</strong> do campo e-mail (linha 12 do HTML) de acordo com o resultado (em adição à mudança de apresentação do elemento).</p>
@@ -116,4 +116,4 @@ original_slug: Web/Accessibility/ARIA/forms/Dicas_básicas_de_form
 
 <div class="note">A ser decidido: <span id="result_box" lang="pt"><span>devemos</span> <span>ou</span> <span>combinar em</span> <span>um</span> <span>artigo ou</span> <span>separar em</span> <span>técnicas</span><span>, ou ambos.</span> <span>Além disso,</span> <span>é</span> <span>ARIA</span> <span>marcação apropriada</span> <span>para mensagens de erro</span> <span>em uma</span> <span>página carregada</span> <span>após a validação</span> <span>do lado do servidor</span><span>?</span></span></div>
 
-<p>Para maiores informações usando ARIA para acessibilidade de forms, veja o documento <a href="http://www.w3.org/TR/wai-aria-practices/" title="http://www.w3.org/TR/wai-aria-practices/">Práticas de Cricação de WAI-ARIA</a>.</p>
+<p>Para maiores informações usando ARIA para acessibilidade de forms, veja o documento <a href="http://www.w3.org/TR/wai-aria-practices/">Práticas de Cricação de WAI-ARIA</a>.</p>

@@ -1,5 +1,5 @@
 ---
-title: ウェブパフォーマンスとは何ですか？
+title: ウェブパフォーマンスとは
 slug: Learn/Performance/What_is_web_performance
 tags:
   - Beginner
@@ -9,40 +9,37 @@ tags:
   - Reference
   - Tutorial
   - Web Performance
+  - Web パフォーマンス
 translation_of: Learn/Performance/What_is_web_performance
 ---
 <div>{{LearnSidebar}}</div>
 
 <div>{{PreviousMenuNext("Learn/Performance/why_web_performance", "Learn/Performance/Perceived_performance", "Learn/Performance")}}</div>
 
-<p>ウェブパフォーマンスは、実際には遅い処理を速いように見せることを含め、ウェブサイトを速くすることに関わるすべての事柄を表します。サイトを速く読み込む、ユーザーが早くインタラクションを始められるようにする、あるいは、読み込みに時間がかかる場合は、たとえばローディングスピナーを表示するなど、ユーザーが安心できるフィードバックを提供する、これらができていますか？スクロールとアニメーションは滑らかですか？この記事では、客観的で測定可能なウェブパフォーマンス*についての簡潔なイントロダクションを提示し、どのような技術、テクニック、そして最適化に関わるツールが利用できるかを探っていきます。</p>
+<p>ウェブパフォーマンスとは、遅い処理を速く<em>見せる</em>ことも含めて、ウェブサイトを速くすることです。サイトがすぐに読み込まれるか、ユーザーがすぐに操作を始めることができるか、何かの読み込みに時間がかかっている場合には安心感のあるフィードバック (ローディングスピナーなど) を提供しているか。スクロールやアニメーションはスムーズか。この記事では、客観的で測定可能なウェブパフォーマンス*について簡単に紹介し、ウェブの最適化にどのような技術、テクニック、ツールが必要なのかを見ていきます。</p>
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td>
-    <p>基本的なコンピューターリテラシー、<a href="https://developer.mozilla.org/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアのインストール</a>、<a href="/ja/docs/Learn/Getting_started_with_the_web">クライアントサイドのウェブ技術</a>の基礎知識</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>
-    <p>Web パフォーマンスに関わる事項について基本的な理解を得ること</p>
-   </td>
-  </tr>
- </tbody>
+	<tbody>
+		<tr>
+			<th scope="row">前提条件:</th>
+			<td>基本的なコンピューターリテラシー、<a href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアのインストール</a>、<a href="/ja/docs/Learn/Getting_started_with_the_web">クライアント側のウェブ技術</a>の基本的な知識。</td>
+		</tr>
+		<tr>
+			<th scope="row">目標:</th>
+			<td>ウェブパフォーマンスに関わる事項について基本的な理解を得ること</td>
+		</tr>
+	</tbody>
 </table>
 
-<p><em>* 次の記事でカバーする主観的な<a href="/ja/docs/Learn/Performance/perceived_performance">知覚される</a></em><em><a href="/ja/docs/Learn/Performance/perceived_performance">パフォーマンス</a>の逆</em></p>
+<p><em>* 次の記事で扱う主観的な<a href="/ja/docs/Learn/Performance/Perceived_performance">知覚パフォーマンス</a>の対義語</em></p>
 
-<h2 id="What_is_web_performance" name="What_is_web_performance">ウェブパフォーマンスとは何ですか？</h2>
+<h2 id="What_is_web_performance">ウェブパフォーマンスとは何か</h2>
 
 <p>ウェブパフォーマンスはウェブサイトまたはウェブアプリケーションの客観的な測定結果とユーザーによって知覚される体験です。これには以下の主要な領域が含まれます。</p>
 
 <ul>
- <li><strong>全体の読み込み時間を減らすこと</strong>：ウェブサイトを描画するためにリクエストされたファイルをユーザーのコンピューターにダウンロードするのにどれくらいの時間がかかりますか？この問いの答えは、ネットワークの<a href="/ja/docs/Web/Performance/Understanding_latency">レイテンシー</a>やファイルの大きさ、ファイルの数、その他様々な要因に影響を受けます。ひとつの一般的な戦略は、ファイルをできる限り小さくすること、HTTP リクエストの回数をできるだけ少なくすること、そしてファイルをより早く利用可能にするために、たとえば<a href="/ja/docs/Web/HTML/Preloading content">プリロード</a>のような、賢い読み込みのテクニックを使うことです。</li>
- <li><strong>サイトをできる限り早く利用可能にすること</strong>：これはすなわち、ユーザーが実際により早く利用を開始できるように、ウェブサイトのアセットを意味のある順序で読み込むことを意味しています。ユーザーが最初のタスクに手をつけている間にバックグラウンドでその他のアセットの読み込みを続けます。必要になったときに必要なアセットだけを読み込む場合もあります（これを<a href="/ja/docs/Web/Performance/Lazy_loading">遅延読み込み</a>と言います。）サイトの読み込みを始めてから、そのサイトが最初に利用可能になるまでどのくらい時間がかかるか測定した値を <a href="/ja/docs/Glossary/Time_to_interactive">Time to Interactive</a> と呼びます。</li>
+ <li><strong>全体の読み込み時間を減らすこと</strong>: ウェブサイトの表示に必要なファイルが、ユーザーのコンピューターにダウンロードされるまでの時間です。これは、<a href="/ja/docs/Web/Performance/Understanding_latency">レイテンシー</a>、ファイルの大きさ、ファイルの数、その他の要因に影響される傾向があります。一般的な戦略としては、ファイルをできるだけ小さくしたり、 HTTP リクエストの数をできるだけ減らしたり、ファイルをより早く利用できるようにするための賢い読み込み技術 (<a href="/ja/docs/Web/HTML/Link_types/preload">先読み</a>など) を採用したりすることです。</li>
+ <li><strong>サイトをできるだけ早く利用可能にすること</strong>: これは基本的に、ユーザーが実際にすぐに使い始めることができるように、ウェブサイトの資産を適切な順序で読み込むことを意味します。ユーザーが主要な作業をしている間、他の資産はバックグラウンドでロードし続けることができます。また、実際に必要なときにだけ資産を読み込む場合もあります (これを<a href="/ja/docs/Web/Performance/Lazy_loading">遅延読み込み</a>といいます)。読み込みを開始してから、サイトが利用可能な状態になるまでの時間を測定したものを <a href="/ja/docs/Glossary/Time_to_interactive">time to interactive</a> と呼びます。</li>
  <li><strong>スムーズさとインタラクティブ性</strong>：そのアプリケーションは使っていて信頼でき、楽しいと感じられますか？スクロールはスムーズですか？ボタンはクリックできますか？ポップアップはすぐに開いてスムーズにアニメーションしますか？アプリケーションがスムーズだと感じさせるための様々なベストプラクティスがあります。たとえば、アニメーションのために JavaScript ではなく CSS を使うこと、DOM の変更により UI  が要求する再描画の回数をできる限り少なくすることなどが挙げられます。</li>
  <li><strong><a href="/ja/docs/Learn/Performance/perceived_performance">知覚されるパフォーマンス</a></strong>：ウェブサイトがユーザーにとっていかに速いように見せるかは、ウェブサイトが実際に速いがどうかよりもユーザーの体験への大きなインパクトがあります。ユーザーがパフォーマンスについてどう感じるかは重要です。あるいは、それは客観的な統計以上に重要です。しかし、それは主観的なもので、簡単に測定できるものではありません。知覚されたパフォーマンスは測定項目 (metric) ではなく、ユーザーからの見え方を表します。レイテンシーやそのほか何かの問題で操作に長い時間がかかる場合であっても、たとえば待ち時間の間にローディングスピナーを表示したり、便利なヒントやティップスを表示したり（他にはジョークや、その他適切だと思えるものであれば何でも良いです）することでユーザーのエンゲージを維持することは可能です。そういったアプローチはただ何も表示しないよりもずっと良いと言えます。何も表示されない時間は長く感じられ、その結果ユーザーはウェブサイトが壊れていると考えて利用をやめてしまう可能性もあります。</li>
  <li><strong>パフォーマンスの測定</strong>：ウェブパフォーマンスにはアプリケーションの実際の速度と知覚的な速度を計測すること、パフォーマンスをできる限り最適化しその結果が維持されているか監視するという面があります。そこではいくつかのメトリクス（成功か失敗かを表す測定可能な指標）とそれらのメトリクスを測定するツールが必要になります。本記事の全体を通してそれらを検討します。</li>
@@ -60,10 +57,10 @@ translation_of: Learn/Performance/What_is_web_performance
 
 <ul>
  <li><strong>ブラウザーはどのように動作するか</strong>：URL を入力し、<kbd>Enter</kbd> / <kbd>Return</kbd> を打ち込んだとき、ブラウザーはウェブサイトのファイルを持っているサーバーがどこにあるかを探しだし、そのサーバーとの接続を確立し、ファイルをリクエストします。詳しい概要は「<a href="/ja/docs/Web/Performance/How_browsers_work">ページの生成：ブラウザーはどのように動作するか</a>」を参照してください。</li>
- <li><strong>ソースコードの順番</strong>：HTML の index ファイル上のソースの順番はパフォーマンスに重大な影響を及ぼす場合があります。index ファイルからリンクされた追加のアセットのダウンロードは、一般的にソースコードの順番に従ってシーケンシャルに実行されます。しかし、この部分はいくつかのリソースがそのコンテンツが解析、実行されるまで追加のダウンロードをブロックすることに気づくことで最適化できるようになります。</li>
+ <li><strong>ソースコードの順番</strong>：HTML の index ファイル上のソースの順番はパフォーマンスに重大な影響を及ぼす場合があります。index ファイルからリンクされた追加の資産のダウンロードは、一般的にソースコードの順番に従ってシーケンシャルに実行されます。しかし、この部分はいくつかのリソースがそのコンテンツが解析、実行されるまで追加のダウンロードをブロックすることに気づくことで最適化できるようになります。</li>
  <li><strong>クリティカルパス</strong>：これはファイルがサーバーからダウンロードされた後にブラウザーがウェブのドキュメントを構築するプロセスのことを指します。ブラウザーは明確に定義されたステップに従って、クリティカルレンダリングパスを最適化し、そのときのユーザーのアクションに関連するコンテンツの表示に優先順位をつけて、コンテンツの描画時間を大きく改善します。より詳しい情報は、<a href="/ja/docs/Web/Performance/Critical_rendering_path">Critical rendering path</a> を参照してください。</li>
- <li><strong>ドキュメントオブジェクトモデル</strong>：ドキュメントオブジェクトモデル (DOM) は HTML のコンテンツと要素をツリーのノードとして表現するツリー構造を指します。そこには HTML のすべての属性とノード間の関係が含まれます。ページがロードされた後の追加の DOM 操作（たとえば、ノードの追加、削除、移動）はパフォーマンスに影響を与えます。そのため、DOM がどのように動作し、その問題をどのように和らげるかを理解するを理解することが重要です。詳しくは <a href="/docs/Web/API/Document_Object_Model">Document Object Model </a><a href="/ja/docs/Web/API/Document_Object_Model"> </a>を参照してください。</li>
- <li><strong>レイテンシー</strong>：事前に述べましたが、簡単に言うと、レイテンシーとは、Web サイトのアセットがサーバーからユーザーのコンピューターまで移動するのにかかる時間のことです。そこには TCP と HTTP の接続を確立にかかるオーバーヘッドも含まれます。そして、リクエストとレスポンスのデータ (bytes) がネットワーク間を行き来するために必要となる避けようのないレイテンシーがあります。一方で、レイテンシーを減らすためのいくつかの方法があります。（たとえば、ダウンロードするファイルの数を減らすことで HTTP リクエストの数を減らすこと、CDN を利用してサイトのデータを世界中に効率よく展開すること、サーバーがより効率よくファイルを提供できるように HTTP/2 を利用することなどが挙げられます）このトピックに関わるすべての事柄は <a href="/ja/docs/Web/Performance/Understanding_latency">Understanding Latency</a> を参照してください。</li>
+ <li><strong>ドキュメントオブジェクトモデル</strong>：ドキュメントオブジェクトモデル (DOM) は HTML のコンテンツと要素をツリーのノードとして表現するツリー構造を指します。そこには HTML のすべての属性とノード間の関係が含まれます。ページがロードされた後の追加の DOM 操作（たとえば、ノードの追加、削除、移動）はパフォーマンスに影響を与えます。そのため、DOM がどのように動作し、その問題をどのように和らげるかを理解するを理解することが重要です。詳しくは <a href="/ja/docs/Web/API/Document_Object_Model">Document Object Model </a><a href="/ja/docs/Web/API/Document_Object_Model"> </a>を参照してください。</li>
+ <li><strong>レイテンシー</strong>：事前に述べましたが、簡単に言うと、レイテンシーとは、Web サイトの資産がサーバーからユーザーのコンピューターまで移動するのにかかる時間のことです。そこには TCP と HTTP の接続を確立にかかるオーバーヘッドも含まれます。そして、リクエストとレスポンスのデータ (bytes) がネットワーク間を行き来するために必要となる避けようのないレイテンシーがあります。一方で、レイテンシーを減らすためのいくつかの方法があります。（たとえば、ダウン読み込むファイルの数を減らすことで HTTP リクエストの数を減らすこと、CDN を利用してサイトのデータを世界中に効率よく展開すること、サーバーがより効率よくファイルを提供できるように HTTP/2 を利用することなどが挙げられます）このトピックに関わるすべての事柄は <a href="/ja/docs/Web/Performance/Understanding_latency">Understanding Latency</a> を参照してください。</li>
 </ul>
 
 <h2 id="Conclusion" name="Conclusion">結論</h2>
@@ -72,19 +69,19 @@ translation_of: Learn/Performance/What_is_web_performance
 
 <p>{{PreviousMenuNext("Learn/Performance/why_web_performance", "Learn/Performance/Perceived_performance", "Learn/Performance")}}</p>
 
-<h2 id="In_this_module" name="In_this_module">このモジュール内</h2>
+<h2 id="In_this_module">このモジュール</h2>
 
 <ul>
- <li><a href="/ja/docs/Learn/Performance/why_web_performance">ウェブパフォーマンスの"なぜ"</a></li>
- <li><a href="/ja/docs/Learn/Performance/What_is_web_performance">ウェブパフォーマンスとは何ですか？</a></li>
- <li><a href="/ja/docs/Learn/Performance/Perceived_performance">ユーザーはパフォーマンスをどのように知覚しますか？</a></li>
- <li><a href="/ja/docs/Learn/Performance/Measuring_performance">パフォーマンスの測定</a></li>
- <li><a href="/ja/docs/Learn/Performance/Multimedia">Multimedia: images</a></li>
- <li><a href="/ja/docs/Learn/Performance/video">Multimedia: video</a></li>
- <li><a href="/ja/docs/Learn/Performance/JavaScript">JavaScript performance best practices</a>.</li>
- <li><a href="/ja/docs/Learn/Performance/HTML">HTML performance features</a></li>
- <li><a href="/ja/docs/Learn/Performance/CSS">CSS performance features</a></li>
- <li><a href="/ja/docs/Learn/Performance/Fonts">Fonts and performance</a></li>
- <li><a href="/ja/docs/Learn/Performance/Mobile">Mobile performance</a></li>
- <li><a href="/ja/docs/Learn/Performance/business_case_for_performance">パフォーマンスに光をあてる</a></li>
+	<li><a href="/ja/docs/Learn/Performance/why_web_performance">ウェブパフォーマンスの「なぜ」</a></li>
+	<li><a href="/ja/docs/Learn/Performance/What_is_web_performance">ウェブパフォーマンスとは</a></li>
+	<li><a href="/ja/docs/Learn/Performance/perceived_performance">ユーザーはパフォーマンスをどう知覚するのか</a></li>
+	<li><a href="/ja/docs/Learn/Performance/Measuring_performance">パフォーマンスの計測</a></li>
+	<li><a href="/ja/docs/Learn/Performance/Multimedia">マルチメディア: 画像</a></li>
+	<li><a href="/ja/docs/Learn/Performance/video">マルチメディア: 動画</a></li>
+	<li><a href="/ja/docs/Learn/Performance/JavaScript">JavaScript パフォーマンスのベストプラクティス</a></li>
+	<li><a href="/ja/docs/Learn/Performance/HTML">HTML のパフォーマンス特性</a></li>
+	<li><a href="/ja/docs/Learn/Performance/CSS">CSS パフォーマンス特性</a></li>
+	<li><a href="/ja/docs/Learn/Performance/Fonts">フォントとパフォーマンス</a></li>
+	<li><a href="/ja/docs/Learn/Performance/Mobile">モバイルパフォーマンス</a></li>
+	<li><a href="/ja/docs/Learn/Performance/business_case_for_performance">パフォーマンスの重視</a></li>
 </ul>

@@ -46,7 +46,7 @@ translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Thr
 &lt;script&gt;
 	var WIDTH = window.innerWidth;
 	var HEIGHT = window.innerHeight;
-	/* весь наш JavaScript код будет после этого комментария */
+	/* весь наш JavaScript-код будет после этого комментария */
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -66,7 +66,7 @@ renderer.setClearColor(0xDDDDDD, 1);
 document.body.appendChild(renderer.domElement);
 </pre>
 
-<p>Создаём новый WebGL renderer, устанавливаем размер так, чтобы он занимал все пространство страницы, прикрепляем DOM элемент к странице. Вы могли заметить параметр <code>antialias</code> в первой строке — если он установлен в <code>true</code>, то границы объектов сглаживаются. Метод <code>setClearColor()</code> устанавливает цвет фона (мы установили в 0xDDDDDD, светло-серый, значение по умолчанию - чёрный).</p>
+<p>Создаём новый WebGL renderer, устанавливаем размер так, чтобы он занимал все пространство страницы, прикрепляем DOM-элемент к странице. Вы могли заметить параметр <code>antialias</code> в первой строке — если он установлен в <code>true</code>, то границы объектов сглаживаются. Метод <code>setClearColor()</code> устанавливает цвет фона (мы установили в 0xDDDDDD, светло-серый, значение по умолчанию - чёрный).</p>
 
 <p>Добавьте этот код в ваш элемент {{htmlelement("script")}}.</p>
 
@@ -106,7 +106,7 @@ scene.add(camera);
 
 <h2 id="Отрисовка_сцены">Отрисовка сцены</h2>
 
-<p>Всё уже готово, но мы пока что ничего не видим. Хотя мы настроили рендерер, нам всё равно нужно запустить рендеринг. Функция <code>render()</code> выполнит эту работу с небольшой помощью <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code>, которая заставляет сцену постоянно перерисовываться в каждом кадре:</p>
+<p>Всё уже готово, но мы пока что ничего не видим. Хотя мы настроили рендерер, нам всё равно нужно запустить рендеринг. Функция <code>render()</code> выполнит эту работу с небольшой помощью <code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code>, которая заставляет сцену постоянно перерисовываться в каждом кадре:</p>
 
 <pre class="brush: js notranslate">function render() {
 	requestAnimationFrame(render);

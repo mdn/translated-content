@@ -11,7 +11,7 @@ translation_of: Web/API/File_Handle_API
 ---
 <p>{{non-standard_header}}</p>
 
-<p>FileHandle API は、ファイルの作成や内容の変更など、ファイルを操作するための API です (<a href="/docs/DOM/File" title="DOM/File">File API</a> とは異なります)。この API を通じたファイル操作は、デバイス上に物理的に格納でき、部分的な編集には、競合問題を避けるためにターンベースのロック機構が使用されています。</p>
+<p>FileHandle API は、ファイルの作成や内容の変更など、ファイルを操作するための API です (<a href="/ja/docs/DOM/File" title="DOM/File">File API</a> とは異なります)。この API を通じたファイル操作は、デバイス上に物理的に格納でき、部分的な編集には、競合問題を避けるためにターンベースのロック機構が使用されています。</p>
 
 <h2 id="API_概観">API 概観</h2>
 
@@ -30,7 +30,7 @@ translation_of: Web/API/File_Handle_API
 
 <h3 id="FileHandle_インスタンスの作成">FileHandle インスタンスの作成</h3>
 
-<p>このインテントは IndexedDB を通じてファイルを保存しているため、{{domxref("FileHandle")}} インスタンスを作成するのに <a href="/docs/IndexedDB/IDBFactory#open" title="IndexedDB/IDBFactory#open">IndexedDB Database</a> が必要です。</p>
+<p>このインテントは IndexedDB を通じてファイルを保存しているため、{{domxref("FileHandle")}} インスタンスを作成するのに <a href="/ja/docs/IndexedDB/IDBFactory#open" title="IndexedDB/IDBFactory#open">IndexedDB Database</a> が必要です。</p>
 
 <div style="overflow: hidden;">
 <pre class="brush: js">var IDBReq = indexedDB.open("myFileStorageDataBase");
@@ -188,7 +188,7 @@ IDBReq.onsuccess = function () {
 }
 </pre>
 
-<p>A file stored that way is physically put on the device. The database itself only stores a pointer to that file. It means that if the {{domxref("FileHandle")}} object is stored several times in several DBs or several data stores, all those objects will reference the same unique file. This is not a problem because to access the file, a {{domxref("LockedFile")}} object is required and operations on such object are performed in <a href="http://en.wikipedia.org/wiki/Isolation_%28database_systems%29" title="http://en.wikipedia.org/wiki/Isolation_%28database_systems%29">isolation</a>, meaning that once a {{domxref("LockedFile")}} is active, all operations of this {{domxref("LockedFile")}} are guaranteed to happen sequentially on the underlying file without being interleaved with operations from other {{domxref("LockedFile")}}.</p>
+<p>A file stored that way is physically put on the device. The database itself only stores a pointer to that file. It means that if the {{domxref("FileHandle")}} object is stored several times in several DBs or several data stores, all those objects will reference the same unique file. This is not a problem because to access the file, a {{domxref("LockedFile")}} object is required and operations on such object are performed in <a href="http://en.wikipedia.org/wiki/Isolation_%28database_systems%29">isolation</a>, meaning that once a {{domxref("LockedFile")}} is active, all operations of this {{domxref("LockedFile")}} are guaranteed to happen sequentially on the underlying file without being interleaved with operations from other {{domxref("LockedFile")}}.</p>
 
 <h3 id="安全な書込み操作">安全な書込み操作</h3>
 
@@ -218,7 +218,7 @@ writing.onerror = function () {
 
 <h3 id="FileWriter_と_API_が異なるのはなぜですか？">FileWriter と API が異なるのはなぜですか？</h3>
 
-<p>The <a href="http://dev.w3.org/2009/dap/file-system/file-writer.html" title="http://dev.w3.org/2009/dap/file-system/file-writer.html">FileWriter specification</a> defines FileWriters, objects aiming at representing editable files. <a href="http://lists.w3.org/Archives/Public/public-webapps/2012JanMar/0886.html" title="http://lists.w3.org/Archives/Public/public-webapps/2012JanMar/0886.html">Discussions on public-webapps</a> led to the conclusion that the API would behave poorly in the case of different entities writing concurrently to the same file. The outcome of this discussion is the FileHandle API with its LockedFile and transaction mechanism.</p>
+<p>The <a href="http://dev.w3.org/2009/dap/file-system/file-writer.html">FileWriter specification</a> defines FileWriters, objects aiming at representing editable files. <a href="http://lists.w3.org/Archives/Public/public-webapps/2012JanMar/0886.html">Discussions on public-webapps</a> led to the conclusion that the API would behave poorly in the case of different entities writing concurrently to the same file. The outcome of this discussion is the FileHandle API with its LockedFile and transaction mechanism.</p>
 
 <h3 id="Browser_Compatibility" name="Browser_Compatibility">仕様書</h3>
 

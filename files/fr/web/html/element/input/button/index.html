@@ -11,33 +11,29 @@ translation_of: Web/HTML/Element/input/button
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">Les éléments {{HTMLElement("input")}} de type <strong><code>button</code></strong> sont affichés comme des boutons poussoirs qui peuvent être programmés afin de contrôler des fonctionnalités de la page via un gestionnaire d'évènement (la plupart du temps pour l'évènement {{event("click")}}).</span></p>
+<p>Les éléments {{HTMLElement("input")}} de type <strong><code>button</code></strong> sont affichés comme des boutons poussoirs qui peuvent être programmés afin de contrôler des fonctionnalités de la page via un gestionnaire d'évènement (la plupart du temps pour l'évènement {{event("click")}}).</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <div class="note">
-<p><strong>Note </strong>: Bien que les éléments <code>&lt;input&gt;</code> de type <code>"button"</code> représentent toujours des éléments HTML valides, l'élément {{HTMLElement("button")}}, plus récent, est la meilleure méthode pour créer des boutons hors d'un formulaire. Il est aussi possible d'insérer des éléments HTML dans l'étiquette du bouton, ce qui permet notamment d'avoir des images.</p>
+<p><strong>Note :</strong> Bien que les éléments <code>&lt;input&gt;</code> de type <code>"button"</code> représentent toujours des éléments HTML valides, l'élément {{HTMLElement("button")}}, plus récent, est la meilleure méthode pour créer des boutons hors d'un formulaire. Il est aussi possible d'insérer des éléments HTML dans l'étiquette du bouton, ce qui permet notamment d'avoir des images.</p>
 </div>
 
 <h2 id="Valeur">Valeur</h2>
 
 <p>L'attribut {{htmlattrxref("value", "input")}} d'un t'el élément contient une chaîne de caractères qui est utilisée comme étiquette pour le bouton (autrement dit, comme texte affiché sur le bouton).</p>
 
-<div id="summary-example3">
+<h3 id="Exemple_1">Exemple 1</h3>
 <pre class="brush: html">&lt;input type="button" value="Bouton cliquer"&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("summary-example3", 650, 30)}}</p>
+<p>{{EmbedLiveSample("Exemple_1", 650, 30)}}</p>
 
+<h3 id="Exemple_2">Exemple 2</h3>
 <p>Si on n'indique aucune valeur, le bouton sera vide :</p>
 
-<div id="summary-example1">
 <pre class="brush: html">&lt;input type="button"&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("summary-example1", 650, 30)}}</p>
+<p>{{EmbedLiveSample("Exemple_2", 650, 30)}}</p>
 
 <h2 id="Utiliser_les_boutons_&lt;input>">Utiliser les boutons <code>&lt;input&gt;</code></h2>
 
@@ -77,7 +73,6 @@ function updateBtn() {
 
 <p>Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit, il faudra appuyer sur la touche <kbd>s</kbd> avec une ou plusieurs touches supplémentaires qui dépendent du navigateur et du système d'exploitation, cf. <code><a href="/fr/docs/Web/HTML/Attributs_universels/accesskey">accesskey</a></code> pour la liste de ces touches).</p>
 
-<div id="accesskey-example1">
 <pre class="brush: html">&lt;form&gt;
   &lt;input type="button" value="Démarrer la machine" accesskey="s"&gt;
 &lt;/form&gt;
@@ -85,8 +80,7 @@ function updateBtn() {
 </pre>
 </div>
 
-<div class="hidden">
-<pre class="brush: js">var btn = document.querySelector('input');
+<pre class="brush: js hidden">var btn = document.querySelector('input');
 var txt = document.querySelector('p');
 
 btn.addEventListener('click', updateBtn);
@@ -100,30 +94,25 @@ function updateBtn() {
     txt.textContent = 'La machine est arrêtée.';
   }
 }</pre>
-</div>
 
 <p>{{EmbedLiveSample("Ajouter_des_raccourcis_clavier", 650, 100)}}</p>
 
 <div class="note">
-<p><strong>Note </strong>: Un problème de cet exemple est que l'utilisateur ne saura pas quelle touche utiliser comme raccourci. Dans un cas concret, cette information serait affichée ou fournie via un lien simple d'accès qui décrirait les raccourcis disponibles.</p>
+<p><strong>Note :</strong> Un problème de cet exemple est que l'utilisateur ne saura pas quelle touche utiliser comme raccourci. Dans un cas concret, cette information serait affichée ou fournie via un lien simple d'accès qui décrirait les raccourcis disponibles.</p>
 </div>
 
 <h3 id="Désactiver_et_activer_un_bouton">Désactiver et activer un bouton</h3>
 
 <p>Pour désactiver un bouton, il suffit d'ajouter l'attribut universel {{htmlattrxref("disabled")}} :</p>
 
-<div id="disable-example1">
 <pre class="brush: html">&lt;input type="button" value="Je suis désactivé" disabled&gt;</pre>
-</div>
 
 <p>Il est possible d'activer ou de désactiver des boutons lors de de l'utilisation de la page en modifiant l'attribut <code>disabled</code> de l'élément dans le DOM. Dans l'exemple qui suit, le bouton est initialement activé et si on appuie dessus : il devient désactivé (c'est ce que fait la ligne de code <code>btn.disabled = true</code>). La fonction {{domxref("WindowTimers.setTimeout","setTimeout()")}} est ensuite utilisée afin de réinitialiser le bouton après deux secondes.</p>
 
-<div class="hidden">
-<h6 id="Hidden_code_1">Hidden code 1</h6>
+<h4 id="Exemple_1">Exemple 1</h4>
+<pre class="brush: html hidden">&lt;input type="button" value="Activé"&gt;</pre>
 
-<pre class="brush: html">&lt;input type="button" value="Activé"&gt;</pre>
-
-<pre class="brush: js">var btn = document.querySelector('input');
+<pre class="brush: js hidden">var btn = document.querySelector('input');
 
 btn.addEventListener('click', disableBtn);
 
@@ -137,23 +126,22 @@ function disableBtn() {
 }</pre>
 </div>
 
-<p>{{EmbedLiveSample("Hidden_code_1", 650, 60)}}</p>
+<p>{{EmbedLiveSample("Exemple_1", 650, 60)}}</p>
 
 <p>Si l'attribut <code>disabled</code> n'est pas fourni, il est hérité depuis l'élément parent. De cette façon, on peut activer/désactiver des groupes d'éléments en les plaçant dans un conteneur (par exemple un élément {{HTMLElement("fieldset")}}) et en indiquant <code>disabled</code> sur le conteneur.</p>
 
 <p>C'est ce qu'illustre l'exemple suivant. Il est semblable à l'exemple précédent mais l'attribut  <code>disabled</code> est activé sur l'élément <code>&lt;fieldset&gt;</code> lorsqu'on appuie sur le premier bouton. Les trois autres boutons sont donc désactivés pendant deux secondes.</p>
 
-<div class="hidden">
-<h6 id="Hidden_code_2">Hidden code 2</h6>
+<h4 id="Exemple_2">Exemple 2</h4>
 
-<pre class="brush: html">&lt;fieldset&gt;
+<pre class="brush: html hidden">&lt;fieldset&gt;
   &lt;legend&gt;Groupe de boutons &lt;/legend&gt;
   &lt;input type="button" value="Bouton 1"&gt;
   &lt;input type="button" value="Bouton 2"&gt;
   &lt;input type="button" value="Bouton 3"&gt;
 &lt;/fieldset&gt;</pre>
 
-<pre class="brush: js">var btn = document.querySelector('input');
+<pre class="brush: js hidden">var btn = document.querySelector('input');
 var fieldset = document.querySelector('fieldset');
 
 btn.addEventListener('click', disableBtn);
@@ -164,12 +152,11 @@ function disableBtn() {
     fieldset.disabled = false;
   }, 2000);
 }</pre>
-</div>
 
-<p>{{EmbedLiveSample("Hidden_code_2", 650, 60)}}</p>
+<p>{{EmbedLiveSample("Exemple_2", 650, 60)}}</p>
 
 <div class="note">
-<p><strong>Note </strong>: À la différence des autres navigateurs, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée</a>. L'attribut {{htmlattrxref("autocomplete","button")}} peut être utilisé afin de contrôler cette fonctionnalité.</p>
+<p><strong>Note :</strong> À la différence des autres navigateurs, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée</a>. L'attribut {{htmlattrxref("autocomplete","button")}} peut être utilisé afin de contrôler cette fonctionnalité.</p>
 </div>
 
 <h2 id="Validation">Validation</h2>
@@ -190,8 +177,7 @@ function disableBtn() {
   &lt;p&gt;Votre navigateur ne semble pas prendre en charge cette fonctionnalité.&lt;/p&gt;
 &lt;/canvas&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   margin: 0;
   overflow: hidden;
   background: #ccc;
@@ -218,7 +204,6 @@ input[type="range"] {
    position: relative;
    bottom: 5px;
  }</pre>
-</div>
 
 <pre class="brush: js">var canvas = document.querySelector('.myCanvas');
 var width = canvas.width = window.innerWidth;

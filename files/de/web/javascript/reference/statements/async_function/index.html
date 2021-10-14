@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 <div>
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><span class="seoSummary"> Die <code><strong>async function</strong></code> Deklaration definiert eine <strong>asynchrone Funktion</strong>, die ein {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}} Objekt zurück gibt.</span> Asynchrone Funktionen laufen über den <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop">Event Loop</a> außerhalb des üblichen Kontrollflusses, und geben als Ergebnis ein implizites {{jsxref("Promise")}} Objekt zurück. Die Syntax und der Aufbau des Codes bei einer asynchronen Funktion ähnelt allerdings der den standardmässigen synchronen Funktionen.</p>
+<p><span class="seoSummary"> Die <code><strong>async function</strong></code> Deklaration definiert eine <strong>asynchrone Funktion</strong>, die ein {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}} Objekt zurück gibt.</span> Asynchrone Funktionen laufen über den <a href="/en-US/docs/Web/JavaScript/EventLoop">Event Loop</a> außerhalb des üblichen Kontrollflusses, und geben als Ergebnis ein implizites {{jsxref("Promise")}} Objekt zurück. Die Syntax und der Aufbau des Codes bei einer asynchronen Funktion ähnelt allerdings der den standardmässigen synchronen Funktionen.</p>
 
 <div class="noinclude">
 <p>Eine <strong><code>async function</code></strong> kann auch durch den {{jsxref("Operators/async_function", "async function expression", "", 1)}} Ausdruck definiert werden.</p>
@@ -55,7 +55,7 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 <p><strong>Das Schlüsselwort <code>await</code> gilt nur innerhalb der <code>async</code> Funktionen.</strong> Die Verwendung außerhalb solcher Funktion wirft einen <code><a href="/de/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code> auf.</p>
 
 <div class="note">
-<p>Das Ziel der <code>async</code>/<code>await</code> Funktionen ist zweifach. Erstens vereinfachen sie die Anwendung von <code>Promises</code> im Rahmen eines synchronen Verfahrens. Zweitens ermöglichen sie die kollektive Verarbeitung einer Gruppe von <code>Promises</code>. Genau wie die <code>Promises</code> dem Verhalten von callbacks ("Rückruffunktionen") ähneln, so ähnelt die <code>async</code>/<code>await</code> Methode der Zusammensetzung von <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Generatoren</a> und <code>Promises</code>.</p>
+<p>Das Ziel der <code>async</code>/<code>await</code> Funktionen ist zweifach. Erstens vereinfachen sie die Anwendung von <code>Promises</code> im Rahmen eines synchronen Verfahrens. Zweitens ermöglichen sie die kollektive Verarbeitung einer Gruppe von <code>Promises</code>. Genau wie die <code>Promises</code> dem Verhalten von callbacks ("Rückruffunktionen") ähneln, so ähnelt die <code>async</code>/<code>await</code> Methode der Zusammensetzung von <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Generatoren</a> und <code>Promises</code>.</p>
 </div>
 
 <h2 id="Beispiele">Beispiele</h2>

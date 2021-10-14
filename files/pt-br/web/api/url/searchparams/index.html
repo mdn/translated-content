@@ -19,7 +19,7 @@ translation_of: Web/API/URL/searchParams
 
 <p>Se a URL da sua página é <code>https://example.com/?name=Jonathan&amp;age=18</code> você pode parsear os parametros 'name' e 'age' usando:</p>
 
-<pre class="default prettyprint prettyprinted notranslate">let params = (new URL(document.location)).searchParams;
+<pre class="default prettyprint prettyprinted notranslate brush: js">let params = (new URL(document.location)).searchParams;
 let name = params.get("name"); // é a string "Jonathan"
 let age = parseInt(params.get("age")); // é o número 18</pre>
 
@@ -40,6 +40,6 @@ let age = parseInt(params.get("age")); // é o número 18</pre>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <p>{{Compat("api.URL.searchParams")}}</p>

@@ -3,7 +3,7 @@ title: Subdomain takeovers
 slug: Web/Security/Subdomain_takeovers
 translation_of: Web/Security/Subdomain_takeovers
 ---
-<p>subdomain takeover は、攻撃者がターゲットドメインのサブドメインの制御権を獲得したときに発生します。一般的には、サブドメインがドメインネームシステム (<a href="https://wiki.developer.mozilla.org/en-US/docs/Glossary/DNS">DNS</a>) に正規名 (<a href="https://en.wikipedia.org/wiki/CNAME_record">CNAME</a>) を持っているが、そのサブドメインにコンテンツを提供しているホストがいない場合に発生します。これは、バーチャルホストがまだ公開されていないか、バーチャルホストが削除されているために起こる可能性があります。攻撃者は、自分のバーチャルホストを提供して、そのサブドメインのコンテンツをホストすることで、そのサブドメインを乗っ取ることができます。</p>
+<p>subdomain takeover は、攻撃者がターゲットドメインのサブドメインの制御権を獲得したときに発生します。一般的には、サブドメインがドメインネームシステム (<a href="/ja/docs/Glossary/DNS">DNS</a>) に正規名 (<a href="https://en.wikipedia.org/wiki/CNAME_record">CNAME</a>) を持っているが、そのサブドメインにコンテンツを提供しているホストがいない場合に発生します。これは、バーチャルホストがまだ公開されていないか、バーチャルホストが削除されているために起こる可能性があります。攻撃者は、自分のバーチャルホストを提供して、そのサブドメインのコンテンツをホストすることで、そのサブドメインを乗っ取ることができます。</p>
 
 <p>攻撃者がこれを行うことができれば、メインドメインから設定された<a href="/ja/docs/Web/HTTP/Cookies">クッキー</a>を読み取ったり、<a href="/ja/docs/Web/Security/Types_of_attacks#Cross-site_scripting_XSS">クロスサイトスクリプティング</a>を行ったり、<a href="/ja/docs/Web/HTTP/CSP">コンテンツセキュリティポリシー</a>を回避したりすることが可能となり、保護された情報 (ログインを含む) を取得したり、不審なユーザーに悪意のあるコンテンツを送信したりすることが可能となります。</p>
 

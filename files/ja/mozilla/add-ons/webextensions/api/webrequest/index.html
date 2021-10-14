@@ -79,7 +79,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 <h2 id="Accessing_security_information" name="Accessing_security_information">セキュリティ情報へのアクセス</h2>
 
-<p>{{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} リスナー内では、{{WebExtAPIRef("webRequest.getSecurityInfo()", "getSecurityInfo()")}} を呼ぶことで <a href="https://wiki.developer.mozilla.org/ja/docs/Glossary/TLS">TLS</a> にアクセスできます。これを行うには、イベントの <code>addListener()</code> の <code>extraInfoSpec</code> 引数に"blocking" を渡す必要もあります。</p>
+<p>{{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} リスナー内では、{{WebExtAPIRef("webRequest.getSecurityInfo()", "getSecurityInfo()")}} を呼ぶことで <a href="/ja/docs/Glossary/TLS">TLS</a> にアクセスできます。これを行うには、イベントの <code>addListener()</code> の <code>extraInfoSpec</code> 引数に"blocking" を渡す必要もあります。</p>
 
 <p>TLS ハンドシェイクについて詳しく読むことができますが、修正したり、ブラウザーのトラストな決定を上書きできません。</p>
 
@@ -116,7 +116,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 <dl>
  <dt>{{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}</dt>
- <dd>10分間に <code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged" title="Suppose an add-on's job is to block web requests against a pattern, and the following scenario happens:"><code>handlerBehaviorChanged()</code></a></code> を最大限呼べる回数。</dd>
+ <dd>10分間に <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged" title="Suppose an add-on's job is to block web requests against a pattern, and the following scenario happens:"><code>handlerBehaviorChanged()</code></a></code> を最大限呼べる回数。</dd>
 </dl>
 
 <h2 id="Methods" name="Methods">メソッド</h2>
@@ -127,7 +127,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
  <dt>{{WebExtAPIRef("webRequest.filterResponseData()")}}</dt>
  <dd>あるリクエストに対する {{WebExtAPIRef("webRequest.StreamFilter")}} オブジェクトを返します。</dd>
  <dt>{{WebExtAPIRef("webRequest.getSecurityInfo()")}}</dt>
- <dd>あるリクエストに対する <a href="https://wiki.developer.mozilla.org/ja/docs/Glossary/TLS">TLS</a> コネクションの詳細情報を返します。</dd>
+ <dd>あるリクエストに対する <a href="/ja/docs/Glossary/TLS">TLS</a> コネクションの詳細情報を返します。</dd>
 </dl>
 
 <h2 id="Events" name="Events">イベント</h2>
@@ -157,7 +157,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 <p>{{Compat("webextensions.api.webRequest")}}</p>
 
-<p><a href="/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webRequest_incompatibilities">Extra notes on Chrome incompatibilities</a>.</p>
+<p><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webRequest_incompatibilities">Extra notes on Chrome incompatibilities</a>.</p>
 
 <p>{{WebExtExamples("h2")}}</p>
 

@@ -77,7 +77,7 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 
 <pre class="brush: js notranslate">person1.valueOf()</pre>
 
-<p>Este método <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">valueOf()</a> simplemente retornará el valor del objeto sobre el que se llama - ¡pruébalo y verás! En este caso, lo que pasa es que:</p>
+<p>Este método <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">valueOf()</a> simplemente retornará el valor del objeto sobre el que se llama - ¡pruébalo y verás! En este caso, lo que pasa es que:</p>
 
 <ul>
  <li>El navegador comprueba inicialmente si el objeto person1 tiene un método valueOf() disponible en él.</li>
@@ -105,7 +105,7 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 
 <p>Así que <code>Object.prototype.watch()</code>, <code>Object.prototype.valueOf()</code>, etc., están disponibles para cualquier tipo de objeto que herede de <code>Object.prototype</code>, incluyendo nuevas instancias de objeto creadas desde el constructor.</p>
 
-<p><code><a href="https://wiki.developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/is">Object.is()</a></code>, <code><a href="https://wiki.developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/keys">Object.keys()</a></code>, y otros miembros no definidos dentro del prototipo del repositorio(bucket) no son heredados por instancias de objeto o tipos de objeto que heredan de Object.prototype. Sino que son métodos/propiedades disponibles sólo en el propio constructor Object().</p>
+<p><code><a href="/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/is">Object.is()</a></code>, <code><a href="/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/keys">Object.keys()</a></code>, y otros miembros no definidos dentro del prototipo del repositorio(bucket) no son heredados por instancias de objeto o tipos de objeto que heredan de Object.prototype. Sino que son métodos/propiedades disponibles sólo en el propio constructor Object().</p>
 
 <div class="note">
 <p><strong>Nota</strong>: Esto parece extraño - ¿cómo se puede tener un método definido en un constructor, que en sí mismo es una función? Bueno, una función es también un tipo de objeto - vea la referencia del constructor de Function() si no nos cree.</p>

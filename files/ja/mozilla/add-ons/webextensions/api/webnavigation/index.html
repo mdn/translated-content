@@ -47,7 +47,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation
 
 <p><code>onCommitted</code> イベントリスナーには 2 つの追加プロパティが渡されます: ナビゲーションの原因 (例えばユーザーがリンクをクリックしたり、ユーザーがブックマークを選んだり) を示す{{WebExtAPIRef("webNavigation.TransitionType","TransitionType")}} と、ナビゲーションの詳細情報を提供する{{WebExtAPIRef("webNavigation.TransitionQualifier","TransitionQualifier")}} です。</p>
 
-<p>この API を使うには"webNavigation" <a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a>が必要です。</p>
+<p>この API を使うには"webNavigation" <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a>が必要です。</p>
 
 <h2 id="Types" name="Types">型</h2>
 
@@ -64,7 +64,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation
 
 <dl>
  <dt>{{WebExtAPIRef("webNavigation.getFrame()")}}</dt>
- <dd>特定フレームについての情報を取得します。フレームにはタブ内のトップレベルのフレームや、ネストされた <a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/iframe">iframe</a> であり、タブ ID とフレーム ID でユニークに識別されます。</dd>
+ <dd>特定フレームについての情報を取得します。フレームにはタブ内のトップレベルのフレームや、ネストされた <a href="/ja/docs/Web/HTML/Element/iframe">iframe</a> であり、タブ ID とフレーム ID でユニークに識別されます。</dd>
  <dt>{{WebExtAPIRef("webNavigation.getAllFrames()")}}</dt>
  <dd>
  <p>タブ ID を指定すると、そのタブに含まれているすべてのフレームの情報を取得します。</p>
@@ -81,9 +81,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation
  <dt>{{WebExtAPIRef("webNavigation.onCommitted")}}</dt>
  <dd>ナビゲーションがコミットされたときに発火します。少なくともサーバーから新しい document がいくらか取得されてブラウザーが新document に切り替えると決決めたとき。</dd>
  <dt>{{WebExtAPIRef("webNavigation.onDOMContentLoaded")}}</dt>
- <dd>ページ内で <a href="https://developer.mozilla.org/ja/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a> イベントが発火したときに発火します。</dd>
+ <dd>ページ内で <a href="/ja/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a> イベントが発火したときに発火します。</dd>
  <dt>{{WebExtAPIRef("webNavigation.onCompleted")}}</dt>
- <dd>document と、それが参照するリソースが完全にロードされて初期化されたときに発火します。これは DOM <code><a href="https://developer.mozilla.org/ja/docs/Web/Events/load">load</a></code> イベントと等価です。</dd>
+ <dd>document と、それが参照するリソースが完全にロードされて初期化されたときに発火します。これは DOM <code><a href="/ja/docs/Web/Events/load">load</a></code> イベントと等価です。</dd>
  <dt>{{WebExtAPIRef("webNavigation.onErrorOccurred")}}</dt>
  <dd>エラーが起こってナビゲーションが停止したときに発火します。これはネットワークエラーが起きたときや、ユーザーがナビゲーションを停止したときのいずれかで起こりえます。</dd>
  <dt>{{WebExtAPIRef("webNavigation.onCreatedNavigationTarget")}}</dt>
