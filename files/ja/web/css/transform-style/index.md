@@ -3,79 +3,83 @@ title: transform-style
 slug: Web/CSS/transform-style
 tags:
   - CSS
-  - CSS Property
-  - CSS Transforms
-  - Experimental
+  - CSS プロパティ
+  - CSS 座標変換
+  - 実験的
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
+browser-compat: css.properties.transform-style
 translation_of: Web/CSS/transform-style
 ---
 {{CSSRef}}
 
-<span class="seoSummary">**`transform-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の子要素を 3D 空間に配置するのか、平面化して要素の平面に配置するのかを設定します。</span>
+**`transform-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の子要素を 3D 空間に配置するのか、平面化して要素の平面に配置するのかを設定します。
 
 {{EmbedInteractiveExample("pages/css/transform-style.html")}}
-
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) をクローンしてプルリクエストを送信してください。</p>
 
 平面化した場合、子要素は自身の 3D 空間に存在しなくなります。
 
 このプロパティは継承されないため、葉要素以外のすべての子孫要素で設定する必要があります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="brush:css no-line-numbers notranslate">/* キーワード値 */
+```css
+/* キーワード値 */
 transform-style: flat;
 transform-style: preserve-3d;
 
 /* グローバル値 */
 transform-style: inherit;
 transform-style: initial;
+transform-style: revert;
 transform-style: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
 - `flat`
   - : 要素の子要素を要素自身の平面上に配置することを示します。
 - `preserve-3d`
   - : 要素の子要素を 3D 空間に配置することを示します。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 公式定義
 
 {{CSSInfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Transform_style_demonstration" name="Transform_style_demonstration">変換スタイルのデモ</h3>
+<h3 id="Transform_style_demonstration">座標変換スタイルのデモ</h3>
 
-この例では、変換を使用して 3D の立方体を作成しています。立方体の面の親コンテナーには、既定で `transform-style: preserve-3d` が設定されているため、3D 空間で変換され、意図したとおりに表示されます。
+この例では、座標変換を使用して 3D の立方体を作成しています。立方体の面の親コンテナーには、既定で `transform-style: preserve-3d` が設定されているため、3D 空間で座標変換され、意図したとおりに表示されます。
 
-また、これと `transform-style: flat` の間で切り替えられるチェックボックスも用意されています。この別な状態では、立方体の面はすべて親の平面上に平坦化され、使用しているブラウザーによっては全く表示されない場合があります。
+また、これと `transform-style: flat` の間で切り替えられるチェックボックスも用意しました。この別な状態では、立方体の面はすべて親の平面上に平坦化され、使用しているブラウザーによっては全く表示されない場合があります。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;section id="example-element"&gt;
-  &lt;div class="face front"&gt;1&lt;/div&gt;
-  &lt;div class="face back"&gt;2&lt;/div&gt;
-  &lt;div class="face right"&gt;3&lt;/div&gt;
-  &lt;div class="face left"&gt;4&lt;/div&gt;
-  &lt;div class="face top"&gt;5&lt;/div&gt;
-  &lt;div class="face bottom"&gt;6&lt;/div&gt;
-&lt;/section&gt;
+```html
+<section id="example-element">
+  <div class="face front">1</div>
+  <div class="face back">2</div>
+  <div class="face right">3</div>
+  <div class="face left">4</div>
+  <div class="face top">5</div>
+  <div class="face bottom">6</div>
+</section>
 
-&lt;div class="checkbox"&gt;
-  &lt;label for="preserve"&gt;&lt;code&gt;preserve-3d&lt;/code&gt;&lt;/label&gt;
-  &lt;input type="checkbox" id="preserve" checked&gt;
-&lt;/div&gt;</pre>
+<div class="checkbox">
+  <label for="preserve"><code>preserve-3d</code></label>
+  <input type="checkbox" id="preserve" checked>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">#example-element {
+```css
+#example-element {
   margin: 50px;
   width: 100px;
   height: 100px;
@@ -123,50 +127,36 @@ transform-style: unset;
 .bottom {
   background: rgba(210,0,210,.7);
   transform: rotateX(-90deg) translateZ(50px);
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js notranslate">const cube = document.getElementById('example-element');
+```js
+const cube = document.getElementById('example-element');
 const checkbox = document.getElementById('preserve');
 
-checkbox.addEventListener('change', () =&gt; {
+checkbox.addEventListener('change', () => {
   if(checkbox.checked) {
     cube.style.transformStyle = 'preserve-3d';
   } else {
     cube.style.transformStyle = 'flat';
   }
-})</pre>
+})
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
 {{EmbedLiveSample('Transform_style_demonstration', '100%', 260)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Transforms 2', '#transform-style-property', 'transform-style')}}</td>
-   <td>{{Spec2('CSS Transforms 2')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-{{Compat("css.properties.transform-style")}}
+{{Compat}}
 
 ## 関連情報
 
-<ul>
- <li>[CSS 変形の使用](/ja/docs/CSS/Using_CSS_transforms)</li>
-</ul>
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)

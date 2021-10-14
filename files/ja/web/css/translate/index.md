@@ -3,20 +3,21 @@ title: translate
 slug: Web/CSS/translate
 tags:
   - CSS
-  - CSS Property
-  - CSS 変形
-  - Experimental
+  - CSS プロパティ
   - Reference
-  - Transforms
+  - 座標変換
+  - recipe:css-property
+browser-compat: css.properties.translate
 translation_of: Web/CSS/translate
 ---
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-**`translate`** は [CSS](/ja/docs/Web/CSS) のプロパティで、平行移動による変形を独自に、 {{CSSxRef("transform")}} プロパティから独立して指定することができます。これは一般的なユーザーインターフェイスの用途に適しており、 `transform` の値で指定する変形関数を正確に思い出す必要がなくなります。
+**`translate`** は [CSS](/ja/docs/Web/CSS) のプロパティで、平行移動の座標変換を独自に、 {{CSSxRef("transform")}} プロパティから独立して指定することができます。これは一般的なユーザーインターフェイスの用途に適しており、 `transform` の値で指定する変換関数を正確に思い出す必要がなくなります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 translate: none;
 
 /* 単一の値 */
@@ -29,9 +30,15 @@ translate: 50% 105px;
 
 /* 三つの値 */
 translate: 50% 105px 5rem;
-</pre>
 
-<h3 id="Values" name="Values">値</h3>
+/* グローバル値 */
+translate: inherit;
+translate: initial;
+translate: revert;
+translate: unset;
+```
+
+### 値
 
 - 単一の {{cssxref("&lt;length-percentage&gt;")}} 値
   - : 単一の {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} 値で、 X 軸および Y 軸方向が同じ移動量の二次元の平行移動を指定します。 `translate()` (二次元の平行移動) 関数に単一の値を指定したものと同等です。
@@ -39,24 +46,31 @@ translate: 50% 105px 5rem;
   - : 二つの {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} 値で、二次元の平行移動における X および Y 軸方向の移動量を (それぞれ) 指定します。 `translate()` (二次元の平行移動) 関数に二つの値を指定したものと同等です。
 - 三つの値
   - : 二つの {{cssxref("&lt;length-percentage&gt;")}} 値と一つの {{cssxref("&lt;length&gt;")}} 値で、三次元の平行移動における X, Y, Z 軸の移動量を (それぞれ) 指定します。 `translate3d()` (三次元の平行移動) 関数と同等です。
- <dt id="none">`none`</dt>
+- `none`
   - : 平行移動が適用されないことを指定します。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{CSSSyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="translate"&gt;Translation&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <p class="translate">Translation</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">* {
+```css
+* {
   box-sizing: border-box;
 }
 
@@ -85,33 +99,24 @@ p {
 div:hover .translate {
   translate: 200px 50px;
 }
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
 {{EmbedLiveSample('Examples')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Transforms 2', '#individual-transforms', 'individual transforms')}}</td>
-   <td>{{Spec2('CSS Transforms 2')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-{{CSSInfo}}
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+{{Compat}}
 
-{{Compat("css.properties.translate")}}
+## 関連情報
+
+- {{cssxref('scale')}}
+- {{cssxref('rotate')}}
+- {{cssxref('transform')}}
+
+メモ: `skew` には独立した `transform` の値はありません

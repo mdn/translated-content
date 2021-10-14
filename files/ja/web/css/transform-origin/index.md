@@ -3,41 +3,45 @@ title: transform-origin
 slug: Web/CSS/transform-origin
 tags:
   - CSS
-  - CSS Property
-  - CSS Transforms
+  - CSS プロパティ
+  - CSS 座標変換
   - Reference
   - 'default value: center'
-  - 'recipe:css-property'
+  - recipe:css-property
   - transform-origin
+browser-compat: css.properties.transform-origin
 translation_of: Web/CSS/transform-origin
 ---
 {{ CSSRef }}
 
-**`transform-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の<ruby>変形<rp> (</rp><rt>transform</rt><rp>) </rp></ruby>における原点を設定します。
+**`transform-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の座標変換 (transform) における原点を設定します。
 
 {{EmbedInteractiveExample("pages/css/transform-origin.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) をクローンしてプルリクエストを送信してください。</p>
+座標変換の原点とは、それを中心に座標変換が適用される点です。例えば、 `[rotate()](/ja/docs/Web/CSS/transform-function/rotate)` 関数における座標変換の原点は、回転の中心です。
 
-変形の原点とは、それを中心に変形が適用される点です。例えば、 `[rotate()](/ja/docs/Web/CSS/transform-function/rotate)` 関数における変形の原点は、回転の中心です。
+実際には、このプロパティは一対の座標変換で、その要素の他の座標変換の周りを囲みます。最初の座標変換は、原点を真の原点である <math><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> に移動させます。その後、他の座標変換が適用されますが、座標変換の原点は <math><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> にあるので、これらの座標変換はその原点の周りで作用します。最後に逆方向の変換を行い，座標変換の原点を元の位置に戻します。したがって，この定義は 次のようになります。
 
-<p>このプロパティは最初にプロパティ値の反対に平行移動し、それから要素の変形を適用し、プロパティ値の分だけ平行移動する形でで適用されます。<br>
- すなわち、</p>
-
-<pre class="brush: css notranslate">transform-origin: -100% 50%;
+```css
+transform-origin: -100% 50%;
 transform: rotate(45deg);
-</pre>
+```
 
-この定義は以下の変形と同じです。
+この定義は以下の座標変換と同じです。
 
-<pre class="brush: css notranslate">transform-origin: 0 0;
-transform: translate(-100%, 50%) rotate(45deg) translate(100%, -50%);</pre>
+```css
+transform-origin: 0 0;
+transform: translate(-100%, 50%) rotate(45deg) translate(100%, -50%);
+```
 
-既定で、変形の原点は `center` です。
+右から左に読むと、`translate(100%, -50%)` は変換の原点を進の原点に移動するもので、`rotate(45deg)` は本来の座標変換であり、`translate(-100%, 50%)` は変換の原点をもとの場所に戻す変換です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+既定で、座標変換の原点は `center` です。
 
-<pre class="brush: css notranslate">/* 値１つの構文 */
+## 構文
+
+```css
+/* 値１つの構文 */
 transform-origin: 2px;
 transform-origin: bottom;
 
@@ -68,407 +72,255 @@ transform-origin: bottom right 2cm;
 /* グローバル値 */
 transform-origin: inherit;
 transform-origin: initial;
+transform-origin: revert;
 transform-origin: unset;
-</pre>
+```
 
-`transform-origin` プロパティは、オフセットを表す１～３つの値を使用して指定することができます。明示的に定義されなかったオフセットは、それぞれの対応する[初期値](/ja/docs/Web/CSS/initial_value)にリセットされます。
+`transform-origin` プロパティは、オフセットを表す 1 ～ 3 つの値を使用して指定することができます。明示的に定義されなかったオフセットは、それぞれの対応する[初期値](/ja/docs/Web/CSS/initial_value)にリセットされます。
 
-２つ以上の値が定義され、どちらもの値もキーワードでない場合、または使われているキーワードが `center` だけであった場合、最初の値は水平方向のオフセットであり、二番目の値は垂直方向のオフセットです。
+単一の {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} が定義された場合、これは水平方向のオフセットを表します。
 
-<ul>
- <li>値１つの構文:
-  <ul>
-   <li>値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, 又は `left`, `center`, `right`, `top`, `bottom` のうちの１つでなければなりません。</li>
-  </ul>
- </li>
- <li>値２つの構文:
-  <ul>
-   <li>一方の値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, 又はキーワードの `left`, `center`, `right` のうちの１つでなければなりません。</li>
-   <li>もう一方の値は、 {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, 又はキーワードの `top`, `center`, `bottom` のうちの１つでなければなりません。</li>
-  </ul>
- </li>
- <li>値３つの構文:
-  <ul>
-   <li>１番目と２番目の値は、値２つの構文と同じです。</li>
-   <li>３番目の値は {{cssxref("&lt;length&gt;")}} でなければなりません。これは常に Z オフセットを表します。</li>
-  </ul>
- </li>
-</ul>
+2 つ以上の値が定義され、どちらもの値もキーワードでない場合、または使われているキーワードが `center` だけであった場合、最初の値は水平方向のオフセットであり、二番目の値は垂直方向のオフセットです。
 
-<h3 id="Values" name="Values">値</h3>
+- 値 1 つの構文:
 
-- <var>x-offset</var>
-  - : {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} の、ボックスの左端から変形の原点までの距離を示す値です。
-- <var>offset-keyword</var>
+  - 値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, または `left`, `center`, `right`, `top`, `bottom` のいずれかでなければなりません。
+
+- 値 2 つの構文:
+
+  - 一方の値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, またはキーワードの `left`, `center`, `right` のいずれかでなければなりません。
+  - もう一方の値は、 {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, またはキーワードの `top`, `center`, `bottom` のいずれかでなければなりません。
+
+- 値 3 つの構文:
+
+  - 1 番目と 2 番目の値は、値 2 つの構文と同じです。
+  - 3 番目の値は {{cssxref("&lt;length&gt;")}} でなければなりません。これは常に Z オフセットを表します。
+
+### 値
+
+- _x-offset_
+  - : {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} の、ボックスの左端から座標変換の原点までの距離を示す値です。
+- _offset-keyword_
   - : `left`, `right`, `top`, `bottom`, `center` のいずれかのキーワードで、対応するオフセットを表します。
-- <var>y-offset</var>
-  - : {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} の、ボックスの右端から変形の原点までの距離を示す値です。
-- <var>x-offset-keyword</var>
-  - : `left`, `right`, `center` のいずれかのキーワードで、ボックスの左端から変形の原点までの距離を示します。
-- <var>y-offset-keyword</var>
-  - : `top`, `bottom`, `center` のいずれかのキーワードで、ボックスの上端から変形の原点までの距離を示します。
-- <var>z-offset</var>
+- _y-offset_
+  - : {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} の、ボックスの右端から座標変換の原点までの距離を示す値です。
+- _x-offset-keyword_
+  - : `left`, `right`, `center` のいずれかのキーワードで、ボックスの左端から座標変換の原点までの距離を示します。
+- _y-offset-keyword_
+  - : `top`, `bottom`, `center` のいずれかのキーワードで、ボックスの上端から座標変換の原点までの距離を示します。
+- _z-offset_
   - : {{cssxref("&lt;length&gt;")}} 値 ({{cssxref("&lt;percentage&gt;")}} を指定すると文が無効になります) で、ユーザーの視点と z=0 原点の距離を示します。
 
-キーワードは便利な速記であり、次の {{cssxref("&lt;percentage&gt;")}} 値に相当します。
+キーワードは便利な速記形であり、次の {{cssxref("&lt;percentage&gt;")}} 値に相当します。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">キーワード</th>
-   <th scope="col">値</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>`left`</td>
-   <td>`0%`</td>
-  </tr>
-  <tr>
-   <td>`center`</td>
-   <td>`50%`</td>
-  </tr>
-  <tr>
-   <td>`right`</td>
-   <td>`100%`</td>
-  </tr>
-  <tr>
-   <td>`top`</td>
-   <td>`0%`</td>
-  </tr>
-  <tr>
-   <td>`bottom`</td>
-   <td>`100%`</td>
-  </tr>
- </tbody>
-</table>
+| Keyword  | Value  |
+| -------- | ------ |
+| `left`   | `0%`   |
+| `center` | `50%`  |
+| `right`  | `100%` |
+| `top`    | `0%`   |
+| `bottom` | `100%` |
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 公式定義
 
 {{CSSInfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+> **Note:** `transform-origin` の初期値は、ルートの `<svg>` 要素と [foreignObject](/ja/docs/Web/SVG/Element/foreignObject) の直接の子である `<svg>` 要素を除いたすべての SVG 要素では `0 0` です。また、 `transform-origin` は他の CSS 要素と同様に `50% 50%` です。詳しくは [SVG transform-origin](/ja/docs/Web/SVG/Attribute/transform-origin) 属性を参照してください。
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>コード</th>
-   <th>サンプル</th>
-  </tr>
-  <tr>
-   <td>
-    `transform: none;`
-   </td>
-   <td>
-    <div class="hidden" id="transform_none">
-    <pre class="brush: html notranslate">
-&lt;div class="box1"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
+<h3 id="A_demonstration_of_various_transform_values">様々な変換値のデモ</h3>
 
-    <pre class="brush: css notranslate">
-.box1 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+この例は、様々な変換関数で様々なt `transform-origin` の値を選択した場合の効果を表します。
+
+```html hidden
+<div class="container">
+
+<div class="example">
+  <div class="box box1">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
 transform: none;
--webkit-transform: none;
-}
-</pre>
-    </div>
-
-    {{EmbedLiveSample('transform_none', '', 120, '', '', 'no-button') }}
-   </td>
-  </tr>
-  <tr>
-   <td>
-    `transform: rotate(30deg);`
-   </td>
-   <td>
-    <div class="hidden" id="transform_rotate_only">
-    <pre class="brush: html notranslate">
-&lt;div class="box2"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css notranslate">
-.box2 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+<div class="example">
+  <div class="box box2">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
 transform: rotate(30deg);
--webkit-transform: rotate(30deg);
-}
-</pre>
-    </div>
-
-    {{EmbedLiveSample('transform_rotate_only', '', 120, '', '', 'no-button') }}
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: rotate(30deg);<br>
-     transform-origin: 0 0;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_rotate">
-    <pre class="brush: html notranslate">
-&lt;div class="box3"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css notranslate">
-.box3 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+<div class="example">
+  <div class="box box3">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
+transform: rotate(30deg);
 transform-origin: 0 0;
--webkit-transform-origin: 0 0;
+</pre>
+
+<div class="example">
+  <div class="box box4">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
 transform: rotate(30deg);
--webkit-transform: rotate(30deg);
-}
-</pre>
-    </div>
-
-    {{EmbedLiveSample('transform_rotate', '', 120, '', '', 'no-button') }}
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: rotate(30deg);<br>
-     transform-origin: 100% 100%;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_rotate_with_percentage">
-    <pre class="brush: html notranslate">
-&lt;div class="box4"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
-
-    <pre class="brush: css notranslate">
-.box4 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
 transform-origin: 100% 100%;
--webkit-transform-origin: 100% 100%;
+</pre>
+
+<div class="example">
+  <div class="box box5">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
 transform: rotate(30deg);
--webkit-transform: rotate(30deg);
-}
-</pre>
-    </div>
-
-    {{EmbedLiveSample('transform_rotate_with_percentage', '', 120, '', '', 'no-button') }}
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: rotate(30deg);<br>
-     transform-origin: -1em -3em;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_rotate_with_em">
-    <pre class="brush: html notranslate">
-&lt;div class="box5"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
-
-    <pre class="brush: css notranslate">
-.box5 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
 transform-origin: -1em -3em;
--webkit-transform-origin: -1em -3em;
-transform: rotate(30deg);
--webkit-transform: rotate(30deg);
-}
-</pre>
-    </div>
-
-    {{EmbedLiveSample('transform_rotate_with_em', '', 120, '', '', 'no-button') }}
-   </td>
-  </tr>
-  <tr>
-   <td>
-    `transform: scale(1.7);`
-   </td>
-   <td>
-    <div class="hidden" id="transform_scale_only">
-    <pre class="brush: html notranslate">
-&lt;div class="box6"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css notranslate">
-.box6 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
-transform: scale(`1.7`);
--webkit-transform: scale(`1.7`);
-}
-</pre>
-    </div>
+<div class="example">
+  <div class="box box6">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
 
-    {{EmbedLiveSample('transform_scale_only', '', 120, '', '', 'no-button') }}
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: scale(1.7);<br>
-     transform-origin: 0 0;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_scale_without_origin">
-    <pre class="brush: html notranslate">
-&lt;div class="box7"&gt;&amp;nbsp;&lt;/div&gt;
+<pre>
+transform: scale(1.7);
 </pre>
 
-    <pre class="brush: css notranslate">
-.box7 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
-transform: scale(`1.7`);
--webkit-transform: scale(`1.7`);
+<div class="example">
+  <div class="box box7">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
+transform: scale(1.7);
 transform-origin: 0 0;
--webkit-transform-origin: 0 0;
-}
-</pre>
-    </div>
-
-    {{EmbedLiveSample('transform_scale_without_origin', '', 120, '', '', 'no-button') }}
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: scale(1.7);<br>
-     transform-origin: 100% -30%;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_scale">
-    <pre class="brush: html notranslate">
-&lt;div class="box8"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css notranslate">
-.box8 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
-transform: scale(`1.7`);
--webkit-transform: scale(`1.7`);
+<div class="example">
+  <div class="box box8">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
+transform: scale(1.7);
 transform-origin: 100% -30%;
--webkit-transform-origin: 100% -30%;
-}
-</pre>
-    </div>
-
-    {{EmbedLiveSample('transform_scale', '', 120, '', '', 'no-button') }}
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: skewX(50deg);<br>
-     transform-origin: 100% -30%;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_skew_x">
-    <pre class="brush: html notranslate">
-&lt;div class="box9"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css notranslate">
-.box9 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+<div class="example">
+  <div class="box box9">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
 transform: skewX(50deg);
--webkit-transform: skewX(50deg);
 transform-origin: 100% -30%;
--webkit-transform-origin: 100% -30%;
-}
-</pre>
-    </div>
-
-    {{EmbedLiveSample('transform_skew_x', '', 120, '', '', 'no-button') }}
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: skewY(50deg);<br>
-     transform-origin: 100% -30%;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_skew_y">
-    <pre class="brush: html notranslate">
-&lt;div class="box10"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css notranslate">
-.box10 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+<div class="example">
+  <div class="box box10">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
 transform: skewY(50deg);
--webkit-transform: skewY(50deg);
 transform-origin: 100% -30%;
--webkit-transform-origin: 100% -30%;
-}
 </pre>
-    </div>
 
-    {{EmbedLiveSample('transform_skew_y', '', 120, '', '', 'no-button') }}
-   </td>
-  </tr>
- </tbody>
-</table>
+</div>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+```css hidden
+.container {
+  display: grid;
+  grid-template-columns: 200px 100px;
+  gap: 20px;
+}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Transforms', '#transform-origin-property', 'transform-origin') }}</td>
-   <td>{{ Spec2('CSS3 Transforms') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+.example {
+  position: relative;
+  margin: 0 2em 4em 5em;
+}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+.box {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  border: solid 1px;
+  background-color: palegreen;
+}
 
-{{Compat("css.properties.transform-origin")}}
+.original {
+  position: absolute;
+  left: 0;
+  opacity: 20%;
+}
+
+.box1 {
+  transform: none;
+}
+
+.box2 {
+  transform: rotate(30deg);
+}
+
+.box3 {
+  transform: rotate(30deg);
+  transform-origin: 0 0;
+}
+
+.box4 {
+  transform: rotate(30deg);
+  transform-origin: 100% 100%;
+}
+
+.box5 {
+  transform: rotate(30deg);
+  transform-origin: -1em -3em;
+}
+
+.box6 {
+  transform: scale(1.7);
+}
+
+.box7  {
+  transform: scale(1.7);
+  transform-origin: 0 0;
+}
+
+.box8 {
+  transform: scale(1.7);
+  transform-origin: 100% -30%;
+}
+
+.box9 {
+  transform: skewX(50deg);
+  transform-origin: 100% -30%;
+}
+
+.box10 {
+  transform: skewY(50deg);
+  transform-origin: 100% -30%;
+}
+```
+
+{{EmbedLiveSample('A_demonstration_of_various_transform_values', '', 1350) }}
+
+## ブラウザーの互換性
+
+{{Compat}}
 
 ## 関連情報
 
-<ul>
- <li>[CSS 変形の使用](/ja/docs/Web/CSS/Using_CSS_transforms)</li>
- <li>[https://css-tricks.com/almanac/properties/t/transform-origin/](https://css-tricks.com/almanac/properties/t/transform-origin/)</li>
-</ul>
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- <https://css-tricks.com/almanac/properties/t/transform-origin/>
