@@ -112,7 +112,7 @@ const promiseA = new Promise( (resolutionFunc,rejectionFunc) => {
     resolutionFunc(777);
 });
 // この時点で、 "promiseA" はすでに解決されています。
-promiseA.then( (val) =&gt; console.log("asynchronous logging has val:",val) );
+promiseA.then( (val) => console.log("asynchronous logging has val:",val) );
 console.log("immediate logging");
 
 // 以下の順序で出力が行われます。

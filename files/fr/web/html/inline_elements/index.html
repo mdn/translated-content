@@ -13,9 +13,9 @@ tags:
 translation_of: Web/HTML/Inline_elements
 original_slug: Web/HTML/Éléments_en_ligne
 ---
-<p class="summary">Les éléments HTML (<strong>Hypertext Markup Language</strong>) étaient historiquement catégorisés comme des éléments de type « bloc » (<i>block</i> en anglais) ou de type « en ligne » (<i>inline</i> en anglais). Comme il s'agit d'une caractéristique de présentation, elle est aujourd'hui spécifiée par CSS dans le module de spécification <a href="/fr/docs/Web/CSS/CSS_Flow_Layout"><i>Flow Layout</i></a> qui définit l'organisation visuelle par défaut des éléments (le « flux » normal). Les éléments en lignes n'occupent que l'espace entre leurs balises et s'insèrent dans le flux du contenu plutôt que de créer un nouveau « bloc » visuel. Dans cet article, nous verrons en détails ces éléments en ligne et leurs différences par rapport aux <a href="/fr/docs/Web/HTML/Block-level_elements">éléments de bloc</a>.</p>
+<p>Les éléments HTML (<strong>Hypertext Markup Language</strong>) étaient historiquement catégorisés comme des éléments de type « bloc » (<i>block</i> en anglais) ou de type « en ligne » (<i>inline</i> en anglais). Comme il s'agit d'une caractéristique de présentation, elle est aujourd'hui spécifiée par CSS dans le module de spécification <a href="/fr/docs/Web/CSS/CSS_Flow_Layout"><i>Flow Layout</i></a> qui définit l'organisation visuelle par défaut des éléments (le « flux » normal). Les éléments en lignes n'occupent que l'espace entre leurs balises et s'insèrent dans le flux du contenu plutôt que de créer un nouveau « bloc » visuel. Dans cet article, nous verrons en détails ces éléments en ligne et leurs différences par rapport aux <a href="/fr/docs/Web/HTML/Block-level_elements">éléments de bloc</a>.</p>
 
-<div class="notecard note">
+<div class="note">
   <p><strong>Note :</strong> Un élément en ligne ne commence pas sur une nouvelle ligne et prend uniquement la largeur qui lui est nécessaire.</p>
 </div>
 
@@ -39,10 +39,7 @@ ligne.&lt;/p&gt;</pre>
 
 <p>{{EmbedLiveSample("Inline", "", 120)}}</p>
 
-<div class="hidden">
-<p>Contenu masqué pour la lecture : cette feuille de style CSS est également utilisée :</p>
-
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   margin: 0;
   padding: 4px;
   border: 1px solid #333;
@@ -51,7 +48,6 @@ ligne.&lt;/p&gt;</pre>
 .highlight {
   background-color:#ee3;
 }</pre>
-</div>
 
 <h3 id="Block-level">Élément de bloc</h3>
 
@@ -61,10 +57,7 @@ ligne.&lt;/p&gt;</pre>
 son arrière-plan est coloré afin d'illustrer la zone couverte par cet élément de
 bloc.&lt;/p&gt;</pre>
 
-<div class="hidden">
-<p>Contenu masqué pour la lecture : cette feuille de style CSS est également utilisée :</p>
-
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   margin: 0;
   padding: 4px;
   border: 1px solid #333;
@@ -73,7 +66,6 @@ bloc.&lt;/p&gt;</pre>
 .highlight {
   background-color:#ee3;
 }</pre>
-</div>
 
 <p>Et voici le résultat qu'on obtient :</p>
 

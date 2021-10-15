@@ -1537,6 +1537,7 @@
 /es/docs/Web/API/Event/createEvent	/es/docs/Web/API/Document/createEvent
 /es/docs/Web/API/Fetch_API/Conceptos_basicos	/es/docs/Web/API/Fetch_API/Basic_concepts
 /es/docs/Web/API/Fetch_API/Utilizando_Fetch	/es/docs/Web/API/Fetch_API/Using_Fetch
+/es/docs/Web/API/File/fileName	/es/docs/conflicting/Web/API/File/name
 /es/docs/Web/API/Geolocalización	/es/docs/Web/API/Geolocation
 /es/docs/Web/API/Geolocation.clearWatch	/es/docs/Web/API/Geolocation/clearWatch
 /es/docs/Web/API/Geolocation.getCurrentPosition	/es/docs/Web/API/Geolocation/getCurrentPosition
@@ -1565,6 +1566,7 @@
 /es/docs/Web/API/Notifications_API/Usando_la_API_de_Notificaciones	/es/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /es/docs/Web/API/ParentNode/childElementCount	/es/docs/Web/API/Element/childElementCount
 /es/docs/Web/API/Position	/es/docs/Web/API/GeolocationPosition
+/es/docs/Web/API/PositionOptions	/es/docs/conflicting/Web/API/Geolocation/getCurrentPosition
 /es/docs/Web/API/RandomSource/Obtenervaloresaleatorios	/es/docs/Web/API/Crypto/getRandomValues
 /es/docs/Web/API/SubtleCrypto/encrypt	/es/docs/Web/HTTP/Headers/Digest
 /es/docs/Web/API/UIEvent/pageX	/es/docs/Web/API/MouseEvent/pageX
@@ -1578,6 +1580,7 @@
 /es/docs/Web/API/Window.navigator	/es/docs/Web/API/Window/navigator
 /es/docs/Web/API/Window.onbeforeunload	/es/docs/Web/API/WindowEventHandlers/onbeforeunload
 /es/docs/Web/API/Window.setTimeout	/es/docs/Web/API/setTimeout
+/es/docs/Web/API/Window/crypto	/es/docs/Web/API/crypto_property
 /es/docs/Web/API/WindowBase64.atob	/es/docs/Web/API/atob
 /es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando	/es/docs/Glossary/Base64
 /es/docs/Web/API/WindowBase64/atob	/es/docs/Web/API/atob
@@ -1667,7 +1670,7 @@
 /es/docs/Web/CSS/Gradiente	/es/docs/Web/CSS/gradient
 /es/docs/Web/CSS/Herramientas	/es/docs/conflicting/Web/CSS
 /es/docs/Web/CSS/Introducción/Content	/es/docs/Learn/CSS/Howto/Generated_content
-/es/docs/Web/CSS/Introducción/Media	/es/docs/Web/Progressive_web_apps/Responsive/Media_types
+/es/docs/Web/CSS/Introducción/Media	/es/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /es/docs/Web/CSS/Preguntas_frecuentes_sobre_CSS	/es/docs/Learn/CSS/Howto/CSS_FAQ
 /es/docs/Web/CSS/Pseudoelementos	/es/docs/Web/CSS/Pseudo-elements
 /es/docs/Web/CSS/Referencia_CSS	/es/docs/Web/CSS/Reference
@@ -2494,6 +2497,7 @@
 /es/docs/Web/Performance/mejorando_rendimienot_inicial	/es/docs/Web/Performance/Optimizing_startup_performance
 /es/docs/Web/Progressive_web_apps/Developer_guide/Instalar	/es/docs/Web/Progressive_web_apps/Installing
 /es/docs/Web/Progressive_web_apps/Developer_guide/Installing	/es/docs/Web/Progressive_web_apps/Installing
+/es/docs/Web/Progressive_web_apps/Responsive/Media_types	/es/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /es/docs/Web/Reference/Events	/es/docs/Web/Events
 /es/docs/Web/Reference/Events/animationend	/es/docs/Web/API/HTMLElement/animationend_event
 /es/docs/Web/Reference/Events/beforeunload	/es/docs/Web/API/Window/beforeunload_event

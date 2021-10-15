@@ -14,7 +14,7 @@ translation_of: Web/Security/Same-origin_policy
 ---
 <div>{{QuickLinksWithSubpages("/ja/docs/Web/Security")}}</div>
 
-<p><span class="seoSummary"><strong>同一オリジンポリシー</strong>は重要なセキュリティの仕組みであり、ある{{Glossary("origin", "オリジン")}}によって読み込まれた文書やスクリプトが、他のオリジンにあるリソースにアクセスできる方法を制限するものです。制限するものです。</span></p>
+<p><span class="seoSummary"><strong>同一オリジンポリシー</strong>は重要なセキュリティの仕組みであり、ある{{Glossary("origin", "オリジン")}}によって読み込まれた文書やスクリプトが、他のオリジンにあるリソースにアクセスできる方法を制限するものです。</span></p>
 
 <p>これにより、悪意のある可能性のあるドキュメントを隔離し、起こりうる攻撃のベクターを減らすことができます。例えば、インターネット上の悪意のあるウェブサイトがブラウザー内で JS を実行して、 (ユーザーがサインインしている) サードパーティのウェブメールサービスや (公開 IP アドレスを持たないことで攻撃者の直接アクセスから保護されている) 企業のイントラネットからデータを読み取り、そのデータを攻撃者に中継することを防ぎます。</p>
 
@@ -124,7 +124,7 @@ translation_of: Web/Security/Same-origin_policy
  <li>CSS を <code>&lt;link rel="stylesheet" href="..."&gt;</code> で使用する場合。 CSS は<a href="https://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html">緩い構文規則</a>を持っているため、オリジンをまたぐ CSS には適切な <code>Content-Type</code> ヘッダーを付加することが必要です。制約はブラウザーにより異なり、ブラウザーごとの詳細は <a href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622939(v=vs.85)?redirectedfrom=MSDN">Internet Explorer</a>, <a href="https://www.mozilla.org/en-US/security/advisories/mfsa2010-46/">Firefox</a>, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=9877">Chrome</a>, <a href="https://support.apple.com/kb/HT4070">Safari</a> (<a href="https://support.apple.com/kb/HT4070?viewlocale=ja_JP">日本語訳</a>) (CVE-2010-0051 までスクロールしてください), <a href="https://security.opera.com/cross-domain-data-theft-with-css-load-opera-security-advisories/">Opera</a> の各項目を参照してください。</li>
  <li>{{htmlelement("img")}} で表示された画像。</li>
  <li>{{htmlelement("video")}} および {{htmlelement("audio")}} で再生されたメディア。</li>
- <li>{{htmlelement("object")}} または {{htmlelement("embed")}} で埋め込まれた外部リソースを。</li>
+ <li>{{htmlelement("object")}} または {{htmlelement("embed")}} で埋め込まれた外部リソース。</li>
  <li>{{cssxref("@font-face")}} が適用されたフォント。異なるオリジンのフォントを許容するブラウザーもありますが、同一オリジンを要求するものもあります。</li>
  <li>{{htmlelement("iframe")}} に関連するあらゆること。このような形のオリジン間のやりとりを防ぐため、サイトに {{HTTPHeader("X-Frame-Options")}} ヘッダーを使用することができます。</li>
 </ul>

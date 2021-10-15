@@ -195,8 +195,8 @@
 /de/docs/CSS_Referenz/Mozilla_CSS_Erweiterungen	/de/docs/Web/CSS/Mozilla_Extensions
 /de/docs/CSS_in_HTML_einbinden	/de/docs/Web/CSS/@import
 /de/docs/DOM	/de/docs/Web/API/Document_Object_Model
-/de/docs/DOM/File.fileName	/de/docs/Web/API/File/fileName
-/de/docs/DOM/File.fileSize	/de/docs/Web/API/File/fileSize
+/de/docs/DOM/File.fileName	/de/docs/conflicting/Web/API/File/name
+/de/docs/DOM/File.fileSize	/de/docs/Web/API/Blob/size
 /de/docs/DOM/File.name	/de/docs/Web/API/File/name
 /de/docs/DOM/Node	/de/docs/Web/API/Node
 /de/docs/DOM/Node.childNodes	/de/docs/Web/API/Node/childNodes
@@ -421,6 +421,8 @@
 /de/docs/Web/API/Element.querySelector	/de/docs/Web/API/Element/querySelector
 /de/docs/Web/API/File/Typ	/de/docs/Web/API/File/type
 /de/docs/Web/API/File/Zugriff_auf_Dateien_von_Webapplikationen	/de/docs/Web/API/File/Using_files_from_web_applications
+/de/docs/Web/API/File/fileName	/de/docs/conflicting/Web/API/File/name
+/de/docs/Web/API/File/fileSize	/de/docs/Web/API/Blob/size
 /de/docs/Web/API/FullscreenOptions	/de/docs/orphaned/Web/API/FullscreenOptions
 /de/docs/Web/API/IndexedDB_API/IndexedDB_verwenden	/de/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /de/docs/Web/API/Navigator/registerProtocolHandler/Webbasierte_protokoll-handler	/de/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
@@ -447,6 +449,7 @@
 /de/docs/Web/API/WebGL_API/Tutorial/Objekte_mit_WebGL_animieren	/de/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /de/docs/Web/API/WebGL_API/Tutorial/Texturen_in_WebGL_verwenden	/de/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /de/docs/Web/API/Window.alert	/de/docs/Web/API/Window/alert
+/de/docs/Web/API/Window/performance	/de/docs/Web/API/performance_property
 /de/docs/Web/API/Window/setTimeout	/de/docs/Web/API/setTimeout
 /de/docs/Web/API/WindowBase64	/de/docs/Web/API/WindowOrWorkerGlobalScope
 /de/docs/Web/API/WindowBase64/btoa	/de/docs/Web/API/btoa

@@ -148,7 +148,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
  <dt><code>AbortError</code></dt>
  <dd>デバイスへのアクセスはユーザとOSから許可され、かつ<code>NotReadableError</code>が生じるような問題も起きなかったが、デバイスを利用できない何らかの問題が発生した。</dd>
  <dt><code>NotAllowedError</code></dt>
- <dd>One or more of the requested source devices cannot be used at this time. This will happen if the browsing context is insecure (that is, the page was loaded using HTTP rather than HTTPS). It also happens if the user has specified that the current browsing instance is not permitted access to the device, the user has denied access for the current session, or the user has denied all access to user media devices globally. On browsers that support managing media permissions with <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a>, this error is returned if Feature Policy is not configured to allow access to the input source(s).
+ <dd>One or more of the requested source devices cannot be used at this time. This will happen if the browsing context is insecure (that is, the page was loaded using HTTP rather than HTTPS). It also happens if the user has specified that the current browsing instance is not permitted access to the device, the user has denied access for the current session, or the user has denied all access to user media devices globally. On browsers that support managing media permissions with <a href="/ja/docs/Web/HTTP/Feature_Policy">Feature Policy</a>, this error is returned if Feature Policy is not configured to allow access to the input source(s).
  <div class="note">Older versions of the specification used <code>SecurityError</code> for this instead; <code>SecurityError</code> has taken on a new meaning.</div>
  </dd>
  <dt><code>NotFoundError</code></dt>
@@ -169,9 +169,9 @@ translation_of: Web/API/MediaDevices/getUserMedia
 
 <p>As an API that may involve significant privacy concerns, <code>getUserMedia()</code>'s specification lays out a wide array of privacy and security requirements that browsers are obligated to meet.</p>
 
-<p><code>getUserMedia()</code> is a powerful feature which can only be used in <a href="/en-US/docs/Web/Security/Secure_Contexts">secure contexts</a>; in insecure contexts, <code>navigator.mediaDevices</code> is <code>undefined</code>, preventing access to <code>getUserMedia()</code>. A secure context is, in short, a page loaded using HTTPS or the <code>file:///</code> URL scheme, or a page loaded from <code>localhost</code>.</p>
+<p><code>getUserMedia()</code> is a powerful feature which can only be used in <a href="/ja/docs/Web/Security/Secure_Contexts">secure contexts</a>; in insecure contexts, <code>navigator.mediaDevices</code> is <code>undefined</code>, preventing access to <code>getUserMedia()</code>. A secure context is, in short, a page loaded using HTTPS or the <code>file:///</code> URL scheme, or a page loaded from <code>localhost</code>.</p>
 
-<p>In addition, user permission is always required to access the user's audio and video inputs. Only a window's top-level document context for a valid origin can even request permission to use <code>getUserMedia()</code>, unless the top-level context expressly grants permission for a given {{HTMLElement("iframe")}} to do so using <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a>. Otherwise, the user will never even be asked for permission to use the input devices.</p>
+<p>In addition, user permission is always required to access the user's audio and video inputs. Only a window's top-level document context for a valid origin can even request permission to use <code>getUserMedia()</code>, unless the top-level context expressly grants permission for a given {{HTMLElement("iframe")}} to do so using <a href="/ja/docs/Web/HTTP/Feature_Policy">Feature Policy</a>. Otherwise, the user will never even be asked for permission to use the input devices.</p>
 
 <p>For additional details on these requirements and rules, how they are reflected in the context in which your code is running, and about how browsers manage user privacy and security issues, read on.</p>
 
@@ -193,7 +193,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
 
 <h4 id="Feature_Policy">Feature Policy</h4>
 
-<p>The <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a> security management feature of {{Glossary("HTTP")}} is in the process of being introduced into browsers, with support available to some extent in many browsers (though not always enabled by default, as in Firefox). <code>getUserMedia()</code> is one method which will require the use of Feature Policy, and your code needs to be prepared to deal with this. For example, you may need to use the {{htmlattrxref("allow", "iframe")}} attribute on any {{HTMLElement("iframe")}} that uses <code>getUserMedia()</code>, and pages that use <code>getUserMedia()</code> will eventually need to supply the {{HTTPHeader("Feature-Policy")}} header.</p>
+<p>The <a href="/ja/docs/Web/HTTP/Feature_Policy">Feature Policy</a> security management feature of {{Glossary("HTTP")}} is in the process of being introduced into browsers, with support available to some extent in many browsers (though not always enabled by default, as in Firefox). <code>getUserMedia()</code> is one method which will require the use of Feature Policy, and your code needs to be prepared to deal with this. For example, you may need to use the {{htmlattrxref("allow", "iframe")}} attribute on any {{HTMLElement("iframe")}} that uses <code>getUserMedia()</code>, and pages that use <code>getUserMedia()</code> will eventually need to supply the {{HTTPHeader("Feature-Policy")}} header.</p>
 
 <p>The two permissions that apply to <code>getUserMedia()</code> are <code>camera</code> and <code>microphone</code>.</p>
 
@@ -210,11 +210,11 @@ translation_of: Web/API/MediaDevices/getUserMedia
 <pre class="brush: html notranslate">&lt;iframe src="https://mycode.example.net/etc" allow="camera;microphone"&gt;
 &lt;/iframe&gt;</pre>
 
-<p>Read our guide, <a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a>, to learn more about how it works.</p>
+<p>Read our guide, <a href="/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a>, to learn more about how it works.</p>
 
 <h4 id="Encryption_based_security">Encryption based security</h4>
 
-<p>The <code>getUserMedia()</code> method is only available in <a href="/en-US/docs/Web/Security/Secure_Contexts">secure contexts</a>. A secure context is one the browser is reasonably confident contains a document which was loaded securely, using HTTPS/TLS, and has limited exposure to insecure contexts. If a document isn't loaded in a secure context, the {{domxref("navigator.mediaDevices")}} property is <code>undefined</code>, making access to <code>getUserMedia()</code> impossible.</p>
+<p>The <code>getUserMedia()</code> method is only available in <a href="/ja/docs/Web/Security/Secure_Contexts">secure contexts</a>. A secure context is one the browser is reasonably confident contains a document which was loaded securely, using HTTPS/TLS, and has limited exposure to insecure contexts. If a document isn't loaded in a secure context, the {{domxref("navigator.mediaDevices")}} property is <code>undefined</code>, making access to <code>getUserMedia()</code> impossible.</p>
 
 <p>Attempting to access <code>getUserMedia()</code> in this situation will result in a <code>TypeError</code>.</p>
 

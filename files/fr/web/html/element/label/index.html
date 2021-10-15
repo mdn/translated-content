@@ -15,8 +15,6 @@ translation_of: Web/HTML/Element/label
 
 <div>{{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}</div>
 
-<div class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</div>
-
 <p>Rattacher un libellé à un élément de saisie ({{HTMLElement("input")}}) offre différents avantages :</p>
 
 <ul>
@@ -39,15 +37,16 @@ translation_of: Web/HTML/Element/label
 
 <dl>
  <dt>{{htmlattrdef("for")}}</dt>
- <dd>L'identifiant (la valeur de l'attribut {{htmlattrxref("id")}}) de l'élément de formulaire associé, appartenant au même document que l'élément label. Le premier élément du document dont l'identifiant correspond est alors le contrôle étiqueté par l'élément.
- <div class="note"><strong>Note :</strong> Un élément label peut simultanément avoir un attribut <code>for</code> et contenir un élément de contrôle tant que l'attribut <code>for</code> pointe vers l'élément contenu.</div>
+ <dd><p>L'identifiant (la valeur de l'attribut {{htmlattrxref("id")}}) de l'élément de formulaire associé, appartenant au même document que l'élément label. Le premier élément du document dont l'identifiant correspond est alors le contrôle étiqueté par l'élément.</p>
+   <div class="note">
+     <p><strong>Note :</strong> Un élément label peut simultanément avoir un attribut <code>for</code> et contenir un élément de contrôle tant que l'attribut <code>for</code> pointe vers l'élément contenu.</p>
+   </div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("form")}}</dt>
- <dd>L'élément de formulaire auquel l'élément label est associé (son formulaire propriétaire). La valeur de cet attribut doit être l'identifiant d'un élément {{HTMLElement("form")}} contenu au sein du même document. Si l'attribut n'est pas renseigné, cet élément &lt;label&gt; doit être le descendant d'un élément {{HTMLElement("form")}}. Cet attribut permet de placer des éléments label dans le document sans qu'ils soient nécessairement imbriqués dans un formulaire.
- <div class="note"><strong>Note : </strong>La spécification HTML a été mise à jour le 28 avril 2016 afin de déprécier l'attribut {{htmlattrxref("form")}}. Celui-ci est toujours disponible dans les scripts mais sa définition a changé, il renvoie désormais le contrôle associé au formulaire ou <code>null</code> s'il n'y a pas de contrôle associé (autrement dit si {{domxref("HTMLLabelElement.control")}} vaut <code>null</code>).</div>
+ <dd><p>L'élément de formulaire auquel l'élément label est associé (son formulaire propriétaire). La valeur de cet attribut doit être l'identifiant d'un élément {{HTMLElement("form")}} contenu au sein du même document. Si l'attribut n'est pas renseigné, cet élément &lt;label&gt; doit être le descendant d'un élément {{HTMLElement("form")}}. Cet attribut permet de placer des éléments label dans le document sans qu'ils soient nécessairement imbriqués dans un formulaire.</p>
+ <div class="note">
+   <p><strong>Note :</strong> La spécification HTML a été mise à jour le 28 avril 2016 afin de déprécier l'attribut {{htmlattrxref("form")}}. Celui-ci est toujours disponible dans les scripts mais sa définition a changé, il renvoie désormais le contrôle associé au formulaire ou <code>null</code> s'il n'y a pas de contrôle associé (autrement dit si {{domxref("HTMLLabelElement.control")}} vaut <code>null</code>).</p>
+ </div>
  </dd>
 </dl>
 

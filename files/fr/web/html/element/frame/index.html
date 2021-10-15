@@ -12,9 +12,8 @@ browser-compat: html.elements.frame
 ---
 <div>{{HTMLRef}}</div>
 
-<div class="notecard deprecated">
-  <p><b>Obsolète</b></p>
-  <p>Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications web l'utilisant peuvent cesser de fonctionner à tout moment.</p>
+<div class="warning">
+  <p><strong>Attention :</strong> Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications web l'utilisant peuvent cesser de fonctionner à tout moment.</p>
 </div>
 
 <p>L'élément HTML <strong><code>&lt;frame&gt;</code></strong> définit une zone particulière dans laquelle un autre document HTML est affiché. Une <code>&lt;frame&gt;</code> (un « cadre ») doit être utilisée dans un élément <a href="/fr/docs/Web/HTML/Element/frameset"><code>&lt;frameset&gt;</code></a>.</p>
@@ -26,19 +25,19 @@ browser-compat: html.elements.frame
 <p>Comme tous les autres éléments HTML, cet élément prend en charge les <a href="/fr/docs/Web/HTML/Global_attributes">attributs universels</a>.</p>
 
 <dl>
-  <dt><code id="attr-src">src</code></dt>
+  <dt><code>src</code></dt>
   <dd>Cet attribut indique le document qui doit être affiché dans la frame.</dd>
-  <dt><code id="attr-name">name</code></dt>
+  <dt><code>name</code></dt>
   <dd>Cet attribut sert à nommer les frames. Sans nommage, tous les liens seront ouverts dans la frame où ils se trouvent. Voir <a href="/fr/docs/Web/HTML/Element/a#attr-target"><code>target</code></a> pour plus d'informations.</dd>
-  <dt><code id="attr-noresize">noresize</code></dt>
+  <dt><code>noresize</code></dt>
   <dd>Cet attribut empêche aux utilisateurs de redimensionner les frames.</dd>
-  <dt><code id="attr-scrolling">scrolling</code></dt>
+  <dt><code>scrolling</code></dt>
   <dd>Cet attribut définit l'existence des barres de défilement. Si cet attribut n'est pas utilisé, le navigateur mettre une barre de défilement si nécessaire. Il y a deux options : <code>yes</code> pour afficher les barres de défilement même quand ce n'est pas nécessaire, et <code>no</code> pour ne pas afficher les barres de défilement même quand c'est nécessaire.</dd>
-  <dt><code id="attr-marginheight">marginheight</code></dt>
+  <dt><code>marginheight</code></dt>
   <dd>Cet attribut définit la hauteur des marges entre les frames.</dd>
-  <dt><code id="attr-marginwidth">marginwidth</code></dt>
+  <dt><code>marginwidth</code></dt>
   <dd>Cet attribut définit la largeur des marges entre les frames.</dd>
-  <dt><code id="attr-frameborder">frameborder</code></dt>
+  <dt><code>frameborder</code></dt>
   <dd>Cet attribut permet de mettre des bordures à la frame.</dd>
 </dl>
 

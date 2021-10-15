@@ -212,76 +212,6 @@ var slice = Function.prototype.apply.bind(unboundSlice);
 
 slice(arguments);</pre>
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>有两种实现<code>bind</code>的方法，下面第一种不支持使用<code>new</code>调用新创建的构造函数，而第二种支持。</p>
-
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="comment token">// Does not work with `new (funcA.bind(thisArg, args))`</span>
-<span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span><span class="class-name token">Function</span><span class="punctuation token">.</span>prototype<span class="punctuation token">.</span>bind<span class="punctuation token">)</span> <span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">{</span>
-  <span class="keyword token">var</span> slice <span class="operator token">=</span> <span class="class-name token">Array</span><span class="punctuation token">.</span>prototype<span class="punctuation token">.</span>slice<span class="punctuation token">;</span>
-  <span class="class-name token">Function</span><span class="punctuation token">.</span>prototype<span class="punctuation token">.</span><span class="function function-variable token">bind</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">var</span> thatFunc <span class="operator token">=</span> <span class="keyword token">this</span><span class="punctuation token">,</span> thatArg <span class="operator token">=</span> arguments<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-    <span class="keyword token">var</span> args <span class="operator token">=</span> <span class="function token">slice</span><span class="punctuation token">.</span><span class="function token">call</span><span class="punctuation token">(</span>arguments<span class="punctuation token">,</span> <span class="number token">1</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="keyword token">typeof</span> thatFunc <span class="operator token">!==</span> <span class="string token">'function'</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="comment token">// closest thing possible to the ECMAScript 5</span>
-      <span class="comment token">// internal IsCallable function</span>
-      <span class="keyword token">throw</span> <span class="keyword token">new</span> <span class="class-name token">TypeError</span><span class="punctuation token">(</span><span class="string token">'Function.prototype.bind - '</span> <span class="operator token">+</span>
-             <span class="string token">'what is trying to be bound is not callable'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    <span class="keyword token">return</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">{</span>
-      <span class="keyword token">var</span> funcArgs <span class="operator token">=</span> args<span class="punctuation token">.</span><span class="function token">concat</span><span class="punctuation token">(</span><span class="function token">slice</span><span class="punctuation token">.</span><span class="function token">call</span><span class="punctuation token">(</span>arguments<span class="punctuation token">)</span><span class="punctuation token">)</span>
-      <span class="keyword token">return</span> <span class="function token">thatFunc</span><span class="punctuation token">.</span><span class="function token">apply</span><span class="punctuation token">(</span>thatArg<span class="punctuation token">,</span> funcArgs<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
-
-<p>你可以将这段代码插入到你的脚本开头，从而使你的 <code>bind()</code> 在没有内置实现支持的环境中也可以部分地使用<code>bind</code>。</p>
-
-<pre class="brush: js notranslate">//  Yes, it does work with `new (funcA.bind(thisArg, args))`
-if (!Function.prototype.bind) (function(){
-  var ArrayPrototypeSlice = Array.prototype.slice;
-  Function.prototype.bind = function(otherThis) {
-    if (typeof this !== 'function') {
-      // closest thing possible to the ECMAScript 5
-      // internal IsCallable function
-      throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
-    }
-
-    var baseArgs= ArrayPrototypeSlice.call(arguments, 1),
-        baseArgsLength = baseArgs.length,
-        fToBind = this,
-        fNOP    = function() {},
-        fBound  = function() {
-          baseArgs.length = baseArgsLength; // reset to default base arguments
-          baseArgs.push.apply(baseArgs, arguments);
-          return fToBind.apply(
-                 fNOP.prototype.isPrototypeOf(this) ? this : otherThis, baseArgs
-          );
-        };
-
-    if (this.prototype) {
-      // Function.prototype doesn't have a prototype property
-      fNOP.prototype = this.prototype;
-    }
-    fBound.prototype = new fNOP();
-
-    return fBound;
-  };
-})();</pre>
-
-<p>上述算法和实际的实现算法还有许多其他的不同 （尽管可能还有其他不同之处，但已经没有必要再多列举）：</p>
-
-<ul>
- <li>这部分实现依赖于 {{jsxref("Array.prototype.slice()")}}， {{jsxref("Array.prototype.concat()")}}， {{jsxref("Function.prototype.apply()")}} 这些原生方法。</li>
- <li>这部分实现创建的函数并没有 {{jsxref("Function.caller", "caller")}} 以及会在 get，set 或者 deletion 上抛出 {{jsxref("Global_Objects/TypeError", "TypeError")}}错误的 arguments 属性这两个不可改变的“毒药” 。（假如环境支持{{jsxref("Object.defineProperty()")}}， 或者实现支持{{jsxref("Object.defineGetter", "__defineGetter__")}} 和 {{jsxref("Object.defineSetter", "__defineSetter__")}} 扩展）</li>
- <li>这部分实现创建的函数有 <code>prototype</code> 属性。（正确的绑定函数没有）</li>
- <li>这部分实现创建的绑定函数所有的 length 属性并不是同ECMA-262标准一致的：它创建的函数的 length 是0，而在实际的实现中根据目标函数的 length 和预先指定的参数个数可能会返回非零的 length。</li>
-</ul>
-
-<p>如果你选择使用这部分实现，<strong>你不能依赖于那些与 ECMA-262, 5th edition 规定的行为偏离的例子。</strong>在 <code>bind()</code> 函数被广泛支持之前，某些情况下（或者为了兼容某些特定需求对其做一些特定修改后）可以选择用这个实现作为过渡。</p>
-
-<p>请访问 <a href="https://github.com/Raynos/function-bind">https://github.com/Raynos/function-bind</a> 以查找更完整的解决方案！</p>
-
 <h2 id="规范" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">规范</h2>
 
 <table class="standard-table">
@@ -318,6 +248,7 @@ if (!Function.prototype.bind) (function(){
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
+ <li><code>Function.prototype.bind</code> 的 polyfill 可以参考 <a href="https://github.com/zloirock/core-js#ecmascript-function">core-js</a></li>
  <li>{{jsxref("Function.prototype.apply()")}}</li>
  <li>{{jsxref("Function.prototype.call()")}}</li>
  <li>{{jsxref("Functions", "函数")}}</li>

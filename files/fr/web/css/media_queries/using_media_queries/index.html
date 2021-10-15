@@ -1,377 +1,397 @@
 ---
-title: Media queries
+title: Médias
 slug: Web/CSS/Media_Queries/Using_media_queries
-translation_of: Web/CSS/Media_Queries/Using_media_queries
-original_slug: Web/CSS/Requêtes_média/Utiliser_les_Media_queries
+tags:
+  - CSS
+  - CSS:Premiers_pas
+translation_of: Web/Progressive_web_apps/Responsive/Media_types
+original_slug: Web/Progressive_web_apps/Responsive/Media_types
 ---
-<div>{{CSSRef}}</div>
-
-<p><strong>Les requêtes média (<em>media queries</em>)</strong> permettent de modifier l'apparence d'un site ou d'une application en fonction du type d'appareil (impression ou écran par exemple) et de ses caractéristiques (la résolution d'écran ou la largeur de la zone d'affichage (<em>viewport</em>) par exemple).</p>
-
-<p>Les requêtes média sont utilisées afin :</p>
-
-<ul>
- <li>D'appliquer certains styles de façon conditionnelle avec le <a href="/fr/docs/Web/CSS">CSS</a> grâce <a href="/fr/docs/Web/CSS/At-rule">aux règles @</a> <a href="/fr/docs/Web/CSS/@media"><code>@media</code></a> et <a href="/fr/docs/Web/CSS/@import"><code>@import</code></a>.</li>
- <li>De cibler certains médias pour les éléments <a href="/fr/docs/Web/HTML/Element/style"><code>&lt;style&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/Source"><code>&lt;source&gt;</code></a> et d'autres éléments <a href="/fr/docs/Web/HTML">HTML</a> grâce à l'attribut <code>media=</code>.</li>
- <li>De <a href="/fr/docs/Web/CSS/Media_Queries/Testing_media_queries">tester et surveiller l'état d'un média</a> grâce aux méthodes <a href="/fr/docs/Web/API/Window/matchMedia"><code>Window.matchMedia()</code></a> et <a href="/fr/docs/Web/API/MediaQueryList/addListener"><code>MediaQueryList.addListener()</code></a>.</li>
-</ul>
-
-<div class="note">
-<p><strong>Note :</strong> Les exemples de cet article utilisent <code>@media</code> à des fins d'illustration. Toutefois, la syntaxe est la même pour les différents types de requêtes média.</p>
-</div>
-
-<h2 id="syntax">Syntaxe</h2>
-
-<p>Une requête média se compose d'un <em>type de média</em> optionnel et d'une ou plusieurs expressions de <em>caractéristiques de média</em>. Plusieurs requêtes peuvent être combinées entre elles grâce à des opérateurs logiques. Les requêtes média ne sont pas sensibles à la casse.</p>
-
-<p>Une requête média vaut <code>true</code> si le type de média correspond à l'appareil utilisé pour l'affichage du document et si toutes les expressions relatives aux caractéristiques sont vraies. Les requêtes qui utilisent des types de média inconnus valent toujours <code>false</code>.</p>
-
-<div class="note">
-<p><strong>Note :</strong> Lorsqu'une feuille de style est attachée à un élément <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> comportant une requếte média, cette feuille de style <a href="http://scottjehl.github.com/CSS-Download-Tests/">sera toujours téléchargée</a>, même si la requête renvoie <code>false</code>. Toutefois, le contenu de cette feuille n'est pas appliquée tant que le résultat de la requête ne devient pas <code>true</code>.</p>
-</div>
-
-<h3 id="media_types">Types de média</h3>
-
-<p>Un type de média définit une catégorie générale d'appareil. Le type de média est optionnel dans une requête média, sauf si celle-ci utilise les opérateurs logiques <code>not</code> ou <code>only</code>. Par défaut, le type de média utilisé est <code>all</code>.</p>
-
-<dl>
- <dt><code id="all">all</code></dt>
- <dd>Correspond pour tous les appareils.</dd>
- <dt><code id="print">print</code></dt>
- <dd>Correspond aux matériaux paginés et aux documents consultés en aperçu avant impression. Pour plus d'informations, voir l'article sur <a href="/fr/docs/Web/CSS/Paged_Media">les médias paginés</a>.</dd>
- <dt><code id="screen">screen</code></dt>
- <dd>Correspond aux appareils dotés d'un écran.</dd>
- <dt><code id="speech">speech</code></dt>
- <dd>Correspond aux outils de synthèse vocale.</dd>
-</dl>
-
-<div class="note"><strong>Note : Les types de média dépréciés</strong> CSS2.1 et <a href="https://drafts.csswg.org/mediaqueries-3/#background">Media Queries 3</a> ont défini plusieurs types additionnels (<code>tty</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code>, and <code>aural</code>) qui ont ensuite été dépréciés avec <a href="https://dev.w3.org/csswg/mediaqueries/#media-types">Media Queries 4</a>. Ces types ne doivent donc plus être utilisés. Le type <code>aural</code> a été remplacé par le type <code>speech</code>.</div>
-
-<h3 id="media_features">Caractéristiques média (<i lang="en">media features</i>)</h3>
-
-<p>Les caractéristiques média décrivent certaines caractéristiques spécifiques de l'agent utilisateur, de l'appareil d'affichage ou de l'environnement. Les expressions de caractéristique média testent leur présence ou leur valeur. Chaque expression de caractéristique doit être entourée de parenthèses.</p>
-
-<table>
- <thead>
-  <tr>
-   <th>Nom</th>
-   <th>Résumé</th>
-   <th>Notes</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{cssxref("@media/width","width")}}</td>
-   <td>La largeur de la zone d'affichage (<em>viewport</em>)</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/height","height")}}</td>
-   <td>La hauteur de la zone d'affichage</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/aspect-ratio","aspect-ratio")}}</td>
-   <td>Le rapport largeur/hauteur de la zone d'affichage</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/orientation","orientation")}}</td>
-   <td>L'orientation la zone d'affichage</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/resolution","resolution")}}</td>
-   <td>La densité de pixel pour l'appareil d'affichage</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/scan","scan")}}</td>
-   <td>Le processus de scan de l'appareil d'affichage</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/grid","grid")}}</td>
-   <td>Le type d'écran de l'appareil : matriciel ou grille ?</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/update-frequency","update")}}</td>
-   <td>La fréquence de modification du contenu par l'appareil d'affichage</td>
-   <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/overflow-block","overflow-block")}}</td>
-   <td>La façon dont l'appareil d'affichage gère le contenu qui dépasse de la zone d'affichage selon l'axe de bloc</td>
-   <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/overflow-inline","overflow-inline")}}</td>
-   <td>La possibilité de faire défiler (<em>scroll</em>) le contenu qui dépasse de la zone d'affichage sur l'axe en ligne</td>
-   <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/color","color")}}</td>
-   <td>Le nombre de bits pour chaque composante de couleur pour l'appareil d'affichage (ou 0 si l'appareil ne gère pas les couleurs)</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/color-gamut","color-gamut")}}</td>
-   <td>Un intervalle approximatif des couleurs prises en charge par l'agent utilisateur et l'appareil d'affichage</td>
-   <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/color-index","color-index")}}</td>
-   <td>Le nombre d'éléments dans le tableau des couleurs de l'appareil d'affichage (ou 0 si l'appareil ne dispose pas d'un tel tableau)</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/display-mode","display-mode")}}</td>
-   <td>Le mode d'affichage de l'application, tel qu'indiqué par la propriété <a href="/fr/docs/Web/Manifest#display"><code>display</code></a> du manifeste</td>
-   <td>Définie dans <a href="https://w3c.github.io/manifest/#the-display-mode-media-feature">la spécification pour les manifestes des applications web</a>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/monochrome","monochrome")}}</td>
-   <td>Le nombre de bits par pixel pour le <em>frame buffer</em> monochrome de l'appareil d'affichage ou 0 si l'appareil n'est pas monochrome</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/inverted-colors","inverted-colors")}}</td>
-   <td>L'inversion (ou non) des couleurs par l'agent utilisateur ou le système d'exploitation</td>
-   <td>Reportée au niveau 5 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/pointer","pointer")}}</td>
-   <td>La présence d'un appareil de pointage comme mécanisme de saisie principal et sa précision</td>
-   <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/hover","hover")}}</td>
-   <td>La capacité du mécanisme de saisie principal à survoler les éléments</td>
-   <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/any-pointer","any-pointer")}}</td>
-   <td>La présence d'un appareil de pointage parmi les mécanismes de saisie et sa précision</td>
-   <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/any-hover","any-hover")}}</td>
-   <td>La capacité d'un des mécanismes de saisie à survoler les éléments</td>
-   <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/light-level","light-level")}}</td>
-   <td>Le niveau de luminosité de l'environnement</td>
-   <td>Ajoutée avec le niveau 5 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}</td>
-   <td>L'utilisateur préfère que la quantité de mouvement sur la page soit réduite.</td>
-   <td>Ajoutée avec le niveau 5 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}}</td>
-   <td>L'utilisateur préfère que la transparence utilisée sur la page soit réduite.</td>
-   <td>Ajoutée avec le niveau 5 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/prefers-contrast", "prefers-contrast")}}</td>
-   <td>L'utilisateur préfère que le contraste soit augmenté ou réduit entre des couleurs proches.</td>
-   <td>Ajoutée avec le niveau 5 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}</td>
-   <td>L'utilisateur préfère utiliser un thème clair ou un thème sombre.</td>
-   <td>Ajoutée avec le niveau 5 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/forced-colors", "forced-colors")}}</td>
-   <td>Détecte si l'agent utilisateur restreint la palette de couleurs.</td>
-   <td>Ajoutée avec le niveau 5 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/scripting","scripting")}}</td>
-   <td>La disponibilité des fonctions de script (JavaScript par exemple)</td>
-   <td>Reportée au niveau 5 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/device-width","device-width")}} {{obsolete_inline}}</td>
-   <td>La largeur de la surface de rendu pour l'appareil d'affichage</td>
-   <td>Dépréciée par le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/device-height","device-height")}} {{obsolete_inline}}</td>
-   <td>La hauteur de la surface de rendu pour l'appareil d'affichage</td>
-   <td>Dépréciée par le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/device-aspect-ratio","device-aspect-ratio")}} {{obsolete_inline}}</td>
-   <td>Le rapport largeur/hauteur de la surface de rendu pour l'appareil d'affichage</td>
-   <td>Dépréciée par le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
- </tbody>
+<p> </p>
+<p>La plupart des pages de ce tutoriel sont centrées sur les propriétés CSS et les valeurs que vous pouvez utiliser pour spécifier la façon dont sera affiché un document.</p>
+<p>Cette page revient sur le but et la structure des feuilles de style CSS.</p>
+<h3 id="Information_:_les_m.C3.A9dias" name="Information_:_les_m.C3.A9dias">Information : les médias</h3>
+<p>Le but de CSS est de spécifier la manière dont les documents sont présentés à l'utilisateur. La présentation peut prendre plusieurs formes.</p>
+<p>Par exemple, vous êtes probablement en train de lire cette page sur un dispositif d'affichage comme un écran d'ordinateur. Mais vous pouvez aussi avoir envie de le projeter sur un grand écran pour un public plus important, ou encore l'imprimer sur papier. Ces différents médias peuvent avoir des caractéristiques différentes. CSS permet donc de présenter un document différemment sur un média différent.</p>
+<p>Pour spécifier des règles spécifiques à un type de média, utilisez <code>@media</code> suivi du type de média, suivi de crochets courbes entourant les règles.</p>
+<table style="border: 1px solid #36b; padding: 1em; background-color: #fffff4; width: 100%;">
+  <caption>
+    Exemple</caption>
+  <tbody>
+    <tr>
+      <td>Un document sur un site Web dispose d'une zone de navigation permettant à l'utilisateur de se déplacer dans le site.
+        <p>Dans le langage de balisage, l'élément parent de la zone de navigation a l'attribut id <code>nav-area</code>.</p>
+        <p>Lorsque le document est imprimé, la zone de navigation n'a aucun intérêt, elle est donc retirée complètement par la feuille de style :</p>
+        <div style="width: 30em;">
+          <pre class="eval">
+@media print {
+  #nav-area {display: none;}
+  }
+</pre>
+        </div>
+      </td>
+    </tr>
+  </tbody>
 </table>
+<p>Voici certains des types de média courants :</p>
+<table style="margin-left: 2em;">
+  <tbody>
+    <tr>
+      <td><code>screen</code></td>
+      <td>Écran d'ordinateur en couleurs</td>
+    </tr>
+    <tr>
+      <td><code>print</code></td>
+      <td>Média paginé</td>
+    </tr>
+    <tr>
+      <td style="padding-right: 1em;"><code>projection</code></td>
+      <td>Projection sur un écran</td>
+    </tr>
+    <tr>
+      <td><code>all</code></td>
+      <td>Tous les médias (la valeur par défaut)</td>
+    </tr>
+  </tbody>
+</table>
+<p> </p>
+<table style="border: 1px solid #36b; padding: 1em; background-color: #f4f4f4; width: 100%;">
+  <caption>
+    Plus de détails</caption>
+  <tbody>
+    <tr>
+      <td>Il existe d'autres manières de spécifier le type de média d'une série de règles.
+        <p>Le langage de balisage du document peut permettre de spécifier le type de média au moment où la feuille de style est liée au document. Par exemple, en HTML, vous pouvez optionnellement spécifier le type de média à l'aide de l'attribut <code>media</code> de la balise <code>LINK</code>.</p>
+        <p>En CSS, vous pouvez utiliser <code>@import</code> au début d'une feuille de style pour en importer une autre depuis une URL, éventuellement en spécifiant le type de média.</p>
+        <p>En utilisant ces techniques, vous pouvez séparer les règles de style pour différents médias dans différents fichiers. Cela peut s'avérer une manière utile de structurer vos feuilles de style.</p>
+        <p>Pour tous les détails sur les types de média, consultez <a class="external" href="http://www.w3.org/TR/CSS21/media.html">Media</a> dans la spécification CSS.</p>
+        <p>Plus d'exemples utilisant la propriété <code>display</code> sont présentés sur une prochaine page de ce tutoriel : <a href="/fr/CSS/Premiers_pas/Données_XML" title="fr/CSS/Premiers_pas/Données_XML">Données XML</a>.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p> </p>
+<h4 id="Impression" name="Impression">Impression</h4>
+<p>CSS possède certaines instructions spécifiques pour l'impression et les médias paginés en général.</p>
+<p>Une règle <code>@page</code> permet de spécifier les marges de la page. Pour l'impression recto-verso, vous pouvez spécifier des marges différentes pour les pages de gauche, <code>@page:left</code>, et les pages de droite, <code>@page:right</code>.</p>
+<p>Pour les médias imprimés, il vaut mieux utiliser des unités de longueur appropriées, comme les centimètres (<code>cm</code>) et millimètres (<code>mm</code>), les pouces (<code>in</code>) ou les points (1 <code>pt</code> = 1/72 pouces). Il est également toujours approprié d'utiliser <code>em</code> pour s'accorder à la taille de police, et les pourcentages (<code>%</code>).</p>
+<p>Vous pouvez contrôler la façon dont le contenu du document se comporte aux abords des limites de pages à l'aide des propriétés <code>page-break-before</code> (saut de page avant), <code>page-break-after</code> (saut de page après) et <code>page-break-inside</code> (saut de page à l'intérieur).</p>
+<table style="border: 1px solid #36b; padding: 1em; background-color: #fffff4; width: 100%;">
+  <caption>
+    Exemples</caption>
+  <tbody>
+    <tr>
+      <td>Cette règle définit les marges de la page à deux centimètres de chaque côté :
+        <div style="width: 30em;">
+          <pre class="eval">
+@page {margin: 2cm;}
+</pre>
+        </div>
+        <p>Cette règle s'assure que chaque élément <small>H1</small> commencera une nouvelle page :</p>
+        <div style="width: 30em;">
+          <pre class="eval">
+h1 {page-break-before: always;}
+</pre>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p> </p>
+<table style="border: 1px solid #36b; padding: 1em; background-color: #f4f4f4; width: 100%;">
+  <caption>
+    Plus de détails</caption>
+  <tbody>
+    <tr>
+      <td>Pour tous les détails sur la gestion des médias paginés par CSS, consultez <a class="external" href="http://www.w3.org/TR/CSS21/page.html">Paged media</a> dans la spécification CSS.
+        <p>Comme les autres fonctionnalités de CSS, l'impression dépend de votre navigateur et de ses réglages. Par exemple, votre navigateur Mozilla fournit des marges, en-têtes et pieds de page par défaut pour l'impression. Lorsque d'autres utilisateurs imprimeront votre document, vous ne pouvez probablement pas prédire le navigateur et les paramètres qu'ils utiliseront, c'est pourquoi vous ne pouvez probablement pas contrôler complètement le résultat.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p> </p>
+<h4 id="Interfaces_utilisateur" name="Interfaces_utilisateur">Interfaces utilisateur</h4>
+<p>CSS possède certaines propriétés spéciales pour les périphériques disposant d'une interface utilisateur comme les écrans d'ordinateur. Celles-ci font que l'apparence du document change dynamiquement et interagit avec les actions de l'utilisateur sur l'interface.</p>
+<p>Il n'y a pas de type de média spécial pour ce type de périphériques.</p>
+<p>Voici les cinq sélecteurs spéciaux :</p>
+<table style="margin-left: 2em;">
+  <tbody>
+    <tr>
+      <td style="width: 10em;"><strong>Selecteur</strong></td>
+      <td><strong>Sélectionne</strong></td>
+    </tr>
+    <tr>
+      <td><code>E:hover</code></td>
+      <td>Tout élément E survolé par le pointeur</td>
+    </tr>
+    <tr>
+      <td><code>E:focus</code></td>
+      <td>Tout élément E ayant le focus du clavier</td>
+    </tr>
+    <tr>
+      <td><code>E:active</code></td>
+      <td>Tout élément E impliqué dans l'action courante de l'utilisateur</td>
+    </tr>
+    <tr>
+      <td><code>E:link</code></td>
+      <td>Tout élément E qui est un lien hypertexte vers une URL que l'utilisateur <em>n'a pas</em> visitée récemment</td>
+    </tr>
+    <tr>
+      <td><code>E:visited</code></td>
+      <td>Tout élément E qui est un lien hypertexte vers une URL que l'utilisateur <em>a</em> visitée récemment</td>
+    </tr>
+  </tbody>
+</table>
+<p>La propriété <code>cursor</code> spécifie la forme du pointeur : certains des pointeurs courants sont montrés ci-dessous. Placez votre pointeur de souris au dessu des éléments de cette liste pour voir comment apparaissent les différentes formes dans votre navigateur :</p>
+<table style="margin-left: 2em;">
+  <tbody>
+    <tr>
+      <td style="width: 10em;"><strong>Valeur</strong></td>
+      <td><strong>Indique</strong></td>
+    </tr>
+    <tr style="cursor: pointer;">
+      <td><code>pointer</code></td>
+      <td>Indique un lien</td>
+    </tr>
+    <tr style="cursor: wait;">
+      <td><code>wait</code></td>
+      <td>Indique que le programme n'accepte aucune interaction pour le moment</td>
+    </tr>
+    <tr style="cursor: progress;">
+      <td><code>progress</code></td>
+      <td>Indique que le programme fonctionne, mais peut toujours accepter une autre commande</td>
+    </tr>
+    <tr style="cursor: default;">
+      <td><code>default</code></td>
+      <td>Le curseur par défaut (habituellement une flèche)</td>
+    </tr>
+  </tbody>
+</table>
+<p><br>
+  Une propriété <code>outline</code> crée un encadrement souvent utilisé pour indiquer où se trouve le focus clavier. Ses valeurs sont similaires à celles de la propriété <code>border</code>, sauf que les différents côtés ne peuvent pas être spécifiés individuellement.</p>
+<p>Certaines autres fonctionnalités des interfaces utilisateur sont implémentées à l'aide d'attributs, de la façon classique. Par exemple, un élément qui est désactivé ou en lecture seule a (respectivement) l'attribut <code>disabled</code> ou <code>readonly</code>. Les sélecteurs peuvent spécifier ces attributs comme n'importe quel autre attribut, à l'aide des crochets droits : <code>{{ mediawiki.external('disabled') }}</code> ou <code>{{ mediawiki.external('readonly') }}</code>.</p>
+<p> </p>
+<table style="border: 1px solid #36b; padding: 1em; background-color: #fffff4; width: 100%;">
+  <caption>
+    Exemple</caption>
+  <tbody>
+    <tr>
+      <td>Ces règles spécifient des styles pour un bouton qui change dynamiquement lorsque l'utilisateur interagit avec lui :
+        <div style="width: 30em;">
+          <pre>
+.bouton-vert {
+  background-color:#cec;
+  color:#black;
+  border:2px outset #cec;
+  }
 
-<h3 id="logical_operators">Opérateurs logiques</h3>
+.bouton-vert[disabled] {
+  background-color:#cdc;
+  color:#777;
+  }
 
-<p>Les opérateurs logiques <code>not</code>, <code>and</code> et <code>only</code> peuvent être utilisés afin de construire une requête média complexe. Il est aussi possible de combiner plusieurs requêtes média en les séparant par des virgules.</p>
+.bouton-vert:active {
+  border-style: inset;
+  }
+</pre>
+        </div>
+        <p>Ce wiki ne permet pas d'utiliser des boutons sur la page, mais voici quelques images pour illustrer l'idée :</p>
+        <table style="border: 2px outset #36b; padding: 1em; background-color: #fff;">
+          <tbody>
+            <tr>
+              <td>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><span style="width: 8em; height: 2em; background-color: #cdc; color: #777; padding: .5em 1em; cursor: default; margin-right: 1em; border: 2px outset #cec;">Cliquez ici</span></td>
+                      <td><span style="width: 8em; height: 2em; background-color: #cec; padding: .5em 1em; cursor: move; margin-right: 1em; border: 2px outset #cec;">Cliquez ici</span></td>
+                      <td><span style="width: 8em; height: 2em; background-color: #cec; padding: .5em 1em; cursor: move; margin-right: 1em; border: 2px inset #cec;">Cliquez ici</span></td>
+                    </tr>
+                    <tr style="line-height: 25%;">
+                      <td> </td>
+                    </tr>
+                    <tr style="font-style: italic;">
+                      <td>disabled</td>
+                      <td>normal</td>
+                      <td>active</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Un bouton tout à fait fonctionnel a aussi un contour noir tout autour lorsqu'il est le bouton par défaut, et un encadrement pointillé sur sa surface lorsqu'il a le focus clavier. Il peut également changer grâce à un effet visuel lorsque le pointeur de la souris le survole.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table style="border: 1px solid #36b; padding: 1em; background-color: #f4f4f4; margin-bottom: 1em; width: 100%;">
+  <caption>
+    Plus de détails</caption>
+  <tbody>
+    <tr>
+      <td>Pour plus d'informations à propos des interfaces utilisateur en CSS, consultez <a class="external" href="http://www.w3.org/TR/CSS21/ui.html">User interface</a> dans la spécification CSS.
+        <p>Un exemple avec le langage de balisage de Mozilla pour les interfaces utilisateur, XUL, est fourni dans la partie II de ce tutoriel.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="Action_:_impression_d.27un_document" name="Action_:_impression_d.27un_document">Action : impression d'un document</h3>
+<p>Créez un nouveau document HTML, <code>doc4.html</code>. Copiez et collez-y le contenu ci-dessous, en vous assurant de faire défiler jusqu'en bas pour en obtenir l'entièreté :</p>
+<div style="width: 48em; height: 12em; overflow: auto;">
+  <pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"&gt;
+&lt;HTML&gt;
 
-<h4 id="and"><code>and</code></h4>
+&lt;HEAD&gt;
+&lt;TITLE&gt;Exemple à imprimer&lt;/TITLE&gt;
+&lt;LINK rel="stylesheet" type="text/css" href="style4.css"&gt;&lt;/strong&gt;
+&lt;/HEAD&gt;
 
-<p>L'opérateur <code>and</code> permet de combiner plusieurs requêtes média en une seule. Pour que la requête résultante soit vraie, il faut que chacune des sous-requêtes soit vraie. Cet opérateur est également utilisé afin de relier des caractéristiques média avec des types de média.</p>
+&lt;BODY&gt;
+&lt;H1&gt;Section A&lt;/H1&gt;
+&lt;P&gt;Ceci est la première section...&lt;/P&gt;
 
-<h4 id="not"><code>not</code></h4>
+&lt;H1&gt;Section B&lt;/H1&gt;
+&lt;P&gt;Ceci est la seconde section...&lt;/P&gt;
 
-<p>L'opérateur <code>not</code> est utilisé afin d'obtenir le résultat opposé d'une requête média (il renvoie <code>true</code> si l'opérande renvoie <code>false</code>). S'il est utilisé dans une liste de requêtes séparées par des virgules, il ne nie que la requête sur laquelle il est appliqué. Si l'opérateur <code>not</code> est utilisé, la requête doit nécessairement contenir un type de média.</p>
+&lt;DIV id="en-tete-impression"&gt;
+Titre pour les médias paginés
+&lt;/DIV&gt;
 
-<div class="note">
-<p><strong>Note :</strong> Pour la spécification de niveau 3, l'opérateur <code>not</code> ne peut pas être utilisé afin de prendre l'opposé d'une expression de caractéristique de média, il ne peut servir qu'à l'échelle d'une requête média entière.</p>
+&lt;DIV id="pied-de-page-impression"&gt;
+Page :
+&lt;/DIV&gt;
+
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre>
 </div>
+<p>Créez une nouvelle feuille de style, <code>style4.css</code>. Copiez et collez-y le contenu ci-dessous, en vous assurant de faire défiler jusqu'en bas pour en obtenir l'entièreté :</p>
+<div style="width: 48em; height: 12em; overflow: auto;">
+  <pre>/*** Exemple d'impression ***/
 
-<h4 id="only"><code>only</code></h4>
+/* Réglages par défaut pour l'écran */
+#en-tete-impression,
+#pied-de-page-impression {
+  display: none;
+  }
 
-<p>L'opérateur <code>only</code> est utilisé afin d'appliquer un style uniquement si l'intégralité de la requête est vérifiée. Il permet d'empêcher les anciens navigateurs d'appliquer les styles concernés. Si on utilise pas <code>only</code>, un ancien navigateur interprètera <code>screen and (max-width: 500px)</code> comme <code>screen</code> uniquement (appliquant ainsi le style à tous les écrans). Si l'opérateur <code>only</code> est utilisé, la requête doit nécessairement contenir un type de média.</p>
+/* Uniquement pour l'impression */
+@media print {
 
-<h4 id="virgule"><code>,</code> (virgule)</h4>
+h1 {
+  page-break-before: always;
+  padding-top: 2em;
+  }
 
-<p>Les virgules permettent de combiner plusieurs requêtes en une. Chaque requête est traitée séparément. Autrement dit, si une des requêtes de la liste renvoie <code>true</code>, toute la requête combinée renverra <code>true</code>. En ce sens, l'opérateur <code>,</code> agit comme un opérateur booléen <code>or</code>.</p>
+h1:first-child {
+  page-break-before: avoid;
+  counter-reset: page;
+  }
 
-<h2 id="targeting_media_types">Cibler des types de média</h2>
+#en-tete-impression {
+  display: block;
+  position: fixed;
+  top: 0pt;
+  left:0pt;
+  right: 0pt;
 
-<p>Les types de média décrivent la catégorie générale de l'appareil utilisé. Bien que la plupart des sites web soient principalement conçus pour être affichés sur des écrans, il est possible d'avoir des styles spécifiques pour les impressions ou pour les lecteurs d'écran. Voici une requête qui permet de cibler les imprimantes ou autres appareils imprimant le contenu sur plusieurs pages :</p>
+  font-size: 200%;
+  text-align: center;
+  }
 
-<pre class="brush: css">@media print { ... }</pre>
+#pied-de-page-impression {
+  display: block;
+  position: fixed;
+  bottom: 0pt;
+  right: 0pt;
 
-<p>Il est possible de cibler plusieurs types à la fois. La règle suivante permet de cibler les écrans et les appareils d'impression :</p>
+  font-size: 200%;
+  }
 
-<pre class="brush: css">@media screen, print { ... }</pre>
+#pied-de-page-impression:after {
+  content: counter(page);
+  counter-increment: page;
+  }
 
-<p>Pour une liste complète des types de média, voir <a class="internal" href="#types">ci-avant</a>. Ces types étant très génériques, peu de valeurs sont disponibles. Afin d'avoir un ciblage plus fin, on pourra utiliser les caractéristiques média.</p>
-
-<h2 id="targeting_media_features">Cibler des caractéristiques média</h2>
-
-<p>Les caractéristiques média décrivent les caractéristiques spécifiques d'un agent utilisateur, d'un appareil d'affichage ou de l'environnement. On peut ainsi cibler différents styles pour les écrans larges, pour les ordinateurs qui disposent d'une souris ou pour les appareils utilisés dans une faible luminosité. Dans l'exemple qui suit, on a une requête qui vérifie si le mécanisme de saisie principal de l'appareil peut survoler les éléments :</p>
-
-<pre class="brush: css">@media (hover: hover) { ... }</pre>
-
-<p>De nombreuses caractéristiques média sont des caractéristiques portant sur un intervalle et peuvent être préfixées par <code>min-</code> ou <code>max-</code> afin d'exprimer des seuils de valeurs. Par exemple, la requête suivante permet d'appliquer des styles à condition que la largeur de la zone d'affichage (<em>viewport</em>) soit inférieure à 1250px :</p>
-
-<pre class="brush: css">@media (max-width: 1250px) { ... }</pre>
-
-<div class="note">
-<p>Selon la spécification du W3C, les barres de défilement font partie des dimensions de la page. Ainsi la barre de défilement vertical s'ajoute à la largeur du document tandis que la barre de défilement horizontal s'ajoute à la hauteur du document. Cependant tous les navigateurs n'ont pas adopté cette recommandation (Chrome par exemple) et tous n'ont pas opté pour la même taille de barre de défilement, ce qui mène à un développement plus difficile pour assurer une comptabilité sur tous les navigateurs.</p>
+} /* fin des paramètres pour l'impression */
+</pre>
 </div>
-
-<p>Si on utilise une caractéristique média sans indiquer de valeur, la requête sera vérifiée tant que la valeur de cette caractéristique n'est pas nulle (ou <code>none</code> pour la spécification de niveau 4). Ainsi, la requête suivante permettra d'appliquer les styles qu'elle contient si l'appareil peut afficher des couleurs :</p>
-
-<pre class="brush: css">@media (color) { ... }</pre>
-
-<p>Si une caractéristique ne s'applique pas à l'appareil, les expressions utilisant cette caractéristique renverront <code>false</code>. Ainsi, la requête suivante aura toujours la valeur <code>false</code> car aucun appareil de synthèse vocale ne possède de caractéristique relative à ses proportions d'écran :</p>
-
-<pre class="brush: css">@media speech and (aspect-ratio: 11/5) { ... }</pre>
-
-<p>Pour plus d'exemples, voir les pages de référence de chacune de ces caractéristiques depuis <a href="#caractéristiques">le tableau ci-dessus</a>.</p>
-
-<h2 id="creating_complex_media_queries">Créer des requêtes média complexes</h2>
-
-<p>Il est parfois nécessaire d'avoir une requête qui repose sur plusieurs conditions. Pour cela, on peut utiliser les opérateurs logiques : <code>not</code>, <code>and</code>, <code>only</code> et la virgule (<code>,</code>) afin de combiner plusieurs requêtes média.</p>
-
-<p>Dans l'exemple précédent, on a utilisé l'opérateur <code>and</code> afin de combiner un type de média et une caractéristique média. Cet opérateur peut également servir à assembler plusieurs requêtes média pour en former la conjonction logique. L'opérateur <code>not</code> permet d'obtenir la négation d'une requête média tandis que l'opérateur <code>only</code> empêche les anciens navigateurs d'appliquer les styles qu'une requête contient.</p>
-
-<div class="note">
-<p><strong>Note :</strong> Dans la plupart des cas, le type de média <code>all</code> est utilisé par défaut si aucun autre type n'est fourni. Toutefois, lorsqu'on utilise les opérateurs <code>not</code> ou <code>only</code>, il est nécessaire de fournir un type de média explicite.</p>
-</div>
-
-<h3 id="combining_multiple_types_or_features">Combiner plusieurs types ou caractéristiques</h3>
-
-<p>Le mot-clé <code>and</code> permet de combiner une caractéristique média avec un type de média ou avec d'autres caractéristiques média. L'exemple suivant permet de restreindre l'application d'un style aux appareils orientés en mode paysage et dont la largeur mesure au moins 30ems :</p>
-
-<pre class="brush: css">@media (min-width: 30em) and (orientation: landscape) { ... }</pre>
-
-<p>Si on souhaite restreindre ces règles aux écrans, on pourra ajouter une clause avec le type de média <code>screen</code> :</p>
-
-<pre class="brush: css">@media screen and (min-width: 30em) and (orientation: landscape) { ... }</pre>
-
-<h3 id="testing_for_multiple_queries">Tester plusieurs requêtes</h3>
-
-<p>La virgule peut être utilisée afin de créer une disjonction (un OU logique) sur différentes clauses (types de média, caractéristiques ou états). Dans l'exemple qui suit, les styles de la requête sont appliqués si l'appareil possède une hauteur supérieure ou égale à 680 pixels ou si l'écran est en mode portrait :</p>
-
-<pre class="brush: css">@media (min-height: 680px), screen and (orientation: portrait) { ... }</pre>
-
-<p>Avec cet exemple, si l'utilisateur utilise une imprimante et que la page mesure 800 pixels de haut, la requête média aurait été vérifiée. Il en aurait été de même si l'utilisateur avait utilisé un smartphone avec une zone d'affichage haute de 480 pixels en portrait car la deuxième clause aurait renvoyée <code>true</code>.</p>
-
-<h3 id="inverting_a_querys_meaning">Opérer une négation</h3>
-
-<p>Le mot-clé <code>not</code> permet d'inverser le résultat d'une requête. Il inversera uniquement la requête sur laquelle il est appliqué (et non la liste des requêtes s'il est utilisé au sein de requêtes séparées par des virgules). Le mot-clé <code>not</code> ne peut pas être utilisé afin d'inverser une caractéristique média, il peut uniquement être utilisé pour une requête média complète. Dans la requête qui suit, l'opérateur <code>not</code> est évalué en dernier :</p>
-
-<pre class="brush: css">@media not all and (monochrome) { ... }
-</pre>
-
-<p>La requête précédente est donc équivalente à :</p>
-
-<pre class="brush: css">@media not (all and (monochrome)) { ... }
-</pre>
-
-<p>Mais elle n'est pas équivalente à :</p>
-
-<pre class="brush: css example-bad">@media (not all) and (monochrome) { ... }</pre>
-
-<p>De même :</p>
-
-<pre class="brush: css">@media not screen and (color), print and (color) { ... }
-</pre>
-
-<p>sera évaluée comme :</p>
-
-<pre class="brush: css">@media (not (screen and (color))), print and (color) { ... }</pre>
-
-<h3 id="improving_compatibility_with_older_browsers">Améliorer la compatibilité avec les anciens navigateurs</h3>
-
-<p>Le mot-clé <code>only</code> empêche les navigateurs qui ne prennent pas en charge les requêtes média avec les caractéristiques média d'appliquer les styles concernés. Cet opérateur n'a aucun effet pour les navigateurs modernes<em>.</em></p>
-
-<pre class="brush: css">@media only screen and (color) { ... }
-</pre>
-
-<h2 id="syntax_improvements_in_level_4">Améliorations syntaxiques avec la spécification de niveau 4</h2>
-
-<p>La spécification de niveau 4 pour les requêtes média ajoute des améliorations syntaxiques pour les requêtes média qui portent sur un intervalle (par exemple les critères de largeur et de hauteur). On peut par exemple utiliser le préfixe <code>max-</code> pour les largeurs et écrire :</p>
-
-<pre class="brush: css">@media (max-width: 30em) { ... }</pre>
-
-<p>Avec les requêtes média de niveau 4, on peut écrire :</p>
-
-<pre class="brush: css">@media (width &lt;= 30em) { ... }</pre>
-
-<p>Si on utilise <code>min-</code> et <code>max-</code> conjointement, on peut tester l'appartenance d'une valeur à un intervalle :</p>
-
-<pre class="brush: css">@media (min-width: 30em) and (max-width: 50em) { ... }</pre>
-
-<p>Avec les requêtes média de niveau 4, on peut écrire :</p>
-
-<pre class="brush: css">@media (30em &lt;= width &lt;= 50em ) { ... }
-</pre>
-
-<p>Les requêtes média de niveau 4 permettent également d'utiliser une logique booléenne avec les opérateurs <code>and</code>, <code>not</code> et <code>or</code>.</p>
-
-<h3 id="negating_a_feature_with_not">Tester l'absence d'une caractéristique avec <code>not</code></h3>
-
-<p>On peut utiliser l'opérateur <code>not()</code> autour d'une caractéristique média afin de tester l'absence de cette caractéristique. Ainsi, on peut <code>not(hover)</code> pour cibler les appareils qui ne permettent pas le survol d'un élément :</p>
-
-<pre class="brush: css">@media (not(hover)) { ... }</pre>
-
-<h3 id="testing_for_multiple_features_with_or">Tester plusieurs caractéristiques avec <code>or</code></h3>
-
-<p>Il est possible d'utiliser l'opérateur <code>or</code> pour tester une correspondance sur plus d'une caractéristique. Dans l'exemple suivant, on cible les appareils qui ont un affichage monochrome (<code>not (color)</code>) ou qui permettent de survoler les éléments (<code>hover</code>) :</p>
-
-<pre class="brush: css">@media (not (color)) or (hover) { ... }
-</pre>
-
-<h2 id="see_also">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/Web/CSS/Media_Queries/Testing_media_queries">Tester des requêtes média en script</a></li>
- <li><a href="https://davidwalsh.name/animate-media-queries">Utiliser les animations CSS entre les requêtes média (en anglais)</a></li>
- <li><a href="/fr/docs/Web/CSS/Mozilla_Extensions#caract%c3%a9ristiques">Les caractéristiques média spécifiques à Mozilla</a></li>
- <li><a href="/fr/docs/Web/CSS/WebKit_Extensions#caract%c3%a9ristiques_m%c3%a9dia">Les caractéristiques média spécifiques à WebKit</a></li>
-</ul>
+<p>Lorsque vous consultez ce document dans votre navigateur, il utilise le style par défaut de celui-ci.</p>
+<p>Lorsque vous l'imprimez (ou demandez un aperçu avant impression) la feuille de style place chaque section sur une page séparée, et ajoute un en-tête et un pied de page à chacune d'elles. Si votre navigateur gère les compteurs, il ajoute le numéro de page dans le pied de page.</p>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <table style="border: 2px outset #36b; padding: 1em;">
+          <tbody>
+            <tr>
+              <td>
+                <table style="width: 15em; margin-right: 2em;">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div style="font-size: 150%; text-align: center; margin-bottom: .5em;">
+                          Titre</div>
+                        <div style="font-size: 150%; font-weight: bold;">
+                          Section A</div>
+                        <div style="font-size: 75%;">
+                          Ceci est la première section...</div>
+                        <div style="font-size: 150%; text-align: right; margin-top: 12em;">
+                          Page : 1</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+      <td>
+        <table style="border: 2px outset #36b; padding: 1em;">
+          <tbody>
+            <tr>
+              <td>
+                <table style="width: 15em; margin-right: 2em;">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div style="font-size: 150%; text-align: center; margin-bottom: .5em;">
+                          Titre</div>
+                        <div style="font-size: 150%; font-weight: bold;">
+                          Section B</div>
+                        <div style="font-size: 75%;">
+                          Ceci est la seconde section...</div>
+                        <div style="font-size: 150%; text-align: right; margin-top: 12em;">
+                          Page : 2</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p> </p>
+<table style="border: 1px solid #36b; padding: 1em; background-color: #fffff4; width: 100%;">
+  <caption>
+    Challenge</caption>
+  <tbody>
+    <tr>
+      <td>Déplacez les règles spécifiques à l'impression dans un fichier CSS séparé.
+        <p>Utilisez les liens plus haut sur cette page pour lire la spécification CSS. Trouvez-y des détails sur la façon d'importer cette nouvelle feuille CSS spécifique à l'impression dans votre feuille de style.</p>
+        <p>Faites en sorte que les titres deviennent bleus lorsque le pointeur de la souris passe au dessus d'eux.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p> </p>
+<h4 id="Pour_continuer" name="Pour_continuer">Pour continuer</h4>
+<p>Si vous avez eu des difficultés à comprendre cette page, ou si vous avez d'autres commentaires à son sujet, n'hésitez pas à contribuer à sa <a href="/Talk:fr/CSS/Premiers_pas/Médias" title="Talk:fr/CSS/Premiers_pas/Médias">page de discussion</a>.</p>
+<p>Jusqu'à présent, toutes les règles de style dans ce tutoriel ont été spécifiées dans des fichiers. Les règles et leurs valeurs sont fixées. La page suivante explique comment ces règles peuvent être changées dynamiquement à l'aide d'un langage de programmation : <strong><a href="/fr/docs/CSS/Premiers_pas/JavaScript" title="fr/CSS/Premiers_pas/JavaScript">JavaScript</a></strong>.</p>

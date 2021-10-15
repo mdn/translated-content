@@ -17,7 +17,7 @@ browser-compat: html.elements.caption
 ---
 <div>{{HTMLRef}}</div>
 
-<p class="summary">L'élément <strong><code>&lt;caption&gt;</code></strong> définit la légende (ou le titre) d'un tableau.</p>
+<p>L'élément <strong><code>&lt;caption&gt;</code></strong> définit la légende (ou le titre) d'un tableau.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/caption.html", "tabbed-standard")}}</div>
 
@@ -61,7 +61,7 @@ browser-compat: html.elements.caption
 <h3 id="deprecated_attributes">Attributs obsolètes</h3>
 
 <dl>
-  <dt><strong id="attr-align"><code>align</code></strong> {{deprecated_inline}}</dt>
+  <dt><strong><code>align</code></strong> {{deprecated_inline}}</dt>
   <dd>Cet attribut à valeur contrainte indique l'alignement de la légende du tableau par rapport au tableau lui-même. Il peut valoir :
   <dl>
     <dt><code>left</code></dt>
@@ -74,9 +74,8 @@ browser-compat: html.elements.caption
     <dd>La légende est affichée en dessous du tableau</dd>
   </dl>
 
-  <div class="notecard note">
-    <p><b>Note d'utilisation :</b></p>
-    <p>Ne pas utiliser cet attribut. Il a été déprécié. L'élément <code>&lt;caption&gt;</code> devrait être mis en forme grâce au <a href="/fr/docs/Web/CSS">CSS</a>. Afin d'obtenir des effets similaires à cet attribut, on utilisera les propriétés CSS <a href="/fr/docs/Web/CSS/caption-side"><code>caption-side</code></a> et <a href="/fr/docs/Web/CSS/text-align"><code>text-align</code></a>.</p>
+  <div class="note">
+    <p><strong>Note :</strong> Ne pas utiliser cet attribut. Il a été déprécié. L'élément <code>&lt;caption&gt;</code> devrait être mis en forme grâce au <a href="/fr/docs/Web/CSS">CSS</a>. Afin d'obtenir des effets similaires à cet attribut, on utilisera les propriétés CSS <a href="/fr/docs/Web/CSS/caption-side"><code>caption-side</code></a> et <a href="/fr/docs/Web/CSS/text-align"><code>text-align</code></a>.</p>
   </div>
   </dd>
 </dl>
@@ -89,7 +88,7 @@ browser-compat: html.elements.caption
 
 <p>Utiliser la propriété <a href="/fr/docs/Web/CSS/background-color"><code>background-color</code></a> sur le tableau ne modifiera pas l'apparence de la légende. Il est également nécessaire d'ajouter une déclaration CSS avec <code>background-color</code> sur l'élément <code>&lt;caption&gt;</code> pour que celui-ci ait la même couleur.</p>
 
-<h2 id="example">Exemple</h2>
+<h2 id="Exemple">Exemple</h2>
 
 <p>Cet exemple simple présente un tableau qui comprend une légende.</p>
 
@@ -111,8 +110,7 @@ browser-compat: html.elements.caption
   &lt;/tr&gt;
 &lt;/table&gt;</pre>
 
-<div class="hidden">
-  <pre class="brush: css">caption {
+<pre class="brush: css hidden">caption {
     caption-side: top;
   }
   table {
@@ -122,12 +120,11 @@ browser-compat: html.elements.caption
   table, th, td {
     border: 1px solid black;
   }
-  </pre>
-  </div>
+</pre>
 
 <h3 id="result">Résultat</h3>
 
-<p>{{EmbedLiveSample('example', '', 120)}}</p>
+<p>{{EmbedLiveSample('Exemple', '', 120)}}</p>
 
 <h2 id="specifications">Spécifications</h2>
 

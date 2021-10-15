@@ -319,10 +319,12 @@
 /ru/docs/Web/API/Document/domConfig	/ru/docs/Web/API/Document
 /ru/docs/Web/API/DocumentOrShadowRoot/activeElement	/ru/docs/Web/API/Document/activeElement
 /ru/docs/Web/API/DocumentOrShadowRoot/getSelection	/ru/docs/Web/API/Document/getSelection
+/ru/docs/Web/API/EffectTiming	/ru/docs/Web/API/KeyframeEffect/KeyframeEffect
 /ru/docs/Web/API/Element.getBoundingClientRect	/ru/docs/Web/API/Element/getBoundingClientRect
 /ru/docs/Web/API/Element.insertAdjacentHTML	/ru/docs/Web/API/Element/insertAdjacentHTML
 /ru/docs/Web/API/Element/accessKey	/ru/docs/Web/API/HTMLElement/accessKey
 /ru/docs/Web/API/EventTarget.addEventListener	/ru/docs/Web/API/EventTarget/addEventListener
+/ru/docs/Web/API/File/fileName	/ru/docs/conflicting/Web/API/File/name
 /ru/docs/Web/API/File_and_Directory_Entries_API/Введение	/ru/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /ru/docs/Web/API/Geolocation/Using_geolocation	/ru/docs/Web/API/Geolocation_API
 /ru/docs/Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API	/ru/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
@@ -359,6 +361,7 @@
 /ru/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/ru/docs/Web/API/Element/previousElementSibling
 /ru/docs/Web/API/ParentNode/childElementCount	/ru/docs/Web/API/Element/childElementCount
 /ru/docs/Web/API/PositionError	/ru/docs/Web/API/GeolocationPositionError
+/ru/docs/Web/API/PositionOptions	/ru/docs/conflicting/Web/API/Geolocation/getCurrentPosition
 /ru/docs/Web/API/RandomSource/getRandomValues	/ru/docs/Web/API/Crypto/getRandomValues
 /ru/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/ru/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ru/docs/Web/API/WebGL_API/Animating_objects_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
@@ -367,6 +370,9 @@
 /ru/docs/Web/API/WebGL_API/Using_shaders_to_apply_color_in_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 /ru/docs/Web/API/WebRTC_API/протоколы	/ru/docs/Web/API/WebRTC_API/Protocols
 /ru/docs/Web/API/WebRTC_API/связь	/ru/docs/Web/API/WebRTC_API/Connectivity
+/ru/docs/Web/API/Window/crypto	/ru/docs/Web/API/crypto_property
+/ru/docs/Web/API/Window/mozAnimationStartTime	/ru/docs/Web/API/Animation/startTime
+/ru/docs/Web/API/Window/performance	/ru/docs/Web/API/performance_property
 /ru/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ru/docs/Glossary/Base64
 /ru/docs/Web/API/WindowBase64/btoa	/ru/docs/Web/API/btoa
 /ru/docs/Web/API/WindowOrWorkerGlobalScope/atob	/ru/docs/Web/API/atob
@@ -674,6 +680,7 @@
 /ru/docs/Web/WebGL/Animating_objects_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /ru/docs/Web/WebGL/Getting_started_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /ru/docs/Web/WebGL/Using_shaders_to_apply_color_in_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
+/ru/docs/Web/Web_Components/HTML_Imports	/ru/docs/conflicting/Web/Web_Components
 /ru/docs/Web/Web_Components/Использование_пользовательских_элементов	/ru/docs/Web/Web_Components/Using_custom_elements
 /ru/docs/Web/XPath/Funkcje	/ru/docs/Web/XPath/Functions
 /ru/docs/Web/XPath/Funkcje/floor	/ru/docs/Web/XPath/Functions/floor

@@ -89,11 +89,11 @@ function resetStyle(elemId) {
 
 <p>{{ EmbedLiveSample('Modify_an_element_style') }}</p>
 
-<p><code>document.defaultView</code> オブジェクトの {{domxref("window.getComputedStyle", "getComputedStyle()")}} メソッドは、その要素に対して計算された全てのスタイルを返します。このメソッドの使い方について詳しくはサンプルの <a href="/en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle" title="en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle">Example 6: getComputedStyle</a> を参照してください。</p>
+<p><code>document.defaultView</code> オブジェクトの {{domxref("window.getComputedStyle", "getComputedStyle()")}} メソッドは、その要素に対して計算された全てのスタイルを返します。このメソッドの使い方について詳しくはサンプルの <a href="/ja/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle" title="en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle">Example 6: getComputedStyle</a> を参照してください。</p>
 
 <h2 id="DOM_Style_Object" name="DOM_Style_Object">DOM Style オブジェクト</h2>
 
-<p><code>style</code> オブジェクトは独立したスタイル指定です。 <code><a href="/en/DOM/document.styleSheets" title="en/DOM/document.styleSheets">document.styleSheets</a></code> から個別にルールを取得するのとは異なり、 style オブジェクトは <code>document</code> またはスタイルが適用される要素から取得されます。ある特定の要素の<em>インライン</em>スタイルを表します。</p>
+<p><code>style</code> オブジェクトは独立したスタイル指定です。 <code><a href="/ja/DOM/document.styleSheets" title="en/DOM/document.styleSheets">document.styleSheets</a></code> から個別にルールを取得するのとは異なり、 style オブジェクトは <code>document</code> またはスタイルが適用される要素から取得されます。ある特定の要素の<em>インライン</em>スタイルを表します。</p>
 
 <p>この記事で例示した CSS プロパティに限らず、 <code>style</code> オブジェクトを通して要素のスタイルを個別に操作できるという点が重要です。</p>
 
@@ -128,7 +128,7 @@ function resetStyle(elemId) {
 
 <h3 id="DOM_Style_Object_SetAttribue" name="DOM_Style_Object_SetAttribue">setAttribute メソッドの利用</h3>
 
-<p>要素のスタイルの変更には、要素の <code><a href="/en/DOM/element.setAttribute" title="en/DOM/element.setAttribute">setAttribute</a></code> メソッドを使うこともできます。</p>
+<p>要素のスタイルの変更には、要素の <code><a href="/ja/DOM/element.setAttribute" title="en/DOM/element.setAttribute">setAttribute</a></code> メソッドを使うこともできます。</p>
 
 <pre class="brush: js notranslate">var el = document.getElementById('some-element');
 el.setAttribute('style', 'background-color:darkblue;');

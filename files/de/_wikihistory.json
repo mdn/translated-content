@@ -2245,6 +2245,13 @@
       "fscholz"
     ]
   },
+  "Web/API/Blob/size": {
+    "modified": "2019-03-23T23:33:53.208Z",
+    "contributors": [
+      "fscholz",
+      "nothine"
+    ]
+  },
   "Web/API/CSS": {
     "modified": "2020-10-15T22:34:59.314Z",
     "contributors": [
@@ -3006,20 +3013,6 @@
       "chrisdavidmills",
       "icy",
       "matschu"
-    ]
-  },
-  "Web/API/File/fileName": {
-    "modified": "2019-03-23T23:33:53.570Z",
-    "contributors": [
-      "fscholz",
-      "nothine"
-    ]
-  },
-  "Web/API/File/fileSize": {
-    "modified": "2019-03-23T23:33:53.208Z",
-    "contributors": [
-      "fscholz",
-      "nothine"
     ]
   },
   "Web/API/File/name": {
@@ -4106,12 +4099,6 @@
       "frickth"
     ]
   },
-  "Web/API/Window/performance": {
-    "modified": "2019-03-23T22:07:15.480Z",
-    "contributors": [
-      "amelzer"
-    ]
-  },
   "Web/API/Window/print": {
     "modified": "2020-10-15T21:39:45.899Z",
     "contributors": [
@@ -4231,6 +4218,12 @@
     "contributors": [
       "schlagi123",
       "mwsh2005"
+    ]
+  },
+  "Web/API/performance_property": {
+    "modified": "2019-03-23T22:07:15.480Z",
+    "contributors": [
+      "amelzer"
     ]
   },
   "Web/API/setTimeout": {
@@ -13567,6 +13560,13 @@
     "modified": "2019-03-23T23:28:11.671Z",
     "contributors": [
       "Sheppy"
+    ]
+  },
+  "conflicting/Web/API/File/name": {
+    "modified": "2019-03-23T23:33:53.570Z",
+    "contributors": [
+      "fscholz",
+      "nothine"
     ]
   },
   "conflicting/Web/API/WindowOrWorkerGlobalScope": {

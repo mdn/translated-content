@@ -544,6 +544,7 @@
 /zh-TW/docs/Web/API/Document_Object_Model/事件	/zh-TW/docs/orphaned/Web/API/Document_Object_Model/Events
 /zh-TW/docs/Web/API/ElementCSSInlineStyle/style	/zh-TW/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /zh-TW/docs/Web/API/Event/createEvent	/zh-TW/docs/Web/API/Document/createEvent
+/zh-TW/docs/Web/API/File/fileName	/zh-TW/docs/Web/API/File/name
 /zh-TW/docs/Web/API/Geolocation/Using_geolocation	/zh-TW/docs/Web/API/Geolocation_API
 /zh-TW/docs/Web/API/HTMLElement/dataset	/zh-TW/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /zh-TW/docs/Web/API/HTMLElement/style	/zh-TW/docs/orphaned/Web/API/ElementCSSInlineStyle/style
@@ -564,6 +565,10 @@
 /zh-TW/docs/Web/API/PositionError	/zh-TW/docs/Web/API/GeolocationPositionError
 /zh-TW/docs/Web/API/PositionError/code	/zh-TW/docs/Web/API/GeolocationPositionError/code
 /zh-TW/docs/Web/API/PositionError/message	/zh-TW/docs/Web/API/GeolocationPositionError/message
+/zh-TW/docs/Web/API/PositionOptions	/zh-TW/docs/conflicting/Web/API/Geolocation/getCurrentPosition_5852407122355d2ab39863042583c266
+/zh-TW/docs/Web/API/PositionOptions/enableHighAccuracy	/zh-TW/docs/conflicting/Web/API/Geolocation/getCurrentPosition
+/zh-TW/docs/Web/API/PositionOptions/maximumAge	/zh-TW/docs/conflicting/Web/API/Geolocation/getCurrentPosition_c2c285f72be001586cb95d7989ba1b54
+/zh-TW/docs/Web/API/PositionOptions/timeout	/zh-TW/docs/conflicting/Web/API/Geolocation/getCurrentPosition_058087067b28ad25fff974fd59827fb6
 /zh-TW/docs/Web/API/WebGL_API/Tutorial/WebGL入門	/zh-TW/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /zh-TW/docs/Web/API/Web_Video_Text_Tracks_Format	/zh-TW/docs/Web/API/WebVTT_API
 /zh-TW/docs/Web/API/Window.history	/zh-TW/docs/Web/API/Window/history

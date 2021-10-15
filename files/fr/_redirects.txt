@@ -433,7 +433,7 @@
 /fr/docs/CSS/Premiers_pas/Les_sélecteurs	/fr/docs/conflicting/Learn/CSS/Building_blocks/Selectors_9bc80fea302c91cd60fb72c4e83c83e9
 /fr/docs/CSS/Premiers_pas/Listes	/fr/docs/conflicting/Learn/CSS/Styling_text/Styling_lists_06e9538892250c13976a84639f0dadd2
 /fr/docs/CSS/Premiers_pas/Mise_en_page	/fr/docs/conflicting/Learn/CSS/CSS_layout
-/fr/docs/CSS/Premiers_pas/Médias	/fr/docs/Web/Progressive_web_apps/Responsive/Media_types
+/fr/docs/CSS/Premiers_pas/Médias	/fr/docs/Web/CSS/Media_Queries/Using_media_queries
 /fr/docs/CSS/Premiers_pas/Pourquoi_utiliser_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_ecbda2160290b96c02dcfa8276c0333a
 /fr/docs/CSS/Premiers_pas/Présentation_des_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_dba75d8c56ccc773f03d946ce2dbb25c
 /fr/docs/CSS/Premiers_pas/Styles_de_texte	/fr/docs/conflicting/Learn/CSS/Styling_text/Fundamentals_8249b1bf53d09b06ed51f43697880b5b
@@ -747,7 +747,7 @@
 /fr/docs/CSS:Premiers_pas:Les_sélecteurs	/fr/docs/conflicting/Learn/CSS/Building_blocks/Selectors_9bc80fea302c91cd60fb72c4e83c83e9
 /fr/docs/CSS:Premiers_pas:Listes	/fr/docs/conflicting/Learn/CSS/Styling_text/Styling_lists_06e9538892250c13976a84639f0dadd2
 /fr/docs/CSS:Premiers_pas:Mise_en_page	/fr/docs/conflicting/Learn/CSS/CSS_layout
-/fr/docs/CSS:Premiers_pas:Médias	/fr/docs/Web/Progressive_web_apps/Responsive/Media_types
+/fr/docs/CSS:Premiers_pas:Médias	/fr/docs/Web/CSS/Media_Queries/Using_media_queries
 /fr/docs/CSS:Premiers_pas:Pourquoi_utiliser_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_ecbda2160290b96c02dcfa8276c0333a
 /fr/docs/CSS:Premiers_pas:Présentation_des_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_dba75d8c56ccc773f03d946ce2dbb25c
 /fr/docs/CSS:Premiers_pas:Styles_de_texte	/fr/docs/conflicting/Learn/CSS/Styling_text/Fundamentals_8249b1bf53d09b06ed51f43697880b5b
@@ -3459,8 +3459,8 @@
 /fr/docs/Web/API/API_fichier_systeme	/fr/docs/Web/API/File_and_Directory_Entries_API
 /fr/docs/Web/API/AbstractWorker	/fr/docs/orphaned/Web/API/AbstractWorker
 /fr/docs/Web/API/Ambient_Light_Events	/fr/docs/orphaned/Web/API/Ambient_Light_Events
-/fr/docs/Web/API/AnimationEffectTimingProperties	/fr/docs/Web/API/EffectTiming
-/fr/docs/Web/API/AnimationEffectTimingProperties/delay	/fr/docs/Web/API/EffectTiming/delay
+/fr/docs/Web/API/AnimationEffectTimingProperties	/fr/docs/conflicting/Web/API/KeyframeEffect/KeyframeEffect
+/fr/docs/Web/API/AnimationEffectTimingProperties/delay	/fr/docs/Web/API/KeyframeEffect/KeyframeEffect
 /fr/docs/Web/API/AnimationEvent.animationName	/fr/docs/Web/API/AnimationEvent/animationName
 /fr/docs/Web/API/AnimationEvent.elapsedTime	/fr/docs/Web/API/AnimationEvent/elapsedTime
 /fr/docs/Web/API/AnimationEvent.pseudoElement	/fr/docs/Web/API/AnimationEvent/pseudoElement
@@ -3546,6 +3546,8 @@
 /fr/docs/Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_W3C	/fr/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 /fr/docs/Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_W3C/Exemple	/fr/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example
 /fr/docs/Web/API/DoubleRange	/fr/docs/Web/API/MediaTrackConstraints
+/fr/docs/Web/API/EffectTiming	/fr/docs/conflicting/Web/API/KeyframeEffect/KeyframeEffect
+/fr/docs/Web/API/EffectTiming/delay	/fr/docs/Web/API/KeyframeEffect/KeyframeEffect
 /fr/docs/Web/API/Element.activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/Web/API/Element.addEventListener	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/Web/API/Element.appendChild	/fr/docs/Web/API/Node/appendChild
@@ -3647,6 +3649,8 @@
 /fr/docs/Web/API/EventTarget/attachEvent	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/Web/API/EventTarget/detachEvent	/fr/docs/Web/API/EventTarget/removeEventListener
 /fr/docs/Web/API/EventTarget/fireEvent	/fr/docs/Web/API/EventTarget/dispatchEvent
+/fr/docs/Web/API/File/fileName	/fr/docs/Web/API/File/name
+/fr/docs/Web/API/File/fileSize	/fr/docs/Web/API/Blob/size
 /fr/docs/Web/API/FileList/FileList	/fr/docs/Web/API/FileList
 /fr/docs/Web/API/FileReader/FileList	/fr/docs/Web/API/FileList
 /fr/docs/Web/API/FormData/Utilisation_objets_FormData	/fr/docs/Web/API/FormData/Using_FormData_Objects
@@ -3708,6 +3712,10 @@
 /fr/docs/Web/API/PasswordCredential/passwordName	/fr/docs/conflicting/Web/API/PasswordCredential_bc57d5dfa87242b4fb83497887124f41
 /fr/docs/Web/API/Performance.now()	/fr/docs/Web/API/Performance/now
 /fr/docs/Web/API/Pointer_events/gestes_pincer_zoom	/fr/docs/Web/API/Pointer_events/Pinch_zoom_gestures
+/fr/docs/Web/API/PositionOptions	/fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition_5852407122355d2ab39863042583c266
+/fr/docs/Web/API/PositionOptions/enableHighAccuracy	/fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition
+/fr/docs/Web/API/PositionOptions/maximumAge	/fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition_c2c285f72be001586cb95d7989ba1b54
+/fr/docs/Web/API/PositionOptions/timeout	/fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition_058087067b28ad25fff974fd59827fb6
 /fr/docs/Web/API/RandomSource.getRandomValues	/fr/docs/Web/API/Crypto/getRandomValues
 /fr/docs/Web/API/RandomSource/getRandomValues	/fr/docs/Web/API/Crypto/getRandomValues
 /fr/docs/Web/API/Référence_du_DOM_Gecko	/fr/docs/Web/API/Document_Object_Model
@@ -3723,6 +3731,7 @@
 /fr/docs/Web/API/Selection_API	/fr/docs/conflicting/Web/API/Selection
 /fr/docs/Web/API/ServiceWorkerState	/fr/docs/orphaned/Web/API/ServiceWorkerState
 /fr/docs/Web/API/Storage/LocalStorage	/fr/docs/conflicting/Web/API/Window/localStorage
+/fr/docs/Web/API/StorageEstimate	/fr/docs/conflicting/Web/API/StorageManager/estimate
 /fr/docs/Web/API/ULongRange	/fr/docs/conflicting/Web/API/MediaTrackConstraints
 /fr/docs/Web/API/URL.createObjectURL	/fr/docs/Web/API/URL/createObjectURL
 /fr/docs/Web/API/URLUtilsReadOnly	/fr/docs/orphaned/Web/API/URLUtilsReadOnly
@@ -3787,7 +3796,9 @@
 /fr/docs/Web/API/Window.showModalDialog	/fr/docs/Web/API/Window/showModalDialog
 /fr/docs/Web/API/Window/URL	/fr/docs/conflicting/Web/API/URL
 /fr/docs/Web/API/Window/caches	/fr/docs/Web/API/caches
+/fr/docs/Web/API/Window/crypto	/fr/docs/Web/API/crypto_property
 /fr/docs/Web/API/Window/gamepaddisconnected	/fr/docs/Web/API/Window/gamepaddisconnected_event
+/fr/docs/Web/API/Window/mozAnimationStartTime	/fr/docs/Web/API/Animation/startTime
 /fr/docs/Web/API/Window/ondevicelight	/fr/docs/orphaned/Web/API/Window/ondevicelight
 /fr/docs/Web/API/Window/onresize	/fr/docs/conflicting/Web/API/GlobalEventHandlers/onresize
 /fr/docs/Web/API/WindowBase64	/fr/docs/Web/API/WindowOrWorkerGlobalScope
@@ -5479,6 +5490,7 @@
 /fr/docs/Web/Progressive_web_apps/Progressive	/fr/docs/conflicting/Web/Progressive_web_apps_954d3e6cc1e06f006b865b74099f55cf
 /fr/docs/Web/Progressive_web_apps/Re-engageable	/fr/docs/conflicting/Web/Progressive_web_apps_cb2823fe6cfc1ddee5db1f6a5d240c67
 /fr/docs/Web/Progressive_web_apps/Relancer_Via_Notifications_Push	/fr/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push
+/fr/docs/Web/Progressive_web_apps/Responsive/Media_types	/fr/docs/Web/CSS/Media_Queries/Using_media_queries
 /fr/docs/Web/Progressive_web_apps/Securisee	/fr/docs/conflicting/Web/Progressive_web_apps_0d5c38b9aa908cbb52e4c39037b4f28b
 /fr/docs/Web/Progressive_web_apps/ajouter_a_lecran_daccueil_a2hs	/fr/docs/Web/Progressive_web_apps/Add_to_home_screen
 /fr/docs/Web/Reference	/fr/docs/orphaned/Web/Reference
@@ -5520,6 +5532,7 @@
 /fr/docs/Web/WebGL/Commencer_avec_le_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /fr/docs/Web/WebGL/Using_shaders_to_apply_color_in_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 /fr/docs/Web/WebGL/Utiliser_les_textures_avec_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+/fr/docs/Web/Web_Components/HTML_Imports	/fr/docs/conflicting/Web/Web_Components
 /fr/docs/Web/Web_Components/Shadow_DOM	/fr/docs/Web/Web_Components/Using_shadow_DOM
 /fr/docs/Web/Web_Components/Utilisation_des_templates_et_des_slots	/fr/docs/Web/Web_Components/Using_templates_and_slots
 /fr/docs/Web/XML/Introduction_à_XML	/fr/docs/Web/XML/XML_introduction
