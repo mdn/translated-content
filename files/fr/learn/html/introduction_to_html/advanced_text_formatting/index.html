@@ -38,7 +38,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting
 
 <p>Dans les bases du texte en HTML, nous avons exposé comment on pouvait baliser <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists">des listes simples en HTML</a>, mais sans mentionner le troisième type de liste que vous rencontrerez à l'occasion — <strong>les listes descriptives</strong>. L'objectif de ces listes est de marquer une série d'éléments et leurs descriptions associées, comme termes et définition, ou bien questions et réponse. Voici l'exemple d'un ensemble de termes et leur définitions :</p>
 
-<pre class="notranslate">soliloque
+<pre>soliloque
 Dans une pièce de théâtre, action d'un acteur adressant à lui-même ses pensées ou sentiments intimes et, de la sorte, les faisant partager à son auditoire (mais pas aux autres personnages de la pièce).
 monologue
 Dans une pièce de théâtre, action d'un acteur partageant ses pensées à haute voix avec le public et tous les personnages présents.
@@ -47,7 +47,7 @@ Dans une pièce de théâtre, action d'un acteur partageant une tirade uniquemen
 
 <p>Les listes descriptives utilisent une enveloppe de balisage différente de celle des autres types de listes — {{htmlelement("dl")}} ; chaque terme est en plus entouré d'un élément {{htmlelement("dt")}} (<strong>d</strong>escription <strong>t</strong>erm) et chaque description d'un élément {{htmlelement("dd")}} (<strong>d</strong>escription <strong>d</strong>efinition). Terminons en balisant l'exemple ci‑dessus :</p>
 
-<pre class="brush: html notranslate">&lt;dl&gt;
+<pre class="brush: html">&lt;dl&gt;
   &lt;dt&gt;soliloque&lt;/dt&gt;
   &lt;dd&gt;Dans une pièce de théâtre, action d'un acteur adressant à lui-même ses pensées ou sentiments intimes et, de la sorte, les faisant partager à son auditoire (mais pas aux autres personnages de la pièce).&lt;/dd&gt;
   &lt;dt&gt;monologue&lt;/dt&gt;
@@ -84,7 +84,7 @@ Dans une pièce de théâtre, action d'un acteur partageant une tirade uniquemen
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Zone de rendu&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Zone de rendu&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -108,7 +108,7 @@ Une couleur brun léger.&lt;/textarea&gt;
 
 
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -130,7 +130,7 @@ body {
 
 
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -219,12 +219,12 @@ textarea.onkeyup = function(){
 
 <p>Si une section ou un contenu de niveau bloc (que ce soit un paragraphe, de multiples paragraphes, une liste, etc.) est cité depuis une autre origine, vous pouvez le signaler en le mettant dans un élément {{htmlelement("blockquote")}} et en incluant une URL qui pointe vers la source de la citation dans un attribut {{htmlattrxref("cite","blockquote")}}. Par exemple, le balisage suivant provient de la page MDN pour l'élément <code>&lt;blockquote&gt;</code> :</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;L'&lt;strong&gt;Élément HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;&lt;/strong&gt; (ou &lt;em&gt;Élément HTML bloc
+<pre class="brush: html">&lt;p&gt;L'&lt;strong&gt;Élément HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;&lt;/strong&gt; (ou &lt;em&gt;Élément HTML bloc
 de citation&lt;/em&gt;) indique que le bloc de texte inclus est une citation étendue.&lt;/p&gt;</pre>
 
 <p>Pour le changer en bloc de citation, on ferait simplement ceci :</p>
 
-<pre class="brush: html notranslate">&lt;blockquote cite="/fr/docs/Web/HTML/Element/blockquote"&gt;
+<pre class="brush: html">&lt;blockquote cite="/fr/docs/Web/HTML/Element/blockquote"&gt;
   &lt;p&gt;L'&lt;strong&gt;Élément HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;&lt;/strong&gt; (ou &lt;em&gt;Élément HTML bloc de citation&lt;/em&gt;)
      indique que le bloc de texte inclus est une citation étendue.&lt;/p&gt;
 &lt;/blockquote&gt;</pre>
@@ -239,7 +239,7 @@ de citation&lt;/em&gt;) indique que le bloc de texte inclus est une citation ét
 
 <p>Les citations en ligne fonctionnent exactement de la même manière, sauf que l'on utilise l'élément {{htmlelement("q")}}. Par exemple, le balisage suivant contient une citation de la page MDN <code>&lt;q&gt;</code> :</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;L'élément citation — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — est &lt;q cite="/fr/docs/Web/HTML/Element/q"&gt;prévu
+<pre class="brush: html">&lt;p&gt;L'élément citation — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — est &lt;q cite="/fr/docs/Web/HTML/Element/q"&gt;prévu
 pour de courtes citations ne nécessitant pas un nouvel alinéa&lt;/q&gt;.&lt;/p&gt;</pre>
 
 <p>Le navigateur l'affichera par défaut comme du texte normal entre guillemets pour indiquer une citation, comme ceci :</p>
@@ -250,7 +250,7 @@ pour de courtes citations ne nécessitant pas un nouvel alinéa&lt;/q&gt;.&lt;/p
 
 <p>Le contenu de l'attribut {{htmlattrxref("cite","blockquote")}} semble utile, malheureusement les navigateurs, lecteurs d'écran, etc. n'en font pas grand chose. Il n'y a pas possibilité de faire afficher différemment au navigateur le contenu d'un <code>cite</code> sans utiliser votre propre JavaScript ou style CSS. Si vous souhaitez rendre disponible la source de la citation sur votre page, la meilleure façon de le faire est d'inclure l'élément {{htmlelement("cite")}} à coté de l'élément citation. Cet élément est vraiment destiné à contenir le nom de la source de la citation — c'est-à-dire le nom du livre ou de la personne auteur de la citation — mais il n'y a aucune raison pour laquelle vous n'avez pas pu lier le texte à l'intérieur de <code>&lt;cite&gt;</code> à la source de la citation d'une manière ou d'une autre :</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Selon la &lt;a href="/fr/docs/Web/HTML/Element/blockquote"&gt;
+<pre class="brush: html">&lt;p&gt;Selon la &lt;a href="/fr/docs/Web/HTML/Element/blockquote"&gt;
 &lt;cite&gt;page blockquote du MDN&lt;/cite&gt;&lt;/a&gt;:
 &lt;/p&gt;
 
@@ -288,7 +288,7 @@ pour de courtes citations ne nécessitant pas un nouvel alinéa&lt;/q&gt;.&lt;/p
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Zone de rendu&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Zone de rendu&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -307,7 +307,7 @@ pour de courtes citations ne nécessitant pas un nouvel alinéa&lt;/q&gt;.&lt;/p
   &lt;input id="solution" type="button" value="Voir la solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -327,7 +327,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -412,7 +412,7 @@ textarea.onkeyup = function(){
 
 <p>Un autre élément assez commun rencontré en se promenant dans le Web est l'élément {{htmlelement("abbr")}}}}. Il s'utilise pour entourer une abréviation ou un acronyme et donner le développement complet du terme (inclus dans un attribut {{htmlattrxref("title")}}}. Voyons quelques exemples :</p>
 
-<pre class="notranslate">&lt;p&gt;Nous utilisons l'&lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt; pour structurer nos documents web.&lt;/p&gt;
+<pre>&lt;p&gt;Nous utilisons l'&lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt; pour structurer nos documents web.&lt;/p&gt;
 
 &lt;p&gt;Je pense que le &lt;abbr title="Révérend"&gt;R.&lt;/abbr&gt; Green l'a fait dans la cuisine avec une tronçonneuse.&lt;/p&gt;</pre>
 
@@ -435,7 +435,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Playable_code_3">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Zone de rendu&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Zone de rendu&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -452,7 +452,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Voir la solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -472,7 +472,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -557,13 +557,13 @@ textarea.onkeyup = function(){
 
 <p>HTML possède l'élément {{htmlelement("address")}} pour baliser des détails de contact. Enveloppez simplement vos coordonnées, par exemple :</p>
 
-<pre class="brush: html notranslate">&lt;address&gt;
+<pre class="brush: html">&lt;address&gt;
   &lt;p&gt;Chris Mills, Manchester, The Grim North, UK&lt;/p&gt;
 &lt;/address&gt;</pre>
 
 <p>Une chose à retenir cependant : l'élément {{htmlelement("address")}} est destiné à marquer les coordonnées de la personne ayant écrit le document HTML et non pas <em>n'importe quelle</em> adresse. Donc, ce qui précède ne serait acceptable que si Chris avait écrit le document sur lequel ce balisage apparaît. Notez que serait également acceptable ce qui suit :</p>
 
-<pre class="brush: html notranslate">&lt;address&gt;
+<pre class="brush: html">&lt;address&gt;
   &lt;p&gt;Page écrite par &lt;a href="../authors/chris-mills/"&gt;Chris Mills&lt;/a&gt;.&lt;/p&gt;
 &lt;/address&gt;</pre>
 
@@ -571,7 +571,7 @@ textarea.onkeyup = function(){
 
 <p>Vous devrez parfois utiliser exposants et indices pour marquer des éléments comme dates, formules chimiques et équations mathématiques de façon à ce qu'ils aient une bonne signification. On effectue ce travail à l'aide des éléments {{htmlelement("sup")}} et {{htmlelement("sub")}}. Par exemple :</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Ma date de naissance est le 1&lt;sup&gt;er&lt;/sup&gt; mai 2001.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Ma date de naissance est le 1&lt;sup&gt;er&lt;/sup&gt; mai 2001.&lt;/p&gt;
 &lt;p&gt;La formule chimique de la caféine est C&lt;sub&gt;8&lt;/sub&gt;H&lt;sub&gt;10&lt;/sub&gt;N&lt;sub&gt;4&lt;/sub&gt;O&lt;sub&gt;2&lt;/sub&gt;.&lt;/p&gt;
 &lt;p&gt;Si x&lt;sup&gt;2&lt;/sup&gt; égale 9, x doit valoir 3 ou -3.&lt;/p&gt;</pre>
 
@@ -597,7 +597,7 @@ textarea.onkeyup = function(){
 
 <p>Voyons quelques exemples. Essayez de jouer avec cela (faites une copie de notre fichier exemple <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html">other-semantics.html</a>) :</p>
 
-<pre class="brush: html notranslate">&lt;pre&gt;&lt;code&gt;var para = document.querySelector('p');
+<pre class="brush: html">&lt;pre&gt;&lt;code&gt;var para = document.querySelector('p');
 
 para.onclick = function() {
   alert('Owww, arrête de me toucher !');
@@ -623,7 +623,7 @@ para.onclick = function() {
 
 <p>HTML fournit également l'élément {{htmlelement("time")}}} pour marquer les heures et les dates dans un format lisible par machine. Par exemple :</p>
 
-<pre class="brush: html notranslate">&lt;time datetime="2016-01-20"&gt;20 janvier 2016&lt;/time&gt;</pre>
+<pre class="brush: html">&lt;time datetime="2016-01-20"&gt;20 janvier 2016&lt;/time&gt;</pre>
 
 <p>En quoi est-ce utile ? Eh bien, il y a beaucoup de façons différentes dont les humains écrivent les dates. La date ci-dessus pourrait s'écrire comme suit :</p>
 
@@ -643,7 +643,7 @@ para.onclick = function() {
 
 <p>L'exemple de base ci-dessus ne fournit qu'une simple date lisible par machine, mais il y a beaucoup d'autres options possibles, par exemple :</p>
 
-<pre class="brush: html notranslate">&lt;!-- Simple date standard --&gt;
+<pre class="brush: html">&lt;!-- Simple date standard --&gt;
 &lt;time datetime="2016-01-20"&gt;20 janvier 2016&lt;/time&gt;
 &lt;!-- Juste l'année et le mois --&gt;
 &lt;time datetime="2016-01"&gt;janvier 2016&lt;/time&gt;

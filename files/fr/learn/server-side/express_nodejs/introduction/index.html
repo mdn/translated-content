@@ -276,7 +276,7 @@ console.log('Second');</pre>
 
 <p>Il est souvent utile de regrouper les gestionnaires de route pour une partie particulière d'un site et d'y accéder en utilisant un préfixe de route commun (par exemple, un site avec un Wiki pourrait avoir toutes les routes liées au wiki dans un seul fichier et les faire accéder avec un préfixe de route de <em>/wiki/</em>). Dans <em>Express</em>, ceci est réalisé en utilisant l'objet <code><a href="https://expressjs.com/fr/guide/routing.html#express-router">express.Router</a></code>. Par exemple, nous pouvons créer notre route wiki dans un module nommé <strong>wiki.js</strong>, puis exporter l'objet <code>Router</code>, comme indiqué ci-dessous :</p>
 
-<pre class="brush: js notranslate">// wiki.js - Module route du wiki
+<pre class="brush: js">// wiki.js - Module route du wiki
 
 const express = require('express');
 const router = express.Router();

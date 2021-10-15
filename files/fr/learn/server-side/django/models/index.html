@@ -64,7 +64,7 @@ translation_of: Learn/Server-side/Django/Models
 
 <p>Les objets sont <strong>toujours</strong> définis dans le fichier <strong>models.py</strong> de chaque application. Ils sont conçus comme sous-classe de <code>django.db.models.Model</code>, et sont caractérisés par des attributs ou champs, des méthodes et des métadonnées. L'extrait ci-dessous définit donc la classe <code>MyModelName</code>:</p>
 
-<pre class="notranslate">from django.db import models
+<pre>from django.db import models
 
 class MyModelName(models.Model):
     """A typical class defining a model, derived from the Model class."""
@@ -92,7 +92,7 @@ class MyModelName(models.Model):
 
 <p>Chaque objet peut contenir autant d'attributs que de besoin et de quelque type qu'il soit. Chaque attribut correspondra à une colonne - <em>ou champ</em> - dans une table de la base de données. Chaque enregistrement, ou ligne dans la table, correspondra à une instance de la classe d'objet et chaque champ sera évalué. Un champ est de la forme :</p>
 
-<pre class="brush: js notranslate">my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')</pre>
+<pre class="brush: js">my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')</pre>
 
 <p>Dans l'exemple ci-dessus, le champs est une chaîne de caractères — de type <code>models.CharField</code> —  dont le nom est <code>my_field_name</code>. Les champs ont des types pré-définis représentés par une classe d'objet Django qui va permettre de caractériser une champ du modèle de données. Cela permet aussi de valider les données qui seront fournies via les formulaires du site web décrits avec le langage HTML. Les classes caractérisant les type de champs peuvent accepter des paramètres pour préciser les contraintes appliquées à ce champ. Dans cet exemple, deux arguments sont indiqués :</p>
 
@@ -143,7 +143,7 @@ class MyModelName(models.Model):
 
 <p>Vous avez la capacité de déclarer des métadonnées à l'aide de la classe  <code>class Meta</code>, comme précisé ci-dessous :</p>
 
-<pre class="brush: python notranslate">class Meta:
+<pre class="brush: python">class Meta:
     ordering = ['-my_field_name']
 </pre>
 
@@ -151,13 +151,13 @@ class MyModelName(models.Model):
 
 <p>Voici un exemple de classe de livre par titre et dates de parution :</p>
 
-<pre class="brush: python notranslate">ordering = ['title', '-pubdate']</pre>
+<pre class="brush: python">ordering = ['title', '-pubdate']</pre>
 
 <p>Les livres sont présenté dans l'ordre alphabétique de leur titre, puis dans l'ordre chronologique du plus récent au plus ancien.</p>
 
 <p>Un autre attribut très utile est celui d'un nom vernaculaire pour la classe, <code>verbose_name</code>  peut être au singulier et au pluriel :</p>
 
-<pre class="brush: python notranslate">verbose_name = 'BetterName'</pre>
+<pre class="brush: python">verbose_name = 'BetterName'</pre>
 
 <p>D'autres attributs vous permettent de compléter des droits d'accès à ceux appliqués par défaut, des classement s'appuyant sur le comportement d'autres champs, ou de définir une classe abstraite (c'est-à-dire qui n'aura pas de transcription dans une table et des enregistrement, mais servira de support à d'autres classes partageant des éléments communs).</p>
 
@@ -171,12 +171,12 @@ class MyModelName(models.Model):
 
 <p><strong>A minima, chaque modèle de données - c'est-à-dire une classe héritée de la classe model du module django.db - vous devez définir la méthode <code>__str__()</code> pour permettre d'afficher un élément compréhensible qui représentera l'instance de la classe.</strong> Cette méthode est aussi utilisée au niveau du site d'administration pour afficher les instances de la classe administrée. La plupart du temps, cette méthode retourne un titre ou nom associé à aux objets de la classe.</p>
 
-<pre class="brush: python notranslate">def __str__(self):
+<pre class="brush: python">def __str__(self):
     return self.field_name</pre>
 
 <p>Une seconde méthode très utilisée dans le cadriciel Django est <code>get_absolute_url()</code>. Elle permet de fournir un URL pour afficher dans le site web le contenu de de chacun des enregistrements associés au modèle de données décrit. Si vous utilisez cette méthode, Django ajoutera un bouton pour permet de visualiser le détail des enregistrements. Classiquement, une méthode <code>get_absolute_url()</code> est de la forme :</p>
 
-<pre class="brush: python notranslate">def get_absolute_url(self):
+<pre class="brush: python">def get_absolute_url(self):
     """Returns the url to access a particular instance of the model."""
     return reverse('model-detail-view', args=[str(self.id)])
 </pre>
@@ -197,7 +197,7 @@ class MyModelName(models.Model):
 
 <p>Pour créer un enregistrement, il suffit de définir une instance de la classe d'objet et de la sauvegarder avec la méthode <code>save()</code>.</p>
 
-<pre class="brush: python notranslate"># Créer un nouvel enregistrement en utilisant la méthode d'instanciation.
+<pre class="brush: python"># Créer un nouvel enregistrement en utilisant la méthode d'instanciation.
 record = MyModelName(my_field_name="Instance #1")
 
 # Sauvegarde de l'enregistrement en base de données.
@@ -210,7 +210,7 @@ record.save()
 
 <p>Les champs de l'enregistrement sont accessibles à l'aide des attributs de la classe d'objet. En utilisant la syntaxe pointée, vous pouvez modifier les valeurs des champs de l'enregistrement. Vous devez utiliser la méthode <code>save()</code> pour enregistrer en base de données les modifications.</p>
 
-<pre class="brush: python notranslate"># Accès au valeur des champs par le biais des attributs de classe Python.
+<pre class="brush: python"># Accès au valeur des champs par le biais des attributs de classe Python.
 print(record.id) # devrez retourner la valeur 1 pour le premier en enregistrement.
 print(record.my_field_name) # devrez afficher 'Instance #1'
 
@@ -228,12 +228,12 @@ record.save()</pre>
 
 <p>Vous pouvez obtenir tous les enregistrements d'un modèle de données sous la forme d'un jeu de données ou <code>QuerySet</code>, en utilisant <code>objects.all()</code>. Un <code>QuerySet</code> est un objet itérable, c'est-à-dire jeu de données contenant des objets que l'on peut parcourir.</p>
 
-<pre class="brush: python notranslate">all_books = Book.objects.all()
+<pre class="brush: python">all_books = Book.objects.all()
 </pre>
 
 <p>Un filtre Django ou <code>filter()</code> est une méthode qui permet de sélectionner un jeu de données répondant à des critères (texte ou numérique) de sélection. Par exemple, nus filtrons les livres dont le titre contient le mot "wild", puis nous dénombrons le jeu de données.</p>
 
-<pre class="brush: python notranslate">wild_books = Book.objects.filter(title__contains='wild')
+<pre class="brush: python">wild_books = Book.objects.filter(title__contains='wild')
 number_wild_books = wild_books.count()
 </pre>
 
@@ -241,7 +241,7 @@ number_wild_books = wild_books.count()
 
 <p>Le marqueur "double souligné" permet de construire une chaîne de navigation à travers les objets lorsque le champ considéré est une clé étrangère (<code>ForeignKey</code>). C'est systématiquement le cas lorsque l'on doit filtrer sur une propriété d'un attribut dans une relation un-à-un. Dans ce cas (exemple ci-dessous), vous identifiez l'attribut de la clé étrangère par le biais d'un "double souligné" qui indique le champs à filter. L'exemple ci-dessous indique que vous filtrez les livres selon le nom (<code>name</code>) du genre (<code>genre</code>) du livre.</p>
 
-<pre class="brush: python notranslate"># Le criètre s'appliquera sur les genres contenant 'fiction' i.e. : Fiction, Science fiction, non-fiction etc.
+<pre class="brush: python"># Le criètre s'appliquera sur les genres contenant 'fiction' i.e. : Fiction, Science fiction, non-fiction etc.
 books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong>__</strong>icontains='fiction')
 </pre>
 
@@ -255,7 +255,7 @@ books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong
 
 <p>Cette section est consacrée au démarrage de la définition de l'application LocalLibrary qui permet de gérer une petite bibliothèque locale. Ouvrez le fichier <em>models.py </em>présent dans le répertoire<em> /locallibrary/catalog/</em>. Le code par défaut est déjà en place au début du document et permet d'importer les éléments du module models de django.</p>
 
-<pre class="brush: python notranslate">from django.db import models
+<pre class="brush: python">from django.db import models
 
 # Create your models here.</pre>
 
@@ -263,7 +263,7 @@ books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong
 
 <p>Cet objet est utilisé pour décrire et enregistrer le genre littéraire des livres — par exemple une fiction, une polard ou un roman. Comme cela a été évoqué précédemment, nous créons un modèle de données plutôt que de gérer cela à l'aide de texte libre ou de codage en dur. Copiez le texte ci-dessous à la fin du fichier <em>models.py</em>.</p>
 
-<pre class="brush: python notranslate">class Genre(models.Model):
+<pre class="brush: python">class Genre(models.Model):
     """Cet objet représente une catégorie ou un genre littéraire."""
     name = models.CharField(max_length=200, help_text='Enter a book genre (e.g. Science Fiction)')
 
@@ -278,7 +278,7 @@ books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong
 
 <p>Comme précédemment, vous pouvez copier le descriptif de l'objet Book à la fin du fichier models.py. Cet objet représente un livre dans sa description et non une copie en rayon disponible au prêt. Par conséquent, l'objet contient un titre et son identifiant international (isbn dont on notera l'étiquette en majuscule pour ne pas avoir "Isbn" à la place) sous forme de chaînes de caractère. De plus, l'objet contient un résumé sous forme d'une chaîne de caractère de longueur non explicite pour traiter de résumés plus ou moins long.</p>
 
-<pre class="brush: python notranslate">from django.urls import reverse # Cette fonction est utilisée pour formater les URL
+<pre class="brush: python">from django.urls import reverse # Cette fonction est utilisée pour formater les URL
 
 class Book(models.Model):
     """Cet objet représente un livre (mais ne traite pas les copies présentes en rayon)."""
@@ -324,7 +324,7 @@ class Book(models.Model):
  <li>Une chaîne de caractères (<code>CharField)</code> pour enregistrer les mentions légales (imprint) du livre.</li>
 </ul>
 
-<pre class="brush: python notranslate">import uuid # Ce module est nécessaire à la gestion des identifiants unique (RFC 4122) pour les copies des livres
+<pre class="brush: python">import uuid # Ce module est nécessaire à la gestion des identifiants unique (RFC 4122) pour les copies des livres
 
 class BookInstance(models.Model):
     """Cet objet permet de modéliser les copies d'un ouvrage (i.e. qui peut être emprunté)."""
@@ -379,7 +379,7 @@ class BookInstance(models.Model):
 
 <p>Terminons en copiant la description de l'objet <code>Author</code> à la fin du fichier <strong>models.py</strong>.</p>
 
-<pre class="brush: python notranslate">class Author(models.Model):
+<pre class="brush: python">class Author(models.Model):
     """Model representing an author."""
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
@@ -404,7 +404,7 @@ class BookInstance(models.Model):
 
 <p>Les objets sont tous décrits dans le fichier dédié à la modélisation. Pour qu'elles soient effectives, il est nécessaire d'exécuter les deux commandes python qui gèrent les migrations de la base de données.</p>
 
-<pre class="notranslate"><code>python3 manage.py makemigrations
+<pre><code>python3 manage.py makemigrations
 python3 manage.py migrate</code></pre>
 
 <h2 id="Défi_—_Introduire_les_langues">Défi — Introduire les langues</h2>
@@ -422,7 +422,7 @@ python3 manage.py migrate</code></pre>
 
 <p>Une dernière chose... n'oubliez pas d'appliquer les modifications en base de données</p>
 
-<pre class="notranslate"><code>python3 manage.py makemigrations</code><code>
+<pre><code>python3 manage.py makemigrations</code><code>
 python3 manage.py migrate</code></pre>
 
 <ul>

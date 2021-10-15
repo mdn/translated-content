@@ -50,7 +50,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks
 
 <p>Un lien élémentaire se crée en intégrant le texte (ou tout autre contenu, cf. {{anch("Liens de niveau bloc")}}) que vous voulez transformer en lien dans un élément {{htmlelement("a")}} et en lui affectant un attribut {{htmlattrxref("href", "a")}} (également connu comme étant une <strong>Hypertext Reference</strong>) contenant l'adresse web vers laquelle vous voulez que le lien pointe.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Je suis en train de créer un lien à
+<pre class="brush: html">&lt;p&gt;Je suis en train de créer un lien à
 &lt;a href="https://www.mozilla.org/fr/"&gt;la page d'accueil Mozilla&lt;/a&gt;.
 &lt;/p&gt;</pre>
 
@@ -62,7 +62,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks
 
 <p>L'autre attribut qu'il est possible d'ajouter à un lien est <code>title</code> ; il est destiné à contenir des informations utiles supplémentaires à propos du lien, comme le type d'informations contenes dans la page ou ce qu'il faut savoir. Par exemple :</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Je suis en train de créer un lien à
+<pre class="brush: html">&lt;p&gt;Je suis en train de créer un lien à
 &lt;a href="https://www.mozilla.org/fr/"
    title="Le meilleur endroit pour trouver plus d'informations sur la
   mission de Mozilla et la manière de contribuer"&gt;la page d'accueil Mozilla&lt;/a&gt;.
@@ -90,7 +90,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks
 
 <p>Comme mentionné précédemment, vous pouvez transformer à peu près tout contenu en un lien, même des <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started#éléments_bloc_ou_en_ligne">éléments bloc </a>. Si vous avez une image que vous voulez transformer en lien, vous avez juste à mettre l'image entre les balises <code>&lt;a&gt;&lt;/a&gt;</code>.</p>
 
-<pre class="brush: html notranslate">&lt;a href="https://www.mozilla.org/fr/"&gt;
+<pre class="brush: html">&lt;a href="https://www.mozilla.org/fr/"&gt;
   &lt;img src="mozilla-image.png" alt="logo mozilla pointant sur la page d'accueil mozilla"&gt;
 &lt;/a&gt;</pre>
 
@@ -116,18 +116,18 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks
  <li>
   <p><strong>Dans un même dossier </strong>: si vous voulez inclure un hyperlien dans <code>index.html</code> (celui de plus haut niveau) pointant vers <code>contacts.html</code>, il suffit d'indiquer uniquement le nom du fichier auquel vous voulez le lier, car il est dans le même répertoire que le fichier actuel. Ainsi, l'URL à utiliser est <code>contacts.html</code> :</p>
 
-  <pre class="brush: html notranslate">&lt;p&gt;Voulez‑vous rencontrer un membre du personnel en particulier ?
+  <pre class="brush: html">&lt;p&gt;Voulez‑vous rencontrer un membre du personnel en particulier ?
 Voyez comment faire sur notre page &lt;a href="contacts.html"&gt;Contacts&lt;/a&gt;.&lt;/p&gt;</pre>
  </li>
  <li>
   <p><strong>Descendre dans les sous-répertoires </strong>: si vous désirez inclure un hyperlien dans <code>index.html</code> (<code>celui</code> de plus haut niveau) pointant vers <code>projects/index.html</code>, vous avez besoin de descendre dans le dossier<code>projects</code> avant d'indiquer le fichier auquel vous voulez vous lier. Cela se fait en indiquant le nom du dossier, suivi d'une barre oblique normale, puis le nom du fichier. Donc l'URL à utiliser sera <code>projects/index.html</code> :</p>
 
-  <pre class="brush: html notranslate">&lt;p&gt;Visitez la &lt;a href="projects/index.html"&gt;page d'accueil&lt;/a&gt; de mon projet.&lt;/p&gt;</pre>
+  <pre class="brush: html">&lt;p&gt;Visitez la &lt;a href="projects/index.html"&gt;page d'accueil&lt;/a&gt; de mon projet.&lt;/p&gt;</pre>
  </li>
  <li>
   <p><strong>Monter dans les dossiers parents </strong>: si vous voulez inclure un hyperlien dans <code>projects/index.html</code> qui pointe vers <code>pdfs/projects-brief.pdf</code>, vous aurez besoin de monter dans le répertoire au niveau au‑dessus, puis de descendre dans le dossier <code>pdfs</code>. « Monter dans le répertoire au niveau au‑dessus » est indiqué avec deux points — <code>..</code> —, de sorte que l'URL à utiliser sera <code>../pdfs/project‑brief.pdf</code> :</p>
 
-  <pre class="brush: html notranslate">&lt;p&gt;Voici un lien vers mon &lt;a href="../pdfs/project-brief.pdf"&gt;sommaire de projet&lt;/a&gt;.&lt;/p&gt;</pre>
+  <pre class="brush: html">&lt;p&gt;Voici un lien vers mon &lt;a href="../pdfs/project-brief.pdf"&gt;sommaire de projet&lt;/a&gt;.&lt;/p&gt;</pre>
  </li>
 </ul>
 
@@ -139,15 +139,15 @@ Voyez comment faire sur notre page &lt;a href="contacts.html"&gt;Contacts&lt;/a&
 
 <p>Il est possible de faire un lien vers une partie donnée d'un document HTML (désignée du terme <strong>fragment de document</strong>), plutôt que juste le haut du document. Pour ce faire, vous devrez d'abord assigner un attribut {{htmlattrxref("id")}} à l'élément sur lequel vous voulez pointer. Il est généralement logique d'établir un lien vers une rubrique précise, ainsi cela ressemble à quelque chose comme :</p>
 
-<pre class="brush: html notranslate">&lt;h2 id="Adresse_mailing"&gt;Adresse de mailing&lt;/h2&gt;</pre>
+<pre class="brush: html">&lt;h2 id="Adresse_mailing"&gt;Adresse de mailing&lt;/h2&gt;</pre>
 
 <p>Puis, pour faire un lien vers cet <code>id</code> précisément, il convient de l'indiquer à la fin de l'URL, précédé d'un croisillon (#) :</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Vous voulez nous écrire une lettre ? Utilisez notre &lt;a href="contacts.html#Adresse_mailing"&gt;adresse de contact&lt;/a&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Vous voulez nous écrire une lettre ? Utilisez notre &lt;a href="contacts.html#Adresse_mailing"&gt;adresse de contact&lt;/a&gt;.&lt;/p&gt;</pre>
 
 <p>Vous pouvez même utiliser une référence au fragment de document seul pour faire un lien vers <em>une autre partie du même document</em> :</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Vous trouverez n l'&lt;a href="#Adresse_mailing"&gt;adresse de mailing&lt;/a&gt; de notre société au bas de cette page.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Vous trouverez n l'&lt;a href="#Adresse_mailing"&gt;adresse de mailing&lt;/a&gt; de notre société au bas de cette page.&lt;/p&gt;</pre>
 
 <h3 id="URL_absolue_vs._URL_relative">URL absolue vs. URL relative</h3>
 
@@ -184,13 +184,13 @@ Voyez comment faire sur notre page &lt;a href="contacts.html"&gt;Contacts&lt;/a&
 
 <p><em><strong>Bon</strong> texte de lien:</em> <a href="https://firefox.com">Télécharger Firefox</a></p>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;a href="https://firefox.com/"&gt;
+<pre class="brush: html">&lt;p&gt;&lt;a href="https://firefox.com/"&gt;
   Télécharger Firefox
 &lt;/a&gt;&lt;/p&gt;</pre>
 
 <p><em><strong>Mauvais</strong> texte de lien :</em> <a href="https://firefox.com/">Cliquer ici </a>pour télécharger Firefox</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;a href="https://firefox.com/"&gt;
+<pre class="brush: html">&lt;p&gt;&lt;a href="https://firefox.com/"&gt;
   Cliquer ici
 &lt;/a&gt;
 pour télécharger Firefox&lt;/p&gt;
@@ -225,7 +225,7 @@ pour télécharger Firefox&lt;/p&gt;
 
 <p>Voici quelques exemples suggérant les genres de texte pouvant être employé :</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;a href=&quot;http://www.exemple.com/rapport-volumineux.pdf&quot;&gt;
+<pre class="brush: html">&lt;p&gt;&lt;a href=&quot;http://www.exemple.com/rapport-volumineux.pdf&quot;&gt;
   Télécharger le rapport des ventes (PDF, 10Mo)
 &lt;/a&gt;&lt;/p&gt;
 
@@ -241,7 +241,7 @@ pour télécharger Firefox&lt;/p&gt;
 
 <p>Quand vous faites un lien avec une ressource qui doit être téléchargée plutôt qu'ouverte dans le navigateur, vous pouvez utiliser l'attribut <code>download</code> pour fournir un nom d'enregistrement par défaut. Voici un exemple avec un lien de téléchargement vers la version Windows la plus récente de Firefox :</p>
 
-<pre class="notranslate"><code>&lt;a href="https://download.mozilla.org/?product=firefox-latest-ssl&amp;os=win64&amp;lang=fr-FR"
+<pre><code>&lt;a href="https://download.mozilla.org/?product=firefox-latest-ssl&amp;os=win64&amp;lang=fr-FR"
    download="firefox-latest-64bit-installer.exe"&gt;
   Télécharger la version de Firefox pour Windows la plus récente (64-bit)(français, France)
 &lt;/a&gt;</code></pre>
@@ -282,7 +282,7 @@ pour télécharger Firefox&lt;/p&gt;
 
 <p>Sous sa forme la plus basique et la plus communément utilisée, un lien <code>mailto:</code> indique simplement l'adresse du destinataire voulu. Par exemple :</p>
 
-<pre class="brush: html notranslate">&lt;a href="mailto:nullepart@mozilla.org"&gt;Envoyer un courriel à nullepart&lt;/a&gt;
+<pre class="brush: html">&lt;a href="mailto:nullepart@mozilla.org"&gt;Envoyer un courriel à nullepart&lt;/a&gt;
 </pre>
 
 <p>Ceci donne un résultat qui ressemble à ceci : <a href="mailto:nowhere@mozilla.org">Envoyer un courriel à nullepart</a>.</p>
@@ -295,7 +295,7 @@ pour télécharger Firefox&lt;/p&gt;
 
 <p>Voici un exemple incluant cc (carbon copy), bcc (blind cc), subject (sujet) et body :</p>
 
-<pre class="brush: html notranslate">&lt;a href="mailto:nullepart@mozilla.org?cc=nom2@rapidtables.com&amp;bcc=nom3@rapidtables.com&amp;subject=L%27objet%20du%20courriel&amp;body=Le%20corps%20du%20courriel"&gt;
+<pre class="brush: html">&lt;a href="mailto:nullepart@mozilla.org?cc=nom2@rapidtables.com&amp;bcc=nom3@rapidtables.com&amp;subject=L%27objet%20du%20courriel&amp;body=Le%20corps%20du%20courriel"&gt;
   Envoyer un mail avec copie, copie cachée, sujet et corps de message
 &lt;/a&gt;</pre>
 

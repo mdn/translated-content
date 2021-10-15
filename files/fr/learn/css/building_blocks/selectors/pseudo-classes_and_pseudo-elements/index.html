@@ -35,7 +35,7 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
 
 <p>Les pseudo-classes sont signalées par un mot clé commençant par deux points <code>:</code></p>
 
-<pre class="notranslate">:<em>pseudo-class-name</em></pre>
+<pre>:<em>pseudo-class-name</em></pre>
 
 <h3 id="Exemple_dune_pseudo-classe_élémentaire">Exemple d'une pseudo-classe élémentaire </h3>
 
@@ -68,7 +68,7 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
 
 <p>Les pseudo-éléments se comportent de manière similaire, même s'ils se comportent comme si vous aviez ajouté un tout nouvel élément HTML dans le balisage, au lieu d'appliquer une classe à des éléments existants. Les pseudo-éléments commencent avec un double deux-points <code>::</code>.</p>
 
-<pre class="notranslate"><em>::pseudo-element-name</em></pre>
+<pre><em>::pseudo-element-name</em></pre>
 
 <div class="blockIndicator note">
 <p><strong>Note </strong>: Certains anciens pseudo-éléments utilisaient un simple deux-points, vous pouvez donc parfois rencontrer cette syntaxe dans du code ou des exemples. Les navigateurs modernes supportent les anciens pseudo-éléments avec un simple ou double deux-points pour assurer la compatibilité.</p>
@@ -88,7 +88,7 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
 
 <p>Si vous souhaitez mettre en gras la première ligne du premier paragraphe, vous pouvez enchaîner les sélecteurs <code>:first-child</code> et <code>::first-line</code> Essayez de modifier l'exemple précédent en direct pour qu'il utilise le CSS suivant. Nous souhaitons sélectionner la première ligne du premier élément <code>&lt;p&gt;</code>, qui se trouve à l'intérieur d'un élément <code>&lt;article&gt;</code></p>
 
-<pre class="brush: css notranslate"><code>article p:first-child::first-line {
+<pre class="brush: css"><code>article p:first-child::first-line {
   font-size: 120%;
   font-weight: bold;
 }</code></pre>

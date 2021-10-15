@@ -108,7 +108,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Voici un exemple élémentaire de champ texte sur une ligne :</p>
 
-<pre class="brush: html notranslate">&lt;input type="text" id="comment" name="comment" value="Je suis un champ texte"&gt;</pre>
+<pre class="brush: html">&lt;input type="text" id="comment" name="comment" value="Je suis un champ texte"&gt;</pre>
 
 <p>Les champs texte sur une ligne n'ont qu'une seule contrainte : si vous saisissez du texte avec des sauts de ligne, le navigateur les supprime avant d'envoyer les données.</p>
 
@@ -120,7 +120,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Ce type de champ est défini en donnant la valeur <code>email</code> à l'attribut {{htmlattrxref("type","input")}} :</p>
 
-<pre class="brush: html notranslate">    &lt;input type="email" <code class="language-html">id="email" name="email" </code>multiple&gt;</pre>
+<pre class="brush: html">    &lt;input type="email" <code class="language-html">id="email" name="email" </code>multiple&gt;</pre>
 
 <p>Avec ce <code>type</code> , l'utilisateur doit saisir un e‑mail valide dans le champ. Tout autre type de contenu amène le navigateur à émettre une erreur lors de la soumission du formulaire. Notez que cette validation s'opère côté client et est faite par le navigateur :</p>
 
@@ -138,7 +138,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Ce type de champ est défini en donnant la valeur <code>password</code> à l'attribut {{htmlattrxref("type","input")}} :</p>
 
-<pre class="brush: html notranslate">    &lt;input type="password" id="pwd" name="pwd"&gt;</pre>
+<pre class="brush: html">    &lt;input type="password" id="pwd" name="pwd"&gt;</pre>
 
 <p>Aucune contrainte de saisie du texte n'est ajoutée, mais la valeur entrée dans le champ est masquée (avec des points ou des astérisques) afin qu'elle ne puisse pas être lue par d'autres.</p>
 
@@ -150,7 +150,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Ce type de champ se définit avec la valeur <code>search</code> de l'attribut {{htmlattrxref("type","input")}} :</p>
 
-<pre class="brush: html notranslate">    &lt;input type="search" id="search" name="search"&gt;</pre>
+<pre class="brush: html">    &lt;input type="search" id="search" name="search"&gt;</pre>
 
 <p>La principale différence entre un champ textuel et un champ de recherche est dans l'apparence — souvent, les champs de recherche sont affichés avec des coins arrondis, et/ou avec une « × » à cliquer pour effacer la valeur entrée. Toutefois, une fonction est aussi ajoutée : les valeurs saisies peuvent être automatiquement enregistrées afin d'être utilisées pour compléter des recherches sur plusieurs pages du même site.</p>
 
@@ -160,7 +160,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Ce type de champ se définit en donnant la valeur <code>tel</code> à l'attribut {{htmlattrxref("type","input")}} :</p>
 
-<pre class="brush: html notranslate">    &lt;input type="tel" id="tel" name="tel"&gt;</pre>
+<pre class="brush: html">    &lt;input type="tel" id="tel" name="tel"&gt;</pre>
 
 <p>À cause de la grande variété de formats de numéros de téléphones à travers le monde, ce type de champ n'ajoute pas de contrainte à la valeur saisie par l'utilisateur. C'est principalement une différence sémantique, bien que sur certains appareils (notamment mobiles) un clavier virtuel différent, mieux adapté à la saisie de numéros de téléphone, puisse être présenté.</p>
 
@@ -168,7 +168,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Ce type de champ se définit en donnant la valeur <code>url</code> à l'attribut {{htmlattrxref("type","input")}} :</p>
 
-<pre class="brush: html notranslate">    &lt;input type="url" id="url" name="url"&gt;</pre>
+<pre class="brush: html">    &lt;input type="url" id="url" name="url"&gt;</pre>
 
 <p>Il ajoute une contrainte de validation spéciale du champ ; le navigateur renvoie une erreur si une URL invalide est saisie.</p>
 
@@ -182,7 +182,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Un champ texte sur plusieurs lignes  se définit avec l'élément {{HTMLElement("textarea")}}, et non avec l'élément {{HTMLElement("input")}}.</p>
 
-<pre class="brush: html notranslate">    &lt;textarea cols="30" rows="10"&gt;&lt;/textarea&gt;</pre>
+<pre class="brush: html">    &lt;textarea cols="30" rows="10"&gt;&lt;/textarea&gt;</pre>
 
 <p>La principale différence entre un champ <code>textarea</code> et un champ monoligne est que, dans un textarea, l'utilisateur peut saisir du texte avec des sauts de ligne en dur (c'est à dire en pressant la touche <code>Retour</code>).</p>
 
@@ -239,7 +239,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Une boîte à sélection est créée avec l'élément {{HTMLElement("select")}} complétée d'un ou plusieurs éléments enfants {{HTMLElement("option")}} définissant les valeurs possibles.</p>
 
-<pre class="brush: html notranslate">    &lt;select&gt;
+<pre class="brush: html">    &lt;select&gt;
       &lt;option&gt;Banane&lt;/option&gt;
       &lt;option&gt;Cerise&lt;/option&gt;
       &lt;option&gt;Citron&lt;/option&gt;
@@ -247,7 +247,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Si nécessaire, la valeur par défaut de la boîte de sélection peut être définie en utilisant l'attribut {{htmlattrxref("selected","option")}} dans l'élément {{HTMLElement("option")}} désiré. Les éléments {{HTMLElement("option")}} peuvent être imbriqués dans des éléments {{HTMLElement("optgroup")}} pour créer des groupes de valeurs associées :</p>
 
-<pre class="brush: html notranslate">    &lt;select&gt;
+<pre class="brush: html">    &lt;select&gt;
       &lt;optgroup label="Fruits"&gt;
         &lt;option&gt;Banane&lt;/option&gt;
         &lt;option selected&gt;Cerise&lt;/option&gt;
@@ -272,7 +272,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Dans ce cas toutefois, la boîte d'utilisateur n'affiche plus les valeurs sous forme d'un menu déroulant. Les valeurs sont toutes affichées dans une liste.</p>
 
-<pre class="brush: html notranslate">    &lt;select multiple&gt;
+<pre class="brush: html">    &lt;select multiple&gt;
       &lt;option&gt;Banane&lt;/option&gt;
       &lt;option&gt;Cerise&lt;/option&gt;
       &lt;option&gt;Citron&lt;/option&gt;
@@ -290,7 +290,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Une fois la liste de données affiliée au widget de formulaire, ses options s'utilisent comme complémentation du texte saisi par l'utilisateur ; cela se présente généralement à l'utilisateur sous forme d'une boîte déroulante listant des correspondances possibles avec ce qui doit être saisi dans la boîte.</p>
 
-<pre class="brush: html notranslate">    &lt;label for="onFruit"&gt;Quel est votre fruit préféré ?&lt;/label&gt;
+<pre class="brush: html">    &lt;label for="onFruit"&gt;Quel est votre fruit préféré ?&lt;/label&gt;
     &lt;input type="text" id="onFruit" list="maSuggestion" /&gt;
     &lt;datalist id="maSuggestion"&gt;
       &lt;option&gt;Pomme&lt;/option&gt;
@@ -314,7 +314,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Pour gérer cela, voici une petite astuce offrant une bonne solution de repli pour ces navigateurs :</p>
 
-<pre class="brush:html; line-numbers  language-html notranslate"><code class="language-html">&lt;label for="myFruit"&gt;Quel est votre fruit préféré ? (avec repli)&lt;/label&gt;
+<pre class="brush:html; line-numbers  language-html"><code class="language-html">&lt;label for="myFruit"&gt;Quel est votre fruit préféré ? (avec repli)&lt;/label&gt;
 &lt;input type="text" id="myFruit" name="fruit" list="fruitList"&gt;
 
 &lt;datalist id="fruitList"&gt;
@@ -365,7 +365,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Une casce à cocher se crée avec l'élément {{HTMLElement("input")}} dont l'attribut {{htmlattrxref("type","input")}} a pour valeur <code>checkbox</code>.</p>
 
-<pre class="brush: html notranslate">    &lt;input type="checkbox" <code class="language-html">checked id="carrots" name="carrots" value="carrots"</code>&gt;
+<pre class="brush: html">    &lt;input type="checkbox" <code class="language-html">checked id="carrots" name="carrots" value="carrots"</code>&gt;
 </pre>
 
 <p>Mettre l'attribut <code>checked</code> fait que la case sera cochée au chargement de la page.</p>
@@ -376,11 +376,11 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Un bouton radio se crée avec un élément {{HTMLElement("input")}} dont l'attribut {{htmlattrxref("type","input")}} a la valeur <code>radio</code>.</p>
 
-<pre class="brush: html notranslate">    &lt;input type="radio" checked<code class="language-html"> id="soup" name="meal"</code>&gt;</pre>
+<pre class="brush: html">    &lt;input type="radio" checked<code class="language-html"> id="soup" name="meal"</code>&gt;</pre>
 
 <p>Plusieurs boutons radio peuvent être liés ensemble. S'ils partagent la même valeur pour leur attribut {{htmlattrxref("name","input")}}, ils seront considérés comme faisant partie d'un seul groupe de boutons. Seulement un bouton à la fois peut être coché par groupe. Ceci signifie que si l'un d'entre eux est coché, tous les autres sont automatiquement décochés. Lorsque le formulaire est envoyé, seule la valeur du bouton coché est envoyée. Si aucun des boutons n'est coché, l'ensemble des boutons du groupe est considéré comme étant dans un état inconnu et aucune valeur n'est envoyée avec le formulaire.</p>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;fieldset&gt;
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;fieldset&gt;
   &lt;legend&gt;Quel est votre mets préféré ?&lt;/legend&gt;
   &lt;ul&gt;
     &lt;li&gt;
@@ -417,7 +417,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <h3 id="submit">submit</h3>
 
-<pre class="brush: html notranslate">    &lt;button type="submit"&gt;
+<pre class="brush: html">    &lt;button type="submit"&gt;
         Ceci est un &lt;br&gt;&lt;strong&gt;bouton d'envoi&lt;/strong&gt;
     &lt;/button&gt;
 
@@ -425,7 +425,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <h3 id="reset">reset</h3>
 
-<pre class="brush: html notranslate">    &lt;button type="reset"&gt;
+<pre class="brush: html">    &lt;button type="reset"&gt;
         Ceci est un &lt;br&gt;&lt;strong&gt;bouton de réinitialisation&lt;/strong&gt;
     &lt;/button&gt;
 
@@ -433,7 +433,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <h3 id="anonymous">anonymous</h3>
 
-<pre class="brush: html notranslate">    &lt;button type="button"&gt;
+<pre class="brush: html">    &lt;button type="button"&gt;
         Ceci est un &lt;br&gt;&lt;strong&gt;bouton lambda&lt;/strong&gt;
     &lt;/button&gt;
 
@@ -467,7 +467,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <h4 id="Exemple">Exemple</h4>
 
-<pre class="brush: html notranslate">    &lt;input type="number" <code class="language-html">name="age" id="age"</code> min="1" max="10" step="2"&gt;</pre>
+<pre class="brush: html">    &lt;input type="number" <code class="language-html">name="age" id="age"</code> min="1" max="10" step="2"&gt;</pre>
 
 <p>Ceci créé un widget pour un nombre dont la valeur est comprise entre 1 et 10 et dont les boutons d'incrémentation/décrémentation modifient la valeur par pas de 2.</p>
 
@@ -479,20 +479,20 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <h4 id="Exemple_2">Exemple</h4>
 
-<pre class="brush: html line-numbers  language-html notranslate">    <code class="language-html">&lt;input type="range" name="beans" id="beans" min="0" max="500" step="10"&gt;
+<pre class="brush: html line-numbers  language-html">    <code class="language-html">&lt;input type="range" name="beans" id="beans" min="0" max="500" step="10"&gt;
 </code></pre>
 
 <p>Cet exemple créé un curseur dont les valeurs varient entre 0 et 500, et dont les bouton d'incrément/décrément font varier la valeur de ±10.</p>
 
 <p>Un problème avec les curseurs est qu'il n'offrent aucun moyen visue de savoir quelle est leur valeur courante. Il est nécessaire d'ajouter cela vous‑même à l'aide de JavaScript, mais c'est assez facile. Dans cet exemple nous ajoutons un élément {{htmlelement("span")}} dans lequel nous écrivons la valeur courante du curseur et la mettons à jour quand elle est modifiée.</p>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;label for="beans"&gt;Combien de haricots pouvez‑vous manger ?&lt;/label&gt;
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;label for="beans"&gt;Combien de haricots pouvez‑vous manger ?&lt;/label&gt;
 &lt;input type="range" name="beans" id="beans" min="0" max="500" step="10"&gt;
 &lt;span class="beancount"&gt;&lt;/span&gt;</code></pre>
 
 <p>et en  JavaScript :</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var beans = document.querySelector('#beans');
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var beans = document.querySelector('#beans');
 var count = document.querySelector('.beancount');
 
 count.textContent = beans.value;
@@ -515,29 +515,29 @@ beans.oninput = function() {
 
 <p>Cette valeur d'attribut créé un widget pour afficher et sélectionner une date et une heure quelque soit le fuseau horaire.</p>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;input type="datetime-local" name="datetime" id="datetime"&gt;</code></pre>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;input type="datetime-local" name="datetime" id="datetime"&gt;</code></pre>
 
 <h4 id="month"><code>month</code></h4>
 
 <p>Cette valeur d'attribut créé un widget pour afficher et sélectionner un mois dans une année donnée.</p>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;input type="month" name="month" id="month"&gt;</code></pre>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;input type="month" name="month" id="month"&gt;</code></pre>
 
 <h4 id="time"><code>time</code></h4>
 
 <p>Cette valeur d'attribut créé un widget pour afficher et sélectionner un horaire.</p>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;input type="time" name="time" id="time"&gt;</code></pre>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;input type="time" name="time" id="time"&gt;</code></pre>
 
 <h4 id="week"><code>week</code></h4>
 
 <p>Cette valeur d'attribut crée un widget pour afficher et sélectionner une semaine et l'année correspondante.</p>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;input type="week" name="week" id="week"&gt;</code></pre>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;input type="week" name="week" id="week"&gt;</code></pre>
 
 <p>Tous les contrôles de sélection de date et heure peuvent être contraints à l'aide des attributs {{htmlattrxref("min","input")}} et {{htmlattrxref("max","input")}}.</p>
 
-<pre class="brush: html notranslate">    &lt;label for="maDate"&gt;Quand êtes vous disponible cet été ?&lt;/label&gt;
+<pre class="brush: html">    &lt;label for="maDate"&gt;Quand êtes vous disponible cet été ?&lt;/label&gt;
     &lt;input type="date" min="2013-06-01" max="2013-08-31" id="maDate"&gt;</pre>
 
 <p class="warning"><strong>Attention :</strong> Les widgets de date et heure sont encore peu pris en charge. Au moment de la rédaction de cet article, Chrome, Edge et Opera les prennent bien en charge, mais il n'y a pas de prise en charge dans Internet Explorer et Firefox et Safari n'ont qu'une prise en charge lacunaire de ces derniers.</p>
@@ -548,7 +548,7 @@ beans.oninput = function() {
 
 <p>Un widget de sélection de couleur se crée avec un élément {{HTMLElement("input")}} dont l'attribut {{htmlattrxref("type","input")}} a pour valeur <code>color</code>.</p>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;input type="color" name="color" id="color"&gt;</code></pre>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;input type="color" name="color" id="color"&gt;</code></pre>
 
 <p>Attention : la prise en charge du widget <code>color</code> n'est pas très bonne actuellement. Il n'y a aucune prise en charge dans Internet Explorer, ni actuellement dans Safari. Les autres navigateurs majeurs le prennent en charge.</p>
 
@@ -570,7 +570,7 @@ beans.oninput = function() {
 
 <p>Dans cet exemple, le widget de sélection de fichiers permet de sélectionner des fichiers d'images. L'utilisateur peut sélectionner plusieurs fichiers.</p>
 
-<pre class="brush: html notranslate"><code class="language-html">&lt;input type="file" name="file" id="file" accept="image/*" multiple&gt;</code></pre>
+<pre class="brush: html"><code class="language-html">&lt;input type="file" name="file" id="file" accept="image/*" multiple&gt;</code></pre>
 
 <h3 id="Contenu_caché">Contenu caché</h3>
 
@@ -578,7 +578,7 @@ beans.oninput = function() {
 
 <p>Si vous créez un tel élément, il est obligatoire de définir ses attributs <code>name</code> et <code>value</code> :</p>
 
-<pre class="brush: html notranslate">    &lt;input type="hidden" <code class="language-html">id="timestamp" </code>name="timestamp" value="1286705410"&gt;</pre>
+<pre class="brush: html">    &lt;input type="hidden" <code class="language-html">id="timestamp" </code>name="timestamp" value="1286705410"&gt;</pre>
 
 <h3 id="Image-bouton">Image-bouton</h3>
 
@@ -586,7 +586,7 @@ beans.oninput = function() {
 
 <p>Une image-bouton se crée avec un élément {{HTMLElement("input")}} dont l'attribut {{htmlattrxref("type","input")}} a pour valeur <code>image</code>. Cet élément accepte exactement le même ensemble d'attributs que l'élément {{HTMLElement("img")}}, en plus de tous les attributs valides pour n'importe quel bouton de formulaire.</p>
 
-<pre class="brush: html notranslate">    &lt;input type="image" alt="Click me!" src="my-img.png" width="80" height="30" /&gt;</pre>
+<pre class="brush: html">    &lt;input type="image" alt="Click me!" src="my-img.png" width="80" height="30" /&gt;</pre>
 
 <p>Si l'image-bouton est utilisée pour envoyer un formulaire, ce widget n'envoie pas sa valeur mais les coordonnées X et Y du clic sur l'image (les coordonnées sont relatives à l'image, ce qui veut dire que le coin supérieur gauche représente les coordonnées 0, 0). Les coordonnées sont envoyées sous la forme de deux paires de clé/valeur :</p>
 
@@ -597,7 +597,7 @@ beans.oninput = function() {
 
 <p>Lorsque vous cliquez sur l'image dans ce formulaire, vous êtes redirigés une URL du type suivant :</p>
 
-<pre class="notranslate">    http://foo.com?pos.x=123&amp;pos.y=456</pre>
+<pre>    http://foo.com?pos.x=123&amp;pos.y=456</pre>
 
 <p>C'est une façon très commode de construire une « hot map » (cartographie des parties d'une page Internet le plus souvent balayées par le regard des lecteurs). La manière d'envoyer et d'extraire ces valeurs est détaillée dans l'article « <a href="/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires" title="/fr/docs/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires">Envoi des données de formulaire</a> ».</p>
 
@@ -609,7 +609,7 @@ beans.oninput = function() {
 
 <p>Une barre de progression représente une valeur qui évolue dans le temps jusqu'à une valeur maximale définie par l'attribut {{htmlattrxref("max","progress")}}. Une telle barre peut être créée grace à un élément {{ HTMLElement("progress")}}.</p>
 
-<pre class="brush: html notranslate">    &lt;progress max="100" value="75"&gt;75/100&lt;/progress&gt;</pre>
+<pre class="brush: html">    &lt;progress max="100" value="75"&gt;75/100&lt;/progress&gt;</pre>
 
 <p>Cela sert à mettre en œuvre visuellement un rapport d'avancement, comme le pourcentage du nombre total de fichiers téléchargés ou le nombre de questions posées dans un questionnaire.</p>
 
@@ -646,7 +646,7 @@ beans.oninput = function() {
 
 <p>Une telle barre se crée avec un élément {{HTMLElement("meter")}}. Cela permet d'implémenter toute sorte d'étalonnage, par exemple une barre montrant l'espace total utilisé sur un disque, qui devient rouge si le disque commence à être plein.</p>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;meter min="0" max="100" value="75" low="33" high="66" optimum="50"&gt;75&lt;/meter&gt;</code></pre>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;meter min="0" max="100" value="75" low="33" high="66" optimum="50"&gt;75&lt;/meter&gt;</code></pre>
 
 <p>Le contenu de l'élément {{HTMLElement("meter")}} est un affichage informatif de repli pour les navigateurs ne prenant pas en charge cet élément ; les technologies d'assistance vocalisent cet affichage.</p>
 

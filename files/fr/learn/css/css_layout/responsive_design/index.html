@@ -93,7 +93,7 @@ original_slug: Apprendre/CSS/CSS_layout/Responsive_Design
 
 <p>Par exemple, la média query suivante teste si la page Web actuelle est affichée comme média d'écran (donc pas un document à imprimer) et si la fenêtre de visualisation a au moins 800 pixels de large. Le CSS du sélecteur <code>.container</code> ne sera appliqué que si ces deux éléments sont vrais.</p>
 
-<pre class="brush: css notranslate"><code>@media screen and (min-width: 800px) {
+<pre class="brush: css"><code>@media screen and (min-width: 800px) {
   .container {
     margin: 1em 2em;
   }
@@ -114,12 +114,12 @@ original_slug: Apprendre/CSS/CSS_layout/Responsive_Design
 
 <p>Aux débuts du responsive design, notre seule option pour réaliser la mise en page était d'utiliser <a href="/fr/docs/Apprendre/CSS/CSS_layout/Floats">floats</a>. Aux débuts du responsive design, notre seule option pour réaliser la mise en page était d'utiliser des flotteurs. Des mises en page flottantes flexibles ont été réalisées en donnant à chaque élément un pourcentage de largeur et en s'assurant que les totaux ne dépassent pas 100 % dans toute la mise en page. Dans sa publication originale sur les grilles fluides, Marcotte a détaillé une formule pour convertir en pourcentages une mise en page conçue à l'aide de pixels.</p>
 
-<pre class="notranslate"><code>target / context = result </code>
+<pre><code>target / context = result </code>
 </pre>
 
 <p>Par exemple, si la taille de notre colonne cible est de 60 pixels et que le contexte (ou conteneur) dans lequel elle se trouve est de 960 pixels, nous divisons 60 par 960 pour obtenir une valeur que nous pouvons utiliser dans notre CSS, après avoir déplacé le point décimal de deux places vers la droite.</p>
 
-<pre class="brush: css notranslate"><code>.col {
+<pre class="brush: css"><code>.col {
   width: 6.25%; /* 60 / 960 = 0.0625 */
 } </code>
 </pre>
@@ -151,14 +151,14 @@ original_slug: Apprendre/CSS/CSS_layout/Responsive_Design
 
 <p>La plus ancienne de ces méthodes de mise en page est multicol — lorsque vous spécifiez un <code>column-count</code>, cela indique en combien de colonnes vous voulez que votre contenu soit divisé. Le navigateur calcule alors la taille de celles-ci, une taille qui changera en fonction de la taille de l'écran.</p>
 
-<pre class="brush: css notranslate"><code>.container {
+<pre class="brush: css"><code>.container {
   column-count: 3;
 } </code>
 </pre>
 
 <p>Si vous spécifiez plutôt une largeur de colonne, vous spécifiez une largeur minimale. Le navigateur créera autant de colonnes de cette largeur qu'il en faudra pour que le conteneur soit parfaitement adapté, puis répartira l'espace restant entre toutes les colonnes. Par conséquent, le nombre de colonnes changera en fonction de l'espace disponible.</p>
 
-<pre class="brush: css notranslate"><code>.container {
+<pre class="brush: css"><code>.container {
   column-width: 10em;
 } </code>
 </pre>
@@ -169,7 +169,7 @@ original_slug: Apprendre/CSS/CSS_layout/Responsive_Design
 
 <p>Dans l'exemple ci-dessous, les éléments flex prendront chacun autant d'espace dans le conteneur flex, en utilisant la notation <code>flex: 1</code> comme décrit dans la rubrique de mise en page <a href="/fr/docs/Apprendre/CSS/CSS_layout/Flexbox#Taille_modulable_des_éléments_flex">Flexbox: Taille modulable des éléments flex</a>.</p>
 
-<pre class="brush: css notranslate"><code>.container {
+<pre class="brush: css"><code>.container {
   display: flex;
 }
 
@@ -186,7 +186,7 @@ original_slug: Apprendre/CSS/CSS_layout/Responsive_Design
 
 <p>Dans la mise en page en grille CSS, l'unité <code>fr</code> permet la répartition de l'espace disponible sur les différentes sections de la grille. L'exemple suivant crée un conteneur de grille avec trois rangées dont la taille est de <code>1fr</code>. Cela créera trois colonnes, chacune prenant une partie de l'espace disponible dans le conteneur. Vous pouvez en savoir plus sur cette approche pour créer une grille dans la rubrique Apprendre la mise en place en grille, dans la section <a href="/fr/docs/Apprendre/CSS/CSS_layout/Grids#Trames_adaptables_avec_lunité_«_fr_»">Trames adaptables avec l'unité "fr"</a>.</p>
 
-<pre class="brush: css notranslate"><code>.container {
+<pre class="brush: css"><code>.container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 } </code>
@@ -200,7 +200,7 @@ original_slug: Apprendre/CSS/CSS_layout/Responsive_Design
 
 <p>L'approche la plus simple pour les images responsive est celle décrite dans les premiers articles de Marcotte sur le design responsive. En gros, vous preniez une image qui était à la plus grande taille possible et vous la réduisiez. C'est encore une approche utilisée aujourd'hui, et dans la plupart des feuilles de style, vous trouverez le CSS suivant quelque part :</p>
 
-<pre class="brush: css notranslate"><code>img {
+<pre class="brush: css"><code>img {
   max-width: 100%:
 } </code>
 </pre>
@@ -219,7 +219,7 @@ original_slug: Apprendre/CSS/CSS_layout/Responsive_Design
 
 <p>Dans cet exemple, nous voulons fixer notre titre de niveau 1 à <code>4rem</code>, ce qui signifie qu'il sera quatre fois plus gros que notre police de base. C'est un très grand titre ! Nous voulons que ce titre géant ne soit utilisé que sur des écrans de grande taille, c'est pourquoi nous créons d'abord un titre plus petit, puis nous utilisons des média queries pour le remplacer par un titre de plus grande taille si nous savons que l'utilisateur a une taille d'écran d'au moins <code>1200px</code>.</p>
 
-<pre class="brush: css notranslate"><code>html {
+<pre class="brush: css"><code>html {
   font-size: 1em;
 }
 
@@ -258,7 +258,7 @@ h1 {
 
 <p>Une approche intéressante consiste à utiliser l'unité viewport <code>vw</code> pour permettre une typographie réactive. <code>1vw</code> est égal à un pour cent de la largeur de la fenêtre, ce qui signifie que si vous définissez la taille de votre police à l'aide de <code>vw</code>, elle sera toujours liée à la taille de la fenêtre.</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   font-size: 6vw;
 }</pre>
 
@@ -266,7 +266,7 @@ h1 {
 
 <p>Il existe une solution, et elle consiste à utiliser <code><a href="/fr/docs/Web/CSS/calc">calc()</a></code>. Si vous ajoutez l'unité <code>vw</code> à un ensemble de valeurs utilisant une taille fixe telle que <code>em</code>s ou <code>rem</code>s, le texte sera toujours zoomable. En fait, l'unité <code>vw</code> s'ajoute à cette valeur zoomée :</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   font-size: calc(1.5rem + 3vw);
 }</pre>
 
@@ -280,7 +280,7 @@ h1 {
 
 <p>Si vous regardez le code source d'une page HTML responsive, vous verrez généralement la balise suivante {{htmlelement("meta")}} dans la section <code>&lt;head&gt;</code> du document.</p>
 
-<pre class="brush: html notranslate"><code>&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;</code>
+<pre class="brush: html"><code>&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;</code>
 </pre>
 
 <p>Cette balise meta dit aux navigateurs mobiles qu'ils doivent ajuster la largeur de la fenêtre à la largeur de l'écran de l'appareil, et mettre l'échelle du document à 100% de sa taille prévue, affichant le document à la taille optimisée pour les mobiles que vous vouliez.</p>

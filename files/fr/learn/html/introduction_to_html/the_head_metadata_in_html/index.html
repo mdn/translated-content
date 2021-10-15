@@ -27,7 +27,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML
 
 <p>Revoyons le document HTML de base de l' <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document">article précédent</a>:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -40,7 +40,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML
 
 <p>Le contenu de l'en-tête HTML {{htmlelement("head")}} — à la difference du contenu de l'élément {{htmlelement("body")}} (affiché quand la page est chargée par le navigateur) — n'est pas affiché dans la page du navigateur. Le travail de la balise &lt;head&gt; est de contenir les {{glossary("Metadata", "métadonnées")}} à propos du document. Dans l'exemple ci-dessus, l'en-tête est plutôt petit :</p>
 
-<pre class="brush: html notranslate">&lt;head&gt;
+<pre class="brush: html">&lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Ma page test&lt;/title&gt;
 &lt;/head&gt;</pre>
@@ -88,7 +88,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML
 
 <p>Dans l'exemple que nous avons vu au-dessus, cette ligne était présente :</p>
 
-<pre class="brush: html notranslate">&lt;meta charset="utf-8"&gt;</pre>
+<pre class="brush: html">&lt;meta charset="utf-8"&gt;</pre>
 
 <p>Cet élément définit l'encodage des caractères du document - le jeu de caractères qu'il est autorisé à utiliser. <code>utf-8</code> <em> </em>est un jeu de caractères universel qui inclut à peu près tous les caractères des langues humaines. Cela signifie que votre page web sera capable de gérer l'affichage de n'importe quelle langue ; c'est donc une bonne idée de le définir dans chaque page web que vous créez ! Par exemple, votre page peut gérer l'anglais et le japonais sans aucun souci :</p>
 
@@ -104,7 +104,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML
 
 <p>Pour cela, reportez-vous au modèle HTML simple que vous avez obtenu dans la section précédente sur <code>&lt;title&gt;</code> (la page  <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html">title-example.html</a>), faites un essai de modification de la valeur de la métadonnée <code>charset</code> en ISO-8859-1 et ajoutez le japonais à votre page. Voici le code que nous avons utilisé :</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Japanese example: ご飯が熱い。&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Japanese example: ご飯が熱い。&lt;/p&gt;</pre>
 
 <h3 id="Ajouter_le_nom_de_lauteur_et_une_description">Ajouter le nom de l'auteur et une description</h3>
 
@@ -117,7 +117,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML
 
 <p>Il est utile d'inclure ces deux méta-éléments dans votre page pour définir son auteur et donner une courte description de son contenu. Voyons un exemple :</p>
 
-<pre class="brush: html notranslate">&lt;meta name="author" content="Chris Mills"&gt;
+<pre class="brush: html">&lt;meta name="author" content="Chris Mills"&gt;
 &lt;meta name="description" content="La Zone Apprentissage des documents web
 du MDN a pour but de donner aux débutants du Web tout ce qu'ils doivent
 savoir pour commencer le développement de pages webs et d'applications."&gt;</pre>
@@ -160,7 +160,7 @@ savoir pour commencer le développement de pages webs et d'applications."&gt;</p
 
 <p>Par exemple, <a href="https://ogp.me/">Open Graph Data</a> est un protocole de métadonnées que Facebook a inventé pour fournir des métadonnées plus riches pour les sites webs. Dans le code source de MDN vous trouverez ceci :</p>
 
-<pre class="brush: html notranslate">&lt;meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png"&gt;
+<pre class="brush: html">&lt;meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png"&gt;
 &lt;meta property="og:description" content="<a class="attribute-value">MDN Web Docs fournit des
 informations sur les technologies web ouvertes comme HTML, CSS et les API
 utilisées pour les sites web et les applications web. On y trouve également
@@ -172,7 +172,7 @@ Mozilla tels que les outils de développement de Firefox.</a>"&gt;
 
 <p><img alt="Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description." src="facebook-output.png" style="display: block; margin: 0 auto;">Twitter a aussi une métadonnée propriétaire, qui a un effet similaire quand l'URL du site est affichée sur twitter.com. Par exemple:</p>
 
-<pre class="brush: html notranslate">&lt;meta name="twitter:title" content="Mozilla Developer Network"&gt;</pre>
+<pre class="brush: html">&lt;meta name="twitter:title" content="Mozilla Developer Network"&gt;</pre>
 
 <h2 id="Ajouter_des_icônes_personnalisées_à_un_site">Ajouter des icônes personnalisées à un site</h2>
 
@@ -185,7 +185,7 @@ Mozilla tels que les outils de développement de Firefox.</a>"&gt;
 <ol>
  <li>Enregistrez-la dans le même répertoire que la page d'index du site, sous le format <code>.ico</code> (la plupart des navigateurs prendront en charge les favicônes dans des formats plus communs comme <code>.gif</code> ou <code>.png</code>, mais utiliser le format ICO assurera son fonctionnement depuis Internet Explorer 6.)</li>
  <li>Ajoutez la ligne suivante dans votre <code>&lt;head&gt;</code> du HTML pour la référencer :
-  <pre class="brush: html notranslate">&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</pre>
+  <pre class="brush: html">&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</pre>
  </li>
 </ol>
 
@@ -195,7 +195,7 @@ Mozilla tels que les outils de développement de Firefox.</a>"&gt;
 
 <p>Il existe de nombreux autres types d'icônes à considérer aussi actuellement. Par exemple, vous trouverez ceci dans le code source de la page d'accueil MDN :</p>
 
-<pre class="brush: html notranslate">&lt;!-- troisième-génération iPad avec haute-résolution Retina display: --&gt;
+<pre class="brush: html">&lt;!-- troisième-génération iPad avec haute-résolution Retina display: --&gt;
 &lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.mozilla.org/static/img/favicon144.png"&gt;
 &lt;!-- iPhone avec haute-résolution Retina display: --&gt;
 &lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.mozilla.org/static/img/favicon114.png"&gt;
@@ -218,12 +218,12 @@ Mozilla tels que les outils de développement de Firefox.</a>"&gt;
  <li>
   <p>L'élément {{htmlelement("link")}} se situe toujours dans l'en-tête du document. Il comporte deux attributs, <code>rel="stylesheet"</code> indiquant qu'il s'agit de la feuille de style du document, et <code>href</code> indiquant le chemin d'accès au fichier la contenant :</p>
 
-  <pre class="brush: html notranslate">&lt;link rel="stylesheet" href="mon_fichier_css.css"&gt;</pre>
+  <pre class="brush: html">&lt;link rel="stylesheet" href="mon_fichier_css.css"&gt;</pre>
  </li>
  <li>
   <p>L'élément {{htmlelement("script")}} ne doit pas aller dans l'en-tête ; en fait, il est souvent préférable de le placer au bas du corps du document (juste avant la balise de clôture <code>&lt;/body&gt;</code>), pour s'assurer que tout le contenu HTML a été lu par le navigateur avant de lui appliquer le JavaScript (si JavaScript essaie d'accéder à un élément qui n'existe pas encore, le navigateur déclenchera une erreur).</p>
 
-  <pre class="brush: html notranslate">&lt;script src="mon-fichier-js.js"&gt;&lt;/script&gt;</pre>
+  <pre class="brush: html">&lt;script src="mon-fichier-js.js"&gt;&lt;/script&gt;</pre>
 
   <div class="note">
   <p><strong>Note </strong>: L'élément <code>&lt;script&gt;</code> peut ressembler à un élément vide, mais ce n'est pas le cas : il faut donc une balise de fermeture. Au lieu de pointer vers un fichier de script externe, vous pouvez également choisir de mettre le code du script dans le HTML à l'intérieur d'un élément <code>&lt;script&gt;</code>.</p>
@@ -256,13 +256,13 @@ Mozilla tels que les outils de développement de Firefox.</a>"&gt;
 
 <p>Enfin, il convient de mentionner que vous pouvez (et devrez vraiment) définir la langue de votre page. Cela peut être fait en ajoutant l'<a href="/en-US/docs/Web/HTML/Global_attributes/lang">attribut <code>lang</code></a> à la balise ouvrante HTML (voir <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html">meta-example.html</a>.)</p>
 
-<pre class="brush: html notranslate">&lt;html lang="fr"&gt;</pre>
+<pre class="brush: html">&lt;html lang="fr"&gt;</pre>
 
 <p>Ceci est utile de plusieurs façons. Votre document sera indexé plus efficacement par les moteurs de recherche si son langage est défini (ce qui lui permet d'apparaître correctement dans les résultats spécifiques à la langue, par exemple) et il est utile pour les personnes visuellement déficientes utilisant un lecteur d'écran (par exemple, le mot « six » existe en français et en anglais, mais se prononce différemment.)</p>
 
 <p>Vous pouvez également définir des sous-sections de votre document pour qu'elles soient reconnues comme étant en différentes langues. Par exemple, nous pourrions définir la partie en langue japonaise pour qu'elle soit reconnue comme telle, de la manière suivante :</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Exemple en japonais : &lt;span lang="jp"&gt;ご飯が熱い。&lt;/span&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Exemple en japonais : &lt;span lang="jp"&gt;ご飯が熱い。&lt;/span&gt;.&lt;/p&gt;</pre>
 
 <p>Ces codes sont définis par la norme <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>. Vous en trouverez plus sur <a href="https://www.w3.org/International/articles/language-tags/">Etiquettes langues en HTML et XML (en)</a>.</p>
 

@@ -40,11 +40,11 @@ original_slug: Apprendre/a11y/HTML
 
 <p>Vous pouvez vous demander pourquoi c'est si important. Après tout, vous pouvez utiliser une combinaison de CSS et de JavaScript pour faire fonctionner n'importe quel élément HTML de la manière que vous souhaitez. Par exemple, un bouton de lecture pour une vidéo sur votre site pourrait être codé ainsi :</p>
 
-<pre class="brush: html notranslate">&lt;div&gt;Lire la vidéo&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div&gt;Lire la vidéo&lt;/div&gt;</pre>
 
 <p>Mais comme vous le verrez en détail plus loin, il est beaucoup plus sensé d'utiliser le bon élément à cet effet :</p>
 
-<pre class="brush: html notranslate">&lt;button&gt;Lire la vidéo&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button&gt;Lire la vidéo&lt;/button&gt;</pre>
 
 <p>Non seulement  <code>&lt;button&gt;</code> possède des styles adéquats par défaut (que vous voudrez probablement surcharger), il intègre aussi l'accès au clavier — on peut tabuler dessus, et l'activer avec la touche entrée.</p>
 
@@ -76,7 +76,7 @@ original_slug: Apprendre/a11y/HTML
 
 <p>L'une des meilleures aides en accessibilité qu'un utilisateur de lecteur d'écran peut avoir est une bonne structure des titres, paragraphes, listes, etc. Un bon exemple sémantique devrait ressembler au code suivant :</p>
 
-<pre class="brush: html example-good line-numbers language-html notranslate">&lt;h1&gt;Mon titre&lt;/h1&gt;
+<pre class="brush: html example-good line-numbers language-html">&lt;h1&gt;Mon titre&lt;/h1&gt;
 
 &lt;p&gt;Ceci est la premère section de mon document.&lt;/p&gt;
 
@@ -107,7 +107,7 @@ original_slug: Apprendre/a11y/HTML
 
 <p>Les gens écrivent parfois des titres, des paragraphes, etc. utilisant le HTML de présentation et retours à la ligne, quelque chose comme ce qui suit :</p>
 
-<pre class="brush: html example-bad line-numbers  language-html notranslate">&lt;font size="7"&gt;Mon titre&lt;/font&gt;
+<pre class="brush: html example-bad line-numbers  language-html">&lt;font size="7"&gt;Mon titre&lt;/font&gt;
 &lt;br&gt;&lt;br&gt;
 Ceci est la première section de mon document.
 &lt;br&gt;&lt;br&gt;
@@ -147,7 +147,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <p>Essayez notre exemple <a href="http://mdn.github.io/learning-area/accessibility/html/table-layout.html">table-layout.html</a>, qui ressemble à quelque chose comme ça :</p>
 
-<pre class="brush: html notranslate">&lt;table width="1200"&gt;
+<pre class="brush: html">&lt;table width="1200"&gt;
       &lt;!-- main heading row --&gt;
       &lt;tr id="heading"&gt;
         &lt;td colspan="6"&gt;
@@ -218,7 +218,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <p>Vous pouvez vérifier ces affirmations en comparant votre expérience antérieure avec un  <a href="https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/">exemple plus moderne de structure de site Web</a>, qui pourrait ressembler à ceci :</p>
 
-<pre class="brush: html notranslate">&lt;header&gt;
+<pre class="brush: html">&lt;header&gt;
   &lt;h1&gt;Entête&lt;/h1&gt;
 &lt;/header&gt;
 
@@ -274,7 +274,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <p>Vous obtenez essentiellement ce comportement gratuitement, en utilisant simplement les éléments appropriés, par exemple :</p>
 
-<pre class="brush: html example-good notranslate">&lt;h1&gt;Liens&lt;/h1&gt;
+<pre class="brush: html example-good">&lt;h1&gt;Liens&lt;/h1&gt;
 
 &lt;p&gt; Ceci est un lien vers  &lt;a href="https://www.mozilla.org"&gt;Mozilla&lt;/a&gt;.&lt;/p&gt;
 
@@ -314,7 +314,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <p>Cependant, il est encore une fois que les gens font parfois des choses étranges avec HTML. Par exemple, vous voyez parfois des boutons balisés en utilisant {{htmlelement("div")}}s,  par exemple :</p>
 
-<pre class="brush: html example-bad notranslate">&lt;div data-message="This is from the first button"&gt; Cliquez-moi!&lt;/div&gt;
+<pre class="brush: html example-bad">&lt;div data-message="This is from the first button"&gt; Cliquez-moi!&lt;/div&gt;
 &lt;div data-message="This is from the second button"&gt;  Cliquez moi aussi!&lt;/div&gt;
 &lt;div data-message="This is from the third button"&gt; Et moi!&lt;/div&gt;</pre>
 
@@ -324,7 +324,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <p>Ajouter de tels avantages en retour demande un peu de travail (vous pouvez utiliser un exemple de code dans notre exemple <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> –  voir également le <a class="external external-icon" href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">source code</a>). Ici, nous avons donné à nos faux boutons <code>&lt;div&gt;</code> la possibilité se focaliser (y compris via la touche Tab) en donnant à chacun l'attribut <code>tabindex="0"</code> :</p>
 
-<pre class="brush: html notranslate">&lt;div data-message="This is from the first button" tabindex="0"&gt; Cliquez-moi!&lt;/div&gt;
+<pre class="brush: html">&lt;div data-message="This is from the first button" tabindex="0"&gt; Cliquez-moi!&lt;/div&gt;
 &lt;div data-message="This is from the second button" tabindex="0"&gt; Cliquez moi aussi!&lt;/div&gt;
 &lt;div data-message="This is from the third button" tabindex="0"&gt; Et moi!&lt;/div&gt;</pre>
 
@@ -337,7 +337,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <p>Bien que l’addition ci-dessus nous permette de tabuler les boutons, elle ne nous permet pas de les activer via la touche Entrée/Retour. Pour ce faire, nous avons dû ajouter le bout de code JavaScript suivant :</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">document.onkeydown = function(e) {
+<pre class="brush: js line-numbers  language-js"><code class="language-js">document.onkeydown = function(e) {
   if(e.keyCode === 13) { // The Enter/Return key
     document.activeElement.onclick(e);
   }
@@ -361,11 +361,11 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <p>Assurez-vous que vos étiquettes ont une signification hors contexte, qu'elles soient lues séparément ou dans le contexte du paragraphe dans lequel elles se trouvent. Par exemple, voici un exemple de texte de lien de qualité :</p>
 
-<pre class="brush: html example-good notranslate">&lt;p&gt; Les baleines sont vraiment des créatures géniales . &lt;a href="whales.html"&gt; En savoir plus sur les baleines &lt;/a&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html example-good">&lt;p&gt; Les baleines sont vraiment des créatures géniales . &lt;a href="whales.html"&gt; En savoir plus sur les baleines &lt;/a&gt;.&lt;/p&gt;</pre>
 
 <p>c'est un mauvais texte du lien :</p>
 
-<pre class="brush: html example-bad notranslate">&lt;p&gt; Les baleines sont des créatures vraiment impressionnantes. Pour en savoir plus sur les baleines,  &lt;a href="whales.html"&gt;cliquez ici&lt;/a&gt;.&lt;/p&gt;
+<pre class="brush: html example-bad">&lt;p&gt; Les baleines sont des créatures vraiment impressionnantes. Pour en savoir plus sur les baleines,  &lt;a href="whales.html"&gt;cliquez ici&lt;/a&gt;.&lt;/p&gt;
 </pre>
 
 <div class="note">
@@ -374,13 +374,13 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <p>Les libellés de formulaire sont également importantes pour vous donner un indice sur ce que vous devez entrer dans chaque entrée de formulaire. Ce qui suit semble être un exemple assez raisonnable :</p>
 
-<pre class="brush: html example-bad notranslate"> Remplis ton nom : &lt;input type="text" id="name" name="name"&gt;</pre>
+<pre class="brush: html example-bad"> Remplis ton nom : &lt;input type="text" id="name" name="name"&gt;</pre>
 
 <p>Cependant, ce n'est pas très utile pour les utilisateurs handicapés. Dans l'exemple ci-dessus, rien n'associe de manière non équivoque l'étiquette à la saisie de formulaire et explique clairement comment la remplir si vous ne la voyez pas. Si vous y accédez avec certains lecteurs d’écran, vous ne recevrez peut-être qu’une description du type « éditer le texte".</p>
 
 <p>Ce qui suit est un exemple bien meilleur :</p>
 
-<pre class="brush: html example-good notranslate"><code class="language-js">&lt;div&gt;
+<pre class="brush: html example-good"><code class="language-js">&lt;div&gt;
   &lt;label for="name"&gt;</code>Entrez votre nom<code class="language-js">:&lt;/label&gt;
   &lt;input type="text" id="name" name="name"&gt;
 &lt;/div&gt;</code></pre>
@@ -399,7 +399,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <p>Une table de données de base peut être écrite avec un balisage très simple, par exemple :</p>
 
-<pre class="brush: html notranslate"><code class="language-js">&lt;table&gt;
+<pre class="brush: html"><code class="language-js">&lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;Nom&lt;/td&gt;
     &lt;td&gt;Age&lt;/td&gt;
@@ -441,7 +441,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <p>Nous avons un exemple simple écrit, <a href="http://mdn.github.io/learning-area/accessibility/html/accessible-image.html">accessible-image.html</a>, comporte quatre copies de la même image :</p>
 
-<pre class="notranslate"><code class="language-js">&lt;img src="dinosaur.png"&gt;
+<pre><code class="language-js">&lt;img src="dinosaur.png"&gt;
 
 &lt;img src="dinosaur.png"
      alt="</code> Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées<code class="language-js">."&gt;
@@ -478,7 +478,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <p>Jetons un autre coup d'oeil à la quatrième méthode :</p>
 
-<pre class="brush: html notranslate"><code class="language-js">&lt;img src="dinosaur.png" aria-labelledby="dino-label"&gt;
+<pre class="brush: html"><code class="language-js">&lt;img src="dinosaur.png" aria-labelledby="dino-label"&gt;
 
 &lt;p id="dino-label"&gt;</code> Le Tyrannosaure rouge Mozilla  ... &lt;/p&gt;</pre>
 
@@ -492,14 +492,14 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <p>Les images ont également d'autres mécanismes disponibles pour fournir un texte descriptif. Par exemple, il existe un attribut <code>longdesc</code> destiné à pointer sur un document web distinct contenant une description étendue de l'image, par exemple :</p>
 
-<pre class="brush: html notranslate"><code class="language-js">
+<pre class="brush: html"><code class="language-js">
 &lt;img src="dinosaur.png" longdesc="dino-info.html"&gt;</code></pre>
 
 <p>Cela semble être une bonne idée, en particulier pour les infographies telles que les grands graphiques contenant de nombreuses informations, qui pourraient peut-être être représentées sous forme de tableau de données accessible (voir section précédente). Cependant, longdesc n’est pas toujours pris en charge par les lecteurs d’écran et le contenu est totalement inaccessible aux utilisateurs autres que les lecteurs d’écran. Il est sans doute préférable d’inclure la description longue sur la même page que l’image, ou d’y accéder par un lien régulier.</p>
 
 <p>HTML5 comprend deux nouveaux éléments  — {{htmlelement("figure")}} et {{htmlelement("figcaption")}} —  qui sont supposés associer une figure quelconque (ce peut être n'importe quoi, pas nécessairement une image) à une légende de figure :</p>
 
-<pre class="brush: html notranslate"><code class="language-js">&lt;figure&gt;
+<pre class="brush: html"><code class="language-js">&lt;figure&gt;
   &lt;img src="dinosaur.png" alt="</code> Le Mozilla Tyrannosaurus <code class="language-js">"&gt;
   &lt;figcaption&gt;</code> Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées <code class="language-js">.&lt;/figcaption&gt;
 &lt;/figure&gt;</code></pre>
@@ -508,7 +508,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <h3 id="Attributs_alt_vides">Attributs alt vides</h3>
 
-<pre class="brush: html notranslate"><code class="language-js">
+<pre class="brush: html"><code class="language-js">
 &lt;h3&gt;
   &lt;img src="article-icon.png" alt=""&gt;
   </code> Tyrannosaurus Rex: le roi des dinosaures <code class="language-js">

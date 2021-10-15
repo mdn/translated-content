@@ -51,11 +51,11 @@ original_slug: Apprendre/CSS/CSS_layout/Le_positionnement
 
 <p>Pour le démontrer et avoir préparer un premier exemple pour les prochaines sections, ajoutez tout d'abord une classe <code>positioned</code> pour le deuxième {{htmlelement("p")}} dans le HTML:</p>
 
-<pre class="brush: html notranslate">&lt;p class="positioned"&gt; ... &lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p class="positioned"&gt; ... &lt;/p&gt;</pre>
 
 <p>Puis ajoutez la règle suivante au bas de votre CSS:</p>
 
-<pre class="brush: css notranslate">.positioned {
+<pre class="brush: css">.positioned {
   position: static;
   background: yellow; }</pre>
 
@@ -69,7 +69,7 @@ original_slug: Apprendre/CSS/CSS_layout/Le_positionnement
 
 <p>Le positionnement relatif est le premier type de positionnement que nous allons étudier. Il est très similaire au positionnement statique. Cependant, une fois que l'élément positionné occupe une place dans le cours normal de la mise en page, vous pourrez modifier sa position finale. Vous pourrez par exemple le faire chevaucher d'autres éléments de la page. Poursuivons : mettez à jour la déclaration de <code>position</code> dans le code :</p>
 
-<pre class="brush: css notranslate">position: relative;</pre>
+<pre class="brush: css">position: relative;</pre>
 
 <p>Si vous sauvegardez et actualisez à ce stade, vous ne verrez aucun changement dans le résultat. Alors, comment modifier la position de l'élément ? Vous avez besoin d'employer les propriétés {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} dont nous parlerons dans le prochain paragraphe.</p>
 
@@ -77,7 +77,7 @@ original_slug: Apprendre/CSS/CSS_layout/Le_positionnement
 
 <p>{{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} sont utilisés conjointement à {{cssxref("position")}} pour définir exactement là où placer l'élément positionné. Pour le tester, ajoutez les déclarations suivantes à la règle <code>.positioned</code> dans la CSS :</p>
 
-<pre class="notranslate">top: 30px;
+<pre>top: 30px;
 left: 30px;</pre>
 
 <div class="note">
@@ -88,14 +88,14 @@ left: 30px;</pre>
 
 <div id="example_1">
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Positionnement relatif&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Positionnement relatif&lt;/h1&gt;
 &lt;p&gt;Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.&lt;/p&gt;
 &lt;p class="positioned"&gt;Par défaut, je couvre 100% de la largeur de mon élément parent et je suis aussi haut que mon contenu enfant. Mes largeur et hauteur totales sont égales aux largeur et hauteur du contenu, plus celles du remplissage, plus celles de l'encadrement.&lt;/p&gt;
 &lt;p&gt;Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.&lt;/p&gt;
 &lt;p&gt;Les éléments « inline » &lt;span&gt;comme celui-ci &lt;/span&gt;ou &lt;span&gt;cet autre&lt;/span&gt; sont sur une même ligne que les nœuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants &lt;span&gt;se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte&lt;/span&gt; ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   margin: 0 auto; }
 p {
@@ -126,20 +126,20 @@ span {
 
 <p>Le positionnement absolu nous apporte des résultats bien différents. Modifions la déclaration de <code>position</code> dans le code :</p>
 
-<pre class="notranslate">position: absolute;</pre>
+<pre>position: absolute;</pre>
 
 <p>Si vous enregistrez et actualisez maintenant, vous verrez quelque chose comme ceci apparaitre :</p>
 
 <div id="example_2">
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Positionnement absolu&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Positionnement absolu&lt;/h1&gt;
 &lt;p&gt;Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.&lt;/p&gt;
 &lt;p class="positioned"&gt;Par défaut, je couvre 100% de la largeur de mon élément parent et je suis aussi haut que mon contenu enfant. Mes largeur et hauteur totales sont égales aux largeur et hauteur du contenu, plus celles du remplissage, plus celles de l'encadrement.&lt;/p&gt;
 &lt;p&gt;Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.&lt;/p&gt;
 &lt;p&gt;Les éléments « inline » &lt;span&gt;comme celui-ci &lt;/span&gt;ou &lt;span&gt;cet autre&lt;/span&gt; sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants &lt;span&gt;se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte&lt;/span&gt; ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   margin: 0 auto; }
 p {
@@ -182,13 +182,13 @@ span {
 
 <p>Nous pouvons changer ce <strong>contexte de positionnement</strong> — par rapport à quel élément est placé l'élément à positionner en absolu. Cela s'effectue en définissant le positionnement sur un des autres éléments parents — un des éléments dans lequel il est imbriqué (vous ne pouvez pas le positionner par rapport à un élément dans lequel il n'est pas imbriqué). Pour l'illustrer, ajoutez la déclaration suivante à la règle body:</p>
 
-<pre class="notranslate">position: relative;</pre>
+<pre>position: relative;</pre>
 
 <p>Cela devrait donner le résultat suivant:</p>
 
 <div id="example_3">
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Contextes de positionnement&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Contextes de positionnement&lt;/h1&gt;
 
 &lt;p&gt;Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.&lt;/p&gt;
 &lt;p class="positioned"&gt;Maintenant je suis positionné de manière absolue par rapport à l'élément &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;, et non par rapport à l'élément &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; !&lt;/p&gt;
@@ -196,7 +196,7 @@ span {
 &lt;p&gt;Les éléments « inline » &lt;span&gt;comme celui-ci &lt;/span&gt;ou &lt;span&gt;cet autre&lt;/span&gt; sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants &lt;span&gt;se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte&lt;/span&gt; ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   margin: 0 auto;
   position: relative;
@@ -237,7 +237,7 @@ span {
 
 <p>Ajoutez le code suivant à la CSS, pour faire en sorte que le premier paragraphe soit aussi en positionnement absolu :</p>
 
-<pre class="notranslate">p:nth-of-type(1) {
+<pre>p:nth-of-type(1) {
   position: absolute;
   background: lime;
   top: 10px;
@@ -252,13 +252,13 @@ span {
 
 <p>Pour modifier l'ordre d'empilement, ajoutez la déclaration suivante à la règle <code>p:nth-of-type(1)</code> :</p>
 
-<pre class="notranslate">z-index: 1;</pre>
+<pre>z-index: 1;</pre>
 
 <p>Voici maintenant l'exemple terminé :</p>
 
 <div id="example_4">
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;z-index&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;z-index&lt;/h1&gt;
 
 
 &lt;p&gt;Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.&lt;/p&gt;
@@ -267,7 +267,7 @@ span {
 &lt;p&gt;Les éléments « inline » &lt;span&gt;comme celui-ci &lt;/span&gt;ou &lt;span&gt;cet autre&lt;/span&gt; sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants &lt;span&gt;se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte&lt;/span&gt; ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   margin: 0 auto;
   position: relative; }
@@ -310,7 +310,7 @@ p:nth-of-type(1) {
 
 <p>Maintenant, mettez à jour la règle <code>body</code> : supprimez la déclaration <code>position : relative ;</code> et ajoutez une hauteur fixe, ainsi :</p>
 
-<pre class="notranslate">body {
+<pre>body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
@@ -318,7 +318,7 @@ p:nth-of-type(1) {
 
 <p>Maintenant, donnez la position <code>fixed</code> à l'élément {{htmlelement("h1")}} et centrez‑le en haut de la fenêtre. Ajoutez la règle suivante à la CSS :</p>
 
-<pre class="notranslate">h1 {
+<pre>h1 {
   position: fixed;
   top: 0;
   width: 500px;
@@ -331,7 +331,7 @@ p:nth-of-type(1) {
 
 <p>Si vous enregistrez et actualisez maintenant, vous verrez un petit effet amusant par lequel le titre reste fixe et le contenu semble défiler vers le haut et disparaître en dessous. Mais nous pouvons l'améliorer davantage — actuellement, une partie du contenu commence sous l'en‑tête. En effet, l'en-tête positionné n'apparaît plus dans le cours du document, de sorte que le reste du contenu se déplace vers le haut. Nous devons tout baisser un peu ; nous pouvons le faire en fixant une marge supérieure sur le premier paragraphe. Ajoutez ceci maintenant :</p>
 
-<pre class="notranslate">p:nth-of-type(1) {
+<pre>p:nth-of-type(1) {
   margin-top: 60px;
 }</pre>
 
@@ -339,14 +339,14 @@ p:nth-of-type(1) {
 
 <div id="example_5">
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Positionnement fixe&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Positionnement fixe&lt;/h1&gt;
 
 &lt;p&gt;Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.&lt;/p&gt;
 &lt;p class="positioned"&gt;Je ne suis plus positionné...&lt;/p&gt;
 &lt;p&gt;Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.&lt;/p&gt;
 &lt;p&gt;Les éléments « inline » &lt;span&gt;comme celui-ci &lt;/span&gt;ou &lt;span&gt;cet autre&lt;/span&gt; sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants &lt;span&gt;se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte&lt;/span&gt; ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
@@ -393,7 +393,7 @@ p:nth-of-type(1) {
 <div class="hidden">
 <h6 id="Exemple_de_positionnement_collant">Exemple de positionnement collant</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Positionnement collant&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Positionnement collant&lt;/h1&gt;
 
 &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
 
@@ -403,7 +403,7 @@ p:nth-of-type(1) {
 
 &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;       </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -417,7 +417,7 @@ p:nth-of-type(1) {
 }</pre>
 </div>
 
-<pre class="brush: css notranslate">.positioned {
+<pre class="brush: css">.positioned {
   position: sticky;
   top: 30px;
   left: 30px;
@@ -428,7 +428,7 @@ p:nth-of-type(1) {
 
 <p>Une utilisation courante pleine d'intérêt de <code>position: sticky</code> permet de créer une page d'index déroulante dans laquelle les divers en‑tête restent collés en haut de la page une fois qu'ils l'ont atteint. Le balisage d'un exemple de ce type ressemble à ceci :</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Positionnement collant&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Positionnement collant&lt;/h1&gt;
 
 &lt;dl&gt;
     &lt;dt&gt;A&lt;/dt&gt;
@@ -461,7 +461,7 @@ p:nth-of-type(1) {
 
 <p>Le CSS pourrait ressembler à ce qui suit. Dans le cours normal, les éléments {{htmlelement("dt")}} défilent avec le contenu. Quand on ajoute <code>position : sticky</code> à l'élément {{htmlelement("dt")}} avec une valeur {{cssxref("top")}} de 0, les navigateurs prenant en charge ce positionnement colleront les titres au sommet de la vue de la fenêtre au fur et à mesure qu'ils atteignent cette position. Chaque en-tête suivant remplacera l'en-tête précédent au fur et à mesure que le contenu défile.</p>
 
-<pre class="brush: css notranslate">dt {
+<pre class="brush: css">dt {
   background-color: black;
   color: white;
   padding: 10px;
@@ -474,7 +474,7 @@ p:nth-of-type(1) {
 
 <div id="Sticky_2">
 <div class="hidden">
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
@@ -491,7 +491,7 @@ dt {
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Positionnement collant&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Positionnement collant&lt;/h1&gt;
 
 &lt;dl&gt;
 &lt;dt&gt;A&lt;/dt&gt;

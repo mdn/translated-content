@@ -51,7 +51,7 @@ translation_of: Learn/Server-side/Django/skeleton_website
 
 <p>Pour <a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">le site web "Bibliothèque locale"</a>, le dossier du site web et celui du projet auront le même nom <em>locallibrary</em>. Une seule application <em>catalog</em> sera utilisée. La hiérachie de dossier du projet à la forme ci-dessous :</p>
 
-<pre class="brush: bash notranslate"><em>locallibrary/         # Website folder</em>
+<pre class="brush: bash"><em>locallibrary/         # Website folder</em>
     <strong>manage.py         </strong># Script to run Django tools for this project (created using django-admin)
     <em>locallibrary/     # Website/project folder </em>(created using django-admin)
     <em>catalog/          # Application folder </em>(created using manage.py)
@@ -67,17 +67,17 @@ translation_of: Learn/Server-side/Django/skeleton_website
 
 <p>Tout d'abord, il est nécessaire d'ouvrir une fenêtre pour exécuter des commandes en ligne (un terminal sous Linux/MacOS ou une fenêtre command sous Windows). Assurez-vous d'être dans un <a href="/en-US/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment">environnement virtuel python</a>, déplacez-vous dans votre arborescence de dossiers pour être dans votre zone de développement des applications Django. Créez-y un sous-dossier pour les projets Django <code>django_projects</code> et déplacez-vous dans ce dernier :</p>
 
-<pre class="brush: bash notranslate">mkdir django_projects
+<pre class="brush: bash">mkdir django_projects
 cd django_projects</pre>
 
 <p>Pour créer un nouveau projet avec le quadriciel Django, il suffit d'utiliser la commande  <code>django-admin startproject</code>. Le résultat de cette commande sera un sous-dossier du nom du projet dans lequel il suffit de s'y déplacer comme indiqué ci-dessous :</p>
 
-<pre class="brush: bash notranslate">django-admin startproject locallibrary
+<pre class="brush: bash">django-admin startproject locallibrary
 cd locallibrary</pre>
 
 <p>La commande <code>django-admin</code> crée une arboresence contenant des fichiers et un sous-dossier portant le même nom que le projet :</p>
 
-<pre class="brush: bash notranslate"><em>locallibrary/</em>
+<pre class="brush: bash"><em>locallibrary/</em>
     manage.py
     <em>locallibrary/</em>
         __init__.py
@@ -87,7 +87,7 @@ cd locallibrary</pre>
 
 <p>Votre répertoire de travail est de la forme :</p>
 
-<pre class="syntaxbox notranslate">../django_projects/locallibrary/</pre>
+<pre class="syntaxbox">../django_projects/locallibrary/</pre>
 
 <p>Le sous-dossier <em>locallibrary</em> permettra de gérer les requêtes web, il contient :</p>
 
@@ -104,7 +104,7 @@ cd locallibrary</pre>
 
 <p>La commande ci-dessous va créer l'application <em>catalog</em>. Vous devez être dans le dossier de votre projet locallibrary pour exécuter cette commande (dans le même dossier que le fichier <strong>manage.py</strong> de votre projet) :</p>
 
-<pre class="brush: bash notranslate">python3 manage.py startapp catalog</pre>
+<pre class="brush: bash">python3 manage.py startapp catalog</pre>
 
 <div class="note">
 <p><strong>Note</strong>: La commande ci-dessus est exécutée dans un environnement Linux/macOS X. Sous Windows, il se peut que la commande soit : <code>py -3 manage.py startapp catalog</code></p>
@@ -118,7 +118,7 @@ cd locallibrary</pre>
 
 <p>Le dossier projet <em>locallibrary</em> est agrémenté d'un nouveau sous-dossier <em>catalog</em> :</p>
 
-<pre class="brush: bash notranslate"><em>locallibrary/</em>
+<pre class="brush: bash"><em>locallibrary/</em>
     manage.py
     <em>locallibrary/
 </em><strong>    <em>catalog/</em>
@@ -148,7 +148,7 @@ cd locallibrary</pre>
 
 <p>Éditez le fichier <strong>django_projects/locallibrary/locallibrary/settings.py</strong> et allez jusqu'à la liste <code>INSTALLED_APPS</code>. Ajoutez alors comme indiqué ci-dessous l'application à la liste.</p>
 
-<pre class="brush: bash notranslate">INSTALLED_APPS = [
+<pre class="brush: bash">INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -170,7 +170,7 @@ cd locallibrary</pre>
 
 <p>Le système de gestion de base de données (SGBD) SQLite sera utilisé dans le projet de cette série didactique ; nous n'aurons pas d'accès concurents massifs et ce système ne requiert pas  de paramétrages complémentaires. Ci-dessous la définition dans <strong>settings.py</strong> est nécessaire pour utiliser ce SGBD :</p>
 
-<pre class="brush: python notranslate">DATABASES = {
+<pre class="brush: python">DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
@@ -182,7 +182,7 @@ cd locallibrary</pre>
 
 <p>Le fichier <strong>settings.py</strong> est utilisé pour l'ensemble des paramètres du projet, mais pour le moment nous n'allons nous occuper du fuseau horaire. Le format des fuseaux horaires est le format standard en informatique (<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">Liste des codes - <em>en anglais</em></a>). Changez la variable <code>TIME_ZONE</code> de votre projet avec la chaîne appropriée à votre fuseau, par exemple :</p>
 
-<pre class="brush: python notranslate">TIME_ZONE = 'Europe/Paris'</pre>
+<pre class="brush: python">TIME_ZONE = 'Europe/Paris'</pre>
 
 <p>Il y a deux paramètres à connaître, même s'il ne seront pas modifiés pour l'instant :</p>
 
@@ -197,7 +197,7 @@ cd locallibrary</pre>
 
 <p>A l'ouverture du fichier <strong>locallibrary/locallibrary/urls.py</strong>,  vous pouvez remarquer les premières instructions sur la manière de gérer la cartographie des URLs.</p>
 
-<pre class="brush: python notranslate">"""locallibrary URL Configuration
+<pre class="brush: python">"""locallibrary URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.1/topics/http/urls/
@@ -228,7 +228,7 @@ urlpatterns = [
 
 <p>Ajoutez les lignes ci-dessous à la fin du fichier de manière à ajouter dans la variable <code>urlpatterns</code> une nouvelle entrée à la liste des routes. Cette nouvelle entrée permet une nouvelle route pour <code>catalog/</code> dont la gestion est déléguée au fichier <strong>urls.py</strong> du module <strong>catalog</strong> (c'est-à-dire le fichier <strong>catalog/urls.py</strong>).</p>
 
-<pre class="brush: python notranslate"># Use include() to add paths from the catalog application
+<pre class="brush: python"># Use include() to add paths from the catalog application
 from django.urls import include
 from django.urls import path
 
@@ -242,7 +242,7 @@ urlpatterns += [
 
 <p>Ajoutez les lignes ci-dessous au bas du fichier <strong>urls.py</strong> :</p>
 
-<pre class="brush: python notranslate">#Add URL maps to redirect the base URL to our application
+<pre class="brush: python">#Add URL maps to redirect the base URL to our application
 from django.views.generic import RedirectView
 urlpatterns += [
     path('', RedirectView.as_view(url='/catalog/', permanent=True)),
@@ -251,7 +251,7 @@ urlpatterns += [
 
 <p>La racine du site ('/') est prise en compte par Django, il est donc inutile d'écrire le chemin avec le caractère '/' en début. Si vous maintenez ce mode d'écriture, vous aurez le message ci-dessous au démarrage du serveur :</p>
 
-<pre class="brush: python notranslate">System check identified some issues:
+<pre class="brush: python">System check identified some issues:
 
 WARNINGS:
 ?: (urls.W002) Your URL pattern '/' has a route beginning with a '/'.
@@ -263,7 +263,7 @@ If this pattern is targeted in an include(), ensure the include() pattern has a 
 
 <p>Ajoutez les lignes ci-dessous au bas du fichier <strong>urls.py</strong> :</p>
 
-<pre class="notranslate"><code># Use static() to add url mapping to serve static files during development (only)
+<pre><code># Use static() to add url mapping to serve static files during development (only)
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -273,7 +273,7 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)</
 <div class="note">
 <p><strong>Note</strong>: Il y a plusieurs manière pour ajouter des routes à la variable <code>urlpatterns</code> (dans les étapes décrites ci-dessus nous avons ajouté petit à patir en utilisant l'opérateur <code>+=</code> pour bien séparer les étapes). Il est en réalité tout à fait possible de tout regrouper dans une seule étape :</p>
 
-<pre class="brush: python notranslate">urlpatterns = [
+<pre class="brush: python">urlpatterns = [
     path('admin/', admin.site.urls),
     path('catalog/', include('catalog.urls')),
     path('', RedirectView.as_view(url='/catalog/')),
@@ -285,7 +285,7 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)</
 
 <p>Dernière étape ! Il faut créer le fichier urls.py dans l'application (ou le module) catalog et de définir la variable <code>urlpatterns</code> vide pour le moment. </p>
 
-<pre class="brush: python notranslate">from django.urls import path
+<pre class="brush: python">from django.urls import path
 from . import views
 
 urlpatterns = [
@@ -305,7 +305,7 @@ urlpatterns = [
 
 <p>Quand le site a été créé (cf. supra), Django a automatiquement ajouté plusieurs modèles de base pour pouvoir administrer le site (point qui sera abordé plus loin). Pour configurer la base de données, avec ces éléments de base, il vous faut exécuter les commandes en ligne ci-dessous dans le répertoire racine du projet (dossier où se trouve<strong> manage.py</strong>):</p>
 
-<pre class="brush: bash notranslate">python3 manage.py makemigrations
+<pre class="brush: bash">python3 manage.py makemigrations
 python3 manage.py migrate
 </pre>
 
@@ -331,7 +331,7 @@ python3 manage.py migrate
 
 <p>Pour démarrer le serveur local, il suffit d'exécuter la commande ci-dessous dans le répertoire du projet (dossier où se trouver <strong>manage.py</strong>) :</p>
 
-<pre class="brush: bash notranslate">python3 manage.py runserver
+<pre class="brush: bash">python3 manage.py runserver
 
  Performing system checks...
 

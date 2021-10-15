@@ -227,10 +227,10 @@ original_slug: Apprendre/HTML/Tableaux/Basics
  <li>Avant tout, faites une copie locale de <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html">blank-template.html</a> et <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">minimal-table.css</a> dans un nouveau répertoire de votre ordinateur.</li>
  <li>Le contenu de chaque tableau est encadré par ces deux balises : <strong><code><a href="/fr/docs/Web/HTML/Element/table">&lt;table&gt;&lt;/table&gt;</a></code></strong>. Ajoutez‑les dans le corps de votre HTML.</li>
  <li>Le plus petit conteneur d'un tableau est la cellule ; elle est créée avec l'élément  <strong><code><a href="/fr/docs/Web/HTML/Element/td">&lt;td&gt;</a></code></strong> (« td » comme « tableau données »). Ajoutez ceci entre les balises du tableau :
-  <pre class="brush: html notranslate">&lt;td&gt;Bonjour, je suis votre première cellule.&lt;/td&gt;</pre>
+  <pre class="brush: html">&lt;td&gt;Bonjour, je suis votre première cellule.&lt;/td&gt;</pre>
  </li>
  <li>Si nous voulons une rangée de quatre cellules, nous devons copier la première trois fois. Mettez à jour le contenu du tableau pour avoir quelque chose comme :
-  <pre class="brush: html notranslate">&lt;td&gt;Bonjour, je suis votre première cellule &lt;/td&gt;
+  <pre class="brush: html">&lt;td&gt;Bonjour, je suis votre première cellule &lt;/td&gt;
 &lt;td&gt;je suis votre deuxième cellule&lt;/td&gt;
 &lt;td&gt;je suis votre troisième cellule&lt;/td&gt;
 &lt;td&gt;je suis votre quatrième cellule&lt;/td&gt;</pre>
@@ -244,7 +244,7 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 <ol>
  <li>Placez les quatre cellules que vous avez créées entre deux balises <code>&lt;tr&gt;</code> ainsi :
 
-  <pre class="brush: html notranslate">&lt;tr&gt;
+  <pre class="brush: html">&lt;tr&gt;
   &lt;td&gt;Bonjour, je suis votre première cellule &lt;/td&gt;
   &lt;td&gt;je suis votre deuxième cellule &lt;/td&gt;
   &lt;td&gt;je suis votre troisième cellule &lt;/td&gt;
@@ -281,7 +281,7 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 
 <p>Intéressons-nous maintenant aux en-têtes du tableau — cellules spéciales qui débutent une ligne ou une colonne et définissent le type de données que contiennent la rangée ou la colonne (à titre d'exemple, voir les cellules "Personne" et "Âge" dans le premier exemple illustré dans cet article). Pour comprendre pourquoi ils sont utiles, regardez l'exemple du tableau suivant. Tout d'abord, le code source :</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;&amp;nbsp;&lt;/td&gt;
     &lt;td&gt;Knocky&lt;/td&gt;
@@ -393,7 +393,7 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 
 <p>Le code initial ressemble à cela :</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;th&gt;Animaux&lt;/th&gt;
   &lt;/tr&gt;
@@ -473,7 +473,7 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 
 <p>Observez l'exemple simple suivant :</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;th&gt;Data 1&lt;/th&gt;
     &lt;th style="background-color: yellow"&gt;Data 2&lt;/th&gt;
@@ -509,7 +509,7 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 
 <p>Ce n'est pas idéal, car nous devons répéter les informations de style dans les trois cellules de la colonne  (nous aurions probablement défini une <code>classe</code> dans un projet réel et spécifié le style dans une feuille de style séparée). À la place, nous pouvons préciser l'information une seule fois dans un élément <code>&lt;col&gt;</code>. Les éléments <code>&lt;col&gt;</code> sont utilisés dans un conteneur <code>&lt;colgroup&gt;</code> juste en-dessous de la balise <code>&lt;table&gt;</code>. Nous pourrions créer le même effet que  celui vu plus haut en spécifiant notre tableau comme suit :</p>
 
-<pre class="brush: html notranslate"> &lt;table&gt;
+<pre class="brush: html"> &lt;table&gt;
    &lt;colgroup&gt;
     &lt;col&gt;
     &lt;col style="background-color: yellow"&gt;
@@ -532,7 +532,7 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 
 <p>Si nous voulions appliquer les informations de style aux deux colonnes, nous devrions juste inclure un élément <code>&lt;col&gt;</code> avec un attribut span, comme ceci :</p>
 
-<pre class="brush: html notranslate">&lt;colgroup&gt;
+<pre class="brush: html">&lt;colgroup&gt;
   &lt;col style="background-color: yellow" span="2"&gt;
 &lt;/colgroup&gt;</pre>
 
