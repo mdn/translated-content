@@ -47,7 +47,7 @@ MDN은(는) [접근성 학습 영역](/ko/docs/Learn/Accessibility) 접근성에
 - [발작 장애에 대한 접근성](/ko/docs/Web/Accessibility/Seizure_disorders)
   - : 어떤 종류의 시각적 웹 콘텐츠는 특정 뇌 질환을 가진 사람들에게 발작을 일으킬 수 있습니다. 문제가 될 수 있는 콘텐츠 유형을 이해하고, 이러한 문제를 방지할 수 있는 도구와 전략을 찾습니다.
 
-## See also
+## 함께 보기
 
 - [WAI Interest Group](https://www.w3.org/WAI/IG/)
 - [개발자 가이드](/ko/docs/Web/Guide)
