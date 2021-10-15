@@ -19,7 +19,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting
 
 <div>{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks", "Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML")}}</div>
 
-<p class="summary">Il y a de nombreux autres éléments HTML pour mettre en forme un texte qui n'ont pas été mentionnés dans l'article<a href="/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"> Les concepts fondamentaux du HTML liés au texte</a>. Les éléments abordés ici sont moins connus mais tout aussi utiles (et ce n'est aucunement une liste complète). Nous voyons ici comment marquer des citations, des listes de description, du code informatique et autres choses relatives au texte : indices et exposants, informations de contact, etc.</p>
+<p>Il y a de nombreux autres éléments HTML pour mettre en forme un texte qui n'ont pas été mentionnés dans l'article<a href="/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"> Les concepts fondamentaux du HTML liés au texte</a>. Les éléments abordés ici sont moins connus mais tout aussi utiles (et ce n'est aucunement une liste complète). Nous voyons ici comment marquer des citations, des listes de description, du code informatique et autres choses relatives au texte : indices et exposants, informations de contact, etc.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -34,9 +34,9 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting
  </tbody>
 </table>
 
-<h2 id="Listes_descriptives"><span>Listes descriptives</span></h2>
+<h2 id="Listes_descriptives">Listes descriptives</h2>
 
-<p>Dans les bases du texte en HTML, nous avons exposé comment on pouvait baliser <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists">des listes simples en HTML</a>, mais sans mentionner le troisième type de liste que vous rencontrerez à l'occasion — <strong>les <span>listes descriptives</span></strong>. L'objectif de ces listes est de marquer une série d'éléments et leurs descriptions associées, comme termes et définition, ou bien questions et réponse. Voici l'exemple d'un ensemble de termes et leur définitions :</p>
+<p>Dans les bases du texte en HTML, nous avons exposé comment on pouvait baliser <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists">des listes simples en HTML</a>, mais sans mentionner le troisième type de liste que vous rencontrerez à l'occasion — <strong>les listes descriptives</strong>. L'objectif de ces listes est de marquer une série d'éléments et leurs descriptions associées, comme termes et définition, ou bien questions et réponse. Voici l'exemple d'un ensemble de termes et leur définitions :</p>
 
 <pre class="notranslate">soliloque
 Dans une pièce de théâtre, action d'un acteur adressant à lui-même ses pensées ou sentiments intimes et, de la sorte, les faisant partager à son auditoire (mais pas aux autres personnages de la pièce).
@@ -600,7 +600,7 @@ textarea.onkeyup = function(){
 <pre class="brush: html notranslate">&lt;pre&gt;&lt;code&gt;var para = document.querySelector('p');
 
 para.onclick = function() {
-  alert('<span>Owww, arrête de me toucher !</span>');
+  alert('Owww, arrête de me toucher !');
 }&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;N'utilisez pas d'éléments de présentation comme &lt;code&gt;&amp;lt;font&amp;gt;&lt;/code&gt; et &lt;code&gt;&amp;lt;center&amp;gt;&lt;/code&gt;.&lt;/p&gt;
@@ -623,7 +623,7 @@ para.onclick = function() {
 
 <p>HTML fournit également l'élément {{htmlelement("time")}}} pour marquer les heures et les dates dans un format lisible par machine. Par exemple :</p>
 
-<pre class="brush: html notranslate">&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2016-01-20<span class="pl-pds">"</span></span>&gt;20 janvier 2016&lt;/<span class="pl-ent">time</span>&gt;</pre>
+<pre class="brush: html notranslate">&lt;time datetime="2016-01-20"&gt;20 janvier 2016&lt;/time&gt;</pre>
 
 <p>En quoi est-ce utile ? Eh bien, il y a beaucoup de façons différentes dont les humains écrivent les dates. La date ci-dessus pourrait s'écrire comme suit :</p>
 
@@ -634,9 +634,9 @@ para.onclick = function() {
  <li>20/01/16</li>
  <li>01/20/16</li>
  <li>Le 20 du mois prochain</li>
- <li><span lang="fr">20e Janvier 2016</span></li>
- <li><span lang="ja">2016年1月20日</span></li>
- <li><span lang="ja">etc.</span></li>
+ <li>20e Janvier 2016</li>
+ <li>2016年1月20日</li>
+ <li>etc.</li>
 </ul>
 
 <p>Mais ces différents formes ne sont pas facilement reconnaissables par les ordinateurs — que se passerait‑il si vous vouliez saisir automatiquement les dates de tous les événements dans une page et les insérer dans un calendrier ? L'élément {{htmlelement("time")}}} vous permettra d'attacher un horodatage non ambigu lisible par machine à cette fin.</p>
@@ -644,21 +644,21 @@ para.onclick = function() {
 <p>L'exemple de base ci-dessus ne fournit qu'une simple date lisible par machine, mais il y a beaucoup d'autres options possibles, par exemple :</p>
 
 <pre class="brush: html notranslate">&lt;!-- Simple date standard --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2016-01-20<span class="pl-pds">"</span></span>&gt;20 janvier 2016&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="2016-01-20"&gt;20 janvier 2016&lt;/time&gt;
 &lt;!-- Juste l'année et le mois --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2016-01<span class="pl-pds">"</span></span>&gt;janvier 2016&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="2016-01"&gt;janvier 2016&lt;/time&gt;
 &lt;!-- Juste le mois et les jour --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>01-20<span class="pl-pds">"</span></span>&gt;20 janvier&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="01-20"&gt;20 janvier&lt;/time&gt;
 &lt;!-- Juste l'heure, heure et minutes --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>19:30<span class="pl-pds">"</span></span>&gt;19h30&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="19:30"&gt;19h30&lt;/time&gt;
 &lt;!-- Vous pouvez aussi mettre les secondes et les millisecondes ! --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span></span>19:30:01.856<span class="pl-s"><span class="pl-pds">"</span></span>&gt;19h30m1,856s&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="19:30:01.856"&gt;19h30m1,856s&lt;/time&gt;
 &lt;!-- Date et heure --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2016-01-20T19:30<span class="pl-pds">"</span></span>&gt;19h30, le 20 janvier 2016&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="2016-01-20T19:30"&gt;19h30, le 20 janvier 2016&lt;/time&gt;
 &lt;!-- Date et heure avec décalage de fuseau horaire --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2016-01-20T19:30<span class="pl-pds">+01:00"</span></span>&gt;19h30, le 20 janvier 2016 corespond à 20h30 en France&lt;/<span class="pl-ent">time</span>&gt;
+&lt;time datetime="2016-01-20T19:30+01:00"&gt;19h30, le 20 janvier 2016 corespond à 20h30 en France&lt;/time&gt;
 &lt;!-- Appel d'un numéro de semains donné --&gt;
-&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2016-W04<span class="pl-pds">"</span></span>&gt;La 4e semaine de 2016&lt;/<span class="pl-ent">time</span>&gt;</pre>
+&lt;time datetime="2016-W04"&gt;La 4e semaine de 2016&lt;/time&gt;</pre>
 
 <h2 id="Résumé">Résumé</h2>
 

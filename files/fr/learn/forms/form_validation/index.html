@@ -14,7 +14,7 @@ original_slug: Web/Guide/HTML/Formulaires/Validation_donnees_formulaire
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés", "Web/Guide/HTML/Formulaires")}}</div>
 
-<p class="summary">Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les données mises dans un formulaire par un utilisateur sont dans un format correct pour pouvoir être traitées correctement et qu'elles ne vont pas casser nos applications. Nous voulons également aider les utilisateurs à compléter les formulaires correctement et à ne pas ressentir de frustration en essayant d'utiliser les applications. La validation des données de formulaire vous aide à remplir ces objectifs — cet article indique ce qu'il est nécessaire de savoir.</p>
+<p>Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les données mises dans un formulaire par un utilisateur sont dans un format correct pour pouvoir être traitées correctement et qu'elles ne vont pas casser nos applications. Nous voulons également aider les utilisateurs à compléter les formulaires correctement et à ne pas ressentir de frustration en essayant d'utiliser les applications. La validation des données de formulaire vous aide à remplir ces objectifs — cet article indique ce qu'il est nécessaire de savoir.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -269,92 +269,92 @@ div {
 
 <p>Voici un exemple complet montrant l'utilisation des fonctionnalités HTML intégrées pour la validation :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>form</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>fieldset</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>legend</span><span class="punctuation token">&gt;Qualité</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>abbr</span> <span class="attr-name token">title</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Ce champ est obligatoire<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>*<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>abbr</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>legend</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>radio<span class="punctuation token">"</span></span> <span class="attr-name token">required</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>title<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>r1<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Mr<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>r1<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>M.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>radio<span class="punctuation token">"</span></span> <span class="attr-name token">required</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>title<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>r2<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Ms<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>r2<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Mme.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>fieldset</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>n1<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Quel est votre âge ?<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-    <span class="comment token">&lt;!-- L'attribut pattern peut servir de recours pour les navigateurs dont le type number n'est
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;form&gt;
+  &lt;p&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;Qualité&lt;abbr title="Ce champ est obligatoire"&gt;*&lt;/abbr&gt;&lt;/legend&gt;
+      &lt;input type="radio" required name="title" id="r1" value="Mr"&gt;&lt;label for="r1"&gt;M.&lt;/label&gt;
+      &lt;input type="radio" required name="title" id="r2" value="Ms"&gt;&lt;label for="r2"&gt;Mme.&lt;/label&gt;
+    &lt;/fieldset&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for="n1"&gt;Quel est votre âge ?&lt;/label&gt;
+    &lt;!-- L'attribut pattern peut servir de recours pour les navigateurs dont le type number n'est
          pas implémenté pour input mais qui prennent en charge l'attribut pattern. Veuillez noter
          que les navigateurs prenant en charge l'attribut pattern ne signalent pas d'erreur quand
-         il est utilisé avec un champ number. Seule son utilisation ici agit en tant que recours. --&gt;</span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>number<span class="punctuation token">"</span></span> <span class="attr-name token">min</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>12<span class="punctuation token">"</span></span> <span class="attr-name token">max</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>120<span class="punctuation token">"</span></span> <span class="attr-name token">step</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>1<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>n1<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>age<span class="punctuation token">"</span></span>
-           <span class="attr-name token">pattern</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>\d+<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>t1<span class="punctuation token">"</span></span><span class="punctuation token">&gt;Quel est votre fruit </span></span>favori ?<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>abbr</span> <span class="attr-name token">title</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Ce champ est obligatoire<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>*<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>abbr</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>t1<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>fruit<span class="punctuation token">"</span></span> <span class="attr-name token">list</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>l1<span class="punctuation token">"</span></span> <span class="attr-name token">required</span>
-           <span class="attr-name token">pattern</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>[Bb]anane|[Cc]erise|[Cc]itron|[Ff]raise|[Oo]range|[Pp]omme<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>datalist</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>l1<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;</span></span>Banane<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;</span></span>Cerise<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;
-      </span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;Citron</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;
-</span></span>      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;Fraise</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;</span></span>Orange<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;</span></span>Pomme<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>datalist</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>t2<span class="punctuation token">"</span></span><span class="punctuation token">&gt;Quelle est votre</span></span> adresse électronique ?<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>email<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>t2<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>email<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>t3<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Laissez un court message<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>textarea</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>t3<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>msg<span class="punctuation token">"</span></span> <span class="attr-name token">maxlength</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>140<span class="punctuation token">"</span></span> <span class="attr-name token">rows</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>5<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>textarea</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>button</span><span class="punctuation token">&gt;</span></span>Soumettre<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>button</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>form</span><span class="punctuation token">&gt;</span></span></code></pre>
+         il est utilisé avec un champ number. Seule son utilisation ici agit en tant que recours. --&gt;
+    &lt;input type="number" min="12" max="120" step="1" id="n1" name="age"
+           pattern="\d+"&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for="t1"&gt;Quel est votre fruit favori ?&lt;abbr title="Ce champ est obligatoire"&gt;*&lt;/abbr&gt;&lt;/label&gt;
+    &lt;input type="text" id="t1" name="fruit" list="l1" required
+           pattern="[Bb]anane|[Cc]erise|[Cc]itron|[Ff]raise|[Oo]range|[Pp]omme"&gt;
+    &lt;datalist id="l1"&gt;
+      &lt;option&gt;Banane&lt;/option&gt;
+      &lt;option&gt;Cerise&lt;/option&gt;
+      &lt;option&gt;Citron&lt;/option&gt;
+      &lt;option&gt;Fraise&lt;/option&gt;
+      &lt;option&gt;Orange&lt;/option&gt;
+      &lt;option&gt;Pomme&lt;/option&gt;
+    &lt;/datalist&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for="t2"&gt;Quelle est votre adresse électronique ?&lt;/label&gt;
+    &lt;input type="email" id="t2" name="email"&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for="t3"&gt;Laissez un court message&lt;/label&gt;
+    &lt;textarea id="t3" name="msg" maxlength="140" rows="5"&gt;&lt;/textarea&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;button&gt;Soumettre&lt;/button&gt;
+  &lt;/p&gt;
+&lt;/form&gt;</code></pre>
 
-<pre class="brush: css line-numbers  language-css"><code class="language-css"><span class="selector token">body </span><span class="punctuation token">{</span>
-  <span class="property token">font</span><span class="punctuation token">:</span> <span class="number token">1</span>em sans-serif<span class="punctuation token">;</span>
-  <span class="property token">padding</span><span class="punctuation token">:</span> <span class="number token">0</span><span class="punctuation token">;</span>
-  <span class="property token">margin</span> <span class="punctuation token">:</span> <span class="number token">0</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: css line-numbers  language-css"><code class="language-css">body {
+  font: 1em sans-serif;
+  padding: 0;
+  margin : 0;
+}
 
-<span class="selector token">form </span><span class="punctuation token">{</span>
-  <span class="property token">max-width</span><span class="punctuation token">:</span> <span class="number token">300</span>px<span class="punctuation token">;</span>
-  <span class="property token">margin</span><span class="punctuation token">:</span> <span class="number token">0</span><span class="punctuation token">;</span>
-  <span class="property token">padding</span><span class="punctuation token">:</span> <span class="number token">0</span> <span class="number token">5</span>px<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+form {
+  max-width: 300px;
+  margin: 0;
+  padding: 0 5px;
+}
 
-<span class="selector token">p &gt; label </span><span class="punctuation token">{</span>
-  <span class="property token">display</span><span class="punctuation token">:</span> block<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+p &gt; label {
+  display: block;
+}
 
-<span class="selector token">input[type=text],
+input[type=text],
 input[type=email],
 input[type=number],
 textarea,
-fieldset </span><span class="punctuation token">{</span>
-<span class="comment token">/* requis pour composer de manière appropriée les éléments
-   de formulaire sur les navigateurs fondés sur WebKit */</span>
-  <span class="property token">-webkit-appearance</span><span class="punctuation token">:</span> none<span class="punctuation token">;</span>
+fieldset {
+/* requis pour composer de manière appropriée les éléments
+   de formulaire sur les navigateurs fondés sur WebKit */
+  -webkit-appearance: none;
 
-  <span class="property token">width</span> <span class="punctuation token">:</span> <span class="number token">100%</span><span class="punctuation token">;</span>
-  <span class="property token">border</span><span class="punctuation token">:</span> <span class="number token">1</span>px solid <span class="hexcode token">#333</span><span class="punctuation token">;</span>
-  <span class="property token">margin</span><span class="punctuation token">:</span> <span class="number token">0</span><span class="punctuation token">;</span>
+  width : 100%;
+  border: 1px solid #333;
+  margin: 0;
 
-  <span class="property token">font-family</span><span class="punctuation token">:</span> inherit<span class="punctuation token">;</span>
-  <span class="property token">font-size</span><span class="punctuation token">:</span> <span class="number token">90%</span><span class="punctuation token">;</span>
+  font-family: inherit;
+  font-size: 90%;
 
-  <span class="property token">-moz-box-sizing</span><span class="punctuation token">:</span> border-box<span class="punctuation token">;</span>
-  <span class="property token">box-sizing</span><span class="punctuation token">:</span> border-box<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-<span class="selector token">input<span class="pseudo-class token">:invalid</span> </span><span class="punctuation token">{</span>
-  <span class="property token">box-shadow</span><span class="punctuation token">:</span> <span class="number token">0</span> <span class="number token">0</span> <span class="number token">5</span>px <span class="number token">1</span>px red<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
 
-<span class="selector token">input<span class="pseudo-class token">:focus</span><span class="pseudo-class token">:invalid</span> </span><span class="punctuation token">{</span>
-  <span class="property token">outline</span><span class="punctuation token">:</span> none<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+input:focus:invalid {
+  outline: none;
+}</code></pre>
 
 <p>{{EmbedLiveSample("Exemple_complet", "100%", 450)}}</p>
 
@@ -830,7 +830,7 @@ addEvent(form, "submit", function () {
  </li>
  <li>Greffons jQuery :
   <ul>
-   <li><a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/" rel="external">Validation</a><span class="hidden"> </span></li>
+   <li><a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/" rel="external">Validation</a> </li>
   </ul>
  </li>
 </ul>
@@ -862,7 +862,7 @@ addEvent(form, "submit", function () {
 
 <ul>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML">Mon premier formulaire HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML"><span>Comment structurer un formulaire HTML</span></a></li>
+ <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML">Comment structurer un formulaire HTML</a></li>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs">Les widgets natifs pour formulaire</a></li>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires">Envoi des données de formulaire</a></li>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire">Validation des données de formulaire</a></li>

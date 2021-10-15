@@ -109,37 +109,37 @@ if (coursesFaites === true) {
 
 <p>Il existe un moyen d'enchaîner des choix / résultats supplémentaires à <code>if...else</code> — en utilisant <code>else if</code> entre. Chaque choix supplémentaire nécessite un bloc additionnel à placer entre <code>if() { ... }</code> et <code>else { ... }</code> — regardez l'exemple suivant plus élaboré, qui pourrait faire partie d'une simple application de prévisions météo:</p>
 
-<pre class="brush: html line-numbers  language-html" style="font-size: 16px !important; line-height: 24px !important;"><code class="language-html" style="font-size: 16px !important; line-height: 24px !important;"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"weather</span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Select the weather type today: <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>select</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>weather<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>--Make a choice--<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>sunny<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Sunny<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>rainy<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Rainy<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>snowing<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Snowing<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>overcast<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Overcast<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>select</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html line-numbers  language-html" style="font-size: 16px !important; line-height: 24px !important;"><code class="language-html" style="font-size: 16px !important; line-height: 24px !important;">&lt;label for="weather"&gt;Select the weather type today: &lt;/label&gt;
+&lt;select id="weather"&gt;
+  &lt;option value=""&gt;--Make a choice--&lt;/option&gt;
+  &lt;option value="sunny"&gt;Sunny&lt;/option&gt;
+  &lt;option value="rainy"&gt;Rainy&lt;/option&gt;
+  &lt;option value="snowing"&gt;Snowing&lt;/option&gt;
+  &lt;option value="overcast"&gt;Overcast&lt;/option&gt;
+&lt;/select&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;p&gt;&lt;/p&gt;</code></pre>
 
-<pre class="brush: js line-numbers  language-js" style="font-size: 16px !important; line-height: 24px !important;"><code class="language-js" style="font-size: 16px !important; line-height: 24px !important;">const select <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'select'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-const para <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'p'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js" style="font-size: 16px !important; line-height: 24px !important;"><code class="language-js" style="font-size: 16px !important; line-height: 24px !important;">const select = document.querySelector('select');
+const para = document.querySelector('p');
 
-select<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'change'</span><span class="punctuation token">,</span> setWeather<span class="punctuation token">)</span><span class="punctuation token">;</span>
+select.addEventListener('change', setWeather);
 
-<span class="keyword token">function</span> <span class="function token">setWeather</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  const choice <span class="operator token">=</span> select<span class="punctuation token">.</span>value<span class="punctuation token">;</span>
+function setWeather() {
+  const choice = select.value;
 
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>choice <span class="operator token">===</span> <span class="string token">'sunny'</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    para<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.'</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="keyword token">if</span> <span class="punctuation token">(</span>choice <span class="operator token">===</span> <span class="string token">'rainy'</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    para<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">'Rain is falling outside; take a rain coat and a brolly, and don\'t stay out for too long.'</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="keyword token">if</span> <span class="punctuation token">(</span>choice <span class="operator token">===</span> <span class="string token">'snowing'</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    para<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">'The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.'</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="keyword token">if</span> <span class="punctuation token">(</span>choice <span class="operator token">===</span> <span class="string token">'overcast'</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    para<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">'It isn\'t raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.'</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-    para<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">''</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+  if (choice === 'sunny') {
+    para.textContent = 'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.';
+  } else if (choice === 'rainy') {
+    para.textContent = 'Rain is falling outside; take a rain coat and a brolly, and don\'t stay out for too long.';
+  } else if (choice === 'snowing') {
+    para.textContent = 'The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.';
+  } else if (choice === 'overcast') {
+    para.textContent = 'It isn\'t raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.';
+  } else {
+    para.textContent = '';
+  }
+}</code></pre>
 
 <p>{{ EmbedLiveSample('else_if', '100%', 100) }}</p>
 

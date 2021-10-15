@@ -212,130 +212,130 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
       &lt;/tr&gt;
     &lt;/table&gt;</pre>
 
-<p><span class="tlid-translation translation"><span title="">Si vous essayez de naviguer à l'aide d'un lecteur d'écran, cela vous indiquera probablement qu'il existe un tableau à examiner (bien que certains lecteurs d'écran puissent deviner la différence entre les présentations de tableau et les tableaux de données).</span> <span title="">Vous devrez ensuite (en fonction du lecteur d’écran que vous utilisez) devoir accéder à la table en tant qu’objet et en examiner les caractéristiques séparément, puis sortir à nouveau de la table pour continuer à naviguer dans le contenu.</span></span></p>
+<p>Si vous essayez de naviguer à l'aide d'un lecteur d'écran, cela vous indiquera probablement qu'il existe un tableau à examiner (bien que certains lecteurs d'écran puissent deviner la différence entre les présentations de tableau et les tableaux de données). Vous devrez ensuite (en fonction du lecteur d’écran que vous utilisez) devoir accéder à la table en tant qu’objet et en examiner les caractéristiques séparément, puis sortir à nouveau de la table pour continuer à naviguer dans le contenu.</p>
 
-<p><span class="tlid-translation translation"><span title="">Les structures de table sont un vestige du passé – elles semblaient logiques lorsque le support CSS n’était pas répandu dans les navigateurs, mais elles semaient la confusion chez les utilisateurs de lecteurs d’écran, tout en étant mauvaises pour de nombreuses autres raisons (utilisation abusive des tableaux, nécessite plus de balisage,</span> <span title="">design manquant de souplesse).</span> <span title="">Ne les utilisez pas !</span></span></p>
+<p>Les structures de table sont un vestige du passé – elles semblaient logiques lorsque le support CSS n’était pas répandu dans les navigateurs, mais elles semaient la confusion chez les utilisateurs de lecteurs d’écran, tout en étant mauvaises pour de nombreuses autres raisons (utilisation abusive des tableaux, nécessite plus de balisage, design manquant de souplesse). Ne les utilisez pas !</p>
 
-<p><span class="tlid-translation translation"><span title="">Vous pouvez vérifier ces affirmations en comparant votre expérience antérieure avec un</span></span>  <a href="https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/">exemple plus moderne de structure de site Web</a>, <span class="tlid-translation translation"><span title="">qui pourrait ressembler à ceci :</span></span></p>
+<p>Vous pouvez vérifier ces affirmations en comparant votre expérience antérieure avec un  <a href="https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/">exemple plus moderne de structure de site Web</a>, qui pourrait ressembler à ceci :</p>
 
 <pre class="brush: html notranslate">&lt;header&gt;
-  &lt;h1&gt;<span class="tlid-translation translation"><span title="">Entête</span></span>&lt;/h1&gt;
+  &lt;h1&gt;Entête&lt;/h1&gt;
 &lt;/header&gt;
 
 &lt;nav&gt;
-  &lt;!--  <span class="tlid-translation translation"><span title="">navigation principale ici</span></span>  --&gt;
+  &lt;!--  navigation principale ici  --&gt;
 &lt;/nav&gt;
 
-&lt;!--  <span class="tlid-translation translation"><span title="">Voici le contenu principal de notre page</span></span>  --&gt;
+&lt;!--  Voici le contenu principal de notre page  --&gt;
 &lt;main&gt;
 
-  &lt;!--  <span class="tlid-translation translation"><span title="">Il contient un article</span></span>  --&gt;
+  &lt;!--  Il contient un article  --&gt;
   &lt;article&gt;
-    &lt;h2&gt;<span class="tlid-translation translation"><span title="">Intitulé de l'article</span></span>&lt;/h2&gt;
+    &lt;h2&gt;Intitulé de l'article&lt;/h2&gt;
 
-    &lt;!--  <span class="tlid-translation translation"><span title="">contenu de l'article ici</span></span>  --&gt;
+    &lt;!--  contenu de l'article ici  --&gt;
   &lt;/article&gt;
 
   &lt;aside&gt;
-    &lt;h2&gt;<span class="tlid-translation translation"><span title="">en relation</span></span>&lt;/h2&gt;
+    &lt;h2&gt;en relation&lt;/h2&gt;
 
-    &lt;!--  <span class="tlid-translation translation"><span title="">à part le contenu ici</span></span>  --&gt;
+    &lt;!--  à part le contenu ici  --&gt;
   &lt;/aside&gt;
 
 &lt;/main&gt;
 
-&lt;!--  <span class="tlid-translation translation"><span title="">Et voici notre pied de page principal utilisé dans toutes les pages de notre site Web.</span></span> --&gt;
+&lt;!--  Et voici notre pied de page principal utilisé dans toutes les pages de notre site Web. --&gt;
 
 &lt;footer&gt;
-  &lt;!--  <span class="tlid-translation translation"><span title="">contenu du pied de page ici</span></span>  --&gt;
+  &lt;!--  contenu du pied de page ici  --&gt;
 &lt;/footer&gt;</pre>
 
-<p><span class="tlid-translation translation"><span title="">Si vous essayez notre exemple plus moderne de structure avec un lecteur d’écran, vous verrez que le balisage de présentation ne gêne plus ni ne rend la lecture du contenu confuse.</span> <span title="">Il est également beaucoup plus léger et plus petit en termes de taille de code, ce qui signifie une maintenance plus facile du code et une sollicitation moindre de la bande passante par l'utilisateur (particulièrement critique en cas de connexions lentes).</span></span></p>
+<p>Si vous essayez notre exemple plus moderne de structure avec un lecteur d’écran, vous verrez que le balisage de présentation ne gêne plus ni ne rend la lecture du contenu confuse. Il est également beaucoup plus léger et plus petit en termes de taille de code, ce qui signifie une maintenance plus facile du code et une sollicitation moindre de la bande passante par l'utilisateur (particulièrement critique en cas de connexions lentes).</p>
 
-<p><span class="tlid-translation translation"><span title="">Une autre considération à prendre en compte lors de la création de dispositions consiste à utiliser des éléments sémantiques HTML5 comme dans l'exemple ci-dessus (voir </span></span><a href="/fr/docs/Web/HTML/Element#Content_sectioning">Référence des éléments HTML</a>). <span class="tlid-translation translation"><span title="">Vous pouvez créer une disposition en utilisant uniquement des éléments</span></span> {{htmlelement("div")}} <span class="tlid-translation translation"><span title="">imbriqués, mais il est préférable d'utiliser</span> des <span title="">éléments de sectionnement appropriés pour envelopper votre navigation principale</span></span> ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), <span class="tlid-translation translation"><span title="">en répétant des unités de contenu</span></span> ({{htmlelement("article")}}), <span class="tlid-translation translation"><span title=""> etc. Elles fournissent une sémantique supplémentaire aux lecteurs d’écran (et à d’autres outils) pour donner à l’utilisateur des indices supplémentaires sur le contenu qu’il navigue (voir</span></span> <a href="http://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/">Prise en charge du lecteur d’écran pour les nouveaux éléments de section HTML5</a> <span class="tlid-translation translation"><span title="">pour une idée de la prise en charge du lecteur d’écran</span></span>).</p>
+<p>Une autre considération à prendre en compte lors de la création de dispositions consiste à utiliser des éléments sémantiques HTML5 comme dans l'exemple ci-dessus (voir <a href="/fr/docs/Web/HTML/Element#Content_sectioning">Référence des éléments HTML</a>). Vous pouvez créer une disposition en utilisant uniquement des éléments {{htmlelement("div")}} imbriqués, mais il est préférable d'utiliser des éléments de sectionnement appropriés pour envelopper votre navigation principale ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), en répétant des unités de contenu ({{htmlelement("article")}}),  etc. Elles fournissent une sémantique supplémentaire aux lecteurs d’écran (et à d’autres outils) pour donner à l’utilisateur des indices supplémentaires sur le contenu qu’il navigue (voir <a href="http://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/">Prise en charge du lecteur d’écran pour les nouveaux éléments de section HTML5</a> pour une idée de la prise en charge du lecteur d’écran).</p>
 
 <div class="note">
-<p><strong>Note </strong>: <span class="tlid-translation translation"><span title="">Outre le fait que votre contenu présente une bonne sémantique et une présentation attrayante, il convient que son ordre source soit logique : vous pouvez toujours le placer où vous le souhaitez à l'aide de CSS par la suite, mais vous devez définir l'ordre exact des sources pour commencer.</span> <span title="">les utilisateurs de lecteur d’écran qui se liront auront du sens.</span></span></p>
+<p><strong>Note </strong>: Outre le fait que votre contenu présente une bonne sémantique et une présentation attrayante, il convient que son ordre source soit logique : vous pouvez toujours le placer où vous le souhaitez à l'aide de CSS par la suite, mais vous devez définir l'ordre exact des sources pour commencer. les utilisateurs de lecteur d’écran qui se liront auront du sens.</p>
 </div>
 
-<h3 id="Contrôles_de_linterface_utilisateur"><span class="tlid-translation translation"><span title="">Contrôles de l'interface utilisateur</span></span></h3>
+<h3 id="Contrôles_de_linterface_utilisateur">Contrôles de l'interface utilisateur</h3>
 
-<p><span class="tlid-translation translation"><span title="">Par contrôles d'interface utilisateur, nous entendons les parties principales des documents web avec lesquelles les utilisateurs interagissent – le plus souvent des boutons, des liens et des contrôles de formulaire.</span> <span title="">Dans cette section, nous examinerons les problèmes d’accessibilité de base à prendre en compte lors de la création de tels contrôles.</span> <span title="">Des articles ultérieurs sur WAI-ARIA et le multimédia aborderont d'autres aspects de l'accessibilité de l'interface utilisateur.</span></span></p>
+<p>Par contrôles d'interface utilisateur, nous entendons les parties principales des documents web avec lesquelles les utilisateurs interagissent – le plus souvent des boutons, des liens et des contrôles de formulaire. Dans cette section, nous examinerons les problèmes d’accessibilité de base à prendre en compte lors de la création de tels contrôles. Des articles ultérieurs sur WAI-ARIA et le multimédia aborderont d'autres aspects de l'accessibilité de l'interface utilisateur.</p>
 
-<p><span class="tlid-translation translation"><span title="">L'un des aspects clés de l'accessibilité des contrôles de l'interface utilisateur est que, par défaut, les navigateurs leur permettent d'être manipulés par le clavier.</span> <span title="">Vous pouvez essayer ceci en utilisant notre exemple </span></span><a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">accessibilité du clavier natif</a> (<span class="tlid-translation translation"><span title="">voir le</span></span> <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">code source</a>) – <span class="tlid-translation translation"><span title="">ouvrez-le dans un nouvel onglet et essayez d’appuyer sur la touche de tabulation;</span> <span title="">après quelques appuis, vous devriez voir le focus de l'onglet commencer à se déplacer à travers les différents éléments qui peuvent être mis au point ;</span> <span title="">les éléments focalisés se voient attribuer un style par défaut en surbrillance dans chaque navigateur (il diffère légèrement d’un navigateur à l’autre) afin que vous puissiez déterminer quel élément est ciblé.</span></span></p>
+<p>L'un des aspects clés de l'accessibilité des contrôles de l'interface utilisateur est que, par défaut, les navigateurs leur permettent d'être manipulés par le clavier. Vous pouvez essayer ceci en utilisant notre exemple <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">accessibilité du clavier natif</a> (voir le <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">code source</a>) – ouvrez-le dans un nouvel onglet et essayez d’appuyer sur la touche de tabulation; après quelques appuis, vous devriez voir le focus de l'onglet commencer à se déplacer à travers les différents éléments qui peuvent être mis au point ; les éléments focalisés se voient attribuer un style par défaut en surbrillance dans chaque navigateur (il diffère légèrement d’un navigateur à l’autre) afin que vous puissiez déterminer quel élément est ciblé.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14215/button-focused-unfocused.png" style="border-style: solid; border-width: 1px; display: block; height: 39px; margin: 0px auto; width: 288px;"></p>
 
-<p><span class="tlid-translation translation"><span title="">Vous pouvez ensuite appuyer sur Entrée/Retour pour suivre un lien sélectionné ou appuyer sur un bouton (nous avons inclus du JavaScript pour que les boutons alertent un message), ou commencer à taper pour saisir du texte dans une entrée de texte (les autres éléments de formulaire ont des contrôles différents,</span> <span title="">par exemple, l'élément</span></span>  {{htmlelement("select")}} <span class="tlid-translation translation"><span title="">peut avoir ses options affichées et alterner entre les touches fléchées haut et bas).</span></span> </p>
+<p>Vous pouvez ensuite appuyer sur Entrée/Retour pour suivre un lien sélectionné ou appuyer sur un bouton (nous avons inclus du JavaScript pour que les boutons alertent un message), ou commencer à taper pour saisir du texte dans une entrée de texte (les autres éléments de formulaire ont des contrôles différents, par exemple, l'élément  {{htmlelement("select")}} peut avoir ses options affichées et alterner entre les touches fléchées haut et bas). </p>
 
 <div class="note">
-<p><strong>Note </strong>:  <span class="tlid-translation translation"><span title="">Différents navigateurs peuvent avoir différentes options de contrôle du clavier disponibles.</span> <span title="">Voir</span></span> comment <a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibilité#Using_native_keyboard_accessibility">gérer les problèmes courants d'accessibilité</a> <span class="tlid-translation translation"><span title="">pour plus de détails.</span></span></p>
+<p><strong>Note </strong>:  Différents navigateurs peuvent avoir différentes options de contrôle du clavier disponibles. Voir comment <a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibilité#Using_native_keyboard_accessibility">gérer les problèmes courants d'accessibilité</a> pour plus de détails.</p>
 </div>
 
-<p><span class="tlid-translation translation"><span title="">Vous obtenez essentiellement ce comportement gratuitement, en utilisant simplement les éléments appropriés,</span></span> par exemple :</p>
+<p>Vous obtenez essentiellement ce comportement gratuitement, en utilisant simplement les éléments appropriés, par exemple :</p>
 
-<pre class="brush: html example-good notranslate">&lt;h1&gt;<span class="tlid-translation translation"><span title="">Liens</span></span>&lt;/h1&gt;
+<pre class="brush: html example-good notranslate">&lt;h1&gt;Liens&lt;/h1&gt;
 
-&lt;p&gt; <span class="tlid-translation translation"><span title="">Ceci est un lien vers</span></span>  &lt;a href="https://www.mozilla.org"&gt;Mozilla&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt; Ceci est un lien vers  &lt;a href="https://www.mozilla.org"&gt;Mozilla&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt; <span class="tlid-translation translation"><span title="">Un autre lien, pour</span></span>  &lt;a href="https://developer.mozilla.org"&gt;Mozilla Developer Network&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt; Un autre lien, pour  &lt;a href="https://developer.mozilla.org"&gt;Mozilla Developer Network&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2&gt;<span class="tlid-translation translation"><span title="">Boutons</span></span>&lt;/h2&gt;
+&lt;h2&gt;Boutons&lt;/h2&gt;
 
 &lt;p&gt;
-  &lt;button data-message="This is from the first button"&gt;<span class="tlid-translation translation"><span title="">Cliquez moi</span></span>!&lt;/button&gt;
-  &lt;button data-message="This is from the second button"&gt; <span class="tlid-translation translation"><span title="">Cliquez moi aussi</span></span> !&lt;/button&gt;
-  &lt;button data-message="This is from the third button"&gt;<span class="tlid-translation translation"><span title="">Et moi</span></span>!&lt;/button&gt;
+  &lt;button data-message="This is from the first button"&gt;Cliquez moi!&lt;/button&gt;
+  &lt;button data-message="This is from the second button"&gt; Cliquez moi aussi !&lt;/button&gt;
+  &lt;button data-message="This is from the third button"&gt;Et moi!&lt;/button&gt;
 &lt;/p&gt;
 
 &lt;h2&gt;formulaire&lt;/h2&gt;
 
 &lt;form&gt;
   &lt;div&gt;
-    &lt;label for="name"&gt; <span class="tlid-translation translation"><span title="">Remplis ton nom</span></span> :&lt;/label&gt;
+    &lt;label for="name"&gt; Remplis ton nom :&lt;/label&gt;
     &lt;input type="text" id="name" name="name"&gt;
   &lt;/div&gt;
   &lt;div&gt;
-    &lt;label for="age"&gt; <span class="tlid-translation translation"><span title="">Entrez votre âge</span></span> :&lt;/label&gt;
+    &lt;label for="age"&gt; Entrez votre âge :&lt;/label&gt;
     &lt;input type="text" id="age" name="age"&gt;
   &lt;/div&gt;
   &lt;div&gt;
-    &lt;label for="mood"&gt; <span class="tlid-translation translation"><span title="">Choisissez votre humeur</span></span> :&lt;/label&gt;
+    &lt;label for="mood"&gt; Choisissez votre humeur :&lt;/label&gt;
     &lt;select id="mood" name="mood"&gt;
-      &lt;option&gt;<span class="tlid-translation translation">Heureux</span>&lt;/option&gt;
-      &lt;option&gt; <span class="tlid-translation translation"><span title="">Triste</span></span> &lt;/option&gt;
-      &lt;option&gt; <span class="tlid-translation translation">Fâché</span> &lt;/option&gt;
-      &lt;option&gt; <span class="tlid-translation translation">Préoccupé</span> &lt;/option&gt;
+      &lt;option&gt;Heureux&lt;/option&gt;
+      &lt;option&gt; Triste &lt;/option&gt;
+      &lt;option&gt; Fâché &lt;/option&gt;
+      &lt;option&gt; Préoccupé &lt;/option&gt;
     &lt;/select&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<p><span class="tlid-translation translation"><span title="">Cela signifie que vous devez utiliser des liens, des boutons, des éléments de formulaire et des étiquettes de manière appropriée (y compris l'élément </span></span> {{htmlelement("label")}} <span class="tlid-translation translation"><span title="">pour les contrôles de formulaire).</span></span></p>
+<p>Cela signifie que vous devez utiliser des liens, des boutons, des éléments de formulaire et des étiquettes de manière appropriée (y compris l'élément  {{htmlelement("label")}} pour les contrôles de formulaire).</p>
 
-<p><span class="tlid-translation translation"><span title="">Cependant, il est encore une fois que les gens font parfois des choses étranges avec HTML.</span> <span title="">Par exemple, vous voyez parfois des boutons balisés en utilisant</span></span> {{htmlelement("div")}}s, <span class="tlid-translation translation"><span title=""> par exemple :</span></span></p>
+<p>Cependant, il est encore une fois que les gens font parfois des choses étranges avec HTML. Par exemple, vous voyez parfois des boutons balisés en utilisant {{htmlelement("div")}}s,  par exemple :</p>
 
-<pre class="brush: html example-bad notranslate">&lt;div data-message="This is from the first button"&gt; <span class="tlid-translation translation"><span title="">Cliquez-moi!</span></span>&lt;/div&gt;
-&lt;div data-message="This is from the second button"&gt; <span class="tlid-translation translation"><span title=""> Cliquez moi aussi!</span></span>&lt;/div&gt;
-&lt;div data-message="This is from the third button"&gt; <span class="tlid-translation translation"><span title="">Et moi!</span></span>&lt;/div&gt;</pre>
+<pre class="brush: html example-bad notranslate">&lt;div data-message="This is from the first button"&gt; Cliquez-moi!&lt;/div&gt;
+&lt;div data-message="This is from the second button"&gt;  Cliquez moi aussi!&lt;/div&gt;
+&lt;div data-message="This is from the third button"&gt; Et moi!&lt;/div&gt;</pre>
 
-<p><span class="tlid-translation translation"><span title="">Il est toutefois déconseillé d’utiliser un tel code. Vous perdriez immédiatement l’accessibilité au clavier natif que vous auriez obtenue si vous aviez utilisé des éléments</span></span>  {{htmlelement("button")}}. <span class="tlid-translation translation"><span title="">De plus, vous n’obtenez aucun des styles CSS par défaut</span> que <span title="">les boutons ont.</span></span></p>
+<p>Il est toutefois déconseillé d’utiliser un tel code. Vous perdriez immédiatement l’accessibilité au clavier natif que vous auriez obtenue si vous aviez utilisé des éléments  {{htmlelement("button")}}. De plus, vous n’obtenez aucun des styles CSS par défaut que les boutons ont.</p>
 
-<h4 id="Remettre_laccessibilité_au_clavier"><span class="tlid-translation translation"><span title="">Remettre l'accessibilité au clavier</span></span></h4>
+<h4 id="Remettre_laccessibilité_au_clavier">Remettre l'accessibilité au clavier</h4>
 
-<p><span class="tlid-translation translation"><span title="">Ajouter de tels avantages en retour demande un peu de travail (vous pouvez utiliser un exemple de code dans notre exemple</span></span> <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> – <span class="tlid-translation translation"><span title=""> voir également le</span></span> <a class="external external-icon" href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">source code</a>). <span class="tlid-translation translation"><span title="">Ici, nous avons donné à nos faux boutons <code>&lt;div&gt;</code> la possibilité</span> <span title="">se focaliser (y compris via la touche Tab) en donnant à chacun l'attribut</span></span> <code>tabindex="0"</code> :</p>
+<p>Ajouter de tels avantages en retour demande un peu de travail (vous pouvez utiliser un exemple de code dans notre exemple <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> –  voir également le <a class="external external-icon" href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">source code</a>). Ici, nous avons donné à nos faux boutons <code>&lt;div&gt;</code> la possibilité se focaliser (y compris via la touche Tab) en donnant à chacun l'attribut <code>tabindex="0"</code> :</p>
 
-<pre class="brush: html notranslate">&lt;div data-message="This is from the first button" tabindex="0"&gt; <span class="tlid-translation translation"><span title="">Cliquez-moi!</span></span>&lt;/div&gt;
-&lt;div data-message="This is from the second button" tabindex="0"&gt; <span class="tlid-translation translation"><span title="">Cliquez moi aussi!</span></span>&lt;/div&gt;
-&lt;div data-message="This is from the third button" tabindex="0"&gt; <span class="tlid-translation translation"><span title="">Et moi!</span></span>&lt;/div&gt;</pre>
+<pre class="brush: html notranslate">&lt;div data-message="This is from the first button" tabindex="0"&gt; Cliquez-moi!&lt;/div&gt;
+&lt;div data-message="This is from the second button" tabindex="0"&gt; Cliquez moi aussi!&lt;/div&gt;
+&lt;div data-message="This is from the third button" tabindex="0"&gt; Et moi!&lt;/div&gt;</pre>
 
-<p><span class="tlid-translation translation"><span title="">Fondamentalement, l'attribut</span></span> {{htmlattrxref("tabindex")}} <span class="tlid-translation translation"><span title="">est principalement destiné à permettre aux éléments que l'on peut cibler avec la touche Tab d'avoir un ordre de tabulation personnalisé (spécifié dans l'ordre numérique positif), au lieu d'être simplement tabulés dans leur ordre source par défaut.</span> <span title="">C'est presque toujours une mauvaise idée, car cela peut causer une confusion majeure.</span> <span title="">Utilisez-le uniquement si vous en avez vraiment besoin, par exemple si la mise en page affiche les éléments dans un ordre visuel très différent de celui du code source et si vous souhaitez que les éléments fonctionnent de manière plus logique.</span> <span title="">Il y a deux autres options pour</span></span> <code>tabindex</code> :</p>
+<p>Fondamentalement, l'attribut {{htmlattrxref("tabindex")}} est principalement destiné à permettre aux éléments que l'on peut cibler avec la touche Tab d'avoir un ordre de tabulation personnalisé (spécifié dans l'ordre numérique positif), au lieu d'être simplement tabulés dans leur ordre source par défaut. C'est presque toujours une mauvaise idée, car cela peut causer une confusion majeure. Utilisez-le uniquement si vous en avez vraiment besoin, par exemple si la mise en page affiche les éléments dans un ordre visuel très différent de celui du code source et si vous souhaitez que les éléments fonctionnent de manière plus logique. Il y a deux autres options pour <code>tabindex</code> :</p>
 
 <ul>
- <li><code>tabindex="0"</code> – <span class="tlid-translation translation"><span title="">comme indiqué ci-dessus, cette valeur permet aux éléments qui ne sont pas normalement tabulables de le devenir.</span> <span title="">C’est la valeur la plus utile de</span></span> <code>tabindex</code>.</li>
- <li><code>tabindex="-1"</code> – <span class="tlid-translation translation"><span title="">cela permet aux éléments qui ne sont normalement pas tabulables d'être ciblés par le programme, par ex.</span> <span title="">via JavaScript, ou en tant que cible de liens.</span></span></li>
+ <li><code>tabindex="0"</code> – comme indiqué ci-dessus, cette valeur permet aux éléments qui ne sont pas normalement tabulables de le devenir. C’est la valeur la plus utile de <code>tabindex</code>.</li>
+ <li><code>tabindex="-1"</code> – cela permet aux éléments qui ne sont normalement pas tabulables d'être ciblés par le programme, par ex. via JavaScript, ou en tant que cible de liens.</li>
 </ul>
 
-<p><span class="tlid-translation translation"><span title="">Bien que l’addition ci-dessus nous permette de tabuler les boutons, elle ne nous permet pas de les activer via la touche Entrée/Retour.</span> <span title="">Pour ce faire, nous avons dû ajouter le bout de code JavaScript</span></span> suivant :</p>
+<p>Bien que l’addition ci-dessus nous permette de tabuler les boutons, elle ne nous permet pas de les activer via la touche Entrée/Retour. Pour ce faire, nous avons dû ajouter le bout de code JavaScript suivant :</p>
 
 <pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">document.onkeydown = function(e) {
   if(e.keyCode === 13) { // The Enter/Return key
@@ -343,61 +343,61 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
   }
 }</code></pre>
 
-<p><span class="tlid-translation translation"><span title="">Ici, nous ajoutons un écouteur à l’objet</span></span> <code class="language-js">d<code>ocument</code></code> <span class="tlid-translation translation"><span title="">pour détecter le moment où un bouton a été appuyé sur le clavier.</span> <span title="">Nous vérifions quel bouton a été pressé via la propriété</span></span> <code class="language-js"> <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code></code> <span class="tlid-translation translation"><span title="">de l'objet événement;</span> <span title="">s'il s'agit du code clé qui correspond</span></span> <code class="language-js"> Return/Enter</code>, <span class="tlid-translation translation"><span title="">nous exécutons la fonction stockée dans le gestionnaire du bouton </span></span> <code class="language-js"> <code>onclick</code></code> <span class="tlid-translation translation"><span title=""> à l'aide de </span></span><code class="language-js"><code>document.activeElement.onclick()</code></code><span class="tlid-translation translation"><span title="">. </span></span><code class="language-js"><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement">activeElement</a></code></code><span class="tlid-translation translation"><span title=""> nous donne l'élément qui est actuellement ciblé sur la page.</span></span></p>
+<p>Ici, nous ajoutons un écouteur à l’objet d<code>ocument</code> pour détecter le moment où un bouton a été appuyé sur le clavier. Nous vérifions quel bouton a été pressé via la propriété  <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code> de l'objet événement; s'il s'agit du code clé qui correspond  Return/Enter, nous exécutons la fonction stockée dans le gestionnaire du bouton   <code>onclick</code>  à l'aide de <code>document.activeElement.onclick()</code>. <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement">activeElement</a></code> nous donne l'élément qui est actuellement ciblé sur la page.</p>
 
 <div class="note">
-<p><span class="tlid-translation translation"><span title=""><strong>Note :</strong> N'oubliez pas que cette technique ne fonctionnera que si vous définissez vos gestionnaires d'événements d'origine via les propriétés du gestionnaire d'événements (par exemple, onclick), </span></span><code class="language-js"><code>addEventListener</code></code><span class="tlid-translation translation"><span title=""> ne fonctionnera pas.</span></span></p>
+<p><strong>Note :</strong> N'oubliez pas que cette technique ne fonctionnera que si vous définissez vos gestionnaires d'événements d'origine via les propriétés du gestionnaire d'événements (par exemple, onclick), <code>addEventListener</code> ne fonctionnera pas.</p>
 </div>
 
-<p><span class="tlid-translation translation"><span title="">C’est beaucoup de tracas supplémentaire pour reconstruire la fonctionnalité. Et il y aura sûrement d’autres problèmes.</span></span> <span class="tlid-translation translation"><span title=""><strong>Mieux vaut utiliser le bon élément pour le bon travail en premier lieu</strong>.</span></span></p>
+<p>C’est beaucoup de tracas supplémentaire pour reconstruire la fonctionnalité. Et il y aura sûrement d’autres problèmes. <strong>Mieux vaut utiliser le bon élément pour le bon travail en premier lieu</strong>.</p>
 
-<h4 id="Étiquettes_de_texte_significatives"><span class="tlid-translation translation"><span title="">Étiquettes de texte significatives</span></span></h4>
+<h4 id="Étiquettes_de_texte_significatives">Étiquettes de texte significatives</h4>
 
-<p><span class="tlid-translation translation"><span title="">Les étiquettes de texte de contrôle UI sont très utiles pour tous les utilisateurs, mais leur mise au point est particulièrement importante pour les utilisateurs handicapés.</span></span></p>
+<p>Les étiquettes de texte de contrôle UI sont très utiles pour tous les utilisateurs, mais leur mise au point est particulièrement importante pour les utilisateurs handicapés.</p>
 
-<p><span class="tlid-translation translation"><span title="">Vous devez vous assurer que les libellés des boutons et des liens sont compréhensibles et distinctifs.</span> <span title="">Ne vous contentez pas d'utiliser </span></span>« <span class="tlid-translation translation"><span title="">Cliquez ici</span></span> »<span class="tlid-translation translation"><span title=""> pour vos étiquettes, car les utilisateurs et utilisatrices de lecteur d'écran créent parfois une liste de boutons et de contrôles de formulaire.</span> <span title="">La capture d'écran suivante montre nos commandes répertoriées par VoiceOver sur Mac.</span></span></p>
+<p>Vous devez vous assurer que les libellés des boutons et des liens sont compréhensibles et distinctifs. Ne vous contentez pas d'utiliser « Cliquez ici » pour vos étiquettes, car les utilisateurs et utilisatrices de lecteur d'écran créent parfois une liste de boutons et de contrôles de formulaire. La capture d'écran suivante montre nos commandes répertoriées par VoiceOver sur Mac.</p>
 
-<p><code class="language-js"><img alt="" src="https://mdn.mozillademos.org/files/14335/voiceover-formcontrols.png" style="display: block; height: 604px; margin: 0px auto; width: 802px;"></code></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/14335/voiceover-formcontrols.png" style="display: block; height: 604px; margin: 0px auto; width: 802px;"></p>
 
-<p><span class="tlid-translation translation"><span title="">Assurez-vous que vos étiquettes ont une signification hors contexte, qu'elles soient lues séparément ou dans le contexte du paragraphe dans lequel elles se trouvent. Par exemple, voici un exemple de texte de lien de qualité :</span></span></p>
+<p>Assurez-vous que vos étiquettes ont une signification hors contexte, qu'elles soient lues séparément ou dans le contexte du paragraphe dans lequel elles se trouvent. Par exemple, voici un exemple de texte de lien de qualité :</p>
 
-<pre class="brush: html example-good notranslate"><code class="language-js">&lt;p&gt;</code> <span class="tlid-translation translation"><span title="">Les baleines sont vraiment des créatures géniales</span></span> <code class="language-js">. &lt;a href="whales.html"&gt;</code> <span class="tlid-translation translation"><span title="">En savoir plus sur les baleines</span></span> <code class="language-js">&lt;/a&gt;.&lt;/p&gt;</code></pre>
+<pre class="brush: html example-good notranslate">&lt;p&gt; Les baleines sont vraiment des créatures géniales . &lt;a href="whales.html"&gt; En savoir plus sur les baleines &lt;/a&gt;.&lt;/p&gt;</pre>
 
-<p><span class="tlid-translation translation"><span title="">c'est un mauvais texte du lien :</span></span></p>
+<p>c'est un mauvais texte du lien :</p>
 
-<pre class="brush: html example-bad notranslate"><code class="language-js">&lt;p&gt;</code> <span class="tlid-translation translation"><span title="">Les baleines sont des créatures vraiment impressionnantes.</span> <span title="">Pour en savoir plus sur les baleines,</span></span> <code class="language-js"> &lt;a href="whales.html"&gt;</code><span class="tlid-translation translation"><span title="">cliquez ici</span></span><code class="language-js">&lt;/a&gt;.&lt;/p&gt;</code>
+<pre class="brush: html example-bad notranslate">&lt;p&gt; Les baleines sont des créatures vraiment impressionnantes. Pour en savoir plus sur les baleines,  &lt;a href="whales.html"&gt;cliquez ici&lt;/a&gt;.&lt;/p&gt;
 </pre>
 
 <div class="note">
-<p><code class="language-js"><strong>Note</strong>:</code><span class="tlid-translation translation"><span title="">Vous pouvez trouver beaucoup plus d'informations sur l'implémentation de liens et les meilleures pratiques dans notre article sur</span></span> la <code class="language-js"><a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks">création d'hyperliens</a></code>. <span class="tlid-translation translation"><span title="">Vous pouvez également voir quelques bons et mauvais exemples dans</span></span> <code class="language-js"><a href="https://mdn.github.io/learning-area/accessibility/html/good-links.html">Bons-liens.html</a> et <a href="https://mdn.github.io/learning-area/accessibility/html/bad-links.html">Mauvais-liens.html</a>.</code></p>
+<p><strong>Note</strong>:Vous pouvez trouver beaucoup plus d'informations sur l'implémentation de liens et les meilleures pratiques dans notre article sur la <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks">création d'hyperliens</a>. Vous pouvez également voir quelques bons et mauvais exemples dans <a href="https://mdn.github.io/learning-area/accessibility/html/good-links.html">Bons-liens.html</a> et <a href="https://mdn.github.io/learning-area/accessibility/html/bad-links.html">Mauvais-liens.html</a>.</p>
 </div>
 
-<p><span class="tlid-translation translation"><span title="">Les libellés de formulaire sont également importantes pour vous donner un indice sur ce que vous devez entrer dans chaque entrée de formulaire.</span> <span title="">Ce qui suit semble être un exemple assez raisonnable :</span></span></p>
+<p>Les libellés de formulaire sont également importantes pour vous donner un indice sur ce que vous devez entrer dans chaque entrée de formulaire. Ce qui suit semble être un exemple assez raisonnable :</p>
 
-<pre class="brush: html example-bad notranslate"> <span class="tlid-translation translation"><span title="">Remplis ton nom</span></span> <code class="language-js">: &lt;input type="text" id="name" name="name"&gt;</code></pre>
+<pre class="brush: html example-bad notranslate"> Remplis ton nom : &lt;input type="text" id="name" name="name"&gt;</pre>
 
-<p><span class="tlid-translation translation"><span title="">Cependant, ce n'est pas très utile pour les utilisateurs handicapés.</span> <span title="">Dans l'exemple ci-dessus, rien n'associe de manière non équivoque l'étiquette à la saisie de formulaire et explique clairement comment la remplir si vous ne la voyez pas.</span> <span title="">Si vous y accédez avec certains lecteurs d’écran, vous ne recevrez peut-être qu’une description du type </span></span>« <span class="tlid-translation translation"><span title="">éditer le texte".</span></span></p>
+<p>Cependant, ce n'est pas très utile pour les utilisateurs handicapés. Dans l'exemple ci-dessus, rien n'associe de manière non équivoque l'étiquette à la saisie de formulaire et explique clairement comment la remplir si vous ne la voyez pas. Si vous y accédez avec certains lecteurs d’écran, vous ne recevrez peut-être qu’une description du type « éditer le texte".</p>
 
-<p><span class="tlid-translation translation"><span title="">Ce qui suit est un exemple bien meilleur :</span></span></p>
+<p>Ce qui suit est un exemple bien meilleur :</p>
 
 <pre class="brush: html example-good notranslate"><code class="language-js">&lt;div&gt;
-  &lt;label for="name"&gt;</code><span class="tlid-translation translation"><span title="">Entrez votre nom</span></span><code class="language-js">:&lt;/label&gt;
+  &lt;label for="name"&gt;</code>Entrez votre nom<code class="language-js">:&lt;/label&gt;
   &lt;input type="text" id="name" name="name"&gt;
 &lt;/div&gt;</code></pre>
 
-<p><span class="tlid-translation translation"><span title="">Avec le code comme celui-ci, le label sera clairement associée à input;</span> <span title="">la description ressemblera davantage à "Entrez votre nom: éditez le texte".</span></span></p>
+<p>Avec le code comme celui-ci, le label sera clairement associée à input; la description ressemblera davantage à "Entrez votre nom: éditez le texte".</p>
 
-<p><code class="language-js"><img alt="" src="https://mdn.mozillademos.org/files/14337/voiceover-good-form-label.png" style="display: block; margin: 0 auto;"></code></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/14337/voiceover-good-form-label.png" style="display: block; margin: 0 auto;"></p>
 
-<p><span class="tlid-translation translation"><span title="">En prime, dans la plupart des navigateurs, associer a un</span></span> <code class="language-js">label</code><span class="tlid-translation translation"><span title=""> à une</span></span> <code class="language-js"> form input</code> <span class="tlid-translation translation"><span title="">signifie que vous pouvez cliquer sur celle-ci pour sélectionner / activer l'élément</span></span> <code class="language-js"> label</code>. <span class="tlid-translation translation"><span title="">Cela donne à </span></span><code class="language-js">input</code><span class="tlid-translation translation"><span title=""> une zone de résultats plus grande, ce qui facilite la sélection</span></span></p>
+<p>En prime, dans la plupart des navigateurs, associer a un label à une  form input signifie que vous pouvez cliquer sur celle-ci pour sélectionner / activer l'élément  label. Cela donne à input une zone de résultats plus grande, ce qui facilite la sélection</p>
 
 <div class="note">
-<p><code class="language-js"><strong>Note</strong>:</code><span class="tlid-translation translation"><span title="">vous pouvez voir des exemples de bonnes et de mauvaises de formulaire dans</span></span> <a href="https://mdn.github.io/learning-area/accessibility/html/good-form.html">exemple de bon formulaire</a><span class="tlid-translation translation"><span title=""> et </span></span><a href="https://mdn.github.io/learning-area/accessibility/html/bad-form.html">exemple de mauvais formulaire</a><span class="tlid-translation translation"><span title="">.</span></span></p>
+<p><strong>Note</strong>:vous pouvez voir des exemples de bonnes et de mauvaises de formulaire dans <a href="https://mdn.github.io/learning-area/accessibility/html/good-form.html">exemple de bon formulaire</a> et <a href="https://mdn.github.io/learning-area/accessibility/html/bad-form.html">exemple de mauvais formulaire</a>.</p>
 </div>
 
-<h2 id="Tableaux_de_données_accessibles"><span class="tlid-translation translation"><span title="">Tableaux de données accessibles</span></span></h2>
+<h2 id="Tableaux_de_données_accessibles">Tableaux de données accessibles</h2>
 
-<p><span class="tlid-translation translation"><span title="">Une table de données de base peut être écrite avec un balisage très simple, par exemple :</span></span></p>
+<p>Une table de données de base peut être écrite avec un balisage très simple, par exemple :</p>
 
 <pre class="brush: html notranslate"><code class="language-js">&lt;table&gt;
   &lt;tr&gt;
@@ -422,110 +422,110 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
   &lt;/tr&gt;
 &lt;/table&gt;</code></pre>
 
-<p><span class="tlid-translation translation"><span title="">Mais cela pose des problèmes : un utilisateur de lecteur d’écran ne peut pas associer des lignes ou des colonnes en tant que groupes de données.</span> <span title="">Pour ce faire, vous devez savoir quelles sont les lignes d'en-tête et si elles sont dirigées vers le haut, des colonnes, etc. Cela ne peut être fait que visuellement pour le tableau ci-dessus (voir bad-table.html et essayez vous-même l'exemple).</span></span></p>
+<p>Mais cela pose des problèmes : un utilisateur de lecteur d’écran ne peut pas associer des lignes ou des colonnes en tant que groupes de données. Pour ce faire, vous devez savoir quelles sont les lignes d'en-tête et si elles sont dirigées vers le haut, des colonnes, etc. Cela ne peut être fait que visuellement pour le tableau ci-dessus (voir bad-table.html et essayez vous-même l'exemple).</p>
 
-<p><span class="tlid-translation translation"><span title="">Regardez maintenant notre </span></span> tableau d'exemple sur les groupes punk – <span class="tlid-translation translation"><span title="">vous pouvez voir quelques aides à l'accessibilité au travail ici :</span></span></p>
+<p>Regardez maintenant notre  tableau d'exemple sur les groupes punk – vous pouvez voir quelques aides à l'accessibilité au travail ici :</p>
 
 <ul>
- <li><span class="tlid-translation translation"><span title="">Les en-têtes de tableau sont définis à l'aide d'éléments</span></span><code class="language-js"> {{htmlelement("th")}} — </code> <span class="tlid-translation translation"><span title="">vous pouvez également spécifier s'il s'agit d'en-têtes de lignes ou de colonnes à l'aide de l'attribut</span></span> <code class="language-js"> <code>scope</code></code><span class="tlid-translation translation"><span title="">. Cela vous donne des groupes complets de données qui peuvent être consommés par les lecteurs d'écran en tant qu'unités simples</span></span></li>
- <li><span class="tlid-translation translation"><span title="">L'élément </span></span><code class="language-js">{{htmlelement("caption")}}</code><span class="tlid-translation translation"><span title=""> et l'attribut summary </span></span> <code class="language-js"> <code>&lt;table&gt;</code></code> <span class="tlid-translation translation"><span title="">effectuent tous deux des travaux similaires. Ils agissent en tant que texte alternatif pour une table, offrant ainsi à un utilisateur de lecteur d'écran un résumé rapide et utile du contenu de la table.</span> </span> <code class="language-js"> <code>&lt;caption&gt;</code></code><span class="tlid-translation translation"><span title=""> est généralement préféré car il rend son contenu accessible aux utilisateurs malvoyants, qui pourraient également le trouver utile.</span> <span title="">Vous n'avez pas vraiment besoin des deux.</span></span></li>
+ <li>Les en-têtes de tableau sont définis à l'aide d'éléments {{htmlelement("th")}} —  vous pouvez également spécifier s'il s'agit d'en-têtes de lignes ou de colonnes à l'aide de l'attribut  <code>scope</code>. Cela vous donne des groupes complets de données qui peuvent être consommés par les lecteurs d'écran en tant qu'unités simples</li>
+ <li>L'élément {{htmlelement("caption")}} et l'attribut summary   <code>&lt;table&gt;</code> effectuent tous deux des travaux similaires. Ils agissent en tant que texte alternatif pour une table, offrant ainsi à un utilisateur de lecteur d'écran un résumé rapide et utile du contenu de la table.   <code>&lt;caption&gt;</code> est généralement préféré car il rend son contenu accessible aux utilisateurs malvoyants, qui pourraient également le trouver utile. Vous n'avez pas vraiment besoin des deux.</li>
 </ul>
 
 <div class="note">
-<p><code class="language-js"><strong>Note</strong> :</code> <span class="tlid-translation translation"><span title="">voir notre article</span></span>  <code class="language-js"><a href="/fr/docs/Apprendre/HTML/Tableaux/Advanced">Tableaux HTML : dispositions avancées et accessibilité</a> </code> <span class="tlid-translation translation"><span title="">pour plus de détails sur les tables de données accessibles.</span></span></p>
+<p><strong>Note</strong> : voir notre article  <a href="/fr/docs/Apprendre/HTML/Tableaux/Advanced">Tableaux HTML : dispositions avancées et accessibilité</a>  pour plus de détails sur les tables de données accessibles.</p>
 </div>
 
-<h2 id="Alternatives_textuelles"><span class="tlid-translation translation"><span title="">Alternatives textuelles</span></span></h2>
+<h2 id="Alternatives_textuelles">Alternatives textuelles</h2>
 
-<p><span class="tlid-translation translation"><span title="">Alors que le contenu textuel est intrinsèquement accessible, il n'en est pas de même pour le contenu multimédia : le contenu image/vidéo ne peut pas être vu par les personnes malvoyantes et le contenu audio ne peut pas être entendu par les malentendants.</span> <span title="">Nous verrons plus loin le contenu audio et vidéo dans l'article multimédia accessible, mais pour cet article, nous examinerons l'accessibilité pour l'élément humble</span></span> <code class="language-js">{{htmlelement("img")}}</code><span class="tlid-translation translation"><span title="">.</span></span></p>
+<p>Alors que le contenu textuel est intrinsèquement accessible, il n'en est pas de même pour le contenu multimédia : le contenu image/vidéo ne peut pas être vu par les personnes malvoyantes et le contenu audio ne peut pas être entendu par les malentendants. Nous verrons plus loin le contenu audio et vidéo dans l'article multimédia accessible, mais pour cet article, nous examinerons l'accessibilité pour l'élément humble {{htmlelement("img")}}.</p>
 
-<p><span class="tlid-translation translation"><span title="">Nous avons un exemple simple écrit, </span></span><code class="language-js"><a href="http://mdn.github.io/learning-area/accessibility/html/accessible-image.html">accessible-image.html</a></code><span class="tlid-translation translation"><span title="">, comporte quatre copies de la même image :</span></span></p>
+<p>Nous avons un exemple simple écrit, <a href="http://mdn.github.io/learning-area/accessibility/html/accessible-image.html">accessible-image.html</a>, comporte quatre copies de la même image :</p>
 
 <pre class="notranslate"><code class="language-js">&lt;img src="dinosaur.png"&gt;
 
 &lt;img src="dinosaur.png"
-     alt="</code> <span class="tlid-translation translation"><span title="">Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées</span></span><code class="language-js">."&gt;
+     alt="</code> Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées<code class="language-js">."&gt;
 
 &lt;img src="dinosaur.png"
-     alt="</code> <span class="tlid-translation translation"><span title="">Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées</span></span><code class="language-js">."
-     title="</code> <span class="tlid-translation translation"><span title="">Le dinosaure rouge de Mozilla</span></span> <code class="language-js">"&gt;
+     alt="</code> Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées<code class="language-js">."
+     title="</code> Le dinosaure rouge de Mozilla <code class="language-js">"&gt;
 
 
 &lt;img src="dinosaur.png" aria-labelledby="dino-label"&gt;
 
-&lt;p id="dino-label"&gt;</code> <span class="tlid-translation translation"><span title="">Tyrannosaure rouge Rex de Mozilla: Dinosaure à deux jambes, debout comme un être humain, avec des armes légères et une grosse tête avec beaucoup de dents acérées</span></span><code class="language-js">.&lt;/p&gt;
+&lt;p id="dino-label"&gt;</code> Tyrannosaure rouge Rex de Mozilla: Dinosaure à deux jambes, debout comme un être humain, avec des armes légères et une grosse tête avec beaucoup de dents acérées<code class="language-js">.&lt;/p&gt;
 </code></pre>
 
-<p><span class="tlid-translation translation"><span title="">La première image, lorsqu'elle est visualisée par un lecteur d'écran, n'offre pas beaucoup d'aide à l'utilisateur. VoiceOver, par exemple, lit </span></span>« <span class="tlid-translation translation"><span title="">/dinosaur.png, image</span></span> »<span class="tlid-translation translation"><span title="">.</span> <span title="">Il lit le nom du fichier pour essayer de fournir de l'aide.</span> <span title="">Dans cet exemple, l'utilisateur ou l’utilisatrice saura au moins qu'il s'agit d'un dinosaure, mais les fichiers peuvent souvent être chargés avec des noms de fichiers générés par une machine (par exemple, à partir d'un appareil photo numérique) et ces noms de fichiers ne fourniront probablement aucun contexte au contenu de l'image.</span></span></p>
+<p>La première image, lorsqu'elle est visualisée par un lecteur d'écran, n'offre pas beaucoup d'aide à l'utilisateur. VoiceOver, par exemple, lit « /dinosaur.png, image ». Il lit le nom du fichier pour essayer de fournir de l'aide. Dans cet exemple, l'utilisateur ou l’utilisatrice saura au moins qu'il s'agit d'un dinosaure, mais les fichiers peuvent souvent être chargés avec des noms de fichiers générés par une machine (par exemple, à partir d'un appareil photo numérique) et ces noms de fichiers ne fourniront probablement aucun contexte au contenu de l'image.</p>
 
 <div class="note">
-<p><code class="language-js"><strong>Note</strong>:</code> <span class="tlid-translation translation"><span title="">c'est pourquoi vous ne devriez jamais inclure de contenu textuel dans une image. Les lecteurs d'écran ne peuvent tout simplement pas y accéder.</span> <span title="">Il y a aussi d'autres inconvénients - vous ne pouvez pas le sélectionner et le copier/coller.</span> <span title="">Juste ne le faite pas !</span></span></p>
+<p><strong>Note</strong>: c'est pourquoi vous ne devriez jamais inclure de contenu textuel dans une image. Les lecteurs d'écran ne peuvent tout simplement pas y accéder. Il y a aussi d'autres inconvénients - vous ne pouvez pas le sélectionner et le copier/coller. Juste ne le faite pas !</p>
 </div>
 
-<p><span class="tlid-translation translation"><span title="">Quand un lecteur d'écran rencontre la deuxième image, il lit l'intégralité de l'attribut alt </span></span>– « <span class="tlid-translation translation"><span title="">Un Tyrannosaure Rex rouge : Un dinosaure à deux pattes se tenant droit comme un humain, avec des armes de petit calibre et une grosse tête avec beaucoup de dents acérées.</span></span> »</p>
+<p>Quand un lecteur d'écran rencontre la deuxième image, il lit l'intégralité de l'attribut alt – « Un Tyrannosaure Rex rouge : Un dinosaure à deux pattes se tenant droit comme un humain, avec des armes de petit calibre et une grosse tête avec beaucoup de dents acérées. »</p>
 
-<p><span class="tlid-translation translation"><span title="">Cela met en évidence l’importance non seulement d’utiliser des noms de fichiers significatifs au cas où ce qui est appelé</span></span> <code class="language-js"><strong>alt text</strong></code> <span class="tlid-translation translation"><span title="">n’est pas disponible, mais aussi de s’assurer que le texte alternatif est fourni dans les attributs</span></span> <code class="language-js"> <code>alt</code></code> <span class="tlid-translation translation"><span title="">chaque fois que possible.</span> <span title="">Notez que le contenu de l'attribut</span></span> <code class="language-js"> <code>alt</code></code><span class="tlid-translation translation"><span title=""> doit toujours fournir une représentation directe de l'image et de ce qu'elle transmet visuellement.</span> <span title="">Aucune connaissance personnelle ou description supplémentaire ne devrait être incluse ici, car elle n’est pas utile pour les personnes qui n’ont jamais rencontré l’image auparavant.</span></span></p>
+<p>Cela met en évidence l’importance non seulement d’utiliser des noms de fichiers significatifs au cas où ce qui est appelé <strong>alt text</strong> n’est pas disponible, mais aussi de s’assurer que le texte alternatif est fourni dans les attributs  <code>alt</code> chaque fois que possible. Notez que le contenu de l'attribut  <code>alt</code> doit toujours fournir une représentation directe de l'image et de ce qu'elle transmet visuellement. Aucune connaissance personnelle ou description supplémentaire ne devrait être incluse ici, car elle n’est pas utile pour les personnes qui n’ont jamais rencontré l’image auparavant.</p>
 
-<p><span class="tlid-translation translation"><span title="">Une chose à considérer est de savoir si vos images ont une signification dans votre contenu, ou si elles sont purement décoratives, n’ont donc aucune signification.</span> <span title="">S'ils sont décoratifs, il est préférable de les inclure dans la page en tant qu'images d'arrière-plan CSS.</span></span></p>
+<p>Une chose à considérer est de savoir si vos images ont une signification dans votre contenu, ou si elles sont purement décoratives, n’ont donc aucune signification. S'ils sont décoratifs, il est préférable de les inclure dans la page en tant qu'images d'arrière-plan CSS.</p>
 
 <div class="note">
-<p><code class="language-js"><strong>Note </strong>:</code> <span class="tlid-translation translation"><span title="">Lisez </span></span><code class="language-js"><a href="/fr/docs/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML">Les images en HTML</a> et<a href="/fr/docs/Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page_web"> Images adaptatives</a></code> <span class="tlid-translation translation"><span title="">pour plus d’informations sur la mise en œuvre des images et les meilleures pratiques.</span></span></p>
+<p><strong>Note </strong>: Lisez <a href="/fr/docs/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML">Les images en HTML</a> et<a href="/fr/docs/Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page_web"> Images adaptatives</a> pour plus d’informations sur la mise en œuvre des images et les meilleures pratiques.</p>
 </div>
 
-<p><span class="tlid-translation translation"><span title="">Si vous souhaitez fournir des informations contextuelles supplémentaires, vous devez les insérer dans le texte entourant l'image ou dans un attribut title, comme indiqué ci-dessus.</span> <span title="">Dans ce cas, la plupart des lecteurs d’écran liront le texte alternatif, l’attribut title et le nom du fichier.</span> <span title="">En outre, les navigateurs affichent le texte du titre sous forme d’infos lors du survol de la souris.</span></span></p>
+<p>Si vous souhaitez fournir des informations contextuelles supplémentaires, vous devez les insérer dans le texte entourant l'image ou dans un attribut title, comme indiqué ci-dessus. Dans ce cas, la plupart des lecteurs d’écran liront le texte alternatif, l’attribut title et le nom du fichier. En outre, les navigateurs affichent le texte du titre sous forme d’infos lors du survol de la souris.</p>
 
-<p><code class="language-js"><img alt="" src="https://mdn.mozillademos.org/files/14333/title-attribute.png" style="display: block; margin: 0 auto;"></code></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/14333/title-attribute.png" style="display: block; margin: 0 auto;"></p>
 
-<p><span class="tlid-translation translation"><span title="">Jetons un autre coup d'oeil à la quatrième méthode :</span></span></p>
+<p>Jetons un autre coup d'oeil à la quatrième méthode :</p>
 
 <pre class="brush: html notranslate"><code class="language-js">&lt;img src="dinosaur.png" aria-labelledby="dino-label"&gt;
 
-&lt;p id="dino-label"&gt;</code> <span class="tlid-translation translation"><span title="">Le Tyrannosaure rouge Mozilla</span></span> <code class="language-js"> ... &lt;/p&gt;</code></pre>
+&lt;p id="dino-label"&gt;</code> Le Tyrannosaure rouge Mozilla  ... &lt;/p&gt;</pre>
 
-<p><span class="tlid-translation translation"><span title="">Dans ce cas, nous n'utilisons pas du tout l'attribut </span></span><code class="language-js"><code>alt</code></code> <span class="tlid-translation translation"><span title="">Nous avons plutôt présenté notre description de l'image sous forme de paragraphe de texte normal, en lui attribuant un</span></span> <code class="language-js"> <code>id</code></code><span class="tlid-translation translation"><span title=""> puis nous avons utilisé l'attribut</span></span> <code class="language-js"> <code>aria-labelledby</code></code> <span class="tlid-translation translation"><span title="">pour :</span> <span title="">faire référence à cela</span></span> <code class="language-js"> <code>id</code></code><span class="tlid-translation translation"><span title="">, ce qui amène les lecteurs d’écran à utiliser ce paragraphe comme alt</span></span> <code class="language-js"> text/label</code><span class="tlid-translation translation"><span title=""> pour cette image.</span> <span title="">Ceci est particulièrement utile si vous souhaitez utiliser le même texte comme étiquette pour plusieurs images – quelque chose qui n’est pas possible avec </span></span><code class="language-js"><code>alt</code></code><span class="tlid-translation translation"><span title="">.</span></span></p>
+<p>Dans ce cas, nous n'utilisons pas du tout l'attribut <code>alt</code> Nous avons plutôt présenté notre description de l'image sous forme de paragraphe de texte normal, en lui attribuant un  <code>id</code> puis nous avons utilisé l'attribut  <code>aria-labelledby</code> pour : faire référence à cela  <code>id</code>, ce qui amène les lecteurs d’écran à utiliser ce paragraphe comme alt  text/label pour cette image. Ceci est particulièrement utile si vous souhaitez utiliser le même texte comme étiquette pour plusieurs images – quelque chose qui n’est pas possible avec <code>alt</code>.</p>
 
 <div class="note">
-<p><code class="language-js"><strong>Note</strong>: <code>aria-labelledby</code></code> <span class="tlid-translation translation"><span title="">fait partie de la spécification </span></span><code class="language-js"><a href="https://www.w3.org/TR/wai-aria-1.1/">WAI ARIA</a></code><span class="tlid-translation translation"><span title="">, qui permet aux développeurs d'ajouter une sémantique supplémentaire à leur balisage afin d'améliorer l'accessibilité du lecteur d'écran, le cas échéant.</span> <span title="">Pour en savoir plus sur son fonctionnement, lisez notre article</span></span> <code class="language-js"><a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basic</a></code><span class="tlid-translation translation"><span title="">.</span></span></p>
+<p><strong>Note</strong>: <code>aria-labelledby</code> fait partie de la spécification <a href="https://www.w3.org/TR/wai-aria-1.1/">WAI ARIA</a>, qui permet aux développeurs d'ajouter une sémantique supplémentaire à leur balisage afin d'améliorer l'accessibilité du lecteur d'écran, le cas échéant. Pour en savoir plus sur son fonctionnement, lisez notre article <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basic</a>.</p>
 </div>
 
-<h3 id="Autres_mécanismes_alternatifs_de_texte"><span class="tlid-translation translation"><span title="">Autres mécanismes alternatifs de texte</span></span></h3>
+<h3 id="Autres_mécanismes_alternatifs_de_texte">Autres mécanismes alternatifs de texte</h3>
 
-<p><span class="tlid-translation translation"><span title="">Les images ont également d'autres mécanismes disponibles pour fournir un texte descriptif.</span> <span title="">Par exemple, il existe un attribut </span></span><code class="language-js"><code>longdesc</code></code><span class="tlid-translation translation"><span title=""> destiné à pointer sur un document web distinct contenant une description étendue de l'image, par exemple :</span></span></p>
+<p>Les images ont également d'autres mécanismes disponibles pour fournir un texte descriptif. Par exemple, il existe un attribut <code>longdesc</code> destiné à pointer sur un document web distinct contenant une description étendue de l'image, par exemple :</p>
 
 <pre class="brush: html notranslate"><code class="language-js">
 &lt;img src="dinosaur.png" longdesc="dino-info.html"&gt;</code></pre>
 
-<p><span class="tlid-translation translation"><span title="">Cela semble être une bonne idée, en particulier pour les infographies telles que les grands graphiques contenant de nombreuses informations, qui pourraient peut-être être représentées sous forme de tableau de données accessible (voir section précédente).</span> <span title="">Cependant, longdesc n’est pas toujours pris en charge par les lecteurs d’écran et le contenu est totalement inaccessible aux utilisateurs autres que les lecteurs d’écran.</span> <span title="">Il est sans doute préférable d’inclure la description longue sur la même page que l’image, ou d’y accéder par un lien régulier.</span></span></p>
+<p>Cela semble être une bonne idée, en particulier pour les infographies telles que les grands graphiques contenant de nombreuses informations, qui pourraient peut-être être représentées sous forme de tableau de données accessible (voir section précédente). Cependant, longdesc n’est pas toujours pris en charge par les lecteurs d’écran et le contenu est totalement inaccessible aux utilisateurs autres que les lecteurs d’écran. Il est sans doute préférable d’inclure la description longue sur la même page que l’image, ou d’y accéder par un lien régulier.</p>
 
-<p><span class="tlid-translation translation"><span title="">HTML5 comprend deux nouveaux éléments</span></span> <code class="language-js"> — {{htmlelement("figure")}} et {{htmlelement("figcaption")}} — </code> <span class="tlid-translation translation"><span title="">qui sont supposés associer une figure quelconque (ce peut être n'importe quoi, pas nécessairement une image) à une légende de figure :</span></span></p>
+<p>HTML5 comprend deux nouveaux éléments  — {{htmlelement("figure")}} et {{htmlelement("figcaption")}} —  qui sont supposés associer une figure quelconque (ce peut être n'importe quoi, pas nécessairement une image) à une légende de figure :</p>
 
 <pre class="brush: html notranslate"><code class="language-js">&lt;figure&gt;
-  &lt;img src="dinosaur.png" alt="</code> <span class="tlid-translation translation"><span title="">Le Mozilla Tyrannosaurus</span></span> <code class="language-js">"&gt;
-  &lt;figcaption&gt;</code> <span class="tlid-translation translation"><span title="">Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées</span></span> <code class="language-js">.&lt;/figcaption&gt;
+  &lt;img src="dinosaur.png" alt="</code> Le Mozilla Tyrannosaurus <code class="language-js">"&gt;
+  &lt;figcaption&gt;</code> Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées <code class="language-js">.&lt;/figcaption&gt;
 &lt;/figure&gt;</code></pre>
 
-<p><span class="tlid-translation translation"><span title="">Malheureusement, la plupart des lecteurs d’écran ne semblent pas encore associer de légendes à leurs figures, mais la structure des éléments est utile pour le style CSS. Elle permet également de placer une description de l’image à côté de la source.</span></span></p>
+<p>Malheureusement, la plupart des lecteurs d’écran ne semblent pas encore associer de légendes à leurs figures, mais la structure des éléments est utile pour le style CSS. Elle permet également de placer une description de l’image à côté de la source.</p>
 
-<h3 id="Attributs_alt_vides"><span class="tlid-translation translation"><span title="">Attributs alt vides</span></span></h3>
+<h3 id="Attributs_alt_vides">Attributs alt vides</h3>
 
 <pre class="brush: html notranslate"><code class="language-js">
 &lt;h3&gt;
   &lt;img src="article-icon.png" alt=""&gt;
-  </code> <span class="tlid-translation translation"><span title="">Tyrannosaurus Rex: le roi des dinosaures</span></span> <code class="language-js">
+  </code> Tyrannosaurus Rex: le roi des dinosaures <code class="language-js">
 &lt;/h3&gt;</code></pre>
 
-<p><span class="tlid-translation translation"><span title="">Il peut arriver qu'une image soit incluse dans la conception d'une page, mais son objectif principal est la décoration visuelle.</span> <span title="">Vous remarquerez dans l'exemple de code ci-dessus que l'attribut </span></span> <code class="language-js"> <code>alt</code> </code> <span class="tlid-translation translation"><span title="">de l'image est vide – il s'agit pour que les lecteurs d'écran reconnaissent l'image, mais n'essayent pas de décrire l'image (au lieu de cela, ils diraient simplement </span></span>« <span class="tlid-translation translation"><span title="">image</span></span> »<span class="tlid-translation translation"><span title="">, ou similaire)</span> <span title="">.</span></span></p>
+<p>Il peut arriver qu'une image soit incluse dans la conception d'une page, mais son objectif principal est la décoration visuelle. Vous remarquerez dans l'exemple de code ci-dessus que l'attribut   <code>alt </code> de l'image est vide – il s'agit pour que les lecteurs d'écran reconnaissent l'image, mais n'essayent pas de décrire l'image (au lieu de cela, ils diraient simplement « image », ou similaire) .</p>
 
-<p><span class="tlid-translation translation"><span title="">La raison d'utiliser un vide </span></span><code class="language-js"><code>alt</code></code> <span class="tlid-translation translation"><span title="">au lieu de ne pas l'inclure est due au fait que de nombreux lecteurs d'écran annoncent l'URL complète de l'image si aucun</span></span> <code class="language-js"> <code>alt</code></code> <span class="tlid-translation translation"><span title="">n'est fourni.</span> <span title="">Dans l'exemple ci-dessus, l'image agit comme une décoration visuelle de l'en-tête auquel elle est associée.</span> <span title="">Dans ce cas, et dans les cas où une image est uniquement une décoration et n'a pas de valeur de contenu, vous devez mettre un vide</span></span> <code class="language-js"> <code>alt</code></code> <span class="tlid-translation translation"><span title="">sur vos images.</span> <span title="">Une autre alternative consiste à utiliser l'attribut aria role role = "presentation" – cela empêche également les lecteurs d'écrans de lire du texte alternatif.</span></span></p>
+<p>La raison d'utiliser un vide <code>alt</code> au lieu de ne pas l'inclure est due au fait que de nombreux lecteurs d'écran annoncent l'URL complète de l'image si aucun  <code>alt</code> n'est fourni. Dans l'exemple ci-dessus, l'image agit comme une décoration visuelle de l'en-tête auquel elle est associée. Dans ce cas, et dans les cas où une image est uniquement une décoration et n'a pas de valeur de contenu, vous devez mettre un vide  <code>alt</code> sur vos images. Une autre alternative consiste à utiliser l'attribut aria role role = "presentation" – cela empêche également les lecteurs d'écrans de lire du texte alternatif.</p>
 
 <div class="note">
-<p><code class="language-js"><strong>Note</strong> :</code><span class="tlid-translation translation"><span title=""> si possible, vous devriez utiliser CSS pour afficher des images qui ne sont que des décorations.</span></span></p>
+<p><strong>Note</strong> : si possible, vous devriez utiliser CSS pour afficher des images qui ne sont que des décorations.</p>
 </div>
 
 <div class="text-wrap tlid-copy-target">
-<h2 class="result-shield-container tlid-copy-target" id="Résumé"><span class="tlid-translation translation"><span title="">Résumé</span></span></h2>
+<h2 class="result-shield-container tlid-copy-target" id="Résumé">Résumé</h2>
 </div>
 
-<p><span class="tlid-translation translation"><span title="">Vous devriez maintenant bien connaître l'écriture HTML accessible pour la plupart des cas.</span> <span title="">Notre article sur les bases de WAI-ARIA comblera également certaines lacunes dans cette connaissance, mais cet article s’occupe des bases.</span> <span title="">Ensuite, nous allons explorer CSS et JavaScript, et comment l’accessibilité est affectée par leur bon ou mauvais usage.</span></span></p>
+<p>Vous devriez maintenant bien connaître l'écriture HTML accessible pour la plupart des cas. Notre article sur les bases de WAI-ARIA comblera également certaines lacunes dans cette connaissance, mais cet article s’occupe des bases. Ensuite, nous allons explorer CSS et JavaScript, et comment l’accessibilité est affectée par leur bon ou mauvais usage.</p>
 
 <p>{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}</p>

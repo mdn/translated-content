@@ -17,7 +17,7 @@ original_slug: Learn/JavaScript/Objects/la_construction_d_objet_en_pratique
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}</div>
 
-<p class="summary">Dans l'article précédent, nous avons passé en revue l'essentiel de la théorie de l'objet Javascript et sa syntaxe détaillée, vous donnant ainsi des bases solides sur lesquelles commencer. Dans le présent article nous plongeons dans un exercice pratique afin d'accroître votre savoir-faire dans la construction d'objets entièrement personnalisés donnant un résultat plutôt amusant et très coloré.</p>
+<p>Dans l'article précédent, nous avons passé en revue l'essentiel de la théorie de l'objet Javascript et sa syntaxe détaillée, vous donnant ainsi des bases solides sur lesquelles commencer. Dans le présent article nous plongeons dans un exercice pratique afin d'accroître votre savoir-faire dans la construction d'objets entièrement personnalisés donnant un résultat plutôt amusant et très coloré.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -186,14 +186,14 @@ testBall.draw()</pre>
 
 <p>Les deux dernières lignes ajoutent la valeur <code>velX</code> à la coordonnée <code>x</code> et la valeur <code>velY</code> à la coordonnée <code>y</code> — la balle est en effet mise en mouvement chaque fois que cette méthode est invoquée.</p>
 
-<p><span class="short_text" id="result_box" lang="fr"><span>Cela suffira pour l'instant,</span> <span>passons à l'animation !</span></span></p>
+<p>Cela suffira pour l'instant, passons à l'animation !</p>
 
 <h2 id="Animer_la_balle">Animer la balle</h2>
 
-<p><span id="result_box" lang="fr"><span>Maintenant, rendons cela amusant.</span> <span>Nous allons commencer à ajouter des balles au canvas et à les animer.</span></span></p>
+<p>Maintenant, rendons cela amusant. Nous allons commencer à ajouter des balles au canvas et à les animer.</p>
 
 <ol>
- <li><span id="result_box" lang="fr"><span>Tout d'abord, nous avons besoin d'un endroit où stocker toutes nos balles.</span> <span>Le tableau suivant fera ce travail </span></span>— <span lang="fr"><span>ajoutez-le au bas de votre code maintenant :</span></span>
+ <li>Tout d'abord, nous avons besoin d'un endroit où stocker toutes nos balles. Le tableau suivant fera ce travail — ajoutez-le au bas de votre code maintenant :
 
   <pre class="brush: js">let balls = [];
 </pre>
@@ -213,8 +213,8 @@ testBall.draw()</pre>
 
   balls.push(ball);
 }</pre>
-  <span>Tous les programmes qui animent les choses impliquent généralement une boucle d'animation, qui sert à mettre à jour les informations dans le programme et à restituer ensuite la vue résultante sur chaque image de l'animation.</span> <span>C'est la base de la plupart des jeux et autres programmes similaires.</span></li>
- <li><span id="result_box" lang="fr"><span>Ajoutez ce qui suit au bas de votre code maintenant :</span></span>
+  Tous les programmes qui animent les choses impliquent généralement une boucle d'animation, qui sert à mettre à jour les informations dans le programme et à restituer ensuite la vue résultante sur chaque image de l'animation. C'est la base de la plupart des jeux et autres programmes similaires.</li>
+ <li>Ajoutez ce qui suit au bas de votre code maintenant :
   <pre class="brush: js">function loop() {
   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
   ctx.fillRect(0, 0, width, height);
@@ -230,10 +230,10 @@ testBall.draw()</pre>
   <p>Notre fonction <code>loop()</code> fonctionne comme suit :</p>
 
   <ul>
-   <li><span id="result_box" lang="fr"><span>On définit la couleur de remplissage du canvas en noir semi-transparent, puis dessine un rectangle de couleur sur toute la largeur et la hauteur du canvas, en utilisant <code>fillRect()</code> (les quatre paramètres fournissent une coordonnée de départ et une largeur et une hauteur pour le rectangle dessiné</span> <span>).</span> <span>Cela sert à masquer le dessin de l'image précédente avant que la suivante ne soit dessinée.</span> <span>Si vous ne faites pas cela, vous verrez juste de longs serpents se faufiler autour de la toile au lieu de balles qui bougent !</span> <span>La couleur du remplissage est définie sur semi-transparent, <code>rgba (0,0,0,.25)</code>, pour permettre aux quelques images précédentes de briller légèrement, produisant les petites traînées derrière les balles lorsqu'elles se déplacent.</span> <span>Si vous avez changé 0.25 à 1, vous ne les verrez plus du tout.</span> <span>Essayez de faire varier ce dernier nombre (entre 0 et 1) pour voir l'effet qu'il a.</span></span></li>
-   <li><span id="result_box" lang="fr"><span>On crée un nouvel objet <code>Ball()</code> avec des attributs générées aléatoirement grâce à la fonction <code>random()</code>, puis on ajoute l'objet au tableau, mais seulement lorsque le nombre de balles dans le tableau est inférieur à 25. Donc</span> <span>quand on a 25 balles à l'écran, plus aucune balle supplémentaire n'apparaît.</span> <span>Vous pouvez essayer de faire varier le nombre dans <code>balls.length &lt;25</code> pour obtenir plus, ou moins de balles à l'écran.</span> <span>En fonction de la puissance de traitement de votre ordinateur / navigateur, spécifier plusieurs milliers de boules peut ralentir l'animation de façon très significative !</span></span></li>
-   <li><span id="result_box" lang="fr"><span>Le programme boucle à travers tous les objets du tableau sur chacun desquels il exécute la fonction <code>draw()</code> et <code>update()</code> pour dessiner à l'écran chaque balle et faire les mise à jour de chaque attribut vant le prochain rafraîchissement.</span></span></li>
-   <li><span id="result_box" lang="fr"><span>Exécute à nouveau la fonction à l'aide de la méthode <code>requestAnimationFrame()</code> </span></span>—<span lang="fr"><span> lorsque cette méthode est exécutée en permanence et a reçu le même nom de fonction, elle exécute cette fonction un nombre défini de fois par seconde pour créer une animation fluide.</span> <span>Cela se fait généralement de manière récursive </span></span>—<span lang="fr"><span> ce qui signifie que la fonction s'appelle elle-même à chaque fois qu'elle s'exécute, de sorte qu'elle sera répétée encore et encore.</span></span></li>
+   <li>On définit la couleur de remplissage du canvas en noir semi-transparent, puis dessine un rectangle de couleur sur toute la largeur et la hauteur du canvas, en utilisant <code>fillRect()</code> (les quatre paramètres fournissent une coordonnée de départ et une largeur et une hauteur pour le rectangle dessiné ). Cela sert à masquer le dessin de l'image précédente avant que la suivante ne soit dessinée. Si vous ne faites pas cela, vous verrez juste de longs serpents se faufiler autour de la toile au lieu de balles qui bougent ! La couleur du remplissage est définie sur semi-transparent, <code>rgba (0,0,0,.25)</code>, pour permettre aux quelques images précédentes de briller légèrement, produisant les petites traînées derrière les balles lorsqu'elles se déplacent. Si vous avez changé 0.25 à 1, vous ne les verrez plus du tout. Essayez de faire varier ce dernier nombre (entre 0 et 1) pour voir l'effet qu'il a.</li>
+   <li>On crée un nouvel objet <code>Ball()</code> avec des attributs générées aléatoirement grâce à la fonction <code>random()</code>, puis on ajoute l'objet au tableau, mais seulement lorsque le nombre de balles dans le tableau est inférieur à 25. Donc quand on a 25 balles à l'écran, plus aucune balle supplémentaire n'apparaît. Vous pouvez essayer de faire varier le nombre dans <code>balls.length &lt;25</code> pour obtenir plus, ou moins de balles à l'écran. En fonction de la puissance de traitement de votre ordinateur / navigateur, spécifier plusieurs milliers de boules peut ralentir l'animation de façon très significative !</li>
+   <li>Le programme boucle à travers tous les objets du tableau sur chacun desquels il exécute la fonction <code>draw()</code> et <code>update()</code> pour dessiner à l'écran chaque balle et faire les mise à jour de chaque attribut vant le prochain rafraîchissement.</li>
+   <li>Exécute à nouveau la fonction à l'aide de la méthode <code>requestAnimationFrame()</code> — lorsque cette méthode est exécutée en permanence et a reçu le même nom de fonction, elle exécute cette fonction un nombre défini de fois par seconde pour créer une animation fluide. Cela se fait généralement de manière récursive — ce qui signifie que la fonction s'appelle elle-même à chaque fois qu'elle s'exécute, de sorte qu'elle sera répétée encore et encore.</li>
   </ul>
  </li>
  <li>Finallement mais non moins important, ajoutez la ligne suivante au bas de votre code — nous devons appeler la fonction une fois pour démarrer l'animation.
@@ -241,14 +241,14 @@ testBall.draw()</pre>
  </li>
 </ol>
 
-<p>Voilà pour les bases — <span id="result_box" lang="fr"><span>essayez d'enregistrer et de rafraîchir pour tester vos balles bondissantes!</span></span></p>
+<p>Voilà pour les bases — essayez d'enregistrer et de rafraîchir pour tester vos balles bondissantes!</p>
 
 <h2 id="Ajouter_la_détection_de_collision">Ajouter la détection de collision</h2>
 
-<p><span id="result_box" lang="fr"><span>Maintenant, pour un peu de plaisir, ajoutons une détection de collision à notre programme, afin que nos balles sachent quand elles ont frappé une autre balle.</span></span></p>
+<p>Maintenant, pour un peu de plaisir, ajoutons une détection de collision à notre programme, afin que nos balles sachent quand elles ont frappé une autre balle.</p>
 
 <ol>
- <li><span id="result_box" lang="fr"><span>Tout d'abord, ajoutez la définition de méthode suivante ci-dessous où vous avez défini la méthode <code>update()</code> (c'est-à-dire le bloc <code>Ball.prototype.update</code>).</span></span>
+ <li>Tout d'abord, ajoutez la définition de méthode suivante ci-dessous où vous avez défini la méthode <code>update()</code> (c'est-à-dire le bloc <code>Ball.prototype.update</code>).
 
   <pre class="brush: js">Ball.prototype.collisionDetect = function() {
   for (let j = 0; j &lt; balls.length; j++) {
@@ -264,40 +264,40 @@ testBall.draw()</pre>
   }
 }</pre>
 
-  <p><span id="result_box" lang="fr"><span>Cette méthode est un peu complexe, donc ne vous inquiétez pas si vous ne comprenez pas exactement comment cela fonctionne pour le moment.</span> Regardons cela pas-à-pas<span> :</span></span></p>
+  <p>Cette méthode est un peu complexe, donc ne vous inquiétez pas si vous ne comprenez pas exactement comment cela fonctionne pour le moment. Regardons cela pas-à-pas :</p>
 
   <ul>
-   <li><span id="result_box" lang="fr"><span>Pour chaque balle <em>b</em>, nous devons vérifier chaque autre balle pour voir si elle est entrée en collision avec <em>b</em>.</span> <span>Pour ce faire, on inspecte toutes les balles du tableau</span></span> <code>balls[]</code> dans une boucle <code>for</code>.</li>
-   <li><span id="result_box" lang="fr"><span>Immédiatement à l'intérieur de cette boucle <code>for</code>, une instruction <code>if</code> vérifie si la balle courante  <em>b'</em> , inspectée dans la boucle, n'est égale à la balle <em>b. Le code correspondant est :  </em><code><em>b</em>'!== <em>b</em></code></span></span><span lang="fr"><span><em>. </em>En effet,</span> n<span>ous ne voulons pas vérifier si une balle <em>b</em> est entrée en collision avec elle-même !</span> N<span>ous contrôlons donc si la balle actuelle <em>b</em></span></span>—<span lang="fr"><span>dont la méthode <code>collisionDetect()</code> est invoquée</span></span>—<span lang="fr"><span>est distincte de la balle <em>b' </em>inspectée dans la boucle<em>. </em>Ainsi</span> <span>le bloc de code venant après l'instruction <code>if</code> ne s'exécutera que si les balles <em>b</em> et <em>b'</em> ne sont pas identiques.</span></span></li>
-   <li><span id="result_box" lang="fr"><span>Un algorithme classique permet ensuite de vérifier la superposition de deux disques</span><span>.</span> <span>Ceci est expliqué plus loin dans</span></span> <a href="/en-US/docs/Games/Techniques/2D_collision_detection">2D collision detection</a>.</li>
-   <li><span id="result_box" lang="fr"><span>Si une collision est détectée, le code à l'intérieur de l'instruction interne <code>if</code> est exécuté.</span> <span>Dans ce cas, nous définissons simplement la propriété <code>color</code> des deux cercles à une nouvelle couleur aléatoire.</span> <span>Nous aurions pu faire quelque chose de bien plus complexe, comme faire rebondir les balles de façon réaliste, mais cela aurait été beaucoup plus complexe à mettre en œuvre.</span> <span>Pour de telles simulations de physique, les développeurs ont tendance à utiliser des bibliothèques de jeux ou de physiques telles que</span></span> <a href="http://wellcaffeinated.net/PhysicsJS/">PhysicsJS</a>, <a href="http://brm.io/matter-js/">matter.js</a>, <a href="http://phaser.io/">Phaser</a>, etc.</li>
+   <li>Pour chaque balle <em>b</em>, nous devons vérifier chaque autre balle pour voir si elle est entrée en collision avec <em>b</em>. Pour ce faire, on inspecte toutes les balles du tableau <code>balls[]</code> dans une boucle <code>for</code>.</li>
+   <li>Immédiatement à l'intérieur de cette boucle <code>for</code>, une instruction <code>if</code> vérifie si la balle courante  <em>b'</em> , inspectée dans la boucle, n'est égale à la balle <em>b. Le code correspondant est :  </em><code><em>b</em>'!== <em>b</em></code><em>. </em>En effet, nous ne voulons pas vérifier si une balle <em>b</em> est entrée en collision avec elle-même ! Nous contrôlons donc si la balle actuelle <em>b</em>—dont la méthode <code>collisionDetect()</code> est invoquée—est distincte de la balle <em>b' </em>inspectée dans la boucle<em>. </em>Ainsi le bloc de code venant après l'instruction <code>if</code> ne s'exécutera que si les balles <em>b</em> et <em>b'</em> ne sont pas identiques.</li>
+   <li>Un algorithme classique permet ensuite de vérifier la superposition de deux disques. Ceci est expliqué plus loin dans <a href="/en-US/docs/Games/Techniques/2D_collision_detection">2D collision detection</a>.</li>
+   <li>Si une collision est détectée, le code à l'intérieur de l'instruction interne <code>if</code> est exécuté. Dans ce cas, nous définissons simplement la propriété <code>color</code> des deux cercles à une nouvelle couleur aléatoire. Nous aurions pu faire quelque chose de bien plus complexe, comme faire rebondir les balles de façon réaliste, mais cela aurait été beaucoup plus complexe à mettre en œuvre. Pour de telles simulations de physique, les développeurs ont tendance à utiliser des bibliothèques de jeux ou de physiques telles que <a href="http://wellcaffeinated.net/PhysicsJS/">PhysicsJS</a>, <a href="http://brm.io/matter-js/">matter.js</a>, <a href="http://phaser.io/">Phaser</a>, etc.</li>
   </ul>
  </li>
- <li><span id="result_box" lang="fr"><span>Vous devez également appeler cette méthode dans chaque image de l'animation.</span> <span>Ajouter le code ci-dessous</span></span>  juste après la ligne <code>balls[i].update();</code>:
+ <li>Vous devez également appeler cette méthode dans chaque image de l'animation. Ajouter le code ci-dessous  juste après la ligne <code>balls[i].update();</code>:
   <pre class="brush: js">balls[i].collisionDetect();</pre>
  </li>
- <li><span id="result_box" lang="fr"><span>Enregistrez et rafraîchissez la démo à nouveau, et vous verrez vos balles changer de couleur quand elles entrent en collision !</span></span></li>
+ <li>Enregistrez et rafraîchissez la démo à nouveau, et vous verrez vos balles changer de couleur quand elles entrent en collision !</li>
 </ol>
 
 <div class="note">
-<p><strong>Note </strong>: <span id="result_box" lang="fr"><span>Si vous avez des difficultés à faire fonctionner cet exemple, essayez de comparer votre code JavaScript avec notre <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js">version finale</a> (voir également la <a href="http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html">démo en ligne</a>).</span></span></p>
+<p><strong>Note </strong>: Si vous avez des difficultés à faire fonctionner cet exemple, essayez de comparer votre code JavaScript avec notre <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js">version finale</a> (voir également la <a href="http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html">démo en ligne</a>).</p>
 </div>
 
 <h2 id="Résumé">Résumé</h2>
 
-<p><span id="result_box" lang="fr"><span>Nous espérons que vous vous êtes amusé à écrire votre propre exemple de balles aléatoires bondissantes comme dans le monde réel, en utilisant diverses techniques orientées objet et divers objets d'un bout à l'autre du module !</span> Nous espérons vous avoir offert un aperçu<span> utile de l'utilisation des objets.</span><br>
- <br>
- <span>C'est tout pour les articles sur les objets </span></span>—<span lang="fr"><span> il ne vous reste plus qu'à tester vos compétences dans l'évaluation sur les objets.</span></span></p>
+<p>Nous espérons que vous vous êtes amusé à écrire votre propre exemple de balles aléatoires bondissantes comme dans le monde réel, en utilisant diverses techniques orientées objet et divers objets d'un bout à l'autre du module ! Nous espérons vous avoir offert un aperçu utile de l'utilisation des objets.</p>
+
+<p>C'est tout pour les articles sur les objets — il ne vous reste plus qu'à tester vos compétences dans l'évaluation sur les objets.</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Didacticiel sur canvas</a> — <span id="result_box" lang="fr"><span>un guide pour débutants sur l'utilisation de canvas 2D.</span></span></li>
+ <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Didacticiel sur canvas</a> — un guide pour débutants sur l'utilisation de canvas 2D.</li>
  <li><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></li>
- <li><span id="result_box" lang="fr"><span><a href="/en-US/docs/Games/Techniques/2D_collision_detection">Détection de collision 2D</a> </span></span></li>
- <li><span id="result_box" lang="fr"><span><a href="/en-US/docs/Games/Techniques/3D_collision_detection">Détection de collision 3D</a> </span></span></li>
- <li><a href="/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">Jeu d'évasion 2D utilisant du JavaScript pu</a> —<span id="result_box" lang="fr"><span>un excellent tutoriel pour débutant montrant comment construire un jeu en 2D.</span></span></li>
- <li><a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">Jeu d'évasion 2D utilisant phaser</a> — <span id="result_box" lang="fr"><span>explique les bases de la construction d'un jeu 2D en utilisant une bibliothèque de jeux JavaScript.</span></span></li>
+ <li><a href="/en-US/docs/Games/Techniques/2D_collision_detection">Détection de collision 2D</a> </li>
+ <li><a href="/en-US/docs/Games/Techniques/3D_collision_detection">Détection de collision 3D</a> </li>
+ <li><a href="/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">Jeu d'évasion 2D utilisant du JavaScript pu</a> —un excellent tutoriel pour débutant montrant comment construire un jeu en 2D.</li>
+ <li><a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">Jeu d'évasion 2D utilisant phaser</a> — explique les bases de la construction d'un jeu 2D en utilisant une bibliothèque de jeux JavaScript.</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}</p>

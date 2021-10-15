@@ -8,7 +8,7 @@ original_slug: Apprendre/JavaScript/Building_blocks/Fonctions
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}</div>
 
-<p class="summary">Les <strong>fonctions</strong> sont un autre concept essentiel de la programmation, qui permettent de stocker dans un bloc défini une partie de code qui effectue une seule tâche afin de l'appeler plus tard lorsque nous en avons besoin en utilisant une seule commande courte — au lieu de ré-écrire l'intégralité de ce code à chaque fois. Dans cet article nous explorons les concepts fondamentaux inhérents aux fonctions tels que la syntaxe de base, comment les définir et les invoquer, leur portée et leurs paramètres.</p>
+<p>Les <strong>fonctions</strong> sont un autre concept essentiel de la programmation, qui permettent de stocker dans un bloc défini une partie de code qui effectue une seule tâche afin de l'appeler plus tard lorsque nous en avons besoin en utilisant une seule commande courte — au lieu de ré-écrire l'intégralité de ce code à chaque fois. Dans cet article nous explorons les concepts fondamentaux inhérents aux fonctions tels que la syntaxe de base, comment les définir et les invoquer, leur portée et leurs paramètres.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -199,7 +199,7 @@ var madeAString = myArray.join(' ');
 var madeAString = myArray.join();
 // renvoie 'I,love,chocolate,frogs'</pre>
 
-<p><span id="result_box" lang="fr"><span>Si aucun paramètre n'est inclus pour spécifier un caractère de jointure / délimitation, une virgule est utilisée par défaut.</span></span></p>
+<p>Si aucun paramètre n'est inclus pour spécifier un caractère de jointure / délimitation, une virgule est utilisée par défaut.</p>
 
 <h2 id="La_portée_des_fonctions_et_les_conflits.">La portée des fonctions et les conflits.</h2>
 
@@ -207,9 +207,9 @@ var madeAString = myArray.join();
 
 <p>Le plus haut niveau en dehors de toutes vos fonctions est appelé la <strong>portée globale</strong>. Les valeurs définies dans la portée globale sont accessibles à partir de n'importe qu'elle partie du code.</p>
 
-<p>Le JavaScript est construit de cette façon pour plusieurs raisons —  mais principalement à cause de la sécurité et de l'organisation. Parfois, vous ne voulez pas que vos variables soient accessibles depuis toutes les autres parties du code — des script externes appelés depuis l'extérieur de la fonction pourraient interférer avec votre code et causer des problèmes <span id="result_box" lang="fr"><span>parce qu'ils utilisent les mêmes noms de variables que d'autres parties du code, provoquant des conflits</span></span>. Cela peut être fait de manière malveillante ou simplement par accident.</p>
+<p>Le JavaScript est construit de cette façon pour plusieurs raisons —  mais principalement à cause de la sécurité et de l'organisation. Parfois, vous ne voulez pas que vos variables soient accessibles depuis toutes les autres parties du code — des script externes appelés depuis l'extérieur de la fonction pourraient interférer avec votre code et causer des problèmes parce qu'ils utilisent les mêmes noms de variables que d'autres parties du code, provoquant des conflits. Cela peut être fait de manière malveillante ou simplement par accident.</p>
 
-<p><span id="result_box" lang="fr"><span>Par exemple, disons que vous avez un fichier HTML qui appelle deux fichiers JavaScript externes, et que les deux ont une variable et une fonction définie qui utilisent le même nom :</span></span></p>
+<p>Par exemple, disons que vous avez un fichier HTML qui appelle deux fichiers JavaScript externes, et que les deux ont une variable et une fonction définie qui utilisent le même nom :</p>
 
 <pre class="brush: html">&lt;!-- Excerpt from my HTML --&gt;
 &lt;script src="first.js"&gt;&lt;/script&gt;
@@ -230,7 +230,7 @@ function greeting() {
   alert('Our company is called ' + name + '.');
 }</pre>
 
-<p><span id="result_box" lang="fr"><span>Les deux fonctions que vous voulez appeler s'appellent</span></span> <code>greeting()</code>, <span id="result_box" lang="fr"><span>mais vous ne pouvez accéder qu'à la fonction </span></span><code>greeting()</code> du second fichier <code>second.js</code>  — <span id="result_box" lang="fr"><span>car celui-ci est appliqué au code HTML plus tard dans le code source, de sorte que sa variable et sa fonction écrasent celles du</span></span> premier fichier <code>first.js</code>.</p>
+<p>Les deux fonctions que vous voulez appeler s'appellent <code>greeting()</code>, mais vous ne pouvez accéder qu'à la fonction <code>greeting()</code> du second fichier <code>second.js</code>  — car celui-ci est appliqué au code HTML plus tard dans le code source, de sorte que sa variable et sa fonction écrasent celles du premier fichier <code>first.js</code>.</p>
 
 <div class="note">
 <p><strong>Note </strong>: Vous pouvez voir cet exemple <a href="http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html">s'exécuter sur GitHub</a> (voir aussi le <a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions">code source</a>).</p>
@@ -263,15 +263,15 @@ output(z);</pre>
  <li>
   <p>Néanmoins, que se passe-t-il losqu'elles sont appelées de l'intérieur d'une autre fonction ? Essayer d'éditer <code>a()</code> et <code>b()</code> pour qu'elles aient la forme suivante :</p>
 
-  <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">a</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> y <span class="operator token">=</span> <span class="number token">2</span><span class="punctuation token">;</span>
-  <span class="function token">output</span><span class="punctuation token">(</span>y<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+  <pre class="brush: js line-numbers  language-js"><code class="language-js">function a() {
+  var y = 2;
+  output(y);
+}
 
-<span class="keyword token">function</span> <span class="function token">b</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> z <span class="operator token">=</span> <span class="number token">3</span><span class="punctuation token">;</span>
-  <span class="function token">output</span><span class="punctuation token">(</span>z<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+function b() {
+  var z = 3;
+  output(z);
+}</code></pre>
   Sauvegardez le code et rechargez-le dans votre navigateur, puis essayez d'appeler les fonctions <code>a()</code> et <code>b()</code> depuis la console JavaScript :
 
   <pre class="brush: js">a();
@@ -323,7 +323,7 @@ b();</pre>
 <h3 id="Des_fonctions_à_lintérieur_de_fonctions">Des fonctions à l'intérieur de fonctions</h3>
 
 <div id="gt-input-tool">
-<div class="cc-ctr gt-src-cc-normal" id="gt-src-cc-ctr"><span id="result_box" lang="fr"><span>Gardez à l'esprit que vous pouvez appeler une fonction de n'importe où, même à l'intérieur d'une autre fonction.</span> <span>Ceci est souvent utilisé comme un moyen de garder le code bien organisé </span></span>—<span lang="fr"><span> si vous avez une grande fonction complexe, elle est plus facile à comprendre si vous la divisez en plusieurs sous-fonctions :</span></span></div>
+<div class="cc-ctr gt-src-cc-normal" id="gt-src-cc-ctr">Gardez à l'esprit que vous pouvez appeler une fonction de n'importe où, même à l'intérieur d'une autre fonction. Ceci est souvent utilisé comme un moyen de garder le code bien organisé — si vous avez une grande fonction complexe, elle est plus facile à comprendre si vous la divisez en plusieurs sous-fonctions :</div>
 </div>
 
 <pre class="brush: js">function myBigFunction() {
@@ -347,7 +347,7 @@ function subFunction3() {
 }
 </pre>
 
-<p><span id="result_box" lang="fr"><span>Assurez-vous simplement que les valeurs utilisées dans la fonction ont une portée correcte.</span> <span>L'exemple ci-dessus entraînerait une erreur</span></span> <code>ReferenceError: myValue is not defined</code>, car bien que la valeur <code>myValue</code>  <span id="result_box" lang="fr"><span>est définie dans la même portée que les appels de fonction, elle n'est pas définie dans les définitions de fonctions - le code réel qui est exécuté lorsque les fonctions sont appelées.</span> <span>Pour que cela fonctionne, vous devez passer la valeur dans la fonction en tant que paramètre, comme ceci :</span></span></p>
+<p>Assurez-vous simplement que les valeurs utilisées dans la fonction ont une portée correcte. L'exemple ci-dessus entraînerait une erreur <code>ReferenceError: myValue is not defined</code>, car bien que la valeur <code>myValue</code>  est définie dans la même portée que les appels de fonction, elle n'est pas définie dans les définitions de fonctions - le code réel qui est exécuté lorsque les fonctions sont appelées. Pour que cela fonctionne, vous devez passer la valeur dans la fonction en tant que paramètre, comme ceci :</p>
 
 <pre class="brush: js">function myBigFunction() {
   var myValue = 1;
@@ -371,12 +371,12 @@ function subFunction3(value) {
 
 <h2 id="Conclusion">Conclusion</h2>
 
-<p><span id="result_box" lang="fr"><span>Cet article a exploré les concepts fondamentaux inhérents aux fonctions, ouvrant la voie au suivant dans lequel nous passerons à la pratique et vous guiderons à travers les étapes pour construire votre propre fonction personnalisée.</span></span></p>
+<p>Cet article a exploré les concepts fondamentaux inhérents aux fonctions, ouvrant la voie au suivant dans lequel nous passerons à la pratique et vous guiderons à travers les étapes pour construire votre propre fonction personnalisée.</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Fonctions">Fonctions</a> — aborde<span class="short_text" id="result_box" lang="fr"><span> certaines fonctionnalités avancées non incluses ici.</span></span></li>
+ <li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Fonctions">Fonctions</a> — aborde certaines fonctionnalités avancées non incluses ici.</li>
  <li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_d%C3%A9faut_des_arguments">Valeur par défaut des arguments</a>, <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es">Fonctions fléchées</a> — références avancées</li>
 </ul>
 

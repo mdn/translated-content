@@ -15,7 +15,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 <div>{{LearnSidebar}}<br>
 {{PreviousMenuNext("Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML", "Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires", "Web/Guide/HTML/Formulaires")}}</div>
 
-<p class="summary">Nous examinerons maintenant en détail les fonctionnalités des divers widgets pour formulaires, en soulignant les options disponibles pour collecter les différents types de données. Ce guide vise à être exhaustif en couvrant tous les widgets natifs de formulaire disponibles.</p>
+<p>Nous examinerons maintenant en détail les fonctionnalités des divers widgets pour formulaires, en soulignant les options disponibles pour collecter les différents types de données. Ce guide vise à être exhaustif en couvrant tous les widgets natifs de formulaire disponibles.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -120,7 +120,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Ce type de champ est défini en donnant la valeur <code>email</code> à l'attribut {{htmlattrxref("type","input")}} :</p>
 
-<pre class="brush: html notranslate">    &lt;input type="email" <code class="language-html"><span class="tag token"><span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>email<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>email<span class="punctuation token">"</span></span> </span></code>multiple&gt;</pre>
+<pre class="brush: html notranslate">    &lt;input type="email" <code class="language-html">id="email" name="email" </code>multiple&gt;</pre>
 
 <p>Avec ce <code>type</code> , l'utilisateur doit saisir un e‑mail valide dans le champ. Tout autre type de contenu amène le navigateur à émettre une erreur lors de la soumission du formulaire. Notez que cette validation s'opère côté client et est faite par le navigateur :</p>
 
@@ -314,22 +314,22 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Pour gérer cela, voici une petite astuce offrant une bonne solution de repli pour ces navigateurs :</p>
 
-<pre class="brush:html; line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>myFruit<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Quel est votre fruit préféré ? (avec repli)<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>myFruit<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>fruit<span class="punctuation token">"</span></span> <span class="attr-name token">list</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>fruitList<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
+<pre class="brush:html; line-numbers  language-html notranslate"><code class="language-html">&lt;label for="myFruit"&gt;Quel est votre fruit préféré ? (avec repli)&lt;/label&gt;
+&lt;input type="text" id="myFruit" name="fruit" list="fruitList"&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>datalist</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>fruitList<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>suggestion<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>ou choisissez un fruit<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>select</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>suggestion<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>altFruit<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;</span></span>Pomme<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;</span></span>Banane<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;</span></span>Mûres<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;</span></span>Airelles<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;</span></span>Citron<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;</span></span>Litchi<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;</span></span>Pêche<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;</span></span>Poire<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>select</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>datalist</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;datalist id="fruitList"&gt;
+  &lt;label for="suggestion"&gt;ou choisissez un fruit&lt;/label&gt;
+  &lt;select id="suggestion" name="altFruit"&gt;
+    &lt;option&gt;Pomme&lt;/option&gt;
+    &lt;option&gt;Banane&lt;/option&gt;
+    &lt;option&gt;Mûres&lt;/option&gt;
+    &lt;option&gt;Airelles&lt;/option&gt;
+    &lt;option&gt;Citron&lt;/option&gt;
+    &lt;option&gt;Litchi&lt;/option&gt;
+    &lt;option&gt;Pêche&lt;/option&gt;
+    &lt;option&gt;Poire&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/datalist&gt;</code></pre>
 
 <p>Les navigateurs qui prennent en charge l'élément {{HTMLElement("datalist")}} ignoreront tous les éléments qui ne sont pas {{HTMLElement("option")}} et fonctionneront comme prévu. D'autre part, les navigateurs qui ne prennent pas en charge l'élément {{HTMLElement("datalist")}} afficheront l'étiquette et la boîte de sélection. Bien sûr, il y a d'autres façons de gérer ce manque de prise en charge de l'élément {{HTMLElement("datalist")}}, mais c'est la manière la plus simple (d'autres ont besoin de JavaScript).</p>
 
@@ -365,7 +365,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Une casce à cocher se crée avec l'élément {{HTMLElement("input")}} dont l'attribut {{htmlattrxref("type","input")}} a pour valeur <code>checkbox</code>.</p>
 
-<pre class="brush: html notranslate">    &lt;input type="checkbox" <code class="language-html"><span class="tag token"><span class="attr-name token">checked</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>carrots<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>carrots<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>carrots<span class="punctuation token">"</span></span></span></code>&gt;
+<pre class="brush: html notranslate">    &lt;input type="checkbox" <code class="language-html">checked id="carrots" name="carrots" value="carrots"</code>&gt;
 </pre>
 
 <p>Mettre l'attribut <code>checked</code> fait que la case sera cochée au chargement de la page.</p>
@@ -376,7 +376,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Un bouton radio se crée avec un élément {{HTMLElement("input")}} dont l'attribut {{htmlattrxref("type","input")}} a la valeur <code>radio</code>.</p>
 
-<pre class="brush: html notranslate">    &lt;input type="radio" checked<code class="language-html"><span class="tag token"><span class="attr-name token"> id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>soup<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>meal<span class="punctuation token">"</span></span></span></code>&gt;</pre>
+<pre class="brush: html notranslate">    &lt;input type="radio" checked<code class="language-html"> id="soup" name="meal"</code>&gt;</pre>
 
 <p>Plusieurs boutons radio peuvent être liés ensemble. S'ils partagent la même valeur pour leur attribut {{htmlattrxref("name","input")}}, ils seront considérés comme faisant partie d'un seul groupe de boutons. Seulement un bouton à la fois peut être coché par groupe. Ceci signifie que si l'un d'entre eux est coché, tous les autres sont automatiquement décochés. Lorsque le formulaire est envoyé, seule la valeur du bouton coché est envoyée. Si aucun des boutons n'est coché, l'ensemble des boutons du groupe est considéré comme étant dans un état inconnu et aucune valeur n'est envoyée avec le formulaire.</p>
 
@@ -467,7 +467,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <h4 id="Exemple">Exemple</h4>
 
-<pre class="brush: html notranslate">    &lt;input type="number" <code class="language-html"><span class="tag token"><span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>age<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>age<span class="punctuation token">"</span></span></span></code> min="1" max="10" step="2"&gt;</pre>
+<pre class="brush: html notranslate">    &lt;input type="number" <code class="language-html">name="age" id="age"</code> min="1" max="10" step="2"&gt;</pre>
 
 <p>Ceci créé un widget pour un nombre dont la valeur est comprise entre 1 et 10 et dont les boutons d'incrémentation/décrémentation modifient la valeur par pas de 2.</p>
 
@@ -479,27 +479,27 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <h4 id="Exemple_2">Exemple</h4>
 
-<pre class="brush: html line-numbers  language-html notranslate">    <code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>range<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>beans<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>beans<span class="punctuation token">"</span></span> <span class="attr-name token">min</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>0<span class="punctuation token">"</span></span> <span class="attr-name token">max</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>500<span class="punctuation token">"</span></span> <span class="attr-name token">step</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>10<span class="punctuation token">"</span></span><span class="punctuation token">&gt;
-</span></span></code></pre>
+<pre class="brush: html line-numbers  language-html notranslate">    <code class="language-html">&lt;input type="range" name="beans" id="beans" min="0" max="500" step="10"&gt;
+</code></pre>
 
 <p>Cet exemple créé un curseur dont les valeurs varient entre 0 et 500, et dont les bouton d'incrément/décrément font varier la valeur de ±10.</p>
 
 <p>Un problème avec les curseurs est qu'il n'offrent aucun moyen visue de savoir quelle est leur valeur courante. Il est nécessaire d'ajouter cela vous‑même à l'aide de JavaScript, mais c'est assez facile. Dans cet exemple nous ajoutons un élément {{htmlelement("span")}} dans lequel nous écrivons la valeur courante du curseur et la mettons à jour quand elle est modifiée.</p>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>beans<span class="punctuation token">"</span></span><span class="punctuation token">&gt;Combien de haricots pouvez‑vous manger </span></span>?<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>range<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>beans<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>beans<span class="punctuation token">"</span></span> <span class="attr-name token">min</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>0<span class="punctuation token">"</span></span> <span class="attr-name token">max</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>500<span class="punctuation token">"</span></span> <span class="attr-name token">step</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>10<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>span</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>beancount<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>span</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;label for="beans"&gt;Combien de haricots pouvez‑vous manger ?&lt;/label&gt;
+&lt;input type="range" name="beans" id="beans" min="0" max="500" step="10"&gt;
+&lt;span class="beancount"&gt;&lt;/span&gt;</code></pre>
 
 <p>et en  JavaScript :</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">var</span> beans <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'#beans'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> count <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'.beancount'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var beans = document.querySelector('#beans');
+var count = document.querySelector('.beancount');
 
-count<span class="punctuation token">.</span>textContent <span class="operator token">=</span> beans<span class="punctuation token">.</span>value<span class="punctuation token">;</span>
+count.textContent = beans.value;
 
-beans<span class="punctuation token">.</span>oninput <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  count<span class="punctuation token">.</span>textContent <span class="operator token">=</span> beans<span class="punctuation token">.</span>value<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+beans.oninput = function() {
+  count.textContent = beans.value;
+}</code></pre>
 
 <p>Ici nous stockons dans deux variables les références du curseur et celle de <code>span</code>, puis nous réglons immédiatement le <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent">textContent</a></code>  de <code>span</code> à la valeur courante <code>value</code> de l'entrée. Enfin, nous avons mis en place un gestionnaire d'événements oninput de sorte que chaque fois que le curseur de plage est déplacé, le <code>textContent</code> de <code>span</code> est mis à jour avec la nouvelle valeur de l'entrée.</p>
 
@@ -548,7 +548,7 @@ beans<span class="punctuation token">.</span>oninput <span class="operator token
 
 <p>Un widget de sélection de couleur se crée avec un élément {{HTMLElement("input")}} dont l'attribut {{htmlattrxref("type","input")}} a pour valeur <code>color</code>.</p>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>color<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>color<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>color<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;input type="color" name="color" id="color"&gt;</code></pre>
 
 <p>Attention : la prise en charge du widget <code>color</code> n'est pas très bonne actuellement. Il n'y a aucune prise en charge dans Internet Explorer, ni actuellement dans Safari. Les autres navigateurs majeurs le prennent en charge.</p>
 
@@ -570,7 +570,7 @@ beans<span class="punctuation token">.</span>oninput <span class="operator token
 
 <p>Dans cet exemple, le widget de sélection de fichiers permet de sélectionner des fichiers d'images. L'utilisateur peut sélectionner plusieurs fichiers.</p>
 
-<pre class="brush: html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>file<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>file<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>file<span class="punctuation token">"</span></span> <span class="attr-name token">accept</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>image/*<span class="punctuation token">"</span></span> <span class="attr-name token">multiple</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html notranslate"><code class="language-html">&lt;input type="file" name="file" id="file" accept="image/*" multiple&gt;</code></pre>
 
 <h3 id="Contenu_caché">Contenu caché</h3>
 
@@ -578,7 +578,7 @@ beans<span class="punctuation token">.</span>oninput <span class="operator token
 
 <p>Si vous créez un tel élément, il est obligatoire de définir ses attributs <code>name</code> et <code>value</code> :</p>
 
-<pre class="brush: html notranslate">    &lt;input type="hidden" <code class="language-html"><span class="tag token"><span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>timestamp<span class="punctuation token">"</span></span> </span></code>name="timestamp" value="1286705410"&gt;</pre>
+<pre class="brush: html notranslate">    &lt;input type="hidden" <code class="language-html">id="timestamp" </code>name="timestamp" value="1286705410"&gt;</pre>
 
 <h3 id="Image-bouton">Image-bouton</h3>
 
@@ -599,7 +599,7 @@ beans<span class="punctuation token">.</span>oninput <span class="operator token
 
 <pre class="notranslate">    http://foo.com?pos.x=123&amp;pos.y=456</pre>
 
-<p>C'est une façon très commode de construire une « hot map » (cartographie des parties d'une page Internet le plus souvent balayées par le regard des lecteurs). La manière d'envoyer et d'extraire ces valeurs est détaillée dans l'article <span>« </span><a href="/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires" title="/fr/docs/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires"><span>Envoi des données de formulaire</span></a> ».</p>
+<p>C'est une façon très commode de construire une « hot map » (cartographie des parties d'une page Internet le plus souvent balayées par le regard des lecteurs). La manière d'envoyer et d'extraire ces valeurs est détaillée dans l'article « <a href="/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires" title="/fr/docs/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires">Envoi des données de formulaire</a> ».</p>
 
 <h3 id="Compteurs_et_barres_de_progression">Compteurs et barres de progression</h3>
 
@@ -646,7 +646,7 @@ beans<span class="punctuation token">.</span>oninput <span class="operator token
 
 <p>Une telle barre se crée avec un élément {{HTMLElement("meter")}}. Cela permet d'implémenter toute sorte d'étalonnage, par exemple une barre montrant l'espace total utilisé sur un disque, qui devient rouge si le disque commence à être plein.</p>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>meter</span> <span class="attr-name token">min</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>0<span class="punctuation token">"</span></span> <span class="attr-name token">max</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>100<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>75<span class="punctuation token">"</span></span> <span class="attr-name token">low</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>33<span class="punctuation token">"</span></span> <span class="attr-name token">high</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>66<span class="punctuation token">"</span></span> <span class="attr-name token">optimum</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>50<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>75<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>meter</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;meter min="0" max="100" value="75" low="33" high="66" optimum="50"&gt;75&lt;/meter&gt;</code></pre>
 
 <p>Le contenu de l'élément {{HTMLElement("meter")}} est un affichage informatif de repli pour les navigateurs ne prenant pas en charge cet élément ; les technologies d'assistance vocalisent cet affichage.</p>
 
@@ -671,7 +671,7 @@ beans<span class="punctuation token">.</span>oninput <span class="operator token
 
 <ul>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML">Mon premier formulaire HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML"><span>Comment structurer un formulaire HTML</span></a></li>
+ <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML">Comment structurer un formulaire HTML</a></li>
  <li>Les widgets natifs pour formulaire</li>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires">Envoi des données de formulaire</a></li>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire">Validation des données de formulaire</a></li>

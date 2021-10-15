@@ -15,7 +15,7 @@ translation_of: Learn/Server-side/Django/Admin_site
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">Nous avons créé le modèle de données pour le site web de la <a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">bibliothèque locale</a>. Dans ce chapitre nous allons utiliser le site d'administration pour introduire des données réelles pour les livres. Dans un premier temps, nous aborderons la manière d'enregistrer les données des objets sur le site d'administration et comment se connecter au site et créer des données. La fin de ce chapitre sera dédié à des éléments d'amélioration possible du site d'administration.</p>
+<p>Nous avons créé le modèle de données pour le site web de la <a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">bibliothèque locale</a>. Dans ce chapitre nous allons utiliser le site d'administration pour introduire des données réelles pour les livres. Dans un premier temps, nous aborderons la manière d'enregistrer les données des objets sur le site d'administration et comment se connecter au site et créer des données. La fin de ce chapitre sera dédié à des éléments d'amélioration possible du site d'administration.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -141,10 +141,10 @@ Cela devrait être de la forme : <code>admin.site.register(Language)</code> et n
    <li>Ajouter des options supplémentaires au menu Actions dans les vues de liste et choisir l'emplacement où ce menu est affiché dans le formulaire.</li>
   </ul>
  </li>
- <li><span class="tlid-translation translation" lang="fr"><span title="">Vues détaillées</span></span>
+ <li>Vues détaillées
   <ul>
-   <li><span class="tlid-translation translation" lang="fr"><span title="">Choisir les champs à afficher (ou à exclure), ainsi que leur ordre, leur groupement, leur caractère modifiable, le widget utilisé, leur orientation, etc.</span></span></li>
-   <li><span class="tlid-translation translation" lang="fr"><span title="">Ajouter des champs associés à un enregistrement pour permettre la modification en ligne (par exemple, ajoutez la possibilité d'ajouter et de modifier des enregistrements de livre lors de la création de leur auteur).</span></span></li>
+   <li>Choisir les champs à afficher (ou à exclure), ainsi que leur ordre, leur groupement, leur caractère modifiable, le widget utilisé, leur orientation, etc.</li>
+   <li>Ajouter des champs associés à un enregistrement pour permettre la modification en ligne (par exemple, ajoutez la possibilité d'ajouter et de modifier des enregistrements de livre lors de la création de leur auteur).</li>
   </ul>
  </li>
 </ul>
@@ -195,7 +195,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>La liste des auteurs (objet <code>Author</code>) est affiché dans l'application <em>LocalLibrary</em> à l'aide du nom généré par la méthode  <code>__str__()</code>. Ceci fonctionne bien, judqu'à ce que vous aurez de nombreux auteurs et éventuellement des doublons parmi ces auteurs. Pour bien les différencier, ou simplement parce que vous souhaitez avoir directement plus d'informations, vous allez utiliser la directive <a href="https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin">list_display</a> tpour ajouter d'autres champs de l'objet <code>Author</code>.</p>
 
-<p><span class="tlid-translation translation" lang="fr"><span title="">Modifiez votre classe <code>AuthorAdmin</code> comme décrit ci-dessous (vous pouvez copier et coller le code).</span> <span title="">Les noms de champs à afficher dans la liste sont déclarés dans un tuple dans l'ordre requis. Ils sont identiques à </span></span><span class="tlid-translation translation" lang="fr"><span title="">ceux spécifiés dans votre modèle d'objet <code>Author</code>.</span></span></p>
+<p>Modifiez votre classe <code>AuthorAdmin</code> comme décrit ci-dessous (vous pouvez copier et coller le code). Les noms de champs à afficher dans la liste sont déclarés dans un tuple dans l'ordre requis. Ils sont identiques à ceux spécifiés dans votre modèle d'objet <code>Author</code>.</p>
 
 <pre class="brush: python">class AuthorAdmin(admin.ModelAdmin):
     list_display = ('last_name', 'first_name', 'date_of_birth', 'date_of_death')
@@ -211,7 +211,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'display_genre')
 </pre>
 
-<p>Le champ <font face="Consolas, Liberation Mono, Courier, monospace">genre </font>représente une relation n à n (<code>ManyToManyField</code>)qui ne peut pas être prise en charge par la directive <code>list_display</code>. Le coût d'accès à la base de donnée peut être important et donc le cadriciel se protège de ce phénomène. A la place, nous devons définir une fonction(<code>display_genre</code>) qui permettra de traiter l'affichage des informations souhaitées pour le genre.</p>
+<p>Le champ genre représente une relation n à n (<code>ManyToManyField</code>)qui ne peut pas être prise en charge par la directive <code>list_display</code>. Le coût d'accès à la base de donnée peut être important et donc le cadriciel se protège de ce phénomène. A la place, nous devons définir une fonction(<code>display_genre</code>) qui permettra de traiter l'affichage des informations souhaitées pour le genre.</p>
 
 <div class="note">
 <p><strong>Note</strong>: C'est dans un but pédagogique que nous recherchons ici l'affichage du <code>genre</code> qui n'a peut-être pas nécessaire d'intérêt et peut représenter un coût d'accès. Nous montrons, ici, comment appler les fonctions dans vos modèles ce qui sera très utile pour la suite de vos applications  — par exemple pour ajouter un lien de suppression de vos enregistrements en liste.</p>

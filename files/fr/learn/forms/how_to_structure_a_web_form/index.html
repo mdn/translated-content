@@ -17,7 +17,7 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 
 <div>{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML", "Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs", "Web/Guide/HTML/Formulaires")}}</div>
 
-<p class="summary">Les bases vues, nous examinons maintenant plus en détail les éléments utilisés pour structurer et donner un sens aux différentes parties d'un formulaire.</p>
+<p>Les bases vues, nous examinons maintenant plus en détail les éléments utilisés pour structurer et donner un sens aux différentes parties d'un formulaire.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -56,23 +56,23 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 
 <p>Voici un petit exemple :</p>
 
-<pre class="brush:html; line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>form</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>fieldset</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>legend</span><span class="punctuation token">&gt;Taille du jus de fruits</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>legend</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>radio<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>size<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>size_1<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>small<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>size_1<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Petite<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>radio<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>size<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>size_2<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>medium<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>size_2<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Moyen<span class="tag token"><span class="tag token"><span class="punctuation token">ne&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>radio<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>size<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>size_3<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>large<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>size_3<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Grand<span class="tag token"><span class="tag token"><span class="punctuation token">e&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>fieldset</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>form</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush:html; line-numbers  language-html"><code class="language-html">&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Taille du jus de fruits&lt;/legend&gt;
+    &lt;p&gt;
+      &lt;input type="radio" name="size" id="size_1" value="small"&gt;
+      &lt;label for="size_1"&gt;Petite&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;input type="radio" name="size" id="size_2" value="medium"&gt;
+      &lt;label for="size_2"&gt;Moyenne&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;input type="radio" name="size" id="size_3" value="large"&gt;
+      &lt;label for="size_3"&gt;Grande&lt;/label&gt;
+    &lt;/p&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
 
 <div class="note">
 <p><strong>Note </strong>: Vous trouverez cet exemple dans <a href="https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html">fieldset-legend.html</a> (voir <a href="https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html">directement aussi</a>).</p>
@@ -88,7 +88,7 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 
 <p>Comme nous l'avons vu dans l'article précédent, l'élément {{HTMLElement("label")}} est le moyen naturel de définir une étiquette pour un widget de formulaire HTML. C'est l'élément le plus important si vous voulez créer des formulaires accessibles — lorsqu'ils sont correctement implémentés, les lecteurs d'écran énonceront l'étiquette d'un élément de formulaire selon toutes les instructions associées. Prenons cet exemple, que nous avons vu dans l'article précédent :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>name<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Nom :<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span> <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>name<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>user_name<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;label for="name"&gt;Nom :&lt;/label&gt; &lt;input type="text" id="name" name="user_name"&gt;</code></pre>
 
 <p>Avec un élément <code>&lt;label&gt;</code> correctement associé à <code>&lt;input&gt;</code> par l'intermédiaire respectivement des attributs <code>for</code> et <code>id</code> (l'attribut <code>for</code> de &lt;label&gt; référence l'attibut <code>id</code> du widget correspondant), un lecteur d'écran lira et dira quelque chose comme « Nom, texte indiqué ».</p>
 
@@ -96,9 +96,9 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 
 <p>Notez qu'un widget peut être incorporé dans son élément {{HTMLElement("label")}}, ainsi :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>name<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  Nom : <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>name<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>user_name<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;label for="name"&gt;
+  Nom : &lt;input type="text" id="name" name="user_name"&gt;
+&lt;/label&gt;</code></pre>
 
 <p>Toutefois, même dans ce cas, il est considéré de bonne pratique de définir l'attribut <code>for</code> parce que certaines techniques d'assistance ne font pas implicitement le lien entre les étiquettes et les widgets.</p>
 
@@ -108,16 +108,16 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 
 <p>Par exemple :</p>
 
-<pre class="brush:html; line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>form</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>taste_1<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>J'aime les cerises<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>checkbox<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>taste_1<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>taste_cherry<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>1<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>taste_2<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>J'aime les bananes<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>checkbox<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>taste_2<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>taste_banana<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>2<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>form</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush:html; line-numbers  language-html"><code class="language-html">&lt;form&gt;
+  &lt;p&gt;
+    &lt;label for="taste_1"&gt;J'aime les cerises&lt;/label&gt;
+    &lt;input type="checkbox" id="taste_1" name="taste_cherry" value="1"&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for="taste_2"&gt;J'aime les bananes&lt;/label&gt;
+    &lt;input type="checkbox" id="taste_2" name="taste_banana" value="2"&gt;
+  &lt;/p&gt;
+&lt;/form&gt;</code></pre>
 
 <div class="note">
 <p><strong>Note </strong>: Vous trouverez cet exemple dans <a href="https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html">checkbox-label.html</a> (à voir <a href="https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html">directement aussi</a>).</p>
@@ -129,29 +129,29 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 
 <p>Considérons cet exemple :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Les champs obligatoires sont suivis de <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>abbr</span> <span class="attr-name token">title</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>required<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>*<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>abbr</span><span class="punctuation token">&gt;</span></span>.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;p&gt;Les champs obligatoires sont suivis de &lt;abbr title="required"&gt;*&lt;/abbr&gt;.&lt;/p&gt;
 
-<span class="comment token">&lt;!-- Donc ceci : --&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>username<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Nom :<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>username<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>username<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>abbr</span> <span class="attr-name token">title</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>required<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>*<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>abbr</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
+&lt;!-- Donc ceci : --&gt;
+&lt;div&gt;
+  &lt;label for="username"&gt;Nom :&lt;/label&gt;
+  &lt;input type="text" name="username"&gt;
+  &lt;label for="username"&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/label&gt;
+&lt;/div&gt;
 
-<span class="comment token">&lt;!-- sera mieux programmé ainsi : --&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>username<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>span</span><span class="punctuation token">&gt;</span></span>Nom :<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>span</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>username<span class="punctuation token">"</span></span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>username<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>abbr</span> <span class="attr-name token">title</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>required<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>*<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>abbr</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
+&lt;!-- sera mieux programmé ainsi : --&gt;
+&lt;div&gt;
+  &lt;label for="username"&gt;
+    &lt;span&gt;Nom :&lt;/span&gt;
+    &lt;input id="username" type="text" name="username"&gt;
+    &lt;abbr title="required"&gt;*&lt;/abbr&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
 
-<span class="comment token">&lt;!-- mais ceci est probablement encore meilleur : --&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>username<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Nom :<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>abbr</span> <span class="attr-name token">title</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>required<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>*<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>abbr</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>username<span class="punctuation token">"</span></span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>username<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;!-- mais ceci est probablement encore meilleur : --&gt;
+&lt;div&gt;
+  &lt;label for="username"&gt;Nom :&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/label&gt;
+  &lt;input id="username" type="text" name="username"&gt;
+&lt;/div&gt;</code></pre>
 
 <p>Le paragraphe du haut définit la règle pour les éléments obligatoires. Ce doit être au début pour s'assurer que les techniques d'assistance telles que les lecteurs d'écran l'afficheront ou le vocaliseront à l'utilisateur avant qu'il ne trouve un élément obligatoire. Ainsi, ils sauront ce que signifie l'astérisque. Un lecteur d'écran mentionnera l'astérisque en disant « astérisque » ou « obligatoire », selon les réglages du lecteur d'écran — dans tous les cas, ce qui sera dit est clairement précisé dans le premier paragraphe.</p>
 
@@ -298,7 +298,7 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 
 <ul>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML">Mon premier formulaire HTML</a></li>
- <li><span>Comment structurer un formulaire HTML</span></li>
+ <li>Comment structurer un formulaire HTML</li>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs">Les widgets natifs pour formulaire</a></li>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires">Envoi des données de formulaire</a></li>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire">Validation des données de formulaire</a></li>

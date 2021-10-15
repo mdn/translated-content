@@ -9,7 +9,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_ge
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
 </div>
 
-<p class="summary">Présentons Maintenant Vue, le troisième de nos cadres. Dans cet article, nous allons examiner un peu de fond Vue, apprendre à l’installer et créer un nouveau projet, étudier la structure de haut niveau de l’ensemble du projet et un composant individuel, voir comment exécuter le projet localement, et le préparer à commencer à construire notre exemple.</p>
+<p>Présentons Maintenant Vue, le troisième de nos cadres. Dans cet article, nous allons examiner un peu de fond Vue, apprendre à l’installer et créer un nouveau projet, étudier la structure de haut niveau de l’ensemble du projet et un composant individuel, voir comment exécuter le projet localement, et le préparer à commencer à construire notre exemple.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -41,7 +41,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_ge
 
 <h2 id="Installation">Installation</h2>
 
-<p><font>Pour utiliser Vue dans un site existant, vous pouvez déposer l’un des éléments suivants sur une page. Cela vous permet de commencer à utiliser Vue sur les sites existants, c’est pourquoi Vue se targue d’être un cadre progressif. Il s’agit d’une excellente option lors de la migration d’un projet existant à l’aide d’une bibliothèque comme JQuery à Vue. Avec cette méthode, vous pouvez utiliser un grand nombre des fonctionnalités de base de Vue, telles que les attributs, les composants personnalisés et la gestion des données.</font><code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code></p>
+<p>Pour utiliser Vue dans un site existant, vous pouvez déposer l’un des éléments suivants sur une page. Cela vous permet de commencer à utiliser Vue sur les sites existants, c’est pourquoi Vue se targue d’être un cadre progressif. Il s’agit d’une excellente option lors de la migration d’un projet existant à l’aide d’une bibliothèque comme JQuery à Vue. Avec cette méthode, vous pouvez utiliser un grand nombre des fonctionnalités de base de Vue, telles que les attributs, les composants personnalisés et la gestion des données.<code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code></p>
 
 <ul>
  <li>
@@ -75,7 +75,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_ge
 
 <pre class="brush: bash notranslate">yarn global add @vue/cli</pre>
 
-<p><font>Once installed, to initialize a new project you can then open a terminal in the directory you want to create the project in, and run . The CLI will then give you a list of project configurations you can use. There are a few preset ones, and you can make your own. These options let you configure things like TypeScript, linting, vue-router, testing, and more.</font><code>vue create &lt;project-name&gt;</code></p>
+<p>Once installed, to initialize a new project you can then open a terminal in the directory you want to create the project in, and run . The CLI will then give you a list of project configurations you can use. There are a few preset ones, and you can make your own. These options let you configure things like TypeScript, linting, vue-router, testing, and more.<code>vue create &lt;project-name&gt;</code></p>
 
 <p>We’ll look at using this below.</p>
 
@@ -84,18 +84,18 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_ge
 <p>To explore various features of Vue, we will be building up a sample todo list app. We'll begin by using the Vue CLI to create a new app framework to build our app into. Follow the steps below:</p>
 
 <ol>
- <li><font>In terminal, to where you'd like to create your sample app, then run .</font><code>cd</code><code>vue create moz-todo-vue</code></li>
- <li><font>Use the arrow keys and to select the "Manually select features" option.</font><kbd>Enter</kbd></li>
- <li><font>The first menu you’ll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press to proceed.</font><kbd>Enter</kbd></li>
- <li><font>Next you’ll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit again. This will help us catch common errors, but not be overly opinionated.</font><kbd>Enter</kbd></li>
- <li><font>Next you are asked to configure what kind of automated linting we want. Select "Lint on save". This will check for errors when we save a file inside the project. Hit to continue.</font><kbd>Enter</kbd></li>
- <li><font>Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's file. Select "In dedicated config files" and push .</font><code>package.json</code><kbd>Enter</kbd></li>
- <li><font>Finally, you are asked if you want to save this as a preset for future options. This is entirely up to you. If you like these settings over the existing presets and want to use them again, type , otherwise type .</font><kbd>y</kbd><kbd>n</kbd></li>
+ <li>In terminal, to where you'd like to create your sample app, then run .<code>cd</code><code>vue create moz-todo-vue</code></li>
+ <li>Use the arrow keys and to select the "Manually select features" option.<kbd>Enter</kbd></li>
+ <li>The first menu you’ll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press to proceed.<kbd>Enter</kbd></li>
+ <li>Next you’ll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit again. This will help us catch common errors, but not be overly opinionated.<kbd>Enter</kbd></li>
+ <li>Next you are asked to configure what kind of automated linting we want. Select "Lint on save". This will check for errors when we save a file inside the project. Hit to continue.<kbd>Enter</kbd></li>
+ <li>Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's file. Select "In dedicated config files" and push .<code>package.json</code><kbd>Enter</kbd></li>
+ <li>Finally, you are asked if you want to save this as a preset for future options. This is entirely up to you. If you like these settings over the existing presets and want to use them again, type , otherwise type .<kbd>y</kbd><kbd>n</kbd></li>
 </ol>
 
 <p>The CLI will now begin scaffolding out your project, and installing all of your dependencies.</p>
 
-<p><font>If you've never run the Vue CLI before, you'll get one more question — you'll be asked to choose a package manager. You can use the arrow keys to select which one you prefer. The Vue CLI will default to this package manager from now on. If you need to use a different package manager after this, you can pass in a flag , when you run .  So if you wanted to create the project with npm and you'd previously chosen yarn, you’d run .</font><code>--packageManager=&lt;package-manager&gt;</code><code>vue create</code><code>moz-todo-vue</code><code>vue create moz-todo-vue --packageManager=npm</code></p>
+<p>If you've never run the Vue CLI before, you'll get one more question — you'll be asked to choose a package manager. You can use the arrow keys to select which one you prefer. The Vue CLI will default to this package manager from now on. If you need to use a different package manager after this, you can pass in a flag , when you run .  So if you wanted to create the project with npm and you'd previously chosen yarn, you’d run .<code>--packageManager=&lt;package-manager&gt;</code><code>vue create</code><code>moz-todo-vue</code><code>vue create moz-todo-vue --packageManager=npm</code></p>
 
 <div class="blockIndicator note">
 <p><strong>Note</strong>: We've not gone over all of the options here, but you can <a href="https://cli.vuejs.org">find more information on the CLI</a> in the Vue docs.</p>
@@ -106,54 +106,54 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_ge
 <p>If everything went successfully, the CLI should have created a series of files and directories for your project. The most significant ones are as follows:</p>
 
 <ul>
- <li><code>.eslintrc.js</code><font>: This is a config file for <a href="https://eslint.org/">eslint</a>. You can use this to manage your linting rules.</font></li>
- <li><code>babel.config.js</code><font>: This is the config file for <a href="https://babeljs.io/">Babel</a>, which transforms modern JavaScript features being used in development code into older syntax that is more cross-browser compatible in production code. You can register additional babel plugins in this file.</font></li>
- <li><code>.browserslistrc</code><font>: This is a config for <a href="https://github.com/browserslist/browserslist">Browserslist</a>. You can use this to control which browsers your tooling optimizes for.</font></li>
- <li><code>public</code><font>: This directory contains static assets that are published, but not processed by <a href="https://webpack.js.org/">Webpack</a> during build (with one exception; gets some processing).</font><code>index.html</code>
+ <li><code>.eslintrc.js</code>: This is a config file for <a href="https://eslint.org/">eslint</a>. You can use this to manage your linting rules.</li>
+ <li><code>babel.config.js</code>: This is the config file for <a href="https://babeljs.io/">Babel</a>, which transforms modern JavaScript features being used in development code into older syntax that is more cross-browser compatible in production code. You can register additional babel plugins in this file.</li>
+ <li><code>.browserslistrc</code>: This is a config for <a href="https://github.com/browserslist/browserslist">Browserslist</a>. You can use this to control which browsers your tooling optimizes for.</li>
+ <li><code>public</code>: This directory contains static assets that are published, but not processed by <a href="https://webpack.js.org/">Webpack</a> during build (with one exception; gets some processing).<code>index.html</code>
   <ul>
-   <li><code>favicon.ico</code><font>: This is the favicon for your app. Currently, it's the Vue logo.</font></li>
-   <li><code>index.html</code><font>: This is the template for your app. Your Vue app is run from this HTML page, and you can use lodash template syntax to interpolate values into it.</font>
+   <li><code>favicon.ico</code>: This is the favicon for your app. Currently, it's the Vue logo.</li>
+   <li><code>index.html</code>: This is the template for your app. Your Vue app is run from this HTML page, and you can use lodash template syntax to interpolate values into it.
     <div class="note"><strong>Note</strong>: this is not the template for managing the layout of your application — this template is for managing static HTML that sits outside of your Vue app. Editing this file typically only occurs in advanced use cases.</div>
    </li>
   </ul>
  </li>
- <li><code>src</code><font>: This directory contains the core of your Vue app.</font>
+ <li><code>src</code>: This directory contains the core of your Vue app.
   <ul>
-   <li><code>main.js</code><font>: this is the entry point to your application. Currently, this file initializes your Vue application and signifies which HTML element in the file your app should be attached to. This file is often where you register global components or additional Vue libraries.</font><code>index.html</code></li>
-   <li><code>App.vue</code><font>: this is the top-level component in your Vue app. See below for more explanation of Vue components.</font></li>
-   <li><code>components</code><font>: this directory is where you keep your components. Currently it just has one example component.</font></li>
-   <li><code>assets</code><font>: This directory is for storing static assets like CSS and images. Because these files are in the source directory, they can be processed by Webpack. This means you can use pre-processors like <a href="https://sass-lang.com/">Sass/SCSS</a> or <a href="https://stylus-lang.com/">Stylus</a>.</font></li>
+   <li><code>main.js</code>: this is the entry point to your application. Currently, this file initializes your Vue application and signifies which HTML element in the file your app should be attached to. This file is often where you register global components or additional Vue libraries.<code>index.html</code></li>
+   <li><code>App.vue</code>: this is the top-level component in your Vue app. See below for more explanation of Vue components.</li>
+   <li><code>components</code>: this directory is where you keep your components. Currently it just has one example component.</li>
+   <li><code>assets</code>: This directory is for storing static assets like CSS and images. Because these files are in the source directory, they can be processed by Webpack. This means you can use pre-processors like <a href="https://sass-lang.com/">Sass/SCSS</a> or <a href="https://stylus-lang.com/">Stylus</a>.</li>
   </ul>
  </li>
 </ul>
 
 <div class="blockIndicator note">
-<p><font><strong>Note</strong>: Depending on the options you select when creating a new project, there might be other directories present (for example, if you choose a router, you will also have a directory).</font><code>views</code></p>
+<p><strong>Note</strong>: Depending on the options you select when creating a new project, there might be other directories present (for example, if you choose a router, you will also have a directory).<code>views</code></p>
 </div>
 
 <h2 id=".vue_files_single_file_components">.vue files (single file components)</h2>
 
 <p>Like in many front-end frameworks, components are a central part of building apps in Vue. These components let you break a large application into discrete building blocks that can be created and managed separately, and transfer data between each other as required. These small blocks can help you reason about and test your code.</p>
 
-<p><font>While some frameworks encourage you to separate your template, logic, and styling code into separate files, Vue takes the opposite approach. Using <a href="https://vuejs.org/v2/guide/single-file-components.html">Single File Components</a>, Vue lets you group your templates, corresponding script, and CSS all together in a single file ending in . These files are processed by a JS build tool (such as Webpack), which means you can take advantage of build-time tooling in your project. This allows you to use tools like Babel, TypeScript, SCSS and more to create more sophisticated components.</font><code>.vue</code></p>
+<p>While some frameworks encourage you to separate your template, logic, and styling code into separate files, Vue takes the opposite approach. Using <a href="https://vuejs.org/v2/guide/single-file-components.html">Single File Components</a>, Vue lets you group your templates, corresponding script, and CSS all together in a single file ending in . These files are processed by a JS build tool (such as Webpack), which means you can take advantage of build-time tooling in your project. This allows you to use tools like Babel, TypeScript, SCSS and more to create more sophisticated components.<code>.vue</code></p>
 
-<p><font>As a bonus, projects created with the Vue CLI are configured to use files with Webpack out of the box. In fact, if you look inside the folder in the project we created with the CLI, you'll see your first file: .</font><code>.vue</code><code>src</code><code>.vue</code><code>App.vue</code></p>
+<p>As a bonus, projects created with the Vue CLI are configured to use files with Webpack out of the box. In fact, if you look inside the folder in the project we created with the CLI, you'll see your first file: .<code>.vue</code><code>src</code><code>.vue</code><code>App.vue</code></p>
 
 <p>Let's explore this now.</p>
 
 <h3 id="App.vue">App.vue</h3>
 
-<p><font>Open your file — you’ll see that it has three parts: , , and , which contain the component’s template, scripting, and styling information. All Single File Components share this same basic structure.</font><code>App.vue</code><code>&lt;template&gt;</code><code>&lt;script&gt;</code><code>&lt;style&gt;</code></p>
+<p>Open your file — you’ll see that it has three parts: , , and , which contain the component’s template, scripting, and styling information. All Single File Components share this same basic structure.<code>App.vue</code><code>&lt;template&gt;</code><code>&lt;script&gt;</code><code>&lt;style&gt;</code></p>
 
-<p><code>&lt;template&gt;</code><font> contains all the markup structure and display logic of your component. Your template can contain any valid HTML, as well as some Vue-specific syntax that we'll cover later.</font></p>
+<p><code>&lt;template&gt;</code> contains all the markup structure and display logic of your component. Your template can contain any valid HTML, as well as some Vue-specific syntax that we'll cover later.</p>
 
 <div class="blockIndicator note">
-<p><font><strong>Note</strong>: By setting the attribute on the tag, you can use Pug template syntax instead of standard HTML — . We'll stick to standard HTML through this tutorial, but it is worth knowing that this is possible.</font><code>lang</code><code>&lt;template&gt;</code><code>&lt;template lang="pug"&gt;</code></p>
+<p><strong>Note</strong>: By setting the attribute on the tag, you can use Pug template syntax instead of standard HTML — . We'll stick to standard HTML through this tutorial, but it is worth knowing that this is possible.<code>lang</code><code>&lt;template&gt;</code><code>&lt;template lang="pug"&gt;</code></p>
 </div>
 
-<p><code>&lt;script&gt;</code><font> contains all of the non-display logic of your component. Most importantly, your tag needs to have a default exported JS object. This object is where you locally register components, define component inputs (props), handle local state, define methods, and more. Your build step will process this object and transform it (with your template) into a Vue component with a function.</font><code>&lt;script&gt;</code><code>render()</code></p>
+<p><code>&lt;script&gt;</code> contains all of the non-display logic of your component. Most importantly, your tag needs to have a default exported JS object. This object is where you locally register components, define component inputs (props), handle local state, define methods, and more. Your build step will process this object and transform it (with your template) into a Vue component with a function.<code>&lt;script&gt;</code><code>render()</code></p>
 
-<p><font>In the case of , our default export sets the name of the component to and registers the component by adding it into the property. When you register a component in this way, you're registering it locally. Locally registered components can only be used inside the components that register them, so you need to import and register them in every component file that uses them. This can be useful for bundle splitting/tree shaking since not every page in your app necessarily needs every component.</font><code>App.vue</code><code>app</code><code>HelloWorld</code><code>components</code></p>
+<p>In the case of , our default export sets the name of the component to and registers the component by adding it into the property. When you register a component in this way, you're registering it locally. Locally registered components can only be used inside the components that register them, so you need to import and register them in every component file that uses them. This can be useful for bundle splitting/tree shaking since not every page in your app necessarily needs every component.<code>App.vue</code><code>app</code><code>HelloWorld</code><code>components</code></p>
 
 <pre class="brush: js notranslate">import HelloWorld from './components/HelloWorld.vue';
 
@@ -166,20 +166,20 @@ export default {
 };</pre>
 
 <div class="blockIndicator note">
-<p><font><strong>Note</strong>: If you want to use <a href="https://www.typescriptlang.org/">TypeScript</a> syntax, you need to set the attribute on the tag to signify to the compiler that you're using TypeScript — .</font><code>lang</code><code>&lt;script&gt;</code><code>&lt;script lang="ts"&gt;</code></p>
+<p><strong>Note</strong>: If you want to use <a href="https://www.typescriptlang.org/">TypeScript</a> syntax, you need to set the attribute on the tag to signify to the compiler that you're using TypeScript — .<code>lang</code><code>&lt;script&gt;</code><code>&lt;script lang="ts"&gt;</code></p>
 </div>
 
-<p><code>&lt;style&gt;</code><font> is where you write your CSS for the component. If you add a attribute — — Vue will scope the styles to the contents of your SFC. This works similar to CSS-in-JS solutions, but allows you to just write plain CSS.</font><code>scoped</code><code>&lt;style scoped&gt;</code></p>
+<p><code>&lt;style&gt;</code> is where you write your CSS for the component. If you add a attribute — — Vue will scope the styles to the contents of your SFC. This works similar to CSS-in-JS solutions, but allows you to just write plain CSS.<code>scoped</code><code>&lt;style scoped&gt;</code></p>
 
 <div class="blockIndicator note">
-<p><font><strong>Note</strong>: If you select a CSS pre-processor when creating the project via the CLI, you can add a attribute to the tag so that the contents can be processed by Webpack at build time. For example, will allow you to use SCSS syntax in your styling information.</font><code>lang</code><code>&lt;style&gt;</code><code>&lt;style lang="scss"&gt;</code></p>
+<p><strong>Note</strong>: If you select a CSS pre-processor when creating the project via the CLI, you can add a attribute to the tag so that the contents can be processed by Webpack at build time. For example, will allow you to use SCSS syntax in your styling information.<code>lang</code><code>&lt;style&gt;</code><code>&lt;style lang="scss"&gt;</code></p>
 </div>
 
 <h2 id="Running_the_app_locally">Running the app locally</h2>
 
-<p><font>The Vue CLI comes with a built-in development server. This allows you to run your app locally so you can test it easily without needing to configure a server yourself. The CLI adds a command to the project’s file as an npm script, so you can easily run it.</font><code>serve</code><code>package.json</code></p>
+<p>The Vue CLI comes with a built-in development server. This allows you to run your app locally so you can test it easily without needing to configure a server yourself. The CLI adds a command to the project’s file as an npm script, so you can easily run it.<code>serve</code><code>package.json</code></p>
 
-<p><font>In your terminal, try running (or if you prefer yarn). Your terminal should output something like the following:</font><code>npm run serve</code><code>yarn serve</code></p>
+<p>In your terminal, try running (or if you prefer yarn). Your terminal should output something like the following:<code>npm run serve</code><code>yarn serve</code></p>
 
 <pre class="notranslate">INFO  Starting development server...
 98% after emitting CopyPlugin
@@ -193,23 +193,23 @@ export default {
   Note that the development build is not optimized.
   To create a production build, run npm run build.</pre>
 
-<p><font>If you navigate to the “local” address in a new browser tab (this should be something like as stated above, but may vary based on your setup), you should see your app. Right now, it should contain a welcome message, a link to the Vue documentation, links to the plugins you added when you initialized the app with your CLI, and some other useful links to the Vue community and ecosystem.</font><code>http://localhost:8080</code></p>
+<p>If you navigate to the “local” address in a new browser tab (this should be something like as stated above, but may vary based on your setup), you should see your app. Right now, it should contain a welcome message, a link to the Vue documentation, links to the plugins you added when you initialized the app with your CLI, and some other useful links to the Vue community and ecosystem.<code>http://localhost:8080</code></p>
 
 <p><img alt="default vue app render, with vue logo, welcome message, and some documentation links" src="https://mdn.mozillademos.org/files/17240/vue-default-app.png" style="border-style: solid; border-width: 1px; height: 779px; width: 1600px;"></p>
 
 <h2 id="Making_a_couple_of_changes">Making a couple of changes</h2>
 
-<p><font>Let's make our first change to the app — we’ll delete the Vue logo. Open the file, and delete the element from the template section:</font><code>App.vue</code><code><a href="/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code></p>
+<p>Let's make our first change to the app — we’ll delete the Vue logo. Open the file, and delete the element from the template section:<code>App.vue</code><code><a href="/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code></p>
 
-<pre class="brush: html notranslate"><span class="author-d-iz88z86z86za0dz67zz78zz78zz74zz68zjz80zz71z9iz90z8h7gz67ziz76zcz77zz80zz71zncfz69zz69ziaz82zz71zz72zhz77zz122zz90z14mcyd">&lt;img alt="Vue logo" src="./assets/logo.png"&gt;</span></pre>
+<pre class="brush: html notranslate">&lt;img alt="Vue logo" src="./assets/logo.png"&gt;</pre>
 
-<p><font>If your server is still running, you should see the logo removed from the rendered site almost instantly. Let’s also remove the component from our template.</font><code>HelloWorld</code></p>
+<p>If your server is still running, you should see the logo removed from the rendered site almost instantly. Let’s also remove the component from our template.<code>HelloWorld</code></p>
 
 <p>First of all delete this line:</p>
 
 <pre class="brush: html notranslate">&lt;HelloWorld msg="Welcome to Your Vue.js App"/&gt;</pre>
 
-<p><font>If you save your file now, the rendered app will throw an error because we’ve registered the component but are not using it. We also need to remove the lines from inside the element that import and register the component:</font><code>App.vue</code><code>&lt;script&gt;</code></p>
+<p>If you save your file now, the rendered app will throw an error because we’ve registered the component but are not using it. We also need to remove the lines from inside the element that import and register the component:<code>App.vue</code><code>&lt;script&gt;</code></p>
 
 <p>Delete these lines now:</p>
 
@@ -219,9 +219,9 @@ export default {
   HelloWorld
 }</pre>
 
-<p><font>Your rendered app should no longer show an error, just a blank page, as we currently have no visible content inside .</font><code>&lt;template&gt;</code></p>
+<p>Your rendered app should no longer show an error, just a blank page, as we currently have no visible content inside .<code>&lt;template&gt;</code></p>
 
-<p><font>Let’s add a new inside . Since we’re going to be creating a todo list app below, let's set our header text to "To-Do List". Add it like so:</font><code>&lt;h1&gt;</code><code>&lt;div id="app"&gt;</code></p>
+<p>Let’s add a new inside . Since we’re going to be creating a todo list app below, let's set our header text to "To-Do List". Add it like so:<code>&lt;h1&gt;</code><code>&lt;div id="app"&gt;</code></p>
 
 <pre class="brush: html notranslate">&lt;template&gt;
   &lt;div id="app"&gt;
@@ -229,7 +229,7 @@ export default {
   &lt;/div&gt;
 &lt;/template&gt;</pre>
 
-<p><code>App.vue</code><font> will now show our heading, as you'd expect.</font></p>
+<p><code>App.vue</code> will now show our heading, as you'd expect.</p>
 
 <h2 id="Summary">Summary</h2>
 
@@ -246,7 +246,7 @@ export default {
 <ul>
  <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
  <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li><font>React</font>
+ <li>React
   <ul>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
@@ -257,7 +257,7 @@ export default {
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
   </ul>
  </li>
- <li><font>Ember</font>
+ <li>Ember
   <ul>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
@@ -267,7 +267,7 @@ export default {
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
   </ul>
  </li>
- <li><font>Vue</font>
+ <li>Vue
   <ul>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
@@ -280,7 +280,7 @@ export default {
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
   </ul>
  </li>
- <li><font>Svelte</font>
+ <li>Svelte
   <ul>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>

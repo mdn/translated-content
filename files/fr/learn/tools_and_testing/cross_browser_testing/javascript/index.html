@@ -17,7 +17,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}</div>
 
-<p class="summary">Nous allons maintenant aborder les problèmes Javascript en navigateur croisé et comment les résoudre. Cela comprend des informations sur l'utilisation  des outils de dev des navigateurs pour localiser et fixer les problèmes, l'utilisation des Polyfills et de librairies pour contourner les problèmes, utiliser les fonctionnalités modernes de Javascript sur des vieux navigateurs, et plus encore.</p>
+<p>Nous allons maintenant aborder les problèmes Javascript en navigateur croisé et comment les résoudre. Cela comprend des informations sur l'utilisation  des outils de dev des navigateurs pour localiser et fixer les problèmes, l'utilisation des Polyfills et de librairies pour contourner les problèmes, utiliser les fonctionnalités modernes de Javascript sur des vieux navigateurs, et plus encore.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -229,7 +229,7 @@ showHeroes(superHeroes);</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note </strong>: Le <a href="https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/" rel="bookmark" title="Read 'Writing Fast, Memory-Efficient JavaScript'"><span class="headline">Writing Fast, Memory-Efficient JavaScript</span></a> de Addy Osmani contient beaucoup de détails et de astuces impeccables pour améliorer les performances en JavaScript.</p>
+<p><strong>Note </strong>: Le <a href="https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/" rel="bookmark" title="Read 'Writing Fast, Memory-Efficient JavaScript'">Writing Fast, Memory-Efficient JavaScript</a> de Addy Osmani contient beaucoup de détails et de astuces impeccables pour améliorer les performances en JavaScript.</p>
 </div>
 
 <h2 id="Les_problèmes_JavaScript_en_navigateur_croisé">Les problèmes JavaScript en navigateur croisé</h2>
@@ -279,13 +279,13 @@ showHeroes(superHeroes);</pre>
 
 <p>L'idée derrière une fonctionnalité de détection est que vous pouvez exécuter un test pour déterminer si une fonctionnalité est supportée dans le navigateur courant, et ensuite exécuter conditionnellement un code pour fournir une expérience acceptable sur chaque navigateur qui supporte et ne supporte pas la fonctionnalité. A titre d'exemple rapide, l'<a href="https://developer.mozilla.org/fr/docs/Using_geolocation">API Geolocalisation</a> (qui présente des données de localisation pour l'appareil sur lequel le navigateur est en train d'être exécuté) a un point d'entrée principal pour son utilisation — une propriété <code>geolocation</code> disponible dans l'objet global <a href="https://developer.mozilla.org/fr/docs/Web/API/Navigator">Navigator</a>.  Par conséquent, vous pouvez détecter si le navigateur supporte la géolocalisation ou non en utilisant quelque chose comme suit :</p>
 
-<pre class="language-js"><span class="keyword token">if</span><span class="punctuation token">(</span><span class="string token">"geolocation"</span> <span class="keyword token">in</span> navigator<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  navigator<span class="punctuation token">.</span>geolocation<span class="punctuation token">.</span><span class="function token">getCurrentPosition</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>position<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="language-js">if("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition(function(position) {
     // show the location on a map, perhaps using the Google Maps API
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;
-}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
+  });
+} else {
   // Give the user a choice of static maps instead perhaps
-<span class="punctuation token">}</span></pre>
+}</pre>
 
 <p>Vous pouvez également écrire un test de ce type pour une fonctionnalité CSS, par exemple en testant l'existence de <em><a href="https://developer.mozilla.org/fr/docs/Web/API/HTMLElement/style">element.style.property</a></em> (par ex. <code>paragraph.style.transform !== undefined</code>). Mais autant pour CSS que JavaScript, il est probablement préférable d'utiliser une librairie de fonction de détection établie plutôt que d'écrire la votre tout le temps. Modernizr est la norme standard pour les tests de fonction de détection.</p>
 
@@ -367,34 +367,34 @@ fetch('flowers.jpg').then(function(response) {
 
 <p>Faire cela nécessite un peu de code supplémentaire dans votre JavaScript. Vous avez besoin d'un test de détection de caractéristiques qui détecte si le navigateur supporte la fonctionnalité que vous essayez d'utiliser :</p>
 
-<pre class="brush: js"><code class="language-js"><span class="hljs-keyword">if</span> (browserSupportsAllFeatures()) {
+<pre class="brush: js"><code class="language-js">if (browserSupportsAllFeatures()) {
   main();
-} <span class="hljs-keyword">else</span> {
-  loadScript(<span class="hljs-string">'polyfills.js'</span>, main);
+} else {
+  loadScript('polyfills.js', main);
 }
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(err) </span>{
-  <span class="hljs-comment">// actual app code goes in here</span>
+function main(err) {
+  // actual app code goes in here
 }</code></pre>
 
 <p>En premier temps on exécute une condition qui vérifie si la fonction <code>browserSupportAllFeatures()</code> retourne true. Si oui, on exécute la fonction <code>main()</code>, qui contiendra tout le code de notre app. <code>browserSupportAllFeatures()</code> ressemble à ça :</p>
 
-<pre class="brush: js"><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">browserSupportsAllFeatures</span>() </span>{
-  <span class="hljs-keyword">return</span> <span class="hljs-built_in">window</span>.Promise &amp;&amp; <span class="hljs-built_in">window</span>.fetch;
+<pre class="brush: js"><code class="language-js">function browserSupportsAllFeatures() {
+  return window.Promise &amp;&amp; window.fetch;
 }</code></pre>
 
 <p>Ici on vérifie si l'objet <code><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> et la fonction <code><a href="https://developer.mozilla.org/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code> existent dans le navigateur. Si les deux existent, la fonction retourne true. Si la fonction retourne <code>false</code>, alors on exécute le code à l'intérieur de la deuxième partie de la condition — elle exécute une fonction appelée loadScript(), qui charge les polyfills dans la page, puis exécute <code>main()</code> après que le chargement soit terminé. <code>loadScript()</code> ressemble à ça :</p>
 
-<pre class="brush: js"><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadScript</span>(<span class="hljs-params">src, done</span>) </span>{
-  <span class="hljs-keyword">var</span> js = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'script'</span>);
+<pre class="brush: js"><code class="language-js">function loadScript(src, done) {
+  var js = document.createElement('script');
   js.src = src;
-  js.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>() </span>{
+  js.onload = function() {
     done();
   };
-  js.onerror = <span class="hljs-function"><span class="hljs-keyword">function</span>() </span>{
-    done(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">'Failed to load script '</span> + src));
+  js.onerror = function() {
+    done(new Error('Failed to load script ' + src));
   };
-  <span class="hljs-built_in">document</span>.head.appendChild(js);
+  document.head.appendChild(js);
 }</code>
 </pre>
 

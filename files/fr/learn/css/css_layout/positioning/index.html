@@ -22,7 +22,7 @@ original_slug: Apprendre/CSS/CSS_layout/Le_positionnement
 
 <div>{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Apprendre/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}</div>
 
-<p class="summary">Le positionnement permet de sortir les éléments du cours normal de composition du document, et faire qu'ils se comportent différemment, par exemple de se placer sur un autre, ou de toujours rester à la même place dans le cadre d'affichage (viewport) du navigateur. Cet article explique les diverses valeurs de {{cssxref("position")}}, et comment les utiliser.</p>
+<p>Le positionnement permet de sortir les éléments du cours normal de composition du document, et faire qu'ils se comportent différemment, par exemple de se placer sur un autre, ou de toujours rester à la même place dans le cadre d'affichage (viewport) du navigateur. Cet article explique les diverses valeurs de {{cssxref("position")}}, et comment les utiliser.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -116,7 +116,7 @@ span {
 
 <p>{{ EmbedLiveSample('example_1', '100%', 500) }}</p>
 
-<p>Cool, n'est-ce-pas ? Oui, mais ce n'était probablement pas ce à quoi vous vous attendiez. Pourquoi le déplacement s'est‑il effectué vers le bas et à droite si nous avons défini <code>top</code> (haut) et <code>left</code> (gauche) ? Même si cela <span class="st">peut paraître illogique, c'est la façon dont fonctionne le positionnement relatif</span>. Songez à une force invisible poussant le côté spécifié de l'élément à positionner, le déplaçant ainsi dans la direction opposé. Par exemple, si nous spécifions <code>top: 30px;</code>, une force pousse le haut de la boîte, entraînant son déplacement vers le bas de 30px.</p>
+<p>Cool, n'est-ce-pas ? Oui, mais ce n'était probablement pas ce à quoi vous vous attendiez. Pourquoi le déplacement s'est‑il effectué vers le bas et à droite si nous avons défini <code>top</code> (haut) et <code>left</code> (gauche) ? Même si cela peut paraître illogique, c'est la façon dont fonctionne le positionnement relatif. Songez à une force invisible poussant le côté spécifié de l'élément à positionner, le déplaçant ainsi dans la direction opposé. Par exemple, si nous spécifions <code>top: 30px;</code>, une force pousse le haut de la boîte, entraînant son déplacement vers le bas de 30px.</p>
 
 <div class="note">
 <p><strong>Remarque</strong>: à ce stade de l'article, vous pouvez retrouver un exemple ici <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html">2_relative-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html">voir le code source</a>).</p>
@@ -160,9 +160,9 @@ span {
 
 <p>{{ EmbedLiveSample('example_2', '100%', 420) }}</p>
 
-<p>Tout d'abord, notez que l'emplacement où l'élément à positionner aurait dû se trouver dans le cours normal de la mise en page du document ne s'y trouve plus. Le premier élément et le troisième sont l'un à côté de l'autre comme si le second n'existait plus ! Dans un sens, c'est le cas. Un élément positionné de manière absolue ne fait plus partie du cours normal de la mise en page. <span class="st">Il se trouve maintenant sur un plan qui lui est propre, séparé de tout le reste.</span> C'est très utile : cela signifie que nous pouvons créer une fonctionnalité d'interface graphique isolée qui n'interfère pas avec la position des autres éléments sur la page. Par exemple, des boîtes d'informations contextuelles (popup), des menus de contrôle, des panneaux déroulants (rollover panels), des fonctionnalités d'interface utilisateur que l'on peut glisser et déposer n'importe où sur la page, et bien plus encore.</p>
+<p>Tout d'abord, notez que l'emplacement où l'élément à positionner aurait dû se trouver dans le cours normal de la mise en page du document ne s'y trouve plus. Le premier élément et le troisième sont l'un à côté de l'autre comme si le second n'existait plus ! Dans un sens, c'est le cas. Un élément positionné de manière absolue ne fait plus partie du cours normal de la mise en page. Il se trouve maintenant sur un plan qui lui est propre, séparé de tout le reste. C'est très utile : cela signifie que nous pouvons créer une fonctionnalité d'interface graphique isolée qui n'interfère pas avec la position des autres éléments sur la page. Par exemple, des boîtes d'informations contextuelles (popup), des menus de contrôle, des panneaux déroulants (rollover panels), des fonctionnalités d'interface utilisateur que l'on peut glisser et déposer n'importe où sur la page, et bien plus encore.</p>
 
-<p>Ensuite, notez que la position de l'élément a changé. {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} se comportent différemment avec le positionnement absolu. Au lieu <span class="st">de positionner l'élément en fonction de sa position relative dans la mise en page du document, ils définissent la distance à laquelle l'élément doit se situer par rapport aux côtés de l'élément contenant.</span> Dans ce cas, nous indiquons que l'élément à positionner de manière absolue doit se placer à 30px du haut et à 30px de la gauche de « l'élément conteneur ». (Dans ce cas, le bloc conteneur initial. Voir la section ci-dessous pour plus d'information)</p>
+<p>Ensuite, notez que la position de l'élément a changé. {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} se comportent différemment avec le positionnement absolu. Au lieu de positionner l'élément en fonction de sa position relative dans la mise en page du document, ils définissent la distance à laquelle l'élément doit se situer par rapport aux côtés de l'élément contenant. Dans ce cas, nous indiquons que l'élément à positionner de manière absolue doit se placer à 30px du haut et à 30px de la gauche de « l'élément conteneur ». (Dans ce cas, le bloc conteneur initial. Voir la section ci-dessous pour plus d'information)</p>
 
 <div class="note">
 <p><strong>Note</strong> : vous pouvez utiliser {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} pour redimensionner les éléments selon vos besoins. Définissez <code>top: 0; bottom: 0; left: 0; right: 0;</code> et <code>margin: 0;</code> sur les éléments à positionner et voyez ce qu'il se produit ! Réinitialisez le tout ensuite...</p>
@@ -225,7 +225,7 @@ span {
 
 <p>{{ EmbedLiveSample('example_3','100%', 420) }}</p>
 
-<p><span class="st">À présent, l</span>'élément a été positionné par rapport à l'élément {{htmlelement("body")}}.</p>
+<p>À présent, l'élément a été positionné par rapport à l'élément {{htmlelement("body")}}.</p>
 
 <div class="note">
 <p><strong>Note </strong>: à ce stade, vous pouvez voir cet exemple ici <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html">4_positioning-context.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/4_positioning-context.html">voir le code source</a>).</p>

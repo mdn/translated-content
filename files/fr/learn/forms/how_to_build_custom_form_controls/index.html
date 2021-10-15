@@ -14,7 +14,7 @@ original_slug: >-
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Validation_donnees_formulaire", "Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript", "Web/Guide/HTML/Formulaires")}}</div>
 
-<p class="summary">Dans de nombreux cas les <a href="/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs">widgets de formulaires HTML disponibles</a> ne suffisent pas. Si vous voulez composer certains widgets dans un <a href="/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms">style avancé</a> tels que l'élément {{HTMLElement("select")}} ou si vous voulez leur donner des comportements personnalisés, vous n'avez pas d'autre choix que de créer vos propres widgets.</p>
+<p>Dans de nombreux cas les <a href="/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs">widgets de formulaires HTML disponibles</a> ne suffisent pas. Si vous voulez composer certains widgets dans un <a href="/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms">style avancé</a> tels que l'élément {{HTMLElement("select")}} ou si vous voulez leur donner des comportements personnalisés, vous n'avez pas d'autre choix que de créer vos propres widgets.</p>
 
 <p>Dans cet article, nous verrons comment construire un tel widget. Pour cela, nous allons travailler avec un exemple : reconstruire l'élément {{HTMLElement("select")}}.</p>
 
@@ -92,7 +92,7 @@ original_slug: >-
 
 <p>Autre exemple amusant : que se passera-t-il si l'utilisateur presse les touches <kbd>↑</kbd> ou <kbd>↓</kbd> alors que le widget est à l'état ouvert ? Ici, c'est un peu plus délicat. Si vous considérez que l'état actif et l'état ouvert sont totalement différents, la réponse est encore une fois « rien ne se produira » parce que nous n'avons pas défini d'interactions clavier pour l'état ouvert. D'autre part, si vous considérez que l'état actif et l'état ouvert coïncident, la valeur peut changer mais l'option ne sera certainement pas mise en valeur en conséquence, encore une fois parce que nous n'avons pas défini d'interactions clavier sur les options lorsque le widget est dans son état ouvert (nous avons seulement défini ce qui doit se passer lorsque le widget est ouvert, mais rien après).</p>
 
-<p>Dans notre exemple, les spécifications manquantes sont évidentes et nous les traiterons, mais cela peut devenir un problème réel sur de nouveaux widgets exotiques, pour lesquels personne n'a la moindre idée de ce qu'est le bon comportement. Il est donc toujours bon de passer du temps à l'étape conception, car si vous définissez pauvrement le comportement, ou si vous oubliez de le définir, il sera très difficile de le redéfinir une fois les utilisateurs habitués. Si vous avez des doutes, demandez l'avis des autres, et si vous avez le budget pour cela, n'hésitez pas à <a href="https://fr.wikipedia.org/wiki/Test_utilisateur">faire des tests utilisateur</a>. Ce processus est appelé UX Design <span class="CLPzrc Y0NH2b">(<strong>U</strong>ser e<strong>X</strong>perience)</span>. Si vous voulez en savoir plus sur ce sujet, vous devriez consulter les ressources utiles suivantes :</p>
+<p>Dans notre exemple, les spécifications manquantes sont évidentes et nous les traiterons, mais cela peut devenir un problème réel sur de nouveaux widgets exotiques, pour lesquels personne n'a la moindre idée de ce qu'est le bon comportement. Il est donc toujours bon de passer du temps à l'étape conception, car si vous définissez pauvrement le comportement, ou si vous oubliez de le définir, il sera très difficile de le redéfinir une fois les utilisateurs habitués. Si vous avez des doutes, demandez l'avis des autres, et si vous avez le budget pour cela, n'hésitez pas à <a href="https://fr.wikipedia.org/wiki/Test_utilisateur">faire des tests utilisateur</a>. Ce processus est appelé UX Design (<strong>U</strong>ser e<strong>X</strong>perience). Si vous voulez en savoir plus sur ce sujet, vous devriez consulter les ressources utiles suivantes :</p>
 
 <ul>
  <li><a href="http://www.uxmatters.com/" rel="external">UXMatters.com</a></li>
@@ -825,7 +825,7 @@ window.addEventListener('load', function () {
 
 <ul>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML">Mon premier formulaire HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML"><span>Comment structurer un formulaire HTML</span></a></li>
+ <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML">Comment structurer un formulaire HTML</a></li>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs">Les widgets natifs pour formulaire</a></li>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires">Envoi des données de formulaire</a></li>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire">Validation des données de formulaire</a></li>

@@ -16,7 +16,7 @@ original_slug: Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte
 
 <div>{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}</div>
 
-<p class="summary">Dans cet article, nous allons commencer le voyage vers la maîtrise des styles du texte avec {{glossary("CSS")}}. Nous passerons en revue les principes de base de mise en forme du texte, y compris la graisse, la famille et le style de police, les codes d'abréviation, l'alignement du texte et autres effets, ainsi que l'espacement des lignes et des lettres.</p>
+<p>Dans cet article, nous allons commencer le voyage vers la maîtrise des styles du texte avec {{glossary("CSS")}}. Nous passerons en revue les principes de base de mise en forme du texte, y compris la graisse, la famille et le style de police, les codes d'abréviation, l'alignement du texte et autres effets, ainsi que l'espacement des lignes et des lettres.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -161,7 +161,7 @@ occasions, comme maintenant.&lt;/p&gt;</pre>
 </table>
 
 <div class="note">
-<p><strong>Note </strong>: <span id="result_box" lang="fr"><span>Le site <a href="https://www.cssfontstack.com/">cssfontstack.com</a> met à votre disposition, entre autres ressources, une liste de polices web sûres disponibles sur les systèmes d'exploitation Windows et Mac OS. Elle peut faciliter votre prise de décision quant à ce que vous considérerez comme sûr pour votre usage.</span></span></p>
+<p><strong>Note </strong>: Le site <a href="https://www.cssfontstack.com/">cssfontstack.com</a> met à votre disposition, entre autres ressources, une liste de polices web sûres disponibles sur les systèmes d'exploitation Windows et Mac OS. Elle peut faciliter votre prise de décision quant à ce que vous considérerez comme sûr pour votre usage.</p>
 </div>
 
 <div class="note">
@@ -186,27 +186,27 @@ occasions, comme maintenant.&lt;/p&gt;</pre>
   <tr>
    <td><code>serif</code></td>
    <td>Les polices qui ont des sérifs (fioritures et autres petits détails que vous voyez en extrémité de trait dans certaines polices)</td>
-   <td><span style="font-family: serif;">Mon grand éléphant rouge</span></td>
+   <td>Mon grand éléphant rouge</td>
   </tr>
   <tr>
    <td><code>sans-serif</code></td>
    <td>Les polices qui n'ont pas d'empattements</td>
-   <td><span style="font-family: sans-serif;">Mon grand éléphant rouge</span></td>
+   <td>Mon grand éléphant rouge</td>
   </tr>
   <tr>
    <td><code>monospace</code></td>
    <td>Les polices dans lesquelles chaque caractère a la même largeur, généralement utilisées dans les listes de codes.</td>
-   <td><span style="font-family: monospace;">Mon grand éléphant rouge</span></td>
+   <td>Mon grand éléphant rouge</td>
   </tr>
   <tr>
    <td><code>cursive</code></td>
    <td>Les polices destinées à émuler l'écriture, avec des traits fluides et connectés.</td>
-   <td><span style="font-family: cursive;">Mon grand éléphant rouge</span></td>
+   <td>Mon grand éléphant rouge</td>
   </tr>
   <tr>
    <td><code>fantasy</code></td>
    <td>Les polices destinées à être décoratives.</td>
-   <td><span style="font-family: fantasy;">Mon grand éléphant rouge</span></td>
+   <td>Mon grand éléphant rouge</td>
   </tr>
  </tbody>
 </table>
@@ -219,7 +219,7 @@ occasions, comme maintenant.&lt;/p&gt;</pre>
   font-family: "Trebuchet MS", Verdana, sans-serif;
 }</pre>
 
-<p>Dans ce cas, le navigateur débute la lecture de la liste et cherche à voir si cette police est disponible sur la machine. <span>Si c'est le cas, il applique cette police aux éléments sélectionnés.</span> <span>Sinon, il passe à la police suivante et ainsi de suite.</span></p>
+<p>Dans ce cas, le navigateur débute la lecture de la liste et cherche à voir si cette police est disponible sur la machine. Si c'est le cas, il applique cette police aux éléments sélectionnés. Sinon, il passe à la police suivante et ainsi de suite.</p>
 
 <p>Indiquer un nom de police générique approprié en fin de liste est une bonne idée : si aucune des polices listées n'est disponible, le navigateur peut au‑moins fournir quelque chose de convenable. Soulignons ce point : les paragraphes seront rendus avec la police serif par défaut du navigateur si aucune autre option n'est disponible — généralement Time New Roman — mais ce ne sera pas un bon substitut à une police sans-serif !</p>
 
@@ -261,7 +261,7 @@ occasions, comme maintenant.&lt;/p&gt;</pre>
 <ul>
  <li><code>px</code> (pixels) : le nombre de pixels souhaités pour la hauteur du texte. C'est une unité absolue — il en résulte une même valeur finale calculée de la police sur la page dans à peu près n'importe quelle situation.</li>
  <li><code>em</code> : 1 em est égal à la taille de la police définie sur l'élément parent de l'élément courant que nous composons (plus précisément, la largeur d'un « M » majuscule de l'élément parent). Cette valeur peut devenir difficile à déterminer si vous avez beaucoup d'imbrications avec diverses tailles de police, mais cela reste faisable, comme vous le verrez ci-dessous. Pourquoi s'embêter ? C'est assez naturel, une fois que vous y êtes habitué ; vous pouvez utiliser <code>em</code> pour tout dimensionner, pas seulement du texte. Vous pouvez avoir un site web entier dimensionné avec des <code>em</code>, la maintenance en sera facilitée.</li>
- <li><code>rem</code> : il fonctionne comme <code>em</code>, excepté que un <code>rem</code> est égal à la taille de la police sur l'élément racine du document (c'est-à-dire {{htmlelement("html")}}) et non le parent direct). Le calcul des tailles de police en est facilité, mais malheureusement les <code>rem</code> ne sont pas pris en charge dans Internet Explorer 8 et avant. Si vous devez prendre en charge des navigateurs plus anciens dans votre projet, vous devrez vous en tenir aux <code>em</code> ou aux <code>px</code>, soit utiliser une <span class="st">prothèse d'émulation</span> ({{glossary ("polyfill")}}) telle que <a href="https://github.com/chuckcarpenter/REM-unit-polyfill">REM-unit-polyfill</a>.</li>
+ <li><code>rem</code> : il fonctionne comme <code>em</code>, excepté que un <code>rem</code> est égal à la taille de la police sur l'élément racine du document (c'est-à-dire {{htmlelement("html")}}) et non le parent direct). Le calcul des tailles de police en est facilité, mais malheureusement les <code>rem</code> ne sont pas pris en charge dans Internet Explorer 8 et avant. Si vous devez prendre en charge des navigateurs plus anciens dans votre projet, vous devrez vous en tenir aux <code>em</code> ou aux <code>px</code>, soit utiliser une prothèse d'émulation ({{glossary ("polyfill")}}) telle que <a href="https://github.com/chuckcarpenter/REM-unit-polyfill">REM-unit-polyfill</a>.</li>
 </ul>
 
 <p>La propriété <code>font-size</code> d'un élément est héritée de son parent. Tout commence par l'élément racine de l'ensemble du document — {{htmlelement("html")}} — dont la propriété <code>font‑size</code> est normée à 16 px sur les navigateurs. Tout paragraphe (ou tout autre élément dont la taille n'a pas été définie différemment par le navigateur) à l'intérieur de l'élément racine aura une taille finale de 16 px. D'autres éléments peuvent avoir des tailles par défaut différentes, par exemple un élément {{htmlelement ("h1")}} a une taille de 2 <code>em</code> définie par défaut, donc aura une taille finale de 32 px.</p>
@@ -333,9 +333,9 @@ p {
  <li>{{cssxref("text-transform")}} : Vous permet de définir les transformations de votre police. Les valeurs comprennent :
   <ul>
    <li><code>none</code> : aucune transformation.</li>
-   <li><code>uppercase</code> : met <span style="text-transform: uppercase;">tout le texte en majuscules</span>.</li>
+   <li><code>uppercase</code> : met tout le texte en majuscules.</li>
    <li><code>lowercase</code> : met tout le texte en minuscules.</li>
-   <li><code>capitalize</code> : transforme tous les mots en mettant leur <span style="text-transform: capitalize;">première lettre en majuscule</span>s.</li>
+   <li><code>capitalize</code> : transforme tous les mots en mettant leur première lettre en majuscules.</li>
    <li><code>full-width</code> : force l'écriture de tous les glyphes dans un carré de largeur fixe, similaire à une police à espacement fixe, permettant leur alignement, par ex. caractères latins avec des glyphes de langue asiatique (comme le chinois, le japonais, le coréen.)</li>
   </ul>
  </li>
@@ -343,10 +343,10 @@ p {
   <ul>
    <li><code>none</code>: désactive les décorations du texte déjà présentes.</li>
    <li><code>underline</code>: <u>souligne le texte</u>.</li>
-   <li><code>overline</code>: <span style="text-decoration: overline;">trace une ligne au-dessus du texte</span>.</li>
+   <li><code>overline</code>: trace une ligne au-dessus du texte.</li>
    <li><code>line-through</code>: <s style="text-decoration: line-through;">barre le texte</s>.</li>
   </ul>
-  Vous devez noter que {{cssxref("text-decoration")}} peut accepter plusieurs valeurs à la fois, si vous voulez en ajouter plusieurs simultanément, par exemple <span style="text-decoration: underline overline;"><code>text-decoration: underline overline</code></span>. Notez aussi que {{cssxref("text-decoration")}} est la propriété raccourcie pour {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} et {{cssxref("text-decoration-color")}}. Vous pouvez utiliser des combinaisons de ces valeurs de propriété pour créer des effets intéressants, par exemple <span style="text-decoration: line-through red wavy;"><code>text-decoration: line-through red wavy</code>.</span></li>
+  Vous devez noter que {{cssxref("text-decoration")}} peut accepter plusieurs valeurs à la fois, si vous voulez en ajouter plusieurs simultanément, par exemple <code>text-decoration: underline overline</code>. Notez aussi que {{cssxref("text-decoration")}} est la propriété raccourcie pour {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} et {{cssxref("text-decoration-color")}}. Vous pouvez utiliser des combinaisons de ces valeurs de propriété pour créer des effets intéressants, par exemple <code>text-decoration: line-through red wavy</code>.</li>
 </ul>
 
 <p>Regardons l'ajout de quelques-unes de ces propriétés à notre exemple.</p>
@@ -465,17 +465,17 @@ p {
 
 <h2 id="Mise_en_page_du_texte"><small lang="en">Mise en page du texte</small></h2>
 
-<p><span id="result_box" lang="fr"><span>Après les propriétés de base des polices, examinons maintenant celles permettant de modifier la disposition des textes.</span></span></p>
+<p>Après les propriétés de base des polices, examinons maintenant celles permettant de modifier la disposition des textes.</p>
 
 <h3 id="Alignement_du_texte">Alignement du texte</h3>
 
-<p>La propriété {{cssxref("text-align")}} s'utilise pour contrôler la disposition du texte dans la zone de contenu. Les valeurs acceptées sont les suivantes. Elles <span id="result_box" lang="fr"><span>fonctionnent à peu près de la même manière que dans un traitement de texte</span></span> :</p>
+<p>La propriété {{cssxref("text-align")}} s'utilise pour contrôler la disposition du texte dans la zone de contenu. Les valeurs acceptées sont les suivantes. Elles fonctionnent à peu près de la même manière que dans un traitement de texte :</p>
 
 <ul>
  <li><code>left</code>: le texte est aligné à gauche.</li>
  <li><code>right</code>: le texte est aligné à droite.</li>
  <li><code>center</code>: le texte est centré.</li>
- <li><code>justify</code>: <span id="result_box" lang="fr"><span>étale le texte, en faisant varier les espaces entre les mots afin de donner la même largeur à toutes les lignes du texte.</span> <span>Vous devez l'utiliser avec discernement </span></span> — <span lang="fr"><span> il peut sembler parfait, surtout lorsqu'il est appliqué à un paragraphe avec beaucoup de longs mots.</span> <span>Si vous voulez l'utiliser, vous devriez aussi penser à utiliser quelque chose d'autre, comme {{cssxref ("hyphens")}}, pour couper certains des mots les plus longs entre les lignes.</span></span></li>
+ <li><code>justify</code>: étale le texte, en faisant varier les espaces entre les mots afin de donner la même largeur à toutes les lignes du texte. Vous devez l'utiliser avec discernement  —  il peut sembler parfait, surtout lorsqu'il est appliqué à un paragraphe avec beaucoup de longs mots. Si vous voulez l'utiliser, vous devriez aussi penser à utiliser quelque chose d'autre, comme {{cssxref ("hyphens")}}, pour couper certains des mots les plus longs entre les lignes.</li>
 </ul>
 
 <p>Si nous appliquons <code>text-align: center;</code> à l'élément {{htmlelement("h1")}} de notre exemple, nous aurons :</p>

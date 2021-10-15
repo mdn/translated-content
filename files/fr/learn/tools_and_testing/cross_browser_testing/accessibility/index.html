@@ -20,7 +20,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibilité
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}</div>
 
-<p class="summary">Tournons maintenant notre attention vers l'accessibilité, les informations sur les problèmes communs, comment faire des tests simples, et comment faire pour utiliser les outils d'audit/automatisation pour trouver les problèmes d'accessibilités.</p>
+<p>Tournons maintenant notre attention vers l'accessibilité, les informations sur les problèmes communs, comment faire des tests simples, et comment faire pour utiliser les outils d'audit/automatisation pour trouver les problèmes d'accessibilités.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -241,7 +241,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>D'un autre côté, vous ne devriez pas utiliser {{cssxref("visibility")}}<code>:hidden</code> ou {{cssxref("display")}}<code>:none</code>, parce qu'il cache le contenu aux lecteurs d'écran. A moins que, bien entendu, il y est une bonne raison qui justifie que ce contenu soit caché aux lecteurs d'écran.</p>
 
 <div class="note">
-<p><strong>Note </strong>: <span class="subtitle"><a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> vous décrira beaucoup de détails utilesà propos de ce sujet. </span></p>
+<p><strong>Note </strong>: <a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> vous décrira beaucoup de détails utilesà propos de ce sujet. </p>
 </div>
 
 <h3 id="JavaScript">JavaScript</h3>
@@ -267,7 +267,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>L'un des domaines de problématique principal pour l'accessibilité c'est les applis complexes qui nécessitent des contrôles de formulaires compliqués (comme les sélecteurs de date) et le contenu dynamique qui se met souvent à jour et de façon incrémentale.</p>
 
-<p>Les contrôles de formulaire compliqués non natifs sont problématiques parce qu'ils ont tendance à nécessiter beaucoup de <code>&lt;div&gt;</code>s imbriquées, et le navigateur ne sait pas quoi faire par défaut avec elles. Si vous les inventer vous-même, vous devez vous assurer qu'ils sont accessibles par le clavier ; si vous utilisez des structures externes, revoyez en profondeur les options disponibles pour voir à quel point elles sont accessibles avant de vous plonger dedans. <a href="http://getbootstrap.com/">Bootstrap</a> à l'air d'être assez bon pour l'accessibilité, par exemple, bien que <span class="l-d-i l-pa2 t-bg-white"><a href="https://www.sitepoint.com/making-bootstrap-accessible/">Making Bootstrap a Little More Accessible</a> de Rhiana Heath aborde certain de ses problèmes (principalement en rapport avec le contraste des couleurs), et examine certaines solutions.</span></p>
+<p>Les contrôles de formulaire compliqués non natifs sont problématiques parce qu'ils ont tendance à nécessiter beaucoup de <code>&lt;div&gt;</code>s imbriquées, et le navigateur ne sait pas quoi faire par défaut avec elles. Si vous les inventer vous-même, vous devez vous assurer qu'ils sont accessibles par le clavier ; si vous utilisez des structures externes, revoyez en profondeur les options disponibles pour voir à quel point elles sont accessibles avant de vous plonger dedans. <a href="http://getbootstrap.com/">Bootstrap</a> à l'air d'être assez bon pour l'accessibilité, par exemple, bien que <a href="https://www.sitepoint.com/making-bootstrap-accessible/">Making Bootstrap a Little More Accessible</a> de Rhiana Heath aborde certain de ses problèmes (principalement en rapport avec le contraste des couleurs), et examine certaines solutions.</p>
 
 <p>Le contenu dynamique régulièrement mis à jour peut-être un problème parce que les utilisateurs de lecteur d'écran peuvent le manquer, spécialement si les mises à jour sont inattendues. Si vous avez une appli en single-page avec un contenu principal dans un panneau qui est régulièrement mis à jour en utilisant <a href="https://developer.mozilla.org/fr/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> ou <a href="https://developer.mozilla.org/fr/docs/Web/API/Fetch_API">Fetch</a>, un utilisateur utilisant un lecteur d'écran peut rater ces mises à jour.</p>
 

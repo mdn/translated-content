@@ -22,7 +22,7 @@ original_slug: Apprendre/JavaScript/Building_blocks/Looping_code
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}</div>
 
-<p class="summary">Les langages de programmation sont très utiles pour effectuer des tâches répétitives, allant de calculs basiques à à peu près n'importe quelle autre situation où vous avez un certain nombre d'actions similaires à répéter. Ici, nous allons étudier les structures de boucle disponible dans JavaScript qui répondent à un tel besoin.</p>
+<p>Les langages de programmation sont très utiles pour effectuer des tâches répétitives, allant de calculs basiques à à peu près n'importe quelle autre situation où vous avez un certain nombre d'actions similaires à répéter. Ici, nous allons étudier les structures de boucle disponible dans JavaScript qui répondent à un tel besoin.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -591,70 +591,70 @@ function updateCode() {
 
 reset.addEventListener('click', function() {
   textarea.value = code;<code class="language-js">
-  userEntry <span class="operator token">=</span> textarea<span class="punctuation token">.</span>value<span class="punctuation token">;</span>
-  solutionEntry <span class="operator token">=</span> jsSolution<span class="punctuation token">;</span>
-  solution<span class="punctuation token">.</span>value <span class="operator token">=</span> <span class="string token">'Show solution'</span><span class="punctuation token">;</span></code>
+  userEntry = textarea.value;
+  solutionEntry = jsSolution;
+  solution.value = 'Show solution';</code>
   updateCode();
 });
 
 solution.addEventListener('click', function() {<code class="language-js">
-  <span class="keyword token">if</span><span class="punctuation token">(</span>solution<span class="punctuation token">.</span>value <span class="operator token">===</span> <span class="string token">'Show solution'</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    textarea<span class="punctuation token">.</span>value <span class="operator token">=</span> solutionEntry<span class="punctuation token">;</span>
-    solution<span class="punctuation token">.</span>value <span class="operator token">=</span> <span class="string token">'Hide solution'</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-    textarea<span class="punctuation token">.</span>value <span class="operator token">=</span> userEntry<span class="punctuation token">;</span>
-    solution<span class="punctuation token">.</span>value <span class="operator token">=</span> <span class="string token">'Show solution'</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span></code>
+  if(solution.value === 'Show solution') {
+    textarea.value = solutionEntry;
+    solution.value = 'Hide solution';
+  } else {
+    textarea.value = userEntry;
+    solution.value = 'Show solution';
+  }</code>
   updateCode();
 });
 <code class="language-js">
-<span class="keyword token">let</span> jsSolution <span class="operator token">=</span> <span class="string token">'let output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nlet i = 10;\n\nwhile(i &gt;= 0) {\n let para = document.createElement(\'p\');\n if(i === 10) {\n para.textContent = \'Countdown \' + i;\n } else if(i === 0) {\n  para.textContent = \'Blast off!\';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}'</span><span class="punctuation token">;</span>
-<span class="keyword token">let</span> solutionEntry <span class="operator token">=</span> jsSolution<span class="punctuation token">;</span>
+let jsSolution = 'let output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nlet i = 10;\n\nwhile(i &gt;= 0) {\n let para = document.createElement(\'p\');\n if(i === 10) {\n para.textContent = \'Countdown \' + i;\n } else if(i === 0) {\n  para.textContent = \'Blast off!\';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}';
+let solutionEntry = jsSolution;
 </code>
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 <code class="language-js">
-<span class="comment token">// empêcher la pression de la touche de tabulation</span> de cibler
-<span class="comment token">// un </span>autre élément <span class="comment token">et insère une tabulation dans le textarea</span>
+// empêcher la pression de la touche de tabulation de cibler
+// un autre élément et insère une tabulation dans le textarea
 
-textarea<span class="punctuation token">.</span><span class="function function-variable token">onkeydown</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">e</span><span class="punctuation token">)</span><span class="punctuation token">{</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>e<span class="punctuation token">.</span>keyCode <span class="operator token">===</span> <span class="number token">9</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    e<span class="punctuation token">.</span><span class="function token">preventDefault</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="function token">insertAtCaret</span><span class="punctuation token">(</span><span class="string token">'\t'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
+textarea.onkeydown = function(e){
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret('\t');
+  }
 
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>e<span class="punctuation token">.</span>keyCode <span class="operator token">===</span> <span class="number token">27</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    textarea<span class="punctuation token">.</span><span class="function token">blur</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span>
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
+};
 
-<span class="keyword token">function</span> <span class="function token">insertAtCaret</span><span class="punctuation token">(</span><span class="parameter token">text</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">let</span> scrollPos <span class="operator token">=</span> textarea<span class="punctuation token">.</span>scrollTop<span class="punctuation token">;</span>
-  <span class="keyword token">let</span> caretPos <span class="operator token">=</span> textarea<span class="punctuation token">.</span>selectionStart<span class="punctuation token">;</span>
+function insertAtCaret(text) {
+  let scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
 
-  <span class="keyword token">let</span> front <span class="operator token">=</span> <span class="punctuation token">(</span>textarea<span class="punctuation token">.</span>value<span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">substring</span><span class="punctuation token">(</span><span class="number token">0</span><span class="punctuation token">,</span> caretPos<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">let</span> back <span class="operator token">=</span> <span class="punctuation token">(</span>textarea<span class="punctuation token">.</span>value<span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">substring</span><span class="punctuation token">(</span>textarea<span class="punctuation token">.</span>selectionEnd<span class="punctuation token">,</span> textarea<span class="punctuation token">.</span>value<span class="punctuation token">.</span>length<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  textarea<span class="punctuation token">.</span>value <span class="operator token">=</span> front <span class="operator token">+</span> text <span class="operator token">+</span> back<span class="punctuation token">;</span>
-  caretPos <span class="operator token">=</span> caretPos <span class="operator token">+</span> text<span class="punctuation token">.</span>length<span class="punctuation token">;</span>
-  textarea<span class="punctuation token">.</span>selectionStart <span class="operator token">=</span> caretPos<span class="punctuation token">;</span>
-  textarea<span class="punctuation token">.</span>selectionEnd <span class="operator token">=</span> caretPos<span class="punctuation token">;</span>
-  textarea<span class="punctuation token">.</span><span class="function token">focus</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  textarea<span class="punctuation token">.</span>scrollTop <span class="operator token">=</span> scrollPos<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+  let front = (textarea.value).substring(0, caretPos);
+  let back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  textarea.value = front + text + back;
+  caretPos = caretPos + text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
+}
 
-<span class="comment token">// Update the saved userCode every time the user updates the text area code</span>
+// Update the saved userCode every time the user updates the text area code
 
-textarea<span class="punctuation token">.</span><span class="function function-variable token">onkeyup</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">{</span>
-  <span class="comment token">// We only want to save the state when the user code is being shown,</span>
-  <span class="comment token">// not the solution, so that solution is not saved over the user code</span>
-  <span class="keyword token">if</span><span class="punctuation token">(</span>solution<span class="punctuation token">.</span>value <span class="operator token">===</span> <span class="string token">'Show solution'</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    userEntry <span class="operator token">=</span> textarea<span class="punctuation token">.</span>value<span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-    solutionEntry <span class="operator token">=</span> textarea<span class="punctuation token">.</span>value<span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
+textarea.onkeyup = function(){
+  // We only want to save the state when the user code is being shown,
+  // not the solution, so that solution is not saved over the user code
+  if(solution.value === 'Show solution') {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
 
-  <span class="function token">updateCode</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code>
+  updateCode();
+};</code>
 </pre>
 </div>
 
@@ -691,15 +691,15 @@ textarea<span class="punctuation token">.</span><span class="function function-v
 <div class="hidden">
 <h6 id="Active_learning_2">Active learning 2</h6>
 
-<pre class="brush: html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h2</span><span class="punctuation token">&gt;</span></span>Live output<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h2</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>output<span class="punctuation token">"</span></span><span class="language-css style-attr token"><span class="attr-name token"> <span class="attr-name token">style</span></span><span class="punctuation token">="</span><span class="attr-value token"><span class="property token">height</span><span class="punctuation token">:</span> <span class="number token">100</span><span class="token unit">px</span><span class="punctuation token">;</span><span class="property token">overflow</span><span class="punctuation token">:</span> auto<span class="punctuation token">;</span></span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>admitted<span class="punctuation token">"</span></span><span class="punctuation token">&gt;Admettre </span></span>: <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>refused<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Refuser : <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html"><code class="language-html">&lt;h2&gt;Live output&lt;/h2&gt;
+&lt;div class="output" style="height: 100px;overflow: auto;"&gt;
+  &lt;p class="admitted"&gt;Admettre : &lt;/p&gt;
+  &lt;p class="refused"&gt;Refuser : &lt;/p&gt;
+&lt;/div&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h2</span><span class="punctuation token">&gt;</span></span>Editable code<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h2</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>a11y-label<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span></code>Appuyer sur Échap pour décibler le coder<code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>textarea</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>code<span class="punctuation token">"</span></span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>playable-code<span class="punctuation token">"</span></span><span class="language-css style-attr token"><span class="attr-name token"> <span class="attr-name token">style</span></span><span class="punctuation token">="</span><span class="attr-value token"><span class="property token">height</span><span class="punctuation token">:</span> <span class="number token">400</span><span class="token unit">px</span><span class="punctuation token">;</span><span class="property token">width</span><span class="punctuation token">:</span> <span class="number token">95</span><span class="token unit">%</span></span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
+&lt;h2&gt;Editable code&lt;/h2&gt;
+&lt;p class="a11y-label"&gt;</code>Appuyer sur Échap pour décibler le coder<code class="language-html">&lt;/p&gt;
+&lt;textarea id="code" class="playable-code" style="height: 400px;width: 95%"&gt;
 const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
 
 const admitted = document.querySelector('.admitted');
@@ -719,102 +719,102 @@ refused.textContent = 'Refuse: '
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css line-numbers language-css"><code class="language-css"><span class="selector token">html</span> <span class="punctuation token">{</span>
-  <span class="property token">font-family</span><span class="punctuation token">:</span> sans-serif<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: css line-numbers language-css"><code class="language-css">html {
+  font-family: sans-serif;
+}
 
-<span class="selector token">h2</span> <span class="punctuation token">{</span>
-  <span class="property token">font-size</span><span class="punctuation token">:</span> <span class="number token">16</span><span class="token unit">px</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+h2 {
+  font-size: 16px;
+}
 
-<span class="selector token"><span class="class token">.a11y-label</span></span> <span class="punctuation token">{</span>
-  <span class="property token">margin</span><span class="punctuation token">:</span> <span class="number token">0</span><span class="punctuation token">;</span>
-  <span class="property token">text-align</span><span class="punctuation token">:</span> right<span class="punctuation token">;</span>
-  <span class="property token">font-size</span><span class="punctuation token">:</span> <span class="number token">0.7</span><span class="token unit">rem</span><span class="punctuation token">;</span>
-  <span class="property token">width</span><span class="punctuation token">:</span> <span class="number token">98</span><span class="token unit">%</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+.a11y-label {
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
+}
 
-<span class="selector token">body</span> <span class="punctuation token">{</span>
-  <span class="property token">margin</span><span class="punctuation token">:</span> <span class="number token">10</span><span class="token unit">px</span><span class="punctuation token">;</span>
-  <span class="property token">background</span><span class="punctuation token">:</span> <span class="hexcode token">#f5f9fa</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+body {
+  margin: 10px;
+  background: #f5f9fa;
+}</code></pre>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> textarea <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'code'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">const</span> reset <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'reset'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">const</span> solution <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'solution'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">let</span> code <span class="operator token">=</span> textarea<span class="punctuation token">.</span>value<span class="punctuation token">;</span>
-<span class="keyword token">let</span> userEntry <span class="operator token">=</span> textarea<span class="punctuation token">.</span>value<span class="punctuation token">;</span>
+<pre class="brush: js line-numbers language-js"><code class="language-js">const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+let code = textarea.value;
+let userEntry = textarea.value;
 
-<span class="keyword token">function</span> <span class="function token">updateCode</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="function token">eval</span><span class="punctuation token">(</span>textarea<span class="punctuation token">.</span>value<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+function updateCode() {
+  eval(textarea.value);
+}
 
-reset<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'click'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  textarea<span class="punctuation token">.</span>value <span class="operator token">=</span> code<span class="punctuation token">;</span>
-  userEntry <span class="operator token">=</span> textarea<span class="punctuation token">.</span>value<span class="punctuation token">;</span>
-  solutionEntry <span class="operator token">=</span> jsSolution<span class="punctuation token">;</span>
-  solution<span class="punctuation token">.</span>value <span class="operator token">=</span> <span class="string token">'Show solution'</span><span class="punctuation token">;</span>
-  <span class="function token">updateCode</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+reset.addEventListener('click', function() {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = jsSolution;
+  solution.value = 'Show solution';
+  updateCode();
+});
 
-solution<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'click'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span><span class="punctuation token">(</span>solution<span class="punctuation token">.</span>value <span class="operator token">===</span> <span class="string token">'Show solution'</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    textarea<span class="punctuation token">.</span>value <span class="operator token">=</span> solutionEntry<span class="punctuation token">;</span>
-    solution<span class="punctuation token">.</span>value <span class="operator token">=</span> <span class="string token">'Hide solution'</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-    textarea<span class="punctuation token">.</span>value <span class="operator token">=</span> userEntry<span class="punctuation token">;</span>
-    solution<span class="punctuation token">.</span>value <span class="operator token">=</span> <span class="string token">'Show solution'</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-  <span class="function token">updateCode</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+solution.addEventListener('click', function() {
+  if(solution.value === 'Show solution') {
+    textarea.value = solutionEntry;
+    solution.value = 'Hide solution';
+  } else {
+    textarea.value = userEntry;
+    solution.value = 'Show solution';
+  }
+  updateCode();
+});
 
-<span class="keyword token">let</span> jsSolution <span class="operator token">=</span> <span class="string token">'const people = [\'Chris\', \'Anne\', \'Colin\', \'Terri\', \'Phil\', \'Lola\', \'Sam\', \'Kay\', \'Bruce\'];\n\nconst admitted = document.querySelector(\'.admitted\');\nconst refused = document.querySelector(\'.refused\');\n\nadmitted.textContent = \'Admit: \';\nrefused.textContent = \'Refuse: \'\nlet i = 0;\n\ndo {\n if(people[i] === \'Phil\' || people[i] === \'Lola\') {\n refused.textContent += people[i] + \', \';\n } else {\n admitted.textContent += people[i] + \', \';\n }\n i++;\n} while(i &lt; people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + \'.\';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + \'.\';'</span><span class="punctuation token">;</span>
-<span class="keyword token">let</span> solutionEntry <span class="operator token">=</span> jsSolution<span class="punctuation token">;</span>
+let jsSolution = 'const people = [\'Chris\', \'Anne\', \'Colin\', \'Terri\', \'Phil\', \'Lola\', \'Sam\', \'Kay\', \'Bruce\'];\n\nconst admitted = document.querySelector(\'.admitted\');\nconst refused = document.querySelector(\'.refused\');\n\nadmitted.textContent = \'Admit: \';\nrefused.textContent = \'Refuse: \'\nlet i = 0;\n\ndo {\n if(people[i] === \'Phil\' || people[i] === \'Lola\') {\n refused.textContent += people[i] + \', \';\n } else {\n admitted.textContent += people[i] + \', \';\n }\n i++;\n} while(i &lt; people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + \'.\';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + \'.\';';
+let solutionEntry = jsSolution;
 
-textarea<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'input'</span><span class="punctuation token">,</span> updateCode<span class="punctuation token">)</span><span class="punctuation token">;</span>
-window<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'load'</span><span class="punctuation token">,</span> updateCode<span class="punctuation token">)</span><span class="punctuation token">;</span>
+textarea.addEventListener('input', updateCode);
+window.addEventListener('load', updateCode);
 
-<span class="comment token">// stop tab key tabbing out of textarea and</span>
-<span class="comment token">// make it write a tab at the caret position instead</span>
+// stop tab key tabbing out of textarea and
+// make it write a tab at the caret position instead
 
-textarea<span class="punctuation token">.</span><span class="function function-variable token">onkeydown</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">e</span><span class="punctuation token">)</span><span class="punctuation token">{</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>e<span class="punctuation token">.</span>keyCode <span class="operator token">===</span> <span class="number token">9</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    e<span class="punctuation token">.</span><span class="function token">preventDefault</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="function token">insertAtCaret</span><span class="punctuation token">(</span><span class="string token">'\t'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
+textarea.onkeydown = function(e){
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret('\t');
+  }
 
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>e<span class="punctuation token">.</span>keyCode <span class="operator token">===</span> <span class="number token">27</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    textarea<span class="punctuation token">.</span><span class="function token">blur</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span>
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
+};
 
-<span class="keyword token">function</span> <span class="function token">insertAtCaret</span><span class="punctuation token">(</span><span class="parameter token">text</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">let</span> scrollPos <span class="operator token">=</span> textarea<span class="punctuation token">.</span>scrollTop<span class="punctuation token">;</span>
-  <span class="keyword token">let</span> caretPos <span class="operator token">=</span> textarea<span class="punctuation token">.</span>selectionStart<span class="punctuation token">;</span>
+function insertAtCaret(text) {
+  let scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
 
-  <span class="keyword token">let</span> front <span class="operator token">=</span> <span class="punctuation token">(</span>textarea<span class="punctuation token">.</span>value<span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">substring</span><span class="punctuation token">(</span><span class="number token">0</span><span class="punctuation token">,</span> caretPos<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">let</span> back <span class="operator token">=</span> <span class="punctuation token">(</span>textarea<span class="punctuation token">.</span>value<span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">substring</span><span class="punctuation token">(</span>textarea<span class="punctuation token">.</span>selectionEnd<span class="punctuation token">,</span> textarea<span class="punctuation token">.</span>value<span class="punctuation token">.</span>length<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  textarea<span class="punctuation token">.</span>value <span class="operator token">=</span> front <span class="operator token">+</span> text <span class="operator token">+</span> back<span class="punctuation token">;</span>
-  caretPos <span class="operator token">=</span> caretPos <span class="operator token">+</span> text<span class="punctuation token">.</span>length<span class="punctuation token">;</span>
-  textarea<span class="punctuation token">.</span>selectionStart <span class="operator token">=</span> caretPos<span class="punctuation token">;</span>
-  textarea<span class="punctuation token">.</span>selectionEnd <span class="operator token">=</span> caretPos<span class="punctuation token">;</span>
-  textarea<span class="punctuation token">.</span><span class="function token">focus</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  textarea<span class="punctuation token">.</span>scrollTop <span class="operator token">=</span> scrollPos<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+  let front = (textarea.value).substring(0, caretPos);
+  let back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  textarea.value = front + text + back;
+  caretPos = caretPos + text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
+}
 
-<span class="comment token">// Update the saved userCode every time the user updates the text area code</span>
+// Update the saved userCode every time the user updates the text area code
 
-textarea<span class="punctuation token">.</span><span class="function function-variable token">onkeyup</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">{</span>
-  <span class="comment token">// We only want to save the state when the user code is being shown,</span>
-  <span class="comment token">// not the solution, so that solution is not saved over the user code</span>
-  <span class="keyword token">if</span><span class="punctuation token">(</span>solution<span class="punctuation token">.</span>value <span class="operator token">===</span> <span class="string token">'Show solution'</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    userEntry <span class="operator token">=</span> textarea<span class="punctuation token">.</span>value<span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-    solutionEntry <span class="operator token">=</span> textarea<span class="punctuation token">.</span>value<span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
+textarea.onkeyup = function(){
+  // We only want to save the state when the user code is being shown,
+  // not the solution, so that solution is not saved over the user code
+  if(solution.value === 'Show solution') {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
 
-  <span class="function token">updateCode</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+  updateCode();
+};</code></pre>
 </div>
 
 <p>{{ EmbedLiveSample('Active_learning_2', '100%', 580) }}</p>

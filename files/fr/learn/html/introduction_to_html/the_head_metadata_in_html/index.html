@@ -8,7 +8,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML
 
 <div>{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Apprendre/HTML/Introduction_à_HTML")}}</div>
 
-<p class="summary">L'en-tête {{glossary("Head", "head")}} dans un document HTML est une partie du document qui n'est pas affichée par le navigateur au chargement de la page. Elle contient des informations comme le titre ({{htmlelement("title")}}) de la page, des liens aux {{glossary("CSS")}} (si vous souhaitez composer le contenu HTML avec des CSS), des liens aux favicons personnalisés et d'autres méta-données (auteur du document, mots-clés décrivant le document, etc.). Cet article porte sur tout ceci et plus, pour vous donner de bonnes bases pour gérer les balises et le code qui devraient figurer dans l'en-tête.</p>
+<p>L'en-tête {{glossary("Head", "head")}} dans un document HTML est une partie du document qui n'est pas affichée par le navigateur au chargement de la page. Elle contient des informations comme le titre ({{htmlelement("title")}}) de la page, des liens aux {{glossary("CSS")}} (si vous souhaitez composer le contenu HTML avec des CSS), des liens aux favicons personnalisés et d'autres méta-données (auteur du document, mots-clés décrivant le document, etc.). Cet article porte sur tout ceci et plus, pour vous donner de bonnes bases pour gérer les balises et le code qui devraient figurer dans l'en-tête.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -102,13 +102,13 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML
 
 <h3 id="Apprentissage_actif_expérience_avec_lencodage_des_caractères">Apprentissage actif : expérience avec l'encodage des caractères</h3>
 
-<p><span id="result_box" lang="fr"><span>Pour cela, reportez-vous au modèle HTML simple que vous avez obtenu dans la section précédente sur <code>&lt;title&gt;</code> (la page </span></span> <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html">title-example.html</a><span lang="fr"><span>), faites un essai de modification de la valeur de la métadonnée <code>charset</code> en ISO-8859-1 et ajoutez le japonais à votre page</span><span>.</span> Voici<span> le code que nous avons utilisé :</span></span></p>
+<p>Pour cela, reportez-vous au modèle HTML simple que vous avez obtenu dans la section précédente sur <code>&lt;title&gt;</code> (la page  <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html">title-example.html</a>), faites un essai de modification de la valeur de la métadonnée <code>charset</code> en ISO-8859-1 et ajoutez le japonais à votre page. Voici le code que nous avons utilisé :</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;Japanese example: ご飯が熱い。&lt;/p&gt;</pre>
 
 <h3 id="Ajouter_le_nom_de_lauteur_et_une_description">Ajouter le nom de l'auteur et une description</h3>
 
-<p><span id="result_box" lang="fr"><span>De nombreux éléments <code>&lt;meta&gt;</code> icontiennent les attributs <code>name</code> et <code>content</code> :</span></span></p>
+<p>De nombreux éléments <code>&lt;meta&gt;</code> icontiennent les attributs <code>name</code> et <code>content</code> :</p>
 
 <ul>
  <li><code>name</code> définit le type de méta élément ; le type d'informations contenu.</li>
@@ -118,9 +118,9 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML
 <p>Il est utile d'inclure ces deux méta-éléments dans votre page pour définir son auteur et donner une courte description de son contenu. Voyons un exemple :</p>
 
 <pre class="brush: html notranslate">&lt;meta name="author" content="Chris Mills"&gt;
-&lt;meta name="description" content="<span id="result_box" lang="fr"><span>La Zone Apprentissage des documents web
-du MDN a pour but de donner </span><span>aux débutants du Web tout ce qu'ils doivent
-savoir pour commencer le développement de pages webs et d'applications</span><span>.</span></span>"&gt;</pre>
+&lt;meta name="description" content="La Zone Apprentissage des documents web
+du MDN a pour but de donner aux débutants du Web tout ce qu'ils doivent
+savoir pour commencer le développement de pages webs et d'applications."&gt;</pre>
 
 <p>Préciser l'auteur peut être intéressant dans certains cas : il est utile de savoir qui a écrit la page pour le contacter et lui poser des questions à propos du contenu. Certains systèmes de gestion de contenu procèdent à l'extraction automatique des informations sur l'auteur de la page et les rendent disponibles à cette fin.</p>
 
@@ -134,12 +134,12 @@ savoir pour commencer le développement de pages webs et d'applications</span><s
  <li>Allez sur la page d'accueil de <a href="/fr/">Mozilla Developer Network</a>.</li>
  <li>Regardez le source de la page (Clic droit/<kbd>Ctrl</kbd>, choissisez « <em>Code source de la page</em> » dans le menu contextuel.)</li>
  <li>Trouvez la balise méta <code>description</code>. Elle ressemble à ceci :
-  <pre id="line1">&lt;meta name="description" content="<span><a class="attribute-value">MDN Web Docs fournit
+  <pre id="line1">&lt;meta name="description" content="<a class="attribute-value">MDN Web Docs fournit
  des informations sur les technologies web ouvertes comme HTML,
  CSS et les API utilisées pour les sites web et les applications
  web. On y trouve également de la documentation destinées aux
  développeurs à propos des produits Mozilla tels que les
- outils de développement de Firefox.</a>"&gt;</span></pre>
+ outils de développement de Firefox.</a>"&gt;</pre>
  </li>
  <li>Maintenant, cherchez « Mozilla Developer Network » sur votre moteur de recherche favori (nous avons utilisé Google). Vous remarquerez que le contenu de la <code>&lt;meta&gt;</code> description et de l'élément <code>&lt;title&gt;</code> sont utilisés dans les résultats de recherche. Cela vaut vraiment la peine !
   <p><img alt='Une page de recherche Google pour "MDN web docs"' src="fr-google.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
@@ -161,11 +161,11 @@ savoir pour commencer le développement de pages webs et d'applications</span><s
 <p>Par exemple, <a href="https://ogp.me/">Open Graph Data</a> est un protocole de métadonnées que Facebook a inventé pour fournir des métadonnées plus riches pour les sites webs. Dans le code source de MDN vous trouverez ceci :</p>
 
 <pre class="brush: html notranslate">&lt;meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png"&gt;
-&lt;meta property="og:description" content=<span>"<a class="attribute-value">MDN Web Docs fournit des
+&lt;meta property="og:description" content="<a class="attribute-value">MDN Web Docs fournit des
 informations sur les technologies web ouvertes comme HTML, CSS et les API
 utilisées pour les sites web et les applications web. On y trouve également
 de la documentation destinées aux développeurs à propos des produits
-Mozilla tels que les outils de développement de Firefox.</a>"&gt;</span>
+Mozilla tels que les outils de développement de Firefox.</a>"&gt;
 &lt;meta property="og:title" content="Mozilla Developer Network"&gt;</pre>
 
 <p>En conséquence, lorsque vous faites un lien à MDN sur Facebook, le lien apparaît avec une image et une description : une expérience plus riche pour les utilisateurs.</p>
@@ -176,7 +176,7 @@ Mozilla tels que les outils de développement de Firefox.</a>"&gt;</span>
 
 <h2 id="Ajouter_des_icônes_personnalisées_à_un_site">Ajouter des icônes personnalisées à un site</h2>
 
-<p><span id="result_box" lang="fr"><span>Pour enrichir davantage le design de votre site, vous pouvez ajouter des références à des icônes personnalisées dans vos métadonnées et celles-ci seront affichées dans certains contextes.</span></span></p>
+<p>Pour enrichir davantage le design de votre site, vous pouvez ajouter des références à des icônes personnalisées dans vos métadonnées et celles-ci seront affichées dans certains contextes.</p>
 
 <p>La petite favicône, qui existe depuis de nombreuses années, a été la première icône de ce type, une icône de 16 x 16 pixels utilisée dans de multiples endroits. Vous verrez des favicônes affichés dans chaque onglet du navigateur pour chaque page ouverte et à côté des pages marquées dans le panneau des signets.</p>
 
@@ -254,7 +254,7 @@ Mozilla tels que les outils de développement de Firefox.</a>"&gt;</span>
 
 <h2 id="Définition_de_la_langue_principale_du_document">Définition de la langue principale du document</h2>
 
-<p>Enfin, il convient de mentionner que vous pouvez (et devrez vraiment) définir la langue de votre page. Cela peut être fait en ajoutant l'<a href="/en-US/docs/Web/HTML/Global_attributes/lang">attribut <code>lang</code></a> <span class="short_text" id="result_box" lang="fr"><span>à la balise ouvrante HTML (voir</span></span> <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html">meta-example.html</a>.)</p>
+<p>Enfin, il convient de mentionner que vous pouvez (et devrez vraiment) définir la langue de votre page. Cela peut être fait en ajoutant l'<a href="/en-US/docs/Web/HTML/Global_attributes/lang">attribut <code>lang</code></a> à la balise ouvrante HTML (voir <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html">meta-example.html</a>.)</p>
 
 <pre class="brush: html notranslate">&lt;html lang="fr"&gt;</pre>
 
