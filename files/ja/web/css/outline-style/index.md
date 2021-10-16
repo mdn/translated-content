@@ -3,26 +3,25 @@ title: outline-style
 slug: Web/CSS/outline-style
 tags:
   - CSS
-  - CSS プロパティ
   - CSS 輪郭線
-  - Outline
+  - CSS プロパティ
   - Reference
-  - outline-style
+  - recipe:css-property
+browser-compat: css.properties.outline-style
 translation_of: Web/CSS/outline-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS の <strong><code>outline-style</code></strong> プロパティは、要素の輪郭線のスタイルを設定します。輪郭線とは要素の周りに描かれる線のことで、 {{cssxref("border")}} よりも外側です。</p>
+CSS の **`outline-style`** プロパティは、要素の輪郭線のスタイルを設定します。輪郭線とは要素の周りに描かれる線のことで、 {{cssxref("border")}} よりも外側です。
 
-<div>{{EmbedInteractiveExample("pages/css/outline-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/outline-style.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+たいていの場合、輪郭線の見た目を定義するときは一括指定プロパティ {{cssxref("outline")}} を使ったほうが便利です。
 
-<p>たいていの場合、輪郭線の見た目を定義するときは一括指定プロパティ {{cssxref("outline")}} を使ったほうが便利です。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 outline-style: auto;
 outline-style: none;
 outline-style: dotted;
@@ -37,96 +36,88 @@ outline-style: outset;
 /* グローバル値 */
 outline-style: inherit;
 outline-style: initial;
+outline-style: revert;
 outline-style: unset;
-</pre>
+```
 
-<p><code>outline-style</code> プロパティは、以下に挙げた値のうちの一つで指定します。</p>
+`outline-style` プロパティは、以下に挙げた値のうちの一つで指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt>
- <p><code>auto</code></p>
- </dt>
- <dd style="outline: 8px auto red;">ユーザーエージェントに輪郭線の描画を任せます。</dd>
- <dt>
- <p><code>none</code></p>
- </dt>
- <dd>輪郭線を描きません。{{cssxref("outline-width")}} は <code>0</code> です。</dd>
- <dt>
- <p><code>dotted</code></p>
- </dt>
- <dd style="outline: 8px dotted red;">点線の輪郭線です。</dd>
- <dt>
- <p><code>dashed</code></p>
- </dt>
- <dd style="outline: 8px dashed red;">破線の輪郭線です。</dd>
- <dt>
- <p><code>solid</code></p>
- </dt>
- <dd style="outline: 8px solid red;">1本の実線の輪郭線です。</dd>
- <dt>
- <p><code>double</code></p>
- </dt>
- <dd style="outline: 8px double red;">2本の実線の輪郭線です。{{cssxref("outline-width")}}は2本の線とその隙間の合計です。</dd>
- <dt>
- <p><code>groove</code></p>
- </dt>
- <dd style="outline: 8px groove red;">ページに刻まれたかのように見える輪郭線です。</dd>
- <dt>
- <p><code>ridge</code></p>
- </dt>
- <dd style="outline: 8px ridge red;"><code>groove</code>の逆で、ページから押し出されたように見える輪郭線です。</dd>
- <dt>
- <p><code>inset</code></p>
- </dt>
- <dd style="outline: 8px inset red;">領域がページに埋め込まれたかのように見える輪郭線です。</dd>
- <dt>
- <p><code>outset</code></p>
- </dt>
- <dd style="outline: 8px outset red;"><code>inset</code>の逆で、領域がページから隆起しているように見える輪郭線です。</dd>
-</dl>
+- `auto`
+  - : ユーザーエージェントに輪郭線の描画を任せます。
+- `none`
+  - : 輪郭線を描きません。{{cssxref("outline-width")}} は `0` です。
+- `dotted`
+  - : 点線の輪郭線です。
+- `dashed`
+  - : 破線の輪郭線です。
+- `solid`
+  - : 1 本の実線の輪郭線です。
+- `double`
+  - : 2 本の実線の輪郭線です。{{cssxref("outline-width")}} は 2 本の線とその隙間の合計です。
+- `groove`
+  - : ページに刻まれたかのように見える輪郭線です。
+- `ridge`
+  - : `groove` の逆で、ページから押し出されたように見える輪郭線です。
+- `inset`
+  - : 領域がページに埋め込まれたかのように見える輪郭線です。
+- `outset`
+  - : `inset` の逆で、領域がページから隆起しているように見える輪郭線です。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Example_0_-_auto" name="Example_0_-_auto">例 0 - <code>auto</code></h3>
+<h3 id="Setting_outline_style_to_auto">輪郭線のスタイルを auto に設定</h3>
 
-<p>値<code>auto</code>は、輪郭線スタイルがカスタムであることを表します。 — <q cite="https://www.w3.org/TR/css-ui-3/#outline-style">典型的には、プラットフォーム用のユーザーインターフェースのデフォルトのスタイル、または、CSSで詳細に記述できるスタイルよりも表現豊かなスタイル(例:輝いて見える半透明の外郭を持つ、輪郭の丸い輪郭線)</q></p>
+`auto` の値は、輪郭線のスタイルが独自のものであることを表します。[仕様書](https://www.w3.org/TR/css-ui-3/#outline-style)によれば、「典型的には、プラットフォーム用のユーザーインターフェイスの既定のスタイル、または、CSS で詳細に記述できるスタイルよりも表現豊かなスタイル 、例えば、輝いて見える半透明の外郭を持つ、輪郭の丸い輪郭線」となっています。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="auto"&gt;Outline Demo&lt;/p&gt;
-&lt;/div&gt; </pre>
+```html
+<div>
+  <p class="auto">Outline Demo</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.auto {
-  outline-style: auto; /* "outline: auto" と同じ */
+```css
+.auto {
+  outline-style: auto; /* same result as "outline: auto" */
 }
 
 /* デモを見やすく */
-* { outline-width: 10px; padding: 15px; } </pre>
+* { outline-width: 10px; padding: 15px; }
+```
 
-<p>{{ EmbedLiveSample('Example_0_-_auto') }}</p>
+#### 結果
 
-<h3 id="Example_1_-_dotted_and_dashed" name="Example_1_-_dotted_and_dashed">例 1 - <code>dotted</code> と <code>dashed</code></h3>
+{{ EmbedLiveSample('Setting_outline_style_to_auto') }}
 
-<h4 id="HTML_2">HTML</h4>
+<h3 id="Setting_outline_style_to_dashed_and_dotted">輪郭線を dashed と dotted に設定</h3>
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div class="dotted"&gt;
-    &lt;p class="dashed"&gt;Outline Demo&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt; </pre>
+#### HTML
 
-<h4 id="CSS_2">CSS</h4>
+```html
+<div>
+  <div class="dotted">
+    <p class="dashed">Outline Demo</p>
+  </div>
+</div>
+```
 
-<pre class="brush: css">.dotted {
+#### CSS
+
+```css
+.dotted {
   outline-style: dotted; /* "outline: dotted" と同じ */
 }
 .dashed {
@@ -134,23 +125,29 @@ outline-style: unset;
 }
 
 /* デモを見やすく */
-* { outline-width: 10px; padding: 15px; } </pre>
+* { outline-width: 10px; padding: 15px; }
+```
 
-<p>{{ EmbedLiveSample('Example_1_-_dotted_and_dashed') }}</p>
+#### 結果
 
-<h3 id="Example_2_-_solid_and_double" name="Example_2_-_solid_and_double">例 2 - <code>solid</code> と <code>double</code></h3>
+{{ EmbedLiveSample('Setting_outline_style_to_dashed_and_dotted') }}
 
-<h4 id="HTML_3">HTML</h4>
+<h3 id="Setting_outline_style_to_solid_and_double">輪郭線のスタイルを solid と double に設定</h3>
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div class="solid"&gt;
-    &lt;p class="double"&gt;Outline Demo&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt; </pre>
+#### HTML
 
-<h4 id="CSS_3">CSS</h4>
+```html
+<div>
+  <div class="solid">
+    <p class="double">Outline Demo</p>
+  </div>
+</div>
+```
 
-<pre class="brush: css">.solid {
+#### CSS
+
+```css
+.solid {
   outline-style: solid;
 }
 .double {
@@ -158,23 +155,29 @@ outline-style: unset;
 }
 
 /* デモを見やすく */
-* { outline-width: 10px; padding: 15px; } </pre>
+* { outline-width: 10px; padding: 15px; }
+```
 
-<p>{{ EmbedLiveSample('Example_2_-_solid_and_double') }}</p>
+#### 結果
 
-<h3 id="Example_3_-_groove_and_ridge" name="Example_3_-_groove_and_ridge">例 3 - <code>groove</code> と <code>ridge</code></h3>
+{{ EmbedLiveSample('Setting_outline_style_to_solid_and_double') }}
 
-<h4 id="HTML_4">HTML</h4>
+<h3 id="Setting_outline_style_to_groove_and_ridge">輪郭線のスタイルを groove と ridge に設定</h3>
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div class="groove"&gt;
-    &lt;p class="ridge"&gt;Outline Demo&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+#### HTML
 
-<h4 id="CSS_4">CSS</h4>
+```html
+<div>
+  <div class="groove">
+    <p class="ridge">Outline Demo</p>
+  </div>
+</div>
+```
 
-<pre class="brush: css">.groove {
+#### CSS
+
+```css
+.groove {
   outline-style: groove;
 }
 .ridge {
@@ -182,23 +185,29 @@ outline-style: unset;
 }
 
 /* デモを見やすく */
-* { outline-width: 10px; padding: 15px; }</pre>
+* { outline-width: 10px; padding: 15px; }
+```
 
-<p>{{ EmbedLiveSample('Example_3_-_groove_and_ridge') }}</p>
+#### 結果
 
-<h3 id="Example_4_-_inset_and_outset" name="Example_4_-_inset_and_outset">例 4 - <code>inset</code> と <code>outset</code></h3>
+{{ EmbedLiveSample('Setting_outline_style_to_groove_and_ridge') }}
 
-<h4 id="HTML_5">HTML</h4>
+<h3 id="Setting_outline_style_to_inset_and_outset">輪郭線のスタイルを inset と outset に設定</h3>
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div class="inset"&gt;
-    &lt;p class="outset"&gt;Outline Demo&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+#### HTML
 
-<h4 id="CSS_5">CSS</h4>
+```html
+<div>
+  <div class="inset">
+    <p class="outset">Outline Demo</p>
+  </div>
+</div>
+```
 
-<pre class="brush: css">.inset {
+#### CSS
+
+```css
+.inset {
   outline-style: inset;
 }
 .outset {
@@ -206,36 +215,23 @@ outline-style: unset;
 }
 
 /* デモを見やすく */
-* { outline-width: 10px; padding: 15px; }</pre>
+* { outline-width: 10px; padding: 15px; }
+```
 
-<p>{{ EmbedLiveSample('Example_4_-_inset_and_outset') }}</p>
+#### 結果
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{ EmbedLiveSample('Setting_outline_style_to_inset_and_outset') }}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#outline-style', 'outline-style')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td><code>auto</code>値を追加。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'ui.html#propdef-outline-style', 'outline-style')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<p>{{cssinfo}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.outline-style")}}</p>
+{{Compat}}
+
+## 関連情報
+
+- {{cssxref("outline")}}
+- {{cssxref("outline-color")}}
+- {{cssxref("outline-width")}}

@@ -3,100 +3,88 @@ title: ime-mode
 slug: Web/CSS/ime-mode
 tags:
   - CSS
-  - CSS Reference
+  - CSS プロパティ
   - Deprecated
+  - recipe:css-property
+browser-compat: css.properties.ime-mode
 translation_of: Web/CSS/ime-mode
 ---
-<div>{{CSSRef}} {{deprecated_header}}</div>
+{{CSSRef}} {{deprecated_header}}
 
-<p><strong><code>ime-mode</code></strong> プロパティは、テキストフィールドで Input Method Editor (以下 IME) をコントロールします。このプロパティは廃止されました。</p>
+**`ime-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストフィールドで Input Method Editor (以下 IME) をコントロールします。このプロパティは廃止されました。
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 ime-mode: auto;
 ime-mode: normal;
 ime-mode: active;
 ime-mode: inactive;
 ime-mode: disabled;
 
-/* Global values */
+/* グローバル値 */
 ime-mode: inherit;
 ime-mode: initial;
-ime-mode: unset;</pre>
+ime-mode: revert;
+ime-mode: unset;
+```
 
-<p><code>ime-mode</code>は、一部のブラウザーで無秩序に実装されたプロパティです。これは、Microsoft が独自の拡張機能として Internet Explorer 5 で導入したものです。{{spec("http://msdn.microsoft.com/library/ms530767(VS.85).aspx","-ms-ime-mode Attribute | imeMode Property")}}</p>
+`ime-mode`は、一部のブラウザーで無秩序に実装されたプロパティです。これは、Microsoft が独自の拡張機能として Internet Explorer 5 で導入したものです。{{spec("https://msdn.microsoft.com/library/ms530767(VS.85).aspx","-ms-ime-mode Attribute | imeMode Property")}}
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> <span class="tlid-translation translation" lang="ja"><span title="">一般的に、パブリックなWebサイトがIMEモードを変更することは適切ではありません。</span></span> このプロパティは、プライベートなWebアプリケーションでのみ使用すべきです。また、以前にレガシーコードで設定されていた場合は、プロパティを元に戻すべきです。</p>
-</div>
+> **Note:** 一般に、公開されたウェブサイトが IME モードを変更することは適切ではありません。このプロパティは、私的ななウェブアプリケーションでのみ使用すべきです。また、以前に古いコードで設定されていた場合は、プロパティを元に戻すべきです。
 
-<p>{{cssinfo}}</p>
+## 構文
 
-<h2 id="構文">構文</h2>
+`ime-mode` プロパティは、以下のキーワード値のうちの一つを使用して指定します。
 
-<h3 id="値">値</h3>
+### 値
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>現在の IME の状態を変更しません。これはデフォルトの設定です。</dd>
- <dt><code>normal</code></dt>
- <dd>IME の状態を通常の状態に変更します。この値はユーザースタイルシートでウェブページが指定した値を上書きするために用意されました。 <em>この値は Internet Explorer ではサポートされていません。</em></dd>
- <dt><code>active</code></dt>
- <dd>コンテンツがフォーカスを得た時に IME は自動的にオンになります。ユーザーがオフにしない限りテキスト入力には IME が使用されます。 <em>Linux ではサポートされていません。</em></dd>
- <dt><code>inactive</code></dt>
- <dd>コンテンツがフォーカスを得た時に IME は自動的にオフに設定されますが、ユーザーは任意で IME をオンにする事ができます。 <em>Linux ではサポートされていません。</em></dd>
- <dt><code>disabled</code></dt>
- <dd>IME は無効にされます。ユーザーによって IME をオンにする事はできません。</dd>
-</dl>
+- `auto`
+  - : 現在の IME の状態を変更しません。これが既定値です。
+- `normal`
+  - : IME の状態を通常の状態に変更します。この値はユーザースタイルシートでウェブページが指定した値を上書きするために用意されました。_この値は Internet Explorer は対応していません_。
+- `active`
+  - : コンテンツがフォーカスを得た時に IME が自動的にオンになります。ユーザーがオフにしない限りテキスト入力には IME が使用されます。_Linux では対応していません。_
+- `inactive`
+  - : コンテンツがフォーカスを得た時に IME は自動的にオフに設定されますが、ユーザーは任意で IME をオンにすることができます。_Linux では対応していません。_
+- `disabled`
+  - : IME は無効になり、ユーザーがオンにすることはできません。
 
-<h3 id="公式の構文">公式の構文</h3>
+## 解説
+
+Internet Explorer とは異なり、Firefox の `ime-mode` は `<input type="password">` にも適用できます。しかし、これはユーザーの使い勝手にはマイナスの影響を与えます。パスワードフィールドでは IME は有効に*されるべきではありません*。ユーザーは以下の CSS をユーザースタイルシートに挿入することで、推奨された設定に従わないサイトの動作を修正することができます。
+
+```css
+input[type=password] {
+  ime-mode: auto !important;
+}
+```
+
+Gecko 1.9 (Firefox 3) の Mac 版では、disabled に設定されたフィールドがフォーカスを失う際に、IME の状態を以前の状態に戻すことができません。そのため、Mac ユーザーは `disabled` 値を利用したフォームの利用に苛立ちを覚えるかもしれません。
+
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="例">例</h2>
+## 例
 
-<p>この例は、フィールドの IME のサポートを無効にします。これは、 拡張文字セットをサポートしていないデータベースにデータを入力するフィールドの一般的なプラクティスでした。</p>
+### インプットメソッドの対応の無効化
 
-<pre>&lt;input type="text" name="name" value="initial value" style="ime-mode: disabled"&gt;</pre>
+この例は、フィールドの IME の対応を無効にします。これは、 拡張文字セットに対応していないデータベースにデータを入力するフィールドで一般的に行われていました。
 
-<div class="blockIndicator note">
-<p>拡張文字がフォームを通過しないように IME を無効にすることに依存しないでください。 IME を無効にしても、拡張文字をフォームのフィールドに貼り付けることはできます。</p>
-</div>
+```html
+<input type="text" name="name" value="initial value" style="ime-mode: disabled">
+```
 
-<h2 id="注記">注記</h2>
+> **Note:** IME を無効にしたからといって、拡張文字がフォームを通過しないとは限りません。IME を無効にしても、ユーザーは拡張文字をフォームのフィールドに貼り付けることができます。
 
-<p>Firefox の <code>ime-mode</code> は Internet Explorer と異なり、<code>&lt;input type="password"&gt;</code> にも適用できます。しかしこれはユーザーの使い勝手にはマイナスの影響を与えます。パスワードフィールドでは IME は有効に<em>されるべきではありません</em>。ユーザーは以下の CSS をユーザースタイルシートに挿入する事で推奨された設定に従わないサイトの動作を修正する事ができます:</p>
+## 仕様書
 
-<pre class="brush: css">input[type=password] {
-  ime-mode: auto !important;
-}</pre>
+{{Specifications}}
 
-<p>Gecko 1.9 の Mac 版では、disabled に設定されたエディターがフォーカスを失う際に、IME の状態をフォーカスを得る直前の状態には戻りません。そのため、Mac ユーザーは <code>disabled</code> 値を利用したフォームの利用に苛立ちを覚えるかもしれません。</p>
+## ブラウザーの互換性
 
-<h2 id="仕様書">仕様書</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#input-method-editor', 'ime-mode')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td>初期の定義</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
-
-<div>
-<div>
-
-
-<p>{{Compat("css.properties.ime-mode")}}</p>
-</div>
-</div>
+{{Compat}}
