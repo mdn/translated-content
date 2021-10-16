@@ -16680,7 +16680,7 @@
       "RainSlide"
     ]
   },
-  "Web/API/MediaCapabilitiesInfo": {
+  "Web/API/MediaCapabilities/encodingInfo": {
     "modified": "2020-10-15T22:18:18.850Z",
     "contributors": [
       "mmdext"
