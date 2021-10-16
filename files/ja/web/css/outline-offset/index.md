@@ -3,83 +3,87 @@ title: outline-offset
 slug: Web/CSS/outline-offset
 tags:
   - CSS
-  - CSS Outline
-  - CSS Property
-  - CSS プロパティ
   - CSS 輪郭線
+  - CSS プロパティ
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
+browser-compat: css.properties.outline-offset
 translation_of: Web/CSS/outline-offset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS の <strong><code>outline-offset</code></strong> プロパティは、要素の辺や境界線と<a href="/ja/docs/Web/CSS/outline">輪郭線</a>との空間の量を設定します。</p>
+CSS の **`outline-offset`** プロパティは、要素の辺や境界線と[輪郭線](/ja/docs/Web/CSS/outline)との空間の量を設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/outline-offset.html")}}</div>
+{{EmbedInteractiveExample("pages/css/outline-offset.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<p><ruby>輪郭線<rp> (</rp><rt>outline</rt><rp>) </rp></ruby>は要素の周囲、<ruby>境界線<rp> (</rp><rt>border</rt><rp>) </rp></ruby>の外側に描かれる線です。要素とその輪郭線との空間は透明です。つまり、親要素の背景と同じになります。</p>
-
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* &lt;length&gt; 値 */
+```css
+/* <length> 値 */
 outline-offset: 3px;
 outline-offset: 0.2em;
 
 /* グローバル値 */
 outline-offset: inherit;
 outline-offset: initial;
+outline-offset: revert;
 outline-offset: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>{{cssxref("&lt;length&gt;")}}</code></dt>
- <dd>要素とその輪郭線との空間の幅です。負の値を指定すると輪郭線は要素の内側に表示されます。 <code>0</code> を指定すると輪郭線は要素との隙間を置かずに表示されます。</dd>
-</dl>
+- `{{cssxref("&lt;length&gt;")}}`
+  - : 要素とその輪郭線との空間の幅です。負の値を指定すると輪郭線は要素の内側に表示されます。 `0` を指定すると輪郭線は要素との隙間を置かずに表示されます。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 解説
+
+輪郭線 (outline) は要素の周囲、境界線 (border) の外側に描かれる線です。要素とその輪郭線の間は透明です。つまり、親要素の背景と同じになります。
+
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: css notranslate">p {
+<h3 id="Setting_outline_offset_in_pixels">輪郭線のオフセットをピクセル数で設定</h3>
+
+#### HTML
+
+```html
+<p>Gallia est omnis divisa in partes tres.</p>
+```
+
+#### CSS
+
+```css
+p {
   outline: 1px dashed red;
   outline-offset: 10px;
   background: yellow;
   border: 1px solid blue;
   margin: 15px;
 }
-</pre>
+```
 
-<pre class="brush: html notranslate">&lt;p&gt;Gallia est omnis divisa in partes tres.&lt;/p&gt;</pre>
+#### 結果
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Setting_outline_offset_in_pixels')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Basic UI', '#outline-offset', 'outline-offset') }}</td>
-   <td>{{ Spec2('CSS3 Basic UI') }}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p>{{cssinfo}}</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.outline-offset")}}</p>
+## 関連情報
+
+- {{cssxref("outline")}}
+- {{cssxref("outline-color")}}
+- {{cssxref("outline-style")}}
+- {{cssxref("outline-width")}}
