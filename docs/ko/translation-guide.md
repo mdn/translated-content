@@ -223,7 +223,8 @@ EDITOR=code
 | Promise chaining | 프로미스 체이닝 | | | 
 | Prototype | 프로토타입 | | |
 | Reject | 거부 | | | 
-| Resolve | 이행 | | | 
+| Resolve | 이행 | | |
+| Rest parameters | 나머지 매개변수 | | [참고 링크](https://github.com/mdn/translated-content/pull/2549/files) | 
 | Settled | 처리 | | | 
 | Scope | 스코프 | | | 
 | Temporal Dead Zone, TDZ | 시간상 사각지대 | | [참고 링크](https://github.com/mdn/translated-content/pull/2626/files) | 
