@@ -219,20 +219,21 @@ EDITOR=code
 | Parameter | 매개변수 | | | 
 | Pending | 대기 | | | 
 | Prerequisites | 필요한 사전 지식 | | | 
-| Promise | 프로미스 | | [해당 링크 참고](https://github.com/mdn/translated-content/pull/1081#issuecomment-878333558) | 
+| Promise | 프로미스 | | [참고 링크](https://github.com/mdn/translated-content/pull/1081#issuecomment-878333558) | 
 | Promise chaining | 프로미스 체이닝 | | | 
 | Prototype | 프로토타입 | | |
 | Reject | 거부 | | | 
 | Resolve | 이행 | | | 
 | Settled | 처리 | | | 
 | Scope | 스코프 | | | 
+| Temporal Dead Zone, TDZ | 시간상 사각지대 | | [참고 링크](https://github.com/mdn/translated-content/pull/2626/files) | 
 
 ### HTTP
 
 | 용어 | 번역 | 기타 | 참고 링크 |
 | --- | --- | --- | ------ |
 | Idempotent | 멱등성 | | | 
-| Payload | 페이로드 | | [링크](https://github.com/mdn/translated-content/pull/2737) | 
+| Payload | 페이로드 | | [참고 링크](https://github.com/mdn/translated-content/pull/2737) | 
 | Request Body | 요청 본문 | | | 
 | Response Body | 응답 본문 | | | 
 
