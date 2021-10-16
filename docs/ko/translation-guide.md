@@ -232,6 +232,7 @@ EDITOR=code
 | 용어 | 번역 | 기타 | 참고 링크 |
 | --- | --- | --- | ------ |
 | Idempotent | 멱등성 | | | 
+| Payload | 페이로드 | | [링크](https://github.com/mdn/translated-content/pull/2737) | 
 | Request Body | 요청 본문 | | | 
 | Response Body | 응답 본문 | | | 
 
