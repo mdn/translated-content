@@ -3,19 +3,19 @@ title: image()
 slug: Web/CSS/image/image()
 tags:
   - CSS
-  - CSS Function
-  - CSS Images
-  - Function
+  - CSS 関数
+  - CSS 画像
+  - 関数
   - Reference
-  - Web
+  - ウェブ
 browser-compat: css.types.image.image
 translation_of: Web/CSS/image/image()
 ---
 {{CSSRef}}
 
-The **`image()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 {{CSSxRef("&lt;image&gt;")}} を {{CSSxRef("url()")}} 関数と同様の様式で定義しますが、画像の書字方向を指定したり、メディアフラグメントで定義された画像の一部だけを表示したり、指定された画像がどれも描画できなかった場合の予備として単色を指定するなどの機能が追加されています。
+**`image()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 {{CSSxRef("&lt;image&gt;")}} を {{CSSxRef("url()")}} 関数と同様の様式で定義しますが、画像の書字方向を指定したり、メディアフラグメントで定義された画像の一部だけを表示したり、指定された画像がどれも描画できなかった場合の予備として単色を指定するなどの機能が追加されています。
 
-> **Note:** CSS の `image()` 関数を {{DOMxRef("HTMLImageElement/Image", '<code>HTMLImageElement</code> のコンストラクターである <code>Image()</code>', '', 1)}} と混同しないでください。
+> **Note:** CSS の `image()` 関数を {{DOMxRef("HTMLImageElement/Image", '`HTMLImageElement` のコンストラクターである `Image()`', '', 1)}} と混同しないでください。
 
 ## 構文
 

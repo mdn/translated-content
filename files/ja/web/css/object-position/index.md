@@ -3,66 +3,80 @@ title: object-position
 slug: Web/CSS/object-position
 tags:
   - CSS
-  - CSS Image
-  - CSS Property
+  - CSS 画像
+  - CSS プロパティ
+  - レイアウト
+  - 位置
   - Reference
+  - 置換要素
+  - css レイアウト
+  - object-position
+  - recipe:css-property
+browser-compat: css.properties.object-position
 translation_of: Web/CSS/object-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>object-position</code></strong> プロパティは、ボックス内における置換要素の配置を指定します。Areas of the box which aren't covered by the replaced element's object will show the element's background.</p>
+**`object-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックス内における[置換要素](/ja/docs/Web/CSS/Replaced_element)の中身の配置を指定します。ボックスの領域内で置換要素のオブジェクトに覆われていない部分は、要素の背景が表示されます。
 
-<p>You can adjust how the replaced element's object's intrinsic size (that is, its natural size) is adjusted to fit within the element's box using the {{cssxref("object-fit")}} property.</p>
+置換要素の本来のサイズ (すなわち、自然なサイズ) を、その要素のボックス内に合わせる方法を調整するには、{{cssxref("object-fit")}} プロパティを使用することができます。
 
-<div>{{EmbedInteractiveExample("pages/css/object-position.html")}}</div>
+{{EmbedInteractiveExample("pages/css/object-position.html")}}
 
+## 構文
 
-
-<p>{{cssinfo}}</p>
-
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css">/* &lt;position&gt; 値 */
+```css
+/* <position> 値 */
 object-position: center top;
 object-position: 100px 50px;
 
 /* グローバル値 */
 object-position: inherit;
 object-position: initial;
+object-position: revert;
 object-position: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>&lt;position&gt;</code></dt>
- <dd>要素のボックスの端に対する 2D 上の位置を表す、1 個から 4 個の値による {{cssxref("&lt;position&gt;")}} です。相対値または絶対値のオフセットを指定できます。また、要素のボックスの外側の位置も指定できます。</dd>
-</dl>
+- {{cssxref("&lt;position&gt;")}}
+  - : 要素のボックスの端に対する 2D 上の位置を表す、1 個から 4 個の値です。相対値または絶対値のオフセットを指定できます。
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> 要素がボックス外にはみ出る位置も指定できます。</p>
-</div>
+> **Note:** 置換要素がボックス外にはみ出る位置も指定できます。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## Examples
 
-<h3 id="HTML_Content" name="HTML_Content">HTML コンテンツ</h3>
+<h3 id="Positioning_image_content">画像の内容の配置を設定</h3>
 
-<pre class="brush: html">&lt;img id="object-position-1" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"/&gt;
-&lt;img id="object-position-2" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"/&gt;
-</pre>
+#### HTML
 
-<h3 id="CSS_Content" name="CSS_Content">CSS コンテンツ</h3>
+それぞれ MDN のロゴを表示する 2 つの {{HTMLElement("img")}} 要素があります。
 
-<pre class="brush: css">img {
-  width: 150px;
-  height: 100px;
-  border: 1px solid #000;
-  background-color: yellow;
+```html
+<img id="object-position-1" src="mdn.svg" alt="MDN Logo"/>
+<img id="object-position-2" src="mdn.svg" alt="MDN Logo"/>
+```
+
+#### CSS
+
+この CSS には、`<img>` 要素自体の既定のスタイルと、2 つの画像それぞれに個別のスタイルが含まれています。
+
+```css
+img {
+  width: 300px;
+  height: 250px;
+  border: 1px solid black;
+  background-color: silver;
   margin-right: 1em;
+  object-fit: none;
 }
 
 #object-position-1 {
@@ -70,50 +84,24 @@ object-position: unset;
 }
 
 #object-position-2 {
-  object-position: 20% 10%;
+  object-position: 100% 10%;
 }
-</pre>
+```
 
-<p>The first image is positioned with its left edge inset 10 pixels from the left edge of the element's box. The second image is positioned with its right edge flush against the right edge of the element's box and is located 10% of the way down the height of the element's box.</p>
+1 枚目の画像は、その左端が要素のボックスの左端から 10 ピクセルはみ出して配置されています。2 番目の画像は、その右端が要素のボックスの右端と同じ位置にあり、要素のボックスの高さの 10% の位置にあります。
 
-<h3 id="Output" name="Output">出力</h3>
+#### Result
 
-<p>{{EmbedLiveSample('Example', '100%','300px' )}}</p>
+{{ EmbedLiveSample('Positioning_image_content', '100%','600px') }}
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Images', '#the-object-position', 'object-position')}}</td>
-   <td>{{Spec2('CSS4 Images')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Images', '#the-object-position', 'object-position')}}</td>
-   <td>{{Spec2('CSS3 Images')}}</td>
-   <td>最初期の定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
+## See also
 
-<p>{{Compat("css.properties.object-position")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>ほかの画像関連 CSS プロパティ: {{cssxref("object-fit")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.</li>
-</ul>
+- その他の画像関連 CSS プロパティ: {{cssxref("object-fit")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}
