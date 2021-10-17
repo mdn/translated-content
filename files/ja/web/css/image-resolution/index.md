@@ -3,18 +3,19 @@ title: image-resolution
 slug: Web/CSS/image-resolution
 tags:
   - CSS
-  - CSS Images
-  - CSS Property
-  - Experimental
+  - CSS 画像
+  - CSS プロパティ
+  - 実験的
   - Reference
   - image-resolution
 browser-compat: css.properties.image-resolution
+translation_of: Web/CSS/image-resolution
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`image-resolution`** [CSS](/en-US/docs/Web/CSS) property specifies the intrinsic resolution of all raster images used in or on the element. It affects content images such as replaced elements and generated content, and decorative images such as `background-image` images.
+**`image-resolution`** は [CSS](/ja/docs/Web/CSS) のプロパティで、この要素で使用されているすべてのラスター画像の内在解像度を指定します。これは置換要素や生成コンテンツ、`background-image` のような装飾画像などのコンテンツ画像に作用します。
 
-The image resolution is defined as the number of image pixels per unit length, e.g., pixels per inch. By default, CSS assumes a resolution of one image pixel per CSS px unit; however, the `image-resolution` property allows a different resolution to be specified.
+画像の解像度は、単位の長さあたりの画像ピクセル数として定義されています (例: 1 インチあたりのピクセル数)。既定では、CSS は CSS ピクセル単位に 1 つの画像ピクセルの解像度を想定していますが、`image-resolution` プロパティを使用することで、異なる解像度を指定することができます。
 
 ## Syntax
 
@@ -34,13 +35,13 @@ image-resolution: unset;
 ### Values
 
 - `{{cssxref("&lt;resolution&gt;")}}`
-  - : Specifies the intrinsic resolution explicitly.
+  - : 内在解像度を明示的に指定します。
 - `from-image`
-  - : Uses the intrinsic resolution as specified by the image format. If the image does not specify its own resolution, the explicitly specified resolution is used (if given), else it defaults to `1dppx` (1 image pixel per CSS px unit).
+  - : 画像形式で指定された内在解像度を使用します。画像が自身の解像度を指定しなかった場合、明示的に指定された解像度が (与えられていれば) 使用し、そうでなければ既定で `1dppx` (1 画像ピクセル毎 CSS ピクセル)となります。
 - `snap`
-  - : If the `snap` keyword is provided, the computed resolution is the specified resolution rounded to the nearest value that would map one image pixel to an integer number of device pixels. If the resolution is taken from the image, then the used intrinsic resolution is the image's native resolution similarly adjusted.
+  - : `snap` キーワードが指定された場合、計算された解像度は、指定された解像度を、画像の 1 ピクセルを端末の整数のピクセルにマッピングする最も近い値に丸めたものになります。解像度が画像から取得された場合、使用される固有の解像度は、画像のネイティブ解像度を同様に調整したものになります。
 
-> **Note:** As vector formats such as SVG do not have an intrinsic resolution, this property has no effect on vector images.
+> **Note:** SVG などのベクター形式は内在解像度を持たないので、このプロパティはベクター画像には影響しません。
 
 ## Formal definition
 
@@ -52,9 +53,9 @@ image-resolution: unset;
 
 ## Examples
 
-### Setting a high dpi for print
+### 印刷用に高い dpi を設定
 
-When printing the document, use a higher resolution.
+文書を印刷する場合、より高い解像度を使用します。
 
 ```css
 @media print {
@@ -64,9 +65,9 @@ When printing the document, use a higher resolution.
 }
 ```
 
-### Use image resolution with fallback
+### フォールバック付きの画像の解像度を使用する
 
-Uses the resolution from the image. If the image does not have a resolution, use 300dpi rather than the default 1dppx.
+画像から解像度を使用します。画像に解像度がない場合は、既定の 1dppx ではなく 300dpi を使用します。
 
 ```css
 .myimage {
@@ -84,5 +85,5 @@ Uses the resolution from the image. If the image does not have a resolution, use
 
 ## See also
 
-- Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}.
+- その他の画像に関する CSS プロパティ: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}.
 - [Chromium bug: 1086473](https://bugs.chromium.org/p/chromium/issues/detail?id=1086473).
