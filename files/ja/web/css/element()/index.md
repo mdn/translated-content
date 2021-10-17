@@ -70,15 +70,15 @@ element(id)
 
 ![](example2.png)
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{cssxref("image/image()", "image()")}}
 - {{cssxref("image/image-set()", "image-set()")}}

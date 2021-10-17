@@ -57,15 +57,15 @@ image-orientation: flip; /* 回転せず、水平方向の反転のみ適用 */
 
 {{cssxref("&lt;transform-function&gt;")}} などの他の CSS プロパティとの組み合わせで使用された場合、 `image-orientation` による回転は、常に他の変形が行われる前に適用されます。
 
-## Formal definition
+## 公式定義
 
 {{cssinfo}}
 
-## Formal syntax
+## 形式文法
 
 {{csssyntax}}
 
-## Examples
+## 例
 
 <h3 id="Orienting_image_from_image_data">画像データから画像の向きを変更</h3>
 
@@ -97,15 +97,15 @@ imageOrientation.addEventListener("change", function (evt) {
 
 {{EmbedLiveSample("Orienting_image_from_image_data", "100%", 240)}}
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - その他の画像関連 CSS プロパティ: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}
 - {{cssxref("transform")}} および {{cssxref("rotate")}}

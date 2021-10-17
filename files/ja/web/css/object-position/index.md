@@ -44,15 +44,15 @@ object-position: unset;
 
 > **Note:** 置換要素がボックス外にはみ出る位置も指定できます。
 
-## Formal definition
+## 公式定義
 
 {{cssinfo}}
 
-## Formal syntax
+## 形式文法
 
 {{csssyntax}}
 
-## Examples
+## 例
 
 <h3 id="Positioning_image_content">画像の内容の配置を設定</h3>
 
@@ -90,18 +90,18 @@ img {
 
 1 枚目の画像は、その左端が要素のボックスの左端から 10 ピクセルはみ出して配置されています。2 番目の画像は、その右端が要素のボックスの右端と同じ位置にあり、要素のボックスの高さの 10% の位置にあります。
 
-#### Result
+#### 結果
 
 {{ EmbedLiveSample('Positioning_image_content', '100%','600px') }}
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - その他の画像関連 CSS プロパティ: {{cssxref("object-fit")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}
