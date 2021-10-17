@@ -53,11 +53,11 @@ object-fit: unset;
 - `scale-down`
   - : コンテンツは `none` または `contain` を指定したかのようにサイズが決められ、オブジェクトの実際のサイズが小さいほうを採用します。
 
-## Formal definition
+## 公式定義
 
 {{cssinfo}}
 
-## Formal syntax
+## 形式文法
 
 {{csssyntax}}
 
@@ -138,19 +138,19 @@ img {
 }
 ```
 
-#### Result
+#### 結果
 
 {{ EmbedLiveSample('Setting_object-fit_for_an_image', 500, 1100) }}
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - その他の画像関連 CSS プロパティ: {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}
 - {{cssxref("background-size")}}

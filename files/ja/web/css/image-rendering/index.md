@@ -49,15 +49,15 @@ image-rendering: unset;
 
 > **Note:** `optimizeQuality` および `optimizeSpeed` の値は、初期の草稿で (SVG の仕様 {{SVGAttr("image-rendering")}} に似たものとして) `smooth` および `pixelated` の同義語として定義されていました。
 
-## Formal definition
+## 公式定義
 
 {{cssinfo}}
 
-## Formal syntax
+## 形式文法
 
 {{csssyntax}}
 
-## Examples
+## 例
 
 <h3 id="Setting_image_scaling_algorithms">画像の拡大縮小アルゴリズムの設定</h3>
 
@@ -95,15 +95,15 @@ img {
 }
 ```
 
-#### Result
+#### 結果
 
 {{EmbedLiveSample('Setting_image_scaling_algorithms')}}
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
@@ -111,6 +111,6 @@ img {
 >
 > Chromium と Safari (WebKit) での動作については、 [`GetInterpolationQuality`](https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/style/computed_style.cc?type=cs&q=GetInterpolationQuality&g=0&l=1160) 関数と [`CSSPrimitiveValue::operator ImageRendering()`](https://github.com/WebKit/webkit/blob/9b169b6c85394d94f172e5d75ca2f6c74830e99c/Source/WebCore/css/CSSPrimitiveValueMappings.h#L4324) をそれぞれ参照してください。
 
-## See also
+## 関連情報
 
 - その他の画像に関する CSS プロパティ: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}

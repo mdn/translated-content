@@ -123,19 +123,19 @@ cross-fade(url(white.png), url(black.png), 100%); /* 完全に白 */
 }
 ```
 
-#### Result
+#### 結果
 
 {{EmbedLiveSample("Older_syntax_for_cross-fade", "330", "330")}}
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{cssxref("image")}}
 - {{cssxref("url()")}}

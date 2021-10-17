@@ -17,7 +17,7 @@ translation_of: Web/CSS/image-resolution
 
 画像の解像度は、単位の長さあたりの画像ピクセル数として定義されています (例: 1 インチあたりのピクセル数)。既定では、CSS は CSS ピクセル単位に 1 つの画像ピクセルの解像度を想定していますが、`image-resolution` プロパティを使用することで、異なる解像度を指定することができます。
 
-## Syntax
+## 構文
 
 ```css
 image-resolution: from-image;
@@ -32,7 +32,7 @@ image-resolution: revert;
 image-resolution: unset;
 ```
 
-### Values
+### 値
 
 - `{{cssxref("&lt;resolution&gt;")}}`
   - : 内在解像度を明示的に指定します。
@@ -43,15 +43,15 @@ image-resolution: unset;
 
 > **Note:** SVG などのベクター形式は内在解像度を持たないので、このプロパティはベクター画像には影響しません。
 
-## Formal definition
+## 公式定義
 
 {{cssinfo}}
 
-## Formal syntax
+## 形式文法
 
 {{csssyntax}}
 
-## Examples
+## 例
 
 ### 印刷用に高い dpi を設定
 
@@ -75,15 +75,15 @@ image-resolution: unset;
 }
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - その他の画像に関する CSS プロパティ: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}.
 - [Chromium bug: 1086473](https://bugs.chromium.org/p/chromium/issues/detail?id=1086473).

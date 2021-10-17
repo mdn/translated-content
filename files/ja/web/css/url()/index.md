@@ -62,9 +62,9 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 **`url()`** 関数は {{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}},
 [@font-face](/ja/docs/Web/CSS/@font-face) ブロック内での [src](/ja/docs/Web/CSS/@font-face/src), [@counter-style/symbol](/ja/docs/Web/CSS/@counter-style/symbols) の値として使用することができます。
 
-## Syntax
+## 構文
 
-### Values
+### 値
 
 - `<string>`
 
@@ -128,7 +128,7 @@ li::after {
 }
 ```
 
-#### Result
+#### 結果
 
 {{EmbedLiveSample("Usage_in_the_content_property", "100%", 110)}}
 
@@ -174,15 +174,15 @@ URL がフィルターへのパスとして使用される場合、 URL は以�
       filter: url(#svg-blur); /* HTML ページに埋め込まれた SVG の ID */
     }
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{cssxref("&lt;gradient&gt;")}}
 - {{cssxref("element()")}}

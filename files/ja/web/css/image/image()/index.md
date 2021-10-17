@@ -143,7 +143,7 @@ ul {
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{CSSxRef("&lt;image&gt;")}}
 - {{CSSxRef("element()")}}
