@@ -2,79 +2,71 @@
 title: ブロック、絶対配置、表レイアウトのブロック配置
 slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables
 tags:
+  - ブロック
   - CSS
-  - ブロックレイアウト
-  - ボックス配置
+  - ガイド
   - 絶対配置
+  - ボックス配置
   - 表
 translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables
 ---
-<p class="summary"><a href="/ja/docs/Web/CSS/CSS_Box_Alignment">ボックス配置仕様書</a>は、様々なレイアウト方法でどのように配置が動作するかを詳説しています。このページでは、ボックス配置は浮動、位置指定、表要素を含むボックスレイアウトのレイアウトでどのように動作するかを明らかにします。このページはブロックレイアウトとボックス配置に固有のことを詳説するため、様々なレイアウト方法に共通のボックス配置の共通機能について説明している、中心となる<a href="/ja/docs/Web/CSS/CSS_Box_Alignment">ボックス配置</a>ページを併せて読んでください。</p>
+[ボックス配置仕様書](/ja/docs/Web/CSS/CSS_Box_Alignment)は、様々なレイアウト方式でどのように配置が動作するかを詳説しています。このページでは、ボックス配置は浮動、位置指定、表要素を含むボックスレイアウトのレイアウトでどのように動作するかを明らかにします。このページはブロックレイアウトとボックス配置に固有のことを詳説するため、様々なレイアウト方式に共通のボックス配置の共通機能について説明している、中心となる[ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)ページを併せて読んでください。
 
-<div class="note">
-<p><strong>Note</strong>: At the time of writing (May 2018), there is no real support for the box alignment properties in block layout. This document details how the specification expects these properties to be implemented for completeness, and is likely to change as the specification and browser implementations develop.</p>
-</div>
+> **Note:** 執筆時点 (2018 年 5 月) では、ブロックレイアウトのボックス配置プロパティへの対応は実際にはありません。この文書では完全性を保つために、仕様がこれらのプロパティをどのように実装することを期待しているかを詳細に説明していますが、仕様やブラウザーの実装が発展するにつれて変更される可能性があります。
 
-<h2 id="align-content_and_justify-content" name="align-content_and_justify-content">align-content と justify-content</h2>
+## align-content と justify-content
 
-<p>The {{cssxref("justify-content")}} property does not apply to block containers or table cells.</p>
+{{cssxref("justify-content")}} プロパティは、ブロックコンテナーや表のセルには適用されません。
 
-<p>The {{cssxref("align-content")}} property applies to the block axis in order to align the contents of the box within its container. If a content distribution method such as <code>space-between</code>, <code>space-around</code> or <code>space-evenly</code> is requested then the fallback alignment will be used, as the content is treated as a single <a href="/ja/docs/Glossary/Alignment_Subject">alignment subject</a>.</p>
+{{cssxref("align-content")}} プロパティは、ブロック軸に適用され、ボックスの内容物をそのコンテナー内で整列させるためのものです。`space-between`、`space-around`、`space-evenly` などの内容物配分方法が要求されている場合は、内容物が 1 つの[配置対象物](/ja/docs/Glossary/Alignment_Subject)として扱われるため、代替配置が使用されます。
 
-<h2 id="justify-self">justify-self</h2>
+## justify-self
 
-<p>The {{cssxref("justify-self")}} property is used to align an item inside its containing block on the inline axis.</p>
+{{cssxref("justify-self")}} プロパティは、インライン軸上で包含ブロックの内部にアイテムを配置するために使用されます。
 
-<p>This property does not apply to floated elements or table cells.</p>
+このプロパティは浮動要素や表のセルには適用されません。
 
-<h3 id="Absolutely_positioned_elements" name="Absolutely_positioned_elements">絶対配置要素</h3>
+## align-self
 
-<p>The alignment container is the positioned block, accounting for the offset values of top, left, bottom, and right. The normal keyword resolves to <code>stretch</code>, unless the positioned item is a replaced element, in which case it resolves to <code>start</code>.</p>
+{{cssxref("align-self")}} プロパティは、ブロックレベルボックスには (浮動要素を含め) 適用されません。ブロック軸に複数のアイテムがあるからです。表のセルにも適用されません。
 
-<h2 id="align-self">align-self</h2>
+### 絶対配置要素
 
-<p>The {{cssxref("align-self")}} property does not apply to block-level boxes (including floats), because there is more than one item in the block axis. It also does not apply to table cells.</p>
+配置コンテナーは、上、左、下、右のオフセット値を考慮して位置指定されたブロックです。normal キーワードは `stretch` に解決されますが、その位置指定アイテムが置換要素である場合は `start` に解決されます。
 
-<h3 id="Absolutely_positioned_elements_2" name="Absolutely_positioned_elements_2">絶対配置要素</h3>
+## 現在のレイアウト方法での整列
 
-<p>The alignment container is the positioned block, accounting for the offset values of top, left, bottom, and right. The normal keyword resolves to <code>stretch</code>, unless the positioned item is a replaced element, in which case it resolves to <code>start</code>.</p>
+現在、ブラウザーはブロックレイアウトでのボックス配置に対応していないため、整列には既存の配置方法のいずれかを使用するか、コンテナー内の 1 つのアイテムでもフレックスボックスで指定された配置プロパティを使用するためにフレックスアイテムにするかのいずれかを選択できます。
 
-<h2 id="Aligning_in_these_layout_methods_today">Aligning in these layout methods today</h2>
+フレックスボックスが導入される前のブロックの水平方向の整列は、ブロックに auto のマージンを設定する方法が一般的でした。{{cssxref("margin")}} を `auto` に設定すると、その次元で利用可能なすべての空間を吸収するため、左右のマージンを自動に設定すると、ブロックを中央に配置することができます。
 
-<p>As we do not currently have browser support for box alignment in block layout, your options for alignment are either to use one of the existing alignment methods or, to make even a single item inside a container a flex item in order to use the alignment properties as specified in flexbox.</p>
-
-<p>Alignment of blocks horizontally prior to flexbox was typically achieved by way of setting auto margins on the block. A {{cssxref("margin")}} of <code>auto</code> will absorb all available space in that dimension, therefore setting a left and right margin of auto, you can push a block into the center:</p>
-
-<pre class="brush: css">.container {
+```css
+.container {
   width: 20em;
   margin-left: auto;
   margin-right: auto;
 }
-</pre>
+```
 
-<p>In table layout, you have access to the {{cssxref("vertical-align")}} property to align the contents of a cell inside that cell.</p>
+表レイアウトでは、{{cssxref("vertical-align")}} プロパティを使用して、セルの内容をそのセル内で配置させることができます。
 
-<p>For many use cases, turning the block container into a flex item will give you the alignment capability that you are looking for. In the example below, a container with a single item inside has been turned into a flex container for the purpose of being able to use the alignment properties.</p>
+多くの利用場面では、ブロックコンテナーをフレックスアイテムに変えることで、求めていた配置機能が得られます。以下の例では、アイテムが 1 つだけ入っているコンテナーを、配置プロパティを使用できるようにするためにフレックスコンテナーに変えています。
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}
 
-<h2 id="Reference" name="Reference">リファレンス</h2>
+## リファレンス
 
-<h3 id="CSS_Properties" name="CSS_Properties">CSS プロパティ</h3>
+### CSS プロパティ
 
-<ul>
- <li>{{cssxref("justify-content")}}</li>
- <li>{{cssxref("align-content")}}</li>
- <li>{{cssxref("justify-self")}}</li>
- <li>{{cssxref("align-self")}}</li>
-</ul>
+- {{cssxref("justify-content")}}
+- {{cssxref("align-content")}}
+- {{cssxref("justify-self")}}
+- {{cssxref("align-self")}}
 
-<h3 id="Glossary_Entries" name="Glossary_Entries">用語集の項目</h3>
+### 用語集の項目
 
-<ul>
- <li><a href="/ja/docs/Glossary/Alignment_Subject">Alignment subject</a></li>
- <li><a href="/ja/docs/Glossary/Alignment_Container">Alignment container</a></li>
- <li><a href="/ja/docs/Glossary/Fallback_Alignment">Fallback alignment</a></li>
-</ul>
+- [配置対象物](/ja/docs/Glossary/Alignment_Subject)
+- [配置コンテナー](/ja/docs/Glossary/Alignment_Container)
+- [代替配置](/ja/docs/Glossary/Fallback_Alignment)
 
-<p>{{CSSRef}}</p>
+{{CSSRef}}

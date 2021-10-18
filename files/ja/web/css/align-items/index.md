@@ -3,24 +3,23 @@ title: align-items
 slug: Web/CSS/align-items
 tags:
   - CSS
-  - CSS グリッドレイアウト
   - CSS フレックスボックス
   - CSS プロパティ
-  - CSS ボックス配置
-  - Reference
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.align-items
 translation_of: Web/CSS/align-items
 ---
-<p><span class="seoSummary"><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>align-items</code></strong> プロパティは、すべての直接の子要素に集合として {{cssxref("align-self")}} の値を設定します。</span>フレックスボックスでは{{glossary("Cross Axis", "交差軸")}}方向のアイテムの配置を制御します。グリッドレイアウトでは、{{glossary("Grid Areas", "グリッド領域")}}におけるアイテムのブロック軸方向の配置を制御します。</p>
+[CSS](/ja/docs/Web/CSS) の **`align-items`** プロパティは、すべての直接の子要素に集合として {{cssxref("align-self")}} の値を設定します。フレックスボックスでは{{glossary("Cross Axis", "交差軸")}}方向のアイテムの配置を制御します。グリッドレイアウトでは、{{glossary("Grid Areas", "グリッド領域")}}におけるアイテムのブロック軸方向の配置を制御します。
 
-<p>以下のデモは、グリッドレイアウトを使用して <code>align-items</code> のいくつかの値の動作を示しています。</p>
+以下のデモは、グリッドレイアウトを使用して `align-items` のいくつかの値の動作を示しています。
 
-<div>{{EmbedInteractiveExample("pages/css/align-items.html")}}</div>
+{{EmbedInteractiveExample("pages/css/align-items.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* 基本キーワード */
+```css
+/* 基本キーワード */
 align-items: normal;
 align-items: stretch;
 
@@ -42,63 +41,61 @@ align-items: unsafe center;
 /* グローバル値 */
 align-items: inherit;
 align-items: initial;
+align-items: revert;
 align-items: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>キーワードの効果は現在のレイアウトモードに依存します。
- <ul>
-  <li>絶対配置のレイアウトでは、このキーワードは<em>置換</em>絶対配置ボックスにおける <code>start</code> のように動作し、<em>他のすべての</em>絶対配置ボックスでは <code>stretch</code> として動作します。</li>
-  <li>絶対配置レイアウトの静的位置では、キーワードは <code>stretch</code> として動作します。</li>
-  <li>フレックスアイテムについては、このキーワードは <code>stretch</code> として動作します。</li>
-  <li>グリッドアイテムについては、このキーワードは <code>stretch</code> の一つと似た動作をしますが、ボックスにアスペクト比や内部寸法がある場合は <code>start</code> のように動作します。</li>
-  <li>このプロパティはブロックレベルボックスや、表のセルには適用されません。</li>
- </ul>
- </dd>
- <dt><code>flex-start</code></dt>
- <dd>フレックスアイテムの cross-start 側マージンの端は、ラインの cross-start の端に寄せられます。</dd>
- <dt><code>flex-end</code></dt>
- <dd>フレックスアイテムの cross-end 側マージンの端は、ラインの cross-end の端に寄せられます。</dd>
- <dt><code>center</code></dt>
- <dd>フレックスアイテムのマージンボックスは、交差軸上の中央に配置されます。アイテムの cross-size がフレックスコンテナより大きい場合は、両方向へ均等にはみ出します。</dd>
- <dt><code>start</code></dt>
- <dd>そのアイテムは、互いにその軸の配置コンテナーの始点側の端に寄せられます。</dd>
- <dt><code>end</code></dt>
- <dd>そのアイテムは、互いにその軸の配置コンテナーの終点側の端に寄せられます。</dd>
- <dt><code>self-start</code></dt>
- <dd>そのアイテムは、その軸の配置コンテナーで、そのアイテムの始点側の端に寄せられます。</dd>
- <dt><code>self-end</code></dt>
- <dd>そのアイテムは、その軸の配置コンテナーで、そのアイテムの終点側の端に寄せられます。</dd>
-</dl>
+- `normal`
 
-<dl>
- <dt><code>baseline</code></dt>
- <dt><code>first baseline</code></dt>
- <dt><code>last baseline</code></dt>
- <dd>すべてのフレックスアイテムは、ベースラインが一直線になるように配置されます。 cross-start 側マージンの端とベースラインの間の距離が最大のアイテムが、ラインの cross-start の端に寄せられます。</dd>
- <dt><code>stretch</code></dt>
- <dd>アイテムのマージンボックスの cross-size が、幅や高さの制約の範囲内でラインと同じになるように拡張されます。</dd>
- <dt><code>safe</code></dt>
- <dd>配置キーワードと共に使用します。選択されたキーワードによって、アイテムが配置コンテナーをあふれてデータの損失が発生する場合、アイテムは配置モードが <code>start</code> であったかのように配置されます。</dd>
- <dt><code>unsafe</code></dt>
- <dd>配置キーワードと共に使用します。アイテムの寸法と配置コンテナーとの関係、あふれることによってデータの損失が発生するかどうかにかかわらず、指定された値を尊重します。</dd>
-</dl>
+  - : このキーワードの効果は現在のレイアウトモードに依存します。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+    - 絶対位置指定レイアウトでは、このキーワードは*置換*絶対位置指定ボックスにおける `start` のように動作し、*他のすべての*絶対位置指定ボックスでは `stretch` として動作します。
+    - 絶対位置指定レイアウトの静的位置では、キーワードは `stretch` として動作します。
+    - フレックスアイテムについては、このキーワードは `stretch` として動作します。
+    - グリッドアイテムについては、このキーワードは `stretch` の一つと似た動作をしますが、ボックスにアスペクト比や内部寸法がある場合は `start` のように動作します。
+    - このプロパティはブロックレベルボックスや、表のセルには適用されません。
+- `flex-start`
+  - : フレックスアイテムの cross-start 側マージンの端は、ラインの cross-start の端に寄せられます。
+- `flex-end`
+  - : フレックスアイテムの cross-end 側マージンの端は、ラインの cross-end の端に寄せられます。
+- `center`
+  - : フレックスアイテムのマージンボックスは、交差軸上の中央に配置されます。アイテムの cross-size がフレックスコンテナより大きい場合は、両方向へ均等にはみ出します。
+- `start`
+  - : そのアイテムは、互いにその軸の配置コンテナーの先頭側の端に寄せられます。
+- `end`
+  - : そのアイテムは、互いにその軸の配置コンテナーの末尾側の端に寄せられます。
+- `self-start`
+  - : そのアイテムは、その軸の配置コンテナーで、そのアイテムの先頭側の端に寄せられます。
+- `self-end`
+  - : そのアイテムは、その軸の配置コンテナーで、そのアイテムの末尾側の端に寄せられます。
+- `baseline`, `first baseline`, `last baseline`
+  - : すべてのフレックスアイテムは、[フレックスコンテナーのベースライン](https://drafts.csswg.org/css-flexbox-1/#flex-baselines)に沿って配置されます。 cross-start 側マージンの端とベースラインの間の距離が最大のアイテムが、ラインの cross-start の端に寄せられます。
+- `stretch`
+  - : アイテムのマージンボックスの cross-size が、幅や高さの制約の範囲内でラインと同じになるように拡張されます。
+- `safe`
+  - : 配置キーワードと共に使用します。選択されたキーワードによって、アイテムが配置コンテナーをあふれてデータの損失が発生する場合、アイテムは配置モードが `start` であったかのように配置されます。
+- `unsafe`
+  - : 配置キーワードと共に使用します。アイテムの寸法と配置コンテナーとの関係、あふれることによってデータの損失が発生するかどうかにかかわらず、指定された値を尊重します。
+
+## 公式定義
+
+{{CSSInfo}}
+
+## 関連情報
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight[4]">#container {
+```css
+#container {
   height:200px;
   width: 240px;
-  align-items: center; /* Can be changed in the live sample */
+  align-items: center; /* ライブサンプルで変更可能 */
   background-color: #8c8c8c;
 }
 
@@ -112,7 +109,7 @@ align-items: unset;
   grid-template-columns: repeat(auto-fill, 50px);
 }
 
-div &gt; div {
+div > div {
   box-sizing: border-box;
   border: 2px solid #8c8c8c;
   width: 50px;
@@ -158,65 +155,65 @@ select {
 
 .row {
   margin-top: 10px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="container" class="flex"&gt;
-  &lt;div id="item1"&gt;1&lt;/div&gt;
-  &lt;div id="item2"&gt;2&lt;/div&gt;
-  &lt;div id="item3"&gt;3&lt;/div&gt;
-  &lt;div id="item4"&gt;4&lt;/div&gt;
-  &lt;div id="item5"&gt;5&lt;/div&gt;
-  &lt;div id="item6"&gt;6&lt;/div&gt;
-&lt;/div&gt;
+```html
+<div id="container" class="flex">
+  <div id="item1">1</div>
+  <div id="item2">2</div>
+  <div id="item3">3</div>
+  <div id="item4">4</div>
+  <div id="item5">5</div>
+  <div id="item6">6</div>
+</div>
 
-&lt;div class="row"&gt;
-  &lt;label for="display"&gt;display: &lt;/label&gt;
-  &lt;select id="display"&gt;
-    &lt;option value="flex"&gt;flex&lt;/option&gt;
-    &lt;option value="grid"&gt;grid&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
+<div class="row">
+  <label for="display">display: </label>
+  <select id="display">
+    <option value="flex">flex</option>
+    <option value="grid">grid</option>
+  </select>
+</div>
 
-&lt;div class="row"&gt;
-  &lt;label for="values"&gt;align-items: &lt;/label&gt;
-  &lt;select id="values"&gt;
-    &lt;option value="normal"&gt;normal&lt;/option&gt;
-    &lt;option value="flex-start"&gt;flex-start&lt;/option&gt;
-    &lt;option value="flex-end"&gt;flex-end&lt;/option&gt;
-    &lt;option value="center" selected&gt;center&lt;/option&gt;
-    &lt;option value="baseline"&gt;baseline&lt;/option&gt;
-    &lt;option value="stretch"&gt;stretch&lt;/option&gt;
+<div class="row">
+  <label for="values">align-items: </label>
+  <select id="values">
+    <option value="normal">normal</option>
+    <option value="flex-start">flex-start</option>
+    <option value="flex-end">flex-end</option>
+    <option value="center" selected>center</option>
+    <option value="baseline">baseline</option>
+    <option value="stretch">stretch</option>
 
-    &lt;option value="start"&gt;start&lt;/option&gt;
-    &lt;option value="end"&gt;end&lt;/option&gt;
-    &lt;option value="self-start"&gt;self-start&lt;/option&gt;
-    &lt;option value="self-end"&gt;self-end&lt;/option&gt;
-    &lt;option value="left"&gt;left&lt;/option&gt;
-    &lt;option value="right"&gt;right&lt;/option&gt;
+    <option value="start">start</option>
+    <option value="end">end</option>
+    <option value="self-start">self-start</option>
+    <option value="self-end">self-end</option>
+    <option value="left">left</option>
+    <option value="right">right</option>
 
-    &lt;option value="first baseline"&gt;first baseline&lt;/option&gt;
-    &lt;option value="last baseline"&gt;last baseline&lt;/option&gt;
+    <option value="first baseline">first baseline</option>
+    <option value="last baseline">last baseline</option>
 
-    &lt;option value="safe center"&gt;safe center&lt;/option&gt;
-    &lt;option value="unsafe center"&gt;unsafe center&lt;/option&gt;
-    &lt;option value="safe right"&gt;safe right&lt;/option&gt;
-    &lt;option value="unsafe right"&gt;unsafe right&lt;/option&gt;
-    &lt;option value="safe end"&gt;safe end&lt;/option&gt;
-    &lt;option value="unsafe end"&gt;unsafe end&lt;/option&gt;
-    &lt;option value="safe self-end"&gt;safe self-end&lt;/option&gt;
-    &lt;option value="unsafe self-end"&gt;unsafe self-end&lt;/option&gt;
-    &lt;option value="safe flex-end"&gt;safe flex-end&lt;/option&gt;
-    &lt;option value="unsafe flex-end"&gt;unsafe flex-end&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
-</pre>
+    <option value="safe center">safe center</option>
+    <option value="unsafe center">unsafe center</option>
+    <option value="safe right">safe right</option>
+    <option value="unsafe right">unsafe right</option>
+    <option value="safe end">safe end</option>
+    <option value="unsafe end">unsafe end</option>
+    <option value="safe self-end">safe self-end</option>
+    <option value="unsafe self-end">unsafe self-end</option>
+    <option value="safe flex-end">safe flex-end</option>
+    <option value="unsafe flex-end">unsafe flex-end</option>
+  </select>
+</div>
+```
 
-<div class="hidden">
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">var values = document.getElementById('values');
+```js hidden
+var values = document.getElementById('values');
 var display = document.getElementById('display');
 var container = document.getElementById('container');
 
@@ -227,57 +224,26 @@ values.addEventListener('change', function (evt) {
 display.addEventListener('change', function (evt) {
   container.className = evt.target.value;
 });
-</pre>
-</div>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example", "260px", "290px")}}</p>
+{{EmbedLiveSample("Examples", "260px", "290px")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Box Alignment", "#propdef-align-items", "align-items")}}</td>
-   <td>{{Spec2("CSS3 Box Alignment")}}</td>
-   <td>最新の構文定義に更新。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#propdef-align-items', 'align-items')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("css.properties.align-items.grid_context")}}
 
-<p>{{cssinfo}}</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat}}
 
-<h3 id="Support_in_Flex_layout" name="Support_in_Flex_layout">フレックスレイアウトでの対応</h3>
+## 関連情報
 
-<p>{{Compat("css.properties.align-items.flex_context")}}</p>
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS フレックスボックスガイド: _[フレックスコンテナーにおけるアイテムの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS グリッドガイド: _[CSS グリッドレイアウトにおけるボックスの配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)
+- {{cssxref("align-self")}} プロパティ
 
-<h3 id="Support_in_Grid_layout" name="Support_in_Grid_layout">グリッドレイアウトでの対応</h3>
-
-<p>{{Compat("css.properties.align-items.grid_context")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>CSS フレックスボックスガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">フレックスボックスの基本概念</a></em></li>
- <li>CSS フレックスボックスガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">フレックスコンテナーにおけるアイテムの配置</a></em></li>
- <li>CSS グリッドガイド: <em><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">CSS グリッドレイアウトにおけるボックスの配置</a></em></li>
- <li><a href="/ja/docs/Web/CSS/CSS_Box_Alignment">CSS ボックス配置</a></li>
- <li>{{cssxref("align-self")}} プロパティ</li>
-</ul>
-
-<div>{{CSSRef}}</div>
+{{CSSRef}}

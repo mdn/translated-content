@@ -79,7 +79,6 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */
 <h3 id="Directionally-sensitive_images">書字方向を意識した画像</h3>
 
 ```html
-<ul>
   <li dir="ltr">行頭記号が左側で右向きの矢印になります。</li>
   <li dir="rtl">行頭記号は同じ矢印で、左を指します。</li>
 </ul>
