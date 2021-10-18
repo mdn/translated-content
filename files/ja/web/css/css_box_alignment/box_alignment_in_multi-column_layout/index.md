@@ -3,49 +3,39 @@ title: 段組みレイアウトでのボックス配置
 slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
 tags:
   - CSS
-  - CSS ボックス配置
-  - CSS 段組みレイアウト
+  - ガイド
+  - ボックス配置
   - 段組み
 translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p class="summary"><a href="/ja/docs/Web/CSS/CSS_Box_Alignment">ボックス配置</a>仕様書では、様々なレイアウト方法でどのように配置が動作するかを詳説しています。このページでは、<a href="/ja/docs/Web/CSS/CSS_Columns">段組みレイアウト</a>のコンテキストでボックス配置がどのように動作するかを探ります。このページとしての目的は、段組みレイアウトとボックス配置に特有のことを探ることですので、レイアウト方法をまたがるボックス配置の共通の機能の詳細を詳説している、中心となる<a href="/ja/docs/Web/CSS/CSS_Box_Alignment">ボックス配置</a>ページと併せて読んでください。</p>
+[ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)仕様書では、さまざまなレイアウト方式で配置がどのように働くかを詳述しています。このページでは、[段組みレイアウト](/ja/docs/Web/CSS/CSS_Columns)のコンテキストにおいてボックス配置がどのように働くかを探ります。このページとしての目的は、段組みレイアウトとボックス配置として定められた事柄を詳述するためのものですので、ボックス配置の様々なレイアウト方式の間で共通の機能について詳述した、主となる[ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)ページを合わせてお読みください。
 
-<p>段組みレイアウトでは、配置コンテナーは段組みコンテナーのコンテンツボックスです。配置主題は段ボックスです。段組みレイアウトに適用するプロパティは以下に説明する通りです。</p>
+段組みレイアウトでは、配置コンテナーは段組みコンテナーのコンテンツボックスです。配置対象物は段ボックスです。段組みレイアウトに適用するプロパティは以下に説明する通りです。
 
-<div class="note">
-<p><strong>メモ</strong>: 段組みレイアウトはボックス配置仕様書に先立つものです。そしてここに挙げたプロパティは、段組みレイアウトのために設定されたものであっても、ブラウザーが対応していないことがあります。</p>
-</div>
+> **Note:** 段組みレイアウトはボックス配置仕様書に先立つものです。そしてここに挙げたプロパティは、段組みレイアウトのために設定されたものであっても、ブラウザーが対応していないことがあります。
 
-<h2 id="align-content_and_justify-content" name="align-content_and_justify-content">align-content と justify-content</h2>
+## align-content と justify-content
 
-<p>{{cssxref("align-content")}} プロパティはブロック軸に、 {{cssxref("justify-content")}} はインライン軸に適用されます。段に追加された空間は配分に使用され、段間のすき間に追加されるため、段間は {{cssxref("column-gap")}} プロパティで指定された寸法よりも大きくなることがあります。</p>
+{{cssxref("align-content")}} プロパティはブロック軸に、 {{cssxref("justify-content")}} はインライン軸に適用されます。段に追加された空間は配分に使用され、段間のすき間に追加されるため、段間は {{cssxref("column-gap")}} プロパティで指定された寸法よりも大きくなることがあります。
 
-<p><code>justify-content</code> に <code>normal</code> または <code>stretch</code> 以外の値を使用すると、 {{cssxref("column-width")}} が指定された段組みコンテナーに表示し、残りの余白は justify-content の値によって配分されます。</p>
+`justify-content` に `normal` または `stretch` 以外の値を使用すると、 {{cssxref("column-width")}} が指定された段組みコンテナーに表示し、残りの余白は justify-content の値によって配分されます。
 
-<h2 id="column-gap">column-gap</h2>
+## column-gap
 
-<p>段組みレイアウト仕様書の早期の版では、 {{cssxref("column-gap")}} プロパティが定義されていましたが、ボックス配置では他のレイアウト方法の gap プロパティと統合されました。他のレイアウト方法では、 column-gap の初期値を 0 として扱うのに対し、段組みレイアウトでは、一般に段間にすき間がないようにすることはないでしょうから、 1em として扱うようになっています。</p>
+段組みレイアウト仕様書の早期の版では、 {{cssxref("column-gap")}} プロパティが定義されていましたが、ボックス配置では他のレイアウト方式の gap プロパティと統合されました。他のレイアウト方式では、 column-gap の初期値を 0 として扱うのに対し、段組みレイアウトでは、一般に段間にすき間がないようにすることはないでしょうから、 1em として扱うようになっています。
 
-<h2 id="Reference" name="Reference">リファレンス</h2>
+## リファレンス
 
-<h3 id="CSS_Properties" name="CSS_Properties">CSS プロパティ</h3>
+### CSS プロパティ
 
-<div class="index">
-<ul>
- <li>{{cssxref("justify-content")}}</li>
- <li>{{cssxref("align-content")}}</li>
- <li>{{cssxref("column-gap")}}</li>
-</ul>
-</div>
+- {{cssxref("justify-content")}}
+- {{cssxref("align-content")}}
+- {{cssxref("column-gap")}}
 
-<h3 id="Glossary_Entries" name="Glossary_Entries">用語集</h3>
+### 用語集の項目
 
-<div class="index">
-<ul>
- <li><a href="/ja/docs/Glossary/Alignment_Subject">配置主題</a></li>
- <li><a href="/ja/docs/Glossary/Alignment_Container">配置コンテナー</a></li>
- <li><a href="/ja/docs/Glossary/Fallback_Alignment">代替配置</a></li>
-</ul>
-</div>
+- [配置対象物](/ja/docs/Glossary/Alignment_Subject)
+- [配置コンテナー](/ja/docs/Glossary/Alignment_Container)
+- [代替配置](/ja/docs/Glossary/Fallback_Alignment)

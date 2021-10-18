@@ -5,26 +5,25 @@ tags:
   - CSS
   - CSS プロパティ
   - CSS ボックス配置
-  - Reference
-  - justify-content
-  - place-content
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.justify-content
 translation_of: Web/CSS/justify-content
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>justify-content</code></strong> プロパティは、フレックスコンテナーの{{Glossary("Main Axis", "主軸")}}およびグリッドコンテナーのインライン軸に沿って、中身のアイテムの間や周囲に間隔を配置する方法を定義します。</p>
+[CSS](/ja/docs/Web/CSS) の **`justify-content`** プロパティは、フレックスコンテナーの{{Glossary("Main Axis", "主軸")}}およびグリッドコンテナーのインライン軸に沿って、中身のアイテムの間や周囲に間隔を配置する方法を定義します。
 
-<p>このデモはグリッドレイアウトを用いていくつかの値を紹介します。</p>
+このデモはグリッドレイアウトを用いていくつかの値を紹介します。
 
-<div>{{EmbedInteractiveExample("pages/css/justify-content.html")}}</div>
+{{EmbedInteractiveExample("pages/css/justify-content.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+長さや自動マージンが適用された後に配置が行われることから、[フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)で {{cssxref("flex-grow")}} が `0` ではないフレックス要素が少なくとも 1 つある場合は利用可能な空間がなくなりますので、このプロパティの効果はないでしょう。
 
-<p>長さや自動マージンが適用された後に配置が行われることから、<a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout">フレックスボックスレイアウト</a>で {{cssxref("flex-grow")}} が <code>0</code> ではないフレックス要素が少なくとも 1 つある場合は利用可能なスペースがなくなりますので、このプロパティの効果はないでしょう。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* 位置による配置 */
+```css
+/* 位置による配置 */
 justify-content: center;     /* アイテムを中央に寄せる */
 justify-content: start;      /* アイテムを先頭に寄せる */
 justify-content: end;        /* アイテムを末尾に寄せる */
@@ -59,155 +58,125 @@ justify-content: unsafe center;
 /* グローバル値 */
 justify-content: inherit;
 justify-content: initial;
+justify-content: revert;
 justify-content: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>start</code></dt>
- <dd>各アイテムは、主軸方向で配置コンテナーの先頭側の端に向けて互いに寄せて配置されます。</dd>
- <dt><code>end</code></dt>
- <dd>各アイテムは、主軸方向で配置コンテナーの末尾側の端に向けて互いに寄せて配置されます。</dd>
- <dt><code>flex-start</code></dt>
- <dd>各アイテムは、フレックスコンテナーに依存して、主軸の先頭側である配置コンテナーの端に向けて互いに寄せて配置されます。<br>
- これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は <code>start</code> のように扱われます。</dd>
- <dt><code>flex-end</code></dt>
- <dd>各アイテムは、フレックスコンテナーに依存して、主軸の末尾側である配置コンテナーの端に向けて互いに寄せて配置されます。<br>
- これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は <code>end</code> のように扱われます。</dd>
- <dt><code>center</code></dt>
- <dd>各アイテムは、主軸方向で配置コンテナーの中央に向けて互いに寄せて配置されます。</dd>
- <dt><code>left</code></dt>
- <dd>各アイテムは、主軸方向で配置コンテナーの左側の端に向けて互いに寄せて配置されます。プロパティの軸がインライン軸と平行でない場合は、この値は <code>start</code> のように動作します。</dd>
- <dt><code>right</code></dt>
- <dd>各アイテムは、主軸方向で配置コンテナーの右側の端に向けて互いに寄せて配置されます。プロパティの軸がインライン軸と平行でない場合は、この値は <code>start</code> のように動作します。</dd>
- <dt><code>normal</code></dt>
- <dd>各アイテムは <code>justify-content</code> の値が設定されていないかのように、既定の位置に寄せて配置されます。この値はグリッドおよびフレックスコンテナーの <code>stretch</code> として動作します。</dd>
- <dt><code>baseline<br>
- first baseline</code><br>
- <code>last baseline</code></dt>
- <dd>first-baseline 配置または last-baseline 配置への関与を指定します。ボックスの最初または最後のベースラインセットの配置ベースラインを、ベースライン共有グループ内のすべてのボックスで共有される最初または最後のベースラインセットで対応するベースラインに揃えます。<br>
- <code>first baseline</code> の代替配置は <code>start</code>、<code>last baseline</code> の代替配置は <code>end</code> です。</dd>
- <dt><code>space-between</code></dt>
- <dd>各アイテムは、配置コンテナーの中で主軸方向に均等に配置されます。隣接するアイテム同士の間隔は同じになります。最初のアイテムは主軸の先頭側に寄せられ、最後のアイテムは主軸の末尾側に寄せられます。</dd>
- <dt><code>space-around</code></dt>
- <dd>各アイテムは、配置コンテナーの中で主軸方向に均等に配置されます。隣接するアイテム同士の間隔は同じになります。最初のアイテムの前と最後のアイテムの後の余白は、隣接するアイテム同士の間隔の半分の幅になります。</dd>
- <dt><code>space-evenly</code></dt>
- <dd>各アイテムは、配置コンテナーの中で主軸方向に均等に配置されます。隣接するアイテム同士の間隔、最初のアイテムの前の余白、最後のアイテムの後の余白は、まったく同じ幅になります。</dd>
- <dt><code>stretch</code></dt>
- <dd>
- <p>各アイテムの主軸に沿った寸法の合計が配置コンテナーの寸法よりも小さい場合、寸法が <code>auto</code> のアイテムは、 {{cssxref("max-height")}}/{{cssxref("max-width")}} (または同等の機能) での制約を尊重しつつ、 (比例的にではなく) 均等に引き伸ばされ、主軸方向の寸法の合計が配置コンテナーを満たすようになります。</p>
 
- <div class="blockIndicator note">
- <p><strong>メモ:</strong> <code>stretch</code> はフレキシブルボックス (フレックスボックス) は対応していません。</p>
- </div>
- </dd>
- <dt><code>safe</code></dt>
- <dd>配置キーワードと共に使用します。選択されたキーワードによって、アイテムが配置コンテナーをあふれてデータの損失が発生する場合、アイテムは配置モードが <code>start</code> であったかのように配置されます。</dd>
- <dt><code>unsafe</code></dt>
- <dd>配置キーワードと共に使用します。アイテムと配置コンテナーの相対的な寸法にかかわらず、またあふれることによってデータの損失が発生するかどうかにかかわらず、指定した値を尊重します。</dd>
-</dl>
+- `start`
+  - : 各アイテムは、主軸方向で配置コンテナーの先頭側の端に向けて互いに寄せて配置されます。
+- `end`
+  - : 各アイテムは、主軸方向で配置コンテナーの末尾側の端に向けて互いに寄せて配置されます。
+- `flex-start`
+  - : 各アイテムは、フレックスコンテナーに依存して、主軸の先頭側である配置コンテナーの端に向けて互いに寄せて配置されます。
+    これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `start` のように扱われます。
+- `flex-end`
+  - : 各アイテムは、フレックスコンテナーに依存して、主軸の末尾側である配置コンテナーの端に向けて互いに寄せて配置されます。
+    これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `end` のように扱われます。
+- `center`
+  - : 各アイテムは、主軸方向で配置コンテナーの中央に向けて互いに寄せて配置されます。
+- `left`
+  - : 各アイテムは、主軸方向で配置コンテナーの左側の端に向けて互いに寄せて配置されます。プロパティの軸がインライン軸と平行でない場合は、この値は `start` のように動作します。
+- `right`
+  - : 各アイテムは、主軸方向で配置コンテナーの右側の端に向けて互いに寄せて配置されます。プロパティの軸がインライン軸と平行でない場合は、この値は `start` のように動作します。
+- `normal`
+  - : 各アイテムは `justify-content` の値が設定されていないかのように、既定の位置に寄せて配置されます。この値はグリッドおよびフレックスコンテナーの `stretch` として動作します。
+- `baseline`, `first baseline`, `last baseline`
+  - : first-baseline 配置または last-baseline 配置への関与を指定します。ボックスの最初または最後のベースラインセットの配置ベースラインを、ベースライン共有グループ内のすべてのボックスで共有される最初または最後のベースラインセットで対応するベースラインに揃えます。
+    `first baseline` の代替配置は `start`、`last baseline` の代替配置は `end` です。
+- `space-between`
+  - : 各アイテムは、配置コンテナーの中で主軸方向に均等に配置されます。隣接するアイテム同士の間隔は同じになります。最初のアイテムは主軸の先頭側に寄せられ、最後のアイテムは主軸の末尾側に寄せられます。
+- `space-around`
+  - : 各アイテムは、配置コンテナーの中で主軸方向に均等に配置されます。隣接するアイテム同士の間隔は同じになります。最初のアイテムの前と最後のアイテムの後の余白は、隣接するアイテム同士の間隔の半分の幅になります。
+- `space-evenly`
+  - : 各アイテムは、配置コンテナーの中で主軸方向に均等に配置されます。隣接するアイテム同士の間隔、最初のアイテムの前の余白、最後のアイテムの後の余白は、まったく同じ幅になります。
+- `stretch`
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+  - : 各アイテムの主軸に沿った寸法の合計が配置コンテナーの寸法よりも小さい場合、寸法が `auto` のアイテムは、 {{cssxref("max-height")}}/{{cssxref("max-width")}} (または同等の機能) での制約を尊重しつつ、 (比例的にではなく) 均等に引き伸ばされ、主軸方向の寸法の合計が配置コンテナーを満たすようになります。
+
+    > **Note:** `stretch` はフレキシブルボックス (フレックスボックス) は対応していません。
+
+- `safe`
+  - : 配置キーワードと共に使用します。選択されたキーワードによって、アイテムが配置コンテナーをあふれてデータの損失が発生する場合、アイテムは配置モードが `start` であったかのように配置されます。
+- `unsafe`
+  - : 配置キーワードと共に使用します。アイテムと配置コンテナーの相対的な寸法にかかわらず、またあふれることによってデータの損失が発生するかどうかにかかわらず、指定した値を尊重します。
+
+## 公式定義
+
+{{cssinfo}}
+
+## 関連情報
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="CSS">CSS</h3>
+<h3 id="Setting_flex_item_distribution">フレックスアイテムの配分の設定</h3>
 
-<pre class="brush: css">#container {
+#### CSS
+
+```css
+#container {
   display: flex;
   justify-content: space-between; /* live sample で変更可能 */
 }
 
-#container &gt; div {
+#container > div {
   width: 100px;
   height: 100px;
   background: linear-gradient(-45deg, #788cff, #b4c8ff);
 }
-</pre>
+```
 
-<div class="hidden">
-<h3 id="HTML">HTML</h3>
+```html hidden
+<div id="container">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+<select id="justifyContent">
+  <option value="start">start</option>
+  <option value="end">end</option>
+  <option value="flex-start">flex-start</option>
+  <option value="flex-end">flex-end</option>
+  <option value="center">center</option>
+  <option value="left">left</option>
+  <option value="right">right</option>
+  <option value="baseline">baseline</option>
+  <option value="first baseline">first baseline</option>
+  <option value="last baseline">last baseline</option>
+  <option value="space-between" selected>space-between</option>
+  <option value="space-around">space-around</option>
+  <option value="space-evenly">space-evenly</option>
+  <option value="stretch">stretch</option>
+</select>
+```
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;select id="justifyContent"&gt;
-  &lt;option value="start"&gt;start&lt;/option&gt;
-  &lt;option value="end"&gt;end&lt;/option&gt;
-  &lt;option value="flex-start"&gt;flex-start&lt;/option&gt;
-  &lt;option value="flex-end"&gt;flex-end&lt;/option&gt;
-  &lt;option value="center"&gt;center&lt;/option&gt;
-  &lt;option value="left"&gt;left&lt;/option&gt;
-  &lt;option value="right"&gt;right&lt;/option&gt;
-  &lt;option value="baseline"&gt;baseline&lt;/option&gt;
-  &lt;option value="first baseline"&gt;first baseline&lt;/option&gt;
-  &lt;option value="last baseline"&gt;last baseline&lt;/option&gt;
-  &lt;option value="space-between" selected&gt;space-between&lt;/option&gt;
-  &lt;option value="space-around"&gt;space-around&lt;/option&gt;
-  &lt;option value="space-evenly"&gt;space-evenly&lt;/option&gt;
-  &lt;option value="stretch"&gt;stretch&lt;/option&gt;
-&lt;/select&gt;</pre>
-
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">var justifyContent = document.getElementById("justifyContent");
+```js hidden
+var justifyContent = document.getElementById("justifyContent");
 justifyContent.addEventListener("change", function (evt) {
   document.getElementById("container").style.justifyContent =
       evt.target.value;
 });
-</pre>
-</div>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+#### 結果
 
-<p>{{EmbedLiveSample("Example", "100%", 140)}}</p>
+{{EmbedLiveSample("Setting_flex_item_distribution", "100%", 180)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>仕様書</th>
-   <th>状態</th>
-   <th>備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Box Alignment', '#propdef-justify-content', 'justify-content')}}</td>
-   <td>{{Spec2('CSS3 Box Alignment')}}</td>
-   <td>[ first | last ]? baseline, self-start, self-end, start, end, left, right, unsafe | safe の値を追加</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#propdef-justify-content', 'justify-content')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("css.properties.justify-content.grid_context")}}
 
-<div>{{cssinfo}}</div>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat}}
 
-<h3 id="Support_in_Flex_layout" name="Support_in_Flex_layout">フレックスレイアウトでの対応</h3>
+## 関連情報
 
-<p>{{Compat("css.properties.justify-content.flex_context")}}</p>
-
-<h3 id="Support_in_Grid_layout" name="Support_in_Grid_layout">グリッドレイアウトでの対応</h3>
-
-<p>{{Compat("css.properties.justify-content.grid_context")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>CSS フレックスボックスガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">フレックスボックスの基本概念</a></em></li>
- <li>CSS フレックスボックスガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">フレックスコンテナー内でのアイテムの配置</a></em></li>
- <li>CSS グリッドガイド: <em><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">CSS グリッドレイアウト内でのボックス配置</a></em></li>
- <li><a href="/ja/docs/Web/CSS/CSS_Box_Alignment">CSS ボックス配置</a></li>
-</ul>
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS フレックスボックスガイド: _[フレックスコンテナー内でのアイテムの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS グリッドガイド: _[CSS グリッドレイアウト内でのボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)
