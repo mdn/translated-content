@@ -150,7 +150,7 @@ el.addEventListener("click", modifyText, false);
 
 <p>Если вам нужно передать параметры в обработчик, вы можете использовать анонимные функции.</p>
 
-<h3 id="Event_Listener_with_anonymous_function" name="Event_Listener_with_anonymous_function">Слушатель события с анонимной функцией</h3>
+<h3 id="Event_Listener_with_anonymous_function" name="Event_Listener_with_anonymous_function">Обработчик события с анонимной функцией</h3>
 
 <h4 id="HTML_Содержимое_2">HTML Содержимое</h4>
 
@@ -178,7 +178,7 @@ el.addEventListener("click", function(){modifyText("четыре")}, false);
 
 <p>{{EmbedLiveSample('Event_Listener_with_anonymous_function')}}</p>
 
-<h3 id="Слушатель_события_со_стрелочной_функцией">Слушатель события со стрелочной функцией</h3>
+<h3 id="Обработчик_события_со_стрелочной_функцией">Обработчик события со стрелочной функцией</h3>
 
 <h4 id="HTML">HTML</h4>
 
@@ -389,7 +389,7 @@ element.onclick = function() {
 };
 </pre>
 
-<p>Этот метод заменяет текущие слушатели события <code>click</code>, если они есть. Тоже самое для других событий и ассоциируемых с ними  обработчиков, таких как <code>blur</code> (<code>onblur</code>), <code>keypress</code> (<code>onkeypress</code>), и так далее.</p>
+<p>Этот метод заменяет текущие обработчики события <code>click</code>, если они есть. Тоже самое для других событий и ассоциируемых с ними  обработчиков, таких как <code>blur</code> (<code>onblur</code>), <code>keypress</code> (<code>onkeypress</code>), и так далее.</p>
 
 <p>Так как это по существу было частью DOM 0, этот метод имеет широкую поддержку и не требует специального кросс-браузерного кода; следовательно, это обычно используется, чтобы добавлять обработчики динамически, если не требуются расширенные возможности <code>addEventListener()</code>.</p>
 
