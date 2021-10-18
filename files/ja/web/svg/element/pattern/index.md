@@ -1,120 +1,101 @@
 ---
 title: <pattern>
 slug: Web/SVG/Element/pattern
+tags:
+  - 要素
+  - SVG
+  - SVG コンテナー
+browser-compat: svg.elements.pattern
 translation_of: Web/SVG/Element/pattern
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><strong><code>&lt;pattern&gt;</code></strong>要素は同じ図形をx軸y軸方向にタイルを敷き詰めるように繰り返し描画させます．</p>
+**`<pattern>`** 要素は、ある領域をカバーするために、x座標とy座標の間隔を繰り返して (「タイル」) 再描画することができるグラフィックオブジェクトを定義します。
 
-<p><code>&lt;pattern&gt;</code>は他の<a href="/ja/docs/Web/SVG/Tutorial/Basic_Shapes">graphics elements</a>の{{SVGAttr("fill")}}または{{SVGAttr("stroke")}}属性として参照されることが可能です．</p>
+`<pattern>` は、他の[グラフィック要素](/ja/docs/Web/SVG/Tutorial/Basic_Shapes)の {{SVGAttr("fill")}} や {{SVGAttr("stroke")}} 属性から参照され、参照されたパターンでそれらの要素を埋めたり、描いたりします。
 
-<div id="Exemple">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2 id="Example">例</h2>
 
-<pre class="brush: html; highlight[4]">&lt;svg viewBox="0 0 230 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;pattern id="star" viewBox="0,0,10,10" width="10%" height="10%"&gt;
-      &lt;polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2"/&gt;
-    &lt;/pattern&gt;
-  &lt;/defs&gt;
+```css hidden
+html,body,svg { height:100% }
+```
 
-  &lt;circle cx="50"  cy="50" r="50" fill="url(#star)"/&gt;
-  &lt;circle cx="180" cy="50" r="40" fill="none" stroke-width="20" stroke="url(#star)"/&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 230 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="star" viewBox="0,0,10,10" width="10%" height="10%">
+      <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2"/>
+    </pattern>
+  </defs>
 
-<p>{{EmbedLiveSample('Exemple', 150, '100%')}}</p>
-</div>
+  <circle cx="50"  cy="50" r="50" fill="url(#star)"/>
+  <circle cx="180" cy="50" r="40" fill="none" stroke-width="20" stroke="url(#star)"/>
+</svg>
+```
 
-<h2 id="属性">属性</h2>
+{{EmbedLiveSample('Example', 150, '100%')}}
 
-<dl>
- <dt>{{SVGAttr("height")}}</dt>
- <dd>This attribute determines the height of the pattern tile.<br>
- <small><em>Value type</em>: <a href="/ja/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/ja/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a>; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("href")}}</dt>
- <dd>This attribute reference a template pattern that provides default values for the <code>&lt;pattern&gt;</code> attributes.<br>
- <small><em>Value type</em>: <a href="/ja/docs/Web/SVG/Content_type#URL"><strong>&lt;URL&gt;</strong></a>; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("patternContentUnits")}}</dt>
- <dd>This attribute defines the coordinate system for the contents of the {{ SVGElement("pattern") }}.<br>
- <small><em>Value type</em>: <code>userSpaceOnUse</code>|<code>objectBoundingBox</code>; <em>Default value</em>: <code>userSpaceOnUse</code>; <em>Animatable</em>: <strong>yes</strong></small>
- <p class="note"><strong>Note:</strong> This attribute has no effect if a <code>viewBox</code> attribute is specified on the <code>&lt;pattern&gt;</code> element.</p>
- </dd>
- <dt>{{SVGAttr("patternTransform")}}</dt>
- <dd>This attribute contains the definition of an optional additional transformation from the pattern coordinate system onto the target coordinate system.<br>
- <small><em>Value type</em>: <strong><a href="/ja/docs/Web/SVG/Content_type#Transform-list">&lt;transform-list&gt;</a></strong>; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("patternUnits")}}</dt>
- <dd>This attribute defines the coordinate system for attributes <code>x</code>, <code>y</code>, <code>width</code> and <code>height</code>.<br>
- <small><em>Value type</em>: <code>userSpaceOnUse</code>|<code>objectBoundingBox</code>; <em>Default value</em>: <code>objectBoundingBox</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("preserveAspectRatio")}}</dt>
- <dd>This attribute defines how the svg fragment must be deformed if it is embedded in a container with a different aspect ratio.<br>
- <small><em>Value type</em>: (<code>none</code>| <code>xMinYMin</code>| <code>xMidYMin</code>| <code>xMaxYMin</code>| <code>xMinYMid</code>| <code>xMidYMid</code>| <code>xMaxYMid</code>| <code>xMinYMax</code>| <code>xMidYMax</code>| <code>xMaxYMax</code>) (<code>meet</code>|<code>slice</code>)? ; <em>Default value</em>: <code>xMidYMid meet</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("viewBox")}}</dt>
- <dd>This attribute defines the bound of the SVG viewport for the pattern fragment.<br>
- <small><em>Value type</em>: <strong><a href="/ja/docs/Web/SVG/Content_type#List-of-Ts">&lt;list-of-numbers&gt;</a></strong> ; <em>Default value</em>: none; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("width")}}</dt>
- <dd>This attribute determines the width of the pattern tile.<br>
- <small><em>Value type</em>: <a href="/ja/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/ja/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("x")}}</dt>
- <dd>This attribute determines the x coordinate shift of the pattern tile.<br>
- <small><em>Value type</em>: <a href="/ja/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/ja/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}</dt>
- <dd>This attribute reference a template pattern that provides default values for the <code>&lt;pattern&gt;</code> attributes.<br>
- <small><em>Value type</em>: <a href="/ja/docs/Web/SVG/Content_type#URL"><strong>&lt;URL&gt;</strong></a>; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small>
- <p class="note"><strong>Note:</strong> For browsers implementing <code>href</code>, if both <code>href</code> and <code>xlink:href</code> are set, <code>xlink:href</code> will be ignored and only <code>href</code> will be used.</p>
- </dd>
- <dt>{{SVGAttr("y")}}</dt>
- <dd>This attribute determines the y coordinate shift of the pattern tile.<br>
- <small><em>Value type</em>: <a href="/ja/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/ja/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
-</dl>
+## 属性
 
-<h3 id="グローバル属性">グローバル属性</h3>
+*   {{SVGAttr("height")}}
+    *   : この属性はパターンタイルの高さを指定します。
+        *値の型*: [**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage); *既定値*: `0`; *アニメーション*: **可**
+*   {{SVGAttr("href")}}
+    *   : この属性は `<pattern>` 属性の既定値を提供するテンプレートパターンを参照します。
+        *値の型*: [**\<URL>**](/ja/docs/Web/SVG/Content_type#url); *既定値*: *none*; *アニメーション*: **可**
+*   {{SVGAttr("patternContentUnits")}}
+    *   : この属性は {{SVGElement("pattern")}} の内容物の座標系を定義します。
+        *値の型*: `userSpaceOnUse`|`objectBoundingBox`; *既定値*: `userSpaceOnUse`; *アニメーション*: **可**
 
-<dl>
- <dt><a href="/ja/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="/ja/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/ja/docs/Web/SVG/Attribute/Conditional_Processing">Conditional Processing Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt><a href="/ja/docs/Web/SVG/Attribute/Presentation">Presentation Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>XLink Attributes</dt>
- <dd><small>Most notably: {{SVGAttr("xlink:title")}}</small></dd>
-</dl>
+        > **Note:** この属性は、`viewBox` 属性が `<pattern>` 上に指定された場合は効果がありません。
+*   {{SVGAttr("patternTransform")}}
+    *   : この属性は、パターン座標系からターゲット座標系への任意の追加変換の定義が入ります。
+        *値の型*: **[\<transform-list>](/ja/docs/Web/SVG/Content_type#transform-list)**; *既定値*: *none*; *アニメーション*: **可**
+*   {{SVGAttr("patternUnits")}}
+    *   : この属性は `x`, `y`, `width`, `height` の各属性の座標系を定義します。
+        *値の型*: `userSpaceOnUse`|`objectBoundingBox`; *既定値*: `objectBoundingBox`; *アニメーション*: **可**
+*   {{SVGAttr("preserveAspectRatio")}}
+    *   : この属性は、SVG フラグメントが異なるアスペクト比を持つコンテナーに埋め込まれた場合に、どのように変形させなければならないかを定義します。
+        *値の型*: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; *既定値*: `xMidYMid meet`; *アニメーション*: **可**
+*   {{SVGAttr("viewBox")}}
+    *   : この属性は、パターンフラグメントの SVG ビューポートの境界を定義します。
+        *値の型*: **[\<list-of-numbers>](/ja/docs/Web/SVG/Content_type#list-of-ts)** ; *既定値*: none; *アニメーション*: **可**
+*   {{SVGAttr("width")}}
+    *   : この属性はパターンタイルの幅を指定します。
+        *値の型*: [**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage) ; *既定値*: `0`; *アニメーション*: **可**
+*   {{SVGAttr("x")}}
+    *   : この属性はパターンタイルの x 方向のシフト量を指定します。
+        *値の型*: [**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage) ; *既定値*: `0`; *アニメーション*: **可**
+*   {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+    *   : この属性は `<pattern>` 属性の既定値を提供するテンプレートパターンを参照します。
+        *値の型*: [**\<URL>**](/ja/docs/Web/SVG/Content_type#url); *既定値*: *none*; *アニメーション*: **可**
 
-<h2 id="Usage_notes">Usage notes</h2>
+        > **Note:** `href` を実装しているブラウザーでは、 `href` と `xlink:href` を共に設定した場合、`xlink:href` は無視され `href` のみが使用されます。
+*   {{SVGAttr("y")}}
+    *   : この属性はパターンタイルの y 方向のシフト量を指定します。
+        *値の型*: [**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage) ; *既定値*: `0`; *アニメーション*: **可**
 
-<p>{{svginfo}}</p>
+### グローバル属性
 
-<h2 id="Specifications">Specifications</h2>
+*   [コア属性](/ja/docs/Web/SVG/Attribute/Core)
+    *   : 最重要なもの: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+*   [スタイル付け属性](/ja/docs/Web/SVG/Attribute/Styling)
+    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+*   [条件処理属性](/ja/docs/Web/SVG/Attribute/Conditional_Processing)
+    *   : 最重要なもの: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+*   [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)
+    *   : 最重要なもの: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+*   XLink 属性
+    *   : 最重要なもの: {{SVGAttr("xlink:title")}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'pservers.html#Patterns', '&lt;pattern&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'pservers.html#Patterns', '&lt;pattern&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+## 利用メモ
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{svginfo}}
 
+## 仕様書
 
+{{Specifications}}
 
-<p>{{Compat("svg.elements.pattern")}}</p>
+## ブラウザーの互換性
+
+{{Compat}}
