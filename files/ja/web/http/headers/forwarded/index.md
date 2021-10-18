@@ -5,64 +5,63 @@ tags:
   - HTTP
   - HTTP ヘッダー
   - Reference
-  - ヘッダー
   - リクエストヘッダー
+  - ヘッダー
+browser-compat: http.headers.Forwarded
 translation_of: Web/HTTP/Headers/Forwarded
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong><code>Forwarded</code></strong> ヘッダーは、プロキシが要求のパスに含まれているときに変更または失われた、プロキシサーバーのクライアント側の情報が含まれます。</p>
+**`Forwarded`** ヘッダーは、[リバースプロキシサーバー](/ja/docs/Web/HTTP/Proxy_servers_and_tunneling)からの情報を含みます。リクエストの経路にプロキシーが介在している場合には、変更されたり失われたりします。
 
-<p>このヘッダーの代替で、事実上の標準となっているものは {{HTTPHeader("X-Forwarded-For")}}, {{HTTPHeader("X-Forwarded-Host")}}, {{HTTPHeader("X-Forwarded-Proto")}} ヘッダーです。</p>
+このヘッダーの代替で、事実上の標準となっているものは {{HTTPHeader("X-Forwarded-For")}}, {{HTTPHeader("X-Forwarded-Host")}}, {{HTTPHeader("X-Forwarded-Proto")}} ヘッダーです。
 
-<p>このヘッダーは、デバッグ、統計、ロケーション依存コンテンツの生成に使用され、クライアントの IP アドレスなどの機密情報を公開します。したがって、このヘッダーを展開する際には、ユーザーのプライバシーを念頭に置く必要があります。</p>
+このヘッダーは、デバッグ、統計、ロケーション依存コンテンツの生成に使用され、クライアントの IP アドレスなどの機密情報を公開します。したがって、このヘッダーを展開する際には、ユーザーのプライバシーを念頭に置く必要があります。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">ヘッダー種別</th>
-   <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
-   <td>いいえ</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">ヘッダー種別</th>
+      <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <td>いいえ</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">Forwarded: by=&lt;identifier&gt;; for=&lt;identifier&gt;; host=&lt;host&gt;; proto=&lt;http|https&gt;
-</pre>
+```
+Forwarded: by=<identifier>;for=<identifier>;host=<host>;proto=<http|https>
+```
 
-<h2 id="Directives" name="Directives">ディレクティブ</h2>
+## ディレクティブ
 
-<dl>
- <dt>&lt;identifier&gt;</dt>
- <dd>プロキシの使用時に変更または失われた情報を公開する識別子。これは次のいずれかです。
- <ul>
-  <li>IP アドレス (v4 又は v6、任意でポート番号付き、 ipv6 は引用符と角括弧で囲まれます)</li>
-  <li>難読化された識別子 ("_hidden" や "_secret" など)</li>
-  <li>又は先行するエンティティが不明な場合 (及び依然として要求の転送が行われたことを示したい場合) は "unknown"</li>
- </ul>
- </dd>
- <dt>by=&lt;identifier&gt;</dt>
- <dd>要求がプロキシサーバーに入ってきたインターフェイス。</dd>
- <dt>for=&lt;identifier&gt;</dt>
- <dd>要求を発行したクライアントと、その後のプロキシチェーン内のプロキシ。</dd>
- <dt>host=&lt;host&gt;</dt>
- <dd>プロキシから受信したときの {{HTTPHeader("Host")}} リクエストヘッダー。</dd>
- <dt>proto=&lt;http|https&gt;</dt>
- <dd>
- <p>そのプロトコルが要求の作成に使用されたか (ふつうは "http" 又は "https")。</p>
- </dd>
-</dl>
+- \<identifier>
 
-<h2 id="Examples" name="Examples">例</h2>
+  - : プロキシーの使用時に変更または失われた情報を公開する識別子。これは次のいずれかです。
 
-<h3 id="Using_the_Forwarded_header" name="Using_the_Forwarded_header"><code>Forwarded</code> ヘッダーの使用</h3>
+    - IP アドレス (v4 または v6、任意でポート番号付き、 ipv6 は引用符と角括弧で囲まれます)
+    - 難読化された識別子 ("\_hidden" や "\_secret" など)
+    - または先行するエンティティが不明な場合 (およびリクエストの転送が行われたことを示したい場合) は "unknown"
 
-<pre>Forwarded: for="_mdn"
+- by=\<identifier>
+  - : リクエストがプロキシサーバーに入ってきたインターフェイス。
+- for=\<identifier>
+  - : リクエストを発行したクライアントと、その後のプロキシーチェーン内のプロキシー。
+- host=\<host>
+  - : プロキシーから受信したときの {{HTTPHeader("Host")}} リクエストヘッダー。
+- proto=\<http|https>
+  - : そのプロトコルがリクエストの作成に使用されたか (ふつうは "http" または "https")。
+
+## 例
+
+### `Forwarded` ヘッダーの使用
+
+```
+Forwarded: for="_mdn"
 
 # 大文字小文字の区別なし
 Forwarded: For="[2001:db8:cafe::17]:4711"
@@ -72,45 +71,31 @@ Forwarded: for=192.0.2.60; proto=http; by=203.0.113.43
 
 # 複数の値をコンマで区切って追加可能
 Forwarded: for=192.0.2.43, for=198.51.100.17
-</pre>
+```
 
-<h3 id="Transitioning_from_X-Forwarded-For_to_Forwarded" name="Transitioning_from_X-Forwarded-For_to_Forwarded"><code>X-Forwarded-For</code> から <code>Forwarded</code> への移行</h3>
+### `X-Forwarded-For` から `Forwarded` への移行
 
-<p>アプリケーション、サーバー、プロキシが標準化された <code>Forwarded</code> ヘッダーに対応している場合は、 {{HTTPHeader("X-Forwarded-For")}} を置き換えることができます。なお、 IPv6 アドレスは、 <code>Forwarded</code> では引用符と角括弧で囲む必要があります。</p>
+アプリケーション、サーバー、プロキシーが標準化された `Forwarded` ヘッダーに対応している場合は、 {{HTTPHeader("X-Forwarded-For")}} を置き換えることができます。なお、 IPv6 アドレスは、 `Forwarded` では引用符と角括弧で囲む必要があります。
 
-<pre>X-Forwarded-For: 123.34.567.89
+```
+X-Forwarded-For: 123.34.567.89
 Forwarded: for=123.34.567.89
 
-X-Forwarded-For: 192.0.2.43, 2001:db8:cafe::17
+X-Forwarded-For: 192.0.2.43, "[2001:db8:cafe::17]"
 Forwarded: for=192.0.2.43, for="[2001:db8:cafe::17]"
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">題名</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7239", "Forwarded", "4")}}</td>
-   <td>Forwarded HTTP Extension</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("http.headers.Forwarded")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTTPHeader("X-Forwarded-For")}}</li>
- <li>{{HTTPHeader("X-Forwarded-Host")}}</li>
- <li>{{HTTPHeader("X-Forwarded-Proto")}}</li>
- <li>{{HTTPHeader("Via")}} – 接続しているクライアントではなく、プロキシ自身についての情報を提供します。</li>
-</ul>
+- {{HTTPHeader("X-Forwarded-For")}}
+- {{HTTPHeader("X-Forwarded-Host")}}
+- {{HTTPHeader("X-Forwarded-Proto")}}
+- {{HTTPHeader("Via")}} – 接続しているクライアントではなく、プロキシー自身についての情報を提供します。
