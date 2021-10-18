@@ -1,17 +1,15 @@
 ---
-title: Alignment container
+title: Alignment container (配置コンテナー)
 slug: Glossary/Alignment_Container
 tags:
-  - Alignment container
+  - 配置コンテナー
   - CSS
-  - Glossary
-  - alignment
+  - 用語集
+  - 配置
 translation_of: Glossary/Alignment_Container
 ---
-<p><strong>アラインメントコンテナー</strong>の四角形の中では、<a href="/ja/docs/Glossary/Alignment_Subject">アラインメントサブジェクト</a>が整列されます。これはレイアウトのモードによって定義されます。通常はアラインメントサブジェクトが内包されているブロックのことを指します。ボックスの writing mode は外側のコンテナーによって決定されます。</p>
+**配置コンテナー**は、中に[配置対象物](/ja/docs/Glossary/Alignment_Subject)が配置される矩形です。これはレイアウトモードによって定義されます。通常は配置対象物を包含しているブロックのことを指します。ボックスの書字方向は外側のコンテナーによって決定されます。
 
-<h2 id="Learn_more" name="Learn_more">関連項目</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a></li>
-</ul>
+- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)

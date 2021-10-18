@@ -1,33 +1,29 @@
 ---
-title: Alignment subject
+title: Alignment subject (配置対象物)
 slug: Glossary/Alignment_Subject
 tags:
-  - Alignment subject
+  - 配置対象物
   - CSS
-  - Glossary
-  - alignment
+  - 用語集
+  - 配置
 translation_of: Glossary/Alignment_Subject
 ---
-<p><a href="/ja/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a> の中では、<strong>アラインメントサブジェクト</strong>はプロパティによって整列されるものです。</p>
+[CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)では、**配置対象物**はそのプロパティによって配置されるものを指します。
 
-<p>{{cssxref("justify-self")}} や {{cssxref("align-self")}} が設定されている場合、アラインメントサブジェクトはこれらのプロパティが設定されているボックスのマージンボックスです。そのボックスの writing mode を使用します。</p>
+{{cssxref("justify-self")}} や {{cssxref("align-self")}} が設定されている場合、配置対象物はこれらのプロパティが設定されているボックスのマージンボックスです。そのボックスの書字方向を使用します。
 
-<p>{{cssxref("justify-content")}} や {{cssxref("align-content")}}の場合は、ボックスの writing mode も使用されます。アラインメントサブジェクトの定義は使用されているレイアウトのモードによります。</p>
+{{cssxref("justify-content")}} や {{cssxref("align-content")}} の場合は、ボックスの書字方向も使用されます。配置対象物の定義は、使用されているレイアウトモードによります。
 
-<dl>
- <dt>ブロックコンテナー ( テーブルセルを含む )</dt>
- <dd>シングルユニットとしてのブロックのコンテンツ全体です。</dd>
- <dt>マルチカラムコンテナー</dt>
- <dd>カラムボックスです。間にスペースが挿入されているカラムボックスは、関連するカラムギャップに追加されます。</dd>
- <dt>フレックスコンテナー</dt>
- <dd>{{cssxref("justify-content")}} の場合は、それぞれのフレックス行の中のフレックスアイテムです。<br>
- {{cssxref("align-content")}} の場合は、フレックス行です。ただし、複数行のフレックスコンテナーにだけ効果を発揮します。</dd>
- <dt>グリッドコンテナー</dt>
- <dd>適切な軸のグリッドトラックです。トラック間にスペースを挿入すると、関連するガターに追加されます。折りたたまれたガターはスペース挿入の単一の機会です。</dd>
-</dl>
+- ブロックコンテナー (テーブルセルを含む)
+  - : 単一のユニットとしてのブロックの内容物全体です。
+- 段組みコンテナー
+  - : 段ボックスです。段ボックスの間に挿入されたスペースが、関連する段間に追加されます。
+- フレックスコンテナー
+  - : {{cssxref("justify-content")}} の場合は、それぞれのフレックス行の中のフレックスアイテムです。
+    {{cssxref("align-content")}} の場合は、フレックス行です。ただし、複数行のフレックスコンテナーにだけ効果を発揮します。
+- グリッドコンテナー
+  - : 適切な軸のグリッドトラックです。トラック間にスペースを挿入すると、関連する溝に追加されます。溝が折り畳まれている場合は、スペースを挿入する唯一の機会として扱われます。
 
-<h2 id="Learn_more" name="Learn_more">関連項目</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a></li>
-</ul>
+- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)
