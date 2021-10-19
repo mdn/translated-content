@@ -48,10 +48,7 @@ original_slug: Learn/JavaScript/First_steps/methode_chaine_utile
 
 <p>Entrez quelques exemples dans une console vierge. En voici une ci-dessous (vous pouvez aussi <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">ouvrir cette console</a> dans un onglet ou une fenêtre séparés, ou utiliser la <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">console de développement du navigateur</a> si vous préférez).</p>
 
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -152,9 +149,8 @@ original_slug: Learn/JavaScript/First_steps/methode_chaine_utile
 
   &lt;/script&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_code', '100%', 300) }}</p>
+<p>{{ EmbedLiveSample('Les_chaînes_de_caractères_sont_des_objets', '100%', 300) }}</p>
 
 <h3 id="Trouver_la_longueur_dune_chaîne">Trouver la longueur d'une chaîne</h3>
 
@@ -245,10 +241,7 @@ radData.toUpperCase();</pre>
  <li>Conseil : dans notre cas, il est probablement plus utile de tester si le résultat de l'appel de notre méthode <em>n'est pas égal</em> à un certain résultat.</li>
 </ol>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;div class="output" style="min-height: 125px;"&gt;
+<pre class="brush: html hidden">&lt;div class="output" style="min-height: 125px;"&gt;
 
 &lt;ul&gt;
 
@@ -284,7 +277,7 @@ for (var i = 0; i &lt; greetings.length; i++) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -308,9 +301,8 @@ var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.inner
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', '100%', 490) }}</p>
+<p>{{ EmbedLiveSample('Filtrer_des_messages_de_vœux', '100%', 490) }}</p>
 
 <h3 id="Remettre_les_majuscules">Remettre les majuscules</h3>
 
@@ -327,10 +319,7 @@ window.addEventListener('load', updateCode);
 <p><strong>Note</strong>: Un conseil — les paramètres des méthodes de chaîne n'ont pas besoin d'être des chaînes, elle peuvent aussi être des variables, ou même des variables avec une méthode invoquée sur elles.</p>
 </div>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html">&lt;div class="output" style="min-height: 125px;"&gt;
+<pre class="brush: html hidden">&lt;div class="output" style="min-height: 125px;"&gt;
 
 &lt;ul&gt;
 
@@ -359,7 +348,7 @@ for(var i = 0; i &lt; cities.length; i++) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -383,9 +372,8 @@ var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.inner
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', '100%', 450) }}</p>
+<p>{{ EmbedLiveSample('Remettre_les_majuscules', '100%', 450) }}</p>
 
 <h3 id="Créer_de_nouvelles_chaînes_à_partir_de_morceaux">Créer de nouvelles chaînes à partir de morceaux</h3>
 
@@ -407,10 +395,7 @@ window.addEventListener('load', updateCode);
  <li>Changer la valeur de la variable <code>result</code> pour qu'elle soit égale à la chaîne finale, plutôt qu'à <code>input</code>.</li>
 </ol>
 
-<div class="hidden">
-<h6 id="Playable_code_3">Playable code 3</h6>
-
-<pre class="brush: html">&lt;div class="output" style="min-height: 125px;"&gt;
+<pre class="brush: html hidden">&lt;div class="output" style="min-height: 125px;"&gt;
 
 &lt;ul&gt;
 
@@ -444,7 +429,7 @@ for (var i = 0; i &lt; stations.length; i++) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -469,9 +454,8 @@ var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.inner
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_3', '100%', 485) }}</p>
+<p>{{ EmbedLiveSample('Créer_de_nouvelles_chaînes_à_partir_de_morceaux', '100%', 485) }}</p>
 
 <h2 id="Conclusion">Conclusion</h2>
 

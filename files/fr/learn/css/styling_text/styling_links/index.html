@@ -206,10 +206,7 @@ Firefox&lt;/a&gt;, &lt;a href="#"&gt;Google Chrome&lt;/a&gt;, et
 
 <p>Si vous faites une erreur, vous pouvez toujours l'annuler en utilisant le bouton <em>Réinitialiser</em>. Si vous êtes vraiment bloqué, appuyez sur le bouton <em>Afficher la solution</em> pour insérer l'exemple que nous avons montré ci-dessus.</p>
 
-<div class="hidden">
-<h5 id="Playable_code">Playable code</h5>
-
-<pre class="brush: html">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
+<pre class="brush: html hidden">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
   &lt;h2&gt;Zone de saisie HTML&lt;/h2&gt;
   &lt;textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;p&gt;Il y a plusieurs navigateurs disponibles, tels que &lt;a href="#"&gt;Mozilla
  Firefox&lt;/a&gt;, &lt;a href="#"&gt;Google Chrome&lt;/a&gt;, et
@@ -249,7 +246,7 @@ a:active {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var htmlInput = document.querySelector(".html-input");
+<pre class="brush: js hidden">var htmlInput = document.querySelector(".html-input");
 var cssInput = document.querySelector(".css-input");
 var reset = document.getElementById("reset");
 var htmlCode = htmlInput.value;
@@ -282,9 +279,8 @@ htmlInput.addEventListener("input", drawOutput);
 cssInput.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 800) }}</p>
+<p>{{ EmbedLiveSample('Apprentissage_actif_mettez_en_forme_vos_propres_liens', 700, 800) }}</p>
 
 <h2 id="Inclusion_dicônes_dans_des_liens">Inclusion d'icônes dans des liens</h2>
 

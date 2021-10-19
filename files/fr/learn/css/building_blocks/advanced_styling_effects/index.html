@@ -350,10 +350,8 @@ article div:last-child {
 
 <p>Si vous faites une erreur, vous pouvez toujours <em>Réinitialiser</em> l'exemple avec le bouton correspondant.</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
+<pre class="brush: html hidden">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
   &lt;h2&gt;Zone de saisie HTML&lt;/h2&gt;
   &lt;textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;div class="style-me"&gt;
 &lt;/div&gt;&lt;/textarea&gt;
@@ -378,7 +376,7 @@ article div:last-child {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var htmlInput = document.querySelector(".html-input");
+<pre class="brush: js hidden">var htmlInput = document.querySelector(".html-input");
 var cssInput = document.querySelector(".css-input");
 var reset = document.getElementById("reset");
 var htmlCode = htmlInput.value;
@@ -404,17 +402,15 @@ htmlInput.addEventListener("input", drawOutput);
 cssInput.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 820) }}</p>
+
+<p>{{ EmbedLiveSample('Apprentissage_actif_expérimenter_certains_effets', 700, 820) }}</p>
 
 <h2 id="Résumé">Résumé</h2>
 
 <p>Nous espérons que vous avez trouvé cet article divertissant — s'amuser avec des jouets brillants l'est généralement et il est toujours intéressant de voir les types d'outils qui viennent d'être mis à disposition dans les navigateurs de pointe. Après avoir atteint la fin des articles sur les styles des boîtes, vous allez tester vos compétences en la matière avec nos évaluations.</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/Styling_boxes/Styling tables", "Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}</p>
-
-<p> </p>
 
 <h2 id="Dans_ce_module">Dans ce module</h2>
 

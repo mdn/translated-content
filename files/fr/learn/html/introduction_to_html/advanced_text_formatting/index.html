@@ -81,10 +81,7 @@ Dans une pièce de théâtre, action d'un acteur partageant une tirade uniquemen
 
 <p>Si vous faites une erreur, vous pouvez toujours réinitialiser grace au bouton <em>Réinitialiser</em>. Si vous êtes vraiment bloqué, cliquez sur<em> Voir la solution</em>.</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Zone de rendu&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Zone de rendu&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -108,7 +105,7 @@ Une couleur brun léger.&lt;/textarea&gt;
 
 
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -130,7 +127,7 @@ body {
 
 
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -207,9 +204,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 350, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Apprentissage_interactif_balisez_une_série_de_définitions', 700, 350, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <h2 id="Citations">Citations</h2>
 
@@ -285,10 +281,7 @@ pour de courtes citations ne nécessitant pas un nouvel alinéa&lt;/q&gt;.&lt;/p
 
 <p>Si vous faites une erreur, vous pourrez toujours tout réinitialiser en pressant le bouton de même nom. Si vous êtes vraiment bloqué, pressez le bouton <em>Voir la solution</em> pour obtenir la réponse.</p>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Zone de rendu&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Zone de rendu&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -307,7 +300,7 @@ pour de courtes citations ne nécessitant pas un nouvel alinéa&lt;/q&gt;.&lt;/p
   &lt;input id="solution" type="button" value="Voir la solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -327,7 +320,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -404,9 +397,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', 700, 450, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Apprentissage_actif_Qui_a_dit_quoi', 700, 450, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <h2 id="Abréviations">Abréviations</h2>
 
@@ -432,10 +424,7 @@ textarea.onkeyup = function(){
 
 <p>Pour cet apprentissage actif, nous aimerions que vous balisiez simplement une abréviation. Vous pouvez utiliser notre élément ci-après ou le remplacer par un de votre cru.</p>
 
-<div class="hidden">
-<h6 id="Playable_code_3">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Zone de rendu&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Zone de rendu&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -452,7 +441,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Voir la solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -472,7 +461,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -549,9 +538,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<div>{{ EmbedLiveSample('Playable_code_3', 700, 300, "", "", "hide-codepen-jsfiddle") }}</div>
+<div>{{ EmbedLiveSample('Apprentissage_actif_marquer_une_abréviation', 700, 300, "", "", "hide-codepen-jsfiddle") }}</div>
 
 <h2 id="Balisage_des_détails_de_contact">Balisage des détails de contact</h2>
 

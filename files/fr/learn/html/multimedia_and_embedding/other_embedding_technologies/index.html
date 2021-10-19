@@ -73,10 +73,7 @@ original_slug: Apprendre/HTML/Multimedia_and_embedding/Other_embedding_technolog
 
 <p>Si vous faites une erreur, vous pouvez toujours réinitialiser le tout avec le bouton <em>Réinitialiser</em>. Si vous êtes vraiment bloqué, pressez le bouton <em>Afficher la solution</em> pour voir la réponse.</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Sortie directe&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Sortie directe&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 250px;"&gt;
 &lt;/div&gt;
@@ -92,7 +89,7 @@ original_slug: Apprendre/HTML/Multimedia_and_embedding/Other_embedding_technolog
   &lt;input id="solution" type="button" value="Afficher la solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -112,7 +109,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -190,10 +187,7 @@ textarea.onkeyup = function(){
   updateCode();
 };</pre>
 
-<p> </p>
-</div>
-
-<p>{{ EmbedLiveSample('Playable_code', 700, 600, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample("Apprentissage_actif_utilisations_classiques_de_l'intégration", 700, 600, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <h2 id="Iframes_en_détail">Iframes en détail</h2>
 

@@ -63,9 +63,7 @@ original_slug: Apprendre/JavaScript/Building_blocks/Evènements
 
 <pre class="brush: html">&lt;button&gt;Change color&lt;/button&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">button { margin: 10px };</pre>
-</div>
+<pre class="brush: css hidden">button { margin: 10px };</pre>
 
 <p>Le JavaScript ressemblera à ça :</p>
 
@@ -279,12 +277,11 @@ for (var i = 0; i &lt; divs.length; i++) {
   }
 }</pre>
 
+<h4>Résultat</h4>
+
 <p>Le résultat est le suivant (essayez de cliquer dessus - amusez-vous):</p>
 
-<div class="hidden">
-<h6 id="Hidden_example">Hidden example</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -324,9 +321,8 @@ for (var i = 0; i &lt; divs.length; i++) {
     &lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_example', '100%', 400, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Résultat', '100%', 400, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <p>La plupart des gestionnaires d'événements que vous rencontrerez ne disposent que d'un ensemble standard de propriétés et de fonctions (méthodes) disponibles sur l'objet événement (voir la liste complète sur {{domxref("Event")}} ). Cependant, certains gestionnaires plus avancés ajoutent des propriétés spécialisées contenant des données supplémentaires dont ils ont besoin pour fonctionner. Le <a href="/en-US/docs/Web/API/MediaRecorder_API">Media Recorder API</a>, par exemple, a un événement <code>dataavailable</code> , qui se déclenche quand un fichier audio ou vidéo a été enregistré et est disponible pour être utilisé (par exemple, pour l'enregistrer ou le lire). L'objet événement du gestionnaire <a href="/en-US/docs/Web/API/MediaRecorder/ondataavailable">ondataavailable</a> correspondant dispose d'une propriété <code>data</code> contenant les données audio ou vidéo enregistrées pour vous permettre d'y accéder et de l'utiliser.</p>
 
@@ -353,12 +349,10 @@ for (var i = 0; i &lt; divs.length; i++) {
 &lt;/form&gt;
 &lt;p&gt;&lt;/p&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
 }
 </pre>
-</div>
 
 <p>Maintenant un peu de JavaScript - ici nous implémentons une vérification très simple dans un gestionnaire d'événement <a href="/en-US/docs/Web/API/GlobalEventHandlers/onsubmit">onsubmit</a> (l'événement submit est renvoyé sur un formulaire quand il est soumis) qui vérifie si les champs de texte sont vides. Si c'est le cas, nous appelons la fonction  <code><a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a></code> sur l'objet événement - ce qui stoppe la soumission du formulaire - puis nous affichons un message d'erreur dans le paragraphe sous notre formulaire pour indiquer à l'utilisateur ce qui ne va pas :</p>
 
@@ -387,10 +381,7 @@ form.onsubmit = function(e) {
 
 <p>Le dernier sujet à aborder ici est quelque chose que vous ne rencontrerez pas souvent, mais cela peut être une vraie difficulté si vous ne le comprenez pas. Le bouillonnement et la capture d'événements sont deux mécanismes qui décrivent ce qui se passe lorsque deux gestionnaires du même type d'événement sont activés sur un même élément. Regardons un exemple pour faciliter cela - ouvrez l'exemple <a href="http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box.html">show-video-box.html</a> dans un nouvel onglet (et le <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html">code source </a>dans un autre). C'est également disponible en live ci-dessous.</p>
 
-<div class="hidden">
-<h6 id="Hidden_video_example">Hidden video example</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -461,9 +452,8 @@ form.onsubmit = function(e) {
     &lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_video_example', '100%', 500, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Le_bouillonnement_et_la_capture', '100%', 500, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <p>Ceci est un exemple assez simple qui montre et cache une balise {{htmlelement("div")}} avec une balise {{htmlelement("video")}} à l'intérieur:</p>
 

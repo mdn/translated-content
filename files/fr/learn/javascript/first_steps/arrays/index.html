@@ -45,10 +45,7 @@ original_slug: Learn/JavaScript/First_steps/tableaux
 
 <p>Comme précédemment, initions‑nous aux bases pratiques des tableaux en entrant quelques exemples dans une console JavaScript. En voici une plus bas (vous pouvez aussi <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">ouvrir cette console</a> dans un onglet ou une fenêtre séparés ou utiliser la <a href="/fr/docs/Learn/Common_questions/What_are_browser_developer_tools">console développeur de l'explorateur</a> si vous préférez).</p>
 
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -153,9 +150,8 @@ original_slug: Learn/JavaScript/First_steps/tableaux
 
   &lt;/script&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_code', '100%', 300) }}</p>
+<p>{{ EmbedLiveSample('Quest‑ce_quun_tableau', '100%', 300) }}</p>
 
 <h3 id="Créer_un_tableau">Créer un tableau</h3>
 
@@ -315,10 +311,7 @@ removedItem;</pre>
  <li>Nous souhaitons que vous modifiez la ligne au‑dessous de  <code>// number 5</code> de sorte que la variable <code>itemText</code> soit égale à « nom actuel de l'élément — $prix actuel de l'élément », par exemple « Shoes — $23.99 » dans chaque cas, de façon à ce qu'une information correcte soit affichée sur l'envoi. Il s'agit d'une simple concaténation de chaînes de caractères, chose qui doit vous être familière.</li>
 </ol>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;div class="output" style="min-height: 150px;"&gt;
+<pre class="brush: html hidden">&lt;div class="output" style="min-height: 150px;"&gt;
 
 &lt;ul&gt;
 
@@ -363,7 +356,7 @@ totalBox.textContent = 'Total: $' + total.toFixed(2);
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -387,9 +380,8 @@ var jsSolution = 'var list = document.querySelector(\'.output ul\');\nvar totalB
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', '100%', 600) }}</p>
+<p>{{ EmbedLiveSample('Activité_affichons_les_produits_!', '100%', 600) }}</p>
 
 <h2 id="Activité_Top_5_des_recherches">Activité : Top 5 des recherches</h2>
 
@@ -408,10 +400,7 @@ window.addEventListener('load', updateCode);
  <li>Ajouter une ligne sous le commentaire <code>// number 2</code>  pour supprimer la valeur en fin de liste du tableau.</li>
 </ol>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html">&lt;div class="output" style="min-height: 150px;"&gt;
+<pre class="brush: html hidden">&lt;div class="output" style="min-height: 150px;"&gt;
 
 &lt;input type="text"&gt;&lt;button&gt;Search&lt;/button&gt;
 
@@ -466,7 +455,7 @@ searchBtn.onclick = function() {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -490,9 +479,8 @@ var jsSolution = 'var list = document.querySelector(\'.output ul\');\nvar search
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', '100%', 600) }}</p>
+<p>{{ EmbedLiveSample('Activité_Top_5_des_recherches', '100%', 600) }}</p>
 
 <h2 id="Testez_vos_compétences_!">Testez vos compétences !</h2>
 

@@ -172,12 +172,11 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
+<h5>Résultat </h5>
+
 <p>Le résultat de ce code est le suivant :</p>
 
-<div class="hidden">
-<h6 id="Hidden_example">Hidden example</h6>
-
-<pre class="brush: css">label {
+<pre class="brush: css hidden">label {
         float: left;
         width: 30%;
         text-align: right;
@@ -204,7 +203,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 
 
 
-<pre class="brush: html">&lt;form&gt;
+<pre class="brush: html hidden">&lt;form&gt;
       &lt;div&gt;
         &lt;label for="date"&gt;Enter a date:&lt;/label&gt;
         &lt;input id="date" type="date"&gt;
@@ -214,9 +213,8 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
         &lt;input id="time" type="time"&gt;
       &lt;/div&gt;
     &lt;/form&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_example', '100%', 150) }}</p>
+<p>{{ EmbedLiveSample('Résultat', '100%', 150) }}</p>
 
 <div class="note">
 <p><strong>Note </strong>: Vous pouvez également le voir exécuté en direct depuis <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html">forms-test.html</a> sur GitHub (voir aussi le <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/forms-test.html">code source</a>).</p>
@@ -227,7 +225,6 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 <p>Note : Bien entendu, cela n'est pas une solution viable pour les besoins de votre projet — la différence dans une présentation visuelle n'est pas désirée, de plus c'est compliqué de garantir que la donnée qui a été inscrite est dans le format que vous voulez qu'elle soit. Pour les formulaires en navigateur croisé, il est préférable de se référer aux simples éléments de formulaire, ou utiliser les éléments avancés de formulaire de manière sélective uniquement sur les navigateurs qui les supportent, ou utiliser une librairie qui fournit des widget décents en navigateur croisé, comme <a href="http://jqueryui.com/">jQuery UI</a> ou <a href="https://bootstrap-datepicker.readthedocs.io/en/latest/">Bootstrap datepicker</a>.</p>
 
 <h4 id="Comportement_naturel_du_CSS">Comportement naturel du CSS</h4>
-
 
 
 <p>Le CSS est sans doute meilleur en solution de recours que le HTML. Si un navigateur rencontre une déclaration ou une règle qu'il ne comprend pas, il la passe complètement sans l'appliquer ou provoquer une erreur. Cela peut être frustrant pour vous et vos utilisateurs si de telles erreurs se glissent à travers le code en production, mais au moins cela veut dire que l'ensemble du site ne va pas crasher à cause d'une erreur, et si utilisé intelligemment vous pouvez vous en servir à votre avantage.</p>

@@ -417,10 +417,7 @@ select.onchange = function() {
 
 <p>Si vous faites une erreur, vous pouvez toujours réinitialiser l'exemple avec le bouton "Réinitialiser". Si vous êtes vraiment bloqué, pressez "Voir la solution".</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;div class="output" style="height: 500px;overflow: auto;"&gt;
+<pre class="brush: html hidden">&lt;div class="output" style="height: 500px;overflow: auto;"&gt;
   &lt;label for="month"&gt;Choisissez un mois : &lt;/label&gt;
   &lt;select id="month"&gt;
     &lt;option value="Janvier"&gt;Janvier&lt;/option&gt;
@@ -476,7 +473,7 @@ createCalendar(31,'Janvier');
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">.output * {
+<pre class="brush: css hidden">.output * {
   box-sizing: border-box;
 }
 
@@ -496,7 +493,7 @@ createCalendar(31,'Janvier');
 }
 </pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -520,9 +517,8 @@ var jsSolution = 'var select = document.querySelector(\'select\');\nvar list = d
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', '100%', 1110, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Apprentissage_actif_un_calendrier_simple', '100%', 1110, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <h2 id="Activité_plus_de_choix_de_couleurs_!">Activité : plus de choix de couleurs !</h2>
 
@@ -536,10 +532,7 @@ window.addEventListener('load', updateCode);
 
 <p>Si vous faites une erreur, vous pouvez toujours réinitialiser l'exemple avec le bouton « Réinitialiser ». Si vous êtes vraiment bloqué, pressez « Voir la solution ».</p>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html">&lt;div class="output" style="height: 300px;"&gt;
+<pre class="brush: html hidden">&lt;div class="output" style="height: 300px;"&gt;
   &lt;label for="theme"&gt;Choisissez un thème : &lt;/label&gt;
   &lt;select id="theme"&gt;
     &lt;option value="white"&gt;Blanc&lt;/option&gt;
@@ -575,7 +568,7 @@ function update(bgColor, textColor) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -599,9 +592,8 @@ const jsSolution = 'const select = document.querySelector(\'select\');\nlet html
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', '100%', 850) }}</p>
+<p>{{ EmbedLiveSample('Activité_plus_de_choix_de_couleurs_!', '100%', 850) }}</p>
 
 <h2 id="Conclusion">Conclusion</h2>
 

@@ -93,31 +93,25 @@ original_slug: Web/Guide/HTML/Formulaires/Validation_donnees_formulaire
 
 <h3 id="Contraintes_de_validation_sur_les_éléments_d'entrée_—_simple_début">Contraintes de validation sur les éléments d'entrée — simple début</h3>
 
-
-
 <p>Dans cette section, nous examinerons quelques unes des diverses fonctionnalités HTML5 peuvant être utilisées pour valider des éléments d'{{HTMLElement("input")}}.</p>
 
 <p>Commençons par un exemple simple — une entrée ouvrant un choix, selon votre préférence, entre banane ou cerise. Il faut un texte {{HTMLElement("input")}} simple avec une étiquette correspondante et un {{htmlelement("button")}} de soumission. Le code source est sur GitHub à l'adresse <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a> et un exemple « live » ci-dessous :</p>
 
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
-
-<pre class="brush: html">&lt;form&gt;
+<pre class="brush: html hidden">&lt;form&gt;
   &lt;label for="choose"&gt;Préférez‑vous la banane ou la cerise ?&lt;/label&gt;
   &lt;input id="choose" name="i_like"&gt;
   &lt;button&gt;Soumettre&lt;/button&gt;
 &lt;/form&gt;</pre>
 
-<pre class="brush: css">input:invalid {
+<pre class="brush: css hidden">input:invalid {
   border: 2px dashed red;
 }
 
 input:valid {
   border: 1px solid black;
 }</pre>
-</div>
 
-<p>{{EmbedLiveSample("Hidden_code", "100%", 55)}}</p>
+<p>{{EmbedLiveSample("Contraintes_de_validation_sur_les_éléments_d'entrée_—_simple_début", "100%", 55)}}</p>
 
 <p>Pour commencer, faites une copie de fruit-start.html dans un nouveau répertoire sur votre disque dur.</p>
 
@@ -184,21 +178,19 @@ input:valid {
 
 <p>Voyons un exemple — mettons à jour notre HTML en y ajoutant un attribut <code>pattern</code>, ainsi :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="choose"&gt;Préférez‑vous la banane ou la cerise ?&lt;/label&gt;
   &lt;input id="choose" name="i_like" required pattern="banane|cerise"&gt;
   &lt;button&gt;Soumettre&lt;/button&gt;
-&lt;/form&gt;</code></pre>
+&lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css line-numbers  language-css"><code class="language-css">input:invalid {
+<pre class="brush: css">input:invalid {
   border: 2px dashed red;
 }
 
 input:valid {
   border: 1px solid black;
-}</code></pre>
-</div>
+}</pre>
 
 <p>{{EmbedLiveSample("Validation_selon_une_expression_régulière", "100%", 55)}}</p>
 
@@ -243,8 +235,7 @@ input:valid {
  <li>Nous avons également contraint le champ <code>number</code> à un <code>min</code> de 1 et un <code>max </code>de 10 — les nombres entrés hors de cette plage seront affichés comme non valides, et vous ne pourrez pas utiliser les flèches d'incrémentation/décrémentation pour porter la valeur en dehors de cette plage.</li>
 </ul>
 
-<div class="hidden">
-<pre class="line-numbers  language-html"><code class="language-html">input:invalid {
+<pre class="brush: html hidden">input:invalid {
   border: 2px dashed red;
 }
 
@@ -254,8 +245,7 @@ input:valid {
 
 div {
   margin-bottom: 10px;
-}</code></pre>
-</div>
+}</pre>
 
 <p>Voici cet exemple s'exécutant en « live » :</p>
 

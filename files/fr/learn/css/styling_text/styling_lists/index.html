@@ -299,10 +299,7 @@ ul li {
 
 <p>Si vous faites une erreur, vous pourrez toujours tout remettre à zéro avec le bouton <em>Réinitialiser</em>. Si vous êtes vraiment bloqué, pressez le bouton <em>Voir la solution</em> pour voir une réponse possible.</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
+<pre class="brush: html hidden">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
   &lt;h2&gt;Zone de saisie du HTML&lt;/h2&gt;
   &lt;textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;ul&gt;
   &lt;li&gt;D'abord, allumez la chandelle.&lt;/li&gt;
@@ -330,7 +327,7 @@ ul li {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var htmlInput = document.querySelector(".html-input");
+<pre class="brush: js hidden">var htmlInput = document.querySelector(".html-input");
 var cssInput = document.querySelector(".css-input");
 var reset = document.getElementById("reset");
 var htmlCode = htmlInput.value;
@@ -365,7 +362,7 @@ window.addEventListener("load", drawOutput);
 </pre>
 </div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 800) }}</p>
+<p>{{ EmbedLiveSample("Apprentissage_actif_définir_le_style_d'une_liste_imbriquée", 700, 800) }}</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 

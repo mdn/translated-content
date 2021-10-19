@@ -76,10 +76,9 @@ original_slug: Apprendre/JavaScript/Building_blocks/Looping_code
 
 <p>Regardons maintenant un exemple qui illustre parfaitement en quoi les boucles sont si intéressantes. Disons que nous voulons dessiner 100 cercles aléatoirement sur un <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html" title="L'élément &lt;canvas> permet de modifier une zone graphique via un script (habituellement en JavaScript ou grâce à WebGL). Il peut par exemple être utilisé afin de dessiner des graphiques, manipuler des images ou jouer des animations."><code>&lt;canvas&gt;</code></a> (appuyez sur le bouton <em>Update</em> pour lancer le programme à nouveau et voir différentes dispositions aléatoires).</p>
 
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
+<h4>Exemple</h4>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -143,9 +142,10 @@ original_slug: Apprendre/JavaScript/Building_blocks/Looping_code
 
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_code', '100%', 400) }}</p>
+<p>{{ EmbedLiveSample('Exemple', '100%', 400) }}</p>
+
+<h4>Principe de boucle</h4>
 
 <p>Vous n'avez pas besoin de comprendre entièrement le code pour l'instant, mais regardons plus en détail la partie du code qui trace les 100 cercles :</p>
 
@@ -201,12 +201,11 @@ for (let i = 0; i &lt; chats.length; i++) {
 
 paragraphe.textContent = info;</pre>
 
+<h3>Sortie</h3>
+
 <p>Cela nous donne la sortie suivante :</p>
 
-<div class="hidden">
-<h6 id="Hidden_code_2">Hidden code 2</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -231,9 +230,8 @@ paragraphe.textContent = info;</pre>
 
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_code_2', '100%', 60) }}</p>
+<p>{{ EmbedLiveSample('Sortie', '100%', 60) }}</p>
 
 <div class="note">
 <p><strong>Note</strong>: Vous pouvez trouver aussi cet <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html">exemple de code sur GitHub</a> (et<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html"> le voir tourner en live</a>).</p>
@@ -322,10 +320,9 @@ bouton.addEventListener('click', function() {
   }
 });</pre>
 
-<div class="hidden">
-<h6 id="Hidden_code_3">Hidden code 3</h6>
+<h3>Résultat</h3>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -363,9 +360,7 @@ bouton.addEventListener('click', function() {
 
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
-
-<p>{{ EmbedLiveSample('Hidden_code_3', '100%', 100) }}</p>
+<p>{{ EmbedLiveSample('Résultat', '100%', 100) }}</p>
 
 <ol>
  <li>Tout d'abord, nous avons quelques définitions de variables — nous avons un tableau d'informations de contact, avec chaque élément étant une chaîne contenant un nom et un numéro de téléphone séparés par deux points.</li>
@@ -404,10 +399,7 @@ for (let i = 1; i &lt;= num; i++) {
 
 <p>Ici la sortie :</p>
 
-<div class="hidden">
-<h6 id="Hidden_code_4">Hidden code 4</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -444,9 +436,8 @@ for (let i = 1; i &lt;= num; i++) {
 
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_code_4', '100%', 100) }}</p>
+<p>{{ EmbedLiveSample('Passer_des_itérations_avec_continue', '100%', 100) }}</p>
 
 <ol>
  <li>Dans ce cas, l'entrée doit être un nombre (<code>num</code>). La boucle <code>for</code> est dotée d'un compteur commençant à 1 (car nous ne sommes pas intéressés par 0 dans ce cas), une condition de sortie indiquant que la boucle s'arrêtera lorsque le compteur deviendra plus grand que l'entrée <code>num</code>, et un itérateur ajoutera 1 au compteur à chaque fois.</li>
@@ -554,10 +545,7 @@ do {
 
 <p>Si vous faites une erreur, vous pourrez toujours réinitialiser l'exemple avec le bouton "Reset". Si vous êtes vraiment bloqué, appuyez sur le bouton "Show solution" pour voir une solution.</p>
 
-<div class="hidden">
-<h6 id="Active_learning">Active learning</h6>
-
-<pre class="brush: html">&lt;h2&gt;Sortie en direct&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Sortie en direct&lt;/h2&gt;
 &lt;div class="output" style="height: 410px;overflow: auto;"&gt;
 
 &lt;/div&gt;
@@ -569,8 +557,8 @@ output.innerHTML = '';
 
 // let i = 10;
 
-// <code>const paragraphe </code>= document.createElement('p');
-// <code>paragraphe</code>.textContent = ;
+// const paragraphe = document.createElement('p');
+// paragraphe.textContent = ;
 // output.appendChild(para);
 &lt;/textarea&gt;
 
@@ -580,7 +568,7 @@ output.innerHTML = '';
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 const code = textarea.value;
@@ -590,30 +578,30 @@ function updateCode() {
 }
 
 reset.addEventListener('click', function() {
-  textarea.value = code;<code class="language-js">
+  textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';</code>
+  solution.value = 'Show solution';
   updateCode();
 });
 
-solution.addEventListener('click', function() {<code class="language-js">
+solution.addEventListener('click', function() {
   if(solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
     textarea.value = userEntry;
     solution.value = 'Show solution';
-  }</code>
+  }
   updateCode();
 });
-<code class="language-js">
+
 let jsSolution = 'let output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nlet i = 10;\n\nwhile(i &gt;= 0) {\n let para = document.createElement(\'p\');\n if(i === 10) {\n para.textContent = \'Countdown \' + i;\n } else if(i === 0) {\n  para.textContent = \'Blast off!\';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}';
 let solutionEntry = jsSolution;
-</code>
+
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
-<code class="language-js">
+
 // empêcher la pression de la touche de tabulation de cibler
 // un autre élément et insère une tabulation dans le textarea
 
@@ -654,11 +642,10 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</code>
+};
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Active_learning', '100%', 780) }}</p>
+<p>{{ EmbedLiveSample('Apprentissage_actif_Lancer_le_compte_à_rebours_!', '100%', 780) }}</p>
 
 <h2 id="Apprentissage_actif_remplir_une_liste_d'invités.">Apprentissage actif : remplir une liste d'invités.</h2>
 
@@ -688,17 +675,14 @@ textarea.onkeyup = function(){
 
 <p>Si vous faites une erreur, vous pourrez toujours ré-initialiser l'exemple avec le bouton "Reset". Si vous êtes vraiment bloqué, appuyez sur le bouton "Show solution" pour voir une solution.</p>
 
-<div class="hidden">
-<h6 id="Active_learning_2">Active learning 2</h6>
-
-<pre class="brush: html"><code class="language-html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 100px;overflow: auto;"&gt;
   &lt;p class="admitted"&gt;Admettre : &lt;/p&gt;
   &lt;p class="refused"&gt;Refuser : &lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;</code>Appuyer sur Échap pour décibler le coder<code class="language-html">&lt;/p&gt;
+&lt;p class="a11y-label"&gt;Appuyer sur Échap pour décibler le code&lt;/p&gt;
 &lt;textarea id="code" class="playable-code" style="height: 400px;width: 95%"&gt;
 const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
 
@@ -706,7 +690,7 @@ const admitted = document.querySelector('.admitted');
 const refused = document.querySelector('.refused');
 admitted.textContent = 'Admit: ';
 refused.textContent = 'Refuse: '
-</code>
+
 // let i = 0;
 
 // refused.textContent += ;
@@ -719,7 +703,7 @@ refused.textContent = 'Refuse: '
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css line-numbers language-css"><code class="language-css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -737,9 +721,9 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</code></pre>
+}</pre>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -814,10 +798,9 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</code></pre>
-</div>
+};</pre>
 
-<p>{{ EmbedLiveSample('Active_learning_2', '100%', 580) }}</p>
+<p>{{ EmbedLiveSample("Apprentissage_actif_remplir_une_liste_d'invités.", '100%', 580) }}</p>
 
 <h2 id="Quel_type_de_boucle_utiliser">Quel type de boucle utiliser ?</h2>
 
