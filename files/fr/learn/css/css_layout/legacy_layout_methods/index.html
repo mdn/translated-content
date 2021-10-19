@@ -93,11 +93,9 @@ div:nth-of-type(2) {
 
 <p>En mettant tout ensemble, voici le résultat :</p>
 
-<div id="Floated_Two_Col">
-<div class="hidden">
-<h6 id="Simple_two-column_layout">Simple two-column layout</h6>
+<h3>Exemple complet</h3>
 
-<pre class="brush: html">&lt;h1&gt;Exemple de disposition sur 2 colonnes&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Exemple de disposition sur 2 colonnes&lt;/h1&gt;
 
 &lt;div&gt;
   &lt;h2&gt;Première colonne&lt;/h2&gt;
@@ -110,7 +108,7 @@ div:nth-of-type(2) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -126,10 +124,8 @@ div:nth-of-type(2) {
   float: right;
 }
 </pre>
-</div>
-</div>
 
-<p>{{ EmbedLiveSample('Floated_Two_Col', '100%', 520) }}</p>
+<p>{{ EmbedLiveSample('Exemple_complet', '100%', 520) }}</p>
 
 <p>Notez que nous avons utilisé des pourcentages pour définir les largeurs — c'est la bonne stratégie, cela crée une <strong>disposition fluide</strong>, s'ajustant à diverses tailles d'écran et gardant les mêmes proportions pour les tailles d'écran plus petites. Modifiez la taille de la fenêtre du navigateur pour voir par vous‑même. C'est un outil adapté au désign web adaptatif.</p>
 

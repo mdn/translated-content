@@ -44,7 +44,7 @@ original_slug: Apprendre/CSS/Building_blocks/Advanced_styling_effects
 
 <p>Débutons avec un exemple simple. D'abord, un peu de HTML :</p>
 
-<div id="example_1">
+
 <pre class="brush: html">&lt;article class="simple"&gt;
   &lt;p&gt;&lt;strong&gt;Attention&lt;/strong&gt; : Le thermostat sur le transcendeur cosmique a atteint un niveau critique.&lt;/p&gt;
 &lt;/article&gt;</pre>
@@ -59,7 +59,7 @@ article {
   max-width: 500px;
   padding: 10px;
   color: white ;
-<code class="language-css">  text-align: center</code> ;
+  text-align: center;
   background-color: red;
   background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25));
 }
@@ -67,11 +67,11 @@ article {
 .simple {
   box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
 }</pre>
-</div>
+
 
 <p>donnent le résultat suivant :</p>
 
-<p>{{ EmbedLiveSample('example_1', '100%', 100) }}</p>
+<p>{{ EmbedLiveSample('Ombre_simple_pour_une_boîte', '100%', 100) }}</p>
 
 <p>Notez les quatre éléments valeur de la propriété <code>box-shadow</code> :</p>
 
@@ -88,14 +88,12 @@ article {
 
 <p>Vous pouvez également définir plusieurs ombres de boîtes dans une seule déclaration en les séparant par des virgules :</p>
 
-<div id="example_2">
-<div class="hidden">
-<pre class="brush: html">&lt;article class="multiple"&gt;
+<pre class="brush: html hidden">&lt;article class="multiple"&gt;
   &lt;p&gt;&lt;strong&gt;Attention&lt;/strong&gt; : Le thermostat sur le transcendeur cosmique a atteint un niveau critique.&lt;/p&gt;
 &lt;/article&gt;</pre>
 </div>
 
-<pre class="brush: css">p {
+<pre class="brush: css hidden">p {
   margin: 0;
 }
 
@@ -114,11 +112,10 @@ article {
                         5px 5px 1px black,
                         6px 6px 1px black; }
 </pre>
-</div>
 
 <p>Nous obtenons le résultat suivant :</p>
 
-<p>{{ EmbedLiveSample('example_2', '100%', 100) }}</p>
+<p>{{ EmbedLiveSample('Ombres_multiples_pour_une_boîte', '100%', 100) }}</p>
 
 <p>Voici quelque chose d'amusant : nous créons une boîte avec une impression de relief avec plusieurs couches de couleur. Vous pouvez utiliser ce procédé d'autre manière, par exemple pour donner une apparence plus réaliste avec des ombres à partir de plusieurs sources de lumière.</p>
 
@@ -128,7 +125,6 @@ article {
 
 <p>D'abord un HTML différent pour cet exemple :</p>
 
-<div id="example_3">
 <pre class="brush: html">&lt;button&gt;Appuyez ici !&lt;/button&gt;</pre>
 
 <pre class="brush: css">button {
@@ -152,13 +148,10 @@ button:active {
               inset 2px 3px 5px rgba(0,0,0,0.3),
               inset -2px -3px 5px rgba(255,255,255,0.5);
 }</pre>
-</div>
 
 <p>Et voici le résultat :</p>
 
-<p>{{ EmbedLiveSample('example_3', '100%', 70) }}</p>
-
-<p> </p>
+<p>{{ EmbedLiveSample('Autres_fonctionnalités_des_ombres_de_boîtes', '100%', 70) }}</p>
 
 <p>Ici, nous avons mis en place un style de bouton avec des états différents selon qu'il a le focus, qu'il est survolé par le pointeur de souris ou qu'il est actif. Le bouton est doté d'une simple ombre noire définie par défaut, plus deux ombres d'insertion, l'une claire et l'autre sombre, placées sur les coins opposés du bouton pour lui donner un bel effet d'ombrage.</p>
 

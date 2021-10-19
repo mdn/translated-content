@@ -47,18 +47,13 @@ original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
 
 <p>Les colonnes créées sont de largeur variable — le navigateur calcule automatiquement l'espace à donner à chacune d'entre elles.</p>
 
-<div id="Multicol_1">
-<div class="hidden">
-<h6 id="column-count_example">column-count example</h6>
-
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
   font: .9em/1.2 Arial, Helvetica, sans-serif;
 }
     </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="container"&gt;
   &lt;h1&gt;Simple exemple &lt;i&gt;multicol&lt;/i&gt;&lt;/h1&gt;
@@ -76,13 +71,9 @@ original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">.container {
-  column-count: 3;
-}
-</pre>
-</div>
+<p>{{ EmbedLiveSample('Un_exemple_élémentaire', '100%', 400) }}</p>
 
-<p>{{ EmbedLiveSample('Multicol_1', '100%', 400) }}</p>
+<h3>Définir column-width</h3>
 
 <p>Modifiez la CSS pour utiliser <code>column-width</code> ainsi :</p>
 
@@ -93,18 +84,14 @@ original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
 
 <p>Le navigateur dispose maintenant le maximum de colonnes possible de la taille fixée ; le reste de l'espace est partagé entre les colonnes existantes. Cela signifie que vous n'obtiendrez pas exactement la largeur définie, à moins que le conteneur soit exactement divisible par cette largeur.</p>
 
-<div id="Multicol_2">
-<div class="hidden">
-<h6 id="column-width_example">column-width example</h6>
-
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
   font: .9em/1.2 Arial, Helvetica, sans-serif;
 }</pre>
 
-<pre class="brush: html">&lt;div class="container"&gt;
+<pre class="brush: html hidden">&lt;div class="container"&gt;
   &lt;h1&gt;Simple exemple &lt;i&gt;multicol&lt;/i&gt;&lt;/h1&gt;
 
   &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.
@@ -118,15 +105,8 @@ original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
   cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis
   dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
 &lt;/div&gt;</pre>
-</div>
 
-<pre class="brush: css">.container {
-  column-width: 200px;
-}
-</pre>
-</div>
-
-<p>{{ EmbedLiveSample('Multicol_2', '100%', 400) }}</p>
+<p>{{ EmbedLiveSample('Définir_column-width', '100%', 400) }}</p>
 
 <h2 id="Style_des_colonnes">Style des colonnes</h2>
 
@@ -154,11 +134,7 @@ original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
 
 <p>Ajoutons des règles pour les divers styles et couleurs.</p>
 
-<div id="Multicol_3">
-<div class="hidden">
-<h6 id="Styling_the_columns">Styling the columns</h6>
-
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
@@ -170,7 +146,7 @@ original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
  column-rule: 4px dotted rgb(79, 185, 227);
 }</pre>
 
-<pre class="brush: html">&lt;div class="container"&gt;
+<pre class="brush: html hidden">&lt;div class="container"&gt;
   &lt;h1&gt;Simple exemple &lt;i&gt;multicol&lt;/i&gt;&lt;/h1&gt;
 
   &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.
@@ -184,10 +160,8 @@ original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
   cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis
   dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
 &lt;/div&gt;</pre>
-</div>
-</div>
 
-<p>{{ EmbedLiveSample('Multicol_3', '100%', 400) }}</p>
+<p>{{ EmbedLiveSample('Style_des_colonnes', '100%', 400) }}</p>
 
 <p>Notez que  la règle ne prend pas de largeur en soi. Elle se place dans l'espace créé avec  <code>column-gap</code>. Pour faire un peu plus d'espace d'un côté ou de l'autre de la règle, vous devez augmenter la taille de l'espace entre les colonnes.</p>
 
@@ -197,11 +171,7 @@ original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
 
 <p>Quelquefois, ces coupures se font dans des endroits amenant des difficultés de lecture. Dans l'exemple en direct ci‑dessous, j'ai utilisé <em>multicol</em> pour disposer une série de boîtes dont chacune a un titre et un peu de texte. Le titre est séparé du texte si la coupure de colonne se produit entre les deux.</p>
 
-<div id="Multicol_4">
-<div class="hidden">
-<h6 id="Cards_example">Cards example</h6>
-
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
@@ -209,7 +179,7 @@ original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
 }            </pre>
 </div>
 
-<pre class="brush: html">&lt;div class="container"&gt;
+<pre class="brush: html hidden">&lt;div class="container"&gt;
   &lt;div class="card"&gt;
     &lt;h2&gt;Je suis un titre&lt;/h2&gt;
     &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
@@ -279,9 +249,10 @@ original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
   padding: 10px;
   margin: 0 0 1em 0;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Multicol_4', '100%', 600) }}</p>
+<p>{{ EmbedLiveSample('Colonnes_et_coupures', '100%', 600) }}</p>
+
+<h3>Utiliser break-inside</h3>
 
 <p>Pour contrôler ce comportement, utilisons les propriétés stipulées dans <a href="/en-US/docs/Web/CSS/CSS_Fragmentation">CSS Fragmentation</a> (coupures dans la CSS). Cette fonctionnalité nous offre des propriétés pour contrôler les coupures de contenu dans le <em>multicol</em> et les médias paginés. Par exemple, ajoutons la propriété {{cssxref("break-inside")}} avec la valeur <code>avoid</code> aux règles pour <code>.card</code>, qui est le conteneur du titre et du texte. Nous indiquons que nous ne souhaitons pas que cette boîte soit coupée.</p>
 
@@ -299,18 +270,14 @@ original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
 
 <p>Actualisez la page et les boîtes devraient rester entières.</p>
 
-<div id="Multicol_5">
-<div class="hidden">
-<h6 id="Multicol_Fragmentation">Multicol Fragmentation</h6>
-
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
   font: .9em/1.2 Arial, Helvetica, sans-serif;
 }              </pre>
 
-<pre class="brush: html">&lt;div class="container"&gt;
+<pre class="brush: html hidden">&lt;div class="container"&gt;
   &lt;div class="card"&gt;
     &lt;h2&gt;Je suis un titre&lt;/h2&gt;
     &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
@@ -368,7 +335,6 @@ original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
 
 &lt;/div&gt;
 </pre>
-</div>
 
 <pre class="brush: css">.container {
   column-width: 250px;
@@ -383,9 +349,8 @@ original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
   padding: 10px;
   margin: 0 0 1em 0;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Multicol_5', '100%', 600) }}</p>
+<p>{{ EmbedLiveSample('Utiliser_break-inside', '100%', 600) }}</p>
 
 <h2 id="Résumé">Résumé</h2>
 

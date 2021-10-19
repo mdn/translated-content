@@ -123,7 +123,6 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 
 <p>Dans l'exemple ci-dessous, j'ai utilisé l'orthographe anglaise <code>colour</code> pour le mot <em>couleur.</em> Cela contredit la convention CSS et rend ce code incompréhensible pour le navigateur. En conséquence, le paragraphe n'a pas été colorié en bleu. Par contre, tout le reste du CSS est appliqué, seule la ligne invalide est ignorée.</p>
 
-<div id="Skipping_example">
 <pre class="brush: html">&lt;p&gt; Je veux que ce texte soit grand, gras et bleu.&lt;/p&gt;</pre>
 
 <pre class="brush: css">p {
@@ -131,18 +130,12 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
   colour: blue; /* incorrect spelling of the color property */
   font-size: 200%;
 }</pre>
-</div>
 
-<p>{{EmbedLiveSample('Skipping_example', '100%', 200)}}</p>
+<p>{{EmbedLiveSample('Que_se_passe-t-il_quand_un_navigateur_rencontre_du_CSS_quil_ne_comprend_pas', '100%', 200)}}</p>
 
 <p>Le comportement décrit ci-dessus est très utile : vous pouvez utiliser du CSS récent pour perfectionner la mise en forme de vos pages, sachant qu'aucune erreur ne se produira quand votre code n'est pas compris — le navigateur interprète la règle... ou ne fait rien. Rappelez vous maintenant la <em>cascade</em> : entre deux règles de même spécificité, le navigateur choisira la dernière rencontrée. La cascade permet d'offrir une alternative pour les navigateurs qui ne prennent pas en charge le CSS le plus récent.</p>
 
 <p>Cela fonctionne particulièrement bien quand on désire utiliser une valeur CSS introduite récemment, pas encore prise en charge partout. Par exemple, quelques vieux navigateurs ne savent pas interpréter <code>calc()</code> pour les valeurs. Je peux donc donner une valeur en pixels pour la largeur de ma boîte, puis proposer une déclaration où la valeur de <code>width</code> est calculée par <code>calc(</code><code>)</code>. Un vieux navigateur interprète la première déclaration, il ne comprend pas la seconde, il l'ignore — il utilisera donc la version pixels. Les navigateurs récents interprètent la déclaration en pixels, puis celle avec  <code>calc()</code> qui, par cascade, écrase la déclaration précédente.</p>
-
-<pre class="brush: css">.box {
-  width: 500px;
-  width: calc(100% - 50px);
-}</pre>
 
 <p>Dans les leçons à venir, nous rencontrerons d'autres méthodes pour adapter le code aux différents navigateurs.</p>
 
