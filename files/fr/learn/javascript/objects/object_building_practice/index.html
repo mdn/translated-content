@@ -24,7 +24,7 @@ original_slug: Learn/JavaScript/Objects/la_construction_d_objet_en_pratique
   <tr>
    <th scope="row">Pré-requis :</th>
    <td>
-    <p>Connaissance basique de l'informatique, une compréhension basique du HTML et du CSS, une familiarité avec  les bases du JavaScript (voir <a href="/en-US/docs/Learn/JavaScript/First_steps">Premiers pas</a> et <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Les blocs de construction</a>) et les bases de la programmation objet en JavaScript (voir <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction aux objets</a>). </p>
+    <p>Connaissance basique de l'informatique, une compréhension basique du HTML et du CSS, une familiarité avec  les bases du JavaScript (voir <a href="/fr/docs/Learn/JavaScript/First_steps">Premiers pas</a> et <a href="/fr/docs/Learn/JavaScript/Building_blocks">Les blocs de construction</a>) et les bases de la programmation objet en JavaScript (voir <a href="/fr/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction aux objets</a>). </p>
    </td>
   </tr>
   <tr>
@@ -45,7 +45,7 @@ original_slug: Learn/JavaScript/Objects/la_construction_d_objet_en_pratique
 <ol>
 </ol>
 
-<p>Cet exemple utilise l'<a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">API Canvas </a> pour dessiner les balles sur l'écran, et l'API <a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame</a>  pour animer l'ensemble de l'affichage — Nul besoin d'avoir une connaissance préalable de ces APIs, nous expérons qu'une fois cet article terminé, vous aurez envie d'en faire une exploration approfondie. Tout le long du parcours nous utiliserons certains objets formidables et vous montrerons nombre de techniques sympathiques comme des balles bondissantes sur les murs et la vérification de balles qui s'entrechoquent (encore connue sous l'appelation <strong>détection de collision</strong>).</p>
+<p>Cet exemple utilise l'<a href="/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">API Canvas </a> pour dessiner les balles sur l'écran, et l'API <a href="/fr/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame</a>  pour animer l'ensemble de l'affichage — Nul besoin d'avoir une connaissance préalable de ces APIs, nous expérons qu'une fois cet article terminé, vous aurez envie d'en faire une exploration approfondie. Tout le long du parcours nous utiliserons certains objets formidables et vous montrerons nombre de techniques sympathiques comme des balles bondissantes sur les murs et la vérification de balles qui s'entrechoquent (encore connue sous l'appelation <strong>détection de collision</strong>).</p>
 
 <p>Pour commencer, faites des copies locales de nos fichiers <code><a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html">index.html</a></code>, <code><a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css">style.css</a></code>, et <code><a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js">main.js</a></code>. Ces fichiers contiennent respectivement :</p>
 
@@ -64,7 +64,7 @@ const ctx = canvas.getContext('2d');
 const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;</pre>
 
-<p>Ce script prend une référence à l'élément  <code>&lt;canvas&gt;</code> et ensuite invoque la méthode  <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/getContext">getContext()</a></code> sur lui, nous donnant ainsi un contexte sur lequel nous pouvons commencer à dessiner. La variable résultante  (<code>ctx</code>)  est l'objet qui représente directement la surface du Canvas où nous pouvons dessiner et qui nous permet de dessiner des formes 2D sur ce dernier. </p>
+<p>Ce script prend une référence à l'élément  <code>&lt;canvas&gt;</code> et ensuite invoque la méthode  <code><a href="/fr/docs/Web/API/HTMLCanvasElement/getContext">getContext()</a></code> sur lui, nous donnant ainsi un contexte sur lequel nous pouvons commencer à dessiner. La variable résultante  (<code>ctx</code>)  est l'objet qui représente directement la surface du Canvas où nous pouvons dessiner et qui nous permet de dessiner des formes 2D sur ce dernier. </p>
 
 <p>Après, nous configurons  les variables <code>width</code> (largeur) et <code>height</code>(hauteur),  et la largeur et la hauteur de l'élément canvas (représentés par les propriétés  <code>canvas.width</code> et <code>canvas.height</code> ) afin qu'elles soient identiques à la fenêtre du navigateur (la surface sur laquelle apparaît la page web— Ceci peut être tiré des propriétés {{domxref("Window.innerWidth")}} et {{domxref("Window.innerHeight")}}).</p>
 
@@ -117,16 +117,16 @@ const height = canvas.height = window.innerHeight;</pre>
 <p>En utilisant cette fonction, nous pouvons dire à notre balle de se dessiner sur l'écran en appelant une série de membres du contexte 2D du canvas que nous avons défini plus tôt  (<code>ctx</code>). Le contexte est comme le papier et maintenant nous allons demander à notre stylo d'y dessiner quelque chose :</p>
 
 <ul>
- <li>Premièrement, nous utilisons <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath">beginPath()</a></code> pour spécifier que nous voulons dessiner une forme sur le papier.</li>
- <li>Ensuite, nous utilisons <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle">fillStyle</a></code> pour définir de quelle couleur nous voulons que la forme soit — nous lui attribuons la valeur de la propriété <code>color</code> de notre balle.</li>
- <li>Après, nous utilisons la méthode <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/arc">arc()</a></code> pour tracer une forme en arc sur le papier. Ses paramètres sont :
+ <li>Premièrement, nous utilisons <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/beginPath">beginPath()</a></code> pour spécifier que nous voulons dessiner une forme sur le papier.</li>
+ <li>Ensuite, nous utilisons <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/fillStyle">fillStyle</a></code> pour définir de quelle couleur nous voulons que la forme soit — nous lui attribuons la valeur de la propriété <code>color</code> de notre balle.</li>
+ <li>Après, nous utilisons la méthode <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/arc">arc()</a></code> pour tracer une forme en arc sur le papier. Ses paramètres sont :
   <ul>
    <li>Les positions <code>x</code> et <code>y</code> du centre de l'arc — nous specifions donc les propriétés <code>x</code> et <code>y </code>de notre balle.</li>
    <li>Le rayon de l'arc — nous specifions la propriété <code>size</code> de notre balle.</li>
    <li>Les deux derniers paramètres spécifient l'intervalle de début et de fin en degrés pour dessiner l'arc. Ici nous avons spécifié 0 degrés et <code>2 * PI </code>qui est l'équivalent de 360 degrés en radians (malheureusement  vous êtes obligés  de spécifier ces valeurs en radians et non en degrés). Cela nous donne un cercle complet. Si vous aviez spécifié seulement  <code>1 * PI</code>, vous auriez eu un demi-cercle (180 degrés).</li>
   </ul>
  </li>
- <li>En dernière position nous utilisons la méthode <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fill">fill()</a></code> qui est habituellement utilisée pour spécifier que nous souhaitons mettre fin au dessin que nous avons commencé avec <code>beginPath()</code>, et remplir la surface délimitée avec la couleur que nous avions spécifiée plus tôt avec <code>fillStyle</code>.</li>
+ <li>En dernière position nous utilisons la méthode <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/fill">fill()</a></code> qui est habituellement utilisée pour spécifier que nous souhaitons mettre fin au dessin que nous avons commencé avec <code>beginPath()</code>, et remplir la surface délimitée avec la couleur que nous avions spécifiée plus tôt avec <code>fillStyle</code>.</li>
 </ul>
 
 <p>Vous pouvez déjà commencer à tester votre objet.</p>
@@ -269,7 +269,7 @@ testBall.draw()</pre>
   <ul>
    <li>Pour chaque balle <em>b</em>, nous devons vérifier chaque autre balle pour voir si elle est entrée en collision avec <em>b</em>. Pour ce faire, on inspecte toutes les balles du tableau <code>balls[]</code> dans une boucle <code>for</code>.</li>
    <li>Immédiatement à l'intérieur de cette boucle <code>for</code>, une instruction <code>if</code> vérifie si la balle courante  <em>b'</em> , inspectée dans la boucle, n'est égale à la balle <em>b. Le code correspondant est :  </em><code><em>b</em>'!== <em>b</em></code><em>. </em>En effet, nous ne voulons pas vérifier si une balle <em>b</em> est entrée en collision avec elle-même ! Nous contrôlons donc si la balle actuelle <em>b</em>—dont la méthode <code>collisionDetect()</code> est invoquée—est distincte de la balle <em>b' </em>inspectée dans la boucle<em>. </em>Ainsi le bloc de code venant après l'instruction <code>if</code> ne s'exécutera que si les balles <em>b</em> et <em>b'</em> ne sont pas identiques.</li>
-   <li>Un algorithme classique permet ensuite de vérifier la superposition de deux disques. Ceci est expliqué plus loin dans <a href="/en-US/docs/Games/Techniques/2D_collision_detection">2D collision detection</a>.</li>
+   <li>Un algorithme classique permet ensuite de vérifier la superposition de deux disques. Ceci est expliqué plus loin dans <a href="/fr/docs/Games/Techniques/2D_collision_detection">2D collision detection</a>.</li>
    <li>Si une collision est détectée, le code à l'intérieur de l'instruction interne <code>if</code> est exécuté. Dans ce cas, nous définissons simplement la propriété <code>color</code> des deux cercles à une nouvelle couleur aléatoire. Nous aurions pu faire quelque chose de bien plus complexe, comme faire rebondir les balles de façon réaliste, mais cela aurait été beaucoup plus complexe à mettre en œuvre. Pour de telles simulations de physique, les développeurs ont tendance à utiliser des bibliothèques de jeux ou de physiques telles que <a href="http://wellcaffeinated.net/PhysicsJS/">PhysicsJS</a>, <a href="http://brm.io/matter-js/">matter.js</a>, <a href="http://phaser.io/">Phaser</a>, etc.</li>
   </ul>
  </li>
@@ -292,12 +292,12 @@ testBall.draw()</pre>
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Didacticiel sur canvas</a> — un guide pour débutants sur l'utilisation de canvas 2D.</li>
- <li><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></li>
- <li><a href="/en-US/docs/Games/Techniques/2D_collision_detection">Détection de collision 2D</a> </li>
- <li><a href="/en-US/docs/Games/Techniques/3D_collision_detection">Détection de collision 3D</a> </li>
- <li><a href="/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">Jeu d'évasion 2D utilisant du JavaScript pu</a> —un excellent tutoriel pour débutant montrant comment construire un jeu en 2D.</li>
- <li><a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">Jeu d'évasion 2D utilisant phaser</a> — explique les bases de la construction d'un jeu 2D en utilisant une bibliothèque de jeux JavaScript.</li>
+ <li><a href="/fr/docs/Web/API/Canvas_API/Tutorial">Didacticiel sur canvas</a> — un guide pour débutants sur l'utilisation de canvas 2D.</li>
+ <li><a href="/fr/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></li>
+ <li><a href="/fr/docs/Games/Techniques/2D_collision_detection">Détection de collision 2D</a> </li>
+ <li><a href="/fr/docs/Games/Techniques/3D_collision_detection">Détection de collision 3D</a> </li>
+ <li><a href="/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">Jeu d'évasion 2D utilisant du JavaScript pu</a> —un excellent tutoriel pour débutant montrant comment construire un jeu en 2D.</li>
+ <li><a href="/fr/docs/Games/Tutorials/2D_breakout_game_Phaser">Jeu d'évasion 2D utilisant phaser</a> — explique les bases de la construction d'un jeu 2D en utilisant une bibliothèque de jeux JavaScript.</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}</p>
@@ -307,11 +307,11 @@ testBall.draw()</pre>
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Les bases de l'objet</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">JavaScript orienté objet pour les débutants</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Prototypes d'objets</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance">Héritage en JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/JSON">Travailler avec des données JSON</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_building_practice">Pratique de construction d'objets</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Ajout de fonctionnalités à notre démo de balles bondissantes</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Basics">Les bases de l'objet</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS">JavaScript orienté objet pour les débutants</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Object_prototypes">Prototypes d'objets</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Inheritance">Héritage en JavaScript</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/JSON">Travailler avec des données JSON</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Object_building_practice">Pratique de construction d'objets</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Ajout de fonctionnalités à notre démo de balles bondissantes</a></li>
 </ul>

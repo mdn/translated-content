@@ -22,7 +22,7 @@ original_slug: Apprendre/Common_questions/configurer_un_serveur_de_test_local
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
-   <td>Vous devez au préalable savoir <a href="/en-US/docs/Learn/How_the_Internet_works">comment Internet fonctionne</a> et <a href="/en-US/docs/Learn/What_is_a_Web_server">ce qu'est un serveur Web</a>.</td>
+   <td>Vous devez au préalable savoir <a href="/fr/docs/Learn/How_the_Internet_works">comment Internet fonctionne</a> et <a href="/fr/docs/Learn/What_is_a_Web_server">ce qu'est un serveur Web</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objectif:</th>
@@ -42,7 +42,7 @@ original_slug: Apprendre/Common_questions/configurer_un_serveur_de_test_local
 <p>Certains exemples ne fonctionneront pas si vous les ouvrez en tant que fichiers locaux. Il y a plusieurs raisons possibles, dont les plus courantes sont :</p>
 
 <ul>
- <li><strong>Ils sont basés sur des requêtes asynchrones</strong>. Certains navigateurs comme Chrome n'exécutent pas de requêtes asynchrones (voyez <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Récolter des données depuis le serveur </a>) si vous lancez simplement l'exemple comme un fichier local. Cela est dû à des restrictions de sécurité (voir <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Sécurité des sites Web</a> pour en savoir plus).</li>
+ <li><strong>Ils sont basés sur des requêtes asynchrones</strong>. Certains navigateurs comme Chrome n'exécutent pas de requêtes asynchrones (voyez <a href="/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Récolter des données depuis le serveur </a>) si vous lancez simplement l'exemple comme un fichier local. Cela est dû à des restrictions de sécurité (voir <a href="/fr/docs/Learn/Server-side/First_steps/Website_security">Sécurité des sites Web</a> pour en savoir plus).</li>
  <li><strong>Ils mettent en œuvre un langage spécifique, tournant sur le serveur</strong>. Des langages côté-serveur (comme PHP ou Python) nécessitent un environnement spécifique fourni par le serveur pour interpréter le code et donner des résultats.</li>
 </ul>
 
@@ -102,7 +102,7 @@ python -m SimpleHTTPServer</pre>
 <p>Le module <code>SimpleHTTPServer</code> de Python est utile, mais il ne sait pas comment exécuter du code écrit dans des langages comme PHP ou Python. Pour gérer ça, vous aurez besoin de quelque chose en plus — ce dont vous aurez besoin exactement dépend du language serveur que vous essayez d'exécuter. Voici quelques exemples :</p>
 
 <ul>
- <li>Pour exécuter du code Python coté-serveur, vous aurez besoin d'utiliser un framework web Python. Vous pouvez découvrir comment utiliser le framework Django en lisant <a href="/en-US/docs/Learn/Server-side/Django">Django Web Framework (Python)</a>. <a href="http://flask.pocoo.org/">Flask</a> est une alternative à Django, un peu plus légère. Pour l'exécuter, vous aurez besoin d'<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/development_environment#Installing_Python_3">installer Python/PIP</a>, puis Flask en utilisant <code>pip3 install flask</code>.  À ce point, vous devriez être capable d'exécuter les exemples Python Flask en utilisant par exemple <code>python3 python-example.py</code>, puis consulter <code>localhost:5000</code> dans votre navigateur.</li>
- <li>Pour exécuter du code Node.js (JavaScript) côté-serveur, vous aurez besoin d'utiliser un  noeud brut ou un framework construit par dessus ce dernier. Express est un bon choix — voir <a href="/en-US/docs/Learn/Server-side/Express_Nodejs">Express Web Framework (Node.js/JavaScript)</a>.</li>
+ <li>Pour exécuter du code Python coté-serveur, vous aurez besoin d'utiliser un framework web Python. Vous pouvez découvrir comment utiliser le framework Django en lisant <a href="/fr/docs/Learn/Server-side/Django">Django Web Framework (Python)</a>. <a href="http://flask.pocoo.org/">Flask</a> est une alternative à Django, un peu plus légère. Pour l'exécuter, vous aurez besoin d'<a href="/fr/docs/Learn/Server-side/Django/development_environment#Installing_Python_3">installer Python/PIP</a>, puis Flask en utilisant <code>pip3 install flask</code>.  À ce point, vous devriez être capable d'exécuter les exemples Python Flask en utilisant par exemple <code>python3 python-example.py</code>, puis consulter <code>localhost:5000</code> dans votre navigateur.</li>
+ <li>Pour exécuter du code Node.js (JavaScript) côté-serveur, vous aurez besoin d'utiliser un  noeud brut ou un framework construit par dessus ce dernier. Express est un bon choix — voir <a href="/fr/docs/Learn/Server-side/Express_Nodejs">Express Web Framework (Node.js/JavaScript)</a>.</li>
  <li>Pour exécuter du code PHP côté serveur, vous aurez besoin d'une configuration serveur qui peut  interpréter PHP. De bonnes options pour tester PHP localement sont <a class="external external-icon" href="https://www.mamp.info/en/downloads/">MAMP</a> (Mac and Windows) , <a class="external external-icon" href="http://ampps.com/download">AMPPS</a> (Mac, Windows, Linux) and <a href="https://www.linux.com/learn/easy-lamp-server-installation">LAMP</a> (Linux, Apache, MySQL, et PHP/Python/Perl). Ce sont des paquets complets qui créent des configurations locales vous permettant d'exécuter un serveur Apache, PHP et des bases de données MySQL.</li>
 </ul>

@@ -24,7 +24,7 @@ original_slug: Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
-   <td>Compétences informatiques de base,  <a href="https://developer.mozilla.org/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base">installation des outils de base</a>, bases de la <a href="https://developer.mozilla.org/fr/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers">manipulation des fichiers</a>, connaissance des fondamentaux du HTML (comme expliqué dans  <a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started">Commencer avec le HTML)</a> et <a href="https://developer.mozilla.org/fr/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML">Images en HTML</a>.</td>
+   <td>Compétences informatiques de base,  <a href="/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base">installation des outils de base</a>, bases de la <a href="/fr/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers">manipulation des fichiers</a>, connaissance des fondamentaux du HTML (comme expliqué dans  <a href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started">Commencer avec le HTML)</a> et <a href="/fr/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML">Images en HTML</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objectifs :</th>
@@ -59,7 +59,7 @@ original_slug: Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video
  <dt>{{htmlattrxref("src","video")}}</dt>
  <dd>De la même manière que pour l'élément {{htmlelement("img")}}, l'attribut <code>src</code> (source) contient le chemin vers la vidéo que vous voulez intégrer.  Cela fonctionne de la même manière.</dd>
  <dt>{{htmlattrxref("controls","video")}}</dt>
- <dd>Les utilisateurs doivent avoir un contrôle sur la lecture de la vidéo ou de l'audio. (c'est particulièrement crucial pour les gens ayant de l'<a href="https://fr.wikipedia.org/wiki/%C3%89pilepsie">épilepsie</a>.) Vous devez vous servir de l'attribut  <code>controls</code> pour appeler l'interface de contrôle du navigateur ou construire votre propre interface en utilisant l'<a href="https://developer.mozilla.org/fr/docs/Web/API/HTMLMediaElement">API JavaScript </a>adéquat. Au minimum, l'interface doit avoir un contrôle de démarrage et d'arrêt (start/stop) du média et un pour ajuster le volume.</dd>
+ <dd>Les utilisateurs doivent avoir un contrôle sur la lecture de la vidéo ou de l'audio. (c'est particulièrement crucial pour les gens ayant de l'<a href="https://fr.wikipedia.org/wiki/%C3%89pilepsie">épilepsie</a>.) Vous devez vous servir de l'attribut  <code>controls</code> pour appeler l'interface de contrôle du navigateur ou construire votre propre interface en utilisant l'<a href="/fr/docs/Web/API/HTMLMediaElement">API JavaScript </a>adéquat. Au minimum, l'interface doit avoir un contrôle de démarrage et d'arrêt (start/stop) du média et un pour ajuster le volume.</dd>
  <dt>Le paragraphe dans la balise <code>&lt;video&gt;</code></dt>
  <dd>Cela peut s'appeler solution de repli ou contenu de secours (fallback content) — si le navigateur accédant à la page ne supporte pas l'élément <code>&lt;video&gt;</code> , cela offre un texte alternatif qui peut être ce que vous voulez ; dans ce cas nous avons mis un lien direct au fichier vidéo, afin que l'utilisateur puisse au moins y accéder sans avoir à se soucier du navigateur qu'il utilise.</dd>
 </dl>
@@ -87,7 +87,7 @@ original_slug: Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video
 <p>Un lecteur audio peut jouer directement une piste audio, par ex. un fichier MP3 ou Ogg. Elles ne nécessitent pas de conteneur.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Ce n'est pas si simple, comme vous pouvez le voir dans le <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Supported_media_formats#Browser_compatibility">tableau de compatibilité des codecs audio-vidéo</a>. En outre, de nombreux navigateurs de plateforme mobile peuvent lire un format non pris en charge en le transférant au lecteur multimédia du système sous-jacent. Mais pour l'instant nous nous contenterons de ce qui précède.</p>
+<p><strong>Note :</strong> Ce n'est pas si simple, comme vous pouvez le voir dans le <a href="/fr/docs/Web/HTML/Supported_media_formats#Browser_compatibility">tableau de compatibilité des codecs audio-vidéo</a>. En outre, de nombreux navigateurs de plateforme mobile peuvent lire un format non pris en charge en le transférant au lecteur multimédia du système sous-jacent. Mais pour l'instant nous nous contenterons de ce qui précède.</p>
 </div>
 
 <p>Les formats ci-dessus ont été créés pour compresser la vidéo et l'audio dans des fichiers gérables (les fichiers vidéo et audio bruts sont très volumineux). Les navigateurs contiennent différents {{Glossary("Codec","Codecs")}}, comme Vorbis ou H.264, utilisés pour convertir le son et la vidéo compressés en binaire et inversement. Comme indiqué ci-dessus, les navigateurs ne supportent malheureusement pas tous les mêmes codecs, vous devrez donc fournir plusieurs fichiers pour chaque production de média. S'il vous manque le bon codec pour décoder le média, il ne pourra pas être lu.</p>
@@ -115,7 +115,7 @@ original_slug: Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video
 <p> </p>
 
 <div class="note">
-<p><strong>Note :</strong> L'<a href="/en-US/docs/Web/HTML/Supported_media_formats">article sur les formats média pris en charge</a> contient quelques types {{glossary("MIME type","MIME")}} courants.</p>
+<p><strong>Note :</strong> L'<a href="/fr/docs/Web/HTML/Supported_media_formats">article sur les formats média pris en charge</a> contient quelques types {{glossary("MIME type","MIME")}} courants.</p>
 </div>
 
 <h3 id="Autres_fonctionnalités_de_&lt;video>">Autres fonctionnalités de &lt;video&gt;</h3>
@@ -250,7 +250,7 @@ Ceci est le deuxième.
 
 <p><img alt='Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="https://mdn.mozillademos.org/files/7887/video-player-with-captions.png" style="display: block; height: 365px; margin: 0px auto; width: 593px;"></p>
 
-<p>Pour plus de détails, lisez <a href="/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Ajouter des légendes et des sous‑titres aux vidéos HTML5</a>. Vous <a href="http://iandevlin.github.io/mdn/video-player-with-captions/">trouverez un exemple</a>, écrit par Ian Devlin, accompagnant cet article sur Github (voyez le <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">code source</a> aussi). Cet exemple utilise un peu de JavaScript pour permettre à l'utilisateur de choisir entre différents sous‑titres. Notez que pour activer les sous‑titres, vous devez presser le bouton « CC » et selectionner une option — English, Deutsch ou Español. </p>
+<p>Pour plus de détails, lisez <a href="/fr/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Ajouter des légendes et des sous‑titres aux vidéos HTML5</a>. Vous <a href="http://iandevlin.github.io/mdn/video-player-with-captions/">trouverez un exemple</a>, écrit par Ian Devlin, accompagnant cet article sur Github (voyez le <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">code source</a> aussi). Cet exemple utilise un peu de JavaScript pour permettre à l'utilisateur de choisir entre différents sous‑titres. Notez que pour activer les sous‑titres, vous devez presser le bouton « CC » et selectionner une option — English, Deutsch ou Español. </p>
 
 <div class="note">
 <p><strong>Note :</strong> Les pistes texte peuvent aussi vous aider avec {{glossary("SEO")}}, car les moteurs de recherche sont très performants sur le texte. Les pistes textes permettent aussi aux moteurs de recherche de faire un lien direct à un point particulier de la vidéo.</p>
@@ -285,9 +285,9 @@ Ceci est le deuxième.
  <li>{{htmlelement("video")}}</li>
  <li>{{htmlelement("source")}}</li>
  <li>{{htmlelement("track")}}</li>
- <li><a href="https://developer.mozilla.org/fr/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video"> Ajouter des légendes et sous-titres aux vidéos HTML5</a></li>
- <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">Intégration Audio et Vidéo </a>: de nombreux détails sur la manière de mettre de la vidéo et audio sur le web avec HTML et JavaScript.</li>
- <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation">Manipuler l'Audio et la Vidéo</a>: de nombreux détails pour manipuler l'audio et la vidéo avec JavaScript (par ex. en ajoutant des filtres).</li>
+ <li><a href="/fr/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video"> Ajouter des légendes et sous-titres aux vidéos HTML5</a></li>
+ <li><a href="/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">Intégration Audio et Vidéo </a>: de nombreux détails sur la manière de mettre de la vidéo et audio sur le web avec HTML et JavaScript.</li>
+ <li><a href="/fr/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation">Manipuler l'Audio et la Vidéo</a>: de nombreux détails pour manipuler l'audio et la vidéo avec JavaScript (par ex. en ajoutant des filtres).</li>
  <li>Options automatisées pour la <a href="http://www.inwhatlanguage.com/blog/translate-video-audio/">traduction multimédia</a>.</li>
 </ul>
 
@@ -298,12 +298,12 @@ Ceci est le deuxième.
 <h2 id="Contenu_du_module">Contenu du module :</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML">Les images en HTML</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video">Contenu audio et vidéo</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Comment/Ajouter_des_images_vectorielles_%C3%A0_une_page_web">Ajouter des images vectorielles à une page Web</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_%C3%A0_une_page_web">Ajouter des images "responsive" à une page Web</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Mozilla splash page</a></li>
+ <li><a href="/fr/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML">Les images en HTML</a></li>
+ <li><a href="/fr/Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video">Contenu audio et vidéo</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a></li>
+ <li><a href="/fr/Apprendre/HTML/Comment/Ajouter_des_images_vectorielles_%C3%A0_une_page_web">Ajouter des images vectorielles à une page Web</a></li>
+ <li><a href="/fr/Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_%C3%A0_une_page_web">Ajouter des images "responsive" à une page Web</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Mozilla splash page</a></li>
 </ul>
 
 <p> </p>

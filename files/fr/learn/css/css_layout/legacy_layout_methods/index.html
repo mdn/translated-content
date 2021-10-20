@@ -135,7 +135,7 @@ div:nth-of-type(2) {
 
 <h2 id="Ancienne_création_d'un_cadre_de_trames">Ancienne création d'un cadre de trames</h2>
 
-<p>La plupart des anciens cadres de création de trames utilisaient le comportement de la propriété {{cssxref("float")}} pour faire flotter les colonnes les unes à côté des autres pour créer quelque chose qui ressemble à des trames. Travailler le processus de création d'une trame avec des boîtes flottantes vous en montre le fonctionnement et sert également d'introduction à certains concepts plus avancés pour construire les choses apprises dans la leçon sur le <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">dégagement des boîtes flottantes</a>.</p>
+<p>La plupart des anciens cadres de création de trames utilisaient le comportement de la propriété {{cssxref("float")}} pour faire flotter les colonnes les unes à côté des autres pour créer quelque chose qui ressemble à des trames. Travailler le processus de création d'une trame avec des boîtes flottantes vous en montre le fonctionnement et sert également d'introduction à certains concepts plus avancés pour construire les choses apprises dans la leçon sur le <a href="/fr/docs/Learn/CSS/CSS_layout/Floats">dégagement des boîtes flottantes</a>.</p>
 
 <p>Le type de cadre de trames le plus facile à créer est un cadre de largeur fixe — il faut simplement déterminer la largeur totale du désign, le nombre de colonnes voulues et la largeur des gouttières et des colonnes. Si nous décidons plutôt de disposer ce design sur une trame avec des colonnes s'adaptant à la largeur de vue du navigateur, nous devrons  calculer les pourcentages de largeur des colonnes et celui des gouttières entre colonnes.</p>
 
@@ -324,7 +324,7 @@ body {
 
 <h3 id="Faciliter_les_calculs_avec_la_fonction_calc()">Faciliter les calculs avec la fonction calc()</h3>
 
-<p>Vous pouvez utiliser la fonction {{cssxref("calc()")}} pour faire les calculs à l'intérieur même de la CSS — la fonction vous permet d'insérer de simples expressions mathématiques pour calculer la valeur qu'il convient de donner à la propriété CSS. C'est utile quand les calculs sont complexes ; vous pouvez même effectuer un calcul avec des unités différentes, par exemple « je veux que la hauteur de cet élément soit toujours égale à 100% de son parent moins 50px ». Voir <a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()">cet exemple dans le didacticiel MediaRecorder API</a>.</p>
+<p>Vous pouvez utiliser la fonction {{cssxref("calc()")}} pour faire les calculs à l'intérieur même de la CSS — la fonction vous permet d'insérer de simples expressions mathématiques pour calculer la valeur qu'il convient de donner à la propriété CSS. C'est utile quand les calculs sont complexes ; vous pouvez même effectuer un calcul avec des unités différentes, par exemple « je veux que la hauteur de cet élément soit toujours égale à 100% de son parent moins 50px ». Voir <a href="/fr/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()">cet exemple dans le didacticiel MediaRecorder API</a>.</p>
 
 <p>Revenon à nos trames ! Toute colonne se développant au delà de la première a une largeur totale de 6.25% multipliée par le nombre de colonnes précédentes plus 2.08333333% multiplié par le nombre de gouttières (qui doit toujours être égal au nombre de colonnes moins 1). La fonction <code>calc()</code> nous permet de faire ce calcul dans la valeur <code>width</code> même, ainsi pour tout élément au-delà de la colonne 4 nous pouvons écrire, par exemple :</p>
 
@@ -481,7 +481,7 @@ body {
 <p>Skeleton inclut plus qu'un système de grille — il contient aussi des CSS pour la typographie et autres éléments de page que vous pouvez utiliser comme point de départ. Toutefois nous les laisserons de côté pour l'instant — c'est la trame qui nous interesse pour le moment.</p>
 
 <div class="note">
-<p><strong>Note :</strong> <a href="/en-US/docs/">Normalize</a> est une petite bibliothèque réellement utile écrite par Nicolas Gallagher, bibliothèque qui fait automatiquement quelques corrections sur les dispositions de base et rend le style des éléments par défaut plus conhérent entre les divers navigateurs.</p>
+<p><strong>Note :</strong> <a href="/fr/docs/">Normalize</a> est une petite bibliothèque réellement utile écrite par Nicolas Gallagher, bibliothèque qui fait automatiquement quelques corrections sur les dispositions de base et rend le style des éléments par défaut plus conhérent entre les divers navigateurs.</p>
 </div>
 
 <p>Nous utiliserons un HTML similaire à celui de notre dernier exemple. Ajoutez ce qui suit dans le corps du HTML :</p>
@@ -569,14 +569,14 @@ body {
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Introduction">Introduction to CSS layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow">Normal Flow</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column Layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy Layout Methods</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Supporting older browsers</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">Fundamental Layout Comprehension Assessment</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Introduction">Introduction to CSS layout</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Normal_Flow">Normal Flow</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Grids">Grid</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column Layout</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy Layout Methods</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Supporting older browsers</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">Fundamental Layout Comprehension Assessment</a></li>
 </ul>

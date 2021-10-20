@@ -13,7 +13,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_f
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.</td>
+   <td>Familiarity with the core <a href="/fr/docs/Learn/HTML">HTML</a>, <a href="/fr/docs/Learn/CSS">CSS</a>, and <a href="/fr/docs/Learn/JavaScript">JavaScript</a> languages.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -28,7 +28,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_f
 
 <p>Angular apps often make heavy use of <strong>TypeScript</strong>. TypeScript is not concerned with the writing of user interfaces, but it is a domain-specific language, and has significant differences to vanilla JavaScript.</p>
 
-<p>DSLs can't be read by the browser directly; they must be transformed into JavaScript or HTML first. <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview#Transformation">Transformation is an extra step in the development process</a>, but framework tooling generally includes the required tools to handle this step, or can be adjusted to include this step. While it is possible to build framework apps without using these domain-specific languages, embracing them will streamline your development process and make it easier to find help from the communities around those frameworks.</p>
+<p>DSLs can't be read by the browser directly; they must be transformed into JavaScript or HTML first. <a href="/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview#Transformation">Transformation is an extra step in the development process</a>, but framework tooling generally includes the required tools to handle this step, or can be adjusted to include this step. While it is possible to build framework apps without using these domain-specific languages, embracing them will streamline your development process and make it easier to find help from the communities around those frameworks.</p>
 
 <h3 id="JSX">JSX</h3>
 
@@ -43,7 +43,7 @@ const header = (
   &lt;/header&gt;
 );</pre>
 
-<p>This expression represents an HTML <code><a href="/en-US/docs/Web/HTML/Element/header">&lt;header&gt;</a></code> element with a <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code> element inside. The curly braces around <code>subject</code> on line 4 tell the application to read the value of the <code>subject</code> constant and insert it into our <code>&lt;h1&gt;</code>.</p>
+<p>This expression represents an HTML <code><a href="/fr/docs/Web/HTML/Element/header">&lt;header&gt;</a></code> element with a <code><a href="/fr/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code> element inside. The curly braces around <code>subject</code> on line 4 tell the application to read the value of the <code>subject</code> constant and insert it into our <code>&lt;h1&gt;</code>.</p>
 
 <p>When used with React, the JSX from the previous snippet would be compiled into this:</p>
 
@@ -131,7 +131,7 @@ var header = React.createElement("header", null,
   byline="Zelda Schiff is editor-in-chief of the Library Times."
 /&gt;</pre>
 
-<p>This will ultimately render the following <code><a href="/en-US/docs/Web/HTML/Element/figure">&lt;figure&gt;</a></code> element in the browser, with its structure as defined in the <code>AuthorCredit</code> component, and its content as defined in the props included on the <code>AuthorCredit</code> component call:</p>
+<p>This will ultimately render the following <code><a href="/fr/docs/Web/HTML/Element/figure">&lt;figure&gt;</a></code> element in the browser, with its structure as defined in the <code>AuthorCredit</code> component, and its content as defined in the props included on the <code>AuthorCredit</code> component call:</p>
 
 <pre class="brush: html">&lt;figure&gt;
   &lt;img
@@ -166,7 +166,7 @@ var header = React.createElement("header", null,
 
 <p>In order to be interactive, components need ways to respond to browser events, so our applications can respond to our users. Frameworks each provide their own syntax for listening to browser events, which reference the names of the equivalent native browser events.</p>
 
-<p>In React, listening for the <code><a href="/en-US/docs/Web/API/Element/click_event">click</a></code> event requires a special property, <code>onClick</code>. Let’s update our <code>CounterButton</code> code from above to allow it to count clicks:</p>
+<p>In React, listening for the <code><a href="/fr/docs/Web/API/Element/click_event">click</a></code> event requires a special property, <code>onClick</code>. Let’s update our <code>CounterButton</code> code from above to allow it to count clicks:</p>
 
 <pre class="brush: js">function CounterButton() {
   const [count, setCount] = useState(0);
@@ -183,7 +183,7 @@ var header = React.createElement("header", null,
 
 <h2 id="Handling_dependencies">Handling dependencies</h2>
 
-<p>All major frameworks provide mechanisms for handling dependencies — using components inside other components, sometimes with multiple hierarchy levels. As with other features, the exact mechanism will differ between frameworks, but the end result is the same. Components tend to import components into other components using the standard <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript module syntax</a>, or at least something similar.</p>
+<p>All major frameworks provide mechanisms for handling dependencies — using components inside other components, sometimes with multiple hierarchy levels. As with other features, the exact mechanism will differ between frameworks, but the end result is the same. Components tend to import components into other components using the standard <a href="/fr/docs/Web/JavaScript/Guide/Modules">JavaScript module syntax</a>, or at least something similar.</p>
 
 <h3 id="Components_in_components">Components in components</h3>
 
@@ -247,7 +247,7 @@ var header = React.createElement("header", null,
 
 <h2 id="Routing">Routing</h2>
 
-<p>As <a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction#Routing">mentioned in the previous chapter, routing</a> is an important part of the web experience. To avoid a broken experience in sufficiently complex apps with lots of views, each of the frameworks covered in this module provides a library (or more than one library) that helps developers implement client-side routing in their applications.</p>
+<p>As <a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction#Routing">mentioned in the previous chapter, routing</a> is an important part of the web experience. To avoid a broken experience in sufficiently complex apps with lots of views, each of the frameworks covered in this module provides a library (or more than one library) that helps developers implement client-side routing in their applications.</p>
 
 <h2 id="Testing">Testing</h2>
 
@@ -289,9 +289,9 @@ it("Increments the count when clicked", () =&gt; {
 <p>At this point you should have more of an idea about the actual languages, features, and tools you'll be using as you create applications with frameworks. I'm sure you’re enthusiastic to get going and actually do some coding, and that's what you are going to do next! At this point you can choose which framework you'd like to start learning first:</p>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">React</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Ember</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Vue</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">React</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Ember</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Vue</a></li>
 </ul>
 
 <div class="note">
@@ -303,52 +303,52 @@ it("Increments the count when clicked", () =&gt; {
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
  <li>React
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
   </ul>
  </li>
  <li>Ember
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
   </ul>
  </li>
  <li>Vue
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
   </ul>
  </li>
  <li>Svelte
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
+   <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
   </ul>
  </li>
 </ul>

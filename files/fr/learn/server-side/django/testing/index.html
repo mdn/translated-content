@@ -23,7 +23,7 @@ translation_of: Learn/Server-side/Django/Testing
  <tbody>
   <tr>
    <th scope="row">Prérequis:</th>
-   <td>Avoir terminé tous les tutoriels précédents, y compris <a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a>.</td>
+   <td>Avoir terminé tous les tutoriels précédents, y compris <a href="/fr/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objectif:</th>
@@ -34,7 +34,7 @@ translation_of: Learn/Server-side/Django/Testing
 
 <h2 id="Vue_densemble">Vue d'ensemble</h2>
 
-<p>Le site <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Local Library</a> a actuellement des pages pour afficher des listes de tous les livres et auteurs, des pages de détail pour les éléments de type <code>Book</code> et <code>Author</code>, une page pour renouveler des <code>BookInstance</code>s, et des pages pour créer, mettre à jour et effacer des éléments de type <code>Author</code> (et également des enregistrements de type <code>Book</code>, si vous avez relevé le <em>défi</em> dans le <a href="/en-US/docs/Learn/Server-side/Django/Forms">tutoriel sur les formulaires</a>). Même avec ce site relativement petit, naviguer manuellement vers chaque page et vérifier <em>superficiellement</em> que tout fonctionne comme prévu peut prendre plusieurs minutes. Quand nous allons faire des modifications et agrandir le site, le temps requis pour vérifier manuellement que tout fonctionne "proprement" va grandir. Si nous continuons comme cela, nous allons sûrement passer beaucoup de temps à tester notre code, et peu à l'améliorer.</p>
+<p>Le site <a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">Local Library</a> a actuellement des pages pour afficher des listes de tous les livres et auteurs, des pages de détail pour les éléments de type <code>Book</code> et <code>Author</code>, une page pour renouveler des <code>BookInstance</code>s, et des pages pour créer, mettre à jour et effacer des éléments de type <code>Author</code> (et également des enregistrements de type <code>Book</code>, si vous avez relevé le <em>défi</em> dans le <a href="/fr/docs/Learn/Server-side/Django/Forms">tutoriel sur les formulaires</a>). Même avec ce site relativement petit, naviguer manuellement vers chaque page et vérifier <em>superficiellement</em> que tout fonctionne comme prévu peut prendre plusieurs minutes. Quand nous allons faire des modifications et agrandir le site, le temps requis pour vérifier manuellement que tout fonctionne "proprement" va grandir. Si nous continuons comme cela, nous allons sûrement passer beaucoup de temps à tester notre code, et peu à l'améliorer.</p>
 
 <p>Les tests automatiques peuvent vraiment nous aider à régler ce problème. Les avantages évidents sont qu'ils peuvent être lancés bien rapidement que des tests manuels, peuvent réaliser des tests à un niveau bien plus bas de détail, et tester exactement les mêmes fonctionnalités à chaque fois (des testeurs humains sont loin d'être aussi fiables !). Parce qu'ils sont rapides, les tests automatisés peuvent être exécutés plus régulièrement, et si un test échoue, ils pointent exactement vers la partie du code qui n'a pas fonctionné comme prévu.</p>
 
@@ -63,7 +63,7 @@ translation_of: Learn/Server-side/Django/Testing
 
 <p>Tester un site web est une tâche complexe, car c'est une opération qui comporte plusieurs couches de logique : depuis la couche HTTP, la gestion des requêtes, les modèles d'interrogation de bases de données, jusqu'à la validation des formulaires, leur traitement et le rendu des templates.</p>
 
-<p>Django fournit un framework de test avec une petite hiérarchie de classes construites sur la librairie standard de Python <code><a href="https://docs.python.org/3/library/unittest.html#module-unittest" title="(in Python v3.5)">unittest</a></code>. Malgré son nom, ce framework de test est utilisable pour les tests unitaires aussi bien que pour les tests d'intégration. Le framework Django ajoute les méthodes et les outils d'une API pour aider à tester un site web et les comportements spécifiques à Django. Ces méthodes vous permettent de simuler des requêtes, d'insérer des données de test et d'inspecter la sortie de votre application. Django fournit aussi une API (<a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#liveservertestcase">LiveServerTestCase</a>) et des outils pour <a href="https://docs.djangoproject.com/en/2.1/topics/testing/advanced/#other-testing-frameworks">utiliser d'autres frameworks de test</a>. Par exemple vous pouvez intégrer le célèbre framework <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Selenium</a> pour simuler l'interaction entre un utilisateur et un vrai navigateur.</p>
+<p>Django fournit un framework de test avec une petite hiérarchie de classes construites sur la librairie standard de Python <code><a href="https://docs.python.org/3/library/unittest.html#module-unittest" title="(in Python v3.5)">unittest</a></code>. Malgré son nom, ce framework de test est utilisable pour les tests unitaires aussi bien que pour les tests d'intégration. Le framework Django ajoute les méthodes et les outils d'une API pour aider à tester un site web et les comportements spécifiques à Django. Ces méthodes vous permettent de simuler des requêtes, d'insérer des données de test et d'inspecter la sortie de votre application. Django fournit aussi une API (<a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#liveservertestcase">LiveServerTestCase</a>) et des outils pour <a href="https://docs.djangoproject.com/en/2.1/topics/testing/advanced/#other-testing-frameworks">utiliser d'autres frameworks de test</a>. Par exemple vous pouvez intégrer le célèbre framework <a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Selenium</a> pour simuler l'interaction entre un utilisateur et un vrai navigateur.</p>
 
 <p>Pour écrire un test, vous partez de l'une des classes de test de base fournies par Django (ou par <em>unittest</em>) (<a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#simpletestcase">SimpleTestCase</a>, <a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#transactiontestcase">TransactionTestCase</a>, <a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase">TestCase</a>, <a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#liveservertestcase">LiveServerTestCase</a>), et ensuite vous écrivez des méthodes séparées pour vérifier que telle fonctionnalité se comporte comme prévu (les tests utilisent des méthodes "assert" pour vérifier qu'une expression retourne <code>True</code> ou <code>False</code>, ou que deux valeurs sont égales, etc.). Quant vous commencez à lancer un test, le framework exécute les méthodes de test écrites dans vos classes dérivées. Les méthodes de test sont lancées de manière indépendante, avec en commun un réglage initial (<em>setUp</em>) et/ou un comportement de fin (<em>tearDown</em>) définis dans la classe, comme indiqué ci-dessous.</p>
 
@@ -134,7 +134,7 @@ translation_of: Learn/Server-side/Django/Testing
 <p>Créez une structure de fichier comme montré ci-dessus, dans votre projet <em>LocalLibrary</em>. Le ficheir<strong> __init__.py</strong> doit être vide (il dit simplement à Python que ce répertoire est un package). Vous pouvez créer les trois fichiers de test en copiant et renommant le fichier de test du squelette <strong>/catalog/tests.py</strong>.</p>
 
 <div class="note">
-<p><strong>Note :</strong> le fichier de test du squelette <strong>/catalog/tests.py</strong> a été créé automatiquement quand nous avons <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">construit le squelette du site web Django</a>. Il est parfaitement "légal" de mettre tous vos tests dedans, mais si vous testez correctement, vous allez rapidement vous retrouver avec un fichier de test énorme et impossible à gérer.</p>
+<p><strong>Note :</strong> le fichier de test du squelette <strong>/catalog/tests.py</strong> a été créé automatiquement quand nous avons <a href="/fr/docs/Learn/Server-side/Django/skeleton_website">construit le squelette du site web Django</a>. Il est parfaitement "légal" de mettre tous vos tests dedans, mais si vous testez correctement, vous allez rapidement vous retrouver avec un fichier de test énorme et impossible à gérer.</p>
 
 <p>Supprimez le fichier de squelette, car nous n'en aurons plus besoin.</p>
 </div>
@@ -898,7 +898,7 @@ class RenewBookInstancesViewTest(TestCase):
 
 <ul>
  <li><a href="http://coverage.readthedocs.io/en/latest/">Coverage</a>: Cet outil Python fait un rapport sur la proportion de votre code réellement exécutée par vos tests. C'est particulièrement intéressant quand vous commencez, et que vous cherchez à vous représenter exactement ce que vous devez tester.</li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Selenium</a> est un framework pour automatiser les tests dans un vrai navigateur. Il vous permet de simuler un utilisateur réel en interaction avec le site, et fournit un excellent framework pour les tests système de votre site (l'étape qui suit les tests d'intégration).</li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Selenium</a> est un framework pour automatiser les tests dans un vrai navigateur. Il vous permet de simuler un utilisateur réel en interaction avec le site, et fournit un excellent framework pour les tests système de votre site (l'étape qui suit les tests d'intégration).</li>
 </ul>
 
 <h2 id="Défi">Défi</h2>
@@ -938,19 +938,19 @@ class RenewBookInstancesViewTest(TestCase):
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial: The Local Library website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django Tutorial Part 2: Creating a skeleton website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Models">Django Tutorial Part 3: Using models</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: Creating our home page</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Introduction">Django introduction</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial: The Local Library website</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/skeleton_website">Django Tutorial Part 2: Creating a skeleton website</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Models">Django Tutorial Part 3: Using models</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: Creating our home page</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
 </ul>

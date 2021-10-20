@@ -187,7 +187,7 @@ professeur1.saluer();Ffa</pre>
 
 <p>La méthode que nous avons détaillée ici n'est pas la seule permettant de mettre en place l'héritage de classes en JavaScript, mais elle fonctionne parfaitement et elle vous permet d'avoir une bonne idée de comment implémenter l'héritage en JavaScript.</p>
 
-<p>Vous pourriez également être intéressé par certaines des nouvelles fonctionnalités de {{glossary("ECMAScript")}} qui nous permettent de mettre en place l'héritage d'une façon beaucoup plus élégante en JavaScript (Voir <a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a>). Nous ne les avons pas développées ici parce qu'elles ne sont actuellement pas supportées par tous les navigateurs. Toutes les autres constructions dont nous avons discuté dans cette série d'articles sont supportées par IE9 et les versions moins récentes et il existe des méthodes qui prennent plus en  charge les navigateurs moins récents.</p>
+<p>Vous pourriez également être intéressé par certaines des nouvelles fonctionnalités de {{glossary("ECMAScript")}} qui nous permettent de mettre en place l'héritage d'une façon beaucoup plus élégante en JavaScript (Voir <a href="/fr/docs/Web/JavaScript/Reference/Classes">Classes</a>). Nous ne les avons pas développées ici parce qu'elles ne sont actuellement pas supportées par tous les navigateurs. Toutes les autres constructions dont nous avons discuté dans cette série d'articles sont supportées par IE9 et les versions moins récentes et il existe des méthodes qui prennent plus en  charge les navigateurs moins récents.</p>
 
 <p>Un moyen habituel est d'utiliser les librairies JavaScript — La plupart des options populaires ont une sélection de fonctionnalités disponibles pour réaliser l'héritage plus facilement et plus rapidement.</p>
 
@@ -195,7 +195,7 @@ professeur1.saluer();Ffa</pre>
 
 <h2 id="Un_exercice_plus_complexe.">Un exercice plus complexe.</h2>
 
-<p>Dans notre <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters">section sur la programmation orientée objet</a> nous avons également inclus  une classe <code>Etudiant</code> comme un concept qui hérite de toutes les fonctionnalités de la classe <code>Personne</code>, et qui a également une méthode <code>saluer()</code> differente de celle de <code>Personne</code> qui est beaucoup moins formelle que la méthode <code>saluer()</code> de <code>Professeur()</code>. Jetez un oeil à ce à quoi ressemble la méthode <code>saluer()</code> de la classe <code>Etudiant</code> dans cette section et essayez d'implémenter votre propre constructeur <code>Etudiant()</code> qui hérite de toutes les fonctionnalités de <code>Personne()</code> et la fonction <code>saluer()</code> différente.</p>
+<p>Dans notre <a href="/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters">section sur la programmation orientée objet</a> nous avons également inclus  une classe <code>Etudiant</code> comme un concept qui hérite de toutes les fonctionnalités de la classe <code>Personne</code>, et qui a également une méthode <code>saluer()</code> differente de celle de <code>Personne</code> qui est beaucoup moins formelle que la méthode <code>saluer()</code> de <code>Professeur()</code>. Jetez un oeil à ce à quoi ressemble la méthode <code>saluer()</code> de la classe <code>Etudiant</code> dans cette section et essayez d'implémenter votre propre constructeur <code>Etudiant()</code> qui hérite de toutes les fonctionnalités de <code>Personne()</code> et la fonction <code>saluer()</code> différente.</p>
 
 <p><strong>Note</strong>: Si vous rencontrez un problème afin de faire fonctionner ce code comparez le à notre <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html">version finalisée</a> (Ou regarder tourner <a href="http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html">notre demo en ligne</a>).</p>
 
@@ -205,7 +205,7 @@ professeur1.saluer();Ffa</pre>
 
 <ol>
  <li>Celles définies au sein d'un constructeur et passées en paramètres aux instances de l'objet. Celles là ne sont pas difficiles à repérer — Dans votre propre code personnalisé, elles sont les membres définis en utilisant les lignes comme <code>this.x = x</code> ; Dans les codes préconstruits propres aux navigateurs, ils sont les membres seulement accessibles aux instances d'objet (usuellement créés en appelant un constructeur via l'utilisation du mot clé <code>new</code>, exemple : <code>var myInstance = new myConstructor()</code>).</li>
- <li>Celles définies directement sur les constructeurs eux mêmes et accessibles uniquement sur les constructeurs. Celles là sont communément présentes uniquement dans les objets préconstruits des navigateurs et sont reconnus par le fait d'être directement chaînées sur un constructeur et non sur une instance. Par exemple, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>.</li>
+ <li>Celles définies directement sur les constructeurs eux mêmes et accessibles uniquement sur les constructeurs. Celles là sont communément présentes uniquement dans les objets préconstruits des navigateurs et sont reconnus par le fait d'être directement chaînées sur un constructeur et non sur une instance. Par exemple, <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>.</li>
  <li>Celles définies sur un prototype de constructeur qui sont héritées par toutes les instances des classes d'objet. Celles là incluent n'importe quel membre défini sur un prototype de constructeur, exemple : <code>myConstructor.prototype.x()</code>.</li>
 </ol>
 
@@ -246,13 +246,13 @@ professeur1.saluer();Ffa</pre>
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics">Les bases de l'Objet</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">JavaScript  Orienté Objet pour débutants</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Prototypes d'Objet</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance">L'héritage en JavaScript</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON">Travailler avec les données JSON</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_building_practice">Construire les Objets dans la pratique</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Ajouter des fonctionnalités à la démo de nos balles bondissantes</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Basics">Les bases de l'Objet</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS">JavaScript  Orienté Objet pour débutants</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Object_prototypes">Prototypes d'Objet</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Inheritance">L'héritage en JavaScript</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/JSON">Travailler avec les données JSON</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Object_building_practice">Construire les Objets dans la pratique</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Ajouter des fonctionnalités à la démo de nos balles bondissantes</a></li>
 </ul>
 
 <p> </p>

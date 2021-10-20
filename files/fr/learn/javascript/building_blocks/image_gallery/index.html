@@ -104,7 +104,7 @@ original_slug: Apprendre/JavaScript/Building_blocks/Image_gallery
 <p>À chaque itération, vous devez ajouter un gestionnaire <code>onclick</code> au <code>newImage</code> courant. Il doit:</p>
 
 <ol>
- <li>Trouver la valeur de l'attribut <code>src</code> de l'image courante. Cela peut être fait avec la fonction <code><a href="/en-US/docs/Web/API/Element/getAttribute">getAttribute()</a></code> sur <code>&lt;img&gt;</code>, en lui passant le paramètre <code>"src"</code> à chaque fois. Mais comment avoir l'image? Utiliser <code>newImage</code> ne marche pas du fait que la boucle est finie avant que le gestionnaire d'événement ne soit appelé; de cette manière, la valeur de <code>src</code> sera toujours celle du dernier <code>&lt;img&gt;</code>. Pour résoudre cela, gardez à l'esprit que, pour chaque gestionnaire d'événement, c'est <code>&lt;img&gt;</code> qui en est la cible. Pourquoi ne pas récupérer l'information de l'objet événement?</li>
+ <li>Trouver la valeur de l'attribut <code>src</code> de l'image courante. Cela peut être fait avec la fonction <code><a href="/fr/docs/Web/API/Element/getAttribute">getAttribute()</a></code> sur <code>&lt;img&gt;</code>, en lui passant le paramètre <code>"src"</code> à chaque fois. Mais comment avoir l'image? Utiliser <code>newImage</code> ne marche pas du fait que la boucle est finie avant que le gestionnaire d'événement ne soit appelé; de cette manière, la valeur de <code>src</code> sera toujours celle du dernier <code>&lt;img&gt;</code>. Pour résoudre cela, gardez à l'esprit que, pour chaque gestionnaire d'événement, c'est <code>&lt;img&gt;</code> qui en est la cible. Pourquoi ne pas récupérer l'information de l'objet événement?</li>
  <li>Exécuter une fonction, en lui passant en paramètre la fameuse valeur de <code>src</code>. Vous pouvez nommer la fonction à votre guise.</li>
  <li>Cette fonction du gestionnaire d'événement doit définir la valeur de l'attribut <code>src</code> de <code>displayed-img &lt;img&gt;</code> à la valeur du <code>src</code> passé en paramètre. Nous vous avons fourni une ligne qui stocke une référence de l'<code>&lt;img&gt;</code> concerné dans une variable nommée <code>displayedImg</code>. Notez que nous voulons une fonction nommée.</li>
 </ol>
@@ -115,7 +115,7 @@ original_slug: Apprendre/JavaScript/Building_blocks/Image_gallery
 
 <ol>
  <li>Vérifie la classe appliquée à <code>&lt;button&gt;</code> — à nouveau, vous pouvez utiliser <code>getAttribute()</code>.</li>
- <li>Si le nom de classe est <code>"dark"</code>, changer la classe du <code>&lt;button&gt;</code> pour <code>"light"</code> (avec <code><a href="/en-US/docs/Web/API/Element/setAttribute">setAttribute()</a></code>), son contenu textuel par "Lighten", et le {{cssxref("background-color")}} du voile d'assombrissement <code>&lt;div&gt;</code> par <code>"rgba(0,0,0,0.5)"</code>.</li>
+ <li>Si le nom de classe est <code>"dark"</code>, changer la classe du <code>&lt;button&gt;</code> pour <code>"light"</code> (avec <code><a href="/fr/docs/Web/API/Element/setAttribute">setAttribute()</a></code>), son contenu textuel par "Lighten", et le {{cssxref("background-color")}} du voile d'assombrissement <code>&lt;div&gt;</code> par <code>"rgba(0,0,0,0.5)"</code>.</li>
  <li>Si le nom de classe n'est pas <code>"dark"</code>, changer la classe du <code>&lt;button&gt;</code> pour <code>"dark"</code>, son contenu textuel par "Darken", et le {{cssxref("background-color")}} du voile d'assombrissement <code>&lt;div&gt;</code> par <code>"rgba(0,0,0,0)"</code>.</li>
 </ol>
 
@@ -154,11 +154,11 @@ overlay.style.backgroundColor = xxx;</pre>
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/docs/Apprendre/JavaScript/Building_blocks/conditionals">Prendre des décisions dans le code — conditions</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Apprendre/JavaScript/Building_blocks/Looping_code">Les boucles dans le code</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Apprendre/JavaScript/Building_blocks/Fonctions">Fonctions — des blocs de code réutilisables</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Apprendre/JavaScript/Building_blocks/Build_your_own_function">Construire vos propres fonctions</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Apprendre/JavaScript/Building_blocks/Return_values">Valeurs de retour des fonctions</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements">Introduction aux événements</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Apprendre/JavaScript/Building_blocks/Image_gallery">Galerie d'images</a></li>
+ <li><a href="/fr/docs/Apprendre/JavaScript/Building_blocks/conditionals">Prendre des décisions dans le code — conditions</a></li>
+ <li><a href="/fr/docs/Apprendre/JavaScript/Building_blocks/Looping_code">Les boucles dans le code</a></li>
+ <li><a href="/fr/docs/Apprendre/JavaScript/Building_blocks/Fonctions">Fonctions — des blocs de code réutilisables</a></li>
+ <li><a href="/fr/docs/Apprendre/JavaScript/Building_blocks/Build_your_own_function">Construire vos propres fonctions</a></li>
+ <li><a href="/fr/docs/Apprendre/JavaScript/Building_blocks/Return_values">Valeurs de retour des fonctions</a></li>
+ <li><a href="/fr/docs/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements">Introduction aux événements</a></li>
+ <li><a href="/fr/docs/Apprendre/JavaScript/Building_blocks/Image_gallery">Galerie d'images</a></li>
 </ul>

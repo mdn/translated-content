@@ -17,14 +17,14 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}</div>
 
-<p>Maintenant que les bases sont posées, nous allons nous concentrer sur les problèmes courants en navigateur croisé que vous allez rencontrer en code HTML et CSS, et quels outils peuvent être utilisés pour prévenir l'arrivée de ces problèmes, ou résoudre les problèmes qui surviennent. Cela inclut le <a href="https://stackoverflow.com/questions/8503559/what-is-linting">linting code</a>, la gestion des préfixes CSS, l'utilisation des outils de dev des navigateurs pour localiser les problèmes, utiliser des <a href="https://developer.mozilla.org/fr/docs/Glossaire/Polyfill">polyfills</a> pour apporter du support dans les navigateurs, se confronter aux problèmes de responsive design et plus encore.</p>
+<p>Maintenant que les bases sont posées, nous allons nous concentrer sur les problèmes courants en navigateur croisé que vous allez rencontrer en code HTML et CSS, et quels outils peuvent être utilisés pour prévenir l'arrivée de ces problèmes, ou résoudre les problèmes qui surviennent. Cela inclut le <a href="https://stackoverflow.com/questions/8503559/what-is-linting">linting code</a>, la gestion des préfixes CSS, l'utilisation des outils de dev des navigateurs pour localiser les problèmes, utiliser des <a href="/fr/docs/Glossaire/Polyfill">polyfills</a> pour apporter du support dans les navigateurs, se confronter aux problèmes de responsive design et plus encore.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
    <td>
-    <p>Connaissances avec le noyau des langages <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, et <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> ; une idée du haut niveau des <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">principes du test en navigateur croisé</a>.</p>
+    <p>Connaissances avec le noyau des langages <a href="/fr/docs/Learn/HTML">HTML</a>, <a href="/fr/docs/Learn/CSS">CSS</a>, et <a href="/fr/docs/Learn/JavaScript">JavaScript</a> ; une idée du haut niveau des <a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">principes du test en navigateur croisé</a>.</p>
    </td>
   </tr>
   <tr>
@@ -44,14 +44,14 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 
 <h2 id="Commençons_par_le_commencement_résoudre_les_problèmes_généraux">Commençons par le commencement : résoudre les problèmes généraux</h2>
 
-<p>Nous disions dans le <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#Testingdiscovery">premier article de cette série</a> que c'était une bonne stratégie de commencer à tester sur une paire de navigateurs modernes sur desktop/mobile, afin de vous assurer que votre site fonctionne pour l'essentiel, avant de commencer à se concentrer sur les problèmes en navigateur croisé.</p>
+<p>Nous disions dans le <a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#Testingdiscovery">premier article de cette série</a> que c'était une bonne stratégie de commencer à tester sur une paire de navigateurs modernes sur desktop/mobile, afin de vous assurer que votre site fonctionne pour l'essentiel, avant de commencer à se concentrer sur les problèmes en navigateur croisé.</p>
 
-<p>Dans nos articles <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a> et <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS">Debugging CSS</a>, nous avancions quelques conseils très basiques sur le débogage HTML/CSS — si vous ne maîtrisez pas ces bases, vous devriez sans aucun doute aller étudier ces articles avant de continuer.</p>
+<p>Dans nos articles <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a> et <a href="/fr/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS">Debugging CSS</a>, nous avancions quelques conseils très basiques sur le débogage HTML/CSS — si vous ne maîtrisez pas ces bases, vous devriez sans aucun doute aller étudier ces articles avant de continuer.</p>
 
 <p>Il s'agit essentiellement de vérifier si votre code HTML et CSS est bien conçu et s'il ne contient aucune erreur de syntaxe.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Un problème fréquent avec le HTML et le CSS arrive quand différentes règles CSS commencent à entrer en conflit avec une autre. Cela peut être particulièrement problématique lorsque vous utilisez un bout de code tierce. Par exemple, vous pouvez utiliser un modèle CSS et remarquer qu'un des noms de classe qui est utilisé entre en conflit avec un que vous utilisez déjà dans un but différent. Ou vous pouvez trouver que du HTML généré par une API tierce (générateur de bannières publicitaires, par exemple) inclut un nom de classe ou d'ID que vous utilisez déjà dans un but différent. Afin de garantir que cela ne se produira pas, vous devez rechercher les outils que vous allez utiliser en premier et construire votre code en conséquence. Il convient également de relever les "<a href="https://developer.mozilla.org/fr/docs/Glossaire/Namespace">espace de noms</a>" en CSS, par ex. si vous avez un widget, assurez-vous qu'il a des classes distinctes, et ensuite commencez les sélecteurs qui sélectionnent les éléments à l'intérieur du widget avec cette classe, les conflits risqueront moins d'arriver. Par exemple <code>.audio-player ul a</code>.</p>
+<p><strong>Note :</strong> Un problème fréquent avec le HTML et le CSS arrive quand différentes règles CSS commencent à entrer en conflit avec une autre. Cela peut être particulièrement problématique lorsque vous utilisez un bout de code tierce. Par exemple, vous pouvez utiliser un modèle CSS et remarquer qu'un des noms de classe qui est utilisé entre en conflit avec un que vous utilisez déjà dans un but différent. Ou vous pouvez trouver que du HTML généré par une API tierce (générateur de bannières publicitaires, par exemple) inclut un nom de classe ou d'ID que vous utilisez déjà dans un but différent. Afin de garantir que cela ne se produira pas, vous devez rechercher les outils que vous allez utiliser en premier et construire votre code en conséquence. Il convient également de relever les "<a href="/fr/docs/Glossaire/Namespace">espace de noms</a>" en CSS, par ex. si vous avez un widget, assurez-vous qu'il a des classes distinctes, et ensuite commencez les sélecteurs qui sélectionnent les éléments à l'intérieur du widget avec cette classe, les conflits risqueront moins d'arriver. Par exemple <code>.audio-player ul a</code>.</p>
 </div>
 
 <h3 id="La_validation">La validation</h3>
@@ -115,7 +115,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 
 <h3 id="Les_vieux_navigateurs_ne_supportant_pas_les_fonctionnalités_récentes">Les vieux navigateurs ne supportant pas les fonctionnalités récentes</h3>
 
-<p>C'est un problème courant, particulièrement lorsque vous devez supporter de vieux navigateurs (comme les anciennes versions d'IE) ou que vous utilisez des fonctionnalités qui sont implémentées en utilisant des préfixes CSS. En général, les fonctionnalités principales du HTML et du CSS (comme les éléments HTML basiques, les couleurs et styles de texte principaux de CSS) marchent sur la plupart des navigateurs que vous voulez supporter ; la majorité des problèmes sont découverts lorsque que vous commencez à vouloir utiliser des nouveautés comme <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>, ou <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">HTML5 video/audio</a>, ou encore plus récent, <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout">CSS Grids</a> ou <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Advanced_box_effects#-webkit-background-clip_text">-webkit-background-clip: text</a>.</p>
+<p>C'est un problème courant, particulièrement lorsque vous devez supporter de vieux navigateurs (comme les anciennes versions d'IE) ou que vous utilisez des fonctionnalités qui sont implémentées en utilisant des préfixes CSS. En général, les fonctionnalités principales du HTML et du CSS (comme les éléments HTML basiques, les couleurs et styles de texte principaux de CSS) marchent sur la plupart des navigateurs que vous voulez supporter ; la majorité des problèmes sont découverts lorsque que vous commencez à vouloir utiliser des nouveautés comme <a href="/fr/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>, ou <a href="/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">HTML5 video/audio</a>, ou encore plus récent, <a href="/fr/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout">CSS Grids</a> ou <a href="/fr/docs/Learn/CSS/Styling_boxes/Advanced_box_effects#-webkit-background-clip_text">-webkit-background-clip: text</a>.</p>
 
 <p>Une fois que vous avez identifié une liste des potentielles technologies à problèmes que vous allez utiliser, c'est une bonne initiative des rechercher sur quels navigateurs elles sont supportées, et quelles techniques associées sont utiles. Voir {{anch("Finding help")}} plus bas.</p>
 
@@ -131,7 +131,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 
 
 
-<p>Des éléments HTML plus complexes comme <a href="/en-US/docs/Web/HTML/Element/video">&lt;video&gt;</a>, <a href="/en-US/docs/Web/HTML/Element/audio">&lt;audio&gt;</a>, et <a href="/en-US/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a> (et encore d'autres) ont des mécanismes naturels pour que les recours soient ajoutés, qui se basent sur le même principe décrit plus haut. Vous pouvez ajouter un contenu de repli entre la balise ouvrante et fermante, et les navigateurs ne supportant pas la feature vont effectivement ignorer les éléments extérieurs et exécuter le contenu imbriqué.</p>
+<p>Des éléments HTML plus complexes comme <a href="/fr/docs/Web/HTML/Element/video">&lt;video&gt;</a>, <a href="/fr/docs/Web/HTML/Element/audio">&lt;audio&gt;</a>, et <a href="/fr/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a> (et encore d'autres) ont des mécanismes naturels pour que les recours soient ajoutés, qui se basent sur le même principe décrit plus haut. Vous pouvez ajouter un contenu de repli entre la balise ouvrante et fermante, et les navigateurs ne supportant pas la feature vont effectivement ignorer les éléments extérieurs et exécuter le contenu imbriqué.</p>
 
 <p>Par exemple :</p>
 
@@ -151,13 +151,13 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
   &lt;a href="video/tears-of-steel-battle-clip-medium.mp4"&gt;Download MP4&lt;/a&gt;
 &lt;/video&gt;</pre>
 
-<p>Cette exemple (issu de <a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a>) n'inclut pas seulement un lecteur Flash de repli pour les anciennes versions d'IE, mais aussi un lien simple vous permettant de télécharger la vidéo si jamais le lecteur Flash ne fonctionne pas, finalement l'utilisateur peut toujours accéder à la vidéo.</p>
+<p>Cette exemple (issu de <a href="/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a>) n'inclut pas seulement un lecteur Flash de repli pour les anciennes versions d'IE, mais aussi un lien simple vous permettant de télécharger la vidéo si jamais le lecteur Flash ne fonctionne pas, finalement l'utilisateur peut toujours accéder à la vidéo.</p>
 
 <div class="note">
 <p><strong>Note :</strong> les librairies tierces comme <a href="http://videojs.com/">Video.js</a> et <a href="https://www.jwplayer.com/">JW Player</a> utilisent ce type de mécanismes de recours pour fournir un support en navigateur croisé.</p>
 </div>
 
-<p>Les éléments des formulaire HTML5 présentent également des recours de qualités — HTML5 a introduit des types d'<code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> spéciaux pour insérer des informations spécifiques dans les formulaires, en particulier sur les plateformes mobiles, où fournir une insertion de données sans difficultés est primordiale pour l'expérience utilisateur. Supporter les plateformes apporte des widgets UI spéciaux lorsque ces types d'input sont utilisés, comme le widget calendrier pour entrer des dates.</p>
+<p>Les éléments des formulaire HTML5 présentent également des recours de qualités — HTML5 a introduit des types d'<code><a href="/fr/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> spéciaux pour insérer des informations spécifiques dans les formulaires, en particulier sur les plateformes mobiles, où fournir une insertion de données sans difficultés est primordiale pour l'expérience utilisateur. Supporter les plateformes apporte des widgets UI spéciaux lorsque ces types d'input sont utilisés, comme le widget calendrier pour entrer des dates.</p>
 
 <p>L'exemple suivant montre des inputs date et time :</p>
 
@@ -257,14 +257,14 @@ button:active {
               inset -1px -1px 3px rgba(255,255,255,0.4);
 }</pre>
 
-<p>Ici on fournit un {{cssxref("background-color")}} <a href="/en-US/docs/Web/CSS/color_value#rgba()">RGBA</a> qui modifie l'opacité au survol afin de donner à l'utilisateur l'information que le bouton est interactif, et une ombre {{cssxref("box-shadow")}} interne semi-transparente pour donner au bouton un peu de texture et de profondeur. Le problème est que les couleurs RGBA et les box shadows ne fonctionnent pas sur les versions d'IE plus vieilles que la 9 — dans les versions plus anciennes le background ne sera juste pas visible du tout et le texte sera illisible, pas bon du tout !</p>
+<p>Ici on fournit un {{cssxref("background-color")}} <a href="/fr/docs/Web/CSS/color_value#rgba()">RGBA</a> qui modifie l'opacité au survol afin de donner à l'utilisateur l'information que le bouton est interactif, et une ombre {{cssxref("box-shadow")}} interne semi-transparente pour donner au bouton un peu de texture et de profondeur. Le problème est que les couleurs RGBA et les box shadows ne fonctionnent pas sur les versions d'IE plus vieilles que la 9 — dans les versions plus anciennes le background ne sera juste pas visible du tout et le texte sera illisible, pas bon du tout !</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14135/unreadable-button.png" style="display: block; margin: 0 auto;"></p>
 
 <p>Pour résoudre ce problème, nous avons ajouté une deuxième déclaration <code>background-color</code>, qui précise juste une couleur hex — c'est un recours supporté par les vieux navigateurs, et agit en tant que solution de repli si les fonctionnalités belles et brillantes ne fonctionnent pas. Ce qui se passe c'est que le navigateur parcourant cette page applique pour commencer la première valeur <code>background-color</code> ; lorsqu'il sélectionne la deuxième déclaration <code>background-color</code>, il remplace la valeur initiale avec cette valeur s'il supporte les couleurs RGBA. S'il ne supporte pas, il ignorera juste toute la déclaration et continuera à avancer.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Il se produit la même chose pour les autres caractéristiques de CSS comme les blocs <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a>, <code><a href="/en-US/docs/Web/CSS/@font-face">@font-face</a></code> et <code><a href="/en-US/docs/Web/CSS/@supports">@supports</a></code> — s'ils ne sont pas supportés, le navigateur va juste les ignorer.</p>
+<p><strong>Note :</strong> Il se produit la même chose pour les autres caractéristiques de CSS comme les blocs <a href="/fr/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a>, <code><a href="/fr/docs/Web/CSS/@font-face">@font-face</a></code> et <code><a href="/fr/docs/Web/CSS/@supports">@supports</a></code> — s'ils ne sont pas supportés, le navigateur va juste les ignorer.</p>
 </div>
 
 <h4 id="Les_commentaires_conditionnels_dIE">Les commentaires conditionnels d'IE</h4>
@@ -297,7 +297,7 @@ button:active {
 
 <h4 id="Support_de_sélecteur">Support de sélecteur</h4>
 
-<p>Naturellement, aucune caractéristiques CSS ne s'appliquera si vous n'utilisez pas les bons <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors">sélecteurs</a> pour sélectionner l'élément que vous voulez styler ! Si vous écrivez juste mal un sélecteur alors le style ne sera juste pas celui attendu sur aucun navigateur, vous devez juste résoudre le problème et trouver ce qui ne va pas avec votre sélecteur. Nous trouvons utile d'inspecter l'élément que vous essayez de styler en utilisant l'outil de dev de votre navigateur, ensuite regarder l'arborescence du fil d'Ariane du DOM que les inspecteurs du DOM fournissent en général afin de voir si votre sélecteur est pertinent par rapport à ce fil d'Ariane.</p>
+<p>Naturellement, aucune caractéristiques CSS ne s'appliquera si vous n'utilisez pas les bons <a href="/fr/docs/Learn/CSS/Introduction_to_CSS/Selectors">sélecteurs</a> pour sélectionner l'élément que vous voulez styler ! Si vous écrivez juste mal un sélecteur alors le style ne sera juste pas celui attendu sur aucun navigateur, vous devez juste résoudre le problème et trouver ce qui ne va pas avec votre sélecteur. Nous trouvons utile d'inspecter l'élément que vous essayez de styler en utilisant l'outil de dev de votre navigateur, ensuite regarder l'arborescence du fil d'Ariane du DOM que les inspecteurs du DOM fournissent en général afin de voir si votre sélecteur est pertinent par rapport à ce fil d'Ariane.</p>
 
 <p>Par exemple, dans l'outil de dev de Firefox, vous obtenez ce genre rendement en bas de l'inspecteur du DOM :</p>
 
@@ -309,7 +309,7 @@ button:active {
 
 <p>(L'input <code>date</code> du formulaire n'est pas directement dans le <code>&lt;form&gt;</code> ; vous feriez mieux d'utiliser un sélecteur descendant général plutôt qu'un sélecteur d'enfant).</p>
 
-<p>Il y a néanmoins un autre problème qui apparaît sur les versions d'IE plus anciennes que la 9 c'est qu'il n'y a aucun nouveau sélecteur (principalement les pseudo-classes et les pseudo-éléments comme <code><a href="/en-US/docs/Web/CSS/:nth-of-type">:nth-of-type</a></code>, <code><a href="/en-US/docs/Web/CSS/:not">:not</a></code>, <code><a href="/en-US/docs/Web/CSS/::selection">::selection</a></code>, etc.) qui marche. Si vous voulez les utiliser dans votre CSS et que vous devez supporter les anciennes versions d'IE, une bonne initiative et d'utiliser la librairie <a href="http://selectivizr.com/">Selectivizr</a> de Keith Clark — c'est une petite librairie Javascript qui s'exécute au-dessus d'une librairie Javascript existante comme  <a href="http://jquery.com/">jQuery</a> ou <a href="http://mootools.net/">MooTools</a>.</p>
+<p>Il y a néanmoins un autre problème qui apparaît sur les versions d'IE plus anciennes que la 9 c'est qu'il n'y a aucun nouveau sélecteur (principalement les pseudo-classes et les pseudo-éléments comme <code><a href="/fr/docs/Web/CSS/:nth-of-type">:nth-of-type</a></code>, <code><a href="/fr/docs/Web/CSS/:not">:not</a></code>, <code><a href="/fr/docs/Web/CSS/::selection">::selection</a></code>, etc.) qui marche. Si vous voulez les utiliser dans votre CSS et que vous devez supporter les anciennes versions d'IE, une bonne initiative et d'utiliser la librairie <a href="http://selectivizr.com/">Selectivizr</a> de Keith Clark — c'est une petite librairie Javascript qui s'exécute au-dessus d'une librairie Javascript existante comme  <a href="http://jquery.com/">jQuery</a> ou <a href="http://mootools.net/">MooTools</a>.</p>
 
 <ol>
  <li>Afin de tester cet exemple, faites une copie locale de <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html">selectivizr-example-start.html</a>. Si vous le regarder s'exécuter en direct, vous verrez qu'il contient deux paragraphes, dont l'un est stylé. Nous avons sélectionné le paragraphe avec <code>p:first-child</code>, qui ne fonctionne pas sur les anciennes versions d'IE.</li>
@@ -347,7 +347,7 @@ background-image: linear-gradient(to right,green,yellow);
 
 <p>La première ligne déclare une propriété {{cssxref("transform")}} avec un préfixe <code>-webkit-</code> — c'était nécessaire pour que la transformation fonctionne sur Chrome, etc jusqu'à ce que la fonctionnalité soit finalisée et beaucoup de navigateurs ont ajouté une version de la propriété sans préfixes (au moment de la rédaction, Chrome supportait les deux versions).</p>
 
-<p>Les trois dernières images montrent trois versions différentes de la fonction <code><a href="/en-US/docs/Web/CSS/linear-gradient">linear-gradient()</a></code>, qui est utilisée pour générer un dégradé linéaire dans la background d'un élément :</p>
+<p>Les trois dernières images montrent trois versions différentes de la fonction <code><a href="/fr/docs/Web/CSS/linear-gradient">linear-gradient()</a></code>, qui est utilisée pour générer un dégradé linéaire dans la background d'un élément :</p>
 
 <ol>
  <li>La première a un préfixe <code>-moz-</code>, et montre une version plutôt ancienne de la syntaxe (Firefox)</li>
@@ -368,7 +368,7 @@ background-image: linear-gradient(to right,green,yellow);
  <li>Entreposer une référence à cet élément dans une variable, par exemple :
   <pre class="brush: js">var test = document.getElementById('hplogo');</pre>
  </li>
- <li>Maintenant essayez d'appliquer une nouvelle valeur pour la propriété CSS qui vous intéresse sur cet élément ; vous pouvez le faire en utilisant la propriété <a href="/en-US/docs/Web/API/HTMLElement/style">style</a> de l'élément, par exemple essayez de taper ça dans votre console Javascript :</li>
+ <li>Maintenant essayez d'appliquer une nouvelle valeur pour la propriété CSS qui vous intéresse sur cet élément ; vous pouvez le faire en utilisant la propriété <a href="/fr/docs/Web/API/HTMLElement/style">style</a> de l'élément, par exemple essayez de taper ça dans votre console Javascript :</li>
  <li>
   <pre class="brush: js">test.style.transform = 'rotate(90deg)'
 test.style.webkitTransform = 'rotate(90deg)'</pre>
@@ -440,13 +440,13 @@ transform: rotate(90deg);</pre>
 
 <h4 id="Support_pour_les_nouvelles_caractéristiques_de_disposition">Support pour les nouvelles caractéristiques de disposition</h4>
 
-<p>La plupart du travail de mise en page sur le web aujourd'hui et réalisé en utilisant les <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">floats</a> — c'est parce que les floats sont bien supportés (depuis IE 4, bien qu'il y ait un certain nombre de bugs qui auront besoin d'être examinés si vous essayez de supporter IE aussi loin). Il n'y a néanmoins pas de véritables explications sur la mise en page — utiliser les floats comme nous les utilisons est un vrai hack — et ils ont de sérieuses limites (par ex. voir <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox#Why_Flexbox">Why Flexbox?</a>)</p>
+<p>La plupart du travail de mise en page sur le web aujourd'hui et réalisé en utilisant les <a href="/fr/docs/Learn/CSS/CSS_layout/Floats">floats</a> — c'est parce que les floats sont bien supportés (depuis IE 4, bien qu'il y ait un certain nombre de bugs qui auront besoin d'être examinés si vous essayez de supporter IE aussi loin). Il n'y a néanmoins pas de véritables explications sur la mise en page — utiliser les floats comme nous les utilisons est un vrai hack — et ils ont de sérieuses limites (par ex. voir <a href="/fr/docs/Learn/CSS/CSS_layout/Flexbox#Why_Flexbox">Why Flexbox?</a>)</p>
 
-<p>Plus récemment, des mécanismes dédiés à la disposition ont fait leur apparition, comme <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> et <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout">CSS Grids</a>, qui rendent les tâches ordinaires de disposition bien plus simples et enlèvent les défauts. Ils ne sont cependant pas bien supportés dans les navigateurs :</p>
+<p>Plus récemment, des mécanismes dédiés à la disposition ont fait leur apparition, comme <a href="/fr/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> et <a href="/fr/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout">CSS Grids</a>, qui rendent les tâches ordinaires de disposition bien plus simples et enlèvent les défauts. Ils ne sont cependant pas bien supportés dans les navigateurs :</p>
 
 <ul>
  <li>Les grilles CSS sont très récentes ; au moment de la rédaction, elles n'étaient <a href="http://gridbyexample.com/browsers/">supportées</a> que par les toutes nouvelles versions des navigateurs modernes.</li>
- <li>Flexbox est <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox#Cross_browser_compatibility">bien supportée</a> dans les navigateurs modernes, mais amène des problèmes dans les vieux navigateurs. IE9 ne le supporte pas du tout, et IE 10 et les vieilles versions d'iOS/desktop Safari supportent respectivement des vieilles versions incompatibles des spécifications de flexbox. Ceci amène à s'intéresser au jonglage des préfixes de navigateur si vous voulez essayer d'utiliser flexbox sur tous ces navigateurs (voir <a href="https://dev.opera.com/articles/advanced-cross-browser-flexbox/">Advanced Cross-Browser Flexbox</a> pour vous faire une idée).</li>
+ <li>Flexbox est <a href="/fr/docs/Learn/CSS/CSS_layout/Flexbox#Cross_browser_compatibility">bien supportée</a> dans les navigateurs modernes, mais amène des problèmes dans les vieux navigateurs. IE9 ne le supporte pas du tout, et IE 10 et les vieilles versions d'iOS/desktop Safari supportent respectivement des vieilles versions incompatibles des spécifications de flexbox. Ceci amène à s'intéresser au jonglage des préfixes de navigateur si vous voulez essayer d'utiliser flexbox sur tous ces navigateurs (voir <a href="https://dev.opera.com/articles/advanced-cross-browser-flexbox/">Advanced Cross-Browser Flexbox</a> pour vous faire une idée).</li>
 </ul>
 
 <p>Les fonctionnalités de disposition ne sont pas aussi simples pour fournir des solutions de repli que de simples couleurs, ombres ou dégradés. Si les propriétés de disposition sont ignorées, la totalité de votre design sera réduit en pièces. De ce fait, vous devez utiliser une fonctionnalité de détection pour détecter si les navigateurs qui consultent votre site supportent ces caractéristiques de disposition, et appliquer différentes dispositions de manière sélective selon le résultat (nous couvrirons les fonctionnalités de détection dans un article à venir).</p>
@@ -454,14 +454,14 @@ transform: rotate(90deg);</pre>
 <p>Par exemple, vous pourriez appliquer une disposition flexbox sur les navigateurs modernes, et aussi appliquer une disposition en float pour les plus vieux navigateurs qui ne supportent pas flexbox.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Il y a une fonctionnalité assez récente en CSS appelé <code><a href="/en-US/docs/Web/CSS/@supports">@supports</a></code>, qui vous permet d'implémenter des tests de détection de fonctionnalités natives.</p>
+<p><strong>Note :</strong> Il y a une fonctionnalité assez récente en CSS appelé <code><a href="/fr/docs/Web/CSS/@supports">@supports</a></code>, qui vous permet d'implémenter des tests de détection de fonctionnalités natives.</p>
 </div>
 
 <h4 id="Les_problèmes_de_responsive_design">Les problèmes de responsive design</h4>
 
-<p>Le design responsive est la pratique de créer des dispositions web qui s'adaptent en fonction des facteurs de formes de l'appareil — par exemple différentes tailles d'écran, l'orientation (portait ou paysage), ou la résolution. Une disposition pour ordinateur de bureau par exemple paraîtra atroce lorsqu'elle sera affichée sur un appareil mobile, vous allez donc devoir fournir une disposition appropriée aux mobiles en utilisant les <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a>, et assurez-vous qu'il est appliqué correctement en utilisant <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>. Vous pouvez trouver un bilan précis de telles pratiques dans <a href="/en-US/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks">The building blocks of responsive design</a>.</p>
+<p>Le design responsive est la pratique de créer des dispositions web qui s'adaptent en fonction des facteurs de formes de l'appareil — par exemple différentes tailles d'écran, l'orientation (portait ou paysage), ou la résolution. Une disposition pour ordinateur de bureau par exemple paraîtra atroce lorsqu'elle sera affichée sur un appareil mobile, vous allez donc devoir fournir une disposition appropriée aux mobiles en utilisant les <a href="/fr/docs/Web/CSS/Media_Queries">media queries</a>, et assurez-vous qu'il est appliqué correctement en utilisant <a href="/fr/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>. Vous pouvez trouver un bilan précis de telles pratiques dans <a href="/fr/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks">The building blocks of responsive design</a>.</p>
 
-<p>La résolution est également très préoccupante — par exemple, les appareils mobiles sont moins susceptibles d'avoir besoin de grosses images lourdes que des ordinateurs de bureau, et ont davantage tendance à avoir des connexions internet plus lentes et sans doute un échange de données coûteux qui gaspille la bande passante qui est un problème supplémentaire. De plus, certains appareils peuvent avoir une gamme de plusieurs résolutions, ce qui veut dire que des petites images peuvent s'afficher pixelisées. Il y a un nombre de techniques qui vous permette de travailler autour de tels problèmes, des simples <a href="/en-US/Apps/Progressive/Responsive/Mobile_first">mobile first media queries</a>, aux plus complexes <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Different_sizes">responsive image techniques</a>.</p>
+<p>La résolution est également très préoccupante — par exemple, les appareils mobiles sont moins susceptibles d'avoir besoin de grosses images lourdes que des ordinateurs de bureau, et ont davantage tendance à avoir des connexions internet plus lentes et sans doute un échange de données coûteux qui gaspille la bande passante qui est un problème supplémentaire. De plus, certains appareils peuvent avoir une gamme de plusieurs résolutions, ce qui veut dire que des petites images peuvent s'afficher pixelisées. Il y a un nombre de techniques qui vous permette de travailler autour de tels problèmes, des simples <a href="/fr/Apps/Progressive/Responsive/Mobile_first">mobile first media queries</a>, aux plus complexes <a href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Different_sizes">responsive image techniques</a>.</p>
 
 <p>Une autre difficulté qui peut présenter des problèmes c'est le support des fonctionnalités par les navigateurs qui rendent les techniques suscitées possibles. Les media queries ne sont pas supportés sur IE 8 ou plus vieux, donc si vous voulez utiliser une disposition mobile en premier lieu puis une disposition pour ordinateur de bureau qui applique aux vieilles versions d'IE, vous devrez appliquer un media querie {{glossary("polyfill")}} à votre page, comme <a href="https://code.google.com/archive/p/css3-mediaqueries-js/">css3-mediaqueries-js</a> ou <a href="https://github.com/scottjehl/Respond">Respond.js</a>.</p>
 
@@ -474,9 +474,9 @@ transform: rotate(90deg);</pre>
 <p>Pour utiliser le Mozilla Developer Network (MDN), la plupart des gens font une recherche de la technologie sur laquelle ils essayent de trouver des informations, et ajoutent le terme "mdn", par exemple "mdn HTML5 video". MDN contient plusieurs types de contenus utiles :</p>
 
 <ul>
- <li>Du contenu de référence sur le support navigateur pour les technologies web côté client, par ex. la <a href="/en-US/docs/Web/HTML/Element/video">page de référence &lt;video&gt;</a>.</li>
- <li>D'autres références de support, par ex. <a href="/en-US/docs/Web/HTML/Supported_media_formats">Media formats supported by the HTML audio and video elements</a>.</li>
- <li>Des tutoriaux utiles qui résolvent des problèmes spécifiques, par exemple <a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Créer un lecteur vidéo en navigateur croisé</a>.</li>
+ <li>Du contenu de référence sur le support navigateur pour les technologies web côté client, par ex. la <a href="/fr/docs/Web/HTML/Element/video">page de référence &lt;video&gt;</a>.</li>
+ <li>D'autres références de support, par ex. <a href="/fr/docs/Web/HTML/Supported_media_formats">Media formats supported by the HTML audio and video elements</a>.</li>
+ <li>Des tutoriaux utiles qui résolvent des problèmes spécifiques, par exemple <a href="/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Créer un lecteur vidéo en navigateur croisé</a>.</li>
 </ul>
 
 <p><a href="http://caniuse.com/">caniuse.com</a> fournit des informations de support, tout au long avec des ressources externes. Par exemple, voir <a href="http://caniuse.com/#search=video">http://caniuse.com/#search=video</a> (vous avez juste à entrer la fonctionnalité que vous recherchez dans la boîte de recherche)</p>
@@ -496,12 +496,12 @@ transform: rotate(90deg);</pre>
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">Introduction to cross browser testing</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies">Strategies for carrying out testing</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">Handling common HTML and CSS problems</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">Handling common JavaScript problems</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">Handling common accessibility problems</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">Implementing feature detection</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">Introduction to automated testing</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Setting up your own test automation environment</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">Introduction to cross browser testing</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies">Strategies for carrying out testing</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">Handling common HTML and CSS problems</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">Handling common JavaScript problems</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">Handling common accessibility problems</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">Implementing feature detection</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">Introduction to automated testing</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Setting up your own test automation environment</a></li>
 </ul>

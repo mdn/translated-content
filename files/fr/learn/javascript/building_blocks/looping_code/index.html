@@ -28,7 +28,7 @@ original_slug: Apprendre/JavaScript/Building_blocks/Looping_code
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
-   <td>Culture informatique basique, compréhension basique du HTML et du CSS, <a href="https://developer.mozilla.org/fr/docs/Learn/JavaScript/First_steps">Premiers pas en JavaScript...</a></td>
+   <td>Culture informatique basique, compréhension basique du HTML et du CSS, <a href="/fr/docs/Learn/JavaScript/First_steps">Premiers pas en JavaScript...</a></td>
   </tr>
   <tr>
    <th scope="row">Objectif :</th>
@@ -169,7 +169,7 @@ ctx.fill();</pre>
 
 <h2 id="La_boucle_standard">La boucle standard</h2>
 
-<p>Commençons maintenant à voir quelques formes de boucles spécifiques. La première, celle que vous utiliserez le plus souvent, est la boucle <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/for">for</a>. Elle a la syntaxe suivante :</p>
+<p>Commençons maintenant à voir quelques formes de boucles spécifiques. La première, celle que vous utiliserez le plus souvent, est la boucle <a href="/fr/docs/Web/JavaScript/Reference/Instructions/for">for</a>. Elle a la syntaxe suivante :</p>
 
 <pre>for (initialisation; condition de sortie; expression finale) {
   // code à exécuter
@@ -286,7 +286,7 @@ paragraphe.textContent = info;</pre>
 
 <h2 id="Quitter_une_boucle_avec_break">Quitter une boucle avec break</h2>
 
-<p>Si vous voulez quitter une boucle avant que toutes les itérations aient été terminées, vous pouvez utiliser l'instruction <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/break">break</a>. Nous l'avons déjà rencontré dans l'article précédent lorsque nous examinions les <a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Building_blocks/conditionals#Instruction_switch">instructions switch </a>: lorsqu'un argument est rencontré dans une instruction switch qui correspond à l'expression d'entrée, l'instruction break quitte immédiatement l'instruction switch et passe au code après elle.</p>
+<p>Si vous voulez quitter une boucle avant que toutes les itérations aient été terminées, vous pouvez utiliser l'instruction <a href="/fr/docs/Web/JavaScript/Reference/Instructions/break">break</a>. Nous l'avons déjà rencontré dans l'article précédent lorsque nous examinions les <a href="/fr/Apprendre/JavaScript/Building_blocks/conditionals#Instruction_switch">instructions switch </a>: lorsqu'un argument est rencontré dans une instruction switch qui correspond à l'expression d'entrée, l'instruction break quitte immédiatement l'instruction switch et passe au code après elle.</p>
 
 <p>C'est la même chose avec les boucles – un <code>break</code> quittera immédiatement la boucle et fera passer le navigateur sur n'importe quel code qui le suit.</p>
 
@@ -382,7 +382,7 @@ bouton.addEventListener('click', function() {
 
 <h2 id="Passer_des_itérations_avec_continue">Passer des itérations avec continue</h2>
 
-<p>L'instruction <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/continue">continue</a> fonctionne d'une manière similaire à <code>break</code>, mais au lieu de sortir complètement de la boucle, elle passe à l'itération suivante de la boucle. Regardons un autre exemple qui prend un nombre comme une entrée, et retourne seulement les nombres qui sont des carrés d'entiers (nombres entiers).</p>
+<p>L'instruction <a href="/fr/docs/Web/JavaScript/Reference/Instructions/continue">continue</a> fonctionne d'une manière similaire à <code>break</code>, mais au lieu de sortir complètement de la boucle, elle passe à l'itération suivante de la boucle. Regardons un autre exemple qui prend un nombre comme une entrée, et retourne seulement les nombres qui sont des carrés d'entiers (nombres entiers).</p>
 
 <p>Le HTML est fondamentalement le même que le dernier exemple — une entrée de texte simple, et un paragraphe pour la sortie. Le JavaScript est la plupart du temps identique, même si la boucle elle-même est un peu différente :</p>
 
@@ -441,7 +441,7 @@ for (let i = 1; i &lt;= num; i++) {
 
 <ol>
  <li>Dans ce cas, l'entrée doit être un nombre (<code>num</code>). La boucle <code>for</code> est dotée d'un compteur commençant à 1 (car nous ne sommes pas intéressés par 0 dans ce cas), une condition de sortie indiquant que la boucle s'arrêtera lorsque le compteur deviendra plus grand que l'entrée <code>num</code>, et un itérateur ajoutera 1 au compteur à chaque fois.</li>
- <li>À l'intérieur de la boucle, nous trouvons la racine carrée de chaque nombre en utilisant <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt">Math.sqrt(i), </a><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/sqrt">, </a>puis vérifions si la racine carrée est un entier en vérifiant si elle est identique à elle-même lorsqu'elle a été arrondie à l'entier le plus proche (ceci est ce que <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/floor">Math.floor() </a>fait au nombre auquel il est passé).</li>
+ <li>À l'intérieur de la boucle, nous trouvons la racine carrée de chaque nombre en utilisant <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt">Math.sqrt(i), </a><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/sqrt">, </a>puis vérifions si la racine carrée est un entier en vérifiant si elle est identique à elle-même lorsqu'elle a été arrondie à l'entier le plus proche (ceci est ce que <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/floor">Math.floor() </a>fait au nombre auquel il est passé).</li>
  <li>Si la racine carrée et la racine carrée arrondie ne sont pas égales les unes aux autres (<code>! ==</code>), cela signifie que la racine carrée n'est pas un entier, donc cela ne nous intéresse pas. Dans un tel cas, nous utilisons l'instruction <code>continue</code> pour passer à l'itération de la boucle suivante sans enregistrer le numéro n'importe où.</li>
  <li>Si la racine carrée est un entier, nous passons complètement le bloc if pour que l'instruction <code>continue</code> ne soit pas exécutée; à la place, nous concaténons la valeur <code>i </code>actuelle plus un espace sur la fin du contenu du paragraphe.</li>
 </ol>
@@ -454,7 +454,7 @@ for (let i = 1; i &lt;= num; i++) {
 
 <p><code>for</code> n'est pas le seul type de boucle disponible en JavaScript. Il y en a beaucoup d'autres et, même si vous n'avez pas besoin de comprendre tout cela maintenant, il vaut mieux jeter un coup d'œil à la structure de quelques autres pour pouvoir reconnaître les mêmes caractéristiques au travail d'une manière légèrement différente.</p>
 
-<p>D'abord, regardons la boucle <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/while">while</a>. La syntaxe de cette boucle ressemble à ceci:</p>
+<p>D'abord, regardons la boucle <a href="/fr/docs/Web/JavaScript/Reference/Instructions/while">while</a>. La syntaxe de cette boucle ressemble à ceci:</p>
 
 <pre>initializer
 while (exit-condition) {
@@ -485,7 +485,7 @@ while (i &lt; cats.length) {
 <p><strong>Note :</strong> Cela fonctionne toujours comme prévu regardez le ici <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html">GitHub</a> (<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html">Voir en ligne</a> le code complet).</p>
 </div>
 
-<p>La boucle<a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/do...while"> do...while</a> est très similaire, mais dénote une variation par rapport à la structure de la boucle while :</p>
+<p>La boucle<a href="/fr/docs/Web/JavaScript/Reference/Instructions/do...while"> do...while</a> est très similaire, mais dénote une variation par rapport à la structure de la boucle while :</p>
 
 <pre>initializer
 do {
@@ -671,7 +671,7 @@ textarea.onkeyup = function(){
  <li><code>admitted.textContent +=</code> — le début de la ligne qui va concaténer un élément à la fin du <code>admitted.textContent</code>.</li>
 </ul>
 
-<p>Question bonus — après avoir accompli les tâches ci-dessus, il vous restera deux listes de noms séparées par des virgules, mais elles seront mal présentées— il y aura des virgules à la fin de chacune d'elles. Pouvez-vous faire en sorte d'écrire des lignes de code qui coupent les dernières virgules dans chacune d'elles, et ajoute un arrêt total à la fin ? Jetez un oeil à l'article <a href="https://developer.mozilla.org/fr/docs/Learn/JavaScript/First_steps/methode_chaine_utile">Méthodes utiles pour les chaînes de caractères </a>pour obtenir de l'aide.</p>
+<p>Question bonus — après avoir accompli les tâches ci-dessus, il vous restera deux listes de noms séparées par des virgules, mais elles seront mal présentées— il y aura des virgules à la fin de chacune d'elles. Pouvez-vous faire en sorte d'écrire des lignes de code qui coupent les dernières virgules dans chacune d'elles, et ajoute un arrêt total à la fin ? Jetez un oeil à l'article <a href="/fr/docs/Learn/JavaScript/First_steps/methode_chaine_utile">Méthodes utiles pour les chaînes de caractères </a>pour obtenir de l'aide.</p>
 
 <p>Si vous faites une erreur, vous pourrez toujours ré-initialiser l'exemple avec le bouton "Reset". Si vous êtes vraiment bloqué, appuyez sur le bouton "Show solution" pour voir une solution.</p>
 
@@ -833,22 +833,22 @@ do {
 <p>Nous recommandons <code>for</code>, au moins pour commencer, car elle est probablement la plus facile pour tout se remémorer — l'initialisation, la condition de sortie, l'expression finale, le tout soigneusement placé entre des parenthèses. De cette façon, il est facile de voir où elles se trouvent et de vérifier qu'on ne les a pas oubliées.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Il y a d'autres types de boucles et de particularités, qui sont très utiles pour des situations spéciales et qui ne sont pas décrites dans cet article. Si vous voulez aller plus loin dans l'apprentissage des boucles, lisez le guide <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Boucles_et_it%C3%A9ration">Boucles et itérations</a>.</p>
+<p><strong>Note :</strong> Il y a d'autres types de boucles et de particularités, qui sont très utiles pour des situations spéciales et qui ne sont pas décrites dans cet article. Si vous voulez aller plus loin dans l'apprentissage des boucles, lisez le guide <a href="/fr/docs/Web/JavaScript/Guide/Boucles_et_it%C3%A9ration">Boucles et itérations</a>.</p>
 </div>
 
 <h2 id="Conclusion">Conclusion</h2>
 
 <p>Cet article vous a révélé les concepts basiques et les différentes options disponibles pour créer des boucles en JavaScript. Vous devriez à présent être en mesure de comprendre en quoi les boucles constituent un bon mécanisme lorsqu'il s'agit de répéter une action dans le code, et vous devez être impatient de les utiliser dans vos propres exemples !</p>
 
-<p>S'il y a quelque chose que vous n'avez pas compris, n'hésitez pas à relire l'article ou à <a href="https://developer.mozilla.org/fr/Apprendre#Nous_contacter">nous contacter </a>pour demander de l'aide.</p>
+<p>S'il y a quelque chose que vous n'avez pas compris, n'hésitez pas à relire l'article ou à <a href="/fr/Apprendre#Nous_contacter">nous contacter </a>pour demander de l'aide.</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Boucles_et_it%C3%A9ration">Boucles et itération</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/for">L'instruction for</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/while">while</a> et <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/do...while">do...while</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/break">break</a> et <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/continue">continue</a></li>
+ <li><a href="/fr/docs/Web/JavaScript/Guide/Boucles_et_it%C3%A9ration">Boucles et itération</a></li>
+ <li><a href="/fr/docs/Web/JavaScript/Reference/Instructions/for">L'instruction for</a></li>
+ <li><a href="/fr/docs/Web/JavaScript/Reference/Instructions/while">while</a> et <a href="/fr/docs/Web/JavaScript/Reference/Instructions/do...while">do...while</a></li>
+ <li><a href="/fr/docs/Web/JavaScript/Reference/Instructions/break">break</a> et <a href="/fr/docs/Web/JavaScript/Reference/Instructions/continue">continue</a></li>
  <li><p><a href="https://www.impressivewebs.com/javascript-for-loop/">What’s the Best Way to Write a JavaScript For Loop?</a> — quelques bonnes pratiques en matière de boucles</p>
  </li>
 </ul>

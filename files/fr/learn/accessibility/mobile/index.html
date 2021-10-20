@@ -22,7 +22,7 @@ original_slug: Apprendre/a11y/Mobile
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Connaissances de base en informatique, compréhension de base de HTML, CSS et JavaScript et compréhension de la  <a href="/en-US/docs/Learn/Accessibility">previous articles in the course</a>.</td>
+   <td>Connaissances de base en informatique, compréhension de base de HTML, CSS et JavaScript et compréhension de la  <a href="/fr/docs/Learn/Accessibility">previous articles in the course</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -35,7 +35,7 @@ original_slug: Apprendre/a11y/Mobile
 
 <p>L’état de l’accessibilité - et la prise en charge des normes Web en général - est bon pour les appareils mobiles modernes. Le temps où les appareils mobiles utilisaient des technologies Web complètement différentes des navigateurs de bureau, forçait les développeurs à utiliser le sniffing de navigateur et à leur servir des sites complètement séparés (même si de nombreuses entreprises détectent encore l'utilisation d'appareils mobiles et leur servent un domaine distinct).</p>
 
-<p>De nos jours, les appareils mobiles en général peuvent gérer des sites Web "complets", et les principales plates-formes ont même des lecteurs d'écran intégrés pour permettre aux utilisateurs malvoyants de les utiliser avec succès. Les navigateurs mobiles modernes ont tendance à avoir un bon support pour  <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a>, aussi</p>
+<p>De nos jours, les appareils mobiles en général peuvent gérer des sites Web "complets", et les principales plates-formes ont même des lecteurs d'écran intégrés pour permettre aux utilisateurs malvoyants de les utiliser avec succès. Les navigateurs mobiles modernes ont tendance à avoir un bon support pour  <a href="/fr/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a>, aussi</p>
 
 <p>Pour rendre un site Web accessible et utilisable sur mobile, il vous suffit de suivre les bonnes pratiques générales en matière de conception de sites Web et d'accessibilité.</p>
 
@@ -201,11 +201,11 @@ original_slug: Apprendre/a11y/Mobile
 
 <h2 id="Mécanismes_de_contrôle">Mécanismes de contrôle</h2>
 
-<p>Dans notre article relatif à l'accessibilité CSS et JavaScript, nous avons examiné l'idée d'événements spécifiques à un certain type de mécanisme de contrôle  (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events">Mouse-specific events</a>). En résumé, cela pose des problèmes d'accessibilité car d'autres mécanismes de contrôle ne peuvent pas activer la fonctionnalité associée.</p>
+<p>Dans notre article relatif à l'accessibilité CSS et JavaScript, nous avons examiné l'idée d'événements spécifiques à un certain type de mécanisme de contrôle  (see <a href="/fr/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events">Mouse-specific events</a>). En résumé, cela pose des problèmes d'accessibilité car d'autres mécanismes de contrôle ne peuvent pas activer la fonctionnalité associée.</p>
 
-<p>Par exemple, l'événement   <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick">click</a>  est bon en termes d'accessibilité - un gestionnaire d'événements associé peut être appelé en cliquant sur l'élément sur lequel il est défini, en le sélectionnant et en appuyant sur Entrée / Retour ou en le tapant sur un périphérique à écran tactile. Essayez notre <a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-button-example.html">simple-button-example.html</a> exemple (<a href="http://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html">see it running live</a>) pour voir ce que nous entendons. .</p>
+<p>Par exemple, l'événement   <a href="/fr/docs/Web/API/GlobalEventHandlers/onclick">click</a>  est bon en termes d'accessibilité - un gestionnaire d'événements associé peut être appelé en cliquant sur l'élément sur lequel il est défini, en le sélectionnant et en appuyant sur Entrée / Retour ou en le tapant sur un périphérique à écran tactile. Essayez notre <a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-button-example.html">simple-button-example.html</a> exemple (<a href="http://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html">see it running live</a>) pour voir ce que nous entendons. .</p>
 
-<p>Sinon, des événements spécifiques à la souris, tels que   <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmousedown">mousedown</a> et <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseup">mouseup</a> créent des problèmes - leurs gestionnaires d'événements ne peuvent pas être appelés à l'aide de contrôles autres que la souris.</p>
+<p>Sinon, des événements spécifiques à la souris, tels que   <a href="/fr/docs/Web/API/GlobalEventHandlers/onmousedown">mousedown</a> et <a href="/fr/docs/Web/API/GlobalEventHandlers/onmouseup">mouseup</a> créent des problèmes - leurs gestionnaires d'événements ne peuvent pas être appelés à l'aide de contrôles autres que la souris.</p>
 
 <p>Si vous essayez de contrôler notre exemple  <a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-box-drag.html">simple-box-drag.html</a> (<a href="http://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html">see example live</a>) avec un clavier ou une touche, vous verrez le problème. Cela se produit car nous utilisons un code tel que:</p>
 
@@ -230,18 +230,18 @@ panel.ontouchend = stopMove;</pre>
 
 <p>Nous avons fourni un exemple simple qui montre comment utiliser simultanément les événements de la souris et des événements tactiles — voir <a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/multi-control-box-drag.html">multi-control-box-drag.html</a> (<a href="http://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html">see the example live</a> aussi).</p>
 
-<p><strong>Note:</strong> Vous pouvez également voir des exemples fonctionnels montrant comment implémenter différents mécanismes de contrôle à   <a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms">Implementing game control mechanisms</a>.</p>
+<p><strong>Note:</strong> Vous pouvez également voir des exemples fonctionnels montrant comment implémenter différents mécanismes de contrôle à   <a href="/fr/docs/Games/Techniques/Control_mechanisms">Implementing game control mechanisms</a>.</p>
 
 <h2 id="Responsive_design">Responsive design</h2>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Progressive/Responsive">Responsive design</a> a l’habitude de faire en sorte que vos mises en page et les autres fonctionnalités de vos applications changent de manière dynamique en fonction de facteurs tels que la taille de l’écran et la résolution, de sorte qu’elles soient utilisables et accessibles aux utilisateurs de différents types d’appareils. .</p>
+<p><a href="/fr/docs/Web/Apps/Progressive/Responsive">Responsive design</a> a l’habitude de faire en sorte que vos mises en page et les autres fonctionnalités de vos applications changent de manière dynamique en fonction de facteurs tels que la taille de l’écran et la résolution, de sorte qu’elles soient utilisables et accessibles aux utilisateurs de différents types d’appareils. .</p>
 
 <p>En particulier, les problèmes les plus courants auxquels le mobile doit faire face sont les suivants:</p>
 
 <ul>
- <li>Adéquation des mises en page pour les appareils mobiles. Une mise en page à plusieurs colonnes ne fonctionnera pas aussi bien sur un écran étroit, par exemple, et il faudra peut-être augmenter la taille du texte pour le rendre lisible. Ces problèmes peuvent être résolus en créant une mise en page réactive utilisant des technologies telles que  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries">media queries</a>, <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>, et <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">flexbox</a>.</li>
- <li>Conserver les tailles d’image téléchargées. En général, les appareils de petite taille n’auront pas besoin d’images aussi volumineuses que leurs homologues de bureau, et ils risquent davantage d’être sur des connexions réseau lentes. Par conséquent, il est sage de servir des images plus petites sur des dispositifs à écran étroit, le cas échéant. Vous pouvez gérer cela en utilisant  <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">responsive image techniques</a>.</li>
- <li>Penser aux hautes résolutions. De nombreux appareils mobiles ont des écrans haute résolution et ont donc besoin d'images de résolution supérieure pour que l'affichage puisse continuer à être net et net. Encore une fois, vous pouvez servir des images selon vos besoins en utilisant des techniques d’image réactives. De plus, de nombreuses exigences en matière d'images peuvent être satisfaites grâce au format d'images vectorielles SVG, bien pris en charge par les navigateurs actuels. SVG a une petite taille de fichier et restera net quelle que soit la taille affichée   (voir <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the web</a> pour plus de détails ).</li>
+ <li>Adéquation des mises en page pour les appareils mobiles. Une mise en page à plusieurs colonnes ne fonctionnera pas aussi bien sur un écran étroit, par exemple, et il faudra peut-être augmenter la taille du texte pour le rendre lisible. Ces problèmes peuvent être résolus en créant une mise en page réactive utilisant des technologies telles que  <a href="/fr/docs/Web/CSS/Media_Queries">media queries</a>, <a href="/fr/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>, et <a href="/fr/docs/Learn/CSS/CSS_layout/Flexbox">flexbox</a>.</li>
+ <li>Conserver les tailles d’image téléchargées. En général, les appareils de petite taille n’auront pas besoin d’images aussi volumineuses que leurs homologues de bureau, et ils risquent davantage d’être sur des connexions réseau lentes. Par conséquent, il est sage de servir des images plus petites sur des dispositifs à écran étroit, le cas échéant. Vous pouvez gérer cela en utilisant  <a href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">responsive image techniques</a>.</li>
+ <li>Penser aux hautes résolutions. De nombreux appareils mobiles ont des écrans haute résolution et ont donc besoin d'images de résolution supérieure pour que l'affichage puisse continuer à être net et net. Encore une fois, vous pouvez servir des images selon vos besoins en utilisant des techniques d’image réactives. De plus, de nombreuses exigences en matière d'images peuvent être satisfaites grâce au format d'images vectorielles SVG, bien pris en charge par les navigateurs actuels. SVG a une petite taille de fichier et restera net quelle que soit la taille affichée   (voir <a href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the web</a> pour plus de détails ).</li>
 </ul>
 
 <p><strong>Note: </strong> Nous ne fournirons pas une analyse complète des techniques de conception réactive ici, car elles sont couvertes ailleurs au sein de MDN (voir les liens ci-dessus).</p>
@@ -252,7 +252,7 @@ panel.ontouchend = stopMove;</pre>
 
 <h4 id="Ne_pas_désactiver_le_zoom">Ne pas désactiver le zoom</h4>
 
-<p>En utilisant  <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>, il est possible de désactiver le zoom, en utilisant un code comme celui-ci dans votre {{htmlelement("head")}}:</p>
+<p>En utilisant  <a href="/fr/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>, il est possible de désactiver le zoom, en utilisant un code comme celui-ci dans votre {{htmlelement("head")}}:</p>
 
 <pre class="brush: html">&lt;meta name="viewport" content="user-scalable=no"&gt;</pre>
 
@@ -279,7 +279,7 @@ panel.ontouchend = stopMove;</pre>
  <li>Les types <code>time</code> et <code>date</code> affichent des sélecteurs appropriés pour la sélection des heures et des dates. .</li>
 </ul>
 
-<p>Si vous souhaitez fournir une solution différente pour les ordinateurs de bureau, vous pouvez toujours proposer un balisage différent à vos périphériques mobiles à l'aide de la détection de fonctionnalités. Reportez-vous à   <a href="http://diveinto.html5doctor.com/detect.html#input-types">input types</a>  pour obtenir des informations brutes sur la détection de différents types d'entrée et consultez notre article  <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">feature detection article</a> pour en savoir plus. .</p>
+<p>Si vous souhaitez fournir une solution différente pour les ordinateurs de bureau, vous pouvez toujours proposer un balisage différent à vos périphériques mobiles à l'aide de la détection de fonctionnalités. Reportez-vous à   <a href="http://diveinto.html5doctor.com/detect.html#input-types">input types</a>  pour obtenir des informations brutes sur la détection de différents types d'entrée et consultez notre article  <a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">feature detection article</a> pour en savoir plus. .</p>
 
 <h2 id="Résumé">Résumé</h2>
 
@@ -300,13 +300,13 @@ panel.ontouchend = stopMove;</pre>
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">What is accessibility?</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript">CSS and JavaScript accessibility best practices</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basics</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/Multimedia">Accessible multimedia</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/Mobile">Mobile accessibility</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting">Accessibility troubleshooting</a></li>
+ <li><a href="/fr/docs/Learn/Accessibility/What_is_accessibility">What is accessibility?</a></li>
+ <li><a href="/fr/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a></li>
+ <li><a href="/fr/docs/Learn/Accessibility/CSS_and_JavaScript">CSS and JavaScript accessibility best practices</a></li>
+ <li><a href="/fr/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basics</a></li>
+ <li><a href="/fr/docs/Learn/Accessibility/Multimedia">Accessible multimedia</a></li>
+ <li><a href="/fr/docs/Learn/Accessibility/Mobile">Mobile accessibility</a></li>
+ <li><a href="/fr/docs/Learn/Accessibility/Accessibility_troubleshooting">Accessibility troubleshooting</a></li>
 </ul>
 </div>
 </div>

@@ -102,8 +102,8 @@ original_slug: >-
 <p>Cette méthode doit avoir la même fonction que celle de <code>Ball()</code>: soit dessiner l'objet dans le canvas. Elle fonctionnera quasiment de la même manière, copiez la fonction <code>Ball.prototype.draw</code>. Puis appliquez les modifications suivantes:</p>
 
 <ul>
- <li>On ne veut pas que le viseur soit plein, mais qu'il ait seulement un contour. Changez <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle">fillStyle</a></code> et <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fill">fill()</a></code> pour <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle">strokeStyle</a></code> et <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/stroke">stroke()</a></code>.</li>
- <li>On voudrait qu'il soit aussi un peu plus épais, pour être plus facile à voir. Pour ça on doit définir un attribut <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth">lineWidth</a></code> à ctx après l'appel à la fonction <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath">beginPath()</a></code> (avec une valeur de 3).</li>
+ <li>On ne veut pas que le viseur soit plein, mais qu'il ait seulement un contour. Changez <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/fillStyle">fillStyle</a></code> et <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/fill">fill()</a></code> pour <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/strokeStyle">strokeStyle</a></code> et <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/stroke">stroke()</a></code>.</li>
+ <li>On voudrait qu'il soit aussi un peu plus épais, pour être plus facile à voir. Pour ça on doit définir un attribut <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/lineWidth">lineWidth</a></code> à ctx après l'appel à la fonction <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/beginPath">beginPath()</a></code> (avec une valeur de 3).</li>
 </ul>
 
 <h4 id="checkBounds()"><code>checkBounds()</code></h4>
@@ -132,7 +132,7 @@ window.onkeydown = function(e) {
     }
   }</pre>
 
-<p>Quand une touche est enfoncée, la propriété <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> de l'objet event est consultée pour savoir quelle touche est enfoncée. Si c'est une des touches spécifiée, alors le viseur ce déplacera à gauche, à droite, en haut ou en bas.</p>
+<p>Quand une touche est enfoncée, la propriété <a href="/fr/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> de l'objet event est consultée pour savoir quelle touche est enfoncée. Si c'est une des touches spécifiée, alors le viseur ce déplacera à gauche, à droite, en haut ou en bas.</p>
 
 <ul>
  <li>Pour un point bonus, faite apparaître à quel touche correspond le code de celle que l'utilisateur a enfoncé.</li>
@@ -199,11 +199,11 @@ window.onkeydown = function(e) {
 <h2 id="Dans_ce_Module">Dans ce Module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Object basics</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object-oriented JavaScript for beginners</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance">Inheritance in JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/JSON">Working with JSON data</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Adding features to our bouncing balls demo</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Basics">Object basics</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object-oriented JavaScript for beginners</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Inheritance">Inheritance in JavaScript</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/JSON">Working with JSON data</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Adding features to our bouncing balls demo</a></li>
 </ul>

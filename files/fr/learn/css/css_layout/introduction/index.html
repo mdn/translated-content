@@ -82,11 +82,11 @@ original_slug: Apprendre/CSS/CSS_layout/Introduction
 <p>Les méthodes des CSS pouvant changer le placement des éléments sont les suivantes :</p>
 
 <ul>
- <li><strong>La propriété {{cssxref("display")}}</strong> — les valeurs standards comme <code>block</code>, <code>inline</code> ou <code>inline-block</code> peuvent changer la manière dont l'élément se comporte dans le cours normal (voir <a href="/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Le_mod%C3%A8le_de_bo%C3%AEte#Les_types_de_bo%C3%AEte">Types de boîtes</a> pour plus d'informations). Ensuite, nous disposons de méthodes de mise en page autonomes activées par l'intermédiaire d'une valeur de <code>display</code>, par exemple les <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids">Grilles CSS</a> ou <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>.</li>
+ <li><strong>La propriété {{cssxref("display")}}</strong> — les valeurs standards comme <code>block</code>, <code>inline</code> ou <code>inline-block</code> peuvent changer la manière dont l'élément se comporte dans le cours normal (voir <a href="/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Le_mod%C3%A8le_de_bo%C3%AEte#Les_types_de_bo%C3%AEte">Types de boîtes</a> pour plus d'informations). Ensuite, nous disposons de méthodes de mise en page autonomes activées par l'intermédiaire d'une valeur de <code>display</code>, par exemple les <a href="/fr/docs/Learn/CSS/CSS_layout/Grids">Grilles CSS</a> ou <a href="/fr/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>.</li>
  <li><strong>Flotteurs</strong> — appliquer à {{cssxref("float")}} une valeur comme <code>left</code> peut créer une juxtaposition d'un élément bloc à côté d'un autre, tout comme les images « baignent » dans le texte dans les mises en page de magazines.</li>
  <li><strong>La propriété {{cssxref("position")}}</strong> — vous permet de contrôler avec précision le placement de boîtes dans d'autres boîtes. <code>static</code> est le placement par défaut dans le cours, mais vous pouvez manipuler les éléments pour qu'ils se comportent différemment à l'aide d'autres valeurs, par exemple en les fixant en haut à gauche de la fenêtre d'affichage du navigateur.</li>
  <li><strong>Mise en page de tableaux</strong> — les fonctions conçues pour styliser les parties d'un tableau HTML peuvent être utilisées sur des éléments non tableau en utilisant <code>display: table</code> et les propriétés associées.</li>
- <li><strong>Mise en page sur plusieurs colonnes</strong> — Les propriétés <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Columns">Multi-column</a> peuvent faire qu'un contenu bloc soit disposé en colonnes, comme dans un journal.</li>
+ <li><strong>Mise en page sur plusieurs colonnes</strong> — Les propriétés <a href="/fr/docs/Web/CSS/CSS_Columns">Multi-column</a> peuvent faire qu'un contenu bloc soit disposé en colonnes, comme dans un journal.</li>
 </ul>
 
 <h2 id="La_propriété_«_display_»">La propriété « display »</h2>
@@ -99,7 +99,7 @@ original_slug: Apprendre/CSS/CSS_layout/Introduction
 
 <h2 id="Flexbox">Flexbox</h2>
 
-<p>Flexbox est l'abréviation pour <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexible Box Layout</a> Module (Mise en page de boîtes modulaires), conçu pour faciliter une disposition alignée sur une dimension — soit en ligne, soit en colonne. Pour utiliser <code>flexbox</code>, appliquez <code>display: flex</code> à l'élément parent des éléments à placer ; tous ses enfants directs deviennent alors des éléments <code>flex</code>. Voyons cela avec un simple exemple.</p>
+<p>Flexbox est l'abréviation pour <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexible Box Layout</a> Module (Mise en page de boîtes modulaires), conçu pour faciliter une disposition alignée sur une dimension — soit en ligne, soit en colonne. Pour utiliser <code>flexbox</code>, appliquez <code>display: flex</code> à l'élément parent des éléments à placer ; tous ses enfants directs deviennent alors des éléments <code>flex</code>. Voyons cela avec un simple exemple.</p>
 
 <p>Le balisage HTML ci-dessous crée un élément conteneur de la classe <code>wrapper</code>, dans lequel nous plaçons 3 éléments {{htmlelement("div")}}. Par défaut ces éléments s'afficheront en tant qu'éléments blocs, les uns sous les autres, dans ce document en langue française.</p>
 
@@ -164,7 +164,7 @@ original_slug: Apprendre/CSS/CSS_layout/Introduction
 <p>{{ EmbedLiveSample('Définir_la_propriété_flex', '300', '200') }}</p>
 
 <div class="note">
-<p><strong>Note :</strong> Ce n'est qu'une très brève introduction aux possibilités de Flexbox : pour en apprendre plus, voyez notre article sur <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>.</p>
+<p><strong>Note :</strong> Ce n'est qu'une très brève introduction aux possibilités de Flexbox : pour en apprendre plus, voyez notre article sur <a href="/fr/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>.</p>
 </div>
 
 <h2 id="Disposition_en_trame">Disposition en trame</h2>
@@ -251,7 +251,7 @@ original_slug: Apprendre/CSS/CSS_layout/Introduction
 <p>{{ EmbedLiveSample('Placer_des_objets_sur_la_grille', '300', '330') }}</p>
 
 <div class="note">
-<p><strong>Note :</strong> Ces deux exemples ne sont qu'une petite partie de la puissance des dispositions tramées ; pour en savoir plus, voyez l'article <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Disposition tramée</a>.</p>
+<p><strong>Note :</strong> Ces deux exemples ne sont qu'une petite partie de la puissance des dispositions tramées ; pour en savoir plus, voyez l'article <a href="/fr/docs/Learn/CSS/CSS_layout/Grids">Disposition tramée</a>.</p>
 </div>
 
 <p>La suite de ce guide porte sur d'autres méthodes de mise en page. Elles ont moins d'importance pour la structure générale de la mise en page, mais peuvent tout de même vous aider à réaliser des tâches spécifiques. En comprenant la nature de chaque tâche de mise en page, vous découvrez rapidement, en regardant un composant particulier de votre design, que le type de mise en page le plus adapté est souvent évident.</p>
@@ -310,7 +310,7 @@ p {
 <p>{{ EmbedLiveSample('Flotteurs_boîtes_flottantes', '100%', 600) }}</p>
 
 <div class="note">
-<p><strong>Note :</strong> Les boîtes flottantes sont précisément expliquées dans la leçon à propos des propriétés <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">float et clear</a>. Précédant les techniques telles que Flexbox et les trames, les boîtes flottantes étaient utilisées comme méthode pour créer des dispositions en colonnes. Vous rencontrerez peut‑être encore ce méthodes sur le Web ; nous les expliciterons dans la leçon sur les <a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Méthodes de mise en page traditionnelles</a>.</p>
+<p><strong>Note :</strong> Les boîtes flottantes sont précisément expliquées dans la leçon à propos des propriétés <a href="/fr/docs/Learn/CSS/CSS_layout/Floats">float et clear</a>. Précédant les techniques telles que Flexbox et les trames, les boîtes flottantes étaient utilisées comme méthode pour créer des dispositions en colonnes. Vous rencontrerez peut‑être encore ce méthodes sur le Web ; nous les expliciterons dans la leçon sur les <a href="/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Méthodes de mise en page traditionnelles</a>.</p>
 </div>
 
 <h2 id="Techniques_de_positionnement">Techniques de positionnement</h2>
@@ -447,7 +447,7 @@ p {
 
 <p>{{ EmbedLiveSample('Positionnement_absolu', '100%', 300) }}</p>
 
-<p>C'est vraiment différent ! L'élément positionné a maintenant complètement été séparé du reste de la mise en page et se situe au haut de celle-ci. Les deux autres paragraphes se trouvent maintenant ensemble comme si leur frère positionné n'existait pas. Les propriétés {{cssxref("top")}} et {{cssxref("left")}} ont des effets différents pour un positionnement absolu comparativement à un relatif. Dans ce cas les décalages ont été calculés à compter du haut et du côté gauche de la la page. Il est possible de modifier l'élément parent conteneur ; nous verrons cela dans la leçon sur le <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning">positionnement</a>.</p>
+<p>C'est vraiment différent ! L'élément positionné a maintenant complètement été séparé du reste de la mise en page et se situe au haut de celle-ci. Les deux autres paragraphes se trouvent maintenant ensemble comme si leur frère positionné n'existait pas. Les propriétés {{cssxref("top")}} et {{cssxref("left")}} ont des effets différents pour un positionnement absolu comparativement à un relatif. Dans ce cas les décalages ont été calculés à compter du haut et du côté gauche de la la page. Il est possible de modifier l'élément parent conteneur ; nous verrons cela dans la leçon sur le <a href="/fr/docs/Learn/CSS/CSS_layout/Positioning">positionnement</a>.</p>
 
 <h3 id="Positionnement_fixé">Positionnement fixé</h3>
 
@@ -533,7 +533,7 @@ p {
 <p>{{ EmbedLiveSample('Positionnement_collant', '100%', 200) }}</p>
 
 <div class="note">
-<p><strong>Note :</strong> pour plus de précisions à propos du positionnement, voir l'article <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positionnement</a>.</p>
+<p><strong>Note :</strong> pour plus de précisions à propos du positionnement, voir l'article <a href="/fr/docs/Learn/CSS/CSS_layout/Positioning">Positionnement</a>.</p>
 </div>
 
 <h2 id="Les_tableaux_CSS">Les tableaux CSS</h2>
@@ -655,12 +655,12 @@ form p {
 <ul>
  <li><a href="/fr/docs/Apprendre/CSS/CSS_layout">La mise en page avec les CSS</a></li>
  <li><a href="/fr/docs/Apprendre/CSS/CSS_layout/Normal_Flow">Cours normal</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column Layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy Layout Methods</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Supporting older browsers</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">Fundamental Layout Comprehension Assessment</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Grids">Grid</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column Layout</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy Layout Methods</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Supporting older browsers</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">Fundamental Layout Comprehension Assessment</a></li>
 </ul>

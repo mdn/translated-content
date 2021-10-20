@@ -25,7 +25,7 @@ original_slug: Apprendre/a11y/HTML
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
-   <td>Compétences informatiques de base, compréhension basique de HTML (voir<a href="/fr/Apprendre/HTML/Introduction_à_HTML"> </a><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">I</a><a href="/fr/Apprendre/HTML/Introduction_à_HTML">ntroduction à HTML</a>), et compréhension de <a href="/fr/docs/Apprendre/a11y/What_is_accessibility"> Qu'est ce que l'accessibilité ?</a></td>
+   <td>Compétences informatiques de base, compréhension basique de HTML (voir<a href="/fr/Apprendre/HTML/Introduction_à_HTML"> </a><a href="/fr/docs/Learn/HTML/Introduction_to_HTML">I</a><a href="/fr/Apprendre/HTML/Introduction_à_HTML">ntroduction à HTML</a>), et compréhension de <a href="/fr/docs/Apprendre/a11y/What_is_accessibility"> Qu'est ce que l'accessibilité ?</a></td>
   </tr>
   <tr>
    <th scope="row">Objectif :</th>
@@ -343,7 +343,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
   }
 }</pre>
 
-<p>Ici, nous ajoutons un écouteur à l’objet <code>document</code> pour détecter le moment où un bouton a été appuyé sur le clavier. Nous vérifions quel bouton a été pressé via la propriété  <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code> de l'objet événement; s'il s'agit du code clé qui correspond  Return/Enter, nous exécutons la fonction stockée dans le gestionnaire du bouton   <code>onclick</code>  à l'aide de <code>document.activeElement.onclick()</code>. <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement">activeElement</a></code> nous donne l'élément qui est actuellement ciblé sur la page.</p>
+<p>Ici, nous ajoutons un écouteur à l’objet <code>document</code> pour détecter le moment où un bouton a été appuyé sur le clavier. Nous vérifions quel bouton a été pressé via la propriété  <code><a href="/fr/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code> de l'objet événement; s'il s'agit du code clé qui correspond  Return/Enter, nous exécutons la fonction stockée dans le gestionnaire du bouton   <code>onclick</code>  à l'aide de <code>document.activeElement.onclick()</code>. <code><a href="/fr/docs/Web/API/Document/activeElement">activeElement</a></code> nous donne l'élément qui est actuellement ciblé sur la page.</p>
 
 <div class="note">
 <p><strong>Note :</strong> N'oubliez pas que cette technique ne fonctionnera que si vous définissez vos gestionnaires d'événements d'origine via les propriétés du gestionnaire d'événements (par exemple, onclick), <code>addEventListener</code> ne fonctionnera pas.</p>
@@ -485,7 +485,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 <p>Dans ce cas, nous n'utilisons pas du tout l'attribut <code>alt</code> Nous avons plutôt présenté notre description de l'image sous forme de paragraphe de texte normal, en lui attribuant un  <code>id</code> puis nous avons utilisé l'attribut  <code>aria-labelledby</code> pour : faire référence à cela  <code>id</code>, ce qui amène les lecteurs d’écran à utiliser ce paragraphe comme alt  text/label pour cette image. Ceci est particulièrement utile si vous souhaitez utiliser le même texte comme étiquette pour plusieurs images – quelque chose qui n’est pas possible avec <code>alt</code>.</p>
 
 <div class="note">
-<p><strong>Note :</strong> <code>aria-labelledby</code> fait partie de la spécification <a href="https://www.w3.org/TR/wai-aria-1.1/">WAI ARIA</a>, qui permet aux développeurs d'ajouter une sémantique supplémentaire à leur balisage afin d'améliorer l'accessibilité du lecteur d'écran, le cas échéant. Pour en savoir plus sur son fonctionnement, lisez notre article <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basic</a>.</p>
+<p><strong>Note :</strong> <code>aria-labelledby</code> fait partie de la spécification <a href="https://www.w3.org/TR/wai-aria-1.1/">WAI ARIA</a>, qui permet aux développeurs d'ajouter une sémantique supplémentaire à leur balisage afin d'améliorer l'accessibilité du lecteur d'écran, le cas échéant. Pour en savoir plus sur son fonctionnement, lisez notre article <a href="/fr/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basic</a>.</p>
 </div>
 
 <h3 id="Autres_mécanismes_alternatifs_de_texte">Autres mécanismes alternatifs de texte</h3>

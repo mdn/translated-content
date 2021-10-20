@@ -262,7 +262,7 @@ if (coursesFaites) { // pas besoin d'écrire explicitement '=== true'
 
 <p>Les Instructions <code>if...else</code>  font bien le travail d'aiguiller la programmation selon des conditions, mais elles ne sont pas sans inconvénient. Elles sont principalement adaptées aux cas où vous avez un choix binaire, chacun nécessitant une quantité raisonnable de code à exécuter, et/ou au cas où les conditions sont complexes (par ex. plusieurs opérateurs logiques). Si vous voulez juste fixer la valeur d'une variable à un choix donné ou afficher une déclaration particulière en fonction d'une condition, cette syntaxe peut devenir un peu lourde, surtout si le nombre de choix est important.</p>
 
-<p>Les <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/switch">instructions switch</a> sont vos amies — elles prennent une seule valeur ou expression en entrée, puis examinent une palette de choix jusqu'à trouver celui qui correspond, et exécutent le code qui va avec. Voici un peu de pseudo-code, pour vous donner l'idée :</p>
+<p>Les <a href="/fr/docs/Web/JavaScript/Reference/Instructions/switch">instructions switch</a> sont vos amies — elles prennent une seule valeur ou expression en entrée, puis examinent une palette de choix jusqu'à trouver celui qui correspond, et exécutent le code qui va avec. Voici un peu de pseudo-code, pour vous donner l'idée :</p>
 
 <pre class="brush: js"><strong>switch (expression) {</strong>
   <strong>case</strong> choix1<strong>:</strong>
@@ -345,7 +345,7 @@ function setWeather() {
 
 <h2 id="Opérateur_ternaire">Opérateur ternaire</h2>
 
-<p>Voici une dernière syntaxe que nous souhaitons vous présenter avant de nous amuser avec quelques exemples. L'<a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel">opérateur ternaire ou conditionnel</a> est un petit morceau de code qui teste une condition et renvoie une valeur ou expression si elle est <code>true</code> et une autre si elle est <code>false</code> — elle est utile dans certains cas, et occupe moins de place qu'un bloc <code>if...else</code> si votre choix est limité à deux possibilités à choisir via une condition <code>true</code>/<code>false</code>. Voici le pseudo‑code correspondant :</p>
+<p>Voici une dernière syntaxe que nous souhaitons vous présenter avant de nous amuser avec quelques exemples. L'<a href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel">opérateur ternaire ou conditionnel</a> est un petit morceau de code qui teste une condition et renvoie une valeur ou expression si elle est <code>true</code> et une autre si elle est <code>false</code> — elle est utile dans certains cas, et occupe moins de place qu'un bloc <code>if...else</code> si votre choix est limité à deux possibilités à choisir via une condition <code>true</code>/<code>false</code>. Voici le pseudo‑code correspondant :</p>
 
 <pre>( condition ) ? exécuter ce code : exécuter celui‑ci à la place</pre>
 
@@ -385,7 +385,7 @@ select.onchange = function() {
 
 <p>Nous mettons un élément {{htmlelement('select')}} pour choisir un thème (noir ou blanc), plus un simple élément {{htmlelement('h1')}} pour afficher un titre de site web. Nous avons aussi une fonction <code>update()</code>, qui prend deux couleurs en paramètre (entrées). La couleur de fond du site est déterminée par la couleur indiquée dans le premier paramètre fourni, et la couleur du texte par le deuxième.</p>
 
-<p>Nous avons également mis un écouteur d'événement <a href="https://developer.mozilla.org/fr/docs/Web/API/GlobalEventHandlers/onchange">onchange</a> qui sert à exécuter une fonction contenant un opérateur ternaire. Il débute par un test de condition — <code>select.value === 'black'</code>. Si le test renvoie <code>true</code>, nous exécutons la fonction <code>update()</code> avec les paramètres blanc et noir : cela signifie que le fond sera noir et le texte blanc. S'il renvoie <code>false</code>, nous exécutons <code>update()</code> avec les paramètres noir et blanc, les couleurs du site seront inversées.</p>
+<p>Nous avons également mis un écouteur d'événement <a href="/fr/docs/Web/API/GlobalEventHandlers/onchange">onchange</a> qui sert à exécuter une fonction contenant un opérateur ternaire. Il débute par un test de condition — <code>select.value === 'black'</code>. Si le test renvoie <code>true</code>, nous exécutons la fonction <code>update()</code> avec les paramètres blanc et noir : cela signifie que le fond sera noir et le texte blanc. S'il renvoie <code>false</code>, nous exécutons <code>update()</code> avec les paramètres noir et blanc, les couleurs du site seront inversées.</p>
 
 <div class="note">
 <p><strong>Note :</strong> Vous trouverez également cet <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html">exemple sur GitHub</a> (voyez‑le en <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html">cours d'exécution </a>ici aussi.)</p>
@@ -597,15 +597,15 @@ window.addEventListener('load', updateCode);
 
 <h2 id="Conclusion">Conclusion</h2>
 
-<p>C'est tout ce qu'il est nécessaire de connaître à propos des structures conditionnelles en JavaScript pour le moment ! Je pense que vous avez assurément compris ces concepts et travaillé les exemples aisément ; s'il y a quelque chose que vous n'avez pas compris, relisez cet article à nouveau, ou bien <a href="https://developer.mozilla.org/fr/Apprendre#Nous_contacter">contactez‑nous</a> pour une aide.</p>
+<p>C'est tout ce qu'il est nécessaire de connaître à propos des structures conditionnelles en JavaScript pour le moment ! Je pense que vous avez assurément compris ces concepts et travaillé les exemples aisément ; s'il y a quelque chose que vous n'avez pas compris, relisez cet article à nouveau, ou bien <a href="/fr/Apprendre#Nous_contacter">contactez‑nous</a> pour une aide.</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/docs/Learn/JavaScript/First_steps/Math#Opérateurs_de_comparaison">Opérateurs de comparaison</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs#Les_instructions_conditionnelles">Les instructions conditionnelles</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/if...else">Référence if...else</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel">Référence opérateur conditionnel (ternaire)</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/First_steps/Math#Opérateurs_de_comparaison">Opérateurs de comparaison</a></li>
+ <li><a href="/fr/docs/Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs#Les_instructions_conditionnelles">Les instructions conditionnelles</a></li>
+ <li><a href="/fr/docs/Web/JavaScript/Reference/Instructions/if...else">Référence if...else</a></li>
+ <li><a href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel">Référence opérateur conditionnel (ternaire)</a></li>
 </ul>
 
 <p>{{NextMenu("Apprendre/JavaScript/Building_blocks/Looping_code", "Apprendre/JavaScript/Building_blocks")}}</p>
@@ -613,11 +613,11 @@ window.addEventListener('load', updateCode);
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Building_blocks/conditionals">Prendre des décisions dans du code — conditions</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Building_blocks/Looping_code">Les boucles dans le code</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Building_blocks/Fonctions">Fonctions — blocs de code réutilisables</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Building_blocks/Build_your_own_function">Construire vos propres fonctions</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Building_blocks/Return_values">Valeurs de retour des fonctions</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements">Introduction aux événements</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Building_blocks/Image_gallery">Gallerie d'images</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Building_blocks/conditionals">Prendre des décisions dans du code — conditions</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Building_blocks/Looping_code">Les boucles dans le code</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Building_blocks/Fonctions">Fonctions — blocs de code réutilisables</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Building_blocks/Build_your_own_function">Construire vos propres fonctions</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Building_blocks/Return_values">Valeurs de retour des fonctions</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements">Introduction aux événements</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Building_blocks/Image_gallery">Gallerie d'images</a></li>
 </ul>

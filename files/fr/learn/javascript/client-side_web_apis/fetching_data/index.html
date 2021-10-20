@@ -130,7 +130,7 @@ var url = verse + '.txt';</pre>
  <li>
   <p>Récupérer une ressource sur le réseau est une opération {{glossary("asynchronous","asynchrone")}}, ce qui signifie que vous devez attendre que cette opération se termine (par exemple, que la ressource soit renvoyée) avant de pouvoir récupérer la réponse — sans quoi une erreur est levée. XHR permet d'exécuter du code lorsque la réponse est reçue grâce au gestionnaire d'événement {{domxref("XMLHttpRequest.onload", "onload")}} — quand l'événement {{event("load")}} est déclenché. Une fois que la réponse a été reçue, alors la réponse est accessible via la propriété <code>response</code> de l'objet XHR utilisé.</p>
 
-  <p>Ajoutez le bloc de code qui suit toujours au bas de la fonction <code>updateDisplay()</code>. Vous verrez qu'à l'intérieur du gestionnaire d'événément <code>onload</code>, nous assignons la propriété <code><a href="/en-US/docs/Web/API/Node/textContent">textContent</a></code> de <code>poemDisplay</code> (l'élément {{htmlelement("pre")}}) à la valeur de la propriété {{domxref("XMLHttpRequest.response", "request.response")}}.</p>
+  <p>Ajoutez le bloc de code qui suit toujours au bas de la fonction <code>updateDisplay()</code>. Vous verrez qu'à l'intérieur du gestionnaire d'événément <code>onload</code>, nous assignons la propriété <code><a href="/fr/docs/Web/API/Node/textContent">textContent</a></code> de <code>poemDisplay</code> (l'élément {{htmlelement("pre")}}) à la valeur de la propriété {{domxref("XMLHttpRequest.response", "request.response")}}.</p>
 
   <pre class="brush: js">request.onload = function() {
   poemDisplay.textContent = request.response;
@@ -257,7 +257,7 @@ myFetch.then(function(response) {
 
 <p>L'objet <code>response</code> a une méthode {{domxref("Body.text","text()")}}, qui convertit les données brutes contenues dans la réponse en texte brut — c'est le format que nous voulons. Cette méthode retourne également une promesse, qui se résout lorsque la réponse est convertie en texte, nous utilisons donc un deuxième {{jsxref("Promise.then",".then()")}} pour cette deuxième promesse.</p>
 
-<p>À l'intérieur de ce dernier <code>.then()</code>, nous définissons une nouvelle fonction, qui décide de ce que nous faisons avec le texte récupéré. Nous nous contentons de définir la propriété <code><a href="/en-US/docs/Web/API/Node/textContent">textContent</a></code> de l'élément {{htmlelement("pre")}} à la valeur du texte.</p>
+<p>À l'intérieur de ce dernier <code>.then()</code>, nous définissons une nouvelle fonction, qui décide de ce que nous faisons avec le texte récupéré. Nous nous contentons de définir la propriété <code><a href="/fr/docs/Web/API/Node/textContent">textContent</a></code> de l'élément {{htmlelement("pre")}} à la valeur du texte.</p>
 
 <h4 id="Chaîner_les_then">Chaîner les then()</h4>
 
@@ -387,12 +387,12 @@ myFetch.then(function(response) {
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction">Introduction aux API du Web</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipuler des documents</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Fetching_data">Récupérer des données du serveur</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Third_party_APIs">APIs tierces</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Drawing_graphics">Dessiner des éléments graphiques</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">APIs vidéo et audio</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage">Stockage côté client</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction">Introduction aux API du Web</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipuler des documents</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Fetching_data">Récupérer des données du serveur</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Third_party_APIs">APIs tierces</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Drawing_graphics">Dessiner des éléments graphiques</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">APIs vidéo et audio</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage">Stockage côté client</a></li>
 </ul>
 </div>

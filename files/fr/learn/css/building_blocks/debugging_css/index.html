@@ -12,7 +12,7 @@ original_slug: Apprendre/CSS/Building_blocks/Debugging_CSS
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)</td>
+   <td>Basic computer literacy, <a href="/fr/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="/fr/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/fr/docs/Learn/CSS/First_steps">CSS first steps</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -23,19 +23,19 @@ original_slug: Apprendre/CSS/Building_blocks/Debugging_CSS
 
 <h2 id="Comment_accéder_aux_outils_de_développement_du_navigateur">Comment accéder aux outils de développement du navigateur</h2>
 
-<p>L'article <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">Que sont les outils de développement de navigateurs</a> est un guide maintenu à jour qui explique comment accéder aux outils dans différents navigateurs et plateformes. Alors que vous pouvez choisir de développer le plus souvent sur un navigateur en particulier, et donc de devenir plus familier avec les outils inclus dans ce navigateur, il est important de savoir comment accéder à ces outils dans d'autres navigateurs. Cela vous aidera si vous voyez des rendus différents entre plusieurs navigateurs.</p>
+<p>L'article <a href="/fr/docs/Learn/Common_questions/What_are_browser_developer_tools">Que sont les outils de développement de navigateurs</a> est un guide maintenu à jour qui explique comment accéder aux outils dans différents navigateurs et plateformes. Alors que vous pouvez choisir de développer le plus souvent sur un navigateur en particulier, et donc de devenir plus familier avec les outils inclus dans ce navigateur, il est important de savoir comment accéder à ces outils dans d'autres navigateurs. Cela vous aidera si vous voyez des rendus différents entre plusieurs navigateurs.</p>
 
-<p>You will also find that browsers have chosen to focus on different areas when creating their DevTools. For example in Firefox there are some excellent tools for working visually with CSS Layout, allowing you to inspect and edit <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Layouts</a>, <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts">Flexbox</a>, and <a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Shapes</a>. However, all of the different browsers have similar fundamental tools, e.g. for inspecting the properties and values applied to elements on your page, and making changes to them from the editor.</p>
+<p>You will also find that browsers have chosen to focus on different areas when creating their DevTools. For example in Firefox there are some excellent tools for working visually with CSS Layout, allowing you to inspect and edit <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Layouts</a>, <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts">Flexbox</a>, and <a href="/fr/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Shapes</a>. However, all of the different browsers have similar fundamental tools, e.g. for inspecting the properties and values applied to elements on your page, and making changes to them from the editor.</p>
 
 <p>In this lesson we will look at some useful features of the Firefox DevTools for working with CSS. In order to do so I'll be using <a href="https://mdn.github.io/css-examples/learn/inspecting/inspecting.html">an example file</a>. Load this up in a new tab if you want to follow along, and open up your DevTools as described in the article linked above.</p>
 
 <h2 id="The_DOM_versus_view_source">The DOM versus view source</h2>
 
-<p>Something that can trip up newcomers to DevTools is the difference between what you see when you <a href="/en-US/docs/Tools/View_source">view the source</a> of a webpage, or look at the HTML file you put on the server, and what you can see in the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#HTML_pane">HTML Pane</a> of the DevTools. While it looks roughly similar to what you can see via View Source there are some differences.</p>
+<p>Something that can trip up newcomers to DevTools is the difference between what you see when you <a href="/fr/docs/Tools/View_source">view the source</a> of a webpage, or look at the HTML file you put on the server, and what you can see in the <a href="/fr/docs/Tools/Page_Inspector/UI_Tour#HTML_pane">HTML Pane</a> of the DevTools. While it looks roughly similar to what you can see via View Source there are some differences.</p>
 
 <p>In the rendered DOM the browser may have corrected some badly-written HTML for you. If you incorrectly closed an element, for instance opening an <code>&lt;h2&gt;</code> but closing with an <code>&lt;/h3&gt;</code>, the browser will figure out what you were meaning to do and the HTML in the DOM will correctly close the open <code>&lt;h2&gt;</code> with an <code>&lt;/h2&gt;</code>. The browser will also normalize all of the HTML, and the DOM will also show any changes made by JavaScript.</p>
 
-<p>View Source in comparison, is simply the HTML source code as stored on the server. The <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#HTML_tree">HTML tree</a> in your DevTools shows exactly what the browser is rendering at any given time, so it gives you an insight into what is really going on.</p>
+<p>View Source in comparison, is simply the HTML source code as stored on the server. The <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#HTML_tree">HTML tree</a> in your DevTools shows exactly what the browser is rendering at any given time, so it gives you an insight into what is really going on.</p>
 
 <h2 id="Inspecting_the_applied_CSS">Inspecting the applied CSS</h2>
 
@@ -43,7 +43,7 @@ original_slug: Apprendre/CSS/Building_blocks/Debugging_CSS
 
 <p><img alt="The example page for this tutorial with DevTools open." src="https://mdn.mozillademos.org/files/16606/inspecting1.png" style="border-style: solid; border-width: 1px; height: 1527px; width: 2278px;"></p>
 
-<p>If you look at the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Rules_view">Rules view</a> to the right of your HTML, you should be able to see the CSS properties and values applied to that element. You will see the rules directly applied to class <code>box1</code> and also the CSS that is being inherited by the box from its ancestors, in this case to <code>&lt;body&gt;</code>. This is useful if you are seeing some CSS being applied that you didn't expect. Perhaps it is being inherited from a parent element and you need to add a rule to overwrite it in the context of this element.</p>
+<p>If you look at the <a href="/fr/docs/Tools/Page_Inspector/UI_Tour#Rules_view">Rules view</a> to the right of your HTML, you should be able to see the CSS properties and values applied to that element. You will see the rules directly applied to class <code>box1</code> and also the CSS that is being inherited by the box from its ancestors, in this case to <code>&lt;body&gt;</code>. This is useful if you are seeing some CSS being applied that you didn't expect. Perhaps it is being inherited from a parent element and you need to add a rule to overwrite it in the context of this element.</p>
 
 <p>Also useful is the ability to expand out shorthand properties. In our example the <code>margin</code> shorthand is used.</p>
 
@@ -74,14 +74,14 @@ original_slug: Apprendre/CSS/Building_blocks/Debugging_CSS
 <p><img alt="The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open" src="https://mdn.mozillademos.org/files/16608/inspecting3-font-size.png" style="border-style: solid; border-width: 1px; height: 956px; width: 2275px;"></p>
 
 <div class="note">
-<p><strong>Note :</strong> There are other useful features in the Rules view too, for example declarations with invalid values are crossed out. You can find out more at <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS">Examine and edit CSS</a>.</p>
+<p><strong>Note :</strong> There are other useful features in the Rules view too, for example declarations with invalid values are crossed out. You can find out more at <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS">Examine and edit CSS</a>.</p>
 </div>
 
 <h2 id="Understanding_the_box_model">Understanding the box model</h2>
 
-<p>In previous lessons we have discussed <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">the Box Model</a>, and the fact that we have an alternate box model that changes how the size of elements are calculated based on the size you give them, plus the padding and borders. DevTools can really help you to understand how the size of an element is being calculated.</p>
+<p>In previous lessons we have discussed <a href="/fr/docs/Learn/CSS/Building_blocks/The_box_model">the Box Model</a>, and the fact that we have an alternate box model that changes how the size of elements are calculated based on the size you give them, plus the padding and borders. DevTools can really help you to understand how the size of an element is being calculated.</p>
 
-<p>The <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Layout_view">Layout view</a> shows you a diagram of the box model on the selected element, along with a description of the properties and values that change how the element is laid out. This includes a description of properties that you may not have explicitly used on the element, but which do have initial values set.</p>
+<p>The <a href="/fr/docs/Tools/Page_Inspector/UI_Tour#Layout_view">Layout view</a> shows you a diagram of the box model on the selected element, along with a description of the properties and values that change how the element is laid out. This includes a description of properties that you may not have explicitly used on the element, but which do have initial values set.</p>
 
 <p>In this panel, one of the detailed properties is the <code>box-sizing</code> property, which controls what box model the element uses.</p>
 
@@ -92,7 +92,7 @@ original_slug: Apprendre/CSS/Building_blocks/Debugging_CSS
 <p><img alt="The Layout section of the DevTools" src="https://mdn.mozillademos.org/files/16609/inspecting4-box-model.png" style="border-style: solid; border-width: 1px; height: 1532px; width: 2275px;"></p>
 
 <div class="note">
-<p><strong>Note :</strong> Find out more in <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model">Examining and Inspecting the Box Model</a>.</p>
+<p><strong>Note :</strong> Find out more in <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model">Examining and Inspecting the Box Model</a>.</p>
 </div>
 
 <h2 id="Solving_specificity_issues">Solving specificity issues</h2>
@@ -112,7 +112,7 @@ original_slug: Apprendre/CSS/Building_blocks/Debugging_CSS
   color: orange;
 }</pre>
 
-<p>As you will recall from the lesson on <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">cascade and inheritance</a> where we discussed specificity, class selectors are more specific than element selectors, and so this is the value that applies. DevTools can help you find such issues, especially if the information is buried somewhere in a huge stylesheet.</p>
+<p>As you will recall from the lesson on <a href="/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">cascade and inheritance</a> where we discussed specificity, class selectors are more specific than element selectors, and so this is the value that applies. DevTools can help you find such issues, especially if the information is buried somewhere in a huge stylesheet.</p>
 
 <p><strong>Inspect the <code>&lt;em&gt;</code> with the class of <code>.special</code> and DevTools will show you that orange is the color that applies, and also shows you the <code>color</code> property applied to the em crossed out. You can now see that the class is overriding the element selector.</strong></p>
 
@@ -120,7 +120,7 @@ original_slug: Apprendre/CSS/Building_blocks/Debugging_CSS
 
 <h2 id="Find_out_more_about_the_Firefox_DevTools">Find out more about the Firefox DevTools</h2>
 
-<p>There is a lot of information about the Firefox DevTools here on MDN. Take a look at the main <a href="/en-US/docs/Tools">DevTools section</a>, and for more detail on the things we have briefly covered in this lesson see <a href="/en-US/docs/Tools/Page_Inspector#How_to">The How To Guides</a>.</p>
+<p>There is a lot of information about the Firefox DevTools here on MDN. Take a look at the main <a href="/fr/docs/Tools">DevTools section</a>, and for more detail on the things we have briefly covered in this lesson see <a href="/fr/docs/Tools/Page_Inspector#How_to">The How To Guides</a>.</p>
 
 <h2 id="Debugging_problems_in_CSS">Debugging problems in CSS</h2>
 
@@ -181,23 +181,23 @@ original_slug: Apprendre/CSS/Building_blocks/Debugging_CSS
 <h2 id="In_this_module">In this module</h2>
 
 <ol>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selectors</a>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors">CSS selectors</a>
   <ul>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Type, class, and ID selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinators</a></li>
+   <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Type, class, and ID selectors</a></li>
+   <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute selectors</a></li>
+   <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
+   <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinators</a></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds and borders</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Values and units</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, media, and form elements</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Styling tables</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Organizing">Organizing your CSS</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds and borders</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Values_and_units">Values and units</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, media, and form elements</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Styling_tables">Styling tables</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Organizing">Organizing your CSS</a></li>
 </ol>

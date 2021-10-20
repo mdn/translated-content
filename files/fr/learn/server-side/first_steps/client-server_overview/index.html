@@ -27,7 +27,7 @@ original_slug: Learn/Server-side/Premiers_pas/Client-Serveur
 
 <h2 id="Serveurs_Web_et_HTTP_un_avant-goût">Serveurs Web et HTTP (un avant-goût)</h2>
 
-<p>Les navigateurs web communiquent avec les serveurs web avec le protocole <a href="/en-US/docs/Web/HTTP">HTTP</a><strong> : H</strong>yper<strong>T</strong>ext<strong>T</strong>ransfer <strong>P</strong>rotocol. Quand vous cliquez un lien sur une page, soumettez un formulaire ou lancez une recherche, le navigateur envoie une requête HTTP (<em>HTTP Request) </em>au serveur.</p>
+<p>Les navigateurs web communiquent avec les serveurs web avec le protocole <a href="/fr/docs/Web/HTTP">HTTP</a><strong> : H</strong>yper<strong>T</strong>ext<strong>T</strong>ransfer <strong>P</strong>rotocol. Quand vous cliquez un lien sur une page, soumettez un formulaire ou lancez une recherche, le navigateur envoie une requête HTTP (<em>HTTP Request) </em>au serveur.</p>
 
 <p>Cette requête inclut :</p>
 
@@ -54,7 +54,7 @@ original_slug: Learn/Server-side/Premiers_pas/Client-Serveur
  <li>Cookies côté Client.  Contient les données de session du client, incluant les clés dont peut se servir le serveur pour déterminer le statut de login et les accés/permissions aux ressources.</li>
 </ul>
 
-<p>Les serveurs Web attendent une requête du client puis la traitent quand elle arrive. Il répond ensuite au navigateur avec un message HTTP Response. La réponse contient un statut <a href="/en-US/docs/Web/HTTP/Status">HTTP Response </a>indiquant si, oui ou non, la requête a abouti. (ex : "<code>200 OK</code>" pour un succés, "<code>404 Not Found</code>" si la ressource ne peut être trouvée, "<code>403 Forbidden</code>" si l'utilisateur n'est pas autorisé à voir la ressource etc. Le corps d'une réponse aboutie à une requête  <code>GET</code> contiendrait la ressource demandée.</p>
+<p>Les serveurs Web attendent une requête du client puis la traitent quand elle arrive. Il répond ensuite au navigateur avec un message HTTP Response. La réponse contient un statut <a href="/fr/docs/Web/HTTP/Status">HTTP Response </a>indiquant si, oui ou non, la requête a abouti. (ex : "<code>200 OK</code>" pour un succés, "<code>404 Not Found</code>" si la ressource ne peut être trouvée, "<code>403 Forbidden</code>" si l'utilisateur n'est pas autorisé à voir la ressource etc. Le corps d'une réponse aboutie à une requête  <code>GET</code> contiendrait la ressource demandée.</p>
 
 <p>Quand une page HTML est retournée, elle est affichée par le navigateur. Le navigateur, nativement, pourra découvrir des liens vers d'autres ressources (ex : une page HTML intégre habituellement des pages JavaScript et CSS ), et enverra des requêtes séparées pour télécharger ces fichiers.</p>
 
@@ -70,7 +70,7 @@ original_slug: Learn/Server-side/Premiers_pas/Client-Serveur
 
 <h4 id="La_requête">La requête</h4>
 
-<p>Chaque ligne de la requête contient des informations sur celle-ci. La première partie est appelée l'en-tête ( <strong>header</strong>) et contient beaucoup de données utiles. De la même manière qu'un <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">HTML head</a> contient des informations utiles (pas le contenu réel qui lui, se trouve dans le corps (body) :</p>
+<p>Chaque ligne de la requête contient des informations sur celle-ci. La première partie est appelée l'en-tête ( <strong>header</strong>) et contient beaucoup de données utiles. De la même manière qu'un <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">HTML head</a> contient des informations utiles (pas le contenu réel qui lui, se trouve dans le corps (body) :</p>
 
 <pre>GET https://developer.mozilla.org/en-US/search?q=la+relation+Client+-+serveur&amp;topic=apps&amp;topic=html&amp;topic=css&amp;topic=js&amp;topic=api&amp;topic=webdev HTTP/1.1
 Host: developer.mozilla.org
@@ -197,7 +197,7 @@ Content-Length: 0
 </pre>
 
 <div class="note">
-<p><strong>Note :</strong> Les requêtes et réponses montrées dans ces exemples ont été capturées avec l'application <a href="https://www.telerik.com/download/fiddler">Fiddler</a> , mais vous pouvez avoir des informations similaires en utilisant des "renifleurs" web  (e.g. <a href="http://websniffer.cc/">Websniffer</a>, <a href="https://www.wireshark.org/">Wireshark</a>) ou des extensions de navigateur comme  <a href="https://addons.mozilla.org/en-US/firefox/addon/httpfox/">HttpFox</a>. Vous pouvez essayer seul. Utilisez tous les outils recommandés, naviguez sur des sites et  éditez des profils de données pour explorer les différentes requêtes et réponses. La plupart des navigateurs modernes ont aussi des outils qui gérent les requêtes réseau, par exemple le <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> dans Firefox).</p>
+<p><strong>Note :</strong> Les requêtes et réponses montrées dans ces exemples ont été capturées avec l'application <a href="https://www.telerik.com/download/fiddler">Fiddler</a> , mais vous pouvez avoir des informations similaires en utilisant des "renifleurs" web  (e.g. <a href="http://websniffer.cc/">Websniffer</a>, <a href="https://www.wireshark.org/">Wireshark</a>) ou des extensions de navigateur comme  <a href="https://addons.mozilla.org/en-US/firefox/addon/httpfox/">HttpFox</a>. Vous pouvez essayer seul. Utilisez tous les outils recommandés, naviguez sur des sites et  éditez des profils de données pour explorer les différentes requêtes et réponses. La plupart des navigateurs modernes ont aussi des outils qui gérent les requêtes réseau, par exemple le <a href="/fr/docs/Tools/Network_Monitor">Network Monitor</a> dans Firefox).</p>
 </div>
 
 <h2 id="Les_sites_statiques">Les sites statiques</h2>
@@ -212,7 +212,7 @@ Content-Length: 0
 
 <p><img alt="A simplified diagram of a static web server." src="https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png"></p>
 
-<p>Quand un utilisateur veut naviguer jusqu'à une page, le navigateur envoie une requête HTTP <code>GET</code> spécifiant l'URL de sa page HTML. Le serveur retourne le document demandé depuis son système de fichiers et retourne une réponse  HTTP contenant le document et un  <a href="/en-US/docs/Web/HTTP/Status">HTTP Response status code</a> ( statut codé de la réponse HTTP) qui est  "<code>200 OK</code>" (indiquant le succés de l'opération). Le serveur peut retourner un statut différent, par exemple "<code>404 Not Found</code>"  si le fichier est absent sur le serveur , ou bien "<code>301 Moved Permanently</code>" si le fichier existe mais a été déplacé vers une nouvelle localisation.</p>
+<p>Quand un utilisateur veut naviguer jusqu'à une page, le navigateur envoie une requête HTTP <code>GET</code> spécifiant l'URL de sa page HTML. Le serveur retourne le document demandé depuis son système de fichiers et retourne une réponse  HTTP contenant le document et un  <a href="/fr/docs/Web/HTTP/Status">HTTP Response status code</a> ( statut codé de la réponse HTTP) qui est  "<code>200 OK</code>" (indiquant le succés de l'opération). Le serveur peut retourner un statut différent, par exemple "<code>404 Not Found</code>"  si le fichier est absent sur le serveur , ou bien "<code>301 Moved Permanently</code>" si le fichier existe mais a été déplacé vers une nouvelle localisation.</p>
 
 <p>Le serveur d'un site statique n'aura à faire face qu'à des requêtes  GET vu qu'il ne stocke aucune donnée modifiable. Il ne change pas non plus ses réponses basées sur les données des requêtes HTTP (c'est à dire les paramètres URL ou les cookies). </p>
 
@@ -310,8 +310,8 @@ def junior(request):
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Introduction">Introduction to the server side</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Web_frameworks">Server-side web frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/First_steps/Introduction">Introduction to the server side</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/First_steps/Web_frameworks">Server-side web frameworks</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/First_steps/Website_security">Website security</a></li>
 </ul>
