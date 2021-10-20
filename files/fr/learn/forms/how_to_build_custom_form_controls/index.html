@@ -34,52 +34,40 @@ original_slug: >-
 
 <p>En termes de comportement, nous voulons que notre widget soit utilisable aussi bien avec une souris qu'avec un clavier, comme n'importe quel widget natif. Commençons par définir comment le widget atteint chaque état :</p>
 
-<dl>
- <dt>Le widget est dans son état normal :</dt>
- <dd>
+<p>Le widget est dans son état normal :</p>
+
  <ul>
   <li>la page se charge</li>
   <li>le widget était actif et l'utilisateur a cliqué quelque part en dehors du widget</li>
   <li>le widget était actif et l'utilisateur a déplacé le focus sur un autre avec le clavier</li>
  </ul>
- </dd>
-</dl>
 
-<p> </p>
-
-<dl>
- <dd>
  <div class="note">
  <p><strong>Note :</strong> Déplacer le focus dans la page entre les divers widgets se fait généralement en appuyant sur la touche de tabulation, mais ce n'est pas la norme partout. Par exemple, circuler parmi les liens sur une page se fait dans Safari par défaut en utilisant la <a href="http://www.456bereastreet.com/archive/200906/enabling_keyboard_navigation_in_mac_os_x_web_browsers/">combinaison Option+Tab</a>.</p>
  </div>
- </dd>
- <dt>Le widget est sans son état actif :</dt>
- <dd>
+
+ <p>Le widget est sans son état actif :</p>
+ 
  <ul>
   <li>l'utilisateur clique sur lui</li>
   <li>l'utilisateur presse la touche Tabulation et obtient le focus</li>
   <li>le widget était dans l'état ouvert et l'utilisateur a cliqué dessus.</li>
  </ul>
- </dd>
- <dt>Le widget est dans un état ouvert :</dt>
- <dd>
+ 
+ <p>Le widget est dans un état ouvert :</p>
+ 
  <ul>
   <li>le widget est dans un état autre que ouvert et l'utilisateur clique dessus.</li>
  </ul>
- </dd>
-</dl>
 
 <p>Maintenant que nous savons comment changer les états du widget, il est important de définir comment changer la valeur du widget :</p>
 
-<dl>
- <dt>La valeur change quand :</dt>
- <dd>
+ <p>La valeur change quand :</p>
+
  <ul>
   <li>l'utilisateur clique sur une option quand le widget est dans l'état ouvert</li>
   <li>l'utilisateur presse la touche <kbd>↑</kbd> ou <kbd>↓</kbd> quand le widget est dans l'état actif</li>
  </ul>
- </dd>
-</dl>
 
 <p>Enfin, définissons comment les options du widget doivent se comporter :</p>
 

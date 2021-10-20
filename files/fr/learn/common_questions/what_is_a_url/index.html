@@ -99,19 +99,17 @@ https://developer.mozilla.org/fr/search?q=URL</pre>
 
 <dl>
  <dt>URL complète</dt>
- <dd>
+ <dd><p>Exemple :</p>
  <pre>https://developer.mozilla.org/fr/docs/Apprendre</pre>
  </dd>
  <dt>Protocole implicite</dt>
- <dd>
+ <dd><p>Exemple :</p>
  <pre>//developer.mozilla.org/fr/docs/Apprendre</pre>
-
  <p>Dans ce cas, le navigateur saura que l'URL utilise le même protocole que celui utilisé pour charger le document qui contient cette URL.</p>
  </dd>
  <dt>Nom de domaine implicite</dt>
- <dd>
+ <dd><p>Exemple :</p>
  <pre>/fr/docs/Apprendre</pre>
-
  <p>Voici le cas le plus fréquent d'une URL absolue dans un document HTML. Le navigateur utilisera alors le même protocole et le même nom de domaine que ceux utilisés pour charger le document qui contient l'URL.</p>
 
  <div class="note">
@@ -126,12 +124,12 @@ https://developer.mozilla.org/fr/search?q=URL</pre>
 
 <dl>
  <dt>Sous-ressources</dt>
- <dd>
+ <dd><p>Exemple :</p>
  <pre>Compétences/Infrastructure/Comprendre_les_URL
 </pre>
  L'URL ne commence pas pas <code>/</code>, le navigateur essaiera de trouver le document visé dans un sous-répertoire de la ressource actuelle. Dans cet exemple, l'URL absolue correspondante du document auquel on souhaite accéder est : <code>https://developer.mozilla.org/fr/docs/Apprendre/Compétences/Infrastructure/Comprendre_les_URL</code></dd>
  <dt>Remonter dans l'arborescence des dossiers</dt>
- <dd>
+ <dd><p>Exemple :</p>
  <pre>../CSS/display</pre>
 
  <p>Dans ce cas, on utilise la convention, héritée du monde UNIX :  <code>../</code> indique au navigateur de remonter d'un répertoire dans l'arborescence. L'URL absolue correspodante à la ressource visée est ici <code>https://developer.mozilla.org/fr/docs/Apprendre/../CSS/display</code>, qui peut être simplifiée en : <code>https://developer.mozilla.org/fr/docs/CSS/display</code></p>
