@@ -1,30 +1,25 @@
 ---
-title: ルーター
+title: Router (ルーター)
 slug: Glossary/routers
+tags:
+  - Intro
 translation_of: Glossary/routers
 original_slug: Glossary/ルーター
 ---
-<p>Webの世界での<strong>ルーター</strong>には2つの定義があります。</p>
+ウェブでは**ルーター**には 3 つの定義があります。
 
-<ol>
- <li>ネットワーク層にとって、ルーターは{{Glossary('Packet','パケット')}}の行先を決めるネットワーク機器です。</li>
- <li>アプリケーション層の{{Glossary('SPA','SPA')}} にとって、ルーターは与えられた {{Glossary('URL', 'URL')}} に対してどのようなウェブページを提供するかを決定する{{Glossary('Library','ライブラリー')}}です。</li>
-</ol>
+1.  ネットワーク層において、ルーターはデータ{{Glossary('Packet','パケット')}}の方向を決めるネットワーク機器です。これらは、ユーザーがインターネットに接続できるように小売店で販売されています。
+2.  アプリケーション層の {{Glossary('SPA','SPA')}} においては、ルーターは指定された {{Glossary('URL')}} に対してどのようなウェブページを提供するかを決定するライブラリーです。このミドルウェアモジュールは、次のページを開くためにレンダリングされるファイルへのパスが与えられるため、すべての URL 関数に使用されます。
+3.  サービスレイヤーにおける {{Glossary('API')}} の実装では、ルーターは、リクエストを解析し、プログラム内のさまざまなハンドラーにリクエストを指示またはルーティングするソフトウェアコンポーネントです。ルーターのコードは通常、ハンドラーからのレスポンスを受け取り、そのレスポンスをリクエスト元に返すことを容易にします。
 
-<h2 id="詳細情報">詳細情報</h2>
+## 関連情報
 
-<h3 id="一般知識">一般知識</h3>
+ネットワーク層の文脈:
 
-<p>ネットワーク層における文脈 :</p>
+- {{Interwiki("wikipedia", "ルーター")}} (ウィキペディア)
 
-<ul>
- <li>Wikipedia上の {{Interwiki("wikipedia", "ルーター")}}</li>
-</ul>
+アプリケーション層の SPA の文脈 (主要な SPA フレームワークのライブラリー):
 
-<p>アプリケーション層の SPA における文脈 (主要なSPAフレームワークのライブラリ) :</p>
-
-<ul>
- <li><a href="https://angular.io/guide/router">Angular router</a></li>
- <li><a href="https://reacttraining.com/react-router">React router</a></li>
- <li><a href="https://router.vuejs.org">Vue router</a></li>
-</ul>
+- [Angular router](https://angular.io/guide/router)
+- [React router](https://reacttraining.com/react-router)
+- [Vue router](https://router.vuejs.org)
