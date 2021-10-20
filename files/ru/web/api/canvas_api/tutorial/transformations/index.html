@@ -7,7 +7,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <div class="summary"><span class="notranslate">Ранее в этом уроке мы узнали о</span> <span class="notranslate" style="background-color: #e6ecf9;"> <a href="https://translate.googleusercontent.com/translate_c?act=url&amp;depth=1&amp;hl=ru&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com&amp;sl=en&amp;sp=nmt4&amp;tl=ru&amp;u=https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes&amp;usg=ALkJrhiuWce927wE2920fN95Jlcrf1HyUg">сетке холста</a></span> <span class="notranslate">и <strong>координатном пространстве</strong> .</span> <span class="notranslate"> До сих пор мы использовали только сетку по умолчанию и изменили размер всего холста для наших нужд.</span> При преобразованиях существуют более мощные способы изменения исходных координат в различные положение, поворот сетки и даже масштабирование.</div>
 
-<h2 id="Saving_and_restoring_state" name="Saving_and_restoring_state"><span class="notranslate" style="background-color: #e6ecf9;">Сохранение и восстановление состояния</span></h2>
+<h2 id="Saving_and_restoring_state"><span class="notranslate" style="background-color: #e6ecf9;">Сохранение и восстановление состояния</span></h2>
 
 <p><span class="notranslate">Прежде чем перейти к методам преобразования, давайте рассмотрим два других метода, которые необходимы, когда вы начинаете создавать все более сложные рисунки.</span></p>
 
@@ -28,7 +28,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>Вы можете вызывать метод <code>save()</code> столько раз, сколько захотите. В то же время, при вызове метода <code>restore()</code> последнее сохранённое состояние будет считано из стека, и все сохранённые настройки будут восстановлены.</p>
 
-<h3 id="A_save_and_restore_canvas_state_example" name="A_save_and_restore_canvas_state_example">Пример <font face="consolas, Liberation Mono, courier, monospace">сохранения и восстановления</font> состояния холста</h3>
+<h3 id="A_save_and_restore_canvas_state_example">Пример <font face="consolas, Liberation Mono, courier, monospace">сохранения и восстановления</font> состояния холста</h3>
 
 <p>Здесь показано, как функционирует сохранение в стек состояния отрисовки на примере последовательной отрисовки набора прямоугольников.</p>
 
@@ -67,7 +67,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "https://mdn.mozillademos.org/files/249/Canvas_savestate.png")}}</p>
 
-<h2 id="Translating" name="Translating">Трансляция (смещение)</h2>
+<h2 id="Translating">Трансляция (смещение)</h2>
 
 <p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/234/Canvas_grid_translate.png" style="float: right;">Первый метод для трансформирования холста <code>translate()</code>. Он используется для перемещения холста в любую точку нашей сетки.</p>
 
@@ -78,7 +78,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>Неплохая идея - сохранять <code>canvas state</code> перед использованием любых трансформаций. Обычно удобнее использовать метод <code>restore</code>, чем выполнять обратные преобразования, чтобы вернуться к начальному состоянию. <span class="tlid-translation translation" lang="ru"><span title="">Кроме того, если вы выполняете преобразования внутри цикла не используя </span></span><code>save</code><span class="tlid-translation translation" lang="ru"><span title=""> и </span></span><code>restore</code><span class="tlid-translation translation" lang="ru"><span title="">, вы рискуете потерять часть рисунка, потому что он был нарисован за пределами края холста.</span></span></p>
 
-<h3 id="A_translate_example" name="A_translate_example">Пример использования <code>translate</code></h3>
+<h3 id="A_translate_example">Пример использования <code>translate</code></h3>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Этот пример демонстрирует некоторые преимущества</span></span> при использовании смещения холста. Без использования метода <code>translate()</code> все прямоугольники будут отрисованы в одинаковой позиции (0,0). Метод <code>translate()</code> даёт возможность размещения прямоугольника в любой позиции без изменения параметров функции <code>fillRect()</code>. Это может дать некоторое упрощение для понимания и использования.</p>
 
@@ -106,7 +106,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>{{EmbedLiveSample("A_translate_example", "160", "160", "https://mdn.mozillademos.org/files/9857/translate.png")}}</p>
 
-<h2 id="Rotating" name="Rotating">Поворот</h2>
+<h2 id="Rotating">Поворот</h2>
 
 <p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png" style="float: right;">Второй метод трансформации <code>rotate()</code>. Он используется для поворота нашего холста.</p>
 
@@ -117,7 +117,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>Центр поворота - всегда начало координат. Для изменения координат центра мы должны сместить холст, используя метод <code>translate()</code>.</p>
 
-<h3 id="A_rotate_example" name="A_rotate_example">Пример использования<code>rotate</code></h3>
+<h3 id="A_rotate_example">Пример использования<code>rotate</code></h3>
 
 <p>В этом примере мы сначала используем <code>rotate()</code> для поворота прямоугольника относительно начала координат, а затем, используя <code>translate()</code> совместно с <code>rotate()</code> поворачиваем прямоугольник относительно его центра.</p>
 
@@ -166,7 +166,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>{{EmbedLiveSample("A_rotate_example", "310", "210", "https://mdn.mozillademos.org/files/9859/rotate.png")}}</p>
 
-<h2 id="Scaling" name="Scaling">Масштабирование</h2>
+<h2 id="Scaling">Масштабирование</h2>
 
 <p>Следующий метод трансформации холста - scaling. Он используется для растяжения, сжатия и отражения координатной сетки. Он может использоваться для отрисовки растянутых или сжатых по осям фигур и изображений.</p>
 
@@ -179,7 +179,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>По умолчанию единица координатной сетки точно соответствует одному пикселю. Если же вы, например, зададите масштабный коэффициент 0.5, то единица сетки будет равна половине пикселя, и нарисованная фигура будет иметь размер в два раза меньше оригинала. Наоборот, если задать масштабный коэффициент 2.0, единица сетки будет соответствовать двум пикселям, а нарисованная фигура станет в два раза больше.</p>
 
-<h3 id="A_scale_example" name="A_scale_example">Пример использования <code>scale</code></h3>
+<h3 id="A_scale_example">Пример использования <code>scale</code></h3>
 
 <p>В этом примере мы нарисуем прямоугольники, используя разные масштабные коэффициенты.</p>
 
@@ -208,7 +208,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>{{EmbedLiveSample("A_scale_example", "160", "160", "https://mdn.mozillademos.org/files/9861/scale.png")}}</p>
 
-<h2 id="Transforms" name="Transforms">Матричное преобразование</h2>
+<h2 id="Transforms">Матричное преобразование</h2>
 
 <p>В заключении рассмотрим метод, который вызывает изменения в соответствии с матрицей преобразования.</p>
 

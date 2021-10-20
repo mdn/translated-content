@@ -7,7 +7,7 @@ translation_of: Web/API/Document/evaluate
 
 <p>Возвращает экземпляр объекта типа <code><a href="/en-US/docs/XPathResult" title="XPathResult">XPathResult</a></code> исходя из данного <a href="/en-US/docs/XPath" title="XPath">XPath</a> и других входных параметров.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox notranslate">var xpathResult = document.evaluate(
  xpathExpression,
@@ -25,7 +25,7 @@ translation_of: Web/API/Document/evaluate
  <li><code>result</code> - экземпляр объекта типа <code>XPathResult</code>, используемого для хранения результатов поиска по данному <code>xpathExpression</code>. Может принимать значение <code>null</code></li>
 </ul>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush: js notranslate">var headings = document.evaluate("/html/body//h2", document, null, XPathResult.ANY_TYPE, null);
 /* Найти в документе все элементы h2
@@ -50,14 +50,14 @@ alert(alertText); // Показывает alert со всеми найденны
 
 <p>Более детально данный материал описан в статье <a href="/en-US/docs/Introduction_to_using_XPath_in_JavaScript" title="Introduction to using XPath in JavaScript">Introduction to using XPath in JavaScript</a>.</p>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 
 <ul>
  <li>Выражения XPath могут быть интерпретированы в HTML- и XML-документах.</li>
  <li>While using document.evaluate() works in FF2, in FF3 one must use someXMLDoc.evaluate() if evaluating against something other than the current document.</li>
 </ul>
 
-<h2 id="Result_types" name="Result_types">Типы возвращаемых данных</h2>
+<h2 id="Result_types">Типы возвращаемых данных</h2>
 
 <p>(Merge with <a href="/Template:XPathResultConstants" title="Template:XPathResultConstants">Template:XPathResultConstants</a>?</p>
 
@@ -127,7 +127,7 @@ alert(alertText); // Показывает alert со всеми найденны
 
 <p>Results of <code>NODE_SNAPSHOT</code> types are snapshots, which are essentially lists of matched nodes. You can make changes to the document by altering snapshot nodes. Modifying the document doesn't invalidate the snapshot; however, if the document is changed, the snapshot may not correspond to the current state of the document, since nodes may have moved, been changed, added, or removed.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
 <table class="standard-table">
  <thead>
@@ -146,11 +146,11 @@ alert(alertText); // Показывает alert со всеми найденны
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat("api.Document.evaluate")}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/en-US/docs/DOM/document.createExpression" title="DOM/document.createExpression">DOM:document.createExpression</a></li>

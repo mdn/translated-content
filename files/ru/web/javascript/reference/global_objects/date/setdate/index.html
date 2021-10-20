@@ -11,15 +11,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setDate
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>setDate()</code></strong> устанавливает день месяца указанной даты по местному времени.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>dateObj</var>.setDate(<var>dayValue</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>dayValue</code></dt>
@@ -30,20 +30,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setDate
 
 <p>В результате выполнения функция setDate() изменяет текущий объект ({{jsxref("Date")}}) и возвращает количество миллисекунд от начала эпохи (1 января 1970 00:00:00 UTC) для полученного значения объекта.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Если значение параметра <code>dayValue</code> будет выходить за пределы количества дней для месяца, метод <code>setDate()</code> соответственно обновит объект {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве <code>dayValue</code> передать значение 0, дата будет установлена в последний день предыдущего месяца.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_setDate" name="Example:_Using_setDate">Пример: использование метода <code>setDate()</code></h3>
+<h3 id="Example:_Using_setDate">Пример: использование метода <code>setDate()</code></h3>
 
 <pre class="brush: js">var theBigDay = new Date(1962, 6, 7); // 1962-07-07
 theBigDay.setDate(24);  // 1962-07-24
 theBigDay.setDate(32);  // 1962-08-01
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
 <table class="standard-table">
  <tbody>
@@ -70,13 +70,13 @@ theBigDay.setDate(32);  // 1962-08-01
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <div> </div>
 
 <div id="compat-mobile">{{Compat("javascript.builtins.Date.setDate")}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Date.prototype.getDate()")}}</li>
