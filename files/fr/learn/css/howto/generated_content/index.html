@@ -13,7 +13,7 @@ original_slug: Apprendre/CSS/Comment/Generated_content
 <h3 id="Information_:_contenu" name="Information_:_contenu">Information : contenu</h3>
 <p>Un des avantages importants de CSS est qu'il vous aide à séparer le style d'un document de son contenu. Cependant, il existe des situations où il n'est pas insensé de spécifier une partie du contenu au sein de la feuille de style plutôt qu'en tant que partie du document</p>
 <p>Le contenu spécifié dans une feuille de style peut consister en du texte ou des images. Ce contenu peut être spécifié dans une feuille de style lorsqu'il est directement lié à la structure du document.</p>
-<table style="border: 1px solid #36b; padding: 1em; background-color: #f4f4f4; margin-bottom: 1em;">
+<table>
   <caption>
     Plus de détails</caption>
   <tbody>
@@ -27,13 +27,13 @@ original_slug: Apprendre/CSS/Comment/Generated_content
 </table>
 <h4 id="Contenu_textuel" name="Contenu_textuel">Contenu textuel</h4>
 <p>CSS peut insérer du texte avant ou après un élément. Pour spécifier cela, créez une règle et ajoutez <code>:before</code> ou <code>:after</code> au sélecteur. Dans la déclaration, spécifiez la propriété <code>content</code> en lui donnant comme valeur le contenu textuel.</p>
-<table style="border: 1px solid #36b; padding: 1em; background-color: #fffff4; margin-bottom: 1em;">
+<table>
   <caption>
     Exemple</caption>
   <tbody>
     <tr>
       <td>Cette règle ajoute le texte Référence : devant chaque élément de la classe <code>ref</code> :
-        <div style="width: 30em;">
+        <div>
           <pre class="eval">
 .ref:before {
   font-weight: bold;
@@ -46,7 +46,7 @@ original_slug: Apprendre/CSS/Comment/Generated_content
     </tr>
   </tbody>
 </table>
-<table style="border: 1px solid #36b; padding: 1em; background-color: #f4f4f4; margin-bottom: 1em;">
+<table>
   <caption>
     Plus de détails</caption>
   <tbody>
@@ -59,13 +59,13 @@ original_slug: Apprendre/CSS/Comment/Generated_content
 </table>
 <h4 id="Contenu_sous_forme_d.27images" name="Contenu_sous_forme_d.27images">Contenu sous forme d'images</h4>
 <p>Pour ajouter une image avant ou après un élément, vous pouvez spécifier l'URL d'un fichier image dans la valeur de la propriété <code>content</code>.</p>
-<table style="border: 1px solid #36b; padding: 1em; background-color: #fffff4; margin-bottom: 1em;">
+<table>
   <caption>
     Exemple</caption>
   <tbody>
     <tr>
       <td>Cette règle ajoute un espace et une icône après chaque lien faisant partie de la classe <code>glossaire</code>:
-        <div style="width: 45em;">
+        <div>
           <pre class="eval">
 a.glossaire:after {content: " " url("../images/glossary-icon.gif");}
 </pre>
@@ -76,14 +76,14 @@ a.glossaire:after {content: " " url("../images/glossary-icon.gif");}
 </table>
 <p><br>
   Pour ajouter une image comme fond d'un élément, spécifiez l'URL d'un fichier image dans la valeur de la propriété <code>background</code>. C'est une propriété raccourcie qui spécifie la couleur de fond, l'image, son éventuelle répétition, et certains autres détails.</p>
-<table style="border: 1px solid #36b; padding: 1em; background-color: #fffff4; margin-bottom: 1em;">
+<table>
   <caption>
     Exemple</caption>
   <tbody>
     <tr>
       <td>Cette règle change le fond d'un élément spécifique, en utilisant une URL pour indiquer un fichier image.
         <p>Le sélecteur spécifie l'id de l'élément. La valeur <code>no-repeat</code> fait que l'image apparaîtra une seule fois :</p>
-        <div style="width: 50em;">
+        <div>
           <pre class="eval">
 #panneau-lateral {background: url("../images/sidebar-ground.png") no-repeat;}
 </pre>
@@ -92,7 +92,7 @@ a.glossaire:after {content: " " url("../images/glossary-icon.gif");}
     </tr>
   </tbody>
 </table>
-<table style="border: 1px solid #36b; padding: 1em; background-color: #f4f4f4; margin-bottom: 1em;">
+<table>
   <caption>
     Plus de détails</caption>
   <tbody>
@@ -103,52 +103,52 @@ a.glossaire:after {content: " " url("../images/glossary-icon.gif");}
 </table>
 <h3 id="Action_:_ajout_d.27une_image_de_fond" name="Action_:_ajout_d.27une_image_de_fond">Action : ajout d'une image de fond</h3>
 <p>Cette image est un carré blanc avec une ligne bleue en bas. Téléchargez le fichier image dans le même répertoire que votre fichier CSS :</p>
-<table style="border: 2px solid #ccc;">
+<table>
   <tbody>
     <tr>
-      <td><img alt="Image:ligne-bleue.png" class="internal" src="/@api/deki/files/1398/=Ligne-bleue.png"></td>
+      <td><img alt="Image:ligne-bleue.png" src="/@api/deki/files/1398/=Ligne-bleue.png"></td>
     </tr>
   </tbody>
 </table>
 <p>(Par exemple, cliquez avec le bouton de droite pour obtenir un menu contextuel, choisissez Enregistrer l'image sous... et choisissez le répertoire que vous utilisez pour ce tutoriel.)</p>
 <p>Éditez votre fichier CSS et ajoutez cette règle à l'élément body, pour donner une image de fond à la page entière.</p>
-<div style="width: 40em;">
+<div>
   <pre class="eval">background: url("ligne-bleue.png");
 </pre>
 </div>
 <p>La valeur <code>repeat</code> est celle par défaut, elle n'a dont pas besoin d'être spécifiée. L'image se répète horizontalement et verticalement, ce qui donne un aspect ressemblant à un papier ligné :</p>
-<div style="position: relative; width: 24em; height: 11em; border: 2px outset #36b; overflow: hidden;">
-  <p style="margin: 0px;"><img alt="Image:fond-lignes-bleues.png" class="internal" src="/@api/deki/files/1373/=Fond-lignes-bleues.png"></p>
-  <div style="position: absolute; top: 0px; left: 0px; border: none; margin: 0px; padding: .5em 0px 0px 1em; font: 16px 'Comic Sams MS', cursive; color: blue; background-color: transparent;">
-    <div style="font-style: italic; width: 24em;">
-      <p><strong style="color: red; background-color: #ddf; font: 200% serif;">C</strong>ascading <strong style="color: green; background-color: #ddf; font: 200% serif;">S</strong>tyle <strong style="color: green; background-color: #ddf; font: 200% serif;">S</strong>heets</p>
+<div>
+  <p><img alt="Image:fond-lignes-bleues.png" src="/@api/deki/files/1373/=Fond-lignes-bleues.png"></p>
+  <div>
+    <div>
+      <p><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets</p>
     </div>
-    <div style="font-style: normal; padding-top: 2px; height: 8em;">
-      <p><strong style="color: red; background-color: #ddf; font: 200% serif;">C</strong>ascading <strong style="color: red; background-color: #ddf; font: 200% serif;">S</strong>tyle <strong style="color: red; background-color: #ddf; font: 200% serif;">S</strong>heets</p>
+    <div>
+      <p><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets</p>
     </div>
   </div>
 </div>
-<table style="border: 1px solid #36b; padding: 1em; background-color: #fffff4; margin-bottom: 1em;">
+<table>
   <caption>
     Challenge</caption>
   <tbody>
     <tr>
       <td>Téléchargez cette image :
-        <table style="border: 2px solid #ccc;">
+        <table>
           <tbody>
             <tr>
-              <td><img alt="Image:punaise-jaune.png" class="internal" src="/@api/deki/files/1427/=Punaise-jaune.png"></td>
+              <td><img alt="Image:punaise-jaune.png" src="/@api/deki/files/1427/=Punaise-jaune.png"></td>
             </tr>
           </tbody>
         </table>
         <p>Ajoutez une règle à votre feuille de style de manière à ce que l'image soit affichée au début de chaque ligne :</p>
-        <div style="position: relative; width: 24em; height: 11em; border: 2px outset #36b; overflow: hidden;">
-          <p style="margin: 0px;"><img alt="Image:fond-lignes-bleues.png" class="internal" src="/@api/deki/files/1373/=Fond-lignes-bleues.png"></p>
-          <div style="position: absolute; top: 0px; left: 0px; border: none; margin: 0px; padding: .5em 0px 0px 1em; font: 16px 'Comic Sams MS', cursive; color: blue; background-color: transparent;">
-            <div style="font-style: italic; width: 24em; padding-top: 8px;">
-              <img alt="image:punaise-jaune.png" class="internal" src="/@api/deki/files/1427/=Punaise-jaune.png"> <strong style="color: red; background-color: #ddf; font: 200% serif;">C</strong>ascading <strong style="color: green; background-color: #ddf; font: 200% serif;">S</strong>tyle <strong style="color: green; background-color: #ddf; font: 200% serif;">S</strong>heets</div>
-            <div style="font-style: normal; padding-top: 12px; height: 8em;">
-              <img alt="image:punaise-jaune.png" class="internal" src="/@api/deki/files/1427/=Punaise-jaune.png"> <strong style="color: red; background-color: #ddf; font: 200% serif;">C</strong>ascading <strong style="color: red; background-color: #ddf; font: 200% serif;">S</strong>tyle <strong style="color: red; background-color: #ddf; font: 200% serif;">S</strong>heets</div>
+        <div>
+          <p><img alt="Image:fond-lignes-bleues.png" src="/@api/deki/files/1373/=Fond-lignes-bleues.png"></p>
+          <div>
+            <div>
+              <img alt="image:punaise-jaune.png" src="/@api/deki/files/1427/=Punaise-jaune.png"> <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets</div>
+            <div>
+              <img alt="image:punaise-jaune.png" src="/@api/deki/files/1427/=Punaise-jaune.png"> <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets</div>
           </div>
         </div>
       </td>
