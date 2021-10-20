@@ -216,7 +216,7 @@ input:valid {
 
 <p>Supprimez maintenant le contenu de l'élément <code>&lt;body&gt;</code> et remplacez-le par le suivant :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="choose"&gt;Préférez‑vous la banane ou la cerise ?&lt;/label&gt;
     &lt;input id="choose" name="i_like" required minlength="6" maxlength="6"&gt;
@@ -228,7 +228,7 @@ input:valid {
   &lt;div&gt;
     &lt;button&gt;Soumettre&lt;/button&gt;
   &lt;/div&gt;
-&lt;/form&gt;</code></pre>
+&lt;/form&gt;</pre>
 
 <ul>
  <li>Ici, nous avons donné au champ de texte une taille minimale et maximale de 6 caractères — la même que celle de <em>banane</em> ou <em>cerise</em>. La saisie de moins de 6 caractères s'affichera comme non valide et la saisie de plus de 6 caractères ne sera pas possible dans la plupart des navigateurs.</li>
@@ -259,7 +259,7 @@ div {
 
 <p>Voici un exemple complet montrant l'utilisation des fonctionnalités HTML intégrées pour la validation :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;p&gt;
     &lt;fieldset&gt;
       &lt;legend&gt;Qualité&lt;abbr title="Ce champ est obligatoire"&gt;*&lt;/abbr&gt;&lt;/legend&gt;
@@ -300,9 +300,9 @@ div {
   &lt;p&gt;
     &lt;button&gt;Soumettre&lt;/button&gt;
   &lt;/p&gt;
-&lt;/form&gt;</code></pre>
+&lt;/form&gt;</pre>
 
-<pre class="brush: css line-numbers  language-css"><code class="language-css">body {
+<pre class="brush: css">body {
   font: 1em sans-serif;
   padding: 0;
   margin : 0;
@@ -344,7 +344,7 @@ input:invalid {
 
 input:focus:invalid {
   outline: none;
-}</code></pre>
+}</pre>
 
 <p>{{EmbedLiveSample("Exemple_complet", "100%", 450)}}</p>
 

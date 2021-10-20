@@ -274,10 +274,10 @@ original_slug: Apprendre/a11y/WAI-ARIA_basics
 
 <p>First of all, let's revisit the form example we first looked at in our CSS and JavaScript accessibility article (read <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Keeping_it_unobtrusive">Keeping it unobtrusive</a> for a full recap). At the end of this section we showed that we have included some ARIA attributes on the error message box that appears when there are validation errors when you try to submit the form:</p>
 
-<pre class="brush: html"><code class="language-html">&lt;div class="errors" role="alert" aria-relevant="all"&gt;
+<pre class="brush: html">&lt;div class="errors" role="alert" aria-relevant="all"&gt;
   &lt;ul&gt;
   &lt;/ul&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
 
 <ul>
  <li><code><a href="https://www.w3.org/TR/wai-aria-1.1/#alert">role="alert"</a></code> automatically turns the element it is applied to into a live region, so changes to it are read out; it also semantically identifies it as an alert message (important time/context sensitive information), and represents a better, more accessible way of delivering an alert to a user (modal dialogs like <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code> calls have a number of accessibility problems; see <a href="http://webaim.org/techniques/javascript/other#popups">Popup Windows</a> by WebAIM).</li>

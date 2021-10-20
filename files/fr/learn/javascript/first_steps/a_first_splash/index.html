@@ -481,7 +481,7 @@ greeting;</pre>
 
 <p>Donc, remplacez l'actuelle fonction <code style="font-size: 16px !important; line-height: 24px !important;">checkGuess()</code> par celle-ci :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function checkGuess(){
+<pre class="brush: js">function checkGuess(){
   let userGuess = Number(guessField.value);
   if (guessCount === 1) {
     guesses.textContent = 'Propositions précédentes : ';
@@ -510,7 +510,7 @@ greeting;</pre>
   guessField.value = '';
   guessField.focus();
 }
-</code></pre>
+</pre>
 
 <p>Pas mal de code — ouf ! Passons en revue chaque section et expliquons ce qu'elle fait.</p>
 

@@ -59,7 +59,7 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 
 <p>Voici un petit exemple :</p>
 
-<pre class="brush:html; line-numbers  language-html"><code class="language-html">&lt;form&gt;
+<pre class="brush:html">&lt;form&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Taille du jus de fruits&lt;/legend&gt;
     &lt;p&gt;
@@ -75,7 +75,7 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
       &lt;label for="size_3"&gt;Grande&lt;/label&gt;
     &lt;/p&gt;
   &lt;/fieldset&gt;
-&lt;/form&gt;</code></pre>
+&lt;/form&gt;</pre>
 
 <div class="note">
 <p><strong>Note :</strong> Vous trouverez cet exemple dans <a href="https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html">fieldset-legend.html</a> (voir <a href="https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html">directement aussi</a>).</p>
@@ -91,7 +91,7 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 
 <p>Comme nous l'avons vu dans l'article précédent, l'élément {{HTMLElement("label")}} est le moyen naturel de définir une étiquette pour un widget de formulaire HTML. C'est l'élément le plus important si vous voulez créer des formulaires accessibles — lorsqu'ils sont correctement implémentés, les lecteurs d'écran énonceront l'étiquette d'un élément de formulaire selon toutes les instructions associées. Prenons cet exemple, que nous avons vu dans l'article précédent :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;label for="name"&gt;Nom :&lt;/label&gt; &lt;input type="text" id="name" name="user_name"&gt;</code></pre>
+<pre class="brush: html">&lt;label for="name"&gt;Nom :&lt;/label&gt; &lt;input type="text" id="name" name="user_name"&gt;</pre>
 
 <p>Avec un élément <code>&lt;label&gt;</code> correctement associé à <code>&lt;input&gt;</code> par l'intermédiaire respectivement des attributs <code>for</code> et <code>id</code> (l'attribut <code>for</code> de &lt;label&gt; référence l'attibut <code>id</code> du widget correspondant), un lecteur d'écran lira et dira quelque chose comme « Nom, texte indiqué ».</p>
 
@@ -99,9 +99,9 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 
 <p>Notez qu'un widget peut être incorporé dans son élément {{HTMLElement("label")}}, ainsi :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;label for="name"&gt;
+<pre class="brush: html">&lt;label for="name"&gt;
   Nom : &lt;input type="text" id="name" name="user_name"&gt;
-&lt;/label&gt;</code></pre>
+&lt;/label&gt;</pre>
 
 <p>Toutefois, même dans ce cas, il est considéré de bonne pratique de définir l'attribut <code>for</code> parce que certaines techniques d'assistance ne font pas implicitement le lien entre les étiquettes et les widgets.</p>
 
@@ -111,7 +111,7 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 
 <p>Par exemple :</p>
 
-<pre class="brush:html; line-numbers  language-html"><code class="language-html">&lt;form&gt;
+<pre class="brush:html">&lt;form&gt;
   &lt;p&gt;
     &lt;label for="taste_1"&gt;J'aime les cerises&lt;/label&gt;
     &lt;input type="checkbox" id="taste_1" name="taste_cherry" value="1"&gt;
@@ -120,7 +120,7 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
     &lt;label for="taste_2"&gt;J'aime les bananes&lt;/label&gt;
     &lt;input type="checkbox" id="taste_2" name="taste_banana" value="2"&gt;
   &lt;/p&gt;
-&lt;/form&gt;</code></pre>
+&lt;/form&gt;</pre>
 
 <div class="note">
 <p><strong>Note :</strong> Vous trouverez cet exemple dans <a href="https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html">checkbox-label.html</a> (à voir <a href="https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html">directement aussi</a>).</p>
@@ -132,7 +132,7 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 
 <p>Considérons cet exemple :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;p&gt;Les champs obligatoires sont suivis de &lt;abbr title="required"&gt;*&lt;/abbr&gt;.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Les champs obligatoires sont suivis de &lt;abbr title="required"&gt;*&lt;/abbr&gt;.&lt;/p&gt;
 
 &lt;!-- Donc ceci : --&gt;
 &lt;div&gt;
@@ -154,7 +154,7 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 &lt;div&gt;
   &lt;label for="username"&gt;Nom :&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/label&gt;
   &lt;input id="username" type="text" name="username"&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
 
 <p>Le paragraphe du haut définit la règle pour les éléments obligatoires. Ce doit être au début pour s'assurer que les techniques d'assistance telles que les lecteurs d'écran l'afficheront ou le vocaliseront à l'utilisateur avant qu'il ne trouve un élément obligatoire. Ainsi, ils sauront ce que signifie l'astérisque. Un lecteur d'écran mentionnera l'astérisque en disant « astérisque » ou « obligatoire », selon les réglages du lecteur d'écran — dans tous les cas, ce qui sera dit est clairement précisé dans le premier paragraphe.</p>
 
@@ -191,19 +191,19 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 <ol start="1" style="list-style-type: decimal;">
  <li>Pour commencer, faites une copie locale de notre <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">fichier modèle vierge</a> et des <a href="https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css">CSS pour notre formulaire de paiement </a> dans un nouveau répertoire.</li>
  <li>Primo, appliquez les CSS au HTML en ajoutant la ligne suivante dans l'élément {{htmlelement("head")}} du HTML :
-  <pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;link href="payment-form.css" rel="stylesheet"&gt;</code></pre>
+  <pre class="brush: html">&lt;link href="payment-form.css" rel="stylesheet"&gt;</pre>
  </li>
  <li>Ensuite, commencez le formulaire en ajoutant un élément {{htmlelement("form")}} :
-  <pre class="brush: html line-numbers  language-html">&lt;form&gt;
+  <pre class="brush: html">&lt;form&gt;
 
 &lt;/form&gt;</pre>
  </li>
  <li>Entre les balises <code>&lt;form&gt;</code>, ajoutez un en‑tête et un paragraphe pour informer les utilisateurs comment sont marqués les champs obligatoires :
-  <pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;h1&gt;Formulaire de paiement&lt;/h1&gt;
-&lt;p&gt;Les champs obligatoires sont suivis par un &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;.&lt;/p&gt;</code></pre>
+  <pre class="brush: html">&lt;h1&gt;Formulaire de paiement&lt;/h1&gt;
+&lt;p&gt;Les champs obligatoires sont suivis par un &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;.&lt;/p&gt;</pre>
  </li>
  <li>Ensuite, nous ajoutons une grande section de code dans le formulaire, sous la précédente. Ici vous verrez que nous enveloppons les champs d'informations de contact dans des éléments {{htmlelement("section")}} distincts. De plus, nous avons un ensemble de deux boutons radio, que nous mettons chacun à l'intérieur de leur propre élément de liste ({{htmlelement("li")}}). Enfin, nous avons deux zones de texte standard {{htmlelement("input")}} et leurs éléments {{htmlelement("label")}} associés, chacun contenu dans un élément {{htmlelement("p")}}, plus une entrée pour le mot de passe. Ajoutez ce code à votre formulaire maintenant :
-  <pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;section&gt;
+  <pre class="brush: html">&lt;section&gt;
     &lt;h2&gt;Informations de contact&lt;/h2&gt;
     &lt;fieldset&gt;
       &lt;legend&gt;Qualité&lt;/legend&gt;
@@ -243,10 +243,10 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
       &lt;/label&gt;
       &lt;input type="password" id="pwd" name="password"&gt;
     &lt;/p&gt;
-&lt;/section&gt;</code></pre>
+&lt;/section&gt;</pre>
  </li>
  <li>Nous arrivons maintenant à la deuxième <code>&lt;section&gt;</code> de notre formulaire — l'information de paiement. Ici nous avons trois widgets distincts avec leur étiquette, chacun contenu dans un paragraphe <code>&lt;p&gt;</code>. Le premier est un menu déroulant ({{htmlelement("select")}}) pour le choix du type de la carte de crédit. Le deuxième  est un élément <code>&lt;input&gt;</code> de type nombre pour entrer le numéro de la carte de crédit. Le dernier est un élément <code>&lt;input&gt;</code> de type <code>date</code> pour entrer la date d'expiration de la carte de crédit (il sera accompagné d'un widget dateur pour les navigateurs prenant en charge cette fonctionnalité, et sera un simple champ textuel pour les navigateurs ne la prenant pas en charge). À nouveau, entrez ce qui suit après la section ci‑dessus :
-  <pre class="brush: html line-numbers  language-html"><code class="language-html">
+  <pre class="brush: html">
 &lt;section&gt;
     &lt;h2&gt;Informations de paiement&lt;/h2&gt;
     &lt;p&gt;
@@ -274,10 +274,10 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
       &lt;/label&gt;
       &lt;input type="text" id="date" name="expiration"&gt;
     &lt;/p&gt;
-&lt;/section&gt;</code></pre>
+&lt;/section&gt;</pre>
  </li>
  <li>La dernière section est plus simple ; elle ne contient qu'un bouton {{htmlelement("button")}} de type <code>submit</code>, pour adresser les données du formulaire. Ajoutez ceci au bas du formulaire :
-  <pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;p&gt; &lt;button type="submit"&gt;Valider le paiement&lt;/button&gt; &lt;/p&gt;</code></pre>
+  <pre class="brush: html">&lt;p&gt; &lt;button type="submit"&gt;Valider le paiement&lt;/button&gt; &lt;/p&gt;</pre>
  </li>
 </ol>
 

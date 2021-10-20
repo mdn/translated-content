@@ -76,7 +76,7 @@ original_slug: Apprendre/a11y/HTML
 
 <p>L'une des meilleures aides en accessibilité qu'un utilisateur de lecteur d'écran peut avoir est une bonne structure des titres, paragraphes, listes, etc. Un bon exemple sémantique devrait ressembler au code suivant :</p>
 
-<pre class="brush: html example-good line-numbers language-html">&lt;h1&gt;Mon titre&lt;/h1&gt;
+<pre class="brush: html example-good">&lt;h1&gt;Mon titre&lt;/h1&gt;
 
 &lt;p&gt;Ceci est la premère section de mon document.&lt;/p&gt;
 
@@ -107,7 +107,7 @@ original_slug: Apprendre/a11y/HTML
 
 <p>Les gens écrivent parfois des titres, des paragraphes, etc. utilisant le HTML de présentation et retours à la ligne, quelque chose comme ce qui suit :</p>
 
-<pre class="brush: html example-bad line-numbers  language-html">&lt;font size="7"&gt;Mon titre&lt;/font&gt;
+<pre class="brush: html example-bad">&lt;font size="7"&gt;Mon titre&lt;/font&gt;
 &lt;br&gt;&lt;br&gt;
 Ceci est la première section de mon document.
 &lt;br&gt;&lt;br&gt;
@@ -337,13 +337,13 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <p>Bien que l’addition ci-dessus nous permette de tabuler les boutons, elle ne nous permet pas de les activer via la touche Entrée/Retour. Pour ce faire, nous avons dû ajouter le bout de code JavaScript suivant :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">document.onkeydown = function(e) {
+<pre class="brush: js">document.onkeydown = function(e) {
   if(e.keyCode === 13) { // The Enter/Return key
     document.activeElement.onclick(e);
   }
-}</code></pre>
+}</pre>
 
-<p>Ici, nous ajoutons un écouteur à l’objet d<code>ocument</code> pour détecter le moment où un bouton a été appuyé sur le clavier. Nous vérifions quel bouton a été pressé via la propriété  <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code> de l'objet événement; s'il s'agit du code clé qui correspond  Return/Enter, nous exécutons la fonction stockée dans le gestionnaire du bouton   <code>onclick</code>  à l'aide de <code>document.activeElement.onclick()</code>. <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement">activeElement</a></code> nous donne l'élément qui est actuellement ciblé sur la page.</p>
+<p>Ici, nous ajoutons un écouteur à l’objet <code>document</code> pour détecter le moment où un bouton a été appuyé sur le clavier. Nous vérifions quel bouton a été pressé via la propriété  <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code> de l'objet événement; s'il s'agit du code clé qui correspond  Return/Enter, nous exécutons la fonction stockée dans le gestionnaire du bouton   <code>onclick</code>  à l'aide de <code>document.activeElement.onclick()</code>. <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement">activeElement</a></code> nous donne l'élément qui est actuellement ciblé sur la page.</p>
 
 <div class="note">
 <p><strong>Note :</strong> N'oubliez pas que cette technique ne fonctionnera que si vous définissez vos gestionnaires d'événements d'origine via les propriétés du gestionnaire d'événements (par exemple, onclick), <code>addEventListener</code> ne fonctionnera pas.</p>
@@ -380,10 +380,10 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <p>Ce qui suit est un exemple bien meilleur :</p>
 
-<pre class="brush: html example-good"><code class="language-js">&lt;div&gt;
-  &lt;label for="name"&gt;</code>Entrez votre nom<code class="language-js">:&lt;/label&gt;
+<pre class="brush: html example-good">&lt;div&gt;
+  &lt;label for="name"&gt;Entrez votre nom:&lt;/label&gt;
   &lt;input type="text" id="name" name="name"&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
 
 <p>Avec le code comme celui-ci, le label sera clairement associée à input; la description ressemblera davantage à "Entrez votre nom: éditez le texte".</p>
 
@@ -399,7 +399,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <p>Une table de données de base peut être écrite avec un balisage très simple, par exemple :</p>
 
-<pre class="brush: html"><code class="language-js">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;Nom&lt;/td&gt;
     &lt;td&gt;Age&lt;/td&gt;
@@ -420,7 +420,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
     &lt;td&gt;5&lt;/td&gt;
     &lt;td&gt;Femelle&lt;/td&gt;
   &lt;/tr&gt;
-&lt;/table&gt;</code></pre>
+&lt;/table&gt;</pre>
 
 <p>Mais cela pose des problèmes : un utilisateur de lecteur d’écran ne peut pas associer des lignes ou des colonnes en tant que groupes de données. Pour ce faire, vous devez savoir quelles sont les lignes d'en-tête et si elles sont dirigées vers le haut, des colonnes, etc. Cela ne peut être fait que visuellement pour le tableau ci-dessus (voir bad-table.html et essayez vous-même l'exemple).</p>
 
@@ -441,20 +441,20 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <p>Nous avons un exemple simple écrit, <a href="http://mdn.github.io/learning-area/accessibility/html/accessible-image.html">accessible-image.html</a>, comporte quatre copies de la même image :</p>
 
-<pre><code class="language-js">&lt;img src="dinosaur.png"&gt;
+<pre>&lt;img src="dinosaur.png"&gt;
 
 &lt;img src="dinosaur.png"
-     alt="</code> Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées<code class="language-js">."&gt;
+     alt="Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées."&gt;
 
 &lt;img src="dinosaur.png"
-     alt="</code> Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées<code class="language-js">."
-     title="</code> Le dinosaure rouge de Mozilla <code class="language-js">"&gt;
+     alt="Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées."
+     title="Le dinosaure rouge de Mozilla "&gt;
 
 
 &lt;img src="dinosaur.png" aria-labelledby="dino-label"&gt;
 
-&lt;p id="dino-label"&gt;</code> Tyrannosaure rouge Rex de Mozilla: Dinosaure à deux jambes, debout comme un être humain, avec des armes légères et une grosse tête avec beaucoup de dents acérées<code class="language-js">.&lt;/p&gt;
-</code></pre>
+&lt;p id="dino-label"&gt; Tyrannosaure rouge Rex de Mozilla: Dinosaure à deux jambes, debout comme un être humain, avec des armes légères et une grosse tête avec beaucoup de dents acérées.&lt;/p&gt;
+</pre>
 
 <p>La première image, lorsqu'elle est visualisée par un lecteur d'écran, n'offre pas beaucoup d'aide à l'utilisateur. VoiceOver, par exemple, lit « /dinosaur.png, image ». Il lit le nom du fichier pour essayer de fournir de l'aide. Dans cet exemple, l'utilisateur ou l’utilisatrice saura au moins qu'il s'agit d'un dinosaure, mais les fichiers peuvent souvent être chargés avec des noms de fichiers générés par une machine (par exemple, à partir d'un appareil photo numérique) et ces noms de fichiers ne fourniront probablement aucun contexte au contenu de l'image.</p>
 
@@ -478,9 +478,9 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <p>Jetons un autre coup d'oeil à la quatrième méthode :</p>
 
-<pre class="brush: html"><code class="language-js">&lt;img src="dinosaur.png" aria-labelledby="dino-label"&gt;
+<pre class="brush: html">&lt;img src="dinosaur.png" aria-labelledby="dino-label"&gt;
 
-&lt;p id="dino-label"&gt;</code> Le Tyrannosaure rouge Mozilla  ... &lt;/p&gt;</pre>
+&lt;p id="dino-label"&gt; Le Tyrannosaure rouge Mozilla  ... &lt;/p&gt;</pre>
 
 <p>Dans ce cas, nous n'utilisons pas du tout l'attribut <code>alt</code> Nous avons plutôt présenté notre description de l'image sous forme de paragraphe de texte normal, en lui attribuant un  <code>id</code> puis nous avons utilisé l'attribut  <code>aria-labelledby</code> pour : faire référence à cela  <code>id</code>, ce qui amène les lecteurs d’écran à utiliser ce paragraphe comme alt  text/label pour cette image. Ceci est particulièrement utile si vous souhaitez utiliser le même texte comme étiquette pour plusieurs images – quelque chose qui n’est pas possible avec <code>alt</code>.</p>
 
@@ -492,27 +492,27 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 
 <p>Les images ont également d'autres mécanismes disponibles pour fournir un texte descriptif. Par exemple, il existe un attribut <code>longdesc</code> destiné à pointer sur un document web distinct contenant une description étendue de l'image, par exemple :</p>
 
-<pre class="brush: html"><code class="language-js">
-&lt;img src="dinosaur.png" longdesc="dino-info.html"&gt;</code></pre>
+<pre class="brush: html">
+&lt;img src="dinosaur.png" longdesc="dino-info.html"&gt;</pre>
 
 <p>Cela semble être une bonne idée, en particulier pour les infographies telles que les grands graphiques contenant de nombreuses informations, qui pourraient peut-être être représentées sous forme de tableau de données accessible (voir section précédente). Cependant, longdesc n’est pas toujours pris en charge par les lecteurs d’écran et le contenu est totalement inaccessible aux utilisateurs autres que les lecteurs d’écran. Il est sans doute préférable d’inclure la description longue sur la même page que l’image, ou d’y accéder par un lien régulier.</p>
 
 <p>HTML5 comprend deux nouveaux éléments  — {{htmlelement("figure")}} et {{htmlelement("figcaption")}} —  qui sont supposés associer une figure quelconque (ce peut être n'importe quoi, pas nécessairement une image) à une légende de figure :</p>
 
-<pre class="brush: html"><code class="language-js">&lt;figure&gt;
-  &lt;img src="dinosaur.png" alt="</code> Le Mozilla Tyrannosaurus <code class="language-js">"&gt;
-  &lt;figcaption&gt;</code> Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées <code class="language-js">.&lt;/figcaption&gt;
-&lt;/figure&gt;</code></pre>
+<pre class="brush: html">&lt;figure&gt;
+  &lt;img src="dinosaur.png" alt="Le Mozilla Tyrannosaurus "&gt;
+  &lt;figcaption&gt; Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées .&lt;/figcaption&gt;
+&lt;/figure&gt;</pre>
 
 <p>Malheureusement, la plupart des lecteurs d’écran ne semblent pas encore associer de légendes à leurs figures, mais la structure des éléments est utile pour le style CSS. Elle permet également de placer une description de l’image à côté de la source.</p>
 
 <h3 id="Attributs_alt_vides">Attributs alt vides</h3>
 
-<pre class="brush: html"><code class="language-js">
+<pre class="brush: html">
 &lt;h3&gt;
   &lt;img src="article-icon.png" alt=""&gt;
-  </code> Tyrannosaurus Rex: le roi des dinosaures <code class="language-js">
-&lt;/h3&gt;</code></pre>
+  Tyrannosaurus Rex: le roi des dinosaures 
+&lt;/h3&gt;</pre>
 
 <p>Il peut arriver qu'une image soit incluse dans la conception d'une page, mais son objectif principal est la décoration visuelle. Vous remarquerez dans l'exemple de code ci-dessus que l'attribut   <code>alt </code> de l'image est vide – il s'agit pour que les lecteurs d'écran reconnaissent l'image, mais n'essayent pas de décrire l'image (au lieu de cela, ils diraient simplement « image », ou similaire) .</p>
 

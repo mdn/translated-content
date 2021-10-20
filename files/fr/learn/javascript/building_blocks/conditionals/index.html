@@ -109,7 +109,7 @@ if (coursesFaites === true) {
 
 <p>Il existe un moyen d'enchaîner des choix / résultats supplémentaires à <code>if...else</code> — en utilisant <code>else if</code> entre. Chaque choix supplémentaire nécessite un bloc additionnel à placer entre <code>if() { ... }</code> et <code>else { ... }</code> — regardez l'exemple suivant plus élaboré, qui pourrait faire partie d'une simple application de prévisions météo:</p>
 
-<pre class="brush: html line-numbers  language-html" style="font-size: 16px !important; line-height: 24px !important;"><code class="language-html" style="font-size: 16px !important; line-height: 24px !important;">&lt;label for="weather"&gt;Select the weather type today: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="weather"&gt;Select the weather type today: &lt;/label&gt;
 &lt;select id="weather"&gt;
   &lt;option value=""&gt;--Make a choice--&lt;/option&gt;
   &lt;option value="sunny"&gt;Sunny&lt;/option&gt;
@@ -118,9 +118,9 @@ if (coursesFaites === true) {
   &lt;option value="overcast"&gt;Overcast&lt;/option&gt;
 &lt;/select&gt;
 
-&lt;p&gt;&lt;/p&gt;</code></pre>
+&lt;p&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: js line-numbers  language-js" style="font-size: 16px !important; line-height: 24px !important;"><code class="language-js" style="font-size: 16px !important; line-height: 24px !important;">const select = document.querySelector('select');
+<pre class="brush: js">const select = document.querySelector('select');
 const para = document.querySelector('p');
 
 select.addEventListener('change', setWeather);
@@ -139,7 +139,7 @@ function setWeather() {
   } else {
     para.textContent = '';
   }
-}</code></pre>
+}</pre>
 
 <p>{{ EmbedLiveSample('else_if', '100%', 100) }}</p>
 

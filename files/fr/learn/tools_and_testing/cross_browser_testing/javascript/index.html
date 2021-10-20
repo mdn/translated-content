@@ -367,7 +367,7 @@ fetch('flowers.jpg').then(function(response) {
 
 <p>Faire cela nécessite un peu de code supplémentaire dans votre JavaScript. Vous avez besoin d'un test de détection de caractéristiques qui détecte si le navigateur supporte la fonctionnalité que vous essayez d'utiliser :</p>
 
-<pre class="brush: js"><code class="language-js">if (browserSupportsAllFeatures()) {
+<pre class="brush: js">if (browserSupportsAllFeatures()) {
   main();
 } else {
   loadScript('polyfills.js', main);
@@ -375,13 +375,13 @@ fetch('flowers.jpg').then(function(response) {
 
 function main(err) {
   // actual app code goes in here
-}</code></pre>
+}</pre>
 
 <p>En premier temps on exécute une condition qui vérifie si la fonction <code>browserSupportAllFeatures()</code> retourne true. Si oui, on exécute la fonction <code>main()</code>, qui contiendra tout le code de notre app. <code>browserSupportAllFeatures()</code> ressemble à ça :</p>
 
-<pre class="brush: js"><code class="language-js">function browserSupportsAllFeatures() {
+<pre class="brush: js">function browserSupportsAllFeatures() {
   return window.Promise &amp;&amp; window.fetch;
-}</code></pre>
+}</pre>
 
 <p>Ici on vérifie si l'objet <code><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> et la fonction <code><a href="https://developer.mozilla.org/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code> existent dans le navigateur. Si les deux existent, la fonction retourne true. Si la fonction retourne <code>false</code>, alors on exécute le code à l'intérieur de la deuxième partie de la condition — elle exécute une fonction appelée loadScript(), qui charge les polyfills dans la page, puis exécute <code>main()</code> après que le chargement soit terminé. <code>loadScript()</code> ressemble à ça :</p>
 

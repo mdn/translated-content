@@ -276,20 +276,20 @@ def index(request):
 
 <p>Maintenant créez le fichier HTML <strong><em>index.html</em></strong> dans le dossier <strong>/locallibrary/catalog/templates/</strong> et copiez-y le code ci-dessous. This code extends our base template on the first line, and then replaces the default <code>content</code> block for the template. </p>
 
-<pre class="brush: html line-numbers language-html"><code class="language-html">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 
 {% block content %}
   &lt;h1&gt;Accueil de la bibliothèque locale&lt;/h1&gt;
-  &lt;p&gt;Bienvenue à la bibliothèque locale, un site web développé par </code><code class="language-html">&lt;em&gt;Mozilla Developer Network&lt;/em&gt;!</code><code class="language-html">&lt;/p&gt;
+  &lt;p&gt;Bienvenue à la bibliothèque locale, un site web développé par &lt;em&gt;Mozilla Developer Network&lt;/em&gt;!&lt;/p&gt;
   &lt;h2&gt;Contenu dynamique&lt;/h2&gt;
   &lt;p&gt;La bibliothèque dispose des enregistrements suivants:&lt;/p&gt;
   &lt;ul&gt;
-    &lt;li&gt;&lt;strong&gt;Livres:&lt;/strong&gt; <strong>\{{ num_books }}</strong>&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;Copies:&lt;/strong&gt; <strong>\{{ num_instances }}</strong>&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;Copies disponibles:&lt;/strong&gt; <strong>\{{ num_instances_available }}</strong>&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;Auteurs:&lt;/strong&gt; <strong>\{{ num_authors }}</strong>&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Livres:&lt;/strong&gt; \{{ num_books }}&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Copies:&lt;/strong&gt; \{{ num_instances }}&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Copies disponibles:&lt;/strong&gt; \{{ num_instances_available }}&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Auteurs:&lt;/strong&gt; \{{ num_authors }}&lt;/li&gt;
   &lt;/ul&gt;
-{% endblock %}</code></pre>
+{% endblock %}</pre>
 
 <p>Dans la section cont'enu dynamique, des emplacements réservés sont définis pour pouvoir y insérer le contenu de variable qui sont identifiées à l'intérieur de doubles accolades (ouvrantes et fermantes). Pour une meilleure visibilité ces emplacements et les variables nommées sont identifiées en caractères gras dans l'extrait de code ci-dessus. </p>
 

@@ -263,7 +263,7 @@ output(z);</pre>
  <li>
   <p>Néanmoins, que se passe-t-il losqu'elles sont appelées de l'intérieur d'une autre fonction ? Essayer d'éditer <code>a()</code> et <code>b()</code> pour qu'elles aient la forme suivante :</p>
 
-  <pre class="brush: js line-numbers  language-js"><code class="language-js">function a() {
+  <pre class="brush: js">function a() {
   var y = 2;
   output(y);
 }
@@ -271,7 +271,7 @@ output(z);</pre>
 function b() {
   var z = 3;
   output(z);
-}</code></pre>
+}</pre>
   Sauvegardez le code et rechargez-le dans votre navigateur, puis essayez d'appeler les fonctions <code>a()</code> et <code>b()</code> depuis la console JavaScript :
 
   <pre class="brush: js">a();
