@@ -13,7 +13,7 @@ browser-compat: html.elements.button
 ---
 <div>{{HTMLRef}}</div>
 
-<p class="summary">L'élément <strong><code>&lt;button&gt;</code></strong> représente un bouton cliquable, utilisé pour soumettre <a href="/fr/docs/Learn/Forms">des formulaires</a> ou n'importe où dans un document pour une fonctionnalité de bouton accessible et standard. Par défaut, les boutons HTML sont présentés dans un style ressemblant à la plate-forme d'exécution de <a href="/fr/docs/Glossary/User_agent">l'agent utilisateur</a>, mais vous pouvez modifier l'apparence des boutons avec <a href="/fr/docs/Web/CSS">CSS</a>.</p>
+<p>L'élément <strong><code>&lt;button&gt;</code></strong> représente un bouton cliquable, utilisé pour soumettre <a href="/fr/docs/Learn/Forms">des formulaires</a> ou n'importe où dans un document pour une fonctionnalité de bouton accessible et standard. Par défaut, les boutons HTML sont présentés dans un style ressemblant à la plate-forme d'exécution de <a href="/fr/docs/Glossary/User_agent">l'agent utilisateur</a>, mais vous pouvez modifier l'apparence des boutons avec <a href="/fr/docs/Web/CSS">CSS</a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/button.html", "tabbed-shorter")}}</div>
 
@@ -55,22 +55,22 @@ browser-compat: html.elements.button
 <p>Cet élément peut utiliser <a href="/fr/docs/Web/HTML/Global_attributes">les attributs universels</a>.</p>
 
 <dl>
-  <dt><strong id="attr-autofocus"><code>autofocus</code></strong></dt>
+  <dt><strong><code>autofocus</code></strong></dt>
   <dd>Cet attribut booléen, <strong>qui ne doit être défini qu'une fois par document</strong>, indique au navigateur que cet élément doit automatiquement avoir le <a href="/fr/docs/Web/API/HTMLOrForeignElement/focus">focus</a> lorsque la page est chargée. Cela permet d'utiliser immédiatement ce bouton, via un raccourci clavier par exemple, sans avoir à cliquer au préalable dans le contrôle adéquat.</dd>
-  <dt><strong id="attr-autocomplete"><code>autocomplete</code></strong> {{non-standard_inline}}</dt>
+  <dt><strong><code>autocomplete</code></strong> {{non-standard_inline}}</dt>
   <dd>Pour l'élément <code>&lt;button&gt;</code>, cet attribut, propre à Firefox, n'est pas standard. Par défaut et à la différence des autres navigateurs, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">Firefox conserve l'état de désactivation d'un bouton</a> d'un élément <code>&lt;button&gt;</code> au fur et à mesure des chargements d'une page. Utiliser cet attribut avec la valeur <code>off</code> (i.e. <code>autocomplete="off"</code>) désactive cette fonctionnalité (cf. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=654072">bug 654072</a> pour plus d'informations).</dd>
-  <dt><strong id="attr-disabled"><code>disabled</code></strong></dt>
+  <dt><strong><code>disabled</code></strong></dt>
   <dd>
     <p>Cet attribut booléen empêche l'utilisateur d'interagir avec le bouton : il ne peut pas être pressé ou ciblé.</p>
 
     <p>Firefox, contrairement aux autres navigateurs, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persiste l'état désactivé dynamique</a> d'un <code>&lt;bouton&gt;</code> à travers les chargements de page. Utilisez l'attribut <a href="#attr-autocomplete"><code>autocomplete</code></a> pour contrôler cette fonctionnalité.</p>
   </dd>
-  <dt><strong id="attr-form"><code>form</code></strong></dt>
+  <dt><strong><code>form</code></strong></dt>
   <dd>L'élément <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a> auquel associer le bouton (son <em>formulaire rattaché</em>). Cet attribut contient l'attribut <code><strong>id</strong></code> de l'élément <code>&lt;form&gt;</code> auquel celui-ci est rattaché. Par défaut, le bouton est rattaché à l'élément <code>&lt;form&gt;</code> qui est son plus proche ancêtre. Cet attribut permet à un bouton d'être placé n'importe où dans le document et pas seulement comme un descendant d'éléments <code>&lt;form&gt;</code>. Il permet également de rattacher le bouton à un autre formulaire que son élément parent.</dd>
-  <dt><strong id="attr-formaction"><code>formaction</code></strong></dt>
+  <dt><strong><code>formaction</code></strong></dt>
   <dd>L'URL qui traite les informations soumises par le bouton. Remplace l'attribut <a href="/fr/docs/Web/HTML/Element/Form#attr-action"><code>action</code></a> du formulaire rattaché au bouton. Il ne fait rien s'il n'y a pas de formulaire rattaché.</dd>
-  <dt><strong id="attr-formenctype"><code>formenctype</code></strong></dt>
-  <dd>Lorsque l'attribut <code><strong>type</strong></code> possède la valeur <code>submit</code>, cet attribut définit le <a class="external" href="https://fr.wikipedia.org/wiki/Type_MIME">type MIME</a> qui sera utilisée pour encoder les données envoyées au serveur. C'est un attribut à valeur contrainte qui peut prendre les valeurs suivantes :
+  <dt><strong><code>formenctype</code></strong></dt>
+  <dd><p>Lorsque l'attribut <code><strong>type</strong></code> possède la valeur <code>submit</code>, cet attribut définit le <a class="external" href="https://fr.wikipedia.org/wiki/Type_MIME">type MIME</a> qui sera utilisée pour encoder les données envoyées au serveur. C'est un attribut à valeur contrainte qui peut prendre les valeurs suivantes :</p>
     <ul>
       <li><code>application/x-www-form-urlencoded</code> : La valeur par défaut.</li>
       <li><code>multipart/form-data</code> : Utilisé pour soumettre des éléments <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> dont les attributs <a href="/fr/docs/Web/HTML/Element/Input#attr-type"><code>type</code></a> sont définis sur <code>file</code>.</li>
@@ -79,8 +79,8 @@ browser-compat: html.elements.button
 
     <p>Si cet attribut est spécifié, il remplace l'attribut <a href="/fr/docs/Web/HTML/Element/Form#attr-enctype"><code>enctype</code></a> du formulaire rattaché au bouton.</p>
   </dd>
-  <dt><strong id="attr-formmethod"><code>formmethod</code></strong></dt>
-  <dd>Lorsque l'attribut <code><strong>type</strong></code> possède la valeur <code>submit</code> (explicitement ou comme valeur par défaut), cet attribut définit la <a href="/fr/docs/Web/HTTP/Methods">méthode HTTP</a> qui sera utilisée pour envoyer les données au serveur. C'est un attribut à valeur contrainte qui peut prendre les valeurs suivantes :
+  <dt><strong><code>formmethod</code></strong></dt>
+  <dd><p>Lorsque l'attribut <code><strong>type</strong></code> possède la valeur <code>submit</code> (explicitement ou comme valeur par défaut), cet attribut définit la <a href="/fr/docs/Web/HTTP/Methods">méthode HTTP</a> qui sera utilisée pour envoyer les données au serveur. C'est un attribut à valeur contrainte qui peut prendre les valeurs suivantes :</p>
   <ul>
     <li><code>post</code> : Les données du formulaire sont incluses dans le corps de la requête HTTP lorsqu'elles sont envoyées au serveur. À utiliser lorsque le formulaire contient des informations qui ne devraient pas être publiques, comme les identifiants de connexion.</li>
     <li><code>get</code> : Les données du formulaire sont ajoutées à l'URL <code>action</code> du formulaire, avec un <code>?</code> comme séparateur, et l'URL résultante est envoyée au serveur. Utilisez cette méthode lorsque le formulaire <a href="/fr/docs/Glossary/Idempotent">n'a pas d'effets secondaires</a>, comme les formulaires de recherche.</li>
@@ -88,11 +88,10 @@ browser-compat: html.elements.button
 
   <p>S'il est spécifié, cet attribut remplace l'attribut <a href="/fr/docs/Web/HTML/Element/Form#attr-method"><code>method</code></a> du formulaire rattaché au bouton.</p>
   </dd>
-  <dt><strong id="attr-formnovalidate"><code>formnovalidate</code></strong></dt>
-  <dd>Si le bouton est un bouton de soumission (<code>type</code> non défini ou défini avec la valeur <code>"submit"</code>), cet attribut booléen spécifie que le formulaire ne doit pas être <a href="/fr/docs/Learn/Forms/Form_validation">validé</a> lorsqu'il est soumis. Si cet attribut est spécifié, il remplace l'attribut <a href="/fr/docs/Web/HTML/Element/Form#attr-novalidate"><code>novalidate</code></a> du formulaire rattaché au bouton.</dd>
-  <dd>Cet attribut est également disponible sur les éléments <code><a href="/fr/docs/Web/HTML/Element/Input/image">&lt;input type="image"&gt;</a></code> et <code><a href="/fr/docs/Web/HTML/Element/Input/submit">&lt;input type="submit"&gt;</a></code>.</p>
+  <dt><strong><code>formnovalidate</code></strong></dt>
+  <dd>Si le bouton est un bouton de soumission (<code>type</code> non défini ou défini avec la valeur <code>"submit"</code>), cet attribut booléen spécifie que le formulaire ne doit pas être <a href="/fr/docs/Learn/Forms/Form_validation">validé</a> lorsqu'il est soumis. Si cet attribut est spécifié, il remplace l'attribut <a href="/fr/docs/Web/HTML/Element/Form#attr-novalidate"><code>novalidate</code></a> du formulaire rattaché au bouton. Cet attribut est également disponible sur les éléments <code><a href="/fr/docs/Web/HTML/Element/Input/image">&lt;input type="image"&gt;</a></code> et <code><a href="/fr/docs/Web/HTML/Element/Input/submit">&lt;input type="submit"&gt;</a></code>.</p>
   </dd>
-  <dt><strong id="attr-formtarget"><code>formtarget</code></strong></dt>
+  <dt><strong><code>formtarget</code></strong></dt>
   <dd>Lorsque l'attribut <code><strong>type</strong></code> possède la valeur <code>submit</code>, cet attribut indique le contexte de navigation (onglet, fenêtre, frame) associé avec le formulaire, sa cible. Outre un attribut <code><strong>id </strong></code>valide du document, il peut prendre l'une de ces valeurs particulières:
     <ul>
       <li><code>_self</code> : Charge la réponse dans le même contexte de navigation que le contexte actuel. Il s'agit de la valeur par défaut si l'attribut n'est pas spécifié.</li>
@@ -101,17 +100,17 @@ browser-compat: html.elements.button
       <li><code>_top</code> : Charge la réponse dans le contexte de navigation de niveau supérieur (c'est-à-dire le contexte de navigation qui est un ancêtre du contexte actuel, et qui n'a pas de parent). S'il n'y a pas de parent, cette option se comporte de la même manière que <code>_self</code>.</li>
     </ul>
   </dd>
-  <dt><strong id="attr-name"><code>name</code></strong></dt>
+  <dt><strong><code>name</code></strong></dt>
   <dd>Le nom du bouton, soumis en tant que paire avec la <code>valeur</code> du bouton comme partie des données du formulaire.</dd>
-  <dt><strong id="attr-type"><code>type</code></strong></dt>
-  <dd>Le comportement par défaut du bouton. Les valeurs possibles sont :
+  <dt><strong><code>type</code></strong></dt>
+  <dd><p>Le comportement par défaut du bouton. Les valeurs possibles sont :</p>
     <ul>
       <li><code>submit</code> : Le bouton soumet les données du formulaire au serveur. C'est la valeur par défaut si l'attribut n'est pas spécifié pour les boutons associés à un <code>&lt;form&gt;</code>, ou si l'attribut est une valeur vide ou invalide.</li>
       <li><code>reset</code> : Le bouton réinitialise tous les contrôles à leur valeur initiale, comme <a href="/fr/docs/Web/HTML/Element/Input/reset">&lt;input type="reset"&gt;</a>. (Ce comportement a tendance à agacer les utilisateurs).</li>
       <li><code>button</code> : Le bouton n'a pas de comportement par défaut et ne fait rien lorsqu'il est pressé par défaut. Les scripts côté client peuvent écouter les événements de l'élément, qui sont déclenchés lorsque les événements se produisent.</li>
     </ul>
   </dd>
-  <dt><strong id="attr-value"><code>value</code></strong></dt>
+  <dt><strong><code>value</code></strong></dt>
   <dd>Définit la valeur associée au <code>name</code> du bouton lorsqu'il est soumis avec les données du formulaire. Cette valeur est transmise au serveur en paramètres lorsque le formulaire est soumis.</dd>
 </dl>
 

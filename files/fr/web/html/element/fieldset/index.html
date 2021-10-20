@@ -13,7 +13,7 @@ browser-compat: html.elements.fieldset
 ---
 <div>{{HTMLRef}}</div>
 
-<p class="summary">L'élément HTML <strong><code>&lt;fieldset&gt;</code></strong> est utilisé afin de regrouper plusieurs contrôles interactifs ainsi que des étiquettes (<a href="/fr/docs/Web/HTML/Element/Label"><code>&lt;label&gt;</code></a>) dans un formulaire HTML.</p>
+<p>L'élément HTML <strong><code>&lt;fieldset&gt;</code></strong> est utilisé afin de regrouper plusieurs contrôles interactifs ainsi que des étiquettes (<a href="/fr/docs/Web/HTML/Element/Label"><code>&lt;label&gt;</code></a>) dans un formulaire HTML.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}</div>
 
@@ -24,13 +24,15 @@ browser-compat: html.elements.fieldset
 <p>Cet élément prend en charge <a href="/fr/docs/Web/HTML/Global_attributes">les attributs universels</a>.</p>
 
 <dl>
-  <dt><code id="attr-disabled">disabled</code></dt>
+  <dt><code>disabled</code></dt>
   <dd>Si cet attribut booléen est utilisé, les contrôles de formulaires des éléments descendants sont désactivés (ils ne peuvent pas être édités). Bien qu'ils ne soient pas éditables, les données de ces contrôles seront envoyées avec le formulaire. Ces contrôles ne recevront pas les évènements liés à la navigation (tels que ceux liés aux clics ou au focus). La plupart du temps, ces contrôles désactivés apparaissent comme grisés. On notera que les éléments de formulaires au sein de l'élément <a href="/fr/docs/Web/HTML/Element/Legend"><code>&lt;legend&gt;</code></a> ne seront pas désactivés.</dd>
-  <dt><code id="attr-form">form</code></dt>
+  <dt><code>form</code></dt>
   <dd>La valeur de cet attribut correspond à la valeur de l'attribut <code>id</code> de l'élément <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a> auquel il est rattaché. La valeur par défaut est l'identifiant du plus proche élément <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a> dont l'élément <code>&lt;fieldset&gt;</code> est le descendant. Attention, cet attribut peut être source de confusion, tout élément <code>&lt;input&gt;</code> contenu au sein du <code>&lt;fieldset&gt;</code> et qui devra être associé au formulaire devra également avoir l'attribut <code>form</code> explicitement défini. En JavaScript, on pourra utiliser la propriété <a href="/fr/docs/Web/API/HTMLFormElement/elements"><code>HTMLFormElement.elements</code></a> pour vérifier le bon rattachement des éléments au formulaire.</dd>
-  <dt><code id="attr-name">name</code></dt>
-  <dd>Le nom associé au groupe.
-  <div class="note"><strong>Note :</strong> L'étiquette du groupe de contrôle est donné par le premier élément enfant <a href="/fr/docs/Web/HTML/Element/Legend"><code>&lt;legend&gt;</code></a> du <code>&lt;fieldset&gt;</code>.</div>
+  <dt><code>name</code></dt>
+  <dd><p>Le nom associé au groupe.</p>
+  <div class="note">
+    <p><strong>Note :</strong> L'étiquette du groupe de contrôle est donné par le premier élément enfant <a href="/fr/docs/Web/HTML/Element/Legend"><code>&lt;legend&gt;</code></a> du <code>&lt;fieldset&gt;</code>.</p>
+  </div>
   </dd>
 </dl>
 

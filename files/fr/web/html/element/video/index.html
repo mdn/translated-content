@@ -17,8 +17,6 @@ translation_of: Web/HTML/Element/video
 
 <div>{{EmbedInteractiveExample("pages/tabbed/video.html", "tabbed-standard")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <p>L'exemple précédent illustre comment utiliser l'élément <code>&lt;video&gt;</code> simplement, à la façon d'un élément {{htmlelement("img")}}. Le chemin vers le média à afficher est fourni via l'attribut <code>src</code> et on peut inclure d'autres attributs afin de spécifier la largeur et la hauteur, la lecture automatique et/ou en boucle, les contrôles affichés, etc.</p>
 
 <p>Le contenu fourni entre les balises <code>&lt;video&gt;&lt;/video&gt;</code> est affiché comme contenu alternatif par les navigateurs qui ne prennent pas en charge l'élément.</p>
@@ -49,32 +47,26 @@ translation_of: Web/HTML/Element/video
 
 <dl>
  <dt>{{htmlattrdef("autoplay")}}</dt>
- <dd>Un attribut booléen qui indique que la vidéo doit automatiquement être lancée dès qu'elle peut être jouée sans être arrêtée par le chargement des données.</dd>
- <dd>
- <p class="note"><strong>Note :</strong> la lecture automatique peut être source de nuisance pour les utilisateurs. Mieux vaut l'éviter lorsque c'est possible ou proposer à l'utilisateur de choisir cette option. Cette valeur peut être utile lors de la création de vidéos dont la source sera définie <em>a posteriori</em>.</p>
-
- <p class="note"><strong>Note :</strong> Cet attribut est un attribut booléen et indiquer <code>autoplay="false"</code> ne suffira pas à retirer la lecture automatique. Pour ce faire, il faut complètement retirer l'attribut.</p>
-
- <p class="note"><strong>Note :</strong>  Pour certains navigateurs (ex. Chrome 70), l'attribut <code>autoplay</code> ne fonctionne pas si aucun attribut <code>mute</code>n'est présent.</p>
+ <dd><p>Un attribut booléen qui indique que la vidéo doit automatiquement être lancée dès qu'elle peut être jouée sans être arrêtée par le chargement des données.</p>
+ <div class="note"><p><strong>Note :</strong> la lecture automatique peut être source de nuisance pour les utilisateurs. Mieux vaut l'éviter lorsque c'est possible ou proposer à l'utilisateur de choisir cette option. Cette valeur peut être utile lors de la création de vidéos dont la source sera définie <em>a posteriori</em>.</p></div>
+ <div class="note"><p><strong>Note :</strong> Cet attribut est un attribut booléen et indiquer <code>autoplay="false"</code> ne suffira pas à retirer la lecture automatique. Pour ce faire, il faut complètement retirer l'attribut.</p></div>
+ <div class="note"><p><strong>Note :</strong> Pour certains navigateurs (ex. Chrome 70), l'attribut <code>autoplay</code> ne fonctionne pas si aucun attribut <code>mute</code>n'est présent.</p></div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("buffered")}}</dt>
  <dd>Un attribut qui peut être lu afin de déterminer l'intervalle temporel mis en mémoire tampon. Cet attribut contient un objet {{domxref("TimeRanges")}}.</dd>
  <dt>{{htmlattrdef("controls")}}</dt>
  <dd>Si cet attribut est présent, le navigateur affichera des contrôles pour permettre à l'utilisateur de contrôler la lecture de la vidéo, le volume et la mise sur pause.</dd>
  <dt>{{htmlattrdef("controlslist")}} {{experimental_inline}}</dt>
- <dd>L'attribut <code>controlslist</code>, lorsqu'il est indiqué, aide le navigateur à choisir les contrôles à afficher pour la manipulation du média lorsque l'attribut <code>controls</code> est utilisé.</dd>
- <dd>Les valeurs autorisées pour cet attribut sont <code>nodownload</code>, <code>nofullscreen</code> et <code>noremoteplayback</code>.<br>
- On utilisera l'attribut <code>disablePictureInPicture</code> afin de désactiver ce mode et les contrôles associés.</dd>
+ <dd><p>L'attribut <code>controlslist</code>, lorsqu'il est indiqué, aide le navigateur à choisir les contrôles à afficher pour la manipulation du média lorsque l'attribut <code>controls</code> est utilisé.</p>
+ <p>Les valeurs autorisées pour cet attribut sont <code>nodownload</code>, <code>nofullscreen</code> et <code>noremoteplayback</code>.</p>
+ <p>On utilisera l'attribut <code>disablePictureInPicture</code> afin de désactiver ce mode et les contrôles associés.</p></dd>
  <dt>{{htmlattrdef("crossorigin")}}</dt>
- <dd>Cet attribut à valeur contrainte permet d'indiquer si le CORS doit être utilisé pour récupérer la vidéo. <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Images_avec_le_contr%C3%B4le_d_acc%C3%A8s_HTTP">Les ressources avec le CORS activé</a> peuvent être réutilisées dans un élément {{HTMLElement("canvas")}} sans le <em>corrompre</em>. Les valeurs autorisées sont :
+ <dd><p>Cet attribut à valeur contrainte permet d'indiquer si le CORS doit être utilisé pour récupérer la vidéo. <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Images_avec_le_contr%C3%B4le_d_acc%C3%A8s_HTTP">Les ressources avec le CORS activé</a> peuvent être réutilisées dans un élément {{HTMLElement("canvas")}} sans le <em>corrompre</em>. Les valeurs autorisées sont :</p>
  <ul>
   <li><code>anonymous</code> : une requête <em>cross-origine</em> est envoyée sans information d'authentification. Autrement dit, un en-tête HTTP {{HTTPHeader("Origin")}} est envoyé, sans cookie, certificat X.509 ou sans authentification HTTP simple. Si le serveur ne fournit pas d'informations d'authentification au site d'origine (c'est-à-dire en n'envoyant pas l'en-tête HTTP {{HTTPHeader("Access-Control-Allow-Origin")}}), la vidéo sera corrompue et son utilisation sera restreinte.</li>
   <li><code>use-credentials</code> : une requête <em>cross-origine</em> est envoyée avec une information d'authentification. Autrement dit, un en-tête HTTP <code>Header</code> est envoyé, avec un cookie, une certification ou une authentification HTTP simple. Si le serveur ne fournit pas d'informations d'authentification au site d'origine (c'est-à-dire en n'envoyant pas l'en-tête HTTP {{HTTPHeader("Access-Control-Allow-Origin")}}), la vidéo sera corrompue et son utilisation sera restreinte.</li>
  </ul>
- Lorsque cet attribut n'est pas présent, la ressource est récupérée sans requête CORS (l'en-tête HTTP {{HTTPHeader("Origin")}}) n'est pas envoyé) et elle ne peut pas être utilisée dans un élément {{HTMLElement('canvas')}}. Si la valeur est invalide, elle sera gérée comme si le mot-clé <code>anonymous</code> était utilisé. Pour plus d'informations, consulter l'article sur <a href="/fr/docs/Web/HTML/Reglages_des_attributs_CORS">les attributs de paramétrage du CORS</a>.</dd>
+ <p>Lorsque cet attribut n'est pas présent, la ressource est récupérée sans requête CORS (l'en-tête HTTP {{HTTPHeader("Origin")}}) n'est pas envoyé) et elle ne peut pas être utilisée dans un élément {{HTMLElement('canvas')}}. Si la valeur est invalide, elle sera gérée comme si le mot-clé <code>anonymous</code> était utilisé. Pour plus d'informations, consulter l'article sur <a href="/fr/docs/Web/HTML/Reglages_des_attributs_CORS">les attributs de paramétrage du CORS</a>.</p></dd>
  <dt>{{htmlattrdef("height")}}</dt>
  <dd>La hauteur de la zone où afficher la vidéo, exprimée en pixels CSS (en valeur absolue uniquement).</dd>
  <dt>{{htmlattrdef("intrinsicsize")}} {{experimental_inline}}</dt>
@@ -88,7 +80,7 @@ translation_of: Web/HTML/Element/video
  <dt>{{htmlattrdef("playsinline")}}</dt>
  <dd>Un attribut booléen qui indique que la vidéo doit être jouée en incise, c'est-à-dire au sein de la zone de lecture de l'élément. À noter : l'absence de cet attribut n'implique pas que la vidéo sera lancée en plein écran.</dd>
  <dt>{{htmlattrdef("preload")}}</dt>
- <dd>Cet attribut à valeur contrainte est une indication destinée au navigateur sur la meilleure façon de charger la vidéo (selon l'auteur de la page). Il peut prendre l'une des valeurs suivantes :
+ <dd><p>Cet attribut à valeur contrainte est une indication destinée au navigateur sur la meilleure façon de charger la vidéo (selon l'auteur de la page). Il peut prendre l'une des valeurs suivantes :</p>
  <ul>
   <li><code>none</code> : la vidéo ne doit pas être préchargée.</li>
   <li><code>metadata</code> : seules les métadonnées de la vidéo (sa durée par exemple) sont récupérées.</li>
@@ -98,7 +90,7 @@ translation_of: Web/HTML/Element/video
 
  <p>La valeur par défaut peut être différente selon le navigateur. La spécification conseille d'utiliser la valeur <code>metadata</code>.</p>
 
- <div class="note"><strong>Notes d'utilisation :</strong>
+ <div class="note"><p><strong>Note :</strong></p>
 
  <ul>
   <li>L'attribut <code>autoplay</code> a la priorité sur <code>preload</code>. Si <code>autoplay</code> est défini, le navigateur doit nécessairement télécharger la vidéo pour la lancer.</li>

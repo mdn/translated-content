@@ -14,7 +14,7 @@ browser-compat: html.elements.canvas
 ---
 <div>{{HTMLRef}}</div>
 
-<p class="summary">On utilise l'élément <strong>HTML <code>&lt;canvas&gt;</code></strong> avec l'API <a href="/fr/docs/Web/API/Canvas_API">canvas</a>, ou l'API <a href="/fr/docs/Web/API/WebGL_API">WebGL</a> pour dessiner des graphiques et des animations.</p>
+<p>On utilise l'élément <strong>HTML <code>&lt;canvas&gt;</code></strong> avec l'API <a href="/fr/docs/Web/API/Canvas_API">canvas</a>, ou l'API <a href="/fr/docs/Web/API/WebGL_API">WebGL</a> pour dessiner des graphiques et des animations.</p>
 
 <table class="properties">
   <tbody>
@@ -54,11 +54,11 @@ browser-compat: html.elements.canvas
 <p>Comme les autres éléments HTML, cet élément possède les <a href="/fr/docs/Web/HTML/Global_attributes">attributs globaux</a>.</p>
 
 <dl>
-  <dt><strong id="attr-height"><code>height</code></strong></dt>
+  <dt><strong><code>height</code></strong></dt>
   <dd>La hauteur de l'espace pour l'élément, exprimée en pixels CSS. La valeur par défaut est 150.</dd>
-  <dt><strong id="attr-moz-opaque"><code>moz-opaque</code></strong> {{non-standard_inline}}{{deprecated_inline}}</dt>
+  <dt><strong><code>moz-opaque</code></strong> {{non-standard_inline}}{{deprecated_inline}}</dt>
   <dd>Cet attribut permet d'indiquer s'il y aura de la transparence ou non. Si le canevas sait qu'il n'y aura pas de transparence, les performances de rendu pourront être améliorées. Cet attribut est uniquement pris en charge par les navigateurs Mozilla, il est préférable d'utiliser la méthode standard <a href="fr/docs/Web/API/HTMLCanvasElement/getContext"><code>canvas.getContext('2d', { alpha: false})</code></a> à la place.</dd>
-  <dt><strong id="attr-width"><code>width</code></strong></dt>
+  <dt><strong><code>width</code></strong></dt>
   <dd>La largeur de l'espace pour l'élément, exprimée en pixels CSS. La valeur par défaut est 300.</dd>
 </dl>
 
@@ -119,9 +119,8 @@ browser-compat: html.elements.canvas
   </tbody>
 </table>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Si on dépasse les dimensions ou l'aire maximale, le canevas deviendra inutilisable et les commandes de dessin ne fonctionneront pas.</p>
+<div class="note">
+  <p><strong>Note :</strong>Si on dépasse les dimensions ou l'aire maximale, le canevas deviendra inutilisable et les commandes de dessin ne fonctionneront pas.</p>
 </div>
 
 <h2 id="examples">Exemples</h2>

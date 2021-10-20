@@ -11,13 +11,13 @@ original_slug: MDN/Structures/Macros/Custom_macros
 ---
 <div>{{MDNSidebar}}</div>
 
-<p><span class="seoSummary">本页列举了一些 MDN 中的常用宏命令。对于使用这些宏的入门信息，请阅读<a href="/zh-CN/docs/MDN/Contribute/Content/Macros">使用宏</a>这篇文章。</span>还有一些不常用或只在特定内容中适用，以及一些不赞成使用的宏的信息，参见<a href="/zh-CN/docs/MDN/Contribute/Structures/Macros/Other">其它宏</a>。在我们的 GitHub Repo 中，可以找到<a href="https://github.com/mdn/yari/tree/master/kumascript/macros">MDN 上所有宏的完整列表</a>。</p>
+<p>本页列举了一些 MDN 中的常用宏命令。对于使用这些宏的入门信息，请阅读<a href="/zh-CN/docs/MDN/Structures/Macros">使用宏</a>这篇文章。</p>
 
-<p>对于调整页面样式相关的宏，另见 <a href="/zh-CN/docs/MDN/Contribute/Guidelines/CSS_style_guide">CSS 样式指南</a>。</p>
+<p>还有一些不常用或只在特定内容中适用，以及一些不赞成使用的宏的信息，参见<a href="/zh-CN/docs/MDN/Structures/Macros/Other">其它宏</a>。对于调整页面样式相关的宏，另见<a href="/zh-CN/docs/MDN/Guidelines/CSS_style_guide">CSS 样式指南</a>。
 
 <h2 id="Linking">链接</h2>
 
-<p>为了简化一些常见超链接的创建工作——如指向站内的技术参考页面、术语库以及其他主题的链接——我们提供了丰富的宏来完成这些工作</p>
+<p>为了简化一些常见超链接的创建工作——如指向站内的技术参考页面、术语库以及其他主题的链接，我们提供了丰富的宏来完成这些工作</p>
 
 <p>我们推荐使用宏来创建这些常见的链接，这样不但简洁，对翻译工作也很友好——使用宏创建的术语库和技术参考链接不需要翻译者再做处理，这些宏可提供正确的链接，使其符合当前页面的语言。</p>
 
@@ -45,9 +45,7 @@ original_slug: MDN/Structures/Macros/Custom_macros
 
 <ul>
   <li><code>\{{anch("Linking to pages in references","链接到 MDN 的参考文档页面")}}</code></li>
-  <li>
-    <p>实际效果：{{anch("Linking to pages in references","链接到 MDN 的参考文档页面")}}</p>
-  </li>
+  <li><p>实际效果：{{anch("Linking to pages in references","链接到 MDN 的参考文档页面")}}</p></li>
 </ul>
 
 <h3 id="Linking_to_pages_in_references">链接到 MDN 的参考文档页面</h3>
@@ -142,26 +140,23 @@ original_slug: MDN/Structures/Macros/Custom_macros
 <ul>
   <li>Bugs
     <ul>
-      <li>通过编号，{{TemplateLink("bug")}}宏可以指向<a href="bugzilla.mozilla.org">bugzilla.mozilla.org</a>站内相应的 bug，<code>\{{Bug(123456)}}</code>会指向{{Bug(123456)}}.
-      </li>
-      <li>类似的，{{TemplateLink("WebkitBug")}}宏同样可以借助编号，指向 WebKit bug 库里对应的 bug。例如，<code>\{{WebkitBug(31277)}}</code>会指向{{WebkitBug(31277)}}.
-      </li>
+      <li>通过编号，{{TemplateLink("bug")}}宏可以指向<a href="bugzilla.mozilla.org">bugzilla.mozilla.org</a>站内相应的 bug，<code>\{{Bug(123456)}}</code>会指向{{Bug(123456)}}.</li>
+      <li>类似的，{{TemplateLink("WebkitBug")}}宏同样可以借助编号，指向 WebKit bug 库里对应的 bug。例如，<code>\{{WebkitBug(31277)}}</code>会指向{{WebkitBug(31277)}}.</li>
     </ul>
   </li>
 </ul>
 
 <h3 id="Navigation_aids_for_multi-page_guides">多页面间的导航栏</h3>
 
-<p>
-  {{TemplateLink("Previous")}}、{TemplateLink("Next")}}、{{TemplateLink("PreviousNext")}}、{{TemplateLink("PreviousMenuNext")}}这几个宏可以在页面中创建导航栏，帮助读者按照文章的先后顺序阅读。其中的参数需要填入目标页面在 MDN 中的位置，你可以在页面的网址中找到所需的信息。例如 <a href="/zh-CN/docs/Learn/JavaScript/Objects/Inheritance">JavaScript 中的继承</a>这个页面，链接地址为“https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Inheritance”，那么它在 MDN 中的位置就可以用<code>Learn/JavaScript/Objects/Object_prototypes</code>描述。</p>
+<p>{{TemplateLink("Previous")}}、{TemplateLink("Next")}} 和 {{TemplateLink("PreviousNext")}} 这几个宏可以在页面中创建导航栏，帮助读者按照文章的先后顺序阅读。其中的参数需要填入目标页面在 MDN 中的位置，你可以在页面的网址中找到所需的信息。对于 {{TemplateLink("PreviousNext")}}，需要的两个参数是相应文章的 Wiki 位置。第一个参数用于上一篇文章，第二个参数用于下一篇文章。</p>
 
 <h2 id="Code_samples">代码示例</h2>
 
 <h3 id="Live_samples">动态示例</h3>
 
 <ul>
-  <li>{{TemplateLink("EmbedLiveSample")}} 可嵌入一个在<a href="/zh-CN/docs/MDN/Contribute/Structures/Live_samples">动态示例</a>中描述的代码示例，到当前页面上。</li>
-  <li>{{TemplateLink("LiveSampleLink")}} 创建一个页面链接，其中包含如<a href="/zh-CN/docs/MDN/Contribute/Structures/Live_samples">动态示例</a>中描述的示例的结果。</li>
+  <li>{{TemplateLink("EmbedLiveSample")}} 可嵌入一个在<a href="/zh-CN/docs/MDN/Structures/Live_samples">在线示例</a>中描述的代码示例到当前页面上。</li>
+  <li>{{TemplateLink("LiveSampleLink")}} 创建指向包含页面上代码示例输出的页面的链接，如<a href="/zh-CN/docs/MDN/Structures/Live_samples">在线示例</a> 中所述。</li>
   <li>{{TemplateLink("EmbedGHLiveSample")}} 提供了一种新的动态示例编写和使用方式，你可以在<a href="/zh-CN/docs/MDN/Structures/Code_examples#github_live_samples">Github动态示例</a>中了解更多信息。</li>
 </ul>
 
@@ -179,8 +174,7 @@ original_slug: MDN/Structures/Macros/Custom_macros
 
 <h3 id="Inline_indicators_for_API_documentation">API 文档的行内指示器</h3>
 
-<p>{{TemplateLink("optional_inline")}} 和 {{TemplateLink("ReadOnlyInline")}} 被用于 API 文档，通常可以用来描述一个对象的属性是只读的或一个函数的参数是可省略的。
-</p>
+<p>{{TemplateLink("optional_inline")}} 和 {{TemplateLink("ReadOnlyInline")}} 被用于 API 文档，通常可以用来描述一个对象的属性是只读的或一个函数的参数是可省略的。</p>
 
 <p>用法: <code>\{{optional_inline}}</code> 或 <code>\{{ReadOnlyInline}} 。</code>示例：</p>
 
@@ -195,48 +189,48 @@ original_slug: MDN/Structures/Macros/Custom_macros
 
 <h3 id="Inline_indicators_with_no_additional_parameters">无需参数的行内指示器</h3>
 
-<h4 id="Non-standard">非标准</h4>
+<h4 id="Non-standard">非标准的</h4>
 
-<p>{{TemplateLink("non-standard_inline")}} 指示当前 API 还没有被标准化，也没有进入标准化议程。</p>
+<p>{{TemplateLink("non-standard_inline")}} 插入一个行内标记，表示 API 尚未标准化并且不在标准轨道上。</p>
 
-<h5 id="Syntax"><strong>语法</strong></h5>
+<h5 id="Syntax">语法</h5>
 
-<p><code>\{{non-standard_inline}}</code></p>
+<p><code>\{{Non-standard_Inline}}</code></p>
 
 <h5 id="Examples">示例</h5>
 
 <ul>
-  <li>图标：{{non-standard_inline}}</li>
+  <li>图标：{{Non-standard_Inline}}</li>
 </ul>
 
 <h4 id="Experimental">实验性的</h4>
 
-<p>{{TemplateLink("experimental_inline")}} 指示当前 API 没有被广泛支持，且将来可能会有所修改。</p>
+<p>{{TemplateLink("Experimental_Inline")}} 插入一个行内标记，表示当前 API 没有被广泛地实现，并且在以后可能会改变。</p>
 
 <h5 id="Syntax_2">语法</h5>
 
-<p><code>\{{experimental_inline}}</code></p>
+<p><code>\{{Experimental_Inline}}</code></p>
 
 <h5 id="Examples_2"><code>示例</code></h5>
 
 <ul>
-  <li>图标：{{experimental_inline}}</li>
+  <li>图标：{{Experimental_Inline}}</li>
 </ul>
 
 <h3 id="Inline_indicators_that_support_specifying_the_technology">代表明确技术参考的行内指示器</h3>
 
-<h4 id="Deprecated">不赞成的</h4>
+<h4 id="Deprecated">已弃用</h4>
 
-<p>{{TemplateLink("deprecated_inline")}}会插入一个带有“不赞成”的行内指示器，即{{Deprecated_Inline}}。这表示不鼓励使用该 API ，或其已经被移除。</p>
+<p>{{TemplateLink("deprecated_inline")}}会插入一个带有 ({{Deprecated_Inline}}) 的标记以阻止使用官方不推荐使用（或已删除）的 API。</p>
 
 <h5 id="Syntax_3">语法</h5>
 
-<p><code>\{{deprecated_inline}}</code>></p>
+<p><code>\{{Deprecated_Inline}}</code></p>
 
 <h5 id="Examples_3">示例</h5>
 
 <ul>
-  <li>图标：{{deprecated_inline}}</li>
+  <li>图标：{{Deprecated_Inline}}</li>
 </ul>
 
 <h3 id="Page_or_section_header_indicators">页面或章节头部的指示器</h3>
@@ -244,26 +238,24 @@ original_slug: MDN/Structures/Macros/Custom_macros
 <p>下列指示器的含义，类似于上述的内联指示器。这些组件应直接放置在技术参考页面的标题（或面包屑导航栏）下，也可以用于标记页面上的某个小节。</p>
 
 <ul>
-  <li>{{TemplateLink("non-standard_header")}}语法：<code>\{{Non-standard_header()}}</code> {{ Non-standard_header}}</li>
-
-  <li>{{TemplateLink("SeeCompatTable")}} 对于一些介绍<a href="/zh-CN/docs/MDN/Guidelines/Conventions_definitions#experimental">实验性功能</a>的内容，应当在这些内容前放置此指示器。语法：<code>\{{SeeCompatTable}}</code> {{SeeCompatTable()}}</li>
-
-  <li>{{TemplateLink("deprecated_header")}}: <code>\{{deprecated_header()}}</code> {{ Deprecated_header() }}</li>
-
-  <li>{{TemplateLink("secureContext_header")}}: <code>\{{SecureContext_Header}}</code> {{SecureContext_Header}}</li>
+  <li>{{TemplateLink("non-standard_header")}}语法：<code>\{{Non-standard_Header}}</code> {{Non-standard_Header}}</li>
+  <li>{{TemplateLink("SeeCompatTable")}} 对于一些介绍<a href="/zh-CN/docs/MDN/Guidelines/Conventions_definitions#experimental">实验性功能</a>的内容，应当在这些内容前放置此指示器。语法：<code>\{{SeeCompatTable}}</code> {{SeeCompatTable}}</li>
+  <li>{{TemplateLink("deprecated_header")}}: <code>\{{Deprecated_Header}}</code> {{Deprecated_Header}}</li>
+  <li>{{TemplateLink("secureContext_header")}}: 应该用于界面页面、API 概览页面和 API 入口点（例如 <code>navigator.xyz</code>）等主要页面，但通常不在方法和属性页面等子页面上使用。语法： <code>\{{SecureContext_Header}}</code> {{SecureContext_Header}}</li>
 </ul>
 
-<h3 id="Indicating_that_a_feature_is_available_in_web_workers">指示一个功能在 web workers 中可用</h3>
+<h3 id="Indicating_that_a_feature_is_available_in_web_workers">表明某个功能在 Web Worker 中可用的指示器</h3>
 
-<p> {{TemplateLink("AvailableInWorkers")}} 宏插入一个本地化的指示框，指示一个功能在<a href="/zh-CN/docs/Web/API/Web_Workers_API">Web worker</a>上下文中可用。它还有一个可选参数，当带有<code>notservice</code>时，表示该功能在 web worker 中可用但在 servcie worker 中不可用。</p>
+<p>{{TemplateLink("AvailableInWorkers")}} 宏插入一个本地化的注释框，指示一个功能在 <a href="/zh-CN/docs/Web/API/Web_Workers_API">Web worker</a> 上下文中可用。它还有一个可选参数，当带有<code>notservice</code>时，表示该功能在 Web Worker 中可用但在 Servcie Worker 中不可用。</p>
 
 <h5 id="Syntax_4">语法</h5>
 
-<p>\{{AvailableInWorkers}}
-  \{{AvailableInWorkers("notservice")}}</p>
+<pre>\{{AvailableInWorkers}}
+\{{AvailableInWorkers("notservice")}}</pre>
 
 <h5 id="Examples_5">Examples</h5>
 
-<div>{{AvailableInWorkers}}
+<div>
+  {{AvailableInWorkers}}
   {{AvailableInWorkers("notservice")}}
 </div>

@@ -20,12 +20,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 
 <p class="hidden">Источник этого интерактивного примера хранится в репозитории GitHub. Если вы хотите внести свой вклад в проект интерактивных примеров, скопируйте https://github.com/mdn/interactive-examples и отправьте нам запрос на перенос.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="brush: js">let <var>newArray</var> = <var>arr</var>.filter(<var>callback</var>(<var>element</var>[, <var>index</var>, [<var>array</var>]])[, <var>thisArg</var>])
 </pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>callback</code></dt>
@@ -49,7 +49,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 
 <p>Вернётся новый массив с элементами, которые проходят тест, то есть <code>callback</code> вернёт <code>true</code>. Если ни один элемент не пройдёт тест, то будет возвращён пустой массив.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>filter()</code> вызывает переданную функцию <code>callback</code> один раз для каждого элемента, присутствующего в массиве, и конструирует новый массив со всеми значениями, для которых функция <code>callback</code> вернула <code>true</code> или {{Glossary('Truthy', 'значение, становящееся true при приведении в boolean')}}. Функция <code>callback</code> вызывается только для индексов массива, имеющих присвоенные значения; она не вызывается для индексов, которые были удалены или которым значения никогда не присваивались. Элементы массива, не прошедшие проверку функцией <code>callback</code>, просто пропускаются и не включаются в новый массив.</p>
 
@@ -67,9 +67,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 
 <p>Диапазон элементов, обрабатываемых методом <code>filter()</code>, устанавливается до первого вызова функции <code>callback</code>. Элементы, добавленные в массив после начала выполнения метода <code>filter()</code>, не будут посещены функцией <code>callback</code>. Если существующие элементы массива изменятся, значения, переданные в функцию <code>callback</code>, будут значениями на тот момент времени, когда метод <code>filter()</code> посетит их; удалённые элементы посещены не будут.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Filtering_out_all_small_values" name="Filtering_out_all_small_values">Отфильтровывание всех маленьких значений</h3>
+<h3 id="Filtering_out_all_small_values">Отфильтровывание всех маленьких значений</h3>
 
 <p>Следующий пример использует <code>filter()</code> для создания отфильтрованного массива, все элементы которого больше или равны 10, а все меньшие 10 удалены.</p>
 
@@ -81,7 +81,7 @@ let filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 // массив filtered равен [12, 130, 44]
 </pre>
 
-<h3 id="Find_all_prime_numbers_in_an_array" name="Find_all_prime_numbers_in_an_array">Найти все простые числа в массиве</h3>
+<h3 id="Find_all_prime_numbers_in_an_array">Найти все простые числа в массиве</h3>
 
 <p>Следующий пример возвращает все простые числа в массиве:</p>
 
@@ -102,7 +102,7 @@ function isPrime(num) {
 
 console.log(array.filter(isPrime));   // [53, 2, 5, 7, 31, 97, 17]</code></pre>
 
-<h3 id="Filtering_invalid_entries_from_JSON" name="Filtering_invalid_entries_from_JSON">Фильтрация неверных записей в JSON</h3>
+<h3 id="Filtering_invalid_entries_from_JSON">Фильтрация неверных записей в JSON</h3>
 
 <p>В следующем примере метод <code>filter()</code> используется для создания отфильтрованного объекта JSON, все элементы которого содержат ненулевое числовое поле <code>id</code>.</p>
 
@@ -161,7 +161,7 @@ function filterItems(query) {
 console.log(filterItems('ap')); // ['apple', 'grapes']
 console.log(filterItems('an')); // ['banana', 'mango', 'orange']</pre>
 
-<h3 id="ES2015_implementation" name="ES2015_implementation">ES2015 реализация</h3>
+<h3 id="ES2015_implementation">ES2015 реализация</h3>
 
 <pre class="brush: js">const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
 
@@ -179,7 +179,7 @@ console.log(filterItems('an')); // ['banana', 'mango', 'orange']
 
 </pre>
 
-<h3 id="Affecting_Initial_Array_modifying_appending_and_deleting" name="Affecting_Initial_Array_modifying_appending_and_deleting">Влияние на начальный массив (изменение, добавление и удаление)</h3>
+<h3 id="Affecting_Initial_Array_modifying_appending_and_deleting">Влияние на начальный массив (изменение, добавление и удаление)</h3>
 
 <p>В следующих примерах проверяется поведение метода <code>filter</code> при изменении массива.</p>
 
@@ -217,7 +217,7 @@ console.log(deleteWords)
 // Заметьте, что 'elite' не получено, так как удалено из `words` до того,
 // как filter смог получить его: ['spray', 'limit']</pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Метод <code>filter()</code> был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>filter()</code> в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 5-го издания; он предполагает, что <code>fn.call</code> вычисляется в оригинальное значение {{jsxref("Function.prototype.call()")}} и что {{jsxref("Array.prototype.push()")}} содержит своё оригинальное значение.</p>
 
@@ -257,7 +257,7 @@ console.log(deleteWords)
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
 <table class="standard-table">
  <tbody>
@@ -284,13 +284,13 @@ console.log(deleteWords)
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <div>
 <p>{{Compat("javascript.builtins.Array.filter")}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.forEach()")}}</li>

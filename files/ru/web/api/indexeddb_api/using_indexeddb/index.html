@@ -16,7 +16,7 @@ translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 
 <p>Справочную документацию по IndexedDB API вы найдёте в документе <a href="/en/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB.</a> В нем описаны типы объектов, используемых в IndexedDB, а также синхронный и асинхронный API.</p>
 
-<h2 id="pattern" name="pattern">Типичная схема работы с базой</h2>
+<h2 id="pattern">Типичная схема работы с базой</h2>
 
 <p>Обычная последовательность шагов при работе с IndexedDB :</p>
 
@@ -34,7 +34,7 @@ translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 
 <p>Теперь, получив общее представление, переходим к более конкретным деталям.</p>
 
-<h2 id="open" name="open">Создание и структурирование хранилища</h2>
+<h2 id="open">Создание и структурирование хранилища</h2>
 
 <p>Так как спецификация пока ещё находится в процессе разработки, то текущие реализации IndexedDB отличаются у различных браузеров и могут содержать имена объектов, включающие в себя префиксы браузеров. Однако, как только стандарт будет принят,  префиксы будут удалены. К настоящему моменту префиксы уже удалены в реализациях IndexedDB в Internet Explorer 10, Firefox 16 и Chrome 24. Браузеры, построенные на базе Gecko пока ещё используют префикс <code>moz,</code> а браузеры на базе движка <code>webkit</code> используют префикс <code>webkit.</code></p>
 
@@ -479,7 +479,7 @@ function useDatabase(db) {
 
 <p>In fact, there is no way to guarantee that IndexedDB transactions will complete, even with normal browser shutdown.  See {{ bug(870645) }}.</p>
 
-<h2 id="Full_IndexedDB_example" name="Full_IndexedDB_example">Full IndexedDB example</h2>
+<h2 id="Full_IndexedDB_example">Full IndexedDB example</h2>
 
 <h3 id="HTML_Content">HTML Content</h3>
 

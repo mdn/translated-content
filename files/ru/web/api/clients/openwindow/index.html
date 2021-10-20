@@ -51,7 +51,7 @@ if (self.Notification.permission === 'granted') {
   self.registration.showNotification('You\'ve got messages!', notificationObject);
 }
 
-// Слушатель события клика по уведомлению
+// Обработчик события клика по уведомлению
 self.addEventListener('notificationclick', e =&gt; {
   // Закрываем всплывающее окно с уведомлением
   e.notification.close();

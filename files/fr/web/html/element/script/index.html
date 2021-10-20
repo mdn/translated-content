@@ -12,7 +12,7 @@ translation_of: Web/HTML/Element/script
 
 <p>L'élément HTML <strong><code>&lt;script&gt;</code></strong> est utilisé pour intégrer ou faire référence à un script exécutable. Cela fait généralement référence à du code JavaScript mais ce peut également être un autre type de script (par exemple <a href="/fr/docs/Apprendre/WebGL">WebGL</a>).</p>
 
-<p>Les scripts sans attribut <code>async</code> ou <code>defer</code> sont chargés et exécutés immédiatement avant que le navigateur continue l'analyse de la page.</p>
+<p>Les scripts sans attribut <code>async</code> ou <code>defer</code> sont chargés et exécutés immédiatement avant que le navigateur continue l'analyse de la page.</p>
 
 <h2 id="Attributs">Attributs</h2>
 
@@ -20,24 +20,23 @@ translation_of: Web/HTML/Element/script
 
 <dl>
  <dt>{{htmlattrdef("async")}}</dt>
- <dd>Cet attribut booléen indique si le navigateur doit, dans la mesure du possible, exécuter les scripts de manière asynchrone. <strong><em>Cet attribut ne doit pas être utilisé si l'attribut <code>src</code> est absent (c'est-à-dire pour les scripts « inline » déclarés dans les éléments), dans ce cas il n'aurait aucun effet.</em></strong></dd>
- <dd>Par défaut, les navigateurs prennent l'hypothèse la plus pessimiste et chargent les scripts de façon synchrone (autrement dit, le comportement par défaut est <code>async="false"</code>) lors de l'analyse du document HTML.</dd>
- <dd>Les scripts insérés dynamiquement (via {{domxref("document.createElement()")}}) sont exécutés de façon asynchrone par défaut. Pour activer le mode d'exécution synchrone, il faudra explicitement indiquer <code>async="false"</code>.<br>
- <br>
- Se référer au tableau de compatibilité ci-après pour les informations concernant la prise en charge par les navigateurs. Voir aussi la page sur <a href="/fr/docs/Games/Techniques/Async_scripts">les scripts asynchrones avec asm.js</a>.</dd>
+ <dd><p>Cet attribut booléen indique si le navigateur doit, dans la mesure du possible, exécuter les scripts de manière asynchrone. <strong><em>Cet attribut ne doit pas être utilisé si l'attribut <code>src</code> est absent (c'est-à-dire pour les scripts « inline » déclarés dans les éléments), dans ce cas il n'aurait aucun effet.</em></strong></p>
+ <p>Par défaut, les navigateurs prennent l'hypothèse la plus pessimiste et chargent les scripts de façon synchrone (autrement dit, le comportement par défaut est <code>async="false"</code>) lors de l'analyse du document HTML.</p>
+ <p>Les scripts insérés dynamiquement (via {{domxref("document.createElement()")}}) sont exécutés de façon asynchrone par défaut. Pour activer le mode d'exécution synchrone, il faudra explicitement indiquer <code>async="false"</code>.</p>
+ <p>Se référer au tableau de compatibilité ci-après pour les informations concernant la prise en charge par les navigateurs. Voir aussi la page sur <a href="/fr/docs/Games/Techniques/Async_scripts">les scripts asynchrones avec asm.js</a>.</p></dd>
  <dt>{{htmlattrdef("crossorigin")}}</dt>
  <dd>Les balises de <code>script</code> classiques enverront un minimum d'informations à {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} pour les scripts qui ne respectent pas les contrôles standard du <a href="/fr/docs/HTTP/Access_control_CORS">CORS</a>. Afin de disposer de plus de renseignements sur les erreurs pour les sites utilisant des domaines séparés pour des documents statiques, on pourra utiliser cet attribut. Voir <a href="/fr/docs/Web/HTML/Reglages_des_attributs_CORS">la page de réglages des attributs CORS</a> pour plus d'explications quant aux valeurs valides.</dd>
  <dt>{{htmlattrdef("defer")}}</dt>
- <dd>Cet attribut booléen permet d'indiquer au navigateur que le script doit être exécuté après l'analyse du document et avant l'évènement {{event("DOMContentLoaded")}}. <strong><em>Cet attribut ne doit pas être utilisé si l'attribut <code>src</code> est absent (c'est-à-dire pour les scripts contenus déclarés dans les éléments), dans ce cas il n'aurait aucun effet.</em></strong> Pour obtenir un effet similaire avec les scripts insérés de façon dynamique, on utilisera explicitement <code>async=false</code>. Les scripts qui possèdent un attribut <code>defer</code> seront exécutés dans l'ordre dans lequel ils apparaissent dans le document.</dd>
- <dd>Les scripts qui utilisent l'attribut <code>defer</code> empêche le déclenchement de l'évènement <code>DOMContentLoaded</code> tant que le script n'a pas été chargé et que son évaluation n'est pas terminée.</dd>
+ <dd><p>Cet attribut booléen permet d'indiquer au navigateur que le script doit être exécuté après l'analyse du document et avant l'évènement {{event("DOMContentLoaded")}}. <strong><em>Cet attribut ne doit pas être utilisé si l'attribut <code>src</code> est absent (c'est-à-dire pour les scripts contenus déclarés dans les éléments), dans ce cas il n'aurait aucun effet.</em></strong> Pour obtenir un effet similaire avec les scripts insérés de façon dynamique, on utilisera explicitement <code>async=false</code>. Les scripts qui possèdent un attribut <code>defer</code> seront exécutés dans l'ordre dans lequel ils apparaissent dans le document.</p>
+ <p>Les scripts qui utilisent l'attribut <code>defer</code> empêche le déclenchement de l'évènement <code>DOMContentLoaded</code> tant que le script n'a pas été chargé et que son évaluation n'est pas terminée.</p></dd>
  <dt>{{htmlattrdef("integrity")}}</dt>
  <dd>Cet attribut contient des métadonnées que l'agent utilisateur peut vérifier afin de contrôler qu'une ressource téléchargée n'a pas été modifiée de façon frauduleuse. Pour plus d'informations, consulter <a href="/fr/docs/Web/Security/Subresource_Integrity">la page relative à l'intégrité des sous-ressources</a>.</dd>
  <dt>{{htmlattrdef("nomodule")}}</dt>
  <dd>Cet attribut booléen indique que le script ne doit pas être exécuté dans le navigateur si celui prend en charge <a href="https://tech.mozfr.org/post/2015/08/21/ES6-en-details-%3A-les-modules">les modules ES6</a>. En pratique, de tels scripts seront utilisés pour couvrir les cas où le navigateur ne prend pas en charge les modules JavaScript.</dd>
  <dt>{{htmlattrdef("nonce")}}</dt>
  <dd>Un <em>nonce</em> cryptographique utilisé pour inscrire les scripts en ligne sur une liste blanche pour la règle <code>script-src</code> de la CSP (<em>Content Security Policy</em>). Le serveur doit générer un nonce unique chaque fois qu'il transmet une règle de sécurité. Ce nonce ne doit pas pouvoir être deviné car sinon, il devient trivial d'outrepasser la règle de sécurité.</dd>
- <dt id="attr-referrer">{{htmlattrdef("referrerpolicy")}}</dt>
- <dd>Une chaîne de caractères qui indique le référent (<em>referrer</em>) à utiliser lors de la récupération du script :
+ <dt>{{htmlattrdef("referrerpolicy")}}</dt>
+ <dd><p>Une chaîne de caractères qui indique le référent (<em>referrer</em>) à utiliser lors de la récupération du script :</p>
  <ul>
   <li><code>no-referrer</code> signifie que l'en-tête {{HTTPHeader("Referer")}} ne sera pas envoyé.</li>
   <li><code>no-referrer-when-downgrade</code> signifie qu'aucune en-tête <code>Referrer</code> ne sera envoyé lorsqu'on navigue vers une origine qui n'utilise pas TLS (HTTPS). C'est le comportement par défaut de l'agent utilisateur.</li>
@@ -161,17 +160,17 @@ translation_of: Web/HTML/Element/script
   <tr>
    <td>{{SpecName("HTML5.1", "semantics-scripting.html#the-script-element", "&lt;script&gt;")}}</td>
    <td>{{Spec2("HTML5.1")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName("HTML5 W3C", "scripting-1.html#script", "&lt;script&gt;")}}</td>
    <td>{{Spec2("HTML5 W3C")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName("HTML4.01", "interact/scripts.html#h-18.2.1", "&lt;script&gt;")}}</td>
    <td>{{Spec2("HTML4.01")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName("Subresource Integrity", "#htmlscriptelement", "&lt;script&gt;")}}</td>

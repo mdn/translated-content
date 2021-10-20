@@ -433,7 +433,7 @@
 /fr/docs/CSS/Premiers_pas/Les_sélecteurs	/fr/docs/conflicting/Learn/CSS/Building_blocks/Selectors_9bc80fea302c91cd60fb72c4e83c83e9
 /fr/docs/CSS/Premiers_pas/Listes	/fr/docs/conflicting/Learn/CSS/Styling_text/Styling_lists_06e9538892250c13976a84639f0dadd2
 /fr/docs/CSS/Premiers_pas/Mise_en_page	/fr/docs/conflicting/Learn/CSS/CSS_layout
-/fr/docs/CSS/Premiers_pas/Médias	/fr/docs/Web/Progressive_web_apps/Responsive/Media_types
+/fr/docs/CSS/Premiers_pas/Médias	/fr/docs/Web/CSS/Media_Queries/Using_media_queries
 /fr/docs/CSS/Premiers_pas/Pourquoi_utiliser_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_ecbda2160290b96c02dcfa8276c0333a
 /fr/docs/CSS/Premiers_pas/Présentation_des_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_dba75d8c56ccc773f03d946ce2dbb25c
 /fr/docs/CSS/Premiers_pas/Styles_de_texte	/fr/docs/conflicting/Learn/CSS/Styling_text/Fundamentals_8249b1bf53d09b06ed51f43697880b5b
@@ -747,7 +747,7 @@
 /fr/docs/CSS:Premiers_pas:Les_sélecteurs	/fr/docs/conflicting/Learn/CSS/Building_blocks/Selectors_9bc80fea302c91cd60fb72c4e83c83e9
 /fr/docs/CSS:Premiers_pas:Listes	/fr/docs/conflicting/Learn/CSS/Styling_text/Styling_lists_06e9538892250c13976a84639f0dadd2
 /fr/docs/CSS:Premiers_pas:Mise_en_page	/fr/docs/conflicting/Learn/CSS/CSS_layout
-/fr/docs/CSS:Premiers_pas:Médias	/fr/docs/Web/Progressive_web_apps/Responsive/Media_types
+/fr/docs/CSS:Premiers_pas:Médias	/fr/docs/Web/CSS/Media_Queries/Using_media_queries
 /fr/docs/CSS:Premiers_pas:Pourquoi_utiliser_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_ecbda2160290b96c02dcfa8276c0333a
 /fr/docs/CSS:Premiers_pas:Présentation_des_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_dba75d8c56ccc773f03d946ce2dbb25c
 /fr/docs/CSS:Premiers_pas:Styles_de_texte	/fr/docs/conflicting/Learn/CSS/Styling_text/Fundamentals_8249b1bf53d09b06ed51f43697880b5b
@@ -3459,8 +3459,8 @@
 /fr/docs/Web/API/API_fichier_systeme	/fr/docs/Web/API/File_and_Directory_Entries_API
 /fr/docs/Web/API/AbstractWorker	/fr/docs/orphaned/Web/API/AbstractWorker
 /fr/docs/Web/API/Ambient_Light_Events	/fr/docs/orphaned/Web/API/Ambient_Light_Events
-/fr/docs/Web/API/AnimationEffectTimingProperties	/fr/docs/Web/API/EffectTiming
-/fr/docs/Web/API/AnimationEffectTimingProperties/delay	/fr/docs/Web/API/EffectTiming/delay
+/fr/docs/Web/API/AnimationEffectTimingProperties	/fr/docs/conflicting/Web/API/KeyframeEffect/KeyframeEffect
+/fr/docs/Web/API/AnimationEffectTimingProperties/delay	/fr/docs/Web/API/KeyframeEffect/KeyframeEffect
 /fr/docs/Web/API/AnimationEvent.animationName	/fr/docs/Web/API/AnimationEvent/animationName
 /fr/docs/Web/API/AnimationEvent.elapsedTime	/fr/docs/Web/API/AnimationEvent/elapsedTime
 /fr/docs/Web/API/AnimationEvent.pseudoElement	/fr/docs/Web/API/AnimationEvent/pseudoElement
@@ -3546,6 +3546,8 @@
 /fr/docs/Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_W3C	/fr/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 /fr/docs/Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_W3C/Exemple	/fr/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example
 /fr/docs/Web/API/DoubleRange	/fr/docs/Web/API/MediaTrackConstraints
+/fr/docs/Web/API/EffectTiming	/fr/docs/conflicting/Web/API/KeyframeEffect/KeyframeEffect
+/fr/docs/Web/API/EffectTiming/delay	/fr/docs/Web/API/KeyframeEffect/KeyframeEffect
 /fr/docs/Web/API/Element.activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/Web/API/Element.addEventListener	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/Web/API/Element.appendChild	/fr/docs/Web/API/Node/appendChild
@@ -5488,6 +5490,7 @@
 /fr/docs/Web/Progressive_web_apps/Progressive	/fr/docs/conflicting/Web/Progressive_web_apps_954d3e6cc1e06f006b865b74099f55cf
 /fr/docs/Web/Progressive_web_apps/Re-engageable	/fr/docs/conflicting/Web/Progressive_web_apps_cb2823fe6cfc1ddee5db1f6a5d240c67
 /fr/docs/Web/Progressive_web_apps/Relancer_Via_Notifications_Push	/fr/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push
+/fr/docs/Web/Progressive_web_apps/Responsive/Media_types	/fr/docs/Web/CSS/Media_Queries/Using_media_queries
 /fr/docs/Web/Progressive_web_apps/Securisee	/fr/docs/conflicting/Web/Progressive_web_apps_0d5c38b9aa908cbb52e4c39037b4f28b
 /fr/docs/Web/Progressive_web_apps/ajouter_a_lecran_daccueil_a2hs	/fr/docs/Web/Progressive_web_apps/Add_to_home_screen
 /fr/docs/Web/Reference	/fr/docs/orphaned/Web/Reference

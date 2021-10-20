@@ -9,7 +9,7 @@ translation_of: Web/API/Gamepad_API/Using_the_Gamepad_API
 
 <p><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> добавляет в  объект {{ domxref("Window") }}  новые события для получения событий контроллера. Дополнительно к этим событиям, API также добавляет объект {{ domxref("Gamepad") }}, который позволяет получить  состояние подключённого контроллера, и метод {{ domxref("navigator.getGamepads()") }} который позволяет получить все контроллеры, определённые на странице браузера.</p>
 
-<h2 id="conntecting" name="conntecting">Подключение геймпада</h2>
+<h2 id="conntecting">Подключение геймпада</h2>
 
 <p>Когда новый  геймпад подключается, на странице срабатывают события  {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}. Если геймпад уже был подключён к моменту загрузки страницы, события  {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} сработают, когда пользователь нажмёт на любую кнопку или передвинет стики. </p>
 
@@ -28,7 +28,7 @@ translation_of: Web/API/Gamepad_API/Using_the_Gamepad_API
 
 <p>Каждый геймпад имеет уникальный ID, который доступен в свойстве {{domxref("GamepadEvent.gamepad", "gamepad")}}.</p>
 
-<h2 id="disconnecting" name="disconnecting">Отключение геймпада</h2>
+<h2 id="disconnecting">Отключение геймпада</h2>
 
 <p>When a gamepad is disconnected, and if a page has previously received data for that gamepad (e.g. {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}), a second event is dispatched to the focused window, {{ event("gamepaddisconnected") }}:</p>
 
@@ -59,7 +59,7 @@ window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, f
 
 <p>This previous example also demonstrates how the <code>gamepad</code> property can be held after the event has completed — a technique we will use for device state querying later.</p>
 
-<h2 id="querying" name="querying">Querying the Gamepad object</h2>
+<h2 id="querying">Querying the Gamepad object</h2>
 
 <p>As you can see, the <strong>gamepad</strong> events discussed above include a <code>gamepad</code> property on the event object, which returns a {{ domxref("Gamepad") }} object. We can use this in order to determine which gamepad (i.e., its ID) had caused the event, since multiple gamepads might be connected at once. We can do much more with the {{ domxref("Gamepad") }} object, including holding a reference to it and querying it to find out which buttons and axes are being pressed at any one time. Doing so is often desirable for games or other interactive web pages that need to know the state of a gamepad now vs. the next time an event fires.</p>
 

@@ -16,8 +16,6 @@ translation_of: Web/HTML/Element/input/datetime-local
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}</div>
 
-<div class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</div>
-
 <p>L'interface utilisateur du contrôle varie selon les navigateurs. La prise en charge de cette fonctionnalité est hétérogène : Chrome/Opera et Edge l'implémentent pour les navigateurs de bureau et la plupart des navigateurs mobiles l'implémentent. Pour les navigateurs qui n'implémentent pas cette fonctionnalité, le contrôle utilisé est celui de <code><a href="/fr/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
 
 <p>Les secondes ne sont pas prises en charge.</p>
@@ -28,21 +26,11 @@ translation_of: Web/HTML/Element/input/datetime-local
 
 <p>Certains navigateurs pourront utiliser un contrôle avec un texte simple et vérifier que la valeur date/heure est correcte avant de l'envoyer au serveur. Toutefois, ce contrôle ayant lieu côté client, vous devrez nécessairement vérifier le bon format de la donnée côté serveur.</p>
 
-<p>Voici, ci-après, un aperçu du contrôle obtenu dans un navigateur fonctionnel. En cliquant sur la flèche vers le bas, cela fait apparaître un sélecteur de date et il faut ensuite saisir l'heure manuellement. Pour Chrome / Opera :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14949/datetime-local-chrome.png" style="display: block; height: 224px; margin: 0px auto; width: 280px;"></p>
-
-<p>Pour Edge, le contrôle associé à <code>datetime-local</code> se décompose en deux sélecteurs : un pour la date et un pour l'heure qui apparaissent quand on clique sur les éléments respectifs du champ :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14953/datetime-local-picker-edge1.png" style="display: block; height: 398px; margin: 0px auto; width: 320px;"></p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14955/datetime-local-picker-edge2.png" style="display: block; height: 394px; margin: 0px auto; width: 264px;"></p>
-
 <h2 id="Valeur">Valeur</h2>
 
 <p>Une chaîne de caractères ({{domxref("DOMString")}}) qui représente la valeur de la date saisie dans le contrôle. Le format utilisable est décrit dans <a href="/fr/docs/Web/HTML/Formats_date_heure_HTML#Représentation_des_dates_et_heures_locales">cette section de l'article sur les formats</a>. Il est possible d'indiquer une date par défaut grâce à l'attribut {{htmlattrxref("value", "input")}} :</p>
 
-<pre class="brush: html notranslate">&lt;label for="party"&gt;Veuillez saisir une date et une heure pour la fête :&lt;/label&gt;
+<pre class="brush: html">&lt;label for="party"&gt;Veuillez saisir une date et une heure pour la fête :&lt;/label&gt;
 &lt;input id="party" type="datetime-local" name="partydate" value="2017-06-01T08:30"&gt;</pre>
 
 <p>{{EmbedLiveSample('Valeur', 600, 60)}}</p>
@@ -50,12 +38,12 @@ translation_of: Web/HTML/Element/input/datetime-local
 <p>On notera ici que le format de la date affichée n'est pas celui utilisé pour écrire la valeur de l'attribut <code>value</code>. Le format d'affichage de la date sera choisi en fonction de la locale du système d'exploitation de l'utilisateur. En revanche, l'attribut <code>value</code> sera toujours formaté de la façon suivante : <code>yyyy-MM-ddThh:mm</code>. Lorsque la valeur est envoyée au serveur, elle aura donc ce format : <code>partydate=2017-06-01T08:30</code>.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Attention si les données sont envoyées avec la méthode HTTP <code><a href="/fr/docs/HTTP/Méthode/GET">GET</a></code>, les deux points (:) devront être échappés pour être intégrés dans les paramètres de l'URL. Avec l'exemple précédent, cela signifie qu'on enverra <code>partydate=2017-06-01T08%3A30</code>. Si on souhaite échapper une chaîne de caractères de la même façon en JavaScript, on pourra utiliser {{jsxref("Objets_globaux/encodeURI", "encodeURI()")}}.</p>
+<p><strong>Note :</strong> Attention si les données sont envoyées avec la méthode HTTP <code><a href="/fr/docs/HTTP/Méthode/GET">GET</a></code>, les deux points (:) devront être échappés pour être intégrés dans les paramètres de l'URL. Avec l'exemple précédent, cela signifie qu'on enverra <code>partydate=2017-06-01T08%3A30</code>. Si on souhaite échapper une chaîne de caractères de la même façon en JavaScript, on pourra utiliser {{jsxref("Objets_globaux/encodeURI", "encodeURI()")}}.</p>
 </div>
 
 <p>En JavaScript, Il est également possible de définir la valeur de la date utilisée dans le contrôle via la propriété {{domxref("HTMLInputElement.value")}}. Par exemple :</p>
 
-<pre class="brush: js notranslate">var dateControl = document.querySelector('input[type="datetime-local"]');
+<pre class="brush: js">var dateControl = document.querySelector('input[type="datetime-local"]');
 date.value = '2017-06-01T08:30';</pre>
 
 <p>Plusieurs méthodes, fournies par JavaScript (cf. {{jsxref("Date")}}), peuvent être utilisée afin de convertir des informations numériques en une telle chaîne de caractères (par exemple la méthode {{jsxref("Date.toISOString()")}}).</p>
@@ -117,7 +105,7 @@ date.value = '2017-06-01T08:30';</pre>
 
 <p>Dans sa forme la plus simple, <code>&lt;input type="datetime-local"&gt;</code> peut s'utilisere avec un élément <code>&lt;input&gt;</code> et un élément {{htmlelement("label")}} comme ceci :</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
     &lt;label for="party"&gt;Veuillez choisir une date et une heure pour la fête :&lt;/label&gt;
     &lt;input id="party" type="datetime-local" name="partydate"&gt;
 &lt;/form&gt;</pre>
@@ -128,7 +116,7 @@ date.value = '2017-06-01T08:30';</pre>
 
 <p>Les attributs {{htmlattrxref("min", "input")}} et {{htmlattrxref("max", "input")}} permettent de restreindre la fenêtre de dates qu'il est possible de choisir. Dans l'exemple qui suit, on indique une date/heure minimale au <code>2017-06-01T08:30</code> et une date maximale au <code>2017-06-30T16:30</code>:</p>
 
-<pre class="brush: html notranslate">  &lt;form&gt;
+<pre class="brush: html">  &lt;form&gt;
     &lt;label for="party"&gt;Veuillez choisir une date et une heure pour la fête :&lt;/label&gt;
     &lt;input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30"&gt;
   &lt;/form&gt;</pre>
@@ -143,7 +131,7 @@ date.value = '2017-06-01T08:30';</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong> : L'attribut {{htmlattrxref("step", "input")}} devrait pouvoir être utilisé afin de faire varier l'incrément, en jours, pour sélectionner la date (par exemple afin de ne pouvoir sélectionner que les samedi). En revanche, à l'heure où nous rédigeons cet article, aucune implémentation ne semble proposer cette fonctionnalité.</p>
+<p><strong>Note :</strong> L'attribut {{htmlattrxref("step", "input")}} devrait pouvoir être utilisé afin de faire varier l'incrément, en jours, pour sélectionner la date (par exemple afin de ne pouvoir sélectionner que les samedi). En revanche, à l'heure où nous rédigeons cet article, aucune implémentation ne semble proposer cette fonctionnalité.</p>
 </div>
 
 <h3 id="Contrôler_la_taille_du_champ">Contrôler la taille du champ</h3>
@@ -156,11 +144,11 @@ date.value = '2017-06-01T08:30';</pre>
 
 <p>Ainsi, si vous créez un système où l'utilisateur est déjà connecté et que le fuseau horaire est déjà connu, celui-ci peut être fourni via un champ de type <code><a href="/fr/docs/Web/HTML/Element/input/hidden">hidden</a></code>. Par exemple :</p>
 
-<pre class="brush: html notranslate">&lt;input type="hidden" id="timezone" name="timezone" value="-08:00"&gt;</pre>
+<pre class="brush: html">&lt;input type="hidden" id="timezone" name="timezone" value="-08:00"&gt;</pre>
 
 <p>Sinon, on peut proposer la sélection d'un fuseau horaire grâce à un élément {{htmlelement("select")}} :</p>
 
-<pre class="brush: html notranslate">&lt;select name="timezone_offset" id="timezone-offset" class="span5"&gt;
+<pre class="brush: html">&lt;select name="timezone_offset" id="timezone-offset" class="span5"&gt;
     &lt;option value="-12:00"&gt;(GMT -12:00) Eniwetok, Kwajalein&lt;/option&gt;
     &lt;option value="-11:00"&gt;(GMT -11:00) Midway Island, Samoa&lt;/option&gt;
     &lt;option value="-10:00"&gt;(GMT -10:00) Hawaii&lt;/option&gt;
@@ -175,7 +163,7 @@ date.value = '2017-06-01T08:30';</pre>
 <p>Dans ces deux situations, le fuseau horaire et la date sont transmis au serveur séparément (c'est côté serveur que le choix de la représentation pour le stockage est effectué).</p>
 
 <div class="note">
-<p><strong>Note</strong> : Le fragment de code précédent est tiré de <a href="https://gist.github.com/nodesocket/3919205">Tous les fuseaux horaires du monde dans un élément <code>&lt;select&gt;</code></a>.</p>
+<p><strong>Note :</strong> Le fragment de code précédent est tiré de <a href="https://gist.github.com/nodesocket/3919205">Tous les fuseaux horaires du monde dans un élément <code>&lt;select&gt;</code></a>.</p>
 </div>
 
 <h2 id="Validation">Validation</h2>
@@ -186,7 +174,7 @@ date.value = '2017-06-01T08:30';</pre>
 
 <p>Prenons un exemple avec des dates mini/maxi et le champ obligatoire :</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
     &lt;div&gt;
         &lt;label for="party"&gt;Veuillez choisir une date et une heure pour la fête (obligatoire, entre le 1er juin, 8h30 et le 30 juin, 16h30) :&lt;/label&gt;
         &lt;input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30" required&gt;
@@ -201,13 +189,10 @@ date.value = '2017-06-01T08:30';</pre>
 
 <p>{{EmbedLiveSample('Validation', 600, 120)}}</p>
 
-<p>Voici une capture d'écran illustrant un message d'erreur dans un navigateur qui prend en charge cette fonctionnalité :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14957/datetime-local-error.png" style="display: block; height: 100px; margin: 0px auto; width: 558px;"></p>
 
 <p>Vous trouverez ensuite la feuille de style CSS utilisée pour l'exemple. On utilise les pseudo-classes {{cssxref(":valid")}} et {{cssxref(":invalid")}} afin de mettre en forme le contrôle selon que sa valeur est valide ou non. Les icônes indicatives sont placées dans un élément {{htmlelement("span")}} séparé car, sous Chrome, le contenu généré automatiquement est placé à l'intériur du contrôle et ne peut pas être affiché/mis en forme efficacement.</p>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -229,14 +214,13 @@ input:valid+span:after {
 }</pre>
 
 <div class="warning">
-<p><strong>Important </strong>: La validation des données du formulaire HTML par le navigateur ne doit pas remplacer la validation des données reçues sur le serveur ! En effet, il est tout à fait possible pour quelqu'un de modifier le document HTML afin d'outrepasser ces contraintes (voire d'envoyer directement des données au serveur sans passer par le formulaire HTML). Si les mécanismes, côté serveur, échouent à valider les données, cela pourrait avoir des conséquences néfastes sur le stockage ou la sécurité de l'application.</p>
+<p><strong>Attention :</strong> La validation des données du formulaire HTML par le navigateur ne doit pas remplacer la validation des données reçues sur le serveur ! En effet, il est tout à fait possible pour quelqu'un de modifier le document HTML afin d'outrepasser ces contraintes (voire d'envoyer directement des données au serveur sans passer par le formulaire HTML). Si les mécanismes, côté serveur, échouent à valider les données, cela pourrait avoir des conséquences néfastes sur le stockage ou la sécurité de l'application.</p>
 </div>
 
 <h2 id="Gérer_la_prise_en_charge_des_navigateurs">Gérer la prise en charge des navigateurs</h2>
 
-<p>Comme indiqué ci-avant, le principal problème qu'on rencontre avec ces contrôles est la prise en charge hétérogène des différents navigateurs : seuls Opera et Chrome implémentent cette fonctionnalité parmi les navigateurs de bureau et la plupart des navigateurs mobiles la prennent en charge. Voici, par exemple, l'interface utilisateur du sélecteur <code>datetime-local</code> de Firefox pour Android :</p>
+<p>Comme indiqué ci-avant, le principal problème qu'on rencontre avec ces contrôles est la prise en charge hétérogène des différents navigateurs : seuls Opera et Chrome implémentent cette fonctionnalité parmi les navigateurs de bureau et la plupart des navigateurs mobiles la prennent en charge.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14951/datetime-local-fxa.png" style="display: block; height: 640px; margin: 0px auto; width: 360px;"></p>
 
 <p>Les navigateurs qui n'implémentent pas cette fonctionnalité afficheront un contrôle de saisie textuelle. Toutefois, cela entraîne des problème de cohérence d'interface graphique d'une part et de représentation des données d'autre part.</p>
 
@@ -255,7 +239,7 @@ input:valid+span:after {
 
 <p>Une façon de contourner ce problème est de placer un attribut {{htmlattrxref("pattern", "input")}} dans l'élément <code>&lt;input type="</code><code>datetime-local"&gt;</code>. Bien que cet élément n'utilise pas cet attribut, s'il est converti en <code>&lt;input type="text"&gt;</code> par le navigateur, le motif sera alors utilisé. Vous pouvez par exemple essayer le code suivant dans un navigateur qui ne prend pas en charge <code>&lt;input type="datetime-local"&gt;</code> :</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
      &lt;label for="party"&gt;Veuillez choisir une date et une heure pour la fête (obligatoire, entre le 1er juin, 8h30 et le 30 juin, 16h30) :&lt;/label&gt;
     &lt;input id="party" type="datetime-local" name="partydate"
@@ -277,8 +261,7 @@ input:valid+span:after {
 
 <p>Bref, il y a toujours un problème.</p>
 
-<div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
 }
 
@@ -301,7 +284,6 @@ input:valid + span:after {
   position: absolute;
   right: -18px;
 }</pre>
-</div>
 
 <p>Actuellement, la meilleure façon de gérer les dates/heures d'une façon homogène pour les différents navigateurs est d'utiliser différents contrôles (via des éléments {{htmlelement("select")}}) pour sélectionner l'année, le jour, le mois, la date et l'heure. Il existe également des bibliothèques JavaScript telles que <a href="https://jqueryui.com/datepicker/">le sélecteur de date jQuery</a> et <a href="https://timepicker.co/">le sélecteur d'heure jQuery</a>.</p>
 
@@ -313,7 +295,7 @@ input:valid + span:after {
 
 <p>Voici le fragment de code HTML utilisé :</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div class="nativeDateTimePicker"&gt;
     &lt;label for="party"&gt;Veuillez sélectionner une date et une heure pour la fête :&lt;/label&gt;
     &lt;input type="datetime-local" id="party" name="bday"&gt;
@@ -367,8 +349,7 @@ input:valid + span:after {
 
 <p>Les mois disponibles sont codés de façon statique (ce sont toujours les mêmes). En revanche, les valeurs pour les jours et les années sont générées dynamiquement selon le mois et l'année courante (voir les commentaires du script ci-après). Les heures et les minutes sont également générées dynamiquement.</p>
 
-<div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -392,11 +373,10 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <p>Une partie intéressante du code est celle où on détecte la prise en charge de la fonctionnalité. Pour cela, dans le script, on crée un nouvel élément {{htmlelement("input")}} auquel on attribut le type <code>datetime-local</code> puis on vérifie son type juste après. Pour les navigateurs qui ne prennent pas en charge ce type de contrôle, le type aura changé et sera <code>text</code>. Si c'est le cas, on masque le contrôle natif et on utilise l'interface utilisateur alternative (composée avec les éléments ({{htmlelement("select")}})).</p>
 
-<pre class="brush: js notranslate">// On définit les différentes variables
+<pre class="brush: js">// On définit les différentes variables
 var nativePicker = document.querySelector('.nativeDateTimePicker');
 var fallbackPicker = document.querySelector('.fallbackDateTimePicker');
 var fallbackLabel = document.querySelector('.fallbackLabel');
