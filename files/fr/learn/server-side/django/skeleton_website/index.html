@@ -42,7 +42,7 @@ translation_of: Learn/Server-side/Django/skeleton_website
  <li>Utilisez la commande <code style="font-style: normal; font-weight: normal; line-height: 1.5;">django-admin</code> pour créer le dossier du projet ainsi que les sous-dossiers et fichiers de base ainsi que le script de gestion du projet (<strong style="line-height: 1.5;">manage.py</strong>).</li>
  <li>Utilisez <strong style="line-height: 1.5;">manage.py</strong> pour créer une ou plusieurs <em>applications</em> du projet.
   <div class="note">
-  <p><strong>Note</strong>: Un site web consiste en une ou plusieurs sections, par exemple un site principal, un blog, un wiki,... La bonne pratique avec Django est de réaliser chacun des composants comme des applications séparées qui pourront éventuellement être réutilisées dans d'autres projets.</p>
+  <p><strong>Note :</strong> Un site web consiste en une ou plusieurs sections, par exemple un site principal, un blog, un wiki,... La bonne pratique avec Django est de réaliser chacun des composants comme des applications séparées qui pourront éventuellement être réutilisées dans d'autres projets.</p>
   </div>
  </li>
  <li>Enregistrez la nouvelle application dans le projet. </li>
@@ -57,8 +57,8 @@ translation_of: Learn/Server-side/Django/skeleton_website
     <em>catalog/          # Application folder </em>(created using manage.py)
 </pre>
 
-<div class="blockIndicator note">
-<p>Afin de respecter la cohérence du code et pouvoir utiliser les développements sur GitHub, les noms du site et des applications, <em>en anglais</em>, n'ont pas été modifiés.</p>
+<div class="note">
+<p><strong>Note :</strong> Afin de respecter la cohérence du code et pouvoir utiliser les développements sur GitHub, les noms du site et des applications, <em>en anglais</em>, n'ont pas été modifiés.</p>
 </div>
 
 <p>La suite de ce chapitre est consacrée pas à pas aux étapes de création d'un projet et d'une application. La fin du chapitre sera consacré à quelques éléments de configuration du site qui peuvent être réalisés à ce stade.</p>
@@ -107,7 +107,7 @@ cd locallibrary</pre>
 <pre class="brush: bash">python3 manage.py startapp catalog</pre>
 
 <div class="note">
-<p><strong>Note</strong>: La commande ci-dessus est exécutée dans un environnement Linux/macOS X. Sous Windows, il se peut que la commande soit : <code>py -3 manage.py startapp catalog</code></p>
+<p><strong>Note :</strong> La commande ci-dessus est exécutée dans un environnement Linux/macOS X. Sous Windows, il se peut que la commande soit : <code>py -3 manage.py startapp catalog</code></p>
 
 <p>Si vous travaillez dans un environnement Windows, l'ensemble de la série didactique est écrite pour un environnement Linux/MacOS. Pensez, alors, à remplacer les commandes <code>python3</code> par <code>py -3</code>.</p>
 
@@ -139,7 +139,7 @@ cd locallibrary</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez constater que dans le dossier de l'application, il n'y a pas de fichier pour gérer les urls, les gabarits ou les fichiers statiques. Nouys verrons ce point un peu plus loin, ils ne sont pas systématiquement nécessaires.</p>
+<p><strong>Note :</strong> Vous pouvez constater que dans le dossier de l'application, il n'y a pas de fichier pour gérer les urls, les gabarits ou les fichiers statiques. Nouys verrons ce point un peu plus loin, ils ne sont pas systématiquement nécessaires.</p>
 </div>
 
 <h2 id="Enregistrer_lapplication_catalog">Enregistrer l'application <em>catalog</em></h2>
@@ -161,7 +161,7 @@ cd locallibrary</pre>
 <p>Le nouvel enregistrement défini l'objet pour cette nouvelle application avec le nom (<code>CatalogConfig</code>) qui a été généré dans le fichier <strong>/locallibrary/catalog/apps.py</strong> quand l'application a été créée.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Nous verrons plus loin les autres paramètres de ce fichier(comme <code>MIDDLEWARE</code>). Cela permet la prise en charge par <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django administration site</a> et donne accès à de nombreuses fonctionnalités (gestion des sessions, de l'authentication, etc).</p>
+<p><strong>Note :</strong> Nous verrons plus loin les autres paramètres de ce fichier(comme <code>MIDDLEWARE</code>). Cela permet la prise en charge par <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django administration site</a> et donne accès à de nombreuses fonctionnalités (gestion des sessions, de l'authentication, etc).</p>
 </div>
 
 <h2 id="Définir_la_base_de_données">Définir la base de données</h2>
@@ -223,7 +223,7 @@ urlpatterns = [
 <p>Le routage des URLs est géré à l'aide de la variable <code>urlpatterns</code>. Elle consititue une liste Python de fonctions <code>path()</code>. Chaque instance <code>path()</code> peut associer des motifs d'URL à une vue particulière, qui sera appelée si l'URL appellée correspond au motif décrit, ou vers une autre liste d'URL (dans ce cas, le motif est à considérer comme le motif de base pour le module dans lequel il est décrit). La variable <code>urlpatterns</code> contient au démarrage une seule fonction qui permet de gérer l'URL d'administration du site et utilisant le module par défaut de Django <code>admin.site.urls</code>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Dans la fonction <code>path()</code>, une route est une chaîne de caractères définissant une URL ou un motif d'URL. Cette chaîne peut inclure des variables nommées (entre &lt; et &gt;, par exemple <code>'catalog/&lt;id&gt;/'</code>). Ce motif correspondra à une URL du type <strong>/catalog/</strong><em>des_caracteres</em><strong>/</strong>. La chaîne <em>des_caracteres</em> sera transmis à la vue comme une chaîne de caractère associée à une variable nommée <code>id</code>. Ce point sera vu en détails plus loin dans la série didactique.</p>
+<p><strong>Note :</strong> Dans la fonction <code>path()</code>, une route est une chaîne de caractères définissant une URL ou un motif d'URL. Cette chaîne peut inclure des variables nommées (entre &lt; et &gt;, par exemple <code>'catalog/&lt;id&gt;/'</code>). Ce motif correspondra à une URL du type <strong>/catalog/</strong><em>des_caracteres</em><strong>/</strong>. La chaîne <em>des_caracteres</em> sera transmis à la vue comme une chaîne de caractère associée à une variable nommée <code>id</code>. Ce point sera vu en détails plus loin dans la série didactique.</p>
 </div>
 
 <p>Ajoutez les lignes ci-dessous à la fin du fichier de manière à ajouter dans la variable <code>urlpatterns</code> une nouvelle entrée à la liste des routes. Cette nouvelle entrée permet une nouvelle route pour <code>catalog/</code> dont la gestion est déléguée au fichier <strong>urls.py</strong> du module <strong>catalog</strong> (c'est-à-dire le fichier <strong>catalog/urls.py</strong>).</p>
@@ -271,7 +271,7 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)</
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Il y a plusieurs manière pour ajouter des routes à la variable <code>urlpatterns</code> (dans les étapes décrites ci-dessus nous avons ajouté petit à patir en utilisant l'opérateur <code>+=</code> pour bien séparer les étapes). Il est en réalité tout à fait possible de tout regrouper dans une seule étape :</p>
+<p><strong>Note :</strong> Il y a plusieurs manière pour ajouter des routes à la variable <code>urlpatterns</code> (dans les étapes décrites ci-dessus nous avons ajouté petit à patir en utilisant l'opérateur <code>+=</code> pour bien séparer les étapes). Il est en réalité tout à fait possible de tout regrouper dans une seule étape :</p>
 
 <pre class="brush: python">urlpatterns = [
     path('admin/', admin.site.urls),
@@ -310,7 +310,7 @@ python3 manage.py migrate
 </pre>
 
 <div class="warning">
-<p><strong>Important</strong>: Chaque fois que vous ferez évoluer le modèle de données, vous devrez exécuter le commandes ci-dessus (elles seront traduites en structure dans la base de données que cela conduise à l'ajout ou au retrait d'objets ou d'attributs).</p>
+<p><strong>Attention :</strong> Chaque fois que vous ferez évoluer le modèle de données, vous devrez exécuter le commandes ci-dessus (elles seront traduites en structure dans la base de données que cela conduise à l'ajout ou au retrait d'objets ou d'attributs).</p>
 </div>
 
 <p>L'option <code>makemigrations</code> réalise (sans les appliquer) les migrations nécessaires à toutes les applications du projet. Vous pouvez cependant préciser le nom de l'application pour laquelle vous souhaitez réaliser la migration. Ceci permet de vérifier le code et la cohérence du modèle de donner avant de l'appliquer réellement. Quand vous aurez un niveau expert, vous pourrez choisir de les modifier à la marge.</p>
@@ -318,7 +318,7 @@ python3 manage.py migrate
 <p>L'option <code>migrate</code> applique les modifications sur la base de données (Django trace les modifications réalisées dans la base de données).</p>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez consulter la documentation <a href="https://docs.djangoproject.com/fr/2.2/topics/migrations/">Migrations</a> (sur le site Django) pour plus d'informations.</p>
+<p><strong>Note :</strong> Vous pouvez consulter la documentation <a href="https://docs.djangoproject.com/fr/2.2/topics/migrations/">Migrations</a> (sur le site Django) pour plus d'informations.</p>
 </div>
 
 <h3 id="Démarrer_le_site_web">Démarrer le site web</h3>
@@ -326,7 +326,7 @@ python3 manage.py migrate
 <p>Pendant la phase de développement, vous pouvez tester votre serveur sur un mode local et le consulter avec votre navigateur.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Le serveur local n'est ni robuste ni performant, il n'est donc pas fait pour être utilisé en production, mais il permet d'être autonome pour les travaux de développement. La configuration par défaut de ce serveur est telle que votre site est accessible à l'URL <code>http://127.0.0.1:8000/</code>. Cependant, vous pouvez modifier ces paramètres et pour plus d'information vous pouvez consulter la documentation sur le site Django des commandes <a href="https://docs.djangoproject.com/fr/2.2/ref/django-admin/#runserver">django-admin and manage.py: runserver</a>.</p>
+<p><strong>Note :</strong> Le serveur local n'est ni robuste ni performant, il n'est donc pas fait pour être utilisé en production, mais il permet d'être autonome pour les travaux de développement. La configuration par défaut de ce serveur est telle que votre site est accessible à l'URL <code>http://127.0.0.1:8000/</code>. Cependant, vous pouvez modifier ces paramètres et pour plus d'information vous pouvez consulter la documentation sur le site Django des commandes <a href="https://docs.djangoproject.com/fr/2.2/ref/django-admin/#runserver">django-admin and manage.py: runserver</a>.</p>
 </div>
 
 <p>Pour démarrer le serveur local, il suffit d'exécuter la commande ci-dessous dans le répertoire du projet (dossier où se trouver <strong>manage.py</strong>) :</p>
@@ -349,13 +349,13 @@ python3 manage.py migrate
 <p>Ne vous inquitez ! Cette erreur était attendue ; elle est due à l'absence de défintion de routes dans le fichier catalog/urls.py ou dans le module <code>catalog.urls</code> module (que nous avons déclaré dans le fichier urls.py du projet). </p>
 
 <div class="note">
-<p><strong>Note</strong>: La page web ci-dessus met en exergue une fonctionnalité utile de Django ; le mode des traces de debogag. Au lieu d'une simple erreur renvoyée par le serveur, celui-ci affiche un écran d'erreur avec des informations utiles pour corriger le développement conduisant à cette erreur d'affichage. Dans le cas présent, l'erreur est due au motif de l'URL qui ne correspond pas à ce qui a été configuré.</p>
+<p><strong>Note :</strong> La page web ci-dessus met en exergue une fonctionnalité utile de Django ; le mode des traces de debogag. Au lieu d'une simple erreur renvoyée par le serveur, celui-ci affiche un écran d'erreur avec des informations utiles pour corriger le développement conduisant à cette erreur d'affichage. Dans le cas présent, l'erreur est due au motif de l'URL qui ne correspond pas à ce qui a été configuré.</p>
 </div>
 
 <p>À ce stade, nous pouvons considérer que le serveur fonctionne !</p>
 
 <div class="note">
-<p><strong>Note</strong>: Chaque fois que vous apportez des modifications significatives, il est important d'exécuter à nouveau un migration et un test du serveur. Cela est assez rapide, pour ne pas s'en priver !</p>
+<p><strong>Note :</strong> Chaque fois que vous apportez des modifications significatives, il est important d'exécuter à nouveau un migration et un test du serveur. Cela est assez rapide, pour ne pas s'en priver !</p>
 </div>
 
 <h2 id="Relevez_le_défi...">Relevez le défi...</h2>

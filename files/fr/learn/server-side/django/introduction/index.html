@@ -60,7 +60,7 @@ translation_of: Learn/Server-side/Django/Introduction
 <p>Django a continué à se développer et à s'améliorer, depuis sa première sortie (1.0) en Septembre 2008 jusqu'à la version 2.0 récemment sortie (2017). Chaque sortie a ajouté son lot de nouvelles fonctionnalités et de corrections de bugs, allant du support de nouveaux types de bases de données, de moteurs de templates et de cache, à l'addition de fonctions et de classes de vues 'génériques' (qui réduisent la quantité de code que doivent écrire les développeurs pour tout un tas de tâches de programmation). </p>
 
 <div class="note">
-<p><strong>Note </strong>: Consultez les <a href="https://docs.djangoproject.com/en/1.10/releases/">notes de publication</a> sur le site web de Django pour voir les changements apportés dans les versions récentes, ainsi que tout le travail accompli pour améliorer Django.</p>
+<p><strong>Note :</strong> Consultez les <a href="https://docs.djangoproject.com/en/1.10/releases/">notes de publication</a> sur le site web de Django pour voir les changements apportés dans les versions récentes, ainsi que tout le travail accompli pour améliorer Django.</p>
 </div>
 
 <p>Désormais, Django est un projet open-source collaboratif florissant, avec plusieurs milliers d'utilisateurs et de contributeurs. Bien que plusieurs fonctionnalités reflètent encore ses origines, Django a évolué en un framework versatile capable de développer n'importe quel type de site web. </p>
@@ -99,7 +99,7 @@ translation_of: Learn/Server-side/Django/Introduction
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Django mentionne cette organisation sous le nom d'architecture "Modèle Vue Template". Elle a plusieurs similarités avec l'architecture <a href="/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">Modèle Vue Contrôleur</a>.</p>
+<p><strong>Note :</strong> Django mentionne cette organisation sous le nom d'architecture "Modèle Vue Template". Elle a plusieurs similarités avec l'architecture <a href="/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">Modèle Vue Contrôleur</a>.</p>
 </div>
 
 <ul>
@@ -144,7 +144,7 @@ def index(request):
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Un peu de Python :</p>
+<p><strong>Note :</strong> Un peu de Python :</p>
 
 <ul>
  <li>Les <a href="https://docs.python.org/3/tutorial/modules.html">modules Python</a> sont des librairies de fonctions, stockés dans des fichiers séparés que l'on peut vouloir utiliser dans notre code. Ici, nous importons l'objet  <code>HttpResponse</code> du module <code>django.http</code> pour qu'on puisse l'utiliser dans notre vue : <code>from django.http import HttpResponse</code> . Il y a d'autres façons d'importer quelques objets (ou tous les objets) d'un module.</li>
@@ -180,7 +180,7 @@ class Team(models.Model):
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Un peu de Python :</p>
+<p><strong>Note :</strong> Un peu de Python :</p>
 
 <ul>
  <li>Python supporte la "programmation orientée-objet", un type de programmation où l'on organise notre code en objets, ce qui inclut les données et fonctions liées qui agiront sur les données. Les objets peuvent être hérités/étendus/dérivés d'autres objets, ce qui permet à ces objets de partager un comportement commun. En Python, on utilise le mot-clé <code>class</code> pour définir le "squelette" d'un objet. On peut créer plusieurs <em>instances</em> spécifiques de ce type d'objet d'après le modèle d'une classe.<br>

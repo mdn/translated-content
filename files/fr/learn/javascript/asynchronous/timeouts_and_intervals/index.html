@@ -66,9 +66,8 @@ translation_of: Learn/JavaScript/Asynchronous/Timeouts_and_intervals
   <li>Zéro ou plusieurs valeurs représentant les paramètres que vous souhaitez transmettre à la fonction lors de son exécution.</li>
 </ul>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>La quantité de temps spécifiée (ou le délai) n'est <strong>pas</strong> le <em>temps garanti</em> à l'exécution, mais plutôt le <em>temps minimum</em> à l'exécution. Les rappels que vous passez à ces fonctions ne peuvent pas s'exécuter tant que la pile du processus principal n'est pas vide.</p>
+<div class="note">
+  <p><strong>Note :</strong> La quantité de temps spécifiée (ou le délai) n'est <strong>pas</strong> le <em>temps garanti</em> à l'exécution, mais plutôt le <em>temps minimum</em> à l'exécution. Les rappels que vous passez à ces fonctions ne peuvent pas s'exécuter tant que la pile du processus principal n'est pas vide.</p>
   <p>En conséquence, un code comme <code>setTimeout(fn, 0)</code> s'exécutera dès que la pile sera vide, <strong>pas</strong> immédiatement. Si vous exécutez un code comme <code>setTimeout(fn, 0)</code> mais qu'immédiatement après vous exécutez une boucle qui compte de 1 à 10 milliards, votre rappel sera exécuté après quelques secondes.</p>
 </div>
 
@@ -116,9 +115,8 @@ let maSalutation = setTimeout(direBonjour, 2000);</pre>
 
 <pre class="brush: js">clearTimeout(maSalutation);</pre>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Voir <code><a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/greeter-app.html">greeter-app.html</a></code> pour une démo un peu plus élaborée qui permet de définir le nom de la personne à saluer dans un formulaire, et d'annuler la salutation à l'aide d'un bouton séparé (<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/greeter-app.html">voir aussi le code source</a>).</p>
+<div class="note">
+  <p><strong>Note :</strong> Voir <code><a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/greeter-app.html">greeter-app.html</a></code> pour une démo un peu plus élaborée qui permet de définir le nom de la personne à saluer dans un formulaire, et d'annuler la salutation à l'aide d'un bouton séparé (<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/greeter-app.html">voir aussi le code source</a>).</p>
 </div>
 
 <h2 id="setinterval">setInterval()</h2>
@@ -179,9 +177,8 @@ clearInterval(myInterval);</pre>
   <li>Vous devriez probablement désactiver le bouton de démarrage après l'avoir pressé une fois, et le réactiver après l'avoir arrêté/réinitialisé. Sinon, les pressions multiples sur le bouton de démarrage appliqueront plusieurs <code>setInterval()</code> à l'horloge, ce qui entraînera un comportement erroné.</li>
 </ul>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Si vous êtes bloqué, vous pouvez <a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-stopwatch.html">trouver notre version ici</a> (voir le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-stopwatch.html">code source</a>).</p>
+<div class="note">
+  <p><strong>Note :</strong> Si vous êtes bloqué, vous pouvez <a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-stopwatch.html">trouver notre version ici</a> (voir le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-stopwatch.html">code source</a>).</p>
 </div>
 
 <h2 id="things_to_keep_in_mind_about_settimeout_and_setinterval">Choses à garder à l'esprit concernant setTimeout() et setInterval()</h2>
@@ -251,9 +248,8 @@ alert('Hello');</pre>
 
 <p>(<a href="http://creativejs.com/resources/requestanimationframe/index.html">Plus d'informations à ce sujet sur CreativeJS</a> <small>(en)</small>.)</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Vous trouverez des exemples d'utilisation de <code>requestAnimationFrame()</code> ailleurs dans le cours - voir par exemple <a href="/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Dessiner des éléments graphiques</a>, et <a href="/fr/docs/Learn/JavaScript/Objects/Object_building_practice">La construction d'objet en pratique</a>.</p>
+<div class="note">
+  <p><strong>Note :</strong> Vous trouverez des exemples d'utilisation de <code>requestAnimationFrame()</code> ailleurs dans le cours - voir par exemple <a href="/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Dessiner des éléments graphiques</a>, et <a href="/fr/docs/Learn/JavaScript/Objects/Object_building_practice">La construction d'objet en pratique</a>.</p>
 </div>
 
 <p>La méthode prend comme argument un rappel à invoquer avant le repeignage. C'est le modèle général dans lequel vous le verrez utilisé :</p>
@@ -267,9 +263,8 @@ draw();</pre>
 
 <p>L'idée est de définir une fonction dans laquelle votre animation est mise à jour (par exemple, vos sprites sont déplacés, le score est mis à jour, les données sont rafraîchies, ou autre). Ensuite, vous l'appelez pour lancer le processus. À la fin du bloc de fonctions, vous appelez <code>requestAnimationFrame()</code> avec la référence de la fonction passée en paramètre, et cela indique au navigateur de rappeler la fonction lors du prochain rafraîchissement de l'affichage. Ceci est ensuite exécuté en continu, car le code appelle <code>requestAnimationFrame()</code> de manière récursive.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Si vous souhaitez réaliser une sorte d'animation DOM simple et constante, <a href="/fr/docs/Web/CSS/CSS_Animations">les animations CSS</a> sont probablement plus rapides. Elles sont calculées directement par le code interne du navigateur, plutôt que par JavaScript.</p>
+<div class="note">
+  <p><strong>Note :</strong> Si vous souhaitez réaliser une sorte d'animation DOM simple et constante, <a href="/fr/docs/Web/CSS/CSS_Animations">les animations CSS</a> sont probablement plus rapides. Elles sont calculées directement par le code interne du navigateur, plutôt que par JavaScript.</p>
   <p>Si, toutefois, vous faites quelque chose de plus complexe et impliquant des objets qui ne sont pas directement accessibles à l'intérieur du DOM (comme les objets <a href="/fr/docs/Web/API/Canvas_API">2D Canvas API</a> ou <a href="/fr/docs/Web/API/WebGL_API">WebGL</a>), <code>requestAnimationFrame()</code> est la meilleure option dans la plupart des cas.</p>
 </div>
 
@@ -338,9 +333,8 @@ draw();</pre>
 
 <p>Assez avec la théorie ! Construisons votre propre exemple personnel de <code>requestAnimationFrame()</code>. Vous allez créer une simple "animation de toupie" - le genre que vous pourriez voir affiché dans une application lorsqu'elle est occupée à se connecter au serveur, etc.</p>
 
-<div class="notecard note">
-  <p><b>Note: </b></p>
-  <p>Dans un exemple du monde réel, vous devriez probablement utiliser des animations CSS pour exécuter ce type d'animation simple. Cependant, ce genre d'exemple est très utile pour démontrer l'utilisation de <code>requestAnimationFrame()</code>, et vous seriez plus susceptible d'utiliser ce genre de technique lorsque vous faites quelque chose de plus complexe comme la mise à jour de l'affichage d'un jeu à chaque image.</p>
+<div class="note">
+  <p><strong>Note :</strong> Dans un exemple du monde réel, vous devriez probablement utiliser des animations CSS pour exécuter ce type d'animation simple. Cependant, ce genre d'exemple est très utile pour démontrer l'utilisation de <code>requestAnimationFrame()</code>, et vous seriez plus susceptible d'utiliser ce genre de technique lorsque vous faites quelque chose de plus complexe comme la mise à jour de l'affichage d'un jeu à chaque image.</p>
 </div>
 
 <ol>
@@ -402,9 +396,8 @@ let rAF;
   </li>
 </ol>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Vous pouvez trouver l'<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-raf-spinner.html">exemple terminé en direct sur GitHub</a>. (Vous pouvez également voir le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-raf-spinner.html">code source</a>).</p>
+<div class="note">
+  <p><strong>Note :</strong> Vous pouvez trouver l'<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-raf-spinner.html">exemple terminé en direct sur GitHub</a>. (Vous pouvez également voir le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-raf-spinner.html">code source</a>).</p>
 </div>
 
 <h3 id="clearing_a_requestanimationframe_call">Effacer un appel de requestAnimationFrame()</h3>
@@ -426,9 +419,8 @@ let rAF;
   <li>Vous voudrez ajouter une variable de suivi pour vérifier si la toupie tourne ou non, effacer le cadre d'animation si c'est le cas, et le rappeler si ce n'est pas le cas.</li>
 </ul>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Essayez d'abord vous-même ; si vous êtes vraiment bloqué, consultez nos pages <a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/start-and-stop-spinner.html">exemple en direct</a> et <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/start-and-stop-spinner.html">code source</a>.</p>
+<div class="note">
+  <p><strong>Note :</strong> Essayez d'abord vous-même ; si vous êtes vraiment bloqué, consultez nos pages <a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/start-and-stop-spinner.html">exemple en direct</a> et <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/start-and-stop-spinner.html">code source</a>.</p>
 </div>
 
 <h3 id="throttling_a_requestanimationframe_animation">Ralentissement d'une animation requestAnimationFrame()</h3>
@@ -536,9 +528,8 @@ function start() {
   btn.style.display = 'none';
   setTimeout(setEndgame, random(5000,10000));
 }</pre>
-    <div class="notecard note">
-      <p><b>Note :</b></p>
-      <p>Vous verrez que cet exemple appelle <code>setTimeout()</code> sans stocker la valeur de retour. (Donc, pas <code>let myTimeout = setTimeout(functionName, interval)</code>.)</p>
+    <div class="note">
+      <p><strong>Note :</strong> Vous verrez que cet exemple appelle <code>setTimeout()</code> sans stocker la valeur de retour. (Donc, pas <code>let myTimeout = setTimeout(functionName, interval)</code>.)</p>
       <p>Cela fonctionne très bien, tant que vous n'avez pas besoin d'effacer votre intervalle/temps d'attente à un moment donné. Si vous le faites, vous devrez sauvegarder l'identifiant renvoyé !</p>
     </div>
     <p>Le résultat net du code précédent est que lorsque le bouton <em>Start</em> est pressé, la toupie est affichée et les joueurs sont amenés à attendre un temps aléatoire avant d'être invités à appuyer sur leur bouton. Cette dernière partie est gérée par la fonction <code>setEndgame()</code>, que vous allez définir ensuite.</p>
@@ -586,9 +577,8 @@ function start() {
 
 <p>Voilà, c'est fait !</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Si vous êtes bloqué, consultez <a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/reaction-game.html">notre version du jeu en live</a> (voir également le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/reaction-game.html">code source</a>).</p>
+<div class="note">
+  <p><strong>Note :</strong> Si vous êtes bloqué, consultez <a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/reaction-game.html">notre version du jeu en live</a> (voir également le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/reaction-game.html">code source</a>).</p>
 </div>
 
 <h2 id="conclusion">Conclusion</h2>

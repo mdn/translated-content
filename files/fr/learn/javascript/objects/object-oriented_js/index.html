@@ -64,7 +64,7 @@ original_slug: Learn/JavaScript/Objects/JS_orienté-objet
 <p>Cela s'avère très utile puisque les étudiants et les professeurs se ressemblent sur de nombreux aspects : ils ont un nom, un genre, un âge, il est donc utile de ne définir ces attributs qu'une seule fois. Il est aussi possible de redéfinir le même attribut dans différentes classes étant donné que l'attribut appartiendra à chaque fois à un nom d'espace différent. On pourra ainsi avoir différentes formes de salutations : « Hey, je m'appelle [prénom] » pour les étudiants ( « Hey je m'appelle Sam » ) tandis que les professeurs pourront dire quelque chose d'un peu plus formel comme « Bonjour, mon nom est [Titre][Nom] et j'enseigne [matière] » par exemple « Bonjour mon nom est M. Griffiths et j'enseigne la chimie ».</p>
 
 <div class="note">
-<p><strong>Note </strong>: On parle de <strong>polymorphisme</strong>, lorsque des objets réutilisent la même propriété,  mais c'est juste pour info, vous embêtez pas.</p>
+<p><strong>Note :</strong> On parle de <strong>polymorphisme</strong>, lorsque des objets réutilisent la même propriété,  mais c'est juste pour info, vous embêtez pas.</p>
 </div>
 
 <p>Une fois la classe fille créée il est alors possible de l'instancier et de créer des objets. Par exemple :</p>
@@ -80,7 +80,7 @@ original_slug: Learn/JavaScript/Objects/JS_orienté-objet
 <p>Lorsqu'un objet est instancié à partir d'une fonction constructeur, les fonctions de la classe ne sont pas copiées directement dans l'objet comme dans la plupart des langages orientés objet (OO). En JavaScript, les fonctions sont liées grâce à une chaîne de référence appelée chaîne prototype (voir <a href="/fr/docs/Learn/JavaScript/Objects/Object_prototypes">Prototypes Objet</a>). Il ne s'agit donc pas d'une véritable instanciation au sens strict puisque JavaScript utilise un mécanisme différent pour partager des fonctionnalités entre les objets.</p>
 
 <div class="note">
-<p><strong>Note</strong> : Ne pas être un "langage classique de POO" n'est pas nécessairement un défaut. Comme nous le mentionnions au début de l'article, la POO peut très vite devenir compliquée et JavaScript, grâce à ses différences parvient à utiliser certains concepts avancés tout en restant abordable.</p>
+<p><strong>Note :</strong> Ne pas être un "langage classique de POO" n'est pas nécessairement un défaut. Comme nous le mentionnions au début de l'article, la POO peut très vite devenir compliquée et JavaScript, grâce à ses différences parvient à utiliser certains concepts avancés tout en restant abordable.</p>
 </div>
 
 <p>Voyons comment créer des classes via les constructeurs et les utiliser pour instancier des objets en JavaScript. Nous allons commencer par faire une copie locale du fichier <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html">oojs.html</a> que nous avons vu dans notre premier article sur les objets.</p>
@@ -116,7 +116,7 @@ salva.salutation();</pre>
 <p>Le constructeur est l'équivalent JavaScript d'une classe. Il possède l'ensemble des fonctionnalités d'une fonction, cependant il ne renvoie rien et ne crée pas d'objet explicitement. Il se contente de définir les propriétés et les méthodes associées. Il y a aussi l'utilisation du mot-clé <code>this</code>, ce mot-clé sert au sein d'une instance qui sera créée à y faire référence, ainsi l'attribut nom sera, pour l'instance, égal au nom passé en argument de la fonction constructrice, la méthode <code>salutation</code><code>()</code> retournera elle aussi le nom passé en argument de la fonction constructrice.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Les fonctions de type constructeur commencent généralement par une majuscule. Cette convention d'écriture permet de repérer les constructeurs plus facilement dans le code.</p>
+<p><strong>Note :</strong> Les fonctions de type constructeur commencent généralement par une majuscule. Cette convention d'écriture permet de repérer les constructeurs plus facilement dans le code.</p>
 </div>
 
 <p>Comment pouvons-nous utiliser un constructeur ?</p>
@@ -203,7 +203,7 @@ personne1.bio()
 // etc.</pre>
 
 <div class="note">
-<p><strong>Note</strong> : Si vous avez du mal à faire fonctionner cet exemple, vous pouvez comparez votre travail avec notre version (voir <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html">oojs-class-finished.html</a> (vous pouvez aussi jeter un œil à la <a href="https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html">démo</a>)</p>
+<p><strong>Note :</strong> Si vous avez du mal à faire fonctionner cet exemple, vous pouvez comparez votre travail avec notre version (voir <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html">oojs-class-finished.html</a> (vous pouvez aussi jeter un œil à la <a href="https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html">démo</a>)</p>
 </div>
 
 <h3 id="Exercices">Exercices</h3>
@@ -213,7 +213,7 @@ personne1.bio()
 <p>D'autre part, il y a quelques améliorations possibles pour notre méthode <code>bio().</code> En effet elle affiche systématiquement le pronom 'il', même si votre personne est une femme ou bien préfère se définir par un autre genre. De plus, la biographie n'inclut que deux passions, même s'il y en a plus dans la liste. Essayez d'améliorer cette méthode. Vous pourrez mettre votre code à l'intérieur du constructeur (vous aurez probablement besoin de quelques structures conditionnelles et d'une boucle). Réflechissez à la syntaxe des phrases qui devra s'adapter en fonction du genre et du nombre de passions listées.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Si vous êtes bloqués, nous avons mis une réponse possible sur notre dépôt <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html">GitHub </a>(<a href="https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html">la démo</a>) —tentez d'abord l'aventure avant d'aller regarder la réponse !</p>
+<p><strong>Note :</strong> Si vous êtes bloqués, nous avons mis une réponse possible sur notre dépôt <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html">GitHub </a>(<a href="https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html">la démo</a>) —tentez d'abord l'aventure avant d'aller regarder la réponse !</p>
 </div>
 
 <h2 id="Dautres_manières_dinstancier_des_objets">D'autres manières d'instancier des objets</h2>

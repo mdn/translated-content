@@ -46,9 +46,8 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Introduction
 
 <p>De la même façon, par exemple, pour programmer des graphismes en 3D, il est beaucoup plus facile de le faire en utilisant une API écrite dans un langage de haut niveau comme JavaScript ou Python, plutôt que d'essayer d'écrire du code bas niveau (comme C ou C ++) qui contrôle directement le GPU de l'ordinateur ou d'autres fonctions graphiques.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Voir aussi l'<a href="/fr/docs/Glossary/API">entrée du glossaire du terme API</a> pour plus de descriptions.</p>
+<div class="note">
+  <p><strong>Note :</strong> Voir aussi l'<a href="/fr/docs/Glossary/API">entrée du glossaire du terme API</a> pour plus de descriptions.</p>
 </div>
 
 <h3 id="apis_in_client-side_javascript">API JavaScript côté client</h3>
@@ -108,9 +107,8 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Introduction
   <li><a href="https://docs.joinmastodon.org/api/">L'API Mastodon</a> permet de manipuler les fonctionnalités du réseau social Mastodon grâce à des programmes.</li>
  </ul>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Vous pouvez trouver des informations sur beaucoup plus d'API tierces dans le <a href="http://www.programmableweb.com/category/all/apis">répertoire Programmable Web API.</a></p>
+<div class="note">
+  <p><strong>Note :</strong> Vous pouvez trouver des informations sur beaucoup plus d'API tierces dans le <a href="http://www.programmableweb.com/category/all/apis">répertoire Programmable Web API.</a></p>
 </div>
 
 <h2 id="how_do_apis_work">Comment les API fonctionnent-elles ?</h2>
@@ -121,9 +119,8 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Introduction
 
 <p>Les API interagissent avec le code en utilisant un ou plusieurs <a href="/fr/docs/Learn/JavaScript/Objects">objets JavaScript</a>, qui servent de conteneurs pour les données utilisées par l'API (contenues dans les propriétés d'objet), et la fonctionnalité rendue disponible par l'API (contenue dans des méthodes d'objet).</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Si vous n'êtes pas déjà familier avec le fonctionnement des objets, vous devriez revenir en arrière et parcourir le module <a href="/fr/docs/Learn/JavaScript/Objects">objets JavaScript</a> avant de continuer.</p>
+<div class="note">
+  <p><strong>Note :</strong> Si vous n'êtes pas déjà familier avec le fonctionnement des objets, vous devriez revenir en arrière et parcourir le module <a href="/fr/docs/Learn/JavaScript/Objects">objets JavaScript</a> avant de continuer.</p>
 </div>
 
 <p>Prenons comme exemple l'API Web Audio. Il s'agit d'une API assez complexe avec plusieurs objets. Voici les objets principaux :</p>
@@ -189,8 +186,7 @@ audioElement.addEventListener('ended', function() {
 });</pre>
 
 <div class="note">
-  <p><b>Note :</b></p>
-  <p>Certains d'entre vous ont peut-être remarqué que les méthodes <code>play()</code> et <code>pause()</code> utilisées pour lire et mettre en pause la piste ne font pas partie de l'API audio Web ; elles font partie de l'API <a href="/fr/docs/Web/API/HTMLMediaElement"><code>HTMLMediaElement</code></a>. qui est différente mais étroitement liée.</p>
+  <p><strong>Note :</strong> Certains d'entre vous ont peut-être remarqué que les méthodes <code>play()</code> et <code>pause()</code> utilisées pour lire et mettre en pause la piste ne font pas partie de l'API audio Web ; elles font partie de l'API <a href="/fr/docs/Web/API/HTMLMediaElement"><code>HTMLMediaElement</code></a>. qui est différente mais étroitement liée.</p>
 </div>
 
 <p>Ensuite, nous créons un objet <a href="/fr/docs/Web/API/GainNode"><code>GainNode</code></a> à l'aide de la méthode <a href="/fr/docs/Web/API/BaseAudioContext/createGain"><code>AudioContext.createGain()</code></a>, qui peut être utilisé pour ajuster le volume de l'audio qui le traverse, et nous créons un autre gestionnaire d'événements qui modifie la valeur du gain (volume) du graphique audio lorsque la valeur du curseur est modifiée :</p>
@@ -233,8 +229,7 @@ const ctx = canvas.getContext('2d');</pre>
 };</pre>
 
 <div class="note">
-  <p><b>Note :</b></p>
-  <p>Vous pouvez voir ce code en action dans notre <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html">démo de balles rebondissantes</a> (voyez-le fonctionner <a href="https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html">en direct</a> également).</p>
+  <p><strong>Note :</strong> Vous pouvez voir ce code en action dans notre <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html">démo de balles rebondissantes</a> (voyez-le fonctionner <a href="https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html">en direct</a> également).</p>
 </div>
 
 <h3 id="they_use_events_to_handle_changes_in_state">Elles utilisent des événements pour gérer les changements d'état</h3>
@@ -261,9 +256,8 @@ request.onload = function() {
   showHeroes(superHeroes);
 }</pre>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Vous pouvez voir ce code en action dans notre exemple <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html">ajax.html</a> (<a href="https://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html">voyez-le en direct</a> également).</p>
+<div class="note">
+  <p><strong>Note :</strong> Vous pouvez voir ce code en action dans notre exemple <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html">ajax.html</a> (<a href="https://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html">voyez-le en direct</a> également).</p>
 </div>
 
 <p>Les cinq premières lignes spécifient l'emplacement de la ressource que nous voulons récupérer, créent une nouvelle instance d'un objet de requête en utilisant le constructeur <code>XMLHttpRequest()</code>, ouvrent une requête HTTP <code>GET</code> pour récupérer la ressource spécifiée, spécifient que la réponse doit être envoyée au format JSON, puis envoient la requête.</p>
@@ -280,9 +274,8 @@ request.onload = function() {
 
 <p>Les API Web Audio et <a href="/fr/docs/Web/API/HTMLMediaElement"><code>HTMLMediaElement</code></a> sont soumises à un mécanisme de sécurité appelé <a href="/fr/docs/Web/API/Web_Audio_API/Best_practices#autoplay_policy">autoplay policy</a> - cela signifie essentiellement que vous ne pouvez pas lire automatiquement l'audio lorsqu'une page se charge — vous devez permettre à vos utilisateurs de déclencher la lecture audio par le biais d'un contrôle comme un bouton. Cette mesure est prise parce que la lecture automatique de l'audio est généralement très ennuyeuse et que nous ne devrions pas y soumettre nos utilisateurs.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Selon la rigueur du navigateur, ces mécanismes de sécurité peuvent même empêcher l'exemple de fonctionner localement, c'est-à-dire si vous chargez le fichier d'exemple local dans votre navigateur au lieu de l'exécuter à partir d'un serveur web. Au moment de la rédaction de ce document, notre exemple d'API Web Audio ne fonctionnait pas localement sur Google Chrome — nous avons dû le télécharger sur GitHub avant qu'il ne fonctionne.</p>
+<div class="note">
+  <p><strong>Note :</strong> Selon la rigueur du navigateur, ces mécanismes de sécurité peuvent même empêcher l'exemple de fonctionner localement, c'est-à-dire si vous chargez le fichier d'exemple local dans votre navigateur au lieu de l'exécuter à partir d'un serveur web. Au moment de la rédaction de ce document, notre exemple d'API Web Audio ne fonctionnait pas localement sur Google Chrome — nous avons dû le télécharger sur GitHub avant qu'il ne fonctionne.</p>
 </div>
 
 <h2 id="Résumé">Résumé</h2>

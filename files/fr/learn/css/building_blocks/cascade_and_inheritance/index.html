@@ -75,8 +75,8 @@ original_slug: Apprendre/CSS/Building_blocks/Cascade_et_heritage
 
 <p>Certaines propriétés ne se transmettent pas — par exemple si vous attribuez un {{cssxref("width")}} de 50% à un élément, aucun de ses descendants n'aura une largeur diminuée de moitié par rapport à celle de son parent. Si c'était le cas, l'usage de CSS serait particulièrement frustrant !</p>
 
-<div class="blockIndicator note">
-<p><strong>Note </strong>: Sur MDN, dans les pages de référence des propriétés CSS, vous trouverez des encarts d'information technique, le plus souvent au pied de la section de spécifications, dans lesquels sont listés nombre de données sur la propriété, notamment si elle est héritée ou non. Voir la <a href="/fr/docs/Web/CSS/color#Specifications">section des spécifications de la propriété color</a>, par exemple.</p>
+<div class="note">
+<p><strong>Note :</strong> Sur MDN, dans les pages de référence des propriétés CSS, vous trouverez des encarts d'information technique, le plus souvent au pied de la section de spécifications, dans lesquels sont listés nombre de données sur la propriété, notamment si elle est héritée ou non. Voir la <a href="/fr/docs/Web/CSS/color#Specifications">section des spécifications de la propriété color</a>, par exemple.</p>
 </div>
 
 <h2 id="Comprendre_comment_ces_concepts_se_combinent">Comprendre comment ces concepts se combinent</h2>
@@ -108,12 +108,12 @@ original_slug: Apprendre/CSS/Building_blocks/Cascade_et_heritage
  <dd>Redéfinit la propriété à sa valeur naturelle : si la propriété est transmise par héritage, le comportement est le même que  <code>inherit</code>, sinon il est identique à <code>initial</code>.</dd>
 </dl>
 
-<div class="blockIndicator note">
-<p><strong>Note </strong>: Il existe aussi la valeur {{cssxref("revert")}}, dont le support par les navigateurs est limité.</p>
+<div class="note">
+<p><strong>Note :</strong> Il existe aussi la valeur {{cssxref("revert")}}, dont le support par les navigateurs est limité.</p>
 </div>
 
-<div class="blockIndicator note">
-<p><strong>Note </strong>: Voir {{SectionOnPage("/en-US/docs/Web/CSS/Cascade", "Origin of CSS declarations")}} pour plus d'informations sur chacune de ces valeurs et comment elles fonctionnent.</p>
+<div class="note">
+<p><strong>Note :</strong> Voir {{SectionOnPage("/en-US/docs/Web/CSS/Cascade", "Origin of CSS declarations")}} pour plus d'informations sur chacune de ces valeurs et comment elles fonctionnent.</p>
 </div>
 
 <p>Voyons maintenant comment les valeurs universelles fonctionnent sur un exemple : une liste de liens. Dans l'exemple live ci-dessous, vous pourrez manipuler CSS et observer directement les effets de vos modifications. Jouer avec le code est vraiment le meilleur moyen pour progresser en HTML et CSS.</p>
@@ -180,7 +180,7 @@ original_slug: Apprendre/CSS/Building_blocks/Cascade_et_heritage
 </ol>
 
 <div class="note">
-<p><strong>Note </strong>: Le sélecteur  universel (<code>*</code>), les combinateurs (<code>+</code>, <code>&gt;</code>, <code>~</code>, ' '), et la pseudo-class de négation (<code>:not</code>) n'affectent en rien la spécificité.</p>
+<p><strong>Note :</strong> Le sélecteur  universel (<code>*</code>), les combinateurs (<code>+</code>, <code>&gt;</code>, <code>~</code>, ' '), et la pseudo-class de négation (<code>:not</code>) n'affectent en rien la spécificité.</p>
 </div>
 
 <p>Le tableau suivant montre quelques exemples isolés pour vous mettre dans l'ambiance. Assurez-vous de comprendre dans chaque cas la spécificité annoncée. Nous n'avons pas encore couvert les sélecteurs en détail, mais vous pouvez trouver les informations à propos de chaque sélecteur sur la <a href="/fr/docs/Web/CSS/CSS_Selectors">référence MDN des sélecteurs</a>.</p>
@@ -253,7 +253,7 @@ original_slug: Apprendre/CSS/Building_blocks/Cascade_et_heritage
 </ul>
 
 <div class="note">
-<p><strong>Note </strong>: Cet exemple est simplificateur. En fait, chaque type de sélecteur voit sa spécificité comptée à un niveau qui lui est propre, qui ne peut pas être dépassé par des sélecteurs d'un type avec une spécificité moindre. Par exemple, un <em>million</em> de sélecteurs de <strong>class</strong> combinés ne prendront jamais le dessus sur <em>un</em> sélecteur d'<strong>id</strong>.</p>
+<p><strong>Note :</strong> Cet exemple est simplificateur. En fait, chaque type de sélecteur voit sa spécificité comptée à un niveau qui lui est propre, qui ne peut pas être dépassé par des sélecteurs d'un type avec une spécificité moindre. Par exemple, un <em>million</em> de sélecteurs de <strong>class</strong> combinés ne prendront jamais le dessus sur <em>un</em> sélecteur d'<strong>id</strong>.</p>
 
 <p>Une manière plus précise d'évaluer la spécificité serait de noter individuellement les niveaux de spécificité en commençant par le plus élevé et en passant au plus bas si nécessaire. Ce n'est que lorsqu'il existe un lien entre les scores des sélecteurs au sein d'un niveau de spécificité que vous devez évaluer le niveau suivant ; sinon, vous pouvez ignorer les sélecteurs de niveau de spécificité inférieur car ils ne peuvent jamais écraser les niveaux de spécificité supérieurs.</p>
 </div>
@@ -275,8 +275,8 @@ original_slug: Apprendre/CSS/Building_blocks/Cascade_et_heritage
  <li>Le deuxième élément a un arrière-plan rouge, mais pas de bordure. Pourquoi ? En raison de la déclaration <code>!important</code> dans la deuxième règle — écrit après  <code>border: none</code>,  ce mot-clé signifie que cette déclaration l'emporte sur le <code>border</code> définie dans la règle précédente, même si l'ID a une spécificité plus élevée.</li>
 </ol>
 
-<div class="blockIndicator note">
-<p><strong>Note </strong>: La seule façon de dépasser cette déclaration  <code>!important</code> serait d'ajouter un <code>!important</code> dans une déclaration de même<em> spécificité</em> apparaissant plus bas dans l'ordre du source, ou avec une spécificité plus grande.</p>
+<div class="note">
+<p><strong>Note :</strong> La seule façon de dépasser cette déclaration  <code>!important</code> serait d'ajouter un <code>!important</code> dans une déclaration de même<em> spécificité</em> apparaissant plus bas dans l'ordre du source, ou avec une spécificité plus grande.</p>
 </div>
 
 <p>Il est utile de connaître  <code>!important</code> , ne serait-ce que pour le reconnaître dans le code des autres. <strong>Cependant, nous vous recommandons fortement de ne jamais l'utiliser, sauf en dernier recours.</strong> <code>!important</code> modifie le fonctionnement normal de la cascade, de sorte qu'il peut être très difficile de résoudre les problèmes de débogage CSS, en particulier dans une grande feuille de style.</p>

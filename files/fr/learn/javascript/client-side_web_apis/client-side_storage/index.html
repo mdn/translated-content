@@ -50,7 +50,7 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage
 <p>Souvent, le stockage côté client et côté serveur sont utilisés ensemble. Par exemple, vous pouvez télécharger à partir d'une base de données côté serveur une série de fichiers mp3 utilisés par un site web (comme un jeu ou une application de musique) vers une base de données côté client et ainsi pouvoir les lire quand vous le voulez. Avec cette stratégie, l'utilisateur n'a à télécharger le fichier qu'une seule fois — les visites suivantes, ils sont récupérés à partir de la base de données locale.</p>
 
 <div class="note">
-<p><strong>Note </strong>: La quantité de données que l'on peut stocker à l'aide des APIs de stockage côté client est limitée (limite par API et limite globale), la limite exacte dépend du navigateur et des configurations. Voir <a href="/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria">Limites de stockage du navigateur et critères d'éviction</a> pour plus d'informations.</p>
+<p><strong>Note :</strong> La quantité de données que l'on peut stocker à l'aide des APIs de stockage côté client est limitée (limite par API et limite globale), la limite exacte dépend du navigateur et des configurations. Voir <a href="/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria">Limites de stockage du navigateur et critères d'éviction</a> pour plus d'informations.</p>
 </div>
 
 <h3 id="À_lancienne_les_cookies">À l'ancienne : les cookies</h3>
@@ -66,7 +66,7 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage
 <p>Le seul avantage des cookies est qu'ils sont supportés par des navigateurs anciens : si votre projet requiert le support de navigateurs obsolètes (comme Internet Explorer 8 et inférieur), les cookies peuvent se révéler utiles. Pour la plupart des projets, vous ne devriez pas avoir besoin d'y recourir.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Pourquoi existe-t-il encore de nouveaux sites crées à l'aide de cookies? Principalement de par les habitudes des développeurs, l'utilisation de bibliothèques anciennes qui utilisent encore des cookies et l'existence de nombreux sites web fournissant des formations et références dépassées pour apprendre à stocker des données.</p>
+<p><strong>Note :</strong> Pourquoi existe-t-il encore de nouveaux sites crées à l'aide de cookies? Principalement de par les habitudes des développeurs, l'utilisation de bibliothèques anciennes qui utilisent encore des cookies et l'existence de nombreux sites web fournissant des formations et références dépassées pour apprendre à stocker des données.</p>
 </div>
 
 <h3 id="La_nouvelle_école_Web_Storage_et_IndexedDB">La nouvelle école : Web Storage et IndexedDB</h3>
@@ -260,11 +260,11 @@ function nameDisplayCheck() {
 <p>Notre exemple est terminé — bien joué ! Il ne vous reste plus qu'à enregistrer votre code et tester votre page HTML dans un navigateur. Vous pouvez voir notre <a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html">version terminée en direct ici</a> (ou le <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/index.js">code JavaScript terminé</a>).</p>
 
 <div class="note">
-<p><strong>Note </strong>: Vous pouvez trouver un exemple un peu plus complexe dans l'article <a href="/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Utiliser l'API de stockage web</a>.</p>
+<p><strong>Note :</strong> Vous pouvez trouver un exemple un peu plus complexe dans l'article <a href="/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Utiliser l'API de stockage web</a>.</p>
 </div>
 
 <div class="note">
-<p><strong>Note </strong>: Dans la ligne <code>&lt;script src="index.js" defer&gt;&lt;/script&gt;</code> de notre version finie, l'attribut <code>defer</code> spécifie que le contenu de l'élément {{htmlelement("script")}} ne doit pas s'exécuter avant que la page ait fini de charger.</p>
+<p><strong>Note :</strong> Dans la ligne <code>&lt;script src="index.js" defer&gt;&lt;/script&gt;</code> de notre version finie, l'attribut <code>defer</code> spécifie que le contenu de l'élément {{htmlelement("script")}} ne doit pas s'exécuter avant que la page ait fini de charger.</p>
 </div>
 
 <h2 id="Stocker_des_données_complexes_—_IndexedDB">Stocker des données complexes — IndexedDB</h2>
@@ -333,7 +333,7 @@ let request = window.indexedDB.open('notes', 1);</pre>
   <p>Pour gérer cela dans IndexedDB, on crée d'abord une requête (que vous pouvez appeler comme vous le voulez — on l'appelle <code>request</code> pour que ce soit plus explicite). On utilise ensuite des gestionnaire d'événement pour exécuter du code lorsque les requêtes sont terminées, échouent, etc, ce que l'on va voir ci-dessous.</p>
 
   <div class="note">
-  <p><strong>Note </strong>: Le numéro de version est important. Si vous voulez mettre à jour votre base de données (par exemple, pour modifier la structure de la table), vous devez ré-exécuter votre code avec un numéro de version supérieur et spécifier le schéma de la base de données avec le gestionnaire d'événement <code>onupgradeneeded</code>. Nous ne verrons pas la mise à jour de base de données dans ce tutoriel.</p>
+  <p><strong>Note :</strong> Le numéro de version est important. Si vous voulez mettre à jour votre base de données (par exemple, pour modifier la structure de la table), vous devez ré-exécuter votre code avec un numéro de version supérieur et spécifier le schéma de la base de données avec le gestionnaire d'événement <code>onupgradeneeded</code>. Nous ne verrons pas la mise à jour de base de données dans ce tutoriel.</p>
   </div>
  </li>
  <li>
@@ -608,7 +608,7 @@ function deleteItem(e) {
 <p>Et voilà ! L'exemple devrait maintenant fonctionner.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Si vous rencontrez des difficultés, n'hésitez pas à consulter <a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/notes/">notre exemple en direct</a> (ou voir <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.js">le code source</a>).</p>
+<p><strong>Note :</strong> Si vous rencontrez des difficultés, n'hésitez pas à consulter <a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/notes/">notre exemple en direct</a> (ou voir <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.js">le code source</a>).</p>
 </div>
 
 <h3 id="Stocker_des_données_complexes_avec_IndexedDB">Stocker des données complexes avec IndexedDB</h3>
@@ -742,7 +742,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 <p>L'API Cache est un autre mécanisme de stockage côté client, il a été conçu pour enregistrer les réponses HTTP et fonctionne donc très bien en synergie avec les service workers.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Les Service workers et Cache sont pris en charge par la plupart des navigateurs modernes aujourd'hui. Au moment de la rédaction de cet article, Safari était encore occupé à l'implémenter, mais il devrait bientôt être disponible.</p>
+<p><strong>Note :</strong> Les Service workers et Cache sont pris en charge par la plupart des navigateurs modernes aujourd'hui. Au moment de la rédaction de cet article, Safari était encore occupé à l'implémenter, mais il devrait bientôt être disponible.</p>
 </div>
 
 <h3 id="Un_exemple_service_worker">Un exemple service worker</h3>
@@ -769,7 +769,7 @@ if('serviceWorker' in navigator) {
 </ul>
 
 <div class="note">
-<p><strong>Note </strong>: Le chemin du fichier <code>sw.js</code> est relatif à l'origine du site, et non au fichier JavaScript qui l'appelle.<br>
+<p><strong>Note :</strong> Le chemin du fichier <code>sw.js</code> est relatif à l'origine du site, et non au fichier JavaScript qui l'appelle.<br>
  Le service worker est sur <code>https://mdn.github.io/learning-area/.../sw.js</code>. L'origine est <code>https://mdn.github.io</code>. Le chemin donné doit donc être <code>/learning-area/.../sw.js</code>.<br>
  Si vous vouliez héberger cet exemple sur votre propre serveur, vous devriez changer le chemin en conséquence. C'est plutôt inhabituel, mais cela doit fonctionner de cette façon pour des raisons de sécurité.</p>
 </div>

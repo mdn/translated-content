@@ -51,7 +51,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 <p>Il s'agit essentiellement de vérifier si votre code HTML et CSS est bien conçu et s'il ne contient aucune erreur de syntaxe.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Un problème fréquent avec le HTML et le CSS arrive quand différentes règles CSS commencent à entrer en conflit avec une autre. Cela peut être particulièrement problématique lorsque vous utilisez un bout de code tierce. Par exemple, vous pouvez utiliser un modèle CSS et remarquer qu'un des noms de classe qui est utilisé entre en conflit avec un que vous utilisez déjà dans un but différent. Ou vous pouvez trouver que du HTML généré par une API tierce (générateur de bannières publicitaires, par exemple) inclut un nom de classe ou d'ID que vous utilisez déjà dans un but différent. Afin de garantir que cela ne se produira pas, vous devez rechercher les outils que vous allez utiliser en premier et construire votre code en conséquence. Il convient également de relever les "<a href="https://developer.mozilla.org/fr/docs/Glossaire/Namespace">espace de noms</a>" en CSS, par ex. si vous avez un widget, assurez-vous qu'il a des classes distinctes, et ensuite commencez les sélecteurs qui sélectionnent les éléments à l'intérieur du widget avec cette classe, les conflits risqueront moins d'arriver. Par exemple <code>.audio-player ul a</code>.</p>
+<p><strong>Note :</strong> Un problème fréquent avec le HTML et le CSS arrive quand différentes règles CSS commencent à entrer en conflit avec une autre. Cela peut être particulièrement problématique lorsque vous utilisez un bout de code tierce. Par exemple, vous pouvez utiliser un modèle CSS et remarquer qu'un des noms de classe qui est utilisé entre en conflit avec un que vous utilisez déjà dans un but différent. Ou vous pouvez trouver que du HTML généré par une API tierce (générateur de bannières publicitaires, par exemple) inclut un nom de classe ou d'ID que vous utilisez déjà dans un but différent. Afin de garantir que cela ne se produira pas, vous devez rechercher les outils que vous allez utiliser en premier et construire votre code en conséquence. Il convient également de relever les "<a href="https://developer.mozilla.org/fr/docs/Glossaire/Namespace">espace de noms</a>" en CSS, par ex. si vous avez un widget, assurez-vous qu'il a des classes distinctes, et ensuite commencez les sélecteurs qui sélectionnent les éléments à l'intérieur du widget avec cette classe, les conflits risqueront moins d'arriver. Par exemple <code>.audio-player ul a</code>.</p>
 </div>
 
 <h3 id="La_validation">La validation</h3>
@@ -100,7 +100,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 <p>Les outils de développement inclus dans la plupart des navigateurs fournissent également des outils pour traquer les erreurs, en particulier pour le CSS.</p>
 
 <div class="note">
-<p><strong>Note</strong> : Les erreurs HTML n'ont pas tendance à se montrer facilement avec les outils de dev, étant donné que le navigateur va essayer de corriger en fermant automatiquement mal les balises ; le validateur W3C est la meilleure façon d'obtenir des erreurs HTML — voir {{anch("Validation")}} plus haut.</p>
+<p><strong>Note :</strong> Les erreurs HTML n'ont pas tendance à se montrer facilement avec les outils de dev, étant donné que le navigateur va essayer de corriger en fermant automatiquement mal les balises ; le validateur W3C est la meilleure façon d'obtenir des erreurs HTML — voir {{anch("Validation")}} plus haut.</p>
 </div>
 
 <p>As an example, in Firefox the CSS inspector will show CSS declarations that aren't applied crossed out, with a warning triangle. Hovering the warning triangle will provide a descriptive error message:</p>
@@ -126,7 +126,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 <p>Les éléments HTML non reconnus sont traités par les navigateurs comme des éléments inline anonymes (véritablement des éléments inline avec aucune valeur sémantiques, similaires aux éléments {{htmlelement("span")}} ). Vous pouvez toujours vous référez à eux avec leurs noms, et les styler avec du CSS, par exemple — vous avez juste besoin de vous assurer qu'ils se comportent comme vous le voulez, par exemple configurer <code>display: block;</code> sur tous les nouveaux éléments sémantiques (comme {{htmlelement("article")}}, {{htmlelement("aside")}}, etc.), mais seulement sur les vieilles versions d'IE qui ne les reconnaissent pas (donc, IE 8 et plus faible). De cette façon les nouveaux navigateurs peuvent juste utiliser le code normalement, mais les anciennes versions d'IE seront également capables de styler ces éléments.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Voir {{anch("IE conditional comments")}} pour une application efficace.</p>
+<p><strong>Note :</strong> Voir {{anch("IE conditional comments")}} pour une application efficace.</p>
 </div>
 
 
@@ -154,7 +154,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 <p>Cette exemple (issu de <a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a>) n'inclut pas seulement un lecteur Flash de repli pour les anciennes versions d'IE, mais aussi un lien simple vous permettant de télécharger la vidéo si jamais le lecteur Flash ne fonctionne pas, finalement l'utilisateur peut toujours accéder à la vidéo.</p>
 
 <div class="note">
-<p><strong>Note</strong> : les librairies tierces comme <a href="http://videojs.com/">Video.js</a> et <a href="https://www.jwplayer.com/">JW Player</a> utilisent ce type de mécanismes de recours pour fournir un support en navigateur croisé.</p>
+<p><strong>Note :</strong> les librairies tierces comme <a href="http://videojs.com/">Video.js</a> et <a href="https://www.jwplayer.com/">JW Player</a> utilisent ce type de mécanismes de recours pour fournir un support en navigateur croisé.</p>
 </div>
 
 <p>Les éléments des formulaire HTML5 présentent également des recours de qualités — HTML5 a introduit des types d'<code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> spéciaux pour insérer des informations spécifiques dans les formulaires, en particulier sur les plateformes mobiles, où fournir une insertion de données sans difficultés est primordiale pour l'expérience utilisateur. Supporter les plateformes apporte des widgets UI spéciaux lorsque ces types d'input sont utilisés, comme le widget calendrier pour entrer des dates.</p>
@@ -217,7 +217,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 <p>{{ EmbedLiveSample('Résultat', '100%', 150) }}</p>
 
 <div class="note">
-<p><strong>Note </strong>: Vous pouvez également le voir exécuté en direct depuis <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html">forms-test.html</a> sur GitHub (voir aussi le <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/forms-test.html">code source</a>).</p>
+<p><strong>Note :</strong> Vous pouvez également le voir exécuté en direct depuis <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html">forms-test.html</a> sur GitHub (voir aussi le <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/forms-test.html">code source</a>).</p>
 </div>
 
 <p>Si vous consultez l'exemple sur un navigateur qui supporte les technologies récentes comme Android Chrome ou iOS Safari, vous verrez le widget/fonctionnalité spécial en action quand vous essaierai de saisir des données. Sur des plateformes non compatibles comme Firefox ou Internet Explorer, les inputs vont juste recourir à un input texte normal, finalement l'utilisateur peut toujours entrer des informations.</p>
@@ -234,7 +234,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 <p><img alt="" src="https://mdn.mozillademos.org/files/14141/blingy-button.png" style="display: block; margin: 0 auto;"></p>
 
 <div class="note">
-<p><strong>Note </strong>: Vous pouvez également voir cet exemple exécuté en direct sur GitHub comme <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/button-with-fallback.html">button-with-fallback.html</a> (voir aussi le <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html">code source</a>).</p>
+<p><strong>Note :</strong> Vous pouvez également voir cet exemple exécuté en direct sur GitHub comme <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/button-with-fallback.html">button-with-fallback.html</a> (voir aussi le <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html">code source</a>).</p>
 </div>
 
 <p>Le bouton a un nombre de déclarations qui le style, mais les deux qui nous intéressent le plus sont les suivantes :</p>
@@ -264,7 +264,7 @@ button:active {
 <p>Pour résoudre ce problème, nous avons ajouté une deuxième déclaration <code>background-color</code>, qui précise juste une couleur hex — c'est un recours supporté par les vieux navigateurs, et agit en tant que solution de repli si les fonctionnalités belles et brillantes ne fonctionnent pas. Ce qui se passe c'est que le navigateur parcourant cette page applique pour commencer la première valeur <code>background-color</code> ; lorsqu'il sélectionne la deuxième déclaration <code>background-color</code>, il remplace la valeur initiale avec cette valeur s'il supporte les couleurs RGBA. S'il ne supporte pas, il ignorera juste toute la déclaration et continuera à avancer.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Il se produit la même chose pour les autres caractéristiques de CSS comme les blocs <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a>, <code><a href="/en-US/docs/Web/CSS/@font-face">@font-face</a></code> et <code><a href="/en-US/docs/Web/CSS/@supports">@supports</a></code> — s'ils ne sont pas supportés, le navigateur va juste les ignorer.</p>
+<p><strong>Note :</strong> Il se produit la même chose pour les autres caractéristiques de CSS comme les blocs <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a>, <code><a href="/en-US/docs/Web/CSS/@font-face">@font-face</a></code> et <code><a href="/en-US/docs/Web/CSS/@supports">@supports</a></code> — s'ils ne sont pas supportés, le navigateur va juste les ignorer.</p>
 </div>
 
 <h4 id="Les_commentaires_conditionnels_dIE">Les commentaires conditionnels d'IE</h4>
@@ -279,7 +279,7 @@ button:active {
 <p>Ce block appliquera les CSS et Javascript spécifiques à IE uniquement si le navigateur qui affiche la page est IE 8 ou plus vieux. <code>lte</code> veux dire "moins que ou égal", mais vous pouvez aussi utiliser lt, gt, gte, <code>!</code> pour NOT, et d'autre syntaxe logique.</p>
 
 <div class="note">
-<p><strong>Note </strong>: L'article <a href="https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/">Internet Explorer Conditional Comments</a> de Sitepoint apporte un tutoriel/référence utile pour les débutants qui explique la syntaxe des commentaires conditionnels en détail.</p>
+<p><strong>Note :</strong> L'article <a href="https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/">Internet Explorer Conditional Comments</a> de Sitepoint apporte un tutoriel/référence utile pour les débutants qui explique la syntaxe des commentaires conditionnels en détail.</p>
 </div>
 
 <p>Comme vous pouvez le voir, c'est particulièrement utile pour appliquer des fixes aux vieilles versions d'IE. Le cas d'usage que nous avons mentionné plus tôt (rendre les éléments sémantiques modernes stylables sur les vieilles versions d'IE) peut être atteint facilement en utilisant des commentaires conditionnels, par exemple vous pouvez mettre quelque chose comme ça dans votre feuille de style IE :</p>
@@ -431,11 +431,11 @@ transform: rotate(90deg);</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong> : Historiquement les développeurs web étaient habitués à utiliser des fichiers CSS appelés resets, qui supprimaient tous les styles par défaut des navigateurs qui s'appliquaient au HTML, et ensuite appliquaient leurs propres styles pour tout le reste — c'était fait pour rendre le style sur un projet plus cohérent, et réduire les possibles problèmes en navigateur croisé, spécialement pour les choses issues de la mise en page. Toutefois, cela a récemment été défini comme exagéré. Le meilleur équivalent que nous avons de nos jours c'est le <a href="https://necolas.github.io/normalize.css/">normalize.css</a>, un peu de CSS propre qui style discrètement par-dessus le style par défaut des navigateurs afin de rendre les éléments plus cohérents et fixe quelques problèmes de disposition. Nous vous recommandons d'appliquer normalize.css sur toutes vos pages HTML.</p>
+<p><strong>Note :</strong> Historiquement les développeurs web étaient habitués à utiliser des fichiers CSS appelés resets, qui supprimaient tous les styles par défaut des navigateurs qui s'appliquaient au HTML, et ensuite appliquaient leurs propres styles pour tout le reste — c'était fait pour rendre le style sur un projet plus cohérent, et réduire les possibles problèmes en navigateur croisé, spécialement pour les choses issues de la mise en page. Toutefois, cela a récemment été défini comme exagéré. Le meilleur équivalent que nous avons de nos jours c'est le <a href="https://necolas.github.io/normalize.css/">normalize.css</a>, un peu de CSS propre qui style discrètement par-dessus le style par défaut des navigateurs afin de rendre les éléments plus cohérents et fixe quelques problèmes de disposition. Nous vous recommandons d'appliquer normalize.css sur toutes vos pages HTML.</p>
 </div>
 
 <div class="note">
-<p><strong>Note </strong>:  Lorsque vous essayer de localiser un problème de disposition difficile, une bonne technique et d'ajouter une couleur éclatante {{cssxref("outline")}} sur l'élément dérangeant, ou sur tous les éléments à côté. Cela facilite la tâche pour voir où tous les éléments sont placés. Voir <a href="http://www.otsukare.info/2016/10/05/debugging-css" rel="bookmark" title="Permalink to Debug your CSS with outline visualizations.">Debug your CSS with outline visualizations</a> pour plus de détails...</p>
+<p><strong>Note :</strong> Lorsque vous essayer de localiser un problème de disposition difficile, une bonne technique et d'ajouter une couleur éclatante {{cssxref("outline")}} sur l'élément dérangeant, ou sur tous les éléments à côté. Cela facilite la tâche pour voir où tous les éléments sont placés. Voir <a href="http://www.otsukare.info/2016/10/05/debugging-css" rel="bookmark" title="Permalink to Debug your CSS with outline visualizations.">Debug your CSS with outline visualizations</a> pour plus de détails...</p>
 </div>
 
 <h4 id="Support_pour_les_nouvelles_caractéristiques_de_disposition">Support pour les nouvelles caractéristiques de disposition</h4>
@@ -454,7 +454,7 @@ transform: rotate(90deg);</pre>
 <p>Par exemple, vous pourriez appliquer une disposition flexbox sur les navigateurs modernes, et aussi appliquer une disposition en float pour les plus vieux navigateurs qui ne supportent pas flexbox.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Il y a une fonctionnalité assez récente en CSS appelé <code><a href="/en-US/docs/Web/CSS/@supports">@supports</a></code>, qui vous permet d'implémenter des tests de détection de fonctionnalités natives.</p>
+<p><strong>Note :</strong> Il y a une fonctionnalité assez récente en CSS appelé <code><a href="/en-US/docs/Web/CSS/@supports">@supports</a></code>, qui vous permet d'implémenter des tests de détection de fonctionnalités natives.</p>
 </div>
 
 <h4 id="Les_problèmes_de_responsive_design">Les problèmes de responsive design</h4>

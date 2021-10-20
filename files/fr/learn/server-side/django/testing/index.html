@@ -56,7 +56,7 @@ translation_of: Learn/Server-side/Django/Testing
 </dl>
 
 <div class="note">
-<p><strong>Note : </strong>Les autres genres habituels de tests comprennent : la boîte noire, la boîte blanche, les tests manuels, automatiques, de canari (canary), de fumée (smoke), de conformité (conformance), d'approbation (acceptance), fonctionnels, système, performance, chargement et stress. Consultez pour plus d'information sur chacun d'eux.</p>
+<p><strong>Note :</strong> Les autres genres habituels de tests comprennent : la boîte noire, la boîte blanche, les tests manuels, automatiques, de canari (canary), de fumée (smoke), de conformité (conformance), d'approbation (acceptance), fonctionnels, système, performance, chargement et stress. Consultez pour plus d'information sur chacun d'eux.</p>
 </div>
 
 <h3 id="Que_fournit_Django_pour_tester">Que fournit Django pour tester ?</h3>
@@ -182,7 +182,7 @@ translation_of: Learn/Server-side/Django/Testing
 </ul>
 
 <div class="note">
-<p>Les classes de test ont aussi une méthode <code>tearDown()</code>, que nous n'avons pas utilisée. Cette méthode n'est pas particulièrement utile pour les tests avec bases de données, dans la mesure où la classe de base <code>TestCase</code> prend soin pour vous de supprimer la base de données utilisées pour les tests.</p>
+<p><strong>Note :</strong> Les classes de test ont aussi une méthode <code>tearDown()</code>, que nous n'avons pas utilisée. Cette méthode n'est pas particulièrement utile pour les tests avec bases de données, dans la mesure où la classe de base <code>TestCase</code> prend soin pour vous de supprimer la base de données utilisées pour les tests.</p>
 </div>
 
 <p>En dessous de ces méthodes, nous avons un certain nombre de méthodes de test, qui utilisent des fonctions <code>Assert</code>, pour tester si certaines conditions sont vraies, fausses ou égales (<code>AssertTrue</code>, <code>AssertFalse</code>, <code>AssertEqual</code>). Si la condition ne renvoie pas le résultat escompté, le test plante et renvoie une erreur à votre console.</p>
@@ -190,7 +190,7 @@ translation_of: Learn/Server-side/Django/Testing
 <p>Les méthodes <code>AssertTrue</code>, <code>AssertFalse</code> et <code>AssertEqual</code> sont des assertions standard fournies par <strong>unittest</strong>. Il y a d'autres assertions standard dans le framework, et aussi des <a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#assertions">assertions spécifiques à Django</a>, pour tester si une vue redirige (<code>assertRedirects</code>), pour tester si tel template a été utilisé (<code>assertTemplateUsed</code>), etc.</p>
 
 <div class="note">
-<p>Normallement vous ne devriez <strong>pas</strong> inclure de fonctions <strong>print()</strong> dans vos tests, comme montré ci-dessus. Nous avons fait cela uniquement pour que vous puissiez voir dans la console (dans la section suivante) l'ordre dans lequel les fonctions de setup sont appelées.</p>
+<p><strong>Note :</strong> Normallement vous ne devriez <strong>pas</strong> inclure de fonctions <strong>print()</strong> dans vos tests, comme montré ci-dessus. Nous avons fait cela uniquement pour que vous puissiez voir dans la console (dans la section suivante) l'ordre dans lequel les fonctions de setup sont appelées.</p>
 </div>
 
 <h2 id="Comment_lancer_les_tests">Comment lancer les tests</h2>
@@ -202,7 +202,7 @@ translation_of: Learn/Server-side/Django/Testing
 <p>Cette commande va lancer la recherche de tous les fichiers ayant la forme <strong>test*.py</strong> sous le répertoire courant, et lancer tous les tests définis, en utilisant les classes de base appropriées (ici nous avons un certain nombre de fichiers de test, mais pour le moment seul <strong>/catalog/tests/test_models.py</strong> contient des tests). Par défaut, chaque test ne fera de rapport qu'en cas d'échec, avec ensuite un résumé du test.</p>
 
 <div class="note">
-<p>Si vous obtenez des erreurs telles que : <code>ValueError: Missing staticfiles manifest entry ...</code>, cela peut être dû au fait que le test ne lance pas <em>collectstatic</em> par défaut, et que votre application utilise une classe de storage qui le requiert (voyez <a href="https://docs.djangoproject.com/en/2.1/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict">manifest_strict</a> pour plus d'information). Il y a plusieurs façons de remédier à ce problème - la plus facile est de lancer tout simplement <em>collectstatic</em> avant de lancer les tests :</p>
+<p><strong>Note :</strong> Si vous obtenez des erreurs telles que : <code>ValueError: Missing staticfiles manifest entry ...</code>, cela peut être dû au fait que le test ne lance pas <em>collectstatic</em> par défaut, et que votre application utilise une classe de storage qui le requiert (voyez <a href="https://docs.djangoproject.com/en/2.1/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict">manifest_strict</a> pour plus d'information). Il y a plusieurs façons de remédier à ce problème - la plus facile est de lancer tout simplement <em>collectstatic</em> avant de lancer les tests :</p>
 
 <pre class="brush: bash">python3 manage.py collectstatic
 </pre>
@@ -238,7 +238,7 @@ Destroying test database for alias 'default'...</pre>
 <p>Ici nous voyons que nous avons eu un échec pour un test, et nous pouvons voir exactement quelle fonction a planté et pourquoi (cet échec était prévu, car <code>False</code> n'est pas <code>True</code> !).</p>
 
 <div class="note">
-<p><strong>Truc: </strong>La chose la plus importante à apprendre de la sortie de test ci-dessus est qu'il est bien mieux d'utiliser des noms descriptifs/informatifs pour vos objets et méthodes.</p>
+<p><strong>Note :</strong> La chose la plus importante à apprendre de la sortie de test ci-dessus est qu'il est bien mieux d'utiliser des noms descriptifs/informatifs pour vos objets et méthodes.</p>
 </div>
 
 <p>Le texte en <strong>gras</strong> ci-dessus n'apparaîtra pas normalement dans la sortie de test (elle est générée par les fonctions <code>print()</code> dans nos tests). Cela montre comment la méthode <code>setUpTestData()</code> est appelée une fois pour l'ensemble de classe, tandis que <code>setUp()</code> est appelée avant chaque méthode.</p>
@@ -275,7 +275,7 @@ python3 manage.py test catalog.tests.test_models.YourTestClass.test_one_plus_one
 <p>Maintenant que nous savons comment lancer nos tests et quel genre de choses nous avons besoin de tester, regardons quelques exemples pratiques.</p>
 
 <div class="note">
-<p><strong>Note : </strong>Nous n'allons pas écrire tous les tests possibles, mais ce qui suit devrait vous donner une idée sur le fonctionnement des tests, et ce que vous pouvez faire ensuite.</p>
+<p><strong>Note :</strong> Nous n'allons pas écrire tous les tests possibles, mais ce qui suit devrait vous donner une idée sur le fonctionnement des tests, et ce que vous pouvez faire ensuite.</p>
 </div>
 
 <h3 id="Modèles">Modèles</h3>
@@ -386,7 +386,7 @@ AssertionError: 'Died' != 'died'
 <p>C'est vraiment un bug mineur, mais il met en lumière comment écrire des test peut vérifier de plus près les hypothèses que vous pourriez avoir supposées vraies.</p>
 
 <div class="note">
-<p><strong>Note : </strong>Changez en "died" le label pour le champ date_of_death (/catalog/models.py) et relancez les tests.</p>
+<p><strong>Note :</strong> Changez en "died" le label pour le champ date_of_death (/catalog/models.py) et relancez les tests.</p>
 </div>
 
 <p>La configuration pour tester les autres modèles est semblable pour tous, aussi nous n'allons pas discuter chacune plus longuement. Sentez-vous libre de créer vos propres tests pour nos autres modèles.</p>
@@ -848,7 +848,7 @@ class RenewBookInstancesViewTest(TestCase):
 </pre>
 
 <div class="warning">
-<p>Si vous utilisez la class de formulaire <code>RenewBookModelForm(forms.ModelForm)</code> à la place de la classe <code>RenewBookForm(forms.Form)</code>, le nom du champ est <strong>'due_back'</strong> et non <strong>'renewal_date'</strong>.</p>
+<p><strong>Attention :</strong> Si vous utilisez la class de formulaire <code>RenewBookModelForm(forms.ModelForm)</code> à la place de la classe <code>RenewBookForm(forms.Form)</code>, le nom du champ est <strong>'due_back'</strong> et non <strong>'renewal_date'</strong>.</p>
 </div>
 
 <p>Le test suivant (ajoutez-le à la classe également) vérifie que la vue redirige vers une liste de tous les livres empruntés si le renouvellement réussit. Ce qui diffère ici est que, pour la première fois, nous montrons comment vous pouvez <code>POST</code>er des données en utilisant le client. Les données postées forment le second argument de la fonction post, et elles sont spécifiées comme un dictionnaire de clés/valeurs.</p>
@@ -861,7 +861,7 @@ class RenewBookInstancesViewTest(TestCase):
 </pre>
 
 <div class="warning">
-<p>La vue <em>all-borrowed</em> a été ajoutée comme <em>défi</em>, et votre code peut, à la place, rediriger vers la page d'accueil '/'. Si c'est le cas, modifiez les deux dernières lignes du code de test pour qu'elles ressemblent au code ci-dessous. L'expression <code>follow=True</code> dans la requête s'assure que la requête retourne l'URL de la destination finale (donc vérifie <code>/catalog/</code> plutôt que <code>/</code>).</p>
+<p><strong>Attention :</strong> La vue <em>all-borrowed</em> a été ajoutée comme <em>défi</em>, et votre code peut, à la place, rediriger vers la page d'accueil '/'. Si c'est le cas, modifiez les deux dernières lignes du code de test pour qu'elles ressemblent au code ci-dessous. L'expression <code>follow=True</code> dans la requête s'assure que la requête retourne l'URL de la destination finale (donc vérifie <code>/catalog/</code> plutôt que <code>/</code>).</p>
 
 <pre class="brush: python"> response = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':valid_date_in_future}, <strong>follow=True</strong> )
  <strong>self.assertRedirects(</strong><strong>response, '/catalog/')</strong></pre>

@@ -20,8 +20,8 @@ translation_of: Learn/Performance/Multimedia
   </tbody>
 </table>
 
-<div class="notecard note">
-  <p><b>Note :</b> Cet article est une introduction à l'optimisation des éléments multimédia sur le web, couvrant les principes généraux et les techniques de base. Pour aller plus loin, consultez des ressources plus spécialisées, telles que <a href="https://images.guide">https://images.guide (en anglais)</a>.</p>
+<div class="note">
+  <p><strong>Note :</strong> Cet article est une introduction à l'optimisation des éléments multimédia sur le web, couvrant les principes généraux et les techniques de base. Pour aller plus loin, consultez des ressources plus spécialisées, telles que <a href="https://images.guide">https://images.guide (en anglais)</a>.</p>
 </div>
 
 <h2 id="why_optimize_your_multimedia">Pourquoi optimiser vos éléments multimédia ?</h2>
@@ -52,8 +52,8 @@ translation_of: Learn/Performance/Multimedia
 
 <p>Le format de fichier le plus optimisé dépend directement du type d'image à charger.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b> Pour obtenir des informations plus générales sur les types d'images, consultez le <a href="/fr/docs/Web/Media/Formats/Image_types">guide des types d'images et de formats d'images</a>.</p>
+<div class="note">
+  <p><strong>Note :</strong> Pour obtenir des informations plus générales sur les types d'images, consultez le <a href="/fr/docs/Web/Media/Formats/Image_types">guide des types d'images et de formats d'images</a>.</p>
 </div>
 
 <p>Le format <a href="/fr/docs/Web/Media/Formats/Image_types#svg">SVG</a> est le plus approprié pour les images qui ne comprennent que quelques couleurs et qui n'ont pas la complexité d'une photographie. Cela nécessite la mise à disposition d'une source dans un format vectoriel. Si cette image n'est disponible qu'en format bitmap, alors le format <a href="/fr/docs/Web/Media/Formats/Image_types#png">PNG</a> sera la solution de repli idéale. De bons exemples d'images idéalement fournies en SVG sont les logos, les illustrations, les graphiques ou les icônes (veuillez noter qu'il vaut mieux utiliser des images au format SVG que des polices d'icônes !). Qu'il s'agisse de SVG ou de PNG, les deux formats prennent en charge la transparence.</p>
@@ -74,8 +74,8 @@ translation_of: Learn/Performance/Multimedia
 
 <ul>
   <li><a href="/fr/docs/Web/Media/Formats/Image_types#webp">WebP</a> : un choix excellent pour les images, qu'elles soient fixes ou animées. WebP offre une meilleure compression que PNG ou JPEG et prend en charge les grandes profondeurs de couleurs, les animations, la transparence et de nombreuses autres fonctionnalités, à l'exception de l'affichage progressif. WebP est pris en charge par tous les navigateurs les plus utilisés à l'exception de Safari 14 sur macOS 14 sur ordinateur.
-    <div class="notecard note">
-      <p><b>Note :</b> en dépit de <a href="https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174">la prise en charge annoncée de WebP sur Safari 14</a>, les images <code>.webp</code> ne s'affiche pas bien sur macOS sur ordinateur, alors qu'elles s'affichent bien sur iOS 14 sur mobile.</p>
+    <div class="note">
+      <p><strong>Note :</strong> en dépit de <a href="https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174">la prise en charge annoncée de WebP sur Safari 14</a>, les images <code>.webp</code> ne s'affiche pas bien sur macOS sur ordinateur, alors qu'elles s'affichent bien sur iOS 14 sur mobile.</p>
     </div>
   </li>
   <li><a href="/fr/docs/Web/Media/Formats/Image_types#avif">AVIF</a> : un bon choix pour les images fixes ou animées, du fait du haut niveau de performances et du fait qu'il est libre de droits. AVIF est encore plus efficient que WebP, mais il n'est pas aussi bien pris en charge : il est actuellement pris en charge sur Chrome, Opera et Firefox (à l'aide des <a href="/fr/docs/Mozilla/Firefox/Experimental_features#avif_av1_image_file_format_support">réglages de préférences</a>). <br />Vous pouvez utiliser cet <a href="https://avif-converter.online">outil en ligne pour convertir différents formats d'images en AVIF</a>.</li>

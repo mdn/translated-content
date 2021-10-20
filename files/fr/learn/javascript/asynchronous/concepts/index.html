@@ -63,9 +63,8 @@ btn.addEventListener('click', () =&gt; {
 
 <p>Lorsque vous exécutez l'exemple, ouvrez votre console JavaScript, puis cliquez sur le bouton. Vous remarquerez que le paragraphe n'apparaît qu'une fois que le calcul des dates est terminé et que le message de la console a été enregistré. Le code s'exécute dans l'ordre où il apparaît dans la source, et la dernière opération ne s'exécute pas tant que la première n'est pas terminée.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>L'exemple précédent est très peu réaliste. Vous ne calculeriez jamais 10 millions de dates sur une véritable application web ! Il sert cependant à vous donner l'idée de base.</p>
+<div class="note">
+  <p><strong>Note :</strong> L'exemple précédent est très peu réaliste. Vous ne calculeriez jamais 10 millions de dates sur une véritable application web ! Il sert cependant à vous donner l'idée de base.</p>
 </div>
 
 <p>Dans notre deuxième exemple, <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-ui-blocking.html">simple-sync-ui-blocking.html</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-ui-blocking.html">voir en direct</a>), nous simulons quelque chose de légèrement plus réaliste que vous pourriez rencontrer sur une page réelle. Nous bloquons l'interactivité de l'utilisateur avec le rendu de l'interface utilisateur. Dans cet exemple, nous avons deux boutons :</p>
@@ -92,9 +91,8 @@ alertBtn.addEventListener('click', () =&gt;
 
 <p>Si vous cliquez sur le premier bouton, puis rapidement sur le second, vous verrez que l'alerte n'apparaît pas avant que les cercles aient fini d'être rendus. La première opération bloque la seconde jusqu'à ce qu'elle ait fini de s'exécuter.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>D'accord, dans notre cas, c'est laid et nous simulons l'effet de blocage, mais il s'agit d'un problème courant contre lequel les développeuses et développeurs d'applications réelles se battent sans cesse pour atténuer les impacts indésirables.</p>
+<div class="note">
+  <p><strong>Note :</strong> D'accord, dans notre cas, c'est laid et nous simulons l'effet de blocage, mais il s'agit d'un problème courant contre lequel les développeuses et développeurs d'applications réelles se battent sans cesse pour atténuer les impacts indésirables.</p>
 </div>
 
 <p>Pourquoi ? La réponse est que JavaScript, de manière générale, ne s'exécute que sur <strong>un seul <i>thread</i></strong>. À ce stade, nous devons introduire le concept de <strong><i>threads</i></strong>.</p>

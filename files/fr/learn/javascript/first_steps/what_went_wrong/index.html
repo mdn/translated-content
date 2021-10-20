@@ -58,7 +58,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 </ol>
 
 <div class="note">
-<p><strong>Note </strong>: Votre propre version de l'exemple de jeu ne fonctionne pas, vous pourriez vouloir la corriger ! Il nous semble plus efficace que vous travailliez sur notre version boguée, afin que vous puissiez apprendre les techniques que nous enseignons ici. Ensuite, vous pouvez revenir en arrière et essayer de réparer votre exemple.</p>
+<p><strong>Note :</strong> Votre propre version de l'exemple de jeu ne fonctionne pas, vous pourriez vouloir la corriger ! Il nous semble plus efficace que vous travailliez sur notre version boguée, afin que vous puissiez apprendre les techniques que nous enseignons ici. Ensuite, vous pouvez revenir en arrière et essayer de réparer votre exemple.</p>
 </div>
 
 <p>À ce stade, consultons la <a href="/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs">console du développeur</a> pour voir si nous pouvons voir des erreurs de syntaxe, puis essayez de les corriger. Vous apprendrez comment ci-dessous.</p>
@@ -86,7 +86,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 </ol>
 
 <div class="note">
-<p><strong>Note</strong> : Voyez la page relative à <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function">TypeError: "x" is not a function</a> pour plus de précisions à propos de cette erreur.</p>
+<p><strong>Note :</strong> Voyez la page relative à <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function">TypeError: "x" is not a function</a> pour plus de précisions à propos de cette erreur.</p>
 </div>
 
 <h3 id="Erreurs_de_syntaxe_deuxième_tour">Erreurs de syntaxe : deuxième tour</h3>
@@ -95,9 +95,11 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
  <li>Enregistrez la page et actualisez‑la, vous constaterez que l'erreur a disparu.</li>
  <li>Maintenant si vous entrez une supposition et pressez le bouton de soumission, vous constaterez ... une autre erreur ! <img alt="" src="https://mdn.mozillademos.org/files/13498/variable-is-null.png" style="display: block; margin: 0 auto;"></li>
  <li>Cette fois‑ci, l'erreur rapportée est "TypeError: lowOrHi is null", à la ligne 78.
-  <div class="note"><strong>Note</strong> : <code><a href="/en-US/docs/Glossary/Null">Null</a></code> est une valeur spéciale signifiant "rien" ou "aucune valeur". Or <code>lowOrHi</code> a été déclaré et initialisé, mais sans valeur signifiante — il n'a ni type ni valeur.</div>
+  <div class="note">
+    <p><strong>Note :</strong> <code><a href="/en-US/docs/Glossary/Null">Null</a></code> est une valeur spéciale signifiant "rien" ou "aucune valeur". Or <code>lowOrHi</code> a été déclaré et initialisé, mais sans valeur signifiante — il n'a ni type ni valeur.</p></div>
 
-  <div class="note"><strong>Note </strong>: Cette erreur n'apparaît pas au moment du chargement de la page car elle survient à l'intérieur d'une fonction (dans <code>checkGuess() { ... }</code>). Comme vous l'apprendrez de manière plus précise plus loin dans l'article à propos des fonctions, le code dans les fonctions s'exécute dans une instance séparée du code en dehors des fonctions. Dans notre cas, le code n'avait pas été exécuté et l'erreur ne pouvait pas survenir avant que la fonction <code>checkGuess()</code> soit lancée à la ligne 86.</div>
+  <div class="note">
+    <p><strong>Note :</strong> Cette erreur n'apparaît pas au moment du chargement de la page car elle survient à l'intérieur d'une fonction (dans <code>checkGuess() { ... }</code>). Comme vous l'apprendrez de manière plus précise plus loin dans l'article à propos des fonctions, le code dans les fonctions s'exécute dans une instance séparée du code en dehors des fonctions. Dans notre cas, le code n'avait pas été exécuté et l'erreur ne pouvait pas survenir avant que la fonction <code>checkGuess()</code> soit lancée à la ligne 86.</p></div>
  </li>
  <li>Regardez à la ligne 78, vous verrez ce code :
   <pre class="brush: js">lowOrHi.textContent = 'Last guess was too high!';</pre>
@@ -109,7 +111,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
   <pre class="brush: js">console.log(lowOrHi);</pre>
 
   <div class="note">
-  <p><strong>Note </strong>: <code><a href="/en-US/docs/Web/API/Console/log">console.log()</a></code> est vraiment utile pour déboguer une fonction en affichant sa valeur sur la console. Donc, elle affichera sur cette dernière la valeur de <code>lowOrHi</code> que nous avons essayé de définir à la ligne 48.</p>
+  <p><strong>Note :</strong> <code><a href="/en-US/docs/Web/API/Console/log">console.log()</a></code> est vraiment utile pour déboguer une fonction en affichant sa valeur sur la console. Donc, elle affichera sur cette dernière la valeur de <code>lowOrHi</code> que nous avons essayé de définir à la ligne 48.</p>
   </div>
  </li>
  <li>Enregistrez et actualisez la page, et vous verrez le résultat de <code>console.log()</code> sur la console. <img alt="" src="https://mdn.mozillademos.org/files/13494/console-log-output.png" style="display: block; margin: 0 auto;"> C'est sûr, la valeur de <code>lowOrHi</code> est <code>null</code> à ce niveau ; il y a bien un problème à la ligne 48.</li>
@@ -121,7 +123,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 </ol>
 
 <div class="note">
-<p><strong>Note</strong> : Voyez la page relative à <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type">TypeError: "x" is (not) "y"</a> pour plus de précisions à propos de cette erreur.</p>
+<p><strong>Note :</strong> Voyez la page relative à <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type">TypeError: "x" is (not) "y"</a> pour plus de précisions à propos de cette erreur.</p>
 </div>
 
 <h3 id="Erreurs_de_syntaxe_troisième_tour">Erreurs de syntaxe : troisième tour</h3>
@@ -189,7 +191,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 <p>cela déclenchera cette même erreur car le logiciel pense que vous êtes en train de faire quelque chose d'autre. Vous devez vous assurer que vous n'avez pas confondu l'opérateur d'assignation  (<code>=</code>) — qui fixe une valeur donnée à une variable — avec l'opérateur (<code>===</code>) qui teste la stricte égalité de deux valeurs, et renvoie un résultat  <code>true</code>/<code>false</code> (vrai/faux).</p>
 
 <div class="note">
-<p><strong>Note</strong> : Voyez la page relative à <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement">SyntaxError: missing ; before statement</a> pour plus de précisions à propos de cette erreur.</p>
+<p><strong>Note :</strong> Voyez la page relative à <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement">SyntaxError: missing ; before statement</a> pour plus de précisions à propos de cette erreur.</p>
 </div>
 
 <h3 id="Le_programme_dit_que_vous_avez_gagné_quelle_que_soit_votre_suggestion.">Le programme dit que vous avez gagné quelle que soit votre suggestion.</h3>
@@ -209,7 +211,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 <p>Cette erreur est triviale — elle indique en général que vous avez oublié une parenthèse fermante à la fin de l'appel d'une fonction ou d'une méthode.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Voyez la page relative à <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list">SyntaxError: missing ) after argument list</a> pour plus de précisions à ce propos.</p>
+<p><strong>Note :</strong> Voyez la page relative à <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list">SyntaxError: missing ) after argument list</a> pour plus de précisions à ce propos.</p>
 </div>
 
 <h3 id="SyntaxError_missing_after_property_id">SyntaxError: missing : after property id</h3>
@@ -235,7 +237,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 <p>Pour toutes ces erreurs, revoyez comment nous avons opéré dans les exemples de ce parcours. Quand une erreur survient, regardez le numéro de ligne indiqué, allez à cette ligne et voyez si vous remarquez ce qui ne va pas. N'oubliez pas que l'erreur n'est pas forcément sur la ligne indiquée, et qu'elle ne provient pas forcément d'un des problèmes évoqués plus haut !</p>
 
 <div class="note">
-<p><strong>Note </strong>: Voyez les pages relatives à  <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_token">SyntaxError: Unexpected token</a> et <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal">SyntaxError: unterminated string literal</a> pour plus de précisions à ce propos.</p>
+<p><strong>Note :</strong> Voyez les pages relatives à  <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_token">SyntaxError: Unexpected token</a> et <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal">SyntaxError: unterminated string literal</a> pour plus de précisions à ce propos.</p>
 </div>
 
 <h2 id="Résumé">Résumé</h2>

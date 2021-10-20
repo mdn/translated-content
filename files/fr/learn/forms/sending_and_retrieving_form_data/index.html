@@ -42,9 +42,8 @@ original_slug: Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_f
 
 <p>Côté client, un formulaire HTML n'est rien d'autre qu'un moyen commode et convivial de configurer une requête HTTP pour envoyer des données à un serveur. L'utilisateur peut ainsi adresser des informations à joindre à la requête HTTP.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Pour une meilleure idée du fonctionnement de l'architecture client‑serveur, lisez notre module <a href="/fr/docs/Learn/Server-side/First_steps">Programmation d'un site web côté‑serveur : premiers pas</a>.</p>
+<div class="note">
+  <p><strong>Note :</strong> Pour une meilleure idée du fonctionnement de l'architecture client‑serveur, lisez notre module <a href="/fr/docs/Learn/Server-side/First_steps">Programmation d'un site web côté‑serveur : premiers pas</a>.</p>
 </div>
 
 <h2 id="on_the_client_side_defining_how_to_send_the_data">Côté client : définition de la méthode d'envoi des données</h2>
@@ -71,9 +70,8 @@ original_slug: Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_f
 
 <pre class="brush: html">&lt;form action="#"&gt;</pre>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Il est possible de spécifier une URL qui utilise le protocole HTTPS (HTTP sécurisé). Quand vous faites ceci, les données sont chiffrées avec le reste de la requête, même si le formulaire lui-même est hébergé dans une page non sécurisée à laquelle on accède via HTTP. D'autre part, si le formulaire est hébergé sur une page sécurisée mais qu'on spécifie une URL non sécurisée avec l'attribut <a href="/fr/docs/Web/HTML/Element/Form#attr-action"><code>action</code></a>, tous les navigateurs affichent une alerte de sécurité pour l'utilisateur chaque fois qu'il envoie des données car celles-ci ne sont pas chiffrées.</p>
+<div class="note">
+  <p><strong>Note :</strong> Il est possible de spécifier une URL qui utilise le protocole HTTPS (HTTP sécurisé). Quand vous faites ceci, les données sont chiffrées avec le reste de la requête, même si le formulaire lui-même est hébergé dans une page non sécurisée à laquelle on accède via HTTP. D'autre part, si le formulaire est hébergé sur une page sécurisée mais qu'on spécifie une URL non sécurisée avec l'attribut <a href="/fr/docs/Web/HTML/Element/Form#attr-action"><code>action</code></a>, tous les navigateurs affichent une alerte de sécurité pour l'utilisateur chaque fois qu'il envoie des données car celles-ci ne sont pas chiffrées.</p>
 </div>
 
 <h3 id="the_method_attribute">L'attribut method</h3>
@@ -118,9 +116,8 @@ original_slug: Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_f
 <pre>GET /?say=Hi&amp;to=Mom HTTP/1.1
 Host: foo.com</pre>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Vous trouverez cet exemple sur GitHub — voyez <a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/get-method.html">get-method.html</a> (à voir <a href="https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html">directement aussi</a>).</p>
+<div class="note">
+  <p><strong>Note :</strong> Vous trouverez cet exemple sur GitHub — voyez <a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/get-method.html">get-method.html</a> (à voir <a href="https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html">directement aussi</a>).</p>
 </div>
 
 <h4 id="the_post_method">La méthode POST</h4>
@@ -154,9 +151,8 @@ say=Hi&amp;to=Mom</pre>
 
 <p>L'en-tête <code>Content-Length </code>indique la taille du corps, et l'en-tête <code>Content-Type</code> indique le type de ressources envoyées au serveur. Nous discuterons de ces en-têtes dans un moment.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Vous trouverez cet exemple sur GitHub — voyez <a href="https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html">post-method.html</a> (à voir <a href="https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html">directement aussi</a>).</p>
+<div class="note">
+  <p><strong>Note :</strong> Vous trouverez cet exemple sur GitHub — voyez <a href="https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html">post-method.html</a> (à voir <a href="https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html">directement aussi</a>).</p>
 </div>
 
 <h3 id="viewing_http_requests">Voir les requêtes HTTP</h3>
@@ -202,10 +198,9 @@ say=Hi&amp;to=Mom</pre>
 
 <p><img alt="L'exécution du code PHP déclenche l'affichage de Hi Mom" src="php-result.png"></p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Cet exemple ne fonctionnera pas si vous le chargez localement dans un navigateur — les navigateurs ne savent pas interpréter le code PHP, donc quand le formulaire est soumis, le navigateur vous offrira seulement de télécharger le fichier PHP pour vous. Pour qu'il s'exécute, il est nécessaire de lancer l'exemple par l'intermédiaire d'un serveur PHP de n'importe quel type. Les bons choix pour des tests locaux de PHP sont <a href="https://www.mamp.info/en/downloads/">MAMP</a> (Mac et Windows) et <a href="https://ampps.com/download">AMPPS</a> (Mac, Windows, Linux).</p>
-  <p></p>Notez également que si vous utilisez MAMP mais que vous n'avez pas installé MAMP Pro (ou si le temps d'essai de la démo de MAMP Pro a expiré), vous pourriez avoir des difficultés à le faire fonctionner. Pour le faire fonctionner à nouveau, nous avons constaté que vous pouvez charger l'application MAMP, puis choisir les options de menu <em>MAMP</em> &gt; <em>Préférences</em> &gt; <em>PHP</em>, et définir "Version standard :" à "7.2.x" (x sera différent selon la version que vous avez installée).</p>
+<div class="note">
+  <p><strong>Note :</strong> Cet exemple ne fonctionnera pas si vous le chargez localement dans un navigateur — les navigateurs ne savent pas interpréter le code PHP, donc quand le formulaire est soumis, le navigateur vous offrira seulement de télécharger le fichier PHP pour vous. Pour qu'il s'exécute, il est nécessaire de lancer l'exemple par l'intermédiaire d'un serveur PHP de n'importe quel type. Les bons choix pour des tests locaux de PHP sont <a href="https://www.mamp.info/en/downloads/">MAMP</a> (Mac et Windows) et <a href="https://ampps.com/download">AMPPS</a> (Mac, Windows, Linux).</p>
+  <p>Notez également que si vous utilisez MAMP mais que vous n'avez pas installé MAMP Pro (ou si le temps d'essai de la démo de MAMP Pro a expiré), vous pourriez avoir des difficultés à le faire fonctionner. Pour le faire fonctionner à nouveau, nous avons constaté que vous pouvez charger l'application MAMP, puis choisir les options de menu <em>MAMP</em> &gt; <em>Préférences</em> &gt; <em>PHP</em>, et définir "Version standard :" à "7.2.x" (x sera différent selon la version que vous avez installée).</p>
 </div>
 
 <h3 id="example_python">Exemple: Python</h3>
@@ -233,9 +228,8 @@ if __name__ == "__main__":
   <li><a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html">greeting.html</a> : Ce modèle contient juste une ligne qui renvoie les deux éléments de donnée qui lui sont passées lors du rendu. Cela est effectué par l'intermédiaire de la fonction <code>hello()</code> vue plus haut qui s'exécute quand l'URL <code>/hello</code> est chargée dans le navigateur.</li>
 </ul>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>À nouveau, ce code ne fonctionnera pas si vous tentez de le charger directement dans le navigateur. Python fonctionne un peu différemment de PHP — pour exécuter ce code localement il est nécessaire d'<a href="/fr/docs/Learn/Server-side/Django/development_environment#installing_python_3">installer Python/PIP</a>, puis Flask avec « <code>pip3 install flask</code> ». À ce moment‑là vous pourrez exécuter l'exemple avec « <code>python3 python-example.py</code> », puis en allant sur « <code>localhost:5000</code> » dans votre navigateur.</p>
+<div class="note">
+  <p><strong>Note :</strong> À nouveau, ce code ne fonctionnera pas si vous tentez de le charger directement dans le navigateur. Python fonctionne un peu différemment de PHP — pour exécuter ce code localement il est nécessaire d'<a href="/fr/docs/Learn/Server-side/Django/development_environment#installing_python_3">installer Python/PIP</a>, puis Flask avec « <code>pip3 install flask</code> ». À ce moment‑là vous pourrez exécuter l'exemple avec « <code>python3 python-example.py</code> », puis en allant sur « <code>localhost:5000</code> » dans votre navigateur.</p>
 </div>
 
 <h3 id="other_languages_and_frameworks">Autres langages et canevas de structures</h3>
@@ -253,9 +247,8 @@ if __name__ == "__main__":
 
 <p>Enfin il faut noter que même en utilisant ces canevas, travailler avec des formulaires n'est pas toujours <em>facile</em>. Mais c'est quand même bien plus facile que d'essayer d'en écrire vous‑même les fonctionnalités et cela vous économisera pas mal de temps.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Nous déborderions du cadre de cet article en vous initiant aux langages côté serveur ou aux canevas. Les liens ci‑dessus vous donneront des informations si vous souhaitez en apprendre plus.</p>
+<div class="note">
+  <p><strong>Note :</strong> Nous déborderions du cadre de cet article en vous initiant aux langages côté serveur ou aux canevas. Les liens ci‑dessus vous donneront des informations si vous souhaitez en apprendre plus.</p>
 </div>
 
 <h2 id="a_special_case_sending_files">Cas particulier : envoyer des fichiers</h2>
@@ -286,9 +279,8 @@ if __name__ == "__main__":
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Les serveurs peuvent être configurés avec une limite de taille pour les fichiers et les requêtes HTTP afin d'éviter les abus.</p>
+<div class="note">
+  <p><strong>Note :</strong> Les serveurs peuvent être configurés avec une limite de taille pour les fichiers et les requêtes HTTP afin d'éviter les abus.</p>
 </div>
 
 <h2 id="security_issues">Problèmes courants de sécurité</h2>

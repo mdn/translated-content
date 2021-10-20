@@ -63,7 +63,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibilité
 <p>Cela dit, cet article couvrira les problèmes en navigateur croisé et de test entourant les personnes avec des handicaps, et comment ils utilisent le Web. Nous avons déjà parlé des autres domaines comme le <a href="https://developer.mozilla.org/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS#Les_probl%C3%A8mes_de_responsive_design">responsive design</a> et la <a href="https://developer.mozilla.org/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Les_probl%C3%A8mes_de_performance">performance</a> à d'autres endroits dans ce module.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Comme beaucoup de choses dans le développement web, l'accessibilité ne concerne pas la totale réussite ou échec ; l'accessibilité à 100% est quasiment impossible à atteindre pour tous les contenus, spécialement quand les sites deviennent plus complexes. Il s'agit plutôt de faire un effort pour rendre votre contenu accessible au plus grand nombre de personnes possible, avec du code de prévention, et se tenir aux meilleures pratiques.</p>
+<p><strong>Note :</strong> Comme beaucoup de choses dans le développement web, l'accessibilité ne concerne pas la totale réussite ou échec ; l'accessibilité à 100% est quasiment impossible à atteindre pour tous les contenus, spécialement quand les sites deviennent plus complexes. Il s'agit plutôt de faire un effort pour rendre votre contenu accessible au plus grand nombre de personnes possible, avec du code de prévention, et se tenir aux meilleures pratiques.</p>
 </div>
 
 <h2 id="Problèmes_d'accessibilité_courants">Problèmes d'accessibilité courants</h2>
@@ -71,7 +71,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibilité
 <p>Dans cette section nous détaillerons certains des problèmes principaux qui se manifestent autour de l'accessibilité, liée à des technologies spécifiques, avec les bonnes pratiques à adopter, et quelques tests rapides que vous pouvez faire pour voir si vos sites vont dans le bon sens.</p>
 
 <div class="note">
-<p><strong>Note </strong>: L'accessibilité est moralement la bonne chose à faire, est bonne pour les affaires (nombre élevé d'utilisateurs handicapés, utilisateurs sur des appareils mobiles, etc. représentent un segment du marché signifiant), mais c'est aussi illégal dans de nombreuses régions de la planète de ne pas rendre les propriétés du web accessibles aux personnes avec des handicaps. Pour plus d'informations, lisez <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_guidelines_and_the_law">Accessibility guidlines and the law</a>.</p>
+<p><strong>Note :</strong> L'accessibilité est moralement la bonne chose à faire, est bonne pour les affaires (nombre élevé d'utilisateurs handicapés, utilisateurs sur des appareils mobiles, etc. représentent un segment du marché signifiant), mais c'est aussi illégal dans de nombreuses régions de la planète de ne pas rendre les propriétés du web accessibles aux personnes avec des handicaps. Pour plus d'informations, lisez <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_guidelines_and_the_law">Accessibility guidlines and the law</a>.</p>
 </div>
 
 <h3 id="HTML">HTML</h3>
@@ -139,7 +139,7 @@ This is the second subsection of my content. I think is more interesting than th
 </ul>
 
 <div class="warning">
-<p><strong>Important </strong>: Vous devez jouer ce genre de test sur toutes les pages que vous écrivez — assurez-vous que la fonctionnalité peut être accessible par le clavier.</p>
+<p><strong>Attention :</strong> Vous devez jouer ce genre de test sur toutes les pages que vous écrivez — assurez-vous que la fonctionnalité peut être accessible par le clavier.</p>
 </div>
 
 <p>Cet exemple souligne l'importance de l'utilisation de la sémantique correcte d'élément pour le travail correct. C'est possible de styler <em>n'importe quel</em> élément pour qu'il ressemble à un lien ou un bouton avec le CSS, et de le faire se comporter comme un lien ou un bouton avec JavaScript, mais ils ne seront toujours pas des liens ou des boutons, et vous perdrez beaucoup de l'accessibilité que ces éléments vous fournissent pour rien. Donc ne le faîte pas si vous pouvez l'éviter.</p>
@@ -152,7 +152,7 @@ a:focus, input:focus, button:focus, select:focus {
 }</pre>
 
 <div class="note">
-<p><strong>Note </strong>: Si vous décidez de retirer le style focus par défaut en utilisant du CSS, assurez-vous de le remplacer par autre chose qui s'accorde au mieux avec votre design — c'est un outil d'accessibilité de grande valeur, qui ne doit pas être supprimé.</p>
+<p><strong>Note :</strong> Si vous décidez de retirer le style focus par défaut en utilisant du CSS, assurez-vous de le remplacer par autre chose qui s'accorde au mieux avec votre design — c'est un outil d'accessibilité de grande valeur, qui ne doit pas être supprimé.</p>
 </div>
 
 <h4 id="Intégrer_l'accessibilité_clavier">Intégrer l'accessibilité clavier</h4>
@@ -173,7 +173,7 @@ a:focus, input:focus, button:focus, select:focus {
 </ol>
 
 <div class="note">
-<p><strong>Note </strong>: Cette technique ne fonctionnera que si vous configurer vos propres gestionnaires d'évènement avec les propriétés de gestion d'évènement (par ex. <code>onclick</code>). <code>addEventListener</code> ne fonctionnera pas. C'est beaucoup de prises de tête pour construire la fonctionnalité de retour. Et il y a d'autres problèmes rattachés avec. Vaut mieux commencer par utiliser les bons éléments pour leurs buts initiaux.</p>
+<p><strong>Note :</strong> Cette technique ne fonctionnera que si vous configurer vos propres gestionnaires d'évènement avec les propriétés de gestion d'évènement (par ex. <code>onclick</code>). <code>addEventListener</code> ne fonctionnera pas. C'est beaucoup de prises de tête pour construire la fonctionnalité de retour. Et il y a d'autres problèmes rattachés avec. Vaut mieux commencer par utiliser les bons éléments pour leurs buts initiaux.</p>
 </div>
 
 <h4 id="Les_textes_alternatifs">Les textes alternatifs</h4>
@@ -181,7 +181,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>Les textes alternatifs sont très importants pour l'accessibilité — si une personne a un trouble visuel ou auditif qui l'empêche de voir ou d'entendre un contenu, alors c'est un problème. Le texte alternatif le plus simple disponible est le modeste attribut <code>alt</code>, que nous devrions inclure dans toutes les images qui contiennent un contenu pertinent. Il peut contenir une description de l'image qui transmet clairement son sens et son contenu sur la page, pour être récupéré par un lecteur d'écran et lu à l'utilisateur.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Pour plus d'informations, lisez <a href="/en-US/docs/Learn/Accessibility/HTML#Text_alternatives">Text alternatives</a>.</p>
+<p><strong>Note :</strong> Pour plus d'informations, lisez <a href="/en-US/docs/Learn/Accessibility/HTML#Text_alternatives">Text alternatives</a>.</p>
 </div>
 
 <p>L'oubli de texte alt peut être testé de bien des façons, par exemple en utilisant le {{anch("Auditing tools")}} d'accessibilité.</p>
@@ -197,7 +197,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>Le suivant sur notre liste, l'élément de formulaire {{htmlelement("label")}} est une des fonctionnalités centrales qui nous permet de rendre les formulaires accessibles. Le problème avec les formulaires c'est que vous avez besoin de libellés pour dire quelle donnée doit être entrée dans chaque champs du formulaire. Chaque libellé doit être inclus dans un {{htmlelement("label")}} pour le relier clairement à son champs partenaire (chaque valeur de l'attribut <code>for</code> de <code>&lt;label&gt;</code> doit aller avec la valeur de l'<code>id</code> de l'élément du formulaire), et cela aura du sens même si le code source n'est pas totalement logique (ce qui pour être tout à fait juste devrait être fait).</p>
 
 <div class="note">
-<p><strong>Note </strong>: Lisez <a href="/en-US/docs/Learn/Accessibility/HTML#Meaningful_text_labels">Meaningful text labels</a>, pour plus d'information à propos des textes de type lien et les libellés des formulaires.</p>
+<p><strong>Note :</strong> Lisez <a href="/en-US/docs/Learn/Accessibility/HTML#Meaningful_text_labels">Meaningful text labels</a>, pour plus d'information à propos des textes de type lien et les libellés des formulaires.</p>
 </div>
 
 <p>Pour terminer, un mot rapide sur les tableaux de données. Un tableau de données basique peut être écrit avec des indications très simples (voir <code>bad-table.html</code> <a href="http://mdn.github.io/learning-area/accessibility/html/bad-table.html">en direct</a>, et <a href="https://github.com/mdn/learning-area/blob/master/accessibility/html/bad-table.html">la source</a>), mais il y a des problèmes — il n'y a aucun moyen pour un utilisateur de lecteur d'écran d'associer des lignes ou des colonnes ensembles comme un groupe de données — pour faire cela vous devez connaître les lignes d'en-têtes, et si elles se dirigent en lignes, colonnes, etc. Cela ne peut être fait qu'en visuel pour un tel tableau.</p>
@@ -205,7 +205,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>Si vous regardez plutôt notre exemple <code>punk-band-complete.html</code> (<a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html">direct</a>, <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html">source</a>), vous pouvez voir plusieurs aides à l'accessibilité en place, comme les entêtes de tableau ({{htmlelement("th")}} et les attributs <code>scope</code>), l'élément {{htmlelement("caption")}}, etc.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Lisez <a href="/en-US/docs/Learn/Accessibility/HTML#Accessible_data_tables">Accessible data tables</a>, pour plus d'information à propos des tableaux accessibles.</p>
+<p><strong>Note :</strong> Lisez <a href="/en-US/docs/Learn/Accessibility/HTML#Accessible_data_tables">Accessible data tables</a>, pour plus d'information à propos des tableaux accessibles.</p>
 </div>
 
 <h3 id="CSS">CSS</h3>
@@ -227,7 +227,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>Une autre astuce est de ne pas compter sur une couleur seule pour les indications/informations, comme ça ne sera pas bon pour ceux qui ne peuvent pas voir la couleur. Plutôt que de marquer en rouge les champs requis d'un formulaire, par exemple, marquez-les avec un astérisque et en rouge.</p>
 
 <div class="note">
-<p><strong>Note </strong>: un contraste élevé permettra également à toute personnes utilisant un smartphone ou une tablette avec un écran brillant de mieux lire les pages dans un environnement lumineux, comme avec la lumière du soleil.</p>
+<p><strong>Note :</strong> un contraste élevé permettra également à toute personnes utilisant un smartphone ou une tablette avec un écran brillant de mieux lire les pages dans un environnement lumineux, comme avec la lumière du soleil.</p>
 </div>
 
 <h4 id="Cacher_du_contenu">Cacher du contenu</h4>
@@ -241,7 +241,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>D'un autre côté, vous ne devriez pas utiliser {{cssxref("visibility")}}<code>:hidden</code> ou {{cssxref("display")}}<code>:none</code>, parce qu'il cache le contenu aux lecteurs d'écran. A moins que, bien entendu, il y est une bonne raison qui justifie que ce contenu soit caché aux lecteurs d'écran.</p>
 
 <div class="note">
-<p><strong>Note </strong>: <a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> vous décrira beaucoup de détails utilesà propos de ce sujet. </p>
+<p><strong>Note :</strong> <a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> vous décrira beaucoup de détails utilesà propos de ce sujet. </p>
 </div>
 
 <h3 id="JavaScript">JavaScript</h3>
@@ -258,7 +258,7 @@ a:focus, input:focus, button:focus, select:focus {
 </ul>
 
 <div class="note">
-<p><strong>Note </strong>: <a href="http://webaim.org/techniques/javascript/">Accessible JavaScript</a> de WebAIM fourni des renseignements approfondis à propos des considérations pour du JavaScript accessible.</p>
+<p><strong>Note :</strong> <a href="http://webaim.org/techniques/javascript/">Accessible JavaScript</a> de WebAIM fourni des renseignements approfondis à propos des considérations pour du JavaScript accessible.</p>
 </div>
 
 <p>Les implémentations JavaScript plus complexes peuvent mener à des problèmes avec l'accessibilité — vous devez faire ce que vous pouvez. par exemple, cela ne serait pas raisonnable d'attendre de vous que vous fassiez un jeu complexe 3D écrit avec <a href="https://developer.mozilla.org/fr/Apprendre/WebGL">WebGL</a> accessible à 100% pour une personne aveugle, mais vous pouvez implémenter des <a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard">contrôles clavier</a> pour qu'il soit utilisable pour un utilisateur sans souris, et réaliser une palette de couleurs suffisamment contrastée pour être utilisable par les personnes avec des lacunes pour percevoir les couleurs.</p>
@@ -321,7 +321,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>Il y a également des options que vous pouvez examiner (voir le lien <em>Show Options</em> vers le haut de la page), ainsi qu'une API pour utiliser Tenon comme un programme.</p>
 
 <div class="note">
-<p><strong>Note </strong>: De tels outils ne sont pas suffisant pour résoudre tous vos problèmes d'accessibilité en tant que tel. Vous devrez les combiner, savoir et expérience, test utilisateur, etc. pour vous faire une image exacte.</p>
+<p><strong>Note :</strong> De tels outils ne sont pas suffisant pour résoudre tous vos problèmes d'accessibilité en tant que tel. Vous devrez les combiner, savoir et expérience, test utilisateur, etc. pour vous faire une image exacte.</p>
 </div>
 
 <h3 id="Les_outils_d'automatisation">Les outils d'automatisation</h3>
@@ -354,7 +354,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>Commençons à effectuer quelques tests avec deux lecteurs d'écran différents pour vous donner une idée générale de comment ils fonctionnent et de comment tester avec eux.</p>
 
 <div class="note">
-<p><strong>Note </strong>: <a href="http://webaim.org/techniques/screenreader/">Designing for Screen Reader Compatibility</a> de WebAIM fournit des informations utiles à propos de l'utilisation des lecteurs d'écran et qu'est-ce qui est le plus efficace pour les lecteurs d'écran. Aller également voir <a href="http://webaim.org/projects/screenreadersurvey6/#used">Screen Reader User Survey #6 Results</a> pour des statistiques intéressantes concernant l'utilisation de lecteur d'écran.</p>
+<p><strong>Note :</strong> <a href="http://webaim.org/techniques/screenreader/">Designing for Screen Reader Compatibility</a> de WebAIM fournit des informations utiles à propos de l'utilisation des lecteurs d'écran et qu'est-ce qui est le plus efficace pour les lecteurs d'écran. Aller également voir <a href="http://webaim.org/projects/screenreadersurvey6/#used">Screen Reader User Survey #6 Results</a> pour des statistiques intéressantes concernant l'utilisation de lecteur d'écran.</p>
 </div>
 
 <h4 id="VoiceOver">VoiceOver</h4>
@@ -364,7 +364,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>Pour le démarrer, pressez Cmd + Fn + F5. Si vous n'avez jamais utilisé VO auparavant, vous obtiendrez un écran de bienvenue où vous pouvez choisir de démarrer VO ou de ne pas le démarrer, et vous parcourrez un tutoriel utile pour apprendre à comment l'utiliser. Pour l'arrêter, pressez Cmd + Fn + F5 à nouveau.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Vous devriez parcourir le tutoriel au moins une fois — il est vraiment très utile pour en apprendre à propos de VO.</p>
+<p><strong>Note :</strong> Vous devriez parcourir le tutoriel au moins une fois — il est vraiment très utile pour en apprendre à propos de VO.</p>
 </div>
 
 <p>Lorsque VO est démarré, l'affichage ressemblera à peu près à cela, mais vous verrez une boîte noire en bas à gauche de l'écran qui contient l'information sur quoi est-ce que VO est actuellement sélectionné. La sélection courante sera également mise en avant, avec une bordure noire — cette mise en avant est connue comme le <strong>curseur VO</strong>.</p>
@@ -490,7 +490,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>Pour utiliser NVDA, vous aller beaucoup utiliser le "modificateur NVDA" — c'est une touche que vous devez presser en plus de l'actuel raccourci NVDA pour qu'elles fonctionnent. Utiliser un modificateur comme celui-ci est courant avec les lecteurs d'écran, pour leur permettre de garder leurs propres commandes en évitant d'entrer en conflit avec d'autres commandes. Dans le cas de NVDA, le modificateur peut aussi être Insert (par défaut), ou VerrMaj (peut être choisi en cochant la première case à cocher dans la boîte de dialogue de bienvenue avant d'appuyer sur <em>OK</em>).</p>
 
 <div class="note">
-<p><strong>Note </strong>: NVDA est plus subtile que VoiceOver en termes de comment il met en valeur là où il est et qu'est-ce qu'il fait. Lorsque vous défilez à travers des rubriques, listes, etc. les éléments que vous sélectionnez seront généralement mis à avant avec un contour subtile, mais ça n'est pas toujours le cas pour toutes les choses. Si vous vous retrouvez complètement perdu, vous pouvez appuyer sur Ctrl + F5 pour rafraîchir la page courante et recommencer en haut de la page.</p>
+<p><strong>Note :</strong> NVDA est plus subtile que VoiceOver en termes de comment il met en valeur là où il est et qu'est-ce qu'il fait. Lorsque vous défilez à travers des rubriques, listes, etc. les éléments que vous sélectionnez seront généralement mis à avant avec un contour subtile, mais ça n'est pas toujours le cas pour toutes les choses. Si vous vous retrouvez complètement perdu, vous pouvez appuyer sur Ctrl + F5 pour rafraîchir la page courante et recommencer en haut de la page.</p>
 </div>
 
 <p>NVDA a beaucoup de commandes clavier, et nous n'allons pas toutes les lister ici. Les principales dont vous aurez besoin pour tester une page web sont dans le tableau suivant. Dans les raccourcis clavier, "NVDA" veut dire "le modificateur NVDA".</p>

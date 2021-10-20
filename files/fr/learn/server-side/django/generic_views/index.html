@@ -77,7 +77,7 @@ class BookListView(generic.ListView):
 <p>C'est tout ! La vue générique va adresser une requête à la base de données pour obtenir tous les enregistrements du modèle spécifié (<code>Book</code>), et ensuite rendre un template situé à l'adresse <strong>/locallibrary/catalog/templates/catalog/book_list.html</strong> (que nous allons créer ci-dessous). À l'intérieur du template vous pouvez accéder à la liste de livres grâce à la variable de template appelée <code>object_list</code> OU <code>book_list</code> (c'est-à-dire l'appellation générique "<code><em>the_model_name</em>_list</code>").</p>
 
 <div class="note">
-<p><strong>Note </strong>: Ce chemin étrange vers le lieu du template n'est pas une faute de frappe : les vues génériques cherchent les templates dans <code>/<em>application_name</em>/<em>the_model_name</em>_list.html</code> (<code>catalog/book_list.html</code> dans ce cas) à l'intérieur du répertoire <code>/<em>application_name</em>/templates/</code> (<code>/catalog/templates/</code>).</p>
+<p><strong>Note :</strong> Ce chemin étrange vers le lieu du template n'est pas une faute de frappe : les vues génériques cherchent les templates dans <code>/<em>application_name</em>/<em>the_model_name</em>_list.html</code> (<code>catalog/book_list.html</code> dans ce cas) à l'intérieur du répertoire <code>/<em>application_name</em>/templates/</code> (<code>/catalog/templates/</code>).</p>
 </div>
 
 <p>Vous pouvez ajouter des attributs pour changer le comportement par défaut utilisé ci-dessus. Par exemple, vous pouvez spécifier un autre fichier de template si vous souhaitez avoir plusieurs vues qui utilisent ce même modèle, ou bien vous pourriez vouloir utiliser un autre nom de variable de template, si book_list n'est pas intuitif par rapport à l'usage que vous faites de vos templates. Probablement, le changement le plus utile est de changer/filtrer le sous-ensemble des résultats retournés : au lieu de lister tous les livres, vous pourriez lister les 5 premiers livres lus par d'autres utilisateurs.</p>
@@ -122,7 +122,7 @@ class BookListView(generic.ListView):
 </ul>
 
 <div class="note">
-<p><strong>Note </strong>: Voyez dans <a href="https://docs.djangoproject.com/en/2.1/topics/class-based-views/generic-display/">Built-in class-based generic views</a> (doc de Django) pour avoir beaucoup plus d'exemples de ce que vous pouvez faire.</p>
+<p><strong>Note :</strong> Voyez dans <a href="https://docs.djangoproject.com/en/2.1/topics/class-based-views/generic-display/">Built-in class-based generic views</a> (doc de Django) pour avoir beaucoup plus d'exemples de ce que vous pouvez faire.</p>
 </div>
 
 <h3 id="Créer_le_template_pour_la_Vue_Liste">Créer le template pour la Vue Liste</h3>
@@ -186,7 +186,7 @@ class BookListView(generic.ListView):
 <p>Nous pouvons aussi appeler des <em>fonctions</em> contenues dans le modèle depuis l'intérieur de notre template — dans ce cas nous appelons <code>Book.get_absolute_url()</code> pour obtenir une URL que vous pouvez utiliser pour afficher dans la vue détail l'enregistrement associé. Cela fonctionne, pourvu que la fonction ne comporte pas d'arguments (il n'y a aucun moyen de passer des arguments !).</p>
 
 <div class="note">
-<p><strong>Note</strong> : Il nous faut être quelque peu attentif aux "effets de bord" quand nous appelons des fonctions dans nos templates. Ici nous récupérons simplement une URL à afficher, mais une fonction peut faire à peu près n'importe quoi — nous ne voudrions pas effacer notre base de données (par exemple) juste parce que nous avons affiché notre template !</p>
+<p><strong>Note :</strong> Il nous faut être quelque peu attentif aux "effets de bord" quand nous appelons des fonctions dans nos templates. Ici nous récupérons simplement une URL à afficher, mais une fonction peut faire à peu près n'importe quoi — nous ne voudrions pas effacer notre base de données (par exemple) juste parce que nous avons affiché notre template !</p>
 </div>
 
 <h4 id="Mettre_à_jour_le_template_de_base">Mettre à jour le template de base</h4>
@@ -220,7 +220,7 @@ class BookListView(generic.ListView):
 <p>Dans ce cas, nous utilisons <code>'&lt;int:pk&gt;'</code> pour capturer l'id du livre, qui doit être une chaîne formatée d'une certaine manière, et passer cet id à la vue en tant que paramètre nommé <code>pk</code> (abbréviation pour primary key - clé primaire). C'est l'id qui doit être utilisé pour stocker le livre de manière unique dans la base de données, comme défini dans le modèle Book.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Comme nous l'avons dit précédemment, notre URL correcte est en réalité <code>catalog/book/&lt;digits&gt;</code> (comme nous sommes dans l'application <strong>catalog</strong>, <code>/catalog/</code> est supposé).</p>
+<p><strong>Note :</strong> Comme nous l'avons dit précédemment, notre URL correcte est en réalité <code>catalog/book/&lt;digits&gt;</code> (comme nous sommes dans l'application <strong>catalog</strong>, <code>/catalog/</code> est supposé).</p>
 </div>
 
 <div class="warning">
@@ -230,7 +230,7 @@ class BookListView(generic.ListView):
 <h4 id="Introduction_aux_chemins_et_expressions_régulières_avancés">Introduction aux chemins et expressions régulières avancés</h4>
 
 <div class="note">
-<p><strong>Note </strong>: Vous n'aurez pas besoin de cette section pour achever le tutoriel ! Nous en parlons parce que nous savons que cette option vous sera probablement utile dans votre avenir centré sur Django.</p>
+<p><strong>Note :</strong> Vous n'aurez pas besoin de cette section pour achever le tutoriel ! Nous en parlons parce que nous savons que cette option vous sera probablement utile dans votre avenir centré sur Django.</p>
 </div>
 
 <p>La recherche de pattern fournie par <code>path()</code> est simple et utile pour les cas (très communs) où vous voulez seulement capturer <em>n'importe quelle</em> chaîne ou entier. Si vous avez besoin d'un filtre plus affiné (par exemple pour filtrer seulement les chaînes qui ont un certain nombre de caractères), alors vous pouvez utiliser la méthode <a href="https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.re_path">re_path()</a>.</p>
@@ -335,7 +335,7 @@ class BookListView(generic.ListView):
 <p>Vous pouvez capturer plusieurs patterns en une seule fois, et donc encoder beaucoup d'informations différentes dans l'URL.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Comme défi, essayez d'envisager comment vous devriez encoder une URL pour lister tous les livres sortis en telle année, à tel mois et à tel jour, et l'expression régulière qu'il faudrait utiliser pour la rechercher.</p>
+<p><strong>Note :</strong> Comme défi, essayez d'envisager comment vous devriez encoder une URL pour lister tous les livres sortis en telle année, à tel mois et à tel jour, et l'expression régulière qu'il faudrait utiliser pour la rechercher.</p>
 </div>
 
 <h4 id="Passer_des_options_supplémentaires_dans_vos_mappages_dURL">Passer des options supplémentaires dans vos mappages d'URL</h4>
@@ -422,7 +422,7 @@ def book_detail_view(request, primary_key):
 </ul>
 
 <div class="note">
-<p>Le lien vers l'auteur dans le template ci-dessus est vide, parce que nous n'avons pas encore crée de page détail pour un auteur. Une fois que cette page sera créée, vous pourrez remplacer l'URL par ceci :</p>
+<p><strong>Note :</strong> Le lien vers l'auteur dans le template ci-dessus est vide, parce que nous n'avons pas encore crée de page détail pour un auteur. Une fois que cette page sera créée, vous pourrez remplacer l'URL par ceci :</p>
 
 <pre>&lt;a href="<strong>{% url 'author-detail' book.author.pk %}</strong>"&gt;\{{ book.author }}&lt;/a&gt;
 </pre>
@@ -446,7 +446,7 @@ def book_detail_view(request, primary_key):
 <p>Cette méthode est requise parce que vous déclarez un champ <code>ForeignKey</code> (one-to-many) seulement du côté "one" de la relation. Comme vous ne faites rien pour déclarer la relation dans les modèles opposés ("many"), Django n'a pas de champ pour récupérer l'ensemble des enregistrements associés. Pour remédier à ce problème, Django construit une fonction justement nommée "recherche inversée", que vous pouvez utiliser. Le nom de la fonction est construit en mettant en minuscule le nom du modèle où a été déclarée la <code>ForeignKey</code>, suivi de <code>_set</code> (ainsi la fonction créée dans <code>Book</code> est <code>bookinstance_set()</code>).</p>
 
 <div class="note">
-<p><strong>Note </strong>: Ici nous utilisons <code>all()</code> pour récupérer tous les enregistrements (comportement par défaut). Bien que vous puissiez utiliser la méthode <code>filter()</code> pour obtenir un sous-ensemble d'enregistrements dans le code, vous ne pouvez faire cela directement dans le template, parce que vous ne pouvez pas spécifier d'arguments dans les fonctions.</p>
+<p><strong>Note :</strong> Ici nous utilisons <code>all()</code> pour récupérer tous les enregistrements (comportement par défaut). Bien que vous puissiez utiliser la méthode <code>filter()</code> pour obtenir un sous-ensemble d'enregistrements dans le code, vous ne pouvez faire cela directement dans le template, parce que vous ne pouvez pas spécifier d'arguments dans les fonctions.</p>
 
 <p>Prenez garde également que, si vous ne définissez pas un ordre (dans votre vue basée sur classe ou votre modèle), vous allez voir des erreurs de ce genre en provenance du serveur de développement :</p>
 
@@ -571,7 +571,7 @@ def book_detail_view(request, primary_key):
 <p>Le code requis pour le mappeur d'URL et les vues sera virtuellement identique aux vues liste et détail du modèle <code>Book</code>, créées ci-dessus. Les templates seront différents, mais auront un comportement semblable.</p>
 
 <div class="note">
-<p><strong>Note</strong>:</p>
+<p><strong>Note :</strong></p>
 
 <ul>
  <li>Une fois que vous aurez créé le mappeur d'URL pour la page "liste d'auteurs", vous aurez besoin de mettre aussi à jour le lien <strong>All authors</strong> dans le template de base. Suivez la <a href="#Update_the_base_template">même procédure</a> que celle adoptée quand nous avons mis à jour le lien <strong>All books</strong>.</li>

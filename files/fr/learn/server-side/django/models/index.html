@@ -53,7 +53,7 @@ translation_of: Learn/Server-side/Django/Models
 <p>Le diagramme met aussi en évidence les relations entre les objets et la cardinalité des relations. La cardinalité est représentée par les nombres entre crochet avec, si nécessaire, un minimum et un maximum. Par exemple, un ouvrage a, au moins un genre ([1..*]) alors qu'un genre peut ne pas référencer un livre ([0..*]) ce qui se traduira en définition des objets dans models.py.</p>
 
 <div class="note">
-<p><strong>Note</strong>: La section ci-dessous est une introduction générale à la modélisation des objets pour les modèles de données dans Django. Gardez à l'esprit la bibliothèque locale et imaginez comment devraient être décrits les objets pour cette bibliothèque.</p>
+<p><strong>Note :</strong> La section ci-dessous est une introduction générale à la modélisation des objets pour les modèles de données dans Django. Gardez à l'esprit la bibliothèque locale et imaginez comment devraient être décrits les objets pour cette bibliothèque.</p>
 </div>
 
 <h2 id="Introduction_au_modèle_de_données">Introduction au modèle de données</h2>
@@ -182,7 +182,7 @@ class MyModelName(models.Model):
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: En supposant que vous allez utiliser des URLs du type <code>/myapplication/mymodelname/2</code> pour afficher individuellement les données des enregistrements de la table associée à votre modèle de données (où "2" est l'<code>id</code>entifiant d'un enregistrement donné), vous devrez créer un routage d'URL pour vous permettre de transmettre l'id à une vue détaillée de l'enregistrement (model detail view dans le cadriciel Django). Cette vue détaillée réalisera l'affichage de l'enregistrement. La fonction <code>reverse()</code> a pour objectif d'écrire l'URL dans un format cohérent avec le traitement des URL par les navigateurs.</p>
+<p><strong>Note :</strong> En supposant que vous allez utiliser des URLs du type <code>/myapplication/mymodelname/2</code> pour afficher individuellement les données des enregistrements de la table associée à votre modèle de données (où "2" est l'<code>id</code>entifiant d'un enregistrement donné), vous devrez créer un routage d'URL pour vous permettre de transmettre l'id à une vue détaillée de l'enregistrement (model detail view dans le cadriciel Django). Cette vue détaillée réalisera l'affichage de l'enregistrement. La fonction <code>reverse()</code> a pour objectif d'écrire l'URL dans un format cohérent avec le traitement des URL par les navigateurs.</p>
 
 <p>Bien entendu, cela requiert d'écrire le routage de l'URL, la vue et le gabarit...</p>
 </div>
@@ -205,7 +205,7 @@ record.save()
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Si aucun champs n'a été défini comme une clé primaire (option <code>primary_key</code>), un champs nommé <code>id</code> ou <code>pk</code> sera affecté au modèle et sera incrémenté automatiquement. Vous pouvez requêter cet enregistrement à l'aide de ce champ ; le premier enregistrement aura habituellement la valeur entière 1.</p>
+<p><strong>Note :</strong> Si aucun champs n'a été défini comme une clé primaire (option <code>primary_key</code>), un champs nommé <code>id</code> ou <code>pk</code> sera affecté au modèle et sera incrémenté automatiquement. Vous pouvez requêter cet enregistrement à l'aide de ce champ ; le premier enregistrement aura habituellement la valeur entière 1.</p>
 </div>
 
 <p>Les champs de l'enregistrement sont accessibles à l'aide des attributs de la classe d'objet. En utilisant la syntaxe pointée, vous pouvez modifier les valeurs des champs de l'enregistrement. Vous devez utiliser la méthode <code>save()</code> pour enregistrer en base de données les modifications.</p>
@@ -223,7 +223,7 @@ record.save()</pre>
 <p>La classe de base <code>objects</code> permet de faire des recherches d'enregistrement qui correspondront aux critères de recherche souhaités.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Nous utiliserons dans les explications le modèle de données d'un livre (<code>Book</code>)avec des titres (<code>title</code>) et des genres littéraires (<code>genre</code>), car expliquer la manière de rechercher sur un modèle théorique n'est pas très pédagogique.</p>
+<p><strong>Note :</strong> Nous utiliserons dans les explications le modèle de données d'un livre (<code>Book</code>)avec des titres (<code>title</code>) et des genres littéraires (<code>genre</code>), car expliquer la manière de rechercher sur un modèle théorique n'est pas très pédagogique.</p>
 </div>
 
 <p>Vous pouvez obtenir tous les enregistrements d'un modèle de données sous la forme d'un jeu de données ou <code>QuerySet</code>, en utilisant <code>objects.all()</code>. Un <code>QuerySet</code> est un objet itérable, c'est-à-dire jeu de données contenant des objets que l'on peut parcourir.</p>
@@ -246,7 +246,7 @@ books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez construire une chemin pour naviguer dans autant de niveaux de relation (<code>ForeignKey</code>/<code>ManyToManyField</code>) que vous en avez besoin en concaténant des noms de champs à l'aide  (__) . Si par exemple vous souhaitez trouver un livre (<code>Book</code>) qui possède différents type (<code>type</code>) de couvertures (<code>cover</code>) identifiées par des noms (<code>name</code>) alors le chemin sera du type : <code>type__cover__name__exact='hard'.</code></p>
+<p><strong>Note :</strong> Vous pouvez construire une chemin pour naviguer dans autant de niveaux de relation (<code>ForeignKey</code>/<code>ManyToManyField</code>) que vous en avez besoin en concaténant des noms de champs à l'aide  (__) . Si par exemple vous souhaitez trouver un livre (<code>Book</code>) qui possède différents type (<code>type</code>) de couvertures (<code>cover</code>) identifiées par des noms (<code>name</code>) alors le chemin sera du type : <code>type__cover__name__exact='hard'.</code></p>
 </div>
 
 <p>La mise en oeuvre des requêtes est très riches en fonction des modèles et des relations, de sous-ensemble de données, etc. Pour une informations détaillées, vous devez consulter <a href="https://docs.djangoproject.com/fr/2.2/topics/db/queries/">les requêtes</a> sur le site de référence de Django.</p>
@@ -367,7 +367,7 @@ class BookInstance(models.Model):
 <p>La méthode <code>__str__()</code> obligatoirement requise par Django pour manipuler les instances d'objet et les enregistrements associés en base. Elle offre cependant la particularité d'associer l'identifiant unique et le titre du livre qui lui est associé.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Un aspect de Python:</p>
+<p><strong>Note :</strong> Un aspect de Python:</p>
 
 <ul>
  <li>Si vous démarrez avec une version postérieure à la version 3.6, vous pouvez utiliser le formatage des chaînes de caractère avec la fonction f-strings : <code>f'{self.id} ({self.book.title})'</code>.</li>

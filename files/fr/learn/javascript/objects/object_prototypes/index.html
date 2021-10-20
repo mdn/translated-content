@@ -78,11 +78,11 @@ original_slug: Learn/JavaScript/Objects/Prototypes_Objet
 </ul>
 
 <div class="note">
-<p><strong>Note </strong>: Encore une fois, il est important d'insister sur le fait que les méthodes et attributs ne sont <strong>pas</strong> copiés d'un objet à un autre, mais qu'on y accède à chaque fois en remontant la chaine de prototypage.</p>
+<p><strong>Note :</strong> Encore une fois, il est important d'insister sur le fait que les méthodes et attributs ne sont <strong>pas</strong> copiés d'un objet à un autre, mais qu'on y accède à chaque fois en remontant la chaine de prototypage.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong> : Il n'existe pas de façon officielle d'accéder directement au prototype d'un objet donné. Les « liens » entre les éléments de la chaine sont définis au sein d'une propriété interne appelée <code>[[prototype]]</code> définie dans la spécification de JavaScript. (voir <a href="fr/docs/Web/JavaScript/Language_Resources">ECMAScript</a>). Néanmoins, la plupart des navigateurs modernes implémentent l'attribut <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code>   (deux tirets soulignés ou <em>underscore</em> de chaque côté) qui contient le prototype objet d'un objet. Vous pouvez tenter <code>personne1.__proto__</code> et <code>personne1.__proto__.__proto__</code> pour voir à quoi ressemble une chaine de prototypage dans la console !</p>
+<p><strong>Note :</strong> Il n'existe pas de façon officielle d'accéder directement au prototype d'un objet donné. Les « liens » entre les éléments de la chaine sont définis au sein d'une propriété interne appelée <code>[[prototype]]</code> définie dans la spécification de JavaScript. (voir <a href="fr/docs/Web/JavaScript/Language_Resources">ECMAScript</a>). Néanmoins, la plupart des navigateurs modernes implémentent l'attribut <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code>   (deux tirets soulignés ou <em>underscore</em> de chaque côté) qui contient le prototype objet d'un objet. Vous pouvez tenter <code>personne1.__proto__</code> et <code>personne1.__proto__.__proto__</code> pour voir à quoi ressemble une chaine de prototypage dans la console !</p>
 </div>
 
 <h2 id="Lattribut_prototype_là_où_lon_définit_les_éléments_héritables">L'attribut prototype : là où l'on définit les éléments héritables</h2>
@@ -96,7 +96,7 @@ original_slug: Learn/JavaScript/Objects/Prototypes_Objet
 <p><code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is()</a></code>, <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>, ainsi que d'autres membres non définis dans <code>prototype</code> ne sont pas hérités par les instances d'objet ou les objets qui héritent de <code>Object.prototype</code>. Ces méthodes et attributs sont disponibles uniquement pour le constructeur <code>Object()</code>.</p>
 
 <div class="note">
-<p><strong>Note</strong> : Ça paraît bizarre, d'avoir une méthode définie au sein d'un constructeur qui est lui même une fonction non ? Et bien, une fonction est aussi un type d'objet — vous pouvez jeter un  œil à la documentation du constructeur <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code> si vous ne nous croyez pas.</p>
+<p><strong>Note :</strong> Ça paraît bizarre, d'avoir une méthode définie au sein d'un constructeur qui est lui même une fonction non ? Et bien, une fonction est aussi un type d'objet — vous pouvez jeter un  œil à la documentation du constructeur <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code> si vous ne nous croyez pas.</p>
 </div>
 
 <ol>
@@ -117,7 +117,7 @@ original_slug: Learn/JavaScript/Objects/Prototypes_Objet
 <p><code>maChaine </code>possède aussitôt plusieurs méthodes utiles pour manipuler les chaines de caractères telles que <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split">split()</a></code>, <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">indexOf()</a></code>, <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a></code>…</p>
 
 <div class="warning">
-<p><strong>Important </strong>: L'attribut <code>prototype</code> est un des éléments JavaScript qui peut le plus prêter à confusion. On pourrait penser qu'il s'agit du prototype objet de l'objet courant mais ça ne l'est pas (on peut y accéder via <code>__proto__</code>). L'attribut <code>prototype </code>est un attribut qui contient un objet où l'on définit les éléments dont on va pouvoir hériter.</p>
+<p><strong>Attention :</strong> L'attribut <code>prototype</code> est un des éléments JavaScript qui peut le plus prêter à confusion. On pourrait penser qu'il s'agit du prototype objet de l'objet courant mais ça ne l'est pas (on peut y accéder via <code>__proto__</code>). L'attribut <code>prototype </code>est un attribut qui contient un objet où l'on définit les éléments dont on va pouvoir hériter.</p>
 </div>
 
 <h2 id="Revenons_sur_create">Revenons sur create()</h2>
@@ -203,7 +203,7 @@ Personne.prototype.aurevoir= function() {
 <p>Même si nous l'avons déclaré après, la méthode <code>aurevoir()</code> est disponible pour l'instance <code>personne1</code>. Son existence a mis à jour dynamiquement les méthodes de l'instance. Cela démontre ce que nous expliquions plus haut au sujet de la chaine de prototypage : le navigateur la parcourt de manière ascendante. Ainsi, il est possible de trouver directement les méthodes qui n'ont pas été définies au niveau de l'instance, plutôt que de les recopier au sein de l'instance. Cela nous permet de bénéficier d'un système extensible de manière simple et élégante.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Si vous avez du mal à faire fonctionner cet exemple, vous pouvez jeter un œil au notre (<a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html">oojs-class-prototype.html</a>, voir la <a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html">démo</a>)</p>
+<p><strong>Note :</strong> Si vous avez du mal à faire fonctionner cet exemple, vous pouvez jeter un œil au notre (<a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html">oojs-class-prototype.html</a>, voir la <a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html">démo</a>)</p>
 </div>
 
 <p>Vous verrez peu d'attributs définis au sein de l'attribut <code>prototype</code>, pour la simple et bonne raison que c'est assez peu pratique. Vous pourriez avoir :</p>

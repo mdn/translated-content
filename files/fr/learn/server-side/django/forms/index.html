@@ -209,7 +209,7 @@ class RenewBookForm(forms.Form):
 <p>La configuration d'URL va rediriger les URLs ayant le format <strong>/catalog/book/<em>&lt;bookinstance id&gt;</em>/renew/</strong> vers la fonction appelée <code>renew_book_librarian()</code> dans <strong>views.py</strong>, et envoyer l'id de <code>BookInstance</code> comme paramètre sous le nom <code>pk</code>. Le pattern ne fonctionnera que si <code>pk</code> est un <code>uuid</code> correctement formaté.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Nous pouvons appeler comme bon nous semble la donnée d'URL "<code>pk</code>" que nous avons capturée, car nous contrôlons complètement la fonction de notre <em>view</em> (nous n'utilisons pas une vue générique <em>detail</em>, laquelle attendrait des paramètres avec un certain nom). Cependant, le raccourci <code>pk</code>, pour "primary key", est une convention qu'il est raisonnable d'utiliser !</p>
+<p><strong>Note :</strong> Nous pouvons appeler comme bon nous semble la donnée d'URL "<code>pk</code>" que nous avons capturée, car nous contrôlons complètement la fonction de notre <em>view</em> (nous n'utilisons pas une vue générique <em>detail</em>, laquelle attendrait des paramètres avec un certain nom). Cependant, le raccourci <code>pk</code>, pour "primary key", est une convention qu'il est raisonnable d'utiliser !</p>
 </div>
 
 <h3 id="Vue">Vue</h3>
@@ -301,7 +301,7 @@ def renew_book_librarian(request, pk):
 <p>Si le formulaire est valide, alors nous pouvons commencer à utiliser les données, en y accédant à travers l'attribut <code>form.cleaned_data</code> (p. ex. <code>data = form.cleaned_data['renewal_date']</code>). Ici nous ne faisons que sauvegarder dans la valeur <code>due_back</code> de l'objet <code>BookInstance</code> associé les données reçues.</p>
 
 <div class="warning">
-<p><strong>Important </strong>: Alors que vous pouvez accéder aussi aux données de formulaire directement à travers la requête (par exemple <code>request.POST['renewal_date']</code>, ou <code>request.GET['renewal_date']</code> si vous utilisez une requête GET), ce n'est PAS recommandé. Les données nettoyées sont assainies, validées et converties en types standard Python.</p>
+<p><strong>Attention :</strong> Alors que vous pouvez accéder aussi aux données de formulaire directement à travers la requête (par exemple <code>request.POST['renewal_date']</code>, ou <code>request.GET['renewal_date']</code> si vous utilisez une requête GET), ce n'est PAS recommandé. Les données nettoyées sont assainies, validées et converties en types standard Python.</p>
 </div>
 
 <p>L'étape finale dans la partie "gestion de formulaire" de la vue est de rediriger vers une autre page, habituellement une page "success". Dans ce cas, nous utilisons <code>HttpResponseRedirect</code> et <code>reverse()</code> pour rediriger vers la vue appelée <code>'all-borrowed'</code> (qui a été créée dans la partie "challenge" de <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself">Django Tutorial Part 8: User authentication and permissions</a>. Si vous n'avez pas créé cette page, vous pouvez rediriger vers la page d'accueil à l'URL '/').</p>
@@ -431,7 +431,7 @@ def renew_book_librarian(request, pk):
 <pre class="brush: html">{% if perms.catalog.can_mark_returned %}- &lt;a href="{% url 'renew-book-librarian' bookinst.id %}"&gt;Renew&lt;/a&gt; {% endif %}</pre>
 
 <div class="note">
-<p><strong>Note </strong>: Souvenez-vous que votre login de test devra avoir la permission "<code>catalog.can_mark_returned</code>" pour pouvoir accéder la page de renouvellement de livre (utilisez peut-être votre compte superuser).</p>
+<p><strong>Note :</strong> Souvenez-vous que votre login de test devra avoir la permission "<code>catalog.can_mark_returned</code>" pour pouvoir accéder la page de renouvellement de livre (utilisez peut-être votre compte superuser).</p>
 </div>
 
 <p>Vous pouvez aussi construire manuellement une URL de test comme ceci : <a class="external" href="http://127.0.0.1:8000/catalog/book/&lt;bookinstance id>/renew/" rel="noopener">http://127.0.0.1:8000/catalog/book/<em>&lt;bookinstance_id&gt;</em>/renew/</a> (un id de bookinstance valide peut être obtenu en navigant vers une page de détail de livre dans votre bibliothèque, et en copiant le champ <code>id</code>).</p>
@@ -468,7 +468,7 @@ class RenewBookModelForm(ModelForm):
 </pre>
 
 <div class="note">
-<p><strong>Note </strong>: Cela peut ne pas sembler beaucoup plus simple que d'utiliser un simple <code>Form</code>, et ça ne l'est effectivement pas dans ce cas, parce que nous n'avons qu'un seul champ. Cependant, si vous avez beaucoup de champs, cela peut réduire notablement la quantité de code !</p>
+<p><strong>Note :</strong> Cela peut ne pas sembler beaucoup plus simple que d'utiliser un simple <code>Form</code>, et ça ne l'est effectivement pas dans ce cas, parce que nous n'avons qu'un seul champ. Cependant, si vous avez beaucoup de champs, cela peut réduire notablement la quantité de code !</p>
 </div>
 
 <p>Le reste de l'information vient des définitions de champ données par le modèle (par ex. les labels, les widgets, le texte d'aide, les messages d'erreur). S'ils ne sont pas suffisamment satisfaisants, nous pouvons les réécrire dans notre <code>class Meta</code>, en précisant un dictionnaire contenant le champ à modifier et sa nouvelle valeur. Par exemple, dans ce formulaire, nous pourrions souhaiter, pour notre champ, un label tel que "<em>Renewal date</em>" (plutôt que celui par défaut, basé sur le nom du champ : <em>Due Back</em>), et nous voulons aussi que notre texte d'aide soit spécifique à ce cas d'utilisation. La classe <code>Meta</code> ci-dessous vous montre comment réécrire ces champs, et vous pouvez pareillement définir <code>widgets</code> et <code>error_messages</code> si les valeurs par défaut ne sont pas suffisantes.</p>
@@ -514,7 +514,7 @@ class RenewBookModelForm(ModelForm):
 <p>L'algorithme de gestion des formulaires que nous avons utilisé ci-dessus dans notre exemple de vue basée sur une fonction, représente un processus extrêmement commun dans vues destinées à éditer un formulaire. Django abstrait pour vous la plus grande partie de ce processus répétitif ("boilerplate") en proposant des <a class="external" href="https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/" rel="noopener">generic editing views</a> pour les vues de création, éditition et suppression basées sur des modèles. Ces vues génériques non seulement assument le comportement d'une vue, mais elles créent automatiquement la classe de formulaire (un <code>ModelForm</code>) pour vous à partir du modèle.</p>
 
 <div class="note">
-<p><strong>Note : </strong>En plus des vues d'édition décrites ici, il existe aussi une classe <a class="external" href="https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/#formview" rel="noopener">FormView</a>, qui se tient, en termes de rapport "flexibilité"/"effort codage", à mi-chemin entre notre vue basée sur une fonction et les autres vues génériques. En utilisant <code>FormView</code>, vous avez encore besoin de créer votre <code>Form</code>, mais vous n'avez pas besoin d'implémenter tous les éléments d'une gestion standard de formulaire. À la place, vous n'avez qu'à fournir une implémentation de la fonction qui sera appelée une fois que les données envoyées sont reconnues valides.</p>
+<p><strong>Note :</strong> En plus des vues d'édition décrites ici, il existe aussi une classe <a class="external" href="https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/#formview" rel="noopener">FormView</a>, qui se tient, en termes de rapport "flexibilité"/"effort codage", à mi-chemin entre notre vue basée sur une fonction et les autres vues génériques. En utilisant <code>FormView</code>, vous avez encore besoin de créer votre <code>Form</code>, mais vous n'avez pas besoin d'implémenter tous les éléments d'une gestion standard de formulaire. À la place, vous n'avez qu'à fournir une implémentation de la fonction qui sera appelée une fois que les données envoyées sont reconnues valides.</p>
 </div>
 
 <p>Dans cette section, nous allons utiliser des vues génériques d'édition pour créer des pages afin de pouvoir ajouter les fonctionnalités de création, d'édition et de suppression des enregistrements de type <code>Author</code> de notre bibliothèque, en fournissant efficacement une réimplémentation basique de certaines parties du site Admin (cela peut être intéressant si vous avez besoin d'offrir une fonctionnalité admin d'une manière plus flexible que ce qui peut être présenté par le site admin).</p>
@@ -601,7 +601,7 @@ class AuthorDelete(DeleteView):
 <p>Les pages de création, modification et suppression d'auteur sont maintenant prêtes à être testées (nous ne nous mettons pas en peine pour cette fois, bien que vous puissiez le faire si vous le souhaiter, de les accrocher dans la barre latérale du site).</p>
 
 <div class="note">
-<p><strong>Note </strong>: Les utilisateurs observateurs auront remarqué que nous n'avons rien fait pour empêcher les utilisateurs non autorisés d'accéder ces pages ! Nous laissons cela comme exercice pour vous (suggestion : vous pourriez utiliser le <code>PermissionRequiredMixin</code>, et soit créer une nouvelle permission, soit réutiliser notre permission<code>can_mark_returned</code> ).</p>
+<p><strong>Note :</strong> Les utilisateurs observateurs auront remarqué que nous n'avons rien fait pour empêcher les utilisateurs non autorisés d'accéder ces pages ! Nous laissons cela comme exercice pour vous (suggestion : vous pourriez utiliser le <code>PermissionRequiredMixin</code>, et soit créer une nouvelle permission, soit réutiliser notre permission<code>can_mark_returned</code> ).</p>
 </div>
 
 <h3 id="Test_de_la_page">Test de la page</h3>

@@ -72,9 +72,8 @@ btn.addEventListener('click', () =&gt; {
 
 <p>{{EmbedLiveSample('synchronous_javascript', '100%', '110px')}}</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Il est important de se rappeler que <code><a href="/fr/docs/Web/API/Window/alert">alert()</a></code>, tout en étant très utile pour démontrer une opération de blocage synchrone, est horrible à utiliser dans des applications du monde réel.</p>
+<div class="note">
+  <p><strong>Note :</strong> Il est important de se rappeler que <code><a href="/fr/docs/Web/API/Window/alert">alert()</a></code>, tout en étant très utile pour démontrer une opération de blocage synchrone, est horrible à utiliser dans des applications du monde réel.</p>
 </div>
 
 <h2 id="asynchronous_javascript">JavaScript asynchrone</h2>
@@ -160,9 +159,8 @@ gods.forEach(function (eachName, index){
   console.log('Problème de récupération : ' + err.message);
 });</pre>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Vous pouvez trouver la version finale sur GitHub (<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-script.js">voir la source ici</a>, et aussi <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/">voir le fonctionnement en direct</a>).</p>
+<div class="note">
+  <p><strong>Note :</strong> Vous pouvez trouver la version finale sur GitHub (<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-script.js">voir la source ici</a>, et aussi <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/">voir le fonctionnement en direct</a>).</p>
 </div>
 
 <p>Nous voyons ici <code>fetch()</code> prendre un seul paramètre - l'URL d'une ressource que vous souhaitez récupérer sur le réseau - et renvoyer une <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">promesse</a>. La promesse est un objet représentant l'achèvement ou l'échec de l'opération asynchrone. Elle représente un état intermédiaire, en quelque sorte. En substance, c'est la façon dont le navigateur dit « Je promets de vous donner la réponse dès que possible », d'où le nom de « promesse ».</p>
@@ -174,9 +172,8 @@ gods.forEach(function (eachName, index){
   <li>Le bloc <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch">catch()</a></code> à la fin s'exécute si l'un des blocs <code>.then()</code> échoue - de manière similaire aux blocs synchrones <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/try...catch" >try...catch</a></code>, un objet d'erreur est mis à disposition à l'intérieur du <code>catch()</code>, qui peut être utilisé pour signaler le type d'erreur qui s'est produit. Notez cependant que le <code>try...catch</code> synchrone ne fonctionnera pas avec les promesses, bien qu'il fonctionne avec <a href="/fr/docs/Learn/JavaScript/Asynchronous/Async_await">async/await</a>, comme vous l'apprendrez plus tard.</li>
 </ul>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Vous en apprendrez beaucoup plus sur les promesses plus tard dans le module, alors ne vous inquiétez pas si vous ne les comprenez pas encore complètement.</p>
+<div class="note">
+  <p><strong>Note :</strong> Vous en apprendrez beaucoup plus sur les promesses plus tard dans le module, alors ne vous inquiétez pas si vous ne les comprenez pas encore complètement.</p>
 </div>
 
 <h3 id="the_event_queue">La file d'attente des événements</h3>
@@ -253,18 +250,16 @@ console.log(`Tout est bon !`);</pre>
 
 <p>Cela est dû au fait qu'au moment où le navigateur tente d'exécuter la troisième instruction <code>console.log()</code>, le bloc <code>fetch()</code> n'a pas fini de s'exécuter, de sorte que la variable <code>image</code> n'a pas reçu de valeur.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Pour des raisons de sécurité, vous ne pouvez pas <code>fetch()</code> les fichiers de votre système de fichiers local (ou exécuter d'autres opérations de ce type localement) ; pour exécuter l'exemple ci-dessus localement, vous devrez le faire passer par un <a href="/fr/docs/Learn/Common_questions/set_up_a_local_testing_server">serveur web local</a>.</p>
+<div class="note">
+  <p><strong>Note :</strong> Pour des raisons de sécurité, vous ne pouvez pas <code>fetch()</code> les fichiers de votre système de fichiers local (ou exécuter d'autres opérations de ce type localement) ; pour exécuter l'exemple ci-dessus localement, vous devrez le faire passer par un <a href="/fr/docs/Learn/Common_questions/set_up_a_local_testing_server">serveur web local</a>.</p>
 </div>
 
 <h2 id="active_learning_make_it_all_async!">Apprentissage actif : rendez tout asynchrone !</h2>
 
 <p>Pour corriger l'exemple problématique de <code>fetch()</code> et faire en sorte que les trois déclarations <code>console.log()</code> apparaissent dans l'ordre souhaité, vous pourriez faire en sorte que la troisième déclaration <code>console.log()</code> s'exécute également de manière asynchrone. Cela peut être fait en la déplaçant à l'intérieur d'un autre bloc <code>.then()</code> enchaîné à la fin du deuxième, ou en la déplaçant à l'intérieur du deuxième bloc <code>then()</code>. Essayez de corriger cela maintenant.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Si vous êtes bloqué, vous pouvez <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html">trouver une réponse ici</a> (voyez-la fonctionner <a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html">en direct</a>). Vous pouvez également trouver beaucoup plus d'informations sur les promesses dans notre guide <a href="/fr/docs/Learn/JavaScript/Asynchronous/Promises">Gérer les opérations asynchrones avec élégance grâce aux Promesses</a>, plus loin dans ce module.</p>
+<div class="note">
+  <p><strong>Note :</strong> Si vous êtes bloqué, vous pouvez <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html">trouver une réponse ici</a> (voyez-la fonctionner <a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html">en direct</a>). Vous pouvez également trouver beaucoup plus d'informations sur les promesses dans notre guide <a href="/fr/docs/Learn/JavaScript/Asynchronous/Promises">Gérer les opérations asynchrones avec élégance grâce aux Promesses</a>, plus loin dans ce module.</p>
 </div>
 
 <h2 id="conclusion">Conclusion</h2>

@@ -33,7 +33,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 <p>Ici, nous nous attarderons sur les widgets de formulaires intégrés aux navigateurs, mais comme les formulaires HTML restent très circonscrits et que la qualité des implémentations peut être très différente d'un navigateur à l'autre, les développeurs web construisent parfois leurs propres widgets de formulaires — voir <a href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés">Comment construire des widgets de formulaires personnalisés</a> plus loin dans ce même module pour plus d'idées à ce propos.</p>
 
 <div class="note">
-<p><strong>Note </strong>: La plupart des fonctionnalités discutées dans cet article sont abondamment explicitées dans les navigateurs ; nous soulignerons les exceptions à ce sujet. Si vous voulez plus de précisions, consultez les <a href="/fr/docs/Web/HTML/Element#Forms">références aux éléments de formulaires HTML</a>, et en particulier nos références détaillées aux <a href="/fr/docs/Web/HTML/Element/input">types &lt;input&gt;</a>.</p>
+<p><strong>Note :</strong> La plupart des fonctionnalités discutées dans cet article sont abondamment explicitées dans les navigateurs ; nous soulignerons les exceptions à ce sujet. Si vous voulez plus de précisions, consultez les <a href="/fr/docs/Web/HTML/Element#Forms">références aux éléments de formulaires HTML</a>, et en particulier nos références détaillées aux <a href="/fr/docs/Web/HTML/Element/input">types &lt;input&gt;</a>.</p>
 </div>
 
 <h2 id="Attributs_communs">Attributs communs</h2>
@@ -95,7 +95,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 </ul>
 
 <div class="note">
-<p><strong>Note :</strong> L'élément {{htmlelement("input")}} est spécial car il peut être pratiquement n'importe quoi. En réglant simplement ses attributs de type, il peut changer radicalement, et il est utilisé pour créer la plupart des types de widgets de formulaire allant des champs texte sur une seule ligne, contrôles sans entrée de texte, contrôles de date et heure jusqu'aux boutons. Il y a toutefois des exceptions, comme {{htmlelement("textarea")}} pour les entrées multi-lignes. Prenez bien note de ceci en lisant cet article.</p>
+<p><strong>Note :</strong> L'élément {{htmlelement("input")}} est spécial car il peut être pratiquement n'importe quoi. En réglant simplement ses attributs de type, il peut changer radicalement, et il est utilisé pour créer la plupart des types de widgets de formulaire allant des champs texte sur une seule ligne, contrôles sans entrée de texte, contrôles de date et heure jusqu'aux boutons. Il y a toutefois des exceptions, comme {{htmlelement("textarea")}} pour les entrées multi-lignes. Prenez bien note de ceci en lisant cet article.</p>
 </div>
 
 <h3 id="Champs_texte_sur_une_seule_ligne"> Champs texte sur une seule ligne</h3>
@@ -103,7 +103,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 <p>On crée un champ texte sur une seule ligne avec l'élément {{HTMLElement("input")}} dont l'attribut {{htmlattrxref("type", "input")}} est mis à <code>text</code> (maisi, si vous n'indiquez pas l'attribut {{htmlattrxref("type", "input")}}, <code>text</code> est la valeur par défaut). <code>text</code> est aussi la valeur de repli si celle indiquée pour l'attribut {{htmlattrxref("type", "input")}} est inconnue du navigateur (par exemple, si vous spécifiez <code>type="date"</code> et que le navigateur ne prend pas en charge les sélecteurs de date natifs).</p>
 
 <div class="note">
-<p><strong>Note :</strong> Vous trouverez des exemples de tous les types de champ texte sur une ligne dans GitHub à <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html">single-line-text-fields.html</a> (voir <a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html">directement aussi</a>).</p>
+<p><strong>Note :</strong> Vous trouverez des exemples de tous les types de champ texte sur une ligne dans GitHub à <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html">single-line-text-fields.html</a> (voir <a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html">directement aussi</a>).</p>
 </div>
 
 <p>Voici un exemple élémentaire de champ texte sur une ligne :</p>
@@ -131,7 +131,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 <p>Sur certains périphériques (les mobiles en particulier), un clavier virtuel différent et mieux adapté à la saisie d'adresses électroniques peut être affiché.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Vous trouverez plus de détails sur la validation des formulaires dans l'article <a href="/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire">Validation des données de formulaires</a>.</p>
+<p><strong>Note :</strong> Vous trouverez plus de détails sur la validation des formulaires dans l'article <a href="/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire">Validation des données de formulaires</a>.</p>
 </div>
 
 <h4 id="Champ_pour_mot_de_passe">Champ pour mot de passe</h4>
@@ -172,10 +172,12 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Il ajoute une contrainte de validation spéciale du champ ; le navigateur renvoie une erreur si une URL invalide est saisie.</p>
 
-<div class="note"><strong>Note :</strong> ce n'est pas parce qu'une URL est bien formée qu'elle pointe vers un emplacement qui existe réellement.</div>
+<div class="note">
+  <p><strong>Note :</strong> ce n'est pas parce qu'une URL est bien formée qu'elle pointe vers un emplacement qui existe réellement.</p>
+</div>
 
 <div class="note">
-<p><strong>Note :</strong> La présence de champs avec contraintes spéciales considérés comme erronés bloquent l'envoi du formulaire. De plus, leur apparence peut être adaptée afin de mettre en évidence l'erreur. Nous allons discuter de cela dans l'article <a href="/fr/docs/HTML/Formulaires/Validation_de_formulaires" title="/fr/docs/HTML/Formulaires/Validation_de_formulaire">Validation de formulaires</a>.</p>
+<p><strong>Note :</strong> La présence de champs avec contraintes spéciales considérés comme erronés bloquent l'envoi du formulaire. De plus, leur apparence peut être adaptée afin de mettre en évidence l'erreur. Nous allons discuter de cela dans l'article <a href="/fr/docs/HTML/Formulaires/Validation_de_formulaires" title="/fr/docs/HTML/Formulaires/Validation_de_formulaire">Validation de formulaires</a>.</p>
 </div>
 
 <h3 id="Champs_texte_multilignes">Champs texte multilignes</h3>
@@ -280,7 +282,9 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p><img alt="Screenshots of multi-lines select box on several platforms." src="/files/4559/all-multi-lines-select.png" style="height: 531px; width: 734px;"></p>
 
-<div class="note"><strong>Note :</strong> tous les navigateurs prenant en charge l'élément {{HTMLElement("select")}} prennent aussi en charge l'attribut {{htmlattrxref("multiple","select")}} sur lui.</div>
+<div class="note">
+  <p><strong>Note :</strong> tous les navigateurs prenant en charge l'élément {{HTMLElement("select")}} prennent aussi en charge l'attribut {{htmlattrxref("multiple","select")}} sur lui.</p>
+</div>
 
 <h3 id="Contenus_auto-complétés">Contenus auto-complétés</h3>
 
@@ -303,7 +307,9 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
       &lt;option&gt;Poire&lt;/option&gt;
     &lt;/datalist&gt;</pre>
 
-<div class="note"><strong>Note :</strong> Selon la <a href="http://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list" rel="external">norme HTML</a>, l'attribut {{htmlattrxref("list","input")}} et l'élément {{HTMLElement("datalist")}} peuvent s'utiliser avec tout type de widget nécessitant une saisie utilisateur. Toutefois, les modalités de ce fonctionnement ne sont pas claire pour des contrôles autres que textuels (de couleur ou de date par ex.) et les divers navigateurs se comporteront de manière différente selon le cas. Pour cette raison, soyez prudent en utilisant cette fonctionnalité avec autre chose que des champs textuels.</div>
+<div class="note">
+  <p><strong>Note :</strong> Selon la <a href="http://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list" rel="external">norme HTML</a>, l'attribut {{htmlattrxref("list","input")}} et l'élément {{HTMLElement("datalist")}} peuvent s'utiliser avec tout type de widget nécessitant une saisie utilisateur. Toutefois, les modalités de ce fonctionnement ne sont pas claire pour des contrôles autres que textuels (de couleur ou de date par ex.) et les divers navigateurs se comporteront de manière différente selon le cas. Pour cette raison, soyez prudent en utilisant cette fonctionnalité avec autre chose que des champs textuels.</p>
+</div>
 
 <div><img alt="Screenshots of datalist on several platforms." src="/files/4593/all-datalist.png" style="height: 329px; width: 437px;"></div>
 
@@ -354,7 +360,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 <p>Il est important de noter que ces widgets ne se comportent pas tout à fait comme les autres widgets de formulaires. Pour la plupart des widgets, une fois que le formulaire est envoyé, tous les widgets dont l'attribut {{htmlattrxref("name","input")}} est défini sont envoyés, même s'ils ne sont pas renseignés. Dans le cas des éléments à cocher, leurs valeurs ne sont envoyées que s'ils sont cochés. S'ils ne sont pas cochés, rien n'est envoyé, pas même la valeur de leur attribut <code>name</code>.</p>
 
 <div class="note">
-<p><strong>Note</strong> : Vous trouverez les exemples de cette section sur GitHub à l'adresse <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/checkable-items.html">checkable-items.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html">voir directement aussi</a>).</p>
+<p><strong>Note :</strong> Vous trouverez les exemples de cette section sur GitHub à l'adresse <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/checkable-items.html">checkable-items.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html">voir directement aussi</a>).</p>
 </div>
 
 <p>Pour un maximum de convivialité/accessibilité, il est conseillé d'entourer chaque liste d'éléments liés dans un {{htmlelement("fieldset")}}, avec un élément {{htmlelement("legend")}} fournissant une description globale de la liste.  Chaque paire individuelle d'éléments {{htmlelement("label")}}/{{htmlelement("input")}} doit être contenue dans son propre élément de liste (ou similaire), comme le montrent les exemples.</p>
@@ -557,7 +563,7 @@ beans.oninput = function() {
 <p>Il existe d'autres types de widgets qui ne peuvent pas être classés facilement à cause de leur comportement très particulier, mais qui sont toujours très utiles.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Vous trouverez les exemples de cette section sur GitHub à l'adresse <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/other-examples.html">other-examples.html</a> (à voir aussi<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html"> directement</a>).</p>
+<p><strong>Note :</strong> Vous trouverez les exemples de cette section sur GitHub à l'adresse <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/other-examples.html">other-examples.html</a> (à voir aussi<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html"> directement</a>).</p>
 </div>
 
 <h3 id="Sélection_de_fichier_2">Sélection de fichier</h3>

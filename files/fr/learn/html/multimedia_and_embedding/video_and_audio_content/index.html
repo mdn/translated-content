@@ -42,7 +42,7 @@ original_slug: Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video
 <p>Nous ne vous apprendrons pas à produire des fichiers audio ou vidéo  — cela demande des compétences totalement différentes. Nous vous conseillons ce lien Github <a href="https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content">fichiers d'échantillons audio et vidéo et exemples de code</a> pour votre expérience personnelle, au cas où vous ne pourriez pas y accéder par vous-même.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Avant de commencer, vous devez savoir qu'il existe un grand nombre de fournisseurs de vidéos en ligne {{glossary("OVP","OVPs")}} comme <a href="https://www.youtube.com/">YouTube</a>, <a href="http://www.dailymotion.com">Dailymotion</a>, et <a href="https://vimeo.com/">Vimeo</a>. Pour l'audio, voyez <a href="https://soundcloud.com/">Soundcloud</a>  par exemple. Ces sociétés offrent un moyen simple d'héberger et de consommer de la vidéo, donc, vous n'avez pas à vous soucier de l'énorme consommation de bande passante. Ils peuvent aussi vous proposer du code "tout-prêt" pour intégrer la vidéo/audio dans vos pages web. Si vous suivez cette procédure, vous vous éviterez quelqu'unes des difficultés abordées dans cet article. Nous parlerons en détails de ces services dans l'article suivant.</p>
+<p><strong>Note :</strong> Avant de commencer, vous devez savoir qu'il existe un grand nombre de fournisseurs de vidéos en ligne {{glossary("OVP","OVPs")}} comme <a href="https://www.youtube.com/">YouTube</a>, <a href="http://www.dailymotion.com">Dailymotion</a>, et <a href="https://vimeo.com/">Vimeo</a>. Pour l'audio, voyez <a href="https://soundcloud.com/">Soundcloud</a>  par exemple. Ces sociétés offrent un moyen simple d'héberger et de consommer de la vidéo, donc, vous n'avez pas à vous soucier de l'énorme consommation de bande passante. Ils peuvent aussi vous proposer du code "tout-prêt" pour intégrer la vidéo/audio dans vos pages web. Si vous suivez cette procédure, vous vous éviterez quelqu'unes des difficultés abordées dans cet article. Nous parlerons en détails de ces services dans l'article suivant.</p>
 </div>
 
 <h3 id="L'_élément_&lt;video>">L' élément &lt;video&gt;</h3>
@@ -87,7 +87,7 @@ original_slug: Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video
 <p>Un lecteur audio peut jouer directement une piste audio, par ex. un fichier MP3 ou Ogg. Elles ne nécessitent pas de conteneur.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Ce n'est pas si simple, comme vous pouvez le voir dans le <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Supported_media_formats#Browser_compatibility">tableau de compatibilité des codecs audio-vidéo</a>. En outre, de nombreux navigateurs de plateforme mobile peuvent lire un format non pris en charge en le transférant au lecteur multimédia du système sous-jacent. Mais pour l'instant nous nous contenterons de ce qui précède.</p>
+<p><strong>Note :</strong> Ce n'est pas si simple, comme vous pouvez le voir dans le <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Supported_media_formats#Browser_compatibility">tableau de compatibilité des codecs audio-vidéo</a>. En outre, de nombreux navigateurs de plateforme mobile peuvent lire un format non pris en charge en le transférant au lecteur multimédia du système sous-jacent. Mais pour l'instant nous nous contenterons de ce qui précède.</p>
 </div>
 
 <p>Les formats ci-dessus ont été créés pour compresser la vidéo et l'audio dans des fichiers gérables (les fichiers vidéo et audio bruts sont très volumineux). Les navigateurs contiennent différents {{Glossary("Codec","Codecs")}}, comme Vorbis ou H.264, utilisés pour convertir le son et la vidéo compressés en binaire et inversement. Comme indiqué ci-dessus, les navigateurs ne supportent malheureusement pas tous les mêmes codecs, vous devrez donc fournir plusieurs fichiers pour chaque production de média. S'il vous manque le bon codec pour décoder le média, il ne pourra pas être lu.</p>
@@ -95,7 +95,7 @@ original_slug: Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video
 <p> </p>
 
 <div class="note">
-<p><strong>Note : </strong>Vous êtes peut-être surpris de l'existence d'une telle situation. Les formats <strong>MP3 </strong>(pour l'audio) et <strong>MP4/H.264</strong> (pour la vidéo) sont tous deux largement pris en charge et de bonne qualité. Cependant, ils sont également grevés de brevets — les brevets américains couvrent le MP3 jusqu'en 2017 au moins et le H.264 jusqu'en 2027 au plus tôt, ce qui signifie que les navigateurs ne détenant pas de licence doivent payer d'énormes sommes d'argent pour pouvoir utiliser ces formats. En outre, beaucoup de personnes évitent, par principe, les logiciels propriétaires et leur préférent des formats ouverts. C'est pourquoi nous devons fournir plusieurs formats pour une prise en charge par différents navigateurs.</p>
+<p><strong>Note :</strong> Vous êtes peut-être surpris de l'existence d'une telle situation. Les formats <strong>MP3 </strong>(pour l'audio) et <strong>MP4/H.264</strong> (pour la vidéo) sont tous deux largement pris en charge et de bonne qualité. Cependant, ils sont également grevés de brevets — les brevets américains couvrent le MP3 jusqu'en 2017 au moins et le H.264 jusqu'en 2027 au plus tôt, ce qui signifie que les navigateurs ne détenant pas de licence doivent payer d'énormes sommes d'argent pour pouvoir utiliser ces formats. En outre, beaucoup de personnes évitent, par principe, les logiciels propriétaires et leur préférent des formats ouverts. C'est pourquoi nous devons fournir plusieurs formats pour une prise en charge par différents navigateurs.</p>
 
 <p> </p>
 </div>
@@ -115,7 +115,7 @@ original_slug: Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video
 <p> </p>
 
 <div class="note">
-<p><strong>Note</strong> : L'<a href="/en-US/docs/Web/HTML/Supported_media_formats">article sur les formats média pris en charge</a> contient quelques types {{glossary("MIME type","MIME")}} courants.</p>
+<p><strong>Note :</strong> L'<a href="/en-US/docs/Web/HTML/Supported_media_formats">article sur les formats média pris en charge</a> contient quelques types {{glossary("MIME type","MIME")}} courants.</p>
 </div>
 
 <h3 id="Autres_fonctionnalités_de_&lt;video>">Autres fonctionnalités de &lt;video&gt;</h3>
@@ -177,7 +177,7 @@ original_slug: Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video
 <p><img alt="A simple audio player with a play button, timer, volume control, and progress bar" src="https://mdn.mozillademos.org/files/12798/audio-player.png" style="display: block; height: 413px; margin: 0px auto; width: 626px;"></p>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouver <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html">lancer la démo de l'audio en direct </a>sur Github (voir aussi le <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html">code source de l'interpréteur</a>.)</p>
+<p><strong>Note :</strong> Vous pouver <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html">lancer la démo de l'audio en direct </a>sur Github (voir aussi le <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html">code source de l'interpréteur</a>.)</p>
 </div>
 
 <p>Cela prend moins de place qu'une vidéo, et il n'y a pas de composante visuelle — il est juste nécessaire d'afficher les contrôles de lecture de l'audio. Voici les autres différences avec les vidéos HTML5 :</p>
@@ -202,7 +202,7 @@ original_slug: Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video
 <p>Ne serait-il pas agréable de pouvoir fournir à ces personnes la transcription des paroles prononcés dans l'audio ou la vidéo ? Eh bien, avec des vidéos HTML5 vous le pouvez, à l'aide du format WebVTT et de l'élément {{htmlelement("track")}}.</p>
 
 <div class="note">
-<p><strong>Note </strong>: « Transcrire » signifie écrire des paroles sous forme de texte, et « transcription » est l'action correspondante.</p>
+<p><strong>Note :</strong> « Transcrire » signifie écrire des paroles sous forme de texte, et « transcription » est l'action correspondante.</p>
 </div>
 
 <p>WebVTT est un format d'écriture de fichiers texte ; il contient nombre de chaînes de texte avec des métadonnées comme l'instant dans la vidéo où vous souhaitez l'affichage du texte, et même une information succinte sur le style et la position de celui‑ci. Ces chaînes textuelles sont appelées des marqueurs, les plus courants étant :</p>
@@ -253,7 +253,7 @@ Ceci est le deuxième.
 <p>Pour plus de détails, lisez <a href="/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Ajouter des légendes et des sous‑titres aux vidéos HTML5</a>. Vous <a href="http://iandevlin.github.io/mdn/video-player-with-captions/">trouverez un exemple</a>, écrit par Ian Devlin, accompagnant cet article sur Github (voyez le <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">code source</a> aussi). Cet exemple utilise un peu de JavaScript pour permettre à l'utilisateur de choisir entre différents sous‑titres. Notez que pour activer les sous‑titres, vous devez presser le bouton « CC » et selectionner une option — English, Deutsch ou Español. </p>
 
 <div class="note">
-<p><strong>Note </strong>: Les pistes texte peuvent aussi vous aider avec {{glossary("SEO")}}, car les moteurs de recherche sont très performants sur le texte. Les pistes textes permettent aussi aux moteurs de recherche de faire un lien direct à un point particulier de la vidéo.</p>
+<p><strong>Note :</strong> Les pistes texte peuvent aussi vous aider avec {{glossary("SEO")}}, car les moteurs de recherche sont très performants sur le texte. Les pistes textes permettent aussi aux moteurs de recherche de faire un lien direct à un point particulier de la vidéo.</p>
 </div>
 
 <h3 id="Apprentissage_interactif_intégrer_vos_propres_vidéos_et_audios">Apprentissage interactif : intégrer vos propres vidéos et audios</h3>

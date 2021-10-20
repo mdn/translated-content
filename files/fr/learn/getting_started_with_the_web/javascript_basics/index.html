@@ -57,7 +57,7 @@ myHeading.textContent = 'Bonjour, monde !';</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong> : La raison pour laquelle nous avons placé l'élément {{htmlelement("script")}} en bas du fichier HTML est que le HTML est chargé par le navigateur dans l'ordre dans lequel il apparaît dans le fichier. Si le JavaScript est chargé en premier et qu'il est supposé affecter le HTML en dessous, il pourrait ne pas fonctionner, car le JavaScript serait chargé avant le HTML sur lequel il est supposé travailler. Par conséquent, placer JavaScript près du bas de la page HTML est souvent la meilleure stratégie.</p>
+<p><strong>Note :</strong> La raison pour laquelle nous avons placé l'élément {{htmlelement("script")}} en bas du fichier HTML est que le HTML est chargé par le navigateur dans l'ordre dans lequel il apparaît dans le fichier. Si le JavaScript est chargé en premier et qu'il est supposé affecter le HTML en dessous, il pourrait ne pas fonctionner, car le JavaScript serait chargé avant le HTML sur lequel il est supposé travailler. Par conséquent, placer JavaScript près du bas de la page HTML est souvent la meilleure stratégie.</p>
 </div>
 
 <h3 id="Que_s'est-il_passé">Que s'est-il passé ?</h3>
@@ -67,7 +67,7 @@ myHeading.textContent = 'Bonjour, monde !';</pre>
 <p>Ensuite, nous fixons à « Bonjour, monde ! » la valeur de la propriété {{domxref("Node.textContent", "textContent")}} de la variable <code>myHeading</code> (elle représente le contenu du titre).</p>
 
 <div class="note">
-<p><strong>Note :</strong> Les deux fonctions que vous avez utilisées ci-dessus font partie de l'API Document Object Model (DOM), qui vous permet de manipuler les documents.</p>
+<p><strong>Note :</strong> Les deux fonctions que vous avez utilisées ci-dessus font partie de l'API Document Object Model (DOM), qui vous permet de manipuler les documents.</p>
 </div>
 
 <h2 id="Les_bases_du_JavaScript_en_accéléré">Les bases du JavaScript en accéléré</h2>
@@ -85,15 +85,15 @@ myHeading.textContent = 'Bonjour, monde !';</pre>
 <pre class="brush: js">let myVariable;</pre>
 
 <div class="note">
-<p><strong>Note</strong> : Un point-virgule en fin de ligne indique là où se termine l'instruction ; ce n'est impérativement requis que si vous devez séparer des instructions sur une même ligne. Toutefois, certains pensent qu'il est de bonne pratique de les mettre à la fin de chaque instruction. Il y a d'autres règles à propos de leur emploi ou non‑emploi — voyez <a href="http://news.codecademy.com/your-guide-to-semicolons-in-javascript/">Guide des points‑virgule en JavaScript</a> pour plus de détails.</p>
+<p><strong>Note :</strong> Un point-virgule en fin de ligne indique là où se termine l'instruction ; ce n'est impérativement requis que si vous devez séparer des instructions sur une même ligne. Toutefois, certains pensent qu'il est de bonne pratique de les mettre à la fin de chaque instruction. Il y a d'autres règles à propos de leur emploi ou non‑emploi — voyez <a href="http://news.codecademy.com/your-guide-to-semicolons-in-javascript/">Guide des points‑virgule en JavaScript</a> pour plus de détails.</p>
 </div>
 
 <div class="note">
-<p><strong>Note </strong>: Vous pouvez utiliser (quasiment) n'importe quel nom pour nommer une variable, mais il y a quelques restrictions (voyez <a href="/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Variables">cet article</a> sur les règles de nommage des variables). Si vous avez un doute, vous pouvez <a href="https://mothereff.in/js-variables">vérifier le nom de votre variable</a> pour voir s'il est valide.</p>
+<p><strong>Note :</strong> Vous pouvez utiliser (quasiment) n'importe quel nom pour nommer une variable, mais il y a quelques restrictions (voyez <a href="/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Variables">cet article</a> sur les règles de nommage des variables). Si vous avez un doute, vous pouvez <a href="https://mothereff.in/js-variables">vérifier le nom de votre variable</a> pour voir s'il est valide.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong> : JavaScript est sensible à la casse — <code>myVariable</code> est une variable différente de <code>myvariable</code>. Si vous avez des problèmes dans votre code, vérifiez la casse  !</p>
+<p><strong>Note :</strong> JavaScript est sensible à la casse — <code>myVariable</code> est une variable différente de <code>myvariable</code>. Si vous avez des problèmes dans votre code, vérifiez la casse  !</p>
 </div>
 
 <p>Une fois une variable déclarée, vous pouvez lui donner une valeur :</p>
@@ -235,7 +235,7 @@ Tout ce qui est écrit ici est entre commentaires.
 <p>Il y a nombre d'autres opérateurs à explorer, mais nous nous en tiendrons à ceux-là pour le moment. Voir <a href="/fr/docs/Web/JavaScript/Reference/Opérateurs">Expressions et opérateurs</a> pour la liste complète.</p>
 
 <div class="note">
-<p><strong>Note</strong> : Mélanger les types de données peut conduire à d'étranges résultats lors des opérations, donc prenez soin de vous référer correctement à vos variables et d'obtenir les résultats attendus. Par exemple, entrez <code>"35" + "25"</code> dans votre console. Pourquoi n'obtenez-vous pas le résultat attendu ? Parce que les guillemets ont transformé les nombres en chaînes, et donc vous avez concaténé deux chaînes au lieu d'additionner deux nombres. Si vous entrez <code>35 + 25</code>, vous obtiendrez le bon résultat.</p>
+<p><strong>Note :</strong> Mélanger les types de données peut conduire à d'étranges résultats lors des opérations, donc prenez soin de vous référer correctement à vos variables et d'obtenir les résultats attendus. Par exemple, entrez <code>"35" + "25"</code> dans votre console. Pourquoi n'obtenez-vous pas le résultat attendu ? Parce que les guillemets ont transformé les nombres en chaînes, et donc vous avez concaténé deux chaînes au lieu d'additionner deux nombres. Si vous entrez <code>35 + 25</code>, vous obtiendrez le bon résultat.</p>
 </div>
 
 <h3 id="Structures_conditionnelles">Structures conditionnelles</h3>
@@ -284,7 +284,7 @@ multiply(20, 20);
 multiply(0.5, 3);</pre>
 
 <div class="note">
-<p><strong>Note</strong> : L'instruction <a href="/fr/docs/Web/JavaScript/Reference/Instructions/return"><code>return</code></a> indique au navigateur qu'il faut renvoyer la variable <code>result</code> en dehors de la fonction afin qu'elle puisse être réutilisée par ailleurs. Cette instruction est nécessaire car les variables définies à l'intérieur des fonctions sont uniquement disponibles à l'intérieur de ces fonctions. C'est ce qu'on appelle une {{Glossary("Portée", "portée")}} (pour en savoir plus, lisez <a href="/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Les_portées_de_variables">cet article</a>).</p>
+<p><strong>Note :</strong> L'instruction <a href="/fr/docs/Web/JavaScript/Reference/Instructions/return"><code>return</code></a> indique au navigateur qu'il faut renvoyer la variable <code>result</code> en dehors de la fonction afin qu'elle puisse être réutilisée par ailleurs. Cette instruction est nécessaire car les variables définies à l'intérieur des fonctions sont uniquement disponibles à l'intérieur de ces fonctions. C'est ce qu'on appelle une {{Glossary("Portée", "portée")}} (pour en savoir plus, lisez <a href="/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Les_portées_de_variables">cet article</a>).</p>
 </div>
 
 <h3 id="Événements">Événements</h3>

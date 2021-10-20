@@ -69,9 +69,8 @@ translation_of: Learn/JavaScript/Asynchronous/Promises
 
 <p>La chose importante ici est que l'appel <code>getUserMedia()</code> revient presque immédiatement, même si le flux de la caméra n'a pas encore été obtenu. Même si la fonction <code>handleCallButton()</code> est déjà retournée au code qui l'a appelée, lorsque <code>getUserMedia()</code> a fini de travailler, elle appelle le gestionnaire que vous fournissez. Tant que l'application ne suppose pas que le flux a commencé, elle peut continuer à fonctionner.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Vous pouvez en apprendre davantage sur ce sujet quelque peu avancé, si cela vous intéresse, dans l'article <a href="/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling">L'essentiel du WebRTC</a>. Un code similaire à celui-ci, mais beaucoup plus complet, est utilisé dans cet exemple.</p>
+<div class="note">
+  <p><strong>Note :</strong> Vous pouvez en apprendre davantage sur ce sujet quelque peu avancé, si cela vous intéresse, dans l'article <a href="/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling">L'essentiel du WebRTC</a>. Un code similaire à celui-ci, mais beaucoup plus complet, est utilisé dans cet exemple.</p>
 </div>
 
 <h2 id="the_trouble_with_callbacks">Le problème des fonctions de rappel</h2>
@@ -146,9 +145,8 @@ translation_of: Learn/JavaScript/Asynchronous/Promises
 
 <p>Cependant, la lecture n'est pas aussi facile et cette syntaxe peut ne pas être utilisable si vos blocs sont plus complexes que ce que nous avons montré ici.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Vous pouvez apporter d'autres améliorations avec la syntaxe <code>async</code>/<code>await</code>, que nous aborderons dans le prochain article.</p>
+<div class="note">
+  <p><strong>Note :</strong> Vous pouvez apporter d'autres améliorations avec la syntaxe <code>async</code>/<code>await</code>, que nous aborderons dans le prochain article.</p>
 </div>
 
 <p>Dans leur forme la plus basique, les promesses sont similaires aux écouteurs d'événements, mais avec quelques différences :</p>
@@ -164,9 +162,8 @@ translation_of: Learn/JavaScript/Asynchronous/Promises
 
 <p>Dans le premier exemple, nous allons utiliser la méthode <a href="/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch"><code>fetch()</code></a> pour récupérer une image sur le web, la méthode <a href="/fr/docs/Web/API/Body/blob"><code>blob()</code></a> pour transformer le contenu brut du corps de la réponse fetch en un objet <a href="/fr/docs/Web/API/Blob"><code>Blob</code></a>, puis afficher ce blob à l'intérieur d'un élément <a href="/fr/docs/Web/HTML/Element/Img"><code>&lt;img&gt;</code></a>. Cet exemple est très similaire à celui que nous avons examiné dans le <a href="/fr/docs/Learn/JavaScript/Asynchronous/Introducing#asynchronous_javascript">premier article</a>, mais nous le ferons un peu différemment au fur et à mesure que nous vous ferons construire votre propre code basé sur des promesses.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>L'exemple suivant ne fonctionnera pas si vous l'exécutez directement à partir du fichier (c'est-à-dire via une URL <code>file://</code>). Vous devez l'exécuter via un <a href="/fr/docs/Learn/Common_questions/set_up_a_local_testing_server">serveur de test local</a>, ou utiliser une solution en ligne telle que <a href="https://glitch.com/">Glitch</a> ou <a href="/fr/docs/Learn/Common_questions/Using_Github_pages">les pages GitHub</a>.</p>
+<div class="note">
+  <p><strong>Note :</strong> L'exemple suivant ne fonctionnera pas si vous l'exécutez directement à partir du fichier (c'est-à-dire via une URL <code>file://</code>). Vous devez l'exécuter via un <a href="/fr/docs/Learn/Common_questions/set_up_a_local_testing_server">serveur de test local</a>, ou utiliser une solution en ligne telle que <a href="https://glitch.com/">Glitch</a> ou <a href="/fr/docs/Learn/Common_questions/Using_Github_pages">les pages GitHub</a>.</p>
 </div>
 
 <ol>
@@ -183,9 +180,8 @@ translation_of: Learn/JavaScript/Asynchronous/Promises
   </li>
   <li>
     <p>Pour répondre à l'achèvement réussi de l'opération lorsque cela se produit (dans ce cas, lorsqu'une <a href="/fr/docs/Web/API/Response">réponse</a> est retournée), nous invoquons la méthode <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/then"><code>.then()</code></a> de l'objet promesse. La fonction de rappel à l'intérieur du bloc <code>.then()</code> s'exécute uniquement lorsque l'appel de la promesse se termine avec succès et retourne l'objet <a href="/fr/docs/Web/API/Response"><code>Response</code></a> — en langage de promesse, lorsqu'elle a été <strong>remplie</strong> (<i>fullfilled</i> en anglais). On lui passe l'objet <a href="/fr/docs/Web/API/Response"><code>Response</code></a> retourné en tant que paramètre.</p>
-    <div class="notecard note">
-      <p><b>Note :</b></p>
-      <p>Le fonctionnement d'un bloc <code>.then()</code> est similaire à celui de l'ajout d'un écouteur d'événements à un objet à l'aide de <code>AddEventListener()</code>. Il ne s'exécute pas avant qu'un événement ne se produise (lorsque la promesse se réalise). La différence la plus notable est qu'un <code>.then()</code> ne s'exécutera qu'une fois à chaque fois qu'il sera utilisé, alors qu'un écouteur d'événements pourrait être invoqué plusieurs fois.</p>
+    <div class="note">
+      <p><strong>Note :</strong> Le fonctionnement d'un bloc <code>.then()</code> est similaire à celui de l'ajout d'un écouteur d'événements à un objet à l'aide de <code>AddEventListener()</code>. Il ne s'exécute pas avant qu'un événement ne se produise (lorsque la promesse se réalise). La différence la plus notable est qu'un <code>.then()</code> ne s'exécutera qu'une fois à chaque fois qu'il sera utilisé, alors qu'un écouteur d'événements pourrait être invoqué plusieurs fois.</p>
     </div>
     <p>Nous exécutons immédiatement la méthode <code>blob()</code> sur cette réponse pour nous assurer que le corps de la réponse est entièrement téléchargé, et lorsqu'il est disponible, le transformer en un objet <code>Blob</code> avec lequel nous pouvons faire quelque chose. Le résultat de cette méthode est retourné comme suit :</p>
     <pre class="brush: js">response =&gt; response.blob()</pre>
@@ -220,9 +216,8 @@ document.body.appendChild(image);</pre>
 
 <p>Si vous enregistrez le fichier HTML que vous venez de créer et le chargez dans votre navigateur, vous verrez que l'image s'affiche dans la page comme prévu. Bon travail !</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Vous remarquerez probablement que ces exemples sont quelque peu artificiels. Vous pourriez tout simplement vous passer de toute la chaîne <code>fetch()</code> et <code>blob()</code>, et simplement créer un élément <code>&lt;img&gt;</code> et définir la valeur de son attribut <code>src</code> à l'URL du fichier image, <code>coffee.jpg</code>. Nous avons toutefois choisi cet exemple parce qu'il démontre les promesses d'une manière simple et agréable, plutôt que pour sa pertinence dans le monde réel.</p>
+<div class="note">
+  <p><strong>Note :</strong> Vous remarquerez probablement que ces exemples sont quelque peu artificiels. Vous pourriez tout simplement vous passer de toute la chaîne <code>fetch()</code> et <code>blob()</code>, et simplement créer un élément <code>&lt;img&gt;</code> et définir la valeur de son attribut <code>src</code> à l'URL du fichier image, <code>coffee.jpg</code>. Nous avons toutefois choisi cet exemple parce qu'il démontre les promesses d'une manière simple et agréable, plutôt que pour sa pertinence dans le monde réel.</p>
 </div>
 
 <h3 id="responding_to_failure">Réagir à un échec</h3>
@@ -237,9 +232,8 @@ document.body.appendChild(image);</pre>
 
 <p>Cela ne fait pas beaucoup plus que si vous ne preniez pas la peine d'inclure le bloc <code>.catch()</code> du tout, mais pensez-y - cela nous permet de contrôler la gestion des erreurs exactement comme nous le voulons. Dans une application réelle, votre bloc <code>.catch()</code> pourrait réessayer de récupérer l'image, ou afficher une image par défaut, ou demander à l'utilisateur de fournir une URL d'image différente, ou autre.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Vous pouvez voir <a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/simple-fetch.html">notre version de l'exemple en direct</a> (voir également son <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/simple-fetch.html">code source</a>).</p>
+<div class="note">
+  <p><strong>Note :</strong> Vous pouvez voir <a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/simple-fetch.html">notre version de l'exemple en direct</a> (voir également son <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/simple-fetch.html">code source</a>).</p>
 </div>
 
 <h3 id="chaining_the_blocks_together">Enchaîner les blocs</h3>
@@ -266,9 +260,8 @@ document.body.appendChild(image);</pre>
 
 <p>Gardez à l'esprit que la valeur renvoyée par une promesse remplie devient le paramètre transmis à la fonction de rappel du bloc <code>.then()</code> suivant.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Les blocs <code>.then()</code>/<code>.catch()</code> dans les promesses sont essentiellement l'équivalent asynchrone d'un bloc <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> dans du code synchrone. Gardez à l'esprit que le <code>try...catch</code> synchrone ne fonctionnera pas dans du code asynchrone.</p>
+<div class="note">
+  <p><strong>Note :</strong> Les blocs <code>.then()</code>/<code>.catch()</code> dans les promesses sont essentiellement l'équivalent asynchrone d'un bloc <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> dans du code synchrone. Gardez à l'esprit que le <code>try...catch</code> synchrone ne fonctionnera pas dans du code asynchrone.</p>
 </div>
 
 <h2 id="promise_terminology_recap">Récapitulatif de la terminologie des promesses</h2>
@@ -394,14 +387,12 @@ document.body.appendChild(para);</pre>
 
 <p>Le code que nous avons fourni ici pour l'affichage des articles est assez rudimentaire, mais il fonctionne comme une explication pour le moment.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Si vous êtes bloqué, vous pouvez comparer votre version du code à la nôtre, pour voir à quoi elle est censée ressembler - <a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/promise-all.html">voir en direct</a>, et voir le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html">code source</a>.</p>
+<div class="note">
+  <p><strong>Note :</strong> Si vous êtes bloqué, vous pouvez comparer votre version du code à la nôtre, pour voir à quoi elle est censée ressembler - <a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/promise-all.html">voir en direct</a>, et voir le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html">code source</a>.</p>
 </div>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Si vous amélioriez ce code, vous pourriez vouloir boucler sur une liste d'éléments à afficher, en récupérant et en décodant chacun d'eux, puis boucler sur les résultats à l'intérieur de <code>Promise.all()</code>, en exécutant une fonction différente pour afficher chacun d'eux en fonction du type de code. Cela permettrait de fonctionner pour n'importe quel nombre d'éléments, pas seulement trois.</p>
+<div class="note">
+  <p><strong>Note :</strong> Si vous amélioriez ce code, vous pourriez vouloir boucler sur une liste d'éléments à afficher, en récupérant et en décodant chacun d'eux, puis boucler sur les résultats à l'intérieur de <code>Promise.all()</code>, en exécutant une fonction différente pour afficher chacun d'eux en fonction du type de code. Cela permettrait de fonctionner pour n'importe quel nombre d'éléments, pas seulement trois.</p>
   <p>De plus, vous pourriez déterminer quel est le type de fichier récupéré sans avoir besoin d'une propriété <code>type</code> explicite. Vous pourriez, par exemple, vérifier l'en-tête HTTP <a href="/fr/docs/Web/HTTP/Headers/Content-Type"><code>Content-Type</code></a> de la réponse dans chaque cas en utilisant <a href="/fr/docs/Web/API/Headers/get"><code>response.headers.get("content-type")</code></a>, puis agir en conséquence.</p>
 </div>
 
@@ -456,9 +447,8 @@ document.body.appendChild(para);</pre>
 
 <p>Cela permet d'envoyer un simple message à la console pour nous dire quand chaque tentative de récupération est terminée.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p><code>then()</code>/<code>catch()</code>/<code>finally()</code> est l'équivalent asynchrone de <code>try</code>/<code>catch</code>/<code>finally</code> en code synchrone.</p>
+<div class="note">
+  <p><strong>Note :</strong> <code>then()</code>/<code>catch()</code>/<code>finally()</code> est l'équivalent asynchrone de <code>try</code>/<code>catch</code>/<code>finally</code> en code synchrone.</p>
 </div>
 
 <h2 id="building_your_own_custom_promises">Construire vos propres promesses personnalisées</h2>
@@ -496,9 +486,8 @@ document.body.appendChild(para);</pre>
 
 <p>L'exemple ci-dessus n'est pas très flexible - la promesse ne peut jamais s'accomplir qu'avec une seule chaîne de caractères, et elle n'a aucune sorte de condition <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject"><code>reject()</code></a> spécifiée (il est vrai que <code>setTimeout()</code> n'a pas vraiment de condition d'échec, donc cela n'a pas d'importance pour cet exemple).</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Pourquoi <code>resolve()</code>, et pas <code>fulfill()</code> ? La réponse que nous vous donnerons, pour l'instant, est <em>c'est compliqué</em>.</p>
+<div class="note">
+  <p><strong>Note :</strong> Pourquoi <code>resolve()</code>, et pas <code>fulfill()</code> ? La réponse que nous vous donnerons, pour l'instant, est <em>c'est compliqué</em>.</p>
 </div>
 
 <h3 id="rejecting_a_custom_promise">Rejeter une promesse personnalisée</h3>
@@ -545,9 +534,8 @@ document.body.appendChild(para);</pre>
 
 <p>Lorsque vous enregistrez et exécutez le code tel quel, après une seconde, vous obtiendrez le message d'alerte. Essayez maintenant de définir le message sur une chaîne vide ou l'intervalle sur un nombre négatif, par exemple, et vous pourrez voir la promesse rejetée avec les messages d'erreur appropriés ! Vous pouvez également essayer de faire autre chose avec le message résolu plutôt que de simplement créer une alerte.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Vous pouvez trouver notre version de cet exemple sur GitHub sur <a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/custom-promise2.html">custom-promise2.html</a> (voir aussi le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/custom-promise2.html">code source</a>).</p>
+<div class="note">
+  <p><strong>Note :</strong> Vous pouvez trouver notre version de cet exemple sur GitHub sur <a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/custom-promise2.html">custom-promise2.html</a> (voir aussi le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/custom-promise2.html">code source</a>).</p>
 </div>
 
 <h3 id="a_more_real-world_example">Un exemple plus concret</h3>

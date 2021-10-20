@@ -65,7 +65,7 @@ original_slug: Learn/Server-side/Premiers_pas/Client-Serveur
 <p>Vous faites une simple requête <code>GET</code> en cliquant sur un lien ou en faisant une recherche sur un site (sur une page de moteur de recherche par exemple). Une requête HTTP envoyée lorsque vous effectuez une recherche sur MDN pour les termes : "La relation Client-Serveur" ressemblera beaucoup à ce qui suit mais ne sera pas identique car des parties du message dépendent des paramètres de votre navigateur.</p>
 
 <div class="note">
-<p>Le format des messsages HTTP est défini par un standard web  (<a href="http://www.rfc-editor.org/rfc/rfc7230.txt">RFC7230</a>). Vous n'avez pas besoin de connaître ce niveau de détails mais vous saurez au moins d'où vient tout ça !</p>
+<p><strong>Note :</strong> Le format des messsages HTTP est défini par un standard web  (<a href="http://www.rfc-editor.org/rfc/rfc7230.txt">RFC7230</a>). Vous n'avez pas besoin de connaître ce niveau de détails mais vous saurez au moins d'où vient tout ça !</p>
 </div>
 
 <h4 id="La_requête">La requête</h4>
@@ -197,7 +197,7 @@ Content-Length: 0
 </pre>
 
 <div class="note">
-<p><strong>Note </strong>: Les requêtes et réponses montrées dans ces exemples ont été capturées avec l'application <a href="https://www.telerik.com/download/fiddler">Fiddler</a> , mais vous pouvez avoir des informations similaires en utilisant des "renifleurs" web  (e.g. <a href="http://websniffer.cc/">Websniffer</a>, <a href="https://www.wireshark.org/">Wireshark</a>) ou des extensions de navigateur comme  <a href="https://addons.mozilla.org/en-US/firefox/addon/httpfox/">HttpFox</a>. Vous pouvez essayer seul. Utilisez tous les outils recommandés, naviguez sur des sites et  éditez des profils de données pour explorer les différentes requêtes et réponses. La plupart des navigateurs modernes ont aussi des outils qui gérent les requêtes réseau, par exemple le <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> dans Firefox).</p>
+<p><strong>Note :</strong> Les requêtes et réponses montrées dans ces exemples ont été capturées avec l'application <a href="https://www.telerik.com/download/fiddler">Fiddler</a> , mais vous pouvez avoir des informations similaires en utilisant des "renifleurs" web  (e.g. <a href="http://websniffer.cc/">Websniffer</a>, <a href="https://www.wireshark.org/">Wireshark</a>) ou des extensions de navigateur comme  <a href="https://addons.mozilla.org/en-US/firefox/addon/httpfox/">HttpFox</a>. Vous pouvez essayer seul. Utilisez tous les outils recommandés, naviguez sur des sites et  éditez des profils de données pour explorer les différentes requêtes et réponses. La plupart des navigateurs modernes ont aussi des outils qui gérent les requêtes réseau, par exemple le <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> dans Firefox).</p>
 </div>
 
 <h2 id="Les_sites_statiques">Les sites statiques</h2>
@@ -205,7 +205,7 @@ Content-Length: 0
 <p>Un site statique renvoie le même contenu codé en dur depuis le serveur quelle que soit la ressource demandée. Si vous avez une page concernant un produit à l'adresse  <code>/static/myproduct1.html</code>, cette même page sera retournée à chaque utilisateur. Si vous ajoutez un nouveau produit, vous devez ajouter une nouvelle page (par ex : <code>myproduct2.html</code>) et ainsi de suite. Cela peut être vraiment inefficace — Comment faire quand vous avez des milliers de pages "produit" à faire ? Vous allez répéter beaucoup de code identique dans chaque page (le modèle de base de la page, sa structure, etc.) et si vous voulez changer quoique ce soit dans la structure de la page — comme une section "produits dérivés" par exemple — alors, il faudra changer chaque page individuellement..</p>
 
 <div class="note">
-<p><strong>Note </strong>: Les sites statiques sont trés efficace quand vous avez un petit nombre de pages et que vous voulez envoyer le même contenu à chaque utilisateur. De toutes façons, ils peuvent avoir un coût certain de maintenance au fur et à mesure de l'augmentation du nombre de pages.</p>
+<p><strong>Note :</strong> Les sites statiques sont trés efficace quand vous avez un petit nombre de pages et que vous voulez envoyer le même contenu à chaque utilisateur. De toutes façons, ils peuvent avoir un coût certain de maintenance au fur et à mesure de l'augmentation du nombre de pages.</p>
 </div>
 
 <p>Voyons comment tout cela marche en révisant un diagramme d'architecture de site statique vu dans l'article précédent.</p>
@@ -275,7 +275,7 @@ urlpatterns = [
 ]</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Les premiers paramètres des fonctions url () peuvent paraître un peu bizarres (par exemple, r '^ junior / $') car ils utilisent une technique de correspondance de modèle appelée "expressions régulières" (RegEx ou RE). Vous n'avez pas besoin de savoir comment fonctionnent les expressions régulières à ce stade, car elles nous permettent également de faire correspondre les modèles de l'URL (plutôt que les valeurs codées en dur ci-dessus) et de les utiliser comme paramètres dans nos fonctions d'affichage. À titre d'exemple, un RegEx très simple pourrait dire "faire correspondre une seule lettre majuscule, suivie de 4 à 7 lettres minuscules".</p>
+<p><strong>Note :</strong> Les premiers paramètres des fonctions url () peuvent paraître un peu bizarres (par exemple, r '^ junior / $') car ils utilisent une technique de correspondance de modèle appelée "expressions régulières" (RegEx ou RE). Vous n'avez pas besoin de savoir comment fonctionnent les expressions régulières à ce stade, car elles nous permettent également de faire correspondre les modèles de l'URL (plutôt que les valeurs codées en dur ci-dessus) et de les utiliser comme paramètres dans nos fonctions d'affichage. À titre d'exemple, un RegEx très simple pourrait dire "faire correspondre une seule lettre majuscule, suivie de 4 à 7 lettres minuscules".</p>
 </div>
 
 <div>L'infrastructure Web permet également à une fonction d'affichage d'extraire facilement des informations de la base de données. La structure de nos données est définie dans des modèles, qui sont des classes Python qui définissent les champs à stocker dans la base de données sous-jacente. Si nous avons un modèle nommé Team avec un champ "team_type", nous pouvons utiliser une syntaxe de requête simple pour récupérer toutes les équipes ayant un type particulier.</div>

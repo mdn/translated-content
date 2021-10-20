@@ -25,7 +25,7 @@ original_slug: Apprendre/a11y/CSS_and_JavaScript
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
-   <td>Connaissances informatiques de base, compréhension de base de HTML, CSS et JavaScript, et compréhension de  <a href="/fr/docs/Apprendre/a11y/What_is_accessibility"> Qu'est ce que l'accessibilité ?</a></td>
+   <td>Connaissances informatiques de base, compréhension de base de HTML, CSS et JavaScript, et compréhension de <a href="/fr/docs/Apprendre/a11y/What_is_accessibility"> Qu'est ce que l'accessibilité ?</a></td>
   </tr>
   <tr>
    <th scope="row">Objectif :</th>
@@ -177,7 +177,7 @@ a:active {
 <p>Il existe un moyen simple de vérifier si votre contraste est suffisamment important pour ne pas causer de problèmes. Il existe un certain nombre d’outils de vérification du contraste en ligne dans lesquels vous pouvez entrer vos couleurs de premier plan et d’arrière-plan afin de les vérifier. Par exemple, le <a href="https://webaim.org/resources/contrastchecker/">vérificateur de contraste de couleur</a> du WebAIM est simple à utiliser et explique ce dont vous avez besoin pour vous conformer aux critères WCAG relatifs au contraste des couleurs.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Un taux de contraste élevé permettra également à toute personne utilisant un smartphone ou une tablette avec un écran brillant de mieux lire les pages dans un environnement lumineux, tel qu'exposé à la lumière du soleil.</p>
+<p><strong>Note :</strong> Un taux de contraste élevé permettra également à toute personne utilisant un smartphone ou une tablette avec un écran brillant de mieux lire les pages dans un environnement lumineux, tel qu'exposé à la lumière du soleil.</p>
 </div>
 
 <p>Un autre conseil est de ne pas compter uniquement sur la couleur pour les panneaux / informations, car cela ne sera pas bon pour ceux qui ne peuvent pas voir la couleur. Au lieu de marquer les champs de formulaire obligatoires en rouge, par exemple, marquez-les d'un astérisque et en rouge.</p>
@@ -193,7 +193,7 @@ a:active {
 <p>Par contre, vous ne devriez pas utiliser {{cssxref("visibility")}}<code>:hidden</code> ou {{cssxref("display")}}<code>:none</code>, car ils masquent le contenu des lecteurs d'écran sauf si vous souhaitez que ce contenu leur soit masqué.</p>
 
 <div class="note">
-<p><strong>Note </strong>: <a href="https://webaim.org/techniques/css/invisiblecontent/">Contenu invisible juste pour les utilisateurs de lecteur d'écran</a>  contient beaucoup plus de détails utiles concernant ce sujet.</p>
+<p><strong>Note :</strong> <a href="https://webaim.org/techniques/css/invisiblecontent/">Contenu invisible juste pour les utilisateurs de lecteur d'écran</a>  contient beaucoup plus de détails utiles concernant ce sujet.</p>
 </div>
 
 <h3 id="Accepter_que_les_utilisateurs_puissent_remplacer_les_styles">Accepter que les utilisateurs puissent remplacer les styles</h3>
@@ -215,7 +215,7 @@ a:active {
 
 <p>Le JavaScript moderne est un langage puissant, et nous pouvons faire beaucoup de choses avec cela de nos jours, du contenu simple et des mises à jour d'interface utilisateur aux jeux 2D et 3D à part entière. Aucune règle ne stipule que tout le contenu doit être accessible à 100% à toutes les personnes. Vous devez simplement faire ce que vous pouvez et rendre vos applications aussi accessibles que possible.</p>
 
-<p>Le contenu et les fonctionnalités simples sont facilement accessibles – texte, images, tableaux, formulaires et bouton-poussoir activant des fonctions. Comme nous l'avons vu dans notre article <a href="/fr/docs/Apprendre/a11y/HTML">HTML : une bonne base pour l'accessibilité</a>,  les principales considérations sont les suivantes :</p>
+<p>Le contenu et les fonctionnalités simples sont facilement accessibles – texte, images, tableaux, formulaires et bouton-poussoir activant des fonctions. Comme nous l'avons vu dans notre article <a href="/fr/docs/Apprendre/a11y/HTML">HTML : une bonne base pour l'accessibilité</a>, les principales considérations sont les suivantes :</p>
 
 <ul>
  <li>Bonne sémantique : Utiliser le bon élément pour le bon travail. Par exemple, assurez-vous que vous utilisez les en-têtes et les paragraphes, et les éléments {{htmlelement("button")}} et {{htmlelement("a")}}.</li>
@@ -248,7 +248,7 @@ a:active {
 <p>Ce type de validation de formulaire est discret — vous pouvez toujours utiliser le formulaire parfaitement sans que le JavaScript soit disponible, et toute implémentation de formulaire sensée aura également une validation côté serveur, car il est trop facile pour les utilisateurs malveillants de contourner la validation côté client (en désactivant JavaScript dans le navigateur, par exemple). La validation côté client est toujours très utile pour signaler les erreurs — les utilisateurs peuvent savoir instantanément quelles erreurs ils commettent, au lieu d'attendre un aller-retour vers le serveur et un rechargement de page. C'est un avantage certain en termes de convivialité.</p>
 
 <div class="note">
-<p><strong>Note </strong>: La validation côté serveur n'a pas été implémentée dans cette simple démonstration.</p>
+<p><strong>Note :</strong> La validation côté serveur n'a pas été implémentée dans cette simple démonstration.</p>
 </div>
 
 <p>Nous avons également rendu cette validation de formulaire assez accessible. Nous avons utilisé des éléments {{htmlelement("label")}} pour nous assurer que les libellés des formulaires sont liés de manière non équivoque à leurs entrées, afin que les lecteurs d'écran puissent les lire au fur et à mesure :</p>
@@ -276,31 +276,31 @@ function validate(e) {
 }</pre>
 
 <div class="note">
-<p><strong>Note </strong>:  Dans cet exemple, nous masquons et montrons la boîte de message d'erreur en utilisant le positionnement absolu plutôt qu'une autre méthode telle que la visibilité ou l'affichage, car cela n'empêche pas le lecteur d'écran de pouvoir lire le contenu de celui-ci.</p>
+<p><strong>Note :</strong> Dans cet exemple, nous masquons et montrons la boîte de message d'erreur en utilisant le positionnement absolu plutôt qu'une autre méthode telle que la visibilité ou l'affichage, car cela n'empêche pas le lecteur d'écran de pouvoir lire le contenu de celui-ci.</p>
 </div>
 
 <p>La validation du formulaire réel serait beaucoup plus complexe que cela : vous voudriez vérifier que le nom saisi ressemble réellement à un nom, que l’âge entré est en réalité un nombre et qu’il est réaliste (par exemple, pas un nombre négatif, ni à quatre chiffres). Ici, nous venons d'implémenter la vérification simple qu'une valeur a été renseignée dans chaque champ de saisie (<code>if(testItem.input.value === '')</code>).</p>
 
-<p>Une fois la validation effectuée, si les tests réussissent, le formulaire est soumis. S'il y a des erreurs  (<code>if(errorList.innerHTML !== '')</code>)  nous arrêtons la soumission du formulaire ( à l'aide de<a href="/fr/docs/Web/API/Event/preventDefault"> event.preventDefault()</a>), et affichons tous les messages d'erreur créés (voir ci-dessous). Ce mécanisme signifie que les erreurs ne seront affichées que s’il y a des erreurs, ce qui est meilleur pour la facilité d’utilisation.</p>
+<p>Une fois la validation effectuée, si les tests réussissent, le formulaire est soumis. S'il y a des erreurs  (<code>if(errorList.innerHTML !== '')</code>) nous arrêtons la soumission du formulaire ( à l'aide de<a href="/fr/docs/Web/API/Event/preventDefault"> event.preventDefault()</a>), et affichons tous les messages d'erreur créés (voir ci-dessous). Ce mécanisme signifie que les erreurs ne seront affichées que s’il y a des erreurs, ce qui est meilleur pour la facilité d’utilisation.</p>
 
 <p>Pour chaque entrée pour laquelle aucune valeur n'a été renseignée lors de la soumission du formulaire, nous créons un élément de liste avec un lien et l'insérons dans la liste <code>errorList</code>.</p>
 
 <pre class="brush: js">function createLink(testItem) {
-  var listItem = document.createElement('li');
-  var anchor = document.createElement('a');
-  anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
-  anchor.href = '#' + testItem.input.name;
-  anchor.onclick = function() {
-    testItem.input.focus();
-  };
-  listItem.appendChild(anchor);
-  errorList.appendChild(listItem);
+ var listItem = document.createElement('li');
+ var anchor = document.createElement('a');
+ anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
+ anchor.href = '#' + testItem.input.name;
+ anchor.onclick = function() {
+   testItem.input.focus();
+ };
+ listItem.appendChild(anchor);
+ errorList.appendChild(listItem);
 }</pre>
 
 <p>Chaque lien a un double objectif — il vous dit quelle est l’erreur, vous pouvez aussi cliquer dessus / l’activer pour passer directement à l’élément d’entrée en question et corriger votre saisie.</p>
 
 <div class="note">
-<p><strong>Note </strong>:  La partie  <code>focus()</code>  de cet exemple est un peu délicate. Chrome et Edge (et les versions plus récentes d'IE) focalisent l'élément lorsque l'utilisateur clique sur le lien, sans avoir besoin du bloc  <code>onclick</code>/<code>focus()</code>.  Safari ne mettra en évidence que l'élément de formulaire avec le lien, il a donc besoin du bloc <code>onclick</code>/<code>focus()</code>  pour le focaliser. Firefox ne focalise pas les entrées correctement dans ce contexte, les utilisateurs de Firefox ne peuvent donc pas en profiter pour le moment (bien que tout le reste fonctionne bien). Le problème de Firefox devrait bientôt être résolu - des efforts sont en cours pour donner la parité des comportements de Firefox aux autres navigateurs (voir {{bug(277178)}}).</p>
+<p><strong>Note :</strong> La partie  <code>focus()</code> de cet exemple est un peu délicate. Chrome et Edge (et les versions plus récentes d'IE) focalisent l'élément lorsque l'utilisateur clique sur le lien, sans avoir besoin du bloc  <code>onclick</code>/<code>focus()</code>. Safari ne mettra en évidence que l'élément de formulaire avec le lien, il a donc besoin du bloc <code>onclick</code>/<code>focus()</code> pour le focaliser. Firefox ne focalise pas les entrées correctement dans ce contexte, les utilisateurs de Firefox ne peuvent donc pas en profiter pour le moment (bien que tout le reste fonctionne bien). Le problème de Firefox devrait bientôt être résolu - des efforts sont en cours pour donner la parité des comportements de Firefox aux autres navigateurs (voir {{bug(277178)}}).</p>
 </div>
 
 <p>De plus, le champ <code>errorField</code> est placé en haut de l'ordre source (bien qu'il soit positionné différemment dans UI à l'aide de CSS), ce qui signifie que les utilisateurs peuvent savoir exactement ce qui ne va pas avec les soumissions de formulaire et accéder aux éléments d'entrée en question en remontant au début de la page</p>
@@ -315,11 +315,11 @@ function validate(e) {
 <p>Nous expliquerons ces attributs dans notre prochain article, qui couvre <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> de manière beaucoup plus détaillée.</p>
 
 <div class="note">
-<p><strong>Note </strong>:  Certains d'entre vous penseront probablement au fait que les formulaires HTML5 ont des mécanismes de validation intégrés tels que les attributs <code>required</code>, <code>min</code>/<code>minlength</code>, et <code>max</code>/<code>maxlength</code>  (voir {{htmlelement("input")}} référence d'élément pour plus d'informations). Nous avons fini par ne pas les utiliser dans la démo, car la prise en charge multi-navigateurs est inégale (par exemple, IE10 et versions ultérieures, pas de prise en charge de Safari).</p>
+<p><strong>Note :</strong> Certains d'entre vous penseront probablement au fait que les formulaires HTML5 ont des mécanismes de validation intégrés tels que les attributs <code>required</code>, <code>min</code>/<code>minlength</code>, et <code>max</code>/<code>maxlength</code> (voir {{htmlelement("input")}} référence d'élément pour plus d'informations). Nous avons fini par ne pas les utiliser dans la démo, car la prise en charge multi-navigateurs est inégale (par exemple, IE10 et versions ultérieures, pas de prise en charge de Safari).</p>
 </div>
 
 <div class="note">
-<p><strong>Note </strong>: WebAIM's <a href="https://webaim.org/techniques/formvalidation/">Validation de formulaire et récupération d'erreur utilisables et accessibles (EN)</a> fournit des informations supplémentaires utiles sur la validation de formulaire accessible.</p>
+<p><strong>Note :</strong> WebAIM's <a href="https://webaim.org/techniques/formvalidation/">Validation de formulaire et récupération d'erreur utilisables et accessibles (EN)</a> fournit des informations supplémentaires utiles sur la validation de formulaire accessible.</p>
 </div>
 
 <h3 id="Autres_problèmes_daccessibilité_JavaScript">Autres problèmes d'accessibilité JavaScript</h3>
@@ -328,7 +328,7 @@ function validate(e) {
 
 <h4 id="Événements_spécifiques_à_la_souris">Événements spécifiques à la souris</h4>
 
-<p>Comme vous le savez peut-être, la plupart des interactions utilisateur sont implémentées dans JavaScript côté client à l'aide de gestionnaires d'événements, ce qui nous permet d'exécuter des fonctions en réponse à certains événements. Certains événements peuvent avoir des problèmes d'accessibilité. L'exemple principal que vous rencontrerez concerne des événements spécifiques à la souris tels que   <a href="/fr/docs/Web/Events/mouseover"> mouseover</a>, <a href="/fr/docs/Web/Events/mouseout"> mouseout</a>, <a href="/fr/docs/Web/Events/dblclick"> dblclick</a>, etc. Les fonctionnalités qui s'exécutent en réponse à ces événements ne seront pas accessibles à l'aide d'autres mécanismes, tels que les contrôles du clavier.</p>
+<p>Comme vous le savez peut-être, la plupart des interactions utilisateur sont implémentées dans JavaScript côté client à l'aide de gestionnaires d'événements, ce qui nous permet d'exécuter des fonctions en réponse à certains événements. Certains événements peuvent avoir des problèmes d'accessibilité. L'exemple principal que vous rencontrerez concerne des événements spécifiques à la souris tels que  <a href="/fr/docs/Web/Events/mouseover"> mouseover</a>, <a href="/fr/docs/Web/Events/mouseout"> mouseout</a>, <a href="/fr/docs/Web/Events/dblclick"> dblclick</a>, etc. Les fonctionnalités qui s'exécutent en réponse à ces événements ne seront pas accessibles à l'aide d'autres mécanismes, tels que les contrôles du clavier.</p>
 
 <p>Pour résoudre de tels problèmes, vous devez doubler ces événements avec des événements similaires pouvant être activés par d'autres moyens (appelés gestionnaires d'événements indépendants du périphérique) —<a href="/fr/docs/Web/Events/focus">focus</a> et <a href="/fr/docs/Web/Events/blur">blur (event)</a> fourniraient une accessibilité aux utilisateurs de clavier. </p>
 
@@ -344,7 +344,7 @@ imgThumb.onblur = hideImg;</pre>
 
 <p>Les deux premières lignes exécutent les fonctions lorsque le pointeur de la souris survole et cesse de survoler la vignette, respectivement. Cela ne nous permettra toutefois pas d'accéder à la vue agrandie à l'aide du clavier ; pour cela, nous avons inclus les deux dernières lignes, qui exécutent les fonctions lorsque l'image est nette et floue (lorsque la mise au point s'arrête). Cela peut être fait en tapant sur l'image, car nous avons inclus  <code>tabindex="0"</code> dessus.</p>
 
-<p>L'événement <a href="/fr/docs/Web/API/Element/click_event">click</a> est intéressant — cela semble dépendre de la souris, mais la plupart des navigateurs activent les gestionnaires d'événement <a href="/fr/docs/Web/API/GlobalEventHandlers/onclick">element.onclick</a>  après avoir  pressé <kbd>Entrée</kbd>  sur un lien ou un élément de formulaire ciblé, ou lorsqu'un tel élément est touché sur un écran tactile. Cependant, cela ne fonctionne pas par défaut lorsque vous autorisez un événement à ne pas être mis au point par défaut à l'aide de tabindex. Dans ce cas, vous devez détecter précisément le moment exact où cette touche est enfoncée (voir <a href="/fr/docs/Apprendre/a11y/HTML#Building_keyboard_accessibility_back_in">Remettre l'accessibilité au clavier</a>).</p>
+<p>L'événement <a href="/fr/docs/Web/API/Element/click_event">click</a> est intéressant — cela semble dépendre de la souris, mais la plupart des navigateurs activent les gestionnaires d'événement <a href="/fr/docs/Web/API/GlobalEventHandlers/onclick">element.onclick</a> après avoir  pressé <kbd>Entrée</kbd>  sur un lien ou un élément de formulaire ciblé, ou lorsqu'un tel élément est touché sur un écran tactile. Cependant, cela ne fonctionne pas par défaut lorsque vous autorisez un événement à ne pas être mis au point par défaut à l'aide de tabindex. Dans ce cas, vous devez détecter précisément le moment exact où cette touche est enfoncée (voir <a href="/fr/docs/Apprendre/a11y/HTML#Building_keyboard_accessibility_back_in">Remettre l'accessibilité au clavier</a>).</p>
 
 <h2 id="Résumé">Résumé</h2>
 

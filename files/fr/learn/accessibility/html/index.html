@@ -59,7 +59,7 @@ original_slug: Apprendre/a11y/HTML
 <p>Continuons et jetons un œil au HTML accessible dans le détail.</p>
 
 <div class="note">
-<p><strong>Note </strong>: C'est une bonne idée d'avoir un lecteur d'écran configuré, pour tester les exemples ci-dessous. Voir notre guide pour <a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibilité#Screenreaders">gérer les problèmes courants d'accessibilité</a> pour plus de détails.</p>
+<p><strong>Note :</strong> C'est une bonne idée d'avoir un lecteur d'écran configuré, pour tester les exemples ci-dessous. Voir notre guide pour <a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibilité#Screenreaders">gérer les problèmes courants d'accessibilité</a> pour plus de détails.</p>
 </div>
 
 <h2 id="Une_bonne_sémantique">Une bonne sémantique</h2>
@@ -255,7 +255,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 <p>Une autre considération à prendre en compte lors de la création de dispositions consiste à utiliser des éléments sémantiques HTML5 comme dans l'exemple ci-dessus (voir <a href="/fr/docs/Web/HTML/Element#Content_sectioning">Référence des éléments HTML</a>). Vous pouvez créer une disposition en utilisant uniquement des éléments {{htmlelement("div")}} imbriqués, mais il est préférable d'utiliser des éléments de sectionnement appropriés pour envelopper votre navigation principale ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), en répétant des unités de contenu ({{htmlelement("article")}}),  etc. Elles fournissent une sémantique supplémentaire aux lecteurs d’écran (et à d’autres outils) pour donner à l’utilisateur des indices supplémentaires sur le contenu qu’il navigue (voir <a href="http://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/">Prise en charge du lecteur d’écran pour les nouveaux éléments de section HTML5</a> pour une idée de la prise en charge du lecteur d’écran).</p>
 
 <div class="note">
-<p><strong>Note </strong>: Outre le fait que votre contenu présente une bonne sémantique et une présentation attrayante, il convient que son ordre source soit logique : vous pouvez toujours le placer où vous le souhaitez à l'aide de CSS par la suite, mais vous devez définir l'ordre exact des sources pour commencer. les utilisateurs de lecteur d’écran qui se liront auront du sens.</p>
+<p><strong>Note :</strong> Outre le fait que votre contenu présente une bonne sémantique et une présentation attrayante, il convient que son ordre source soit logique : vous pouvez toujours le placer où vous le souhaitez à l'aide de CSS par la suite, mais vous devez définir l'ordre exact des sources pour commencer. les utilisateurs de lecteur d’écran qui se liront auront du sens.</p>
 </div>
 
 <h3 id="Contrôles_de_linterface_utilisateur">Contrôles de l'interface utilisateur</h3>
@@ -269,7 +269,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 <p>Vous pouvez ensuite appuyer sur Entrée/Retour pour suivre un lien sélectionné ou appuyer sur un bouton (nous avons inclus du JavaScript pour que les boutons alertent un message), ou commencer à taper pour saisir du texte dans une entrée de texte (les autres éléments de formulaire ont des contrôles différents, par exemple, l'élément  {{htmlelement("select")}} peut avoir ses options affichées et alterner entre les touches fléchées haut et bas). </p>
 
 <div class="note">
-<p><strong>Note </strong>:  Différents navigateurs peuvent avoir différentes options de contrôle du clavier disponibles. Voir comment <a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibilité#Using_native_keyboard_accessibility">gérer les problèmes courants d'accessibilité</a> pour plus de détails.</p>
+<p><strong>Note :</strong> Différents navigateurs peuvent avoir différentes options de contrôle du clavier disponibles. Voir comment <a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibilité#Using_native_keyboard_accessibility">gérer les problèmes courants d'accessibilité</a> pour plus de détails.</p>
 </div>
 
 <p>Vous obtenez essentiellement ce comportement gratuitement, en utilisant simplement les éléments appropriés, par exemple :</p>
@@ -369,7 +369,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>:Vous pouvez trouver beaucoup plus d'informations sur l'implémentation de liens et les meilleures pratiques dans notre article sur la <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks">création d'hyperliens</a>. Vous pouvez également voir quelques bons et mauvais exemples dans <a href="https://mdn.github.io/learning-area/accessibility/html/good-links.html">Bons-liens.html</a> et <a href="https://mdn.github.io/learning-area/accessibility/html/bad-links.html">Mauvais-liens.html</a>.</p>
+<p><strong>Note :</strong> Vous pouvez trouver beaucoup plus d'informations sur l'implémentation de liens et les meilleures pratiques dans notre article sur la <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks">création d'hyperliens</a>. Vous pouvez également voir quelques bons et mauvais exemples dans <a href="https://mdn.github.io/learning-area/accessibility/html/good-links.html">Bons-liens.html</a> et <a href="https://mdn.github.io/learning-area/accessibility/html/bad-links.html">Mauvais-liens.html</a>.</p>
 </div>
 
 <p>Les libellés de formulaire sont également importantes pour vous donner un indice sur ce que vous devez entrer dans chaque entrée de formulaire. Ce qui suit semble être un exemple assez raisonnable :</p>
@@ -392,7 +392,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 <p>En prime, dans la plupart des navigateurs, associer a un label à une  form input signifie que vous pouvez cliquer sur celle-ci pour sélectionner / activer l'élément  label. Cela donne à input une zone de résultats plus grande, ce qui facilite la sélection</p>
 
 <div class="note">
-<p><strong>Note</strong>:vous pouvez voir des exemples de bonnes et de mauvaises de formulaire dans <a href="https://mdn.github.io/learning-area/accessibility/html/good-form.html">exemple de bon formulaire</a> et <a href="https://mdn.github.io/learning-area/accessibility/html/bad-form.html">exemple de mauvais formulaire</a>.</p>
+<p><strong>Note :</strong> vous pouvez voir des exemples de bonnes et de mauvaises de formulaire dans <a href="https://mdn.github.io/learning-area/accessibility/html/good-form.html">exemple de bon formulaire</a> et <a href="https://mdn.github.io/learning-area/accessibility/html/bad-form.html">exemple de mauvais formulaire</a>.</p>
 </div>
 
 <h2 id="Tableaux_de_données_accessibles">Tableaux de données accessibles</h2>
@@ -432,7 +432,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 </ul>
 
 <div class="note">
-<p><strong>Note</strong> : voir notre article  <a href="/fr/docs/Apprendre/HTML/Tableaux/Advanced">Tableaux HTML : dispositions avancées et accessibilité</a>  pour plus de détails sur les tables de données accessibles.</p>
+<p><strong>Note :</strong> voir notre article  <a href="/fr/docs/Apprendre/HTML/Tableaux/Advanced">Tableaux HTML : dispositions avancées et accessibilité</a>  pour plus de détails sur les tables de données accessibles.</p>
 </div>
 
 <h2 id="Alternatives_textuelles">Alternatives textuelles</h2>
@@ -459,7 +459,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 <p>La première image, lorsqu'elle est visualisée par un lecteur d'écran, n'offre pas beaucoup d'aide à l'utilisateur. VoiceOver, par exemple, lit « /dinosaur.png, image ». Il lit le nom du fichier pour essayer de fournir de l'aide. Dans cet exemple, l'utilisateur ou l’utilisatrice saura au moins qu'il s'agit d'un dinosaure, mais les fichiers peuvent souvent être chargés avec des noms de fichiers générés par une machine (par exemple, à partir d'un appareil photo numérique) et ces noms de fichiers ne fourniront probablement aucun contexte au contenu de l'image.</p>
 
 <div class="note">
-<p><strong>Note</strong>: c'est pourquoi vous ne devriez jamais inclure de contenu textuel dans une image. Les lecteurs d'écran ne peuvent tout simplement pas y accéder. Il y a aussi d'autres inconvénients - vous ne pouvez pas le sélectionner et le copier/coller. Juste ne le faite pas !</p>
+<p><strong>Note :</strong> c'est pourquoi vous ne devriez jamais inclure de contenu textuel dans une image. Les lecteurs d'écran ne peuvent tout simplement pas y accéder. Il y a aussi d'autres inconvénients - vous ne pouvez pas le sélectionner et le copier/coller. Juste ne le faite pas !</p>
 </div>
 
 <p>Quand un lecteur d'écran rencontre la deuxième image, il lit l'intégralité de l'attribut alt – « Un Tyrannosaure Rex rouge : Un dinosaure à deux pattes se tenant droit comme un humain, avec des armes de petit calibre et une grosse tête avec beaucoup de dents acérées. »</p>
@@ -469,7 +469,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 <p>Une chose à considérer est de savoir si vos images ont une signification dans votre contenu, ou si elles sont purement décoratives, n’ont donc aucune signification. S'ils sont décoratifs, il est préférable de les inclure dans la page en tant qu'images d'arrière-plan CSS.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Lisez <a href="/fr/docs/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML">Les images en HTML</a> et<a href="/fr/docs/Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page_web"> Images adaptatives</a> pour plus d’informations sur la mise en œuvre des images et les meilleures pratiques.</p>
+<p><strong>Note :</strong> Lisez <a href="/fr/docs/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML">Les images en HTML</a> et<a href="/fr/docs/Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page_web"> Images adaptatives</a> pour plus d’informations sur la mise en œuvre des images et les meilleures pratiques.</p>
 </div>
 
 <p>Si vous souhaitez fournir des informations contextuelles supplémentaires, vous devez les insérer dans le texte entourant l'image ou dans un attribut title, comme indiqué ci-dessus. Dans ce cas, la plupart des lecteurs d’écran liront le texte alternatif, l’attribut title et le nom du fichier. En outre, les navigateurs affichent le texte du titre sous forme d’infos lors du survol de la souris.</p>
@@ -485,7 +485,7 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 <p>Dans ce cas, nous n'utilisons pas du tout l'attribut <code>alt</code> Nous avons plutôt présenté notre description de l'image sous forme de paragraphe de texte normal, en lui attribuant un  <code>id</code> puis nous avons utilisé l'attribut  <code>aria-labelledby</code> pour : faire référence à cela  <code>id</code>, ce qui amène les lecteurs d’écran à utiliser ce paragraphe comme alt  text/label pour cette image. Ceci est particulièrement utile si vous souhaitez utiliser le même texte comme étiquette pour plusieurs images – quelque chose qui n’est pas possible avec <code>alt</code>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <code>aria-labelledby</code> fait partie de la spécification <a href="https://www.w3.org/TR/wai-aria-1.1/">WAI ARIA</a>, qui permet aux développeurs d'ajouter une sémantique supplémentaire à leur balisage afin d'améliorer l'accessibilité du lecteur d'écran, le cas échéant. Pour en savoir plus sur son fonctionnement, lisez notre article <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basic</a>.</p>
+<p><strong>Note :</strong> <code>aria-labelledby</code> fait partie de la spécification <a href="https://www.w3.org/TR/wai-aria-1.1/">WAI ARIA</a>, qui permet aux développeurs d'ajouter une sémantique supplémentaire à leur balisage afin d'améliorer l'accessibilité du lecteur d'écran, le cas échéant. Pour en savoir plus sur son fonctionnement, lisez notre article <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basic</a>.</p>
 </div>
 
 <h3 id="Autres_mécanismes_alternatifs_de_texte">Autres mécanismes alternatifs de texte</h3>
@@ -519,12 +519,10 @@ Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus int�
 <p>La raison d'utiliser un vide <code>alt</code> au lieu de ne pas l'inclure est due au fait que de nombreux lecteurs d'écran annoncent l'URL complète de l'image si aucun  <code>alt</code> n'est fourni. Dans l'exemple ci-dessus, l'image agit comme une décoration visuelle de l'en-tête auquel elle est associée. Dans ce cas, et dans les cas où une image est uniquement une décoration et n'a pas de valeur de contenu, vous devez mettre un vide  <code>alt</code> sur vos images. Une autre alternative consiste à utiliser l'attribut aria role role = "presentation" – cela empêche également les lecteurs d'écrans de lire du texte alternatif.</p>
 
 <div class="note">
-<p><strong>Note</strong> : si possible, vous devriez utiliser CSS pour afficher des images qui ne sont que des décorations.</p>
+<p><strong>Note :</strong> si possible, vous devriez utiliser CSS pour afficher des images qui ne sont que des décorations.</p>
 </div>
 
-<div class="text-wrap tlid-copy-target">
-<h2 class="result-shield-container tlid-copy-target" id="Résumé">Résumé</h2>
-</div>
+<h2 id="Résumé">Résumé</h2>
 
 <p>Vous devriez maintenant bien connaître l'écriture HTML accessible pour la plupart des cas. Notre article sur les bases de WAI-ARIA comblera également certaines lacunes dans cette connaissance, mais cet article s’occupe des bases. Ensuite, nous allons explorer CSS et JavaScript, et comment l’accessibilité est affectée par leur bon ou mauvais usage.</p>
 
