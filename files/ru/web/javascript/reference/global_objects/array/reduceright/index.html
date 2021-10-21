@@ -14,13 +14,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 ---
 <div>{{JSRef("Global_Objects", "Array")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Метод <code><strong>reduceRight()</strong></code> применяет функцию к аккумулятору и каждому значению массива (справа-налево), сводя его к одному значению.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code><var>arr</var>.reduceRight(<var>callback</var>[, <var>initialValue</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 <dl>
  <dt><code>callback</code></dt>
  <dd>Функция, выполняющаяся для каждого элемента массива, принимает четыре аргумента:
@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
  <dd>Необязательный параметр. Объект, используемый в качестве первого аргумента при первом вызове функции <code>callback</code>.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Метод <code>reduceRight()</code> выполняет функцию <code>callback</code> один раз для каждого элемента, присутствующего в массиве, за исключением пустот, принимая четыре аргумента: начальное значение (или значение от предыдущего вызова <code>callback</code>), значение текущего элемента, текущий индекс и массив, по которому происходит итерация.</p>
 <p>Вызов колбэк-функции <code>callback</code> будет выглядеть так:</p>
 <pre class="brush: js">array.reduceRight(function(previousValue, currentValue, index, array) {
@@ -162,23 +162,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 </table>
 <p>Значение, возвращённое методом <code>reduceRight()</code> на этот раз, конечно же, будет равным <code>20</code>.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Sum_up_all_values_within_an_array" name="Example:_Sum_up_all_values_within_an_array">Пример: суммирование всех значений в массиве</h3>
+<h3 id="Example:_Sum_up_all_values_within_an_array">Пример: суммирование всех значений в массиве</h3>
 <pre class="brush: js">var total = [0, 1, 2, 3].reduceRight(function(a, b) {
   return a + b;
 });
 // total == 6
 </pre>
 
-<h3 id="Example:_Flatten_an_array_of_arrays" name="Example:_Flatten_an_array_of_arrays">Пример: разворачивание массива массивов</h3>
+<h3 id="Example:_Flatten_an_array_of_arrays">Пример: разворачивание массива массивов</h3>
 <pre class="brush: js">var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
   return a.concat(b);
 }, []);
 // flattened равен [4, 5, 2, 3, 0, 1]
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 <p>Метод <code>Array.prototype.reduceRight()</code> был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>reduceRight()</code> в реализациях, которые не поддерживают этот метод.</p>
 <pre class="brush: js">// Шаги алгоритма ECMA-262, 5-е издание, 15.4.4.22
 // Ссылка (en): http://es5.github.io/#x15.4.4.22
@@ -214,7 +214,7 @@ if ('function' !== typeof Array.prototype.reduceRight) {
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -235,10 +235,10 @@ if ('function' !== typeof Array.prototype.reduceRight) {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("Array.prototype.reduce()")}}</li>
 </ul>
