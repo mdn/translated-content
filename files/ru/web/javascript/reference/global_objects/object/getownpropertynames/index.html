@@ -17,11 +17,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNam
 
 <p>{{EmbedInteractiveExample("pages/js/object-getownpropertynames.html")}}</p>
 
-<h2 id="Syntax">Синтаксис</h2>
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
 
 <pre class="brush: js"><code>Object.getOwnPropertyNames(<var>obj</var>)</code></pre>
 
-<h3 id="Parameters">Параметры</h3>
+<h3 id="Parameters" name="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>obj</code></dt>
@@ -32,13 +32,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNam
 
 <p>Массив строк, который соответствует свойствам, найденным непосредственно в данном объекте.</p>
 
-<h2 id="Description">Описание</h2>
+<h2 id="Description" name="Description">Описание</h2>
 
 <p>Метод <code>Object.getOwnPropertyNames</code> возвращает массив строк, соответствующих перечисляемым <em>и неперечисляемым</em> свойствам, найденным непосредственно в объекте <code>obj</code>. Порядок перечисляемых свойств в массиве соответствует порядку при обходе объекта циклом {{jsxref("Statements/for...in", "for...in")}} (или при возврате методом {{jsxref("Object.keys")}}). Порядок неперечисляемых свойств в массиве, а также их местоположение среди перечисляемых свойств не определены.</p>
 
-<h2 id="Examples">Примеры</h2>
+<h2 id="Examples" name="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_Object.getOwnPropertyNames">Пример: использование <code>Object.getOwnPropertyNames()</code></h3>
+<h3 id="Example:_Using_Object.getOwnPropertyNames" name="Example:_Using_Object.getOwnPropertyNames">Пример: использование <code>Object.getOwnPropertyNames()</code></h3>
 
 <pre class="brush: js">var arr = ['a', 'b', 'c'];
 console.log(Object.getOwnPropertyNames(arr).sort()); // напечатает '0,1,2,length'
@@ -89,7 +89,7 @@ alert(
 );
 </pre>
 
-<h3 id="Example:_Get_Non-Enumerable_Only">Пример: получение только не перечисляемых свойств</h3>
+<h3 id="Example:_Get_Non-Enumerable_Only" name="Example:_Get_Non-Enumerable_Only">Пример: получение только не перечисляемых свойств</h3>
 
 <p>Здесь используется функция {{jsxref("Array.prototype.filter()")}} для удаления перечисляемых ключей (полученных через метод {{jsxref("Object.keys()")}}) из списка всех ключей (полученных через метод <code>Object.getOwnPropertyNames()</code>) и, таким образом, оставляющая только неперечисляемые ключи.</p>
 
@@ -110,7 +110,7 @@ var nonenum_only = enum_and_nonenum.filter(function(key) {
 console.log(nonenum_only);
 </pre>
 
-<h2 id="Notes">Примечания</h2>
+<h2 id="Notes" name="Notes">Примечания</h2>
 
 <p>В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6 такой аргумент будет приведён к объекту.</p>
 
@@ -121,7 +121,7 @@ TypeError: "foo" is not an object // код ES5
 ['length', '0', '1', '2']         // код ES6
 </pre>
 
-<h2 id="Specifications">Спецификации</h2>
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
 
 <table class="standard-table">
  <tbody>
@@ -143,13 +143,13 @@ TypeError: "foo" is not an object // код ES5
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
 
 <div>{{Compat("javascript.builtins.Object.getOwnPropertyNames")}}</div>
 
 <p> </p>
 
-<h2 id="See_also">Смотрите также</h2>
+<h2 id="See_also" name="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/ru/docs/Enumerability_and_ownership_of_properties">Перечисляемость и собственность свойств</a></li>

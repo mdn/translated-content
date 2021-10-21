@@ -15,11 +15,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 
 <p>Метод <code><strong>Object.create()</strong></code> создаёт новый объект с указанным прототипом и свойствами.</p>
 
-<h2 id="Syntax">Синтаксис</h2>
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox notranslate"><code>Object.create(<var>proto</var>[, <var>propertiesObject</var>])</code></pre>
 
-<h3 id="Parameters">Параметры</h3>
+<h3 id="Parameters" name="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>proto</code></dt>
@@ -32,13 +32,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 
 <p>Новый объект с заданным прототипом и свойствами</p>
 
-<h3 id="Throws">Выбрасываемые исключения</h3>
+<h3 id="Throws" name="Throws">Выбрасываемые исключения</h3>
 
 <p>Выбрасывает исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}, если параметр <code>proto</code> не является {{jsxref("Global_Objects/null", "null")}} или объектом (исключение составляют объекты-обёртки примитивных типов).</p>
 
-<h2 id="Examples">Примеры</h2>
+<h2 id="Examples" name="Examples">Примеры</h2>
 
-<h3 id="Example.3A_Classical_inheritance_with_Object.create">Пример: классическое наследование с <code>Object.create()</code></h3>
+<h3 id="Example.3A_Classical_inheritance_with_Object.create" name="Example.3A_Classical_inheritance_with_Object.create()">Пример: классическое наследование с <code>Object.create()</code></h3>
 
 <p>Ниже показан пример использования <code>Object.create()</code> для имитации классического наследования. Это пример одиночного наследования, поскольку только его поддерживает JavaScript.</p>
 
@@ -88,7 +88,7 @@ MyClass.prototype.myMethod = function() {
 
 <p>Функция примешивания должна копировать функции из прототипа суперкласса в прототип подкласса, она должна предоставляться пользователем. Примером примеси может служить функция <a href="http://api.jquery.com/jQuery.extend/">jQuery.extend()</a>.</p>
 
-<h3 id="Example.3A_Using_propertiesObject_argument_with_Object.create">Пример: использование аргумента <code>propertiesObject</code> с <code>Object.create()</code></h3>
+<h3 id="Example.3A_Using_propertiesObject_argument_with_Object.create" name="Example.3A_Using_propertiesObject_argument_with_Object.create()">Пример: использование аргумента <code>propertiesObject</code> с <code>Object.create()</code></h3>
 
 <pre class="brush: js notranslate">var o;
 
@@ -155,7 +155,7 @@ o2 = Object.create({}, {
 });
 </pre>
 
-<h2 id="Polyfill">Полифил</h2>
+<h2 id="Polyfill" name="Polyfill">Полифил</h2>
 
 <p>Для этого полифила необходима правильно работающая Object.prototype.hasOwnProperty.</p>
 
@@ -204,7 +204,7 @@ o2 = Object.create({}, {
 }
 </pre>
 
-<h2 id="Specifications">Спецификации</h2>
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
 
 <table class="standard-table">
  <tbody>
@@ -226,11 +226,11 @@ o2 = Object.create({}, {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
 
 <div>{{Compat("javascript.builtins.Object.create")}}</div>
 
-<h2 id="See_also">Смотрите также</h2>
+<h2 id="See_also" name="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Object.defineProperty()")}}</li>

@@ -16,7 +16,7 @@ translation_of: Web/API/EventTarget/addEventListener
 
 <p>{{domxref("EventTarget")}} может быть {{domxref("Element")}}, {{domxref("Document")}}, {{domxref("Window")}}, или любым другим объектом, поддерживающим события (таким как <code style="font-style: normal;"><a href="/ru/docs/DOM/XMLHttpRequest" title="XMLHttpRequest">XMLHttpRequest</a></code>).</p>
 
-<h2 id="Syntax">Синтаксис</h2>
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox notranslate"><code><em>target.addEventListener(type, listener</em>[<em>, options</em>]<em>);
 target</em>.addEventListener(<em>type</em>, <em>listener</em>[, <em>useCapture</em>]);
@@ -113,7 +113,7 @@ try {
 
 <h2 id="Примеры"><span style='font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 2.5rem;'>Примеры</span></h2>
 
-<h3 id="addEventListenerBasic">Добавление простого обработчика</h3>
+<h3 id="addEventListenerBasic" name="addEventListenerBasic">Добавление простого обработчика</h3>
 
 <p>Эти примеры демонстрируют как использовать <code>addEventListener()</code> для наблюдения за щелчками мышкой по элементу.</p>
 
@@ -146,11 +146,11 @@ el.addEventListener("click", modifyText, false);
 
 <h4 id="Результат">Результат</h4>
 
-<p>{{EmbedLiveSample('addEventListenerBasic')}}</p>
+<p>{{EmbedLiveSample('Add_a_simple_listener')}}</p>
 
 <p>Если вам нужно передать параметры в обработчик, вы можете использовать анонимные функции.</p>
 
-<h3 id="Event_Listener_with_anonymous_function">Обработчик события с анонимной функцией</h3>
+<h3 id="Event_Listener_with_anonymous_function" name="Event_Listener_with_anonymous_function">Слушатель события с анонимной функцией</h3>
 
 <h4 id="HTML_Содержимое_2">HTML Содержимое</h4>
 
@@ -178,7 +178,7 @@ el.addEventListener("click", function(){modifyText("четыре")}, false);
 
 <p>{{EmbedLiveSample('Event_Listener_with_anonymous_function')}}</p>
 
-<h3 id="Обработчик_события_со_стрелочной_функцией">Обработчик события со стрелочной функцией</h3>
+<h3 id="Слушатель_события_со_стрелочной_функцией">Слушатель события со стрелочной функцией</h3>
 
 <h4 id="HTML">HTML</h4>
 
@@ -201,13 +201,13 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);</pre>
 
 <h4 id="Результат_3">Результат</h4>
 
-<p>{{EmbedLiveSample('Обработчик_события_со_стрелочной_функцией')}}</p>
+<p>{{EmbedLiveSample('Event_listener_with_an_arrow_function')}}</p>
 
 <p>Обратите внимание: несмотря на то, что анонимные и стрелочные функции схожи, они имеют разные значения <code>this</code>.</p>
 
 <h2 id="Примечания">Примечания</h2>
 
-<h3 id="Why_use_addEventListener.3F">Зачем использовать <code>addEventListener</code>?</h3>
+<h3 id="Why_use_addEventListener.3F" name="Why_use_addEventListener.3F">Зачем использовать <code>addEventListener</code>?</h3>
 
 <p><code>addEventListener</code> — это способ зарегистрировать обработчик события, описанный в документации W3C DOM. Вот список преимуществ его использования:</p>
 
@@ -219,15 +219,15 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);</pre>
 
 <p>Ниже описан другой, <a href="#Older_way_to_register_event_listeners">более старый способ регистрации обработчиков</a>.</p>
 
-<h3 id="Adding_a_listener_during_event_dispatch">Добавление обработчика во время обработки события</h3>
+<h3 id="Adding_a_listener_during_event_dispatch" name="Adding_a_listener_during_event_dispatch">Добавление обработчика во время обработки события</h3>
 
 <p>Если <code>EventListener</code> добавлен к <code>EventTarget</code> во время обработки события, он не будет вызван текущими действиями, но может быть вызван на более поздней стадии обработки события, при восходящей обработке.</p>
 
-<h3 id="Multiple_identical_event_listeners">Несколько одинаковых обработчиков события</h3>
+<h3 id="Multiple_identical_event_listeners" name="Multiple_identical_event_listeners">Несколько одинаковых обработчиков события</h3>
 
 <p>Если зарегистрировано несколько одинаковых <code>EventListener</code> на одном <code>EventTarget</code> с одинаковыми параметрами, дублирующиеся обработчики игнорируются. Так как одинаковые обработчики игнорируются, не требуется удалять их вручную с помощью метода <a href="/en-US/docs/DOM/EventTarget.removeEventListener" title="DOM/element.removeEventListener">removeEventListener</a>.</p>
 
-<h3 id="The_value_of_this_within_the_handler">Значение <code>this</code> в обработчике</h3>
+<h3 id="The_value_of_this_within_the_handler" name="The_value_of_this_within_the_handler">Значение <code>this</code> в обработчике</h3>
 
 <p>Обычно желательно передавать элемент, на котором сработал обработчик события, например, при использовании обобщённых обработчиков для схожих элементов. При добавлении функции при помощи <code>addEventListener()</code> значение переменной <code>this</code> меняется — заметьте, что значение <code>this</code> передаётся в функцию от вызывающего объекта.</p>
 
@@ -282,7 +282,7 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);</pre>
 }
 </pre>
 
-<h3 id="Legacy_Internet_Explorer_and_attachEvent">Наследство Internet Explorer и attachEvent</h3>
+<h3 id="Legacy_Internet_Explorer_and_attachEvent" name="Legacy_Internet_Explorer_and_attachEvent">Наследство Internet Explorer и attachEvent</h3>
 
 <p>В Internet Explorer младше 9 версии, вы можете использовать <code><a href="http://msdn.microsoft.com/en-us/library/ms536343(VS.85).aspx">attachEvent</a></code> вместо стандартного <code>addEventListener</code>. Для поддержки IE, пример выше может быть модифицирован следующим образом:</p>
 
@@ -295,7 +295,7 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);</pre>
 
 <p>У <code>attachEvent</code> есть недостаток: <code>this</code> будет ссылаться на объект <code>window</code>, а не на элемент, на котором он был вызван.</p>
 
-<h3 id="Compatibility">Совместимость</h3>
+<h3 id="Compatibility" name="Compatibility">Совместимость</h3>
 
 <p>Вы можете обойти методы <code>addEventListener</code>, <code>removeEventListener</code>, <code>Event.preventDefault</code> и <code>Event.stopPropagation</code> не поддерживаемы в IE 8 используя следующий код в начале вашего скрипта. Этот код поддерживает использование <code>handleEvent</code> и события <code>DOMContentLoaded</code>.</p>
 
@@ -376,7 +376,7 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);</pre>
   }
 })();</pre>
 
-<h3 id="Older_way_to_register_event_listeners">Старый способ регистрации обработчиков событий</h3>
+<h3 id="Older_way_to_register_event_listeners" name="Older_way_to_register_event_listeners">Старый способ регистрации обработчиков событий</h3>
 
 <p><code>addEventListener()</code> был добавлен в спецификации DOM 2 <a href="http://www.w3.org/TR/DOM-Level-2-Events">Events</a>. До этого обработчики добавлялись следующим образом:</p>
 
@@ -389,11 +389,11 @@ element.onclick = function() {
 };
 </pre>
 
-<p>Этот метод заменяет текущие обработчики события <code>click</code>, если они есть. Тоже самое для других событий и ассоциируемых с ними  обработчиков, таких как <code>blur</code> (<code>onblur</code>), <code>keypress</code> (<code>onkeypress</code>), и так далее.</p>
+<p>Этот метод заменяет текущие слушатели события <code>click</code>, если они есть. Тоже самое для других событий и ассоциируемых с ними  обработчиков, таких как <code>blur</code> (<code>onblur</code>), <code>keypress</code> (<code>onkeypress</code>), и так далее.</p>
 
 <p>Так как это по существу было частью DOM 0, этот метод имеет широкую поддержку и не требует специального кросс-браузерного кода; следовательно, это обычно используется, чтобы добавлять обработчики динамически, если не требуются расширенные возможности <code>addEventListener()</code>.</p>
 
-<h3 id="Memory_issues">Вопросы памяти</h3>
+<h3 id="Memory_issues" name="Memory_issues">Вопросы памяти</h3>
 
 <pre class="brush: js notranslate">var i;
 var els = document.getElementsByTagName('*');
@@ -439,7 +439,7 @@ elem.addEventListener(
 
 <p>Установка <code>passive</code> не имеет значения для основного события {{event ("scroll")}}, поскольку его нельзя отменить, поэтому его обработчик в любом случае не может блокировать показ страницы.</p>
 
-<h2 id="Browser_compatibility">Совместимость</h2>
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость</h2>
 
 <div>{{Compat("api.EventTarget.addEventListener", 3)}}</div>
 

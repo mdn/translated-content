@@ -3,7 +3,7 @@ title: Отправка и получение бинарных данных
 slug: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
 translation_of: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
 ---
-<h2 id="Receiving_binary_data_using_JavaScript_typed_arrays">Получение бинарных данных используя JavaScript arrays </h2>
+<h2 id="Receiving_binary_data_using_JavaScript_typed_arrays" name="Receiving_binary_data_using_JavaScript_typed_arrays">Получение бинарных данных используя JavaScript arrays </h2>
 
 <p>Свойство responseType объекта XMLHttpRequest можно задать для изменения ожидаемого типа ответа с сервера. Возможные значения: пустая строка (по умолчанию), "arraybuffer", "blob", "document", "json" и "text". Свойство response будет содержать тело сущности в соответствии с типом ответа, как ArrayBuffer, Blob, Document, JSON или string. Это значение равно null, если запрос не завершён или не был успешным.</p>
 
@@ -53,7 +53,7 @@ oReq.onload = function(oEvent) {
 
 oReq.send();</pre>
 
-<h2 id="Receiving_binary_data_in_older_browsers">Получение бинарных данных в старых браузерах</h2>
+<h2 id="Receiving_binary_data_in_older_browsers" name="Receiving_binary_data_in_older_browsers">Получение бинарных данных в старых браузерах</h2>
 
 <p>Функция load_binary_resource(), показанная ниже, загружает двоичные данные из указанного URL, возвращая их вызывающему объекту.</p>
 
@@ -88,7 +88,7 @@ var abyte = filestream.charCodeAt(x) &amp; 0xff; // throw away high-order byte (
 });
 </pre>
 
-<h2 id="Sending_binary_data">Отправка бинарных данных</h2>
+<h2 id="Sending_binary_data" name="Sending_binary_data">Отправка бинарных данных</h2>
 
 <p>Метод <code>send</code> объекта XMLHttpRequest был расширен, чтобы обеспечить лёгкую передачу бинарных данных - теперь он принимает объекты <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBuffer" title="ArrayBuffer"><code>ArrayBuffer</code></a>, {{domxref("Blob")}}, или {{domxref("File")}}.</p>
 
@@ -105,7 +105,7 @@ var blob = new Blob(['abc123'], {type: 'text/plain'});
 oReq.send(blob);
 </pre>
 
-<h2 id="Sending_typed_arrays_as_binary_data">Отправка типизированных массивов как бинарных данных</h2>
+<h2 id="Sending_typed_arrays_as_binary_data" name="Sending_typed_arrays_as_binary_data">Отправка типизированных массивов как бинарных данных</h2>
 
 <p>Точно так же можно отправлять типизированные массивы JavaScript.</p>
 
@@ -125,11 +125,11 @@ xhr.send(myArray);
 
 <div class="note"><strong>Примечание:</strong> Поддержка передачи объектов <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBuffer" title="ArrayBuffer"><code>ArrayBuffer</code></a> с помощью XMLHttpRequest появилась в Gecko 9.0 {{geckoRelease("9.0")}}. <strong>Add information about other browsers' support here.</strong></div>
 
-<h2 id="Submitting_forms_and_uploading_files">Отправка форм и загрузка файлов</h2>
+<h2 id="Submitting_forms_and_uploading_files" name="Submitting_forms_and_uploading_files">Отправка форм и загрузка файлов</h2>
 
 <p>См. <a href="/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files" title="DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">этот параграф</a>.</p>
 
-<h2 id="Firefox-specific_examples">Примеры для Firefox</h2>
+<h2 id="Firefox-specific_examples" name="Firefox-specific_examples">Примеры для Firefox</h2>
 
 <p>В этом примере двоичные данные передаются асинхронно методом <code>POST</code> и нестандартным методом Firefox's <code>sendAsBinary()</code>.</p>
 

@@ -13,7 +13,7 @@ translation_of: Web/API/Element/closest
 
 <p>Метод <code><strong>Element.closest()</strong></code> возвращает ближайший родительский элемент (или сам элемент), который соответствует заданному CSS-селектору или null, если таковых элементов вообще нет.</p>
 
-<h2 id="Syntax">Синтаксис</h2>
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox notranslate">var <em>elt =</em><em> element</em>.closest(<em>selectors</em>);
 </pre>
@@ -30,7 +30,7 @@ translation_of: Web/API/Element/closest
  <dd>Указанный css-селектор не является допустимым<em> ("/=21=1", "&amp;@*#", "%'54523" и т.п. приведут к ошибке).</em></dd>
 </dl>
 
-<h2 id="Example">Пример</h2>
+<h2 id="Example" name="Example">Пример</h2>
 
 <pre class="notranslate">&lt;div id="block" title="Я - блок"&gt;
     &lt;a href="#"&gt;Я ссылка в никуда&lt;/a&gt;
@@ -66,7 +66,7 @@ div.closest("div[title]") //#block - так как ближе нет блоко�
       };
 }(Element.prototype));</pre>
 
-<h2 id="Specification">Полифил #2 (через цикл)</h2>
+<h2 id="Specification" name="Specification">Полифил #2 (через цикл)</h2>
 
 <p>Тем не менее, если вам требуется поддержка IE 8, вы можете использовать следующий полифил. Имейте ввиду - этот способ позволяет использовать CSS селекторы только уровня 2.1 и может жутко тормозить.</p>
 
@@ -82,7 +82,7 @@ div.closest("div[title]") //#block - так как ближе нет блоко�
  }
 })(Element.prototype);</pre>
 
-<h2 id="Specification">Спецификация</h2>
+<h2 id="Specification" name="Specification">Спецификация</h2>
 
 <table class="standard-table">
  <tbody>
@@ -99,7 +99,7 @@ div.closest("div[title]") //#block - так как ближе нет блоко�
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
 
 <div>{{Compat("api.Element.closest")}}</div>
 

@@ -15,17 +15,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
 <div>{{JSRef("Global_Objects", "Array")}}</div>
 
-<h2 id="Summary">Сводка</h2>
+<h2 id="Summary" name="Summary">Сводка</h2>
 
 <p>Метод <code><strong>map()</strong></code> создаёт новый массив с результатом вызова указанной функции для каждого элемента массива.</p>
 
-<h2 id="Syntax">Синтаксис</h2>
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox notranslate">let <var>new_array</var> = <var>arr</var>.map(function <var>callback</var>( <var>currentValue</var>[, <var>index</var>[, <var>array</var>]]) {
     // Возвращает элемент для new_array
 }[, <var>thisArg</var>])</pre>
 
-<h3 id="Parameters">Параметры</h3>
+<h3 id="Parameters" name="Parameters">Параметры</h3>
 
 <dl>
  <dt><code><var>callback</var></code></dt>
@@ -51,7 +51,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <p>Новый массив, где каждый элемент является результатом <code>callback</code> функции.</p>
 
-<h2 id="Description">Описание</h2>
+<h2 id="Description" name="Description">Описание</h2>
 
 <p>Метод <code>map</code> вызывает переданную функцию <code>callback</code> один раз для каждого элемента, в порядке их появления и конструирует новый массив из результатов её вызова. Функция <code>callback</code> вызывается только для индексов массива, имеющих присвоенные значения, включая {{jsxref("Global_Objects/undefined", "undefined")}}. Она не вызывается для пропущенных элементов массива (то есть для индексов, которые никогда не были заданы, которые были удалены или которым никогда не было присвоено значение.</p>
 
@@ -63,9 +63,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <p>Диапазон элементов, обрабатываемых методом <code>map</code>, устанавливается до первого вызова функции <code>callback</code>. Элементы, добавленные в массив после начала выполнения метода <code>map</code>, не будут посещены функцией <code>callback</code>. Если существующие элементы массива изменяются функцией <code>callback</code>, их значения, переданные в функцию, будут значениями на тот момент времени, когда метод <code>map</code> посетит их; удалённые элементы посещены не будут.</p>
 
-<h2 id="Examples">Примеры</h2>
+<h2 id="Examples" name="Examples">Примеры</h2>
 
-<h3 id="Example_Mapping_an_array_of_numbers_to_an_array_of_square_roots">Пример: отображение массива чисел на массив квадратных корней</h3>
+<h3 id="Example_Mapping_an_array_of_numbers_to_an_array_of_square_roots" name="Example:_Mapping_an_array_of_numbers_to_an_array_of_square_roots">Пример: отображение массива чисел на массив квадратных корней</h3>
 
 <p>Следующий код берёт массив чисел и создаёт новый массив, содержащий квадратные корни чисел из первого массива.</p>
 
@@ -74,7 +74,7 @@ var roots = numbers.map(Math.sqrt);
 // теперь roots равен [1, 2, 3], а numbers всё ещё равен [1, 4, 9]
 </pre>
 
-<h3 id="Example_Mapping_an_array_of_numbers_using_a_function_containing_an_argument">Пример: отображение массива чисел с использованием функции, содержащей аргумент</h3>
+<h3 id="Example_Mapping_an_array_of_numbers_using_a_function_containing_an_argument" name="Example:_Mapping_an_array_of_numbers_using_a_function_containing_an_argument">Пример: отображение массива чисел с использованием функции, содержащей аргумент</h3>
 
 <p>Следующий код показывает, как работает отображение, когда функция требует один аргумент. Аргумент будет автоматически присваиваться каждому элементу массива, когда <code>map</code> проходит по оригинальному массиву.</p>
 
@@ -85,7 +85,7 @@ var doubles = numbers.map(function(num) {
 // теперь doubles равен [2, 8, 18], а numbers всё ещё равен [1, 4, 9]
 </pre>
 
-<h3 id="Example_using_map_generically">Пример: обобщённое использование <code>map</code></h3>
+<h3 id="Example_using_map_generically" name="Example:_using_map_generically">Пример: обобщённое использование <code>map</code></h3>
 
 <p>Этот пример показывает, как использовать <code>map</code> на объекте строки {{jsxref("Global_Objects/String", "String")}} для получения массива байт в кодировке ASCII, представляющего значения символов:</p>
 
@@ -94,7 +94,7 @@ var a = map.call('Hello World', function(x) { return x.charCodeAt(0); });
 // теперь a равен [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
 </pre>
 
-<h3 id="Example_using_map_generically_querySelectorAll">Пример: обобщённое использование <code>map</code> вместе с <code>querySelectorAll</code></h3>
+<h3 id="Example_using_map_generically_querySelectorAll" name="Example:_using_map_generically_querySelectorAll">Пример: обобщённое использование <code>map</code> вместе с <code>querySelectorAll</code></h3>
 
 <p>Этот пример показывает, как пройтись по коллекции объектов, собранных с помощью <code>querySelectorAll</code>. В данном случае мы получаем все выбранные опции на экране и печатаем их в консоль:</p>
 
@@ -106,7 +106,7 @@ var values = [].map.call(elems, function(obj) {
 
 <p>Более простым способом будет использование метода {{jsxref("Array.from()")}}.</p>
 
-<h3 id="Example_Using_map_to_reverse_a_string">Пример: использование <code>map</code> для переворачивания строки</h3>
+<h3 id="Example_Using_map_to_reverse_a_string" name="Example:_Using_map_to_reverse_a_string">Пример: использование <code>map</code> для переворачивания строки</h3>
 
 <pre class="brush: js notranslate">var str = '12345';
 [].map.call(str, function(x) {
@@ -119,7 +119,7 @@ var values = [].map.call(elems, function(obj) {
 
 <p>Более простым способом будет использование метода {{jsxref("String.split()")}} (см. пример <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/split#Example:_Reversing_a_String_using_split">обращение строки при помощи метода split()</a>).</p>
 
-<h3 id="Example_Tricky_use_case">Пример: хитрый вариант использования</h3>
+<h3 id="Example_Tricky_use_case" name="Example:_Tricky_use_case">Пример: хитрый вариант использования</h3>
 
 <p><a href="http://www.wirfs-brock.com/allen/posts/166">(навеяно этой записью в блоге)</a></p>
 
@@ -148,7 +148,7 @@ function returnInt(element) {
 ['1', '2', '3'].map(Number); // [1, 2, 3]
 </pre>
 
-<h2 id="Polyfill">Полифил</h2>
+<h2 id="Polyfill" name="Polyfill">Полифил</h2>
 
 <p>Метод <code>map</code> был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>map</code> в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 5-го издания; он предполагает, что {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}} и {{jsxref("Global_Objects/Array", "Array")}} имеют свои первоначальные значения и что <code>callback.call</code> вычисляется в оригинальное значение {{jsxref("Function.prototype.call")}}.</p>
 
@@ -245,7 +245,7 @@ if (!Array.prototype.map) {
 }
 </pre>
 
-<h2 id="Specifications">Спецификации</h2>
+<h2 id="Specifications" name="Specifications">Спецификации</h2>
 
 <table class="standard-table">
  <tbody>
@@ -273,7 +273,7 @@ if (!Array.prototype.map) {
 <p>{{Compat("javascript.builtins.Array.map")}}</p>
 </div>
 
-<h2 id="See_also">Смотрите также</h2>
+<h2 id="See_also" name="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.forEach()")}}</li>

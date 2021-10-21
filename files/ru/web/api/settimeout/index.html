@@ -6,11 +6,11 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 ---
 <div>{{ APIRef() }}</div>
 
-<h2 id="Summary">Краткое изложение</h2>
+<h2 id="Summary" name="Summary">Краткое изложение</h2>
 
 <p>Вызов функции или выполнение фрагмента кода после указанной задержки.</p>
 
-<h2 id="Syntax">Синтаксис</h2>
+<h2 id="Syntax" name="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox notranslate"><em>var timeoutID</em> = window.setTimeout(<em>func</em>, [, <em>delay</em>, <em>param1</em>, <em>param2</em>, ...]);
 <em>var timeoutID</em> = window.setTimeout(<em>code </em>[, <em>delay]</em>);
@@ -29,7 +29,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 
 <div class="warning"><strong>Important:</strong> Prior to Gecko 13 {{ geckoRelease("13.0") }}, Gecko passed an extra parameter to the callback routine, indicating the "actual lateness" of the timeout in milliseconds. This non-standard parameter is no longer passed.</div>
 
-<h2 id="Example">Пример</h2>
+<h2 id="Example" name="Example">Пример</h2>
 
 <p>В следующем примере на веб странице создаются две простые кнопки, к которым привязываются действия setTimeout и clearTimeout. Нажатие на первую кнопку установит таймаут, который вызовет диалоговое окно через две секунды. Также будет сохранён id для clearTimeout. Таймаут также может быть отменён по нажатию на вторую кнопку.</p>
 
@@ -246,11 +246,11 @@ window.setTimeout("alert(\"Hello World!\");", 500);
 
 <p>{{Compat("api.WindowOrWorkerGlobalScope.setTimeout")}}</p>
 
-<h2 id="Specification">Спецификация</h2>
+<h2 id="Specification" name="Specification">Спецификация</h2>
 
 <p>Part of DOM level 0, as specified in <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#timers">HTML5</a>.</p>
 
-<h2 id="See_also">Также интересно</h2>
+<h2 id="See_also" name="See_also">Также интересно</h2>
 
 <ul>
  <li><a href="/en-US/docs/JavaScript/Timers" title="/en-US/docs/JavaScript/Timers">JavaScript timers</a></li>
