@@ -27,7 +27,7 @@ original_slug: Apprendre/HTML/Tableaux/Advanced
 
 <p>Dans le second article de ce module, nous examinerons quelques dispositions avancées des tableaux HTML — comme intitulés ou résumés, groupement des rangées dans l'en-tête, le corps ou le pied de page du tableau — ainsi que l'accessibilité des tableaux aux utilisateurs malvoyants.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -371,13 +371,13 @@ tfoot {
 
 <p>Cette partie de l'article indique des techniques avancées pour rendre les tableaux les plus accessibles possible.</p>
 
-<h3 class="attTitle" id="Utilisation_des_en-têtes_de_colonnes_et_de_lignes">Utilisation des en-têtes de colonnes et de lignes</h3>
+<h3 id="Utilisation_des_en-têtes_de_colonnes_et_de_lignes">Utilisation des en-têtes de colonnes et de lignes</h3>
 
 <p>Les lecteurs d'écran identifieront tous les en-têtes et les utiliseront pour réaliser automatiquement les associations entre ces en-têtes et les cellules correspondantes.  La combinaison des en-têtes des colonnes et des lignes doit permettre d'identifier et d'interprêter les données de chaque cellule. Ainsi, les utilisateurs de lecteurs d'écran peuvent accéder aux données d'une façon similaire à celle des utilisateurs voyants.</p>
 
 <p>Nous avons déjà traité des en-têtes dans notre article précédent — voir <a href="/fr/docs/Learn/HTML/Tables/Basics#Adding_headers_with_%3Cth%3E_elements">Ajouter des en-têtes avec &lt;th&gt;</a> .</p>
 
-<h3 class="attTitle" id="L'attribut_scope">L'attribut <code>scope</code></h3>
+<h3 id="L'attribut_scope">L'attribut <code>scope</code></h3>
 
 <p>Aux balises <code>&lt;th&gt;</code>, sujet de l'article précédent, ajoutons l'attribut {{htmlattrxref("scope","th")}}. Il peut être mentionné dans un élément <code>&lt;th&gt;</code> pour indiquer précisément à un lecteur d'écran si la cellule contient un en-tête de colonne ou de ligne — par exemple, sommes‑nous dans un en-tête de ligne, ou de colonne ? En revenant à notre exemple d'enregistrement de dépenses vu plus tôt, il est possible de définir sans ambiguité un en-tête de colonne comme étant un en-tête de colonne ainsi :</p>
 
@@ -405,7 +405,7 @@ tfoot {
 
 <p><code>scope</code> a deux autres valeurs possibles — <code>colgroup</code> et <code>rowgroup</code>. Elles sont utilisées pour les en-têtes qui couvrent plusieurs colonnes ou lignes. Si vous revenez au tableau « Articles vendus... » au début de ce paragraphe du présent article, vous voyez que la cellule « Vêtements » se trouve au-dessus des cellules  « Pantalons », « Jupes » et « Robes ». Toutes ces cellules sont marquées comme en-têtes (<code>&lt;th&gt;</code>), mais « Vêtements » est un en-tête de niveau supérieur qui définit trois « sous-en-têtes ». « Vêtements » comportera donc un attribut  <code>scope="colgroup"</code>, alors que les autres doivent recevront un attribut <code>scope="col"</code>.</p>
 
-<h3 class="attTitle" id="Les_attributs_id_et_headers">Les attributs <code>id</code> et <code>headers</code></h3>
+<h3 id="Les_attributs_id_et_headers">Les attributs <code>id</code> et <code>headers</code></h3>
 
 <p>Une alternative à l'usage de l'attribut <code>scope</code> est l'utilisation des attributs {{htmlattrxref("id")}} et {{htmlattrxref("headers", "td")}} pour créer une association entre en-têtes et cellules. Ils sont utilisés de la manière suivante :</p>
 
@@ -470,7 +470,7 @@ tfoot {
 <ul>
  <li><a href="/fr/docs/Learn/HTML/Tables/Basics">Tableaux HTML : notions de base</a></li>
  <li><a href="/fr/docs/Learn/HTML/Tables/Advanced">Tableaux HTML : dispositions avancées et accessibilité</a></li>
- <li><a class="new" href="/fr/docs/Learn/HTML/Tables/Structuring_planet_data" rel="nofollow">Structuration de données sur les planètes</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Tables/Structuring_planet_data">Structuration de données sur les planètes</a></li>
 </ul>
 </div>
 </div>

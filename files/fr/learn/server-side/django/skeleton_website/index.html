@@ -19,7 +19,7 @@ translation_of: Learn/Server-side/Django/skeleton_website
 
 <p>Ce second article de la série <a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">didactique Django</a> va décrire comment créer le squelette du site web du projet. Ensuite, vous pourrez paramètrer et développer les composants spécifiques comme les modèles de données, les vues, les gabarits, les formulaires...</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis:</th>
@@ -39,8 +39,8 @@ translation_of: Learn/Server-side/Django/skeleton_website
 <p>La création est aisée:</p>
 
 <ol>
- <li>Utilisez la commande <code style="font-style: normal; font-weight: normal; line-height: 1.5;">django-admin</code> pour créer le dossier du projet ainsi que les sous-dossiers et fichiers de base ainsi que le script de gestion du projet (<strong style="line-height: 1.5;">manage.py</strong>).</li>
- <li>Utilisez <strong style="line-height: 1.5;">manage.py</strong> pour créer une ou plusieurs <em>applications</em> du projet.
+ <li>Utilisez la commande <code>django-admin</code> pour créer le dossier du projet ainsi que les sous-dossiers et fichiers de base ainsi que le script de gestion du projet (<strong>manage.py</strong>).</li>
+ <li>Utilisez <strong>manage.py</strong> pour créer une ou plusieurs <em>applications</em> du projet.
   <div class="note">
   <p><strong>Note :</strong> Un site web consiste en une ou plusieurs sections, par exemple un site principal, un blog, un wiki,... La bonne pratique avec Django est de réaliser chacun des composants comme des applications séparées qui pourront éventuellement être réutilisées dans d'autres projets.</p>
   </div>
@@ -95,7 +95,7 @@ cd locallibrary</pre>
  <li><strong>__init__.py </strong>est un fichier vide qui indique au langage Python de considérer ce dossier comme un module Python.</li>
  <li><strong>settings.py</strong> contient les paramètrages du site web. C'est ce fichier qui permet de contrôler l'enregistrement des applications créées - qui va être exposé plus bas -, la configuration de la base de données ou des variables globales au site. </li>
  <li><strong>urls.py</strong> contient les indications de routage des urls du site web. Alors qu'il pourraient contenir toutes les urls, nous verrons plus loin qu'ils est plus pratique de déléguer la gestion des urls à propre à chacune des applications dans le contexte de l'application. </li>
- <li><strong style="line-height: 1.5;">wsgi.py</strong> est utilisé pour la gestion de l'interface entre Python et le serveur web. Il est recommandé de ne pas y toucher.</li>
+ <li><strong>wsgi.py</strong> est utilisé pour la gestion de l'interface entre Python et le serveur web. Il est recommandé de ne pas y toucher.</li>
 </ul>
 
 <p>Le fichier <strong>manage.py</strong> est utilisé pour créer et gérer les applications au sein du projet. C'est une boîte à outil précieuse qu'il ne faut pas modifier.</p>

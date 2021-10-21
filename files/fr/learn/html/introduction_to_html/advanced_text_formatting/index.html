@@ -21,7 +21,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting
 
 <p>Il y a de nombreux autres éléments HTML pour mettre en forme un texte qui n'ont pas été mentionnés dans l'article<a href="/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"> Les concepts fondamentaux du HTML liés au texte</a>. Les éléments abordés ici sont moins connus mais tout aussi utiles (et ce n'est aucunement une liste complète). Nous voyons ici comment marquer des citations, des listes de description, du code informatique et autres choses relatives au texte : indices et exposants, informations de contact, etc.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -220,6 +220,7 @@ textarea.onkeyup = function(){
 <pre class="brush: html">&lt;p&gt;L'&lt;strong&gt;Élément HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;&lt;/strong&gt; (ou &lt;em&gt;Élément HTML bloc
 de citation&lt;/em&gt;) indique que le bloc de texte inclus est une citation étendue.&lt;/p&gt;</pre>
 
+<h4>Exemple de bloc de citation</h4>
 <p>Pour le changer en bloc de citation, on ferait simplement ceci :</p>
 
 <pre class="brush: html">&lt;blockquote cite="/fr/docs/Web/HTML/Element/blockquote"&gt;
@@ -228,21 +229,20 @@ de citation&lt;/em&gt;) indique que le bloc de texte inclus est une citation ét
 &lt;/blockquote&gt;</pre>
 
 <p>Le navigateur l'affichera par défaut sous forme d'un paragraphe indenté, avec l'indication qu'il s'agit d'une citation ; MDN agit de même et y ajoute un style personnalisé :</p>
-
-<blockquote cite="/fr/docs/Web/HTML/Element/blockquote">
-<p>L'<strong>Élément HTML <code>&lt;blockquote&gt;</code></strong> (ou <em>Élément HTML bloc de citation</em>) indique que le bloc de texte inclus est une citation étendue.</p>
-</blockquote>
+<p>{{EmbedLiveSample("Blocs_de_citation")}}</p>
 
 <h3 id="Citations_en_ligne">Citations en ligne</h3>
 
 <p>Les citations en ligne fonctionnent exactement de la même manière, sauf que l'on utilise l'élément {{htmlelement("q")}}. Par exemple, le balisage suivant contient une citation de la page MDN <code>&lt;q&gt;</code> :</p>
+
+<h4>Exemple de citation en ligne</h4>
 
 <pre class="brush: html">&lt;p&gt;L'élément citation — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — est &lt;q cite="/fr/docs/Web/HTML/Element/q"&gt;prévu
 pour de courtes citations ne nécessitant pas un nouvel alinéa&lt;/q&gt;.&lt;/p&gt;</pre>
 
 <p>Le navigateur l'affichera par défaut comme du texte normal entre guillemets pour indiquer une citation, comme ceci :</p>
 
-<p>L'élément citation — <code>&lt;q&gt;</code> — est <q cite="/fr/docs/Web/HTML/Element/q">prévu pour de courtes citations ne nécessitant pas un nouvel alinéa</q>.</p>
+<p>{{EmbedLiveSample("Exemple_de_citation_en_ligne")}}</p>
 
 <h3 id="Citations_2">Citations</h3>
 

@@ -19,7 +19,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 <p>Dans cette formation nous allons vous montrer comment travailler avec les formulaires HTML sous Django afin de créer, modifier et supprimer des instances de modèle. Pour illustrer le raisonnement, nous allons étendre le site web <a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> pour permettre aux bibliothécaires d'utiliser nos formulaires (plutôt que l'application d'administration par défaut) pour prolonger la durée de prêt des livres, et également pour ajouter, mettre à jour et supprimer des auteurs. </p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis:</th>
@@ -46,9 +46,9 @@ translation_of: Learn/Server-side/Django/Forms
 
 <h2 id="Formulaires_HTML">Formulaires HTML</h2>
 
-<p>D'abord, un premier aperçu des formulaires HTML (<a href="/fr/docs/Learn/HTML/Forms" style='background-color: rgb(255, 255, 255); font-family: "Open Sans", arial, x-locale-body, sans-serif;'>HTML Forms</a>). Soit un formulaire HTML simple, composé d'un unique champ de saisie texte , présent pour y entrer le nom d'une "équipe" quelconque, et son sa description dans l'étiquette associée :</p>
+<p>D'abord, un premier aperçu des formulaires HTML (<a href="/fr/docs/Learn/HTML/Forms">HTML Forms</a>). Soit un formulaire HTML simple, composé d'un unique champ de saisie texte , présent pour y entrer le nom d'une "équipe" quelconque, et son sa description dans l'étiquette associée :</p>
 
-<p><img alt="Simple name field example in HTML form" src="https://mdn.mozillademos.org/files/14117/form_example_name_field.png" style="border-style: solid; border-width: 1px; display: block; height: 44px; margin: 0px auto; width: 399px;"></p>
+<p><img alt="Simple name field example in HTML form" src="form_example_name_field.png"></p>
 
 <p>Le formulaire est défini en HTML comme une collection d'éléments enfermés entre deux balises &lt;form&gt; ... &lt;/form&gt; contenant au moins une balise &lt;input&gt; dont la valeur d'attribut 'type' doit valoir "submit":</p>
 

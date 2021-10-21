@@ -19,7 +19,7 @@ translation_of: Learn/Server-side/Django/Testing
 
 <p>Quant un site web grandit, il devient plus difficile à tester manuellement. Non seulement il y a plus de choses à tester, mais encore, comme les interactions entres ses composants deviennent plus complexes, un léger changement dans une partie de l'application peut affecter les autres parties, si bien qu'il va être nécessaire de faire beaucoup de modifications pour s'assurer que tout continue de fonctionner, et qu'aucune erreur ne sera introduite quand il y aura encore plus de modifications. Une façon de limiter ces problèmes est d'écrire des tests automatiques qui puissent être lancés d'une manière simple et fiable à chaque fois que vous faites une modification. Ce tutoriel montre comment automatiser des <em>tests unitaires</em> sur votre site web en utilisant le framework de tests de Django.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis:</th>
@@ -109,7 +109,7 @@ translation_of: Learn/Server-side/Django/Testing
     def __str__(self):
         return '%s, %s' % (self.last_name, self.first_name)</pre>
 
-<p>De même, vous pouvez tester que les méthodes personnalisées <code style="font-style: normal; font-weight: normal;">get_absolute_url()</code> et <code style="font-style: normal; font-weight: normal;">__str__()</code> se comportent comme prévu, car elles appartiennent à votre logique code/métier. Dans le cas de <code style="font-style: normal; font-weight: normal;">get_absolute_url()</code>, vous pouvez supposer que la méthode Django <code>reverse()</code> a été implémentée correctement, aussi ce que vous allez tester, c'est que la vue associée a été effectivement définie.</p>
+<p>De même, vous pouvez tester que les méthodes personnalisées <code>get_absolute_url()</code> et <code>__str__()</code> se comportent comme prévu, car elles appartiennent à votre logique code/métier. Dans le cas de <code>get_absolute_url()</code>, vous pouvez supposer que la méthode Django <code>reverse()</code> a été implémentée correctement, aussi ce que vous allez tester, c'est que la vue associée a été effectivement définie.</p>
 
 <div class="note">
 <p><strong>Note :</strong> Les lecteurs attentifs auront noté que nous pourrions aussi vouloir limiter les dates de naissance et de décès à des valeurs sensibles, et vérifier que le décès intervient après la naissance. En Django, cette contrainte est ajoutée à vos classes de formulaires (bien que vous puissiez définir des validateurs pour les champs du modèle et des validateurs de modèles, ceux-ci ne sont utilisés qu'au niveau du formulaire s'ils sont appelés par la méthode clean() du modèle. Cela requière un ModelForm ou bien la méthode clean() du modèle a besoin d'être appelée explicitement.)</p>

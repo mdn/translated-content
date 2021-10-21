@@ -17,7 +17,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Introduction
 
 <p>Dans ce tout premier article consacré à Express, nous répondons aux questions «&nbsp;Qu'est-ce que Node&nbsp;?&nbsp;» et «&nbsp;Qu'est-ce que Express ?&nbsp;», et vous donnons un aperçu de ce qui fait d'Express un framework web si spécial. Nous décrivons les principales fonctionnalités et montrons quelques-uns des principaux composants d'une application Express (bien que vous ne disposiez pas encore d'un environnement de développement pour le tester).</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
@@ -170,7 +170,7 @@ app.listen(port, () =&gt; {
 
 <p>Un module est une bibliothèque/fichier JavaScript que vous pouvez importer dans un autre code en utilisant la fonction <code>require()</code> de Node. <em>Express</em> lui-même est un module, tout comme les bibliothèques de <i>middleware</i> et de base de données que nous utilisons dans nos applications <em>Express</em>.</p>
 
-<p>Le code ci-dessous montre comment nous importons un module par son nom, en utilisant le framework <em>Express</em> comme exemple. Tout d'abord, nous invoquons la fonction <code style="font-style : normal ; font-weight : normal ;">require()</code>, en spécifiant le nom du module sous forme de chaîne (<code>'express'</code>), et en appelant l'objet retourné pour créer une <a href="https://expressjs.com/en/4x/api.html#app">applicationExpress</a>. Nous pouvons alors accéder aux propriétés et fonctions de l'objet application.</p>
+<p>Le code ci-dessous montre comment nous importons un module par son nom, en utilisant le framework <em>Express</em> comme exemple. Tout d'abord, nous invoquons la fonction <code>require()</code>, en spécifiant le nom du module sous forme de chaîne (<code>'express'</code>), et en appelant l'objet retourné pour créer une <a href="https://expressjs.com/en/4x/api.html#app">applicationExpress</a>. Nous pouvons alors accéder aux propriétés et fonctions de l'objet application.</p>
 
 <pre class="brush: js">const express = require('express');
 const app = express();

@@ -7,10 +7,9 @@ tags:
 translation_of: Learn/CSS/Howto/Generated_content
 original_slug: Apprendre/CSS/Comment/Generated_content
 ---
-<p> </p>
 <p>Cette page décrit plusieurs manières d'utiliser CSS pour ajouter du contenu à un document affiché.</p>
 <p>Vous modifierez votre feuille de style pour ajouter du contenu textuel et une image.</p>
-<h3 id="Information_:_contenu" name="Information_:_contenu">Information : contenu</h3>
+<h3>Information : contenu</h3>
 <p>Un des avantages importants de CSS est qu'il vous aide à séparer le style d'un document de son contenu. Cependant, il existe des situations où il n'est pas insensé de spécifier une partie du contenu au sein de la feuille de style plutôt qu'en tant que partie du document</p>
 <p>Le contenu spécifié dans une feuille de style peut consister en du texte ou des images. Ce contenu peut être spécifié dans une feuille de style lorsqu'il est directement lié à la structure du document.</p>
 <table>
@@ -25,7 +24,7 @@ original_slug: Apprendre/CSS/Comment/Generated_content
     </tr>
   </tbody>
 </table>
-<h4 id="Contenu_textuel" name="Contenu_textuel">Contenu textuel</h4>
+<h4 id="Contenu_textuel">Contenu textuel</h4>
 <p>CSS peut insérer du texte avant ou après un élément. Pour spécifier cela, créez une règle et ajoutez <code>:before</code> ou <code>:after</code> au sélecteur. Dans la déclaration, spécifiez la propriété <code>content</code> en lui donnant comme valeur le contenu textuel.</p>
 <table>
   <caption>
@@ -57,7 +56,7 @@ original_slug: Apprendre/CSS/Comment/Generated_content
     </tr>
   </tbody>
 </table>
-<h4 id="Contenu_sous_forme_d.27images" name="Contenu_sous_forme_d.27images">Contenu sous forme d'images</h4>
+<h4 id="Contenu_sous_forme_d.27images">Contenu sous forme d'images</h4>
 <p>Pour ajouter une image avant ou après un élément, vous pouvez spécifier l'URL d'un fichier image dans la valeur de la propriété <code>content</code>.</p>
 <table>
   <caption>
@@ -101,7 +100,7 @@ a.glossaire:after {content: " " url("../images/glossary-icon.gif");}
     </tr>
   </tbody>
 </table>
-<h3 id="Action_:_ajout_d.27une_image_de_fond" name="Action_:_ajout_d.27une_image_de_fond">Action : ajout d'une image de fond</h3>
+<h3 id="Action_:_ajout_d.27une_image_de_fond">Action : ajout d'une image de fond</h3>
 <p>Cette image est un carré blanc avec une ligne bleue en bas. Téléchargez le fichier image dans le même répertoire que votre fichier CSS :</p>
 <table>
   <tbody>
@@ -155,6 +154,6 @@ a.glossaire:after {content: " " url("../images/glossary-icon.gif");}
     </tr>
   </tbody>
 </table>
-<h4 id="Pour_continuer" name="Pour_continuer">Pour continuer</h4>
+<h4 id="Pour_continuer">Pour continuer</h4>
 <p>Une façon courante d'ajouter du contenu via une feuile de style est de marquer les différents éléments d'une liste.</p>
 <p>La page suivante décrit la manière de spécifier un style pour les éléments d'une liste : <strong><a href="/fr/docs/CSS/Premiers_pas/Listes" title="fr/CSS/Premiers_pas/Listes">Listes.</a></strong></p>

@@ -18,7 +18,7 @@ original_slug: Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte
 
 <p>Dans cet article, nous allons commencer le voyage vers la maîtrise des styles du texte avec {{glossary("CSS")}}. Nous passerons en revue les principes de base de mise en forme du texte, y compris la graisse, la famille et le style de police, les codes d'abréviation, l'alignement du texte et autres effets, ainsi que l'espacement des lignes et des lettres.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -120,7 +120,7 @@ occasions, comme maintenant.&lt;/p&gt;</pre>
  <thead>
   <tr>
    <th scope="col">Nom</th>
-   <th scope="col" style="white-space: nowrap;">Type générique</th>
+   <th scope="col">Type générique</th>
    <th scope="col">Notes</th>
   </tr>
  </thead>
@@ -136,12 +136,12 @@ occasions, comme maintenant.&lt;/p&gt;</pre>
    <td>Certains systèmes d'exploitation ont une version alternative (peut-être plus ancienne) de la police <em>Courier New</em> appelée <em>Courier</em>. Il est recommandé d'utiliser les deux avec <em>Courier New</em> comme alternative préférée.</td>
   </tr>
   <tr>
-   <td style="white-space: nowrap;">Georgia</td>
+   <td>Georgia</td>
    <td>serif</td>
    <td> </td>
   </tr>
   <tr>
-   <td style="white-space: nowrap;">Times New Roman</td>
+   <td>Times New Roman</td>
    <td>serif</td>
    <td>Certains systèmes d'exploitation ont une version alternative (peut-être plus ancienne) de la police <em>Times New Roman</em> appelée <em>Times</em>. Il est recommandé d'utiliser les deux avec <em>Times New Roman</em> comme alternative préférée.</td>
   </tr>
@@ -319,7 +319,7 @@ p {
  </li>
  <li>{{cssxref("font-weight")}} : définit la graisse du texte. La propriété peut avoir de nombreuses valeurs s'il y a de nombreuses variantes de polices disponibles (comme <em>-light</em>, <em>-normal</em>, <em>-bold</em>, <em>-extrabold</em>, <em>-black</em>, etc.), mais en réalité, vous les utiliserez rarement en dehors de <code>normal</code> et <code>bold</code> (gras):
   <ul>
-   <li><code>normal</code>, <code>bold</code> : graisse de la police, normale ou <strong style="font-weight: bold;">bold</strong>.</li>
+   <li><code>normal</code>, <code>bold</code> : graisse de la police, normale ou <strong>bold</strong>.</li>
    <li><code>lighter</code>, <code>bolder</code> : définit la graisse de l'élément courant de sorte qu'il soit un cran moins gras ou plus gras que son parent.</li>
    <li><code>100–900</code> : valeurs numériques du taux de graisse ; elles permettent un dosage plus fin que les mots-clés ci-dessus, si nécessaire.</li>
   </ul>
@@ -336,9 +336,9 @@ p {
  <li>{{cssxref("text-decoration")}} : active ou désactive les décorations de texte sur les polices (vous les utiliserez principalement pour désactiver le soulignement par défaut sur les liens lors de leur création). Les valeurs disponibles sont :
   <ul>
    <li><code>none</code>: désactive les décorations du texte déjà présentes.</li>
-   <li><code>underline</code>: <u>souligne le texte</u>.</li>
+   <li><code>underline</code>: souligne le texte.</li>
    <li><code>overline</code>: trace une ligne au-dessus du texte.</li>
-   <li><code>line-through</code>: <s style="text-decoration: line-through;">barre le texte</s>.</li>
+   <li><code>line-through</code>: barre le texte.</li>
   </ul>
   Vous devez noter que {{cssxref("text-decoration")}} peut accepter plusieurs valeurs à la fois, si vous voulez en ajouter plusieurs simultanément, par exemple <code>text-decoration: underline overline</code>. Notez aussi que {{cssxref("text-decoration")}} est la propriété raccourcie pour {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} et {{cssxref("text-decoration-color")}}. Vous pouvez utiliser des combinaisons de ces valeurs de propriété pour créer des effets intéressants, par exemple <code>text-decoration: line-through red wavy</code>.</li>
 </ul>
@@ -453,7 +453,7 @@ p {
 <p><strong>Note :</strong> Vous pouvez voir plus d'exemples intéressants de <code>text-shadow</code> dans l'article de Sitepoint <a href="http://www.sitepoint.com/moonlighting-css-text-shadow/">Moonlighting with CSS text-shadow</a> (Clair de lune avec text-shadow).</p>
 </div>
 
-<h2 id="Mise_en_page_du_texte"><small lang="en">Mise en page du texte</small></h2>
+<h2 id="Mise_en_page_du_texte">Mise en page du texte</h2>
 
 <p>Après les propriétés de base des polices, examinons maintenant celles permettant de modifier la disposition des textes.</p>
 
@@ -722,16 +722,10 @@ window.addEventListener("load", drawOutput);
 
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
-<p> </p>
-
 <ul>
  <li><a href="/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte">Initiation à la mise en forme du texte</a></li>
  <li><a href="/fr/docs/Learn/CSS/Styling_text/Styling_lists">Style de listes</a></li>
  <li><a href="/fr/docs/Learn/CSS/Styling_text/Mise_en_forme_des_liens">Mise en forme des liens</a></li>
- <li><a class="new" href="https://developer.mozilla.org/fr/docs/Learn/CSS/Styling_text/Web_fonts" rel="nofollow">Polices de caractères web</a></li>
- <li><a class="new" href="https://developer.mozilla.org/fr/docs/Learn/CSS/Styling_text/Typesetting_a_homepage" rel="nofollow">Composition d'une page d'accueil d'une école communale</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Styling_text/Web_fonts">Polices de caractères web</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Styling_text/Typesetting_a_homepage">Composition d'une page d'accueil d'une école communale</a></li>
 </ul>
-
-<p> </p>
-
-<p> </p>

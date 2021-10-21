@@ -19,7 +19,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
 <p>Nous allons maintenant aborder les problèmes Javascript en navigateur croisé et comment les résoudre. Cela comprend des informations sur l'utilisation  des outils de dev des navigateurs pour localiser et fixer les problèmes, l'utilisation des Polyfills et de librairies pour contourner les problèmes, utiliser les fonctionnalités modernes de Javascript sur des vieux navigateurs, et plus encore.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -42,9 +42,9 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
 <p>De tels problèmes d'incompabilités ont persistés jusqu'au début des années 2000, étant donné que les vieux navigateurs étaient encore utilisés et devaient donc encore être supportés par les site web. C'est une des raisons principale pour laquelle les librairies comme JQuery ont vu le jour — pour faire abstraction des différences entre les implémentations des navigateur (par ex. voir le bout de code dans <a href="/fr/docs/Web/Guide/AJAX/Premiers_pas#.C3.89tape_1_.E2.80.94_Lancement_d.27une_requ.C3.AAte_HTTP">Lancement d'une requête HTTP</a>) comme ça la développeurs n'ont qu'à écrire un simple morceau de code (voir <code><a href="http://api.jquery.com/jquery.ajax/">jQuery.ajax()</a></code>). JQuery (ou qu'importe la librarie que vous utilisez) procédera ensuite au traitement en arrière-plan, donc vous n'aurez pas à le faire.</p>
 
-<p class="entry-title">Les choses se sont bien améliorées depuis ; les navigateurs modernes font un bon travail en supportant "les fonctionnalités classiques de JavaScript", et les conditions pour utiliser ce genre de code ont diminué comme les prérequis pour supporter les plus vieux navigateurs ont diminué (gardez toutefois à l'esprit qu'elles n'ont pas tout entièrement disparues).</p>
+<p>Les choses se sont bien améliorées depuis ; les navigateurs modernes font un bon travail en supportant "les fonctionnalités classiques de JavaScript", et les conditions pour utiliser ce genre de code ont diminué comme les prérequis pour supporter les plus vieux navigateurs ont diminué (gardez toutefois à l'esprit qu'elles n'ont pas tout entièrement disparues).</p>
 
-<p class="entry-title">De nos jours, la plupart des problèmes de JavaScript en navigateur croisé sont :</p>
+<p>De nos jours, la plupart des problèmes de JavaScript en navigateur croisé sont :</p>
 
 <ul>
  <li>Lorsque la mauvaise qualité du détecteur de code du navigateur, la fonctionnalité de détection de code ou l'utilisation des <a href="/fr/docs/Glossaire/Pr%C3%A9fixe_Vendeur">préfixes vendeurs</a> empêchent les navigateurs d'exécuter du code qu'autrement ils pourraient utiliser sans difficultés.</li>
@@ -77,7 +77,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
 <p>La <a href="http://jshint.com/">page d'accueil de JSHint</a> fournit un linter en ligne, qui vous permet d'entrer votre code JavaScript sur la gauche et vous fournit un résultat sur la droite, incluant des indicateurs, des avertissements, et des erreurs.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14175/jshint-online.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="jshint-online.png"></p>
 
 <h4 id="Les_plugins_des_éditeurs_de_code">Les plugins des éditeurs de code</h4>
 
@@ -93,7 +93,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
  <li>Une fois que les packages ont terminé de s'installer, essayez de charger un fichier JavaScript : vous verrez tous les problèmes surlignés en vert (pour les avertissements) et des cercles rouges (pour les erreurs) à côté des numéros de lignes, et un panneau séparé en bas qui vous fournit les numéros de lignes, les messages d'erreur, et parfois des valeur suggérées ou d'autres solutions.</li>
 </ol>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14173/jshint-linter.png" style="display: block; margin: 0 auto;">D'autres éditeurs répandus ont des packages similaires de linting disponibles. Par exemple, voir la section "Plugins for text editors and IDEs" de la <a href="http://jshint.com/install/">page d'installation de JSHint</a>.</p>
+<p><img alt="" src="jshint-linter.png">D'autres éditeurs répandus ont des packages similaires de linting disponibles. Par exemple, voir la section "Plugins for text editors and IDEs" de la <a href="http://jshint.com/install/">page d'installation de JSHint</a>.</p>
 
 <h4 id="Autres_usages">Autres usages</h4>
 
@@ -104,7 +104,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 <pre class="brush: bash">npm install -g jshint
 </pre>
 
-<p>Vous pouvez ensuite indiquer à ces outils les fichiers JavaScript que vous voulez lint, par exemple :<img alt="" src="https://mdn.mozillademos.org/files/14171/js-hint-commandline.png" style="display: block; height: 478px; margin: 0px auto; width: 697px;">Vous pouvez également utiliser ces outils avec un exécuteur de tâche/outil de build comme <a href="http://gulpjs.com/">Gulp</a> ou <a href="https://webpack.github.io/">Webpack</a> pour linter automatiquement votre JavaScript pendant le développement. (voir <a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#Using_a_task_runner_to_automate_testing_tools">Using a task runner to automate testing tools</a> dans un article ultérieur). Voir <a href="http://eslint.org/docs/user-guide/integrations">ESLint integrations</a> pour les options de ESLint ; JSHint est supporté nativement par Grunt, et a également d'autre intégrations possibles, par ex. <a href="https://github.com/webpack/jshint-loader">JSHint loader for Webpack</a>.</p>
+<p>Vous pouvez ensuite indiquer à ces outils les fichiers JavaScript que vous voulez lint, par exemple :<img alt="" src="js-hint-commandline.png">Vous pouvez également utiliser ces outils avec un exécuteur de tâche/outil de build comme <a href="http://gulpjs.com/">Gulp</a> ou <a href="https://webpack.github.io/">Webpack</a> pour linter automatiquement votre JavaScript pendant le développement. (voir <a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#Using_a_task_runner_to_automate_testing_tools">Using a task runner to automate testing tools</a> dans un article ultérieur). Voir <a href="http://eslint.org/docs/user-guide/integrations">ESLint integrations</a> pour les options de ESLint ; JSHint est supporté nativement par Grunt, et a également d'autre intégrations possibles, par ex. <a href="https://github.com/webpack/jshint-loader">JSHint loader for Webpack</a>.</p>
 
 <div class="note">
 <p><strong>Note :</strong> ESLint prend un peu plus de temps à l'installation et à la configuration que JSHint, mais il est également plus puissant.</p>
@@ -116,7 +116,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
 <p>Faîtes une copie locale de notre exemple <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/broken-ajax.html">broken-ajax.html</a> (voir aussi le <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/broken-ajax.html">code source</a>). Si vous regardez dans la console, vous verrez le résultat suivant :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14165/broken-ajax.png" style="display: block; height: 86px; margin: 0px auto; width: 635px;"></p>
+<p><img alt="" src="broken-ajax.png"></p>
 
 <p>Le message d'erreur affiche "TypeError: jsonObj is null", et le numéro de ligne signifiée et le 37. Si nous regardons le code source, la section de code concernée est celle-ci :</p>
 
@@ -150,7 +150,7 @@ showHeroes(superHeroes);</pre>
 
 <p>Rafraîchissez la page dans le navigateur, et vous obtiendrez un résultat dans la console comme celui-ci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14167/console-log.png" style="display: block; height: 99px; margin: 0px auto; width: 638px;"></p>
+<p><img alt="" src="console-log.png"></p>
 
 <p>Le résultat de <code>console.log()</code> montre que l'objet <code>superHeroes</code> ne semble pas contenir quoi que ce soit, bien que vous remarquerez que l'erreur a maintenant changé en "TypeError: heroes is undefined". Cela montre que l'erreur est intermittente, mettant ainsi en évidence qu'il s'agit d'une erreur asynchrone. Corrigeons l'erreur actuelle et avançons — retirer la ligne <code>console.log()</code>, et mettez à jour ce bloc de code :</p>
 
@@ -180,7 +180,7 @@ showHeroes(superHeroes);</pre>
 
 <p>Dans Firefox, le Débogueur se présente comme suit :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14169/debugger-tab.png" style="display: block; height: 253px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="debugger-tab.png"></p>
 
 <ul>
  <li>Sur la gauche, vous pouvez sélectionner le script que vous voulez déboguer (dans ce cas nous n'en n'avons qu'un seul).</li>
@@ -192,7 +192,7 @@ showHeroes(superHeroes);</pre>
 
 <p>Mettons-nous au travail. Pour commencer, nous savons que l'erreur est renvoyée à la ligne 51. Cliquez sur la ligne numéro 51 dans le panneau central pour y ajouter un point d'arrêt (vous verrez une flèche bleue apparaître au-dessus de celle-ci). Maintenant rafraichissez la page (Cmd/Ctrl + R) — la navigateur arrêtera l'exécution du code à la ligne 51. A ce moment, le panneau de droite va se mettre à jour pour montrer des informations très utiles.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14163/breakpoint.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="breakpoint.png"></p>
 
 <ul>
  <li>En-dessous de <em>Points d'arrêt</em>, vous verrez le détail du point d'arrêt que vous avez configuré.</li>
@@ -279,7 +279,7 @@ showHeroes(superHeroes);</pre>
 
 <p>L'idée derrière une fonctionnalité de détection est que vous pouvez exécuter un test pour déterminer si une fonctionnalité est supportée dans le navigateur courant, et ensuite exécuter conditionnellement un code pour fournir une expérience acceptable sur chaque navigateur qui supporte et ne supporte pas la fonctionnalité. A titre d'exemple rapide, l'<a href="/fr/docs/Using_geolocation">API Geolocalisation</a> (qui présente des données de localisation pour l'appareil sur lequel le navigateur est en train d'être exécuté) a un point d'entrée principal pour son utilisation — une propriété <code>geolocation</code> disponible dans l'objet global <a href="/fr/docs/Web/API/Navigator">Navigator</a>.  Par conséquent, vous pouvez détecter si le navigateur supporte la géolocalisation ou non en utilisant quelque chose comme suit :</p>
 
-<pre class="language-js">if("geolocation" in navigator) {
+<pre class="brush: js">if("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position) {
     // show the location on a map, perhaps using the Google Maps API
   });
@@ -334,9 +334,9 @@ showHeroes(superHeroes);</pre>
 <p>Observons cet exercice — dans cet exemple nous allons utiliser un polyfill Fetch pour fournir du support pour une API Fetch dans de vieux navigateurs ; nous avons toutefois également besoin d'utiliser le polyfill es6-promise, comme Fetch utilise largement les promises, et les navigateurs qui ne les supportent pas seront toujours bloqués.</p>
 
 <ol>
- <li class="gh-header-title instapaper_title">Pour commencer, faîtes une copie locale de notre exemple <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill.html">fetch-polyfill.html</a> et de <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/flowers.jpg">notre belle image de fleurs</a> dans un nouveau répertoire. Nous allons écrire du code pour récupérer l'image de fleurs et l'afficher sur la page.</li>
- <li class="gh-header-title instapaper_title">Ensuite, sauvegarder les copies de <a href="https://raw.githubusercontent.com/github/fetch/master/fetch.js">Fetch polyfill</a> et de <a href="https://raw.githubusercontent.com/stefanpenner/es6-promise/master/dist/es6-promise.js">es6-promises polyfill</a> dans le même répertoire que le HTML.</li>
- <li class="gh-header-title instapaper_title">Appliquer les scripts de polyfill à la page en utilisant le code suivant — placez-les au-dessus de l'élément {{htmlelement("script")}} existant ainsi ils seront déjà disponibles sur la page quand on essaiera d'utiliser Fetch :
+ <li>Pour commencer, faîtes une copie locale de notre exemple <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill.html">fetch-polyfill.html</a> et de <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/flowers.jpg">notre belle image de fleurs</a> dans un nouveau répertoire. Nous allons écrire du code pour récupérer l'image de fleurs et l'afficher sur la page.</li>
+ <li>Ensuite, sauvegarder les copies de <a href="https://raw.githubusercontent.com/github/fetch/master/fetch.js">Fetch polyfill</a> et de <a href="https://raw.githubusercontent.com/stefanpenner/es6-promise/master/dist/es6-promise.js">es6-promises polyfill</a> dans le même répertoire que le HTML.</li>
+ <li>Appliquer les scripts de polyfill à la page en utilisant le code suivant — placez-les au-dessus de l'élément {{htmlelement("script")}} existant ainsi ils seront déjà disponibles sur la page quand on essaiera d'utiliser Fetch :
   <pre class="brush: js">&lt;script src="es6-promise.js"&gt;&lt;/script&gt;
 &lt;script src="fetch.js"&gt;&lt;/script&gt;</pre>
  </li>
@@ -352,7 +352,7 @@ fetch('flowers.jpg').then(function(response) {
 });</pre>
  </li>
  <li>Maintenant si vous le chargez dans un navigateur qui ne supporte pas Fetch (Safari et IE sont des candidats de choix), vous devriez quand même voir l'image de la fleur apparaitre — cool !<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/14183/fetch-image.jpg" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+  <img alt="" src="fetch-image.jpg"></li>
 </ol>
 
 <div class="note">
@@ -385,7 +385,7 @@ function main(err) {
 
 <p>Ici on vérifie si l'objet <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> et la fonction <code><a href="/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code> existent dans le navigateur. Si les deux existent, la fonction retourne true. Si la fonction retourne <code>false</code>, alors on exécute le code à l'intérieur de la deuxième partie de la condition — elle exécute une fonction appelée loadScript(), qui charge les polyfills dans la page, puis exécute <code>main()</code> après que le chargement soit terminé. <code>loadScript()</code> ressemble à ça :</p>
 
-<pre class="brush: js"><code class="language-js">function loadScript(src, done) {
+<pre class="brush: js">function loadScript(src, done) {
   var js = document.createElement('script');
   js.src = src;
   js.onload = function() {
@@ -395,7 +395,7 @@ function main(err) {
     done(new Error('Failed to load script ' + src));
   };
   document.head.appendChild(js);
-}</code>
+}
 </pre>
 
 <p>Cette fonction créé un nouvel élément <code>&lt;script&gt;</code>, puis applique son attribut <code>src</code> au chemin que nous avons spécifié en premier argument (<code>'polyfills.js'</code> dont nous parlions dans le code au-dessus). Une fois qu'il est chargé, nous exécutons la fonction que nous avons spécifié en deuxième argument (<code>main()</code>). Si une erreur se produit pendant le chargement du script, on continue d'appeler la fonction, mais avec une erreur personnalisée que nous pouvons retrouver pour faciliter le débug d'un problème s'il arrive.</p>

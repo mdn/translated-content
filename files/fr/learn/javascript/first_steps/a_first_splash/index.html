@@ -20,7 +20,7 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 
 <p>Maintenant que vous avez appris quelques éléments théoriques sur le JavaScript, et ce que vous pouvez faire avec, nous allons vous donner un cours intensif sur les fonctionnalités basiques du JavaScript avec un tutoriel entièrement pratique. Vous allez construire un jeu simple, étape par étape. Il s'agit de faire deviner un nombre, notre jeu s'appelle « Guess the number ».</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -477,9 +477,9 @@ greeting;</pre>
 
 <h3 id="Structures_conditionnelles">Structures conditionnelles</h3>
 
-<p>Revenons à la fonction <code style="font-size: 16px !important; line-height: 24px !important;">checkGuess()</code>. Nous pouvons assurément dire que nous ne souhaitons pas qu'elle renvoie un message d'emplacement réservé. Nous voulons qu'elle vérifie si la supposition du joueur est correcte ou non et qu'elle renvoie une réponse appropriée.</p>
+<p>Revenons à la fonction <code>checkGuess()</code>. Nous pouvons assurément dire que nous ne souhaitons pas qu'elle renvoie un message d'emplacement réservé. Nous voulons qu'elle vérifie si la supposition du joueur est correcte ou non et qu'elle renvoie une réponse appropriée.</p>
 
-<p>Donc, remplacez l'actuelle fonction <code style="font-size: 16px !important; line-height: 24px !important;">checkGuess()</code> par celle-ci :</p>
+<p>Donc, remplacez l'actuelle fonction <code>checkGuess()</code> par celle-ci :</p>
 
 <pre class="brush: js">function checkGuess(){
   let userGuess = Number(guessField.value);
@@ -515,7 +515,7 @@ greeting;</pre>
 <p>Pas mal de code — ouf ! Passons en revue chaque section et expliquons ce qu'elle fait.</p>
 
 <ul>
- <li>La première ligne de la fonction (ligne 2) déclare une variable nommée <code>userGuess</code> et définit sa valeur par celle qui vient d'être saisie dans le champ de texte. Nous faisons passer aussi cette valeur par la méthode  <code style="font-size: 16px !important; line-height: 24px !important;">Number()</code> , juste pour nous assurer que la valeur stockée dans <code>userGuess</code> est bien un nombre.</li>
+ <li>La première ligne de la fonction (ligne 2) déclare une variable nommée <code>userGuess</code> et définit sa valeur par celle qui vient d'être saisie dans le champ de texte. Nous faisons passer aussi cette valeur par la méthode  <code>Number()</code> , juste pour nous assurer que la valeur stockée dans <code>userGuess</code> est bien un nombre.</li>
  <li>Ensuite, nous rencontrons notre premier bloc de code conditionnel (lignes 3-5). Il permet d'exécuter des instructions de manière sélective, selon certaines conditions qui sont vraies ou non. Cela ressemble un peu à une fonction, mais ce n'est pas le cas. La forme la plus simple du bloc conditionnel commence par le mot clé <code>if</code>, puis parenthèses, puis des accolades <code>{ }</code>.<br>
   A l'intérieur de ces parenthèses, nous mettons le test. S'il renvoie <code>true</code> , nous exécutons le code à l'intérieur des accolades. Sinon, nous ne le faisons pas, et passons au morceau de code suivant. Dans ce cas, le test vérifie si la variable <code>guessCount</code> est égale à <code>1</code> (c'est-à-dire s'il s'agit de la première supposition du joueur) :
   <pre class="brush: js">guessCount === 1</pre>

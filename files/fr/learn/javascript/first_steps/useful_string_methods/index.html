@@ -23,7 +23,7 @@ original_slug: Learn/JavaScript/First_steps/methode_chaine_utile
 
 <p>À présent que nous avons vu les bases de la manipulation des chaînes de caractères, allons un cran plus loin et commençons à imaginer les opérations utiles que nous pourrions faire sur les chaînes de caractères avec les méthodes intégrées : trouver la longueur d'une chaîne, assembler ou couper des chaînes, substituer un caractère à un autre dans une chaîne, et plus encore.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -180,9 +180,6 @@ browserType.length;</pre>
 
   <pre class="brush: js">browserType.indexOf('zilla');</pre>
   La commande donne 2 comme résultat, car la sous-chaîne « zilla » commence à la position 2 (0, 1, 2 — donc au troisième caractère) dans « mozilla ». Un tel code s'utilise pour filtrer des chaînes. Par exemple, vous pourriez avoir une liste d'adresses web et ne vouloir afficher que celles qui contiennent « mozilla ».</li>
-</ol>
-
-<ol start="2">
  <li>On peut faire cela autrement, peut-être plus efficacement encore. Écrivez :
   <pre class="brush: js">browserType.indexOf('vanilla');</pre>
   Cela doit vous donner <code>-1</code> comme résultat — renvoyé quand la sous-chaîne, en l'occurence « vanilla », n'est pas trouvée dans la chaîne principale.<br>

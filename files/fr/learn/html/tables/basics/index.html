@@ -25,7 +25,7 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 
 <p>Cet article vous initie aux tableaux en HTML. Il porte sur les bases comme les rangées, les cellules, les en-têtes, les cellules sur plusieurs colonnes ou lignes, ainsi que sur la façon de regrouper les cellules dans une colonne en vue d'affecter un style.</p>
 
-<table class="learn-box standard-table" style="height: 97px; width: 672px;">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -461,6 +461,7 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 
 <p>Il y a une dernière fonctionnalité dont nous devons parler dans cet article avant de passer à autre chose. HTML a une méthode de définition des styles pour une colonne entière de données en un seul endroit — les éléments <strong><code><a href="/fr/docs/Web/HTML/Element/col">&lt;col&gt;</a></code></strong> and <strong><code><a href="/fr/docs/Web/HTML/Element/colgroup">&lt;colgroup&gt;</a></code></strong>. Ils existent parce qu'il peut être ennuyeux et inefficace de préciser le style dans chaque colonne  — vous devez généralement spécifier les éléments de style dans chaque  <code>&lt;td&gt;</code> ou <code>&lt;th&gt;</code> de la colonne, ou utiliser un selecteur complexe tel que {{cssxref(":nth-child()")}}.</p>
 
+<h3>Premier exemple</h3>
 <p>Observez l'exemple simple suivant :</p>
 
 <pre class="brush: html">&lt;table&gt;
@@ -479,25 +480,11 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 &lt;/table&gt;</pre>
 
 <p>Ce qui nous donne comme résultat :</p>
-
-<table>
- <tbody>
-  <tr>
-   <th>Data 1</th>
-   <th style="background-color: yellow;">Data 2</th>
-  </tr>
-  <tr>
-   <td>Calcutta</td>
-   <td style="background-color: yellow;">Orange</td>
-  </tr>
-  <tr>
-   <td>Robots</td>
-   <td style="background-color: yellow;">Jazz</td>
-  </tr>
- </tbody>
-</table>
+<p>{{EmbedLiveSample("Premier_exemple")}}</p>
 
 <p>Ce n'est pas idéal, car nous devons répéter les informations de style dans les trois cellules de la colonne  (nous aurions probablement défini une <code>classe</code> dans un projet réel et spécifié le style dans une feuille de style séparée). À la place, nous pouvons préciser l'information une seule fois dans un élément <code>&lt;col&gt;</code>. Les éléments <code>&lt;col&gt;</code> sont utilisés dans un conteneur <code>&lt;colgroup&gt;</code> juste en-dessous de la balise <code>&lt;table&gt;</code>. Nous pourrions créer le même effet que  celui vu plus haut en spécifiant notre tableau comme suit :</p>
+
+<h3>Autres exemples</h3>
 
 <pre class="brush: html"> &lt;table&gt;
    &lt;colgroup&gt;
