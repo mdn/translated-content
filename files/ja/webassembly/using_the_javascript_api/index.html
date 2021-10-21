@@ -5,10 +5,10 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 ---
 <div>{{WebAssemblySidebar}}</div>
 
-<p class="summary">これまでに <a href="/en-US/docs/WebAssembly/C_to_wasm">Emscriptenのようなツールを使用して他の言語からモジュールをコンパイルしたり</a>、<a href="/en-US/docs/WebAssembly/Loading_and_running">あなた自身のコードをロードして実行しました</a>。次のステップは他のWebAssembly JavaScript APIの使い方について学ぶことです。この記事ではあなたが知る必要があることを説明します。</p>
+<p class="summary">これまでに <a href="/ja/docs/WebAssembly/C_to_wasm">Emscriptenのようなツールを使用して他の言語からモジュールをコンパイルしたり</a>、<a href="/ja/docs/WebAssembly/Loading_and_running">あなた自身のコードをロードして実行しました</a>。次のステップは他のWebAssembly JavaScript APIの使い方について学ぶことです。この記事ではあなたが知る必要があることを説明します。</p>
 
 <div class="note">
-<p><strong>注</strong>: もし、この記事で説明している基本的なコンセプトがよくわからない場合、<a href="/en-US/docs/WebAssembly/Concepts">WebAssemblyのコンセプト</a> をはじめに読んでからこの記事に戻ってきてください。</p>
+<p><strong>注</strong>: もし、この記事で説明している基本的なコンセプトがよくわからない場合、<a href="/ja/docs/WebAssembly/Concepts">WebAssemblyのコンセプト</a> をはじめに読んでからこの記事に戻ってきてください。</p>
 </div>
 
 <h2 id="シンプルな例">シンプルな例</h2>
@@ -25,7 +25,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
  <li>まずは、wasm モジュールが必要です! <a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm">simple.wasm</a> をコピーしてローカルマシンの新しいディレクトリの中に保存します。</li>
  <li>次に、使用しているブラウザが WebAssembly に対応しているか確認します。Firefox 52+ と Chrome 57+ では WebAssembly がデフォルトで有効になっています。</li>
  <li>次に、wasm ファイルと同じディレクトリに <code>index.html</code> という名前でシンプルな HTML ファイルを作成しましょう (もしも簡単に利用できるテンプレートを持っていない場合、<a href="https://github.com/mdn/webassembly-examples/blob/master/template/template.html">simple template</a> を使用できます) 。</li>
- <li>ここで、何が起こっているのか理解を助けるために、wasm モジュールのテキスト表現を見てみましょう (<a href="https://developer.mozilla.org/ja/docs/WebAssembly/Text_format_to_wasm">テキストフォーマットから wasm に変換する</a> も参照してください):
+ <li>ここで、何が起こっているのか理解を助けるために、wasm モジュールのテキスト表現を見てみましょう (<a href="/ja/docs/WebAssembly/Text_format_to_wasm">テキストフォーマットから wasm に変換する</a> も参照してください):
   <pre>(module
   (func $i (import "imports" "imported_func") (param i32))
   (func (export "exported_func")
@@ -46,7 +46,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 <p>上で説明したように、 <code>imports.imported_func</code> でインポート機能を利用できます。</p>
 
 <div class="note">
-<p><strong>注</strong>: <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">ES6のアローファンクション</a> を使用するとより簡潔に書くことができます:</p>
+<p><strong>注</strong>: <a href="/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions">ES6のアローファンクション</a> を使用するとより簡潔に書くことができます:</p>
 
 <pre class="brush: js">var importObject = { imports: { imported_func: arg =&gt; console.log(arg) } };</pre>
 </div>
@@ -251,7 +251,7 @@ console.log(tbl.get(1)());  // 42</pre>
  </li>
 </ol>
 
-<p>このコードはテーブルに格納されている各関数参照に順番にアクセスし、内包した値をコンソールに書き出すためにインスタンス化します。<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code> で各関数参照を取得した後、関数を実行するためには括弧を追加することに注意してください。</p>
+<p>このコードはテーブルに格納されている各関数参照に順番にアクセスし、内包した値をコンソールに書き出すためにインスタンス化します。<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code> で各関数参照を取得した後、関数を実行するためには括弧を追加することに注意してください。</p>
 
 <div class="note">
 <p><strong>注</strong>: 完全なデモは <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html">table.html</a> (<a href="https://mdn.github.io/webassembly-examples/js-api-examples/table.html">動作例</a>) を参照してください。このバージョンでは <code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">fetchAndInstantiate()</a></code> 関数を使用しています。</p>

@@ -49,9 +49,8 @@ browser-compat: html.elements.img
 
 <p>{{page("/fr/docs/Web/Media/Formats/Types_des_images", "table-of-image-file-types")}}</p>
 
-<div class="notecard note">
-  <p><b>Astuce :</b></p>
-  <p>Voir le <a href="/fr/docs/Web/Media/Formats/Image_types">Guide des types et formats de fichiers image</a> pour des informations plus complètes sur les formats d'image pris en charge par les navigateurs web. Cela inclut les formats d'image pris en charge mais non recommandés pour le contenu web (par exemple, ICO, BMP, etc.).</p>
+<div class="note">
+  <p><strong>Note :</strong> Voir le <a href="/fr/docs/Web/Media/Formats/Image_types">Guide des types et formats de fichiers image</a> pour des informations plus complètes sur les formats d'image pris en charge par les navigateurs web. Cela inclut les formats d'image pris en charge mais non recommandés pour le contenu web (par exemple, ICO, BMP, etc.).</p>
 </div>
 
 <h2 id="image_loading_errors">Erreurs de chargement des images</h2>
@@ -71,10 +70,10 @@ browser-compat: html.elements.img
 <p>Cet élément inclut les <a href="/fr/docs/Web/HTML/Global_attributes">attributs globaux</a>.</p>
 
 <dl>
-  <dt><code id="attr-alt">alt</code></dt>
+  <dt><code>alt</code></dt>
   <dd>Cet attribut définit le texte alternatif utilisé lorsqu'il est impossible d'afficher l'image (par exemple si l'URL est incorrecte ou si l'image n'est pas encore téléchargée).
-    <div class="notecard note">
-      <p><b>Note :</b></p>
+    <div class="note">
+      <p><strong>Note :</strong></p>
 			<p>Les navigateurs n'affichent pas toujours les images. Il existe un certain nombre de situations dans lesquelles un navigateur peut ne pas afficher les images, par exemple :</p>
 			<ul>
 				<li>Navigateurs non visuels (tels que ceux utilisés par les personnes souffrant de déficiences visuelles)</li>
@@ -89,7 +88,7 @@ browser-compat: html.elements.img
   
     <p>Cet attribut est également utilisé pour copier et coller l'image dans du texte, ou pour enregistrer une image liée dans un signet.</p>
   </dd>
-  <dt><code id="attr-crossorigin">crossorigin</code></dt>
+  <dt><code>crossorigin</code></dt>
   <dd>
     <p>Indique si la récupération de l'image doit être effectuée à l'aide d'une requête <a href="/fr/docs/Glossary/CORS">CORS</a>. Les données d'image d'une <a href="/fr/docs/Web/HTML/CORS_enabled_image">image compatible avec le système CORS</a> renvoyées par une requête CORS peuvent être réutilisées dans l'élément <a href="/fr/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a> sans être marquées « <a href="/fr/docs/Web/HTML/CORS_enabled_image#what_is_a_tainted_canvas">corrompu</a> ».</p>
   
@@ -106,7 +105,7 @@ browser-compat: html.elements.img
       <dd>Une requête entre deux origines est effectuée (avec l'en-tête <a href="/fr/docs/Web/HTTP/Headers/Origin"><code>Origin</code></a>) avec des informations d'authentification qui sont envoyées (par exemple un cookie, un certificat et une authentification HTTP). Si le serveur ne fournit pas d'informations d'authentification au site d'origine (via l'en-tête HTTP <a href="/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Origin"><code>Access-Control-Allow-Origin</code></a>), l'image sera corrompue et son utilisation sera restreinte.</dd>
     </dl>
   Lorsque cet attribut est absent, la ressource est récupérée sans requête <em>CORS</em> (c'est-à-dire sans envoyer l'en-tête HTTP <a href="/fr/docs/Web/HTTP/Headers/Origin"><code>origin</code></a>) ce qui empêche de l'utiliser dans un <a href="/fr/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a> sans qu'elle soit considérée comme corrompue. Si la valeur de l'attribut est invalide, elle sera considérée comme <code><strong>anonymous</strong></code>. Voir la page <a href="/fr/docs/Web/HTML/Attributes/crossorigin">réglage des attributs CORS</a> pour plus d'informations.</dd>
-  <dt><code id="attr-decoding">decoding</code></dt>
+  <dt><code>decoding</code></dt>
   <dd>
     <p>Cet attribut fournit une indication à l'agent utilisateur pour le décodage de l'information. Les valeurs possibles sont :</p>
     <dl>
@@ -118,30 +117,28 @@ browser-compat: html.elements.img
       <dd>Le mode par défaut qui indique l'absence de préférence pour le mode de décodage. Dans ce cas, l'agent utilisateur décide de la meilleure stratégie.</dd>
     </dl>
   </dd>
-  <dt><code id="attr-height">height</code></dt>
+  <dt><code>height</code></dt>
   <dd>La hauteur intrinsèque de l'image, en pixels. Doit être un nombre entier sans unité.</dd>
-  <dt><code id="attr-intrinsicsize">intrinsicsize</code> {{deprecated_inline}}</dt>
+  <dt><code>intrinsicsize</code> {{deprecated_inline}}</dt>
   <dd>Cet attribut indique au navigateur d'ignorer la taille intrinsèque réelle de l'image et d'utiliser la taille fournie par les attributs. La matrice contenant l'image aurait donc ces dimensions et calculer <code>naturalWidth</code>/<code>naturalHeight</code> sur de telles images renverrait les valeurs de cet attribut. <a href="https://github.com/ojanvafai/intrinsicsize-attribute">Explications</a>, <a href="https://googlechrome.github.io/samples/intrinsic-size/index.html">exemples</a>.</dd>
-  <dt><code id="attr-ismap">ismap</code></dt>
+  <dt><code>ismap</code></dt>
   <dd>Un attribut booléen dont la valeur indique si l'image fait partie d'une carte cliquable. Si c'est le cas, les coordonnées du clic seront envoyées au serveur.
-    <div class="notecard note">
-      <p><b>Note :</b></p>
-      <p>Cet attribut est uniquement autorisé si l'élément <code>&lt;img&gt;</code> descend d'un élément <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a> dont l'attribut <a href="/fr/docs/Web/HTML/Element/a#attr-href"><code>href</code></a> est valide.</p>
+    <div class="note">
+      <p><strong>Note :</strong>Cet attribut est uniquement autorisé si l'élément <code>&lt;img&gt;</code> descend d'un élément <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a> dont l'attribut <a href="/fr/docs/Web/HTML/Element/a#attr-href"><code>href</code></a> est valide.</p>
     </div>
   </dd>
-  <dt><code id="attr-loading">loading</code> {{experimental_inline}}</dt>
+  <dt><code>loading</code> {{experimental_inline}}</dt>
   <dd>Indique comment le navigateur doit charger l'image :
     <ul>
       <li><code>eager</code> : Charge l'image immédiatement, que l'image se trouve ou non dans le viewport visible (c'est la valeur par défaut).</li>
       <li><code>lazy</code> : Diffère le chargement de l'image au moment où elle atteint une certaine distance de la fenêtre de visualisation, telle que définie par le navigateur. Le but est d'éviter que le réseau et la zone de stockage nécessaires à la manipulation de l'image ne soient utilisés tant qu'il n'est pas relativement sûr que celle-ci sera nécessaire. Cela permet généralement d'améliorer les performances du contenu dans la plupart des cas d'utilisation typiques.
-        <div class="notecard note">
-          <p><b>Note :</b></p>
-          <p>Le chargement n'est différé que lorsque JavaScript est activé. Il s'agit d'une mesure anti-pistage, car si un agent utilisateur prenait en charge le chargement différé lorsque les scripts sont désactivés, il serait toujours possible pour un site de suivre la position de défilement approximative d'un utilisateur tout au long d'une session, en plaçant stratégiquement des images dans le balisage d'une page de sorte qu'un serveur puisse suivre le nombre d'images demandées et le moment où elles le sont.</p>
+        <div class="note">
+          <p><strong>Note :</strong>Le chargement n'est différé que lorsque JavaScript est activé. Il s'agit d'une mesure anti-pistage, car si un agent utilisateur prenait en charge le chargement différé lorsque les scripts sont désactivés, il serait toujours possible pour un site de suivre la position de défilement approximative d'un utilisateur tout au long d'une session, en plaçant stratégiquement des images dans le balisage d'une page de sorte qu'un serveur puisse suivre le nombre d'images demandées et le moment où elles le sont.</p>
         </div>
       </li>
     </ul>
   </dd>
-  <dt><code id="attr-referrerpolicy">referrerpolicy</code> {{experimental_inline}}</dt>
+  <dt><code>referrerpolicy</code> {{experimental_inline}}</dt>
   <dd>Une chaîne de caractères indiquant le référent à utiliser lors de la récupération de la ressource :
     <ul>
       <li><code>no-referrer</code> : l'en-tête HTTP <a href="/fr/docs/Web/HTTP/Headers/Referer"><code>Referer</code></a> ne sera pas envoyé.</li>
@@ -151,7 +148,7 @@ browser-compat: html.elements.img
       <li><code>unsafe-url</code> : l'en-tête HTTP <a href="/fr/docs/Web/HTTP/Headers/Referer"><code>Referer</code></a> incluera l'origine et le chemin mais aucun fragment, mot de passe ou nom d'utilisateur. Ce cas de figure n'est pas sécurisé, car il peut laisser fuire des origines et des chemins de ressources protégées par TLS vers des origines non-sécurisées.</li>
     </ul>
   </dd>
-  <dt><code id="attr-sizes">sizes</code></dt>
+  <dt><code>sizes</code></dt>
   <dd>Une ou plusieurs chaînes de caractères séparées par des virgules, indiquant un ensemble de tailles sources. Chaque taille source est composée de :
     <ol>
       <li>D'une <a href="/fr/docs/Web/CSS/Media_Queries/Using_media_queries#syntax">condition sur le média</a>. Qui doit être absente pour le dernier élément de la liste.</li>
@@ -162,9 +159,9 @@ browser-compat: html.elements.img
   
     <p>Les valeurs de taille de la source spécifient la taille d'affichage prévue de l'image. <a href="/fr/docs/Glossary/User_agent">Les agents utilisateurs</a> utilisent la taille actuelle de la source pour sélectionner l'une des sources fournies par l'attribut <code>srcset</code>, lorsque ces sources sont décrites à l'aide de descripteurs de largeur (<code>w</code>). La taille de la source sélectionnée affecte la <a href="/fr/docs/Glossary/Intrinsic_size">taille intrinsèque</a> de l'image (la taille d'affichage de l'image si aucun style <a href="/fr/docs/Glossary/CSS">CSS</a> n'est appliqué). Si l'attribut <code>srcset</code> est absent, ou ne contient aucune valeur avec un descripteur de largeur, alors l'attribut <code>sizes</code> n'a aucun effet.</p>
   </dd>
-  <dt><code id="attr-src">src</code></dt>
+  <dt><code>src</code></dt>
   <dd>L'<a href="/fr/docs/Glossary/URL">URL</a> de l'image. Cet attribut est obligatoire pour l'élément <code>&lt;img&gt;</code>. Pour les <a href="/fr/docs/Glossary/Browser">navigateurs</a> qui prennent en charge <code>srcset</code>, <code>src</code> est considéré comme une image candidate dont la densité de pixel vaut <code>1x</code> si aucune autre image avec cette densité n'est définie via <code>srcset</code> ou si <code>srcset</code> contient des descripteurs « <code>w</code> ».</dd>
-  <dt><code id="attr-srcset">srcset</code>*</dt>
+  <dt><code>srcset</code>*</dt>
   <dd>Une liste de une ou plusieurs chaînes de caractères, séparées par des virgules, qui indiquent un ensemble d'images sources parmi lequel l'agent utilisateur pourra choisir la meilleure image à afficher. Chaque chaîne de caractères se compose :
   <ol>
     <li>D'une <a href="/fr/docs/Glossary/URL">URL</a> vers une image,</li>
@@ -182,13 +179,12 @@ browser-compat: html.elements.img
 
 	<p>L'agent utilisateur sélectionne l'une des sources disponibles à sa discrétion. Il dispose ainsi d'une marge de manœuvre importante pour adapter sa sélection en fonction de choses comme les préférences de l'utilisateur ou les conditions de <a href="/fr/docs/Glossary/Bandwidth">bande passante</a>. Voir notre <a href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Tutoriel sur les images responsives</a> pour un exemple.</p>
   </dd>
-  <dt><code id="attr-width">width</code></dt>
+  <dt><code>width</code></dt>
   <dd>La largeur intrinsèque de l'image en pixels. Doit être un nombre entier sans unité.</dd>
-  <dt><code id="attr-usemap">usemap</code></dt>
+  <dt><code>usemap</code></dt>
   <dd>Le fragment d'URL (commençant avec #) d'une <a href="/fr/docs/Web/HTML/Element/map">carte d'images</a> associée à cet élément.
     <div class="note">
-      <p><b>Note :</b></p>
-      <p>Cet attribut ne peut pas être utilisé si l'élément <code>&lt;img&gt;</code> est un descendant d'un élément <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a> ou d'un élément <a href="/fr/docs/Web/HTML/Element/Button"><code>&lt;button&gt;</code></a>.</p>
+      <p><strong>Note :</strong>Cet attribut ne peut pas être utilisé si l'élément <code>&lt;img&gt;</code> est un descendant d'un élément <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a> ou d'un élément <a href="/fr/docs/Web/HTML/Element/Button"><code>&lt;button&gt;</code></a>.</p>
     </div>
   </dd>
 </dl>
@@ -196,9 +192,8 @@ browser-compat: html.elements.img
 <h3 id="deprecated_attributes">Attributs obsolètes</h3>
 
 <dl>
-  <dt><code id="attr-align">align</code> {{deprecated_inline}}</dt>
-  <dd>L'alignement de l'image selon le contexte qui l'entoure. En HTML5, on privilégiera les propriétés CSS <a href="/fr/docs/Web/CSS/float"><code>float</code></a> et/ou <a href="/fr/docs/Web/CSS/vertical-align"><code>vertical-align</code></a> voire la propriété <a href="/fr/docs/Web/CSS/object-position"><code>object-position</code></a> qui permet de positionner l'image au sein de la boîte de l'élément. Les valeurs autorisées sont :</dd>
-  <dd>
+  <dt><code>align</code> {{deprecated_inline}}</dt>
+  <dd><p>L'alignement de l'image selon le contexte qui l'entoure. En HTML5, on privilégiera les propriétés CSS <a href="/fr/docs/Web/CSS/float"><code>float</code></a> et/ou <a href="/fr/docs/Web/CSS/vertical-align"><code>vertical-align</code></a> voire la propriété <a href="/fr/docs/Web/CSS/object-position"><code>object-position</code></a> qui permet de positionner l'image au sein de la boîte de l'élément. Les valeurs autorisées sont :</p>
     <dl>
       <dt><code>top</code></dt>
       <dd>Équivalent à <code>vertical-align: top;</code> ou à <code>vertical-align: text-top;</code></dd>
@@ -212,20 +207,19 @@ browser-compat: html.elements.img
       <dd>Équivalent à <code>float: right;</code></dd>
     </dl>
   </dd>
-  <dt><code id="attr-border">border</code> {{deprecated_inline}}</dt>
+  <dt><code>border</code> {{deprecated_inline}}</dt>
   <dd>La largeur d'une bordure autour de l'image. Utilisez plutôt la propriété <a href="/fr/docs/Glossary/CSS">CSS</a> <a href="/fr/docs/Web/CSS/border"><code>border</code></a>.</dd>
-  <dt><code id="attr-hspace">hspace</code> {{deprecated_inline}}</dt>
+  <dt><code>hspace</code> {{deprecated_inline}}</dt>
   <dd>Le nombre de pixels blancs à insérer à droite et à gauche de l'image. En HTML5, on privilégiera la propriété CSS <a href="/fr/docs/Web/CSS/margin"><code>margin</code></a>.</dd>
-  <dt><code id="attr-longdesc">longdesc</code> {{deprecated_inline}}</dt>
-  <dd>Un lien vers une description plus détaillée de l'image. Les valeurs possibles sont une URL ou un identifiant (<a href="/fr/docs/Web/HTML/Global_attributes#attr-id"><code>id</code></a>) d'un élément.
-    <div class="notecard note">
-      <p><b>Note :</b></p>
-      <p>Cet attribut est mentionné dans la dernière version du <a href="/fr/docs/Glossary/W3C">W3C</a>, <a href="https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc">HTML 5.2</a>, mais a été supprimé du <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">HTML Living Standard</a> du <a href="/fr/docs/Glossary/WHATWG">WHATWG</a>. Son avenir est incertain ; les auteurs devraient utiliser une alternative <a href="/fr/docs/Glossary/WAI">WAI</a>-<a href="/fr/docs/Glossary/ARIA">ARIA</a> telle que <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby"><code>aria-describedby</code></a> ou <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-details"><code>aria-details</code></a>.</p>
+  <dt><code>longdesc</code> {{deprecated_inline}}</dt>
+  <dd><p>Un lien vers une description plus détaillée de l'image. Les valeurs possibles sont une URL ou un identifiant (<a href="/fr/docs/Web/HTML/Global_attributes#attr-id"><code>id</code></a>) d'un élément.</p>
+    <div class="note">
+      <p><strong>Note :</strong>Cet attribut est mentionné dans la dernière version du <a href="/fr/docs/Glossary/W3C">W3C</a>, <a href="https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc">HTML 5.2</a>, mais a été supprimé du <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">HTML Living Standard</a> du <a href="/fr/docs/Glossary/WHATWG">WHATWG</a>. Son avenir est incertain ; les auteurs devraient utiliser une alternative <a href="/fr/docs/Glossary/WAI">WAI</a>-<a href="/fr/docs/Glossary/ARIA">ARIA</a> telle que <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby"><code>aria-describedby</code></a> ou <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-details"><code>aria-details</code></a>.</p>
     </div>
   </dd>
-  <dt><code id="attr-name">name</code> {{deprecated_inline}}</dt>
+  <dt><code>name</code> {{deprecated_inline}}</dt>
   <dd>Un nom pour l'élément. Utilisez plutôt l'attribut <a href="/fr/docs/Web/HTML/Global_attributes#attr-id"><code>id</code></a>.</dd>
-  <dt><code id="attr-vspace">vspace</code> {{deprecated_inline}}</dt>
+  <dt><code>vspace</code> {{deprecated_inline}}</dt>
   <dd>Le nombre de pixels blancs à insérer en dessous et au-dessus de l'image. En HTML5, on privilégiera la propriété CSS <a href="/fr/docs/Web/CSS/margin"><code>margin</code></a>.</dd>
 </dl>
 
@@ -282,9 +276,8 @@ browser-compat: html.elements.img
 
 <p>{{EmbedLiveSample("using_the_srcset_and_sizes_attributes", "100%", 450)}}</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Pour observer l'effet du redimensionnement, vous devrez consulter <a href="/fr/docs/Web/HTML/Element/img/Using_the_srcset_and_sizes_attributes">l'exemple sur une page séparée</a> afin de pouvoir modifier la taille de la zone.</p>
+<div class="note">
+  <p><strong>Note :</strong>Pour observer l'effet du redimensionnement, vous devrez consulter <a href="/fr/docs/Web/HTML/Element/img/Using_the_srcset_and_sizes_attributes">l'exemple sur une page séparée</a> afin de pouvoir modifier la taille de la zone.</p>
 </div>
 
 <h2 id="security_and_privacy_concerns">Sécurité et vie privée</h2>

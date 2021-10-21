@@ -9,12 +9,12 @@ translation_of: Web/API/Node/normalize
 
 <p>Метод <code><strong>Node.normalize()</strong></code> преобразует указанный узел и все его под-деревья в "нормализованный" вид. В нормализованном под-дереве нет ни пустых, ни смежных текстовых узлов.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><em>element</em>.normalize();
 </pre>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush:js">var wrapper = document.createElement("div");
 
@@ -30,13 +30,13 @@ wrapper.normalize();
 // Now, wrapper.childNodes.length === 1
 // wrapper.childNodes[0].textContent === "Part 1 Part 2 "</pre>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <ul>
  <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-normalize">DOM Level 2 Core: Node.normalize</a></li>
 </ul>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/en-US/docs/DOM/Text.splitText" title="DOM/Text.splitText"><code>Text.splitText</code></a></li>

@@ -100,11 +100,7 @@ original_slug: >-
 
 <p>Lorsque la visibilité du contenu est modifiée (c'est-à-dire qu'un élément est masqué ou affiché), les développeurs doivent modifier la valeur de la propriété <strong><code>aria-hidden</code></strong>. Les techniques décrites ci-dessus doivent être utilisées pour déclarer du CSS permettant de cacher visuellement un élément en utilisant <code>display:none</code>.</p>
 
-<p>Le site Web Open Ajax Alliance fournit<a class="external" href="http://www.oaa-accessibility.org/example/39/" title="http://www.oaa-accessibility.org/example/39/"> un exemple de tooltip qui utilise <strong><code>aria-hidden</code></strong> pour controler la visibilité du tooltip.</a> L'exemple montre un formulaire Web simple avec des info-bulles contenant des instructions associées aux champs d’entrée.</p>
-
 <p>Les parties pertinentes de l'exemple sont expliquées ci-dessous.Dans cet exemple, le code HTML de l’info-bulle a le format indiqué dans l'exemple 2a. La ligne 9 définit l’état <strong><code>aria-hidden</code></strong> à <code>true</code>.</p>
-
-<p><em>Exemple 2a. HTML pour un tooltip (adapté de <a class="external" href="http://www.oaa-accessibility.org/example/39/" rel="freelink">http://www.oaa-accessibility.org/example/39/</a>).</em></p>
 
 <pre class="brush: html">&lt;div class="text"&gt;
     &lt;label id="tp1-label" for="first"&gt;First Name:&lt;/label&gt;
@@ -119,7 +115,7 @@ original_slug: >-
 </pre>
 
 <p>Le CSS pour ce balisage est montré dans l'exemple 2b. Notez qu’il n’y a pas de nom de classe personnalisé utilisé, seul le statut de l'attribut <strong><code>aria-hidden</code></strong> à la ligne 1<em>.<br>
- Exemple 2b. Un attribut basé sur le sélecteur indiquant l'état (tiré de <a class="external" href="http://www.oaa-accessibility.org/example/39/" rel="freelink">http://www.oaa-accessibility.org/example/39/</a>).</em></p>
+ Exemple 2b. Un attribut basé sur le sélecteur indiquant l'état.</em></p>
 
 <pre class="brush: css">div.tooltip[aria-hidden="true"] {
   display: none;
@@ -128,7 +124,7 @@ original_slug: >-
 
 <p>Le JavaScript à mettre à jour est la propriété <strong><code>aria-hidden</code></strong> du formulaire montré dans l'exemple 2c. Notez que le script met à jour seulement l'attribut <strong><code>aria-hidden</code></strong> à la (ligne 2) ; il n'y a pas besoin d'ajouter ou de supprimer un nom de classe personnalisé.</p>
 
-<p><em>Exemple 2c. JavaScript pour mettre à jour l'attribut aria-checked (basé sur <a class="external" href="http://www.oaa-accessibility.org/example/39/" rel="freelink">http://www.oaa-accessibility.org/example/39/</a>).</em></p>
+<p><em>Exemple 2c. JavaScript pour mettre à jour l'attribut aria-checked.</em></p>
 
 <pre class="brush: javascript">var showTip = function(el) {
   el.setAttribute('aria-hidden', 'false');

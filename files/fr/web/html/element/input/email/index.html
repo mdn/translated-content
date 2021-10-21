@@ -9,11 +9,9 @@ translation_of: Web/HTML/Element/input/email
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">Les éléments {{HTMLElement("input")}} dont l'attribut <code>type</code> vaut <code><strong>"email"</strong></code> permettent à un utilisateur de saisir et d'éditer une adresse mail ou, si l'attribut {{htmlattrxref("multiple", "input")}} est indiqué, une liste d'adresses mail. La valeur saisie est automatiquement validée afin de vérifier que le champ est vide ou que l'adresse (ou la liste d'adresses) est correcte.</span> Les pseudo-classes CSS {{cssxref(":valid")}} et {{cssxref(":invalid")}} sont appliquées automatiquement selon le cas.</p>
+<p>Les éléments {{HTMLElement("input")}} dont l'attribut <code>type</code> vaut <code><strong>"email"</strong></code> permettent à un utilisateur de saisir et d'éditer une adresse mail ou, si l'attribut {{htmlattrxref("multiple", "input")}} est indiqué, une liste d'adresses mail. La valeur saisie est automatiquement validée afin de vérifier que le champ est vide ou que l'adresse (ou la liste d'adresses) est correcte. Les pseudo-classes CSS {{cssxref(":valid")}} et {{cssxref(":invalid")}} sont appliquées automatiquement selon le cas.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-email.html", "tabbed-shorter")}}</div>
-
-<div class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</div>
 
 <div class="note">
 <p><strong>Note :</strong> Les navigateurs qui ne prennent pas en charge le type <code>"email"</code> emploieront un élément <code>&lt;input&gt;</code> <code><a href="/fr/docs/Web/HTML/Element/input/text">"text"</a></code> à la place.</p>
@@ -236,9 +234,7 @@ translation_of: Web/HTML/Element/input/email
 
 <p>On peut également fournir une valeur par défaut en remplissant l'attribut {{htmlattrxref("value", "input")}} de l'élément :</p>
 
-<div id="Default_value">
 <pre class="brush: html">&lt;input type="email" value="default@example.com"&gt;</pre>
-</div>
 
 <p>{{EmbedLiveSample("Fournir_une_option_par_défaut", 600, 40)}}</p>
 
@@ -260,14 +256,12 @@ translation_of: Web/HTML/Element/input/email
 
 <p>Lorsqu'on utilise l'élément {{HTMLElement("datalist")}} et l'élément {{HTMLElement("option")}}, le navigateur affichera les adresses suggérées lors de la saisie, généralement sous la forme d'une liste déroulante ou d'une popup. Bien que les détails d'interface puissent dépendre de chaque navigateur, cliquer sur le champ d'édition affichera généralement la liste sous forme d'un volet déroulant. Ensuite, la liste est restreinte au fur et à mesure des caractères saisis.</p>
 
-<p><img alt="Animation: Using keyboard entry to filter the list of suggested email addresses" src="https://mdn.mozillademos.org/files/14831/html-input-email1.gif" style="border-style: solid; border-width: 1px; height: 168px; width: 352px;"></p>
-
 <h2 id="Validation">Validation</h2>
 
 <p>Il existe deux niveaux de validation pour les champs de saisie de type <code>"email"</code>. Tout d'abord, on a le niveau standard qui permet de vérifier automatiquement si l'adresse électronique est bien formatée. Ensuite, il est possible d'ajouter un filtre spécifique si besoin de répondre à des contraintes plus spécifiques.</p>
 
 <div class="warning">
-<p><strong>Attention !</strong> La validation du formulaire HTML par l'agent utilisateur ne saurait remplacer la vérification des données saisies côté serveur. En effet, il est relativement simple de modifier le document HTML avec son navigateur pour outrepasser les contraintes exprimées ici (quitte à les transmettre directement au serveur). Si les données ne sont pas vérifiées côté serveur, cela pourra entraîner des erreurs (valeurs trop grande, au mauvais format) voire des failles de sécurité.</p>
+<p><strong>Attention :</strong> La validation du formulaire HTML par l'agent utilisateur ne saurait remplacer la vérification des données saisies côté serveur. En effet, il est relativement simple de modifier le document HTML avec son navigateur pour outrepasser les contraintes exprimées ici (quitte à les transmettre directement au serveur). Si les données ne sont pas vérifiées côté serveur, cela pourra entraîner des erreurs (valeurs trop grande, au mauvais format) voire des failles de sécurité.</p>
 </div>
 
 <h3 id="Validation_simple">Validation simple</h3>
@@ -288,8 +282,7 @@ translation_of: Web/HTML/Element/input/email
 
 <p>Le navigateur vérifie d'une part que l'adresse électronique est une adresse correctement formatée <em>et</em> que celle-ci respecte l'expression rationnelle indiquée avec {{htmlattrxref("pattern", "input")}}. Voici un exemple d'application :</p>
 
-<div class="hidden">
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   font: 16px sans-serif;
 }
 
@@ -308,7 +301,6 @@ label {
 label::after {
   content: ":";
 }</pre>
-</div>
 
 <pre class="brush: html">&lt;form&gt;
  &lt;div class="emailBox"&gt;
@@ -333,9 +325,9 @@ label::after {
 
 <p>Si on regarde le champ de saisie pour l'adresse électronique, on voit que les deux attributs {{htmlattrxref("size", "input")}} et {{htmlattrxref("maxlength", "input")}} ont la valeur 64 (on affiche une boîte de saisie large de 64 caractères et on ne peut saisir une adresse électronique d'au plus 64 caractères). L'attribut {{htmlattrxref("required", "input")}} est présent et l'adresse électronique est donc obligatoire pour l'envoi du formulaire.</p>
 
-<p>L'attribut {{htmlattrxref("placeholder", "input")}} indique qu'une valeur semblable à <code>"nomutilisateur@beststartupever.com"</code> est attendue. L'intérêt de cette valeur est double : on indique qu'il faut saisir une adresse mail et on suggère que cette adresse provient d'un compte beststartupever.com. Le type <code>"email"</code> permet de valider le texte saisi afin de vérifier qu'il s'agit d'une adresse électronique valide.  Si la valeur saisie n'est pas une adresse valide, un message d'erreur sera affiché :</p>
+<p>L'attribut {{htmlattrxref("placeholder", "input")}} indique qu'une valeur semblable à <code>"nomutilisateur@beststartupever.com"</code> est attendue. L'intérêt de cette valeur est double : on indique qu'il faut saisir une adresse mail et on suggère que cette adresse provient d'un compte beststartupever.com. Le type <code>"email"</code> permet de valider le texte saisi afin de vérifier qu'il s'agit d'une adresse électronique valide. Si la valeur saisie n'est pas une adresse valide, un message d'erreur sera affiché :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14855/enter-valid-email-address.png" style="height: 125px; width: 530px;"></p>
+<p><img alt="" src="enter-valid-email-address.png"></p>
 
 <p>Si on utilise uniquement les attributs qu'on vient de décrire, on restreint les valeurs saisissables aux adresses électroniques valides de 64 caractères. Or, on veut également valider le fait que l'adresse respecte le format "<em>nomutilisateur</em>@beststartupever.com". C'est pourquoi on utilise l'attribut {{htmlattrxref("pattern", "input")}} avec la valeur <code>".+@beststartupever.com"</code>. Cette valeur est une expression rationnelle qui permet de vérifier que la chaîne de caractère contient un ou plusieurs caractères quelconques, ensuite suivi d'une arobase (@) puis du nom de domaine "beststartupever.com".</p>
 
@@ -345,7 +337,7 @@ label::after {
 
 <p>C'est pour cela qu'on indique la chaîne de caractères "Merci de fournir uniquement une adresse Best Startup Ever". Le message complet obtenu sera donc : "Le texte saisi ne correspond pas au motif requis. Merci de fournir uniquement une adresse Best Startup Ever."</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14853/email-pattern-match-bad.png" style="height: 140px; width: 536px;"></p>
+<p><img alt="" src="email-pattern-match-bad.png"></p>
 
 <div class="note">
 <p><strong>Note :</strong> Si vous rencontrez des problèmes à propos de l'expression rationnelle, n'hésitez pas à ouvrir la console du navigateur. Cette dernière peut contenir des messages d'erreur aidant à diagnostiquer et résoudre le problème.</p>

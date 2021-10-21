@@ -11,13 +11,11 @@ translation_of: Web/HTML/Element/input/color
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">Les éléments {{HTMLElement("input")}} de type <code><strong>"color"</strong></code> permettent de sélectionner une couleur via une interface (un sélecteur de couleur) ou en saisissant le code hexadécimal de la couleur au format <code>"#rrggbb"</code>. Ce format de valeur peut être utilisé en CSS.</span></p>
+<p>Les éléments {{HTMLElement("input")}} de type <code><strong>"color"</strong></code> permettent de sélectionner une couleur via une interface (un sélecteur de couleur) ou en saisissant le code hexadécimal de la couleur au format <code>"#rrggbb"</code>. Ce format de valeur peut être utilisé en CSS.</p>
 
 <p>L'apparence du contrôle de sélection des couleurs peut grandement varier d'un navigateur à un autre et d'un système d'exploitation à un autre. Pour certains navigateurs, seul un champ textuel sera affiché afin de saisir le code de la couleur (avec des mécanismes de validation vérifiant le format), pour d'autres, ce sera le sélecteur de couleur du système d'exploitation qui sera utilisé et pour d'autres encore, ce sera un sélecteur de couleur spécifique.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-color.html", "tabbed-standard")}}</div>
-
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
 
 <h2 id="Valeur">Valeur</h2>
 
@@ -35,7 +33,7 @@ translation_of: Web/HTML/Element/input/color
 
 <p>Il est possible de créer un sélecteur de couleur qui emploie une valeur par défaut :</p>
 
-<pre class="brush: html notranslate">&lt;input type="color" value="#ff0000"&gt;</pre>
+<pre class="brush: html">&lt;input type="color" value="#ff0000"&gt;</pre>
 
 <p>{{EmbedLiveSample("Fournir_une_couleur_par_défaut", 700, 30)}}</p>
 
@@ -45,7 +43,7 @@ translation_of: Web/HTML/Element/input/color
 
 <p>Comme pour les différents éléments {{HTMLElement("input")}}, deux évènements peuvent être utilisés afin de détecter une modification de la couleur : {{event("input")}} et {{event("change")}}. <code>input</code> est déclenché sur l'élément <code>&lt;input&gt;</code> à chaque fois que la couleur change. L'évènement <code>change</code> est déclenché lorsque l'utilisateur ferme le sélecteur de couleur. Dans tous les cas, il est possible de déterminer la nouvelle valeur de l'élément grâce à {{domxref("HTMLInputElement.value", "value")}}.</p>
 
-<pre class="brush: js notranslate">colorPicker.addEventListener("input", updateFirst, false);
+<pre class="brush: js">colorPicker.addEventListener("input", updateFirst, false);
 colorPicker.addEventListener("change", watchColorPicker, false);
 
 function watchColorPicker(event) {
@@ -57,23 +55,9 @@ function watchColorPicker(event) {
 
 <h3 id="Sélectionner_la_valeur">Sélectionner la valeur</h3>
 
-<p>Si l'implémentation du navigateur n'affiche pas de sélecteur de couleur mais un champ texte, il est possible de sélectionner la valeur du texte avec la méthode {{domxref("HTMLInputElement.select", "select()")}}. Si le navigateur affiche un sélecteur de couleur, <code>select()</code> ne fera rien.</p>
+<p>Si l'implémentation du navigateur n'affiche pas de sélecteur de couleur mais un champ texte, il est possible de sélectionner la valeur du texte avec la méthode {{domxref("HTMLInputElement.select", "select()")}}. Si le navigateur affiche un sélecteur de couleur, <code>select()</code> ne fera rien. Soyez conscient⋅e de ce comportement afin d'adapter votre code à ce cas.</p>
 
-<pre class="brush: js notranslate">colorWell.select();</pre>
-
-<h3 id="Différences_daspect">Différences d'aspect</h3>
-
-<p>Comme mentionné précédemment, lorsqu'un navigateur ne prend pas en charge l'affichage d'un sélecteur de couleur, c'est un champ texte qui sera affiché. Par exemple, sous Safari 10.1, on peut voir le résultat suivant :</p>
-
-<p><img alt="Screenshot of the example taken in Safari." src="https://mdn.mozillademos.org/files/14899/input-color-safari.png" style="border-style: solid; border-width: 1px; height: 160px; width: 598px;"></p>
-
-<p>Avec Firefox Firefox 55, on aura cet affichage :</p>
-
-<p><img alt="Screenshot of the example taken in Firefox 55 for macOS" src="https://mdn.mozillademos.org/files/14901/input-color-firefox.png" style="border-style: solid; border-width: 1px; height: 160px; width: 598px;"></p>
-
-<p>Pour ce deuxième cas, en cliquant sur le carré coloré, cela ouvrira le sélecteur de couleur natif du système d'exploitation :</p>
-
-<p><img alt="Screenshot of the element with the color picker open in Firefox Mac." src="https://mdn.mozillademos.org/files/14903/input-with-picker-firefox-mac.png" style="border-style: solid; border-width: 1px; height: 405px; width: 682px;"></p>
+<pre class="brush: js">colorWell.select();</pre>
 
 <h2 id="Validation">Validation</h2>
 
@@ -87,7 +71,7 @@ function watchColorPicker(event) {
 
 <p>Le fragment de code HTML utilisé est relativement simple. On utilise quelques paragraphes descriptifs ainsi qu'un élément {{HTMLElement("input")}} de type <code>"color"</code> dont l'identifiant est <code>"colorWell"</code> (c'est la valeur de cette couleur qu'on utilisera pour changer la couleur du texte des paragraphes).</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Un exemple qui illustre l'utilisation de &lt;code&gt;&amp;lt;input type="color"&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Un exemple qui illustre l'utilisation de &lt;code&gt;&amp;lt;input type="color"&amp;gt;&lt;/code&gt;.&lt;/p&gt;
 
 &lt;label for="colorWell"&gt;Couleur :&lt;/label&gt;
 &lt;input type="color" value="#ff0000" id="colorWell"&gt;
@@ -102,7 +86,7 @@ function watchColorPicker(event) {
 
 <p>Tout d'abord, on établit certains variables : une pour la couleur du sélecteur et une autre couleur pour la couleur par défaut. On ajoute un gestionnaire {{event("load")}} afin de lancer les actions de démarrage lorsque la page est chargée.</p>
 
-<pre class="brush: js notranslate">var colorWell
+<pre class="brush: js">var colorWell
 var defaultColor = "#0000ff";
 
 window.addEventListener("load", startup, false);
@@ -112,7 +96,7 @@ window.addEventListener("load", startup, false);
 
 <p>Lorsque la page est chargée, l'évènement <code>"load"</code> est déclenché et la fonction <code>startup()</code> est donc appelée :</p>
 
-<pre class="brush: js notranslate">function startup() {
+<pre class="brush: js">function startup() {
   colorWell = document.querySelector("#colorWell");
   colorWell.value = defaultColor;
   colorWell.addEventListener("input", updateFirst, false);
@@ -129,7 +113,7 @@ window.addEventListener("load", startup, false);
 
 <p>On dispose de deux fonctions qui gèrent les modifications de couleurs. La fonction <code>updateFirst()</code> permet de répondre à l'évènement <code>input</code> et modifie la couleur du premier paragraphe dans le document en utilisant la nouvelle valeur saisie. Étant donné que les évènements <code>input</code> ont lieu à chaque fois qu'un ajustement est fait, cette fonction sera appelée sans cesse lorsque le sélecteur de couleur est utilisé.</p>
 
-<pre class="brush: js notranslate">function updateFirst(event) {
+<pre class="brush: js">function updateFirst(event) {
   var p = document.querySelector("p");
 
   if (p) {
@@ -139,7 +123,7 @@ window.addEventListener("load", startup, false);
 
 <p>Lorsque le sélecteur est fermé, cela signifie que la valeur ne sera plus modifié avant une prochaine ouverture du sélecteur. Un évènement <code>change</code> est alors envoyé et cela déclenche alors l'appel de la fonction <code>updateAll()</code> :</p>
 
-<pre class="brush: js notranslate">function updateAll(event) {
+<pre class="brush: js">function updateAll(event) {
   document.querySelectorAll("p").forEach(function(p) {
     p.style.color = event.target.value;
   });

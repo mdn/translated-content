@@ -9,21 +9,19 @@ translation_of: Web/HTML/Element/input/month
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">Les éléments {{htmlelement("input")}} dont l'attribut <code>type</code> vaut <code><strong>"month"</strong></code> permettent de créer des contrôles où l'utilisateur peut saisir un mois et année. La valeur associée à un tel élément suit le format <code>"YYYY-MM"</code>, où <code>YYYY</code> représente l'année sur quatre chiffre et <code>MM</code> le mois sur deux chiffres.</span></p>
+<p>Les éléments {{htmlelement("input")}} dont l'attribut <code>type</code> vaut <code><strong>"month"</strong></code> permettent de créer des contrôles où l'utilisateur peut saisir un mois et année. La valeur associée à un tel élément suit le format <code>"YYYY-MM"</code>, où <code>YYYY</code> représente l'année sur quatre chiffre et <code>MM</code> le mois sur deux chiffres.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}</div>
-
-<div class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</div>
 
 <p>L'interface utilisateur associée à ce contrôle varie d'un navigateur à l'autre et la prise en charge de cette fonctionnalité reste encore hétérogène : seuls Chrome, Opéra et Edge implémentent cette fonctionnalité sur ordinateur et la plupart des navigateurs mobiles possèdent une implémentation. Pour les navigateurs qui ne prennent pas en charge cette fonctionnalité, l'élément sera transformé en un simple <code><a href="/fr/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
 
 <p>Si votre navigateur ne prend pas en charge ce type d'élément, voici ensuite une capture d'écran de Chrome : cliquer sur la flèche vers le bas permettra de faire apparaître un sélecteur de date qui permettra de choisir le mois et l'année.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15391/month-control-chrome.png" style="display: block; height: 216px; margin: 0px auto; width: 273px;"></p>
+<p><img alt="" src="month-control-chrome.png"></p>
 
 <p>Voici un aperçu du contrôle sous Edge :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15393/month-control-edge.png" style="display: block; height: 389px; margin: 0px auto; width: 227px;"></p>
+<p><img alt="" src="month-control-edge.png"></p>
 
 <h2 id="Valeur">Valeur</h2>
 
@@ -31,12 +29,12 @@ translation_of: Web/HTML/Element/input/month
 
 <p>Il est possible de définir une valeur par défaut pour le contrôle en utilisant l'attribut {{htmlattrxref("value", "input")}} de la façon suivante :</p>
 
-<div id="value-example-1">
+<h3 id="Exemple_1">Exemple 1</h3>
+
 <pre class="brush: html">&lt;label for="bday-month"&gt;Quel est le mois de votre naissance ?&lt;/label&gt;
 &lt;input id="bday-month" type="month" name="bday-month" value="2017-06"&gt;</pre>
 
-<p>{{EmbedLiveSample('value-example-1', 600, 60)}}</p>
-</div>
+<p>{{EmbedLiveSample('Exemple_1', 600, 60)}}</p>
 
 <p>On notera que la façon dont la date est affichée peut varier selon la locale de l'utilisateur et être présentée sous un format différent. En revanche, d'un point de vue technique, la valeur de l'attribut <code>value</code> suivra toujours le format <code>YYYY-MM</code>.</p>
 
@@ -44,17 +42,16 @@ translation_of: Web/HTML/Element/input/month
 
 <p>Il est également possible de manipuler la date en JavaScript grâce à la propriété {{domxref("HTMLInputElement.value")}}. Par exemple :</p>
 
-<div id="value-example-2">
-<div class="hidden">
-<pre class="brush: html">&lt;label for="bday-month"&gt;Quel est le mois de votre naissance ?&lt;/label&gt;
+<h3 id="Exemple_2">Exemple 2</h3>
+
+<pre class="brush: html hidden">&lt;label for="bday-month"&gt;Quel est le mois de votre naissance ?&lt;/label&gt;
 &lt;input id="bday-month" type="month" name="bday-month" value="2017-06"&gt;</pre>
 </div>
 
-<pre class="brush: js">var monthControl = document.querySelector('input[type="month"]');
+<pre class="brush: js hidden">var monthControl = document.querySelector('input[type="month"]');
 monthControl.value = '1978-06';</pre>
 
-<p>{{EmbedLiveSample("value-example-2", 600, 60)}}</p>
-</div>
+<p>{{EmbedLiveSample("Exemple_2", 600, 60)}}</p>
 
 <h2 id="Attributs_supplémentaires">Attributs supplémentaires</h2>
 
@@ -150,7 +147,7 @@ monthControl.value = '1978-06';</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong> : L'attribut {{htmlattrxref("step", "input")}} devrait pouvoir être utilisé afin d'ajuster le pas d'incrémentation (par exemple si on ne veut pouvoir sélectionner que les mois de début de trimestre). Toutefois, à l'heure où nous écrivons ces lignes, aucun navigateur ne semble prendre correctement en charge cette fonctionnalité.</p>
+<p><strong>Note :</strong> L'attribut {{htmlattrxref("step", "input")}} devrait pouvoir être utilisé afin d'ajuster le pas d'incrémentation (par exemple si on ne veut pouvoir sélectionner que les mois de début de trimestre). Toutefois, à l'heure où nous écrivons ces lignes, aucun navigateur ne semble prendre correctement en charge cette fonctionnalité.</p>
 </div>
 
 <h3 id="Contrôler_la_taille_du_champ">Contrôler la taille du champ</h3>
@@ -183,7 +180,7 @@ monthControl.value = '1978-06';</pre>
 
 <p>Voici une capture d'écran qui illustre le résultat obtenu avec un navigateur prenant en charge cette fonctionnalité :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15395/month-required.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="month-required.png"></p>
 
 <p>Voici ensuite la feuille de style CSS utilisée dans l'exemple précédent. On utilise {{cssxref(":valid")}} et {{cssxref(":invalid")}} afin de mettre en forme le contrôle selon que la valeur saisie est invalide. Les icônes ajoutées sont placées dans un élément {{htmlelement("span")}} à part car Chrome ne permet pas de gérer du contenu généré à même le contrôle ni de mettre en forme ce contenu généré.</p>
 
@@ -213,14 +210,14 @@ input:valid+span:after {
 }</pre>
 
 <div class="warning">
-<p><strong>Attention !</strong> Il est également important de vérifier le format de la valeur saisie côté serveur ! En effet, il est tout à fait possible pour un utilisateur de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.</p>
+<p><strong>Attention :</strong> Il est également important de vérifier le format de la valeur saisie côté serveur ! En effet, il est tout à fait possible pour un utilisateur de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.</p>
 </div>
 
 <h2 id="Gérer_la_prise_en_charge_des_navigateurs">Gérer la prise en charge des navigateurs</h2>
 
 <p>Comme évoqué plus haut, le problème principal relatif à ces contrôles est l'absence partielle de prise en charge des navigateurs. Seuls Chrome, Opera et Edge supportent ce type de contrôle sur ordinateurs et la plupart des navigateurs mobiles le prennent en charge. À titre d'exemple, voici une capture d'écran du contrôle sous Chrome pour Android :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15397/month-android.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="month-android.png"></p>
 
 <p>Les navigateurs qui ne prennent pas en charge cette fonctionnalité basculent sur un contrôle textuel classique mais cela pose problème à la fois en termes de cohérence de l'interface utilisateur et aussi par rapport à la gestion des données.</p>
 
@@ -255,8 +252,7 @@ input:valid+span:after {
 
 <p>De plus, cela présage que l'utilisateur comprenne le format dans lequel il faut saisir la valeur. Bref, le problème subsiste.</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -280,7 +276,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <p>La meilleure façon de gérer la saisie de mois pour l'ensemble des navigateurs consiste actuellement à saisir le mois et l'année dans deux contrôles séparés, représentés chacun par un élément {{htmlelement("select")}}. On peut également utiliser certaines bibliothèques JavaScript telles que <a href="https://jqueryui.com/datepicker/">jQuery date picker</a> ou le plugin <a href="http://timepicker.co/">jQuery timepicker</a>.</p>
 
@@ -329,8 +324,7 @@ input:valid+span:after {
 
 <p>Les mois sont représentés statiquement (ce sont toujours les mêmes) et les valeurs pour les années sont générées dynamiquement à partir de l'année courante (voir les commentaires dans le code suivant).</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -354,7 +348,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <p>Une partie intéressante du code est celle qui permet de détecter la prise en charge de fonctionnalité. Pour détecter si le navigateur prend en charge ce contrôle, on crée un nouvel élément {{htmlelement("input")}} dont on modifie le type afin qu'il vaille <code>month</code> puis on vérifie immédiatement la valeur associée au type : les navigateurs qui ne prennent pas en charge la fonctionnalité renverront <code>text</code> car le champ <code>month</code> a automatiquement transformé en <code>text</code>. Si c'est le cas, on masque le sélecteur natif et on affiche le sélecteur alternatif (celui construit avec les éléments {{htmlelement("select")}}).</p>
 

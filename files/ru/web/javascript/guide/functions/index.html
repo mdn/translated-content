@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Guide/Functions
  <li>сборщик мусора (<code>garbage collector</code>)</li>
 </ul>
 
-<h2 id="Объявление_функций"><a id="definition" name="definition"></a>Объявление функций</h2>
+<h2 id="Объявление_функций"><a id="definition"></a>Объявление функций</h2>
 
 <h3 id="Функции_вида_function_declaration_statement">Функции вида "function declaration statement"</h3>
 
@@ -134,7 +134,7 @@ if (num === 0) {
 
 <p><strong>Метод</strong> — это функция, которая является свойством объекта. Узнать больше про объекты и методы можно по ссылке: <a href="/ru/docs/Web/JavaScript/Guide/Working_with_Objects">Работа с объектами</a>.</p>
 
-<h2 id="Вызовы_функций"><a id="call" name="call"></a>Вызовы функций</h2>
+<h2 id="Вызовы_функций"><a id="call"></a>Вызовы функций</h2>
 
 <p>Объявление функции не выполняет её. Объявление функции просто называет функцию и указывает, что делать при вызове функции.</p>
 
@@ -186,7 +186,7 @@ e = factorial(5); // e gets the value 120
 
 <p>Есть другие способы вызвать функцию. Существуют частые случаи, когда функции необходимо вызывать динамически, или поменять номера аргументов функции, или необходимо вызвать функцию с привязкой к определённому контексту. Оказывается, что функции сами по себе являются объектами, и эти объекты в свою очередь имеют методы (посмотрите объект <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function" title="The Function constructor creates a new Function object. Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues similar to eval. However, unlike eval, the Function constructor allows executing code in the global scope, prompting better programming habits and allowing for more efficient code minification."><code>Function</code></a>). Один из них это метод <code><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" title="The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).">apply()</a></code>, использование которого может достигнуть этой цели.</p>
 
-<h2 id="Область_видимости_функций"><a id="definition" name="definition"></a>Область видимости функций</h2>
+<h2 id="Область_видимости_функций"><a id="definition"></a>Область видимости функций</h2>
 
 <p><u><em>(function scope)</em></u></p>
 
@@ -219,7 +219,7 @@ function getScore() {
 getScore(); // вернёт "Chamahk scored 5"
 </pre>
 
-<h2 id="Scope_и_стек_функции"><a id="definition" name="definition"></a>Scope и стек функции</h2>
+<h2 id="Scope_и_стек_функции"><a id="definition"></a>Scope и стек функции</h2>
 
 <p><em><u>(function stack)</u></em></p>
 
@@ -397,7 +397,7 @@ outside()(10); // возвращает 20 вместо 10</pre>
 
 <p>Конфликт имени произошёл в инструкции <code>return x * 2</code> между параметром <code>x</code> функции <code>inside</code> и переменной <code>x</code> функции <code>outside</code>. Scope chain здесь будет таким: {<code>inside</code> ==&gt; <code>outside</code> ==&gt; глобальный объект (<em>global object</em>)}. Следовательно <code>x</code> функции <code>inside</code> имеет больший приоритет по сравнению с <code>outside</code>, и нам вернулось 20 (= 10 * 2), а не 10 (= 5 * 2).</p>
 
-<h2 id="Замыкания"><a id="definition" name="definition"></a>Замыкания</h2>
+<h2 id="Замыкания"><a id="definition"></a>Замыкания</h2>
 
 <p><em><u>(Closures)</u></em></p>
 
@@ -482,7 +482,7 @@ getCode();    // Returns the apiCode
 }
 </pre>
 
-<h2 id="Использование_объекта_arguments"><a id="definition" name="definition"></a>Использование объекта arguments</h2>
+<h2 id="Использование_объекта_arguments"><a id="definition"></a>Использование объекта arguments</h2>
 
 <p>Объект arguments функции является псевдо-массивом. Внутри функции вы можете ссылаться к аргументам следующим образом:</p>
 
@@ -524,9 +524,9 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
 
 <p>Рассмотрите объект <code><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function" title="The Function constructor creates a new Function object. Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues similar to eval. However, unlike eval, the Function constructor allows executing code in the global scope, prompting better programming habits and allowing for more efficient code minification.">Function</a></code> в JavaScript-справочнике для большей информации.</p>
 
-<h2 id="Параметры_функции"><a id="definition" name="definition"></a>Параметры функции</h2>
+<h2 id="Параметры_функции"><a id="definition"></a>Параметры функции</h2>
 
-<p>Начиная с ECMAScript 2015 появились два новых вида параметров: параметры по умолчанию (<em>default parameters</em>) и оставшиеся параметры (<em>rest parameters</em>).</p>
+<p>Начиная с ECMAScript 2015 появились два новых вида параметров: параметры по умолчанию (<em>default parameters</em>) и остаточные параметры (<em>rest parameters</em>).</p>
 
 <h3 id="Параметры_по_умолчанию_Default_parameters">Параметры по умолчанию (Default parameters)</h3>
 
@@ -552,9 +552,9 @@ multiply(5); // 5</pre>
 
 <p>Для более детального рассмотрения ознакомьтесь с <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметрами по умолчанию</a>.</p>
 
-<h3 id="Оставшиеся_параметры_Rest_parameters">Оставшиеся параметры (Rest parameters)</h3>
+<h3 id="Остаточные_параметры_Rest_parameters">Остаточные параметры (Rest parameters)</h3>
 
-<p><a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">Оставшиеся параметры</a> предоставляют нам массив неопределённых аргументов. В примере мы используем оставшиеся параметры, чтобы собрать аргументы с индексами со 2-го до последнего. Затем мы умножим каждый из них на значение первого аргумента. В этом примере используется стрелочная функция (<u><em><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a>)</em></u>, о которой будет рассказано в следующей секции.</p>
+<p><a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">Остаточные параметры</a> предоставляют нам массив неопределённых аргументов. В примере мы используем остаточные параметры, чтобы собрать аргументы с индексами со 2-го до последнего. Затем мы умножим каждый из них на значение первого аргумента. В этом примере используется стрелочная функция (<u><em><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a>)</em></u>, о которой будет рассказано в следующей секции.</p>
 
 <pre class="brush: js">function multiply(multiplier, ...theArgs) {
   return theArgs.map(x =&gt; multiplier * x);
@@ -564,7 +564,7 @@ var arr = multiply(2, 1, 2, 3);
 console.log(arr); // [2, 4, 6]
 </pre>
 
-<h2 id="Стрелочные_функции"><a id="definition" name="definition"></a>Стрелочные функции</h2>
+<h2 id="Стрелочные_функции"><a id="definition"></a>Стрелочные функции</h2>
 
 <p><u><em>(Arrow functions)</em></u></p>
 

@@ -16,9 +16,7 @@ translation_of: Web/HTML/Element/input
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
-<h2 id="Les_différents_types_de_champs_&lt;input>"><a id="types" name="types">Les différents types de champs <code>&lt;input&gt;</code></a></h2>
+<h2 id="Les_différents_types_de_champs_&lt;input>">Les différents types de champs <code>&lt;input&gt;</code></h2>
 
 <p>La façon dont un élément <code>&lt;input&gt;</code> fonctionne dépend grandement de la valeur de son attribut <code>type</code>. Aussi, pour chacun de ces types, on aura une page de référence dédiée. Par défaut, lorsque l'attribut <code>type</code> n'est pas présent, il aura la valeur implicite <code>text</code>.</p>
 
@@ -37,7 +35,8 @@ translation_of: Web/HTML/Element/input
  <li><code>{{HTMLElement("input/month", "month")}}</code> : {{HTMLVersionInline("5")}} un contrôle qui permet de saisir un mois et une année (sans fuseau horaire).</li>
  <li><code>{{HTMLElement("input/number", "number")}}</code> : {{HTMLVersionInline("5")}} un contrôle qui permet de saisir un nombre.</li>
  <li><code>{{HTMLElement("input/password", "password")}}</code> : un champ texte sur une seule ligne dont la valeur est masquée. Les attributs <code>maxlength</code> et <code>minlength</code> définissent la taille maximale et minimale de la valeur à saisir dans le champ.
-  <div class="note"><strong>Note :</strong> Tout formulaire comportant des données sensibles doit être servi via HTTPS. Les navigateurs alertent les utilisateurs lorsque les formulaires avec de telles données sont uniquement disponibles via HTTP.</div>
+  <div class="note">
+    <p><strong>Note :</strong> Tout formulaire comportant des données sensibles doit être servi via HTTPS. Les navigateurs alertent les utilisateurs lorsque les formulaires avec de telles données sont uniquement disponibles via HTTP.</p></div>
  </li>
  <li><code>{{HTMLElement("input/radio", "radio")}}</code> : un bouton radio qui permet de sélectionner une seule valeur parmi un groupe de différentes valeurs.</li>
  <li><code>{{HTMLElement("input/range", "range")}}</code> : {{HTMLVersionInline("5")}} un contrôle qui permet de saisir un nombre dont la valeur exacte n'est pas importante.</li>
@@ -145,7 +144,7 @@ translation_of: Web/HTML/Element/input
 <p>Seul un élément du document peut avoir l'attribut <code>autofocus</code>. Il n'est pas possible d'utiliser l'attribut <code>autofocus</code> sur les champs de type <code>hidden</code> car ces derniers, masqués, ne peuvent pas avoir le focus.</p>
 
 <div class="warning">
-<p><strong>Attention !</strong> Le focus automatique sur un champ de formulaire peut être source de confusion, notamment pour les personnes qui utilisent des lecteurs d'écran. En effet, lorsque <code>autofocus</code> est utilisé, les lecteurs d'écran « téléportent » l'utilisateur sur le contrôle du champ, sans aucun avertissement.</p>
+<p><strong>Attention :</strong> Le focus automatique sur un champ de formulaire peut être source de confusion, notamment pour les personnes qui utilisent des lecteurs d'écran. En effet, lorsque <code>autofocus</code> est utilisé, les lecteurs d'écran « téléportent » l'utilisateur sur le contrôle du champ, sans aucun avertissement.</p>
 </div>
 
 <h4 id="htmlattrdef(disabled)">{{htmlattrdef("disabled")}}</h4>
@@ -188,7 +187,7 @@ let hatSize = form.elements["hat-size"];
 <p>Avec ce code, la variable <code>guestName</code> correspondra à l'élément {{domxref("HTMLInputElement")}} du champ <code>guest</code> et <code>hatSize</code> à l'objet pour le champ <code>hat-size</code>.</p>
 
 <div class="warning">
-<p><strong>Attention !</strong> Il est préférable de ne pas utiliser de valeurs pour <code>name</code> qui correspondent à une propriété native de l'objet du DOM car cela surchargerait la propriété préexistante avec une référence au champ concerné.</p>
+<p><strong>Attention :</strong> Il est préférable de ne pas utiliser de valeurs pour <code>name</code> qui correspondent à une propriété native de l'objet du DOM car cela surchargerait la propriété préexistante avec une référence au champ concerné.</p>
 </div>
 
 <p>Le nom <code>_charset_</code> possède une signification spéciale. Si cette valeur est utilisée comme nom pour un élément <code>&lt;input&gt;</code> de type <code><a href="/fr/docs/Web/HTML/Element/Input/hidden">hidden</a></code>, la valeur du champ (l'attribut <code>value</code>) sera automatiquememnt renseignée par l'agent utilisateur et correspondra à l'encodage utilisé pour envoyer le formulaire.</p>
@@ -205,12 +204,8 @@ let hatSize = form.elements["hat-size"];
 
 <p><code>disabled</code> et <code>readonly</code> sont bien différents : <code>readonly</code> permet d'avoir un contrôle fonctionnel mais non éditable alors que les champs <code>disabled</code> ne fonctionnent pas comme des contrôles.</p>
 
-<div class="blockIndicator note">
-<p><strong>Notes :</strong></p>
-
-<p>L'attribut <code>required</code> n'est pas autorisé sur les éléments <code>&lt;input&gt;</code> avec l'attribut <code>readonly</code>.</p>
-
-<p>Seuls les champs textuels peuvent être mis en lecture seule. En effet, pour les autres contrôles (ex. les case à cocher et les boutons radio), il n'y a pas de réelle différence entre l'application de <code>readonly</code> ou de <code>disabled</code>.</p>
+<div class="note">
+<p><strong>Note :</strong> L'attribut <code>required</code> n'est pas autorisé sur les éléments <code>&lt;input&gt;</code> avec l'attribut <code>readonly</code>. Seuls les champs textuels peuvent être mis en lecture seule. En effet, pour les autres contrôles (ex. les case à cocher et les boutons radio), il n'y a pas de réelle différence entre l'application de <code>readonly</code> ou de <code>disabled</code>.</p>
 </div>
 
 <h4 id="htmlattrdef(required)">{{htmlattrdef("required")}}</h4>

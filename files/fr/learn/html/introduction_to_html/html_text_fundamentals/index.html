@@ -42,7 +42,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals
 
 <p>La plupart des textes structurés comprennent des titres et des paragraphes, que ce soit dans les romans, les journaux, les livres scolaires, les magazines, etc.</p>
 
-<p><img alt="An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs." src="https://mdn.mozillademos.org/files/12371/newspaper_small.jpg" style="display: block; margin: 0px auto;" title="An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs."></p>
+<p><img alt="An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs." src="newspaper_small.jpg" style="display: block; margin: 0px auto;" title="An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs."></p>
 
 <p>Le contenu structuré facilite la lecture et la rend plus agréable.</p>
 
@@ -84,18 +84,18 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals
  <li>Bien qu'il y ait 6 niveaux de titre (de <code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code>), Il est déconseillé d'utiliser plus de trois niveaux dans une page. Les documents avec beaucoup de niveaux deviennent complexes et difficiles à parcourir. Dans ce cas, il est préférable de partager le contenu sur plusieurs pages.</li>
 </ul>
 
-<h3 id="Pourquoi_faut-il_structurer_un_document">Pourquoi  faut-il structurer un document ?</h3>
+<h3 id="Pourquoi_faut-il_structurer_un_document">Pourquoi faut-il structurer un document ?</h3>
 
 <p>Pour répondre à cette question, regardons la page <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html">text-start.html</a> — le point de départ de l'exemple que nous allons utiliser dans cet article (une recette). Enregistrez une copie de ce fichier sur votre ordinateur car vous en aurez besoin pour les exercices qui vont suivre. Le corps de ce document contient plusieurs parties sans aucune balise ; elles sont seulement séparées par des retours chariots (obtenus en pressant la touche <kbd>Entrée</kbd> ou <kbd>⏎</kbd>)</p>
 
 <p>Cependant, si l'on ouvre ce document dans un navigateur, il sera affiché sous forme d'un gros bloc de texte !</p>
 
-<p><img alt="Une page Web qui montre un mur de texte non formaté, parce qu'il n'y a pas d'éléments sur la page pour la structurer." src="https://mdn.mozillademos.org/files/15951/recette.png" style="display: block; height: 429px; margin: 0px auto; width: 640px;" title="A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it."></p>
+<p><img alt="Une page Web qui montre un mur de texte non formaté, parce qu'il n'y a pas d'éléments sur la page pour la structurer." src="recette.png" style="display: block; margin: 0px auto;" title="A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it."></p>
 
 <p>Ceci est dû au fait qu'il n'y a aucun élément indiquant la structure du contenu, et donc le navigateur ne sait pas différencier ce qui est un titre d'un paragraphe. De plus :</p>
 
 <ul>
- <li>Les visiteurs d'une page web la parcourent pour trouver le contenu pertinent. Par conséquent, ils ne lisent souvent que les titres (généralement <a href="http://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/">nous ne passons que très peu de temps sur une page web</a>). S'ils ne trouvent pas le contenu souhaité en quelques secondes, ils seront probablement déçus et chercheront l'information souhaitée ailleurs.</li>
+ <li>Les visiteurs d'une page web la parcourent pour trouver le contenu pertinent. Par conséquent, ils ne lisentsouvent que les titres (généralement <a href="http://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/">nous ne passons que très peu de temps sur une page web</a>). S'ils ne trouvent pas le contenu souhaité en quelques secondes, ils seront probablement déçus et chercheront l'information souhaitée ailleurs.</li>
  <li>Les moteurs de recherche, lorsqu'ils indexent votre page, prennent en considération les titres en tant que mots‑clés ce qui influe sur le classement de la page lors d'une recherche. Sans titre, une page aura un faible référencement (voir {{glossary("SEO")}} (Search Engine Optimization).</li>
  <li>Les personnes malvoyantes ne pouvant lire votre page peuvent utiliser des <a href="https://fr.wikipedia.org/wiki/Lecteur_d%27%C3%A9cran">lecteurs d'écran</a>. Ces logiciels permettent d'accéder rapidement à une partie du texte. Pour cela, ils lisent les titres de votre document aux utilisateurs, leur permettant ainsi de trouver rapidement l'information dont ils ont besoin. Si les titres ne sont pas disponibles, les lecteurs d'écran lisent tout le document, le rendant peu accessible aux personnes avec un handicap visuel.</li>
  <li>Pour composer un style de contenu avec le {{glossary("CSS")}} ou réaliser des choses intéressantes avec le {{glossary("JavaScript")}}, vous devez avoir des éléments enveloppant les contenus pertinents, ce qui permet ensuite de les cibler avec CSS/JavaScript.</li>
@@ -249,7 +249,7 @@ textarea.onkeyup = function(){
 
 <h2 id="Listes">Listes</h2>
 
-<p>Intéressons-nous maintenant aux listes. Il y a des listes partout dans la vie — de la liste de courses à la liste de directions que vous suivez inconsciemment pour rentrer chez vous tous les jours,  sans oublier la liste des instructions que vous suivez dans ce tutoriel ! Les listes sont aussi très répandues sur le Web, nous allons nous intéresser aux trois différents types de liste.</p>
+<p>Intéressons-nous maintenant aux listes. Il y a des listes partout dans la vie — de la liste de courses à la liste de directions que vous suivez inconsciemment pour rentrer chez vous tous les jours, sans oublier la liste des instructions que vous suivez dans ce tutoriel ! Les listes sont aussi très répandues sur le Web, nous allons nous intéresser aux trois différents types de liste.</p>
 
 <h3 id="Listes_non-ordonnées">Listes non-ordonnées</h3>
 
@@ -285,7 +285,6 @@ houmous
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code</h6>
 
-<p> </p>
 
 <pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
@@ -434,7 +433,6 @@ Roulez sur 300 mètres, l'école est sur votre droite</pre>
 <div class="hidden">
 <h6 id="Playable_code_3">Playable code</h6>
 
-<p> </p>
 
 <pre class="brush: html">&lt;h2&gt;Sortie directe&lt;/h2&gt;
 
@@ -574,7 +572,7 @@ textarea.onkeyup = function(){
 
 &lt;textarea id="code" class="input" style="min-height: 200px; width: 95%"&gt;Recette rapide de l'houmous
 
-  Cette recette permet d'obtenir rapidement un houmous savoureux, sans complications. C'est une adaptation de plusieurs recettes différentes que j'ai essayées au fil des ans.
+ Cette recette permet d'obtenir rapidement un houmous savoureux, sans complications. C'est une adaptation de plusieurs recettes différentes que j'ai essayées au fil des ans.
 
   L'houmous est une délicieuse pâte épaisse utilisée dans les plats en Grèce et au Moyen-Orient. Il s'accorde très bien avec la salade, les viandes grillées et du pain calabrais.
 
@@ -592,13 +590,13 @@ textarea.onkeyup = function(){
   Enlever les graines et la tige du poivron, le hacher grossièrement.
   Mettre tous les ingrédients dans un robot et mixer jusqu'à l'obtention d'une pâte.
   Si vous voulez un houmous grenu, ne le mixez pas trop longtemps.
-  Si vous voulez un houmous lisse, mixez-le plus longtemps.
+ Si vous voulez un houmous lisse, mixez-le plus longtemps.
 
   Pour des saveurs différentes, vous pouvez essayer d'y mettre un peu de jus de citron et de coriandre, du tabasco, de la limette et du chipotle, de la harissa et de la menthe ou des épinards et de la feta. Essayez et voyez ce qui vous va.
 
   Conservation
 
-  Mettez l'houmous fini au réfrigérateur dans un récipient fermé. Vous le garderez ainsi pendant environ une semaine.   S'il se met à fermenter, jettez‑le sans hésiter.
+  Mettez l'houmous fini au réfrigérateur dans un récipient fermé. Vous le garderez ainsi pendant environ une semaine. S'il se met à fermenter, jettez‑le sans hésiter.
 
   L'houmous peut être congelé ; consommez‑le dans les deux mois qui suivent sa congélation.&lt;/textarea&gt;
 
@@ -826,7 +824,6 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<p> </p>
 
 <pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
@@ -957,24 +954,20 @@ textarea.onkeyup = function(){
 
 <h2 id="Résumé">Résumé</h2>
 
-<p>C'est tout pour l'instant ! Cet article doit vous avoir donné une bonne idée de la façon de commencer à baliser le texte en HTML et présenté les éléments les plus importants dans ce domaine. Il existe énormément d'autres éléments sémantiques à connaître dans ce domaine ; nous en verrons beaucoup plus dans notre article « More Semantic Elements », plus loin dans ce cours. Dans le prochain article, nous examinerons en détail comment <a href="/fr/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks">créer des hyperliens</a>, qui est peut-être l'élément le plus important sur le Web.</p>
+<p>C'est tout pour l'instant ! Cet article doit vous avoir donné une bonne idée de la façon de commencer à baliser le texte en HTML et présenté les éléments les plus importants dans ce domaine. Il existe énormément d'autres éléments sémantiques à connaître dans ce domaine ; nous en verrons beaucoup plus dans notre article « More Semantic Elements », plus loin dans ce cours. Dans le prochain article, nous examinerons en détail comment <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">créer des hyperliens</a>, qui est peut-être l'élément le plus important sur le Web.</p>
 
 <p>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}</p>
-
-<p> </p>
 
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="/fr/Apprendre/HTML/Introduction_à_HTML/Getting_started">Commencer avec le HTML</a></li>
- <li><a href="/fr/Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML">Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Commencer avec le HTML</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML</a></li>
  <li>Fondamentaux du texte HTML</li>
- <li><a href="/fr/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks">Creation d'hyperliens</a></li>
- <li><a href="/fr/Apprendre/HTML/Introduction_à_HTML/formatage-avance-texte">Formatage avancé du texte</a></li>
- <li><a href="/fr/Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure">Structure de Site Web et de document</a></li>
- <li><a href="/fr/Apprendre/HTML/Introduction_à_HTML/Debugging_HTML">Déboguer de l'HTML</a></li>
- <li><a href="/fr/Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter">Faire une Lettre</a></li>
- <li><a href="/fr/Apprendre/HTML/Introduction_à_HTML/Structuring_a_page_of_content">Structurer une page de contenu</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Creation d'hyperliens</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">Formatage avancé du texte</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">Structure de Site Web et de document</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Déboguer de l'HTML</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter">Faire une Lettre</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content">Structurer une page de contenu</a></li>
 </ul>
-
-<p> </p>

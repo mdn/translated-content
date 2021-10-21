@@ -58,7 +58,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 ## インスタンスメソッド
 
 - {{jsxref("Intl/Locale/maximize", "Intl.Locale.prototype.maximize()")}}
-  - : 既存の値に基づいて、ロケールの言語、表記法、地域の最も可能性の高い値を取得します。
+  - : 既存の値に基づいて、ロケールの言語、文字体系、地域の最も可能性の高い値を取得します。
 - {{jsxref("Intl/Locale/minimize", "Intl.Locale.prototype.minimize()")}}
   - : {{jsxref("Intl/Locale/maximize", "Locale.maximize()")}} を呼び出すことで追加されるロケールに関する情報を削除しようとします。
 - {{jsxref("Intl/Locale/toString", "Intl.Locale.prototype.toString()")}}

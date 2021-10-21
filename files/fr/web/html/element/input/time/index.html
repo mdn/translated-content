@@ -14,8 +14,6 @@ translation_of: Web/HTML/Element/input/time
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuer à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <p>L'interface utilisateur affichée pour le contrôle peut varier d'un navigateur à l'autre. À l'heure où nous écrivons ces lignes, seul Safari ne prend pas en charge ce type de contrôle. Pour ce dernier, l'élément sera transformé en simple <code><a href="/fr/docs/Web/HTML/Element/Input/text">&lt;input type="text"&gt;</a></code>.</p>
 
 <h2 id="Apparence">Apparence</h2>
@@ -24,23 +22,25 @@ translation_of: Web/HTML/Element/input/time
 
 <p>Pour Chrome/Opera, le contrôle <code>time</code> possède deux cases permettant de saisir les heures d'une part et les minutes d'autre part (sur 12 ou 24 heures selon la locale de l'ordinateur), deux flèches pour augmenter ou réduire la valeur et une croix permettant de supprimer la valeur.</p>
 
-<p><img alt="Contrôle Chrome pour une saisie avec une locale sur 24h" src="https://mdn.mozillademos.org/files/15399/chrome-time.png" style="display: block; height: 31px; margin: 0px auto; width: 82px;"><img alt="Contrôle de Chrome pour une saisie avec une locale sur 12h" src="https://mdn.mozillademos.org/files/16417/chrome_time.PNG" style="display: block; height: 31px; margin: 0px auto; width: 82px;"></p>
+<p><img alt="Contrôle Chrome pour une heure sur 12 heures" src="chrome_time.png">12 heures</p>
+
+<p><img alt="Contrôle Chrome pour une heure sur 24 heures" src="chrome-time.png">24 heures</p>
 
 <h3 id="Firefox">Firefox</h3>
 
 <p>Pour Firefox, l'aspect du contrôle est similaire mais il ne possède pas les flèches d'incrément. L'horloge peut également s'utiliser sur un format 12 heures ou 24 heures (selon la locale du système). Un bouton rond avec une croix permet de réinitialiser la valeur du contrôle.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15403/firefox-time.png" style="display: block; height: 29px; margin: 0px auto; width: 106px;"></p>
+<p><img alt="Contrôle Firefox pour une heure sur 12 heures" src="firefox-time.png">12 heures</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16461/firefox-time-24.png" style="display: block; height: 29px; margin: 0px auto; width: 106px;"></p>
+<p><img alt="Contrôle Firefox pour une heure sur 24 heures" src="firefox-time-24.png">24 heures</p>
 
 <h3 id="Edge">Edge</h3>
 
 <p>Pour Edge, le contrôle affiché est un plus élaboré : il affiche un sélecteur avec deux bandes déroulantes pour choisir l'heure et les minutes (sur 12 ou 24 heures selon la locale) :</p>
 
-<p><img alt="Contrôle Edge pour la saisie sur 24h" src="https://mdn.mozillademos.org/files/15401/edge-time.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="Contrôle Edge pour la saisie sur 12 heures" src="edge_time.png">12 heures</p>
 
-<p><img alt="Contrôle Edge pour la saisie sur 12 heures" src="https://mdn.mozillademos.org/files/16418/edge_time.PNG" style="display: block; height: 360px; margin: 0px auto; width: 233px;"></p>
+<p><img alt="Contrôle Edge pour la saisie sur 24 heures" src="edge-time.png">24 heures</p>
 
 <h2 id="Valeur">Valeur</h2>
 
@@ -119,7 +119,9 @@ startTime.addEventListener("input", function() {
  </tbody>
 </table>
 
-<div class="note"><strong>Note :</strong> À la différence d'autres types de donnée, les valeurs pour les heures sont sur un domaine <strong>périodique</strong>. Cela signifie qu'une fois la valeur maximale dépassée, on revient à la valeur minimale (autrement dit, on fait le tour de l'horloge). Ainsi, si on indique <code>min</code> avec la valeur <code>"14:00"</code> et <code>max</code> avec la valeur <code>"2:00"</code>, cela signifie que les valeurs autorisées sont comprises entre 2 heures de l'après-midi et jusqu'à 2 heures du matin le jour suivant.</div>
+<div class="note">
+  <p><strong>Note :</strong> À la différence d'autres types de donnée, les valeurs pour les heures sont sur un domaine <strong>périodique</strong>. Cela signifie qu'une fois la valeur maximale dépassée, on revient à la valeur minimale (autrement dit, on fait le tour de l'horloge). Ainsi, si on indique <code>min</code> avec la valeur <code>"14:00"</code> et <code>max</code> avec la valeur <code>"2:00"</code>, cela signifie que les valeurs autorisées sont comprises entre 2 heures de l'après-midi et jusqu'à 2 heures du matin le jour suivant.</p>
+</div>
 
 <h3 id="htmlattrdef(max)">{{htmlattrdef("max")}}</h3>
 
@@ -249,13 +251,8 @@ input:valid+span:after {
 <p>Si vous essayez de soumettre le formulaire sans avoir saisi de valeur (ou avec une heure en dehors des heures d'ouverture indiquées), le navigateur affichera une erreur. Vous pouvez manipuler le résultat obtenu :</p>
 
 <p>{{EmbedLiveSample('Rendre_la_saisie_obligatoire', 600, 120)}}</p>
-
-<p>Voici une capture d'écran (en anglais) si votre navigateur ne prend pas en charge cete fonctionnalité :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/15405/firefox-validation-message.png" style="display: block; margin: 0 auto;"></p>
-
 <div class="warning">
-<p><strong>Attention !</strong> Il est également important de vérifier le format de la valeur saisie côté serveur ! En effet, il est tout à fait possible pour un utilisateur de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.</p>
+<p><strong>Attention :</strong> Il est également important de vérifier le format de la valeur saisie côté serveur ! En effet, il est tout à fait possible pour un utilisateur de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.</p>
 </div>
 
 <h2 id="Gérer_la_prise_en_charge_des_navigateurs">Gérer la prise en charge des navigateurs</h2>
@@ -264,7 +261,7 @@ input:valid+span:after {
 
 <p>Pour les plateformes mobiles (Android et iOS par exemple), les systèmes d'exploitation fournissent des interfaces particulièrement adaptées aux environnements tactiles. Voici par exemple le sélecteur d'heure pour Chrome sur Android :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15407/chrome-android-time.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="chrome-android-time.png"></p>
 
 <p>Lorsqu'un navigateur ne prend pas en charge ce type d'élément, il utilise un champ texte (<code>&lt;input type="text"&gt;</code>) à la place. Mais cela crée des problèmes, tant au niveau de l'interface utilisateur que de la cohérence des données et du format.</p>
 
@@ -301,8 +298,7 @@ input:valid+span:after {
 
 <p>Il reste donc un problème.</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -326,7 +322,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <p>Actuellement, la meilleure façon de gérer ce type de saisie pour les différents navigateurs consiste à utiliser deux contrôles (le premier pour la saisie des heures et le second pour la saisie des minutes) avec deux éléments {{htmlelement("select")}} (cf. ci-après) ou d'utiliser certaines bibliothèques JavaScript telles que <a href="https://jqueryui.com/datepicker/">jQuery date picker</a> ou encore <a href="http://timepicker.co/">jQuery timepicker plugin</a>.</p>
 
@@ -364,8 +359,7 @@ input:valid+span:after {
 
 <p>Les valeurs pour les heures et les minutes seront générées dynamiquement en JavaScript.</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -389,7 +383,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <p>La partie la plus intéressante du code est celle qui permet de détecter si le contrôle natif est pris en charge. Pour cela, on crée un nouvel élément {{htmlelement("input")}} et on modifie son attribut <code>type</code> afin qu'il vaille <code>time</code>, immédiatement après, on vérifie la valeur du type. Si le navigateur ne prend pas en charge l'élément, il renverra <code>text</code> car l'élément a été transformé en <code>&lt;input type="text"&gt;</code>, dans ce cas, on masque le sélecteur natif et on affiche l'interface alternative avec les deux éléments {{htmlelement("select")}}.</p>
 

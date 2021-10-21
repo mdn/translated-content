@@ -11,17 +11,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>TypedArray[@@species]</strong></code> アクセッサプロパティは、<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array</a> のコンストラクタを返します。</p>
+<p><code><strong>TypedArray[@@species]</strong></code> アクセッサプロパティは、<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array</a> のコンストラクタを返します。</p>
 
 <h2 id="説明">説明</h2>
 
-<p><code>species</code> アクセッサプロパティは、<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array</a> オブジェクトの既定のコンストラクタを返します。サブクラスのコンストラクタは、コンストラクタの割り当てを変更するために、これをオーバーライドできます。</p>
+<p><code>species</code> アクセッサプロパティは、<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array</a> オブジェクトの既定のコンストラクタを返します。サブクラスのコンストラクタは、コンストラクタの割り当てを変更するために、これをオーバーライドできます。</p>
 
 <h2 id="例">例</h2>
 
 <h3 id="普通のオブジェクト">普通のオブジェクト</h3>
 
-<p><code>species</code> プロパティは、指定した <a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array</a> オブジェクトの typed array コンストラクタを既定のコンストラクタ関数として返します。</p>
+<p><code>species</code> プロパティは、指定した <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array</a> オブジェクトの typed array コンストラクタを既定のコンストラクタ関数として返します。</p>
 
 <pre class="brush: js notranslate">Int8Array[Symbol.species];    // function Int8Array()
 Uint8Array[Symbol.species];   // function Uint8Array()
@@ -30,7 +30,7 @@ Float32Array[Symbol.species]; // function Float32Array()
 
 <h3 id="派生オブジェクト">派生オブジェクト</h3>
 
-<p>派生コレクションオブジェクト（たとえば、カスタム typed array の <code>MyTypedArray</code>）では、<code>MyTypedArray</code> の species は <code>MyTypedArray</code> コンストラクタです。しかし、派生クラスのメソッドで、親である <a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array</a> オブジェクトを返すためにこれをオーバーライドしたいかもしれません。</p>
+<p>派生コレクションオブジェクト（たとえば、カスタム typed array の <code>MyTypedArray</code>）では、<code>MyTypedArray</code> の species は <code>MyTypedArray</code> コンストラクタです。しかし、派生クラスのメソッドで、親である <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array</a> オブジェクトを返すためにこれをオーバーライドしたいかもしれません。</p>
 
 <pre class="brush: js notranslate">class MyTypedArray extends Uint8Array {
   // MyTypedArray の species を親である Uint8Array コンストラクタにオーバーライド

@@ -12,7 +12,14 @@ original_slug: Web/JavaScript/Reference/Functions/애로우_펑션
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
-<p>화살표 함수 표현(<strong>arrow function expression</strong>)은 <a href="/ko/docs/Web/JavaScript/Reference/Operators/function">function 표현</a>에 비해 구문이 짧고  자신의 <a href="/ko/docs/Web/JavaScript/Reference/Operators/this">this</a>, <a href="/ko/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>, <a href="/ko/docs/Web/JavaScript/Reference/Operators/super">super</a> 또는 <a href="/ko/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a>을 바인딩 하지 않습니다. 화살표 함수는 항상 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/name">익명</a>입니다. 이  함수 표현은 메소드 함수가 아닌 곳에 가장 적합합니다. 그래서 생성자로서 사용할 수 없습니다.</p>
+<p>화살표 함수 표현(<strong>arrow function expression</strong>)은 <a href="/ko/docs/Web/JavaScript/Reference/Operators/function">전통적인 함수표현(function)</a>의 간편한 대안입니다.  하지만, 화살표 함수는 몇 가지 제한점이 있고 모든 상황에 사용할 수는 없습니다.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/this">this</a>나 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/super">super</a>에 대한 바인딩이 없고, <a href="https://developer.mozilla.org/ko/docs/Glossary/Method">methods</a> 로 사용될 수 없습니다.</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a>키워드가 없습니다.</li>
+<li>일반적으로 스코프를 지정할 때 사용하는 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call</a>, <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply</a>, <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">bind</a> methods를 이용할 수 없습니다.</li>
+<li>생성자<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes/constructor">(Constructor)</a>로 사용할 수 없습니다.</li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/yield">yield</a>를 화살표 함수 내부에서 사용할 수 없습니다.</li>
+</ul>
 
 <p>{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}</p>
 

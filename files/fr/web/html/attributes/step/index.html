@@ -12,7 +12,7 @@ translation_of: Web/HTML/Attributes/step
 ---
 <div>{{HTMLSidebar}}</div>
 
-<p class="summary">L'attribut <strong><code>step</code></strong> est un nombre qui indique l'incrément que la valeur doit suivre ou le mot-clé <code>any</code>. Il est valable pour les types de saisie numérique, notamment les <a href="/fr/docs/Web/HTML/Element/Input/date"><code>date</code></a>, <a href="/fr/docs/Web/HTML/Element/Input/month"><code>month</code></a>, <a href="/fr/docs/Web/HTML/Element/Input/week"><code>week</code></a>, <a href="/fr/docs/Web/HTML/Element/Input/time"><code>time</code></a>, <a href="/fr/docs/Web/HTML/Element/Input/datetime-local"><code>datetime-local</code></a>, <a href="/fr/docs/Web/HTML/Element/Input/number"><code>number</code></a> et <a href="/fr/docs/Web/HTML/Element/Input/range"><code>range</code></a>.</p>
+<p>L'attribut <strong><code>step</code></strong> est un nombre qui indique l'incrément que la valeur doit suivre ou le mot-clé <code>any</code>. Il est valable pour les types de saisie numérique, notamment les <a href="/fr/docs/Web/HTML/Element/Input/date"><code>date</code></a>, <a href="/fr/docs/Web/HTML/Element/Input/month"><code>month</code></a>, <a href="/fr/docs/Web/HTML/Element/Input/week"><code>week</code></a>, <a href="/fr/docs/Web/HTML/Element/Input/time"><code>time</code></a>, <a href="/fr/docs/Web/HTML/Element/Input/datetime-local"><code>datetime-local</code></a>, <a href="/fr/docs/Web/HTML/Element/Input/number"><code>number</code></a> et <a href="/fr/docs/Web/HTML/Element/Input/range"><code>range</code></a>.</p>
 
 <p><code>step</code> définit l'incrément obtenu lors du clic sur les boutons déroulants haut et bas, du déplacement d'un curseur vers la gauche et la droite sur une plage, et de la validation des différents types de date. S'il n'est pas explicitement inclus, <code>step</code> prend par défaut la valeur 1 pour <code>number</code> et <code>range</code>, et 1 type d'unité (minute, semaine, mois, jour) pour les types d'entrée date/heure. La valeur doit être un nombre positif - entier ou flottant - ou la valeur spéciale <code>any</code>, ce qui signifie qu'aucun incrément n'est impliqué et que toute valeur est autorisée (sauf autres contraintes, comme <a href="/fr/docs/Web/HTML/Attributes/min"><code>min</code></a> et <a href="/fr/docs/Web/HTML/Attributes/max"><code>max</code></a>).</p>
 
@@ -33,37 +33,37 @@ translation_of: Web/HTML/Attributes/step
     <tr>
       <td><a href="/fr/docs/Web/HTML/Element/Input/date"><code>date</code></a></td>
       <td>1 (jour)</td>
-      <td><code class="brush: html">&lt;input type="date" min="2019-12-25" step="1"&gt;</code></td>
+      <td><pre class="brush: html">&lt;input type="date" min="2019-12-25" step="1"&gt;</pre></td>
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/HTML/Element/Input/month"><code>month</code></a></td>
       <td>1 (mois)</td>
-      <td><code class="brush: html">&lt;input type="month" min="2019-12" step="12"&gt;</code></td>
+      <td><pre class="brush: html">&lt;input type="month" min="2019-12" step="12"&gt;</pre></td>
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/HTML/Element/Input/week"><code>week</code></a></td>
       <td>1 (semaine)</td>
-      <td><code class="brush: html">&lt;input type="week" min="2019-W23" step="2"&gt;</code></td>
+      <td><pre class="brush: html">&lt;input type="week" min="2019-W23" step="2"&gt;</pre></td>
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/HTML/Element/Input/time"><code>time</code></a></td>
       <td>60 (secondes)</td>
-      <td><code class="brush: html">&lt;input type="time" min="09:00" step="900"&gt;</code></td>
+      <td><pre class="brush: html">&lt;input type="time" min="09:00" step="900"&gt;</pre></td>
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/HTML/Element/Input/datetime-local"><code>datetime-local</code></a></td>
       <td>1 (jour)</td>
-      <td><code class="brush: html">&lt;input type="datetime-local" min="019-12-25T19:30" step="7"&gt;</code></td>
+      <td><pre class="brush: html">&lt;input type="datetime-local" min="019-12-25T19:30" step="7"&gt;</pre></td>
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/HTML/Element/Input/number"><code>number</code></a></td>
       <td>1</td>
-      <td><code class="brush: html">&lt;input type="number" min="0" step="0.1" max="10"&gt;</code></td>
+      <td><pre class="brush: html">&lt;input type="number" min="0" step="0.1" max="10"&gt;</pre></td>
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/HTML/Element/Input/range"><code>range</code></a></td>
       <td>1</td>
-      <td><code class="brush: html">&lt;input type="range" min="0" step="2" max="10"&gt;</code></td>
+      <td><pre class="brush: html">&lt;input type="range" min="0" step="2" max="10"&gt;</pre></td>
     </tr>
   </tbody>
 </table>
@@ -88,9 +88,8 @@ translation_of: Web/HTML/Attributes/step
 
 <div>{{EmbedLiveSample("min_impact_on_step","",50)}}</div>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Lorsque les données saisies par l'utilisateur ne respectent pas la configuration indiquée par l'incrément, la valeur est considérée comme non valide dans la validation des contraintes et correspondra aux pseudoclasses <a href="/fr/docs/Web/CSS/:invalid"><code>:invalid</code></a> et <a href="/fr/docs/Web/CSS/:out-of-range"><code>:out-of-range</code></a>.</p>
+<div class="note">
+  <p><strong>Note :</strong>Lorsque les données saisies par l'utilisateur ne respectent pas la configuration indiquée par l'incrément, la valeur est considérée comme non valide dans la validation des contraintes et correspondra aux pseudoclasses <a href="/fr/docs/Web/CSS/:invalid"><code>:invalid</code></a> et <a href="/fr/docs/Web/CSS/:out-of-range"><code>:out-of-range</code></a>.</p>
 </div>
 
 <p>Voir <a href="/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation">Validation côté client</a> et <a href="/fr/docs/Web/API/ValidityState/stepMismatch"><code>stepMismatch</code></a> pour plus d'informations.</p>

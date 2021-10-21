@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 
 <p>JavaScript のコードをページに挿入します。</p>
 
-<p>コードを挿入できるページの URL は、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">マッチパターン</a> により指定できます。 つまり、URL の scheme 部は、"http", "https", "file", "ftp" のいずれかでなければなりません。そして、その URL に対する明示的な <a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host パーミッション</a>、または <a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">activeTab パーミッション</a>が必要です。</p>
+<p>コードを挿入できるページの URL は、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">マッチパターン</a> により指定できます。 つまり、URL の scheme 部は、"http", "https", "file", "ftp" のいずれかでなければなりません。そして、その URL に対する明示的な <a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host パーミッション</a>、または <a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">activeTab パーミッション</a>が必要です。</p>
 
 <p>また、自らの拡張機能パッケージに含まれるページに対してであれば、次の方法でコードを挿入することも可能です。</p>
 
@@ -33,7 +33,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 
 <p>挿入するスクリプトのことを、コンテンツスクリプトと呼びます。詳細は <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">コンテンツスクリプト</a> で学んでください。</p>
 
-<p>これは、<code><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返す非同期関数です。</p>
+<p>これは、<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返す非同期関数です。</p>
 
 <h2 id="構文">構文</h2>
 
@@ -70,13 +70,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 
 <h3 id="戻り値">戻り値</h3>
 
-<p>オブジェクト配列を使って fulfilled 状態にされる <code><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> です。それぞれのオブジェクトは、フレームに挿入されたスクリプトの結果を表します。</p>
+<p>オブジェクト配列を使って fulfilled 状態にされる <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> です。それぞれのオブジェクトは、フレームに挿入されたスクリプトの結果を表します。</p>
 
 <p>スクリプトの結果とは最後に評価された文のことです。これは、<a href="/ja/docs/Tools/Web_Console">Webコンソール</a>で実行されたスクリプトの出力 (結果であって、<code>console.log()</code> の出力のことではありません) に似ています。例えば、次のようなスクリプトを挿入したとします。</p>
 
 <pre class="brush: js">var foo='my result';foo;</pre>
 
-<p>この場合、結果配列には、文字列 "<code>my result</code>" が含まれます。結果は、<a href="/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> が可能でなければなりません。最後の文を <code><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> にすることもできますが、<a href="https://github.com/mozilla/webextension-polyfill#tabsexecutescript">webextension-polyfill</a> ライブラリではサポートされていません。</p>
+<p>この場合、結果配列には、文字列 "<code>my result</code>" が含まれます。結果は、<a href="/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> が可能でなければなりません。最後の文を <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> にすることもできますが、<a href="https://github.com/mozilla/webextension-polyfill#tabsexecutescript">webextension-polyfill</a> ライブラリではサポートされていません。</p>
 
 <p>エラーが発生した場合、Promise はエラーメッセージを使って rejected 状態にされます。</p>
 

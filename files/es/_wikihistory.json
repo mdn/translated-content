@@ -6609,14 +6609,6 @@
       "Izel"
     ]
   },
-  "Web/API/File/fileName": {
-    "modified": "2020-02-09T09:40:59.258Z",
-    "contributors": [
-      "blanchart",
-      "IsraelFloresDGA",
-      "BrodaNoel"
-    ]
-  },
   "Web/API/File/lastModifiedDate": {
     "modified": "2019-03-23T22:06:34.338Z",
     "contributors": [
@@ -7446,14 +7438,6 @@
       "empirreamm"
     ]
   },
-  "Web/API/KeyboardEvent/which": {
-    "modified": "2019-03-23T23:25:30.040Z",
-    "contributors": [
-      "fscholz",
-      "jsx",
-      "arthusu"
-    ]
-  },
   "Web/API/Location": {
     "modified": "2020-03-11T08:46:40.807Z",
     "contributors": [
@@ -7920,14 +7904,6 @@
       "fscholz",
       "arquigames",
       "joredjs"
-    ]
-  },
-  "Web/API/PositionOptions": {
-    "modified": "2019-03-23T23:16:28.831Z",
-    "contributors": [
-      "fscholz",
-      "LeoHirsch",
-      "lupomontero"
     ]
   },
   "Web/API/PushManager": {
@@ -8440,6 +8416,14 @@
       "fscholz"
     ]
   },
+  "Web/API/UIEvent/which": {
+    "modified": "2019-03-23T23:25:30.040Z",
+    "contributors": [
+      "fscholz",
+      "jsx",
+      "arthusu"
+    ]
+  },
   "Web/API/URL": {
     "modified": "2019-03-23T22:19:12.735Z",
     "contributors": [
@@ -8814,14 +8798,6 @@
     "modified": "2019-03-23T22:45:47.266Z",
     "contributors": [
       "julian3xl"
-    ]
-  },
-  "Web/API/Window/crypto": {
-    "modified": "2020-02-12T20:26:38.795Z",
-    "contributors": [
-      "joseluisq",
-      "AlePerez92",
-      "victorjavierss"
     ]
   },
   "Web/API/Window/devicePixelRatio": {
@@ -9244,6 +9220,14 @@
     "modified": "2020-10-15T22:14:17.553Z",
     "contributors": [
       "Bumxu"
+    ]
+  },
+  "Web/API/crypto_property": {
+    "modified": "2020-02-12T20:26:38.795Z",
+    "contributors": [
+      "joseluisq",
+      "AlePerez92",
+      "victorjavierss"
     ]
   },
   "Web/API/fetch": {
@@ -20392,12 +20376,6 @@
       "Nachec"
     ]
   },
-  "Web/Progressive_web_apps/Responsive/Media_types": {
-    "modified": "2019-03-18T21:15:11.297Z",
-    "contributors": [
-      "luismj"
-    ]
-  },
   "Web/SVG": {
     "modified": "2019-03-23T23:44:20.243Z",
     "contributors": [
@@ -21362,10 +21340,26 @@
       "tureey"
     ]
   },
+  "conflicting/Web/API/File/name": {
+    "modified": "2020-02-09T09:40:59.258Z",
+    "contributors": [
+      "blanchart",
+      "IsraelFloresDGA",
+      "BrodaNoel"
+    ]
+  },
   "conflicting/Web/API/Geolocation": {
     "modified": "2019-03-23T23:01:31.642Z",
     "contributors": [
       "fscholz"
+    ]
+  },
+  "conflicting/Web/API/Geolocation/getCurrentPosition": {
+    "modified": "2019-03-23T23:16:28.831Z",
+    "contributors": [
+      "fscholz",
+      "LeoHirsch",
+      "lupomontero"
     ]
   },
   "conflicting/Web/API/HTML_Drag_and_Drop_API": {
@@ -21527,6 +21521,12 @@
     "modified": "2019-03-23T22:31:07.427Z",
     "contributors": [
       "miguelsp"
+    ]
+  },
+  "conflicting/Web/CSS/Media_Queries/Using_media_queries": {
+    "modified": "2019-03-18T21:15:11.297Z",
+    "contributors": [
+      "luismj"
     ]
   },
   "conflicting/Web/CSS/cursor": {

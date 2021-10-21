@@ -30,7 +30,7 @@
 /ko/docs/CSS/Getting_Started/Content	/ko/docs/Learn/CSS/Howto/Generated_content
 /ko/docs/CSS/Getting_Started/How_CSS_works	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ko/docs/CSS/Getting_Started/JavaScript	/ko/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-/ko/docs/CSS/Getting_Started/Media	/ko/docs/Web/Progressive_web_apps/Responsive/Media_types
+/ko/docs/CSS/Getting_Started/Media	/ko/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /ko/docs/CSS/Getting_Started/SVG_graphics	/ko/docs/Web/SVG/Tutorial/SVG_and_CSS
 /ko/docs/CSS/Getting_Started/Selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors
 /ko/docs/CSS/Getting_Started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
@@ -66,7 +66,7 @@
 /ko/docs/CSS/시작하기/CSS_동작_원리	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ko/docs/CSS/시작하기/CSS란	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ko/docs/CSS/시작하기/내용물	/ko/docs/Learn/CSS/Howto/Generated_content
-/ko/docs/CSS/시작하기/미디어	/ko/docs/Web/Progressive_web_apps/Responsive/Media_types
+/ko/docs/CSS/시작하기/미디어	/ko/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /ko/docs/CSS/시작하기/색상	/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
 /ko/docs/CSS/시작하기/설렉터	/en-US/docs/Learn/CSS/Building_blocks/Selectors
 /ko/docs/CSS/시작하기/왜_CSS를_사용하나	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
@@ -76,7 +76,7 @@
 /ko/docs/CSS:Getting_Started:Content	/ko/docs/Learn/CSS/Howto/Generated_content
 /ko/docs/CSS:Getting_Started:How_CSS_works	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ko/docs/CSS:Getting_Started:JavaScript	/ko/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-/ko/docs/CSS:Getting_Started:Media	/ko/docs/Web/Progressive_web_apps/Responsive/Media_types
+/ko/docs/CSS:Getting_Started:Media	/ko/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /ko/docs/CSS:Getting_Started:SVG_graphics	/ko/docs/Web/SVG/Tutorial/SVG_and_CSS
 /ko/docs/CSS:Getting_Started:Selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors
 /ko/docs/CSS:Getting_Started:What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
@@ -452,6 +452,7 @@
 /ko/docs/Web/API/Element/firstChild	/ko/docs/Web/API/Node/firstChild
 /ko/docs/Web/API/Event/createEvent	/ko/docs/Web/API/Document/createEvent
 /ko/docs/Web/API/Fetch_API/Fetch의_사용법	/ko/docs/Web/API/Fetch_API/Using_Fetch
+/ko/docs/Web/API/File/size	/ko/docs/Web/API/Blob/size
 /ko/docs/Web/API/FileReader.result	/ko/docs/Web/API/FileReader/result
 /ko/docs/Web/API/HTMLHyperlinkElementUtils/href	/ko/docs/Web/API/HTMLAnchorElement/href
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API	/ko/docs/Web/API/HTML_Drag_and_Drop_API
@@ -472,6 +473,8 @@
 /ko/docs/Web/API/Notification.permission	/ko/docs/Web/API/Notification/permission
 /ko/docs/Web/API/ParentNode/childElementCount	/ko/docs/Web/API/Element/childElementCount
 /ko/docs/Web/API/Position	/ko/docs/Web/API/GeolocationPosition
+/ko/docs/Web/API/PositionOptions	/ko/docs/conflicting/Web/API/Geolocation/getCurrentPosition
+/ko/docs/Web/API/RTCConfiguration	/ko/docs/conflicting/Web/API/RTCPeerConnection/RTCPeerConnection
 /ko/docs/Web/API/RandomSource	/ko/docs/Web/API/Crypto/getRandomValues
 /ko/docs/Web/API/RandomSource/getRandomValues	/ko/docs/Web/API/Crypto/getRandomValues
 /ko/docs/Web/API/Screen.lockOrientation	/ko/docs/Web/API/Screen/lockOrientation
@@ -490,6 +493,7 @@
 /ko/docs/Web/API/WebGL_API/Using_shaders_to_apply_color_in_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 /ko/docs/Web/API/WebGL_API/Using_textures_in_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /ko/docs/Web/API/Web_Workers_API/basic_usage	/ko/docs/Web/API/Web_Workers_API/Using_web_workers
+/ko/docs/Web/API/Window/crypto	/ko/docs/Web/API/crypto_property
 /ko/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/ko/docs/Web/API/setTimeout
 /ko/docs/Web/API/WindowTimers/setTimeout	/ko/docs/Web/API/setTimeout
 /ko/docs/Web/API/XMLHttpRequest/timeout	/ko/docs/Web/API/XMLHttpRequest/timeout_event
@@ -529,7 +533,7 @@
 /ko/docs/Web/CSS/Getting_Started/Content	/ko/docs/Learn/CSS/Howto/Generated_content
 /ko/docs/Web/CSS/Getting_Started/How_CSS_works	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ko/docs/Web/CSS/Getting_Started/JavaScript	/ko/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-/ko/docs/Web/CSS/Getting_Started/Media	/ko/docs/Web/Progressive_web_apps/Responsive/Media_types
+/ko/docs/Web/CSS/Getting_Started/Media	/ko/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /ko/docs/Web/CSS/Getting_Started/SVG_graphics	/ko/docs/Web/SVG/Tutorial/SVG_and_CSS
 /ko/docs/Web/CSS/Getting_Started/Selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors
 /ko/docs/Web/CSS/Getting_Started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
@@ -560,7 +564,7 @@
 /ko/docs/Web/CSS/시작하기/CSS_동작_원리	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ko/docs/Web/CSS/시작하기/CSS란	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ko/docs/Web/CSS/시작하기/내용물	/ko/docs/Learn/CSS/Howto/Generated_content
-/ko/docs/Web/CSS/시작하기/미디어	/ko/docs/Web/Progressive_web_apps/Responsive/Media_types
+/ko/docs/Web/CSS/시작하기/미디어	/ko/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /ko/docs/Web/CSS/시작하기/색상	/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
 /ko/docs/Web/CSS/시작하기/설렉터	/en-US/docs/Learn/CSS/Building_blocks/Selectors
 /ko/docs/Web/CSS/시작하기/왜_CSS를_사용하나	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
@@ -681,6 +685,7 @@
 /ko/docs/Web/Media/Formats/코덱파라미터	/ko/docs/Web/Media/Formats/codecs_parameter
 /ko/docs/Web/Performance/브라우저는_어떻게_동작하는가	/ko/docs/Web/Performance/How_browsers_work
 /ko/docs/Web/Performance/중요_렌더링_경로	/ko/docs/Web/Performance/Critical_rendering_path
+/ko/docs/Web/Progressive_web_apps/Responsive/Media_types	/ko/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /ko/docs/Web/Progressive_web_apps/소개	/ko/docs/Web/Progressive_web_apps/Introduction
 /ko/docs/Web/Reference/Events	/ko/docs/Web/Events
 /ko/docs/Web/Reference/Events/DOMContentLoaded	/ko/docs/Web/API/Window/DOMContentLoaded_event
