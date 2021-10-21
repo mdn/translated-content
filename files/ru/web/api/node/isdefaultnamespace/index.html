@@ -9,7 +9,7 @@ translation_of: Web/API/Node/isDefaultNamespace
 
 <p>Метод <strong><code>Node.isDefaultNamespace()</code></strong> принимает URI пространства имён в качестве аргумента и возвращает {{jsxref("Boolean")}} со значением <code>true</code> если пространство имён является пространством имён данного узла по умолчанию или <code>false</code> если нет.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><em>result</em> = <em>node</em>.isDefaultNamespace(<em>namespaceURI</em>)
 </pre>
@@ -19,14 +19,14 @@ translation_of: Web/API/Node/isDefaultNamespace
  <li><code>namespaceURI</code> это строка представляющая собой пространство имён, на которое элемент будет проверен.</li>
 </ul>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush:js">var XULNS = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 var el = document.getElementsByTagNameNS(XULNS, 'textbox')[0];
 
 alert(el.isDefaultNamespace(XULNS)); // true</pre>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <ul>
  <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-isDefaultNamespace">DOM Level 3 Core: isDefaultNamespace</a></li>

@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
 <div>{{JSRef("Global_Objects", "RegExp")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Конструктор <strong><code>RegExp</code></strong> создаёт объект регулярного выражения для сопоставления текста с шаблоном.</p>
 
@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 
 <p class="hidden">Исходный код этого интерактивного примера хранится в репозитории на GitHub. Если вы хотите участвовать в проекте интерактивных примеров, пожалуйста, склонируйте <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> и пришлите нам запрос на принятие изменений.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <p>Возможны как литеральная запись, так и запись через конструктор:</p>
 
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 new RegExp(<var>pattern</var>, <var>flags</var>)</code>
 </pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>pattern</code></dt>
@@ -52,7 +52,7 @@ new RegExp(<var>pattern</var>, <var>flags</var>)</code>
  </dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Существует два способа создания объекта <code>RegExp</code>: литеральная запись и использование конструктора. При записи строк параметры в литеральной записи не используют символы кавычек, в то время как параметры функции-конструктора используют кавычки. Так что следующие выражения создают одинаковые регулярные выражения:</p>
 
@@ -70,7 +70,7 @@ new RegExp('ab+c', 'i');
 var re = new RegExp('\\w+');
 </pre>
 
-<h2 id="Special_characters_meaning_in_regular_expressions" name="Special_characters_meaning_in_regular_expressions">Значение специальных символов в регулярных выражениях</h2>
+<h2 id="Special_characters_meaning_in_regular_expressions">Значение специальных символов в регулярных выражениях</h2>
 
 <ul>
  <li><a href="#character-classes">Символьные классы</a></li>
@@ -423,7 +423,7 @@ var re = new RegExp('\\w+');
  </tbody>
 </table>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <dl>
  <dt>{{jsxref("RegExp.prototype")}}</dt>
@@ -434,25 +434,25 @@ var re = new RegExp('\\w+');
 
 <div>{{jsOverrides("Function", "Properties", "prototype")}}</div>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
 <p>Глобальный объект <code>RegExp</code> не имеет собственных методов, однако, он наследует некоторые методы через цепочку прототипов.</p>
 
 <div>{{jsOverrides("Function", "Methods", "prototype")}}</div>
 
-<h2 id="RegExp_prototype_objects_and_instances" name="RegExp_prototype_objects_and_instances">Экземпляры регулярного выражения</h2>
+<h2 id="RegExp_prototype_objects_and_instances">Экземпляры регулярного выражения</h2>
 
-<h3 id="Properties_of_RegExp_instance" name="Properties_of_RegExp_instance">Свойства</h3>
+<h3 id="Properties_of_RegExp_instance">Свойства</h3>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype', 'Properties')}}</div>
 
-<h3 id="Methods_of_RegExp_instance" name="Methods_of_RegExp_instance">Методы</h3>
+<h3 id="Methods_of_RegExp_instance">Методы</h3>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype', 'Methods')}}</div>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_a_regular_expression_to_change_data_format" name="Example:_Using_a_regular_expression_to_change_data_format">Пример: использование регулярных выражений для смены формата данных</h3>
+<h3 id="Example_Using_a_regular_expression_to_change_data_format">Пример: использование регулярных выражений для смены формата данных</h3>
 
 <p>Следующий скрипт использует метод {{jsxref("String.prototype.replace()", "replace()")}} экземпляра строки {{jsxref("Global_Objects/String", "String")}} для сопоставления с именем в формате <em>имя фамилия</em> и выводит его в формате <em>фамилия, имя</em>. В тесте замены скрипт использует заменители <code>$1</code> и <code>$2</code>, которые заменяются на результаты соответствующих сопоставившихся подгрупп регулярного выражения.</p>
 
@@ -470,7 +470,7 @@ console.log(newstr);
 
 <p>Пример выведет «Smith, John» и «Смит, Джон»</p>
 
-<h3 id="Example_Using_regular_expression_to_split_lines" name="Example:_Using_regular_expression_to_split_lines">Пример: использование регулярного выражения для разбиения строк с различными символами конца строки</h3>
+<h3 id="Example_Using_regular_expression_to_split_lines">Пример: использование регулярного выражения для разбиения строк с различными символами конца строки</h3>
 
 <p>Символы конца строки различаются на различных платформах (Unix, Windows и так далее). Разбиение строк из этого примера работает на всех платформах.</p>
 
@@ -481,7 +481,7 @@ console.log(lines); // выведет [ 'Некоторый текст', 'Ещё
 
 <p>Обратите внимание, что порядок шаблонов в регулярном выражении имеет значение.</p>
 
-<h3 id="Example_Using_regular_expression_on_multiple_lines" name="Example:_Using_regular_expression_on_multiple_lines">Пример: использование регулярных выражений на нескольких строках</h3>
+<h3 id="Example_Using_regular_expression_on_multiple_lines">Пример: использование регулярных выражений на нескольких строках</h3>
 
 <pre class="brush: js notranslate">var s = 'Please yes\nmake my day!';
 s.match(/yes.*day/);
@@ -490,7 +490,7 @@ s.match(/yes[^]*day/);
 // Вернёт 'yes\nmake my day'
 </pre>
 
-<h3 id="Example_Using_a_regular_expression_with_the_.22sticky.22_flag" name="Example:_Using_a_regular_expression_with_the_.22sticky.22_flag">Пример: использование регулярных выражений с флагом «липучести»</h3>
+<h3 id="Example_Using_a_regular_expression_with_the_.22sticky.22_flag">Пример: использование регулярных выражений с флагом «липучести»</h3>
 
 <p>Этот пример демонстрирует, как можно использовать флаг «липучести» регулярных выражений для сопоставления с отдельными строками многострочного ввода.</p>
 
@@ -517,7 +517,7 @@ catch(e) { supports_sticky = false; }
 console.log(supports_sticky); // напечатает 'true'
 </pre>
 
-<h3 id="Example_Regular_expression_and_Unicode_characters" name="Example:_Regular_expression_and_Unicode_characters">Пример: регулярные выражения и символы Юникода</h3>
+<h3 id="Example_Regular_expression_and_Unicode_characters">Пример: регулярные выражения и символы Юникода</h3>
 
 <p>Как уже сказано выше, символьные классы <code>\w</code> и <code>\W</code> сопоставляются только с базовыми символами ASCII; то есть, с символами от «a» до «z», от «A» до «Z», от «0» до «9» и символом «_». Для сопоставления с символами из других языков, например, с кириллическими или иврита, используйте форму <code>\uhhhh</code>, где «hhhh» — это значение символа Юникода, записанное в шестнадцатеричной форме. Этот пример демонстрирует, как можно выделить символы Юникода, составляющие слова.</p>
 
@@ -537,13 +537,13 @@ console.log(regex.lastIndex); // напечатает '15'
 
 <p>Вот на этом внешнем ресурсе можно составить полный диапазон блоков Юникода для различных письменностей: <a href="http://kourge.net/projects/regexp-unicode-block">regexp-unicode-block</a>.</p>
 
-<h3 id="Example_Extracting_subdomain_name_from_URL" name="Example:_Extracting_subdomain_name_from_URL">Пример: извлечение имени поддомена из URL</h3>
+<h3 id="Example_Extracting_subdomain_name_from_URL">Пример: извлечение имени поддомена из URL</h3>
 
 <pre class="brush: js notranslate">var url = 'http://xxx.domain.com';
 console.log(/[^.]+/.exec(url)[0].substr(7)); // напечатает 'xxx'
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
 <table class="standard-table">
  <tbody>
@@ -570,11 +570,11 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // напечатает 'xxx'
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h3 id="Gecko_specific_notes" name="Gecko_specific_notes">Примечания по Gecko</h3>
+<h3 id="Gecko_specific_notes">Примечания по Gecko</h3>
 
 <p>Начиная с Gecko 34 {{geckoRelease(34)}}, в случае захвата группы с квантификаторами, предотвращающими появление группы в результате сопоставления, сопоставившийся текст для захваченной группы теперь имеет значение <code>undefined</code> вместо пустой строки:</p>
 
@@ -591,7 +591,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // напечатает 'xxx'
 
 <p>Обратите внимание, что для поддержания обратной совместимости, свойства <code>RegExp.$N</code> по-прежнему возвращают пустую строку вместо значения <code>undefined</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1053944">bug 1053944</a>).</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>Глава про <a href="/ru/docs/Web/JavaScript/Guide/Regular_Expressions">регулярные выражения</a> в <a href="/ru/docs/Web/JavaScript/Guide">руководстве по JavaScript</a></li>
