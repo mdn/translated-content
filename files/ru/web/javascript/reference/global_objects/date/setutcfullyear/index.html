@@ -11,13 +11,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Метод <strong><code>setUTCFullYear()</code></strong> устанавливает полный год указанной даты по всемирному координированному времени.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code><var>dateObj</var>.setUTCFullYear(<var>yearValue</var>[, <var>monthValue</var>[, <var>dayValue</var>]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 <dl>
  <dt><code>yearValue</code></dt>
  <dd>Целое число, определяющее значение года, например, 1995.</dd>
@@ -27,18 +27,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
  <dd>Необязательный параметр. Целое число от 1 до 31, представляющее день месяца. Если вы определите параметр <code>dayValue</code>, вы также должны определить параметр <code>monthValue</code>.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Если вы не определите значения параметров <code>monthValue</code> и <code>dayValue</code>, будут использоваться значения, возвращаемые методами {{jsxref("Date.prototype.getUTCMonth()", "getUTCMonth()")}} и {{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}}.</p>
 <p>Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод <code>setUTCFullYear()</code> попытается соответственно обновить другие параметры и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве <code>monthValue</code> передать значение 15, год увеличится на 1 (<code>yearValue + 1</code>), а в качестве месяца будет использоваться значение 3.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_setUTCFullYear" name="Example:_Using_setUTCFullYear">Пример: использование метода <code>setUTCFullYear()</code></h3>
+<h3 id="Example:_Using_setUTCFullYear">Пример: использование метода <code>setUTCFullYear()</code></h3>
 <pre class="brush: js">var theBigDay = new Date();
 theBigDay.setUTCFullYear(1997);
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -64,10 +64,10 @@ theBigDay.setUTCFullYear(1997);
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>
  <li>{{jsxref("Date.prototype.setFullYear()")}}</li>

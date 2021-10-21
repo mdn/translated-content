@@ -13,15 +13,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 ---
 <div>{{JSRef("Global_Objects", "String")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>split()</code></strong> разбивает объект {{jsxref("Global_Objects/String", "String")}} на массив строк путём разделения строки указанной подстрокой.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox notranslate"><code><var>str</var>.split([<var>separator</var>[, <var>limit</var>]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>separator</code></dt>
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/split
  <dd>Необязательный параметр. Целое число, определяющее ограничение на количество найденных подстрок. Метод <code>split()</code> всё равно разделяет строку на каждом сопоставлении с разделителем <code>separator</code>, но обрезает возвращаемый массив так, чтобы он содержал не более <code>limit</code> элементов.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>split()</code> возвращает новый массив.</p>
 
@@ -40,9 +40,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 
 <p>{{Note("Если строка является пустой строкой, метод <code>split()</code> вернёт массив, состоящий из одной пустой строки, а не пустой массив.")}}</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_split" name="Example:_Using_split">Пример: использование метода <code>split()</code></h3>
+<h3 id="Example_Using_split">Пример: использование метода <code>split()</code></h3>
 
 <p>В следующем примере определяется функция, которая разбивает строку на массив строк, используя указанный разделитель. После разбиения строки, функция отображает сообщения, показывающие оригинальную строку (до разбиения), используемый разделитель, количество элементов в массиве и сами эти элементы.</p>
 
@@ -81,7 +81,7 @@ splitString(monthString, comma);
 Массив содержит 12 элементов: Янв / Фев / Мар / Апр / Май / Июн / Июл / Авг / Сен / Окт / Ноя / Дек
 </pre>
 
-<h3 id="Example_Removing_spaces_from_a_string" name="Example:_Removing_spaces_from_a_string">Пример: удаление пробелов из строки</h3>
+<h3 id="Example_Removing_spaces_from_a_string">Пример: удаление пробелов из строки</h3>
 
 <p>В следующем примере метод <code>split()</code> ищет 0 или более пробелов, за которыми следует точка с запятой, за которой снова следуют 0 или более пробелов, и, если этот шаблон найден, удаляет пробелы из строки. Переменная <code>nameList</code> является массивом, возвращённым в результате работы метода <code>split()</code>.</p>
 
@@ -101,7 +101,7 @@ console.log(nameList);
 Гарри Трамп,Фред Барни,Хелен Ригби,Билл Абель,Крис Ханд
 </pre>
 
-<h3 id="Example_Returning_a_limited_number_of_splits" name="Example:_Returning_a_limited_number_of_splits">Пример: возврат ограниченного числа подстрок</h3>
+<h3 id="Example_Returning_a_limited_number_of_splits">Пример: возврат ограниченного числа подстрок</h3>
 
 <p>В следующем примере метод <code>split()</code> ищет 0 или более пробелов в строке и возвращает первые три найденных подстроки.</p>
 
@@ -116,7 +116,7 @@ console.log(splits);
 <pre class="brush: js notranslate">Привет,,мир.,Как
 </pre>
 
-<h3 id="Example_Capturing_parentheses" name="Example:_Capturing_parentheses">Пример: захват подгрупп</h3>
+<h3 id="Example_Capturing_parentheses">Пример: захват подгрупп</h3>
 
 <p>Если параметр <code>separator</code> содержит подгруппы, сопоставившиеся результаты также будут присутствовать в возвращённом массиве.</p>
 
@@ -131,7 +131,7 @@ console.log(splits);
 <pre class="brush: js notranslate">Привет ,1, мир. Предложение номер ,2,.
 </pre>
 
-<h3 id="Example_Reversing_a_String_using_split" name="Example:_Reversing_a_String_using_split">Пример: обращение строки при помощи метода <code>split()</code></h3>
+<h3 id="Example_Reversing_a_String_using_split">Пример: обращение строки при помощи метода <code>split()</code></h3>
 
 <pre class="brush: js notranslate">var str = 'фывапролд';
 var strReverse = str.split('').reverse().join(''); // 'длорпавыф'
@@ -140,7 +140,7 @@ var strReverse = str.split('').reverse().join(''); // 'длорпавыф'
 
 <p><strong>Бонус:</strong> используя оператор {{jsxref("Operators/Comparison_Operators", "===", "#Identity_.2F_strict_equality_(.3D.3D.3D)")}}, можно проверить, являлась ли строка палиндромом.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
 <table class="standard-table">
  <tbody>
@@ -167,11 +167,11 @@ var strReverse = str.split('').reverse().join(''); // 'длорпавыф'
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.charAt()")}}</li>

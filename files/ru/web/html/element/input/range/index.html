@@ -161,7 +161,7 @@ translation_of: Web/HTML/Element/input/range
 
 <pre class="brush: html notranslate">&lt;input type="range" min="-10" max="10"&gt;</pre>
 
-<p>{{EmbedLiveSample("Specifying_the_minimum_and_maximum", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Указание_минимума_и_максимума", 600, 40)}}</p>
 
 <h3 id="Настройка_детализации_значения">Настройка детализации значения</h3>
 
@@ -293,9 +293,11 @@ translation_of: Web/HTML/Element/input/range
 
 <p>Рассмотрим контроллер диапазона:</p>
 
+<div id="Orientation_sample1">
 <pre class="notranslate">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
 
 <p>{{EmbedLiveSample("Orientation_sample1", 200, 200, "https://mdn.mozillademos.org/files/14983/Orientation_sample1.png")}}</p>
+</div>
 
 <p>Это горизонтальный контроллер (по крайне мере на большинстве основных браузеров, другие могут отличаться).</p>
 
@@ -303,6 +305,7 @@ translation_of: Web/HTML/Element/input/range
 
 <p>Следуя спецификации, сделать его вертикальным также просто как добавить CSS, чтобы изменить размеры контроллера, чтобы его высота оказалась больше ширины:</p>
 
+<div id="Orientation_sample2">
 <h4 id="CSS">CSS</h4>
 
 <pre class="notranslate">#volume {
@@ -317,6 +320,7 @@ translation_of: Web/HTML/Element/input/range
 <h4 id="Результат">Результат</h4>
 
 <p>{{EmbedLiveSample("Orientation_sample2", 200, 200, "https://mdn.mozillademos.org/files/14985/Orientation_sample2.png")}}</p>
+</div>
 
 <p>К сожалению, большинство браузеров сейчас не поддерживают вертикальные контроллы напрямую.</p>
 
@@ -434,7 +438,7 @@ translation_of: Web/HTML/Element/input/range
   -webkit-appearance: slider-vertical;
 }</pre>
 
-<p>{{EmbedLiveSample("Putting_it_all_together", 200, 200)}}</p>
+<p>{{EmbedLiveSample("Все_вместе", 200, 200)}}</p>
 </div>
 
 <h2 id="Спецификации">Спецификации</h2>

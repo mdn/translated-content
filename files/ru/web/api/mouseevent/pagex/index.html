@@ -7,11 +7,11 @@ translation_of: Web/API/MouseEvent/pageX
 
 <p><strong><code><font face="Open Sans, arial, x-locale-body, sans-serif">MouseEvent.</font>pageX</code></strong> - это свойство {{domxref("MouseEvent")}} доступное только для чтения. Данное свойство возвращает значение равное горизонтальной координате, относительно всего документа. Это свойство учитывает любую горизонтальную прокрутку страницы. Первоначально это свойство было определено как длинное целое число. Модуль просмотра CSSOM переопределил его как double float. Подробнее см. Раздел «Совместимость с браузером».</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">var <em>pos</em> = <em>event</em>.pageX</pre>
 
-<h2 id="Syntax" name="Syntax">Примеры</h2>
+<h2 id="Syntax">Примеры</h2>
 
 <pre><em>var pageX</em> = <em>event</em>.pageX;
 pageX === event.clientX + (window.pageYOffset || document.body.scrollTop);
