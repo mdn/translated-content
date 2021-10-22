@@ -74,7 +74,7 @@ Les codes de statut de réponse HTTP indiquent si une requête [HTTP](/fr/docs/W
 - {{HTTPStatus(307, "307 Temporary Redirect")}}
   - : Le serveur a envoyé cette réponse pour rediriger le client afin d'obtenir la ressource demandée via un autre URI, en utilisant la même méthode que précédemment. Ce code a la même sémantique que le code `302 Found`, à l'exception près que l'agent utilisateur _ne doit pas_ changer la méthode HTTP utilisée : si `POST` était utilisé dans la première requête, alors `POST` doit être utilisé dans la seconde.
 - {{HTTPStatus(308, "308 Permanent Redirect")}}
-  - : Cela signifie que la ressource a été déplacée de manière permante vers une autre URI, spécifiée dans l'en-tête de réponse HTTP `Location:`. Ce code a la même sémantique que le code `301 Moved Permanently`, à l'exception près que l'agent utilisateur _ne doit pas_ changer la méthode HTTP utilisée : si `POST` était utilisé dans la première requête, alors `POST` doit être utilisé dans la seconde.
+  - : Cela signifie que la ressource a été déplacée de manière permanente vers une autre URI, spécifiée dans l'en-tête de réponse HTTP `Location:`. Ce code a la même sémantique que le code `301 Moved Permanently`, à l'exception près que l'agent utilisateur _ne doit pas_ changer la méthode HTTP utilisée : si `POST` était utilisé dans la première requête, alors `POST` doit être utilisé dans la seconde.
 
 ## Réponses d'erreur côté client
 
