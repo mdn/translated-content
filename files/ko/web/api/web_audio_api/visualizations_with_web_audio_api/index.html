@@ -135,7 +135,7 @@ var x = 0;</pre>
 
 <p>제작할 또 다른 멋진 작은 사운드 시각화는 Winamp 스타일의 주파수 막대 그래프 중 하나입니다. 우리는 Voice-change-O-matic에서 이용 가능한 하나를 가지고 있습니다; 어떻게 이것이 완성되었는지를 살펴봅시다.</p>
 
-<p>우선, 우리는 analyser와 데이터 배열을 다시 준비하고, <code>clearRect()</code>로 현재 캔버스 디스플레이를 지웁니다. 이전과 다른 유일한 점은 fft 사이즈를 더욱 작게 설정했다는 것입니다; 이것은 그래프에서 각각의 바가 얇은 가닥보다는 실제로 막대기처럼 보이기에 충분히 크도록 하기 위함입니다.</p>
+<p>우선, 우리는 analyser와 데이터 배열을 다시 준비하고, <code>clearRect()</code>로 현재 캔버스 디스플레이를 지웁니다. 이전과 다른 유일한 점은 fft 사이즈를 더욱 작게 설정했다는 것입니다. 이것은 그래프에서 각각의 바가 얇은 가닥보다는 실제로 막대기처럼 보이기에 충분히 크도록 하기 위함입니다.</p>
 
 <pre class="brush: js">analyser.fftSize = 256;
 var bufferLength = analyser.frequencyBinCount;
