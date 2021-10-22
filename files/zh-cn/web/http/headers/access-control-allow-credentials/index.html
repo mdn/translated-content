@@ -11,11 +11,11 @@ translation_of: Web/HTTP/Headers/Access-Control-Allow-Credentials
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><strong><code>Access-Control-Allow-Credentials</code></strong> 响应头表示是否可以将对请求的响应暴露给页面。返回true则可以，其他值均不可以。</p>
+<p><strong><code>Access-Control-Allow-Credentials</code></strong> 响应头表示当请求中要求包含credentials({{domxref("Request.credentials")}}的值为`include`)时，是否可以将对请求的响应暴露给页面。返回true则可以，其他值均不可以。</p>
 
 <p>Credentials可以是 cookies, authorization headers 或 TLS client certificates。</p>
 
-<p>当作为对预检请求的响应的一部分时，这能表示是否真正的请求可以使用credentials。注意简单的{{HTTPMethod("GET")}} 请求没有预检，所以若一个对资源的请求带了credentials，如果这个响应头没有随资源返回，响应就会被浏览器忽视，不会返回到web内容。</p>
+<p>当作为对预检请求的响应的一部分时，这表示真正的请求是否可以使用credentials。注意简单的{{HTTPMethod("GET")}} 请求没有预检，所以若一个对资源的请求带了credentials，如果这个响应头没有随资源返回，响应就会被浏览器忽视，不会返回到web内容。</p>
 
 <p><code>Access-Control-Allow-Credentials</code> 头 工作中与{{domxref("XMLHttpRequest.withCredentials")}} 或Fetch API中的{{domxref("Request.Request()", "Request()")}} 构造器中的<code>credentials</code> 选项结合使用。Credentials必须在前后端都被配置（即the <code>Access-Control-Allow-Credentials</code> header 和 XHR 或Fetch request中都要配置）才能使带credentials的CORS请求成功。</p>
 
