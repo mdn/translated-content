@@ -79,7 +79,7 @@ original_slug: Apprendre/CSS/Building_blocks/Styling_tables
 
 <p>Le tableau est bien balisé, facile à disposer et accessible, remercions les fonctionnalités {{htmlattrxref("scope","th")}}, {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}}, etc. Malheureusement, il n'a pas un rendu bien terrible à l'écran (voyez‑le directement ici <a href="http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html">punk-bands-unstyled.html</a>) :</p>
 
-<p><img alt="Liste des groupes punk du Royaume Uni" src="https://mdn.mozillademos.org/files/16114/punk.png" style="display: block; height: 275px; margin: 0px auto; width: 1012px;"></p>
+<p><img alt="Liste des groupes punk du Royaume Uni" src="punk.png"></p>
 
 <p>Il est d'aspect resserré, difficile à lire et austère. Utilisons une règle CSS pour corriger cela.</p>
 
@@ -136,14 +136,14 @@ th, td {
  <li>Définir pour le tableau la valeur <code>fixed</code> pour {{cssxref("table-layout")}} est généralement une bonne idée, car cela rend le comportement par défaut du tableau un peu plus prévisible. Normalement, les colonnes des tableaux sont dimensionnées en fonction de leur contenu, ce qui produit des résultats étranges. Avec <code>table-layout: fixed</code>, vous pouvez dimensionner les colonnes selon la largeur de leurs en-têtes, puis traiter leur contenu comme il convient. C'est pourquoi nous sélectionnons les quatre en-têtes distinctement avec le sélecteur <code>thead th:nth-child(n)</code> ({{cssxref(":nth-child")}}) (« sélectionner le nième élément enfant {{htmlelement("th")}} dans la liste à l'intérieur de l'élément {{htmlelement("thead")}} ») et leur donnons un pourcentage de largeur défini. Chaque colonne prend la largeur de son en‑tête, ce qui permet de bien dimensionner les colonnes du tableau. Chris Coyier expose cette technique de façon détaillée dans <a href="https://css-tricks.com/fixing-tables-long-strings/">Fixed Table Layouts</a>.<br>
   <br>
   Ceci est couplé avec une largeur {{cssxref("width")}} de 100%, ce qui signifie que le tableau remplira complétement tout conteneur dans lequel il sera placé et sera bien adaptable (même s'il aura besoin de quelques aménagements complémentaires pour avoir bel aspect avec les largeurs d'écran étroites).</li>
- <li>La valeur <code>collapse</code> pour {{cssxref("border-collapse")}} est une bonne pratique courante pour toute mise en page de tableau. Par défaut, quand vous définissez des encadrements pour les éléments d'un tableau, il y a un espace entre eux, comme le montre cette illustration : <img alt="Encadrement des éléments d'un tableau" src="https://mdn.mozillademos.org/files/16116/cadre_1.png" style="display: block; height: 68px; margin: 0px auto; width: 231px;"> Cela n'a pas l'air très joli (même si c'est peut-être le look que vous voulez, qui sait ?) Avec <code>border-collapse : collapse;</code>, les bordures se condensent en une seule, ce qui est beaucoup mieux :<img alt="Avec border-collapse: collapse; les encadrements se condensent" src="https://mdn.mozillademos.org/files/16117/cadre_2.png" style="display: block; height: 59px; margin: 0px auto; width: 223px;"></li>
+ <li>La valeur <code>collapse</code> pour {{cssxref("border-collapse")}} est une bonne pratique courante pour toute mise en page de tableau. Par défaut, quand vous définissez des encadrements pour les éléments d'un tableau, il y a un espace entre eux, comme le montre cette illustration : <img alt="Encadrement des éléments d'un tableau" src="cadre_1.png"> Cela n'a pas l'air très joli (même si c'est peut-être le look que vous voulez, qui sait ?) Avec <code>border-collapse : collapse;</code>, les bordures se condensent en une seule, ce qui est beaucoup mieux :<img alt="Avec border-collapse: collapse; les encadrements se condensent" src="cadre_2.png"></li>
  <li>Nous avons mis un cadre ({{cssxref("border")}}) tout autour du tableau, cadre nécessaire car nous encadrerons  plus tard l'intitulé et le pied de page — si vous n'avez pas d'encadrement général du tableau, terminer par un espacement donne un aspect insolite et peu net.</li>
  <li>Nous avons défini une valeur pour le remplissage ({{cssxref("padding")}}) des éléments {{htmlelement("th")}} et {{htmlelement("td")}} — cela donne un peu d'air aux données et facilite la lecture de la table.</li>
 </ul>
 
 <p>À ce stade, le tableau a déjà meilleure mine :</p>
 
-<p><img alt="Première mise en forme du tableau" src="https://mdn.mozillademos.org/files/16118/punk_A.png" style="display: block; height: 460px; margin: 0px auto; width: 1096px;"></p>
+<p><img alt="Première mise en forme du tableau" src="punk_A.png"></p>
 
 <h3 id="Simple_typographie">Simple typographie</h3>
 
@@ -194,7 +194,7 @@ tfoot th {
 
 <p>Cela fait un peu plus propre :</p>
 
-<p><img alt="Deuxième mise en forme : modifications des polices de caractères." src="https://mdn.mozillademos.org/files/16119/punk_B.png" style="display: block; height: 531px; margin: 0px auto; width: 1055px;"></p>
+<p><img alt="Deuxième mise en forme : modifications des polices de caractères." src="punk_B.png"></p>
 
 <h3 id="Graphisme_et_couleurs">Graphisme et couleurs</h3>
 
@@ -248,7 +248,7 @@ table {
 
 <p>Et voici l'explosion de couleurs résultante :</p>
 
-<p><img alt="Troisième mise en forme : coloriage agressif" src="https://mdn.mozillademos.org/files/16120/punk_C.png" style="display: block; height: 496px; margin: 0px auto; width: 1257px;"></p>
+<p><img alt="Troisième mise en forme : coloriage agressif" src="punk_C.png"></p>
 
 <p>Maintenant, peut-être trouverez‑vous que nous avons forcé la dose et que ce n'est pas à votre goût, mais ce que nous avons essayé de montrer ici est que les tableaux ne sont pas forcément ennuyeux ou académiques.</p>
 
@@ -268,7 +268,7 @@ table {
 
 <p>Rien de remarquable ici, sauf pour la propriété {{cssxref("caption-side")}} à laquelle on a donné la valeur <code>bottom</code>. Elle a pour effet de positionner la légende au bas du tableau, ce qui, avec les autres déclarations, nous donne ce look final (voir en direct sur <a href="http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html">punk-bands-complete.html</a>) :</p>
 
-<p><img alt="Quatrième mise en forme : l'intitulé est disposé en bas à droite à la manière d'une légende de dessin" src="https://mdn.mozillademos.org/files/16121/punk_D.png" style="display: block; height: 539px; margin: 0px auto; width: 1254px;"></p>
+<p><img alt="Quatrième mise en forme : l'intitulé est disposé en bas à droite à la manière d'une légende de dessin" src="punk_D.png"></p>
 
 <h2 id="Apprentissage_actif_mettez_en_page_votre_propre_tableau">Apprentissage actif : mettez en page votre propre tableau</h2>
 

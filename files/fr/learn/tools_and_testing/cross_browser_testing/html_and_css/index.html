@@ -58,7 +58,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 
 <p>Pour le HTML, la validation implique de s'assurer que toutes vos balises sont correctement fermées et imbriquées, que vous utilisez un DOCTYPE, et que vous utilisez les balises à leur fin prévue. Une bonne stratégie est de valider régulièrement votre code. On service qui peut le faire est le W3C <a href="https://validator.w3.org/">Markup Validation Service</a>, qui vous permet de montrer votre code, et retourne une liste d'erreurs :</p>
 
-<p><img alt="The HTML validator homepage" src="https://mdn.mozillademos.org/files/12441/validator.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="The HTML validator homepage" src="validator.png"></p>
 
 <p>Le CSS a une histoire semblable — vous devez vérifier que vos noms de propriétés sont correctement épelés, ques les valeurs des propriétés sont correctement épelées et qu'elles sont valides pour les propriétés auxquelles elles s'appliquent, que vous n'oubliez aucune accolades ouvrantes et fermantes. Les W3C a un <a class="external external-icon" href="http://jigsaw.w3.org/css-validator/">CSS Validator</a> également disponible à cet effet.</p>
 
@@ -68,7 +68,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 
 <p>Il y a beaucoup d'applications linter en ligne, les meilleures d'entre elles sont probablement <a href="https://www.dirtymarkup.com/">Dirty Markup</a> (HTML, CSS, JavaScript), et <a href="http://csslint.net/">CSS Lint</a> (seulement CSS). Elles vous permettent de coller votre code dans une fenêtre, et mettront en évidence toutes les erreurs avec des croix, qui peuvent être survolées pour obtenir un message d'erreur décrivant le problème. Dirty Markup vous permet également de faire des fixs dans votre code en utilisant le bouton <em>Clean</em>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14113/dirty-markup.png" style="border-style: solid; border-width: 1px; display: block; height: 203px; margin: 0px auto; width: 1204px;"></p>
+<p><img alt="" src="dirty-markup.png"></p>
 
 <p>Néanmoins, ce n'est pas très pratique de devoir copier et coller votre code dans une page web pour vérifier sa validité plusieurs fois. Ce dont vous avez vraiment besoin c'est d'un linter qui s'installera dans votre espace de travail standard avec le minimum de prise de tête.</p>
 
@@ -86,7 +86,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 
 
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14109/atom-htmltidy.png" style="display: block; margin: 0 auto;"><img alt="" src="https://mdn.mozillademos.org/files/14107/atom-csslint.png" style="display: block; height: 516px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="atom-htmltidy.png"><img alt="" src="atom-csslint.png"></p>
 
 <p>D'autres éditeurs populaires ont des packages de linting similaires. Voir, par exemple :</p>
 
@@ -105,7 +105,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 
 <p>As an example, in Firefox the CSS inspector will show CSS declarations that aren't applied crossed out, with a warning triangle. Hovering the warning triangle will provide a descriptive error message:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14111/css-message-devtools.png" style="display: block; height: 311px; margin: 0px auto; width: 451px;"></p>
+<p><img alt="" src="css-message-devtools.png"></p>
 
 <p>Les outils de dev des autres navigateurs ont des fonctionnalités semblables.</p>
 
@@ -231,7 +231,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 
 <p>Observons un exemple — une simple boîte stylée avec du CSS, qui a certains styles apportés par différentes caractéristiques CSS3 :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14141/blingy-button.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="blingy-button.png"></p>
 
 <div class="note">
 <p><strong>Note :</strong> Vous pouvez également voir cet exemple exécuté en direct sur GitHub comme <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/button-with-fallback.html">button-with-fallback.html</a> (voir aussi le <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html">code source</a>).</p>
@@ -259,7 +259,7 @@ button:active {
 
 <p>Ici on fournit un {{cssxref("background-color")}} <a href="/fr/docs/Web/CSS/color_value#rgba()">RGBA</a> qui modifie l'opacité au survol afin de donner à l'utilisateur l'information que le bouton est interactif, et une ombre {{cssxref("box-shadow")}} interne semi-transparente pour donner au bouton un peu de texture et de profondeur. Le problème est que les couleurs RGBA et les box shadows ne fonctionnent pas sur les versions d'IE plus vieilles que la 9 — dans les versions plus anciennes le background ne sera juste pas visible du tout et le texte sera illisible, pas bon du tout !</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14135/unreadable-button.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="unreadable-button.png"></p>
 
 <p>Pour résoudre ce problème, nous avons ajouté une deuxième déclaration <code>background-color</code>, qui précise juste une couleur hex — c'est un recours supporté par les vieux navigateurs, et agit en tant que solution de repli si les fonctionnalités belles et brillantes ne fonctionnent pas. Ce qui se passe c'est que le navigateur parcourant cette page applique pour commencer la première valeur <code>background-color</code> ; lorsqu'il sélectionne la deuxième déclaration <code>background-color</code>, il remplace la valeur initiale avec cette valeur s'il supporte les couleurs RGBA. S'il ne supporte pas, il ignorera juste toute la déclaration et continuera à avancer.</p>
 
@@ -301,7 +301,7 @@ button:active {
 
 <p>Par exemple, dans l'outil de dev de Firefox, vous obtenez ce genre rendement en bas de l'inspecteur du DOM :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14139/dom-breadcrumb-trail.png" style="display: block; height: 24px; margin: 0px auto; width: 448px;"></p>
+<p><img alt="" src="dom-breadcrumb-trail.png"></p>
 
 <p>Si pour cet exemple vous essayez d'utiliser ce sélecteur, vous vous rendrez compte qu'il ne sélectionnera pas l'élément input comme désiré :</p>
 
@@ -324,7 +324,7 @@ button:active {
 
 <p>Si vous essayer d'exécuter cette page sur une vieille version d'IE, cela devrait bien fonctionner.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14137/new-selector-ie7.png" style="border-style: solid; border-width: 1px; display: block; height: 516px; margin: 0px auto; width: 771px;"></p>
+<p><img alt="" src="new-selector-ie7.png"></p>
 
 <h4 id="Gestion_des_préfixes_CSS">Gestion des préfixes CSS</h4>
 

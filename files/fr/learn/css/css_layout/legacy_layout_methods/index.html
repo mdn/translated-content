@@ -172,7 +172,7 @@ div:nth-of-type(2) {
 
 <p>Le but est d'en faire une trame de démonstration sur deux lignes à partir des 12 colonnes — la ligne haute montre la taille de colonnes prises isolément, la ligne basse montre des zones de taille différentes à partir de cette trame.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13901/simple-grid-finished.png" style="display: block; height: 50px; margin: 0px auto; width: 952px;"></p>
+<p><img alt="" src="simple-grid-finished.png"></p>
 
 <p>À l'élément {{htmlelement("style")}}, ajoutons le code ci-après. Il donne une largeur de 980 pixels au conteneur enveloppe avec un remplissage de 20 pixels du côté droit. Cela nous laisse 960 pixels comme largeur totale pour les colonnes et les gouttières — dans ce cas, le remplissage est soustrait à la largeur totale du contenu car nous avons fixé la valeur de  {{cssxref("box-sizing")}} à <code>border-box</code> sur tous les éléments du site (voir <a href="/fr/docs/Apprendre/CSS/Styling_boxes/Box_model_recap#Modification totale du modèle de boîte">Modification totale du modèle de boîte</a> pour plus d'explications).</p>
 
@@ -402,7 +402,7 @@ body {
 
 <p>Chargez et actualisez pour voir la différence, ou bien vérifiez avec l'exemple <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-offset.html">fluid-grid-offset.html</a> (voir aussi <a href="http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html">l'exécution directement</a>). L'exemple terminé doit ressembler à ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13903/offset-grid-finished.png" style="display: block; height: 47px; margin: 0px auto; width: 944px;"></p>
+<p><img alt="" src="offset-grid-finished.png"></p>
 
 <div class="note">
 <p><strong>Note :</strong> Comme exercice supplémentaire, pouvez‑vous implémenter une classe <code>offset-by-two</code> ?</p>
@@ -453,7 +453,7 @@ body {
 
 <p>Sur la ligne haute, nous disposons de douze boîtes nettes sur la trame et elle s'élargissent ou s'étrécissent de manière égale quand nous modifions la largeur de la vue. Sur la ligne suivante, toutefois, nous n'avons que quatre éléments et ceux-ci s'élargissent ou s'étrécissent à partir de la base de 60px. Avec seulement quatre d'entre eux ils peuvent s'élargir un peu plus que les éléments de la ligne au‑dessus, le résultat étant qu'ils occupent tous la même largeur sur la deuxième ligne.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13905/flexbox-grid-incomplete.png" style="display: block; height: 71px; margin: 0px auto; width: 944px;"></p>
+<p><img alt="" src="flexbox-grid-incomplete.png"></p>
 
 <p>Pour corriger cela, nous avons encore besoin d'inclure les classes <code>span</code> pour donner une largeur qui remplave la valeur donnée par <code>flex-basis</code> pour cet élément.</p>
 

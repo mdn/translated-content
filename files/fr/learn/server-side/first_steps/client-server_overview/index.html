@@ -210,7 +210,7 @@ Content-Length: 0
 
 <p>Voyons comment tout cela marche en révisant un diagramme d'architecture de site statique vu dans l'article précédent.</p>
 
-<p><img alt="A simplified diagram of a static web server." src="https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png"></p>
+<p><img alt="A simplified diagram of a static web server." src="Basic%20Static%20App%20Server.png"></p>
 
 <p>Quand un utilisateur veut naviguer jusqu'à une page, le navigateur envoie une requête HTTP <code>GET</code> spécifiant l'URL de sa page HTML. Le serveur retourne le document demandé depuis son système de fichiers et retourne une réponse  HTTP contenant le document et un  <a href="/fr/docs/Web/HTTP/Status">HTTP Response status code</a> ( statut codé de la réponse HTTP) qui est  "<code>200 OK</code>" (indiquant le succés de l'opération). Le serveur peut retourner un statut différent, par exemple "<code>404 Not Found</code>"  si le fichier est absent sur le serveur , ou bien "<code>301 Moved Permanently</code>" si le fichier existe mais a été déplacé vers une nouvelle localisation.</p>
 
@@ -232,7 +232,7 @@ Content-Length: 0
 
 <p>Le diagramme ci-dessous montre les principaux éléments du site Web "entraîneur d'équipe", ainsi que des étiquettes numérotées pour la séquence des opérations lorsque l'entraîneur accède à la liste "meilleure équipe". Les parties du site qui le rendent dynamique sont l’application Web (c’est ainsi que nous nous référerons au code côté serveur qui traite les requêtes HTTP et renvoie les réponses HTTP), la base de données, qui contient des informations sur les joueurs, les équipes, les entraîneurs et leurs partenaires. relations, et les modèles HTML.</p>
 
-<p><img alt="This is a diagram of a simple web server with step numbers for each of step of the client-server interaction." src="https://mdn.mozillademos.org/files/13829/Web%20Application%20with%20HTML%20and%20Steps.png" style="height: 584px; width: 1226px;"></p>
+<p><img alt="This is a diagram of a simple web server with step numbers for each of step of the client-server interaction." src="Web%20Application%20with%20HTML%20and%20Steps.png"></p>
 
 <p>Une fois que l’entraîneur a soumis le formulaire avec le nom de l’équipe et le nombre de joueurs, la séquence des opérations est la suivante:</p>
 

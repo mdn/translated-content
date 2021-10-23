@@ -7,153 +7,61 @@ tags:
 translation_of: Learn/CSS/Howto/Generated_content
 original_slug: Apprendre/CSS/Comment/Generated_content
 ---
-<p>Cette page décrit plusieurs manières d'utiliser CSS pour ajouter du contenu à un document affiché.</p>
-<p>Vous modifierez votre feuille de style pour ajouter du contenu textuel et une image.</p>
-<h3>Information : contenu</h3>
-<p>Un des avantages importants de CSS est qu'il vous aide à séparer le style d'un document de son contenu. Cependant, il existe des situations où il n'est pas insensé de spécifier une partie du contenu au sein de la feuille de style plutôt qu'en tant que partie du document</p>
-<p>Le contenu spécifié dans une feuille de style peut consister en du texte ou des images. Ce contenu peut être spécifié dans une feuille de style lorsqu'il est directement lié à la structure du document.</p>
-<table>
-  <caption>
-    Plus de détails</caption>
-  <tbody>
-    <tr>
-      <td>Spécifier du contenu dans une feuille de style peut engendrer des complications. Par exemple, vous pouvez avoir des versions de votre document en différentes langues qui partagent la même feuille de style. Si une partie de la feuille de style doit être traduite, cela signifie que vous devez placer cette partie dans des fichiers séparés et vous arranger pour qu'elles soient liées avec les bonnes versions de langue de votre document.
-        <p>Ces complications ne surviendront pas si le contenu spécifié consiste en une série de symboles ou d'images compréhensibles dans toutes les langues et cultures.</p>
-        <p>Le contenu spécifié dans une feuille de style ne fait pas partie du DOM.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<h4 id="Contenu_textuel">Contenu textuel</h4>
-<p>CSS peut insérer du texte avant ou après un élément. Pour spécifier cela, créez une règle et ajoutez <code>:before</code> ou <code>:after</code> au sélecteur. Dans la déclaration, spécifiez la propriété <code>content</code> en lui donnant comme valeur le contenu textuel.</p>
-<table>
-  <caption>
-    Exemple</caption>
-  <tbody>
-    <tr>
-      <td>Cette règle ajoute le texte Référence : devant chaque élément de la classe <code>ref</code> :
-        <div>
-          <pre class="eval">
-.ref:before {
+<p>{{LearnSidebar}}</p>
+
+<p>Cet article décrit différentes façons d'utiliser CSS afin d'ajouter du contenu à un document affiché. Vous pouvez modifier votre feuille de style afin d'ajouter du contenu textuel ou des images.</p>
+
+<p>L'un des avantages majeurs de CSS est qu'il permet de séparer la forme du contenu. Toutefois, il existe des situations où il est pertinent d'indiquer du contenu dans la feuille de style et pas dans le document. Il est possible d'indiquer du contenu textuel ou des images dans une feuille de style lorsque ce contenu est fortement couplé à la structure du document.</p>
+
+<div class="note">
+<p><strong>Note :</strong> Le contenu spécifié dans la feuille de style ne fait pas partie du DOM.</p>
+</div>
+
+<p>Ajouter du contenu dans une feuille de style peut engendrer des complications. Ainsi, si vous avez un document disponible en plusieurs langues et que ces versions partagent une même feuille de style, lorsque vous indiquez du contenu dans la feuille de style qui doit être traduit, vous devrez organiser ces parties de la feuille de style dans différents fichiers et faire le nécessaire pour qu'elles soient rattachées aux différentes versions du document.</p>
+
+<p>Ce problème ne se pose pas si le contenu indiqué est composé de symboles ou d'images qui peuvent s'appliquer dans toutes les langues et pour toutes les cultures.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<h3 id="Contenu_textuel">Contenu textuel</h3>
+
+<p>CSS peut insérer du contenu textuel avant ou après un élément. Pour cela, on créera une règle en ajoutant {{ cssxref("::before") }} ou {{ cssxref("::after") }} au sélecteur. Dans la déclaration, on utilisera la propriété {{ cssxref("content") }} avec comme valeur le texte à utiliser.</p>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html">Un texte où j'en ai besoin de &lt;span class="ref"&gt; quelque chose&lt;/span&gt;
+</pre>
+
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css">.ref::before {
   font-weight: bold;
   color: navy;
-  content: "Référence : ";
-  }
-</pre>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<table>
-  <caption>
-    Plus de détails</caption>
-  <tbody>
-    <tr>
-      <td>Le jeu de caractères d'une feuille de style est UTF-8 par défaut, mais il peut être spécifié dans le lien, ou dans la feuille de style elle-même, ou d'une autre manière. Pour plus de détails, consultez <a class="external" href="http://www.w3.org/TR/CSS21/syndata.html#q23">4.4 CSS style sheet representation</a> dans la spécification CSS.
-        <p>Des caractères individuels peuvent également être spécifiés à l'aide d'un mécanisme utilisant le backslash (barre oblique inversée) comme caractère d'échappement. Par exemple, \265B est le symbole du jeu d'échecs pour la reine noire ♛. Pour plus de détails, consultez <a class="external" href="http://www.w3.org/TR/CSS21/syndata.html#q24">Referring to characters not represented in a character encoding</a>, ainsi que <a class="external" href="http://www.w3.org/TR/CSS21/syndata.html#q6">Characters and case</a> dans la spécification CSS.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<h4 id="Contenu_sous_forme_d.27images">Contenu sous forme d'images</h4>
-<p>Pour ajouter une image avant ou après un élément, vous pouvez spécifier l'URL d'un fichier image dans la valeur de la propriété <code>content</code>.</p>
-<table>
-  <caption>
-    Exemple</caption>
-  <tbody>
-    <tr>
-      <td>Cette règle ajoute un espace et une icône après chaque lien faisant partie de la classe <code>glossaire</code>:
-        <div>
-          <pre class="eval">
-a.glossaire:after {content: " " url("../images/glossary-icon.gif");}
-</pre>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<p><br>
-  Pour ajouter une image comme fond d'un élément, spécifiez l'URL d'un fichier image dans la valeur de la propriété <code>background</code>. C'est une propriété raccourcie qui spécifie la couleur de fond, l'image, son éventuelle répétition, et certains autres détails.</p>
-<table>
-  <caption>
-    Exemple</caption>
-  <tbody>
-    <tr>
-      <td>Cette règle change le fond d'un élément spécifique, en utilisant une URL pour indiquer un fichier image.
-        <p>Le sélecteur spécifie l'id de l'élément. La valeur <code>no-repeat</code> fait que l'image apparaîtra une seule fois :</p>
-        <div>
-          <pre class="eval">
-#panneau-lateral {background: url("../images/sidebar-ground.png") no-repeat;}
-</pre>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<table>
-  <caption>
-    Plus de détails</caption>
-  <tbody>
-    <tr>
-      <td>Pour plus d'informations sur les propriétés affectant les fonds, et d'autres options qui peuvent être spécifiées pour les images de fond, consultez <a class="external" href="http://www.w3.org/TR/CSS21/colors.html#q2">The background</a> dans la spécification CSS.</td>
-    </tr>
-  </tbody>
-</table>
-<h3 id="Action_:_ajout_d.27une_image_de_fond">Action : ajout d'une image de fond</h3>
-<p>Cette image est un carré blanc avec une ligne bleue en bas. Téléchargez le fichier image dans le même répertoire que votre fichier CSS :</p>
-<table>
-  <tbody>
-    <tr>
-      <td><img alt="Image:ligne-bleue.png" src="/@api/deki/files/1398/=Ligne-bleue.png"></td>
-    </tr>
-  </tbody>
-</table>
-<p>(Par exemple, cliquez avec le bouton de droite pour obtenir un menu contextuel, choisissez Enregistrer l'image sous... et choisissez le répertoire que vous utilisez pour ce tutoriel.)</p>
-<p>Éditez votre fichier CSS et ajoutez cette règle à l'élément body, pour donner une image de fond à la page entière.</p>
-<div>
-  <pre class="eval">background: url("ligne-bleue.png");
-</pre>
-</div>
-<p>La valeur <code>repeat</code> est celle par défaut, elle n'a dont pas besoin d'être spécifiée. L'image se répète horizontalement et verticalement, ce qui donne un aspect ressemblant à un papier ligné :</p>
-<div>
-  <p><img alt="Image:fond-lignes-bleues.png" src="/@api/deki/files/1373/=Fond-lignes-bleues.png"></p>
-  <div>
-    <div>
-      <p><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets</p>
-    </div>
-    <div>
-      <p><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets</p>
-    </div>
-  </div>
-</div>
-<table>
-  <caption>
-    Challenge</caption>
-  <tbody>
-    <tr>
-      <td>Téléchargez cette image :
-        <table>
-          <tbody>
-            <tr>
-              <td><img alt="Image:punaise-jaune.png" src="/@api/deki/files/1427/=Punaise-jaune.png"></td>
-            </tr>
-          </tbody>
-        </table>
-        <p>Ajoutez une règle à votre feuille de style de manière à ce que l'image soit affichée au début de chaque ligne :</p>
-        <div>
-          <p><img alt="Image:fond-lignes-bleues.png" src="/@api/deki/files/1373/=Fond-lignes-bleues.png"></p>
-          <div>
-            <div>
-              <img alt="image:punaise-jaune.png" src="/@api/deki/files/1427/=Punaise-jaune.png"> <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets</div>
-            <div>
-              <img alt="image:punaise-jaune.png" src="/@api/deki/files/1427/=Punaise-jaune.png"> <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets</div>
-          </div>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<h4 id="Pour_continuer">Pour continuer</h4>
-<p>Une façon courante d'ajouter du contenu via une feuile de style est de marquer les différents éléments d'une liste.</p>
-<p>La page suivante décrit la manière de spécifier un style pour les éléments d'une liste : <strong><a href="/fr/docs/CSS/Premiers_pas/Listes" title="fr/CSS/Premiers_pas/Listes">Listes.</a></strong></p>
+  content: "Réference ";
+}</pre>
+
+<h4 id="Résultat">Résultat</h4>
+
+<p>{{ EmbedLiveSample('Contenu_textuel', 600, 30) }}</p>
+
+<p>L'encodage d'une feuille de styles est UTF-8 par défaut mais cela peut être défini dans le lien, dans la feuille de style même ou d'autres façons. Pour plus de détails, voir <a href="https://www.w3.org/TR/CSS21/syndata.html#q23">4.4 Représentation de la feuille de style CSS</a> dans la spécification CSS.</p>
+
+<p>Des caractères individuels peuvent également être spécifiés avec un échappement avec la barre oblique inversée. Ainsi, "\265B" pourra être utilisé pour générer le symbole de la reine noire aux échecs : ♛. Pour plus de détails, voir <a href="https://www.w3.org/TR/CSS21/syndata.html#q24">Référencer des caractères non représentés par l'encodage</a> et <a href="https://www.w3.org/TR/CSS21/syndata.html#q6">Caractères et casse</a> dans la spécification CSS.</p>
+
+<h3 id="Contenu_avec_une_image">Contenu_avec_une_image</h3>
+
+<p>Afin d'ajouter une image avant ou après un élément, vous pouvez indiquer l'URL d'un fichier image dans la valeur de la propriété {{ cssxref("content") }}.</p>
+
+<p>Cette règle ajoute un espace et une icône après chaque lien qui possède la classe <code>glossary</code> :</p>
+
+<h4 id="HTML_2">HTML</h4>
+
+<pre class="brush: html">&lt;a href="developer.mozilla.org" class="glossary"&gt;developer.mozilla.org&lt;/a&gt;</pre>
+
+<h4 id="CSS_2">CSS</h4>
+
+<pre class="brush: css">a.glossary::after {
+   content: " " url("glossary-icon.gif");
+}</pre>
+
+<p>{{ EmbedLiveSample('Contenu_avec_une_image', 600, 40) }}</p>

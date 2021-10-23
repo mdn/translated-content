@@ -112,7 +112,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Les champs texte sur une ligne n'ont qu'une seule contrainte : si vous saisissez du texte avec des sauts de ligne, le navigateur les supprime avant d'envoyer les données.</p>
 
-<p><img alt="Screenshots of single line text fields on several platforms." src="https://developer.mozilla.org/files/4273/all-single-line-text-field.png" style="height: 235px; width: 655px;"></p>
+<p><img alt="Screenshots of single line text fields on several platforms." src="https://developer.mozilla.org/files/4273/all-single-line-text-field.png"></p>
 
 <p>HTML5 améliore le champ texte élémentaire sur une ligne par ajout de valeurs spéciales pour l'attribut {{htmlattrxref("type","input")}}. Ces valeurs conservent l'élément {{HTMLElement("input")}} en tant que champ texte sur une ligne mais ajoutent quelques contraintes et caractéristiques supplémentaires au champ.</p>
 
@@ -124,7 +124,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Avec ce <code>type</code> , l'utilisateur doit saisir un e‑mail valide dans le champ. Tout autre type de contenu amène le navigateur à émettre une erreur lors de la soumission du formulaire. Notez que cette validation s'opère côté client et est faite par le navigateur :</p>
 
-<p><img alt="Entrée d'un e-mail non valide déclenchant un message d'avertissement « Veuillez saisir une adresse électronique valide »" src="https://mdn.mozillademos.org/files/16001/fr-email.png" style="border-style: solid; border-width: 1px; display: block; height: 130px; margin: 0px auto; width: 434px;"></p>
+<p><img alt="Entrée d'un e-mail non valide déclenchant un message d'avertissement « Veuillez saisir une adresse électronique valide »" src="fr-email.png"></p>
 
 <p>Avec l'attribut {{htmlattrxref("multiple","input")}}, l'utilisateur pourra saisir plusieurs adresses électroniques dans la même entrée (avec une virgule comme séparateur).</p>
 
@@ -154,7 +154,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>La principale différence entre un champ textuel et un champ de recherche est dans l'apparence — souvent, les champs de recherche sont affichés avec des coins arrondis, et/ou avec une « × » à cliquer pour effacer la valeur entrée. Toutefois, une fonction est aussi ajoutée : les valeurs saisies peuvent être automatiquement enregistrées afin d'être utilisées pour compléter des recherches sur plusieurs pages du même site.</p>
 
-<p><img alt="Screenshots of search fields on several platforms." src="/files/4269/all-search-field.png" style="height: 235px; width: 655px;"></p>
+<p><img alt="Screenshots of search fields on several platforms." src="all-search-field.png"></p>
 
 <h4 id="Champ_pour_numéro_de_téléphone">Champ pour numéro de téléphone</h4>
 
@@ -188,7 +188,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>La principale différence entre un champ <code>textarea</code> et un champ monoligne est que, dans un textarea, l'utilisateur peut saisir du texte avec des sauts de ligne en dur (c'est à dire en pressant la touche <code>Retour</code>).</p>
 
-<p><img alt="Screenshots of multi-lines text fields on several platforms." src="/files/4271/all-multi-lines-text-field.png" style="height: 330px; width: 745px;"></p>
+<p><img alt="Screenshots of multi-lines text fields on several platforms." src="all-multi-lines-text-field.png"></p>
 
 <div class="note">
 <p><strong>Note :</strong> Vous trouverez un exemple de champ texte multiligne sur GitHub à l'adresse <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/multi-line-text-field.html">multi-line-text-field.html</a> (voir aussi <a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/multi-line-text-field.html">directement</a>). Jetez-y un coup d'œil, et remarquez que dans la plupart des navigateurs, la zone de texte est dotée d'une poignée d'étirement en bas à droite pour permettre à l'utilisateur de la redimensionner. Cette capacité de redimensionnement peut être désactivée en réglant la propriété {{cssxref("resize")}} de la zone de texte à <code>none</code> dans les CSS.</p>
@@ -262,7 +262,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
       &lt;/optgroup&gt;
     &lt;/select&gt;</pre>
 
-<p><img alt="Screenshots of single line select box on several platforms." src="/files/4517/all-select.png" style="height: 636px; width: 887px;"></p>
+<p><img alt="Screenshots of single line select box on several platforms." src="all-select.png"></p>
 
 <p>Si un élément {{HTMLElement("option")}} est défini avec l'attribut <code>value</code>, la valeur de cet attribut est envoyée lorsque le formulaire est soumis. Si l'attribut <code>value</code> est omis, le contenu de l'élément {{HTMLElement("option")}} est utilisé comme valeur de la boîte de sélection.</p>
 
@@ -280,7 +280,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
       &lt;option&gt;Citron&lt;/option&gt;
     &lt;/select&gt;</pre>
 
-<p><img alt="Screenshots of multi-lines select box on several platforms." src="/files/4559/all-multi-lines-select.png" style="height: 531px; width: 734px;"></p>
+<p><img alt="Screenshots of multi-lines select box on several platforms." src="all-multi-lines-select.png"></p>
 
 <div class="note">
   <p><strong>Note :</strong> tous les navigateurs prenant en charge l'élément {{HTMLElement("select")}} prennent aussi en charge l'attribut {{htmlattrxref("multiple","select")}} sur lui.</p>
@@ -311,7 +311,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
   <p><strong>Note :</strong> Selon la <a href="http://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list" rel="external">norme HTML</a>, l'attribut {{htmlattrxref("list","input")}} et l'élément {{HTMLElement("datalist")}} peuvent s'utiliser avec tout type de widget nécessitant une saisie utilisateur. Toutefois, les modalités de ce fonctionnement ne sont pas claire pour des contrôles autres que textuels (de couleur ou de date par ex.) et les divers navigateurs se comporteront de manière différente selon le cas. Pour cette raison, soyez prudent en utilisant cette fonctionnalité avec autre chose que des champs textuels.</p>
 </div>
 
-<div><img alt="Screenshots of datalist on several platforms." src="/files/4593/all-datalist.png" style="height: 329px; width: 437px;"></div>
+<div><img alt="Screenshots of datalist on several platforms." src="all-datalist.png"></div>
 
 <div>
 <h4 id="Prise_en_charge_de_Datalist_et_recours">Prise en charge de Datalist et recours</h4>
@@ -343,11 +343,11 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
  <tbody>
   <tr>
    <th scope="row">Safari 6</th>
-   <td><img alt="Screenshot of the datalist element fallback with Safari on Mac OS" src="https://developer.mozilla.org/files/4583/datalist-safari.png" style="height: 32px; width: 495px;"></td>
+   <td><img alt="Screenshot of the datalist element fallback with Safari on Mac OS" src="https://developer.mozilla.org/files/4583/datalist-safari.png"></td>
   </tr>
   <tr>
    <th scope="row">Firefox 18</th>
-   <td><img alt="Screenshot of the datalist element with Firefox on Mac OS" src="https://developer.mozilla.org/files/4581/datalist-firefox-macos.png" style="height: 102px; width: 353px;"></td>
+   <td><img alt="Screenshot of the datalist element with Firefox on Mac OS" src="https://developer.mozilla.org/files/4581/datalist-firefox-macos.png"></td>
   </tr>
  </tbody>
 </table>
@@ -376,7 +376,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 
 <p>Mettre l'attribut <code>checked</code> fait que la case sera cochée au chargement de la page.</p>
 
-<p><img alt="Screenshots of check boxes on several platforms." src="/files/4595/all-checkbox.png" style="height: 198px; width: 352px;"></p>
+<p><img alt="Screenshots of check boxes on several platforms." src="all-checkbox.png"></p>
 
 <h3 id="Bouton_radio">Bouton radio</h3>
 
@@ -404,7 +404,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
   &lt;/ul&gt;
 &lt;/fieldset&gt;</pre>
 
-<p><img alt="Screenshots of radio buttons on several platforms." src="/files/4597/all-radio.png" style="height: 198px; width: 352px;"></p>
+<p><img alt="Screenshots of radio buttons on several platforms." src="all-radio.png"></p>
 
 <h2 id="Boutons">Boutons</h2>
 
@@ -452,7 +452,7 @@ original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
  <li>Dans le cas des éléments {{HTMLElement("button")}}, il est possible d'avoir une valeur différente de l'étiquette du bouton (toutefois, ceci ne peut être utilisé pour les versions antérieures à la version 8 d'Internet Explorer).</li>
 </ul>
 
-<p><img alt="Screenshots of buttons on several platforms." src="/files/4599/all-buttons.png" style="height: 235px; width: 464px;"></p>
+<p><img alt="Screenshots of buttons on several platforms." src="all-buttons.png"></p>
 
 <p>Techniquement parlant, il n'y a pratiquement pas de différence entre un bouton défini avec l'élément {{HTMLElement("button")}} ou l'élément {{HTMLElement("input")}}. La seule différence à noter réside dans l'étiquette du bouton lui-même. Dans un élément {{HTMLElement("input")}}, l'étiquette ne peut être constituée que de données de type caractère, alors que dans un élément {{HTMLElement("button")}}, l'étiquette peut être mise sous HTML, de sorte qu'elle peut être mise en forme en conséquence.</p>
 

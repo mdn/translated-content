@@ -55,7 +55,7 @@ original_slug: Apprendre/CSS/CSS_layout/Flexbox
 
 <p>Qu'avons‑nous ? un élément {{htmlelement("header")}} avec un en‑tête de haut niveau à l'intérieur, et un élément {{htmlelement("section")}} contenant trois {{htmlelement("article")}}s. Nous allons les utiliser pour créer une disposition vraiment classique sur trois colonnes.</p>
 
-<p><img alt="Échantillon d'utilisation de flexbox" src="https://mdn.mozillademos.org/files/16097/Exemple_flexbox_1.png" style="border-style: solid; border-width: 1px; display: block; height: 575px; margin: 0px auto; width: 994px;"></p>
+<p><img alt="Échantillon d'utilisation de flexbox" src="Exemple_flexbox_1.png"></p>
 
 <h2 id="Détermination_des_éléments_à_disposer_en_boîtes_flexibles">Détermination des éléments à disposer en boîtes flexibles</h2>
 
@@ -67,7 +67,7 @@ original_slug: Apprendre/CSS/CSS_layout/Flexbox
 
 <p>Voici le résultat :</p>
 
-<p><img alt="Échantillon d'utilisation de flexbox" src="https://mdn.mozillademos.org/files/16097/Exemple_flexbox_1.png" style="border-style: solid; border-width: 1px; display: block; height: 575px; margin: 0px auto; width: 994px;"></p>
+<p><img alt="Échantillon d'utilisation de flexbox" src="Exemple_flexbox_1.png"></p>
 
 <p>Ainsi, cette unique déclaration donne tout ce dont nous avons besoin — incroyable, non ? Nous avons ainsi notre disposition en plusieurs colonnes de largeur égale, et toutes de même hauteur. Ceci parce que les valeurs par défaut données aux éléments flex (les enfants du conteneur flex) sont configurés pour résoudre des problèmes courants tels celui-ci. On en reparlera plus tard.</p>
 
@@ -108,7 +108,7 @@ original_slug: Apprendre/CSS/CSS_layout/Flexbox
 
 <p>Problème : quand votre structure est de largeur ou hauteur fixe, il arrive que les éléments flex débordent du conteneur et brisent cette structure. Voyez l'exemple <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html">flexbox-wrap0.html</a>, essayez <a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html">directement</a> (faites une copie locale de ce fichier maintenant si vous voulez suivre cet exemple) :</p>
 
-<p><img alt="Débordement des éléments modulables" src="https://mdn.mozillademos.org/files/16098/Exemple_flexbox_2.png" style="display: block; height: 663px; margin: 0px auto; width: 933px;"></p>
+<p><img alt="Débordement des éléments modulables" src="Exemple_flexbox_2.png"></p>
 
 <p>Ici, nous voyons que les enfants débordent du conteneur. Une façon d'y remédier est d'ajouter la déclaration suivante à votre règle pour <code>section</code> :</p>
 
@@ -116,7 +116,7 @@ original_slug: Apprendre/CSS/CSS_layout/Flexbox
 
 <p>Essayons ; la disposition est bien meilleure avec cet ajout :</p>
 
-<p><img alt="Conditionnement des éléments modulables" src="https://mdn.mozillademos.org/files/16099/Exemple_flexbox_3.png" style="display: block; height: 918px; margin: 0px auto; width: 933px;">Nous avons maintenant plusieurs lignes — un nombre sensé d'enfants flexibles est placé sur chaque ligne, et le débordement est déplacé vers le bas sur une ligne supplémentaire. La déclaration <code>flex: 200px</code> pour les éléments <code>article</code> signifie que chacun aura au moins 200px de large ; nous discuterons de cette propriété plus en détail plus tard. Vous noterez aussi que chacun des enfants de la dernière rangée est plus large, de façon à ce que toute la rangée reste remplie.</p>
+<p><img alt="Conditionnement des éléments modulables" src="Exemple_flexbox_3.png">Nous avons maintenant plusieurs lignes — un nombre sensé d'enfants flexibles est placé sur chaque ligne, et le débordement est déplacé vers le bas sur une ligne supplémentaire. La déclaration <code>flex: 200px</code> pour les éléments <code>article</code> signifie que chacun aura au moins 200px de large ; nous discuterons de cette propriété plus en détail plus tard. Vous noterez aussi que chacun des enfants de la dernière rangée est plus large, de façon à ce que toute la rangée reste remplie.</p>
 
 <p>Mais nous pouvons faire plus ici. Tout d'abord, essayez de changer la valeur de la propriété {{cssxref("flex-direction")}} en <code>row-reverse</code> — maintenant vous avez toujours la disposition sur plusieurs lignes, mais elles commencent dans l'angle opposé de la fenêtre du navigateur et se disposent à l'envers.</p>
 
@@ -165,7 +165,7 @@ article:nth-of-type(3) {
 
 <p>Actualisez et vous devriez voir une différence dans la façon dont l'espace est réparti.</p>
 
-<p><img alt="Modulation de la largeur" src="https://mdn.mozillademos.org/files/16100/Exemple_flexbox_4.png" style="border-style: solid; border-width: 1px; display: block; height: 484px; margin: 0px auto; width: 1001px;"></p>
+<p><img alt="Modulation de la largeur" src="Exemple_flexbox_4.png"></p>
 
 <p>Le véritable intérêt de flexbox apparaît dans sa souplesse et sa réactivité — si vous redimensionnez la fenêtre du navigateur ou ajoutez un autre élément {{htmlelement("article")}}}, la mise en page continue de fonctionner correctement.</p>
 
@@ -185,7 +185,7 @@ article:nth-of-type(3) {
 
 <p>Vous pouvez également utiliser les fonctionnalités de flexbox pour aligner les éléments flex le long de l'axe principal ou croisé. Voyons cela avec un nouvel exemple — <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html">flex-align0.html</a> (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html">voir aussi en direct</a>). Nous allons le transformer facilement en une barre souple de boutons. Actuellement, nous avons une barre de menu horizontale avec quelques boutons tassés dans l'angle supérieur gauche.</p>
 
-<p><img alt="Alignement" src="https://mdn.mozillademos.org/files/16101/Exemple_flexbox_5.png" style="display: block; height: 105px; margin: 0px auto; width: 960px;"></p>
+<p><img alt="Alignement" src="Exemple_flexbox_5.png"></p>
 
 <p>D'abord, faites une copie locale de cet exemple.</p>
 
@@ -256,7 +256,7 @@ article:nth-of-type(3) {
 
 <p>Il est possible de créer des mises en page joliment complexes avec flexbox. Il est parfaitement loisible de déclarer un élément flex en tant que conteneur flex, de sorte que ses enfants sont également disposés en tant que boîtes modulables. Regardez <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html">complex-flexbox.html</a> (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html">à voir en direct également</a>).</p>
 
-<p><img alt="Imbrications avec flexbox" src="https://mdn.mozillademos.org/files/16102/Exemple_flexbox_6.png" style="border-style: solid; border-width: 1px; display: block; height: 559px; margin: 0px auto; width: 1003px;"></p>
+<p><img alt="Imbrications avec flexbox" src="Exemple_flexbox_6.png"></p>
 
 <p>Le HTML pour cela est vraiment simple. Voici un élément {{htmlelement("section")}} contenant trois éléments {{htmlelement("article")}}. Le troisième élément {{htmlelement("article")}} contient trois éléments {{htmlelement("div")}}. Le premier élément {{htmlelement("div")}} contient cinq éléments {{htmlelement("button")}}  :</p>
 

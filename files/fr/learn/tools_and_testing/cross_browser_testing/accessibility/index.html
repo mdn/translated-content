@@ -127,7 +127,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>Vous pouvez essayer ceci en utilisant notre exemple <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">native-keyboard-accessibility.html</a> (voir le <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">code source</a>) — ouvrez le dans un nouvel onglet, et essayez de presser la touche tab ; après quelques pressions, vous devriez voir la focalisation du tab commencer à se déplacer entre les différents éléments focalisables ; les éléments focalisés ont un style de mise en avant par défaut dans tous les navigateurs (cela diffère peu entre les différents navigateurs) donc vous pouvez dire quel éléments est focalisé.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14215/button-focused-unfocused.png" style="border-style: solid; border-width: 1px; display: block; height: 39px; margin: 0px auto; width: 288px;"></p>
+<p><img alt="" src="button-focused-unfocused.png"></p>
 
 <p>Vous pouvez ensuite presser Entrée/Retour pour accéder à un lien focalisé ou presser un bouton (nous avons inclus un peu de JavaScript pour que les boutons renvoies un message d'alerte), ou commencer à taper pour entrer du texte dans un des input texte (d'autres éléments de formulaire ont différents contrôles, par exemple l'élément {{htmlelement("select")}} peut avoir ses options affichées et navigable en utilisant les touches haut et bas).</p>
 
@@ -234,7 +234,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>Il y a plusieurs cas où un design visuel requerra que tout le contenu ne soit pas montré d'un seul coup. Par exemple, dans notre <a href="http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Exemple de boîte d'info avec onglets</a> (voir le <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">code source</a>) nous avons trois panneau d'information, mais nous les <a href="/fr/docs/Learn/CSS/CSS_layout/Positioning">positionnons</a> les uns sur les autres et fournissons des onglets qui peuvent être cliqués pour montrer chacun d'entre eux (c'est aussi accessible au clavier — vous pouvez utiliser alternativement Tab et Entrée/Retour pour les sélectionner).</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13368/tabbed-info-box.png" style="display: block; height: 400px; margin: 0px auto; width: 450px;"></p>
+<p><img alt="" src="tabbed-info-box.png"></p>
 
 <p>Les utilisateurs de lecteur d'écran ne se soucient pas vraiment de cela — ils sont satisfaits tant que le contenu a du sens dans le code source, et qu'ils peuvent entièrement y accéder. Le positionnement absolute (comme utilisé dans cet exemple) est souvent vu comme l'un des meilleur mécanismes pour cacher du contenu pour des effets visuels, parce que ça n'empêche pas les lecteur d'écran d'y accéder.</p>
 
@@ -316,7 +316,7 @@ a:focus, input:focus, button:focus, select:focus {
  <li>Défilez vers le bas jusqu'à que vous trouviez la section d'erreur/signalement, comme montré ci-dessous.</li>
 </ol>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14217/tenon-screenshot.png" style="border-style: solid; border-width: 1px; display: block; height: 593px; margin: 0px auto; width: 870px;"></p>
+<p><img alt="" src="tenon-screenshot.png"></p>
 
 <p>Il y a également des options que vous pouvez examiner (voir le lien <em>Show Options</em> vers le haut de la page), ainsi qu'une API pour utiliser Tenon comme un programme.</p>
 
@@ -335,7 +335,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>Cela ajoute un onglet accessibilité aux outils de développeur du navigateur, nous avons installé la version pour Firefox, puis nous l'avons utilisé pour auditer notre exemple <a href="http://mdn.github.io/learning-area/accessibility/html/bad-table.html">bad-table.html</a>. Nous obtenons les résultats suivants :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14213/aXe-screenshot.png" style="display: block; height: 580px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="aXe-screenshot.png"></p>
 
 <p>aXe est également installable en utilisant <code>npm</code>, et peut-être intégré avec des exécuteurs de tâche comme <a href="http://gruntjs.com/">Grunt</a> et <a href="http://gulpjs.com/">Gulp</a>, des frameworks d'automatisation comme <a href="http://www.seleniumhq.org/">Selenium</a> et <a href="https://cucumber.io/">Cucumber</a>, des framework de test unitaire comme <a href="http://jasmine.github.io/">Jasmin</a>, et d'autres encore (une fois encore, voir la <a href="https://www.deque.com/products/axe/">page principale d'aXe</a> pour plus de détails).</p>
 
@@ -369,7 +369,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>Lorsque VO est démarré, l'affichage ressemblera à peu près à cela, mais vous verrez une boîte noire en bas à gauche de l'écran qui contient l'information sur quoi est-ce que VO est actuellement sélectionné. La sélection courante sera également mise en avant, avec une bordure noire — cette mise en avant est connue comme le <strong>curseur VO</strong>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14219/voiceover.png" style="border-style: solid; border-width: 1px; display: block; height: 386px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="voiceover.png"></p>
 
 <p>Pour utiliser VO, vous aller beaucoup utiliser le "modificateur VO" — c'est une touche ou une combinaison de touches que vous devez presser en plus de l'actuel raccourci VO pour qu'elles fonctionnent. Utiliser un modificateur comme celui-ci est courant avec les lecteurs d'écran, pour leur permettre de garder leur propres commandes en évitant d'entrer en conflit avec d'autres commandes. Dans le cas de VO, le modificateur peut aussi être VerrMaj, ou Ctrl + Option.</p>
 

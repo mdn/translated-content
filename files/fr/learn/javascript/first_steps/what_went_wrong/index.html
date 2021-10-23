@@ -68,7 +68,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 <p>Antérieurement dans le cours, nous vous avons demandé de taper quelques commandes JavaScript simples dans la <a href="/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs">console JavaScript</a> <a href="/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs">des outils de développement</a> (si vous ne pouvez pas vous rappeler comment l'ouvrir dans votre navigateur, suivez le lien précédent pour savoir comment). Ce qui est encore plus utile, c'est que la console vous donne des messages d'erreur chaque fois qu'une erreur de syntaxe existe dans le JavaScript qui est introduit dans le moteur JavaScript du navigateur. Maintenant partons en chasse !</p>
 
 <ol>
- <li>Allez à l'onglet dans lequel est affiché <code>number-game-errors.html</code>, et ouvrez la console  JavaScript. Vous devriez voir un message d'erreur dans les lignes qui suivent : <img alt="" src="https://mdn.mozillademos.org/files/13496/not-a-function.png" style="display: block; margin: 0 auto;"></li>
+ <li>Allez à l'onglet dans lequel est affiché <code>number-game-errors.html</code>, et ouvrez la console  JavaScript. Vous devriez voir un message d'erreur dans les lignes qui suivent : <img alt="" src="not-a-function.png"></li>
  <li>C'est une erreur très facile à trouver, et le navigateur vous fournit quelques indices pour vous en sortir (la copie d'écran ci‑dessus provient de Firefox, mais les autres navigateurs donnent des indications semblables). De gauche à droite, nous avons :
   <ul>
    <li>Une croix rouge indiquant que c'est une erreur.</li>
@@ -93,7 +93,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 <ol>
  <li>Enregistrez la page et actualisez‑la, vous constaterez que l'erreur a disparu.</li>
- <li>Maintenant si vous entrez une supposition et pressez le bouton de soumission, vous constaterez ... une autre erreur ! <img alt="" src="https://mdn.mozillademos.org/files/13498/variable-is-null.png" style="display: block; margin: 0 auto;"></li>
+ <li>Maintenant si vous entrez une supposition et pressez le bouton de soumission, vous constaterez ... une autre erreur ! <img alt="" src="variable-is-null.png"></li>
  <li>Cette fois‑ci, l'erreur rapportée est "TypeError: lowOrHi is null", à la ligne 78.
   <div class="note">
     <p><strong>Note :</strong> <code><a href="/fr/docs/Glossary/Null">Null</a></code> est une valeur spéciale signifiant "rien" ou "aucune valeur". Or <code>lowOrHi</code> a été déclaré et initialisé, mais sans valeur signifiante — il n'a ni type ni valeur.</p></div>
@@ -114,7 +114,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
   <p><strong>Note :</strong> <code><a href="/fr/docs/Web/API/Console/log">console.log()</a></code> est vraiment utile pour déboguer une fonction en affichant sa valeur sur la console. Donc, elle affichera sur cette dernière la valeur de <code>lowOrHi</code> que nous avons essayé de définir à la ligne 48.</p>
   </div>
  </li>
- <li>Enregistrez et actualisez la page, et vous verrez le résultat de <code>console.log()</code> sur la console. <img alt="" src="https://mdn.mozillademos.org/files/13494/console-log-output.png" style="display: block; margin: 0 auto;"> C'est sûr, la valeur de <code>lowOrHi</code> est <code>null</code> à ce niveau ; il y a bien un problème à la ligne 48.</li>
+ <li>Enregistrez et actualisez la page, et vous verrez le résultat de <code>console.log()</code> sur la console. <img alt="" src="console-log-output.png"> C'est sûr, la valeur de <code>lowOrHi</code> est <code>null</code> à ce niveau ; il y a bien un problème à la ligne 48.</li>
  <li>Quel est ce problème ? Réfléchissons. À la ligne 48, nous avons utilisé la méthode <code><a href="/fr/docs/Web/API/Document/querySelector">document.querySelector()</a></code> pour obtenir une référence sur un élément avec un sélecteur CSS. En regardant plus en amont dans notre fichier, nous pouvons trouver le paragraphe en question :
   <pre class="brush: js">&lt;p class="lowOrHi"&gt;&lt;/p&gt;</pre>
  </li>

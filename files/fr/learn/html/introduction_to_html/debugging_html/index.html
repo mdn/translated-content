@@ -36,7 +36,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Debugging_HTML
 
 <p>Quand on écrit du code , tout va généralement bien, jusqu'au moment redouté où une erreur se produit — vous avez fait quelque chose d'incorrect, donc votre code ne fonctionne pas — soit pas du tout, soit pas tout à fait comme vous l'aviez souhaité. Par exemple, ce qui suit montre une erreur signalée lors d'une tentative de {{glossary("compile","compilation")}} d'un programme simple écrit en Rust.</p>
 
-<p><img alt="Console montrant le résultat de la compilation d'un programme Rust avec guillemet manquant dans une chaîne textuelle dans une instruction d'affichage. Le message signalé est « erreur : guillemet double manquant dans la chaîne »." src="fr-erreur.png" style="display: block; margin: 0px auto;">Ici, le message d'erreur est relativement facile à comprendre — « unterminated double quote string » : il manque un guillemet double ouvrant ou fermant pour envelopper la chaîne. Si vous regardez le listage, vous verrez <code>println!(Salut, Ô Monde!");</code> il manque un guillemet double. Cependant, des messages d'erreur peuvent devenir plus complexes et plus abscons au fur et à mesure que le programme grossit et, même dans des cas simples devenir intimidants à quelqu'un qui ne connaît rien du Rust.</p>
+<p><img alt="Console montrant le résultat de la compilation d'un programme Rust avec guillemet manquant dans une chaîne textuelle dans une instruction d'affichage. Le message signalé est « erreur : guillemet double manquant dans la chaîne »." src="fr-erreur.png">Ici, le message d'erreur est relativement facile à comprendre — « unterminated double quote string » : il manque un guillemet double ouvrant ou fermant pour envelopper la chaîne. Si vous regardez le listage, vous verrez <code>println!(Salut, Ô Monde!");</code> il manque un guillemet double. Cependant, des messages d'erreur peuvent devenir plus complexes et plus abscons au fur et à mesure que le programme grossit et, même dans des cas simples devenir intimidants à quelqu'un qui ne connaît rien du Rust.</p>
 
 <p>Déboguer ne doit toutefois pas devenir un problème — la clé pour être à l'aise lors de l'écriture et du débogage d'un programme réside dans une bonne connaissance à la fois du langage et des outils.</p>
 
@@ -69,7 +69,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Debugging_HTML
 
 <ol>
  <li>Primo, télécharchez notre démo <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html">debug-example </a>et enregistrez‑le localement. Cette démo est délibérement écrite avec des erreurs pour que nous puissions les examiner (le balisage HTML est dit <strong>malformé</strong>, par opposition à <strong>bien-formé</strong>).</li>
- <li>Ensuite, ouvrez‑le dans un navigateur. Vous verrez quelque chose comme ceci :<img alt="Un simple document HTML intitulé « Exemples de HTML à déboguer » et quelques informations sur les erreurs HTML courantes, telles que les éléments non fermés ou mal imbriqués et des attributs non fermés. " src="fr-html-errone.png" style="display: block; margin: 0px auto;"></li>
+ <li>Ensuite, ouvrez‑le dans un navigateur. Vous verrez quelque chose comme ceci :<img alt="Un simple document HTML intitulé « Exemples de HTML à déboguer » et quelques informations sur les erreurs HTML courantes, telles que les éléments non fermés ou mal imbriqués et des attributs non fermés. " src="fr-html-errone.png"></li>
  <li>Constatons que ce n'est pas terrible ; examinons le code source pour voir ce que nous pouvons en faire (seul le contenu de l'élément <code>body</code> est affiché) :
   <pre>    &lt;h1&gt;Exemple de HTML à déboguer&lt;/h1&gt;
 
@@ -100,7 +100,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Debugging_HTML
   </ul>
  </li>
  <li>Revoyons maintenant comment le navigateur a vu le balisage, par comparaison au balisage du code source. Pour ce faire, utilisons les outils de développement du navigateur. Si vous n'êtes pas un familier de l'utilisation des outils de développement du navigateur, prenez quelques minutes pour revoir <a href="/fr/docs/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs">Découverte des outils de développement du navigateur</a>.</li>
- <li>Dans l'« Inspecteur », vous pouvez voir ce à quoi le balisage du rendu ressemble : <img alt="L'inspecteur HTML dans Firefox, avec le paragraphe de l'exemple en surbrillance, montrant le texte &quot;Quelles sont les causes d'erreurs en HTML ? Ici, vous pouvez voir que l'élément de paragraphe a été fermé par le navigateur." src="fr-inspecteur.png" style="display: block; margin: 0px auto;"></li>
+ <li>Dans l'« Inspecteur », vous pouvez voir ce à quoi le balisage du rendu ressemble : <img alt="L'inspecteur HTML dans Firefox, avec le paragraphe de l'exemple en surbrillance, montrant le texte &quot;Quelles sont les causes d'erreurs en HTML ? Ici, vous pouvez voir que l'élément de paragraphe a été fermé par le navigateur." src="fr-inspecteur.png"></li>
  <li>Avec l'« Inspecteur », explorons le code en détail pour voir comment le navigateur a essayé de corriger nos erreurs HTML (nous avons fait la revue dans Firefox ; d'autres navigateurs modernes <em>devraient</em> donner le même résultat) :
   <ul>
    <li>Les éléments <code>p</code> et <code>li</code> ont été pourvus de balises fermantes.</li>
@@ -127,7 +127,7 @@ en HTML. Voici un exemple :&lt;/strong&gt;
 
 <p>La meilleure stratégie consiste à faire passer votre page HTML par le <a href="https://validator.w3.org/">Markup Validation Service (</a>Service de validation de balisage) — créé et maintenu par le W3C, l'organisation s'occupant des normes définissant le HTML, les CSS et autres technologies web. Cet outil Web accepte un document HTML en entrée, le parcourt et fait le rapport de ce qui ne va pas dans le HTML soumis.</p>
 
-<p><img alt="La page d'accueil du validateur HTML" src="fr-w3c.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="La page d'accueil du validateur HTML" src="fr-w3c.png"></p>
 
 <p>Pour définir le HTML à valider, vous pouvez donner une adresse web (<em>Validate by URI</em>) , téléverser un fichier HTML (<em>Validate by File Upload</em>) ou entrer directement du code HTML (<em>Validate by Direct Input</em>).</p>
 
@@ -144,7 +144,7 @@ en HTML. Voici un exemple :&lt;/strong&gt;
 
 <p>Cela vous donnera une liste d'erreurs et autres informations.</p>
 
-<p><img alt="La liste des résultats de la validation de HTML par le service de validation du W3C." src="fr-liste-erreur.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="La liste des résultats de la validation de HTML par le service de validation du W3C." src="fr-liste-erreur.png"></p>
 
 <h4 id="Interprétation_des_messages_d'erreur">Interprétation des messages d'erreur</h4>
 
@@ -169,7 +169,7 @@ en HTML. Voici un exemple :&lt;/strong&gt;
 
 <p>Vous saurez que toutes vos erreurs sont corrigées quand vous verrez la bannière suivante dans la sortie : </p>
 
-<p><img alt='Banner that reads "The document validates according to the specified schema(s) and to additional constraints checked by the validator."' src="valid-html-banner.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt='Banner that reads "The document validates according to the specified schema(s) and to additional constraints checked by the validator."' src="valid-html-banner.png"></p>
 
 <h2 id="Résumé">Résumé</h2>
 

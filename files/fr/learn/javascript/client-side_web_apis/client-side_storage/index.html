@@ -59,7 +59,7 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage
 
 <p>De par leur histoire, les cookies souffrent d'un certain nombre de problèmes — tant techniques qu'au niveau de l'expérience utilisateur. Ces problèmes sont suffisamment importants pour imposer un message d'information aux utilisateurs habitant en Europe lors de leur première visite si le site utilise des cookies pour stocker des informations sur eux. Cela est dû à une loi de l'Union Européenne connue sous le nom de <a href="/fr/docs/Web/HTTP/Cookies#EU_cookie_directive">directive Cookie</a>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15734/cookies-notice.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="cookies-notice.png"></p>
 
 <p>Pour ces raisons, nous ne verrons pas dans cet article comment utiliser les cookies. Entre le fait qu'ils sont dépassés, les <a href="/fr/docs/Web/HTTP/Cookies#Security">problèmes de sécurité</a> qu'ils présentent et l'incapacité de stocker des données complexes, les cookies ne sont pas la meilleure manière pour stocker des données. Il y a de meilleures alternatives, modernes, permettant de stocker des données variées sur l'ordinateur de l'utilisateur.</p>
 
@@ -169,7 +169,7 @@ myName</pre>
 
 <p>Le HTML de l'exemple est disponible à <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html">personal-greeting.html</a> — il s'agit d'un site web très simple avec entête, contenu et pied de page, ainsi qu'un formulaire pour entrer votre nom.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15735/web-storage-demo.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="web-storage-demo.png"></p>
 
 <p>Nous allons construire cet exemple pas à pas, cela vous permettra de comprendre comment ça marche.</p>
 
@@ -279,7 +279,7 @@ function nameDisplayCheck() {
 
 <p>L'application ressemble à ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15744/idb-demo.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="idb-demo.png"></p>
 
 <p>Chaque note a un titre et une description, chacun éditables individuellement. Le code JavaScript que nous allons voir ci-dessous contient des commentaires détaillés pour vous aider à comprendre ce qu'il se passe.</p>
 
@@ -729,7 +729,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 
 <p>L'exemple ci-dessus montre comment créer une application qui stocke des ressources volumineuses dans une base de données IndexedDB, évitant ainsi de devoir les télécharger plus d'une fois. C'est déjà une grande amélioration pour l'expérience utilisateur, mais il manque encore une chose: les fichiers HTML, CSS, et JavaScript doivent encore être téléchargés à chaque fois que le site est accédé, ce qui veut dire qu'il ne fonctionnera pas lorsqu'il n'y a pas de connexion réseau</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15759/ff-offline.png" style="border-style: solid; border-width: 1px; display: block; height: 307px; margin: 0px auto; width: 765px;"></p>
+<p><img alt="" src="ff-offline.png"></p>
 
 <p>C'est là qu'interviennet les <a href="/fr/docs/Web/API/Service_Worker_API">Service workers</a> et l'API étroitement liée, <a href="/fr/docs/Web/API/Cache">Cache</a>.</p>
 

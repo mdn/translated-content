@@ -59,11 +59,11 @@ original_slug: Learn/JavaScript/Objects/Prototypes_Objet
 
 <p>Si vous entrez  « <code>personne1</code> » dans votre console JavaScript, vous devriez voir que le navigateur essaie de faire de l'auto-complétion avec les attributs de cet objet.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14907/autocomplete_Personne.png" style="height: 304px; width: 288px;"><img alt="" src="https://mdn.mozillademos.org/files/14919/autocomplete_Personne.png" style="height: 288px; width: 303px;"></p>
+<p><img alt="" src="autocomplete_Personne.png"><img alt="" src="autocomplete_Personne.png"></p>
 
 <p>Dans cette liste vous verrez les membres définis au niveau du constructeur de <code>personne1</code> qui n'est autre  <code>Personne()</code>. On y trouve les valeurs suivantes : <code>nom</code>, <code>age</code>, <code>genre</code>, <code>interets</code>, <code>bio</code>, et <code>salutation</code>. On peut voir aussi d'autres membres tels que <code>watch</code>, <code>valueOf</code> …  Ces membres particuliers sont définis au niveau du prototype objet du constructeur <code>Personne()</code>, qui est <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>. On voit ici une mise en œuvre de la chaine de prototypage.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14921/prototype_chaine.PNG" style="height: 137px; width: 703px;"></p>
+<p><img alt="" src="prototype_chaine.PNG"></p>
 
 <p>Que peut-il bien se passer lorsque l'on tente d'appeler une méthode définie pour <code>Object</code> en l'appliquant à <code>Personne</code>1 ? Par exemple :</p>
 

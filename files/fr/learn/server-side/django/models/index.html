@@ -46,7 +46,7 @@ translation_of: Learn/Server-side/Django/Models
 
 <p>Avec ces éléments présents à l'esprit, le diagramme  de classes UML ci-dessous décrit les objets de la bibliothèque.</p>
 
-<p><img alt="LocalLibrary Model UML" src="https://mdn.mozillademos.org/files/16479/local_library_model_uml.png" style="height: 660px; width: 977px;"></p>
+<p><img alt="LocalLibrary Model UML" src="local_library_model_uml.png"></p>
 
 <p>Le modèle ainsi créé, décrit l'objet livre - <em>Book</em> - avec une description générique d'un livre, la copie d'un livre - <em>BookInstance</em> - avec l'état d'un copie physique d'un livre et de sa disponibilité, et l'objet auteur - <em>Author</em>. Les genres des collections pouvant varier, il est plus élégant de concevoir une classe d'objets dédiée comme pour les langues. Considérant que le statut de prêt ne changera pas, il est décidé que le traiter dans le code - <code>BookInstance:status</code> sera géré dans le code Django <code>LOAN_STATUS</code>. Dans le diagramme de classe, les caractéristiques de chacun des attributs et méthodes sont précisées pour plus de clarté du travail à réaliser.</p>
 

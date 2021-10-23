@@ -43,7 +43,7 @@ original_slug: Learn/JavaScript/Objects/JS_orienté-objet
 
 <p>Pour débuter, nous pouvons réutiliser l'objet Personne que nous avons créé dans notre <a href="/fr/docs/Learn/JavaScript/Objects/Basics">premier article</a>, il définit un ensemble de données et actions d'une personne. Il existe tout un tas de choses que nous pourrions savoir au sujet d'une personne (son adresse, sa taille, sa pointure, son ADN, son numéro de passeport, ses traits particuliers significatifs… ). En l'occurrence, nous souhaitons uniquement afficher son nom, son âge, ses passions, écrire une petite introduction à son sujet en utilisant ces données et lui apprendre à se présenter. On parle alors d'<strong>abstraction </strong>: créer un modèle simplifié de quelque chose de complexe mais qui ne contient que les aspects qui nous intéressent. Il sera alors plus simple de manipuler ce modèle objet simplifié dans le cadre de notre programme.</p>
 
-<p><img alt="Classe Personne avec attributs élémentaires" src="https://mdn.mozillademos.org/files/14867/ClassePersonne.png" style="height: 216px; width: 604px;"></p>
+<p><img alt="Classe Personne avec attributs élémentaires" src="ClassePersonne.png"></p>
 
 <p>Dans plusieurs langages de POO, la définition d'un objet est appelé une <strong>classe </strong>(comme on le verra ci-après, JavaScript se base sur un mécanisme et une terminologie différente). En réalité ce n'est pas vraiment un objet mais plutôt un modèle qui définit les propriétés que notre objet doit avoir.</p>
 
@@ -51,7 +51,7 @@ original_slug: Learn/JavaScript/Objects/JS_orienté-objet
 
 <p>À partir de notre classe, nous pouvons créer des objets, on parle alors d'<strong>instancier des objets</strong>, une classe objet a alors <strong>une instance</strong>. Il s'agit d'objets qui contiennent les données et attributs définis dans une classe. À partir de notre classe Personne, nous pouvons modéliser des personnes réelles :</p>
 
-<p><img alt="Instantiation on a Personn Class for JS examples (fr)" src="https://mdn.mozillademos.org/files/14869/InstancePersonne.png" style="height: 716px; width: 699px;"></p>
+<p><img alt="Instantiation on a Personn Class for JS examples (fr)" src="InstancePersonne.png"></p>
 
 <p>Lorsque l'instance d'un objet est créée, on appelle la <strong>fonction</strong> <strong>constructeur </strong>de la classe pour la créer. On parle d'<strong>instanciation</strong> d'un objet — l'objet ainsi créé est <strong>instancié</strong> à partir de la classe.</p>
 
@@ -59,7 +59,7 @@ original_slug: Learn/JavaScript/Objects/JS_orienté-objet
 
 <p>Pour notre exemple, nous n'allons pas nous contenter de personnes génériques — nous pourrions utiliser des professeurs, des étudiants, qui sont des types un peu plus spécifiques de personnes. En POO, il est possible de créer de nouvelles classes à partir d'autres classes — ces <strong>classes filles</strong> nouvellement créées peuvent <strong>hériter</strong> des propriétés et des attributs de leur <strong>classe mère</strong>. Il est donc possible d'avoir des attributs partagés à l'ensemble des classes plutôt que de les dupliquer. Si besoin, il est possible d'ajouter des fonctions et attributs spécifiques sur chaque classe fille.</p>
 
-<p><img alt="Inheritance principle with French text for JS example" src="https://mdn.mozillademos.org/files/14887/HeritageClasse.PNG" style="height: 709px; width: 696px;"></p>
+<p><img alt="Inheritance principle with French text for JS example" src="HeritageClasse.PNG"></p>
 
 <p>Cela s'avère très utile puisque les étudiants et les professeurs se ressemblent sur de nombreux aspects : ils ont un nom, un genre, un âge, il est donc utile de ne définir ces attributs qu'une seule fois. Il est aussi possible de redéfinir le même attribut dans différentes classes étant donné que l'attribut appartiendra à chaque fois à un nom d'espace différent. On pourra ainsi avoir différentes formes de salutations : « Hey, je m'appelle [prénom] » pour les étudiants ( « Hey je m'appelle Sam » ) tandis que les professeurs pourront dire quelque chose d'un peu plus formel comme « Bonjour, mon nom est [Titre][Nom] et j'enseigne [matière] » par exemple « Bonjour mon nom est M. Griffiths et j'enseigne la chimie ».</p>
 
@@ -69,7 +69,7 @@ original_slug: Learn/JavaScript/Objects/JS_orienté-objet
 
 <p>Une fois la classe fille créée il est alors possible de l'instancier et de créer des objets. Par exemple :</p>
 
-<p><img alt="Professor instantiation example for JS fr" src="https://mdn.mozillademos.org/files/14889/InstanceProf.png" style="height: 703px; width: 696px;"></p>
+<p><img alt="Professor instantiation example for JS fr" src="InstanceProf.png"></p>
 
 <p>Dans la suite de l'article, nous nous intéresserons à la mise en œuvre de la programmation orientée objet (POO) au sein de JavaScript.</p>
 

@@ -144,7 +144,7 @@ ctx.fillRect(0, 0, width, height);</pre>
 
 <p>De nombreuses opérations doivent recevoir des coordonnées en entrée pour savoir où dessiner quelque chose — le coin supérieur gauche du canvas est le point (0, 0), l'axe horizontal (x) va de gauche à droite, et l'axe vertical (y) va de haut en bas.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" style="display: block; height: 220px; margin: 0px auto; width: 220px;"></p>
+<p><img alt="" src="Canvas_default_grid.png"></p>
 
 <p>Dessiner des formes est souvent fait en utilisant la forme rectangle, ou alors en traçant une ligne le long d'un certain chemin puis en remplissant la forme. Nous allons vous montrer ci-dessous comment faire ces deux choses.</p>
 
@@ -284,7 +284,7 @@ ctx.fill();</pre>
 
     <p> </p>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/14829/trigonometry.png" style="display: block; margin: 0 auto;"></p>
+    <p><img alt="" src="trigonometry.png"></p>
 
     <p>Une des formule trigonométrique de base stipule que la longueur du côté adjacent mutiplié par la tangente de l'angle est égale à l'opposé, soit <code>50 * Math.tan(degToRad(60))</code>. Nous utilisons notre fonction <code>degToRad()</code> pour convertir 60 degrés en radians, puisque {{jsxref("Math.tan()")}} attend une valeur en radians.</p>
    </li>
@@ -627,7 +627,7 @@ var posX = 0;</pre>
 
   <p>L'image de sprites (que nous avons respectueusement emprunté à Mike Thomas dans son article <a href="http://atomicrobotdesign.com/blog/htmlcss/create-a-sprite-sheet-walk-cycle-using-using-css-animation/" rel="bookmark" title="Permanent Link to Create a sprite sheet walk cycle using using CSS animation">Create a sprite sheet walk cycle using using CSS animation</a> — créer un cycle de marche avec une feuille de sprites en utilisant les animations CSS) ressemble à ça:</p>
 
-  <p><img alt="" src="https://mdn.mozillademos.org/files/14847/walk-right.png" style="display: block; height: 148px; margin: 0px auto; width: 612px;"></p>
+  <p><img alt="" src="walk-right.png"></p>
 
   <p>Elle contient six sprites qui constituent une séquence de marche — chacun a 102 pixels de large et 148 pixels de hauteur. Pour afficher chaque sprite proprement, nous allons devoir utiliser <code>drawImage()</code> pour découper un seul sprite de l'image et n'afficher que cette partie, comme nous l'avons fait précédemment avec le logo Firefox. La coordonnée X de la découpe devra être un multiple de 102 et la coordonnée Y sera toujours 0. La taille de la découpe sera toujours de 102 pixels par 148.</p>
  </li>

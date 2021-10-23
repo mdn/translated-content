@@ -38,7 +38,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 <p>Bien que nous n'ayons pas encore créé de formulaire au cours de cette formation, nous en avons déjà rencontré sur l'interface d'administration Django Admin — par exemple la capture d'écran ci-dessous montre un formulaire d'édition  de l'un de nos modèle de <a href="/fr/docs/Learn/Server-side/Django/Models">Book</a>  (livre), comprenant des composants élémentaires d'interface graphique de chois de valeur parmi une liste proposée,  et des zones des saisie de texte.</p>
 
-<p><img alt="Admin Site - Book Add" src="https://mdn.mozillademos.org/files/13979/admin_book_add.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Admin Site - Book Add" src="admin_book_add.png"></p>
 
 <p>Travailler avec des formulaires peut s'avérer compliqué ! Les développeurs doivent non seulement écrire le code  HTML pour le formulaire, mais aussi vérifier et corriger sur le serveur les données saisies (et éventuellement aussi dans le navigateur), renvoyer le formulaire avec des messages d'erreur pour informer les usagers de tout champ invalide, prendre en charge les données quand elles passent l'étape de vérification, et finalement renvoyer une information à l'utilisateur d'une manière ou d'une autre pour indiquer ce succès. Les formulaires sous Django enlèvent beaucoup de travail à chacune de ces étapes, grâce à un cadriciel qui permet de déclarer des formulaires et leurs champs à travers un langage de programmation, puis d'utiliser ces objets non seulement pour générer le code HTML, mais aussi une grosse partie de la vérification des données et du retour d'information à l'utilisateur.</p>
 
@@ -83,7 +83,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 <p>Voici ci-dessous un diagramme représentant les étapes de gestion d'un formulaire de requêtes, commencant par la demande par le navigateur d'une page, dont le code HTML se trouve contenir un formulaire (en vert).</p>
 
-<p><img alt="Updated form handling process doc." src="https://mdn.mozillademos.org/files/14205/Form%20Handling%20-%20Standard.png" style="display: block; height: 569px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="Updated form handling process doc." src="Form%20Handling%20-%20Standard.png"></p>
 
 <p>En se basant sur la lecture du diagramme ci-dessus, les tâches principales dont s'aquitte Django à l'occasion de la gestion d'un formulaire sont : </p>
 
@@ -440,15 +440,15 @@ def renew_book_librarian(request, pk):
 
 <p>Si tout a bien marché, le formulaire par défaut ressemblera à ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14209/forms_example_renew_default.png" style="border-style: solid; border-width: 1px; display: block; height: 292px; margin: 0px auto; width: 680px;"></p>
+<p><img alt="" src="forms_example_renew_default.png"></p>
 
 <p>Le formulaire avec valeur erronée ressemblera à ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14211/forms_example_renew_invalid.png" style="border-style: solid; border-width: 1px; display: block; height: 290px; margin: 0px auto; width: 658px;"></p>
+<p><img alt="" src="forms_example_renew_invalid.png"></p>
 
 <p>La liste de tous les livres avec les liens vers le renouvellement ressemblera à ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14207/forms_example_renew_allbooks.png" style="border-style: solid; border-width: 1px; display: block; height: 256px; margin: 0px auto; width: 613px;"></p>
+<p><img alt="" src="forms_example_renew_allbooks.png"></p>
 
 <h2 id="ModelForms">ModelForms</h2>
 
@@ -610,7 +610,7 @@ class AuthorDelete(DeleteView):
 
 <p>Ensuite naviguez à la page de création d'auteur : <a class="external" href="http://127.0.0.1:8000/catalog/author/create/" rel="noopener">http://127.0.0.1:8000/catalog/author/create/</a>, ce qui devrait ressembler à la capture d'écran ci-dessous.</p>
 
-<p><img alt="Form Example: Create Author" src="https://mdn.mozillademos.org/files/14223/forms_example_create_author.png" style="border-style: solid; border-width: 1px; display: block; height: 184px; margin: 0px auto; width: 645px;"></p>
+<p><img alt="Form Example: Create Author" src="forms_example_create_author.png"></p>
 
 <p>Entrez des valeurs pour les champs et ensuite cliquez sur <strong>Submit</strong> pour sauvegarder l'enregistrement de cet auteur. Vous devriez maintenant être conduit à une vue "détail" pour votre nouvel auteur, avec une URL du genre <em>http://127.0.0.1:8000/catalog/author/10</em>.</p>
 
@@ -618,13 +618,13 @@ class AuthorDelete(DeleteView):
 
 <p>Enfin, nous pouvons effacer l'enregistrement en ajoutant "delete" à la fin de l'URL de détail (par exemple <em>http://127.0.0.1:8000/catalog/author/10/delete/</em>). Django devrait vous afficher la page de suppression montrée ci-dessous. Cliquez sur "<strong>Yes, delete</strong>" pour supprimer l'enregistrement et être reconduit à la liste des auteurs.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14221/forms_example_delete_author.png" style="border-style: solid; border-width: 1px; display: block; height: 194px; margin: 0px auto; width: 561px;"></p>
+<p><img alt="" src="forms_example_delete_author.png"></p>
 
 <h2 id="Mettez-vous_au_défi">Mettez-vous au défi</h2>
 
 <p>Créez des formulaires pour créer, modifier et effacer des enregistrements de type <code>Book</code>. Vous pouvez utiliser exactement la même structure que pour les <code>Authors</code>. Si votre template <strong>book_form.html</strong> est simplement copié-renommé à partir du template <strong>author_form.html</strong>, alors la nouvelle page "create book" va ressembler à quelque chose comme ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14225/forms_example_create_book.png" style="border-style: solid; border-width: 1px; display: block; height: 521px; margin: 0px auto; width: 595px;"></p>
+<p><img alt="" src="forms_example_create_book.png"></p>
 
 <ul>
 </ul>
