@@ -5,69 +5,74 @@ tags:
   - API
   - DOM
   - Double Click
-  - Double-Click
+  - ダブルクリック
   - Element
-  - Event
-  - Input
-  - Interface
-  - MouseEvent
-  - Reference
-  - button
-  - dblclick
-  - events
-  - mouse
   - イベント
+  - Input
+  - インターフェイス
+  - MouseEvent
+  - リファレンス
+  - ボタン
+  - dblclick
+  - mouse
 translation_of: Web/API/Element/dblclick_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><span class="seoSummary"><strong><code>dblclick</code></strong> イベントは、ポインティングデバイスのボタン (マウスの第一ボタンなど) がダブルクリックされたとき、つまり、単一の要素上でとても短い時間内に素早く二回クリックされたときに発生します。</span></p>
+**`dblclick`** イベントは、ポインティングデバイスのボタン (マウスの第一ボタンなど) がダブルクリックされたとき、つまり、単一の要素上でとても短い時間内に素早く 2 回クリックされたときに発生します。
 
-<p><code>dblclick</code> は二回の {{domxref("Element/click_event", "click")}} イベントの後 (展開すると、2組の {{domxref("Element.mousedown_event", "mousedown")}} および {{domxref("Element.mouseup_event", "mouseup")}} の後) に発生します。</p>
+`dblclick` は 2 回の {{domxref("Element/click_event", "click")}} イベントの後 (展開すると、2 組の {{domxref("Element.mousedown_event", "mousedown")}} および {{domxref("Element.mouseup_event", "mouseup")}} の後) に発生します。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>あり</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル可能</th>
-   <td>はい</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.ondblclick", "ondblclick")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>あり</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>可</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>
+        {{domxref("GlobalEventHandlers.ondblclick", "ondblclick")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<p>この例では、カードをダブルクリックするたびに寸法が切り替わります。</p>
+この例では、カードをダブルクリックするたびに寸法が切り替わります。
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const card = document.querySelector('aside');
+```js
+const card = document.querySelector('aside');
 
 card.addEventListener('dblclick', function (e) {
   card.classList.toggle('large');
-});</pre>
+});
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;aside&gt;
-  &lt;h3&gt;My Card&lt;/h3&gt;
-  &lt;p&gt;Double click to resize this object.&lt;/p&gt;
-&lt;/aside&gt;</pre>
+```html
+<aside>
+  <h3>My Card</h3>
+  <p>Double click to resize this object.</p>
+</aside>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">aside {
+```css
+aside {
   background: #fe9;
   border-radius: 1em;
   display: inline-block;
@@ -75,48 +80,33 @@ card.addEventListener('dblclick', function (e) {
   transform: scale(.9);
   transform-origin: 0 0;
   transition: transform .6s;
+  user-select: none;
 }
 
 .large {
   transform: scale(1.3);
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Examples", 700, 200)}}</p>
+{{EmbedLiveSample("Examples", 700, 200)}}
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('UI Events', '#event-type-dblclick', 'dblclick')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#event-type-dblclick', 'dblclick')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Element.dblclick_event")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベントの紹介</a></li>
- <li>{{domxref("Element/auxclick_event", "auxclick")}}</li>
- <li>{{domxref("Element/click_event", "click")}}</li>
- <li>{{domxref("Element/contextmenu_event", "contextmenu")}}</li>
- <li>{{domxref("Element/mousedown_event", "mousedown")}}</li>
- <li>{{domxref("Element/mouseup_event", "mouseup")}}</li>
- <li>{{domxref("Element/pointerdown_event", "pointerdown")}}</li>
- <li>{{domxref("Element/pointerup_event", "pointerup")}}</li>
-</ul>
+- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
+- {{domxref("Element/auxclick_event", "auxclick")}}
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}
+- {{domxref("HTMLElement/pointerup_event", "pointerup")}}

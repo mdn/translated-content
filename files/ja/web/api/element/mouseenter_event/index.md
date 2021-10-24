@@ -6,97 +6,106 @@ tags:
   - Cursor
   - DOM
   - Element
-  - Event
-  - Interface
-  - MouseEvent
-  - Reference
-  - events
-  - mouse
-  - mouseenter
-  - pointer
   - イベント
+  - インターフェイス
+  - MouseEvent
+  - リファレンス
+  - マウス
+  - mouseenter
+  - ポインター
+browser-compat: api.Element.mouseenter_event
 translation_of: Web/API/Element/mouseenter_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><span class="seoSummary"><strong><code>mouseenter</code></strong> イベントは、ポインティングデバイス (通常はマウス) のホットスポットが最初にイベントが発生した要素の中に移動したときに {{domxref("Element")}} に発生します。</span></p>
+**`mouseenter`** イベントは、ポインティングデバイス (通常はマウス) のホットスポットが最初にイベントが発行された要素の中に移動したときに {{domxref("Element")}} に発行されます。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.onmouseenter", "onmouseenter")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onmouseenter", "onmouseenter")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+## 使用上の注意
 
-<p><code>mouseenter</code> は {{domxref("Element/mouseover_event", "mouseover")}} と似ていますが、<a href="/ja/docs/Web/API/Event/bubbles">バブリング</a>しない点と、ポインターが子孫の物理的な空間から自分自身の物理的な空間に移動したときに、子孫には送信されない点が異なります。</p>
+`mouseenter` は {{domxref("Element/mouseover_event", "mouseover")}} と似ていますが、[バブリング](/ja/docs/Web/API/Event/bubbles)しない点と、ポインターが子孫の物理的な空間から自分自身の物理的な空間に移動したときに、子孫には送信されない点が異なります。
 
-<div style="column-width: 455px; border: 1px solid; padding: 5px; margin-bottom: 10px;">
-<div style="text-align: center;"><img alt="mouseenter.png" class="default internal" src="/@api/deki/files/5908/=mouseenter.png"></div>
-要素の階層に入った場合、それぞれの要素に1つずつ <code>mouseenter</code> が送信されます。ここでポインターがテキストに達した時、階層の4つの要素に4つのイベントが送信されます。
+#### `mouseenter` イベントの動作
 
-<div style="text-align: center;"><img alt="mouseover.png" class="default internal" src="/@api/deki/files/5909/=mouseover.png"></div>
-DOM ツリーの最も深い要素に1つの <code>mouseover</code> イベントが送信され、ハンドラーによってキャンセルされるかルートに達するまで階層を上にバブリングします。</div>
+![](mouseenter.png)
+要素の階層に入った場合、それぞれの要素に 1 つずつ `mouseenter` が送信されます。ここでポインターがテキストに達した時、階層の 4 つの要素に 4 つのイベントが送信されます。
 
-<p>深い階層では、数多くの <code>mouseenter</code> イベントが送信され、とても重くなり、著しい性能の問題を引き起こすことがあります。このような場合は <code>mouseover</code> イベントを待ち受けした方が優れています。</p>
+#### `mouseover` イベントの動作
 
-<p>対応する (マウスがコンテンツ領域から出たときに要素に発生する) <code>mouseleave</code> と組み合わせると、 <code>mouseenter</code> イベントは CSS の {{cssxref(':hover')}} 疑似クラスととても似た方法で動作します。</p>
+![](mouseover.png)
+DOM ツリーの最も深い要素に 1 つの `mouseover` イベントが送信され、ハンドラーによってキャンセルされるかルートに達するまで階層を上にバブリングします。</div>
 
-<h2 id="Examples" name="Examples">例</h2>
+深い階層では、数多くの `mouseenter` イベントが送信され、とても重くなり、著しい性能の問題を引き起こすことがあります。このような場合は `mouseover` イベントを待ち受けした方が優れています。
 
-<p><a href="/ja/docs/Web/Events/mouseover#Example"><code>mouseover</code></a> のドキュメントには、 <code>mouseover</code> と <code>mouseenter</code> の間の違いを説明する例があります。</p>
+対応する (マウスがコンテンツ領域から出たときに要素に発生する) `mouseleave` と組み合わせると、 `mouseenter` イベントは CSS の {{cssxref(':hover')}} 擬似クラスととても似た方法で動作します。
 
-<h3 id="mouseenter">mouseenter</h3>
+## 例
 
-<p>以下は端的な例ですが、 <code>mouseenter</code> イベントを使用して、マウスが割り当てられた空間に入ったときに <code>div</code> の境界を変化させます。そして、リストに <code>mouseenter</code> または <code>mouseleave</code> イベントの回数を示す項目を追加します。</p>
+[`mouseover`](/ja/docs/Web/API/Element/mouseover_event#example) のドキュメントには、 `mouseover` と `mouseenter` の間の違いを説明する例があります。
 
-<h4 id="HTML">HTML</h4>
+### mouseenter
 
-<pre class="brush: html">&lt;div id='mouseTarget'&gt;
- &lt;ul id="unorderedList"&gt;
-  &lt;li&gt;No events yet!&lt;/li&gt;
- &lt;/ul&gt;
-&lt;/div&gt;</pre>
+以下は端的な例ですが、 `mouseenter` イベントを使用して、マウスが割り当てられた空間に入ったときに `div` の境界を変化させます。そして、リストに `mouseenter` または `mouseleave` イベントの回数を示す項目を追加します。
 
-<h4 id="CSS">CSS</h4>
+#### HTML
 
-<p><code>div</code> を整形してもっと目立つようにします。</p>
+```html
+<div id='mouseTarget'>
+ <ul id="unorderedList">
+  <li>No events yet!</li>
+ </ul>
+</div>
+```
 
-<pre class="brush: css">#mouseTarget {
+#### CSS
+
+`div` を整形してもっと目立つようにします。
+
+```css
+#mouseTarget {
   box-sizing: border-box;
   width:15rem;
   border:1px solid #333;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var enterEventCount = 0;
+```js
+var enterEventCount = 0;
 var leaveEventCount = 0;
 const mouseTarget = document.getElementById('mouseTarget');
 const unorderedList = document.getElementById('unorderedList');
 
-mouseTarget.addEventListener('mouseenter', e =&gt; {
+mouseTarget.addEventListener('mouseenter', e => {
   mouseTarget.style.border = '5px dotted orange';
   enterEventCount++;
   addListItem('This is mouseenter event ' + enterEventCount + '.');
 });
 
-mouseTarget.addEventListener('mouseleave', e =&gt; {
+mouseTarget.addEventListener('mouseleave', e => {
   mouseTarget.style.border = '1px solid #333';
   leaveEventCount++;
   addListItem('This is mouseleave event ' + leaveEventCount + '.');
@@ -114,49 +123,31 @@ function addListItem(text) {
 
   // リストに新しく生成したリスト項目を追加する
   unorderedList.appendChild(newListItem);
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample('mouseenter')}}</p>
+{{EmbedLiveSample('mouseenter')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('UI Events', '#event-type-mouseenter', 'mouseenter')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#event-type-mouseenter', 'mouseenter')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Element.mouseenter_event")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベントの紹介</a></li>
- <li>{{domxref("Element/mousedown_event", "mousedown")}}</li>
- <li>{{domxref("Element/mouseup_event", "mouseup")}}</li>
- <li>{{domxref("Element/mousemove_event", "mousemove")}}</li>
- <li>{{domxref("Element/click_event", "click")}}</li>
- <li>{{domxref("Element/dblclick_event", "dblclick")}}</li>
- <li>{{domxref("Element/mouseover_event", "mouseover")}}</li>
- <li>{{domxref("Element/mouseout_event", "mouseout")}}</li>
- <li>{{domxref("Element/mouseenter_event", "mouseenter")}}</li>
- <li>{{domxref("Element/mouseleave_event", "mouseleave")}}</li>
- <li>{{domxref("Element/contextmenu_event", "contextmenu")}}</li>
-</ul>
+- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("Element/mousemove_event", "mousemove")}}
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("Element/mouseover_event", "mouseover")}}
+- {{domxref("Element/mouseout_event", "mouseout")}}
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}

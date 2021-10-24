@@ -4,68 +4,72 @@ slug: Web/API/Element/mouseout_event
 tags:
   - API
   - DOM
-  - Event
-  - Interface
+  - イベント
+  - インターフェイス
   - MouseEvent
-  - Reference
-  - events
-  - mouse
+  - リファレンス
+  - マウス
   - mouseout
   - move
-  - イベント
-  - マウス
+browser-compat: api.Element.mouseout_event
 translation_of: Web/API/Element/mouseout_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><span class="seoSummary"><strong><code>mouseout</code></strong> イベントは {{domxref("Element")}} において、ポインティングデバイス (普通はマウス) を使用してカーソルが要素またはその子要素のうちの一つに含まれなくなったときに発生します。</span> <code>mouseout</code> は、カーソルが子要素に入った場合にも要素に配信されますが、これは子要素が要素の可視領域を覆い隠すためです。</p>
+**`mouseout`** イベントは {{domxref("Element")}} において、ポインティングデバイス (普通はマウス) を使用してカーソルが要素またはその子要素のうちの一つに含まれなくなったときに発生します。
+
+`mouseout` は、カーソルが子要素に入った場合にも要素に配信されますが、これは子要素が要素の可視領域を覆い隠すためです。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>あり</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.onmouseout", "onmouseout")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>あり</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>可</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onmouseout", "onmouseout")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>以下の例は <code>mouseout</code> イベントの使い方を示しています。</p>
+以下の例は `mouseout` イベントの使い方を示しています。
 
-<h3 id="mouseout_と_mouseleave">mouseout と mouseleave</h3>
+<h3 id="mouseout_and_mouseleave">mouseout と mouseleave</h3>
 
-<p>以下の例は、 <code>mouseout</code> と {{domxref("Element/mouseleave_event", "mouseleave")}} の各イベントの違いを説明しています。 <code>mouseleave</code> イベントを {{HTMLElement("ul")}} に追加し、マウスが <code>&lt;ul&gt;</code> を出るたびにリストを紫色に着色するようにします。 <code>mouseout</code> をリストに追加し、マウスがそこを出ると対象の要素をオレンジ色に着色するようにします。</p>
+以下の例は、`mouseout` と {{domxref("Element/mouseleave_event", "mouseleave")}} の各イベントの違いを説明しています。`mouseleave` イベントを {{HTMLElement("ul")}} に追加し、マウスが `&lt;ul&gt;` を出るたびにリストを紫色に着色するようにします。`mouseout` をリストに追加し、マウスがそこを出ると対象の要素をオレンジ色に着色するようにします。
 
-<p>これを試してみると、 <code>mouseout</code> はそれぞれのリスト項目に配信されるのに対し、 <code>mouseleave</code> は項目の階層構造のおかげでリスト全体に行き、リストの項目は、その下にある <code>&lt;ul&gt;</code> を不明瞭にします。</p>
+これを試してみると、`mouseout` はそれぞれのリスト項目に配信されるのに対し、 `mouseleave` は項目の階層構造のおかげでリスト全体に行き、リストの項目は、その下にある `&lt;ul&gt;` を不明瞭にします。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;ul id="test"&gt;
-  &lt;li&gt;item 1&lt;/li&gt;
-  &lt;li&gt;item 2&lt;/li&gt;
-  &lt;li&gt;item 3&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul id="test">
+  <li>item 1</li>
+  <li>item 2</li>
+  <li>item 3</li>
+</ul>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js notranslate">let test = document.getElementById("test");
+```js
+let test = document.getElementById("test");
 
-// マウスが &lt;ul&gt; を出るとリストを一時的に紫色にします
-// ときに1度だけ実行されます
+// マウスが <ul> を出るとリストを一時的に紫色にします
+// ときに 1 度だけ実行されます
 test.addEventListener("mouseleave", function( event ) {
   // mouseleave の対象を強調
   event.target.style.color = "purple";
@@ -76,7 +80,7 @@ test.addEventListener("mouseleave", function( event ) {
   }, 1000);
 }, false);
 
-// マウスが出ると &lt;li&gt; を一時的にオレンジ色にします
+// マウスが出ると-  を一時的にオレンジ色にします
 test.addEventListener("mouseout", function( event ) {
   // mouseout の対象を強調
   event.target.style.color = "orange";
@@ -85,48 +89,30 @@ test.addEventListener("mouseout", function( event ) {
   setTimeout(function() {
     event.target.style.color = "";
   }, 500);
-}, false);</pre>
+}, false);
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("mouseout_and_mouseleave", 640, 200)}}</p>
+{{EmbedLiveSample("mouseout_and_mouseleave", 640, 200)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <thead>
-  <tr>
-   <td>{{SpecName('UI Events', '#event-type-mouseout', 'mouseout')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#event-type-mouseout', 'mouseout')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-  </tr>
- </thead>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Element.mouseout_event")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベントの紹介</a></li>
- <li>{{domxref("Element/mousedown_event", "mousedown")}}</li>
- <li>{{domxref("Element/mouseup_event", "mouseup")}}</li>
- <li>{{domxref("Element/mousemove_event", "mousemove")}}</li>
- <li>{{domxref("Element/click_event", "click")}}</li>
- <li>{{domxref("Element/dblclick_event", "dblclick")}}</li>
- <li>{{domxref("Element/mouseover_event", "mouseover")}}</li>
- <li>{{domxref("Element/mouseenter_event", "mouseenter")}}</li>
- <li>{{domxref("Element/mouseleave_event", "mouseleave")}}</li>
- <li>{{domxref("Element/contextmenu_event", "contextmenu")}}</li>
-</ul>
+- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("Element/mousemove_event", "mousemove")}}
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("Element/mouseover_event", "mouseover")}}
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}
