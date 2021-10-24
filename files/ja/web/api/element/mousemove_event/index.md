@@ -4,73 +4,78 @@ slug: Web/API/Element/mousemove_event
 tags:
   - API
   - DOM
-  - Event
-  - Interface
+  - イベント
+  - インターフェイス
   - MouseEvent
-  - Reference
-  - events
-  - mouse
+  - リファレンス
+  - マウス
   - mousemove
   - move
-  - pointer
+  - ポインター
 translation_of: Web/API/Element/mousemove_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p><span class="seoSummary"><code>mousemove</code> イベントは、マウスなどのポインティングデバイスで、カーソルのホットスポットが要素内にある間に動いた時に発行されるイベントです。</span></p>
+`mousemove` イベントは、マウスなどのポインティングデバイスで、カーソルのホットスポットが要素内にある間に動いた時に発行されるイベントです。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>あり</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>あり</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>可</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<p>次の例は、 {{domxref("Element/mousedown_event", "mousedown")}}, <code>mousemove</code>, and {{domxref("Element/mouseup_event", "mouseup")}} イベントを使って HTML5 の要素である <a href="/ja/docs/Web/API/Canvas_API">canvas</a> の上にお絵かきができるものです。機能は単純で、線の太さは 1、線の色は黒に固定されています。</p>
+次の例は、{{domxref("Element/mousedown_event", "mousedown")}}、`mousemove`、{{domxref("Element/mouseup_event", "mouseup")}} の各イベントを使って HTML5 の要素である [canvas](/ja/docs/Web/API/Canvas_API) の上にお絵かきができるものです。機能は単純で、線の太さは 1、線の色は黒に固定されています。
 
-<p>ページが読み込まれると、定数 <code>myPics</code> と <code>context</code> が、それぞれ canvas と描画に使用する 2d context の参照を格納するために生成されます。</p>
+ページが読み込まれると、定数 `myPics` と `context` が、それぞれ canvas と描画に使用する 2D コンテキストの参照を格納するために生成されます。
 
-<p><code>mousedown</code> イベントが発行されると線の描画が始まります。まずマウスの x 座標と y 座標が変数 <code>x</code> と <code>y</code> に格納され、フラグ <code>isDrawing</code> の値が true になります。</p>
+`mousedown` イベントが発行されると線の描画が始まります。まずマウスの x 座標と y 座標が変数 `x` と `y` に格納され、フラグ `isDrawing` の値が true になります。
 
-<p>ページ上でマウスを動かすと、 <code>mousemove</code> イベントが発行されます。 <code>isDrawing</code> が true である場合、 <code>drawLine</code> 関数を呼び出して <code>x</code> と <code>y</code> に格納された値から現在の位置まで線を引きます。</p>
+ページ上でマウスを動かすと、 `mousemove` イベントが発行されます。 `isDrawing` が true である場合、 `drawLine` 関数を呼び出して `x` と `y` に格納された値から現在の位置まで線を引きます。
 
-<p><code>drawLine()</code> 関数の返値は、座標を再調整して <code>x</code> と <code>y</code> に保存します。</p>
+`drawLine()` 関数の返値は、座標を再調整して `x` と `y` に保存します。
 
-<p><code>mouseup</code> イベントで線の最後の区間を描画し、 <code>x</code> と <code>y</code> をそれぞれを <code>0</code> に設定し、その後の描画を止めるために <code>isDrawing</code> を <code>false</code> に設定します。</p>
+`mouseup` イベントで線の最後の区間を描画し、 `x` と `y` をそれぞれを `0` に設定し、その後の描画を止めるために `isDrawing` を `false` に設定します。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;h1&gt;マウスイベントを使ったお絵かき&lt;/h1&gt;
-&lt;canvas id="myPics" width="560" height="360"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<h1>マウスイベントを使ったお絵かき</h1>
+<canvas id="myPics" width="560" height="360"></canvas>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">canvas {
+```css
+canvas {
   border: 1px solid black;
   width: 560px;
   height: 360px;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">// isDrawing が真のとき、マウスを動かすと線を描く
+```js
+// 真のとき、マウスを動かすと線を描く
 let isDrawing = false;
 let x = 0;
 let y = 0;
@@ -81,13 +86,13 @@ const context = myPics.getContext('2d');
 // event.offsetX, event.offsetY はキャンバスの縁からのオフセットの (x,y) です。
 
 // mousedown, mousemove, mouseup にイベントリスナーを追加
-myPics.addEventListener('mousedown', e =&gt; {
+myPics.addEventListener('mousedown', e => {
   x = e.offsetX;
   y = e.offsetY;
   isDrawing = true;
 });
 
-myPics.addEventListener('mousemove', e =&gt; {
+myPics.addEventListener('mousemove', e => {
   if (isDrawing === true) {
     drawLine(context, x, y, e.offsetX, e.offsetY);
     x = e.offsetX;
@@ -95,7 +100,7 @@ myPics.addEventListener('mousemove', e =&gt; {
   }
 });
 
-window.addEventListener('mouseup', e =&gt; {
+window.addEventListener('mouseup', e => {
   if (isDrawing === true) {
     drawLine(context, x, y, e.offsetX, e.offsetY);
     x = 0;
@@ -112,48 +117,30 @@ function drawLine(context, x1, y1, x2, y2) {
   context.lineTo(x2, y2);
   context.stroke();
   context.closePath();
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Examples", 640, 450)}}</p>
+{{EmbedLiveSample("Examples", 640, 450)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('UI Events', '#event-type-mousemove', 'mousemove')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#event-type-mousemove', 'mousemove')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Element.mousemove_event")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベントの紹介</a></li>
- <li>{{domxref("Element/mousedown_event", "mousedown")}}</li>
- <li>{{domxref("Element/mouseup_event", "mouseup")}}</li>
- <li>{{domxref("Element/click_event", "click")}}</li>
- <li>{{domxref("Element/dblclick_event", "dblclick")}}</li>
- <li>{{domxref("Element/mouseover_event", "mouseover")}}</li>
- <li>{{domxref("Element/mouseout_event", "mouseout")}}</li>
- <li>{{domxref("Element/mouseenter_event", "mouseenter")}}</li>
- <li>{{domxref("Element/mouseleave_event", "mouseleave")}}</li>
- <li>{{domxref("Element/contextmenu_event", "contextmenu")}}</li>
-</ul>
+- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("Element/mouseover_event", "mouseover")}}
+- {{domxref("Element/mouseout_event", "mouseout")}}
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}
