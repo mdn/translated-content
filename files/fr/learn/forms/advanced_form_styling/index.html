@@ -1,20 +1,12 @@
 ---
 title: Composition avancée des formulaires HTML
 slug: Learn/Forms/Advanced_form_styling
-tags:
-  - Avancé
-  - CSS
-  - Exemple
-  - Formulaires
-  - Guide
-  - HTML
-  - Web
 translation_of: Learn/Forms/Advanced_form_styling
 original_slug: Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML", "Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets", "Web/Guide/HTML/Formulaires")}}</div>
 
-<p>Dans cet article, nous verrons comment utiliser les <a href="/fr/docs/Apprendre/CSS">CSS</a> avec les formulaires <a href="/fr/docs/Glossaire/HTML">HTML</a> pour modifier le style de certains widgets difficiles à personnaliser. Comme nous l'avons vu dans l'<a href="/fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML">article précédent</a>, les champs texte et les boutons sont parfaitement compatibles avec les CSS. Maintenant, nous allons approfondir la part sombre de la composition stylistique des formulaires HTML.</p>
+<p>Dans cet article, nous verrons comment utiliser les <a href="/fr/docs/Learn/CSS">CSS</a> avec les formulaires <a href="/fr/docs/Glossary/HTML">HTML</a> pour modifier le style de certains widgets difficiles à personnaliser. Comme nous l'avons vu dans l'<a href="/fr/docs/Learn/Forms/Styling_web_forms">article précédent</a>, les champs texte et les boutons sont parfaitement compatibles avec les CSS. Maintenant, nous allons approfondir la part sombre de la composition stylistique des formulaires HTML.</p>
 
 <p>Avant d'aller plus loin, faisons un rappel pour deux types de widgets de formulaires :</p>
 
@@ -32,7 +24,7 @@ original_slug: Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms
 <p>L'évolution récente du HTML et des CSS a étendu l'expressivité des CSS :</p>
 
 <ul>
- <li><a href="http://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes" rel="external">CSS 2.1</a> était très limité et n'offrait que trois pseudo-classes :
+ <li><a href="https://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes" rel="external">CSS 2.1</a> était très limité et n'offrait que trois pseudo-classes :
 
   <ul>
    <li>{{cssxref(":active")}}</li>
@@ -40,7 +32,7 @@ original_slug: Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms
    <li>{{cssxref(":hover")}}</li>
   </ul>
  </li>
- <li><a href="http://www.w3.org/TR/css3-selectors/" rel="external">CSS Selector Level 3</a> a ajouté quelques nouvelles pseudo-classes relatives aux formulaires HTML :
+ <li><a href="https://www.w3.org/TR/css3-selectors/" rel="external">CSS Selector Level 3</a> a ajouté quelques nouvelles pseudo-classes relatives aux formulaires HTML :
   <ul>
    <li>{{cssxref(":enabled")}}</li>
    <li>{{cssxref(":disabled")}}</li>
@@ -48,7 +40,7 @@ original_slug: Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms
    <li>{{cssxref(":indeterminate")}}</li>
   </ul>
  </li>
- <li><a href="http://dev.w3.org/csswg/css3-ui/#pseudo-classes" rel="external">CSS Basic UI Level 3</a> a ajouté quelques autres pseudo-classes pour décrire l'état du widget :
+ <li><a href="https://dev.w3.org/csswg/css3-ui/#pseudo-classes" rel="external">CSS Basic UI Level 3</a> a ajouté quelques autres pseudo-classes pour décrire l'état du widget :
   <ul>
    <li>{{cssxref(":default")}}</li>
    <li>{{cssxref(":valid")}}</li>
@@ -61,7 +53,7 @@ original_slug: Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms
    <li>{{cssxref(":read-write")}}</li>
   </ul>
  </li>
- <li><a href="http://dev.w3.org/csswg/selectors4/" rel="external">CSS Selector Level 4</a> actuellement en développement actif et objet de grandes discussions ne prévoit pas d'ajouter grand‑chose pour améliorer les formulaires :
+ <li><a href="https://dev.w3.org/csswg/selectors4/" rel="external">CSS Selector Level 4</a> actuellement en développement actif et objet de grandes discussions ne prévoit pas d'ajouter grand‑chose pour améliorer les formulaires :
   <ul>
    <li>{{cssxref(":user-error")}} qui est juste une amélioration de la pseudo‑classe {{cssxref(":invalid")}}.</li>
   </ul>
@@ -73,16 +65,16 @@ original_slug: Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms
 <p>Il y a quelques expérimentations par les fournisseurs de navigateurs pour étendre l'expressivité des CSS sur les formulaires ; dans certains cas, il est bon de savoir ce qui est disponible..</p>
 
 <div class="warning">
-<p><strong>Attention :</strong> Même si ces expérimentations sont intéressantes, <strong>elles ne sont pas normées, ce qui signifie qu'elles ne sont pas fiables</strong>. Si vous les utilisez (et vous ne devriez probablement pas le faire souvent), vous le faites à vos propres risques et périls ; <a href="http://www.alistapart.com/articles/every-time-you-call-a-proprietary-feature-css3-a-kitten-dies/">vous faites quelque chose qui peut être mauvais pour le Web</a> en utilisant des propriétés non standard.</p>
+<p><strong>Attention :</strong> Même si ces expérimentations sont intéressantes, <strong>elles ne sont pas normées, ce qui signifie qu'elles ne sont pas fiables</strong>. Si vous les utilisez (et vous ne devriez probablement pas le faire souvent), vous le faites à vos propres risques et périls ; <a href="https://www.alistapart.com/articles/every-time-you-call-a-proprietary-feature-css3-a-kitten-dies/">vous faites quelque chose qui peut être mauvais pour le Web</a> en utilisant des propriétés non standard.</p>
 </div>
 
 <ul>
  <li><a href="/fr/docs/CSS/CSS_Reference/Mozilla_Extensions" title="/en-US/docs/CSS/CSS_Reference/Mozilla_Extensions">Extensions des CSS Mozilla </a>
 
   <ul>
-   <li>{{cssxref(":-moz-placeholder")}}</li>
+   <li>{{cssxref(":placeholder-shown")}}</li>
    <li>{{cssxref(":-moz-submit-invalid")}}</li>
-   <li>{{cssxref(":-moz-ui-invalid")}}</li>
+   <li>{{cssxref(":user-invalid")}}</li>
    <li>{{cssxref(":-moz-ui-valid")}}</li>
   </ul>
  </li>
@@ -99,15 +91,15 @@ original_slug: Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms
  </li>
 </ul>
 
-<h3 id="Contrôle_de_l'apparence_des_éléments_de_formulaire">Contrôle de l'apparence des éléments de formulaire</h3>
+<h3 id="Contrôle_du_style_des_éléments_de_formulaire">Contrôle du style des éléments de formulaire</h3>
 
 <p>Les navigateurs fondés sur WebKit- (Chrome, Safari) et Gecko- (Firefox) offrent les meilleures possibilités de personnalisation des widgets HTML. Ils sont aussi disponibles sur plateforme croisées, et donc ils nécessitent un mécanisme de bascule entre les widgets de « look and feel » natif  et widget stylistiquement composables par l'utilisateur.</p>
 
-<p>À cette fin, ils utilisent une propriété propriétaire : {{cssxref("-webkit-appearance")}} ou {{cssxref("-moz-appearance")}}. <strong>Ces propriétés ne sont pas normées et ne doivent pas être utilisées</strong>. En fait, elles se comportent même différemment entre WebKit et Gecko. Cependant, il y a une valeur qu'il est bon de connaître : <code>none</code>. Avec cette valeur, vous êtes en mesure d'obtenir un contrôle (presque total) sur le style des widgets donnés.</p>
+<p>À cette fin, ils utilisent une propriété propriétaire : {{cssxref("-webkit-appearance")}} ou {{cssxref("appearance")}}. <strong>Ces propriétés ne sont pas normées et ne doivent pas être utilisées</strong>. En fait, elles se comportent même différemment entre WebKit et Gecko. Cependant, il y a une valeur qu'il est bon de connaître : <code>none</code>. Avec cette valeur, vous êtes en mesure d'obtenir un contrôle (presque total) sur le style des widgets donnés.</p>
 
 <p>Donc, si vous avez du mal à appliquer un style à un élément, essayez d'utiliser ces propriétés propriétaires. Nous verrons quelques exemples ci-dessous, mais le cas d'utilisation le plus connu de cette propriété est relatif au style des champs de recherche sur les navigateurs WebKit :</p>
 
-<pre class="brush: css">&lt;style&gt;
+<pre class="brush: html">&lt;style&gt;
 input[type=search] {
     border: 1px dotted #999;
     border-radius: 0;
@@ -120,10 +112,10 @@ input[type=search] {
     &lt;input type="search"&gt;
 &lt;/form&gt;</pre>
 
-<p>{{EmbedLiveSample("Contrôle_de_l'apparence_des_éléments_de_formulaire", 250, 40)}}</p>
+<p>{{EmbedLiveSample("Contrôle_du_style_des_éléments_de_formulaire", 250, 40)}}</p>
 
 <div class="note">
-<p><strong>Note :</strong> Il est toujours difficile de prédire l'avenir, quand on parle de techniques Web. L'extension des possibilités d'expression des CSS est difficile ; il y a un travail exploratoire avec d'autres spécifications, telles que <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html" rel="external">Shadow DOM</a> qui offrent certaines perspectives. La quête du formulaire de style totalement composable est loin d'être terminée.</p>
+<p><strong>Note :</strong> Il est toujours difficile de prédire l'avenir, quand on parle de techniques Web. L'extension des possibilités d'expression des CSS est difficile ; il y a un travail exploratoire avec d'autres spécifications, telles que <a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html" rel="external">Shadow DOM</a> qui offrent certaines perspectives. La quête du formulaire de style totalement composable est loin d'être terminée.</p>
 </div>
 
 <h2 id="Exemples">Exemples</h2>
@@ -191,7 +183,7 @@ input[type=checkbox] {
 
 <h4 id="Un_exemple_un_peu_plus_compliqué">Un exemple un peu plus compliqué</h4>
 
-<p>Comme Opera et Internet Explorer n'ont pas de fonctionnalités telles que {{cssxref("-webkit-appearance")}} ou {{cssxref("-moz-appearance")}}, leur utilisation n'est pas appropriée. Heureusement, nous sommes dans un cas où les CSS disposent d'assez d'expressions pour trouver des solutions. Prenons un exemple courant :</p>
+<p>Comme Opera et Internet Explorer n'ont pas de fonctionnalités telles que {{cssxref("-webkit-appearance")}} ou {{cssxref("appearance")}}, leur utilisation n'est pas appropriée. Heureusement, nous sommes dans un cas où les CSS disposent d'assez d'expressions pour trouver des solutions. Prenons un exemple courant :</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;fieldset&gt;
@@ -261,7 +253,7 @@ p+p {
   left: -1000em;
 }</pre>
 
-<p>Maintenant que nous sommes débarrassés des cases à cocher natives, ajoutons la nôtre. Pour cela, nous utiliserons le pseudo élément {{cssxref(":before")}} de l'élément {{HTMLElement("label")}} qui suit la case à cocher originale. Ainsi, dans le sélecteur suivant, nous utilisons le sélecteur d'attributs pour cibler la case à cocher, puis nous utilisons le sélecteur de parents adjacent pour cibler le <code>label</code> suivant la case à cocher originale. Enfin, nous accédons au pseudo-élément {{cssxref(":before")}} et le styliser pour qu'il affiche notre case à cocher personnalisée non cochée.</p>
+<p>Maintenant que nous sommes débarrassés des cases à cocher natives, ajoutons la nôtre. Pour cela, nous utiliserons le pseudo élément {{cssxref("::before")}} de l'élément {{HTMLElement("label")}} qui suit la case à cocher originale. Ainsi, dans le sélecteur suivant, nous utilisons le sélecteur d'attributs pour cibler la case à cocher, puis nous utilisons le sélecteur de parents adjacent pour cibler le <code>label</code> suivant la case à cocher originale. Enfin, nous accédons au pseudo-élément {{cssxref("::before")}} et le styliser pour qu'il affiche notre case à cocher personnalisée non cochée.</p>
 
 <pre class="brush: css">:root input[type=checkbox] + label:before {
   content: "";
@@ -456,15 +448,15 @@ option {
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML">Mon premier formulaire HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML">Comment structurer un formulaire HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs">Les widgets natifs pour formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires">Envoi des données de formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire">Validation des données de formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés">Comment construire des widgets personnalisés pour formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript">Envoi de formulaires à l'aide du JavaScript</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers">Formulaires HTML dans les navigateurs anciens</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML">Mise en forme des formulaires HTML</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Your_first_form">Mon premier formulaire HTML</a></li>
+ <li><a href="/fr/docs/Learn/Forms/How_to_structure_a_web_form">Comment structurer un formulaire HTML</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Basic_native_form_controls">Les widgets natifs pour formulaire</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Sending_and_retrieving_form_data">Envoi des données de formulaire</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Form_validation">Validation des données de formulaire</a></li>
+ <li><a href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls">Comment construire des widgets personnalisés pour formulaire</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Sending_forms_through_JavaScript">Envoi de formulaires à l'aide du JavaScript</a></li>
+ <li><a href="/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers">Formulaires HTML dans les navigateurs anciens</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Styling_web_forms">Mise en forme des formulaires HTML</a></li>
  <li>Mise en forme avancée des formulaires HTML</li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets">Table de compatibilité des propriétés pour les widgets de formulaire</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Table de compatibilité des propriétés pour les widgets de formulaire</a></li>
 </ul>

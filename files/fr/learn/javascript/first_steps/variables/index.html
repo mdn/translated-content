@@ -1,18 +1,6 @@
 ---
 title: Stocker les informations nécessaires — les variables
 slug: Learn/JavaScript/First_steps/Variables
-tags:
-  - Booléens
-  - Declaration
-  - Initialisation
-  - JavaScript
-  - Mise à jour
-  - Nombres
-  - Objets
-  - Tableaux
-  - Typage faible
-  - Variables
-  - chaînes
 translation_of: Learn/JavaScript/First_steps/Variables
 ---
 <div>{{LearnSidebar}}</div>
@@ -24,11 +12,11 @@ translation_of: Learn/JavaScript/First_steps/Variables
 <table class="standard-table">
  <tbody>
   <tr>
-   <th scope="row">Prérequis :</th>
+   <th scope="row">Prérequis&nbsp;:</th>
    <td>Vocabulaire courant de l'informatique, bases de HTML et CSS, compréhension de ce que fait JavaScript.</td>
   </tr>
   <tr>
-   <th scope="row">Objectif :</th>
+   <th scope="row">Objectif&nbsp;:</th>
    <td>Se familiariser avec l'usage élémentaire des variables en JavaScript.</td>
   </tr>
  </tbody>
@@ -42,7 +30,7 @@ translation_of: Learn/JavaScript/First_steps/Variables
 
 <h2 id="Quest_ce_quune_variable">Qu'est ce qu'une variable ?</h2>
 
-<p>Une variable est un conteneur pour une valeur, tel un nombre à utiliser pour une addition, ou une chaîne devant faire partie d'une phrase. Mais un aspect spécial des variables est que les valeurs contenues peuvent changer. Voyons un exemple simple :</p>
+<p>Une variable est un conteneur pour une valeur, tel un nombre à utiliser pour une addition, ou une chaîne devant faire partie d'une phrase. Mais un aspect spécial des variables est que les valeurs contenues peuvent changer. Voyons un exemple simple&nbsp;:</p>
 
 <pre class="brush: html">&lt;button&gt;Pressez moi&lt;/button&gt;</pre>
 
@@ -53,7 +41,7 @@ button.onclick = function() {
   alert('Salut ' + name + ', sympa de vous voir !');
 }</pre>
 
-<p>{{ EmbedLiveSample('What_is_a_variable', '100%', 50) }}</p>
+<p>{{ EmbedLiveSample('Quest_ce_quune_variable', '100%', 50) }}</p>
 
 <p>Dans cet exemple, presser le bouton déclenche l'exécution de quelques lignes de code. La première ligne affiche à l'écran une boîte priant l'utilisateur de saisir son nom et stocke la valeur entrée dans une variable. La deuxième affiche un message de bienvenue avec la valeur de la variable.</p>
 
@@ -79,9 +67,9 @@ if (name === 'Adam') {
 
 <p>Les variables sont essentielles et à mesure que vous en apprendrez plus sur JavaScript, elles deviendront une seconde nature pour vous.</p>
 
-<p>Une autre particularité des variables : elle peuvent contenir pratiquement de tout — pas uniquement des chaînes ou des nombres. Elles peuvent aussi contenir des données complexes et même des fonctions, ce qui permet de réaliser des choses étonnantes. Vous en apprendrez plus à ce propos au long de ce parcours.</p>
+<p>Une autre particularité des variables&nbsp;: elle peuvent contenir pratiquement de tout — pas uniquement des chaînes ou des nombres. Elles peuvent aussi contenir des données complexes et même des fonctions, ce qui permet de réaliser des choses étonnantes. Vous en apprendrez plus à ce propos au long de ce parcours.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note :</strong> Nous disons que les variables contiennent des valeurs. C'est un distingo important. Les variables ne sont pas les valeurs elles‑mêmes : ce sont des conteneurs pour ces valeurs. Vous pouvez vous les représenter comme une boîte en carton dans laquelle il est possible de ranger des choses.</p>
 </div>
 
@@ -89,7 +77,7 @@ if (name === 'Adam') {
 
 <h2 id="Déclarer_une_variable">Déclarer une variable</h2>
 
-<p>Avant de se servir d'une variable, il faut d'abord la créer — plus précisément, nous disons <em>déclarer la variable</em>. Pour ce faire, nous saisissons le mot‑clé <code>var</code> ou <code>let</code> suivi du nom que vous voulez donner à la variable :</p>
+<p>Avant de se servir d'une variable, il faut d'abord la créer — plus précisément, nous disons <em>déclarer la variable</em>. Pour ce faire, nous saisissons le mot‑clé <code>var</code> ou <code>let</code> suivi du nom que vous voulez donner à la variable&nbsp;:</p>
 
 <pre class="brush: js">let myName;
 let myAge;</pre>
@@ -223,17 +211,17 @@ myAge;</pre>
 
 <h2 id="Initialisation_dune_variable">Initialisation d'une variable</h2>
 
-<p>Une fois la variable déclarée, vous pouvez l'initialiser avec une valeur. On réalise cela en saisissant le nom de la variable, suivi d'un signe égale (<code>=</code>), lui-même suivi de la valeur souhaitée pour la variable. Par exemple :</p>
+<p>Une fois la variable déclarée, vous pouvez l'initialiser avec une valeur. On réalise cela en saisissant le nom de la variable, suivi d'un signe égale (<code>=</code>), lui-même suivi de la valeur souhaitée pour la variable. Par exemple&nbsp;:</p>
 
 <pre class="brush: js">myName = 'Chris';
 myAge = 37;</pre>
 
-<p>Revenez à la console maintenant et saisissez‑y ces deux lignes. Constatez que la console renvoie en confirmation la  valeur assignée à la variable dans chaque cas. Vous pouvez, à nouveau, faire renvoyer par la console les valeurs de variable en saisissant simplement son nom dans la console — essayez encore :</p>
+<p>Revenez à la console maintenant et saisissez‑y ces deux lignes. Constatez que la console renvoie en confirmation la  valeur assignée à la variable dans chaque cas. Vous pouvez, à nouveau, faire renvoyer par la console les valeurs de variable en saisissant simplement son nom dans la console — essayez encore&nbsp;:</p>
 
 <pre class="brush: js">myName;
 myAge;</pre>
 
-<p>Il est possible de déclarer et initialiser une variable en même temps, comme ceci :</p>
+<p>Il est possible de déclarer et initialiser une variable en même temps, comme ceci&nbsp;:</p>
 
 <pre class="brush: js">let myDog = 'Rover';</pre>
 
@@ -292,7 +280,7 @@ myName = 'Bob' ;</pre>
 
 <h2 id="Mise_à_jour_dune_variable">Mise à jour d'une variable</h2>
 
-<p>Une fois la variable initialisée avec une valeur, vous pouvez simplement modifier (ou mettre à jour) cette valeur en lui assignant une nouvelle valeur. Entrez ces deux lignes dans la console :</p>
+<p>Une fois la variable initialisée avec une valeur, vous pouvez simplement modifier (ou mettre à jour) cette valeur en lui assignant une nouvelle valeur. Entrez ces deux lignes dans la console&nbsp;:</p>
 
 <pre class="brush: js">myName = 'Bob';
 myAge = 40;</pre>
@@ -312,10 +300,10 @@ myAge = 40;</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note :</strong> Une liste exhaustive des mots réservés est proposée dans la page <a href="/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">Lexical grammar — keywords</a>.</p>
+<p><strong>Note :</strong> Une liste exhaustive des mots réservés est proposée dans la page <a href="/fr/docs/Web/JavaScript/Reference/Lexical_grammar#keywords">Lexical grammar — keywords</a>.</p>
 </div>
 
-<p>Exemples de noms corrects :</p>
+<p>Exemples de noms corrects&nbsp;:</p>
 
 <pre class="example-good">age
 myAge
@@ -337,7 +325,7 @@ document
 skjfndskjfnbdskjfb
 thisisareallylongstupidvariablenameman </pre>
 
-<p>Parmi ces noms, les suivants déclenchent une <code>SyntaxError</code>  :</p>
+<p>Parmi ces noms, les suivants déclenchent une <code>SyntaxError</code> &nbsp;:</p>
 
 <pre class="brush: js example-bad">1 //la variable commence par un chiffre
 var //mot réservé
@@ -366,11 +354,11 @@ document //mot réservé
 
 <h3 id="Booléens">Booléens</h3>
 
-<p>Les booléens sont des valeurs true/false (vrai/faux) — elles ne peuvent prendre que deux valeurs: <code>true</code> ou <code>false</code>. Elles sont généralement utilisées pour tester une condition, à la suite de laquelle le code est exécuté de manière appropriée. Ainsi, par exemple, un cas simple pourrait être :</p>
+<p>Les booléens sont des valeurs true/false (vrai/faux) — elles ne peuvent prendre que deux valeurs: <code>true</code> ou <code>false</code>. Elles sont généralement utilisées pour tester une condition, à la suite de laquelle le code est exécuté de manière appropriée. Ainsi, par exemple, un cas simple pourrait être&nbsp;:</p>
 
 <pre class="brush: js">var iAmAlive = true;</pre>
 
-<p>Toutefois, en réalité, un booléen sera plutôt utilisé ainsi :</p>
+<p>Toutefois, en réalité, un booléen sera plutôt utilisé ainsi&nbsp;:</p>
 
 <pre class="brush: js">var test = 6 &lt; 3;</pre>
 
@@ -378,17 +366,17 @@ document //mot réservé
 
 <h3 id="Tableaux">Tableaux</h3>
 
-<p>Une tableau est un objet unique contenant plusieurs valeurs entre crochets séparées par des virgules. Saisissez les lignes suivantes dans la console :</p>
+<p>Une tableau est un objet unique contenant plusieurs valeurs entre crochets séparées par des virgules. Saisissez les lignes suivantes dans la console&nbsp;:</p>
 
 <pre class="brush: js">var myNameArray = ['Chris', 'Bob', 'Jim'];
 var myNumberArray = [10,15,40];</pre>
 
-<p>Un fois ces tableaux définis, vous pouvez avoir accès à chaque valeur en fonction de leur emplacement dans le tableau. Voyez ces lignes :</p>
+<p>Un fois ces tableaux définis, vous pouvez avoir accès à chaque valeur en fonction de leur emplacement dans le tableau. Voyez ces lignes&nbsp;:</p>
 
 <pre class="brush: js">myNameArray[0]; // renverra 'Chris'
 myNumberArray[2]; // renverra 40</pre>
 
-<p>La valeur entre crochets précise l'index correspondant à la position de la valeur que vous souhaitez voir renvoyée. Vous remarquerez que les tableaux en JavaScript sont indexés à partir de zéro : le premier élément a l'index 0.</p>
+<p>La valeur entre crochets précise l'index correspondant à la position de la valeur que vous souhaitez voir renvoyée. Vous remarquerez que les tableaux en JavaScript sont indexés à partir de zéro&nbsp;: le premier élément a l'index 0.</p>
 
 <p>Vous en apprendrez beaucoup plus au sujet des tableaux dans un article suivant.</p>
 
@@ -396,11 +384,11 @@ myNumberArray[2]; // renverra 40</pre>
 
 <p>En programmation, un objet est une structure de code qui modélise un objet du réel. Vous pouvez avoir un objet simple représentant une place de parking avec sa largeur et sa profondeur ou bien un objet représentant une personne avec comme données son nom, sa taille, son poids, son vernaculaire, comment le contacter, et plus encore.</p>
 
-<p>Entrez la ligne suivant dans la console de votre explorateur :</p>
+<p>Entrez la ligne suivant dans la console de votre explorateur&nbsp;:</p>
 
 <pre class="brush: js">var dog = { name : 'Spot', breed : 'Dalmatian' };</pre>
 
-<p>Pour récupérer une information stockée dans un objet, vous pouvez utiliser la syntaxe suivante :</p>
+<p>Pour récupérer une information stockée dans un objet, vous pouvez utiliser la syntaxe suivante&nbsp;:</p>
 
 <pre class="brush: js">dog.name</pre>
 
@@ -410,11 +398,11 @@ myNumberArray[2]; // renverra 40</pre>
 
 <p>JavaScript est un « langage faiblement typé », ce qui veut dire que, contrairement à d'autres langages, vous n'êtes pas obligé de préciser quel est le type de donnée que doit contenir une variable (par ex. nombres, chaînes, tableaux, etc).</p>
 
-<p>Par exemple, si vous déclarez une variable et si vous y placez une valeur entre guillemets, le navigateur la traitera comme étant une chaîne :</p>
+<p>Par exemple, si vous déclarez une variable et si vous y placez une valeur entre guillemets, le navigateur la traitera comme étant une chaîne&nbsp;:</p>
 
 <pre class="brush: js">var myString = 'Hello';</pre>
 
-<p>Ce sera toujours une chaîne, même si ce sont des nombres, donc soyez prudents :</p>
+<p>Ce sera toujours une chaîne, même si ce sont des nombres, donc soyez prudents&nbsp;:</p>
 
 <pre class="brush: js">var myNumber = '500'; // oops, c'est toujours une chaîne
 typeof(myNumber);

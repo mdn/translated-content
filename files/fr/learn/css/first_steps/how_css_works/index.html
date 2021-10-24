@@ -1,11 +1,6 @@
 ---
-title: 'CSS, comment ça marche ?'
+title: CSS, comment ça marche ?
 slug: Learn/CSS/First_steps/How_CSS_works
-tags:
-  - Apprendre
-  - CSS
-  - DOM
-  - Débutant
 translation_of: Learn/CSS/First_steps/How_CSS_works
 ---
 <p>{{LearnSidebar}}<br>
@@ -17,7 +12,7 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
-   <td>Notions de base en l'informatique, <a href="/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base">logiciels de base installés</a>, <a href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers">savoir manipuler des fichiers</a>, connaissance de base de HTML (cf. <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML">Introduction à HTML</a>.)</td>
+   <td>Notions de base en l'informatique, <a href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software">logiciels de base installés</a>, <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files">savoir manipuler des fichiers</a>, connaissance de base de HTML (cf. <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Introduction à HTML</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Objectif :</th>
@@ -79,7 +74,7 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 
 <p>C'est ainsi que le navigateur interprète notre fragment HTML—il transforme ce DOM en arbre de rendu puis affiche le résultat comme suit :</p>
 
-<p>{{EmbedLiveSample('A_real_DOM_representation', '100%', 55)}}</p>
+<p>{{EmbedLiveSample('Une_représentation_concrète_du_DOM', '100%', 55)}}</p>
 
 <pre class="brush: css hidden">p {margin:0;}</pre>
 
@@ -105,13 +100,13 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 
 <p>Voilà le résultat après mise à jour :</p>
 
-<p>{{EmbedLiveSample('Applying_CSS_to_the_DOM', '100%', 55)}}</p>
+<p>{{EmbedLiveSample('Appliquer_CSS_au_DOM', '100%', 55)}}</p>
 
 <p>Dans le prochain module, dans l'article <a href="/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a>, nous utiliserons les DevTools du navigateur pour débuguer des erreurs CSS. Ce sera aussi l'occasion de mieux comprendre comment le navigateur interprète CSS.</p>
 
 <h2 id="Que_se_passe-t-il_quand_un_navigateur_rencontre_du_CSS_quil_ne_comprend_pas">Que se passe-t-il quand un navigateur rencontre du CSS qu'il ne comprend pas ?</h2>
 
-<p>Les navigateurs n'implémentent pas tous en même temps une fonctionnalité CSS nouvelle, j'avais mentionné ce fait <a href="/fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS#Prise_en_charge_par_les_navigateurs">dans une leçon précédente</a>. Rajoutez à cela le fait que trop de gens n'utilisent pas une version à jour de leur navigateur. CSS, lui, est en développement constant et donc toujours en avance par rapport à ce que les navigateurs peuvent implémenter. On doit donc se demander ce qui se passe quand un navigateur tombe sur un sélecteur ou une déclaration qu'il ne sait pas interpréter.</p>
+<p>Les navigateurs n'implémentent pas tous en même temps une fonctionnalité CSS nouvelle, j'avais mentionné ce fait <a href="/fr/docs/Learn/CSS/First_steps/What_is_CSS#prise_en_charge_par_les_navigateurs">dans une leçon précédente</a>. Rajoutez à cela le fait que trop de gens n'utilisent pas une version à jour de leur navigateur. CSS, lui, est en développement constant et donc toujours en avance par rapport à ce que les navigateurs peuvent implémenter. On doit donc se demander ce qui se passe quand un navigateur tombe sur un sélecteur ou une déclaration qu'il ne sait pas interpréter.</p>
 
 <p>La réponse : ne rien faire et passer à la suite !</p>
 

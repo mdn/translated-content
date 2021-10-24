@@ -1,14 +1,6 @@
 ---
 title: Validation des données de formulaires
 slug: Learn/Forms/Form_validation
-tags:
-  - Exemple
-  - Formulaires
-  - Guide
-  - HTML
-  - Intermédiaire
-  - JavaScript
-  - Web
 translation_of: Learn/Forms/Form_validation
 original_slug: Web/Guide/HTML/Formulaires/Validation_donnees_formulaire
 ---
@@ -76,7 +68,7 @@ original_slug: Web/Guide/HTML/Formulaires/Validation_donnees_formulaire
 
 <h2 id="Utiliser_la_validation_intégrée_au_formulaire">Utiliser la validation intégrée au formulaire</h2>
 
-<p>Une des caractéristiques de <a href="/fr/docs/HTML/HTML5">HTML5</a> est la possibilité de valider la plupart des données utilisateur sans avoir recours à des scripts. Ceci se fait en utilisant des <a href="/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation">attributs de validation</a> sur les éléments de formulaire ; ils vous permettent de spécifier des règles pour une entrée de formulaire comme : une valeur doit‑elle être remplie ? y a-t-il une longueur minimale et/ou maximale des données ? doit‑elle être un nombre, une adresse e-mail ou autre chose ? doit‑elle correspondre à un modèle ? Si les données saisies suivent toutes ces règles, elles sont considérées comme valides ; si ce n'est pas le cas, elles sont considérées comme non valides.<br>
+<p>Une des caractéristiques de <a href="/fr/docs/orphaned/Web/Guide/HTML/HTML5">HTML5</a> est la possibilité de valider la plupart des données utilisateur sans avoir recours à des scripts. Ceci se fait en utilisant des <a href="/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation">attributs de validation</a> sur les éléments de formulaire ; ils vous permettent de spécifier des règles pour une entrée de formulaire comme : une valeur doit‑elle être remplie ? y a-t-il une longueur minimale et/ou maximale des données ? doit‑elle être un nombre, une adresse e-mail ou autre chose ? doit‑elle correspondre à un modèle ? Si les données saisies suivent toutes ces règles, elles sont considérées comme valides ; si ce n'est pas le cas, elles sont considérées comme non valides.<br>
  Quand un élément est valide :</p>
 
 <ul>
@@ -91,7 +83,7 @@ original_slug: Web/Guide/HTML/Formulaires/Validation_donnees_formulaire
  <li>si l'utilisateur essaie d'envoyer le formulaire, le navigateur le bloquera et affichera un message d'erreur.</li>
 </ul>
 
-<h3 id="Contraintes_de_validation_sur_les_éléments_d'entrée_—_simple_début">Contraintes de validation sur les éléments d'entrée — simple début</h3>
+<h3 id="Contraintes_de_validation_sur_les_éléments_input_—_simple_début">Contraintes de validation sur les éléments input — simple début</h3>
 
 <p>Dans cette section, nous examinerons quelques unes des diverses fonctionnalités HTML5 peuvant être utilisées pour valider des éléments d'{{HTMLElement("input")}}.</p>
 
@@ -111,11 +103,11 @@ input:valid {
   border: 1px solid black;
 }</pre>
 
-<p>{{EmbedLiveSample("Contraintes_de_validation_sur_les_éléments_d'entrée_—_simple_début", "100%", 55)}}</p>
+<p>{{EmbedLiveSample("Contraintes_de_validation_sur_les_éléments_input_—_simple_début", "100%", 55)}}</p>
 
 <p>Pour commencer, faites une copie de fruit-start.html dans un nouveau répertoire sur votre disque dur.</p>
 
-<h3 id="L'attribut_required">L'attribut required</h3>
+<h3 id="Attribut_required">Attribut required</h3>
 
 <p>La fonctionnalité de validation HTML5 la plus simple à utiliser est l'attribut {{htmlattrxref("required", "input")}}} — si vous voulez rendre une entrée obligatoire, vous pouvez marquer l'élément en utilisant cet attribut. Lorsque cet attribut est mis, le formulaire ne sera pas soumis (et affichera un message d'erreur) si l'entrée est vide (l'entrée sera également considérée comme invalide).</p>
 
@@ -139,11 +131,11 @@ input:valid {
 
 <p>L'entrée a une bordure en pointillés rouge vif lorsqu'elle n'est pas valide, et une bordure noire plus subtile lorsqu'elle est valide. Essayez le nouveau comportement dans l'exemple ci-dessous :</p>
 
-<p>{{EmbedLiveSample("L'attribut_required", "100%", 55)}}</p>
+<p>{{EmbedLiveSample("Attribut_required", "100%", 55)}}</p>
 
 <h3 id="Validation_selon_une_expression_régulière">Validation selon une expression régulière</h3>
 
-<p>Une autre fonctionnalité de validation très courante est l'attribut {{htmlattrxref("pattern", "input")}}, qui attend une <a href="/fr/docs/Web/JavaScript/Guide/Expressions_régulières">expression régulière</a> comme valeur. Une expression régulière (regex) est un modèle qui peut être utilisé pour faire correspondre des combinaisons de caractères dans des chaînes de texte, de sorte qu'elles sont idéales pour la validation de formulaires (ainsi que diverses autres utilisations en JavaScript). Les Regex sont assez complexes et nous n'avons pas l'intention de vous les enseigner de manière exhaustive dans cet article.</p>
+<p>Une autre fonctionnalité de validation très courante est l'attribut {{htmlattrxref("pattern", "input")}}, qui attend une <a href="/fr/docs/Web/JavaScript/Guide/Regular_Expressions">expression régulière</a> comme valeur. Une expression régulière (regex) est un modèle qui peut être utilisé pour faire correspondre des combinaisons de caractères dans des chaînes de texte, de sorte qu'elles sont idéales pour la validation de formulaires (ainsi que diverses autres utilisations en JavaScript). Les Regex sont assez complexes et nous n'avons pas l'intention de vous les enseigner de manière exhaustive dans cet article.</p>
 
 <p>Vous trouverez ci-dessous quelques exemples pour vous donner une idée de base de leur fonctionnement :</p>
 
@@ -350,7 +342,7 @@ input:focus:invalid {
 
 
 
-<h3 id="Messages_d'erreur_personnalisés">Messages d'erreur personnalisés</h3>
+<h3 id="Messages_adaptés_pour_les_erreurs">Messages adaptés pour les erreurs</h3>
 
 <p>Comme nous avons vu dans les exemples précédents, à chaque fois qu'un utilisateur tente d'envoyer un formulaire invalide, le navigateur affiche un message d'erreur. La manière dont le message est affiché dépend du navigateur.</p>
 
@@ -387,7 +379,7 @@ input:focus:invalid {
 
 <p>Pour personnaliser l'apparence et le texte de ces messages, vous devez utiliser JavaScript ; il n'est pas possible de l'implémenter en utilisant uniquement HTML et CSS.</p>
 
-<p>HMTL5 fournit une <a href="http://www.w3.org/TR/html5/forms.html#the-constraint-validation-api">API de contraintes de validation</a> pour vérifier et personnaliser l'état des élément d'un formulaire. Il est possible, entre autres, de changer le texte des messages d'erreur. Voici un court exemple :</p>
+<p>HMTL5 fournit une <a href="https://www.w3.org/TR/html5/forms.html#the-constraint-validation-api">API de contraintes de validation</a> pour vérifier et personnaliser l'état des élément d'un formulaire. Il est possible, entre autres, de changer le texte des messages d'erreur. Voici un court exemple :</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;label for="mail"&gt;Pourriez-vous nous fournir une adresse mail ?&lt;/label&gt;
@@ -407,7 +399,7 @@ email.addEventListener("keyup", function (event) {
   }
 });</pre>
 
-<p>{{EmbedLiveSample("Messages_d'erreur_personnalisés", "100%", 50)}}</p>
+<p>{{EmbedLiveSample("Messages_adaptés_pour_les_erreurs", "100%", 50)}}</p>
 
 <h2 id="Validation_de_formulaires_avec_JavaScript">Validation de formulaires avec JavaScript</h2>
 
@@ -501,7 +493,7 @@ email.addEventListener("keyup", function (event) {
 
 <p>Pour les anciens navigateurs, il existe <a href="https://hyperform.js.org/">une prothèse d'émulation (<em>polyfill</em>) comme Hyperform</a>, pour compenser le défaut de prise en charge de cette API. Comme vous utilisez déjà JavaScript, l'utilisation d'une prethèse d'émulation n'est pas un souci supplémentaire pour la conception ou l'implémentation de votre site ou application Web.</p>
 
-<h4 id="Exemple_d'utilisation_de_l'API_de_validation_des_contraintes">Exemple d'utilisation de l'API de validation des contraintes</h4>
+<h4 id="Exemple_utilisant_la_validation_des_contraintes">Exemple utilisant la validation des contraintes</h4>
 
 <p>Voyons comment utiliser l'API pour créer des messages d'erreur personnalisés. Tout d'abord, le HTML :</p>
 
@@ -618,7 +610,7 @@ form.addEventListener("submit", function (event) {
 
 <p>Voici le résultat:</p>
 
-<p>{{EmbedLiveSample("Exemple_d'utilisation_de_l'API_de_validation_des_contraintes", "100%", 130)}}</p>
+<p>{{EmbedLiveSample("Exemple_utilisant_la_validation_des_contraintes", "100%", 130)}}</p>
 
 <p>L'API de validation des contraintes fournit un outil puissant pour gérer la validation des formulaires, en vous laissant un contrôle sur l'interface utilisateur bien supérieur à ce que vous auriez pu avoir avec uniquement HTML et CSS. </p>
 
@@ -639,12 +631,12 @@ form.addEventListener("submit", function (event) {
   <li>SmashingMagazine : <a href="http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/" rel="external">Form-Field Validation: The Errors-Only Approach</a></li>
   <li>SmashingMagazine : <a href="http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/" rel="external">Web Form Validation: Best Practices and Tutorials</a></li>
   <li>Six Revision : <a href="http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/" rel="external">Best Practices for Hints and Validation in Web Forms</a></li>
-  <li>A List Apart : <a href="http://www.alistapart.com/articles/inline-validation-in-web-forms/" rel="external">Inline Validation in Web Forms</a></li>
+  <li>A List Apart : <a href="https://www.alistapart.com/articles/inline-validation-in-web-forms/" rel="external">Inline Validation in Web Forms</a></li>
  </ul>
  </dd>
 </dl>
 
-<h4 id="Exemple_qui_n'utilise_pas_l'API_de_validation_des_contraintes">Exemple qui n'utilise pas l'API de validation des contraintes</h4>
+<h4 id="Exemple_sans_utilisation_de_la_validation_des_contraintes">Exemple sans utilisation de la validation des contraintes</h4>
 
 <p>Afin d'illustrer le propos, réécrivons le précédent exemple afin qu'il fonctionne avec d'anciens navigateurs:</p>
 
@@ -807,7 +799,7 @@ addEvent(form, "submit", function () {
 
 <p>Voici le résultat:</p>
 
-<p>{{EmbedLiveSample("Exemple_qui_n'utilise_pas_l'API_de_validation_des_contraintes", "100%", 130)}}</p>
+<p>{{EmbedLiveSample("Exemple_sans_utilisation_de_la_validation_des_contraintes", "100%", 130)}}</p>
 
 <p>Comme vous avez pu le voir, il n'est pas si difficile de créer par soi-même un système de validation. La difficulté consiste à rendre le tout assez générique pour l'utiliser à la fois sur toutes les plateformes et pour chaque formulaire que vous pourriez créer. Il existe de nombreuses bibliothèques permettant ce genre de validation de formulaire ; n'hésitez pas à les utiliser. En voici quelques exemples :</p>
 
@@ -850,15 +842,15 @@ addEvent(form, "submit", function () {
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML">Mon premier formulaire HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML">Comment structurer un formulaire HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs">Les widgets natifs pour formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires">Envoi des données de formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire">Validation des données de formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés">Comment construire des widgets personnalisés pour formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript">Envoi de formulaires à l'aide du JavaScript</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers">Formulaires HTML dans les navigateurs anciens</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML">Mise en forme des formulaires HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms">Mise en forme avancée des formulaires HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets">Table de compatibilité des propriétés pour les widgets de formulaire</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Your_first_form">Mon premier formulaire HTML</a></li>
+ <li><a href="/fr/docs/Learn/Forms/How_to_structure_a_web_form">Comment structurer un formulaire HTML</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Basic_native_form_controls">Les widgets natifs pour formulaire</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Sending_and_retrieving_form_data">Envoi des données de formulaire</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Form_validation">Validation des données de formulaire</a></li>
+ <li><a href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls">Comment construire des widgets personnalisés pour formulaire</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Sending_forms_through_JavaScript">Envoi de formulaires à l'aide du JavaScript</a></li>
+ <li><a href="/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers">Formulaires HTML dans les navigateurs anciens</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Styling_web_forms">Mise en forme des formulaires HTML</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Advanced_form_styling">Mise en forme avancée des formulaires HTML</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Table de compatibilité des propriétés pour les widgets de formulaire</a></li>
 </ul>

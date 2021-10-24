@@ -1,16 +1,6 @@
 ---
 title: Gérer du texte — les chaînes de caractères en JavaScript
 slug: Learn/JavaScript/First_steps/Strings
-tags:
-  - Article
-  - Attacher
-  - Codage
-  - Débutant
-  - Guide
-  - Guillemets
-  - JavaScript
-  - chaînes
-  - concatenation
 translation_of: Learn/JavaScript/First_steps/Strings
 ---
 <div>{{LearnSidebar}}</div>
@@ -198,7 +188,7 @@ dblSgl;</pre>
 <pre class="brush: js">let bigmouth = 'Je n\'ai pas eu droit à prendre place...';
 bigmouth;</pre>
 
-<p>Cela fonctionne à la perfection. Vous pouvez échapper d'autres caractères de la même manière, par ex. <code>\"</code>,  et il y a certains codes spéciaux à côté. Voyez  <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation">Notations d'échappement</a> pour plus de détails.</p>
+<p>Cela fonctionne à la perfection. Vous pouvez échapper d'autres caractères de la même manière, par ex. <code>\"</code>,  et il y a certains codes spéciaux à côté. Voyez  <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation">Notations d'échappement</a> pour plus de détails.</p>
 
 <h2 id="Concaténation_de_chaînes">Concaténation de chaînes</h2>
 
@@ -236,7 +226,7 @@ button.onclick = function() {
   alert('Hello ' + name + ', sympa de vous voir !');
 }</pre>
 
-<p>{{ EmbedLiveSample('Concatenation_in_context', '100%', 50) }}</p>
+<p>{{ EmbedLiveSample('Concaténation_dans_un_contexte', '100%', 50) }}</p>
 
 <p>Ici nous utilisons en ligne 4 la fonction {{domxref("Window.prompt()", "Window.prompt()")}}, qui demande à l'utilisateur de répondre à une question par l'intermédiaire d'une boîte de dialogue, puis qui stocke le texte entré dans une variable donnée — dans ce cas <code>name</code>. En ligne 5, nous nous servons de la fonction {{domxref("Window.alert()", "Window.alert()")}} pour afficher un dialogue contenant une chaîne assemblée à partir de deux chaînes littérales et de la variable <code>name</code>, par concaténation.</p>
 
