@@ -26,7 +26,7 @@ translation_of: Web/SVG/SVG_animation_with_SMIL
 
 <p>Pour ce faire, on utilise un élément SVG tel que {{ SVGElement("animate") }}. Vous trouverez ci-dessous des exemples illustrant les quatres différents manières de procéder.</p>
 
-<h2 id="Animer_l'attribut_d'un_élément">Animer l'attribut d'un élément</h2>
+<h2 id="Animation_pour_un_attribut">Animation pour un attribut</h2>
 
 <p>L'exemple suivant anime l'attribut <code><strong>cx</strong></code> d'un cercle. Pour ce faire, on ajoute un élément {{ SVGElement("animate") }}  dans l'élément {{ SVGElement("circle") }}. Les attributs importants pour {{ SVGElement("animate") }} sont :</p>
 
@@ -53,9 +53,9 @@ translation_of: Web/SVG/SVG_animation_with_SMIL
   &lt;/circle&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{ EmbedLiveSample("Animer_l'attribut_d'un_élément", '100%', 120) }}</p>
+<p>{{ EmbedLiveSample("Animation_pour_un_attribut", '100%', 120) }}</p>
 
-<h2 id="Animer_la_transformation_d'attributs">Animer la transformation d'attributs</h2>
+<h2 id="Animer_une_transformation_des_attributs">Animer une transformation d'attributs</h2>
 
 <p>L'élement {{ SVGElement("animateTransform") }} permet d'animer la <strong>transformation</strong> d'attributs. Ce nouvel élément est nécéssaire parce que nous n'animons pas un simple attribut tel que <strong>x, </strong>qui est juste un nombre.<br>
  Les attributs pour la rotation sont ainsi : <code>rotation(theta, x, y)</code>, où <code>theta</code> est l'angle en degrés, <code>x</code> et <code>y</code> sont les positions absolues.<br>
@@ -78,7 +78,7 @@ translation_of: Web/SVG/SVG_animation_with_SMIL
 &lt;/svg&gt;
 </pre>
 
-<p>{{ EmbedLiveSample("Animer_la_transformation_d'attributs", '100%', 120) }}</p>
+<p>{{ EmbedLiveSample("Animer_une_transformation_des_attributs", '100%', 120) }}</p>
 
 <h2 id="Animation_suivant_un_tracé_(chemin)">Animation suivant un tracé (chemin)</h2>
 
