@@ -1,11 +1,6 @@
 ---
 title: Les variables CSS
 slug: Web/CSS/Using_CSS_custom_properties
-tags:
-  - CSS
-  - Guide
-  - Intermédiaire
-  - Web
 translation_of: Web/CSS/Using_CSS_custom_properties
 ---
 {{CSSRef}}
@@ -106,7 +101,7 @@ Appliquons-le à ce code HTML :
 
 ce qui donne ceci :
 
-{{EmbedLiveSample("exemple_1",600,180)}}
+{{EmbedLiveSample("Exemple_1",600,180)}}
 
 Remarquez la répétition dans le CSS. La couleur d'arrière-plan est définie à `brown` à plusieurs endroits. Certaines déclarations peuvent être faites plus haut dans la cascade et le problème se résoudra grâce à l'héritage. Mais pour des projets non-triviaux, cela n'est pas toujours possible. En déclarant une variable dans la pseudo-classe {{cssxref(":root")}}, un développeur CSS peut éviter certaines répétitions en utilisant cette variable.
 
@@ -259,7 +254,7 @@ Comme on pourrait s'y attendre, le valeur applique la substitution aec `--text-c
 
 ### Résultat
 
-{{EmbedLiveSample('Gestion_des_valeurs_invalides')}}
+{{EmbedLiveSample('Gestion_des_variables_invalides')}}
 
 > **Note :** La couleur du paragraphe ne sera pas bleue car une substitution invalide est remplacée par la valeur héritée ou la valeur initiale, pas par les valeurs provenant d'éventuelles autres règles.
 >
