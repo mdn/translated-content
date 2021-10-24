@@ -1,16 +1,12 @@
 ---
 title: Composition et découpe
 slug: Web/API/Canvas_API/Tutorial/Compositing
-tags:
-  - Canvas
-  - Composition
-  - dessin
 translation_of: Web/API/Canvas_API/Tutorial/Compositing
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Composition
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
-Dans tous nos [exemples précédents](/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations), les formes étaient toutes dessinées les unes au dessus des autres. C'est plus que suffisant pour la plupart des situations, mais cela limite l'ordre dans lequel les formes composées sont construites. Nous pouvons cependant changer ce comportement en définissant la propriété `globalCompositeOperation`. En complément, la propriété `clip` nous permet de cacher les parties des formes que nous ne désirons pas.
+Dans tous nos [exemples précédents](/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations), les formes étaient toutes dessinées les unes au dessus des autres. C'est plus que suffisant pour la plupart des situations, mais cela limite l'ordre dans lequel les formes composées sont construites. Nous pouvons cependant changer ce comportement en définissant la propriété `globalCompositeOperation`. En complément, la propriété `clip` nous permet de cacher les parties des formes que nous ne désirons pas.
 
 ## `globalCompositeOperation`
 
@@ -19,9 +15,9 @@ Nous pouvons non seulement dessiner de nouvelles formes derrière des formes exi
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}
   - : Cela configure le type d'opération de composition à appliquer lorsqu'on dessine de nouvelles formes, où le type correspond à une string qui fait référence à une des douze opérations de composition possibles.
 
-Reportez-vous aux [exemples de compositon](/fr/docs/Tutoriel_canvas/Composition/Example) pour le code des exemples suivants.
+Reportez-vous aux [exemples de compositon](/fr/docs/Tutoriel_canvas/Composition/Example) pour le code des exemples suivants.
 
-{{EmbedLiveSample("Exemple_de_composition", 750, 6750, "" ,"/Tutoriel_canvas/Composition/Example")}}
+{{EmbedLiveSample("globalCompositeOperation", 750, 6750, "" ,"/Tutoriel_canvas/Composition/Example")}}
 
 ## Détourage
 
@@ -29,18 +25,18 @@ Un détourage (_clipping path_ en anglais) est comme une forme de canvas standar
 
 ![](canvas_clipping_path.png)
 
-Si nous comparons le détourage à la propriété `globalCompositeOperation` vue précédemment, nous voyons deux modes de composition qui ont plus ou moins les mémes effets qu'avec `source-in` et `source-atop`. La différence la plus significative entre les deux est que le détourage n'est jamais dessiné sur le canvas à proprement parler et il n'est jamais affecté par l'ajout de nouvelles formes. Ça le rend idéal pour dessiner plusieurs formes dans une zone restreinte.
+Si nous comparons le détourage à la propriété `globalCompositeOperation` vue précédemment, nous voyons deux modes de composition qui ont plus ou moins les mémes effets qu'avec `source-in` et `source-atop`. La différence la plus significative entre les deux est que le détourage n'est jamais dessiné sur le canvas à proprement parler et il n'est jamais affecté par l'ajout de nouvelles formes. Ça le rend idéal pour dessiner plusieurs formes dans une zone restreinte.
 
-Dans le chapitre "[dessiner des formes avec le canevas](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)", nous n'avions mentionné que les méthodes `stroke()` et `fill()`, mais il y en a une troisième: `clip()` — elle permet de faire des détourages.
+Dans le chapitre "[dessiner des formes avec le canevas](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)", nous n'avions mentionné que les méthodes `stroke()` et `fill()`, mais il y en a une troisième: `clip()` — elle permet de faire des détourages.
 
 - {{domxref("CanvasRenderingContext2D.clip", "clip()")}}
   - : Transforme le chemin en cours de création en détourage effectif.
 
-Il faut utiliser `clip()` plutot que `closePath()` pour fermer un chemin et enfaire un détourage.
+Il faut utiliser `clip()` plutot que `closePath()` pour fermer un chemin et enfaire un détourage.
 
-Par défault, l'élément {{HTMLElement("canvas")}} possède un détourage aux mêmes dimensions que le canvas lui-même. Donc, par défaut aucune découpe n'est apparente.
+Par défault, l'élément {{HTMLElement("canvas")}} possède un détourage aux mêmes dimensions que le canvas lui-même. Donc, par défaut aucune découpe n'est apparente.
 
-### Un exemple de `clip`
+### Un exemple de `clip`
 
 Dans cet exemple, nous allons utiliser un détourage circulaire pour restreindre le dessin d'un essemble d'étoiles aléatoires à une zone particulière (et circulaire...).
 
@@ -101,10 +97,10 @@ function drawStar(ctx, r) {
 draw();
 ```
 
-Dans les premières lignes de code, nous dessinons un rectangle noir ayant la même taille que le canvas comme toile de fond puis nous déplaçons l'origine au centre de l'image. Ensuite, nous créons le détourage circulaire en dessinant un arc (complet) et en faisant appelle à `clip()`. Les détourages font aussi partie de l'état de sauvegarde des canvas. Si on voulait garder le détourage d'origine, on pourrait par exemple sauvegarder l'état du canvas au préalable.
+Dans les premières lignes de code, nous dessinons un rectangle noir ayant la même taille que le canvas comme toile de fond puis nous déplaçons l'origine au centre de l'image. Ensuite, nous créons le détourage circulaire en dessinant un arc (complet) et en faisant appelle à `clip()`. Les détourages font aussi partie de l'état de sauvegarde des canvas. Si on voulait garder le détourage d'origine, on pourrait par exemple sauvegarder l'état du canvas au préalable.
 
-Tout ce qui sera dessiné après la création du détourage n'apparaîtra qu'à l'intérieur de ce chemin. Vous pouvez voir ça clairement avec le dégradé linéaire qui est dessiné après. Ensuite, un ensemble de 50 étoiles aléatoires est dessiné, en utilisant la fonction `drawStar()`. Nous pouvons voir, une fois de plus, que les éléments (ici les étoiles) n'apparaissent qu'à l'intérieur du détourage.
+Tout ce qui sera dessiné après la création du détourage n'apparaîtra qu'à l'intérieur de ce chemin. Vous pouvez voir ça clairement avec le dégradé linéaire qui est dessiné après. Ensuite, un ensemble de 50 étoiles aléatoires est dessiné, en utilisant la fonction `drawStar()`. Nous pouvons voir, une fois de plus, que les éléments (ici les étoiles) n'apparaissent qu'à l'intérieur du détourage.
 
-{{EmbedLiveSample("A_clip_example", "180", "180", "canvas_clip.png")}}
+{{EmbedLiveSample("Un_exemple_de_clip", "180", "180", "canvas_clip.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

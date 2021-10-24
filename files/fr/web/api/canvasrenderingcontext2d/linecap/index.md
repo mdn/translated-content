@@ -1,12 +1,6 @@
 ---
 title: CanvasRenderingContext2D.lineCap
 slug: Web/API/CanvasRenderingContext2D/lineCap
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Propriété
-  - Reference
 translation_of: Web/API/CanvasRenderingContext2D/lineCap
 ---
 {{APIRef}}
@@ -101,7 +95,7 @@ zoneTexte.addEventListener('input', dessinerCanevas);
 window.addEventListener('load', dessinerCanevas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 700, 360) }}
+{{ EmbedLiveSample('Code_jouable', 700, 360) }}
 
 ### Un exemple de `lineCap`
 
@@ -138,7 +132,7 @@ for (var i = 0; i < lineCap.length; i++) {
 <canvas id="canevas" width="150" height="150"></canvas>
 ```
 
-{{EmbedLiveSample("A_lineCap_example", "180", "180", "canvas_linecap.png")}}
+{{EmbedLiveSample("Un_exemple_de_lineCap", "180", "180", "canvas_linecap.png")}}
 
 ## Spécifications
 

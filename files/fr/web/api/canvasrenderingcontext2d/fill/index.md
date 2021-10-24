@@ -1,15 +1,11 @@
 ---
 title: CanvasRenderingContext2D.fill()
 slug: Web/API/CanvasRenderingContext2D/fill
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
 translation_of: Web/API/CanvasRenderingContext2D/fill
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D`\*\***`.fill()`\*\* de l'API Canvas 2D remplit le chemin courant ou donné avec la couleur de fond en cours, en utilisant la règle de remplissage extérieur/intérieur non nul ou la règle de remplissage pair/impair.
+La méthode **`CanvasRenderingContext2D.fill()`** de l'API Canvas 2D remplit le chemin courant ou donné avec la couleur de fond en cours, en utilisant la règle de remplissage extérieur/intérieur non nul ou la règle de remplissage pair/impair.
 
 ## Syntaxe
 
@@ -91,7 +87,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 700, 360) }}
+{{ EmbedLiveSample('Code_jouable', 700, 360) }}
 
 ### Utiliser l'option `fillRule`
 
@@ -174,7 +170,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{EmbedLiveSample('code_jouable_2', 700, 360)}}
+{{EmbedLiveSample('Code_jouable_2', 700, 360)}}
 
 ## Spécifications
 

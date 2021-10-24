@@ -1,13 +1,6 @@
 ---
 title: HTMLElement.isContentEditable
 slug: Web/API/HTMLElement/isContentEditable
-tags:
-  - HTML DOM
-  - Propriété
-  - Reference
-  - lecture seule
-  - Édition
-  - Élément HTML
 translation_of: Web/API/HTMLElement/isContentEditable
 ---
 {{ APIRef("HTML DOM") }}
@@ -39,7 +32,7 @@ document.getElementById("infoText2").innerHTML += document.getElementById("myTex
 
 ### Résultat
 
-{{ EmbedLiveSample('Example') }}
+{{ EmbedLiveSample('Exemple') }}
 
 ## Spécifications
 

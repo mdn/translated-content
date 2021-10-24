@@ -1,13 +1,6 @@
 ---
 title: DOMTokenList.add()
 slug: Web/API/DOMTokenList/add
-tags:
-  - API
-  - Ajout
-  - Chaînes de caractères
-  - DOM
-  - Listes
-  - Méthodes
 translation_of: Web/API/DOMTokenList/add
 ---
 {{APIRef("DOM")}}
@@ -48,7 +41,7 @@ span.textContent = classes;
 
 La sortie ressemble à ceci :
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('Exemples', '100%', 60) }}
 
 Vous pouvez ajouter plusieurs _token_ :
 

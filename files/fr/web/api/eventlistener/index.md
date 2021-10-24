@@ -1,12 +1,6 @@
 ---
 title: EventListener
 slug: Web/API/EventListener
-tags:
-  - API
-  - DOM
-  - Evènement
-  - Interface
-  - Écouteurs
 translation_of: Web/API/EventListener
 ---
 {{APIRef("DOM Events")}}
@@ -59,7 +53,7 @@ buttonElement.addEventListener('click', {
 
 ### Résultat
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Exemple')}}
 
 ## Spécifications
 

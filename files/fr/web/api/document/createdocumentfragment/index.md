@@ -1,13 +1,6 @@
 ---
 title: document.createDocumentFragment
 slug: Web/API/Document/createDocumentFragment
-tags:
-  - API
-  - DOM
-  - Document
-  - HTML
-  - Méthode
-  - Reference
 translation_of: Web/API/Document/createDocumentFragment
 ---
 {{ApiRef("DOM")}}
@@ -56,7 +49,7 @@ element.appendChild(fragment);
 
 ### Résultat
 
-{{EmbedLiveSample("Example", 600, 140)}}
+{{EmbedLiveSample("Exemple", 600, 140)}}
 
 ## Spécification
 
