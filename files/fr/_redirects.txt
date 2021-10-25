@@ -309,7 +309,7 @@
 /fr/docs/CSS/-moz-grab	/en-US/docs/Web/CSS/cursor#grab
 /fr/docs/CSS/-moz-grabbing	/en-US/docs/Web/CSS/cursor#grab
 /fr/docs/CSS/-moz-image-region	/fr/docs/Web/CSS/-moz-image-region
-/fr/docs/CSS/-moz-linear-gradient	/fr/docs/orphaned/Web/CSS/linear-gradient()
+/fr/docs/CSS/-moz-linear-gradient	/fr/docs/Web/CSS/gradient/linear-gradient()
 /fr/docs/CSS/-moz-margin-end	/fr/docs/Web/CSS/margin-inline-end
 /fr/docs/CSS/-moz-margin-start	/fr/docs/Web/CSS/margin-inline-start
 /fr/docs/CSS/-moz-opacity	/fr/docs/Web/CSS/opacity
@@ -585,7 +585,7 @@
 /fr/docs/CSS/length	/fr/docs/Web/CSS/length
 /fr/docs/CSS/letter-spacing	/fr/docs/Web/CSS/letter-spacing
 /fr/docs/CSS/line-height	/fr/docs/Web/CSS/line-height
-/fr/docs/CSS/linear-gradient	/fr/docs/orphaned/Web/CSS/linear-gradient()
+/fr/docs/CSS/linear-gradient	/fr/docs/Web/CSS/gradient/linear-gradient()
 /fr/docs/CSS/list-style	/fr/docs/Web/CSS/list-style
 /fr/docs/CSS/list-style-image	/fr/docs/Web/CSS/list-style-image
 /fr/docs/CSS/list-style-position	/fr/docs/Web/CSS/list-style-position
@@ -3887,7 +3887,7 @@
 /fr/docs/Web/CSS/-moz-copy	/fr/docs/Web/CSS/cursor
 /fr/docs/Web/CSS/-moz-grab	/en-US/docs/Web/CSS/cursor#grab
 /fr/docs/Web/CSS/-moz-grabbing	/en-US/docs/Web/CSS/cursor#grab
-/fr/docs/Web/CSS/-moz-linear-gradient	/fr/docs/orphaned/Web/CSS/linear-gradient()
+/fr/docs/Web/CSS/-moz-linear-gradient	/fr/docs/Web/CSS/gradient/linear-gradient()
 /fr/docs/Web/CSS/-moz-margin-end	/fr/docs/Web/CSS/margin-inline-end
 /fr/docs/Web/CSS/-moz-margin-start	/fr/docs/Web/CSS/margin-inline-start
 /fr/docs/Web/CSS/-moz-opacity	/fr/docs/Web/CSS/opacity
@@ -4213,8 +4213,8 @@
 /fr/docs/Web/CSS/image-set	/fr/docs/orphaned/Web/CSS/image-set()
 /fr/docs/Web/CSS/image-set()	/fr/docs/orphaned/Web/CSS/image-set()
 /fr/docs/Web/CSS/imagefunction	/fr/docs/orphaned/Web/CSS/image()
-/fr/docs/Web/CSS/linear-gradient	/fr/docs/orphaned/Web/CSS/linear-gradient()
-/fr/docs/Web/CSS/linear-gradient()	/fr/docs/orphaned/Web/CSS/linear-gradient()
+/fr/docs/Web/CSS/linear-gradient	/fr/docs/Web/CSS/gradient/linear-gradient()
+/fr/docs/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient()
 /fr/docs/Web/CSS/longueur	/fr/docs/Web/CSS/length
 /fr/docs/Web/CSS/marks	/fr/docs/orphaned/Web/CSS/@page/marks
 /fr/docs/Web/CSS/max	/fr/docs/Web/CSS/max()
@@ -5863,6 +5863,7 @@
 /fr/docs/inset-inline-end	/fr/docs/Web/CSS/inset-inline-end
 /fr/docs/inset-inline-start	/fr/docs/Web/CSS/inset-inline-start
 /fr/docs/orphaned/Introduction_à_la_cryptographie_à_clef_publique/Signatures_numériques	/fr/docs/Glossary/Signature/Security
+/fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient()
 /fr/docs/orphaned/Web/Guide/Events/Media_events	/fr/docs/Web/Events#media
 /fr/docs/setAttribute	/fr/docs/Web/API/Element/setAttribute
 /fr/docs/toSource	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toSource
