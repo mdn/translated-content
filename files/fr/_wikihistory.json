@@ -42546,13 +42546,6 @@
       "BenoitL"
     ]
   },
-  "conflicting/Learn/CSS/Building_blocks/Selectors": {
-    "modified": "2020-07-16T22:25:39.574Z",
-    "contributors": [
-      "SphinxKnight",
-      "Oliviermoz"
-    ]
-  },
   "conflicting/Learn/CSS/Building_blocks/Selectors_9bc80fea302c91cd60fb72c4e83c83e9": {
     "modified": "2019-03-24T00:11:21.423Z",
     "contributors": [
@@ -42593,12 +42586,6 @@
       "teoli",
       "Verruckt",
       "BenoitL"
-    ]
-  },
-  "conflicting/Learn/CSS/CSS_layout/Introduction": {
-    "modified": "2020-07-16T22:25:40.392Z",
-    "contributors": [
-      "SphinxKnight"
     ]
   },
   "conflicting/Learn/CSS/First_steps": {
@@ -42757,12 +42744,6 @@
   },
   "conflicting/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting": {
     "modified": "2020-07-16T22:22:41.102Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting_b235e00aa38ee1d4b535fc921395f446": {
-    "modified": "2020-07-16T22:22:37.801Z",
     "contributors": [
       "SphinxKnight"
     ]
@@ -44118,26 +44099,6 @@
       "SphinxKnight"
     ]
   },
-  "orphaned/Web/API/Body": {
-    "modified": "2020-10-15T22:00:04.273Z",
-    "contributors": [
-      "Voulto",
-      "Retroscilo",
-      "Arzak656",
-      "SphinxKnight",
-      "vqrs"
-    ]
-  },
-  "orphaned/Web/API/Body/json": {
-    "modified": "2020-10-15T22:00:00.599Z",
-    "contributors": [
-      "SphinxKnight",
-      "jdvauguet",
-      "enkienki",
-      "MaximeSarrato",
-      "Nithramir"
-    ]
-  },
   "orphaned/Web/API/ChildNode": {
     "modified": "2020-10-15T21:28:06.168Z",
     "contributors": [
@@ -44189,18 +44150,6 @@
     "modified": "2019-03-18T21:41:11.030Z",
     "contributors": [
       "loella16"
-    ]
-  },
-  "orphaned/Web/API/Detecting_device_orientation": {
-    "modified": "2019-03-23T23:28:22.437Z",
-    "contributors": [
-      "mgagnon555",
-      "a-mt",
-      "tregagnon",
-      "Fredchat",
-      "FredB",
-      "achraf",
-      "darnuria"
     ]
   },
   "orphaned/Web/API/DocumentTouch": {
@@ -44475,12 +44424,6 @@
       "SphinxKnight",
       "teoli",
       "Aaaaaaa"
-    ]
-  },
-  "orphaned/Web/CSS/@media/prefers-reduced-transparency": {
-    "modified": "2020-10-15T22:20:20.333Z",
-    "contributors": [
-      "SphinxKnight"
     ]
   },
   "orphaned/Web/CSS/@media/scan": {
