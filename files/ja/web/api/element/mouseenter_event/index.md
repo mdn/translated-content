@@ -18,7 +18,7 @@ translation_of: Web/API/Element/mouseenter_event
 ---
 {{APIRef}}
 
-**`mouseenter`** イベントは、ポインティングデバイス (通常はマウス) のホットスポットが最初にイベントが発行された要素の中に移動したときに {{domxref("Element")}} に発行されます。
+**`mouseenter`** イベントは、ポインティングデバイス (通常はマウス) のホットスポットが最初にイベントが発行された要素の中に移動したときにその要素 ({{domxref("Element")}}) に発行されます。
 
 <table class="properties">
   <tbody>

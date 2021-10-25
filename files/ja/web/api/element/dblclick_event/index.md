@@ -19,7 +19,7 @@ translation_of: Web/API/Element/dblclick_event
 ---
 {{APIRef}}
 
-**`dblclick`** イベントは、ポインティングデバイスのボタン (マウスの第一ボタンなど) がダブルクリックされたとき、つまり、単一の要素上でとても短い時間内に素早く 2 回クリックされたときに発生します。
+**`dblclick`** イベントは、ポインティングデバイスのボタン (マウスの第一ボタンなど) がダブルクリックされたとき、つまり、単一の要素上でとても短い時間内に素早く 2 回クリックされたときに発行されます。
 
 `dblclick` は 2 回の {{domxref("Element/click_event", "click")}} イベントの後 (展開すると、2 組の {{domxref("Element.mousedown_event", "mousedown")}} および {{domxref("Element.mouseup_event", "mouseup")}} の後) に発生します。
 
