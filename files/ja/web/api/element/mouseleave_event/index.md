@@ -16,7 +16,7 @@ translation_of: Web/API/Element/mouseleave_event
 ---
 {{APIRef}}
 
-**`mouseleave`** イベントは、ポインティングデバイス (ふつうはマウス) のカーソルが {{domxref("Element")}} 外に移動したときに発行されます。
+**`mouseleave`** イベントは、ポインティングデバイス (ふつうはマウス) のカーソルが要素 ({{domxref("Element")}}) の外に移動したときに発行されます。
 
 <table class="properties">
   <tbody>

@@ -19,7 +19,7 @@ translation_of: Web/API/Element/mouseup_event
 ---
 {{APIRef}}
 
-**`mouseup`** イベントは、 {{domxref("Element")}} においてポインターが中にあるときにポインティングデバイス (マウスやトラックパッドなど) のボタンが離されたときに発生します。
+**`mouseup`** イベントは、ポインターが要素の中にあるときに、ポインティングデバイス (マウスやトラックパッドなど) のボタンが離されるとその要素 ({{domxref("Element")}}) に発行されます。
 
 `mouseup` イベントは {{domxref("Element.mousedown_event", "mousedown")}} イベントに対応します。
 

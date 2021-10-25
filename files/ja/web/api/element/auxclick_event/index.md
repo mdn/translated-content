@@ -14,9 +14,9 @@ translation_of: Web/API/Element/auxclick_event
 ---
 {{APIRef}}
 
-**`auxclick`** イベントは、ポインティングデバイスの第 1 ボタン以外のボタン (マウスの第 1 の—通常は左端の—ボタン) が同じ要素 ({{domxref("Element")}}) 内で両方とも押され、離されたとき、その要素で発行されます。
+**`auxclick`** イベントは、ポインティングデバイスの第 1 ボタン以外のボタン (マウスの第 1 の—通常は左端の—ボタン) が同じ要素 ({{domxref("Element")}}) 内で押されて離されたとき、その要素で発行されます。
 
-`auxclick` は、 {{event("mousedown")}} および {{event("mouseup")}} イベントが発生した後に、順に発生します。
+`auxclick` は、{{domxref("Element/mousedown_event", "mousedown")}} および {{domxref("Element/mouseup_event", "mouseup")}} イベントが発生した後に、順に発生します。
 
 <table class="properties">
   <tbody>
@@ -47,11 +47,11 @@ Firefox を含む大多数のブラウザーでは、中央クリックを新し
 
 入力やナビゲーションに対応していない要素で発生した `auxclick` イベントを待ち受ける場合、マウスの中ボタンのダウンアクションにマッピングされた他の既定のアクションを明示的に防止したい場合がよくあります。Windows では自動スクロール、macOS や Linux ではクリップボードの貼り付けなどがこれにあたります。これは、{{domxref("Element/mousedown_event", "mousedown")}} イベントや {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} イベントの既定の動作を防ぐことで実現できます。
 
-さらに、右クリックの後にシステムコンテキストメニューを開かないようにする必要がある場合もあります。オペレーティングシステムのタイミングの違いにより、これも `auxclick` の既定のの動作では防ぐことができません。代わりに、{{domxref("Element/contextmenu_event", "contextmenu")}} イベントの既定の動作を防止することで実現できます。
+さらに、右クリックの後にシステムコンテキストメニューを開かなくする必要がある場合もあります。オペレーティングシステムのタイミングの違いにより、これも `auxclick` の既定のの動作では防ぐことができません。代わりに、{{domxref("Element/contextmenu_event", "contextmenu")}} イベントの既定の動作を防止することで実現できます。
 
 <h2 id="Examples">例</h2>
 
-この例では、 {{domxref("GlobalEventHandlers.onclick", "onclick")}} と {{domxref("GlobalEventHandlers.onauxclick", "onauxclick")}} という 2 つのイベントハンドラーの関数を定義しています。前者はボタンの背景色を変更し、後者はボタンの前景 (テキスト) の色を変更します。また、このデモを多ボタンマウスで試すことで、2 つの関数が動作する様子を見ることができます ([GitHubでライブで見る](https://mdn.github.io/dom-examples/auxclick/)ことができ、[ソースコードも見る](https://github.com/mdn/dom-examples/blob/master/auxclick/index.html)ことができます)。
+この例では、 {{domxref("GlobalEventHandlers.onclick", "onclick")}} と {{domxref("GlobalEventHandlers.onauxclick", "onauxclick")}} という 2 つのイベントハンドラーの関数を定義しています。前者はボタンの背景色を変更し、後者はボタンの前景 (テキスト) の色を変更します。また、このデモを多ボタンマウスで試すことで、2 つの関数が動作する様子を見ることができます ([GitHubでライブで見る](https://mdn.github.io/dom-examples/auxclick/)ことができ、[ソースコードを見る](https://github.com/mdn/dom-examples/blob/master/auxclick/index.html)こともできます)。
 
 ### JavaScript
 

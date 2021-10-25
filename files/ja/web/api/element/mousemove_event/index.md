@@ -16,7 +16,7 @@ translation_of: Web/API/Element/mousemove_event
 ---
 {{APIRef}}
 
-`mousemove` イベントは、マウスなどのポインティングデバイスで、カーソルのホットスポットが要素内にある間に動いた時に発行されるイベントです。
+`mousemove` イベントは、カーソルのホットスポットが要素内にあるときに、ポインティングデバイス (通常はマウス) が移動されると、その要素に発行されます。
 
 <table class="properties">
   <tbody>
