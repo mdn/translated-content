@@ -11,15 +11,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 ---
 <div>{{JSRef("Global_Objects", "RegExp")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Свойство <strong><code>lastIndex</code></strong> является целочисленным свойством регулярного выражения, доступным как для чтения, так и для записи, которое определяет индекс, с которого следует начинать следующее сопоставление.</p>
 
 <div>{{js_property_attributes(1, 0, 0)}}</div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code><var>regExpObj</var>.lastIndex</code></pre>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Это свойство устанавливается только в том случае, если в регулярном выражении используется флаг <code>"g"</code>, указывающий на необходимость глобального поиска. Оно подчиняется следующим правилам:</p>
 <ul>
  <li>Если свойство <code>lastIndex</code> больше длины строки, методы {{jsxref("RegExp.prototype.test()", "test()")}} и {{jsxref("RegExp.prototype.exec()", "exec()")}} завершатся с неудачей, а свойство <code>lastIndex</code> будет установлено в 0.</li>
@@ -28,9 +28,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
  <li>Во всех остальных случаях свойство <code>lastIndex</code> устанавливается в позицию, следующую за самым последним сопоставлением.</li>
 </ul>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_lastIndex" name="Example:_Using_lastIndex">Пример: использование свойства <code>lastIndex</code></h3>
+<h3 id="Example:_Using_lastIndex">Пример: использование свойства <code>lastIndex</code></h3>
 <p>Рассмотрим следующую последовательность инструкций:</p>
 <pre class="brush: js">var re = /(привет)?/g;
 </pre>
@@ -44,7 +44,7 @@ console.log(re.lastIndex);
 </pre>
 <p>Выведет массив <code>["", undefined]</code>, «пустой» массив, чей нулевой элемент является сопоставившейся строкой. В данном случае, ей является пустая строка, поскольку свойство <code>lastIndex</code> было равно 6 (и остаётся равным 6), а строка <code>"привет"</code> имеет длину 6.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -71,10 +71,10 @@ console.log(re.lastIndex);
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("RegExp.prototype.ignoreCase")}}</li>
  <li>{{jsxref("RegExp.prototype.global")}}</li>

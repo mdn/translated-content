@@ -10,33 +10,33 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/log
 ---
 <div>{{JSRef("Global_Objects", "Math")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Метод <strong><code>Math.log()</code></strong> возвращает натуральный (по основанию {{jsxref("Math.E", "e")}}) логарифм числа, то есть</p>
 <p><math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>уникальный</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>такой, что</mtext><mspace width="thickmathspace"></mspace><msup><mi>e</mi><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x &gt; 0, \mathtt{\operatorname{Math.log}(x)} = \ln(x) = \text{уникальный} \; y \; \text{такой, что} \; e^y = x</annotation></semantics></math></p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code>Math.log(<var>x</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 <dl>
  <dt><code>x</code></dt>
  <dd>Число.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Если значение <code>x</code> меньше 0, возвращаемое значение всегда будет равным {{jsxref("Global_Objects/NaN", "NaN")}}.</p>
 <p>Поскольку метод <code>log()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.log()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_Math.log" name="Example:_Using_Math.log">Пример: использование метода <code>Math.log()</code></h3>
+<h3 id="Example:_Using_Math.log">Пример: использование метода <code>Math.log()</code></h3>
 <pre class="brush: js">Math.log(-1); // NaN, выход за пределы диапазона
 Math.log(0);  // -Infinity
 Math.log(1);  // 0
 Math.log(10); // 2.302585092994046
 </pre>
 
-<h3 id="Example:_Using_Math.log_with_a_different_base" name="Example:_Using_Math.log_with_a_different_base">Пример: использование метода <code>Math.log()</code> с различными основаниями</h3>
+<h3 id="Example:_Using_Math.log_with_a_different_base">Пример: использование метода <code>Math.log()</code> с различными основаниями</h3>
 <p>Следующая функция возвращает логарифм из <code>y</code> по основанию <code>x</code> (то есть, <math><semantics><mrow><msub><mo>log</mo><mi>x</mi></msub><mi>y</mi></mrow><annotation encoding="TeX">\log_x y</annotation></semantics></math>):</p>
 <pre class="brush: js">function getBaseLog(x, y) {
   return Math.log(y) / Math.log(x);
@@ -44,7 +44,7 @@ Math.log(10); // 2.302585092994046
 </pre>
 <p>Если вы выполните <code>getBaseLog(10, 1000)</code>, функция вернёт <code>2.9999999999999996</code> из-за особенностей округления чисел с плавающей запятой, что довольно близко к правильному ответу — 3.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -70,10 +70,10 @@ Math.log(10); // 2.302585092994046
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("Math.exp()")}}</li>
  <li>{{jsxref("Math.log1p()")}} {{experimental_inline}}</li>
