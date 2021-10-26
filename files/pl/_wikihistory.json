@@ -4299,6 +4299,18 @@
       "P0lip"
     ]
   },
+  "Web/CSS/Media_Queries/Using_media_queries": {
+    "modified": "2019-03-23T23:43:37.766Z",
+    "contributors": [
+      "teoli",
+      "Verruckt",
+      "gandalf",
+      "Takenbot",
+      "Ptak82",
+      "Anonymous",
+      "Witia"
+    ]
+  },
   "Web/CSS/Mozilla_Extensions": {
     "modified": "2019-03-24T00:14:13.075Z",
     "contributors": [
@@ -8729,18 +8741,6 @@
     "modified": "2020-03-21T20:07:05.090Z",
     "contributors": [
       "abes21111984"
-    ]
-  },
-  "Web/Progressive_web_apps/Responsive/Media_types": {
-    "modified": "2019-03-23T23:43:37.766Z",
-    "contributors": [
-      "teoli",
-      "Verruckt",
-      "gandalf",
-      "Takenbot",
-      "Ptak82",
-      "Anonymous",
-      "Witia"
     ]
   },
   "Web/SVG": {

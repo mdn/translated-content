@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/unescape
 </div>
 </div>
 
-<h2 id="Summary" name="Summary">Описание</h2>
+<h2 id="Summary">Описание</h2>
 
 <p>Устаревший метод <code><strong>unescape(str)</strong></code> создаёт новую строку в которой шестнадцатеричная последовательность символов вида %xx заменяется эквивалентами из кодировки ASCII. Знаки, закодированные в формате %uxxxx (знаки Юникода), заменяются знаками Юникода в шестнадцатеричной кодировке xxxx.</p>
 
@@ -17,18 +17,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/unescape
 
 <div class="note"><strong>Обратите внимание:</strong> Не рекомендуется использовать <code>unescape</code> чтобы декодировать URI, используйте <code>decodeURI</code> вместо него.</div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>unescape(str)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Parameters</h3>
+<h3 id="Parameters">Parameters</h3>
 
 <dl>
  <dt><code>str</code></dt>
  <dd>Строка которую необходимо преобразовать</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p><code>Функция unescape</code> это свойство <em>глобального объекта</em>.</p>
 
@@ -41,36 +41,13 @@ unescape("%u0107");     // "ć"
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
-   <td>Начальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-B.2.2', 'unescape')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Определено в (информативно) Compatibility Annex B</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-unescape-string', 'unescape')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Определено в (нормативно) Annex B for Additional ECMAScript Features for Web Browsers</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_Also" name="See_Also">Смотрите также</h2>
+<h2 id="See_Also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Global_Objects/decodeURI", "decodeURI")}}</li>

@@ -9,11 +9,9 @@ translation_of: Web/HTML/Element/input/search
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">Les éléments {{HTMLElement("input")}} dont l'attribut <code>type</code> vaut <code><strong>search</strong></code> permettent à un utilisateur de saisir des termes de recherche. </span></p>
+<p>Les éléments {{HTMLElement("input")}} dont l'attribut <code>type</code> vaut <code><strong>search</strong></code> permettent à un utilisateur de saisir des termes de recherche.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}</div>
-
-<div class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</div>
 
 <h2 id="Valeur">Valeur</h2>
 
@@ -175,11 +173,11 @@ translation_of: Web/HTML/Element/input/search
 
 <p>La différence principale est la façon dont les navigateurs gèrent cet élément. Premièrement, certains navigateurs affiche une icône de croix dans la zone de saisie qui peut être utilisée pour retirer le terme de la recherche. Voici par exemple un aperçu de la fonctionnalité sous Chrome:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15235/chrome-cross-icon.png" style="display: block; height: 31px; margin: 0px auto; width: 144px;"></p>
+<p><img alt="" src="chrome-cross-icon.png"></p>
 
 <p>De plus, les navigateurs modernes proposent souvent une auto-complétion basée sur les termes de recherche déjà utilisés sur le site. Ainsi, quand on réutilise le champ, différentes suggestions peuvent être affichées et utilisées. Voici l'aperçu de cette fonctionnalité sous Firefox :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15237/firefox-auto-complete.png" style="display: block; height: 83px; margin: 0px auto; width: 171px;"></p>
+<p><img alt="" src="firefox-auto-complete.png"></p>
 
 <h3 id="Ajouter_un_texte_indicatif">Ajouter un texte indicatif</h3>
 
@@ -226,7 +224,7 @@ translation_of: Web/HTML/Element/input/search
 <p>Il n'y a aucune différence visuelle avec l'exemple précédent mais avec cette deuxième version, les personnes qui utilisent un lecteur d'écran disposeront de plus d'informations.</p>
 
 <div class="note">
-<p><strong>Note</strong> : Voir <a href="/fr/docs/Learn/Accessibility/WAI-ARIA_basics#SignpostsLandmarks">Signposts/Landmarks</a> pour plus d'informations à propos de ces fonctionnalités relatives à l'accessibilité.</p>
+<p><strong>Note :</strong> Voir <a href="/fr/docs/Learn/Accessibility/WAI-ARIA_basics#SignpostsLandmarks">Signposts/Landmarks</a> pour plus d'informations à propos de ces fonctionnalités relatives à l'accessibilité.</p>
 </div>
 
 <h3 id="Paramétrer_la_taille_physique">Paramétrer la taille physique</h3>
@@ -248,7 +246,7 @@ translation_of: Web/HTML/Element/input/search
 <p>Les éléments <code>&lt;input&gt;</code> de type <code>search</code> possèdent les mêmes fonctionnalités de validation que les éléments <code>&lt;input type="text"&gt;</code>. Il existe peu de raison de contraindre les termes d'une recherche mais voici quelques cas.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Attention, la validation des données d'un formulaire de recherche HTML par le client ne doit pas remplacer la vérification de ces données lorsqu'elles sont reçues sur le serveur. En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML de la page pour outrepasser les mécanismes de validation. Il est également possible d'envoyer des données directement au serveur. Si le serveur ne valide pas les données reçues, des données potentiellement mal formatées pourraient causer des dommages aux bases de données et autres composants sensibles.</p>
+<p><strong>Note :</strong> Attention, la validation des données d'un formulaire de recherche HTML par le client ne doit pas remplacer la vérification de ces données lorsqu'elles sont reçues sur le serveur. En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML de la page pour outrepasser les mécanismes de validation. Il est également possible d'envoyer des données directement au serveur. Si le serveur ne valide pas les données reçues, des données potentiellement mal formatées pourraient causer des dommages aux bases de données et autres composants sensibles.</p>
 </div>
 
 <h3 id="Une_note_sur_la_mise_en_forme">Une note sur la mise en forme</h3>
@@ -282,8 +280,7 @@ input:valid ~ span:after {
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">input {
+<pre class="brush: css hidden">input {
   margin-right: 10px;
 }
 
@@ -298,7 +295,6 @@ input:valid ~ span:after {
   padding-left: 5px;
   position: absolute;
 }</pre>
-</div>
 
 <p>Voici le résultat obtenu :</p>
 
@@ -306,7 +302,7 @@ input:valid ~ span:after {
 
 <p>De plus, si on essaie d'envoyer le formulaire sans aucun terme de recherche, le navigateur affichera un message. Voici par exemple, le résultat dans Firefox :</p>
 
-<p><img alt="form field with attached message that says Please fill out this field" src="https://mdn.mozillademos.org/files/15241/firefox-required-message.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="Champ de formulaire avec un message attaché indiquant 'veuillez remplir ce formulaire'" src="firefox-required-message.png"></p>
 
 <p>Différents messages peuvent être affichés selon le type d'erreur liée à la saisie.</p>
 
@@ -327,8 +323,7 @@ input:valid ~ span:after {
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">input {
+<pre class="brush: css hidden">input {
   margin-right: 10px;
 }
 
@@ -343,7 +338,6 @@ input:valid ~ span:after {
   padding-left: 5px;
   position: absolute;
 }</pre>
-</div>
 
 <p>Voici le résultat obtenu avec ce fragment de code HTML :</p>
 
@@ -368,8 +362,7 @@ input:valid ~ span:after {
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">input {
+<pre class="brush: css hidden">input {
   margin-right: 10px;
 }
 
@@ -384,7 +377,6 @@ input:valid ~ span:after {
   padding-left: 5px;
   position: absolute;
 }</pre>
-</div>
 
 <p>Voici le résultat obtenu avec ce fragment HTML :</p>
 

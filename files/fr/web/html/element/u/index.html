@@ -13,12 +13,10 @@ translation_of: Web/HTML/Element/u
 <p>L'élément HTML <strong><code>&lt;u&gt;</code></strong> permet d'afficher un fragment de texte qui est annoté avec des éléments non textuels. Par défaut, le contenu de l'élément est souligné. Cela pourra par exemple être le cas pour marquer un texte comme étant un nom propre chinois, ou pour marquer un texte qui a été mal orthographié.</p>
 
 <div class="warning">
-<p><strong>Attention !</strong> Cet élément était auparavant appelé <em>underline</em> pour les anciennes versions des spécifications HTML. Si on souhaite simplement souligner du texte, il ne faudra pas utiliser cet élément mais la propriété CSS {{cssxref("text-decoration")}} avec la valeur <code>"underline"</code>.</p>
+<p><strong>Attention :</strong> Cet élément était auparavant appelé <em>underline</em> pour les anciennes versions des spécifications HTML. Si on souhaite simplement souligner du texte, il ne faudra pas utiliser cet élément mais la propriété CSS {{cssxref("text-decoration")}} avec la valeur <code>"underline"</code>.</p>
 </div>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}</div>
-
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
 
 <h2 id="Attributs">Attributs</h2>
 
@@ -106,7 +104,6 @@ Soupe de potiron avec un soupçon de noix de muscade</pre>
 
 <h4 id="Indiquer_le_titre_pour_un_livre">Indiquer le titre pour un livre</h4>
 
-<div id="example-unstyled-cite">
 <p>Les titres de livres doivent être indiqués avec un élément {{HTMLElement("cite")}} et non avec <code>&lt;u&gt;</code> ou <code>&lt;i&gt;</code>.</p>
 
 <h5 id="HTML_3">HTML</h5>
@@ -116,19 +113,7 @@ Soupe de potiron avec un soupçon de noix de muscade</pre>
   au cours du premier trimestre.
 &lt;/p&gt;</pre>
 
-<h5 id="Résultat_avec_la_mise_en_forme_par_défaut">Résultat avec la mise en forme par défaut</h5>
-
-<p>{{EmbedLiveSample("example-unstyled-cite", 650, 80)}}</p>
-</div>
-
-<p>On notera que, par défaut, un élément <code>&lt;cite&gt;</code> est affiché en italique. Ceci peut être modifié grâce à CSS :</p>
-
-<pre class="brush: css">cite {
-  font-style: normal;
-  text-decoration: underline;
-}</pre>
-
-<h5 id="Résultat_3">Résultat</h5>
+<h5 id="Résultat">Résultat</h5>
 
 <p>{{EmbedLiveSample("Indiquer_le_titre_pour_un_livre", 650, 80)}}</p>
 

@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Создаёт экземпляр объекта <strong><code>Date</code></strong>, представляющего собой момент времени. Объект Дата содержит число миллисекунд прошедших с 1 января 1970 г. UTC</p>
 
@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date
 <p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox notranslate"><code>new Date();
 new Date(<var>value</var>);
@@ -34,7 +34,7 @@ new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, 
 <p><strong>Обратите внимание:</strong> объекты <code>Date</code> могут быть созданы только путём вызова функции <code>Date</code> в качестве конструктора: обычный вызов функции (то есть, без использования оператора {{jsxref("Operators/new", "new")}}) вернёт строку вместо объекта <code>Date</code>; в отличие от других объектных типов JavaScript, объекты <code>Date</code> не имеют литерального синтаксиса.</p>
 </div>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <div class="note">
 <p><strong>Обратите внимание:</strong> если функция <code>Date</code> вызывается в качестве конструктора с более, чем одним аргументом, значения, большие логического диапазона (например, 13 в качестве номера месяца или 70 для значения минут) «переметнутся» на соседние значения. Например, вызов <code>new Date(2013, 13, 1)</code> эквивалентен вызову <code>new Date(2014, 1, 1)</code>, оба создадут дату <code>2014-02-01</code> (нумерация месяцев начинается с нуля). Тоже самое действует и для других значений: вызов <code>new Date(2013, 2, 1, 0, 70)</code> эквивалентен вызову <code>new Date(2013, 2, 1, 1, 10)</code> — оба вызова создадут дату <code>2013-03-01T01:10:00</code>.</p>
@@ -65,7 +65,7 @@ new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, 
  <dd>Необязательный параметр. Целое значение, представляющее миллисекунды времени.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <ul>
  <li>Если никаких аргументов передано не было, конструктор создаёт объект <code>Date</code>  для текущих даты и времени, согласно системным настройкам.</li>
@@ -76,7 +76,7 @@ new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, 
  <li>Вызов объекта <code>Date</code> в качестве функции (то есть, без использования оператора {{jsxref("Operators/new", "new")}}) вернёт строку, представляющую текущие дату и время.</li>
 </ul>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <dl>
  <dt>{{jsxref("Date.prototype")}}</dt>
@@ -87,7 +87,7 @@ new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, 
 
 <div>{{jsOverrides("Function", "properties", "prototype")}}</div>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
 <dl>
  <dt>{{jsxref("Date.now()")}}</dt>
@@ -100,7 +100,7 @@ new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, 
 
 <div>{{jsOverrides("Function", "Methods", "now", "parse", "UTC")}}</div>
 
-<h2 id="Date_instances" name="Date_instances">Экземпляры объекта <code>Date</code></h2>
+<h2 id="Date_instances">Экземпляры объекта <code>Date</code></h2>
 
 <p>Все экземпляры объекта <code>Date</code> наследуются от {{jsxref("Date.prototype")}}. Объект прототипа конструктора <code>Date</code> может быть изменён, чтобы затронуть все экземпляры объекта <code>Date</code>.</p>
 
@@ -108,9 +108,9 @@ new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, 
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype', 'Methods')}}</div>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Several_ways_to_assign_dates" name="Example:_Several_ways_to_assign_dates">Пример: несколько способов создания объекта <code>Date</code></h3>
+<h3 id="Example_Several_ways_to_assign_dates">Пример: несколько способов создания объекта <code>Date</code></h3>
 
 <p>Следующие примеры показывают несколько способов создания дат в JavaScript:</p>
 
@@ -125,7 +125,7 @@ var birthday = new Date(1995, 11, 17);
 var birthday = new Date(1995, 11, 17, 3, 24, 0);
 </pre>
 
-<h3 id="Example_Two_digit_years_map_to_1900_-_1999" name="Example:_Two_digit_years_map_to_1900_-_1999">Пример: двухциферный год отображается на 1900 - 1999 года</h3>
+<h3 id="Example_Two_digit_years_map_to_1900_-_1999">Пример: двухциферный год отображается на 1900 - 1999 года</h3>
 
 <p>Для того, чтобы создать и получить даты между 0 и 99 годом, нужно использовать методы {{jsxref("Date.prototype.setFullYear()")}} и {{jsxref("Date.prototype.getFullYear()")}}.</p>
 
@@ -137,7 +137,7 @@ date.setYear(98);           // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 date.setFullYear(98);       // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
 </pre>
 
-<h3 id="Example_Calculating_elapsed_time" name="Example:_Calculating_elapsed_time">Пример: вычисление затраченного времени</h3>
+<h3 id="Example_Calculating_elapsed_time">Пример: вычисление затраченного времени</h3>
 
 <p>Следующие примеры показывают, как определить разницу во времени между двумя датами в JavaScript:</p>
 
@@ -183,7 +183,7 @@ yourFunctionReturn = printElapsedTime(yourFunction);
 
 <p>В этом случае важно возвращать только целое число (так что простое деление не подойдёт), а также возвращать только фактически прошедшие секунды (поэтому этот код использует {{jsxref ("Math.floor ()")}} а не {{jsxref ("Math.round ()")}}).</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
 <table class="standard-table">
  <tbody>
@@ -223,6 +223,6 @@ yourFunctionReturn = printElapsedTime(yourFunction);
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat("javascript.builtins.Date", 3)}}</p>

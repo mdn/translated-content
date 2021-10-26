@@ -1,5 +1,5 @@
 ---
-title: 其他需要注意的宏
+title: 其他宏
 slug: MDN/Structures/Macros/Other
 tags:
   - Macros
@@ -7,86 +7,85 @@ tags:
 ---
 <div>{{MDNSidebar}}</div>
 
-<p>In contrast to the macros listed in <a href="/en-US/docs/MDN/Structures/Macros/Commonly-used_macros">Commonly-used macros</a>, the macros documented in this article are used infrequently or only in specific contexts, or are deprecated.</p>
+<p>与 <a href="/zh-CN/docs/MDN/Structures/Macros/Commonly-used_macros">常用的宏</a> 中列出的宏相比，本文中记录的宏很少使用或仅在特定上下文中使用，或者已弃用。</p>
 
-<h2 id="Special_contexts">Special contexts</h2>
+<h2 id="Special_contexts">特殊情况</h2>
 
-<p>These macros are used only with particular contexts, such as a specific API reference.</p>
-
-<ul>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Interwiki.ejs">Interwiki</a></code> makes it easy to create interwiki links. Currently it supports linking to Wikipedia and Wikimo. The first parameter is the name of the wiki ("wikipedia" or "wikimo"), and the second is the path of the article. For example, <code>\{\{interwiki("wikipedia", "Firefox")\}\}</code> shows up as {{ interwiki("wikipedia", "Firefox") }}. This template auto-detects the page language and directs to the same language on Wikipedia, for example.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/RFC.ejs">RFC</a></code> creates a link to the specified RFC, given its number. The syntax is: <code>\{\{RFC(number)\}\}</code>. For example, <code>\{\{RFC(2616)\}\}</code> becomes {{ RFC(2616) }}.</li>
- <li>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/anch.ejs">anch</a></code> macro inserts a link to an anchor. <code>\{\{Anch("top")\}\}</code> produces <code>&lt;a href="#top"&gt;top&lt;/a&gt;</code> ({{ Anch("top") }}). You can also add a second parameter which contains replacement text to display as the link text.</li>
-</ul>
-
-<h3 id="Landing_page_components">Landing page components</h3>
-
-<p>We have an assortment of macros that can be used to automatically generate the contents of landing pages. Here they are.</p>
-
-<h4 id="Lists_of_subpages">Lists of subpages</h4>
+<p>这些宏仅用于特定的上下文，例如特定的 API 参考。</p>
 
 <ul>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/ListSubpages.ejs">ListSubpages</a></code> generates an unordered list of links to all the immediate children of the current page; useful for automatically generating tables of contents for sets of documentation.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LandingPageListSubpages.ejs">LandingPageListSubpages</a></code> outputs a two-column definition list of all immediate subpages of the current page, with their titles as the {{HTMLElement("dt")}} and their SEO summary as the {{HTMLElement("dd")}}. This makes it easy to automatically generate reasonably attractive landing pages.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/NavListWithPrioritizedPages.ejs">NavListWithPrioritizedPages</a></code> generates an ordered list formatted properly for use in a zone navigation sidebar (or quicklinks). As input, you can specify zero or more page slugs that should be pulled out of the main list and instead inserted at the top of the list, in the given order. All remaining pages are placed in the list alphabetically. One level of subpages is included.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/APIListAlpha.ejs">APIListAlpha</a></code> builds a list of the current page's subpages, formatted as a list of API terms, divided up by first letter. There are three parameters. The first is 0 if you want to include all top-level subpages or 1 to leave out subpages with "." in their names. The second and third let you add text to display as part of the name in each link. This can be used to add "&lt;" and "&gt;" for element links, or to add "()" at the end of lists of method names.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SubpagesWithSummaries.ejs">SubpagesWithSummaries</a></code> constructs a definition list of all the immediate children of the current page. There is no other formatting done. You can get a two-column list ready for use as a multi-column landing page using <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LandingPageListSubpages.ejs">LandingPageListSubpages</a></code>.</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Interwiki.ejs">Interwiki</a></code> 使创建跨wiki链接变得容易。目前它支持链接到 Wikipedia 和 Wikimo。第一个参数是维基的名称（“wikipedia”或“wikimo”），第二个参数是文章的路径。例如，<code>\{{interwiki("wikipedia", "Firefox")}}</code> 显示为 {{ interwiki("wikipedia", "Firefox") }}。例如，此模板会自动检测页面语言并指向维基百科上的相同语言。</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/RFC.ejs">RFC</a></code> 给定编号，创建指向指定 RFC 的链接。语法为：<code>\{{RFC(number)}}</code>。例如，<code>\{{RFC(2616)}}</code> 变为 {{ RFC(2616) }}。</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/anch.ejs">anch</a></code> 宏插入指向锚点的链接。 <code>\{{Anch("top")}}</code> 产生 <code>&lt;a href=&quot;#top&quot;&gt;top&lt;/a&gt;</code> ({{ Anch("top") }})。您还可以添加包含替换文本的第二个参数以显示为链接文本。</li>
 </ul>
 
-<h3 id="Quicklinks">Quicklinks</h3>
+<h3 id="Landing_page_components">着陆页组件</h3>
 
-<p>We have some macros specifically designed to create <a href="/en-US/docs/MDN/Structures/Quicklinks">quicklinks</a>:</p>
+<p>我们有各种各样的宏，可用于自动生成着陆页面的内容。请参考：</p>
+
+<h4 id="Lists_of_subpages">子页面列表</h4>
 
 <ul>
- <li>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/MakeSimpleQuicklinks.ejs">MakeSimpleQuicklinks</a></code> macro creates a flat list of links in the quicklinks box. Give it a set of paths to destination pages as its input arguments. Each link's text is the page title, and each link has a tooltip derived from the page summary.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/QuickLinksWithSubpages.ejs">QuickLinksWithSubpages</a></code> creates a set of quicklinks comprised of the pages below the current page (or specified page, if one is given). Up to two total levels of depth are generated.</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/ListSubpages.ejs">ListSubpages</a></code> 生成指向当前页面所有直接子级的无序列表；用于自动生成文档集的目录。</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LandingPageListSubpages.ejs">LandingPageListSubpages</a></code> 输出当前页面所有直接子页面的两列定义列表，其标题为 {{HTMLElement("dt")}}，其 SEO 摘要为 {{HTMLElement("dd")}}。这使得自动生成相当有吸引力的着陆页变得容易。</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/NavListWithPrioritizedPages.ejs">NavListWithPrioritizedPages</a></code> 生成格式正确的有序列表，以便在区域导航侧边栏（或快速链接）中使用。作为输入，您可以指定零个或多个应从主列表中拉出并按给定顺序插入到列表顶部的页面 slug。所有剩余的页面按字母顺序放置在列表中。包括一级子页面。</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/APIListAlpha.ejs">APIListAlpha</a></code> 构建当前页面的子页面列表，格式为 API 术语列表，按首字母划分。有三个参数。如果要包含所有顶级子页面，第一个是 0，如果要包含带有“.”的子页面，则第一个是 1。以他们的名字。第二个和第三个让您添加文本以在每个链接中显示为名称的一部分。这可用于为元素链接添加“&lt;”和“&gt;”，或在方法名称列表的末尾添加“()”。</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SubpagesWithSummaries.ejs">SubpagesWithSummaries</a></code> 构造当前页面的所有直接子级的定义列表。没有完成其他格式化。您可以使用 <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LandingPageListSubpages.ejs">LandingPageListSubpages</a></code> 获得一个两栏式列表，准备用作多栏式着陆页。</li>
 </ul>
 
-<h3 id="Transclusion">Transclusion</h3>
+<h3 id="Quicklinks">快速链接</h3>
 
-<p><strong>Transclusion</strong> is the embedding of part or all of one page into another. Exercise caution when using this macro, to ensure that the transcluded content makes sense in the context of the page it is embedded into.</p>
+<p>我们有一些宏，专门用于创建 <a href="/zh-CN/docs/MDN/Structures/Quicklinks">快速链接</a>:</p>
 
-<p><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/page.ejs">page</a></code> lets you embed some or all of a specific page into a document. It accepts five parameters:</p>
+<ul>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/MakeSimpleQuicklinks.ejs">MakeSimpleQuicklinks</a></code> 宏在快速链接框中创建一个扁平的链接列表。为其提供一组指向目标页面的路径作为其输入参数。每个链接的文本都是页面标题，每个链接都有一个源自页面摘要的工具提示。</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/QuickLinksWithSubpages.ejs">QuickLinksWithSubpages</a></code> 创建一组由当前页面（或指定页面，如果有的话）下方的页面组成的快速链接。生成最多两个总深度级别。</li>
+</ul>
+
+<h3 id="Transclusion">嵌入</h3>
+
+<p><strong>嵌入</strong>是将一个页面的部分或全部嵌入到另一个页面中。使用此宏时要小心，以确保嵌入的内容在其嵌入的页面上下文中有意义。</p>
+
+<p><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/page.ejs">page</a></code> 允许您将特定页面的部分或全部嵌入到文档中。它接受五个参数：</p>
 
 <ol>
- <li>The URI of the page to transclude. For example, "/en-US/docs/MDN/About".</li>
- <li>The name of the section within the page to transclude. This can be specified either as the title string or as the ID of a block to copy over. If not specified, the entire article is transcluded. {{optional_inline}}</li>
- <li>The revision number of the page version to transclude. This feature is not currently implemented, but would allow including text from specific versions of an article. {{unimplemented_inline}}</li>
- <li>A Boolean value indicating whether or not to show the heading of the top-level section being transcluded. This is useful if you wish to specify your own heading. The default value is false, meaning the heading is not included by default. {{optional_inline}}</li>
- <li>The heading level to use as the top heading level. This adjusts the outermost first-discovered level of the transcluded content to the specified number, and all other headings correspondingly. This lets you include content that has its own headings but adjust them to match the heading level at which you're including them. If you don't specify this value, the headings are not adjusted. {{unimplemented_inline}}</li>
+  <li>要嵌入的页面的 URI。例如 "/en-US/docs/MDN/About"。</li>
+  <li>页面中要嵌入的部分的名称。这可以指定为标题字符串或要复制的块的 ID。如果未指定，则整篇文章被嵌入。 {{optional_inline}}</li>
+  <li>要嵌入的页面版本的修订号。此功能目前尚未实现，但允许包含来自文章特定版本的文本。 {{unimplemented_inline}}</li>
+  <li>一个布尔值，指示是否显示被嵌入的顶级部分的标题。如果您希望指定自己的标题，这很有用。默认值为 false，表示默认情况下不包含标题。 {{optional_inline}}</li>
+  <li>用作顶部标题级别的标题级别。这会将嵌入内容的最外层首次发现级别调整为指定数量，并相应地调整所有其他标题。这使您可以包含具有自己标题的内容，但可以调整它们以匹配您包含它们的标题级别。如果不指定此值，则不会调整标题。 {{unimplemented_inline}}</li>
 </ol>
 
-<h4 id="Example_without_heading">Example without heading</h4>
+<h4 id="Example_without_heading">没有标题的例子</h4>
 
 <p>\{{Page("/en-US/docs/MDN/About", "How you can help")}}</p>
 
-<p>Result:</p>
+<p>输出以下内容：</p>
 
-<p>{{Page("/en-US/docs/MDN/About", "How you can help")}}</p>
+{{Page("/en-US/docs/MDN/About", "How you can help")}}
 
-<h4 id="Example_with_heading">Example with heading</h4>
+<h4 id="Example_with_heading">带标题的例子</h4>
 
 <p>\{{Page("/en-US/docs/MDN/About", "How you can help", 0, 1)}}</p>
 
-<p>Result:</p>
+<p>输出以下内容：</p>
 
-<p>{{Page("/en-US/docs/MDN/About", "How you can help", 0, 1)}}</p>
+{{Page("/en-US/docs/MDN/About", "How you can help", 0, 1)}}
 
-<h2 id="Deprecated">Deprecated</h2>
+<h2 id="Deprecated">不赞成的</h2>
 
-<p>These macros have been replace by other ways of doing the same thing, and should no longer be used. If you find them in existing articles, please replace them.</p>
+<p>这些宏已被其他做同样事情的方式所取代，不应再使用。如果您在现有文章中找到它们，请替换它们。</p>
 
-<h3 id="Linking">Linking</h3>
+<h3 id="Linking">链接</h3>
 
 <ul>
-
- <li>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SectionOnPage.ejs">SectionOnPage</a></code> macro creates a phrase that links to both the name of a section and the article containing that section. For example, <code>\{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}</code> outputs the following: <em>{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}</em>.</li>
- <li>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/manch.ejs">manch</a></code> inserts a link to a method within the current interface; this is intended only for use in interface documentation pages. <code>\{\{manch("foo")\}\}</code> produces <code>&lt;code&gt;&lt;a href="current/path#foo"&gt;foo()&lt;/a&gt;&lt;/code&gt;</code> ({{ manch("foo") }}).</li>
- <li>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Link.ejs">Link</a></code> macro inserts a link to the specified page on MDN, using the page's title as the visible string to click on, and the tooltip picked up from the page's SEO summary.</li>
- <li>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LinkItem.ejs">LinkItem</a></code> macro inserts a link to a specified URL, with the indicated text as the visible string to click on. The link automatically picks up as its tooltip the summary of the target page. This differs from <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Link.ejs">Link</a></code> in that you must specify the title.</li>
- <li>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LinkItemDL.ejs">LinkItemDL</a></code> macro inserts a link to a specified URL, with the indicated text as a {{HTMLElement("dt")}} which is also the link. The {{HTMLElement("dd")}} element contains the specified page's summary.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/funcref.ejs">funcref</a></code> creates links to global functions (usually C++) documented on top-level pages. However, such pages are no longer created at the top-level of MDN.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/source.ejs">source</a></code> allows you to link to a Mozilla source code file without having to type a long MXR URL using this syntax: <code>\{\{Source("browser/Makefile.in")\}\}</code>. This gives you: {{ Source("browser/Makefile.in") }}. The text of the link is the path provided; if you want different text, then just provide a second parameter, like so: <code>\{\{Source("browser/Makefile.in", "the browser/ Makefile.in")\}\}</code>, which produces {{ Source("browser/Makefile.in", "the browser/ Makefile.in") }}. Note that the link will be to the very latest version of the file in bleeding-edge code.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Source_cvs.ejs">Source_cvs</a></code> works just like <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/source.ejs">source</a></code>, except it links to the <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/CVS">CVS</a> repository instead of the newer <a href="/en-US/docs/Mozilla/Developer_guide/mozilla-central">mozilla-central</a> one.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LXRSearch.ejs">LXRSearch</a></code> can be used to create an LXR search URL.</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SectionOnPage.ejs">SectionOnPage</a></code> 宏创建一个链接到一个部分的名称和包含该部分的文章的短语。例如，<code>\{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}</code> 输出以下内容：<em>{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}</em>。</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/manch.ejs">manch</a></code> 在当前接口中插入一个方法的链接；这仅用于接口文档页面。 <code>\{{manch("foo")}}</code> 产生 <code>&lt;code&gt;&lt;a href=&quot;current/path#foo&quot;&gt;foo()&lt;/a&gt;&lt;/code&gt;</code> ({{ manch("foo") }})。</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Link.ejs">Link</a></code> 宏在 MDN 上插入到指定页面的链接，使用页面标题作为要单击的可见字符串，并从页面的 SEO 摘要中提取工具提示。</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LinkItem.ejs">LinkItem</a></code> 宏插入到指定 URL 的链接，将指示的文本作为要单击的可见字符串。该链接会自动选取目标页面的摘要作为其工具提示。这与 <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Link.ejs">Link</a></code> 的不同之处在于您必须指定标题。</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LinkItemDL.ejs">LinkItemDL</a></code> 宏插入指向指定 URL 的链接，指示文本为 {{HTMLElement("dt")}}，这也是链接。 {{HTMLElement("dd")}} 元素包含指定页面的摘要。</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/funcref.ejs">funcref</a></code> 创建指向顶级页面上记录的全局函数（通常是 C++）的链接。但是，此类页面不再在 MDN 的顶层创建。</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/source.ejs">source</a></code> 允许您使用以下语法链接到 Mozilla 源代码文件，而无需键入长 MXR URL：<code>\{{Source("browser/Makefile.in")}}</code>。输出以下内容：{{ Source("browser/Makefile.in") }}。链接的文本是提供的路径；如果你想要不同的文本，那么只需提供第二个参数，就像这样：<code>\{{Source("browser/Makefile.in", "the browser/ Makefile.in")}}</code>，它产生 {{Source("browser/Makefile.in", "the browser/ Makefile.in")}}。请注意，该链接将指向最新版本的最新代码文件。</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Source_cvs.ejs">Source_cvs</a></code> 就像 <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/source.ejs">source</a></code> 一样工作，除了它链接到 <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/CVS">CVS</a> 存储库而不是较新的一个 <a href="/en-US/docs/Mozilla/Developer_guide/mozilla-central">mozilla-central</a>。</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LXRSearch.ejs">LXRSearch</a></code> 可用于创建 LXR Search URL。</li>
 </ul>

@@ -7222,12 +7222,6 @@
       "tavira"
     ]
   },
-  "Web/API/EffectTiming": {
-    "modified": "2020-10-15T22:29:01.473Z",
-    "contributors": [
-      "Kami-san"
-    ]
-  },
   "Web/API/Element": {
     "modified": "2020-10-15T21:21:45.874Z",
     "contributors": [
@@ -9234,6 +9228,12 @@
       "Tvortsa"
     ]
   },
+  "Web/API/KeyframeEffect/KeyframeEffect": {
+    "modified": "2020-10-15T22:29:01.473Z",
+    "contributors": [
+      "Kami-san"
+    ]
+  },
   "Web/API/Location": {
     "modified": "2019-08-09T02:31:05.855Z",
     "contributors": [
@@ -9933,13 +9933,6 @@
     "modified": "2020-10-15T22:33:38.177Z",
     "contributors": [
       "hisbvdis"
-    ]
-  },
-  "Web/API/PositionOptions": {
-    "modified": "2019-03-23T22:21:01.208Z",
-    "contributors": [
-      "Casus",
-      "devkudasov"
     ]
   },
   "Web/API/Presentation": {
@@ -12894,12 +12887,6 @@
     "modified": "2020-03-07T13:30:09.947Z",
     "contributors": [
       "Radragon"
-    ]
-  },
-  "Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow": {
-    "modified": "2020-11-03T12:58:17.297Z",
-    "contributors": [
-      "at940266"
     ]
   },
   "Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts": {
@@ -24188,6 +24175,13 @@
     "modified": "2019-03-23T22:43:32.725Z",
     "contributors": [
       "AlexAlex"
+    ]
+  },
+  "conflicting/Web/API/Geolocation/getCurrentPosition": {
+    "modified": "2019-03-23T22:21:01.208Z",
+    "contributors": [
+      "Casus",
+      "devkudasov"
     ]
   },
   "conflicting/Web/API/HTMLMediaElement/abort_event": {

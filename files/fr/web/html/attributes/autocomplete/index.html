@@ -22,7 +22,7 @@ original_slug: Web/HTML/Attributs/autocomplete
 ---
 <div>{{HTMLSidebar}}</div>
 
-<p class="summary">L'attribut <code>autocomplete</code> est disponible sur les éléments <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> qui prennent une valeur textuelle ou numérique en entrée, mais aussi pour les éléments <a href="/fr/docs/Web/HTML/Element/Textarea"><code>&lt;textarea&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a>. <code>autocomplete</code> permet aux développeuses et développeurs web de spécifier quelle est l'autorisation éventuelle, pour l'<a href="/fr/docs/Glossary/User_agent">agent utilisateur</a>, de fournir une assistance automatisée afin de remplir les valeurs des champs de formulaire, ainsi que des indications au navigateur quant au type d'informations attendues dans le champ.</p>
+<p>L'attribut <code>autocomplete</code> est disponible sur les éléments <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> qui prennent une valeur textuelle ou numérique en entrée, mais aussi pour les éléments <a href="/fr/docs/Web/HTML/Element/Textarea"><code>&lt;textarea&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a>. <code>autocomplete</code> permet aux développeuses et développeurs web de spécifier quelle est l'autorisation éventuelle, pour l'<a href="/fr/docs/Glossary/User_agent">agent utilisateur</a>, de fournir une assistance automatisée afin de remplir les valeurs des champs de formulaire, ainsi que des indications au navigateur quant au type d'informations attendues dans le champ.</p>
 
 <p>La source fournissant les valeurs suggérées pour l'autocomplétion dépend du navigateur. Généralement, celle-ci est constituée des valeurs saisies précédemment par l'utilisateur. Des valeurs préconfigurées peuvent aussi être utilisées. Ainsi, un navigateur pourra permettre à un utilisateur d'enregistrer son nom, son adresse, son numéro de téléphone et des adresses électroniques pour l'aider lors de l'autocomplétion. Le navigateur pourrait également fournir le stockage chiffré des informations de cartes bancaires et déclencher une procédure d'authentification lorsque ces informations doivent être récupérées pour être utilisées.</p>
 
@@ -30,9 +30,8 @@ original_slug: Web/HTML/Attributs/autocomplete
 
 <p>Pour plus d'informations, voir la documentation de l'attribut <a href="/fr/docs/Web/HTML/Element/Form#attr-autocomplete"><code>autocomplete</code></a> pour l'élément <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a>.</p>
 
-<div class="notecard note">
-  <p><b>Note: </b></p>
-  <p>Afin de fournir des fonctionnalités d'autocomplétion, un agent utilisateur pourra utiliser les prérequis suivants quant aux éléments <code>&lt;input&gt;</code>/<code>&lt;select&gt;</code>/<code>&lt;textarea&gt;</code>:</p>
+<div class="note">
+  <p><strong>Note :</strong> Afin de fournir des fonctionnalités d'autocomplétion, un agent utilisateur pourra utiliser les prérequis suivants quant aux éléments <code>&lt;input&gt;</code>/<code>&lt;select&gt;</code>/<code>&lt;textarea&gt;</code>:</p>
 
   <ol>
     <li>Que ceux-ci aient un attribut <code>name</code> et/ou <code>id</code></li>
@@ -46,9 +45,8 @@ original_slug: Web/HTML/Attributs/autocomplete
 <dl>
   <dt><code>off</code></dt>
   <dd>Le navigateur n'est pas autorisé à saisir automatiquement des valeurs pour ce champ. Cette valeur peut être utilisée lorsque le document ou l'application fournit son propre mécanisme d'autocomplétion ou lorsque des raisons de sécurité imposent de ne pas pouvoir saisir la valeur automatiquement.
-    <div class="notecard note">
-      <p><b>Note :</b></p>
-      <p>Pour la plupart des navigateurs modernes, utiliser <code>autocomplete="off"</code> n'empêchera pas un gestionnaire de mots de passe de demander à l'utilisateur s'il souhaite sauvegarder le nom d'utilisateur et le mot de passe ou de renseigner automatiquement les informations pour un formulaire de connexion. Voir <a href="/fr/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields">l'article sur l'attribut <code>autocomplete</code> et les champs des formulaires de connexion</a>.</p>
+    <div class="note">
+      <p><strong>Note :</strong> Pour la plupart des navigateurs modernes, utiliser <code>autocomplete="off"</code> n'empêchera pas un gestionnaire de mots de passe de demander à l'utilisateur s'il souhaite sauvegarder le nom d'utilisateur et le mot de passe ou de renseigner automatiquement les informations pour un formulaire de connexion. Voir <a href="/fr/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields">l'article sur l'attribut <code>autocomplete</code> et les champs des formulaires de connexion</a>.</p>
     </div>
   </dd>
   <dt><code>on</code></dt>
@@ -163,9 +161,8 @@ original_slug: Web/HTML/Attributs/autocomplete
 
 <p>Voir <a href="https://html.spec.whatwg.org/multipage/forms.html#autofill">la spécification WHATWG</a> pour plus de détails.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>À la différence des autres navigateurs, pour Firefox, l'attribut <code>autocomplete</code> contrôlera également si <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">l'état de désactivation ou de coche dynamique persiste lors d'un rechargement de la page</a> pour un champ <code>&lt;input&gt;</code>. Par défaut, un élément reste désactivé ou coché/décoché lors des rechargements. En utilisant l'attribut <code>autocomplete</code> avec la valeur <code>off</code>, on désactive cette fonctionnalité. Cela fonctionne, y compris lorsque l'attribut <code>autocomplete</code> ne devrait pas s'appliquer à l'élément <code>&lt;input&gt;</code> d'après son type. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=654072">bug 654072</a>.</p>
+<div class="note">
+  <p><strong>Note :</strong> À la différence des autres navigateurs, pour Firefox, l'attribut <code>autocomplete</code> contrôlera également si <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">l'état de désactivation ou de coche dynamique persiste lors d'un rechargement de la page</a> pour un champ <code>&lt;input&gt;</code>. Par défaut, un élément reste désactivé ou coché/décoché lors des rechargements. En utilisant l'attribut <code>autocomplete</code> avec la valeur <code>off</code>, on désactive cette fonctionnalité. Cela fonctionne, y compris lorsque l'attribut <code>autocomplete</code> ne devrait pas s'appliquer à l'élément <code>&lt;input&gt;</code> d'après son type. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=654072">bug 654072</a>.</p>
 </div>
 
 <h2 id="examples">Exemples</h2>

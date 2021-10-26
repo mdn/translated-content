@@ -11,11 +11,9 @@ translation_of: Web/HTML/Element/tfoot
 ---
 <div>{{HTMLRef}}</div>
 
-<p id="Summary">L'élément HTML <strong><code>&lt;tfoot&gt;</code></strong> permet de définir un ensemble de lignes qui résument les colonnes d'un tableau.</p>
+<p>L'élément HTML <strong><code>&lt;tfoot&gt;</code></strong> permet de définir un ensemble de lignes qui résument les colonnes d'un tableau.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/tfoot.html","tabbed-taller")}}</div>
-
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
 
 <h2 id="Attributs">Attributs</h2>
 
@@ -36,7 +34,7 @@ translation_of: Web/HTML/Element/tfoot
 
  <p>Si cet attribut n'est pas renseigné, la valeur <code>left</code> est prise par défaut.</p>
 
- <div class="note"><strong>Notes : </strong>Cet attribut est devenu obsolète dans le dernier standard.
+ <div class="note"><p><strong>Note :</strong> Cet attribut est devenu obsolète dans le dernier standard.</p>
 
  <ul>
   <li>Pour réaliser le même effet qu'avec les valeurs left, center, right ou justify, utilisez la propriété CSS {{cssxref("text-align")}} sur cet élément.</li>
@@ -44,9 +42,6 @@ translation_of: Web/HTML/Element/tfoot
  </ul>
  </div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("bgcolor")}} {{Non-standard_inline}}</dt>
  <dd>Cet attribut définit la couleur d'arrière-plan de toutes les cellules. C'est un code à 6 chiffres hexadécimaux comme défini par le <a class="external" href="https://www.w3.org/Graphics/Color/sRGB">sRGB</a>. Il est précédé d'un '#'. Un de ces seize mot-clé peut également être utilisé.
  <table>
@@ -86,28 +81,18 @@ translation_of: Web/HTML/Element/tfoot
   </tbody>
  </table>
 
- <div class="note"><strong>Note d'utilisation : </strong>Il est fortement conseillé de ne pas utiliser cet attribut car celui-ci n'est pas un attribut standard et n'a été implémentée que sous certaines versions d'Internet Explorer. L'élément {{HTMLElement("tfoot")}} doit être mis en forme grâce au <a href="/fr/docs/CSS">CSS</a>. Pour fournir un effet semblable à celui achevé par l'attribut <code><strong>bgcolor</strong></code>, il est possible d'utiliser la propriété CSS {{cssxref("background-color")}} sur les éléments  {{HTMLElement("td")}} ou {{HTMLElement("th")}} souhaités.</div>
+ <div class="note"><p><strong>Note :</strong> Il est fortement conseillé de ne pas utiliser cet attribut car celui-ci n'est pas un attribut standard et n'a été implémentée que sous certaines versions d'Internet Explorer. L'élément {{HTMLElement("tfoot")}} doit être mis en forme grâce au <a href="/fr/docs/CSS">CSS</a>. Pour fournir un effet semblable à celui achevé par l'attribut <code><strong>bgcolor</strong></code>, il est possible d'utiliser la propriété CSS {{cssxref("background-color")}} sur les éléments  {{HTMLElement("td")}} ou {{HTMLElement("th")}} souhaités.</p></div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("char")}} {{Deprecated_inline}} en {{HTMLVersionInline("4")}}, {{obsolete_inline}} en {{HTMLVersionInline("5")}}</dt>
- <dd>Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut {{htmlattrxref("align", "tfoot")}} ne vaut pas <code>char</code>, l'attribut est ignoré.</dd>
- <dd>
- <div class="note"><strong>Note d'utilisation : </strong>Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec {{htmlattrxref("char", "tfoot")}}, on peut utiliser CSS3 en attribuant la même valeur à la propriété {{cssxref("text-align")}}.{{unimplemented_inline}}.</div>
+ <dd><p>Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut {{htmlattrxref("align", "tfoot")}} ne vaut pas <code>char</code>, l'attribut est ignoré.</p>
+ <div class="note"><p><strong>Note :</strong> Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec {{htmlattrxref("char", "tfoot")}}, on peut utiliser CSS3 en attribuant la même valeur à la propriété {{cssxref("text-align")}}.{{unimplemented_inline}}.</p></div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("charoff")}} {{Deprecated_inline}} en {{HTMLVersionInline("4")}}, {{obsolete_inline}} en {{HTMLVersionInline("5")}}</dt>
- <dd>Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut<strong> char</strong> à appliquer au contenu des cellules.
- <div class="note"><strong>Note d'utilisation: </strong>Cet attribut ne doit plus être utilisé car il est maintenant obsolète et n'est plus supporté dans le dernier standard.</div>
+ <dd><p>Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut<strong> char</strong> à appliquer au contenu des cellules.</p>
+ <div class="note"><p><strong>Note :</strong> Cet attribut ne doit plus être utilisé car il est maintenant obsolète et n'est plus supporté dans le dernier standard.</p></div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("valign")}} {{Deprecated_inline}} en {{HTMLVersionInline("4")}}, {{obsolete_inline}} en {{HTMLVersionInline("5")}}</dt>
- <dd>Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles de cet attribut sont :
+ <dd><p>Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles de cet attribut sont :</p>
  <ul>
   <li><code>baseline</code> qui alignera le texte à la ligne la plus basse possible en utilisant la <a class="external" href="https://fr.wikipedia.org/wiki/Ligne_de_base_%28typographie%29">ligne de base</a> des caractères. Si les caractères ont tous la même taille, cela aura le même effet que la valeur <code>bottom</code>.</li>
   <li><code>bottom</code> qui placera le texte au plus bas de la cellule</li>
@@ -115,7 +100,7 @@ translation_of: Web/HTML/Element/tfoot
   <li><code>top</code> qui placera le texte au plus haut de la cellule.</li>
  </ul>
 
- <div class="note"><strong>Note d'utilisation : </strong>Cet attribut étant maintenant obsolète (et n'étant plus supporté), il est fortement déconseillé de l'utiliser. La propriété CSS {{cssxref("vertical-align")}} doit être utilisée à la place.</div>
+ <div class="note"><p><strong>Note :</strong> Cet attribut étant maintenant obsolète (et n'étant plus supporté), il est fortement déconseillé de l'utiliser. La propriété CSS {{cssxref("vertical-align")}} doit être utilisée à la place.</p></div>
  </dd>
 </dl>
 

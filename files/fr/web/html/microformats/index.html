@@ -12,7 +12,7 @@ tags:
   - Search
 translation_of: Web/HTML/microformats
 ---
-<p class="summary">Les <a href="https://microformats.org/"><dfn>microformats</dfn></a> (parfois abrégés <strong>μF</strong>) sont des normes utilisées pour intégrer la sémantique et les données structurées dans le HTML, et fournir une API à utiliser par les moteurs de recherche, les agrégateurs et autres outils. Ces modèles minimaux de HTML sont utilisés pour marquer des entités allant d'informations fondamentales à des informations spécifiques à un domaine, telles que des personnes, des organisations, des événements et des lieux. Les microformats utilisent des vocabulaires de soutien pour décrire les objets et des paires nom-valeur pour attribuer des valeurs à leurs propriétés. Les propriétés sont transportées dans des attributs de classe qui peuvent être ajoutés à tout élément HTML, tandis que les valeurs des données réutilisent le contenu des éléments HTML et les attributs sémantiques. Microformats2 est une mise à jour de microformats qui offre un moyen plus simple d'annoter la syntaxe structurée et les vocabulaires HTML que les approches précédentes utilisant RDFa et microdata qui nécessitent l'apprentissage de nouveaux attributs.</p>
+<p>Les <a href="https://microformats.org/"><dfn>microformats</dfn></a> (parfois abrégés <strong>μF</strong>) sont des normes utilisées pour intégrer la sémantique et les données structurées dans le HTML, et fournir une API à utiliser par les moteurs de recherche, les agrégateurs et autres outils. Ces modèles minimaux de HTML sont utilisés pour marquer des entités allant d'informations fondamentales à des informations spécifiques à un domaine, telles que des personnes, des organisations, des événements et des lieux. Les microformats utilisent des vocabulaires de soutien pour décrire les objets et des paires nom-valeur pour attribuer des valeurs à leurs propriétés. Les propriétés sont transportées dans des attributs de classe qui peuvent être ajoutés à tout élément HTML, tandis que les valeurs des données réutilisent le contenu des éléments HTML et les attributs sémantiques. Microformats2 est une mise à jour de microformats qui offre un moyen plus simple d'annoter la syntaxe structurée et les vocabulaires HTML que les approches précédentes utilisant RDFa et microdata qui nécessitent l'apprentissage de nouveaux attributs.</p>
 
 <p>Les microformats sont pris en charge par tous les principaux moteurs de recherche. Les moteurs de recherche bénéficient grandement d'un accès direct à ces données structurées, car elles leur permettent de comprendre les informations contenues dans les pages Web et de fournir des résultats plus pertinents aux utilisateurs. En plus d'être lisible par les machines, leur format est conçu pour être facilement lu par les humains.</p>
 
@@ -81,7 +81,6 @@ translation_of: Web/HTML/microformats
 
 <h4 id="Example_h-card">Exemple de h-card</h4>
 
-<div dir="ltr" style="text-align: left;">
 <pre class="brush: html">&lt;p class="h-card"&gt;
   &lt;img class="u-photo" src="http://example.org/photo.png" alt="" /&gt;
   &lt;a class="p-name u-url" href="http://example.org"&gt;Joe Bloggs&lt;/a&gt;
@@ -90,7 +89,6 @@ translation_of: Web/HTML/microformats
   &lt;span class="p-locality"&gt;Reykjavík&lt;/span&gt;
   &lt;span class="p-country-name"&gt;Iceland&lt;/span&gt;
 &lt;/p&gt;</pre>
-</div>
 
 <table class="standard-table">
   <tbody>
@@ -164,7 +162,7 @@ translation_of: Web/HTML/microformats
   }]
 }</pre>
 
-<div class="notecard note">
+<div class="note">
   <p><strong>Note :</strong> Le h-card imbriqué récupère des valeurs implicites pour <code>name</code> et <code>url</code>.</p>
 </div>
 
@@ -270,7 +268,6 @@ translation_of: Web/HTML/microformats
 
 <h4 id="Example_h-feed">Example h-feed</h4>
 
-<div dir="ltr" style="text-align: left;">
 <pre class="brush: html">&lt;div class="h-feed"&gt;
   &lt;h1 class="p-name"&gt;Microformats Blogs&lt;/h1&gt;
   &lt;article class="h-entry"&gt;
@@ -282,7 +279,6 @@ translation_of: Web/HTML/microformats
   &lt;div class="e-content"&gt; &lt;p&gt;Blah blah blah&lt;/p&gt; &lt;/div&gt;
   &lt;/article&gt;
 &lt;/div&gt;</pre>
-</div>
 
 <h4 id="Properties_2">Propriétés</h4>
 
@@ -320,7 +316,6 @@ translation_of: Web/HTML/microformats
 
 <p>Le microformat <code>h-event</code> permet de représenter des évènements.</p>
 
-<div dir="ltr" style="text-align: left;">
 <pre class="brush: html">&lt;div class="h-event"&gt;
   &lt;h1 class="p-name"&gt;Microformats Meetup&lt;/h1&gt;
   &lt;p&gt;From
@@ -329,7 +324,6 @@ translation_of: Web/HTML/microformats
   at &lt;span class="p-location"&gt;Some bar in SF&lt;/span&gt;&lt;/p&gt;
   &lt;p class="p-summary"&gt;Get together and discuss all things microformats-related.&lt;/p&gt;
 &lt;/div&gt;</pre>
-</div>
 
 <h4 id="Properties_3">Propriétés</h4>
 

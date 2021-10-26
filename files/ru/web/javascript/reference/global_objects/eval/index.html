@@ -66,7 +66,7 @@ eval(expression.toString());
 }
 </pre>
 
-<h2 id="Не_используйте_eval_без_необходимости!"><a name="dont-use-it"><code><font face="Open Sans, Arial, sans-serif">Н</font>е используйте eval без необходимости!</code></a></h2>
+<h2 id="Не_используйте_eval_без_необходимости!"><a><code><font face="Open Sans, Arial, sans-serif">Н</font>е используйте eval без необходимости!</code></a></h2>
 
 <p><code>eval()</code> - опасная функция, которая выполняет код, проходящий со всеми привилегиями вызывателя. Если вы запускаете <code>eval()</code> со строкой, на которую могут влиять злоумышленники, то вы можете запустить вредоносный код на устройство пользователя с правами вашей веб-страницы/расширения. Наиболее важно, код третьей стороны может видеть область видимости, в которой был вызван <code>eval()</code>, что может может привести к атакам, похожим на {{jsxref("Global_Objects/Function", "Function")}}.</p>
 
@@ -164,30 +164,7 @@ var fct2 = eval(fctStr2)  // вернёт функцию
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.2.1', 'eval')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-eval-x', 'eval')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 

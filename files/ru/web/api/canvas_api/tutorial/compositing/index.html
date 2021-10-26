@@ -12,7 +12,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Композиции
 <p>Во всех наших <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations">предыдущих примерах</a>, фигуры всегда были нарисованы одна поверх другой. Это более чем достаточно для большинства ситуаций, но это ограничивает порядок, в котором построены композиционные формы. Однако, мы можем изменить это поведение, установив свойство <code>globalCompositeOperation</code>. Кроме того, свойства <code>clip</code> позволяет скрыть нежелательные части формы.</p>
 </div>
 
-<h2 id="globalCompositeOperation" name="globalCompositeOperation"><code>globalCompositeOperation</code></h2>
+<h2 id="globalCompositeOperation"><code>globalCompositeOperation</code></h2>
 
 <p>Мы можем не только рисовать новые фигуры за существующие формы, но мы также можем использовать его, чтобы замаскировать определённые участки, очистить разделы от холста (не ограничивается прямоугольниками, как{{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} method does) и другое.</p>
 
@@ -25,7 +25,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Композиции
 
 <p>{{EmbedLiveSample("Compositing_example", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}</p>
 
-<h2 id="Clipping_paths" name="Clipping_paths">Обрезка контуров</h2>
+<h2 id="Clipping_paths">Обрезка контуров</h2>
 
 <p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png" style="float: right;">Отсечённый контур похож на обычную форму холста, но он действует как маска, чтобы скрыть нежелательные части фигур. Это визуализируется на изображении справа. Форма красной звезды - наша отправочная дорожка. Все, что выходит за пределы этого пути, не будет нарисовано на холсте.</p>
 
@@ -42,7 +42,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Композиции
 
 <p>По умолчанию элемент {{HTMLElement("canvas")}} использует отсечённый контур, который в точности совпадает по размеру с размером самого холста. Это означает, что никакого отсечения попросту не произойдёт.</p>
 
-<h3 id="A_clip_example" name="A_clip_example">Пример обрезки</h3>
+<h3 id="A_clip_example">Пример обрезки</h3>
 
 <p>В этом примере мы будем использовать круговую обрезку контура, чтобы ограничить рисование набора случайных звёзд определённой областью.</p>
 

@@ -15,8 +15,6 @@ translation_of: Web/HTML/Element/table
 
 <div>{{EmbedInteractiveExample("pages/tabbed/table.html","tabbed-standard")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <h2 id="Attributs">Attributs</h2>
 
 <p>Cet élément inclut <a href="/fr/docs/Web/HTML/Attributs_universels">les attributs universels</a>. Les attributs listés ci-après sont désormais tous dépréciés.</p>
@@ -33,7 +31,7 @@ translation_of: Web/HTML/Element/table
     </li>
  </ul>
 
- <div class="note"><strong>Note : </strong>
+ <div class="note"><p><strong>Note :</strong></p>
 
  <ul>
   <li><strong>Cet attribut ne doit pas être utilisé</strong> car il a été déprécié : l'élément {{HTMLElement("table")}} devrait être stylisé en utilisant <a href="/fr/docs/CSS">CSS</a>. Pour obtenir un effet similaire à celui réalisé par l'attribut align, les propriétés <a href="/fr/docs/CSS">CSS</a> {{cssxref("text-align")}} et {{cssxref("vertical-align")}} devraient être utilisées.</li>
@@ -41,93 +39,30 @@ translation_of: Web/HTML/Element/table
  </ul>
  </div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("bgcolor")}} {{Deprecated_inline}}</dt>
- <dd>Cet attribut définit la couleur d'arrière-plan de toutes les cellules. C'est un code à 6 chiffres hexadécimaux comme défini par le <a class="external" href="https://www.w3.org/Graphics/Color/sRGB">sRGB</a>. Il est précédé d'un '#'. Un de ces seize mot-clé peut également être utilisé.
- <table style="width: 80%;">
-  <tbody>
-   <tr>
-    <td style="background-color: black; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>black</code> = "#000000"</td>
-    <td style="background-color: green; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>green</code> = "#008000"</td>
-   </tr>
-   <tr>
-    <td style="background-color: silver; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>silver</code> = "#C0C0C0"</td>
-    <td style="background-color: lime; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>lime</code> = "#00FF00"</td>
-   </tr>
-   <tr>
-    <td style="background-color: gray; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>gray</code> = "#808080"</td>
-    <td style="background-color: olive; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>olive</code> = "#808000"</td>
-   </tr>
-   <tr>
-    <td style="background-color: white; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>white</code> = "#FFFFFF"</td>
-    <td style="background-color: yellow; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>yellow</code> = "#FFFF00"</td>
-   </tr>
-   <tr>
-    <td style="background-color: maroon; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>maroon</code> = "#800000"</td>
-    <td style="background-color: navy; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>navy</code> = "#000080"</td>
-   </tr>
-   <tr>
-    <td style="background-color: red; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>red</code> = "#FF0000"</td>
-    <td style="background-color: blue; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>blue</code> = "#0000FF"</td>
-   </tr>
-   <tr>
-    <td style="background-color: purple; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>purple</code> = "#800080"</td>
-    <td style="background-color: teal; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>teal</code> = "#008080"</td>
-   </tr>
-   <tr>
-    <td style="background-color: fuchsia; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>fuchsia</code> = "#FF00FF"</td>
-    <td style="background-color: aqua; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>aqua</code> = "#00FFFF"</td>
-   </tr>
-  </tbody>
- </table>
-
- <div class="note"><strong>Note d'utilisation : </strong>Il est fortement conseillé de ne pas utiliser cet attribut car celui-ci a été déprécié. La mise en forme d'un tableau doit se faire en utilisant CSS. Il est possible d'utiliser la propriété CSS {{cssxref("background-color")}} pour cet effet.</div>
+ <dd><p>Cet attribut définit la couleur d'arrière-plan de toutes les cellules. C'est un code à 6 chiffres hexadécimaux comme défini par le <a class="external" href="https://www.w3.org/Graphics/Color/sRGB">sRGB</a>. Il est précédé d'un '#'. Un des <a href="/fr/docs/Web/CSS/color_value#color_keywords">mots-clés préfédinis pour les couleurs</a> peut également être utilisé.</p>
+ <div class="note">
+   <p><strong>Note :</strong> Il est fortement conseillé de ne pas utiliser cet attribut car celui-ci a été déprécié. La mise en forme d'un tableau doit se faire en utilisant CSS. Il est possible d'utiliser la propriété CSS {{cssxref("background-color")}} pour cet effet.</p>
+ </div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("border")}} {{Deprecated_inline}}</dt>
  <dd>Cet attribut entier définit, en pixels, la taille de la bordure entourant le tableau. S'il vaut 0, cela implique que l'attribut {{htmlattrxref("frame", "table")}} est vide.
- <div class="note"><strong>Note d'utilisation : </strong>Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Les propriétés CSS {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} et {{cssxref("border-style")}} devraient être utilisées à la place.</div>
+ <div class="note"><p><strong>Note :</strong>Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Les propriétés CSS {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} et {{cssxref("border-style")}} devraient être utilisées à la place.</p></div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("cellpadding")}} {{Deprecated_inline}}</dt>
  <dd>Cet attribut définit la taille de l'espace entre le contenu d'une cellule et sa bordure, qu'lle soit affichée ou non. Si cet attribut est exprimé en pixels, le décalage sera appliqué sur les quatre côtés. S'il est exprimé en pourcents, le contenu sera centré verticalement et la somme des espaces en haut et en bas représentera le pourcentage, il en va de même pour l'espace horizontal (droite et gauche).
- <div class="note"><strong>Note d'utilisation : </strong>Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Pour réaliser un effet similaire, la propriété {{cssxref("border-collapse")}} avec la valeur collapse doit être utilisée sur l'élément {{HTMLElement("table")}} et la propriété {{cssxref("padding")}} sur l'élément {{HTMLElement("td")}}.</div>
+ <div class="note"><p><strong>Note :</strong> Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Pour réaliser un effet similaire, la propriété {{cssxref("border-collapse")}} avec la valeur collapse doit être utilisée sur l'élément {{HTMLElement("table")}} et la propriété {{cssxref("padding")}} sur l'élément {{HTMLElement("td")}}.</p></div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{htmlattrdef("cellspacing")}} {{Deprecated_inline}}</dt>
  <dd>Cet attribut définit la taille (en pourcents ou pixels) de l'espace (vertical et horizontal) entre deux cellules, entre la haut du tableau et les cellules de la première ligne, la gauche du tableau et les cellules de la première colonne, puis de la même manière pour le bas et le côté droit du tableau.
- <div class="note"><strong>Note d'utilisation : </strong>Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Pour réaliser un effet similaire, la propriété {{cssxref("border-collapse")}} avec la valeur collapse doit être utilisée sur l'élément {{HTMLElement("table")}} et la propriété {{cssxref("margin")}} sur l'élément {{HTMLElement("td")}}.</div>
+ <div class="note"><p><strong>Note :</strong> Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Pour réaliser un effet similaire, la propriété {{cssxref("border-collapse")}} avec la valeur collapse doit être utilisée sur l'élément {{HTMLElement("table")}} et la propriété {{cssxref("margin")}} sur l'élément {{HTMLElement("td")}}.</p></div>
  </dd>
 </dl>
 
 <dl>
  <dt>{{htmlattrdef("frame")}} {{Deprecated_inline}}</dt>
  <dd>Cet attribut à valeurs multiples définit les côtés du tableau sur lesquels dessiner une bordure. Il peut prendre les valeurs suivantes : <code>above, hsides, lhs, border, void, below, vsides, rhs, box</code>.
- <div class="note"><strong>N</strong><strong>ote d'utilisation : </strong>Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Pour réaliser un effet similaire, les propriétés {{cssxref("border-style")}} et {{cssxref("border-width")}} doivent être utilisées.</div>
+ <div class="note"><p><strong>Note :</strong> Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Pour réaliser un effet similaire, les propriétés {{cssxref("border-style")}} et {{cssxref("border-width")}} doivent être utilisées.</p></div>
  </dd>
 </dl>
 
@@ -142,7 +77,7 @@ translation_of: Web/HTML/Element/table
   <li><code>all</code>, tous les traits seront affichés (entre les lignes et entre les colonnes).</li>
  </ul>
 
- <div class="note"><strong>Note :</strong>
+ <div class="note"><p><strong>Note :</strong></p>
 
  <ul>
   <li>L'apparence de ces traits dépend du navigateur utilisé et ne peut être modifiée.</li>
@@ -155,7 +90,7 @@ translation_of: Web/HTML/Element/table
 <dl>
  <dt>{{htmlattrdef("summary")}} {{Deprecated_inline}}</dt>
  <dd>Cet attribut définit un texte alternatif à utiliser afin de décrire le tableau. Un tel texte peut être utilisé par un agent utilisateur qui ne pourrait pas afficher le tableau. Il est généralement utilisé pour les personnes souffrant d'une déficience visuelle, comme par exemple les aveugles qui navigueront sur des pages web en utilisant un écran Braille. Si l'information contenue dans cet attribut serait également utile aux autres utilisateurs, il faudra plutôt utiliser l'élément {{HTMLElement("caption")}}. L'attribut <code><strong>summary</strong></code> n'est pas obligatoire et peut être omis lorsqu'un élément {{HTMLElement("caption")}} remplit ce rôle.
- <div class="note"><strong>Note d'utilisation : </strong>Cet attribut ayant été déprécié, il ne doit pas être utilisé. Les façons suivantes peuvent être envisagées pour cette expression :
+ <div class="note"><p><strong>Note :</strong> Cet attribut ayant été déprécié, il ne doit pas être utilisé. Les façons suivantes peuvent être envisagées pour cette expression :</p>
  <ul>
   <li>Grâce à un texte entourant le tableau, cette manière est la plus faible du point de vue de la sémantique</li>
   <li>Grâce à l'élément {{HTMLElement("caption")}}</li>
@@ -171,13 +106,11 @@ translation_of: Web/HTML/Element/table
 <dl>
  <dt>{{htmlattrdef("width")}} {{Deprecated_inline}}</dt>
  <dd>Cet attribut définit la largeur du tableau. Elle peut être exprimée en pixels ou en pourcent (représentant alors la fraction du conteneur que le tableau peut occuper).
- <div class="note"><strong>Note d'utilisation : </strong>Cet attribut ayant été déprécié, il ne doit pas être utilisé. La propriété CSS {{cssxref("width")}} doit être utilisée à la place.</div>
+ <div class="note"><p><strong>Note :</strong> Cet attribut ayant été déprécié, il ne doit pas être utilisé. La propriété CSS {{cssxref("width")}} doit être utilisée à la place.</p></div>
  </dd>
 </dl>
 
 <h2 id="Exemples">Exemples</h2>
-
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/table.html")}}</div>
 
@@ -185,7 +118,7 @@ translation_of: Web/HTML/Element/table
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html" style="font-size: 12px;">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;Jean&lt;/td&gt;
     &lt;td&gt;Biche&lt;/td&gt;
@@ -374,10 +307,7 @@ translation_of: Web/HTML/Element/table
   <tr>
    <th scope="row"><dfn>Contenu autorisé</dfn></th>
    <td>
-    <div class="content-models">
-    <div id="table-mdls">
     <p>Dans cet ordre :</p>
-
     <ul>
      <li>Un élément facultatif {{HTMLElement("caption")}}</li>
      <li>Zéro ou plusieurs éléments {{HTMLElement("colgroup")}}</li>
@@ -390,8 +320,6 @@ translation_of: Web/HTML/Element/table
      </li>
      <li>un élément {{HTMLElement("tfoot")}} optionnel</li>
     </ul>
-    </div>
-    </div>
    </td>
   </tr>
   <tr>

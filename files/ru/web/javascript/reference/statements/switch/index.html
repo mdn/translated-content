@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Statements/switch
 
 <p><strong>Инструкция switch</strong> сравнивает выражение со случаями, перечисленными <font face="Courier New, Andale Mono, monospace">внутри неё</font>, а затем выполняет соответствующие инструкции.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">switch (expression) {
   case value1:
@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Statements/switch
  <dd>Инструкции, выполняемые если <code>expression</code> не соответствует ни одному случаю.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Если выражение соответствует какому-то случаю, то выполняются инструкции этого случая. Если несколько случаев соответствуют значению, только первый случай будет использован.</p>
 
@@ -51,9 +51,9 @@ translation_of: Web/JavaScript/Reference/Statements/switch
 
 <p>Опциональная инструкция <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/break" title="JavaScript/Reference/Statements/break">break</a></code> выполняет выход из блока <code>switch</code>. Она может располагаться в каждом из случаев, но не является обязательной. Если её нет, то выполняется следующая инструкция из блока <code>switch</code>.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_switch" name="Example:_Using_switch">Пример: Использование <code>switch</code></h3>
+<h3 id="Example_Using_switch">Пример: Использование <code>switch</code></h3>
 
 <p>В этом примере, если <code>expr</code> равно "Bananas", программа находит случай "Bananas" и выполняет соответствующие инструкции. При выполнении инструкции <code>break</code>, выполнение продолжится за пределами <code>switch</code>. Если бы <code>break</code> не было, то выполнились бы инструкции случая "Cherries".</p>
 
@@ -81,7 +81,7 @@ translation_of: Web/JavaScript/Reference/Statements/switch
 console.log("Is there anything else you'd like?");
 </pre>
 
-<h3 id="What_happens_if_I_forgot_a_break" name="What_happens_if_I_forgot_a_break">Пример: Что случится, если не использовать break?</h3>
+<h3 id="What_happens_if_I_forgot_a_break">Пример: Что случится, если не использовать break?</h3>
 
 <p>Если вы не использовали инструкцию <code>break</code>, то будут выполнены инструкции следующего случая. И проверка на соответствие выражению не будет выполняться.</p>
 
@@ -103,7 +103,7 @@ switch (foo) {
         console.log('default');
 }</pre>
 
-<h3 id="Methods_for_Multi-criteria_Case" name="Methods_for_Multi-criteria_Case">Пример: Использование нескольких значений для одного случая</h3>
+<h3 id="Methods_for_Multi-criteria_Case">Пример: Использование нескольких значений для одного случая</h3>
 
 <p>Если вы хотите использовать один набор инструкций для соответствия нескольким случаям, можно использовать два способа. Первый способ является рекомендуемым, а второй - скорее трюком. Оба способа вызовут предупреждение с текстом "yes", если значение <code>foo</code> равно 0, 1, 2 или 3.</p>
 
@@ -145,31 +145,7 @@ switch (true) { // Постоянное значение true вместо foo
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е Издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение.<br>
-    Реализован в JavaScript 1.2</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.11', 'Инструкция switch')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-switch-statement', 'Инструкция switch')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
@@ -177,7 +153,7 @@ switch (true) { // Постоянное значение true вместо foo
 
 <p>{{Compat("javascript.statements.switch")}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/ru/docs/Web/JavaScript/Reference/Statements/if...else" lang="ru"><code>if...else</code></a></li>

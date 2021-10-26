@@ -7906,14 +7906,6 @@
       "joredjs"
     ]
   },
-  "Web/API/PositionOptions": {
-    "modified": "2019-03-23T23:16:28.831Z",
-    "contributors": [
-      "fscholz",
-      "LeoHirsch",
-      "lupomontero"
-    ]
-  },
   "Web/API/PushManager": {
     "modified": "2019-03-23T22:40:00.540Z",
     "contributors": [
@@ -20384,12 +20376,6 @@
       "Nachec"
     ]
   },
-  "Web/Progressive_web_apps/Responsive/Media_types": {
-    "modified": "2019-03-18T21:15:11.297Z",
-    "contributors": [
-      "luismj"
-    ]
-  },
   "Web/SVG": {
     "modified": "2019-03-23T23:44:20.243Z",
     "contributors": [
@@ -21368,6 +21354,14 @@
       "fscholz"
     ]
   },
+  "conflicting/Web/API/Geolocation/getCurrentPosition": {
+    "modified": "2019-03-23T23:16:28.831Z",
+    "contributors": [
+      "fscholz",
+      "LeoHirsch",
+      "lupomontero"
+    ]
+  },
   "conflicting/Web/API/HTML_Drag_and_Drop_API": {
     "modified": "2019-03-23T23:18:26.504Z",
     "contributors": [
@@ -21527,6 +21521,12 @@
     "modified": "2019-03-23T22:31:07.427Z",
     "contributors": [
       "miguelsp"
+    ]
+  },
+  "conflicting/Web/CSS/Media_Queries/Using_media_queries": {
+    "modified": "2019-03-18T21:15:11.297Z",
+    "contributors": [
+      "luismj"
     ]
   },
   "conflicting/Web/CSS/cursor": {

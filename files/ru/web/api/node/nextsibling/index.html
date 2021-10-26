@@ -18,12 +18,12 @@ translation_of: Web/API/Node/nextSibling
 
 <p>Свойство <code><strong>Node.nextSibling</strong></code> используется только для чтения и возвращает узел, непосредственно следующий за данным узлом в списке  {{domxref("Node.childNodes","childNodes")}} его родительского элемента, или <code>null</code> если данный узел последний в этом списке.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><var>nextNode</var> = <var>node</var>.nextSibling
 </pre>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 
 <div><p>Браузеры, основанные на Gecko, вставляют текстовые узлы в документ для представления пробелов в разметке.
     Поэтому узел, полученный, например, при использовании <a href="/ru/docs/Web/API/Node/firstChild" title="Свойство Node.firstChild только для чтения, возвращающее первый потомок узла в древе или null, если узел является бездетным. Если узел это документ, он возвращает первый узел в списке своих прямых детей."><code>Node.firstChild</code></a> или <a href="/ru/docs/Web/API/Node/previousSibling" title="Свойство Node.previousSibling используется только для чтения, оно возвращает узел предшедствующий указанному в родительском элементе childNodes, или null,  если указанный узел первый в своём родителе."><code>Node.previousSibling</code></a> может относиться к
@@ -33,7 +33,7 @@ translation_of: Web/API/Node/nextSibling
     <a class="external" href="http://www.w3.org/DOM/faq.html#emptytext" rel="noopener">W3C DOM 3 FAQ: Почему некоторые текстовые узлы пустые?</a>
     для дополнительной информации.</p></div>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush:html">&lt;div id="div-01"&gt;Вот div-01&lt;/div&gt;
 &lt;div id="div-02"&gt;Вот div-02&lt;/div&gt;
@@ -69,7 +69,7 @@ while (el) {
 
 <p>Возможность включения текстовых узлов в DOM должна быть разрешена, когда DOM обходится с помощью <code>nextSibling</code>. Смотрите раздел "Примечания".</p>
 
-<h2 id="Specification" name="Specification">Спецификации</h2>
+<h2 id="Specification">Спецификации</h2>
 
 <ul>
  <li><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling">DOM Level 1 Core: nextSibling</a></li>

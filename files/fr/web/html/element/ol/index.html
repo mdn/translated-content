@@ -11,7 +11,7 @@ translation_of: Web/HTML/Element/ol
 ---
 <div>{{HTMLRef}}</div>
 
-<p class="summary">L'élément HTML <strong><code>&lt;ol&gt;</code></strong> représente une liste ordonnée. Les éléments d'une telle liste sont généralement affichés avec un indicateur ordinal pouvant prendre la forme de nombres, de lettres, de chiffres romains ou de points. La mise en forme de la numérotation n'est pas utilisée dans la description HTML mais dans la feuille de style CSS associée grâce à la propriété <a href="/fr/docs/Web/CSS/list-style-type"><code>list-style-type</code></a>.</p>
+<p>L'élément HTML <strong><code>&lt;ol&gt;</code></strong> représente une liste ordonnée. Les éléments d'une telle liste sont généralement affichés avec un indicateur ordinal pouvant prendre la forme de nombres, de lettres, de chiffres romains ou de points. La mise en forme de la numérotation n'est pas utilisée dans la description HTML mais dans la feuille de style CSS associée grâce à la propriété <a href="/fr/docs/Web/CSS/list-style-type"><code>list-style-type</code></a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/ol.html", "tabbed-shorter")}}</div>
 
@@ -53,11 +53,11 @@ translation_of: Web/HTML/Element/ol
 <p>À l'instar des autres éléments HTML, il est possible d'utiliser <a href="/fr/docs/Web/HTML/Global_attributes">les attributs universels</a> sur cet élément.</p>
 
 <dl>
-  <dt><strong id="attr-reversed"><code>reversed</code></strong></dt>
+  <dt><strong><code>reversed</code></strong></dt>
   <dd>Cet attribut booléen indique que les éléments de la liste sont dans l'ordre inverse. Les éléments sont numérotés de haut en bas.</dd>
-  <dt><strong id="attr-start"><code>start</code></strong></dt>
+  <dt><strong><code>start</code></strong></dt>
   <dd>Un nombre entier à partir duquel on commence à compter pour les éléments de la liste. Toujours un chiffre arabique (1, 2, 3, etc.), même lorsque le <code>type</code> de numérotation est constitué de lettres ou de chiffres romains. Par exemple, pour commencer à numéroter les éléments à partir de la lettre "d" ou du chiffre romain "iv", utilisez <code>start="4"</code>.</dd>
-  <dt><strong id="attr-type"><code>type</code></strong></dt>
+  <dt><strong><code>type</code></strong></dt>
   <dd>Définit le type de numérotation :
     <ul>
       <li><code>a</code> pour les lettres minuscules</li>
@@ -68,9 +68,8 @@ translation_of: Web/HTML/Element/ol
     </ul>
     <p>Le type spécifié est utilisé pour l'ensemble de la liste, sauf si un attribut différent <a href="/fr/docs/Web/HTML/Element/li#attr-type"><code>type</code></a> est utilisé sur un élément <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a> fermé.</p>
 
-    <div class="notecard note">
-      <p><b>Note :</b></p>
-      <p>À moins que le type du numéro de la liste n'ait de l'importance (comme dans les documents juridiques ou techniques où les éléments sont référencés par leur numéro/lettre), utilisez plutôt la propriété CSS <a href="/fr/docs/Web/CSS/list-style-type"><code>list-style-type</code></a>.</p>
+    <div class="note">
+      <p><strong>Note :</strong>À moins que le type du numéro de la liste n'ait de l'importance (comme dans les documents juridiques ou techniques où les éléments sont référencés par leur numéro/lettre), utilisez plutôt la propriété CSS <a href="/fr/docs/Web/CSS/list-style-type"><code>list-style-type</code></a>.</p>
     </div>
   </dd>
 </dl>
