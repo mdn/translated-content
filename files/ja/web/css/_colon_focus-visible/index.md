@@ -5,40 +5,40 @@ tags:
   - ':focus'
   - ':focus-visible'
   - CSS
-  - Experimental
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+  - レイアウト
+  - 擬似クラス
+  - リファレンス
+  - セレクター
+  - ウェブ
 translation_of: 'Web/CSS/:focus-visible'
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>:focus-visible</code></strong> 擬似クラスは、要素が {{CSSxRef(":focus")}} 擬似クラスに一致している時で、{{glossary("User Agent", "ユーザーエージェント")}}が要素にフォーカスを明示するべきであると発見的に指定した場合 (多くのブラウザーではこの場合、「フォーカスリング」を表示します) に適用されます。</p>
+**`:focus-visible`** 擬似クラスは、要素が {{CSSxRef(":focus")}} 擬似クラスに一致している時で、{{glossary("User Agent", "ユーザーエージェント")}}が要素にフォーカスを明示するべきであると推測的に判断した場合に適用されます (多くのブラウザーではこの場合、既定で「フォーカスリング」を表示します)。
 
-<p>このセレクターは、ユーザーの入力方法 (マウスなのかキーボードなのか) によって異なるフォーカス表示を提供したい場合に便利です。</p>
+このセレクターは、ユーザーの入力方法 (マウスなのかキーボードなのか) によって異なるフォーカス表示を提供したい場合に便利です。
 
-<p>なお、 Firefox は似た機能をより古い接頭辞付きの擬似クラス、 {{CSSxRef(":-moz-focusring")}} で対応しています。</p>
-
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 {{CSSSyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Basic_example" name="Basic_example">基本的な例</h3>
+<h3 id="Basic_example">基本的な例</h3>
 
-<p>この例では、 <code>:focus-visible</code> セレクターはユーザーエージェントの動作を使用して一致するタイミングを判断します。マウスでそれぞれのコントロールをクリックしたときと、キーボードを使用してタブ移動したときとで、何が起こるかを比較してみてください。なお、 <code>:focus</code> でスタイル付けされた要素との動作の違いに注意してください。</p>
+この例では、`:focus-visible` セレクターはユーザーエージェントの動作を使用して照合するタイミングを判断します。マウスでそれぞれのコントロールをクリックしたときと、キーボードを使用してタブ移動したときとで、何が起こるかを比較してみてください。なお、`:focus` でスタイル付けされた要素との動作の違いに注意してください。
 
-<pre class="brush: html notranslate">&lt;input value="Default styles"&gt;&lt;br&gt;
-&lt;button&gt;Default styles&lt;/button&gt;&lt;br&gt;
-&lt;input class="focus-only" value=":focus only"&gt;&lt;br&gt;
-&lt;button class="focus-only"&gt;:focus only&lt;/button&gt;&lt;br&gt;
-&lt;input class="focus-visible-only" value=":focus-visible only"&gt;&lt;br&gt;
-&lt;button class="focus-visible-only"&gt;:focus-visible only&lt;/button&gt;</pre>
+```html
+<input value="既定のスタイル"><br>
+<button>既定のスタイル</button><br>
+<input class="focus-only" value=":focus のみ"><br>
+<button class="focus-only">:focus のみ</button><br>
+<input class="focus-visible-only" value=":focus-visible のみ"><br>
+<button class="focus-visible-only">:focus-visible のみ</button>
+```
 
-<pre class="brush: css highlight[9] notranslate">input, button {
+```css
+input, button {
   margin: 10px;
 }
 
@@ -49,17 +49,20 @@ translation_of: 'Web/CSS/:focus-visible'
 .focus-visible-only:focus-visible {
   outline: 4px dashed darkorange;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Basic_example", "100%", 300)}}</p>
+{{EmbedLiveSample("Basic_example", "100%", 300)}}
 
-<h3 id="Selectively_showing_the_focus_indicator" name="Selectively_showing_the_focus_indicator">フォーカスインジケーターの選択的な表示</h3>
+<h3 id="Selectively_showing_the_focus_indicator">フォーカスインジケーターの選択的な表示</h3>
 
-<p>カスタムコントロール、例えば <a href="/ja/docs/User:Andreas_Wuest/Custom_Elements">カスタム要素</a>ボタンなどは、 <code>:focus-visible</code> を使用してキーボードフォーカスに対してのみフォーカスインジケーターを選択的に適用することができます。これは {{htmlelement("button")}} のようなコントロールのネイティブのフォーカスの動作に一致します。</p>
+カスタムコントロール、例えばカスタム要素のボタンなどは、`:focus-visible` を使用してキーボードフォーカスに対してのみフォーカスインジケーターを選択的に適用することができます。これは{{htmlelement("button")}} のようなコントロールのネイティブのフォーカスの動作に一致します。
 
-<pre class="brush: html notranslate">&lt;custom-button tabindex="0" role="button"&gt;Click Me&lt;/custom-button&gt;</pre>
+```html
+<custom-button tabindex="0" role="button">クリックしてください</custom-button>
+```
 
-<pre class="brush: css highlight[13, 19] notranslate">custom-button {
+```css
+custom-button {
   display: inline-block;
   margin: 10px;
 }
@@ -67,7 +70,7 @@ translation_of: 'Web/CSS/:focus-visible'
 custom-button:focus {
   /* Provide a fallback style for browsers
      that don't support :focus-visible */
-  outline: none;
+  outline: 2px solid red;
   background: lightgrey;
 }
 
@@ -83,54 +86,36 @@ custom-button:focus-visible {
      :focus-visible */
   outline: 4px dashed darkorange;
   background: transparent;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Selectively_showing_the_focus_indicator", "100%", 300)}}</p>
+{{EmbedLiveSample("Selectively_showing_the_focus_indicator", "100%", 60)}}
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+## ポリフィル
 
-<p><a href="https://github.com/WICG/focus-visible">focus-visible.js</a> を使用して <code>:focus-visible</code> のポリフィルにすることができます。</p>
+`:focus-visible` のポリフィルとして [focus-visible.js](https://github.com/WICG/focus-visible) を使用することができます。
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮</h2>
+## アクセシビリティの考慮
 
-<h3 id="Low_vision" name="Low_vision">弱視</h3>
+### 弱視
 
-<p>視覚的なフォーカスインジケーターが、弱視の人々からも見えるように確認してください。これは外光が明るい場所 (太陽の下の屋外など) で画面を使用するすべての人にも利益になります。 <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">WCAG 2.1 SC 1.4.11 Non-Text Contrast</a> は、視覚的なフォーカスインジケーターを少なくとも 3:1 にすることを要求しています。</p>
+視覚的なフォーカスインジケーターが、弱視の人々からも見えるように確認してください。これは外光が明るい場所 (太陽の下の屋外など) で画面を使用するすべての人にも利益になります。 [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) は、視覚的なフォーカスインジケーターを少なくとも 3:1 にすることを要求しています。
 
-<ul>
- <li>アクセシブルな視覚的フォーカスインジケーター: <a href="https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/">Give Your Site Some Focus! Tips for Designing Useful and Usable Focus Indicators</a></li>
-</ul>
+- アクセシブルな視覚的フォーカスインジケーター: [Give Your Site Some Focus! Tips for Designing Useful and Usable Focus Indicators](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
 
-<h3 id="Cognition" name="Cognition">認知障碍</h3>
+### 認知障碍
 
-<p>人が形式が混在した入力フィールドを使用している場合、フォーカスインジケーターが表示されたり消えたりする理由が明確に分からないかもしれません。認知的な懸念のあるユーザーや技術的なリテラシーの低いユーザーにとっては、対話的要素が一貫した動作をしていないと、混乱を招くかもしれません。</p>
+複数の入力形式を混在させている場合、フォーカスインジケーターが表示されたり消えたりする理由は明らかではないかもしれません。認知機能に不安のあるユーザーや、技術的な知識が乏しいユーザーにとって、対話的要素の動作が一貫していないと、混乱を招く可能性があります。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#the-focus-visible-pseudo", ":focus-visible")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.selectors.focus-visible")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{CSSxRef(":focus")}}</li>
- <li>{{CSSxRef(":focus-within")}}</li>
-</ul>
+- {{CSSxRef(":focus")}}
+- {{CSSxRef(":focus-within")}}
