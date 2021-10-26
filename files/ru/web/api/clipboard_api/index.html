@@ -30,7 +30,7 @@ translation_of: Web/API/Clipboard_API
 
 <p>Вместо создания объекта буфера посредством инициализации экземпляра, вы получаете доступ к системному буферу обмена через глобальный {{domxref("Navigator.clipboard")}}:</p>
 
-<pre class="brush: js notranslate">navigator.clipboard.readText().then(
+<pre class="brush: js">navigator.clipboard.readText().then(
   clipText =&gt; document.querySelector(".editor").innerText += clipText);</pre>
 
 <p>Этот фрагмент извлекает текст из буфера обмена и добавляет его к первому элементу, найденному с помощью <code>editor</code> (редактора) классов. Этот код безопасен, поскольку {{domxref("Clipboard.readText", "readText()")}} (и {{domxref("Clipboard.read", "read()")}}, если на то пошло) возвращает пустую строку, если в буфере обмена нет текста.</p>

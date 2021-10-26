@@ -9,7 +9,7 @@ translation_of: Web/API/Event/Event
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"> <em>event</em> = new Event(<em>typeArg</em>, <em>eventInit</em>);</pre>
+<pre class="syntaxbox"> <em>event</em> = new Event(<em>typeArg</em>, <em>eventInit</em>);</pre>
 
 <h3 id="Параметры">Параметры</h3>
 
@@ -32,7 +32,7 @@ translation_of: Web/API/Event/Event
 
 <h2 id="Пример">Пример</h2>
 
-<pre class="brush: js notranslate">//  <span id="result_box" lang="ru"><span>создать событие "look", событие всплывающее и не может быть отменено</span></span>
+<pre class="brush: js">//  <span id="result_box" lang="ru"><span>создать событие "look", событие всплывающее и не может быть отменено</span></span>
 
 var evt = new Event("look", {"bubbles":true, "cancelable":false});
 document.dispatchEvent(evt);

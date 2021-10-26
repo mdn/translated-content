@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.getTime()</code></pre>
+<pre class="syntaxbox"><code><var>dateObj</var>.getTime()</code></pre>
 
 <h3 id="Parameters">Параметры</h3>
 
@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
 
 <p>Конструирует новый объект даты с идентичным значением времени.</p>
 
-<pre class="brush: js notranslate">let birthday = new Date(2020, 12, 20);
+<pre class="brush: js">let birthday = new Date(2020, 12, 20);
 let copy = new Date();
 copy.setTime(birthday.getTime());
 
@@ -50,7 +50,7 @@ console.log(copy.setTime(birthday.getTime())); // 1611090000000
 
 <p>Вычитанием двух последовательных вызовов метода <code>getTime()</code> на заново сконструированных объектах {{jsxref("Global_Objects/Date", "Date")}} можно замерить промежуток времени, произошедший между двумя этими вызовами. Это можно использовать для вычисления времени выполнения неких операций.</p>
 
-<pre class="brush: js notranslate">let end, start;
+<pre class="brush: js">let end, start;
 
 start = new Date();
 for (let i = 0; i &lt; 1000; i++) {

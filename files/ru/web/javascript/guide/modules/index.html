@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Guide/Modules
 
 <p>В первом примере (см. директорию <a href="https://github.com/mdn/js-examples/tree/master/modules/basic-modules">basic-modules</a>) у нас следующая структура файлов:</p>
 
-<pre class="notranslate">index.html
+<pre>index.html
 main.js
 modules/
     canvas.js
@@ -106,7 +106,7 @@ modules/
 
 <p>Самый простой способ использовать экспорт — поместить конструкцию <code>export</code> перед любыми элементами, которые вы хотите экспортировать из модуля, например:</p>
 
-<pre class="brush: js; notranslate">export const name = 'square';
+<pre class="brush: js;">export const name = 'square';
 
 export function draw(ctx, length, x, y, color) {
   ctx.fillStyle = color;
@@ -125,13 +125,13 @@ export function draw(ctx, length, x, y, color) {
 
 <p>Более удобный способ экспорта всех элементов, которые вы хотите экспортировать,— использовать одну конструкцию <code>export</code> в конце файла модуля, где указать переменные, функции, классы, который вы хотите экспортировать, через запятую в фигурных скобках. Например:</p>
 
-<pre class="brush: js; notranslate">export { name, draw, reportArea, reportPerimeter };</pre>
+<pre class="brush: js;">export { name, draw, reportArea, reportPerimeter };</pre>
 
 <h2 id="Импорт_функционала_в_ваш_скрипт">Импорт функционала в ваш скрипт</h2>
 
 <p>После того, как вы экспортировали некоторые функции из своего модуля, вам необходимо импортировать их в свой скрипт, чтобы иметь возможность использовать их. Самый простой способ сделать это:</p>
 
-<pre class="brush: js; notranslate">import { name, draw, reportArea, reportPerimeter } from './modules/square.js';</pre>
+<pre class="brush: js;">import { name, draw, reportArea, reportPerimeter } from './modules/square.js';</pre>
 
 <p>Используйте конструкцию {{JSxRef("Statements/import", "import")}}, за которой следует разделенный запятыми список функций, которые вы хотите импортировать, заключённый в фигурные скобки, за которым следует ключевое слово from, за которым следует путь к файлу модуля — путь относительно корня сайта, который для нашего примера <code>basic-modules</code> будет равен <code>/js-examples/modules/basic-modules</code>.</p>
 
@@ -140,11 +140,11 @@ export function draw(ctx, length, x, y, color) {
 
 <p>Так например:</p>
 
-<pre class="notranslate">/js-examples/modules/basic-modules/modules/square.js</pre>
+<pre>/js-examples/modules/basic-modules/modules/square.js</pre>
 
 <p>становится</p>
 
-<pre class="notranslate">./modules/square.js</pre>
+<pre>./modules/square.js</pre>
 
 <p>Вы можете найти подобные строки кода в файле <code><a href="https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js">main.js</a></code>.</p>
 
@@ -155,7 +155,7 @@ export function draw(ctx, length, x, y, color) {
 <p>После того, как вы импортировали функции в свой скрипт, вы можете использовать их так же, как если бы они были определены в этом же файле. 
   Следующий пример можно найти в <code>main.js</code>, сразу за строками импорта:</p>
 
-<pre class="brush: js; notranslate">let myCanvas = create('myCanvas', document.body, 480, 320);
+<pre class="brush: js;">let myCanvas = create('myCanvas', document.body, 480, 320);
 let reportList = createReportList(myCanvas.id);
 
 let square1 = draw(myCanvas.ctx, 50, 50, 100, 'blue');
@@ -177,11 +177,11 @@ reportPerimeter(square1.length, reportList);
 
 <p>Прежде всего, вам нужно добавить <code>type="module"</code> в <a href="/en-US/docs/Web/HTML/Element/script" title="The HTML &lt;script> элемент используется для встраивания исполняемого кода или ссылки на него; обычно используется для встраивания JavaScript кода или ссылки на него."><code>&lt;script&gt;</code></a>-элемент, чтобы объявить, что скрипт является модулем. Чтобы подключить модуль <code>main.js</code>, нужно написать следующее:</p>
 
-<pre class="brush: html; no-line-numbers notranslate">&lt;script type="module" src="main.js"&gt;&lt;/script&gt;</pre>
+<pre class="brush: html; no-line-numbers">&lt;script type="module" src="main.js"&gt;&lt;/script&gt;</pre>
 
 <p>Вы также можете встроить скрипт модуля непосредственно в HTML-файл, поместив JavaScript-код внутрь <code>&lt;script&gt;</code>-элемента:</p>
 
-<pre class="brush: js notranslate">&lt;script type="module"&gt;
+<pre class="brush: js">&lt;script type="module"&gt;
   /* код JavaScript модуля */
 &lt;/script&gt;</pre>
 
@@ -213,25 +213,25 @@ reportPerimeter(square1.length, reportList);
 <p>Давайте посмотрим на пример, и мы объясним, как это работает.
   В модуле <code>square.js</code> из нашего примера вы можете найти функцию <code>randomSquare()</code>, которая создаёт квардрат случайного цвета и размера со случайными координатами. Мы хотим экпортировать эту функции по умолчанию, поэтому в конце файла пишем следующее:</p>
 
-<pre class="brush: js; notranslate">export default randomSquare;</pre>
+<pre class="brush: js;">export default randomSquare;</pre>
 
 <p>Обратите внимание на отсутствие фигурных скобок.</p>
 
 <p>Кстати, можно было бы определить функцию как анонимную и добавить к ней <code>export default</code>:</p>
 
-<pre class="brush: js; notranslate">export default function(ctx) {
+<pre class="brush: js;">export default function(ctx) {
   ...
 }</pre>
 
 <p>В нашем файле <code>main.js</code> мы импортируем функцию по умолчанию, используя эту строку:</p>
 
-<pre class="brush: js; notranslate">import randomSquare from './modules/square.js';</pre>
+<pre class="brush: js;">import randomSquare from './modules/square.js';</pre>
 
 <p>Снова обратите внимание на отсутствие фигурных скобок.
   Такой синтакис допустим, поскольку для каждого модуля разрешен только один экспорт по умолчанию, и мы знаем, что это <code>randomSquare</code>.
   Вышеупомянутая строка является сокращением для:</p>
 
-<pre class="brush: js; notranslate">import {default as randomSquare} from './modules/square.js';</pre>
+<pre class="brush: js;">import {default as randomSquare} from './modules/square.js';</pre>
 
 <div class="blockIndicator note">
 <p><strong>Примечание</strong>: «as» синтаксис для переименования экспортируемых элементов поясняется ниже в разделе <a href="#Переименование_импорта_и_экмпорта">Переименование импорта и экмпорта</a>.</p>
@@ -252,7 +252,7 @@ reportPerimeter(square1.length, reportList);
 
 <p>Так, например, оба следующих элемента будут выполнять одну и ту же работу, хотя и немного по-разному:</p>
 
-<pre class="brush: js; notranslate">// внутри module.js
+<pre class="brush: js;">// внутри module.js
 export {
   function1 as newFunctionName,
   function2 as anotherNewFunctionName
@@ -261,7 +261,7 @@ export {
 // внутри main.js
 import { newFunctionName, anotherNewFunctionName } from './modules/module.js';</pre>
 
-<pre class="brush: js; notranslate">// внутри module.js
+<pre class="brush: js;">// внутри module.js
 export { function1, function2 };
 
 // внутри main.js
@@ -274,11 +274,11 @@ import { function1 as newFunctionName,
 
 <p>Внутри каждого из этих модулей у нас есть функции с одинаковыми именами, которые экспортируются, и поэтому у каждого из них есть один и тот же оператор <code>export</code> внизу файла:</p>
 
-<pre class="brush: js; notranslate">export { name, draw, reportArea, reportPerimeter };</pre>
+<pre class="brush: js;">export { name, draw, reportArea, reportPerimeter };</pre>
 
 <p>Если бы в <code>main.js</code> при их импорте мы попытались использовать</p>
 
-<pre class="brush: js; notranslate">import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
+<pre class="brush: js;">import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
 import { name, draw, reportArea, reportPerimeter } from './modules/circle.js';
 import { name, draw, reportArea, reportPerimeter } from './modules/triangle.js';</pre>
 
@@ -286,7 +286,7 @@ import { name, draw, reportArea, reportPerimeter } from './modules/triangle.js';
 
 <p>Вместо этого нам нужно переименовать импорт, чтобы он был уникальным:</p>
 
-<pre class="brush: js; notranslate">import { name as squareName,
+<pre class="brush: js;">import { name as squareName,
          draw as drawSquare,
          reportArea as reportSquareArea,
          reportPerimeter as reportSquarePerimeter } from './modules/square.js';
@@ -303,13 +303,13 @@ import { name as triangleName,
 
 <p>Обратите внимание, что вместо этого вы можете решить проблему в файлах модуля, например.</p>
 
-<pre class="brush: js; notranslate">// внутри square.js
+<pre class="brush: js;">// внутри square.js
 export { name as squareName,
          draw as drawSquare,
          reportArea as reportSquareArea,
          reportPerimeter as reportSquarePerimeter };</pre>
 
-<pre class="brush: js; notranslate">// внутри main.js
+<pre class="brush: js;">// внутри main.js
 import { squareName, drawSquare, reportSquareArea, reportSquarePerimeter } from './modules/square.js';</pre>
 
 <p>И это сработало бы точно так же.
@@ -322,11 +322,11 @@ import { squareName, drawSquare, reportSquareArea, reportSquarePerimeter } from 
   Существует решение получше — импортировать функции каждого модуля внутри объекта модуля.
   Для этого используется следующая синтаксическая форма:</p>
 
-<pre class="brush: js; notranslate">import * as Module from './modules/module.js';</pre>
+<pre class="brush: js;">import * as Module from './modules/module.js';</pre>
 
 <p>Эта конструкция берёт все экспорты, доступные внутри <code>module.js</code> и делает их доступными в качестве свойств объекта <code>Module</code>, фактически давая ему собственное пространство имен. Так например:</p>
 
-<pre class="brush: js; notranslate">Module.function1()
+<pre class="brush: js;">Module.function1()
 Module.function2()
 </pre>
 и т.д.
@@ -335,11 +335,11 @@ Module.function2()
   вы снова увидите тот же самый пример, но переписанный с учётом преимуществ этого нового синтаксиса.
   В модулях все экспорты представлены в следующей простой форме:</p>
 
-<pre class="brush: js; notranslate">export { name, draw, reportArea, reportPerimeter };</pre>
+<pre class="brush: js;">export { name, draw, reportArea, reportPerimeter };</pre>
 
 <p>С другой стороны, импорт выглядит так:</p>
 
-<pre class="brush: js; notranslate">import * as Canvas from './modules/canvas.js';
+<pre class="brush: js;">import * as Canvas from './modules/canvas.js';
 
 import * as Square from './modules/square.js';
 import * as Circle from './modules/circle.js';
@@ -347,7 +347,7 @@ import * as Triangle from './modules/triangle.js';</pre>
 
 <p>В каждом случае теперь вы можете получить доступ к импорту модуля под указанным свойством объекта, например:</p>
 
-<pre class="brush: js; notranslate">let square1 = Square.draw(myCanvas.ctx, 50, 50, 100, 'blue');
+<pre class="brush: js;">let square1 = Square.draw(myCanvas.ctx, 50, 50, 100, 'blue');
 Square.reportArea(square1.length, reportList);
 Square.reportPerimeter(square1.length, reportList);</pre>
 
@@ -360,7 +360,7 @@ Square.reportPerimeter(square1.length, reportList);</pre>
 <p>Вы можете увидеть пример нашего модуля для рисования фигур, переписанного с помощью классов ES в нашей <a href="https://github.com/mdn/js-examples/tree/master/modules/classes">classes</a> директории.
   В качестве примера, файд <code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/modules/square.js">square.js</a></code> теперь содержит всю свою функциональность в одном классе:</p>
 
-<pre class="brush: js; notranslate">class Square {
+<pre class="brush: js;">class Square {
   constructor(ctx, listId, length, x, y, color) {
     ...
   }
@@ -374,15 +374,15 @@ Square.reportPerimeter(square1.length, reportList);</pre>
 
 <p>который мы затем экспортируем:</p>
 
-<pre class="brush: js; notranslate">export { Square };</pre>
+<pre class="brush: js;">export { Square };</pre>
 
 <p>Далее в <code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/main.js">main.js</a></code>, мы импортируем его так:</p>
 
-<pre class="brush: js; notranslate">import { Square } from './modules/square.js';</pre>
+<pre class="brush: js;">import { Square } from './modules/square.js';</pre>
 
 <p>А затем используем импортированный класс, чтобы нарисовать наш квадрат:</p>
 
-<pre class="brush: js; notranslate">let square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
+<pre class="brush: js;">let square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
 square1.draw();
 square1.reportArea();
 square1.reportPerimeter();</pre>
@@ -393,7 +393,7 @@ square1.reportPerimeter();</pre>
   У вас может быть несколько уровней зависимостей, где вы хотите упростить вещи, объединив несколько подмодулей в один родительский модуль.
   Это возможно с использованием следующего синтаксиса экспорта в родительском модуле:</p>
 
-<pre class="brush: js; notranslate">export * from 'x.js'
+<pre class="brush: js;">export * from 'x.js'
 export { name } from 'x.js'</pre>
 
 <p>Для примера посмотрите на нашу директорию <a href="https://github.com/mdn/js-examples/tree/master/modules/module-aggregation">module-aggregation</a>.
@@ -402,7 +402,7 @@ export { name } from 'x.js'</pre>
   Мы также переместили наши подмодули в дочернюю директорию внутри директории <code>modules</code> под названием <code>shape</code>.
   Итак, структура модуля в этом примере:</p>
 
-<pre class="notranslate">modules/
+<pre>modules/
   canvas.js
   shapes.js
   shapes/
@@ -412,12 +412,12 @@ export { name } from 'x.js'</pre>
 
 <p>В каждом из подмодулей экспорт имеет одинаковую форму, например:</p>
 
-<pre class="brush: js; notranslate">export { Square };</pre>
+<pre class="brush: js;">export { Square };</pre>
 
 <p>Далее идет агрегирование.
   Внутри <code><a href="https://github.com/mdn/js-examples/blob/master/modules/module-aggregation/modules/shapes.js">shapes.js</a></code>, мы добавляем следующие строки:</p>
 
-<pre class="brush: js; notranslate">export { Square } from './shapes/square.js';
+<pre class="brush: js;">export { Square } from './shapes/square.js';
 export { Triangle } from './shapes/triangle.js';
 export { Circle } from './shapes/circle.js';</pre>
 
@@ -429,13 +429,13 @@ export { Circle } from './shapes/circle.js';</pre>
 
 <p>Итак, теперь в файле <code>main.js</code> мы можем получить доступ ко всем трём классам модулей, заменив:</p>
 
-<pre class="brush: js; notranslate">import { Square } from './modules/square.js';
+<pre class="brush: js;">import { Square } from './modules/square.js';
 import { Circle } from './modules/circle.js';
 import { Triangle } from './modules/triangle.js';</pre>
 
 <p>на единственную строку кода:</p>
 
-<pre class="brush: js; notranslate">import { Square, Circle, Triangle } from './modules/shapes.js';</pre>
+<pre class="brush: js;">import { Square, Circle, Triangle } from './modules/shapes.js';</pre>
 
 <h2 id="Динамическая_загрузка_модулей">Динамическая загрузка модулей</h2>
 
@@ -446,7 +446,7 @@ import { Triangle } from './modules/triangle.js';</pre>
 <p>Поддержка динамической загрузки модулей позволяет вызывать {{JSxRef("Statements/import", "import()", "#Dynamic_Imports")}} в качестве функции, передав ей аргументом путь к модулю.
  Данный вызов возвращает {{JSxRef("Promise")}}, который резолвится объектом модуля (см. <a href="#Создание_объекта_модуля">Создание объекта модуля</a>), предоставляя вам доступ к экспорту указанного модуля, например:</p>
 
-<pre class="brush: js; notranslate">import('./modules/myModule.js')
+<pre class="brush: js;">import('./modules/myModule.js')
   .then((module) =&gt; {
     // делаем что-то с функционалом из импортированного модуля
   });</pre>
@@ -460,11 +460,11 @@ import { Triangle } from './modules/triangle.js';</pre>
 
 <p>Далее в <code>main.js</code> мы взяли ссылку на каждую кнопку, используя вызов <a href="/en-US/docs/Web/API/Document/querySelector"><code>document.querySelector()</code></a>:</p>
 
-<pre class="brush: js; notranslate">let squareBtn = document.querySelector('.square');</pre>
+<pre class="brush: js;">let squareBtn = document.querySelector('.square');</pre>
 
 <p>Затем мы добавляем обработчик событий на каждую кнопку, чтобы при нажатии соответствующий модуль динамически загружался и использовался для рисования фигуры:</p>
 
-<pre class="brush: js; notranslate">squareBtn.addEventListener('click', () =&gt; {
+<pre class="brush: js;">squareBtn.addEventListener('click', () =&gt; {
   import('./modules/square.js').then((Module) =&gt; {
     let square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
     square1.draw();

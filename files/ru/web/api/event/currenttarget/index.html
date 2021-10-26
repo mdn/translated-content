@@ -11,7 +11,7 @@ translation_of: Web/API/Event/currentTarget
 
 <p><code>event.currentTarget</code> используется, когда один и тот же обработчик события присваивается нескольким элементам.</p>
 
-<pre class="brush: js notranslate">function hide(e){
+<pre class="brush: js">function hide(e){
   e.currentTarget.style.visibility = "hidden";
   // Когда данная функция используется в качестве обработчика события: this === e.currentTarget
 }

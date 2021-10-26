@@ -29,7 +29,7 @@ original_slug: Learn/CSS/Styling_text/Веб_шрифты
 
 <p>Как мы рассматривали в <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Фундаментальной стилизации текста и шрифта</a>, шрифты применённые к вашему HTML могут контролироваться при помощи свойства {{cssxref("font-family")}}. Оно принимает одно и более имён семейств шрифтов и браузер следует по списку пока не найдёт тот шрифт, который является доступным в системе, под управлением которой он работает:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
 }</pre>
 
@@ -41,14 +41,14 @@ original_slug: Learn/CSS/Styling_text/Веб_шрифты
 
 <p>Во-первых, у вас есть блок {{cssxref("@font-face")}} в начале CSS, который указывает файл(-ы) шрифтов для загрузки:</p>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
   font-family: "myFont";
   src: url("myFont.woff");
 }</pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Ниже вы можете использовать имя семейства шрифтов, указанное внутри @font-face, чтобы применить свой собственный шрифт ко всему, что вам нравится, как обычно:</span></span></p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: "myFont", "Bitstream Vera Serif", serif;
 }</pre>
 
@@ -122,7 +122,7 @@ original_slug: Learn/CSS/Styling_text/Веб_шрифты
  <li>Теперь вы можете использовать эти шрифты в ваших стеках шрифтов, как и любой веб-безопасный или по умолчанию системный шрифт. Например:</li>
 </ol>
 
-<pre class="brush: css notranslate">font-family: 'zantrokeregular', serif;</pre>
+<pre class="brush: css">font-family: 'zantrokeregular', serif;</pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Вы должны получить демо-страницу с какими-то реализованными симпатичными шрифтами. Поскольку различные шрифты создаются в разных размерах, вам может понадобиться настроить размер, интервалы и т.д., чтобы отладить внешний вид.</span></span></p>
 
@@ -155,7 +155,7 @@ original_slug: Learn/CSS/Styling_text/Веб_шрифты
 
 <p>Давайте исследуем тот <code>@font-face</code> синтаксис, который fontsquirrel сгенерировал для вас. Это то, как выглядит один из этих блоков:</p>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
   font-family: 'ciclefina';
   src: url('fonts/cicle_fina-webfont.eot');
   src: url('fonts/cicle_fina-webfont.eot?#iefix') format('embedded-opentype'),

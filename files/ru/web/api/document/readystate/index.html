@@ -16,7 +16,7 @@ translation_of: Web/API/Document/readyState
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="notranslate">var <var>string</var> = <var>document</var>.readyState;</pre>
+<pre>var <var>string</var> = <var>document</var>.readyState;</pre>
 
 <h3 id="Значения">Значения</h3>
 
@@ -37,7 +37,7 @@ translation_of: Web/API/Document/readyState
 
 <h3 id="Разные_состояния_загрузки_страницы">Разные состояния загрузки страницы</h3>
 
-<pre class="brush: js notranslate"><span>switch (document.readyState) {
+<pre class="brush: js"><span>switch (document.readyState) {
   case "loading":
     // Страница все ещё загружается
     break;
@@ -56,7 +56,7 @@ translation_of: Web/API/Document/readyState
 
 <h3 id="readystatechange_как_альтернатива_событию_DOMContentLoaded">readystatechange как альтернатива событию DOMContentLoaded</h3>
 
-<pre class="brush:js notranslate">// альтернатива событию DOMContentLoaded
+<pre class="brush:js">// альтернатива событию DOMContentLoaded
 document.onreadystatechange = function () {
   if (document.readyState == "interactive") {
     initApplication();
@@ -65,7 +65,7 @@ document.onreadystatechange = function () {
 
 <h3 id="readystatechange_как_альтернатива_событию_load">readystatechange как альтернатива событию load</h3>
 
-<pre class="brush: js notranslate">// альтернатива событию load
+<pre class="brush: js">// альтернатива событию load
 document.onreadystatechange = function () {
   if (document.readyState == "complete") {
     initApplication();

@@ -39,7 +39,7 @@ translation_of: Learn/JavaScript/Building_blocks/Functions
 
 <p>В этом курсе мы использовали функции, встроенные в браузер. Каждый раз, когда мы манипулировали текстовой строкой, например:</p>
 
-<pre class="brush: js notranslate">var myText = 'Я строка';
+<pre class="brush: js">var myText = 'Я строка';
 var newString = myText.replace('строка', 'сосиска');
 console.log(newString);
 // Функция строки replace() принимает строку,
@@ -48,7 +48,7 @@ console.log(newString);
 
 <p>Или каждый раз, когда мы манипулировали массивом:</p>
 
-<pre class="brush: js notranslate">var myArray = ['Я', 'люблю', 'шоколадных', 'лягушек'];
+<pre class="brush: js">var myArray = ['Я', 'люблю', 'шоколадных', 'лягушек'];
 var madeAString = myArray.join(' ');
 console.log(madeAString);
 // Функция join() принимает массив, соединяет
@@ -57,7 +57,7 @@ console.log(madeAString);
 
 <p>Или каждый раз, когда мы генерировали случайное число:</p>
 
-<pre class="brush: js notranslate">var myNumber = Math.random()
+<pre class="brush: js">var myNumber = Math.random()
 // Функция random() генерирует случайное число от 0 до 1,
 // и возвращает это число</pre>
 
@@ -83,7 +83,7 @@ console.log(madeAString);
 
 <p>В этом курсе так же использовались <strong>пользовательские функции</strong> — это функции, которые вы определяете в своём коде, а не внутри браузера. Каждый раз, когда вы видели произвольное слово (имя функции) с круглыми скобками прямо после него, вы использовали пользовательскую функцию. В нашем примере <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html">random-canvas-circles.html</a> (подробнее см. <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html">исходный код</a>) из нашей <a href="/ru/docs/Learn/JavaScript/Building_blocks/Looping_code">статьи о циклах</a> мы включили пользовательскую функцию <code>draw()</code>, которая выглядит так:</p>
 
-<pre class="brush: js notranslate">function draw() {
+<pre class="brush: js">function draw() {
   ctx.clearRect(0,0,WIDTH,HEIGHT);
   for (var i = 0; i &lt; 100; i++) {
     ctx.beginPath();
@@ -95,11 +95,11 @@ console.log(madeAString);
 
 <p>Эта функция рисует 100 случайных кругов внутри элемента {{htmlelement("canvas")}}. Каждый раз, когда мы хотим это сделать, мы можем вызвать эту функцию следующим образом</p>
 
-<pre class="brush: js notranslate">draw();</pre>
+<pre class="brush: js">draw();</pre>
 
 <p>вместо того, чтобы каждый раз, когда мы хотим повторить этот код, не писать его заново. И функции могут содержать любой код, который вам нравится - вы можете даже вызывать другие функции внутри своих функций. Вышеупомянутая функция, например, вызывает функцию <code>random()</code> три раза, которая выглядит следующим образом:</p>
 
-<pre class="brush: js notranslate">function random(number) {
+<pre class="brush: js">function random(number) {
   return Math.floor(Math.random()*number);
 }</pre>
 
@@ -109,7 +109,7 @@ console.log(madeAString);
 
 <p>Скорее всего, вы уже поняли это, но на всякий случай ... чтобы использовать функцию после того, как она была определена, вам нужно запустить или вызвать её. Это делается путём включения имени функции в код где-нибудь, за которым следуют скобки.</p>
 
-<pre class="brush: js notranslate">function myFunction() {
+<pre class="brush: js">function myFunction() {
   alert('привет');
 }
 
@@ -120,19 +120,19 @@ myFunction()
 
 <p>Вы можете видеть функции, определённые и вызываемые несколькими разными способами. До этого мы создавали функции таким способом:</p>
 
-<pre class="brush: js notranslate">function myFunction() {
+<pre class="brush: js">function myFunction() {
   alert('привет');
 }</pre>
 
 <p>Но вы также можете создавать функции без имени:</p>
 
-<pre class="brush: js notranslate">function() {
+<pre class="brush: js">function() {
   alert('привет');
 }</pre>
 
 <p>Такая функция называется <strong>безымянная функция</strong> (или анонимная) — она не имеет имени! Она сама по себе ничего не делает. Обычно такие функции используются вместе с обработчиком событий, например, следующее будет вызывать код внутри функции каждый раз, по нажатию соответствующей кнопки:</p>
 
-<pre class="brush: js notranslate">var myButton = document.querySelector('button');
+<pre class="brush: js">var myButton = document.querySelector('button');
 
 myButton.onclick = function() {
   alert('привет');
@@ -142,34 +142,34 @@ myButton.onclick = function() {
 
 <p>Вы также можете присвоить к переменной анонимную функцию, например:</p>
 
-<pre class="brush: js notranslate">var myGreeting = function() {
+<pre class="brush: js">var myGreeting = function() {
   alert('привет');
 }</pre>
 
 <p>Теперь эту функцию можно вызвать, используя:</p>
 
-<pre class="brush: js notranslate">myGreeting();</pre>
+<pre class="brush: js">myGreeting();</pre>
 
 <p>Фактически такой способ присваивает переменной имя; вы также можете присвоить функцию значением нескольких переменных, например:</p>
 
-<pre class="brush: js notranslate">var anotherGreeting = function() {
+<pre class="brush: js">var anotherGreeting = function() {
   alert('привет');
 }</pre>
 
 <p>Теперь функцию можно вызвать, используя любую из переменных</p>
 
-<pre class="brush: js notranslate">myGreeting();
+<pre class="brush: js">myGreeting();
 anotherGreeting();</pre>
 
 <p>Но это может ввести в заблуждение, так что не стоит так делать! При создании функций лучше всего придерживаться следующего вида:</p>
 
-<pre class="brush: js notranslate">function myGreeting() {
+<pre class="brush: js">function myGreeting() {
   alert('привет');
 }</pre>
 
 <p>Чаще всего вы будете использовать анонимные функции, чтобы просто запускать код при срабатывания события - например, нажатие кнопки - с помощью обработчика событий. Опять же, это выглядит примерно так:</p>
 
-<pre class="brush: js notranslate">myButton.onclick = function() {
+<pre class="brush: js">myButton.onclick = function() {
   alert('привет');
   // При желании, внутри этой функции
   // можно написать много кода.
@@ -185,11 +185,11 @@ anotherGreeting();</pre>
 
 <p>Например встроенная в браузер функция <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a> не требует параметров. При вызове, она всегда возвращает случайное число от 0 до 1:</p>
 
-<pre class="brush: js notranslate">var myNumber = Math.random();</pre>
+<pre class="brush: js">var myNumber = Math.random();</pre>
 
 <p>Браузерная встроенная функция, работающая со строкой, <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a> ожидает два параметра — это подстрока для поиска в основной строке и строка, на которую происходит замена в основной строке:</p>
 
-<pre class="brush: js notranslate">var myText = 'Я строка';
+<pre class="brush: js">var myText = 'Я строка';
 var newString = myText.replace('строка', 'сосиска');</pre>
 
 <div class="note">
@@ -198,7 +198,7 @@ var newString = myText.replace('строка', 'сосиска');</pre>
 
 <p>Следует также отметить, что иногда параметры являются необязательными - вам не нужно их указывать. Если вы этого не сделаете, функция, как правило, примет какое-то поведение по умолчанию. В качестве примера параметр функции массива <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/join">join()</a> необязателен:</p>
 
-<pre class="brush: js notranslate">var myArray = ['Я', 'люблю', 'шоколадных', 'лягушек'];
+<pre class="brush: js">var myArray = ['Я', 'люблю', 'шоколадных', 'лягушек'];
 var madeAString = myArray.join(' ');
 // Вернёт 'Я люблю шоколадных лягушек'
 var madeAString = myArray.join();
@@ -216,20 +216,20 @@ var madeAString = myArray.join();
 
 <p>Например, скажем, у вас есть файл HTML, который вызывается в двух внешних файлах JavaScript, и оба они имеют переменную и определённую функцию, которые используют одно и то же имя:</p>
 
-<pre class="brush: html notranslate">&lt;!-- Excerpt from my HTML --&gt;
+<pre class="brush: html">&lt;!-- Excerpt from my HTML --&gt;
 &lt;script src="first.js"&gt;&lt;/script&gt;
 &lt;script src="second.js"&gt;&lt;/script&gt;
 &lt;script&gt;
   greeting();
 &lt;/script&gt;</pre>
 
-<pre class="brush: js notranslate">// first.js
+<pre class="brush: js">// first.js
 var name = 'Chris';
 function greeting() {
   alert('Hello ' + name + ': welcome to our company.');
 }</pre>
 
-<pre class="brush: js notranslate">// second.js
+<pre class="brush: js">// second.js
 var name = 'Zaptec';
 function greeting() {
   alert('Our company is called ' + name + '.');
@@ -257,14 +257,14 @@ function greeting() {
  <li>Сначала создайте локальную копию нашего примера <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html">function-scope.html</a>. Это содержит две функции, называемые <code>a()</code> и <code>b()</code>, и три переменные - <code>x</code>, <code>y</code> и <code>z</code> - две из которых определены внутри функций и одна в глобальной области. Он также содержит третью функцию, называемую <code>output()</code>, которая принимает один параметр и выводит его в абзаце на странице.</li>
  <li>Откройте пример в браузере и в текстовом редакторе.</li>
  <li>Откройте консоль JavaScript в инструментах разработчика вашего браузера. В консоли JavaScript введите следующую команду:
-  <pre class="brush: js notranslate">output(x);</pre>
+  <pre class="brush: js">output(x);</pre>
   вы должны увидеть значение переменной <code>x</code> вывод на экране.</li>
  <li>Теперь попробуйте ввести следующее в консоли
-  <pre class="brush: js notranslate">output(y);
+  <pre class="brush: js">output(y);
 output(z);</pre>
   Оба из них должны возвращать ошибку в строке "<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: y is not defined</a>". Почему это? Из-за функции scope - <code>y</code> и <code>z</code> блокируются внутри функций <code>a() </code>и <code>b()</code>, поэтому <code>output()</code> не может получить к ним доступ при вызове из глобальной области.</li>
  <li>Однако как насчёт того, когда он вызван изнутри другой функции? Попробуйте отредактировать функции <code>a()</code> и <code>b()</code>, чтобы они выглядели следующим образом:
-  <pre class="brush: js notranslate">function a() {
+  <pre class="brush: js">function a() {
   var y = 2;
   output(y);
 }
@@ -275,11 +275,11 @@ function b() {
 }</pre>
   Сохраните код и перезагрузите его в своём браузере, затем попробуйте вызвать функции <code>a()</code> и <code>b()</code> из консоли JavaScript:
 
-  <pre class="brush: js notranslate">a();
+  <pre class="brush: js">a();
 b();</pre>
   вы должны увидеть значения y и z, выводимые на странице. Это отлично работает, так как функция <code>output() </code>вызывается внутри других функций - в той же области, где переменные, которые она печатает, определяются в каждом случае. <code>output()</code> доступен из любого места, поскольку он определён в глобальной области.</li>
  <li>Теперь попробуйте обновить свой код следующим образом:
-  <pre class="brush: js notranslate">function a() {
+  <pre class="brush: js">function a() {
   var y = 2;
   output(x);
 }
@@ -290,13 +290,13 @@ function b() {
 }</pre>
   Сохраните и перезагрузите снова и повторите попытку в консоли JavaScript:</li>
  <li>
-  <pre class="brush: js notranslate"><code>a();
+  <pre class="brush: js"><code>a();
 b();</code></pre>
 
   <p>Оба вызова <code>a()</code> и <code>b()</code> должны выводить значение x - 1. Они работают нормально, потому что, хотя вызовы <code>output()</code> не находятся в той же области, где определено <code>x</code>, <code>x</code> - глобальная переменная, поэтому она доступна внутри всего кода, везде</p>
  </li>
  <li>Наконец, попробуйте обновить свой код следующим образом:
-  <pre class="brush: js notranslate"><code>function a() {
+  <pre class="brush: js"><code>function a() {
   var y = 2;
   output(z);
 }
@@ -307,7 +307,7 @@ function b() {
 }</code></pre>
   Сохраните и перезагрузите снова и повторите попытку в консоли JavaScript:</li>
  <li>
-  <pre class="brush: js notranslate"><code>a();
+  <pre class="brush: js"><code>a();
 b();</code></pre>
  </li>
 </ol>
@@ -329,7 +329,7 @@ b();</code></pre>
 
 <p>Имейте в виду, что вы можете вызывать функцию из любого места, даже если она внутри другой функции.  Это часто используется как способ поддержания чистоты кода. Если у вас есть большая сложная функция, её легче понять, если разбить её на несколько подфункций:</p>
 
-<pre class="brush: js notranslate">function myBigFunction() {
+<pre class="brush: js">function myBigFunction() {
   var myValue;
 
   subFunction1();
@@ -352,7 +352,7 @@ function subFunction3() {
 
 <p>Просто убедитесь, что значения, используемые внутри функции, находятся в области видимости. В приведённом выше примере выдаётся ошибка <code>ReferenceError: MyValue is not defined</code>, поскольку хотя переменная <code>myValue</code> определена в той же области, что и вызовы функций, она не определена в определениях функций - фактический код, который запускается при вызове функций. Чтобы это работало, вам нужно передать значение в функцию в качестве параметра, например так:</p>
 
-<pre class="brush: js notranslate">function myBigFunction() {
+<pre class="brush: js">function myBigFunction() {
   var myValue = 1;
 
   subFunction1(myValue);

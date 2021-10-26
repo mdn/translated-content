@@ -14,13 +14,13 @@ translation_of: Web/JavaScript/Reference/Classes/constructor
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">constructor([arguments]) { ... }</pre>
+<pre class="syntaxbox">constructor([arguments]) { ... }</pre>
 
 <h2 id="Описание">Описание</h2>
 
 <p>Конструктор позволяет произвести начальную инициализацию, которая должна быть выполнена до того, как остальные методы будут вызваны.</p>
 
-<pre class="notranslate">class Person {
+<pre>class Person {
 
   constructor(name) {
     this.name = name;
@@ -38,17 +38,17 @@ otto.introduce();</pre>
 
 <p>Если вы не определили метод constructor, то будет использован конструктор по умолчанию. Если ваш класс базовый, то конструктор по умолчанию пустой:</p>
 
-<pre class="notranslate">constructor() {}</pre>
+<pre>constructor() {}</pre>
 
 <p>Если ваш класс является производным классом, конструктор по умолчанию вызывает родительский конструктор, передавая любые аргументы, которые были предоставлены:</p>
 
-<pre class="notranslate">constructor(...args) {
+<pre>constructor(...args) {
   super(...args);
 }</pre>
 
 <p>Это позволяет работать следующему коду:</p>
 
-<pre class="notranslate">class ValidationError extends Error {
+<pre>class ValidationError extends Error {
 
   printCustomerMessage() {
     return `Проверка не удалась :-( (подробности: ${this.message})`;
@@ -72,7 +72,7 @@ try {
 
 <p>Однако, если определён ваш собственный конструктор и класс является производным от какого-либо родительского класса, то вы должны явно объявить конструктор родительского класса, используя <code>super</code>. К примеру:</p>
 
-<pre class="notranslate">class ValidationError extends Error {
+<pre>class ValidationError extends Error {
 
   constructor(message) {
     super(message);  // вызов конструктора родительского класса
@@ -106,7 +106,7 @@ try {
 
 <p>Данный фрагмент кода взят из <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes sample</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a>).</p>
 
-<pre class="brush: js notranslate">class Square extends Polygon {
+<pre class="brush: js">class Square extends Polygon {
   constructor(length) {
     // Здесь вызывается конструктор родительского класса,
     // в который передаётся length в качестве аргументов,
@@ -130,7 +130,7 @@ try {
 
 <p>Посмотрите на этот отрывок кода.</p>
 
-<pre class="brush: js notranslate">class Polygon {
+<pre class="brush: js">class Polygon {
   constructor() {
     this.name = "Polygon";
   }
@@ -158,11 +158,11 @@ console.log(newInstance.name); //Polygon</pre>
 
 <p>Если вы не определите метод constructor, будет использован constructor по умолчанию. Для базовых классов, constructor по умолчанию:</p>
 
-<pre class="brush: js notranslate">constructor() {}</pre>
+<pre class="brush: js">constructor() {}</pre>
 
 <p>Для производных классов, constructor по умолчанию:</p>
 
-<pre class="brush: js notranslate">constructor(...args) {
+<pre class="brush: js">constructor(...args) {
   super(...args);
 }</pre>
 

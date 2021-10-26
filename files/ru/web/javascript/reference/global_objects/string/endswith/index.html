@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.endsWith(<var>searchString</var>[, <var>length</var>])</code></pre>
+<pre class="syntaxbox"><code><var>str</var>.endsWith(<var>searchString</var>[, <var>length</var>])</code></pre>
 
 <h3 id="Parameters">Параметры</h3>
 
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
 
 <h3 id="Example_Using_endsWith">Пример: использование метода <code>endsWith()</code></h3>
 
-<pre class="brush: js notranslate">var str = 'Быть или не быть, вот в чём вопрос.';
+<pre class="brush: js">var str = 'Быть или не быть, вот в чём вопрос.';
 
 console.log(str.endsWith('вопрос.'));   // true
 console.log(str.endsWith('быть'));      // false
@@ -51,7 +51,7 @@ console.log(str.endsWith('быть', 16));  // true
 
 <p>Этот метод был добавлен к спецификации ECMAScript 6 и может быть доступен ещё не во всех реализациях JavaScript. Однако, вы можете легко эмулировать этот метод при помощи следующего кода:</p>
 
-<pre class="brush: js notranslate">if (!String.prototype.endsWith) {
+<pre class="brush: js">if (!String.prototype.endsWith) {
   Object.defineProperty(String.prototype, 'endsWith', {
     value: function(searchString, position) {
       var subjectString = this.toString();

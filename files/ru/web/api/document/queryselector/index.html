@@ -22,7 +22,7 @@ translation_of: Web/API/Document/querySelector
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre class="brush: js notranslate">element = document.querySelector(selectors);
+<pre class="brush: js">element = document.querySelector(selectors);
 </pre>
 
 <h3 id="Параметры">Параметры</h3>
@@ -59,7 +59,7 @@ translation_of: Web/API/Document/querySelector
 
 <p>Чтобы сопоставить ID или селекторы, которые не соответствуют стандартному синтаксису CSS (например, использующих ненадлежащим образом двоеточие или пробел), необходимо экранировать символ обратной косой чертой ("<code>\</code>"). Поскольку обратная косая черта также является экранирующим символом в JavaScript, то при вводе литеральной строки необходимо экранировать её <em>дважды</em> (первый раз для строки JavaScript и второй для <code>querySelector()</code>):</p>
 
-<pre class="brush: html notranslate">&lt;div id="foo\bar"&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div id="foo\bar"&gt;&lt;/div&gt;
 &lt;div id="foo:bar"&gt;&lt;/div&gt;
 
 &lt;script&gt;
@@ -80,14 +80,14 @@ translation_of: Web/API/Document/querySelector
 
 <p>В этом примере, нам вернётся первый элемент в документе с классом "<code>myclass</code>":</p>
 
-<pre class="brush: js notranslate">var el = document.querySelector(".myclass");
+<pre class="brush: js">var el = document.querySelector(".myclass");
 </pre>
 
 <h3 id="Notes">Более сложный селектор</h3>
 
 <p>Селекторы, передаваемые в querySelector, могут быть использованы и для точного поиска, как показано в примере ниже. В данном примере возвращается элемент &lt;input name="login"/&gt;, находящийся в &lt;div class="user-panel main"&gt;:</p>
 
-<pre class="brush: js notranslate">var el = document.querySelector("div.user-panel.main input[name=login]");
+<pre class="brush: js">var el = document.querySelector("div.user-panel.main input[name=login]");
 </pre>
 
 <h2 id="Спецификации">Спецификации</h2>
