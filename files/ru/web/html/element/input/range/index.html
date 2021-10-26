@@ -294,7 +294,7 @@ translation_of: Web/HTML/Element/input/range
 <p>Рассмотрим контроллер диапазона:</p>
 
 <div id="Orientation_sample1">
-<pre class="notranslate">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
+<pre class="brush: html">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
 
 <p>{{EmbedLiveSample("Orientation_sample1", 200, 200, "https://mdn.mozillademos.org/files/14983/Orientation_sample1.png")}}</p>
 </div>
@@ -308,14 +308,14 @@ translation_of: Web/HTML/Element/input/range
 <div id="Orientation_sample2">
 <h4 id="CSS">CSS</h4>
 
-<pre class="notranslate">#volume {
+<pre class="brush: css">#volume {
   height: 150px;
   width: 50px;
 }</pre>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="notranslate">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
+<pre class="brush: html">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
 
 <h4 id="Результат">Результат</h4>
 
@@ -371,7 +371,7 @@ translation_of: Web/HTML/Element/input/range
 
 <p>Используем тот же HTML что и в предыдущем примере:</p>
 
-<pre class="notranslate">&lt;input type="range" min="0" max="11" value="7" step="1"&gt;
+<pre class="brush: html">&lt;input type="range" min="0" max="11" value="7" step="1"&gt;
 </pre>
 
 <h4 id="CSS_3">CSS</h4>
@@ -392,7 +392,7 @@ translation_of: Web/HTML/Element/input/range
 
 <p>Используем тот же HTML что и в предыдущем примере и добавляем атрибут со значением <code>vertical</code>:</p>
 
-<pre class="notranslate">&lt;input type="range" min="0" max="11" value="7" step="1" orient="vertical"&gt;
+<pre class="brush: html">&lt;input type="range" min="0" max="11" value="7" step="1" orient="vertical"&gt;
 </pre>
 
 <p>{{EmbedLiveSample("orient_attribute", 200, 200)}}</p>
@@ -405,14 +405,14 @@ translation_of: Web/HTML/Element/input/range
 
 <p>Используем тот же HTML что и в предыдущем примере:</p>
 
-<pre class="notranslate">&lt;input type="range" min="0" max="11" value="7" step="1"&gt;
+<pre class="brush:html notranslate">&lt;input type="range" min="0" max="11" value="7" step="1"&gt;
 </pre>
 
 <h4 id="CSS_4">CSS</h4>
 
 <p>Берём только те инпуты что имеют тип range, меняем writing mode с default на <code>bt-lr</code>, или bottom-to-top и left-to-right:</p>
 
-<pre class="notranslate">input[type="range"] {
+<pre class="brush: css notranslate">input[type="range"] {
   writing-mode: bt-lr;
 }</pre>
 
@@ -426,14 +426,14 @@ translation_of: Web/HTML/Element/input/range
 
 <p>Оставим <code>orient</code> атрибут  со значением <code>vertical</code> для Firefox:</p>
 
-<pre class="notranslate">&lt;input type="range" min="0" max="11" value="7" step="1" orient="vertical"&gt;
+<pre class="brush: html">&lt;input type="range" min="0" max="11" value="7" step="1" orient="vertical"&gt;
 </pre>
 
 <h4 id="CSS_5">CSS</h4>
 
 <p>Берём только те инпуты что имеют тип range, меняем writing mode с default на <code>bt-lr</code>, или bottom-to-top и left-to-right, для Edge и Internet Explorer, и добавляем <code>-webkit-appearance: slider-vertical</code> для всех -webkit-based браузеров:</p>
 
-<pre class="notranslate">input[type="range"] {
+<pre class="brush: css notranslate">input[type="range"] {
   writing-mode: bt-lr;
   -webkit-appearance: slider-vertical;
 }</pre>
