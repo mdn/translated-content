@@ -57,11 +57,59 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
 
 <h3 id="Свойства">Свойства</h3>
 
-<p>{{page('ru/Web/JavaScript/Reference/Global_Objects/Set/prototype','Properties')}}</p>
+<dl>
+  <dt><a href="/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Set/size"><code>Set.prototype.size</code></a></dt>
+  <dd>
+    <p> Возвращает количество значений в объекте <code>Set</code>.</p>
+  </dd>
+</dl>
 
 <h3 id="Методы">Методы</h3>
 
-<p>{{page('ru/Web/JavaScript/Reference/Global_Objects/Set/prototype','Methods')}}</p>
+<dl>
+  <dt><a href="/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Set/add"><code>Set.prototype.add(<var>value</var>)</code></a></dt>
+  <dd>
+    <p>Добавляет <code>value</code> значение к объекту <code>Set</code>. Возвращает объект <code>Set</code> с добавленным значением.</p>
+  </dd>
+  <dt><a href="/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Set/clear"><code>Set.prototype.clear()</code></a></dt>
+  <dd>
+    <p>Удаляет все элементы из объекта <code>Set</code>.</p>
+  </dd>
+  <dt><a href="/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Set/delete"><code>Set.prototype.delete(<var>value</var>)</code></a></dt>
+  <dd>
+    <p>Удаляет элемент, связанный со значением, и возвращает логическое <code>значение</code>, подтверждающее, был ли элемент успешно удален или нет. <code>Set.prototype.has(value)</code> впоследствии вернет <code>false</code>.</p>
+  </dd>
+  <dt><a href="/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Set/has"><code>Set.prototype.has(<var>value</var>)</code></a></dt>
+  <dd>
+    <p>Возвращает логическое значение, подтверждающее, присутствует ли элемент с заданным значением в объекте <code>Set</code> или нет.</p>
+  </dd>
+</dl>
+
+<h3 id="Методы итерации">Методы итерации</h3>
+
+<dl>
+  <dt><a href="/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator"><code>Set.prototype[@@iterator]()</code></a></dt>
+  <dd>
+    <p>Возвращает новый объект итератора, который возвращает <strong>значения<strong> для каждого элемента в объекте <code>Set</code> в порядке вставки.</p>
+  </dd>
+  <dt><a href="/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Set/values"><code>Set.prototype.values()</code></a></dt>
+  <dd>
+    <p>Возвращает новый объект итератора, который возвращает <strong>значения</strong> для каждого элемента в объекте <code>Set</code> в порядке вставки.</p>
+  </dd>
+  <dt><a href="/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Set/values"><code>Set.prototype.keys()</code></a></dt>
+  <dd>
+    <p>Псевдоним для <a href="/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Set/values"><code>Set.prototype.values()</code></a>.</p>
+  </dd>
+  <dt><a href="/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Set/entries"><code>Set.prototype.entries()</code></a></dt>
+  <dd>
+    <p>Возвращает новый объект итератора, который содержит <strong>массив <code>[значение, значение]</code></strong>для каждого элемента в объекте <code>Set</code> в порядке вставки.</p>
+    <p>Это похоже на объект <a href="/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Map"><code>Map</code></a>, так что <em>ключ</em> каждой записи совпадает с его значением для <code>Set</code>.</p>
+  </dd>
+  <dt><a href="/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach"><code>Set.prototype.forEach(<var>callbackFn</var>[, <var>thisArg</var>])</code></a></dt>
+  <dd>
+    <p>Вызывает <code>callbackFn</code> один раз для каждого значения, присутствующего в объекте <code>Set</code>, в порядке вставки. Если указан параметр <code>thisArg</code>, он будет использоваться как значение <code>this</code> для каждого вызова <code>callbackFn</code>.</p>
+  </dd>
+</dl>
 
 <h2 id="Примеры">Примеры</h2>
 
