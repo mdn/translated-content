@@ -19,45 +19,49 @@ l'utilisation de RTCPeerConnection implique la négociation d'une connexion entr
 
 Les deux parties (l'appelant et l'appelé) doivent mettre en place leurs propres instances de RTCPeerConnection pour représenter leurs extrémités de la connexion peer-to-peer:
 
-    var pc = new RTCPeerConnection();
-    pc.onaddstream = function(obj) {
-      var vid = document.createElement("video");
-      document.appendChild(vid);
-      vid.srcObject = obj.stream;
-    }
+```js
+var pc = new RTCPeerConnection();
+pc.onaddstream = function(obj) {
+  var vid = document.createElement("video");
+  document.appendChild(vid);
+  vid.srcObject = obj.stream;
+}
 
-    // Helper functions
-    function endCall() {
-      var videos = document.getElementsByTagName("video");
-      for (var i = 0; i < videos.length; i++) {
-        videos[i].pause();
-      }
+// Helper functions
+function endCall() {
+  var videos = document.getElementsByTagName("video");
+  for (var i = 0; i < videos.length; i++) {
+    videos[i].pause();
+  }
 
-      pc.close();
-    }
+  pc.close();
+}
 
-    function error(err) {
-      endCall();
-    }
+function error(err) {
+  endCall();
+}
+```
 
 **Initialiser un appel**
 
 l'appelant doit utiliser {{domxref("navigator.getUserMedia()")}} pour obtenir un flux vidéo, puis ajouter ce flux à l'instance de RTCPeerConnection. Une fois que cela a été fait, il doit appeler {{domxref("RTCPeerConnection.createOffer()")}} pour créer une offre,puis la configurer et l'envoyer a un serveur faisant office d'intermediaire.
 
-    // recuperer la liste des "amis" a partir du serveur
-    // l'utilisateur selectionne un amis avec qui lancer la connection
-    navigator.getUserMedia({video: true}, function(stream) {
-      // l'ajout d'un stream locale ne declanche pas onaddstream,
-      // donc il faut l'appeler manuellement.
-      pc.onaddstream = e => video.src = URL.createObjectURL(e.stream);
-      pc.addStream(stream);
+```js
+// recuperer la liste des "amis" a partir du serveur
+// l'utilisateur selectionne un amis avec qui lancer la connection
+navigator.getUserMedia({video: true}, function(stream) {
+  // l'ajout d'un stream locale ne declanche pas onaddstream,
+  // donc il faut l'appeler manuellement.
+  pc.onaddstream = e => video.src = URL.createObjectURL(e.stream);
+  pc.addStream(stream);
 
-      pc.createOffer(function(offer) {
-        pc.setLocalDescription(offer, function() {
-          // envoi de l'offre au serveur qui se charge de la transmettre a "l'ami" choisit precedemment.
-        }, error);
-      }, error);
-    });
+  pc.createOffer(function(offer) {
+    pc.setLocalDescription(offer, function() {
+      // envoi de l'offre au serveur qui se charge de la transmettre a "l'ami" choisit precedemment.
+    }, error);
+  }, error);
+});
+```
 
 **Répondre à un appel**
 
@@ -65,27 +69,31 @@ sur l'autre machine, l'ami recevra l'offre à partir du serveur en utilisant le 
 
 Ensuite, une réponse est créée en utilisant {{domxref("RTCPeerConnection.createAnswer()")}} et renvoyé au serveur, qui la transmet à l'appelant.
 
-    var offer = getOfferFromFriend();
-    navigator.getUserMedia({video: true}, function(stream) {
-      pc.onaddstream = e => video.src = URL.createObjectURL(e.stream);
-      pc.addStream(stream);
+```js
+var offer = getOfferFromFriend();
+navigator.getUserMedia({video: true}, function(stream) {
+  pc.onaddstream = e => video.src = URL.createObjectURL(e.stream);
+  pc.addStream(stream);
 
-      pc.setRemoteDescription(new RTCSessionDescription(offer), function() {
-        pc.createAnswer(function(answer) {
-          pc.setLocalDescription(answer, function() {
-            // envoi de la réponse au serveur qui la transmettra a l'appelant
-          }, error);
-        }, error);
+  pc.setRemoteDescription(new RTCSessionDescription(offer), function() {
+    pc.createAnswer(function(answer) {
+      pc.setLocalDescription(answer, function() {
+        // envoi de la réponse au serveur qui la transmettra a l'appelant
       }, error);
-    });
+    }, error);
+  }, error);
+});
+```
 
 **Gestion de la réponse**
 
 retour a la première machine, qui recois la reponse. une fois cette dernière arrivée,l'appelant utilise {{domxref("RTCPeerConnection.setRemoteDescription()")}} pour définir la réponse comme la description de l'autre l'extrémité de la connexion.
 
-    // pc a été déclaré précédemment, lors de l'envoi de l'offre.
-    var offer = getResponseFromFriend();
-    pc.setRemoteDescription(new RTCSessionDescription(offer), function() { }, error);
+```js
+// pc a été déclaré précédemment, lors de l'envoi de l'offre.
+var offer = getResponseFromFriend();
+pc.setRemoteDescription(new RTCSessionDescription(offer), function() { }, error);
+```
 
 ## Ancien contenu en approche!
 
