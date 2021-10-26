@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code><var>arr</var>.slice([<var>begin</var>[, <var>end</var>]])</code></pre>
+<pre class="syntaxbox"><code><var>arr</var>.slice([<var>begin</var>[, <var>end</var>]])</code></pre>
 
 <h3 id="Parameters">Параметры</h3>
 
@@ -56,7 +56,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 <h3 id="Example_Return_a_portion_of_an_existing_array">Пример: возврат части существующего массива</h3>
 
-<pre class="brush: js notranslate">// Пример: наши хорошие друзья цитрусовые среди фруктов
+<pre class="brush: js">// Пример: наши хорошие друзья цитрусовые среди фруктов
 var fruits = ['Банан', 'Апельсин', 'Лимон', 'Яблоко', 'Манго'];
 var citrus = fruits.slice(1, 3);
 
@@ -67,7 +67,7 @@ var citrus = fruits.slice(1, 3);
 
 <p>В следующем примере метод <code>slice()</code> создаёт новый массив, <code>newCar</code>, из массива <code>myCar</code>. Оба содержат ссылку на объект <code>myHonda</code>. Когда цвет в объекте <code>myHonda</code> изменяется на багровый, оба массива замечают это изменение.</p>
 
-<pre class="brush: js notranslate">// Используя slice, создаём newCar из myCar.
+<pre class="brush: js">// Используя slice, создаём newCar из myCar.
 var myHonda = { color: 'красный', wheels: 4, engine: { cylinders: 4, size: 2.2 } };
 var myCar = [myHonda, 2, 'в хорошем состоянии', 'приобретена в 1997'];
 var newCar = myCar.slice(0, 2);
@@ -90,7 +90,7 @@ console.log('newCar[0].color = ' + newCar[0].color);
 
 <p>Этот скрипт выведет:</p>
 
-<pre class="brush: js notranslate">myCar = [{color:'красный', wheels:4, engine:{cylinders:4, size:2.2}}, 2,
+<pre class="brush: js">myCar = [{color:'красный', wheels:4, engine:{cylinders:4, size:2.2}}, 2,
          'в хорошем состоянии', 'приобретена в 1997']
 newCar = [{color:'красный', wheels:4, engine:{cylinders:4, size:2.2}}, 2]
 myCar[0].color = красный
@@ -104,7 +104,7 @@ newCar[0].color = багровый
 
 <p>Метод <code>slice()</code> также может использоваться для преобразования массивоподобных объектов / коллекций в новый массив <code>Array</code>. Вам просто нужно привязать метод к объекту. Псевдомассив {{jsxref("Functions_and_function_scope/arguments", "arguments")}} внутри функции как раз является примером «массивоподобного объекта».</p>
 
-<pre class="brush: js notranslate">function list() {
+<pre class="brush: js">function list() {
   return Array.prototype.slice.call(arguments, 0);
 }
 
@@ -113,7 +113,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 <p>Привязка может быть осуществлена посредством функции .<code>call()</code> из прототипа функции {{jsxref("Function.prototype")}}, также запись может быть сокращена до <code>[].slice.call(arguments)</code> вместо использования <code>Array.prototype.slice.call()</code>. В любом случае, она может быть упрощена посредством использования функции {{jsxref("Function.prototype.bind()", "bind()")}}.</p>
 
-<pre class="brush: js notranslate">var unboundSlice = Array.prototype.slice;
+<pre class="brush: js">var unboundSlice = Array.prototype.slice;
 var slice = Function.prototype.call.bind(unboundSlice);
 
 function list() {
@@ -127,7 +127,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 <p>Хотя спецификация не требует от хост-объектов (например, объектов DOM) следовать поведению Mozilla при преобразовании с помощью <code>Array.prototype.slice()</code> и IE &lt; 9 так не делает, версии IE, начиная с 9-й это умеют. «Прокладывание» позволяет добиться надёжного кросс-браузерного поведения. Пока другие современные браузеры будут поддерживать эту способность, что и делают в настоящее время IE, Mozilla, Chrome, Safari и Opera, разработчики, читая (поддерживающий DOM) код функции <code>slice()</code>, опирающийся на эту прокладку, не будут вводиться в заблуждение его семантикой; они могут смело полагаться на текущую семантику, являющуюся, видимо, <em>де-факто</em> стандартным поведением. (Прокладка также исправляет поведение IE, позволяя работать со вторым аргументом <code>slice()</code>, явно определённым как {{jsxref("Global_Objects/null", "null")}}/{{jsxref("Global_Objects/undefined", "undefined")}}, поскольку более ранние версии IE такое не позволяют, но все современные браузеры, в том числе IE &gt;= 9, поддерживают данное поведение.)</p>
 
-<pre class="brush: js notranslate">/**
+<pre class="brush: js">/**
  * Прокладка для "исправления" отсутствия поддержки в IE &lt; 9 применения slice
  * к хост-объектам вроде NamedNodeMap, NodeList и HTMLCollection
  * (технически, поскольку хост-объекты зависят от реализации,

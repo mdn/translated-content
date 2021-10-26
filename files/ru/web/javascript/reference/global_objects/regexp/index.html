@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 
 <p>Возможны как литеральная запись, так и запись через конструктор:</p>
 
-<pre class="syntaxbox notranslate"><code>/<var>pattern</var>/<var>flags</var>
+<pre class="syntaxbox"><code>/<var>pattern</var>/<var>flags</var>
 new RegExp(<var>pattern</var>, <var>flags</var>)</code>
 </pre>
 
@@ -56,7 +56,7 @@ new RegExp(<var>pattern</var>, <var>flags</var>)</code>
 
 <p>Существует два способа создания объекта <code>RegExp</code>: литеральная запись и использование конструктора. При записи строк параметры в литеральной записи не используют символы кавычек, в то время как параметры функции-конструктора используют кавычки. Так что следующие выражения создают одинаковые регулярные выражения:</p>
 
-<pre class="brush: js notranslate">/ab+c/i;
+<pre class="brush: js">/ab+c/i;
 new RegExp('ab+c', 'i');
 </pre>
 
@@ -66,7 +66,7 @@ new RegExp('ab+c', 'i');
 
 <p>При использовании функции-конструктора необходимо использовать обычные правила экранирования в строках (предварять специальные символы символом обратного слеша «\»). Например, следующие выражения эквивалентны:</p>
 
-<pre class="brush: js notranslate">var re = /\w+/;
+<pre class="brush: js">var re = /\w+/;
 var re = new RegExp('\\w+');
 </pre>
 
@@ -456,7 +456,7 @@ var re = new RegExp('\\w+');
 
 <p>Следующий скрипт использует метод {{jsxref("String.prototype.replace()", "replace()")}} экземпляра строки {{jsxref("Global_Objects/String", "String")}} для сопоставления с именем в формате <em>имя фамилия</em> и выводит его в формате <em>фамилия, имя</em>. В тесте замены скрипт использует заменители <code>$1</code> и <code>$2</code>, которые заменяются на результаты соответствующих сопоставившихся подгрупп регулярного выражения.</p>
 
-<pre class="brush: js notranslate">var re = /(\w+)\s(\w+)/;
+<pre class="brush: js">var re = /(\w+)\s(\w+)/;
 var str = 'John Smith';
 var newstr = str.replace(re, '$2, $1');
 console.log(newstr);
@@ -474,7 +474,7 @@ console.log(newstr);
 
 <p>Символы конца строки различаются на различных платформах (Unix, Windows и так далее). Разбиение строк из этого примера работает на всех платформах.</p>
 
-<pre class="brush: js notranslate">var text = 'Некоторый текст\nЕщё текст\r\nИ ещё\rЭто конец';
+<pre class="brush: js">var text = 'Некоторый текст\nЕщё текст\r\nИ ещё\rЭто конец';
 var lines = text.split(/\r\n|\r|\n/);
 console.log(lines); // выведет [ 'Некоторый текст', 'Ещё текст', 'И ещё', 'Это конец' ]
 </pre>
@@ -483,7 +483,7 @@ console.log(lines); // выведет [ 'Некоторый текст', 'Ещё
 
 <h3 id="Example_Using_regular_expression_on_multiple_lines">Пример: использование регулярных выражений на нескольких строках</h3>
 
-<pre class="brush: js notranslate">var s = 'Please yes\nmake my day!';
+<pre class="brush: js">var s = 'Please yes\nmake my day!';
 s.match(/yes.*day/);
 // Вернёт null
 s.match(/yes[^]*day/);
@@ -494,7 +494,7 @@ s.match(/yes[^]*day/);
 
 <p>Этот пример демонстрирует, как можно использовать флаг «липучести» регулярных выражений для сопоставления с отдельными строками многострочного ввода.</p>
 
-<pre class="brush: js notranslate">var text = 'Первая строка\nВторая строка';
+<pre class="brush: js">var text = 'Первая строка\nВторая строка';
 var regex = /(\S+) строка\n?/y;
 
 var match = regex.exec(text);
@@ -511,7 +511,7 @@ console.log(match3 === null); // напечатает 'true'
 
 <p>Во время выполнения можно проверить, поддерживается ли флаг «липучести», при помощи блока <code>try { … } catch { … }</code>. Для этого надо использовать либо выражение с <code>eval(…)</code>, либо конструктор <code>RegExp(<var>строка-регулярки</var>, <var>строка-с-флагами</var>)</code> (поскольку нотация <code>/<var>регулярка</var>/<var>флаги</var></code> обрабатывается во время компиляции, исключение будет выброшено до того, как выполнение достигнет блока <code>catch</code>). Например:</p>
 
-<pre class="brush: js notranslate">var supports_sticky;
+<pre class="brush: js">var supports_sticky;
 try { RegExp('', 'y'); supports_sticky = true; }
 catch(e) { supports_sticky = false; }
 console.log(supports_sticky); // напечатает 'true'
@@ -521,7 +521,7 @@ console.log(supports_sticky); // напечатает 'true'
 
 <p>Как уже сказано выше, символьные классы <code>\w</code> и <code>\W</code> сопоставляются только с базовыми символами ASCII; то есть, с символами от «a» до «z», от «A» до «Z», от «0» до «9» и символом «_». Для сопоставления с символами из других языков, например, с кириллическими или иврита, используйте форму <code>\uhhhh</code>, где «hhhh» — это значение символа Юникода, записанное в шестнадцатеричной форме. Этот пример демонстрирует, как можно выделить символы Юникода, составляющие слова.</p>
 
-<pre class="brush: js notranslate">var text = 'Образец text на русском языке';
+<pre class="brush: js">var text = 'Образец text на русском языке';
 var regex = /[\u0400-\u04FF]+/g;
 
 var match = regex.exec(text);
@@ -539,7 +539,7 @@ console.log(regex.lastIndex); // напечатает '15'
 
 <h3 id="Example_Extracting_subdomain_name_from_URL">Пример: извлечение имени поддомена из URL</h3>
 
-<pre class="brush: js notranslate">var url = 'http://xxx.domain.com';
+<pre class="brush: js">var url = 'http://xxx.domain.com';
 console.log(/[^.]+/.exec(url)[0].substr(7)); // напечатает 'xxx'
 </pre>
 
@@ -578,7 +578,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // напечатает 'xxx'
 
 <p>Начиная с Gecko 34 {{geckoRelease(34)}}, в случае захвата группы с квантификаторами, предотвращающими появление группы в результате сопоставления, сопоставившийся текст для захваченной группы теперь имеет значение <code>undefined</code> вместо пустой строки:</p>
 
-<pre class="brush: js notranslate">// Firefox 33 или более ранние
+<pre class="brush: js">// Firefox 33 или более ранние
 'x'.replace(/x(.)?/g, function(m, group) {
   console.log("'group:" + group + "'");
 }); // 'group:'

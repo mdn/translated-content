@@ -46,7 +46,7 @@ translation_of: Web/API/Storage
 
 <p>В данном примере мы получаем доступ к объекту Storage вызывая localStorage. Для начала мы проверяем содержит ли local storage элементы данных используя <code>!localStorage.getItem('bgcolor')</code>. Если да, мы вызываем функцию <code>setStyles()</code> которая получает элементы данных используя {{domxref("localStorage.getItem()")}} и использует их значения для обновления стилей на странице. Если нет, мы вызывает другую функцию, <code>populateStorage()</code>, которая использует {{domxref("localStorage.setItem()")}} что бы установить значения для элементов,  потом вызываем <code>setStyles()</code>.</p>
 
-<pre class="brush: js notranslate">if(!localStorage.getItem('bgcolor')) {
+<pre class="brush: js">if(!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();

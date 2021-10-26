@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code>new Date();
+<pre class="syntaxbox"><code>new Date();
 new Date(<var>value</var>);
 new Date(<var>dateString</var>);
 new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, <var>minute</var>[, <var>second</var>[, <var>millisecond</var>]]]]]);
@@ -118,7 +118,7 @@ new Date(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, 
 <p><strong>Обратите внимание:</strong> разбор строкового представления дат с помощью конструктора <code>Date</code> (так же как эквивалентный ему метод <code>Date.parse</code>) может иметь различия и несоответствия в браузерах.</p>
 </div>
 
-<pre class="brush: js notranslate">var today = new Date();
+<pre class="brush: js">var today = new Date();
 var birthday = new Date('December 17, 1995 03:24:00');
 var birthday = new Date('1995-12-17T03:24:00');
 var birthday = new Date(1995, 11, 17);
@@ -129,7 +129,7 @@ var birthday = new Date(1995, 11, 17, 3, 24, 0);
 
 <p>Для того, чтобы создать и получить даты между 0 и 99 годом, нужно использовать методы {{jsxref("Date.prototype.setFullYear()")}} и {{jsxref("Date.prototype.getFullYear()")}}.</p>
 
-<pre class="brush: js notranslate">var date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+<pre class="brush: js">var date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
 // Устаревший метод, 98 отображается на 1998 год
 date.setYear(98);           // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
@@ -141,7 +141,7 @@ date.setFullYear(98);       // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
 
 <p>Следующие примеры показывают, как определить разницу во времени между двумя датами в JavaScript:</p>
 
-<pre class="brush: js notranslate">// Используя объекты Date
+<pre class="brush: js">// Используя объекты Date
 var start = Date.now();
 
 // Событие, для которого замеряется время, происходит тут:
@@ -150,7 +150,7 @@ var end = Date.now();
 var elapsed = end - start; // затраченное время в миллисекундах
 </pre>
 
-<pre class="brush: js notranslate">// Используя встроенные методы
+<pre class="brush: js">// Используя встроенные методы
 var start = new Date();
 
 // Событие, для которого замеряется время, происходит тут:
@@ -159,7 +159,7 @@ var end = new Date();
 var elapsed = end.getTime() - start.getTime(); // затраченное время в миллисекундах
 </pre>
 
-<pre class="brush: js notranslate">// Проверяет функцию и возвращает её возвращаемое значение
+<pre class="brush: js">// Проверяет функцию и возвращает её возвращаемое значение
 function printElapsedTime(fTest) {
   var nStartTime = Date.now(),
       vReturn = fTest(),
@@ -179,7 +179,7 @@ yourFunctionReturn = printElapsedTime(yourFunction);
 
 <h3 id="Получить_количество_секунд_с_начала_эпохи_Unix">Получить количество секунд с начала эпохи Unix</h3>
 
-<pre class="notranslate"><code>var seconds = Math.floor(Date.now() / 1000);</code></pre>
+<pre><code>var seconds = Math.floor(Date.now() / 1000);</code></pre>
 
 <p>В этом случае важно возвращать только целое число (так что простое деление не подойдёт), а также возвращать только фактически прошедшие секунды (поэтому этот код использует {{jsxref ("Math.floor ()")}} а не {{jsxref ("Math.round ()")}}).</p>
 

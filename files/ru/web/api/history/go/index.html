@@ -17,7 +17,7 @@ translation_of: Web/API/History/go
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">history.go([<em>delta</em>])</pre>
+<pre class="syntaxbox">history.go([<em>delta</em>])</pre>
 
 <h3 id="Параметры">Параметры</h3>
 
@@ -30,23 +30,23 @@ translation_of: Web/API/History/go
 
 <p>Перемещение на 1 страницу назад (аналог вызова {{domxref("History.back", "back()")}}):</p>
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js">history<span class="punctuation token">.</span><span class="function token">go</span><span class="punctuation token">(</span><span class="operator token">-</span><span class="number token">1</span><span class="punctuation token">)</span></code></pre>
+<pre class="brush: js line-numbers language-js"><code class="language-js">history<span class="punctuation token">.</span><span class="function token">go</span><span class="punctuation token">(</span><span class="operator token">-</span><span class="number token">1</span><span class="punctuation token">)</span></code></pre>
 
 <p>Перемещение на страницу вперёд, как {{domxref("History.forward", "forward()")}}:</p>
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js">history<span class="punctuation token">.</span><span class="function token">go</span><span class="punctuation token">(</span><span class="number token">1</span><span class="punctuation token">)</span></code></pre>
+<pre class="brush: js line-numbers language-js"><code class="language-js">history<span class="punctuation token">.</span><span class="function token">go</span><span class="punctuation token">(</span><span class="number token">1</span><span class="punctuation token">)</span></code></pre>
 
 <p>Перемещение на 2 страницы вперёд:</p>
 
-<pre class="brush: js notranslate">history.go(2);</pre>
+<pre class="brush: js">history.go(2);</pre>
 
 <p>Перемещение на 2 страницы назад:</p>
 
-<pre class="brush: js notranslate">history.go(-2);</pre>
+<pre class="brush: js">history.go(-2);</pre>
 
 <p>Также, оба этих вызова перезагрузят страницу:</p>
 
-<pre class="brush: js notranslate">history.go();
+<pre class="brush: js">history.go();
 history.go(0);</pre>
 
 <h2 id="Спецификации">Спецификации</h2>

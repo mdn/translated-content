@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code>Number.isSafeInteger(<var>testValue</var>)</code></pre>
+<pre class="syntaxbox"><code>Number.isSafeInteger(<var>testValue</var>)</code></pre>
 
 <h3 id="Parameters">Параметры</h3>
 
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 
 <h2 id="Examples">Примеры</h2>
 
-<pre class="brush: js notranslate">Number.isSafeInteger(3);                    // true
+<pre class="brush: js">Number.isSafeInteger(3);                    // true
 Number.isSafeInteger(Math.pow(2, 53));      // false
 Number.isSafeInteger(Math.pow(2, 53) - 1);  // true
 Number.isSafeInteger(NaN);                  // false
@@ -58,7 +58,7 @@ Number.isSafeInteger(3.0);                  // true
 
 <h2 id="Specifications">Полифил</h2>
 
-<pre class="brush: js notranslate">Number.isSafeInteger = Number.isSafeInteger || function (value) {
+<pre class="brush: js">Number.isSafeInteger = Number.isSafeInteger || function (value) {
    return Number.isInteger(value) &amp;&amp; Math.abs(value) &lt;= Number.MAX_SAFE_INTEGER;
 };</pre>
 

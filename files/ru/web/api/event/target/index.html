@@ -11,7 +11,7 @@ translation_of: Web/API/Event/target
 
 <p id="Синтаксис">Синтаксис</p>
 
-<pre class="syntaxbox notranslate">theTarget = event.target</pre>
+<pre class="syntaxbox">theTarget = event.target</pre>
 
 <p>Значение:</p>
 
@@ -21,7 +21,7 @@ translation_of: Web/API/Event/target
 
 <p>Свойство <code>event.target</code> может быть использовано для реализации <strong>делегирования событий</strong>.</p>
 
-<pre class="notranslate">// Создадим список
+<pre>// Создадим список
 var ul = document.createElement('ul');
 document.body.appendChild(ul);
 
@@ -52,7 +52,7 @@ ul.addEventListener('click', hide, false);</pre>
 
 <p>В IE 6-8 модель событий отличается. Обработчики событий назначаются с помощью нестандартного {{domxref('EventTarget.attachEvent')}} метода. При этом в объекте события есть свойство {{domxref('Event.srcElement')}}, вместо <code>target</code> свойства, но по смыслу оно идентично <code>event.target</code>.</p>
 
-<pre class="brush: js notranslate">function hide(e) {
+<pre class="brush: js">function hide(e) {
   // Поддержка IE 6-8
   var target = e.target || e.srcElement;
   target.style.visibility = 'hidden';

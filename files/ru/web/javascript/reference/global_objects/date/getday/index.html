@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.getDay()</code></pre>
+<pre class="syntaxbox"><code><var>dateObj</var>.getDay()</code></pre>
 
 <h3 id="Parameters">Параметры</h3>
 
@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 
 <p>Вторая инструкция в примере ниже присваивает значение 1 переменной <code>weekday</code> из значения объекта {{jsxref("Global_Objects/Date", "Date")}} <code>date</code>. 25 декабря 1995 года было понедельником.</p>
 
-<pre class="brush: js notranslate">let date = new Date('December 25, 1995 23:15:30');
+<pre class="brush: js">let date = new Date('December 25, 1995 23:15:30');
 let weekday = date.getDay();
 
 console.log(weekday); // 1
@@ -42,7 +42,7 @@ console.log(weekday); // 1
 <div class="blockIndicator note">
 <p><strong>Примечание:</strong> При необходимости полное название дня (например, "<code>Понедельник</code>") можно получить, используя {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} с параметром <code>options</code> parameter. С помощью этого метода упрощается интернационализация:</p>
 
-<pre class="brush: js notranslate">let options = { weekday: 'long'};
+<pre class="brush: js">let options = { weekday: 'long'};
 
 console.log(new Intl.DateTimeFormat('en-US', options).format(date));
 // Monday

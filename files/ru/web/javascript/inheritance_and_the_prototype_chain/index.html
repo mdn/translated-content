@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 <p>Объекты в JavaScript — динамические "контейнеры", наполненные свойствами (называемыми <strong>собственными свойствами</strong>). Каждый объект содержит ссылку на свой объект-прототип.<br>
  При попытке получить доступ к какому-либо свойству объекта, свойство вначале ищется в самом объекте, затем в прототипе объекта, после чего в прототипе прототипа, и так далее. Поиск ведётся до тех пор, пока не найдено свойство с совпадающим именем или не достигнут конец цепочки прототипов.</p>
 
-<pre class="brush: js notranslate">// В этом примере someObject.[[Prototype]] означает прототип someObject.
+<pre class="brush: js">// В этом примере someObject.[[Prototype]] означает прототип someObject.
 // Это упрощённая нотация (описанная в стандарте ECMAScript).
 // Она не может быть использована в реальных скриптах.
 
@@ -74,7 +74,7 @@ console.log(o.d); // undefined
 
 <p>В области видимости унаследованной функции ссылка <a href="/en/JavaScript/Reference/Operators/this" title="this"><code>this</code></a> указывает на наследующий объект (на наследника), а не на прототип, в котором данная функция является собственным свойством.</p>
 
-<pre class="brush: js notranslate">var o = {
+<pre class="brush: js">var o = {
   a: 2,
   m: function(){
     return this.a + 1;
@@ -98,7 +98,7 @@ console.log(p.m()); // 13
 
 <h3 id="Создание_объектов_с_помощью_литералов">Создание объектов с помощью литералов</h3>
 
-<pre class="brush: js notranslate">var o = {a: 1};
+<pre class="brush: js">var o = {a: 1};
 
 // Созданный объект 'o' имеет Object.prototype в качестве своего [[Prototype]]
 // у 'o' нет собственного свойства 'hasOwnProperty'
@@ -127,7 +127,7 @@ function f(){
 
 <p>В JavaScript "конструктор" — это "просто" функция, вызываемая с оператором <a href="/en/JavaScript/Reference/Operators/new" title="new">new</a>.</p>
 
-<pre class="brush: js notranslate">function Graph() {
+<pre class="brush: js">function Graph() {
   this.vertexes = [];
   this.edges = [];
 }
@@ -147,7 +147,7 @@ var g = new Graph();
 
 <p>В ECMAScript 5 представлен новый метод создания объектов: <a href="/en/JavaScript/Reference/Global_Objects/Object/create" title="create">Object.create</a>. Прототип создаваемого объекта указывается в первом аргументе этого метода:</p>
 
-<pre class="brush: js notranslate">var a = {a: 1};
+<pre class="brush: js">var a = {a: 1};
 // a ---&gt; Object.prototype ---&gt; null
 
 var b = Object.create(a);
@@ -168,7 +168,7 @@ console.log(d.hasOwnProperty);
 
 <p>С выходом ECMAScript 6 появился целый набор ключевых слов, реализующих <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">классы</a>. Они могут показаться знакомыми людям, изучавшим языки, основанные на классах, но есть существенные отличия. JavaScript был и остаётся прототипно-ориентированным языком. Новые ключевые слова: "<code>class</code>", "<code>constructor</code>", "<code>static</code>", "<code>extends</code>" и "<code>super</code>".</p>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js">"use strict";
 
 class Polygon {
   constructor(height, width) {
@@ -217,7 +217,7 @@ var square = new Square(2);</pre>
 
 <p><code>B</code> наследует от <code>A</code>:</p>
 
-<pre class="brush: js notranslate">function A(a){
+<pre class="brush: js">function A(a){
   this.varA = a;
 }
 
@@ -274,17 +274,17 @@ b.doSomething();</pre>
 
 <p><code>[[Prototype]]</code> работает <em>рекурсивно</em>, то есть при вызове:</p>
 
-<pre class="brush: js notranslate">var o = new Foo();</pre>
+<pre class="brush: js">var o = new Foo();</pre>
 
 <p>JavaScript на самом деле выполняет что-то подобное:</p>
 
-<pre class="brush: js notranslate">var o = new Object();
+<pre class="brush: js">var o = new Object();
 o.[[Prototype]] = Foo.prototype;
 Foo.call(o);</pre>
 
 <p>а когда вы делаете так:</p>
 
-<pre class="brush: js notranslate">o.someProp;</pre>
+<pre class="brush: js">o.someProp;</pre>
 
 <p>JavaScript проверяет, есть ли у <strong><code>o</code></strong> свойство <code>someProp</code>.<br>
  и если нет, то проверяет <code>Object.getPrototypeOf(o).someProp</code> <br>

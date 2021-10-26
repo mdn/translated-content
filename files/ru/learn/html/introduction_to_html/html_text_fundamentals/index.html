@@ -46,11 +46,11 @@ original_slug: Learn/HTML/Введение_в_HTML/HTML_text_fundamentals
 
 <p>В HTML каждый абзац заключён в элемент {{htmlelement("p")}}, подобно:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Я параграф, да, это я.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Я параграф, да, это я.&lt;/p&gt;</pre>
 
 <p>Каждый заголовок заключён в элемент заголовка {{htmlelement("h1")}}:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Я заголовок истории.&lt;/h1&gt;</pre>
+<pre class="brush: html">&lt;h1&gt;Я заголовок истории.&lt;/h1&gt;</pre>
 
 <p>Имеется шесть элементов заголовка: {{htmlelement("h1")}}, {{htmlelement("h2")}}, {{htmlelement("h3")}}, {{htmlelement("h4")}}, {{htmlelement("h5")}} и {{htmlelement("h6")}}. Каждый элемент представляет разный уровень контента в документе; <code>&lt;h1&gt;</code> представляет главный заголовок, <code>&lt;h2&gt;</code> представляет подзаголовки, <code>&lt;h3&gt;</code> представляет под-подзаголовки и так далее.</p>
 
@@ -58,7 +58,7 @@ original_slug: Learn/HTML/Введение_в_HTML/HTML_text_fundamentals
 
 <p>Например, в рассказе <code>&lt;h1&gt;</code> будет представлять заглавие рассказа, <code>&lt;h2&gt;</code> обозначит название каждой главы, <code>&lt;h3&gt;</code>  будет обозначать подзаголовки в каждой главе и так далее.</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt; Сокрушительная скука &lt;/ h1&gt;
+<pre class="brush: html">&lt;h1&gt; Сокрушительная скука &lt;/ h1&gt;
 
 &lt;p&gt; Крис Миллс &lt;/ p&gt;
 
@@ -111,7 +111,7 @@ original_slug: Learn/HTML/Введение_в_HTML/HTML_text_fundamentals
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Результат&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Результат&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -128,7 +128,7 @@ original_slug: Learn/HTML/Введение_в_HTML/HTML_text_fundamentals
   &lt;input id="solution" type="button" value="Показать решение"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -162,7 +162,7 @@ h2 {
 
 </pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -242,13 +242,13 @@ textarea.onkeyup = function(){
 
 <p><span id="result_box" lang="ru"><span>В подобном ключе нам нужно убедиться, что мы используем правильные элементы, придавая нашему контенту правильное значение, функцию или внешний вид.</span> <span>В этом контексте элемент {{htmlelement ("h1")}} также является семантическим элементом, который даёт тексту, который он обёртывает,  роль (или значение) «заголовка верхнего уровня на вашей странице».</span></span></p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Это заголовок верхнего уровня&lt;/h1&gt;</pre>
+<pre class="brush: html">&lt;h1&gt;Это заголовок верхнего уровня&lt;/h1&gt;</pre>
 
 <p><span id="result_box" lang="ru"><span>По умолчанию браузер придаст ему большой размер шрифта, чтобы он выглядел как заголовок (хотя вы можете стилизовать его как угодно, используя CSS).</span> <span>Что ещё более важно, его семантическое значение будет использоваться несколькими способами, например, поисковыми системами и программами чтения с экрана (как упоминалось выше).</span></span></p>
 
 <p><span id="result_box" lang="ru"><span>С другой стороны, вы можете сделать любой элемент похожим на заголовок верхнего уровня.</span> <span>Рассмотрим следующее:</span></span></p>
 
-<pre class="brush: html notranslate">&lt;span style="font-size: 32px; margin: 21px 0;"&gt;Это заголовок верхнего уровня?&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;span style="font-size: 32px; margin: 21px 0;"&gt;Это заголовок верхнего уровня?&lt;/span&gt;</pre>
 
 <p><span id="result_box" lang="ru"><span>Это элемент {{htmlelement ("span")}}.</span> <span>У него нет семантики.</span> <span>Вы используете его, когда хотите применить к контенту CSS (или сделать что-то с ним с помощью JavaScript), не придавая ему никакого дополнительного значения (об этом вы узнаете позже). Мы применили CSS,</span> <span>чтобы он выглядел как заголовок верхнего уровня, но поскольку он не имеет семантического значения, он не получит никаких дополнительных преимуществ, описанных выше.</span> <span>Рекомендуется использовать соответствующий элемент HTML на практике.</span></span></p>
 
@@ -260,7 +260,7 @@ textarea.onkeyup = function(){
 
 <p><span id="result_box" lang="ru"><span>Неупорядоченные списки используются для элементов, для которых порядок не имеет значения, — возьмём, к примеру, список покупок:</span></span></p>
 
-<pre class="notranslate">молоко
+<pre>молоко
 яйца
 хлеб
 хумус</pre>
@@ -269,7 +269,7 @@ textarea.onkeyup = function(){
 
 <p><span id="result_box" lang="ru"><span>Последний шаг состоит в том, чтобы обернуть каждый элемент списка в элемент {{htmlelement ("li")}} (элемент списка):</span></span></p>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;молоко&lt;/li&gt;
   &lt;li&gt;яйца&lt;/li&gt;
   &lt;li&gt;хлеб&lt;/li&gt;
@@ -283,7 +283,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code</h6>
 
-<pre class="brush: html notranslate"><code>&lt;h2&gt;Результат&lt;/h2&gt;
+<pre class="brush: html"><code>&lt;h2&gt;Результат&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -301,7 +301,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Показать решение"&gt;
 &lt;/div&gt;</code></pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -335,7 +335,7 @@ h2 {
 
 </pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -413,7 +413,7 @@ textarea.onkeyup = function(){
 
 <p><span id="result_box" lang="ru"><span>Упорядоченные списки — это списки, в которых порядок элементов имеет значение, — возьмём в качестве примера маршрут следования:</span></span></p>
 
-<pre class="notranslate">Двигайтесь до конца дороги
+<pre>Двигайтесь до конца дороги
 Поверните направо
 Езжайте прямо через первые два перекрёстка с круговым движением
 Поверните налево на третьем перекрёстке
@@ -421,7 +421,7 @@ textarea.onkeyup = function(){
 
 <p><span id="result_box" lang="ru"><span>Структура разметки такая же, как для неупорядоченных списков, за исключением того, что вы должны обернуть элементы списка в элемент {{htmlelement ("ol")}} (ordered list), а не &lt;ul&gt;:</span></span></p>
 
-<pre class="brush: html notranslate">&lt;ol&gt;
+<pre class="brush: html">&lt;ol&gt;
    &lt;li&gt;Двигайтесь до конца дороги&lt;/li&gt;
    &lt;li&gt;Поверните направо&lt;/li&gt;
    &lt;li&gt;Езжайте прямо через первые два перекрёстка с круговым движением&lt;/li&gt;
@@ -436,7 +436,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Playable_code_3">Playable code</h6>
 
-<pre class="brush: html notranslate"><code>&lt;h2&gt;Результат&lt;/h2&gt;
+<pre class="brush: html"><code>&lt;h2&gt;Результат&lt;/h2&gt;
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
 &lt;h2&gt;Редактируемый код&lt;/h2&gt;
@@ -453,7 +453,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Показать решение"&gt;
 &lt;/div&gt;</code></pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -487,7 +487,7 @@ h2 {
 
 </pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -568,7 +568,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Playable_code_4">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Результат&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Результат&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -614,7 +614,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Показать решение"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -647,7 +647,7 @@ h2 {
 }
 </pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -727,7 +727,7 @@ textarea.onkeyup = function(){
 
 <p><span id="result_box" lang="ru"><span>Вполне нормально вложить один список в другой.</span> <span>Возможно, вы захотите, чтобы один список располагался внутри другого.</span> <span>Давайте возьмём второй список из нашего примера рецепта:</span></span></p>
 
-<pre class="brush: html notranslate">&lt;ol&gt;
+<pre class="brush: html">&lt;ol&gt;
   &lt;li&gt;Очистите чеснок от кожуры и крупно нарежьте.&lt;/li&gt;
   &lt;li&gt;Удалите стебель и семена у перца; крупно нарежьте перец.&lt;/li&gt;
   &lt;li&gt;Добавьте все ингредиенты в пищевой комбайн.&lt;/li&gt;
@@ -740,7 +740,7 @@ textarea.onkeyup = function(){
 <div class="trans-verified-button-small" dir="ltr" id="gt-res-dir-ctr"><span id="result_box" lang="ru"><span>Поскольку последние две строки очень тесно связаны с тем, что было до них (они читаются как вспомогательные инструкции или варианты, которые подходят под этой маркой), может иметь смысл вложить их в свой собственный неупорядоченный список и поместить этот список внутри текущего</span><span>.</span> <span>Это будет выглядеть так:</span></span></div>
 </div>
 
-<pre class="brush: html notranslate">&lt;ol&gt;
+<pre class="brush: html">&lt;ol&gt;
   &lt;li&gt;Очистите чеснок от кожуры и крупно нарежьте.&lt;/li&gt;
   &lt;li&gt;Удалите стебель и семена у перца; крупно нарежьте перец.&lt;/li&gt;
   &lt;li&gt;Добавьте все ингредиенты в пищевой комбайн.&lt;/li&gt;
@@ -774,7 +774,7 @@ textarea.onkeyup = function(){
 
 <p><span id="result_box" lang="ru"><span>В таких случаях в HTML используется элемент {{htmlelement ("em")}} (выделение).</span> <span>Кроме того, чтобы сделать документ более интересным для чтения, они распознаются программами, считывающими с экрана, и произносятся другим тоном.</span> <span>Браузеры стилизуют это по умолчанию курсивом, но вы можете не использовать этот тег, чтобы получить курсив.</span> <span>Для выделения курсивом вы можете использовать элемент {{htmlelement ("span")}} и CSS, или, возможно, элемент {{htmlelement ("i")}} (смотрите ниже).</span></span></p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Я &lt;em&gt;рад&lt;/em&gt;, что ты не &lt;em&gt;опоздал&lt;/em&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Я &lt;em&gt;рад&lt;/em&gt;, что ты не &lt;em&gt;опоздал&lt;/em&gt;.&lt;/p&gt;</pre>
 
 <h3 id="Важное_значение"><span class="short_text" id="result_box" lang="ru"><span>Важное значение</span></span></h3>
 
@@ -786,13 +786,13 @@ textarea.onkeyup = function(){
 
 <p><span id="result_box" lang="ru"><span>В таких случаях в HTML используется элемент {{htmlelement ("strong")}} (важное значение).</span> <span>Помимо того, что документ становится более полезным,  они распознаются программами, считывающими с экрана, и говорят другим тоном.</span> <span>Браузеры стилизуют это как полужирный текст по умолчанию, но вы можете не использовать этот тег, чтобы получить</span></span><span lang="ru"><span> жирный шрифт.</span> <span>Для получения жирного шрифта вы можете использовать элемент {{htmlelement ("span")}} и CSS, или, возможно, элемент {{htmlelement ("b")}} (</span></span><span id="result_box" lang="ru"><span>смотрите ниже</span></span><span lang="ru"><span>).</span></span></p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Эта жидкость &lt;strong&gt;очень токсична&lt;/strong&gt;.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Эта жидкость &lt;strong&gt;очень токсична&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Я рассчитываю на тебя. &lt;strong&gt;Не &lt;/strong&gt;опаздывай!&lt;/p&gt;</pre>
 
 <p><span id="result_box" lang="ru"><span>При желании вы можете вложить важные и акцентированные слова друг в друга:</span></span></p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Эта жидкость &lt;strong&gt;очень токсична&lt;/strong&gt; —
+<pre class="brush: html">&lt;p&gt;Эта жидкость &lt;strong&gt;очень токсична&lt;/strong&gt; —
 если ты выпьешь её, &lt;strong&gt;то можешь&lt;em&gt;умереть&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;</pre>
 
 <h3 id="Активное_изучение_Давайте_будем_важны!">Активное изучение: <span class="short_text" id="result_box" lang="ru"><span>Давайте будем важны!</span></span></h3>
@@ -802,7 +802,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Playable_code_5">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Результат&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Результат&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -824,7 +824,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Показать решение"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -844,7 +844,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -947,7 +947,7 @@ textarea.onkeyup = function(){
 <p><span id="result_box" lang="ru"><span>Предупреждение о подчёркивании:<strong> люди сильно ассоциируют подчёркивание с гиперссылками</strong>.</span> <span>Поэтому в Интернете лучше всего подчеркнуть только ссылки.</span> <span>Используйте элемент &lt;u&gt;, когда он семантически подходит, но подумайте о том, чтобы использовать CSS для изменения подчёркивания по умолчанию для чего-то более подходящего в Интернете.</span> <span>Пример ниже иллюстрирует, как это можно сделать.</span></span></p>
 </div>
 
-<pre class="brush: html notranslate">&lt;!-- Научные наименования --&gt;
+<pre class="brush: html">&lt;!-- Научные наименования --&gt;
 &lt;p&gt;
   Колибри обыкновенный (&lt;i&gt;архилоус обыкновенный&lt;/i&gt;) —
 наиболее часто встречающийся вид колибри в северо-восточной Америке.

@@ -53,14 +53,14 @@ translation_of: Web/HTTP/Methods/PATCH
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">PATCH /file.txt HTTP/1.1
+<pre class="syntaxbox">PATCH /file.txt HTTP/1.1
 </pre>
 
 <h2 id="Пример">Пример</h2>
 
 <h3 id="Запрос">Запрос</h3>
 
-<pre class="line-numbers  language-html notranslate">PATCH /file.txt HTTP/1.1
+<pre class="line-numbers  language-html">PATCH /file.txt HTTP/1.1
 Host: www.example.com
 Content-Type: application/example
 If-Match: "e0023aa4e"
@@ -72,7 +72,7 @@ Content-Length: 100
 
 <p>Успешный ответ указывается с помощью кода ответа {{HTTPStatus("204")}}, поскольку ответ в примере не содержит тела сообщения. А если бы содержал, то код был бы {{HTTPStatus("200")}}.</p>
 
-<pre class="newpage notranslate">HTTP/1.1 204 No Content
+<pre class="newpage">HTTP/1.1 204 No Content
 Content-Location: /file.txt
 ETag: "e0023aa4f"</pre>
 
