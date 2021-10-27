@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code>new Intl.DateTimeFormat([<var>locales</var>[, <var>options</var>]])
+<pre class="syntaxbox"><code>new Intl.DateTimeFormat([<var>locales</var>[, <var>options</var>]])
 Intl.DateTimeFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</var>]])</code></pre>
 
 <h3 id="Parameters">Параметры</h3>
@@ -122,7 +122,7 @@ Intl.DateTimeFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</va
 
 <p>При базовом использовании без определения локали <code>DateTimeFormat</code> использует локаль и опции по умолчанию.</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Вывод format без аргументов зависит от реализации,
 // локали по умолчанию и часового пояса по умолчанию
@@ -134,7 +134,7 @@ console.log(new Intl.DateTimeFormat().format(date));
 
 <p>Этот пример показывает некоторые локализованные форматы даты и времени. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) через аргумент <code>locales</code>:</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Форматирование ниже предполагает, что местный часовой пояс равен
 // America/Los_Angeles для локали США
@@ -170,7 +170,7 @@ console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
 
 <p>Формат даты и времени может быть настроен с помощью аргумента <code>options</code>:</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Запрашиваем день недели вместе с длинным форматом даты
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -203,20 +203,7 @@ console.log(date.toLocaleString('en-US', options));
 
 <h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 1.0', '#sec-12.1', 'Intl.DateTimeFormat')}}</td>
-   <td>{{Spec2('ES Int 1.0')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 

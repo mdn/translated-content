@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre class="brush: js notranslate">function(a, b, ...theArgs) {
+<pre class="brush: js">function(a, b, ...theArgs) {
   // ...
 }
 </pre>
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 
 <p>Если последний именованный аргумент функции имеет префикс <code>...</code>, он автоматически становится массивом с элементами от <code>0</code> до <code>theArgs.length-1</code> в соответствии с актуальным количеством аргументов, переданных в функцию.</p>
 
-<pre class="brush: js notranslate">function myFun(a, b, ...manyMoreArgs) {
+<pre class="brush: js">function myFun(a, b, ...manyMoreArgs) {
   console.log("a", a);
   console.log("b", b);
   console.log("manyMoreArgs", manyMoreArgs);
@@ -52,7 +52,7 @@ myFun("один", "два", "три", "четыре", "пять", "шесть");
 
 <p>Остаточные параметры были введены для уменьшения количества шаблонного кода:</p>
 
-<pre class="brush: js notranslate">// До появления остаточных параметров "arguments" конвертировали в обычный массив используя:
+<pre class="brush: js">// До появления остаточных параметров "arguments" конвертировали в обычный массив используя:
 
 function f(a, b) {
 
@@ -78,7 +78,7 @@ function f(...args) {
 
 <p>Остаточные параметры могут быть деструктурированы (только массивы). Это означает, что их данные могут быть заданы как отдельные значения. Смотрите <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Деструктурирующее присваивание</a>.</p>
 
-<pre class="notranslate"><code>function f(...[a, b, c]) {
+<pre><code>function f(...[a, b, c]) {
   return a + b + c;
 }
 
@@ -90,7 +90,7 @@ f(1, 2, 3, 4) // 6 (четвёртый параметр не деструкту�
 
 <p>В этом примере первый аргумент задан как <code>"a"</code>, второй как <code>"b"</code>, так что эти аргументы используются как обычно. Однако третий аргумент <code>"manyMoreArgs"</code> будет массивом, который содержит 3-й, 4-й, 5-й, 6-й ... n-й аргументы, которые передаст пользователь.</p>
 
-<pre class="brush: js notranslate">function myFun(a, b, ...manyMoreArgs) {
+<pre class="brush: js">function myFun(a, b, ...manyMoreArgs) {
   console.log("a", a);
   console.log("b", b);
   console.log("manyMoreArgs", manyMoreArgs);
@@ -104,7 +104,7 @@ myFun("один", "два", "три", "четыре", "пять", "шесть");
 
 <p>Ниже... даже если передано одно значение последним аргументом, оно всё равно помещается в массив.</p>
 
-<pre class="brush: js notranslate">// использование той же функции, что и в примере выше
+<pre class="brush: js">// использование той же функции, что и в примере выше
 
 myFun("один", "два", "три");
 
@@ -114,7 +114,7 @@ myFun("один", "два", "три");
 
 <p>Ниже... третий аргумент не был передан, но "manyMoreArgs" всё ещё массив (хотя и пустой).</p>
 
-<pre class="brush: js notranslate">// использование той же функции, что и в примере выше
+<pre class="brush: js">// использование той же функции, что и в примере выше
 
 myFun("один", "два");
 
@@ -124,7 +124,7 @@ myFun("один", "два");
 
 <p>Поскольку <code>theArgs</code> является массивом, количество элементов в нём определяется свойством <code>length</code>:</p>
 
-<pre class="brush: js notranslate">function fun1(...theArgs) {
+<pre class="brush: js">function fun1(...theArgs) {
   console.log(theArgs.length);
 }
 
@@ -134,7 +134,7 @@ fun1(5, 6, 7); // 3</pre>
 
 <p>В следующем примере, остаточные параметры используются для сбора всех аргументов после первого в массив. Каждый из них умножается на первый параметр и возвращается массив:</p>
 
-<pre class="brush: js notranslate"><code>function multiply(multiplier, ...theArgs) {
+<pre class="brush: js"><code>function multiply(multiplier, ...theArgs) {
   return theArgs.map(function(element) {
     return multiplier * element;
   });
@@ -145,7 +145,7 @@ console.log(arr); // [2, 4, 6]</code></pre>
 
 <p>Методы <code>Array</code> могут быть использованы на остаточных параметрах, но не на объекте <code>arguments</code>: </p>
 
-<pre class="brush: js notranslate">function sortRestArgs(...theArgs) {
+<pre class="brush: js">function sortRestArgs(...theArgs) {
   var sortedArgs = theArgs.sort();
   return sortedArgs;
 }
@@ -162,7 +162,7 @@ console.log(sortArguments(5, 3, 7, 1)); // TypeError (arguments.sort is not a fu
 
 <p>Чтобы использовать методы <code>Array</code> на объекте <code>arguments</code>, нужно преобразовать его в настоящий массив.</p>
 
-<pre class="brush: js notranslate"><code>function sortArguments() {
+<pre class="brush: js"><code>function sortArguments() {
   var args = Array.from(arguments);
   var sortedArgs = args.sort();
   return sortedArgs;

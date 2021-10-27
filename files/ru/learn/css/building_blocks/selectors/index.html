@@ -47,7 +47,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы
 
 <p>Несколько селекторов, использующих одни и те же таблицы стилей, можно объединить в <em>лист селекторов</em>: правило будет добавлено к каждому селектору. К примеру, у меня есть одинаковые правила для заголовка <code>h1</code> и класса <code>.special</code>; я могу написать их так:</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   color: blue;
 }
 
@@ -57,13 +57,13 @@ original_slug: Learn/CSS/Building_blocks/Селекторы
 
 <p>А могу написать короче — просто отделив селекторы запятыми:</p>
 
-<pre class="brush: css notranslate">h1, .special {
+<pre class="brush: css">h1, .special {
   color: blue;
 } </pre>
 
 <p>Пробел можно вставлять до или после запятой. Ещё удобнее писать каждый селектор с новой строки:</p>
 
-<pre class="brush: css notranslate">h1,
+<pre class="brush: css">h1,
 .special {
   color: blue;
 } </pre>
@@ -76,7 +76,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы
 
 <p>В примере ниже правило для селектора класса не будет работать, в то время как <code>h1</code> будет стилизован.</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   color: blue;
 }
 
@@ -86,7 +86,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы
 
 <p>Но если мы объединим селекторы, правило не применится ни к <code>h1</code>, ни к классу: оно считается недействительным.</p>
 
-<pre class="brush: css notranslate">h1, ..special {
+<pre class="brush: css">h1, ..special {
   color: blue;
 } </pre>
 
@@ -98,41 +98,41 @@ original_slug: Learn/CSS/Building_blocks/Селекторы
 
 <p>К этой группе относятся селекторы HTML-элементов, таких как <code>&lt;h1&gt;</code>.</p>
 
-<pre class="brush: css notranslate">h1 { }</pre>
+<pre class="brush: css">h1 { }</pre>
 
 <p>К группе относятся и селекторы классов:</p>
 
-<pre class="brush: css notranslate">.box { }</pre>
+<pre class="brush: css">.box { }</pre>
 
 <p>или селекторы идентификаторов (ID):</p>
 
-<pre class="brush: css notranslate">#unique { }</pre>
+<pre class="brush: css">#unique { }</pre>
 
 <h3 id="Селекторы_атрибутов">Селекторы атрибутов</h3>
 
 <p>Эта группа селекторов позволяет выбирать селекторы, основываясь на <em>наличии</em> у них конкретного атрибута элемента:</p>
 
-<pre class="brush: css notranslate">a[title] { }</pre>
+<pre class="brush: css">a[title] { }</pre>
 
 <p>или основываясь на <em>значении</em> атрибута:</p>
 
-<pre class="brush: css notranslate">a[href="https://example.com"] { }</pre>
+<pre class="brush: css">a[href="https://example.com"] { }</pre>
 
 <h3 id="Псевдоклассы_псевдоэлементы">Псевдоклассы, псевдоэлементы</h3>
 
 <p>К этой группе относятся псевдоклассы, которые стилизуют определённое состояние элемента. Псевдокласс <code>:hover</code>, например, применяет правило, только если на элемент наведён курсор мыши</p>
 
-<pre class="brush: css notranslate">a:hover { }</pre>
+<pre class="brush: css">a:hover { }</pre>
 
 <p>К группе ещё относятся псевдоэлементы, которые выбирают определённую часть элемента (вместо целого элемента). Например, <code>::first-line</code> всегда выбирает первую строку внутри элемента (абзаца <code>&lt;p&gt;</code> в нашем случае), действуя, как если бы тег <code>&lt;span&gt;</code> оборачивал первую строку, а затем был стилизован.</p>
 
-<pre class="brush: css notranslate">p::first-line { }</pre>
+<pre class="brush: css">p::first-line { }</pre>
 
 <h3 id="Комбинаторы">Комбинаторы</h3>
 
 <p>И последняя группа селекторов: она позволяет объединять селекторы, чтобы было легче находить конкретные элементы внутри документа. В следующем примере мы отыскали дочерний элемент <code>&lt;article&gt;</code> с помощью комбинатора дочерних элементов (<code>&gt;</code>):</p>
 
-<pre class="brush: css notranslate">article &gt; p { }</pre>
+<pre class="brush: css">article &gt; p { }</pre>
 
 <h2 id="Продолжение">Продолжение</h2>
 

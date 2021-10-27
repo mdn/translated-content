@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Operators/yield*
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"> yield* [[expression]];</pre>
+<pre class="syntaxbox"> yield* [[expression]];</pre>
 
 <dl>
  <dt><code>expression</code></dt>
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Operators/yield*
 
 <p>В следующем примере, значения полученные из <code>g1()</code> возвращаются из <code>g2</code> вызовами <code>next</code>, как будто бы она вычислила их сама.</p>
 
-<pre class="brush: js notranslate">function* g1() {
+<pre class="brush: js">function* g1() {
   yield 2;
   yield 3;
   yield 4;
@@ -54,7 +54,7 @@ console.log(iterator.next()); // { value: undefined, done: true }
 
 <p>Помимо объектов генераторов, <code>yield*</code> может перебирать другие виды итерируемых объектов, т.е. массивы, строки, объекты аргументов и др.</p>
 
-<pre class="brush: js notranslate">function* g3() {
+<pre class="brush: js">function* g3() {
   yield* [1, 2];
   yield* "34";
   yield* Array.from(arguments);
@@ -106,7 +106,7 @@ class PowersOfTwo {
 
 <p><code>yield*</code> - это выражение, а не оператор, поэтому оно имеет значение, равное последнему значению итератора </p>
 
-<pre class="brush: js notranslate">function* g4() {
+<pre class="brush: js">function* g4() {
   yield* [1, 2, 3];
   return "foo";
 }
@@ -162,7 +162,7 @@ console.log(result);          // "foo"
  <li>Начиная с Gecko 33 {{geckoRelease(33)}}, разбор выражений yield было приведено к соответствию с последними спецификациями ES6 ({{bug(981599)}}):
   <ul>
    <li>Реализована корректная обработка разрыва строки. Разрыва строки между "yield" и "*" быть не может. Такой код вызовет {{jsxref("SyntaxError")}}:
-    <pre class="brush: js notranslate">function* foo() {
+    <pre class="brush: js">function* foo() {
   yield
   *[];
 }</pre>

@@ -15,7 +15,7 @@ translation_of: Web/API/RTCPeerConnection/currentLocalDescription
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><em>sessionDescription</em> = <em>RTCPeerConnection</em>.currentLocalDescription;</pre>
+<pre class="syntaxbox"><em>sessionDescription</em> = <em>RTCPeerConnection</em>.currentLocalDescription;</pre>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
@@ -25,7 +25,7 @@ translation_of: Web/API/RTCPeerConnection/currentLocalDescription
 
 <p>В этом примере рассматривается свойство <code>currentLocalDescription</code>  и отображается предупреждение, содержащее свойства объекта {{domxref("RTCSessionDescription")}}  <code>type</code> и <code>sdp</code> .</p>
 
-<pre class="brush: js notranslate">var pc = new RTCPeerConnection();
+<pre class="brush: js">var pc = new RTCPeerConnection();
 …
 var sd = pc.currentLocalDescription;
 if (sd) {

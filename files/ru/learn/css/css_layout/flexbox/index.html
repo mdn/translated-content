@@ -52,7 +52,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Для начала нам нужно выбрать, какие элементы следует выкладывать в виде flex блоков. Для этого мы устанавливаем специальное значение {{cssxref ("display")}} в родительском элементе тех элементов, которые вы хотите оформить. В нашем случае мы хотим расположить элементы {{htmlelement ("article")}}, поэтому мы устанавливаем это значение на {{htmlelement ("section")}} (который становится flex контейнером):</p>
 
-<pre class="brush: css notranslate">section {
+<pre class="brush: css">section {
   display: flex;
 }</pre>
 
@@ -85,7 +85,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Попробуйте добавить следующую строчку в ваш файл:</p>
 
-<pre class="brush: css notranslate">flex-direction: column</pre>
+<pre class="brush: css">flex-direction: column</pre>
 
 <p>Вы увидите, что элементы расположились в виде столбцов, также как было до того, как мы добавили CSS код. Прежде чем продолжать, удалите эту строчку из примера.</p>
 
@@ -101,7 +101,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Мы видим, что дочерние элементы выбиваются из своего родителя-контейнера. Один из способов как это исправить - это добавить следующее свойство:</p>
 
-<pre class="brush: css notranslate">flex-wrap: wrap</pre>
+<pre class="brush: css">flex-wrap: wrap</pre>
 
 <p>Попробуйте, и вы увидите, что так макет стал выглядеть гораздо лучше:</p>
 
@@ -115,12 +115,12 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>На этом этапе нужно заметить, что существует сокращение для свойств {{cssxref("flex-direction")}} и {{cssxref("flex-wrap")}} — {{cssxref("flex-flow")}}. Например, вы можете заменить</p>
 
-<pre class="brush: css notranslate">flex-direction: row;
+<pre class="brush: css">flex-direction: row;
 flex-wrap: wrap;</pre>
 
 <p>на</p>
 
-<pre class="brush: css notranslate">flex-flow: row wrap;</pre>
+<pre class="brush: css">flex-flow: row wrap;</pre>
 
 <h2 id="Гибкое_изменение_размеров_flex_элементов">Гибкое изменение размеров flex элементов</h2>
 
@@ -128,7 +128,7 @@ flex-wrap: wrap;</pre>
 
 <p>Прежде всего, добавим следующее правило в конец вашего CSS кода:</p>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   flex: 1;
 }</pre>
 
@@ -136,7 +136,7 @@ flex-wrap: wrap;</pre>
 
 <p>Теперь добавьте следующее правило в строку после предыдущего:</p>
 
-<pre class="brush: css notranslate">article:nth-of-type(3) {
+<pre class="brush: css">article:nth-of-type(3) {
   flex: 2;
 }</pre>
 
@@ -144,7 +144,7 @@ flex-wrap: wrap;</pre>
 
 <p>Вы также можете указать минимальный размер внутри значения flex. Попробуйте изменить существующие правила, добавив размеры:</p>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   flex: 1 200px;
 }
 
@@ -180,7 +180,7 @@ article:nth-of-type(3) {
 
 <p>Теперь добавьте следующую строку в низ кода CSS:</p>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -198,7 +198,7 @@ article:nth-of-type(3) {
 
 <p>Вы можете переопределить {{cssxref("align-items")}} поведение для отдельных flex элементов, применив свойство {{cssxref("align-self")}} к ним. Например, попробуйте добавить эти строки в код:</p>
 
-<pre class="brush: css notranslate">button:first-child {
+<pre class="brush: css">button:first-child {
   align-self: flex-end;
 }</pre>
 
@@ -222,7 +222,7 @@ article:nth-of-type(3) {
 
 <p>Код здесь простой: попробуйте добавить следующий CSS вниз вашего кода примера:</p>
 
-<pre class="brush: css notranslate">button:first-child {
+<pre class="brush: css">button:first-child {
   order: 1;
 }</pre>
 
@@ -237,7 +237,7 @@ article:nth-of-type(3) {
 
 <p>Вы можете установить отрицательные значения , чтобы элементы отображались раньше, чем элементы с установленным 0. Например, вы можете сделать, чтобы кнопка «Blush» появлялась в начале основной оси, используя следующее правило:</p>
 
-<pre class="brush: css notranslate">button:last-child {
+<pre class="brush: css">button:last-child {
   order: -1;
 }</pre>
 
@@ -249,7 +249,7 @@ article:nth-of-type(3) {
 
 <p>HTML для этого довольно простой. У нас есть элемент {{htmlelement ("section")}}, содержащий три {{htmlelement ("article")}}. Третий {{htmlelement ("article")}} содержит ещё три {{htmlelement ("div")}}.</p>
 
-<pre class="notranslate">section - article
+<pre>section - article
           article
           article - div - button
                     div   button
@@ -261,13 +261,13 @@ article:nth-of-type(3) {
 
 <p>Прежде всего, мы устанавливаем дочерние элементы {{htmlelement ("section")}} в виде flex блоков.</p>
 
-<pre class="brush: css notranslate">section {
+<pre class="brush: css">section {
   display: flex;
 }</pre>
 
 <p>Затем мы устанавливаем несколько значений на самих {{htmlelement ("article")}}. Обратите внимание на второе правило: мы устанавливаем третий {{htmlelement ("article")}}, чтобы его дети были в макете в виде flex блоков, но на этот раз мы располагаем их как столбец.</p>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   flex: 1 200px;
 }
 
@@ -280,7 +280,7 @@ article:nth-of-type(3) {
 
 <p>Затем мы берём первый {{htmlelement ("div")}}. Сначала мы пишем flex: 1 100px; чтобы дать ему минимальную высоту 100px, потом мы устанавливаем его дочерние элементы (элементы {{htmlelement ("button")}}) также в виде flex блоков. Им мы назначаем перенос блоков и выравниваем их по центру доступного пространства, как это было в примере с кнопкой.</p>
 
-<pre class="brush: css notranslate">article:nth-of-type(3) div:first-child {
+<pre class="brush: css">article:nth-of-type(3) div:first-child {
   flex: 1 100px;
   display: flex;
   flex-flow: row wrap;
@@ -290,7 +290,7 @@ article:nth-of-type(3) {
 
 <p>Наконец, мы устанавливаем размер кнопке, мы даём ему значение flex 1. Это даёт очень интересный эффект, который вы увидите, если попытаетесь изменить размер ширины окна браузера. Кнопки занимают столько места, сколько могут, и сидят на одной линии также, сколько могут. Если же они не могут комфортно расположиться на одной линии, они перепрыгнут на новые строки.</p>
 
-<pre class="brush: css notranslate">button {
+<pre class="brush: css">button {
   flex: 1;
   margin: 5px;
   font-size: 18px;

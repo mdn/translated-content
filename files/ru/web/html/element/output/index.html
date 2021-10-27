@@ -57,7 +57,7 @@ translation_of: Web/HTML/Element/output
 
 <p>Эта форма содержит слайдер, значение которого находится в пределах от 0 до 100, и элемент {{HTMLElement("input")}}, в который можно ввести второе значение. Два числа складываются и результат отображается в элементе <code>&lt;output&gt;</code> каждый раз, когда значение любого управляющего элемента меняется.</p>
 
-<pre class="brush: html notranslate">&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt;
+<pre class="brush: html">&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt;
   &lt;input type="range" name="b" value="50" /&gt; +
   &lt;input type="number" name="a" value="10" /&gt; =
   &lt;output name="result"&gt;60&lt;/output&gt;

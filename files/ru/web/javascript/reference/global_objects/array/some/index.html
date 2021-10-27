@@ -106,20 +106,20 @@ checkAvailability(fruits, 'banana'); // true</pre>
 
 <h3 id="Проверка_наличия_элемента_в_массиве_с_использованием_стрелочной_функции">Проверка наличия элемента в массиве с использованием стрелочной функции</h3>
 
-<pre><code>const fruits = ['apple', 'banana', 'mango', 'guava'];
+<pre class="brush: js">const fruits = ['apple', 'banana', 'mango', 'guava'];
 
 function checkAvailability(arr, val) {
   return arr.some(arrVal =&gt; val === arrVal);
 }
 
 checkAvailability(fruits, 'kela');   // false
-checkAvailability(fruits, 'banana'); // true</code></pre>
+checkAvailability(fruits, 'banana'); // true</pre>
 
 <p>{{ EmbedLiveSample('Проверка_наличия_элемента_в_массиве_с_использованием_стрелочной_функции', '', '', '', 'Experiment:StaticExamplesOnTop/JavaScript/Array/some') }}</p>
 
 <h3 id="Приведение_значения_к_логическому_типу">Приведение значения к логическому типу</h3>
 
-<pre><code>const TRUTHY_VALUES = [true, 'true', 1];
+<pre class="brush: js">const TRUTHY_VALUES = [true, 'true', 1];
 
 function getBoolean(value) {
   'use strict';
@@ -136,7 +136,7 @@ function getBoolean(value) {
 getBoolean(false);   // false
 getBoolean('false'); // false
 getBoolean(1);       // true
-getBoolean('true');  // true</code></pre>
+getBoolean('true');  // true</pre>
 
 <p>{{ EmbedLiveSample('Приведение_значения_к_логическому_типу', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}</p>
 
@@ -176,30 +176,7 @@ if (!Array.prototype.some) {
 
 <h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.17', 'Array.prototype.some')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.6.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.some', 'Array.prototype.some')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.some', 'Array.prototype.some')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 

@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code><var>array</var>.splice(<var>start[</var>, <var>deleteCount</var>[, <var>item1</var>[, <var>item2</var>[, ...]]]])
+<pre class="syntaxbox"><code><var>array</var>.splice(<var>start[</var>, <var>deleteCount</var>[, <var>item1</var>[, <var>item2</var>[, ...]]]])
 </code></pre>
 
 <h3 id="Parameters">Параметры</h3>
@@ -44,7 +44,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 
 <h3 id="Удаляет_0_элементов_по_индексу_2_и_вставляет_drum">Удаляет 0 элементов по индексу 2 и вставляет "drum"</h3>
 
-<pre class="brush: js notranslate">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+<pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(2, 0, 'drum');
 
 // myFish равен ["angel", "clown", "drum", "mandarin", "sturgeon"]
@@ -52,7 +52,7 @@ var removed = myFish.splice(2, 0, 'drum');
 
 <h3 id="Удаляет_1_элемент_по_индексу_3">Удаляет 1 элемент по индексу 3</h3>
 
-<pre class="brush: js notranslate">var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
+<pre class="brush: js">var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(3, 1);
 
 // removed равен ["mandarin"]
@@ -60,7 +60,7 @@ var removed = myFish.splice(3, 1);
 
 <h3 id="Удаляет_1_элемент_по_индексу_2_и_вставляет_trumpet">Удаляет 1 элемент по индексу 2 и вставляет "trumpet"</h3>
 
-<pre class="brush: js notranslate">var myFish = ['angel', 'clown', 'drum', 'sturgeon'];
+<pre class="brush: js">var myFish = ['angel', 'clown', 'drum', 'sturgeon'];
 var removed = myFish.splice(2, 1, 'trumpet');
 
 // myFish равен ["angel", "clown", "trumpet", "sturgeon"]
@@ -68,7 +68,7 @@ var removed = myFish.splice(2, 1, 'trumpet');
 
 <h3 id="Удаляет_2_элемента_начиная_с_индекса_0_и_вставляет_parrot_anemone_и_blue">Удаляет 2 элемента начиная с индекса 0 и вставляет "parrot", "anemone" и "blue"</h3>
 
-<pre class="brush: js notranslate">var myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
+<pre class="brush: js">var myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
 var removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
 
 // myFish равен ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
@@ -76,7 +76,7 @@ var removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
 
 <h3 id="Удаляет_2_элемента_начиная_с_индекса_2">Удаляет 2 элемента начиная с индекса 2</h3>
 
-<pre class="brush: js notranslate">var myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
+<pre class="brush: js">var myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
 var removed = myFish.splice(myFish.length - 3, 2);
 
 // myFish равен ["parrot", "anemone", "sturgeon"]
@@ -84,7 +84,7 @@ var removed = myFish.splice(myFish.length - 3, 2);
 
 <h3 id="Удаляет_1_элемент_по_индексу_-2">Удаляет 1 элемент по индексу -2</h3>
 
-<pre class="brush: js notranslate">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+<pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(-2, 1);
 
 // myFish равен ["angel", "clown", "sturgeon"]
@@ -92,7 +92,7 @@ var removed = myFish.splice(-2, 1);
 
 <h3 id="Удаляет_все_элементы_после_индекса_2_включительно">Удаляет все элементы после индекса 2 (включительно)</h3>
 
-<pre class="brush: js notranslate">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+<pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(2);
 
 // myFish равен ["angel", "clown"]
@@ -100,30 +100,7 @@ var removed = myFish.splice(2);
 
 <h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.12', 'Array.prototype.splice')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.splice', 'Array.prototype.splice')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
