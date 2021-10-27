@@ -8,7 +8,7 @@ translation_of: Web/CSS/image-resolution
 
 La propriété [CSS](/fr/docs/Web/CSS) **`image-resolution`**  spécifie la résolution intrinsèque de toutes les images matricielles utilisée dans l'élément. Cela affecte les images de contenu comme les éléments remplacés et le contenu généré, ainsi que les images décoratives générées à l'aide de la propriété `background-image`.
 
-La résolution de l'image est définie par le nombre de pixels part unité de longueur de l'image, par exemple exprimé en pixels par pouce. Par défaut, CSS part du principe que la résolution d'une image est d'un pixel image par unité de pixel CSS. Cependant, la propriété `image-resolution` permet de définir une résolution différente.
+La résolution de l'image est définie par le nombre de pixels par unité de longueur de l'image, par exemple exprimé en pixels par pouce. Par défaut, CSS part du principe que la résolution d'une image est d'un pixel image par unité de pixel CSS. Cependant, la propriété `image-resolution` permet de définir une résolution différente.
 
 ## Syntaxe
 
