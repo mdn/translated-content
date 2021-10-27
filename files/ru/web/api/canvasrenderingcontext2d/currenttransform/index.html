@@ -31,11 +31,11 @@ translation_of: Web/API/CanvasRenderingContext2D/currentTransform
 
 <h4 id="HTML">HTML</h4>
 
-<pre><code>&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</code></pre>
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre><code>const canvas = document.getElementById('canvas');
+<pre class="brush: html">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let matrix = ctx.currentTransform;
@@ -46,7 +46,7 @@ matrix.d = 1;
 matrix.e = 0;
 matrix.f = 0;
 ctx.currentTransform = matrix;
-ctx.fillRect(0, 0, 100, 100);</code></pre>
+ctx.fillRect(0, 0, 100, 100);</pre>
 
 <h4 id="Результат">Результат</h4>
 
