@@ -48,7 +48,7 @@ image-resolution: unset;
 
 ### Mettre en place la haute résolution pour l'impression
 
-Lorsque l'on imprime un document, il est possible de demander une meilleur résolution pour les images&nbsp;:
+Lorsque l'on imprime un document, il est possible de demander une meilleure résolution pour les images&nbsp;:
 
 ```css
 @media print {
