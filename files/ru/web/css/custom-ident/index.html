@@ -78,7 +78,52 @@ bili.bob          Только буквы, цифры, _ и - можно не э
 
 <h2 id="Спецификации">Спецификации</h2>
 
-{{Specifications}}
+<table>
+  <thead>
+    <tr>
+      <th>Specification</th>
+      <th>Status</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('CSS4 Values', '#custom-idents', '<code>&lt;custom-ident&gt;</code>')}}</td>
+      <td>{{Spec2('CSS4 Values')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSS Will Change', '#valdef-will-change-custom-ident', '<code>&lt;custom-ident&gt;</code> for <code>will-change</code>')}}</td>
+      <td>{{Spec2('CSS Will Change')}}</td>
+      <td>Defines which values are excluded for {{CSSxRef("will-change")}}.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSS3 Counter Styles', '#typedef-counter-style-name', '<code>&lt;custom-ident&gt;</code> for <code>list-style-type</code>')}}</td>
+      <td>{{Spec2('CSS3 Counter Styles')}}</td>
+      <td>Uses <code>&lt;custom-ident&gt;</code> instead of a finite list of keywords. Defines which values are excluded for {{CSSxRef("list-style-type")}} and {{CSSxRef("@counter-style")}}.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSS3 Lists', '#counter-properties', '<code>&lt;custom-ident&gt;</code> for <code>counter-*</code>')}}</td>
+      <td>{{Spec2('CSS3 Lists')}}</td>
+      <td>Renames <code>&lt;identifier&gt;</code> to <code>&lt;custom-ident&gt;</code>. Adds its usage to the new <code>counter-set</code> property.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSS3 Animations', '#typedef-single-animation-name', '<code>&lt;custom-ident&gt;</code> for <code>animation-name</code>')}}</td>
+      <td>{{Spec2('CSS3 Animations')}}</td>
+      <td>Defines which values are excluded for {{CSSxRef("animation-name")}}.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSS3 Values', '#custom-idents', '<code>&lt;custom-ident&gt;</code>')}}</td>
+      <td>{{Spec2('CSS3 Values')}}</td>
+      <td>Renames <code>&lt;identifier&gt;</code> to <code>&lt;custom-ident&gt;</code>. Makes it a pseudo-type and forbids the use of excluded values.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSS2.1', 'syndata.html#value-def-identifier', '<code>&lt;identifier&gt;</code>')}}</td>
+      <td>{{Spec2('CSS2.1')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
