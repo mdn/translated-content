@@ -12,18 +12,64 @@ original_slug: Web/Events/icecandidate
 
 <p><code>icecandidate</code> 的类型为 {{domxref("RTCPeerIceCandidateEvent")}}, 在以下三种情况下会触发该事件：</p>
 
-<h3 id="分享新的源">分享新的源</h3>
+<h3 id="分享新的源">分享新的候选</h3>
 
 <p><code>触发icecandidate</code>事件的首要原因：当获得新的源之后，需要将该源的信息发送给远端信号服务器，并分发至其他端的{{domxref("RTCPeerConnection")}}。其他{{domxref("RTCPeerConnection")}}通过{{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}方法将新{{domxref("RTCPeerCandidateIceEvent.candidate", "candidate")}} 中携带的信息，将新的源描述信息添加进它的备选池中；</p>
 
 <pre>rtcPeerConnection.onicecandidate = (event) =&gt; {
   if (event.candidate) {
     sendCandidateToRemotePeer(event.candidate)
+  } else {
+    /* 在此次协商中，没有更多的候选了 */
   }
 }
 </pre>
 
+<h3 id="代表最后一轮候选结束">代表最后一轮候选结束</h3>
 
+<p>当一个ICE协商会话没有候选来提供给某个给定的RTCIceTransport，就完成了一轮候选的收集。一个带有空字串（""）的icecandidate事件出现，表明了这种情况。</p>
+<p>您应当像对待任何普通候选一般向远程节点传递这个候选，正如在上述“共享一个新的候选”里所描述的。这就确保了远程节点也能获得候选终结的通知。正如您在上一个小节的代码里所见，每个候选都被发送到别的节点，包括任何可能含有空候选字串的。只有那些事件的candidate属性为null的不通过信令连接传递。</p>
+<p>候选终结指示在Trickle ICE draft specification的9.3章有描述（注意，章节号码会根据标准的反复修正而发生改变）</p>
+
+<h3 id="代表ICE收集完成">代表ICE收集完成</h3>
+<p>一旦所有的ICE传输完成收集候选并且RTCPeerConnection对象的iceGatheringState的值变化成complete，一个icecandidate事件携带着complete的值设为null被发送。</p>
+
+<p>这个信号的存在是为了向后兼容的目的，并且不需要向远程节点分发（这也就是为什么上面的代码片段检查了event.candidate是否为null，优先于沿着候选发送）</p>
+<p>如果您需要执行任何特别的动作，当没有更多的期待的候选，您最好通过观察icegatheringstatechange事件来观察ICE收集状态。</p>
+
+<pre>pc.addEventListener("icegatheringstatechange", ev =&gt; {
+  switch(pc.iceGatheringState) {
+    case "new":
+      /* gathering is either just starting or has been reset */
+      break;
+    case "gathering":
+      /* gathering has begun or is ongoing */
+      break;
+    case "complete":
+      /* gathering has ended */
+      break;
+  }
+});
+</pre>
+
+<p>如您在这个例子中看到的，icegatheringstatechange事件让您知道RTCPeerConnection属性iceGatheringState被更新的时机。如果那个值现在是complete，你就知道ICE收集刚刚结束。</p>
+<p>对表明一个ICE会话已经结束而言，相比观察一个单独的ICE消息，这是更为可靠的方法。</p>
+
+<h3 id="例子">例子</h3>
+<p>这个例子建立一个简单的icecandidate事件处理器，通过信令服务器使用一个sendMessenge（）来建立和发送一个回复给远程节点。</p>
+<p>首先，一个使用addEventListener()的例子：</p>
+<pre>pc.addEventListener("icecandidate",ev=&gt; {
+      if(ev.candidate){
+        sendMessage({type:"new-ice-candidate",candidate:event.candidate});
+      }},false);
+</pre>
+<p>您也可以直接设定onicecandidate事件处理器的属性：</p>
+<pre>pc.onicecandidate = ev =&gt; {
+      if(ev.candidate){
+        sendMessage({type:"new-ice-candidate",candidate:event.candidate});
+      }
+     };
+</pre>
 
 <h2 id="概述">概述</h2>
 
