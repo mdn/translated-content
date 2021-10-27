@@ -46,11 +46,11 @@ translation_of: Web/API/CanvasRenderingContext2D/lineJoin
 
 <h4 id="HTML">HTML</h4>
 
-<pre><code>&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</code></pre>
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre><code>const canvas = document.getElementById('canvas');
+<pre class="brush: html">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.lineWidth = 20;
@@ -60,7 +60,7 @@ ctx.moveTo(20, 20);
 ctx.lineTo(190, 100);
 ctx.lineTo(280, 20);
 ctx.lineTo(280, 150);
-ctx.stroke();</code></pre>
+ctx.stroke();</pre>
 
 <h4 id="Result">Result</h4>
 
@@ -75,10 +75,10 @@ ctx.stroke();</code></pre>
 <p> </p>
 
 <div class="hidden">
-<pre><code>&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</code></pre>
+<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 </div>
 
-<pre><code>var ctx = document.getElementById('canvas').getContext('2d');
+<pre class="brush: html">var ctx = document.getElementById('canvas').getContext('2d');
 var lineJoin = ['round', 'bevel', 'miter'];
 ctx.lineWidth = 10;
 
@@ -91,7 +91,7 @@ for (let i = 0; i &lt; lineJoin.length; i++) {
   ctx.lineTo(115, 45 + i * 40);
   ctx.lineTo(155, 5 + i * 40);
   ctx.stroke();
-}</code></pre>
+}</pre>
 
 <p>{{EmbedLiveSample("Разница_между_значениями_lineJoin", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}</p>
 
