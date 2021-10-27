@@ -80,7 +80,7 @@ _このインターフェイスは {{domxref("HTMLElement")}}、{{domxref("Eleme
 
 ## イベント
 
-これらのイベントを待ち受けするには {{domxref("EventTarget/addEventListener", "addEventListener()")}} を使用するか、イベントリスナーをこのインターフェイスの `on<em>イベント名</em>` プロパティに代入するかしてください。
+これらのイベントを待ち受けするには {{domxref("EventTarget/addEventListener", "addEventListener()")}} を使用するか、イベントリスナーをこのインターフェイスの `onイベント名` プロパティに代入するかしてください。
 
 - {{domxref("HTMLElement/change_event", "change")}} イベント
   - : {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} の各要素で、ユーザーが要素の値の変更を確定したときに発行されます。
