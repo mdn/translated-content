@@ -30,7 +30,7 @@ image-resolution: unset;
 - `{{cssxref("&lt;resolution&gt;")}}`
   - : Spécifie explicitement la résolution intrinsèque.
 - `from-image`
-  - : Utilise la résolution intrinsèque comme spécifié par le format de l'image. Si l'image ne spécifie pas elle-même sa propre résolution, alors la résolution explicitement spécifié sera utilisée, si elle a été fournie. Sinon, la résolution par défaut sera de `1dppx` (1 pixel image par unité de pixel CSS).
+  - : Utilise la résolution intrinsèque comme spécifié par le format de l'image. Si l'image ne spécifie pas elle-même sa propre résolution, alors la résolution explicitement spécifiée sera utilisée, si elle a été fournie. Sinon, la résolution par défaut sera de `1dppx` (1 pixel image par unité de pixel CSS).
 - `snap`
   - : Si le mot-clé `snap` est fourni, la résolution calculée sera la résolution spécifiée arrondie à la valeur la plus proche correspondant à un pixel image défini sous la forme d'un nombre entier de pixels de l'appareil. Si la résolution est récupérée à partir de l'image, alors la résolution intrinsèque utilisée est la résolution native de l'image, arrondie de la même façon.
 
