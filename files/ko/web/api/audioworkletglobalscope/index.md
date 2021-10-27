@@ -42,7 +42,7 @@ browser-compat: api.AudioWorkletGlobalScope
 
 이 예제에서 우리는 콘솔에 사용자 정의 {{domxref("AudioWorkletProcessor")}}의 생성자에 있는 모든 전역 속성을 출력합니다.
 
-우선 우리는 프로세서를 정의할 필요가 있고, 그것을 등록합니다. 이것은 별도의 파일에서 수행되어야 한다는 점을 기억하세요.
+우선 우리는 프로세서를 정의하고, 등록할 필요가 있습니다. 이 작업은 별도의 파일에서 이루어져야 함을 기억하세요.
 
 ```js
 // test-processor.js
