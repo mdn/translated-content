@@ -15,12 +15,13 @@ translation_of: Web/API/Element/getBoundingClientRect
 
 <p>如果是标准盒子模型，元素的尺寸等于<code>width/height</code> + <code>padding</code> + <code>border-width</code>的总和。如果<code>box-sizing: border-box</code>，元素的的尺寸等于 <code>width/height</code>。</p>
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate"><var>rectObject</var> = <var>object</var>.getBoundingClientRect();
-</pre>
+```js
+domRect = element.getBoundingClientRect();
+```
 
-<h3 id="值">值</h3>
+### 值
 
 <p>返回值是一个 {{domxref("DOMRect")}} 对象，这个对象是由该元素的 {{domxref("Element.getClientRects", "getClientRects()")}} 方法返回的一组矩形的集合，就是该元素的 CSS 边框大小。返回的结果是包含完整元素的最小矩形，并且拥有<code>left</code>, <code>top</code>, <code>right</code>, <code>bottom</code>, <code>x</code>, <code>y</code>, <code>width</code>, 和 <code>height</code>这几个以像素为单位的只读属性用于描述整个边框。除了<code>width</code> 和 <code>height</code> 以外的属性是相对于视图窗口的左上角来计算的。</p>
 
@@ -39,12 +40,35 @@ translation_of: Web/API/Element/getBoundingClientRect
 (((t = document.documentElement) || (t = document.body.parentNode))
   &amp;&amp; typeof t.scrollTop == 'number' ? t : document.body).scrollTop</pre>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush:js notranslate">// rect 是一个具有四个属性 left、top、right、bottom 的 DOMRect 对象
-//译者注：DOMRect 是 TextRectangle 或 ClientRect 的标准名称，他们是相同的。
-var rect = obj.getBoundingClientRect();
-</pre>
+```html
+<div></div>
+```
+
+```css
+div {
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  margin: 50px auto;
+  background: purple;
+}
+```
+
+```js
+let elem = document.querySelector('div');
+let rect = elem.getBoundingClientRect();
+for (var key in rect) {
+  if(typeof rect[key] !== 'function') {
+    let para = document.createElement('p');
+    para.textContent  = `${ key } : ${ rect[key] }`;
+    document.body.appendChild(para);
+  }
+}
+```
+
+{{EmbedLiveSample('Basic', '100%', 640)}}
 
 <h2 id="规范">规范</h2>
 
