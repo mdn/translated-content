@@ -177,7 +177,7 @@ EDITOR=code
 | Grammar | 문법 | |
 | Guides (헤딩) | 가이드 | | | 
 | Literal | 리터럴 | |
-| Method | 메서드 | |
+| Method | 메서드 | [국립국어원 Method](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=11976) |
 | Module | 모듈 | ESM에서 명시하는 모듈의 경우 '모듈'로 변역한다. | | 
 | Module | 과정 | 어떠한 교육 과정, 단위에 의한 표현은 '과정'으로 번역한다. (예: In this module) | | 
 | Note (안내문구) | 참고	 | | | 
