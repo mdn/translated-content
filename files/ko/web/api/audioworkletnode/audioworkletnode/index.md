@@ -68,7 +68,7 @@ var node = new AudioWorkletNode(context, name, options);
 
 만약 `outputChannelCount`이 명시되지 않았고, `numberOfInputs`와 `numberOfOutputs`가 모두 1이라면, `AudioWorkletNode`의 초기 채널 카운트는 1으로 설정됩니다. 이것은 계산된 채널의 수로 동적으로 변화하는 출력 채널 카운트를 변화시키는 효과를 가지는데, 이는 입력의 채널 카운트와 {{domxref("AudioNode")}} 속성 {{domxref("AudioNode.channelCountMode", "channelCountMode")}}의 현재 설정에 기반합니다.
 
-그렇지 않으면, 만약 `outputChannelCount`이 제공되고 *그리고* 만약 `numberOfInputs`와 `numberOfOutputs`의 값이 둘 다 1이라면, 오디오 worklet 노드의 채널 카운트는 `outputChannelCount`의 값으로 설정됩니다. 그렇지 않으면, 출력 채널의 집합에 있는 각 채널의 채널 카운트는 해당하는 `outputChannelCount` 배열의 값과 일치되도록 설정됩니다.
+그렇지 않으면, 만약 `outputChannelCount`이 제공되고 만약 `numberOfInputs`와 `numberOfOutputs`의 값이 둘 다 1이라면, 오디오 worklet 노드의 채널 카운트는 `outputChannelCount`의 값으로 설정됩니다. 그렇지 않으면, 출력 채널의 집합에 있는 각 채널의 채널 카운트는 해당하는 `outputChannelCount` 배열의 값과 일치되도록 설정됩니다.
 
 ## 예제
 
