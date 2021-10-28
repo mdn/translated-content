@@ -132,24 +132,44 @@ EDITOR=code
     - 예: 정수 값, 소수 값, 반환 값, 기본 값
     - 틀린 예: 정숫값, 소숫값, 반환값, 기본값
 
+### 용어 지침 `참고 링크` 우선 순위
+
+- 1. 해당 단어에 대한 의견을 나눈 PR
+- 2. 적절한 ko MDN 문서
+- 3. 적절한 en-us MDN 문서 
+
 ## Section Title
 
-각 페이지의 Section Title에 대한 정의입니다. 
+각 페이지의 Section Title에 대한 단어 정의입니다. 
 
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
+| Advantages | 장점 | [링크](https://developer.mozilla.org/en-US/docs/Games/Introduction_to_HTML5_Game_Development) |
 | Aliasing | 별칭 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
+| Brief history | 간략한 역사 | [링크](https://developer.mozilla.org/ko/docs/Glossary/HTML#%EA%B0%84%EB%9E%B5%ED%95%9C_%EC%97%AD%EC%82%AC) |
 | Browser compatibility | 브라우저 호환성 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
-| Description | | [링크](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#description) |
+| Concept | 개념 | |
+| Conclusion | 결론 | |
+| Demo | 데모 | [링크](https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders#demo)
+| Description | | [링크](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#description)  
 | Example | 예제 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+| Examples | 예제들 | [링크](https://developer.mozilla.org/en-US/docs/Glossary/loop#examples) |
+| Guides | 가이드 | |
+| In this module | | [링크](https://developer.mozilla.org/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started#in_this_module) |
 | Learn More | 더 알아보기 | [링크](https://developer.mozilla.org/en-US/docs/Glossary/Mutable) |
+| Next steps | 다음 단계 | [링크](https://developer.mozilla.org/ko/docs/Games/Tutorials/2D_breakout_game_Phaser#%EB%8B%A4%EC%9D%8C_%EB%8B%A8%EA%B3%84) |
 | Polyfill | 폴리필 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
 | Reference | 참고서 | |
-| Syntax | 구문 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
-| Specifications | 명세서 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
 | See also | 같이 보기 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+| Specifications | 명세서 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
+| Summary | 요약 | |
+| Syntax | 구문 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+| Tools & resources | | [링크](https://developer.mozilla.org/en-US/docs/Web/JavaScript) |
+| Web Technologies | 웹 기술들 | [링크](https://developer.mozilla.org/en-US/docs/Games/Introduction_to_HTML5_Game_Development) |
 
-## Sub Section Title
+## Section Subtitle
+
+각 페이지의 Section Subtitle에 대한 단어 정의입니다. 
 
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
@@ -157,6 +177,8 @@ EDITOR=code
 | Compatibility notes | - | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
 
 ## 안내 문구
+
+각 페이지의 안내 문구에 대한 단어 정의입니다.
 
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
@@ -185,7 +207,6 @@ EDITOR=code
 | Global | 전역 | |
 | Glossary | 용어 사전 | |
 | Grammar | 문법 | |
-| Guides (헤딩) | 가이드 | | | 
 | Literal | 리터럴 | |
 | Method | 메서드 | [국립국어원 Method](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=11976) |
 | Module | 모듈 | ESM에서 명시하는 모듈의 경우 '모듈'로 변역한다. | | 
