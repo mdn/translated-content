@@ -144,12 +144,14 @@ EDITOR=code
 
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
+| Accessibility concerns | 접근성 고려사항 | |
 | Advantages | 장점 | [링크](https://developer.mozilla.org/en-US/docs/Games/Introduction_to_HTML5_Game_Development) |
 | Aliasing | 별칭 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
 | Brief history | 간략한 역사 | [링크](https://developer.mozilla.org/ko/docs/Glossary/HTML#%EA%B0%84%EB%9E%B5%ED%95%9C_%EC%97%AD%EC%82%AC) |
 | Browser compatibility | 브라우저 호환성 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
 | Concept | 개념 | |
 | Conclusion | 결론 | |
+| Contact us | 문의하기 | |
 | Demo | 데모 | [링크](https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders#demo)
 | Description | | [링크](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#description)  
 | Example | 예제 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
@@ -165,6 +167,7 @@ EDITOR=code
 | Summary | 요약 | |
 | Syntax | 구문 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
 | Tools & resources | | [링크](https://developer.mozilla.org/en-US/docs/Web/JavaScript) |
+| Tutorial | 자습서 | |
 | Web Technologies | 웹 기술들 | [링크](https://developer.mozilla.org/en-US/docs/Games/Introduction_to_HTML5_Game_Development) |
 
 ## Section Subtitle
@@ -174,7 +177,7 @@ EDITOR=code
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
 | Value | - | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
-| Compatibility notes | - | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+| Compatibility notes | 호환성 참고 사항 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
 
 ## 안내 문구
 
@@ -190,12 +193,10 @@ EDITOR=code
 
 | 용어 | 번역 | 기타 |
 | --- | --- | --- |
-| Accessibility concerns | 접근성 고려사항 | Heading |
 | Application | 애플리케이션 | |
 | Attribute | 특성 | |
 | Boolean | 불리언 | |
 | Class | 클래스 | |
-| Contact us | 문의하기 | |
 | Content(s) | 콘텐츠 | |
 | Context | 맥락 | |
 | Document | 문서 | |
@@ -221,9 +222,7 @@ EDITOR=code
 | Regular expression | 정규 표현식 | |
 | Rendering | 렌더링 | |
 | Section | 구획 | |
-| Specification | 명세 | |
 | Statement | 명령문 또는 문 | |
-| Tutorial | 자습서 | |
 | Usage notes | 사용 일람 | Heading |
 | User agent | 사용자 에이전트 | |
 
