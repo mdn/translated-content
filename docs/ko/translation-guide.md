@@ -130,6 +130,30 @@ EDITOR=code
     - 예: 정수 값, 소수 값, 반환 값, 기본 값
     - 틀린 예: 정숫값, 소숫값, 반환값, 기본값
 
+## Section Title
+
+각 페이지의 Section Title에 대한 정의입니다. 
+
+| 용어 | 번역 | 참고 링크 |
+| --- | --- | --- |
+| Aliasing | 별칭 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
+| Browser compatibility | 브라우저 호환성 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
+| Description | | [링크](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#description) |
+| Example | 예제 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+| Learn More | 더 알아보기 | [링크](https://developer.mozilla.org/en-US/docs/Glossary/Mutable) |
+| Polyfill | 폴리필 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
+| Reference | 참고서 | |
+| Syntax | 구문 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+| Specifications | 명세서 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
+| See also | 같이 보기 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+
+## Sub Section Title
+
+| 용어 | 번역 | 가이드라인 반영 여부 | 참고 링크 |
+| --- | --- | --- | --- |
+| Value | - | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+| Compatibility notes | - | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+
 **사전 순으로 용어집을 편집해주세요.**
 
 | 용어 | 번역 | 기타 |
@@ -146,7 +170,6 @@ EDITOR=code
 | Element | 요소 | |
 | Entity | 개체 | |
 | Enumerated | 열거형 | |
-| Example | 예제 | Heading |
 | Expression | 표현식 또는 식 | |
 | Framework | 프레임워크 | |
 | Global | 전역 | |
@@ -168,11 +191,9 @@ EDITOR=code
 | Reference | 참고서 | |
 | Regular expression | 정규 표현식 | |
 | Rendering | 렌더링 | |
-| See also | 같이 보기 | Heading |
 | Section | 구획 | |
 | Specification | 명세 | |
 | Statement | 명령문 또는 문 | |
-| Syntax | 구문 | |
 | Tutorial | 자습서 | |
 | Usage notes | 사용 일람 | Heading |
 | User agent | 사용자 에이전트 | |
