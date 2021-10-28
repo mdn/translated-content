@@ -183,8 +183,9 @@ EDITOR=code
 
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
-| Value | - | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
 | Compatibility notes | 호환성 참고 사항 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+| Parameters | 매개변수 | [링크](http://localhost:5000/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode#parameters) |
+| Value | - | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
 
 ## 안내 문구
 
