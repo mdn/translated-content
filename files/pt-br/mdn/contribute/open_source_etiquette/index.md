@@ -63,22 +63,22 @@ Você também deve evitar qualquer xingamento / linguagem ofensiva no MDN, mesmo
 
 Esteja ciente de que existem regras em qualquer PCA para proteger seus contribuidores de se sentirem desconfortáveis enquanto contribuem. Isto geralmente vem na forma de um arquivo CODE_OF_CONDUCT.md no GitHub.
 
-For example, MDN's repos are governed by the wide-reaching [Mozilla Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/). Usually mildly offensive behavior on MDN repos (such as constantly being off-topic/disruptive, or being rude) will usually be first responded to by a warning on the repo, followed by a final warning, then a temporary or permanent ban. More serious behavioral problems such as hate speech or threats against another contributor will not be tolerated, and will likely result in an instant ban.
+Por exemplo, os repositórios do MDN são governados pela ampla [Diretriz de Participação da Comunidade do Mozilla](https://www.mozilla.org/en-US/about/governance/policies/participation/). Geralmente, comportamento ligeiramente ofensivo nos repositórios do MDN (Tal qual constantemente estar fora do assunto, ser perturbador ou ser rude) geralmente será respondido com um aviso do repositório, seguido de um aviso final, e então um banimento temporário ou permanente. Problemas comportamentais mais sérios como discurso de ódio ou ameaças contra outro contribuidor não serão tolerados e, provavelmente, resultarão em um banimento instantâneo.
 
-If you receive anything that makes you feel uncomfortable, you should always report it using the mechanism provided on the code of conduct.
+Se você receber qualquer coisa que faça você se sentir desconfortável, você sempre deve reportar usando os mecanismos fornecidos no código de conduta. 
 
-## Choose effective contributions
+## Escolha contribuições efetivas
 
-Think about what you want to do on the project. For example, we have a large list of issues filed at <https://github.com/mdn/content/issues>, broken up by various GitHub labels into estimated time to fix, technology categories, and more. Another good label to look for is "good first issue", which is generally given to issues that are quite simple and good for beginners to get started with. We are also soon going to start triaging our issues more extensively, by adding other labels such as priority indicators. Try picking some issues that you think you can manage with the time you have available, and ask to be assigned to them.
+Pense sobre o que você quer fazer no projeto. Por exemplo, nós temos uma longa lista de problemas arquivada em <https://github.com/mdn/content/issues>, dividida por vários rótulos no GitHub com tempo estimado para corrigir, categorias de tecnologia, e mais. Um bom rótulo para procurar é o "good first issue" (Bom primeiro problema), que, no geral, são problemas que são simples e bons para iniciantes começarem. Em breve, nós vamos começar a fazer uma triagem mais ampla de nossos problemas, adicionando novos rótulos como indicadores de prioridade. Tente escolher alguns problemas que você acha que consegue lidar no tempo que você tem disponível, e peça para ser atribuído para eles.
 
-You could also contribute by opening pull requests to fix problems that you come across while reading MDN articles.
+Você também pode contribuir abrindo pull requests para resolver problemas com os quais você se deparou enquanto estava lendo os artigos do MDN.
 
-A lot of the work on MDN revolves around writing documentation and code examples, but there are other ways to contribute too:
+Muito trabalho no MDN se resolve escrevendo documentação e exemplos de código, mas existem outras formas de contribuir também:
 
-- Help to triage issues that come in.
-- Help fix typos.
-- Help to improve grammar and make pages more understandable.
-- Help to mentor people that are trying to make fixes.
+- Ajudar a triar problemas que apareceram.
+- Ajudar a corrigir erros de digitação.
+- Ajudar a melhorar a gramática e fazer as páginas serem mais compreensíveis.
+- Ajudar a mentorar pessoas que estão tentando corrigir erros.
 
 Every fix is useful, no matter how small, and we won't turn any fix away. Nevertheless, try to make sure your fixes are productive. We'd like to advise against these kinds of contributions:
 
