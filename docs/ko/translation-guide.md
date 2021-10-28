@@ -151,10 +151,18 @@ EDITOR=code
 
 ## Sub Section Title
 
-| 용어 | 번역 | 가이드라인 반영 여부 | 참고 링크 |
-| --- | --- | --- | --- |
+| 용어 | 번역 | 참고 링크 |
+| --- | --- | --- |
 | Value | - | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
 | Compatibility notes | - | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+
+## 안내 문구
+
+| 용어 | 번역 | 참고 링크 |
+| --- | --- | --- |
+| Note | 참고 | | 
+| Prerequisites | 필요한 사전 지식 | [링크](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) | 
+| Objective | 목표 | [링크](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) |
 
 **사전 순으로 용어집을 편집해주세요.**
 
@@ -182,9 +190,7 @@ EDITOR=code
 | Method | 메서드 | [국립국어원 Method](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=11976) |
 | Module | 모듈 | ESM에서 명시하는 모듈의 경우 '모듈'로 변역한다. | | 
 | Module | 과정 | 어떠한 교육 과정, 단위에 의한 표현은 '과정'으로 번역한다. (예: In this module) | | 
-| Note (안내문구) | 참고	 | | | 
 | Object | 객체 | |
-| Objective (안내문구) | 목표 | | |
 | Origin | 출처 | |
 | Override | 재정의 | |
 | Primitive | 원시 (값) | |
@@ -248,7 +254,6 @@ EDITOR=code
 | Non-blocking operation | 논블로킹 연산 | | | 
 | Parameter | 매개변수 | | | 
 | Pending | 대기 | | | 
-| Prerequisites | 필요한 사전 지식 | | | 
 | Promise | 프로미스 | | [참고 링크](https://github.com/mdn/translated-content/pull/1081#issuecomment-878333558) | 
 | Promise chaining | 프로미스 체이닝 | | | 
 | Prototype | 프로토타입 | | |
