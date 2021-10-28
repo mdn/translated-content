@@ -13,7 +13,7 @@ browser-compat: api.AudioWorkletNode
 ---
 {{APIRef("Web Audio API")}}
 
-> **참고:** 이 인터페이스는 [secure contexts](/ko/docs/Web/Security/Secure_Contexts) 바깥에서 이용 가능 하지만, {{domxref("BaseAudioContext.audioWorklet")}} 속성은 그렇지 않습니다. 따라서 사용자 정의 {{domxref("AudioWorkletProcessor")}}는 [secure contexts](/ko/docs/Web/Security/Secure_Contexts) 바깥에서 정의될 수 없습니다.
+> **참고:** 이 인터페이스는 [secure contexts](/ko/docs/Web/Security/Secure_Contexts) 바깥에서 이용 가능하지만, {{domxref("BaseAudioContext.audioWorklet")}} 속성은 그렇지 않습니다. 따라서 사용자 정의 {{domxref("AudioWorkletProcessor")}}는 [secure contexts](/ko/docs/Web/Security/Secure_Contexts) 바깥에서 정의될 수 없습니다.
 
 [Web Audio API](/ko/docs/Web/API/Web_Audio_API)의 **`AudioWorkletNode`** 인터페이스는 사용자에 의해 정의된, 다른 노드들과 마찬가지로 오디오 라우팅 그래프에 연결될 수 있는, {{domxref("AudioNode")}}에 대한 base 클래스를 나타냅니다.  **`AudioWorkletNode`** 는 연관된 {{domxref("AudioWorkletProcessor")}}를 가지고 있는데, 이는 Web Audio 렌더링 스레드에서 실제적인 오디오 프로세싱을 합니다.
 
