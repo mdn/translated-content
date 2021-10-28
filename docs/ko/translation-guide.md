@@ -26,6 +26,12 @@ MDN의 모든 로케일은 `en-us`를 기준으로 변역이 진행되고 있습
 - `ko-locale`에 존재하지 않는 새로운 파일에 대한 번역을 진행할 때, **파일 전체 번역**을 원칙으로 합니다. (단, [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)와 같이 분량이 많은 파일에 대해서는 부분 번역을 허용합니다. 이때, 번역되지 않은 부분은 `en-us locale` 원본으로 대체합니다.)
 - `PR`의 `Merge` 우선 순위는 먼저 PR을 생성한 순서대로 우선권을 갖습니다. 리뷰어는 우선 순위가 있는 PR을 먼저 병합하는것을 원칙으로 합니다. 따라서, 번역을 진행하기 전에, `Draft PR`을 먼저 생성하는 것을 권장합니다. [ko-locale PR 목록](https://github.com/mdn/translated-content/pulls?q=is%3Apr+is%3Aopen+label%3Al10n-ko+)
 
+### ko-locale 현황판
+
+어디서부터 기여해야될지 모르겠다면 현황판에 등록된 `Level 0`, `Level 1`, `Level 2` 각자 MDN의 이해도에 맞는 이슈를 처리해보세요! 새로운 이슈를 제보하는 것도 기여에 큰 도움이 됩니다.
+
+- [ko-locale 현황판](https://github.com/mdn/translated-content/projects/2)
+
 ### 파일 확장자
 
 현재 translated-content 저장소는 `.html`과 `.md` 두 개의 확장자로 문서 편집을 할 수 있습니다. **(자세한 내용은 [자주 묻는 질문](https://github.com/mdn/translated-content/blob/main/docs/ko/translation-guide.md#%EC%9E%90%EC%A3%BC-%EB%AC%BB%EB%8A%94-%EC%A7%88%EB%AC%B8) 6번을 참고해주세요.)**
