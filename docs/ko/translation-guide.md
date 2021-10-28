@@ -24,7 +24,7 @@ MDN의 모든 로케일은 `en-us`를 기준으로 변역이 진행되고 있습
 ### PR 규칙
 
 - `ko-locale`에 존재하지 않는 새로운 파일에 대한 번역을 진행할 때, **파일 전체 번역**을 원칙으로 합니다. (단, [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)와 같이 분량이 많은 파일에 대해서는 부분 번역을 허용합니다. 이때, 번역되지 않은 부분은 `en-us locale` 원본으로 대체합니다.)
-- `PR`의 `Merge` 우선 순위는 먼저 PR을 생성한 순서대로 우선권을 갖습니다. 리뷰어는 우선 순위가 있는 PR을 먼저 병합하는것을 원칙으로 합니다. 따라서, 번역을 진행하기 전에, `Draft PR`을 먼저 생성하는 것을 권장합니다.
+- `PR`의 `Merge` 우선 순위는 먼저 PR을 생성한 순서대로 우선권을 갖습니다. 리뷰어는 우선 순위가 있는 PR을 먼저 병합하는것을 원칙으로 합니다. 따라서, 번역을 진행하기 전에, `Draft PR`을 먼저 생성하는 것을 권장합니다. [ko-locale PR 목록](https://github.com/mdn/translated-content/pulls?q=is%3Apr+is%3Aopen+label%3Al10n-ko+)
 
 ### 파일 확장자
 
