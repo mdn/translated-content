@@ -194,8 +194,8 @@ EDITOR=code
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
 | Note | 참고 | | 
-| Prerequisites | 필요한 사전 지식 | [링크](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) | 
 | Objective | 목표 | [링크](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) |
+| Prerequisites | 필요한 사전 지식 | [링크](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) | 
 
 **사전 순으로 용어집을 편집해주세요.**
 
