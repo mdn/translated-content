@@ -38,7 +38,7 @@ _또한 부모인 {{domxref("AudioNode")}}로부터 속성을 상속받습니다
 
 ## 메서드
 
-_또한 부모인 {{domxref("AudioNode")}}로부터 메서드를 상속받습니다_.
+_부모인 {{domxref("AudioNode")}}로부터 메서드를 상속받습니다_.
 
 _`AudioWorkletNode` 인터페이스는 자신만의 어떠한 메서드도 정의하지 않습니다._
 
