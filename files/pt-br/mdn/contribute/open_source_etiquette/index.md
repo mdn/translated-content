@@ -1,5 +1,5 @@
 ---
-title: Etiqueta básica para projetos de código aberto
+title: Etiqueta básica para projetos open source
 slug: MDN/Contribute/Open_source_etiquette
 tags:
   - Boas práticas
@@ -10,13 +10,13 @@ tags:
 ---
 {{MDNSidebar}}
 
-Se você nunca trabalhou em um projeto de código aberto (PCA) antes, é uma boa ideia ler este artigo antes de começar a contribuir ao MDN (ou outros projetos de código aberto). Existem algumas boas práticas para adotar que vão ajudar a garantir que você e outros contribuidores do projeto se sintam valorizados e seguros, e continuem produtivos.
+Se você nunca trabalhou em um projeto open source (OSP) antes, é uma boa ideia ler este artigo antes de começar a contribuir ao MDN (ou outros projetos open source). Existem algumas boas práticas para adotar que vão ajudar a garantir que você e outros contribuidores do projeto se sintam valorizados e seguros, e continuem produtivos.
 
-Este artigo não vai te ensinar tudo sobre contribuir para projetos de código aberto; o objetivo aqui é mais te dar alguns bons pontos iniciais para pensar quando você começar a contribuir com projetos de código aberto.
+Este artigo não vai te ensinar tudo sobre contribuir para projetos open source; o objetivo aqui é mais te dar alguns bons pontos iniciais para pensar quando você começar a contribuir com projetos open source.
 
-## Pense sobre o porquê de você estar contribuindo para um PCA
+## Pense sobre o porquê de você estar contribuindo para um OSP
 
-Antes de você começar a contribuir para um projeto de código aberto, se pergunte o motivo de você querer fazer isso. Está tudo bem se a resposta para esta pergunta for só "Estou entediado e quero achar algo produtivo para fazer com meu tempo", mas você provavelmente consegue ir mais fundo que isso.
+Antes de você começar a contribuir para um projeto open source, se pergunte o motivo de você querer fazer isso. Está tudo bem se a resposta para esta pergunta for só "Estou entediado e quero achar algo produtivo para fazer com meu tempo", mas você provavelmente consegue ir mais fundo que isso.
 
 Razões ainda melhores podem incluir:
 
@@ -52,7 +52,7 @@ Você e outros contribuidores estão (ou deveriam estar) aqui porque querem faze
 
 - Conhecimento do projeto e tecnologias usadas para contruí-lo
 - Gênero, sexualidade, idade, línguas faladas, localização, vies político, religião, ou outros atributos pessoais
-- Experiências com projetos de código aberto
+- Experiências com projetos open source
 - Confiança
 - Expectativas
 - Senso de humor
@@ -61,7 +61,7 @@ Portanto, você deve manter o que escreve o máximo possível dentro do assunto,
 
 Você também deve evitar qualquer xingamento / linguagem ofensiva no MDN, mesmo se não for direcionado a alguém específico. Isso não é necessário para a participação, e algumas pessoas são realmente sensíveis a isso.
 
-Esteja ciente de que existem regras em qualquer PCA para proteger seus contribuidores de se sentirem desconfortáveis enquanto contribuem. Isto geralmente vem na forma de um arquivo CODE_OF_CONDUCT.md no GitHub.
+Esteja ciente de que existem regras em qualquer OSP para proteger seus contribuidores de se sentirem desconfortáveis enquanto contribuem. Isto geralmente vem na forma de um arquivo CODE_OF_CONDUCT.md no GitHub.
 
 Por exemplo, os repositórios do MDN são governados pela ampla [Diretriz de Participação da Comunidade do Mozilla](https://www.mozilla.org/en-US/about/governance/policies/participation/). Geralmente, comportamento ligeiramente ofensivo nos repositórios do MDN (Tal qual constantemente estar fora do assunto, ser perturbador ou ser rude) geralmente será respondido com um aviso do repositório, seguido de um aviso final, e então um banimento temporário ou permanente. Problemas comportamentais mais sérios como discurso de ódio ou ameaças contra outro contribuidor não serão tolerados e, provavelmente, resultarão em um banimento instantâneo.
 
@@ -69,40 +69,40 @@ Se você receber qualquer coisa que faça você se sentir desconfortável, você
 
 ## Escolha contribuições efetivas
 
-Pense sobre o que você quer fazer no projeto. Por exemplo, nós temos uma longa lista de problemas arquivada em <https://github.com/mdn/content/issues>, dividida por vários rótulos no GitHub com tempo estimado para corrigir, categorias de tecnologia, e mais. Um bom rótulo para procurar é o "good first issue" (Bom primeiro problema), que, no geral, são problemas que são simples e bons para iniciantes começarem. Em breve, nós vamos começar a fazer uma triagem mais ampla de nossos problemas, adicionando novos rótulos como indicadores de prioridade. Tente escolher alguns problemas que você acha que consegue lidar no tempo que você tem disponível, e peça para ser atribuído para eles.
+Pense sobre o que você quer fazer no projeto. Por exemplo, nós temos uma longa lista de issues(problemas) arquivada em <https://github.com/mdn/content/issues>, dividida por vários rótulos no GitHub com tempo estimado para corrigir, categorias de tecnologia, e mais. Um bom rótulo para procurar é o "good first issue" (Bom primeiro problema), que, no geral, são issues simples e boas para iniciantes começarem. Em breve, nós vamos começar a fazer uma triagem mais ampla de nossos problemas, adicionando novos rótulos como indicadores de prioridade. Tente escolher algumas issues que você ache que consegue lidar no tempo que você tem disponível, e peça para ser atribuído para elas.
 
 Você também pode contribuir abrindo pull requests para resolver problemas com os quais você se deparou enquanto estava lendo os artigos do MDN.
 
 Muito trabalho no MDN se resolve escrevendo documentação e exemplos de código, mas existem outras formas de contribuir também:
 
-- Ajudar a triar problemas que apareceram.
+- Ajudar a triar issues que aparecerem.
 - Ajudar a corrigir erros de digitação.
 - Ajudar a melhorar a gramática e fazer as páginas serem mais compreensíveis.
 - Ajudar a mentorar pessoas que estão tentando corrigir erros.
 
-Every fix is useful, no matter how small, and we won't turn any fix away. Nevertheless, try to make sure your fixes are productive. We'd like to advise against these kinds of contributions:
+Toda correção é útil, não importa o quão pequena seja, e nós não iremos descartar nenhuma correção. No entanto, tente fazer com que as correções sejam produtivas. Nós gostaríamos de desaconselhar estes tipos de contribuições:
 
-- Updating code styling just because "you like that style better".
-- Updating language style "just because you like that style better".
-- Changing pages from US English to British English.
-- Adding or removing a bunch of punctuation when there's not really anything wrong.
-- Changing the testing framework we are using for something else because you prefer it.
+- Atualizar o estilo de código só porque "você gosta mais desse estilo".
+- Atualizar o estilo de escrita só porque "você gosta mais desse estilo".
+- Trocar páginas de Inglês Americano para Inglês Britânico.
+- Adicionar ou remover um monte de pontuações quando na verdade não tem nada errado.
+- Trocar o framework de testes que nós estamos usando por outro porque você prefere.
 
-In many cases, things are like they are on OSPs for a reason. You should read their style guides if they have one, and if in doubt about whether something is productive, always ask first!
+Em muitos casos, as coisas são como são em um OSP por uma razão. Você deve ler os guias de estilos deles se exitirem, e se você duvida que algo seja produtivo, sempre pergunte primeiro!
 
-## Read the manual
+## Leia o manual
 
-Good OSPs will always make contributor documentation readily available. On GitHub projects, it is usually in the repo's CONTRIBUTING.md file, or sometimes in the project's README.md file. Being a documentation project, MDN content has a [README](https://github.com/mdn/content/blob/main/README.md) and a decent set of contributor docs on the site itself (see [Contributing to MDN](/en-US/docs/MDN/Contribute)).
+Bons OSPs sempre irão disponibilizar a documentação do contribuidor. Em nossos projetos no GitHub, geralmente está em um arquivo CONTRIBUTING.md no repositório, ou, as vezes, em um arquivo README.md no projeto. Sendo um projeto de documentação, o conteúdo do MDN tem um [README](https://github.com/mdn/content/blob/main/README.md) e um bom conjunto de docs de contribuidor no site em si (veja [Contribuindo para o MDN](/en-US/docs/MDN/Contribute)).
 
-Don't be afraid to ask for help, but ALWAYS try to find the answer to your question first before asking. This way you build up your knowledge of the project and become more independent, and don't put unnecessary burden on the other contributors.
+Não tenha medo de pedir ajuda, mas SEMPRE tente achar a resposta antes de perguntar. Desta forma você vai contruir seu conhecimento do projeto e se tornar mais independente, e não sobrecarregue desnecessariamente os outros colaboradores.
 
-Of course, the docs won't always be perfect. If an explanation is hard to find or not described very well, file an issue, or create a pull request to try to fix it yourself.
+Naturalmente, os docs não serão sempre perfeitos. Se for difícil encontrar uma explicação ou ela não estiver bem descrita, crie uma issue, ou crie um pull request para tentar corrigir isso você mesmo.
 
-## Find out where to ask questions
+## Descubra onde perguntar
 
-Always find out where the best place is to ask questions. Good OSPs will always make this clear in their docs (see [ask for help on MDN](/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help)). If you want to ask general questions, then always make use of these channels. Don't just file an issue on GitHub for every question, as it adds noise to the project (see "Make progress, not noise" below).
+Sempre descubra onde é o melhor lugar para perguntar. Bons OSPs sempre irão deixar isso claro em seus docs (veja [peça ajuda no MDN](/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help)). Se você tiver dúvidas gerais, então use estes canais. Não crie uma issue no GitHub apenas para fazer uma pergunta, já que isso gera ruídos no projeto (veja "Faça progresso, não barulho" abaixo).
 
-## Make progress, not noise
+## Faça progresso, não barulho
 
 Think carefully about the way you handle communication in the project — make sure it is useful, and that it doesn't make other contributor's jobs harder. Submitting pull requests to fix bugs is great, but are they truly useful, and easy to review? Filing issues and joining in other conversations is fine, but are your issues and comments on topic, or are they just adding noise?
 
