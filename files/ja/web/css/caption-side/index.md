@@ -3,92 +3,94 @@ title: caption-side
 slug: Web/CSS/caption-side
 tags:
   - CSS
-  - CSS Property
-  - CSS Tables
-  - Reference
+  - CSS プロパティ
+  - CSS 表
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.caption-side
 translation_of: Web/CSS/caption-side
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>caption-side</code></strong> は、表 ({{htmlelement("table")}}) の {{HTMLElement("caption")}} の配置位置を指定する <a href="/ja/docs/CSS" title="CSS">CSS</a> プロパティです。</p>
+**`caption-side`** は [CSS](/ja/docs/Web/CSS) のプロパティで、表 ({{htmlelement("table")}}) の {{HTMLElement("caption")}} の中身を指定された側に配置します。この値は表の {{cssxref('writing-mode')}} に対する相対値です。
 
-<div>{{EmbedInteractiveExample("pages/css/caption-side.html")}}</div>
+{{EmbedInteractiveExample("pages/css/caption-side.html")}}
 
+## 構文
 
-
-<p>{{cssinfo}}</p>
-
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush: css">/* 方向を示す値 */
+```css
+/* 方向を示す値 */
 caption-side: top;
 caption-side: bottom;
 
 /* 警告: 非標準の値 */
-caption-side: left;
-caption-side: right;
-caption-side: top-outside;
-caption-side: bottom-outside;
+caption-side: block-start;
+caption-side: block-end;
+caption-side: inline-start;
+caption-side: inline-end;
 
 /* グローバル値 */
 caption-side: inherit;
 caption-side: initial;
+caption-side: revert;
 caption-side: unset;
-</pre>
+```
 
-<p>このプロパティの値は、表の {{cssxref('writing-mode')}} に対して相対的です。</p>
+`caption-side` プロパティは、以下のキーワード値のうちの一つで指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>top</code></dt>
- <dd>キャプションボックスを表の上に配置することを示すキーワードです。</dd>
- <dt><code>bottom</code></dt>
- <dd>キャプションボックスを表の下に配置することを示すキーワードです。</dd>
- <dt><code>left</code> {{non-standard_inline}}</dt>
- <dd>キャプションボックスを表の左に配置することを示すキーワードです。</dd>
- <dd>{{Note("この値は CSS 2 で提案されましたが、最終的な CSS 2.1 仕様から削除されており、非標準です。")}}</dd>
- <dt><code>right</code> {{non-standard_inline}}</dt>
- <dd>キャプションボックスを表の右に配置することを示すキーワードです。</dd>
- <dd>{{Note("この値は CSS 2 で提案されましたが、最終的な CSS 2.1 仕様から削除されており、非標準です。")}}</dd>
- <dt><code>top-outside</code> {{non-standard_inline}}</dt>
- <dd>キャプションボックスを表の上に配置することを示すキーワードです。ただし、キャプションの幅や水平方向の配置は、表の水平方向のレイアウトに束縛されません。<br>
- {{Note("CSS 2.1 仕様では、CSS 2 仕様で値 <code>top</code> について異なる動作を説明していたとの注記があります。この動作は将来の仕様書で、この値を使用して再導入する予定です。")}}</dd>
- <dt><code>bottom-outside</code> {{non-standard_inline}}</dt>
- <dd>キャプションボックスを表の下に配置することを示すキーワードです。ただし、キャプションの幅や水平方向の配置は、表の水平方向のレイアウトに束縛されません。<br>
- {{Note("CSS 2.1 仕様では、CSS 2 仕様で値 <code>bottom</code> について異なる動作を説明していたとの注記があります。この動作は将来の仕様書で、この値を使用して再導入する予定です。")}}</dd>
-</dl>
+- `top`
+  - : キャプションボックスを表の上方に配置します。
+- `bottom`
+  - : キャプションボックスを表の下方に配置します。
+- `block-start`
+  - : キャプションボックスを表のブロック方向の先頭に配置します。
+- `block-end`
+  - : キャプションボックスを表のブロック方向の末尾に配置します。
+- `inline-start`
+  - : キャプションボックスを表のインライン方向の先頭に配置します。
+- `inline-end`
+  - : キャプションボックスを表のインライン方向の末尾に配置します。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式構文</h3>
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+<h3 id="Setting_captions_above_and_below">キャプションを上や下に設定</h3>
 
-<pre class="brush: html">&lt;table class="top"&gt;
-  &lt;caption&gt;Caption ABOVE the table&lt;/caption&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Some data&lt;/td&gt;
-    &lt;td&gt;Some more data&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
+#### HTML
 
-&lt;br&gt;
+```html
+<table class="top">
+  <caption>Caption ABOVE the table</caption>
+  <tr>
+    <td>Some data</td>
+    <td>Some more data</td>
+  </tr>
+</table>
 
-&lt;table class="bottom"&gt;
-  &lt;caption&gt;Caption BELOW the table&lt;/caption&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Some data&lt;/td&gt;
-    &lt;td&gt;Some more data&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+<br>
 
-<h3 id="CSS">CSS</h3>
+<table class="bottom">
+  <caption>Caption BELOW the table</caption>
+  <tr>
+    <td>Some data</td>
+    <td>Some more data</td>
+  </tr>
+</table>
+```
 
-<pre class="brush: css">.top caption {
+#### CSS
+
+```css
+.top caption {
   caption-side: top;
 }
 
@@ -103,38 +105,16 @@ table {
 td {
   border: 1px solid blue;
 }
-</pre>
+```
 
-<h3 id="出力">出力</h3>
+#### 結果
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Setting_captions_above_and_below', 'auto', 160)}}
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Logical Properties', '#caption-side', 'caption-side')}}</td>
-   <td>{{Spec2('CSS Logical Properties')}}</td>
-   <td>値 <code>top</code> および <code>bottom</code> は、<code>writing-mode</code> の値に対して相対的であることを定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'tables.html#caption-position', 'caption-side')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>最初の定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("css.properties.caption-side")}}</p>
+{{Compat}}
