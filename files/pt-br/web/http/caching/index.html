@@ -100,7 +100,7 @@ Cache-Control: public
 
 <p><img alt="Show how a proxy cache acts when a doc is not cache, in the cache and fresh, in the cache and stale." src="https://mdn.mozillademos.org/files/13771/HTTPStaleness.png" style="height: 910px; width: 822px;"></p>
 
-<p>O tempo de Vida é calculado beaseado em vários headers. Se o "<code>Cache-control: max-age=N</code>" header é especificado, então o tempo de vida é igual a N. Se este header não está presente, o que ocorre com frequência, ele checa se um {{HTTPHeader("Expires")}} heade está presente. Se um <code>Expires</code> header existe, então é o valor menos o valor do {{HTTPHeader("Date")}} header determina o tempo de vida. Finalmente, se nenhum header está presente, procure pelo {{HTTPHeader("Last-Modified")}} header. Se este header está presente, então o tempo de vidaé igual ao valor do  <code>Date</code> header menos o valor do <code>Last-modified</code> header dividido por 10.<br>
+<p>O tempo de Vida é calculado beaseado em vários headers. Se o "<code>Cache-control: max-age=N</code>" header é especificado, então o tempo de vida é igual a N. Se este header não está presente, o que ocorre com frequência, ele checa se um {{HTTPHeader("Expires")}} header está presente. Se um <code>Expires</code> header existe, então é o valor menos o valor do {{HTTPHeader("Date")}} header determina o tempo de vida. Finalmente, se nenhum header está presente, procure pelo {{HTTPHeader("Last-Modified")}} header. Se este header está presente, então o tempo de vidaé igual ao valor do  <code>Date</code> header menos o valor do <code>Last-modified</code> header dividido por 10.<br>
  O valor de expiração é computado por:</p>
 
 <pre>expirationTime = responseTime + freshnessLifetime - currentAge
