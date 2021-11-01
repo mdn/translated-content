@@ -12,10 +12,9 @@ translation_of: Web/SVG/Element/symbol
 
 <p>L'utilisation d'éléments <code>symbol</code> pour les graphiques qui sont utilisés de multiples fois dans le même document permet d'améliorer la structure et la sémantique du document. Les documents fortement structurés peuvent plus facilement être rendus sous forme graphique, vocale, ou Braille, et ainsi favoriser leur accessibilité.</p>
 
-<div id="Exemple">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Exemple</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
@@ -36,7 +35,6 @@ translation_of: Web/SVG/Element/symbol
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Exemple', 150, '100%')}}</p>
-</div>
 
 <h2 id="Attributs">Attributs</h2>
 
@@ -86,7 +84,9 @@ translation_of: Web/SVG/Element/symbol
 
 <p>{{svginfo}}</p>
 
-<p class="note"><strong>Note:</strong> Un élément <code>&lt;symbol&gt;</code> n'est pas destiné à être affiché par lui-même. Seules les instances d'un élément <code>&lt;symbol&gt;</code> (c'est à dire une référence vers un <code>&lt;symbol&gt;</code> par un élément {{SVGElement("use")}}) sont affichées. Cela signifie que certains navigateurs peuvent refuser d'afficher directement un élément <code>&lt;symbol&gt;</code> quand bien même la propriété CSS {{cssxref('display')}} indique le contraire.</p>
+<div class="note">
+  <p><strong>Note :</strong> Un élément <code>&lt;symbol&gt;</code> n'est pas destiné à être affiché par lui-même. Seules les instances d'un élément <code>&lt;symbol&gt;</code> (c'est à dire une référence vers un <code>&lt;symbol&gt;</code> par un élément {{SVGElement("use")}}) sont affichées. Cela signifie que certains navigateurs peuvent refuser d'afficher directement un élément <code>&lt;symbol&gt;</code> quand bien même la propriété CSS {{cssxref('display')}} indique le contraire.</p>
+</div>
 
 <h2 id="Spécifications">Spécifications</h2>
 

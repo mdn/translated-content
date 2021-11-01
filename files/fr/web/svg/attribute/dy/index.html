@@ -12,10 +12,9 @@ translation_of: Web/SVG/Attribute/dy
 
 <p>Sept éléments utilisent cet attribut: {{SVGElement('altGlyph')}}, {{SVGElement('feDropShadow')}}, {{SVGElement('feOffset')}}, {{SVGElement('glyphRef')}}, {{SVGElement('text')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}</p>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Exemple</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Lignes indiquant la position des glyphes --&gt;
@@ -36,12 +35,13 @@ translation_of: Web/SVG/Attribute/dy
   stroke-dasharray: 3px;
 }</pre>
 
-<p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
-</div>
+<p>{{EmbedLiveSample('exemple', '100%', 200)}}</p>
 
 <h2 id="altGlyph">altGlyph</h2>
 
-<p class="warning"><strong>Attention:</strong> Depuis {{SVGElement('altGlyph')}} est déprécié et ne devrait pas être utilisé.</p>
+<div class="warning">
+  <p><strong>Attention :</strong> Depuis {{SVGElement('altGlyph')}} est déprécié et ne devrait pas être utilisé.</p>
+</div>
 
 <p>Pour {{SVGElement('altGlyph')}}, s'il ne contient qu'une seule valeur, <code>dy</code> définit un décalge sur l'axe y pour tous les glyphes.</p>
 
@@ -108,7 +108,9 @@ translation_of: Web/SVG/Attribute/dy
 
 <h2 id="glyphRef">glyphRef</h2>
 
-<p class="warning"><strong>Attention:</strong> Depuis SVG2 {{SVGElement('glyphRef')}} est déprécié et ne devrait pas être utilisé.</p>
+<div class="warning">
+  <p><strong>Attention :</strong> Depuis SVG2 {{SVGElement('glyphRef')}} est déprécié et ne devrait pas être utilisé.</p>
+</div>
 
 <p>Pour {{SVGElement('glyphRef')}}, <code>dy</code> définit le décalage x du glyphe, dans le système métrique de la police.</p>
 
@@ -135,8 +137,6 @@ translation_of: Web/SVG/Attribute/dy
 
 <p>S'il a plusieurs valeurs, <code>dx</code> définit un décalage sur l'axe x individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent une valeur de <code>0</code>. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs supplémentaires sont ignorées.</p>
 
-<p> </p>
-
 <table class="standard-table">
  <tbody>
   <tr>
@@ -156,9 +156,7 @@ translation_of: Web/SVG/Attribute/dy
 
 <h3 id="Exemple">Exemple</h3>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 150 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Lignes horizontales --&gt;
@@ -188,15 +186,13 @@ translation_of: Web/SVG/Attribute/dy
 
 <h2 id="tref">tref</h2>
 
-<p class="warning"><strong>Attention:</strong> Depuis SVG2 {{SVGElement('tref')}} est déprécié et ne devrait pas être utilisé.</p>
-
-<p> </p>
+<div class="warning">
+  <p><strong>Attention :</strong> Depuis SVG2 {{SVGElement('tref')}} est déprécié et ne devrait pas être utilisé.</p>
+</div>
 
 <p>Pour {{SVGElement('tref')}}, s'il ne contient qu'une seule valeur, <code>dx</code> définit un décalage sur l'axe x pour tous les glyphes.</p>
 
 <p>S'il a plusieurs valeurs, <code>dx</code> définit un décalage sur l'axe x individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent une valeur de <code>0</code>. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs supplémentaires sont ignorées.</p>
-
-<p> </p>
 
 <table class="standard-table">
  <tbody>
@@ -217,13 +213,9 @@ translation_of: Web/SVG/Attribute/dy
 
 <h2 id="tspan">tspan</h2>
 
-<p> </p>
-
 <p>Pour {{SVGElement('tspan')}}, s'il ne contient qu'une seule valeur, <code>dx</code> définit un décalage sur l'axe x pour tous les glyphes.</p>
 
 <p>S'il a plusieurs valeurs, <code>dx</code> définit un décalage sur l'axe x individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent une valeur de <code>0</code>. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs supplémentaires sont ignorées.</p>
-
-<p> </p>
 
 <table class="standard-table">
  <tbody>
