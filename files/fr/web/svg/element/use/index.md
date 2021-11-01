@@ -3,102 +3,80 @@ title: <use>
 slug: Web/SVG/Element/use
 translation_of: Web/SVG/Element/use
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élement <strong><code>&lt;use&gt; </code></strong>permet la duplication de <em>nodes </em>(noeuds du DOM, NDR) définis par <a href="/fr/docs/Web/SVG/Element/defs">&lt;defs&gt;</a> afin de les insérer par ailleurs. L'effet est le même que si les noeuds étaient créés dans une partie non-rendue (au sens de non-affichée) au sein du DOM puis "clonés"  là où est utilisé l'élément <code>use</code> tel que le permet les <a href="/fr/docs/Web/HTML/Element/template">éléments de gabarit</a> grâce à HTML5.<br>
- <br>
- Puisque les noeuds clonés par <code>use</code> ne sont pas exposés, vous devez être attentif lorsque vous utilisez des règles de style <a href="/fr/docs/Web/CSS" title="en/CSS">CSS</a> sur l'élément <code>use</code> et ses enfants "cachés". En effet les attributs CSS ne sont pas garantis d'être hérités lorsqu'ils seront clonés si vous n'explicitez pas correctement les <a href="/fr/docs/Web/CSS/inheritance" title="en/CSS/inheritance">héritages CSS</a>.</p>
+L'élement **`<use> `**permet la duplication de _nodes_ (noeuds du DOM, NDR) définis par [\<defs>](/fr/docs/Web/SVG/Element/defs) afin de les insérer par ailleurs. L'effet est le même que si les noeuds étaient créés dans une partie non-rendue (au sens de non-affichée) au sein du DOM puis "clonés"  là où est utilisé l'élément `use` tel que le permet les [éléments de gabarit](/fr/docs/Web/HTML/Element/template) grâce à HTML5.
 
-<p>Pour des raisons de sécurité, certains navigateurs peuvent appliquer la politique de <em>même-origine</em> (c'est-à-dire le couple domaine et port identiques) pour l'élément <code>use</code> ce qui peut conduire à un refus de charger une URI depuis une origine différente conernant l'attribut {{SVGAttr("href")}}.</p>
+Puisque les noeuds clonés par `use` ne sont pas exposés, vous devez être attentif lorsque vous utilisez des règles de style [CSS](/fr/docs/Web/CSS "en/CSS") sur l'élément `use` et ses enfants "cachés". En effet les attributs CSS ne sont pas garantis d'être hérités lorsqu'ils seront clonés si vous n'explicitez pas correctement les [héritages CSS](/fr/docs/Web/CSS/inheritance "en/CSS/inheritance").
 
-<div class="warning">
-  <p><strong>Attention :</strong> Depuis la version de SVG 2, l'attribut {{SVGAttr("xlink:href")}} est obsolète. Voir la page {{SVGAttr("xlink:href")}} pour plus d'informations.</p>
-</div>
+Pour des raisons de sécurité, certains navigateurs peuvent appliquer la politique de _même-origine_ (c'est-à-dire le couple domaine et port identiques) pour l'élément `use` ce qui peut conduire à un refus de charger une URI depuis une origine différente conernant l'attribut {{SVGAttr("href")}}.
 
-<h2 id="Contexte_d'usage">Contexte d'usage</h2>
+> **Attention :** Depuis la version de SVG 2, l'attribut {{SVGAttr("xlink:href")}} est obsolète. Voir la page {{SVGAttr("xlink:href")}} pour plus d'informations.
 
-<p>{{svginfo}}</p>
+## Contexte d'usage
 
-<h2 id="Attributs">Attributs</h2>
+{{svginfo}}
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+## Attributs
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#Conditional_processing_attributes" title="en/SVG/Attribute#ConditionalProccessing">Conditional processing attributes</a> »</li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Core_attributes" title="en/SVG/Attribute#Core">Core attributes</a> »</li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Graphical_event_attributes" title="en/SVG/Attribute#GraphicalEvent">Graphical event attributes</a> »</li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Presentation_attributes" title="en/SVG/Attribute#Presentation">Presentation attributes</a> »</li>
- <li><a href="/fr/docs/Web/SVG/Attribute#XLink_attributes" title="en/SVG/Attribute#XLink">Xlink attributes</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
- <li>{{SVGAttr("transform")}}</li>
-</ul>
+### Attributs globaux
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+- [Conditional processing attributes](/fr/docs/Web/SVG/Attribute#Conditional_processing_attributes "en/SVG/Attribute#ConditionalProccessing") »
+- [Core attributes](/fr/docs/Web/SVG/Attribute#Core_attributes "en/SVG/Attribute#Core") »
+- [Graphical event attributes](/fr/docs/Web/SVG/Attribute#Graphical_event_attributes "en/SVG/Attribute#GraphicalEvent") »
+- [Presentation attributes](/fr/docs/Web/SVG/Attribute#Presentation_attributes "en/SVG/Attribute#Presentation") »
+- [Xlink attributes](/fr/docs/Web/SVG/Attribute#XLink_attributes "en/SVG/Attribute#XLink") »
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
+- {{SVGAttr("transform")}}
 
-<ul>
- <li>{{SVGAttr("x")}}</li>
- <li>{{SVGAttr("y")}}</li>
- <li>{{SVGAttr("width")}}</li>
- <li>{{SVGAttr("height")}}</li>
- <li>{{SVGAttr("href")}}</li>
-</ul>
+### Attributs spécifiques
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+- {{SVGAttr("x")}}
+- {{SVGAttr("y")}}
+- {{SVGAttr("width")}}
+- {{SVGAttr("height")}}
+- {{SVGAttr("href")}}
 
-<p>Cet élément est implanté par l'interface {{domxref("SVGUseElement")}}.</p>
+## Interface DOM
 
-<h2 id="Exemple">Exemple</h2>
+Cet élément est implanté par l'interface {{domxref("SVGUseElement")}}.
 
-<pre class="brush: html; highlight[15,17,19]">&lt;svg width="80" height="80" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;style&gt;
+## Exemple
+
+```html
+<svg width="80" height="80" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style>
     .classA {
       fill: red;
     }
-  &lt;/style&gt;
-  &lt;defs&gt;
-    &lt;g id="Port"&gt;
-      &lt;circle style="fill: inherit;" r="10"/&gt;
-    &lt;/g&gt;
-  &lt;/defs&gt;
+  </style>
+  <defs>
+    <g id="Port">
+      <circle style="fill: inherit;" r="10"/>
+    </g>
+  </defs>
 
-  &lt;text y="15"&gt;black&lt;/text&gt;
-  &lt;use x="50" y="10" href="#Port" /&gt;
-  &lt;text y="35"&gt;red&lt;/text&gt;
-  &lt;use x="50" y="30" href="#Port" class="classA"/&gt;
-  &lt;text y="55"&gt;blue&lt;/text&gt;
-  &lt;use x="50" y="50" href="#Port" style="fill: blue;"/&gt;
-&lt;/svg&gt;
-</pre>
+  <text y="15">black</text>
+  <use x="50" y="10" href="#Port" />
+  <text y="35">red</text>
+  <use x="50" y="30" href="#Port" class="classA"/>
+  <text y="55">blue</text>
+  <use x="50" y="50" href="#Port" style="fill: blue;"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Exemple", 80, 80)}}</p>
+{{EmbedLiveSample("Exemple", 80, 80)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'struct.html#UseElement', '&lt;use&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'struct.html#UseElement', '&lt;use&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                   | Commentaire        |
+| ------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
+| {{SpecName('SVG2', 'struct.html#UseElement', '&lt;use&gt;')}}     | {{Spec2('SVG2')}} |                    |
+| {{SpecName('SVG1.1', 'struct.html#UseElement', '&lt;use&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.use")}}</p>
+{{Compat("svg.elements.use")}}

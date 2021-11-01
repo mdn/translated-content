@@ -7,155 +7,134 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feColorMatrix
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>La primitive de filtre SVG <strong><code>&lt;feColorMatrix&gt;</code></strong> change les couleurs d'un élément en fonction d'une matrice de transformation. Chaque pixel (représenté par un vecteur [R,G,B,A]) est <a href="https://fr.wikipedia.org/wiki/Produit_matriciel">multiplié par matrice</a> pour créer une nouvelle couleur:</p>
+La primitive de filtre SVG **`<feColorMatrix>`** change les couleurs d'un élément en fonction d'une matrice de transformation. Chaque pixel (représenté par un vecteur \[R,G,B,A]) est [multiplié par matrice](https://fr.wikipedia.org/wiki/Produit_matriciel) pour créer une nouvelle couleur:
 
-<pre>| R' |     | a00 a01 a02 a03 a04 |   | R |
-| G' |     | a10 a11 a12 a13 a14 |   | G |
-| B' |  =  | a20 a21 a22 a23 a24 | * | B |
-| A' |     | a30 a31 a32 a33 a34 |   | A |
-| 1  |     |  0   0   0   0   1  |   | 1 |</pre>
+    | R' |     | a00 a01 a02 a03 a04 |   | R |
+    | G' |     | a10 a11 a12 a13 a14 |   | G |
+    | B' |  =  | a20 a21 a22 a23 a24 | * | B |
+    | A' |     | a30 a31 a32 a33 a34 |   | A |
+    | 1  |     |  0   0   0   0   1  |   | 1 |
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_base">Attributs de base</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_présentation">Attributs de présentation</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_primitives_de_filtre">Attributs de primitive de filtre</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
-</ul>
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation)
+- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#Attributs_de_primitives_de_filtre)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<ul>
- <li>{{SVGAttr("in")}}</li>
- <li>{{SVGAttr("type")}}</li>
- <li>{{SVGAttr("values")}}</li>
-</ul>
+- {{SVGAttr("in")}}
+- {{SVGAttr("type")}}
+- {{SVGAttr("values")}}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface {{domxref("SVGFEColorMatrixElement")}}.</p>
+Cet élément implémente l'interface {{domxref("SVGFEColorMatrixElement")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html; highlight[19-24,31-33,40-42,49-50]">&lt;svg width="100%" height="100%" viewBox="0 0 150 360"
+```html
+<svg width="100%" height="100%" viewBox="0 0 150 360"
     preserveAspectRatio="xMidYMid meet"
     xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+    xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  &lt;!-- ref --&gt;
-  &lt;defs&gt;
-    &lt;g id="circles"&gt;
-      &lt;circle cx="30" cy="30" r="20" fill="blue" fill-opacity="0.5" /&gt;
-      &lt;circle cx="20" cy="50" r="20" fill="green" fill-opacity="0.5" /&gt;
-      &lt;circle cx="40" cy="50" r="20" fill="red" fill-opacity="0.5" /&gt;
-    &lt;/g&gt;
-  &lt;/defs&gt;
-  &lt;use href="#circles" /&gt;
-  &lt;text x="70" y="50"&gt;Reference&lt;/text&gt;
+  <!-- ref -->
+  <defs>
+    <g id="circles">
+      <circle cx="30" cy="30" r="20" fill="blue" fill-opacity="0.5" />
+      <circle cx="20" cy="50" r="20" fill="green" fill-opacity="0.5" />
+      <circle cx="40" cy="50" r="20" fill="red" fill-opacity="0.5" />
+    </g>
+  </defs>
+  <use href="#circles" />
+  <text x="70" y="50">Reference</text>
 
-  &lt;!-- matrix --&gt;
-  &lt;filter id="colorMeMatrix"&gt;
-    &lt;feColorMatrix in="SourceGraphic"
+  <!-- matrix -->
+  <filter id="colorMeMatrix">
+    <feColorMatrix in="SourceGraphic"
         type="matrix"
         values="0 0 0 0 0
                 1 1 1 1 0
                 0 0 0 0 0
-                0 0 0 1 0" /&gt;
-  &lt;/filter&gt;
-  &lt;use href="#circles" transform="translate(0 70)" filter="url(#colorMeMatrix)" /&gt;
-  &lt;text x="70" y="120"&gt;matrix&lt;/text&gt;
+                0 0 0 1 0" />
+  </filter>
+  <use href="#circles" transform="translate(0 70)" filter="url(#colorMeMatrix)" />
+  <text x="70" y="120">matrix</text>
 
-  &lt;!-- saturate --&gt;
-  &lt;filter id="colorMeSaturate"&gt;
-    &lt;feColorMatrix in="SourceGraphic"
+  <!-- saturate -->
+  <filter id="colorMeSaturate">
+    <feColorMatrix in="SourceGraphic"
         type="saturate"
-        values="0.2" /&gt;
-  &lt;/filter&gt;
-  &lt;use href="#circles" transform="translate(0 140)" filter="url(#colorMeSaturate)" /&gt;
-  &lt;text x="70" y="190"&gt;saturate&lt;/text&gt;
+        values="0.2" />
+  </filter>
+  <use href="#circles" transform="translate(0 140)" filter="url(#colorMeSaturate)" />
+  <text x="70" y="190">saturate</text>
 
-  &lt;!-- hueRotate --&gt;
-  &lt;filter id="colorMeHueRotate"&gt;
-    &lt;feColorMatrix in="SourceGraphic"
+  <!-- hueRotate -->
+  <filter id="colorMeHueRotate">
+    <feColorMatrix in="SourceGraphic"
         type="hueRotate"
-        values="180" /&gt;
-  &lt;/filter&gt;
-  &lt;use href="#circles" transform="translate(0 210)" filter="url(#colorMeHueRotate)" /&gt;
-  &lt;text x="70" y="260"&gt;hueRotate&lt;/text&gt;
+        values="180" />
+  </filter>
+  <use href="#circles" transform="translate(0 210)" filter="url(#colorMeHueRotate)" />
+  <text x="70" y="260">hueRotate</text>
 
-  &lt;!-- luminanceToAlpha --&gt;
-  &lt;filter id="colorMeLTA"&gt;
-    &lt;feColorMatrix in="SourceGraphic"
-        type="luminanceToAlpha" /&gt;
-  &lt;/filter&gt;
-  &lt;use href="#circles" transform="translate(0 280)" filter="url(#colorMeLTA)" /&gt;
-  &lt;text x="70" y="320"&gt;luminanceToAlpha&lt;/text&gt;
-&lt;/svg&gt;</pre>
+  <!-- luminanceToAlpha -->
+  <filter id="colorMeLTA">
+    <feColorMatrix in="SourceGraphic"
+        type="luminanceToAlpha" />
+  </filter>
+  <use href="#circles" transform="translate(0 280)" filter="url(#colorMeLTA)" />
+  <text x="70" y="320">luminanceToAlpha</text>
+</svg>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemple", "100%", 700, "/files/4371/test.png")}}</p>
+{{EmbedLiveSample("Exemple", "100%", 700, "/files/4371/test.png")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Filters 1.0', '#feColorMatrixElement', '&lt;feColorMatrix&gt;')}}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-   <td>Aucun changement</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'filters.html#feColorMatrixElement', '&lt;feColorMatrix&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | Statut                           | Commentaire         |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName('Filters 1.0', '#feColorMatrixElement', '&lt;feColorMatrix&gt;')}}         | {{Spec2('Filters 1.0')}} | Aucun changement    |
+| {{SpecName('SVG1.1', 'filters.html#feColorMatrixElement', '&lt;feColorMatrix&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.feColorMatrix")}}</p>
+{{Compat("svg.elements.feColorMatrix")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{SVGElement("filter")}}</li>
- <li>{{SVGElement("animate")}}</li>
- <li>{{SVGElement("set")}}</li>
- <li>{{SVGElement("feBlend")}}</li>
- <li>{{SVGElement("feComponentTransfer")}}</li>
- <li>{{SVGElement("feComposite")}}</li>
- <li>{{SVGElement("feConvolveMatrix")}}</li>
- <li>{{SVGElement("feDiffuseLighting")}}</li>
- <li>{{SVGElement("feDisplacementMap")}}</li>
- <li>{{SVGElement("feFlood")}}</li>
- <li>{{SVGElement("feGaussianBlur")}}</li>
- <li>{{SVGElement("feImage")}}</li>
- <li>{{SVGElement("feMerge")}}</li>
- <li>{{SVGElement("feMorphology")}}</li>
- <li>{{SVGElement("feOffset")}}</li>
- <li>{{SVGElement("feSpecularLighting")}}</li>
- <li>{{SVGElement("feTile")}}</li>
- <li>{{SVGElement("feTurbulence")}}</li>
- <li><a href="/fr/docs/Web/SVG/Tutoriel/filtres">Tutoriel SVG: Filtres</a></li>
-</ul>
+- {{SVGElement("filter")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("set")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feMorphology")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres)

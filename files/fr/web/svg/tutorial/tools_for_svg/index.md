@@ -4,68 +4,68 @@ slug: Web/SVG/Tutorial/Tools_for_SVG
 translation_of: Web/SVG/Tutorial/Tools_for_SVG
 original_slug: Web/SVG/Tutoriel/Tools_for_SVG
 ---
-<p>{{ PreviousNext("Web/SVG/Tutoriel/SVG_Image_Tag") }}</p>
+{{ PreviousNext("Web/SVG/Tutoriel/SVG_Image_Tag") }}
 
-<p>Maintenant que nous avons vu les notions de base en SVG, nous allons nous intéresser à quelques outils qui permettent d'éditer des fichiers SVG.</p>
+Maintenant que nous avons vu les notions de base en SVG, nous allons nous intéresser à quelques outils qui permettent d'éditer des fichiers SVG.
 
-<h3 id="Support_des_navigateurs">Support des navigateurs</h3>
+### Support des navigateurs
 
-<p>Avec l'arrivée de IE9, on peut enfin dire que les principaux navigateurs -  Internet Explorer 9, Mozilla Firefox, Safari, Google Chrome et Opera - supportent le SVG. Sur mobile c'est aussi le cas des navigateurs basés sur Webkit (principalement iOS et Android). Et il y a en général des chances pour que les appareils plus vieux ou plus petits supportent au moins SVG Tiny.</p>
+Avec l'arrivée de IE9, on peut enfin dire que les principaux navigateurs -  Internet Explorer 9, Mozilla Firefox, Safari, Google Chrome et Opera - supportent le SVG. Sur mobile c'est aussi le cas des navigateurs basés sur Webkit (principalement iOS et Android). Et il y a en général des chances pour que les appareils plus vieux ou plus petits supportent au moins SVG Tiny.
 
-<h2 id="Inkscape">Inkscape</h2>
+## Inkscape
 
-<p>URL: <a href="http://www.inkscape.org">www.inkscape.org</a></p>
+URL: [www.inkscape.org](http://www.inkscape.org)
 
-<p>L'un des outils fondamentaux pour travailler un format graphique est un logiciel de dessin performant. Inkscape permet de faire du dessin vectoriel, il est mis à jour régulièrement, et a le mérite d'être open source.</p>
+L'un des outils fondamentaux pour travailler un format graphique est un logiciel de dessin performant. Inkscape permet de faire du dessin vectoriel, il est mis à jour régulièrement, et a le mérite d'être open source.
 
-<p>Il utilise le SVG comme format natif, et l'étend avec des éléments et attributs définis dans un espace de nommage spécifique. On peut aussi choisir un export au format SVG standard.</p>
+Il utilise le SVG comme format natif, et l'étend avec des éléments et attributs définis dans un espace de nommage spécifique. On peut aussi choisir un export au format SVG standard.
 
-<h2 id="Adobe_Illustrator">Adobe Illustrator</h2>
+## Adobe Illustrator
 
-<p>URL: <a href="http://www.adobe.com/products/illustrator/">www.adobe.com/products/illustrator/</a></p>
+URL: [www.adobe.com/products/illustrator/](http://www.adobe.com/products/illustrator/)
 
-<p>Avant de racheter Macromedia, Adobe était le plus ardent défenseur de SVG. C'est de cette époque que date le bon support du SVG dans Illustrator. Cependant, le code généré comporte souvent des bizarreries, qui obligent à le retraiter pour pouvoir l'utiliser en dehors d'Illustrator.</p>
+Avant de racheter Macromedia, Adobe était le plus ardent défenseur de SVG. C'est de cette époque que date le bon support du SVG dans Illustrator. Cependant, le code généré comporte souvent des bizarreries, qui obligent à le retraiter pour pouvoir l'utiliser en dehors d'Illustrator.
 
-<h2 id="Apache_Batik">Apache Batik</h2>
+## Apache Batik
 
-<p>URL: <a href="http://xmlgraphics.apache.org/batik/">xmlgraphics.apache.org/batik/</a></p>
+URL: [xmlgraphics.apache.org/batik/](http://xmlgraphics.apache.org/batik/)
 
-<p>Batik est un ensemble d'outils open source proposés par Apache Software Foundation. La boite à outils est codée en Java et assure un support quasi intégral de SVG 1.1, ainsi que certaines des fonctionnalités qui étaient prévues à l'origine pour SVG 1.2.</p>
+Batik est un ensemble d'outils open source proposés par Apache Software Foundation. La boite à outils est codée en Java et assure un support quasi intégral de SVG 1.1, ainsi que certaines des fonctionnalités qui étaient prévues à l'origine pour SVG 1.2.
 
-<p>En plus d'un outil de visualisation (Squiggle) et d'un moteur d'aplatissement des calques pour l'export en PNG, Batik propose aussi un outil de formatage du code SVG, ainsi qu'un convertisseur de typographie TrueType vers SVG.</p>
+En plus d'un outil de visualisation (Squiggle) et d'un moteur d'aplatissement des calques pour l'export en PNG, Batik propose aussi un outil de formatage du code SVG, ainsi qu'un convertisseur de typographie TrueType vers SVG.
 
-<p>Utilisé avec <a href="http://xmlgraphics.apache.org/fop/">Apache FOP</a>, il permet également de transformer du SVG en PDF.</p>
+Utilisé avec [Apache FOP](http://xmlgraphics.apache.org/fop/), il permet également de transformer du SVG en PDF.
 
-<h3 id="Autres_moteurs_de_rendu">Autres moteurs de rendu</h3>
+### Autres moteurs de rendu
 
-<p>Il existe plusieurs projets qui permettent d'exporter une image tramée à partie d'une source SVG. <a href="http://ImageMagick.org">ImageMagick</a> est l'un des outils les plus connus de traitement des images en ligne de commande.  Wikipédia utilise la librairie de code Gnome <a href="http://library.gnome.org/devel/rsvg/">rsvg</a> pour le rendu de ses images SVG.</p>
+Il existe plusieurs projets qui permettent d'exporter une image tramée à partie d'une source SVG. [ImageMagick](http://ImageMagick.org) est l'un des outils les plus connus de traitement des images en ligne de commande.  Wikipédia utilise la librairie de code Gnome [rsvg](http://library.gnome.org/devel/rsvg/) pour le rendu de ses images SVG.
 
-<h2 id="Raphael_JS">Raphael JS</h2>
+## Raphael JS
 
-<p>URL: <a href="http://raphaeljs.com/">raphaeljs.com</a></p>
+URL: [raphaeljs.com](http://raphaeljs.com/)
 
-<p>Raphaël est un framework javascript, qui propose une couche d'abstraction pour les différentes implémentations des navigateurs. Les vieilles versions d'Internet Explorer sont supportées grace à la génération de code VML, un langage de balisage vectoriel, qui est l'un des ancêtres de SVG et existe depuis IE 5.5.</p>
+Raphaël est un framework javascript, qui propose une couche d'abstraction pour les différentes implémentations des navigateurs. Les vieilles versions d'Internet Explorer sont supportées grace à la génération de code VML, un langage de balisage vectoriel, qui est l'un des ancêtres de SVG et existe depuis IE 5.5.
 
-<h2 id="Snap.svg">Snap.svg</h2>
+## Snap.svg
 
-<p>URL: <a href="http://snapsvg.io/">snapsvg.io</a></p>
+URL: [snapsvg.io](http://snapsvg.io/)
 
-<p>Une nouvelle couche d'abstraction JavaScript, plus récent, du même auteur que Raphael JS. Snap.svg est conçu pour les navigateurs modernes et prend donc en charge les dernières fonctionnalités SVG telles que la masquage, le découpage, les motifs, gradients et groupes. Il ne supporte pas les anciens navigateurs, contrairement à Raphael.</p>
+Une nouvelle couche d'abstraction JavaScript, plus récent, du même auteur que Raphael JS. Snap.svg est conçu pour les navigateurs modernes et prend donc en charge les dernières fonctionnalités SVG telles que la masquage, le découpage, les motifs, gradients et groupes. Il ne supporte pas les anciens navigateurs, contrairement à Raphael.
 
-<h2 id="Google_Docs">Google Docs</h2>
+## Google Docs
 
-<p>URL: <a href="http://www.google.com/google-d-s/drawings/">www.google.com/google-d-s/drawings/</a></p>
+URL: [www.google.com/google-d-s/drawings/](http://www.google.com/google-d-s/drawings/)
 
-<p>Les dessins réalisés dans Google Docs peuvent être exportés en SVG.</p>
+Les dessins réalisés dans Google Docs peuvent être exportés en SVG.
 
-<h2 id="Science">Science</h2>
+## Science
 
-<p>Les fameux outils d'analyse de données xfig and gnuplot supportent l'export en SVG. Pour le rendu de graphiques sur le web <a href="http://jsxgraph.uni-bayreuth.de/wp/">JSXGraph</a> supporte VML, SVG et canvas, proposant automatiquement l'un ou l'autre en fonction du support des navigateurs.</p>
+Les fameux outils d'analyse de données xfig and gnuplot supportent l'export en SVG. Pour le rendu de graphiques sur le web [JSXGraph](http://jsxgraph.uni-bayreuth.de/wp/) supporte VML, SVG et canvas, proposant automatiquement l'un ou l'autre en fonction du support des navigateurs.
 
-<p>SVG est souvent utilisé dans les applications GIS (Geographic Information System) à la fois comme format de stockage et de rendu. Cf <a href="http://carto.net">carto.net</a> pour davantage de détails.</p>
+SVG est souvent utilisé dans les applications GIS (Geographic Information System) à la fois comme format de stockage et de rendu. Cf [carto.net](http://carto.net) pour davantage de détails.
 
-<h2 id="Autres_outils">Autres outils</h2>
+## Autres outils
 
-<p>Le W3C propose une <a href="http://www.w3.org/Graphics/SVG/WG/wiki/Implementations">liste des programmes</a> qui supportent le SVG.</p>
+Le W3C propose une [liste des programmes](http://www.w3.org/Graphics/SVG/WG/wiki/Implementations) qui supportent le SVG.
 
-<p>{{ PreviousNext("Web/SVG/Tutoriel/SVG_Image_Tag") }}</p>
+{{ PreviousNext("Web/SVG/Tutoriel/SVG_Image_Tag") }}

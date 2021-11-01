@@ -7,92 +7,70 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feMergeNode
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément SVG <code>feMergeNode</code> se place à l'intérieur d'un élément {{ SVGElement("feMerge") }}. Il prend en entrée le résultat d'un filtre afin qu'il soit traité par son parent.</p>
+L'élément SVG `feMergeNode` se place à l'intérieur d'un élément {{ SVGElement("feMerge") }}. Il prend en entrée le résultat d'un filtre afin qu'il soit traité par son parent.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: html">&lt;svg width="200" height="200"
+```html
+<svg width="200" height="200"
  xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+ xmlns:xlink="http://www.w3.org/1999/xlink">
 
-    &lt;filter id="feOffset" x="-40" y="-20" width="100" height="200"&gt;
-        &lt;feOffset in="SourceGraphic" dx="60" dy="60" /&gt;
-        &lt;feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur2" /&gt;
-        &lt;feMerge&gt;
-            &lt;feMergeNode in="blur2" /&gt;
-            &lt;feMergeNode in="SourceGraphic" /&gt;
-        &lt;/feMerge&gt;
-    &lt;/filter&gt;
+    <filter id="feOffset" x="-40" y="-20" width="100" height="200">
+        <feOffset in="SourceGraphic" dx="60" dy="60" />
+        <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur2" />
+        <feMerge>
+            <feMergeNode in="blur2" />
+            <feMergeNode in="SourceGraphic" />
+        </feMerge>
+    </filter>
 
-    &lt;rect x="40" y="40" width="100" height="100"
-       style="stroke: #000000; fill: green; filter: url(#feOffset);" /&gt;
-    &lt;rect x="40" y="40" width="100" height="100"
-        style="stroke: #000000; fill: green;" /&gt;
-&lt;/svg&gt;
-</pre>
+    <rect x="40" y="40" width="100" height="100"
+       style="stroke: #000000; fill: green; filter: url(#feOffset);" />
+    <rect x="40" y="40" width="100" height="100"
+        style="stroke: #000000; fill: green;" />
+</svg>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemple', 200, 200)}}</p>
+{{EmbedLiveSample('Exemple', 200, 200)}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_base" title="en/SVG/Attribute#Core">Attributs de base</a></li>
-</ul>
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core")
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<ul>
- <li>{{ SVGAttr("in") }}</li>
-</ul>
+- {{ SVGAttr("in") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface {{domxref("SVGFEMergeNodeElement")}}.</p>
+Cet élément implémente l'interface {{domxref("SVGFEMergeNodeElement")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Filters 1.0', '#elementdef-femergenode', '&lt;feMergeNode&gt;')}}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'filters.html#feMergeNodeElement', '&lt;feMergeNode&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | Statut                           | Commentaire         |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('Filters 1.0', '#elementdef-femergenode', '&lt;feMergeNode&gt;')}}     | {{Spec2('Filters 1.0')}} |                     |
+| {{SpecName('SVG1.1', 'filters.html#feMergeNodeElement', '&lt;feMergeNode&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.feMergeNode")}}</p>
+{{Compat("svg.elements.feMergeNode")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{ SVGElement("filter") }}</li>
- <li>{{ SVGElement("animate") }}</li>
- <li>{{ SVGElement("set") }}</li>
- <li>{{ SVGElement("feMerge") }}</li>
- <li><a href="/fr/docs/Web/SVG/Tutoriel/filtres" title="en/SVG/Tutorial/Filter_effects">Tutoriel SVG: Filtres</a></li>
-</ul>
+- {{ SVGElement("filter") }}
+- {{ SVGElement("animate") }}
+- {{ SVGElement("set") }}
+- {{ SVGElement("feMerge") }}
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres "en/SVG/Tutorial/Filter_effects")

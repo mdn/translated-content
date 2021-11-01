@@ -6,167 +6,166 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/cx
 ---
-<p>{{SVGRef}}</p>
+{{SVGRef}}
 
-<p>L'attribut <strong><code>cx</code></strong> définit la coordonnée de l'axe x pour le point central d'un élément.</p>
+L'attribut **`cx`** définit la coordonnée de l'axe x pour le point central d'un élément.
 
-<p>Trois éléments utilisent cet attribut: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, et {{SVGElement("radialGradient")}}</p>
+Trois éléments utilisent cet attribut: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, et {{SVGElement("radialGradient")}}
 
-<h2>Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;radialGradient cx="25%" id="myGradient"&gt;
-    &lt;stop offset="0"    stop-color="white" /&gt;
-    &lt;stop offset="100%" stop-color="black" /&gt;
-  &lt;/radialGradient&gt;
+```html
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <radialGradient cx="25%" id="myGradient">
+    <stop offset="0"    stop-color="white" />
+    <stop offset="100%" stop-color="black" />
+  </radialGradient>
 
-  &lt;circle cx="50" cy="50" r="45"/&gt;
-  &lt;ellipse cx="150" cy="50" rx="45" ry="25" /&gt;
-  &lt;rect x="205" y="5" width="90" height="90" fill="url(#myGradient)" /&gt;
-&lt;/svg&gt;</pre>
+  <circle cx="50" cy="50" r="45"/>
+  <ellipse cx="150" cy="50" rx="45" ry="25" />
+  <rect x="205" y="5" width="90" height="90" fill="url(#myGradient)" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('exemple', 100, 100)}}</p>
+{{EmbedLiveSample('exemple', 100, 100)}}
 
-<h2 id="circle">circle</h2>
+## circle
 
-<p>Pour un élément {{SVGElement('circle')}}, <code>cx</code> définit la coordonnée x de son centre.</p>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
-</table>
-
-<div class="note">
-  <p><strong>Note:</strong> À partir de SVG2, <code>cx</code> est une<em> propriété de géométrie</em>, ce qui signifie que cet attribut peut être utilisé comme propriété CSS pour les cercles.</p>
-</div>
-
-<h2 id="ellipse">ellipse</h2>
-
-<p>Pour un élément {{SVGElement('ellipse')}}, <code>cx</code> définit la coordonnées x de son centre.</p>
+Pour un élément {{SVGElement('circle')}}, `cx` définit la coordonnée x de son centre.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-  <p><strong>Note :</strong> À partir de SVG2, <code>cx</code> est une<em> propriété de géométrie</em>, ce qui signifie que cet attribut peut être utilisé comme propriété CSS pour les ellipses.</p>
-</div>
+> **Note :** À partir de SVG2, `cx` est une _propriété de géométrie_, ce qui signifie que cet attribut peut être utilisé comme propriété CSS pour les cercles.
 
-<h2 id="radialGradient">radialGradient</h2>
+## ellipse
 
-<p>Pour un élément {{SVGElement('radialGradient')}}, <code>cx</code> définit la coordonnées x du plus grand cercle pour le dégradé radial (c'est-à-dire du plus externe). Le dégradé sera dessiné de telle façon que la <a href="/fr/docs/SVG/Element/stop" title="/en-US/docs/SVG/Element/stop">limite du dégradé</a> à <strong>100%</strong> corresponde au périmètre de ce plus grand cercle.</p>
+Pour un élément {{SVGElement('ellipse')}}, `cx` définit la coordonnées x de son centre.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>50%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h4 id="autre_exemple">Autre exemple</h4>
+> **Note :** À partir de SVG2, `cx` est une _propriété de géométrie_, ce qui signifie que cet attribut peut être utilisé comme propriété CSS pour les ellipses.
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+## radialGradient
 
-<pre class="brush: html">&lt;svg viewBox="0 0 34 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;radialGradient cx="0" id="myGradient000"&gt;
-      &lt;stop offset="0%"   stop-color="gold" /&gt;
-      &lt;stop offset="50%"  stop-color="green" /&gt;
-      &lt;stop offset="100%" stop-color="white" /&gt;
-    &lt;/radialGradient&gt;
-
-    &lt;radialGradient cx="50%" id="myGradient050"&gt;
-      &lt;stop offset="0%"   stop-color="gold" /&gt;
-      &lt;stop offset="50%"  stop-color="green" /&gt;
-      &lt;stop offset="100%" stop-color="white" /&gt;
-    &lt;/radialGradient&gt;
-
-    &lt;radialGradient cx="100%" id="myGradient100"&gt;
-      &lt;stop offset="0%"   stop-color="gold" /&gt;
-      &lt;stop offset="50%"  stop-color="green" /&gt;
-      &lt;stop offset="100%" stop-color="white" /&gt;
-    &lt;/radialGradient&gt;
-  &lt;/defs&gt;
-
-  &lt;rect x="1"  y="1" width="8" height="8" fill="url(#myGradient000)" stroke="black" /&gt;
-  &lt;rect x="13" y="1" width="8" height="8" fill="url(#myGradient050)" stroke="black" /&gt;
-  &lt;rect x="25" y="1" width="8" height="8" fill="url(#myGradient100)" stroke="black" /&gt;
-&lt;/svg&gt;</pre>
-
-<p>{{EmbedLiveSample('radialGradient', 150, '100%')}}</p>
-
-<h2 id="Spécifications">Spécifications</h2>
+Pour un élément {{SVGElement('radialGradient')}}, `cx` définit la coordonnées x du plus grand cercle pour le dégradé radial (c'est-à-dire du plus externe). Le dégradé sera dessiné de telle façon que la [limite du dégradé](/fr/docs/SVG/Element/stop "/en-US/docs/SVG/Element/stop") à **100%** corresponde au périmètre de ce plus grand cercle.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "geometry.html#CX", "cx")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Définition comme propriété de géométrie</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "pservers.html#RadialGradientElementCXAttribute", "cx")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Définition pour SVG2</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "pservers.html#RadialGradientElementCXAttribute", "cx")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale pour <code>&lt;radialGradient&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "shapes.html#EllipseElementCXAttribute", "cx")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale pour <code>&lt;ellipse&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "shapes.html#CircleElementCXAttribute", "cx")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale pour <code>&lt;circle&gt;</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>50%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
+
+#### Autre exemple
+
+```css hidden
+html,body,svg { height:100% }
+```
+
+```html
+<svg viewBox="0 0 34 10" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient cx="0" id="myGradient000">
+      <stop offset="0%"   stop-color="gold" />
+      <stop offset="50%"  stop-color="green" />
+      <stop offset="100%" stop-color="white" />
+    </radialGradient>
+
+    <radialGradient cx="50%" id="myGradient050">
+      <stop offset="0%"   stop-color="gold" />
+      <stop offset="50%"  stop-color="green" />
+      <stop offset="100%" stop-color="white" />
+    </radialGradient>
+
+    <radialGradient cx="100%" id="myGradient100">
+      <stop offset="0%"   stop-color="gold" />
+      <stop offset="50%"  stop-color="green" />
+      <stop offset="100%" stop-color="white" />
+    </radialGradient>
+  </defs>
+
+  <rect x="1"  y="1" width="8" height="8" fill="url(#myGradient000)" stroke="black" />
+  <rect x="13" y="1" width="8" height="8" fill="url(#myGradient050)" stroke="black" />
+  <rect x="25" y="1" width="8" height="8" fill="url(#myGradient100)" stroke="black" />
+</svg>
+```
+
+{{EmbedLiveSample('radialGradient', 150, '100%')}}
+
+## Spécifications
+
+| Spécification                                                                                            | Statut                   | Commentaire                                 |
+| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------- |
+| {{SpecName("SVG2", "geometry.html#CX", "cx")}}                                             | {{Spec2("SVG2")}} | Définition comme propriété de géométrie     |
+| {{SpecName("SVG2", "pservers.html#RadialGradientElementCXAttribute", "cx")}}     | {{Spec2("SVG2")}} | Définition pour SVG2                        |
+| {{SpecName("SVG1.1", "pservers.html#RadialGradientElementCXAttribute", "cx")}} | {{Spec2("SVG1.1")}} | Définition initiale pour `<radialGradient>` |
+| {{SpecName("SVG1.1", "shapes.html#EllipseElementCXAttribute", "cx")}}             | {{Spec2("SVG1.1")}} | Définition initiale pour `<ellipse>`        |
+| {{SpecName("SVG1.1", "shapes.html#CircleElementCXAttribute", "cx")}}             | {{Spec2("SVG1.1")}} | Définition initiale pour `<circle>`         |

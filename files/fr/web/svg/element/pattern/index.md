@@ -5,95 +5,95 @@ tags:
   - Element
   - SVG
   - SVG Container
-browser-compat: svg.elements.pattern
 translation_of: Web/SVG/Element/pattern
+browser-compat: svg.elements.pattern
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément <strong><code>&lt;pattern&gt;</code></strong> définit un objet graphique qui peut être redessiné à des intervalles de coordonnées x et y répétés ("en mosaïque") pour couvrir une surface.</p>
+L'élément **`<pattern>`** définit un objet graphique qui peut être redessiné à des intervalles de coordonnées x et y répétés ("en mosaïque") pour couvrir une surface.
 
-<p>Le <strong><code>&lt;pattern&gt;</code></strong> est référéne par les attributs {{SVGAttr("fill")}} et {{SVGAttr("stroke")}} sur les autres éléments graphiques, pour appliquer un remplissage ou une bordure sur ces éléments avec le motif référencé.</p>
+Le **`<pattern>`** est référéne par les attributs {{SVGAttr("fill")}} et {{SVGAttr("stroke")}} sur les autres éléments graphiques, pour appliquer un remplissage ou une bordure sur ces éléments avec le motif référencé.
 
-<h2>Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">html, body, svg { height: 100% }</pre>
+```css hidden
+html, body, svg { height: 100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 230 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;pattern id="star" viewBox="0,0,10,10" width="10%" height="10%"&gt;
-      &lt;polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2"/&gt;
-    &lt;/pattern&gt;
-  &lt;/defs&gt;
+```html
+<svg viewBox="0 0 230 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="star" viewBox="0,0,10,10" width="10%" height="10%">
+      <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2"/>
+    </pattern>
+  </defs>
 
-  &lt;circle cx="50"  cy="50" r="50" fill="url(#star)"/&gt;
-  &lt;circle cx="180" cy="50" r="40" fill="none" stroke-width="20" stroke="url(#star)"/&gt;
-&lt;/svg&gt;</pre>
+  <circle cx="50"  cy="50" r="50" fill="url(#star)"/>
+  <circle cx="180" cy="50" r="40" fill="none" stroke-width="20" stroke="url(#star)"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample('exemple', 150, '100%')}}</p>
+{{EmbedLiveSample('exemple', 150, '100%')}}
 
-<h2 id="attributes">Attributs</h2>
+## Attributs
 
-<dl>
- <dt>{{SVGAttr("height")}}</dt>
- <dd>Cet attribut détermine la hauteur du motif de mosaïque.<br>
- <small><em>Type de valeur </em>: <a href="/fr/docs/Web/SVG/Content_type#Length"><strong>&lt;longueur&gt;</strong></a>|<a href="/fr/docs/Web/SVG/Content_type#Percentage"><strong>&lt;pourcentage&gt;</strong></a>; <em>Valeur par défaut </em>: <code>0</code>; <em>Animable </em>: <strong>oui</strong></small></dd>
- <dt>{{SVGAttr("href")}}</dt>
- <dd>Cet attribut référence un patron de motif qui fournit les valeurs par défaut des attributs de l'élément <code>&lt;pattern&gt;</code>.<br>
- <small><em>Type de valeur</em>: <a href="/fr/docs/Web/SVG/Content_type#URL"><strong>&lt;URL&gt;</strong></a>; <em>Valeur par défaut </em>: <em>none</em>; <em>Animable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("patternContentUnits")}}</dt>
- <dd><p>Cet attribut définit le système de coordonnées pour le contenu de {{SVGElement("pattern")}}. <small><em>Type de valeur </em>: <code>userSpaceOnUse</code>|<code>objectBoundingBox</code>; <em>Valeur par défaut </em>: <code>userSpaceOnUse</code>; <em>Animable</em>: <strong>yes</strong></small></p>
- <div class="note">
-   <p><strong>Note :</strong> Cet attribut n'a pas d'effet si l'attribut <code>viewBox</code> est définit sur l'élément <code>&lt;pattern&gt;</code>.</p>
-</div>
- </dd>
- <dt>{{SVGAttr("patternTransform")}}</dt>
- <dd><p>Cet attribut contient la définition d'une transformation optionnelle supplémentaire du système de coordonnées du motif vers celui de la cible. <small><em>Type de valeur </em>: <strong><a href="/fr/docs/Web/SVG/Content_type#Transform-list">&lt;transform-list&gt;</a></strong>; <em>Valeur par défaut </em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></p></dd>
- <dt>{{SVGAttr("patternUnits")}}</dt>
- <dd><p>Cet attribut définit le système de coordonnées pour les attributs <code>x</code>, <code>y</code>, <code>width</code> , et <code>height</code>.<small><em>Type de valeur </em>: <code>userSpaceOnUse</code>|<code>objectBoundingBox</code>; <em>Valeur par défaut </em>: <code>objectBoundingBox</code>; <em>Animable</em>: <strong>yes</strong></small></p></dd>
- <dt>{{SVGAttr("preserveAspectRatio")}}</dt>
- <dd><p>Cet attribut définit comme le fragment SVG doit être déformé s'il est embarqué dans un conteneur avec un ratio d'aspect différent.
- <small><em>Type de valeur </em>: (<code>none</code>| <code>xMinYMin</code>| <code>xMidYMin</code>| <code>xMaxYMin</code>| <code>xMinYMid</code>| <code>xMidYMid</code>| <code>xMaxYMid</code>| <code>xMinYMax</code>| <code>xMidYMax</code>| <code>xMaxYMax</code>) (<code>meet</code>|<code>slice</code>)? ; <em>Valeur par défaut </em>: <code>xMidYMid meet</code>; <em>Animable</em>: <strong>yes</strong></small></p></dd>
- <dt>{{SVGAttr("viewBox")}}</dt>
- <dd><p>Cet attribut définit les limites de la fenêtre de rendu du SVG pour le fragment du motif.<small><em>Type de valeur </em>: <strong><a href="/fr/docs/Web/SVG/Content_type#List-of-Ts">&lt;list-of-numbers&gt;</a></strong> ; <em>Valeur par défaut </em>: none; <em>Animable</em>: <strong>yes</strong></small></p></dd>
- <dt>{{SVGAttr("width")}}</dt>
- <dd><p>Cet attribut détermine la largeur du motif de mosaïque.<br>
- <small><em>Type de valeur </em>: <a href="/fr/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/fr/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Valeur par défaut </em>: <code>0</code>; <em>Animable</em>: <strong>yes</strong></small></p></dd>
- <dt>{{SVGAttr("x")}}</dt>
- <dd><p>Cet attribut détermine le déplacement en coordonnée x du motif de mosaïque.<small><em>Type de valeur </em>: <a href="/fr/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/fr/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Valeur par défaut </em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}</dt>
- <dd>Cet attribut référence un patron de motif qui fournit des valeurs par défaut pour les attributs du <code>&lt;pattern&gt;</code>.<br>
- <small><em>Type de valeur </em>: <a href="/fr/docs/Web/SVG/Content_type#URL"><strong>&lt;URL&gt;</strong></a>; <em>Valeur par défaut </em>: <em>none</em>; <em>Animable</em>: <strong>yes</strong></small></p>
- <div class="note">
-   <p><strong>Note :</strong> Pour les navigateurs implémentant <code>href</code>, si à la fois <code>href</code> et <code>xlink:href</code> sont définis, <code>xlink:href</code> sera ignoré et seulement <code>href</code> sera utilisé.</p>
- </div>
- </dd>
- <dt>{{SVGAttr("y")}}</dt>
- <dd><p>Cet attribut détermine le déplacement en coordonnée y du motif de mosaïque. <small><em>Type de valeur </em>: <a href="/fr/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/fr/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Valeur par défaut </em>: <code>0</code>; <em>Animable</em>: <strong>yes</strong></small></p></dd>
-</dl>
+- {{SVGAttr("height")}}
+  - : Cet attribut détermine la hauteur du motif de mosaïque.
+    _Type de valeur_ : [**\<longueur>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<pourcentage>**](/fr/docs/Web/SVG/Content_type#Percentage); _Valeur par défaut_ : `0`; _Animable_ : **oui**
+- {{SVGAttr("href")}}
+  - : Cet attribut référence un patron de motif qui fournit les valeurs par défaut des attributs de l'élément `<pattern>`.
+    _Type de valeur_: [**\<URL>**](/fr/docs/Web/SVG/Content_type#URL); _Valeur par défaut_ : _none_; _Animable_: **yes**
+- {{SVGAttr("patternContentUnits")}}
 
-<h3 id="global_attributes">Attributs globaux</h3>
+  - : Cet attribut définit le système de coordonnées pour le contenu de {{SVGElement("pattern")}}. _Type de valeur_ : `userSpaceOnUse`|`objectBoundingBox`; _Valeur par défaut_ : `userSpaceOnUse`; _Animable_: **yes**
 
-<dl>
-<dt><a href="/fr/docs/Web/SVG/Attribute/Core">Attributs principaux</a></dt>
- <dd><small>Plus notamment : {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="/fr/docs/Web/SVG/Attribute/Styling">Attributs de style</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/fr/docs/Web/SVG/Attribute/Conditional_Processing">Attributs de traitement conditionnel</a></dt>
- <dd><small>Plus notamment : {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt><a href="/fr/docs/Web/SVG/Attribute/Presentation">Attributs de présentation</a></dt>
- <dd><small>Plus notamment : {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>Attributs XLink</dt>
- <dd><small>Plus notamment : {{SVGAttr("xlink:title")}}</small></dd>
-</dl>
+    > **Note :** Cet attribut n'a pas d'effet si l'attribut `viewBox` est définit sur l'élément `<pattern>`.
 
-<h2 id="usage_notes">Notes d'utilisation</h2>
+- {{SVGAttr("patternTransform")}}
+  - : Cet attribut contient la définition d'une transformation optionnelle supplémentaire du système de coordonnées du motif vers celui de la cible. _Type de valeur_ : **[\<transform-list>](/fr/docs/Web/SVG/Content_type#Transform-list)**; _Valeur par défaut_ : _none_; _Animatable_: **yes**
+- {{SVGAttr("patternUnits")}}
+  - : Cet attribut définit le système de coordonnées pour les attributs `x`, `y`, `width` , et `height`._Type de valeur_ : `userSpaceOnUse`|`objectBoundingBox`; _Valeur par défaut_ : `objectBoundingBox`; _Animable_: **yes**
+- {{SVGAttr("preserveAspectRatio")}}
+  - : Cet attribut définit comme le fragment SVG doit être déformé s'il est embarqué dans un conteneur avec un ratio d'aspect différent.
+    _Type de valeur_ : (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Valeur par défaut_ : `xMidYMid meet`; _Animable_: **yes**
+- {{SVGAttr("viewBox")}}
+  - : Cet attribut définit les limites de la fenêtre de rendu du SVG pour le fragment du motif._Type de valeur_ : **[\<list-of-numbers>](/fr/docs/Web/SVG/Content_type#List-of-Ts)** ; _Valeur par défaut_ : none; _Animable_: **yes**
+- {{SVGAttr("width")}}
+  - : Cet attribut détermine la largeur du motif de mosaïque.
+    _Type de valeur_ : [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_ : `0`; _Animable_: **yes**
+- {{SVGAttr("x")}}
+  - : Cet attribut détermine le déplacement en coordonnée x du motif de mosaïque._Type de valeur_ : [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_ : `0`; _Animatable_: **yes**
+- {{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}
 
-<p>{{svginfo}}</p>
+  - : Cet attribut référence un patron de motif qui fournit des valeurs par défaut pour les attributs du `<pattern>`.
+    _Type de valeur_ : [**\<URL>**](/fr/docs/Web/SVG/Content_type#URL); _Valeur par défaut_ : _none_; _Animable_: **yes**
 
-<h2 id="specifications">Spécifications</h2>
+    > **Note :** Pour les navigateurs implémentant `href`, si à la fois `href` et `xlink:href` sont définis, `xlink:href` sera ignoré et seulement `href` sera utilisé.
+
+- {{SVGAttr("y")}}
+  - : Cet attribut détermine le déplacement en coordonnée y du motif de mosaïque. _Type de valeur_ : [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_ : `0`; _Animable_: **yes**
+
+### Attributs globaux
+
+- [Attributs principaux](/fr/docs/Web/SVG/Attribute/Core)
+  - : Plus notamment : {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+- [Attributs de style](/fr/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute/Conditional_Processing)
+  - : Plus notamment : {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute/Presentation)
+  - : Plus notamment : {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+- Attributs XLink
+  - : Plus notamment : {{SVGAttr("xlink:title")}}
+
+## Notes d'utilisation
+
+{{svginfo}}
+
+## Spécifications
 
 {{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}

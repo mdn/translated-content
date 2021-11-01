@@ -4,36 +4,35 @@ slug: Web/SVG/Tutorial/Other_content_in_SVG
 translation_of: Web/SVG/Tutorial/Other_content_in_SVG
 original_slug: Web/SVG/Tutoriel/Contenu_embarque_SVG
 ---
-<p>{{ PreviousNext("Web/SVG/Tutoriel/Découpages_et_masquages", "Web/SVG/Tutoriel/filtres") }}</p>
+{{ PreviousNext("Web/SVG/Tutoriel/Découpages_et_masquages", "Web/SVG/Tutoriel/filtres") }}
 
-<p>En plus des formes graphiques simples comme les rectangles et les cercles, le format SVG permet d'ajouter d'autres types de contenu aux images.</p>
+En plus des formes graphiques simples comme les rectangles et les cercles, le format SVG permet d'ajouter d'autres types de contenu aux images.
 
-<h3 id="embarquer_des_images">Embarquer des images</h3>
+### Embarquer des images
 
-<p>De la même façon qu'il est possible d'utiliser la balise <strong>img</strong> en HTML, le format SVG possède un élément <strong><code>image</code></strong> qui a la même utilité. Vous pouvez l'utiliser pour insérer des images bitmap ou vectorielles dans votre image SVG. La spécification définit que les formats PNG, JPEG et SVG au moins doivent être supportés.</p>
+De la même façon qu'il est possible d'utiliser la balise **img** en HTML, le format SVG possède un élément **`image`** qui a la même utilité. Vous pouvez l'utiliser pour insérer des images bitmap ou vectorielles dans votre image SVG. La spécification définit que les formats PNG, JPEG et SVG au moins doivent être supportés.
 
-<p>L'image embarquée devient un élément SVG normal. Cela implique que vous pouvez utiliser le découpage, les masques, les filtres, les rotations et toute la panoplie des outils svg sur ce contenu embarqué :</p>
+L'image embarquée devient un élément SVG normal. Cela implique que vous pouvez utiliser le découpage, les masques, les filtres, les rotations et toute la panoplie des outils svg sur ce contenu embarqué :
 
-<pre class="brush: html">&lt;svg version="1.1"
+```html
+<svg version="1.1"
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="200" height="200"&gt;
-&lt;image x="90" y="-65" width="128" height="146" transform="rotate(45)"
-  xlink:href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/image/mdn_logo_only_color.png"/&gt;
-&lt;/svg&gt;
-</pre>
+  width="200" height="200">
+<image x="90" y="-65" width="128" height="146" transform="rotate(45)"
+  xlink:href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/image/mdn_logo_only_color.png"/>
+</svg>
+```
 
-<p>{{ EmbedLiveSample('embarquer_des_images','220','240') }}</p>
+{{ EmbedLiveSample('embarquer_des_images','220','240') }}
 
-<h3 id="Embarquer_du_contenu_XML_quelconque">Embarquer du contenu XML quelconque</h3>
+### Embarquer du contenu XML quelconque
 
-<p>Étant donné que le SVG est un document XML, il est toujours possible d'adjoindre un contenu XML quelconque n'importe où dans le document. Mais il n'y a évidemment aucun moyen de savoir comment l'élément SVG encadrant votre contenu réagira à ce qui aura été inséré. En fait, un lecteur SVG correct ne réagira d'aucune façon particulière et ignorera purement et simplement ce contenu. Si la spécification ajoute l'élément SVG <code><strong>foreignObject</strong>, </code>son utilité est essentiellement d'être une coquille pour d'autres balises et de permettre d'adjoindre des attributs de style (comme par exemple la <em>largeur</em> et la <em>hauteur</em> de l'objet embarqué afin de définir la place que celui-ci occupera).</p>
+Étant donné que le SVG est un document XML, il est toujours possible d'adjoindre un contenu XML quelconque n'importe où dans le document. Mais il n'y a évidemment aucun moyen de savoir comment l'élément SVG encadrant votre contenu réagira à ce qui aura été inséré. En fait, un lecteur SVG correct ne réagira d'aucune façon particulière et ignorera purement et simplement ce contenu. Si la spécification ajoute l'élément SVG `foreignObject, `son utilité est essentiellement d'être une coquille pour d'autres balises et de permettre d'adjoindre des attributs de style (comme par exemple la _largeur_ et la _hauteur_ de l'objet embarqué afin de définir la place que celui-ci occupera).
 
-<p>L'élément <strong><code>foreignObject</code></strong> est donc la bonne méthode pour embarquer du <strong>XHTML</strong> dans du SVG. Si le SVG doit contenir du texte de longueur conséquente, la disposition HTML est bien plus pratique et utilisable que l'élément SVG <code>text</code>. Une autre utilisation bien pratique de cet élément est l'adjonction de formules avec MathML. Pour des applications scientifiques utilisant le SVG, c'est un bon moyen de permettre la communication entre ces deux univers.</p>
+L'élément **`foreignObject`** est donc la bonne méthode pour embarquer du **XHTML** dans du SVG. Si le SVG doit contenir du texte de longueur conséquente, la disposition HTML est bien plus pratique et utilisable que l'élément SVG `text`. Une autre utilisation bien pratique de cet élément est l'adjonction de formules avec MathML. Pour des applications scientifiques utilisant le SVG, c'est un bon moyen de permettre la communication entre ces deux univers.
 
-<div class="note">
-  <p><strong>Note :</strong> Gardez à l'esprit que le contenu du <code>foreignObject</code> doit pouvoir être analysé et pris en compte par votre lecteur SVG. Il y a peu de chances qu'un lecteur SVG autonome soit capable de restituer du contenu HTML or MathML.</p>
-</div>
+> **Note :** Gardez à l'esprit que le contenu du `foreignObject` doit pouvoir être analysé et pris en compte par votre lecteur SVG. Il y a peu de chances qu'un lecteur SVG autonome soit capable de restituer du contenu HTML or MathML.
 
-<p>Etant donné que le <code>foreignObject</code> est un élément SVG comme un autre, vous pouvez, comme dans le case de l'élément <code>image</code>, utiliser toute la panoplie des attributs SVG qui pourrait s'appliquer au contenu embarqué.</p>
+Etant donné que le `foreignObject` est un élément SVG comme un autre, vous pouvez, comme dans le case de l'élément `image`, utiliser toute la panoplie des attributs SVG qui pourrait s'appliquer au contenu embarqué.
 
-<p>{{ PreviousNext("Web/SVG/Tutoriel/Découpages_et_masquages", "Web/SVG/Tutoriel/filtres") }}</p>
+{{ PreviousNext("Web/SVG/Tutoriel/Découpages_et_masquages", "Web/SVG/Tutoriel/filtres") }}

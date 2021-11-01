@@ -6,109 +6,108 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/stroke-dashoffset
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'attribut <strong><code>stroke-dashoffset</code></strong> décale la position de départ des pointillés sur les lignes SVG.</p>
+L'attribut **`stroke-dashoffset`** décale la position de départ des pointillés sur les lignes SVG.
 
-<div class="note">
-  <p><strong>Note :</strong> <code>stroke-dashoffset</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
-</div>
+> **Note :** `stroke-dashoffset` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
-<p>Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}</p>
+Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
 
-<h2>Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
+```html
+<svg viewBox="-3 0 33 10" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pas de tiret -->
+  <line x1="0" y1="1" x2="30" y2="1" stroke="black" />
 
-<pre class="brush: html">&lt;svg viewBox="-3 0 33 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Pas de tiret --&gt;
-  &lt;line x1="0" y1="1" x2="30" y2="1" stroke="black" /&gt;
+  <!-- Pas de décalage -->
+  <line x1="0" y1="3" x2="30" y2="3" stroke="black"
+        stroke-dasharray="3 1" />
 
-  &lt;!-- Pas de décalage --&gt;
-  &lt;line x1="0" y1="3" x2="30" y2="3" stroke="black"
-        stroke-dasharray="3 1" /&gt;
-
-  &lt;!--
+  <!--
   Le début des tirets est décalé
   de 3 unités vers la gauche
-  --&gt;
-  &lt;line x1="0" y1="5" x2="30" y2="5" stroke="black"
+  -->
+  <line x1="0" y1="5" x2="30" y2="5" stroke="black"
         stroke-dasharray="3 1"
-        stroke-dashoffset="3" /&gt;
+        stroke-dashoffset="3" />
 
-  &lt;!--
+  <!--
   Le début des tirets est décalé
   de 3 unités vers la droite (-3)
-  --&gt;
-  &lt;line x1="0" y1="7" x2="30" y2="7" stroke="black"
+  -->
+  <line x1="0" y1="7" x2="30" y2="7" stroke="black"
         stroke-dasharray="3 1"
-        stroke-dashoffset="-3" /&gt;
+        stroke-dashoffset="-3" />
 
-  &lt;!--
+  <!--
   Le début des tirets est décalé
   de 1 unité vers la gauche
   ce qui affiche la même chose que l'exemple précédent
-  --&gt;
-  &lt;line x1="0" y1="9" x2="30" y2="9" stroke="black"
+  -->
+  <line x1="0" y1="9" x2="30" y2="9" stroke="black"
         stroke-dasharray="3 1"
-        stroke-dashoffset="1" /&gt;
+        stroke-dashoffset="1" />
 
-  &lt;!--
+  <!--
   Lignes rouges pour indiquer la position
   de départ des tirets
-  --&gt;
-  &lt;path d="M0,5 h-3 M0,7 h3 M0,9 h-1" stroke="rgba(255,0,0,.5)" /&gt;
-&lt;/svg&gt;
-</pre>
+  -->
+  <path d="M0,5 h-3 M0,7 h3 M0,9 h-1" stroke="rgba(255,0,0,.5)" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('exemple', '100%', 200)}}</p>
+{{EmbedLiveSample('exemple', '100%', 200)}}
 
-<h2 id="Notes_d'usage">Notes d'usage</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong><a href="/fr/SVG/Content_type#Percentage" title="en/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong> | <strong><a href="/fr/SVG/Content_type#Length" title="en/SVG/Content_type#Length">&lt;length&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
-</table>
-
-<p>Le décalage est généralement exprimé en unités résolues par {{SVGAttr('pathLength')}} mais si un <a href="/fr/SVG/Content_type#Percentage" title="en/SVG/Content_type#Percentage">&lt;percentage&gt;</a> est utilisé, alors la valeur est résolue en pourcentage du viewport.</p>
-
-<h2 id="Browser_Compatibility">Compatibilité des navigateurs</h2>
-
-<p>{{Compat("svg.attributes.presentation.stroke-dashoffset")}}</p>
-
-<h2 id="Spécification">Spécification</h2>
+## Notes d'usage
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "painting.html#StrokeDashoffsetProperty", "stroke-dashoffset")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Définition pour les formes et le texte</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "painting.html#StrokeDashoffsetProperty", "stroke-dashoffset")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale pour les formes et le texte</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a
+            href="/fr/SVG/Content_type#Percentage"
+            title="en/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+        |
+        <strong
+          ><a
+            href="/fr/SVG/Content_type#Length"
+            title="en/SVG/Content_type#Length"
+            >&#x3C;length></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
+
+Le décalage est généralement exprimé en unités résolues par {{SVGAttr('pathLength')}} mais si un [\<percentage>](/fr/SVG/Content_type#Percentage "en/SVG/Content_type#Percentage") est utilisé, alors la valeur est résolue en pourcentage du viewport.
+
+## Compatibilité des navigateurs
+
+{{Compat("svg.attributes.presentation.stroke-dashoffset")}}
+
+## Spécification
+
+| Spécification                                                                                                    | Statut                   | Commentaire                                     |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------- |
+| {{SpecName("SVG2", "painting.html#StrokeDashoffsetProperty", "stroke-dashoffset")}} | {{Spec2("SVG2")}} | Définition pour les formes et le texte          |
+| {{SpecName("SVG1.1", "painting.html#StrokeDashoffsetProperty", "stroke-dashoffset")}} | {{Spec2("SVG1.1")}} | Définition initiale pour les formes et le texte |

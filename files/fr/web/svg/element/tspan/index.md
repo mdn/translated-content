@@ -8,93 +8,74 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/tspan
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>A l'intérieur d'un élément {{SVGElement("text")}}, les propriétés du texte et des polices, ainsi que la position actuelle du texte, peuvent être ajustées de façon absolue ou relative à partir des coodonnées précisées dans un élément <code>tspan</code>.</p>
+A l'intérieur d'un élément {{SVGElement("text")}}, les propriétés du texte et des polices, ainsi que la position actuelle du texte, peuvent être ajustées de façon absolue ou relative à partir des coodonnées précisées dans un élément `tspan`.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2>Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html; highlight[9]">&lt;svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;style&gt;
+```html
+<svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg">
+  <style>
     text  { font: italic 12px serif; }
     tspan { font: bold 10px sans-serif; fill: red; }
-  &lt;/style&gt;
+  </style>
 
-  &lt;text x="10" y="30" class="small"&gt;
+  <text x="10" y="30" class="small">
     Vous êtes
-    &lt;tspan&gt;not&lt;/tspan&gt;
+    <tspan>not</tspan>
     une banane !
-  &lt;/text&gt;
-&lt;/svg&gt;</pre>
+  </text>
+</svg>
+```
 
-<p>{{EmbedLiveSample('exemple', 100, '100%')}}</p>
+{{EmbedLiveSample('exemple', 100, '100%')}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/SVG/Attribute#ConditionalProccessing" title="SVG/Attribute#ConditionalProccessing">Attributs de traitement conditionnel</a> »</li>
- <li><a href="/fr/docs/SVG/Attribute#Core" title="SVG/Attribute#Core">Attributs de base</a> »</li>
- <li><a href="/fr/docs/SVG/Attribute#GraphicalEvent" title="SVG/Attribute#GraphicalEvent">Attributs d'évènements graphiques</a> »</li>
- <li><a href="/fr/docs/SVG/Attribute#Presentation" title="SVG/Attribute#Presentation">Attributs de présentation</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
-</ul>
+- [Attributs de traitement conditionnel](/fr/docs/SVG/Attribute#ConditionalProccessing "SVG/Attribute#ConditionalProccessing") »
+- [Attributs de base](/fr/docs/SVG/Attribute#Core "SVG/Attribute#Core") »
+- [Attributs d'évènements graphiques](/fr/docs/SVG/Attribute#GraphicalEvent "SVG/Attribute#GraphicalEvent") »
+- [Attributs de présentation](/fr/docs/SVG/Attribute#Presentation "SVG/Attribute#Presentation") »
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("x")}}</li>
- <li>{{SVGAttr("y")}}</li>
- <li>{{SVGAttr("dx")}}</li>
- <li>{{SVGAttr("dy")}}</li>
- <li>{{SVGAttr("rotate")}}</li>
- <li>{{SVGAttr("textLength")}}</li>
- <li>{{SVGAttr("lengthAdjust")}}</li>
-</ul>
+- {{SVGAttr("x")}}
+- {{SVGAttr("y")}}
+- {{SVGAttr("dx")}}
+- {{SVGAttr("dy")}}
+- {{SVGAttr("rotate")}}
+- {{SVGAttr("textLength")}}
+- {{SVGAttr("lengthAdjust")}}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface <code><a href="/fr/docs/Web/API/SVGTSpanElement">SVGTSpanElement</a></code>.</p>
+Cet élément implémente l'interface [`SVGTSpanElement`](/fr/docs/Web/API/SVGTSpanElement).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'text.html#TextElement', '&lt;tspan&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'text.html#TSpanElement', '&lt;tspan&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Définition originale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | Statut                   | Commentaire          |
+| ---------------------------------------------------------------------------------------- | ------------------------ | -------------------- |
+| {{SpecName('SVG2', 'text.html#TextElement', '&lt;tspan&gt;')}}     | {{Spec2('SVG2')}} |                      |
+| {{SpecName('SVG1.1', 'text.html#TSpanElement', '&lt;tspan&gt;')}} | {{Spec2('SVG1.1')}} | Définition originale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.tspan")}}</p>
+{{Compat("svg.elements.tspan")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{SVGElement("text")}}</li>
-</ul>
+- {{SVGElement("text")}}

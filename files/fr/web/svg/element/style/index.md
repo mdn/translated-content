@@ -7,86 +7,64 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/style
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément <code>style</code> permet d'intégrer directement des feuilles de style dans un contenu SVG. L'élément style de SVG possède les mêmes attributs que l'élément correspondant au format HTML (voir l'élément HTML {{HTMLElement("style")}}).</p>
+L'élément `style` permet d'intégrer directement des feuilles de style dans un contenu SVG. L'élément style de SVG possède les mêmes attributs que l'élément correspondant au format HTML (voir l'élément HTML {{HTMLElement("style")}}).
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: html">&lt;svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;style&gt;
-    /* &lt;![CDATA[ */
+```html
+<svg width="100%" height="100%" viewBox="0 0 100 100"
+     xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* <![CDATA[ */
     circle {
       fill: orange;
       stroke: black;
       stroke-width: 10px; // Note that the value of a pixel depend on the viewBox
     }
-    /* ]]&gt; */
-  &lt;/style&gt;
+    /* ]]> */
+  </style>
 
-  &lt;circle cx="50" cy="50" r="40" /&gt;
-&lt;/svg&gt;
-</pre>
+  <circle cx="50" cy="50" r="40" />
+</svg>
+```
 
-<p>Résultat en direct:</p>
+Résultat en direct:
 
-<p>{{EmbedLiveSample("Exemple",150,165)}}</p>
+{{EmbedLiveSample("Exemple",150,165)}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_Globaux">Attributs Globaux</h3>
+### Attributs Globaux
 
-<ul>
- <li><a href="/fr/SVG/Attribute#Core">Core attributes</a> »</li>
-</ul>
+- [Core attributes](/fr/SVG/Attribute#Core) »
 
-<h3 id="Attributs_Specifiques">Attributs Specifiques</h3>
+### Attributs Specifiques
 
-<ul>
- <li>{{SVGAttr("type")}}</li>
- <li>{{SVGAttr("media")}}</li>
- <li>{{SVGAttr("title")}}</li>
-</ul>
+- {{SVGAttr("type")}}
+- {{SVGAttr("media")}}
+- {{SVGAttr("title")}}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implemente l'interface <code><a href="/fr/DOM/SVGStyleElement">SVGStyleElement</a></code>.</p>
+Cet élément implemente l'interface [`SVGStyleElement`](/fr/DOM/SVGStyleElement).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'styling.html#StyleElement', '&lt;style&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'styling.html#StyleElement', '&lt;style&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                   | Commentaire        |
+| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName('SVG2', 'styling.html#StyleElement', '&lt;style&gt;')}}     | {{Spec2('SVG2')}} |                    |
+| {{SpecName('SVG1.1', 'styling.html#StyleElement', '&lt;style&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.style")}}</p>
+{{Compat("svg.elements.style")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/HTML/Element/style">&lt;style&gt; element in HTML</a></li>
-</ul>
+- [\<style> element in HTML](/fr/HTML/Element/style)

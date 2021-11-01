@@ -3,270 +3,266 @@ title: Attributs SVG de présentation
 slug: Web/SVG/Attribute/Presentation
 translation_of: Web/SVG/Attribute/Presentation
 ---
-<p>{{draft}}</p>
+{{draft}}
 
-<p>Les <em>attributs SVG de présentation</em> sont des propriétés CSS pouvant être utilisées comme attributs sur les éléments SVG</p>
+Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être utilisées comme attributs sur les éléments SVG
 
-<ul>
- <li>alignment-baseline</li>
- <li>baseline-shift</li>
- <li>clip</li>
- <li>clip-path</li>
- <li>clip-rule</li>
- <li>color</li>
- <li>color-interpolation</li>
- <li>color-interpolation-filters</li>
- <li>color-profile</li>
- <li>color-rendering</li>
- <li>cursor</li>
- <li>direction</li>
- <li>display</li>
- <li>dominant-baseline</li>
- <li>enable-background</li>
- <li>fill</li>
- <li>fill-opacity</li>
- <li>fill-rule</li>
- <li>filter</li>
- <li>flood-color</li>
- <li>flood-opacity</li>
- <li>font-family</li>
- <li>font-size</li>
- <li>font-size-adjust</li>
- <li>font-stretch</li>
- <li>font-style</li>
- <li>font-variant</li>
- <li>font-weight</li>
- <li>glyph-orientation-horizontal</li>
- <li>glyph-orientation-vertical</li>
- <li>image-rendering</li>
- <li>kerning</li>
- <li>letter-spacing</li>
- <li>lighting-color</li>
- <li>marker-end</li>
- <li>marker-mid</li>
- <li>marker-start</li>
- <li>mask</li>
- <li>opacity</li>
- <li>overflow</li>
- <li>pointer-events</li>
- <li>shape-rendering</li>
- <li>solid-color</li>
- <li>solid-opacity</li>
- <li>stop-color</li>
- <li>stop-opacity</li>
- <li>stroke</li>
- <li>stroke-dasharray</li>
- <li>stroke-dashoffset</li>
- <li>stroke-linecap</li>
- <li>stroke-linejoin</li>
- <li>stroke-miterlimit</li>
- <li>stroke-opacity</li>
- <li>stroke-width</li>
- <li>text-anchor</li>
- <li>text-decoration</li>
- <li>text-rendering</li>
- <li>transform</li>
- <li>unicode-bidi</li>
- <li>vector-effect</li>
- <li>visibility</li>
- <li>word-spacing</li>
- <li>writing-mode</li>
-</ul>
+- alignment-baseline
+- baseline-shift
+- clip
+- clip-path
+- clip-rule
+- color
+- color-interpolation
+- color-interpolation-filters
+- color-profile
+- color-rendering
+- cursor
+- direction
+- display
+- dominant-baseline
+- enable-background
+- fill
+- fill-opacity
+- fill-rule
+- filter
+- flood-color
+- flood-opacity
+- font-family
+- font-size
+- font-size-adjust
+- font-stretch
+- font-style
+- font-variant
+- font-weight
+- glyph-orientation-horizontal
+- glyph-orientation-vertical
+- image-rendering
+- kerning
+- letter-spacing
+- lighting-color
+- marker-end
+- marker-mid
+- marker-start
+- mask
+- opacity
+- overflow
+- pointer-events
+- shape-rendering
+- solid-color
+- solid-opacity
+- stop-color
+- stop-opacity
+- stroke
+- stroke-dasharray
+- stroke-dashoffset
+- stroke-linecap
+- stroke-linejoin
+- stroke-miterlimit
+- stroke-opacity
+- stroke-width
+- text-anchor
+- text-decoration
+- text-rendering
+- transform
+- unicode-bidi
+- vector-effect
+- visibility
+- word-spacing
+- writing-mode
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<dl>
- <dt>{{SVGAttr('alignment-baseline')}}</dt>
- <dd>Spécifie comment un objet est aligné sur la ligne de pied de la police par rapport à son parent.<br>
- <small><em>Valeur</em>: <strong><code>auto</code></strong>|<code>baseline</code>|<code>before-edge</code>|<code>text-before-edge</code>|<code>middle</code>|<code>central</code>|<code>after-edge</code>|<code>text-after-edge</code>|<code>ideographic</code>|<code>alphabetic</code>|<code>hanging</code>|<code>mathematical</code>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('baseline-shift')}}</dt>
- <dd>Permet de positionner la ligne de pied de l'élément par rapport à celle de son parent.<br>
- <small><em>Valeur</em>: <strong><code>auto</code></strong>|<code>baseline</code>|<code>super</code>|<code>sub</code>|<a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a>|<a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('clip')}} {{deprecated_inline('css')}}</dt>
- <dd>Définit quelle partie d'un élément est visible.<br>
- <small><em>Valeur</em>: <strong><code>auto</code></strong>|{{cssxref("shape")}}|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('clip-path')}}</dt>
- <dd>Associe un chemin de détourage {{SVGElement('clipPath')}} à l'élément.<br>
- <small><em>Valeur</em>: <strong><code>none</code></strong>|<a href="/docs/Web/SVG/Content_type#FuncIRI">&lt;FuncIRI&gt;</a>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('clip-rule')}}</dt>
- <dd>Indique la règle de remplissage à appliquer sur un élément {{SVGElement('clipPath')}}.<br>
- <small><em>Valeur</em>: <strong><code>nonezero</code></strong>|<code>evenodd</code>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('color')}}</dt>
- <dd>Définit la valeur potentielle (valeur de <code>currentColor</code>) pour les attributs de présentation <code>fill</code>, <code>stroke</code>, <code>stop-color</code>, <code>flood-color</code> et <code>lighting-color</code>.<br>
- <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#Color">&lt;color&gt;</a>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('color-interpolation')}}</dt>
- <dd>Spécifie l'espace colométrique pour les interpolations de dégradés, les animations couleur et composition alpha.<br>
- <small><em>Valeur</em>: <code>auto</code>|<strong><code>sRGB</code></strong>|<code>linearRGB</code>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('color-interpolation-filters')}}</dt>
- <dd>Spécifie l'espace colométrique pour les opérations effectuées via des effets de filtre.<br>
- <small><em>Valeur</em>: <code>auto</code>|<code>sRGB</code>|<strong><code>linearRGB</code></strong>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('color-profile')}} {{deprecated_inline('svg2')}}</dt>
- <dd>Définit le profil de couleur qu'une image bitmap incluse via l'élément {{SVGElement('image')}} doit utiliser.<br>
- <small><em>Valeur</em>: <code>auto</code>|<code>sRGB</code>|<code>linearRGB</code>|<a href="/docs/Web/SVG/Content_type#Name">&lt;name&gt;</a>|<a href="/docs/Web/SVG/Content_type#IRI">&lt;IRI&gt;</a>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('color-rendering')}}</dt>
- <dd>Indique au navigateur comment optimiser ses opérations d'interpolation et de composition des couleurs.<br>
- <small><em>Valeur</em>: <strong><code>auto</code></strong>|<code>optimizeSpeed</code>|<code>optimizeQuality</code>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('cursor')}}</dt>
- <dd>Spécifie le curseur affiché lorsque la souris passe au-desuss de l'élément.<br>
- <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#FuncIRI">&lt;FuncIRI&gt;</a>|<a href="/docs/Web/CSS/cursor#Values">&lt;keywords&gt;</a>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('direction')}}</dt>
- <dd>Spécifie la direction d'écriture du texte.<br>
- <small><em>Valeur</em>: <strong><code>ltr</code></strong>|<code>rtl</code>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('display')}}</dt>
- <dd>Permet de contrôler le rendu d'éléments graphiques ou conteneurs.<br>
- <small><em>Valeur</em>: see css {{cssxref('display')}}; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('dominant-baseline')}}</dt>
- <dd>Définit la ligne de pied utilisée pour aligner le texte.<br>
- <small><em>Valeur</em>: <code>auto</code>|<code>text-bottom</code>|<code>alphabetic</code>|<code>ideographic</code>|<code>middle</code>|<code>central</code>| <code>mathematical</code>|<code>hanging</code>|<code>text-top</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('enable-background')}} {{deprecated_inline('svg2')}}</dt>
- <dd>Indique au navigateur comment gérer l'image d'arrière plan.<br>
- <small><em>Valeur</em>: <strong><code>accumulate</code></strong>|<code>new</code>|<code>inherit</code>; <em>Animation</em>: <strong>Non</strong></small></dd>
- <dt>{{SVGAttr('fill')}}</dt>
- <dd>Définit la couleur de remplissage d'un élément graphique.<br>
- <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('fill-opacity')}}</dt>
- <dd>Définit l'opacité du remplissage de l'élément.<br>
- <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a>|<a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('fill-rule')}}</dt>
- <dd>Indique comment déterminer quelles parties du chemin se trouvent à l'intérieur de la forme.<br>
- <small><em>Valeur</em>: <strong><code>nonzero</code></strong>|<code>evenodd</code>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('filter')}}</dt>
- <dd>Applique un filtre, définit par un élément {{SVGElement('filter')}}, à l'élément.<br>
- <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#FuncIRI">&lt;FuncIRI&gt;</a>|<strong><code>none</code></strong>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('flood-color')}}</dt>
- <dd>Indique quelle couleur utiliser pour remplir la région du filtre, définit par les éléments {{SVGElement('feFlood')}} ou {{SVGElement('feDropShadow')}}.<br>
- <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#Color">&lt;color&gt;</a>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('flood-opacity')}}</dt>
- <dd>Indique l'opacité à utiliser pour remplir la région du filtre, définit par les éléments {{SVGElement('feFlood')}} ou {{SVGElement('feDropShadow')}}.<br>
- <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a>|<a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('font-family')}}</dt>
- <dd>Indique la police utiliser pour restituer le texte de l'élément.<br>
- <small><em>Valeur</em>: see css {{cssxref('font-family')}}; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('font-size')}}</dt>
- <dd>Spécifie la taille de la police.<br>
- <small><em>Valeur</em>: see css {{cssxref('font-size')}}; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('font-size-adjust')}}</dt>
- <dd>Spécifie que la taille de la police doit être choisit en se basant sur la taille des lettres minuscules et non des majuscules.<br>
- <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a>|<code><strong>none</strong></code>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('font-stretch')}}</dt>
- <dd>Sélectionne la version normale, condensée ou espacée d'une police.<br>
- <small><em>Valeur</em>: see css {{cssxref('font-stretch')}}; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('font-style')}}</dt>
- <dd>Spécifie si la police doit être stylisée en normal, italique ou oblique.<br>
- <small><em>Valeur</em>: <strong><code>normal</code></strong>|<code>italic</code>|<code>oblique</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('font-variant')}}</dt>
- <dd>Spécifie si une police doit utiliser certaines variations, telles que les petites majuscules ou les ligatures.<br>
- <small><em>Valeur</em>: see css {{cssxref('font-variant')}}; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('font-weight')}}</dt>
- <dd>Spécifie l'épaisseur (ou graisse) de la police.<br>
- <small><em>Valeur</em>: <strong><code>normal</code></strong>|<code>bold</code>|<code>lighter</code>|<code>bolder</code>|<code>100</code>|<code>200</code>|<code>300</code>|<code>400</code>|<code>500</code>|<code>600</code>|<code>700</code>|<code>800</code>|<code>900</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('glyph-orientation-horizontal')}} {{deprecated_inline('svg2')}}</dt>
- <dd>Contrôle l'orientation des glyphes lorsque la direction en ligne est horizontale.<br>
- <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#Angle">&lt;angle&gt;</a>|<code>inherit</code>; <em>Animation</em>: <strong>Non</strong></small></dd>
- <dt>{{SVGAttr('glyph-orientation-vertical')}} {{deprecated_inline('svg2')}}</dt>
- <dd>Contrôle l'orientation des glyphes lorsque la direction en ligne est verticale.<br>
- <small><em>Valeur</em>: <strong><code>auto</code></strong>|<a href="/docs/Web/SVG/Content_type#Angle">&lt;angle&gt;</a>|<code>inherit</code>; <em>Animation</em>: <strong>Non</strong></small></dd>
- <dt>{{SVGAttr('image-rendering')}}</dt>
- <dd>Indique au navigateur le compromis à effectuer entre vitesse et qualité du rendu des images.<br>
- <small><em>Valeur</em>: <strong><code>auto</code></strong>|<code>optimizeQuality</code>|<code>optimizeSpeed</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('kerning')}} {{deprecated_inline('svg2')}}</dt>
- <dd>Indique au navigateur s'il doit ajuster l'espacement entre les glyphes.<br>
- <small><em>Valeur</em>: <strong><code>auto</code></strong>|<a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('letter-spacing')}}</dt>
- <dd>Contrôle l'espacement entre les caratères du texte.<br>
- <small><em>Valeur</em>: <strong><code>normal</code></strong>|<a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('lighting-color')}}</dt>
- <dd>Définit la couleur de la source de lumière pour les filtres {{SVGElement('feDiffuseLighting')}} et {{SVGElement('feSpecularLighting')}}.<br>
- <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#Color">&lt;color&gt;</a>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('marker-end')}}</dt>
- <dd>Définit la pointe de la flèche ou polymarker dessiné à la fin de l'élément {{SVGElement('path')}} ou ou de la forme.<br>
- <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#FuncIRI">&lt;FuncIRI&gt;</a>|<strong><code>none</code></strong>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('marker-mid')}}</dt>
- <dd>Définit la pointe de la flèche ou polymarker dessiné entre chaque segment de l'élément {{SVGElement('path')}} ou de la forme.<br>
- <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#FuncIRI">&lt;FuncIRI&gt;</a>|<strong><code>none</code></strong>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('marker-start')}}</dt>
- <dd>Définit la pointe de la flèche ou polymarker dessiné au début de l'élément {{SVGElement('path')}} ou ou de la forme.<br>
- <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#FuncIRI">&lt;FuncIRI&gt;</a>|<strong><code>none</code></strong>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('mask')}}</dt>
- <dd>Modifie la visibilité d'un élément en masquant ou détourant l'image à des endroits spécifiques.<br>
- <small><em>Valeur</em>: see css {{cssxref('mask')}}; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('opacity')}}</dt>
- <dd>Spécifie l'opacité d'un objet ou d'un groupe d'objets.<br>
- <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#Opacity_value">&lt;opacity-value&gt;</a>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('overflow')}}</dt>
- <dd>Spécifie si le contenu d'un élément bloc est tronqué lorsqu'il déborde de la zone de l'élément.<br>
- <small><em>Valeur</em>: <code><strong>visible</strong></code>|<code>hidden|scroll</code>|<code>auto</code>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('pointer-events')}}</dt>
- <dd>Définit si et quand un élément peut être la cible d'un événement de la souris.<br>
- <small><em>Valeur</em>: <code>bounding-box</code>|<code><strong>visiblePainted</strong></code>|<code>visibleFil</code>|<code>visibleStroke</code>|<code>visible</code> |<code>painted</code>|<code>fill</code>|<code>stroke</code>|<code>all</code>|<code>none</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('shape-rendering')}}</dt>
- <dd>Indique au navigateur le compromis à effectuer entre vitesse et qualité du rendu des éléments {{SVGElement('path')}} et des formes.<br>
- <small><em>Valeur</em>: <code><strong>auto</strong></code>|<code>optimizeSpeed</code>|<code>crispEdges</code>|<code>geometricPrecision</code> |<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('solid-color')}}</dt>
- <dd>-<br>
- <small><em>Valeur</em>:; <em>Animation</em>: <strong>-</strong></small></dd>
- <dt>{{SVGAttr('solid-opacity')}}</dt>
- <dd>-<br>
- <small><em>Valeur</em>:; <em>Animation</em>: <strong>-</strong></small></dd>
- <dt>{{SVGAttr('stop-color')}}</dt>
- <dd>Indique la couleur à utiliser sur un {{SVGElement('stop')}} d'un dégradé.<br>
- <small><em>Valeur</em>: <code>currentColor</code>|<a href="/fr/SVG/Content_type#Color" title="en/SVG/Content_type#Color">&lt;color&gt;</a>|<a href="/fr/SVG/Content_type#ICCColor" title="en/SVG/Content_type#ICCColor">&lt;icccolor&gt;</a>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('stop-opacity')}}</dt>
- <dd>Indique l'opacité du {{SVGElement('stop')}}.<br>
- <small><em>Valeur</em>: <a href="/fr/SVG/Content_type#Opacity_value" title="en/SVG/Content_type#Opacity_value">&lt;opacity-value&gt;</a>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('stroke')}}</dt>
- <dd>Définit la couleur à utiliser pour le contour de l'élément.<br>
- <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('stroke-dasharray')}}</dt>
- <dd>Définit le motif des pointillés utilisé pour dessiner le contour de la forme.<br>
- <small><em>Valeur</em>: <code>none</code>|<code>&lt;dasharray&gt;</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt>{{SVGAttr('stroke-dashoffset')}}</dt>
- <dd>Décale la position de départ des pointillés.<br>
- <small><em>Valeur</em>: <a href="/fr/SVG/Content_type#Percentage" title="en/SVG/Content_type#Percentage">&lt;percentage&gt;</a>|<a href="/fr/SVG/Content_type#Length" title="en/SVG/Content_type#Length">&lt;length&gt;</a>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt><strong>{{SVGAttr('stroke-linecap')}}</strong></dt>
- <dd>Définit la forme de la fin des lignes.<br>
- <small><em>Valeur</em>: <code><strong>butt</strong></code>|<code>round</code>|<code>square</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt><strong>{{SVGAttr('stroke-linejoin')}}</strong></dt>
- <dd>Définit la manière de dessiner la liaison entre deux segments de ligne.<br>
- <small><em>Valeur</em>: <code>arcs</code>|<code>bevel</code>|<code><strong>miter</strong></code>|<code>miter-clip</code>|<code>round</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt><strong>{{SVGAttr('stroke-miterlimit')}}</strong></dt>
- <dd>Définit la limite du rapport entre la longueur du coin et la valeur de {{SVGAttr('stroke-width')}} utilisée pour dessiner la liaison entre deux segments de ligne.<br>
- <small><em>Valeur</em>: <a href="/fr/SVG/Content_type#Number" title="en/SVG/Content_type#Number">&lt;number&gt;</a>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt><strong>{{SVGAttr('stroke-opacity')}}</strong></dt>
- <dd>Définit l'opacité du contour d'une forme.<br>
- <small><em>Valeur</em>: <a href="/fr/SVG/Content_type#Opacity_value" title="en/SVG/Content_type#Opacity_value">&lt;opacity-value&gt;</a>|<a href="/docs/Web/SVG/Content_type#Paint">&lt;percentage&gt;</a>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt><strong>{{SVGAttr('stroke-width')}}</strong></dt>
- <dd>Définit l'épaisseur du contour appliqué à une forme.<br>
- <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a>|<a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt><strong>{{SVGAttr('text-anchor')}}</strong></dt>
- <dd>Définit l'alignement vertical d'une chaîne de texte.<br>
- <small><em>Valeur</em>: <code>start</code>|<code>middle</code>|<code>end</code>|<code><strong>inherit</strong></code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt><strong>{{SVGAttr('text-decoration')}}</strong></dt>
- <dd>Définit l'apparence des lignes décoratives sur le texte.<br>
- <small><em>Valeur</em>: <code>none</code>|<code>underline</code>|<code>overline</code>|<code>line-through</code>|<code>blink</code>|<code><strong>inherit</strong></code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt><strong>{{SVGAttr('text-rendering')}}</strong></dt>
- <dd>Indique au navigateur le compromis à effectuer entre vitesse et qualité du rendu du texte.<br>
- <small><em>Valeur</em>: <code><strong>auto</strong></code>|<code>optimizeSpeed</code>|<code>optimizeLegibility</code>|<code>geometricPrecision</code>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt><strong>{{SVGAttr('transform')}}</strong></dt>
- <dd>Définit une liste de transformations à appliquer à un élément et à ses enfants.<br>
- <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#Transform-list">&lt;transform-list&gt;</a>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt><strong>{{SVGAttr('unicode-bidi')}}</strong></dt>
- <dd>-<br>
- <small><em>Valeur</em>:; <em>Animation</em>: <strong>-</strong></small></dd>
- <dt><strong>{{SVGAttr('vector-effect')}}</strong></dt>
- <dd>Spécifie l'effet vectoriel à utiliser lors du dessin d'un objet.<br>
- <small><em>Valeur</em>: <code>default</code>|<code>non-scaling-stroke</code>|<code>inherit</code>|<code>&lt;uri&gt;</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt><strong>{{SVGAttr('visibility')}}</strong></dt>
- <dd>Définit la visibilité d'éléments graphiques.<br>
- <small><em>Valeur</em>: <strong><code>visible</code></strong>|<code>hidden</code>|<code>collapse</code>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt><strong>{{SVGAttr('word-spacing')}}</strong></dt>
- <dd>Définit la longueur des espaces entre les mots d'un texte.<br>
- <small><em>Valeur</em>: <a href="/fr/SVG/Content_type#Length" title="https://developer.mozilla.org/en/SVG/Content_type#Length">&lt;length&gt;</a>|<code><strong title="this is the default value">inherit</strong></code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
- <dt><strong>{{SVGAttr('writing-mode')}}</strong></dt>
- <dd>Spécifie si la direction d'un élément  {{SVGElement('text')}} doit être de gauche-à-droite, droite-à-gauche, ou de haut-en-bas.<br>
- <small><em>Valeur</em>: <strong><code>lr-tb</code></strong>|<code>rl-tb</code>|<code>tb-rl</code>|<code>lr</code>|<code>rl</code>|<code>tb</code>|<code>inherit</code>; <em>Animation</em>: <strong>Oui</strong></small></dd>
-</dl>
+- {{SVGAttr('alignment-baseline')}}
+  - : Spécifie comment un objet est aligné sur la ligne de pied de la police par rapport à son parent.
+    _Valeur_: **`auto`**|`baseline`|`before-edge`|`text-before-edge`|`middle`|`central`|`after-edge`|`text-after-edge`|`ideographic`|`alphabetic`|`hanging`|`mathematical`|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('baseline-shift')}}
+  - : Permet de positionner la ligne de pied de l'élément par rapport à celle de son parent.
+    _Valeur_: **`auto`**|`baseline`|`super`|`sub`|[\<percentage>](/docs/Web/SVG/Content_type#Percentage)|[\<length>](/docs/Web/SVG/Content_type#Length)|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('clip')}} {{deprecated_inline('css')}}
+  - : Définit quelle partie d'un élément est visible.
+    _Valeur_: **`auto`**|{{cssxref("shape")}}|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('clip-path')}}
+  - : Associe un chemin de détourage {{SVGElement('clipPath')}} à l'élément.
+    _Valeur_: **`none`**|[\<FuncIRI>](/docs/Web/SVG/Content_type#FuncIRI)|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('clip-rule')}}
+  - : Indique la règle de remplissage à appliquer sur un élément {{SVGElement('clipPath')}}.
+    _Valeur_: **`nonezero`**|`evenodd`|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('color')}}
+  - : Définit la valeur potentielle (valeur de `currentColor`) pour les attributs de présentation `fill`, `stroke`, `stop-color`, `flood-color` et `lighting-color`.
+    _Valeur_: [\<color>](/docs/Web/SVG/Content_type#Color)|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('color-interpolation')}}
+  - : Spécifie l'espace colométrique pour les interpolations de dégradés, les animations couleur et composition alpha.
+    _Valeur_: `auto`|**`sRGB`**|`linearRGB`|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('color-interpolation-filters')}}
+  - : Spécifie l'espace colométrique pour les opérations effectuées via des effets de filtre.
+    _Valeur_: `auto`|`sRGB`|**`linearRGB`**|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('color-profile')}} {{deprecated_inline('svg2')}}
+  - : Définit le profil de couleur qu'une image bitmap incluse via l'élément {{SVGElement('image')}} doit utiliser.
+    _Valeur_: `auto`|`sRGB`|`linearRGB`|[\<name>](/docs/Web/SVG/Content_type#Name)|[\<IRI>](/docs/Web/SVG/Content_type#IRI)|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('color-rendering')}}
+  - : Indique au navigateur comment optimiser ses opérations d'interpolation et de composition des couleurs.
+    _Valeur_: **`auto`**|`optimizeSpeed`|`optimizeQuality`|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('cursor')}}
+  - : Spécifie le curseur affiché lorsque la souris passe au-desuss de l'élément.
+    _Valeur_: [\<FuncIRI>](/docs/Web/SVG/Content_type#FuncIRI)|[\<keywords>](/docs/Web/CSS/cursor#Values)|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('direction')}}
+  - : Spécifie la direction d'écriture du texte.
+    _Valeur_: **`ltr`**|`rtl`|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('display')}}
+  - : Permet de contrôler le rendu d'éléments graphiques ou conteneurs.
+    _Valeur_: see css {{cssxref('display')}}; _Animation_: **Oui**
+- {{SVGAttr('dominant-baseline')}}
+  - : Définit la ligne de pied utilisée pour aligner le texte.
+    _Valeur_: `auto`|`text-bottom`|`alphabetic`|`ideographic`|`middle`|`central`| `mathematical`|`hanging`|`text-top`; _Animation_: **Oui**
+- {{SVGAttr('enable-background')}} {{deprecated_inline('svg2')}}
+  - : Indique au navigateur comment gérer l'image d'arrière plan.
+    _Valeur_: **`accumulate`**|`new`|`inherit`; _Animation_: **Non**
+- {{SVGAttr('fill')}}
+  - : Définit la couleur de remplissage d'un élément graphique.
+    _Valeur_: [\<paint>](/docs/Web/SVG/Content_type#Paint); _Animation_: **Oui**
+- {{SVGAttr('fill-opacity')}}
+  - : Définit l'opacité du remplissage de l'élément.
+    _Valeur_: [\<number>](/docs/Web/SVG/Content_type#Number)|[\<percentage>](/docs/Web/SVG/Content_type#Percentage); _Animation_: **Oui**
+- {{SVGAttr('fill-rule')}}
+  - : Indique comment déterminer quelles parties du chemin se trouvent à l'intérieur de la forme.
+    _Valeur_: **`nonzero`**|`evenodd`|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('filter')}}
+  - : Applique un filtre, définit par un élément {{SVGElement('filter')}}, à l'élément.
+    _Valeur_: [\<FuncIRI>](/docs/Web/SVG/Content_type#FuncIRI)|**`none`**|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('flood-color')}}
+  - : Indique quelle couleur utiliser pour remplir la région du filtre, définit par les éléments {{SVGElement('feFlood')}} ou {{SVGElement('feDropShadow')}}.
+    _Valeur_: [\<color>](/docs/Web/SVG/Content_type#Color); _Animation_: **Oui**
+- {{SVGAttr('flood-opacity')}}
+  - : Indique l'opacité à utiliser pour remplir la région du filtre, définit par les éléments {{SVGElement('feFlood')}} ou {{SVGElement('feDropShadow')}}.
+    _Valeur_: [\<number>](/docs/Web/SVG/Content_type#Number)|[\<percentage>](/docs/Web/SVG/Content_type#Percentage); _Animation_: **Oui**
+- {{SVGAttr('font-family')}}
+  - : Indique la police utiliser pour restituer le texte de l'élément.
+    _Valeur_: see css {{cssxref('font-family')}}; _Animation_: **Oui**
+- {{SVGAttr('font-size')}}
+  - : Spécifie la taille de la police.
+    _Valeur_: see css {{cssxref('font-size')}}; _Animation_: **Oui**
+- {{SVGAttr('font-size-adjust')}}
+  - : Spécifie que la taille de la police doit être choisit en se basant sur la taille des lettres minuscules et non des majuscules.
+    _Valeur_: [\<number>](/docs/Web/SVG/Content_type#Number)|**`none`**|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('font-stretch')}}
+  - : Sélectionne la version normale, condensée ou espacée d'une police.
+    _Valeur_: see css {{cssxref('font-stretch')}}; _Animation_: **Oui**
+- {{SVGAttr('font-style')}}
+  - : Spécifie si la police doit être stylisée en normal, italique ou oblique.
+    _Valeur_: **`normal`**|`italic`|`oblique`; _Animation_: **Oui**
+- {{SVGAttr('font-variant')}}
+  - : Spécifie si une police doit utiliser certaines variations, telles que les petites majuscules ou les ligatures.
+    _Valeur_: see css {{cssxref('font-variant')}}; _Animation_: **Oui**
+- {{SVGAttr('font-weight')}}
+  - : Spécifie l'épaisseur (ou graisse) de la police.
+    _Valeur_: **`normal`**|`bold`|`lighter`|`bolder`|`100`|`200`|`300`|`400`|`500`|`600`|`700`|`800`|`900`; _Animation_: **Oui**
+- {{SVGAttr('glyph-orientation-horizontal')}} {{deprecated_inline('svg2')}}
+  - : Contrôle l'orientation des glyphes lorsque la direction en ligne est horizontale.
+    _Valeur_: [\<angle>](/docs/Web/SVG/Content_type#Angle)|`inherit`; _Animation_: **Non**
+- {{SVGAttr('glyph-orientation-vertical')}} {{deprecated_inline('svg2')}}
+  - : Contrôle l'orientation des glyphes lorsque la direction en ligne est verticale.
+    _Valeur_: **`auto`**|[\<angle>](/docs/Web/SVG/Content_type#Angle)|`inherit`; _Animation_: **Non**
+- {{SVGAttr('image-rendering')}}
+  - : Indique au navigateur le compromis à effectuer entre vitesse et qualité du rendu des images.
+    _Valeur_: **`auto`**|`optimizeQuality`|`optimizeSpeed`; _Animation_: **Oui**
+- {{SVGAttr('kerning')}} {{deprecated_inline('svg2')}}
+  - : Indique au navigateur s'il doit ajuster l'espacement entre les glyphes.
+    _Valeur_: **`auto`**|[\<length>](/docs/Web/SVG/Content_type#Length)|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('letter-spacing')}}
+  - : Contrôle l'espacement entre les caratères du texte.
+    _Valeur_: **`normal`**|[\<length>](/docs/Web/SVG/Content_type#Length)|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('lighting-color')}}
+  - : Définit la couleur de la source de lumière pour les filtres {{SVGElement('feDiffuseLighting')}} et {{SVGElement('feSpecularLighting')}}.
+    _Valeur_: [\<color>](/docs/Web/SVG/Content_type#Color); _Animation_: **Oui**
+- {{SVGAttr('marker-end')}}
+  - : Définit la pointe de la flèche ou polymarker dessiné à la fin de l'élément {{SVGElement('path')}} ou ou de la forme.
+    _Valeur_: [\<FuncIRI>](/docs/Web/SVG/Content_type#FuncIRI)|**`none`**|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('marker-mid')}}
+  - : Définit la pointe de la flèche ou polymarker dessiné entre chaque segment de l'élément {{SVGElement('path')}} ou de la forme.
+    _Valeur_: [\<FuncIRI>](/docs/Web/SVG/Content_type#FuncIRI)|**`none`**|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('marker-start')}}
+  - : Définit la pointe de la flèche ou polymarker dessiné au début de l'élément {{SVGElement('path')}} ou ou de la forme.
+    _Valeur_: [\<FuncIRI>](/docs/Web/SVG/Content_type#FuncIRI)|**`none`**|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('mask')}}
+  - : Modifie la visibilité d'un élément en masquant ou détourant l'image à des endroits spécifiques.
+    _Valeur_: see css {{cssxref('mask')}}; _Animation_: **Oui**
+- {{SVGAttr('opacity')}}
+  - : Spécifie l'opacité d'un objet ou d'un groupe d'objets.
+    _Valeur_: [\<opacity-value>](/docs/Web/SVG/Content_type#Opacity_value); _Animation_: **Oui**
+- {{SVGAttr('overflow')}}
+  - : Spécifie si le contenu d'un élément bloc est tronqué lorsqu'il déborde de la zone de l'élément.
+    _Valeur_: **`visible`**|`hidden|scroll`|`auto`|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('pointer-events')}}
+  - : Définit si et quand un élément peut être la cible d'un événement de la souris.
+    _Valeur_: `bounding-box`|**`visiblePainted`**|`visibleFil`|`visibleStroke`|`visible` |`painted`|`fill`|`stroke`|`all`|`none`; _Animation_: **Oui**
+- {{SVGAttr('shape-rendering')}}
+  - : Indique au navigateur le compromis à effectuer entre vitesse et qualité du rendu des éléments {{SVGElement('path')}} et des formes.
+    _Valeur_: **`auto`**|`optimizeSpeed`|`crispEdges`|`geometricPrecision` |`inherit`; _Animation_: **Oui**
+- {{SVGAttr('solid-color')}}
+  - : -
+    _Valeur_:; _Animation_: **-**
+- {{SVGAttr('solid-opacity')}}
+  - : -
+    _Valeur_:; _Animation_: **-**
+- {{SVGAttr('stop-color')}}
+  - : Indique la couleur à utiliser sur un {{SVGElement('stop')}} d'un dégradé.
+    _Valeur_: `currentColor`|[\<color>](/fr/SVG/Content_type#Color "en/SVG/Content_type#Color")|[\<icccolor>](/fr/SVG/Content_type#ICCColor "en/SVG/Content_type#ICCColor")|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('stop-opacity')}}
+  - : Indique l'opacité du {{SVGElement('stop')}}.
+    _Valeur_: [\<opacity-value>](/fr/SVG/Content_type#Opacity_value "en/SVG/Content_type#Opacity_value")|`inherit`; _Animation_: **Oui**
+- {{SVGAttr('stroke')}}
+  - : Définit la couleur à utiliser pour le contour de l'élément.
+    _Valeur_: [\<paint>](/docs/Web/SVG/Content_type#Paint); _Animation_: **Oui**
+- {{SVGAttr('stroke-dasharray')}}
+  - : Définit le motif des pointillés utilisé pour dessiner le contour de la forme.
+    _Valeur_: `none`|`<dasharray>`; _Animation_: **Oui**
+- {{SVGAttr('stroke-dashoffset')}}
+  - : Décale la position de départ des pointillés.
+    _Valeur_: [\<percentage>](/fr/SVG/Content_type#Percentage "en/SVG/Content_type#Percentage")|[\<length>](/fr/SVG/Content_type#Length "en/SVG/Content_type#Length"); _Animation_: **Oui**
+- **{{SVGAttr('stroke-linecap')}}**
+  - : Définit la forme de la fin des lignes.
+    _Valeur_: **`butt`**|`round`|`square`; _Animation_: **Oui**
+- **{{SVGAttr('stroke-linejoin')}}**
+  - : Définit la manière de dessiner la liaison entre deux segments de ligne.
+    _Valeur_: `arcs`|`bevel`|**`miter`**|`miter-clip`|`round`; _Animation_: **Oui**
+- **{{SVGAttr('stroke-miterlimit')}}**
+  - : Définit la limite du rapport entre la longueur du coin et la valeur de {{SVGAttr('stroke-width')}} utilisée pour dessiner la liaison entre deux segments de ligne.
+    _Valeur_: [\<number>](/fr/SVG/Content_type#Number "en/SVG/Content_type#Number"); _Animation_: **Oui**
+- **{{SVGAttr('stroke-opacity')}}**
+  - : Définit l'opacité du contour d'une forme.
+    _Valeur_: [\<opacity-value>](/fr/SVG/Content_type#Opacity_value "en/SVG/Content_type#Opacity_value")|[\<percentage>](/docs/Web/SVG/Content_type#Paint); _Animation_: **Oui**
+- **{{SVGAttr('stroke-width')}}**
+  - : Définit l'épaisseur du contour appliqué à une forme.
+    _Valeur_: [\<length>](/docs/Web/SVG/Content_type#Length)|[\<percentage>](/docs/Web/SVG/Content_type#Percentage); _Animation_: **Oui**
+- **{{SVGAttr('text-anchor')}}**
+  - : Définit l'alignement vertical d'une chaîne de texte.
+    _Valeur_: `start`|`middle`|`end`|**`inherit`**; _Animation_: **Oui**
+- **{{SVGAttr('text-decoration')}}**
+  - : Définit l'apparence des lignes décoratives sur le texte.
+    _Valeur_: `none`|`underline`|`overline`|`line-through`|`blink`|**`inherit`**; _Animation_: **Oui**
+- **{{SVGAttr('text-rendering')}}**
+  - : Indique au navigateur le compromis à effectuer entre vitesse et qualité du rendu du texte.
+    _Valeur_: **`auto`**|`optimizeSpeed`|`optimizeLegibility`|`geometricPrecision`|`inherit`; _Animation_: **Oui**
+- **{{SVGAttr('transform')}}**
+  - : Définit une liste de transformations à appliquer à un élément et à ses enfants.
+    _Valeur_: [\<transform-list>](/docs/Web/SVG/Content_type#Transform-list); _Animation_: **Oui**
+- **{{SVGAttr('unicode-bidi')}}**
+  - : -
+    _Valeur_:; _Animation_: **-**
+- **{{SVGAttr('vector-effect')}}**
+  - : Spécifie l'effet vectoriel à utiliser lors du dessin d'un objet.
+    _Valeur_: `default`|`non-scaling-stroke`|`inherit`|`<uri>`; _Animation_: **Oui**
+- **{{SVGAttr('visibility')}}**
+  - : Définit la visibilité d'éléments graphiques.
+    _Valeur_: **`visible`**|`hidden`|`collapse`|`inherit`; _Animation_: **Oui**
+- **{{SVGAttr('word-spacing')}}**
+  - : Définit la longueur des espaces entre les mots d'un texte.
+    _Valeur_: [\<length>](/fr/SVG/Content_type#Length "https://developer.mozilla.org/en/SVG/Content_type#Length")|**`inherit`**; _Animation_: **Oui**
+- **{{SVGAttr('writing-mode')}}**
+  - : Spécifie si la direction d'un élément  {{SVGElement('text')}} doit être de gauche-à-droite, droite-à-gauche, ou de haut-en-bas.
+    _Valeur_: **`lr-tb`**|`rl-tb`|`tb-rl`|`lr`|`rl`|`tb`|`inherit`; _Animation_: **Oui**
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.attributes.presentation")}}</p>
+{{Compat("svg.attributes.presentation")}}

@@ -7,155 +7,134 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feDiffuseLighting
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>La primitive de filtre <a href="/fr/docs/Web/SVG">SVG</a> <strong><code>&lt;feDiffuseLighting&gt;</code></strong> éclaire une image en utilisant son canal alpha en tant que relief. L'image résultante, qui est une image RGBA opaque, dépend de la couleur de la lumière, de sa position et du relief de l'image en entrée.</p>
+La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feDiffuseLighting>`** éclaire une image en utilisant son canal alpha en tant que relief. L'image résultante, qui est une image RGBA opaque, dépend de la couleur de la lumière, de sa position et du relief de l'image en entrée.
 
-<p>La lumière crée par cette primitive de filtre peut être combinée avec une image de texture à l'aide de l'opérateur <code>arithmetic</code> de la primitive de filtre {{SVGElement("feComposite")}}. De multiples sources lumineuses peuvent être simulées en ajoutant plusieurs éléments à la texture.</p>
+La lumière crée par cette primitive de filtre peut être combinée avec une image de texture à l'aide de l'opérateur `arithmetic` de la primitive de filtre {{SVGElement("feComposite")}}. De multiples sources lumineuses peuvent être simulées en ajoutant plusieurs éléments à la texture.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_base">Attributs de base</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_présentation">Attributs de présentation</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_primitives_de_filtre">Attributs de primitive de filtre</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
-</ul>
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation)
+- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#Attributs_de_primitives_de_filtre)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<ul>
- <li>{{SVGAttr("in")}}</li>
- <li>{{SVGAttr("surfaceScale")}}</li>
- <li>{{SVGAttr("diffuseConstant")}}</li>
- <li>{{SVGAttr("kernelUnitLength")}}</li>
-</ul>
+- {{SVGAttr("in")}}
+- {{SVGAttr("surfaceScale")}}
+- {{SVGAttr("diffuseConstant")}}
+- {{SVGAttr("kernelUnitLength")}}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface {{domxref("SVGFEDiffuseLightingElement")}}.</p>
+Cet élément implémente l'interface {{domxref("SVGFEDiffuseLightingElement")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>L'exemple suivant montre l'effet de l'élément <code>&lt;feDiffuseLighting&gt;</code> sur un cercle avec chaque type de lumière disponible. À chaque fois, la lumière vient du coin supérieur gauche.</p>
+L'exemple suivant montre l'effet de l'élément `<feDiffuseLighting>` sur un cercle avec chaque type de lumière disponible. À chaque fois, la lumière vient du coin supérieur gauche.
 
-<pre class="brush: html; highlight[10-13,25-28,40-44]">&lt;svg width="440" height="140" xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg width="440" height="140" xmlns="http://www.w3.org/2000/svg">
 
-  &lt;!-- Aucune lumière n'est appliquée --&gt;
-  &lt;text text-anchor="middle" x="60" y="22"&gt;No Light&lt;/text&gt;
-  &lt;circle cx="60" cy="80" r="50" fill="green" /&gt;
+  <!-- Aucune lumière n'est appliquée -->
+  <text text-anchor="middle" x="60" y="22">No Light</text>
+  <circle cx="60" cy="80" r="50" fill="green" />
 
-  &lt;!-- La source lumineuse est un élément fePointLight --&gt;
-  &lt;text text-anchor="middle" x="170" y="22"&gt;fePointLight&lt;/text&gt;
-  &lt;filter id="lightMe1"&gt;
-    &lt;feDiffuseLighting in="SourceGraphic" result="light"
-        lighting-color="white"&gt;
-      &lt;fePointLight x="150" y="60" z="20" /&gt;
-    &lt;/feDiffuseLighting&gt;
+  <!-- La source lumineuse est un élément fePointLight -->
+  <text text-anchor="middle" x="170" y="22">fePointLight</text>
+  <filter id="lightMe1">
+    <feDiffuseLighting in="SourceGraphic" result="light"
+        lighting-color="white">
+      <fePointLight x="150" y="60" z="20" />
+    </feDiffuseLighting>
 
-    &lt;feComposite in="SourceGraphic" in2="light"
-                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/&gt;
-  &lt;/filter&gt;
+    <feComposite in="SourceGraphic" in2="light"
+                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>
+  </filter>
 
-  &lt;circle cx="170" cy="80" r="50" fill="green"
-      filter="url(#lightMe1)" /&gt;
+  <circle cx="170" cy="80" r="50" fill="green"
+      filter="url(#lightMe1)" />
 
-  &lt;!-- La source lumineuse est un élément feDistantLight --&gt;
-  &lt;text text-anchor="middle" x="280" y="22"&gt;feDistantLight&lt;/text&gt;
-  &lt;filter id="lightMe2"&gt;
-    &lt;feDiffuseLighting in="SourceGraphic" result="light"
-        lighting-color="white"&gt;
-      &lt;feDistantLight azimuth="240" elevation="20"/&gt;
-    &lt;/feDiffuseLighting&gt;
+  <!-- La source lumineuse est un élément feDistantLight -->
+  <text text-anchor="middle" x="280" y="22">feDistantLight</text>
+  <filter id="lightMe2">
+    <feDiffuseLighting in="SourceGraphic" result="light"
+        lighting-color="white">
+      <feDistantLight azimuth="240" elevation="20"/>
+    </feDiffuseLighting>
 
-    &lt;feComposite in="SourceGraphic" in2="light"
-                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/&gt;
-  &lt;/filter&gt;
+    <feComposite in="SourceGraphic" in2="light"
+                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>
+  </filter>
 
-  &lt;circle cx="280" cy="80" r="50" fill="green"
-      filter="url(#lightMe2)" /&gt;
+  <circle cx="280" cy="80" r="50" fill="green"
+      filter="url(#lightMe2)" />
 
-  &lt;!-- La source lumineuse est un élément feSpotLight --&gt;
-  &lt;text text-anchor="middle" x="390" y="22"&gt;feSpotLight&lt;/text&gt;
-  &lt;filter id="lightMe3"&gt;
-    &lt;feDiffuseLighting in="SourceGraphic" result="light"
-        lighting-color="white"&gt;
-      &lt;feSpotLight x="360" y="5" z="30" limitingConeAngle="20"
-                   pointsAtX="390" pointsAtY="80" pointsAtZ="0"/&gt;
-    &lt;/feDiffuseLighting&gt;
+  <!-- La source lumineuse est un élément feSpotLight -->
+  <text text-anchor="middle" x="390" y="22">feSpotLight</text>
+  <filter id="lightMe3">
+    <feDiffuseLighting in="SourceGraphic" result="light"
+        lighting-color="white">
+      <feSpotLight x="360" y="5" z="30" limitingConeAngle="20"
+                   pointsAtX="390" pointsAtY="80" pointsAtZ="0"/>
+    </feDiffuseLighting>
 
-    &lt;feComposite in="SourceGraphic" in2="light"
-                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/&gt;
-  &lt;/filter&gt;
+    <feComposite in="SourceGraphic" in2="light"
+                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>
+  </filter>
 
-  &lt;circle cx="390" cy="80" r="50" fill="green"
-      filter="url(#lightMe3)" /&gt;
-&lt;/svg&gt;</pre>
+  <circle cx="390" cy="80" r="50" fill="green"
+      filter="url(#lightMe3)" />
+</svg>
+```
 
-<p>Résultat attendu:</p>
+Résultat attendu:
 
-<p><img alt="Expected rendering for the example" src="/files/4447/feDiffuseLighting.png"></p>
+![Expected rendering for the example](/files/4447/feDiffuseLighting.png)
 
-<p>Rendu en direct:</p>
+Rendu en direct:
 
-<p>{{EmbedLiveSample("Exemple", 470, 170)}}</p>
+{{EmbedLiveSample("Exemple", 470, 170)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Filters 1.0', '#feDiffuseLightingElement', '&lt;feDiffuseLighting&gt;')}}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-   <td>Déprécie l'attribut <code>kernelUnitLength</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'filters.html#feDiffuseLightingElement', '&lt;feDiffuseLighting&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                | Statut                           | Commentaire                            |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------- |
+| {{SpecName('Filters 1.0', '#feDiffuseLightingElement', '&lt;feDiffuseLighting&gt;')}}             | {{Spec2('Filters 1.0')}} | Déprécie l'attribut `kernelUnitLength` |
+| {{SpecName('SVG1.1', 'filters.html#feDiffuseLightingElement', '&lt;feDiffuseLighting&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale                    |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.feDiffuseLighting")}}</p>
+{{Compat("svg.elements.feDiffuseLighting")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{SVGElement("filter")}}</li>
- <li>{{SVGElement("feBlend")}}</li>
- <li>{{SVGElement("feColorMatrix")}}</li>
- <li>{{SVGElement("feComponentTransfer")}}</li>
- <li>{{SVGElement("feComposite")}}</li>
- <li>{{SVGElement("feConvolveMatrix")}}</li>
- <li>{{SVGElement("feDisplacementMap")}}</li>
- <li>{{SVGElement("feDistantLight")}}</li>
- <li>{{SVGElement("feFlood")}}</li>
- <li>{{SVGElement("feGaussianBlur")}}</li>
- <li>{{SVGElement("feImage")}}</li>
- <li>{{SVGElement("feMerge")}}</li>
- <li>{{SVGElement("feMorphology")}}</li>
- <li>{{SVGElement("feOffset")}}</li>
- <li>{{SVGElement("fePointLight")}}</li>
- <li>{{SVGElement("feSpecularLighting")}}</li>
- <li>{{SVGElement("feSpotLight")}}</li>
- <li>{{SVGElement("feTile")}}</li>
- <li>{{SVGElement("feTurbulence")}}</li>
- <li><a href="/fr/docs/Web/SVG/Tutoriel/filtres">Tutoriel SVG: Filtres</a></li>
-</ul>
+- {{SVGElement("filter")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feDistantLight")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feMorphology")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("fePointLight")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feSpotLight")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres)

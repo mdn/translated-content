@@ -7,55 +7,36 @@ tags:
   - SVG Description
 translation_of: Web/SVG/Element/metadata
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément <a href="/fr/docs/Web/SVG">SVG</a> <strong><code>&lt;metadata&gt;</code></strong> permet d'ajouter des metadonnées au contenu SVG. Des metadonnées sont des données structurées qui donnent des informations sur le contenu du document. La balise <code>&lt;metadata&gt;</code> doit contenir des éléments d'un autre {{Glossary("namespace", "namespaces")}} {{Glossary("XML")}} tel que {{Glossary("RDF")}}, <a href="https://fr.wikipedia.org/wiki/FOAF">FOAF</a>, etc.</p>
+L'élément [SVG](/fr/docs/Web/SVG) **`<metadata>`** permet d'ajouter des metadonnées au contenu SVG. Des metadonnées sont des données structurées qui donnent des informations sur le contenu du document. La balise `<metadata>` doit contenir des éléments d'un autre {{Glossary("namespace", "namespaces")}} {{Glossary("XML")}} tel que {{Glossary("RDF")}}, [FOAF](https://fr.wikipedia.org/wiki/FOAF), etc.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_base">Attributs de base</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Événements_globaux">Attributs d'événements globaux</a></li>
-</ul>
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
+- [Attributs d'événements globaux](/fr/docs/Web/SVG/Attribute#Événements_globaux)
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<p><em>Aucun</em></p>
+_Aucun_
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface {{domxref("SVGMetadataElement")}}.</p>
+Cet élément implémente l'interface {{domxref("SVGMetadataElement")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'struct.html#MetadataElement', '&lt;metadata&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td>Autorise les attributs d'événements globaux sur l'élément.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'metadata.html#MetadataElement', '&lt;metadata&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | Statut                   | Commentaire                                                |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------- |
+| {{SpecName('SVG2', 'struct.html#MetadataElement', '&lt;metadata&gt;')}}     | {{Spec2('SVG2')}} | Autorise les attributs d'événements globaux sur l'élément. |
+| {{SpecName('SVG1.1', 'metadata.html#MetadataElement', '&lt;metadata&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale                                        |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.metadata")}}</p>
+{{Compat("svg.elements.metadata")}}

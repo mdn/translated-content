@@ -3,82 +3,90 @@ title: mask
 slug: Web/SVG/Attribute/mask
 translation_of: Web/SVG/Attribute/mask
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'attribut <code>mask</code> est un attribut de présentation principalement utilisé pour appliquer un trou (défini par un élément {{ SVGElement("mask") }}) sur l'élément qui possède cet attribut.</p>
+L'attribut `mask` est un attribut de présentation principalement utilisé pour appliquer un trou (défini par un élément {{ SVGElement("mask") }}) sur l'élément qui possède cet attribut.
 
-<div class="note">
-  <p><strong>Note :</strong> On peut aussi utiliser l'attribut {{cssxref('mask')}} en CSS.</p>
-</div>
+> **Note :** On peut aussi utiliser l'attribut {{cssxref('mask')}} en CSS.
 
-<h2>Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;mask id="monMask" maskContentUnits="objectBoundingBox"&gt;
-    &lt;rect    fill="white" x="0" y="0" width="100%" height="100%" /&gt;
-    &lt;polygon fill="black" points="0.5,0.2 0.68,0.74 0.21,0.41 0.79,0.41 0.32,0.74" /&gt;
-  &lt;/mask&gt;
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <mask id="monMask" maskContentUnits="objectBoundingBox">
+    <rect    fill="white" x="0" y="0" width="100%" height="100%" />
+    <polygon fill="black" points="0.5,0.2 0.68,0.74 0.21,0.41 0.79,0.41 0.32,0.74" />
+  </mask>
 
-  &lt;!-- Fait un trou de la forme d'une étoile sur le cercle rouge,
-  ce qui laisse apparaître le cercle jaune situé dessous. --&gt;
-  &lt;circle cx="50" cy="50" r="20" fill="yellow" /&gt;
-  &lt;circle cx="50" cy="50" r="45" fill="red"
-          mask="url(#monMask)"/&gt;
-&lt;/svg&gt;</pre>
+  <!-- Fait un trou de la forme d'une étoile sur le cercle rouge,
+  ce qui laisse apparaître le cercle jaune situé dessous. -->
+  <circle cx="50" cy="50" r="20" fill="yellow" />
+  <circle cx="50" cy="50" r="45" fill="red"
+          mask="url(#monMask)"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample('exemple', '100%', 150)}}</p>
+{{EmbedLiveSample('exemple', '100%', 150)}}
 
-<p>Depuis SVG2, l'attribut {{cssxref('mask')}} est défini comme une propriété CSS et comme une propriété raccourcie pour beaucoup d'autres propriétés: {{cssxref('mask-image')}}, {{cssxref('mask-mode')}}, {{cssxref('mask-repeat')}}, {{cssxref('mask-position')}}, {{cssxref('mask-clip')}}, {{cssxref('mask-origin')}}, {{cssxref('mask-size')}} et {{cssxref('mask-composite')}}.</p>
+Depuis SVG2, l'attribut {{cssxref('mask')}} est défini comme une propriété CSS et comme une propriété raccourcie pour beaucoup d'autres propriétés: {{cssxref('mask-image')}}, {{cssxref('mask-mode')}}, {{cssxref('mask-repeat')}}, {{cssxref('mask-position')}}, {{cssxref('mask-clip')}}, {{cssxref('mask-origin')}}, {{cssxref('mask-size')}} et {{cssxref('mask-composite')}}.
 
-<p>Étant un attribut de présentation, il peut être appliqué sur n'importe quel élément, mais il a un effet visible surtout sur les éléments suivants: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('ellipse')}}, {{SVGElement('g')}}, {{SVGElement('glyph')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('marker')}}, {{SVGElement('mask')}}, {{SVGElement('path')}}, {{SVGElement('pattern')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('svg')}}, {{SVGElement('symbol')}}, {{SVGElement('text')}} et {{SVGElement('use')}}.</p>
+Étant un attribut de présentation, il peut être appliqué sur n'importe quel élément, mais il a un effet visible surtout sur les éléments suivants: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('ellipse')}}, {{SVGElement('g')}}, {{SVGElement('glyph')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('marker')}}, {{SVGElement('mask')}}, {{SVGElement('path')}}, {{SVGElement('pattern')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('svg')}}, {{SVGElement('symbol')}}, {{SVGElement('text')}} et {{SVGElement('use')}}.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td>Voir la propriété CSS {{cssxref('mask')}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>none</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animable</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>Voir la propriété CSS {{cssxref('mask')}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>none</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animable</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_Compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.attributes.presentation.mask")}}</p>
+{{Compat("svg.attributes.presentation.mask")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#the-mask", 'mask')}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td>
-    <p>Étend cet usage pour les éléments HTML en créant un raccourci pour les nouvelles propriétés <code>mask-*</code> défini dans cette spécification.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'masking.html#MaskProperty', 'mask')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("CSS Masks", "#the-mask", 'mask')}}</td>
+      <td>{{Spec2("CSS Masks")}}</td>
+      <td>
+        <p>
+          Étend cet usage pour les éléments HTML en créant un raccourci pour les
+          nouvelles propriétés <code>mask-*</code> défini dans cette
+          spécification.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('SVG1.1', 'masking.html#MaskProperty', 'mask')}}
+      </td>
+      <td>{{Spec2('SVG1.1')}}</td>
+      <td>Définition initiale</td>
+    </tr>
+  </tbody>
 </table>

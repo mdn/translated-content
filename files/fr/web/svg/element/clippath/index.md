@@ -6,105 +6,88 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/clipPath
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément <a href="/fr/docs/Web/SVG">SVG</a> <strong><code>&lt;clipPath&gt;</code></strong> définit un détourage. Ce détourage peut par la suite être appliqué sur une forme en utilisant la propriété {{SVGAttr("clip-path")}}.</p>
+L'élément [SVG](/fr/docs/Web/SVG) **`<clipPath>`** définit un détourage. Ce détourage peut par la suite être appliqué sur une forme en utilisant la propriété {{SVGAttr("clip-path")}}.
 
-<p>Le détourage limite la zone dans laquelle l'élément sur lequel il est appliqué sera dessiné. Autrement dit, les parties de l'élément en dehors de la forme créée par le détourage ne seront pas affichées.</p>
+Le détourage limite la zone dans laquelle l'élément sur lequel il est appliqué sera dessiné. Autrement dit, les parties de l'élément en dehors de la forme créée par le détourage ne seront pas affichées.
 
-<h2>Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100"&gt;
-  &lt;clipPath id="myClip"&gt;
-    &lt;!-- La forme créée par le détourage est un simple cercle. --&gt;
-    &lt;circle cx="40" cy="35" r="35" /&gt;
-  &lt;/clipPath&gt;
+```html
+<svg viewBox="0 0 100 100">
+  <clipPath id="myClip">
+    <!-- La forme créée par le détourage est un simple cercle. -->
+    <circle cx="40" cy="35" r="35" />
+  </clipPath>
 
-  &lt;!-- Le coeur sans détourage, pour référence --&gt;
-  &lt;path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" /&gt;
+  <!-- Le coeur sans détourage, pour référence -->
+  <path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
 
-  &lt;!--
+  <!--
     Le coeur avec détourage.
     Seule la partie à l'intérieur du cercle est visible.
-  --&gt;
-  &lt;use clip-path="url(#myClip)" xlink:href="#heart" fill="red" /&gt;
-&lt;/svg&gt;</pre>
+  -->
+  <use clip-path="url(#myClip)" xlink:href="#heart" fill="red" />
+</svg>
+```
 
-<pre class="brush: css">/* Animation CSS pour les navigateurs *
+```css
+/* Animation CSS pour les navigateurs *
  * qui implémentent la propriété de géométrie r. */
 
 @keyframes openYourHeart {from {r: 0} to {r: 60px}}
 
 #myClip circle {
   animation: openYourHeart 15s infinite;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('exemple', 100, 100)}}</p>
+{{EmbedLiveSample('exemple', 100, 100)}}
 
-<p>Sur le plan conceptuel, un détourage est un peu comme une zone d'affichage personnalisée pour l'élément sur lequel il est appliqué. Cela va limiter la zone dans laquelle l'élément est affiché, sans affecter sa géométrie (position, taille, etc).</p>
+Sur le plan conceptuel, un détourage est un peu comme une zone d'affichage personnalisée pour l'élément sur lequel il est appliqué. Cela va limiter la zone dans laquelle l'élément est affiché, sans affecter sa géométrie (position, taille, etc).
 
-<p>La zone de sélection d'un élément détouré (c'est à dire un élément qui référence un <code>&lt;clipPath&gt;</code> via la propriété {{SVGAttr("clip-path")}}, ou un de ses enfant) reste la même, comme s'il n'était pas tronqué.</p>
+La zone de sélection d'un élément détouré (c'est à dire un élément qui référence un `<clipPath>` via la propriété {{SVGAttr("clip-path")}}, ou un de ses enfant) reste la même, comme s'il n'était pas tronqué.
 
-<p>Par défaut, les événements de pointeur ne sont pas déclenchés sur les régions détourées (non visibles) d'une forme. Par exemple, un cercle avec un rayon de 10 qui est détouré à un cercle de rayon 5, ne recevra pas d'événement "click" en dehors de ce rayon de 5. Ce comportement peut être modifié avec la propriété {{cssxref("pointer-events")}}.</p>
+Par défaut, les événements de pointeur ne sont pas déclenchés sur les régions détourées (non visibles) d'une forme. Par exemple, un cercle avec un rayon de 10 qui est détouré à un cercle de rayon 5, ne recevra pas d'événement "click" en dehors de ce rayon de 5. Ce comportement peut être modifié avec la propriété {{cssxref("pointer-events")}}.
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<dl>
- <dt>{{SVGAttr("clipPathUnits")}}</dt>
- <dd>Cet attribut définit le système de coordonnées pour le contenu de l'élément <code>&lt;clipPath&gt;</code>.<br>
- <small><em>Valeur</em>: <code>userSpaceOnUse</code>|<code>objectBoundingBox</code> ; <em>Valeur par défaut</em>: <code>userSpaceOnUse</code>; <em>Animation</em>: <strong>oui</strong></small></dd>
-</dl>
+- {{SVGAttr("clipPathUnits")}}
+  - : Cet attribut définit le système de coordonnées pour le contenu de l'élément `<clipPath>`.
+    _Valeur_: `userSpaceOnUse`|`objectBoundingBox` ; _Valeur par défaut_: `userSpaceOnUse`; _Animation_: **oui**
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<dl>
- <dt><a href="/fr/docs/Web/SVG/Attribute/Core">Attributs de base</a></dt>
- <dd><small>Notamment: {{SVGAttr('id')}}</small></dd>
- <dt><a href="/fr/docs/Web/SVG/Attribute/Styling">Attributs de style</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/fr/docs/Web/SVG/Attribute/Conditional_Processing">Attributs de traitement conditionnel</a></dt>
- <dd><small>Notamment: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt><a href="/fr/docs/Web/SVG/Attribute/Presentation">Attributs de présentation</a></dt>
- <dd><small>Notamment: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
-</dl>
+- [Attributs de base](/fr/docs/Web/SVG/Attribute/Core)
+  - : Notamment: {{SVGAttr('id')}}
+- [Attributs de style](/fr/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute/Conditional_Processing)
+  - : Notamment: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute/Presentation)
+  - : Notamment: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 
-<h2 id="Notes_d'usage">Notes d'usage</h2>
+## Notes d'usage
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#ClipPathElement", "&lt;clipPath&gt;")}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "masking.html#EstablishingANewClippingPath", "&lt;clipPath&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | Statut                       | Commentaire         |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName("CSS Masks", "#ClipPathElement", "&lt;clipPath&gt;")}}                             | {{Spec2("CSS Masks")}} |                     |
+| {{SpecName("SVG1.1", "masking.html#EstablishingANewClippingPath", "&lt;clipPath&gt;")}} | {{Spec2("SVG1.1")}}     | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.clipPath")}}</p>
+{{Compat("svg.elements.clipPath")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Élément de masquage: {{SVGElement("mask")}}</li>
- <li>Quelques propriétés CSS: {{cssxref("clip-path")}}, {{cssxref("pointer-events")}}</li>
-</ul>
+- Élément de masquage: {{SVGElement("mask")}}
+- Quelques propriétés CSS: {{cssxref("clip-path")}}, {{cssxref("pointer-events")}}

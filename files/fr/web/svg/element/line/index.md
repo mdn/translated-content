@@ -10,62 +10,60 @@ tags:
   - Élément(2)
 translation_of: Web/SVG/Element/line
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément <code>line</code> est un élément de la catégorie des formes simples SVG, utilisé pour créer une ligne connectant deux points.</p>
+L'élément `line` est un élément de la catégorie des formes simples SVG, utilisé pour créer une ligne connectant deux points.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2>Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;line x1="0" y1="80" x2="100" y2="20" stroke="black" /&gt;
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <line x1="0" y1="80" x2="100" y2="20" stroke="black" />
 
-  &lt;!-- Si on n'indique pas stroke, la ligne de couleur
-       ne sera pas visible --&gt;
-&lt;/svg&gt;</pre>
+  <!-- Si on n'indique pas stroke, la ligne de couleur
+       ne sera pas visible -->
+</svg>
+```
 
-<p>{{EmbedLiveSample('exemple', 100, 100)}}</p>
+{{EmbedLiveSample('exemple', 100, 100)}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel" title="en/SVG/Attribute#ConditionalProccessing">Attributs conditionnels</a> ;</li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_base" title="en/SVG/Attribute#Core">Attributs centraux</a> ;</li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_d'.C3.A9v.C3.A9nement_graphique" title="en/SVG/Attribute#GraphicalEvent">Attributs d'événements graphiques</a> ;</li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_pr.C3.A9sentation" title="en/SVG/Attribute#Presentation">Attributs de présentation </a> ;</li>
- <li>{{ SVGAttr("class") }} ;</li>
- <li>{{ SVGAttr("style") }} ;</li>
- <li>{{ SVGAttr("externalResourcesRequired") }} ;</li>
- <li>{{ SVGAttr("transform") }}.</li>
-</ul>
+- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel "en/SVG/Attribute#ConditionalProccessing") ;
+- [Attributs centraux](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core") ;
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Attributs_d'.C3.A9v.C3.A9nement_graphique "en/SVG/Attribute#GraphicalEvent") ;
+- [Attributs de présentation ](/fr/docs/Web/SVG/Attribute#Attributs_de_pr.C3.A9sentation "en/SVG/Attribute#Presentation") ;
+- {{ SVGAttr("class") }} ;
+- {{ SVGAttr("style") }} ;
+- {{ SVGAttr("externalResourcesRequired") }} ;
+- {{ SVGAttr("transform") }}.
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<ul>
- <li>{{ SVGAttr("x1") }}</li>
- <li>{{ SVGAttr("x2") }}</li>
- <li>{{ SVGAttr("y1") }}</li>
- <li>{{ SVGAttr("y2") }}</li>
-</ul>
+- {{ SVGAttr("x1") }}
+- {{ SVGAttr("x2") }}
+- {{ SVGAttr("y1") }}
+- {{ SVGAttr("y2") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface <code><a href="/fr/DOM/SVGLineElement" title="en/DOM/SVGLineElement">SVGLineElement</a></code>.</p>
+Cet élément implémente l'interface [`SVGLineElement`](/fr/DOM/SVGLineElement "en/DOM/SVGLineElement").
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.line")}}</p>
+{{Compat("svg.elements.line")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{ SVGElement("polygon") }} ;</li>
- <li>{{ SVGElement("path") }}.</li>
-</ul>
+- {{ SVGElement("polygon") }} ;
+- {{ SVGElement("path") }}.

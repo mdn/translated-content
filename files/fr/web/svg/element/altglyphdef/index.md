@@ -7,36 +7,32 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/altGlyphDef
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p>L'élément <code>altGlyphDef</code> défini une représentation de substitution pour les glyphes.</p>
+L'élément `altGlyphDef` défini une représentation de substitution pour les glyphes.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#Core">Attributs fondamentaux</a> »</li>
-</ul>
+- [Attributs fondamentaux](/fr/docs/Web/SVG/Attribute#Core) »
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<p><em>Aucun</em></p>
+_Aucun_
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface <code><a href="/fr/docs/Web/API/SVGAltGlyphDefElement" title="en/DOM/SVGAltGlyphElement">SVGAltGlyphDefElement</a></code>.</p>
+Cet élément implémente l'interface [`SVGAltGlyphDefElement`](/fr/docs/Web/API/SVGAltGlyphDefElement "en/DOM/SVGAltGlyphElement").
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>{{ SVGElement("glyph") }}</li>
- <li>{{ SVGElement("glyphRef") }}</li>
- <li>{{ SVGElement("altGlyphDef") }}</li>
-</ul>
+- {{ SVGElement("glyph") }}
+- {{ SVGElement("glyphRef") }}
+- {{ SVGElement("altGlyphDef") }}

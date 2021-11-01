@@ -3,104 +3,87 @@ title: <svg>
 slug: Web/SVG/Element/svg
 translation_of: Web/SVG/Element/svg
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément <code>svg</code> peut être utilisé pour intégrer des fragments de code SVG à l'intérieur d'un document (par exemple, un document HTML). Ce fragment de code SVG dispose de ses propres <a href="/fr/docs/">viewport</a> et système de coordonnée.</p>
+L'élément `svg` peut être utilisé pour intégrer des fragments de code SVG à l'intérieur d'un document (par exemple, un document HTML). Ce fragment de code SVG dispose de ses propres [viewport](/fr/docs/) et système de coordonnée.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Prenons le fichier SVG suivant (représentant le drapeau nationnal de l'Italie) :</p>
+Prenons le fichier SVG suivant (représentant le drapeau nationnal de l'Italie) :
 
-<pre class="brush: xml">&lt;svg xmlns="http://www.w3.org/2000/svg"
-     width="150" height="100" viewBox="0 0 3 2"&gt;
+```xml
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="150" height="100" viewBox="0 0 3 2">
 
-  &lt;rect width="1" height="2" x="0" fill="#008d46" /&gt;
-  &lt;rect width="1" height="2" x="1" fill="#ffffff" /&gt;
-  &lt;rect width="1" height="2" x="2" fill="#d2232c" /&gt;
-&lt;/svg&gt;</pre>
+  <rect width="1" height="2" x="0" fill="#008d46" />
+  <rect width="1" height="2" x="1" fill="#ffffff" />
+  <rect width="1" height="2" x="2" fill="#d2232c" />
+</svg>
+```
 
-<p>Ce fichier peut être inclus dans un document HTML5 de cette façon :</p>
+Ce fichier peut être inclus dans un document HTML5 de cette façon :
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-8" /&gt;
-  &lt;title&gt;Exemple mêlant HTML &amp; SVG&lt;/title&gt;
-&lt;/head&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Exemple mêlant HTML & SVG</title>
+</head>
 
-&lt;body&gt;
+<body>
 
-  &lt;svg width="150" height="100" viewBox="0 0 3 2"&gt;
-    &lt;rect width="1" height="2" x="0" fill="#008d46" /&gt;
-    &lt;rect width="1" height="2" x="1" fill="#ffffff" /&gt;
-    &lt;rect width="1" height="2" x="2" fill="#d2232c" /&gt;
-  &lt;/svg&gt;
+  <svg width="150" height="100" viewBox="0 0 3 2">
+    <rect width="1" height="2" x="0" fill="#008d46" />
+    <rect width="1" height="2" x="1" fill="#ffffff" />
+    <rect width="1" height="2" x="2" fill="#d2232c" />
+  </svg>
 
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</body>
+</html>
+```
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#ConditionalProccessing">Conditional processing attributes</a> »</li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Core">Core attributes</a> »</li>
- <li><a href="/fr/docs/Web/SVG/Attribute#DocumentEvent">Document event attributes</a> »</li>
- <li><a href="/fr/docs/Web/SVG/Attribute#GraphicalEvent">Graphical event attributes</a> »</li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Presentation">Presentation attributes</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
-</ul>
+- [Conditional processing attributes](/fr/docs/Web/SVG/Attribute#ConditionalProccessing) »
+- [Core attributes](/fr/docs/Web/SVG/Attribute#Core) »
+- [Document event attributes](/fr/docs/Web/SVG/Attribute#DocumentEvent) »
+- [Graphical event attributes](/fr/docs/Web/SVG/Attribute#GraphicalEvent) »
+- [Presentation attributes](/fr/docs/Web/SVG/Attribute#Presentation) »
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<ul>
- <li>{{SVGAttr("version")}}</li>
- <li>{{SVGAttr("baseProfile")}}</li>
- <li>{{SVGAttr("x")}}</li>
- <li>{{SVGAttr("y")}}</li>
- <li>{{SVGAttr("width")}}</li>
- <li>{{SVGAttr("height")}}</li>
- <li>{{SVGAttr("preserveAspectRatio")}}</li>
- <li>{{SVGAttr("contentScriptType")}}</li>
- <li>{{SVGAttr("contentStyleType")}}</li>
- <li>{{SVGAttr("viewBox")}}</li>
-</ul>
+- {{SVGAttr("version")}}
+- {{SVGAttr("baseProfile")}}
+- {{SVGAttr("x")}}
+- {{SVGAttr("y")}}
+- {{SVGAttr("width")}}
+- {{SVGAttr("height")}}
+- {{SVGAttr("preserveAspectRatio")}}
+- {{SVGAttr("contentScriptType")}}
+- {{SVGAttr("contentStyleType")}}
+- {{SVGAttr("viewBox")}}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cette élément implémente l'interface <code><a href="/fr/docs/Web/API/SVGSVGElement">SVGSVGElement</a></code>.</p>
+Cette élément implémente l'interface [`SVGSVGElement`](/fr/docs/Web/API/SVGSVGElement).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'struct.html#NewDocument', '&lt;svg&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'struct.html#NewDocument', '&lt;svg&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Status                   | Commentaires        |
+| ------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
+| {{SpecName('SVG2', 'struct.html#NewDocument', '&lt;svg&gt;')}} | {{Spec2('SVG2')}} |                     |
+| {{SpecName('SVG1.1', 'struct.html#NewDocument', '&lt;svg&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.svg")}}</p>
+{{Compat("svg.elements.svg")}}

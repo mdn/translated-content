@@ -5,65 +5,60 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/path
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément <code>path</code> est l'élément générique pour définir une forme. Toutes les formes basiques peuvent aussi être faites à partir de <code>path</code>.</p>
+L'élément `path` est l'élément générique pour définir une forme. Toutes les formes basiques peuvent aussi être faites à partir de `path`.
 
-<h2 id="Usage">Usage</h2>
+## Usage
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: xml">&lt;?xml version="1.0" standalone="no"?&gt;
-&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
-&lt;svg width="100%" height="100%" viewBox="0 0 400 400"
-     xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
+```xml
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 400 400"
+     xmlns="http://www.w3.org/2000/svg" version="1.1">
 
-  &lt;path d="M 100 100 L 300 100 L 200 300 z"
-        fill="red" stroke-width="3" /&gt;
-&lt;/svg&gt;
-</pre>
+  <path d="M 100 100 L 300 100 L 200 300 z"
+        fill="red" stroke-width="3" />
+</svg>
+```
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_Globaux">Attributs Globaux</h3>
+### Attributs Globaux
 
-<ul>
- <li><a href="/fr/SVG/Attribute#ConditionalProccessing" title="fr/SVG/Attribute#ConditionalProccessing">Attributs conditionnels</a> »</li>
- <li><a href="/fr/SVG/Attribute#Core" title="fr/SVG/Attribute#Core">Attributs centraux</a> »</li>
- <li><a href="/fr/SVG/Attribute#GraphicalEvent" title="fr/SVG/Attribute#GraphicalEvent">Attributs d'événements graphiques</a> »</li>
- <li><a href="/fr/SVG/Attribute#Presentation" title="fr/SVG/Attribute#Presentation">Attributs de présentation</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [Attributs conditionnels](/fr/SVG/Attribute#ConditionalProccessing "fr/SVG/Attribute#ConditionalProccessing") »
+- [Attributs centraux](/fr/SVG/Attribute#Core "fr/SVG/Attribute#Core") »
+- [Attributs d'événements graphiques](/fr/SVG/Attribute#GraphicalEvent "fr/SVG/Attribute#GraphicalEvent") »
+- [Attributs de présentation](/fr/SVG/Attribute#Presentation "fr/SVG/Attribute#Presentation") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<ul>
- <li>{{ SVGAttr("d") }}</li>
- <li>{{ SVGAttr("pathLength") }}</li>
-</ul>
+- {{ SVGAttr("d") }}
+- {{ SVGAttr("pathLength") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface <code><a href="/fr/DOM/SVGPathElement" title="en/DOM/SVGPathElement">SVGPathElement</a></code>.</p>
+Cet élément implémente l'interface [`SVGPathElement`](/fr/DOM/SVGPathElement "en/DOM/SVGPathElement").
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.path")}}</p>
+{{Compat("svg.elements.path")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>{{ SVGElement("circle") }}</li>
- <li>{{ SVGElement("ellipse") }}</li>
- <li>{{ SVGElement("line") }}</li>
- <li>{{ SVGElement("polygon") }}</li>
- <li>{{ SVGElement("polyline") }}</li>
- <li>{{ SVGElement("rect") }}</li>
- <li><a href="/fr/SVG/Tutorial/Paths" title="en/SVG/Tutorial/Paths">The MDN SVG "Getting Started" tutorial : Path</a></li>
-</ul>
+- {{ SVGElement("circle") }}
+- {{ SVGElement("ellipse") }}
+- {{ SVGElement("line") }}
+- {{ SVGElement("polygon") }}
+- {{ SVGElement("polyline") }}
+- {{ SVGElement("rect") }}
+- [The MDN SVG "Getting Started" tutorial : Path](/fr/SVG/Tutorial/Paths "en/SVG/Tutorial/Paths")

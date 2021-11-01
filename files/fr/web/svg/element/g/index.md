@@ -8,76 +8,60 @@ tags:
   - SVG Conteneur
 translation_of: Web/SVG/Element/g
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément <code>g</code> est un conteneur utilisé pour grouper des objets.</p>
+L'élément `g` est un conteneur utilisé pour grouper des objets.
 
-<p>Les transformations appliquées à l'élément <code>g</code> sont reportées à tous ses éléments enfants. Les attributs appliqués sont également reportés aux éléments enfants. De plus, il peut être utilisé pour définir des objets complexes qui seront référencés ultérieurement avec l'élément {{SVGElement("use")}}.</p>
+Les transformations appliquées à l'élément `g` sont reportées à tous ses éléments enfants. Les attributs appliqués sont également reportés aux éléments enfants. De plus, il peut être utilisé pour définir des objets complexes qui seront référencés ultérieurement avec l'élément {{SVGElement("use")}}.
 
-<h2>Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Les enfants de g héritent de ses attributs de présentation -->
+  <g fill="white" stroke="green" stroke-width="5">
+    <circle cx="40" cy="40" r="25" />
+    <circle cx="60" cy="60" r="25" />
+  </g>
+</svg>
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Les enfants de g héritent de ses attributs de présentation --&gt;
-  &lt;g fill="white" stroke="green" stroke-width="5"&gt;
-    &lt;circle cx="40" cy="40" r="25" /&gt;
-    &lt;circle cx="60" cy="60" r="25" /&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;</pre>
+{{EmbedLiveSample('exemple', 100, '100%')}}
 
-<p>{{EmbedLiveSample('exemple', 100, '100%')}}</p>
+## Attributs
 
-<h2 id="Attributs">Attributs</h2>
+Cet élément n'a que des attributs globaux
 
-<p>Cet élément n'a que des attributs globaux</p>
+### Attributs globaux
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+- [Attributs de base](/fr/docs/Web/SVG/Attribute/Core)
+  - : Notamment: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+- [Attributs de style](/fr/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute/Conditional_Processing)
+  - : Notamment: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- Attributs d'événement
+  - : [Attributs d'événement globaux](/fr/docs/Web/SVG/Attribute/Events#Attributs_d'événement_globaux), [Attributs d'événement graphiques](/fr/docs/Web/SVG/Attribute/Events#Attributs_d'événement_graphiques)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute/Presentation)
+  - : Notamment: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+- Attributs Aria
+  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
 
-<dl>
- <dt><a href="/fr/docs/Web/SVG/Attribute/Core">Attributs de base</a></dt>
- <dd><small>Notamment: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="/fr/docs/Web/SVG/Attribute/Styling">Attributs de style</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/fr/docs/Web/SVG/Attribute/Conditional_Processing">Attributs de traitement conditionnel</a></dt>
- <dd><small>Notamment: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt>Attributs d'événement</dt>
- <dd><small><a href="/fr/docs/Web/SVG/Attribute/Events#Attributs_d'événement_globaux">Attributs d'événement globaux</a>, <a href="/fr/docs/Web/SVG/Attribute/Events#Attributs_d'événement_graphiques">Attributs d'événement graphiques</a></small></dd>
- <dt><a href="/fr/docs/Web/SVG/Attribute/Presentation">Attributs de présentation</a></dt>
- <dd><small>Notamment: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>Attributs Aria</dt>
- <dd><small><code>aria-activedescendant</code>, <code>aria-atomic</code>, <code>aria-autocomplete</code>, <code>aria-busy</code>, <code>aria-checked</code>, <code>aria-colcount</code>, <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-controls</code>, <code>aria-current</code>, <code>aria-describedby</code>, <code>aria-details</code>, <code>aria-disabled</code>, <code>aria-dropeffect</code>, <code>aria-errormessage</code>, <code>aria-expanded</code>, <code>aria-flowto</code>, <code>aria-grabbed</code>, <code>aria-haspopup</code>, <code>aria-hidden</code>, <code>aria-invalid</code>, <code>aria-keyshortcuts</code>, <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-level</code>, <code>aria-live</code>, <code>aria-modal</code>, <code>aria-multiline</code>, <code>aria-multiselectable</code>, <code>aria-orientation</code>, <code>aria-owns</code>, <code>aria-placeholder</code>, <code>aria-posinset</code>, <code>aria-pressed</code>, <code>aria-readonly</code>, <code>aria-relevant</code>, <code>aria-required</code>, <code>aria-roledescription</code>, <code>aria-rowcount</code>, <code>aria-rowindex</code>, <code>aria-rowspan</code>, <code>aria-selected</code>, <code>aria-setsize</code>, <code>aria-sort</code>, <code>aria-valuemax</code>, <code>aria-valuemin</code>, <code>aria-valuenow</code>, <code>aria-valuetext</code>, <code>role</code></small></dd>
-</dl>
+## Contexte d'utilisation
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+{{svginfo}}
 
-<p>{{svginfo}}</p>
+## Spécifications
 
-<h2 id="Spécifications">Spécifications</h2>
+| Spécification                                                                | Statut                   | Commentaire        |
+| ---------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName("SVG2", "struct.html#GElement", "&lt;g&gt;")}} | {{Spec2("SVG2")}} |                    |
+| {{SpecName("SVG1.1", "struct.html#Groups", "&lt;g&gt;")}} | {{Spec2("SVG1.1")}} | Initial definition |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "struct.html#GElement", "&lt;g&gt;")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "struct.html#Groups", "&lt;g&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilité des navigateurs
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p>{{Compat("svg.elements.g")}}</p>
+{{Compat("svg.elements.g")}}

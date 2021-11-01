@@ -6,182 +6,175 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/stroke-linecap
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'attribut <strong><code>stroke-linecap</code></strong> définit la forme de la fin des lignes SVG.</p>
+L'attribut **`stroke-linecap`** définit la forme de la fin des lignes SVG.
 
-<div class="note">
-  <p><strong>Note :</strong> <code>stroke-linecap</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
-</div>
+> **Note :** `stroke-linecap` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
-<p>Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polyline')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}</p>
+Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polyline')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
 
-<h2>Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
 
-  &lt;!-- Effet de la valeur "butt" (valeur par défaut) --&gt;
-  &lt;line x1="1" y1="1" x2="5" y2="1" stroke="black"
-        stroke-linecap="butt" /&gt;
+  <!-- Effet de la valeur "butt" (valeur par défaut) -->
+  <line x1="1" y1="1" x2="5" y2="1" stroke="black"
+        stroke-linecap="butt" />
 
-  &lt;!-- Effet de la valeur "round" --&gt;
-  &lt;line x1="1" y1="3" x2="5" y2="3" stroke="black"
-        stroke-linecap="round" /&gt;
+  <!-- Effet de la valeur "round" -->
+  <line x1="1" y1="3" x2="5" y2="3" stroke="black"
+        stroke-linecap="round" />
 
-  &lt;!-- Effet de la valeur "square" --&gt;
-  &lt;line x1="1" y1="5" x2="5" y2="5" stroke="black"
-        stroke-linecap="square" /&gt;
+  <!-- Effet de la valeur "square" -->
+  <line x1="1" y1="5" x2="5" y2="5" stroke="black"
+        stroke-linecap="square" />
 
-  &lt;!--
+  <!--
   Les lignes roses indiquent la position
   du chemin pour chaque trait
-  --&gt;
-  &lt;path d="M1,1 h4 M1,3 h4 M1,5 h4" stroke="pink" stroke-width="0.025" /&gt;
-&lt;/svg&gt;
-</pre>
+  -->
+  <path d="M1,1 h4 M1,3 h4 M1,5 h4" stroke="pink" stroke-width="0.025" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('exemple', '100%', 200)}}</p>
+{{EmbedLiveSample('exemple', '100%', 200)}}
 
-<h2 id="Notes_d'usage">Notes d'usage</h2>
+## Notes d'usage
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><code>butt</code> | <code>round</code> | <code>square</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>butt</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td><code>butt</code> | <code>round</code> | <code>square</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>butt</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="butt">butt</h3>
+### butt
 
-<p>La valeur <code>butt</code> indique que le trait de chaque chemin ne s'étend pas au-delà de ses extremités. Un chemin de longueur zéro ne s'affichera pas du tout.</p>
+La valeur `butt` indique que le trait de chaque chemin ne s'étend pas au-delà de ses extremités. Un chemin de longueur zéro ne s'affichera pas du tout.
 
-<h4 id="Exemple">Exemple</h4>
+#### Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
 
-  &lt;!-- Effet de la valeur "butt" --&gt;
-  &lt;path d="M1,1 h4" stroke="black"
-        stroke-linecap="butt" /&gt;
+  <!-- Effet de la valeur "butt" -->
+  <path d="M1,1 h4" stroke="black"
+        stroke-linecap="butt" />
 
-  &lt;!-- Effet de la valeur "butt" sur un chemin de longueur zéro --&gt;
-  &lt;path d="M3,3 h0" stroke="black"
-        stroke-linecap="butt" /&gt;
+  <!-- Effet de la valeur "butt" sur un chemin de longueur zéro -->
+  <path d="M3,3 h0" stroke="black"
+        stroke-linecap="butt" />
 
 
-  &lt;!--
+  <!--
   Lignes roses pour indiquer la position
   du chemin pour chaque trait
-  --&gt;
-  &lt;path d="M1,1 h4" stroke="pink" stroke-width="0.025" /&gt;
-  &lt;circle cx="1" cy="1" r="0.05" fill="pink" /&gt;
-  &lt;circle cx="5" cy="1" r="0.05" fill="pink" /&gt;
-  &lt;circle cx="3" cy="3" r="0.05" fill="pink" /&gt;
-&lt;/svg&gt;
-</pre>
+  -->
+  <path d="M1,1 h4" stroke="pink" stroke-width="0.025" />
+  <circle cx="1" cy="1" r="0.05" fill="pink" />
+  <circle cx="5" cy="1" r="0.05" fill="pink" />
+  <circle cx="3" cy="3" r="0.05" fill="pink" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('butt', '100%', 200)}}</p>
+{{EmbedLiveSample('butt', '100%', 200)}}
 
-<h3 id="round">round</h3>
+### round
 
-<p>La valeur <code>round</code> indique que la fin de chaque trait sera prolongé d'un demi-cerlce de diamètre égal à la la largeur du trait. Pour un chemin de longueur zéro, un cercle complet est affiché.</p>
+La valeur `round` indique que la fin de chaque trait sera prolongé d'un demi-cerlce de diamètre égal à la la largeur du trait. Pour un chemin de longueur zéro, un cercle complet est affiché.
 
-<h4 id="Exemple_2">Exemple</h4>
+#### Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
 
-  &lt;!-- Effet de la valeur "round" --&gt;
-  &lt;path d="M1,1 h4" stroke="black"
-        stroke-linecap="round" /&gt;
+  <!-- Effet de la valeur "round" -->
+  <path d="M1,1 h4" stroke="black"
+        stroke-linecap="round" />
 
-  &lt;!-- Effet de la valeur "round" sur un chemin de longueur zéro --&gt;
-  &lt;path d="M3,3 h0" stroke="black"
-        stroke-linecap="round" /&gt;
+  <!-- Effet de la valeur "round" sur un chemin de longueur zéro -->
+  <path d="M3,3 h0" stroke="black"
+        stroke-linecap="round" />
 
 
-  &lt;!--
+  <!--
   Lignes roses pour indiquer la position
   du chemin pour chaque trait
-  --&gt;
-  &lt;path d="M1,1 h4" stroke="pink" stroke-width="0.025" /&gt;
-  &lt;circle cx="1" cy="1" r="0.05" fill="pink" /&gt;
-  &lt;circle cx="5" cy="1" r="0.05" fill="pink" /&gt;
-  &lt;circle cx="3" cy="3" r="0.05" fill="pink" /&gt;
-&lt;/svg&gt;
-</pre>
+  -->
+  <path d="M1,1 h4" stroke="pink" stroke-width="0.025" />
+  <circle cx="1" cy="1" r="0.05" fill="pink" />
+  <circle cx="5" cy="1" r="0.05" fill="pink" />
+  <circle cx="3" cy="3" r="0.05" fill="pink" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('round', '100%', 200)}}</p>
+{{EmbedLiveSample('round', '100%', 200)}}
 
-<h3 id="square">square</h3>
+### square
 
-<p>La valeur <code>square</code> indique que la fin de chaque trait sera prolongé par un rectangle d'une taille égale à la moitié de l'épaisseur du contour. Pour un chemin de longueur zéro, seul un rectangle est affiché, de la longueur de l'épaisseur du contour, et centré autour de la position du chemin.</p>
+La valeur `square` indique que la fin de chaque trait sera prolongé par un rectangle d'une taille égale à la moitié de l'épaisseur du contour. Pour un chemin de longueur zéro, seul un rectangle est affiché, de la longueur de l'épaisseur du contour, et centré autour de la position du chemin.
 
-<h4 id="Exemple_3">Exemple</h4>
+#### Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
 
-  &lt;!-- Effet de la valeur "square" --&gt;
-  &lt;path d="M1,1 h4" stroke="black"
-        stroke-linecap="square" /&gt;
+  <!-- Effet de la valeur "square" -->
+  <path d="M1,1 h4" stroke="black"
+        stroke-linecap="square" />
 
-  &lt;!-- Effet de la valeur "square" sur un chemin de longueur zéro --&gt;
-  &lt;path d="M3,3 h0" stroke="black"
-        stroke-linecap="square" /&gt;
+  <!-- Effet de la valeur "square" sur un chemin de longueur zéro -->
+  <path d="M3,3 h0" stroke="black"
+        stroke-linecap="square" />
 
-  &lt;!--
+  <!--
   Les lignes roses indiquent la position
   du chemin pour chaque trait
-  --&gt;
-  &lt;path d="M1,1 h4" stroke="pink" stroke-width="0.025" /&gt;
-  &lt;circle cx="1" cy="1" r="0.05" fill="pink" /&gt;
-  &lt;circle cx="5" cy="1" r="0.05" fill="pink" /&gt;
-  &lt;circle cx="3" cy="3" r="0.05" fill="pink" /&gt;
-&lt;/svg&gt;
-</pre>
+  -->
+  <path d="M1,1 h4" stroke="pink" stroke-width="0.025" />
+  <circle cx="1" cy="1" r="0.05" fill="pink" />
+  <circle cx="5" cy="1" r="0.05" fill="pink" />
+  <circle cx="3" cy="3" r="0.05" fill="pink" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('square', '100%', 200)}}</p>
+{{EmbedLiveSample('square', '100%', 200)}}
 
-<h2 id="Browser_Compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.attributes.presentation.stroke-linecap")}}</p>
+{{Compat("svg.attributes.presentation.stroke-linecap")}}
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "painting.html#StrokeLinecapProperty", "stroke-linecap")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Définition pour les formes et le texte</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "painting.html#StrokeLinecapProperty", "stroke-linecap")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale pour les formes et le texte</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | Statut                   | Commentaire                                     |
+| -------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------- |
+| {{SpecName("SVG2", "painting.html#StrokeLinecapProperty", "stroke-linecap")}} | {{Spec2("SVG2")}} | Définition pour les formes et le texte          |
+| {{SpecName("SVG1.1", "painting.html#StrokeLinecapProperty", "stroke-linecap")}} | {{Spec2("SVG1.1")}} | Définition initiale pour les formes et le texte |

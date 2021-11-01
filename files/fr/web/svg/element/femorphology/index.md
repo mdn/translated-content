@@ -7,60 +7,58 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feMorphology
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>La primitive de filtre <a href="/fr/docs/Web/SVG">SVG</a> <strong><code>&lt;feMorphology&gt;</code></strong> est utilisée pour éroder ou dilater l'image en entrée. Cela permet d'appliquer des effets de mise en gras ou d'amincissement.</p>
+La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feMorphology>`** est utilisée pour éroder ou dilater l'image en entrée. Cela permet d'appliquer des effets de mise en gras ou d'amincissement.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_base">Attributs de base</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_présentation">Attributs de présentation</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_primitives_de_filtre">Attributs de primitive de filtre</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
-</ul>
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation)
+- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#Attributs_de_primitives_de_filtre)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<ul>
- <li>{{SVGAttr("in")}}</li>
- <li>{{SVGAttr("operator")}}</li>
- <li>{{SVGAttr("radius")}}</li>
-</ul>
+- {{SVGAttr("in")}}
+- {{SVGAttr("operator")}}
+- {{SVGAttr("radius")}}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface {{domxref("SVGFEMorphologyElement")}}.</p>
+Cet élément implémente l'interface {{domxref("SVGFEMorphologyElement")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Sur_du_contenu_SVG">Sur du contenu SVG</h3>
+### Sur du contenu SVG
 
-<h4 id="SVG">SVG</h4>
+#### SVG
 
-<pre class="brush: html; highlight[3,6]">&lt;svg xmlns="http://www.w3.org/2000/svg" width="300" height="180"&gt;
-  &lt;filter id="erode"&gt;
-    &lt;feMorphology operator="erode" radius="1"/&gt;
-  &lt;/filter&gt;
-  &lt;filter id="dilate"&gt;
-    &lt;feMorphology operator="dilate" radius="2"/&gt;
-  &lt;/filter&gt;
-  &lt;text y="1em"&gt;Texte normal&lt;/text&gt;
-  &lt;text id="thin" y="2em"&gt;Texte mince&lt;/text&gt;
-  &lt;text id="thick" y="3em"&gt;Text gras&lt;/text&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="180">
+  <filter id="erode">
+    <feMorphology operator="erode" radius="1"/>
+  </filter>
+  <filter id="dilate">
+    <feMorphology operator="dilate" radius="2"/>
+  </filter>
+  <text y="1em">Texte normal</text>
+  <text id="thin" y="2em">Texte mince</text>
+  <text id="thick" y="3em">Text gras</text>
+</svg>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[7,11]">text {
+```css
+text {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3em;
 }
@@ -71,30 +69,34 @@ translation_of: Web/SVG/Element/feMorphology
 
 #thick {
   filter: url(#dilate);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Sur_du_contenu_SVG", 340, 180)}}</p>
+{{EmbedLiveSample("Sur_du_contenu_SVG", 340, 180)}}
 
-<h3 id="Sur_du_contenu_HTML">Sur du contenu HTML</h3>
+### Sur du contenu HTML
 
-<h4 id="SVG_2">SVG</h4>
+#### SVG
 
-<pre class="brush: html; highlight[3,6]">&lt;svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"&gt;
-  &lt;filter id="erode"&gt;
-    &lt;feMorphology operator="erode" radius="1"/&gt;
-  &lt;/filter&gt;
-  &lt;filter id="dilate"&gt;
-    &lt;feMorphology operator="dilate" radius="2"/&gt;
-  &lt;/filter&gt;
-&lt;/svg&gt;
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+  <filter id="erode">
+    <feMorphology operator="erode" radius="1"/>
+  </filter>
+  <filter id="dilate">
+    <feMorphology operator="dilate" radius="2"/>
+  </filter>
+</svg>
 
-&lt;p&gt;Texte normal&lt;/p&gt;
-&lt;p id="thin"&gt;Texte mince&lt;/p&gt;
-&lt;p id="thick"&gt;Text gras&lt;/p&gt;</pre>
+<p>Texte normal</p>
+<p id="thin">Texte mince</p>
+<p id="thick">Text gras</p>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[8,12]">p {
+```css
+p {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3em;
@@ -106,58 +108,40 @@ translation_of: Web/SVG/Element/feMorphology
 
 #thick {
   filter: url(#dilate);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Sur_du_contenu_HTML", 340, 180)}}</p>
+{{EmbedLiveSample("Sur_du_contenu_HTML", 340, 180)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#feMorphologyElement", "&lt;feMorphology&gt;")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>Aucun changement</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feMorphologyElement", "&lt;feMorphology&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | Statut                           | Commentaire         |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName("Filters 1.0", "#feMorphologyElement", "&lt;feMorphology&gt;")}}         | {{Spec2("Filters 1.0")}} | Aucun changement    |
+| {{SpecName("SVG1.1", "filters.html#feMorphologyElement", "&lt;feMorphology&gt;")}} | {{Spec2("SVG1.1")}}         | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.feMorphology")}}</p>
+{{Compat("svg.elements.feMorphology")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{SVGElement("filter")}}</li>
- <li>{{SVGElement("animate")}}</li>
- <li>{{SVGElement("set")}}</li>
- <li>{{SVGElement("feBlend")}}</li>
- <li>{{SVGElement("feColorMatrix")}}</li>
- <li>{{SVGElement("feComponentTransfer")}}</li>
- <li>{{SVGElement("feComposite")}}</li>
- <li>{{SVGElement("feConvolveMatrix")}}</li>
- <li>{{SVGElement("feDiffuseLighting")}}</li>
- <li>{{SVGElement("feDisplacementMap")}}</li>
- <li>{{SVGElement("feFlood")}}</li>
- <li>{{SVGElement("feGaussianBlur")}}</li>
- <li>{{SVGElement("feImage")}}</li>
- <li>{{SVGElement("feMerge")}}</li>
- <li>{{SVGElement("feOffset")}}</li>
- <li>{{SVGElement("feSpecularLighting")}}</li>
- <li>{{SVGElement("feTile")}}</li>
- <li>{{SVGElement("feTurbulence")}}</li>
- <li><a href="/fr/docs/Web/SVG/Tutoriel/filtres">Tutoriel SVG: Filtres</a></li>
-</ul>
+- {{SVGElement("filter")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("set")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres)
