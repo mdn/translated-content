@@ -8,122 +8,104 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/polyline
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément SVG <strong><code>&lt;polyline&gt;</code></strong> est une forme SVG basique qui crée des lignes entre plusieurs points. Un élément <code>polyline</code> est généralement utilisé pour créer des tracés ouverts car le dernier point n'est pas nécessairement connecté avec le premier. Lorsqu'on désire réaliser des formes fermées, on privilégiera l'élément {{SVGElement("polygon")}}.</p>
+L'élément SVG **`<polyline>`** est une forme SVG basique qui crée des lignes entre plusieurs points. Un élément `polyline` est généralement utilisé pour créer des tracés ouverts car le dernier point n'est pas nécessairement connecté avec le premier. Lorsqu'on désire réaliser des formes fermées, on privilégiera l'élément {{SVGElement("polygon")}}.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_universels">Attributs universels</h3>
+### Attributs universels
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel">Attributs de traitement conditionnel</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_base">Attributs principaux</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_d%27%C3%A9v%C3%A9nement_graphique">Attributs relatifs aux évènements graphiques</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_présentation">Attributs de présentation</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
- <li>{{SVGAttr("transform")}}</li>
-</ul>
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel)
+- [Attributs principaux](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
+- [Attributs relatifs aux évènements graphiques](/fr/docs/Web/SVG/Attribute#Attributs_d%27%C3%A9v%C3%A9nement_graphique)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
+- {{SVGAttr("transform")}}
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<ul>
- <li>{{SVGAttr("points")}}</li>
-</ul>
+- {{SVGAttr("points")}}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface {{domxref("SVGPolylineElement")}}.</p>
+Cet élément implémente l'interface {{domxref("SVGPolylineElement")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_basique">Utilisation basique</h3>
+### Utilisation basique
 
-<h4 id="SVG">SVG</h4>
+#### SVG
 
-<pre class="brush: html">&lt;svg width="120" height="120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;polyline fill="none" stroke="black"
-      points="20,100 40,60 70,80 100,20"/&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+  <polyline fill="none" stroke="black"
+      points="20,100 40,60 70,80 100,20"/>
+</svg>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Utilisation_basique", 120, 120)}}</p>
+{{EmbedLiveSample("Utilisation_basique", 120, 120)}}
 
-<h3 id="Escaliers">Escaliers</h3>
+### Escaliers
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="contain-demo"&gt;
-  &lt;svg width="150" height="200"&gt;
-    &lt;desc&gt;
+```html
+<div class="contain-demo">
+  <svg width="150" height="200">
+    <desc>
       Première polyligne orange avec
       remplissage blanc.
-    &lt;/desc&gt;
-    &lt;polyline
+    </desc>
+    <polyline
         points="0,40 40,40 40,80 80,80 80,120 120,120 120,160"
-        fill="white" stroke="#D07735" stroke-width="6" /&gt;
-  &lt;/svg&gt;
-  &lt;svg width="150" height="200"&gt;
-    &lt;desc&gt;
+        fill="white" stroke="#D07735" stroke-width="6" />
+  </svg>
+  <svg width="150" height="200">
+    <desc>
       Seconde polyligne orange avec
       remplissage jaune.
-    &lt;/desc&gt;
-    &lt;polyline
+    </desc>
+    <polyline
         points="0,40 40,40 40,80 80,80 80,120 120,120 120,160"
-        fill="#F9F38C" stroke="#D07735" stroke-width="6" /&gt;
-  &lt;/svg&gt;
-&lt;/div&gt;
-</pre>
+        fill="#F9F38C" stroke="#D07735" stroke-width="6" />
+  </svg>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.contain-demo {
+```css
+.contain-demo {
   margin: 25px auto;
   text-align: center;
-}</pre>
+}
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Escaliers", 400, 500)}}</p>
+{{EmbedLiveSample("Escaliers", 400, 500)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'shapes.html#PolylineElement', '&lt;polyline&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'shapes.html#PolylineElement', '&lt;polyline&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                     | Commentaires         |
+| ------------------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
+| {{SpecName('SVG2', 'shapes.html#PolylineElement', '&lt;polyline&gt;')}} | {{Spec2('SVG2')}} |                      |
+| {{SpecName('SVG1.1', 'shapes.html#PolylineElement', '&lt;polyline&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.polyline")}}</p>
+{{Compat("svg.elements.polyline")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{SVGElement("line")}}</li>
- <li>{{SVGElement("polygon")}}</li>
-</ul>
+- {{SVGElement("line")}}
+- {{SVGElement("polygon")}}

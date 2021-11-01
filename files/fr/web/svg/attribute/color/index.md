@@ -6,62 +6,68 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/color
 ---
-<p>{{SVGRef}}</p>
+{{SVGRef}}
 
-<p>L'attribut <code>color</code> est utilisé pour définir indirectement une valeur potentielle (<code>currentColor</code>) pour les attributs {{ SVGAttr("fill") }}, {{ SVGAttr("stroke") }}, {{ SvgAttr("stop-color") }}, {{ SVGAttr("flood-color") }} et {{ SVGAttr("lighting-color") }}.</p>
+L'attribut `color` est utilisé pour définir indirectement une valeur potentielle (`currentColor`) pour les attributs {{ SVGAttr("fill") }}, {{ SVGAttr("stroke") }}, {{ SvgAttr("stop-color") }}, {{ SVGAttr("flood-color") }} et {{ SVGAttr("lighting-color") }}.
 
-<div class="note">
-  <p><strong>Note :</strong> <code>color</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS. Voir {{ cssxref("color","CSS color") }} pour plus d'informations.</p>
-</div>
+> **Note :** `color` étant un attribut de présentation, il peut être utilisé comme propriété CSS. Voir {{ cssxref("color","CSS color") }} pour plus d'informations.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Catégories</th>
-   <td>Attribut de présentation</td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><a href="/fr/SVG/Content_type#Color" title="en/SVG/Content_type#Color">&lt;color&gt;</a> | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Document normatif</th>
-   <td><a href="http://www.w3.org/TR/SVG11/color.html#ColorProperty">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Catégories</th>
+      <td>Attribut de présentation</td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <a href="/fr/SVG/Content_type#Color" title="en/SVG/Content_type#Color"
+          >&#x3C;color></a
+        >
+        | inherit
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Document normatif</th>
+      <td>
+        <a href="http://www.w3.org/TR/SVG11/color.html#ColorProperty"
+          >SVG 1.1 (2nd Edition)</a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: html">&lt;svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
-  &lt;g color="green"&gt;
-    &lt;rect width="50" height="50" fill="currentColor" /&gt;
-    &lt;circle r="25" cx="70" cy="70" stroke="currentColor" fill="none" stroke-width="5" /&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <g color="green">
+    <rect width="50" height="50" fill="currentColor" />
+    <circle r="25" cx="70" cy="70" stroke="currentColor" fill="none" stroke-width="5" />
+  </g>
+</svg>
+```
 
-<p>{{ EmbedLiveSample('Exemple', '100%', '110') }}</p>
+{{ EmbedLiveSample('Exemple', '100%', '110') }}
 
-<h2 id="Éléments">Éléments</h2>
+## Éléments
 
-<p>Les éléments suivants peuvent utiliser l'attribut <code>color</code>:</p>
+Les éléments suivants peuvent utiliser l'attribut `color`:
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Element#Éléments_de_contenu_textuel" title="en/SVG/Element#Text_content_elements">Éléments de contenu textuel</a> »</li>
- <li><a href="/fr/docs/Web/SVG/Element#Éléments_de_formes" title="en/SVG/Element#Shape_elements">Éléments de formes</a>  »</li>
- <li>{{ SVGElement("stop") }}</li>
- <li>{{ SVGElement("feFlood") }}</li>
- <li>{{ SVGElement("feDiffuseLighting") }}</li>
- <li>{{ SVGElement("feSpecularLighting") }}</li>
-</ul>
+- [Éléments de contenu textuel](/fr/docs/Web/SVG/Element#Éléments_de_contenu_textuel "en/SVG/Element#Text_content_elements") »
+- [Éléments de formes](/fr/docs/Web/SVG/Element#Éléments_de_formes "en/SVG/Element#Shape_elements")  »
+- {{ SVGElement("stop") }}
+- {{ SVGElement("feFlood") }}
+- {{ SVGElement("feDiffuseLighting") }}
+- {{ SVGElement("feSpecularLighting") }}
 
-<h2 id="Browser_Compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.attributes.presentation.color")}}</p>
+{{Compat("svg.attributes.presentation.color")}}

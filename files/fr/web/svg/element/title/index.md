@@ -8,77 +8,57 @@ tags:
   - SVG Description
 translation_of: Web/SVG/Element/title
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>Tout élément graphique ou conteneur dans un dessin SVG peut définir un titre en utilisant un élément <strong><code>&lt;title&gt;</code></strong>, ce titre ne peut contenir que du texte.</p>
+Tout élément graphique ou conteneur dans un dessin SVG peut définir un titre en utilisant un élément **`<title>`**, ce titre ne peut contenir que du texte.
 
-<p>Quand l'élément contenant un titre apparaît à l'utilisateur sous forme d'image, l'élément <code>&lt;title&gt;</code> n'est pas affiché. Néanmoins, quelques moteurs de rendu peuvent, par exemple, l'afficher sous forme d'infobulle. Des représentations alternatives sont possibles, visuelles ou auditives, en renplacement des éléments graphiques. De manière générale, cet élément améliore l'accessibilité des documents SVG.</p>
+Quand l'élément contenant un titre apparaît à l'utilisateur sous forme d'image, l'élément `<title>` n'est pas affiché. Néanmoins, quelques moteurs de rendu peuvent, par exemple, l'afficher sous forme d'infobulle. Des représentations alternatives sont possibles, visuelles ou auditives, en renplacement des éléments graphiques. De manière générale, cet élément améliore l'accessibilité des documents SVG.
 
-<p>L'élément <code>&lt;title&gt;</code> est souvent le premier enfant de son parent. Notons que les implémentations qui rendent l'élément title en infobulle ne le font que s'il est à cette place.</p>
+L'élément `<title>` est souvent le premier enfant de son parent. Notons que les implémentations qui rendent l'élément title en infobulle ne le font que s'il est à cette place.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_base" title="en/SVG/Attribute#Core">Attributs de base</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
-</ul>
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<p><em>(Aucun)</em></p>
+_(Aucun)_
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface <code><a href="/fr/docs/Web/API/SVGTitleElement" title="en/DOM/SVGTitleElement">SVGTitleElement</a></code>.</p>
+Cet élément implémente l'interface [`SVGTitleElement`](/fr/docs/Web/API/SVGTitleElement "en/DOM/SVGTitleElement").
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: html">&lt;svg width="220" height="70" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;title&gt;SVG Title Demo example&lt;/title&gt;
-  &lt;rect x="10" y="10" width="200" height="50"
-    style="fill:wheat; stroke:blue; stroke-width:1px"&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg width="220" height="70" xmlns="http://www.w3.org/2000/svg">
+  <title>SVG Title Demo example</title>
+  <rect x="10" y="10" width="200" height="50"
+    style="fill:wheat; stroke:blue; stroke-width:1px">
+</svg>
+```
 
-<p>{{ EmbedLiveSample('Exemple', '100%', 100) }}</p>
+{{ EmbedLiveSample('Exemple', '100%', 100) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'struct.html#TitleElement', '&lt;title&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'struct.html#DescriptionAndTitleElements', '&lt;title&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | Statut                   | Commentaire         |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
+| {{SpecName('SVG2', 'struct.html#TitleElement', '&lt;title&gt;')}}                     | {{Spec2('SVG2')}} |                     |
+| {{SpecName('SVG1.1', 'struct.html#DescriptionAndTitleElements', '&lt;title&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.title")}}</p>
+{{Compat("svg.elements.title")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{ SVGElement("desc") }}</li>
-</ul>
+- {{ SVGElement("desc") }}

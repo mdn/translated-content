@@ -3,61 +3,50 @@ title: Attributs SVG de base
 slug: Web/SVG/Attribute/Core
 translation_of: Web/SVG/Attribute/Core
 ---
-<p>Les <em>attributs SVG de base</em> sont  tous les attributs communs pouvant être spécifiés sur n'importe quel élément SVG.</p>
+Les _attributs SVG de base_ sont  tous les attributs communs pouvant être spécifiés sur n'importe quel élément SVG.
 
-<ul>
- <li><code>id</code></li>
- <li><code>lang</code></li>
- <li><code>tabindex</code></li>
- <li><code>xml:base</code></li>
- <li><code>xml:lang</code></li>
- <li><code>xml:space</code></li>
-</ul>
+- `id`
+- `lang`
+- `tabindex`
+- `xml:base`
+- `xml:lang`
+- `xml:space`
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<dl>
- <dt>{{SVGAttr('id')}}</dt>
- <dd>Définit un identifiant (ID) qui doit être unique dans tout le document. Son but est d'identifier l'élément pour pouvoir y faire référence plus tard, comme identificateur de fragment, dans du code, ou pour appliquer du style (avec CSS).<br>
- <small><em>Valuer</em>: Tout ID valide; <em>Animation</em>: <strong>Non</strong></small></dd>
- <dt>{{SVGAttr('lang')}}</dt>
- <dd>
- <p>Définit le langage de l'élément  — la langue dans laquelle sont écrit les éléments non-éditables et celle dans laquelle devrait être écrits les éléments éditables. L'attribut prend pour valeur l'identifiant de la langue tel que définit dans le <a href="https://www.ietf.org/rfc/bcp/bcp47.txt">document IETF "Tags for Identifying Languages" (BCP47)</a>.</p>
+- {{SVGAttr('id')}}
+  - : Définit un identifiant (ID) qui doit être unique dans tout le document. Son but est d'identifier l'élément pour pouvoir y faire référence plus tard, comme identificateur de fragment, dans du code, ou pour appliquer du style (avec CSS).
+    _Valuer_: Tout ID valide; _Animation_: **Non**
+- {{SVGAttr('lang')}}
 
- <div class="note">
- <p><strong>Note :</strong> SVG 2 introduit l'attribut <code>lang</code>. Si les attributs <code>lang</code> et <code>xml:lang</code> sont tous les deux définis, <code>xml:lang</code> a la priorité sur <code>lang</code>.</p>
- </div>
+  - : Définit le langage de l'élément  — la langue dans laquelle sont écrit les éléments non-éditables et celle dans laquelle devrait être écrits les éléments éditables. L'attribut prend pour valeur l'identifiant de la langue tel que définit dans le [document IETF "Tags for Identifying Languages" (BCP47)](https://www.ietf.org/rfc/bcp/bcp47.txt).
 
- <p><small><em>Valeur</em>: Tout ID de langage valide; <em>Animation</em>: <strong>Non</strong></small></p>
- </dd>
- <dt>{{SVGAttr('tabindex')}}</dt>
- <dd>L'attribut SVG tabindex permet de contrôler si un élément peut prendre le focus et définit l'ordre relatif des éléments pour la navigation via tabulation.<br>
- <small><em>Type de valeur</em>: <a href="/docs/Web/SVG/Content_type#Integer">&lt;integer&gt;</a>; <em>Animation</em>: <strong>Non</strong></small></dd>
- <dt>{{SVGAttr('xml:base')}}</dt>
- <dd>Spécifie une IRI de base autre que celle du document.<br>
- <small><em>Type de valeur</em>: <a href="/docs/Web/SVG/Content_type#IRI">&lt;IRI&gt;</a>; <em>Animation</em>: <strong>Non</strong></small></dd>
- <dt>{{SVGAttr('xml:lang')}}</dt>
- <dd>
- <p>C'est un attribut universel autorisé dans tous les documents XML pour définir le langage du texte présent dans l'élément. Son utilisation est presque identique à celle de l'attribut <a href="/fr/docs/Web/HTML/Attributs_universels/lang">lang</a> en HTML, hormis que les documents XML 1.0 ne permettent pas l'utilisation d'une valeur d'attribut nulle (<code>xml:lang=""</code>) pour indiquer un langage inconnu. À la place, utiliser <code>xml:lang="und"</code>.</p>
+    > **Note :** SVG 2 introduit l'attribut `lang`. Si les attributs `lang` et `xml:lang` sont tous les deux définis, `xml:lang` a la priorité sur `lang`.
 
- <div class="note">
- <p><strong>Note :</strong> SVG 2 introduit l'attribut <code>lang</code>. Si les attributs <code>lang</code> et <code>xml:lang</code> sont tous les deux définis, <code>xml:lang</code> a la priorité sur <code>lang</code>.</p>
- </div>
+    _Valeur_: Tout ID de langage valide; _Animation_: **Non**
 
- <p><small><em>Valeur</em>: Tout ID de langage valide; <em>Animation</em>: <strong>Non</strong></small></p>
- </dd>
- <dt>{{SVGAttr('xml:space')}} {{deprecated_inline('svg2')}}</dt>
- <dd>
- <p>SVG prend en charge l'attribut XML standard <code>xml:space</code> pour spécifier le traitement des caractères d'espaces dans les données d'un élément {{ SVGElement("text") }} donné.</p>
+- {{SVGAttr('tabindex')}}
+  - : L'attribut SVG tabindex permet de contrôler si un élément peut prendre le focus et définit l'ordre relatif des éléments pour la navigation via tabulation.
+    _Type de valeur_: [\<integer>](/docs/Web/SVG/Content_type#Integer); _Animation_: **Non**
+- {{SVGAttr('xml:base')}}
+  - : Spécifie une IRI de base autre que celle du document.
+    _Type de valeur_: [\<IRI>](/docs/Web/SVG/Content_type#IRI); _Animation_: **Non**
+- {{SVGAttr('xml:lang')}}
 
- <div class="note">
- <p><strong>Note:</strong> Plutôt qu'utiliser l'attribut <code>xml:space</code> vous devriez utiliser la propriété CSS {{cssxref('white-space')}} à la place.</p>
- </div>
+  - : C'est un attribut universel autorisé dans tous les documents XML pour définir le langage du texte présent dans l'élément. Son utilisation est presque identique à celle de l'attribut [lang](/fr/docs/Web/HTML/Attributs_universels/lang) en HTML, hormis que les documents XML 1.0 ne permettent pas l'utilisation d'une valeur d'attribut nulle (`xml:lang=""`) pour indiquer un langage inconnu. À la place, utiliser `xml:lang="und"`.
 
- <p><small><em>Valeur</em>: <code><strong>default</strong></code> | <code>preserve</code>; <em>Animation</em>: <strong>Non</strong></small></p>
- </dd>
-</dl>
+    > **Note :** SVG 2 introduit l'attribut `lang`. Si les attributs `lang` et `xml:lang` sont tous les deux définis, `xml:lang` a la priorité sur `lang`.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+    _Valeur_: Tout ID de langage valide; _Animation_: **Non**
 
-<p>{{Compat("svg.attributes.core")}}</p>
+- {{SVGAttr('xml:space')}} {{deprecated_inline('svg2')}}
+
+  - : SVG prend en charge l'attribut XML standard `xml:space` pour spécifier le traitement des caractères d'espaces dans les données d'un élément {{ SVGElement("text") }} donné.
+
+    > **Note :** Plutôt qu'utiliser l'attribut `xml:space` vous devriez utiliser la propriété CSS {{cssxref('white-space')}} à la place.
+
+    _Valeur_: **`default`** | `preserve`; _Animation_: **Non**
+
+## Compatibilité des navigateurs
+
+{{Compat("svg.attributes.core")}}

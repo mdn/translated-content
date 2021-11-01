@@ -8,43 +8,37 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/hkern
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>La distance horizontale entre deux glyphes peut être ajustée minutieusement avec l'élément hkern. Ce proccessus est appelé <a href="https://fr.wikipedia.org/wiki/Cr%C3%A9nage">Crénage</a>.</p>
+La distance horizontale entre deux glyphes peut être ajustée minutieusement avec l'élément hkern. Ce proccessus est appelé [Crénage](https://fr.wikipedia.org/wiki/Cr%C3%A9nage).
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#Core">Attributs fondamentaux</a> »</li>
-</ul>
+- [Attributs fondamentaux](/fr/docs/Web/SVG/Attribute#Core) »
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<ul>
- <li>{{ SVGAttr("u1") }}</li>
- <li>{{ SVGAttr("g1") }}</li>
- <li>{{ SVGAttr("u2") }}</li>
- <li>{{ SVGAttr("g2") }}</li>
- <li>{{ SVGAttr("k") }}</li>
-</ul>
+- {{ SVGAttr("u1") }}
+- {{ SVGAttr("g1") }}
+- {{ SVGAttr("u2") }}
+- {{ SVGAttr("g2") }}
+- {{ SVGAttr("k") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface <code><a href="/fr/docs/Web/API/SVGHKernElement" title="en/DOM/SVGHKernElement">SVGHKernElement</a></code>.</p>
+Cet élément implémente l'interface [`SVGHKernElement`](/fr/docs/Web/API/SVGHKernElement "en/DOM/SVGHKernElement").
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>{{ SVGElement("font") }}</li>
- <li>{{ SVGElement("glyph") }}</li>
- <li>{{ SVGElement("vkern") }}</li>
- <li><a href="/fr/docs/Web/SVG/Tutorial/SVG_fonts">Tutoriel SVG : Polices SVG</a></li>
-</ul>
+- {{ SVGElement("font") }}
+- {{ SVGElement("glyph") }}
+- {{ SVGElement("vkern") }}
+- [Tutoriel SVG : Polices SVG](/fr/docs/Web/SVG/Tutorial/SVG_fonts)

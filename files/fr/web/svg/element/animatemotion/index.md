@@ -7,103 +7,82 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/animateMotion
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément <strong><code>&lt;animateMotion&gt;</code></strong> permet d'animer un élément le long d'un chemin donné.</p>
+L'élément **`<animateMotion>`** permet d'animer un élément le long d'un chemin donné.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#ConditionalProccessing">Attributs à traitement conditionnel</a> »</li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Core">Attributs fondamentaux</a> »</li>
- <li><a href="/fr/docs/SVG/Attribute#AnimationEvent">Attributs d'événements d'animation</a> »</li>
- <li><a href="/fr/docs/Web/SVG/Attribute#XLink">Attributs XLink</a> »</li>
- <li><a href="/fr/docs/SVG/Attribute#AnimationTiming" title="SVG/Attribute#AnimationTiming">Attributs d'animation de timing</a> »</li>
- <li><a href="/fr/docs/SVG/Attribute#AnimationValue" title="SVG/Attribute#AnimationValue">Attributs d'animation de valeurs</a> »</li>
- <li><a href="/fr/docs/SVG/Attribute#AnimationAddition" title="SVG/Attribute#AnimationAddition">Attributs d'animation d'ajout</a> »</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [Attributs à traitement conditionnel](/fr/docs/Web/SVG/Attribute#ConditionalProccessing) »
+- [Attributs fondamentaux](/fr/docs/Web/SVG/Attribute#Core) »
+- [Attributs d'événements d'animation](/fr/docs/SVG/Attribute#AnimationEvent) »
+- [Attributs XLink](/fr/docs/Web/SVG/Attribute#XLink) »
+- [Attributs d'animation de timing](/fr/docs/SVG/Attribute#AnimationTiming "SVG/Attribute#AnimationTiming") »
+- [Attributs d'animation de valeurs](/fr/docs/SVG/Attribute#AnimationValue "SVG/Attribute#AnimationValue") »
+- [Attributs d'animation d'ajout](/fr/docs/SVG/Attribute#AnimationAddition "SVG/Attribute#AnimationAddition") »
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<ul>
- <li>{{ SVGAttr("calcMode") }}</li>
- <li>{{ SVGAttr("path") }}</li>
- <li>{{ SVGAttr("keyPoints") }}</li>
- <li>{{ SVGAttr("rotate") }}</li>
- <li>{{ SVGAttr("origin") }}</li>
-</ul>
+- {{ SVGAttr("calcMode") }}
+- {{ SVGAttr("path") }}
+- {{ SVGAttr("keyPoints") }}
+- {{ SVGAttr("rotate") }}
+- {{ SVGAttr("origin") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface <code><a href="/fr/docs/DOM/SVGAnimateMotionElement" title="en/DOM/SVGAnimateMotionElement">SVGAnimateMotionElement</a></code>.</p>
+Cet élément implémente l'interface [`SVGAnimateMotionElement`](/fr/docs/DOM/SVGAnimateMotionElement "en/DOM/SVGAnimateMotionElement").
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html; highlight[18-20]">&lt;?xml version="1.0"?&gt;
-&lt;svg width="120" height="120" viewBox="0 0 120 120"
+```html
+<?xml version="1.0"?>
+<svg width="120" height="120" viewBox="0 0 120 120"
     xmlns="http://www.w3.org/2000/svg" version="1.1"
-    xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+    xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  &lt;!-- Dessine le chemin en gris, avec 2 cercles aux extrémités --&gt;
-  &lt;path d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110"
+  <!-- Dessine le chemin en gris, avec 2 cercles aux extrémités -->
+  <path d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110"
       stroke="lightgrey" stroke-width="2"
-      fill="none" id="theMotionPath"/&gt;
-  &lt;circle cx="10" cy="110" r="3" fill="lightgrey"  /&gt;
-  &lt;circle cx="110" cy="10" r="3" fill="lightgrey"  /&gt;
+      fill="none" id="theMotionPath"/>
+  <circle cx="10" cy="110" r="3" fill="lightgrey"  />
+  <circle cx="110" cy="10" r="3" fill="lightgrey"  />
 
-  &lt;!-- Cercle rouge qui sera déplacé le long du chemin. --&gt;
-  &lt;circle cx="" cy="" r="5" fill="red"&gt;
+  <!-- Cercle rouge qui sera déplacé le long du chemin. -->
+  <circle cx="" cy="" r="5" fill="red">
 
-    &lt;!-- Définit l'animation --&gt;
-    &lt;animateMotion dur="6s" repeatCount="indefinite"&gt;
-      &lt;mpath xlink:href="#theMotionPath"/&gt;
-    &lt;/animateMotion&gt;
-  &lt;/circle&gt;
-&lt;/svg&gt;</pre>
+    <!-- Définit l'animation -->
+    <animateMotion dur="6s" repeatCount="indefinite">
+      <mpath xlink:href="#theMotionPath"/>
+    </animateMotion>
+  </circle>
+</svg>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemple", 120, 120)}}</p>
+{{EmbedLiveSample("Exemple", 120, 120)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#AnimateMotionElement", "&lt;animateMotion&gt;")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td>Aucun changement</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'animate.html#AnimateMotionElement', '&lt;animateMotion&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | Statut                                   | Commentaire         |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
+| {{SpecName("SVG Animations 2", "#AnimateMotionElement", "&lt;animateMotion&gt;")}}     | {{Spec2("SVG Animations 2")}} | Aucun changement    |
+| {{SpecName('SVG1.1', 'animate.html#AnimateMotionElement', '&lt;animateMotion&gt;')}} | {{Spec2('SVG1.1')}}                 | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.animateMotion")}}</p>
+{{Compat("svg.elements.animateMotion")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{ SVGElement("mpath") }}</li>
-</ul>
+- {{ SVGElement("mpath") }}

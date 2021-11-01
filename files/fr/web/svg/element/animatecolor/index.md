@@ -7,87 +7,67 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/animateColor
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<div class="warning">
-  <p><strong>Attention :</strong> Cet élément est déprécié depuis SVG 1.1 Deuxième édition et peut etre retiré dans une prochaine version de SVG. Il ne fournis pas de fonctionnalités non disponible en utilisant l'élément {{ SVGElement("animate") }}. Il n'est pas implémenté dans Firefox ni dans Internet Explorer. Il est préférable d'utiliser l'élément {{ SVGElement("animate") }} à la place.</p>
-</div>
+> **Attention :** Cet élément est déprécié depuis SVG 1.1 Deuxième édition et peut etre retiré dans une prochaine version de SVG. Il ne fournis pas de fonctionnalités non disponible en utilisant l'élément {{ SVGElement("animate") }}. Il n'est pas implémenté dans Firefox ni dans Internet Explorer. Il est préférable d'utiliser l'élément {{ SVGElement("animate") }} à la place.
 
-<p>L'élément <strong><code>&lt;animateColor&gt;</code></strong> spécifie une transformation de couleur à travers le temps.</p>
+L'élément **`<animateColor>`** spécifie une transformation de couleur à travers le temps.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#ConditionalProccessing">Attributs à traitement conditionnel</a> »</li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Core">Attributs fondamentaux</a> »</li>
- <li><a href="/fr/docs/SVG/Attribute#AnimationEvent">Attributs d'événements d'animation</a> »</li>
- <li><a href="/fr/docs/Web/SVG/Attribute#XLink">Attributs XLink</a> »</li>
- <li><a href="/fr/docs/Web/SVG/Attribute#AnimationAttributeTarget">Attributs de cible d'attribut d'animation</a> »</li>
- <li><a href="/fr/docs/SVG/Attribute#AnimationTiming" title="SVG/Attribute#AnimationTiming">Attributs d'animation de timing</a> »</li>
- <li><a href="/fr/docs/SVG/Attribute#AnimationValue" title="SVG/Attribute#AnimationValue">Attributs d'animation de valeurs</a> »</li>
- <li><a href="/fr/docs/SVG/Attribute#AnimationAddition" title="SVG/Attribute#AnimationAddition">Attributs d'animation d'ajout</a> »</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [Attributs à traitement conditionnel](/fr/docs/Web/SVG/Attribute#ConditionalProccessing) »
+- [Attributs fondamentaux](/fr/docs/Web/SVG/Attribute#Core) »
+- [Attributs d'événements d'animation](/fr/docs/SVG/Attribute#AnimationEvent) »
+- [Attributs XLink](/fr/docs/Web/SVG/Attribute#XLink) »
+- [Attributs de cible d'attribut d'animation](/fr/docs/Web/SVG/Attribute#AnimationAttributeTarget) »
+- [Attributs d'animation de timing](/fr/docs/SVG/Attribute#AnimationTiming "SVG/Attribute#AnimationTiming") »
+- [Attributs d'animation de valeurs](/fr/docs/SVG/Attribute#AnimationValue "SVG/Attribute#AnimationValue") »
+- [Attributs d'animation d'ajout](/fr/docs/SVG/Attribute#AnimationAddition "SVG/Attribute#AnimationAddition") »
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<ul>
- <li>{{ SVGAttr("by") }}</li>
- <li>{{ SVGAttr("from") }}</li>
- <li>{{ SVGAttr("to") }}</li>
-</ul>
+- {{ SVGAttr("by") }}
+- {{ SVGAttr("from") }}
+- {{ SVGAttr("to") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface <code><a href="/fr/docs/DOM/SVGAnimateColorElement" title="en/DOM/SVGAnimateColorElement">SVGAnimateColorElement</a></code>.</p>
+Cet élément implémente l'interface [`SVGAnimateColorElement`](/fr/docs/DOM/SVGAnimateColorElement "en/DOM/SVGAnimateColorElement").
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush:html">&lt;svg width="120" height="120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle cx="60" cy="60" r="50"&gt;
-    &lt;animateColor attributeName="fill" attributeType="XML"
-        from="black" to="red" dur="6s" repeatCount="indefinite"/&gt;
-  &lt;/circle&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="50">
+    <animateColor attributeName="fill" attributeType="XML"
+        from="black" to="red" dur="6s" repeatCount="indefinite"/>
+  </circle>
+</svg>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemple", 120, 120)}}</p>
+{{EmbedLiveSample("Exemple", 120, 120)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "animate.html#AnimateColorElement", "&lt;animateColor&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | Statut                   | Commentaire         |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
+| {{SpecName("SVG1.1", "animate.html#AnimateColorElement", "&lt;animateColor&gt;")}} | {{Spec2("SVG1.1")}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.animateColor")}}</p>
+{{Compat("svg.elements.animateColor")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>{{ SVGElement("animate") }}</li>
-</ul>
+- {{ SVGElement("animate") }}

@@ -6,131 +6,132 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/preserveAspectRatio
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'attibut <strong><code>preserveAspectRatio</code></strong> indique comment un élément est mis à l'échelle lorsque le ratio largeur:hauteur de la <a href="/fr/docs/Web/SVG/Attribute/viewBox"><code>viewBox</code></a> est différent du ratio de la zone d'affichage (définit par les attributs <code>width</code> et <code>height</code>).</p>
+L'attibut **`preserveAspectRatio`** indique comment un élément est mis à l'échelle lorsque le ratio largeur:hauteur de la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est différent du ratio de la zone d'affichage (définit par les attributs `width` et `height`).
 
-<p>Parce que les proportions du SVG sont définies par l'attribut <code>viewBox</code>, si ce dernier n'est pas défini alors l'attribut <code>preserveAspectRatio</code> n'a aucun effet (<em>à l'exception près de l'élément <a href="/fr/docs/Web/SVG/Element/image"><code>&lt;image&gt;</code></a> comme décrit ci-dessous</em>).</p>
+Parce que les proportions du SVG sont définies par l'attribut `viewBox`, si ce dernier n'est pas défini alors l'attribut `preserveAspectRatio` n'a aucun effet (_à l'exception près de l'élément [`<image>`](/fr/docs/Web/SVG/Element/image) comme décrit ci-dessous_).
 
-<h2 id="example">Exemple</h2>
+## Exemple
 
-<pre class="brush: html">&lt;svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-     &lt;path id="smiley" d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" /&gt;
-  &lt;/defs&gt;
+```html
+<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+     <path id="smiley" d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+  </defs>
 
-  &lt;!-- (largeur&gt;hauteur) meet --&gt;
-  &lt;rect x="0" y="0" width="20" height="10"&gt;
-    &lt;title&gt;xMidYMid meet&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="20" height="10"
-       preserveAspectRatio="xMidYMid meet" x="0" y="0"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <!-- (largeur>hauteur) meet -->
+  <rect x="0" y="0" width="20" height="10">
+    <title>xMidYMid meet</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="20" height="10"
+       preserveAspectRatio="xMidYMid meet" x="0" y="0">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;rect x="25" y="0" width="20" height="10"&gt;
-    &lt;title&gt;xMinYMid meet&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="20" height="10"
-       preserveAspectRatio="xMinYMid meet" x="25" y="0"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <rect x="25" y="0" width="20" height="10">
+    <title>xMinYMid meet</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="20" height="10"
+       preserveAspectRatio="xMinYMid meet" x="25" y="0">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;rect x="50" y="0" width="20" height="10"&gt;
-    &lt;title&gt;xMaxYMid meet&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="20" height="10"
-       preserveAspectRatio="xMaxYMid meet" x="50" y="0"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <rect x="50" y="0" width="20" height="10">
+    <title>xMaxYMid meet</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="20" height="10"
+       preserveAspectRatio="xMaxYMid meet" x="50" y="0">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;!-- (largeur&gt;hauteur) slice --&gt;
-  &lt;rect x="0" y="15" width="20" height="10"&gt;
-    &lt;title&gt;xMidYMin slice&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="20" height="10"
-       preserveAspectRatio="xMidYMin slice" x="0" y="15"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <!-- (largeur>hauteur) slice -->
+  <rect x="0" y="15" width="20" height="10">
+    <title>xMidYMin slice</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="20" height="10"
+       preserveAspectRatio="xMidYMin slice" x="0" y="15">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;rect x="25" y="15" width="20" height="10"&gt;
-    &lt;title&gt;xMidYMid slice&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="20" height="10"
-       preserveAspectRatio="xMidYMid slice" x="25" y="15"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <rect x="25" y="15" width="20" height="10">
+    <title>xMidYMid slice</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="20" height="10"
+       preserveAspectRatio="xMidYMid slice" x="25" y="15">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;rect x="50" y="15" width="20" height="10"&gt;
-    &lt;title&gt;xMidYMax slice&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="20" height="10"
-       preserveAspectRatio="xMidYMax slice" x="50" y="15"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <rect x="50" y="15" width="20" height="10">
+    <title>xMidYMax slice</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="20" height="10"
+       preserveAspectRatio="xMidYMax slice" x="50" y="15">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;!-- (largeur&lt;hauteur) meet --&gt;
-  &lt;rect x="75" y="0" width="10" height="25"&gt;
-    &lt;title&gt;xMidYMin meet&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="10" height="25"
-       preserveAspectRatio="xMidYMin meet" x="75" y="0"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <!-- (largeur<hauteur) meet -->
+  <rect x="75" y="0" width="10" height="25">
+    <title>xMidYMin meet</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="10" height="25"
+       preserveAspectRatio="xMidYMin meet" x="75" y="0">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;rect x="90" y="0" width="10" height="25"&gt;
-    &lt;title&gt;xMidYMid meet&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="10" height="25"
-       preserveAspectRatio="xMidYMid meet" x="90" y="0"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <rect x="90" y="0" width="10" height="25">
+    <title>xMidYMid meet</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="10" height="25"
+       preserveAspectRatio="xMidYMid meet" x="90" y="0">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;rect x="105" y="0" width="10" height="25"&gt;
-    &lt;title&gt;xMidYMax meet&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="10" height="25"
-       preserveAspectRatio="xMidYMax meet" x="105" y="0"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <rect x="105" y="0" width="10" height="25">
+    <title>xMidYMax meet</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="10" height="25"
+       preserveAspectRatio="xMidYMax meet" x="105" y="0">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;!-- (largeur&lt;hauteur) slice --&gt;
-  &lt;rect x="120" y="0" width="10" height="25"&gt;
-    &lt;title&gt;xMinYMid slice&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="10" height="25"
-       preserveAspectRatio="xMinYMid slice" x="120" y="0"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <!-- (largeur<hauteur) slice -->
+  <rect x="120" y="0" width="10" height="25">
+    <title>xMinYMid slice</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="10" height="25"
+       preserveAspectRatio="xMinYMid slice" x="120" y="0">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;rect x="135" y="0" width="10" height="25"&gt;
-    &lt;title&gt;xMidYMid slice&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="10" height="25"
-       preserveAspectRatio="xMidYMid slice" x="135" y="0"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <rect x="135" y="0" width="10" height="25">
+    <title>xMidYMid slice</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="10" height="25"
+       preserveAspectRatio="xMidYMid slice" x="135" y="0">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;rect x="150" y="0" width="10" height="25"&gt;
-    &lt;title&gt;xMaxYMid slice&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="10" height="25"
-       preserveAspectRatio="xMaxYMid slice" x="150" y="0"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
+  <rect x="150" y="0" width="10" height="25">
+    <title>xMaxYMid slice</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="10" height="25"
+       preserveAspectRatio="xMaxYMid slice" x="150" y="0">
+    <use href="#smiley" />
+  </svg>
 
-  &lt;!-- none --&gt;
-  &lt;rect x="0" y="30" width="160" height="60"&gt;
-    &lt;title&gt;none&lt;/title&gt;
-  &lt;/rect&gt;
-  &lt;svg viewBox="0 0 100 100" width="160" height="60"
-       preserveAspectRatio="none" x="0" y="30"&gt;
-    &lt;use href="#smiley" /&gt;
-  &lt;/svg&gt;
-&lt;/svg&gt;</pre>
+  <!-- none -->
+  <rect x="0" y="30" width="160" height="60">
+    <title>none</title>
+  </rect>
+  <svg viewBox="0 0 100 100" width="160" height="60"
+       preserveAspectRatio="none" x="0" y="30">
+    <use href="#smiley" />
+  </svg>
+</svg>
+```
 
-
-<pre class="brush: css hidden">
+```css hidden
 html,body,svg { height:100% }
 
 path {
@@ -144,248 +145,226 @@ path {
 
 rect:hover, rect:active {
   outline: 1px solid red;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
+{{EmbedLiveSample('topExample', '100%', 200)}}
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">preserveAspectRatio="&lt;align&gt; [&lt;meetOrSlice&gt;]"</pre>
+    preserveAspectRatio="<align> [<meetOrSlice>]"
 
-<p>La valeur de l'attribut est constituée d'un ou deux mots clés : l'alignement et l'option "meet ou slice" (satisfaire ou trancher) comme décrit ci-dessous:</p>
+La valeur de l'attribut est constituée d'un ou deux mots clés : l'alignement et l'option "meet ou slice" (satisfaire ou trancher) comme décrit ci-dessous:
 
-<dl>
- <dt>Alignement</dt>
- <dd>L'alignement indique s'il faut forcer une mise à l'échelle uniforme et si oui, comment faire dans le cas où le rapport largeur:hauteur de la <a href="/fr/docs/Web/SVG/Attribute/viewBox"><code>viewBox</code></a> ne correspond pas à celui affiché. Les différentes valeurs possibles sont:
- <ul>
-  <li><strong>none</strong><br>
-   Ne pas forcer la mise à l'échelle uniforme. Étirer le contenu de manière à ce que le contenu remplisse toute la hauteur et toute la largeur affichée. <em>Notez que si </em><code>&lt;align&gt;</code><em> vaut </em><code>none</code><em>, alors la valeur </em><code>&lt;meetOrSlice&gt;</code><em> est ignorée</em>.</li>
-  <li><strong>xMinYMin</strong> - Force la mise à l'échelle uniforme.<br>
-   Aligne le côté gauche de l'élément à gauche de la zone d'affichage.<br>
-   Aligne le côté haut de l'élément en haut de la zone d'affichage.</li>
-  <li><strong>xMidYMin</strong> - Force la mise à l'échelle uniforme.<br>
-   Aligne horizontalement le centre de l'élément au milieu de la zone d'affichage.<br>
-   Aligne le côté haut de l'élément en haut de la zone d'affichage.</li>
-  <li><strong>xMaxYMin</strong> - Force la mise à l'échelle uniforme.<br>
-   Aligne le côté droit de l'élément à droite de la zone d'affichage.<br>
-   Aligne le côté haut de l'élément en haut de la zone d'affichage.</li>
-  <li><strong>xMinYMid</strong> - Force la mise à l'échelle uniforme.<br>
-   Aligne le côté gauche de l'élément à gauche de la zone d'affichage.<br>
-   Aligne verticalement le centre de l'élément au milieu de la zone d'affichage.</li>
-  <li><strong>xMidYMid</strong> (<em>par défaut</em>) - Force la mise à l'échelle uniforme.<br>
-   Aligne horizontalement le centre de l'élément au milieu de la zone d'affichage.<br>
-   Aligne verticalement le centre de l'élément au milieu de la zone d'affichage.</li>
-  <li><strong>xMaxYMid</strong> - Force la mise à l'échelle uniforme.<br>
-   Aligne le côté droit de l'élément à droite de la zone d'affichage.<br>
-   Aligne verticalement le centre de l'élément au milieu de la zone d'affichage.</li>
-  <li><strong>xMinYMax</strong> - Force la mise à l'échelle uniforme.<br>
-   Aligne le côté gauche de l'élément à gauche de la zone d'affichage.<br>
-   Aligne le côté bas de l'élément en bas de la zone d'affichage.</li>
-  <li><strong>xMidYMax</strong> - Force la mise à l'échelle uniforme.<br>
-   Aligne horizontalement le centre de l'élément au milieu de la zone d'affichage.<br>
-   Aligne le côté bas de l'élément en bas de la zone d'affichage.</li>
-  <li><strong>xMaxYMax</strong> - Force la mise à l'échelle uniforme.<br>
-   Aligne le côté droit de l'élément à droite de la zone d'affichage.<br>
-   Aligne le côté bas de l'élément en bas de la zone d'affichage.</li>
- </ul>
- </dd>
- <dt>Meet ou slice</dt>
- <dd>La valeur <em>meet</em> ou <em>slice</em> est optionnelle. Les deux valeurs possibles sont:
- <ul>
-  <li><strong>meet</strong> (<em>par défaut</em>) - Mettre à l'échelle l'image tel que:
-   <ul>
-    <li>les proportions sont préservées</li>
-    <li>la <a href="/fr/docs/Web/SVG/Attribute/viewBox"><code>viewBox</code></a> est entièrement visible dans la zone d'affichage</li>
-    <li>la <a href="/fr/docs/Web/SVG/Attribute/viewBox"><code>viewBox</code></a> est agrandie autant que possible, tout en respectant les autres critères</li>
-   </ul>
-   Autrement dit, si les proportions du contenu ne correspondent pas à la zone d'affichage, la zone d'affichage sera agrandie au-delà de la <a href="/fr/docs/Web/SVG/Attribute/viewBox"><code>viewBox</code></a> (la zone dans laquelle sera dessinée la <a href="/fr/docs/Web/SVG/Attribute/viewBox"><code>viewBox</code></a> sera plus petite que la zone d'affichage).</li>
-  <li><strong>slice</strong> - Mettre à l'échelle l'image tel que:
-   <ul>
-    <li>les proportions sont préservées</li>
-    <li>la zone d'affichage est entièrement remplie par la <a href="/fr/docs/Web/SVG/Attribute/viewBox"><code>viewBox</code></a></li>
-    <li>la <a href="/fr/docs/Web/SVG/Attribute/viewBox"><code>viewBox</code></a> est réduite autant que possible, tout en respectant les autres critères</li>
-   </ul>
-   Autrement dit, si les proportions du contenu ne correspondent pas à la zone d'affichage, la <a href="/fr/docs/Web/SVG/Attribute/viewBox"><code>viewBox</code></a> sera agrandie au-delà de la zone d'affichage (la zone dans laquelle sera dessinée la <a href="/fr/docs/Web/SVG/Attribute/viewBox"><code>viewBox</code></a> sera plus grande que la zone d'affichage).</li>
- </ul>
- </dd>
-</dl>
+- Alignement
 
-<h2 id="elements">Éléments</h2>
+  - : L'alignement indique s'il faut forcer une mise à l'échelle uniforme et si oui, comment faire dans le cas où le rapport largeur:hauteur de la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) ne correspond pas à celui affiché. Les différentes valeurs possibles sont:
 
-<p>Sept éléments utilisent cet attribut: <a href="/fr/docs/Web/SVG/Element/svg"><code>&lt;svg&gt;</code></a>, <a href="/fr/docs/Web/SVG/Element/symbol"><code>&lt;symbol&gt;</code></a>, <a href="/fr/docs/Web/SVG/Element/image"><code>&lt;image&gt;</code></a>, <a href="/fr/docs/Web/SVG/Element/feImage"><code>&lt;feImage&gt;</code></a>, <a href="/fr/docs/Web/SVG/Element/marker"><code>&lt;marker&gt;</code></a>, <a href="/fr/docs/Web/SVG/Element/pattern"><code>&lt;pattern&gt;</code></a>, and <a href="/fr/docs/Web/SVG/Element/view"><code>&lt;view&gt;</code></a>.</p>
+    - **none**
+      Ne pas forcer la mise à l'échelle uniforme. Étirer le contenu de manière à ce que le contenu remplisse toute la hauteur et toute la largeur affichée. _Notez que si_ `<align>` _vaut_ `none`_, alors la valeur_ `<meetOrSlice>` _est ignorée_.
+    - **xMinYMin** - Force la mise à l'échelle uniforme.
+      Aligne le côté gauche de l'élément à gauche de la zone d'affichage.
+      Aligne le côté haut de l'élément en haut de la zone d'affichage.
+    - **xMidYMin** - Force la mise à l'échelle uniforme.
+      Aligne horizontalement le centre de l'élément au milieu de la zone d'affichage.
+      Aligne le côté haut de l'élément en haut de la zone d'affichage.
+    - **xMaxYMin** - Force la mise à l'échelle uniforme.
+      Aligne le côté droit de l'élément à droite de la zone d'affichage.
+      Aligne le côté haut de l'élément en haut de la zone d'affichage.
+    - **xMinYMid** - Force la mise à l'échelle uniforme.
+      Aligne le côté gauche de l'élément à gauche de la zone d'affichage.
+      Aligne verticalement le centre de l'élément au milieu de la zone d'affichage.
+    - **xMidYMid** (_par défaut_) - Force la mise à l'échelle uniforme.
+      Aligne horizontalement le centre de l'élément au milieu de la zone d'affichage.
+      Aligne verticalement le centre de l'élément au milieu de la zone d'affichage.
+    - **xMaxYMid** - Force la mise à l'échelle uniforme.
+      Aligne le côté droit de l'élément à droite de la zone d'affichage.
+      Aligne verticalement le centre de l'élément au milieu de la zone d'affichage.
+    - **xMinYMax** - Force la mise à l'échelle uniforme.
+      Aligne le côté gauche de l'élément à gauche de la zone d'affichage.
+      Aligne le côté bas de l'élément en bas de la zone d'affichage.
+    - **xMidYMax** - Force la mise à l'échelle uniforme.
+      Aligne horizontalement le centre de l'élément au milieu de la zone d'affichage.
+      Aligne le côté bas de l'élément en bas de la zone d'affichage.
+    - **xMaxYMax** - Force la mise à l'échelle uniforme.
+      Aligne le côté droit de l'élément à droite de la zone d'affichage.
+      Aligne le côté bas de l'élément en bas de la zone d'affichage.
 
-<h3 id="feImage">feImage</h3>
+- Meet ou slice
 
-<p>Pour <a href="/fr/docs/Web/SVG/Element/feImage"><code>&lt;feImage&gt;</code></a>, <code>preserveAspectRatio</code> définit comment l'image doit être ajustée dans le rectangle défini par l'élément <code>&lt;feImage&gt;</code>.</p>
+  - : La valeur _meet_ ou _slice_ est optionnelle. Les deux valeurs possibles sont:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong>&lt;align&gt; &lt;meetOrSlice&gt;?</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>xMidYMid</code> <code>meet</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
-</table>
+    - **meet** (_par défaut_) - Mettre à l'échelle l'image tel que:
 
-<h3 id="image">image</h3>
+      - les proportions sont préservées
+      - la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est entièrement visible dans la zone d'affichage
+      - la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est agrandie autant que possible, tout en respectant les autres critères
 
-<p>Pour <a href="/fr/docs/Web/SVG/Element/feImage"><code>&lt;feImage&gt;</code></a>, <code>preserveAspectRatio</code> définit comment l'image doit être ajustée dans le rectangle défini par l'élément <code>&lt;image&gt;</code>.</p>
+      Autrement dit, si les proportions du contenu ne correspondent pas à la zone d'affichage, la zone d'affichage sera agrandie au-delà de la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) (la zone dans laquelle sera dessinée la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) sera plus petite que la zone d'affichage).
+
+    - **slice** - Mettre à l'échelle l'image tel que:
+
+      - les proportions sont préservées
+      - la zone d'affichage est entièrement remplie par la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox)
+      - la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est réduite autant que possible, tout en respectant les autres critères
+
+      Autrement dit, si les proportions du contenu ne correspondent pas à la zone d'affichage, la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) sera agrandie au-delà de la zone d'affichage (la zone dans laquelle sera dessinée la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) sera plus grande que la zone d'affichage).
+
+## Éléments
+
+Sept éléments utilisent cet attribut: [`<svg>`](/fr/docs/Web/SVG/Element/svg), [`<symbol>`](/fr/docs/Web/SVG/Element/symbol), [`<image>`](/fr/docs/Web/SVG/Element/image), [`<feImage>`](/fr/docs/Web/SVG/Element/feImage), [`<marker>`](/fr/docs/Web/SVG/Element/marker), [`<pattern>`](/fr/docs/Web/SVG/Element/pattern), and [`<view>`](/fr/docs/Web/SVG/Element/view).
+
+### feImage
+
+Pour [`<feImage>`](/fr/docs/Web/SVG/Element/feImage), `preserveAspectRatio` définit comment l'image doit être ajustée dans le rectangle défini par l'élément `<feImage>`.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong>&lt;align&gt; &lt;meetOrSlice&gt;?</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>xMidYMid</code> <code>meet</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>xMidYMid</code> <code>meet</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="marker">marker</h3>
+### image
 
-<p>Pour <a href="/fr/docs/Web/SVG/Element/marker"><code>&lt;marker&gt;</code></a>, <code>preserveAspectRatio</code> indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.</p>
+Pour [`<feImage>`](/fr/docs/Web/SVG/Element/feImage), `preserveAspectRatio` définit comment l'image doit être ajustée dans le rectangle défini par l'élément `<image>`.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong>&lt;align&gt; &lt;meetOrSlice&gt;?</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>xMidYMid</code> <code>meet</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>xMidYMid</code> <code>meet</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="pattern">pattern</h3>
+### marker
 
-<p>Pour <a href="/fr/docs/Web/SVG/Element/pattern"><code>&lt;pattern&gt;</code></a>, <code>preserveAspectRatio</code> indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.</p>
+Pour [`<marker>`](/fr/docs/Web/SVG/Element/marker), `preserveAspectRatio` indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong>&lt;align&gt; &lt;meetOrSlice&gt;?</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>xMidYMid</code> <code>meet</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>xMidYMid</code> <code>meet</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="svg">svg</h3>
+### pattern
 
-<p>Pour <a href="/fr/docs/Web/SVG/Element/svg"><code>&lt;svg&gt;</code></a>, <code>preserveAspectRatio</code> indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.</p>
+Pour [`<pattern>`](/fr/docs/Web/SVG/Element/pattern), `preserveAspectRatio` indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong>&lt;align&gt; &lt;meetOrSlice&gt;?</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>xMidYMid</code> <code>meet</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>xMidYMid</code> <code>meet</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="symbol">symbol</h3>
+### svg
 
-<p>Pour <a href="/fr/docs/Web/SVG/Element/symbol"><code>&lt;symbol&gt;</code></a>, <code>preserveAspectRatio</code> indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.</p>
+Pour [`<svg>`](/fr/docs/Web/SVG/Element/svg), `preserveAspectRatio` indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong>&lt;align&gt; &lt;meetOrSlice&gt;?</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>xMidYMid</code> <code>meet</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>xMidYMid</code> <code>meet</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="view">view</h3>
+### symbol
 
-<p>Pour <a href="/fr/docs/Web/SVG/Element/view"><code>&lt;view&gt;</code></a>, <code>preserveAspectRatio</code> indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.</p>
+Pour [`<symbol>`](/fr/docs/Web/SVG/Element/symbol), `preserveAspectRatio` indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong>&lt;align&gt; &lt;meetOrSlice&gt;?</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>xMidYMid</code> <code>meet</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>xMidYMid</code> <code>meet</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Spécification">Spécification</h2>
+### view
+
+Pour [`<view>`](/fr/docs/Web/SVG/Element/view), `preserveAspectRatio` indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#element-attrdef-feimage-preserveaspectratio", "preserveAspectRatio")}}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "coords.html#PreserveAspectRatioAttribute", "preserveAspectRatio")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "coords.html#PreserveAspectRatioAttribute", "preserveAspectRatio")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>xMidYMid</code> <code>meet</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
+
+## Spécification
+
+| Spécification                                                                                                                        | Statut                           | Commentaire         |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName("Filters 1.0", "#element-attrdef-feimage-preserveaspectratio", "preserveAspectRatio")}} | {{Spec2('Filters 1.0')}} |                     |
+| {{SpecName("SVG2", "coords.html#PreserveAspectRatioAttribute", "preserveAspectRatio")}}                 | {{Spec2("SVG2")}}         |                     |
+| {{SpecName("SVG1.1", "coords.html#PreserveAspectRatioAttribute", "preserveAspectRatio")}}             | {{Spec2("SVG1.1")}}         | Définition initiale |

@@ -3,58 +3,55 @@ title: <image>
 slug: Web/SVG/Element/image
 translation_of: Web/SVG/Element/image
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément Image SVG (&lt;image&gt;) permet d'inclure une image matricielle dans un document SVG.</p>
+L'élément Image SVG (\<image>) permet d'inclure une image matricielle dans un document SVG.
 
-<h2 id="Contexte_dUtilisation">Contexte d'Utilisation</h2>
+## Contexte d'Utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Rendu basique d'une image PNG dans un objet SVG :</p>
+Rendu basique d'une image PNG dans un objet SVG :
 
-<pre class="brush: html">&lt;svg width="100%" height="100%" viewBox="0 0 100 100"
+```html
+<svg width="100%" height="100%" viewBox="0 0 100 100"
      xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;image xlink:href="/files/2917/fxlogo.png" x="0" y="0" height="100" width="100" /&gt;
-&lt;/svg&gt;
-</pre>
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <image xlink:href="/files/2917/fxlogo.png" x="0" y="0" height="100" width="100" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Exemple",250,260)}}</p>
+{{EmbedLiveSample("Exemple",250,260)}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/SVG/Attribute#ConditionalProccessing" title="en/SVG/Attribute#ConditionalProccessing">Attributs de traitement conditionnel</a> »</li>
- <li><a href="/fr/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Attributs noyau</a> »</li>
- <li><a href="/fr/SVG/Attribute#GraphicalEvent" title="en/SVG/Attribute#GraphicalEvent">Attributs d'événement graphique</a> »</li>
- <li><a href="/fr/SVG/Attribute#XLink" title="en/SVG/Attribute#XLink">Attributs Xlink</a> »</li>
- <li><a href="/fr/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Attributs de présentation</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [Attributs de traitement conditionnel](/fr/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
+- [Attributs noyau](/fr/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Attributs d'événement graphique](/fr/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
+- [Attributs Xlink](/fr/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- [Attributs de présentation](/fr/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<ul>
- <li>{{ SVGAttr("x") }}</li>
- <li>{{ SVGAttr("y") }}</li>
- <li>{{ SVGAttr("width") }}</li>
- <li>{{ SVGAttr("height") }}</li>
- <li>{{ SVGAttr("xlink:href") }}</li>
- <li>{{ SVGAttr("preserveAspectRatio") }}</li>
-</ul>
+- {{ SVGAttr("x") }}
+- {{ SVGAttr("y") }}
+- {{ SVGAttr("width") }}
+- {{ SVGAttr("height") }}
+- {{ SVGAttr("xlink:href") }}
+- {{ SVGAttr("preserveAspectRatio") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface <code><a href="/fr/DOM/SVGImageElement" title="en/DOM/SVGImageElement">SVGImageElement</a></code>.</p>
+Cet élément implémente l'interface [`SVGImageElement`](/fr/DOM/SVGImageElement "en/DOM/SVGImageElement").
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.image")}}</p>
+{{Compat("svg.elements.image")}}

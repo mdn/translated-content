@@ -10,41 +10,50 @@ tags:
   - SVG
 translation_of: Web/SVG/Attribute/accent-height
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'attribut <strong><code>accent-height</code></strong> définit la distance entre l'origine et le haut des accents placés sur les caractères. Cette distance est mesurée dans le système de coordonnées de la police.</p>
+L'attribut **`accent-height`** définit la distance entre l'origine et le haut des accents placés sur les caractères. Cette distance est mesurée dans le système de coordonnées de la police.
 
-<p>Si cet attribut n'est pas défini, l'effet obtenu est identique à celui obtenu avec la valeur de l'attribut {{SVGAttr("ascent")}}.</p>
+Si cet attribut n'est pas défini, l'effet obtenu est identique à celui obtenu avec la valeur de l'attribut {{SVGAttr("ascent")}}.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Catégories</th>
-   <td>Aucune</td>
-  </tr>
-  <tr>
-   <th scope="row">Type de valeur</th>
-   <td><a href="/fr/docs/Web/SVG/Content_type#Length" title="https://developer.mozilla.org/en/SVG/Content_type#Number">&lt;number&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Peut être animé</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Spécification</th>
-   <td><a href="https://www.w3.org/TR/SVG/fonts.html#FontFaceElementAccentHeightAttribute">SVG 1.1 (seconde édition)</a></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Catégories</th>
+      <td>Aucune</td>
+    </tr>
+    <tr>
+      <th scope="row">Type de valeur</th>
+      <td>
+        <a
+          href="/fr/docs/Web/SVG/Content_type#Length"
+          title="https://developer.mozilla.org/en/SVG/Content_type#Number"
+          >&#x3C;number></a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Peut être animé</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Spécification</th>
+      <td>
+        <a
+          href="https://www.w3.org/TR/SVG/fonts.html#FontFaceElementAccentHeightAttribute"
+          >SVG 1.1 (seconde édition)</a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>{{page("/fr/docs/Web/SVG/Content_type","Number")}}</p>
+{{page("/fr/docs/Web/SVG/Content_type","Number")}}
 
-<h2 id="Éléments">Éléments</h2>
+## Éléments
 
-<p>On peut utiliser l'attribut <code>accent-height</code> sur les éléments suivants :</p>
+On peut utiliser l'attribut `accent-height` sur les éléments suivants :
 
-<ul>
- <li>{{SVGElement("font-face")}}</li>
-</ul>
+- {{SVGElement("font-face")}}

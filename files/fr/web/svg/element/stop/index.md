@@ -3,96 +3,74 @@ title: <stop>
 slug: Web/SVG/Element/stop
 translation_of: Web/SVG/Element/stop
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément <a href="/fr/docs/Web/SVG">SVG</a> <strong><code>&lt;stop&gt;</code></strong> définit une couleur supplémentaire dans une palette à utiliser pour un dégradé, et est contenu dans un élément {{SVGElement("linearGradient")}} ou {{SVGElement("radialGradient")}}.</p>
+L'élément [SVG](/fr/docs/Web/SVG) **`<stop>`** définit une couleur supplémentaire dans une palette à utiliser pour un dégradé, et est contenu dans un élément {{SVGElement("linearGradient")}} ou {{SVGElement("radialGradient")}}.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#Core_attributes">Attributs de base</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Presentation_attributes">Attributs de présentation</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
-</ul>
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Core_attributes)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Presentation_attributes)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("offset")}}</li>
- <li>{{SVGAttr("stop-color")}}</li>
- <li>{{SVGAttr("stop-opacity")}}</li>
-</ul>
+- {{SVGAttr("offset")}}
+- {{SVGAttr("stop-color")}}
+- {{SVGAttr("stop-opacity")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>Cet élément implémenté l'interface {{domxref("SVGStopElement")}}.</p>
+Cet élément implémenté l'interface {{domxref("SVGStopElement")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html">&lt;svg width="160" height="95" viewBox="0 0 80 40"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg width="160" height="95" viewBox="0 0 80 40"
+     xmlns="http://www.w3.org/2000/svg">
 
-  &lt;defs&gt;
-    &lt;linearGradient id="MyGradient"&gt;
-      &lt;stop offset="5%" stop-color="#F60" /&gt;
-      &lt;stop offset="95%" stop-color="#FF6" /&gt;
-    &lt;/linearGradient&gt;
-  &lt;/defs&gt;
+  <defs>
+    <linearGradient id="MyGradient">
+      <stop offset="5%" stop-color="#F60" />
+      <stop offset="95%" stop-color="#FF6" />
+    </linearGradient>
+  </defs>
 
-  &lt;!-- Contour de la zone de dessin en noir --&gt;
-  &lt;rect fill="none" stroke="black"
-        x="0.5" y="0.5" width="79" height="39"/&gt;
+  <!-- Contour de la zone de dessin en noir -->
+  <rect fill="none" stroke="black"
+        x="0.5" y="0.5" width="79" height="39"/>
 
-  &lt;!-- Le rectangle est rempli avec un dégradé linéaire --&gt;
-  &lt;rect fill="url(#MyGradient)" stroke="black" stroke-width="1"
-        x="10" y="10" width="60" height="20"/&gt;
-&lt;/svg&gt;
-</pre>
+  <!-- Le rectangle est rempli avec un dégradé linéaire -->
+  <rect fill="url(#MyGradient)" stroke="black" stroke-width="1"
+        x="10" y="10" width="60" height="20"/>
+</svg>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemple", 160, 95)}}</p>
+{{EmbedLiveSample("Exemple", 160, 95)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'pservers.html#GradientStops', '&lt;stop&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'pservers.html#GradientStops', '&lt;stop&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | Statut                   | Commentaire         |
+| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
+| {{SpecName('SVG2', 'pservers.html#GradientStops', '&lt;stop&gt;')}}     | {{Spec2('SVG2')}} |                     |
+| {{SpecName('SVG1.1', 'pservers.html#GradientStops', '&lt;stop&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.stop")}}</p>
+{{Compat("svg.elements.stop")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{SVGElement("linearGradient")}}</li>
- <li>{{SVGElement("radialGradient")}}</li>
-</ul>
+- {{SVGElement("linearGradient")}}
+- {{SVGElement("radialGradient")}}

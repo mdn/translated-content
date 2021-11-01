@@ -6,284 +6,281 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/dy
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'attribut <strong><code>dy</code></strong> indique un décalage sur l'axe y de la position d'un élément ou de son contenu.</p>
+L'attribut **`dy`** indique un décalage sur l'axe y de la position d'un élément ou de son contenu.
 
-<p>Sept éléments utilisent cet attribut: {{SVGElement('altGlyph')}}, {{SVGElement('feDropShadow')}}, {{SVGElement('feOffset')}}, {{SVGElement('glyphRef')}}, {{SVGElement('text')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}</p>
+Sept éléments utilisent cet attribut: {{SVGElement('altGlyph')}}, {{SVGElement('feDropShadow')}}, {{SVGElement('feOffset')}}, {{SVGElement('glyphRef')}}, {{SVGElement('text')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
 
-<h2>Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Lignes indiquant la position des glyphes --&gt;
-  &lt;line x1="10%" x2="10%"  y1="0"   y2="100%" /&gt;
-  &lt;line x1="0"   x2="100%" y1="30%" y2="30%"  /&gt;
-  &lt;line x1="0"   x2="100%" y1="80%" y2="80%"  /&gt;
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Lignes indiquant la position des glyphes -->
+  <line x1="10%" x2="10%"  y1="0"   y2="100%" />
+  <line x1="0"   x2="100%" y1="30%" y2="30%"  />
+  <line x1="0"   x2="100%" y1="80%" y2="80%"  />
 
-  &lt;!-- Un texte de référence --&gt;
-  &lt;text x="10%" y="30%" fill="grey"&gt;SVG&lt;/text&gt;
+  <!-- Un texte de référence -->
+  <text x="10%" y="30%" fill="grey">SVG</text>
 
-  &lt;!-- Le même texte avec un décalage sur l'axe y --&gt;
-  &lt;text dy="50%" x="10%" y="30%"&gt;SVG&lt;/text&gt;
-&lt;/svg&gt;</pre>
+  <!-- Le même texte avec un décalage sur l'axe y -->
+  <text dy="50%" x="10%" y="30%">SVG</text>
+</svg>
+```
 
-<pre class="brush: css">line {
+```css
+line {
   stroke: red;
   stroke-width: .5px;
   stroke-dasharray: 3px;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('exemple', '100%', 200)}}</p>
+{{EmbedLiveSample('exemple', '100%', 200)}}
 
-<h2 id="altGlyph">altGlyph</h2>
+## altGlyph
 
-<div class="warning">
-  <p><strong>Attention :</strong> Depuis {{SVGElement('altGlyph')}} est déprécié et ne devrait pas être utilisé.</p>
-</div>
+> **Attention :** Depuis {{SVGElement('altGlyph')}} est déprécié et ne devrait pas être utilisé.
 
-<p>Pour {{SVGElement('altGlyph')}}, s'il ne contient qu'une seule valeur, <code>dy</code> définit un décalge sur l'axe y pour tous les glyphes.</p>
+Pour {{SVGElement('altGlyph')}}, s'il ne contient qu'une seule valeur, `dy` définit un décalge sur l'axe y pour tous les glyphes.
 
-<p>S'il a plusieurs valeurs, <code>dy</code> définit un décalage sur l'axe y individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent la valeur <code>0</code>. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs restantes sont ignorées.</p>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td>Liste de <strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><em>aucune</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="feDropShadow">feDropShadow</h2>
-
-<p>Pour {{SVGElement('feDropShadow')}}, <code>dy</code> définit le décalage x de l'ombre portée. L'unité utilisée pour résoudre la valeur est définie par l'attribut {{SVGAttr('primitiveUnits')}} de l'élément {{SVGElement('filter')}}.</p>
+S'il a plusieurs valeurs, `dy` définit un décalage sur l'axe y individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent la valeur `0`. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs restantes sont ignorées.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>2</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        Liste de
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><em>aucune</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="feOffset">feOffset</h2>
+## feDropShadow
 
-<p>Pour {{SVGElement('feOffset')}}, <code>dy</code> définit le décalage x de l'élément source du filtre. L'unité utilisée pour résoudre la valeur est définie par l'attribut {{SVGAttr('primitiveUnits')}} de l'élément {{SVGElement('filter')}}.</p>
+Pour {{SVGElement('feDropShadow')}}, `dy` définit le décalage x de l'ombre portée. L'unité utilisée pour résoudre la valeur est définie par l'attribut {{SVGAttr('primitiveUnits')}} de l'élément {{SVGElement('filter')}}.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>2</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="glyphRef">glyphRef</h2>
+## feOffset
 
-<div class="warning">
-  <p><strong>Attention :</strong> Depuis SVG2 {{SVGElement('glyphRef')}} est déprécié et ne devrait pas être utilisé.</p>
-</div>
-
-<p>Pour {{SVGElement('glyphRef')}}, <code>dy</code> définit le décalage x du glyphe, dans le système métrique de la police.</p>
+Pour {{SVGElement('feOffset')}}, `dy` définit le décalage x de l'élément source du filtre. L'unité utilisée pour résoudre la valeur est définie par l'attribut {{SVGAttr('primitiveUnits')}} de l'élément {{SVGElement('filter')}}.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="text">text</h2>
+## glyphRef
 
-<p>Pour {{SVGElement('text')}}, s'il ne contient qu'une seule valeur, <code>dx</code> définit un décalage sur l'axe x pour tous les glyphes.</p>
+> **Attention :** Depuis SVG2 {{SVGElement('glyphRef')}} est déprécié et ne devrait pas être utilisé.
 
-<p>S'il a plusieurs valeurs, <code>dx</code> définit un décalage sur l'axe x individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent une valeur de <code>0</code>. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs supplémentaires sont ignorées.</p>
+Pour {{SVGElement('glyphRef')}}, `dy` définit le décalage x du glyphe, dans le système métrique de la police.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td>Liste de <strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><em>aucune</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Exemple">Exemple</h3>
+## text
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+Pour {{SVGElement('text')}}, s'il ne contient qu'une seule valeur, `dx` définit un décalage sur l'axe x pour tous les glyphes.
 
-<pre class="brush: html">&lt;svg viewBox="0 0 150 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Lignes horizontales --&gt;
-  &lt;line x1="0" x2="100%" y1="30" y2="30" /&gt;
-  &lt;line x1="0" x2="100%" y1="40" y2="40" /&gt;
-  &lt;line x1="0" x2="100%" y1="50" y2="50" /&gt;
-  &lt;line x1="0" x2="100%" y1="60" y2="60" /&gt;
+S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent une valeur de `0`. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs supplémentaires sont ignorées.
 
-  &lt;!-- Lignes verticales --&gt;
-  &lt;line x1="10" x2="10" y1="0" y2="100%" /&gt;
-  &lt;line x1="50" x2="50" y1="0" y2="100%" /&gt;
-  &lt;line x1="90" x2="90" y1="0" y2="100%" /&gt;
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        Liste de
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><em>aucune</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
 
-  &lt;!-- Le comportement change en fonction du nombre de valeurs de l'attribut --&gt;
-  &lt;text dy="20"      x="10" y="30"&gt;SVG&lt;/text&gt;
-  &lt;text dy="0 10"    x="50" y="30"&gt;SVG&lt;/text&gt;
-  &lt;text dy="0 10 20" x="90" y="30"&gt;SVG&lt;/text&gt;
-&lt;/svg&gt;</pre>
+### Exemple
 
-<pre class="brush: css">line {
+```css hidden
+html,body,svg { height:100% }
+```
+
+```html
+<svg viewBox="0 0 150 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Lignes horizontales -->
+  <line x1="0" x2="100%" y1="30" y2="30" />
+  <line x1="0" x2="100%" y1="40" y2="40" />
+  <line x1="0" x2="100%" y1="50" y2="50" />
+  <line x1="0" x2="100%" y1="60" y2="60" />
+
+  <!-- Lignes verticales -->
+  <line x1="10" x2="10" y1="0" y2="100%" />
+  <line x1="50" x2="50" y1="0" y2="100%" />
+  <line x1="90" x2="90" y1="0" y2="100%" />
+
+  <!-- Le comportement change en fonction du nombre de valeurs de l'attribut -->
+  <text dy="20"      x="10" y="30">SVG</text>
+  <text dy="0 10"    x="50" y="30">SVG</text>
+  <text dy="0 10 20" x="90" y="30">SVG</text>
+</svg>
+```
+
+```css
+line {
   stroke: red;
   stroke-width: .5px;
   stroke-dasharray: 3px;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('text', '100%', 100)}}</p>
+{{EmbedLiveSample('text', '100%', 100)}}
 
-<h2 id="tref">tref</h2>
+## tref
 
-<div class="warning">
-  <p><strong>Attention :</strong> Depuis SVG2 {{SVGElement('tref')}} est déprécié et ne devrait pas être utilisé.</p>
-</div>
+> **Attention :** Depuis SVG2 {{SVGElement('tref')}} est déprécié et ne devrait pas être utilisé.
 
-<p>Pour {{SVGElement('tref')}}, s'il ne contient qu'une seule valeur, <code>dx</code> définit un décalage sur l'axe x pour tous les glyphes.</p>
+Pour {{SVGElement('tref')}}, s'il ne contient qu'une seule valeur, `dx` définit un décalage sur l'axe x pour tous les glyphes.
 
-<p>S'il a plusieurs valeurs, <code>dx</code> définit un décalage sur l'axe x individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent une valeur de <code>0</code>. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs supplémentaires sont ignorées.</p>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td>Liste de <strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><em>aucune</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="tspan">tspan</h2>
-
-<p>Pour {{SVGElement('tspan')}}, s'il ne contient qu'une seule valeur, <code>dx</code> définit un décalage sur l'axe x pour tous les glyphes.</p>
-
-<p>S'il a plusieurs valeurs, <code>dx</code> définit un décalage sur l'axe x individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent une valeur de <code>0</code>. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs supplémentaires sont ignorées.</p>
+S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent une valeur de `0`. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs supplémentaires sont ignorées.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td>Liste de <strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><em>aucune</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        Liste de
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><em>aucune</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Spécifications">Spécifications</h2>
+## tspan
+
+Pour {{SVGElement('tspan')}}, s'il ne contient qu'une seule valeur, `dx` définit un décalage sur l'axe x pour tous les glyphes.
+
+S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent une valeur de `0`. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs supplémentaires sont ignorées.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Filters 1.0', '#element-attrdef-fedropshadow-dy', 'dy') }}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-   <td>Définition initiale pour <code>&lt;feDropShadow&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Filters 1.0', '#element-attrdef-feoffset-dy', 'dy') }}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-   <td>Définition pour <code>&lt;feOffset&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "text.html#TextElementDYAttribute", "dy")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Définition pour <code>&lt;text&gt;</code> et <code>&lt;tspan&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feOffsetDyAttribute", "dy")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale pour <code>&lt;feOffset&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#AltGlyphElementDYAttribute", "dy")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale pour <code>&lt;altGlyph&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#GlyphRefElementDYAttribute", "dy")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale pour <code>&lt;glyphRef&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#TextElementDYAttribute", "dy")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale pour <code>&lt;text&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#TSpanElementDYAttribute", "dy")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale pour <code>&lt;tref&gt;</code> et <code>&lt;tspan&gt;</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        Liste de
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><em>aucune</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
+
+## Spécifications
+
+| Spécification                                                                                    | Statut                           | Commentaire                                    |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------- |
+| {{ SpecName('Filters 1.0', '#element-attrdef-fedropshadow-dy', 'dy') }} | {{Spec2('Filters 1.0')}} | Définition initiale pour `<feDropShadow>`      |
+| {{ SpecName('Filters 1.0', '#element-attrdef-feoffset-dy', 'dy') }}         | {{Spec2('Filters 1.0')}} | Définition pour `<feOffset>`                   |
+| {{SpecName("SVG2", "text.html#TextElementDYAttribute", "dy")}}             | {{Spec2("SVG2")}}         | Définition pour `<text>` et `<tspan>`          |
+| {{SpecName("SVG1.1", "filters.html#feOffsetDyAttribute", "dy")}}             | {{Spec2("SVG1.1")}}         | Définition initiale pour `<feOffset>`          |
+| {{SpecName("SVG1.1", "text.html#AltGlyphElementDYAttribute", "dy")}}     | {{Spec2("SVG1.1")}}         | Définition initiale pour `<altGlyph>`          |
+| {{SpecName("SVG1.1", "text.html#GlyphRefElementDYAttribute", "dy")}}     | {{Spec2("SVG1.1")}}         | Définition initiale pour `<glyphRef>`          |
+| {{SpecName("SVG1.1", "text.html#TextElementDYAttribute", "dy")}}             | {{Spec2("SVG1.1")}}         | Définition initiale pour `<text>`              |
+| {{SpecName("SVG1.1", "text.html#TSpanElementDYAttribute", "dy")}}         | {{Spec2("SVG1.1")}}         | Définition initiale pour `<tref>` et `<tspan>` |

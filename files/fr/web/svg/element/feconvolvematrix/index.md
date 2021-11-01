@@ -7,161 +7,136 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feConvolveMatrix
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>La primitive de filtre <a href="/fr/docs/Web/SVG">SVG</a> <strong><code>&lt;feConvolveMatrix&gt;</code></strong> applique une matrice de convolution d'effet de filtre. Une convolution combine les pixels de l'image en entrée avec ceux voisins pour donner une image résultante. On peut obtenir une grande variété d'opérations d'imagerie à l'aide de convolutions, dont le flou, la détection de bord, la netteté, l'estampage et le chanfreinage.</p>
+La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feConvolveMatrix>`** applique une matrice de convolution d'effet de filtre. Une convolution combine les pixels de l'image en entrée avec ceux voisins pour donner une image résultante. On peut obtenir une grande variété d'opérations d'imagerie à l'aide de convolutions, dont le flou, la détection de bord, la netteté, l'estampage et le chanfreinage.
 
-<p>Une convolution de matrice se fonde sur une matrice n par m (le noyau de convolution), qui décrit la façon dont une valeur de pixel donné de l'image en entrée est combinée avec celles des pixels de son voisinage pour aboutir à une valeur de pixel résultante. Chaque pixel du résultat est déterminé par l'application de la matrice noyau sur le pixel source correspondant et ses pixels voisins. La formule de convolution de base, appliquée à chaque valeur de couleur d'un pixel donné, est :</p>
+Une convolution de matrice se fonde sur une matrice n par m (le noyau de convolution), qui décrit la façon dont une valeur de pixel donné de l'image en entrée est combinée avec celles des pixels de son voisinage pour aboutir à une valeur de pixel résultante. Chaque pixel du résultat est déterminé par l'application de la matrice noyau sur le pixel source correspondant et ses pixels voisins. La formule de convolution de base, appliquée à chaque valeur de couleur d'un pixel donné, est :
 
-<p>COLOR<sub>X,Y</sub> = ( <br>
-               SUM <sub>I=0 to [<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderY</a>-1]</sub> { <br>
-                 SUM <sub>J=0 to [<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderX</a>-1]</sub> { <br>
-                   SOURCE <sub>X-<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetXAttribute">targetX</a>+J, Y-<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetYAttribute">targetY</a>+I</sub> *  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementKernelMatrixAttribute">kernelMatrix</a><sub><a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderX</a>-J-1,  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderY</a>-I-1</sub> <br>
-                 } <br>
-               } <br>
-             ) /  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementDivisorAttribute">divisor</a> +  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementBiasAttribute">bias</a> * ALPHA<sub>X,Y</sub> </p>
+COLOR<sub>X,Y</sub> = ( 
+              SUM <sub>I=0 to [<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderY</a>-1]</sub> { 
+                SUM <sub>J=0 to [<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderX</a>-1]</sub> { 
+                  SOURCE <sub>X-<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetXAttribute">targetX</a>+J, Y-<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetYAttribute">targetY</a>+I</sub> \*  [kernelMatrix](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementKernelMatrixAttribute)<sub><a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderX</a>-J-1,  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderY</a>-I-1</sub> 
+                } 
+              } 
+            ) /  [divisor](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementDivisorAttribute) +  [bias](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementBiasAttribute) \* ALPHA<sub>X,Y</sub>
 
-<p>dans laquelle</p>
+dans laquelle
 
-<ul>
- <li>"orderX" et "orderY" représentent les valeurs X et Y pour l'attribut {{SVGAttr("order")}},</li>
- <li>"targetX" représente la valeur de l'attribut {{SVGAttr("targetX")}},</li>
- <li>"targetY" la valeur de l'attribut {{SVGAttr("targetY")}},</li>
- <li>"kernelMatrix" celle de l'attribut {{SVGAttr("kernelMatrix")}},</li>
- <li>"divisor" celle de l'attribut {{SVGAttr("divisor")}}</li>
- <li>et "bias" la valeur de l'attribut {{SVGAttr("bias")}}.</li>
-</ul>
+- "orderX" et "orderY" représentent les valeurs X et Y pour l'attribut {{SVGAttr("order")}},
+- "targetX" représente la valeur de l'attribut {{SVGAttr("targetX")}},
+- "targetY" la valeur de l'attribut {{SVGAttr("targetY")}},
+- "kernelMatrix" celle de l'attribut {{SVGAttr("kernelMatrix")}},
+- "divisor" celle de l'attribut {{SVGAttr("divisor")}}
+- et "bias" la valeur de l'attribut {{SVGAttr("bias")}}.
 
-<p>Remarquez dans la formule ci-dessus que les valeurs de la matrice noyau sont appliquées de telle manière que cette matrice noyau soit tournée de 180 degrés par rapport aux images de source et de destination, pour correspondre avec la théorie de la convolution telle qu'elle est décrite dans de nombreux ouvrages sur l'infographie.</p>
+Remarquez dans la formule ci-dessus que les valeurs de la matrice noyau sont appliquées de telle manière que cette matrice noyau soit tournée de 180 degrés par rapport aux images de source et de destination, pour correspondre avec la théorie de la convolution telle qu'elle est décrite dans de nombreux ouvrages sur l'infographie.
 
-<p>Pour illustrer, supposons que l'on ait une image en entrée, de 5x5 pixels, dont les valeurs de couleur pour l'un des canaux de couleur sont les suivantes:</p>
+Pour illustrer, supposons que l'on ait une image en entrée, de 5x5 pixels, dont les valeurs de couleur pour l'un des canaux de couleur sont les suivantes:
 
-<pre>0    20  40 235 235
-100 120 140 235 235
-200 220 240 235 235
-225 225 255 255 255
-225 225 255 255 255
-</pre>
+    0    20  40 235 235
+    100 120 140 235 235
+    200 220 240 235 235
+    225 225 255 255 255
+    225 225 255 255 255
 
-<p>et que l'on définit un noyau de convolution de 3x3 comme ceci:</p>
+et que l'on définit un noyau de convolution de 3x3 comme ceci:
 
-<pre>1 2 3
-4 5 6
-7 8 9
-</pre>
+    1 2 3
+    4 5 6
+    7 8 9
 
-<p>Concentrons-nous sur la valeur de couleur de la deuxième ligne, deuxième colonne (la valeur du pixel source est 120). En supposant le cas le plus simple (quand le quadrillage de pixels de l'image source s'aligne parfaitement avec celui du noyau) et en supposant les valeurs par défaut des attributs <code>divisor</code>, <code>targetX</code> et <code>targetY</code>, alors la valeur de couleur résultante sera :</p>
+Concentrons-nous sur la valeur de couleur de la deuxième ligne, deuxième colonne (la valeur du pixel source est 120). En supposant le cas le plus simple (quand le quadrillage de pixels de l'image source s'aligne parfaitement avec celui du noyau) et en supposant les valeurs par défaut des attributs `divisor`, `targetX` et `targetY`, alors la valeur de couleur résultante sera :
 
-<pre>(9*  0 + 8* 20 + 7* 40 +
- 6*100 + 5*120 + 4*140 +
- 3*200 + 2*220 + 1*240) / (9+8+7+6+5+4+3+2+1)</pre>
+    (9*  0 + 8* 20 + 7* 40 +
+     6*100 + 5*120 + 4*140 +
+     3*200 + 2*220 + 1*240) / (9+8+7+6+5+4+3+2+1)
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_base">Attributs de base</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_présentation">Attributs de présentation</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_primitives_de_filtre">Attributs de primitive de filtre</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
-</ul>
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation)
+- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#Attributs_de_primitives_de_filtre)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<ul>
- <li>{{SVGAttr("in")}}</li>
- <li>{{SVGAttr("order")}}</li>
- <li>{{SVGAttr("kernelMatrix")}}</li>
- <li>{{SVGAttr("divisor")}}</li>
- <li>{{SVGAttr("bias")}}</li>
- <li>{{SVGAttr("targetX")}}</li>
- <li>{{SVGAttr("targetY")}}</li>
- <li>{{SVGAttr("edgeMode")}}</li>
- <li>{{SVGAttr("kernelUnitLength")}}</li>
- <li>{{SVGAttr("preserveAlpha")}}</li>
-</ul>
+- {{SVGAttr("in")}}
+- {{SVGAttr("order")}}
+- {{SVGAttr("kernelMatrix")}}
+- {{SVGAttr("divisor")}}
+- {{SVGAttr("bias")}}
+- {{SVGAttr("targetX")}}
+- {{SVGAttr("targetY")}}
+- {{SVGAttr("edgeMode")}}
+- {{SVGAttr("kernelUnitLength")}}
+- {{SVGAttr("preserveAlpha")}}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface {{domxref("SVGFEConvolveMatrixElement")}}.</p>
+Cet élément implémente l'interface {{domxref("SVGFEConvolveMatrixElement")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html">&lt;svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;defs&gt;
-    &lt;filter id="emboss"&gt;
-      &lt;feConvolveMatrix
+```html
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <filter id="emboss">
+      <feConvolveMatrix
           kernelMatrix="3 0 0
                         0 0 0
-                        0 0 -3"/&gt;
-    &lt;/filter&gt;
-  &lt;/defs&gt;
+                        0 0 -3"/>
+    </filter>
+  </defs>
 
-  &lt;image xlink:href="/files/12668/MDN.svg" x="0" y="0"
-      height="200" width="200" style="filter:url(#emboss);" /&gt;
-&lt;/svg&gt;</pre>
+  <image xlink:href="/files/12668/MDN.svg" x="0" y="0"
+      height="200" width="200" style="filter:url(#emboss);" />
+</svg>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemple", 200, 210)}}</p>
+{{EmbedLiveSample("Exemple", 200, 210)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#feConvolveMatrixElement", "&lt;feConvolveMatrix&gt;")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feConvolveMatrixElement", "&lt;feConvolveMatrix&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | Statut                           | Commentaire         |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName("Filters 1.0", "#feConvolveMatrixElement", "&lt;feConvolveMatrix&gt;")}}         | {{Spec2("Filters 1.0")}} |                     |
+| {{SpecName("SVG1.1", "filters.html#feConvolveMatrixElement", "&lt;feConvolveMatrix&gt;")}} | {{Spec2("SVG1.1")}}         | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.feConvolveMatrix")}}</p>
+{{Compat("svg.elements.feConvolveMatrix")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{SVGElement("filter")}}</li>
- <li>{{SVGElement("animate")}}</li>
- <li>{{SVGElement("set")}}</li>
- <li>{{SVGElement("feBlend")}}</li>
- <li>{{SVGElement("feColorMatrix")}}</li>
- <li>{{SVGElement("feComponentTransfer")}}</li>
- <li>{{SVGElement("feComposite")}}</li>
- <li>{{SVGElement("feDiffuseLighting")}}</li>
- <li>{{SVGElement("feDisplacementMap")}}</li>
- <li>{{SVGElement("feFlood")}}</li>
- <li>{{SVGElement("feGaussianBlur")}}</li>
- <li>{{SVGElement("feImage")}}</li>
- <li>{{SVGElement("feMerge")}}</li>
- <li>{{SVGElement("feMorphology")}}</li>
- <li>{{SVGElement("feOffset")}}</li>
- <li>{{SVGElement("feSpecularLighting")}}</li>
- <li>{{SVGElement("feTile")}}</li>
- <li>{{SVGElement("feTurbulence")}}</li>
- <li><a href="/fr/docs/Web/SVG/Tutoriel/filtres">Tutoriel SVG: Filtres</a></li>
-</ul>
+- {{SVGElement("filter")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("set")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feMorphology")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres)

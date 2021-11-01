@@ -4,163 +4,145 @@ slug: Web/SVG/Tutorial/Basic_Shapes
 translation_of: Web/SVG/Tutorial/Basic_Shapes
 original_slug: Web/SVG/Tutoriel/Formes_de_base
 ---
-<p>{{PreviousNext("Web/SVG/Tutorial/Positions","Web/SVG/Tutorial/Paths")}}</p>
+{{PreviousNext("Web/SVG/Tutorial/Positions","Web/SVG/Tutorial/Paths")}}
 
-<p>Il existe tout un ensemble de formes de base utilisées pour faire du dessin via SVG. Le but de ces formes s'avère assez transparent si on regarde attentivement les noms de chaque élément. Des attributs permettent de configurer leur position et leur taille, mais vous pourrez retrouver les détails de chaque élément avec tous ses attributs à <a href="/fr/docs/Web/SVG/Element">la page des références SVG</a>. Nous nous contenterons ici de couvrir les fonctions de base qui nous sont nécessaires, car elles sont utilisées dans la plupart des documents SVG.</p>
+Il existe tout un ensemble de formes de base utilisées pour faire du dessin via SVG. Le but de ces formes s'avère assez transparent si on regarde attentivement les noms de chaque élément. Des attributs permettent de configurer leur position et leur taille, mais vous pourrez retrouver les détails de chaque élément avec tous ses attributs à [la page des références SVG](/fr/docs/Web/SVG/Element). Nous nous contenterons ici de couvrir les fonctions de base qui nous sont nécessaires, car elles sont utilisées dans la plupart des documents SVG.
 
-<h2 id="basic_shapes">Formes de base</h2>
+## Formes de base
 
-<p>Pour insérer une forme, vous devez ajouter un élément dans un document. Des éléments différents correspondent à des formes différentes et ont des attributs différents pour décrire leur taille et leur position. Certaines déclarations sont très fortement redondantes en ce qu'elles peuvent être créées par d'autres formes, mais elles sont toutes là de manière à faciliter votre vie et à rendre le document SVG aussi court et lisible que possible. Toutes les formes de bases sont affichées sur l'image de gauche. Le code pour générer tout cela ressemble à cela :</p>
+Pour insérer une forme, vous devez ajouter un élément dans un document. Des éléments différents correspondent à des formes différentes et ont des attributs différents pour décrire leur taille et leur position. Certaines déclarations sont très fortement redondantes en ce qu'elles peuvent être créées par d'autres formes, mais elles sont toutes là de manière à faciliter votre vie et à rendre le document SVG aussi court et lisible que possible. Toutes les formes de bases sont affichées sur l'image de gauche. Le code pour générer tout cela ressemble à cela :
 
-<p><img alt="" src="shapes.png"></p>
+![](shapes.png)
 
-<pre class="brush:xml">
-&lt;?xml version="1.0" standalone="no"?&gt;
-&lt;svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg"&gt;
+```xml
+<?xml version="1.0" standalone="no"?>
+<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
 
-  &lt;rect x="10" y="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/&gt;
-  &lt;rect x="60" y="10" rx="10" ry="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/&gt;
+  <rect x="10" y="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
+  <rect x="60" y="10" rx="10" ry="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
 
-  &lt;circle cx="25" cy="75" r="20" stroke="red" fill="transparent" stroke-width="5"/&gt;
-  &lt;ellipse cx="75" cy="75" rx="20" ry="5" stroke="red" fill="transparent" stroke-width="5"/&gt;
+  <circle cx="25" cy="75" r="20" stroke="red" fill="transparent" stroke-width="5"/>
+  <ellipse cx="75" cy="75" rx="20" ry="5" stroke="red" fill="transparent" stroke-width="5"/>
 
-  &lt;line x1="10" x2="50" y1="110" y2="150" stroke="orange" stroke-width="5"/&gt;
-  &lt;polyline points="60 110 65 120 70 115 75 130 80 125 85 140 90 135 95 150 100 145"
-      stroke="orange" fill="transparent" stroke-width="5"/&gt;
+  <line x1="10" x2="50" y1="110" y2="150" stroke="orange" stroke-width="5"/>
+  <polyline points="60 110 65 120 70 115 75 130 80 125 85 140 90 135 95 150 100 145"
+      stroke="orange" fill="transparent" stroke-width="5"/>
 
-  &lt;polygon points="50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180"
-      stroke="green" fill="transparent" stroke-width="5"/&gt;
+  <polygon points="50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180"
+      stroke="green" fill="transparent" stroke-width="5"/>
 
-  &lt;path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/&gt;
-&lt;/svg&gt;
-</pre>
+  <path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/>
+</svg>
+```
 
-<div class="note">
-  <p><strong>Note :</strong> les attributs <code>stroke</code>, <code>stroke-width</code> et <code>fill</code> sont détaillés plus loin dans ce tutoriel.</p>
-</div>
+> **Note :** les attributs `stroke`, `stroke-width` et `fill` sont détaillés plus loin dans ce tutoriel.
 
-<h3 id="rectangle">Rectangle</h3>
+### Rectangle
 
-<p>L'élément <a href="/fr/docs/Web/SVG/Element/rect"><code>&lt;rect&gt;</code></a> permet de dessiner des rectangles. Il existe 6 attributs de base qui contrôlent la position et la forme du rectangle à l'écran. L'image précédente affichait 2 rectangles, ce qui est un peu répétitif. Celui de droite possède des attributs <code>rx</code> et <code>ry</code> définis, ce qui lui donne des coins arrondis. Si ces attributs ne sont pas définis, leur valeur par défaut est de 0, ce qui a pour résultats d'afficher un rectangle avec des angles droits.</p>
+L'élément [`<rect>`](/fr/docs/Web/SVG/Element/rect) permet de dessiner des rectangles. Il existe 6 attributs de base qui contrôlent la position et la forme du rectangle à l'écran. L'image précédente affichait 2 rectangles, ce qui est un peu répétitif. Celui de droite possède des attributs `rx` et `ry` définis, ce qui lui donne des coins arrondis. Si ces attributs ne sont pas définis, leur valeur par défaut est de 0, ce qui a pour résultats d'afficher un rectangle avec des angles droits.
 
-<pre class="brush:xml">
-&lt;rect x="10" y="10" width="30" height="30"/&gt;
-&lt;rect x="60" y="10" rx="10" ry="10" width="30" height="30"/&gt;
-</pre>
+```xml
+<rect x="10" y="10" width="30" height="30"/>
+<rect x="60" y="10" rx="10" ry="10" width="30" height="30"/>
+```
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Position du coin supérieur gauche du rectangle sur l'axe horizontal.</dd>
- <dt><code>y</code></dt>
- <dd>Position du coin supérieur gauche sur l'axe vertical.</dd>
- <dt><code>width</code></dt>
- <dd>Largeur du rectangle.</dd>
- <dt><code>height</code></dt>
- <dd>Hauteur du rectangle.</dd>
- <dt><code>rx</code></dt>
- <dd>Rayon x des coins du rectangle.</dd>
- <dt><code>ry</code></dt>
- <dd>Rayon y des coins du rectangle.</dd>
-</dl>
+- `x`
+  - : Position du coin supérieur gauche du rectangle sur l'axe horizontal.
+- `y`
+  - : Position du coin supérieur gauche sur l'axe vertical.
+- `width`
+  - : Largeur du rectangle.
+- `height`
+  - : Hauteur du rectangle.
+- `rx`
+  - : Rayon x des coins du rectangle.
+- `ry`
+  - : Rayon y des coins du rectangle.
 
-<h3 id="circle">Cercle</h3>
+### Cercle
 
-<p>L'élément <a href="/fr/docs/Web/SVG/Element/circle"><code>&lt;circle&gt;</code></a> permet de dessiner un cercle à l'écran. Seuls 3 attributs peuvent être définis pour cet élément.</p>
+L'élément [`<circle>`](/fr/docs/Web/SVG/Element/circle) permet de dessiner un cercle à l'écran. Seuls 3 attributs peuvent être définis pour cet élément.
 
-<pre class="brush:xml">
-&lt;circle cx="25" cy="75" r="20"/&gt;
-</pre>
+```xml
+<circle cx="25" cy="75" r="20"/>
+```
 
-<dl>
- <dt><code>r</code></dt>
- <dd>Rayon du cercle.</dd>
- <dt><code>cx</code></dt>
- <dd>Position du centre du cercle sur l'axe des abscisses.</dd>
- <dt><code>cy</code></dt>
- <dd>Position du centre du cercle sur l'axe des ordonnées.</dd>
-</dl>
+- `r`
+  - : Rayon du cercle.
+- `cx`
+  - : Position du centre du cercle sur l'axe des abscisses.
+- `cy`
+  - : Position du centre du cercle sur l'axe des ordonnées.
 
-<h3 id="ellipses">Ellipse</h3>
+### Ellipse
 
-<p>L'élément <a href="/fr/docs/Web/SVG/Element/ellipse"><code>&lt;ellipse&gt;</code></a> permet de dessiner des ellipses, il s'agit d'une sorte de cercles, où l'on peut modifier les rayons x et y séparément l'un de l'autre (les matheux appellent ces rayons le grand axe et le petit axe).</p>
+L'élément [`<ellipse>`](/fr/docs/Web/SVG/Element/ellipse) permet de dessiner des ellipses, il s'agit d'une sorte de cercles, où l'on peut modifier les rayons x et y séparément l'un de l'autre (les matheux appellent ces rayons le grand axe et le petit axe).
 
-<pre class="brush:xml">
-&lt;ellipse cx="75" cy="75" rx="20" ry="5"/&gt;
-</pre>
+```xml
+<ellipse cx="75" cy="75" rx="20" ry="5"/>
+```
 
-<dl>
- <dt><code>rx</code></dt>
- <dd>Rayon x de l'ellipse.</dd>
- <dt><code>ry</code></dt>
- <dd>Rayon y de l'ellipse.</dd>
- <dt><code>cx</code></dt>
- <dd>Position du centre de l'ellipse sur l'axe des abscisses.</dd>
- <dt><code>cy</code></dt>
- <dd>Position du centre de l'ellipse sur l'axe des ordonnées.</dd>
-</dl>
+- `rx`
+  - : Rayon x de l'ellipse.
+- `ry`
+  - : Rayon y de l'ellipse.
+- `cx`
+  - : Position du centre de l'ellipse sur l'axe des abscisses.
+- `cy`
+  - : Position du centre de l'ellipse sur l'axe des ordonnées.
 
-<h3 id="line">Ligne</h3>
+### Ligne
 
-<p>L'élément SVG <a href="/fr/docs/Web/SVG/Element/line"><code>&lt;line&gt;</code></a> correspond à une portion de droite tracée entre 2 points.</p>
+L'élément SVG [`<line>`](/fr/docs/Web/SVG/Element/line) correspond à une portion de droite tracée entre 2 points.
 
-<pre class="brush:xml">
-&lt;line x1="10" x2="50" y1="110" y2="150"/&gt;
-</pre>
+```xml
+<line x1="10" x2="50" y1="110" y2="150"/>
+```
 
-<dl>
- <dt><code>x1</code></dt>
- <dd>Position horizontale du premier point.</dd>
- <dt><code>x2</code></dt>
- <dd>Position horizontale du deuxième point.</dd>
- <dt><code>y1</code></dt>
- <dd>Position verticale du premier point.</dd>
- <dt><code>y2</code></dt>
- <dd>Position verticale du deuxième point.</dd>
-</dl>
+- `x1`
+  - : Position horizontale du premier point.
+- `x2`
+  - : Position horizontale du deuxième point.
+- `y1`
+  - : Position verticale du premier point.
+- `y2`
+  - : Position verticale du deuxième point.
 
-<h3 id="polyline">Ligne brisée</h3>
+### Ligne brisée
 
-<p>Les lignes brisées, aussi appelées lignes polygonales, sont définies par l'élément <a href="/fr/docs/Web/SVG/Element/polyline"><code>&lt;polyline&gt;</code></a> en SVG. Elles sont constituées d'un ensemble de lignes droites connectées entre elles, donc d'un ensemble de points se reliant entre eux suivant un ordre défini. Comme ce lot de points peut être assez conséquent à déclarer, un seul attribut est utilisé pour déclarer l'ensemble des points :</p>
+Les lignes brisées, aussi appelées lignes polygonales, sont définies par l'élément [`<polyline>`](/fr/docs/Web/SVG/Element/polyline) en SVG. Elles sont constituées d'un ensemble de lignes droites connectées entre elles, donc d'un ensemble de points se reliant entre eux suivant un ordre défini. Comme ce lot de points peut être assez conséquent à déclarer, un seul attribut est utilisé pour déclarer l'ensemble des points :
 
-<pre class="brush:xml;">
-&lt;polyline points="60, 110 65, 120 70, 115 75, 130 80, 125 85, 140 90, 135 95, 150 100, 145"/&gt;
-</pre>
+```xml
+<polyline points="60, 110 65, 120 70, 115 75, 130 80, 125 85, 140 90, 135 95, 150 100, 145"/>
+```
 
-<dl>
- <dt><code>points</code></dt>
- <dd>Une liste de points, chaque paire de nombres (entiers positifs) correspondent aux coordonnées x et y de chaque point. Chaque position x est séparée de la position y par une virgule, un espace, un saut de ligne. Chaque point est séparé du suivant en utilisant un caractère qui n'est pas celui utilisé pour séparer les coordonnées. Exemple : points="100,10 190,78 160,198 40,198 10,78" ou points="100 10,190 78,160 198,40 198,10 78"</dd>
-</dl>
+- `points`
+  - : Une liste de points, chaque paire de nombres (entiers positifs) correspondent aux coordonnées x et y de chaque point. Chaque position x est séparée de la position y par une virgule, un espace, un saut de ligne. Chaque point est séparé du suivant en utilisant un caractère qui n'est pas celui utilisé pour séparer les coordonnées. Exemple : points="100,10 190,78 160,198 40,198 10,78" ou points="100 10,190 78,160 198,40 198,10 78"
 
-<h3 id="polygon">Polygone</h3>
+### Polygone
 
-<p>L'élément <a href="/fr/docs/Web/SVG/Element/polygon"><code>&lt;polygon&gt;</code></a> fonctionne de façon semblable à l'élément <code>&lt;polyline&gt;</code>. Toutefois, pour les polygones, le chemin de cette ligne retourne automatiquement au point de départ, créant ainsi une forme fermée.</p>
+L'élément [`<polygon>`](/fr/docs/Web/SVG/Element/polygon) fonctionne de façon semblable à l'élément `<polyline>`. Toutefois, pour les polygones, le chemin de cette ligne retourne automatiquement au point de départ, créant ainsi une forme fermée.
 
-<div class="note">
-<p><strong>Note :</strong> Il est à noter que le rectangle est un type de polygone particulier. Il est donc possible, pour des besoins de flexibilité, de déclarer un rectangle en utilisant l'élément <code>&lt;polygon&gt;</code>.</p>
-</div>
+> **Note :** Il est à noter que le rectangle est un type de polygone particulier. Il est donc possible, pour des besoins de flexibilité, de déclarer un rectangle en utilisant l'élément `<polygon>`.
 
-<pre class="brush:xml;">
-&lt;polygon points="50, 160 55, 180 70, 180 60, 190 65, 205 50, 195 35, 205 40, 190 30, 180 45, 180"/&gt;
-</pre>
+```xml
+<polygon points="50, 160 55, 180 70, 180 60, 190 65, 205 50, 195 35, 205 40, 190 30, 180 45, 180"/>
+```
 
-<dl>
- <dt>points</dt>
- <dd>Idem que l'attribut <code>points</code> de l'élément <code>&lt;polyline&gt;</code>.</dd>
-</dl>
+- points
+  - : Idem que l'attribut `points` de l'élément `<polyline>`.
 
-<h3 id="path">Chemin</h3>
+### Chemin
 
-<p>L'élément pour tracer les chemins, <a href="/fr/docs/Web/SVG/Tutorial/Paths"><code>&lt;path&gt;</code></a>, est sûrement la forme la plus généraliste qui peut être utilisée en SVG. Avec un élément <code>&lt;path&gt;</code>, vous pouvez dessiner un rectangle (avec ou sans coins arrondis), des cercles, des ellipses, des lignes brisées et des polygones. De manière plus basique, il est aussi possible de dessiner d'autres types de formes, comme des courbes de Bézier, des paraboles, et bien plus encore.</p>
+L'élément pour tracer les chemins, [`<path>`](/fr/docs/Web/SVG/Tutorial/Paths), est sûrement la forme la plus généraliste qui peut être utilisée en SVG. Avec un élément `<path>`, vous pouvez dessiner un rectangle (avec ou sans coins arrondis), des cercles, des ellipses, des lignes brisées et des polygones. De manière plus basique, il est aussi possible de dessiner d'autres types de formes, comme des courbes de Bézier, des paraboles, et bien plus encore.
 
-<p>Pour cette raison, l'élément <code>&lt;path&gt;</code> fera l'objet du <a href="/fr/docs/Web/SVG/Tutorial/Paths">prochain chapitre</a> de ce tutoriel, mais pour le moment, nous allons uniquement voir comment définir cet élément.</p>
+Pour cette raison, l'élément `<path>` fera l'objet du [prochain chapitre](/fr/docs/Web/SVG/Tutorial/Paths) de ce tutoriel, mais pour le moment, nous allons uniquement voir comment définir cet élément.
 
-<pre class="brush:xml;">
-&lt;path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/&gt;
-</pre>
+```xml
+<path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/>
+```
 
-<dl>
- <dt><code>d</code></dt>
- <dd>Un ensemble d'informations définissant le chemin à dessiner. Pour en savoir plus, consultez <a href="/fr/docs/Web/SVG/Tutorial/Paths">la section sur les chemins</a>.</dd>
-</dl>
+- `d`
+  - : Un ensemble d'informations définissant le chemin à dessiner. Pour en savoir plus, consultez [la section sur les chemins](/fr/docs/Web/SVG/Tutorial/Paths).
 
-<div>{{PreviousNext("Web/SVG/Tutorial/Positions","Web/SVG/Tutorial/Paths")}}</div>
+{{PreviousNext("Web/SVG/Tutorial/Positions","Web/SVG/Tutorial/Paths")}}

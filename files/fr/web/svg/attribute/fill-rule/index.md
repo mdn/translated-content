@@ -6,155 +6,146 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/fill-rule
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'attribut <strong><code>fill-rule</code></strong> définit l'algorithme à utiliser pour déterminer les parties qui sont considérées <em>à l'intérieur</em> de la forme.</p>
+L'attribut **`fill-rule`** définit l'algorithme à utiliser pour déterminer les parties qui sont considérées _à l'intérieur_ de la forme.
 
-<div class="note">
-  <p><strong>Note :</strong> <code>fill-rule</code> est un attribut de présentation et peut donc être utilisé comme propriété CSS.</p>
-</div>
+> **Note :** `fill-rule` est un attribut de présentation et peut donc être utilisé comme propriété CSS.
 
-<p>Cet attribut peut être appliqué à n'importe quel élément mais n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}</p>
+Cet attribut peut être appliqué à n'importe quel élément mais n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
 
-<h2>Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Valeur par défaut pour fill-rule --&gt;
-  &lt;polygon fill-rule="nonzero" stroke="red"
-   points="50,0 21,90 98,35 2,35 79,90"/&gt;
+```html
+<svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Valeur par défaut pour fill-rule -->
+  <polygon fill-rule="nonzero" stroke="red"
+   points="50,0 21,90 98,35 2,35 79,90"/>
 
-  &lt;!--
+  <!--
   Les points au centre de la forme ont 2
   segments (matérialisés par le trait rouge)
   Avec la règle evenodd, ils sont considérés en
   dehors de la forme, et l'intérieur de l'étoile
   est donc vide.
-  --&gt;
-  &lt;polygon fill-rule="evenodd" stroke="red"
-   points="150,0 121,90 198,35 102,35 179,90"/&gt;
-&lt;/svg&gt;</pre>
+  -->
+  <polygon fill-rule="evenodd" stroke="red"
+   points="150,0 121,90 198,35 102,35 179,90"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample('exemple', '100%', 200)}}</p>
+{{EmbedLiveSample('exemple', '100%', 200)}}
 
-<h2 id="Usage">Usage</h2>
+## Usage
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><code>nonzero</code> | <code>evenodd</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>nonzero</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td><code>nonzero</code> | <code>evenodd</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>nonzero</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>L'attribut <code>fill-rule</code> peut prendre deux valeurs:</p>
+L'attribut `fill-rule` peut prendre deux valeurs:
 
-<h3 id="nonzero">nonzero</h3>
+### nonzero
 
-<p>La valeur <code>nonzero</code> détermine si un point est à l'intérieur d'une forme en dessinant un rayon à partir de ce point vers l'infini dans toutes les directions, puis examine les endroits où un segment de la forme traverse le rayon.</p>
+La valeur `nonzero` détermine si un point est à l'intérieur d'une forme en dessinant un rayon à partir de ce point vers l'infini dans toutes les directions, puis examine les endroits où un segment de la forme traverse le rayon.
 
-<p>À chaque fois qu'un segment traverse le rayon de gauche à droite, on ajoute un. À chaque fois qu'un segment traverse le rayon de droite à gauche, on soustrait un. Si au final, le compte est égal à zéro, le point est l'extérieur. Dans le cas contraire, il est à l'intérieur.</p>
+À chaque fois qu'un segment traverse le rayon de gauche à droite, on ajoute un. À chaque fois qu'un segment traverse le rayon de droite à gauche, on soustrait un. Si au final, le compte est égal à zéro, le point est l'extérieur. Dans le cas contraire, il est à l'intérieur.
 
-<h4 id="Exemple">Exemple</h4>
+#### Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Effet de la règle de remplissage sur les segments qui se croisent --&gt;
-  &lt;polygon fill-rule="nonzero" stroke="red"
-           points="50,0 21,90 98,35 2,35 79,90"/&gt;
+```html
+<svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Effet de la règle de remplissage sur les segments qui se croisent -->
+  <polygon fill-rule="nonzero" stroke="red"
+           points="50,0 21,90 98,35 2,35 79,90"/>
 
-  &lt;!--
+  <!--
   Effet sur une forme dans une forme
   lorsque le segment va dans la même direction
   (vers la droite)
-  --&gt;
-  &lt;path fill-rule="nonzero" stroke="red"
+  -->
+  <path fill-rule="nonzero" stroke="red"
         d="M110,0  h90 v90 h-90 z
-           M130,20 h50 v50 h-50 z"/&gt;
+           M130,20 h50 v50 h-50 z"/>
 
-  &lt;!--
+  <!--
   Effet sur une forme dans une forme
   lorsque le segment va dans la direction opposée
   (vers la gauche contre vers la droite)
-  --&gt;
-  &lt;path fill-rule="nonzero" stroke="red"
+  -->
+  <path fill-rule="nonzero" stroke="red"
         d="M210,0  h90 v90 h-90 z
-           M230,20 v50 h50 v-50 z"/&gt;
-&lt;/svg&gt;</pre>
+           M230,20 v50 h50 v-50 z"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample('nonzero', '100%', 200)}}</p>
+{{EmbedLiveSample('nonzero', '100%', 200)}}
 
-<h3 id="evenodd">evenodd</h3>
+### evenodd
 
-<p>La valeur <code>evenodd</code> détermine si un point est à l'intérieur d'une forme en dessinant un rayon de à partir de ce point vers l'infini dans toutes les directions, et compte le nombre de segments de la forme qui traversent ce rayon. Si ce nombre est impair (<em>odd</em> en anglais), alors le point est à l'intérieur. Si le nombre est pair (<em>even</em> en anglais), alors le point est à l'extérieur.</p>
+La valeur `evenodd` détermine si un point est à l'intérieur d'une forme en dessinant un rayon de à partir de ce point vers l'infini dans toutes les directions, et compte le nombre de segments de la forme qui traversent ce rayon. Si ce nombre est impair (_odd_ en anglais), alors le point est à l'intérieur. Si le nombre est pair (_even_ en anglais), alors le point est à l'extérieur.
 
-<h4 id="Exemple_2">Exemple</h4>
+#### Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Effet de la règle de remplissage sur les segments qui se croisent --&gt;
-  &lt;polygon fill-rule="evenodd" stroke="red"
-           points="50,0 21,90 98,35 2,35 79,90"/&gt;
+```html
+<svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Effet de la règle de remplissage sur les segments qui se croisent -->
+  <polygon fill-rule="evenodd" stroke="red"
+           points="50,0 21,90 98,35 2,35 79,90"/>
 
-  &lt;!--
+  <!--
   Effet sur une forme dans une forme
   lorsque le segment va dans la même direction
   (vers la droite)
-  --&gt;
-  &lt;path fill-rule="evenodd" stroke="red"
+  -->
+  <path fill-rule="evenodd" stroke="red"
         d="M110,0  h90 v90 h-90 z
-           M130,20 h50 v50 h-50 z"/&gt;
+           M130,20 h50 v50 h-50 z"/>
 
-  &lt;!--
+  <!--
   Effet sur une forme dans une forme
   lorsque le segment va dans la direction opposée
   (vers la gauche contre vers la droite)
-  --&gt;
-  &lt;path fill-rule="evenodd" stroke="red"
+  -->
+  <path fill-rule="evenodd" stroke="red"
         d="M210,0  h90 v90 h-90 z
-           M230,20 v50 h50 v-50 z"/&gt;
-&lt;/svg&gt;</pre>
+           M230,20 v50 h50 v-50 z"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample('evenodd', '100%', 200)}}</p>
+{{EmbedLiveSample('evenodd', '100%', 200)}}
 
-<h2 id="Browser_Compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.attributes.presentation.fill-rule")}}</p>
+{{Compat("svg.attributes.presentation.fill-rule")}}
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "painting.html#FillRuleProperty", "fill-rule")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Définition pour les formes et le texte</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "painting.html#FillRuleProperty", "fill-rule")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale pour les formes et le texte</td>
-  </tr>
- </tbody>
-</table>
-
-<p> </p>
+| Spécification                                                                                | Statut                   | Commentaire                                     |
+| -------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------- |
+| {{SpecName("SVG2", "painting.html#FillRuleProperty", "fill-rule")}}     | {{Spec2("SVG2")}} | Définition pour les formes et le texte          |
+| {{SpecName("SVG1.1", "painting.html#FillRuleProperty", "fill-rule")}} | {{Spec2("SVG1.1")}} | Définition initiale pour les formes et le texte |

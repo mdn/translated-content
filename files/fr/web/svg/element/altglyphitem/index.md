@@ -7,38 +7,34 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/altGlyphItem
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p>L'élément <code>altGlyphItem fournit un ensemble de candidats pour la substitution de glyphes par l'élément </code>{{ SVGElement("altGlyph") }}.</p>
+L'élément `altGlyphItem fournit un ensemble de candidats pour la substitution de glyphes par l'élément `{{ SVGElement("altGlyph") }}.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#Core">Attributs fondamentaux</a> »</li>
-</ul>
+- [Attributs fondamentaux](/fr/docs/Web/SVG/Attribute#Core) »
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<p><em>Aucun</em></p>
+_Aucun_
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface <code><a href="/fr/docs/Web/API/SVGAltGlyphItemElement" title="en/DOM/SVGAltGlyphElement">SVGAltGlyphItemElement</a></code>.</p>
+Cet élément implémente l'interface [`SVGAltGlyphItemElement`](/fr/docs/Web/API/SVGAltGlyphItemElement "en/DOM/SVGAltGlyphElement").
 
-<p> </p>
 
-<h2 id="Voir_également">Voir également</h2>
 
-<ul>
- <li>{{ SVGElement("glyph") }}</li>
- <li>{{ SVGElement("glyphRef") }}</li>
- <li>{{ SVGElement("altGlyphDef") }}</li>
-</ul>
+## Voir également
+
+- {{ SVGElement("glyph") }}
+- {{ SVGElement("glyphRef") }}
+- {{ SVGElement("altGlyphDef") }}

@@ -7,60 +7,58 @@ tags:
   - SVG Reference
 translation_of: Web/SVG/Element/circle
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément <code>circle</code> est un élément de la catégorie des Formes simples, utilisé pour créer des cercles, en se basant sur un centre et un rayon.</p>
+L'élément `circle` est un élément de la catégorie des Formes simples, utilisé pour créer des cercles, en se basant sur un centre et un rayon.
 
-<h2 id="Usage">Usage</h2>
+## Usage
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden"> html,body,svg { height:100% } </pre>
+```css hidden
+ html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 
-  &lt;circle cx="50" cy="50" r="50"/&gt;
+  <circle cx="50" cy="50" r="50"/>
 
-&lt;/svg&gt;</pre>
+</svg>
+```
 
-<p>{{EmbedLiveSample('Exemple', 100, 100)}}</p>
+{{EmbedLiveSample('Exemple', 100, 100)}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_Globaux">Attributs Globaux</h3>
+### Attributs Globaux
 
-<ul>
- <li><a href="/fr/SVG/Attribute#ConditionalProccessing" title="fr/SVG/Attribute#ConditionalProccessing">Attributs conditionnels</a> »</li>
- <li><a href="/fr/SVG/Attribute#Core" title="fr/SVG/Attribute#Core">Attributs centraux</a> »</li>
- <li><a href="/fr/SVG/Attribute#GraphicalEvent" title="fr/SVG/Attribute#GraphicalEvent">Attributs d'événements graphiques</a> »</li>
- <li><a href="/fr/SVG/Attribute#Presentation" title="fr/SVG/Attribute#Presentation">Attributs de présentation</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [Attributs conditionnels](/fr/SVG/Attribute#ConditionalProccessing "fr/SVG/Attribute#ConditionalProccessing") »
+- [Attributs centraux](/fr/SVG/Attribute#Core "fr/SVG/Attribute#Core") »
+- [Attributs d'événements graphiques](/fr/SVG/Attribute#GraphicalEvent "fr/SVG/Attribute#GraphicalEvent") »
+- [Attributs de présentation](/fr/SVG/Attribute#Presentation "fr/SVG/Attribute#Presentation") »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<ul>
- <li>{{ SVGAttr("cx") }}</li>
- <li>{{ SVGAttr("cy") }}</li>
- <li>{{ SVGAttr("r") }}</li>
-</ul>
+- {{ SVGAttr("cx") }}
+- {{ SVGAttr("cy") }}
+- {{ SVGAttr("r") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface {{ domxref("SVGCircleElement") }}.</p>
+Cet élément implémente l'interface {{ domxref("SVGCircleElement") }}.
 
-<h2 id="Compatibilité_avec_les_navigateurs">Compatibilité avec les navigateurs</h2>
+## Compatibilité avec les navigateurs
 
-<p>{{Compat("svg.elements.circle")}}</p>
+{{Compat("svg.elements.circle")}}
 
-<h2 id="Corrélat">Corrélat</h2>
+## Corrélat
 
-<ul>
- <li>{{ SVGElement("ellipse") }}</li>
- <li>{{ SVGElement("rect") }}</li>
-</ul>
+- {{ SVGElement("ellipse") }}
+- {{ SVGElement("rect") }}

@@ -10,93 +10,81 @@ tags:
   - Reference
   - SVG
   - Web
-  - 'l10n:priority'
+  - l10n:priority
   - Ícones
 translation_of: Web/SVG
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><strong>SVG (Scalable Vector Graphics)</strong> est un langage de balisage <a href="/fr/docs/Web/XML">XML</a> décrivant des <a href="https://fr.wikipedia.org/wiki/Image_vectorielle">images vectorielles</a> bidimensionnelles. On pourrait dire que SVG est aux images ce qu'<a href="/fr/docs/Web/HTML">HTML</a> est au texte.</span></p>
+**SVG (Scalable Vector Graphics)** est un langage de balisage [XML](/fr/docs/Web/XML) décrivant des [images vectorielles](https://fr.wikipedia.org/wiki/Image_vectorielle) bidimensionnelles. On pourrait dire que SVG est aux images ce qu'[HTML](/fr/docs/Web/HTML) est au texte.
 
-<p><strong><a href="/fr/SVG/Tutoriel" title="fr/SVG/Tutoriel">Premiers pas</a></strong> ce tutoriel vous aidera à débuter en SVG.</p>
+**[Premiers pas](/fr/SVG/Tutoriel "fr/SVG/Tutoriel")** ce tutoriel vous aidera à débuter en SVG.
 
-<p>SVG est une <a href="http://www.w3.org/Graphics/SVG/">recommandation du W3C</a> et est basé sur XML. Il est explicitement conçu pour fonctionner avec d'autres standards du <a href="http://www.w3.org/">W3C</a> comme <a href="/fr/CSS" title="fr/CSS">CSS</a>, <a href="/fr/DOM" title="fr/DOM">DOM</a> et <a href="http://www.w3.org/AudioVideo/">SMIL</a>.</p>
+SVG est une [recommandation du W3C](http://www.w3.org/Graphics/SVG/) et est basé sur XML. Il est explicitement conçu pour fonctionner avec d'autres standards du [W3C](http://www.w3.org/) comme [CSS](/fr/CSS "fr/CSS"), [DOM](/fr/DOM "fr/DOM") et [SMIL](http://www.w3.org/AudioVideo/).
 
-<p>SVG est un format d'images vectorielles. Les images vectorielles peuvent être redimensionnées sans perte de qualité, tandis que ce n'est pas possible avec des images matricielles (bitmap).</p>
+SVG est un format d'images vectorielles. Les images vectorielles peuvent être redimensionnées sans perte de qualité, tandis que ce n'est pas possible avec des images matricielles (bitmap).
 
-<p>SVG est une norme développée par le <a href="https://www.w3.org/">World Wide Web Consortium (W3C) </a>depuis 1999.</p>
+SVG est une norme développée par le [World Wide Web Consortium (W3C) ](https://www.w3.org/)depuis 1999.
 
-<h2 id="Documentation">Documentation</h2>
+## Documentation
 
-<dl>
- <dt><a href="/fr/SVG/Element" title="fr/SVG/Element">Référence des éléments SVG</a></dt>
- <dd>Obtenir des informations sur les éléments SVG.</dd>
- <dt><a href="/fr/docs/Web/SVG/Attribute" title="/fr/docs/Web/SVG/Attribute">Référence des attributs SVG</a></dt>
- <dd>Obtenir des informations sur les attributs SVG.</dd>
- <dt><a href="/fr/docs/Référence_du_DOM_Gecko#Interfaces_SVG" title="/fr/docs/Référence_du_DOM_Gecko#Interfaces_SVG">Référence de l'interface DOM SVG</a></dt>
- <dd>Les détails sur l'API DOM SVG pour intéragir avec Javascript.</dd>
- <dt><a href="/fr/SVG_dans_Firefox" title="fr/SVG_dans_Firefox">SVG dans Firefox</a></dt>
- <dd>Cet article décrit les caractéristiques et le comportement du sous-ensemble de la spécification SVG 1.1 actuellement implémenté dans Firefox 2.</dd>
- <dt><a href="http://svground.fr/">SVG documentation tierce</a></dt>
- <dd>Une référence francophone du format SVG sous forme de tutoriels.</dd>
- <dt><a href="http://jwatt.org/svg/authoring/">SVG Authoring Guidelines</a> (en anglais)</dt>
- <dd>jwatt traite des erreurs les plus courantes commises dans le contenu SVG, et explique ce que les auteurs peuvent faire pour les corriger.</dd>
- <dt><a href="/fr/docs/Mozilla/Mozilla_SVG_Project" title="fr/Projet_SVG_de_Mozilla">Projet SVG de Mozilla</a></dt>
- <dd>Une présentation du projet SVG de Mozilla (à traduire de <a href="/fr/Mozilla_SVG_Project" title="en/Mozilla_SVG_Project">en:Mozilla SVG Project</a>).</dd>
- <dt><a href="http://www.mozilla.org/projects/svg/faq.html">Mozilla SVG Project FAQ</a></dt>
- <dd>Cette FAQ est le résultat de recherches au sein du groupe mozilla.dev.tech.svg et des forums de MozillaZine pour connaître les questions les plus souvent posées à propos de SVG dans Mozilla.</dd>
- <dt>Autres ressources</dt>
- <dd><p>Voici d'autres articles à propos de SVG sur MDN&nbsp;:</p>
- <ul>
-  <li><a href="/fr/docs/Web/SVG/Tutoriel" title="/fr/docs/Web/SVG/Tutoriel">Un tutoriel</a></li>
-  <li><a href="/fr/docs/Introduction_à_SVG_dans_HTML" title="/fr/docs/Introduction_à_SVG_dans_HTML">Une introduction à SVG dans HTML</a></li>
- </ul>
- </dd>
-</dl>
+- [Référence des éléments SVG](/fr/SVG/Element "fr/SVG/Element")
+  - : Obtenir des informations sur les éléments SVG.
+- [Référence des attributs SVG](/fr/docs/Web/SVG/Attribute "/fr/docs/Web/SVG/Attribute")
+  - : Obtenir des informations sur les attributs SVG.
+- [Référence de l'interface DOM SVG](/fr/docs/Référence_du_DOM_Gecko#Interfaces_SVG "/fr/docs/Référence_du_DOM_Gecko#Interfaces_SVG")
+  - : Les détails sur l'API DOM SVG pour intéragir avec Javascript.
+- [SVG dans Firefox](/fr/SVG_dans_Firefox "fr/SVG_dans_Firefox")
+  - : Cet article décrit les caractéristiques et le comportement du sous-ensemble de la spécification SVG 1.1 actuellement implémenté dans Firefox 2.
+- [SVG documentation tierce](http://svground.fr/)
+  - : Une référence francophone du format SVG sous forme de tutoriels.
+- [SVG Authoring Guidelines](http://jwatt.org/svg/authoring/) (en anglais)
+  - : jwatt traite des erreurs les plus courantes commises dans le contenu SVG, et explique ce que les auteurs peuvent faire pour les corriger.
+- [Projet SVG de Mozilla](/fr/docs/Mozilla/Mozilla_SVG_Project "fr/Projet_SVG_de_Mozilla")
+  - : Une présentation du projet SVG de Mozilla (à traduire de [en:Mozilla SVG Project](/fr/Mozilla_SVG_Project "en/Mozilla_SVG_Project")).
+- [Mozilla SVG Project FAQ](http://www.mozilla.org/projects/svg/faq.html)
+  - : Cette FAQ est le résultat de recherches au sein du groupe mozilla.dev.tech.svg et des forums de MozillaZine pour connaître les questions les plus souvent posées à propos de SVG dans Mozilla.
+- Autres ressources
 
-<h2 id="Communauté">Communauté</h2>
+  - : Voici d'autres articles à propos de SVG sur MDN :
 
-<ul>
- <li>Voir les forums Mozilla... {{DiscussionList("dev-tech-svg", "mozilla.dev.tech.svg")}}</li>
-</ul>
+    - [Un tutoriel](/fr/docs/Web/SVG/Tutoriel "/fr/docs/Web/SVG/Tutoriel")
+    - [Une introduction à SVG dans HTML](/fr/docs/Introduction_à_SVG_dans_HTML "/fr/docs/Introduction_à_SVG_dans_HTML")
 
-<h2 id="Outils">Outils</h2>
+## Communauté
 
-<ul>
- <li><a href="http://www.w3.org/Graphics/SVG/Test/">SVG Test Suite</a></li>
- <li><a href="http://validator.w3.org/">Validateur SVG</a> (jusqu'à 1.1 seulement)</li>
- <li>D'autres ressources connexes : <a href="/fr/docs/Web/XML" title="/fr/docs/XML">XML</a>, <a href="/fr/docs/CSS">CSS</a>, <a href="/fr/docs/DOM">DOM</a>, <a href="/fr/docs/HTML/Canvas">Canvas</a></li>
-</ul>
+- Voir les forums Mozilla... {{DiscussionList("dev-tech-svg", "mozilla.dev.tech.svg")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Outils
 
-<ul>
- <li><a href="http://plurib.us/1shot/2007/svg_gallery/">Galerie d'art SVG</a></li>
- <li><a href="http://www.carto.net/papers/svg/samples/">carto.net</a></li>
- <li>Google <a href="http://maps.google.com">Maps</a> (tracé des routes) et Google <a href="http://docs.google.com">Docs</a> (graphiques des tableurs)</li>
- <li><a href="http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml">Menus « bulles » SVG</a></li>
- <li>Présentation <a href="https://jwatt.org/blog/2009/11/16/slides-and-demos-from-svg-open-2009">SVG et Mozilla</a> lors de SVG Open 2009</li>
- <li><a href="/fr/docs/Web/SVG/SVG_en_tant_qu_image">SVG comme image</a></li>
- <li><a href="/fr/docs/Web/SVG/SVG_animation_with_SMIL">Animation SVG avec SMIL</a></li>
-</ul>
+- [SVG Test Suite](http://www.w3.org/Graphics/SVG/Test/)
+- [Validateur SVG](http://validator.w3.org/) (jusqu'à 1.1 seulement)
+- D'autres ressources connexes : [XML](/fr/docs/Web/XML "/fr/docs/XML"), [CSS](/fr/docs/CSS), [DOM](/fr/docs/DOM), [Canvas](/fr/docs/HTML/Canvas)
 
-<h3 id="Animation_et_interaction">Animation et interaction</h3>
+## Exemples
 
-<p>Comme HTML, SVG dispose d'un modèle de document (DOM) et d'évènements, et est accessible depuis JavaScript. Ceci permet aux développeurs de créer des animations riches et des images interactives.</p>
+- [Galerie d'art SVG](http://plurib.us/1shot/2007/svg_gallery/)
+- [carto.net](http://www.carto.net/papers/svg/samples/)
+- Google [Maps](http://maps.google.com) (tracé des routes) et Google [Docs](http://docs.google.com) (graphiques des tableurs)
+- [Menus « bulles » SVG](http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml)
+- Présentation [SVG et Mozilla](https://jwatt.org/blog/2009/11/16/slides-and-demos-from-svg-open-2009) lors de SVG Open 2009
+- [SVG comme image](/fr/docs/Web/SVG/SVG_en_tant_qu_image)
+- [Animation SVG avec SMIL](/fr/docs/Web/SVG/SVG_animation_with_SMIL)
 
-<ul>
- <li><a href="http://svg-wow.org/">svg-wow.org</a></li>
- <li>Extension Firefox (<a href="http://schepers.cc/grafox/">Grafox</a>) pour ajouter la gestion d'un sous-ensemble des animations SMIL</li>
- <li>Manipulation interactive de <a href="http://people.mozilla.com/~vladimir/demos/photos.svg">photos</a></li>
- <li><a href="http://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/">Transformations HTML </a>utilisant <code>foreignObject</code> de SVG</li>
-</ul>
+### Animation et interaction
 
-<h3 id="Cartes_graphiques_jeux_et_expérimentations_3D">Cartes, graphiques, jeux et expérimentations 3D</h3>
+Comme HTML, SVG dispose d'un modèle de document (DOM) et d'évènements, et est accessible depuis JavaScript. Ceci permet aux développeurs de créer des animations riches et des images interactives.
+
+- [svg-wow.org](http://svg-wow.org/)
+- Extension Firefox ([Grafox](http://schepers.cc/grafox/)) pour ajouter la gestion d'un sous-ensemble des animations SMIL
+- Manipulation interactive de [photos](http://people.mozilla.com/~vladimir/demos/photos.svg)
+- [Transformations HTML ](http://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/)utilisant `foreignObject` de SVG
+
+### Cartes, graphiques, jeux et expérimentations 3D
+
 Bien qu'un peu de SVG puisse contribuer à améliorer le contenu du web, voici quelques exemples d'utilisation poussée du SVG.
 
-<ul>
-  <li>Un<a href="http://www.codedread.com/yastframe.php"> Tetris en SVG</a> et <a href="http://www.treebuilder.de/svg/connect4.svg">Connect 4</a></li>
-  <li>Jeu <a href="http://dev.w3.org/SVG/tools/svgweb/samples/svg-files/USStates.svg">Find the State</a></li>
-  <li><a href="http://www.treebuilder.de/default.asp?file=441875.xml">Boîte 3D</a> et <a href="http://www.treebuilder.de/default.asp?file=206524.xml">boîtes 3D</a></li>
-  <li><a href="http://jvectormap.com/">jVectorMap</a> (pour représenter des cartes interactives avec des données) (en anglais)</li>
-</ul>
+- Un[ Tetris en SVG](http://www.codedread.com/yastframe.php) et [Connect 4](http://www.treebuilder.de/svg/connect4.svg)
+- Jeu [Find the State](http://dev.w3.org/SVG/tools/svgweb/samples/svg-files/USStates.svg)
+- [Boîte 3D](http://www.treebuilder.de/default.asp?file=441875.xml) et [boîtes 3D](http://www.treebuilder.de/default.asp?file=206524.xml)
+- [jVectorMap](http://jvectormap.com/) (pour représenter des cartes interactives avec des données) (en anglais)

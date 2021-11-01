@@ -11,61 +11,58 @@ tags:
   - XML
 translation_of: Web/SVG/SVG_animation_with_SMIL
 ---
-<div class="warning">
-  <p><strong>Attention :</strong> Bien que Chrome 45 déprécie SMIL en faveur des animations CSS et des animations Web, les développeurs Chrome ont depuis <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/5o0yiO440LM/YGEJBsjUAwAJ">suspendu</a> cette décision.</p>
-</div>
+> **Attention :** Bien que Chrome 45 déprécie SMIL en faveur des animations CSS et des animations Web, les développeurs Chrome ont depuis [suspendu](https://groups.google.com/a/chromium.org/d/msg/blink-dev/5o0yiO440LM/YGEJBsjUAwAJ) cette décision.
 
-<p>Firefox 4 introduit le support pour les animations <a href="/fr/SVG" title="en/SVG">SVG</a> en utilisant <a href="http://www.w3.org/TR/REC-smil">Synchronized Multimedia Integration Language</a> (SMIL). SMIL permet :</p>
+Firefox 4 introduit le support pour les animations [SVG](/fr/SVG "en/SVG") en utilisant [Synchronized Multimedia Integration Language](http://www.w3.org/TR/REC-smil) (SMIL). SMIL permet :
 
-<ul>
- <li>d'animer les attributs numériques d'un élément (x, y, ...)</li>
- <li>d'animer la transformation des attributs (translation ou rotation)</li>
- <li>d'animer les attributs de couleur</li>
- <li>de créer un mouvement en suivant un tracé donné</li>
-</ul>
+- d'animer les attributs numériques d'un élément (x, y, ...)
+- d'animer la transformation des attributs (translation ou rotation)
+- d'animer les attributs de couleur
+- de créer un mouvement en suivant un tracé donné
 
-<p>Pour ce faire, on utilise un élément SVG tel que {{ SVGElement("animate") }}. Vous trouverez ci-dessous des exemples illustrant les quatres différents manières de procéder.</p>
+Pour ce faire, on utilise un élément SVG tel que {{ SVGElement("animate") }}. Vous trouverez ci-dessous des exemples illustrant les quatres différents manières de procéder.
 
-<h2 id="Animation_pour_un_attribut">Animation pour un attribut</h2>
+## Animation pour un attribut
 
-<p>L'exemple suivant anime l'attribut <code><strong>cx</strong></code> d'un cercle. Pour ce faire, on ajoute un élément {{ SVGElement("animate") }}  dans l'élément {{ SVGElement("circle") }}. Les attributs importants pour {{ SVGElement("animate") }} sont :</p>
+L'exemple suivant anime l'attribut **`cx`** d'un cercle. Pour ce faire, on ajoute un élément {{ SVGElement("animate") }}  dans l'élément {{ SVGElement("circle") }}. Les attributs importants pour {{ SVGElement("animate") }} sont :
 
-<dl>
- <dt><code><strong>attributeName</strong></code></dt>
- <dd>Le nom de l'attribut à animer.</dd>
- <dt><code>from</code></dt>
- <dd>La valeur initiale de l'attribut.</dd>
- <dt><code>to</code></dt>
- <dd>La valeur finale.</dd>
- <dt><code>dur</code></dt>
- <dd>La durée de l'animation (par exemple, écrire '5s' pour 5 secondes).</dd>
-</dl>
+- **`attributeName`**
+  - : Le nom de l'attribut à animer.
+- `from`
+  - : La valeur initiale de l'attribut.
+- `to`
+  - : La valeur finale.
+- `dur`
+  - : La durée de l'animation (par exemple, écrire '5s' pour 5 secondes).
 
-<p>Si vous voulez animer plus d'attributs dans le même élément, ajoutez simplement d'autres éléments {{ SVGElement("animate") }}.</p>
+Si vous voulez animer plus d'attributs dans le même élément, ajoutez simplement d'autres éléments {{ SVGElement("animate") }}.
 
-<pre class="brush: html">&lt;svg width="300" height="100"&gt;
-  &lt;title&gt;Attribute Animation with SMIL&lt;/title&gt;
-  &lt;rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" /&gt;
-  &lt;circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1"&gt;
-    &lt;animate
+```html
+<svg width="300" height="100">
+  <title>Attribute Animation with SMIL</title>
+  <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
+  <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
+    <animate
        attributeName="cx" from="0" to="100"
-       dur="5s" repeatCount="indefinite" /&gt;
-  &lt;/circle&gt;
-&lt;/svg&gt;</pre>
+       dur="5s" repeatCount="indefinite" />
+  </circle>
+</svg>
+```
 
-<p>{{ EmbedLiveSample("Animation_pour_un_attribut", '100%', 120) }}</p>
+{{ EmbedLiveSample("Animation_pour_un_attribut", '100%', 120) }}
 
-<h2 id="Animer_une_transformation_des_attributs">Animer une transformation d'attributs</h2>
+## Animer une transformation d'attributs
 
-<p>L'élement {{ SVGElement("animateTransform") }} permet d'animer la <strong>transformation</strong> d'attributs. Ce nouvel élément est nécéssaire parce que nous n'animons pas un simple attribut tel que <strong>x, </strong>qui est juste un nombre.<br>
- Les attributs pour la rotation sont ainsi : <code>rotation(theta, x, y)</code>, où <code>theta</code> est l'angle en degrés, <code>x</code> et <code>y</code> sont les positions absolues.<br>
- Dans l'exemple ci dessous, on anime le centre de rotation et l'angle.</p>
+L'élement {{ SVGElement("animateTransform") }} permet d'animer la **transformation** d'attributs. Ce nouvel élément est nécéssaire parce que nous n'animons pas un simple attribut tel que **x,** qui est juste un nombre.
+Les attributs pour la rotation sont ainsi : `rotation(theta, x, y)`, où `theta` est l'angle en degrés, `x` et `y` sont les positions absolues.
+Dans l'exemple ci dessous, on anime le centre de rotation et l'angle.
 
-<pre class="brush: html">&lt;svg width="300" height="100"&gt;
-  &lt;title&gt;SVG SMIL Animate with transform&lt;/title&gt;
-  &lt;rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" /&gt;
-  &lt;rect x="0" y="50" width="15" height="34" fill="blue" stroke="black" stroke-width="1"&gt;
-    &lt;animateTransform
+```html
+<svg width="300" height="100">
+  <title>SVG SMIL Animate with transform</title>
+  <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
+  <rect x="0" y="50" width="15" height="34" fill="blue" stroke="black" stroke-width="1">
+    <animateTransform
        attributeName="transform"
        begin="0s"
        dur="20s"
@@ -73,57 +70,57 @@ translation_of: Web/SVG/SVG_animation_with_SMIL
        from="0 60 60"
        to="360 100 60"
        repeatCount="indefinite"
-			/&gt;
-  &lt;/rect&gt;
-&lt;/svg&gt;
-</pre>
+			/>
+  </rect>
+</svg>
+```
 
-<p>{{ EmbedLiveSample("Animer_une_transformation_des_attributs", '100%', 120) }}</p>
+{{ EmbedLiveSample("Animer_une_transformation_des_attributs", '100%', 120) }}
 
-<h2 id="Animation_suivant_un_tracé_(chemin)">Animation suivant un tracé (chemin)</h2>
+## Animation suivant un tracé (chemin)
 
-<p>L'élement {{ SVGElement("animateMotion") }} permet d'animer la position et la rotation d'éléments en suivant un tracé spécifique. Ce chemin est définit de la même manière que dans  {{ SVGElement("path") }}.</p>
+L'élement {{ SVGElement("animateMotion") }} permet d'animer la position et la rotation d'éléments en suivant un tracé spécifique. Ce chemin est définit de la même manière que dans {{ SVGElement("path") }}.
 
-<h3 id="Exemple_1_Mouvement_linéaire">Exemple 1: Mouvement linéaire</h3>
+### Exemple 1: Mouvement linéaire
 
-<p>Dans cet exemple, un cercle bleu rebondit indéfiniment entre les bords gauche et droit d'une boîte noir. L'animation est ici gérée par l'élément {{ SVGElement("animateMotion") }}.</p>
+Dans cet exemple, un cercle bleu rebondit indéfiniment entre les bords gauche et droit d'une boîte noir. L'animation est ici gérée par l'élément {{ SVGElement("animateMotion") }}.
 
-<p>On crée ici un chemin avec les commandes<strong> M</strong>oveTo, pour définir le point de départ de l'animation<strong>, H</strong>orizontal-line, pour déplacer le cercle de 300 pixels vers la droite, et la commande <strong>Z</strong>, pour fermer le chemin — ce qui permet d'établir une boucle qui revient au début. En définissant la valeur de l'attribut <strong>repeatCount</strong> à <code>indefinite</code>, on indique que l'animation doit boucler indéfiniment, tant que l'image SVG existe.</p>
+On crée ici un chemin avec les commandes **M**oveTo, pour définir le point de départ de l'animation**, H**orizontal-line, pour déplacer le cercle de 300 pixels vers la droite, et la commande **Z**, pour fermer le chemin — ce qui permet d'établir une boucle qui revient au début. En définissant la valeur de l'attribut **repeatCount** à `indefinite`, on indique que l'animation doit boucler indéfiniment, tant que l'image SVG existe.
 
-<pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" width="300" height="100"&gt;
-  &lt;title&gt;SVG SMIL Animate with Path&lt;/title&gt;
-  &lt;rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" /&gt;
-  &lt;circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1"&gt;
-    &lt;animateMotion
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="100">
+  <title>SVG SMIL Animate with Path</title>
+  <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
+  <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
+    <animateMotion
        path="M 0 0 H 300 Z"
-       dur="3s" repeatCount="indefinite" /&gt;
-  &lt;/circle&gt;
-&lt;/svg&gt;
-</pre>
+       dur="3s" repeatCount="indefinite" />
+  </circle>
+</svg>
+```
 
-<p>{{ EmbedLiveSample('Exemple_1_Mouvement_linéaire', '100%', 120) }}</p>
+{{ EmbedLiveSample('Exemple_1_Mouvement_linéaire', '100%', 120) }}
 
-<h3 id="Exemple_2_Mouvement_en_courbe">Exemple 2: Mouvement en courbe</h3>
+### Exemple 2: Mouvement en courbe
 
-<p>Le même exemple que précédemment mais avec une trajectoire courbe.</p>
+Le même exemple que précédemment mais avec une trajectoire courbe.
 
-<pre class="brush: html">&lt;svg width="300" height="100"&gt;
-  &lt;title&gt;SVG SMIL Animate with Path&lt;/title&gt;
-  &lt;rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" /&gt;
-  &lt;rect x="0" y="0" width="20" height="20" fill="blue" stroke="black" stroke-width="1"&gt;
-    &lt;animateMotion
+```html
+<svg width="300" height="100">
+  <title>SVG SMIL Animate with Path</title>
+  <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
+  <rect x="0" y="0" width="20" height="20" fill="blue" stroke="black" stroke-width="1">
+    <animateMotion
        path="M 250,80 H 50 Q 30,80 30,50 Q 30,20 50,20 H 250 Q 280,20,280,50 Q 280,80,250,80Z"
-       dur="3s" repeatCount="indefinite" rotate="auto" /&gt;
-  &lt;/rect&gt;
-&lt;/svg&gt;
-</pre>
+       dur="3s" repeatCount="indefinite" rotate="auto" />
+  </rect>
+</svg>
+```
 
-<p>{{ EmbedLiveSample('Exemple_2_Mouvement_en_courbe', '100%', 120) }}</p>
+{{ EmbedLiveSample('Exemple_2_Mouvement_en_courbe', '100%', 120) }}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/SVG" title="en/SVG">SVG</a></li>
- <li><a href="http://www.w3.org/TR/SVG/animate.html">SVG Animation Specification</a></li>
- <li><a href="http://www.w3.org/TR/REC-smil">SMIL Specification</a></li>
-</ul>
+- [SVG](/fr/SVG "en/SVG")
+- [SVG Animation Specification](http://www.w3.org/TR/SVG/animate.html)
+- [SMIL Specification](http://www.w3.org/TR/REC-smil)

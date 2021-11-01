@@ -6,474 +6,490 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/fill
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'attribut <strong><code>fill</code></strong> a deux significations différentes: 1. pour les formes et le texte, il définit le remplissage (<em>couleur, dégradé, motif, etc</em>); 2. pour les animations, il définit l'état final.</p>
+L'attribut **`fill`** a deux significations différentes: 1. pour les formes et le texte, il définit le remplissage (_couleur, dégradé, motif, etc_); 2. pour les animations, il définit l'état final.
 
-<p>Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura d'effet que sur les formes suivantes: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}</p>
+Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura d'effet que sur les formes suivantes: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
 
-<p>Pour les animations, il s'applique à cinq éléments: {{SVGElement('animate')}}, {{SVGElement('animateColor')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, et {{SVGElement('set')}}</p>
+Pour les animations, il s'applique à cinq éléments: {{SVGElement('animate')}}, {{SVGElement('animateColor')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, et {{SVGElement('set')}}
 
-<h2>Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Remplir avec une simple couleur --&gt;
-  &lt;circle cx="50" cy="50" r="40" fill="pink" /&gt;
+```html
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Remplir avec une simple couleur -->
+  <circle cx="50" cy="50" r="40" fill="pink" />
 
-  &lt;!-- Remplir avec un dégradé --&gt;
-  &lt;defs&gt;
-    &lt;radialGradient id="myGradient"&gt;
-      &lt;stop offset="0%"   stop-color="pink" /&gt;
-      &lt;stop offset="100%" stop-color="black" /&gt;
-    &lt;/radialGradient&gt;
-  &lt;/defs&gt;
-  &lt;circle cx="150" cy="50" r="40" fill="url(#myGradient)" /&gt;
+  <!-- Remplir avec un dégradé -->
+  <defs>
+    <radialGradient id="myGradient">
+      <stop offset="0%"   stop-color="pink" />
+      <stop offset="100%" stop-color="black" />
+    </radialGradient>
+  </defs>
+  <circle cx="150" cy="50" r="40" fill="url(#myGradient)" />
 
-  &lt;!-- Définit l'état final d'un cercle animé --&gt;
-  &lt;circle cx="250" cy="50" r="20"&gt;
-    &lt;animate attributeType="XML"
+  <!-- Définit l'état final d'un cercle animé -->
+  <circle cx="250" cy="50" r="20">
+    <animate attributeType="XML"
              attributeName="r"
              from="0" to="40" dur="5s"
-             fill="freeze" /&gt;
-  &lt;/circle&gt;
-&lt;/svg&gt;
-</pre>
+             fill="freeze" />
+  </circle>
+</svg>
+```
 
-<p>{{EmbedLiveSample('exemple', '100%', 200)}}</p>
+{{EmbedLiveSample('exemple', '100%', 200)}}
 
-<h2 id="altGlyph">altGlyph</h2>
+## altGlyph
 
-<div class="warning">
-  <p><strong>Attention :</strong> {{SVGElement('altGlyph')}} est déprécié en SVG2 et ne devrait pas être utilisé.</p>
-</div>
+> **Attention :** {{SVGElement('altGlyph')}} est déprécié en SVG2 et ne devrait pas être utilisé.
 
-<p>Pour {{SVGElement('altGlyph')}}, <code>fill</code> est un attribut de présentation qui définit la couleur du glyphe.</p>
+Pour {{SVGElement('altGlyph')}}, `fill` est un attribut de présentation qui définit la couleur du glyphe.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>black</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-  <p><strong>Note :</strong> <code>fill</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
-</div>
+> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
-<h2 id="animate">animate</h2>
+## animate
 
-<p>Pour {{SVGElement('animate')}}, <code>fill</code> définit l'état final de l'animation.</p>
+Pour {{SVGElement('animate')}}, `fill` définit l'état final de l'animation.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><code>freeze</code> (<em>Conserver la dernière image de l'animation</em>) | <code>remove</code> (<em>Conserver la première image de l'animation</em>)</td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>remove</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Non</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <code>freeze</code> (<em>Conserver la dernière image de l'animation</em
+        >) | <code>remove</code> (<em
+          >Conserver la première image de l'animation</em
+        >)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>remove</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Non</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="animateColor">animateColor</h2>
+## animateColor
 
-<div class="warning">
-  <p><strong>Attention :</strong> {{SVGElement('animateColor')}} est déprécié en SVG2 et ne devrait pas être utilisé. Utiliser {{SVGElement('animate')}} à la place.</p>
-</div>
+> **Attention :** {{SVGElement('animateColor')}} est déprécié en SVG2 et ne devrait pas être utilisé. Utiliser {{SVGElement('animate')}} à la place.
 
-<p>Pour {{SVGElement('animateColor')}}, <code>fill</code> définit l'état final de l'animation.</p>
+Pour {{SVGElement('animateColor')}}, `fill` définit l'état final de l'animation.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><code>freeze</code> (<em>Conserver la dernière image de l'animation</em>) | <code>remove</code> (<em>Conserver la première image de l'animation</em>)</td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>remove</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Non</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <code>freeze</code> (<em>Conserver la dernière image de l'animation</em
+        >) | <code>remove</code> (<em
+          >Conserver la première image de l'animation</em
+        >)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>remove</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Non</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="animateMotion">animateMotion</h2>
+## animateMotion
 
-<p>Pour {{SVGElement('animateMotion')}}, <code>fill</code> définit l'état final de l'animation.</p>
+Pour {{SVGElement('animateMotion')}}, `fill` définit l'état final de l'animation.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><code>freeze</code> (<em>Conserver la dernière image de l'animation</em>) | <code>remove</code> (<em>Conserver la première image de l'animation</em>)</td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>remove</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Non</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <code>freeze</code> (<em>Conserver la dernière image de l'animation</em
+        >) | <code>remove</code> (<em
+          >Conserver la première image de l'animation</em
+        >)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>remove</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Non</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="animateTransform">animateTransform</h2>
+## animateTransform
 
-<p>Pour {{SVGElement('animateTransform')}}, <code>fill</code> définit l'état final de l'animation.</p>
+Pour {{SVGElement('animateTransform')}}, `fill` définit l'état final de l'animation.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><code>freeze</code> (<em>Conserver la dernière image de l'animation</em>) | <code>remove</code> (<em>Conserver la première image de l'animation</em>)</td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>remove</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Non</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <code>freeze</code> (<em>Conserver la dernière image de l'animation</em
+        >) | <code>remove</code> (<em
+          >Conserver la première image de l'animation</em
+        >)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>remove</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Non</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="circle">circle</h2>
+## circle
 
-<p>Pour {{SVGElement('circle')}}, <code>fill</code> est un attribut de présentation qui définit la couleur de remplissage du cercle.</p>
+Pour {{SVGElement('circle')}}, `fill` est un attribut de présentation qui définit la couleur de remplissage du cercle.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>black</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-  <p><strong>Note :</strong> <code>fill</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
-</div>
+> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
-<h2 id="ellipse">ellipse</h2>
+## ellipse
 
-<p>Pour {{SVGElement('ellipse')}}, <code>fill</code> est un attribut de présentation qui définit la couleur de remplissage du cercle.</p>
+Pour {{SVGElement('ellipse')}}, `fill` est un attribut de présentation qui définit la couleur de remplissage du cercle.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>black</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-  <p><strong>Note :</strong> <code>fill</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
-</div>
+> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
-<h2 id="path">path</h2>
+## path
 
-<p>Pour {{SVGElement('path')}}, <code>fill</code> est un attribut de présentation qui définit la couleur de remplissage de la forme. (<em>Intérieur définit par l'attribut {{SVGAttr('fill-rule')}}</em>)</p>
+Pour {{SVGElement('path')}}, `fill` est un attribut de présentation qui définit la couleur de remplissage de la forme. (_Intérieur définit par l'attribut {{SVGAttr('fill-rule')}}_)
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>black</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-  <p><strong>Note :</strong> <code>fill</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
-</div>
+> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
-<h2 id="polygon">polygon</h2>
+## polygon
 
-<p>Pour {{SVGElement('polygon')}}, <code>fill</code> est un attribut de présentation qui définit la couleur de remplissage de la forme. (<em>Intérieur définit par l'attribut {{SVGAttr('fill-rule')}}</em>)</p>
+Pour {{SVGElement('polygon')}}, `fill` est un attribut de présentation qui définit la couleur de remplissage de la forme. (_Intérieur définit par l'attribut {{SVGAttr('fill-rule')}}_)
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>black</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-  <p><strong>Note :</strong> <code>fill</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
-</div>
+> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
-<h2 id="polyline">polyline</h2>
+## polyline
 
-<p>For {{SVGElement('polyline')}}, <code>fill</code> est un attribut de présentation qui définit la couleur de remplissage de la forme. (<em>Intérieur définit par l'attribut {{SVGAttr('fill-rule')}}</em>)</p>
+For {{SVGElement('polyline')}}, `fill` est un attribut de présentation qui définit la couleur de remplissage de la forme. (_Intérieur définit par l'attribut {{SVGAttr('fill-rule')}}_)
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>black</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-  <p><strong>Note :</strong> <code>fill</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
-</div>
+> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
-<h2 id="rect">rect</h2>
+## rect
 
-<p>Pour {{SVGElement('rect')}}, <code>fill</code> est un attribut de présentation qui définit la couleur de remplissage du rectangle.</p>
+Pour {{SVGElement('rect')}}, `fill` est un attribut de présentation qui définit la couleur de remplissage du rectangle.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>black</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-  <p><strong>Note :</strong> <code>fill</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
-</div>
+> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
-<h2 id="set">set</h2>
+## set
 
-<p>Pour {{SVGElement('set')}}, <code>fill</code> définit l'état final de l'animation.</p>
+Pour {{SVGElement('set')}}, `fill` définit l'état final de l'animation.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><code>freeze</code> (<em>Conserver la dernière image de l'animation</em>) | <code>remove</code> (<em>Conserver la première image de l'animation</em>)</td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>remove</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Non</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <code>freeze</code> (<em>Conserver la dernière image de l'animation</em
+        >) | <code>remove</code> (<em
+          >Conserver la première image de l'animation</em
+        >)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>remove</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Non</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="text">text</h2>
+## text
 
-<p>Pour {{SVGElement('text')}}, <code>fill</code> est un attribut de présentation qui définit la couleur du texte.</p>
+Pour {{SVGElement('text')}}, `fill` est un attribut de présentation qui définit la couleur du texte.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>black</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-  <p><strong>Note :</strong> <code>fill</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
-</div>
+> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
-<h2 id="textPath">textPath</h2>
+## textPath
 
-<p>Pour {{SVGElement('textPath')}}, <code>fill</code> est un attribut de présentation qui définit la couleur du texte.</p>
+Pour {{SVGElement('textPath')}}, `fill` est un attribut de présentation qui définit la couleur du texte.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>black</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-  <p><strong>Note :</strong> <code>fill</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
-</div>
+> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
-<h2 id="tref">tref</h2>
+## tref
 
-<div class="warning">
-  <p><strong>Attention :</strong> {{SVGElement('tref')}} est déprécié en SVG2 et ne devrait pas être utilisé.</p>
-</div>
+> **Attention :** {{SVGElement('tref')}} est déprécié en SVG2 et ne devrait pas être utilisé.
 
-<p>Pour {{SVGElement('tref')}}, <code>fill</code> est un attribut de présentation qui définit la couleur du texte.</p>
+Pour {{SVGElement('tref')}}, `fill` est un attribut de présentation qui définit la couleur du texte.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>black</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-  <p><strong>Note :</strong> <code>fill</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
-</div>
+> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
-<h2 id="tspan">tspan</h2>
+## tspan
 
-<p>Pour {{SVGElement('tspan')}}, <code>fill</code> est un attribut de présentation qui définit la couleur du texte.</p>
+Pour {{SVGElement('tspan')}}, `fill` est un attribut de présentation qui définit la couleur du texte.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><code>black</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animation</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><code>black</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animation</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-  <p><strong>Note :</strong> <code>fill</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
-</div>
+> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#FillAttribute", "transform")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td>Définition pour les animations.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "painting.html#FillProperty", "fill")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Définition pour les formes et le texte.<br>
-    Ajoute <code>context-fill</code> et <code>context-stroke</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "animate.html#FillAttribute", "fill")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale pour les animations.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "painting.html#FillProperty", "fill")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale pour les formes et le texte.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                                   | Commentaire                                                                        |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------------------------------------------------------- |
+| {{SpecName("SVG Animations 2", "#FillAttribute", "transform")}} | {{Spec2("SVG Animations 2")}} | Définition pour les animations.                                                    |
+| {{SpecName("SVG2", "painting.html#FillProperty", "fill")}}         | {{Spec2("SVG2")}}                 | Définition pour les formes et le texte. Ajoute `context-fill` et `context-stroke`. |
+| {{SpecName("SVG1.1", "animate.html#FillAttribute", "fill")}}     | {{Spec2("SVG1.1")}}                 | Définition initiale pour les animations.                                           |
+| {{SpecName("SVG1.1", "painting.html#FillProperty", "fill")}}     | {{Spec2("SVG1.1")}}                 | Définition initiale pour les formes et le texte.                                   |
 
-<h2 id="Browser_Compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.attributes.presentation.fill")}}</p>
+{{Compat("svg.attributes.presentation.fill")}}
 
-<div class="note">
-  <p><strong>Note :</strong> Pour plus d'informations sur les valeurs de <code>context-fill</code> (et <code>context-stroke</code>) dans des documents HTML, voir la documentation pour la propriété non-standard {{cssxref("-moz-context-properties")}}.</p>
-</div>  
+> **Note :** Pour plus d'informations sur les valeurs de `context-fill` (et `context-stroke`) dans des documents HTML, voir la documentation pour la propriété non-standard {{cssxref("-moz-context-properties")}}.

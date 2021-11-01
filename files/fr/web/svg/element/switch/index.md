@@ -7,85 +7,68 @@ tags:
   - SVG Conteneur
 translation_of: Web/SVG/Element/switch
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément <code>switch</code> évalue les attributs {{ SVGAttr("requiredFeatures") }}, {{ SVGAttr("requiredExtensions") }} et {{ SVGAttr("systemLanguage") }} de ses éléments enfants directs, dans l'ordre, puis affiche le premier élément pour lequel les attributs renvoient <code>true</code>. Tous les autres seront ignorés et donc non affichés. Si l'élément enfant est un élément conteneur tel que {{ SVGElement("g") }}, alors l'intégralité du contenu de cet enfant est soit traité/rendu soit ignoré/non rendu.</p>
+L'élément `switch` évalue les attributs {{ SVGAttr("requiredFeatures") }}, {{ SVGAttr("requiredExtensions") }} et {{ SVGAttr("systemLanguage") }} de ses éléments enfants directs, dans l'ordre, puis affiche le premier élément pour lequel les attributs renvoient `true`. Tous les autres seront ignorés et donc non affichés. Si l'élément enfant est un élément conteneur tel que {{ SVGElement("g") }}, alors l'intégralité du contenu de cet enfant est soit traité/rendu soit ignoré/non rendu.
 
-<p>Notez que la valeur des propriétés <code>display</code> et <code>visibility</code> n'ont aucun effet sur le traitement du <code>switch</code>. En particulier, appliquer une propriété <code>display</code> à <code>none</code> sur l'élément enfant d'un <code>switch</code> n'a aucun effet sur le résultat du test <code>true/false</code> associé au traitement des éléments par le <code>switch</code>.</p>
+Notez que la valeur des propriétés `display` et `visibility` n'ont aucun effet sur le traitement du `switch`. En particulier, appliquer une propriété `display` à `none` sur l'élément enfant d'un `switch` n'a aucun effet sur le résultat du test `true/false` associé au traitement des éléments par le `switch`.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel" title="en/SVG/Attribute#ConditionalProccessing">Attributs de traitement conditionnel</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_base" title="en/SVG/Attribute#Core">Attributs de base</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Événement_graphiques" title="en/SVG/Attribute#GraphicalEvent">Attributs d'événements graphiques</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_présentation" title="en/SVG/Attribute#Presentation">Attributs de présentation</a></li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel "en/SVG/Attribute#ConditionalProccessing")
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core")
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Événement_graphiques "en/SVG/Attribute#GraphicalEvent")
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation "en/SVG/Attribute#Presentation")
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface <code><a href="/fr/docs/DOM/SVGSwitchElement" title="en/DOM/SVGSwitchElement">SVGSwitchElement</a></code>.</p>
+Cet élément implémente l'interface [`SVGSwitchElement`](/fr/docs/DOM/SVGSwitchElement "en/DOM/SVGSwitchElement").
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Cet exemple montre comment afficher un texte différent selon les paramètres de langue du navigateur. L'élément <code>switch</code> affichera le premier élément enfant dont l'attribut <code>systemLanguage</code> correspond au language de l'utilisateur, ou l'élément sans attribut <code>systemLanguage</code> si aucun ne correspond.</p>
+Cet exemple montre comment afficher un texte différent selon les paramètres de langue du navigateur. L'élément `switch` affichera le premier élément enfant dont l'attribut `systemLanguage` correspond au language de l'utilisateur, ou l'élément sans attribut `systemLanguage` si aucun ne correspond.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;svg width="100%" viewBox="0 -20 100 50"&gt;
-   &lt;switch&gt;
-      &lt;text systemLanguage="ar"&gt;مرحبا&lt;/text&gt;
-      &lt;text systemLanguage="de,nl"&gt;Hallo!&lt;/text&gt;
-      &lt;text systemLanguage="en"&gt;Hello!&lt;/text&gt;
-      &lt;text systemLanguage="en-us"&gt;Howdy!&lt;/text&gt;
-      &lt;text systemLanguage="en-gb"&gt;Wotcha!&lt;/text&gt;
-      &lt;text systemLanguage="en-au"&gt;G'day!&lt;/text&gt;
-      &lt;text systemLanguage="es"&gt;Hola!&lt;/text&gt;
-      &lt;text systemLanguage="fr"&gt;Bonjour!&lt;/text&gt;
-      &lt;text systemLanguage="ja"&gt;こんにちは&lt;/text&gt;
-      &lt;text systemLanguage="ru"&gt;Привет!&lt;/text&gt;
-      &lt;text&gt;☺&lt;/text&gt;
-   &lt;/switch&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg width="100%" viewBox="0 -20 100 50">
+   <switch>
+      <text systemLanguage="ar">مرحبا</text>
+      <text systemLanguage="de,nl">Hallo!</text>
+      <text systemLanguage="en">Hello!</text>
+      <text systemLanguage="en-us">Howdy!</text>
+      <text systemLanguage="en-gb">Wotcha!</text>
+      <text systemLanguage="en-au">G'day!</text>
+      <text systemLanguage="es">Hola!</text>
+      <text systemLanguage="fr">Bonjour!</text>
+      <text systemLanguage="ja">こんにちは</text>
+      <text systemLanguage="ru">Привет!</text>
+      <text>☺</text>
+   </switch>
+</svg>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{ EmbedLiveSample('Exemple') }}</p>
+{{ EmbedLiveSample('Exemple') }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'struct.html#SwitchElement', '&lt;switch&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td>Clarifie l'évaluation de l'attribut {{SVGAttr("systemLanguage")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'struct.html#SwitchElement', '&lt;switch&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | Statut                   | Commentaire                                                                  |
+| -------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------- |
+| {{SpecName('SVG2', 'struct.html#SwitchElement', '&lt;switch&gt;')}}     | {{Spec2('SVG2')}} | Clarifie l'évaluation de l'attribut {{SVGAttr("systemLanguage")}} |
+| {{SpecName('SVG1.1', 'struct.html#SwitchElement', '&lt;switch&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale                                                          |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.switch")}}</p>
+{{Compat("svg.elements.switch")}}

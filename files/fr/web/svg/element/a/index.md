@@ -7,33 +7,37 @@ tags:
   - SVG Conteneur
 translation_of: Web/SVG/Element/a
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément SVG <strong><code>&lt;a&gt;</code></strong> crée un hyperlien vers d'autres pages web, fichiers, emplacements dans la page en cours, adresses email, ou toute autre URL.</p>
+L'élément SVG **`<a>`** crée un hyperlien vers d'autres pages web, fichiers, emplacements dans la page en cours, adresses email, ou toute autre URL.
 
-<p>En SVG, l'élément <code>&lt;a&gt;</code> est un conteneur, ce qui veut dire que vous pouvez créer un lien autour du texte comme en HTML, mais que vous pouvez aussi créer un lien autour de n'importe quelle forme.</p>
+En SVG, l'élément `<a>` est un conteneur, ce qui veut dire que vous pouvez créer un lien autour du texte comme en HTML, mais que vous pouvez aussi créer un lien autour de n'importe quelle forme.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">@namespace svgns url(http://www.w3.org/2000/svg);
-html,body,svg { height:100% }</pre>
+```css hidden
+@namespace svgns url(http://www.w3.org/2000/svg);
+html,body,svg { height:100% }
+```
 
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Un lien autour d'une forme -->
+  <a href="/docs/Web/SVG/Element/circle">
+    <circle cx="50" cy="40" r="35"/>
+  </a>
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;!-- Un lien autour d'une forme --&gt;
-  &lt;a href="/docs/Web/SVG/Element/circle"&gt;
-    &lt;circle cx="50" cy="40" r="35"/&gt;
-  &lt;/a&gt;
+  <!-- Un lien autour d'un texte -->
+  <a href="/docs/Web/SVG/Element/circle">
+    <text x="50" y="90" text-anchor="middle">
+      &lt;circle&gt;
+    </text>
+  </a>
+</svg>
+```
 
-  &lt;!-- Un lien autour d'un texte --&gt;
-  &lt;a href="/docs/Web/SVG/Element/circle"&gt;
-    &lt;text x="50" y="90" text-anchor="middle"&gt;
-      &amp;lt;circle&amp;gt;
-    &lt;/text&gt;
-  &lt;/a&gt;
-&lt;/svg&gt;</pre>
-
-<pre class="brush: css">/* Comme SVG ne fournit pas de style visuel par défaut pour les liens,
+```css
+/* Comme SVG ne fournit pas de style visuel par défaut pour les liens,
    il est en recommendé d'en ajouter manuellement */
 
 @namespace svgns url(http://www.w3.org/2000/svg);
@@ -49,83 +53,57 @@ svgns|a text {
 
 svgns|a:hover, svgns|a:active {
   outline: dotted 1px blue;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Exemple', 100, 100)}}</p>
+{{EmbedLiveSample('Exemple', 100, 100)}}
 
-<div class="warning">
-  <p><strong>Attention :</strong> Étant donné que cet élément partage son nom de balise avec l'<a href="/fr/docs/Web/HTML/Element/a">élément HTML <code>&lt;a&gt;</code></a>, la sélection de "<code>a</code>" avec CSS ou <a href="/fr/docs/Web/API/Document/querySelector"><code>querySelector</code></a> peut s'appliquer au mauvais type d'élément. La <a href="/fr/docs/Web/CSS/@namespace">règle <code>@namespace</code></a> permet de faire la distinction entre les deux.</p>
-</div>
+> **Attention :** Étant donné que cet élément partage son nom de balise avec l'[élément HTML `<a>`](/fr/docs/Web/HTML/Element/a), la sélection de "`a`" avec CSS ou [`querySelector`](/fr/docs/Web/API/Document/querySelector) peut s'appliquer au mauvais type d'élément. La [règle `@namespace`](/fr/docs/Web/CSS/@namespace) permet de faire la distinction entre les deux.
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<p> </p>
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_base" title="SVG/Attribute#Core">Attributs de base</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel" title="SVG/Attribute#ConditionalProccessing">Attributs de traitement conditionnel</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Événement_graphiques" title="SVG/Attribute#GraphicalEvent">Attributs d'événements graphiques</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_présentation" title="SVG/Attribute#Presentation">Attributs de présentation</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_XLink" title="SVG/Attribute#XLink">Attributs Xlink</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
- <li>{{SVGAttr("transform")}}</li>
-</ul>
+### Attributs globaux
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base "SVG/Attribute#Core")
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel "SVG/Attribute#ConditionalProccessing")
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Événement_graphiques "SVG/Attribute#GraphicalEvent")
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation "SVG/Attribute#Presentation")
+- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#Attributs_XLink "SVG/Attribute#XLink")
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
+- {{SVGAttr("transform")}}
 
-<ul>
- <li>{{htmlattrxref("download", "a")}} {{experimental_inline}}</li>
- <li>{{SVGAttr("href")}}</li>
- <li>{{htmlattrxref("hreflang", "a")}}</li>
- <li>{{htmlattrxref("ping", "a")}} {{experimental_inline}}</li>
- <li>{{htmlattrxref("referrerpolicy", "a")}} {{experimental_inline}}</li>
- <li>{{htmlattrxref("rel", "a")}} {{experimental_inline}}</li>
- <li>{{SVGAttr("target")}}</li>
- <li>{{htmlattrxref("type", "a")}}</li>
- <li>{{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}</li>
-</ul>
+### Attributs spécifiques
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+- {{htmlattrxref("download", "a")}} {{experimental_inline}}
+- {{SVGAttr("href")}}
+- {{htmlattrxref("hreflang", "a")}}
+- {{htmlattrxref("ping", "a")}} {{experimental_inline}}
+- {{htmlattrxref("referrerpolicy", "a")}} {{experimental_inline}}
+- {{htmlattrxref("rel", "a")}} {{experimental_inline}}
+- {{SVGAttr("target")}}
+- {{htmlattrxref("type", "a")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}
 
-<p>{{svginfo}}</p>
+## Contexte d'utilisation
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+{{svginfo}}
 
-<p>Cet élément implémente l'interface <code><a href="/fr/docs/DOM/SVGAElement" title="DOM/SVGAElement">SVGAElement</a></code>.</p>
+## Interface DOM
 
-<h2 id="Spécifications">Spécifications</h2>
+Cet élément implémente l'interface [`SVGAElement`](/fr/docs/DOM/SVGAElement "DOM/SVGAElement").
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}}</td>
-   <td>{{Spec2('Referrer Policy')}}</td>
-   <td>Ajoute l'attribut <code>referrerpolicy</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "linking.html#Links", "&lt;a&gt;")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Remplace l'attribut {{SVGAttr("xlink:href")}} par {{SVGAttr("href")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "linking.html#Links", "&lt;a&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+## Spécifications
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+| Spécification                                                                                                                            | Statut                               | Commentaire                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------- |
+| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}} | {{Spec2('Referrer Policy')}} | Ajoute l'attribut `referrerpolicy`.                                               |
+| {{SpecName("SVG2", "linking.html#Links", "&lt;a&gt;")}}                                                                 | {{Spec2("SVG2")}}             | Remplace l'attribut {{SVGAttr("xlink:href")}} par {{SVGAttr("href")}} |
+| {{SpecName("SVG1.1", "linking.html#Links", "&lt;a&gt;")}}                                                             | {{Spec2("SVG1.1")}}             | Définition initiale                                                               |
 
-<p>{{Compat("svg.elements.a")}}</p>
+## Compatibilité des navigateurs
+
+{{Compat("svg.elements.a")}}

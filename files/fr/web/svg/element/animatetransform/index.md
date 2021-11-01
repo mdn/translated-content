@@ -7,87 +7,68 @@ tags:
   - SVG Animation
 translation_of: Web/SVG/Element/animateTransform
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément <strong><code>&lt;animateTransform&gt;</code></strong> permet d'animer un élement en appliquant une transformation: translation, mise à l'échelle, rotation et/ou inclinaison.</p>
+L'élément **`<animateTransform>`** permet d'animer un élement en appliquant une transformation: translation, mise à l'échelle, rotation et/ou inclinaison.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: html">&lt;?xml version="1.0"?&gt;
-&lt;svg width="120" height="120"  viewBox="0 0 120 120"
+```html
+<?xml version="1.0"?>
+<svg width="120" height="120"  viewBox="0 0 120 120"
      xmlns="http://www.w3.org/2000/svg" version="1.1"
-     xmlns:xlink="http://www.w3.org/1999/xlink" &gt;
+     xmlns:xlink="http://www.w3.org/1999/xlink" >
 
-    &lt;polygon points="60,30 90,90 30,90"&gt;
-        &lt;animateTransform attributeName="transform"
+    <polygon points="60,30 90,90 30,90">
+        <animateTransform attributeName="transform"
                           attributeType="XML"
                           type="rotate"
                           from="0 60 70"
                           to="360 60 70"
                           dur="10s"
-                          repeatCount="indefinite"/&gt;
-    &lt;/polygon&gt;
-&lt;/svg&gt;</pre>
+                          repeatCount="indefinite"/>
+    </polygon>
+</svg>
+```
 
-<p>{{ EmbedLiveSample('Exemple','120','120') }}</p>
+{{ EmbedLiveSample('Exemple','120','120') }}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/SVG/Attribute#ConditionalProccessing" title="en/SVG/Attribute#ConditionalProccessing">Attributs de traitement conditionnel</a> »</li>
- <li><a href="/fr/docs/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Attributs de base</a> »</li>
- <li><a href="/fr/docs/SVG/Attribute#AnimationEvent" title="en/SVG/Attribute#AnimationEvent">Attributs de l'évènement d'animation</a> »</li>
- <li><a href="/fr/docs/SVG/Attribute#XLink" title="en/SVG/Attribute#XLink">Attributs Xlink</a> »</li>
- <li><a href="/fr/docs/SVG/Attribute#AnimationAttributeTarget" title="en/SVG/Attribute#AnimationAttributeTarget">Attributs de ciblage d'animation</a> »</li>
- <li><a href="/fr/docs/SVG/Attribute#AnimationTiming" title="en/SVG/Attribute#AnimationTiming">Attributs de chronométrage d'animation</a> »</li>
- <li><a href="/fr/docs/SVG/Attribute#AnimationValue" title="en/SVG/Attribute#AnimationValue">Attributs de valeur d'animation</a> »</li>
- <li><a href="/fr/docs/SVG/Attribute#AnimationAddition" title="en/SVG/Attribute#AnimationAddition">Attributs d'ajout d'animations</a> »</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [Attributs de traitement conditionnel](/fr/docs/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
+- [Attributs de base](/fr/docs/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Attributs de l'évènement d'animation](/fr/docs/SVG/Attribute#AnimationEvent "en/SVG/Attribute#AnimationEvent") »
+- [Attributs Xlink](/fr/docs/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- [Attributs de ciblage d'animation](/fr/docs/SVG/Attribute#AnimationAttributeTarget "en/SVG/Attribute#AnimationAttributeTarget") »
+- [Attributs de chronométrage d'animation](/fr/docs/SVG/Attribute#AnimationTiming "en/SVG/Attribute#AnimationTiming") »
+- [Attributs de valeur d'animation](/fr/docs/SVG/Attribute#AnimationValue "en/SVG/Attribute#AnimationValue") »
+- [Attributs d'ajout d'animations](/fr/docs/SVG/Attribute#AnimationAddition "en/SVG/Attribute#AnimationAddition") »
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<ul>
- <li>{{ SVGAttr("by") }}</li>
- <li>{{ SVGAttr("from") }}</li>
- <li>{{ SVGAttr("to") }}</li>
- <li>{{ SVGAttr("type") }}</li>
-</ul>
+- {{ SVGAttr("by") }}
+- {{ SVGAttr("from") }}
+- {{ SVGAttr("to") }}
+- {{ SVGAttr("type") }}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface <code><a href="/fr/docs/DOM/SVGAnimateTransformElement" title="en/DOM/SVGAnimateTransformElement">SVGAnimateTransformElement</a></code>.</p>
+Cet élément implémente l'interface [`SVGAnimateTransformElement`](/fr/docs/DOM/SVGAnimateTransformElement "en/DOM/SVGAnimateTransformElement").
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#AnimateTransformElement", "&lt;animateTransform&gt;")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td>Aucun changement</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'animate.html#AnimateTransformElement', '&lt;animateTransform&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | Statut                                   | Commentaire         |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
+| {{SpecName("SVG Animations 2", "#AnimateTransformElement", "&lt;animateTransform&gt;")}}     | {{Spec2("SVG Animations 2")}} | Aucun changement    |
+| {{SpecName('SVG1.1', 'animate.html#AnimateTransformElement', '&lt;animateTransform&gt;')}} | {{Spec2('SVG1.1')}}                 | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.animateTransform")}}</p>
+{{Compat("svg.elements.animateTransform")}}

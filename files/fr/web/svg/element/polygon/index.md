@@ -6,73 +6,71 @@ tags:
   - Reference
   - SVG
   - SVG Graphique
-browser-compat: svg.elements.polygon
 translation_of: Web/SVG/Element/polygon
+browser-compat: svg.elements.polygon
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément <strong><code>&lt;polygon&gt;</code></strong> délimite une forme close composée d'un groupe de plusieurs segments de droites. Le dernier point est relié au premier afin de fermer la forme et de relier les traits entre deux. Pour créer une forme ouverte, voir l'élément {{SVGElement("polyline")}}.</p>
+L'élément **`<polygon>`** délimite une forme close composée d'un groupe de plusieurs segments de droites. Le dernier point est relié au premier afin de fermer la forme et de relier les traits entre deux. Pour créer une forme ouverte, voir l'élément {{SVGElement("polyline")}}.
 
-<h2>Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Exemple d'un polygone avec le remplissage par défaut --&gt;
-  &lt;polygon points="0,100 50,25 50,75 100,0" /&gt;
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Exemple d'un polygone avec le remplissage par défaut -->
+  <polygon points="0,100 50,25 50,75 100,0" />
 
-  &lt;!-- Le même polygone sans remplissage et avec un contour --&gt;
-  &lt;polygon points="100,100 150,25 150,75 200,0" fill="none" stroke="black" /&gt;
-&lt;/svg&gt;</pre>
+  <!-- Le même polygone sans remplissage et avec un contour -->
+  <polygon points="100,100 150,25 150,75 200,0" fill="none" stroke="black" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('exemple', '100', '100')}}</p>
+{{EmbedLiveSample('exemple', '100', '100')}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<dl>
- <dt>{{SVGAttr('points')}}</dt>
- <dd>Cette attribut défini une liste de point (paire de coordonnées absolue x et y ) nécessaire pour dessiner le polygone.<br>
- <small><em>Type de valeur</em>: <a href="/fr/docs/Web/SVG/Content_type#Number"><strong>&lt;number&gt;</strong></a>+ ; <em>Valeur par défaut</em>: <code>""</code>; <em>Peut être animé</em>: <strong>oui</strong></small></dd>
- <dt>{{SVGAttr("pathLength")}}</dt>
- <dd>Cet attribut spécifie la taille totale pour le chemin dans l'unité de l'utilisateur.<br>
- <small><em>Type de valeur</em>: <a href="/fr/docs/Web/SVG/Content_type#Number"><strong>&lt;number&gt;</strong></a>; <em>Valeur par défaut</em>: <em>aucune</em>; <em>Peut être animé</em>: <strong>oui</strong></small></dd>
-</dl>
+- {{SVGAttr('points')}}
+  - : Cette attribut défini une liste de point (paire de coordonnées absolue x et y ) nécessaire pour dessiner le polygone.
+    _Type de valeur_: [**\<number>**](/fr/docs/Web/SVG/Content_type#Number)+ ; _Valeur par défaut_: `""`; _Peut être animé_: **oui**
+- {{SVGAttr("pathLength")}}
+  - : Cet attribut spécifie la taille totale pour le chemin dans l'unité de l'utilisateur.
+    _Type de valeur_: [**\<number>**](/fr/docs/Web/SVG/Content_type#Number); _Valeur par défaut_: _aucune_; _Peut être animé_: **oui**
 
-<h3 id="Attributs_Globaux">Attributs Globaux</h3>
+### Attributs Globaux
 
-<dl>
- <dt><a href="/fr/docs/Web/SVG/Attribute/Core">Attribut de base</a></dt>
- <dd><small>Principalement: {{SVGAttr('id')}} et {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="/fr/docs/Web/SVG/Attribute/Styling">Attribut de style</a></dt>
- <dd><small>{{SVGAttr('class')}} et {{SVGAttr('style')}}</small></dd>
- <dt><a href="/fr/docs/Web/SVG/Attribute/Conditional_Processing">Attributs conditionnels</a></dt>
- <dd><small>Principalement: {{SVGAttr('requiredExtensions')}} et {{SVGAttr('systemLanguage')}}</small></dd>
- <dt>Attributs d'évènements</dt>
- <dd><small><a href="/fr/docs/Web/SVG/Attribute/Events#global_event_attributes">Attribut d'évènement global</a>, <a href="/fr/docs/Web/SVG/Attribute/Events#graphical_event_attributes">Attribut d'évènement graphique</a></small></dd>
- <dt><a href="h/fr/docs/Web/SVG/Attribute/Presentation">Attributs de présentation</a></dt>
- <dd><small>Principalement: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}} et {{SVGAttr('visibility')}}</small></dd>
- <dt>Attributs ARIA</dt>
- <dd><small><code>aria-activedescendant</code>, <code>aria-atomic</code>, <code>aria-autocomplete</code>, <code>aria-busy</code>, <code>aria-checked</code>, <code>aria-colcount</code>, <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-controls</code>, <code>aria-current</code>, <code>aria-describedby</code>, <code>aria-details</code>, <code>aria-disabled</code>, <code>aria-dropeffect</code>, <code>aria-errormessage</code>, <code>aria-expanded</code>, <code>aria-flowto</code>, <code>aria-grabbed</code>, <code>aria-haspopup</code>, <code>aria-hidden</code>, <code>aria-invalid</code>, <code>aria-keyshortcuts</code>, <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-level</code>, <code>aria-live</code>, <code>aria-modal</code>, <code>aria-multiline</code>, <code>aria-multiselectable</code>, <code>aria-orientation</code>, <code>aria-owns</code>, <code>aria-placeholder</code>, <code>aria-posinset</code>, <code>aria-pressed</code>, <code>aria-readonly</code>, <code>aria-relevant</code>, <code>aria-required</code>, <code>aria-roledescription</code>, <code>aria-rowcount</code>, <code>aria-rowindex</code>, <code>aria-rowspan</code>, <code>aria-selected</code>, <code>aria-setsize</code>, <code>aria-sort</code>, <code>aria-valuemax</code>, <code>aria-valuemin</code>, <code>aria-valuenow</code>, <code>aria-valuetext</code>, <code>role</code></small></dd>
-</dl>
+- [Attribut de base](/fr/docs/Web/SVG/Attribute/Core)
+  - : Principalement: {{SVGAttr('id')}} et {{SVGAttr('tabindex')}}
+- [Attribut de style](/fr/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}} et {{SVGAttr('style')}}
+- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute/Conditional_Processing)
+  - : Principalement: {{SVGAttr('requiredExtensions')}} et {{SVGAttr('systemLanguage')}}
+- Attributs d'évènements
+  - : [Attribut d'évènement global](/fr/docs/Web/SVG/Attribute/Events#global_event_attributes), [Attribut d'évènement graphique](/fr/docs/Web/SVG/Attribute/Events#graphical_event_attributes)
+- [Attributs de présentation](h/fr/docs/Web/SVG/Attribute/Presentation)
+  - : Principalement: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}} et {{SVGAttr('visibility')}}
+- Attributs ARIA
+  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
 
-<h2 id="Contexte_dusage">Contexte d'usage</h2>
+## Contexte d'usage
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface {{domxref("SVGPolygonElement")}}.</p>
+Cet élément implémente l'interface {{domxref("SVGPolygonElement")}}.
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité avec les navigateurs</h2>
+## Compatibilité avec les navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>Autres formes élémentaires en SVG: {{ SVGElement('circle') }}, {{ SVGElement('ellipse') }}, {{ SVGElement('line') }}, <strong>{{ SVGElement('polyline') }}</strong> et <strong>{{ SVGElement('rect') }}.</strong></li>
-</ul>
+- Autres formes élémentaires en SVG: {{ SVGElement('circle') }}, {{ SVGElement('ellipse') }}, {{ SVGElement('line') }}, **{{ SVGElement('polyline') }}** et **{{ SVGElement('rect') }}.**

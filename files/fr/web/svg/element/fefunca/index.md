@@ -7,68 +7,47 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feFuncA
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>La primitive de filtre <a href="/fr/docs/Web/SVG">SVG</a> <code><strong>&lt;feFuncA&gt;</strong></code> doit être placée dans une balise {{SVGElement("feComponentTransfer")}} et elle définit la fonction de transfert pour le canal alpha (opacité) de l'image en entrée.</p>
+La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feFuncA>`** doit être placée dans une balise {{SVGElement("feComponentTransfer")}} et elle définit la fonction de transfert pour le canal alpha (opacité) de l'image en entrée.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_base">Attributs de base</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_fonction_de_transfert">Attributs de fonction de transfert</a></li>
-</ul>
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
+- [Attributs de fonction de transfert](/fr/docs/Web/SVG/Attribute#Attributs_de_fonction_de_transfert)
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<p><em>Aucun</em></p>
+_Aucun_
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface {{domxref("SVGFEFuncAElement")}}.</p>
+Cet élément implémente l'interface {{domxref("SVGFEFuncAElement")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#feFuncAElement", "&lt;feFuncA&gt;")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>Aucun changement</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feFuncAElement", "&lt;feFuncA&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                           | Commentaire         |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName("Filters 1.0", "#feFuncAElement", "&lt;feFuncA&gt;")}}         | {{Spec2("Filters 1.0")}} | Aucun changement    |
+| {{SpecName("SVG1.1", "filters.html#feFuncAElement", "&lt;feFuncA&gt;")}} | {{Spec2("SVG1.1")}}         | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.feFuncA")}}</p>
+{{Compat("svg.elements.feFuncA")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{SVGElement("filter")}}</li>
- <li>{{SVGElement("animate")}}</li>
- <li>{{SVGElement("set")}}</li>
- <li>{{SVGElement("feComponentTransfer")}}</li>
- <li>{{SVGElement("feFuncR")}}</li>
- <li>{{SVGElement("feFuncB")}}</li>
- <li>{{SVGElement("feFuncG")}}</li>
- <li><a href="/fr/docs/Web/SVG/Tutoriel/filtres">Tutoriel SVG: Filtres</a></li>
-</ul>
+- {{SVGElement("filter")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("set")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feFuncR")}}
+- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncG")}}
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres)

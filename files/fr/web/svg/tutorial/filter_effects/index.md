@@ -7,132 +7,153 @@ tags:
 translation_of: Web/SVG/Tutorial/Filter_effects
 original_slug: Web/SVG/Tutoriel/filtres
 ---
-<p>{{ PreviousNext("Web/SVG/Tutoriel/Contenu_embarque_SVG", "Web/SVG/Tutoriel/polices_SVG") }}</p>
+{{ PreviousNext("Web/SVG/Tutoriel/Contenu_embarque_SVG", "Web/SVG/Tutoriel/polices_SVG") }}
 
-<p>Dans certaines situations, les formes de base n'offrent pas la flexibilité nécessaire pour obtenir un certain effet. Par exemple, les ombres portées ne peuvent raisonnablement pas être crées avec des gradients. Les filtres sont des mécanismes SVG qui permettent de créer effets plus sophistiqués.</p>
+Dans certaines situations, les formes de base n'offrent pas la flexibilité nécessaire pour obtenir un certain effet. Par exemple, les ombres portées ne peuvent raisonnablement pas être crées avec des gradients. Les filtres sont des mécanismes SVG qui permettent de créer effets plus sophistiqués.
 
-<p>Un exemple de base consiste à ajouter un effet de flou au contenu du SVG. Bien que des effets de flou simples peuvent être obtenus avec les gradients, le filtre est nécessaire pour quelque chose de plus complexe.</p>
+Un exemple de base consiste à ajouter un effet de flou au contenu du SVG. Bien que des effets de flou simples peuvent être obtenus avec les gradients, le filtre est nécessaire pour quelque chose de plus complexe.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Les filtres sont définis par l'élément {{SVGElement('filter')}}, qui doit ête placé dans la section <code>&lt;defs&gt;</code> de votre fichier SVG. Entre les balises du filtre, se placent une liste de <em>primitives</em>, des opérations basiques qui s'ajoutent aux opérations précédentes (tel que du flou, de la lumière, etc). Pour appliquer le filtre créé sur un élément graphique, on définit l'attribut {{SVGAttr('filter')}}.</p>
+Les filtres sont définis par l'élément {{SVGElement('filter')}}, qui doit ête placé dans la section `<defs>` de votre fichier SVG. Entre les balises du filtre, se placent une liste de _primitives_, des opérations basiques qui s'ajoutent aux opérations précédentes (tel que du flou, de la lumière, etc). Pour appliquer le filtre créé sur un élément graphique, on définit l'attribut {{SVGAttr('filter')}}.
 
-<pre class="brush: html">&lt;svg width="250" viewBox="0 0 200 85"
-     xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
-  &lt;defs&gt;
-    &lt;!-- Déclaration du filtre --&gt;
-    &lt;filter id="MyFilter" filterUnits="userSpaceOnUse"
+```html
+<svg width="250" viewBox="0 0 200 85"
+     xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <!-- Déclaration du filtre -->
+    <filter id="MyFilter" filterUnits="userSpaceOnUse"
             x="0" y="0"
-            width="200" height="120"&gt;
+            width="200" height="120">
 
-      &lt;!-- offsetBlur --&gt;
-      &lt;feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/&gt;
-      &lt;feOffset in="blur" dx="4" dy="4" result="offsetBlur"/&gt;
+      <!-- offsetBlur -->
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+      <feOffset in="blur" dx="4" dy="4" result="offsetBlur"/>
 
-      &lt;!-- litPaint --&gt;
-      &lt;feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75"
+      <!-- litPaint -->
+      <feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75"
                           specularExponent="20" lighting-color="#bbbbbb"
-                          result="specOut"&gt;
-        &lt;fePointLight x="-5000" y="-10000" z="20000"/&gt;
-      &lt;/feSpecularLighting&gt;
-      &lt;feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/&gt;
-      &lt;feComposite in="SourceGraphic" in2="specOut" operator="arithmetic"
-                   k1="0" k2="1" k3="1" k4="0" result="litPaint"/&gt;
+                          result="specOut">
+        <fePointLight x="-5000" y="-10000" z="20000"/>
+      </feSpecularLighting>
+      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
+      <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic"
+                   k1="0" k2="1" k3="1" k4="0" result="litPaint"/>
 
-      &lt;!-- fusionne offsetBlur + litPaint --&gt;
-      &lt;feMerge&gt;
-        &lt;feMergeNode in="offsetBlur"/&gt;
-        &lt;feMergeNode in="litPaint"/&gt;
-      &lt;/feMerge&gt;
-    &lt;/filter&gt;
-  &lt;/defs&gt;
+      <!-- fusionne offsetBlur + litPaint -->
+      <feMerge>
+        <feMergeNode in="offsetBlur"/>
+        <feMergeNode in="litPaint"/>
+      </feMerge>
+    </filter>
+  </defs>
 
-  &lt;!-- Éléments graphiques --&gt;
-  &lt;g filter="url(#MyFilter)"&gt;
-      &lt;path fill="none" stroke="#D90000" stroke-width="10"
-            d="M50,66 c-50,0 -50,-60 0,-60 h100 c50,0 50,60 0,60z" /&gt;
-      &lt;path fill="#D90000"
-            d="M60,56 c-30,0 -30,-40 0,-40 h80 c30,0 30,40 0,40z" /&gt;
-      &lt;g fill="#FFFFFF" stroke="black" font-size="45" font-family="Verdana" &gt;
-        &lt;text x="52" y="52"&gt;SVG&lt;/text&gt;
-      &lt;/g&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;
-</pre>
+  <!-- Éléments graphiques -->
+  <g filter="url(#MyFilter)">
+      <path fill="none" stroke="#D90000" stroke-width="10"
+            d="M50,66 c-50,0 -50,-60 0,-60 h100 c50,0 50,60 0,60z" />
+      <path fill="#D90000"
+            d="M60,56 c-30,0 -30,-40 0,-40 h80 c30,0 30,40 0,40z" />
+      <g fill="#FFFFFF" stroke="black" font-size="45" font-family="Verdana" >
+        <text x="52" y="52">SVG</text>
+      </g>
+  </g>
+</svg>
+```
 
-<p>{{ EmbedLiveSample('Exemple', '100%', 120) }}</p>
+{{ EmbedLiveSample('Exemple', '100%', 120) }}
 
-<h3 id="Étape_1">Étape 1</h3>
+### Étape 1
 
-<pre class="brush: html">&lt;feGaussianBlur in="SourceAlpha"
+```html
+<feGaussianBlur in="SourceAlpha"
                 stdDeviation="4"
-                result="blur"/&gt;</pre>
+                result="blur"/>
+```
 
-<p>{{SVGElement('feGaussianBlur')}} prend en entrée (<code>in</code>) "SourceAlpha", qui est la couche alpha de l'élément source, applique un flou de 4, et stocke le résultat (<code>result</code>) dans un buffer temporaire nommé "blur".</p>
+{{SVGElement('feGaussianBlur')}} prend en entrée (`in`) "SourceAlpha", qui est la couche alpha de l'élément source, applique un flou de 4, et stocke le résultat (`result`) dans un buffer temporaire nommé "blur".
 
-<h3 id="Étape_2">Étape 2</h3>
+### Étape 2
 
-<pre class="brush: html">&lt;feOffset in="blur"
+```html
+<feOffset in="blur"
           dx="4" dy="4"
-          result="offsetBlur"/&gt;</pre>
+          result="offsetBlur"/>
+```
 
-<p>{{SVGElement('feOffset')}} prend en entrée (<code>in</code>) "blur", qu'on a crée précedemment, le décale de 4 vers la droite et 4 vers le bas, et stocke le résultat (<code>result</code>) dans le buffer "offsetBlur". Les deux premières primitives viennent de créer une ombre portée.</p>
+{{SVGElement('feOffset')}} prend en entrée (`in`) "blur", qu'on a crée précedemment, le décale de 4 vers la droite et 4 vers le bas, et stocke le résultat (`result`) dans le buffer "offsetBlur". Les deux premières primitives viennent de créer une ombre portée.
 
-<h3 id="Étape_3">Étape 3</h3>
+### Étape 3
 
-<pre class="brush: html">&lt;feSpecularLighting in="blur"
+```html
+<feSpecularLighting in="blur"
                     surfaceScale="5" specularConstant=".75"
                     specularExponent="20" lighting-color="#bbbbbb"
-                    result="specOut"&gt;
-  &lt;fePointLight x="-5000" y="-10000" z="20000"/&gt;
-&lt;/feSpecularLighting&gt;</pre>
+                    result="specOut">
+  <fePointLight x="-5000" y="-10000" z="20000"/>
+</feSpecularLighting>
+```
 
-<p>{{SVGelement('feSpecularLighting')}} prend en entrée (<code>in</code>) "blur", génère un effet d'éclairage, et stocke le résultat (<code>result</code>) dans le buffer "specOut".</p>
+{{SVGelement('feSpecularLighting')}} prend en entrée (`in`) "blur", génère un effet d'éclairage, et stocke le résultat (`result`) dans le buffer "specOut".
 
-<h3 id="Étape_4">Étape 4</h3>
+### Étape 4
 
-<pre class="brush: html">&lt;feComposite in="specOut" in2="SourceAlpha"
+```html
+<feComposite in="specOut" in2="SourceAlpha"
              operator="in"
-             result="specOut"/&gt;</pre>
+             result="specOut"/>
+```
 
-<p>Le premier {{SVGElement('feComposite')}} prend en entrée (<code>in</code>, <code>in2</code>) "specOut" et "SourceAlpha", masque le résultat de "specOut" de telle sorte qu'il ne soit pas plus grand que "SourceAlpha" (l'élément graphique d'origine), et remplace le résultat (<code>result</code>) "specOut".</p>
+Le premier {{SVGElement('feComposite')}} prend en entrée (`in`, `in2`) "specOut" et "SourceAlpha", masque le résultat de "specOut" de telle sorte qu'il ne soit pas plus grand que "SourceAlpha" (l'élément graphique d'origine), et remplace le résultat (`result`) "specOut".
 
-<h3 id="Étape_5">Étape 5</h3>
+### Étape 5
 
-<pre class="brush: html">&lt;feComposite in="SourceGraphic" in2="specOut"
+```html
+<feComposite in="SourceGraphic" in2="specOut"
              operator="arithmetic"
              k1="0" k2="1" k3="1" k4="0"
-             result="litPaint"/&gt;</pre>
+             result="litPaint"/>
+```
 
-<p>Le second {{SVGElement('feComposite')}} prend en entrée (<code>in</code>, <code>in2</code>) "SourceAlpha" et "specOut", ajoute le résultat "specOut" au-dessus de "SourceAlpha", et stocke le résultat (<code>result</code>) dans "litPaint".</p>
+Le second {{SVGElement('feComposite')}} prend en entrée (`in`, `in2`) "SourceAlpha" et "specOut", ajoute le résultat "specOut" au-dessus de "SourceAlpha", et stocke le résultat (`result`) dans "litPaint".
 
-<h3 id="Étape_6">Étape 6</h3>
+### Étape 6
 
-<pre class="brush: html">&lt;feMerge&gt;
-  &lt;feMergeNode in="offsetBlur"/&gt;
-  &lt;feMergeNode in="litPaint"/&gt;
-&lt;/feMerge&gt;</pre>
+```html
+<feMerge>
+  <feMergeNode in="offsetBlur"/>
+  <feMergeNode in="litPaint"/>
+</feMerge>
+```
 
-<p>Finalement, {{SVGElement('feMerge')}} fusionne ensemble "offsetBlur", qui est l'ombre portée, et "litPaint", qui est l'élément d'origine avec l'effet d'éclairage.</p>
+Finalement, {{SVGElement('feMerge')}} fusionne ensemble "offsetBlur", qui est l'ombre portée, et "litPaint", qui est l'élément d'origine avec l'effet d'éclairage.
 
-<img alt="graphique source" src="filters01-0.png">
-<p>Graphique source</p>
+![graphique source](filters01-0.png)
 
-<img alt="Primitive 1" src="filters01-1.png">
-<p>Primitive 1</p>
+Graphique source
 
-<img alt="Primitive 2" src="filters01-2.png">
-<p>Primitive 2</p>
+![Primitive 1](filters01-1.png)
 
-<img alt="Primitive 3" src="filters01-3.png">
-<p>Primitive 3</p>
+Primitive 1
 
-<img alt="Primitive 4" src="filters01-4.png">
-<p>Primitive 4</p>
+![Primitive 2](filters01-2.png)
 
-<img alt="Primitive 5" src="filters01-5.png">
-<p>Primitive 5</p>
+Primitive 2
 
-<img alt="Primitive 6" src="filters01-6.png">
-<p>Primitive 6</p>
-<p>{{ PreviousNext("Web/SVG/Tutoriel/Contenu_embarque_SVG", "Web/SVG/Tutoriel/polices_SVG") }}</p>
+![Primitive 3](filters01-3.png)
+
+Primitive 3
+
+![Primitive 4](filters01-4.png)
+
+Primitive 4
+
+![Primitive 5](filters01-5.png)
+
+Primitive 5
+
+![Primitive 6](filters01-6.png)
+
+Primitive 6
+
+{{ PreviousNext("Web/SVG/Tutoriel/Contenu_embarque_SVG", "Web/SVG/Tutoriel/polices_SVG") }}

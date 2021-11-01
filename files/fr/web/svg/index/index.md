@@ -5,4 +5,4 @@ tags:
   - SVG
 translation_of: Web/SVG/Index
 ---
-<p>{{Index("/fr/docs/Web/SVG")}}</p>
+{{Index("/fr/docs/Web/SVG")}}

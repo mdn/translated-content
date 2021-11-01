@@ -8,91 +8,70 @@ tags:
   - SVG Gradient
 translation_of: Web/SVG/Element/linearGradient
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'élément <strong><code>&lt;linearGradient&gt;</code></strong> permet de définir des dégradés linéaires, qui pourront être utilisés comme remplissage ou contour des éléments SVG.</p>
+L'élément **`<linearGradient>`** permet de définir des dégradés linéaires, qui pourront être utilisés comme remplissage ou contour des éléments SVG.
 
-<h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
+## Contexte d'utilisation
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributs">Attributs</h2>
+## Attributs
 
-<h3 id="Attributs_globaux">Attributs globaux</h3>
+### Attributs globaux
 
-<ul>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_base">Attributs de base</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_de_présentation">Attributs de présentation</a></li>
- <li><a href="/fr/docs/Web/SVG/Attribute#Attributs_XLink">Attributs Xlink</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
-</ul>
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation)
+- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#Attributs_XLink)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
 
-<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+### Attributs spécifiques
 
-<ul>
- <li>{{SVGAttr("gradientUnits")}}</li>
- <li>{{SVGAttr("gradientTransform")}}</li>
- <li>{{SVGAttr("x1")}}</li>
- <li>{{SVGAttr("y1")}}</li>
- <li>{{SVGAttr("x2")}}</li>
- <li>{{SVGAttr("y2")}}</li>
- <li>{{SVGAttr("spreadMethod")}}</li>
- <li>{{SVGAttr("xlink:href")}}</li>
-</ul>
+- {{SVGAttr("gradientUnits")}}
+- {{SVGAttr("gradientTransform")}}
+- {{SVGAttr("x1")}}
+- {{SVGAttr("y1")}}
+- {{SVGAttr("x2")}}
+- {{SVGAttr("y2")}}
+- {{SVGAttr("spreadMethod")}}
+- {{SVGAttr("xlink:href")}}
 
-<h2 id="Interface_DOM">Interface DOM</h2>
+## Interface DOM
 
-<p>Cet élément implémente l'interface {{domxref("SVGLinearGradientElement")}}.</p>
+Cet élément implémente l'interface {{domxref("SVGLinearGradientElement")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: html">&lt;svg width="120" height="120" xmlns="http://www.w3.org/2000/svg"&gt;
-    &lt;defs&gt;
-        &lt;linearGradient id="MyGradient"&gt;
-            &lt;stop offset="5%"  stop-color="green"/&gt;
-            &lt;stop offset="95%" stop-color="gold"/&gt;
-        &lt;/linearGradient&gt;
-    &lt;/defs&gt;
+```html
+<svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="MyGradient">
+            <stop offset="5%"  stop-color="green"/>
+            <stop offset="95%" stop-color="gold"/>
+        </linearGradient>
+    </defs>
 
-    &lt;rect fill="url(#MyGradient)"
-          x="10" y="10" width="100" height="100"/&gt;
-&lt;/svg&gt;</pre>
+    <rect fill="url(#MyGradient)"
+          x="10" y="10" width="100" height="100"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Exemple", 120, 120)}}</p>
+{{EmbedLiveSample("Exemple", 120, 120)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'pservers.html#LinearGradientElement', '&lt;linearGradient&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'pservers.html#LinearGradients', '&lt;linearGradient&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | Statut                   | Commentaire         |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
+| {{SpecName('SVG2', 'pservers.html#LinearGradientElement', '&lt;linearGradient&gt;')}} | {{Spec2('SVG2')}} |                     |
+| {{SpecName('SVG1.1', 'pservers.html#LinearGradients', '&lt;linearGradient&gt;')}}     | {{Spec2('SVG1.1')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("svg.elements.linearGradient")}}</p>
+{{Compat("svg.elements.linearGradient")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{SVGElement("radialGradient")}}</li>
- <li>{{SVGElement("stop")}}</li>
-</ul>
+- {{SVGElement("radialGradient")}}
+- {{SVGElement("stop")}}

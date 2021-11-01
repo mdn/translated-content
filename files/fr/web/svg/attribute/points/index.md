@@ -3,138 +3,121 @@ title: points
 slug: Web/SVG/Attribute/points
 translation_of: Web/SVG/Attribute/points
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>L'attribut <code><strong>point</strong></code> défini une liste de points. Chaque point est défini par deux nombres représentant les coordonnées X et Y dans le système de coordonnées de l'utilisateur. Si une coordonnées est dépareillée elle sera ignorée.</p>
+L'attribut **`point`** défini une liste de points. Chaque point est défini par deux nombres représentant les coordonnées X et Y dans le système de coordonnées de l'utilisateur. Si une coordonnées est dépareillée elle sera ignorée.
 
-<p>Les éléments {{SVGElement("polyline")}} et {{SVGElement("polygon")}} utilisent cet attribut.</p>
+Les éléments {{SVGElement("polyline")}} et {{SVGElement("polygon")}} utilisent cet attribut.
 
-<h2>Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- polyline est une forme ouverte --&gt;
-  &lt;polyline stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/&gt;
+```html
+<svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- polyline est une forme ouverte -->
+  <polyline stroke="black" fill="none"
+   points="50,0 21,90 98,35 2,35 79,90"/>
 
-  &lt;!-- polygon est une forme fermée --&gt;
-  &lt;polygon stroke="black" fill="none" transform="translate(100,0)"
-   points="50,0 21,90 98,35 2,35 79,90"/&gt;
+  <!-- polygon est une forme fermée -->
+  <polygon stroke="black" fill="none" transform="translate(100,0)"
+   points="50,0 21,90 98,35 2,35 79,90"/>
 
-  &lt;!--
+  <!--
   Il est généralement recommendé de séparer les valeurs X et Y
   avec une virgule et les coordonées avec des espaces.
   Cela est plus lisible.
-  --&gt;
-&lt;/svg&gt;</pre>
+  -->
+</svg>
+```
 
-<p>{{EmbedLiveSample('exemple', '100%', 200)}}</p>
+{{EmbedLiveSample('exemple', '100%', 200)}}
 
-<h2 id="polyline">polyline</h2>
+## polyline
 
-<p>Pour un élément {{SVGElement('polyline')}}, <code>points</code> défini une liste de point, chaqu'un représente le vecteur pour tracer la ligne. Chaque point est défini par X et Y dans le système de coordonées de l'utilisateur.</p>
+Pour un élément {{SVGElement('polyline')}}, `points` défini une liste de point, chaqu'un représente le vecteur pour tracer la ligne. Chaque point est défini par X et Y dans le système de coordonées de l'utilisateur.
 
-<div class="note">
-  <p><strong>Note :</strong> Un polygone est une forme ouverte, ce qui implique que le dernier point n'est pas connecté au premier point.</p>
-</div>
-
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td>[ {{cssxref("number")}}+ ]#</td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><em>aucune</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Peut être animé</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="Exemple">Exemple</h3>
-
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
-
-<pre class="brush: html">&lt;svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- polyline est une forme ouverte --&gt;
-  &lt;polyline stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/&gt;
-&lt;/svg&gt;</pre>
-
-<p>{{EmbedLiveSample('polyline', '100%', 200)}}</p>
-
-<h2 id="polygon">polygon</h2>
-
-<p>Pour un élément {{SVGElement('polyline')}}, <code>points</code> défini une liste de point, chaqu'un représente le vecteur pour tracer la ligne. Chaque point est défini par X et Y dans le système de coordonées de l'utilisateur.</p>
-
-<div class="note">
-  <p><strong>Note :</strong> Un polygone est une forme fermée, ce qui implique que le dernier point est connecté au premier.</p>
-</div>
+> **Note :** Un polygone est une forme ouverte, ce qui implique que le dernier point n'est pas connecté au premier point.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Valeur</th>
-   <td>[ {{cssxref("number")}}+ ]#</td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td><em>aucune</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Peut être animé</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>[ {{cssxref("number")}}+ ]#</td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><em>aucune</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Peut être animé</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Example">Example</h3>
+### Exemple
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- polygon est une forme fermée --&gt;
-  &lt;polygon stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90" /&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- polyline est une forme ouverte -->
+  <polyline stroke="black" fill="none"
+   points="50,0 21,90 98,35 2,35 79,90"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample('polygon', '100%', 200)}}</p>
+{{EmbedLiveSample('polyline', '100%', 200)}}
 
-<h2 id="Spécification">Spécification</h2>
+## polygon
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "shapes.html#PolygonElementPointsAttribute", "points")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Définition de <code>&lt;polygon&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "shapes.html#PolylineElementPointsAttribute", "points")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Définition de <code>&lt;polyline&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "shapes.html#PolygonElementPointsAttribute", "points")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale de <code>&lt;polygon&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "shapes.html#PolylineElementPointsAttribute", "points")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Définition initiale de <code>&lt;polyline&gt;</code></td>
-  </tr>
- </tbody>
+Pour un élément {{SVGElement('polyline')}}, `points` défini une liste de point, chaqu'un représente le vecteur pour tracer la ligne. Chaque point est défini par X et Y dans le système de coordonées de l'utilisateur.
+
+> **Note :** Un polygone est une forme fermée, ce qui implique que le dernier point est connecté au premier.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Valeur</th>
+      <td>[ {{cssxref("number")}}+ ]#</td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td><em>aucune</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Peut être animé</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
+
+### Example
+
+```css hidden
+html,body,svg { height:100% }
+```
+
+```html
+<svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- polygon est une forme fermée -->
+  <polygon stroke="black" fill="none"
+   points="50,0 21,90 98,35 2,35 79,90" />
+</svg>
+```
+
+{{EmbedLiveSample('polygon', '100%', 200)}}
+
+## Spécification
+
+| Spécification                                                                                            | Status                   | Commentaire                         |
+| -------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------- |
+| {{SpecName("SVG2", "shapes.html#PolygonElementPointsAttribute", "points")}}     | {{Spec2("SVG2")}} | Définition de `<polygon>`           |
+| {{SpecName("SVG2", "shapes.html#PolylineElementPointsAttribute", "points")}}     | {{Spec2("SVG2")}} | Définition de `<polyline>`          |
+| {{SpecName("SVG1.1", "shapes.html#PolygonElementPointsAttribute", "points")}} | {{Spec2("SVG1.1")}} | Définition initiale de `<polygon>`  |
+| {{SpecName("SVG1.1", "shapes.html#PolylineElementPointsAttribute", "points")}} | {{Spec2("SVG1.1")}} | Définition initiale de `<polyline>` |
