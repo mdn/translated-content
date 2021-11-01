@@ -115,7 +115,7 @@ onmessage = function(evt) {
 
 | Spécification                                                                                                                | Statut                           | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#the-offscreencanvas-interface", "OffscreenCanvas")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "canvas.html#the-offscreencanvas-interface", "OffscreenCanvas")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 
