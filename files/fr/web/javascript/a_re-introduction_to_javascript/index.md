@@ -263,7 +263,7 @@ JavaScript possède une différence importante quant aux autres langages de prog
 
 ## Les opérateurs
 
-Les opérateurs numériques en JavaScript sont `+`, `-`, `*`, `/` et `%` (qui est [l'opérateur de reste, à ne pas confondre avec le « modulo » mathématique](</fr/docs/conflicting/Web/JavaScript/Reference/Operators#remainder_()>)). Les valeurs sont affectées à l'aide de `=` et il existe également des opérateurs d'affectation combinés comme `+=` et `-=`. Ils sont équivalents à `x = x opérateur y`.
+Les opérateurs numériques en JavaScript sont `+`, `-`, `*`, `/` et `%` (qui est [l'opérateur de reste, qui est le même que le « modulo » mathématique](</fr/docs/conflicting/Web/JavaScript/Reference/Operators#remainder_()>)). Les valeurs sont affectées à l'aide de `=` et il existe également des opérateurs d'affectation combinés comme `+=` et `-=`. Ils sont équivalents à `x = x opérateur y`.
 
 ```js
 x += 5;
