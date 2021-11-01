@@ -104,7 +104,7 @@ Sempre descubra onde é o melhor lugar para perguntar. Bons OSPs sempre irão de
 
 ## Faça progresso, não ruído
 
-Pensei com cuidado sobre como você lida com a comunicação no projeto — tenha certeza de que é útil, e que não faz o trabalho de outro contribuidor mais difícil. Submeter pull requests para corrigir bugs é ótimo, mas eles são realmente úteis e fáceis de revisar? Tudo bem registrar issues e se juntar a outras conversas, mas suas issues e comentários estão dentro do assunto ou só estão gerando ruído?
+Pense com cuidado sobre como você lida com a comunicação no projeto — tenha certeza de que é útil, e que não faz o trabalho de outro contribuidor mais difícil. Submeter pull requests para corrigir bugs é ótimo, mas eles são realmente úteis e fáceis de revisar? Tudo bem registrar issues e se juntar a outras conversas, mas suas issues e comentários estão dentro do assunto ou só estão gerando ruído?
 
 Como regra, faça:
 
