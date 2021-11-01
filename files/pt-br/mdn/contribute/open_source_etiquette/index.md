@@ -63,7 +63,7 @@ Você também deve evitar qualquer xingamento / linguagem ofensiva no MDN, mesmo
 
 Esteja ciente de que existem regras em qualquer OSP para proteger seus contribuidores de se sentirem desconfortáveis enquanto contribuem. Isto geralmente vem na forma de um arquivo CODE_OF_CONDUCT.md no GitHub.
 
-Por exemplo, os repositórios do MDN são governados pela ampla [Diretrizes de participação na comunidade Mozilla](https://www.mozilla.org/pt-BR/about/governance/policies/participation/). Geralmente, comportamento ligeiramente ofensivo nos repositórios do MDN (Tal qual constantemente estar fora do assunto, ser perturbador ou ser rude) geralmente será respondido com um aviso do repositório, seguido de um aviso final, e então um banimento temporário ou permanente. Problemas comportamentais mais sérios como discurso de ódio ou ameaças contra outro contribuidor não serão tolerados e, provavelmente, resultarão em um banimento instantâneo.
+Por exemplo, os repositórios do MDN são governados pelas amplas [Diretrizes de participação na comunidade Mozilla](https://www.mozilla.org/pt-BR/about/governance/policies/participation/). Geralmente, comportamento ligeiramente ofensivo nos repositórios do MDN (Tal qual constantemente estar fora do assunto, ser perturbador ou ser rude) geralmente será respondido com um aviso do repositório, seguido de um aviso final, e então um banimento temporário ou permanente. Problemas comportamentais mais sérios como discurso de ódio ou ameaças contra outro contribuidor não serão tolerados e, provavelmente, resultarão em um banimento instantâneo.
 
 Se você receber qualquer coisa que faça você se sentir desconfortável, você sempre deve reportar usando os mecanismos fornecidos no código de conduta. 
 
@@ -100,7 +100,7 @@ Naturalmente, os docs não serão sempre perfeitos. Se for difícil encontrar um
 
 ## Descubra onde perguntar
 
-Sempre descubra onde é o melhor lugar para perguntar. Bons OSPs sempre irão deixar isso claro em seus docs (veja [peça ajuda no MDN](/pt-BR/docs/MDN/Contribute/Getting_started#step_4_ask_for_help)). Se você tiver dúvidas gerais, então use estes canais. Não crie uma issue no GitHub apenas para fazer uma pergunta, já que isso gera ruídos no projeto (veja "Faça progresso, não barulho" abaixo).
+Sempre descubra onde é o melhor lugar para perguntar. Bons OSPs sempre irão deixar isso claro em seus docs (veja [peça ajuda no MDN](/pt-BR/docs/MDN/Contribute/Getting_started#step_4_ask_for_help)). Se você tiver dúvidas gerais, então use estes canais. Não crie uma issue no GitHub apenas para fazer uma pergunta, já que isso gera ruídos no projeto (veja "Faça progresso, não ruído" abaixo).
 
 ## Faça progresso, não ruído
 
@@ -127,7 +127,7 @@ OSPs são bem democráticas — muitas decisões são votadas, e você é amplam
 
 Contudo, algumas coisas serão amplamente decididas por um grupo pequeno de contribuidores principais. Você está livre para se opor a qualquer decisão, mas, as vezes, um moderador vai tomar uma decisão que vai contra sua opinião. Você precisa respeitar e aceitar estas decisões.
 
-É útil conhecer alguns moderadores do projeto, então você saberá quem é o melhor para pedir ajudar, por exemplo com pull requests ou discussões em issues.
+É útil conhecer alguns moderadores do projeto, então você saberá quem é o melhor para pedir ajuda, por exemplo com pull requests ou discussões em issues.
 
 ## Seja paciente, seja conveniente
 
@@ -137,7 +137,7 @@ Tenha em mente que muitas pessoas trabalhando em OSPs estão fazendo isso em seu
 
 NÃO É razoável começar a exigir coisas, como uma resposta rápida.
 
-Se alguém está esperando que você faça algo por eles, você deveria demonstrar a mesma cortesia, mas, ao mesmo tempo, tentar responder o quão prontamente você conseguir. Se você realmente não conseguir encontrar tempo, os avise e peça para os mantenedores ajudarem a encontrar alguém para fazer a tarefa.
+Se alguém está esperando que você faça algo por eles, você deveria demonstrar a mesma cortesia, mas, ao mesmo tempo, tentar responder o quão prontamente você conseguir. Se você realmente não conseguir encontrar tempo, os avise e peça para que os mantenedores ajudem a encontrar alguém para fazer a tarefa.
 
 ## Veja também
 
