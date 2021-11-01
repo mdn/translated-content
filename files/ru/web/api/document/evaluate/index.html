@@ -9,7 +9,7 @@ translation_of: Web/API/Document/evaluate
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">var xpathResult = document.evaluate(
+<pre class="syntaxbox">var xpathResult = document.evaluate(
  xpathExpression,
  contextNode,
  namespaceResolver,
@@ -27,7 +27,7 @@ translation_of: Web/API/Document/evaluate
 
 <h2 id="Example">Пример</h2>
 
-<pre class="brush: js notranslate">var headings = document.evaluate("/html/body//h2", document, null, XPathResult.ANY_TYPE, null);
+<pre class="brush: js">var headings = document.evaluate("/html/body//h2", document, null, XPathResult.ANY_TYPE, null);
 /* Найти в документе все элементы h2
  * В качестве результата будет получен узловой итератор. */
 var thisHeading = headings.iterateNext();
@@ -43,7 +43,7 @@ alert(alertText); // Показывает alert со всеми найденны
 
 <p>Further optimization can be achieved by careful use of the context parameter. For example, if you know the content you are looking for is somewhere inside the body tag, you can use this:</p>
 
-<pre class="brush: js notranslate">document.evaluate(".//h2", document.body, null, XPathResult.ANY_TYPE, null);
+<pre class="brush: js">document.evaluate(".//h2", document.body, null, XPathResult.ANY_TYPE, null);
 </pre>
 
 <p>Notice in the above <code>document.body</code> has been used as the context instead of <code>document</code> so the XPath starts from the body element. (In this example, the <code>"."</code> is important to indicate that the querying should start from the context node, document.body. If the "." was left out (leaving <code>//h2</code>) the query would start from the root node (<code>html</code>) which would be more wasteful.)</p>
@@ -129,26 +129,11 @@ alert(alertText); // Показывает alert со всеми найденны
 
 <h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM3 XPath", "xpath.html#XPathEvaluator-evaluate", "Document.evaluate")}}</td>
-   <td>{{Spec2("DOM3 XPath")}}</td>
-   <td>Initial specification</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Document.evaluate")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">Смотрите также</h2>
 

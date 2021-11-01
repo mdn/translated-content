@@ -24,7 +24,7 @@ translation_of: Web/API/Media_Session_API
 
 <p>Главный интерфейс Media Session API -- {{domxref("MediaSession")}}. Не нужно создавать собственный экземпляр <code>MediaSession</code>, доступ к API осуществляется через свойство {{domxref("navigator.mediaSession")}}. Например, следующий код укажет, что страница воспроизводит медиа в данный момент:</p>
 
-<pre class="brush: js notranslate">navigator.mediaSession.playbackState = "playing";</pre>
+<pre class="brush: js">navigator.mediaSession.playbackState = "playing";</pre>
 
 <h2 id="Интерфейсы">Интерфейсы</h2>
 
@@ -50,7 +50,7 @@ translation_of: Web/API/Media_Session_API
 
 <p>Данный пример демонстрирует работу и определение доступности Media Session API. Также, он передаёт метаданные и определяет собственные обработчики событий:</p>
 
-<pre class="brush: js notranslate">if ('mediaSession' in navigator) {
+<pre class="brush: js">if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: 'Unforgettable',
     artist: 'Nat King Cole',
@@ -75,7 +75,7 @@ translation_of: Web/API/Media_Session_API
 
 <p>Некоторые браузеры отключают автовоспроизведение медиаэлементов на мобильных устройствах и требуют действий пользователя для начала воспроизведения. Этот пример добавит обработчик события <code>pointerup</code> для кнопки воспроизведения на странице, который начнёт работу с медиасессией:</p>
 
-<pre class="brush: js notranslate">playButton.addEventListener('pointerup', function(event) {
+<pre class="brush: js">playButton.addEventListener('pointerup', function(event) {
   var audio = document.querySelector('audio');
 
   // Пользователь нажал кнопку, начинаем воспроизведение...
@@ -86,19 +86,21 @@ translation_of: Web/API/Media_Session_API
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Session')}}</td>
-   <td>{{Spec2('Media Session')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
+<table>
+  <thead>
+    <tr>
+      <th>Specification</th>
+      <th>Status</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Media Session')}}</td>
+      <td>{{Spec2('Media Session')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Совместимость">Совместимость</h2>

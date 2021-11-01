@@ -9,7 +9,7 @@ translation_of: Web/API/AudioParam/setValueAtTime
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">var AudioParam = AudioParam.setValueAtTime(<em>value</em>, <em>startTime</em>)</pre>
+<pre class="syntaxbox">var AudioParam = AudioParam.setValueAtTime(<em>value</em>, <em>startTime</em>)</pre>
 
 <h3 id="Параметры">Параметры</h3>
 
@@ -28,7 +28,7 @@ translation_of: Web/API/AudioParam/setValueAtTime
 
 <p>This simple example features a media element source with two control buttons (see our <a href="https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html">webaudio-examples repo</a> for the source code, or <a href="https://mdn.github.io/webaudio-examples/audio-param/">view the example live</a>). When the buttons are pressed, the <code>currGain</code> variable is incremented/decremented by 0.25, then the <code>setValueAtTime()</code> method is used to set the gain value equal to <code>currGain</code>, one second from now (<code>audioCtx.currentTime + 1</code>.)</p>
 
-<pre class="brush: js;highlight[32,37] notranslate">// create audio context
+<pre class="brush: js;highlight[32,37]">// create audio context
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
@@ -88,7 +88,7 @@ targetAtTimeMinus.onclick = function() {
 
 
 
-<p>{{Compat("api.AudioParam.setValueAtTime")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

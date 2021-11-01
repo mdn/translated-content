@@ -31,7 +31,7 @@ original_slug: Web/HTTP/Заголовки/Content-Type
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">Content-Type: text/html; charset=utf-8
+<pre class="syntaxbox">Content-Type: text/html; charset=utf-8
 Content-Type: multipart/form-data; boundary=something
 </pre>
 
@@ -52,7 +52,7 @@ Content-Type: multipart/form-data; boundary=something
 
 <p>В {{HTTPMethod("POST")}} запросе, сгенерированном в результате отправки HTML формы, <code>Content-Type</code> запроса определяется в атрибуте <code>enctype</code> тега {{HTMLElement("form")}}.</p>
 
-<pre class="brush: html notranslate">&lt;form action="/" method="post" enctype="multipart/form-data"&gt;
+<pre class="brush: html">&lt;form action="/" method="post" enctype="multipart/form-data"&gt;
   &lt;input type="text" name="description" value="some text"&gt;
   &lt;input type="file" name="myFile"&gt;
   &lt;button type="submit"&gt;Submit&lt;/button&gt;
@@ -61,7 +61,7 @@ Content-Type: multipart/form-data; boundary=something
 
 <p>Запрос в этом случае может выглядеть так (менее интересные заголовки опущены):</p>
 
-<pre class="notranslate">POST /foo HTTP/1.1
+<pre>POST /foo HTTP/1.1
 Content-Length: 68137
 Content-Type: multipart/form-data; boundary=---------------------------974767299852498929531610575
 
@@ -97,7 +97,7 @@ Content-Type: text/plain
 </table>
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat("http.headers.Content-Type")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

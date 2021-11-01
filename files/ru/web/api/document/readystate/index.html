@@ -16,7 +16,7 @@ translation_of: Web/API/Document/readyState
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="notranslate">var <var>string</var> = <var>document</var>.readyState;</pre>
+<pre>var <var>string</var> = <var>document</var>.readyState;</pre>
 
 <h3 id="Значения">Значения</h3>
 
@@ -37,7 +37,7 @@ translation_of: Web/API/Document/readyState
 
 <h3 id="Разные_состояния_загрузки_страницы">Разные состояния загрузки страницы</h3>
 
-<pre class="brush: js notranslate"><span>switch (document.readyState) {
+<pre class="brush: js"><span>switch (document.readyState) {
   case "loading":
     // Страница все ещё загружается
     break;
@@ -56,7 +56,7 @@ translation_of: Web/API/Document/readyState
 
 <h3 id="readystatechange_как_альтернатива_событию_DOMContentLoaded">readystatechange как альтернатива событию DOMContentLoaded</h3>
 
-<pre class="brush:js notranslate">// альтернатива событию DOMContentLoaded
+<pre class="brush:js">// альтернатива событию DOMContentLoaded
 document.onreadystatechange = function () {
   if (document.readyState == "interactive") {
     initApplication();
@@ -65,7 +65,7 @@ document.onreadystatechange = function () {
 
 <h3 id="readystatechange_как_альтернатива_событию_load">readystatechange как альтернатива событию load</h3>
 
-<pre class="brush: js notranslate">// альтернатива событию load
+<pre class="brush: js">// альтернатива событию load
 document.onreadystatechange = function () {
   if (document.readyState == "complete") {
     initApplication();
@@ -74,34 +74,11 @@ document.onreadystatechange = function () {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="spectable standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Состояние</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#current-document-readiness", "Document readiness")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "#current-document-readiness", "Document readiness")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "#current-document-readiness", "Document readiness")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Первичная спецификация.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Браузерная_поддержка">Браузерная поддержка</h2>
 
-<p>{{Compat("api.Document.readyState")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

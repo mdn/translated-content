@@ -19,7 +19,7 @@ translation_of: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 
 <h2 id="Reason">Reason</h2>
 
-<pre class="syntaxbox notranslate">Причина: CORS заголовок 'Access-Control-Allow-Origin' не соответствует 'xyz'</pre>
+<pre class="syntaxbox">Причина: CORS заголовок 'Access-Control-Allow-Origin' не соответствует 'xyz'</pre>
 
 <h2 id="Что_пошло_не_так">Что пошло не так?</h2>
 
@@ -31,11 +31,11 @@ translation_of: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 
 <p>К примеру, в Apache, вы можете добавить следующую строку в конфигурацию веб-сервера (в пределах одной из секций - <code>&lt;Directory&gt;</code>, <code>&lt;Location&gt;</code>, <code>&lt;Files&gt;</code> или <code>&lt;VirtualHost&gt;</code>). Обычно конфигурация находиться в файле <code>.conf</code> (наиболее частые имена для него - <code>httpd.conf</code> и <code>apache.conf</code>) или в файле <code>.htaccess</code>.</p>
 
-<pre class="notranslate">Header set Access-Control-Allow-Origin '<em>origin-list</em>'</pre>
+<pre>Header set Access-Control-Allow-Origin '<em>origin-list</em>'</pre>
 
 <p>В Nginx, для установки такого заголовка можно воспользоваться следующей командой: </p>
 
-<pre class="notranslate">add_header 'Access-Control-Allow-Origin' '<em>origin-list</em>'</pre>
+<pre>add_header 'Access-Control-Allow-Origin' '<em>origin-list</em>'</pre>
 
 <h2 id="See_also">See also</h2>
 

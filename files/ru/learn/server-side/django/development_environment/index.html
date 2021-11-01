@@ -115,19 +115,19 @@ translation_of: Learn/Server-side/Django/development_environment
 
 <p>Ubuntu Linux включает в себя Python 3 по умолчанию. Вы можете удостовериться в этом, выполнив следующую команду в терминале:</p>
 
-<pre class="notranslate">python3 -V
+<pre>python3 -V
  Python 3.5.2</pre>
 
 <p>Однако, инструмент Python Package Index, при помощи которого вам нужно будет установить пакеты для  Python 3 (включая Django), по умолчанию <strong>не установлен</strong>. Вы можете установить pip3 через терминал bash при помощи:</p>
 
-<pre class="notranslate">sudo apt-get install python3-pip
+<pre>sudo apt-get install python3-pip
 </pre>
 
 <h3 id="Mac_OS_X">Mac OS X</h3>
 
 <p>Mac OS X "El Capitan" не включает Python 3. Вы можете удостовериться в этом, выполнив следующую команду в терминале:</p>
 
-<pre class="notranslate">python3 -V
+<pre>python3 -V
  -bash: python3: command not found</pre>
 
 <p>Вы можете легко установить Python 3 (вместе с инструментом <em>pip3</em>) с<a href="https://www.python.org/"> python.org</a>:</p>
@@ -144,13 +144,13 @@ translation_of: Learn/Server-side/Django/development_environment
 
 <p>Удостовериться в успешной установке вы можете проверкой на наличие  <em>Python 3</em>, как показано ниже:</p>
 
-<pre class="notranslate">python3 -V
+<pre>python3 -V
  Python 3.5.20
 </pre>
 
 <p>Подобным образом вы можете проверить установку <em>pip3</em>, отобразив список доступных пакетов:</p>
 
-<pre class="notranslate">pip3 list</pre>
+<pre>pip3 list</pre>
 
 <h3 id="Windows_10">Windows 10</h3>
 
@@ -168,13 +168,13 @@ translation_of: Learn/Server-side/Django/development_environment
 
 <p>После этого вы сможете подтвердить успешную установку Python путём выполнения следующего текста в командной строке:</p>
 
-<pre class="notranslate">py -3 -V
+<pre>py -3 -V
  Python 3.5.2
 </pre>
 
 <p>Установщик Windows включает в себя <em>pip3</em> (менеджер пакетов Python) по умолчанию. Вы можете отобразить список установленных пакетов, как показано далее:</p>
 
-<pre class="notranslate">pip list
+<pre>pip list
 </pre>
 
 <div class="note">
@@ -193,12 +193,12 @@ translation_of: Learn/Server-side/Django/development_environment
 
 <p>Установите инструмент при помощи pip3:</p>
 
-<pre class="notranslate"><code>sudo pip3 install virtualenvwrapper</code>
+<pre><code>sudo pip3 install virtualenvwrapper</code>
 </pre>
 
 <p>Затем добавьте следующие строки в конец файла загрузки программной оболочки (shell) (это скрытый файл в вашей домашней директории с именем <strong>.bashrc</strong>). Они устанавливают расположение виртуальных сред, расположение каталога разрабатываемого проекта и расположение установленного с этим пакетом скрипта.</p>
 
-<pre class="notranslate"><code>export WORKON_HOME=$HOME/.virtualenvs
+<pre><code>export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/bin/python3 '
 export PROJECT_HOME=$HOME/Devel
@@ -207,12 +207,12 @@ source /usr/local/bin/virtualenvwrapper.sh</code>
 
 <p>Затем перезагрузите файл загрузки, выполнив в терминале следующую команду:</p>
 
-<pre class="notranslate"><code>source ~/.bashrc</code>
+<pre><code>source ~/.bashrc</code>
 </pre>
 
 <p>В этот момент вы должны увидеть запуск группы скриптов, как показано ниже:</p>
 
-<pre class="notranslate"><code>virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/premkproject
+<pre><code>virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/premkproject
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postmkproject
 ...
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/preactivate
@@ -228,12 +228,12 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/get_env_detail
 
 <p>Установите инструмент при помощи pip3:</p>
 
-<pre class="notranslate"><code>sudo pip3 install virtualenvwrapper</code>
+<pre><code>sudo pip3 install virtualenvwrapper</code>
 </pre>
 
 <p>Затем добавьте следующие строки в конец вашего файла загрузки программной оболочки:</p>
 
-<pre class="notranslate"><code>export WORKON_HOME=$HOME/.virtualenvs
+<pre><code>export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh</code>
@@ -252,7 +252,7 @@ source /usr/local/bin/virtualenvwrapper.sh</code>
 
 
 
-<pre class="notranslate"><code>cd ~ # Navigate to my home directory
+<pre><code>cd ~ # Navigate to my home directory
 ls -la #List the content of the directory. You should see .bash_profile
 nano .bash_profile # Open the file in the nano text editor, within the terminal
 # Scroll to the end of the file, and copy in the lines above
@@ -262,7 +262,7 @@ nano .bash_profile # Open the file in the nano text editor, within the terminal
 
 <p>После этого перезагрузите файл загрузки путём выполнения следующей команды в терминале:</p>
 
-<pre class="notranslate"><code>source ~/.bash_profile</code>
+<pre><code>source ~/.bash_profile</code>
 </pre>
 
 <p>В этот момент вы должны увидеть запуск группы скриптов (те же скрипты, что и в случае установки на Ubuntu).</p>
@@ -273,7 +273,7 @@ nano .bash_profile # Open the file in the nano text editor, within the terminal
 
 <p>Установка <a href="https://pypi.python.org/pypi/virtualenvwrapper-win">virtualenvwrapper-win</a> ещё более проста, чем установка <em>virtualenvwrapper</em>, потому что вам не нужно настраивать расположения сохранения информации о виртуальной среде инструментом (эти значения заданы по умолчанию). Все, что вам нужно сделать, это запустить следующую команду в командной строке:</p>
 
-<pre class="notranslate"><code>pip3 install virtualenvwrapper-win</code></pre>
+<pre><code>pip3 install virtualenvwrapper-win</code></pre>
 
 <p>Теперь вы можете создать новую виртуальную среду при помощи команды <code>mkvirtualen</code>.</p>
 
@@ -283,7 +283,7 @@ nano .bash_profile # Open the file in the nano text editor, within the terminal
 
 <p>Теперь вы можете создать новую виртуальную среду при помощи команды <code>mkvirtualenv</code>. Во время запуска команды вы увидите установку виртуальной среды (конкретные результаты команды очень зависят от платформы). После выполнения команды активируется новая виртуальная среда — заметить это вы можете по тому, что началом ввода будет название виртуальной среды в круглых скобках (как показано ниже).</p>
 
-<pre class="notranslate"><code>$ mkvirtualenv my_django_environment
+<pre><code>$ mkvirtualenv my_django_environment
 Running virtualenv with interpreter /usr/bin/python3 ...
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
 (my_django_environment) ubuntu@ubuntu:~$</code></pre>
@@ -309,12 +309,12 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get
 
 <p>После создания виртуальной среды и вызова <code>workon</code> для входа в неё вы можете использовать <em>pip3 </em>для установки Django. </p>
 
-<pre class="notranslate">pip3 install django
+<pre>pip3 install django
 </pre>
 
 <p>Вы можете проверить установку Django, выполнив следующую команду (она просто проверяет, что Python может найти модуль Django):</p>
 
-<pre class="notranslate"># Linux/Mac OS X
+<pre># Linux/Mac OS X
 python3 -m django --version
  1.10.10
 
@@ -335,18 +335,18 @@ py -3 -m django --version
 
 <p>Указанная выше проверка работает, но не представляет особого интереса.Более интересная проверка заключается в создании шаблона проекта и проверки его работы. Для её выполнения перейдите в командной строке/терминале в место, где планируете сохранять приложения Django. Создайте папку для теста и перейдите в неё.</p>
 
-<pre class="notranslate">mkdir django_test
+<pre>mkdir django_test
 cd django_test
 </pre>
 
 <p>Затем вы можете создать шаблон сайта "<em>mytestsite</em>" при помощи инструмента <strong>django-admin</strong>. После создания сайта вы можете перейти в папку, где найдёте основной скрипт для управления проектами с именем <strong>manage.py</strong>.</p>
 
-<pre class="notranslate">django-admin startproject mytestsite
+<pre>django-admin startproject mytestsite
 cd mytestsite</pre>
 
 <p>Мы можем запустить веб-сервер разработки из этой папки при помощи <strong>manage.py</strong> и команды <code>runserver</code>, как показано ниже.</p>
 
-<pre class="notranslate">$ <strong>python3 manage.py runserver </strong>
+<pre>$ <strong>python3 manage.py runserver </strong>
 Performing system checks...
 
 System check identified no issues (0 silenced).

@@ -101,7 +101,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>Пример базового одностраничного текстового поля:</p>
 
-<pre class="brush: html notranslate">&lt;input type="text" id="comment" name="comment" value="I'm a text field"&gt;</pre>
+<pre class="brush: html">&lt;input type="text" id="comment" name="comment" value="I'm a text field"&gt;</pre>
 
 <p>Однострочное текстовое поле имеет только одно настоящее ограничение: если вы вводите текст с разрывами строки, браузер удаляет эти разрывы строк перед отправкой данных.</p>
 
@@ -113,7 +113,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>Этот тип поля устанавливается со значением <code>email</code> для атрибута {{htmlattrxref("type","input")}}:</p>
 
-<pre class="brush: html notranslate">&lt;input type="email" id="email" name="email" multiple&gt;</pre>
+<pre class="brush: html">&lt;input type="email" id="email" name="email" multiple&gt;</pre>
 
 <p>Когда используется этот <code>type</code>, пользователь должен ввести в поле валидный адрес электронной почты; любое другое содержание будет отображено браузером при отправке формы как ошибка. Заметьте, что это проверка ошибок на стороне клиента, выполняемая браузером:</p>
 
@@ -131,7 +131,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>This type of field is set using the value <code>password</code> for the {{htmlattrxref("type","input")}} attribute:</p>
 
-<pre class="brush: html notranslate">&lt;input type="password" id="pwd" name="pwd"&gt;</pre>
+<pre class="brush: html">&lt;input type="password" id="pwd" name="pwd"&gt;</pre>
 
 <p>It doesn't add any special constraints to the entered text, but it does obscure the value entered into the field (e.g. with dots or asterisks) so it can't be read by others.</p>
 
@@ -143,7 +143,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>This type of field is set by using the value <code>search</code> for the {{htmlattrxref("type","input")}} attribute:</p>
 
-<pre class="brush: html notranslate">&lt;input type="search" id="search" name="search"&gt;</pre>
+<pre class="brush: html">&lt;input type="search" id="search" name="search"&gt;</pre>
 
 <p>The main difference between a text field and a search field is how the browser styles it — often, search fields are rendered with rounded corners, and/or given an "x" to press to clear the entered value. However, there is another added feature worth noting: their values can be automatically saved to be auto completed across multiple pages on the same site.</p>
 
@@ -153,7 +153,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>This type of field is set using <code>tel</code> as the value of the {{htmlattrxref("type","input")}} attribute:</p>
 
-<pre class="brush: html notranslate">&lt;input type="tel" id="tel" name="tel"&gt;</pre>
+<pre class="brush: html">&lt;input type="tel" id="tel" name="tel"&gt;</pre>
 
 <p>Due to the wide variety of phone number formats around the world, this type of field does not enforce any constraints on the value entered by a user (this can include letters, etc.). This is primarily a semantic difference, although on some devices (especially on mobile), a different virtual keypad might be presented that is more suitable for entering phone numbers.</p>
 
@@ -161,7 +161,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>This type of field is set using the value <code>url</code> for the {{htmlattrxref("type","input")}} attribute:</p>
 
-<pre class="brush: html notranslate">&lt;input type="url" id="url" name="url"&gt;</pre>
+<pre class="brush: html">&lt;input type="url" id="url" name="url"&gt;</pre>
 
 <p>It adds special validation constraints to the field, with the browser reporting an error if invalid URLs are entered.</p>
 
@@ -175,7 +175,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>A multi-line text field is specified using a {{HTMLElement("textarea")}} element, rather than using the {{HTMLElement("input")}} element.</p>
 
-<pre class="brush: html notranslate">&lt;textarea cols="30" rows="10"&gt;&lt;/textarea&gt;</pre>
+<pre class="brush: html">&lt;textarea cols="30" rows="10"&gt;&lt;/textarea&gt;</pre>
 
 <p>The main difference between a textarea and a regular single line text field is that users are allowed to type text that includes hard line breaks (i.e. pressing return).</p>
 
@@ -236,7 +236,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>A select box is created with a {{HTMLElement("select")}} element with one or more {{HTMLElement("option")}} elements as its children, each of which specifies one of its possible values.</p>
 
-<pre class="brush: html notranslate">&lt;select id="simple" name="simple"&gt;
+<pre class="brush: html">&lt;select id="simple" name="simple"&gt;
   &lt;option&gt;Banana&lt;/option&gt;
   &lt;option&gt;Cherry&lt;/option&gt;
   &lt;option&gt;Lemon&lt;/option&gt;
@@ -244,7 +244,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>If required, the default value for the select box can be set using the {{htmlattrxref("selected","option")}} attribute on the desired {{HTMLElement("option")}} element — this option is then preselected when the page loads. The {{HTMLElement("option")}} elements can also be nested inside {{HTMLElement("optgroup")}} elements to create visually associated groups of values:</p>
 
-<pre class="brush: html notranslate">&lt;select id="groups" name="groups"&gt;
+<pre class="brush: html">&lt;select id="groups" name="groups"&gt;
   &lt;optgroup label="fruits"&gt;
     &lt;option&gt;Banana&lt;/option&gt;
     &lt;option selected&gt;Cherry&lt;/option&gt;
@@ -269,7 +269,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>Note: In the case of multiple choice select boxes, the select box no longer displays the values as drop-down content — instead, they are all displayed at once in a list.</p>
 
-<pre class="brush: html notranslate">&lt;select multiple id="multi" name="multi"&gt;
+<pre class="brush: html">&lt;select multiple id="multi" name="multi"&gt;
   &lt;option&gt;Banana&lt;/option&gt;
   &lt;option&gt;Cherry&lt;/option&gt;
   &lt;option&gt;Lemon&lt;/option&gt;
@@ -287,7 +287,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>Once a data list is affiliated with a form widget, its options are used to auto-complete text entered by the user; typically, this is presented to the user as a drop-down box listing possible matches for what they've typed into the input.</p>
 
-<pre class="brush: html notranslate">&lt;label for="myFruit"&gt;What's your favorite fruit?&lt;/label&gt;
+<pre class="brush: html">&lt;label for="myFruit"&gt;What's your favorite fruit?&lt;/label&gt;
 &lt;input type="text" name="myFruit" id="myFruit" list="mySuggestion"&gt;
 &lt;datalist id="mySuggestion"&gt;
   &lt;option&gt;Apple&lt;/option&gt;
@@ -312,7 +312,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>To handle this, here is a little trick to provide a nice fallback for those browsers:</p>
 
-<pre class="brush:html; notranslate">&lt;label for="myFruit"&gt;What is your favorite fruit? (With fallback)&lt;/label&gt;
+<pre class="brush:html;">&lt;label for="myFruit"&gt;What is your favorite fruit? (With fallback)&lt;/label&gt;
 &lt;input type="text" id="myFruit" name="fruit" list="fruitList"&gt;
 
 &lt;datalist id="fruitList"&gt;
@@ -363,7 +363,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>A check box is created using the {{HTMLElement("input")}} element with its {{htmlattrxref("type","input")}} attribute set to the value <code>checkbox</code>.</p>
 
-<pre class="brush: html notranslate">&lt;input type="checkbox" checked id="carrots" name="carrots" value="carrots"&gt;
+<pre class="brush: html">&lt;input type="checkbox" checked id="carrots" name="carrots" value="carrots"&gt;
 </pre>
 
 <p>Including the <code>checked</code> attribute makes the checkbox checked automatically when the page loads.</p>
@@ -374,11 +374,11 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>A radio button is created using the {{HTMLElement("input")}} element with its {{htmlattrxref("type","input")}} attribute set to the value <code>radio</code>.</p>
 
-<pre class="brush: html notranslate">&lt;input type="radio" checked id="soup" name="meal"&gt;</pre>
+<pre class="brush: html">&lt;input type="radio" checked id="soup" name="meal"&gt;</pre>
 
 <p>Several radio buttons can be tied together. If they share the same value for their {{htmlattrxref("name","input")}} attribute, they will be considered to be in the same group of buttons. Only one button in a given group may be checked at the same time; this means that when one of them is checked all the others automatically get unchecked. When the form is sent, only the value of the checked radio button is sent. If none of them are checked, the whole pool of radio buttons is considered to be in an unknown state and no value is sent with the form.</p>
 
-<pre class="brush: html notranslate">&lt;fieldset&gt;
+<pre class="brush: html">&lt;fieldset&gt;
   &lt;legend&gt;What is your favorite meal?&lt;/legend&gt;
   &lt;ul&gt;
     &lt;li&gt;
@@ -419,7 +419,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <h3 id="submit">submit</h3>
 
-<pre class="brush: html notranslate">&lt;button type="submit"&gt;
+<pre class="brush: html">&lt;button type="submit"&gt;
     This a &lt;br&gt;&lt;strong&gt;submit button&lt;/strong&gt;
 &lt;/button&gt;
 
@@ -427,7 +427,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <h3 id="reset">reset</h3>
 
-<pre class="brush: html notranslate">&lt;button type="reset"&gt;
+<pre class="brush: html">&lt;button type="reset"&gt;
     This a &lt;br&gt;&lt;strong&gt;reset button&lt;/strong&gt;
 &lt;/button&gt;
 
@@ -435,7 +435,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <h3 id="anonymous">anonymous</h3>
 
-<pre class="brush: html notranslate">&lt;button type="button"&gt;
+<pre class="brush: html">&lt;button type="button"&gt;
     This an &lt;br&gt;&lt;strong&gt;anonymous button&lt;/strong&gt;
 &lt;/button&gt;
 
@@ -473,7 +473,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <h4 id="Example">Example</h4>
 
-<pre class="brush: html notranslate">&lt;input type="number" name="age" id="age" min="1" max="10" step="2"&gt;</pre>
+<pre class="brush: html">&lt;input type="number" name="age" id="age" min="1" max="10" step="2"&gt;</pre>
 
 <p>This creates a number widget whose value is restricted to any value between 1 and 10, and whose increase and decrease buttons change its value by 2.</p>
 
@@ -487,19 +487,19 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <h4 id="Example_2">Example</h4>
 
-<pre class="brush: html notranslate">&lt;input type="range" name="beans" id="beans" min="0" max="500" step="10"&gt;</pre>
+<pre class="brush: html">&lt;input type="range" name="beans" id="beans" min="0" max="500" step="10"&gt;</pre>
 
 <p>This example creates a slider whose value may range between 0 and 500, and whose increment/decrement buttons change the value by +10 and -10.</p>
 
 <p>One problem with sliders is that they don't offer any kind of visual feedback as to what the current value is. You need to add this yourself with JavaScript, but this is relatively easy to do. In this example we add an empty {{htmlelement("span")}} element, in which we will write the current value of the slider, updating it as it is changed.</p>
 
-<pre class="brush: html notranslate">&lt;label for="beans"&gt;How many beans can you eat?&lt;/label&gt;
+<pre class="brush: html">&lt;label for="beans"&gt;How many beans can you eat?&lt;/label&gt;
 &lt;input type="range" name="beans" id="beans" min="0" max="500" step="10"&gt;
 &lt;span class="beancount"&gt;&lt;/span&gt;</pre>
 
 <p>This can be implemented using some simple JavaScript:</p>
 
-<pre class="brush: js notranslate">var beans = document.querySelector('#beans');
+<pre class="brush: js">var beans = document.querySelector('#beans');
 var count = document.querySelector('.beancount');
 
 count.textContent = beans.value;
@@ -522,29 +522,29 @@ beans.oninput = function() {
 
 <p>This creates a widget to display and pick a date with time, but without any specific time zone information.</p>
 
-<pre class="brush: html notranslate">&lt;input type="datetime-local" name="datetime" id="datetime"&gt;</pre>
+<pre class="brush: html">&lt;input type="datetime-local" name="datetime" id="datetime"&gt;</pre>
 
 <h4 id="month"><code>month</code></h4>
 
 <p>This creates a widget to display and pick a month with a year.</p>
 
-<pre class="brush: html notranslate">&lt;input type="month" name="month" id="month"&gt;</pre>
+<pre class="brush: html">&lt;input type="month" name="month" id="month"&gt;</pre>
 
 <h4 id="time"><code>time</code></h4>
 
 <p>This creates a widget to display and pick a time value.</p>
 
-<pre class="brush: html notranslate">&lt;input type="time" name="time" id="time"&gt;</pre>
+<pre class="brush: html">&lt;input type="time" name="time" id="time"&gt;</pre>
 
 <h4 id="week"><code>week</code></h4>
 
 <p>This creates a widget to display and pick a week number and its year.</p>
 
-<pre class="brush: html notranslate">&lt;input type="week" name="week" id="week"&gt;</pre>
+<pre class="brush: html">&lt;input type="week" name="week" id="week"&gt;</pre>
 
 <p>All date and time control can be constrained using the {{htmlattrxref("min","input")}} and {{htmlattrxref("max","input")}} attributes.</p>
 
-<pre class="brush: html notranslate">&lt;label for="myDate"&gt;When are you available this summer?&lt;/label&gt;
+<pre class="brush: html">&lt;label for="myDate"&gt;When are you available this summer?&lt;/label&gt;
 &lt;input type="date" name="myDate" min="2013-06-01" max="2013-08-31" id="myDate"&gt;</pre>
 
 <p>Warning — The date and time widgets don't have the deepest support. At the moment, Chrome, Edge, Firefox, and Opera support them well, but there is no support in Internet Explorer and Safari has patchy support.</p>
@@ -555,7 +555,7 @@ beans.oninput = function() {
 
 <p>A color widget is created using the {{HTMLElement("input")}} element with its {{htmlattrxref("type","input")}} attribute set to the value <code>color</code>.</p>
 
-<pre class="brush: html notranslate">&lt;input type="color" name="color" id="color"&gt;</pre>
+<pre class="brush: html">&lt;input type="color" name="color" id="color"&gt;</pre>
 
 <p>Warning — Color widget support it currently not very good. There is no support in Internet Explorer, and Safari currently doesn't support it either. The other major browsers do support it.</p>
 
@@ -577,7 +577,7 @@ beans.oninput = function() {
 
 <p>In this example, a file picker is created that requests graphic image files. The user is allowed to select multiple files in this case.</p>
 
-<pre class="brush: html notranslate">&lt;input type="file" name="file" id="file" accept="image/*" multiple&gt;</pre>
+<pre class="brush: html">&lt;input type="file" name="file" id="file" accept="image/*" multiple&gt;</pre>
 
 <h3 id="Hidden_content">Hidden content</h3>
 
@@ -585,7 +585,7 @@ beans.oninput = function() {
 
 <p>If you create such an element, it's required to set its <code>name</code> and <code>value</code> attributes:</p>
 
-<pre class="brush: html notranslate">&lt;input type="hidden" id="timestamp" name="timestamp" value="1286705410"&gt;</pre>
+<pre class="brush: html">&lt;input type="hidden" id="timestamp" name="timestamp" value="1286705410"&gt;</pre>
 
 <h3 id="Image_button">Image button</h3>
 
@@ -593,7 +593,7 @@ beans.oninput = function() {
 
 <p>An image button is created using an {{HTMLElement("input")}} element with its {{htmlattrxref("type","input")}} attribute set to the value <code>image</code>. This element supports exactly the same set of attributes as the {{HTMLElement("img")}} element, plus all the attributes supported by other form buttons.</p>
 
-<pre class="brush: html notranslate">&lt;input type="image" alt="Click me!" src="my-img.png" width="80" height="30" /&gt;</pre>
+<pre class="brush: html">&lt;input type="image" alt="Click me!" src="my-img.png" width="80" height="30" /&gt;</pre>
 
 <p>If the image button is used to submit the form, this widget doesn't submit its value; instead the X and Y coordinates of the click on the image are submitted (the coordinates are relative to the image, meaning that the upper-left corner of the image represents the coordinate 0, 0). The coordinates are sent as two key/value pairs:</p>
 
@@ -604,7 +604,7 @@ beans.oninput = function() {
 
 <p>So for example when you click on the image of this widget, you are sent to a URL like the following:</p>
 
-<pre class="notranslate">http://foo.com?pos.x=123&amp;pos.y=456</pre>
+<pre>http://foo.com?pos.x=123&amp;pos.y=456</pre>
 
 <p>This is a very convenient way to build a "hot map". How these values are sent and retrieved is detailed in the <a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data" title="/en-US/docs/HTML/Forms/Sending_and_retrieving_form_data"><span>Sending and retrieving form data</span></a> article.</p>
 
@@ -616,7 +616,7 @@ beans.oninput = function() {
 
 <p>A progress bar represents a value that changes over time up to a maximum value specified by the {{htmlattrxref("max","progress")}} attribute. Such a bar is created using a {{ HTMLElement("progress")}} element.</p>
 
-<pre class="brush: html notranslate">&lt;progress max="100" value="75"&gt;75/100&lt;/progress&gt;</pre>
+<pre class="brush: html">&lt;progress max="100" value="75"&gt;75/100&lt;/progress&gt;</pre>
 
 <p>This is for implementing anything requiring progress reporting, such as the percentage of total files downloaded, or the number of questions filled in on a questionnaire.</p>
 
@@ -653,7 +653,7 @@ beans.oninput = function() {
 
 <p>Such a bar is created using a {{HTMLElement("meter")}} element. This is for implementing any kind of meter, for example a bar showing total space used on a disk, which turns red when it starts to get full.</p>
 
-<pre class="brush: html notranslate">&lt;meter min="0" max="100" value="75" low="33" high="66" optimum="50"&gt;75&lt;/meter&gt;</pre>
+<pre class="brush: html">&lt;meter min="0" max="100" value="75" low="33" high="66" optimum="50"&gt;75&lt;/meter&gt;</pre>
 
 <p>The content inside the {{HTMLElement("meter")}} element is a fallback for browsers that don't support the element and for assistive technologies to vocalize it.</p>
 

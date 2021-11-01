@@ -85,7 +85,7 @@ translation_of: Learn/Server-side/Express_Nodejs/development_environment
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Самый простой способ установить последнюю версию LTS Node 6.x - это использовать</span></span> <a href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions">package manager</a> <span class="tlid-translation translation" lang="ru"><span title="">чтобы получить его из репозитория бинарных дистрибутивов Ubuntu.</span> <span title="">Это можно сделать очень просто, выполнив следующие две команды на вашем терминале:</span></span></p>
 
-<pre class="brush: bash notranslate"><code>curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+<pre class="brush: bash"><code>curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs</code>
 </pre>
 
@@ -100,12 +100,12 @@ sudo apt-get install -y nodejs</code>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Самый простой способ проверить, установлен ли этот узел, - это запустить команду «версия» в своём терминале / командной строке и проверить, что возвращается строка версии:</span></span></p>
 
-<pre class="brush: bash notranslate">&gt;node -v
+<pre class="brush: bash">&gt;node -v
 v8.11.3</pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Менеджер пакетов Nodejs NPM также должен быть установлен и может быть протестирован таким же образом:</span></span></p>
 
-<pre class="brush: bash notranslate">&gt;npm -v
+<pre class="brush: bash">&gt;npm -v
 5.8.0</pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">В качестве немного более захватывающего теста давайте создадим очень простой сервер «чистого узла», который просто печатает «Hello World» в браузере, когда вы посещаете правильный URL в вашем браузере:</span></span></p>
@@ -113,7 +113,7 @@ v8.11.3</pre>
 <ol>
  <li><span class="tlid-translation translation" lang="ru"><span title="">Скопируйте следующий текст в файл с именем hellonode.js.</span> <span title="">Здесь используются чистые функции Node (ничего из Express) и некоторый синтаксис ES6:</span></span>
 
-  <pre class="brush: js notranslate">//Загрузка модуля HTTP
+  <pre class="brush: js">//Загрузка модуля HTTP
 const http = require("http");
 <code>const hostname = '127.0.0.1';
 const port = 3000;
@@ -141,7 +141,7 @@ server.listen(port, hostname, () =&gt; {
   </div>
  </li>
  <li><span class="tlid-translation translation" lang="ru"><span title="">Запустите сервер, перейдя в тот же каталог, что и ваш файл hellonode.js в командной строке, и вызвав узел вместе с именем скрипта, например так:</span></span>
-  <pre class="brush: bash notranslate">&gt;node hellonode.js
+  <pre class="brush: bash">&gt;node hellonode.js
 Server running at http://127.0.0.1:3000/
 </pre>
  </li>
@@ -169,15 +169,15 @@ Server running at http://127.0.0.1:3000/
 <ol>
  <li><span class="tlid-translation translation" lang="ru"><span title="">Сначала создайте каталог для вашего нового приложения и перейдите в него:</span></span>
 
-  <pre class="brush: bash notranslate">mkdir myapp
+  <pre class="brush: bash">mkdir myapp
 cd myapp</pre>
  </li>
  <li><span class="tlid-translation translation" lang="ru"><span title="">Используйте команду npm init для создания файла package.json для вашего приложения.</span> <span title="">Эта команда запрашивает у вас несколько вещей, включая имя и версию вашего приложения, а также имя исходного файла точки входа (по умолчанию это index.js).</span> <span title="">Сейчас просто примите значения по умолчанию:</span></span>
-  <pre class="brush: bash notranslate">npm init</pre>
+  <pre class="brush: bash">npm init</pre>
 
   <p><span class="tlid-translation translation" lang="ru"><span title="">Если вы отобразите файл package.json (cat package.json), вы увидите принятые по умолчанию значения, заканчивающиеся лицензией.</span></span></p>
 
-  <pre class="brush: json notranslate">{
+  <pre class="brush: json">{
   "name": "myapp",
   "version": "1.0.0",
   "description": "",
@@ -192,11 +192,11 @@ cd myapp</pre>
  </li>
  <li><span class="tlid-translation translation" lang="ru"><span title="">Теперь установите Express в каталог myapp и сохраните его в списке зависимостей вашего файла package.json</span></span></li>
  <li>
-  <pre class="brush: bash notranslate">npm install express --save</pre>
+  <pre class="brush: bash">npm install express --save</pre>
 
   <p><span class="tlid-translation translation" lang="ru"><span title="">Раздел зависимостей вашего package.json теперь появится в конце файла package.json и будет содержать Express.</span></span></p>
 
-  <pre class="brush: json notranslate">{
+  <pre class="brush: json">{
   "name": "myapp",
   "version": "1.0.0",
   "description": "",
@@ -213,7 +213,7 @@ cd myapp</pre>
 </pre>
  </li>
  <li><span class="tlid-translation translation" lang="ru"><span title="">Для использования библиотеки вы вызываете функцию require (), как показано ниже в вашем файле index.js.</span></span>
-  <pre class="notranslate"><code><strong>const express = require('express')</strong>
+  <pre><code><strong>const express = require('express')</strong>
 const app = express();
 
 app.get('/', (req, res) =&gt; {
@@ -230,7 +230,7 @@ app.listen(</code>8000<code>, () =&gt; {
    <span class="tlid-translation translation" lang="ru"><span title="">Создайте файл с именем index.js в корне каталога приложения «myapp» и передайте ему содержимое, показанное выше.</span></span></p>
  </li>
  <li><span class="tlid-translation translation" lang="ru"><span title="">Вы можете запустить сервер, вызвав узел с помощью скрипта в командной строке:</span></span>
-  <pre class="brush: bash notranslate">&gt;node index.js
+  <pre class="brush: bash">&gt;node index.js
 Example app listening on port 8000
 </pre>
  </li>
@@ -241,11 +241,11 @@ Example app listening on port 8000
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Если зависимость используется только во время разработки, вы должны вместо этого сохранить её как «зависимость разработки» (чтобы пользователям вашего пакета не приходилось устанавливать её в производстве).</span> <span title="">Например, чтобы использовать популярный инструмент JavaScript Linting eslint, вы должны вызвать NPM, как показано ниже:</span></span></p>
 
-<pre class="brush: bash notranslate"><code>npm install eslint --save-dev</code></pre>
+<pre class="brush: bash"><code>npm install eslint --save-dev</code></pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Следующая запись будет добавлена в package.json вашего приложения:</span></span></p>
 
-<pre class="brush: js notranslate">  "devDependencies": {
+<pre class="brush: js">  "devDependencies": {
     "eslint": "^4.12.1"
   }
 </pre>
@@ -264,7 +264,7 @@ Example app listening on port 8000
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Например, чтобы определить скрипт для запуска зависимости разработки eslint, которую мы указали в предыдущем разделе, мы могли бы добавить следующий блок скрипта в наш файл package.json (при условии, что наш источник приложения находится в папке / src / js):</span></span></p>
 
-<pre class="brush: js notranslate">"scripts": {
+<pre class="brush: js">"scripts": {
   ...
   "lint": "eslint src/js"
   ...
@@ -275,7 +275,7 @@ Example app listening on port 8000
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Затем мы сможем запустить eslint с помощью NPM, вызвав:</span></span></p>
 
-<pre class="brush: bash notranslate"><code>npm run-script lint
+<pre class="brush: bash"><code>npm run-script lint
 # OR (using the alias)
 npm run lint</code>
 </pre>
@@ -286,16 +286,16 @@ npm run lint</code>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Инструмент Express Application Generator создаёт «скелет» приложения Express.</span> <span title="">Установите генератор, используя NPM, как показано (флаг -g устанавливает инструмент глобально, чтобы вы могли вызывать его из любого места):</span></span></p>
 
-<pre class="notranslate"><code>npm install express-generator -g</code></pre>
+<pre><code>npm install express-generator -g</code></pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Чтобы создать приложение Express с именем «helloworld» с настройками по умолчанию, перейдите туда, где вы хотите его создать, и запустите приложение, как показано ниже:</span></span></p>
 
-<pre class="brush: bash notranslate">express helloworld</pre>
+<pre class="brush: bash">express helloworld</pre>
 
 <div class="note">
 <p><strong>Замечание:</strong> <span class="tlid-translation translation" lang="ru"><span title="">Вы также можете указать библиотеку шаблонов для использования и ряд других настроек.</span> <span title="">Используйте команду help, чтобы увидеть все параметры:</span></span></p>
 
-<pre class="brush: bash notranslate">express --help
+<pre class="brush: bash">express --help
 </pre>
 </div>
 
@@ -304,7 +304,7 @@ npm run lint</code>
 <div class="note">
 <p><span class="tlid-translation translation" lang="ru"><span title="">Новое приложение будет иметь файл package.json в своём корневом каталоге.</span> <span title="">Вы можете открыть это, чтобы увидеть, какие зависимости установлены, включая Express и библиотеку шаблонов Jade:</span></span></p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
   "name": "helloworld",
   "version": "0.0.0",
   "private": true,
@@ -325,13 +325,13 @@ npm run lint</code>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Установите все зависимости для приложения helloworld, используя NPM, как показано ниже:</span></span></p>
 
-<pre class="brush: bash notranslate">cd helloworld
+<pre class="brush: bash">cd helloworld
 npm install
 </pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Затем запустите приложение (команды немного отличаются для Windows и Linux / macOS), как показано ниже:</span></span></p>
 
-<pre class="brush: bash notranslate"># Run the helloworld on Windows with Command Prompt
+<pre class="brush: bash"># Run the helloworld on Windows with Command Prompt
 SET DEBUG=helloworld:* &amp; npm start
 
 # Run the helloworld on Windows with PowerShell
@@ -343,7 +343,7 @@ DEBUG=helloworld:* npm start
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Команда DEBUG создаёт полезное ведение журнала, что приводит к выводу, подобному показанному ниже.</span></span></p>
 
-<pre class="brush: bash notranslate">&gt;SET DEBUG=helloworld:* &amp; npm start
+<pre class="brush: bash">&gt;SET DEBUG=helloworld:* &amp; npm start
 
 &gt; helloworld@0.0.0 start D:\Github\expresstests\helloworld
 &gt; node ./bin/www

@@ -10,17 +10,17 @@ translation_of: Web/JavaScript/Reference/Classes/constructor
 ---
 <div>{{jsSidebar("Classes")}}</div>
 
-<div><code>constructor</code> - специальный метод, служащий для создания и инициализации объектов, созданных с использованием <code>class</code>.</div>
+<div><code>constructor</code> - это специальный метод, служащий для создания и инициализации объектов, созданных с использованием <code>class</code>.</div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">constructor([arguments]) { ... }</pre>
+<pre class="syntaxbox">constructor([arguments]) { ... }</pre>
 
 <h2 id="Описание">Описание</h2>
 
-<p>Конструктор позволяет произвести начальную инициализацию, которая должна быть выполнена до того, как остальные методы вызваны.</p>
+<p>Конструктор позволяет произвести начальную инициализацию, которая должна быть выполнена до того, как остальные методы будут вызваны.</p>
 
-<pre class="notranslate">class Person {
+<pre>class Person {
 
   constructor(name) {
     this.name = name;
@@ -38,17 +38,17 @@ otto.introduce();</pre>
 
 <p>Если вы не определили метод constructor, то будет использован конструктор по умолчанию. Если ваш класс базовый, то конструктор по умолчанию пустой:</p>
 
-<pre class="notranslate">constructor() {}</pre>
+<pre>constructor() {}</pre>
 
 <p>Если ваш класс является производным классом, конструктор по умолчанию вызывает родительский конструктор, передавая любые аргументы, которые были предоставлены:</p>
 
-<pre class="notranslate">constructor(...args) {
+<pre>constructor(...args) {
   super(...args);
 }</pre>
 
-<p>Это позволяет работать код:</p>
+<p>Это позволяет работать следующему коду:</p>
 
-<pre class="notranslate">class ValidationError extends Error {
+<pre>class ValidationError extends Error {
 
   printCustomerMessage() {
     return `Проверка не удалась :-( (подробности: ${this.message})`;
@@ -57,22 +57,22 @@ otto.introduce();</pre>
 }
 
 try {
-  throw new ValidationError("Не правильный номер телефона");
+  throw new ValidationError("Неправильный номер телефона");
 } catch (error) {
    if (error instanceof ValidationError) {
     console.log(error.name); // Это Error вместо ValidationError!
     console.log(error.printCustomerMessage());
   } else {
-    console.log('Не известная ошибка', error);
+    console.log('Неизвестная ошибка', error);
     throw error;
   }
 }</pre>
 
-<p><code>ValidationError</code> классу не нужен явный (explicit) конструктор, потому что не требуется инициализация. Затем конструктор по умолчанию позаботится о инициализации родительского класса <code>Error</code> переданным ему аргументом.</p>
+<p><code>ValidationError</code> классу не нужен явный (explicit) конструктор, потому что не требуется инициализация. Затем, конструктор по умолчанию позаботится об инициализации родительского класса <code>Error</code>, переданным ему аргументом.</p>
 
-<p>Однако, если определён ваш собственный конструктор и ваш класс является производным от какого-либо родительского класса, то вы должны явно объявить конструктор родительского класса, используя <code>super</code>. К примеру:</p>
+<p>Однако, если определён ваш собственный конструктор и класс является производным от какого-либо родительского класса, то вы должны явно объявить конструктор родительского класса, используя <code>super</code>. К примеру:</p>
 
-<pre class="notranslate">class ValidationError extends Error {
+<pre>class ValidationError extends Error {
 
   constructor(message) {
     super(message);  // вызов конструктора родительского класса
@@ -87,13 +87,13 @@ try {
 }
 
 try {
-  throw new ValidationError("Не правильный номер телефона");
+  throw new ValidationError("Неправильный номер телефона");
 } catch (error) {
    if (error instanceof ValidationError) {
     console.log(error.name); // Теперь это ValidationError!
     console.log(error.printCustomerMessage());
   } else {
-    console.log('Не известная ошибка', error);
+    console.log('Неизвестная ошибка', error);
     throw error;
   }
 }</pre>
@@ -106,13 +106,13 @@ try {
 
 <p>Данный фрагмент кода взят из <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes sample</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a>).</p>
 
-<pre class="brush: js notranslate">class Square extends Polygon {
+<pre class="brush: js">class Square extends Polygon {
   constructor(length) {
     // Здесь вызывается конструктор родительского класса,
     // в который передаётся length в качестве аргументов,
     // соответствующим полям width и height класса Polygon
     super(length, length);
-    // Примечание: В производном классе, super() должен вызываться перед тем как
+    // Примечание: В производном классе, super() должен вызываться перед тем, как
     // вы сможете использовать 'this'. Иначе будет сгенерировано исключение reference error.
     this.name = 'Square';
   }
@@ -130,7 +130,7 @@ try {
 
 <p>Посмотрите на этот отрывок кода.</p>
 
-<pre class="brush: js notranslate">class Polygon {
+<pre class="brush: js">class Polygon {
   constructor() {
     this.name = "Polygon";
   }
@@ -158,38 +158,20 @@ console.log(newInstance.name); //Polygon</pre>
 
 <p>Если вы не определите метод constructor, будет использован constructor по умолчанию. Для базовых классов, constructor по умолчанию:</p>
 
-<pre class="brush: js notranslate">constructor() {}</pre>
+<pre class="brush: js">constructor() {}</pre>
 
 <p>Для производных классов, constructor по умолчанию:</p>
 
-<pre class="brush: js notranslate">constructor(...args) {
+<pre class="brush: js">constructor(...args) {
   super(...args);
 }</pre>
 
 <h2 id="Спецификация">Спецификация</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-static-semantics-constructormethod', 'Constructor Method')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-static-semantics-constructormethod', 'Constructor Method')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat("javascript.classes.constructor")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

@@ -214,7 +214,6 @@ a::before {
 #### HTML
 
 ```html
-<ul>
   <li><a id="moz" href="https://www.mozilla.org/">
     Mozilla Home Page</a></li>
   <li><a id="mdn" href="https://developer.mozilla.org/">
