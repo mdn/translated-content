@@ -6,8 +6,8 @@ tags:
   - Basis
   - CSS
   - Flex
-  - Guide
-  - flexbox
+  - ガイド
+  - フレックスボックス
   - free space
   - grow
   - max-content
@@ -17,188 +17,180 @@ tags:
 translation_of: >-
   Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p class="summary">このガイドでは、フレックスアイテムに適用され、主軸に沿ってアイテムの寸法と自由度を制御することができる三つのプロパティを見ていきます。 — {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}}, {{CSSxRef("flex-basis")}} です。これらのプロパティがどのようにアイテムを伸縮させるかについて完全に理解することが、フレックスボックスをマスターするための鍵です。</p>
+このガイドでは、フレックスアイテムに適用され、主軸に沿ってアイテムの寸法と自由度を制御することができる三つのプロパティ — {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}}, {{CSSxRef("flex-basis")}} を見ていきます。これらのプロパティがどのようにアイテムを伸縮させるかについて完全に理解することが、フレックスボックスをマスターするための鍵です。
 
-<h2 id="A_first_look" name="A_first_look">最初に見てみる</h2>
+## 最初に見てみる
 
-<p>三つのプロパティは、フレックスアイテムの自由度を以下の観点から制御します。</p>
+3 つのプロパティは、フレックスアイテムの自由度を以下の観点から制御します。
 
-<ul>
- <li><code>flex-grow</code>: このアイテムがどれだけ余白を得るか。</li>
- <li><code>flex-shrink</code>: このアイテムからどれだけ余白を削除できるか。</li>
- <li><code>flex-basis</code>: 伸長や縮小が発生する前のアイテムの寸法はいくつか。</li>
-</ul>
+- `flex-grow`: このアイテムが得る正の自由空間はどれくらいか。
+- `flex-shrink`: このアイテムから縮小できる負の自由空間はどれくらいか。
+- `flex-basis`: 伸長や縮小が発生する前のアイテムの寸法はいくつか。
 
-<p>プロパティは通常、一括指定の {{CSSxRef("flex")}} プロパティとして表されます。以下のコードは <code>flex-grow</code> プロパティを <code>2</code> に、 <code>flex-shrink</code> を <code>1</code> に、 <code>flex-basis</code> を <code>auto</code> に設定します。</p>
+プロパティは通常、一括指定の {{CSSxRef("flex")}} プロパティとして表されます。以下のコードは `flex-grow` プロパティを `2` に、 `flex-shrink` を `1` に、 `flex-basis` を `auto` に設定します。
 
-<pre class="brush: css no-line-numbers">.item {
+```css
+.item {
   flex: 2 1 auto;
-}</pre>
+}
+```
 
-<p>すでに<a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">フレックスボックスの基本概念</a>の記事を読んでいるのであれば、すでにこれらのプロパティの紹介を受けているでしょう。ここではこれらを掘り下げ、使用するとブラウザーが何をするかを完全に理解できるようにします。</p>
+すでに[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)の記事を読んでいるのであれば、すでにこれらのプロパティの紹介を受けているでしょう。ここではこれらを掘り下げ、使用するとブラウザーが何をするかを完全に理解できるようにします。
 
-<h2 id="Important_concepts_when_working_on_the_main_axis" name="Important_concepts_when_working_on_the_main_axis">主軸に合わせて動作する重要概念</h2>
+## 主軸に合わせて動作する重要概念
 
-<p>There are a few concepts worth digging into before looking at how the flex properties work to control ratios along the main axis. These relate to the <em>natural</em> size of flex items before any growing or shrinking takes place, and to the concept of free space.</p>
+主軸に沿った比率を制御するためのフレックスプロパティの機能を見る前に、いくつかの概念を確認しておきましょう。これらは、フレックスアイテムの成長や縮小が起こる前の*自然な*寸法と、自由空間の概念に関連しています。
 
-<h3 id="Flex_item_sizing" name="Flex_item_sizing">フレックスアイテムの寸法の変更</h3>
+### フレックスアイテムの寸法の変更
 
-<p>In order to work out how much space there is available to lay out flex items, the browser needs to know how big the item is to start with. How is this worked out for items that don’t have a width or a height applied using an absolute length unit?</p>
+フレックスアイテムをレイアウトするための空間を確保するには、まずアイテムの大きさをブラウザーが知る必要があります。絶対的な長さの単位で適用される幅や高さを持たないアイテムは、どのようにして処理されるのでしょうか。
 
-<p>There is a concept in CSS of {{CSSxRef('width','min-content','#min-content')}} and {{CSSxRef('width','max-content','#max-content')}} — these keywords are <a href="https://drafts.csswg.org/css-sizing-3/#width-height-keywords">defined in the CSS Intrinsic and Extrinsic Sizing Specification</a>, and can be used in place of a <a href="/ja/docs/Web/CSS/length">length unit</a>.</p>
+CSS には {{CSSxRef('width','min-content','#min-content')}} と {{CSSxRef('width','max-content','#max-content')}} という概念があります。これらのキーワードは [CSS Intrinsic and Extrinsic Sizing 仕様書で定義](https://drafts.csswg.org/css-sizing-3/#width-height-keywords)されており、[長さの単位](/ja/docs/Web/CSS/length)の代わりに使用することができます。
 
-<p>In the live example below for instance I have two paragraph elements that contain a string of text. The first paragraph has a width of <code>min-content</code>. In a browser that supports this keyword you should be able to see that the text has taken all of the soft wrapping opportunities available to it, becoming as small as it can be without overflowing. This then, is the <code>min-content</code> size of that string. Essentially, the longest word in the string is dictating the size.</p>
+例えば、以下のライブ例では、テキストの文字列を含む 2 つの段落要素があります。1 つ目の段落の幅は `min-content` となっています。このキーワードに対応しているブラウザーでは、テキストのソフトな折り返しの機会をすべて利用して、はみ出さない範囲で小さくなっているのがわかるはずです。これが、その文字列の最小コンテンツサイズです。基本的には、文字列の中で最も長い単語が大きさを決定します。
 
-<p>The second paragraph has a value of <code>max-content</code> and so it does the opposite. It gets as big as it possibly can be, taking no soft-wrapping opportunities. It would overflow the box it is in if that container was too narrow.</p>
+2 つ目の段落は、`max-content` という値を持っているので、逆のことをしています。これは可能な限り大きくして、ソフトな折り返しの機会を与えません。コンテナーが狭すぎるとボックスからあふれてしまいます。
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/ratios/min-max-content.html", '100%', 750)}}</p>
+{{EmbedGHLiveSample("css-examples/flexbox/ratios/min-max-content.html", '100%', 750)}}
 
-<p>If your browser does not yet support these keywords both paragraphs will be rendered as normal paragraphs in block flow; the below screenshots show the expected rendering.</p>
+お使いのブラウザーがこれらのキーワードにまだ対応していない場合、両方の段落はブロックフローの通常の段落としてレンダリングされます。以下のスクリーンショットは期待されるレンダリングを示しています。
 
-<p><img alt="The first paragraph is wrapped to the longest word, the second stretched out so as to cause overflow." src="https://mdn.mozillademos.org/files/15658/ratios-size.png" style="display: block; height: 558px; margin: 0px auto; width: 1520px;"></p>
+![第 1 段落は最も長い単語で折り返されており、第 2 段落はあふれ出すように引き伸ばされています。](ratios-size.png)
 
-<p>Remember this behaviour and what effects <code>min-content</code> and <code>max-content</code> have as we explore <code>flex-grow</code> and <code>flex-shrink</code> later in this article.</p>
+この動作と、`min-content` および `max-content` がどのような効果を持つかについては、後述の `flex-grow` と `flex-shrink` の説明で覚えておいてください。
 
-<h3 id="Positive_and_negative_free_space" name="Positive_and_negative_free_space">正と負のフリースペース</h3>
+### 正と負の自由空間
 
-<p>To talk about these properties we need to understand the concept of <strong>positive and negative free space</strong>. When a flex container has positive free space, it has more space than is required to display the flex items inside the container. For example, if I have a 500 pixel-wide container, {{CSSxRef("flex-direction")}} is <code>row</code>, and I have three flex items each 100 pixels wide, then I have 200 pixels of positive free space, which could be distributed between the items if I wanted them to fill the container.</p>
+これらの特性を説明するには、**正と負の自由空間**の概念を理解する必要があります。フレックスコンテナーに正の自由空間がある場合は、コンテナー内にフレックスアイテムを表示するのに必要な空間よりも大きな空間があるということです。たとえば 幅が 500 ピクセルのコンテナーで、{{CSSxRef("flex-direction")}} が `row` であり、幅 100 ピクセルのフレックスアイテムが 3 つあった場合、正の自由空間が 200 ピクセルあり、コンテナーいっぱいに表示したい場合は、各アイテムに分配することができます。
 
-<p><img alt="Image showing space left over after items have been displayed." src="https://mdn.mozillademos.org/files/15654/Basics7.png" style="display: block; height: 198px; margin: 0px auto; width: 528px;"></p>
+![アイテムを配置した後で空間が残っていることを表す画像です。](basics7.png)
 
-<p>We have negative free space when the natural size of the items adds up to larger than the available space in the flex container. If I have a 500 pixel-wide container like the one above, but the three flex items are each 200 pixels wide, the total space I need will be 600 pixels, so I have 100 pixels of negative free space. This could be removed from the items in order to make them fit the container.</p>
+アイテムの自然な大きさの合計が、フレックスコンテナー内の利用可能な空間よりも大きい場合、負の自由空間が発生します。上の図のように幅 500 ピクセルのコンテナーがあるものの、3 つのフレックスアイテムの幅がそれぞれ 200 ピクセルであった場合、必要な空間は合計で 600 ピクセルとなり、100 ピクセルの負の自由空間が発生します。これをアイテムから取り除くことで、コンテナーに合わせることができます。
 
-<p><img alt="The items overflow the container" src="https://mdn.mozillademos.org/files/15655/ratios1.png" style="display: block; height: 198px; margin: 0px auto; width: 634px;"></p>
+![アイテムがコンテナーから溢れてしまう](ratios1.png)
 
-<p>It is this distribution of positive free space and removal of negative free space that we need to understand in order to understand the flex properties.</p>
+フレックスのプロパティを理解するには、この正の自由空間の分配と負の自由空間の除去を理解する必要があります。
 
-<p>In the following examples I am working with {{CSSxRef("flex-direction")}} set to row, therefore the size of items will always come from their width. We will be calculating the positive and negative free space created by comparing the total width of all the items with the container width. You could equally try out each example with <code>flex-direction: column</code>. The main axis would then be the column, and you would then need to compare the height of the items and that of the container they are in to work out the positive and negative free space.</p>
+以下の例では、{{CSSxRef("flex-direction")}} を row (行) に設定して作業しているので、アイテムの寸法は常に幅に基づいて決定されます。すべてのアイテムの幅の合計とコンテナーの幅を比較して、正と負の自由空間を計算します。それぞれの例を `flex-direction: column` で試すこともできます。主軸が列になり、アイテムの高さと、アイテムが入っているコンテナーの高さを比較して、プラスとマイナスの自由空間を計算する必要が出てきます。
 
-<h2 id="The_flex-basis_property" name="The_flex-basis_property">flex-basis プロパティ</h2>
+## flex-basis プロパティ
 
-<p>The {{CSSxRef("flex-basis")}} property specifies the initial size of the flex item before any space distribution happens. The initial value for this property is <code>auto</code>. If <code>flex-basis</code> is set to <code>auto</code> then to work out the initial size of the item the browser first checks if the main size of the item has an absolute size set. This would be the case if you had given your item a width of 200 pixels. In that case <code>200px</code> would be the <code>flex-basis</code> for this item.</p>
+{{CSSxRef("flex-basis")}} プロパティは、空間の分配が行われる前のフレックスアイテムの初期の大きさを指定します。このプロパティの初期値は `auto` です。`flex-basis` が `auto` に設定されている場合、ブラウザーはアイテムの初期の大きさを計算するために、まずアイテムの主軸方向の寸法に絶対寸法が設定されているかどうかをチェックします。例えば、アイテムの幅を 200 ピクセルに設定している場合です。この場合、`200px` がこのアイテムのフレックスベースとなります。
 
-<p>If your item is instead auto-sized, then <code>auto</code> resolves to the size of its content. At this point your knowledge of <code>min-</code> and <code>max-content</code> sizing becomes useful, as flexbox will take the <code>max-content</code> size of the item as the <code>flex-basis</code>. The following live example can help to demonstrate this.</p>
+アイテムの寸法が自動になっている場合、`auto` を指定すると内容物の寸法が解決値になります。このとき、`min-` および `max-content` の寸法に関する知識があると便利です。フレックスボックスでは、アイテムの `max-content` の寸法を `flex-basis` として使用します。次のライブ例でこれを説明します。
 
-<p>In this example I have created a series of inflexible boxes, with both <code>flex-grow</code> and <code>flex-shrink</code> set to <code>0</code>. Here we can see how the first item — which has an explicit width of 150 pixels set as the main size — takes a <code>flex-basis</code> of <code>150px</code>, whereas the other two items have no width and so are sized according to their content width.</p>
+この例では、柔軟性のない一連のボックスを作成し、`flex-grow` と `flex-shrink` の両方を `0` に設定しています。ここでは、主軸方向の寸法として 150 ピクセルの幅を明示的に設定した最初のアイテムが、`flex-basis`として`150px`を取るのに対し、他の2つのアイテムは幅を持たないため、コンテンツの幅に応じたサイズになっていることがわかります。
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-basis.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-basis.html", '100%', 500)}}
 
-<p>In addition to the <code>auto</code> keyword, you can use the <code>content</code> keyword as the <code>flex-basis</code>. This will result in the <code>flex-basis</code> being taken from the content size even if there is a width set on the item. This is a newer keyword and has less browser support, however you can always get the same effect by using <code>auto</code> as the flex-basis and ensuring that your item does not have a width set, in order that it will be auto-sized.</p>
+`auto` キーワードに加えて、`content` キーワードを `flex-basis` として使用することができます。この場合、アイテムに幅が設定されていても、コンテンツの寸法から `flex-basis` が算出されます。これは新しいキーワードで、ブラウザーの対応も少ないのですが、`auto` を flex-basis として使用し、アイテムに幅を設定しないようにすることで、自動で寸法が調整されるので、常に同じ効果を得ることができます。
 
-<p>If you want flexbox to completely ignore the size of the item when doing space distribution then set <code>flex-basis</code> to <code>0</code>. This essentially tells flexbox that all the space is up for grabs, and to share it out in proportion. We will see examples of this as we move on to look at <code>flex-grow</code>.</p>
+余白の分配を行う際に、フレックスボックスでアイテムの寸法を完全に無視したい場合は、`flex-basis`を`0`に設定します。これは基本的に、フレックスボックスのすべての空間が利用可能であり、それをアイテムに比例して分配することを指示します。この例は、次に紹介する `flex-grow` で見てみましょう。
 
-<h2 id="The_flex-grow_property" name="The_flex-grow_property">flex-grow プロパティ</h2>
+## flex-grow プロパティ
 
-<p>The {{CSSxRef("flex-grow")}} property specifies the <strong>flex grow factor</strong>, which determines how much the flex item will grow relative to the rest of the flex items in the flex container when the positive free space is distributed.</p>
+{{CSSxRef("flex-grow")}}プロパティは、**フレックス伸長係数**を指定します。これは、正の自由空間が分配されたときに、フレックスアイテムがフレックスコンテナー内の他のフレックスアイテムに対してどれだけ伸長するかを決定します。
 
-<p>If all of your items have the same <code>flex-grow</code> factor then space will be distributed evenly between all of them. If this is the situation that you want then typically you would use <code>1</code> as the value, however you could give them all a <code>flex-grow</code> of <code>88</code>, or <code>100</code>, or <code>1.2</code> if you like — it is a ratio. If the factor is the same for all, and there is positive free space in the flex container then it will be distributed equally to all.</p>
+すべてのアイテムの `flex-grow` 係数が同じであれば、余白はすべてのアイテムに均等に分配されます。このような場合、ふつうは値に `1` を使用しますが、すべてのアイテムに `flex-grow` の値として `88`、`100`、`1.2` など与えることもできます。これは係数です。係数がすべてのアイテムで等しく、フレックスコンテナー内に正の自由空間があれば、すべてのアイテムに均等に分配されます。
 
-<h3 id="Combining_flex-grow_and_flex-basis" name="Combining_flex-grow_and_flex-basis"><code>flex-grow</code> と <code>flex-basis</code> を組み合わせる</h3>
+### `flex-grow` と `flex-basis` を組み合わせる
 
-<p>Things can get confusing in terms of how <code>flex-grow</code> and <code>flex-basis</code> interact. Let's consider the case of three flex items of differing content lengths and the following <code>flex</code> rules applied to them:</p>
+`flex-grow` と `flex-basis` がどのように相互作用するかという点については混乱しやすいものです。コンテンツの長さが異なる 3 つのフレックスアイテムに、次のような `flex` ルールを適用した場合を考えてみましょう。
 
-<p><code>flex: 1 1 auto;</code></p>
+`flex: 1 1 auto;`
 
-<p>In this case the <code>flex-basis</code> value is <code>auto</code> and the items don’t have a width set, and so are auto-sized. This means that flexbox is looking at the <code>max-content</code> size of the items. After laying the items out we have some positive free space in the flex container, shown in this image as the hatched area:</p>
+この場合、`flex-basis` の値は `auto` で、アイテムには幅が設定されていないので、寸法は自動調整されます。つまり、フレックスボックスはアイテムの `max-content` の寸法を見ていることになります。アイテムを並べると、フレックスコンテナー内に正の自由空間 (この画像で斜線を引いた部分) ができます。
 
-<p><img alt="Images shows the positive free space as a hatched area" src="https://mdn.mozillademos.org/files/15656/ratios2.png" style="display: block; height: 100px; margin: 0px auto; width: 634px;"></p>
+![正の自由空間を斜線で表現している画像](ratios2.png)
 
-<p>We are working with a <code>flex-basis</code> equal to the content size so the available space to distribute is subtracted from the total available space (the width of the flex container), and the leftover space is then shared out equally among each item. Our bigger item ends up bigger because it started from a bigger size, even though it has the same amount of spare space assigned to it as the others:</p>
+コンテンツの寸法と同じ `flex-basis` を使用しているので、全体の利用可能な空間 (フレックスコンテナーの幅) から分配可能な領域を差し引いた余白を各アイテムに均等に分配しています。大きなアイテムは、他のアイテムと同じ量の余白が割り当てられますが、もともと寸法が大きいので、結果的にもっと大きくなります。
 
-<p><img alt="The positive space is distributed between items" src="https://mdn.mozillademos.org/files/15657/ratios3.png" style="display: block; height: 100px; margin: 0px auto; width: 634px;"></p>
+![ポジティブな空間は、アイテム間に分配される](ratios3.png)
 
-<p>If what you actually want is three equally-sized items, even if they start out at different sizes, you should use this:</p>
+もし本当に実現したいことが 3 つのアイテムを同じ大きさにすることであれば、最初の寸法が異なっていても、これを使用してください。
 
-<p><code>flex: 1 1 0;</code></p>
+`flex: 1 1 0;`
 
-<p>Here we are saying that the size of the item for the purposes of our space distribution calculation is <code>0</code> — all the space is up for grabs and as all of the items have the same <code>flex-grow</code> factor, they each get an equal amount of space distributed. The end result is three equal width, flexible items.</p>
+ここでは、空間の分配の計算上、アイテムの寸法を `0` としています。すべての空間が確保され、すべてのアイテムが同じ `flex-grow` 係数を持っているので、それぞれに同じ量の空間が分配されることになります。最終的には、3 つの同じ幅の伸縮可能ななアイテムができあがります。
 
-<p>Try changing the <code>flex-grow</code> factor from 1 to 0 in this live example to see the different behavior:</p>
+このライブ例で、`flex-grow` 係数を 1 から 0 に変更して、動作の違いを確認してみてください。
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-grow.html", '100%', 520)}}</p>
+{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-grow.html", '100%', 520)}}
 
-<h3 id="Giving_items_different_flex-grow_factors" name="Giving_items_different_flex-grow_factors">アイテムに別の flex-grow 要素を与える</h3>
+### アイテムに個別の flex-grow 要素を与える
 
-<p>Our understanding of how <code>flex-grow</code> works with <code>flex-basis</code> allows us to have further control over our individual item sizes by assigning items different <code>flex-grow</code> factors. If we keep our <code>flex-basis</code> at <code>0</code> so all of the space can be distributed, we could assign each of the three flex items a different <code>flex-grow</code> factor. In the example below I am using the following values:</p>
+`flex-grow` と `flex-basis` の関係を理解すると、アイテムに様々な `flex-grow` 係数を割り当てることで、個々のアイテムの大きさをさらに制御することができるようになります。`flex-basis` を `0` にして、すべての空間を分配できるようにした場合、3 つのフレックスアイテムにそれぞれ異なる `flex-grow` ファクターを割り当てることができます。以下の例では、次のような値を使用しています。
 
-<ul>
- <li><code>1</code> for the first item.</li>
- <li><code>1</code> for the second item.</li>
- <li><code>2</code> for the third item.</li>
-</ul>
+- 1 番目のアイテムには `1`
+- 2 番目のアイテムには `1`
+- 3 番目のアイテムには `2`
 
-<p>Working from a <code>flex-basis</code> of <code>0</code> this means that the available space is distributed as follows. We need to add up the flex grow factors, then divide the total amount of positive free space in the flex container by that number, which in this case is 4. We then share out the space according to the individual values — the first item gets one part, the second one part, the third two parts. This means that the third item is twice the size of the first and second items.</p>
+`flex-basis` を `0` とすると、利用可能な空間は次のように分配されます。まずフレックス伸長係数を合計し、フレックスコンテナー内の正の自由空間の合計をその数値、この場合は 4 で割ります。それからそれぞれの値に応じて空間を分配します。 — 1 番目のアイテムは 1 つ分、2 番目は 1 つ分、3 番目は 2 つ分になります。つまり、3 番目のアイテムは、1 番目と 2 番目のアイテムの 2 倍の大きさになります。
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-grow-ratios.html", '100%', 520)}}</p>
+{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-grow-ratios.html", '100%', 520)}}
 
-<p>Remember that you can use any positive value here. It is the ratio between one item and the others that matters. You can use large numbers, or decimals — it is up to you. To test that out change the values assigned in the above example to <code>.25</code>, <code>.25</code>, and <code>.50</code> — you should see the same result.</p>
+ここでは、どんな正の値も使用できることを覚えておいてください。重要なのは、ある項目と他の項目との比率です。大きな数字を使っても、小数を使っても構いません。 — あなた次第です。試しに、上の例で割り当てられた値を `.25`, `.25`, `.50` に変更してみてください。 — 同じ結果が得られるはずです。
 
-<h2 id="The_flex-shrink_property" name="The_flex-shrink_property"><code>flex-shrink</code> プロパティ</h2>
+## `flex-shrink` プロパティ
 
-<p>The {{CSSxRef("flex-shrink")}} property specifies the <strong>flex shrink factor</strong>, which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when negative free space is distributed.</p>
+{{CSSxRef("flex-shrink")}}プロパティでは、**フレックス縮小係数**を指定します。これは、負の自由空間が分配されたときに、フレックスコンテナー内の他のフレックスアイテムに対して、フレックスアイテムがどれだけ縮小するかを決定します。
 
-<p>This property deals with situations where the browser calculates the <code>flex-basis</code> values of the flex items, and finds that they are too large to fit into the flex container. As long as <code>flex-shrink</code> has a positive value the items will shrink in order that they do not overflow the container.</p>
+このプロパティは、ブラウザーがフレックスアイテムの `flex-basis` 値を計算して、フレックスコンテナーに収まらない大きさだと判断した場合に対処します。`flex-shrink` に正の値があれば、コンテナーからはみ出さないようにアイテムが縮小されます。
 
-<p>So where <code>flex-grow</code> deals with adding available space, <code>flex-shrink</code> manages taking away space to make boxes fit into their container without overflowing.</p>
+つまり、`flex-grow` が利用可能な空間を追加する扱いをするのに対し、`flex-shrink` はボックスがはみ出さずにコンテナーに収まるように空間を縮小する扱いをします。
 
-<p>In the next live example I have three items in a flex container; I’ve given each a width of 200 pixels, and the container is 500 pixels wide. With <code>flex-shrink</code> set to <code>0</code> the items are not allowed to shrink and so they overflow the box.</p>
+次のライブ例では、3 つのアイテムをフレックスコンテナーに入れています。それぞれに 200 ピクセルの幅を与え、コンテナーの幅は 500 ピクセルにしています。`flex-shrink` を `0` に設定すると、アイテムは縮小できないので、ボックスからはみ出してしまいます。
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink.html", '100%', 500)}}
 
-<p>Change the <code>flex-shrink</code> value to <code>1</code> and you will see each item shrink by the same amount, in order that all of the items now fit in the box. They have become smaller than their initial width in order to do so.</p>
+`flex-shrink` の値を `1` に変更すると、すべてのアイテムがボックスに収まるように、各アイテムが同じ量だけ縮小されるのがわかります。これは、すべてのアイテムがボックスに収まるようにするために、最初の幅よりも小さくしたものです。
 
-<h3 id="Combining_flex-shrink_and_flex-basis" name="Combining_flex-shrink_and_flex-basis"><code>flex-shrink</code> と <code>flex-basis</code> を組み合わせる</h3>
+### `flex-shrink` と `flex-basis` の組み合わせ
 
-<p>You could say that <code>flex-shrink</code> works in pretty much the same way as <code>flex-grow</code>. However there are two reasons why it isn’t <em>quite</em> the same.</p>
+`flex-shrink` は、`flex-grow` とほとんど同じように動作すると言えるでしょう。しかし、*完全に*同じではない理由が 2 つあります。
 
-<p>While it is usually subtle, defined in the specification is one reason why <code>flex-shrink</code> isn’t quite the same for negative space as <code>flex-grow</code> is for positive space:</p>
+通常は些細な違いですが、仕様に定義されていることは、負の空間に対して `flex-shrink` が行うことが、正の空間に対して `flex-grow` が行うこととまったく同じではない理由の一つです。
 
-<blockquote>
-<p>“Note: The flex shrink factor is multiplied by the flex base size when distributing negative space. This distributes negative space in proportion to how much the item is able to shrink, so that e.g. a small item won’t shrink to zero before a larger item has been noticeably reduced.”</p>
-</blockquote>
+> 「注：負の空間を分配する際には、フレックス縮小係数にフレックスベースの大きさが乗じられます。これは、アイテムが縮小できる量に比例して負の空間を分配するもので、例えば、大きなアイテムが目に見えて縮小する小さなアイテムが、大きなアイテムが目立って縮小する前にゼロまで縮小してしまうことはありません。」
 
-<p>The second reason is that flexbox prevents small items from shrinking to zero size during this removal of negative free space. The items will be floored at their <code>min-content</code> size — the size that they become if they take advantage of any soft wrapping opportunities available to them.</p>
+2 つ目の理由は、フレックスボックスは、負の自由空間を除去する際に小さなアイテムがゼロの大きさにまで縮小することを防ぐためです。アイテムは `min-content` の寸法が下限になります。 — 可能な限りすべてのソフト折り返しの機会を利用した後の寸法です。
 
-<p>You can see this <code>min-content</code> flooring happen in the below example, where the <code>flex-basis</code> is resolving to the size of the content. If you change the width on the flex container — increasing it to 700px for example — and then reduce the flex item width, you can see that the first two items will wrap, however they will never become smaller than that <code>min-content</code> size. As the box gets smaller space is then just removed from the third item.</p>
+以下の例では、`min-content` の下限になり、`flex-basis` が内容物の大きさに解決されていることがわかります。フレックスコンテナーの幅を 700px などに変更してからフレックスアイテムの幅を小さくすると、最初の 2 つのアイテムは折り返されますが、`min-content` の寸法より小さくなることはありません。ボックスが小さくなると、3 つ目のアイテムが縮小します。
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink-min-content.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink-min-content.html", '100%', 500)}}
 
-<p>In practice the shrinking behaviour does tend to give you reasonable results. You don’t usually want your content to disappear completely or for boxes to get smaller than their minimum content, so the above rules make sense in terms of sensible behaviour for content that needs to be shrunk in order to fit into a container.</p>
+実際には、縮小の動作は妥当な結果をもたらす傾向があります。通常、内容物が完全に消えてしまったり、ボックスが最小の内容物よりも小さくなってしまったりすることはありません。そのため、上記のルールは、コンテナーに収まるように内容物を縮小する必要がある場合の適切な動作という点で、理にかなっています。
 
-<h3 id="Giving_items_different_flex-shrink_factors" name="Giving_items_different_flex-shrink_factors">アイテムに別の <code>flex-shrink</code> 要素を与える</h3>
+### アイテムに別の `flex-shrink` 要素を与える
 
-<p>In the same way as <code>flex-grow</code>, you can give flex-items different <code>flex-shrink</code> factors. This can help change the default behaviour if, for example, you want an item to shrink more or less rapidly than its siblings or not shrink at all.</p>
+`flex-grow` と同様に、それぞれのフレックスアイテムにに異なる `flex-shrink` 係数を与えることができます。これにより、たとえば、あるアイテムを兄弟アイテムよりも急速に縮小させたり、まったく縮小させないようにしたい場合に、既定の動作を変更することができます。
 
-<p>In the following live example the first item has a <code>flex-shrink</code> factor of 1, the second <code>0</code> (so it won’t shrink at all), and the third <code>4</code>. The third item therefore shrinks more rapidly than the first. Play around with the different values — as for <code>flex-grow</code> you can use decimals or larger numbers here. Choose whatever makes most sense to you.</p>
+次のライブ例では、1 番目のアイテムの `flex-shrink` 係数は 1、2 番目のアイテムは `0` (つまり、まったく縮まない)、3 番目のアイテムは `4` です。したがって、3 番目のアイテムは、1 番目のアイテムよりも急速に縮小します。`flex-grow` と同様に、ここでも小数や大きな数字を使うことができます。最も分かりやすいものを選んでください。
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink-ratios.html", '100%', 570)}}</p>
+{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink-ratios.html", '100%', 570)}}
 
-<h2 id="Mastering_sizing_of_flex_items" name="Mastering_sizing_of_flex_items">flex アイテムのサイズ設定をマスターする</h2>
+## フレックスアイテムの寸法の設定をマスターする
 
-<p>The key to really understanding how flex item sizing works is in understanding the number of things that come into play. Consider the following aspects, which we have already discussed in these guides:</p>
+フレックスアイテムの寸法の調整の仕組みを理解するには、いくつかの要素を理解する必要があります。このガイドでは、以下の点について説明してきました。
 
-<h3 id="What_sets_the_base_size_of_the_item" name="What_sets_the_base_size_of_the_item">アイテムの基本サイズを何がセットするか？</h3>
+## アイテムの基本的な寸法に何が設定されているか
 
-<ol>
- <li>Is <code>flex-basis</code> set to <code>auto</code>, and does the item have a width set? If so, the size will be based on that width.</li>
- <li>Is <code>flex-basis</code> set to <code>auto</code> or <code>content</code> (in a supporting browser)? If so, the size is based on the item size.</li>
- <li>Is <code>flex-basis</code> a length unit, but not zero? If so this is the size of the item.</li>
- <li>Is <code>flex-basis</code> set to <code>0</code>? if so then the item size is not taken into consideration for the space-sharing calculation.</li>
-</ol>
+1.  `flex-basis` が `auto` に設定されていて、アイテムに幅が設定されている場合は、その幅に応じた寸法になります。
+2.  `flex-basis` が `auto` または `content` (対応しているブラウザーの場合) に設定されている場合は、寸法はアイテムの寸法に基づいて決定されます。
+3.  `flex-basis` が長さの単位で、0 ではない場合は、これがアイテムの寸法になります。
+4.  `flex-basis` が `0` に設定されている場合は、アイテムの寸法は空間共有の計算には考慮されません。
 
-<h3 id="Do_we_have_available_space" name="Do_we_have_available_space">利用できるスペースが残っているか？</h3>
+### 利用できる余白が残っているか
 
-<p>Items can’t grow with no positive free space, and they won’t shrink unless there is negative free space.</p>
+正の自由空間がないとアイテムは伸長しませんし、負の自由空間がないとアイテムは縮小しません。
 
-<ol>
- <li>If we took all of the items and added up their widths (or heights if working in a column), is that total <strong>less</strong> than the total width (or height) of the container? If so, then you have positive free space and <code>flex-grow</code> comes into play.</li>
- <li>If we took all of the items and added up their widths (or heights if working in a column), is that total <strong>more</strong> than the total width (or height) of the container? If so, you have negative free space and <code>flex-shrink</code> comes into play.</li>
-</ol>
+1.  すべてのアイテムの幅 (列の場合は高さ) を合計したとき、その合計がコンテナーの幅 (または高さ) の合計よりも**小さい**場合は、正の自由空間があり、`flex-grow` の出番となります。
+2.  すべてのアイテムの幅 (列の場合は高さ) を合計した場合、その合計がコンテナーの幅 (または高さ) の合計より**大きい**場合は、負の自由空間があり、`flex-shrink` が効いてきます。
 
-<h3 id="Other_ways_to_distribute_space" name="Other_ways_to_distribute_space">スペースを配分する別の方法</h3>
+### 空間を分配する別の方法
 
-<p>If you do not want space added to the items, remember that you can deal with free space between or around items using the alignment properties described in the guide to aligning items in a flex container. The {{CSSxRef("justify-content")}} property will enable the distribution of free space between or around items. You can also use auto margins on flex items to absorb space and create gaps between items.</p>
+アイテムに空間を追加したくない場合は、「フレックスコンテナー内のアイテムの配置」で説明している配置プロパティを使って、アイテム間やアイテム周辺の自由空間を処理できることを覚えておいてください。{{CSSxRef("justify-content")}} プロパティを使用すると、アイテム間やアイテム周辺の自由空間の分配が可能になります。また、フレックスアイテムに auto のマージンを使用すると、スペースを吸収してアイテム間に隙間を作ることができます。
 
-<p>With all the flex tools at your disposal you will find that most tasks can be achieved, although it might take a little bit of experimentation at first.</p>
+自由に使えるフレックスツールがあれば、最初は少し試行錯誤するかもしれませんが、ほとんどの作業が可能であることがわかります。

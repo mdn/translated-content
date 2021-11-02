@@ -1,92 +1,96 @@
 ---
 title: フレックスアイテムの折り返しのマスター
 slug: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
+tags:
+  - CSS
+  - Flex
+  - ガイド
+  - collapsed items
+  - フレックスボックス
+  - grid
+  - 折り返し
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
 ---
-<p class="summary">フレックスボックスは一次元のレイアウトとして設計されており、つまりアイテムを行または列として扱います。 — しかし、同時ではありません。しかし、フレックスアイテムを新しい行に折り返し、 {{cssxref("flex-direction")}} が <code>row</code> の場合は新しい行を、 <code>flex-direction</code> が <code>column</code> の場合は新しい列を生成します。このガイドでは、これがどのように動作するのか、何のために設計されているのか、どのような場合にフレックスボックスより <a href="/ja/docs/Web/CSS/CSS_Grid_Layout">CSS グリッドレイアウト</a>が必要になるかを説明します。</p>
+{{CSSRef}}
 
-<h2 id="Making_things_wrap" name="Making_things_wrap">折り返しを行う</h2>
+フレックスボックスは一次元のレイアウトとして設計されており、つまりアイテムを行または列として扱います。 — しかし、同時ではありません。しかし、フレックスアイテムを新しい行に折り返し、 {{cssxref("flex-direction")}} が `row` の場合は新しい行を、 `flex-direction` が `column` の場合は新しい列を生成します。このガイドでは、これがどのように動作するのか、何のために設計されているのか、どのような場合にフレックスボックスより [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)が必要になるかを説明します。
 
-<p>The initial value of the {{cssxref("flex-wrap")}} property is <code>nowrap</code>. This means that if you have a set of flex items that are too wide for their container, they will overflow it. If you want to cause them to wrap once they become too wide you must add the <code>flex-wrap</code> property with a value of <code>wrap</code>, or use the shorthand {{cssxref("flex-flow")}} with values of <code>row wrap</code> or <code>column wrap</code>.</p>
+## 折り返しを行う
 
-<p>Items will then wrap in the container. In the next example I have ten items all with a <code>flex-basis</code> of <code>160px</code> and the ability to grow and shrink. Once the first row gets to a point where there is not enough space to place another 160 pixel item, a new flex line is created for the items and so on until all of the items are placed. As the items can grow, they will expand larger than 160 px in order to fill each row completely. If there is only one item on the final line it will stretch to fill the entire line.</p>
+{{cssxref("flex-wrap")}} プロパティの初期値は `nowrap` です。つまり、コンテナーに対して幅が広すぎるフレックスアイテムのセットがあると、コンテナーからはみ出してしまいます。幅が広くなりすぎたら折り返すようにしたい場合は、`flex-wrap` プロパティを追加して `wrap` の値を設定するか、一括指定の {{cssxref("flex-flow")}} を使用して `row wrap` または `column wrap` の値を設定する必要があります。
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/wrapping/row-wrap.html", '100%', 650)}}</p>
+アイテムはコンテナーの中に収まります。次の例では、10 個のアイテムを配置しています。すべてのアイテムの `flex-basis` は 160px で、伸長と縮小が可能です。最初の列で 160 ピクセルのアイテムを配置する空間がなくなると、新しいフレックス行が作成され、すべてのアイテムが配置されるまで繰り返されます。アイテムが成長すると、各列を完全に埋めるために、160 ピクセルよりも大きく拡張されます。最終行にアイテムが 1 つしかない場合は、行全体を埋めるように伸縮します。
 
-<p>We can see the same thing happening with columns. The container will need to have a height in order that the items will start wrapping and creating new columns, and items will stretch taller to fill each column completely.</p>
+{{EmbedGHLiveSample("css-examples/flexbox/wrapping/row-wrap.html", '100%', 650)}}
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/wrapping/column-wrap.html", '100%', 810)}}</p>
+これと同じことが列でも起こります。アイテムが折り返して新しい列を作り始め、それぞれの列を完全に埋めるためにアイテムを伸長するようにするためには、コンテナーに高さを設定する必要があります。
 
-<h2 id="Wrapping_and_flex-direction" name="Wrapping_and_flex-direction">折り返しと flex-direction</h2>
+{{EmbedGHLiveSample("css-examples/flexbox/wrapping/column-wrap.html", '100%', 810)}}
 
-<p>Wrapping works as you might expect when combined with <code>flex-direction</code>. If <code>flex-direction</code> is set to <code>row-reverse</code> then the items will start from the end edge of the container and lay themselves out in reverse ordered lines.</p>
+## 折り返しと flex-direction
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/wrapping/row-reverse-wrap.html", '100%', 750)}}</p>
+折り返しは、`flex-direction` と組み合わせることで、期待通りの効果を発揮します。`flex-direction` が `row-reverse` に設定されている場合、アイテムはコンテナーの端から始まり、逆順に並んでいきます。
 
-<p>Note that the reversing is only happening in the inline, row direction. We start on the right then go onto the second line and again start from the right. We aren’t reversing in both directions, starting from the bottom coming up the container!</p>
+{{EmbedGHLiveSample("css-examples/flexbox/wrapping/row-reverse-wrap.html", '100%', 750)}}
 
-<h2 id="Single-dimensional_layout_explained" name="Single-dimensional_layout_explained">一次元のレイアウトの説明</h2>
+なお、反転は行内方向にのみ行われます。右から開始して 2 行目に進み、再び右から開始します。下から開始してコンテナーを上がっていくという、両方の方向で反転しているわけではありません。
 
-<p>As we have seen from the above examples if our items are allowed to grow and shrink, when there are fewer items in the last row or column then those items grow to fill the available space.</p>
+## 一次元レイアウトの説明
 
-<p>There is no method in flexbox to tell items in one row to line up with items in the row above — each flex line acts like a new flex container. It deals with space distribution across the main axis. If there is only one item, and that item is allowed to grow, it will fill the axis just as if you had a single item flex container.</p>
+上の例で見たように、アイテムが伸縮することが許されていれば、最後の行や列のアイテムが少なくなると、それらのアイテムは空いた空間を埋めるように伸びていきます。
 
-<p>If you want layout in two dimensions then you probably want Grid Layout. We can compare our wrapped row example above with the CSS Grid version of that layout to see the difference. The following live sample uses CSS Grid Layout to create a layout that has as many columns of at least 160 pixels as will fit, distributing the extra space between all columns. However, in this case the items stay in their grid and don’t stretch out when there are fewer of them on the final row.</p>
+フレックスボックスには、ある行のアイテムとその上の行のアイテムの位置を揃える方法はありません。各フレックス行は新しいフレックスコンテナーのように機能します。これが主軸の空間分配を行います。アイテムが 1 つだけで、そのアイテムが成長することが許可されている場合、1 つのアイテムのフレックスコンテナーがある場合と同様に、その軸いっぱいに表示されます。
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/wrapping/grid-example.html", '100%', 700)}}</p>
+2 次元でのレイアウトが必要な場合は、おそらくグリッドレイアウトを使用します。上記の折り返し行の例を CSS グリッド版のレイアウトと比較すると、違いが分かります。次のライブサンプルでは、CSS グリッドレイアウトを使用して、160 ピクセル以上の列が収まるだけのレイアウトを作成し、余分な空間をすべての列に分配しています。ただし、この場合、アイテムはグリッド内に留まり、最終行のアイテム数が少なくなっても伸びることはありません。
 
-<p>This is the difference between one and two-dimensional layout. In a one dimensional method like flexbox, we only control the row or column. In two dimensional layout like grid we control both at the same time. If you want the space distribution row by row, use flexbox. If you don’t, use Grid.</p>
+{{EmbedGHLiveSample("css-examples/flexbox/wrapping/grid-example.html", '100%', 700)}}
 
-<h2 id="How_do_flexbox-based_grid_systems_work" name="How_do_flexbox-based_grid_systems_work">フレックスボックスベースのグリッドシステムはどのように動作するか</h2>
+これが一次元と二次元のレイアウトの違いです。フレックスボックスのような一次元方式では、行または列のみを制御します。グリッドのような二次元のレイアウトでは、両方を同時に制御します。行ごとに空間を分配したい場合は、フレックスボックスを使用してください。そうでない場合は、グリッドを使用してください。
 
-<p>Typically flexbox-based grid systems work by taking flexbox back to the familiar world of float-based layouts. If you assign percentage widths to flex items — either as <code>flex-basis</code> or by adding a width to the item itself leaving the value of <code>flex-basis</code> as <code>auto</code> — you can get the impression of a two dimensional layout. You can see this working in the example below.</p>
+## フレックスボックスベースのグリッドシステムはどのように機能するか
 
-<p>Here I have set <code>flex-grow</code> and <code>flex-shrink</code> to <code>0</code> to make inflexible flex items and am then controlling flexibility using percentages, just like we used to do in float layouts.</p>
+通常、フレックスボックスベースのグリッドシステムは、フレックスボックスを馴染みのある float ベースのレイアウトの世界に戻すことで機能します。フレックスアイテムにパーセント値の幅を割り当てると、`flex-basis` として、または `flex-basis` の値を `auto` のままにしてアイテム自体に幅を追加することで、2 次元のレイアウトのような印象を与えることができます。以下の例では、この機能を確認できます。
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/wrapping/flex-grid.html", '100%', 650)}}</p>
+ここでは、`flex-grow` と `flex-shrink` を `0` に設定して、柔軟性のないフレックスアイテムを作り、フロートレイアウトで行っていたように、パーセント値を使って柔軟性をコントロールしています。
 
-<p>If you need flex items to line up in the cross axis, controlling the width in this way will achieve that. In most cases however, adding widths to flex items in this way demonstrates that you would probably be better served by switching to grid layout for that component.</p>
+{{EmbedGHLiveSample("css-examples/flexbox/wrapping/flex-grid.html", '100%', 650)}}
 
-<h2 id="Creating_gutters_between_items" name="Creating_gutters_between_items">アイテム間の溝の作成</h2>
+フレックスアイテムを横軸に並べる必要がある場合は、この方法で幅を制御することで実現できます。しかし、ほとんどの場合、この方法でフレックスアイテムに幅を追加する場合は、その部分をグリッドレイアウトに変更した方がよいことがわかります。
 
-<p>When wrapping flex items, the need to space them out is likely to arise. At the current time we do not have any implementations of the gap properties from the <a href="https://www.w3.org/TR/css-align-3/">Box Alignment module</a> for Flexbox. In the future we will be able to simply use <code>row-gap</code> and <code>column-gap</code> for flexbox as we do for CSS Grid. At the current time you will need to use margins to achieve this.</p>
+## アイテム間の間隔の生成
 
-<p>You can see from the live example below that in order to create gaps that do not also create a gap at the edges of the container, we need to use negative margins on the flex container itself. Any border on the flex container is then moved to a second wrapper in order that the negative margin can pull the items up to that wrapper element.</p>
+フレックスアイテムを折り返すする際に、余白を空ける必要がある場合があります。現時点では、[Box Alignment モジュール](https://www.w3.org/TR/css-align-3/) の gap プロパティをフレックスボックス用に実装したものはありません。将来的には、CSS グリッドと同様に、フレックスボックスでも `row-gap` と `column-gap` を使用できるようになる予定です。現時点では、これを実現するためには、margin を使用する必要があります。
 
-<p>It is this requirement that the gap properties, once implemented, will solve for us. Proper gaps only happen on the inside edges of items.</p>
+下の実例を見ると、コンテナーの端に隙間ができないように隙間を作るためには、フレックスコンテナー自体に負のマージンを使用する必要があることがわかります。フレックスコンテナーの境界は 2 番目のラッパーに移動し、負のマージンによってアイテムをラッパー要素に引き上げることができます。
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/wrapping/gaps.html", '100%', 830)}}</p>
+これが gap プロパティが必要な理由で、実装されれば問題の解決になります。gap は適切にアイテムの内側の辺にのみ置かれます。
 
-<h2 id="Collapsed_items" name="Collapsed_items">アイテムの折りたたみ</h2>
+{{EmbedGHLiveSample("css-examples/flexbox/wrapping/gaps.html", '100%', 830)}}
 
-<p>The flexbox specification details what should happen if a flex item is collapsed by setting <code>visibility: collapse</code> on an item. See the MDN documentation for the {{cssxref("visibility")}} property. The specification describes the behaviour as follows:</p>
+## アイテムの折り畳み
 
-<blockquote>
-<p>“Specifying visibility:collapse on a flex item causes it to become a collapsed flex item, producing an effect similar to visibility:collapse on a table-row or table-column: the collapsed flex item is removed from rendering entirely, but leaves behind a "strut" that keeps the flex line’s cross-size stable. Thus, if a flex container has only one flex line, dynamically collapsing or uncollapsing items may change the flex container’s main size, but is guaranteed to have no effect on its cross size and won’t cause the rest of the page’s layout to "wobble". Flex line wrapping is re-done after collapsing, however, so the cross-size of a flex container with multiple lines might or might not change.” - <a href="https://www.w3.org/TR/css-flexbox-1/#visibility-collapse">Collapsed items</a></p>
-</blockquote>
+フレックスボックスの仕様では、アイテムに `visibility: collapse` を設定することで、フレックスアイテムが折り畳まれた場合の動作が詳細に規定されています。{{cssxref("visibility")}} プロパティの MDN ドキュメントを参照してください。仕様では、以下のように動作を説明しています。
 
-<p>This behaviour is useful if you want to target flex items using JavaScript to show and hide content for example. The example in the specification demonstrates one such pattern.</p>
+> 「フレックスアイテムに visibility:collapse を指定すると、折り畳まれたフレックスアイテムになり、table-row や table-column の visibility:collapse と同様の効果が得られます。折り畳まれたフレックス アイテムはレンダリングから完全に削除されますが、フレックス行の交差軸の寸法を安定させる「支柱」が残ります。したがって、フレックスコンテナーにフレックス行が 1 つしかない場合、アイテムの折り畳み状態を動的に変化させると、フレックスコンテナーの主軸の寸法が変更されることがありますが、交差軸の寸法には影響しないことが保証されているため、ページの残りのレイアウトが「ぐらつく」ことはありません。ただし、フレックスの行の折り返しは折り畳み後に再実行されるため、複数の行を持つフレックスコンテナーの交差軸の寸法は変更される場合もあれば、変更されない場合もあります。" - [Collapsed items](https://www.w3.org/TR/css-flexbox-1/#visibility-collapse)
 
-<p>In the following live example I have a non-wrapped flex container. The third item has more content than the others yet is set to <code>visibility: collapse</code> and therefore the flex container is retaining a <em>strut</em> of the height required to display this item. If you remove <code>visibility: collapse</code> from the CSS or change the value to <code>visible</code>, you will see the item disappear and the space redistribute between non-collapsed items; the height of the flex container should not change.</p>
+この動作は、JavaScript を使用してフレックスアイテムを対象にし、コンテンツの表示・非表示を行う場合などに便利です。仕様書の例では、そのようなパターンの一つを示しています。
 
-<div class="note">
-<p><strong>Note</strong>: Use Firefox for the below two examples as Chrome and Safari treat collapse as hidden.</p>
-</div>
+次のライブ例では、折り返されていないフレックスコンテナーを使用しています。3 番目のアイテムは他のアイテムよりもコンテンツが多いのですが、`visibility: collapse` に設定されているため、フレックスコンテナーはこのアイテムを表示するために必要な高さの*支柱*を保持しています。CSS から `visibility: collapse` を削除するか、値を `visible` に変更すると、アイテムが消えて、折り畳まれていないアイテムの間にスペースが再分配されますが、フレックスコンテナの高さは変わりません。
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/wrapping/visibility-collapse.html", '100%', 650)}}</p>
+> **Note:** Chrome や Safari では折りたたまれている部分は非表示として扱われるため、以下の 2 つの例は Firefox を使用してください。
 
-<p>When dealing with multiple-line flex containers however you need to understand that the wrapping is re-done <em>after</em> collapsing. So the browser needs to re-do the wrapping behaviour to account for the new space that the collapsed item has left in the inline direction.</p>
+{{EmbedGHLiveSample("css-examples/flexbox/wrapping/visibility-collapse.html", '100%', 650)}}
 
-<p>This means that items might end up on a different line to the one they started on. In the case of an item being shown and hidden it could well cause the items to end up in a different row.</p>
+しかし、複数行のフレックスコンテナーを扱う場合は、折り返しが折り返しの後に再実行されることを理解する必要があります。つまり、ブラウザーは折り畳まれたアイテムがインライン方向に残した新しい空間を考慮して、折り返しの動作を再実行する必要があります。
 
-<p>I have created this behaviour in the next live example. You can see how the stretching changes row based on the location of the collapsed item. If you add more content to the second item, it changes row once it gets long enough. That top row then only becomes as tall as a single line of text.</p>
+つまり、アイテムが最初の行とは別の行になってしまう可能性があるのです。アイテムを表示したり隠したりすると、アイテムが別の行になってしまうこともあります。
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/wrapping/wrapped-visibility-collapse.html", '100%', 750)}}</p>
+次のライブ例では、この動作を作成しました。折り畳まれたアイテムの位置に基づいて、引き伸ばされている行が変化している様子がわかります。2 番目のアイテムにさらにコンテンツを追加すると、十分な長さになった時点で行が変更されます。その結果、一番上の行は、テキストの 1 行分の高さにしかなりません。
 
-<p>If this causes a problem for your layout it may require a rethinking of the structure, for example putting each row into a separate flex container in order that they can’t shift rows.</p>
+{{EmbedGHLiveSample("css-examples/flexbox/wrapping/wrapped-visibility-collapse.html", '100%', 750)}}
 
-<h3 id="The_difference_between_visibility_hidden_and_display_none" name="The_difference_between_visibility_hidden_and_display_none"><code>visibility: hidden</code> と <code>display: none</code> の違い</h3>
+これによりレイアウトに問題が生じる場合は、構造を見直す必要があるかもしれません。たとえば、各行を別々のフレックスコンテナーに入れて、行がずれないようにするなどです。
 
-<p>When you set an item to <code>display: none</code> in order to hide it, the item is removed from the formatting structure of the page. What this means in practice is that counters ignore it, and things like transitions do not run. Using <code>visibility: hidden</code> keeps the box in the formatting structure which is useful in that it still behaves as if it were part of the layout even though the user can’t see it.</p>
+### `visibility: hidden` と `display: none` の違い
 
-<p>{{CSSRef}}</p>
+アイテムを `display: none` に設定して非表示にすると、そのアイテムはページの整形構造から削除されます。すなわち、カウンターはそれを無視し、トランジションも実行されません。`visibility: hidden` を使用すると、ボックスは整形構造の中に維持され、ユーザーには見えなくても、レイアウトの一部であるかのように動作することができるので便利です。
