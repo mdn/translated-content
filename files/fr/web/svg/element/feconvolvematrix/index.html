@@ -13,7 +13,7 @@ translation_of: Web/SVG/Element/feConvolveMatrix
 
 <p>Une convolution de matrice se fonde sur une matrice n par m (le noyau de convolution), qui décrit la façon dont une valeur de pixel donné de l'image en entrée est combinée avec celles des pixels de son voisinage pour aboutir à une valeur de pixel résultante. Chaque pixel du résultat est déterminé par l'application de la matrice noyau sur le pixel source correspondant et ses pixels voisins. La formule de convolution de base, appliquée à chaque valeur de couleur d'un pixel donné, est :</p>
 
-<p id="feConvolveMatrixElementFormula">COLOR<sub>X,Y</sub> = ( <br>
+<p>COLOR<sub>X,Y</sub> = ( <br>
                SUM <sub>I=0 to [<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderY</a>-1]</sub> { <br>
                  SUM <sub>J=0 to [<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderX</a>-1]</sub> { <br>
                    SOURCE <sub>X-<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetXAttribute">targetX</a>+J, Y-<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetYAttribute">targetY</a>+I</sub> *  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementKernelMatrixAttribute">kernelMatrix</a><sub><a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderX</a>-J-1,  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderY</a>-I-1</sub> <br>
@@ -50,7 +50,7 @@ translation_of: Web/SVG/Element/feConvolveMatrix
 7 8 9
 </pre>
 
-<p>Concentrons-nous sur la valeur de couleur de la deuxième ligne, deuxième colonne (la valeur du pixel source est 120). En supposant le cas le plus simple (quand le quadrillage de pixels de l'image source s'aligne parfaitement avec celui du noyau) et en supposant les valeurs par défaut des attributs <code><span class="attr-name">divisor</span></code>, <code><span class="attr-name">targetX</span></code> et <code><span class="attr-name">targetY</span></code>, alors la valeur de couleur résultante sera :</p>
+<p>Concentrons-nous sur la valeur de couleur de la deuxième ligne, deuxième colonne (la valeur du pixel source est 120). En supposant le cas le plus simple (quand le quadrillage de pixels de l'image source s'aligne parfaitement avec celui du noyau) et en supposant les valeurs par défaut des attributs <code>divisor</code>, <code>targetX</code> et <code>targetY</code>, alors la valeur de couleur résultante sera :</p>
 
 <pre>(9*  0 + 8* 20 + 7* 40 +
  6*100 + 5*120 + 4*140 +

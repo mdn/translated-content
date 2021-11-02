@@ -7,12 +7,13 @@ translation_of: Web/SVG/Attribute/mask
 
 <p>L'attribut <code>mask</code> est un attribut de présentation principalement utilisé pour appliquer un trou (défini par un élément {{ SVGElement("mask") }}) sur l'élément qui possède cet attribut.</p>
 
-<p class="note"><strong>Note:</strong> On peut aussi utiliser l'attribut {{cssxref('mask')}} en CSS.</p>
-
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
+<div class="note">
+  <p><strong>Note :</strong> On peut aussi utiliser l'attribut {{cssxref('mask')}} en CSS.</p>
 </div>
+
+<h2>Exemple</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;mask id="monMask" maskContentUnits="objectBoundingBox"&gt;
@@ -27,8 +28,7 @@ translation_of: Web/SVG/Attribute/mask
           mask="url(#monMask)"/&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample('topExample', '100%', 150)}}</p>
-</div>
+<p>{{EmbedLiveSample('exemple', '100%', 150)}}</p>
 
 <p>Depuis SVG2, l'attribut {{cssxref('mask')}} est défini comme une propriété CSS et comme une propriété raccourcie pour beaucoup d'autres propriétés: {{cssxref('mask-image')}}, {{cssxref('mask-mode')}}, {{cssxref('mask-repeat')}}, {{cssxref('mask-position')}}, {{cssxref('mask-clip')}}, {{cssxref('mask-origin')}}, {{cssxref('mask-size')}} et {{cssxref('mask-composite')}}.</p>
 
@@ -53,9 +53,7 @@ translation_of: Web/SVG/Attribute/mask
  </tbody>
 </table>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilité des navigateurs</h2>
-
-
+<h2 id="Browser_Compatibility">Compatibilité des navigateurs</h2>
 
 <p>{{Compat("svg.attributes.presentation.mask")}}</p>
 

@@ -3396,8 +3396,6 @@
 /fr/docs/SVG:Tutoriel	/fr/docs/Web/SVG/Tutorial
 /fr/docs/SVG:Tutoriel:Introduction	/fr/docs/Web/SVG/Tutorial/Introduction
 /fr/docs/SVG:Tutoriel:Premiers_pas	/fr/docs/Web/SVG/Tutorial/Getting_Started
-/fr/docs/SVG_dans_Firefox	/fr/docs/Web/SVG/SVG_1.1_Support_in_Firefox
-/fr/docs/SVG_dans_Firefox_1.5	/fr/docs/Web/SVG/SVG_1.1_Support_in_Firefox
 /fr/docs/Server-sent_events	/fr/docs/Web/API/Server-sent_events
 /fr/docs/Server-sent_events/Using_server-sent_events	/fr/docs/Web/API/Server-sent_events/Using_server-sent_events
 /fr/docs/Tools/Debugger/How_to/Black_box_a_source	/fr/docs/Tools/Debugger/How_to/Ignore_a_source

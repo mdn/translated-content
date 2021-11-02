@@ -13,9 +13,8 @@ browser-compat: svg.attributes.presentation.text-anchor
 
 <p>L'attribut <code>text-anchor</code> est appliqué à chaque bloc de texte individuel dans un élément <a href="/fr/docs/Web/SVG/Element/text"><code>&lt;text&gt;</code></a> donné. Chaque fragment de texte a une position de texte actuelle initiale, qui représente le point du système de coordonnées de l'utilisateur résultant (selon le contexte) de l'application des attributs <a href="/fr/docs/Web/SVG/Attribute/x"><code>x</code></a> et <a href="/fr/docs/Web/SVG/Attribute/y"><code>y</code></a> sur l'élément <code>&lt;text&gt;</code>, toute valeur d'attribut <code>x</code> ou <code>y</code> sur un élément <a href="/fr/docs/Web/SVG/Element/tspan"><code>&lt;tspan&gt;</code></a>, <a href="/fr/docs/Web/SVG/Element/tref"><code>&lt;tref&gt;</code></a> ou <a href="/fr/docs/Web/SVG/Element/altGlyph"><code>&lt;altGlyph&gt;</code></a> assigné explicitement au premier caractère rendu dans un fragment de texte, ou la détermination de la position initiale du texte actuel pour un élément <a href="/fr/docs/Web/SVG/Element/textPath"><code>&lt;textPath&gt;</code></a>.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>En tant qu'attribut de présentation, <code>text-anchor</code> peut être utilisé comme une propriété CSS.</p>
+<div class="note">
+  <p><strong>Note :</strong> En tant qu'attribut de présentation, <code>text-anchor</code> peut être utilisé comme une propriété CSS.</p>
 </div>
 
 <p>Cet attribut peut être utilisé pour les éléments SVG suivants :</p>
@@ -28,12 +27,12 @@ browser-compat: svg.attributes.presentation.text-anchor
   <li><a href="/fr/docs/Web/SVG/Element/tspan"><code>&lt;tspan&gt;</code></a></li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>Exemple</h2>
+
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }</pre>
-</div>
+
 
 <pre class="brush: html">&lt;svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Matérialisation des ancrages --&gt;
@@ -56,8 +55,7 @@ browser-compat: svg.attributes.presentation.text-anchor
   ]]&gt;&lt;/style&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample("topExample", "120", "120")}}</p>
-</div>
+<p>{{EmbedLiveSample("exemple", "120", "120")}}</p>
 
 <h2 id="usage_notes">Notes d'utilisation</h2>
 

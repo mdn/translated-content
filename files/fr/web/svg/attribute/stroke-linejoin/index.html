@@ -10,14 +10,15 @@ translation_of: Web/SVG/Attribute/stroke-linejoin
 
 <p>L'attribut <strong><code>stroke-linejoin</code></strong> définit la manière de dessiner la liaison entre deux segments de ligne.</p>
 
-<div class="blockIndicator note"><strong>Note:</strong> <code>stroke-linejoin</code> étant un attribut de présentation, il peut être utililsé comme propriété CSS.</div>
+<div class="note">
+  <p><strong>Note :</strong> <code>stroke-linejoin</code> étant un attribut de présentation, il peut être utililsé comme propriété CSS.</p>
+</div>
 
 <p>Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}</p>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Exemple</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!--
@@ -75,8 +76,7 @@ translation_of: Web/SVG/Attribute/stroke-linejoin
 &lt;/svg&gt;
 </pre>
 
-<p>{{EmbedLiveSample('topExample', '100%', 400)}}</p>
-</div>
+<p>{{EmbedLiveSample('exemple', '100%', 400)}}</p>
 
 <h2 id="Contexte_d'utilisation">Contexte d'utilisation</h2>
 
@@ -99,15 +99,15 @@ translation_of: Web/SVG/Attribute/stroke-linejoin
 
 <h3 id="arcs">arcs</h3>
 
-<div class="blockIndicator note"><strong>Note:</strong> La valeur <code>arcs</code> a été introduite en SVG2 et n'est pas souvent pris en charge pour le moment, voir {{anch("Compatibilité des navigateurs")}} ci-dessous pour plus de détails.</div>
+<div class="note">
+  <p><strong>Note :</strong> La valeur <code>arcs</code> a été introduite en SVG2 et n'est pas souvent pris en charge pour le moment, voir {{anch("Compatibilité des navigateurs")}} ci-dessous pour plus de détails.</p>
+</div>
 
 <p>La valeur <code>arcs</code> indique qu'un arc est utilisé pour joindre les segments du chemin. L'arc est formé en prolongeant les bords extérieurs du trait au point de liaison, avec la même courbe que ce bord.</p>
 
 <h4 id="Exemple">Exemple</h4>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effet de la valeur "arcs" --&gt;
@@ -135,9 +135,7 @@ translation_of: Web/SVG/Attribute/stroke-linejoin
 
 <h4 id="Exemple_2">Exemple</h4>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effet de la valeur "bevel" --&gt;
@@ -163,13 +161,13 @@ translation_of: Web/SVG/Attribute/stroke-linejoin
 
 <p>La valeur <code>miter</code> indique qu'un angle droit est utilisé pour joindre les segments du chemin. Le coin est formé en prolongeant les bords extérieurs du trait jusqu'à ce qu'ils se joignent.</p>
 
-<div class="blockIndicator note"><strong>Note:</strong> Si la longueur du coin dépasse {{SVGAttr('stroke-miterlimit')}}, un coin de type <code>bevel</code> est utilisé à la place.</div>
+<div class="note">
+  <p><strong>Note :</strong> Si la longueur du coin dépasse {{SVGAttr('stroke-miterlimit')}}, un coin de type <code>bevel</code> est utilisé à la place.</p>
+</div>
 
 <h4 id="Exemple_3">Exemple</h4>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effet de la valeur "miter" --&gt;
@@ -206,7 +204,9 @@ translation_of: Web/SVG/Attribute/stroke-linejoin
 
 <h3 id="miter-clip">miter-clip</h3>
 
-<div class="blockIndicator note"><strong>Note:</strong> La valeur <code>miter-clip</code> a été introduite en SVG2 et n'est pas souvent pris en charge pour le moment, voir {{anch("Compatibilité des navigateurs")}} ci-dessous pour plus de détails.</div>
+<div class="note">
+  <p><strong>Note :</strong> La valeur <code>miter-clip</code> a été introduite en SVG2 et n'est pas souvent pris en charge pour le moment, voir {{anch("Compatibilité des navigateurs")}} ci-dessous pour plus de détails.</p>
+</div>
 
 <p>La valeur <code>miter-clip</code> indique qu'un angle droit est utilisé pour joindre les segments du chemin. Le coin est formé en prolongeant les bords extérieurs du trait jusqu'à ce qu'ils se joignent.</p>
 
@@ -214,9 +214,7 @@ translation_of: Web/SVG/Attribute/stroke-linejoin
 
 <h4 id="Exemple_4">Exemple</h4>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effet de la valeur "miter-clip" --&gt;
@@ -257,9 +255,7 @@ translation_of: Web/SVG/Attribute/stroke-linejoin
 
 <h4 id="Exemple_5">Exemple</h4>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effet de la valeur "round" --&gt;

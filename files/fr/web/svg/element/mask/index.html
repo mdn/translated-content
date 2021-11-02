@@ -15,10 +15,9 @@ translation_of: Web/SVG/Element/mask
 
 <p>Le masque permet de rendre des zones de l'élément sur lequel est appliqué (semi-)transparentes. On peut par exemple créer un effet de fondu en utilisant un dégradé, ce que le détourage ({{SVGElement('clipPath')}}) ne permet pas.</p>
 
-<div id="Example">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Exemple</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="-10 -10 120 120"&gt;
   &lt;mask id="myMask"&gt;
@@ -35,13 +34,12 @@ translation_of: Web/SVG/Element/mask
   &lt;circle cx="50" cy="50" r="50" mask="url(#myMask)" /&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample('Example', 100, 100)}}</p>
-</div>
+<p>{{EmbedLiveSample('exemple', 100, 100)}}</p>
 
 <h2 id="Attributs">Attributs</h2>
 
 <dl>
- <dt id="attr-cx">{{SVGAttr("height")}}</dt>
+ <dt>{{SVGAttr("height")}}</dt>
  <dd>Définit la hauteur du masque.<br>
  <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a> ; Valeur par défaut: <code>120%</code>; <em>Animation</em>: <strong>oui</strong></small></dd>
  <dt>{{SVGAttr("maskContentUnits")}}</dt>
@@ -50,13 +48,13 @@ translation_of: Web/SVG/Element/mask
  <dt>{{SVGAttr("maskUnits")}}</dt>
  <dd>Définit le système de coordonnées pour les attributs {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}} et {{SVGAttr("height")}} du <code>&lt;mask&gt;</code>.<br>
  <small><em>Valeur</em>: <code>userSpaceOnUse</code>|<code>objectBoundingBox</code> ; <em>Valeur par défaut</em>: <code>objectBoundingBox</code>; <em>Animation</em>: <strong>oui</strong></small></dd>
- <dt id="attr-cx">{{SVGAttr("x")}}</dt>
+ <dt>{{SVGAttr("x")}}</dt>
  <dd>Définit la coordonnée de l'axe x du coin supérieur gauche du masque.<br>
  <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#Coordinate"><strong>&lt;coordinate&gt;</strong></a> ; <em>Valeur par défaut</em>: <code>-10%</code>; <em>Animation</em>: <strong>oui</strong></small></dd>
- <dt id="attr-cx">{{SVGAttr("y")}}</dt>
+ <dt>{{SVGAttr("y")}}</dt>
  <dd>Définit la coordonnée de l'axe y du coin supérieur gauche du masque.<br>
  <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#Coordinate"><strong>&lt;coordinate&gt;</strong></a> ; <em>Valeur par défaut</em>: <code>-10%</code>; <em>Animation</em>: <strong>oui</strong></small></dd>
- <dt id="attr-cx">{{SVGAttr("width")}}</dt>
+ <dt>{{SVGAttr("width")}}</dt>
  <dd>Définit la largeur du masque.<br>
  <small><em>Valeur</em>: <a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a> ; Valeur par défaut: <code>120%</code>; <em>Animation</em>: <strong>oui</strong></small></dd>
 </dl>
