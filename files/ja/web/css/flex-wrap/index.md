@@ -5,152 +5,139 @@ tags:
   - CSS
   - CSS フレックスボックス
   - CSS プロパティ
-  - Reference
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.flex-wrap
 translation_of: Web/CSS/flex-wrap
 ---
-<div>{{ CSSRef}}</div>
+{{ CSSRef}}
 
-<p><a href="/ja/docs/CSS" title="CSS">CSS</a> の <strong><code>flex-wrap</code></strong> プロパティは、フレックスアイテムを単一行に押し込むか、あるいは複数行に折り返してもよいかを指定します。折り返しを許可する場合は、行を積み重ねる方向の制御も可能です。</p>
+**`flex-wrap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムを単一行に押し込むか、あるいは複数行に折り返してもよいかを指定します。折り返しを許可する場合は、行を積み重ねる方向の制御も可能です。
 
-<div>{{EmbedInteractiveExample("pages/css/flex-wrap.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+他のプロパティや詳細情報については [CSS フレックスボックスの使用](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)をご覧ください。
 
-<p>他のプロパティや詳細情報については <a href="/ja/docs/CSS/Using_CSS_flexible_boxes" title="/ja/docs/CSS/Using_CSS_flexible_boxes">CSS フレックスボックスの利用</a>をご覧ください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">flex-wrap: nowrap; /* 既定値 */
+```css
+flex-wrap: nowrap; /* 既定値 */
 flex-wrap: wrap;
 flex-wrap: wrap-reverse;
 
 /* グローバル値 */
 flex-wrap: inherit;
 flex-wrap: initial;
+flex-wrap: revert;
 flex-wrap: unset;
-</pre>
+```
 
-<p><code>flex-wrap</code> プロパティは次の値のリストから選択した単一のキーワードで指定します。</p>
+`flex-wrap` プロパティは次の値のリストから選択した単一のキーワードで指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<p>以下の値を利用することができます。</p>
+以下の値を利用することができます。
 
-<dl>
- <dt><code>nowrap</code></dt>
- <dd>フレックスアイテムは単一行に配置され、フレックスコンテナーからあふれることもあります。 <code>cross-start</code> は、 {{cssxref("flex-direction")}} の値に応じて <code>start</code> または <code>before</code> と同一になります。</dd>
- <dt><code>wrap</code></dt>
- <dd>フレックスアイテムは複数行に分割されます。 <code>cross-start</code> は <code>flex-direction</code> の値に応じて <code>start</code> または <code>before</code> と同一になり、 <code>cross-end</code> は、指定された <code>cross-start</code> の反対側になります。</dd>
- <dt><code>wrap-reverse</code></dt>
- <dd><code>wrap</code> と同様に動作しますが、 <code>cross-start</code> と <code>cross-end</code> が入れ替わります。</dd>
-</dl>
+- `nowrap`
+  - : フレックスアイテムは単一行に配置され、フレックスコンテナーからあふれることもあります。 `cross-start` は、 {{cssxref("flex-direction")}} の値に応じて `start` または `before` と同一になります。
+- `wrap`
+  - : フレックスアイテムは複数行に分割されます。 `cross-start` は `flex-direction` の値に応じて `start` または `before` と同一になり、 `cross-end` は、指定された `cross-start` の反対側になります。
+- `wrap-reverse`
+  - : `wrap` と同様に動作しますが、 `cross-start` と `cross-end` が入れ替わります。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+<h3 id="Setting_flex_container_wrap_values">フレックスコンテナーの wrap 値の設定</h3>
 
-<div id="Live_Sample">
-<pre class="brush: html">&lt;h4&gt;This is an example for flex-wrap:wrap &lt;/h4&gt;
-&lt;div class="content"&gt;
-  &lt;div class="red"&gt;1&lt;/div&gt;
-  &lt;div class="green"&gt;2&lt;/div&gt;
-  &lt;div class="blue"&gt;3&lt;/div&gt;
-&lt;/div&gt;
-&lt;h4&gt;This is an example for flex-wrap:nowrap &lt;/h4&gt;
-&lt;div class="content1"&gt;
-  &lt;div class="red"&gt;1&lt;/div&gt;
-  &lt;div class="green"&gt;2&lt;/div&gt;
-  &lt;div class="blue"&gt;3&lt;/div&gt;
-&lt;/div&gt;
-&lt;h4&gt;This is an example for flex-wrap:wrap-reverse &lt;/h4&gt;
-&lt;div class="content2"&gt;
-  &lt;div class="red"&gt;1&lt;/div&gt;
-  &lt;div class="green"&gt;2&lt;/div&gt;
-  &lt;div class="blue"&gt;3&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+#### HTML
 
-<h3 id="CSS">CSS</h3>
+```html
+<h4>This is an example for flex-wrap:wrap </h4>
+<div class="content">
+  <div class="red">1</div>
+  <div class="green">2</div>
+  <div class="blue">3</div>
+</div>
+<h4>This is an example for flex-wrap:nowrap </h4>
+<div class="content1">
+  <div class="red">1</div>
+  <div class="green">2</div>
+  <div class="blue">3</div>
+</div>
+<h4>This is an example for flex-wrap:wrap-reverse </h4>
+<div class="content2">
+  <div class="red">1</div>
+  <div class="green">2</div>
+  <div class="blue">3</div>
+</div>
+```
 
-<pre class="brush: css">/* Common Styles */
+#### CSS
+
+```css
+/* Common Styles */
 .content,
 .content1,
 .content2 {
-    color: #fff;
-    font: 100 24px/100px sans-serif;
-    height: 150px;
-    text-align: center;
+  color: #fff;
+  font: 100 24px/100px sans-serif;
+  height: 150px;
+  width: 897px;
+  text-align: center;
 }
 
 .content div,
 .content1 div,
 .content2 div {
-    height: 50%;
-    width: 50%;
+  height: 50%;
+  width: 300px;
 }
 .red {
-    background: orangered;
+  background: orangered;
 }
 .green {
-    background: yellowgreen;
+  background: yellowgreen;
 }
 .blue {
-    background: steelblue;
+  background: steelblue;
 }
 
 /* Flexbox Styles */
 .content {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .content1 {
-    display: flex;
-    flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .content2 {
-    display: flex;
-    flex-wrap: wrap-reverse;
+  display: flex;
+  flex-wrap: wrap-reverse;
 }
+```
 
-</pre>
-</div>
+#### 結果
 
-<h3 id="Results" name="Results">結果</h3>
+{{ EmbedLiveSample('Setting_flex_container_wrap_values', '700px', '700px', '', 'Web/CSS/flex-wrap') }}
 
-<p>{{ EmbedLiveSample('Examples', '700px', '700px', '', 'Web/CSS/flex-wrap') }}</p>
+## 仕様書
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{Specifications}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Flexbox', '#flex-wrap-property', 'flex-wrap') }}</td>
-   <td>{{ Spec2('CSS3 Flexbox') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<p>{{cssinfo}}</p>
+{{Compat}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## 関連情報
 
-<p>{{Compat("css.properties.flex-wrap")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>CSS フレックスボックスガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">フレックスボックスの基本概念</a></em></li>
- <li>CSS フレックスボックスガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items">フレックスアイテムの折り返しのマスター</a></em></li>
-</ul>
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS フレックスボックスガイド: _[フレックスアイテムの折り返しのマスター](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_

@@ -3,148 +3,136 @@ title: flex
 slug: Web/CSS/flex
 tags:
   - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - 'recipe:css-shorthand-property'
+  - CSS フレックスボックス
+  - CSS プロパティ
+  - リファレンス
+  - recipe:css-shorthand-property
+browser-compat: css.properties.flex
 translation_of: Web/CSS/flex
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><strong><code>flex</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/Shorthand_properties">一括指定プロパティ</a>で、フレックス<em>アイテム</em>をフレックスコンテナーの領域に収めるために、どのように伸長・収縮させるかを指定します。</span></p>
+**`flex`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、フレックス*アイテム*をフレックスコンテナーの領域に収めるために、どのように伸長・収縮させるかを指定します。
 
-<div>{{EmbedInteractiveExample("pages/css/flex.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構成要素のプロパティ
 
-<h2 id="Constituent_properties" name="Constituent_properties">構成するプロパティ</h2>
+このプロパティは以下の CSS プロパティの一括指定です。
 
-<p>このプロパティは以下の CSS プロパティの一括指定です。</p>
+- {{cssxref("flex-grow")}}
+- {{cssxref("flex-shrink")}}
+- {{cssxref("flex-basis")}}
 
-<ul>
- <li>{{cssxref("flex-grow")}}</li>
- <li>{{cssxref("flex-shrink")}}</li>
- <li>{{cssxref("flex-basis")}}</li>
-</ul>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* キーワード値 */
+```css
+/* キーワード値 */
 flex: auto;
 flex: initial;
 flex: none;
 
-/* 単位がない数値を1つ指定: flex-grow */
+/* 単位がない数値を 1 つ指定: flex-grow */
 flex: 2;
 
-/* 幅または高さを1つ指定: flex-basis */
+/* 幅または高さを 1 つ指定: flex-basis */
 flex: 10em;
 flex: 30%;
 flex: min-content;
 
-/* 値を2つ指定: flex-grow | flex-basis */
+/* 値を 2 つ指定: flex-grow | flex-basis */
 flex: 1 30px;
 
-/* 値を2つ指定: flex-grow | flex-shrink */
+/* 値を 2 つ指定: flex-grow | flex-shrink */
 flex: 2 2;
 
-/* 値を3つ指定: flex-grow | flex-shrink | flex-basis */
+/* 値を 3 つ指定: flex-grow | flex-shrink | flex-basis */
 flex: 2 2 10%;
 
 /* グローバル値 */
 flex: inherit;
 flex: initial;
+flex: revert;
 flex: unset;
-</pre>
+```
 
-<p><code>flex</code> プロパティは1つ、2つ、3つの値を取ることがあります。</p>
+`flex` プロパティは 1 つ、2 つ、3 つの値を取ることができます。
 
-<ul>
- <li><strong>値1つの構文:</strong> 値は以下のうちの1つです。
+- **値 1 つの構文:** 値は以下のうちの 1 つです。
 
-  <ul>
-   <li><code>&lt;number&gt;</code>: この場合は <code>flex: &lt;number&gt; 1 0</code> と解釈されます。 <code><a href="#&lt;'flex-shrink'>">&lt;flex-shrink&gt;</a></code> の値は 1 と想定され、 <code><a href="#&lt;'flex-basis'>">&lt;flex-basis&gt;</a></code> の値は <code>0</code> と想定されます。</li>
-   <li>キーワード: <code><a href="#none">none</a></code>, <code><a href="#auto">auto</a></code>, <code>initial</code> のいずれか。</li>
-  </ul>
- </li>
- <li><strong>値2つの構文:</strong>
-  <ul>
-   <li>1つ目は次の値でなければなりません。
-    <ul>
-     <li>{{cssxref("&lt;number&gt;")}} であり、 <code><a href="#&lt;'flex-grow'>">&lt;flex-grow&gt;</a></code> として解釈される。</li>
-    </ul>
-   </li>
-   <li>2つ目は次の値でなければなりません。
-    <ul>
-     <li>{{cssxref("&lt;number&gt;")}}: <code><a href="#&lt;'flex-shrink'>">&lt;flex-shrink&gt;</a></code> として解釈される。</li>
-     <li>{{cssxref("width")}} として有効な値: <code><a href="#&lt;'flex-basis'>">&lt;flex-basis&gt;</a></code> として解釈される。</li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li><strong>値3つの構文:</strong> 値は以下の順序でなければなりません。
-  <ol>
-   <li>最初の値は単位なしの {{cssxref("&lt;number&gt;")}} でなければならず、 <code><a href="#&lt;'flex-grow'>">&lt;flex-grow&gt;</a></code> として解釈されます。</li>
-   <li>2つ目の値は単位なしの {{cssxref("&lt;number&gt;")}} でなければならず、 <code><a href="#&lt;'flex-grow'>">&lt;flex-shrink&gt;</a></code> として解釈されます。</li>
-   <li>3つ目の値は {{cssxref("width")}} として有効な値でなければならず、 <code><a href="#&lt;'flex-basis'>">&lt;flex-basis&gt;</a></code> として解釈されます。</li>
-  </ol>
- </li>
-</ul>
+  - `<number>`: この場合は `flex: <number> 1 0` と解釈されます。[`<flex-shrink>`](#flex-shrink) の値は 1 と想定され、[`<flex-basis>`](#flex-basis) の値は `0` と想定されます。
+  - キーワード: `none`, `auto`, `initial` のいずれか。
 
-<h3 id="Values" name="Values">値</h3>
+- **値 2 つの構文:**
 
-<dl>
- <dt><code>initial</code></dt>
- <dd>アイテムは <code>width</code> および <code>height</code> プロパティによって大きさが決められます。コンテナーに合うように最小サイズまで収縮しますが、フレックスコンテナーの空き領域を埋めるために伸長することはありません。これは "<code>flex: 0 1 auto</code>" と同等です。</dd>
- <dt id="auto"><code>auto</code></dt>
- <dd>アイテムは <code>width</code> および <code>height</code> プロパティによって大きさが決められますが、フレックスコンテナーの空き領域を埋めるために伸長したり、コンテナーに合うように最小サイズまで収縮したりします。これは "<code>flex: 1 1 auto</code>" と同等です。</dd>
- <dt id="none"><code>none</code></dt>
- <dd>アイテムは <code>width</code> および <code>height</code> プロパティによって大きさが決められます。大きさは完全に固定で、フレックスコンテナーに連動して収縮したり伸長したりすることはありません。これは"<code>flex: 0 0 auto</code>" と同等です。</dd>
- <dt id="&lt;'flex-grow'>"><code>&lt;'flex-grow'&gt;</code></dt>
- <dd>フレックスアイテムの {{cssxref("flex-grow")}} を定義します。負の値は無効とみなされます。省略時の既定値は <code>1</code> です。 (初期値は <code>0</code>)</dd>
- <dt id="&lt;'flex-shrink'>"><code>&lt;'flex-shrink'&gt;</code></dt>
- <dd>フレックスアイテムの {{cssxref("flex-shrink")}} を定義します。負の値は無効とみなされます。省略時の既定値は <code>1</code> です。 (初期値は <code>1</code>)</dd>
- <dt id="&lt;'flex-basis'>"><code>&lt;'flex-basis'&gt;</code></dt>
- <dd>フレックスアイテムの {{cssxref("flex-basis")}} を定義します。希望サイズが <code>0</code> ならば、フレキシビリティとして解釈されないように単位をつけなければなりません。省略時の既定値は <code>1</code> です。 (初期値は <code>auto</code>)</dd>
-</dl>
+  - 1 つ目は次の値でなければなりません。
 
-<h2 id="Description" name="Description">解説</h2>
+    - {{cssxref("&lt;number&gt;")}} であり、`<flex-grow>` として解釈される。
 
-<p>多くの場合、 <code>flex</code> には <code>auto</code>, <code>initial</code>, <code>none</code>, または単位のない正の数を設定してください。これらの値の効果を確認するには、以下のフレックスコンテナーの大きさを変更してみてください。</p>
+  - 2 つ目は次の値でなければなりません。
 
-<div id="flex">
-<pre class="hidden brush: html notranslate">&lt;div class="flex-container"&gt;
-  &lt;div class="item auto"&gt;auto&lt;/div&gt;
-  &lt;div class="item auto"&gt;auto&lt;/div&gt;
-  &lt;div class="item auto"&gt;auto&lt;/div&gt;
-&lt;/div&gt;
+    - {{cssxref("&lt;number&gt;")}}: `<flex-shrink>` として解釈される。
+    - {{cssxref("width")}} として有効な値: `<flex-basis>` として解釈される。
 
-&lt;div class="flex-container"&gt;
-  &lt;div class="item auto"&gt;auto&lt;/div&gt;
-  &lt;div class="item initial"&gt;initial&lt;/div&gt;
-  &lt;div class="item initial"&gt;initial&lt;/div&gt;
-&lt;/div&gt;
+- **値 3 つの構文:** 値は以下の順序でなければなりません。
 
-&lt;div class="flex-container"&gt;
-  &lt;div class="item auto"&gt;auto&lt;/div&gt;
-  &lt;div class="item auto"&gt;auto&lt;/div&gt;
-  &lt;div class="item none"&gt;none&lt;/div&gt;
-&lt;/div&gt;
+  1.  {{cssxref("&lt;number&gt;")}} で `<flex-grow>` として解釈される。
+  2.  {{cssxref("&lt;number&gt;")}} で `<flex-shrink>` として解釈される。
+  3.  {{cssxref("width")}} として有効な値で、`<flex-basis>` として解釈される。
 
-&lt;div class="flex-container"&gt;
-  &lt;div class="item initial"&gt;initial&lt;/div&gt;
-  &lt;div class="item none"&gt;none&lt;/div&gt;
-  &lt;div class="item none"&gt;none&lt;/div&gt;
-&lt;/div&gt;
+### 値
 
-&lt;div class="flex-container"&gt;
-  &lt;div class="item four"&gt;4&lt;/div&gt;
-  &lt;div class="item two"&gt;2&lt;/div&gt;
-  &lt;div class="item one"&gt;1&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+- `initial`
+  - : アイテムは `width` および `height` プロパティによって寸法が決められます。コンテナーに合うように最小サイズまで収縮しますが、フレックスコンテナーの空き領域を埋めるために伸長することはありません。これは "`flex: 0 1 auto`" と同等です。
+- `auto`
+  - : アイテムは `width` および `height` プロパティによって寸法が決められますが、フレックスコンテナーの空き領域を埋めるために伸長したり、コンテナーに合うように最小サイズまで収縮したりします。これは "`flex: 1 1 auto`" と同等です。
+- `none`
+  - : アイテムは `width` および `height` プロパティによって寸法が決められます。寸法は完全に固定で、フレックスコンテナーに連動して収縮したり伸長したりすることはありません。これは"`flex: 0 0 auto`" と同等です。
+- `<'flex-grow'>`
+  - : フレックスアイテムの {{cssxref("flex-grow")}} を定義します。負の値は無効とみなされます。省略時の既定値は `1` です。 (初期値は `0`)
+- `<'flex-shrink'>`
+  - : フレックスアイテムの {{cssxref("flex-shrink")}} を定義します。負の値は無効とみなされます。省略時の既定値は `1` です。 (初期値は `1`)
+- `<'flex-basis'>`
+  - : フレックスアイテムの {{cssxref("flex-basis")}} を定義します。希望サイズが `0` ならば、自由度として解釈されないように単位をつけなければなりません。省略時の既定値は `1` です。 (初期値は `auto`)
 
-<pre class="hidden brush: css notranslate">* {
+<h2 id="Description">解説</h2>
+
+多くの場合、 `flex` には `auto`, `initial`, `none`, または単位のない正の数を設定してください。これらの値の効果を確認するには、以下のフレックスコンテナーの大きさを変更してみてください。
+
+```html hidden
+<div class="flex-container">
+  <div class="item auto">auto</div>
+  <div class="item auto">auto</div>
+  <div class="item auto">auto</div>
+</div>
+
+<div class="flex-container">
+  <div class="item auto">auto</div>
+  <div class="item initial">initial</div>
+  <div class="item initial">initial</div>
+</div>
+
+<div class="flex-container">
+  <div class="item auto">auto</div>
+  <div class="item auto">auto</div>
+  <div class="item none">none</div>
+</div>
+
+<div class="flex-container">
+  <div class="item initial">initial</div>
+  <div class="item none">none</div>
+  <div class="item none">none</div>
+</div>
+
+<div class="flex-container">
+  <div class="item four">4</div>
+  <div class="item two">2</div>
+  <div class="item one">1</div>
+</div>
+```
+
+```css hidden
+* {
   box-sizing: border-box;
 }
 
@@ -190,103 +178,87 @@ flex: unset;
 .one {
   flex: 1;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("flex", 1200, 370, "", "", "example-outcome-frame")}}</p>
+{{EmbedLiveSample("Description", 1200, 400, "", "", "example-outcome-frame")}}
 
-<p>既定ではフレックスアイテムは最小コンテンツサイズよりも収縮することはありません。これを変更するには、 {{cssxref("min-width")}} または {{cssxref("min-height")}} を設定してください。</p>
-</div>
+既定ではフレックスアイテムは内容物の最小の寸法よりも収縮することはありません。これを変更するには、 {{cssxref("min-width")}} または {{cssxref("min-height")}} を設定してください。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Setting_flex_auto" name="Setting_flex_auto">flex: auto の設定</h3>
+<h3 id="Setting_flex_auto">flex: auto の設定</h3>
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div id="flex-container"&gt;
-  &lt;div class="flex-item" id="flex"&gt;Flex box (click to toggle raw box)&lt;/div&gt;
-  &lt;div class="raw-item" id="raw"&gt;Raw box&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="flex-container">
+  <div class="flex-item" id="flex">Flex box (click to toggle raw box)</div>
+  <div class="raw-item" id="raw">Raw box</div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">#flex-container {
+```css
+#flex-container {
   display: flex;
   flex-direction: row;
 }
 
-#flex-container &gt; .flex-item {
+#flex-container > .flex-item {
   flex: auto;
 }
 
-#flex-container &gt; .raw-item {
+#flex-container > .raw-item {
   width: 5rem;
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: js notranslate">var flex = document.getElementById("flex");
+```js hidden
+var flex = document.getElementById("flex");
 var raw = document.getElementById("raw");
 flex.addEventListener("click", function() {
   raw.style.display = raw.style.display == "none" ? "block" : "none";
 });
-</pre>
+```
 
-<pre class="brush: css notranslate">#flex-container {
+```css hidden
+#flex-container {
   width: 100%;
   font-family: Consolas, Arial, sans-serif;
 }
 
-#flex-container &gt; div {
+#flex-container > div {
   border: 1px solid #f00;
   padding: 1rem;
 }
 
-#flex-container &gt; .raw-item {
+#flex-container > .raw-item {
   border: 1px solid #000;
 }
-</pre>
-</div>
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Setting_flex_auto','100%','60')}}</p>
+{{EmbedLiveSample('Setting_flex_auto','100%','100')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状況</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#flex-property', 'flex')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.flex")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>CSS フレックスボックスガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">フレックスボックスの基本概念</a></em></li>
- <li>CSS フレックスボックスガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">主軸に沿ったフレックスアイテムの比率の制御</a></em></li>
-</ul>
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS フレックスボックスガイド: _[主軸に沿ったフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_

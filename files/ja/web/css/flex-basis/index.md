@@ -3,27 +3,33 @@ title: flex-basis
 slug: Web/CSS/flex-basis
 tags:
   - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - 'recipe:css-property'
+  - CSS フレックスボックス
+  - CSS プロパティ
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.flex-basis
 translation_of: Web/CSS/flex-basis
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>flex-basis</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、フレックスアイテムの主要部分の初期の寸法を設定します。 {{Cssxref("box-sizing")}} で設定していない限り、このプロパティはコンテンツボックスの寸法を定義します。</p>
+**`flex-basis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムの主要部分の初期の寸法を設定します。 {{Cssxref("box-sizing")}} で設定していない限り、このプロパティはコンテンツボックスの寸法を定義します。
 
-<div>{{EmbedInteractiveExample("pages/css/flex-basis.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex-basis.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+この例では、3 つすべてのアイテムの {{cssxref("flex-grow")}} と {{cssxref("flex-shrink")}} プロパティがともに `1` に設定されており、フレックスアイテムが初期の `flex-basis` から伸長したり縮小したりできることを示しています。
 
-<div class="note">
-<p><strong>メモ</strong>: (<code>auto</code> 以外の) <code>flex-basis</code> と <code>width</code> (または <code>flex-direction: column</code> の場合は <code>height</code>) の両方が要素に設定されていた場合、 <code>flex-basis</code> が優先されます。</p>
-</div>
+このデモでは、最初のアイテムの `flex-basis` を変更します。そして、その `flex-basis` を基準にして伸長したり縮小したりします。つまり、例えば最初のアイテムの `flex-basis` が `200px` の場合、最初は 200px で表示されますが、他のアイテムが最低でも `min-content` の大きさであることを考慮して、利用可能な空間に合わせて縮小されます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+下記の図は、Firefox の [Flexbox インスペクター](/ja/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts)がアイテムがどのような寸法になるのかを理解するのに役立つことを示しています。
 
-<pre class="brush:css no-line-numbers notranslate">/* 幅を指定する */
+![Firefox の Flexbox インスペクターでは、アイテムが縮小された後のサイズが表示されます。](firefox-flex-basis.png)
+
+> **Note:** (`auto` 以外の) `flex-basis` と `width` (または `flex-direction: column` の場合は `height`) の両方が要素に設定されていた場合、 `flex-basis` が優先されます。
+
+## 構文
+
+```css
+/* 幅を指定する */
 flex-basis: 10em;
 flex-basis: 3px;
 flex-basis: auto;
@@ -40,63 +46,58 @@ flex-basis: content;
 /* グローバル値 */
 flex-basis: inherit;
 flex-basis: initial;
+flex-basis: revert;
 flex-basis: unset;
-</pre>
+```
 
-<p><code>flex-basis</code> プロパティは、<code><a href="#content">content</a></code> キーワードまたは <code><a href="#&lt;'width'>">&lt;'width'&gt;</a></code> で指定します。</p>
+`flex-basis` プロパティは、`content` キーワードまたは `<'width'>` で指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code id="&lt;'width'>">&lt;'width'&gt;</code></dt>
- <dd>絶対的な {{cssxref("&lt;length&gt;")}}、親のフレックスコンテナーの main size に対する {{cssxref("&lt;percentage&gt;")}}、あるいは <code>auto</code> キーワードで定義します。負の値は不正です。既定値は <code>auto</code> です。</dd>
- <dt><code id="content">content</code></dt>
- <dd>flex アイテムの内容物に基づいて、自動的にサイズを決めます。</dd>
- <dd>
- <div class="note"><strong>メモ:</strong> この値は Flexible Box Layout の初期リリースでは定義されていませんでしたので、古い実装では対応していない場合があります。 main size (<a href="https://drafts.csswg.org/css2/visudet.html#propdef-width">width</a> または <a href="https://drafts.csswg.org/css2/visudet.html#propdef-height">height</a>) を <code>auto</code> にするのと合わせて <code>auto</code> を使用することで、同等の効果を得られます。</div>
+- `<'width'>`
+  - : 絶対的な {{cssxref("&lt;length&gt;")}}、親のフレックスコンテナーの主軸方向の寸法に対する {{cssxref("&lt;percentage&gt;")}}、あるいは `auto` キーワードで定義します。負の値は無効です。既定値は `auto` です。
+- `content`
 
- <div class="note">
- <p id="comment_text_0"><strong>経緯:</strong></p>
+  - : フレックスアイテムの内容物に基づいて、自動的に大きさを決めます。
 
- <ul>
-  <li>元々、<code>flex-basis:auto</code> は "自身の <code>width</code> または <code>height</code> プロパティを参照する" ことを意味していました。</li>
-  <li>その後 <code>flex-basis:auto</code> の意味が自動サイズ設定に変わり、また "自身の <code>width</code> または <code>height</code> プロパティを参照する" キーワードとして "main-size" を導入しました。これは {{bug("1032922")}} で実装しました。</li>
-  <li>さらに、この変更が {{bug("1093316")}} で戻されて <code>auto</code> が再び "自身の <code>width</code> または <code>height</code> プロパティを参照する" になり、自動サイズ設定を行うための <code>content</code> キーワードを新たに導入しました (content キーワードの追加は {{bug("1105111")}} で扱っています)。</li>
- </ul>
- </div>
- </dd>
-</dl>
+    > **Note:** この値は Flexible Box Layout の初期リリースでは定義されていませんでしたので、古い実装では対応していない場合があります。主軸方向の寸法 ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) または [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) を `auto` にするのと合わせて `auto` を使用することで、同等の効果を得られます。
+    >
+    > - もともと、`flex-basis:auto` は「自身の `width` または `height` プロパティを参照する」という意味でした。
+    > - その後 `flex-basis:auto` の意味が自動拡大縮小設定に変わり、また「自身の `width` または `height` プロパティを参照する」キーワードとして "main-size" を導入しました。これは {{bug("1032922")}} で実装しました。
+    > - さらに、この変更が {{bug("1093316")}} で戻されて `auto` が再び「自身の `width` または `height` プロパティを参照する」になり、自動拡大縮小設定を行うための `content` キーワードを新たに導入しました (content キーワードの追加は {{bug("1105111")}} で扱っています)。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Setting_flex_item_initial_sizes" name="Setting_flex_item_initial_sizes">フレックスアイテムの初期の寸法の設定</h3>
+<h3 id="Setting_flex_item_initial_sizes">フレックスアイテムの初期の寸法の設定</h3>
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;ul class="container"&gt;
-  &lt;li class="flex flex1"&gt;1: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex2"&gt;2: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex3"&gt;3: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex4"&gt;4: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex5"&gt;5: flex-basis test&lt;/li&gt;
-&lt;/ul&gt;
+```html
+<ul class="container">
+  <li class="flex flex1">1: flex-basis test</li>
+  <li class="flex flex2">2: flex-basis test</li>
+  <li class="flex flex3">3: flex-basis test</li>
+  <li class="flex flex4">4: flex-basis test</li>
+  <li class="flex flex5">5: flex-basis test</li>
+</ul>
 
-&lt;ul class="container"&gt;
-  &lt;li class="flex flex6"&gt;6: flex-basis test&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+<ul class="container">
+  <li class="flex flex6">6: flex-basis test</li>
+</ul>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">.container {
+```css
+.container {
   font-family: arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -174,39 +175,22 @@ flex-basis: unset;
 .flex6:after {
   content: 'fill';
 }
-</pre>
+```
 
-<h4 id="Results" name="Results">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Setting_flex_item_initial_sizes', '', '360')}}</p>
+{{EmbedLiveSample('Setting_flex_item_initial_sizes', '', '360')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#propdef-flex-basis', 'flex-basis')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.flex-basis")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>CSS フレックスボックスガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">フレックスボックスの基本概念</a></em></li>
- <li>CSS フレックスボックスガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">フレックスアイテムの主軸方向における比率の制御</a></em></li>
- <li>{{cssxref("width")}}</li>
-</ul>
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS フレックスボックスガイド: _[フレックスアイテムの主軸方向における比率の制御](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- {{cssxref("width")}}

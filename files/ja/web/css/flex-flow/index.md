@@ -5,32 +5,39 @@ tags:
   - CSS
   - CSS フレックスボックス
   - CSS プロパティ
-  - Reference
-  - 一括指定プロパティ
+  - リファレンス
+  - recipe:css-shorthand-property
+browser-compat: css.properties.flex-flow
 translation_of: Web/CSS/flex-flow
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>flex-flow</code></strong> プロパティは、 {{cssxref("flex-direction")}} プロパティと {{cssxref("flex-wrap")}} プロパティの<a href="/ja/docs/Web/CSS/Shorthand_properties">一括指定</a>プロパティです。</p>
+**`flex-flow`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、フレックスコンテナーの向きと折り返しの動作を同時に指定します。
 
-<div>{{EmbedInteractiveExample("pages/css/flex-flow.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex-flow.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構成要素のプロパティ
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+このプロパティは以下の CSS プロパティの一括指定です。
 
-<pre class="brush:css no-line-numbers">/* flex-flow: &lt;'flex-direction'&gt; */
+- [`flex-direction`](/ja/docs/Web/CSS/flex-direction)
+- [`flex-wrap`](/ja/docs/Web/CSS/flex-wrap)
+
+## 構文
+
+```css
+/* flex-flow: <'flex-direction'> */
 flex-flow: row;
 flex-flow: row-reverse;
 flex-flow: column;
 flex-flow: column-reverse;
 
-/* flex-flow: &lt;'flex-wrap'&gt; */
+/* flex-flow: <'flex-wrap'> */
 flex-flow: nowrap;
 flex-flow: wrap;
 flex-flow: wrap-reverse;
 
-/* flex-flow: &lt;'flex-direction'&gt; および &lt;'flex-wrap'&gt; */
+/* flex-flow: <'flex-direction'> および <'flex-wrap'> */
 flex-flow: row nowrap;
 flex-flow: column wrap;
 flex-flow: column-reverse wrap-reverse;
@@ -38,53 +45,42 @@ flex-flow: column-reverse wrap-reverse;
 /* グローバル値 */
 flex-flow: inherit;
 flex-flow: initial;
+flex-flow: revert;
 flex-flow: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<p>値に関して詳しくは、 {{cssxref("flex-direction")}} および {{cssxref("flex-wrap")}} をご覧ください。</p>
+値に関して詳しくは、 {{cssxref("flex-direction")}} および {{cssxref("flex-wrap")}} をご覧ください。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush:css;highlight:3">element {
+### column-reverse と wrap の設定
+
+```css
+element {
   /* main-axis は block 方向で、 main-start と main-end を逆にします。フレックスアイテムは複数行にレイアウトされます */
   flex-flow: column-reverse wrap;
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Flexbox','#flex-flow-property','flex-flow') }}</td>
-   <td>{{ Spec2('CSS3 Flexbox') }}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p>{{cssinfo}}</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.flex-flow")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>CSS フレックスボックスガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">フレックスボックスの基本概念</a></em></li>
- <li>CSS フレックスボックスガイド: <em><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items">フレックスアイテムの順序</a></em></li>
-</ul>
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS フレックスボックスガイド: _[フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
