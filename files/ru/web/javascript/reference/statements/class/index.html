@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Statements/class
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="brush: js notranslate">class <em>name</em> [extends] {
+<pre class="brush: js">class <em>name</em> [extends] {
   // тело класса
 }
 </pre>
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Statements/class
 
 <p>В следующем примере сначала определяется класс с именем Polygon, затем он наследуется для создания класса Square. Заметьте, что super(), используемый в конструкторе, может быть использован только в конструкторе и должен быть вызван до того, как будет использовано ключевое слово this.</p>
 
-<pre class="brush: js notranslate">class Polygon {
+<pre class="brush: js">class Polygon {
   constructor(height, width) {
     this.name = 'Polygon';
     this.height = height;
@@ -50,13 +50,13 @@ class Square extends Polygon {
 
 <p>Переопределение класса с помощью class declaration вызовет ошибку типа.</p>
 
-<pre class="brush: js notranslate">class Foo {};
+<pre class="brush: js">class Foo {};
 class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared
 </pre>
 
 <p>Та же ошибка будет вызвана, если класс был определён перед использованием class declaration.</p>
 
-<pre class="brush: js notranslate">var Foo = class {};
+<pre class="brush: js">var Foo = class {};
 class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared
 
 </pre>

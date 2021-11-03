@@ -16,11 +16,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 
 <p>{{EmbedInteractiveExample("pages/js/array-from.html")}}</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>Array.from(<var>arrayLike</var>[, <var>mapFn</var>[, <var>thisArg</var>]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>arrayLike</code></dt>
@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 
 <p>Новый экземпляр {{jsxref("Array")}}</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p><code>Array.from()</code> позволяет вам создавать массивы из:</p>
 
@@ -50,7 +50,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 
 <p>В ES2015 классовый синтаксис позволяет создавать подклассы как встроенных классов, так и классов, определённых пользователем; в результате статические методы класса, вроде <code>Array.from</code> «наследуются» подклассами {{jsxref("Global_Objects/Array", "Array")}} и создают новые экземпляры подкласса, а не класса {{jsxref("Global_Objects/Array", "Array")}}.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <h3 id="Массив_из_строки_String">Массив из строки <code>String</code></h3>
 
@@ -94,7 +94,7 @@ Array.from([1, 2, 3], x =&gt; x + x);
 Array.from({ length: 5 }, (v, k) =&gt; k);
 // [0, 1, 2, 3, 4]</pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Метод <code>Array.from</code> был добавлен к стандарту ECMA-262 в 6-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>Array.from</code> в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 6-го издания; он предполагает, что {{jsxref("Global_Objects/Object", "Object")}} и {{jsxref("Global_Objects/TypeError", "TypeError")}} имеют свои первоначальные значения и что <code>callback.call</code> вычисляется в оригинальное значение {{jsxref("Function.prototype.call")}}. Кроме того, поскольку истинные итерируемые объекты не могут быть заменены полифилом, эта реализация не поддерживает общие итерируемые объекты, как они определены в 6-м издании ECMA-262.</p>
 
@@ -179,35 +179,17 @@ if (!Array.from) {
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.from', 'Array.from')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-array.from', 'Array.from')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div>{{Compat("javascript.builtins.Array.from")}}</div>
+<div>{{Compat}}</div>
 
 <div id="compat-mobile"></div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Array")}}</li>

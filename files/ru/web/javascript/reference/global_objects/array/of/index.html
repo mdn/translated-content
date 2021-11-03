@@ -23,11 +23,11 @@ Array.of(1, 2, 3); // [1, 2, 3]
 Array(7);          // массив с 7 пустыми слотами
 Array(1, 2, 3);    // [1, 2, 3]</pre>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>Array.of(<var>element0</var>[, <var>element1</var>[, ...[, <var>elementN</var>]]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>element<em>N</em></code></dt>
@@ -38,18 +38,18 @@ Array(1, 2, 3);    // [1, 2, 3]</pre>
 
 <p>Новый массив {{jsxref("Array")}}.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Эта функция является частью стандарта ECMAScript 6. Для дополнительной информации смотрите <a href="https://gist.github.com/rwaldron/1074126">предложение по Array.of и Array.from</a> и <a href="https://gist.github.com/rwaldron/3186576">полифил для Array.of</a>.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <pre class="brush: js">Array.of(1);         // [1]
 Array.of(1, 2, 3);   // [1, 2, 3]
 Array.of(undefined); // [undefined]
 </pre>
 
-<h2 id="Compatibility" name="Compatibility">Полифил</h2>
+<h2 id="Compatibility">Полифил</h2>
 
 <p>Выполнение следующего кода перед любым другим кодом создаст метод <code>Array.of()</code>, если он ещё не реализован в браузере.</p>
 
@@ -64,33 +64,15 @@ Array.of(undefined); // [undefined]
     return vals.slice()
 }</pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.of', 'Array.of')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.of', 'Array.of')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div>{{Compat("javascript.builtins.Array.of")}}</div>
+<div>{{Compat}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Array")}}</li>

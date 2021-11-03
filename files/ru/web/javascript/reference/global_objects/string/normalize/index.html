@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
 ---
 <div>{{JSRef("Global_Objects", "String")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>normalize()</code></strong> возвращает форму нормализации Юникода данной строки (если значение не является строкой, сначала оно будет в неё преобразовано).</p>
 
@@ -26,11 +26,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
 
 <p>'æ' взаимозаменяемый 'ae', но они не являются строго эквивалентными, если не провести некоторую нормализацию</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>str</var>.normalize(<var>[form</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>form</code></dt>
@@ -44,20 +44,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
  </dd>
 </dl>
 
-<h3 id="Throws" name="Throws">Выбрасываемые исключения</h3>
+<h3 id="Throws">Выбрасываемые исключения</h3>
 
 <dl>
  <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
  <dd>Если параметр <code>form</code> не является одним из вышеперечисленных значений, будет выброшено исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>normalize()</code> возвращает указанную форму нормализации Юникода строки. Он не изменяет значение самой строки.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_normalize" name="Example:_Using_normalize">Пример: использование метода <code>normalize()</code></h3>
+<h3 id="Example_Using_normalize">Пример: использование метода <code>normalize()</code></h3>
 
 <pre class="brush: js">let valueStr = ['h', 'ĥ', 'æ', 'ae', 'g', 'ġ'],
     normArr = valueStr.map(function (text) {
@@ -96,28 +96,15 @@ valueStrNorm.sort(function (first, second) {
 valueStrNorm.join(', ');//-&gt; <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">ae, g, h, s, æ, ġ, ĥ, ș</span></span></span></span>
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.normalize', 'String.prototype.normalize')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="http://www.unicode.org/reports/tr15/">Приложение №15 к стандарту Юникода: формы нормализации Юникода</a></li>

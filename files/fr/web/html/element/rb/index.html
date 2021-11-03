@@ -10,11 +10,7 @@ translation_of: Web/HTML/Element/rb
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">L'élément de <strong>base ruby (<code>&lt;rb&gt;</code>) </strong>est utilisé afin de délimiter le composant texte de base d'une annotation {{HTMLElement("ruby")}}. Autrement dit, le texte qui est annoté.</span> Un élément <code>&lt;rb&gt;</code> devrait encadrer chaque segment atomique du texte de base.</p>
-
-<div class="hidden">\{{EmbedInteractiveExample("pages/tabbed/rb.html", "tabbed-standard")}}</div>
-
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
+<p>L'élément de <strong>base ruby (<code>&lt;rb&gt;</code>) </strong>est utilisé afin de délimiter le composant texte de base d'une annotation {{HTMLElement("ruby")}}. Autrement dit, le texte qui est annoté. Un élément <code>&lt;rb&gt;</code> devrait encadrer chaque segment atomique du texte de base.</p>
 
 <h2 id="Attributs">Attributs</h2>
 
@@ -46,35 +42,31 @@ translation_of: Web/HTML/Element/rb
   字 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;ji&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
 &lt;/ruby&gt;</pre>
 
-<div class="hidden">
-<div id="with-ruby">
-<pre class="brush: html">&lt;ruby&gt; &lt;rb&gt;漢&lt;rb&gt;字 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;kan&lt;rt&gt;ji&lt;rp&gt;)&lt;/rp&gt; &lt;/ruby&gt;
+<h3 id="Avec_prise_en_charge_de_ruby">Avec prise en charge de ruby</h3>
+
+<pre class="brush: html hidden">&lt;ruby&gt; &lt;rb&gt;漢&lt;rb&gt;字 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;kan&lt;rt&gt;ji&lt;rp&gt;)&lt;/rp&gt; &lt;/ruby&gt;
 </pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   font-size: 22px;
 }</pre>
-</div>
-</div>
 
 <p>Voici le résultat obtenu :</p>
 
-<p>{{EmbedLiveSample("with-ruby", "100%", 60)}}</p>
+<p>{{EmbedLiveSample("Avec_prise_en_charge_de_ruby", "100%", 60)}}</p>
 
 <p>Pour un navigateur qui ne prend pas en charge les annotations ruby, voici à quoi aurait ressemblé le résultat :</p>
 
-<div id="without-ruby">
-<div class="hidden">
-<pre class="brush: html">漢字 (kan ji)</pre>
+<h3 id="Sans_prise_en_charge_de_ruby">Sans prise en charge de ruby</h3>
 
-<pre class="brush: css">body {
+<pre class="brush: html hidden">漢字 (kan ji)</pre>
+
+<pre class="brush: css hidden">body {
   font-size: 22px;
 }
 </pre>
-</div>
-</div>
 
-<p>{{EmbedLiveSample("without-ruby", "100%", 60)}}</p>
+<p>{{EmbedLiveSample("Sans_prise_en_charge_de_ruby", "100%", 60)}}</p>
 
 <div class="note">
 <p><strong>Note :</strong> Voir l'article sur l'élément {{HTMLElement("ruby")}} pour de plus amples exemples.</p>

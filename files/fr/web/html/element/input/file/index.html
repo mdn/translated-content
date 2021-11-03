@@ -9,18 +9,16 @@ translation_of: Web/HTML/Element/input/file
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">Les éléments {{HTMLElement("input")}} dont l'attribut <code>type</code> vaut <strong><code>"file"</code></strong> permettent à un utilisateur de sélectionner un ou plusieurs fichiers depuis leur appareil et de les <em>uploader</em> vers un serveur via <a href="/fr/docs/Web/Guide/HTML/Formulaires">un formulaire</a> ou grâce à du code JavaScript <a href="/fr/docs/Using_files_from_web_applications">via l'API <em>File</em></a>.</span></p>
+<p>Les éléments {{HTMLElement("input")}} dont l'attribut <code>type</code> vaut <strong><code>"file"</code></strong> permettent à un utilisateur de sélectionner un ou plusieurs fichiers depuis leur appareil et de les <em>uploader</em> vers un serveur via <a href="/fr/docs/Web/Guide/HTML/Formulaires">un formulaire</a> ou grâce à du code JavaScript <a href="/fr/docs/Using_files_from_web_applications">via l'API <em>File</em></a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}</div>
-
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
 
 <h2 id="Valeur">Valeur</h2>
 
 <p>L'attribut {{htmlattrxref("value", "input")}} contient une chaîne de caractères ({{domxref("DOMString")}}) qui représente le chemin du/des fichier(s) sélectionné(s). Les autres fichiers peuvent être identifiés grâce à la propriété <code>HTMLInputElement.files</code>.</p>
 
-<div class="note"><strong>Note :</strong>
-
+<div class="note">
+  <p><strong>Note :</strong></p>
 <ol>
  <li>Si plusieurs fichiers sont sélectionnés, la chaîne de caractères représente le chemin du premier fichier sélectionné. Il est possible d'accéder aux autres fichiers en JavaScript <a href="/en-US/docs/Using_files_from_web_applications#Getting_information_about_selected_file(s)">grâce à la propriété <code>FileList</code></a>.</li>
  <li>Si aucun fichier n'est sélectionné, la chaîne de caractères sera vide (<code>""</code>).</li>
@@ -72,7 +70,9 @@ translation_of: Web/HTML/Element/input/file
 
 <p>Une chaîne de caractères qui indique la caméra à utiliser pour capturer des photos et des vidéos si l'attribut <code>accept</code> indique que le fichier est de ce type. Lorsque <code>capture</code> vaut <code>"user"</code>, cela indique que la caméra qui fait face à l'utilisateur devrait être utilisée. Si l'attribut vaut <code>"environment"</code>, c'est la caméra qui est tournée vers l'extérieur devrait être utilisée. Si l'attribut est absent, l'agent utilisateur pourra décider de laquelle utiliser. Si la caméra souhaitée par l'attribut n'est pas disponible, l'agent utilisateur pourra utiliser une autre caméra de l'appareil.</p>
 
-<div class="note"><strong>Note :</strong> <code>capture</code> était auparavant un attribut booléen qui, lorsqu'il était présent, indiquait que les capteurs de l'appareil (caméra/micro) devaient être utilisés plutôt qu'un fichier.</div>
+<div class="note">
+  <p><strong>Note :</strong> <code>capture</code> était auparavant un attribut booléen qui, lorsqu'il était présent, indiquait que les capteurs de l'appareil (caméra/micro) devaient être utilisés plutôt qu'un fichier.</p>
+</div>
 
 <h3 id="htmlattrdeffiles">{{htmlattrdef("files")}}</h3>
 
@@ -139,18 +139,16 @@ translation_of: Web/HTML/Element/input/file
  &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
 }</pre>
-</div>
 
 <p>Ce fragment de code HTML produira le résultat suivant :</p>
 
 <p>{{EmbedLiveSample('Un_exemple_simple', 650, 60)}}</p>
 
 <div class="note">
-<p><strong>Note</strong> : Vous pouvez également trouver cet exemple sur GitHub — <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html">avec le code source</a> et <a href="https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html">la démonstration</a>.</p>
+<p><strong>Note :</strong> Vous pouvez également trouver cet exemple sur GitHub — <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html">avec le code source</a> et <a href="https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html">la démonstration</a>.</p>
 </div>
 
 <p>Quel que soit l'appareil ou le système d'exploitation de l'utilisateur, l'élément <code>&lt;input type="file"&gt;</code> fournit un bouton qui ouvre un sélecteur de fichier permettant de choisir un fichier.</p>
@@ -204,23 +202,19 @@ translation_of: Web/HTML/Element/input/file
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
 }</pre>
-</div>
 
 <p>Voici le résultat produit :</p>
 
 <p>{{EmbedLiveSample('Restreindre_les_types_de_fichiers_acceptés', 650, 60)}}</p>
 
 <div class="note">
-<p><strong>Note</strong> : Vous pouvez également consulter cet exemple sur GitHub — <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html">voir le code source</a> et <a href="https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html">la démonstration <em>live</em></a>.</p>
+<p><strong>Note :</strong> Vous pouvez également consulter cet exemple sur GitHub — <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html">voir le code source</a> et <a href="https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html">la démonstration <em>live</em></a>.</p>
 </div>
 
 <p>Le résultat peut sembler similaire à l'exemple précédent mais lorsque vous essayer de sélectionner un fichier, vous verrez que le sélecteur ne permet de sélectionner que les fichiers du/des type(s) indiqué(s) (il peut y avoir certaines différences selons les navigateurs et les systèmes d'exploitation).</p>
-
-<p><img alt="Screenshot of a macOS file picker dialog. Files other than JPEG are grayed-out and unselectable." src="https://mdn.mozillademos.org/files/15183/file-chooser.png" style="margin: 0 auto;"></p>
 
 <p>L'attribut <code>accept</code> ne permet pas de valider/contrôler le type réel du/des fichier(s) sélectionné(s). Il fournit simplement une indication au navigateur pour aider l'utilisateur à sélectionner les bons fichiers. Toutefois, dans la plupart des cas, l'utilisateur peut toujours choisir une option dans le sélecteur afin de pouvoir choisir un fichier d'un autre type.</p>
 
@@ -245,7 +239,7 @@ input.value = "toto";
 <p>Dans l'exemple qui suit, on présente sélecteur de fichiers plus avancé, qui tire parti des informations disponibles grâce à la propriété <code>HTMLInputElement.files</code>. On montre aussi quelques astuces.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Le code source complet de cet exemple est disponible sur GitHub — <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html">file-example.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html">voir la démonstration <em>live</em> associée</a>). Nous n'expliquerons pas ici la feuille de style CSS mais plutôt le code JavaScript qui contient la logique.</p>
+<p><strong>Note :</strong> Le code source complet de cet exemple est disponible sur GitHub — <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html">file-example.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html">voir la démonstration <em>live</em> associée</a>). Nous n'expliquerons pas ici la feuille de style CSS mais plutôt le code JavaScript qui contient la logique.</p>
 </div>
 
 <p>Tout d'abord, voici le fragment de code HTML utilisé :</p>
@@ -263,8 +257,7 @@ input.value = "toto";
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -317,7 +310,6 @@ form label:active, form button:active {
   background-color: #0D3F8F;
   color: white;
 }</pre>
-</div>
 
 <p>Pour l'instant, le fragment HTML ressemble à ce que nous avons déjà vu avant, rien de spécial.</p>
 
@@ -331,7 +323,7 @@ var preview = document.querySelector('.preview');
 input.style.opacity = 0;</pre>
 
 <div class="note">
-<p><strong>Note : </strong>La propriété <a href="/fr/docs/Web/CSS/opacity"><code>opacity</code></a> est utilisée pour masquer l'élément <code>&lt;input&gt;</code> plutôt que <a href="/fr/docs/Web/CSS/visibility"><code>visibility: hidden</code></a> ou <a href="/fr/docs/Web/CSS/display"><code>display: none</code></a>. En effet, avec ces derniers les technologies d'assistance (lecteurs d'écran par exemple) comprendraient que l'élément n'est pas interactif et ne peut pas être utilisé.</p>
+<p><strong>Note :</strong> La propriété <a href="/fr/docs/Web/CSS/opacity"><code>opacity</code></a> est utilisée pour masquer l'élément <code>&lt;input&gt;</code> plutôt que <a href="/fr/docs/Web/CSS/visibility"><code>visibility: hidden</code></a> ou <a href="/fr/docs/Web/CSS/display"><code>display: none</code></a>. En effet, avec ces derniers les technologies d'assistance (lecteurs d'écran par exemple) comprendraient que l'élément n'est pas interactif et ne peut pas être utilisé.</p>
 </div>
 
 <p>Ensuite, on ajoute <a href="/fr/docs/Web/API/EventTarget/addEventListener">un gestionnaire d'évènement</a> à l'élément <code>&lt;input&gt;</code> afin de réaliser certaines actions lorsque sa valeur (c'est-à-dire les fichiers sélectionnés) change. Ici, le gestionnaire d'évènement appelle la fonction <code>updateImageDisplay()</code> que nous décrirons juste après.</p>

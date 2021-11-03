@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number
 
 <p>Объект <strong><code>Number</code></strong> является объектом-обёрткой, позволяющей вам работать с числовыми значениями. Объект <code>Number</code> создаётся через конструктор <code>Number()</code>.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre>new Number(<em>value</em>);
 var <em>a</em> = new Number('123'); // a === 123 is false
@@ -19,14 +19,14 @@ var <em>b</em> = Number('123'); // b === 123 is true
 <em>a</em> instanceof Number; // is true
 <em>b</em> instanceof Number; // is false</pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>value</code></dt>
  <dd>Числовое значение, которое примет объект после создания.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Несколько замечаний относительно использования объекта <code>Number</code>:</p>
 
@@ -35,7 +35,7 @@ var <em>b</em> = Number('123'); // b === 123 is true
  <li>В неконструкторном контексте (то есть, без оператора {{jsxref("Operators/new", "new")}}), объект <code>Number</code> может использоваться для проведения преобразования типов.</li>
 </ul>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <dl>
  <dt>{{jsxref("Number.EPSILON")}} {{experimental_inline}}</dt>
@@ -60,7 +60,7 @@ var <em>b</em> = Number('123'); // b === 123 is true
 
 <div>{{jsOverrides("Function", "properties", "MAX_VALUE", "MIN_VALUE", "NaN", "NEGATIVE_INFINITY", "POSITIVE_INFINITY", "protoype")}}</div>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
 <dl>
  <dt>{{jsxref("Number.isNaN()")}} {{experimental_inline}}</dt>
@@ -81,17 +81,17 @@ var <em>b</em> = Number('123'); // b === 123 is true
 
 <div>{{jsOverrides("Function", "methods", "isNaN")}}</div>
 
-<h2 id="Number_instances" name="Number_instances">Экземпляры объекта <code>Number</code></h2>
+<h2 id="Number_instances">Экземпляры объекта <code>Number</code></h2>
 
 <p>Все экземпляры объекта <code>Number</code> наследуются от {{jsxref("Number.prototype")}}. Объект прототипа конструктора <code>Number</code> может быть изменён, чтобы затронуть все экземпляры объекта <code>Number</code>.</p>
 
-<h3 id="Methods_of_Number_instance" name="Methods_of_Number_instance">Методы</h3>
+<h3 id="Methods_of_Number_instance">Методы</h3>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype', 'Methods')}}</div>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_the_Number_object_to_assign_values_to_numeric_variables" name="Example:_Using_the_Number_object_to_assign_values_to_numeric_variables">Пример: использование объекта <code>Number</code> для присваивания значений числовым переменным</h3>
+<h3 id="Example_Using_the_Number_object_to_assign_values_to_numeric_variables">Пример: использование объекта <code>Number</code> для присваивания значений числовым переменным</h3>
 
 <p>В следующем примере для присваивания значений числовым переменным используются свойства объекта <code>Number</code>:</p>
 
@@ -102,7 +102,7 @@ var negInfiniteNum = Number.NEGATIVE_INFINITY;
 var notANum = Number.NaN;
 </pre>
 
-<h3 id="Example_Using_Number_to_convert_a_Date_object" name="Example:_Using_Number_to_convert_a_Date_object">Пример: целочисленный диапазон для объекта <code>Number</code></h3>
+<h3 id="Example_Using_Number_to_convert_a_Date_object">Пример: целочисленный диапазон для объекта <code>Number</code></h3>
 
 <p>Следующий пример показывает, какие минимальное и максимальное целочисленные значения может представить объект <code>Number</code> (за подробностями обращайтесь к стандарту EcmaScript, главе <em>8.5 Тип Number</em>):</p>
 
@@ -112,7 +112,7 @@ var smallestInt = -9007199254740992;
 
 <p>При разборе данных, сериализованных в JSON, можно ожидать, что целые значения, выпадающие из этого диапазона будут повреждены, когда парсер JSON приведёт их к типу <code>Number</code>. Возможным обходным путём может быть использование объекта {{jsxref("Global_Objects/String", "String")}}.</p>
 
-<h3 id="Example_Using_Number_to_convert_a_Date_object" name="Example:_Using_Number_to_convert_a_Date_object">Пример: использование <code>Number</code> для преобразования объекта <code>Date</code></h3>
+<h3 id="Example_Using_Number_to_convert_a_Date_object">Пример: использование <code>Number</code> для преобразования объекта <code>Date</code></h3>
 
 <p>В следующем примере объект {{jsxref("Global_Objects/Date", "Date")}} преобразуется в числовое значение с использование объекта <code>Number</code> в качестве функции:</p>
 
@@ -122,7 +122,7 @@ console.log(Number(d));
 
 <p>Пример выведет "819199440000".</p>
 
-<h3 id="Example_Convert_numeric_strings_to_numbers" name="Example:_Convert_numeric_strings_to_numbers">Пример: преобразование строк с числами в числа</h3>
+<h3 id="Example_Convert_numeric_strings_to_numbers">Пример: преобразование строк с числами в числа</h3>
 
 <pre class="brush: js">Number('123')     // 123
 Number('')        // 0
@@ -133,43 +133,15 @@ Number('foo')     // NaN
 Number('100a')    // NaN
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7', 'Number')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number-objects', 'Number')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Добавлены новые методы и свойства: ({{jsxref("Number.EPSILON", "EPSILON")}}, {{jsxref("Number.isFinite", "isFinite")}}, {{jsxref("Number.isInteger", "isInteger")}}, {{jsxref("Number.isNaN", "isNaN")}}, {{jsxref("Number.parseFloat", "parseFloat")}} и {{jsxref("Number.parseInt", "parseInt")}})</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number-objects', 'Number')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.builtins.Number")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Global_Objects/NaN", "NaN")}}</li>

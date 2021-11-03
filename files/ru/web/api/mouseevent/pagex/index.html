@@ -7,11 +7,11 @@ translation_of: Web/API/MouseEvent/pageX
 
 <p><strong><code><font face="Open Sans, arial, x-locale-body, sans-serif">MouseEvent.</font>pageX</code></strong> - это свойство {{domxref("MouseEvent")}} доступное только для чтения. Данное свойство возвращает значение равное горизонтальной координате, относительно всего документа. Это свойство учитывает любую горизонтальную прокрутку страницы. Первоначально это свойство было определено как длинное целое число. Модуль просмотра CSSOM переопределил его как double float. Подробнее см. Раздел «Совместимость с браузером».</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">var <em>pos</em> = <em>event</em>.pageX</pre>
 
-<h2 id="Syntax" name="Syntax">Примеры</h2>
+<h2 id="Syntax">Примеры</h2>
 
 <pre><em>var pageX</em> = <em>event</em>.pageX;
 pageX === event.clientX + (window.pageYOffset || document.body.scrollTop);
@@ -19,29 +19,11 @@ pageX === event.clientX + (window.pageYOffset || document.body.scrollTop);
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-mouseevent-pagex', 'pageX')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Redefined from <code>long</code> to <code>double</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Touch Events', '#widl-Touch-pageX', 'pageX')}}</td>
-   <td>{{Spec2('TouchEvents')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.MouseEvent.pageX")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также"><strong>Смотрите также</strong></h2>
 

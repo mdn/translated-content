@@ -12,11 +12,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error
 
 <p>Конструктор <strong><code>Error</code></strong> создаёт объект ошибки. Экземпляры объекта <code>Error</code> выбрасываются при возникновении ошибок во время выполнения. Объект <code>Error</code> также может использоваться в качестве базового для пользовательских исключений. Смотрите ниже стандартные встроенные типы ошибок.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">new Error([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>message </code> <code>{{optional_inline()}}</code></dt>
@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error
  <dd>Значение свойства <code>lineNumber</code> созданного объекта <code>Error</code>. Значением по умолчанию является номер строки, содержащей вызов конструктора <code>Error()</code>.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Во время выполнения кода ошибки приводят к созданию и выбрасыванию новых объектов <code>Error</code>.</p>
 
@@ -46,7 +46,7 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
 
 <p> </p>
 
-<h3 id="Error_types" name="Error_types"><a id="Error_types" name="Error_types">Типы ошибок</a></h3>
+<h3 id="Error_types" name="Error_types"><a id="Error_types">Типы ошибок</a></h3>
 
 <p>Кроме общего конструктора <code>Error</code>, в JavaScript существует ещё семь других основных конструкторов ошибок. По обработке исключений смотрите раздел <a href="/ru/docs/Web/JavaScript/Guide/Statements#Exception_Handling_Statements">Выражения обработки исключений</a>.</p>
 
@@ -67,32 +67,32 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
  <dd>Создаёт экземпляр, представляющий ошибку, возникающую при передаче в функции {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} или {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} недопустимых параметров.</dd>
 </dl>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <dl>
  <dt>{{jsxref("Error.prototype")}}</dt>
  <dd>Позволяет добавлять свойства в экземпляры объекта <code>Error</code>.</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
 <p>Глобальный объект <code>Error</code> не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.</p>
 
-<h2 id="Error_instances" name="Error_instances">Экземпляры объекта <code>Error</code></h2>
+<h2 id="Error_instances">Экземпляры объекта <code>Error</code></h2>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Error/prototype', 'Description')}}</div>
 
-<h3 id="Properties_2" name="Properties_2">Свойства</h3>
+<h3 id="Properties_2">Свойства</h3>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Error/prototype', 'Properties')}}</div>
 
-<h3 id="Methods_2" name="Methods_2">Методы</h3>
+<h3 id="Methods_2">Методы</h3>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Error/prototype', 'Methods')}}</div>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Throwing_a_generic_error" name="Example:_Throwing_a_generic_error">Пример: выбрасывание обычной ошибки</h3>
+<h3 id="Example:_Throwing_a_generic_error">Пример: выбрасывание обычной ошибки</h3>
 
 <p>Обычно, вы создаёте объект <code>Error</code> с намерением возбудить ошибку с помощью ключевого слова {{jsxref("Statements/throw", "throw")}}. Вы можете обработать ошибку с помощью конструкции {{jsxref("Statements/try...catch", "try...catch")}}:</p>
 
@@ -103,7 +103,7 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
 }
 </pre>
 
-<h3 id="Example:_Handling_a_specific_error" name="Example:_Handling_a_specific_error">Пример: обработка ошибки конкретного типа</h3>
+<h3 id="Example:_Handling_a_specific_error">Пример: обработка ошибки конкретного типа</h3>
 
 <p><span class="comment">Возможно, это следует удалить</span> вы можете обрабатывать только какой-то определённый вид ошибок, проверяя тип ошибки в свойстве {{jsxref("Object.prototype.constructor", "constructor")}} или, если вы пишете для современных движков JavaScript, с помощью ключевого слова {{jsxref("Operators/instanceof", "instanceof")}}:</p>
 
@@ -119,7 +119,7 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
 }
 </pre>
 
-<h3 id="Example:_Custom_Error_Types" name="Example:_Custom_Error_Types">Пример: пользовательские типы ошибок</h3>
+<h3 id="Example:_Custom_Error_Types">Пример: пользовательские типы ошибок</h3>
 
 <p>Вы можете захотеть определить свои собственные типы ошибок, унаследованные от <code>Error</code>, что бы иметь возможность писать <code>throw new MyError()</code> и использовать <code>instanceof MyError</code> для проверки вида ошибки в обработчике исключений. Ниже продемонстрирован общий подход к выполнению этой задачи.</p>
 
@@ -153,49 +153,21 @@ try {
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.11', 'Error')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-error-objects', 'Error')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-error-objects', 'Error')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p> </p>
 
-<p>{{Compat("javascript.builtins.Error")}}</p>
+<p>{{Compat}}</p>
 
 <p> </p>
 
 <div> </div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Error.prototype")}}</li>

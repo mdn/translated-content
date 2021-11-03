@@ -50,7 +50,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 <p>Форма описывается на языке HTML как набор элементов, расположенных внутри парных тэгов <code>&lt;form&gt;...&lt;/form&gt;</code>. Любая форма содержит как минимум одно поле-тэг <code>input</code> типа <code>type="submit"</code>.</p>
 
-<pre class="brush: html notranslate">&lt;form action="/team_name_url/" method="post"&gt;
+<pre class="brush: html">&lt;form action="/team_name_url/" method="post"&gt;
     &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
     &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
     &lt;input type="submit" value="OK"&gt;
@@ -74,7 +74,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 <p>Как вы видите, создание HTML-формы, валидация и возврат данных, переотрисовка введённых значений, при необходимости, а также выполнение желаемых действий с "правильными данными", в целом, может потребовать довольно больших усилий для того, чтобы все "заработало". Django делает этот процесс намного проще, беря на себя некоторые "тяжёлые" и повторяющиеся участки кода!</p>
 
-<h2 id="Процесс_управления_формой_в_Django_2"><a id="Процесс_управления_формой_в_Django" name="Процесс_управления_формой_в_Django">Процесс управления формой в Django</a></h2>
+<h2 id="Процесс_управления_формой_в_Django_2"><a id="Процесс_управления_формой_в_Django">Процесс управления формой в Django</a></h2>
 
 <p>Управление формами в Django использует те же самые техники, которые мы изучали в предыдущих частях руководства (при показе информации из наших моделей): отображение получает запрос, выполняет необходимые действия, включающие в себя чтение данных из моделей, генерацию и возврат страницы HTML (из шаблона, в который передаётся <em>контекст,</em> содержащий данные, которые и будут показаны). Что делает данный процесс более сложным, так это то, что серверной части надо дополнительно обработать данные, предоставленные пользователем и, в случае возникновения ошибок, снова перерисовать страницу.</p>
 
@@ -129,7 +129,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 <p>Для того, чтобы создать класс с возможностями базового класса <code>Form</code> мы должны импортировать библиотеку <code>forms</code>, наследовать наш класс от класса <code>Form</code>, а затем объявить поля формы. Таким образом, самый простой класс формы в нашем случае будет иметь вид, показанный ниже:</p>
 
-<pre class="brush: python notranslate">from django import forms
+<pre class="brush: python">from django import forms
 
 class RenewBookForm(forms.Form):
     renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
@@ -160,7 +160,7 @@ class RenewBookForm(forms.Form):
 
 <p>Django предоставляет несколько мест где вы можете осуществить валидацию ваших данных. Простейшим способом проверки значения одиночного поля является переопределение метода<code>clean_<strong>&lt;fieldname&gt;</strong>()</code> (здесь, <code><strong>&lt;fieldname&gt;</strong></code> это имя поля, которое вы хотите проверить). Например, мы хотим проверить, что введённое значение <code>renewal_date</code> находится между текущей датой и  4 неделями в будущем. Для этого мы создаём метод <code>clean_<strong>renewal_date</strong>()</code>, как показано ниже:</p>
 
-<pre class="brush: python notranslate">from django import forms
+<pre class="brush: python">from django import forms
 
 <strong>from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
@@ -201,7 +201,7 @@ class RenewBookForm(forms.Form):
 
 <p>Перед созданием отображения давайте добавим соответствующую конфигурацию URL-адреса для страницы обновления книг. Скопируйте следующий фрагмент в нижнюю часть файла<strong> locallibrary/catalog/urls.py</strong>.</p>
 
-<pre class="brush: python notranslate">urlpatterns += [
+<pre class="brush: python">urlpatterns += [
     url(r'^book/(?P&lt;pk&gt;[-\w]+)/renew/$', views.renew_book_librarian, name='renew-book-librarian'),
 ]</pre>
 
@@ -219,7 +219,7 @@ class RenewBookForm(forms.Form):
 
 <p>Процесс обновления книги приводит к изменению информации в базе данных, таким образом, в соответствии с нашими соглашениями, в таком случае мы должны применять запрос типа <code>POST</code>. Фрагмент кода, представленный ниже, показывает (наиболее общую) схему работы для таких запросов. </p>
 
-<pre class="brush: python notranslate">from django.shortcuts import get_object_or_404
+<pre class="brush: python">from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 import datetime
@@ -263,7 +263,7 @@ def renew_book_librarian(request, pk):
 
 <p>В отображении аргумент <code>pk</code> мы используем в функции<code>get_object_or_404()</code> для получения текущего объекта типа <code>BookInstance</code> (если его не существует, то функция, а следом и наше отображение прервут своё выполнение, а на странице пользователя отобразится сообщение об ошибке: "объект не найден"). Если запрос вызова отображения <em>не является</em> <code>POST</code>-запросом, то мы переходим к условному блоку <code>else</code>, в котором мы создаём форму по умолчанию и передаём ей начальное значения<code>initial</code> для поля <code>renewal_date</code> (выделено жирным ниже, - 3 недели, начиная с текущей даты). </p>
 
-<pre class="brush: python notranslate">    book_inst = get_object_or_404(BookInstance, pk=pk)
+<pre class="brush: python">    book_inst = get_object_or_404(BookInstance, pk=pk)
 
     # Если это GET (или другой метод), тогда создаём форму по умолчанию
     <strong>else:</strong>
@@ -276,7 +276,7 @@ def renew_book_librarian(request, pk):
 
 <p>Если все таки у нас <code>POST</code>-запрос, тогда мы создаём объект с  именем <code>form</code> и заполняем его данными, полученными из запроса. Данный процесс называется связыванием (или, биндингом, от англ. "binding") и позволяет нам провести валидацию данных. Далее осуществляется валидация формы, при этом проверяются все поля формы — для этого используются как код обобщённого класса, так и пользовательских функций, в частности нашей функции проверки введённых дат <code>clean_renewal_date()</code>. </p>
 
-<pre class="brush: python notranslate">    book_inst = get_object_or_404(BookInstance, pk=pk)
+<pre class="brush: python">    book_inst = get_object_or_404(BookInstance, pk=pk)
 
     # Если данный запрос типа POST, тогда
     if request.method == 'POST':
@@ -309,7 +309,7 @@ def renew_book_librarian(request, pk):
 
 <p>Окончательный вид отображения показан ниже. Пожалуйста, скопируйте данный текст в нижнюю часть файла <strong>locallibrary/catalog/views.py</strong>.</p>
 
-<pre class="notranslate"><strong>from django.contrib.auth.decorators import permission_required</strong>
+<pre><strong>from django.contrib.auth.decorators import permission_required</strong>
 
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
@@ -352,7 +352,7 @@ def renew_book_librarian(request, pk):
 
 <p>Создайте шаблон, на который ссылается наше отображение (<strong>/catalog/templates/catalog/book_renew_librarian.html</strong>) и скопируйте в него код, указанный ниже:</p>
 
-<pre class="brush: html notranslate">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 {% block content %}
 
     &lt;h1&gt;Renew: \{{bookinst.book.title}}&lt;/h1&gt;
@@ -379,7 +379,7 @@ def renew_book_librarian(request, pk):
 
 <p>Все что осталось, это указать переменную <code>\{{form}}</code>, которую мы передали в шаблон в словаре контекста. Возможно это вас не удивит, но таким образом мы предоставим возможность форме отрендерить свои поля с их метками, виджетами и дополнительными текстами, и в результате мы получим следующее:</p>
 
-<pre class="brush: html notranslate">&lt;tr&gt;
+<pre class="brush: html">&lt;tr&gt;
   &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
   &lt;td&gt;
     &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required /&gt;
@@ -395,7 +395,7 @@ def renew_book_librarian(request, pk):
 
 <p>Если вы ввели неправильную дату, то на странице вы должны получить список сообщений об ошибках (показано жирным ниже).</p>
 
-<pre class="brush: html notranslate">&lt;tr&gt;
+<pre class="brush: html">&lt;tr&gt;
   &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
    &lt;td&gt;
 <strong>      &lt;ul class="errorlist"&gt;
@@ -427,7 +427,7 @@ def renew_book_librarian(request, pk):
 
 <p>Если вы выполнили задание в <a href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself">Django руководство часть 8: Аутентификация и разрешение доступа</a>, то у вас должна быть страница со списком всех книг в наличии библиотеки и данный список (страница) должен быть доступен только её сотрудникам. На данной странице в каждом пункте (для каждой книги) мы можем добавить ссылку на нашу новую страницу обновления книги.</p>
 
-<pre class="brush: html notranslate">{% if perms.catalog.can_mark_returned %}- &lt;a href="{% url 'renew-book-librarian' bookinst.id %}"&gt;Renew&lt;/a&gt;  {% endif %}</pre>
+<pre class="brush: html">{% if perms.catalog.can_mark_returned %}- &lt;a href="{% url 'renew-book-librarian' bookinst.id %}"&gt;Renew&lt;/a&gt;  {% endif %}</pre>
 
 <div class="note">
 <p><strong>Примечание</strong>: Помните что, для того чтобы перейти на страницу обновления книги, ваш тестовый логин должен иметь разрешение доступа типа "<code>catalog.can_mark_returned</code>"(возможно надо воспользоваться вашим аккаунтом для суперпользователя).</p>
@@ -457,7 +457,7 @@ def renew_book_librarian(request, pk):
 
 <p>Базовая реализация <code>ModelForm</code> содержит тоже поле как и ваш предыдущий класс формы  <code>RenewBookForm</code>, что и показано ниже. Все что вам необходимо сделать, - внутри вашего нового класса добавить класс <code>Meta</code> и связать его с моделью <code>model</code> (<code>BookInstance</code>), а затем перечислить поля модели в поле <code>fields</code> которые должны быть включены в форму (вы можете включить все поля при помощи <code>fields = '__all__'</code>, или можно воспользоваться полем <code>exclude</code> (вместо <code>fields</code>), чтобы определить поля модели, которые <em>не</em> нужно включать).</p>
 
-<pre class="brush: python notranslate">from django.forms import ModelForm
+<pre class="brush: python">from django.forms import ModelForm
 from .models import BookInstance
 
 class RenewBookModelForm(ModelForm):
@@ -472,7 +472,7 @@ class RenewBookModelForm(ModelForm):
 
 <p>Оставшаяся часть информации касается объявления полей модели (то есть, текстовых меток, виджетов, текстов, сообщений об ошибках). Если они недостаточно "правильные", то тогда мы можем переопределить их в нашем классе <code>Meta</code> при помощи словаря, содержащего поле, которое надо изменить и его новое значение. Например, в нашей форме мы могли бы поменять текст метки для поля "<em>Renewal date</em>" (вместо того, чтобы оставить текст по умолчанию: <em>Due date</em>), а кроме того мы хотим написать другой вспомогательный текст. Класс <code>Meta</code>, представленный ниже, показывает вам, как переопределить данные поля. Кроме того, при необходимости, вы можете установить значения для виджетов <code>widgets</code> и сообщений об ошибках <code>error_messages</code>.</p>
 
-<pre class="brush: python notranslate">class Meta:
+<pre class="brush: python">class Meta:
     model = BookInstance
     fields = ['due_back',]
 <strong>    labels = { 'due_back': _('Renewal date'), }
@@ -481,7 +481,7 @@ class RenewBookModelForm(ModelForm):
 
 <p>Чтобы добавить валидацию, вы можете использовать тот же способ как и для класса <code>Form</code> — вы определяете функцию с именем  <code>clean_<em>field_name</em>()</code> из которой выбрасываете исключение <code>ValidationError</code>, если это необходимо. Единственным отличием от нашей оригинальной формы будет являться то, что поле модели имеет имя <code>due_back</code>, а не "<code>renewal_date</code>".</p>
 
-<pre class="brush: python notranslate">from django.forms import ModelForm
+<pre class="brush: python">from django.forms import ModelForm
 from .models import BookInstance
 
 class RenewBookModelForm(ModelForm):
@@ -522,7 +522,7 @@ class RenewBookModelForm(ModelForm):
 
 <p>Откройте файл отображений (<strong>locallibrary/catalog/views.py</strong>) и добавьте следующий код в его нижнюю часть:</p>
 
-<pre class="brush: python notranslate">from django.views.generic.edit import CreateView, UpdateView, DeleteView
+<pre class="brush: python">from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Author
 
@@ -551,7 +551,7 @@ class AuthorDelete(DeleteView):
 
 <p>Создайте файл шаблона <strong>locallibrary/catalog/templates/catalog/author_form.html</strong>  и скопируйте в него следующий текст.</p>
 
-<pre class="brush: html notranslate">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 
 {% block content %}
 
@@ -569,7 +569,7 @@ class AuthorDelete(DeleteView):
 
 <p>Отображения "удалить" ожидает "найти" шаблон с именем формата <em>model_name</em><strong>_confirm_delete.html</strong> (и снова, вы можете изменить суффикс при помощи поля отображения<code>template_name_suffix</code>). Создайте файл шаблона <strong>locallibrary/catalog/templates/catalog/author_confirm_delete</strong><strong>.html</strong> и скопируйте в него текст, указанный ниже.</p>
 
-<pre class="brush: html notranslate">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 
 {% block content %}
 
@@ -589,7 +589,7 @@ class AuthorDelete(DeleteView):
 
 <p>Откройте файл конфигураций URL-адресов (<strong>locallibrary/catalog/urls.py</strong>) и добавьте в его нижнюю часть следующие настройки:</p>
 
-<pre class="brush: python notranslate">urlpatterns += [
+<pre class="brush: python">urlpatterns += [
     url(r'^author/create/$', views.AuthorCreate.as_view(), name='author_create'),
     url(r'^author/(?P&lt;pk&gt;\d+)/update/$', views.AuthorUpdate.as_view(), name='author_update'),
     url(r'^author/(?P&lt;pk&gt;\d+)/delete/$', views.AuthorDelete.as_view(), name='author_delete'),

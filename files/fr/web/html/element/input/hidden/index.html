@@ -12,17 +12,17 @@ translation_of: Web/HTML/Element/input/hidden
 <p>Les éléments {{HTMLElement("input")}} de type <code><strong>"hidden"</strong></code> permettent aux développeurs web d'inclure des données qui ne peuvent pas être vues ou modifiées lorsque le formulaire est envoyé. Cela permet par exemple d'envoyer l'identifiant d'une commande ou un jeton de sécurité unique. Les champs de ce type sont invisibles sur la page.</p>
 
 <div class="note">
-<p><strong>Note </strong>: La ligne de code suivante est suivie du rendu associé... si l'exemple fonctionne correctement, vous ne devriez rien voir :)</p>
+<p><strong>Note :</strong> La ligne de code suivante est suivie du rendu associé... si l'exemple fonctionne correctement, vous ne devriez rien voir :)</p>
 </div>
 
-<div id="Basic_example">
+<h2>Exemple simple</h2>
+
 <pre class="brush: html">&lt;input id="prodId" name="prodId" type="hidden" value="xm234jq"&gt;</pre>
 
-<p>{{EmbedLiveSample('Basic_example', 600, 40)}}</p>
+<p>{{EmbedLiveSample('Exemple_simple', 600, 40)}}</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note :</strong> Attention, les évènements DOM <code><a href="/fr/docs/Web/API/HTMLElement/input_event">input</a></code> et <code><a href="/fr/docs/Web/API/HTMLElement/change_event">change</a></code> ne s'appliquent pas à ce type de contrôle. Les champs masqués ne peuvent pas recevoir le focus, y compris en JavaScript avec <code>hiddenInput.focus()</code>).</p>
-</div>
 </div>
 
 <h2 id="Valeur">Valeur</h2>
@@ -30,7 +30,7 @@ translation_of: Web/HTML/Element/input/hidden
 <p>L'attribut {{htmlattrxref("value", "input")}} de l'élément contient une chaîne de caractères masquée qui est envoyée au serveur avec le formulaire. Cette valeur ne peut pas directement être éditée par l'utilisateur sur la page (mais elle est toujours accessible et modifiable via les outils de développement intégrés au navigateur).</p>
 
 <div class="warning">
-<p><strong>Attention !</strong> Bien que la valeur ne soit pas affichée sur la page, elle est visible et modifiable par l'utilisateur si ce dernier utilise les outils de développements intégrés aux navigateurs (par exemple "Afficher la source"). Le type <code>hidden</code> ne doit donc pas être utilisé comme mécanisme de sécurité.</p>
+<p><strong>Attention :</strong> Bien que la valeur ne soit pas affichée sur la page, elle est visible et modifiable par l'utilisateur si ce dernier utilise les outils de développements intégrés aux navigateurs (par exemple "Afficher la source"). Le type <code>hidden</code> ne doit donc pas être utilisé comme mécanisme de sécurité.</p>
 </div>
 
 <h2 id="Attributs_supplémentaires">Attributs supplémentaires</h2>
@@ -157,7 +157,7 @@ textarea {
 <p>{{EmbedLiveSample('Exemples', '100%', 200)}}</p>
 
 <div class="note">
-<p><strong>Note </strong>: Vous pouvez consulter l'exemple sur GitHub (cf. <a href="https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html">le code source</a> et <a href="https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html">la démonstration <em>live</em></a>).</p>
+<p><strong>Note :</strong> Vous pouvez consulter l'exemple sur GitHub (cf. <a href="https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html">le code source</a> et <a href="https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html">la démonstration <em>live</em></a>).</p>
 </div>
 
 <p>Lorsque le formulaire est envoyé, les données envoyées au serveur ressembleront à :</p>

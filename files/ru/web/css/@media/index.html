@@ -13,7 +13,7 @@ translation_of: Web/CSS/@media
 <p>В JavaScript, at-правило <code>@media</code> может быть получено с помощью {{domxref("CSSMediaRule")}}, интерфейса объектной модели CSS.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <p>At-правило <code>@media</code> можно разместить не только на верхнем уровне CSS, но и внутри любого фрагмента <a href="/ru/docs/Web/CSS/At-rule#Conditional_group_rules">условной группы-правил</a>.</p>
 
@@ -41,7 +41,7 @@ translation_of: Web/CSS/@media
 
 <p>A <code>&lt;media-query&gt;</code> is composed of a optional media type and/or a number of media features.</p>
 
-<h2 id="Media_types" name="Media_types">Типы</h2>
+<h2 id="Media_types">Типы</h2>
 
 <dl>
  <dt>all</dt>
@@ -56,7 +56,7 @@ translation_of: Web/CSS/@media
 
 <div class="note"><strong>Примечание:</strong> CSS2.1 и Media Queries 3 определили несколько дополнительных значений (<code>tty</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code>, <code>aural</code>), но они устарели в <a href="http://dev.w3.org/csswg/mediaqueries/#media-types">Media Queries 4</a> и не рекомендуется к использованию.</div>
 
-<h2 id="Media_features" name="Media_features">Media Features</h2>
+<h2 id="Media_features">Media Features</h2>
 
 <p>Each <em>media feature</em> tests for one specific feature of the browser or device.</p>
 
@@ -217,7 +217,7 @@ translation_of: Web/CSS/@media
  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <pre class="brush: css">@media print {
   body { font-size: 10pt }
@@ -238,49 +238,11 @@ translation_of: Web/CSS/@media
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Compat', '#css-media-queries', 'CSS Media Queries')}}</td>
-   <td>{{Spec2('Compat')}}</td>
-   <td>Стандартизация <code>-webkit-device-pixel-ratio</code> и <code>-webkit-transform-3d</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Conditional', '#at-media', '@media')}}</td>
-   <td>{{Spec2('CSS3 Conditional')}}</td>
-   <td>Определяет базовый синтаксис правила <code>@media</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#media', '@media')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td>
-    <p>Добавлены <code>scripting</code>, <code>pointer</code>, <code>hover</code>, <code>light-level</code>, <code>update-frequency</code>, <code>overflow-block</code> и <code>overflow-inline</code>.<br>
-     Исключены все media типы за исключением <code>screen</code>, <code>print</code>, <code>speech</code>, и <code>all</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries', '#media0', '@media')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td>Нет изменений.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'media.html#at-media-rule', '@media')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Первоначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("css.at-rules.media")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

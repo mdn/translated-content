@@ -3540,6 +3540,12 @@
       "limkukhyun"
     ]
   },
+  "Web/API/Blob/size": {
+    "modified": "2019-03-18T20:48:30.715Z",
+    "contributors": [
+      "DeadIntegral"
+    ]
+  },
   "Web/API/BroadcastChannel": {
     "modified": "2020-10-15T22:17:58.054Z",
     "contributors": [
@@ -4878,12 +4884,6 @@
       "DeadIntegral"
     ]
   },
-  "Web/API/File/size": {
-    "modified": "2019-03-18T20:48:30.715Z",
-    "contributors": [
-      "DeadIntegral"
-    ]
-  },
   "Web/API/FileList": {
     "modified": "2019-03-18T21:44:05.861Z",
     "contributors": [
@@ -6085,13 +6085,6 @@
       "JinSeungHo"
     ]
   },
-  "Web/API/PositionOptions": {
-    "modified": "2020-10-15T22:02:42.878Z",
-    "contributors": [
-      "alattalatta",
-      "Saem"
-    ]
-  },
   "Web/API/Proximity_Events": {
     "modified": "2019-03-23T23:26:46.443Z",
     "contributors": [
@@ -6117,12 +6110,6 @@
     "modified": "2020-10-15T22:19:20.272Z",
     "contributors": [
       "younheeJang"
-    ]
-  },
-  "Web/API/RTCConfiguration": {
-    "modified": "2020-10-15T22:21:34.262Z",
-    "contributors": [
-      "chansbro"
     ]
   },
   "Web/API/RTCDataChannelEvent": {
@@ -7213,13 +7200,6 @@
       "alattalatta"
     ]
   },
-  "Web/API/Window/crypto": {
-    "modified": "2020-10-15T21:40:03.517Z",
-    "contributors": [
-      "alattalatta",
-      "hoony"
-    ]
-  },
   "Web/API/Window/customElements": {
     "modified": "2020-10-15T22:26:45.848Z",
     "contributors": [
@@ -7628,6 +7608,13 @@
     "contributors": [
       "teoli",
       "Sebuls"
+    ]
+  },
+  "Web/API/crypto_property": {
+    "modified": "2020-10-15T21:40:03.517Z",
+    "contributors": [
+      "alattalatta",
+      "hoony"
     ]
   },
   "Web/API/notification": {
@@ -16255,13 +16242,6 @@
       "cs09g"
     ]
   },
-  "Web/Progressive_web_apps/Responsive/Media_types": {
-    "modified": "2019-03-23T23:33:02.082Z",
-    "contributors": [
-      "teoli",
-      "SpikeYou"
-    ]
-  },
   "Web/SVG": {
     "modified": "2019-11-05T05:19:15.768Z",
     "contributors": [
@@ -17544,6 +17524,19 @@
       "Sheppy"
     ]
   },
+  "conflicting/Web/API/Geolocation/getCurrentPosition": {
+    "modified": "2020-10-15T22:02:42.878Z",
+    "contributors": [
+      "alattalatta",
+      "Saem"
+    ]
+  },
+  "conflicting/Web/API/RTCPeerConnection/RTCPeerConnection": {
+    "modified": "2020-10-15T22:21:34.262Z",
+    "contributors": [
+      "chansbro"
+    ]
+  },
   "conflicting/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL": {
     "modified": "2019-03-23T22:54:05.275Z",
     "contributors": [
@@ -17578,6 +17571,13 @@
       "teoli",
       "Inyoung",
       "jaemin_jo"
+    ]
+  },
+  "conflicting/Web/CSS/Media_Queries/Using_media_queries": {
+    "modified": "2019-03-23T23:33:02.082Z",
+    "contributors": [
+      "teoli",
+      "SpikeYou"
     ]
   },
   "conflicting/Web/Guide": {

@@ -13,7 +13,7 @@ browser-compat: html.elements.colgroup
 ---
 <div>{{HTMLRef}}</div>
 
-<p class="summary">L'élément HTML <strong><code>&lt;colgroup&gt;</code></strong> définit un groupe de colonnes au sein d'un tableau.</p>
+<p>L'élément HTML <strong><code>&lt;colgroup&gt;</code></strong> définit un groupe de colonnes au sein d'un tableau.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/colgroup.html","tabbed-taller")}}</div>
 
@@ -56,9 +56,9 @@ browser-compat: html.elements.colgroup
 <p>Comme pour tous les éléments, on peut utiliser <a href="/fr/docs/Web/HTML/Global_attributes">les attributs universels</a> sur cet élément.</p>
 
 <dl>
-  <dt><strong id="attr-span"><code>span</code></strong></dt>
+  <dt><strong><code>span</code></strong></dt>
   <dd>Cet attribut contient un nombre entier positif indiquant le nombre de colonnes consécutives que l'élément <code>&lt;colgroup&gt;</code> couvre. S'il n'est pas présent, sa valeur par défaut est <code>1</code>.
-    <div class="notecard note">
+    <div class="note">
       <p><strong>Note:</strong></p>
       <p>Cet attribut est appliqué sur les attributs du groupe de colonnes, il n'a aucun effet sur les règles de style CSS qui lui sont associées ni, a fortiori, sur les cellules des membres du groupe de la colonne.</p>
       <ul>
@@ -73,7 +73,7 @@ browser-compat: html.elements.colgroup
 <p>Les attributs suivants sont dépréciés et ne doivent pas être utilisés. Ils sont documentés ci-dessous à titre de référence lors de la mise à jour du code existant et uniquement pour des raisons historiques.</p>
 
 <dl>
-  <dt><strong id="attr-align"><code>align</code></strong> {{deprecated_inline}}</dt>
+  <dt><strong><code>align</code></strong> {{deprecated_inline}}</dt>
   <dd>Cet attribut de type énumératif indique comment l'alignement horizontal du contenu des cellules de chaque colonne sera traité. Les valeurs possibles sont :
     <ul>
       <li><code>left</code>, aligner le contenu à gauche de la cellule</li>
@@ -85,8 +85,8 @@ browser-compat: html.elements.colgroup
 
     <p>Si cet attribut n'est pas défini, la valeur <code>left</code> est adoptée. Les éléments <a href="/fr/docs/Web/HTML/Element/col"><code>&lt;col&gt;</code></a> descendants peuvent remplacer cette valeur en utilisant leur propre attribut <a href="/fr/docs/Web/HTML/Element/col#attr-align"><code>align</code></a>.</p>
 
-    <div class="notecard note">
-      <p><b>Note :</b></p>
+    <div class="note">
+      <p><strong>Note :</strong></p>
       <ul>
         <li>N'essayez pas de définir la propriété <a href="/fr/docs/Web/CSS/text-align"><code>text-align</code></a> sur un sélecteur donnant un élément <a href="/fr/docs/Web/HTML/Element/colgroup"><code>&lt;colgroup&gt;</code></a>. Comme les éléments <a href="/fr/docs/Web/HTML/Element/td"><code>&lt;td&gt;</code></a> ne sont pas des descendants de l'élément <a href="/fr/docs/Web/HTML/Element/colgroup"><code>&lt;colgroup&gt;</code></a>, ils n'en hériteront pas.</li>
         <li>Si le tableau n'utilise pas d'attribut <a href="/fr/docs/Web/HTML/Element/td#attr-colspan">code>colspan</code></a>, utilisez un <code>td:nth-child(an+b)</code> sélecteur CSS par colonne, où a est le nombre total de colonnes du tableau et b est la position ordinale de cette colonne dans le tableau. Ce n'est qu'après ce sélecteur que la propriété <code>text-align</code> peut être utilisée.</li>
@@ -94,17 +94,17 @@ browser-compat: html.elements.colgroup
       </ul>
     </div>
   </dd>
-  <dt><strong id="attr-bgcolor"><code>bgcolor</code></strong> {{deprecated_inline}}</dt>
+  <dt><strong><code>bgcolor</code></strong> {{deprecated_inline}}</dt>
   <dd>
     <p>La couleur de fond du tableau. Il s'agit d'un <a href="/fr/docs/Web/CSS/color_value#rgb_colors">code RVB hexadécimal à 6 chiffres</a>, préfixé par un «&nbsp;<code>#</code>&nbsp;». L'un des <a href="/fr/docs/Web/CSS/color_value#color_keywords">mots-clés de couleur</a> prédéfinis peut également être utilisé.</p>
 
     <p>Pour obtenir un effet similaire, utilisez la propriété CSS <a href="/fr/docs/Web/CSS/background-color"><code>background-color</code></a>.</p>
   </dd>
-  <dt><strong id="attr-char"><code>char</code></strong> {{deprecated_inline}}</dt>
+  <dt><strong><code>char</code></strong> {{deprecated_inline}}</dt>
   <dd>Cet attribut spécifie l'alignement du contenu d'un groupe de colonnes sur un caractère. Les valeurs typiques de cet attribut comprennent un point (.) lorsqu'on tente d'aligner des chiffres ou des valeurs monétaires. Si <a href="#attr-align"><code>align</code></a> n'est pas défini sur <code>char</code>, cet attribut est ignoré, bien qu'il sera toujours utilisé comme valeur par défaut pour le <a href="/fr/docs/Web/HTML/Element/col#attr-align"><code>align</code></a> du <a href="/fr/docs/Web/HTML/Element/col"><code>&lt;col&gt;</code></a> qui sont membres de ce groupe de colonnes.</dd>
-  <dt><strong id="attr-charoff"><code>charoff</code></strong> {{deprecated_inline}}</dt>
+  <dt><strong><code>charoff</code></strong> {{deprecated_inline}}</dt>
   <dd>Cet attribut est utilisé pour indiquer le nombre de caractères pour décaler les données de la colonne par rapport au caractère d'alignement spécifié par l'attribut <code>char</code>.</dd>
-  <dt><strong id="attr-valign"><code>valign</code></strong> {{deprecated_inline}}</dt>
+  <dt><strong><code>valign</code></strong> {{deprecated_inline}}</dt>
   <dd>Cet attribut spécifie l'alignement vertical du texte dans chaque cellule de la colonne. Les valeurs possibles de cet attribut sont les suivantes :
     <ul>
       <li><code>baseline</code>, mettra le texte aussi près du bas de la cellule que possible, mais l'alignera sur la <a href="https://fr.wikipedia.org/wiki/Ligne_de_base_(typographie)">ligne de base</a> des caractères au lieu du bas de ceux-ci. Si les caractères sont tous de la même taille, cela a le même effet que <code>bottom</code> ;</li>
@@ -113,8 +113,8 @@ browser-compat: html.elements.colgroup
       <li>and <code>top</code>, placera le texte aussi près du haut de la cellule que possible.</li>
     </ul>
 
-    <div class="notecard note">
-      <p><b>Note :</b></p>
+    <div class="note">
+      <p><strong>Note :</strong></p>
       <ul>
         <li>N'essayez pas de définir la propriété <a href="/fr/docs/Web/CSS/vertical-align"><code>vertical-align</code></a> sur un sélecteur donnant un élément <code>&lt;col&gt;</code>. Comme les éléments <a href="/fr/docs/Web/HTML/Element/td"><code>&lt;td&gt;</code></a> ne sont pas des descendants de l'élément <code>&lt;col&gt;</code>, ils n'en hériteront pas.</li>
         <li>Si le tableau n'utilise pas d'attribut <a href="/fr/docs/Web/HTML/Element/td#attr-colspan"><code>colspan</code></a>, utilisez le sélecteur CSS <code>td:nth-child(an+b)</code> où a est le nombre total de colonnes du tableau et b la position ordinale de la colonne dans le tableau. Ce n'est qu'après ce sélecteur que la propriété <code>vertical-align</code> peut être utilisée.</li>

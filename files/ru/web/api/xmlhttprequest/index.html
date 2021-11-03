@@ -337,7 +337,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <h2 id="Конструктор">Конструктор</h2>
 
-<h3 id="XMLHttpRequest()" name="XMLHttpRequest()">XMLHttpRequest()</h3>
+<h3 id="XMLHttpRequest()">XMLHttpRequest()</h3>
 
 <p>Конструктор создаёт объект XMLHttpRequest. Он должен быть вызван перед обращением к любому методу класса.</p>
 
@@ -363,17 +363,17 @@ translation_of: Web/API/XMLHttpRequest
 
 <h2 id="Методы">Методы</h2>
 
-<h3 id="abort()" name="abort()">abort()</h3>
+<h3 id="abort()">abort()</h3>
 
 <p>Отменяет запрос, если он был отправлен.</p>
 
-<h3 id="getAllResponseHeaders()" name="getAllResponseHeaders()">getAllResponseHeaders()</h3>
+<h3 id="getAllResponseHeaders()">getAllResponseHeaders()</h3>
 
 <pre>DOMString getAllResponseHeaders();</pre>
 
 <p>Возвращает все заголовки ответа как строку, или <code>null</code> если ответ не был получен. Для multypart запросов возвращает заголовки текущей части запроса, а не всего канала.</p>
 
-<h3 id="getResponseHeader()" name="getResponseHeader()">getResponseHeader()</h3>
+<h3 id="getResponseHeader()">getResponseHeader()</h3>
 
 <pre>DOMString? getResponseHeader(DOMString <var>header</var>);</pre>
 
@@ -383,7 +383,7 @@ translation_of: Web/API/XMLHttpRequest
 <p><code><strong>Примечание: </strong>Если в ответе есть заголовки с одни названием, то значения этих заголовков будут объеденены в одну строку, разделённую запятой и пробелом.</code></p>
 </div>
 
-<h3 id="open()" name="open()">open()</h3>
+<h3 id="open()">open()</h3>
 
 <p>Инициализирует запрос. Этот метод может (и должен) быть вызван из JavaScript-кода; если необходимо вызвать запрос из нативного кода, то нужно использовать метод <a class="internal" href="/en/nsIXMLHttpRequest#openRequest()" title="/en/XMLHttpRequest#openRequest()"><code>openRequest()</code></a>.</p>
 
@@ -415,13 +415,13 @@ translation_of: Web/API/XMLHttpRequest
  <dd>Необязательный параметр, используется для аутентификации пользователя. По умолчанию пустая строка.</dd>
 </dl>
 
-<h3 id="overrideMimeType()" name="overrideMimeType()">overrideMimeType()</h3>
+<h3 id="overrideMimeType()">overrideMimeType()</h3>
 
 <p>Переопределяет MIME тип, получаемый от сервера. Это может быть использовано, например, для того чтобы получить и распарсить данные в формате text/xml, даже, если сервер сообщает что это не так. Этот метод должен быть вызван перед вызовом метода <code>send()</code>.</p>
 
 <pre>void overrideMimeType(DOMString <var>mimetype</var>);</pre>
 
-<h3 id="send()" name="send()">send()</h3>
+<h3 id="send()">send()</h3>
 
 <p>Отправляет запрос. Если запрос асинхронный (а по умолчанию это так), этот метод вернёт значение сразу после того как метод вызван.</p>
 
@@ -451,7 +451,7 @@ void send(FormData <var>data</var>);</pre>
 
 <p>The best way to send binary content (like in files upload) is using an <a href="/en-US/docs/JavaScript/Typed_arrays/ArrayBufferView" title="/en-US/docs/JavaScript/Typed_arrays/ArrayBufferView">ArrayBufferView</a> or <a href="/en-US/docs/DOM/Blob" title="/en-US/docs/DOM/Blob">Blobs</a> in conjuncton with the <code>send()</code> method. However, if you want to send a <a href="/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify" title="/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify">stringifiable</a> raw data, use the <a href="/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()" title="/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()"><code>sendAsBinary()</code></a> method instead, or the <a href="/en-US/docs/Web/JavaScript/Typed_arrays/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code></a> <span class="inlineIndicator" title="This API is not native.">Non native</span> typed arrays superclass.</p>
 
-<h3 id="setRequestHeader()" name="setRequestHeader()">setRequestHeader()</h3>
+<h3 id="setRequestHeader()">setRequestHeader()</h3>
 
 <p>Устанавливает значение заголовка HTTP-запроса. Вы должны вызвать <code>setRequestHeader()</code> после <a href="#open"><code>open()</code></a>, но перед <code>send()</code>. Если данный метод вызывается несколько раз с одним и тем же заголовком, все значения объединяются в один заголовок запроса.</p>
 
@@ -569,7 +569,7 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 
 <p>More recent browsers, including Firefox, also support listening to the <code>XMLHttpRequest</code> events via standard <code><a href="/en/DOM/element.addEventListener" title="element.addEventListener">addEventListener</a></code> APIs in addition to setting <code>on*</code> properties to a handler function.</p>
 
-<h2 id="Permissions" name="Permissions">Permissions</h2>
+<h2 id="Permissions">Permissions</h2>
 
 <p>When using System XHR via the <code>mozSystem</code> property, for example for Firefox OS apps, you need to be sure to add the <code>systemXHR</code> permission into your manifest file. System XHR can be used in privileged or certified apps.</p>
 
@@ -577,9 +577,9 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
     "systemXHR":{}
 }</pre>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_Compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.XMLHttpRequest")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

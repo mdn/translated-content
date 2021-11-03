@@ -10,14 +10,16 @@ translation_of: Web/SVG/Attribute/stroke-dashoffset
 
 <p>L'attribut <strong><code>stroke-dashoffset</code></strong> décale la position de départ des pointillés sur les lignes SVG.</p>
 
-<p class="note"><strong>Note:</strong> <code>stroke-dashoffset</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
+<div class="note">
+  <p><strong>Note :</strong> <code>stroke-dashoffset</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
+</div>
 
 <p>Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}</p>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Exemple</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+
 
 <pre class="brush: html">&lt;svg viewBox="-3 0 33 10" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Pas de tiret --&gt;
@@ -60,8 +62,7 @@ translation_of: Web/SVG/Attribute/stroke-dashoffset
 &lt;/svg&gt;
 </pre>
 
-<p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
-</div>
+<p>{{EmbedLiveSample('exemple', '100%', 200)}}</p>
 
 <h2 id="Notes_d'usage">Notes d'usage</h2>
 
@@ -69,7 +70,7 @@ translation_of: Web/SVG/Attribute/stroke-dashoffset
  <tbody>
   <tr>
    <th scope="row">Valeur</th>
-   <td><strong><a href="/en/SVG/Content_type#Percentage" title="en/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong> | <strong><a href="/en/SVG/Content_type#Length" title="en/SVG/Content_type#Length"><span>&lt;length&gt;</span></a></strong></td>
+   <td><strong><a href="/fr/SVG/Content_type#Percentage" title="en/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong> | <strong><a href="/fr/SVG/Content_type#Length" title="en/SVG/Content_type#Length">&lt;length&gt;</a></strong></td>
   </tr>
   <tr>
    <th scope="row">Valeur par défaut</th>
@@ -82,9 +83,9 @@ translation_of: Web/SVG/Attribute/stroke-dashoffset
  </tbody>
 </table>
 
-<p>Le décalage est généralement exprimé en unités résolues par {{SVGAttr('pathLength')}} mais si un <a href="/en/SVG/Content_type#Percentage" title="en/SVG/Content_type#Percentage">&lt;percentage&gt;</a> est utilisé, alors la valeur est résolue en pourcentage du viewport.</p>
+<p>Le décalage est généralement exprimé en unités résolues par {{SVGAttr('pathLength')}} mais si un <a href="/fr/SVG/Content_type#Percentage" title="en/SVG/Content_type#Percentage">&lt;percentage&gt;</a> est utilisé, alors la valeur est résolue en pourcentage du viewport.</p>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilité des navigateurs</h2>
+<h2 id="Browser_Compatibility">Compatibilité des navigateurs</h2>
 
 <p>{{Compat("svg.attributes.presentation.stroke-dashoffset")}}</p>
 

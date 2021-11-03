@@ -6050,12 +6050,6 @@
       "rbertoche"
     ]
   },
-  "Web/API/PositionOptions": {
-    "modified": "2019-03-23T22:47:40.708Z",
-    "contributors": [
-      "victorkurauchi"
-    ]
-  },
   "Web/API/ProcessingInstruction": {
     "modified": "2019-03-18T21:38:06.302Z",
     "contributors": [
@@ -6643,13 +6637,6 @@
       "fabreu"
     ]
   },
-  "Web/API/Window/crypto": {
-    "modified": "2019-03-23T22:12:19.817Z",
-    "contributors": [
-      "Hikashii",
-      "AlexandreBarros"
-    ]
-  },
   "Web/API/Window/document": {
     "modified": "2019-03-23T22:49:44.918Z",
     "contributors": [
@@ -6736,12 +6723,6 @@
       "saulodecarlo",
       "teoli",
       "perrucho"
-    ]
-  },
-  "Web/API/Window/performance": {
-    "modified": "2019-03-23T22:44:28.136Z",
-    "contributors": [
-      "augustoclaro"
     ]
   },
   "Web/API/Window/popstate_event": {
@@ -7002,10 +6983,23 @@
       "Willkuns"
     ]
   },
+  "Web/API/crypto_property": {
+    "modified": "2019-03-23T22:12:19.817Z",
+    "contributors": [
+      "Hikashii",
+      "AlexandreBarros"
+    ]
+  },
   "Web/API/fetch": {
     "modified": "2019-03-23T22:06:21.567Z",
     "contributors": [
       "dowgssss"
+    ]
+  },
+  "Web/API/performance_property": {
+    "modified": "2019-03-23T22:44:28.136Z",
+    "contributors": [
+      "augustoclaro"
     ]
   },
   "Web/API/setInterval": {
@@ -16396,6 +16390,12 @@
     "modified": "2019-03-23T23:35:40.503Z",
     "contributors": [
       "teoli"
+    ]
+  },
+  "conflicting/Web/API/Geolocation/getCurrentPosition": {
+    "modified": "2019-03-23T22:47:40.708Z",
+    "contributors": [
+      "victorkurauchi"
     ]
   },
   "conflicting/Web/API/GlobalEventHandlers/onscroll": {

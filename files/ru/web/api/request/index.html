@@ -94,7 +94,7 @@ translation_of: Web/API/Request
 
 <p>In the following snippet, we create a new request using the <code>Request()</code> constructor (for an image file in the same directory as the script), then return some property values of the request:</p>
 
-<pre class="brush: js notranslate">const request = new Request('https://www.mozilla.org/favicon.ico');
+<pre class="brush: js">const request = new Request('https://www.mozilla.org/favicon.ico');
 
 const URL = request.url;
 const method = request.method;
@@ -103,7 +103,7 @@ const credentials = request.credentials;
 
 <p>You could then fetch this request by passing the <code>Request</code> object in as a parameter to a {{domxref("WindowOrWorkerGlobalScope.fetch()")}} call, for example:</p>
 
-<pre class="brush: js notranslate">fetch(request)
+<pre class="brush: js">fetch(request)
   .then(response =&gt; response.blob())
   .then(blob =&gt; {
     image.src = URL.createObjectURL(blob);
@@ -111,7 +111,7 @@ const credentials = request.credentials;
 
 <p>In the following snippet, we create a new request using the <code>Request()</code> constructor with some initial data and body content for an api request which need a body payload:</p>
 
-<pre class="brush: js notranslate">const request = new Request('https://example.com', {method: 'POST', body: '{"foo": "bar"}'});
+<pre class="brush: js">const request = new Request('https://example.com', {method: 'POST', body: '{"foo": "bar"}'});
 
 const URL = request.url;
 const method = request.method;
@@ -127,7 +127,7 @@ const bodyUsed = request.bodyUsed;
 
 <p>Вы можете получить этот запрос API, передав объект Request в качестве параметра для вызова {{domxref("WindowOrWorkerGlobalScope.fetch()")}}, например, и получить ответ:</p>
 
-<pre class="brush: js notranslate">fetch(request)
+<pre class="brush: js">fetch(request)
   .then(response =&gt; {
     if (response.status === 200) {
       return response.json();
@@ -164,7 +164,7 @@ const bodyUsed = request.bodyUsed;
 
 
 
-<p>{{Compat("api.Request")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Читай_также">Читай также</h2>
 

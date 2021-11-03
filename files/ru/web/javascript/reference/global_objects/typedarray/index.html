@@ -38,7 +38,7 @@ Int8Array(), Uint8Array(), Uint8ClampedArray(), Int16Array(), Uint16Array(), Int
  <dd>Когда происходит вызов с параметрами <strong><code>buffer</code> </strong>и опциональными параметрами <strong><code>byteOffset </code></strong>и<code> </code><strong><code>length</code></strong>, то будет создан новый типизированный массив, который будет отражать <code>buffer </code>типа {{jsxref("ArrayBuffer")}}. Параметры <code>byteOffset</code> и <code>length</code> определяют диапазон (размер) памяти, выводимый данным массивоподобным представлением. Если оба этих параметра (<code>byteOffset</code> и <code>length</code>) опущены, то будет использован весь буфер <code>buffer</code>; если опущен только <code>length</code>, то будет выведен весь остаток буфера после смещения начала отсчёта элементов, заданного параметром <code>byteOffset</code>.</dd>
 </dl>
 
-<h2 id="Описание"><a id="Description" name="Description">Описание</a></h2>
+<h2 id="Описание"><a id="Description">Описание</a></h2>
 
 <p>ECMAScript 2015 определяет конструктор объекта <em>TypedArray, </em>который является прототипом всех <em>TypedArray</em>-конструкторов. Этот конструктор не открыт явным образом: какое-либо глобальное свойство <em><code>%TypedArray%</code></em> или <em><code>TypedArray</code> </em>отсутствует.  Он доступен только через <code>Object.getPrototypeOf(...) (</code>например<code>, Int8Array.prototype)</code>. Все <em>TypedArray</em>s конструкторы наследуют общие свойства от конструктора <code>%TypedArray%</code>. Кроме того, все прототипы типизированных массивов (<em>TypedArray<code>.</code></em><code>prototype</code>) имеют своим прототипом <em>%TypedArray%<code>.</code></em><code>prototype</code>.</p>
 
@@ -69,7 +69,7 @@ Int8Array.prototype[-1] = "foo";
 Int8Array.prototype.foo = "bar";
 (new Int8Array(32)).foo; // "bar"</pre>
 
-<h2 id="Объекты_TypedArray"><a id="TypedArray_objects" name="TypedArray_objects">Объекты TypedArray</a></h2>
+<h2 id="Объекты_TypedArray"><a id="TypedArray_objects">Объекты TypedArray</a></h2>
 
 <table class="standard-table">
  <tbody>
@@ -208,36 +208,13 @@ for (var k in typedArrayTypes)
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Примечание</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Typed Array')}}</td>
-   <td>{{Spec2('Typed Array')}}</td>
-   <td>Определяет работу <code>TypedArray</code> и <code>ArrayBufferView</code>. Заменён в ECMAScript 6.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-typedarray-objects', 'TypedArray Objects')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Первоначальное определение в стандарте ECMA. Определяет поведение индексных и именованных свойств. Указывает, что необходимо использовать оператор <code>new</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Спецификация ECMAScript 2017 изменила конструктор TypedArray, так что используется операция <code>ToIndex,</code> и позволены конструкторы без аргументов.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
 
 
 
-<p>{{Compat("javascript.builtins.TypedArray")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Совместимость">Совместимость</h2>
 

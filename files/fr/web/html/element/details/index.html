@@ -15,32 +15,26 @@ browser-compat: html.elements.details
 ---
 <div>{{HTMLRef}}</div>
 
-<p class="summary">L'élément HTML <strong><code>&lt;details&gt;</code></strong> est utilisé comme un outil permettant de révéler une information. Un résumé ou un intitulé peuvent être fournis grâce à un élément <a href="/fr/docs/Web/HTML/Element/summary"><code>&lt;summary&gt;</code></a>.</p>
+<p>L'élément HTML <strong><code>&lt;details&gt;</code></strong> est utilisé comme un outil permettant de révéler une information. Un résumé ou un intitulé peuvent être fournis grâce à un élément <a href="/fr/docs/Web/HTML/Element/summary"><code>&lt;summary&gt;</code></a>.</p>
 
 <p>La plupart du temps, le contrôle utilisé pour cet élément est un triangle qui est tourné ou tordu afin d'indiquer si l'élément est révélé ou non. Si le premier élément fils de l'élément <code>&lt;details&gt;</code> est un élément <code>&lt;summary&gt;</code>, c'est le contenu de ce dernier qui est utilisé comme intitulé pour le contenu à révéler (l'intitulé est donc toujours visible).</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-standard")}}</div>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>L'utilisation courante d'un triangle qui tourne ou s'enroule pour représenter l'ouverture ou la fermeture du widget explique pourquoi on les appelle parfois « twisties » en anglais.</p>
+<div class="note">
+  <p><strong>Note :</strong>L'utilisation courante d'un triangle qui tourne ou s'enroule pour représenter l'ouverture ou la fermeture du widget explique pourquoi on les appelle parfois « twisties » en anglais.</p>
 </div>
 
-<p>Un widget <code>&lt;details&gt;</code> peut être dans l'un des deux états suivants. L'état par défaut <em>fermé</em> affiche uniquement le triangle et l'étiquette à l'intérieur du <code>&lt;summary&gt;</code> (ou une chaîne par défaut définie par <a href="/fr/docs/Glossary/User_agent">l'agent utilisateur</a> si aucun <code>&lt;summary&gt;</code>). Cela peut ressembler à ce qui suit :</p>
+<p>Un widget <code>&lt;details&gt;</code> peut être dans l'un des deux états suivants. L'état par défaut <em>fermé</em> affiche uniquement le triangle et l'étiquette à l'intérieur du <code>&lt;summary&gt;</code> (ou une chaîne par défaut définie par <a href="/fr/docs/Glossary/User_agent">l'agent utilisateur</a> si aucun <code>&lt;summary&gt;</code>).</p>
 
-<figure style="margin: 1em 0; padding: 1em; border: 1px solid black; box-shadow: 0 0 4px 1px black; width: 640px;"><img alt="Capture d'écran du widget fermé &lt;details&gt;. Un triangle noir pointant vers la gauche se trouve à droite du texte « System Requirements »." src="details-closed.png"></figure>
-
-<p>Nous voyons ici un widget de divulgation standard avec l'étiquette "System Requirements", dans son état fermé par défaut. Lorsque l'utilisateur clique sur le widget ou le met au point, puis appuie sur la barre d'espacement, il s'ouvre par "torsion", révélant son contenu :</p>
-
-<figure style="margin: 1em 0; padding: 1em; border: 1px solid black; box-shadow: 0 0 4px 1px black; width: 640px;"><img alt="Capture d'écran du widget &lt;details&gt; ouvert. Le triangle pointe maintenant vers le bas, et une description détaillée de ce que signifie « System Requirements » est affichée." src="details-open.png"></figure>
+<p>Lorsque l'utilisateur clique sur le widget ou le met au point, puis appuie sur la barre d'espacement, il s'ouvre par "torsion", révélant son contenu :</p>
 
 <p>À partir de là, vous pouvez utiliser les feuilles de style en cascade pour donner un style au widget de divulgation, et vous pouvez ouvrir et fermer le widget de façon programmatique en définissant ou en supprimant son attribut <a href="/fr/docs/Web/HTML/Element/details#attr-open"><code>open</code></a>.</p>
 
 <p>Par défaut, lorsqu'il est fermé, le widget est seulement assez haut pour afficher le triangle de divulgation et le résumé. Lorsqu'il est ouvert, il s'étend pour afficher les détails qu'il contient.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Malheureusement, à l'heure actuelle, il n'existe aucun moyen intégré d'animer la transition entre l'ouverture et la fermeture.</p>
+<div class="note">
+  <p><strong>Note :</strong>Malheureusement, à l'heure actuelle, il n'existe aucun moyen intégré d'animer la transition entre l'ouverture et la fermeture.</p>
 </div>
 
 <p>Les implémentations entièrement conformes aux normes appliquent automatiquement le code CSS <code><a href="/fr/docs/Web/CSS/display">display</a>: list-item</code> à l'élément <a href="/fr/docs/Web/HTML/Element/summary"><code>&lt;summary&gt;</code></a>. Vous pouvez l'utiliser pour personnaliser davantage son apparence. Voir <a href="#customizing_the_disclosure_widget">personnaliser le marqueur de révélation</a> pour plus de détails.</p>
@@ -83,13 +77,12 @@ browser-compat: html.elements.details
 <p>Comme tous les éléments HTML, cet élément accepte les <a href="/fr/docs/Web/HTML/Global_attributes">attributs universels</a>.</p>
 
 <dl>
-  <dt><code id="attr-open">open</code></dt>
+  <dt><code>open</code></dt>
   <dd>
     <p>Cet attribut booléen indique si les détails — c'est-à-dire le contenu de l'élément <code>&lt;details&gt;</code> — sont actuellement visibles ou non. Les détails sont affichés lorsque cet attribut existe, ou cachés lorsque cet attribut est absent. Par défaut, cet attribut est absent, ce qui signifie que les détails ne sont pas visibles.</p>
 
     <div class="note">
-      <p><b>Note :</b></p>
-      <p>Vous devez supprimer entièrement cet attribut pour que les détails soient cachés. Attention, <code>open="false"</code> rend les détails visibles, car cet attribut est booléen.</p>
+      <p><strong>Note :</strong>Vous devez supprimer entièrement cet attribut pour que les détails soient cachés. Attention, <code>open="false"</code> rend les détails visibles, car cet attribut est booléen.</p>
     </div>
   </dd>
 </dl>
@@ -201,7 +194,7 @@ details[open] > summary {
 
 <h4 id="css_2">CSS</h4>
 
-<pre class="brush: css; highlight:[12, 15-17]">details {
+<pre class="brush: css">details {
   font: 16px "Open Sans", "Arial", sans-serif;
   width: 620px;
 }

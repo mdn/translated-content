@@ -11,11 +11,9 @@ translation_of: Web/HTML/Element/input/tel
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">Les éléments {{HTMLElement("input")}} dont l'attribut <code>type</code> vaut <code><strong>"tel"</strong></code> permettent à un utilisateur de saisir un numéro de téléphone. Contrairement aux contrôles utilisés pour <code><a href="/fr/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code> et <code><a href="/fr/docs/Web/HTML/Element/input/url">&lt;input type="url"&gt;</a></code> , la valeur saisie n'est pas automatiquement validée selon un format donné car les formats des numéros de téléphone varient à travers le monde.</span></p>
+<p>Les éléments {{HTMLElement("input")}} dont l'attribut <code>type</code> vaut <code><strong>"tel"</strong></code> permettent à un utilisateur de saisir un numéro de téléphone. Contrairement aux contrôles utilisés pour <code><a href="/fr/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code> et <code><a href="/fr/docs/Web/HTML/Element/input/url">&lt;input type="url"&gt;</a></code> , la valeur saisie n'est pas automatiquement validée selon un format donné car les formats des numéros de téléphone varient à travers le monde.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-tel.html", "tabbed-standard")}}</div>
-
-<div class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</div>
 
 <div class="note">
 <p><strong>Note :</strong> Les navigateurs qui ne prennent pas en charge le type <code>"tel"</code> utiliseront à la place un contrôle de type <code><a href="/fr/docs/Web/HTML/Element/input/text">"text"</a></code>.</p>
@@ -129,20 +127,34 @@ translation_of: Web/HTML/Element/input/tel
 <p>Les numéros de téléphone peuvent jouer un rôle important dans certains formulaires web. Un site de commerce en ligne, par exemple, peut vouloir enregistrer le numéro de téléphone d'un utilisateur pour le contacter lors de la livraison. Toutefois, un des problèmes relatifs aux numéros de téléphone est la variété de formats qui existent à travers le monde. Il est donc difficile (voire impossible) de valider les valeurs automatiquement.</p>
 
 <div class="note">
-<p><strong>Note</strong> : Des mécanismes de validation particuliers peuvent être ajoutés si besoin (cf. {{anch("Validation")}} ci-après).</p>
+<p><strong>Note :</strong> Des mécanismes de validation particuliers peuvent être ajoutés si besoin (cf. {{anch("Validation")}} ci-après).</p>
 </div>
 
 <h3 id="Claviers_adaptés">Claviers adaptés</h3>
 
-<p>L'un des avantages des contrôles de type <code>tel</code> est qu'ils permettent aux navigateurs mobiles de proposer un clavier adapté à la saisie de numéros de téléphone. Voici par exemple le clavier obtenu avec Firefox pour Android :</p>
+<p>L'un des avantages des contrôles de type <code>tel</code> est qu'ils permettent aux navigateurs mobiles de proposer un clavier adapté à la saisie de numéros de téléphone.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15441/fx-android-tel.png" style="border-style: solid; border-width: 1px; display: block; height: 640px; margin: 0px auto; width: 360px;"></p>
+<table class="standard-table">
+  <caption>Exemples de claviers adaptés sur appareils mobiles.</caption>
+  <thead>
+   <tr>
+    <th scope="col">Firefox pour Android</th>
+    <th scope="col">WebKit iOS (Safari/Chrome/Firefox)</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td><img alt="Capture d'écran pour Firefox pour Android" src="fx-android-tel.png"></td>
+    <td><img alt="Capture d'écran pour Firefox pour iOS" src="iphone-tel-keyboard-50pct.png"></td>
+   </tr>
+  </tbody>
+</table>
 
 <h3 id="Un_contrôle_simple">Un contrôle simple</h3>
 
 <p>Dans sa forme la plus simple, on peut implémenter un tel contrôle avec ce fragment HTML :</p>
 
-<pre class="brush: html notranslate">&lt;input id="telNo" name="telNo" type="tel"&gt;</pre>
+<pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"&gt;</pre>
 
 <p>{{EmbedLiveSample('Un_contrôle_simple', 600, 40)}}</p>
 
@@ -154,7 +166,7 @@ translation_of: Web/HTML/Element/input/tel
 
 <p>Dans l'exemple suivant, on a un contrôle <code>"tel"</code> avec un attribut <code>placeholder</code> qui vaut <code>"01 23 45 67 89"</code>. Vous pouvez manipuler le résultat obtenu pour voir comment ce texte est affiché selon qu'une valeur saisie ou que le champ est vide :</p>
 
-<pre class="brush: html notranslate">&lt;input id="telNo" name="telNo" type="tel"
+<pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
        placeholder="01 23 45 67 89"&gt;</pre>
 
 <p>{{EmbedLiveSample('Textes_indicatifs_-_placeholders', 600, 40)}}</p>
@@ -167,7 +179,7 @@ translation_of: Web/HTML/Element/input/tel
 
 <p>La taille physique de la boîte de saisie peut être contrôlée avec l'attribut {{htmlattrxref("size", "input")}}. La valeur de cet attribut indique le nombre de caractères que la boîte peut afficher simultanément. Si, par exemple, on souhaite que le contrôle mesure 20 caractères de large, on pourra utiliser le code suivant :</p>
 
-<pre class="brush: html notranslate">&lt;input id="telNo" name="telNo" type="tel"
+<pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
        size="20"&gt;</pre>
 
 <p>{{EmbedLiveSample('La_taille_physique', 600, 40)}}</p>
@@ -178,23 +190,21 @@ translation_of: Web/HTML/Element/input/tel
 
 <p>Dans l'exemple qui suit, on crée un contrôle qui mesure 20 caractères de large et dont le contenu doit être plus long que 9 caractères et plus court que 14 caractères.</p>
 
-<pre class="brush: html notranslate">&lt;input id="telNo" name="telNo" type="tel"
+<pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
        size="20" minlength="9" maxlength="14"&gt;</pre>
 
 <p>{{EmbedLiveSample("La_longueur_de_la_valeur", 600, 40)}}</p>
 
 <div class="note">
-<p><strong>Note</strong> : Ces deux attributs jouent un rôle lors de la {{anch("validation", "Validation")}}. Dans l'exemple précédent, la valeur sera considérée comme invalide si elle contient moins de 9 caractères ou plus de 14. La plupart des navigateurs ne permettront pas de saisir une valeur plus longue que la taille maximale.</p>
+<p><strong>Note :</strong> Ces deux attributs jouent un rôle lors de la {{anch("validation", "Validation")}}. Dans l'exemple précédent, la valeur sera considérée comme invalide si elle contient moins de 9 caractères ou plus de 14. La plupart des navigateurs ne permettront pas de saisir une valeur plus longue que la taille maximale.</p>
 </div>
 
 <h3 id="Fournir_une_valeur_par_défaut">Fournir une valeur par défaut</h3>
 
 <p>Il est possible de fournir une valeur par défaut en renseignant au préalable l'attribut {{htmlattrxref("value", "input")}} :</p>
 
-<div id="Default_value">
-<pre class="brush: html notranslate">&lt;input id="telNo" name="telNo" type="tel"
+<pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
        value="01 23 45 67 89"&gt;</pre>
-</div>
 
 <p>{{EmbedLiveSample("Fournir_une_valeur_par_défaut", 600, 40)}}</p>
 
@@ -202,7 +212,7 @@ translation_of: Web/HTML/Element/input/tel
 
 <p>Si on souhaite aller plus loin, on peut fournir une liste de suggestions parmi lesquelles l'utilisateur pourra choisir (il pourra également saisir la valeur de son choix si celle-ci ne fait pas partie de la liste). Pour cela, on utilisera l'attribut {{htmlattrxref("list", "input")}} dont la valeur est l'identifiant d'un élément  {{HTMLElement("datalist")}} qui contient autant d'éléments  {{HTMLElement("option")}} que de valeurs suggérées. C'est la valeur de l'attribut <code>value</code> de chaque élément <code>&lt;option&gt;</code> qui sera utilisée comme suggestion.</p>
 
-<pre class="brush: html notranslate">&lt;input id="telNo" name="telNo" type="tel" list="defaultTels"&gt;
+<pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel" list="defaultTels"&gt;
 
 &lt;datalist id="defaultTels"&gt;
   &lt;option value="01 23 45 67 89"&gt;
@@ -219,13 +229,15 @@ translation_of: Web/HTML/Element/input/tel
 
 <p>Comme évoqué ci-avant, il est difficile de fournir une solution qui convienne pour l'ensemble des formats utilisés et qui permette de valider correctement les numéros de téléphone.</p>
 
-<div class="warning"><strong>Attention !</strong> Il est également important de vérifier le format de la valeur saisie côté serveur ! En effet, il est tout à fait possible pour un utilisateur de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.</div>
+<div class="warning">
+  <p><strong>Attention :</strong> Il est également important de vérifier le format de la valeur saisie côté serveur ! En effet, il est tout à fait possible pour un utilisateur de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.</p>
+</div>
 
 <h3 id="Rendre_la_valeur_obligatoire">Rendre la valeur obligatoire</h3>
 
 <p>Il est possible de rendre la saisie obligatoire avant de pouvoir envoyer le formulaire. Pour cela, on utilisera l'attribut {{htmlattrxref("required", "input")}} :</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="telNo"&gt;Veuillez saisir un numéro de téléphone (obligatoire) : &lt;/label&gt;
     &lt;input id="telNo" name="telNo" type="tel" required&gt;
@@ -238,7 +250,7 @@ translation_of: Web/HTML/Element/input/tel
 
 <p>On utilisera la feuille de style suivante pour indiquer les éléments valides ou invalides du formulaire :</p>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -268,13 +280,13 @@ input:valid+span:after {
 
 <p>{{EmbedLiveSample("Rendre_la_valeur_obligatoire", 700, 70)}}</p>
 
-<h3 id="Utiliser_un_format_particulier"><a id="format" name="format">Utiliser un format particulier</a></h3>
+<h3 id="Utiliser_un_format_particulier">Utiliser un format particulier</h3>
 
 <p>Si on souhaite restreindre le format de la valeur qui peut être saisie, on peut utiliser l'attribut {{htmlattrxref("pattern","input")}} dont la valeur est une expression rationnelle que la valeur doit respecter pour être valide.</p>
 
 <p>Dans cet exemple, on utilisera la même feuille de style que précédemment mais le code HTML sera celui-ci :</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="telNo"&gt;Veuillez saisir un numéro de téléphone (obligatoire) : &lt;/label&gt;
     &lt;input id="telNo" name="telNo" type="tel" required
@@ -286,8 +298,7 @@ input:valid+span:after {
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -312,7 +323,6 @@ input:valid+span:after {
   padding-left: 5px;
   color: #009000;
 }</pre>
-</div>
 
 <p>{{EmbedLiveSample("Utiliser_un_format_particulier", 700, 70)}}</p>
 
@@ -324,7 +334,7 @@ input:valid+span:after {
 
 <p>Chaque boîte de saisie possède un attribut {{htmlattrxref("placeholder","input")}} qui indique le format pressenti. On utilise également l'attribut {{htmlattrxref("pattern","input")}} afin d'indiquer le nombre de caractères ainsi qu'un attribut <code>aria-label</code> qui pourra être lu par un lecteur d'écran ete qui décrit quoi saisir dans le contrôle.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="country"&gt;Veuillez choisir votre pays :&lt;/label&gt;
     &lt;select id="country" name="country"&gt;
@@ -361,7 +371,7 @@ input:valid+span:after {
 
 <p>Le code JavaScript associé est relativement simple, il contient un gestionnaire d'évènements {{domxref("GlobalEventHandlers.onchange", "onchange")}} qui est déclenché lorsque la valeur du <code>&lt;select&gt;</code> est modifiée. Il met alors à jour les attributs <code>pattern</code>, <code>placeholder</code>, <code>aria-label</code> du contrôle pour adapter le format attendu au pays choisi.</p>
 
-<pre class="brush: js notranslate">var selectElem = document.querySelector("select");
+<pre class="brush: js">var selectElem = document.querySelector("select");
 var inputElems = document.querySelectorAll("input");
 
 selectElem.onchange = function() {
@@ -415,8 +425,7 @@ selectElem.onchange = function() {
 
 <p>Bien entendu, si cette complexité est trop importante, on peut également faire le choix de contrôler la valeur côté serveur avant de faire un retour à l'utilisateur.</p>
 
-<div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css hidden">div {
 margin-bottom: 10px;
 position: relative;
 }
@@ -439,7 +448,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <h2 id="Résumé_technique">Résumé technique</h2>
 

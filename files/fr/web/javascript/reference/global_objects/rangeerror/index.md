@@ -1,69 +1,58 @@
 ---
 title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
-tags:
-  - Error
-  - JavaScript
-  - RangeError
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
 original_slug: Web/JavaScript/Reference/Objets_globaux/RangeError
+browser-compat: javascript.builtins.RangeError
 ---
 {{JSRef}}
 
-L'objet **`RangeError`** permet d'indiquer une erreur lorsqu'une valeur fournie n'appartient pas à l'intervalle autorisé.
-
-## Syntaxe
-
-    new RangeError([message[, nomFichier[, numLigne]]])
-
-### Paramètres
-
-- `message`
-  - : Paramètre optionnel. Une description lisible (humainement) de l'erreur.
-- `nomFichier` {{non-standard_inline}}
-  - : Paramètre optionnel. Le nom du fichier contenant le code à l'origine de cette exception.
-- `numLigne `{{non-standard_inline}}
-  - : Paramètre optionnel. Le numéro de la ligne du code à l'origine de cette exception.
+L'objet **`RangeError`** permet d'indiquer une erreur lorsqu'une valeur fournie n'appartient pas à l'intervalle ou à l'ensemble de valeurs autorisées.
 
 ## Description
 
-Une exception `RangeError` est levée lorsqu'une valeur est passée comme argument à une fonction qui n'accepte pas de valeurs dans cet intervalle. Par exemple, cela peut être le cas quand on souhaite créer un tableau avec une longueur illégale via {{jsxref("Array")}} ou lorsqu'on passe des valeurs incorrectes aux méthodes {{jsxref("Number.toExponential()")}}, {{jsxref("Number.toFixed()")}} ou {{jsxref("Number.toPrecision()")}}. Cette exception n'est pas limitée aux problèmes d'intervalles numériques et peuvent également se produire lorsqu'on passe une valeur non autorisée à {{jsxref("String.prototype.normalize()")}}.
+Une exception `RangeError` est levée lorsqu'une valeur est passée comme argument à une fonction qui n'accepte pas de valeurs dans cet intervalle.
 
-## Propriétés
+Par exemple, cela peut être le cas quand&nbsp;:
 
-- {{jsxref("RangeError.prototype")}}
-  - : Cette propriété permet d'ajouter des propriétés à toutes les instances de `RangeError`.
+- on passe une valeur qui n'est pas une des valeurs autorisées pour [`String.prototype.normalize()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/normalize), ou
+- on souhaite créer un tableau avec une longueur illégale via [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) ou
+- lorsqu'on passe des valeurs incorrectes aux méthodes [`Number.toExponential()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential), [`Number.toFixed()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) ou [`Number.toPrecision()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision).
 
-## Méthodes
+## Constructeur
 
-L'objet global `RangeError` ne contient pas de méthodes propres mais héritent de certaines méthodes via la chaîne de prototypes.
+- [`RangeError()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError/RangeError)
+  - : Crée un nouvel objet `RangeError`.
 
-## Instances de `RangeError`
+## Propriétés des instances
 
-### Propriétés
-
-{{ page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/RangeError/prototype','Properties') }}
-
-### Méthodes
-
-{{ page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/RangeError/prototype','Methods') }}
-
+- [`RangeError.prototype.message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message)
+  - : Un message d'erreur. Bien qu'ECMA-262 spécifie que `RangeError` devrait fournir sa propre propriété `message`, pour SpiderMonkey, celle-ci est héritée de [`Error.prototype.message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message).
+- [`RangeError.prototype.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/name)
+  - : Le nom d'erreur. Hérité de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`RangeError.prototype.fileName`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName)
+  - : Le chemin vers le fichier qui a déclenché cette erreur. Héritée de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`RangeError.prototype.lineNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber)
+  - : Le numéro de la ligne dans le fichier qui a déclenché cette erreur. Héritée de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`RangeError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
+  - : Le numéro de la colonne dans la ligne du fichier qui a déclenché cette erreur. Héritée de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`RangeError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack)
+  - : La trace de la pile d'appel. Héritée de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
 ## Exemples
 
 ### Utiliser `RangeError`
 
 ```js
-var MIN = 200;
-var MAX = 300;
-var vérifier = function( num ) {
+const MIN = 200;
+const MAX = 300;
+function verifier( num ) {
   if( num < MIN || num > MAX ) {
     throw new RangeError( "Le paramètre doit être compris entre " + MIN + " et " + MAX );
   }
 };
 
 try {
-  vérifier(500);
+  verifier(500);
 }
 catch (e) {
   if (e instanceof RangeError ){
@@ -93,23 +82,17 @@ catch(erreur) {
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES3')}}                                                                                                         | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.11.6.2', 'RangeError')}}                                                         | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-rangeerror', 'RangeError')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-rangeerror', 'RangeError')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RangeError")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{jsxref("Error")}}
-- {{jsxref("Array")}}
-- {{jsxref("RangeError.prototype")}}
-- {{jsxref("Number.toExponential()")}}
-- {{jsxref("Number.toFixed()")}}
-- {{jsxref("Number.toPrecision()")}}
-- {{jsxref("String.prototype.normalize()")}}
+- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
+- [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [`Number.toExponential()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential)
+- [`Number.toFixed()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed)
+- [`Number.toPrecision()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision)
+- [`String.prototype.normalize()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/normalize)

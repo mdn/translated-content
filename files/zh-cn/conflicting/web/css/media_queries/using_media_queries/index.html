@@ -1,0 +1,390 @@
+---
+title: 媒体
+slug: conflicting/Web/CSS/Media_Queries/Using_media_queries
+translation_of: Web/Progressive_web_apps/Responsive/Media_types
+original_slug: Web/Progressive_web_apps/Responsive/Media_types
+---
+<p>{{CSSTutorialTOC}} {{previousPage("/zh-CN/docs/Web/Guide/CSS/Getting_Started/Tables", "表格")}}</p>
+
+<p>本章节是 <a href="/en-US/docs/Web/Guide/CSS/Getting_Started" title="en-US/docs/Web/Guide/CSS/Getting Started">CSS 入门教程</a><span style="line-height: 1.5;">指南的第 14 章也是最后一部分。本指南主要描述了用来展示文档的 CSS 的属性及其值，本章节依旧着眼于这个目标，同时也会介绍 CSS 样式表的结构。</span></p>
+
+<h2 class="clearLeft" id="为不同媒介提供的样式信息">为不同媒介提供的样式信息</h2>
+
+<p>CSS 的作用是将网页文档以更友好的展现方式呈现给用户。</p>
+
+<p><span style="line-height: 1.5;">例如，假设你现在正用一台显示设备来阅读这篇文章，同时你也想把它投影到屏幕上，或者打印出来，而显示设备、屏幕投影和打印等这些媒介都有自己的特点，CSS 就能根据媒介种类控制展示文档的方法。</span></p>
+
+<p>CSS通过使用 {{CSSXref("@media")}} 来对特定的媒介指定适配规则。</p>
+
+<div class="tuto_example">
+<div class="tuto_type">示例</div>
+
+<p>我们的站点上有一个导航区域允许用户浏览。</p>
+
+<p>在标签语言中，导航区域父元素的 id 是 <code>nav-area</code>。（在 {{HTMLVersionInline(5)}}, 可以使用 {{HTMLElement("nav")}} 元素代替带有 id 属性的 {{HTMLElement("div")}}。）</p>
+
+<p>为了在打印网页的时候去掉无用的信息，我们在样式表中加一条适配规则，使导航区域在打印时是被隐藏起来的：</p>
+
+<pre class="brush:css">@media print {
+  #nav-area {display: none;}
+  }
+</pre>
+</div>
+
+<p><span style="line-height: 1.5;">一些常见的媒介类型</span><span style="line-height: 1.5;">:</span></p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>screen</code></td>
+   <td>彩色计算机显示</td>
+  </tr>
+  <tr>
+   <td><code>print</code></td>
+   <td>打印（分页式媒体）</td>
+  </tr>
+  <tr>
+   <td style="padding-right: 1em;"><code>projection</code></td>
+   <td>投影</td>
+  </tr>
+  <tr>
+   <td><code>all</code></td>
+   <td>所有媒体 (默认)</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="tuto_details">
+<div class="tuto_type">更多</div>
+
+<p>还有其它一些对 CSS 规则指定适用媒介类型的方式。</p>
+
+<p><span style="line-height: 1.5;">有些标签语言可能允许在链接引用样式表时指定媒介类型。例如，在 HTML 中，你可以通过在</span><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">link</code><span style="line-height: 1.5;"> </span><span style="line-height: 1.5;">标签上添加 media 属性来指定媒介类型。</span></p>
+
+<p>在 CSS 中，你可以在样式表开头 {{CSSXref("@import")}} 一个 url 来引入另外的样式表，同时指定其媒介类型。</p>
+
+<p><span style="line-height: 1.5;">根据这些知识，你可以区分在不同的文件中定义不同媒介的样式规则。有时这也是结构化样式表的好方法。</span></p>
+
+<p><span style="line-height: 1.5;">想获取媒介类型更多细节，请参考 CSS 规范中的</span> <a href="http://www.w3.org/TR/CSS21/media.html">Media</a> <span style="line-height: 1.5;">部分。</span></p>
+
+<p>接下来将介绍更多 {{cssxref("display")}} <span style="line-height: 1.5;">属性的例子</span><span style="line-height: 1.5;">: </span><a href="/en-US/docs/Web/Guide/CSS/Getting_Started/XML_data" style="line-height: 1.5;" title="en-US/docs/Web/Guide/CSS/Getting_Started/XML_data">XML data</a><span style="line-height: 1.5;">.</span></p>
+</div>
+
+<h3 id="打印">打印</h3>
+
+<p>CSS 有一些支持打印和分页媒体的特性。</p>
+
+<p> {{cssxref("@page")}} 规则能够设置页间距。对于双面打印，还可以分开设置 <code>@page:left</code> 和 <code>@page:right。</code></p>
+
+<p>对于打印媒介，可以使用适当的长度单位，像是英寸（in）、点（1pt = 1/72 inch）、厘米（cm）还有毫米（mm）。这等同于使用 em 来配合字体大小和百分比。</p>
+
+<p>可以通过使用 {{cssxref("page-break-before")}}, {{cssxref("page-break-after")}} 和 {{cssxref("page-break-inside")}} 属性来控制文档内容的分页边界。</p>
+
+<div class="tuto_example">
+<div class="tuto_type">示例</div>
+
+<p>这个规则把四个方向的页边距都设置为 1 inch：</p>
+
+<pre class="brush:css">@page {margin: 1in;} </pre>
+
+<p><span style="line-height: 1.5;">这个规则确保每个 H1 元素都从新的一页开始</span>：</p>
+
+<pre class="brush:css">h1 {page-break-before: always;}
+</pre>
+</div>
+
+<div class="tuto_details">
+<div class="tuto_type">更多细节</div>
+
+<p>想获取更多细节，请参考 CSS 规范中的 <a href="http://www.w3.org/TR/CSS21/page.html">Paged media</a> 部分。</p>
+
+<p><span style="line-height: 1.5;">像 CSS 的其他特性一样，打印也依赖于你的浏览器及其设置。例如，在打印的时候 Mozilla 浏览器支持默认的间距，页眉和页脚。而当其他用户打印你的文档时，你无法预知他会使用的什么样的浏览器和设置，因此你也不能完全控制打印情况。</span></p>
+</div>
+
+<h3 id="用户界面">用户界面</h3>
+
+<p><span style="line-height: 1.5;">CSS 有一些特殊的属性能够支持设备的用户界面，例如电脑显示器。这使得文档的展示随着用户界面的情况而动态地变化。</span></p>
+
+<p>下面有五种特殊的选择器：</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><strong>Selector</strong></td>
+   <td><strong>Selects</strong></td>
+  </tr>
+  <tr>
+   <td><code>E{{cssxref(":hover")}}</code></td>
+   <td>当鼠标悬浮在此元素上</td>
+  </tr>
+  <tr>
+   <td><code>E{{cssxref(":focus")}}</code></td>
+   <td>当元素获得键盘焦点</td>
+  </tr>
+  <tr>
+   <td><code>E{{cssxref(":active")}}</code></td>
+   <td>当元素是当前的活动元素</td>
+  </tr>
+  <tr>
+   <td><code>E{{cssxref(":link")}}</code></td>
+   <td>当元素超链接到一个 url 但是用户还没有访问过</td>
+  </tr>
+  <tr>
+   <td><code>E{{cssxref(":visited")}}</code></td>
+   <td>当元素超链接到一个 url 但是用户已经访问过</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note">
+<p><strong>注意: </strong>在 {{gecko("2.0")}} <em>中可获得的 :visited 选择器信息是有限的。更过细节请参照</em><span style="line-height: 1.5;"> </span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector" style="line-height: 1.5;" title="en-US/docs/Web/Guide/CSS/Privacy and the :visited selector">Privacy and the :visited selector</a><span style="line-height: 1.5;"> 。</span></p>
+</div>
+
+<p> {{cssxref("cursor")}} 属性指定鼠标的形状：一些常见的形状如下表所示。把你的鼠标放在列表的选项上来看浏览器中实际显示的鼠标形状:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><strong>Selector</strong></td>
+   <td><strong>Selects</strong></td>
+  </tr>
+  <tr style="cursor: pointer;">
+   <td><code>pointer</code></td>
+   <td>指示超链接</td>
+  </tr>
+  <tr style="cursor: wait;">
+   <td><code>wait</code></td>
+   <td>表明程序无法接受输入</td>
+  </tr>
+  <tr style="cursor: progress;">
+   <td><code>progress</code></td>
+   <td>表明程序正在运行，但是仍可以接受输入</td>
+  </tr>
+  <tr style="cursor: default;">
+   <td><code>default</code></td>
+   <td>默认（通常是箭头）</td>
+  </tr>
+ </tbody>
+</table>
+
+<p> {{cssxref("outline")}} 属性通过创建轮廓来表明获得键盘焦点。只有在父元素使用 relative, fixed or absolute 时才有效。你可以为任何父元素指定 position: relative;因为它不会产生移动。<br>
+ 它的作用相当于 {{cssxref("border")}} 属性，但与其不同的是它不能指明个别方向。</p>
+
+<p>一些其他的用户界面特性通常会通过属性来应用。例如，禁用或者只读的元素可以设置 <strong>disabled</strong> 属性和 <strong>readonly</strong> 属性。选择器可以通过方括: <code>{{mediawiki.external('disabled')}}</code> 或者 <code>{{mediawiki.external('readonly')}}来指定这些属性。</code></p>
+
+<div class="tuto_example">
+<div class="tuto_type">示例</div>
+
+<p><span style="line-height: 1.5;">这些规则规定了按钮在用户使用时动态变化的样式</span>:</p>
+
+<pre class="brush:css">.green-button {
+  background-color:#cec;
+  color:#black;
+  border:2px outset #cec;
+  }
+
+.green-button[disabled] {
+  background-color:#cdc;
+  color:#777;
+  }
+
+.green-button:active {
+  border-style: inset;
+  } </pre>
+
+<p><span style="line-height: 1.5;">这个wiki不支持页面上的用户界面，所以这些按钮不能点击。下面用一些静态图片来举例说明</span>:</p>
+
+<table style="background-color: #fff; border: 2px outset #36b; padding: 1em;">
+ <tbody>
+  <tr>
+   <td>
+    <table>
+     <tbody>
+      <tr>
+       <td><span style="background-color: #cdc; border: 2px outset #cec; color: #777; cursor: default; height: 2em; margin-right: 1em; padding: .5em 1em; width: 8em;">Click Me</span></td>
+       <td><span style="background-color: #cec; border: 2px outset #cec; cursor: move; height: 2em; margin-right: 1em; padding: .5em 1em; width: 8em;">Click Me</span></td>
+       <td><span style="background-color: #cec; border: 2px inset #cec; cursor: move; height: 2em; margin-right: 1em; padding: .5em 1em; width: 8em;">Click Me</span></td>
+      </tr>
+      <tr style="line-height: 25%;">
+       <td> </td>
+      </tr>
+      <tr style="font-style: italic;">
+       <td>disabled</td>
+       <td>normal</td>
+       <td>active</td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>当一个功能性按钮初始化的时候，它的周围会围绕着一条黑色的轮廓。当它获取键盘焦点时，从表面上看有一条虚线轮廓。同时当鼠标悬浮在它上面时也有一些悬浮效果。</p>
+</div>
+
+<div class="tuto_details">
+<div class="tuto_type">更多</div>
+
+<p>获取更多关于CSS用户界面的信息，请参考CSS规范中的 <a href="http://www.w3.org/TR/CSS21/ui.html">User interface</a> 部分。</p>
+
+<p><span style="line-height: 1.5;">本文的第二部分列举了Mozilla的用户界面标签语言的例子，XUL。</span></p>
+</div>
+
+<h2 id="实践_打印文档">实践: 打印文档</h2>
+
+<ol>
+ <li>创建一个新的HTML文档, <code>doc4.html</code>. 把下面的HTML代码粘贴过去:
+
+  <pre class="brush:html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Print sample&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style4.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Section A&lt;/h1&gt;
+    &lt;p&gt;This is the first section...&lt;/p&gt;
+    &lt;h1&gt;Section B&lt;/h1&gt;
+    &lt;p&gt;This is the second section...&lt;/p&gt;
+    &lt;div id="print-head"&gt;
+      Heading for paged media
+    &lt;/div&gt;
+    &lt;div id="print-foot"&gt;
+      Page:
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+ </li>
+ <li>创建一个新的样式表, <code>style4.css</code>. 把下面的HTML代码粘贴过去:
+  <pre class="brush:css">/*** Print sample ***/
+
+/* defaults  for screen */
+#print-head,
+#print-foot {
+  display: none;
+  }
+
+/* print only */
+@media print {
+
+h1 {
+  page-break-before: always;
+  padding-top: 2em;
+  }
+
+h1:first-child {
+  page-break-before: avoid;
+  counter-reset: page;
+  }
+
+#print-head {
+  display: block;
+  position: fixed;
+  top: 0pt;
+  left:0pt;
+  right: 0pt;
+
+  font-size: 200%;
+  text-align: center;
+  }
+
+#print-foot {
+  display: block;
+  position: fixed;
+  bottom: 0pt;
+  right: 0pt;
+
+  font-size: 200%;
+  }
+
+#print-foot:after {
+  content: counter(page);
+  counter-increment: page;
+  }
+
+} /* end print only */
+</pre>
+ </li>
+ <li>在浏览器中查看文档，你会看到它使用的是默认样式。</li>
+ <li>打印（或者打印预览）文档；样式表的适配规则开始起作用，同时会显示每个页面的页眉和页脚，如果浏览器支持记数器，页码也会被显示出来。
+  <table>
+   <tbody>
+    <tr>
+     <td>
+      <table style="border: 2px outset #36b; padding: 1em;">
+       <tbody>
+        <tr>
+         <td>
+          <table style="margin-right: 2em; width: 15em;">
+           <tbody>
+            <tr>
+             <td>
+              <div style="font-size: 110%; text-align: center; margin-bottom: .5em;">Heading for paged media</div>
+
+              <div style="font-size: 150%; font-weight: bold;">Section A</div>
+
+              <div style="font-size: 75%;">This is the first section...</div>
+
+              <div style="font-size: 150%; text-align: right; margin-top: 12em;">Page: 1</div>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </td>
+     <td>
+      <table style="border: 2px outset #36b; padding: 1em;">
+       <tbody>
+        <tr>
+         <td>
+          <table style="margin-right: 2em; width: 15em;">
+           <tbody>
+            <tr>
+             <td>
+              <div style="font-size: 110%; text-align: center; margin-bottom: .5em;">Heading for paged media</div>
+
+              <div style="font-size: 150%; font-weight: bold;">Section B</div>
+
+              <div style="font-size: 75%;">This is the second section...</div>
+
+              <div style="font-size: 150%; text-align: right; margin-top: 12em;">Page: 2</div>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </li>
+</ol>
+
+<table style="background-color: #fffff4; border: 1px solid #36b; padding: 1em; width: 100%;">
+ <caption>挑战</caption>
+ <tbody>
+  <tr>
+   <td><span style="line-height: 1.5;">把指定打印样式的规则转移到单独的CSS文件。</span>
+    <p>学习 {{CSSXref("@import")}} 了解如何将新的指定打印 CSS 文件引用到 <code style="font-style: normal;">style4.css</code> 样式表里去。</p>
+
+    <p>当鼠标放在标题时，改变颜色为蓝色。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p><a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Challenge_solutions#Media" title="en-US/docs/Web/Guide/CSS/Getting_started/Challenge_solutions#Media">查看这些挑战的解决方案。</a></p>
+
+<h2 id="接下来">接下来?</h2>
+
+<p>如果你还是很难理解这个章节，或者你对它有一些意见或者建议，请在 <a href="/Talk:en-US/docs/Web/Guide/CSS/Getting_Started/Media" title="Talk:en-US/docs/Web/Guide/CSS/Getting_Started/Media">讨论区</a> 中不吝赐教。</p>
+
+<p>目前，本文所有的样式规则都可以在文件里面规定。这些规则及其值均是固定的。下面的篇章将会描述该如何使用程序语言 <strong><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/JavaScript" title="en-US/docs/Web/Guide/CSS/Getting_Started/JavaScript">JavaScript</a> 来动态地改变规则。</strong></p>

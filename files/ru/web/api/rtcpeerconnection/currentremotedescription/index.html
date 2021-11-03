@@ -15,7 +15,7 @@ translation_of: Web/API/RTCPeerConnection/currentRemoteDescription
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><em>sessionDescription</em> = <em>RTCPeerConnection</em>.currentRemoteDescription;</pre>
+<pre class="syntaxbox"><em>sessionDescription</em> = <em>RTCPeerConnection</em>.currentRemoteDescription;</pre>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
@@ -25,7 +25,7 @@ translation_of: Web/API/RTCPeerConnection/currentRemoteDescription
 
 <p>Пример рассматривает свойство  <code>currentRemoteDescription</code> и отображает предупреждение, содержащее значения свойств  <code>type</code> и <code>sdp</code> ,объекта {{domxref("RTCSessionDescription")}}.</p>
 
-<pre class="brush: js notranslate">var pc = new RTCPeerConnection();
+<pre class="brush: js">var pc = new RTCPeerConnection();
 …
 var sd = pc.currentRemoteDescription;
 if (sd) {
@@ -40,28 +40,13 @@ else {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#dom-peerconnection-currentremotedesc', 'RTCPeerConnection.currentRemoteDescription') }}</td>
-   <td>{{ Spec2('WebRTC 1.0') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 
 
-<p>{{Compat("api.RTCPeerConnection.currentRemoteDescription")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

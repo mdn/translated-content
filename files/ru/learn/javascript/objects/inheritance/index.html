@@ -57,7 +57,7 @@ original_slug: Learn/JavaScript/Объекты/Inheritance
 
 <p>Прежде всего сделайте себе локальную копию нашего файла <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-start.html">oojs-class-inheritance-start.html</a> (он также работает <a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-start.html">в режиме реального времени</a>). В файле вы найдёте тот же пример конструктора <code>Person()</code>, который мы использовали на протяжении всего модуля, с небольшим отличием - мы определили внутри конструктора только лишь свойства:</p>
 
-<pre class="brush: js notranslate">function Person(first, last, age, gender, interests) {
+<pre class="brush: js">function Person(first, last, age, gender, interests) {
   this.name = {
     first,
     last
@@ -69,7 +69,7 @@ original_slug: Learn/JavaScript/Объекты/Inheritance
 
 <p><em>Все</em> методы определены в прототипе конструктора. Например:</p>
 
-<pre class="brush: js notranslate">Person.prototype.greeting = function() {
+<pre class="brush: js">Person.prototype.greeting = function() {
   alert('Hi! I\'m ' + this.name.first + '.');
 };</pre>
 
@@ -88,7 +88,7 @@ original_slug: Learn/JavaScript/Объекты/Inheritance
 
 <p>Первое, что нам нужно сделать, это создать конструктор <code>Teacher()</code> - добавьте ниже следующий код:</p>
 
-<pre class="brush: js notranslate">function Teacher(first, last, age, gender, interests, subject) {
+<pre class="brush: js">function Teacher(first, last, age, gender, interests, subject) {
   Person.call(this, first, last, age, gender, interests);
 
   this.subject = subject;
@@ -102,7 +102,7 @@ original_slug: Learn/JavaScript/Объекты/Inheritance
 
 <p>В качестве примечания мы могли бы просто сделать это:</p>
 
-<pre class="brush: js notranslate">function Teacher(first, last, age, gender, interests, subject) {
+<pre class="brush: js">function Teacher(first, last, age, gender, interests, subject) {
   this.name = {
     first,
     last
@@ -119,14 +119,14 @@ original_slug: Learn/JavaScript/Объекты/Inheritance
 
 <p>Обратите внимание, что если конструктор, от которого вы наследуете, не принимает значения своего свойства из параметров, вам не нужно указывать их в качестве дополнительных аргументов в <code>call()</code>. Так, например, если у вас было что-то действительно простое:</p>
 
-<pre class="brush: js notranslate">function Brick() {
+<pre class="brush: js">function Brick() {
   this.width = 10;
   this.height = 20;
 }</pre>
 
 <p>Вы можете наследовать свойства <code>width</code> и <code>height</code>, выполнив это (как и другие шаги, описанные ниже, конечно):</p>
 
-<pre class="brush: js notranslate">function BlueGlassBrick() {
+<pre class="brush: js">function BlueGlassBrick() {
   Brick.call(this);
 
   this.opacity = 0.5;
@@ -141,11 +141,11 @@ original_slug: Learn/JavaScript/Объекты/Inheritance
 
 <ol>
  <li>Добавьте следующую строку ниже своего предыдущего добавления:
-  <pre class="brush: js notranslate">Teacher.prototype = Object.create(Person.prototype);</pre>
+  <pre class="brush: js">Teacher.prototype = Object.create(Person.prototype);</pre>
   Здесь наш друг <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> снова приходит на помощь. В этом случае мы используем его для создания нового объекта и делаем его значением <code>Teacher.prototype</code>. Новый объект имеет свой прототип <code>Person.prototype</code> и, следовательно, наследует, если и когда это необходимо, все доступные методы <code>Person.prototype</code>.</li>
  <li>Нам нужно сделать ещё одну вещь, прежде чем двигаться дальше. После добавления последней строки, <code>Teacher.prototype.constructor</code> стало равным <code>Person()</code>, потому что мы просто устанавливаем <code>Teacher.prototype</code> для ссылки на объект, который наследует его свойства от <code>Person.prototype</code>! Попробуйте сохранить код, загрузите страницу в браузере и введите <code>Teacher.prototype.constructor</code> в консоль для проверки.</li>
  <li>Это может стать проблемой, поэтому нам нужно сделать это правильно. Вы можете сделать это, вернувшись к исходному коду и добавив следующие строки внизу:
-  <pre class="notranslate"><code>Object.defineProperty(Teacher.prototype, 'constructor', {
+  <pre><code>Object.defineProperty(Teacher.prototype, 'constructor', {
     value: Teacher,
     enumerable: false, // false, чтобы данное свойство не появлялось в цикле for in
     writable: true });</code></pre>
@@ -159,7 +159,7 @@ original_slug: Learn/JavaScript/Объекты/Inheritance
 
 <p>Самый простой способ сделать это - определить его на прототипе <code>Teacher()</code> - добавить в нижнюю часть кода следующее:</p>
 
-<pre class="brush: js notranslate">Teacher.prototype.greeting = function() {
+<pre class="brush: js">Teacher.prototype.greeting = function() {
   var prefix;
 
   if (this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M') {
@@ -179,11 +179,11 @@ original_slug: Learn/JavaScript/Объекты/Inheritance
 
 <p>Теперь, когда вы ввели весь код, попробуйте создать экземпляр объекта из <code>Teacher()</code>, поставив ниже вашего JavaScript-кода (или что-то похожее по вашему выбору):</p>
 
-<pre class="brush: js notranslate">var teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');</pre>
+<pre class="brush: js">var teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');</pre>
 
 <p>Теперь сохраните, обновите, и попробуйте получить доступ к свойствам и методам вашего нового объекта <code>teacher1</code>, например:</p>
 
-<pre class="brush: js notranslate">teacher1.name.first;
+<pre class="brush: js">teacher1.name.first;
 teacher1.interests[0];
 teacher1.bio();
 teacher1.subject;

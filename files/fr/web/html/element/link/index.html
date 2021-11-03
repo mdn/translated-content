@@ -14,33 +14,31 @@ translation_of: Web/HTML/Element/link
 
 <div>{{EmbedInteractiveExample("pages/tabbed/link.html")}}</div>
 
-
-
 <p>Pour lier une feuille de style externe, on inclut un élément <code>&lt;link&gt;</code> de la forme suivante à l'intérieur de l'élément {{htmlelement("head")}} :</p>
 
-<pre class="brush: html notranslate">&lt;link href="main.css" rel="stylesheet"&gt;</pre>
+<pre class="brush: html">&lt;link href="main.css" rel="stylesheet"&gt;</pre>
 
 <p>Dans cet exemple, on indique le chemin vers la feuille de style grâce à l'attribut <code>href</code>, l'attribut  <code>rel</code> possède une valeur <code>stylesheet</code> qui indique que c'est une feuille de style. <code>rel</code> signifie <em>relationship</em> qui correspond donc à la relation entre la ressource et le document courant. Il existe de <a href="/fr/docs/Web/HTML/Types_de_lien">nombreux types de liens possibles</a>.</p>
 
 <p>Certains types sont assez fréquents. Ainsi, pour l'icône présentant le site dans l'onglet, on trouvera :</p>
 
-<pre class="brush: html notranslate">&lt;link rel="icon" href="favicon.ico"&gt;</pre>
+<pre class="brush: html">&lt;link rel="icon" href="favicon.ico"&gt;</pre>
 
 <p>Il existe différents types de relations pour préciser les icônes et qui permettent notamment de cibler certaines plateformes mobiles :</p>
 
-<pre class="brush: html notranslate">&lt;link rel="apple-touch-icon-precomposed" sizes="114x114"
+<pre class="brush: html">&lt;link rel="apple-touch-icon-precomposed" sizes="114x114"
       href="apple-icon-114.png" type="image/png"&gt;</pre>
 
 <p>L'attribut <code>sizes</code> indique la taille de l'icône tandis que l'attribut <code>type</code> contient le type MIME de la ressource qui est liée. Ces attributs permettent alors au navigateur de sélectionner la ressource la plus adéquate.</p>
 
 <p>On peut également fournir l'attribut <code>media</code> afin d'utiliser telle ou telle ressource lorsqu'une requête média est vérifiée. Ainsi, on pourra utiliser ce qui suit afin d'avoir une feuille de style utilisée à l'impression et une autre dédiée au mobile :</p>
 
-<pre class="brush: html notranslate">&lt;link href="print.css" rel="stylesheet" media="print"&gt;
+<pre class="brush: html">&lt;link href="print.css" rel="stylesheet" media="print"&gt;
 &lt;link href="mobile.css" rel="stylesheet" media="screen and (max-width: 600px)"&gt;</pre>
 
 <p>Certaines fonctionnalités relatives à la sécurité sont également disponibles avec certains attributs de <code>&lt;link&gt;</code>. Dans cet exemple :</p>
 
-<pre class="brush: html notranslate">&lt;link rel="preload" href="myFont.woff2" as="font"
+<pre class="brush: html">&lt;link rel="preload" href="myFont.woff2" as="font"
       type="font/woff2" crossorigin="anonymous"&gt;</pre>
 
 <p>L'attribut <code>rel</code> vaut <code>preload</code> et indique que le navigateur doit précharger la ressource (voir <a href="/fr/docs/Web/HTML/Précharger_du_contenu">Le préchargement du contenu avec <code>rel="preload"</code></a> pour plus de détails), l'attribut <code>as</code> indique la classe de contenu qui est récupéré et l'attribut <code>crossorigin</code> indique si la ressource doit être récupérée avec une requête CORS.</p>
@@ -97,8 +95,8 @@ translation_of: Web/HTML/Element/link
  <dt>{{htmlattrdef("integrity")}} {{experimental_inline}}</dt>
  <dd>Cet attribut contient des métadonnées en ligne qui correspondent à l'empreinte cryptographique de la ressource qu'on souhaite récupérer. Cela permet à l'agent utilisateur de contrôler que la ressource récupérée n'a pas été manipulée. Pour plus d'informations, consulter <a href="/fr/docs/Web/Security/Subresource_Integrity">l'article sur le contrôle des sous-ressources</a>.</dd>
  <dt>{{htmlattrdef("media")}}</dt>
- <dd>Cet attribut indique le média auquel s'applique la ressource liée. Sa valeur doit être <a href="/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries">une requête média</a>. Cet attribut est principalement utilisé pour permettre à l'agent utilisateur de sélectionner la meilleure feuille de style en fonction de l'appareil de l'utilisateur.
- <div class="note"><strong>Note d'utilisation :</strong>
+ <dd><p>Cet attribut indique le média auquel s'applique la ressource liée. Sa valeur doit être <a href="/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries">une requête média</a>. Cet attribut est principalement utilisé pour permettre à l'agent utilisateur de sélectionner la meilleure feuille de style en fonction de l'appareil de l'utilisateur.</p>
+ <div class="note"><p><strong>Note :</strong></p>
  <ul>
   <li>En HTML4, la valeur de cet attribut était une liste de descripteurs de médias (<a href="/fr/docs/Web/CSS/@media">des types ou des groupes de média</a>) séparés par des espaces, par exemple <code>print</code> <code>screen</code> <code>aural</code> <code>braille</code>. HTML5 étend cet attribut à l'ensemble <a href="/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries">des requêtes média</a> qui forment un surensemble des valeurs autorisées en HTML 4.</li>
   <li>Les navigateurs qui ne prennent pas en charge <a href="/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries">les requêtes média CSS3</a> ne reconnaîtront pas nécessairement les liens adéquats et il faut donc toujours fournir des liens de recours.</li>
@@ -124,7 +122,7 @@ translation_of: Web/HTML/Element/link
   <li>une liste de tailles, séparées par des espaces, dont chacune est de la forme <code><em>&lt;largeur en pixels&gt;</em>x<em>&lt;hauteur en pixels&gt;</em></code> ou <code><em>&lt;largeur en pixels&gt;</em>X<em>&lt;hauteur en pixels&gt;</em></code>. Pour chacune de ces dimensions, il doit exister une image correspondante dans la ressource.</li>
  </ul>
 
- <div class="note"><strong>Note d'utilisation :</strong>
+ <div class="note"><p><strong>Note :</strong></p>
 
  <ul>
   <li>La plupart des format d'icône permettent simplement de stocker une seule icône, c'est pour cela que, la plupart du temps, {{htmlattrxref("sizes")}} ne contient qu'un seul élément.</li>
@@ -142,8 +140,8 @@ translation_of: Web/HTML/Element/link
 
 <dl>
  <dt>{{htmlattrdef("charset")}}{{obsolete_inline}}</dt>
- <dd>Cet attribut définit l'encodage de la ressource lié. La valeur de cet attribut est une liste de jeux de caractères (tels que définis dans la RFC {{rfc(2045)}}) séparés par des espaces ou des virgules. La valeur par défaut de cet attribut est <code>iso-8859-1</code>.
- <div class="note"><strong>Note d'utilisation :</strong> cet attribut est obsolète <strong>et ne doit pas être utilisé</strong>. Pour obtenir l'effet escompté, on utilisera l'en-tête HTTP {{httpheader("Content-Type")}} pour la ressource liée.</div>
+ <dd><p>Cet attribut définit l'encodage de la ressource lié. La valeur de cet attribut est une liste de jeux de caractères (tels que définis dans la RFC {{rfc(2045)}}) séparés par des espaces ou des virgules. La valeur par défaut de cet attribut est <code>iso-8859-1</code>.</p>
+ <div class="note"><p><strong>Note :</strong> cet attribut est obsolète <strong>et ne doit pas être utilisé</strong>. Pour obtenir l'effet escompté, on utilisera l'en-tête HTTP {{httpheader("Content-Type")}} pour la ressource liée.</p></div>
  </dd>
  <dt>{{htmlattrdef("methods")}} {{Non-standard_inline}}</dt>
  <dd>La valeur de cet attribut fournit des informations quant aux fonctions qui peuvent être utilisées sur l'objet lié. Les valeurs sont généralement des méthodes HTTP mais elles peuvent également inclure des informations en avance sur le lien (le navigateur pourrait par exemple choisir un affichage différent pour un lien selon la méthode utilisée). Cet attribut n'est pas pris en charge de façon correcte, y compris par le navigateur qui le définit, Internet Explorer 4. Voir <a href="https://msdn.microsoft.com/en-us/library/ms534168%28VS.85%29.aspx" rel="external nofollow">la page MSDN sur la propriété <code>methods</code></a>.</dd>
@@ -151,10 +149,12 @@ translation_of: Web/HTML/Element/link
  <dd>Cet attribut permet d'identifier une ressource qui sera nécessaire dans la suite de la navigation et que l'agent utilisateur devrait télécharger. Cela permet à l'agent utilisateur d'avoir un meilleur temps de réponse lorsque la ressource sera nécessaire.</dd>
  <dt>{{htmlattrdef("rev")}}{{obsolete_inline}}</dt>
  <dd>La valeur de cet attribut décrit le lien entre le document courant et la ressource liée (définie par l'attribut {{htmlattrxref("href", "link")}}). Cet attribut définit donc la relation réciproque à la relation décrite par l'attribut <code>rel</code>. <a href="/fr/docs/Web/HTML/Types_de_lien">Les types de lien</a> utilisés pour cet attribut sont semblables aux valeurs autorisés par {{htmlattrxref("rel", "link")}}.
- <div class="note"><strong>Note d'utilisation :</strong> cet attribut est obsolète en HTML5 <strong>et ne doit pas être utilisé</strong>. Pour obtenir le même effet, on utilisera l'attribut {{htmlattrxref("rel", "link")}} avec la valeur réciproque <a href="/fr/docs/Web/HTML/Types_de_lien">pour le type de lien</a>, (<code>made</code> devrait par exemple être remplacé par <code>author</code>). Cet attribut ne signifie pas « révision » et ne doit pas être utilisé comme un numéro de version.</div>
+ <div class="note">
+   <p><strong>Note :</strong> cet attribut est obsolète en HTML5 <strong>et ne doit pas être utilisé</strong>. Pour obtenir le même effet, on utilisera l'attribut {{htmlattrxref("rel", "link")}} avec la valeur réciproque <a href="/fr/docs/Web/HTML/Types_de_lien">pour le type de lien</a>, (<code>made</code> devrait par exemple être remplacé par <code>author</code>). Cet attribut ne signifie pas « révision » et ne doit pas être utilisé comme un numéro de version.</p>
+ </div>
 
  <div class="note">
- <p><strong>Note </strong><strong>:</strong> La spécification actuelle de HTML 5.2 du W3C n'indique plus l'attribut <code>rev</code> comme obsolète. En revanche, la spécification du WHATWG le considère toujours comme obsolète. Tant que cette incohérence n'est pas résolue, mieux vaut considérer cet attribut comme obsolète.</p>
+ <p><strong>Note :</strong> La spécification actuelle de HTML 5.2 du W3C n'indique plus l'attribut <code>rev</code> comme obsolète. En revanche, la spécification du WHATWG le considère toujours comme obsolète. Tant que cette incohérence n'est pas résolue, mieux vaut considérer cet attribut comme obsolète.</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("target")}}{{Non-standard_inline}}</dt>
@@ -167,7 +167,7 @@ translation_of: Web/HTML/Element/link
 
 <p>Pour associer une feuille de style à la page courante, on utilisera la syntaxe suivante :</p>
 
-<pre class="brush: html notranslate">&lt;link href="style.css" rel="stylesheet"&gt;
+<pre class="brush: html">&lt;link href="style.css" rel="stylesheet"&gt;
 </pre>
 
 <h3 id="Fournir_des_feuilles_de_style_alternatives">Fournir des feuilles de style alternatives</h3>
@@ -176,7 +176,7 @@ translation_of: Web/HTML/Element/link
 
 <p>L'utilisateur pourra choisir parmi ces feuilles de style via le menu « Affichage &gt; Style de la page ». Ainsi, un utilisateur pourra voir différentes versions d'une même page.</p>
 
-<pre class="brush: html notranslate">&lt;link href="default.css" rel="stylesheet" title="Mise en forme par défaut"&gt;
+<pre class="brush: html">&lt;link href="default.css" rel="stylesheet" title="Mise en forme par défaut"&gt;
 &lt;link href="joli.css" rel="alternate stylesheet" title="Joli"&gt;
 &lt;link href="simple.css" rel="alternate stylesheet" title="Simple"&gt;
 </pre>
@@ -185,7 +185,7 @@ translation_of: Web/HTML/Element/link
 
 <p>Il est possible de déterminer si une feuille de style a été chargée en écoutant l'évènement <code>load</code>. De la même façon, un évènement <code>error</code> indiquera qu'une erreur a eu lieu lors du traitement de la feuille de style:</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
   function sheetLoaded() {
     // faire quelque chose, sachant
     // que la feuille a été chargéee
@@ -201,7 +201,9 @@ translation_of: Web/HTML/Element/link
   onerror="sheetError()"&gt;
 </pre>
 
-<div class="note"><strong>Note :</strong> L'évènement <code>load</code> est déclenché une fois que la feuille de style et que le contenu associé ont été chargés et analysés et immédiatement avant que la mise en forme soit appliquée au contenu.</div>
+<div class="note">
+  <p><strong>Note :</strong> L'évènement <code>load</code> est déclenché une fois que la feuille de style et que le contenu associé ont été chargés et analysés et immédiatement avant que la mise en forme soit appliquée au contenu.</p>
+</div>
 
 <h3 id="Exemples_avec_preload">Exemples avec <code>preload</code></h3>
 

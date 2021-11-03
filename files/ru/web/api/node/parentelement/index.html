@@ -9,13 +9,13 @@ translation_of: Web/API/Node/parentElement
 
 <p>Свойство <code><strong>Node.parentElement</strong></code> только для чтения, возвращает родителя узла DOM {{domxref("Element")}}, или <code>null</code> если узел не имеет родителя, или его родитель не DOM {{domxref("Element")}}.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><em>parentElement</em> = <em>node</em>.parentElement</pre>
 
 <p><code>parentElement</code> это родительский элемент текущего узла. Это всегда объект DOM {{domxref("Element")}}, или <code>null</code>.</p>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush:js">if (node.parentElement) {
     node.parentElement.style.color = "red";
@@ -25,15 +25,15 @@ translation_of: Web/API/Node/parentElement
 
 <p>В некоторых браузерах, свойство <code>parentElement</code> определено только для узлов, которые сами {{domxref("Element")}}. В частности, не определено для текстовых узлов.</p>
 
-<p>{{Compat("api.Node.parentElement")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <ul>
  <li>{{spec("http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#parent-element", "DOM Level 4: Node.parentElement", "WD")}}</li>
 </ul>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{domxref("Node.parentNode")}}</li>
