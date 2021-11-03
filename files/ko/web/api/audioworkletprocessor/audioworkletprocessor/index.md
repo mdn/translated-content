@@ -17,7 +17,9 @@ browser-compat: api.AudioWorkletProcessor.AudioWorkletProcessor
 
 ## 구문
 
-> **참고:** `AudioWorkletProcessor` 와 이것으로부터 파생된 클래스들은 사용자에 의해 제공된 코드로부터 직접적으로 초기화될 수 없습니다. 대신, 이것들은 오직 연관된 {{domxref("AudioWorkletNode")}}들의 생성에 의해서만 내부적으로 생성됩니다.
+> **참고:** `AudioWorkletProcessor` 와 이것으로부터 파생된 클래스들은
+> 사용자에 의해 제공된 코드로부터 직접적으로 초기화될 수 없습니다.
+> 대신, 이것들은 오직 연관된 {{domxref("AudioWorkletNode")}}들의 생성에 의해서만 내부적으로 생성됩니다.
 
 ```js
 new AudioWorkletProcessor(options);
