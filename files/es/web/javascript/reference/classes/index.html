@@ -218,7 +218,10 @@ p.hablar();</pre>
 
 <pre class="notranslate"><code>var Animal = {
   hablar() {
-    console.log(this.nombre + 'hace ruido.');
+    console.log(this.nombre + ' hace ruido.');
+  },
+  comer() {
+    console.log(this.nombre + ' se alimenta.');
   }
 };
 
@@ -231,10 +234,12 @@ class Perro {
   }
 }
 
+// Solo adjunta los métodos aún no definidos
 Object.setPrototypeOf(Perro.prototype, Animal);
 
 var d = new Perro('Mitzie');
-d.hablar();</code></pre>
+d.hablar(); // Mitzie ladra.
+d.comer(); // Mitzie se alimenta.</code></pre>
 
 <h2 id="Especies">Especies</h2>
 
@@ -243,7 +248,7 @@ d.hablar();</code></pre>
 <p>Por ejemplo, cuando se usan metodos del tipo {{jsxref("Array.map", "map()")}} que devuelven el constructor por defecto, se quiere que esos métodos devuelvan un objeto padre Array, en vez de MyArray. El símbolo {{jsxref("Symbol.species")}} permite hacer:</p>
 
 <pre class="brush: js notranslate"><code>class MyArray extends Array {
-  // Sobre escribe species sobre el constructor padre Array
+  // Sobreescribe species sobre el constructor padre Array
   static get [Symbol.species]() { return Array; }
 }
 
