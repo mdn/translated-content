@@ -12,26 +12,26 @@ original_slug: Glossaire/Boolean
 ---
 <p>En informatique, un <strong>booléen</strong> est un type de données logique qui ne peut prendre que deux valeurs : <code>true</code><strong> </strong><em>(vrai)</em><strong> </strong>ou <code>false</code><em> (faux)</em>. Par exemple, en JavaScript, les conditions booléennes sont souvent ouvertes pour décider quelle section de code doit être exécutée (comme dans l'<a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/if...else">instruction If</a>) ou répétée (comme pour une <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/for">boucle For</a>).</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">/* JavaScript instruction if */</span>
-<span class="keyword token">if</span> <span class="punctuation token">(</span>boolean conditional<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-   <span class="comment token">// code à exécuter si la condition est true <em>(vrai)</em></span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">/* JavaScript instruction if */
+if (boolean conditional) {
+   // code à exécuter si la condition est true <em>(vrai)</em>
+}
 
-<span class="keyword token">if</span> <span class="punctuation token">(</span>boolean conditional<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"boolean conditional resolved to true"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"boolean conditional resolved to false"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+if (boolean conditional) {
+  console.log("boolean conditional resolved to true");
+} else {
+  console.log("boolean conditional resolved to false");
+}
 
 
-<span class="comment token">/* JavaScript boucle for */</span>
-<span class="keyword token">for</span> <span class="punctuation token">(</span>control variable<span class="punctuation token">;</span> boolean conditional<span class="punctuation token">;</span> counter<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="comment token">// </span></code> <span id="result_box" lang="fr"><span>code à exécuter répétitivement si la condition est vraie</span></span> <code class="language-js">
-<span class="punctuation token">}</span>
+/* JavaScript boucle for */
+for (control variable; boolean conditional; counter) {
+  // </code> code à exécuter répétitivement si la condition est vraie <code class="language-js">
+}
 
-<span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> i<span class="operator token">=</span><span class="number token">0</span><span class="punctuation token">;</span> i <span class="operator token">&lt;</span> <span class="number token">4</span><span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"I print only when the boolean conditional is true"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+for (var i=0; i &lt; 4; i++) {
+  console.log("I print only when the boolean conditional is true");
+}</code></pre>
 
 <h2 id="Pour_Approfondir">Pour Approfondir</h2>
 

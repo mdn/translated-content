@@ -19,65 +19,65 @@ original_slug: Glossaire/Fonction
 
 <p>Une <strong>fonction anonyme</strong> est une fonction sans nom de fonction :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span><span class="punctuation token">}</span><span class="punctuation token">;</span>
-<span class="comment token">// ou en utilisant la notation de flèche de ECMAScript 2015</span>
-<span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span><span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function () {};
+// ou en utilisant la notation de flèche de ECMAScript 2015
+() =&gt; {};</code></pre>
 
 <p>Une <strong>fonction nommée</strong> est une fonction avec un nom de fonction :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">foo</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span><span class="punctuation token">}</span><span class="punctuation token">;</span>
-<span class="comment token">// ou en utilisant la notation de flèche de ECMAScript 2015</span>
-<span class="keyword token">const</span> foo <span class="operator token">=</span> <span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span><span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function foo() {};
+// ou en utilisant la notation de flèche de ECMAScript 2015
+const foo = () =&gt; {};</code></pre>
 
 <p>Une <strong>fonction imbriquée (ou fonction interne)</strong> est une fonction à l'intérieur d'une autre fonction (<em><code>square</code></em> dans l'exemple suivant). Une <strong>fonction externe</strong> est une fonction qui contient une fonction (<em><code>addSquares</code></em> dans l'exemple suivant) :</p>
 
 <dl>
 </dl>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">addSquares</span><span class="punctuation token">(</span>a<span class="punctuation token">,</span>b<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-   <span class="keyword token">function</span> <span class="function token">square</span><span class="punctuation token">(</span>x<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">return</span> x <span class="operator token">*</span> x<span class="punctuation token">;</span>
-   <span class="punctuation token">}</span>
-   <span class="keyword token">return</span> <span class="function token">square</span><span class="punctuation token">(</span>a<span class="punctuation token">)</span> <span class="operator token">+</span> <span class="function token">square</span><span class="punctuation token">(</span>b<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span>
-<span class="comment token">//En utilisant la notation de flèche de ECMAScript 2015</span>
-<span class="keyword token">const</span> addSquares <span class="operator token">=</span> <span class="punctuation token">(</span>a<span class="punctuation token">,</span>b<span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
-   <span class="keyword token">const</span> square <span class="operator token">=</span> x <span class="operator token">=</span><span class="operator token">&gt;</span> x<span class="operator token">*</span>x<span class="punctuation token">;</span>
-   <span class="keyword token">return</span> <span class="function token">square</span><span class="punctuation token">(</span>a<span class="punctuation token">)</span> <span class="operator token">+</span> <span class="function token">square</span><span class="punctuation token">(</span>b<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function addSquares(a,b) {
+   function square(x) {
+      return x * x;
+   }
+   return square(a) + square(b);
+};
+//En utilisant la notation de flèche de ECMAScript 2015
+const addSquares = (a,b) =&gt; {
+   const square = x =&gt; x*x;
+   return square(a) + square(b);
+};</code></pre>
 
 <p>Une <strong>fonction récursive</strong> est une fonction qui fait appel à elle-même. Voir {{Glossary("Recursion","récursion")}}.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">loop</span><span class="punctuation token">(</span>x<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-   <span class="keyword token">if</span> <span class="punctuation token">(</span>x <span class="operator token">&gt;=</span> <span class="number token">10</span><span class="punctuation token">)</span>
-      <span class="keyword token">return</span><span class="punctuation token">;</span>
-   <span class="function token">loop</span><span class="punctuation token">(</span>x <span class="operator token">+</span> <span class="number token">1</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span>
-<span class="comment token">//En utilisant la notation de flèche de ECMAScript 2015</span>
-<span class="keyword token">const</span> loop <span class="operator token">=</span> x <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
-   <span class="keyword token">if</span> <span class="punctuation token">(</span>x <span class="operator token">&gt;=</span> <span class="number token">10</span><span class="punctuation token">)</span>
-      <span class="keyword token">return</span><span class="punctuation token">;</span>
-   <span class="function token">loop</span><span class="punctuation token">(</span>x <span class="operator token">+</span> <span class="number token">1</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function loop(x) {
+   if (x &gt;= 10)
+      return;
+   loop(x + 1);
+};
+//En utilisant la notation de flèche de ECMAScript 2015
+const loop = x =&gt; {
+   if (x &gt;= 10)
+      return;
+   loop(x + 1);
+};</code></pre>
 
-<p><span id="result_box" lang="fr"><span>Une <strong>expression de fonction invoquée immédiatement</strong> (IIFE) est une fonction appelée directement après le chargement de la fonction dans le compilateur du navigateur.</span> <span>La façon d'identifier une IIFE est de localiser les parenthèses gauche et droite supplémentaires à la fin de la déclaration de la fonction.</span></span></p>
+<p>Une <strong>expression de fonction invoquée immédiatement</strong> (IIFE) est une fonction appelée directement après le chargement de la fonction dans le compilateur du navigateur. La façon d'identifier une IIFE est de localiser les parenthèses gauche et droite supplémentaires à la fin de la déclaration de la fonction.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Erreur (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)</span>
-<span class="comment token">/*
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// Erreur (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
+/*
 ​function foo() {
     console.log('Hello Foo');
 }();
-*/</span>
+*/
 
-<span class="punctuation token">(</span><span class="keyword token">function</span> <span class="function token">foo</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Hello Foo"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+(function foo() {
+    console.log("Hello Foo");
+}());
 
-<span class="punctuation token">(</span><span class="keyword token">function</span> <span class="function token">food</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Hello Food"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+(function food() {
+    console.log("Hello Food");
+})();</code></pre>
 
-<p><span id="result_box" lang="fr"><span>Si vous souhaitez en savoir plus sur les IIFE, consultez la page suivante sur Wikipedia : <a href="https://fr.wikipedia.org/wiki/JavaScript#Expressions_de_fonctions_imm%C3%A9diatement_invoqu%C3%A9es">Expression de la fonction immédiatement invoquée</a></span></span></p>
+<p>Si vous souhaitez en savoir plus sur les IIFE, consultez la page suivante sur Wikipedia : <a href="https://fr.wikipedia.org/wiki/JavaScript#Expressions_de_fonctions_imm%C3%A9diatement_invoqu%C3%A9es">Expression de la fonction immédiatement invoquée</a></p>
 
 <h2 id="En_apprendre_plus">En apprendre plus</h2>
 

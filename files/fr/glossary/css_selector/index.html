@@ -15,39 +15,39 @@ original_slug: Glossaire/Sélecteur_CSS
 
 <p>Considérez ce code CSS :</p>
 
-<pre class="brush: css line-numbers  language-css"><code class="language-css"><span class="selector token">p </span><span class="punctuation token">{</span>
-  <span class="property token">color</span><span class="punctuation token">:</span> green<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: css line-numbers  language-css"><code class="language-css">p {
+  color: green;
+}
 
-<span class="selector token">div<span class="class token">.warning</span> </span><span class="punctuation token">{</span>
-  <span class="property token">width</span><span class="punctuation token">:</span> <span class="number token">100%</span><span class="punctuation token">;</span>
-  <span class="property token">border</span><span class="punctuation token">:</span> <span class="number token">2</span>px solid yellow<span class="punctuation token">;</span>
-  <span class="property token">color</span><span class="punctuation token">:</span> white<span class="punctuation token">;</span>
-  <span class="property token">background-color</span><span class="punctuation token">:</span> darkred<span class="punctuation token">;</span>
-  <span class="property token">padding</span><span class="punctuation token">:</span>  <span class="number token">0.8</span>em <span class="number token">0.8</span>em <span class="number token">0.6</span>em<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+div.warning {
+  width: 100%;
+  border: 2px solid yellow;
+  color: white;
+  background-color: darkred;
+  padding:  0.8em 0.8em 0.6em;
+}
 
-<span class="selector token"><span class="id token">#customized</span> </span><span class="punctuation token">{</span>
-  <span class="property token">font</span><span class="punctuation token">:</span> <span class="number token">16</span>px Lucida Grande, Arial, Helvetica, sans-serif<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+#customized {
+  font: 16px Lucida Grande, Arial, Helvetica, sans-serif;
+}</code></pre>
 
 <p>Les sélecteurs sont ici <code>"p"</code> (qui applique la couleur verte au texte de tout élément {{HTMLElement ("p")}}), <code>"div.warning"</code> (qui fait que tout élément {{HTMLElement ("div")}} appartenant à la {{Glossary ("Class", "classe CSS")}} <code>"warning"</code> ressemble à une boîte d'avertissement) et <code>"#customized"</code>, qui définit la police de base de l'élément avec l'ID <code>"customized"</code> à 16 -pixel Lucida Grande ou l'une des polices de secours.</p>
 
 <p>Nous pouvons ensuite appliquer ce CSS à du HTML, tel que :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>This is happy text.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;p&gt;This is happy text.&lt;/p&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>warning<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
+&lt;div class="warning"&gt;
   Be careful! There are wizards present, and they are quick to anger!
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
+&lt;/div&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>customized<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>This is happy text.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
+&lt;div id="customized"&gt;
+  &lt;p&gt;This is happy text.&lt;/p&gt;
 
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>warning<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
+  &lt;div class="warning"&gt;
     Be careful! There are wizards present, and they are quick to anger!
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
 <p>Le contenu de la page résultant ressemble à ceci:</p>
 

@@ -21,11 +21,11 @@ original_slug: Glossaire/Injection_SQL
 
 <p>Après l'entrée du nom d'utilisateur et du mot de passe, derrière l'interface graphique, les requêtes SQL fonctionnent comme suit :</p>
 
-<pre style="margin-left: 0px;"><strong><span style="color: #0000cd;">"SELECT Count(*) FROM Users WHERE Username=' " + txt.User.Text+" ' AND Password=' "+ txt.Password.Text+" ' ";</span></strong></pre>
+<pre style="margin-left: 0px;"><strong>"SELECT Count(*) FROM Users WHERE Username=' " + txt.User.Text+" ' AND Password=' "+ txt.Password.Text+" ' ";</strong></pre>
 
 <p>Supposons maintenant que l'utilisateur entre le nom d'utilisateur : admin et le mot de passe : mdp123, puis après avoir cliqué sur le bouton Connexion, la requête SQL s'exécutera comme suit:</p>
 
-<pre><strong><span style="color: #0000cd;">"SELECT Count(*) FROM Users WHERE Username=' admin ' AND Password=' mdp123 ' ";</span>
+<pre><strong>"SELECT Count(*) FROM Users WHERE Username=' admin ' AND Password=' mdp123 ' ";
 
 </strong></pre>
 
@@ -39,7 +39,7 @@ original_slug: Glossaire/Injection_SQL
 
 <p>Après avoir cliqué sur le bouton de connexion, la requête SQL fonctionnera comme suit :</p>
 
-<pre><strong><span style="color: #0000cd;">"SELECT Count(*) FROM Users WHERE Username=' admin ' AND Password=' anything 'or'1'='1 ' ";</span>
+<pre><strong>"SELECT Count(*) FROM Users WHERE Username=' admin ' AND Password=' anything 'or'1'='1 ' ";
 </strong></pre>
 
 <p>Regardez de plus près la section mot de passe de la requête ci-dessus.</p>
@@ -56,11 +56,11 @@ original_slug: Glossaire/Injection_SQL
 
 <p style="margin-left: 40px;">Avant d'exécuter les requêtes pour les informations d'identification de l'utilisateur, apportez les modifications suivantes :</p>
 
-<pre><span style="color: #0000ff;">$id = $_GET['id'] </span>
+<pre>$id = $_GET['id'] 
 
-<span style="color: #0000ff;">(1) $id = Stripslashes($id)</span>
+(1) $id = Stripslashes($id)
 
-<span style="color: #0000ff;">(2) $id = mysql_real_escape_String($id)</span></pre>
+(2) $id = mysql_real_escape_String($id)</pre>
 
 <p>Ainsi, en raison de (1) chaque guillemet simple (') dans la chaîne d'entrée est remplacé par des guillemets ("), et en raison de (2) avant chaque (') est ajouté un (/). La chaîne magique contrôlée échoue à contourner l'authentification et votre base de données reste sécurisée.</p>
 

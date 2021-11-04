@@ -18,7 +18,7 @@ original_slug: Glossaire/cacheable
 
 <p>Notez que certaines requêtes / réponses ne pouvant être mises en cache à un URI spécifique peuvent invalider des réponses précédemment mises en cache sur le même URI. Par exemple, un {{HTTPMethod("PUT")}} à pageX.html invalidera toutes les requêtes {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}} dans le même URI.</p>
 
-<p><span id="result_box" lang="fr"><span>Lorsque les deux, la méthode de la requête et l'état de la réponse, peuvent être mis en cache, la réponse à la requête peut être mise en cache :</span></span></p>
+<p>Lorsque les deux, la méthode de la requête et l'état de la réponse, peuvent être mis en cache, la réponse à la requête peut être mise en cache :</p>
 
 <pre>GET /pageX.html HTTP/1.1
 (…)
@@ -27,7 +27,7 @@ original_slug: Glossaire/cacheable
 (…)
 </pre>
 
-<p>Une requête {{HTTPMethod("PUT")}} ne peut pas être mise en cache. <span id="result_box" lang="fr"><span>De plus, elle invalide les données mises en cache pour une requête au même URI</span></span> via {{HTTPMethod("HEAD")}} ou {{HTTPMethod("GET")}} :</p>
+<p>Une requête {{HTTPMethod("PUT")}} ne peut pas être mise en cache. De plus, elle invalide les données mises en cache pour une requête au même URI via {{HTTPMethod("HEAD")}} ou {{HTTPMethod("GET")}} :</p>
 
 <pre>PUT /pageX.html HTTP/1.1
 (…)
