@@ -19,22 +19,22 @@ original_slug: Glossaire/Fonction
 
 <p>Une <strong>fonction anonyme</strong> est une fonction sans nom de fonction :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function () {};
+<pre class="brush: js">function () {};
 // ou en utilisant la notation de flèche de ECMAScript 2015
-() =&gt; {};</code></pre>
+() =&gt; {};</pre>
 
 <p>Une <strong>fonction nommée</strong> est une fonction avec un nom de fonction :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function foo() {};
+<pre class="brush: js">function foo() {};
 // ou en utilisant la notation de flèche de ECMAScript 2015
-const foo = () =&gt; {};</code></pre>
+const foo = () =&gt; {};</pre>
 
 <p>Une <strong>fonction imbriquée (ou fonction interne)</strong> est une fonction à l'intérieur d'une autre fonction (<em><code>square</code></em> dans l'exemple suivant). Une <strong>fonction externe</strong> est une fonction qui contient une fonction (<em><code>addSquares</code></em> dans l'exemple suivant) :</p>
 
 <dl>
 </dl>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function addSquares(a,b) {
+<pre class="brush: js">function addSquares(a,b) {
    function square(x) {
       return x * x;
    }
@@ -44,11 +44,11 @@ const foo = () =&gt; {};</code></pre>
 const addSquares = (a,b) =&gt; {
    const square = x =&gt; x*x;
    return square(a) + square(b);
-};</code></pre>
+};</pre>
 
 <p>Une <strong>fonction récursive</strong> est une fonction qui fait appel à elle-même. Voir {{Glossary("Recursion","récursion")}}.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function loop(x) {
+<pre class="brush: js">function loop(x) {
    if (x &gt;= 10)
       return;
    loop(x + 1);
@@ -58,11 +58,11 @@ const loop = x =&gt; {
    if (x &gt;= 10)
       return;
    loop(x + 1);
-};</code></pre>
+};</pre>
 
 <p>Une <strong>expression de fonction invoquée immédiatement</strong> (IIFE) est une fonction appelée directement après le chargement de la fonction dans le compilateur du navigateur. La façon d'identifier une IIFE est de localiser les parenthèses gauche et droite supplémentaires à la fin de la déclaration de la fonction.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// Erreur (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
+<pre class="brush: js">// Erreur (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 /*
 ​function foo() {
     console.log('Hello Foo');
@@ -75,7 +75,7 @@ const loop = x =&gt; {
 
 (function food() {
     console.log("Hello Food");
-})();</code></pre>
+})();</pre>
 
 <p>Si vous souhaitez en savoir plus sur les IIFE, consultez la page suivante sur Wikipedia : <a href="https://fr.wikipedia.org/wiki/JavaScript#Expressions_de_fonctions_imm%C3%A9diatement_invoqu%C3%A9es">Expression de la fonction immédiatement invoquée</a></p>
 

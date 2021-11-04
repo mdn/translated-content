@@ -18,25 +18,25 @@ original_slug: Glossaire/Hoisting
 
 <p>L'un des avantages du fait que JavaScript met en mémoire les déclarations des fonctions avant d'exécuter un quelconque segment de code, est que cela vous permet d'utiliser une fonction avant que nous ne la déclariez dans votre code. Par exemple :</p>
 
-<pre class="brush: js line-numbers  language-js"><code>function nomChat(nom) {
+<pre class="brush: js">function nomChat(nom) {
   console.log("Le nom de mon chat est " + nom);
 }
 
 nomChat("Tigrou");
 /*
 Le résultat du code ci-dessus est : "Le nom de mon chat est Tigrou"
-*/</code></pre>
+*/</pre>
 
 <p>Le fragment de code ci-dessus est la façon dont vous vous attendez à écrire le code pour qu'il fonctionne. Voyons maintenant ce qui se passe quand nous appelons la fonction avant de la déclarer :</p>
 
-<pre class="brush: js line-numbers  language-js"><code>nomChat("Chloé");
+<pre class="brush: js">nomChat("Chloé");
 
 function nomChat(nom) {
   console.log("Le nom de mon chat est " + nom);
 }
 /*
 Le résultat du code ci-dessus est : "Le nom de mon chat est Chloé"
-*/</code></pre>
+*/</pre>
 
 <p>Même si nous appelons d'abord la fonction dans notre code, avant que la fonction ne soit écrite, le code fonctionne néanmoins. Cela est dû à la façon dont l'exécution de contexte fonctionne en Javascript.</p>
 
@@ -44,14 +44,14 @@ Le résultat du code ci-dessus est : "Le nom de mon chat est Chloé"
 
 <h3 id="Exemple_technique_2">Exemple technique</h3>
 
-<pre class="brush: js line-numbers  language-js"><code>num = 6;
+<pre class="brush: js">num = 6;
 num + 7;
 var num;
-/* Ne donne aucune erreur tant que num est déclarée*/</code></pre>
+/* Ne donne aucune erreur tant que num est déclarée*/</pre>
 
 <p>JavaScript hisse seulement les déclarations, pas les initialisations. Si vous utilisez une variable qui est déclarée et initialisée après l'avoir utilisée, sa valeur sera indéfinie. Les deux exemples ci-dessous montrent le même comportement.</p>
 
-<pre class="brush: js line-numbers  language-js"><code>var x = 1; // Initialise x
+<pre class="brush: js">var x = 1; // Initialise x
 console.log(x + " " + y); // Affiche '1 undefined'
 var y = 2; // Initialise y
 
@@ -60,7 +60,7 @@ var y = 2; // Initialise y
 var x = 1; // Initialise x
 var y; // Déclare y
 console.log(x + " " + y); // Affiche '1 undefined'
-y = 2; // Initialise y</code>
+y = 2; // Initialise y
 </pre>
 
 <h3 id="Références_techniques">Références techniques</h3>

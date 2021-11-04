@@ -17,17 +17,15 @@ original_slug: Glossaire/Injection_SQL
 
 <h2 id="Comment_ça_marche">Comment ça marche ?</h2>
 
-<p><img alt="" src="http://www.infosemantics.com.au/sites/default/files/image/widget_tutorials/Updates_LoginScreen.png" style="height: 309px; width: 293px;"></p>
+<p><img alt="" src="http://www.infosemantics.com.au/sites/default/files/image/widget_tutorials/Updates_LoginScreen.png"></p>
 
 <p>Après l'entrée du nom d'utilisateur et du mot de passe, derrière l'interface graphique, les requêtes SQL fonctionnent comme suit :</p>
 
-<pre style="margin-left: 0px;"><strong>"SELECT Count(*) FROM Users WHERE Username=' " + txt.User.Text+" ' AND Password=' "+ txt.Password.Text+" ' ";</strong></pre>
+<pre>"SELECT Count(*) FROM Users WHERE Username=' " + txt.User.Text+" ' AND Password=' "+ txt.Password.Text+" ' ";</pre>
 
 <p>Supposons maintenant que l'utilisateur entre le nom d'utilisateur : admin et le mot de passe : mdp123, puis après avoir cliqué sur le bouton Connexion, la requête SQL s'exécutera comme suit:</p>
 
-<pre><strong>"SELECT Count(*) FROM Users WHERE Username=' admin ' AND Password=' mdp123 ' ";
-
-</strong></pre>
+<pre>"SELECT Count(*) FROM Users WHERE Username=' admin ' AND Password=' mdp123 ' ";</pre>
 
 <p>Si les informations d'identification sont correctes, l'utilisateur est autorisé à se connecter, c'est donc un mécanisme très simple (et non sécurisé). Les pirates utilisent cette insécurité pour obtenir un accès non autorisé.</p>
 
@@ -54,7 +52,7 @@ original_slug: Glossaire/Injection_SQL
 
 <h2 id="Comment_l'empêcher">Comment l'empêcher ?</h2>
 
-<p style="margin-left: 40px;">Avant d'exécuter les requêtes pour les informations d'identification de l'utilisateur, apportez les modifications suivantes :</p>
+<p>Avant d'exécuter les requêtes pour les informations d'identification de l'utilisateur, apportez les modifications suivantes :</p>
 
 <pre>$id = $_GET['id'] 
 

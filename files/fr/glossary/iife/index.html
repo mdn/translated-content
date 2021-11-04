@@ -18,20 +18,20 @@ original_slug: Glossaire/IIFE
 
 <p>La fonction devient une expression de fonction qui est immédiatement exécutée. La variable dans l'expression ne peut pas être atteinte de l'extérieur.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">(function () {
+<pre class="brush: js">(function () {
     var aName = "Barry";
 })();
 // Le nom de la variable n'est pas accessible depuis le périmètre externe
-aName // lancement "Exception ReferenceError: aName n'est pas défini"</code></pre>
+aName // lancement "Exception ReferenceError: aName n'est pas défini"</pre>
 
 <p>Affecter l'IIFE à une variable ne la stocke pas mais reçoit son résultat.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var result = (function () {
+<pre class="brush: js">var result = (function () {
     var name = "Barry";
     return name;
 })();
 // Crée immédiatement la sortie: 
-result; // "Barry"</code></pre>
+result; // "Barry"</pre>
 
 <h2 id="Pour_approfondir">Pour approfondir</h2>
 
