@@ -18,9 +18,9 @@ original_slug: Glossaire/Pistes_de_grille
 
 <p><span id="result_box" lang="fr"><span>Lors de la définition de pistes de grille avec</span></span> {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-rows")}}, <span id="result_box" lang="fr"><span>vous pouvez utiliser n'importe quelle unité de longueur, ainsi que l'unité flexible, qui indique une partie de l'espace disponible dans le conteneur de la grille.</span> <span>L'exemple ci-dessous montre une grille avec trois pistes de colonnes, l'une de 200 pixels, la seconde de 1fr, la troisième de 3fr.</span> <span>Une fois que les 200 pixels ont été soustraits de l'espace disponible dans le conteneur de la grille, l'espace restant est divisé en 4. Une partie est donnée à la colonne 2, 3 parties à la colonne 3.</span></span></p>
 
-<div id="example_1">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<h2 id="Exemple">Exemple</h2>
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -36,7 +36,6 @@ original_slug: Glossaire/Pistes_de_grille
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -53,8 +52,8 @@ original_slug: Glossaire/Pistes_de_grille
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('example_1', '500', '230') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Exemple', '500', '230') }}</p>
+
 
 <h2 id="Taille_de_piste_dans_la_grille_implicite">Taille de piste dans la grille implicite</h2>
 

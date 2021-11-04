@@ -10,9 +10,9 @@ original_slug: Glossaire/Lignes_de_grille_(lines)
 ---
 <p>Les <strong>lignes de grille</strong> sont créées avec la définition  des {{glossary("Grid Tracks", "pistes")}} (<em>tracks</em>) dans la grille explicite pour <a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Grid_Layout">une grille CSS</a>. Dans l'exemple suivant, est présentée une grille qui a 3 pistes de colonnes et 2 pistes de lignes. <span id="result_box" lang="fr"><span>Cela nous donne 4 lignes de colonnes <em>(column lines</em>) et 3 lignes de lignes <em>(row lines)</em>.</span></span></p>
 
-<div id="example_1">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<h2 id="Exemple">Exemple</h2>
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -31,7 +31,6 @@ original_slug: Glossaire/Lignes_de_grille_(lines)
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
@@ -49,7 +48,7 @@ original_slug: Glossaire/Lignes_de_grille_(lines)
 }
 </pre>
 
-<p>{{ EmbedLiveSample('example_1', '500', '250') }}</p>
+<p>{{ EmbedLiveSample('Exemple', '500', '250') }}</p>
 
 <p><span id="result_box" lang="fr"><span>Les lignes peuvent être adressées en utilisant leur numéro de ligne.</span> <span>Dans une langue de gauche à droite telle que l'anglais, la ligne de colonne 1 sera sur la gauche de la grille, la ligne de ligne 1 en haut.</span> <span>Les chiffres des lignes respectent le</span></span> <a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_%C3%A9criture">mode d'écriture</a> du document et <span id="result_box" lang="fr"><span>ainsi, dans une langue écrite de droite à gauche par exemple, la ligne de colonne 1 sera sur la droite de la grille.</span> <span>L'image ci-dessous montre les numéros de ligne de la grille, en supposant que la langue est écrite de gauche à droite.</span></span></p>
 
@@ -62,9 +61,7 @@ original_slug: Glossaire/Lignes_de_grille_(lines)
 
 <p><span id="result_box" lang="fr"><span>Après avoir créé une grille, vous pouvez placer des éléments sur la grille par numéro de ligne.</span> <span>Dans l'exemple suivant, l'élément est positionné de la ligne de colonne 1 à la ligne de colonne 3 et de la ligne de ligne 1 à la ligne de ligne 3.</span></span></p>
 
-<div id="example_2">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -83,7 +80,6 @@ original_slug: Glossaire/Lignes_de_grille_(lines)
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="item"&gt;Item&lt;/div&gt;
@@ -103,16 +99,13 @@ original_slug: Glossaire/Lignes_de_grille_(lines)
 }
 </pre>
 
-<p>{{ EmbedLiveSample('example_2', '500', '250') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Placement_des_éléments_sur_la_grille_par_numéro_de_ligne', '500', '250') }}</p>
 
 <h2 id="Nommage_des_lignes">Nommage des lignes</h2>
 
 <p><span id="result_box" lang="fr"><span>Les lignes créées dans la grille explicite peuvent être nommées, en ajoutant le nom entre crochets avant ou après les informations de dimensionnement de la piste.</span> <span>Lorsque vous placez un objet, vous pouvez utiliser ces noms à la place du numéro de ligne, comme illustré ci-dessous.</span></span></p>
 
-<div id="example_3">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -131,7 +124,6 @@ original_slug: Glossaire/Lignes_de_grille_(lines)
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="item"&gt;Item&lt;/div&gt;
@@ -151,8 +143,7 @@ original_slug: Glossaire/Lignes_de_grille_(lines)
 }
 </pre>
 
-<p>{{ EmbedLiveSample('example_3', '500', '250') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Nommage_des_lignes', '500', '250') }}</p>
 
 <h2 id="En_apprendre_plus">En apprendre plus</h2>
 
