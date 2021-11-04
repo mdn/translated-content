@@ -98,7 +98,7 @@ original_slug: Web/API/WindowBase64/Décoder_encoder_en_base64
 
 <h3 id="Première_solution_–_échapper_la_chaîne_avant_de_lencoder">Première solution  – échapper la chaîne avant de l'encoder</h3>
 
-<pre class="brush:js notranslate">function utf8_to_b64( str ) {
+<pre class="brush:js">function utf8_to_b64( str ) {
   return window.btoa(unescape(encodeURIComponent( str )));
 }
 
@@ -116,7 +116,7 @@ b64_to_utf8('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"</pre>
 
 <div class="note"><strong>Note :</strong> Le code suivant peut également être utilisé pour obtenir un <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer">ArrayBuffer</a> depuis une chaîne en base 64 (et vice-versa, voir ci-après). <strong>Pour un article concernant une bibliothèque complète sur les tableaux typés, voir <a href="/fr/Add-ons/Code_snippets/StringView" title="/fr/Add-ons/Code_snippets/StringView">cet article</a></strong>.</div>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js">"use strict";
 
 /*\
 |*|
@@ -292,7 +292,7 @@ function strToUTF8Arr (sDOMStr) {
 
 <h4 id="Tests">Tests</h4>
 
-<pre class="brush: js notranslate">/* Tests */
+<pre class="brush: js">/* Tests */
 
 var entréeChaîne = "base64 \u2014 Mozilla Developer Network";
 
@@ -312,7 +312,7 @@ alert(sortieChaîne);</pre>
 
 <p>Ces fonctions permettent de créer des objets <a href="/fr/docs/Web/API/Uint8Array">uint8Arrays</a> ou <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer">arrayBuffers</a> à partir de chaînes en base64 :</p>
 
-<pre class="brush: js notranslate">var monTableau = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw=="); // "Base 64 \u2014 Mozilla Developer Network"
+<pre class="brush: js">var monTableau = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw=="); // "Base 64 \u2014 Mozilla Developer Network"
 
 var monBuffer = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==").buffer; // "Base 64 \u2014 Mozilla Developer Network"
 

@@ -12,7 +12,7 @@ original_slug: Glossaire/Type_coercion
 
 <h2 id="Exemples">Exemples</h2>
 
-<pre class="brush: js notranslate">const valeur1 = '5';
+<pre class="brush: js">const valeur1 = '5';
 const valeur2 = 9;
 let somme = valeur1 + valeur2;
 
@@ -22,7 +22,7 @@ console.log(somme);</pre>
 
 <p>Le compilateur aurait pu coercer le <code>5</code> en un nombre et retourner la somme de <code>14</code>, mais ce n'est pas ce qu'il a fait. Pour pouvoir retourner <code>14</code>, il aurait fallu explicitement convertir le 5 en un nombre grâce à la méthode {{jsxref("Global_Objects/Number", "Number()")}}:</p>
 
-<pre class="brush: js notranslate">somme = Number(valeur1) + valeur2;</pre>
+<pre class="brush: js">somme = Number(valeur1) + valeur2;</pre>
 
 <section id="Quick_links">
 <ol>
