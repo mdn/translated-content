@@ -30,7 +30,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog
 
 <p>Si une boîte de dialogue a une barre de titre visible, le texte de cette barre peut être utilisé comme label pour la boîte elle-même. La meilleure façon de le faire est d’utiliser l’attribut <code>aria-labelledby</code> pour l’élément <code>role="dialog"</code>. De plus, si la boîte de dialogue contient une description supplémentaire, en plus du titre de la boîte, le texte de la description peut être associé avec la boîte de dialogue à l’aide de l’attribut <code>aria-describedby</code>. Cette approche est illustrée dans l’extrait de code ci-dessous :</p>
 
-<pre class="brush: html notranslate">&lt;div <strong>role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"</strong>&gt;
+<pre class="brush: html">&lt;div <strong>role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"</strong>&gt;
     &lt;h2 <strong>id="dialog1Title"</strong>&gt;Vos informations personnelles ont correctement été actualisées.&lt;/h2&gt;
 
     &lt;p <strong>id="dialog1Desc"</strong>&gt;Vous pouvez modifier vos informations personnelles à n’importe quel moment depuis la section « Compte utilisateur. »&lt;/p&gt;
@@ -69,7 +69,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog
 
 <h4 id="Exemple_1_une_boîte_de_dialogue_contenant_un_formulaire">Exemple 1 : une boîte de dialogue contenant un formulaire</h4>
 
-<pre class="brush: html notranslate">&lt;div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"&gt;
+<pre class="brush: html">&lt;div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"&gt;
     &lt;h2 id="dialog1Title"&gt;Formulaire de souscription&lt;/h2&gt;
 
     &lt;p id="dialog1Desc"&gt;Nous ne partageons pas ces informations avec des tierces parties.&lt;/p&gt;
@@ -106,7 +106,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog
 
 <p>Pour prendre en charge les navigateurs ou les produits de technologies d’assistance qui ne prennent pas ARIA en charge, il est également possible d’appliquer le balisage <code>dialog</code> à un élément <code>fieldset</code> comme contenu alternatif. Ainsi le titre de la boîte de dialogue sera toujours annoncé correctement :</p>
 
-<pre class="brush: html notranslate"><strong>&lt;fieldset role="dialog"</strong> aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"&gt;
+<pre class="brush: html"><strong>&lt;fieldset role="dialog"</strong> aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"&gt;
     <strong>&lt;legend&gt;</strong>
         &lt;span id="dialog1Title"&gt;Vos informations personnelles ont correctement été actualisées.&lt;/span&gt;
         &lt;span id="dialog1Desc"&gt;Vous pouvez modifier vos informations personnelles à n’importe quel moment depuis la section « Compte utilisateur ».&lt;/span&gt;
