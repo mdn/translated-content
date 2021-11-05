@@ -3,105 +3,92 @@ title: font-language-override
 slug: Web/CSS/font-language-override
 tags:
   - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
+  - CSS フォント
+  - CSS プロパティ
+  - リファレンス
   - font-language-override
   - l10n
-  - 'recipe:css-property'
+  - recipe:css-property
+browser-compat: css.properties.font-language-override
 translation_of: Web/CSS/font-language-override
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>font-language-override</code></strong> は CSS のプロパティで、書体で言語に固有の字形の使用を制御します。</p>
+**`font-language-override`** は CSS のプロパティで、書体で言語に固有の字形の使用を制御します。
 
-<pre class="brush:css no-line-numbers notranslate">/* キーワード値 */
+```css
+/* キーワード値 */
 font-language-override: normal;
 
-/* &lt;string&gt; 値 */
+/* <string> 値 */
 font-language-override: "ENG";  /* 英語の字形 */
 font-language-override: "TRK";  /* トルコ語の字形 */
 
 /* グローバル値 */
 font-language-override: initial;
 font-language-override: inherit;
+font-language-override: revert;
 font-language-override: unset;
-</pre>
+```
 
-<p>既定では、 HTML の <code>lang</code> 属性がブラウザーにその言語に特化してデザインされた字形を表示することを指示します。例えば、多くのフォントが合字 <code>fi</code> に特別な文字を持っており、 "i" の点を "f" に統合しています。しかし、言語がトルコ語に設定された場合、その書体では統合した字形を使用しません。トルコ語では "i" に、点が付いたもの (<code>i</code>) と点が付かないもの (<code>ı</code>) の二つの種類があり、この合字を使用すると点が付いた "i" を点がない "ı" に誤った変換をしてしまいます。</p>
+既定では、 HTML の `lang` 属性がブラウザーにその言語に特化してデザインされた字形を表示することを指示します。例えば、多くのフォントが合字 `fi` に特別な文字を持っており、 "i" の点を "f" に統合しています。しかし、言語がトルコ語に設定された場合、その書体では統合した字形を使用しません。トルコ語では "i" に、点が付いたもの (`i`) と点が付かないもの (`ı`) の二つの種類があり、この合字を使用すると点が付いた "i" を点がない "ı" に誤った変換をしてしまいます。
 
-<p><code>font-language-override</code> プロパティで、その書体における特定の言語の動作を上書きすることができます。これは例えば、使用している書体でその言語に対して正しい対応が行われていないときに便利です。例えば、ある書体がアゼルバイジャン語の正しい規則を持っていない場合、同様の規則に従うトルコ語の字形を強制的に使用することができます。</p>
+`font-language-override` プロパティで、その書体における特定の言語の動作を上書きすることができます。これは例えば、使用している書体でその言語に対して正しい対応が行われていないときに便利です。例えば、ある書体がアゼルバイジャン語の正しい規則を持っていない場合、同様の規則に従うトルコ語の字形を強制的に使用することができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>font-language-override</code> プロパティは、キーワード <code>normal</code> または一つの <code>&lt;string&gt;</code> として指定します。</p>
+`font-language-override` プロパティは、キーワード `normal` または一つの `<string>` として指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>normal</code></dt>
- <dd><code>lang</code> 属性で指定された言語で適切なフォントの字形を使用するよう、ブラウザーに指示します。</dd>
- <dt>{{cssxref("string")}}</dt>
- <dd>文字列で指定された言語で適切なフォントの字形を使用するよう、ブラウザーに指示します。値は <a href="http://www.microsoft.com/typography/otspec/languagetags.htm">OpenType language system</a> にある言語タグと一致している必要があります。例えば、 "ENG" は英語で、 "KOR" は韓国語です。</dd>
-</dl>
+- `normal`
+  - : `lang` 属性で指定された言語で適切なフォントの字形を使用するよう、ブラウザーに指示します。
+- {{cssxref("string")}}
+  - : 文字列で指定された言語で適切なフォントの字形を使用するよう、ブラウザーに指示します。値は [OpenType language system](https://www.microsoft.com/typography/otspec/languagetags.htm) にある言語タグと一致している必要があります。例えば、 "ENG" は英語で、 "KOR" は韓国語です。
 
-<h2 id="公式定義">公式定義</h2>
+## 公式定義
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式定義
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="Using_Danish_glyphs" name="Using_Danish_glyphs">デンマーク語の文字の使用Using Danish glyphs</h3>
+<h3 id="Using_Danish_glyphs">デンマーク語の文字の使用</h3>
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p class="para1"&gt;Default language setting.&lt;/p&gt;
-&lt;p class="para2"&gt;This is a string with the &lt;code&gt;font-language-override&lt;/code&gt; set to <code>Danish.</code>&lt;/p&gt;
-</pre>
+```html
+<p class="para1">Default language setting.</p>
+<p class="para2">This is a string with the <code>font-language-override</code> set to Danish.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">p.para1 {
+```css
+p.para1 {
   font-language-override: normal;
 }
 
 p.para2 {
   font-language-override: "DAN";
-}</pre>
+}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{ EmbedLiveSample('Using_Danish_glyphs', '600', '', '', 'Web/CSS/font-language-override') }}</p>
+{{ EmbedLiveSample('Using_Danish_glyphs', '600', '', '', 'Web/CSS/font-language-override') }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Fonts', '#propdef-font-language-override', 'font-language-override')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.font-language-override")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{cssxref("font-variant")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-kerning")}}</li>
-</ul>
+- {{cssxref("font-variant")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-kerning")}}

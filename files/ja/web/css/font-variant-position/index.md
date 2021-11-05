@@ -5,16 +5,17 @@ tags:
   - CSS
   - CSS フォント
   - CSS プロパティ
-  - Reference
+  - リファレンス
 translation_of: Web/CSS/font-variant-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS の <strong><code>font-variant-position</code></strong> プロパティは、上付き文字または下付き文字として配置された小さな代替文字の使用を制御します。</p>
+**`font-variant-position`** は CSS のプロパティで、上付き文字または下付き文字として配置された小さな代替文字の使用を制御します。
 
-<p>文字は変更されないまま、フォントのベースラインから相対的に配置されます。これらの文字はふつう、 {{HTMLElement("sub")}} と {{HTMLElement("sup")}} 要素で使用されます。</p>
+文字は変更されないまま、フォントのベースラインから相対的に配置されます。これらの文字はふつう、 {{HTMLElement("sub")}} と {{HTMLElement("sup")}} 要素で使用されます。
 
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 font-variant-position: normal;
 font-variant-position: sub;
 font-variant-position: super;
@@ -22,46 +23,51 @@ font-variant-position: super;
 /* グローバル値 */
 font-variant-position: inherit;
 font-variant-position: initial;
+font-variant-position: revert;
 font-variant-position: unset;
-</pre>
+```
 
-<p>これらの代替文字の使用が有効の場合、一連の中のある文字がそのような字体 - 強調字体を持っていない場合、一連の文字のセット全体が代替方法を使用して、合成によって描画されます。</p>
+これらの代替文字の使用が有効の場合、一連の中のある文字がそのような字体 - 強調字体を持っていない場合、一連の文字のセット全体が代替方法を使用して、合成によって描画されます。
 
-<p>これらの代替字体は、フォントの他の部分と同じ em ボックスと同じベースラインを共有します。それらは単にグラフィカルに強化されており、行の高さや他のボックスの特性には影響しません。</p>
+これらの代替字体は、フォントの他の部分と同じ em ボックスと同じベースラインを共有します。それらは単にグラフィカルに強化されており、行の高さや他のボックスの特性には影響しません。
 
-<p>{{cssinfo}}</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+`font-variant-position` プロパティは、以下に列挙されたキーワード値のうちの一つで指定します。
 
-<p><code>font-variant-position</code> プロパティは、以下に列挙されたキーワード値のうちの一つで指定します。</p>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
+- `normal`
+  - : 上付き文字および下付き文字の字体の代替を無効にします。
+- `sub`
+  - : 下付き文字の代替グリフを有効にします。特定の文字列で、そのような文字の1つが使用できない場合、文字列内のすべての文字が合成を使用して描画されます。
+- `super`
+  - : 上付き文字の代替グリフを有効にします。特定の文字列で、そのような文字の1つが使用できない場合、文字列内のすべての文字が合成を使用して描画されます。
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>上付き文字および下付き文字の字体の代替を無効にします。</dd>
- <dt><code>sub</code></dt>
- <dd>下付き文字の代替グリフを有効にします。特定の文字列で、そのような文字の1つが使用できない場合、文字列内のすべての文字が合成を使用して描画されます。</dd>
- <dt><code>super</code></dt>
- <dd>上付き文字の代替グリフを有効にします。特定の文字列で、そのような文字の1つが使用できない場合、文字列内のすべての文字が合成を使用して描画されます。</dd>
-</dl>
+## 公式定義
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+<h3 id="Setting_superscript_and_subscript_forms">上付きおよび下付き形の設定</h3>
 
-<pre class="brush:html">&lt;p class="normal"&gt;Normal!&lt;/p&gt;
-&lt;p class="super"&gt;Super!&lt;/p&gt;
-&lt;p class="sub"&gt;Sub!&lt;/p&gt;
-</pre>
+#### HTML
 
-<h3 id="CSS">CSS</h3>
+```html
+<p class="normal">Normal!</p>
+<p class="super">Super!</p>
+<p class="sub">Sub!</p>
+```
 
-<pre class="brush:css">p {
+#### CSS
+
+```css
+p {
   display: inline;
 }
 
@@ -76,31 +82,24 @@ font-variant-position: unset;
 .sub {
   font-variant-position: sub;
 }
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+#### 結果
 
-<p>{{ EmbedLiveSample('Examples') }}</p>
+{{ EmbedLiveSample('Setting_superscript_and_subscript_forms') }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#propdef-font-variant-position', 'font-variant-position')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+### ブラウザーの互換性
 
-<p>{{Compat("css.properties.font-variant-position")}}</p>
+{{Compat}}
+
+## 関連情報
+
+- {{cssxref("font-variant-alternates")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-ligatures")}}
+- {{cssxref("font-variant-numeric")}}
