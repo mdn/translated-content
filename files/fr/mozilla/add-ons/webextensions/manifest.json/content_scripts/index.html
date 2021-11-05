@@ -56,7 +56,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
  </thead>
  <tbody>
   <tr>
-   <td><a id="all_frames" name="all_frames"><code>all_frames</code></a></td>
+   <td><code>all_frames</code></td>
    <td>{{ jsxref("boolean", "Booléen") }}</td>
    <td>
     <p><code>true</code> : injecte les scripts spécifiés dans {{ anch("js") }} et {{ anch("css") }} dans tous les cadres correspondant aux exigences d’URL spécifiées, même s’il n’est pas le cadre le plus haut d’un onglet. Cela n’injecte pas dans les cadres enfants quand seul leur parent correspond aux exigences d’URL et pas les cadres enfants. Les exigences d’URL sont vérifiées pour chaque cadre indépendamment.</p>
@@ -67,7 +67,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
    </td>
   </tr>
   <tr>
-   <td><a id="css" name="css"><code>css</code></a></td>
+   <td><code>css</code></td>
    <td>{{ jsxref("array", "Tableau") }}</td>
    <td>
     <p>Un tableau de chemins, relatifs à <em>manifest.json</em>, référençant les fichiers CSS qui seront injectés dans les pages correspondantes.</p>
@@ -80,26 +80,26 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
    </td>
   </tr>
   <tr>
-   <td><a id="exclude_globs" name="exclude_globs"><code>exclude_globs</code></a></td>
+   <td><code>exclude_globs</code></td>
    <td>{{ jsxref("array", "Tableau") }}</td>
    <td>
     <p>Un tableau de chaînes contenant des caractères génériques. Voir les {{ anch("Les_modèles_de_correspondance_d’URL", "modèles de correpondance d’URL") }} ci-dessous.</p>
    </td>
   </tr>
   <tr>
-   <td><a id="exclude_matches" name="exclude_matches"><code>exclude_matches</code></a></td>
+   <td><code>exclude_matches</code></td>
    <td>{{ jsxref("array", "Tableau") }}</td>
    <td>
     <p>Un tableau de <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">modèles de correspondance</a>. Voir les {{ anch("Les_modèles_de_correspondance_d’URL", "modèles de correpondance d’URL") }} ci-dessous.</p>
    </td>
   </tr>
   <tr>
-   <td><a id="include_globs" name="include_globs"><code>include_globs</code></a></td>
+   <td><code>include_globs</code></td>
    <td>{{ jsxref("array", "Tableau") }}</td>
    <td>Un tableau de chaînes contenant des caractères génériques. Voir les {{ anch("Les_modèles_de_correspondance_d’URL", "modèles de correpondance d’URL") }} ci-dessous.</td>
   </tr>
   <tr>
-   <td><a id="js" name="js"><code>js</code></a></td>
+   <td><code>js</code></td>
    <td>{{ jsxref("array", "Tableau") }}</td>
    <td>
     <p>Un tableau de chemins, relatifs au fichier <em>manifest.json</em>, référençant les fichiers JavaScript qui seront injectés dans les pages correspondantes.</p>
@@ -115,7 +115,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
    </td>
   </tr>
   <tr>
-   <td><code><a id="match_about_blank" name="match_about_blank">match_about_blank</a></code></td>
+   <td><code>match_about_blank</code></td>
    <td>{{ jsxref("boolean", "Booléen") }}</td>
    <td>
     <p>Insère les scripts de contenu dans les pages dont l’URL est <code>about:blank</code> ou <code>about:srcdoc</code>, si l’URL de la page qui a ouvert ou créé cette page {{ anch("Les_modèles_de_correspondance_d’URL", "correspond aux modèles") }} spécifiés dans le reste de la clé <code>content_scripts</code>.</p>
@@ -140,7 +140,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
    </td>
   </tr>
   <tr>
-   <td><a id="matches" name="matches"><code>matches</code></a></td>
+   <td><code>matches</code></td>
    <td>{{ jsxref("array", "Tableau") }}</td>
    <td>
     <p>Un ensemble de <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">modèles de correspondance</a>. Voir les {{ anch("Les_modèles_de_correspondance_d’URL", "modèles de correpondance d’URL") }} ci-dessous.</p>
@@ -149,7 +149,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
    </td>
   </tr>
   <tr>
-   <td><a id="run_at" name="run_at"><code>run_at</code></a></td>
+   <td><code>run_at</code></td>
    <td>{{ jsxref("string", "Chaîne") }}</td>
    <td>
     <p>Cette option détermine quand les scripts spécifiés dans {{ anch("js") }} sont injectés. Vous pouvez fournir une chaîne parmi trois ici, chacune identifiant un état dans le processus de chargement d’un document. Les états correspondent directement à {{domxref("Document/readyState", "Document.readyState")}} :</p>

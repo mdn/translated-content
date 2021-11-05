@@ -55,7 +55,7 @@ var creating = browser.windows.create(createData);</pre>
 
 <p>Par défaut, les pages que vous ouvrez de cette manière seront stockées dans l’historique de l’utilisateur, comme les pages Web normales. Si vous ne voulez pas avoir ce comportement, utilisez {{WebExtAPIRef("history.deleteUrl()")}} pour supprimer l'enregistrement du navigateur :</p>
 
-<pre class="brush: js" id="ct-4">function onVisited(historyItem) {
+<pre class="brush: js">function onVisited(historyItem) {
   if (historyItem.url == browser.extension.getURL(myPage)) {
     browser.history.deleteUrl({url: historyItem.url});
   }

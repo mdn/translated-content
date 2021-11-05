@@ -86,7 +86,7 @@ console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"</pre
 
 <p>Notez également que le déballage est transitif: lorsque vous utilisez <code>wrappedJSObject</code>, toutes les propriétés de l'objet déplié sont elles-mêmes dépliées (et donc peu fiables). C'est donc une bonne pratique, une fois que vous avez l'objet dont vous avez besoin, de le réemballer, ce que vous pouvez faire comme ceci:</p>
 
-<pre class="bz_comment_text" id="comment_text_38">XPCNativeWrapper(window.wrappedJSObject.foo);</pre>
+<pre>XPCNativeWrapper(window.wrappedJSObject.foo);</pre>
 
 <p>voir le document <a href="/fr/Tech/Xray_vision">vision Xray</a> pour plus de détails à ce sujet.</p>
 
