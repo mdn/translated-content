@@ -62,7 +62,7 @@ original_slug: Mozilla/Firefox/Versions/3.6
     </li>
   </ol>
 </div>
-<p>Firefox 3.6 (nom de code <a class="external" href="https://wiki.mozilla.org/Firefox/Namoroka">Namoroka</a>) est sorti le 21 janvier 2010 et est basé sur Gecko 1.9.2. Cette page fournit des liens vers des articles qui décrivent les nouvelles fonctionnalités de Firefox 3.6.</p>
+<p>Firefox 3.6 (nom de code <a href="https://wiki.mozilla.org/Firefox/Namoroka">Namoroka</a>) est sorti le 21 janvier 2010 et est basé sur Gecko 1.9.2. Cette page fournit des liens vers des articles qui décrivent les nouvelles fonctionnalités de Firefox 3.6.</p>
 
 <h2 id="Pour_les_développeurs_de_sites_et_dapplications_Web">Pour les développeurs de sites et d'applications Web</h2>
 
@@ -74,9 +74,9 @@ original_slug: Mozilla/Firefox/Versions/3.6
  <dt><a href="/fr/docs/CSS/Fonds_multiples">Fonds multiples</a></dt>
  <dd>La propriété <a href="/fr/docs/Web/CSS/background"><code>background</code></a> (ainsi que <a href="/fr/docs/Web/CSS/background-attachment"><code>background-attachment</code></a><a href="/fr/docs/Web/CSS/background-color"><code>background-color</code></a>, <a href="/fr/docs/Web/CSS/background-image"><code>background-image</code></a>, <a href="/fr/docs/Web/CSS/background-position"><code>background-position</code></a> et <a href="/fr/docs/Web/CSS/background-repeat"><code>background-repeat</code></a>) peuvent gérer des fonds multiples. Ceux-ci seront affichés par couches, les uns au dessus des autres.</dd>
  <dt><a href="/fr/docs/CSS/Media_queries#Fonctionnalit.C3.A9s_de_m.C3.A9dias_sp.C3.A9cifiques_.C3.A0_Mozilla">Fonctionnalités de médias spécifiques à Mozilla</a></dt>
- <dd>Des fonctionnalités de médias ont été ajoutées pour des mesures spécifiques à Mozilla, afin de pouvoir utiliser des <a class="external" href="/fr/docs/CSS/Media_queries">media queries</a> pour vérifier plus aisément la disponibilité de fonctionnalités comme un écran tactile.</dd>
+ <dd>Des fonctionnalités de médias ont été ajoutées pour des mesures spécifiques à Mozilla, afin de pouvoir utiliser des <a href="/fr/docs/CSS/Media_queries">media queries</a> pour vérifier plus aisément la disponibilité de fonctionnalités comme un écran tactile.</dd>
  <dt><a href="/fr/docs/CSS/Scaling_background_images">Redimensionnement d'images de fond</a></dt>
- <dd>La propriété <code>background-size</code> du <a class="external" href="http://dev.w3.org/csswg/css3-background/">brouillon CSS 3 Backgrounds and Borders</a> est gérée sous le nom de <a href="/fr/docs/Web/CSS/-moz-background-size"><code>-moz-background-size</code></a>.</dd>
+ <dd>La propriété <code>background-size</code> du <a href="http://dev.w3.org/csswg/css3-background/">brouillon CSS 3 Backgrounds and Borders</a> est gérée sous le nom de <a href="/fr/docs/Web/CSS/-moz-background-size"><code>-moz-background-size</code></a>.</dd>
  <dt><a href="/fr/docs/WOFF">Support des polices WOFF</a></dt>
  <dd><a href="/fr/docs/Web/CSS/@font-face"><code>@font-face</code></a> supporte désormais le format de polices Web téléchargeables WOFF</dd>
  <dt><a href="/fr/docs/CSS/pointer-events">Evènements pointeurs</a></dt>
@@ -86,7 +86,7 @@ original_slug: Mozilla/Firefox/Versions/3.6
 <h4 id="Autres_changements_CSS">Autres changements CSS</h4>
 
 <ul>
- <li>L'unité de longueur <a href="/fr/docs/CSS/longueur"><code>rem</code></a> de <a class="external" href="http://www.w3.org/TR/css3-values/#lengths">CSS3 Values and Units</a> est maintenant supportée. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=472195">bug 472195</a>.</li>
+ <li>L'unité de longueur <a href="/fr/docs/CSS/longueur"><code>rem</code></a> de <a href="http://www.w3.org/TR/css3-values/#lengths">CSS3 Values and Units</a> est maintenant supportée. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=472195">bug 472195</a>.</li>
  <li><a href="/fr/docs/Web/CSS/image-rendering"><code>image-rendering</code></a> est gérée pour les images, images de fond, vidéos et canvas. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=423756">bug 423756</a>.</li>
  <li><a href="/fr/docs/Web/CSS/text-align"><code>text-align</code></a>:end est maintenant supportée. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=299837">bug 299837</a>.</li>
  <li>Les changements DOM sur des éléments utilisant les types de <a href="/fr/docs/Web/CSS/display"><code>display</code></a> table fonctionnent beaucoup mieux.</li>
@@ -135,7 +135,7 @@ original_slug: Mozilla/Firefox/Versions/3.6
 </dl>
 
 <ul>
- <li>La méthode <code>getBoxObjectFor()</code> a été <strong>supprimée</strong>, car elle n'était pas standard et exposait d'autres fonctionnalités non standard. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=340571">bug 340571</a>. La bibliothèque <a class="external" href="http://mootools.net/">MooTools</a> qui utilisait cet appel pour la détection de Gecko est affectée ; cela a été corrigé dans la dernière version de MooTools, assurez-vous donc d'être à jour.</li>
+ <li>La méthode <code>getBoxObjectFor()</code> a été <strong>supprimée</strong>, car elle n'était pas standard et exposait d'autres fonctionnalités non standard. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=340571">bug 340571</a>. La bibliothèque <a href="http://mootools.net/">MooTools</a> qui utilisait cet appel pour la détection de Gecko est affectée ; cela a été corrigé dans la dernière version de MooTools, assurez-vous donc d'être à jour.</li>
  <li>Les nouvelles propriétés <a href="/fr/docs/DOM/window.mozInnerScreenX"><code>mozInnerScreenX</code></a> et <a href="/fr/docs/DOM/window.mozInnerScreenY"><code>mozInnerScreenY</code></a> sur les objets DOM window on été ajoutés ; ils renvoient les coordonnées à l'écran du coin supérieur gauche de la zone de visualisation de la fenêtre.</li>
  <li>La nouvelle propriété <code>mozScreenPixelsPerCSSPixel</code> de <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils">nsIDOMWindowUtils</a></code> uniquement accessible depuis le chrome, fournit un facteur de conversion entre les pixels CSS et les pixels à l'écran ; cette valeur peut varier selon le niveau de zoom du contenu.</li>
  <li>Lorsque l'identifiant de fragment de document de l'URL de la page change (la partie après le caractère « # » (dièse)), un nouvel évènement <code>hashchange</code> est envoyé à la page. Consultez <a href="/fr/docs/DOM/window.onhashchange">window.onhashchange</a> pour plus d'informations. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=385434">bug 385434</a></li>
@@ -201,7 +201,7 @@ original_slug: Mozilla/Firefox/Versions/3.6
 
 <dl>
  <dt><a href="/fr/docs/Themes/Lightweight_themes">Thèmes légers</a></dt>
- <dd>Firefox 3.6 supporte les thèmes légers ; ce sont des thèmes faciles à créer et qui sont simplement appliqué sur le fond de la fenêtre du navigateur, en haut (barre d'adresses et boutons) et en bas (barre d'état). Il s'agit d'une intégration de l'architecture de thèmes <a class="external" href="http://www.getpersonas.com/">Personas</a> dans Firefox.</dd>
+ <dd>Firefox 3.6 supporte les thèmes légers ; ce sont des thèmes faciles à créer et qui sont simplement appliqué sur le fond de la fenêtre du navigateur, en haut (barre d'adresses et boutons) et en bas (barre d'état). Il s'agit d'une intégration de l'architecture de thèmes <a href="http://www.getpersonas.com/">Personas</a> dans Firefox.</dd>
 </dl>
 
 <h3 id="Divers">Divers</h3>

@@ -24,7 +24,7 @@ original_slug: Mozilla/Firefox/Versions/7
 <h4 id="Canvas">Canvas</h4>
 
 <ul>
- <li>Dans le cadre du <a class="external" href="http://blog.mozilla.com/joe/2011/04/26/introducing-the-azure-project/">projet Azure</a>, le Backend Azure Direct2D <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=651858">a été implémenté</a> et améliore considérablement les performances des canvas 2D.</li>
+ <li>Dans le cadre du <a href="http://blog.mozilla.com/joe/2011/04/26/introducing-the-azure-project/">projet Azure</a>, le Backend Azure Direct2D <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=651858">a été implémenté</a> et améliore considérablement les performances des canvas 2D.</li>
  <li>La spécification de valeurs invalides lors de l'appel de <code>setTransform()</code>, <code>bezierCurveTo()</code> ou <code>arcTo()</code> ne renvoie plus d'exception, ces appels sont à présent ignorés silencieusement.</li>
  <li>La méthode <a href="/fr/docs/DOM/CanvasRenderingContext2D#isPointInPath()"><code>isPointInPath()</code></a> considère maintenant correctement la matrice de transformation lors de la comparaison du point spécifié au tracé en cours.</li>
  <li>L'appel de <code>strokeRect()</code> avec une largeur et une hauteur de zéro n'a désormais plus aucun effet.</li>
@@ -51,7 +51,7 @@ original_slug: Mozilla/Firefox/Versions/7
  <li>XLink href a été rétabli et l'attribut <code>href</code> de MathML3 est maintenant supporté. Les développeurs sont encouragés à passer à la dernière syntaxe.</li>
  <li>Le support de l'attribut <code>voffset</code> sur les éléments {{MathMLElement("mpadded")}} a été ajouté et le comportement de l'attribut <code>lspace</code> a été fixé.</li>
  <li>L'élément de premier niveau {{MathMLElement("math")}} accepte maintenant tous les atributs de l'élément {{MathMLElement("mstyle")}}.</li>
- <li>Le support des polices <a class="external" href="http://www.ctan.org/tex-archive/fonts/Asana-Math/">Asana Math</a> a été ajouté.</li>
+ <li>Le support des polices <a href="http://www.ctan.org/tex-archive/fonts/Asana-Math/">Asana Math</a> a été ajouté.</li>
  <li>L'épaisseur des lignes <code>medium</code> des barres de fraction des éléments {{MathMLElement("mfrac")}} a été corrigé pour correspondre à l'épaisseur par défaut.</li>
  <li><a href="/fr/docs/MathML/Attributes/Values#Constants_(namedspaces)">Les noms des espaces négatifs</a> sont maintenant supportés.</li>
 </ul>
@@ -68,7 +68,7 @@ original_slug: Mozilla/Firefox/Versions/7
  <li>{{domxref("DOMTokenList.item")}} renvoie désormais <code>undefined</code> si <code>index</code> est en dehors des limites, auparavant il renvoyé <code>null</code>.</li>
  <li><code>Node.getFeature</code> a été supprimé.</li>
  <li>Les interfaces <code>HTMLInsElement</code> et <code>HTMLDelElement</code> ont été retirées, depuis que les éléments {{HTMLElement("ins")}} et {{HTMLElement("del")}} utilisent l'interface {{domxref("HTMLModElement")}}.</li>
- <li>Dans le but d'être conforme à la prochaine spécification <a class="external" href="http://www.w3.org/TR/dom/">DOM4</a> où {{domxref("Attr")}} n'hérite plus de {{domxref("Node")}} (il l'a fait dans les DOM Core 1, 2 and 3), beaucoup de propriétés et méthodes de {{domxref("Node")}} sur l'interface {{domxref("Attr")}} sont maintenant des <a href="/fr/docs/DOM/Attr#Deprecated_properties_and_methods">rapports d'alertes</a> que nous nous efforçons de retirer dans une version ultérieure.</li>
+ <li>Dans le but d'être conforme à la prochaine spécification <a href="http://www.w3.org/TR/dom/">DOM4</a> où {{domxref("Attr")}} n'hérite plus de {{domxref("Node")}} (il l'a fait dans les DOM Core 1, 2 and 3), beaucoup de propriétés et méthodes de {{domxref("Node")}} sur l'interface {{domxref("Attr")}} sont maintenant des <a href="/fr/docs/DOM/Attr#Deprecated_properties_and_methods">rapports d'alertes</a> que nous nous efforçons de retirer dans une version ultérieure.</li>
  <li>Ajout du support des propriétés {{domxref("window.ondeviceorientation")}} et {{domxref("window.ondevicemotion")}} sur les objets {{domxref("window")}}.</li>
  <li>{{domxref("window.resizeTo")}}, {{domxref("window.resizeBy")}}, {{domxref("window.moveTo")}} et {{domxref("window.moveBy")}} ne s'appliquent plus à la fenêtre principale.</li>
 </ul>
@@ -83,7 +83,7 @@ original_slug: Mozilla/Firefox/Versions/7
 
 <ul>
  <li>la préférence <code>network.websocket.max-connections</code> est utilisée pour déterminer le nombre maximum de connexions à WebSocket qui peuvent être ouvertes en même temps. La valeur par défaut est 200.</li>
- <li>La version 8 du protocole WebSocket (comme spécifié par <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-10">IETF draft 10</a>) est maintenant utilisé à la place de la version 7 du protocole utilisé par Firefox 6.</li>
+ <li>La version 8 du protocole WebSocket (comme spécifié par <a href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-10">IETF draft 10</a>) est maintenant utilisé à la place de la version 7 du protocole utilisé par Firefox 6.</li>
  <li>L'API WebSocket est maintenant disponible sur Firefox Mobile.</li>
 </ul>
 
@@ -97,13 +97,13 @@ original_slug: Mozilla/Firefox/Versions/7
 <h3 id="Web_timing">Web timing</h3>
 
 <ul>
- <li>Première implémentation de la spécification <a class="external" href="http://www.w3.org/TR/navigation-timing/">Navigation Timing</a> qui fournit des données pouvant être utilisées pour mesurer les performances d'un site.</li>
+ <li>Première implémentation de la spécification <a href="http://www.w3.org/TR/navigation-timing/">Navigation Timing</a> qui fournit des données pouvant être utilisées pour mesurer les performances d'un site.</li>
 </ul>
 
 <h3 id="XML">XML</h3>
 
 <ul>
- <li>En plus de la précédente prise en charge de <code>text/xsl</code>, les feuilles de style XSLT peuvent désormais utiliser les médias Internet officiels (MIME) de type <code>application/xslt+xml</code> (dans la <a class="external" href="http://www.w3.org/TR/xml-stylesheet/">feuille de style d'instruction de traitement</a> ou le <a class="external" href="http://tools.ietf.org/html/rfc5988">champ d'en-tête HTTP Link</a>).</li>
+ <li>En plus de la précédente prise en charge de <code>text/xsl</code>, les feuilles de style XSLT peuvent désormais utiliser les médias Internet officiels (MIME) de type <code>application/xslt+xml</code> (dans la <a href="http://www.w3.org/TR/xml-stylesheet/">feuille de style d'instruction de traitement</a> ou le <a href="http://tools.ietf.org/html/rfc5988">champ d'en-tête HTTP Link</a>).</li>
 </ul>
 </div>
 
@@ -163,7 +163,7 @@ original_slug: Mozilla/Firefox/Versions/7
 <h3 id="Changements_dans_les_interfaces">Changements dans les interfaces</h3>
 
 <ul>
- <li>{{interface("nsISocketTransport")}} offre désormais un nouveau drapeau de connexion : <code>DISABLE_IPV6</code>, cela entraîne des tentatives de connexion uniquement aux adresses IPv4, en ignorant toutes les adresses IPv6 disponibles. De plus, {{interface("nsIDNSService")}} offre désormais un nouveau drapeau de résolution : <code>RESOLVE_DISABLE_IPV6</code>, ce qui entraîne un résolution des noms de domaine en ne tenant compte que des hôtes IPv4 et en ignorant toutes les adresses IPv6 disponibles. Ces changements permettent d'implémenter la <a class="external" href="http://tools.ietf.org/html/draft-wing-http-new-tech-00">stratégie "happy eyeballs"</a> pour améliorer le temps de réponse lors d'une tentative de connexion sur les hôtes qui supportent à la fois IPv4 et IPv6 (en particulier ceux qui ont brisé la connectivité IPv6).</li>
+ <li>{{interface("nsISocketTransport")}} offre désormais un nouveau drapeau de connexion : <code>DISABLE_IPV6</code>, cela entraîne des tentatives de connexion uniquement aux adresses IPv4, en ignorant toutes les adresses IPv6 disponibles. De plus, {{interface("nsIDNSService")}} offre désormais un nouveau drapeau de résolution : <code>RESOLVE_DISABLE_IPV6</code>, ce qui entraîne un résolution des noms de domaine en ne tenant compte que des hôtes IPv4 et en ignorant toutes les adresses IPv6 disponibles. Ces changements permettent d'implémenter la <a href="http://tools.ietf.org/html/draft-wing-http-new-tech-00">stratégie "happy eyeballs"</a> pour améliorer le temps de réponse lors d'une tentative de connexion sur les hôtes qui supportent à la fois IPv4 et IPv6 (en particulier ceux qui ont brisé la connectivité IPv6).</li>
  <li>{{interface("inIDOMUtils")}} a deux nouvelles méthodes, {{ifmethod("inIDOMUtils","getChildrenForNode")}} qui renvoie une liste des nœuds enfants d'un noeud et {{ifmethod("inIDOMUtils","getUsedFontFaces")}} qui renvoie la liste des police de caractères utilisées dans une gamme.</li>
  <li>L'interface <code>nsIMarkupDocumentViewer_MOZILLA_2_0_BRANCH</code> a été intégrée dans l'interface {{interface("nsIMarkupDocumentViewer")}}.</li>
  <li>L'interface <code>nsIDOMWindow2</code> a été intégrée dans l'interface {{interface("nsIDOMWindow")}}.</li>
@@ -231,8 +231,8 @@ original_slug: Mozilla/Firefox/Versions/7
 <h3 id="Autres_changements">Autres changements</h3>
 
 <ul>
- <li>La structure de la fenêtre de la bibliothèque (<code>places.xul</code>) <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=588027">a été nettoyée</a>. Cela <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=677417">pourrait casser les extensions</a> et les thèmes</li>
- <li>L'apparence de la fenêtre d'aperçu avant impression <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=663028">a été modernisé</a> et les auteurs de thèmes sont invités à avoir le même style en utilisant les pseudo-éléments CSS {{cssxref("::-moz-page")}}, {{cssxref("::-moz-page-sequence")}} et {{cssxref("::-moz-scrolled-page-sequence")}}</li>
+ <li>La structure de la fenêtre de la bibliothèque (<code>places.xul</code>) <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=588027">a été nettoyée</a>. Cela <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=677417">pourrait casser les extensions</a> et les thèmes</li>
+ <li>L'apparence de la fenêtre d'aperçu avant impression <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=663028">a été modernisé</a> et les auteurs de thèmes sont invités à avoir le même style en utilisant les pseudo-éléments CSS {{cssxref("::-moz-page")}}, {{cssxref("::-moz-page-sequence")}} et {{cssxref("::-moz-scrolled-page-sequence")}}</li>
 </ul>
 
 <h2 id="Voir_également">Voir également</h2>

@@ -29,7 +29,7 @@ original_slug: Changements_dans_Gecko_1.9_affectant_les_sites_Web
 <pre class="eval">window.addEventListener('load', votreFonction, false);
 </pre>
 
-<p>Pour une explication du fonctionnement de la capture des évènements, consultez <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture">DOM Level 2 Event capture</a> (en)</p>
+<p>Pour une explication du fonctionnement de la capture des évènements, consultez <a href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture">DOM Level 2 Event capture</a> (en)</p>
 
 <h3 id="preventBubble_a_.C3.A9t.C3.A9_supprim.C3.A9e" name="preventBubble_a_.C3.A9t.C3.A9_supprim.C3.A9e"><code>preventBubble</code> a été supprimée</h3>
 
@@ -45,11 +45,11 @@ original_slug: Changements_dans_Gecko_1.9_affectant_les_sites_Web
 
 <p></p><p>Les nœuds provenant de documents externes doivent être clonés à l'aide de <a href="/fr/docs/Web/API/Document/importNode"><code>document.importNode()</code></a> (ou adoptés avec
     <a href="/fr/docs/Web/API/Document/adoptNode"><code>document.adoptNode()</code></a>) avant de pouvoir être insérés dans le document courant. Pour en savoir plus sur les problèmes
-    de <a href="/fr/docs/Web/API/Node/ownerDocument"><code>Node.ownerDocument</code></a>, consultez la <a class="external" href="http://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">FAQ DOM du W3C</a> (en anglais).</p>
+    de <a href="/fr/docs/Web/API/Node/ownerDocument"><code>Node.ownerDocument</code></a>, consultez la <a href="http://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">FAQ DOM du W3C</a> (en anglais).</p>
 
     <p>Gecko n'obligeait pas à utiliser <a href="/fr/docs/Web/API/Document/importNode"><code>document.importNode()</code></a> et <a href="/fr/docs/Web/API/Document/adoptNode"><code>document.adoptNode()</code></a> avant sa version 1.9. Depuis les versions 1.9
     alphas, si un nœud n'est pas adopté ou importé avant d'être utilisé dans un autre document, l'exception
-    <code>WRONG_DOCUMENT_ERR</code> est déclenchée (<code>NS_ERROR_DOM_WRONG_DOCUMENT_ERR</code>). implémentation dans le <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=47903" rel="noopener">bug 47903</a>.</p><p></p>
+    <code>WRONG_DOCUMENT_ERR</code> est déclenchée (<code>NS_ERROR_DOM_WRONG_DOCUMENT_ERR</code>). implémentation dans le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=47903" rel="noopener">bug 47903</a>.</p><p></p>
 
 
 <h2 id="Ranges" name="Ranges">Ranges</h2>

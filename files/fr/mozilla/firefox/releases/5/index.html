@@ -30,7 +30,7 @@ original_slug: Mozilla/Firefox/Versions/5
  <li>Spécifier des valeurs non finies lors de l'ajout de couleur arrête l'ajout via un appel à <code>addColorStop()</code> de la méthode {{domxref("CanvasGradient")}} en renvoyant désormais <code>INDEX_SIZE_ERR</code> à la place de <code>SYNTAX_ERR</code>.</li>
  <li>La méthode {{domxref("HTMLCanvasElement")}} <code>toDataURL()</code> now correctly lower-cases the specified MIME type before matching.</li>
  <li><code>getImageData()</code> accepte maintenant correctement les rectangles qui vont au-delà des limites de la zone, les pixels qui sont en dehors de la zone sont mis en noir transparent.</li>
- <li><code>drawImage()</code> et <code>createImageData()</code> traitent désormais les arguments négatifs conformément à la spécification, en retournant le rectangle autour de l'axe approprié. <strong>Nous avons besoin d'un article sur <a class="external" href="http://dev.w3.org/csswg/css3-images/#default-sizing">CSS sizing</a> et son fonctionnement.</strong></li>
+ <li><code>drawImage()</code> et <code>createImageData()</code> traitent désormais les arguments négatifs conformément à la spécification, en retournant le rectangle autour de l'axe approprié. <strong>Nous avons besoin d'un article sur <a href="http://dev.w3.org/csswg/css3-images/#default-sizing">CSS sizing</a> et son fonctionnement.</strong></li>
  <li>La spécification de valeurs non-finies lors de l'appel de <code>createImageData()</code> renvoi maintenant l'exception <code>NOT_SUPPORTED_ERR</code>.</li>
  <li><code>createImageData()</code> et <code>getImageData()</code> retournent maintenant correctement une valeur d'un pixel en données d'image si un rectangle plus petit qu'un petit qu'un pixel est spécifié.</li>
  <li>La spécification d'un angle négatif lors de l'appel de <code>createRadialGradient()</code> renvoi désormais <code>INDEX_SIZE_ERR</code>.</li>
@@ -89,7 +89,7 @@ original_slug: Mozilla/Firefox/Versions/5
 <h3 id="MathML">MathML</h3>
 
 <ul>
- <li>Support des <a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#id.3.2.5.7.3">opérateurs embellis</a></li>
+ <li>Support des <a href="http://www.w3.org/TR/MathML3/chapter3.html#id.3.2.5.7.3">opérateurs embellis</a></li>
 </ul>
 
 <h3 id="Outils_pour_les_développeurs">Outils pour les développeurs</h3>
