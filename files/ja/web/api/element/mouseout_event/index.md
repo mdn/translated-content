@@ -80,7 +80,7 @@ test.addEventListener("mouseleave", function( event ) {
   }, 1000);
 }, false);
 
-// マウスが出ると-  を一時的にオレンジ色にします
+// マウスが出ると <li> を一時的にオレンジ色にします
 test.addEventListener("mouseout", function( event ) {
   // mouseout の対象を強調
   event.target.style.color = "orange";
