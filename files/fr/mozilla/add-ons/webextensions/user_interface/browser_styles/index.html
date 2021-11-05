@@ -35,7 +35,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 
 <p>Dans Firefox, la feuille de style peut être vue sur <code>chrome://browser/content/extension.css</code>. La feuille de style peut être vue sur <code>chrome://browser/content/extension-mac.css</code> est également incluse sur OS X.</p>
 
-<p>La plupart des styles sont automatiquement appliqués, mais certains éléments nécessitent que vous ajoutiez la classe  <code style="white-space: nowrap;">browser-style</code> non standard pour obtenir leur style, comme indiqué dans le tableau ci-dessous :</p>
+<p>La plupart des styles sont automatiquement appliqués, mais certains éléments nécessitent que vous ajoutiez la classe  <code>browser-style</code> non standard pour obtenir leur style, comme indiqué dans le tableau ci-dessous :</p>
 
 <table class="standard-table">
  <thead>
@@ -48,7 +48,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
   <tr>
    <td><code><a href="/fr/docs/Web/HTML/Element/button">&lt;button&gt;</a></code></td>
    <td>
-    <pre class="brush: html no-line-numbers">
+    <pre class="brush: html">
 &lt;button class="browser-style"&gt;Click me&lt;/button&gt;{{non-standard_inline}}</pre>
    </td>
   </tr>
@@ -57,7 +57,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
     <p><code><a href="/fr/docs/Web/HTML/Element/select">&lt;select&gt;</a></code></p>
    </td>
    <td>
-    <pre class="brush: html no-line-numbers">
+    <pre class="brush: html">
 &lt;select class="browser-style" name="select"&gt;
   &lt;option value="value1"&gt;Value 1&lt;/option&gt;
   &lt;option value="value2" selected&gt;Value 2&lt;/option&gt;
@@ -68,14 +68,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
   <tr>
    <td><code><a href="/fr/docs/Web/HTML/Element/textarea">&lt;textarea&gt;</a></code></td>
    <td>
-    <pre class="brush: html no-line-numbers">
+    <pre class="brush: html">
 &lt;textarea class="browser-style"&gt;Write here&lt;/textarea&gt;</pre>
    </td>
   </tr>
   <tr>
    <td>Parent d'un <code><a href="/fr/docs/Web/HTML/Element/input">&lt;input&gt;</a></code></td>
    <td>
-    <pre class="brush: html no-line-numbers">
+    <pre class="brush: html">
 &lt;div class="browser-style"&gt;
   &lt;input type="radio" id="op1" name="choices" value="op1"&gt;
   &lt;label for="op1"&gt;Option 1&lt;/label&gt;
@@ -100,9 +100,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 
 <h2 id="Composants_du_panneau_Firefox">Composants du panneau Firefox</h2>
 
-<div class="overheadIndicator nonStandard">
-<p><strong>Non-Standard</strong><br>
- Cette fonctionnalité est non standard et ne fonctionne que dans Firefox.</p>
+<div class="warning">
+<p><strong>Attention :</strong> Cette fonctionnalité est non standard et ne fonctionne que dans Firefox.</p>
 </div>
 
 <p>La feuille de style <code>chrome://browser/content/extension.css</code> contient également les styles des composants du panneau Firefox.</p>

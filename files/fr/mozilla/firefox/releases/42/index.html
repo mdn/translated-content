@@ -12,8 +12,6 @@ translation_of: Mozilla/Firefox/Releases/42
 ---
 <div>{{FirefoxSidebar}}</div>
 
-<div class="column-container zone-callout"><a href="https://www.mozilla.org/firefox/developer/">Pour tester les dernières fonctionnalités de développement de Firefox, installer Firefox Developer Edition</a> Firefox 42 a été publié le 3 Novembre 2015. Cet article répertorie les modificarions clés qui sont utiles non seulement pour les développeurs Web, mais aussi pour les développeurs Firefox et Gecko ainsi que pour les développeurs d'add-on.</div>
-
 <h2 id="Changements_pour_les_développeurs_Web">Changements pour les développeurs Web</h2>
 
 <h3 id="Outils_de_développement">Outils de développement</h3>
@@ -75,7 +73,7 @@ translation_of: Mozilla/Firefox/Releases/42
 
 <ul>
  <li>{{domxref('Request.context')}} a été supprimé ({{bug(1188062)}}).</li>
- <li>L'<a href="/fr/docs/Web/API/Push_API">API Push</a> a été activée par défaut sur Firefox pour bureau ({{bug(1153499)}}), mais uniquement sur les canaux Nightly/Dev Edition/Beta. Elle est désactivée par défaut dans le canal Release jusqu'à ce que l'UX grand public et les fonctionnalit"s de débogage aient été correctement implémentées ({{bug(1207875)}}). Vous pouvez toujours l'activer en activant la préférence <code>dom.push.enabled</code> dans <a>about:config</a>.</li>
+ <li>L'<a href="/fr/docs/Web/API/Push_API">API Push</a> a été activée par défaut sur Firefox pour bureau ({{bug(1153499)}}), mais uniquement sur les canaux Nightly/Dev Edition/Beta. Elle est désactivée par défaut dans le canal Release jusqu'à ce que l'UX grand public et les fonctionnalit"s de débogage aient été correctement implémentées ({{bug(1207875)}}). Vous pouvez toujours l'activer en activant la préférence <code>dom.push.enabled</code> dans about:config.</li>
  <li>La méthode {{domxref("PushManager.hasPermission()")}} a été désapprouvée dans la spécification et remplacée par la méthode {{domxref("PushManager.permissionState()")}}. Firefox a mis à jour son implémentation pour refléter cela ({{bug("1183853")}}).</li>
  <li>Des ajouts liés au service worker de l'<a href="/fr/docs/Web/API/Notifications_API">API Notifications</a> ont été mis en œuvre ({{bug(1114554)}}), mais sont désactivés dans cette version.</li>
 </ul>

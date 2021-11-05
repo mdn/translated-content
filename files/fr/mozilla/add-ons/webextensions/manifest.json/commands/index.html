@@ -23,7 +23,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
   <tr>
    <th scope="row">Exemple</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "commands": {
   "toggle-feature": {
     "suggested_key": {
@@ -69,7 +69,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 
 <p>Par exemple :</p>
 
-<pre class="brush: json no-line-numbers">"commands": {
+<pre class="brush: json">"commands": {
   "toggle-feature": {
     "suggested_key": {
       "default": "Alt+Shift+U",
@@ -93,7 +93,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 
 <p>Vous pouvez alors écouter la commande <code>"toggle-feature"</code> avec un code comme celui-ci :</p>
 
-<pre class="brush: js no-line-numbers">browser.commands.onCommand.addListener(function(command) {
+<pre class="brush: js">browser.commands.onCommand.addListener(function(command) {
   if (command == "toggle-feature") {
     console.log("toggling the feature!");
   }
@@ -111,7 +111,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 
 <p>Par exemple, ce JSON définit une combinaison de touches qui clique sur l'action du navigateur de l'extension :</p>
 
-<pre class="brush: js no-line-numbers">"commands": {
+<pre class="brush: js">"commands": {
   "_execute_browser_action": {
     "suggested_key": {
       "default": "Ctrl+Shift+Y"
@@ -165,7 +165,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 
 <p>Définissez un seul raccourci clavier en utilisant uniquement la combinaison de touches par défaut :</p>
 
-<pre class="brush: json no-line-numbers">"commands": {
+<pre class="brush: json">"commands": {
   "toggle-feature": {
     "suggested_key": {
       "default": "Ctrl+Shift+Y"
@@ -176,7 +176,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 
 <p>Définissez deux raccourcis clavier, l'un avec une combinaison de touches spécifique à la plate-forme :</p>
 
-<pre class="brush: json no-line-numbers">"commands": {
+<pre class="brush: json">"commands": {
   "toggle-feature": {
     "suggested_key": {
       "default": "Alt+Shift+U",

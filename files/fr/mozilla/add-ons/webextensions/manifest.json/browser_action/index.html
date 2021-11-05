@@ -22,7 +22,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
   <tr>
    <th scope="row">Example</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "browser_action": {
   "browser_style": true,
   "default_icon": {
@@ -84,7 +84,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
    <td><code>default_area</code></td>
    <td>Chaîne de caractères</td>
    <td>
-    <div class="blockIndicator  geckoVersionNote">Nouveau dans Firefox 54</div>
 
     <p>Définit la partie du navigateur dans laquelle le bouton est initialement placé. Il s'agit d'une chaîne qui peut prendre l'une des quatre valeurs suivantes:</p>
 
@@ -114,12 +113,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 
     <p>Vous pouvez spécifier un seul fichier d'icône en fournissant une chaîne ici:</p>
 
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "default_icon": "path/to/geo.svg"</pre>
 
     <p>Pour spécifier plusieurs icônes dans différentes tailles, spécifiez ici un objet. Le nom de chaque propriété est la hauteur de l'icône en pixels et doit être converti en un nombre entier. La valeur est l'URL. Par exemple:</p>
 
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
     "default_icon": {
       "16": "path/to/geo-16.png",
       "32": "path/to/geo-32.png"
@@ -190,7 +189,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 
 <p>Il y a deux approches principales pour cela. Vous pouvez fournir une seule icône en tant que fichier SVG, et elle sera mise à l'échelle correctement :</p>
 
-<pre class="brush: json no-line-numbers">"default_icon": "path/to/geo.svg"</pre>
+<pre class="brush: json">"default_icon": "path/to/geo.svg"</pre>
 
 <p>Ou vous pouvez fournir plusieurs icônes dans différentes tailles, et le navigateur choisira la meilleure.</p>
 
@@ -203,7 +202,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 
 <p>Vous pouvez donc spécifier des icônes qui correspondent exactement, à la fois aux affichages normaux et à Retina, en fournissant trois fichiers d'icônes et en les spécifiant comme suit:</p>
 
-<pre class="brush: json no-line-numbers">    "default_icon": {
+<pre class="brush: json">    "default_icon": {
       "16": "path/to/geo-16.png",
       "32": "path/to/geo-32.png",
       "64": "path/to/geo-64.png"
@@ -213,7 +212,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: json no-line-numbers">"browser_action": {
+<pre class="brush: json">"browser_action": {
   "default_icon": {
     "16": "button/geo-16.png",
     "32": "button/geo-32.png"
@@ -222,7 +221,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 
 <p>Une action de navigateur avec juste une icône, spécifiée en 2 tailles différentes. Les scripts d'arrière-plan de l'extension peuvent recevoir des événements de clic lorsque l'utilisateur clique sur l'icône en utilisant un code comme celui-ci :</p>
 
-<pre class="brush: js no-line-numbers"> browser.browserAction.onClicked.addListener(handleClick);</pre>
+<pre class="brush: js"> browser.browserAction.onClicked.addListener(handleClick);</pre>
 
 <pre class="brush: json">"browser_action": {
   "default_icon": {

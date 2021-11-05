@@ -22,7 +22,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resou
   <tr>
    <th scope="row">Exemple</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "web_accessible_resources": [
   "images/my-image.png"
 ]</pre>
@@ -55,7 +55,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resou
 
 <p>Pour permettre à une page Web d'utiliser un élément <code><a href="/fr/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> dont l'attribut <code>src</code> pointe sur cette image, vous pouvez spécifier "web_accessible_resources" comme suit :</p>
 
-<pre class="brush: json no-line-numbers">"web_accessible_resources": ["images/my-image.png"]</pre>
+<pre class="brush: json">"web_accessible_resources": ["images/my-image.png"]</pre>
 
 <p>Le fichier sera alors disponible en utilisant une URL comme :</p>
 
@@ -69,7 +69,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resou
 
 <p>L'approche recommandée pour obtenir l'URL de la ressource est d'utiliser <code><a href="/fr/Add-ons/WebExtensions/API/runtime/getURL">runtime.getURL</a></code> en passant le chemin relatif à manifest.json, par exemple :</p>
 
-<pre class="brush: js no-line-numbers">browser.runtime.getURL("images/my-image.png");
+<pre class="brush: js">browser.runtime.getURL("images/my-image.png");
 // something like:
 // moz-extension://944cfddf-7a95-3c47-bd9a-663b3ce8d699/images/my-image.png</pre>
 
@@ -79,7 +79,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resou
 
 <p><code>web_accessible_resources</code> peuvent contenir des caractères génériques. Par exemple, l'entrée suivante fonctionnera également pour inclure la ressource à  "images/my-image.png":</p>
 
-<pre class="brush: json no-line-numbers">  "web_accessible_resources": ["images/*.png"]</pre>
+<pre class="brush: json">  "web_accessible_resources": ["images/*.png"]</pre>
 
 <h3 id="Sécurité">Sécurité</h3>
 
@@ -87,7 +87,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resou
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: json no-line-numbers">"web_accessible_resources": ["images/my-image.png"]</pre>
+<pre class="brush: json">"web_accessible_resources": ["images/my-image.png"]</pre>
 
 <p>Crée un fichier dans "images/my-image.png" accessible sur le web.</p>
 
