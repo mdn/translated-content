@@ -108,7 +108,7 @@ int main(int argc, char ** argv) {
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez spécifier, comme sortie, juste le fichier* JavaScript "glue" au lieu de la sortie HTML en specifiant un fichier .js au lieu d'un fichier HTML dans le flag<code>-o</code> . Par exemple: <code>emcc -o hello2.js hello2.c -O3 -s WASM=1</code>. Vous pouevz ensuite votre propre fichier HTML à partir de rien bien que ce soit une approche plus compliquée. Il est généralement plus simple d'utiliser le template HTML fournit.</p>
+<p><strong>Note :</strong> Vous pouvez spécifier, comme sortie, juste le fichier* JavaScript "glue" au lieu de la sortie HTML en specifiant un fichier .js au lieu d'un fichier HTML dans le flag<code>-o</code> . Par exemple: <code>emcc -o hello2.js hello2.c -O3 -s WASM=1</code>. Vous pouevz ensuite votre propre fichier HTML à partir de rien bien que ce soit une approche plus compliquée. Il est généralement plus simple d'utiliser le template HTML fournit.</p>
 
 <p>* Emscripten necessite une grande variété de code Javascript "glue" pour gérer les allocations memoire, les fuites memoires et bien d'autres problèmes.</p>
 </div>
@@ -143,7 +143,7 @@ void EMSCRIPTEN_KEEPALIVE myFunction(int argc, char ** argv) {
   <p>By default, Emscripten-generated code always just calls the <code>main()</code> function, and other functions are eliminated as dead code. Putting <code>EMSCRIPTEN_KEEPALIVE</code> before a function name stops this from happening. You also need to import the <code>emscripten.h</code> library to use <code>EMSCRIPTEN_KEEPALIVE</code>.</p>
 
   <div class="note">
-  <p><strong>Note</strong>: We are including the <code>#ifdef</code> blocks so that if you are trying to include this in C++ code, the example will still work. Due to C versus C++ name mangling rules, this would otherwise break, but here we are setting it so that it treats it as an external C function if you are using C++.</p>
+  <p><strong>Note :</strong> We are including the <code>#ifdef</code> blocks so that if you are trying to include this in C++ code, the example will still work. Due to C versus C++ name mangling rules, this would otherwise break, but here we are setting it so that it treats it as an external C function if you are using C++.</p>
   </div>
  </li>
  <li>

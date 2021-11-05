@@ -27,7 +27,7 @@ translation_of: WebAssembly/Concepts
 </ul>
 
 <div class="note">
-<p><strong>Note </strong>: WebAssembly aura également des usages en dehors du web et des environnements JavaScript (voir <a href="http://webassembly.org/docs/non-web/">Non-web embeddings</a>).</p>
+<p><strong>Note :</strong> WebAssembly aura également des usages en dehors du web et des environnements JavaScript (voir <a href="http://webassembly.org/docs/non-web/">Non-web embeddings</a>).</p>
 </div>
 
 <h2 id="Comment_WebAssembly_sintègre_dans_la_plateforme_web">Comment WebAssembly s'intègre dans la plateforme web ?</h2>
@@ -91,7 +91,7 @@ translation_of: WebAssembly/Concepts
 
 <p>L'outil Emscripten est capable de prendre du code source C/C++ et de le compiler dans un module .wasm, de générer le code "glue" JavaScript nécessaire pour charger et exécuter le module et de créer un document HTML capable d'afficher les résultats d'exécution du code.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14647/emscripten-diagram.png" style="display: block; height: 104px; margin: 0px auto; width: 764px;"></p>
+<p><img alt="" src="emscripten-diagram.png"></p>
 
 <p>En résumé, le principe de fonctionnement est le suivant :</p>
 
@@ -102,7 +102,7 @@ translation_of: WebAssembly/Concepts
 </ol>
 
 <div class="note">
-<p><strong>Note</strong> : Il existe des propositions future pour <a href="http://webassembly.org/docs/gc/"> permettre au WebAssembly d'appeler directement l'API Web</a>.</p>
+<p><strong>Note :</strong> Il existe des propositions future pour <a href="http://webassembly.org/docs/gc/"> permettre au WebAssembly d'appeler directement l'API Web</a>.</p>
 </div>
 
 <p>Le code "passe-plat" en JavaScript n'est pas aussi simple que vous pourriez l'imaginer. Pour le moment, Emscripten implémente des librairies C/C++ populaire comme <a href="https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer">SDL</a>, <a href="https://en.wikipedia.org/wiki/OpenGL">OpenGL</a>, <a href="https://en.wikipedia.org/wiki/OpenAL">OpenAL</a>, et une partie de <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a>. Ces bibliothèques sont implémentées sous forme d'API Web et donc chacune d'entre elles requiert un peu de code JavaScript "passe-plat" pour relier WebAssembly à l'API Web sous-jacente.</p>
