@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 
 <p><code>.</code> 대신에 <code>?.</code> 연산자를 사용함으로써, 자바스크립트는 <code>obj.first.second</code>에 접근하기 전에 <code>obj.first</code>가 <code>null</code> 또는 <code>undefined</code>가 아니라는 것을 암묵적으로 확인하는 것을 알고 있다. 만약 <code>obj.first</code>가 <code>null</code> 또는 <code>undefined</code>이라면, 그 표현식은 자동으로 단락되어 <code>undefined</code>가 반환된다.</p>
 
-<p>이는 임시 변수가 실제로 생성되지 않는다는 점을 제외하고 다음과 동일합니다.</p>
+<p>이는 임시 변수가 실제로 생성되지 않는다는 점을 제외하고 다음과 동일하다.</p>
 
 <pre class="brush: js">let temp = obj.first;
 let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);</pre>
