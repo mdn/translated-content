@@ -63,16 +63,16 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
 
 <ul>
  <li><a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">GUID</a></li>
- <li>Une chaîne formatée comme une adresse e-mail : <code class="plain">extensionname@example.org</code></li>
+ <li>Une chaîne formatée comme une adresse e-mail : <code>extensionname@example.org</code></li>
 </ul>
 
 <p>Ce dernier format est plus facile à générer et à manipuler. Sachez que l'utilisation d'une véritable adresse e-mail ici peut attirer des spams.</p>
 
 <p>Par exemple :</p>
 
-<pre class="brush: json; auto-links: false; no-line-numbers">"id": "extensionname@example.org"</pre>
+<pre class="brush: json">"id": "extensionname@example.org"</pre>
 
-<pre class="brush: json; auto-links: false; no-line-numbers">"id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"</pre>
+<pre class="brush: json">"id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"</pre>
 
 <h3 id="Propriétés_Microsoft_Edge">Propriétés Microsoft Edge</h3>
 
@@ -98,7 +98,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
 
 <p>Exemple avec toutes les clés possibles. Notez que vous n'incluez normalement ni une version <code>strict_max_version</code> ni une clé <code>update_url</code>.</p>
 
-<pre class="brush: json; auto-links: false; no-line-numbers">"browser_specific_settings": {
+<pre class="brush: json">"browser_specific_settings": {
   "gecko": {
     "id": "addon@example.com",
     "strict_min_version": "42.0",
