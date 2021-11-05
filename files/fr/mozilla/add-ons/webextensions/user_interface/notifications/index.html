@@ -33,8 +33,7 @@ browser.notifications.create({
 
 <p>Si la notification inclut un appel à l'action, vous pouvez écouter l'utilisateur en cliquant sur la notification pour appeler la fonction pour gérer l'action:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">browser.notifications.onClicked.addListener(handleClick);
-</code></pre>
+<pre class="brush: js">browser.notifications.onClicked.addListener(handleClick);</pre>
 
 <p>Si vous émettez des appels à l'action par le biais de notifications, vous souhaitez également définir l'ID de notification facultatif, afin de déterminer quel appel à l'action a sélectionné.</p>
 

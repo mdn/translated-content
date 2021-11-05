@@ -52,7 +52,7 @@ original_slug: >-
 
 <p>Créez un nouveau volet et remplissez-le avec un objet JSON. Vous pouvez exécuter ce code dans un script chargé par la <a href="/fr/Add-ons/WebExtensions/manifest.json/devtools_page">page devtools</a>. de votre extension</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function onCreated(sidebarPane) {
+<pre class="brush: js">function onCreated(sidebarPane) {
   sidebarPane.setObject({
     someBool: true,
     someString: "hello there",
@@ -63,7 +63,7 @@ original_slug: >-
   });
 }
 
-browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);</code></pre>
+browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);</pre>
 
 <p>{{WebExtExamples}}</p>
 

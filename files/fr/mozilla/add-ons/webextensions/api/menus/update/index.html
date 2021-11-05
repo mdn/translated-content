@@ -68,16 +68,16 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/update
   <dd>
   <p><code>object</code>. Une ou plusieurs icônes personnalisées à afficher à côté de l'élément. Les icônes personnalisées ne peuvent être définies que pour les éléments apparaissant dans les sous-menus. Cette propriété est un objet avec une propriété pour chaque icône fournie : le nom de la propriété doit inclure la taille de l'icône en pixels, et le chemin est relatif à l'icône du répertoire racine de l'extension. Le navigateur essaie de choisir une icône 16x16 pixels pour un affichage normal ou une icône 32x32 pixels pour un affichage haute densité. Pour éviter toute mise à l'échelle, vous pouvez spécifier des icônes comme celle-ci :</p>
 
-  <pre class="brush: json no-line-numbers  language-json"><code class="language-json">"icons": {
+  <pre class="brush: json">"icons": {
       "16": "path/to/geo-16.png",
       "32": "path/to/geo-32.png"
-    }</code></pre>
+    }</pre>
 
   <p>Alternativement, vous pouvez spécifier une seule icône SVG, et elle sera mise à l'échelle de manière appropriée :</p>
 
-  <pre class="brush: json no-line-numbers  language-json"><code class="language-json">"icons": {
+  <pre class="brush: json">"icons": {
       "16": "path/to/geo.svg"
-    }</code></pre>
+    }</pre>
 
   <div class="blockIndicator note">
   <p><strong>Note</strong>: The top-level menu item uses the <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a> specified in the manifest rather than what is specified with this key.</p>

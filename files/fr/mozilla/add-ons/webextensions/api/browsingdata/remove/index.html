@@ -74,7 +74,7 @@ then(onRemoved, onError);
 
 <p>Supprimer tout l'historique de téléchargement et de navigation :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function onRemoved() {
+<pre class="brush: js">function onRemoved() {
   console.log("removed");
 }
 
@@ -84,7 +84,7 @@ function onError(error) {
 
 browser.browsingData.remove({},
   {downloads: true, history: true}).
-then(onRemoved, onError);</code></pre>
+then(onRemoved, onError);</pre>
 
 <p>{{WebExtExamples}}</p>
 

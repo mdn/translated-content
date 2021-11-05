@@ -50,7 +50,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeFormData
 
 <p>Supprimer les données de formulaire enregistrées la semaine dernière :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function onRemoved() {
+<pre class="brush: js">function onRemoved() {
   console.log("removed");
 }
 
@@ -66,11 +66,11 @@ var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
 
 browser.browsingData.removeFormData(
   {since: oneWeekAgo}).
-then(onRemoved, onError);</code></pre>
+then(onRemoved, onError);</pre>
 
 <p>Supprimer tous les données de formulaire enregistrées :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function onRemoved() {
+<pre class="brush: js">function onRemoved() {
   console.log("removed");
 }
 
@@ -79,7 +79,7 @@ function onError(error) {
 }
 
 browser.browsingData.removeFormData({}).
-then(onRemoved, onError);</code></pre>
+then(onRemoved, onError);</pre>
 
 <p>{{WebExtExamples}}</p>
 

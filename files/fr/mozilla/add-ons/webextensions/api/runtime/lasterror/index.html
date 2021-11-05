@@ -44,7 +44,7 @@ gettingCookies.then(onGot, onError);</pre>
 
 <p>Définir un cookie, utiliser pour enregistrer le nouveau cookie ou signaler une erreur :</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">function logCookie(c) {
+<pre class="brush: js">function logCookie(c) {
   if (browser.runtime.lastError) {
     console.error(browser.runtime.lastError);
   } else {
@@ -55,11 +55,11 @@ gettingCookies.then(onGot, onError);</pre>
 browser.cookies.set(
   {url: "https://developer.mozilla.org/"},
   logCookie
-);</code></pre>
+);</pre>
 
 <p>La même chose, mais en utilisant une promesse de gérer le résultat de <code>setCookie()</code>:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">function logCookie(c) {
+<pre class="brush: js">function logCookie(c) {
   console.log(c);
 }
 
@@ -71,7 +71,7 @@ var setCookie = browser.cookies.set(
   {url: "https://developer.mozilla.org/"}
 );
 
-setCookie.then(logCookie, logError);</code></pre>
+setCookie.then(logCookie, logError);</pre>
 
 <div class="note">
 <p>Note: <code>runtime.lastError</code> est un alias pour  {{WebExtAPIRef("extension.lastError")}}: Ils sont ensemble, et la vérification de l'un fonctionnera.</p>

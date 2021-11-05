@@ -51,7 +51,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorag
 
 <p>Supprime tout le stockage local :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function onRemoved() {
+<pre class="brush: js">function onRemoved() {
   console.log("removed");
 }
 
@@ -59,8 +59,8 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.</code>removeLocalStorage<code class="language-js">({}).
-then(onRemoved, onError);</code></pre>
+browser.browsingData.removeLocalStorage({}).
+then(onRemoved, onError);</pre>
 
 <p>{{WebExtExamples}}</p>
 

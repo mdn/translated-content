@@ -60,7 +60,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/getTitle
 
 <p>Ce code change le titre entre "ceci" et "cela" chaque fois que l'utilisateur clique sur l'action du navigateur :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function toggleTitle(title) {
+<pre class="brush: js">function toggleTitle(title) {
   if (title == "this") {
     browser.browserAction.setTitle({title: "that"});
   } else {
@@ -71,7 +71,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/getTitle
 browser.browserAction.onClicked.addListener(() =&gt; {
   var gettingTitle = browser.browserAction.getTitle({});
   gettingTitle.then(toggleTitle);
-});</code></pre>
+});</pre>
 
 <p>{{WebExtExamples}}</p>
 

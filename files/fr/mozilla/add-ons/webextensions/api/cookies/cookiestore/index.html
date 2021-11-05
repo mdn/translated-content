@@ -40,14 +40,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 
 <p>Dans l'extrait suivant, la méthode {{WebExtAPIRef("cookies.getAllCookieStores()")}} permet de récupérer tous les magasins de cookies actuellement disponibles dans le navigateur et d'afficher chaque ID de cookie, ainsi que les onglets qui se partagent le cookie store.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function logStores(cookieStores) {
+<pre class="brush: js">function logStores(cookieStores) {
   for(store of cookieStores) {
     console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
   }
 }
 
 var getting = browser.cookies.getAllCookieStores();
-getting.then(logStores);</code></pre>
+getting.then(logStores);</pre>
 
 <p>L'extrait de code suivant obtient tous les cookies stockés et enregistre ensuite le nombre total stocké et combien de ces cookies sont incognito.</p>
 

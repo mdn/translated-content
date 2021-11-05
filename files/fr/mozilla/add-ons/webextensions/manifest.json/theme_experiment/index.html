@@ -124,31 +124,31 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experimentation
 
 <p>La feuille de style définit :</p>
 
-<pre><code>#reload-button {
+<pre class="brush: css">#reload-button {
   fill: var(--reload-button-color);
 }
-</code></pre>
+</pre>
 
 <p>où <code>#reload-button</code> est le sélecteur CSS interne de Firefox pour le bouton reload et  <code>--reload-button-color</code> est un nom arbitraire..</p>
 
 <p>Dans le fichier <code>manifest.json</code>, <code>--reload-button-color</code> est alors mappé au nom à utiliser dans la propriété <code>theme</code> <code>colors</code> :</p>
 
-<pre><code>"theme_experiment": {
+<pre class="brush: json">"theme_experiment": {
   "stylesheet": "style.css",
   "colors": {
     "reload_button": "--reload-button-color"
   }
 }
-</code></pre>
+</pre>
 
 <p>L'argument <code>reload_button</code> est alors utilisé de la même manière que n'importe quelle autre propriété de <code>theme</code> .</p>
 
-<pre><code>"theme": {
+<pre class="brush: json">"theme": {
   "colors": {
     "reload_button": "orange"
   }
 }
-</code></pre>
+</pre>
 
 <p>Ceci a pour effet de rendre l'icône de recharge orange.</p>
 <img alt="Outcome of a theme experiment, showing the reload button colored orange." src="https://mdn.mozillademos.org/files/16892/theme_experiment.png" style="height: 110px; width: 241px;">

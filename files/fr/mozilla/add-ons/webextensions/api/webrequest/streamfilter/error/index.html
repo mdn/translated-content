@@ -25,7 +25,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/error
 
 <p>Cet exemple ajoute un écouteur {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} qui enregistre la valeur de <code>error</code>.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData("12345");
 
   filter.onerror = event =&gt; {
@@ -39,6 +39,6 @@ browser.webRequest.onBeforeRequest.addListener(
   listener,
   {urls: ["&lt;all_urls&gt;"], types: ["main_frame"]},
   ["blocking"]
-);</code></pre>
+);</pre>
 
 <p>{{WebExtExamples}}</p>

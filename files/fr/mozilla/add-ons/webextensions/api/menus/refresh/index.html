@@ -45,7 +45,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/refresh
 
 <p>Cet exemple permet d'afficher le menu contextuel sur un lien, puis met à jour l'élément de menu <code>openLabelledId</code> menu item avec le nom d'hôte du lien :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function updateMenuItem(linkHostname) {
+<pre class="brush: js">function updateMenuItem(linkHostname) {
   browser.menus.update(openLabelledId, {
     title: `Open (${linkHostname})`
   });
@@ -59,6 +59,6 @@ browser.menus.onShown.addListener(info =&gt; {
   let linkElement = document.createElement("a");
   linkElement.href = info.linkUrl;
   updateMenuItem(linkElement.hostname);
-});</code></pre>
+});</pre>
 
 <p>{{WebExtExamples}}</p>

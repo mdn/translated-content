@@ -45,10 +45,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
 
   <p>Utilisez un dictionnaire d'objet pour spécifier plusieurs objets <code>ImageData</code> dans différentes tailles, de sorte que l'icône ne doit pas  être mise à l'échelle pour un périphérique avec une densité de pixel différentes. Si <code>imageData</code> est un dictionnaire, la valeur de chaque propriété  est un objet<code>ImageData</code>, et son nom est sa taille, comme ceci :</p>
 
-  <pre class="brush: json line-numbers  language-json"><code class="language-json">{
+  <pre class="brush: json">{
   16: image16,
   32: image32
-}</code></pre>
+}</pre>
 
   <p>Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir <a href="/fr/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes">Choix de la tailles d'icônes</a> pour plus d'informations à ce sujet.</p>
   </dd>
@@ -58,10 +58,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
 
   <p>Utilisez un dictionnaire d'objet pour spécifier plusieurs fichiers d'icônes dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différentes. Si <code>path</code> est un dictionnaire, la valeur de chaque propriété est un chemin relatif , et son nom est sa taille, comme ceci :</p>
 
-  <pre class="brush: json line-numbers  language-json"><code class="language-json">{
+  <pre class="brush: json">{
   16: "path/to/image16.jpg",
   32: "path/to/image32.jpg"
-}</code></pre>
+}</pre>
 
   <p>Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir <a href="/fr/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes">Choix de la tailles d'icônes</a> pour plus d'informations à ce sujet.</p>
   </dd>

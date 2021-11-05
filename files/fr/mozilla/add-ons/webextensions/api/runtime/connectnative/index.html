@@ -62,7 +62,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
 <pre class="brush: js">/*
 On startup, connect to the "ping_pong" app.
 */
-var port = <code class="language-js">browser</code>.runtime.connectNative("ping_pong");
+var port = browser.runtime.connectNative("ping_pong");
 
 /*
 Listen for messages from the app.
@@ -74,7 +74,7 @@ port.onMessage.addListener((response) =&gt; {
 /*
 On a click on the browser action, send the app a message.
 */
-<code class="language-js">browser</code>.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() =&gt; {
   console.log("Sending:  ping");
   port.postMessage("ping");
 });</pre>

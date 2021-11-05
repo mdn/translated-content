@@ -51,7 +51,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeDownloads
 
 <p>Supprime les enregistrements d'objets téléchargés la semaine dernière :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function onRemoved() {
+<pre class="brush: js">function onRemoved() {
   console.log("removed");
 }
 
@@ -67,11 +67,11 @@ var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
 
 browser.browsingData.removeDownloads(
   {since: oneWeekAgo}).
-then(onRemoved, onError);</code></pre>
+then(onRemoved, onError);</pre>
 
 <p>Supprime tous les enregistrements d'objets téléchargés :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function onRemoved() {
+<pre class="brush: js">function onRemoved() {
   console.log("removed");
 }
 
@@ -80,7 +80,7 @@ function onError(error) {
 }
 
 browser.browsingData.removeDownloads({}).
-then(onRemoved, onError);</code></pre>
+then(onRemoved, onError);</pre>
 
 <p>{{WebExtExamples}}</p>
 

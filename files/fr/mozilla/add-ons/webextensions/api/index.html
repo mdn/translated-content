@@ -8,24 +8,22 @@ translation_of: Mozilla/Add-ons/WebExtensions/API
 ---
 <div>{{AddonSidebar}}</div>
 
-<div>
 <p>Les APIs WebExtensions en JavaScript peuvent être utilisées au sein des <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">scripts d’arrière plan</a> de l’extension et dans tout autre document livré avec celle-ci. Ceci inclut les pop-ups relatives à une <a href="/fr/Add-ons/WebExtensions/user_interface/Browser_action">action navigateur</a> ou <a href="/fr/Add-ons/WebExtensions/user_interface/Page_actions">action de page</a>, <a href="/fr/Add-ons/WebExtensions/user_interface/barres_laterales">barres latérales</a>, <a href="/fr/Add-ons/WebExtensions/user_interface/Options_pages">pages d’options</a>, ou <a href="/fr/Add-ons/WebExtensions/manifest.json/chrome_url_overrides">pages de nouvel onglet</a>. Certaines de ces APIs peuvent également être interrogées par des <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">scripts de contenu</a> de l’extension (voir la <a href="/fr/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs">liste dans le guide des scripts de contenu</a>).</p>
 
 <p>Pour utiliser les APIs plus puissantes, vous devez en <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">demander la permission</a> dans le manifest.json de votre extension.</p>
 
 <p>Vous pouvez accéder aux APIs en utilisant l’espace de noms <code>browser</code> :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function afficherTabs (tabs) {
+<pre class="brush: js">function afficherTabs (tabs) {
   console.log(tabs)
 }
 
-browser.tabs.query({currentWindow: true}, afficherTabs)</code></pre>
-</div>
+browser.tabs.query({currentWindow: true}, afficherTabs)</pre>
 
-<div>
+
 <p>De nombreuses APIs sont asynchrones et retournent une {{JSxRef("Promise")}}:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function afficherCookie (c) {
+<pre class="brush: js">function afficherCookie (c) {
   console.log(c)
 }
 
@@ -36,8 +34,8 @@ function afficherErreur (e) {
 let setCookie = browser.cookies.set(
    {url: "https://developer.mozilla.org/"}
 );
-setCookie.then(logCookie, afficherErreur)</code></pre>
-</div>
+setCookie.then(logCookie, afficherErreur)</pre>
+
 
 <div>
 <p>Notez que ceci est différent du système d'extension de Google Chrome, qui utilise l’espace de noms <code>chrome</code> à la place de <code>browser</code>, et qui utilise des fonctions de rappel (callbacks) plutôt que des promesses pour les fonctions asynchrones. Afin de favoriser la portabilité, l’implémentation Firefox des WebExtensions prend en charge <code>chrome</code> et les fonctions de rappel ainsi que <code>browser</code> et les promesses. Mozilla a également écrit une prothèse d’émulation (polyfill) permettant au code qui utilise <code>browser</code> et les promesses de fonctionner sans modification dans Chrome: <a href="https://github.com/mozilla/webextension-polyfill">https://github.com/mozilla/webextension-polyfill</a>.</p>

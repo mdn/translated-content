@@ -78,7 +78,7 @@ then(onRemoved, onError);</pre>
  Si vous souhaitez simplement effacer tous les cookies sans perturber les installations de stockage locales, utilisez <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies">browser.cookies</a> pour faire une boucle et supprimer le contenu de tous les magasins de cookies.</p>
 </div>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function onRemoved() {
+<pre class="brush: js">function onRemoved() {
   console.log("removed");
 }
 
@@ -87,7 +87,7 @@ function onError(error) {
 }
 
 browser.browsingData.removeCookies({}).
-then(onRemoved, onError);</code></pre>
+then(onRemoved, onError);</pre>
 
 <p>{{WebExtExamples}}</p>
 

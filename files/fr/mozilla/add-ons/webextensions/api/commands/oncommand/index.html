@@ -17,8 +17,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/commands/onCommand
 
 <div>Lancer quand une commande est exécutée à l'aide de son raccourci clavier associé.</div>
 
-<div></div>
-
 <div>L'écouteur reçoit  le nom de la commande. Cela correspond au nom donnée à la commande dans une  <a href="/fr/Add-ons/WebExtensions/manifest.json/commands">entrée manifest.json</a>.</div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
@@ -63,30 +61,22 @@ browser.commands.onCommand.hasListener(listener)
 
 <div>Etant donnée une entrée manifest.json comme ceci :</div>
 
-<div></div>
-
-<div>
-<pre class="brush: json line-numbers language-json"><code class="language-json">"commands": {
+<pre class="brush: json">"commands": {
   "toggle-feature": {
     "suggested_key": {
       "default": "Ctrl+Shift+Y"
     },
     "description": "Send a 'toggle-feature' event"
   }
-}</code></pre>
-</div>
+}</pre>
 
 <div>Vous pouvez écouter cette commande particulière comme ceci :</div>
 
-<div></div>
-
-<div>
-<pre class="brush: js line-numbers language-js"><code class="language-js">browser.commands.onCommand.addListener(function(command) {
+<pre class="brush: js">browser.commands.onCommand.addListener(function(command) {
   if (command == "toggle-feature") {
     console.log("toggling the feature!");
   }
-});</code></pre>
-</div>
+});</pre>
 
 <p>{{WebExtExamples}}</p>
 

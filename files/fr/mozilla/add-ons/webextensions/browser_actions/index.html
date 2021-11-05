@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Browser_actions
 
 <p>Si vous ne spécifiez pas de popup, alors lorsque l'utilisateur clique sur le bouton, un événement est envoyé à l'extension, que vous pouvez écouter à l'aide de <a href="/fr/Add-ons/WebExtensions/API/BrowserAction/onClicked"><code>browserAction.onClicked</code></a>:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">browser.browserAction.onClicked.addListener(handleClick);</code></pre>
+<pre class="brush: js">browser.browserAction.onClicked.addListener(handleClick);</pre>
 
 <p>Si vous spécifiez un popup, l'événement click n'est pas distribué : au lieu de cela, le popup sera affiché lorsque l'utilisateur clique sur le bouton. L'utilisateur pourra interagir avec le popup et il se fermera automatiquement lorsque l'utilisateur clique à l'extérieur.</p>
 
@@ -25,14 +25,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/Browser_actions
 
 <p>Vous définissez les propriétés de l'action du navigateur - icône, titre, popup - en utilisant la clé <code><a href="/fr/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> dans manifest.json:</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json">"browser_action": {
+<pre class="brush: json">"browser_action": {
   "default_icon": {
     "19": "button/geo-19.png",
     "38": "button/geo-38.png"
   },
   "default_title": "Whereami?",
   "default_popup": "popup/geo.html"
-}</code></pre>
+}</pre>
 
 <p>La seule clé obligatoire est <code>default_icon</code>. Vous pouvez changer n'importe laquelle de ces propriétés par programme à l'aide de l'API <code><a href="/fr/Add-ons/WebExtensions/API/browserAction">browserAction</a></code> .</p>
 
