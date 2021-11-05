@@ -22,8 +22,6 @@
 /fr/docs/Accessibilité/ARIA/FAQ_Applications_Web_et_ARIA	/fr/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ
 /fr/docs/Accessibilité/ARIA/Guides_ARIA	/fr/docs/Web/Accessibility/ARIA/ARIA_Guides
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques
-/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Modele_Technique_ARIA	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/ARIA_Technique_Template
-/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utilisation_du_groupe_rôle	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utilisation_du_groupe_switch	/fr/docs/Web/Accessibility/ARIA/Roles/Switch_role
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-describedby	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-invalid	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute
@@ -48,7 +46,6 @@
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_slider	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_status	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_textbox	/fr/docs/Web/Accessibility/ARIA/Roles/textbox_role
-/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_toolbar	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alert	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_article	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_article_role
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_button	/fr/docs/Web/Accessibility/ARIA/Roles/button_role

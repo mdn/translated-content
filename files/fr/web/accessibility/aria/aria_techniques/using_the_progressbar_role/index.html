@@ -20,15 +20,18 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_progressbar
 
 <p>Si le rôle <code>progressbar</code> décrit la progression du chargement d’une zone particulière d’une page, l’auteur <strong>DOIT</strong> utiliser l’attribut <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby"><code>aria-describedby</code></a> pour pointer vers l’état courant, et définir l’attribut <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-busy"><code>aria-busy</code></a> à <code>true</code> pour la zone jusqu’à la fin du chargement. Il n’est pas possible à l’utilisateur de modifier la valeur de <code>progressbar</code> car elle est toujours en lecture seule.</p>
 
-<div class="note"><strong>Note :</strong> généralement les technologies d’assistance retourneront la valeur de l’attribut <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-valuenow"><code>aria-valuenow</code></a> sous la forme d’un pourcentage d’une plage de valeurs comprise entre <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-valuemin"><code>aria-valuemin</code></a> et <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-valuemax"><code>aria-valuemax</code></a>, sauf si <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-valuetext"><code>aria-valuetext</code></a> est spécifié. Il est préférable de définir les valeurs pour les attributs <code>aria-valuemin</code>, <code>aria-valuemax</code> et <code>aria-valuenow</code> de façon appropriée pour ce calcul.</div>
+<div class="note">
+  <p><strong>Note :</strong> généralement les technologies d’assistance retourneront la valeur de l’attribut <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-valuenow"><code>aria-valuenow</code></a> sous la forme d’un pourcentage d’une plage de valeurs comprise entre <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-valuemin"><code>aria-valuemin</code></a> et <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-valuemax"><code>aria-valuemax</code></a>, sauf si <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-valuetext"><code>aria-valuetext</code></a> est spécifié. Il est préférable de définir les valeurs pour les attributs <code>aria-valuemin</code>, <code>aria-valuemax</code> et <code>aria-valuenow</code> de façon appropriée pour ce calcul.</p></div>
 
-<div class="note"><strong>Note :</strong> les éléments possédant le rôle <code>progressbar</code> ont une valeur <code>aria-readonly</code> implicite définie à <code>true</code>.</div>
+<div class="note">
+  <p><strong>Note :</strong> les éléments possédant le rôle <code>progressbar</code> ont une valeur <code>aria-readonly</code> implicite définie à <code>true</code>.</p>
+</div>
 
 <h3 id="Effets_possibles_sur_les_agents_utilisateurs_et_les_technologies_d’assistance">Effets possibles sur les agents utilisateurs et les technologies d’assistance</h3>
 
 <p>Les lecteurs devraient annoncer les mises à jour de la progression dès qu’elles se produisent. Si la barre de progression a un label, il devrait également être mentionné.</p>
 
-<div class="note"><strong>Note :</strong> il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.</div>
+<div class="note"><p><strong>Note :</strong> il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.</p></div>
 
 <h3 id="Exemples">Exemples</h3>
 
