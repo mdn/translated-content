@@ -12,7 +12,7 @@ tags:
 
 [Git](https://git-scm.com/) e [GitHub](https://github.com/) são ferramentas desafiadoras para aprender e dominar, mas com alguns poucos comandos simples e alguns bons conselhos, você deve ser capaz de fazer o suficiente para contribuir para o MDN sem muitos problemas. O intuito deste artigo não é te ajudar a dominar Git ou GitHub, mas te dar o bastante para ser produtivo com eles em um nível básico e contribuir para o MDN.
 
-Se você já está familiarizado com o básico de Git/GitHub, você provavelmente não vai aprender nada novo aqui, mas você ainda pode achar este artigo útil como uma referência. Existe uma [folha de dicas de GitHub](/en-US/docs/MDN/Contribute/GitHub_cheatsheet) disponível também, apenas com os comandos e sem as longas explicações.
+Se você já está familiarizado com o básico de Git/GitHub, você provavelmente não vai aprender nada novo aqui, mas você ainda pode achar este artigo útil como uma referência. Existe uma [folha de dicas de GitHub](/pt-BR/docs/MDN/Contribute/GitHub_cheatsheet) disponível também, apenas com os comandos e sem as longas explicações.
 
 ## Conceitos essenciais
 
@@ -30,8 +30,8 @@ A seguir estão os conceitos essenciais que você deve se familiarizar para tira
 
 Este artigo assume que:
 
-- Você já está confortável usando linha de comando/terminal. Se você é novo com linha de comando, leia nosso [Curso intensivo de linha de comando](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line).
-- Você está trabalhando em um sistema que entende linhas de comando no padrão Unix. O macOS/Linux já tem isto disponível; [O Windows não é tão simples](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#windows) nesta questão, mas existem ferramentas úteis para emular estas funcionalidades no Windows, assim como o Gitbash.
+- Você já está confortável usando linha de comando/terminal. Se você é novo com linha de comando, leia nosso [Curso intensivo de linha de comando](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line).
+- Você está trabalhando em um sistema que entende linhas de comando no padrão Unix. O macOS/Linux já tem isto disponível; [O Windows não é tão simples](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#windows) nesta questão, mas existem ferramentas úteis para emular estas funcionalidades no Windows, assim como o Gitbash.
 - Você vai usar a linha de comando para interagir com o Git/GitHub. Existem inúmeras ferramentas GUI disponíveis para Git e GitHub, mas não vamos trabalhar com elas neste guia.
 
 ## Setup inicial
@@ -39,7 +39,7 @@ Este artigo assume que:
 Antes de você começar a trabalhar com algum repo específico, siga estes passos:
 
 1. Instale o Git no seu computador. Vá para [a página de downloads do Git](https://git-scm.com/downloads), baixe a última versão no seu computador, e a instale. Se você é um usuário de Windows, você também deve instalar o pacote [Git para Windows](https://gitforwindows.org/), que inclui o Gitbash.
-2. Enquanto isso, instale as outras dependências necessárias para trabalhar localmente com o MDN — [Node.js](https://nodejs.org/en/download/) e [yarn](https://classic.yarnpkg.com/en/docs/install).
+2. Enquanto isso, instale as outras dependências necessárias para trabalhar localmente com o MDN — [Node.js](https://nodejs.org/pt-br/download/) e [yarn](https://classic.yarnpkg.com/en/docs/install).
 
     1. Instale o Node.js seguindo os links acima e baixe e instale a última versão no seu computador.
     2. Depois de você instalar o Node.js, instale o yarn rodando o comando `npm install --global yarn`.
@@ -49,98 +49,98 @@ Antes de você começar a trabalhar com algum repo específico, siga estes passo
 
 ### Configurando a autenticação SSH no GitHub
 
-At this point you need to set up an SSH key on your GitHub account. This is basically a security mechanism that identifies you to GitHub, and means that you don't have to authenticate each time you use GitHub services.
+Agora, você precisa configurar uma chave SSH na sua conta do GitHub. Isto é basicamente um mecanismo de segurança que identifica você para o GitHub, e significa que você não vai ter que se autenticar todas as vezes para usar os serviços do GitHub.
 
-GitHub have created a useful guide to setting this up — see the starting point at [Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh). Follow each of the steps here to get set up with SSH on Github.
+O GitHub criou um guia útil para configurar isto — veja o ponto de partida em [Conectando no GitHub com SSH](https://docs.github.com/pt/github/authenticating-to-github/connecting-to-github-with-ssh). Siga cada um dos passos aqui para configurar o SSH no GitHub.
 
-If you don't do this, you'll still be able to contribute to MDN, but you'll have to enter your username and password every time you interact with GitHub (e.g. whenever you submit a pull request, as seen below).
+Se você não fizer isto, você ainda vai ser capaz de contribuir para o MDN, mas você vai ter que inserir seu usuário e senha toda vez que interagir com o GitHub (e.g. sempre que você submeter um pull request, como visto abaixo).
 
-## Setting up to work on a specific repo
+## Preparando-se para trabalhar em um repo específico
 
-There are a number of different repos you may have to update as you work on different MDN tasks (see [Where is everything on MDN? A guide to our repos](/en-US/docs/MDN/Contribute/Where_is_everything)), but there are a number of setup steps you should follow on every repo you work on, to make things easier and more consistent.
+Existem inúmeros repos diferentes que você pode ter que atualizar conforme você trabalha em tarefas diferentes do MDN (veja [Onde está tudo no MDN? Um guia para nossos repositórios](/pt-BR/docs/MDN/Contribute/Where_is_everything)), mas existem alguns passos que você deve seguir em todos os repos que você trabalhar, para fazer as coisas serem mais fáceis e consistentes.
 
-### Forking and cloning
+### Bifurcando e clonando
 
-_Forking_ and _cloning_ are two terms you'll come across often in the world of Git:
+_Bifurcar_, também conhecido como _criar um fork_, e _clonar_ são dois termos com os quais você vai se deparar frequentemente no mundo do Git:
 
-- Forking means creating your own copy of a repo on GitHub.
-- Cloning means making a local copy of a repo for you to work on (i.e. on your local hard drive).
+- Bifurcar significa criar sua própria cópia de um repo no GitHub.
+- Clonar significa fazer uma cópia local de um repositório para você trabalhar nela (i.e. no seu disco rígido local).
 
-It is possible to do the two things separately, but in practice you will nearly always do them together when contributing to other people's projects. You should first make a fork of each repo you want to work on. This is required for you to submit change requests to the main version of the repo (we'll learn how to create a pull request later on). Due to security reasons, you can't submit changes directly to the main version of the repo. So to submit changes, first fork the main repo, then push the changes to your fork, and then create a pull request to get the changes from your fork merged into the main repo.
+É possível fazer as duas coisas separadamente, mas na prática você quase sempre irá fazer os dois juntos quando estiver contribuindo nos projetos de outras pessoas. Primeiro, você deve fazer um fork de cada repo no qual você quer trabalhar. Isto é necessário para você submeter as alterações solicitadas para a versão principal do repo (nós vamos aprender a criar um pull request mais tarde). Por segurança, você não pode submeter alterações diretamente para a versão principal do repositório. Então para submeter as mudanças, primeiro faça o fork do repo principal, então envie as mudanças para o seu fork, e então crie um pull request para que as mudanças do seu fork sejam mescladas no repositório principal.
 
-Let's fork <https://github.com/mdn/content> right now; you'll definitely be contributing to this repo at some point. Follow these steps:
+Vamos criar um fork do <https://github.com/mdn/content> agora mesmo; você definitivamente vai estar contribuindo para este repo em algum momento. Siga estes passos:
 
-1.  Locate the Fork button at the top-right hand corner of the content repo's page, and press it:
+1.  Localize o botão Fork no canto superior direito da página do repo content, e clique nele:
 
-    ![Button labeled fork, with the number 609 next to it](fork-button.png)
+    ![Botão rotulado fork, com o número 609 próximo a ele](fork-button.png)
 
-2.  A modal window will appear, asking you where you want to fork the repo to. Select your personal GitHub account.
+2.  Uma janela modular vai aparecer, perguntando onde você quer fazer o fork do repo. Selecione sua conta pessoal do GitHub.
 
-    A message will appear saying something like "Forking mdn/content. It should only take a few seconds." Once GitHub has finished forking, your browser should redirect to the page for the new fork. As an example, my fork of <https://github.com/mdn/content> is available at <https://github.com/chrisdavidmills/content>.
+  Uma mensagem vai aparecer dizendo algo como "Bifurcando mdn/content. Isso deve levar apenas alguns segundos.". Uma vez que o GitHub tenha terminado de fazer o fork, seu browser deve redirecionar para a página do novo fork. Como um exemplo, meu fork do <https://github.com/mdn/content> está disponível em <https://github.com/chrisdavidmills/content>.
 
-Now you've forked the repo, it is time to clone your fork locally. To do this:
+Agora que você criou o fork do repo, é hora de clonar o fork localmente. Para fazer isto:
 
-1.  Go to your fork's page on github.com (e.g. `https://github.com/<your-user-name>/content`).
-2.  Press the green "Code" button at the top of the files list. Something similar to the following popup should appear as a result:
+1.  Vá para a página do fork em github.com (e.g. `https://github.com/<your-user-name>/content`). 
+2.  Clique no botão verde "Code" no topo da lista de arquivos. Algo similar ao popup abaixo deve aparecer:
 
-    ![Popup window showing a clone URL along with options to open with github desktop and download zip](code-popup.png)
+    ![Janela popup mostrando uma URL para clonar junto com opções para abrir com o GitHub desktop e baixar o zip](code-popup.png)
 
-3.  If you set up SSH authentication as instructed above, click the "SSH" tab and copy the `git@github.com:<your-user-name>/content.git` URL from the text field in the box. If you didn't set up SSH authentication, copy the URL from the text field on the "HTTPS" tab instead, which should look like this: `https://github.com/<your-user-name>/content.git`.
-4.  Now open up the command line on your computer, and navigate into the directory you set up earlier to store your local git repo clones in using the cd command, e.g.
+3.  Se você configurar a autenticação SSH como mostrado acima, clique na tab "SSH" e copie a URL `git@github.com:<your-user-name>/content.git` do campo de texto na caixa. Se você não configurou a autenticação SSH, ao invés disso copie a URL do campo de texto na tab "HTTPS", que deve ser parecida com esta: `https://github.com/<your-user-name>/content.git`.
+4.  Agora abra a linha de comando no seu computador, e navegue para o diretório que você configurou anteriormente para armazenar localmente os clones de repos usando o comando cd, e.g.
 
     ```bash
     cd git
     ```
 
-5.  Clone your fork by entering a command with the following form:
+5.  Clone seu fork inserindo um comando com a seguinte forma:
 
     ```bash
-    git clone the-url-you-copied
+    git clone url-que-você-copiou
     ```
 
-    So for example my cloning command looked like this:
+    Então, por exemplo, meu comando para clonar parecia com isto:
 
     ```bash
     git clone git@github.com:chrisdavidmills/content.git
     ```
 
-You should now find a content directory inside your git directory, containing the contents of the repo.
+Agora você deve encontrar um diretório content dentro do seu diretório do git, contendo o conteúdo do repo.
 
-### Setting up a remote to point to the main version of the repo
+### Configurando um ramo remoto para apontar para a versão principal do repo
 
-One last thing to do before moving on is set up a _remote_ to point to the main version of the repo, e.g. <https://github.com/mdn/content> in the case of our example. A remote is basically a pointer to a specific remote repo location on GitHub, and is most commonly used to update your local clone so it is up-to-date with the latest main repo, as we'll see below.
+Uma última coisa a se fazer antes de seguirmos é configurar um _ramo remoto_ para apontar para a versão principal do repo, e.g. <https://github.com/mdn/content> no caso do nosso exemplo. Um ramo remoto é basicamente um ponteiro para um repo remoto específico localizado no GitHub, e é mais comumente usado para atualizar seu clone local, então ele está atualizado com a última versão do repo principal, como nós veremos abaixo.
 
-Setting up a remote is done with the `git remote add` command, which looks like this:
+Um ramo remoto é configurado com o comando `git remote add`, que se parece com isto:
 
 ```bash
-git remote add remote-name repo-you-want-to-point-to
+git remote add nome-ramo-remoto repo-para-o-qual-você-quer-apontar
 ```
 
-- _remote-name_ is a name that you decide on, which is used to refer to the remote later on. It is good to stick to a consistent name for remotes across different repos that have the same purpose, so the same remote name will do the same thing everywhere, and you are less likely to get confused. So for example, the main version of the repo that you forked your version from is often called the "upstream repo", therefore people often use "upstream" as the name of the remote upstream location. I usually call my upstream remotes "mozilla", to signify that they point to Mozilla's main copy of the repo.
-- _repo-you-want-to-point-to_ is the SSH (or HTTPS) URL of the repo you want to point to, retrieved in the same way as we did when we were cloning our fork earlier.
+- _nome-ramo-remoto_ é um nome que você escolhe, que é usado para referenciar o ramo remoto posteriormente. É bom manter um nome consistente para os ramos remotos que tem o mesmo propósito pelos diferentes repos, então o ramo remoto com o mesmo nome vai fazer a mesma coisa em todos os lugares, e você tem menos chance de ficar confuso. Então, por exemplo, a versão principal do repo que você bifurcou a sua versão é frequentemente chamado de "upstream repo", por isso as pessoas costumam usar "upstream" como nome do local remoto de upstream. Eu geralmente chamo meus upstream remotos como "mozilla", para significar que eles apontam para a cópia principal da Mozilla do repo.
+- _repo-para-o-qual-você-quer-apontar_ é a URL SSH (ou HTTPS) do repo que você quer apontar, obtida da mesma forma que nós obtivemos quando nós clonamos o fork anteriormente.
 
-So, to add your remote:
+Então, adicionar seu ramo remoto:
 
-1.  Go to the github.com page for the main version of the repo (<https://github.com/mdn/content> in this example) and retrieve the SSH or HTTPS URL as appropriate, from the "Code" popup.
-2.  In your command line, `cd` into your content directory:
+1.  Vá para a página da versão principal do repo em github.com (<https://github.com/mdn/content> neste exemplo) e recupere a URL SSH ou HTTPS, como for conveniente, do popup "Code".
+2.  Na sua linha de comando, `cd` para o seu diretório content:
 
     ```bash
     cd content
     ```
 
-3.  Now run a command along the following lines, replacing _remote-name_ and _repo-you-want-to-point-to_ as appropriate:
+3.  Agora rode a linha a seguir, substituindo _nome-ramo-remoto_ e _repo-para-o-qual-você-quer-apontar_ de forma apropriada:
 
     ```bash
-    git remote add remote-name repo-you-want-to-point-to
+    git remote add nome-ramo-remoto repo-para-o-qual-você-quer-apontar
     ```
 
-    So for example, I used the SSH URL and called my remote "mozilla":
+    Então, por exemplo, eu usei a URL SSH e chamei meu ramo remoto de "mozilla":
 
     ```bash
     git remote add mozilla git@github.com:mdn/content.git
     ```
 
-Your remote should now be set up. You can verify it by running the command `git remote -v` in your terminal, which outputs a list of your remote names and where they point to. You should see something a bit like this:
+Seu ramo remoto agora deve estar configurado. Você pode verificar isso rodando o comando `git remote -v` no seu terminal, o que irá produzir uma lista com os nomes do seus ramos remotos e para onde eles apontam. Você deve ver algo como isto:
 
 ```plain
 mozilla    git@github.com:mdn/content.git (fetch)
@@ -149,9 +149,9 @@ origin    git@github.com:chrisdavidmills/content.git (fetch)
 origin    git@github.com:chrisdavidmills/content.git (push)
 ```
 
-## Preparing to make a change to the repo
+## Se preparando para fazer uma alteração no repo
 
-Now you've got your local fork clone all set up to work with, there is a set of commands you should get in the habit of running before you attempt to make any new changes.
+Agora que você você tem seu fork local, clonado e configurado para trabalhar, há um conjunto de comandos que você deve ter o hábito de rodar antes de tentar fazer qualquer mudança nova.
 
 ### Switch to the main branch
 
