@@ -8,28 +8,28 @@ tags:
 translation_of: Mozilla/Firefox/Releases/35
 original_slug: Mozilla/Firefox/Versions/35
 ---
-<div><section id="Quick_links">
+<div>
   <ol>
-    <li class="toggle">
-        <details>
-            <summary>Notes de versions pour développeurs</summary>
+    <li>
+        
+            <p>Notes de versions pour développeurs</p>
             <ol>
               <li><a href="/fr/docs/Mozilla/Firefox/Releases">Notes de versions pour développeurs</a></li>
             </ol>
-        </details>
+        
     </li>
-    <li class="toggle">
-        <details>
-            <summary>Modules complémentaires</summary>
+    <li>
+        
+            <p>Modules complémentaires</p>
             <ol>
               <li><a href="/fr/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="/fr/Add-ons/Themes">Thèmes</a></li>
             </ol>
-        </details>
+        
     </li>
-    <li class="toggle">
-        <details>
-            <summary>Fonctionnement interne de Firefox</summary>
+    <li>
+        
+            <p>Fonctionnement interne de Firefox</p>
             <ol>
               <li><a href="/fr/docs/Mozilla/">Le projet Mozilla</a></li>
               <li><a href="/fr/docs/Mozilla/Gecko">Gecko</a></li>
@@ -44,11 +44,11 @@ original_slug: Mozilla/Firefox/Versions/35
               <li><a href="/fr/docs/Mozilla/Tech/XPCOM">XPCOM</a></li>
               <li><a href="/fr/docs/Mozilla/Tech/XUL">XUL</a></li>
             </ol>
-        </details>
+        
     </li>
-    <li class="toggle">
-        <details>
-            <summary>Développer et contribuer</summary>
+    <li>
+        
+            <p>Développer et contribuer</p>
             <ol>
               <li><a href="/fr/docs/Mozilla/Developer_guide/Build_Instructions">Instructions de compilation</a></li>
               <li><a href="/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">Configuration des options de compilation</a></li>
@@ -59,10 +59,11 @@ original_slug: Mozilla/Firefox/Versions/35
               <li><a href="/fr/docs/Mozilla/QA">Assurance qualité</a></li>
               <li><a href="/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects">Utilisation de code Mozilla dans d'autres projets</a></li>
             </ol>
-        </details>
+        
     </li>
   </ol>
-</section></div><h2 id="Changement_concernant_les_développeurs">Changement concernant les développeurs</h2>
+</div>
+<h2 id="Changement_concernant_les_développeurs">Changement concernant les développeurs</h2>
 
 <h3 id="Outils_de_développement">Outils de développement</h3>
 
@@ -84,7 +85,7 @@ original_slug: Mozilla/Firefox/Versions/35
  <li>La fonction <a href="/fr/docs/Web/CSS/@font-face" title="La règle @ @font-face permet de définir les polices d'écriture à utiliser pour afficher le texte de pages web. Cette police peut être chargée depuis un serveur distant ou depuis l'ordinateur de l'utilisateur. Si la fonction local() est utilisée, elle indique à l'agent utilisateur de prendre en compte une police présente sur le poste de l'utilisateur."><code>@font-face</code></a> est maintenant compatible avec les polices de type WOFF2 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1064737" title="FIXED: support WOFF2 fonts via @font-face">bug 1064737</a>).</li>
  <li>La notation fonctionnelle <a href="/fr/docs/Web/CSS/symbol()" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>symbol()</code></a> est maintenant supportée(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=966168" title="FIXED: Implement symbols() CSS function">bug 966168</a>).</li>
  <li>L'API CSS Font Loading a été implémentée (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1028497" title="FIXED: implement the CSS Font Loading API">bug 1028497</a>).</li>
- <li><span id="summary_alias_container"><span id="short_desc_nonedit_display">En utilisant <a href="/fr/docs/Web/CSS/appearance" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>-moz-appearance</code></a> avec la valeur <code>none</code> sur un menu de type </span></span><code>select</code><span><span>, le bouton</span></span> déroulant est maintenant supprimé (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649849" title="FIXED: Make -moz-appearance:none on a combobox remove the dropdown button">bug 649849</a>).</li>
+ <li>En utilisant <a href="/fr/docs/Web/CSS/appearance" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>-moz-appearance</code></a> avec la valeur <code>none</code> sur un menu de type <code>select</code><span><span>, le bouton</span></span> déroulant est maintenant supprimé (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649849" title="FIXED: Make -moz-appearance:none on a combobox remove the dropdown button">bug 649849</a>).</li>
  <li>La propriété accessor <code>element.style["css-property-name"]</code> a maintenant été ajoutée pour correspondre aux autres navigateurs (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=958887" title='FIXED: Add support for element.style["css-property-name"] non-standard extension'>bug 958887</a>).</li>
 </ul>
 
