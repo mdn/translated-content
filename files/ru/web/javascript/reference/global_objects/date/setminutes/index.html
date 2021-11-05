@@ -11,11 +11,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>setMinutes()</code></strong> устанавливает минуты указанной даты по местному времени.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>dateObj</var>.setMinutes(<var>minutesValue</var>[, <var>secondsValue</var>[, <var>msValue</var>]])</code></pre>
 
@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
 
 <pre class="syntaxbox"><code><var>dateObj</var>.setMinutes(<var>minutesValue</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>minutesValue</code></dt>
@@ -38,52 +38,29 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
 
 <p>Количество миллисекунд между 1 января 1970 00:00:00 UTC и обновлённой датой.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Если вы не определите значения параметров <code>secondsValue</code> и <code>msValue</code>, будут использоваться значения, возвращаемые методами {{jsxref("Date.prototype.getSeconds()", "getSeconds()")}} и {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}}.</p>
 
 <p>Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод <code>setMinutes()</code> попытается соответственно обновить другие параметры и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве <code>secondsValue</code> передать значение 100, минуты увеличатся на 1 (<code>minutesValue + 1</code>), а в качестве секунд будет использоваться значение 40.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_setMinutes" name="Example:_Using_setMinutes">Пример: использование метода <code>setMinutes()</code></h3>
+<h3 id="Example:_Using_setMinutes">Пример: использование метода <code>setMinutes()</code></h3>
 
 <pre class="brush: js">var theBigDay = new Date();
 theBigDay.setMinutes(45);
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.32', 'Date.prototype.setMinutes')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.setminutes', 'Date.prototype.setMinutes')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Date.prototype.getMinutes()")}}</li>

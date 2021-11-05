@@ -20,7 +20,7 @@ original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser
 
 <p>Добавьте следующие переменные сразу после всех наших текущих определений переменных:</p>
 
-<pre class="brush: js notranslate">var lives = 3;
+<pre class="brush: js">var lives = 3;
 var livesText;
 var lifeLostText;
 </pre>
@@ -31,7 +31,7 @@ var lifeLostText;
 
 <p>Надписи мы уже определяли, когда реализовывали систему <a href="https://developer.mozilla.org/ru/docs/Games/Tutorials/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_2D_Breakout_%D0%B8%D0%B3%D1%80%D1%8B_%D0%BD%D0%B0_Phaser/%D0%9E%D1%87%D0%BA%D0%B8">очков</a>. Добавьте следующие строки кода в после определения надписи <code>scoreText</code> в функции <code>create()</code>:</p>
 
-<pre class="brush: js notranslate">livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, { font: '18px Arial', fill: '#0095DD' });
+<pre class="brush: js">livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, { font: '18px Arial', fill: '#0095DD' });
 livesText.anchor.set(1,0);
 lifeLostText = game.add.text(game.world.width*0.5, game.world.height*0.5, 'Life lost, click to continue', { font: '18px Arial', fill: '#0095DD' });
 lifeLostText.anchor.set(0.5);
@@ -46,12 +46,12 @@ lifeLostText.visible = false;
 
 <p>Как вы могли заметить, мы используем одинаковые стили для всех надписей: <code>scoreText</code>, <code>livesText</code> и <code>lifeLostText</code>. Однако, налицо копирование кода и если мы, когда-либо, захотим изменить размер шрифта или цвет, то нам придётся делать это в нескольких местах. Чтобы избежать этого, мы вынесем стиль в отдельную переменную. Напишите следующую строку сразу после всех наших текущих определений переменных:</p>
 
-<pre class="brush: js notranslate">var textStyle = { font: '18px Arial', fill: '#0095DD' };
+<pre class="brush: js">var textStyle = { font: '18px Arial', fill: '#0095DD' };
 </pre>
 
 <p>Теперь мы можем использовать эту переменную для нашего текста — обновите ваш код и замените повторяющиеся участки со стилем текста на переменную.</p>
 
-<pre class="brush: js notranslate">scoreText = game.add.text(5, 5, 'Points: 0', textStyle);
+<pre class="brush: js">scoreText = game.add.text(5, 5, 'Points: 0', textStyle);
 livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, textStyle);
 livesText.anchor.set(1,0);
 lifeLostText = game.add.text(game.world.width*0.5, game.world.height*0.5, 'Life lost, click to continue', textStyle);
@@ -65,7 +65,7 @@ lifeLostText.visible = false;
 
 <p>Чтобы реализовать жизнь в нашей игре, давайте сначала изменим функцию шара, связанную с событием <code>onOutOfBounds</code>. Вместо того, чтобы выполнять анонимную функцию и сразу показывать сообщение:</p>
 
-<pre class="brush: js notranslate"><s>ball.events.onOutOfBounds.add(function(){
+<pre class="brush: js"><s>ball.events.onOutOfBounds.add(function(){
     alert('Game over!');
     location.reload();
 }, this);</s>
@@ -73,12 +73,12 @@ lifeLostText.visible = false;
 
 <p>Мы объявим новую функцию <code>ballLeaveScreen</code>; Удалим предыдущий обработчик (зачёркнутый код сверху) и заменим его следующей линией:</p>
 
-<pre class="brush: js notranslate">ball.events.onOutOfBounds.add(ballLeaveScreen, this);
+<pre class="brush: js">ball.events.onOutOfBounds.add(ballLeaveScreen, this);
 </pre>
 
 <p>Мы будем уменьшать количество жизней каждый раз, когда шар выйдет за пределы окна Canvas. Добавьте функцию <code>ballLeaveScreen()</code> в конец кода:</p>
 
-<pre class="brush: js notranslate">function ballLeaveScreen() {
+<pre class="brush: js">function ballLeaveScreen() {
     lives--;
     if(lives) {
         livesText.setText('Lives: '+lives);

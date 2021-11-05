@@ -9,7 +9,7 @@ translation_of: 'Web/CSS/::slotted'
 
 <p>Это работает только при использовании внутри CSS, помещённого в <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a>. Обратите также внимание, что этот селектор не будет выбирать текстовый узел, помещённый в слот; он нацелен только на фактические элементы.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Выбирает любой элемент, помещённый в слот */
+<pre class="brush: css no-line-numbers">/* Выбирает любой элемент, помещённый в слот */
 ::slotted(*) {
   font-weight: bold;
 }
@@ -30,7 +30,7 @@ translation_of: 'Web/CSS/::slotted'
 
 <p>В этом демо мы использовали простой шаблон с тремя слотами:</p>
 
-<pre class="brush: html notranslate">&lt;template id="person-template"&gt;
+<pre class="brush: html">&lt;template id="person-template"&gt;
   &lt;div&gt;
     &lt;h2&gt;Personal ID Card&lt;/h2&gt;
     &lt;slot name="person-name"&gt;NAME MISSING&lt;/slot&gt;
@@ -43,7 +43,7 @@ translation_of: 'Web/CSS/::slotted'
 
 <p>Пользовательский элемент — <code>&lt;person-details&gt;</code> — определяется следующим образом:</p>
 
-<pre class="brush: js notranslate">customElements.define('person-details',
+<pre class="brush: js">customElements.define('person-details',
   class extends HTMLElement {
     constructor() {
       super();
@@ -68,7 +68,7 @@ translation_of: 'Web/CSS/::slotted'
 
 <p>Элемент выглядит следующим образом при вставке на страницу:</p>
 
-<pre class="brush: html notranslate">&lt;person-details&gt;
+<pre class="brush: html">&lt;person-details&gt;
   &lt;p slot="person-name"&gt;Dr. Shazaam&lt;/p&gt;
   &lt;span slot="person-age"&gt;Immortal&lt;/span&gt;
   &lt;span slot="person-occupation"&gt;Superhero&lt;/span&gt;
@@ -76,28 +76,13 @@ translation_of: 'Web/CSS/::slotted'
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS Scope', '#slotted-pseudo', '::slotted') }}</td>
-   <td>{{ Spec2('CSS Scope') }}</td>
-   <td>Первое определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Поддержка браузерами</h2>
+<h2 id="Browser_compatibility">Поддержка браузерами</h2>
 
 
 
-<p>{{Compat("css.selectors.slotted")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

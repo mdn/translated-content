@@ -11,9 +11,9 @@ original_slug: Web/SVG/Tutoriel/Fills_and_Strokes
 
 <p>Il y a différentes manières de colorer des formes: utiliser différents attributs SVG sur l'objet, utiliser du {{glossary("CSS")}} en ligne, une section CSS ou un fichier CSS externe. La plupart des {{glossary("SVG")}} que vous trouverez sur le Web utilisent du CSS en ligne, mais il y a des avantages et inconvénients pour chaque manière.</p>
 
-<h2 id="Fill_and_Stroke_Attributes" name="Fill_and_Stroke_Attributes">Attributs Fill et Stroke</h2>
+<h2 id="Fill_and_Stroke_Attributes">Attributs Fill et Stroke</h2>
 
-<h3 id="Painting" name="Painting">Colorer</h3>
+<h3 id="Painting">Colorer</h3>
 
 <p>La coloration peut être faite en définissant deux attributs sur l'objet: <code>fill</code> et <code>stroke</code>. <code>Fill</code> définit la couleur de remplissage et <code>stroke</code> définit la couleur de la bordure. Vous pouvez utiliser la même convention de nommage des couleurs que CSS, que ce soit les noms (comme <em>red</em>), les valeurs rgb (comme <em>rgb(255,0,0)</em>), les valeurs hexadécimales, rgba, etc.</p>
 
@@ -24,9 +24,11 @@ original_slug: Web/SVG/Tutoriel/Fills_and_Strokes
 
 <p>De plus, vous pouvez spécifier l'opacité de <code>fill</code> et/ou <code>stroke</code>. Celle-ci est contrôlé par les attributs <code>fill-opacity</code> et <code>stroke-opacity</code> respectivement.</p>
 
-<div class="note style-wrap"><strong>Note</strong>: Dans Firefox 3+, les valeurs rgba sont autorisés, ce qui donne le même effet qu'utiliser les attributs d'opacité. En revanche, pour être compatible avec les autres navigateurs, il est souvent préférable de spécifier fill/stoke-opacity séparemment. Si vous spécifiez à la fois une valeur rgba et fill/stoke-opacity, les deux seront appliquées.</div>
+<div class="note">
+  <p><strong>Note :</strong> Dans Firefox 3+, les valeurs rgba sont autorisés, ce qui donne le même effet qu'utiliser les attributs d'opacité. En revanche, pour être compatible avec les autres navigateurs, il est souvent préférable de spécifier fill/stoke-opacity séparemment. Si vous spécifiez à la fois une valeur rgba et fill/stoke-opacity, les deux seront appliquées.</p>
+</div>
 
-<h3 id="Stroke" name="Stroke">Options du contour</h3>
+<h3 id="Stroke">Options du contour</h3>
 
 <p>Outre les propriétés de couleur, il existe quelques attributs additionnels pour contrôler la manière dont le contour est dessiné.</p>
 
@@ -38,7 +40,7 @@ original_slug: Web/SVG/Tutoriel/Fills_and_Strokes
 
 <p>Le second attribut affectant le contour est la propriété <code>stroke-linecap</code>. Elle contrôle la forme des fins de ligne. Dans l'image ci-dessous, le chemin est dessiné en rose et le contour en noir.</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/355/=SVG_Stroke_Linecap_Example.png" style="float: right;"></p>
+<p><img alt="" src="svg_stroke_linecap_example.png"></p>
 
 <pre class="brush:html;">&lt;svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
   &lt;line x1="40" x2="120" y1="20" y2="20"
@@ -63,7 +65,7 @@ original_slug: Web/SVG/Tutoriel/Fills_and_Strokes
 
 <p>La propriété <code>stroke-linejoin</code> permet de contrôler la manière de dessiner la liaison entre deux segments de ligne.</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/356/=SVG_Stroke_Linejoin_Example.png" style="float: right;"></p>
+<p><img alt="" src="svg_stroke_linejoin_example.png"></p>
 
 <pre class="brush:html;">&lt;svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
   &lt;polyline points="40 60 80 20 120 60" stroke="black" stroke-width="20"
@@ -90,7 +92,7 @@ original_slug: Web/SVG/Tutoriel/Fills_and_Strokes
 
 <p>Finalement, vous pouvez également créer des lignes pointillées en spécifiant l'attribut <code>stroke-dasharray</code>.</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/354/=SVG_Stroke_Dasharray_Example.png" style="float: right;"></p>
+<p><img alt="" src="svg_stroke_dasharray_example.png"></p>
 
 <pre class="brush:html;">&lt;svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
   &lt;path d="M 10 75 Q 50 10 100 75 T 190 75" stroke="black"
@@ -104,7 +106,7 @@ original_slug: Web/SVG/Tutoriel/Fills_and_Strokes
 <p>L'attribut <code>stroke-dasharray</code> prend une série de nombres séparés par une virgule en argument. </p>
 
 <div class="note">
-<p><strong>Note</strong>: Contrairement aux paths, ces nombres <strong><em>doivent</em></strong> être séparés par des virgules (les espaces sont ignorés).</p>
+  <p><strong>Note :</strong> Contrairement aux paths, ces nombres <strong><em>doivent</em></strong> être séparés par des virgules (les espaces sont ignorés).</p>
 </div>
 
 <p>Le premier nombre spécifie la distance du trait et le second la distance de l'espace. Dans l'exemple précédent, la ligne rouge commence par un trait de 5 suivit d'un espace de 5 (<code>5,5</code>), motif qui se répète sur le reste de la ligne. Vous pouvez spécifier davantage de nombres pour créer un motif de pointillés plus complexe. Pour la ligne noire on a spécifié trois nombres (<code>5,10,5</code>), ce qui a pour effet d'alterner le motif: (5 trait, 10 espace, 5 trait), (5 espace, 10 trait, 5 espace), etc.</p>
@@ -119,11 +121,13 @@ original_slug: Web/SVG/Tutoriel/Fills_and_Strokes
  <li><code><a href="/fr/docs/Web/SVG/Attribute/stroke-dashoffset">stroke-dashoffset</a></code>, définit à partir d'où commencer les pointilliés sur la ligne.</li>
 </ul>
 
-<h2 id="Using_CSS" name="Using_CSS">Utiliser CSS</h2>
+<h2 id="Using_CSS">Utiliser CSS</h2>
 
 <p>En plus de définir des attributs sur des objets, vous pouvez également utiliser CSS pour styliser les remplissages et les contours. Tous les attributs ne peuvent pas être définis via CSS. Ceux qui traitent le remplissage et le contour le sont généralement, <code>fill</code>, <code>stroke</code>, <code>stroke-dasharray</code>, etc... peuvent donc être définis de cette manière. Les attributs tels que <code>width</code>, <code>height</code>, ou les commandes des paths, ne peuvent pas être définis par CSS. Le plus simple est de tester pour découvrir ce qui est disponible et ce qui ne l'est pas.</p>
 
-<div class="note style-wrap"><strong>Note:</strong> La <a class="external" href="http://www.w3.org/TR/SVG/propidx.html">spécification SVG</a> décide strictement entre les attributs qui sont des <em>propriétés</em> et les autres. Les premiers peuvent être modifiés avec CSS, les derniers non.</div>
+<div class="note">
+  <p><strong>Note :</strong> La <a href="http://www.w3.org/TR/SVG/propidx.html">spécification SVG</a> décide strictement entre les attributs qui sont des <em>propriétés</em> et les autres. Les premiers peuvent être modifiés avec CSS, les derniers non.</p>
+</div>
 
 <h4 id="En_ligne">En ligne</h4>
 
@@ -134,7 +138,7 @@ original_slug: Web/SVG/Tutoriel/Fills_and_Strokes
 
 <h4 id="Dans_un_section_style">Dans un section style</h4>
 
-<p>Sinon, il peut être déplacé vers une section <code>style</code>. Au lieu de l'insérer dans une section <code>&lt;head&gt;</code> comme vous le feriez en HTML, on la place dans la zone <a href="/en/SVG/Element/defs" title="en/SVG/Element/defs"><code>&lt;defs&gt;</code></a> du SVG. <code>&lt;defs&gt;</code> (abbréviation de definitions) est l'endroit où vous placez les éléments qui n'apparaissent pas dans le SVG directement, mais qui sont utilisés par les autres éléments.</p>
+<p>Sinon, il peut être déplacé vers une section <code>style</code>. Au lieu de l'insérer dans une section <code>&lt;head&gt;</code> comme vous le feriez en HTML, on la place dans la zone <a href="/fr/SVG/Element/defs" title="en/SVG/Element/defs"><code>&lt;defs&gt;</code></a> du SVG. <code>&lt;defs&gt;</code> (abbréviation de definitions) est l'endroit où vous placez les éléments qui n'apparaissent pas dans le SVG directement, mais qui sont utilisés par les autres éléments.</p>
 
 <pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
@@ -159,7 +163,7 @@ original_slug: Web/SVG/Tutoriel/Fills_and_Strokes
 
 <h4 id="Dans_un_fichier_externe">Dans un fichier externe</h4>
 
-<p>Ou vous pouvez spécifier une feuille de style externe pour vos règles CSS avec la <a class="external" href="http://www.w3.org/TR/xml-stylesheet/">syntaxe XML pour les stylesheets</a>:</p>
+<p>Ou vous pouvez spécifier une feuille de style externe pour vos règles CSS avec la <a href="http://www.w3.org/TR/xml-stylesheet/">syntaxe XML pour les stylesheets</a>:</p>
 
 <pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;?xml-stylesheet type="text/css" href="style.css"?&gt;

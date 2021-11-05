@@ -18,7 +18,7 @@ translation_of: Web/API/Window/screenX
 <p><strong>Примечание</strong>: Псевдоним <code>screenX</code> был реализован во всех современных браузерах - {{domxref ("Window.screenLeft")}}. Первоначально это поддерживалось только в IE, но было введено повсеместно из-за популярности.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><em>leftWindowPos</em> = window.screenX
 </pre>
@@ -27,7 +27,7 @@ translation_of: Web/API/Window/screenX
 
 <p>Число, равное количеству пикселей CSS от левого края окна просмотра браузера до левого края экрана.</p>
 
-<h2 id="Specifications" name="Specifications">Пример</h2>
+<h2 id="Specifications">Пример</h2>
 
 <p>В нашем примере <a href="https://mdn.github.io/dom-examples/screenleft-screentop/">screenleft-screentop</a> вы увидите холст, на котором нарисован круг. В этом примере мы используем {{domxref ("Window.screenLeft")}}/{{domxref ("Window.screenTop")}} плюс {{domxref("Window.requestAnimationFrame ()")}}, чтобы постоянно перерисовывать круг в том же физическом положении на экране, даже если позиция окна перемещается.</p>
 
@@ -64,28 +64,13 @@ window.requestAnimationFrame(positionElem);</pre>
   window.screenTop = window.screenY;
 }</pre>
 
-<h2 id="Specifications" name="Specifications">Спецификация</h2>
+<h2 id="Specifications">Спецификация</h2>
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM View', '#dom-window-screenx', 'Window.screenX') }}</td>
-   <td>{{ Spec2('CSSOM View') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_браузера">Совместимость браузера</h2>
 
-<p>{{Compat("api.Window.screenX")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

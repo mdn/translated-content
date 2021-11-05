@@ -15,7 +15,7 @@ translation_of: Web/API/Event/initEvent
 <p>Вместо него используйте такой специальный конструктор событий, как {{domxref("Event.Event", "Event()")}}. Страница <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a> даст больше информации о возможностях использования.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><em>event</em>.initEvent(<em>type</em>, <em>bubbles</em>, <em>cancelable</em>);</pre>
 
@@ -28,7 +28,7 @@ translation_of: Web/API/Event/initEvent
  <dd>Is a {{jsxref("Boolean")}} defining whether the event can be canceled. Once set, the read-only property {{ domxref("Event.cancelable") }} will give its value.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre><code>// Create the event.
 var event = document.createEvent('Event');
@@ -67,9 +67,9 @@ elem.dispatchEvent(event);</code>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Event.initEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

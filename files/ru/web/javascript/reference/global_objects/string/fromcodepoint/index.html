@@ -14,35 +14,35 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 ---
 <div>{{JSRef("Global_Objects", "String")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Статический метод <strong><code>String.fromCodePoint()</code></strong> возвращает строку, созданную из указанной последовательности кодовых точек.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>String.fromCodePoint(<var>num1</var>[, ...[, <var>numN</var>]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>num1, ..., num<em>N</em></code></dt>
  <dd>Последовательность кодовых точек.</dd>
 </dl>
 
-<h3 id="Throws" name="Throws">Выбрасываемые исключения</h3>
+<h3 id="Throws">Выбрасываемые исключения</h3>
 
 <dl>
  <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
  <dd>Исключение {{jsxref("Global_Objects/RangeError", "RangeError")}} выбрасывается в случае, если методу предоставлена неверная кодовая точка Юникода (например, "RangeError: NaN is not a valid code point").</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Поскольку метод <code>fromCodePoint()</code> является статическим методом объекта {{jsxref("Global_Objects/String", "String")}}, вы всегда должны использовать его как <code>String.fromCodePoint()</code>, а не как метод созданного вами экземпляра {{jsxref("Global_Objects/String", "String")}}.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_fromCharCode" name="Example:_Using_fromCharCode">Пример: использование метода <code>fromCodePoint()</code></h3>
+<h3 id="Example:_Using_fromCharCode">Пример: использование метода <code>fromCodePoint()</code></h3>
 
 <pre class="brush: js">String.fromCodePoint(42);       // "*"
 String.fromCodePoint(65, 90);   // "AZ"
@@ -66,7 +66,7 @@ String.fromCodePoint(NaN);      // RangeError
 console.log(String.fromCodePoint(0x2F804)); // или 194564 в десятичной записи
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Метод <code>String.fromCodePoint()</code> был добавлен к стандарту ECMAScript в 6-й версии и может поддерживаться ещё не во всех браузерах или окружениях. Используйте код ниже в качестве полифила:</p>
 
@@ -134,28 +134,15 @@ if (!String.fromCodePoint) {
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.fromcodepoint', 'String.fromCodePoint')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("String.fromCharCode()")}}</li>

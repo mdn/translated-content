@@ -56,10 +56,10 @@ original_slug: Web/SVG/Tutoriel/Motifs
 
 <p>La chose à retenir est que si l'objet change de taille, le motif lui-même sera mis à l'échelle mais les objets à l'intérieur non. Ainsi, alors qu'on aura toujours 4 motifs qui se répètent horizontalement et verticalement, les objets à l'intérieur du motif garderont la même taille, et une zone vide sera affichée.</p>
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
 
-<pre class="brush: html">&lt;svg width="600" height="200" xmlns="http://www.w3.org/2000/svg" id="svg" class="playable-svg"&gt;
+<h3>Exemple</h6>
+
+<pre class="brush: html hidden">&lt;svg width="600" height="200" xmlns="http://www.w3.org/2000/svg" id="svg" class="playable-svg"&gt;
   &lt;defs&gt;
     &lt;linearGradient id="Gradient1"&gt;
       &lt;stop offset="5%" stop-color="white"/&gt;
@@ -88,7 +88,7 @@ original_slug: Web/SVG/Tutoriel/Motifs
 rect.setAttribute('width', 300);&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var svg      = document.getElementById('svg'),
+<pre class="brush: js hidden">var svg      = document.getElementById('svg'),
     rect     = svg.lastElementChild;
 
 var textarea = document.getElementById('code'),
@@ -110,9 +110,8 @@ edit.addEventListener('click', function() {
 textarea.addEventListener('input', drawSvg);
 window.addEventListener('load', drawSvg);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code','220','350') }}</p>
+<p>{{ EmbedLiveSample('exemple_jouable','220','350') }}</p>
 
 <h2 id="Unités_du_contenu_objectBoundingBox">Unités du contenu: objectBoundingBox</h2>
 
@@ -127,10 +126,9 @@ window.addEventListener('load', drawSvg);
 
 <p>Maintenant, parce le contenu du motif utilise le même système d'unité que le motif, le motif redimensionne automatiquement son contenu. Cela contraste avec le système "userSpaceOnUse" par défaut, où lorsque le motif change le taille, le contenu garde la même taille.</p>
 
-<div class="hidden">
-<h6 id="Playable_code_2" name="Playable_code_2">Playable code 2</h6>
+<h3 id="code_jouable_2">Code jouable 2</h3>
 
-<pre class="brush: html">&lt;svg width="600" height="200" xmlns="http://www.w3.org/2000/svg" id="svg" class="playable-svg"&gt;
+<pre class="brush: html hidden">&lt;svg width="600" height="200" xmlns="http://www.w3.org/2000/svg" id="svg" class="playable-svg"&gt;
   &lt;defs&gt;
     &lt;linearGradient id="Gradient1"&gt;
       &lt;stop offset="5%" stop-color="white"/&gt;
@@ -159,7 +157,7 @@ window.addEventListener('load', drawSvg);
 rect.setAttribute('width', 300);&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var svg      = document.getElementById('svg'),
+<pre class="brush: js hidden">var svg      = document.getElementById('svg'),
     rect     = svg.lastElementChild;
 
 var textarea = document.getElementById('code'),
@@ -181,11 +179,12 @@ edit.addEventListener('click', function() {
 textarea.addEventListener('input', drawSvg);
 window.addEventListener('load', drawSvg);
 </pre>
+
+<p>{{ EmbedLiveSample('code_jouable_2','220','350') }}</p>
+
+<div class="note">
+  <p><strong>Note :</strong> Dans Gecko, les cercles semblent avoir du mal à être dessinés si le rayon est inférieur à 0.075 (on ignore s'il s'agit d'un bug de l'élément pattern ou non). Pour contourner ce problème, il est probablement préférable d'éviter de dessiner des cercles dans des unités "objectBoundingBox".</p>
 </div>
-
-<p>{{ EmbedLiveSample('Playable_code_2','220','350') }}</p>
-
-<p class="note"><strong>Note</strong>: Dans Gecko, les cercles semblent avoir du mal à être dessinés si le rayon est inférieur à 0.075 (on ignore s'il s'agit d'un bug de l'élément pattern ou non). Pour contourner ce problème, il est probablement préférable d'éviter de dessiner des cercles dans des unités "objectBoundingBox".</p>
 
 <h2 id="Unités_du_motif_userSpaceOnUse">Unités du motif: userSpaceOnUse</h2>
 
@@ -200,10 +199,9 @@ window.addEventListener('load', drawSvg);
 
 <p>Bien sûr, cela veut dire que le motif ne sera pas mis à l'échelle si vous modifiez la taille de l'objet ultérieurement.</p>
 
-<div class="hidden">
-<h6 id="Playable_code_3" name="Playable_code_3">Playable code</h6>
+<h3>Exemple jouable</h3>
 
-<pre class="brush: html">&lt;svg width="600" height="200" xmlns="http://www.w3.org/2000/svg" id="svg" class="playable-svg"&gt;
+<pre class="brush: html hidden">&lt;svg width="600" height="200" xmlns="http://www.w3.org/2000/svg" id="svg" class="playable-svg"&gt;
   &lt;defs&gt;
     &lt;linearGradient id="Gradient1"&gt;
       &lt;stop offset="5%" stop-color="white"/&gt;
@@ -232,7 +230,7 @@ window.addEventListener('load', drawSvg);
 rect.setAttribute('width', 300);&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var svg      = document.getElementById('svg'),
+<pre class="brush: js hidden">var svg      = document.getElementById('svg'),
     rect     = svg.lastElementChild;
 
 var textarea = document.getElementById('code'),
@@ -254,14 +252,13 @@ edit.addEventListener('click', function() {
 textarea.addEventListener('input', drawSvg);
 window.addEventListener('load', drawSvg);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_3','220','350') }}</p>
+<p>{{ EmbedLiveSample('exemple_jouable_3','220','350') }}</p>
 
 <h2 id="Récapitulatif">Récapitulatif</h2>
 
 <p>Les trois exemples sont illustrés ci-dessous sur un rectangle allongé à une hauteur de 300px:</p>
 
-<p><img alt="Image:SVG_Pattern_Comparison_of_Units.png" class="internal" src="/@api/deki/files/349/=SVG_Pattern_Comparison_of_Units.png"></p>
+<p><img src="svg_pattern_comparison_of_units.png"></p>
 
 <p>{{ PreviousNext("Web/SVG/Tutoriel/Gradients", "Web/SVG/Tutoriel/Texts") }}</p>

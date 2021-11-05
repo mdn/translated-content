@@ -10,14 +10,15 @@ translation_of: Web/SVG/Attribute/fill-rule
 
 <p>L'attribut <strong><code>fill-rule</code></strong> définit l'algorithme à utiliser pour déterminer les parties qui sont considérées <em>à l'intérieur</em> de la forme.</p>
 
-<p class="note"><strong>Note:</strong> <code>fill-rule</code> est un attribut de présentation et peut donc être utilisé comme propriété CSS.</p>
+<div class="note">
+  <p><strong>Note :</strong> <code>fill-rule</code> est un attribut de présentation et peut donc être utilisé comme propriété CSS.</p>
+</div>
 
 <p>Cet attribut peut être appliqué à n'importe quel élément mais n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}</p>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Exemple</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Valeur par défaut pour fill-rule --&gt;
@@ -34,9 +35,8 @@ translation_of: Web/SVG/Attribute/fill-rule
   &lt;polygon fill-rule="evenodd" stroke="red"
    points="150,0 121,90 198,35 102,35 179,90"/&gt;
 &lt;/svg&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
+<p>{{EmbedLiveSample('exemple', '100%', 200)}}</p>
 
 <h2 id="Usage">Usage</h2>
 
@@ -67,9 +67,7 @@ translation_of: Web/SVG/Attribute/fill-rule
 
 <h4 id="Exemple">Exemple</h4>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effet de la règle de remplissage sur les segments qui se croisent --&gt;
@@ -103,9 +101,7 @@ translation_of: Web/SVG/Attribute/fill-rule
 
 <h4 id="Exemple_2">Exemple</h4>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effet de la règle de remplissage sur les segments qui se croisent --&gt;
@@ -133,7 +129,7 @@ translation_of: Web/SVG/Attribute/fill-rule
 
 <p>{{EmbedLiveSample('evenodd', '100%', 200)}}</p>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilité des navigateurs</h2>
+<h2 id="Browser_Compatibility">Compatibilité des navigateurs</h2>
 
 <p>{{Compat("svg.attributes.presentation.fill-rule")}}</p>
 

@@ -13,11 +13,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 
 <p>Метод <code><strong>Object.freeze()</strong></code> замораживает объект: это значит, что он предотвращает добавление новых свойств к объекту, удаление старых свойств из объекта и изменение существующих свойств или значения их атрибутов перечисляемости, настраиваемости и записываемости. В сущности, объект становится эффективно неизменным. Метод возвращает замороженный объект.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>Object.freeze(<var>obj</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>obj</code></dt>
@@ -28,13 +28,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 
 <p>Замороженный объект</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>К замороженному объекту нельзя добавить никаких свойств, так же как и удалить свойства из замороженного объекта. Любые попытки сделать это потерпят неудачу, либо молча, либо выбросив исключение {{jsxref("Global_Objects/TypeError", "TypeError")}} (как правило, но не обязательно, это происходит в {{jsxref("Functions_and_function_scope/Strict_mode", "строгом режиме", "", 1)}}).</p>
 
 <p>Значения свойств-данных не могут быть изменены. Свойства-доступы (геттеры и сеттеры) работают как положено (и всё ещё создают иллюзию, что вы изменили значение). Обратите внимание, что значения, являющиеся объектами, всё ещё могут быть изменены, если только они так же не были заморожены.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <pre class="brush: js">var obj = {
   prop: function() {},
@@ -112,7 +112,7 @@ obj2.internal.a = 'другоеЗначение';
 obj2.internal.a; // undefined
 </pre>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 
 <p>В ES5 если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES2015 такой аргумент будет рассматриваться, как простой замороженный объект и метод его просто вернёт.</p>
 
@@ -123,38 +123,15 @@ TypeError: 1 is not an object // код ES5
 1                             // код ES2015
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.9', 'Object.freeze')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-object.freeze', 'Object.freeze')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.freeze', 'Object.freeze')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div>{{Compat("javascript.builtins.Object.freeze")}}</div>
+<div>{{Compat}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Object.isFrozen()")}}</li>

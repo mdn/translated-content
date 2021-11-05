@@ -14,24 +14,24 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/seal
 
 <p>Метод <strong><code>Object.seal()</code></strong> запечатывает объект, предотвращая добавление новых свойств к объекту и делая все существующие свойства не настраиваемыми. Значения представленных свойств всё ещё могут изменяться, поскольку они остаются записываемыми.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>Object.seal(<var>obj</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>obj</code></dt>
  <dd>Запечатываемый объект.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>По умолчанию, объекты являются {{jsxref("Object.isExtensible()", "расширяемыми", "", 1)}} (к ним могут добавляться новые свойства). Запечатывание объекта предотвращает добавление к нему новых свойств и делает все существующие свойства не настраиваемыми. Оно делает все свойства объекта фиксированными и неизменными. Пометка всех свойств объекта как не настраиваемых также предотвращает их преобразование из свойств данных в свойства доступа и наоборот, но не предотвращает изменение значения свойств данных. Попытки удаления или добавления свойств к запечатанному объекту, либо преобразования свойств данных в свойства доступа и наоборот, будут терпеть неудачу, либо молча, либо с выбрасыванием исключения {{jsxref("Global_Objects/TypeError", "TypeError")}} (как правило, но не обязательно, это происходит в {{jsxref("Strict_mode", "строгом режиме", "", 1)}}).</p>
 
 <p>Цепочка прототипов не затрагивается. Однако, свойство {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}} также запечатываться.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <pre class="brush: js">var obj = {
   prop: function() {},
@@ -71,7 +71,7 @@ Object.defineProperty(obj, 'ohai', { value: 17 }); // выбросит TypeError
 Object.defineProperty(obj, 'foo', { value: 'eit' }); // изменяем значение существующего свойства
 </pre>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 
 <p>В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6 такой аргумент будет рассматриваться, как простой запечатанный объект и метод его просто вернёт.</p>
 
@@ -82,33 +82,15 @@ TypeError: 1 is not an object // код ES5
 1                             // код ES6
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.8', 'Object.seal')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.seal', 'Object.seal')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div>{{Compat("javascript.builtins.Object.seal")}}</div>
+<div>{{Compat}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Object.isSealed()")}}</li>

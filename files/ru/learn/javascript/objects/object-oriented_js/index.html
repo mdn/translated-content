@@ -87,7 +87,7 @@ original_slug: Learn/JavaScript/Объекты/Object-oriented_JS
 <ol>
  <li>Давайте рассмотрим как можно определить человека с нормальной функцией. Добавьте эту функцию в элемент <code>script</code>:
 
-  <pre class="brush: js notranslate">function createNewPerson(name) {
+  <pre class="brush: js">function createNewPerson(name) {
   const obj = {};
   obj.name = name;
   obj.greeting = function() {
@@ -97,12 +97,12 @@ original_slug: Learn/JavaScript/Объекты/Object-oriented_JS
 }</pre>
  </li>
  <li>Теперь вы можете создать нового человека, вызвав эту функцию - попробуйте следующие строки в консоли JavaScript браузера:
-  <pre class="brush: js notranslate">const salva = createNewPerson('Salva');
+  <pre class="brush: js">const salva = createNewPerson('Salva');
 salva.name;
 salva.greeting();</pre>
   Это работает достаточно хорошо, но код излишне многословен; если мы знаем, что хотим создать объект, зачем нам явно создавать новый пустой объект и возвращать его? К счастью, JavaScript предоставляет нам удобный способ в виде функций-конструкторов - давайте сделаем это сейчас!</li>
  <li>Замените предыдущую функцию следующей:
-  <pre class="brush: js notranslate">function Person(name) {
+  <pre class="brush: js">function Person(name) {
   this.name = name;
   this.greeting = function() {
     alert('Hi! I\'m ' + this.name + '.');
@@ -121,11 +121,11 @@ salva.greeting();</pre>
 
 <ol>
  <li>Добавьте следующие строки под предыдущим добавлением кода:
-  <pre class="brush: js notranslate">let person1 = new Person('Bob');
+  <pre class="brush: js">let person1 = new Person('Bob');
 let person2 = new Person('Sarah');</pre>
  </li>
  <li>Сохраните код и перезагрузите его в браузере и попробуйте ввести следующие строки в консоль JS:
-  <pre class="brush: js notranslate">person1.name
+  <pre class="brush: js">person1.name
 person1.greeting()
 person2.name
 person2.greeting()</pre>
@@ -136,12 +136,12 @@ person2.greeting()</pre>
 
 <p>Давайте снова посмотрим на вызовы конструктора:</p>
 
-<pre class="brush: js notranslate">let person1 = new Person('Bob');
+<pre class="brush: js">let person1 = new Person('Bob');
 let person2 = new Person('Sarah');</pre>
 
 <p>В каждом случае ключевое слово <code>new</code> используется, чтобы сообщить браузеру, что мы хотим создать экземпляр нового объекта, за которым следует имя функции с её необходимыми параметрами, содержащимися в круглых скобках, и результат сохраняется в переменной - очень похоже на то, как вызывается стандартная функция. Каждый экземпляр создаётся в соответствии с этим определением:</p>
 
-<pre class="brush: js notranslate">function Person(name) {
+<pre class="brush: js">function Person(name) {
   this.name = name;
   this.greeting = function() {
     alert('Hi! I\'m ' + this.name + '.');
@@ -150,7 +150,7 @@ let person2 = new Person('Sarah');</pre>
 
 <p>После создания новых объектов переменные <code>person1</code> и <code>person2</code> содержат следующие объекты:</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
   name: 'Bob',
   greeting: function() {
     alert('Hi! I\'m ' + this.name + '.');
@@ -172,7 +172,7 @@ let person2 = new Person('Sarah');</pre>
 
 <ol>
  <li>Замените весь предыдущий код новой функцией конструктора - это, в принципе, тот же самое что и в наглядном примере, но несколько сложнее:
-  <pre class="brush: js notranslate">function Person(first, last, age, gender, interests) {
+  <pre class="brush: js">function Person(first, last, age, gender, interests) {
   this.name = {
     first : first,
     last: last
@@ -189,13 +189,13 @@ let person2 = new Person('Sarah');</pre>
 };</pre>
  </li>
  <li>Теперь добавьте следующую строку ниже, чтобы создать экземпляр объекта из него:
-  <pre class="brush: js notranslate">let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);</pre>
+  <pre class="brush: js">let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);</pre>
  </li>
 </ol>
 
 <p>Как вы могли заметить, вы можете получить доступ к свойствам и методам, как это было ранее, - попробуйте использовать их в консоли JS:</p>
 
-<pre class="brush: js notranslate">person1['age']
+<pre class="brush: js">person1['age']
 person1.interests[1]
 person1.bio()
 // etc.</pre>
@@ -224,17 +224,17 @@ person1.bio()
 
 <ol>
  <li>Попробуйте ввести это в консоль JavaScript вашего браузера:
-  <pre class="brush: js notranslate">let person1 = new Object();</pre>
+  <pre class="brush: js">let person1 = new Object();</pre>
  </li>
  <li>Это сохраняет ссылку на пустой объект в переменную <code>person1</code>. Затем вы можете добавить свойства и методы к этому объекту с использованием точечной или скобочной нотации по желанию; попробуйте эти примеры в консоли:
-  <pre class="brush: js notranslate">person1.name = 'Chris';
+  <pre class="brush: js">person1.name = 'Chris';
 person1['age'] = 38;
 person1.greeting = function() {
   alert('Hi! I\'m ' + this.name + '.');
 };</pre>
  </li>
  <li>Вы также можете передать литерал объекта конструктору <code>Object()</code> в качестве параметра, чтобы заполнить его свойствами / методами. Попробуйте это в консоли JS:
-  <pre class="brush: js notranslate">let person1 = new Object({
+  <pre class="brush: js">let person1 = new Object({
   name: 'Chris',
   age: 38,
   greeting: function() {
@@ -252,10 +252,10 @@ person1.greeting = function() {
 
 <ol>
  <li>Закончив упражнение из предыдущего раздела, загруженное в браузер, попробуйте это в консоли JavaScript:
-  <pre class="brush: js notranslate">let person2 = Object.create(person1);</pre>
+  <pre class="brush: js">let person2 = Object.create(person1);</pre>
  </li>
  <li>Теперь попробуйте:
-  <pre class="brush: js notranslate">person2.name
+  <pre class="brush: js">person2.name
 person2.greeting()</pre>
  </li>
 </ol>

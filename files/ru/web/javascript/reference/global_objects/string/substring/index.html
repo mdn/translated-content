@@ -12,15 +12,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
 ---
 <div>{{JSRef("Global_Objects", "String")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>substring()</code></strong> возвращает подстроку строки между двумя индексами, или от одного индекса и до конца строки.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>str</var>.substring(<var>indexA</var>[, <var>indexB</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>indexA</code></dt>
@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
  <dd>Необязательный параметр. Целое число от <code>0</code> до длины строки, определяющее смещение в строке первого символа, который <strong>не будет</strong> включён в результирующую подстроку.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>substring()</code> извлекает символы, начиная с индекса <code>indexA</code> до, но не включая, индекс <code>indexB</code>. В частности:</p>
 
@@ -42,9 +42,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
 
 <p>Если аргумент <code>indexA</code> будет больше аргумента <code>indexB</code>, то метод <code>substring()</code> сработает так, как если бы аргументы были поменяны местами; например, <code><em>str</em>.substring(1, 0) == <em>str</em>.substring(0, 1)</code>.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_substring" name="Example:_Using_substring">Пример: использование метода <code>substring()</code></h3>
+<h3 id="Example:_Using_substring">Пример: использование метода <code>substring()</code></h3>
 
 <p>В следующем примере метод <code>substring()</code> используется для отображения символов из строки <code>'Mozilla'</code>:</p>
 
@@ -66,7 +66,7 @@ console.log(anyString.substring(0, 7));
 console.log(anyString.substring(0, 10));
 </pre>
 
-<h3 id="Example:_Using_substring_with_length_property" name="Example:_Using_substring_with_length_property">Пример: использование метода <code>substring()</code> вместе со свойством <code>length</code></h3>
+<h3 id="Example:_Using_substring_with_length_property">Пример: использование метода <code>substring()</code> вместе со свойством <code>length</code></h3>
 
 <p>Следующий пример использует метод <code>substring()</code> и свойство {{jsxref("String.length", "length")}} для извлечения последних символов из строки. Этот метод может оказаться легче для запоминания, особенно если учесть, что вам не нужно знать начальный и конечный индексы, как это было в примере выше.</p>
 
@@ -81,7 +81,7 @@ var anyString5 = anyString.substring(anyString.length - 5);
 console.log(anyString5);
 </pre>
 
-<h3 id="Example:_Replacing_a_substring_within_a_string" name="Example:_Replacing_a_substring_within_a_string">Пример: замена подстроки в строке</h3>
+<h3 id="Example:_Replacing_a_substring_within_a_string">Пример: замена подстроки в строке</h3>
 
 <p>Следующий пример демонстрирует замену подстроки в строке. Он заменит как отдельные символы, так и целые подстроки. Вызов функции в конце примера изменит строку <code>'Дивный новый мир'</code> на строку <code>'Дивный новый веб'</code>.</p>
 
@@ -107,38 +107,15 @@ replaceString('мир', 'веб', 'Дивный новый мир');
 
 <p>Код выше следует рассматривать всего лишь как пример работы с подстроками. Если вам нужно заменить подстроки, скорее всего вы захотите использовать метод {{jsxref("String.prototype.replace()")}}.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.15', 'String.prototype.substring')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.substring', 'String.prototype.substring')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.substr()")}}</li>

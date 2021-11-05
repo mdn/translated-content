@@ -1,11 +1,6 @@
 ---
 title: animation
 slug: Web/CSS/animation
-tags:
-  - Animations
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/animation
 ---
 {{CSSRef}}
@@ -216,7 +211,7 @@ window.addEventListener('load', function () {
 })
 ```
 
-{{EmbedLiveSample("animation_example", "100%", 260, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("Exemple_danimation", "100%", 260, "", "", "example-outcome-frame")}}
 
 [Une liste des propriétés qui peuvent être animées](/fr/docs/Web/CSS/Liste_propriétés_CSS_animées) est disponible. On notera que cette liste est également valable pour [les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS).
 

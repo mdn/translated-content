@@ -69,19 +69,17 @@ translation_of: Web/API/Web_Speech_API
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+<table>
+  <thead>
+    <tr>
+      <th>Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="">Web Speech API</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -98,7 +96,7 @@ translation_of: Web/API/Web_Speech_API
 
 <p>To use speech recognition in an app, you need to specify the following permissions in your <a href="/en-US/docs/Web/Apps/Build/Manifest">manifest</a>:</p>
 
-<pre class="brush: json notranslate">"permissions": {
+<pre class="brush: json">"permissions": {
   "audio-capture" : {
     "description" : "Audio capture"
   },
@@ -109,7 +107,7 @@ translation_of: Web/API/Web_Speech_API
 
 <p>You also need a privileged app, so you need to include this as well:</p>
 
-<pre class="brush: json notranslate">  "type": "privileged"</pre>
+<pre class="brush: json">  "type": "privileged"</pre>
 
 <p>Speech synthesis needs no permissions to be set.</p>
 

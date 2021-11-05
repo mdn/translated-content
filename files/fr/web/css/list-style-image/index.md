@@ -1,10 +1,6 @@
 ---
 title: list-style-image
 slug: Web/CSS/list-style-image
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/list-style-image
 ---
 {{CSSRef}}
@@ -62,7 +58,7 @@ ul {
 
 ### Résultat
 
-{{EmbedLiveSample('Exemple')}}
+{{EmbedLiveSample('Exemples')}}
 
 ## Spécifications
 

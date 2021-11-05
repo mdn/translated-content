@@ -104,7 +104,7 @@
 /fr/docs/Apprendre/CSS/CSS_layout/Normal_Flow	/fr/docs/Learn/CSS/CSS_layout/Normal_Flow
 /fr/docs/Apprendre/CSS/CSS_layout/Prise_En_Charge_Des_Anciens_Navigateurs	/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers
 /fr/docs/Apprendre/CSS/CSS_layout/Responsive_Design	/fr/docs/Learn/CSS/CSS_layout/Responsive_Design
-/fr/docs/Apprendre/CSS/CSS_properties	/fr/docs/conflicting/Learn/CSS/Building_blocks/Selectors
+/fr/docs/Apprendre/CSS/CSS_properties	/fr/docs/Learn/CSS/Building_blocks/Selectors
 /fr/docs/Apprendre/CSS/Comment	/fr/docs/Learn/CSS/Howto
 /fr/docs/Apprendre/CSS/Comment/Créer_de_belles_boîtes	/fr/docs/Learn/CSS/Howto/create_fancy_boxes
 /fr/docs/Apprendre/CSS/Comment/Generated_content	/fr/docs/Learn/CSS/Howto/Generated_content
@@ -116,7 +116,7 @@
 /fr/docs/Apprendre/CSS/Introduction_à_CSS/Debugging_CSS	/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS
 /fr/docs/Apprendre/CSS/Introduction_à_CSS/Fundamental_CSS_comprehension	/fr/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 /fr/docs/Apprendre/CSS/Introduction_à_CSS/La_cascade_et_l_héritage	/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
-/fr/docs/Apprendre/CSS/Introduction_à_CSS/La_disposition	/fr/docs/conflicting/Learn/CSS/CSS_layout/Introduction
+/fr/docs/Apprendre/CSS/Introduction_à_CSS/La_disposition	/fr/docs/Learn/CSS/CSS_layout/Introduction
 /fr/docs/Apprendre/CSS/Introduction_à_CSS/La_syntaxe	/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured
 /fr/docs/Apprendre/CSS/Introduction_à_CSS/Le_fonctionnement_de_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /fr/docs/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte	/en-US/docs/Learn/CSS/Building_blocks/The_box_model
@@ -126,12 +126,12 @@
 /fr/docs/Apprendre/CSS/Introduction_à_CSS/Values_and_units	/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
 /fr/docs/Apprendre/CSS/Les_bases	/en-US/docs/Learn/CSS/First_steps
 /fr/docs/Apprendre/CSS/Les_bases/La_cascade_et_l_héritage	/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
-/fr/docs/Apprendre/CSS/Les_bases/La_disposition	/fr/docs/conflicting/Learn/CSS/CSS_layout/Introduction
+/fr/docs/Apprendre/CSS/Les_bases/La_disposition	/fr/docs/Learn/CSS/CSS_layout/Introduction
 /fr/docs/Apprendre/CSS/Les_bases/La_syntaxe	/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured
 /fr/docs/Apprendre/CSS/Les_bases/Le_fonctionnement_de_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /fr/docs/Apprendre/CSS/Les_bases/Le_modèle_de_boîte	/en-US/docs/Learn/CSS/Building_blocks/The_box_model
 /fr/docs/Apprendre/CSS/Les_bases/Les_sélecteurs	/en-US/docs/Learn/CSS/Building_blocks/Selectors
-/fr/docs/Apprendre/CSS/Les_propriétés_CSS	/fr/docs/conflicting/Learn/CSS/Building_blocks/Selectors
+/fr/docs/Apprendre/CSS/Les_propriétés_CSS	/fr/docs/Learn/CSS/Building_blocks/Selectors
 /fr/docs/Apprendre/CSS/Utiliser_CSS_dans_une_page_web	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works
 /fr/docs/Apprendre/CSS/formatage_texte_CSS	/fr/docs/conflicting/Learn/CSS/Styling_text/Fundamentals_9e7ba587262abbb02304cbc099c1f0d8
 /fr/docs/Apprendre/CSS/styliser_boites	/en-US/docs/Learn/CSS/Building_blocks
@@ -185,13 +185,13 @@
 /fr/docs/Apprendre/HTML/Comment/Annoter_des_images_et_graphiques	/fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML_2c0377f7605f693cad465c2b4839addc
 /fr/docs/Apprendre/HTML/Comment/Appliquer_du_CSS_à_une_page_web	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_cf31463f874ecd8e10e648dacde4a995
 /fr/docs/Apprendre/HTML/Comment/Comment_créer_un_document_HTML_simple	/fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/Getting_started
-/fr/docs/Apprendre/HTML/Comment/Comment_identifier_et_expliquer_des_abréviations	/fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting_b235e00aa38ee1d4b535fc921395f446
+/fr/docs/Apprendre/HTML/Comment/Comment_identifier_et_expliquer_des_abréviations	/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 /fr/docs/Apprendre/HTML/Comment/Créer_un_document_HTML_simple	/fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/Getting_started
 /fr/docs/Apprendre/HTML/Comment/Créer_un_hyperlien	/fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 /fr/docs/Apprendre/HTML/Comment/Créer_une_liste_d_éléments_avec_HTML	/fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 /fr/docs/Apprendre/HTML/Comment/Découper_une_page_web_en_sections_logiques	/fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 /fr/docs/Apprendre/HTML/Comment/Définir_des_termes_avec_HTML	/fr/docs/Learn/HTML/Howto/Define_terms_with_HTML
-/fr/docs/Apprendre/HTML/Comment/Identifier_et_expliquer_des_abréviations	/fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting_b235e00aa38ee1d4b535fc921395f446
+/fr/docs/Apprendre/HTML/Comment/Identifier_et_expliquer_des_abréviations	/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 /fr/docs/Apprendre/HTML/Comment/Intégrer_une_page_web_dans_une_autre_page_web	/fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies_fbe06d127f73df4dd2f56a31b7c2bd2d
 /fr/docs/Apprendre/HTML/Comment/Mettre_en_place_une_hiérarchie_de_titres	/fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals_e22cde852fd55bbd8b014a4eac49a3bc
 /fr/docs/Apprendre/HTML/Comment/Mettre_l_accent_sur_un_contenu_ou_indiquer_qu_un_texte_est_important	/fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals_42ad0dcdd765b60d8adda1f6293954b6
@@ -309,7 +309,7 @@
 /fr/docs/CSS/-moz-grab	/en-US/docs/Web/CSS/cursor#grab
 /fr/docs/CSS/-moz-grabbing	/en-US/docs/Web/CSS/cursor#grab
 /fr/docs/CSS/-moz-image-region	/fr/docs/Web/CSS/-moz-image-region
-/fr/docs/CSS/-moz-linear-gradient	/fr/docs/orphaned/Web/CSS/linear-gradient()
+/fr/docs/CSS/-moz-linear-gradient	/fr/docs/Web/CSS/gradient/linear-gradient()
 /fr/docs/CSS/-moz-margin-end	/fr/docs/Web/CSS/margin-inline-end
 /fr/docs/CSS/-moz-margin-start	/fr/docs/Web/CSS/margin-inline-start
 /fr/docs/CSS/-moz-opacity	/fr/docs/Web/CSS/opacity
@@ -585,7 +585,7 @@
 /fr/docs/CSS/length	/fr/docs/Web/CSS/length
 /fr/docs/CSS/letter-spacing	/fr/docs/Web/CSS/letter-spacing
 /fr/docs/CSS/line-height	/fr/docs/Web/CSS/line-height
-/fr/docs/CSS/linear-gradient	/fr/docs/orphaned/Web/CSS/linear-gradient()
+/fr/docs/CSS/linear-gradient	/fr/docs/Web/CSS/gradient/linear-gradient()
 /fr/docs/CSS/list-style	/fr/docs/Web/CSS/list-style
 /fr/docs/CSS/list-style-image	/fr/docs/Web/CSS/list-style-image
 /fr/docs/CSS/list-style-position	/fr/docs/Web/CSS/list-style-position
@@ -3396,8 +3396,6 @@
 /fr/docs/SVG:Tutoriel	/fr/docs/Web/SVG/Tutorial
 /fr/docs/SVG:Tutoriel:Introduction	/fr/docs/Web/SVG/Tutorial/Introduction
 /fr/docs/SVG:Tutoriel:Premiers_pas	/fr/docs/Web/SVG/Tutorial/Getting_Started
-/fr/docs/SVG_dans_Firefox	/fr/docs/Web/SVG/SVG_1.1_Support_in_Firefox
-/fr/docs/SVG_dans_Firefox_1.5	/fr/docs/Web/SVG/SVG_1.1_Support_in_Firefox
 /fr/docs/Server-sent_events	/fr/docs/Web/API/Server-sent_events
 /fr/docs/Server-sent_events/Using_server-sent_events	/fr/docs/Web/API/Server-sent_events/Using_server-sent_events
 /fr/docs/Tools/Debugger/How_to/Black_box_a_source	/fr/docs/Tools/Debugger/How_to/Ignore_a_source
@@ -3465,8 +3463,6 @@
 /fr/docs/Web/API/AnimationEvent.elapsedTime	/fr/docs/Web/API/AnimationEvent/elapsedTime
 /fr/docs/Web/API/AnimationEvent.pseudoElement	/fr/docs/Web/API/AnimationEvent/pseudoElement
 /fr/docs/Web/API/AudioContext/createGain	/fr/docs/Web/API/BaseAudioContext/createGain
-/fr/docs/Web/API/Body	/fr/docs/orphaned/Web/API/Body
-/fr/docs/Web/API/Body/json	/fr/docs/orphaned/Web/API/Body/json
 /fr/docs/Web/API/ByteString	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/Web/API/CSSMatrix	/fr/docs/Web/API/DOMMatrix
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas	/fr/docs/Web/API/Canvas_API/Tutorial
@@ -3496,7 +3492,6 @@
 /fr/docs/Web/API/DOMLocator	/fr/docs/orphaned/Web/API/DOMLocator
 /fr/docs/Web/API/DOMTokenList/DOMTokenList.add()	/fr/docs/Web/API/DOMTokenList/add
 /fr/docs/Web/API/DOMUserData	/fr/docs/orphaned/Web/API/DOMUserData
-/fr/docs/Web/API/Detecting_device_orientation	/fr/docs/orphaned/Web/API/Detecting_device_orientation
 /fr/docs/Web/API/DeviceOrientationEvent.absolute	/fr/docs/Web/API/DeviceOrientationEvent/absolute
 /fr/docs/Web/API/DeviceRotationRate	/fr/docs/Web/API/DeviceMotionEventRotationRate
 /fr/docs/Web/API/DeviceRotationRate/alpha	/fr/docs/Web/API/DeviceMotionEventRotationRate/alpha
@@ -3887,7 +3882,7 @@
 /fr/docs/Web/CSS/-moz-copy	/fr/docs/Web/CSS/cursor
 /fr/docs/Web/CSS/-moz-grab	/en-US/docs/Web/CSS/cursor#grab
 /fr/docs/Web/CSS/-moz-grabbing	/en-US/docs/Web/CSS/cursor#grab
-/fr/docs/Web/CSS/-moz-linear-gradient	/fr/docs/orphaned/Web/CSS/linear-gradient()
+/fr/docs/Web/CSS/-moz-linear-gradient	/fr/docs/Web/CSS/gradient/linear-gradient()
 /fr/docs/Web/CSS/-moz-margin-end	/fr/docs/Web/CSS/margin-inline-end
 /fr/docs/Web/CSS/-moz-margin-start	/fr/docs/Web/CSS/margin-inline-start
 /fr/docs/Web/CSS/-moz-opacity	/fr/docs/Web/CSS/opacity
@@ -3923,7 +3918,6 @@
 /fr/docs/Web/CSS/:before	/fr/docs/Web/CSS/::before
 /fr/docs/Web/CSS/:matches	/fr/docs/Web/CSS/:is
 /fr/docs/Web/CSS/:visited_et_la_vie_privée	/fr/docs/Web/CSS/Privacy_and_the_:visited_selector
-/fr/docs/Web/CSS/@media/prefers-reduced-transparency	/fr/docs/orphaned/Web/CSS/@media/prefers-reduced-transparency
 /fr/docs/Web/CSS/@media/scan	/fr/docs/orphaned/Web/CSS/@media/scan
 /fr/docs/Web/CSS/@page/bleed	/fr/docs/orphaned/Web/CSS/@page/bleed
 /fr/docs/Web/CSS/@page/marks	/fr/docs/orphaned/Web/CSS/@page/marks
@@ -4213,8 +4207,8 @@
 /fr/docs/Web/CSS/image-set	/fr/docs/orphaned/Web/CSS/image-set()
 /fr/docs/Web/CSS/image-set()	/fr/docs/orphaned/Web/CSS/image-set()
 /fr/docs/Web/CSS/imagefunction	/fr/docs/orphaned/Web/CSS/image()
-/fr/docs/Web/CSS/linear-gradient	/fr/docs/orphaned/Web/CSS/linear-gradient()
-/fr/docs/Web/CSS/linear-gradient()	/fr/docs/orphaned/Web/CSS/linear-gradient()
+/fr/docs/Web/CSS/linear-gradient	/fr/docs/Web/CSS/gradient/linear-gradient()
+/fr/docs/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient()
 /fr/docs/Web/CSS/longueur	/fr/docs/Web/CSS/length
 /fr/docs/Web/CSS/marks	/fr/docs/orphaned/Web/CSS/@page/marks
 /fr/docs/Web/CSS/max	/fr/docs/Web/CSS/max()
@@ -5630,7 +5624,6 @@
 /fr/docs/Web/XSLT/Éléments/element	/fr/docs/Web/XSLT/Element/element
 /fr/docs/WebAPI	/fr/docs/conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3
 /fr/docs/WebAPI/Battery_Status	/fr/docs/Web/API/Battery_status_API
-/fr/docs/WebAPI/Detecting_device_orientation	/fr/docs/orphaned/Web/API/Detecting_device_orientation
 /fr/docs/WebAPI/Network_Information	/fr/docs/Web/API/Network_Information_API
 /fr/docs/WebAPI/Pointer_Lock	/fr/docs/Web/API/Pointer_Lock_API
 /fr/docs/WebAPI/Proximity	/fr/docs/Web/API/Proximity_Events
@@ -5854,6 +5847,9 @@
 /fr/docs/XSLT_dans_Gecko:Génération_de_HTML	/fr/docs/Web/API/XSLTProcessor/Generating_HTML
 /fr/docs/Zoom_pleine_page	/fr/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
 /fr/docs/appendChild	/fr/docs/Web/API/Node/appendChild
+/fr/docs/conflicting/Learn/CSS/Building_blocks/Selectors	/fr/docs/Learn/CSS/Building_blocks/Selectors
+/fr/docs/conflicting/Learn/CSS/CSS_layout/Introduction	/fr/docs/Learn/CSS/CSS_layout/Introduction
+/fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting_b235e00aa38ee1d4b535fc921395f446	/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 /fr/docs/document.createElement	/fr/docs/Web/API/Document/createElement
 /fr/docs/document.getElementById	/fr/docs/Web/API/Document/getElementById
 /fr/docs/en	/en-US/
@@ -5863,6 +5859,7 @@
 /fr/docs/inset-inline-end	/fr/docs/Web/CSS/inset-inline-end
 /fr/docs/inset-inline-start	/fr/docs/Web/CSS/inset-inline-start
 /fr/docs/orphaned/Introduction_à_la_cryptographie_à_clef_publique/Signatures_numériques	/fr/docs/Glossary/Signature/Security
+/fr/docs/orphaned/Web/CSS/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient()
 /fr/docs/orphaned/Web/Guide/Events/Media_events	/fr/docs/Web/Events#media
 /fr/docs/setAttribute	/fr/docs/Web/API/Element/setAttribute
 /fr/docs/toSource	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toSource

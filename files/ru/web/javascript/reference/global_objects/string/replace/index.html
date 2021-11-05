@@ -13,15 +13,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 ---
 <div>{{JSRef("Global_Objects", "String")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>replace()</code></strong> возвращает новую строку с некоторыми или всеми сопоставлениями с шаблоном, заменёнными на заменитель. Шаблон может быть строкой или {{jsxref("Global_Objects/RegExp", "регулярным выражением", "", 1)}}, а заменитель может быть строкой или функцией, вызываемой при каждом сопоставлении.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>str</var>.replace(<var>regexp</var>|<var>substr</var>, <var>newSubStr</var>|<var>function</var>[, <var>flags</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>regexp</code></dt>
@@ -49,17 +49,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
  </dd>
 </dl>
 
-<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+<h3 id="Returns">Возвращаемое значение</h3>
 
 <p>Новая строка с некоторыми или всеми сопоставлениями шаблона, заменёнными на заменитель.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Этот метод не изменяет объект {{jsxref("Global_Objects/String", "String")}}, на котором он вызывается. Он просто возвращает новую строку.</p>
 
 <p>Для выполнения глобального поиска и замены либо включите флаг <code>g</code> в регулярное выражение, либо, если первый параметр является строкой, включите флаг <code>g</code> в параметр <code>flags</code>.</p>
 
-<h3 id="Specifying_a_string_as_a_parameter" name="Specifying_a_string_as_a_parameter">Передача строки в качестве второго параметра</h3>
+<h3 id="Specifying_a_string_as_a_parameter">Передача строки в качестве второго параметра</h3>
 
 <p>строка замены может включать следующие специальные шаблоны замены:</p>
 
@@ -92,7 +92,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
  </tbody>
 </table>
 
-<h3 id="Specifying_a_function_as_a_parameter" name="Specifying_a_function_as_a_parameter">Передача функции в качестве второго параметра</h3>
+<h3 id="Specifying_a_function_as_a_parameter">Передача функции в качестве второго параметра</h3>
 
 <p>В качестве второго параметра вы можете передать функцию. В этом случае функция будет выполнена после произошедшего сопоставления. Результат вызова функции (её возвращаемое значение) будет использоваться в качестве строки замены (обратите внимание: описанные выше специальные шаблоны замены в этом случае <em>не</em> применяются). Обратите внимание, что функция будет вызвана несколько раз для каждого полного сопоставления, если регулярное выражение в первом параметре является глобальным.</p>
 
@@ -134,9 +134,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 var newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
 </pre>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_global_and_ignore_with_replace" name="Example:_Using_global_and_ignore_with_replace">Пример: использование флагов <code>global</code> и <code>ignore</code> с методом <code>replace()</code></h3>
+<h3 id="Example_Using_global_and_ignore_with_replace">Пример: использование флагов <code>global</code> и <code>ignore</code> с методом <code>replace()</code></h3>
 
 <p>В следующем примере регулярное выражение включает флаги для глобального поиска и игнорирования регистра, которые позволяют методу <code>replace()</code> заменить все вхождения слова «яблоки» в строке на слово «апельсины».</p>
 
@@ -146,7 +146,7 @@ var newstr = str.replace(re, 'апельсины');
 console.log(newstr); // апельсины круглые и апельсины сочные.
 </pre>
 
-<h3 id="Example_Defining_the_regular_expression_in_replace" name="Example:_Defining_the_regular_expression_in_replace">Пример: передача регулярного выражения в метод <code>replace()</code></h3>
+<h3 id="Example_Defining_the_regular_expression_in_replace">Пример: передача регулярного выражения в метод <code>replace()</code></h3>
 
 <p>В следующем примере в метод <code>replace()</code> передаётся регулярное выражение вместе с флагом игнорирования регистра.</p>
 
@@ -158,7 +158,7 @@ console.log(newstr); // Twas the night before Christmas...
 
 <p>Пример выведет строку 'Twas the night before Christmas...'</p>
 
-<h3 id="Example_Switching_words_in_a_string" name="Example:_Switching_words_in_a_string">Пример: смена местами слов в строке</h3>
+<h3 id="Example_Switching_words_in_a_string">Пример: смена местами слов в строке</h3>
 
 <p>Следующий скрипт меняет местами слова в строке. В качестве текста замены он использует шаблоны замены <code>$1</code> и <code>$2</code>.</p>
 
@@ -170,7 +170,7 @@ console.log(newstr); // Смит, Джон
 
 <p>Пример выведет строку 'Смит, Джон'.</p>
 
-<h3 id="Example_Using_an_inline_function_that_modifies_the_matched_characters" name="Example:_Using_an_inline_function_that_modifies_the_matched_characters">Пример: использование функции для изменения сопоставившихся символов</h3>
+<h3 id="Example_Using_an_inline_function_that_modifies_the_matched_characters">Пример: использование функции для изменения сопоставившихся символов</h3>
 
 <p>В этом примере все входящие в строку (латинские) буквы в верхнем регистре преобразуются в нижний регистр, а перед самой буквой вставляется дефис. Здесь важно то, что прежде чем элемент вставится в качестве замены, над ним нужно провести дополнительные преобразования.</p>
 
@@ -193,7 +193,7 @@ console.log(newstr); // Смит, Джон
 
 <p>Происходит это потому, что сначала часть <code>'$&amp;'.toLowerCase()</code> вычисляется в строковый литерал (результат по-прежнему равен <code>'$&amp;'</code>), а только потом его символы используются в качестве шаблона.</p>
 
-<h3 id="Example_Replacing_a_Fahrenheit_degree_with_its_Celsius_equivalent" name="Example:_Replacing_a_Fahrenheit_degree_with_its_Celsius_equivalent">Пример: замена градусов по Фаренгейту на эквивалент в градусах по Цельсию</h3>
+<h3 id="Example_Replacing_a_Fahrenheit_degree_with_its_Celsius_equivalent">Пример: замена градусов по Фаренгейту на эквивалент в градусах по Цельсию</h3>
 
 <p>В следующем примере градусы по Фаренгейту заменяются на эквивалентные градусы по Цельсию. Градусы по Фаренгейту должны быть числом, оканчивающимся на букву F. Функция возвращает количество градусов по Цельсию, оканчивающиеся на букву C. Например, если входное число равняется 212F, функция вернёт 100C. Если число равняется 0F, функция вернёт -17.77777777777778C.</p>
 
@@ -209,7 +209,7 @@ console.log(newstr); // Смит, Джон
 }
 </pre>
 
-<h3 id="Example_Use_an_inline_function_with_a_regular_expression_to_avoid_for_loops" name="Example: Use an inline function with a regular expression to avoid for loops">Пример: использование функции вместе с регулярным выражением для избавления от цикла <code>for</code></h3>
+<h3 id="Example_Use_an_inline_function_with_a_regular_expression_to_avoid_for_loops">Пример: использование функции вместе с регулярным выражением для избавления от цикла <code>for</code></h3>
 
 <p>Следующий пример принимает строку шаблона и преобразует её в массив объектов.</p>
 
@@ -249,38 +249,15 @@ console.log(retArr);
 
 <p>Этот код сгенерирует массив из трёх объектов в описанном формате без использования цикла <code>for</code>.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.2</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.11', 'String.prototype.replace')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.replace', 'String.prototype.replace')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div>{{Compat("javascript.builtins.String.replace")}}</div>
+<div>{{Compat}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.match()")}}</li>

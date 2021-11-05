@@ -1,12 +1,6 @@
 ---
 title: Les grilles CSS, les valeurs logiques et les modes d'écriture
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
-tags:
-  - CSS
-  - CSS Grids
-  - Grilles CSS
-  - Guides
-  - Intermédiaire
 translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes
 original_slug: >-
   Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture
@@ -184,7 +178,7 @@ Si on ajoute `writing-mode: vertical-lr` au conteneur de la grille, on peut voir
 </div>
 ```
 
-{{EmbedLiveSample("definir_writing-mode", '500', '330')}}
+{{EmbedLiveSample("Définir_writing-mode", '500', '330')}}
 
 ![A image showing the direction of Block and Inline when writing-mode is vertical-lr](8-vertical-lr.png)
 
@@ -313,7 +307,7 @@ Dans l'exemple suivant, on a une grille avec la direction `ltr` et on positionne
 </div>
 ```
 
-{{EmbedLiveSample("placement_sur_les_lignes_pour_du_texte_de_gauche_à_droite", '500', '330')}}
+{{EmbedLiveSample("Placement_sur_les_lignes_pour_du_texte_de_gauche_à_droite", '500', '330')}}
 
 ### Placement sur les lignes pour du texte de droite à gauche
 
@@ -365,7 +359,7 @@ Si on ajoute alors la propriété {{cssxref("direction")}} avec la valeur `rtl` 
 </div>
 ```
 
-{{EmbedLiveSample("placement_sur_les_lignes_pour_du_texte_de_droite_à_gauche", '500', '330')}}
+{{EmbedLiveSample("Placement_sur_les_lignes_pour_du_texte_de_droite_à_gauche", '500', '330')}}
 
 On voit ici que si on change la direction du texte pour la page ou pour une partie de la page : la disposition change selon lees numéros de lignes. Si on ne veut pas que les lignes bougent, on pourra utiliser des lignes nommées pour éviter cet effet.
 

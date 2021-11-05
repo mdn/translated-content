@@ -5,7 +5,7 @@ translation_of: 'Web/CSS/:not'
 ---
 <div>{{ CSSRef() }}</div>
 
-<h2 id="Summary" name="Summary">Описание</h2>
+<h2 id="Summary">Описание</h2>
 
 <p><strong>Отрицательный </strong><a href="/ru/docs/CSS/Pseudo-classes" title="Pseudo-classes">CSS псевдокласс</a>, <code>:not(X)</code> - функция, принимающая простой селектор <var>X</var> в качестве аргумента. Он находит элементы, не соответствующие селектору. <var>X</var> не должен содержать других отрицательных селекторов.</p>
 
@@ -19,11 +19,11 @@ translation_of: 'Web/CSS/:not'
 </ul>
 </div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">:not(selector) { <em>style properties</em> }</pre>
 
-<h2 id="Examples" name="Examples">Пример</h2>
+<h2 id="Examples">Пример</h2>
 
 <pre class="brush: css">p:not(.classy) { color: red; }
 body :not(p) { color: green; }</pre>
@@ -39,30 +39,10 @@ body :not(p) { color: green; }</pre>
 
 <p>{{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/:not') }}</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS4 Selectors', '#negation', ':not()') }}</td>
-   <td>{{ Spec2('CSS4 Selectors') }}</td>
-   <td>Аргумент расширен до поддержки нескольких непростых селекторов.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Selectors', '#negation', ':not()') }}</td>
-   <td>{{ Spec2('CSS3 Selectors') }}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Поддержка браузерами</h2>
+<h2 id="Browser_compatibility">Поддержка браузерами</h2>
 
-<p>{{Compat("css.selectors.not")}}</p>
+<p>{{Compat}}</p>

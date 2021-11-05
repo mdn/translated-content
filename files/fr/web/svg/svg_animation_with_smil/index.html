@@ -12,10 +12,10 @@ tags:
 translation_of: Web/SVG/SVG_animation_with_SMIL
 ---
 <div class="warning">
-<p>Bien que Chrome 45 déprécie SMIL en faveur des animations CSS et des animations Web, les développeurs Chrome ont depuis <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/5o0yiO440LM/YGEJBsjUAwAJ">suspendu</a> cette décision.</p>
+  <p><strong>Attention :</strong> Bien que Chrome 45 déprécie SMIL en faveur des animations CSS et des animations Web, les développeurs Chrome ont depuis <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/5o0yiO440LM/YGEJBsjUAwAJ">suspendu</a> cette décision.</p>
 </div>
 
-<p>Firefox 4 introduit le support pour les animations <a href="/en/SVG" title="en/SVG">SVG</a> en utilisant <a class="external" href="http://www.w3.org/TR/REC-smil">Synchronized Multimedia Integration Language</a> (SMIL). SMIL permet :</p>
+<p>Firefox 4 introduit le support pour les animations <a href="/fr/SVG" title="en/SVG">SVG</a> en utilisant <a href="http://www.w3.org/TR/REC-smil">Synchronized Multimedia Integration Language</a> (SMIL). SMIL permet :</p>
 
 <ul>
  <li>d'animer les attributs numériques d'un élément (x, y, ...)</li>
@@ -24,11 +24,11 @@ translation_of: Web/SVG/SVG_animation_with_SMIL
  <li>de créer un mouvement en suivant un tracé donné</li>
 </ul>
 
-<p>Pour ce faire, on utilise un élément SVG tel que <span class="author-g-shbl2alwmr0wm7ko">{{ SVGElement("animate") }}</span>. Vous trouverez ci-dessous des exemples illustrant les quatres différents manières de procéder.</p>
+<p>Pour ce faire, on utilise un élément SVG tel que {{ SVGElement("animate") }}. Vous trouverez ci-dessous des exemples illustrant les quatres différents manières de procéder.</p>
 
-<h2 id="Animer_l'attribut_d'un_élément">Animer l'attribut d'un élément</h2>
+<h2 id="Animation_pour_un_attribut">Animation pour un attribut</h2>
 
-<p>L'exemple suivant anime l'attribut <code><strong>cx</strong></code> d'un cercle. Pour ce faire, on ajoute un élément <span class="author-g-shbl2alwmr0wm7ko">{{ SVGElement("animate") }}  dans</span><span class="author-g-shbl2alwmr0wm7ko"> l'élément {{ SVGElement("circle") }}. Les attributs importants pour </span><span class="author-g-shbl2alwmr0wm7ko">{{ SVGElement("animate") }} sont :</span></p>
+<p>L'exemple suivant anime l'attribut <code><strong>cx</strong></code> d'un cercle. Pour ce faire, on ajoute un élément {{ SVGElement("animate") }}  dans l'élément {{ SVGElement("circle") }}. Les attributs importants pour {{ SVGElement("animate") }} sont :</p>
 
 <dl>
  <dt><code><strong>attributeName</strong></code></dt>
@@ -53,13 +53,13 @@ translation_of: Web/SVG/SVG_animation_with_SMIL
   &lt;/circle&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{ EmbedLiveSample("Animer_l'attribut_d'un_élément", '100%', 120) }}</p>
+<p>{{ EmbedLiveSample("Animation_pour_un_attribut", '100%', 120) }}</p>
 
-<h2 id="Animer_la_transformation_d'attributs">Animer la transformation d'attributs</h2>
+<h2 id="Animer_une_transformation_des_attributs">Animer une transformation d'attributs</h2>
 
-<p><span class="author-g-shbl2alwmr0wm7ko">L'élement {{ SVGElement("animateTransform") }} permet d'animer la <strong>transformation</strong> d'attributs. Ce nouvel élément est nécéssaire parce que nous n'animons pas un simple attribut tel que <strong>x, </strong>qui est juste un nombre.<br>
+<p>L'élement {{ SVGElement("animateTransform") }} permet d'animer la <strong>transformation</strong> d'attributs. Ce nouvel élément est nécéssaire parce que nous n'animons pas un simple attribut tel que <strong>x, </strong>qui est juste un nombre.<br>
  Les attributs pour la rotation sont ainsi : <code>rotation(theta, x, y)</code>, où <code>theta</code> est l'angle en degrés, <code>x</code> et <code>y</code> sont les positions absolues.<br>
- Dans l'exemple ci dessous, on anime le centre de rotation et l'angle.</span></p>
+ Dans l'exemple ci dessous, on anime le centre de rotation et l'angle.</p>
 
 <pre class="brush: html">&lt;svg width="300" height="100"&gt;
   &lt;title&gt;SVG SMIL Animate with transform&lt;/title&gt;
@@ -78,11 +78,11 @@ translation_of: Web/SVG/SVG_animation_with_SMIL
 &lt;/svg&gt;
 </pre>
 
-<p>{{ EmbedLiveSample("Animer_la_transformation_d'attributs", '100%', 120) }}</p>
+<p>{{ EmbedLiveSample("Animer_une_transformation_des_attributs", '100%', 120) }}</p>
 
 <h2 id="Animation_suivant_un_tracé_(chemin)">Animation suivant un tracé (chemin)</h2>
 
-<p><span class="author-g-shbl2alwmr0wm7ko">L'élement {{ SVGElement("animateMotion") }} permet d'animer la position et la rotation d'éléments en suivant un tracé spécifique. Ce chemin est définit de la même manière que dans </span> <span class="author-g-shbl2alwmr0wm7ko">{{ SVGElement("path") }}</span><span lang="fr">.</span></p>
+<p>L'élement {{ SVGElement("animateMotion") }} permet d'animer la position et la rotation d'éléments en suivant un tracé spécifique. Ce chemin est définit de la même manière que dans  {{ SVGElement("path") }}.</p>
 
 <h3 id="Exemple_1_Mouvement_linéaire">Exemple 1: Mouvement linéaire</h3>
 
@@ -123,7 +123,7 @@ translation_of: Web/SVG/SVG_animation_with_SMIL
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="/en/SVG" title="en/SVG">SVG</a></li>
- <li><a class="external" href="http://www.w3.org/TR/SVG/animate.html">SVG Animation Specification</a></li>
- <li><a class="external" href="http://www.w3.org/TR/REC-smil">SMIL Specification</a></li>
+ <li><a href="/fr/SVG" title="en/SVG">SVG</a></li>
+ <li><a href="http://www.w3.org/TR/SVG/animate.html">SVG Animation Specification</a></li>
+ <li><a href="http://www.w3.org/TR/REC-smil">SMIL Specification</a></li>
 </ul>

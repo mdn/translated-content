@@ -70,7 +70,7 @@ Pour une liste des types d'événements disponibles, aller voir la page [Référ
 
 ### Résultat
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Exemples')}}
 
 ## Spécifications
 

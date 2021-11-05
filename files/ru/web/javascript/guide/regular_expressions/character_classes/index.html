@@ -149,7 +149,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 
 <h3 id="Поиск_серии_цифр">Поиск серии цифр</h3>
 
-<pre class="brush: js notranslate">var randomData = "015 354 8787 687351 3512 8735";
+<pre class="brush: js">var randomData = "015 354 8787 687351 3512 8735";
 var regexpFourDigits = /\b\d{4}\b/g;
 // \b определяет границу поиска (например, не начинает поиск с середины слова)
 // \d{4} определяет цифру, четыре раза
@@ -162,7 +162,7 @@ console.table(randomData.match(regexpFourDigits));
 
 <h3 id="Поиск_слов_латинский_алфавит_начинающих_с_A">Поиск слов  (латинский алфавит), начинающих с A</h3>
 
-<pre class="brush: js notranslate">var aliceExcerpt = "I’m sure I’m not Ada,’ she said, ‘for her hair goes in such long ringlets, and mine doesn’t go in ringlets at all.";
+<pre class="brush: js">var aliceExcerpt = "I’m sure I’m not Ada,’ she said, ‘for her hair goes in such long ringlets, and mine doesn’t go in ringlets at all.";
 var regexpWordStartingWithA = /\b[aA]\w+/g;
 // \b определяет границу поиска (например, не начинает поиск с середины слова)
 // [aA] определяет букву a или A
@@ -176,7 +176,7 @@ console.table(aliceExcerpt.match(regexpWordStartingWithA));
 
 <p>Вместо латинского алфавита, мы может использовать диапазон Unicode символов для определения слова (благодаря этому мы можем работать с текстами написанным, например на русском или арабском языке or Arabic). Unicode содержит большинство символов используемых на планете, мы так же можем объединять их диапазоны и классы символов.</p>
 
-<pre class="brush: js notranslate">var nonEnglishText = "Приключения Алисы в Стране чудес";
+<pre class="brush: js">var nonEnglishText = "Приключения Алисы в Стране чудес";
 var regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
 // BMP goes through U+0000 to U+FFFF but space is U+0020
 
@@ -187,19 +187,6 @@ console.table(nonEnglishText.match(regexpBMPWord));
 <div class="hidden">
 <p>Note for MDN editors: please do not try to add funny examples with emoji as those characters are not handled by the platform (Kuma).</p>
 </div>
-
-<h2 id="Спецификации">Спецификации</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-characterclass', 'RegExp: Character classes')}}</td>
-  </tr>
- </tbody>
-</table>
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 

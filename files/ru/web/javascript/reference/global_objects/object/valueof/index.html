@@ -10,15 +10,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 ---
 <div>{{JSRef("Global_Objects", "Object")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <code><strong>valueOf()</strong></code> возвращает примитивное значение указанного объекта.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>object</var>.valueOf()</code></pre>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>JavaScript вызывает метод <code>valueOf</code> для преобразования объекта в примитивное значение. Вам редко потребуется вызывать метод <code>valueOf</code> самостоятельно; JavaScript автоматически вызывает его при обнаружении объекта, когда ожидается примитивное значение.</p>
 
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 
 <p>Вы можете использовать <code>valueOf</code> в своём коде для преобразования встроенных объектов в примитивное значение. Когда вы создаёте пользовательский объект, вы можете переопределить метод <code>Object.prototype.valueOf()</code>, чтобы вызывать собственный метод вместо метода по умолчанию из {{jsxref("Global_Objects/Object", "Object")}}.</p>
 
-<h3 id="Overriding_valueOf_for_custom_objects" name="Overriding_valueOf_for_custom_objects">Переопределение <code>valueOf</code> в пользовательских объектах</h3>
+<h3 id="Overriding_valueOf_for_custom_objects">Переопределение <code>valueOf</code> в пользовательских объектах</h3>
 
 <p>Вы можете создать функцию, вызываемую вместо метода <code>valueOf</code> по умолчанию. Ваша функция не должна принимать аргументов.</p>
 
@@ -46,46 +46,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 <p><strong>Примечание:</strong> объекты в строковом контексте преобразуются с помощью метода {{jsxref("Object.toString", "toString()")}}, что отличается от объектов {{jsxref("Global_Objects/String", "String")}}, преобразующихся в строковые примитивы методом <code>valueOf</code>. Все объекты имеют преобразование в строку вида "<code>[object <em>type</em>]</code>". Но многие объекты не преобразуются в число, логическое значение или функцию.</p>
 </div>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_valueOf" name="Example:_Using_valueOf">Пример: использование <code>valueOf</code></h3>
+<h3 id="Example:_Using_valueOf">Пример: использование <code>valueOf</code></h3>
 
 <pre class="brush: js">var o = new Object();
 myVar = o.valueOf();      // [object Object]
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.4', 'Object.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Object.prototype.toString()")}}</li>

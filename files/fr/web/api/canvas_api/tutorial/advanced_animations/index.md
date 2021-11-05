@@ -227,7 +227,7 @@ canvas.addEventListener("mouseout",function(e){
 ball.draw();
 ```
 
-{{EmbedLiveSample("deuxième_démo", "610", "310")}}
+{{EmbedLiveSample("Deuxième_démo", "610", "310")}}
 
 ## Effet de traînée
 
@@ -297,7 +297,7 @@ canvas.addEventListener("mouseout",function(e){
 ball.draw();
 ```
 
-{{EmbedLiveSample("troisième_démo", "610", "310")}}
+{{EmbedLiveSample("Troisième_démo", "610", "310")}}
 
 ## Ajout d'un contrôle de souris
 
@@ -376,7 +376,7 @@ ball.draw();
 
 Déplacez la balle en utilisant votre souris et relâchez-la avec un click.
 
-{{EmbedLiveSample("Ajout_d'un_contrôle_de_souris", "610", "310")}}
+{{EmbedLiveSample("Ajout_d\'un_contrôle_de_souris", "610", "310")}}
 
 ## Casse-briques
 

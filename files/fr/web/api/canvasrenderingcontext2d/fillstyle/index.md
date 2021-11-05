@@ -1,12 +1,6 @@
 ---
 title: CanvasRenderingContext2D.fillStyle
 slug: Web/API/CanvasRenderingContext2D/fillStyle
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Propriété
-  - Reference
 translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 ---
 {{APIRef}}
@@ -93,7 +87,7 @@ textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 700, 360) }}
+{{ EmbedLiveSample('Code_jouable', 700, 360) }}
 
 ### Un exemple `fillStyle` avec les boucles `for`
 
@@ -116,7 +110,7 @@ for (var i = 0; i < 6; i++){
 
 Le résultat devrait ressembler à ça:
 
-{{EmbedLiveSample("A_fillStyle_example_with_for_loops", 160, 160, "canvas_fillstyle.png")}}
+{{EmbedLiveSample("Un_exemple_fillStyle_avec_les_boucles_for", 160, 160, "canvas_fillstyle.png")}}
 
 ## Spécifications
 

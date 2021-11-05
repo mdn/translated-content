@@ -11,22 +11,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 ---
 <div>{{JSRef("Global_Objects", "String")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>charCodeAt()</code></strong> возвращает числовое значение Юникода для символа по указанному индексу (за исключением кодовых точек Юникода, больших 0x10000).</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>str</var>.charCodeAt(<var>index</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>index</code></dt>
  <dd>Целое число больше, либо равное 0 и меньше длины строки; если параметр не является числом, он устанавливается в 0.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Кодовые точки Юникода простираются в диапазоне от 0 до 1114111 (0x10FFFF). Первые 128 кодовых точек Юникода напрямую отображаются в кодировку ASCII. Информацию по Юникоду смотрите в <a href="/ru/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">Руководстве по JavaScript</a>.</p>
 
@@ -36,16 +36,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 
 <p>Обратная совместимость: в более старых версиях (например, в JavaScript 1.2) метод <code>charCodeAt()</code> возвращал число из кодировки ISO-Latin-1 по указанному индексу. Диапазон символов в кодировке ISO-Latin-1 простирается от 0 до 255. Первые 127 чисел напрямую отображаются в кодировку ASCII.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_charCodeAt" name="Example:_Using_charCodeAt">Пример: использование метода <code>charCodeAt()</code></h3>
+<h3 id="Example:_Using_charCodeAt">Пример: использование метода <code>charCodeAt()</code></h3>
 
 <p>В следующем примере возвращается число 65, значение Unicode для латинского символа «A».</p>
 
 <pre class="brush: js">'ABC'.charCodeAt(0); // вернёт 65
 </pre>
 
-<h3 id="Example:_Fixing_charCodeAt_to_handle_non-Basic-Multilingual-Plane_characters_if_their_presence_earlier_in_the_string_is_unknown" name="Example:_Fixing_charCodeAt_to_handle_non-Basic-Multilingual-Plane_characters_if_their_presence_earlier_in_the_string_is_unknown">Пример: исправление метода <code>charCodeAt()</code> для обработки символов не в Базовой многоязыковой плоскости, если их предыдущее присутствие в строке неизвестно</h3>
+<h3 id="Example:_Fixing_charCodeAt_to_handle_non-Basic-Multilingual-Plane_characters_if_their_presence_earlier_in_the_string_is_unknown">Пример: исправление метода <code>charCodeAt()</code> для обработки символов не в Базовой многоязыковой плоскости, если их предыдущее присутствие в строке неизвестно</h3>
 
 <p>Эта версия может использоваться в циклах for, даже когда неизвестно, были ли до указанной позиции символы из не-БМП.</p>
 
@@ -81,7 +81,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 }
 </pre>
 
-<h3 id="Example:_Fixing_charCodeAt_to_handle_non-Basic-Multilingual-Plane_characters_if_their_presence_earlier_in_the_string_is_known" name="Example:_Fixing_charCodeAt_to_handle_non-Basic-Multilingual-Plane_characters_if_their_presence_earlier_in_the_string_is_known">Пример: исправление метода <code>charCodeAt()</code> для обработки символов не в Базовой многоязыковой плоскости, если их предыдущее присутствие в строке известно</h3>
+<h3 id="Example:_Fixing_charCodeAt_to_handle_non-Basic-Multilingual-Plane_characters_if_their_presence_earlier_in_the_string_is_known">Пример: исправление метода <code>charCodeAt()</code> для обработки символов не в Базовой многоязыковой плоскости, если их предыдущее присутствие в строке известно</h3>
 
 <pre class="brush: js">function knownCharCodeAt(str, idx) {
   str += '';
@@ -116,38 +116,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.5', 'String.prototype.charCodeAt')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.charcodeat', 'String.prototype.charCodeAt')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("String.fromCharCode()")}}</li>

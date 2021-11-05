@@ -60,7 +60,7 @@ original_slug: Learn/HTML/Forms/Ваша_первая_HTML_форма
 
 <p>Создание форм начинается с элемента {{HTMLelement("form")}}:</p>
 
-<pre class="brush:html; notranslate">&lt;form action="/my-handling-form-page" method="post"&gt;
+<pre class="brush:html;">&lt;form action="/my-handling-form-page" method="post"&gt;
 
 &lt;/form&gt;</pre>
 
@@ -89,7 +89,7 @@ original_slug: Learn/HTML/Forms/Ваша_первая_HTML_форма
 
 <p>В терминах HTML нам нужен код наподобие представленного ниже, чтобы добавить виджеты форм:</p>
 
-<pre class="brush:html; notranslate">&lt;form action="/my-handling-form-page" method="post"&gt;
+<pre class="brush:html;">&lt;form action="/my-handling-form-page" method="post"&gt;
   &lt;ul&gt;
     &lt;li&gt;
       &lt;label for="name"&gt;Name:&lt;/label&gt;
@@ -121,11 +121,11 @@ original_slug: Learn/HTML/Forms/Ваша_первая_HTML_форма
 
 <p>Последнее, но не менее важное, обратите внимание на разницу синтаксиса у HTML-элементов <code>&lt;input&gt;</code> и <code>&lt;textarea&gt;&lt;/textarea&gt;</code>. Это одна из странностей HTML. Тег <code>&lt;input&gt;</code> — это пустой элемент, то есть он не нуждается в закрывающем теге.  {{HTMLElement("textarea")}} — это непустой элемент, что говорит о том, что ему необходим закрывающий тег. Это важно при использовании одного из свойств форм: определения значения по умолчанию. Для определения начального значения для HTML-элемента {{HTMLElement("input")}} вам необходимо использовать атрибут <code>value</code> следующим образом:</p>
 
-<pre class="brush:html; notranslate">&lt;input type="text" value="по умолчанию в этом элементе находится этот текст" /&gt;</pre>
+<pre class="brush:html;">&lt;input type="text" value="по умолчанию в этом элементе находится этот текст" /&gt;</pre>
 
 <p>Если вы хотите определить значение по умолчанию для HTML-элемента {{HTMLElement("textarea")}}, вам просто нужно поместить это начальное значение между открывающим и закрывающим тегами:</p>
 
-<pre class="brush:html; notranslate">&lt;textarea&gt;
+<pre class="brush:html;">&lt;textarea&gt;
 по умолчанию в этом элементе находится этот текст
 &lt;/textarea&gt;</pre>
 
@@ -133,7 +133,7 @@ original_slug: Learn/HTML/Forms/Ваша_первая_HTML_форма
 
 <p>Разметка нашей формы почти готова, но нам ещё необходимо добавить кнопку, которая позволит пользователю отправлять или "представлять" информацию после заполнения формы. Это делается с помощью HTML-элемента {{HTMLelement("button")}}. Необходимо добавить следующий код перед закрывающим тегом <code>&lt;/form&gt;</code>:</p>
 
-<pre class="brush:html; notranslate">&lt;li class="button"&gt;
+<pre class="brush:html;">&lt;li class="button"&gt;
   &lt;button type="submit"&gt;Send your message&lt;/button&gt;
 &lt;/li&gt;</pre>
 
@@ -163,13 +163,13 @@ original_slug: Learn/HTML/Forms/Ваша_первая_HTML_форма
 
 <p>Сначала необходимо добавить HTML-элемент {{htmlelement("style")}} на вашу страницу внутрь тега <code>head</code> в HTML. Это должно выглядеть следующим образом:</p>
 
-<pre class="brush: html notranslate">&lt;style&gt;
+<pre class="brush: html">&lt;style&gt;
 
 &lt;/style&gt;</pre>
 
 <p>Внутри тега стилей добавьте следующий код:</p>
 
-<pre class="brush:css; notranslate">form {
+<pre class="brush:css;">form {
   /* Расположим форму по центру страницы */
   margin: 0 auto;
   width: 400px;
@@ -251,7 +251,7 @@ button {
 
 <p>Чтобы переименовать данные, вам необходимо использовать атрибут <code>name</code> на каждом виджете формы, который будет собирать определённую часть информации. Давайте взглянем на код нашей формы ещё раз:</p>
 
-<pre class="brush:html; notranslate">&lt;form action="/my-handling-form-page" method="post"&gt;
+<pre class="brush:html;">&lt;form action="/my-handling-form-page" method="post"&gt;
   &lt;div&gt;
     &lt;label for="name"&gt;Name:&lt;/label&gt;
     &lt;input type="text" id="name" name="user_name" /&gt;
@@ -276,7 +276,7 @@ button {
 
 <p>Поздравляем! Вы создали свою первую HTML-форму. Вживую это выглядит так: </p>
 
-<p>{{ EmbedLiveSample('A_simple_form', '100%', '240', '', 'Learn/HTML/Forms/Your_first_HTML_form/Example') }}</p>
+<p>{{ EmbedLiveSample('A_simple_form', '100%', '240', '', 'Learn/Forms/Your_first_form/Example') }}</p>
 
 <p>Однако это только начало — пришло время взглянуть глубже. HTML-формы намного мощнее, чем то, что мы видели здесь, и другие статьи этого раздела помогут освоить остальное.</p>
 

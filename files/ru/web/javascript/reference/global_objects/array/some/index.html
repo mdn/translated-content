@@ -24,11 +24,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 
 <p>{{EmbedInteractiveExample("pages/js/array-some.html")}}</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><var>arr</var>.some(<var>callback(element[, index[, array]])</var>[, <var>thisArg</var>])</pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>callback</code></dt>
@@ -50,7 +50,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 
 <p><code><strong>true</strong></code>, если функция проверки возвращает {{Glossary("truthy")}} значение хотя бы для одного элемента массива. Иначе, <code><strong>false</strong></code>.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>some()</code> вызывает переданную функцию <code>callback</code> один раз для каждого элемента, присутствующего в массиве до тех пор, пока не найдёт такой, для которого <code>callback</code> вернёт <em>истинное</em> значение (значение, становящееся равным <code>true</code> при приведении его к типу {{jsxref("Boolean")}}). Если такой элемент найден, метод <code>some()</code> немедленно вернёт <code>true</code>. В противном случае, если <code>callback</code> вернёт <code>false</code> для всех элементов массива, метод <code>some()</code> вернёт <code>false</code>. Функция <code>callback</code> вызывается только для индексов массива, имеющих присвоенные значения; она не вызывается для индексов, которые были удалены или которым значения никогда не присваивались.</p>
 
@@ -62,9 +62,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 
 <p>Диапазон элементов, обрабатываемых методом <code>some()</code>, устанавливается до первого вызова функции <code>callback</code>. Элементы, добавленные в массив после начала выполнения метода <code>some()</code>, не будут посещены функцией <code>callback</code>. Если существующие элементы массива изменятся, значения, переданные в функцию <code>callback</code>, будут значениями на тот момент времени, когда метод <code>some()</code> посетит их; удалённые элементы посещены не будут.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Testing_size_of_all_array_elements" name="Example:_Testing_size_of_all_array_elements">Проверка значений элементов массива</h3>
+<h3 id="Проверка_значений_элементов_массива">Проверка значений элементов массива</h3>
 
 <p>Следующий пример проверяет наличие в массиве элемента, который больше 10.</p>
 
@@ -77,7 +77,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 
 <p>{{ EmbedLiveSample('Проверка_значений_элементов_массива', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}</p>
 
-<h3 id="Example_Testing_array_elements_using_arrow_functions" name="Example:_Testing_array_elements_using_arrow_functions">Проверка элементов массива с использованием стрелочных функций</h3>
+<h3 id="Проверка_элементов_массива_с_использованием_стрелочных_функций">Проверка элементов массива с использованием стрелочных функций</h3>
 
 <p><a href="/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Стрелочные функции</a> предоставляют более краткий синтаксис для подобных проверок.</p>
 
@@ -106,20 +106,20 @@ checkAvailability(fruits, 'banana'); // true</pre>
 
 <h3 id="Проверка_наличия_элемента_в_массиве_с_использованием_стрелочной_функции">Проверка наличия элемента в массиве с использованием стрелочной функции</h3>
 
-<pre><code>const fruits = ['apple', 'banana', 'mango', 'guava'];
+<pre class="brush: js">const fruits = ['apple', 'banana', 'mango', 'guava'];
 
 function checkAvailability(arr, val) {
   return arr.some(arrVal =&gt; val === arrVal);
 }
 
 checkAvailability(fruits, 'kela');   // false
-checkAvailability(fruits, 'banana'); // true</code></pre>
+checkAvailability(fruits, 'banana'); // true</pre>
 
 <p>{{ EmbedLiveSample('Проверка_наличия_элемента_в_массиве_с_использованием_стрелочной_функции', '', '', '', 'Experiment:StaticExamplesOnTop/JavaScript/Array/some') }}</p>
 
 <h3 id="Приведение_значения_к_логическому_типу">Приведение значения к логическому типу</h3>
 
-<pre><code>const TRUTHY_VALUES = [true, 'true', 1];
+<pre class="brush: js">const TRUTHY_VALUES = [true, 'true', 1];
 
 function getBoolean(value) {
   'use strict';
@@ -136,11 +136,11 @@ function getBoolean(value) {
 getBoolean(false);   // false
 getBoolean('false'); // false
 getBoolean(1);       // true
-getBoolean('true');  // true</code></pre>
+getBoolean('true');  // true</pre>
 
 <p>{{ EmbedLiveSample('Приведение_значения_к_логическому_типу', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}</p>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Метод <code>some()</code> был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может не присутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>some()</code> в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 5-го издания; и предполагает, что {{jsxref("Global_Objects/Object", "Object")}} и {{jsxref("Global_Objects/TypeError", "TypeError")}} имеют свои первоначальные значения и что <code>callback.call</code> вычисляется в оригинальное значение {{jsxref("Function.prototype.call()")}}.</p>
 
@@ -174,38 +174,15 @@ if (!Array.prototype.some) {
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.17', 'Array.prototype.some')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.6.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.some', 'Array.prototype.some')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.some', 'Array.prototype.some')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div>{{Compat("javascript.builtins.Array.some")}}</div>
+<div>{{Compat}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.forEach()")}}</li>

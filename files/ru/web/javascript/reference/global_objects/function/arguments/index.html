@@ -11,12 +11,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/arguments
 ---
 <div>
  {{JSRef("Global_Objects", "Function")}} {{deprecated_header}}</div>
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Свойство <code><strong><em>function</em>.arguments</strong></code> ссылалось на массивоподобный объект, соответствующий аргументам, переданным в функцию. Используйте вместо него простую переменную {{jsxref("Functions_and_function_scope/arguments", "arguments")}}.</p>
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Синтаксис <code><em>function</em>.arguments</code> устарел. Рекомендуемым способом доступа к объекту {{jsxref("Functions_and_function_scope/arguments", "arguments")}}, доступному внутри функций, является простая ссылка на переменную {{jsxref("Functions_and_function_scope/arguments", "arguments")}}.</p>
 <p>В случае рекурсии, то есть, если функция <code>f</code> несколько раз появляется в стеке вызовов, значение <code>f.arguments</code> представляет аргументы, соответствующие самому последнему вызову функции.</p>
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 <pre class="brush: js">function f(n) { g(n - 1); }
 
 function g(n) {
@@ -35,36 +35,13 @@ f(2);
 // после: 0
 // после: 1
 </pre>
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0. Устарело в связи с объектом {{jsxref("Functions_and_function_scope/arguments", "arguments")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-10.6', 'объект arguments')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Объект {{jsxref("Functions_and_function_scope/arguments", "arguments")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-arguments-object', 'объект arguments')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Объект {{jsxref("Functions_and_function_scope/arguments", "arguments")}}</td>
-  </tr>
- </tbody>
-</table>
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Specifications">Спецификации</h2>
+{{Specifications}}
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <div>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>объект {{jsxref("Functions_and_function_scope/arguments", "arguments")}}</li>
  <li>{{jsxref("Functions_and_function_scope", "Функции и их область видимости", "", 1)}}</li>

@@ -10,14 +10,15 @@ translation_of: Web/SVG/Attribute/fill-opacity
 
 <p>L'attribut <strong><code>fill-opacity</code></strong> définit l'opacité du remplissage (<em>couleur, dégradé, motif</em>, etc) appliqué à une forme.</p>
 
-<p class="note"><strong>Note:</strong> <code>fill-opacity</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
+<div class="note">
+  <p><strong>Note :</strong> <code>fill-opacity</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
+</div>
 
 <p>Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}</p>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Exemple</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Opacité par défaut: 1 --&gt;
@@ -36,8 +37,7 @@ translation_of: Web/SVG/Attribute/fill-opacity
           style="fill-opacity: .25;" /&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample('topExample', '100%', 150)}}</p>
-</div>
+<p>{{EmbedLiveSample('exemple', '100%', 150)}}</p>
 
 <h2 id="Notes_d'utilisation">Notes d'utilisation</h2>
 
@@ -58,7 +58,9 @@ translation_of: Web/SVG/Attribute/fill-opacity
  </tbody>
 </table>
 
-<p class="note"><strong>Note:</strong> SVG2 introduit les valeurs en pourcentage pour <code>fill-opacity</code>. Cependant,  ce n'est pas souvent pris en charge pour le moment (<em>Voir {{anch('Compatibilité des navigateurs')}} ci-dessous</em>). Il est par conséquent recommandé d'utiiser les valeurs de l'intervalle <code>[0-1]</code>.</p>
+<div class="note">
+  <p><strong>Note :</strong> SVG2 introduit les valeurs en pourcentage pour <code>fill-opacity</code>. Cependant,  ce n'est pas souvent pris en charge pour le moment (<em>Voir {{anch('Compatibilité des navigateurs')}} ci-dessous</em>). Il est par conséquent recommandé d'utiliser les valeurs de l'intervalle <code>[0-1]</code>.</p>
+</div>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 

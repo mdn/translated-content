@@ -1,10 +1,6 @@
 ---
 title: ':checked'
 slug: Web/CSS/:checked
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:checked
 ---
 {{CSSRef}}
@@ -85,7 +81,7 @@ option:checked {
 
 #### Résultat
 
-{{EmbedLiveSample("exemple_simple")}}
+{{EmbedLiveSample("Exemple_simple")}}
 
 ## Spécifications
 

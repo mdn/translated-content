@@ -11,12 +11,12 @@ translation_of: Web/API/Document/createAttribute
 <p>Строка, заданная в параметре, преобразуется в нижний регистр.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"><em>attribute</em> = document.createAttribute(name)
 </pre>
 
-<h3 id="Parameters" name="Parameters">Parameters</h3>
+<h3 id="Parameters">Parameters</h3>
 
 <ul>
  <li><code>name</code> строка, содержащая имя атрибута.</li>
@@ -32,7 +32,7 @@ translation_of: Web/API/Document/createAttribute
  <li><code>INVALID_CHARACTER_ERR</code> если параметр содержит недопустимые символы для атрибута XML.</li>
 </ul>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush:js">var node = document.getElementById("div1");
 var a = document.createAttribute("my_attrib");
@@ -41,7 +41,7 @@ node.setAttributeNode(a);
 console.log(node.getAttribute("my_attrib")); // "newVal"
 </pre>
 
-<h2 id="Specification" name="Specification">Спецификации</h2>
+<h2 id="Specification">Спецификации</h2>
 
 <table class="spectable standard-table">
  <tbody>
@@ -77,7 +77,7 @@ console.log(node.getAttribute("my_attrib")); // "newVal"
 
 
 
-<p>{{Compat("api.Document.createAttribute")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

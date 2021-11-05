@@ -1,36 +1,11 @@
 ---
 title: Comprendre le format texte de WebAssembly
 slug: WebAssembly/Understanding_the_text_format
-tags:
-  - JavaScript
-  - Texte
-  - WebAssembly
-  - wasm
 translation_of: WebAssembly/Understanding_the_text_format
 ---
-<h2 id="drame">drame</h2>
 
-<p>HTML</p>
-
-<dl>
-</dl>
-
-<pre class="brush: html notranslate">Contenu HTML de l'exemple</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css notranslate">Contenu CSS de l'exemple
-</pre>
-
-<h3 id="Résultat">Résultat</h3>
-
-<dl>
- <dt>{{EmbedLiveSample}}</dt>
- <dd>Afin de permettre aux humains de lire et d'éditer du code WebAssembly, il y a une représentation textuelle du format binaire wasm. C'est une forme intermédiaire conçue pour être affic<span class="hidden"> </span><span class="hidden"> </span>hée dans les éditeurs de texte, les outils de développeurs intégrés aux navigateurs web, etc. Cet article montre comment ce format fonctionne sur le plan syntaxique, mais aussi comment il se combine avec le code binaire sous-jacent — ainsi que l'objet JavaScript englobant qui représente wasm.</dd>
- <dt><strong>Note</strong>: Ceci est potentiellement exagéré si vous êtes un développeur web cherchant uniquement à charger un module wasm dans une page pour l'utiliser dans votre code (voir <a href="https://developer.mozilla.org/fr/docs/WebAssembly/Using_the_JavaScript_API">Utilisez l'API JavaScript de WebAssembly</a>). Mais il est plus utile si, en revanche, vous voulez écrite des modules wasm pour optimiser les performances de votre librairies Javascript, ou construire votre propre compilateur WebAssembl</dt>
-</dl>
-
-<div class="note"></div>
+<p>Afin de permettre aux humains de lire et d'éditer du code WebAssembly, il y a une représentation textuelle du format binaire wasm. C'est une forme intermédiaire conçue pour être affic<span class="hidden"> </span><span class="hidden"> </span>hée dans les éditeurs de texte, les outils de développeurs intégrés aux navigateurs web, etc. Cet article montre comment ce format fonctionne sur le plan syntaxique, mais aussi comment il se combine avec le code binaire sous-jacent — ainsi que l'objet JavaScript englobant qui représente wasm.</p>
+ <div><p><strong>Note :</strong> Ceci est potentiellement exagéré si vous êtes un développeur web cherchant uniquement à charger un module wasm dans une page pour l'utiliser dans votre code (voir <a href="https://developer.mozilla.org/fr/docs/WebAssembly/Using_the_JavaScript_API">Utilisez l'API JavaScript de WebAssembly</a>). Mais il est plus utile si, en revanche, vous voulez écrite des modules wasm pour optimiser les performances de votre librairies Javascript, ou construire votre propre compilateur WebAssembly</p></div>
 
 <h2 id="S-expressions">S-expressions</h2>
 
@@ -38,7 +13,7 @@ translation_of: WebAssembly/Understanding_the_text_format
 
 <p>Tout d'abord, regardons à quoi ressemble une S-expression. Chaque noeud de l'arbre se situe à l'intérieur d'un couple de parenthèses — <code>( ... )</code>. Le premier label dans ces parenthèses indique le type de noeud. Ensuite, il y a une liste de noeufs ou d'attributs séparés par des espaces. Donc si l'on considère la S-expression WebAssembly suivante :</p>
 
-<pre class="notranslate">(module (memory 1) (func))</pre>
+<pre>(module (memory 1) (func))</pre>
 
 <p>Celle-ci représente un arbre avec un noeud racine "module" ainsi que deux noeuds enfants, un "memory" avec l'attribut 1, ainsi qu'un noeud "func". Nous allons bientôt voir ce que ces noeuds signifient.</p>
 
@@ -46,13 +21,13 @@ translation_of: WebAssembly/Understanding_the_text_format
 
 <p>Commençons avec la version la plus simple et la plus courte possible d'un module wasm.</p>
 
-<pre class="notranslate">(module) (commençons avec la version la plus simple et la plus courte possible d'un module wasm.) </pre>
+<pre>(module) (commençons avec la version la plus simple et la plus courte possible d'un module wasm.) </pre>
 
 <p>Celui-ci est totalement vide, mais reste un module valide.</p>
 
 <p>Si l'on convertit notre module en binaire (voir <a href="/en-US/docs/WebAssembly/Text_format_to_wasm">Converting WebAssembly text format to wasm</a>), nous obtenons l'en-tête de module de 8 octets, décrite dans le <a href="https://webassembly.org/docs/binary-encoding/#high-level-structure">format binaire</a>.</p>
 
-<pre class="notranslate">0000000: 0061 736d              ; WASM_BINARY_MAGIC
+<pre>0000000: 0061 736d              ; WASM_BINARY_MAGIC
 0000004: 0100 0000              ; WASM_BINARY_VERSION</pre>
 
 <h3 id="Ajouter_des_fonctionnalités_à_votre_module">Ajouter des fonctionnalités à votre module</h3>
@@ -61,7 +36,7 @@ translation_of: WebAssembly/Understanding_the_text_format
 
 <p>Tout code dans un module WebAssembly est regroupé en fonctions, qui ont la structure suivante (en pseudo-code):</p>
 
-<pre class="notranslate">( func &lt;signature&gt; &lt;locals&gt; &lt;body&gt; )</pre>
+<pre>( func &lt;signature&gt; &lt;locals&gt; &lt;body&gt; )</pre>
 
 <ul>
  <li>La <strong>signature </strong>déclare les arguments de la fonction ainsi que ses valeurs de retour.</li>
@@ -82,344 +57,7 @@ translation_of: WebAssembly/Understanding_the_text_format
 
 
 
-<div class="blockIndicator warning">
-<p>Chaque argument possède un type déclaré explicitement. Quatre types sont actuellement</p>
-
-<table class="standard-table">
- <caption>préparation</caption>
- <thead>
-  <tr>
-   <th scope="col">
-    <ul>
-     <li>
-      <div class="blockIndicator note">
-      <div class="blockIndicator warning">
-      <p>Mathematique</p>
-      </div>
-      </div>
-     </li>
-    </ul>
-   </th>
-   <th scope="col">
-    <ul>
-     <li>
-      <div class="blockIndicator note">
-      <div class="blockIndicator warning">
-      <p>histoire-goegraphie</p>
-      </div>
-      </div>
-     </li>
-    </ul>
-   </th>
-   <th scope="col">
-    <ul>
-     <li>
-      <div class="blockIndicator note">
-      <div class="blockIndicator warning">
-      <p>sciense applique </p>
-      </div>
-      </div>
-     </li>
-    </ul>
-   </th>
-   <th scope="col">
-    <ul>
-     <li>
-      <div class="blockIndicator warning">
-      <p>sciense naturel </p>
-      </div>
-     </li>
-    </ul>
-   </th>
-   <th scope="col">
-    <h5 id="sect1"></h5>
-   </th>
-   <th scope="col"></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
-<blockquote>
-<h5 class="brush: bash" id="disponible_dans_wasm">disponible dans wasm:</h5>
-</blockquote>
-
-<dl>
-</dl>
-</div>
+<p>Chaque argument possède un type déclaré explicitement. Quatre types sont actuellement disponibles dans wasm</p>
 
 <ul>
  <li><code>i32</code>: Entier 32-bit</li>
@@ -430,7 +68,7 @@ translation_of: WebAssembly/Understanding_the_text_format
 
 <p>Un argument seul s'écrit <code>(param i32)</code> et le type de retour s'écrit <code>(result i32)</code>, donc une fonction binaire prenant deux entiers 32-bit and et retournant un nombre à virgule flottante 64-bit s'écrirait ainsi :</p>
 
-<pre class="notranslate">(func (param i32) (param i32) (result f64) ... )</pre>
+<pre>(func (param i32) (param i32) (result f64) ... )</pre>
 
 <p>Après la signature, les variables locales sont listées avec leur type, par exemple <code>(local i32)</code>. Les arguments sont juste des variables locales initialisées avec avec la valeur de l'argument correspondant, passé par la fonction appelante.</p>
 
@@ -440,7 +78,7 @@ translation_of: WebAssembly/Understanding_the_text_format
 
 <p>Les commandes <code>get_local</code>/<code>set_local</code> désignent l'élément à récupérer/définir par son index numérique : les arguments sont référencés en premier, par ordre de déclaration, suivis par les variables locales, par ordre de déclaration également. Donc, en considérant la fonction suivante :</p>
 
-<pre class="notranslate">(func (param i32) (param f32) (local f64)
+<pre>(func (param i32) (param f32) (local f64)
   get_local 0
   get_local 1
   get_local 2)</pre>
@@ -451,7 +89,7 @@ translation_of: WebAssembly/Understanding_the_text_format
 
 <p>Ainsi, vous pourriez ré-écrire la signature précédente ainsi :</p>
 
-<pre class="notranslate">(func (param $p1 i32) (param $p2 f32) (local $loc i32) …)</pre>
+<pre>(func (param $p1 i32) (param $p2 f32) (local $loc i32) …)</pre>
 
 <p>Et ensuite, vous pourriez écrire  <code>get_local $p1</code> en lieu et place de <code>get_local 0</code>, etc.  (Lorsque ce texte sera converti en binaire, le code de sortie contiendra uniquement l'entier)</p>
 
@@ -463,7 +101,7 @@ translation_of: WebAssembly/Understanding_the_text_format
 
 <p>Lorsqu'une fonction est appelée, elle débute avec une pile vide qui est peu à peu remplie et vidée durant l'exécution du corps de la fonction. Par exemple, après l'exécution de la fonction suivante :</p>
 
-<pre class="notranslate">(func (param $p i32)
+<pre>(func (param $p i32)
   get_local $p
   get_local $p
   i32.add)</pre>
@@ -476,7 +114,7 @@ translation_of: WebAssembly/Understanding_the_text_format
 
 <p>Comme mentionné plus haut, le corps de la fonction est simplement une liste d'instructions qui s'enchaînent lorsque la fonction est appelée. En reprenant tout ce que nous avons déjà appris, nous pouvons enfin définir un module contenant notre simple fonction :</p>
 
-<pre class="notranslate">(module
+<pre>(module
   (func (param $lhs i32) (param $rhs i32) (result i32)
     get_local $lhs
     get_local $rhs
@@ -492,17 +130,17 @@ translation_of: WebAssembly/Understanding_the_text_format
 
 <p>A l'image des variables locales, les fonctions sont identifiées par un index, mais par commodité, elle peuvent être nommées. Commençons par cela en premier : nous allons ajouter un nom précédé d'un symbole dollar, juste après le mot-clé <code>func</code>:</p>
 
-<pre class="notranslate">(func $add … )</pre>
+<pre>(func $add … )</pre>
 
 <p>Maintenant, nous allons ajouter la déclaration d'export, qui prend cette forme :</p>
 
-<pre class="notranslate">(export "add" (func $add))</pre>
+<pre>(export "add" (func $add))</pre>
 
 <p>Ici, <code>add</code> est le nom par lequel la fonction sera identifiée dans JavaScript, tandis que <code>$add</code> correspond à la fonction WebAssembly dans le module qui sera exportée.</p>
 
 <p>Notre module final ressemble à ceci (pour l'instant) :</p>
 
-<pre class="notranslate">(module
+<pre>(module
   (func $add (param $lhs i32) (param $rhs i32) (result i32)
     get_local $lhs
     get_local $rhs
@@ -514,7 +152,7 @@ translation_of: WebAssembly/Understanding_the_text_format
 
 <p>Ensuite, nous allons charger notre binaire dans un tableau typé appelé <code>addCode</code> (comme décrit dans <a href="/en-US/docs/WebAssembly/Fetching_WebAssembly_bytecode">Fetching WebAssembly Bytecode</a>), le compiler et l'instantier, puis exécuter notre fonction <code>add</code> dans JavaScript (nous pouvons désormais obtenir <code>add()</code> dans la propriété <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports">exports</a></code> de l'instance):</p>
 
-<pre class="brush: js notranslate">WebAssembly.instantiateStreaming(fetch('add.wasm'))
+<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('add.wasm'))
 .then(obj =&gt; {
    console.log(obj.instance.exports.add(1, 2));  // "3"
 });</pre>
@@ -531,7 +169,7 @@ translation_of: WebAssembly/Understanding_the_text_format
 
 <p>L'instruction <code>call</code> appelle une fonction à partir de son index ou de son nom. Par exemple, le module suivant contient deux fonctions — l'une d'entre elle retourne la valeur 42, tandis que l'autre retourne le résultat de l'appel de la première plus un:</p>
 
-<pre class="notranslate">(module
+<pre>(module
   (func $getAnswer (result i32)
     i32.const 42)
   (func (export "getAnswerPlus1") (result i32)
@@ -547,11 +185,11 @@ translation_of: WebAssembly/Understanding_the_text_format
 
 <p>Ceci revient à inclure une déclaration de fonction séparée en dehors de la fonction, autre part dans le module, de la même façon que ce que nous avons déjà fait précédemment :</p>
 
-<pre class="notranslate">(export "getAnswerPlus1" (func $functionName))</pre>
+<pre>(export "getAnswerPlus1" (func $functionName))</pre>
 
 <p>Voici le code JavaScript pour appeler notre module ci-dessus :</p>
 
-<pre class="brush: js notranslate">WebAssembly.instantiateStreaming(fetch('call.wasm'))
+<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('call.wasm'))
 .then(obj =&gt; {
    console.log(obj.instance.exports.getAnswerPlus1());  // "43"
 });</pre>
@@ -564,7 +202,7 @@ translation_of: WebAssembly/Understanding_the_text_format
 
 <p>Nous avons déjà vu du JavaScript appeler des fonctions WebAssembly, mais que dites-vous d'appeler des fonctions JavaScript depuis WebAssembly ? En fait, WebAssembly n'a pas nativement connaissance de JavaScript, mais il possède une méthode générique d'import de fonctions qui peut accepter des fonctions wasm ou JavaScript. Voici un exemple :</p>
 
-<pre class="notranslate">(module
+<pre>(module
   (import "console" "log" (func $log (param i32)))
   (func (export "logIt")
     i32.const 13
@@ -580,7 +218,7 @@ translation_of: WebAssembly/Understanding_the_text_format
 
 <p>This would look like the following:</p>
 
-<pre class="brush: js notranslate">var importObject = {
+<pre class="brush: js">var importObject = {
   console: {
     log: function(arg) {
       console.log(arg);
@@ -611,11 +249,11 @@ WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
 
 <p>While there are many different ways to encode a string’s length in the string itself (for example, C strings); for simplicity here we just pass both offset and length as parameters:</p>
 
-<pre class="notranslate">(import "console" "log" (func $log (param i32) (param i32)))</pre>
+<pre>(import "console" "log" (func $log (param i32) (param i32)))</pre>
 
 <p>On the JavaScript side, we can use the <a href="/en-US/docs/Web/API/TextDecoder">TextDecoder API</a> to easily decode our bytes into a JavaScript string.  (We specify <code>utf8</code> here, but many other encodings are supported.)</p>
 
-<pre class="brush: js notranslate">consoleLogString(offset, length) {
+<pre class="brush: js">consoleLogString(offset, length) {
   var bytes = new Uint8Array(memory.buffer, offset, length);
   var string = new TextDecoder('utf8').decode(bytes);
   console.log(string);
@@ -625,7 +263,7 @@ WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
 
 <p>For simplicity, let's create it in JavaScript then import it into WebAssembly.  Our <code>import</code> statement is written as follows:</p>
 
-<pre class="notranslate">(import "js" "mem" (memory 1))</pre>
+<pre>(import "js" "mem" (memory 1))</pre>
 
 <p>The <code>1</code> indicates that the imported memory must have at least 1 page of memory (WebAssembly defines a page to be 64KB.)</p>
 
@@ -633,7 +271,7 @@ WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
 
 <p>Our final wasm module looks like this:</p>
 
-<pre class="notranslate">(module
+<pre>(module
   (import "console" "log" (func $log (param i32 i32)))
   (import "js" "mem" (memory 1))
   (data (i32.const 0) "Hi")
@@ -648,7 +286,7 @@ WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
 
 <p>Now from JavaScript we can create a Memory with 1 page and pass it in. This results in "Hi" being printed to the console:</p>
 
-<pre class="brush: js notranslate">var memory = new WebAssembly.Memory({initial:1});
+<pre class="brush: js">var memory = new WebAssembly.Memory({initial:1});
 
 var importObj = { console: { log: consoleLogString }, js: { mem: memory } };
 
@@ -683,7 +321,7 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
 
 <p>So how do we place wasm functions in our table? Just like <code>data</code> sections can be used to initialize regions of linear memory with bytes, <code>elem</code> sections can be used to initialize regions of tables with functions:</p>
 
-<pre class="notranslate">(module
+<pre>(module
   (table 2 anyfunc)
   (elem (i32.const 0) $f1 $f2)
   (func $f1 (result i32)
@@ -706,7 +344,7 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
 
 <p>In JavaScript, the equivalent calls to create such a table instance would look something like this:</p>
 
-<pre class="brush: js notranslate">function() {
+<pre class="brush: js">function() {
   // table section
   var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
 
@@ -723,7 +361,7 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
 
 <p>Moving on, now we’ve defined the table we need to use it somehow. Let's use this section of code to do so:</p>
 
-<pre class="notranslate">(type $return_i32 (func (result i32))) ;; if this was f32, type checking would fail
+<pre>(type $return_i32 (func (result i32))) ;; if this was f32, type checking would fail
 (func (export "callByIndex") (param $i i32) (result i32)
   get_local $i
   call_indirect (type $return_i32))</pre>
@@ -737,7 +375,7 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
 
 <p>You could also declare the <code>call_indirect</code> parameter explicitly during the command call instead of before it, like this:</p>
 
-<pre class="notranslate">(call_indirect (type $return_i32) (get_local $i))</pre>
+<pre>(call_indirect (type $return_i32) (get_local $i))</pre>
 
 <p>In a higher level, more expressive language like JavaScript, you could imagine doing the same thing with an array (or probably more likely, object) containing functions. The pseudo code would look something like <code>tbl[i]()</code>.</p>
 
@@ -745,11 +383,11 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
 
 <p>So what links the <code>call_indirect</code> to the table we are calling? The answer is that there is only one table allowed right now per module instance, and that is what <code>call_indirect</code> is implicitly calling. In the future, when multiple tables are allowed, we would also need to specify a table identifier of some kind, along the lines of</p>
 
-<pre class="notranslate">call_indirect $my_spicy_table (type $i32_to_void)</pre>
+<pre>call_indirect $my_spicy_table (type $i32_to_void)</pre>
 
 <p>The full module all together looks like this, and can be found in our <a href="https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.wat">wasm-table.wat</a> example file:</p>
 
-<pre class="notranslate">(module
+<pre>(module
   (table 2 anyfunc)
   (func $f1 (result i32)
     i32.const 42)
@@ -764,7 +402,7 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
 
 <p>We load it into a webpage using the following JavaScript:</p>
 
-<pre class="brush: js notranslate">WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
+<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
 .then(obj =&gt; {
   console.log(obj.instance.exports.callByIndex(0)); // returns 42
   console.log(obj.instance.exports.callByIndex(1)); // returns 13
@@ -791,7 +429,7 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
 
 <p><code>shared0.wat</code>:</p>
 
-<pre class="notranslate">(module
+<pre>(module
   (import "js" "memory" (memory 1))
   (import "js" "table" (table 1 anyfunc))
   (elem (i32.const 0) $shared0func)
@@ -802,7 +440,7 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
 
 <p><code>shared1.wat</code>:</p>
 
-<pre class="notranslate">(module
+<pre>(module
   (import "js" "memory" (memory 1))
   (import "js" "table" (table 1 anyfunc))
   (type $void_to_i32 (func (result i32)))
@@ -827,13 +465,13 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
 <div class="note">
 <p><strong>Note</strong>: The above expressions again pop values from the stack implicitly, but you could declare these explicitly inside the command calls instead, for example:</p>
 
-<pre class="notranslate">(i32.store (i32.const 0) (i32.const 42))
+<pre>(i32.store (i32.const 0) (i32.const 42))
 (call_indirect (type $void_to_i32) (i32.const 0))</pre>
 </div>
 
 <p>After converting to assembly, we then use <code>shared0.wasm</code> and <code>shared1.wasm</code> in JavaScript via the following code:</p>
 
-<pre class="brush: js notranslate">var importObj = {
+<pre class="brush: js">var importObj = {
   js: {
     memory : new WebAssembly.Memory({ initial: 1 }),
     table : new WebAssembly.Table({ initial: 1, element: "anyfunc" })

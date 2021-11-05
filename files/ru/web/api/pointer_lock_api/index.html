@@ -9,7 +9,7 @@ translation_of: Web/API/Pointer_Lock_API
 
 <p>Блокировка указателя позволяет вам получить доступ к данным мыши, даже если курсор ушёл за границы экрана или браузера. Например, ваши пользователи могут продолжать вращать или управлять 3D моделью движением мыши бесконечно. Без блокировки вращение или управление останавливается, как только курсор достигает края браузера или экрана. Геймеры теперь могут нажимать кнопки и водить курсором взад и вперёд, не боясь покинуть игровое поле и случайно переключится на другое приложение.</p>
 
-<h2 id="basics" name="basics">Основные концепции</h2>
+<h2 id="basics">Основные концепции</h2>
 
 <p>Pointer lock is related to <a href="/en/DOM/element.setCapture" title="element.setCapture">mouse capture</a>. Mouse capture provides continued delivery of events to a target element while a mouse is being dragged, but it stops when the mouse button is released. Pointer lock is different from mouse capture in the following ways:</p>
 
@@ -20,7 +20,7 @@ translation_of: Web/API/Pointer_Lock_API
  <li>It hides the cursor.</li>
 </ul>
 
-<h2 id="method_overview" name="method_overview">Обзор методов/свойств</h2>
+<h2 id="method_overview">Обзор методов/свойств</h2>
 
 <p>Этот раздел содержит краткое описание каждого свойства и метода, связанного со спецификацией блокировки указателя.</p>
 
@@ -61,7 +61,7 @@ canvas.requestPointerLock()
 document.exitPointerLock();
 </pre>
 
-<h2 id="mouselocklostevent" name="mouselocklostevent">pointerlockchange event</h2>
+<h2 id="mouselocklostevent">pointerlockchange event</h2>
 
 <p>When the Pointer lock state changes—for example, when calling {{domxref("Element.requestPointerLock","requestPointerLock")}}, {{domxref("Document.exitPointerLock","exitPointerLock")}}, the user pressing the ESC key, etc.—the {{event("pointerlockchange")}} event is dispatched to the <code>document</code>. This is a simple event and contains no extra data.</p>
 
@@ -85,7 +85,7 @@ function lockChangeAlert() {
   }
 }</pre>
 
-<h2 id="mouselocklostevent" name="mouselocklostevent">pointerlockerror event</h2>
+<h2 id="mouselocklostevent">pointerlockerror event</h2>
 
 <p>When there is an error caused by calling {{domxref("Element.requestPointerLock","requestPointerLock")}} or {{domxref("Document.exitPointerLock","exitPointerLock")}}, the {{event("pointerlockerror")}} event is dispatched to the <code>document</code>. This is a simple event and contains no extra data.</p>
 
@@ -99,7 +99,7 @@ function lockError(e) {
 
 <div class="note"><strong>Note</strong>: The above events are currently prefixed with <code>moz</code> in Firefox and <code>webkit</code> in Chrome. </div>
 
-<h2 id="extensions" name="extensions">Extensions to mouse events</h2>
+<h2 id="extensions">Extensions to mouse events</h2>
 
 <p>The Pointer lock API extends the normal {{domxref("MouseEvent")}} interface with movement attributes.</p>
 
@@ -112,17 +112,17 @@ function lockError(e) {
 
 <p>Two new parameters to mouse events—{{domxref("MouseEvent.movementX","movementX")}} and {{domxref("MouseEvent.movementY","movementY")}}—provide the change in mouse positions. The values of the parameters are the same as the difference between the values of {{domxref("MouseEvent")}} properties, {{domxref("MouseEvent.screenX","screenX")}} and {{domxref("MouseEvent.screenY","screenY")}}, which are stored in two subsequent {{event("mousemove")}} events, <code>eNow</code> and <code>ePrevious</code>. In other words, the Pointer lock parameter <code>movementX = eNow.screenX - ePrevious.screenX</code>.</p>
 
-<h3 id="locked_state" name="locked_state">Locked state</h3>
+<h3 id="locked_state">Locked state</h3>
 
 <p>When Pointer lock is enabled, the standard {{domxref("MouseEvent")}} properties {{domxref("MouseEvent.clientX","clientX")}}, {{domxref("MouseEvent.clientY","clientY")}}, {{domxref("MouseEvent.screenX","screenX")}}, and {{domxref("MouseEvent.screenY","screenY")}} are held constant, as if the mouse is not moving. The {{domxref("MouseEvent.movementX","movementX")}} and {{domxref("MouseEvent.movementY","movementY")}} properties continue to provide the mouse's change in position. There is no limit to {{domxref("MouseEvent.movementX","movementX")}} and {{domxref("MouseEvent.movementY","movementY")}} values if the mouse is continuously moving in a single direction. The concept of the mouse cursor does not exist and the cursor cannot move off the window or be clamped by a screen edge.</p>
 
-<h3 id="unlocked_state" name="unlocked_state">Unlocked state</h3>
+<h3 id="unlocked_state">Unlocked state</h3>
 
 <p>The parameters {{domxref("MouseEvent.movementX","movementX")}} and {{domxref("MouseEvent.movementY","movementY")}} are valid regardless of the mouse lock state, and are available even when unlocked for convenience.</p>
 
 <p>When the mouse is unlocked, the system cursor can exit and re-enter the browser window. If that happens, {{domxref("MouseEvent.movementX","movementX")}} and {{domxref("MouseEvent.movementY","movementY")}} could be set to zero.</p>
 
-<h2 id="example" name="example">Simple example walkthrough</h2>
+<h2 id="example">Simple example walkthrough</h2>
 
 <p>We've written a <a href="http://mdn.github.io/pointer-lock-demo/">simple pointer lock demo</a> to show you how to use it to set up a simple control system (<a href="https://github.com/mdn/pointer-lock-demo">see source code</a>). The demo looks like this:</p>
 
@@ -262,11 +262,11 @@ document.addEventListener('webkitpointerlockchange', lockChangeAlert, false);</p
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat("api.Element.requestPointerLock")}}</p>
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{domxref("MouseEvent")}}</li>

@@ -11,24 +11,24 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumera
 ---
 <div>{{JSRef("Global_Objects", "Object")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Метод <code><strong>propertyIsEnumerable()</strong></code> возвращает логическое значение, указывающее, является ли указанное свойство перечисляемым.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code><var>obj</var>.propertyIsEnumerable(<var>prop</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 <dl>
  <dt><code>prop</code></dt>
  <dd>Имя проверяемого свойства.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Каждый объект имеет метод <code>propertyIsEnumerable</code>. Этот метод может определять, является ли указанное свойство в объекте перечисляемым в цикле {{jsxref("Statements/for...in", "for...in")}}, за исключением свойств, унаследованных из цепочки прототипов. Если объект не имеет указанного свойства, метод вернёт <code>false</code>.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_A_basic_use_of_propertyIsEnumerable" name="Example:_A_basic_use_of_propertyIsEnumerable">Пример: базовое использование <code>propertyIsEnumerable</code></h3>
+<h3 id="Example:_A_basic_use_of_propertyIsEnumerable">Пример: базовое использование <code>propertyIsEnumerable</code></h3>
 <p>Следующий пример показывает использование метода <code>propertyIsEnumerable</code> на объектах и массивах:</p>
 <pre class="brush: js">var o = {};
 var a = [];
@@ -39,7 +39,7 @@ o.propertyIsEnumerable('prop');   // вернёт true
 a.propertyIsEnumerable(0);        // вернёт true
 </pre>
 
-<h3 id="Example:_User-defined_versus_built-in_objects" name="Example:_User-defined_versus_built-in_objects">Пример: определённые пользователем и встроенные объекты</h3>
+<h3 id="Example:_User-defined_versus_built-in_objects">Пример: определённые пользователем и встроенные объекты</h3>
 <p>Следующий пример демонстрирует перечисляемость свойств, определённых пользователем и встроенных свойств:</p>
 <pre class="brush: js">var a = ['перечисляемое'];
 
@@ -50,7 +50,7 @@ Math.propertyIsEnumerable('random');   // вернёт false
 this.propertyIsEnumerable('Math');     // вернёт false
 </pre>
 
-<h3 id="Example:_Direct_versus_inherited_properties" name="Example:_Direct_versus_inherited_properties">Пример: собственные и унаследованные свойства</h3>
+<h3 id="Example:_Direct_versus_inherited_properties">Пример: собственные и унаследованные свойства</h3>
 <pre class="brush: js">var a = [];
 a.propertyIsEnumerable('constructor');         // вернёт false
 
@@ -86,7 +86,7 @@ o.propertyIsEnumerable('constructor'); // вернёт false
 o.propertyIsEnumerable('firstMethod'); // вернёт false
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -112,10 +112,10 @@ o.propertyIsEnumerable('firstMethod'); // вернёт false
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li><a href="/ru/docs/Enumerability_and_ownership_of_properties">Перечисляемость и собственность свойств</a></li>
  <li>{{jsxref("Statements/for...in", "for...in")}}</li>
