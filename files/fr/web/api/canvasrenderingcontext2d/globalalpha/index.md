@@ -1,12 +1,6 @@
 ---
 title: CanvasRenderingContext2D.globalAlpha
 slug: Web/API/CanvasRenderingContext2D/globalAlpha
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Propriété
-  - Reference
 translation_of: Web/API/CanvasRenderingContext2D/globalAlpha
 ---
 {{APIRef}}La propriété **CanvasRenderingContext2D.globalAlpha** de l'API Canvas 2D spécifie la valeur alpha qui sera appliquée aux formes et aux images avant qu'elles ne soient dessinées sur le canevas. La valeur est comprise entre 0,0 (entièrement transparente) et 1,0 (entièrement opaque).
@@ -95,7 +89,7 @@ zoneTexte.addEventListener('input', dessinerCanevas);
 window.addEventListener('load', dessinerCanevas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 700, 380) }}
+{{ EmbedLiveSample('Code_jouable', 700, 380) }}
 
 ### Un exemple de `globalAlpha`
 
@@ -130,7 +124,7 @@ for (i = 0; i < 7; i++){
 <canvas id="canevas" width="150" height="150"></canvas>
 ```
 
-{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}
+{{EmbedLiveSample("Un_exemple_de_globalAlpha", "180", "180", "canvas_globalalpha.png")}}
 
 ## Spécifications
 

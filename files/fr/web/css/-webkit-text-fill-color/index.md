@@ -1,11 +1,6 @@
 ---
 title: '-webkit-text-fill-color'
 slug: Web/CSS/-webkit-text-fill-color
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-webkit-text-fill-color
 ---
 {{CSSRef}}{{Non-standard_header}}
@@ -56,7 +51,7 @@ p {
 
 ### Résultat
 
-{{EmbedLiveSample("Example", "380px", "60px")}}
+{{EmbedLiveSample("Exemples", "380px", "60px")}}
 
 ## Spécifications
 

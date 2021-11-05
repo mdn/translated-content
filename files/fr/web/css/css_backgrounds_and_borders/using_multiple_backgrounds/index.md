@@ -1,22 +1,18 @@
 ---
 title: Utiliser plusieurs arrière-plans
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-tags:
-  - CSS
-  - Guide
-  - Reference
 translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Utiliser_plusieurs_arrière-plans
 ---
 {{CSSRef}}
 
-Avec [CSS3](/fr/docs/Web/CSS/CSS3), on peut appliquer plusieurs arrière-plans à des éléments. Ceux-ci seront empilés les uns sur les autres (le premier de la liste étant le plus « haut » dans la pile et le dernier étant le plus « bas ». Seul le dernier arrière-plan peut décrire une couleur.
+Avec [CSS](/fr/docs/Web/CSS), on peut appliquer plusieurs arrière-plans à des éléments. Ceux-ci seront empilés les uns sur les autres (le premier de la liste étant le plus « haut » dans la pile et le dernier étant le plus « bas ». Seul le dernier arrière-plan peut décrire une couleur.
 
 Pour cela, il suffit simplement d'utiliser une liste de valeur avec {{cssxref("background")}} :
 
 ```css
 .maClasse {
-  background: background1, background 2, ..., backgroundN;
+  background: background1, background2, ..., backgroundN;
 }
 ```
 
@@ -46,7 +42,7 @@ Dans cet exemple, on cumule trois arrière-plans : le logo de Firefox, un dégra
 
 ### Résultat
 
-{{EmbedLiveSample('Exemple','100%','400')}}
+{{EmbedLiveSample('Exemples','100%','400')}}
 
 Comme on peut le voir ici, le logo qui est le premier élément de la liste apparaît en dessus, il est suivi par le dégradé puis par les bulles. Chacune des propriétés ({{cssxref("background-repeat")}} et {{cssxref("background-position")}}) s'applique aux arrière-plans correspondant (la première valeur de la liste pour le premier arrière-plan, etc.).
 

@@ -1,12 +1,6 @@
 ---
 title: compositionstart
 slug: Web/API/Element/compositionstart_event
-tags:
-  - Element
-  - Event
-  - Input method
-  - Reference
-  - compositionstart
 translation_of: Web/API/Element/compositionstart_event
 original_slug: Web/Events/compositionstart
 ---
@@ -120,7 +114,7 @@ inputElement.addEventListener('compositionend', handleEvent);
 
 #### Résultat
 
-{{ EmbedLiveSample('Live_example', '100%', '180px') }}
+{{ EmbedLiveSample('Exemple_concret', '100%', '180px') }}
 
 ## Spécifications
 

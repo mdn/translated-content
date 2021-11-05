@@ -66,7 +66,7 @@ if (document.elementsFromPoint) {
 
 ### Résultat
 
-{{EmbedLiveSample('Example', '420', '120')}}
+{{EmbedLiveSample('Exemples', '420', '120')}}
 
 ## Spécifications
 

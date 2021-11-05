@@ -1,14 +1,6 @@
 ---
 title: minmax()
 slug: Web/CSS/minmax()
-tags:
-  - CSS
-  - CSS Function
-  - CSS Grid
-  - Function
-  - Layout
-  - Reference
-  - Web
 translation_of: Web/CSS/minmax()
 ---
 {{CSSRef}}
@@ -120,7 +112,7 @@ Si _max_ est inférieur à _min_, alors _max_ sera ignoré et `minmax(min,max)` 
 
 ### Résultat
 
-{{EmbedLiveSample("Examples", "100%", 200)}}
+{{EmbedLiveSample("Exemples", "100%", 200)}}
 
 ## Spécifications
 

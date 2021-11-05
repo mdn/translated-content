@@ -1,10 +1,6 @@
 ---
 title: word-break
 slug: Web/CSS/word-break
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/word-break
 ---
 {{CSSRef}}
@@ -90,7 +86,7 @@ La propriété `word-break` est définie avec un mot-clé parmi ceux décrits ci
 
 ### Résultat
 
-{{EmbedLiveSample('Exemple','100%',600)}}
+{{EmbedLiveSample('Exemples','100%',600)}}
 
 ## Spécifications
 
