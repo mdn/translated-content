@@ -69,14 +69,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 
 <p>Vous définissez les propriétés de la clé de l'<code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">action de page</a></code> dans le manifest.json:</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"page_action":</span> <span class="punctuation token">{</span>
-  <span class="key token">"browser_style":</span> <span class="keyword token">true</span><span class="punctuation token">,</span>
-  <span class="key token">"default_icon":</span> <span class="punctuation token">{</span>
-    <span class="key token">"19":</span> <span class="string token">"button/geo-19.png"</span><span class="punctuation token">,</span>
-    <span class="key token">"38":</span> <span class="string token">"button/geo-38.png"</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="key token">"default_title":</span> <span class="string token">"Whereami?"</span><span class="punctuation token">,</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json line-numbers  language-json"><code class="language-json">"page_action": {
+  "browser_style": true,
+  "default_icon": {
+    "19": "button/geo-19.png",
+    "38": "button/geo-38.png"
+  },
+  "default_title": "Whereami?",
+}</code></pre>
 
 <p>La seule clé obligatoire est <code>default_icon</code>.</p>
 
@@ -85,7 +85,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 <ul>
  <li><strong>Sans popup:</strong> Lorsque l'utilisateur clique sur le bouton, un événement est envoyé à l'extension, que l'extension écoute pour utiliser <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>pageAction.onClicked</code></a>:</li>
  <li>
-  <pre class="brush: js line-numbers  language-js"><code class="language-js">browser<span class="punctuation token">.</span>pageAction<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleClick<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+  <pre class="brush: js line-numbers  language-js"><code class="language-js">browser.pageAction.onClicked.addListener(handleClick);</code></pre>
  </li>
  <li><strong>Avec un popup:</strong> L'événement <code>click</code> n'est pas envoyé. Au lieu de cela, le popup apparaît lorsque l'utilisateur clique sur le bouton. L'utilisateur interagit alors avec le popup. Lorsque l'utilisateur clique à l'extérieur de la fenêtre contextuelle, celle-ci se ferme automatiquement. Voir l'article <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Popups">Popup </a>pour plus de détails sur la création et la gestion des popups.</li>
 </ul>

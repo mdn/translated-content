@@ -34,7 +34,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Working_with_files
 
 <p>L'API de téléchargement fournit également des fonctionnalités pour annuler, mettre en pause, reprendre, effacer et supprimer les téléchargements, rechercher les fichiers téléchargés dans le gestionnaire de téléchargement, afficher les fichiers téléchargés dans le gestionnaire de fichiers de l'ordinateur, et ouvrir un fichier dans une application associée.</p>
 
-<p><span id="result_box" lang="fr"><span>Pour utiliser cette API, vous devez avoir les </span></span><a href="/fr/docs/Web/API/Permissions#API_permissions">permissions API</a> "downloads" spécifiées dans votre fichier<a href="/fr/Add-ons/WebExtensions/manifest.json"> manifest.json</a>.</p>
+<p>Pour utiliser cette API, vous devez avoir les <a href="/fr/docs/Web/API/Permissions#API_permissions">permissions API</a> "downloads" spécifiées dans votre fichier<a href="/fr/Add-ons/WebExtensions/manifest.json"> manifest.json</a>.</p>
 
 <p>Exemple : <a href="https://github.com/mdn/webextensions-examples/tree/master/latest-download">Latest download</a><br>
  API référence : <a href="/fr/Add-ons/WebExtensions/API/downloads">downloads API</a></p>
@@ -51,9 +51,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/Working_with_files
 <p>Si vous souhaitez accéder ou traiter tous les fichiers dans un dossier sélectionné, vous pouvez le faire en utilisant <code>&lt;input type="file" webkitdirectory="true"/&gt;</code>pour sélectionner le dossier et récupérer tous les fichiers qu'il contient.</p>
 </div>
 
-<h2 id="Ouverture_de_fichiers_dans_une_extension_avec_glisser-déposer"><span id="result_box" lang="fr"><span>Ouverture de fichiers dans une extension avec glisser-déposer</span></span></h2>
+<h2 id="Ouverture_de_fichiers_dans_une_extension_avec_glisser-déposer">Ouverture de fichiers dans une extension avec glisser-déposer</h2>
 
-<p>L'API Web Drag and Drop offre une alternative à l'utilisation d'un sélecteur de fichiers. Pour utiliser cette méthode, établissez une zone de stockage qui correspond à votre interface utilisateur, puis ajoutez les récepteurs pour les évènements<a href="/fr/docs/Web/Events/dragenter"> dragenter</a> <em>(entrer)</em>,<a href="/fr/docs/Web/Events/dragover"> dragover</a> <em>(glisser)</em>, et<a href="/fr/docs/Web/Events/drop"> drop</a>  <em>(déposer)</em>. <span id="result_box" lang="fr"><span>Dans le gestionnaire de l'événement "déposer", votre code peut accéder à tout fichier déposé par l'utilisateur à partir de l'objet offert par la propriété dataTransfer en utilisant</span></span> <a href="/fr/docs/Web/API/DataTransfer/files">DataTransfer.files</a>. Votre code peut alors accéder aux fichiers et les traiter en utilisant le <a href="/fr/docs/Web/API/File">DOM File API</a>.</p>
+<p>L'API Web Drag and Drop offre une alternative à l'utilisation d'un sélecteur de fichiers. Pour utiliser cette méthode, établissez une zone de stockage qui correspond à votre interface utilisateur, puis ajoutez les récepteurs pour les évènements<a href="/fr/docs/Web/Events/dragenter"> dragenter</a> <em>(entrer)</em>,<a href="/fr/docs/Web/Events/dragover"> dragover</a> <em>(glisser)</em>, et<a href="/fr/docs/Web/Events/drop"> drop</a>  <em>(déposer)</em>. Dans le gestionnaire de l'événement "déposer", votre code peut accéder à tout fichier déposé par l'utilisateur à partir de l'objet offert par la propriété dataTransfer en utilisant <a href="/fr/docs/Web/API/DataTransfer/files">DataTransfer.files</a>. Votre code peut alors accéder aux fichiers et les traiter en utilisant le <a href="/fr/docs/Web/API/File">DOM File API</a>.</p>
 
 <p>Exemple : <a href="https://github.com/mdn/webextensions-examples/tree/master/imagify">Imagify</a><br>
  Guides : <a href="/fr/docs/Using_files_from_web_applications">Using files from web applications</a> | <a href="/fr/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop">File drag and drop</a><br>
@@ -61,7 +61,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Working_with_files
 
 <h2 id="Enregistrement_de_fichiers_de_données_localement_avec_la_bibliothèque_de_stockage_de_fichiers_IndexedDB">Enregistrement de fichiers de données localement avec la bibliothèque de stockage de fichiers IndexedDB</h2>
 
-<p>Si votre extension doit enregistrer des fichiers localement, <a href="https://www.npmjs.com/package/idb-file-storage">idb-file-storage library</a> fournit une simple enveloppe de <a href="/fr/docs/Web/API/API_IndexedDB">IndexedDB API</a> <span id="result_box" lang="fr"><span>pour faciliter le stockage et la récupération des fichiers et des blobs</span></span> .</p>
+<p>Si votre extension doit enregistrer des fichiers localement, <a href="https://www.npmjs.com/package/idb-file-storage">idb-file-storage library</a> fournit une simple enveloppe de <a href="/fr/docs/Web/API/API_IndexedDB">IndexedDB API</a> pour faciliter le stockage et la récupération des fichiers et des blobs .</p>
 
 <p>Sur Firefox, cette bibliothèque fournit également un " Promise-based API wrapper"   pour l'API IDBMutableFile non standard. (L'API IDBMutableFile permet aux extensions de créer et de maintenir un fichier objet de base de données IndexedDB qui fournit une API pour lire et modifier le contenu du fichier sans charger tout le fichier dans la mémoire.)</p>
 
@@ -85,7 +85,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Working_with_files
 
 <p>Le fonctionnement de la bibliothèque peut être compris en regardant <a href="https://github.com/mdn/webextensions-examples/blob/master/store-collected-images/webextension-plain/utils/image-store.js">image-store.js</a> dans /utils/ :</p>
 
-<h3 id="Création_du_stockage_et_enregistrement_des_images"><span class="short_text" id="result_box" lang="fr"><span>Création du stockage et enregistrement des images</span></span></h3>
+<h3 id="Création_du_stockage_et_enregistrement_des_images">Création du stockage et enregistrement des images</h3>
 
 <pre class="brush: js">async function saveCollectedBlobs(collectionName, collectedBlobs) {
  const storedImages = await getFileStorage({name: "stored-images"});

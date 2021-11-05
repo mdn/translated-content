@@ -101,11 +101,11 @@ browser.webRequest.onAuthRequired.hasListener(listener)
  <dt><code>filter</code></dt>
  <dd>{{WebExtAPIRef('webRequest.RequestFilter')}}. Un filtre qui restreint les événements qui seront envoyés à cet auditeur.</dd>
  <dt><code>extraInfoSpec</code>{{optional_inline}}</dt>
- <dd><code>array</code> de <code>string</code>. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes <span class="im">:</span></dd>
+ <dd><code>array</code> de <code>string</code>. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :</dd>
  <dd>
  <ul>
   <li><code>"blocking"</code>: faire le blocage de la demande, afin que vous puissiez annuler la demande ou fournir des informations d'authentification.</li>
-  <li><span class="im"><code>"</code></span><code>responseHeaders</code><span class="im"><code>"</code>: inclure <code>responseHeaders</code> dans l'objet <code>details</code> transmis à l'auditeur</span></li>
+  <li><code>"</code><code>responseHeaders</code><code>"</code>: inclure <code>responseHeaders</code> dans l'objet <code>details</code> transmis à l'auditeur</li>
  </ul>
  </dd>
 </dl>

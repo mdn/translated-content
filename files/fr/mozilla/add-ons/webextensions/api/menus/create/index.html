@@ -67,16 +67,16 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/create
   <dd>
   <p><code>object</code>. Une ou plusieurs icônes personnalisées à afficher en regard de l'élément. Les icônes personnalisées ne peuvent être définies que pour les éléments apparaissant dans les sous-menus. Cette propriété est un objet avec une propriété pour chaque icône fournie: le nom de la propriété est la taille de l'icône en pixels et sa valeur est un chemin vers l'icône à partir du répertoire racine de l'extension. Le navigateur va essayer de choisir une icône de 16x16 pixels pour un affichage normal ou une icône de 32x32 pixels pour un affichage haute densité. Donc, pour éviter toute mise à l'échelle, vous pouvez spécifier des icônes comme ceci :</p>
 
-  <pre class="brush: json no-line-numbers  language-json"><code class="language-json"><span class="key token">"icons":</span> <span class="punctuation token">{</span>
-      <span class="key token">"16":</span> <span class="string token">"path/to/geo-16.png"</span><span class="punctuation token">,</span>
-      <span class="key token">"32":</span> <span class="string token">"path/to/geo-32.png"</span>
-    <span class="punctuation token">}</span></code></pre>
+  <pre class="brush: json no-line-numbers  language-json"><code class="language-json">"icons": {
+      "16": "path/to/geo-16.png",
+      "32": "path/to/geo-32.png"
+    }</code></pre>
 
   <p>Vous pouvez également spécifier une seule icône SVG, qui sera mise à l'échelle de manière appropriée :</p>
 
-  <pre class="brush: json no-line-numbers  language-json"><code class="language-json"><span class="key token">"icons":</span> <span class="punctuation token">{</span>
-      <span class="key token">"16":</span> <span class="string token">"path/to/geo.svg"</span>
-    <span class="punctuation token">}</span></code></pre>
+  <pre class="brush: json no-line-numbers  language-json"><code class="language-json">"icons": {
+      "16": "path/to/geo.svg"
+    }</code></pre>
 
   <div class="blockIndicator note">
   <p><strong>Note</strong>: L'élément de menu de niveau supérieur utilise les <a href="/fr/Add-ons/WebExtensions/manifest.json/icons">icônes</a> spécifiées dans le manifest plutôt que ce qui est spécifié avec cette touche.</p>

@@ -66,14 +66,14 @@ browser.commands.onCommand.hasListener(listener)
 <div></div>
 
 <div>
-<pre class="brush: json line-numbers language-json"><code class="language-json"><span class="key token">"commands":</span> <span class="punctuation token">{</span>
-  <span class="key token">"toggle-feature":</span> <span class="punctuation token">{</span>
-    <span class="key token">"suggested_key":</span> <span class="punctuation token">{</span>
-      <span class="key token">"default":</span> <span class="string token">"Ctrl+Shift+Y"</span>
-    <span class="punctuation token">}</span><span class="punctuation token">,</span>
-    <span class="key token">"description":</span> <span class="string token">"Send a 'toggle-feature' event"</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json line-numbers language-json"><code class="language-json">"commands": {
+  "toggle-feature": {
+    "suggested_key": {
+      "default": "Ctrl+Shift+Y"
+    },
+    "description": "Send a 'toggle-feature' event"
+  }
+}</code></pre>
 </div>
 
 <div>Vous pouvez écouter cette commande particulière comme ceci :</div>
@@ -81,11 +81,11 @@ browser.commands.onCommand.hasListener(listener)
 <div></div>
 
 <div>
-<pre class="brush: js line-numbers language-js"><code class="language-js">browser<span class="punctuation token">.</span>commands<span class="punctuation token">.</span>onCommand<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>command<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>command <span class="operator token">==</span> <span class="string token">"toggle-feature"</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"toggling the feature!"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers language-js"><code class="language-js">browser.commands.onCommand.addListener(function(command) {
+  if (command == "toggle-feature") {
+    console.log("toggling the feature!");
+  }
+});</code></pre>
 </div>
 
 <p>{{WebExtExamples}}</p>

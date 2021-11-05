@@ -78,7 +78,7 @@ browser.browserAction.onClicked.addListener(function() {
   gettingCurrent.then(firstToLast, onError);
 });</pre>
 
-<p><span id="result_box" lang="fr"><span>Déplacer tous les onglets servis via HTTP ou HTTPS depuis * .mozilla.org jusqu'à la fin de leur fenêtre :</span></span></p>
+<p>Déplacer tous les onglets servis via HTTP ou HTTPS depuis * .mozilla.org jusqu'à la fin de leur fenêtre :</p>
 
 <pre class="brush: js">function onMoved(tab) {
   console.log(`Moved: ${tab}`);
@@ -99,7 +99,7 @@ browser.browserAction.onClicked.addListener(function() {
   gettingMozTabs.then(moveMoz, onError);
 });</pre>
 
-<p><span id="result_box" lang="fr"><span>Déplacer tous les onglets servis via HTTP ou HTTPS de * .mozilla.org vers la fenêtre qui héberge le premier onglet de ce type, en commençant à la position 0 :</span></span></p>
+<p>Déplacer tous les onglets servis via HTTP ou HTTPS de * .mozilla.org vers la fenêtre qui héberge le premier onglet de ce type, en commençant à la position 0 :</p>
 
 <pre class="brush: js">function onMoved(tab) {
   console.log(`Moved: ${tab}`);

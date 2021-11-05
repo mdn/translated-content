@@ -55,17 +55,17 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
 
 <p>Copiez une image distante :</p>
 
-<pre class="brush: js" id="ct-71"><span class="quote">// requires:
-// * the host permission for "<a href="https://cdn.mdn.mozilla.net/" rel="nofollow">https://cdn.mdn.mozilla.net/</a>*"
+<pre class="brush: js" id="ct-71">// requires:
+// * the host permission for "https://cdn.mdn.mozilla.net/*"
 // * the API permission "clipboardWrite"
 
-fetch('<a class="hoverZoomLink" href="https://cdn.mdn.mozilla.net/static/img/favicon144.png" rel="nofollow">https://cdn.mdn.mozilla.net/static/img/favicon144.png</a>')
+fetch('https://cdn.mdn.mozilla.net/static/img/favicon144.png')
 .then(response =&gt; response.arrayBuffer())
-.then(buffer =&gt; browser.clipboard.setImageData(buffer, 'png'));</span></pre>
+.then(buffer =&gt; browser.clipboard.setImageData(buffer, 'png'));</pre>
 
 <p>Copiez une image fournie avec l'extension :</p>
 
-<pre class="brush: js" id="ct-70">// requires <span class="quote">the API permission </span>"clipboardWrite"
+<pre class="brush: js" id="ct-70">// requires the API permission "clipboardWrite"
 
 fetch(browser.runtime.getURL('image.png'))
 .then(response =&gt; response.arrayBuffer())

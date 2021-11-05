@@ -23,7 +23,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 <p>Vous ne pouvez injecter du CSS que dans des pages dont l'URL peut être exprimée en utilisant un <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">motif de correspondance</a>,  ce qui signifie que son schéma doit être "http", "https", "file", "ftp". Cela signifie que vous ne pouvez pas injecter de CSS dans les pages intégrées du navigateur, telles que about:debugging, about:addons, ou la page qui s'ouvre lorsque vous ouvrez un nouvel onglet vide.</p>
 
 <div class="blockIndicator note">
-<p><span class="tlid-translation translation" lang="fr"><span title="">Firefox résout les URL dans les fichiers CSS injectés par rapport au fichier CSS lui-même, plutôt qu'à la page dans laquelle il est injecté.</span></span></p>
+<p>Firefox résout les URL dans les fichiers CSS injectés par rapport au fichier CSS lui-même, plutôt qu'à la page dans laquelle il est injecté.</p>
 </div>
 
 <p>Le CSS inséré peut être retiré à nouveau en appelant  {{WebExtAPIRef("tabs.removeCSS()")}}.</p>

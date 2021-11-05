@@ -15,28 +15,28 @@ translation_of: Mozilla/Add-ons/WebExtensions/API
 
 <p>Vous pouvez accéder aux APIs en utilisant l’espace de noms <code>browser</code> :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> afficher<span class="function token">Tabs</span><span class="punctuation token"> (</span>tabs<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>tabs<span class="punctuation token">)</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function afficherTabs (tabs) {
+  console.log(tabs)
+}
 
-browser<span class="punctuation token">.</span>tabs<span class="punctuation token">.</span><span class="function token">query</span><span class="punctuation token">(</span><span class="punctuation token">{</span>currentWindow<span class="punctuation token">:</span> <span class="keyword token">true</span><span class="punctuation token">}</span><span class="punctuation token">,</span> afficherTabs<span class="punctuation token">)</span></code></pre>
+browser.tabs.query({currentWindow: true}, afficherTabs)</code></pre>
 </div>
 
 <div>
 <p>De nombreuses APIs sont asynchrones et retournent une {{JSxRef("Promise")}}:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> afficher<span class="function token">Cookie </span><span class="punctuation token">(</span>c<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>c<span class="punctuation token">)</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function afficherCookie (c) {
+  console.log(c)
+}
 
-<span class="keyword token">function</span> afficherErreur <span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span>
-<span class="punctuation token">}</span>
+function afficherErreur (e) {
+  console.error(e)
+}
 
-<span class="keyword token">let</span> setCookie <span class="operator token">=</span> browser<span class="punctuation token">.</span>cookies<span class="punctuation token">.</span><span class="keyword token">set</span><span class="punctuation token">(</span>
-<span class="punctuation token">   {</span>url<span class="punctuation token">:</span> <span class="string token">"https://developer.mozilla.org/"</span><span class="punctuation token">}
-</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-setCookie<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>logCookie<span class="punctuation token">,</span> afficherErreur<span class="punctuation token">)</span></code></pre>
+let setCookie = browser.cookies.set(
+   {url: "https://developer.mozilla.org/"}
+);
+setCookie.then(logCookie, afficherErreur)</code></pre>
 </div>
 
 <div>

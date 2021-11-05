@@ -80,11 +80,11 @@ browser.webRequest.onBeforeSendHeaders.hasListener(listener)
  <dt><code>filter</code></dt>
  <dd>{{WebExtAPIRef('webRequest.RequestFilter')}}. Un ensemble de filtres qui restreint les événements qui seront envoyés à cet auditeur.</dd>
  <dt><code>extraInfoSpec</code>{{optional_inline}}</dt>
- <dd><code>array</code> de <code>string</code>. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes <span class="im">:</span></dd>
+ <dd><code>array</code> de <code>string</code>. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :</dd>
  <dd>
  <ul>
   <li><code>"blocking"</code>: rendre la requête synchrone, ce qui vous permet de modifier les en-têtes de requête</li>
-  <li><span class="im"><code>"requestHeaders"</code>: </span>inclure les en-têtes de requête dans l'objet<span class="im"> <code>details</code>  </span>transmis à l'auditeur</li>
+  <li><code>"requestHeaders"</code>: inclure les en-têtes de requête dans l'objet <code>details</code>  transmis à l'auditeur</li>
  </ul>
  </dd>
 </dl>

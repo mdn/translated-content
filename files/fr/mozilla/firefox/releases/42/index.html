@@ -48,7 +48,7 @@ translation_of: Mozilla/Firefox/Releases/42
 
 <ul>
  <li>L'objet {{jsxref("Reflect")}} a été implémenté ({{bug(987514)}}).</li>
- <li>La mise en <span class="tlid-translation translation" lang="fr"><span title="">œuvre de l'interruption</span></span> {{jsxref("Proxy")}} {{jsxref("Global_Objects/Proxy/handler/ownKeys", "handler.ownKeys()")}} a été mise à jour pour correspondre à la spécification finale ES2015 ({{bug(1049662)}}).</li>
+ <li>La mise en œuvre de l'interruption {{jsxref("Proxy")}} {{jsxref("Global_Objects/Proxy/handler/ownKeys", "handler.ownKeys()")}} a été mise à jour pour correspondre à la spécification finale ES2015 ({{bug(1049662)}}).</li>
  <li>Appel de {{jsxref("Map")}}, {{jsxref("Set")}}, ou {{jsxref("WeakMap")}} sans {{jsxref('Operators', 'new')}}, va maintenant lancer un {{jsxref("TypeError")}} ({{bug(1083752)}}).</li>
 </ul>
 
@@ -77,7 +77,7 @@ translation_of: Mozilla/Firefox/Releases/42
  <li>{{domxref('Request.context')}} a été supprimé ({{bug(1188062)}}).</li>
  <li>L'<a href="/en-US/docs/Web/API/Push_API">API Push</a> a été activée par défaut sur Firefox pour bureau ({{bug(1153499)}}), mais uniquement sur les canaux Nightly/Dev Edition/Beta. Elle est désactivée par défaut dans le canal Release jusqu'à ce que l'UX grand public et les fonctionnalit"s de débogage aient été correctement implémentées ({{bug(1207875)}}). Vous pouvez toujours l'activer en activant la préférence <code>dom.push.enabled</code> dans <a>about:config</a>.</li>
  <li>La méthode {{domxref("PushManager.hasPermission()")}} a été désapprouvée dans la spécification et remplacée par la méthode {{domxref("PushManager.permissionState()")}}. Firefox a mis à jour son implémentation pour refléter cela ({{bug("1183853")}}).</li>
- <li>Des ajouts liés au service worker de l'<a href="/en-US/docs/Web/API/Notifications_API">API Notifications</a> ont été mis en <span class="tlid-translation translation" lang="fr"><span title="">œuvre</span></span> ({{bug(1114554)}}), mais sont désactivés dans cette version.</li>
+ <li>Des ajouts liés au service worker de l'<a href="/en-US/docs/Web/API/Notifications_API">API Notifications</a> ont été mis en œuvre ({{bug(1114554)}}), mais sont désactivés dans cette version.</li>
 </ul>
 
 <h4 id="API_Web_Animations">API Web Animations</h4>
@@ -145,7 +145,7 @@ translation_of: Mozilla/Firefox/Releases/42
 <h2 id="HTTP">HTTP</h2>
 
 <ul>
- <li>Firefox 41 et les versions antérieures acceptaient à tord les champs de pseudo-en-tête non définis ou non valides dans les réponses HTTP/2 . Ceci est maintenant corrigé et le seul champ pseudo-en-tête accepté depuis Firefox 42 est le : <em>statut</em> selon la spécification. <span class="tlid-translation translation" lang="fr"><span title="">Les en-têtes de réponse contenant des champs arbitraires sont considérés comme mal formés.</span></span> ({{bug(1136727)}})</li>
+ <li>Firefox 41 et les versions antérieures acceptaient à tord les champs de pseudo-en-tête non définis ou non valides dans les réponses HTTP/2 . Ceci est maintenant corrigé et le seul champ pseudo-en-tête accepté depuis Firefox 42 est le : <em>statut</em> selon la spécification. Les en-têtes de réponse contenant des champs arbitraires sont considérés comme mal formés. ({{bug(1136727)}})</li>
 </ul>
 
 <h2 id="La_mise_en_réseau">La mise en réseau</h2>

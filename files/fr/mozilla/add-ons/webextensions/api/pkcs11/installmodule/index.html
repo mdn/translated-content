@@ -49,23 +49,23 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/installModule
 
 <p>Installe un module, puis dresse la liste de ses emplacements et liste les jetons qu'ils contiennent :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">onInstalled</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">return</span> browser<span class="punctuation token">.</span>pkcs11<span class="punctuation token">.</span><span class="function token">getModuleSlots</span><span class="punctuation token">(</span><span class="string token">"my_module"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function onInstalled() {
+  return browser.pkcs11.getModuleSlots("my_module");
+}
 
-<span class="keyword token">function</span> <span class="function token">onGotSlots</span><span class="punctuation token">(</span>slots<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">for</span> <span class="punctuation token">(</span>slot <span class="keyword token">of</span> slots<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`Slot: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>slot<span class="punctuation token">.</span>name<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span>slot<span class="punctuation token">.</span>token<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`Contains token: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>slot<span class="punctuation token">.</span>token<span class="punctuation token">.</span>name<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-      console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Is empty'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span>
+function onGotSlots(slots) {
+  for (slot of slots) {
+    console.log(`Slot: ${slot.name}`);
+    if (slot.token) {
+      console.log(`Contains token: ${slot.token.name}`);
+    } else {
+      console.log('Is empty');
+    }
+  }
+}
 
-browser<span class="punctuation token">.</span>pkcs11<span class="punctuation token">.</span><span class="function token">installModule</span><span class="punctuation token">(</span><span class="string token">"my_module"</span><span class="punctuation token">)</span>
-<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>onInstalled<span class="punctuation token">)</span>
-<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>onGotSlots<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+browser.pkcs11.installModule("my_module")
+.then(onInstalled)
+.then(onGotSlots);</code></pre>
 
 <p>{{WebExtExamples}}</p>

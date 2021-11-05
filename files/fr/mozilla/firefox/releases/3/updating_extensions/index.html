@@ -70,12 +70,12 @@ original_slug: Mise_à_jour_des_extensions_pour_Firefox_3
 
 <p>Trouvez simplement la ligne indiquant la version maximale compatible de Firefox (qui, pour Firefox 2, ressemblait probablement à ceci) :</p>
 
-<pre class="eval"> <span class="nowiki">&lt;em:maxVersion&gt;2.0.*&lt;/em:maxVersion&gt;</span>
+<pre class="eval"> &lt;em:maxVersion&gt;2.0.*&lt;/em:maxVersion&gt;
 </pre>
 
 <p>Modifiez-la pour indiquer la compatibilité avec Firefox 3 :</p>
 
-<pre class="eval"> <span class="nowiki">&lt;em:maxVersion&gt;3.0.*&lt;/em:maxVersion&gt;</span>
+<pre class="eval"> &lt;em:maxVersion&gt;3.0.*&lt;/em:maxVersion&gt;
 </pre>
 
 <p>Et réinstallez ensuite votre extension.</p>
@@ -133,7 +133,7 @@ original_slug: Mise_à_jour_des_extensions_pour_Firefox_3
 
 <h4 id="Popups_.28menus.2C_menus_contextuels.2C_bulles_d.27information_et_panneaux.29" name="Popups_.28menus.2C_menus_contextuels.2C_bulles_d.27information_et_panneaux.29">Popups (menus, menus contextuels, bulles d'information et panneaux)</h4>
 
-<p>Le système de popups XUL a été modifié de manière importante dans Firefox 3. Celui-ci gère les menus principaux, les menus contextuels et les panneaux d'information. Un guide d'<a href="/fr/XUL/Guide_des_popups" title="fr/XUL/Guide_des_popups">utilisation des popups</a> a été créé pour expliquer en détail le fonctionnement du système. Une chose à noter est l'obsolescence de <code>popup.<span id="m-showPopup"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/showPopup">showPopup</a></code></span></code> en faveur des nouvelles méthodes <code>popup.<span id="m-openPopup"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/openPopup">openPopup</a></code></span></code> et <code>popup.<span id="m-openPopupAtScreen"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/openPopupAtScreen">openPopupAtScreen</a></code></span></code>.</p>
+<p>Le système de popups XUL a été modifié de manière importante dans Firefox 3. Celui-ci gère les menus principaux, les menus contextuels et les panneaux d'information. Un guide d'<a href="/fr/XUL/Guide_des_popups" title="fr/XUL/Guide_des_popups">utilisation des popups</a> a été créé pour expliquer en détail le fonctionnement du système. Une chose à noter est l'obsolescence de <code>popup.<code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/showPopup">showPopup</a></code></code> en faveur des nouvelles méthodes <code>popup.<code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/openPopup">openPopup</a></code></code> et <code>popup.<code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/openPopupAtScreen">openPopupAtScreen</a></code></code>.</p>
 
 <h4 id="Compl.C3.A9ment_automatique" name="Compl.C3.A9ment_automatique">Complément automatique</h4>
 

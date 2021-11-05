@@ -52,18 +52,18 @@ original_slug: >-
 
 <p>Créez un nouveau volet et remplissez-le avec un objet JSON. Vous pouvez exécuter ce code dans un script chargé par la <a href="/fr/Add-ons/WebExtensions/manifest.json/devtools_page">page devtools</a>. de votre extension</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">onCreated</span><span class="punctuation token">(</span>sidebarPane<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  sidebarPane<span class="punctuation token">.</span><span class="function token">setObject</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-    someBool<span class="punctuation token">:</span> <span class="keyword token">true</span><span class="punctuation token">,</span>
-    someString<span class="punctuation token">:</span> <span class="string token">"hello there"</span><span class="punctuation token">,</span>
-    someObject<span class="punctuation token">:</span> <span class="punctuation token">{</span>
-      someNumber<span class="punctuation token">:</span> <span class="number token">42</span><span class="punctuation token">,</span>
-      someOtherString<span class="punctuation token">:</span> <span class="string token">"this is my pane's content"</span>
-    <span class="punctuation token">}</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function onCreated(sidebarPane) {
+  sidebarPane.setObject({
+    someBool: true,
+    someString: "hello there",
+    someObject: {
+      someNumber: 42,
+      someOtherString: "this is my pane's content"
+    }
+  });
+}
 
-browser<span class="punctuation token">.</span>devtools<span class="punctuation token">.</span>panels<span class="punctuation token">.</span>elements<span class="punctuation token">.</span><span class="function token">createSidebarPane</span><span class="punctuation token">(</span><span class="string token">"My pane"</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>onCreated<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);</code></pre>
 
 <p>{{WebExtExamples}}</p>
 

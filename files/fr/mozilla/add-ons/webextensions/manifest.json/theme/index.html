@@ -1239,7 +1239,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/theme
    }
  }</pre>
 
-<p dir="ltr"><span id="result_box" lang="fr"><span>Plusieurs images peuvent être utilisées pour remplir l'en-tête</span></span>, <span id="result_box" lang="fr"><span>en utilisant une image d'en-tête vierge/transparente pour donner le contrôle de l'emplacement à chaque image visible:</span></span></p>
+<p dir="ltr">Plusieurs images peuvent être utilisées pour remplir l'en-tête, en utilisant une image d'en-tête vierge/transparente pour donner le contrôle de l'emplacement à chaque image visible:</p>
 
 <pre class="brush: json" dir="ltr"> "theme": {
    "images": {
@@ -1324,12 +1324,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/theme
  <li>toutes les couleurs doivent être spécifiées sous la forme d'un tableau de valeurs RVB, comme ceci :</li>
 </ul>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"theme":</span> <span class="punctuation token">{</span>
-  <span class="key token">"colors":</span> <span class="punctuation token">{</span>
-     <span class="key token">"frame":</span> <span class="punctuation token">[</span><span class="number token">255</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">,</span>
-     <span class="key token">"tab_background_text":</span> <span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">255</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">,</span>
-     <span class="key token">"bookmark_text":</span> <span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">255</span><span class="punctuation token">]</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json line-numbers  language-json"><code class="language-json">"theme": {
+  "colors": {
+     "frame": [255, 0, 0],
+     "tab_background_text": [0, 255, 0],
+     "bookmark_text": [0, 0, 255]
+  }
+}</code></pre>
 
 <p>A partir de Firefox 59, la forme tableau et la forme couleur CSS sont acceptées pour toutes les propriétés. Avant cela, <code>colors/frame</code> et <code>colors/tab_background_text</code> nécessitaient la forme tableau, alors que d'autres propriétés nécessitaient la forme couleur CSS.</p>

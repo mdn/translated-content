@@ -121,14 +121,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p>Les scripts de contenu sont des scripts fournis par les extensions qui s'exécutent dans le contexte d'une page Web ; cela diffère des scripts qui sont chargés par la page elle-même, y compris ceux qui sont fournis dans les éléments {{HTMLElement ("script")}} dans la page.</p>
 
-<p><span id="result_box" lang="fr"><span>Les scripts de contenu peuvent voir et manipuler le DOM de la page, tout comme les scripts normaux chargés par la page.</span></span></p>
+<p>Les scripts de contenu peuvent voir et manipuler le DOM de la page, tout comme les scripts normaux chargés par la page.</p>
 
 <p>Contrairement aux scripts de pages normales, ils peuvent :</p>
 
 <ul>
- <li><span id="result_box" lang="fr"><span>Effectuer des requêtes XHR entre domaines</span></span>.</li>
+ <li>Effectuer des requêtes XHR entre domaines.</li>
  <li>Utiliser un petit sous-ensemble de l'<a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API">APIs des WebExtensions</a>.</li>
- <li><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan">Echanger des messages avec leurs scripts d'arrière-plan</a> <span lang="fr"><span>et peuvent ainsi accéder indirectement à toutes les API des WebExtensions.</span></span></li>
+ <li><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan">Echanger des messages avec leurs scripts d'arrière-plan</a> et peuvent ainsi accéder indirectement à toutes les API des WebExtensions.</li>
 </ul>
 
 <p>Les scripts de contenu ne peuvent pas directement accéder normalement aux scripts de page, mais peuvent échanger des messages avec eux à l'aide de l'API standard <code><a href="/fr-FR/docs/Web/API/Window/postMessage">window.postMessage()</a></code>.</p>

@@ -78,16 +78,16 @@ then(onRemoved, onError);</pre>
  Si vous souhaitez simplement effacer tous les cookies sans perturber les installations de stockage locales, utilisez <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies">browser.cookies</a> pour faire une boucle et supprimer le contenu de tous les magasins de cookies.</p>
 </div>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">onRemoved</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"removed"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function onRemoved() {
+  console.log("removed");
+}
 
-<span class="keyword token">function</span> <span class="function token">onError</span><span class="punctuation token">(</span>error<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span>error<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+function onError(error) {
+  console.error(error);
+}
 
-browser<span class="punctuation token">.</span>browsingData<span class="punctuation token">.</span><span class="function token">removeCookies</span><span class="punctuation token">(</span><span class="punctuation token">{</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">.</span>
-<span class="function token">then</span><span class="punctuation token">(</span>onRemoved<span class="punctuation token">,</span> onError<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+browser.browsingData.removeCookies({}).
+then(onRemoved, onError);</code></pre>
 
 <p>{{WebExtExamples}}</p>
 

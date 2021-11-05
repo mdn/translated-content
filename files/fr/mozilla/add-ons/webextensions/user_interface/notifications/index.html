@@ -16,7 +16,7 @@ Les notifications peuvent inclure un appel d'action pour l'utilisateur, et votre
 
 <p>Vous gérez les notifications en programmant, en utilisant l'API {{WebExtAPIRef("notifications")}}. Pour utiliser cette API, vous devez demander la permission de notification dans votre manifest.json :</p>
 
-<pre class="brush: json"><span class="pl-s"><span class="pl-pds">"</span>permissions<span class="pl-pds">"</span></span>: [<span class="pl-s"><span class="pl-pds">"</span>notifications<span class="pl-pds">"</span></span>]</pre>
+<pre class="brush: json">"permissions": ["notifications"]</pre>
 
 <p>Vous utilisez ensuite {{WebExtAPIRef("notifications.create")}} pour créer vos notifications, comme dans cet exemple de <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> :</p>
 
@@ -33,7 +33,7 @@ browser.notifications.create({
 
 <p>Si la notification inclut un appel à l'action, vous pouvez écouter l'utilisateur en cliquant sur la notification pour appeler la fonction pour gérer l'action:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">browser<span class="punctuation token">.</span>notifications<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleClick<span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">browser.notifications.onClicked.addListener(handleClick);
 </code></pre>
 
 <p>Si vous émettez des appels à l'action par le biais de notifications, vous souhaitez également définir l'ID de notification facultatif, afin de déterminer quel appel à l'action a sélectionné.</p>
