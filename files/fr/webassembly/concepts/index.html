@@ -36,7 +36,7 @@ translation_of: WebAssembly/Concepts
 
 <ul>
  <li>Une machine virtuelle (VM) qui exécute le code de la Web app, e.g le code JavaScript qui fait tourner vos applications.</li>
- <li>Une ensemble de <a href="/en-US/docs/Web/API">Web APIs</a> que la Web app peut appeler pour contrôler les fonctionnalités des navigateurs/appareils et réaliser des actions (<a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a>, <a href="/en-US/docs/Web/API/CSS_Object_Model">CSSOM</a>, <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>, <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>, <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, etc.).</li>
+ <li>Une ensemble de <a href="/fr/docs/Web/API">Web APIs</a> que la Web app peut appeler pour contrôler les fonctionnalités des navigateurs/appareils et réaliser des actions (<a href="/fr/docs/Web/API/Document_Object_Model">DOM</a>, <a href="/fr/docs/Web/API/CSS_Object_Model">CSSOM</a>, <a href="/fr/docs/Web/API/WebGL_API">WebGL</a>, <a href="/fr/docs/Web/API/IndexedDB_API">IndexedDB</a>, <a href="/fr/docs/Web/API/Web_Audio_API">Web Audio API</a>, etc.).</li>
 </ul>
 
 <p>Historiquement, la VM était seulement capable de charger le JavaScript. Cela fonctionnait bien pour nous comme le JavaScript est assez puissant pour résoudre la majeure partie des problèmes que les gens rencontrent sur Internet. Nous nous sommes, cependant, confrontés à des problèmes de performances lors de l'utilisation de JavaScript pour des cas d'utilisations plus avancés comme les jeux 3D, la réalité virtuelle et augmentée, la vision artificielle, l'édition d'image/vidéo, et un nombre de domaines qui demandent des performances natives ( voir <a href="http://webassembly.org/docs/use-cases/">Cas d'utilisations WebAssembly</a> pour plus d'informations).</p>
@@ -59,7 +59,7 @@ translation_of: WebAssembly/Concepts
 <p>Il y a différents concepts clefs nécessaires pour comprendre comment fonctionne WebAssembly dans le navigateur. Tous ces concepts se retrouvent totalement dans l'API WebAssembly JavaScript.</p>
 
 <ul>
- <li><strong>Module </strong>: Représente un binaire WebAssembly qui a été compilé en code exécutable par le navigateur.  Un module est sans état et - comme un <a href="/en-US/docs/Web/API/Blob">Blob</a> - peut donc être explicitement<a href="/en-US/WebAssembly/Caching_modules"> mis en cache dans IndexedDB</a> ou partagé entre le contexte fenêtre et les workers (via <code><a href="/en-US/docs/Web/API/MessagePort/postMessage">postMessage()</a></code>).  Un module déclare des imports et exports au même titre qu'un module ES2015.</li>
+ <li><strong>Module </strong>: Représente un binaire WebAssembly qui a été compilé en code exécutable par le navigateur.  Un module est sans état et - comme un <a href="/fr/docs/Web/API/Blob">Blob</a> - peut donc être explicitement<a href="/fr/WebAssembly/Caching_modules"> mis en cache dans IndexedDB</a> ou partagé entre le contexte fenêtre et les workers (via <code><a href="/fr/docs/Web/API/MessagePort/postMessage">postMessage()</a></code>).  Un module déclare des imports et exports au même titre qu'un module ES2015.</li>
  <li><strong>Mémoire </strong>: Représente un ArrayBuffer redimensionnable qui contient un tableau d'octets contiguë accessible en lecture/écriture par les instructions bas niveau d'accès mémoire du WebAssembly.</li>
  <li><strong>Table</strong> : Représente un tableau typé de référence (comme par exemple des fonctions) qui ne peut pas être stocké de manière brute en mémoire (pour des raisons de sécurité et de portabilité).</li>
  <li><strong>Instance </strong>: Représente un module associé avec tous les états qu'il utilise à l'exécution à savoir la mémoire, la table précédemment citée et un ensemble de données importées. Une instance est comme un module ES2015 qui a été chargée dans un contexte global avec un ensemble d'imports.</li>
@@ -80,7 +80,7 @@ translation_of: WebAssembly/Concepts
 <p>D'autres outils verront sans aucun doute le jour à l'avenir. Pour le moment, il y a trois points d'entrée principaux :</p>
 
 <ul>
- <li>Porter une application C/C++ avec <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Emscripten">Emscripten</a>.</li>
+ <li>Porter une application C/C++ avec <a href="/fr/docs/Mozilla/Projects/Emscripten">Emscripten</a>.</li>
  <li>Écrire ou générer WebAssembly directement au niveau assembleur.</li>
  <li>Écrire une application Rust et cibler WebAssembly en sortie.</li>
 </ul>
@@ -111,7 +111,7 @@ translation_of: WebAssembly/Concepts
 
 <p>Le document HTML généré charge le fichier JavaScript contenant le code "passe-plat" et écrit stdout dans un {{htmlelement("textarea")}}. Si l'application utilise OpenGL, le HTML contient aussi un élément {{htmlelement("canvas")}} qui est utilisé comme cible de rendu. Il est vraiment simple de modifier la sortie Emscripten pour en faire l'application web que vous souhaitez.</p>
 
-<p>Vous pouvez trouver toute la documentation sur Emscripten à l'adresse <a href="http://emscripten.org">emscripten.org</a>, et un guide pour exploiter la chaîne de compilation et ainsi compiler votre propre application C/C++ en wasm à l'adresse <a href="https://developer.mozilla.org/en-US/docs/WebAssembly/C_to_wasm">Compiler du C/C++ en WebAssembly</a>.</p>
+<p>Vous pouvez trouver toute la documentation sur Emscripten à l'adresse <a href="http://emscripten.org">emscripten.org</a>, et un guide pour exploiter la chaîne de compilation et ainsi compiler votre propre application C/C++ en wasm à l'adresse <a href="/fr/docs/WebAssembly/C_to_wasm">Compiler du C/C++ en WebAssembly</a>.</p>
 
 <h3 id="Écrire_du_WebAssembly_directement">Écrire du WebAssembly directement</h3>
 
@@ -119,7 +119,7 @@ translation_of: WebAssembly/Concepts
 
 <p>De la même manière que les langages assembleur physiques, le format binaire du  WebAssembly a une représentation textuelle. Ces deux formats ont un fonctionnement équivalents. Vous pouvez écrire ou générer ce format à la main et ensuite le convertir au format binaire avec un des nombreux <a href="http://webassembly.org/getting-started/advanced-tools/">outils de conversion texte vers binaire WebAssembly</a>.</p>
 
-<p>Pour un guide simple sur comment réaliser ceci, regarder notre article <a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Text_format_to_wasm">Convertir le WebAssembly au format text en wasm</a>.</p>
+<p>Pour un guide simple sur comment réaliser ceci, regarder notre article <a href="/fr/docs/WebAssembly/Text_format_to_wasm">Convertir le WebAssembly au format text en wasm</a>.</p>
 
 <h2 id="En_résumé">En résumé</h2>
 
@@ -130,6 +130,6 @@ translation_of: WebAssembly/Concepts
 <ul>
  <li><a href="https://hacks.mozilla.org/category/webassembly/">WebAssembly articles on Mozilla Hacks blog</a></li>
  <li><a href="https://research.mozilla.org/webassembly/">WebAssembly on Mozilla Research</a></li>
- <li><a href="/en-US/docs/WebAssembly/Loading_and_running">Loading and running WebAssembly code</a>— trouvez comment charger votre propre module WebAssembly dans une page web.</li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a> — trouvez comment utiliser les autres fonctionnalités majeures de l'API JavaScript WebAssembly.</li>
+ <li><a href="/fr/docs/WebAssembly/Loading_and_running">Loading and running WebAssembly code</a>— trouvez comment charger votre propre module WebAssembly dans une page web.</li>
+ <li><a href="/fr/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a> — trouvez comment utiliser les autres fonctionnalités majeures de l'API JavaScript WebAssembly.</li>
 </ul>
