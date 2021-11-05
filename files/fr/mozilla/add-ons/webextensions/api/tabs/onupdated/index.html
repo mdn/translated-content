@@ -48,7 +48,7 @@ browser.tabs.onUpdated.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>tabId</code></dt>
   <dd><code>integer</code>. ID de l'onglet qui a été mis à jour.</dd>
   <dt><code>changeInfo</code></dt>
@@ -61,7 +61,7 @@ browser.tabs.onUpdated.hasListener(listener)
  <dd>
  <p><code>object</code>. Un ensemble de filtres qui restreint les événements qui seront envoyés à cet auditeur. C'est un objet qui peut avoir une ou plusieurs des propriétés suivantes. Les événements ne seront envoyés que s'ils satisfont à tous les filtres donnés.</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>urls</code></dt>
   <dd><code>Array</code>. Un tableau <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. Ne déclenchez l'événement que pour les onglets dont la propriété de l'<code>url</code> courante correspond à l'un des motifs.</dd>
   <dt><code>properties</code></dt>
@@ -96,7 +96,7 @@ browser.tabs.onUpdated.hasListener(listener)
 
 <p>Répertorie les modifications apportées à l'état de l'onglet mis à jour. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>attention</code> {{optional_inline}}</dt>
  <dd><code>boolean</code>. Indique si l'onglet attire l'attention. Par exemple, lorsque l'onglet affiche un dialogue modal, <code>attention</code> sera <code>true</code>.</dd>
  <dt><code>audible</code>{{optional_inline}}</dt>

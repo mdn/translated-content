@@ -63,7 +63,7 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>details</code></dt>
   <dd><a href="#details"><code>object</code></a>. Détails sur la demande. Voir les <code><a href="#details">details</a></code> ci-dessous.</dd>
  </dl>
@@ -86,13 +86,13 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
 
 <h3 id="détails">détails</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>documentUrl</code></dt>
  <dd><code>string</code>. URL du document dans lequel la ressource sera chargée. Par exemple, si la page web "https://example.com" contient une image ou un iframe, alors le <code>documentUrl</code> pour l'image ou l'iframe sera "https://example.com". Pour un document de niveau supérieur, <code>documentUrl</code> n'est pas défini.</dd>
  <dt><code>frameAncestors</code></dt>
  <dd><code>array</code>. Contient des informations pour chaque document dans la hiérarchie des cadres jusqu'au document de niveau supérieur. Le premier élément du tableau contient des informations sur le parent immédiat du document demandé, et le dernier élément contient des informations sur le document de niveau supérieur. Si la charge est réellement pour le document de niveau supérieur, alors ce tableau est vide.</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>url</code></dt>
   <dd><code>string</code>. URL à partir de laquelle le document a été chargé.</dd>
   <dt><code>frameId</code></dt>
@@ -144,7 +144,7 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
  <dt><code>requestBody</code>{{optional_inline}}</dt>
  <dd><code>object</code>. Contient les données du corps de la requête HTTP. Seulement si <code>extraInfoSpec</code> contient <code>"requestBody"</code>.</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>error</code>{{optional_inline}}</dt>
   <dd><code>string</code>. Ce paramètre est défini si des erreurs ont été rencontrées lors de l'obtention des données du corps de la demande.</dd>
   <dt><code>formData</code>{{optional_inline}}</dt>

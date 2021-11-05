@@ -27,7 +27,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOpti
 
 <p>Les trois premières propriétés - <code>type</code>, <code>title</code>, <code>message</code> - sont obligatoires pour {{WebExtAPIRef("notifications.create()")}}, mais pas avec {{WebExtAPIRef("notifications.update()")}}. Firefox ne supporte que les propriétés <code>type</code>, <code>title</code>, <code>message</code>, et <code>iconUrl</code> pour le moment, et le seul <code>type</code> disponible est <code>'basic'</code>.</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>type</code></dt>
  <dd>{{WebExtAPIRef("notifications.TemplateType")}}. Le type de notification que vous voulez. Selon votre choix ici, certaines propriétés seront soit nécéssaires, soit interdites.</dd>
  <dt><code>message</code></dt>
@@ -45,7 +45,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOpti
  <dt><code>buttons</code>{{optional_inline}}</dt>
  <dd><code>array</code> de <code>button</code>. Un tableau pouvant contenir jusqu'à deux boutons à afficher dans la notification. Vous pouvez réagir aux clics sur ces boutons grâce à {{WebExtAPIRef("notifications.onButtonClicked")}}. Chaque bouton est un objet avec ces propriétés :</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>title</code></dt>
   <dd><code>string</code>. Le texte du bouton.</dd>
   <dt><code>iconUrl</code>{{optional_inline}}</dt>
@@ -61,7 +61,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOpti
  <dt><code>items</code></dt>
  <dd><code>array</code> of <code>item</code>. Un tableau d'éléments à inclure dans la notification. Selon les paramètres de notification du système d'exploitation, certains éléments que vous souhaitez afficher pourraient ne pas l'être. Chaque élément est un objet avec les propriétés suivantes :</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>title</code></dt>
   <dd><code>string</code>. Le titre de cet élément.</dd>
   <dt><code>message</code></dt>

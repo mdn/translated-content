@@ -70,7 +70,7 @@ browser.webRequest.onBeforeSendHeaders.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>details</code></dt>
   <dd><a href="#details"><code>object</code></a>. Détails de la demande. Ceci inclura les en-têtes de demande si vous avez inclus <code>"requestHeaders"</code> dans <code>extraInfoSpec</code>.</dd>
  </dl>
@@ -93,7 +93,7 @@ browser.webRequest.onBeforeSendHeaders.hasListener(listener)
 
 <h3 id="détails">détails</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>documentUrl</code></dt>
  <dd><code>string</code>. URL du document dans lequel la ressource sera chargée. Par exemple, si la page web "https://example.com" contient une image ou un iframe, alors le <code>documentUrl</code> pour l'image ou l'iframe sera "https://example.com". Pour un document de niveau supérieur, <code>documentUrl</code> n'est pas défini.</dd>
  <dt><code>frameId</code></dt>

@@ -59,17 +59,17 @@ browser.runtime.onMessageExternal.hasListener(listener)
  <dd>
  <p>Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>message</code></dt>
   <dd><code>object</code>. Le message lui-même. C'est un objet JSON-ifiable.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>sender</code></dt>
   <dd>Un objet {{WebExtAPIRef('runtime.MessageSender')}} représentant l'expéditeur du message.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>sendResponse</code></dt>
   <dd>
   <p>Une fonction à appeler, au plus une fois, pour envoyer une réponse au message. La fonction prend un seul argument, qui peut être n'importe quel objet JSON-ifiable. Cet argument est renvoyé à l'expéditeur du message.</p>

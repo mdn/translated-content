@@ -86,7 +86,7 @@ browser.webRequest.onAuthRequired.hasListener(listener)
  <dd>
  <p> Une fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>details</code></dt>
   <dd><a href="#details"><code>object</code></a>. Détails sur la demande. Voir les <code><a href="#details">détails</a></code> ci-dessous.</dd>
  </dl>
@@ -114,11 +114,11 @@ browser.webRequest.onAuthRequired.hasListener(listener)
 
 <h3 id="détails">détails</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>challenger</code></dt>
  <dd><code>object</code>. Le serveur demandant l'authentification. C'est un objet avec les propriétés suivantes :</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>host</code></dt>
   <dd><code>string</code>. Le <a href="https://en.wikipedia.org/wiki/Hostname#Internet_hostnames">nom d'hôte</a> du serveur.<br>
   <strong>Warning</strong>: Contrairement à chrome, Firefox retournera l'hôte demandé au lieu du proxy demandant l'authentification, même si <code>isProxy</code> est <code>true</code>.</dd>
@@ -169,7 +169,7 @@ browser.webRequest.onAuthRequired.hasListener(listener)
  <dt><code>requestId</code></dt>
  <dd><code>string</code>. L'ID de la demande. Les ID de requête sont uniques au sein d'une session de navigateur, de sorte que vous pouvez les utiliser pour relier différents événements associés à la même requête.</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
  </dl>
  </dd>
  <dt><code>responseHeaders</code>{{optional_inline}}</dt>

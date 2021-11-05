@@ -41,7 +41,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/create
  <p>L'objet <code>alarmInfo</code> peut contenir les propriétés suivantes :</p>
  </dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>when</code>{{optional_inline}}</dt>
   <dd><code>double</code>. Le moment où l'alarme se déclenchera en premier. L'instant est indiquée comme une valeur absolue, exprimée en <a href="https://fr.wikipedia.org/wiki/Heure_Unix">millisecondes depuis epoch</a>. Pour obtenir le nombre de millisecondes entre l'époque et l'heure actuelle, on pourra utiliser {{jsxref("Date.now")}}. Si cette valeur est utilisée, il ne faut pas fournir <code>delayInMinutes</code>.</dd>
   <dt><code>delayInMinutes</code>{{optional_inline}}</dt>
@@ -84,7 +84,7 @@ browser.alarms.create("my-periodic-alarm", {
 
 <dl>
  <dd>
- <dl class="reference-values">
+ <dl>
  </dl>
  </dd>
 </dl>

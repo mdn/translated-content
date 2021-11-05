@@ -34,7 +34,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/get
  <dd><code>integer</code>. L'ID de l'objet de fenêtre souhaité est retourné.</dd>
  <dt><code>getInfo</code>{{optional_inline}}</dt>
  <dd><code>object</code>. Contient des options pour filtrer le type de fenêtre.
- <dl class="reference-values">
+ <dl>
   <dt><code>populate</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre. Les objets Tab ne contiennent que les propriétés <code>url</code>, <code>title</code> et <code>favIconUrl</code>  i le fichier manifeste de l'extension comprend la permission <code>"tabs"</code>.</dd>
   <dt><code>windowTypes</code>{{optional_inline}}</dt>

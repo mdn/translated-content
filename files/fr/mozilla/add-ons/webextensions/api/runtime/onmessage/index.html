@@ -87,17 +87,17 @@ browser.runtime.onMessage.hasListener(<var>listener</var>)
  <dd>
  <p>Une fonction d’écoute qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><em><code>message</code></em></dt>
   <dd>Un objet qui est le message lui-même. C’est un objet sérialisable (voir <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm">l'algorithme de clonage de données</a>).</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><em><code>sender</code></em></dt>
   <dd>Un objet {{WebExtAPIRef("runtime.MessageSender")}} représentant l’expéditeur du message.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>s<em>endResponse</em></code></dt>
   <dd>
   <p>Une fonction à appeler, au plus une fois, pour envoyer une réponse au <code><var>message</var></code>. La fonction prend un seul argument, qui peut être n'importe quel objet sérialisable (voir <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm">l'algorithme de clonage de données</a>). Cet argument est renvoyé à l'expéditeur du message.</p>
