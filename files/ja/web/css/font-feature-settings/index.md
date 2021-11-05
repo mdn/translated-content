@@ -6,19 +6,20 @@ tags:
   - CSS フォント
   - CSS プロパティ
   - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.font-feature-settings
 translation_of: Web/CSS/font-feature-settings
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS の <strong><code>font-feature-settings</code></strong> プロパティは、 OpenType フォントの拡張タイポグラフィの特性を制御します。</p>
+**`font-feature-settings`** は CSS のプロパティで、 OpenType フォントの拡張書体の特性を制御します。
 
-<div>{{EmbedInteractiveExample("pages/css/font-feature-settings.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-feature-settings.html")}}
 
-<p class="hidden">この対話型サンプルのソースファイルは GitHub リポジトリに格納されています。対話型サンプルプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* 既定の設定を使用する */
+```css
+/* 既定の設定を使用する */
 font-feature-settings: normal;
 
 /* OpenType の特性タグの値を設定する */
@@ -30,88 +31,84 @@ font-feature-settings: "smcp", "swsh" 2;
 /* グローバル値 */
 font-feature-settings: inherit;
 font-feature-settings: initial;
-font-feature-settings: unset;</pre>
+font-feature-settings: revert;
+font-feature-settings: unset;
+```
 
-<div class="note"><strong>メモ:</strong> 可能な限り、ウェブの作者は代わりに {{cssxref("font-variant")}} 一括指定プロパティ、又は関連する個別指定プロパティである {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}} プロパティを使うべきです。<br>
-<br>
-これらは <code>font-feature-settings</code> よりも、もっと効率的で、予想でき、理解できる結果をもたらし、 <code>font-feature-settings</code> は、 OpenType フォント特性を有効またはアクセスするための他の方法が存在しない特殊なケースを処理するように設計された低レベルの機能です。特に、スモールキャップの表現に <code>font-feature-settings</code> を使うべきではありません。</div>
+可能な限り、ウェブの作者は代わりに {{cssxref("font-variant")}} 一括指定プロパティ、または関連する個別指定プロパティである {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}} プロパティを使うべきです。
 
-<h3 id="Values" name="Values">値</h3>
+これらは `font-feature-settings` よりも、もっと効率的で、予想でき、理解できる結果をもたらし、 `font-feature-settings` は、 OpenType フォント特性を有効またはアクセスするための他の方法が存在しない特殊なケースを処理するように設計された低レベルの機能です。特に、スモールキャップの表現に `font-feature-settings` を使うべきではありません。
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>テキストは既定の設定で配置されます。</dd>
- <dt><code>&lt;feature-tag-value&gt;</code></dt>
- <dd>テキストの描画時、 OpenType の特性タグ値のリストがテキストレイアウトエンジンに渡され、フォントの機能を有効化または無効化します。タグは常に 4 文字の ASCII 文字の {{cssxref("&lt;string&gt;")}} です。文字数がこれより少ないか多い場合、もしくはコードポイント U+20 - U+7E の範囲外の文字を含む場合、プロパティ全体が無効になります。<br>
- 値は正の整数です。キーワード <code>on</code> と <code>off</code> はそれぞれ <code>1</code> と <code>0</code> の別名です。値が設定されていなければ、既定値は <code>1</code> です。 非真偽値の OpenType 特性 (例: <a href="http://www.microsoft.com/typography/otspec/features_pt.htm#salt">stylistic alternates</a>) では、この値は選ばれる特定のグリフを意味します。真偽値の特性はオンとオフを切り替えます。</dd>
-</dl>
+### 値
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+- `normal`
+  - : テキストは既定の設定で配置されます。
+- `<feature-tag-value>`
+  - : テキストの描画時、 OpenType の特性タグ値のリストがテキストレイアウトエンジンに渡され、フォントの機能を有効化または無効化します。タグは常に 4 文字の ASCII 文字の {{cssxref("&lt;string&gt;")}} です。文字数がこれより少ないか多い場合、もしくはコードポイント U+20 - U+7E の範囲外の文字を含む場合、プロパティ全体が無効になります。<br>
+ 値は正の整数です。キーワード `on` と `off` はそれぞれ `1` と `0` の別名です。値が設定されていなければ、既定値は `1` です。 論理値ではない OpenType 特性 (例: [stylistic alternates](https://www.microsoft.com/typography/otspec/features_pt.htm#salt)) では、この値は選ばれる特定の字形を意味します。論理値の特性はオンとオフを切り替えます。
+
+## 公式定義
+
+{{cssinfo}}
+
+## 形式定義
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush:css">/* use small-cap alternate glyphs */
+### 様々なフォント特性を有効にする
+
+```css
+/* スモールキャップ代替字形 */
 .smallcaps { font-feature-settings: "smcp" on; }
 
-/* convert both upper and lowercase to small caps (affects punctuation also) */
+/* 大文字と小文字の両方をスモールキャップに変換 (記号も) */
 .allsmallcaps { font-feature-settings: "c2sc", "smcp"; }
 
-/* use zeros with a slash through them to differentiate from "O" */
+/* スラッシュのついたゼロを使用して "O" と区別する */
 
 .nicezero { font-feature-settings: "zero"; }
 
-/* enable historical forms */
+/* 歴史的な書体を有効に */
 .hist { font-feature-settings: "hist"; }
 
-/* disable common ligatures, usually on by default */
+/* よくある合字を無効にする (既定ではオン) */
 .noligs { font-feature-settings: "liga" 0; }
 
-/* enable tabular (monospaced) figures */
+/* 表内の数字を有効にする (等幅) */
 td.tabular { font-feature-settings: "tnum"; }
 
-/* enable automatic fractions */
+/* 自動的に分数化する */
 .fractions { font-feature-settings: "frac"; }
 
-/* use the second available swash character */
+/* 利用可能な2番目のスウォッシュ文字を使用 */
 .swash { font-feature-settings: "swsh" 2; }
 
-/* enable stylistic set 7 */
+/* スタイリッシュセット 7 を有効にする */
 .fancystyle {
   font-family: Gabriola; /* available on Windows 7, and on Mac OS */
   font-feature-settings: "ss07";
 }
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+## 仕様書
 
-<h2 id="仕様書">仕様書</h2>
+{{Specifications}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#propdef-font-feature-settings', 'font-feature-settings')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.font-feature-settings")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="http://www.microsoft.com/typography/otspec/featurelist.htm">OpenType Feature Tags</a> list</li>
- <li><a href="http://blogs.msdn.com/b/ie/archive/2012/01/09/css-corner-using-the-whole-font.aspx">Using the whole font</a> (The -moz syntax is the old one. On Gecko, use the -ms syntax but with -moz).</li>
-</ul>
+- {{cssxref("@font-face/font-display", "font-display")}}
+- {{cssxref("@font-face/font-family", "font-family")}}
+- {{cssxref("@font-face/font-stretch", "font-stretch")}}
+- {{cssxref("@font-face/font-style", "font-style")}}
+- {{cssxref("@font-face/font-weight", "font-weight")}}
+- {{cssxref("@font-face/font-variant", "font-variant")}}
+- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
+- {{cssxref("@font-face/src", "src")}}
+- {{cssxref("@font-face/unicode-range", "unicode-range")}}
+- [OpenType 特性タグ](https://docs.microsoft.com/typography/opentype/spec/featurelist)のリスト

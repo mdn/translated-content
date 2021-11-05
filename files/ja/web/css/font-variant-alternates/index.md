@@ -3,9 +3,9 @@ title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
 tags:
   - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
+  - CSS フォント
+  - CSS プロパティ
+  - リファレンス
   - recipe:css-property
 browser-compat: css.properties.font-variant-alternates
 translation_of: Web/CSS/font-variant-alternates

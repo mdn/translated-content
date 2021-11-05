@@ -5,53 +5,67 @@ tags:
   - CSS
   - CSS フォント
   - CSS プロパティ
-  - Reference
+  - NeedsExample
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.font-optical-sizing
 translation_of: Web/CSS/font-optical-sizing
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>font-optical-sizing</code></strong> プロパティは、テキストの描画をそれぞれの大きさでの表示に最適化して表示するかどうかを設定します。これは光学的サイズバリエーション軸があるフォントのみで動作します。</p>
+**`font-optical-sizing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの描画をそれぞれの大きさでの表示に最適化して表示するかどうかを設定します。
 
-<p>例えば、小さいテキストは太い角と大きなセリフで描かれる傾向があるのに対し、大きなテキストは太い角と細い角の間のコントラストがもっと微妙に描画される傾向があります。</p>
+{{EmbedInteractiveExample("pages/css/font-optical-sizing.html")}}
 
-<div class="note">
-<p><strong>メモ</strong>: 光学的サイズバリエーション軸は、 {{cssxref("font-variation-settings")}} の <code>opsz</code> で表現されます。</p>
-</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 font-optical-sizing: none;
 font-optical-sizing: auto; /* default */
 
 /* グローバル値 */
 font-optical-sizing: inherit;
 font-optical-sizing: initial;
+font-optical-sizing: revert;
 font-optical-sizing: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt>none</dt>
- <dd>ブラウザーは表示の最適化のために書体の形を変更しません。</dd>
- <dt>auto</dt>
- <dd>ブラウザーは表示の最適化のために書体の形を変更します。</dd>
-</dl>
+- none
+  - : ブラウザーは表示の最適化のために書体の形を変更しません。
+- auto
+  - : ブラウザーは表示の最適化のために書体の形を変更します。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 解説
+
+オプティカルサイズは、光学的サイズ変化軸を持つフォントに対して既定で有効になります。オプティカルサイズ変化軸は {{cssxref("font-variation-settings")}} の `opsz` で表されます。
+
+オプティカルサイジングを使用した場合、小さな文字サイズは太いストロークと大きなセリフで表現されることが多く、逆に大きな文字サイズは太いストロークと細いストロークのコントラストが強くなり、より繊細に表現されることが多くなります。
+
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: html">&lt;p class="optical-sizing"&gt;This paragraph is optically sized.
- This is the default across browsers.&lt;/p&gt;
+### オプティカルサイズの変更を無効化
 
-&lt;p class="no-optical-sizing"&gt;This paragraph is not optically sized.
- You should see a difference in supporting browsers.&lt;/p&gt;</pre>
+```html
+<p class="optical-sizing">This paragraph is optically sized.
+ This is the default across browsers.</p>
 
-<pre class="brush: css">@font-face {
+<p class="no-optical-sizing">This paragraph is not optically sized.
+ You should see a difference in supporting browsers.</p>
+```
+
+```css
+@font-face {
     src: url('AmstelvarAlpha-VF.ttf');
     font-family:'Amstelvar';
     font-style: normal;
@@ -64,33 +78,21 @@ p {
 
 .no-optical-sizing {
   font-optical-sizing: none;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>メモ</strong>: 上記で参照されているフォント — 光学的サイズを含みライセンスフリーであるもの — はテストに適しています。 <a href="https://github.com/TypeNetwork/Amstelvar/releases">GitHub からダウンロード</a>できます。</p>
-</div>
+> **Note:** 上記で参照されているフォント — 光学的サイズを含みライセンスフリーであるもの — がテストに適しています。 [GitHub からダウンロード](https://github.com/TypeNetwork/Amstelvar/releases)できます。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Fonts', '#font-optical-sizing-def', 'font-optical-sizing')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p>{{cssinfo}}</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.font-optical-sizing")}}</p>
+## 関連情報
+
+- {{cssxref("font-size")}}
+- {{cssxref("font-size-adjust")}}
+- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
