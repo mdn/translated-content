@@ -15,7 +15,7 @@ original_slug: Accessibilité/ARIA/formulaires/Alertes
 
 <h2 id="Le_formulaire">Le formulaire</h2>
 
-<p>Tout d’abord, veuillez lire la <a href="/fr/Accessibilité/ARIA/formulaires/Indications_élémentaires_pour_les_formulaires" rel="nofollow" title="Indications élémentaires pour les formulaires">technique <code>aria-required</code></a> pour commencer, si vous ne l’avez pas déjà lu, puisque la technique abordée en est le prolongement.</p>
+<p>Tout d’abord, veuillez lire la <a href="/fr/Accessibilité/ARIA/formulaires/Indications_élémentaires_pour_les_formulaires" rel="nofollow">technique <code>aria-required</code></a> pour commencer, si vous ne l’avez pas déjà lu, puisque la technique abordée en est le prolongement.</p>
 
 <p>Voici un formulaire simple :</p>
 
@@ -110,7 +110,7 @@ function checkValidity(aID, aSearchTerm, aMsg)
 
 <p>Cette fonction commence par enlever toutes les alertes restantes. Son fonctionnement est simple : elle cherche un élément avec un identifiant <code>alert</code>, et si elle en trouve un, l’enlève du modèle objet de document (DOM).</p>
 
-<p>Ensuite, la fonction crée un élément {{ HTMLElement("div") }} qui contient le texte de l’alerte. On lui attribue l’ID <code>alert</code>. Et son rôle est défini comme celui d’une « alert ». C’est inspiré par ARIA, même si le nom de l’attribut ne comporte par « aria ». Cela découle du fait que ce rôle est basé sur le module <a class="external text" href="http://www.w3.org/TR/xhtml-role/" title="XHTML Role Attribut Module">XHTML Role Attribut</a> qui a été tout simplement porté sur HTML pour plus de simplicité.</p>
+<p>Ensuite, la fonction crée un élément {{ HTMLElement("div") }} qui contient le texte de l’alerte. On lui attribue l’ID <code>alert</code>. Et son rôle est défini comme celui d’une « alert ». C’est inspiré par ARIA, même si le nom de l’attribut ne comporte par « aria ». Cela découle du fait que ce rôle est basé sur le module <a href="http://www.w3.org/TR/xhtml-role/">XHTML Role Attribut</a> qui a été tout simplement porté sur HTML pour plus de simplicité.</p>
 
 <p>Le texte est ajouté à l’élément {{ HTMLElement("div") }}, qui est lui-même ajouté au document.</p>
 

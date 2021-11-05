@@ -10,20 +10,20 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_listbox
 ---
 <h3 id="Description">Description</h3>
 
-<p>Cette technique présente l’utilisation du rôle <a class="external" href="http://www.w3.org/TR/wai-aria/roles#listbox">listbox</a> et décrit les effets produits sur les navigateurs et les technologies d’assistance.</p>
+<p>Cette technique présente l’utilisation du rôle <a href="http://www.w3.org/TR/wai-aria/roles#listbox">listbox</a> et décrit les effets produits sur les navigateurs et les technologies d’assistance.</p>
 
 <p>Le rôle <code>listbox</code> est utilisé pour identifier un élément qui crée une liste à partir de laquelle un utilisateur peut sélectionner un ou plusieurs éléments statiques et peut contenir des images, contrairement à l’élément HTML {{ HTMLElement("select") }}. Lorsque ce rôle est ajouté à un élément, le navigateur émettra un événement accessible <code>listbox</code> aux produits de technologie d’assistance qui pourront alors le notifier à l’utilisateur.</p>
 
-<p>Chaque entrée de la boîte liste devrait avoir un rôle d’<a class="external" href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option">option</a> et devrait être une descendante de la boîte liste dans l’arbre DOM. Si une ou plusieurs entrées ne sont pas des descendantes de la boîte liste dans le DOM, référez-vous aux <a class="external" href="http://www.w3.org/TR/wai-aria-practices/#listbox_div">Bonnes pratiques ARIA</a> pour obtenir plus de détails sur les propriétés additionnelles qui doivent être définies.</p>
+<p>Chaque entrée de la boîte liste devrait avoir un rôle d’<a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option">option</a> et devrait être une descendante de la boîte liste dans l’arbre DOM. Si une ou plusieurs entrées ne sont pas des descendantes de la boîte liste dans le DOM, référez-vous aux <a href="http://www.w3.org/TR/wai-aria-practices/#listbox_div">Bonnes pratiques ARIA</a> pour obtenir plus de détails sur les propriétés additionnelles qui doivent être définies.</p>
 
-<p>Lorsqu’on navigue entre les différents éléments d’une liste, le premier élément de la liste sera sélectionné par défaut en l’absence de sélection existante. Les flèches haut et bas permettent de naviguer dans la liste, et appuyer sur <kbd>Maj+Flèche haut/bas</kbd> déplacera et développera la sélection. Saisir un ou plusieurs lettres permet de naviguer dans la liste des éléments (une seule et même lettre positionnera la sélection sur chacun des éléments qui commence par elle, plusieurs lettres placeront la sélection sur le premier élément commençant par la chaîne). Si l’élément courant est associé à un menu contextuel, <kbd>Maj+F10</kbd> affichera ce menu. Si les éléments de la liste peuvent être cochés, <kbd>Espace</kbd> peut être utilisée pour basculer l’état de la <a class="external" href="http://www.w3.org/TR/wai-aria-practices/#checkbox">checkboxes</a>. Pour les éléments de liste sélectionnables, <kbd>Espace</kbd> bascule l’état de sélection, <kbd>Maj+Espace</kbd> peut être utilisé pour sélection des éléments contigus, <kbd>Ctrl+Flèche</kbd> déplace le curseur sans sélectionner d’élément, et <kbd>Ctrl+Espace</kbd> peut être utilisé pour sélectionner des éléments non-contigus. Il est recommandé d’utiliser une case à cocher, un lien ou tout autre méthode pour permettre la sélection de tous les éléments, et <kbd>Ctrl+A</kbd> peut être utilisé comme raccourci pour cela.</p>
+<p>Lorsqu’on navigue entre les différents éléments d’une liste, le premier élément de la liste sera sélectionné par défaut en l’absence de sélection existante. Les flèches haut et bas permettent de naviguer dans la liste, et appuyer sur <kbd>Maj+Flèche haut/bas</kbd> déplacera et développera la sélection. Saisir un ou plusieurs lettres permet de naviguer dans la liste des éléments (une seule et même lettre positionnera la sélection sur chacun des éléments qui commence par elle, plusieurs lettres placeront la sélection sur le premier élément commençant par la chaîne). Si l’élément courant est associé à un menu contextuel, <kbd>Maj+F10</kbd> affichera ce menu. Si les éléments de la liste peuvent être cochés, <kbd>Espace</kbd> peut être utilisée pour basculer l’état de la <a href="http://www.w3.org/TR/wai-aria-practices/#checkbox">checkboxes</a>. Pour les éléments de liste sélectionnables, <kbd>Espace</kbd> bascule l’état de sélection, <kbd>Maj+Espace</kbd> peut être utilisé pour sélection des éléments contigus, <kbd>Ctrl+Flèche</kbd> déplace le curseur sans sélectionner d’élément, et <kbd>Ctrl+Espace</kbd> peut être utilisé pour sélectionner des éléments non-contigus. Il est recommandé d’utiliser une case à cocher, un lien ou tout autre méthode pour permettre la sélection de tous les éléments, et <kbd>Ctrl+A</kbd> peut être utilisé comme raccourci pour cela.</p>
 
 <h3 id="Effets_possibles_sur_les_agents_utilisateurs_et_les_technologies_d’assistance">Effets possibles sur les agents utilisateurs et les technologies d’assistance</h3>
 
 <p>Lorsque le rôle <code>listbox</code> est ajouté à un élément, ou qu’un tel élément devient visible, l’agent utilisateur devrait suivre les étapes suivantes :</p>
 
 <ul>
- <li>Présenter l’élément comme ayant un rôle d’alerte à l’API d’accessibilité du système d’exploitation. Alternativement, s’il est un enfant de ou s’il appartient à une boîte combinée <a class="external" href="http://www.w3.org/TR/wai-aria/roles#combobox">combobox</a>, présenter l’élément comme un <a class="external" href="http://www.w3.org/TR/wai-aria/roles#menu">menu</a> ;</li>
+ <li>Présenter l’élément comme ayant un rôle d’alerte à l’API d’accessibilité du système d’exploitation. Alternativement, s’il est un enfant de ou s’il appartient à une boîte combinée <a href="http://www.w3.org/TR/wai-aria/roles#combobox">combobox</a>, présenter l’élément comme un <a href="http://www.w3.org/TR/wai-aria/roles#menu">menu</a> ;</li>
  <li>Déclencher un événement liste (ou dans les cas spéciaux, un événement menu) accessible à l’aide l’API d’accessibilité du système d’exploitation si elle le prend en charge.</li>
 </ul>
 
@@ -54,7 +54,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_listbox
 &lt;/div&gt;
 </pre>
 
-<p>Voir l’<a class="external" href="http://codetalks.org/source/widgets/listbox/listbox.html">exemple</a> CodeTalks pour plus de détails.</p>
+<p>Voir l’<a href="http://codetalks.org/source/widgets/listbox/listbox.html">exemple</a> CodeTalks pour plus de détails.</p>
 
 <h4 id="Exemples_concrets">Exemples concrets :</h4>
 
@@ -65,23 +65,23 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_listbox
 <h3 id="Notes">Notes</h3>
 
 <ul>
- <li>Pour être accessible au clavier, les développeurs doivent <a class="external" href="http://www.w3.org/TR/wai-aria/roles#option">gérer le focus</a> de chaque descendant de ce rôle.</li>
+ <li>Pour être accessible au clavier, les développeurs doivent <a href="http://www.w3.org/TR/wai-aria/roles#option">gérer le focus</a> de chaque descendant de ce rôle.</li>
  <li>Il est recommandé aux développeurs d’utiliser différents styles pour la sélection lorsque la liste n’a pas le focus, par exemple, une sélection inactive est parfois affichée avec une couleur d’arrière-plan plus claire.</li>
- <li>Si la boîte liste ne fait pas partie d’un autre composant, il faut définir sa propriété <a class="external" href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby"><code>aria-labelledby</code></a>.</li>
- <li>Si une ou plusieurs entrées ne sont pas des descendants DOM de la boîte liste, il faudra définir des propriétés <code>aria-*</code> supplémentaires (voir <a class="external" href="http://www.w3.org/TR/wai-aria-practices/#listbox_div">Bonnes pratiques ARIA</a>).</li>
- <li>S’il existe une bonne raison pour <a class="external" href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-expanded">étendre</a> la boîte liste, le rôle <a class="external" href="http://www.w3.org/TR/wai-aria/roles#combobox">combobox</a> peut être plus approprié.</li>
+ <li>Si la boîte liste ne fait pas partie d’un autre composant, il faut définir sa propriété <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby"><code>aria-labelledby</code></a>.</li>
+ <li>Si une ou plusieurs entrées ne sont pas des descendants DOM de la boîte liste, il faudra définir des propriétés <code>aria-*</code> supplémentaires (voir <a href="http://www.w3.org/TR/wai-aria-practices/#listbox_div">Bonnes pratiques ARIA</a>).</li>
+ <li>S’il existe une bonne raison pour <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-expanded">étendre</a> la boîte liste, le rôle <a href="http://www.w3.org/TR/wai-aria/roles#combobox">combobox</a> peut être plus approprié.</li>
 </ul>
 
 <h3 id="Attributs_ARIA_utilisés">Attributs ARIA utilisés</h3>
 
 <ul>
- <li><a class="external" href="http://www.w3.org/TR/wai-aria/roles#listbox">listbox</a></li>
+ <li><a href="http://www.w3.org/TR/wai-aria/roles#listbox">listbox</a></li>
 </ul>
 
 <h3 id="Techniques_ARIA_connexes">Techniques ARIA connexes</h3>
 
 <ul>
- <li>Rôle <a class="external" href="http://www.w3.org/TR/wai-aria/roles#combobox">combobox</a>.</li>
+ <li>Rôle <a href="http://www.w3.org/TR/wai-aria/roles#combobox">combobox</a>.</li>
 </ul>
 
 <h3 id="Compatibilité">Compatibilité</h3>
@@ -91,6 +91,6 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_listbox
 <h3 id="Autres_ressources">Autres ressources</h3>
 
 <ul>
- <li>Bonnes pratiques ARIA – Listbox : <a class="external" href="http://www.w3.org/TR/wai-aria-practices/#listbox_div">#listbox_div</a></li>
+ <li>Bonnes pratiques ARIA – Listbox : <a href="http://www.w3.org/TR/wai-aria-practices/#listbox_div">#listbox_div</a></li>
  <li>Le modèle de rôles ARIA – Listbox : <a href="http://www.w3.org/TR/wai-aria/roles#listbox">#listbox</a></li>
 </ul>

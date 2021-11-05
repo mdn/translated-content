@@ -10,15 +10,15 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_group
 ---
 <h3 id="Description">Description</h3>
 
-<p>Cette technique présente l’utilisation du rôle <a class="external" href="http://www.w3.org/TR/wai-aria/roles#group">group</a> et décrit les effets produits sur les navigateurs et les technologies d’assistance.</p>
+<p>Cette technique présente l’utilisation du rôle <a href="http://www.w3.org/TR/wai-aria/roles#group">group</a> et décrit les effets produits sur les navigateurs et les technologies d’assistance.</p>
 
-<p>Le rôle <code>group</code> est utilisé pour identifier un ensemble d’objets de l’interface utilisateur qui, contrairement à une <a class="external" href="http://www.w3.org/TR/wai-aria/roles#region"><code>region</code></a>, ne sont pas destinés à être intégrés dans une table de contenus ou une page récapitulative (telles que des structures dynamiquement créées par des scripts ou par les technologies d’assistance) ; un groupe ne devrait pas être considéré comme une partie perceptible majeure d’une page. Lorsque le rôle <code>group</code> est ajouté à un élément, , le navigateur émettra un événement <code>group</code> accessible aux produits de technologie d’assistance qui pourront alors le notifier à l’utilisateur.</p>
+<p>Le rôle <code>group</code> est utilisé pour identifier un ensemble d’objets de l’interface utilisateur qui, contrairement à une <a href="http://www.w3.org/TR/wai-aria/roles#region"><code>region</code></a>, ne sont pas destinés à être intégrés dans une table de contenus ou une page récapitulative (telles que des structures dynamiquement créées par des scripts ou par les technologies d’assistance) ; un groupe ne devrait pas être considéré comme une partie perceptible majeure d’une page. Lorsque le rôle <code>group</code> est ajouté à un élément, , le navigateur émettra un événement <code>group</code> accessible aux produits de technologie d’assistance qui pourront alors le notifier à l’utilisateur.</p>
 
-<p>Un groupe devrait utilisé pour former un ensemble logique d’éléments avec des fonctions connexes, tels que les enfants dans un composant d’arborescence formant un ensemble apparenté dans une hiérarchie, ou une collection d’éléments ayant le même conteneur dans un répertoire. Cependant, lorsqu’on utilise un groupe pour former une liste, les développeurs doivent limiter ses enfants aux éléments <a class="external" href="http://www.w3.org/TR/wai-aria/roles#listitem">listitem</a>. Les éléments de groupe devraient être imbriqués.</p>
+<p>Un groupe devrait utilisé pour former un ensemble logique d’éléments avec des fonctions connexes, tels que les enfants dans un composant d’arborescence formant un ensemble apparenté dans une hiérarchie, ou une collection d’éléments ayant le même conteneur dans un répertoire. Cependant, lorsqu’on utilise un groupe pour former une liste, les développeurs doivent limiter ses enfants aux éléments <a href="http://www.w3.org/TR/wai-aria/roles#listitem">listitem</a>. Les éléments de groupe devraient être imbriqués.</p>
 
 <p>La gestion correcte d’un groupe par les technologies d’assistance est déterminée par le contexte dans lequel il est fourni.</p>
 
-<p>Si un auteur pense qu’une section est suffisamment importante pour faire partie de la table des matières d’une page, il devrait assigner un rôle de <a class="external" href="http://www.w3.org/TR/wai-aria/roles#region"><code>region</code></a> ou un rôle standard de <a class="external" href="http://www.w3.org/TR/wai-aria/roles#landmark_roles">point de repère</a> à cette section.</p>
+<p>Si un auteur pense qu’une section est suffisamment importante pour faire partie de la table des matières d’une page, il devrait assigner un rôle de <a href="http://www.w3.org/TR/wai-aria/roles#region"><code>region</code></a> ou un rôle standard de <a href="http://www.w3.org/TR/wai-aria/roles#landmark_roles">point de repère</a> à cette section.</p>
 
 <h3 id="Effets_possibles_sur_les_agents_utilisateurs_et_les_technologies_d’assistance">Effets possibles sur les agents utilisateurs et les technologies d’assistance</h3>
 
@@ -32,7 +32,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_group
 <p>Les technologies d’assistance devraient être à l’écoute de tels événements et les notifier à l’utilisateur en conséquence :</p>
 
 <ul>
- <li>Les lecteurs d’écran devraient annoncer le groupe lorsque le focus atteint l’un des contrôles appartenant au groupe, et si <a class="external" href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby">aria-describedby</a> a été défini, la description peut être lue. Après cela seulement le contrôle focalisé devrait être annoncé.</li>
+ <li>Les lecteurs d’écran devraient annoncer le groupe lorsque le focus atteint l’un des contrôles appartenant au groupe, et si <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby">aria-describedby</a> a été défini, la description peut être lue. Après cela seulement le contrôle focalisé devrait être annoncé.</li>
  <li>Les loupes d’écran devraient agrandir le groupe.</li>
 </ul>
 
@@ -95,7 +95,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_group
 <h4 id="Exemples_concrets">Exemples concrets :</h4>
 
 <ul>
- <li><a class="external" href="http://test.cita.illinois.edu/aria/tree/tree2.php">http://test.cita.illinois.edu/aria/tree/tree2.php</a></li>
+ <li><a href="http://test.cita.illinois.edu/aria/tree/tree2.php">http://test.cita.illinois.edu/aria/tree/tree2.php</a></li>
 </ul>
 
 <h3 id="Notes">Notes</h3>
@@ -107,13 +107,13 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_group
 <h3 id="Attributs_ARIA_utilisés">Attributs ARIA utilisés</h3>
 
 <ul>
- <li><a class="external" href="http://www.w3.org/TR/wai-aria/roles#group">group (en)</a></li>
+ <li><a href="http://www.w3.org/TR/wai-aria/roles#group">group (en)</a></li>
 </ul>
 
 <h3 id="Techniques_ARIA_connexes">Techniques ARIA connexes</h3>
 
 <ul>
- <li>Rôle <a class="external" href="http://www.w3.org/TR/wai-aria/roles#region">region (en)</a></li>
+ <li>Rôle <a href="http://www.w3.org/TR/wai-aria/roles#region">region (en)</a></li>
 </ul>
 
 <h3 id="Compatibilité">Compatibilité</h3>
@@ -123,5 +123,5 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_group
 <h3 id="Autres_ressources">Autres ressources</h3>
 
 <ul>
- <li>Bonnes pratiques ARIA – Répertoires, groupes et zones : <a class="external" href="http://www.w3.org/TR/wai-aria-practices/#kbd_layout_groupheading">Directories, Groups, and Regions (en)</a></li>
+ <li>Bonnes pratiques ARIA – Répertoires, groupes et zones : <a href="http://www.w3.org/TR/wai-aria-practices/#kbd_layout_groupheading">Directories, Groups, and Regions (en)</a></li>
 </ul>

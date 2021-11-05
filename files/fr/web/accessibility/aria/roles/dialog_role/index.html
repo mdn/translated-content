@@ -11,7 +11,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog
 ---
 <h3 id="Description">Description</h3>
 
-<p>Cette technique présente l’utilisation du rôle <code><a class="external" href="http://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog" title="http://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#alertdialog">dialog (en)</a></code>.</p>
+<p>Cette technique présente l’utilisation du rôle <code><a href="http://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog">dialog (en)</a></code>.</p>
 
 <p>Le rôle <code>dialog</code> est utilisé pour marquer une fenêtre ou une boîte de dialogue d’application web qui sépare le contenu ou l’UI du reste de l’application web ou de la page. Visuellement, les boîtes de dialogues sont généralement placées par dessus le contenu de la page, à l’aide d’un calque (ou « Overlay »). Les boîtes de dialogue peuvent être non-modales (ce qui signifie qu’il est toujours possible d’interagir avec le contenu situé hors de la boîte de dialogue) ou modales (ce qui signifie qu’on ne peut interagir qu’avec le contenu de la boîte de dialogue).</p>
 
@@ -50,7 +50,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog
  <li>Quand la boîte de dialogue s’affiche à l’écran, le focus clavier devrait être placé sur le contrôle focalisable par défaut de la boîte de dialogue. Ce contrôle dépend de la fonction des boîtes de dialogue. Pour les boîtes de dialogue ne fournissant qu’un texte simple, ce pourra être un bouton « OK ». Pour les boîtes de dialogue contenant un formulaire, ce pourra être le premier champ à renseigner du formulaire.</li>
  <li>Pour la plupart des boîtes de dialogue, le comportement attendu est que l’ordre de tabulation de la boîte <em>tourne</em>, c’est-à-dire que le premier élément focalisable sera focalisé après que le dernier élément focalisable de la boîte de dialogue aura été atteint lorsque l’utilisateur tabule. En d’autres termes, l’ordre de tabulation doit être contenu par la boîte de dialogue.</li>
  <li>Si la boîte de dialogue peut être déplacée ou redimensionnée, assurez-vous que ces actions peuvent être exécutées par les utilisateurs de clavier tout comme les utilisateurs de souris. De la même façon, si une boîte de dialogue fournit certaines fonctionnalités, comme des barres d’outils ou des menus contextuels, celles-ci doivent également être accessibles et pouvoir être actionnées par les utilisateurs de clavier.</li>
- <li>Les boîtes de dialogue peuvent être modales ou non modales. Lorsqu’une boîte de dialogue <em>modale</em> s’affiche à l’écran, il n’est pas possible d’interagir avec le reste du contenu de la page. En d’autres termes, l’UI principale de l’application ou le contenu de la page est considéré comme temporairement désactivé tant que la boîte de dialogue modale est affichée. Pour les boîtes de dialogue <em>non modales</em> il est toujours possible d’interagir avec du contenu extérieur à la boîte lorsqu’elle est affichée. Pour les boîtes de dialogue non modales, il y devra toujours y avoir un raccourci clavier global permettant de déplacer le focus entre les boîtes de dialogue ouvertes et la page principale. Pour plus d’informations, lisez le guide <a href="/fr/docs/ARIA/Guides_ARIA/Gérer_les_dialogues_modaux_et_non_modaux" title="/en-US/docs/ARIA/Guides_ARIA/Managing_Modal_and_Non_Modal_Dialogs">Gérer les dialogues modaux et non modaux</a>.</li>
+ <li>Les boîtes de dialogue peuvent être modales ou non modales. Lorsqu’une boîte de dialogue <em>modale</em> s’affiche à l’écran, il n’est pas possible d’interagir avec le reste du contenu de la page. En d’autres termes, l’UI principale de l’application ou le contenu de la page est considéré comme temporairement désactivé tant que la boîte de dialogue modale est affichée. Pour les boîtes de dialogue <em>non modales</em> il est toujours possible d’interagir avec du contenu extérieur à la boîte lorsqu’elle est affichée. Pour les boîtes de dialogue non modales, il y devra toujours y avoir un raccourci clavier global permettant de déplacer le focus entre les boîtes de dialogue ouvertes et la page principale. Pour plus d’informations, lisez le guide <a href="/fr/docs/ARIA/Guides_ARIA/Gérer_les_dialogues_modaux_et_non_modaux">Gérer les dialogues modaux et non modaux</a>.</li>
 </ul>
 
 <h3 id="Effets_possibles_sur_les_agents_utilisateurs_et_les_technologies_d’assistance">Effets possibles sur les agents utilisateurs et les technologies d’assistance</h3>
@@ -119,7 +119,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog
 <h4 id="Exemples_concrets">Exemples concrets :</h4>
 
 <ul>
- <li><a class="external" href="http://jqueryui.com/demos/dialog/" title="http://jqueryui.com/demos/dialog/">jQuery-UI Dialog</a></li>
+ <li><a href="http://jqueryui.com/demos/dialog/">jQuery-UI Dialog</a></li>
 </ul>
 
 <h3 id="Notes">Notes</h3>
@@ -129,15 +129,15 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog
 <h3 id="Attributs_ARIA_utilisés">Attributs ARIA utilisés</h3>
 
 <ul>
- <li><a class="external" href="http://www.w3.org/TR/wai-aria/roles#dialog" title="http://www.w3.org/TR/wai-aria/roles#dialog">dialog (en)</a></li>
- <li><a class="external" href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby" title="http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby">aria-labelledby (en)</a></li>
- <li><a class="external" href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby" title="http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby">aria-describedby (en)</a></li>
+ <li><a href="http://www.w3.org/TR/wai-aria/roles#dialog">dialog (en)</a></li>
+ <li><a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby">aria-labelledby (en)</a></li>
+ <li><a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby">aria-describedby (en)</a></li>
 </ul>
 
 <h3 id="Techniques_ARIA_connexes">Techniques ARIA connexes</h3>
 
 <ul>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alertdialog" title="Utiliser le rôle alertdialog">Utiliser le rôle <code>alertdialog</code></a></li>
+ <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alertdialog">Utiliser le rôle <code>alertdialog</code></a></li>
 </ul>
 
 <h3 id="Compatibilité">Compatibilité</h3>

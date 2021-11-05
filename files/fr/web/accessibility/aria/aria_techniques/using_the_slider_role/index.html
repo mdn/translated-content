@@ -10,7 +10,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_slider
 ---
 <h3 id="Description">Description</h3>
 
-<p>Cette technique présente l’utilisation du rôle <a class="external" href="http://www.w3.org/TR/wai-aria/roles#slider" rel="external" title="http://www.w3.org/TR/wai-aria/roles#slider">slider</a>.</p>
+<p>Cette technique présente l’utilisation du rôle <a href="http://www.w3.org/TR/wai-aria/roles#slider">slider</a>.</p>
 
 <p>Le rôle <code>slider</code> est utilisé pour des balises qui permettent à l'utilisateur de sélectionner une valeur dans un intervalle donné. Le rôle <code>slider</code> est assigné à la « <em>molette</em> », le contrôle qui est ajusté pour modifier la valeur. Typiquement, un autre élément est stylé pour représenter visuellement l'intervalle de valeurs possibles, et le curseur est positionné visuellement pour représenter la valeur dans cet intervalle. Lorsque l'utilisateur interagit avec la molette, l'application doit programmatiquement ajuster l'attribut <code>aria-valuenow</code> du curseur de défilement (et si possible <code>aria-valuetext</code>) pour refléter la valeur courante. Voir la section {{ anch("Exemples") }} ci-dessous pour plus d'informations.</p>
 
@@ -93,11 +93,11 @@ var updateSlider = function (newValue) {
 <h3 id="Attributs_ARIA_utilisés">Attributs ARIA utilisés</h3>
 
 <ul>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemin" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute">aria-valuemin</a> ;</li>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemax" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute">aria-valuemax</a> ;</li>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuenow" title="Using the aria-label attribute">aria-valuenow</a> ;</li>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuetext" title="Using the aria-required attribute">aria-valuetext</a> ;</li>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-orientation" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute">aria-orientation</a>.</li>
+ <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemin">aria-valuemin</a> ;</li>
+ <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemax">aria-valuemax</a> ;</li>
+ <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuenow">aria-valuenow</a> ;</li>
+ <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuetext">aria-valuetext</a> ;</li>
+ <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-orientation">aria-orientation</a>.</li>
 </ul>
 
 <h3 id="Techniques_ARIA_connexes">Techniques ARIA connexes</h3>
@@ -109,5 +109,5 @@ var updateSlider = function (newValue) {
 <h3 id="Autres_ressources">Autres ressources</h3>
 
 <ul>
- <li><a class="external" href="http://www.w3.org/TR/wai-aria/roles#slider" title="http://www.w3.org/TR/wai-aria/roles#slider">Spécifications WAI-ARIA pour le rôle <code>slider</code></a></li>
+ <li><a href="http://www.w3.org/TR/wai-aria/roles#slider">Spécifications WAI-ARIA pour le rôle <code>slider</code></a></li>
 </ul>
