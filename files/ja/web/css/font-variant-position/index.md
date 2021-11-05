@@ -6,6 +6,8 @@ tags:
   - CSS フォント
   - CSS プロパティ
   - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.font-variant-position
 translation_of: Web/CSS/font-variant-position
 ---
 {{CSSRef}}
