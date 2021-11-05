@@ -83,7 +83,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_slider
 <pre class="brush: js">var dayNames = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
 var updateSlider = function (newValue) {
     var handle = document.getElementById("day-handle");
-    handle<span>.setAttribute(<span class="string">"aria-valuenow"</span><span>, </span><span class="string">newValue.toString()</span><span>);</span></span>
+    handle.setAttribute("aria-valuenow", newValue.toString());
     handle.setAttribute("aria-valuetext", dayNames[newValue]);
 };
 </pre>

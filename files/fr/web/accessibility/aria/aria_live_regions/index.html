@@ -8,11 +8,11 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Live_Regions
 original_slug: Accessibilité/ARIA/Zones_live_ARIA
 ---
-<h2 id="Introduction_2"><span class="mw-headline" id="Introduction">Introduction </span></h2>
+<h2 id="Introduction_2">Introduction </h2>
 
 <p>Dans le passé, un changement dans une page web débouchait souvent sur une relecture intégrale, ce qui agaçait souvent l’utilisateur, ou au contraire très peu ou pas de lecture du tout, rendant inaccessible une partie, voire l’ensemble des informations. Jusqu’à récemment, les lecteurs d’écran n’étaient en mesure d’améliorer cela du fait de l’absence d’éléments standardisés pour prévenir le lecteur d’écran d’un changement. Les zones « live » ARIA comblent cette lacune et fournissent des solutions aux lecteurs d’écran afin de savoir si et comment interrompre l'utilisateur lors d’un changement.</p>
 
-<h2 id="Zones_«_live_»_basiques"><span class="mw-headline" id="Live_Region_State">Zones « live » basiques</span></h2>
+<h2 id="Zones_«_live_»_basiques">Zones « live » basiques</h2>
 
 <p>Le contenu dynamique qui s’actualise sans rechargement de la page est généralement une zone ou un composant d’interface. Les changements de contenu simples, sans interaction possible, devraient être marqués comme des zones « live ». Ci-dessous, voici une liste de chaque propriété relative à une zone « live » ARIA et sa description.</p>
 
@@ -103,7 +103,7 @@ original_slug: Accessibilité/ARIA/Zones_live_ARIA
  <dd>L’attribut <code>aria-describedby=[LISTE_ID]</code> est utilisé pour associer une ou des descriptions à une zone. Le fonctionnement est similaire à celui d'<code>aria-controls </code>mais les références d'id pointent vers les textes descriptifs associés aux blocs identifiés, et les références multiples sont également séparées par un espace.</dd>
 </dl>
 
-<h3 id="Cas_d’étude_avancé_liste_de_contacts"><span class="mw-headline" id="Use_Case:_Roster">Cas d’étude avancé : liste</span> de contacts</h3>
+<h3 id="Cas_d’étude_avancé_liste_de_contacts">Cas d’étude avancé : liste de contacts</h3>
 
 <p>Un site de chat voudrait afficher la liste des utilisateurs actuellement connectés. L'affichage de la liste des utilisateurs doit alors refléter l’état de connexion ou de déconnexion des utilisateurs de manière dynamique (sans actualisation de la page).</p>
 
