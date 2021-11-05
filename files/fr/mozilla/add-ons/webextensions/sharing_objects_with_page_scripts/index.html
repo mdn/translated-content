@@ -54,7 +54,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/partage_d_objets_avec_des_scripts_d
 
 <p>Prenons un exemple simple. Supposons qu'une page Web charge un script:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -66,19 +66,19 @@ original_slug: Mozilla/Add-ons/WebExtensions/partage_d_objets_avec_des_scripts_d
 
 <p>Le script ajoute une propriété expando à la <code>fenêtre</code> globale :</p>
 
-<pre class="brush: js notranslate">// main.js
+<pre class="brush: js">// main.js
 
 var foo = "I'm defined in a page script!";</pre>
 
 <p>La vision Xray signifie que si un script de contenu tente d'accéder à <code>foo</code>, il sera indéfini:</p>
 
-<pre class="brush: js notranslate">// content-script.js
+<pre class="brush: js">// content-script.js
 
 console.log(window.foo); // undefined</pre>
 
 <p>Dans Firefox, les scripts de contenu peuvent utiliser <code>window.wrappedJSObject</code> pour voir la propriété expando :</p>
 
-<pre class="brush: js notranslate">// content-script.js
+<pre class="brush: js">// content-script.js
 
 console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"</pre>
 
@@ -86,7 +86,7 @@ console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"</pre
 
 <p>Notez également que le déballage est transitif: lorsque vous utilisez <code>wrappedJSObject</code>, toutes les propriétés de l'objet déplié sont elles-mêmes dépliées (et donc peu fiables). C'est donc une bonne pratique, une fois que vous avez l'objet dont vous avez besoin, de le réemballer, ce que vous pouvez faire comme ceci:</p>
 
-<pre class="bz_comment_text notranslate" id="comment_text_38">XPCNativeWrapper(window.wrappedJSObject.foo);</pre>
+<pre class="bz_comment_text" id="comment_text_38">XPCNativeWrapper(window.wrappedJSObject.foo);</pre>
 
 <p>voir le document <a href="/fr/Tech/Xray_vision">vision Xray</a> pour plus de détails à ce sujet.</p>
 
@@ -106,7 +106,7 @@ console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"</pre
 
 <p>Par exemple, considérons une extension qui a un script d'arrière-plan comme ceci :</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 Execute content script in the active tab.
 */
 function loadContentScript() {
@@ -142,7 +142,7 @@ browser.runtime.onMessage.addListener((message) =&gt; {
 
 <p>Le script de contenu ressemble à ceci :</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 Define a function in the content script's scope, then export it
 into the page script's scope.
 */
@@ -154,7 +154,7 @@ exportFunction(notify, window, {defineAs:'notify'});</pre>
 
 <p>Cela définit une fonction <code>notify()</code>, qui envoie simplement son argument au script d'arrière-plan. Il exporte ensuite la fonction vers la portée du script de page. Maintenant, le script de la page peut appeler cette fonction:</p>
 
-<pre class="brush: js notranslate">window.notify("Message from the page script!");</pre>
+<pre class="brush: js">window.notify("Message from the page script!");</pre>
 
 <p>Pour l'histoire complète, voir <code><a href="/fr/Tech/XPCOM/Language_Bindings/Components.utils.exportFunction">Components.utils.exportFunction</a></code>.</p>
 
@@ -164,7 +164,7 @@ exportFunction(notify, window, {defineAs:'notify'});</pre>
 
 <p>Par exemple, voici un script de contenu qui définit un objet contenant une fonction, puis le clone dans la portée du script de page :</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 Create an object that contains functions in
 the content script's scope, then clone it
 into the page script's scope.
@@ -188,7 +188,7 @@ window.wrappedJSObject.messenger = cloneInto(
 
 <p>Maintenant les scripts de page vont voir une nouvelle propriété sur la fenêtre, <code>messenger</code>, qui a une fonction <code>notify()</code>:</p>
 
-<pre class="brush: js notranslate">window.messenger.notify("Message from the page script!");</pre>
+<pre class="brush: js">window.messenger.notify("Message from the page script!");</pre>
 
 <p>Pour l'histoire complète, voir <code><a href="/fr/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto">Components.utils.cloneInto</a></code>.</p>
 
@@ -198,7 +198,7 @@ window.wrappedJSObject.messenger = cloneInto(
 
 <p>Puisque les objets créés de cette manière appartiennent déjà à la page et que le script de contenu ne les renvoie pas à la page, il ne nécessitera pas de clonage ou d'exportation supplémentaire.</p>
 
-<pre class="brush: js notranslate">/* javascript built-ins */
+<pre class="brush: js">/* javascript built-ins */
 
 const objA = new Object();
 const objB = new window.Object();

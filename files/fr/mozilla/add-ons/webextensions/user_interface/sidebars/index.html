@@ -20,7 +20,7 @@ Le navigateur peut inclure un certain nombre de barrières intégrées. Par exem
 
 <p>Un document pour un onglet particulier peut être défini en utilisant la fonction {{WebExtAPIRef("sidebarAction.setPanel()")}}. Une barre latérale peut comprendre quelle fenêtre elle appartient à l'utilisation de l'API  {{WebExtAPIRef("windows.getCurrent()")}} :</p>
 
-<pre class="brush: js notranslate">// sidebar.js
+<pre class="brush: js">// sidebar.js
 browser.windows.getCurrent({populate: true}).then((windowInfo) =&gt; {
   myWindowId = windowInfo.id;
 });</pre>
@@ -37,7 +37,7 @@ browser.windows.getCurrent({populate: true}).then((windowInfo) =&gt; {
 
 <p>Pour spécifier une barre latérale, définissez le document par défaut avec la clé du manifest.json  <code><a href="/fr/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code>, à côté d'un titre et d'une icône par défaut :</p>
 
-<pre class="brush: json notranslate">"sidebar_action": {
+<pre class="brush: json">"sidebar_action": {
   "default_title": "My sidebar",
   "default_panel": "sidebar.html",
   "default_icon": "sidebar_icon.png"
