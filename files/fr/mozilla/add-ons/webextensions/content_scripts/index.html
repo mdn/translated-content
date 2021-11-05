@@ -38,9 +38,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
  <li>testpilot.firefox.com</li>
 </ul>
 
-<p>If you try to inject a content script into a page in these domains, it will fail and the page will log a <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> error.</p>
+<p>If you try to inject a content script into a page in these domains, it will fail and the page will log a <a href="/fr/docs/Web/HTTP/CSP">CSP</a> error.</p>
 
-<p>Because these restrictions include addons.mozilla.org, users may attempt to use your extension immediately after installation—only to find that it doesn't work! You may want to add an appropriate warning, or an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices">onboarding page</a> to move users away from addons.mozilla.org.</p>
+<p>Because these restrictions include addons.mozilla.org, users may attempt to use your extension immediately after installation—only to find that it doesn't work! You may want to add an appropriate warning, or an <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices">onboarding page</a> to move users away from addons.mozilla.org.</p>
 </div>
 
 <div class="note">
@@ -59,7 +59,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 
 <p>Il n'y a qu'une seule portée globale pour chaque <em>frame</em> et pour chaque extension. Cela signifie que les variables d'un script de contenu peuvent être accédées directement par un autre script de contenu, indépendamment de la manière dont le script de contenu a été chargé.</p>
 
-<p>À l'aide des méthodes (1) et (2), vous ne pouvez charger des scripts que dans des pages dont les URL peuvent être représentées par un <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">motif de correspondance</a>.</p>
+<p>À l'aide des méthodes (1) et (2), vous ne pouvez charger des scripts que dans des pages dont les URL peuvent être représentées par un <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">motif de correspondance</a>.</p>
 
 <p>En utilisant la méthode (3), vous pouvez également charger des scripts dans des pages packagées avec votre extension, mais vous ne pouvez pas charger des scripts dans des pages privilégiées du navigateur (comme <code><a>about:debugging</a></code> ou <code><a>about:addons</a></code>).</p>
 
@@ -141,7 +141,7 @@ window.confirm("Êtes-vous sûr ?"); // appelle la méthode window.confirm() ori
 <div class="blockIndicator note">
 <p><strong>Note:</strong> Firefox <em>fournis</em> certaines API qui permettent aux scripts de contenu d'accéder aux objets JavaScript créés par les scripts de page et d'exposer leurs propres objets JavaScript aux scripts de page.</p>
 
-<p>Voir <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts">Partage d'objets avec des scripts de page</a> pour plus de détails.***</p>
+<p>Voir <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts">Partage d'objets avec des scripts de page</a> pour plus de détails.***</p>
 </div>
 
 <h3 id="Les_API_WebExtension_accessibles">Les API WebExtension accessibles</h3>

@@ -14,7 +14,7 @@ original_slug: Utilisation_du_cache_de_Firefox_1.5
 
 <h3 id="Introduction" name="Introduction">Introduction</h3>
 
-<p><a href="/fr/Firefox_1.5_pour_les_développeurs" title="fr/Firefox_1.5_pour_les_développeurs">Firefox 1.5</a> met en mémoire cache des pages Web entières, avec leurs états JavaScript, pour une même session de navigation. Revenir ou avancer entre des pages déjà visitées ne nécessite aucun chargement de page et les états JavaScript sont préservés. Cette fonctionnalité parfois appelée <strong>bfcache</strong> (pour « Back-Forward Cache ») rend la navigation très rapide. Ce cache est préservé en mémoire jusqu'à ce que l'utilisateur ferme le navigateur.</p>
+<p><a href="/fr/Firefox_1.5_pour_les_développeurs">Firefox 1.5</a> met en mémoire cache des pages Web entières, avec leurs états JavaScript, pour une même session de navigation. Revenir ou avancer entre des pages déjà visitées ne nécessite aucun chargement de page et les états JavaScript sont préservés. Cette fonctionnalité parfois appelée <strong>bfcache</strong> (pour « Back-Forward Cache ») rend la navigation très rapide. Ce cache est préservé en mémoire jusqu'à ce que l'utilisateur ferme le navigateur.</p>
 
 <p>Il existe des cas où Firefox ne met pas en cache les pages. Vous trouverez ci-dessous certaines raisons classiques de programmation faisant qu'une page n'est pas mise en cache :</p>
 
@@ -185,6 +185,6 @@ function loadOnlyFirst() {
 
 <h3 id="D.C3.A9veloppement_d.27extensions_pour_Firefox" name="D.C3.A9veloppement_d.27extensions_pour_Firefox">Développement d'extensions pour Firefox</h3>
 
-<p>Les <a href="/fr/Construire_une_extension" title="fr/Construire_une_extension">extensions</a> pour Firefox 1.5 doivent prendre en compte cette fonctionnalité de mise en cache. Si vous développez une extension pour Firefox et que vous désirez qu'elle soit compatible à la fois avec la 1.5 et les versions antérieures, assurez-vous qu'elle écoute l'évènement <code>load</code> pour les déclencheurs qui peuvent être mis en cache et écoute l'évènement <code>pageshow</code> pour les déclencheurs qui ne doivent pas être mis en cache.</p>
+<p>Les <a href="/fr/Construire_une_extension">extensions</a> pour Firefox 1.5 doivent prendre en compte cette fonctionnalité de mise en cache. Si vous développez une extension pour Firefox et que vous désirez qu'elle soit compatible à la fois avec la 1.5 et les versions antérieures, assurez-vous qu'elle écoute l'évènement <code>load</code> pour les déclencheurs qui peuvent être mis en cache et écoute l'évènement <code>pageshow</code> pour les déclencheurs qui ne doivent pas être mis en cache.</p>
 
 <p>Par exemple, la Barre d'outils Google pour Firefox doit écouter l'évènement <code>load</code> pour la fonction de liens automatiques et l'évènement <code>pageshow</code> pour la fonction PageRank afin d'être compatible à la fois avec la version 1.5 et les versions antérieures.</p>

@@ -73,7 +73,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 
     <p>Utilisez-le pour inclure une feuille de style dans votre popup qui le rendra cohérent avec l'interface utilisateur du navigateur et avec d'autres extensions qui utilisent la propriété <code>browser_style</code>. Bien que cette touche par défaut soit <code>false</code>, il est recommandé de l'inclure et de la mettre à <code>true</code> afin de rendre vos fenêtres contextuelles cohérentes avec l'apparence du reste de l'interface utilisateur du navigateur.</p>
 
-    <p>Dans Firefox, la feuille de style peut être vue à chrome://browser/content/extension.css, ou chrome://browser/content/extension-mac.css sur OS X. Lorsque vous définissez les dimensions, sachez que cette feuille de style définit actuellement  <code>box-sizing: border-box</code> (voir <a href="https://developer.mozilla.org/docs/Web/CSS/box-sizing">box-sizing</a>).</p>
+    <p>Dans Firefox, la feuille de style peut être vue à chrome://browser/content/extension.css, ou chrome://browser/content/extension-mac.css sur OS X. Lorsque vous définissez les dimensions, sachez que cette feuille de style définit actuellement  <code>box-sizing: border-box</code> (voir <a href="/docs/Web/CSS/box-sizing">box-sizing</a>).</p>
 
     <p>Les <a href="/fr/Add-ons/WebExtensions/user_interface/Browser_styles">Browser styles</a> décrivent les classes que vous pouvez appliquer aux éléments dans le popup afin d'obtenir des styles particuliers.</p>
 
@@ -136,7 +136,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
    <td>
     <p>Le chemin d'accès à un fichier HTML contenant la spécification de la fenêtre contextuelle.</p>
 
-    <p>Le fichier HTML peut inclure des fichiers CSS et JavaScript en utilisant des éléments <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> et <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code>, tout comme une page Web normale. Cependant, <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> doit avoir l'attribut <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">src</a></code> pour charger un fichier. N'utilisez pas <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> avec du code intégré, car vous obtiendrez une erreur de politique de violation de contenu confuse.</p>
+    <p>Le fichier HTML peut inclure des fichiers CSS et JavaScript en utilisant des éléments <code><a href="/fr/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> et <code><a href="/fr/docs/Web/HTML/Element/script">&lt;script&gt;</a></code>, tout comme une page Web normale. Cependant, <code><a href="/fr/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> doit avoir l'attribut <code><a href="/fr/docs/Web/HTML/Element/script">src</a></code> pour charger un fichier. N'utilisez pas <code><a href="/fr/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> avec du code intégré, car vous obtiendrez une erreur de politique de violation de contenu confuse.</p>
 
     <p>Contrairement à une page Web normale, JavaScript en cours d'exécution dans la fenêtre contextuelle peut accéder à toutes les <a href="/fr/Add-ons/WebExtensions/API">APIs WebExtension</a> (soumis, bien sûr, à l'extension possédant les <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a> appropriées).</p>
 

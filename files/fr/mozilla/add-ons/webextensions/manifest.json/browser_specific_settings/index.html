@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
   <tr>
    <th scope="row">Obligatoire</th>
    <td>
-    <p>Habituellement, non (mais voir aussi <a href="https://developer.mozilla.org/fr/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID">Quand avec-vous besoin d'une ID Complémentaire</a><a href="https://developer.mozilla.org/fr/Add-ons/WebExtensions/manifest.json/applications#When_do_I_need_the_applications_key">?</a>). Obligatoire avant Firefox 48 (desktop) et Firefox pour Android.</p>
+    <p>Habituellement, non (mais voir aussi <a href="/fr/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID">Quand avec-vous besoin d'une ID Complémentaire</a><a href="/fr/Add-ons/WebExtensions/manifest.json/applications#When_do_I_need_the_applications_key">?</a>). Obligatoire avant Firefox 48 (desktop) et Firefox pour Android.</p>
    </td>
   </tr>
   <tr>
@@ -51,7 +51,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
  <li><code>strict_min_version </code>: la version minimum de Gecko supportée. Les versions contenant un "*" ne sont pas valides dans ce domaine. Par défaut, c'est "42a1".</li>
  <li><code>strict_max_version</code> : la version maximum de Gecko supportée. Si la version de Firefox sur laquelle l'extension est en cours d'installation ou d'exécution est au-dessus de cette version, l'extension sera désactivée ou ne sera pas autorisée à être installée. Par défaut, c'est "*", qui désactive la vérification d'une version maximale.</li>
  <li>
-  <p><code>update_url</code> est lien vers un <a href="https://developer.mozilla.org/fr-FR/Add-ons/Install_Manifests#updateURL">manifeste de mise à jour personnalisé</a>. Notez que le lien doit commencer par "https". Cette clé consiste à gérer vous-même les mises à jour d'extension (c'est-à-dire pas via AMO).</p>
+  <p><code>update_url</code> est lien vers un <a href="/fr-FR/Add-ons/Install_Manifests#updateURL">manifeste de mise à jour personnalisé</a>. Notez que le lien doit commencer par "https". Cette clé consiste à gérer vous-même les mises à jour d'extension (c'est-à-dire pas via AMO).</p>
  </li>
 </ul>
 
@@ -62,7 +62,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
 <p>L'ID d'extension doit être l'un des suivants :</p>
 
 <ul>
- <li><a href="https://en.wikipedia.org/wiki/Universally_unique_identifier" title="Generating_GUIDs">GUID</a></li>
+ <li><a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">GUID</a></li>
  <li>Une chaîne formatée comme une adresse e-mail : <code class="plain">extensionname@example.org</code></li>
 </ul>
 
@@ -85,11 +85,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
 <dl>
  <dt><code>browser_action_next_to_addressbar</code></dt>
  <dd>
- <p>Propriété booléenne qui contrôle le placement de l'<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_actions">action du navigateur</a>.</p>
+ <p>Propriété booléenne qui contrôle le placement de l'<a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_actions">action du navigateur</a>.</p>
 
  <ul>
-  <li><code>true</code> est équivalent à la définition <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#Syntax">browser_action.default_area</a></code> à <code>navbar</code>.</li>
-  <li><code>false</code> is équivalent à la définition <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#Syntax">browser_action.default_area</a></code> à <code>menupanel</code>.</li>
+  <li><code>true</code> est équivalent à la définition <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#Syntax">browser_action.default_area</a></code> à <code>navbar</code>.</li>
+  <li><code>false</code> is équivalent à la définition <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#Syntax">browser_action.default_area</a></code> à <code>menupanel</code>.</li>
  </ul>
  </dd>
 </dl>

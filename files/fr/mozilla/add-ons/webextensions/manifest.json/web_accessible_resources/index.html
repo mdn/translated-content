@@ -35,7 +35,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resou
 
 <p>Parfois, vous souhaitez associer certaines ressources - par exemple, images, HTML, CSS ou JavaScript - avec votre extension pour les mettre à la disposition des pages Web.</p>
 
-<p>Par exemple, l'<a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">extensions d'exemple "beastify"</a> remplace une page web par une image d'une bête sélectionnée par l'utilisateur. Les images de la bête sont emballées avec l'extension. Pour rendre visible l'image sélectionnée, l'extension ajoute  <code><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> des éléments dont l'attribut <code>src</code> pointe sur l'image de la bête. Pour que la page Web puisse charger les images, elles doivent être rendues accessibles sur le Web.</p>
+<p>Par exemple, l'<a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">extensions d'exemple "beastify"</a> remplace une page web par une image d'une bête sélectionnée par l'utilisateur. Les images de la bête sont emballées avec l'extension. Pour rendre visible l'image sélectionnée, l'extension ajoute  <code><a href="/fr/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> des éléments dont l'attribut <code>src</code> pointe sur l'image de la bête. Pour que la page Web puisse charger les images, elles doivent être rendues accessibles sur le Web.</p>
 
 <p>Avec la clé <code>web_accessible_resources</code> liste toutes les ressources packagées que vous souhaitez mettre à la disposition des pages Web. Vous les spécifiez comme chemins relatifs dans le fichier manifest.json.</p>
 
@@ -67,7 +67,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resou
 <p>Dans Chrome, l'ID d'une extension est fixe. Quand une ressource est listée dans  <code>web_accessible_resources</code>, elle est accessible comme <code>chrome-extension://&lt;your-extension-id&gt;/&lt;path/to/resource&gt;</code>.  </p>
 </div>
 
-<p>L'approche recommandée pour obtenir l'URL de la ressource est d'utiliser <code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/runtime/getURL">runtime.getURL</a></code> en passant le chemin relatif à manifest.json, par exemple :</p>
+<p>L'approche recommandée pour obtenir l'URL de la ressource est d'utiliser <code><a href="/fr/Add-ons/WebExtensions/API/runtime/getURL">runtime.getURL</a></code> en passant le chemin relatif à manifest.json, par exemple :</p>
 
 <pre class="brush: js no-line-numbers">browser.runtime.getURL("images/my-image.png");
 // something like:

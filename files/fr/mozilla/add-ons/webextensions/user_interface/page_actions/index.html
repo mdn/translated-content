@@ -30,7 +30,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
  </li>
  <li>La visibilité du bouton <strong>:</strong>
   <ul>
-   <li>L'action page est masquée par défaut (bien que cette valeur par défaut puisse être modifiée via les propriétés <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/page_action">manifest </a>des clés <code>show_matches</code> et <code>hide_matches</code>), et vous appelez <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/show" title="Shows the page action for a given tab. The page action is shown whenever the given tab is the active tab."><code>pageAction.show()</code></a> et <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/hide" title="Hides the page action for a given tab."><code>pageAction.hide()</code></a> pour l'afficher ou la masquer dans des onglets spécifiques.</li>
+   <li>L'action page est masquée par défaut (bien que cette valeur par défaut puisse être modifiée via les propriétés <a href="/fr/Add-ons/WebExtensions/manifest.json/page_action">manifest </a>des clés <code>show_matches</code> et <code>hide_matches</code>), et vous appelez <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/show"><code>pageAction.show()</code></a> et <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/hide"><code>pageAction.hide()</code></a> pour l'afficher ou la masquer dans des onglets spécifiques.</li>
    <li>L'action du navigateur est toujours affichée.</li>
   </ul>
  </li>
@@ -67,7 +67,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 
 <h2 id="Spécification_de_l'action_de_la_page">Spécification de l'action de la page</h2>
 
-<p>Vous définissez les propriétés de la clé de l'<code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">action de page</a></code> dans le manifest.json:</p>
+<p>Vous définissez les propriétés de la clé de l'<code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">action de page</a></code> dans le manifest.json:</p>
 
 <pre class="brush: json line-numbers  language-json"><code class="language-json">"page_action": {
   "browser_style": true,
@@ -80,19 +80,19 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 
 <p>La seule clé obligatoire est <code>default_icon</code>.</p>
 
-<p>Il y a deux façons de spécifier une action de page : avec ou sans <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Popups">popup</a>.</p>
+<p>Il y a deux façons de spécifier une action de page : avec ou sans <a href="/fr/Add-ons/WebExtensions/Popups">popup</a>.</p>
 
 <ul>
- <li><strong>Sans popup:</strong> Lorsque l'utilisateur clique sur le bouton, un événement est envoyé à l'extension, que l'extension écoute pour utiliser <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>pageAction.onClicked</code></a>:</li>
+ <li><strong>Sans popup:</strong> Lorsque l'utilisateur clique sur le bouton, un événement est envoyé à l'extension, que l'extension écoute pour utiliser <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked"><code>pageAction.onClicked</code></a>:</li>
  <li>
   <pre class="brush: js line-numbers  language-js"><code class="language-js">browser.pageAction.onClicked.addListener(handleClick);</code></pre>
  </li>
- <li><strong>Avec un popup:</strong> L'événement <code>click</code> n'est pas envoyé. Au lieu de cela, le popup apparaît lorsque l'utilisateur clique sur le bouton. L'utilisateur interagit alors avec le popup. Lorsque l'utilisateur clique à l'extérieur de la fenêtre contextuelle, celle-ci se ferme automatiquement. Voir l'article <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Popups">Popup </a>pour plus de détails sur la création et la gestion des popups.</li>
+ <li><strong>Avec un popup:</strong> L'événement <code>click</code> n'est pas envoyé. Au lieu de cela, le popup apparaît lorsque l'utilisateur clique sur le bouton. L'utilisateur interagit alors avec le popup. Lorsque l'utilisateur clique à l'extérieur de la fenêtre contextuelle, celle-ci se ferme automatiquement. Voir l'article <a href="/fr/Add-ons/WebExtensions/Popups">Popup </a>pour plus de détails sur la création et la gestion des popups.</li>
 </ul>
 
 <p>Notez que votre extension ne peut avoir qu'une seule page action.</p>
 
-<p>Vous pouvez modifier l'une des propriétés d'action de la page de manière programmée en utilisant l'API de la <code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">pageAction</a></code>.</p>
+<p>Vous pouvez modifier l'une des propriétés d'action de la page de manière programmée en utilisant l'API de la <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">pageAction</a></code>.</p>
 
 <h2 id="Icônes">Icônes</h2>
 

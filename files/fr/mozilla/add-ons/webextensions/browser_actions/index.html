@@ -13,7 +13,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Browser_actions
 
 <p>Il existe deux façons de spécifier une action du navigateur : avec une <a href="/fr/Add-ons/WebExtensions/Popups">fenêtre contextuelle</a>, ou sans fenêtre contextuelle.</p>
 
-<p>Si vous ne spécifiez pas de popup, alors lorsque l'utilisateur clique sur le bouton, un événement est envoyé à l'extension, que vous pouvez écouter à l'aide de <a href="/fr/Add-ons/WebExtensions/API/BrowserAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>browserAction.onClicked</code></a>:</p>
+<p>Si vous ne spécifiez pas de popup, alors lorsque l'utilisateur clique sur le bouton, un événement est envoyé à l'extension, que vous pouvez écouter à l'aide de <a href="/fr/Add-ons/WebExtensions/API/BrowserAction/onClicked"><code>browserAction.onClicked</code></a>:</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">browser.browserAction.onClicked.addListener(handleClick);</code></pre>
 

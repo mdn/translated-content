@@ -18,9 +18,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 
 <p>Injecter du code CSS dans une page web.</p>
 
-<p>Pour utiliser cette API vous devez avoir la permission "<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a>" ou utiliser la permission "<a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">activeTab permission</a>".</p>
+<p>Pour utiliser cette API vous devez avoir la permission "<a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a>" ou utiliser la permission "<a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">activeTab permission</a>".</p>
 
-<p>Vous ne pouvez injecter du CSS que dans des pages dont l'URL peut être exprimée en utilisant un <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">motif de correspondance</a>,  ce qui signifie que son schéma doit être "http", "https", "file", "ftp". Cela signifie que vous ne pouvez pas injecter de CSS dans les pages intégrées du navigateur, telles que about:debugging, about:addons, ou la page qui s'ouvre lorsque vous ouvrez un nouvel onglet vide.</p>
+<p>Vous ne pouvez injecter du CSS que dans des pages dont l'URL peut être exprimée en utilisant un <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">motif de correspondance</a>,  ce qui signifie que son schéma doit être "http", "https", "file", "ftp". Cela signifie que vous ne pouvez pas injecter de CSS dans les pages intégrées du navigateur, telles que about:debugging, about:addons, ou la page qui s'ouvre lorsque vous ouvrez un nouvel onglet vide.</p>
 
 <div class="blockIndicator note">
 <p>Firefox résout les URL dans les fichiers CSS injectés par rapport au fichier CSS lui-même, plutôt qu'à la page dans laquelle il est injecté.</p>
@@ -28,7 +28,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 
 <p>Le CSS inséré peut être retiré à nouveau en appelant  {{WebExtAPIRef("tabs.removeCSS()")}}.</p>
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> (sur Firefox seulement).</p>
+<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> (sur Firefox seulement).</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -52,7 +52,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
   <dt><code>code</code>{{optional_inline}}</dt>
   <dd><code>string</code>. Code à injecter, sous la forme d'une chaîne de texte.</dd>
   <dt><code>cssOrigin</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Cela peut prendre l'une des deux valeurs suivantes: "utilisateur", pour ajouter le CSS en tant que feuille de style utilisateur, ou "auteur" pour l'ajouter en tant que feuille de style auteur. Spécifier "utilisateur" vous permet d'empêcher les sites Web de surcharger le CSS que vous insérez: voir <a href="/en-US/docs/Web/CSS/Cascade#Cascading_order">la commande en cascade</a>. Si cette option est omise, le CSS est ajouté en tant que feuille de style auteur.</dd>
+  <dd><code>string</code>. Cela peut prendre l'une des deux valeurs suivantes: "utilisateur", pour ajouter le CSS en tant que feuille de style utilisateur, ou "auteur" pour l'ajouter en tant que feuille de style auteur. Spécifier "utilisateur" vous permet d'empêcher les sites Web de surcharger le CSS que vous insérez: voir <a href="/fr/docs/Web/CSS/Cascade#Cascading_order">la commande en cascade</a>. Si cette option est omise, le CSS est ajouté en tant que feuille de style auteur.</dd>
   <dt><code>file</code>{{optional_inline}}</dt>
   <dd><code>string</code>. Chemin d'accès à un fichier contenant le code à injecter. Dans Firefox, les URL relatives sont résolues par rapport à l'URL de la page en cours. Dans Chrome, ces URL sont résolues par rapport à l'URL de base de l'extension. Pour travailler avec plusieurs navigateurs, vous pouvez spécifier le chemin comme une URL absolue, en commençant à la racine de l'extension, comme ceci : <code>"/path/to/stylesheet.css"</code>.</dd>
   <dt><code>frameId</code>{{optional_inline}}</dt>
@@ -67,7 +67,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 
 <h3 id="Valeur_retournée">Valeur retournée</h3>
 
-<p>Une <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> qui sera remplie sans arguments lorsque tous les CSS ont été insérés. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> qui sera remplie sans arguments lorsque tous les CSS ont été insérés. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
 
 <h2 id="Exemples">Exemples</h2>
 

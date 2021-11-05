@@ -19,7 +19,7 @@ translation_of: Mozilla/Firefox/Releases/29
 
 <ul>
  <li>Console web largement améliorée - Les tableaux sont affichés en lgne sans cliquer pour faire apparaître l'inspecteur de droite, les objets de fenêtre affichent leur URL, etc.</li>
- <li>Ajout de l'<a href="https://developer.mozilla.org/docs/Web/API/console">API console</a> aux Web Workers (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=620935">bug 620935</a>). Vous pouvez désormais consigner les messages dans la console Web à partir de Web Workers.</li>
+ <li>Ajout de l'<a href="/docs/Web/API/console">API console</a> aux Web Workers (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=620935">bug 620935</a>). Vous pouvez désormais consigner les messages dans la console Web à partir de Web Workers.</li>
  <li>L'outil <a href="/fr/docs/Outils/Moniteur_réseau">Moniteur réseau</a> affiche désormais des statistiques de performances à l'aide de graphiques à secteurs ({{bug(846601)}}).</li>
  <li>Sur l'<a href="/fr/docs/Outils/Inspecteur">inspecteur</a>, des info-bulles d'aperçu des transformations CSS sont désormais disponibles ({{bug(726427)}}).</li>
  <li>Les éléments DOM vus dans le débogueur et la console peuvent être supprimés ou inspectés directement, via les nouveaux boutons à droite de la liste des variables.</li>
@@ -27,7 +27,7 @@ translation_of: Mozilla/Firefox/Releases/29
  <li>L'Autocompletion des propriétés et valeurs CSS a été ajoutée à l'<a href="/fr/docs/Outils/Éditeur_de_style">éditeur de style</a> ({{bug(717369)}}).</li>
 </ul>
 
-<p><em>Consultez l'<a href="https://hacks.mozilla.org/2014/02/css-source-map-support-network-performance-analysis-more-firefox-developer-tools-episode-29/" title="CSS source map support, network performance analysis &amp; more – Firefox Developer Tools Episode 29 ✩ Mozilla Hacks – the Web developer blog">article du blog Mozilla Hacks</a> pour plus de détails et d'autres changements mineurs.</em></p>
+<p><em>Consultez l'<a href="https://hacks.mozilla.org/2014/02/css-source-map-support-network-performance-analysis-more-firefox-developer-tools-episode-29/">article du blog Mozilla Hacks</a> pour plus de détails et d'autres changements mineurs.</em></p>
 
 <h3 id="CSS">CSS</h3>
 
@@ -77,7 +77,7 @@ translation_of: Mozilla/Firefox/Releases/29
  </li>
  <li>Pour correspondre au projet de spécification ECMAScript6 mis à jour, les objets {{jsxref("Map")}} et {{jsxref("Set")}} traitent désormais <code>-0</code> et <code>+0</code> comme étant identiques lors de la vérification de l'égalité des clés et des valeurs.</li>
  <li>La <code>Promise</code> a été activée par défaut ({{bug(918806)}}).</li>
- <li>Les <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">générateurs</a> terminés renvoient maintenant un objet <code>IteratorResult</code> au lieu de lancer ({{bug(958951)}}).</li>
+ <li>Les <a href="/fr/docs/Web/JavaScript/Reference/Statements/function*">générateurs</a> terminés renvoient maintenant un objet <code>IteratorResult</code> au lieu de lancer ({{bug(958951)}}).</li>
  <li>Une chaîne JSON malformée analysée par {{jsxref("JSON.parse()")}} renvoie désormais un message d'erreur plus détaillé contenant le numéro de ligne et de colonne à l'origine de l'erreur d'analyse. Ceci est utile lors du débogage de données JSON volumineuses.</li>
  <li>La méthode {{jsxref("ArrayBuffer.isView()")}} a été ajoutée ({{bug(896105)}}).</li>
 </ul>
@@ -120,7 +120,7 @@ translation_of: Mozilla/Firefox/Releases/29
 <h2 id="Modifications_pour_les_développeurs_dadd-on_et_Mozilla">Modifications pour les développeurs d'add-on et Mozilla</h2>
 
 <ul>
- <li><a href="/en-US/Firefox/Australis_add-on_compat">Compatibilité Australis et add-on</a> - Il s'agit d'un changement majeur de thème Firefox qui affecte la plupart des extensions impliquant l'interface utilisateur de Firefox.</li>
+ <li><a href="/fr/Firefox/Australis_add-on_compat">Compatibilité Australis et add-on</a> - Il s'agit d'un changement majeur de thème Firefox qui affecte la plupart des extensions impliquant l'interface utilisateur de Firefox.</li>
  <li><code>nsISecurityCheckedComponent</code> a été supprimé ({{bug(794943)}}). La plupart des consommateurs peuvent simplement supprimer nsISecurityCheckedComponent de leur définition d'interface et ils continueront à fonctionner.</li>
 </ul>
 

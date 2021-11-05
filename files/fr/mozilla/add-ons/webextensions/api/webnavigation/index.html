@@ -47,7 +47,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation
 
 <p>L'écouteur d'événement <code>onCommitted</code>reçoit deux propriétés supplémentaires : un {{WebExtAPIRef("webNavigation.TransitionType","TransitionType")}} indiquant la cause de la navigation (par exemple, parce que l'utilisateur a cliqué sur un lien ou parce que l'utilisateur a sélectionné un signet), et un  {{WebExtAPIRef("webNavigation.TransitionQualifier","TransitionQualifier")}} fournissant plus d'informations sur la navigation.</p>
 
-<p>Pour utiliser cette API, vous devez avoir la <a href="https://developer.mozilla.org/fr/Add-ons/WebExtensions/manifest.json/permissions">permission</a> "webNavigation".</p>
+<p>Pour utiliser cette API, vous devez avoir la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission</a> "webNavigation".</p>
 
 <h2 id="Types">Types</h2>
 
@@ -64,7 +64,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation
 
 <dl>
  <dt>{{WebExtAPIRef("webNavigation.getFrame()")}}</dt>
- <dd>Récupère des informations sur un cadre particulier. Ce cadre peut être le cadre de niveau supérieur dans un onglet ou un <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/iframe">iframe</a> imbriqué, et est identifié de manière unique par un ID d'onglet et un ID de <em>frame</em>.</dd>
+ <dd>Récupère des informations sur un cadre particulier. Ce cadre peut être le cadre de niveau supérieur dans un onglet ou un <a href="/fr/docs/Web/HTML/Element/iframe">iframe</a> imbriqué, et est identifié de manière unique par un ID d'onglet et un ID de <em>frame</em>.</dd>
  <dt>{{WebExtAPIRef("webNavigation.getAllFrames()")}}</dt>
  <dd>
  <p>Étant donné un ID d'onglet, récupère des informations sur tous les cadres qu'il contient.</p>
@@ -81,9 +81,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation
  <dt>{{WebExtAPIRef("webNavigation.onCommitted")}}</dt>
  <dd>Lancé lorsqu'une navigation est validée. Au moins une partie du nouveau document a été reçue du serveur et le navigateur a décidé de passer au nouveau document.</dd>
  <dt>{{WebExtAPIRef("webNavigation.onDOMContentLoaded")}}</dt>
- <dd>Lancé lorsque l'événement <a href="https://developer.mozilla.org/fr/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a> est déclenché dans la page.</dd>
+ <dd>Lancé lorsque l'événement <a href="/fr/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a> est déclenché dans la page.</dd>
  <dt>{{WebExtAPIRef("webNavigation.onCompleted")}}</dt>
- <dd>Lancé lorsqu'un document, y compris les ressources auxquelles il fait référence, est complètement chargé et initialisé. Ceci est équivalent à l'événement de <code><a href="https://developer.mozilla.org/fr/docs/Web/Events/load">chargement</a></code> du DOM.</dd>
+ <dd>Lancé lorsqu'un document, y compris les ressources auxquelles il fait référence, est complètement chargé et initialisé. Ceci est équivalent à l'événement de <code><a href="/fr/docs/Web/Events/load">chargement</a></code> du DOM.</dd>
  <dt>{{WebExtAPIRef("webNavigation.onErrorOccurred")}}</dt>
  <dd>Lancé lorsqu'une erreur se produit et que la navigation est annulée. Cela peut se produire si une erreur réseau s'est produite ou si l'utilisateur a interrompu la navigation.</dd>
  <dt>{{WebExtAPIRef("webNavigation.onCreatedNavigationTarget")}}</dt>

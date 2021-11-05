@@ -21,9 +21,9 @@ translation_of: Mozilla/Firefox/Releases/42
 <p>Points forts:</p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_over_Wifi">Débogage de Firefox pour Android via Wifi</a></li>
- <li><a href="/en-US/docs/Tools/WebIDE/Setting_up_runtimes#Configuring_Simulators">Configuration de Firefox OS Simulator dans WebIDE</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters#Saving_filter_presets">Préréglages de filtre CSS</a></li>
+ <li><a href="/fr/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_over_Wifi">Débogage de Firefox pour Android via Wifi</a></li>
+ <li><a href="/fr/docs/Tools/WebIDE/Setting_up_runtimes#Configuring_Simulators">Configuration de Firefox OS Simulator dans WebIDE</a></li>
+ <li><a href="/fr/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters#Saving_filter_presets">Préréglages de filtre CSS</a></li>
 </ul>
 
 <p><a class="external external-icon" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Client%20Software&amp;chfieldto=2015-08-10&amp;query_format=advanced&amp;chfield=resolution&amp;chfieldfrom=2015-06-29&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%203D%20View&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&amp;component=Developer%20Tools%3A%20Responsive%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Storage%20Inspector&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;component=Developer%20Tools%3A%20WebIDE&amp;product=Firefox&amp;list_id=12478437">Tous les bogues devtools corrigés entre Firefox 41 et Firefox 42</a>.</p>
@@ -75,14 +75,14 @@ translation_of: Mozilla/Firefox/Releases/42
 
 <ul>
  <li>{{domxref('Request.context')}} a été supprimé ({{bug(1188062)}}).</li>
- <li>L'<a href="/en-US/docs/Web/API/Push_API">API Push</a> a été activée par défaut sur Firefox pour bureau ({{bug(1153499)}}), mais uniquement sur les canaux Nightly/Dev Edition/Beta. Elle est désactivée par défaut dans le canal Release jusqu'à ce que l'UX grand public et les fonctionnalit"s de débogage aient été correctement implémentées ({{bug(1207875)}}). Vous pouvez toujours l'activer en activant la préférence <code>dom.push.enabled</code> dans <a>about:config</a>.</li>
+ <li>L'<a href="/fr/docs/Web/API/Push_API">API Push</a> a été activée par défaut sur Firefox pour bureau ({{bug(1153499)}}), mais uniquement sur les canaux Nightly/Dev Edition/Beta. Elle est désactivée par défaut dans le canal Release jusqu'à ce que l'UX grand public et les fonctionnalit"s de débogage aient été correctement implémentées ({{bug(1207875)}}). Vous pouvez toujours l'activer en activant la préférence <code>dom.push.enabled</code> dans <a>about:config</a>.</li>
  <li>La méthode {{domxref("PushManager.hasPermission()")}} a été désapprouvée dans la spécification et remplacée par la méthode {{domxref("PushManager.permissionState()")}}. Firefox a mis à jour son implémentation pour refléter cela ({{bug("1183853")}}).</li>
- <li>Des ajouts liés au service worker de l'<a href="/en-US/docs/Web/API/Notifications_API">API Notifications</a> ont été mis en œuvre ({{bug(1114554)}}), mais sont désactivés dans cette version.</li>
+ <li>Des ajouts liés au service worker de l'<a href="/fr/docs/Web/API/Notifications_API">API Notifications</a> ont été mis en œuvre ({{bug(1114554)}}), mais sont désactivés dans cette version.</li>
 </ul>
 
 <h4 id="API_Web_Animations">API Web Animations</h4>
 
-<p>Notre implémentation expérimentale de l'<a href="/en-US/docs/Web/API/Web_Animations_API">API Web Animations</a> a été étendue pour prendre en charge:</p>
+<p>Notre implémentation expérimentale de l'<a href="/fr/docs/Web/API/Web_Animations_API">API Web Animations</a> a été étendue pour prendre en charge:</p>
 
 <ul>
  <li>La propriété {{domxref('AnimationPlayer.playbackRate')}} ({{bug(1127380)}}).</li>
@@ -93,7 +93,7 @@ translation_of: Mozilla/Firefox/Releases/42
 
 <h4 id="Composants_Web">Composants Web</h4>
 
-<p>Notre implémentation expérimentale du <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a> a été modifiée:</p>
+<p>Notre implémentation expérimentale du <a href="/fr/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a> a été modifiée:</p>
 
 <ul>
  <li>Lorsque vous essayez d'appeler {{domxref('Node.cloneNode()')}} sur un {{domxref('ShadowRoot')}}, lance une exception <code>DataCloneError</code> ({{bug(1176757)}}).</li>
@@ -123,11 +123,11 @@ translation_of: Mozilla/Firefox/Releases/42
 <h4 id="Divers">Divers</h4>
 
 <ul>
- <li>L'interface {{domxref('IDBCursorWithValue')}} est désormais disponible dans les <a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> ({{bug(1188115)}}).</li>
- <li>Les événements d'erreur envoyés dans les <a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> ne bouillonnent plus ({{bug(1188141)}}).</li>
- <li><a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions</a> (MSE) a été activé pour tous les sites Web, et pas plus pour une liste blanche de sites ({{bug(1185611)}}).</li>
+ <li>L'interface {{domxref('IDBCursorWithValue')}} est désormais disponible dans les <a href="/fr/docs/Web/API/Web_Workers_API">Web workers</a> ({{bug(1188115)}}).</li>
+ <li>Les événements d'erreur envoyés dans les <a href="/fr/docs/Web/API/Web_Workers_API">Web workers</a> ne bouillonnent plus ({{bug(1188141)}}).</li>
+ <li><a href="/fr/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions</a> (MSE) a été activé pour tous les sites Web, et pas plus pour une liste blanche de sites ({{bug(1185611)}}).</li>
  <li>Le {{domxref('Window.mozRequestAnimationFrame()')}} non standard et obsolète a été supprimé ({{bug(909154)}}). Utilisez plutôt le standard {{domxref('Window.requestAnimationFrame()')}}.</li>
- <li>La synthèse vocale (text-to-speech) a été implémentée dans Firefox Desktop pour Windows, cachée derrière l'indicateur <code>media.webspeech.synth.enabled</code> dans <code>about:config</code> ({{bug("1003457")}}). Voir <a href="/en-US/docs/Web/API/Web_Speech_API">API Web Speech</a> pour plus d'informations.</li>
+ <li>La synthèse vocale (text-to-speech) a été implémentée dans Firefox Desktop pour Windows, cachée derrière l'indicateur <code>media.webspeech.synth.enabled</code> dans <code>about:config</code> ({{bug("1003457")}}). Voir <a href="/fr/docs/Web/API/Web_Speech_API">API Web Speech</a> pour plus d'informations.</li>
 </ul>
 
 <h3 id="MathML">MathML</h3>
@@ -167,7 +167,7 @@ translation_of: Mozilla/Firefox/Releases/42
 <h4 id="nsIContentPolicy">nsIContentPolicy</h4>
 
 <ul>
- <li>La constante <code><strong>TYPE_EMBED</strong></code> a été ajoutée à <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPolicy" title="">nsIContentPolicy</a></code> pour permettre aux internes de Gecko et au code add-on de mieux différencier les différents types de requêtes. Auparavant, <code><strong>TYPE_OBJECT</strong></code> était utilisé pour ces cas ({{bug(1148030)}}).</li>
+ <li>La constante <code><strong>TYPE_EMBED</strong></code> a été ajoutée à <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPolicy">nsIContentPolicy</a></code> pour permettre aux internes de Gecko et au code add-on de mieux différencier les différents types de requêtes. Auparavant, <code><strong>TYPE_OBJECT</strong></code> était utilisé pour ces cas ({{bug(1148030)}}).</li>
  <li>De même, les constantes <strong><code>TYPE_SUBDOCUMENT</code></strong> ont été divisées en <code><strong>TYPE_FRAME</strong></code> et <strong><code>TYPE_IFRAME</code></strong> ({{bug(1148044)}}).</li>
 </ul>
 

@@ -15,9 +15,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/contains
 
 <p>Vérifiez si l'extension a les permissions listées dans l'objet  {{WebExtAPIRef("permissions.Permissions")}}.</p>
 
-<p>L'argument <code>Permissions</code> peut contenir une propriété origine, qui est un tableau de <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">permissions hôtes</a>, ou une propriété  <code>permissions</code> , qui est un tableau de <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">permissions API</a>, ou les deux.</p>
+<p>L'argument <code>Permissions</code> peut contenir une propriété origine, qui est un tableau de <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">permissions hôtes</a>, ou une propriété  <code>permissions</code> , qui est un tableau de <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">permissions API</a>, ou les deux.</p>
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promesse</a></code>. La promesse est remplie avec true  seulement si toute l'extension possède actuellement toutes les permissions données. Pour les permissions d'hôtes, si le modèle de permissions if the extension's permissions <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">pattern-match</a> the permissions listed in <code>origins</code>, then they are considered to match.</p>
+<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promesse</a></code>. La promesse est remplie avec true  seulement si toute l'extension possède actuellement toutes les permissions données. Pour les permissions d'hôtes, si le modèle de permissions if the extension's permissions <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">pattern-match</a> the permissions listed in <code>origins</code>, then they are considered to match.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -35,7 +35,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/contains
 
 <h3 id="Valeur_renvoyée">Valeur renvoyée</h3>
 
-<p>Une <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promesse</a></code> qui sera remplie avec  <code>true</code> si l'extension possède déjà toutes les permissions listées dans l'argument des <code>permissions</code> , ou <code>false</code> dans le cas contraire.</p>
+<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promesse</a></code> qui sera remplie avec  <code>true</code> si l'extension possède déjà toutes les permissions listées dans l'argument des <code>permissions</code> , ou <code>false</code> dans le cas contraire.</p>
 
 <h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
 

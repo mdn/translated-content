@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
 
 <p>Cet événement sera également déclenché pour les modifications des propriétés d'un onglet qui n'impliquent pas de navigation, comme le pinning et le débrochage (qui met à jour la propriété <code>pinned</code>) et le muting ou le unmuting (qui met à jour les propriétés  <code>audible</code> et <code>mutedInfo</code>).</p>
 
-<p>Vous pouvez filtrer cet événement, en le rendant uniquement valable pour les onglets dont les urls correspondent à des <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">patterns</a> spécifiques, ou pour les modifications de propriétés spécifiques, ou pour les modifications d'un onglet ou d'une fenêtre spécifique, ou toute combinaison de ces restrictions.</p>
+<p>Vous pouvez filtrer cet événement, en le rendant uniquement valable pour les onglets dont les urls correspondent à des <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">patterns</a> spécifiques, ou pour les modifications de propriétés spécifiques, ou pour les modifications d'un onglet ou d'une fenêtre spécifique, ou toute combinaison de ces restrictions.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -52,7 +52,7 @@ browser.tabs.onUpdated.hasListener(listener)
   <dt><code>tabId</code></dt>
   <dd><code>integer</code>. ID de l'onglet qui a été mis à jour.</dd>
   <dt><code>changeInfo</code></dt>
-  <dd><a href="https://developer.mozilla.org/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated$edit#changeInfo"><code>object</code></a>. ontient les propriétés des propriétés de l'onglet qui ont été modifiées. Voir <code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs/onUpdated#changeInfo">changeInfo</a></code> ci-dessous.</dd>
+  <dd><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated$edit#changeInfo"><code>object</code></a>. ontient les propriétés des propriétés de l'onglet qui ont été modifiées. Voir <code><a href="/fr/Add-ons/WebExtensions/API/tabs/onUpdated#changeInfo">changeInfo</a></code> ci-dessous.</dd>
   <dt><code>tab</code></dt>
   <dd>{{WebExtAPIRef('tabs.Tab')}}. Le nouvel état de l'onglet.</dd>
  </dl>
@@ -63,7 +63,7 @@ browser.tabs.onUpdated.hasListener(listener)
 
  <dl class="reference-values">
   <dt><code>urls</code></dt>
-  <dd><code>Array</code>. Un tableau <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. Ne déclenchez l'événement que pour les onglets dont la propriété de l'<code>url</code> courante correspond à l'un des motifs.</dd>
+  <dd><code>Array</code>. Un tableau <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. Ne déclenchez l'événement que pour les onglets dont la propriété de l'<code>url</code> courante correspond à l'un des motifs.</dd>
   <dt><code>properties</code></dt>
   <dd>
   <p><code>Array</code>. un tableau de chaîne de caractères,  qui sont les noms des propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}}. Ne déclenchez cet événement seulement pour les changement apportées à l'une des propriétés nommées dans ce tableau. Les propriétés suivantes peuvent être listées ici :</p>
@@ -144,7 +144,7 @@ browser.tabs.onUpdated.addListener(handleUpdated);</pre>
 
 <h3 id="Filtering_examples">Filtering examples</h3>
 
-<p>Le journal ne change que pour les onglets dont la propriété <code>url</code> est <a href="/en-US/Add-ons/WebExtensions/Match_patterns">matched</a> par "https://developer.mozilla.org/*" ou "https://twitter.com/mozdevnet":</p>
+<p>Le journal ne change que pour les onglets dont la propriété <code>url</code> est <a href="/fr/Add-ons/WebExtensions/Match_patterns">matched</a> par "https://developer.mozilla.org/*" ou "https://twitter.com/mozdevnet":</p>
 
 <pre class="brush: js">const pattern1 = "https://developer.mozilla.org/*";
 const pattern2 = "https://twitter.com/mozdevnet";
@@ -179,7 +179,7 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);</pre>
 
 <ul>
  <li>A la propriété <code>épinglée</code> des onglets</li>
- <li>Dont la propriété <code>url</code> est <a href="/en-US/Add-ons/WebExtensions/Match_patterns">matched</a> par "https://developer.mozilla.org/*" ou "https://twitter.com/mozdevnet":</li>
+ <li>Dont la propriété <code>url</code> est <a href="/fr/Add-ons/WebExtensions/Match_patterns">matched</a> par "https://developer.mozilla.org/*" ou "https://twitter.com/mozdevnet":</li>
 </ul>
 
 <pre class="brush: js">const pattern1 = "https://developer.mozilla.org/*";
@@ -204,7 +204,7 @@ browser.tabs.onUpdated.addListener(
 
 <ul>
  <li>A la propriété <code>épinglée</code> des onglets</li>
- <li>Dont la propriété <code>url</code> est <a href="/en-US/Add-ons/WebExtensions/Match_patterns">matched</a> par "https://developer.mozilla.org/*" ou "https://twitter.com/mozdevnet"</li>
+ <li>Dont la propriété <code>url</code> est <a href="/fr/Add-ons/WebExtensions/Match_patterns">matched</a> par "https://developer.mozilla.org/*" ou "https://twitter.com/mozdevnet"</li>
  <li>et qui font partie de la fenêtre actuelle du navigateur au moment où l'événement de mise à jour est déclenché :</li>
 </ul>
 

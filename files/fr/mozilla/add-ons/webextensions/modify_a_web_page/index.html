@@ -45,7 +45,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 
 }</pre>
 
-<p>La clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>  est la façon dont vous chargez les scripts dans des pages qui correspondent aux modèles d'URL. Dans ce cas, les instructions <code>content_scripts demandent au navigateur de charger un script appelé</code>  "page-eater.js" dans toutes les pages sous <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a>.</p>
+<p>La clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>  est la façon dont vous chargez les scripts dans des pages qui correspondent aux modèles d'URL. Dans ce cas, les instructions <code>content_scripts demandent au navigateur de charger un script appelé</code>  "page-eater.js" dans toutes les pages sous <a href="/">https://developer.mozilla.org/</a>.</p>
 
 <div class="note">
 <p>Puisque la propriété "js" de content_scripts est un tableau, vous pouvez l'utiliser pour injecter plus d'un script dans des pages correspondantes. Si vous faites cela, les pages partagent la même portée, tout comme les scripts multiples chargés par une page, et ils sont chargés dans l'ordre dans lequel ils sont répertoriés dans le tableau.</p>
@@ -63,7 +63,7 @@ var header = document.createElement('h1');
 header.textContent = "This page has been eaten";
 document.body.appendChild(header);</pre>
 
-<p>Maintenant <a href="/fr/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">installer la WebExtension</a>, et visiter <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a>:</p>
+<p>Maintenant <a href="/fr/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">installer la WebExtension</a>, et visiter <a href="/">https://developer.mozilla.org/</a>:</p>
 
 <p>{{EmbedYouTube("lxf2Tkg6U1M")}}</p>
 
@@ -221,7 +221,7 @@ browser.runtime.onMessage.addListener(eatPage);
 
 <ul>
  <li><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Content scripts</a> guide</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> manifest key</li>
+ <li><code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> manifest key</li>
  <li><code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> manifest key</li>
  <li><code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript">tabs.executeScript()</a></code></li>
  <li><code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS">tabs.insertCSS()</a></code></li>

@@ -77,7 +77,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 
 <pre class="brush: js">var foo='my result';foo;</pre>
 
-<p>Ici, le tableau des résultats contiendra la chaîne <code>"my result"</code> en tant qu’élément. Les valeurs de résultat doivent être <a href="/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure">clonables tructurées</a>. La dernière déclaration peut également être une <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>, mais cette fonctionnalité n'est pas supportée par la bibliothèque <a href="https://github.com/mozilla/webextension-polyfill#tabsexecutescript">webextension-polyfill</a>.<br>
+<p>Ici, le tableau des résultats contiendra la chaîne <code>"my result"</code> en tant qu’élément. Les valeurs de résultat doivent être <a href="/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure">clonables tructurées</a>. La dernière déclaration peut également être une <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>, mais cette fonctionnalité n'est pas supportée par la bibliothèque <a href="https://github.com/mozilla/webextension-polyfill#tabsexecutescript">webextension-polyfill</a>.<br>
  Si une erreur se produit, la promesse sera rejetée avec un message d’erreur.</p>
 
 <h2 id="Exemples">Exemples</h2>

@@ -36,9 +36,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/ProxyInfo
  <dt><code>port</code></dt>
  <dd><code>string</code>. e numéro de port du serveur proxy. Obligatoire sauf si le <code>type</code> est  <code>"direct"</code>.</dd>
  <dt><code>username</code></dt>
- <dd><code>string</code>. Nom d'utilisateur pour le service proxy. Ceci est utilisable avec "socks".  Pour les autorisations de proxy HTTP, utilisez <a href="/fr/Add-ons/WebExtensions/API/webRequest/onAuthRequired" title="Fired when the server sends a 401 or 407 status code: that is, when the server is asking the client to provide authentication credentials such as a username and password."><code>webRequest.onAuthRequired</code></a>.</dd>
+ <dd><code>string</code>. Nom d'utilisateur pour le service proxy. Ceci est utilisable avec "socks".  Pour les autorisations de proxy HTTP, utilisez <a href="/fr/Add-ons/WebExtensions/API/webRequest/onAuthRequired"><code>webRequest.onAuthRequired</code></a>.</dd>
  <dt><code>password</code></dt>
- <dd><code>string</code>. Mot de passe pour le service proxy. Ceci est utilisable avec "socks". FPour les autorisations de proxy HTTP, utilisez <a href="/fr/Add-ons/WebExtensions/API/webRequest/onAuthRequired" title="Fired when the server sends a 401 or 407 status code: that is, when the server is asking the client to provide authentication credentials such as a username and password."><code>webRequest.onAuthRequired</code></a>.</dd>
+ <dd><code>string</code>. Mot de passe pour le service proxy. Ceci est utilisable avec "socks". FPour les autorisations de proxy HTTP, utilisez <a href="/fr/Add-ons/WebExtensions/API/webRequest/onAuthRequired"><code>webRequest.onAuthRequired</code></a>.</dd>
  <dt><code>proxyDNS</code></dt>
  <dd><code>boolean</code>. Si vrai, le serveur proxy est utilisé pour résoudre certaines requêtes DNS (uniquement utilisable avec <code>"socks4"</code> et <code>"socks"</code>).  Par défaut à <code>false</code>.</dd>
  <dt><code>failoverTimeout</code></dt>

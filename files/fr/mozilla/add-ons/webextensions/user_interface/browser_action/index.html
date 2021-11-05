@@ -24,7 +24,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 
 <p>La seule clé obligatoire est <code>default_icon</code>.</p>
 
-<p>Il existe deux façons de spécifier une action du navigateur: avec ou sans <a href="/fr/Add-ons/WebExtensions/Popups">popup</a>. Si vous ne spécifiez pas de popup, lorsque l'utilisateur clique sur le bouton, un événement est envoyé à l'extension, que celle-ci attend pour utiliser  <a href="https://developer.mozilla.org/fr//Add-ons/WebExtensions/API/BrowserAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>browserAction.onClicked</code></a> :</p>
+<p>Il existe deux façons de spécifier une action du navigateur: avec ou sans <a href="/fr/Add-ons/WebExtensions/Popups">popup</a>. Si vous ne spécifiez pas de popup, lorsque l'utilisateur clique sur le bouton, un événement est envoyé à l'extension, que celle-ci attend pour utiliser  <a href="/fr//Add-ons/WebExtensions/API/BrowserAction/onClicked"><code>browserAction.onClicked</code></a> :</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">browser.browserAction.onClicked.addListener(handleClick);</code></pre>
 
