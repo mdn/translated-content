@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Web Audio API")}}</div>
 
-<p class="summary">이 자습서에서, 우리는 사운드 생성과 수정 뿐만이 아니라, 타이밍과 스케쥴링도 다룰 것입니다. 우리는 샘플 로딩, 엔벨로프, 필터, 웨이브 테이블, 주파수 조정을 소개할 것입니다. 만약 여러분이 이 용어들에 익숙하고 Web Audio API 내에서의 이것들의 응용에 대한 입문을 찾고 있다면, 맞는 장소에 오셨습니다.</p>
+<p class="summary">이 자습서에서, 우리는 사운드 생성과 수정 뿐만 아니라, 타이밍과 스케쥴링도 다룰 것입니다. 우리는 샘플 로딩, 엔벨로프, 필터, 웨이브 테이블, 주파수 조정을 소개할 것입니다. 만약 여러분이 이 용어들에 익숙하고 Web Audio API 내에서의 이것들의 응용에 대한 입문을 찾고 있다면, 맞는 장소에 오셨습니다.</p>
 
 <h2 id="Demo">데모</h2>
 
@@ -24,14 +24,14 @@ tags:
 <p>실제로는 이것은 라이브러리로 하는 것이 더 쉽습니다 — Web Audio API는 기반이 되도록 개발되었습니다. 만약 여러분이 무언가 더욱 복잡한 것의 개발에 착수하려고 한다면, <a href="https://tonejs.github.io/">tone.js</a>가 시작하기 좋은 지점일 것입니다. 그러나, 학습 예제로서, 우리는 이런 데모를 기본 원칙들으로부터 어떻게 개발하는지를 보이고 싶습니다.</p>
 
 <div class="note">
-<p><strong>참고</strong>: 여러분은 소스 코드 <a href="https://github.com/mdn/webaudio-examples/tree/master/step-sequencer">step-sequencer</a> 를 GitHub에서 찾을 수 있습니다; <a href="https://mdn.github.io/webaudio-examples/step-sequencer/">step-sequencer 작동 예제</a>도 확인해 보세요.</p>
+<p><strong>참고</strong>: 여러분은 <a href="https://github.com/mdn/webaudio-examples/tree/master/step-sequencer">step-sequencer</a> 소스 코드를 GitHub에서 찾을 수 있습니다; <a href="https://mdn.github.io/webaudio-examples/step-sequencer/">step-sequencer 작동 예제</a>도 확인해 보세요.</p>
 </div>
 
-<p>인터페이스는 시퀸서를 재생/정지할 수 있게 하는 주 제어기, 그리고 "음악"의 속도를 올리거나 내릴 수 있게 하는 BPM (beats per minute) 조절기로 이루어져 있습니다.</p>
+<p>인터페이스는 시퀸서를 재생/정지할 수 있게 하는 주 제어 버튼, 그리고 "음악"의 속도를 올리거나 내릴 수 있게 하는 BPM (beats per minute) 조절 슬라이더로 이루어져 있습니다.</p>
 
 <p>재생될 수 있는 네 가지의 다른 음, 또는 소리가 있습니다. 각 소리는 네 개의 버튼을 가지고 있는데, 이는 음악의 한 마디에 있는 네 개의 비트를 나타냅니다. 이것들이 활성화되었을 때 노트는 소리를 낼 것입니다. 악기가 재생될 때, 이것은 이 비트들의 세트를 가로질러 이동하고 마디를 반복할 것입니다.</p>
 
-<p>각 소리는 또한 지역 제어기를 가지고 있는데, 이는 이펙트나 우리가 이 소리들을 만들기 위해 사용한 각 기법의 특정한 매개변수를 조작할 수 있게 해 줍니다. 우리가 사용하는 이 기법들은:</p>
+<p>각 소리들은 또한 해당 소리를 수정할 수 있는 슬라이더를 가지고 있는데, 이는 이펙트나 우리가 이 소리들을 만들기 위해 사용한 각 기법의 특정한 매개변수를 조작할 수 있게 해 줍니다. 우리가 사용하는 이 기법들은:</p>
 
 <table class="standard-table">
  <thead>
@@ -66,7 +66,7 @@ tags:
 </table>
 
 <div class="note">
-<p><strong>참고</strong>: 이 악기는 좋은 소리를 내기 위해 만들어지지 않았습니다. 이것은 데모 코드를 제공하기 위해 만들어졌고 이런 악기의 <em>아주</em> 단순화된 버전을 나타냅니다. 이 소리들은 다이얼 접속 모뎀에 기반합니다. 만약 여러분이 이것이 어떤 소리인지 모른다면 <a href="https://soundcloud.com/john-pemberton/modem-dialup">여기서 들어볼 수 있습니다.</a></p>
+<p><strong>참고</strong>: 이 악기는 좋은 소리를 내기 위해 만들어지지 않았습니다. 이것은 데모 코드를 제공하기 위해 만들어졌고 이런 악기의 <strong>아주</strong> 단순화된 버전을 나타냅니다. 이 소리들은 다이얼 접속 모뎀에 기반합니다. 만약 여러분이 이것이 어떤 소리인지 모른다면 <a href="https://soundcloud.com/john-pemberton/modem-dialup">여기서 들어볼 수 있습니다.</a></p>
 </div>
 
 <h2 id="Creating_an_audio_context">오디오 컨텍스트 생성하기</h2>
@@ -91,7 +91,7 @@ const audioCtx = new AudioContext();</pre>
 </pre>
 
 <div class="note">
-<p><strong>참고</strong>: 우리의 예제에서 웨이브 테이블은 별도의 JavaScript 파일 (<code>wavetable.js</code>) 에 저장되어 있는데, 왜냐하면 <em>아주</em> 많은 값들이 있기 때문입니다. 이것은 <a href="https://github.com/GoogleChromeLabs/web-audio-samples/">Google Chrome Labs으로부터의 Web Audio API 예제들</a>에서 찾을 수 있는 <a href="https://github.com/GoogleChromeLabs/web-audio-samples/tree/main/archive/demos/wave-tables">웨이브 테이블 레포지토리</a>에서 취해졌습니다.</p>
+<p><strong>참고</strong>: 우리의 예제에서 웨이브 테이블은 별도의 JavaScript 파일 (<code>wavetable.js</code>) 에 저장되어 있는데, 왜냐하면 <strong>아주</strong> 많은 값들이 있기 때문입니다. 이것은 <a href="https://github.com/GoogleChromeLabs/web-audio-samples/">Google Chrome Labs으로부터의 Web Audio API 예제들</a>에서 찾을 수 있는 <a href="https://github.com/GoogleChromeLabs/web-audio-samples/tree/main/archive/demos/wave-tables">웨이브 테이블 레포지토리</a>에서 가져온 것입니다.</p>
 </div>
 
 <h3 id="The_Oscillator">오실레이터</h3>
@@ -111,9 +111,9 @@ const audioCtx = new AudioContext();</pre>
 
 <h3 id="Controlling_amplitude">진폭 제어하기</h3>
 
-<p>이것은 훌륭하지만, 만약 우리가 이것에 적용되는 진폭 엔벨로프를 가지고 있다면 멋지지 않겠습니까? Web Audio API로 엔벨로프를 생성하기 위해 필요한 메서드들에 익숙해지도록 간단한 것을 생성해 봅시다.</p>
+<p>이것은 훌륭하지만, 만약 우리가 이것에 적용되는 진폭 엔벨로프를 가지고 있다면 멋지지 않을까요? Web Audio API로 엔벨로프를 생성하기 위해 필요한 메서드들에 익숙해지도록 간단한 것을 생성해 봅시다.</p>
 
-<p>우리의 엔벨로프가 attack과 release를 가지고 있다고 해 봅시다. 우리는 유저가 이것들을 인터페이스의 <a href="/ko/docs/Web/HTML/Element/input/range">range 입력</a>를 사용하여 제어할 수 있도록 할 수 있습니다.</p>
+<p>우리의 엔벨로프가 attack과 release를 가지고 있다고 해 봅시다. 우리는 사용자가 이것들을 인터페이스의 <a href="/ko/docs/Web/HTML/Element/input/range">range 입력</a>를 사용하여 제어할 수 있도록 할 수 있습니다.</p>
 
 <pre class="brush: html">&lt;label for="attack"&gt;Attack&lt;/label&gt;
 &lt;input name="attack" id="attack" type="range" min="0" max="1" value="0.2" step="0.1" /&gt;
@@ -137,11 +137,11 @@ releaseControl.addEventListener('input', function() {
 
 <h3 id="The_final_playSweep_function">최종 playSweep() 함수</h3>
 
-<p>이제 우리는 우리의 <code>playSweep()</code> 함수를 확장할 수 있습니다. 우리는 {{domxref("GainNode")}}를 추가하고 실제로 진폭 변화를 소리에 적용하기 위하여 우리의 오디오 그래프를 통해 이것을 연결할 필요가 있습니다. gain 노드는 하나의 속성 <code>gain</code> 을 가지고 있는데, 이는 {{domxref("AudioParam")}} 유형입니다.</p>
+<p>이제 우리는 우리의 <code>playSweep()</code> 함수를 확장할 수 있습니다. 우리는 {{domxref("GainNode")}}를 추가하고 실제로 진폭 변화를 소리에 적용하기 위하여 우리의 오디오 그래프를 통해 이 노드를 연결할 필요가 있습니다. gain 노드는 하나의 속성 <code>gain</code> 을 가지고 있는데, 이는 {{domxref("AudioParam")}} 유형입니다.</p>
 
-<p>이것은 정말로 유용합니다 — 이제 우리는 gain 값에 audio param 메서드의 힘을 이용하기 위해 시작할 수 있습니다. 우리는 특정한 시간에 값을 설정할 수 있거나, 혹은 우리는 {{domxref("AudioParam.linearRampToValueAtTime")}}과 같은 메서드로 시간에 <em>따라</em> 이것을 변화시킬 수 있습니다.</p>
+<p>이것은 정말로 유용합니다 — 이제 우리는 gain 값에 audio param 메서드의 힘을 사용할 수 있습니다. 우리는 특정한 시간에 값을 설정할 수 있거나, {{domxref("AudioParam.linearRampToValueAtTime")}}과 같은 메서드로 시간에 <strong>따라</strong> 이것을 변화시킬 수 있습니다.</p>
 
-<p>우리의 attack과 release에 대해, 우리는 위에서 언급된 <code>linearRampToValueAtTime</code> 메서드를 사용할 것입니다. 이것은 두 개의 매개변수를 취합니다 — 변화시키고 있는 매개변수에 설정하기 원하는 값 (이 경우 gain) 그리고 언제 이것을 하고 싶은지. 우리의 경우 <em>언제</em>는 우리의 입력에 의해 제어됩니다. 그래서 아래의 예제에서 gain은 attack 범위 입력이 설정된 시간에 따라 선형 비율로 1까지 증가됩니다. 비슷하게 release의 경우 release 범위가 입력된 동안 선형적으로 gain은 0으로 설정됩니다. </p>
+<p>우리의 attack과 release에 대해, 우리는 위에서 언급된 <code>linearRampToValueAtTime</code> 메서드를 사용할 것입니다. 이것은 두 개의 매개변수를 취합니다 — 변화시키고 있는 매개변수에 설정하기 원하는 값 (이 경우 gain) 그리고 언제 이것을 하고 싶은지. 우리의 경우 <strong>언제</strong>는 우리의 입력에 의해 제어됩니다. 그래서 아래의 예제에서 gain은 attack 범위 입력이 설정된 시간에 따라 선형 비율로 1까지 증가됩니다. 비슷하게 release의 경우, release 입력이 설정된 시간에 걸쳐 선형 비율로 gain은 0으로 설정됩니다.</p>
 
 <pre class="brush: js">let sweepLength = 2;
 function playSweep(time) {
@@ -168,7 +168,7 @@ function playSweep(time) {
 
 <h3 id="Initial_oscillator">첫 오실레이터</h3>
 
-<p>우리가 맞춤형 파동을 설정하기 위해 웨이브 테이블을 사용하지 않을 것이라는 점을 제외하고, 우리는 스윕 사운드에 한 것과 같은 방식으로 첫번째 {{domxref("OscillatorNode")}}를 설정합니다 — 우리는 단지 기본 <code>사인</code> 파동을 사용할 것입니다:</p>
+<p>우리가 맞춤형 파동을 설정하기 위해 웨이브 테이블을 사용하지 않을 것이라는 점을 제외하고, 우리는 스윕 사운드에 한 것과 같은 방식으로 첫번째 {{domxref("OscillatorNode")}}를 설정합니다 — 우리는 단지 기본 <code>sine</code>파를 사용할 것입니다:</p>
 
 <pre class="brush: js">const osc = audioCtx.createOscillator();
 osc.type = 'sine';
@@ -181,7 +181,7 @@ amp.gain.setValueAtTime(1, audioCtx.currentTime);</pre>
 
 <h3 id="Creating_the_second_low_frequency_oscillator">두 번째 저주파 오실레이터 생성하기</h3>
 
-<p>첫 번째 사인파의 진폭을 변경하기 위해 우리는 이제 두 번째 — <code>사각</code> — 파 (또는 펄스) 오실레이터를 생성할 것입니다:</p>
+<p>첫 번째 사인파의 진폭을 변경하기 위해 우리는 이제 두 번째 — <code>square</code> — 파 (또는 펄스) 오실레이터를 생성할 것입니다:</p>
 
 <pre class="brush: js">const lfo = audioCtx.createOscillator();
 lfo.type = 'square';
@@ -201,7 +201,7 @@ osc.stop(time + pulseTime);</pre>
 <p><strong>참고</strong>: 우리는 또한 우리가 생성하는 이 오실레이터 중 어느 것에 대해서도 기본 파동 유형을 사용할 필요가 없습니다 — 우리는 웨이브 테이블과 우리가 전에 한 것처럼 주기파를 사용할 수 있습니다. 최소한의 노드들로도 다수의 가능성이 있습니다.</p>
 </div>
 
-<h3 id="Pulse_user_controls">펄스 유저 제어기</h3>
+<h3 id="Pulse_user_controls">펄스 슬라이더</h3>
 
 <p>UI 제어에 대해, 오실레이터의 두 주파수들이 range 입력을 통해 제어될 수 있도록 모두 노출합시다. 하나는 음색을 변경할 것이고 나머지 하나는 어떻게 펄스가 첫번째 파동을 조정하는지를 변경할 것입니다.</p>
 
@@ -286,7 +286,7 @@ noise.buffer = buffer;</pre>
 <pre class="brush: js">noise.connect(audioCtx.destination);
 noise.start();</pre>
 
-<p>여러분은 이것이 꽤 쉭쉭하는 소리가 나거나 금속성의 소리가 나는 것을 인지하였을 것입니다. 우리는 백색소음을 만들었고, 백색소음이라면 그래야만 합니다. 값은 -1과 1사이에서 실행되는데, 이는 우리가 모든 주파수의 피크를 가지고 있는데, 결국 이는 실제로 꽤 찢어지는 듯한 소리임을 의미합니다. 우리는 이 함수가 0.5에서 -0.5에서 실행되거나 피크를 내려 불편함을 줄이는 유사한 작업을 하도록 수정<em>할 수 있는데</em>, 그렇게 하면 재미가 없죠? 우리가 생성한 노이즈가 필터를 통과하도록 전송합시다.</p>
+<p>여러분은 이것이 꽤 쉭쉭하는 소리가 나거나 금속성의 소리가 나는 것을 인지하였을 것입니다. 우리는 백색소음을 만들었고, 백색소음이라면 그래야만 합니다. 값은 -1과 1 사이에서 실행되는데, 이는 우리가 모든 주파수의 피크를 가지고 있고, 결국 실제로 꽤 찢어지는 듯한 소리가 난다는 것을 의미합니다. 우리는 이 함수가 0.5에서 -0.5에서 실행되거나 피크를 내려 불편함을 줄이는 유사한 작업을 하도록 수정<strong>할 수 있는데</strong>, 그렇게 하면 재미가 없죠? 우리가 생성한 노이즈가 필터를 통과하도록 전송합시다.</p>
 
 <h3 id="Adding_a_biquad_filter_to_the_mix">믹스에 바이쿼드 필터 추가하기</h3>
 
@@ -305,7 +305,7 @@ bandpass.frequency.value = 1000;
 // 그래프 연결하기
 noise.connect(bandpass).connect(audioCtx.destination);</pre>
 
-<h3 id="Noise_user_controls">노이즈 유저 제어기</h3>
+<h3 id="Noise_user_controls">노이즈 슬라이더</h3>
 
 <p>UI에서 우리는 사용자가 range 입력과 지난 섹션에서처럼의 이벤트 처리기를 통해 노이즈 지속과 우리가 밴드하기를 원하는 주파수를 조정할 수 있도록 이것들을 노출시킬 것입니다.</p>
 
@@ -410,7 +410,7 @@ bandControl.addEventListener('input', function() {
 <p><strong>참고</strong>: 우리는 {{domxref("AudioBufferSourceNode")}}의 <code>stop()</code>을 호출할 수 있지만, 이것은 샘플이 재생을 마쳤을 때 자동적으로 발생할 것입니다.</p>
 </div>
 
-<h3 id="Dial-up_user_controls">다이얼 음 유저 제어기</h3>
+<h3 id="Dial-up_user_controls">다이얼 음 슬라이더</h3>
 
 <p>{{domxref("AudioBufferSourceNode")}}는 <code><a href="/ko/docs/Web/API/AudioBufferSourceNode/playbackRate">playbackRate</a></code> 속성을 가지고 있습니다. 우리가 샘플의 속도를 올리고 내릴 수 있도록, 이것을 UI에 드러내 봅시다. 우리는 이전에 한 것과 같은 종류의 방법으로 이것을 할 것입니다:</p>
 
@@ -444,10 +444,10 @@ rateControl.addEventListener('input', function() {
 
 <p>디지털 오디오 애플리케이션의 일반적인 문제는 사운드를 비트가 일정하게 유지되고, 시간에서 벗어나지 않도록, 제 시간에 재생하는 것입니다.</p>
 
-<p>우리는 <code>for</code> 반복문 내에서 소리가 재생되도록 스케쥴할 수 있지만, 이것의 가장 큰 문제는 이것이 재생되는 도중에 업데이트되고, 우리는 이미 이것을 하기 위한 UI 제어기를 구현했다는 것입니다. 또한, 악기 전체의 BPM 제어기를 고려하는 것은 정말 좋을 것입니다. 비트에 맞춰 소리를 재생시키는 가장 좋은 방법은 우리가 노드가 언제 재생될지 내다보고 그것들을 큐에 넣는 스케쥴링 시스템을 만드는 것입니다. 우리는 currentTime 속성으로 정밀한 시간에서 이것들을 시작시킬 수 있고 또한 어떠한 변화도 고려할 수 있습니다.</p>
+<p>우리는 <code>for</code> 반복문 내에서 소리가 재생되도록 스케쥴할 수 있지만, 이것의 가장 큰 문제는 이것이 재생되는 도중에 업데이트되고, 우리는 이미 이것을 하기 위한 UI를 구현했다는 것입니다. 또한, 악기 전체의 BPM 슬라이더를 고려하는 것은 정말 좋을 것입니다. 비트에 맞춰 소리를 재생시키는 가장 좋은 방법은 우리가 노드가 언제 재생될지 내다보고 그것들을 큐에 넣는 스케쥴링 시스템을 만드는 것입니다. 우리는 currentTime 속성으로 정밀한 시간에서 이것들을 시작시킬 수 있고 또한 어떠한 변화도 고려할 수 있습니다.</p>
 
 <div class="note">
-<p><strong>참고</strong>: 이것은 <a href="https://www.html5rocks.com/en/tutorials/audio/scheduling/">Chris Wilson의 A Tale Of Two Clocks</a> 글의 가장 기본적인 것만 남긴 버전인데, 저 글은 이 방법을 더욱 자세하게 다룹니다. 이것을 모두 여기서 반복할 필요는 없지만, 저 글을 읽고 이 방법을 사용하는 것을 대단히 추천합니다. 여기서의 대부분의 코드는 그의 <a href="https://github.com/cwilso/metronome/blob/master/js/metronome.js">메트로놈 예제</a>에서 취해졌는데, 이는 그가 저 글에서 언급했습니다.</p>
+<p><strong>참고</strong>: 이것은 <a href="https://www.html5rocks.com/en/tutorials/audio/scheduling/">Chris Wilson의 A Tale Of Two Clocks</a> 글의 가장 기본적인 것만 남긴 버전인데, 저 글은 이 방법을 더욱 자세하게 다룹니다. 이것을 모두 여기서 반복할 필요는 없지만, 저 글을 읽고 이 방법을 사용하는 것을 대단히 추천합니다. 여기서의 대부분의 코드는 그의 <a href="https://github.com/cwilso/metronome/blob/master/js/metronome.js">메트로놈 예제</a>에서 가져온 것인데, 이 예제는 그가 저 글에서 언급했습니다.</p>
 </div>
 
 <p>또한 — 추측하셨다시피 — 유저가 또 다른 range 입력을 통해 제어할 수 있는 기본 BPM (beats per minute)을 설정하면서 시작해 봅시다.</p>
@@ -544,7 +544,7 @@ function draw() {
 
 <h2 id="Putting_it_all_together">종합하기</h2>
 
-<p>이제 남은 것은 우리가 악기를 <em>재생</em>할 수 있기 전에 샘플이 로드된 것을 확실히 하는 것입니다. 우리는 파일이 가져와지고 디코드되었을 때 사라지는 로딩 스크린을 추가할 것이고, 그리고 나서 우리는 재생 버튼 클릭 이벤트를 사용해 스케쥴러가 시작되도록 할 수 있습니다.</p>
+<p>이제 남은 것은 우리가 악기를 <strong>재생</strong>할 수 있기 전에 샘플이 로드된 것을 확실히 하는 것입니다. 우리는 파일이 가져와지고 디코드되었을 때 사라지는 로딩 스크린을 추가할 것이고, 그리고 나서 우리는 재생 버튼 클릭 이벤트를 사용해 스케쥴러가 시작되도록 할 수 있습니다.</p>
 
 <pre class="brush: js">// 로드된 샘플이 재생을 허용했을 때
 let loadingEl = document.querySelector('.loading');
