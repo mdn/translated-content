@@ -66,7 +66,8 @@ original_slug: Mise_à_jour_des_applications_Web_pour_Firefox_3
 
 <p>Cette manipulation ne devrait pas être nécessaire la plupart du temps, mais elle existe toutefois pour les rares cas où elle reste indispensable. Notez qu'il n'est pas exclu que Firefox avertisse l'utilisateur de cette utilisation du paramètre <code>contentaccessible</code>, étant donné qu'il constitue un risque potentiel de sécurité.</p>
 
-<div class="note"><strong>Note :</strong> Firefox 2 ne gérant pas le paramètre contentaccessible (la ligne le contenant sera entièrement ignorée), si vous voulez que votre module reste compatible avec Firefox 2 et Firefox 3, ajoutez plutôt quelque chose comme ceci :
+<div class="note">
+  <p><strong>Note :</strong> Firefox 2 ne gérant pas le paramètre contentaccessible (la ligne le contenant sera entièrement ignorée), si vous voulez que votre module reste compatible avec Firefox 2 et Firefox 3, ajoutez plutôt quelque chose comme ceci :</p>
 
 <pre class="eval">content mypackage location/
 content mypackage location/ contentaccessible=yes

@@ -18,9 +18,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 <p>Les scripts de contenu ne peuvent accéder qu'à <a href="#API WebExtensions">un sous-ensemble des API WebExtension</a>, mais ils peuvent <a href="#communication_background">communiquer avec les scripts d'arrière-plan</a> grâce à un système de messages et ainsi accéder indirectement aux API WebExtension.</p>
 
 <div class="note">
-<p>Notez que les scripts de contenu sont bloqués sur les domaines suivants :</p>
+<p><strong>Note :</strong> que les scripts de contenu sont bloqués sur les domaines suivants :</p>
 
-<ul style="display: grid;">
+<ul>
  <li>accounts-static.cdn.mozilla.net</li>
  <li>accounts.firefox.com</li>
  <li>addons.cdn.mozilla.net</li>
@@ -44,7 +44,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 </div>
 
 <div class="note">
-<p>Les valeurs ajoutées à la portée globale d'un script de contenu avec <code>var foo</code> ou <code>window.foo = "bar"</code> peuvent disparaître à cause du bogue <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1408996">1408996</a>.</p>
+<p><strong>Note :</strong> Les valeurs ajoutées à la portée globale d'un script de contenu avec <code>var foo</code> ou <code>window.foo = "bar"</code> peuvent disparaître à cause du bogue <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1408996">1408996</a>.</p>
 </div>
 
 <h2 id="Charger_des_scripts_de_contenu">Charger des scripts de contenu</h2>

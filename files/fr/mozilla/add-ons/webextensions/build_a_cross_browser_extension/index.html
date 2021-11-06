@@ -54,8 +54,8 @@ original_slug: Mozilla/Add-ons/WebExtensions/construction_extension_cross_browse
 
 <p>Firefox prend également en charge les <i>callbacks</i> pour les API qui prennent en charge l'espace de noms <code>chrome.*</code>. Cependant, il est recommandé d'utiliser des promesses (et l'espace de noms <code>browser.*</code> du navigateur). Des promesses ont été adoptées dans le cadre de la norme proposée. Cette approche simplifie grandement la gestion asynchrone des événements, en particulier lorsque vous devez enchaîner des événements.</p>
 
-<div class="notecard note">
- <p>Si vous n'êtes pas familier avec les différences entre ces deux méthodes, jetez un coup d'oeil à <a href="https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee">Apprendre à connaître le JavaScript asynchrone : Rappels, promesses et synchronisation/attente</a> ou la page sur <a href="/fr/docs/Web/JavaScript/Guide/Utiliser_les_promesses">l'utilisation des promesses</a> de MDN.</p>
+<div class="note">
+ <p><strong>Note :</strong> Si vous n'êtes pas familier avec les différences entre ces deux méthodes, jetez un coup d'oeil à <a href="https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee">Apprendre à connaître le JavaScript asynchrone : Rappels, promesses et synchronisation/attente</a> ou la page sur <a href="/fr/docs/Web/JavaScript/Guide/Utiliser_les_promesses">l'utilisation des promesses</a> de MDN.</p>
 </div>
 
 <h4 id="The_WebExtension_browser_API_Polyfill">Polyfill pour l'API WebExtension du navigateur</h4>
@@ -86,8 +86,8 @@ original_slug: Mozilla/Add-ons/WebExtensions/construction_extension_cross_browse
 
 <p>Votre but est de vous assurer que le <i>polyfill</i> s'exécute dans votre extension avant tout autre script qui attend le <code>browser.*</code> API namespace s'exécute.</p>
 
-<div class="notecard note">
- <p>Pour plus de détails et d'informations sur l'utilisation du <i>polyfill</i> avec un module bundler, voir le <a href="https://github.com/mozilla/webextension-polyfill/blob/master/README.md">readme du projet sur GitHub.</a></p>
+<div class="note">
+ <p><strong>Note :</strong> Pour plus de détails et d'informations sur l'utilisation du <i>polyfill</i> avec un module bundler, voir le <a href="https://github.com/mozilla/webextension-polyfill/blob/master/README.md">readme du projet sur GitHub.</a></p>
 </div>
 
 <p>Il existe d'autres options de <i>polyfill</i> mais, au moment où nous écrivons ces lignes, aucune ne fournit une couverture équivalente à ce <i>polyfill</i> pour l'API WebExtension du navigateur. Ainsi, lorsque vous n'avez pas choisi Firefox comme cible initiale de navigateur, vos options sont d'accepter les limitations des <i>polyfills</i> alternatifs, de porter sur Firefox et d'ajouter la prise en charge multi-navigateur, ou de développer votre propre <i>polyfill</i>.</p>

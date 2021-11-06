@@ -82,11 +82,15 @@ original_slug: Mise_à_jour_des_extensions_pour_Firefox_3
 
 <p>Notez que Firefox 3 n'a plus besoin d'un « .0 » supplémentaire dans son numéro de version, donc au lieu d'utiliser « 3.0.0.* », il ne faut plus indiquer que « 3.0.* ».</p>
 
-<div class="blockIndicator note"><strong>Note :</strong> Notez qu'à ce point, il faut s'attendre à d'autres changements dans Firefox 3. Ceux-ci peuvent poser des problèmes à certaines extensions, il faut donc éviter de publier une extension avec la valeur <code>3.0.0.*</code> pour <code>maxVersion</code> avant que la RC de Firefox 3 soit disponible. Durant la pariode beta de Firefox 3, il convient d'utiliser <code>3.0b5</code> comme valeur de <code>maxVersion</code>.</div>
+<div class="note">
+  <p><strong>Note :</strong> Notez qu'à ce point, il faut s'attendre à d'autres changements dans Firefox 3. Ceux-ci peuvent poser des problèmes à certaines extensions, il faut donc éviter de publier une extension avec la valeur <code>3.0.0.*</code> pour <code>maxVersion</code> avant que la RC de Firefox 3 soit disponible. Durant la pariode beta de Firefox 3, il convient d'utiliser <code>3.0b5</code> comme valeur de <code>maxVersion</code>.</p>
+</div>
 
 <p>Il y a eu (et il y aura encore) un certain nombre de changements dans les API qui poseront probablement des problèmes à certaines. Nous sommes encore en train d'établir une liste complète de ces changements.</p>
 
-<div class="blockIndicator note"><strong>Note :</strong> Si votre extension utilise toujours un script <code><a href='\"fr/Install.js\"'>Install.js</a></code> plutôt qu'un <a href="\&quot;fr/Manifestes_d\'installation\&quot;">manifeste d'installation</a>, il vous faudra faire la transition vers un manifeste d'installation maintenant. Firefox 3 ne gère plus les scripts <code>install.js</code> dans les fichiers XPI.</div>
+<div class="note">
+  <p><strong>Note :</strong> Si votre extension utilise toujours un script <code><a href='\"fr/Install.js\"'>Install.js</a></code> plutôt qu'un <a href="\&quot;fr/Manifestes_d\'installation\&quot;">manifeste d'installation</a>, il vous faudra faire la transition vers un manifeste d'installation maintenant. Firefox 3 ne gère plus les scripts <code>install.js</code> dans les fichiers XPI.</p>
+</div>
 
 <h4 id="Ajout_de_localisations_au_manifeste_d.27installation">Ajout de localisations au manifeste d'installation</h4>
 
@@ -192,7 +196,9 @@ original_slug: Mise_à_jour_des_extensions_pour_Firefox_3
 &lt;/window&gt;
 </pre>
 
-<div class="blockIndicator note"><strong>Note :</strong> Ce changement s'applique à partir de Firefox 3 beta 4 et des nightlies précédentes.</div>
+<div class="note">
+  <p><strong>Note :</strong> Ce changement s'applique à partir de Firefox 3 beta 4 et des nightlies précédentes.</p>
+</div>
 
 <h3 id="Autres_changements">Autres changements</h3>
 

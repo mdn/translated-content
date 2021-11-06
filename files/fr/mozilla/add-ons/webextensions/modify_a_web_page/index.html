@@ -48,11 +48,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 <p>La clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>  est la façon dont vous chargez les scripts dans des pages qui correspondent aux modèles d'URL. Dans ce cas, les instructions <code>content_scripts demandent au navigateur de charger un script appelé</code>  "page-eater.js" dans toutes les pages sous <a href="/">https://developer.mozilla.org/</a>.</p>
 
 <div class="note">
-<p>Puisque la propriété "js" de content_scripts est un tableau, vous pouvez l'utiliser pour injecter plus d'un script dans des pages correspondantes. Si vous faites cela, les pages partagent la même portée, tout comme les scripts multiples chargés par une page, et ils sont chargés dans l'ordre dans lequel ils sont répertoriés dans le tableau.</p>
+<p><strong>Note :</strong> Puisque la propriété "js" de content_scripts est un tableau, vous pouvez l'utiliser pour injecter plus d'un script dans des pages correspondantes. Si vous faites cela, les pages partagent la même portée, tout comme les scripts multiples chargés par une page, et ils sont chargés dans l'ordre dans lequel ils sont répertoriés dans le tableau.</p>
 </div>
 
 <div class="note">
-<p>La clé content_scripts possède également une propriété "css" que vous pouvez utiliser pour injecter des feuilles de style CSS.</p>
+<p><strong>Note :</strong> La clé content_scripts possède également une propriété "css" que vous pouvez utiliser pour injecter des feuilles de style CSS.</p>
 </div>
 
 <p>Ensuite, créez un fichier appelé "page-eater.js" dans le dossier "modify-page" et donnez-lui le contenu suivant :</p>
@@ -68,7 +68,7 @@ document.body.appendChild(header);</pre>
 <p>{{EmbedYouTube("lxf2Tkg6U1M")}}</p>
 
 <div class="note">
-<p>Notez bien que cette vidéo montre le script de contenu fonctionnant dans <a href="/fr/firefox/">addons.mozilla.org</a>, les scripts de contenu sont actuellement bloqués pour ce site.</p>
+  <p><strong>Note :</strong> Cette vidéo montre le script de contenu fonctionnant dans <a href="/fr/firefox/">addons.mozilla.org</a>, les scripts de contenu sont actuellement bloqués pour ce site.</p>
 </div>
 
 <h2 id="Modification_des_pages_par_programme">Modification des pages par programme</h2>
@@ -131,7 +131,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 <p>{{EmbedYouTube("zX4Bcv8VctA")}}</p>
 
 <div class="note">
-<p>Notez que bien que cette vidéo montre le script de contenu fonctionnant dans  <a href="/fr/firefox/">addons.mozilla.org</a>, les scripts de contenu sont actuellement bloqués pour ce site.</p>
+  <p><strong>Note :</strong> Bien que cette vidéo montre le script de contenu fonctionnant dans  <a href="/fr/firefox/">addons.mozilla.org</a>, les scripts de contenu sont actuellement bloqués pour ce site.</p>
 </div>
 
 <h2 id="Messagerie">Messagerie</h2>
@@ -160,8 +160,8 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
  </thead>
 </table>
 
-<div class="blockIndicator note">
-<p>En ajoutant à cette méthode de communication, qui envoie des messages uniques, vous pouvez également utiliser une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darri%C3%A8re-plan">approche basée sur la connexion pour échanger des messages</a>.</p>
+<div class="note">
+  <p><strong>Note :</strong> En ajoutant à cette méthode de communication, qui envoie des messages uniques, vous pouvez également utiliser une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darri%C3%A8re-plan">approche basée sur la connexion pour échanger des messages</a>.</p>
 </div>
 
 <p>Mettons à jour notre exemple pour montrer comment envoyer un message à partir du script en arrière-plan.</p>
@@ -214,7 +214,7 @@ browser.runtime.onMessage.addListener(eatPage);
 <p>Si nous voulions envoyer des messages du script de contenu à la page d'arrière-plan, la configuration serait inverse de cet exemple, sauf que nous utiliserions <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> dans le script de contenu.</p>
 
 <div class="note">
-<p>Ces exemples injectent JavaScript; Vous pouvez également injecter CSS par programme en utilisant la fonction <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS">tabs.insertCSS()</a></code>.</p>
+  <p><strong>Note :</strong> Ces exemples injectent JavaScript; Vous pouvez également injecter CSS par programme en utilisant la fonction <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS">tabs.insertCSS()</a></code>.</p>
 </div>
 
 <h2 id="Apprendre_plus">Apprendre plus</h2>

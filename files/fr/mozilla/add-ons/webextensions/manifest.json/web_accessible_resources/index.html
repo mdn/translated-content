@@ -63,8 +63,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resou
 
 <p><code>&lt;extension-UUID&gt;</code> n'est <strong>pas</strong> l'identifiant de votre extension. Il est généré de manière aléatoire pour chaque instance de navigateur. Ceci empêche les sites Web de prendre les empreintes digitales d'un navigateur en examinant les extensions qu'il a installées.</p>
 
-<div class="blockIndicator note">
-<p>Dans Chrome, l'ID d'une extension est fixe. Quand une ressource est listée dans  <code>web_accessible_resources</code>, elle est accessible comme <code>chrome-extension://&lt;your-extension-id&gt;/&lt;path/to/resource&gt;</code>.  </p>
+<div class="note">
+<p><strong>Note :</strong> Dans Chrome, l'ID d'une extension est fixe. Quand une ressource est listée dans  <code>web_accessible_resources</code>, elle est accessible comme <code>chrome-extension://&lt;your-extension-id&gt;/&lt;path/to/resource&gt;</code>.  </p>
 </div>
 
 <p>L'approche recommandée pour obtenir l'URL de la ressource est d'utiliser <code><a href="/fr/Add-ons/WebExtensions/API/runtime/getURL">runtime.getURL</a></code> en passant le chemin relatif à manifest.json, par exemple :</p>

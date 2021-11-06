@@ -30,8 +30,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts
 
 <p>Pour utiliser l'API, appelez <code>{{WebExtAPIRef("userScripts.register","register()")}}</code> en passant un objet définissant les scripts à enregistrer. La méthode renvoie une promesse qui est résolue par un objet  <code>{{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}</code>.</p>
 
-<div class="blockIndicator note">
-<p>Les scripts utilisateur sont désenregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts utilisateur ont été enregistrés) est déchargée, vous devez donc enregistrer un script utilisateur depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts utilisateur restent enregistrés</p>
+<div class="note">
+<p><strong>Note :</strong> Les scripts utilisateur sont désenregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts utilisateur ont été enregistrés) est déchargée, vous devez donc enregistrer un script utilisateur depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts utilisateur restent enregistrés</p>
 </div>
 
 <dl>

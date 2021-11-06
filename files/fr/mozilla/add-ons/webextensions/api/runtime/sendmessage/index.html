@@ -28,8 +28,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 
 <p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
 
-<div class="blockIndicator note">
-<p>Vous pouvez également utiliser une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan">approche basée sur la connexion pour échanger des messages</a>.</p>
+<div class="note">
+<p><strong>Note :</strong> Vous pouvez également utiliser une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan">approche basée sur la connexion pour échanger des messages</a>.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
@@ -126,7 +126,7 @@ browser.runtime.onMessage.addListener(handleMessage);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
 

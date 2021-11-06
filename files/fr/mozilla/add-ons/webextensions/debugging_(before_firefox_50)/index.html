@@ -13,8 +13,8 @@ original_slug: Mozilla/Add-ons/WebExtensions/Debogage_(avant_Firefox_50)
 ---
 <div>{{AddonSidebar}}</div>
 
-<div class="blockIndicator note">
-<p>Cet article explique comment vous pouvez déboguer des extensions à l'aide des API WebExtension sur des versions de Firefox antérieures à la version 50.</p>
+<div class="note">
+<p><strong>Note :</strong> Cet article explique comment vous pouvez déboguer des extensions à l'aide des API WebExtension sur des versions de Firefox antérieures à la version 50.</p>
 
 <p>Si vous utilisez Firefox 50 ou version ultérieure, consultez l'<a href="/fr/Add-ons/WebExtensions/Debugging">article principal sur les extensions de débogage</a>.</p>
 </div>
@@ -178,8 +178,8 @@ chrome.runtime.onMessage.addListener(notify);
 
 <p>Notez que les scripts de contenu n'apparaîtront pas dans la liste des sources jusqu'à ce qu'ils soient chargés. Si vous avez besoin d'y accéder dès qu'ils se chargent, essayez d'ajouter un <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/debugger">debuggueur</a></code> ; instruction au début de votre script.</p>
 
-<div class="blockIndicator note">
-<p>Note : vous n'avez besoin et ne pouvez accéder à la Browser Content Toolbox que si vous développez contre Firefox multiprocessus.</p>
+<div class="note">
+<p><strong>Note :</strong> vous n'avez besoin et ne pouvez accéder à la Browser Content Toolbox que si vous développez contre Firefox multiprocessus.</p>
 </div>
 
 <div class="blockIndicator warning">
@@ -206,8 +206,8 @@ chrome.runtime.onMessage.addListener(notify);
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/12622/disable-autohide.png" style="display: block; height: 417px; margin-left: auto; margin-right: auto; width: 877px;">Maintenant, lorsque vous ouvrez un panneau dans Firefox, il restera ouvert jusqu'à ce que vous appuyiez sur Escape.</p>
 
-<div class="blockIndicator note">
-<p>Notez que ce changement s'applique aux <a href="/fr/docs/Tools/Browser_Toolbox#Debugging_popups">fenêtre contextuelles intégrés au navigateur</a>, cpùùe le menu Hamburger (<img alt="" src="https://mdn.mozillademos.org/files/12712/hamburger.png">), ainsi qu'aux fenêtres contextuelles d'extension.</p>
+<div class="note">
+<p><strong>Note :</strong> Que ce changement s'applique aux <a href="/fr/docs/Tools/Browser_Toolbox#Debugging_popups">fenêtre contextuelles intégrés au navigateur</a>, cpùùe le menu Hamburger (<img alt="" src="https://mdn.mozillademos.org/files/12712/hamburger.png">), ainsi qu'aux fenêtres contextuelles d'extension.</p>
 
 <p>Notez également que le changement est persistant, même si le navigateur redémarre. Nous travaillons à résoudre ce problème dans le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1251658">bug 1251658</a>, mais d'ici là, vous préférerez peut-être réactiver la fonction Autohide en cliquant à nouveau sur le bouton avant de fermer la boîte à outils du navigateur.</p>
 

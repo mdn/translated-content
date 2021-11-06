@@ -20,7 +20,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Ajouter_une_page_de_paramètres
 </ul>
 
 <div class="note">
-<p>Vous pouvez aussi ouvrir cette page automatiquement en utilisant la fonction <code><a href="/fr/Add-ons/WebExtensions/API/runtime/openOptionsPage">runtime.openOptionsPage()</a></code>.</p>
+<p><strong>Note :</strong> Vous pouvez aussi ouvrir cette page automatiquement en utilisant la fonction <code><a href="/fr/Add-ons/WebExtensions/API/runtime/openOptionsPage">runtime.openOptionsPage()</a></code>.</p>
 </div>
 
 <h2 id="Une_WebExtension_simple">Une WebExtension simple</h2>
@@ -160,7 +160,7 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 <p>Vous pouvez stocker les valeurs des paramètres dans le stockage local à la place si vous pensez que le stockage local est préférable pour votre extension.</p>
 
 <div class="note">
-<p>Notez que l'implémentation de <code>storage.sync</code> dans Firefox repose sur l'ID du module complémentaire. Si vous utilisez <code>storage.sync</code>,  vous devez définir un ID pour votre extension à l'aide de la clé manifest.json des <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a></code>  comme indiqué dans l'exemple de manifeste ci-dessus.</p>
+<p><strong>Note :</strong> L'implémentation de <code>storage.sync</code> dans Firefox repose sur l'ID du module complémentaire. Si vous utilisez <code>storage.sync</code>,  vous devez définir un ID pour votre extension à l'aide de la clé manifest.json des <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a></code>  comme indiqué dans l'exemple de manifeste ci-dessus.</p>
 </div>
 
 <p>Finalement, mettez à jour "borderify.js" pour lire la couleur de la bordure depuis le stockage :</p>

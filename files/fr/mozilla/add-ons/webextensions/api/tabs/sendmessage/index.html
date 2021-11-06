@@ -24,8 +24,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
 
 <p>Il s'agit d'une fonction asynchrone qui renvoit un objet <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
 
-<div class="blockIndicator note">
-<p>Vous pouvez également utiliser une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan">approche basée sur la connexion pour échanger des messages</a>.</p>
+<div class="note">
+<p><strong>Note :</strong> Vous pouvez également utiliser une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan">approche basée sur la connexion pour échanger des messages</a>.</p>
 </div>
 
 
@@ -107,7 +107,7 @@ browser.runtime.onMessage.addListener(request =&gt; {
 
 <p>{{Compat("webextensions.api.tabs.sendMessage")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 

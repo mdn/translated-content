@@ -43,7 +43,7 @@ let duplicating = browser.tabs.duplicate(
 <p>Une <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">promesse (<code>Promise</code>)</a> dont la valeur de résolution sera un objet <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab"><code>tabs.Tab</code></a> contenant des détails sur l'onglet dupliqué. L'objet <code>Tab</code> contiendra les propriétés <code>url</code>, <code>title</code> et <code>favIconUrl</code> uniquement si l'extension dispose de la <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"> permission <code>"tabs"</code></a> ou lorsque <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">l'hôte correspond à un hôte ciblé dans les permissions</a>. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
 
 <div class="note">
-<p><strong>Note</strong> : À partir de Firefox 68, la promesse renvoyée par <code>browser.tabs.duplicate()</code> se résout dès que l'onglet a été dupliqué. Auparavant, la promesse n'était résolue qu'une fois l'onglet entièrement chargé.</p>
+<p><strong>Note :</strong> À partir de Firefox 68, la promesse renvoyée par <code>browser.tabs.duplicate()</code> se résout dès que l'onglet a été dupliqué. Auparavant, la promesse n'était résolue qu'une fois l'onglet entièrement chargé.</p>
 </div>
 
 <h2 id="Exemples">Exemples</h2>
@@ -82,7 +82,7 @@ querying.then(duplicateFirstTab, onError);</pre>
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Remerciements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 

@@ -22,8 +22,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 
 <p>Vous ne pouvez injecter du CSS que dans des pages dont l'URL peut être exprimée en utilisant un <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">motif de correspondance</a>,  ce qui signifie que son schéma doit être "http", "https", "file", "ftp". Cela signifie que vous ne pouvez pas injecter de CSS dans les pages intégrées du navigateur, telles que about:debugging, about:addons, ou la page qui s'ouvre lorsque vous ouvrez un nouvel onglet vide.</p>
 
-<div class="blockIndicator note">
-<p>Firefox résout les URL dans les fichiers CSS injectés par rapport au fichier CSS lui-même, plutôt qu'à la page dans laquelle il est injecté.</p>
+<div class="note">
+<p><strong>Note :</strong> Firefox résout les URL dans les fichiers CSS injectés par rapport au fichier CSS lui-même, plutôt qu'à la page dans laquelle il est injecté.</p>
 </div>
 
 <p>Le CSS inséré peut être retiré à nouveau en appelant  {{WebExtAPIRef("tabs.removeCSS()")}}.</p>
@@ -103,7 +103,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>{{Compat("webextensions.api.tabs.insertCSS")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 
