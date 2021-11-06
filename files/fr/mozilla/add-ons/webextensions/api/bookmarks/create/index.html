@@ -17,8 +17,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
 
 <p>Crée un signet ou un dossier en tant qu'enfant de {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} avec  <code>parentId</code> spécifié. Pour créer un dossier, omettez ou laissez vide le paramètre  {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}}.</p>
 
-<div class="blockIndicator warning">
-<p>Si votre extension tente de créer un nouveau signet dans le nœud racine de l'arborescence du signet, une erreur est générée: "<em>La racine du signet ne peut pas être modifiée</em>" et le signet ne sera pas créé.</p>
+<div class="warning">
+<p><strong>Attention :</strong> Si votre extension tente de créer un nouveau signet dans le nœud racine de l'arborescence du signet, une erreur est générée: "<em>La racine du signet ne peut pas être modifiée</em>" et le signet ne sera pas créé.</p>
 </div>
 
 <p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>

@@ -166,7 +166,7 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 <p>Finalement, mettez à jour "borderify.js" pour lire la couleur de la bordure depuis le stockage :</p>
 
 <div class="warning">
-<p>A cause d'un bug dans <a href="/fr/Add-ons/WebExtensions/API/storage/StorageArea/get">browser.storage.local.get()</a> dans Firefox pour les versions précédant la 52, le code qui suit ne fonctionnera pas. Pour le faire fonctionner pour les versions de Firefox avant la 52, les deux occurrences d'<code>item.color</code> dans <code>onGot()</code> doivent être changer pour <code>item[0].color</code>.</p>
+<p><strong>Attention :</strong> A cause d'un bug dans <a href="/fr/Add-ons/WebExtensions/API/storage/StorageArea/get">browser.storage.local.get()</a> dans Firefox pour les versions précédant la 52, le code qui suit ne fonctionnera pas. Pour le faire fonctionner pour les versions de Firefox avant la 52, les deux occurrences d'<code>item.color</code> dans <code>onGot()</code> doivent être changer pour <code>item[0].color</code>.</p>
 </div>
 
 <pre class="brush: js"> function onError(error) {

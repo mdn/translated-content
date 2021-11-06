@@ -18,8 +18,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 
 <p>La méthode <strong><code>bookmarks.remove()</code></strong> supprime un seul signet ou un dossier de signets vide.</p>
 
-<div class="blockIndicator warning">
-<p>Si votre extension tente de supprimer un signet du nœud racine de l’arborescence de signets, l’appel déclenche une erreur avec le message suivant: "<em>La racine du signet ne peut pas être modifiée</em>" et le signet ne sera pas supprimé.</p>
+<div class="warning">
+<p><strong>Attention :</strong> Si votre extension tente de supprimer un signet du nœud racine de l’arborescence de signets, l’appel déclenche une erreur avec le message suivant: "<em>La racine du signet ne peut pas être modifiée</em>" et le signet ne sera pas supprimé.</p>
 </div>
 
 <p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>

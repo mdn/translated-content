@@ -10,9 +10,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/proxy
 ---
 <div>{{AddonSidebar}}</div>
 
-<div class="blockIndicator warning">
-<p><strong>Avertissement</strong><br>
- Vous ne devez pas utiliser la fonction {{WebExtAPIRef("proxy.register()")}} ou la fonction {{WebExtAPIRef("proxy.unregister()")}} pour enregistrer et supprimer le fichier <a href="/fr/Add-ons/WebExtensions/API/proxy/register#PAC_file_specification">Proxy Auto-Configuration (PAC)</a>.  Cette API était dépréciée dans Firefox 68 et sera supprimée de Firefox 71.</p>
+<div class="warning">
+<p><strong>Attention :</strong></p>
+ <p>Vous ne devez pas utiliser la fonction {{WebExtAPIRef("proxy.register()")}} ou la fonction {{WebExtAPIRef("proxy.unregister()")}} pour enregistrer et supprimer le fichier <a href="/fr/Add-ons/WebExtensions/API/proxy/register#PAC_file_specification">Proxy Auto-Configuration (PAC)</a>. Cette API était dépréciée dans Firefox 68 et sera supprimée de Firefox 71.</p>
 </div>
 
 <p>Utilisez l'API proxy pour les requêtes Web proxy. Vous pouvez utiliser l'écouteur d'événement {{WebExtAPIRef("proxy.onRequest")}}} pour intercepter les requêtes web, et retourner un objet qui décrit si et comment les proxyer.</p>

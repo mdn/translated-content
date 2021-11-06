@@ -73,8 +73,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 <p>Pour ce faire, vous devez transmettre une option avec la valeur "blocking" dans l'argument <code>extraInfoSpec</code> à la fonction <code>addListener()</code> de l'événement. Cela rend l'auditeur synchrone. Dans l'écouteur, vous pouvez alors renvoyer un objet {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}}, qui indique la modification à apporter : par exemple, l'en-tête de requête modifié que vous souhaitez envoyer.</p>
 
-<div class="blockIndicator warning">
-<p><strong>Avertissement </strong>: Les protocoles non-HTTP(S) ne supportent pas actuellement la fonctionnalité de "<code>blockage</code>", donc la modification de ces requêtes n'est pas disponible pour le moment. Voir {{bug(1475832)}} pour plus de détails.</p>
+<div class="warning">
+<p><strong>Attention :</strong> Les protocoles non-HTTP(S) ne supportent pas actuellement la fonctionnalité de "<code>blockage</code>", donc la modification de ces requêtes n'est pas disponible pour le moment. Voir {{bug(1475832)}} pour plus de détails.</p>
 </div>
 
 <h2 id="Accéder_aux_informations_de_sécurité">Accéder aux informations de sécurité</h2>

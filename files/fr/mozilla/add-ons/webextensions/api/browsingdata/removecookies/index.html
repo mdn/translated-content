@@ -72,10 +72,9 @@ then(onRemoved, onError);</pre>
 <p>Supprime tous les cookies :</p>
 
 <div class="warning">
-<p><strong>Avertissement</strong><br>
- L'utilisation de l'API pour supprimer tous les cookies effacera simultanément tous les objets de stockage locaux (y compris ceux des autres extensions).<br>
- <br>
- Si vous souhaitez simplement effacer tous les cookies sans perturber les installations de stockage locales, utilisez <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies">browser.cookies</a> pour faire une boucle et supprimer le contenu de tous les magasins de cookies.</p>
+<p><strong>Attention :</strong></p>
+<p>L'utilisation de l'API pour supprimer tous les cookies effacera simultanément tous les objets de stockage locaux (y compris ceux des autres extensions).</p>
+<p>Si vous souhaitez simplement effacer tous les cookies sans perturber les installations de stockage locales, utilisez <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies">browser.cookies</a> pour faire une boucle et supprimer le contenu de tous les magasins de cookies.</p>
 </div>
 
 <pre class="brush: js">function onRemoved() {

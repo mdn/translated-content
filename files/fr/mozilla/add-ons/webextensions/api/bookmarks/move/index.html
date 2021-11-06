@@ -17,8 +17,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 
 <p>La méthode <strong><code>bookmarks.move()</code></strong> déplace le  {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} à la destination spécifiée dans l'arborescence des signets. Cela vous permet de déplacer un signet vers un nouveau dossier et / ou une position dans le dossier.</p>
 
-<div class="blockIndicator warning">
-<p>Si votre extension tente de déplacer un signet dans le nœud racine de l’arborescence de signets, l’appel déclenche une erreur avec le message suivant: "<em>La racine du signet ne peut pas être modifiée</em>" et le déplacement ne sera pas terminé.</p>
+<div class="warning">
+<p><strong>Attention :</strong> Si votre extension tente de déplacer un signet dans le nœud racine de l’arborescence de signets, l’appel déclenche une erreur avec le message suivant: "<em>La racine du signet ne peut pas être modifiée</em>" et le déplacement ne sera pas terminé.</p>
 </div>
 
 <p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>

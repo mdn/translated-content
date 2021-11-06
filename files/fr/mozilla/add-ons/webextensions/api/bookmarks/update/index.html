@@ -17,8 +17,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
 
 <p><strong><code>bookmarks.update()</code></strong> met à jour le titre et / ou l'URL d'un signet ou le nom d'un dossier de signets.</p>
 
-<div class="blockIndicator warning">
-<p>Si votre extension tente de mettre à jour un signet dans le nœud racine de l'arborescence de signets, l'appel déclenche une erreur avec le message suivant: "La racine du signet ne peut pas être modifiée" et le signet ne sera pas mis à jour.</p>
+<div class="warning">
+<p><strong>Attention :</strong> Si votre extension tente de mettre à jour un signet dans le nœud racine de l'arborescence de signets, l'appel déclenche une erreur avec le message suivant: "La racine du signet ne peut pas être modifiée" et le signet ne sera pas mis à jour.</p>
 </div>
 
 <p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
