@@ -106,20 +106,20 @@ Agora que você criou o fork do repo, é hora de clonar o fork localmente. Para 
 
 Agora você deve encontrar um diretório content dentro do seu diretório do git, contendo o conteúdo do repo.
 
-### Configurando um ramo remoto para apontar para a versão principal do repo
+### Configurando um remoto para apontar para a versão principal do repo
 
-Uma última coisa a se fazer antes de seguirmos é configurar um _ramo remoto_ para apontar para a versão principal do repo, e.g. <https://github.com/mdn/content> no caso do nosso exemplo. Um ramo remoto é basicamente um ponteiro para um repo remoto específico localizado no GitHub, e é mais comumente usado para atualizar seu clone local, então ele está atualizado com a última versão do repo principal, como nós veremos abaixo.
+Uma última coisa a se fazer antes de seguirmos é configurar um _remoto_ para apontar para a versão principal do repo, e.g. <https://github.com/mdn/content> no caso do nosso exemplo. Um remoto é basicamente um ponteiro para um repo remoto específico localizado no GitHub, e é mais comumente usado para atualizar seu clone local, então ele está atualizado com a última versão do repo principal, como nós veremos abaixo.
 
-Um ramo remoto é configurado com o comando `git remote add`, que se parece com isto:
+Um remoto é configurado com o comando `git remote add`, que se parece com isto:
 
 ```bash
-git remote add nome-ramo-remoto repo-para-o-qual-você-quer-apontar
+git remote add nome-remoto repo-para-o-qual-você-quer-apontar
 ```
 
-- _nome-ramo-remoto_ é um nome que você escolhe, que é usado para referenciar o ramo remoto posteriormente. É bom manter um nome consistente para os ramos remotos que tem o mesmo propósito pelos diferentes repos, então o ramo remoto com o mesmo nome vai fazer a mesma coisa em todos os lugares, e você tem menos chance de ficar confuso. Então, por exemplo, a versão principal do repo que você bifurcou a sua versão é frequentemente chamado de "upstream repo", por isso as pessoas costumam usar "upstream" como nome do local remoto de upstream. Eu geralmente chamo meus upstream remotos como "mozilla", para significar que eles apontam para a cópia principal da Mozilla do repo.
+- _nome-remoto_ é um nome que você escolhe, que é usado para referenciar o remoto posteriormente. É bom manter um nome consistente para os remotos que tem o mesmo propósito pelos diferentes repos, então o remoto com o mesmo nome vai fazer a mesma coisa em todos os lugares, e você tem menos chance de ficar confuso. Então, por exemplo, a versão principal do repo do qual você bifurcou a sua versão é frequentemente chamado de "upstream repo", por isso as pessoas costumam usar "upstream" como nome do local para o remoto de upstream. Eu geralmente chamo meus upstream remotos como "mozilla", para significar que eles apontam para a cópia principal da Mozilla do repo.
 - _repo-para-o-qual-você-quer-apontar_ é a URL SSH (ou HTTPS) do repo que você quer apontar, obtida da mesma forma que nós obtivemos quando nós clonamos o fork anteriormente.
 
-Então, adicionar seu ramo remoto:
+Então, adicionar seu remoto:
 
 1.  Vá para a página da versão principal do repo em github.com (<https://github.com/mdn/content> neste exemplo) e recupere a URL SSH ou HTTPS, como for conveniente, do popup "Code".
 2.  Na sua linha de comando, `cd` para o seu diretório content:
@@ -128,19 +128,19 @@ Então, adicionar seu ramo remoto:
     cd content
     ```
 
-3.  Agora rode a linha a seguir, substituindo _nome-ramo-remoto_ e _repo-para-o-qual-você-quer-apontar_ de forma apropriada:
+3.  Agora rode a linha a seguir, substituindo _nome-remoto_ e _repo-para-o-qual-você-quer-apontar_ de forma apropriada:
 
     ```bash
-    git remote add nome-ramo-remoto repo-para-o-qual-você-quer-apontar
+    git remote add nome-remoto repo-para-o-qual-você-quer-apontar
     ```
 
-    Então, por exemplo, eu usei a URL SSH e chamei meu ramo remoto de "mozilla":
+    Então, por exemplo, eu usei a URL SSH e chamei meu remoto de "mozilla":
 
     ```bash
     git remote add mozilla git@github.com:mdn/content.git
     ```
 
-Seu ramo remoto agora deve estar configurado. Você pode verificar isso rodando o comando `git remote -v` no seu terminal, o que irá produzir uma lista com os nomes do seus ramos remotos e para onde eles apontam. Você deve ver algo como isto:
+Seu remoto agora deve estar configurado. Você pode verificar isso rodando o comando `git remote -v` no seu terminal, o que irá produzir uma lista com os nomes do seus remotos e para onde eles apontam. Você deve ver algo como isto:
 
 ```plain
 mozilla    git@github.com:mdn/content.git (fetch)
@@ -151,58 +151,58 @@ origin    git@github.com:chrisdavidmills/content.git (push)
 
 ## Se preparando para fazer uma alteração no repo
 
-Agora que você você tem seu fork local, clonado e configurado para trabalhar, há um conjunto de comandos que você deve ter o hábito de rodar antes de tentar fazer qualquer mudança nova.
+Agora que você tem seu fork local, clonado e configurado para trabalhar, há um conjunto de comandos que você deve ter o hábito de rodar antes de tentar fazer qualquer mudança nova.
 
-### Switch to the main branch
+### Mudar para o ramo principal
 
-Each repo has a number of different branches, which are basically different versions of the codebase inside the same repo. The idea is that for each change to a codebase, you make the change on a separate branch and test it there first, before then pushing the changes to the main copy of the code.
+Cada repo tem um número diferente de ramos, que são, basicamente, versões diferentes do código base dentro do mesmo repo. A ideia é que para cada mudança no código base, faça a alteração em um ramo separado e teste lá primeiro, antes de enviar as mudanças para a cópia principal do código.
 
-The main branch of the content repo is called "main" (it might be called something else like "master" in other repos, and if so you'll have to update the name of it in all commands shown below). You'll be on this branch by default if you've just cloned the repo, but if you've already done some work you'll likely be on a different branch.
-Make sure you run the following to switch to the main branch before doing anything else:
+O ramo principal do conteúdo do repo é chamada de "main" (pode ser chamado de outra coisa como "master" em outros repos, e se for o caso você terá que atualizar o nome em todos os comandos abaixo). Você estará nesse ramo por padrão se você tiver acabado de clonar o repo, mas se você já tiver feito algum trabalho, provavelmente vai estar em um ramo diferente.
+Tenha certeza de rodar o comando a seguir para mudar para o ramo principal antes de fazer qualquer outra coisa:
 
 ```bash
 git switch main
 ```
 
-> **Note:** In other tutorials you may have seen `git checkout` used to change branches in a repo. That works fine most of the time, but can sometimes have unintended side-effects, therefore in this tutorial we are recommending the newer `git switch` command, which is designed purely for switching branches and has less chance of going wrong. If you are interested in how these commands are related, and the differences between them, [Highlights from Git 2.23 > Experimental alternatives for git checkout](https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout) provides a good summary.
+> **Nota:** Em outros tutoriais você pode ter visto `git checkout` sendo usado para mudar de ramos no repo. Isto funciona na maior parte do tempo, mas pode ter efeitos colaterais indesejados, por isso neste tutorial nós estamos recomendando o novo comando `git switch`, que é projetado puramente para trocar de ramos e tem menos chance de dar problema. Se você estiver interessado em como estes comandos estão relacionados, e as diferenças entre eles [Destaques do Git 2.23 > Alternativas experimentais para o git checkout](https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout) tem um bom resumo.
 
-### Update your main branch
+### Atualize o seu ramo principal
 
-Next up, you should update your main branch so that it contains the same content as the main branch of the main repo. The content repo is updated many times every day by a large number of contributors, so if you don't do this, your version will get out-of-date, and this will cause problems when you try to submit your updates. This is where your remote will come in handy!
+Em seguida, você deveria atualizar seu ramo principal para que ele tenha o mesmo conteúdo que o ramo principal do repo principal. O repo content é atualizado muitas vezes por dia por uma grande quantidade de contribuidores, então se você não fizer isto, sua versão vai ficar desatualizada, e isto vai causar problemas quando você tentar submeter suas atualizações. É aqui que o seu remoto vai vir a calhar!
 
-To update your repo:
+Para atualizar seu repo:
 
-1.  First fetch the updated contents of your remote with the following command:
+1.  Primeiro, busque o conteúdo atualizado do seu repositório remoto com o comando a seguir:
 
     ```bash
-    git fetch remote-name
+    git fetch nome-remoto
     ```
 
-    So for example:
+    Então por exemplo:
 
     ```bash
     git fetch mozilla
     ```
 
-2.  Next, replace the contents of your main branch with the remote repo's main branch. There are many different ways you could do this, but I tend to use the `rebase` command, like this:
+2.  Em seguida, substitua o conteúdo do seu ramo principal com o conteúdo do ramo principal do repo remoto. Existem várias formas que você poderia fazer isto, mas eu tendo a usar o comando `rebase`, assim:
 
     ```bash
-    git rebase remote-name/main-branch-name
+    git rebase nome-remoto/nome-ramo-principal
     ```
 
-    So for example:
+    Então por exemplo:
 
     ```bash
     git rebase mozilla/main
     ```
 
-3.  Finally, push those changes up to the remote version of your fork using:
+3.  Finalmente, envie essas mudanças para a versão remota do seu fork usando:
 
     ```bash
     git push
     ```
 
-You'll know if your updates worked properly by looking at the github.com page for your fork (i.e. mine is <https://github.com/chrisdavidmills/content>). It should say something like "This branch is even with mdn:main." somewhere near the top. If it says your main branch is behind mdn:main by a number of commits, then you'll need to try it again, or [troubleshoot](#troubleshooting).
+Você vai saber se as suas atualizações funcionaram corretamente vendo a página do seu fork em github.com (i.e. a minha é <https://github.com/chrisdavidmills/content>). Deve aparecer algo como "Este ramo está atualizado com mdn:main." em algum lugar próximo ao topo. Se estiver escrito que seu ramo principal está atrás da mdn:main por um número de commits, então você vai ter que tentar novamente ou leia [solução de problemas](#troubleshooting).
 
 ### Create a new branch to do your work in
 
