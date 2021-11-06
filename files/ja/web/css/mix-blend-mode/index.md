@@ -2,24 +2,25 @@
 title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
 tags:
+  - 混合
   - CSS
   - CSS プロパティ
-  - ウェブ
-  - リファレンス
+  - 合成
   - 合成と混合
+  - recipe:css-property
+browser-compat: css.properties.mix-blend-mode
 translation_of: Web/CSS/mix-blend-mode
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>mix-blend-mode</code></strong> プロパティは、要素の内容物と親要素の内容物や要素の背景をどのように混合するかを設定します。</p>
+**`mix-blend-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の内容物と親要素の内容物や要素の背景をどのように混合するかを設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/mix-blend-mode.html")}}</div>
+{{EmbedInteractiveExample("pages/css/mix-blend-mode.html")}}
 
-<p class="hidden">このインタラクティブデモのソースは GitHub のリポジトリに格納されています。インタラクティブデモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送ってください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css">/* キーワード値 */
+```css
+/* キーワード値 */
 mix-blend-mode: normal;
 mix-blend-mode: multiply;
 mix-blend-mode: screen;
@@ -40,434 +41,441 @@ mix-blend-mode: luminosity;
 /* グローバル値 */
 mix-blend-mode: initial;
 mix-blend-mode: inherit;
+mix-blend-mode: revert;
 mix-blend-mode: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>&lt;blend-mode&gt;</code></dt>
- <dd>適用する混合モードを表す {{cssxref("&lt;blend-mode&gt;")}} です。</dd>
-</dl>
+- {{cssxref("&lt;blend-mode&gt;")}}
+  - : 適用する混合モードを表す {{cssxref("&lt;blend-mode&gt;")}} です。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<div class="hidden" id="mix-blend-mode">
-<pre class="brush: html">&lt;div class="grid"&gt;
-  &lt;div class="col"&gt;
-    &lt;div class="note"&gt;Blending in isolation (no blending with the background)&lt;/div&gt;
-    &lt;div class="row isolate"&gt;
-      &lt;div class="cell"&gt; normal
-        &lt;div class="container normal"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;defs&gt;
-                &lt;linearGradient id="red"&gt;
-                  &lt;stop offset="0"    stop-color="hsl(0,100%,50%)" /&gt;
-                  &lt;stop offset="100%" stop-color="hsl(0,0%,100%)" /&gt;
-                &lt;/linearGradient&gt;
-                &lt;linearGradient id="green"&gt;
-                  &lt;stop offset="0"    stop-color="hsl(120,100%,50%)" /&gt;
-                  &lt;stop offset="100%" stop-color="hsl(120,0%,100%)" /&gt;
-                &lt;/linearGradient&gt;
-                &lt;linearGradient id="blue"&gt;
-                  &lt;stop offset="0"    stop-color="hsl(240,100%,50%)" /&gt;
-                  &lt;stop offset="100%" stop-color="hsl(240,0%,100%)" /&gt;
-                &lt;/linearGradient&gt;
-              &lt;/defs&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; multiply
-        &lt;div class="container multiply"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; darken
-        &lt;div class="container darken"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; screen
-        &lt;div class="container screen"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; lighten
-        &lt;div class="container lighten"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; overlay
-        &lt;div class="container overlay"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; color-dodge
-        &lt;div class="container color-dodge"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; color-burn
-        &lt;div class="container color-burn"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; hard-light
-        &lt;div class="container hard-light"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; soft-light
-        &lt;div class="container soft-light"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; difference
-        &lt;div class="container difference"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; exclusion
-        &lt;div class="container exclusion"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; hue
-        &lt;div class="container hue"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; saturation
-        &lt;div class="container saturation"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; color
-        &lt;div class="container color"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; luminosity
-        &lt;div class="container luminosity"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+<h3 id="Effect_of_different_mix-blend-mode_values">mix-blend-mode の様々な値の効果</h3>
 
-    &lt;div class="note"&gt;Blending globally (blend with the background)&lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt; normal
-        &lt;div class="container normal"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; multiply
-        &lt;div class="container multiply"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; darken
-        &lt;div class="container darken"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; screen
-        &lt;div class="container screen"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; lighten
-        &lt;div class="container lighten"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; overlay
-        &lt;div class="container overlay"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; color-dodge
-        &lt;div class="container color-dodge"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; color-burn
-        &lt;div class="container color-burn"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; hard-light
-        &lt;div class="container hard-light"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; soft-light
-        &lt;div class="container soft-light"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; difference
-        &lt;div class="container difference"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; exclusion
-        &lt;div class="container exclusion"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; hue
-        &lt;div class="container hue"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; saturation
-        &lt;div class="container saturation"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; color
-        &lt;div class="container color"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; luminosity
-        &lt;div class="container luminosity"&gt;
-          &lt;div class="group"&gt;
-            &lt;div class="item firefox"&gt;&lt;/div&gt;
-            &lt;svg viewBox="0 0 150 150"&gt;
-              &lt;ellipse class="item R" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item G" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-              &lt;ellipse class="item B" cx="75" cy="75" rx="25" ry="70"&gt;&lt;/ellipse&gt;
-            &lt;/svg&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+```html hidden
+<div class="grid">
+  <div class="col">
+    <div class="note">Blending in isolation (no blending with the background)</div>
+    <div class="row isolate">
+      <div class="cell"> normal
+        <div class="container normal">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <defs>
+                <linearGradient id="red">
+                  <stop offset="0"    stop-color="hsl(0,100%,50%)" />
+                  <stop offset="100%" stop-color="hsl(0,0%,100%)" />
+                </linearGradient>
+                <linearGradient id="green">
+                  <stop offset="0"    stop-color="hsl(120,100%,50%)" />
+                  <stop offset="100%" stop-color="hsl(120,0%,100%)" />
+                </linearGradient>
+                <linearGradient id="blue">
+                  <stop offset="0"    stop-color="hsl(240,100%,50%)" />
+                  <stop offset="100%" stop-color="hsl(240,0%,100%)" />
+                </linearGradient>
+              </defs>
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> multiply
+        <div class="container multiply">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> darken
+        <div class="container darken">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> screen
+        <div class="container screen">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> lighten
+        <div class="container lighten">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> overlay
+        <div class="container overlay">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> color-dodge
+        <div class="container color-dodge">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> color-burn
+        <div class="container color-burn">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> hard-light
+        <div class="container hard-light">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> soft-light
+        <div class="container soft-light">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> difference
+        <div class="container difference">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> exclusion
+        <div class="container exclusion">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> hue
+        <div class="container hue">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> saturation
+        <div class="container saturation">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> color
+        <div class="container color">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> luminosity
+        <div class="container luminosity">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<pre class="brush: css">html,body {
+    <div class="note">Blending globally (blend with the background)</div>
+    <div class="row">
+      <div class="cell"> normal
+        <div class="container normal">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> multiply
+        <div class="container multiply">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> darken
+        <div class="container darken">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> screen
+        <div class="container screen">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> lighten
+        <div class="container lighten">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> overlay
+        <div class="container overlay">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> color-dodge
+        <div class="container color-dodge">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> color-burn
+        <div class="container color-burn">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> hard-light
+        <div class="container hard-light">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> soft-light
+        <div class="container soft-light">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> difference
+        <div class="container difference">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> exclusion
+        <div class="container exclusion">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> hue
+        <div class="container hue">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> saturation
+        <div class="container saturation">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> color
+        <div class="container color">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell"> luminosity
+        <div class="container luminosity">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+```css hidden
+html,body {
   height: 100%;
   box-sizing: border-box;
   background: #EEE;
@@ -559,20 +567,27 @@ mix-blend-mode: unset;
 .hue .item         { mix-blend-mode: hue; }
 .saturation .item  { mix-blend-mode: saturation; }
 .color .item       { mix-blend-mode: color; }
-.luminosity .item  { mix-blend-mode: luminosity; }</pre>
+.luminosity .item  { mix-blend-mode: luminosity; }
+```
+
+{{EmbedLiveSample("Effect_of_different_mix-blend-mode_values", "100%", 1600, "", "", "example-outcome-frame")}}
+
+<h3 id="Using_mix-blend-mode_with_HTML">HTML での mix-blend-mode の使用</h3>
+
+#### HTML
+
+```html
+<div class="isolate">
+  <div class="circle circle-1"></div>
+  <div class="circle circle-2"></div>
+  <div class="circle circle-3"></div>
 </div>
+```
 
-<div>{{EmbedLiveSample("mix-blend-mode", "100%", 1600, "", "", "example-outcome-frame")}}</div>
+#### CSS
 
-<h3 id="HTML_example" name="HTML_example">HTML の例</h3>
-
-<pre class="brush: html">&lt;div class="isolate"&gt;
-  &lt;div class="circle circle-1"&gt;&lt;/div&gt;
-  &lt;div class="circle circle-2"&gt;&lt;/div&gt;
-  &lt;div class="circle circle-3"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
-
-<pre class="brush: css">.circle {
+```css
+.circle {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -596,58 +611,49 @@ mix-blend-mode: unset;
 }
 
 .isolate {
-  isolation: isolate; /* Without isolation, the background color will be taken into account */
+  isolation: isolate; /* isolation がないと、背景色が考慮されてしまう */
   position: relative;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("HTML_example", "100%", "180")}}</p>
+#### 結果
 
-<h3 id="SVG_example" name="SVG_example">SVG の例</h3>
+{{EmbedLiveSample("Using_mix-blend-mode_with_HTML", "100%", "180")}}
 
-<p>This example reproduces the previous example using SVG.</p>
+<h3 id="Using_mix-blend-mode_with_SVG">SVG での mix-blend-mode の使用</h3>
 
-<pre class="brush: html">&lt;svg&gt;
-  &lt;g class="isolate"&gt;
-    &lt;circle cx="40" cy="40" r="40" fill="red"/&gt;
-    &lt;circle cx="80" cy="40" r="40" fill="lightgreen"/&gt;
-    &lt;circle cx="60" cy="80" r="40" fill="blue"/&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;</pre>
+#### SVG
 
-<pre class="brush:css">circle { mix-blend-mode: screen; }
+```html
+<svg>
+  <g class="isolate">
+    <circle cx="40" cy="40" r="40" fill="red"/>
+    <circle cx="80" cy="40" r="40" fill="lightgreen"/>
+    <circle cx="60" cy="80" r="40" fill="blue"/>
+  </g>
+</svg>
+```
+
+#### CSS
+
+```css
+circle { mix-blend-mode: screen; }
 .isolate { isolation: isolate; } /* Without isolation, the background color will be taken into account */
-</pre>
+```
 
-<p>{{EmbedLiveSample("SVG_example", "100%", "180")}}</p>
+#### 結果
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{EmbedLiveSample("Using_mix-blend-mode_with_SVG", "100%", "180")}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Compositing', '#mix-blend-mode', 'mix-blend-mode') }}</td>
-   <td>{{ Spec2('Compositing') }}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<p>{{cssinfo}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.mix-blend-mode")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{cssxref("&lt;blend-mode&gt;")}}</li>
- <li>{{cssxref("background-blend-mode")}}</li>
-</ul>
+- {{cssxref("&lt;blend-mode&gt;")}}
+- {{cssxref("background-blend-mode")}}

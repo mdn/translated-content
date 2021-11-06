@@ -3,70 +3,44 @@ title: 合成と混合
 slug: Web/CSS/Compositing_and_Blending
 tags:
   - CSS
-  - リファレンス
   - 合成と混合
+  - ガイド
   - 概要
+  - リファレンス
 translation_of: Web/CSS/Compositing_and_Blending
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><ruby><strong>合成と混合</strong><rp> (</rp><rt>Compositing and Blending</rt><rp>) </rp></ruby>は CSS モジュールの一つで、様々な要素のシェイプを単一の画像に合成する方法を定義します。</p>
+**合成と混合** (Compositing and Blending) は CSS モジュールの一つで、様々な要素のシェイプを単一の画像に合成する方法を定義します。
 
-<h2 id="Reference" name="Reference">リファレンス</h2>
+## リファレンス
 
-<h3 id="Properties" name="Properties">プロパティ</h3>
+### プロパティ
 
-<div class="index">
-<ul>
- <li>{{cssxref("background-blend-mode")}}</li>
- <li>{{cssxref("isolation")}}</li>
- <li>{{cssxref("mix-blend-mode")}}</li>
-</ul>
-</div>
+- {{cssxref("background-blend-mode")}}
+- {{cssxref("isolation")}}
+- {{cssxref("mix-blend-mode")}}
 
-<h3 id="Data_types" name="Data_types">データ型</h3>
+### データ型
 
-<div class="index">
-<ul>
- <li>{{cssxref("&lt;blend-mode&gt;")}}</li>
-</ul>
-</div>
+- {{cssxref("&lt;blend-mode&gt;")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Compositing")}}</td>
-   <td>{{Spec2("Compositing")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                      | 状態                     | 備考     |
+| --------------------------- | ------------------------ | -------- |
+| {{SpecName("Compositing")}} | {{Spec2("Compositing")}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<h3 id="background-blend-mode_プロパティ"><code>background-blend-mode</code> プロパティ</h3>
+### `background-blend-mode` プロパティ
 
-<div>
-<p>{{Compat("css.properties.background-blend-mode")}}</p>
-</div>
+{{Compat("css.properties.background-blend-mode")}}
 
-<h3 id="isolation_プロパティ"><code>isolation</code> プロパティ</h3>
+### `isolation` プロパティ
 
-<div>
-<p>{{Compat("css.properties.isolation")}}</p>
-</div>
+{{Compat("css.properties.isolation")}}
 
-<h3 id="mix-blend-mode_プロパティ"><code>mix-blend-mode</code> プロパティ</h3>
+### `mix-blend-mode` プロパティ
 
-<div>
-<p>{{Compat("css.properties.mix-blend-mode")}}</p>
-</div>
+{{Compat("css.properties.mix-blend-mode")}}
