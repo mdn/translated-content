@@ -5,58 +5,72 @@ tags:
   - CSS
   - CSS プロパティ
   - 合成と混合
+  - NeedsContent
+  - isolation
+  - recipe:css-property
+browser-compat: css.properties.isolation
 translation_of: Web/CSS/isolation
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>isolation</code></strong> プロパティは、要素が新しい{{glossary("stacking context", "重ね合わせコンテキスト")}}を生成する必要があるかどうかを定義します。</p>
+[CSS](/ja/docs/Web/CSS) の **`isolation`** プロパティは、要素が新しい{{glossary("stacking context", "重ね合わせコンテキスト")}}を生成する必要があるかどうかを定義します。
 
-<div>{{EmbedInteractiveExample("pages/css/isolation.html")}}</div>
+{{EmbedInteractiveExample("pages/css/isolation.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+このプロパティは {{cssxref("mix-blend-mode")}} との組み合わせで使用すると特に有用です。
 
-<p>このプロパティは {{cssxref("mix-blend-mode")}} との組み合わせで使用すると特に有用です。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 isolation: auto;
 isolation: isolate;
 
 /* グローバル値 */
 isolation: inherit;
 isolation: initial;
+isolation: revert;
 isolation: unset;
-</pre>
+```
 
-<p><code>isolation</code> プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。</p>
+`isolation` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>何れかのプロパティが必要な要素に適用された場合にのみ、新しい重ね合わせコンテキストが作成されます。</dd>
- <dt><code>isolate</code></dt>
- <dd>新しい重ね合わせコンテキストが必ず作成されます。</dd>
-</dl>
+- `auto`
+  - : 何れかのプロパティが必要な要素に適用された場合にのみ、新しい重ね合わせコンテキストが作成されます。
+- `isolate`
+  - : 新しい重ね合わせコンテキストが必ず作成されます。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: html">&lt;div id="b" class="a"&gt;
-  &lt;div id="d"&gt;
-    &lt;div class="a c"&gt;auto&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div id="e"&gt;
-    &lt;div class="a c"&gt;isolate&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+<h3 id="Forcing_a_new_stacking_context_for_an_element">要素で強制的に新しい重ね合わせコンテキストを生成</h3>
 
-<pre class="brush: css">.a {
+#### HTML
+
+```html
+<div id="b" class="a">
+  <div id="d">
+    <div class="a c">auto</div>
+  </div>
+  <div id="e">
+    <div class="a c">isolate</div>
+  </div>
+</div>
+```
+
+#### CSS
+
+```css
+.a {
   background-color: rgb(0,255,0);
 }
 #b {
@@ -75,38 +89,22 @@ isolation: unset;
 }
 #e {
   isolation: isolate;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Examples', 230, 230) }}</p>
+#### 結果
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{ EmbedLiveSample('Forcing_a_new_stacking_context_for_an_element', 230, 230) }}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Compositing', '#isolation', 'Isolation') }}</td>
-   <td>{{ Spec2('Compositing') }}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<p>{{cssinfo}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.isolation")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{cssxref("&lt;blend-mode&gt;")}}</li>
- <li>{{cssxref("mix-blend-mode")}}, {{cssxref("background-blend-mode")}}</li>
-</ul>
+- {{cssxref("&lt;blend-mode&gt;")}}
+- {{cssxref("mix-blend-mode")}}, {{cssxref("background-blend-mode")}}

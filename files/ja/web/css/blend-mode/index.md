@@ -2,458 +2,443 @@
 title: <blend-mode>
 slug: Web/CSS/blend-mode
 tags:
-  - Blend modes
+  - 混合モード
   - CSS
   - CSS Data Type
-  - Compositing
+  - 合成
   - Compositing and Blending
   - Data Type
   - Reference
   - color
-  - ブレンドモード
-  - 合成
 browser-compat: css.types.blend-mode
 translation_of: Web/CSS/blend-mode
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>&lt;blend-mode&gt;</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/CSS_Types">データ型</a>で、要素が重なったときにどのように色が現れるかを記述します。 {{cssxref("background-blend-mode")}} または {{cssxref("mix-blend-mode")}} プロパティで使用されます。</p>
+**`<blend-mode>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、要素が重なったときにどのように色が現れるかを記述します。 {{cssxref("background-blend-mode")}} または {{cssxref("mix-blend-mode")}} プロパティで使用されます。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<p><code>&lt;blend-mode&gt;</code> データ型は、以下に挙げたキーワードのうちの一つで定義します。</p>
+`<blend-mode>` データ型は、以下に挙げたキーワードのうちの一つで定義します。
 
-<h3 id="Values">値</h3>
+### 値
 
-<dl>
- <dt><code id="normal">normal</code></dt>
- <dd>
- <p>下の色が何であるかに関わらず、上の色が最終的な色になります。<br>
-  この効果は 2 枚の不透明の紙が重なっているようなものです。</p>
+- `normal`
+  - : 下の色が何であるかに関わらず、上の色が最終的な色になります。
+     この効果は 2 枚の不透明の紙が重なっているようなものです。
+- `multiply`
+  - : 上の色と下の色を掛け合わせた結果が最終的な色になります。
+    黒いレイヤーは最終的に黒いレイヤーになり、白いレイヤーは変化をもたらしません。
+    この効果は 2 枚の透明なフィルムに印刷された画像を重ね合わせたようなものです。
+- `screen`
+  - : 色を反転して乗算を行い、さらに色を反転した結果が最終的な色になります。
+    黒いレイヤーは変化をもたらしません。白いレイヤーは、最終的に白いのレイヤーへ近づけます。
+    この効果は 2 枚の画像が画面に投影された状況に似ています。
+- `overlay`
+  - : 下の色が暗ければ `multiply`、下の色が明るければ `screen` の結果が最終的な色になります。
+    この混合モードは `hard-light` と同等ですが、レイヤーは逆です。
+- `darken`
+  - : 色成分ごとに最も暗い値が最終的な値になります。
+- `lighten`
+  - : 色成分ごとに最も明るい値が最終的な値になります。
+- `color-dodge`
+  - : 下の色を、反転した上の色で除算した結果が、最終的な色になります。
+    黒い前景は変化をもたらしません。背景色を反転した色を持つ前景は、完全に明るい色に導きます。
+    この混合モードは `screen` に似ていますが、完全に明るい色に近づけるためには背景色を反転した色と同程度に明るい前景が必要です。
+- `color-burn`
+  - : 反転した下の色を上の色で除算して、さらに反転した結果が最終的な色になります。
+    白い背景は変化をもたらしません。背景色を反転した色を持つ前景は、最終的に黒い画像へ近づけます。
+    この混合モードは `multiply` に似ていますが、最終的に画像を暗くするためには背景色を反転した色と同程度に暗い前景が必要です。
+- `hard-light`
+  - : 上の色が暗い色であれば `multiply` 、明るい色であれば `screen` の結果が最終的な色になります。
+    この混合モードは `overlay` と同じですが、レイヤーが入れ替わっています。
+    この効果は、背景に*強烈な*スポットライトを当てた状況に似ています。
+- `soft-light`
+  - : 最終的な色は `hard-light` に似ていますが、よりソフトになります。
+    この混合モードは `hard-light` に似ています。
+    この効果は、背景に*拡散光の*スポットライトを当てた状況に似ています。
+- `difference`
+  - : 2 つの色のうち明るい色から、暗い色を減算した結果が最終的な色になります。
+    黒いレイヤーは変化をもたらしません。白いレイヤーは、もうひとつのレイヤーの色を反転します。
+- `exclusion`
+  - : 最終的な色は `difference` に似ていますが、コントラストが低くなります。
+    `difference` と同様に、黒いレイヤーは変化をもたらしません。白いレイヤーは、もうひとつのレイヤーの色を反転します。
+- `hue`
+  - : 最終的な色は上の色の*色相*を持ちますが、*彩度*および*明度*は下の色の値を使用します。
+- `saturation`
+  - : 最終的な色は上の色の*彩度*を持ちますが、*色相*および*明度*は下の色の値を使用します。
+    彩度を持たない純粋なグレーの背景は、効果がありません。
+- `color`
+  - : 最終的な色は上の色の*色相*および*彩度*を持ちますが、*明度*は下の色の値を使用します。
+    この効果はグレーレベルを保持しており、前景に色をつけるために使用できます。
+- `luminosity`
+  - : 最終的な色は上の色の*明度*を持ちますが、*色相*および *彩度*は下の色の値を使用します。
+    この混合モードは `color` と同じですが、レイヤーが入れ替わっています。
 
- <div id="normal_example">
- <div class="hidden">
- <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
+## 解説
 
- <pre class="brush: css">#div {
+混合モードは、適用されるレイヤー間のそれぞれのピクセルにおいて前景色と背景色を取り、計算を行い、新しい色の値を返します。
+
+混合モード同士の変化は補完されません。すべての変更が直接反映されます。
+
+## 例
+
+### normal
+
+```html hidden
+<div id="div"></div>
+```
+
+```css
+#div {
   width: 300px;
   height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-              url('https://mdn.mozillademos.org/files/8545/tr.png');
+  background: url('br.png'),
+              url('tr.png');
   background-blend-mode: normal;
-}</pre>
- </div>
- </div>
+}
+```
 
- <p>{{ EmbedLiveSample('normal_example', "300", "300") }}</p>
- </dd>
- <dt><code id="multiply">multiply</code></dt>
- <dd>
- <p>上の色と下の色を掛け合わせた結果が最終的な色になります。<br>
-  黒いレイヤーは最終的に黒いレイヤーに近づけ、白いレイヤーは変化をもたらしません。<br>
-  この効果は2枚の透明なフィルムに印刷された画像を重ね合わせたようなものです。</p>
+{{ EmbedLiveSample('normal', "300", "350") }}
 
- <div id="multiply_example">
- <div class="hidden">
- <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
+### multiply
 
- <pre class="brush: css">#div {
+```html hidden
+<div id="div"></div>
+```
+
+```css
+#div {
   width: 300px;
   height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-              url('https://mdn.mozillademos.org/files/8545/tr.png');
+  background: url('br.png'),
+              url('tr.png');
   background-blend-mode: multiply;
-}</pre>
- </div>
- </div>
+}
+```
 
- <p>{{ EmbedLiveSample('multiply_example', "300", "300") }}</p>
- </dd>
- <dt><code id="screen">screen</code></dt>
- <dd>
- <p>色を反転して乗算を行い、さらに色を反転した結果が最終的な色になります。<br>
-  黒いレイヤーは変化をもたらしません。白いレイヤーは、最終的に白いのレイヤーへ近づけます。<br>
-  この効果は2枚の画像がスクリーンに投影された状況に似ています。</p>
+{{ EmbedLiveSample('multiply', "300", "350") }}
 
- <div id="screen_example">
- <div class="hidden">
- <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
+### screen
 
- <pre class="brush: css">#div {
+```html hidden
+<div id="div"></div>
+```
+
+```css
+#div {
   width: 300px;
   height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-              url('https://mdn.mozillademos.org/files/8545/tr.png');
+  background: url('br.png'),
+              url('tr.png');
   background-blend-mode: screen;
-}</pre>
- </div>
- </div>
+}
+```
 
- <p>{{ EmbedLiveSample('screen_example', "300", "300") }}</p>
- </dd>
- <dt><code id="overlay">overlay</code></dt>
- <dd>下の色が暗ければ <code>multiply</code>、下の色が明るければ <code>screen</code> の結果が最終的な色になります。。<br>
- このブレンドモードは <code>hard-light</code> と同等ですが、レイヤーは逆です。
- <div id="overlay_example">
- <div class="hidden">
- <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
+{{ EmbedLiveSample('screen', "300", "350") }}
 
- <pre class="brush: css">#div {
+### overlay
+
+```html hidden
+<div id="div"></div>
+```
+
+```css
+#div {
   width: 300px;
   height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-              url('https://mdn.mozillademos.org/files/8545/tr.png');
+  background: url('br.png'),
+              url('tr.png');
   background-blend-mode: overlay;
-}</pre>
- </div>
- </div>
+}
+```
 
- <p>{{ EmbedLiveSample('overlay_example', "300", "300") }}</p>
- </dd>
- <dt><code id="darken">darken</code></dt>
- <dd>
- <p>色成分ごとに最も暗い値が最終的な値になります。</p>
+{{ EmbedLiveSample('overlay', "300", "350") }}
 
- <div id="darken_example">
- <div class="hidden">
- <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
+### darken
 
- <pre class="brush: css">#div {
+```html hidden
+<div id="div"></div>
+```
+
+```css
+#div {
   width: 300px;
   height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-              url('https://mdn.mozillademos.org/files/8545/tr.png');
+  background: url('br.png'),
+              url('tr.png');
   background-blend-mode: darken;
-}</pre>
- </div>
- </div>
+}
+```
 
- <p>{{ EmbedLiveSample('darken_example', "300", "300") }}</p>
- </dd>
- <dt><code id="lighten">lighten</code></dt>
- <dd>
- <p>色成分ごとに最も明るい値が最終的な値になります。</p>
+{{ EmbedLiveSample('darken', "300", "350") }}
 
- <div id="lighten_example">
- <div class="hidden">
- <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
+### lighten
 
- <pre class="brush: css">#div {
+```html hidden
+<div id="div"></div>
+```
+
+```css
+#div {
   width: 300px;
   height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-              url('https://mdn.mozillademos.org/files/8545/tr.png');
+  background: url('br.png'),
+              url('tr.png');
   background-blend-mode: lighten;
-}</pre>
- </div>
- </div>
+}
+```
 
- <p>{{ EmbedLiveSample('lighten_example', "300", "300") }}</p>
- </dd>
- <dt><code id="color-dodge">color-dodge</code></dt>
- <dd>
- <p>下の色を、反転した上の色で除算した結果が、最終的な色になります。<br>
-  黒い前景は変化をもたらしません。背景色を反転した色を持つ前景は、完全に明るい色に導きます。<br>
-  このブレンドモードは <code>screen</code> に似ていますが、完全に明るい色に近づけるためには背景色を反転した色と同程度に明るい前景が必要です。</p>
+{{ EmbedLiveSample('lighten', "300", "350") }}
 
- <div id="color-dodge_example">
- <div class="hidden">
- <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
+### color-dodge
 
- <pre class="brush: css">#div {
+```html hidden
+<div id="div"></div>
+```
+
+```css
+#div {
   width: 300px;
   height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-              url('https://mdn.mozillademos.org/files/8545/tr.png');
+  background: url('br.png'),
+              url('tr.png');
   background-blend-mode: color-dodge;
-}</pre>
- </div>
- </div>
+}
+```
 
- <p>{{ EmbedLiveSample('color-dodge_example', "300", "300") }}</p>
- </dd>
- <dt><code id="color-burn">color-burn</code></dt>
- <dd>
- <p>反転した下の色を上の色で除算して、さらに反転した結果が最終的な色になります。<br>
-  白い背景は変化をもたらしません。背景色を反転した色を持つ前景は、最終的に黒い画像へ近づけます。<br>
-  このブレンドモードは <code>multiply</code> に似ていますが、最終的に画像を暗くするためには背景色を反転した色と同程度に暗い前景が必要です。</p>
+{{ EmbedLiveSample('color-dodge', "300", "350") }}
 
- <div id="color-burn_example">
- <div class="hidden">
- <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
+### color-burn
 
- <pre class="brush: css">#div {
+```html hidden
+<div id="div"></div>
+```
+
+```css
+#div {
   width: 300px;
   height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-              url('https://mdn.mozillademos.org/files/8545/tr.png');
+  background: url('br.png'),
+              url('tr.png');
   background-blend-mode: color-burn;
-}</pre>
- </div>
- </div>
+}
+```
 
- <p>{{ EmbedLiveSample('color-burn_example', "300", "300") }}</p>
- </dd>
- <dt><code>hard-light</code></dt>
- <dd>
- <p>上の色が暗い色であれば <code>multiply</code> 、明るい色であれば <code>screen</code> の結果が最終的な色になります。<br>
-  このブレンドモードは <code>overlay</code> と同じですが、レイヤーが入れ替わっています。<br>
-  この効果は、背景に<em>強烈な</em>スポットライトを当てた状況に似ています。</p>
+{{ EmbedLiveSample('color-burn', "300", "350") }}
 
- <div id="hard-light_example">
- <div class="hidden">
- <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
+### hard-light
 
- <pre class="brush: css">#div {
+```html hidden
+<div id="div"></div>
+```
+
+```css
+#div {
   width: 300px;
   height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-              url('https://mdn.mozillademos.org/files/8545/tr.png');
+  background: url('br.png'),
+              url('tr.png');
   background-blend-mode: hard-light;
-}</pre>
- </div>
- </div>
+}
+```
 
- <p>{{ EmbedLiveSample('hard-light_example', "300", "300") }}</p>
- </dd>
- <dt><code id="soft-light">soft-light</code></dt>
- <dd>
- <p>最終的な色は <code>hard-light</code> に似ていますが、よりソフトになります。<br>
-  このブレンドモードは <code>hard-light</code> に似ています。<br>
-  この効果は、背景に<em>拡散光の</em>スポットライトを当てた状況に似ています。</p>
+{{ EmbedLiveSample('hard-light', "300", "350") }}
 
- <div id="soft-light_example">
- <div class="hidden">
- <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
+### soft-light
 
- <pre class="brush: css">#div {
+```html hidden
+<div id="div"></div>
+```
+
+```css
+#div {
   width: 300px;
   height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-              url('https://mdn.mozillademos.org/files/8545/tr.png');
+  background: url('br.png'),
+              url('tr.png');
   background-blend-mode: soft-light;
-}</pre>
- </div>
- </div>
+}
+```
 
- <p>{{ EmbedLiveSample('soft-light_example', "300", "300") }}</p>
- </dd>
- <dt><code id="difference">difference</code></dt>
- <dd>
- <p>2 つの色のうち明るい色から、暗い色を減算した結果が最終的な色になります。<br>
-  黒いレイヤーは変化をもたらしません。白いレイヤーは、もうひとつのレイヤーの色を反転します。</p>
+{{ EmbedLiveSample('soft-light', "300", "350") }}
 
- <div id="difference_example">
- <div class="hidden">
- <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
+### difference
 
- <pre class="brush: css">#div {
+```html hidden
+<div id="div"></div>
+```
+
+```css
+#div {
   width: 300px;
   height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-              url('https://mdn.mozillademos.org/files/8545/tr.png');
+  background: url('br.png'),
+              url('tr.png');
   background-blend-mode: difference;
-}</pre>
- </div>
- </div>
+}
+```
 
- <p>{{ EmbedLiveSample('difference_example', "300", "300") }}</p>
- </dd>
- <dt><code id="exclusion">exclusion</code></dt>
- <dd>
- <p>最終的な色は <code>difference</code> に似ていますが、コントラストが低くなります。<br>
-  <code>difference</code> と同様に、黒いレイヤーは変化をもたらしません。白いレイヤーは、もうひとつのレイヤーの色を反転します。</p>
+{{ EmbedLiveSample('difference', "300", "350") }}
 
- <div id="exclusion_example">
- <div class="hidden">
- <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
+### exclusion
 
- <pre class="brush: css">#div {
+```html hidden
+<div id="div"></div>
+```
+
+```css
+#div {
   width: 300px;
   height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-              url('https://mdn.mozillademos.org/files/8545/tr.png');
+  background: url('br.png'),
+              url('tr.png');
   background-blend-mode: exclusion;
-}</pre>
- </div>
- </div>
+}
+```
 
- <p>{{ EmbedLiveSample('exclusion_example', "300", "300") }}</p>
- </dd>
- <dt><code id="hue">hue</code></dt>
- <dd>
- <p>最終的な色は上の色の<em>色調</em>を持ちますが、<em>彩度</em>および<em>明度</em>は下の色の値を使用します。</p>
+{{ EmbedLiveSample('exclusion', "300", "350") }}
 
- <div id="hue_example">
- <div class="hidden">
- <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
+### hue
 
- <pre class="brush: css">#div {
+```html hidden
+<div id="div"></div>
+```
+
+```css
+#div {
   width: 300px;
   height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-              url('https://mdn.mozillademos.org/files/8545/tr.png');
+  background: url('br.png'),
+              url('tr.png');
   background-blend-mode: hue;
-}</pre>
- </div>
- </div>
+}
+```
 
- <p>{{ EmbedLiveSample('hue_example', "300", "300") }}</p>
- </dd>
- <dt><code id="saturation">saturation</code></dt>
- <dd>
- <p>最終的な色は上の色の<em>彩度</em>を持ちますが、<em>色調</em>および<em>明度</em>は下の色の値を使用します。<br>
-  彩度を持たない純粋なグレーの背景は、効果がありません。</p>
+{{ EmbedLiveSample('hue', "300", "350") }}
 
- <div id="saturation_example">
- <div class="hidden">
- <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
+### saturation
 
- <pre class="brush: css">#div {
+```html hidden
+<div id="div"></div>
+```
+
+```css
+#div {
   width: 300px;
   height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-              url('https://mdn.mozillademos.org/files/8545/tr.png');
+  background: url('br.png'),
+              url('tr.png');
   background-blend-mode: saturation;
-}</pre>
- </div>
- </div>
+}
+```
 
- <p>{{ EmbedLiveSample('saturation_example', "300", "300") }}</p>
- </dd>
- <dt><code id="color">color</code></dt>
- <dd>
- <p>最終的な色は上の色の<em>色調</em>および<em>彩度</em>を持ちますが、<em>明度</em>は下の色の値を使用します。<br>
-  この効果はグレーレベルを保持しており、前景に色をつけるために使用できます。</p>
+{{ EmbedLiveSample('saturation', "300", "350") }}
 
- <div id="color_example">
- <div class="hidden">
- <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
+### color
 
- <pre class="brush: css">#div {
+```html hidden
+<div id="div"></div>
+```
+
+```css
+#div {
   width: 300px;
   height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-              url('https://mdn.mozillademos.org/files/8545/tr.png');
+  background: url('br.png'),
+              url('tr.png');
   background-blend-mode: color;
-}</pre>
- </div>
- </div>
+}
+```
 
- <p>{{ EmbedLiveSample('color_example', "300", "300") }}</p>
- </dd>
- <dt><code id="luminosity">luminosity</code></dt>
- <dd>
- <p>最終的な色は上の色の<em>明度</em>を持ちますが、<em>色調</em>および <em>彩度</em>は下の色の値を使用します。<br>
-  このブレンドモードは <code>color</code> と同じですが、レイヤーが入れ替わっています。</p>
+{{ EmbedLiveSample('color', "300", "350") }}
 
- <div id="luminosity_example">
- <div class="hidden">
- <pre class="brush: html">&lt;div id="div"&gt;&lt;/div&gt;</pre>
+### luminosity
 
- <pre class="brush: css">#div {
+```html hidden
+<div id="div"></div>
+```
+
+```css
+#div {
   width: 300px;
   height: 300px;
-  background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-              url('https://mdn.mozillademos.org/files/8545/tr.png');
+  background: url('br.png'),
+              url('tr.png');
   background-blend-mode: luminosity;
-}</pre>
- </div>
- </div>
+}
+```
 
- <p>{{ EmbedLiveSample('luminosity_example', "300", "300") }}</p>
- </dd>
-</dl>
+{{ EmbedLiveSample('luminosity', "300", "350") }}
 
-<h2 id="Description">解説</h2>
+<h3 id="Blend_mode_comparison">混合モードの比較</h3>
 
-<p>ブレンドモードは、適用されるレイヤー間のそれぞれのピクセルにおいて前景色と背景色を取り、計算を行い、新しい色の値を返します。</p>
+次の例の `<div>` には、 Firefox のロゴと線形グラデーションの 2 つの背景画像を設定してあります。その下に `<select>` メニューがあって `background-blend-mode` を変更することができ、それが `<div>` に適用されますので、様々な混合モードの効果を比較することができます。
 
-<p>ブレンドモード同士の変化は補完されません。すべての変更が直接反映されます。</p>
+#### HTML
 
-<h2 id="Examples">例</h2>
+```html
+<div></div>
+<p>混合モードを選択してください。</p>
+<select>
+  <option selected>normal</option>
+  <option>multiply</option>
+  <option>screen</option>
+  <option>overlay</option>
+  <option>darken</option>
+  <option>lighten</option>
+  <option>color-dodge</option>
+  <option>color-burn</option>
+  <option>hard-light</option>
+  <option>soft-light</option>
+  <option>difference</option>
+  <option>exclusion</option>
+  <option>hue</option>
+  <option>saturation</option>
+  <option>color</option>
+  <option>luminosity</option>
+</select>
+```
 
-<h3 id="Blend_mode_comparison">ブレンドモードの比較</h3>
+#### CSS
 
-<p>次の例の <code>&lt;div&gt;</code> には、 Firefox のロゴと線形グラデーションの 2 つの背景画像を設定してあります。その下に <code>&lt;select&gt;</code> メニューがあって <code>background-blend-mode</code> を変更することができ、それが <code>&lt;div&gt;</code> に適用されますので、様々なブレンドモードの効果を比較することができます。</p>
-
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;div&gt;&lt;/div&gt;
-&lt;p&gt;ブレンドモードを選択してください。&lt;/p&gt;
-&lt;select&gt;
-  &lt;option selected&gt;normal&lt;/option&gt;
-  &lt;option&gt;multiply&lt;/option&gt;
-  &lt;option&gt;screen&lt;/option&gt;
-  &lt;option&gt;overlay&lt;/option&gt;
-  &lt;option&gt;darken&lt;/option&gt;
-  &lt;option&gt;lighten&lt;/option&gt;
-  &lt;option&gt;color-dodge&lt;/option&gt;
-  &lt;option&gt;color-burn&lt;/option&gt;
-  &lt;option&gt;hard-light&lt;/option&gt;
-  &lt;option&gt;soft-light&lt;/option&gt;
-  &lt;option&gt;difference&lt;/option&gt;
-  &lt;option&gt;exclusion&lt;/option&gt;
-  &lt;option&gt;hue&lt;/option&gt;
-  &lt;option&gt;saturation&lt;/option&gt;
-  &lt;option&gt;color&lt;/option&gt;
-  &lt;option&gt;luminosity&lt;/option&gt;
-&lt;/select&gt;</pre>
-
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">div {
+```css
+div {
   width: 300px;
   height: 300px;
   background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center,
   linear-gradient(to bottom, blue, orange);
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const selectElem = document.querySelector('select');
+```js
+const selectElem = document.querySelector('select');
 const divElem = document.querySelector('div');
 
-selectElem.addEventListener('change', () =&gt; {
+selectElem.addEventListener('change', () => {
   divElem.style.backgroundBlendMode = selectElem.value;
-});</pre>
+});
+```
 
-<h4 id="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Blend_mode_comparison', '100%', 370)}}</p>
+{{EmbedLiveSample('Blend_mode_comparison', '100%', 400)}}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Compositing', '#ltblendmodegt', '&lt;blend-mode&gt;') }}</td>
-   <td>{{ Spec2('Compositing') }}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>このデータ型を使用するプロパティ: {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}</li>
-</ul>
+- このデータ型を使用するプロパティ: {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
 
-<p>様々なブレンドモードの他のウェブサイトにおける解説</p>
+様々な混合モードの他のウェブサイトにおける解説:
 
-<ul>
- <li>Wikipedia の<a href="https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%AC%E3%83%B3%E3%83%89%E3%83%A2%E3%83%BC%E3%83%89">ブレンドモード</a>の記事</li>
- <li><a href="https://helpx.adobe.com/jp/photoshop/using/blending-modes.html">Adobe Photoshop における描画モード</a> (Adobe)</li>
-</ul>
+- Wikipedia の[ブレンドモード](https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%AC%E3%83%B3%E3%83%89%E3%83%A2%E3%83%BC%E3%83%89)の記事
+- [Adobe Photoshop における描画モード](https://helpx.adobe.com/jp/photoshop/using/blending-modes.html) (Adobe)
