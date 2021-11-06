@@ -11,25 +11,25 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Метод <strong><code>toJSON()</code></strong> возвращает представление объекта {{jsxref("Global_Objects/Date", "Date")}} в виде {{Glossary("JSON")}}.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code><var>dateObj</var>.toJSON()</code></pre>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Экземпляры объекта {{jsxref("Global_Objects/Date", "Date")}} ссылаются на определённый момент времени. Вызов метода <code>toJSON()</code> вернёт строку, отформатированную в JSON (при помощи метода {{jsxref("Date.prototype.toISOString()", "toISOString()")}}), представляющую значение объекта {{jsxref("Global_Objects/Date", "Date")}}. Этот метод, как правило, предназначен для сериализации объектов {{jsxref("Global_Objects/Date", "Date")}} в JSON.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_toJSON" name="Example:_Using_toJSON">Пример: использование метода <code>toJSON()</code></h3>
+<h3 id="Example:_Using_toJSON">Пример: использование метода <code>toJSON()</code></h3>
 <pre class="brush:js">var jsonDate = (new Date()).toJSON();
 var backToDate = new Date(jsonDate);
 
 console.log('Сериализованный объект даты: ' + jsonDate);
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -50,10 +50,10 @@ console.log('Сериализованный объект даты: ' + jsonDate)
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
  <li>{{jsxref("Date.prototype.toTimeString()")}}</li>

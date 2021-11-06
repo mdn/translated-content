@@ -22,11 +22,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 
 <p> </p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">parseInt(<em>string</em>, <em>radix</em>);</pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>string</code></dt>
@@ -38,11 +38,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
  <dd>Целое число в диапазоне между 2 и 36, представляющее собой основание системы счисления числовой строки <code>string</code>, описанной выше. В основном пользователи используют десятичную систему счисления и указывают 10. <strong>Всегда указывайте этот параметр,</strong> чтобы исключить ошибки считывания и гарантировать корректность исполнения и предсказуемость результата. Когда основание системы счисления не указано, разные реализации могут возвращать разные результаты.</dd>
 </dl>
 
-<h3 id="Description" name="Description">Возвращаемое значение</h3>
+<h3 id="Description">Возвращаемое значение</h3>
 
 <p>Целое число, полученное парсингом (разбором и интерпретацией) переданной строки. Если первый символ не получилось сконвертировать в число, то возвращается {{jsxref("NaN")}}. </p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Функция <code>parseInt</code> преобразует первый переданный ей аргумент в строковый тип, интерпретирует его и возвращает целое число или значение <code>NaN</code>. Результат (если не <code>NaN</code>) является целым числом и представляет собой первый аргумент (<code>string</code>), рассматривающийся как число в указанной системе счисления (<code>radix</code>). Например, основание 10 указывает на преобразование из десятичного числа, 8 - восьмеричного, 16 - шестнадцатеричного и так далее. Если основание больше <code>10</code>, то для обозначения цифр больше <code>9</code> используются буквы. Например, для шестнадцатеричных чисел (основание 16) используются буквы от <code>A</code> до <code>F</code>.</p>
 
@@ -64,9 +64,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 
 <p>Для преобразования числа в строку в указанной системе счисления, используйте <code>intValue.toString(radix)</code>.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_parseInt" name="Example:_Using_parseInt">Пример: Использование <code>parseInt</code></h3>
+<h3 id="Example:_Using_parseInt">Пример: Использование <code>parseInt</code></h3>
 
 <p>Все следующие примеры возвращают <strong><code>15</code></strong>:</p>
 
@@ -154,43 +154,15 @@ console.log(filterInt('1.61803398875'));     // NaN
 
 <h2 id="Спецификация">Спецификация</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.2.2', 'parseInt')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-parseint-string-radix', 'parseInt')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-parseint-string-radix', 'parseInt')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
 
 
-<p>{{Compat("javascript.builtins.parseInt")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_Also" name="See_Also">Смотрите также</h2>
+<h2 id="See_Also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Global_Objects/parseFloat", "parseFloat()")}}</li>

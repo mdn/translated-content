@@ -10,29 +10,29 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toString
 ---
 <div>{{JSRef("Global_Objects", "Number")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>toString()</code></strong> возвращает строковое представление указанного объекта {{jsxref("Global_Objects/Number", "Number")}}.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code><var>numObj</var>.toString([<var>radix</var>])</code></pre>
+<pre class="syntaxbox"><code><var>numObj</var>.toString([<var>radix</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>radix</code></dt>
  <dd>Необязательный параметр. Целое число между 2 и 36, определяющее основание системы счисления, используемой для представления числового значения.</dd>
 </dl>
 
-<h3 id="Throws" name="Throws">Выбрасываемые исключения</h3>
+<h3 id="Throws">Выбрасываемые исключения</h3>
 
 <dl>
  <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
  <dd>Если в метод <code>toString()</code> передано основание не в диапазоне от 2 до 36, будет выброшено исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Объект {{jsxref("Global_Objects/Number", "Number")}} переопределяет метод {{jsxref("Object.prototype.toString", "toString")}}, унаследованный из объекта {{jsxref("Global_Objects/Object", "Object")}}; он не наследует метод {{jsxref("Object.prototype.toString")}}. Для объектов {{jsxref("Global_Objects/Number", "Number")}} метод <code>toString()</code> возвращает строку, представляющую объект в определённой системе счисления.</p>
 
@@ -42,11 +42,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toString
 
 <p>Если число <code>numObj</code> отрицательно, его знак сохраняется. Это правило действует даже если основание равно 2; возвращённая строка является двоичным представлением положительного числа <code>numObj</code>, перед которым ставится знак <code>-</code>, а <strong>не</strong> дополнительным кодом числа <code>numObj</code>.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_toString" name="Example:_Using_toString">Пример: использование <code>toString</code></h3>
+<h3 id="Example_Using_toString">Пример: использование <code>toString</code></h3>
 
-<pre class="brush: js notranslate">var count = 10;
+<pre class="brush: js">var count = 10;
 
 console.log(count.toString());    // Выведет '10'
 console.log((17).toString());     // Выведет '17'
@@ -60,38 +60,15 @@ console.log((-10).toString(2));   // Выведет '-1010'
 console.log((-0xff).toString(2)); // Выведет '-11111111'
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.4.2', 'Number.prototype.tostring')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.prototype.tostring', 'Number.prototype.tostring')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div>{{Compat("javascript.builtins.Number.toString")}}</div>
+<div>{{Compat}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Number.prototype.toFixed()")}}</li>

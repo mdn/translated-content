@@ -12,15 +12,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 ---
 <div>{{JSRef("Global_Objects", "String")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>indexOf()</code></strong> возвращает индекс первого вхождения указанного значения в строковый объект {{jsxref("Global_Objects/String", "String")}}, на котором он был вызван, начиная с индекса <code>fromIndex</code>. Возвращает -1, если значение не найдено.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>str</var>.indexOf(<var>searchValue</var>, [<var>fromIndex</var>]</code>)</pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>searchValue</code></dt>
@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
  <dd>Необязательный параметр. Местоположение внутри строки, откуда начинать поиск. Может быть любым целым числом. Значение по умолчанию установлено в 0. Если <code>fromIndex &lt; 0</code>, поиск ведётся по всей строке (так же, как если бы был передан 0). Если <code>fromIndex &gt;= str.length</code>, метод вернёт -1, но только в том случае, если <code>searchValue</code> не равен пустой строке, в этом случае он вернёт <code>str.length</code>.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Символы в строке идут слева направо. Индекс первого символа равен 0, а последнего символа в строке <code>stringName</code> равен <code>stringName.length - 1</code>.</p>
 
@@ -42,14 +42,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 'Синий кит'.indexOf('', 10);      // вернёт 9
 </pre>
 
-<h3 id="Case-sensitivity" name="Case-sensitivity">Регистрозависимость</h3>
+<h3 id="Case-sensitivity">Регистрозависимость</h3>
 
 <p>Метод <code>indexOf()</code> является регистрозависимым. Например, следующее выражение вернёт -1:</p>
 
 <pre class="brush: js">'Синий кит'.indexOf('синий'); // вернёт -1
 </pre>
 
-<h3 id="Checking_occurrences" name="Checking_occurrences">Проверка на вхождение</h3>
+<h3 id="Checking_occurrences">Проверка на вхождение</h3>
 
 <p>Обратите внимание, что значение 0 не вычисляется в <code>true</code>, а значение -1 не вычисляется в <code>false</code>. Поэтому, для проверки того, что конкретная строка содержится в другой строке, правильно делать так:</p>
 
@@ -57,9 +57,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 'Синий кит'.indexOf('Голубой') !== -1; // false
 </pre>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_indexOf_and_lastIndexOf" name="Example:_Using_indexOf_and_lastIndexOf">Пример: использование методов <code>indexOf()</code> и <code>lastIndexOf()</code></h3>
+<h3 id="Example:_Using_indexOf_and_lastIndexOf">Пример: использование методов <code>indexOf()</code> и <code>lastIndexOf()</code></h3>
 
 <p>В следующем примере используются методы <code>indexOf()</code> и {{jsxref("String.prototype.lastIndexOf()", "lastIndexOf()")}} для нахождения значений в строке <code>"Дивный новый мир"</code>.</p>
 
@@ -76,7 +76,7 @@ console.log('Индекс вхождения «новый» с конца стр
 // Отобразит 7
 </pre>
 
-<h3 id="Example:_indexOf_and_case-sensitivity" name="Example:_indexOf_and_case-sensitivity">Пример: метод <code>indexOf()</code> и регистрозависимость</h3>
+<h3 id="Example:_indexOf_and_case-sensitivity">Пример: метод <code>indexOf()</code> и регистрозависимость</h3>
 
 <p>В следующем примере определяются две строковых переменных. Переменные содержат одинаковые строки, за исключение того, что слова во второй строке начинаются с заглавных букв. Первый вызов метода {{domxref("console.log()")}} отобразит 18. Но поскольку метод <code>indexOf()</code> является регистрозависимым, строка <code>"чеддер"</code> в переменной <code>myCapString</code> не будет найдена, так что второй вызов метода <code>console.log()</code> отобразит -1.</p>
 
@@ -89,7 +89,7 @@ console.log('Вызов myCapString.indexOf("чеддер") вернул ' + myC
 // Отобразит -1
 </pre>
 
-<h3 id="Example:_Using_indexOf_to_count_occurrences_of_a_letter_in_a_string" name="Example:_Using_indexOf_to_count_occurrences_of_a_letter_in_a_string">Пример: использование метода <code>indexOf()</code> для подсчёта вхождений буквы в строку</h3>
+<h3 id="Example:_Using_indexOf_to_count_occurrences_of_a_letter_in_a_string">Пример: использование метода <code>indexOf()</code> для подсчёта вхождений буквы в строку</h3>
 
 <p>Следующий пример устанавливает значение переменной <code>count</code> в количество вхождений буквы <code>в</code> в строку <code>str</code>:</p>
 
@@ -105,38 +105,15 @@ while (pos !== -1) {
 console.log(count); // отобразит 3
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.7', 'String.prototype.indexOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.charAt()")}}</li>

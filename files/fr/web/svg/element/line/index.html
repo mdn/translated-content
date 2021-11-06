@@ -18,17 +18,18 @@ translation_of: Web/SVG/Element/line
 
 <p>{{svginfo}}</p>
 
-<h2 id="Exemple">Exemple</h2>
+<h2>Exemple</h2>
 
-<p>» <a href="https://developer.mozilla.org/files/3254/line.svg" title="https://developer.mozilla.org/files/3254/line.svg">line.svg</a></p>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
-<p>Vous pouvez aussi appliquer une transformation pour avoir le même résultat. En commençant avec une ligne normale,</p>
+<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;line x1="0" y1="80" x2="100" y2="20" stroke="black" /&gt;
 
-<p>» <a href="https://developer.mozilla.org/files/3345/line1.svg" title="https://developer.mozilla.org/files/3345/line1.svg">line1.svg</a></p>
+  &lt;!-- Si on n'indique pas stroke, la ligne de couleur
+       ne sera pas visible --&gt;
+&lt;/svg&gt;</pre>
 
-<p>ajoutez des options de transformation pour changer la direction de la ligne :</p>
-
-<p>» <a href="https://developer.mozilla.org/files/3346/line2.svg" title="https://developer.mozilla.org/files/3346/line2.svg">line2.svg</a></p>
+<p>{{EmbedLiveSample('exemple', 100, 100)}}</p>
 
 <h2 id="Attributs">Attributs</h2>
 

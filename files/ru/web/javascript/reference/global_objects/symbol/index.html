@@ -11,22 +11,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol
 ---
 <div>{{JSRef}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p><strong style="line-height: 1.5;">Символ (анг. Symbol)</strong><span style="line-height: 1.5;"> — это уникальный и неизменяемый тип данных, который может быть использован как идентификатор для свойств объектов. </span><em>Символьный объект (анг. symbol object) </em>— это объект-обёртка (англ. wrapper) для <span style="line-height: 1.5;">{{Glossary("Primitive", "примитивного")}} символьного типа.</span></p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>Symbol(<em>[описание]</em>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>описание</code> {{optional_inline}}</dt>
  <dd>Необязательный, строка. Описание символа, которое может быть использовано во время отладки, но не для доступа к самому символу.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Чтобы создать новый символьный примитив, достаточно написать <code>Symbol()</code>, указав по желанию строку в качестве описания этого символа:</p>
 
@@ -61,7 +61,7 @@ typeof symObj;  // "object"
 
 <p>Метод {{jsxref("Object.getOwnPropertySymbols()")}} возвращает массив символов и позволяет получить символьные свойства конкретного объекта. Следует заметить, что при инициализации объекты не получают символьных свойств, так что этот массив будет пуст, пока вы не зададите ему какое-либо символьное свойство.</p>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <dl>
  <dt><code>Symbol.length</code></dt>
@@ -108,7 +108,7 @@ typeof symObj;  // "object"
  <dd>Строковое значение, используемое в качестве описания объекта по умолчанию. Используется функцией {{jsxref("Object.prototype.toString()")}}</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
 <dl>
  <dt>{{jsxref("Symbol.for()", "Symbol.for(key)")}}</dt>
@@ -117,7 +117,7 @@ typeof symObj;  // "object"
  <dd>Получает по разделяемому символу его ключ из глобального реестра символов.</dd>
 </dl>
 
-<h2 id="Boolean_instances" name="Boolean_instances"><code><span style="font-family: open sans,sans-serif; font-size: 2.14285714285714rem;">Прототип </span>Symbol</code></h2>
+<h2 id="Boolean_instances"><code><span style="font-family: open sans,sans-serif; font-size: 2.14285714285714rem;">Прототип </span>Symbol</code></h2>
 
 <p>Все символы наследуют от {{jsxref("Symbol.prototype")}}.</p>
 
@@ -129,9 +129,9 @@ typeof symObj;  // "object"
 
 <p>{{page('en-US/Web/JavaScript/Reference/Global_Objects/Symbol/prototype','Methods')}}</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Creating_Boolean_objects_with_an_initial_value_of_false" name="Creating_Boolean_objects_with_an_initial_value_of_false">Использование оператора <code>typeof</code> с символами</h3>
+<h3 id="Creating_Boolean_objects_with_an_initial_value_of_false">Использование оператора <code>typeof</code> с символами</h3>
 
 <p>Оператор {{jsxref("Operators/typeof", "typeof")}} позволяет идентифицировать символ.</p>
 
@@ -187,31 +187,13 @@ obj[Object(sym)];    // снова 1
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-symbol-objects', 'Symbol')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol-objects', 'Symbol')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<p>{{Compat("javascript.builtins.Symbol")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/ru/docs/Glossary/Symbol">Глоссарий: Символьный тип данных</a></li>

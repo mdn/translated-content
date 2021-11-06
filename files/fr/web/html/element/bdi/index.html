@@ -26,7 +26,7 @@ browser-compat: html.elements.bdi
 ---
 <div>{{HTMLRef}}</div>
 
-<p class="summary">L'élément <strong><code>&lt;bdi&gt;</code></strong> (ou élément d'isolation de texte bidirectionnel) isole une portée (<em>span</em>) de texte pouvant être formatée dans une direction différente de celle du texte qui l'entoure. Cela permet, par exemple, de présenter correctement une citation en arabe (écrit de droite à gauche) au sein d'un texte écrit en français (écrit de gauche à droite).</p>
+<p>L'élément <strong><code>&lt;bdi&gt;</code></strong> (ou élément d'isolation de texte bidirectionnel) isole une portée (<em>span</em>) de texte pouvant être formatée dans une direction différente de celle du texte qui l'entoure. Cela permet, par exemple, de présenter correctement une citation en arabe (écrit de droite à gauche) au sein d'un texte écrit en français (écrit de gauche à droite).</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/bdi.html", "tabbed-standard")}}</div>
 
@@ -94,71 +94,66 @@ browser-compat: html.elements.bdi
 
 <h2 id="examples">Exemples</h2>
 
-<h3 id="no_&lt;bdi&gt;_with_only_ltr">Texte de gauche à droite uniquement, sans &lt;bdi&gt;</h3>
+<h3 id="Gauche_à_droite_sans_bdi">Gauche à droite sans bdi</h3>
 
 <p>Cet exemple affiche les gagnants d'une compétition grâce à des éléments <a href="/fr/docs/Web/HTML/Element/span"><code>&lt;span&gt;</code></a>. Ici, les noms ne s'écrivent que de gauche à droite et le résultat s'affiche correctement :</p>
 
-<div id="bdi-sample-1">
 <pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;&lt;span class="name"&gt;Henrietta Boffin&lt;/span&gt; - 1&lt;sup&gt;re&lt;/sup&gt; place&lt;/li&gt;
   &lt;li&gt;&lt;span class="name"&gt;Jerry Cruncher&lt;/span&gt; - 2&lt;sup&gt;e&lt;/sup&gt; place&lt;/li&gt;
 &lt;/ul&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">body {
+
+<pre class="brush: css hidden">body {
   border: 1px solid #3f87a6;
   max-width: calc(100% - 40px - 6px);
   padding: 20px;
   width: calc(100% - 40px - 6px);
   border-width: 1px 1px 1px 5px;
 }</pre>
-</div>
-</div>
-<div>{{EmbedLiveSample("bdi-sample-1", "100%", 150)}}</div>
+
+<p>{{EmbedLiveSample("Gauche_à_droite_sans_bdi", "100%", 150)}}</p>
 
 <h3 id="no_&lt;bdi&gt;_with_rtl_text">Texte sans &lt;bdi&gt; avec deux directionnalités</h3>
 
 <p>Cela fonctionne sans problème tant que les noms s'écrivent de gauche à droite. Lorsqu'on insère un nom écrit de droite à gauche, la partie « <code>- 1</code> » sera captée par le texte en RTL et le résultat sera confus :</p>
 
-<div id="bdi-sample-2">
+<h4>Exemple sans bidi</h4>
 <pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;&lt;span class="name"&gt;اَلأَعْشَى&lt;/span&gt; - 1&lt;sup&gt;re&lt;/sup&gt; place&lt;/li&gt;
   &lt;li&gt;&lt;span class="name"&gt;Jerry Cruncher&lt;/span&gt; - 2&lt;sup&gt;e&lt;/sup&gt; place&lt;/li&gt;
 &lt;/ul&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   border: 1px solid #3f87a6;
   max-width: calc(100% - 40px - 6px);
   padding: 20px;
   width: calc(100% - 40px - 6px);
   border-width: 1px 1px 1px 5px;
 }</pre>
-</div>
-</div>
-<div>{{EmbedLiveSample("bdi-sample-2", "100%", 150)}}</div>
+
+<p>{{EmbedLiveSample("Exemple_sans_bidi", "100%", 150)}}</p>
 
 <h3 id="using_&lt;bdi&gt;_with_ltr_and_rtl_text">Texte avec &lt;bdi&gt; et deux directionnalités</h3>
 
 <p>Pour éviter cet écueil, on pourra utiliser <code>&lt;bdi&gt;</code> pour séparer le contenu :</p>
 
-<div id="bdi-sample-3">
+<h4>Exemple avec bidi</h4>
+
 <pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;&lt;bdi class="name"&gt;اَلأَعْشَى&lt;/bdi&gt; - 1&lt;sup&gt;re&lt;/sup&gt; place&lt;/li&gt;
   &lt;li&gt;&lt;bdi class="name"&gt;Jerry Cruncher&lt;/bdi&gt; - 2&lt;sup&gt;e&lt;/sup&gt; place&lt;/li&gt;
 &lt;/ul&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   border: 1px solid #3f87a6;
   max-width: calc(100% - 40px - 6px);
   padding: 20px;
   width: calc(100% - 40px - 6px);
   border-width: 1px 1px 1px 5px;
 }</pre>
-</div>
-</div>
-<div>{{EmbedLiveSample("bdi-sample-3", "100%", 150)}}</div>
+
+<p>{{EmbedLiveSample("Exemple_avec_bidi", "100%", 150)}}</p>
 
 <h2 id="specifications">Spécifications</h2>
 

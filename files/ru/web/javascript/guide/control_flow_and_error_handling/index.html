@@ -24,13 +24,13 @@ translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 
 <p>Блок обычно используется с управляющими инструкциями (например, <code>if</code>, <code>for</code>, <code>while</code>).</p>
 
-<pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">while</span> <span class="punctuation token" style="color: #999999;">(</span>x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">&lt;</span> <span class="number token" style="color: #990055;">10</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{ </span>x<span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">++</span><span class="punctuation token" style="color: #999999;">;</span><span class="punctuation token"> </span><span class="punctuation token" style="color: #999999;">}</span></code></pre>
+<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">while</span> <span class="punctuation token" style="color: #999999;">(</span>x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">&lt;</span> <span class="number token" style="color: #990055;">10</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{ </span>x<span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">++</span><span class="punctuation token" style="color: #999999;">;</span><span class="punctuation token"> </span><span class="punctuation token" style="color: #999999;">}</span></code></pre>
 
 <p>В вышеприведённом примере <code>{ x++; }</code> является блоком.</p>
 
 <p><strong>Обратите внимание:</strong> в JavaScript <strong>отсутствует</strong> область видимости блока до ECMAScript2015. Переменные, объявленные внутри блока, имеют область видимости функции (или скрипта), в которой находится данный блок, вследствие чего они сохранят свои значения при выходе за пределы блока. Другими словами, блок не создаёт новую область видимости. "Автономные" (standalone) блоки в JavaScript могут продуцировать полностью отличающийся результат, от результата в языках C или Java. Например:</p>
 
-<pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">var</span> x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="number token" style="color: #990055;">1</span><span class="punctuation token" style="color: #999999;">;</span>
+<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">var</span> x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="number token" style="color: #990055;">1</span><span class="punctuation token" style="color: #999999;">;</span>
 <span class="punctuation token" style="color: #999999;">{
   </span><span class="keyword token" style="color: #0077aa;">var</span> x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="number token" style="color: #990055;">2</span><span class="punctuation token" style="color: #999999;">;
 </span><span class="punctuation token" style="color: #999999;">}</span>
@@ -48,7 +48,7 @@ console<span class="punctuation token" style="color: #999999;">.</span><span cla
 
 <p>Используйте оператор <code>if</code> для выполнения инструкции, если логическое условия истинно. Используйте опциональный <code>else</code>, для выполнения инструкции, если условие ложно. Оператор if выглядит так:</p>
 
-<pre class="brush: js notranslate">if (condition) {
+<pre class="brush: js">if (condition) {
     statement_1;
 } else {
     statement_2;
@@ -58,7 +58,7 @@ console<span class="punctuation token" style="color: #999999;">.</span><span cla
 
 <p>Также вы можете объединить несколько инструкций, пользуясь <code>else if</code> для получения последовательности проверок условий:</p>
 
-<pre class="syntaxbox notranslate">if (condition_1) { statement_1;} else if (condition_2) { statement_2;} else if (condition_n) { statement_n; } else { statement_last;}</pre>
+<pre class="syntaxbox">if (condition_1) { statement_1;} else if (condition_2) { statement_2;} else if (condition_n) { statement_n; } else { statement_last;}</pre>
 
 <p>В случае нескольких условий только первое логическое условие, которое вычислится истинным (true), будет выполнено. Используйте блок ( <code>{ ... }</code> ) для группировки нескольких инструкций. Применение блоков является хорошей практикой, особенно когда используются вложенные инструкции <code>if</code>:</p>
 
@@ -72,12 +72,12 @@ console<span class="punctuation token" style="color: #999999;">.</span><span cla
 
 <p>Нежелательно использовать простые присваивания в условном выражении, т.к. присваивание может быть спутано с равенством при быстром просмотре кода. Например, не используйте следующий код:</p>
 
-<pre class="brush: js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">(</span>x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> y<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span><span class="punctuation token"> </span><span class="comment token" style="color: #708090;">/* ... */</span><span class="comment token"> </span><span class="punctuation token" style="color: #999999;">}</span>
+<pre class="brush: js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">(</span>x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> y<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span><span class="punctuation token"> </span><span class="comment token" style="color: #708090;">/* ... */</span><span class="comment token"> </span><span class="punctuation token" style="color: #999999;">}</span>
 </code></pre>
 
 <p>Если вам нужно использовать присваивание в условном выражении, то распространённой практикой является заключение операции присваивания в дополнительные скобки. Например:</p>
 
-<pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">( </span><span class="punctuation token" style="color: #999999;">(</span>x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> y<span class="punctuation token" style="color: #999999;">) </span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span><span class="punctuation token"> </span><span class="comment token" style="color: #708090;">/* ... */</span><span class="comment token"> </span><span class="punctuation token" style="color: #999999;">}</span></code></pre>
+<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">( </span><span class="punctuation token" style="color: #999999;">(</span>x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> y<span class="punctuation token" style="color: #999999;">) </span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span><span class="punctuation token"> </span><span class="comment token" style="color: #708090;">/* ... */</span><span class="comment token"> </span><span class="punctuation token" style="color: #999999;">}</span></code></pre>
 
 <h4 id="Ложные_значения">Ложные значения</h4>
 
@@ -96,14 +96,14 @@ console<span class="punctuation token" style="color: #999999;">.</span><span cla
 
 <p>Не путайте примитивные логические значения <code>true</code> и <code>false</code> со значениями true и false объекта {{jsxref("Boolean")}}. Например:</p>
 
-<pre class="brush: js notranslate">var b = new Boolean(false);
+<pre class="brush: js">var b = new Boolean(false);
 if (b) // это условие true
 if (b == true) // это условие false
 </pre>
 
 <p>В следующем примере функция <code>checkData</code> возвращает <code>true</code>, если число символов в объекте <code>Text</code> равно трём; в противном случае функция отображает окно alert и возвращает <code>false</code>.</p>
 
-<pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">function</span> <span class="function token" style="color: #dd4a68;">checkData<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">function</span> <span class="function token" style="color: #dd4a68;">checkData<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
   <span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">(</span>document<span class="punctuation token" style="color: #999999;">.</span>form1<span class="punctuation token" style="color: #999999;">.</span>threeChar<span class="punctuation token" style="color: #999999;">.</span>value<span class="punctuation token" style="color: #999999;">.</span>length <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">==</span> <span class="number token" style="color: #990055;">3</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
     <span class="keyword token" style="color: #0077aa;">return</span> <span class="keyword token" style="color: #0077aa;">true</span><span class="punctuation token" style="color: #999999;">;</span>
   <span class="punctuation token" style="color: #999999;">}</span> <span class="keyword token" style="color: #0077aa;">else</span> <span class="punctuation token" style="color: #999999;">{</span>
@@ -117,7 +117,7 @@ if (b == true) // это условие false
 
 <p>Инструкция <code>switch</code> позволяет сравнить значение выражения с различными вариантами и при совпадении выполнить соответствующий код. Инструкция имеет следующий вид:</p>
 
-<pre class="notranslate">switch (expression) {
+<pre>switch (expression) {
    case label_1:
       statements_1
       [break;]
@@ -137,7 +137,7 @@ if (b == true) // это условие false
 
 <p>В следующем примере если <code>fruittype</code> имеет значение <code>"Bananas"</code>, то будет выведено сообщение<code> "Bananas are $0.48 a pound."</code> и оператор <code>break</code> прекратит выполнение <code>switch</code>. Если бы оператор <code>break</code> отсутствовал, то был бы также выполнен код, соответствующий ветви <code>"Cherries"</code>, т.е. выведено сообщение <code>"Cherries are $3.00 a pound."</code>.</p>
 
-<pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">switch</span> <span class="punctuation token" style="color: #999999;">(</span>fruittype<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">switch</span> <span class="punctuation token" style="color: #999999;">(</span>fruittype<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
   <span class="keyword token" style="color: #0077aa;">case</span> <span class="string token" style="color: #669900;">"Oranges"</span><span class="punctuation token" style="color: #999999;">:</span>
     console<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">log<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">"Oranges are $0.59 a pound."</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
     <span class="keyword token" style="color: #0077aa;">break</span><span class="punctuation token" style="color: #999999;">;</span>
@@ -182,7 +182,7 @@ console<span class="punctuation token" style="color: #999999;">.</span><span cla
 
 <p>Вы можете выбросить любое выражение, а не только выражения определённого типа. В следующем примере выбрасываются исключения различных типов:</p>
 
-<pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">throw</span> <span class="string token" style="color: #669900;">"Error2"</span><span class="punctuation token" style="color: #999999;">;</span>  <span class="comment token" style="color: #708090;">                                            // string
+<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">throw</span> <span class="string token" style="color: #669900;">"Error2"</span><span class="punctuation token" style="color: #999999;">;</span>  <span class="comment token" style="color: #708090;">                                            // string
 </span><span class="keyword token" style="color: #0077aa;">throw</span> <span class="number token" style="color: #990055;">42</span><span class="punctuation token" style="color: #999999;">;</span>        <span class="comment token" style="color: #708090;">                                            // number
 </span><span class="keyword token" style="color: #0077aa;">throw</span> <span class="keyword token" style="color: #0077aa;">true</span><span class="punctuation token" style="color: #999999;">;</span>      <span class="comment token" style="color: #708090;">                                            // boolean
 </span><span class="keyword token" style="color: #0077aa;">throw</span> <span class="punctuation token" style="color: #999999;">{ </span>toString<span class="punctuation token" style="color: #999999;">:</span> <span class="keyword token" style="color: #0077aa;">function</span><span class="punctuation token" style="color: #999999;">(</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span> <span class="keyword token" style="color: #0077aa;">return</span> <span class="string token" style="color: #669900;">"I'm an object!"</span><span class="punctuation token" style="color: #999999;">;</span> <span class="punctuation token" style="color: #999999;">}</span> <span class="punctuation token" style="color: #999999;">}</span><span class="punctuation token" style="color: #999999;">; </span></code><code class="language-js" style="direction: ltr; white-space: pre;"><span class="comment token" style="color: #708090;">// object</span></code></pre>
@@ -191,7 +191,7 @@ console<span class="punctuation token" style="color: #999999;">.</span><span cla
 
 <p class="note">В следующем примере объект <code>UserException</code> выбрасывается как исключение:</p>
 
-<pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">function</span> UserException <span class="punctuation token" style="color: #999999;">(</span>message<span class="punctuation token" style="color: #999999;">) </span><span class="punctuation token" style="color: #999999;">{</span>
+<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">function</span> UserException <span class="punctuation token" style="color: #999999;">(</span>message<span class="punctuation token" style="color: #999999;">) </span><span class="punctuation token" style="color: #999999;">{</span>
   <span class="keyword token" style="color: #0077aa;">this</span><span class="punctuation token" style="color: #999999;">.</span>message <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">= </span>message<span class="punctuation token" style="color: #999999;">;</span>
   <span class="keyword token" style="color: #0077aa;">this</span><span class="punctuation token" style="color: #999999;">.</span>name <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">= </span><span class="string token" style="color: #669900;">"UserException"</span><span class="punctuation token" style="color: #999999;">;</span>
 <span class="punctuation token" style="color: #999999;">}</span>
@@ -208,7 +208,7 @@ console<span class="punctuation token" style="color: #999999;">.</span><span cla
 
 <p>В следующем примере вызывается функция <code>getMonthName</code>, которая возвращает название месяца по его номеру. Если месяца с указанным номером не существует, то функция выбросит исключение <code>"InvalidMonthNo"</code>, которое будет перехвачено в блоке <code>catch</code>:</p>
 
-<pre class="brush: js notranslate">function getMonthName(mo) {
+<pre class="brush: js">function getMonthName(mo) {
   mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
   var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul",
                 "Aug","Sep","Oct","Nov","Dec"];
@@ -229,7 +229,7 @@ catch (e) {
 
 </pre>
 
-<h4 id="The_catch_Block" name="The_catch_Block">Блок <code>catch</code></h4>
+<h4 id="The_catch_Block">Блок <code>catch</code></h4>
 
 <p>Используйте блок <code>catch</code>, чтобы обработать исключения, сгенерированные в блоке <code>try</code>.</p>
 
@@ -239,7 +239,7 @@ catch (e) {
 
 <p>В следующем примере выбрасывается исключение, которое перехватывается в блоке <code>catch</code>:</p>
 
-<pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">try</span> <span class="punctuation token" style="color: #999999;">{</span>
+<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">try</span> <span class="punctuation token" style="color: #999999;">{</span>
   <span class="keyword token" style="color: #0077aa;">throw</span> <span class="string token" style="color: #669900;">"myException"</span><span class="comment token" style="color: #708090;">
 </span><span class="punctuation token" style="color: #999999;">}</span><span class="punctuation token"> </span><span class="keyword token" style="color: #0077aa;">catch</span> <span class="punctuation token" style="color: #999999;">(</span><span class="class-name token">e</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{
   </span></code><code class="language-js" style="direction: ltr; white-space: pre;">console<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">error<span class="punctuation token" style="color: #999999;">(</span></span>e<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span></code><code class="language-js" style="direction: ltr; white-space: pre;"><span class="comment token" style="color: #708090;">
@@ -251,7 +251,7 @@ catch (e) {
 
 <p>В следующем примере открывается файл, затем в блоке <code>try</code> происходит вызов функции <code>writeMyFile</code>, который может выбросить исключение. Если возникает исключение, то оно обрабатывается в блоке <code>catch</code>. В любом случае файл будет закрыт функцией <code>closeMyFile</code>, вызов которой находится в блоке <code>finally</code>.</p>
 
-<pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="function token" style="color: #dd4a68;">openMyFile<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="function token" style="color: #dd4a68;">openMyFile<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
 <span class="keyword token" style="color: #0077aa;">try</span> <span class="punctuation token" style="color: #999999;">{</span>
   <span class="function token" style="color: #dd4a68;">writeMyFile<span class="punctuation token" style="color: #999999;">(</span></span>theData<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span><span class="comment token" style="color: #708090;">
 </span><span class="punctuation token" style="color: #999999;">}</span> <span class="keyword token" style="color: #0077aa;">catch</span><span class="punctuation token" style="color: #999999;">(</span>e<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
@@ -262,7 +262,7 @@ catch (e) {
 
 <p>Если блок <code>finally</code> возвращает значение, то данное значение становится возвращаемым значением всей связки <code>try-catch-finally</code>. Значения, возвращаемые блоками <code>try</code> и <code>catch</code>, будут проигнорированы.</p>
 
-<pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">function</span> <span class="function token" style="color: #dd4a68;">f<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">function</span> <span class="function token" style="color: #dd4a68;">f<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
   <span class="keyword token" style="color: #0077aa;">try</span> <span class="punctuation token" style="color: #999999;">{</span>
     console<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">log<span class="punctuation token" style="color: #999999;">(</span></span><span class="number token" style="color: #990055;">0</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
     <span class="keyword token" style="color: #0077aa;">throw</span> <span class="string token" style="color: #669900;">"bogus"</span><span class="punctuation token" style="color: #999999;">;</span>
@@ -282,7 +282,7 @@ catch (e) {
 
 <p>Замена возвращаемых значений блоком <code>finally</code> распространяется в том числе и на исключения, которые выбрасываются или перевыбрасываются в блоке <code>catch</code>:</p>
 
-<pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">function</span> <span class="function token" style="color: #dd4a68;">f<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">function</span> <span class="function token" style="color: #dd4a68;">f<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
   <span class="keyword token" style="color: #0077aa;">try</span> <span class="punctuation token" style="color: #999999;">{</span>
     <span class="keyword token" style="color: #0077aa;">throw</span> <span class="string token" style="color: #669900;">"bogus"</span><span class="punctuation token" style="color: #999999;">;</span>
   <span class="punctuation token" style="color: #999999;">}</span> <span class="keyword token" style="color: #0077aa;">catch</span><span class="punctuation token" style="color: #999999;">(</span>e<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
@@ -304,7 +304,7 @@ catch (e) {
 // В результате отображается сообщение </span><span class="comment token" style="color: #708090;">caught inner "bogus"
 // и возвращается значение `false`</span></code></pre>
 
-<h4 id="Nesting_try...catch_Statements" name="Nesting_try...catch_Statements">Вложенные инструкции <code>try...catch</code></h4>
+<h4 id="Nesting_try...catch_Statements">Вложенные инструкции <code>try...catch</code></h4>
 
 <p>Вы можете вкладывать инструкции <code>try...catch</code> друг в друга. Если внутренняя инструкция <code>try...catch</code> не имеет блока <code>catch</code>, то она должна иметь блок finally, кроме того исключение будет перехвачено во внешнем блоке <code>catch</code>. Для получения большей информации ознакомьтесь с вложенными <a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks">try-блоками</a>.</p>
 
@@ -314,7 +314,7 @@ catch (e) {
 
 <p>Если вы выбрасываете собственные исключения, то чтобы получить преимущество, которое предоставляют эти свойства (например, если ваш блок <code>catch</code> не делает различий между вашими исключениями и системными), используйте конструктор <code>Error</code>. Например:</p>
 
-<pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">function</span> doSomethingErrorProne <span class="punctuation token" style="color: #999999;">(</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">function</span> doSomethingErrorProne <span class="punctuation token" style="color: #999999;">(</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
   <span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">( </span><span class="function token" style="color: #dd4a68;">ourCodeMakesAMistake<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">) </span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
     <span class="keyword token" style="color: #0077aa;">throw</span> <span class="punctuation token" style="color: #999999;">( </span><span class="keyword token" style="color: #0077aa;">new</span> <span class="class-name token">Error</span><span class="punctuation token" style="color: #999999;">(</span><span class="string token" style="color: #669900;">'The message'</span><span class="punctuation token" style="color: #999999;">) </span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
   <span class="punctuation token" style="color: #999999;">}</span> <span class="keyword token" style="color: #0077aa;">else</span> <span class="punctuation token" style="color: #999999;">{</span>
@@ -348,7 +348,7 @@ catch (e) {
 
 <p>Простой пример использования объектов <code>Promise</code> и <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> для загрузки изображения доступен в репозитории MDN <a href="https://github.com/mdn/js-examples/tree/master/promises-test">promise-test</a> на GitHub. Вы также можете <a href="https://mdn.github.io/js-examples/promises-test/">посмотреть его в действии</a>. Каждый шаг прокомментирован, что позволяет вам разобраться в архитектуре <code>Promise</code> и XHR. Здесь приводится версия без комментариев:</p>
 
-<pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">function</span> <span class="function token" style="color: #dd4a68;">imgLoad<span class="punctuation token" style="color: #999999;">(</span></span>url<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">function</span> <span class="function token" style="color: #dd4a68;">imgLoad<span class="punctuation token" style="color: #999999;">(</span></span>url<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
   <span class="keyword token" style="color: #0077aa;">return</span> <span class="keyword token" style="color: #0077aa;">new</span> <span class="class-name token">Promise</span><span class="punctuation token" style="color: #999999;">(</span><span class="keyword token" style="color: #0077aa;">function</span><span class="punctuation token" style="color: #999999;">(</span>resolve<span class="punctuation token" style="color: #999999;">,</span> reject<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
     <span class="keyword token" style="color: #0077aa;">var</span> request <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="keyword token" style="color: #0077aa;">new</span> <span class="class-name token">XMLHttpRequest</span><span class="punctuation token" style="color: #999999;">(</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
     request<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">open<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">'GET'</span><span class="punctuation token" style="color: #999999;">,</span> url<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>

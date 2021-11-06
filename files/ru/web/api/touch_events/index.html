@@ -42,7 +42,7 @@ translation_of: Web/API/Touch_events
 
 <h3 id="Создание_canvas">Создание canvas</h3>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="600" height="600" style="border:solid black 1px;"&gt;
+<pre class="brush: html">&lt;canvas id="canvas" width="600" height="600" style="border:solid black 1px;"&gt;
   Ваш браузер не поддерживает элемент canvas.
 &lt;/canvas&gt;
 &lt;br&gt;
@@ -52,7 +52,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;</pre>
 
 <p>После загрузки страницы будет вызвана функция <code>startup()</code>, показанная ниже</p>
 
-<pre class="brush: js notranslate">function startup() {
+<pre class="brush: js">function startup() {
   var el = document.getElementById("canvas");
   el.addEventListener("touchstart", handleStart, false);
   el.addEventListener("touchend", handleEnd, false);
@@ -68,12 +68,12 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;</pre>
 
 <p>Рассмотрим касания в действии.</p>
 
-<pre class="brush: js notranslate">var ongoingTouches = [];
+<pre class="brush: js">var ongoingTouches = [];
 </pre>
 
 <p>Когда возникает событие {{event("touchstart")}}, свидетельствующее о новом касании к поверхности, вызывается приведённая ниже функция <code>handleStart()</code>.</p>
 
-<pre class="brush: js notranslate">function handleStart(evt) {
+<pre class="brush: js">function handleStart(evt) {
   evt.preventDefault();
   console.log("touchstart.");
   var el = document.getElementById("canvas");
@@ -101,7 +101,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;</pre>
 
 <p>Каждый раз, когда двигается один или несколько пальцев, срабатывает событие {{event("touchmove")}}, в результате чего вызывается наша функция <code>handleMove()</code>.В этом примере данная функция ответственна за обновление данных о касании и рисование линии от предыдущей до текущей точки касания.</p>
 
-<pre class="brush: js notranslate">function handleMove(evt) {
+<pre class="brush: js">function handleMove(evt) {
   evt.preventDefault();
   var el = document.getElementById("canvas");
   var ctx = el.getContext("2d");
@@ -141,7 +141,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;</pre>
 
 <p>Когда пользователь убирает палец с сенсорной поверхности, срабатывает событие {{domxref("Element/touchend_event", "touchend")}}. Мы обрабатываем его, вызывая функцию <code>handleEnd()</code>, которая представлена ниже. Её задача - рисовать последний отрезок линии для каждого касания, которое завершилось, и удалять точку касания из текущего списка касаний.</p>
 
-<pre class="brush: js notranslate">function handleEnd(evt) {
+<pre class="brush: js">function handleEnd(evt) {
   evt.preventDefault();
   log("touchend");
   var el = document.getElementById("canvas");
@@ -173,7 +173,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;</pre>
 
 <p>Если палец пользователя перемещается в интерфейс браузера или прикосновение должно быть отменено, отправляется событие {{domxref("Element/touchcancel_event", "touchcancel")}}, и мы вызываем функцию <code>handleCancel()</code>, приведённую ниже.</p>
 
-<pre class="brush: js notranslate">function handleCancel(evt) {
+<pre class="brush: js">function handleCancel(evt) {
   evt.preventDefault();
   console.log("touchcancel.");
   var touches = evt.changedTouches;
@@ -195,7 +195,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;</pre>
 
 <p>Чтобы рисунок каждого касания выглядел по-разному, используется функция <code>colorForTouch()</code>, в которой цвета выбираются на основе уникального идентификатора касаний. Этот идентификатор является скрытым числом, но мы, по крайней мере, можем полагаться на то, что у каждого активного на данный момент касания он уникальный.</p>
 
-<pre class="brush: js notranslate">function colorForTouch(touch) {
+<pre class="brush: js">function colorForTouch(touch) {
   var r = touch.identifier % 16;
   var g = Math.floor(touch.identifier / 3) % 16;
   var b = Math.floor(touch.identifier / 7) % 16;
@@ -214,7 +214,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;</pre>
 
 <p>Некоторые браузеры (например, мобильный Safari) повторно используют объекты касания в разных событиях, поэтому лучше копировать только важные свойства, а не ссылаться на весь объект.</p>
 
-<pre class="brush: js notranslate">function copyTouch({ identifier, pageX, pageY }) {
+<pre class="brush: js">function copyTouch({ identifier, pageX, pageY }) {
   return { identifier, pageX, pageY };
 }</pre>
 
@@ -222,7 +222,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;</pre>
 
 <p>Приведённая ниже функция <code>ongoingTouchIndexById()</code> сканирует весь массив <code>ongoingTouches</code>, чтобы найти касание, соответствующее данному идентификатору, после чего возвращает в массив индекс этого касания.</p>
 
-<pre class="brush: js notranslate">function ongoingTouchIndexById(idToFind) {
+<pre class="brush: js">function ongoingTouchIndexById(idToFind) {
   for (var i = 0; i &lt; ongoingTouches.length; i++) {
     var id = ongoingTouches[i].identifier;
 
@@ -236,7 +236,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;</pre>
 
 <h4 id="Отображение_происходящего">Отображение происходящего</h4>
 
-<pre class="brush: js notranslate">function log(msg) {
+<pre class="brush: js">function log(msg) {
   var p = document.getElementById('log');
   p.innerHTML = msg + "\n" + p.innerHTML;
 }</pre>
@@ -255,7 +255,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;</pre>
 
 <p>Данный пример очень упрощён и может привести к странному поведению. Он уместен исключительно как учебный пример.</p>
 
-<pre class="brush: js notranslate">function onTouch(evt) {
+<pre class="brush: js">function onTouch(evt) {
   evt.preventDefault();
   if (evt.touches.length &gt; 1 || (evt.type == "touchend" &amp;&amp; evt.touches.length &gt; 0))
     return;
@@ -292,24 +292,17 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;</pre>
 
 <h2 id="Спецификация">Спецификация</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Touch Events 2', '#touch-interface', 'Touch')}}</td>
-   <td>{{Spec2('Touch Events 2')}}</td>
-   <td>Добавлены свойства <code>radiusX</code>, <code>radiusY</code>, <code>rotationAngle</code>, <code>force</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Touch Events', '#touch-interface', 'Touch')}}</td>
-   <td>{{Spec2('Touch Events')}}</td>
-   <td>Начальное определение.</td>
-  </tr>
- </tbody>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://w3c.github.io/touch-events/">Touch Events</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>

@@ -10,7 +10,7 @@ translation_of: Web/HTML/Attributes/multiple
 ---
 <p>{{HTMLSidebar}}</p>
 
-<p class="summary">L'attribut booléen <strong><code>multiple</code></strong>, s'il est défini, signifie que le contrôle de formulaire accepte une ou plusieurs valeurs. Valable pour les types de saisie <a href="/fr/docs/Web/HTML/Element/Input/email"><code>email</code></a> et <a href="/fr/docs/Web/HTML/Element/Input/file"><code>file</code></a> et l'élément <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a>, la manière dont l'utilisateur opte pour plusieurs valeurs dépend du contrôle de formulaire.</p>
+<p>L'attribut booléen <strong><code>multiple</code></strong>, s'il est défini, signifie que le contrôle de formulaire accepte une ou plusieurs valeurs. Valable pour les types de saisie <a href="/fr/docs/Web/HTML/Element/Input/email"><code>email</code></a> et <a href="/fr/docs/Web/HTML/Element/Input/file"><code>file</code></a> et l'élément <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a>, la manière dont l'utilisateur opte pour plusieurs valeurs dépend du contrôle de formulaire.</p>
 
 <p>Selon le type, le contrôle de formulaire peut avoir une apparence différente si l'attribut <code>multiple</code> est défini. Pour le type de saisie de fichier, la messagerie native fournie par le navigateur diffère. Dans Firefox, l'entrée de fichier indique « Aucun fichier sélectionné » lorsque l'attribut est présent et « Aucun fichier sélectionné » dans le cas contraire, lorsqu'aucun fichier n'est sélectionné. La plupart des navigateurs affichent une zone de liste déroulante pour un contrôle <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> avec l'attribut <code>multiple</code> défini contre une liste déroulante à une ligne lorsque l'attribut est omis. L'entrée <a href="/fr/docs/Web/HTML/Element/Input/email"><code>email</code></a> s'affiche de la même manière, mais correspondra à la pseudo-classe <a href="/fr/docs/Web/CSS/:invalid"><code>:invalid</code></a> si plus d'une adresse électronique séparée par des virgules est incluse en l'absence de l'attribut.</p>
 
@@ -57,9 +57,7 @@ translation_of: Web/HTML/Attributes/multiple
   &lt;option value="doc@menuisiers.fr"&gt;Doc&lt;/option&gt;
 &lt;/datalist&gt;</pre>
 
-<div class="hidden">
 <pre class="brush: css">input:invalid {border: red solid 3px;}</pre>
-</div>
 
 <p>Si et seulement si l'attribut <code>multiple</code> est spécifié, la valeur peut être une liste d'adresses électroniques correctement formées et séparées par des virgules. Tout espace blanc de queue et de tête est supprimé de chaque adresse de la liste. Si l'attribut <a href="/fr/docs/Web/HTML/Attributs/required"><code>required</code></a> est présent, au moins une adresse électronique est requise.</p>
 

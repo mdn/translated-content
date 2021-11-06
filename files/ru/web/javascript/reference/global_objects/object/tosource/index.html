@@ -13,16 +13,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/toSource
 
 <p>Метод <strong><code>toSource()</code></strong> возвращает строку, представляющую исходный код объекта.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>Object.toSource();
 <var>obj</var>.toSource();</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <p>Нет.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>toSource()</code> возвращает следующие значения:</p>
 
@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/toSource
 
 <p>Вы можете вызывать метод <code>toSource()</code> во время отладки для просмотра содержимого объекта.</p>
 
-<h3 id="Overriding_the_toSource_method" name="Overriding_the_toSource_method">Переопределение метода <code>toSource()</code></h3>
+<h3 id="Overriding_the_toSource_method">Переопределение метода <code>toSource()</code></h3>
 
 <p>Вы можете безопасно переопределять метод <code>toSource()</code> для объектов. Например:</p>
 
@@ -54,7 +54,7 @@ Person.prototype.toSource = function Person_toSource() {
 console.log(new Person('Joe').toSource()); // ---&gt; new Person("Joe")
 </pre>
 
-<h3 id="Built-in_toString_methods" name="Built-in_toString_methods">Встроенные методы <code>toSource()</code></h3>
+<h3 id="Built-in_toString_methods">Встроенные методы <code>toSource()</code></h3>
 
 <p>Каждый тип ядра JavaScript имеет свой собственный метод <code>toSource()</code>. Вот эти объекты:</p>
 
@@ -70,7 +70,7 @@ console.log(new Person('Joe').toSource()); // ---&gt; new Person("Joe")
  <li><code>Math.toSource()</code> — возвращает строку "Math".</li>
 </ul>
 
-<h3 id="Limitations_on_cyclical_objects" name="Limitations_on_cyclical_objects">Ограничение на циклические объекты</h3>
+<h3 id="Limitations_on_cyclical_objects">Ограничение на циклические объекты</h3>
 
 <p>В том случае, если объекты содержат ссылки на самих себя, например циклический связанный список или дерево, которое можно обходить в обоих направлениях, метод <code>toSource()</code> не создаёт такие ссылки, начиная с Firefox 24. Например:</p>
 
@@ -89,9 +89,9 @@ console.log('Циклическая ссылка: ' + (obj1.b.a == obj1));
 
 <p>Если же вам позарез нужно использовать метод <code>toSource()</code> для циклической структуры, объект должен предоставить переопределённый метод <code>toSource()</code>, либо с помощью ссылки на конструктор, либо предоставив анонимную функцию.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_toSource" name="Example:_Using_toSource">Пример: использование метода <code>toSource()</code></h3>
+<h3 id="Example:_Using_toSource">Пример: использование метода <code>toSource()</code></h3>
 
 <p>Следующий код определяет тип объекта <code>Dog</code> и создаёт объект <code>theDog</code> типа <code>Dog</code>:</p>
 
@@ -111,15 +111,15 @@ theDog = new Dog('Болтушка', 'лабрадор', 'шоколадный',
 // вернёт ({name:"Болтушка", breed:"лабрадор", color:"шоколадный", sex:"девочка"})
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
 <p>Не является частью какого-либо стандарта. Реализована в JavaScript 1.3.</p>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p> </p>
 
-<p>{{Compat("javascript.builtins.Object.toSource")}}</p>
+<p>{{Compat}}</p>
 
 <p> </p>
 
@@ -127,7 +127,7 @@ theDog = new Dog('Болтушка', 'лабрадор', 'шоколадный',
 
 <div id="compat-mobile"> </div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Object.prototype.toString()")}}</li>

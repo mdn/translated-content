@@ -7,7 +7,7 @@ translation_of: Web/CSS/url()
 
 <p><span class="seoSummary">The <code><strong>url()</strong></code> <a href="/en-US/docs/Web/CSS">CSS</a> function is used to include a file. The parameter is an absolute URL, a relative URL, or a data URI. The <code><strong>url()</strong></code> function can be passed as a parameter of another CSS functions, like the {{cssxref('attr()')}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The url() functional notation is the value for the &lt;url&gt; data type.</span></p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Simple usage */
+<pre class="brush: css no-line-numbers">/* Simple usage */
 url(https://example.com/images/myImg.jpg);
 url(data:image/png;base64,iRxVB0…);
 url(myFont.woff);
@@ -59,7 +59,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
  <dl>
   <dt>&lt;url&gt;</dt>
   <dd>A url, which is a relative or absolute address, or pointer, to the web resource to be included, or a data uri, optionally in single or double quotes. Quotes are required if the URL includes parentheses, whitespace, or quotes, unless these characters are escaped, or if the address includes control characters above 0x7e. Double quotes cannot occur inside double quotes and single quotes cannot occur inside single quotes unless escaped. The following are all valid and equivalent:
-  <pre class="syntaxbox notranslate">&lt;css_property&gt;: url("https://example.com/image.png")
+  <pre class="syntaxbox">&lt;css_property&gt;: url("https://example.com/image.png")
 &lt;css_property&gt;: url('https://example.com/image.png')
 &lt;css_property&gt;: url(https://example.com/image.png)</pre>
   </dd>
@@ -73,7 +73,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="syntaxbox notranslate">url( <a href="/en-US/docs/Web/CSS/string">&lt;string&gt;</a> &lt;url-modifier&gt;* )</pre>
+<pre class="syntaxbox">url( <a href="/en-US/docs/Web/CSS/string">&lt;string&gt;</a> &lt;url-modifier&gt;* )</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -81,7 +81,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;Item 1&lt;/li&gt;
   &lt;li&gt;Item 2&lt;/li&gt;
   &lt;li&gt;Item 3&lt;/li&gt;
@@ -89,7 +89,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css highlight[2] notranslate">li::after {
+<pre class="brush: css highlight[2]">li::after {
   content: ' - ' url(https://mdn.mozillademos.org/files/16761/star.gif);
 }</pre>
 
@@ -102,17 +102,17 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 <div id="color-value">
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="background"&gt;&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div class="background"&gt;&lt;/div&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
 <div class="hidden">
-<pre class="brush: css notranslate">.background {
+<pre class="brush: css">.background {
   height: 100vh;
 }</pre>
 </div>
 
-<pre class="brush: css highlight[6] notranslate">.background {
+<pre class="brush: css highlight[6]">.background {
   background: yellow;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='45'%3E%3Cpath d='M10 10h60' stroke='%2300F' stroke-width='5'/%3E%3Cpath d='M10 20h60' stroke='%230F0' stroke-width='5'/%3E%3Cpath d='M10 30h60' stroke='red' stroke-width='5'/%3E%3C/svg%3E");
 }</pre>
@@ -120,7 +120,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 <p>{{EmbedLiveSample("data-uri", "100%", 50)}}</p>
 
-<h2 id="Specifications" name="Specifications">Specifications</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
  <thead>
@@ -158,7 +158,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 
 
-<div>{{Compat("css.types.url")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

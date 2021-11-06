@@ -10,11 +10,9 @@ translation_of: Web/HTML/Element/input/url
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">Les éléments {{HTMLElement("input")}} dont l'attribut <code>type</code> vaut <code><strong>"url"</strong></code> sont employées afin de permettre à un utilisateur de saisir ou d'éditer une URL.</span></p>
+<p>Les éléments {{HTMLElement("input")}} dont l'attribut <code>type</code> vaut <code><strong>"url"</strong></code> sont employées afin de permettre à un utilisateur de saisir ou d'éditer une URL.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}</div>
-
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
 
 <p>La valeur saisie est automatiquement validée par le navigateur qui vérifie qu'elle est vide ou formatée correctement avant que le formulaire puisse être envoyé. Les pseudo-classes {{cssxref(":valid")}} et {{cssxref(":invalid")}} sont appliquées auomatiquement selon le cas de figure.</p>
 
@@ -140,7 +138,7 @@ translation_of: Web/HTML/Element/input/url
 <p>Toutefois, ce mécanisme ne vérifie pas que l'URL saisie existe bien ou correspond à l'utilisateur. Seule une vérification de format est effectuée.</p>
 
 <div class="warning">
-<p><strong>Attention !</strong> Il est également important de vérifier le format de la valeur saisie côté serveur ! En effet, il est tout à fait possible pour un utilisateur de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.</p>
+<p><strong>Attention :</strong> Il est également important de vérifier le format de la valeur saisie côté serveur ! En effet, il est tout à fait possible pour un utilisateur de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.</p>
 </div>
 
 <h3 id="Un_simple_champ">Un simple champ</h3>
@@ -192,17 +190,15 @@ translation_of: Web/HTML/Element/input/url
 <p>{{EmbedLiveSample("La_longueur_de_la_valeur", 600, 40)}}</p>
 
 <div class="note">
-<p><strong>Note</strong> : Ces attributs jouent un rôle lors de la validation. Si la valeur saisie est plus courte que la longueur minimale indiquée ou plus grande que la longueur maximale indiquée, alors elle seera considérée comme invalide. De plus, la plupart des navigateurs ne permettent pas de saisir une valeur plus grande que la longueur maximale indiquée avec <code>maxlength</code>.</p>
+<p><strong>Note :</strong> Ces attributs jouent un rôle lors de la validation. Si la valeur saisie est plus courte que la longueur minimale indiquée ou plus grande que la longueur maximale indiquée, alors elle seera considérée comme invalide. De plus, la plupart des navigateurs ne permettent pas de saisir une valeur plus grande que la longueur maximale indiquée avec <code>maxlength</code>.</p>
 </div>
 
 <h3 id="Fournir_des_valeurs_par_défaut">Fournir des valeurs par défaut</h3>
 
 <p>On peut fournir une valeur par défaut grâce à l'attribut {{htmlattrxref("value", "input")}} :</p>
 
-<div id="Default_value">
 <pre class="brush: html">&lt;input id="monURL" name="monURL" type="url"
        value="http://www.example.com"&gt;</pre>
-</div>
 
 <p>{{EmbedLiveSample("Fournir_des_valeurs_par_défaut", 600, 40)}}</p>
 
@@ -229,7 +225,7 @@ translation_of: Web/HTML/Element/input/url
 <p>Il existe deux niveaux de validation pour les contrôles de type <code>"url"</code>. Tout d'abord, le contrôle natif, toujours présent qui s'asssure que la valeur correspond à une URL bien formée. Ensuite, on peut ajouter des options supplémentaires pour personnaliser le format de l'URL attendue.</p>
 
 <div class="warning">
-<p><strong>Attention !</strong> Il est également important de vérifier le format de la valeur saisie côté serveur ! En effet, il est tout à fait possible pour un utilisateur de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.</p>
+<p><strong>Attention :</strong> Il est également important de vérifier le format de la valeur saisie côté serveur ! En effet, il est tout à fait possible pour un utilisateur de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.</p>
 </div>
 
 <h3 id="Validation_simple">Validation simple</h3>
@@ -240,18 +236,16 @@ translation_of: Web/HTML/Element/input/url
 
 <p>Comme vu ci-avant, on peut rendre la saisie de l'URL obligatoire avec l'attribut {{htmlattrxref("required", "input")}} :</p>
 
-<div id="Default_value">
 <pre class="brush: html">&lt;form&gt;
   &lt;input id="monURL" name="monURL" type="url" required&gt;
   &lt;button&gt;Envoyer&lt;/button&gt;
 &lt;/form&gt;</pre>
-</div>
 
 <p>{{EmbedLiveSample("Rendre_le_champ_URL_obligatoire", 600, 40)}}</p>
 
 <p>Vous pouvez essayer d'envoyer le formulaire précédent sans valeur saisie et voir le résultat obtenu.</p>
 
-<h3 id="Utiliser_un_format_particulier"><a id="format" name="format">Utiliser un format particulier</a></h3>
+<h3 id="Utiliser_un_format_particulier">Utiliser un format particulier</h3>
 
 <p>S'il faut restreindre l'URL plus fortement, on peut utiliser l'attribut {{htmlattrxref("pattern", "input")}} afin d'indiquer une <a href="/fr/docs/Web/JavaScript/Guide/Expressions_régulières">expression rationnelle</a> que la valeur saisie doit respecter afin d'être valide.</p>
 
@@ -259,8 +253,7 @@ translation_of: Web/HTML/Element/input/url
 
 <p>Les contrôles de type <code>"url"</code> utilisant la validation native pour vérifier que c'est une URL bien formée et une validation spécifique via l'attribut {{htmlattrxref("pattern", "input")}}, on peut implémenter cette contrainte facilement :</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
   }
@@ -282,8 +275,8 @@ translation_of: Web/HTML/Element/input/url
     position: absolute;
     content: '✓';
     padding-left: 5px;
-  }</pre>
-</div>
+  }
+</pre>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
@@ -318,7 +311,7 @@ translation_of: Web/HTML/Element/input/url
 <p>C'est pourquoi nous avons écrit "L'URL doit être sur le domaine maboite" qui est plus détaillé.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Si vous rencontrez des problèmes avec ces expressions rationnelles et qu'elles ne semblent pas fonctionner correctement, vérifiez la console de votre navigateur. Il est possible que des messages d'erreur y soient affichés et puissent vous aider à diagnostiquer le problème.</p>
+<p><strong>Note :</strong> Si vous rencontrez des problèmes avec ces expressions rationnelles et qu'elles ne semblent pas fonctionner correctement, vérifiez la console de votre navigateur. Il est possible que des messages d'erreur y soient affichés et puissent vous aider à diagnostiquer le problème.</p>
 </div>
 
 <h2 id="Exemples">Exemples</h2>

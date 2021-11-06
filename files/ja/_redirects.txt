@@ -264,7 +264,7 @@
 /ja/docs/CSS/Getting_Started/JavaScript	/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 /ja/docs/CSS/Getting_Started/Layout	/ja/docs/Learn/CSS/CSS_layout
 /ja/docs/CSS/Getting_Started/Lists	/ja/docs/Learn/CSS/Styling_text/Styling_lists
-/ja/docs/CSS/Getting_Started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
+/ja/docs/CSS/Getting_Started/Media	/ja/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /ja/docs/CSS/Getting_Started/Selectors	/ja/docs/Learn/CSS/Building_blocks/Selectors
 /ja/docs/CSS/Getting_Started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/CSS/Getting_Started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
@@ -1469,7 +1469,7 @@
 /ja/docs/DOM/window.confirm-redirect-1	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM/window.content	/ja/docs/Web/API/Window/content
 /ja/docs/DOM/window.controllers	/ja/docs/Web/API/Window/controllers
-/ja/docs/DOM/window.crypto	/ja/docs/Web/API/Window/crypto
+/ja/docs/DOM/window.crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/DOM/window.defaultStatus	/ja/docs/Web/API/Window/defaultStatus
 /ja/docs/DOM/window.directories	/ja/docs/Web/API/Window/directories
 /ja/docs/DOM/window.document	/ja/docs/Web/API/Window/document
@@ -1695,7 +1695,7 @@
 /ja/docs/DOM:window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM:window.content	/ja/docs/Web/API/Window/content
 /ja/docs/DOM:window.controllers	/ja/docs/Web/API/Window/controllers
-/ja/docs/DOM:window.crypto	/ja/docs/Web/API/Window/crypto
+/ja/docs/DOM:window.crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/DOM:window.defaultStatus	/ja/docs/Web/API/Window/defaultStatus
 /ja/docs/DOM:window.directories	/ja/docs/Web/API/Window/directories
 /ja/docs/DOM:window.document	/ja/docs/Web/API/Window/document
@@ -2995,7 +2995,7 @@
 /ja/docs/Web-d/Guide/CSS/Getting_started/JavaScript	/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 /ja/docs/Web-d/Guide/CSS/Getting_started/Layout	/ja/docs/Learn/CSS/CSS_layout
 /ja/docs/Web-d/Guide/CSS/Getting_started/Lists	/ja/docs/Learn/CSS/Styling_text/Styling_lists
-/ja/docs/Web-d/Guide/CSS/Getting_started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
+/ja/docs/Web-d/Guide/CSS/Getting_started/Media	/ja/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /ja/docs/Web-d/Guide/CSS/Getting_started/Selectors	/ja/docs/Learn/CSS/Building_blocks/Selectors
 /ja/docs/Web-d/Guide/CSS/Getting_started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/Web-d/Guide/CSS/Getting_started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
@@ -3069,6 +3069,7 @@
 /ja/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ja/docs/Web/API/Document/styleSheets
 /ja/docs/Web/API/Document_Object_Model/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
 /ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/Web/API/Document_Object_Model
+/ja/docs/Web/API/EffectTiming	/ja/docs/Web/API/KeyframeEffect/KeyframeEffect
 /ja/docs/Web/API/Element.contentEditable	/ja/docs/Web/API/HTMLElement/contentEditable
 /ja/docs/Web/API/Element.isContentEditable	/ja/docs/Web/API/HTMLElement/isContentEditable
 /ja/docs/Web/API/Element.querySelector	/ja/docs/Web/API/Element/querySelector
@@ -3158,6 +3159,7 @@
 /ja/docs/Web/API/IDBFactory.open	/ja/docs/Web/API/IDBFactory/open
 /ja/docs/Web/API/Index	/ja/docs/Web/API
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
+/ja/docs/Web/API/MediaCapabilitiesInfo	/ja/docs/Web/API/MediaCapabilities/encodingInfo
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
 /ja/docs/Web/API/MouseEvent/which	/ja/docs/Web/API/UIEvent/which
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
@@ -3219,7 +3221,12 @@
 /ja/docs/Web/API/NonDocumentTypeChildNode	/ja/docs/Web/API/Element
 /ja/docs/Web/API/Position	/ja/docs/Web/API/GeolocationPosition
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
+/ja/docs/Web/API/PositionOptions	/ja/docs/conflicting/Web/API/Geolocation/getCurrentPosition
+/ja/docs/Web/API/PublicKeyCredentialCreationOptions	/ja/docs/conflicting/Web/API/CredentialsContainer/create_18148a708412fc42b1affe2f08eab270
+/ja/docs/Web/API/PublicKeyCredentialCreationOptions/authenticatorSelection	/ja/docs/Web/API/CredentialsContainer/create
+/ja/docs/Web/API/PublicKeyCredentialCreationOptions/excludeCredentials	/ja/docs/conflicting/Web/API/CredentialsContainer/create
 /ja/docs/Web/API/Push_API/Using_the_Push_API	/ja/docs/Web/API/Push_API
+/ja/docs/Web/API/RTCConfiguration	/ja/docs/Web/API/RTCPeerConnection/RTCPeerConnection
 /ja/docs/Web/API/RTCIdentityErrorEvent	/ja/docs/orphaned/Web/API/RTCIdentityErrorEvent
 /ja/docs/Web/API/RTCIdentityEvent	/ja/docs/orphaned/Web/API/RTCIdentityEvent
 /ja/docs/Web/API/RTCSessionDescriptionCallback	/ja/docs/orphaned/Web/API/RTCSessionDescriptionCallback
@@ -3244,6 +3251,9 @@
 /ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers
 /ja/docs/Web/API/Slotable	/ja/docs/Web/API/Element
 /ja/docs/Web/API/SourceBufferList/SourceBuffer	/ja/docs/orphaned/Web/API/SourceBufferList/SourceBuffer
+/ja/docs/Web/API/StorageEstimate	/ja/docs/conflicting/Web/API/StorageManager/estimate
+/ja/docs/Web/API/StorageEstimate/quota	/ja/docs/conflicting/Web/API/StorageManager/estimate_78aa4ffd4dfacc8f94d5c05d150d36ac
+/ja/docs/Web/API/StorageEstimate/usage	/ja/docs/conflicting/Web/API/StorageManager/estimate_9ffeea37c30a26922d3f1621912db8d8
 /ja/docs/Web/API/TouchList.length	/ja/docs/Web/API/TouchList/length
 /ja/docs/Web/API/UserProximityEvent.near	/ja/docs/Web/API/UserProximityEvent
 /ja/docs/Web/API/UserProximityEvent/near	/ja/docs/Web/API/UserProximityEvent
@@ -3283,6 +3293,7 @@
 /ja/docs/Web/API/Window.onafterprint	/ja/docs/Web/API/WindowEventHandlers/onafterprint
 /ja/docs/Web/API/Window/URL	/ja/docs/Web/API/URL
 /ja/docs/Web/API/Window/arguments	/ja/docs/orphaned/Working_with_windows_in_chrome_code
+/ja/docs/Web/API/Window/crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/Web/API/Window/dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/Window/escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
 /ja/docs/Web/API/Window/getAttention	/ja/docs/orphaned/Web/API/Window/getAttention
@@ -3299,6 +3310,7 @@
 /ja/docs/Web/API/Window/onmouseup	/ja/docs/Web/API/GlobalEventHandlers/onmouseup
 /ja/docs/Web/API/Window/onreset	/ja/docs/Web/API/GlobalEventHandlers/onreset
 /ja/docs/Web/API/Window/onresize	/ja/docs/Web/API/GlobalEventHandlers/onresize
+/ja/docs/Web/API/Window/performance	/ja/docs/Web/API/performance_property
 /ja/docs/Web/API/Window/restore	/ja/docs/Web/API/Window/moveTo
 /ja/docs/Web/API/Window/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/Window/setTimeout	/ja/docs/Web/API/setTimeout
@@ -3453,7 +3465,7 @@
 /ja/docs/Web/API/window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/Web/API/window.content	/ja/docs/Web/API/Window/content
 /ja/docs/Web/API/window.controllers	/ja/docs/Web/API/Window/controllers
-/ja/docs/Web/API/window.crypto	/ja/docs/Web/API/Window/crypto
+/ja/docs/Web/API/window.crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/Web/API/window.defaultStatus	/ja/docs/Web/API/Window/defaultStatus
 /ja/docs/Web/API/window.dialogArguments	/ja/docs/Web/API/Window/dialogArguments
 /ja/docs/Web/API/window.directories	/ja/docs/Web/API/Window/directories
@@ -3661,7 +3673,7 @@
 /ja/docs/Web/CSS/Getting_started/JavaScript	/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 /ja/docs/Web/CSS/Getting_started/Layout	/ja/docs/Learn/CSS/CSS_layout
 /ja/docs/Web/CSS/Getting_started/Lists	/ja/docs/Learn/CSS/Styling_text/Styling_lists
-/ja/docs/Web/CSS/Getting_started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
+/ja/docs/Web/CSS/Getting_started/Media	/ja/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /ja/docs/Web/CSS/Getting_started/Selectors	/ja/docs/Learn/CSS/Building_blocks/Selectors
 /ja/docs/Web/CSS/Getting_started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/Web/CSS/Getting_started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
@@ -3859,7 +3871,7 @@
 /ja/docs/Web/Guide/CSS/Getting_started/JavaScript	/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 /ja/docs/Web/Guide/CSS/Getting_started/Layout	/ja/docs/Learn/CSS/CSS_layout
 /ja/docs/Web/Guide/CSS/Getting_started/Lists	/ja/docs/Learn/CSS/Styling_text/Styling_lists
-/ja/docs/Web/Guide/CSS/Getting_started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
+/ja/docs/Web/Guide/CSS/Getting_started/Media	/ja/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /ja/docs/Web/Guide/CSS/Getting_started/Selectors	/ja/docs/Learn/CSS/Building_blocks/Selectors
 /ja/docs/Web/Guide/CSS/Getting_started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/Web/Guide/CSS/Getting_started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
@@ -4062,6 +4074,8 @@
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSPreflightDidNotSucceed	/ja/docs/Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSRequestNotHttp	/ja/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 /ja/docs/Web/HTTP/HTTP_response_codes	/ja/docs/Web/HTTP/Status
+/ja/docs/Web/HTTP/Headers/Feature-Policy/vr	/ja/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
+/ja/docs/Web/HTTP/Headers/Feature-Policy/xr	/ja/docs/conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
 /ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /ja/docs/Web/HTTP/Response_codes	/ja/docs/Web/HTTP/Status
 /ja/docs/Web/HTTP/Response_codes/204	/ja/docs/Web/HTTP/Status/204
@@ -4321,6 +4335,7 @@
 /ja/docs/Web/Manifest/serviceworker	/ja/docs/orphaned/Web/Manifest/serviceworker
 /ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/Web/Progressive_web_apps/Introduction
 /ja/docs/Web/Progressive_web_apps/Responsive	/ja/docs/Web/Progressive_web_apps
+/ja/docs/Web/Progressive_web_apps/Responsive/Media_types	/ja/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /ja/docs/Web/Reference	/ja/docs/Web
 /ja/docs/Web/Reference/API	/ja/docs/Web/API
 /ja/docs/Web/Reference/Events	/ja/docs/Web/Events

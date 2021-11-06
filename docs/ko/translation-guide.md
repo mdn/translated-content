@@ -124,6 +124,7 @@ EDITOR=code
 | 용어 | 번역 | 기타 |
 | --- | --- | --- |
 | Accessibility concerns | 접근성 고려사항 | Heading |
+| Application | 애플리케이션 | |
 | Attribute | 특성 | |
 | Boolean | 불리언 | |
 | Class | 클래스 | |
@@ -136,6 +137,7 @@ EDITOR=code
 | Enumerated | 열거형 | |
 | Example | 예제 | Heading |
 | Expression | 표현식 또는 식 | |
+| Framework | 프레임워크 | |
 | Global | 전역 | |
 | Glossary | 용어 사전 | |
 | Grammar | 문법 | |

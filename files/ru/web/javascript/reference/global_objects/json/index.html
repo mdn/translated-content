@@ -11,13 +11,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON
 ---
 <div>{{JSRef("Global_Objects", "JSON")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Объект <strong><code>JSON</code></strong> содержит методы для разбора <a class="external" href="http://json.org/">объектной нотации JavaScript</a> (JavaScript Object Notation — сокращённо {{glossary("JSON")}}) и преобразования значений в JSON. Его нельзя вызвать как функцию или сконструировать как объект, и кроме своих двух методов он не содержит никакой интересной функциональности.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
-<h3 id="JavaScript_Object_Notation" name="JavaScript_Object_Notation">Объектная нотация JavaScript</h3>
+<h3 id="JavaScript_Object_Notation">Объектная нотация JavaScript</h3>
 
 <p>JSON является синтаксисом для сериализации объектов, массивов, чисел, строк логических значений и значения {{jsxref("null")}}. Он основывается на синтаксисе JavaScript, однако всё же отличается от него: не каждый код на JavaScript является JSON, и не каждый JSON является кодом на JavaScript. Смотрите также статью <a href="http://timelessrepo.com/json-isnt-a-javascript-subset">JSON: подмножество JavaScript, которым он не является</a> (на английском).</p>
 
@@ -105,7 +105,7 @@ ArrayElements = JSON
 
 <p>Во всех продукциях могут присутствовать незначащие пробельные символы, за исключением продукций <code><var>ЧислоJSON</var></code> (числа не должны содержать пробелов) и <code><var>СтрокаJSON</var></code> (где они интерпретируются как часть строки или возбуждают ошибку). Пробельными символами считаются символы табуляции (<a href="http://unicode-table.com/ru/0009/">U+0009</a>), возврата каретки (<a href="http://unicode-table.com/ru/000D/">U+000D</a>), перевода строки (<a href="http://unicode-table.com/ru/000A/">U+000A</a>) и, собственно, пробела (<a href="http://unicode-table.com/ru/0020/">U+0020</a>).</p>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
 <dl>
  <dt>{{jsxref("JSON.parse()")}}</dt>
@@ -114,7 +114,7 @@ ArrayElements = JSON
  <dd>Возвращает строку JSON, соответствующую указанному значению, возможно с включением только определённых свойств или с заменой значений свойств определяемым пользователем способом.</dd>
 </dl>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Объект <code>JSON</code> не поддерживается старыми браузерами. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать объект <code>JSON</code> в реализациях, которые его ещё не поддерживают (например, в Internet Explorer 6).</p>
 
@@ -146,33 +146,15 @@ ArrayElements = JSON
 
 <p>Более сложными известными <a class="external" href="http://remysharp.com/2010/10/08/what-is-a-polyfill/">полифилами</a> для объекта <code>JSON</code> являются проекты <a class="link-https" href="https://github.com/douglascrockford/JSON-js">JSON2</a> и <a class="external" href="http://bestiejs.github.com/json3">JSON3</a>.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.12', 'JSON')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-json-object', 'JSON')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/ru/docs/Web/JavaScript/Guide/Using_native_JSON">Использование родного объекта <code>JSON</code></a></li>

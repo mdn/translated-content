@@ -4,12 +4,12 @@ slug: Web/CSS/image
 tags:
   - CSS
   - CSS Data Type
-  - CSS Images
+  - CSS 画像
   - Data Type
-  - Graphics
+  - グラフィック
   - Layout
   - Reference
-  - Web
+  - ウェブ
 browser-compat: css.types.image
 translation_of: Web/CSS/image
 ---
@@ -22,7 +22,7 @@ translation_of: Web/CSS/image
 `<image>` データ型は以下のいずれかによって表すことができます。
 
 - {{CSSxRef("url()", "url()")}} データ型で記述された画像
-- {{CSSxRef("<gradient>")}} データ型
+- {{CSSxRef("&lt;gradient&gt;")}} データ型
 - {{CSSxRef("element()","element()")}} 関数で定義されたウェブページの一部
 - {{CSSxRef("image/image()","image()")}} 関数で定義された画像、画像フラグメント、単色の色
 - {{CSSxRef("cross-fade()","cross-fade()")}} 関数で定義された 2 つ以上の画像の合成

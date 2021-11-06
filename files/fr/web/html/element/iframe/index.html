@@ -25,8 +25,8 @@ browser-compat: html.elements.iframe
 
 <p>Chaque contexte de navigation possède son propre <a href="/fr/docs/Web/API/History">historique</a> et son propre <a href="/fr/docs/Web/API/Document">document actif</a>. Le contexte de navigation qui contient le contenu intégré est appelé « contexte de navigation parent ». Le contexte de navigation le plus élevé (qui n'a pas de contexte parent) correspond généralement à la fenêtre du navigateur (cf. <a href="/fr/docs/Web/API/Window"><code>Window</code></a>).</p>
 
-<div class="notecard warning">
-  <p>Chaque contexte de navigation créé par un élément <code>&lt;iframe&gt;</code> représente un document à part entière et cela peut donc augmenter les ressources nécessaires à l'utilisation de la page. Aussi, bien qu'en théorie on puisse ajouter autant d'<em>iframes</em> que possible sur autant de niveaux d'imbrication que voulus, on gardera à l'esprit que cela peut nuire aux performances.</p>
+<div class="warning">
+  <p><strong>Attention :</strong> Chaque contexte de navigation créé par un élément <code>&lt;iframe&gt;</code> représente un document à part entière et cela peut donc augmenter les ressources nécessaires à l'utilisation de la page. Aussi, bien qu'en théorie on puisse ajouter autant d'<em>iframes</em> que possible sur autant de niveaux d'imbrication que voulus, on gardera à l'esprit que cela peut nuire aux performances.</p>
 </div>
 
 <table class="properties">
@@ -67,36 +67,34 @@ browser-compat: html.elements.iframe
 <p>Cet élément prend en charge <a href="/fr/docs/Web/HTML/Global_attributes">les attributs universels</a>.</p>
 
 <dl>
-  <dt><code id="attr-allow">allow</code></dt>
+  <dt><code>allow</code></dt>
   <dd>L'attribut <code>allow</code> permet de définir une <a href="/fr/docs/Web/HTTP/Feature_Policy">politique de fonctionnalité</a> pour l'<i>iframe</i>. Cette politique définit les fonctionnalités disponibles au sein de l'<i>iframe</i> selon l'origine de la requête (les fonctionnalités peuvent être l'accès au micro, à la caméra, aux informations de batterie, etc.). Pour plus d'informations, voir <a href="/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy#the_iframe_allow_attribute">l'article sur l'utilisation de <code>Feature-Policy</code></a>.</dd>
-  <dt><code id="attr-allowfullscreen">allowfullscreen</code></dt>
+  <dt><code>allowfullscreen</code></dt>
   <dd>Cet attribut, lorsqu'il vaut <code>true</code>, indique que l'<i>iframe</i> intégrée peut être passée en plein écran via la méthode<a href="/fr/docs/Web/API/Element/requestFullScreen"><code>Element.requestFullscreen()</code></a>.
-    <div class="notecard note">
-      <p><b>Note :</b></p>
-      <p>Cet attribut est considéré comme historique et a été redéfini avec <code>allow="fullscreen"</code>.</p>
+    <div class="note">
+      <p><strong>Note :</strong>Cet attribut est considéré comme historique et a été redéfini avec <code>allow="fullscreen"</code>.</p>
     </div>
   </dd>
-  <dt><code id="attr-allowpaymentrequest">allowpaymentrequest</code></dt>
+  <dt><code>allowpaymentrequest</code></dt>
   <dd>Cet attribut, lorsqu'il vaut <code>true</code>, permet à l'<i>iframe</i> intégrée d'appeler l'API <a href="/fr/docs/Web/API/Payment_Request_API">Payment Request</a>.
-    <div class="notecard note">
-      <p><b>Note :</b></p>
-      <p>Cet attribut est considéré comme historique et a été redéfini avec <code>allow="payment"</code>.</p>
+    <div class="note">
+      <p><strong>Note :</strong>Cet attribut est considéré comme historique et a été redéfini avec <code>allow="payment"</code>.</p>
     </div>
   </dd>
-  <dt><code id="attr-csp">csp</code> {{experimental_inline}}</dt>
+  <dt><code>csp</code> {{experimental_inline}}</dt>
   <dd>L'attribut <code>csp</code> définit <a href="/fr/docs/Web/HTTP/CSP">la politique de sécurité du contenu</a> que le document intégré doit respecter. Voir <a href="/fr/docs/Web/API/HTMLIFrameElement/csp"><code>HTMLIFrameElement.csp</code></a> pour plus de détails.</dd>
-  <dt><code id="attr-height">height</code></dt>
+  <dt><code>height</code></dt>
   <dd>Cet attribut définit la hauteur du cadre en pixels CSS. La valeur par défaut est <code>150</code>.</dd>
-  <dt><code id="attr-loading">loading</code> {{experimental_inline}}</dt>
+  <dt><code>loading</code> {{experimental_inline}}</dt>
   <dd>Cet attribut indique la façon dont le navigateur devrait charger l'<i>iframe</i> :
     <ul>
       <li><code>eager</code> : L'<i>iframe</i> doit être chargée immédiatement, même si elle n'est pas dans la zone d'affichage (<i>viewport</i>) visible. C'est la valeur par défaut.</li>
       <li><code>lazy</code> : Le chargement de l'<i>iframe</i> est retardé jusqu'à ce que celle-ci atteigne une distance donnée du <i>viewport</i>, définie par le navigateur.</li>
     </ul>
   </dd>
-  <dt id="name-attribute"><code id="attr-name">name</code></dt>
+  <dt><code>name</code></dt>
   <dd>Un nom pour le contexte de navigation (ou la <em>frame</em>). Ce nom peut être utilisé comme la valeur de l'attribut <code>target</code> <em>(cible)</em> d'un élément <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a> <em>(formulaire)</em> ou comme valeur de l'attribut <code>formtarget</code> d'un élément <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> <em>(entrée)</em> ou <a href="/fr/docs/Web/HTML/Element/Button"><code>&lt;button&gt;</code></a> <em>(bouton)</em>. Il peut également être utilisé comme valeur pour le paramètre <code>windowName</code> de la méthode <a href="/fr/docs/Web/API/Window/open"><code>window.open()</code></a>.</dd>
-  <dt id="attr-referrer"><code id="attr-referrerpolicy">referrerpolicy</code></dt>
+  <dt><code>referrerpolicy</code></dt>
   <dd>Une chaîne de caractères qui indique le référent (<em>referrer</em>) à utiliser lors de la récupération de la ressource :
     <ul>
       <li><code>no-referrer</code> signifie que l'en-tête <a href="/fr/docs/Web/HTTP/Headers/Referer"><code>Referer</code></a> ne sera pas envoyé.</li>
@@ -109,7 +107,7 @@ browser-compat: html.elements.iframe
       <li><code>unsafe-url</code> signifie que le référent inclura l'origine et le chemin (mais pas le fragment, le mot de passe ou le nom utilisateur). <strong>Cette valeur n'est pas sûre</strong>, car elle peut entraîner des fuites d'origine ou de chemin provenant de ressources sécurisées avec TLS vers des origines non sécurisées.</li>
     </ul>
   </dd>
-  <dt><code id="attr-sandbox">sandbox</code></dt>
+  <dt><code>sandbox</code></dt>
   <dd>Cet attribut permet d'appliquer des restrictions sur le contenu qui peut apparaître dans l'<i>iframe</i>. Si cet attribut vaut la chaîne de caractères vide, toutes les restrictions sont appliquées, sinon, on peut utiliser une liste de mots-clés séparés par des espaces pour définir des restrictions précises. Les mots-clés qui peuvent être utilisés sont :
     <ul>
       <li><code>allow-downloads-without-user-activation</code> {{experimental_inline}} : permet aux téléchargements d'avoir lieu sans un signe de l'utilisateur.</li>
@@ -127,8 +125,8 @@ browser-compat: html.elements.iframe
       <li><code>allow-top-navigation</code> : le contexte de navigation peut charger du contenu depuis le contexte de navigation de plus haut niveau. Si ce mot-clé est absent, cette opération n'est pas autorisée.</li>
       <li><code>allow-top-navigation-by-user-activation</code> : le contexte de navigation peut charger du contenu depuis le contexte de plus haut niveau uniquement si l'action provient de l'utilisateur. Si ce mot-clé est absent, cette opération n'est pas autorisée.</li>
     </ul>
-    <div class="notecard note">
-      <p><b>Notes :</b></p>
+    <div class="note">
+      <p><strong>Note :</strong></p>
       <ul>
         <li>Lorsque le document intégré possède la même origine que la page principale, il est <strong>fortement déconseillé</strong> d'employer <code>allow-scripts</code> et <code>allow-same-origin</code> simultanément, car cela permet de retirer l'attribut <code>sandbox</code> via un programme, c'est donc aussi sûr que de ne pas utiliser l'attribut <code>sandbox</code>.</li>
         <li>La mise en bac à sable (<em>sandboxing</em>) est d'une aide minime si un attaquant peut faire en sorte qu'un contenu potentiellement hostile soit affiché dans le navigateur de l'utilisateur en dehors d'un <i>iframe</i> sous sandbox. Aussi, il est recommandé de diffuser le contenu depuis un domaine dédié séparé, afin de limiter les éventuels dommages.</li>
@@ -136,28 +134,28 @@ browser-compat: html.elements.iframe
       </ul>
     </div>
   </dd>
-  <dt><code id="attr-src">src</code></dt>
+  <dt><code>src</code></dt>
   <dd>L'URL de la page qu'on souhaite intégrer. On pourra utiliser <code>about:blank</code> pour les pages vides afin de respecter les règles de même origine (<em>Same-Origin Policy</em>). On notera également que retirer l'attribut <code>src</code> d'un élément <code>&lt;iframe&gt;</code> à l'aide d'un script (par exemple avec <a href="/fr/docs/Web/API/Element/removeAttribute"><code>Element.removeAttribute()</code></a>) provoquera le chargement de <code>about:blank</code> dans la <em>frame</em> pour Firefox à partir de la version 65, pour les navigateurs basés sur Chromium ainsi que pour Safari.</dd>
-  <dt><code id="attr-srcdoc">srcdoc</code></dt>
+  <dt><code>srcdoc</code></dt>
   <dd>Le contenu de la page qu'on souhaite intégrer dans le contexte de navigation et qui surcharge celui indiqué par <code>src</code>.</dd>
-  <dt><code id="attr-width">width</code></dt>
+  <dt><code>width</code></dt>
   <dd>Cet attribut indique la largeur de l'<i>iframe</i> en pixels CSS. Par défaut, cet attribut vaut <code>300</code>.</dd>
 </dl>
 
 <h3 id="deprecated_attributes">Attributs dépréciés</h3>
 
 <dl>
-  <dt><code id="attr-align">align</code> {{deprecated_inline}}</dt>
+  <dt><code>align</code> {{deprecated_inline}}</dt>
   <dd>Cet attribut obsolète permettait de définir l'alignement de l'<i>iframe</i> par rapport à son contexte englobant.</dd>
-  <dt><code id="attr-frameborder">frameborder</code> {{deprecated_inline}}</dt>
+  <dt><code>frameborder</code> {{deprecated_inline}}</dt>
   <dd>Lorsqu'il vaut 1 (la valeur par défaut), cet attribut indique au navigateur de définir une bordure entre ce cadre et tout autre cadre. Lorsqu'il vaut 0, aucune bordure n'est dessinée. Plutôt que cet attribut, on utilisera la propriété CSS <a href="/fr/docs/Web/CSS/border"><code>border</code></a> pour dessiner la bordure autour d'une iframe.</dd>
-  <dt><code id="attr-longdesc">longdesc</code> {{deprecated_inline}}</dt>
+  <dt><code>longdesc</code> {{deprecated_inline}}</dt>
   <dd>Un URI vers une description détaillée du cadre. En raison d'un mauvais usage, cet attribut n'est pas utile pour les navigateurs non-visuels.</dd>
-  <dt><code id="attr-marginheight">marginheight</code> {{deprecated_inline}}</dt>
+  <dt><code>marginheight</code> {{deprecated_inline}}</dt>
   <dd>L'espace, exprimé en pixels, entre le contenu du cadre et ses marges haute et basse.</dd>
-  <dt><code id="attr-marginwidth">marginwidth</code> {{deprecated_inline}}</dt>
+  <dt><code>marginwidth</code> {{deprecated_inline}}</dt>
   <dd>L'espace, exprimé en pixels, entre le contenu du cadre et ses marges gauche et droite.</dd>
-  <dt><code id="attr-scrolling">scrolling</code> {{deprecated_inline}}</dt>
+  <dt><code>scrolling</code> {{deprecated_inline}}</dt>
   <dd>Un attribut à valeur contrainte qui indique si le navigateur doit afficher une barre de défilement (ou tout autre moyen de défilement) pour<em> </em>le cadre :
     <ul>
       <li><code>auto</code> : la barre de défilement est uniquement affichée lorsque c'est nécessaire.</li>
@@ -170,7 +168,7 @@ browser-compat: html.elements.iframe
 <h3 id="non-standard_attributes">Attributs non-standard {{non-standard_inline}}</h3>
 
 <dl>
-  <dt><code id="attr-mozbrowser">mozbrowser</code> {{non-standard_inline}}</dt>
+  <dt><code>mozbrowser</code> {{non-standard_inline}}</dt>
   <dd>Cet attribut est uniquement disponible pour les <a href="/fr/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>. L'<i>iframe</i> se comporte comme une fenêtre de navigateur de plus haut niveau. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1318532">le bug 1318532</a> quant à l'exposition de cet attribut dans Firefox.</dd>
 </dl>
 

@@ -15,17 +15,15 @@ translation_of: Web/HTML/Element/input/week
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-week.html", "tabbed-shorter")}}</div>
 
-<div class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</div>
-
 <p>L'interface utilisateur offerte par un tel contrôle varie en fonction des navigateurs. Au moment où nous écrivons ces lignes, seuls Chrome/Opera et Edge prennent en charge cette fonctionnalité. Pour les navigateurs qui ne l'implémentent pas, l'élément est interprété comme un élément <code><a href="/fr/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
 
 <p>Sous Chrome/Opera, le contrôle <code>week</code> fournit des emplacements pour les deux valeurs. Un calendrier est affiché afin de sélectionner plus faiclement la semaine et l'année. Un bouton avec une croix permet de supprimer la valeur saisie dans le contrôle.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15409/week-control-chrome.png" style="display: block; height: 235px; margin: 0px auto; width: 320px;"></p>
+<p><img alt="" src="week-control-chrome.png"></p>
 
 <p>Pour Edge, le contrôle associé à <code>month</code> est plus élaboré et se compose de deux listes qu'on peut faire défiler séparement pour la semaine d'une part et l'année d'autre part.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15411/week-control-edge.png" style="display: block; height: 391px; margin: 0px auto; width: 227px;"></p>
+<p><img alt="" src="week-control-edge.png"></p>
 
 <h2 id="Valeur">Valeur</h2>
 
@@ -193,10 +191,10 @@ input:valid+span:after {
 
 <p>Voici une capture d'écran du résultat obtenu si votre navigateur ne prend pas en charge cette fonctionnalité :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15415/week-validation-chrome.png" style="display: block; height: 85px; margin: 0px auto; width: 473px;"></p>
+<p><img alt="" src="week-validation-chrome.png"></p>
 
 <div class="warning">
-<p><strong>Important </strong>: la validation des données du formulaire HTML par le navigateur ne se substitue pas à la validation des données reçues côté serveur. En effet, il est tout à fait possible pour un utilisateur de modifier le HTML côté client et de passer outre les contraintes normalement appliquées. Il est également possible d'envoyer des données au serveur sans passer par le formulaire. Ne pas vérifier les données reçues côté serveur expose à des risques d'erreur voire d'attaques.</p>
+<p><strong>Attention :</strong> la validation des données du formulaire HTML par le navigateur ne se substitue pas à la validation des données reçues côté serveur. En effet, il est tout à fait possible pour un utilisateur de modifier le HTML côté client et de passer outre les contraintes normalement appliquées. Il est également possible d'envoyer des données au serveur sans passer par le formulaire. Ne pas vérifier les données reçues côté serveur expose à des risques d'erreur voire d'attaques.</p>
 </div>
 
 <h2 id="Gérer_la_prise_en_charge_des_navigateurs">Gérer la prise en charge des navigateurs</h2>
@@ -205,7 +203,7 @@ input:valid+span:after {
 
 <p>Les plateformes mobiles comme Android et iOS fournissent un contrôle natif à l'ergonomie tactile adaptée. Voici par exemple le sélecteur <code>week</code> sur Chrome pour Android :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15413/week-chrome-android.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="week-chrome-android.png"></p>
 
 <p>Les navigateurs qui ne prennent pas en charge ce type de contrôle l'interprètent comme un champ texte mais cela crée des problèmes de cohérence tant au niveau de l'ergonomie qu'au niveau de la représentation des données.</p>
 
@@ -256,8 +254,7 @@ input:valid+span:after {
 
 <p>On génère les valeurs des semaines dynamiquement.</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -281,7 +278,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <p>Dans le fragment de code JavaScript qui suit, on montre comment détecter si la fonctionnalité est prise en charge ou non. Pour cela, on crée un nouvel élément {{htmlelement("input")}} et on règle son <code>type</code> sur <code>week</code> puis on vérifie immédiatement la valeur de son type. Les navigateurs qui ne prennent pas en charge la fonctionnalité renverront <code>text</code>. Si c'est le cas, on masque le sélecteur natif et on affiche le sélecteur alternatif composé des deux éléments {{htmlelement("select")}}.</p>
 

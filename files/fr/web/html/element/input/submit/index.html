@@ -11,13 +11,13 @@ translation_of: Web/HTML/Element/input/submit
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">Les éléments {{HTMLElement("input")}} dont l'attribut <code>type</code> vaut <strong><code>"submit"</code></strong> sont affichés comme des boutons permettant d'envoyer les données d'un formulaire. Cliquer sur un tel bouton déclenchera l'envoi des données du formulaire vers le serveur.</span></p>
+<p>Les éléments {{HTMLElement("input")}} dont l'attribut <code>type</code> vaut <strong><code>"submit"</code></strong> sont affichés comme des boutons permettant d'envoyer les données d'un formulaire. Cliquer sur un tel bouton déclenchera l'envoi des données du formulaire vers le serveur.</p>
 
-<div id="summary-example2">
+<h2 id="Exemple_simple">Exemple simple</h2>
+
 <pre class="brush: html">&lt;input type="submit" value="Envoyer le formulaire"&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("summary-example2", 650, 30)}}</p>
+<p>{{EmbedLiveSample("Exemple_simple", 650, 30)}}</p>
 
 <h2 id="Valeur">Valeur</h2>
 
@@ -25,11 +25,11 @@ translation_of: Web/HTML/Element/input/submit
 
 <p>Si on n'indique aucune valeur, ce sera un texte par défaut (dépendant du navigateur) qui sera utilisé ainsi que du système d'éxploitation:</p>
 
-<div id="summary-example1">
-<pre class="brush: html">&lt;input type="submit"&gt;</pre>
-</div>
+<h3 id="Exemple_avec_valeur_par_défaut">Exemple avec valeur par défaut</h3>
 
-<p>{{EmbedLiveSample("summary-example1", 650, 30)}}</p>
+<pre class="brush: html">&lt;input type="submit"&gt;</pre>
+
+<p>{{EmbedLiveSample("Exemple_avec_valeur_par_défaut", 650, 30)}}</p>
 
 <h2 id="Attributs_supplémentaires">Attributs supplémentaires</h2>
 
@@ -178,25 +178,23 @@ translation_of: Web/HTML/Element/input/submit
 <p>{{EmbedLiveSample("Ajouter_un_raccourci_clavier", 650, 100)}}</p>
 
 <div class="note">
-<p><strong>Note </strong>: Un problème de cet exemple est que l'utilisateur ne saura pas quelle touche utiliser comme raccourci. Dans un cas concret, cette information serait affichée ou fournie via un lien simple d'accès qui décrirait les raccourcis disponibles.</p>
+<p><strong>Note :</strong> Un problème de cet exemple est que l'utilisateur ne saura pas quelle touche utiliser comme raccourci. Dans un cas concret, cette information serait affichée ou fournie via un lien simple d'accès qui décrirait les raccourcis disponibles.</p>
 </div>
 
 <h3 id="Activer_et_désactiver_un_bouton_d'envoi">Activer et désactiver un bouton d'envoi</h3>
 
 <p>Si on souhaite désactiver un bouton, il sufft d'utiliser l'attribut booléen universel {{htmlattrxref("disabled")}} :</p>
 
-<div id="disable-example1">
 <pre class="brush: html">&lt;input type="submit" value="Disabled" disabled&gt;</pre>
-</div>
 
 <p>Pour activer / désactiver le bouton dynamiquement, on pourra manipuler l'attribut DOM <code>disabled</code> avec la valeur <code>true</code> ou <code>false</code> en JavaScript (avec une instruction similaire à <code>btn.disabled = true</code>).</p>
 
 <div class="note">
-<p><strong>Note </strong>: Voir la page <code><a href="/fr/docs/Web/HTML/Element/Input/button#Désactiver_et_activer_un_bouton">&lt;input type="button"&gt;</a></code> pour plus d'exemples concernant l'activation/désactivation des boutons liés à un formulaire.</p>
+<p><strong>Note :</strong> Voir la page <code><a href="/fr/docs/Web/HTML/Element/Input/button#Désactiver_et_activer_un_bouton">&lt;input type="button"&gt;</a></code> pour plus d'exemples concernant l'activation/désactivation des boutons liés à un formulaire.</p>
 </div>
 
 <div class="note">
-<p><strong>Note </strong>: À la différence des autres navigateurs, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée</a>. L'attribut {{htmlattrxref("autocomplete","button")}} peut être utilisé afin de contrôler cette fonctionnalité.</p>
+<p><strong>Note :</strong> À la différence des autres navigateurs, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée</a>. L'attribut {{htmlattrxref("autocomplete","button")}} peut être utilisé afin de contrôler cette fonctionnalité.</p>
 </div>
 
 <h2 id="Validation">Validation</h2>

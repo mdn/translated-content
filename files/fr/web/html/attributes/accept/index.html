@@ -12,7 +12,7 @@ translation_of: Web/HTML/Attributes/accept
 ---
 <p>{{HTMLSidebar}}</p>
 
-<p class="summary">L'attribut <strong><code>accept</code></strong> prend comme valeur une liste séparée par des virgules d'un ou plusieurs types de fichiers, ou d'une <a href="#unique_file_type_specifiers">spécification de type de fichier unique</a>, décrivant les types de fichiers à autoriser. La propriété <code>accept</code> est un attribut pour les éléments <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> de type <a href="/fr/docs/Web/HTML/Element/Input/file"><code>file</code></a>. Elle était prise en charge par l'élément <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a>, mais a été supprimée au profit de <a href="/fr/docs/Web/HTML/Element/Input/file"><code>file</code></a> dans HTML5.</p>
+<p>L'attribut <strong><code>accept</code></strong> prend comme valeur une liste séparée par des virgules d'un ou plusieurs types de fichiers, ou d'une <a href="#unique_file_type_specifiers">spécification de type de fichier unique</a>, décrivant les types de fichiers à autoriser. La propriété <code>accept</code> est un attribut pour les éléments <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> de type <a href="/fr/docs/Web/HTML/Element/Input/file"><code>file</code></a>. Elle était prise en charge par l'élément <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a>, mais a été supprimée au profit de <a href="/fr/docs/Web/HTML/Element/Input/file"><code>file</code></a> dans HTML5.</p>
 
 <p>Comme un type de fichier donné peut être identifié de plusieurs manières, il est utile de fournir un ensemble complet de spécificateurs de type lorsque vous avez besoin de fichiers d'un type spécifique, ou d'utiliser le joker pour indiquer qu'un type de n'importe quel format est accepté.</p>
 
@@ -82,19 +82,16 @@ translation_of: Web/HTML/Attributes/accept
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
 <pre class="brush: css">div {
   margin-bottom: 10px;
 }</pre>
-</div>
 
 <p>Cela produit le résultat suivant :</p>
 
 <p>{{EmbedLiveSample('a_basic_example', 650, 100)}}</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Vous pouvez trouver cet exemple sur GitHub également - voir le <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html">code source</a>, et aussi <a href="https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html">le fonctionnement en direct</a>.</p>
+<div class="note">
+  <p><strong>Note :</strong> Vous pouvez trouver cet exemple sur GitHub également - voir le <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html">code source</a>, et aussi <a href="https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html">le fonctionnement en direct</a>.</p>
 </div>
 
 <p>Quel que soit le dispositif ou le système d'exploitation de l'utilisateur, l'entrée de fichier fournit un bouton qui ouvre une boîte de dialogue de sélection de fichier permettant à l'utilisateur de choisir un fichier.</p>
@@ -127,11 +124,9 @@ translation_of: Web/HTML/Attributes/accept
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
 }</pre>
-</div>
 
 <p>{{EmbedLiveSample('limiting_accepted_file_types', 650, 100)}}</p>
 

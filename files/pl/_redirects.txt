@@ -63,7 +63,7 @@
 /pl/docs/CSS/Na_początek/Kaskadowość_i_dziedziczenie	/pl/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
 /pl/docs/CSS/Na_początek/Kolor	/pl/docs/Learn/CSS/Building_blocks/Values_and_units
 /pl/docs/CSS/Na_początek/Listy	/pl/docs/Learn/CSS/Styling_text/Styling_lists
-/pl/docs/CSS/Na_początek/Media	/pl/docs/Web/Progressive_web_apps/Responsive/Media_types
+/pl/docs/CSS/Na_początek/Media	/pl/docs/Web/CSS/Media_Queries/Using_media_queries
 /pl/docs/CSS/Na_początek/Selektory	/pl/docs/Learn/CSS/Building_blocks/Selectors
 /pl/docs/CSS/Na_początek/Style_tekstowe	/pl/docs/Learn/CSS/Styling_text/Fundamentals
 /pl/docs/CSS/Na_początek/Tabele	/pl/docs/Learn/CSS/Building_blocks/Styling_tables
@@ -178,7 +178,7 @@
 /pl/docs/CSS:Na_początek:Kaskadowość_i_dziedziczenie	/pl/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
 /pl/docs/CSS:Na_początek:Kolor	/pl/docs/Learn/CSS/Building_blocks/Values_and_units
 /pl/docs/CSS:Na_początek:Listy	/pl/docs/Learn/CSS/Styling_text/Styling_lists
-/pl/docs/CSS:Na_początek:Media	/pl/docs/Web/Progressive_web_apps/Responsive/Media_types
+/pl/docs/CSS:Na_początek:Media	/pl/docs/Web/CSS/Media_Queries/Using_media_queries
 /pl/docs/CSS:Na_początek:Selektory	/pl/docs/Learn/CSS/Building_blocks/Selectors
 /pl/docs/CSS:Na_początek:Style_tekstowe	/pl/docs/Learn/CSS/Styling_text/Fundamentals
 /pl/docs/CSS:Na_początek:Tabele	/pl/docs/Learn/CSS/Building_blocks/Styling_tables
@@ -443,7 +443,7 @@
 /pl/docs/DOM/window.clearTimeout	/pl/docs/Web/API/clearTimeout
 /pl/docs/DOM/window.closed	/pl/docs/Web/API/Window/closed
 /pl/docs/DOM/window.controllers	/pl/docs/Web/API/Window/controllers
-/pl/docs/DOM/window.crypto	/pl/docs/Web/API/Window/crypto
+/pl/docs/DOM/window.crypto	/pl/docs/Web/API/crypto_property
 /pl/docs/DOM/window.defaultStatus	/pl/docs/Web/API/Window/defaultStatus
 /pl/docs/DOM/window.directories	/pl/docs/Web/API/Window/directories
 /pl/docs/DOM/window.document	/pl/docs/Web/API/Window/document
@@ -675,7 +675,7 @@
 /pl/docs/DOM:window.alert	/pl/docs/Web/API/Window/alert
 /pl/docs/DOM:window.closed	/pl/docs/Web/API/Window/closed
 /pl/docs/DOM:window.controllers	/pl/docs/Web/API/Window/controllers
-/pl/docs/DOM:window.crypto	/pl/docs/Web/API/Window/crypto
+/pl/docs/DOM:window.crypto	/pl/docs/Web/API/crypto_property
 /pl/docs/DOM:window.defaultStatus	/pl/docs/Web/API/Window/defaultStatus
 /pl/docs/DOM:window.directories	/pl/docs/Web/API/Window/directories
 /pl/docs/DOM:window.document	/pl/docs/Web/API/Window/document
@@ -1503,6 +1503,7 @@
 /pl/docs/Web/API/UIEvent/pageY	/pl/docs/Web/API/MouseEvent/pageY
 /pl/docs/Web/API/Window/clearInterval	/pl/docs/Web/API/clearInterval
 /pl/docs/Web/API/Window/clearTimeout	/pl/docs/Web/API/clearTimeout
+/pl/docs/Web/API/Window/crypto	/pl/docs/Web/API/crypto_property
 /pl/docs/Web/API/Window/onload	/pl/docs/Web/API/GlobalEventHandlers/onload
 /pl/docs/Web/API/Window/setInterval	/pl/docs/Web/API/setInterval
 /pl/docs/Web/API/Window/setTimeout	/pl/docs/Web/API/setTimeout
@@ -1563,7 +1564,7 @@
 /pl/docs/Web/CSS/Na_początek/Kaskadowość_i_dziedziczenie	/pl/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
 /pl/docs/Web/CSS/Na_początek/Kolor	/pl/docs/Learn/CSS/Building_blocks/Values_and_units
 /pl/docs/Web/CSS/Na_początek/Listy	/pl/docs/Learn/CSS/Styling_text/Styling_lists
-/pl/docs/Web/CSS/Na_początek/Media	/pl/docs/Web/Progressive_web_apps/Responsive/Media_types
+/pl/docs/Web/CSS/Na_początek/Media	/pl/docs/Web/CSS/Media_Queries/Using_media_queries
 /pl/docs/Web/CSS/Na_początek/Selektory	/pl/docs/Learn/CSS/Building_blocks/Selectors
 /pl/docs/Web/CSS/Na_początek/Style_tekstowe	/pl/docs/Learn/CSS/Styling_text/Fundamentals
 /pl/docs/Web/CSS/Na_początek/Tables	/pl/docs/Learn/CSS/Building_blocks/Styling_tables
@@ -2155,6 +2156,7 @@
 /pl/docs/Web/JavaScript/Referencje/Własnościundefined	/pl/docs/Web/JavaScript/Reference/Global_Objects/undefined
 /pl/docs/Web/JavaScript/Zasoby_języka_JavaScript	/pl/docs/Web/JavaScript/Language_Resources
 /pl/docs/Web/JavaScript/dziedziczenie_lancuch_prototypow	/pl/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
+/pl/docs/Web/Progressive_web_apps/Responsive/Media_types	/pl/docs/Web/CSS/Media_Queries/Using_media_queries
 /pl/docs/Web/SVG/Element/okrąg	/pl/docs/Web/SVG/Element/circle
 /pl/docs/Web/SVG/Inne_zasoby	/pl/docs/Web/SVG/Other_Resources
 /pl/docs/Web/SVG/Przewodnik	/pl/docs/Web/SVG/Tutorial

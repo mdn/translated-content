@@ -12,15 +12,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 ---
 <div>{{JSRef("Global_Objects", "String")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>lastIndexOf()</code></strong> возвращает индекс последнего вхождения указанного значения в строковый объект {{jsxref("Global_Objects/String", "String")}}, на котором он был вызван, или -1, если ничего не было найдено. Поиск по строке ведётся от конца к началу, начиная с индекса <code>fromIndex</code>.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>str</var>.lastIndexOf(<var>searchValue</var>[, <var>fromIndex</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>searchValue</code></dt>
@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
  <dd>Необязательный параметр. Местоположение внутри строки, откуда начинать поиск, нумерация индексов идёт слева направо. Может быть любым целым числом. Значение по умолчанию установлено в <code>str.length</code>. Если оно отрицательно, трактуется как 0. Если <code>fromIndex &gt; str.length</code>, параметр <code>fromIndex</code> будет трактоваться как <code>str.length</code>.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Символы в строке идут слева направо. Индекс первого символа равен 0, а последнего символа в строке <code>stringName</code> равен <code>stringName.length - 1</code>.</p>
 
@@ -39,16 +39,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 'канал'.lastIndexOf('ч');     // вернёт -1
 </pre>
 
-<h3 id="Case-sensitivity" name="Case-sensitivity">Регистрозависимость</h3>
+<h3 id="Case-sensitivity">Регистрозависимость</h3>
 
 <p>Метод <code>lastIndexOf()</code> является регистрозависимым. Например, следующее выражение вернёт -1:</p>
 
 <pre class="brush: js">'Синий кит, касатка'.lastIndexOf('синий'); // вернёт -1
 </pre>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_indexOf_and_lastIndexOf" name="Example:_Using_indexOf_and_lastIndexOf">Пример: использование методов <code>indexOf()</code> и <code>lastIndexOf()</code></h3>
+<h3 id="Example:_Using_indexOf_and_lastIndexOf">Пример: использование методов <code>indexOf()</code> и <code>lastIndexOf()</code></h3>
 
 <p>В следующем примере используются методы {{jsxref("String.prototype.indexOf()", "indexOf()")}} и <code>lastIndexOf()</code> для нахождения значений в строке <code>"Дивный новый мир"</code>.</p>
 
@@ -65,38 +65,15 @@ console.log('Индекс вхождения «новый» с конца стр
 // Отобразит 7
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.8', 'String.prototype.lastIndexOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.lastindexof', 'String.prototype.lastIndexOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.charAt()")}}</li>

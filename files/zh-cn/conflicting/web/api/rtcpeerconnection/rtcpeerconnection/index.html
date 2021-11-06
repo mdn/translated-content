@@ -1,0 +1,67 @@
+---
+title: RTCConfiguration
+slug: conflicting/Web/API/RTCPeerConnection/RTCPeerConnection
+translation_of: Web/API/RTCConfiguration
+original_slug: Web/API/RTCConfiguration
+---
+<p>{{APIRef("WebRTC")}}{{draft}}</p>
+
+<p>The <strong><code>RTCConfiguration</code></strong> dictionary is used to provide configuration options for an {{domxref("RTCPeerConnection")}}. It may be passed into the constructor when instantiating a connection, or used with the {{domxref("RTCPeerConnection.getConfiguration()")}} and {{domxref("RTCPeerConnection.setConfiguration()")}} methods, which allow inspecting and changing the configuration while a connection is established.</p>
+
+<p>The options include ICE server and transport settings and identity information.</p>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+ <dt><code>bundlePolicy</code> {{optional_inline}}</dt>
+ <dd>Specifies how to handle negotiation of candidates when the remote peer is not compatible with the <a href="https://webrtcstandards.info/sdp-bundle/">SDP BUNDLE standard</a>. This must be one of the values from the enum <code><a href="#RTCBundlePolicy_enum">RTCBundlePolicy</a></code>. If this value isn't included in the dictionary, <code>"balanced"</code> is assumed.</dd>
+ <dt><code>certificates</code> {{optional_inline}}</dt>
+ <dd>An {{jsxref("Array")}} of objects of type {{domxref("RTCCertificate")}} which are used by the connection for authentication. If this property isn't specified, a set of certificates is generated automatically for each {{domxref("RTCPeerConnection")}} instance. Although only one certificate is used by a given connection, providing certificates for multiple algorithms may improve the odds of successfully connecting in some circumstances. See {{anch("Using certificates")}} below for additional information.
+ <div class="note">This configuration option cannot be changed after it is first specified; once the certificates have been set, this property is ignored in future calls to {{domxref("RTCPeerConnection.setConfiguration()")}}.</div>
+ </dd>
+ <dt><code>iceCandidatePoolSize</code> {{optional_inline}}</dt>
+ <dd>一个16bit无符号整型值，代表预获取的ICE candidate pool的大小。 默认为 0 (意味着不会发生candidate的预获取)。在某些情况下，由于预获取了ICE candidate，在 {{domxref("RTCPeerConnection.setLocalDescription()")}} 被调用时，被预获取的candidate可被立刻检查，从而导致可以更快的建立连接。
+ <div class="note">改变 ICE candidate pool的大小将触发启动 ICE gathering。</div>
+ </dd>
+ <dt><code>iceServers</code> {{optional_inline}}</dt>
+ <dd>An array of {{domxref("RTCIceServer")}} objects, each describing one server which may be used by the ICE agent; these are typically STUN and/or TURN servers. If this isn't specified, the ICE agent may choose to use its own ICE servers; otherwise, the connection attempt will be made with no STUN or TURN server available, which limits the connection to local peers.</dd>
+ <dt><code>iceTransportPolicy</code> {{optional_inline}}</dt>
+ <dd>The current ICE transport policy; this must be one of the values from the <code><a href="#RTCIceTransportPolicy_enum">RTCIceTransportPolicy</a></code> enum. If this isn't specified, <code>"all"</code> is assumed.</dd>
+ <dt><code>peerIdentity</code> {{optional_inline}}</dt>
+ <dd>A {{domxref("DOMString")}} which specifies the target peer identity for the {{domxref("RTCPeerConnection")}}. If this value is set (it defaults to <code>null</code>), the <code>RTCPeerConnection</code> will not connect to a remote peer unless it can successfully authenticate with the given name.</dd>
+ <dt><code>rtcpMuxPolicy</code> {{optional_inline}}</dt>
+ <dd>The RTCP mux policy to use when gathering ICE candidates, in order to support non-multiplexed RTCP. The value must be one of those from the <a href="#RTCRtcpMuxPolicy_enum"><code>RTCRtcpMuxPolicy</code> enum</a>. The default is <code>"require"</code>.</dd>
+</dl>
+
+<h2 id="Constants">Constants</h2>
+
+<p>{{page("/en-US/docs/Web/API/RTCPeerConnection", "RTCBundlePolicy enum", 0, 1)}}</p>
+
+<p>{{page("/en-US/docs/Web/API/RTCPeerConnection", "RTCIceTransportPolicy enum", 0, 1)}}</p>
+
+<p>{{page("/en-US/docs/Web/API/RTCPeerConnection", "RTCRtcpMuxPolicy enum", 0, 1)}}</p>
+
+<h2 id="Using_certificates">Using certificates</h2>
+
+<p>When you wish to provide your own certificates for use by an {{domxref("RTCPeerConnection")}} instead of having the <code>RTCPeerConnection</code> generate them automatically, you do so through calls to {{domxref("RTCPeerConnection.generateCertificate()")}}.</p>
+
+<p>This attribute supports providing multiple certificates because even though a given DTLS connection uses only one certificate, providing multiple certificates allows support for multiple encryption algorithms. The implementation of <code>RTCPeerConnection</code> will choose which certificate to use based on the algorithms it and the remote peer support, as determined during DTLS handshake.</p>
+
+<p>If you don't provide certificates, new ones are generated automatically. One obvious benefit to providing your own is identity key continuity—if you use the same certificate for subsequent calls, the remote peer can tell you're the same caller. This also avoids the cost of generating new keys.</p>
+
+<p>&lt;&lt;&lt;link to added info on identity&gt;&gt;&gt;</p>
+
+<h2 id="Example">Example</h2>
+
+<p>The configuration below establishes two ICE servers. The first one, <code>stun:stun.services.mozilla.com</code>, requires authentication, so the username and password are provided. The second server has two URLs: <code>stun:stun.example.com</code> and <code>stun:stun-1.example.com</code>.</p>
+
+<pre class="brush: js">var configuration = { iceServers: [{
+                          urls: "stun:stun.services.mozilla.com",
+                          username: "louis@mozilla.com",
+                          credential: "webrtcdemo"
+                      }, {
+                          urls: ["stun:stun.example.com", "stun:stun-1.example.com"]
+                      }]
+};
+
+var pc = new RTCPeerConnection(configuration);</pre>
