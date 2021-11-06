@@ -47,7 +47,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resou
 
 <p>Par exemple, supposons que votre extension inclut un fichier image sur images images/my-image.png, comme ceci :</p>
 
-<pre class="no-line-numbers">my-extension-files/
+<pre>my-extension-files/
     manifest.json
     my-background-script.js
     images/
@@ -59,7 +59,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resou
 
 <p>Le fichier sera alors disponible en utilisant une URL comme :</p>
 
-<pre class="no-line-numbers">moz-extension://&lt;extension-UUID&gt;/images/my-image.png"</pre>
+<pre>moz-extension://&lt;extension-UUID&gt;/images/my-image.png"</pre>
 
 <p><code>&lt;extension-UUID&gt;</code> n'est <strong>pas</strong> l'identifiant de votre extension. Il est généré de manière aléatoire pour chaque instance de navigateur. Ceci empêche les sites Web de prendre les empreintes digitales d'un navigateur en examinant les extensions qu'il a installées.</p>
 
