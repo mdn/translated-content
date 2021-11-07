@@ -20,7 +20,7 @@ La valeur de cet attribut doit être une expression rationnelle JavaScript valid
 
 Si le motif n'est pas indiqué ou est invalide, aucune expression rationnelle ne sera appliquée et l'attribut sera ignoré.
 
-> **Note :**On pourra utiliser l'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) afin de fournir aux utilisateurs des explications quant aux règles à respecter pour que la valeur soit valide. Attention, on ne doit pas utiliser uniquement cet attribut pour fournir ces explications. Voir ci-après quant à l'utilisabilité.
+> **Note :** On pourra utiliser l'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) afin de fournir aux utilisateurs des explications quant aux règles à respecter pour que la valeur soit valide. Attention, on ne doit pas utiliser uniquement cet attribut pour fournir ces explications. Voir ci-après quant à l'utilisabilité.
 
 Certains types d'`<input>` qui prennent en charge l'attribut `pattern` (notamment [`email`](/fr/docs/Web/HTML/Element/Input/email) et [`url`](/fr/docs/Web/HTML/Element/Input/url)) ont des contraintes particulières qui doivent également être respectées. Si l'attribut `pattern` n'est pas présent et que la valeur saisie ne respecte pas la syntaxe attendue pour ce type de champ, la propriété en lecture seule [`typeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) vaudra `true`.
 
@@ -114,7 +114,7 @@ input:valid+span:after {
 
 Cela donne le résultat suivant :
 
-{{EmbedLiveSample('specifying_a_pattern', '', 130)}}
+{{EmbedLiveSample('Indiquer_un_motif', '', 130)}}
 
 ## Accessibilité
 

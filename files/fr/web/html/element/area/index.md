@@ -143,7 +143,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
     Cet attribut doit uniquement être utilisé si l'attribut [`href`](#attr-href) est présent.
 
-    > **Note :**La définition de `target="_blank"` sur les éléments `<area>` fournit implicitement le même comportement `rel` que la définition de [`rel="noopener"`](/fr/docs/Web/HTML/Link_types/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour les informations sur son support.
+    > **Note :** La définition de `target="_blank"` sur les éléments `<area>` fournit implicitement le même comportement `rel` que la définition de [`rel="noopener"`](/fr/docs/Web/HTML/Link_types/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour les informations sur son support.
 
 ### Attributs dépréciés ou obsolètes
 
@@ -153,7 +153,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : Indique une absence d'hyperlien pour la zone d'intérêt. Cet attribut doit être présent si **href** ne l'est pas et _vice versa_.
 
-    > **Note :**Cet attribut est obsolète en HTML5, ne pas utiliser l'attribut `href` suffit.
+    > **Note :** Cet attribut est obsolète en HTML5, ne pas utiliser l'attribut `href` suffit.
 
 - **`tabindex`** {{deprecated_inline}}
   - : Une valeur numérique définissant l'ordre de la zone d'intérêt parmi les différentes étiquettes. Cet attribut est un attribut universel avec HTML5.
@@ -174,7 +174,7 @@ Dans cet exemple, la partie gauche est un lien vers une page et la partie droite
 
 ### Résultat
 
-{{EmbedLiveSample("example", "100%", "230")}}
+{{EmbedLiveSample("Exemple", "100%", "230")}}
 
 ## Spécifications
 

@@ -73,7 +73,7 @@ Si et seulement si l'attribut `multiple` est spécifié, la valeur peut être un
 
 Certains navigateurs prennent en charge l'apparition de la [liste](/fr/docs/Web/HTML/Attributes/list) d'options de la [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) pour les adresses électroniques ultérieures lorsque `multiple` est présent. D'autres ne le font pas.
 
-{{EmbedLiveSample("email_input", '', 80)}}
+{{EmbedLiveSample("Saisie_d'adresses_électroniques", '', 80)}}
 
 ### Saisie de fichiers
 
@@ -97,7 +97,7 @@ Lorsque `multiple` est défini sur le type de saisie [`file`](/fr/docs/Web/HTML/
 </form>
 ```
 
-{{EmbedLiveSample("file_input", '', 160)}}
+{{EmbedLiveSample("Saisie_de_fichiers", '', 160)}}
 
 Notez la différence d'aspect entre l'exemple avec `multiple` défini et l'autre entrée `file` sans.
 
@@ -139,7 +139,7 @@ L'attribut `multiple` de l'élément [`<select>`](/fr/docs/Web/HTML/Element/sele
 </form>
 ```
 
-{{EmbedLiveSample("select", '', 220)}}
+{{EmbedLiveSample("Saisir_plusieurs_options", '', 220)}}
 
 Notez la différence d'apparence entre les deux contrôles de formulaire.
 

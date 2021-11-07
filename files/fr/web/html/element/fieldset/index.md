@@ -65,7 +65,7 @@ Cet exemple montre un `<fieldset>` très simple, avec un `<legend>`, et un seul 
 
 #### Résultat
 
-{{EmbedLiveSample('simple_fieldset', '100%', '80')}}
+{{EmbedLiveSample('Exemple_simple', '100%', '80')}}
 
 ### \<fieldset> désactivé
 
@@ -91,7 +91,7 @@ Dans cet exemple, on voit comment l'attribut `disabled` permet de désactiver un
 
 #### Résultat
 
-{{EmbedLiveSample('disabled_fieldset', '100%', '110') }}
+{{EmbedLiveSample('fieldset_désactivé', '100%', '110') }}
 
 ## Résumé technique
 

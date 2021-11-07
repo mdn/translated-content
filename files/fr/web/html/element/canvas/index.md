@@ -136,7 +136,7 @@ La taille maximale d'un élément `<canvas>` dépend du navigateur utilisé. Voi
 | Safari     | 32 767 pixels    | 32 767 pixels    | 268 435 456 pixels (soit 16 384 x 16 384) |
 | IE         | 8 192 pixels     | 8 192 pixels     | ?                                         |
 
-> **Note :**Si on dépasse les dimensions ou l'aire maximale, le canevas deviendra inutilisable et les commandes de dessin ne fonctionneront pas.
+> **Note :** Si on dépasse les dimensions ou l'aire maximale, le canevas deviendra inutilisable et les commandes de dessin ne fonctionneront pas.
 
 ## Exemples
 
@@ -163,7 +163,7 @@ ctx.fillRect(10, 10, 100, 100);
 
 ### Résultat
 
-{{EmbedLiveSample('examples')}}
+{{EmbedLiveSample('Exemples')}}
 
 ## Accessibilité
 

@@ -54,7 +54,7 @@ Lorsque cet attribut est utilisé sur un champ permettant de sélectionner un fi
 </p>
 ```
 
-{{EmbedLiveSample('examples', '', 160)}}
+{{EmbedLiveSample('Exemples', '', 160)}}
 
 Notez que le dernier exemple vous permet de sélectionner plusieurs images. Voir l'attribut [`multiple`](multiple) pour plus d'informations.
 
@@ -98,7 +98,7 @@ div {
 
 Cela produit le résultat suivant :
 
-{{EmbedLiveSample('a_basic_example', 650, 100)}}
+{{EmbedLiveSample('Utilisation_des_champs_pour_saisir_des_fichiers', 650, 100)}}
 
 > **Note :** Vous pouvez trouver cet exemple sur GitHub également - voir le [code source](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html), et aussi [le fonctionnement en direct](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
 
@@ -138,7 +138,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('limiting_accepted_file_types', 650, 100)}}
+{{EmbedLiveSample('Restreindre_les_types_de_fichier_acceptés', 650, 100)}}
 
 ## Spécifications
 

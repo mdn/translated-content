@@ -21,7 +21,7 @@ Dans le cas d'un groupe de boutons [`radio`](/fr/docs/Web/HTML/Element/Input/rad
 
 Dans le cas d'un même groupe nommé de types d'entrée [`checkbox`](/fr/docs/Web/HTML/Element/Input/checkbox), seules les cases à cocher avec l'attribut `required` sont obligatoires.
 
-> **Note :**Le réglage `aria-required="true"` indique à un lecteur d'écran qu'un élément (n'importe lequel) est requis, mais n'a aucune incidence sur le caractère facultatif de l'élément.
+> **Note :** Le réglage `aria-required="true"` indique à un lecteur d'écran qu'un élément (n'importe lequel) est requis, mais n'a aucune incidence sur le caractère facultatif de l'élément.
 
 ## Interactions entre attributs
 
@@ -55,7 +55,7 @@ Si l'élément est requis et que la valeur de l'élément est la chaîne vide, a
 
 ### Résultat
 
-{{EmbedLiveSample('examples')}}
+{{EmbedLiveSample('Exemple')}}
 
 ## Accessibilité
 

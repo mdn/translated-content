@@ -141,7 +141,7 @@ En général, les navigateurs donnent un style au contenu d'un élément `<cite>
 
 Le HTML ci-dessus produit le résultat suivant :
 
-{{EmbedLiveSample('example', '', 80)}}
+{{EmbedLiveSample('Exemple', '', 80)}}
 
 ## Spécifications
 

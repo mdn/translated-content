@@ -17,7 +17,7 @@ L'attribut `readonly` est pris en charge par les types [`text`](/fr/docs/Web/HTM
 
 L'attribut n'est pas pris en charge ou pertinent pour [`<select>`](/fr/docs/Web/HTML/Element/select) ou les types d'entrée qui ne sont déjà pas mutables, comme [`checkbox`](/fr/docs/Web/HTML/Element/Input/checkbox) et [`radio`](/fr/docs/Web/HTML/Element/Input/radio) ou ne peuvent pas, par définition, commencer par une valeur, comme le type d'entrée [`file`](/fr/docs/Web/HTML/Element/Input/file). [`range`](/fr/docs/Web/HTML/Element/Input/range) et [`color`](/fr/docs/Web/HTML/Element/Input/color), car tous deux ont des valeurs par défaut. Il n'est pas non plus pris en charge sur [`hidden`](/fr/docs/Web/HTML/Element/Input/hidden), car on ne peut pas s'attendre à ce qu'un utilisateur remplisse un formulaire qui est caché. Il n'est pas non plus supporté sur des types de boutons, y compris `image`.
 
-> **Note :**Seuls les contrôles de texte peuvent être rendus en lecture seule, car pour les autres contrôles (comme les cases à cocher et les boutons), il n'y a pas de distinction utile entre être en lecture seule et être désactivé, donc l'attribut `readonly` ne s'applique pas.
+> **Note :** Seuls les contrôles de texte peuvent être rendus en lecture seule, car pour les autres contrôles (comme les cases à cocher et les boutons), il n'y a pas de distinction utile entre être en lecture seule et être désactivé, donc l'attribut `readonly` ne s'applique pas.
 
 Lorsqu'une entrée possède l'attribut `readonly`, la pseudo-classe [`:read-only`](/fr/docs/Web/CSS/:read-only) s'y applique également. Inversement, les entrées qui prennent en charge l'attribut `readonly` mais qui n'ont pas l'attribut défini correspondent à la pseudo-classe [`:read-write`](/fr/docs/Web/CSS/:read-write).
 
@@ -29,7 +29,7 @@ Comme un champ en lecture seule ne peut pas voir sa valeur modifiée par une int
 
 Le seul moyen de modifier dynamiquement la valeur de l'attribut readonly est d'utiliser un script.
 
-> **Note :**L'attribut `required` n'est pas autorisé sur les entrées pour lesquelles l'attribut `readonly` est spécifié.
+> **Note :** L'attribut `required` n'est pas autorisé sur les entrées pour lesquelles l'attribut `readonly` est spécifié.
 
 ### Validation des contraintes
 
@@ -64,7 +64,7 @@ Si l'élément est en lecture seule, la valeur de l'élément ne peut pas être 
 
 ### Résultat
 
-{{EmbedLiveSample('examples')}}
+{{EmbedLiveSample('Exemples')}}
 
 ## Spécifications
 

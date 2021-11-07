@@ -131,7 +131,7 @@ On peut baliser une abréviation sans fournir de description ou de définition, 
 
 #### Résultat
 
-{{EmbedLiveSample("marking_up_an_abbreviation_semantically", "100%", 80)}}
+{{EmbedLiveSample("Baliser_une_abréviation_pour_marquer_la_sémantique", "100%", 80)}}
 
 ### Mettre en forme des abréviations
 
@@ -153,7 +153,7 @@ abbr {
 
 #### Résultat
 
-{{EmbedLiveSample("styling_abbreviations", "100%", 80)}}
+{{EmbedLiveSample("Mettre_en_forme_des_abréviations", "100%", 80)}}
 
 ### Fournir une description
 
@@ -167,7 +167,7 @@ On peut ajouter un attribut [`title`](/fr/docs/Web/HTML/Global_attributes#attr-t
 
 #### Résultat
 
-{{EmbedLiveSample("providing_an_expansion", "100%", 80)}}
+{{EmbedLiveSample("Fournir_une_description", "100%", 80)}}
 
 ### Définir une abréviation
 
@@ -188,7 +188,7 @@ l'utiliser.</p>
 
 #### Résultat
 
-{{EmbedLiveSample("defining_an_abbreviation", "100%", 160)}}
+{{EmbedLiveSample("Définir_une_abréviation", "100%", 160)}}
 
 ## Accessibilité
 

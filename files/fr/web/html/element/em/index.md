@@ -122,7 +122,7 @@ L'élément `<em>` est souvent utilisé pour indiquer un contraste, implicite ou
 
 ### Résultat
 
-{{EmbedLiveSample("example", "", 100)}}
+{{EmbedLiveSample("Exemple", "", 100)}}
 
 ## Spécifications
 

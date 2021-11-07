@@ -39,7 +39,7 @@ ligne.</p>
 
 Dans cet exemple, l'élément [`<p>`](/fr/docs/Web/HTML/Element/p) (le paragraphe) est un élément de bloc qui contient du texte. Dans ce texte, on a un élément [`<span>`](/fr/docs/Web/HTML/Element/span) qui est un élément en ligne. L'élément `<span>` étant un élément en ligne, le paragraphe est bien affiché sous la forme d'un flux de texte sans rupture :
 
-{{EmbedLiveSample("Inline", "", 120)}}
+{{EmbedLiveSample("Élément_en_ligne", "", 120)}}
 
 ```css hidden
 body {
@@ -77,7 +77,7 @@ body {
 
 Et voici le résultat qu'on obtient :
 
-{{EmbedLiveSample("Block-level", "", 150)}}
+{{EmbedLiveSample("Élément_de_bloc", "", 150)}}
 
 On voit ici que l'élément `<div>` modifie complètement la disposition du texte et le découpe en trois parties : une partie avant le `<div>`, une partie constituée avec le texte de l'élément `<div>` et une dernière partie ensuite.
 

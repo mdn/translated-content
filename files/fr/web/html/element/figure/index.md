@@ -134,7 +134,7 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 </figure>
 ```
 
-{{EmbedLiveSample("images", "100%", 400)}}
+{{EmbedLiveSample("Images", "100%", 400)}}
 
 ### Extrait de code
 
@@ -156,7 +156,7 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 </figure>
 ```
 
-{{EmbedLiveSample("code_snippets", "100%", 250)}}
+{{EmbedLiveSample("Extrait_de_code", "100%", 250)}}
 
 ### Citation
 
@@ -171,7 +171,7 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 </figure>
 ```
 
-{{EmbedLiveSample("quotations","", 150)}}
+{{EmbedLiveSample("Citation","", 150)}}
 
 ### Poème
 
@@ -190,7 +190,7 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 </figure>
 ```
 
-{{EmbedLiveSample("poems", "100%", 260)}}
+{{EmbedLiveSample("Poème", "100%", 260)}}
 
 ## Spécifications
 

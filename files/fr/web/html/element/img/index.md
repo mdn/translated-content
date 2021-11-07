@@ -115,7 +115,7 @@ Cet élément inclut les [attributs globaux](/fr/docs/Web/HTML/Global_attributes
 
   - : Un attribut booléen dont la valeur indique si l'image fait partie d'une carte cliquable. Si c'est le cas, les coordonnées du clic seront envoyées au serveur.
 
-    > **Note :**Cet attribut est uniquement autorisé si l'élément `<img>` descend d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) dont l'attribut [`href`](/fr/docs/Web/HTML/Element/a#attr-href) est valide.
+    > **Note :** Cet attribut est uniquement autorisé si l'élément `<img>` descend d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) dont l'attribut [`href`](/fr/docs/Web/HTML/Element/a#attr-href) est valide.
 
 - `loading` {{experimental_inline}}
 
@@ -124,7 +124,7 @@ Cet élément inclut les [attributs globaux](/fr/docs/Web/HTML/Global_attributes
     - `eager` : Charge l'image immédiatement, que l'image se trouve ou non dans le viewport visible (c'est la valeur par défaut).
     - `lazy` : Diffère le chargement de l'image au moment où elle atteint une certaine distance de la fenêtre de visualisation, telle que définie par le navigateur. Le but est d'éviter que le réseau et la zone de stockage nécessaires à la manipulation de l'image ne soient utilisés tant qu'il n'est pas relativement sûr que celle-ci sera nécessaire. Cela permet généralement d'améliorer les performances du contenu dans la plupart des cas d'utilisation typiques.
 
-      > **Note :**Le chargement n'est différé que lorsque JavaScript est activé. Il s'agit d'une mesure anti-pistage, car si un agent utilisateur prenait en charge le chargement différé lorsque les scripts sont désactivés, il serait toujours possible pour un site de suivre la position de défilement approximative d'un utilisateur tout au long d'une session, en plaçant stratégiquement des images dans le balisage d'une page de sorte qu'un serveur puisse suivre le nombre d'images demandées et le moment où elles le sont.
+      > **Note :** Le chargement n'est différé que lorsque JavaScript est activé. Il s'agit d'une mesure anti-pistage, car si un agent utilisateur prenait en charge le chargement différé lorsque les scripts sont désactivés, il serait toujours possible pour un site de suivre la position de défilement approximative d'un utilisateur tout au long d'une session, en plaçant stratégiquement des images dans le balisage d'une page de sorte qu'un serveur puisse suivre le nombre d'images demandées et le moment où elles le sont.
 
 - `referrerpolicy` {{experimental_inline}}
 
@@ -171,7 +171,7 @@ Cet élément inclut les [attributs globaux](/fr/docs/Web/HTML/Global_attributes
 
   - : Le fragment d'URL (commençant avec #) d'une [carte d'images](/fr/docs/Web/HTML/Element/map) associée à cet élément.
 
-    > **Note :**Cet attribut ne peut pas être utilisé si l'élément `<img>` est un descendant d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) ou d'un élément [`<button>`](/fr/docs/Web/HTML/Element/Button).
+    > **Note :** Cet attribut ne peut pas être utilisé si l'élément `<img>` est un descendant d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) ou d'un élément [`<button>`](/fr/docs/Web/HTML/Element/Button).
 
 ### Attributs obsolètes
 
@@ -198,7 +198,7 @@ Cet élément inclut les [attributs globaux](/fr/docs/Web/HTML/Global_attributes
 
   - : Un lien vers une description plus détaillée de l'image. Les valeurs possibles sont une URL ou un identifiant ([`id`](/fr/docs/Web/HTML/Global_attributes#attr-id)) d'un élément.
 
-    > **Note :**Cet attribut est mentionné dans la dernière version du [W3C](/fr/docs/Glossary/W3C), [HTML 5.2](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc), mais a été supprimé du [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) du [WHATWG](/fr/docs/Glossary/WHATWG). Son avenir est incertain ; les auteurs devraient utiliser une alternative [WAI](/fr/docs/Glossary/WAI)-[ARIA](/fr/docs/Glossary/ARIA) telle que [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) ou [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
+    > **Note :** Cet attribut est mentionné dans la dernière version du [W3C](/fr/docs/Glossary/W3C), [HTML 5.2](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc), mais a été supprimé du [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) du [WHATWG](/fr/docs/Glossary/WHATWG). Son avenir est incertain ; les auteurs devraient utiliser une alternative [WAI](/fr/docs/Glossary/WAI)-[ARIA](/fr/docs/Glossary/ARIA) telle que [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) ou [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
 
 - `name` {{deprecated_inline}}
   - : Un nom pour l'élément. Utilisez plutôt l'attribut [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id).
@@ -226,7 +226,7 @@ L'exemple suivant intègre une image dans la page et inclut un texte alternatif 
   alt="MDN logo">
 ```
 
-{{EmbedLiveSample('Alternative_text', '100%', '160')}}
+{{EmbedLiveSample('Texte_alternatif', '100%', '160')}}
 
 ### Lien image
 
@@ -238,7 +238,7 @@ Cet exemple s'appuie sur le précédent, en montrant comment transformer l'image
 </a>
 ```
 
-{{EmbedLiveSample('image_link', '100%', '160')}}
+{{EmbedLiveSample('Lien_image', '100%', '160')}}
 
 ### Créer un lien avec une image
 
@@ -250,7 +250,7 @@ Dans cet exemple, nous incluons un attribut `srcset` avec une référence à une
   srcset="favicon144.png 2x">
 ```
 
-{{EmbedLiveSample('using_the_srcset_attribute', '100%', '160')}}
+{{EmbedLiveSample('Créer_un_lien_avec_une_image', '100%', '160')}}
 
 ### Utiliser les attributs `srcset` et `sizes`
 
@@ -264,9 +264,9 @@ L'attribut `src` est ignoré lorsque l'agent utilisateur prend en charge `srcset
   sizes="(min-width: 600px) 200px, 50vw">
 ```
 
-{{EmbedLiveSample("using_the_srcset_and_sizes_attributes", "100%", 450)}}
+{{EmbedLiveSample("Utiliser_les_attributs_srcset_et_sizes", "100%", 450)}}
 
-> **Note :**Pour observer l'effet du redimensionnement, vous devrez consulter [l'exemple sur une page séparée](/fr/docs/Web/HTML/Element/img/Using_the_srcset_and_sizes_attributes) afin de pouvoir modifier la taille de la zone.
+> **Note :** Pour observer l'effet du redimensionnement, vous devrez consulter [l'exemple sur une page séparée](/fr/docs/Web/HTML/Element/img/Using_the_srcset_and_sizes_attributes) afin de pouvoir modifier la taille de la zone.
 
 ## Sécurité et vie privée
 
