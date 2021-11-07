@@ -97,7 +97,7 @@ Dans cet exemple, on utilise deux éléments `<style>`, on peut voir comment les
 
 #### Résultat
 
-{{EmbedLiveSample('Utiliser_plusieurs_éléments_&lt;style&gt;', '100%', '60')}}
+{{EmbedLiveSample('Utiliser_plusieurs_éléments_style', '100%', '60')}}
 
 ### Utiliser une requête média
 

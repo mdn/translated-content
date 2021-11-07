@@ -36,7 +36,7 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 
     Un quatrième type a été défini dans l'interface WebTV : `triangle` mais tous les navigateurs ne l'implémentent pas.
 
-    > **Attention :**Cet attribut a été déprécié et ne doit pas être utilisé. Pour obtenir le même effet, on pourra utiliser la propriété CSS {{cssxref("list-style-type")}} à la place.
+    > **Attention :** Cet attribut a été déprécié et ne doit pas être utilisé. Pour obtenir le même effet, on pourra utiliser la propriété CSS {{cssxref("list-style-type")}} à la place.
 
 ## Notes d'utilisation
 
@@ -113,7 +113,7 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 
 #### Résultat
 
-{{EmbedLiveSample("&lt;ul&gt;_et_&lt;ol&gt;_imbriqués","100%","180")}}
+{{EmbedLiveSample("ul_et_ol_imbriqués","100%","180")}}
 
 ## Résumé technique
 

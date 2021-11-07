@@ -34,7 +34,7 @@ Comme pour tous les autres éléments, on peut utiliser [les attributs universel
 
 ## Exemples
 
-### Menu contextuel{{Deprecated_inline}}
+### Menu contextuel
 
 {{Deprecated_header}}
 
@@ -92,7 +92,7 @@ div {
 
 {{EmbedLiveSample('Bouton_de_menu', '100%', '50')}}
 
-### Barre d’outils {{experimental_inline}}
+### Barre d'outils
 
 > **Attention :** Les menus sous forme de barres d'outils n'ont pas encore été implémentés dans les navigateurs.
 
@@ -122,7 +122,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Barre_d’outils", '100%', '100')}}
+{{EmbedLiveSample("Barre_doutils", '100%', '100')}}
 
 ## Résumé technique
 

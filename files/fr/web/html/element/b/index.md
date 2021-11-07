@@ -111,7 +111,7 @@ l'élément &lt;b&gt;, sûrement en gras.
 
 ### Résultat
 
-{{EmbedLiveSample("example")}}
+{{EmbedLiveSample("Exemple")}}
 
 ## Spécifications
 
