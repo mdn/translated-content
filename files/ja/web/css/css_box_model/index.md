@@ -1,114 +1,88 @@
 ---
-title: CSS 基本ボックスモデル
+title: CSS ボックスモデル
 slug: Web/CSS/CSS_Box_Model
 tags:
   - CSS
-  - CSS Box Model
-  - CSS 基本ボックスモデル
-  - Overview
-  - Reference
+  - CSS ボックスモデル
+  - ガイド
+  - 概要
+  - リファレンス
 translation_of: Web/CSS/CSS_Box_Model
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS 基本ボックスモデル</strong>は CSS のモジュールの1つで、要素に対して作成され、パディングやマージンを含む長方形のボックス定義します。<a href="/ja/docs/Web/CSS/Visual_formatting_model">視覚整形モデル</a>によって配置されます。</p>
+**CSS ボックスモデル**は CSS のモジュールの一つで、要素に対して作成され、パディングやマージンを含む長方形のボックス定義します。[視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)によって配置されます。
 
-<h2 id="Reference" name="Reference">リファレンス</h2>
+## ボックスモデル
 
-<h3 id="Properties" name="Properties">プロパティ</h3>
+CSS のボックスは、テキスト、画像、その他の HTML 要素が表示されるコンテンツ領域で構成されています。この領域は、パディング、境界、マージンによって、1 つ以上の辺で囲まれることがあります。ボックスモデルは、これらの要素がどのように連携して CSS で表示されるボックスを作成するかを説明します。詳しくは、[CSS ボックスモデル入門](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)をご覧ください。
 
-<h4 id="Properties_controlling_the_flow_of_content_in_a_box" name="Properties_controlling_the_flow_of_content_in_a_box">ボックス内のコンテンツの流れを制御するプロパティ</h4>
+### ボックスの辺のキーワード
 
-<div class="index">
-<ul>
- <li>{{CSSxRef("overflow")}}</li>
- <li>{{CSSxRef("overflow-x")}}</li>
- <li>{{CSSxRef("overflow-y")}}</li>
-</ul>
-</div>
+ボックスモデルの仕様書では、ボックスの各部分の辺を参照する一連のキーワードが定義されています。これらは、{{cssxref("box-sizing")}} プロパティの値など、CSS のキーワード値としても使用され、ボックスモデルがどのように寸法を計算するかを制御します。
 
-<h4 id="Properties_controlling_the_size_of_a_box" name="Properties_controlling_the_size_of_a_box">ボックスの寸法を制御するプロパティ</h4>
+- `content-box`
+  - : そのボックスのコンテンツ領域の辺です。
+- `padding-box`
+  - : そのボックスのパディングの辺です。その方向にパディングがなかった場合は、 `content-box` と同じになります。
+- `border-box`
+  - : そのボックスの境界の辺です。その方向に境界がなかった場合は、 `padding-box` と同じになります。
+- `margin-box`
+  - : そのボックスのマージンの辺です。その方向にマージンがなかった場合は、 `border-box` と同じになります。
+- `stroke-box`
+  - : SVG では、ストロークの囲みボックスを指します。 CSS では `content-box` として扱われます。
+- `view-box`
+  - : SVG では、最も近い SVG ビューポート要素の原点ボックスを指します。これはその要素の {{svgattr("viewBox")}} 属性によって確立された初期の SVG ユーザー座標系の幅と高さを持つ長方形です。CSS では `border-box` として扱われます。
 
-<div class="index">
-<ul>
- <li>{{CSSxRef("height")}}</li>
- <li>{{CSSxRef("width")}}</li>
- <li>{{CSSxRef("max-height")}}</li>
- <li>{{CSSxRef("max-width")}}</li>
- <li>{{CSSxRef("min-height")}}</li>
- <li>{{CSSxRef("min-width")}}</li>
-</ul>
-</div>
+## リファレンス
 
-<h4 id="Properties_controlling_the_margins_of_a_box" name="Properties_controlling_the_margins_of_a_box">ボックスのマージンを制御するプロパティ</h4>
+### プロパティ
 
-<div class="index">
-<ul>
- <li>{{CSSxRef("margin")}}</li>
- <li>{{CSSxRef("margin-bottom")}}</li>
- <li>{{CSSxRef("margin-left")}}</li>
- <li>{{CSSxRef("margin-right")}}</li>
- <li>{{CSSxRef("margin-top")}}</li>
- <li>{{CSSxRef("margin-trim")}} {{Experimental_Inline}}</li>
-</ul>
-</div>
+> **Note:** 本仕様では、物理的なパディングとマージンのプロパティを定義しています。テキストの方向に関係するフローに関連したプロパティは、[論理的プロパティと値](/ja/docs/Web/CSS/CSS_Logical_Properties)で定義されています。
 
-<h4 id="Properties_controlling_the_paddings_of_a_box" name="Properties_controlling_the_paddings_of_a_box">ボックスのパディングを制御するプロパティ</h4>
+#### ボックスのマージンを制御するプロパティ
 
-<div class="index">
-<ul>
- <li>{{CSSxRef("padding")}}</li>
- <li>{{CSSxRef("padding-bottom")}}</li>
- <li>{{CSSxRef("padding-left")}}</li>
- <li>{{CSSxRef("padding-right")}}</li>
- <li>{{CSSxRef("padding-top")}}</li>
-</ul>
-</div>
+マージンは、ボックスの境界を囲み、ボックス同士の間隔を確保するものです。
 
-<h4 id="Other_properties" name="Other_properties">その他のプロパティ</h4>
+- {{CSSxRef("margin")}}
+- {{CSSxRef("margin-bottom")}}
+- {{CSSxRef("margin-left")}}
+- {{CSSxRef("margin-right")}}
+- {{CSSxRef("margin-top")}}
+- {{CSSxRef("margin-trim")}} {{Experimental_Inline}}
 
-<div class="index">
-<ul>
- <li>{{CSSxRef("visibility")}}</li>
-</ul>
-</div>
+#### ボックスのパディングを制御するプロパティ
 
-<h2 id="Guides" name="Guides">ガイド</h2>
+パディングは、ボックスの境界の縁と内容物の縁の間に挿入されます。
 
-<dl>
- <dt><a href="/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS ボックスモデルの紹介</a></dt>
- <dd>CSS の基礎的概念の1つである、ボックスモデルを説明します。このモデルは CSS が要素とその内容、パディング、境界線、マージン領域をどのように配置するかを定義します。</dd>
- <dt><a href="/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">マージンの相殺の理解</a></dt>
- <dd>2つの隣接するマージンが1つに相殺されることがあります。この記事ではいつなぜそれが発生し、どのように制御するかを説明します。</dd>
- <dt><a href="/ja/docs/Web/CSS/Visual_formatting_model">視覚整形モデル</a></dt>
- <dd>視覚整形モデルを説明します。</dd>
-</dl>
+- {{CSSxRef("padding")}}
+- {{CSSxRef("padding-bottom")}}
+- {{CSSxRef("padding-left")}}
+- {{CSSxRef("padding-right")}}
+- {{CSSxRef("padding-top")}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">仕様書</h2>
+#### その他のプロパティ
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Box")}}</td>
-   <td>{{Spec2("CSS3 Box")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "box.html")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+ボックスモデルに関連するプロパティは他にもあり、それらは別の場所で定義されています。
+
+- [境界](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+  - : 境界のプロパティは、境界の太さ、描画スタイル、色を指定します。
+- [オーバーフロー](/ja/docs/Web/CSS/overflow)
+  - : 内容物が多すぎてボックスに入りきらない場合に起こることを制御します。
+
+## ガイド
+
+- [CSS ボックスモデルの紹介](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - : CSS の基礎的概念の 1 つである、ボックスモデルを解説します。このモデルは CSS が要素とそのコンテンツ領域、パディング領域、境界領域、マージン領域をどのように配置するかを定義しています。
+- [マージンの相殺の理解](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - : 2 つの隣接するマージンが 1 つに相殺されることがあります。この記事ではいつなぜそれが発生し、どのように制御するかを説明します。
+- [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - : 視覚整形モデルを説明します。
+
+## 仕様書
+
+| 仕様書                             | 状態                  | 備考                 |
+| ---------------------------------- | --------------------- | -------------------- |
+| {{SpecName("CSS3 Box")}}           | {{Spec2("CSS3 Box")}} | `margin-trim` を追加 |
+| {{SpecName("CSS2.1", "box.html")}} | {{Spec2("CSS2.1")}}   |                      |
+| {{SpecName("CSS1")}}               | {{Spec2("CSS1")}}     | 初回定義             |
