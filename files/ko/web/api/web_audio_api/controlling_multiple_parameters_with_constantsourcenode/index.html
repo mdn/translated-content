@@ -143,7 +143,7 @@ let playing = false;</pre>
  <dd>우리가 현재 음을 재생하고 있는지 아닌지를 추적하기 위해 사용할 {{jsxref("Boolean")}}.</dd>
 </dl>
 
-<p>이제 <code>setup()</code> 함수를 살펴봅시다. 이 함수는 window의 {{event("load")}} 이벤트에 대한 이벤트 처리기(handler)입니다; 이것은 DOM이 제자리에 있기 위한 모든 초기화 작업을 다룹니다.</p>
+<p>이제 <code>setup()</code> 함수를 살펴봅시다. 이 함수는 window의 {{event("load")}} 이벤트에 대한 이벤트 처리기(handler)입니다. 이것은 DOM이 제자리에 있기 위한 모든 초기화 작업을 다룹니다.</p>
 
 <pre class="brush: js">function setup() {
   context = new (window.AudioContext || window.webkitAudioContext)();
