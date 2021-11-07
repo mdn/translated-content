@@ -5,109 +5,113 @@ tags:
   - CSS
   - CSS プロパティ
   - CSS リスト
-  - Reference
-  - list-style
-  - list-style-image
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.list-style-image
 translation_of: Web/CSS/list-style-image
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>list-style-image</code></strong> プロパティは、リスト項目のマーカーとして使われる画像を設定します。</p>
+**`list-style-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リスト項目のマーカーとして使われる画像を設定します。
 
-<p>ふつうは一括指定の {{cssxref("list-style")}} を使うほうが便利です。</p>
+ふつうは一括指定の {{cssxref("list-style")}} を使ったほうが便利です。
 
-<div>{{EmbedInteractiveExample("pages/css/list-style-image.html")}}</div>
+{{EmbedInteractiveExample("pages/css/list-style-image.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+> **Note:** このプロパティはリスト項目、つまり、`{{cssxref("display")}}: list-item;` が指定された要素に対して適用されます。[既定では](https://www.w3.org/TR/html5/rendering.html#lists)、 {{HTMLElement("li")}} 要素を含みます。このプロパティは継承されるので、親要素 (通常は {{HTMLElement("ol")}} や {{HTMLElement("ul")}}) に設定することで、すべてのリスト項目に適用することができます。
 
-<div class="note">
-<p><strong>注:</strong> このプロパティはリスト項目、つまり、 <code>{{cssxref("display")}}: list-item;</code> が指定された要素に対して適用されます。<a href="https://www.w3.org/TR/html5/rendering.html#lists">既定では</a>、 {{HTMLElement("li")}} 要素を含みます。このプロパティは継承されるので、親要素 (通常は {{HTMLElement("ol")}} や {{HTMLElement("ul")}}) に設定することで、すべてのリスト項目に適用することができます。</p>
-</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* キーワード値 */
+```css
+/* キーワード値 */
 list-style-image: none;
 
-/* &lt;url&gt; 値 */
+/* <url>  値 */
 list-style-image: url('starsolid.gif');
+
+/* 有効な画像値 */
+list-style-image: linear-gradient(to left bottom, red, blue);
 
 /* グローバル値 */
 list-style-image: inherit;
 list-style-image: initial;
+list-style-image: revert;
 list-style-image: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt>{{cssxref("&lt;url&gt;")}}</dt>
- <dd>マーカーとして使う画像の場所です。</dd>
- <dt><code>none</code></dt>
- <dd>画像をマーカーとして使用しないことを指定します。この値が設定された場合、代わりに {{ Cssxref("list-style-type") }} で定義されたマーカーが使われます。</dd>
-</dl>
+- {{cssxref("&lt;image&gt;")}}
+  - : マーカーとして使う画像の場所です。
+- `none`
+  - : 画像をマーカーとして使用しないことを指定します。この値が設定された場合、代わりに {{ Cssxref("list-style-type") }} で定義されたマーカーが使われます。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Setting_list_item_images" name="Setting_list_item_images">リスト項目の画像の設定</h3>
+<h3 id="Using_a_url_value">url 値の使用</h3>
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;ul&gt;
-  &lt;li&gt;Item 1&lt;/li&gt;
-  &lt;li&gt;Item 2&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css notranslate">ul {
-  list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif");
-}</pre>
-
-<h4 id="Result" name="Result">結果</h4>
-
-<p>{{ EmbedLiveSample('Setting_list_item_images') }}</p>
-
-<h2 id="Specifications" name="Specifications">仕様書</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Lists', '#propdef-list-style-image', 'list-style-image') }}</td>
-   <td>{{ Spec2('CSS3 Lists') }}</td>
-   <td>すべての {{cssxref("&lt;image&gt;")}} データ型をサポートするように拡張</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'generate.html#propdef-list-style-image', 'list-style-image') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p>{{Compat("css.properties.list-style-image")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
+```html
 <ul>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-type")}}, {{Cssxref("list-style-position")}}</li>
- <li>{{cssxref("url()", "url()")}} 関数</li>
+  <li>Item 1</li>
+  <li>Item 2</li>
 </ul>
+```
+
+#### CSS
+
+```css
+ul {
+  list-style-image: url("starsolid.gif");
+}
+```
+
+#### 結果
+
+{{ EmbedLiveSample('Using_a_url_value') }}
+
+<h3 id="Using_a_gradient">グラデーションの使用</h3>
+
+#### HTML
+
+```html
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+```
+
+#### CSS
+
+```css
+ul {
+  font-size: 200%;
+  list-style-image: linear-gradient(to left bottom, red, blue);
+}
+```
+
+#### 結果
+
+{{ EmbedLiveSample('Using_a_gradient') }}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-type")}}, {{Cssxref("list-style-position")}}
+- {{cssxref("url()", "url()")}} 関数
