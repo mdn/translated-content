@@ -26,7 +26,7 @@ translation_of: Web/CSS/CSS_Lists_and_Counters
 
 - [一貫したリストのインデント](/ja/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation)
   - : 異なるブラウザー同士でも一貫したリストのインデントを実現する方法を説明します。
-- [CSS カウンターの使用](//docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- [CSS カウンターの使用](/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
   - : リストのカウンターを制御するために CSS カウンタープロパティを使用する方法を説明します。
 
 ## 仕様書
