@@ -50,8 +50,8 @@ Seja gentil com os outros contribuidores, e este será um lugar mais feliz e pro
 
 Você e outros contribuidores estão (ou deveriam estar) aqui porque querem fazer contribuições positivas ao projeto, mas, além disso, você não pode assumir nada sobre eles. Isto inclui:
 
-- Conhecimento do projeto e tecnologias usadas para contruí-lo
-- Gênero, sexualidade, idade, línguas faladas, localização, vies político, religião, ou outros atributos pessoais
+- Conhecimento do projeto e tecnologias usadas para construí-lo
+- Gênero, sexualidade, idade, línguas faladas, localização, viés político, religião, ou outros atributos pessoais
 - Experiências com projetos open source
 - Confiança
 - Expectativas
@@ -94,7 +94,7 @@ Em muitos casos, as coisas são como são em um OSP por uma razão. Você deve l
 
 Bons OSPs sempre irão disponibilizar a documentação do contribuidor. Em nossos projetos no GitHub, geralmente está em um arquivo CONTRIBUTING.md no repositório, ou, as vezes, em um arquivo README.md no projeto. Sendo um projeto de documentação, o conteúdo do MDN tem um [README](https://github.com/mdn/content/blob/main/README.md) e um bom conjunto de docs de contribuidor no site em si (veja [Contribuindo para o MDN](/pt-BR/docs/MDN/Contribute)).
 
-Não tenha medo de pedir ajuda, mas SEMPRE tente achar a resposta antes de perguntar. Desta forma você vai contruir seu conhecimento do projeto e se tornar mais independente, e não sobrecarregue desnecessariamente os outros colaboradores.
+Não tenha medo de pedir ajuda, mas SEMPRE tente achar a resposta antes de perguntar. Desta forma você vai construir seu conhecimento do projeto e se tornar mais independente, e não sobrecarregue desnecessariamente os outros colaboradores.
 
 Naturalmente, os docs não serão sempre perfeitos. Se for difícil encontrar uma explicação ou ela não estiver bem descrita, crie uma issue, ou crie um pull request para tentar corrigir isso você mesmo.
 
