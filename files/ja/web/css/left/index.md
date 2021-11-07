@@ -3,38 +3,27 @@ title: left
 slug: Web/CSS/left
 tags:
   - CSS
-  - CSS Property
-  - CSS プロパティ
   - CSS 位置指定レイアウト
-  - Reference
+  - CSS プロパティ
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.left
 translation_of: Web/CSS/left
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>left</code></strong> は <a href="/ja/docs/Web/CSS" title="CSS">CSS</a> のプロパティで、<ruby><a href="/ja/docs/Web/CSS/position">位置指定要素</a><rp> (</rp><rt>positioned element</rt><rp>) </rp></ruby>の水平位置の決定に関与します。位置指定されていない要素には効果はありません。</p>
+**`left`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/position)の水平位置の決定に関与します。位置指定されていない要素には効果はありません。
 
-<div>{{EmbedInteractiveExample("pages/css/left.html")}}</div>
+{{EmbedInteractiveExample("pages/css/left.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<p><code>left</code> の効果は、要素がどの様に配置されているか (つまり、 {{cssxref("position")}} プロパティの値) によって変わります。</p>
-
-<ul>
- <li><code>position</code> が <code>absolute</code> 又は <code>fixed</code> に設定されている場合、 <code>left</code> プロパティは要素の左辺と包含ブロックの左辺との間の距離を指定します。 (包含ブロックは相対配置された祖先の要素です。)</li>
- <li><code>position</code> が <code>relative</code> に設定されている場合、 <code>left</code> プロパティは要素の左辺が通常位置から右方向へ移動する量を指定します。</li>
- <li><code>position</code> が <code>sticky</code> に設定されている場合、 <code>left</code> プロパティは sticky 制約の矩形を計算するために使用されます。</li>
- <li><code>position</code> が <code>static</code> に設定されている場合、 <code>left</code> プロパティは<em>効果がありません</em>。</li>
-</ul>
-
-<p><code>left</code> と {{cssxref("right")}} の両方が定義されていて、幅の制約がない場合、要素は両方を満たすように伸縮されます。要素が両方を満たすように伸縮できない場合、要素の位置は<em>過剰指定</em>になります。このような場合、包含ブロックが左書きの場合は <code>left</code> の値が優先され、包含ブロックが右書きの場合は <code>right</code> の値が優先されます。</p>
-
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* &lt;length&gt; 値 */
+```css
+/* <length> 値 */
 left: 3px;
 left: 2.4em;
 
-/* 内包ブロックの幅に対する &lt;percentage&gt; */
+/* 包含ブロックの幅に対する <percentage> */
 left: 10%;
 
 /* キーワード値 */
@@ -43,41 +32,110 @@ left: auto;
 /* グローバル値 */
 left: inherit;
 left: initial;
+left: revert;
 left: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>負、null、または正の {{cssxref("&lt;length&gt;")}} で、以下のものを表します。
- <ul>
-  <li><em>絶対位置指定要素</em>の場合は、包含ブロックの左辺までの距離。</li>
-  <li><em>相対位置指定要素</em>の場合は、通常の位置からの右方向への移動量。</li>
- </ul>
- </dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>包含ブロックの幅に対する {{cssxref("&lt;percentage&gt;")}} です。</dd>
- <dt><code>auto</code></dt>
- <dd>以下のように指定します。
- <ul>
-  <li><em>絶対位置指定要素</em>では、要素の位置は {{Cssxref("right")}} プロパティに基づいて決まり、 <code>width: auto</code> は内容物の幅に基づいて決まります。また、 <code>right</code> も <code>auto</code> であった場合は、要素は水平方向には静的要素が配置される場合と同様に配置されます。</li>
-  <li><em>相対位置指定要素</em>では、通常の位置から要素までの距離は {{Cssxref("right")}} に基づきます。また、 <code>right</code> も <code>auto</code> であった場合は、水平方向には移動しません。</li>
- </ul>
- </dd>
- <dt><code>inherit</code></dt>
- <dd>値が親要素 (包含ブロックとは限りません) の計算値と同じであることを示すキーワードです。そして、この計算値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, 又は <code>auto</code> キーワードと同様に扱われます。</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+  - : 負、null、または正の {{cssxref("&lt;length&gt;")}} で、以下のものを表します。
+
+    - *絶対位置指定要素*の場合は、包含ブロックの左辺までの距離。
+    - *相対位置指定要素*の場合は、通常の位置からの右方向への移動量。
+
+- {{cssxref("&lt;percentage&gt;")}}
+  - : 包含ブロックの幅に対する {{cssxref("&lt;percentage&gt;")}} です。
+- `auto`
+
+  - : 以下のように指定します。
+
+    - *絶対位置指定要素*では、要素の位置は {{Cssxref("right")}} プロパティに基づいて決まり、 `width: auto` は内容物の幅に基づいて決まります。また、 `right` も `auto` であった場合は、要素は水平方向には静的要素が配置される場合と同様に配置されます。
+    - *相対位置指定要素*では、通常の位置から要素までの距離は {{Cssxref("right")}} に基づきます。また、 `right` も `auto` であった場合は、水平方向には移動しません。
+
+- `inherit`
+  - : 値が親要素 (包含ブロックとは限りません) の計算値と同じであることを示すキーワードです。そして、この計算値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, または `auto` キーワードと同様に扱われます。
+
+## 解説
+
+`left` の効果は、要素がどの様に配置されているか (つまり、 {{cssxref("position")}} プロパティの値) によって変わります。
+
+- `position` が `absolute` または `fixed` に設定されている場合、 `left` プロパティは要素の左辺と包含ブロックの左辺との間の距離を指定します。 (包含ブロックは相対配置された祖先の要素です。)
+- `position` が `relative` に設定されている場合、 `left` プロパティは要素の左辺が通常位置から右方向へ移動する量を指定します。
+- `position` が `sticky` に設定されている場合、 `left` プロパティは sticky 制約の矩形を計算するために使用されます。
+- `position` が `static` に設定されている場合、 `left` プロパティは*効果がありません*。
+
+`left` と {{cssxref("right")}} の両方が定義されていて、幅の制約がない場合、要素は両方を満たすように伸縮されます。要素が両方を満たすように伸縮できない場合、要素の位置は*過剰指定*になります。このような場合、包含ブロックが左書きの場合は `left` の値が優先され、包含ブロックが右書きの場合は `right` の値が優先されます。
+
+## 公式定義
+
+{{cssinfo}}
+
+## 形式定義
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="CSS">CSS</h3>
+<h3 id="Positioning_elements">位置指定要素</h3>
 
-<pre class="brush: css notranslate">#wrap {
+#### HTML
+
+```html
+<div id="wrap">
+  <div id="example_1">
+    <pre>
+      position: absolute;
+      left: 20px;
+      top: 20px;
+    </pre>
+    <p>The only containing element for this div is the main window, so it positions itself in relation to it.</p>
+  </div>
+
+  <div id="example_2">
+    <pre>
+      position: relative;
+      top: 0;
+      right: 0;
+    </pre>
+    <p>Relative position in relation to its siblings.</p>
+  </div>
+
+  <div id="example_3">
+    <pre>
+      float: right;
+      position: relative;
+      top: 20px;
+      left: 20px;
+    </pre>
+    <p>Relative to its sibling div above, but removed from flow of content.</p>
+
+    <div id="example_4">
+      <pre>
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+      </pre>
+      <p>Absolute position inside of a parent with relative position</p>
+    </div>
+
+    <div id="example_5">
+      <pre>
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 200px;
+      </pre>
+      <p>Absolute position with both left and right declared</p> </div>
+  </div>
+</div>
+```
+
+#### CSS
+
+```css
+#wrap {
   width: 700px;
   margin: 0 auto;
   background: #5C5C5C;
@@ -131,96 +189,23 @@ pre {
   left: 0;
   top: 100px;
   background-color: #D7FFC2;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+#### 結果
 
-<pre class="brush: html notranslate">&lt;div id="wrap"&gt;
-  &lt;div id="example_1"&gt;
-    &lt;pre&gt;
-      position: absolute;
-      left: 20px;
-      top: 20px;
-    &lt;/pre&gt;
-    &lt;p&gt;The only containing element for this div is the main window, so it positions itself in relation to it.&lt;/p&gt;
-  &lt;/div&gt;
+{{EmbedLiveSample('Positioning_elements',1200,650)}}
 
-  &lt;div id="example_2"&gt;
-    &lt;pre&gt;
-      position: relative;
-      top: 0;
-      right: 0;
-    &lt;/pre&gt;
-    &lt;p&gt;Relative position in relation to its siblings.&lt;/p&gt;
-  &lt;/div&gt;
+## 仕様書
 
-  &lt;div id="example_3"&gt;
-    &lt;pre&gt;
-      float: right;
-      position: relative;
-      top: 20px;
-      left: 20px;
-    &lt;/pre&gt;
-    &lt;p&gt;Relative to its sibling div above, but removed from flow of content.&lt;/p&gt;
+{{Specifications}}
 
-    &lt;div id="example_4"&gt;
-      &lt;pre&gt;
-        position: absolute;
-        bottom: 10px;
-        right: 20px;
-      &lt;/pre&gt;
-      &lt;p&gt;Absolute position inside of a parent with relative position&lt;/p&gt;
-    &lt;/div&gt;
+## ブラウザーの互換性
 
-    &lt;div id="example_5"&gt;
-      &lt;pre&gt;
-        position: absolute;
-        right: 0;
-        left: 0;
-        top: 200px;
-      &lt;/pre&gt;
-      &lt;p&gt;Absolute position with both left and right declared&lt;/p&gt; &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+{{Compat}}
 
-<h3 id="Live_sample" name="Live_sample">実行例</h3>
+## 関連情報
 
-<p>{{EmbedLiveSample('Examples',1200,650)}}</p>
-
-<h2 id="Specifications" name="Specifications">仕様書</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Positioning', '#propdef-left', 'left')}}</td>
-   <td>{{Spec2('CSS3 Positioning')}}</td>
-   <td>sticky の位置の動作を追加</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#propdef-left', 'left')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
-
-<p>{{cssinfo}}</p>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p>{{Compat("css.properties.left")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}</li>
- <li>対応する論理的プロパティ: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, {{cssxref("inset-inline-end")}} および一括指定の {{cssxref("inset-block")}} と {{cssxref("inset-inline")}}</li>
- <li>{{cssxref("position")}}</li>
-</ul>
+- {{cssxref("inset")}}: 関連するすべてのプロパティである {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, {{cssxref("right")}} の一括指定
+- 対応する論理的プロパティ: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, {{cssxref("inset-inline-end")}} および一括指定の {{cssxref("inset-block")}} と {{cssxref("inset-inline")}}
+- {{cssxref("position")}}
