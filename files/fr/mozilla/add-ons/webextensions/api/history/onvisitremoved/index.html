@@ -47,13 +47,10 @@ browser.history.onVisitRemoved.hasListener(listener)
 
 <dl>
  <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction sera passée l'argument suivant :</p>
-
+ <dd><p>Fonction qui sera appelée lorsque cet événement se produit. La fonction sera passée l'argument suivant :</p>
  <dl>
   <dt><code>removed</code></dt>
-  <dd><code>object</code>. Détails de l'enlèvement. C'est un objet contenant deux propriétés: un booléen <code>allHistory</code> et un tableau <code>urls</code>.</dd>
-  <dd>
+  <dd><p><code>object</code>. Détails de l'enlèvement. C'est un objet contenant deux propriétés: un booléen <code>allHistory</code> et un tableau <code>urls</code>.</p>
   <ul>
    <li>Si cet événement se déclenche parce qu'il est clair, <code>allHistory</code> sera <code>true</code> et <code>urls</code> sera un tableau vide.</li>
    <li>Dans le cas contraire,  <code>allHistory</code> sera <code>false</code> et <code>urls</code> contiendront un qui est l'URL de la page supprimée.</li>

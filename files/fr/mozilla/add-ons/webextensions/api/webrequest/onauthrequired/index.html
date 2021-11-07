@@ -83,9 +83,7 @@ browser.webRequest.onAuthRequired.hasListener(listener)
 
 <dl>
  <dt><code>callback</code></dt>
- <dd>
- <p> Une fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :</p>
-
+ <dd><p>Une fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :</p>
  <dl>
   <dt><code>details</code></dt>
   <dd><a href="#details"><code>object</code></a>. Détails sur la demande. Voir les <code><a href="#details">détails</a></code> ci-dessous.</dd>
@@ -101,8 +99,7 @@ browser.webRequest.onAuthRequired.hasListener(listener)
  <dt><code>filter</code></dt>
  <dd>{{WebExtAPIRef('webRequest.RequestFilter')}}. Un filtre qui restreint les événements qui seront envoyés à cet auditeur.</dd>
  <dt><code>extraInfoSpec</code>{{optional_inline}}</dt>
- <dd><code>array</code> de <code>string</code>. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :</dd>
- <dd>
+ <dd><p><code>array</code> de <code>string</code>. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :</p>
  <ul>
   <li><code>"blocking"</code>: faire le blocage de la demande, afin que vous puissiez annuler la demande ou fournir des informations d'authentification.</li>
   <li><code>"</code><code>responseHeaders</code><code>"</code>: inclure <code>responseHeaders</code> dans l'objet <code>details</code> transmis à l'auditeur</li>
@@ -116,8 +113,7 @@ browser.webRequest.onAuthRequired.hasListener(listener)
 
 <dl>
  <dt><code>challenger</code></dt>
- <dd><code>object</code>. Le serveur demandant l'authentification. C'est un objet avec les propriétés suivantes :</dd>
- <dd>
+ <dd><p><code>object</code>. Le serveur demandant l'authentification. C'est un objet avec les propriétés suivantes :</p>
  <dl>
   <dt><code>host</code></dt>
   <dd><code>string</code>. Le <a href="https://en.wikipedia.org/wiki/Hostname#Internet_hostnames">nom d'hôte</a> du serveur.<br>
@@ -168,10 +164,6 @@ browser.webRequest.onAuthRequired.hasListener(listener)
  <dd><code>string</code>. La zone d'authentification <a href="https://tools.ietf.org/html/rfc1945#section-11">realm</a> fournie par le serveur, s'il y en a un.</dd>
  <dt><code>requestId</code></dt>
  <dd><code>string</code>. L'ID de la demande. Les ID de requête sont uniques au sein d'une session de navigateur, de sorte que vous pouvez les utiliser pour relier différents événements associés à la même requête.</dd>
- <dd>
- <dl>
- </dl>
- </dd>
  <dt><code>responseHeaders</code>{{optional_inline}}</dt>
  <dd>{{WebExtAPIRef('webRequest.HttpHeaders')}}. Les en-têtes de réponse HTTP qui ont été reçus avec cette réponse.</dd>
  <dt><code>scheme</code></dt>

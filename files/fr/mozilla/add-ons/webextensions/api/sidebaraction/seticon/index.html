@@ -45,12 +45,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>. Un Objet contenant des propriétés <code>imageData</code> ou <code>path</code>, et éventuellement une propriété <code>tabId</code>.</dd>
- <dd>
+ <dd><p><code>object</code>. Un Objet contenant des propriétés <code>imageData</code> ou <code>path</code>, et éventuellement une propriété <code>tabId</code>.</p>
  <dl>
   <dt><code>imageData</code>{{optional_inline}}</dt>
   <dd>
-  <p><code>{{WebExtAPIRef('sidebarAction.ImageDataType')}}</code> ou <code><code>object</code></code>. C'est un objet <code>ImageData</code> unique ou un objet dictionnaire.</p>
+  <p><code>{{WebExtAPIRef('sidebarAction.ImageDataType')}}</code> ou <code>object</code>. C'est un objet <code>ImageData</code> unique ou un objet dictionnaire.</p>
 
   <p>Utilisez un objet dictionnaire pour spécifier plusieurs objets <code>ImageData</code> dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente. Si <code>imageData</code> est un dictionnaire, la valeur de chaque propriété est un objet <code>ImageData</code>, et son nom est sa taille, comme ceci :</p>
 
@@ -63,7 +62,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
   </dd>
   <dt><code>path</code>{{optional_inline}}</dt>
   <dd>
-  <p><code><code>string</code></code> ou <code><code>object</code></code>. C'est soit un chemin relatif vers un fichier d'icône, soit un objet dictionnaire. </p>
+  <p><code>string</code> ou <code>object</code>. C'est soit un chemin relatif vers un fichier d'icône, soit un objet dictionnaire. </p>
 
   <p>Utilisez un objet de dictionnaire pour spécifier plusieurs fichiers d'icônes de différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente. Si <code>path</code> est un dictionnaire, la valeur de chaque propriété est un chemin relatif, et son nom est sa taille, comme ceci :</p>
 

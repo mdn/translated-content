@@ -47,9 +47,7 @@ browser.webRequest.onResponseStarted.hasListener(listener)
 
 <dl>
  <dt><code>callback</code></dt>
- <dd>
- <p>Une fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :</p>
-
+ <dd><p>Une fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :</p>
  <dl>
   <dt><code>details</code></dt>
   <dd><a href="#details"><code>object</code></a>. Détails sur la demande. Voir les <code><a href="#details">details</a></code> ci-dessous.</dd>
@@ -58,8 +56,7 @@ browser.webRequest.onResponseStarted.hasListener(listener)
  <dt><code>filter</code></dt>
  <dd>{{WebExtAPIRef('webRequest.RequestFilter')}}. Un filtre qui restreint les événements qui seront envoyés à cet auditeur.</dd>
  <dt><code>extraInfoSpec</code>{{optional_inline}}</dt>
- <dd><code>array</code> de <code>string</code>. Options supplémentaires pour l'événement. Vous ne pouvez passer qu'une seule valeur :</dd>
- <dd>
+ <dd><p><code>array</code> de <code>string</code>. Options supplémentaires pour l'événement. Vous ne pouvez passer qu'une seule valeur :</p>
  <ul>
   <li><code>"</code><code>responseHeaders</code><code>"</code>: inclure <code>responseHeaders</code> dans l'objet <code>détails</code> transmis à l'auditeur</li>
  </ul>

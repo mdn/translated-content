@@ -30,22 +30,19 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history/search
 
 <dl>
  <dt><code>query</code></dt>
- <dd>Un objet qui indique ce qu'il faut rechercher dans l'historique du navigateur. Cet objet a les champs suivants :</dd>
- <dd>
+ <dd><p>Un objet qui indique ce qu'il faut rechercher dans l'historique du navigateur. Cet objet a les champs suivants :</p>
  <dl>
   <dt><code>text</code></dt>
-  <dd><code>string</code>. Rechercher des éléments d'historique par URL et titre. La chaîne est divisée en termes de recherche distincts aux limites de l'espace. Chaque terme de recherche est insensible à la casse par rapport à l'URL et au titre de l'élément d'historique. L'élément d'historique sera renvoyé si tous les termes de recherche correspondent.</dd>
-  <dd>Par exemple, considérez cet article :</dd>
-  <dd>URL: <code>"http://example.org"</code><br>
-  Title: <code>"Example Domain"</code></dd>
-  <dd>
+  <dd><p><code>string</code>. Rechercher des éléments d'historique par URL et titre. La chaîne est divisée en termes de recherche distincts aux limites de l'espace. Chaque terme de recherche est insensible à la casse par rapport à l'URL et au titre de l'élément d'historique. L'élément d'historique sera renvoyé si tous les termes de recherche correspondent.</p>
+  <p>Par exemple, considérez cet article :</p>
+  <p><p>URL: <code>"http://example.org"</code></p>
+  <p>Title: <code>"Example Domain"</code></p>
   <pre>"http"              -&gt; matches
 "domain"            -&gt; matches
 "MAIN ample"        -&gt; matches
 "main tt"           -&gt; matches
 "main https"        -&gt; does not match</pre>
-  </dd>
-  <dd>Spécifiez une chaîne vide (<code>""</code>) pour récupérer tous les objets {{WebExtAPIRef("history.HistoryItem")}} qui répondent à tous les autres critères.</dd>
+  <p>Spécifiez une chaîne vide (<code>""</code>) pour récupérer tous les objets {{WebExtAPIRef("history.HistoryItem")}} qui répondent à tous les autres critères.</p></dd>
   <dt><code>startTime</code> {{optional_inline}}</dt>
   <dd><code>number</code> ou <code>string</code> ou <code>object</code>. Une valeur indiquant une date et une heure. Cela peut être représenté par :  un objet <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>, une <a href="http://www.iso.org/iso/home/standards/iso8601.htm">chaîne de date ISO 8601</a>, ou le nombre de millisecondes depuis l'époque. Si elle est fournie, cette option exclut les résultats dont <code>lastVisitTime</code> est antérieure à cette heure. Si elle est omise, la recherche est limitée aux dernières 24 heures.</dd>
   <dt><code>endTime</code> {{optional_inline}}</dt>

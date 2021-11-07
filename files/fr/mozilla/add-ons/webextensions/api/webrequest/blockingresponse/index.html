@@ -27,8 +27,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse
 
 <dl>
  <dt><code>authCredentials</code>{{optional_inline}}</dt>
- <dd><code>object</code>. Si elle est définie, la demande est faite en utilisant les informations d'identification données. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}. La propriété <code>authCredentials</code> est un objet avec les propriétés suivantes :</dd>
- <dd>
+ <dd><p><code>object</code>. Si elle est définie, la demande est faite en utilisant les informations d'identification données. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}. La propriété <code>authCredentials</code> est un objet avec les propriétés suivantes :</p>
  <dl>
   <dt><code>username</code></dt>
   <dd><code>string</code>. Nom d'utilisateur à fournir.</dd>
@@ -39,15 +38,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse
  <dt><code>cancel</code>{{optional_inline}}</dt>
  <dd><code>boolean</code>. Si <code>true</code>, la demande est annulée. Vous ne pouvez définir cette propriété dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}, {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}, {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}, et  {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}.</dd>
  <dt><code>redirectUrl</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Il s'agit d'une URL, et si elle est définie, la requête originale est redirigée vers cette URL. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} ou {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}.</dd>
- <dd>Les redirections vers des schémas non-HTTP tels que data : sont autorisées, mais elles ne sont pas prises en charge actuellement ({{bug("707624")}}). Les redirections utilisent la même méthode de requête que la requête originale à moins qu'elle ne soit initiée à partir de l'étape <code>onHeadersReceived</code>, auquel cas la redirection utilise la méthode GET.</dd>
- <dd>Si une extension veut rediriger une URL publique (par exemple HTTPS) vers une <a href="/fr/Add-ons/WebExtensions/user_interface/Extension_pages">page d'extension</a>, le fichier manifest.json de l'extension doit contenir une clé <a href="/fr/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a> qui liste l'URL de la page d'extension.</dd>
+ <dd><p><code>string</code>. Il s'agit d'une URL, et si elle est définie, la requête originale est redirigée vers cette URL. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} ou {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}.</p>
+ <p>Les redirections vers des schémas non-HTTP tels que data : sont autorisées, mais elles ne sont pas prises en charge actuellement ({{bug("707624")}}). Les redirections utilisent la même méthode de requête que la requête originale à moins qu'elle ne soit initiée à partir de l'étape <code>onHeadersReceived</code>, auquel cas la redirection utilise la méthode GET.</p>
+ <p>Si une extension veut rediriger une URL publique (par exemple HTTPS) vers une <a href="/fr/Add-ons/WebExtensions/user_interface/Extension_pages">page d'extension</a>, le fichier manifest.json de l'extension doit contenir une clé <a href="/fr/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a> qui liste l'URL de la page d'extension.</p></dd>
  <dt><code>requestHeaders</code>{{optional_inline}}</dt>
  <dd>
  <p>{{WebExtAPIRef('webRequest.HttpHeaders')}}. C'est un objet {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}}, un tableau dans lequel chaque objet représente un en-tête. Si elle est définie, la demande est faite avec ces en-têtes plutôt qu'avec les en-têtes d'origine. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} .</p>
  </dd>
  <dt><code>responseHeaders</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('webRequest.HttpHeaders')}}. C'est un objet {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}}, un tableau dans lequel chaque objet représente un en-tête. Si elle est définie, le serveur est supposé avoir répondu avec ces en-têtes de réponse au lieu des originaux. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}. Si plusieurs extensions tentent de définir le même en-tête (par exemple, <code>Content-Security-Policy</code>), une seule des modifications sera réussie..</dd>
+ <dd>{{WebExtAPIRef('webRequest.HttpHeaders')}}. C'est un objet {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}}, un tableau dans lequel chaque objet représente un en-tête. Si elle est définie, le serveur est supposé avoir répondu avec ces en-têtes de réponse au lieu des originaux. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}. Si plusieurs extensions tentent de définir le même en-tête (par exemple, <code>Content-Security-Policy</code>), une seule des modifications sera réussie.</dd>
  <dt><code>upgradeToSecure</code>{{optional_inline}}</dt>
  <dd><code>boolean</code>. Si la valeur <code>true</code> est est définie et que la requête originale est une requête HTTP, cela empêchera l'envoi de la requête originale et fera plutôt une requête sécurisée (HTTPS). Si une extension renvoie <code>redirectUrl</code> dans <code>onBeforeRequest</code>, alors <code>upgradeToSecure</code> sera ignoré pour cette requête. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}.</dd>
 </dl>

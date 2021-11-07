@@ -45,12 +45,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 
 <dl>
  <dt><code>extensionId</code>{{optional_inline}}</dt>
- <dd><code>string</code>. L'ID de l'extension à envoyer le message. Incluez ceci pour envoyer le message à une extension différente..Si le destinataire prévu a défini un ID explicitement en utilisant la clé d' <a href="/fr/Add-ons/WebExtensions/manifest.json/applications">applications</a> dans  manifest.json, <code>extensionId</code> doit avoir une valeur. Sinon, il devrait avoir l'ID qui a été généré pour le destinataire prévu.</dd>
- <dd>Si <code>extensionId</code> est omis, le message sera envoyé à votre propre extension.</dd>
+ <dd><p><code>string</code>. L'ID de l'extension à envoyer le message. Incluez ceci pour envoyer le message à une extension différente..Si le destinataire prévu a défini un ID explicitement en utilisant la clé d' <a href="/fr/Add-ons/WebExtensions/manifest.json/applications">applications</a> dans  manifest.json, <code>extensionId</code> doit avoir une valeur. Sinon, il devrait avoir l'ID qui a été généré pour le destinataire prévu.</p>
+  <p>Si <code>extensionId</code> est omis, le message sera envoyé à votre propre extension.</p></dd>
  <dt><code>message</code></dt>
  <dd><code>any</code>. Un objet qui peut être structuré clone sérialisé.</dd>
  <dt><code>options</code>{{optional_inline}}</dt>
- <dd><code>object</code>.
+ <dd><p><code>object</code>.</p>
  <dl>
   <dt><code>includeTlsChannelId</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. Indique si l'ID de canal TLS sera transmis à {{WebExtAPIRef('runtime.onMessageExternal')}} pour les processus qui écoutent l'événement de connexion.</dd>

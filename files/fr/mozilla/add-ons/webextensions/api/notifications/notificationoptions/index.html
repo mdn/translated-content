@@ -43,8 +43,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOpti
  <dt><code>eventTime</code>{{optional_inline}}</dt>
  <dd><code>number</code>. Un timestamp en millisecondes pour cette notification <a href="https://fr.wikipedia.org/wiki/Temps_Unix">depuis le timestamp 0</a>.</dd>
  <dt><code>buttons</code>{{optional_inline}}</dt>
- <dd><code>array</code> de <code>button</code>. Un tableau pouvant contenir jusqu'à deux boutons à afficher dans la notification. Vous pouvez réagir aux clics sur ces boutons grâce à {{WebExtAPIRef("notifications.onButtonClicked")}}. Chaque bouton est un objet avec ces propriétés :</dd>
- <dd>
+ <dd><p><code>array</code> de <code>button</code>. Un tableau pouvant contenir jusqu'à deux boutons à afficher dans la notification. Vous pouvez réagir aux clics sur ces boutons grâce à {{WebExtAPIRef("notifications.onButtonClicked")}}. Chaque bouton est un objet avec ces propriétés :</p>
  <dl>
   <dt><code>title</code></dt>
   <dd><code>string</code>. Le texte du bouton.</dd>
@@ -59,18 +58,16 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOpti
  <p><em>Cette propriété est utilisable seuleument si le <code>type</code> de la notification est <code>'image'</code>. Dans ce cas, cette propriété sera obligatoire si l'objet <code>NotificationOptions</code> est utilisé avec {{WebExtAPIRef("notifications.create()")}}, mais optionel avec </em><em>{{WebExtAPIRef("notifications.update()")}}.</em></p>
  </dd>
  <dt><code>items</code></dt>
- <dd><code>array</code> of <code>item</code>. Un tableau d'éléments à inclure dans la notification. Selon les paramètres de notification du système d'exploitation, certains éléments que vous souhaitez afficher pourraient ne pas l'être. Chaque élément est un objet avec les propriétés suivantes :</dd>
- <dd>
+ <dd><p><code>array</code> of <code>item</code>. Un tableau d'éléments à inclure dans la notification. Selon les paramètres de notification du système d'exploitation, certains éléments que vous souhaitez afficher pourraient ne pas l'être. Chaque élément est un objet avec les propriétés suivantes :</p>
  <dl>
   <dt><code>title</code></dt>
   <dd><code>string</code>. Le titre de cet élément.</dd>
   <dt><code>message</code></dt>
   <dd><code>string</code>. Le message à afficher pour cet élément.</dd>
  </dl>
- <em>Cette propriété est utilisable seuleument si le <code>type</code> de la notification est <code>'list'</code>. Dans ce cas, cette propriété sera obligatoire si l'objet <code>NotificationOptions</code> est utilisé avec {{WebExtAPIRef("notifications.create()")}}, mais optionel avec </em><em>{{WebExtAPIRef("notifications.update()")}}.</em></dd>
+ <p><em>Cette propriété est utilisable seuleument si le <code>type</code> de la notification est <code>'list'</code>. Dans ce cas, cette propriété sera obligatoire si l'objet <code>NotificationOptions</code> est utilisé avec {{WebExtAPIRef("notifications.create()")}}, mais optionel avec </em><em>{{WebExtAPIRef("notifications.update()")}}.</em></p></dd>
  <dt><code>progress</code></dt>
- <dd><code>integer</code>. Une valeur entre 0 et 100, qui représente l'avancée actuelle d'un indicateur de progression.</dd>
- <dd><em>Cette propriété est utilisable seuleument si le <code>type</code> de la notification est <code>'progress'</code>. Dans ce cas, cette propriété sera obligatoire si l'objet <code>NotificationOptions</code> est utilisé avec {{WebExtAPIRef("notifications.create()")}}, mais optionel avec </em><em>{{WebExtAPIRef("notifications.update()")}}.</em></dd>
+ <dd><code>integer</code>. Une valeur entre 0 et 100, qui représente l'avancée actuelle d'un indicateur de progression. <em>Cette propriété est utilisable seuleument si le <code>type</code> de la notification est <code>'progress'</code>. Dans ce cas, cette propriété sera obligatoire si l'objet <code>NotificationOptions</code> est utilisé avec {{WebExtAPIRef("notifications.create()")}}, mais optionel avec </em><em>{{WebExtAPIRef("notifications.update()")}}.</em></dd>
 </dl>
 
 <p>Notez que les propriétés <code>appIconMaskUrl</code> et <code>isClickable</code> ne sont pas supportées.</p>

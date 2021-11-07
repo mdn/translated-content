@@ -30,14 +30,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/getAll
 
 <dl>
  <dt><code>details</code></dt>
- <dd>Un <code>object</code> contenant des détails pouvant être utilisés pour faire correspondre les cookies à extraire. Les propriétés incluses sont les suivantes (voir <a href="/fr/Add-ons/WebExtensions/API/cookies/Cookie#Type">type de cookie</a> pour plus d'informations sur celles-ci ) :</dd>
- <dd>
+ <dd><p>Un <code>object</code> contenant des détails pouvant être utilisés pour faire correspondre les cookies à extraire. Les propriétés incluses sont les suivantes (voir <a href="/fr/Add-ons/WebExtensions/API/cookies/Cookie#Type">type de cookie</a> pour plus d'informations sur celles-ci ) :</p>
  <dl>
   <dt><code>domain</code>{{optional_inline}}</dt>
   <dd>Une <code>chaîne</code> représentant un domaine auquel les cookies doivent être associés (ils peuvent être associés soit à ce domaine exact, soit à l'un de ses sous-domaines).</dd>
   <dt><code>firstPartyDomain</code>{{optional_inline}}</dt>
-  <dd>Une <code>chaîne</code> représentant le domaine de première partie avec lequel le cookie à récupérer est associé.</dd>
-  <dd>Cette propriété doit être fournie si l'isolation de la première partie est activée sur le navigateur. Vous pouvez cependant passer <code>null</code> dans cette situation. Si vous faites cela, alors les cookies avec n'importe quelle valeur pour <code>firstPartyDomain</code>, ainsi que les cookies qui n'ont pas de set <code>firstPartyDomain</code> , seront inclus dans les résultats. Voir <a href="/fr/Add-ons/WebExtensions/API/cookies#Isolement_de_la_première_partie">Isolement de la première partie</a>.</dd>
+  <dd>Une <code>chaîne</code> représentant le domaine de première partie avec lequel le cookie à récupérer est associé. Cette propriété doit être fournie si l'isolation de la première partie est activée sur le navigateur. Vous pouvez cependant passer <code>null</code> dans cette situation. Si vous faites cela, alors les cookies avec n'importe quelle valeur pour <code>firstPartyDomain</code>, ainsi que les cookies qui n'ont pas de set <code>firstPartyDomain</code> , seront inclus dans les résultats. Voir <a href="/fr/Add-ons/WebExtensions/API/cookies#Isolement_de_la_première_partie">Isolement de la première partie</a>.</dd>
   <dt><code>name</code>{{optional_inline}}</dt>
   <dd>Une <code>chaîne</code> représentant un nom que les cookies devraient avoir.</dd>
   <dt><code>path</code>{{optional_inline}}</dt>

@@ -30,8 +30,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/create
 
 <dl>
  <dt><code>createProperties</code></dt>
- <dd><code>object</code>.Propriétés pour donner le nouvel onglet. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.</dd>
- <dd>
+ <dd><p><code>object</code>.Propriétés pour donner le nouvel onglet. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.</p>
  <dl>
   <dt><code>active</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. Si l'onglet doit devenir l'onglet actif dans la fenêtre. Si elle est <code>false</code>, elle n'a aucun effet. N'affecte pas si la fenêtre est mise au point (voir {{WebExtAPIRef('windows.update')}}). Par défaut à  <code>true</code>.</dd>
@@ -50,10 +49,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/create
   <div class="warning">Cette propriété est obsolète et n'est pas prise en charge dans Firefox. Utilisez  <code>actif</code> à la place.</div>
   </dd>
   <dt><code>url</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. 'URL permettant de naviguer dans l'onglet initialement. Par défaut à la page Nouvel onglet.</dd>
-  <dd>Les URL complètes doivent inclure un schéma (i.e. 'http://www.google.com', par 'www.google.com').</dd>
-  <dd>Pour des raisons de sécurité, dans Firefox, il se peut que ce ne soit pas une URL privilégiée. Le passage de l'une des URL suivantes échouera :</dd>
-  <dd>
+  <dd><p><code>string</code>. 'URL permettant de naviguer dans l'onglet initialement. Par défaut à la page Nouvel onglet.</p>
+  <p>Les URL complètes doivent inclure un schéma (i.e. 'http://www.google.com', par 'www.google.com').</p>
+  <p>Pour des raisons de sécurité, dans Firefox, il se peut que ce ne soit pas une URL privilégiée. Le passage de l'une des URL suivantes échouera :</p>
   <ul>
    <li>chrome: URLs</li>
    <li>javascript: URLs</li>

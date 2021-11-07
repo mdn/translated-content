@@ -23,8 +23,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/SecurityInfo
 
 <dl>
  <dt><code>certificates</code></dt>
- <dd><code>Array</code> de {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}}. Si {{WebExtAPIRef("webRequest.getSecurityInfo()")}} a été appelé avec l'option <code>certificateChain</code> présente et définie sur <code>true</code>, cela contiendra un objet <code>CertificateInfo</code> pour chaque certificat de la chaîne, depuis le certificat du serveur jusqu'à et y compris la racine de confiance.</dd>
- <dd>Sinon, il contiendra un seul objet <code>CertificateInfo</code>, pour le certificat du serveur.</dd>
+ <dd><p><code>Array</code> de {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}}. Si {{WebExtAPIRef("webRequest.getSecurityInfo()")}} a été appelé avec l'option <code>certificateChain</code> présente et définie sur <code>true</code>, cela contiendra un objet <code>CertificateInfo</code> pour chaque certificat de la chaîne, depuis le certificat du serveur jusqu'à et y compris la racine de confiance.</p>
+ <p>Sinon, il contiendra un seul objet <code>CertificateInfo</code>, pour le certificat du serveur.</p></dd>
  <dt><code>certificateTransparencyStatus</code> {{optional_inline}}</dt>
  <dd>
  <p><code>String</code>. Indique l'état de la <a href="https://www.certificate-transparency.org/">transparence des certificats</a> pour la connexion. Ceci peut prendre l'une des valeurs suivantes :</p>

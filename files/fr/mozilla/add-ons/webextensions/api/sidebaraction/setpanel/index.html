@@ -37,14 +37,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>. Un objet avec les propriétés suivantes :</dd>
- <dd>
+ <dd><p><code>object</code>. Un objet avec les propriétés suivantes :</p>
  <dl>
   <dt><code>panel</code></dt>
-  <dd><code>string</code> ou <code>null</code>. Le panneau à charger dans la barre latérale, spécifié comme une URL pointant vers un document HTML, ou <code>null</code>, ou une chaîne vide.</dd>
-  <dd>Ceci peut pointer vers un fichier empaqueté dans l'extension (for exemple, créé à l'aide de {{WebExtAPIRef("runtime.getURL")}}), ou un document distant (par exemple <code>https://example.org/</code>). Il doit s'agir d'une URL valide.</dd>
-  <dd>Si <code>panel</code> est <code>null</code> ou <code>""</code>,alors un panneau précédemment défini sera supprimé, de sorte que :</dd>
-  <dd>
+  <dd><p><code>string</code> ou <code>null</code>. Le panneau à charger dans la barre latérale, spécifié comme une URL pointant vers un document HTML, ou <code>null</code>, ou une chaîne vide.</p>
+  <p>Ceci peut pointer vers un fichier empaqueté dans l'extension (for exemple, créé à l'aide de {{WebExtAPIRef("runtime.getURL")}}), ou un document distant (par exemple <code>https://example.org/</code>). Il doit s'agir d'une URL valide.</p>
+  <p>Si <code>panel</code> est <code>null</code> ou <code>""</code>,alors un panneau précédemment défini sera supprimé, de sorte que :</p>
   <ul>
    <li>Si <code>tabId</code> est spécifié, et que l'onglet a un jeu de panneaux spécifiques aux onglets, alors l'onglet héritera du panneau à partir de la fenêtre à laquelle il appartient.</li>
    <li>Si <code>windowId</code> est spécifié, et que la fenêtre a un jeu de panneaux spécifiques à la fenêtre, alors la fenêtre héritera du panneau global.</li>

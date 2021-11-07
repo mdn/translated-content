@@ -34,15 +34,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/highlight
 
 <dl>
  <dt><code>highlightInfo</code></dt>
- <dd><code>object</code>.</dd>
- <dd>
+ <dd><p><code>object</code>.</p>
  <dl>
   <dt><code>windowId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>. ID de la fenêtre contenant les onglets.</dd>
   <dt><code>populate</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Par défaut la valeur est <code>true</code>. S'il est défini sur <code>false</code>, l'objet {{WebExtAPIRef('windows.Window')}} n'aura pas de propriété <code>tabs</code> contenant une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre.
+  <dd><p><code>boolean</code>. Par défaut la valeur est <code>true</code>. S'il est défini sur <code>false</code>, l'objet {{WebExtAPIRef('windows.Window')}} n'aura pas de propriété <code>tabs</code> contenant une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre.</p>
   <div class="note">
-  <p><strong>Note</strong>: Remplir la fenêtre (le comportement par défaut) peut être une opération coûteuse s'il y a beaucoup d'onglets. Pour de meilleures performances, il est recommandé de définir manuellement configuré <code>populate</code> à <code>false</code> si vous n'avez pas besoin des détails de l'onglet.</p>
+  <p><strong>Note :</strong> Remplir la fenêtre (le comportement par défaut) peut être une opération coûteuse s'il y a beaucoup d'onglets. Pour de meilleures performances, il est recommandé de définir manuellement configuré <code>populate</code> à <code>false</code> si vous n'avez pas besoin des détails de l'onglet.</p>
   </div>
   </dd>
   <dt><code>tabs</code></dt>

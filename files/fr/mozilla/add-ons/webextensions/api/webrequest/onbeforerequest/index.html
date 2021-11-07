@@ -60,21 +60,17 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
 
 <dl>
  <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :</p>
-
+ <dd><p>Fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :</p>
  <dl>
   <dt><code>details</code></dt>
   <dd><a href="#details"><code>object</code></a>. Détails sur la demande. Voir les <code><a href="#details">details</a></code> ci-dessous.</dd>
  </dl>
-
  <p>Les retours : {{WebExtAPIRef('webRequest.BlockingResponse')}}. Si <code>"blocking"</code>est spécifié dans le paramètre <code>extraInfoSpec</code>, l'auditeur d'événement doit retourner un objet <code>BlockingResponse</code>, et peut définir soit son <code>annulation</code>, soit ses propriétés  <code>redirectUrl</code>. A partir de Firefox 52, au lieu de renvoyer <code>BlockingResponse</code>,l'auditeur peut renvoyer une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui est résolue avec un <code>BlockingResponse</code>. Ceci permet à l'auditeur de traiter la demande de manière asynchrone.</p>
  </dd>
  <dt><code>filter</code></dt>
  <dd>{{WebExtAPIRef('webRequest.RequestFilter')}}. Un filtre qui restreint les événements qui seront envoyés à cet auditeur.</dd>
  <dt><code>extraInfoSpec</code>{{optional_inline}}</dt>
- <dd><code>array</code> de <code>string</code>. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :</dd>
- <dd>
+ <dd><p><code>array</code> de <code>string</code>. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :</p>
  <ul>
   <li><code>"blocking"</code>: rendre la requête synchrone, de sorte que vous pouvez annuler ou rediriger la requête</li>
   <li><code>"requestBody"</code>: include <code>requestBody</code> dans l'objet <code>details</code> transmis à l'auditeur</li>
@@ -90,8 +86,7 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
  <dt><code>documentUrl</code></dt>
  <dd><code>string</code>. URL du document dans lequel la ressource sera chargée. Par exemple, si la page web "https://example.com" contient une image ou un iframe, alors le <code>documentUrl</code> pour l'image ou l'iframe sera "https://example.com". Pour un document de niveau supérieur, <code>documentUrl</code> n'est pas défini.</dd>
  <dt><code>frameAncestors</code></dt>
- <dd><code>array</code>. Contient des informations pour chaque document dans la hiérarchie des cadres jusqu'au document de niveau supérieur. Le premier élément du tableau contient des informations sur le parent immédiat du document demandé, et le dernier élément contient des informations sur le document de niveau supérieur. Si la charge est réellement pour le document de niveau supérieur, alors ce tableau est vide.</dd>
- <dd>
+ <dd><p><code>array</code>. Contient des informations pour chaque document dans la hiérarchie des cadres jusqu'au document de niveau supérieur. Le premier élément du tableau contient des informations sur le parent immédiat du document demandé, et le dernier élément contient des informations sur le document de niveau supérieur. Si la charge est réellement pour le document de niveau supérieur, alors ce tableau est vide.</p>
  <dl>
   <dt><code>url</code></dt>
   <dd><code>string</code>. URL à partir de laquelle le document a été chargé.</dd>
@@ -142,14 +137,13 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
  </dl>
  </dd>
  <dt><code>requestBody</code>{{optional_inline}}</dt>
- <dd><code>object</code>. Contient les données du corps de la requête HTTP. Seulement si <code>extraInfoSpec</code> contient <code>"requestBody"</code>.</dd>
- <dd>
+ <dd><p><code>object</code>. Contient les données du corps de la requête HTTP. Seulement si <code>extraInfoSpec</code> contient <code>"requestBody"</code>.</p>
  <dl>
   <dt><code>error</code>{{optional_inline}}</dt>
   <dd><code>string</code>. Ce paramètre est défini si des erreurs ont été rencontrées lors de l'obtention des données du corps de la demande.</dd>
   <dt><code>formData</code>{{optional_inline}}</dt>
-  <dd><code>object</code>. Cet objet est présent si la méthode de requête est POST et que le corps est une séquence de paires clé-valeur codées en UTF-8 sous la forme "multipart/form-data" ou "application/x-www-form-urlencoded".</dd>
-  <dd>Il s'agit d'un dictionnaire dans lequel chaque clé contient la liste de toutes les valeurs de cette clé. Par exemple: <code>{'key': ['value1', 'value2']}</code>. Si les données sont d'un autre type de support, ou si elles sont malformées, l'objet n'est pas présent.</dd>
+  <dd><p><code>object</code>. Cet objet est présent si la méthode de requête est POST et que le corps est une séquence de paires clé-valeur codées en UTF-8 sous la forme "multipart/form-data" ou "application/x-www-form-urlencoded".</p>
+  <p>Il s'agit d'un dictionnaire dans lequel chaque clé contient la liste de toutes les valeurs de cette clé. Par exemple: <code>{'key': ['value1', 'value2']}</code>. Si les données sont d'un autre type de support, ou si elles sont malformées, l'objet n'est pas présent.</p></dd>
   <dt><code>raw</code>{{optional_inline}}</dt>
   <dd><code>array</code> of <code>{{WebExtAPIRef('webRequest.UploadData')}}</code>. Si la méthode de requête est PUT ou POST, et que le corps n'est pas déjà analysé dans <code>formData</code>, alors ce tableau contient les éléments de corps de requête non analysés.</dd>
  </dl>
