@@ -69,7 +69,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Travailler_avec_l_API_Tabs
 
 <p>Pour voir comment {{WebExtAPIRef("tabs.query")}} et {{WebExtAPIRef("tabs.Tab")}} sont utilisés, voyons comment l'exemple <a href="https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs">tabs-tabs-tabs</a> ajoute la liste de  “passer aux onglets” à son popup bouton de barre d'outils.</p>
 
-<p><img alt="The tabs tabs tabs toolbar menu showing the switch to tap area" src="https://mdn.mozillademos.org/files/15723/Switch_to_tab.png" style="height: 645px; width: 369px;"></p>
+<p><img src="switch_to_tab.png"></p>
 
 <h3 id="manifest.json">manifest.json</h3>
 
@@ -356,7 +356,7 @@ Define the other menu items
 
 <p>Il est intéressant de noter l'utilisation de console.log. Cela vous permet de générer des informations sur la console du <a href="/fr/Add-ons/WebExtensions/Debugging">debugger</a>, ce qui peut être utile lors de la résolution des problèmes rencontrés lors du développement.</p>
 
-<p><img alt="Example of the console.log output, from the move tabs feature, in the debugging console" src="https://mdn.mozillademos.org/files/15722/console.png" style="height: 329px; width: 911px;"></p>
+<p><img src="console.png"></p>
 
 <p>Le code de déplacement appelle d'abord <code>callOnActiveTab()</code> qui à son tour appelle  <code>getCurrentWindowTabs()</code> pour obtenir un objet {{WebExtAPIRef("tabs.Tab")}} contenant les onglets de la fenêtre active. Il parcourt ensuite l'objet pour rechercher et renvoyer l'objet onglet actif :</p>
 

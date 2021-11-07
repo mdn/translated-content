@@ -101,9 +101,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/find/find
 
   <p>Par exemple, considérons une partie d'une page Web qui ressemble à ceci :</p>
 
-  <p><img alt="" src="https://mdn.mozillademos.org/files/15582/rects-1.png" style="display: block; height: 227px; margin-left: auto; margin-right: auto; width: 488px;">Si vous recherchez "You may", la comparaison doit être décrit par deux rectangles :</p>
+  <p><img alt="" src="rects-1.png">Si vous recherchez "You may", la comparaison doit être décrit par deux rectangles :</p>
 
-  <p><img alt="" src="https://mdn.mozillademos.org/files/15583/rects-2.png" style="display: block; height: 227px; margin-left: auto; margin-right: auto; width: 488px;">Dans le cas, dans le <code>RectData</code> qui décrit cette correspondance, <code>rectsAndTexts.rectList</code> et <code>rectsAndTexts.textList</code> auront chacun 2 éléments.</p>
+  <p><img alt="" src="rects-2.png">Dans le cas, dans le <code>RectData</code> qui décrit cette correspondance, <code>rectsAndTexts.rectList</code> et <code>rectsAndTexts.textList</code> auront chacun 2 éléments.</p>
 
   <ul>
    <li><code>textList[0]</code> contiendra "You ", et <code>rectList[0]</code> contiendra son rectangle de délimitation.</li>
@@ -228,7 +228,7 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) =&gt; {
 
 <p>Dans cet exemple, l'extensions utilise <code>rectData</code> pour comparer "redact", en ajoutant des DIVs noires au dessus de leurs rectangles de délimitation :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15584/redacted.png" style="display: block; height: 416px; margin-left: auto; margin-right: auto; width: 625px;">Notez qu'il y a plusieurs façons, c'est une mauvaise façon d'atteindre les pages.</p>
+<p><img alt="" src="redacted.png">Notez qu'il y a plusieurs façons, c'est une mauvaise façon d'atteindre les pages.</p>
 
 <p>Le script d'arrière-plan :</p>
 
