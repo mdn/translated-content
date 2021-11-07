@@ -100,7 +100,7 @@ Comme pour tous les autres éléments, on peut utiliser [les attributs universel
 
 ### Résultat
 
-{{EmbedLiveSample("examples", "", 100)}}
+{{EmbedLiveSample("Exemples", "", 100)}}
 
 ## Accessibilité
 

@@ -122,7 +122,7 @@ Comme pour tous les éléments, on peut appliquer [les attributs universels](/fr
 
 ### Résultat
 
-{{EmbedLiveSample("examples","100%",120)}}
+{{EmbedLiveSample("Exemples","100%",120)}}
 
 ## Notes
 

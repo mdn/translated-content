@@ -40,7 +40,7 @@ En ajoutant `size` sur certains types d'entrée, la largeur de l'entrée peut ê
 </select>
 ```
 
-{{EmbedLiveSample('examples')}}
+{{EmbedLiveSample('Exemples')}}
 
 ## Spécifications
 

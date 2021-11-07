@@ -108,7 +108,7 @@ Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Globa
 
 #### Résultat
 
-{{EmbedLiveSample("examples", "", 100)}}
+{{EmbedLiveSample("Exemples", "", 100)}}
 
 ## Spécifications
 

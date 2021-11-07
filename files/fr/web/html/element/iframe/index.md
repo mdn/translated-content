@@ -112,13 +112,13 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Globa
 
   - : Cet attribut, lorsqu'il vaut `true`, indique que l'_iframe_ intégrée peut être passée en plein écran via la méthode[`Element.requestFullscreen()`](/fr/docs/Web/API/Element/requestFullScreen).
 
-    > **Note :**Cet attribut est considéré comme historique et a été redéfini avec `allow="fullscreen"`.
+    > **Note :** Cet attribut est considéré comme historique et a été redéfini avec `allow="fullscreen"`.
 
 - `allowpaymentrequest`
 
   - : Cet attribut, lorsqu'il vaut `true`, permet à l'_iframe_ intégrée d'appeler l'API [Payment Request](/fr/docs/Web/API/Payment_Request_API).
 
-    > **Note :**Cet attribut est considéré comme historique et a été redéfini avec `allow="payment"`.
+    > **Note :** Cet attribut est considéré comme historique et a été redéfini avec `allow="payment"`.
 
 - `csp` {{experimental_inline}}
   - : L'attribut `csp` définit [la politique de sécurité du contenu](/fr/docs/Web/HTTP/CSP) que le document intégré doit respecter. Voir [`HTMLIFrameElement.csp`](/fr/docs/Web/API/HTMLIFrameElement/csp) pour plus de détails.
@@ -233,7 +233,7 @@ L'exemple qui suit utilise la page située à <https://example.org> pour l'inté
 
 #### Résultat
 
-{{EmbedLiveSample('example1', 640, 400)}}
+{{EmbedLiveSample('Exemples', 640, 400)}}
 
 ## Accessibilité
 

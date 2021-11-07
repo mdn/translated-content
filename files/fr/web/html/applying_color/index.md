@@ -227,7 +227,7 @@ La façon la plus simple (et la plus fréquemment utilisée) pour appliquer des 
 
 Prenons un exemple et commençons par le résultat :
 
-{{EmbedLiveSample("Specifying_colors_in_stylesheets", 650, 200)}}
+{{EmbedLiveSample("Indiquer_les_couleurs_via_une_feuille_de_style", 650, 200)}}
 
 #### HTML
 
@@ -330,7 +330,7 @@ Lorsqu'on choisit une couleur via un élément `<input>`, la valeur stockée dan
 
 Prenons un exemple simple où l'utilisateur choisit une couleur qui est immédiatement appliquée sur la bordure de l'exemple. Une fois la couleur finale sélectionnée, la valeur du sélecteur de couleur est affichée.
 
-{{EmbedLiveSample("Example_Picking_a_color", 525, 275)}}
+{{EmbedLiveSample("Exemple_sélectionner_une_couleur", 525, 275)}}
 
 > **Note :** Sur macOS, pour indiquer qu'on a fini de choisir la couleur, il faut fermer la fenêtre du sélecteur de couleur.
 

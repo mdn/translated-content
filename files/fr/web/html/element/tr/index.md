@@ -113,7 +113,7 @@ th, td {
 
 #### Résultat
 
-{{EmbedLiveSample("basic_example","100%","200")}}
+{{EmbedLiveSample("Exemple_simple","100%","200")}}
 
 ### Étendre sur plusieurs lignes ou colonnes
 
@@ -123,7 +123,7 @@ On utilise ici les attributs `rowspan` et `colspan` pour étendre des cellules s
 
 Une fois n'est pas coutume, commençons par regarder le résultat produit.
 
-{{EmbedLiveSample("row_and_column_spanning")}}
+{{EmbedLiveSample("Étendre_sur_plusieurs_lignes_ou_colonnes")}}
 
 On voit que la zone d'en-tête occupe deux lignes : la première avec le nom, l'identifiant, les dates et le solde du compte ; la seconde avec les dates d'inscription et de résiliation qui forment un sous-groupe de colonnes. Pour obtenir ceci, on a:
 
@@ -243,7 +243,7 @@ th, td {
 
 Le résultat n'a pas changé visuellement mais la structure comporte des informations sémantiques complémentaires.
 
-{{EmbedLiveSample("explicitly_specifying_table_content_groups", 500, 200)}}
+{{EmbedLiveSample("Distinguer_en-tête_et_contenu", 500, 200)}}
 
 ### Mise en forme simple
 
@@ -255,7 +255,7 @@ Modifions ici la police et la couleur d'arrière-plan pour la ligne d'en-tête.
 
 Là encore, regardons le résultat pour commencer.
 
-{{EmbedLiveSample("basic_styling", 500, 200)}}
+{{EmbedLiveSample("Mise_en_forme_simple", 500, 200)}}
 
 #### HTML
 
@@ -329,7 +329,7 @@ Allons encore plus loin dans la mise en forme avec des styles pour l'en-tête ai
 
 Voici le résultat qui sera obtenu :
 
-{{EmbedLiveSample("advanced_styling", 500, 200)}}
+{{EmbedLiveSample("Mise_en_forme_avancée", 500, 200)}}
 
 #### HTML
 

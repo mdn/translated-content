@@ -17,7 +17,7 @@ L'attribut `disabled` est utilisé par [`<button>`](/fr/docs/Web/HTML/Element/Bu
 
 Cet attribut booléen indique que l'utilisateur ne peut pas interagir avec le contrôle ou ses contrôles descendants. Si cet attribut n'est pas spécifié, le contrôle hérite ce paramètre de l'élément contenant, par exemple `fieldset` ; s'il n'y a pas d'élément contenant avec l'attribut `disabled` défini, et que le contrôle lui-même ne possède pas cet attribut, alors le contrôle est activé. S'il est déclaré sur un [`<optgroup>`](/fr/docs/Web/HTML/Element/Optgroup), le sélecteur est toujours interactif (sauf s'il est désactivé autrement), mais aucun des éléments du groupe d'options n'est sélectionnable.
 
-> **Note :**Si un [`<fieldset>`](/fr/docs/Web/HTML/Element/Fieldset) est désactivé, les contrôles de formulaire descendants sont tous désactivés, à l'exception des contrôles de formulaire dans la légende ([`<legend>`](/fr/docs/Web/HTML/Element/Legend)).
+> **Note :** Si un [`<fieldset>`](/fr/docs/Web/HTML/Element/Fieldset) est désactivé, les contrôles de formulaire descendants sont tous désactivés, à l'exception des contrôles de formulaire dans la légende ([`<legend>`](/fr/docs/Web/HTML/Element/Legend)).
 
 Lorsqu'un élément de support a l'attribut `disabled` est appliqué, la pseudo-classe [`:disabled`](/fr/docs/Web/CSS/:disabled) s'y applique également. Inversement, les éléments qui prennent en charge l'attribut `disabled` mais qui n'ont pas l'attribut défini correspondent à la pseudo-classe [`:enabled`](/fr/docs/Web/CSS/:enabled).
 
@@ -31,7 +31,7 @@ La différence entre `disabled` et [`readonly`](/fr/docs/Web/HTML/Attributes/rea
 
 Étant donné qu'un champ désactivé ne peut pas voir sa valeur modifiée, [`required`](/fr/docs/Web/HTML/Attributes/required) n'a aucun effet sur les entrées dont l'attribut `disabled` est également spécifié. De plus, puisque les éléments deviennent immuables, la plupart des autres attributs, tels que [`pattern`](/fr/docs/Web/HTML/Attributes/pattern), n'ont aucun effet, tant que le contrôle n'est pas activé.
 
-> **Note :**L'attribut `required` n'est pas autorisé sur les entrées pour lesquelles l'attribut `disabled` est spécifié.
+> **Note :** L'attribut `required` n'est pas autorisé sur les entrées pour lesquelles l'attribut `disabled` est spécifié.
 
 ### Utilisation
 
@@ -99,7 +99,7 @@ Lorsque les contrôles de formulaire sont désactivés, de nombreux navigateurs 
 </fieldset>
 ```
 
-{{EmbedLiveSample('examples', '', 460)}}
+{{EmbedLiveSample('Exemples', '', 460)}}
 
 ## Spécifications
 

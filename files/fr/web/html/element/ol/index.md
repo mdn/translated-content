@@ -128,7 +128,7 @@ L'élément HTML **`<ol>`** représente une liste ordonnée. Les éléments d'un
 
     Le type spécifié est utilisé pour l'ensemble de la liste, sauf si un attribut différent [`type`](/fr/docs/Web/HTML/Element/li#attr-type) est utilisé sur un élément [`<li>`](/fr/docs/Web/HTML/Element/li) fermé.
 
-    > **Note :**À moins que le type du numéro de la liste n'ait de l'importance (comme dans les documents juridiques ou techniques où les éléments sont référencés par leur numéro/lettre), utilisez plutôt la propriété CSS [`list-style-type`](/fr/docs/Web/CSS/list-style-type).
+    > **Note :** À moins que le type du numéro de la liste n'ait de l'importance (comme dans les documents juridiques ou techniques où les éléments sont référencés par leur numéro/lettre), utilisez plutôt la propriété CSS [`list-style-type`](/fr/docs/Web/CSS/list-style-type).
 
 ## Note d'utilisation
 
@@ -159,7 +159,7 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 
 Le HTML ci-dessus affichera :
 
-{{EmbedLiveSample("simple_example", 400, 150)}}
+{{EmbedLiveSample("Exemple_simple", 400, 150)}}
 
 ### Utilisation des chiffres romains
 
@@ -173,7 +173,7 @@ Le HTML ci-dessus affichera :
 
 Le HTML ci-dessus affichera :
 
-{{EmbedLiveSample("using_roman_numeral_type", 400, 150)}}
+{{EmbedLiveSample("Utilisation_des_chiffres_romains", 400, 150)}}
 
 ### Utilisation de l'attribut start
 
@@ -189,7 +189,7 @@ Le HTML ci-dessus affichera :
 
 Le HTML ci-dessus affichera :
 
-{{EmbedLiveSample("using_the_start_attribute", 400, 160)}}
+{{EmbedLiveSample("Utilisation_de_l'attribut_start", 400, 160)}}
 
 ### Listes imbriquées
 
@@ -209,7 +209,7 @@ Le HTML ci-dessus affichera :
 
 Le HTML ci-dessus affichera :
 
-{{EmbedLiveSample("nesting_lists", 400, 200)}}
+{{EmbedLiveSample("Listes_imbriquées", 400, 200)}}
 
 ### Liste non ordonnée dans une liste ordonnée
 
@@ -229,7 +229,7 @@ Le HTML ci-dessus affichera :
 
 Le HTML ci-dessus affichera :
 
-{{EmbedLiveSample("unordered_list_inside_ordered_list", 400, 200)}}
+{{EmbedLiveSample("Liste_non_ordonnée_dans_une_liste_ordonnée", 400, 200)}}
 
 ## Spécifications
 

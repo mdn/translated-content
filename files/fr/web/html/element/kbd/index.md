@@ -121,7 +121,7 @@ En imbriquant un élément `<kbd>` dans un élément {{HTMLElement("samp")}}, on
 
 {{EmbedLiveSample("Saisie_restituée", 650, 100)}}
 
-### Représenter les options de saisies à l’écran
+### Représenter les options de saisies à l'écran
 
 Imbriquer un élément `<samp>` dans un élément `<kbd>`  représente une saisie basée sur du texte affiché par le système (par exemple des noms de menu, d'éléments de menu, des noms de boutons affichés à l'écran, etc.).
 
@@ -147,7 +147,7 @@ On voit ici différentes imbrications. La description de l'option du menu est in
 
 #### Résultat
 
-{{EmbedLiveSample("Representer_les_options_de_saisies_a_l_ecran", 650, 120)}}
+{{EmbedLiveSample("Représenter_les_options_de_saisies_à_l'écran", 650, 120)}}
 
 ## Résumé technique
 

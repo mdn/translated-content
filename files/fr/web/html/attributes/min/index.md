@@ -116,7 +116,7 @@ Valable pour les types de saisie numérique, y compris les types [`date`](/fr/do
   </tbody>
 </table>
 
-> **Note :**Lorsque les données saisies par l'utilisateur ne respectent pas la valeur minimale définie, la valeur est considérée comme non valide dans la validation des contraintes et correspondra aux pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range).
+> **Note :** Lorsque les données saisies par l'utilisateur ne respectent pas la valeur minimale définie, la valeur est considérée comme non valide dans la validation des contraintes et correspondra aux pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range).
 
 Voir la [validation côté client](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) et [`rangeUnderflow`](/fr/docs/Web/API/ValidityState/rangeUnderflow) pour plus d'informations.
 
@@ -146,7 +146,7 @@ Nous définissons ensuite une entrée avec une valeur minimale de 7,2, en ometta
 
 Comme `step` a pour valeur 1 par défaut, les valeurs valides comprennent `7,2`, `8,2`, `9,2`, et ainsi de suite. La valeur 8 n'est pas valide. Comme nous avons inclus une valeur non valide, les navigateurs compatibles afficheront la valeur comme non valide.
 
-{{EmbedLiveSample("impact_on_step", "", 55)}}
+{{EmbedLiveSample("Impact_sur_step", "", 55)}}
 
 S'il n'est pas explicitement inclus, `step` prend par défaut la valeur 1 pour `number` et `range`, et 1 type d'unité (seconde, semaine, mois, jour) pour les types d'entrée date/heure.
 

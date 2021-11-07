@@ -71,7 +71,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
     - `_parent` : le contexte de navigation parent de celui en cours. S'il n'y a pas de parent, il se comporte comme `_self`.
     - `_top` : le contexte de navigation le plus haut (le contexte "le plus haut" qui est un ancêtre du contexte actuel). S'il n'a aucun ancêtre, il se comporte comme `_self`.
 
-    > **Note :**Définir `target="_blank"` sur les éléments `<a>` fournit implicitement le même comportement `rel` que définir [`rel="noopener"`](/fr/docs/Web/HTML/Link_types/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour le support.
+    > **Note :** Définir `target="_blank"` sur les éléments `<a>` fournit implicitement le même comportement `rel` que définir [`rel="noopener"`](/fr/docs/Web/HTML/Link_types/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour le support.
 
 - **`type`**
   - : Donne des indications sur le format de l'URL liée avec un [Type MIME](/fr/docs/Glossary/MIME_type). Aucune fonctionnalité intégrée.
@@ -82,7 +82,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : Fait allusion aux [encodages des caractères](/fr/docs/Glossary/character_encoding) de l'URL liée.
 
-    > **Note :**Cet attribut est déprécié et **ne doit pas être utilisé par les auteurs**. Utilisez l'en-tête HTTP [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) sur l'URL liée.
+    > **Note :** Cet attribut est déprécié et **ne doit pas être utilisé par les auteurs**. Utilisez l'en-tête HTTP [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) sur l'URL liée.
 
 - **`coords`** {{Deprecated_Inline}}
   - : Utilisé avec [l'attribut `shape`](#shape). Une liste de coordonnées séparées par des virgules.
@@ -90,7 +90,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : Était nécessaire pour définir un emplacement cible possible dans une page. En HTML 4.01, `id` et `name` pouvaient tous deux être utilisés sur `<a>`, pour autant qu'ils aient des valeurs identiques.
 
-    > **Note :**Utilisez l'attribut universel [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) à la place.
+    > **Note :** Utilisez l'attribut universel [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) à la place.
 
 - **`rev`** {{Deprecated_Inline}}
   - : Spécifiait un lien inverse ; l'opposé de [l'attribut `rel`](#rel). Déprécié pour avoir été très confus.
@@ -98,7 +98,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : La forme de la région de l'hyperlien dans une carte d'image.
 
-    > **Note :**Utilisez plutôt l'élément [`<area>`](/fr/docs/Web/HTML/Element/area) pour les cartes d'images.
+    > **Note :** Utilisez plutôt l'élément [`<area>`](/fr/docs/Web/HTML/Element/area) pour les cartes d'images.
 
 ## Propriétés
 
@@ -225,7 +225,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
 #### Résultat
 
-{{EmbedLiveSample("linking_to_an_absolute_url", "100%", 50)}}
+{{EmbedLiveSample("Créer_un_lien_vers_une_URL_absolue", "100%", 50)}}
 
 ### Créer des liens vers des URL relatives
 
@@ -243,7 +243,7 @@ a { display: block; margin-bottom: 0.5em }
 
 #### Résultat
 
-{{EmbedLiveSample("linking_to_relative_urls", "100%", 120)}}
+{{EmbedLiveSample("Créer_des_liens_vers_des_URL_relatives", "100%", 120)}}
 
 ### Créer un lien vers un élément de la même page
 
@@ -257,7 +257,7 @@ a { display: block; margin-bottom: 0.5em }
 <h2 id="section_further_down">Section plus bas</h2>
 ```
 
-> **Note :**Vous pouvez utiliser `href="#top"` ou le fragment vide (`href="#"`) pour créer un lien vers le haut de la page actuelle, [comme défini dans la spécification HTML](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
+> **Note :** Vous pouvez utiliser `href="#top"` ou le fragment vide (`href="#"`) pour créer un lien vers le haut de la page actuelle, [comme défini dans la spécification HTML](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
 
 ### Créer un lien avec une adresse électronique
 
@@ -349,7 +349,7 @@ document.querySelector('a').addEventListener('click', event =>
 
 ##### Résultat
 
-{{EmbedLiveSample('example_painting_app_with_save_link', '100%', '420')}}
+{{EmbedLiveSample("Exemple_d'application_de_peinture_avec_lien_de_sauvegarde", '100%', '420')}}
 
 ## Sécurité et vie privée
 

@@ -230,7 +230,7 @@ Par exemple :
 <input type="range" id="volume" min="0" max="11" value="7" step="1">
 ```
 
-{{EmbedLiveSample("horizontal", 200, 200, "orientation_sample1.png")}}
+{{EmbedLiveSample("Horizontal", 200, 200, "orientation_sample1.png")}}
 
 Le contrôle est ici horizontal, pour le rendre vertical, on pourra utiliser un peu de CSS afin de le rendre plus haut que large :
 
@@ -253,7 +253,7 @@ Le contrôle est ici horizontal, pour le rendre vertical, on pourra utiliser un 
 
 ##### Résultat
 
-{{EmbedLiveSample("vertical", 200, 200, "orientation_sample2.png")}}
+{{EmbedLiveSample("Vertical", 200, 200, "orientation_sample2.png")}}
 
 **Currently, no major browsers support creating vertical range inputs using CSS this way, even though it's the way the specification recommends they do it.**
 

@@ -36,7 +36,7 @@ p {
 
 ### Résultat
 
-{{EmbedLiveSample('Block-level_Example','100%',100)}}
+{{EmbedLiveSample('Éléments_de_type_bloc','100%',100)}}
 
 ## Utilisation
 

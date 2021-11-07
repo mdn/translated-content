@@ -66,7 +66,7 @@ Cet exemple utilise la propriété CSS [`font-size`](/fr/docs/Web/CSS/font-size)
 
 #### Résultat
 
-{{EmbedLiveSample("using_css_font-size", "", 100)}}
+{{EmbedLiveSample("Utilisation_de_la_propriété_CSS_font-size", "", 100)}}
 
 ## Interface DOM
 

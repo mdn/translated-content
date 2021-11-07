@@ -198,7 +198,7 @@ Si vos boutons ne servent pas à soumettre des données de formulaire à un serv
 <button name="button">Cliquez sur moi :)</button>
 ```
 
-{{EmbedLiveSample('example', 200, 64)}}
+{{EmbedLiveSample('Exemple', 200, 64)}}
 
 ## Problèmes d'accessibilité
 
