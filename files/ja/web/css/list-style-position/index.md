@@ -5,78 +5,85 @@ tags:
   - CSS
   - CSS プロパティ
   - CSS リスト
-  - Reference
-  - list-style
-  - list-style-position
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.list-style-position
 translation_of: Web/CSS/list-style-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>list-style-position</code></strong> プロパティは、リストアイテムに対する {{cssxref("::marker")}} の位置を指定します。</p>
+**`list-style-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リスト項目に対する {{cssxref("::marker")}} の位置を指定します。
 
-<div>{{EmbedInteractiveExample("pages/css/list-style-position.html")}}</div>
+{{EmbedInteractiveExample("pages/css/list-style-position.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+多くの場合、一括指定の {{cssxref("list-style")}} を使ったほうが便利です。
 
-<p>多くの場合、一括指定の {{cssxref("list-style")}} を使うほうが便利です。</p>
+> **Note:** このプロパティはリスト項目に対して適用されます。つまり、 `{{cssxref("display")}}: list-item;` が指定された要素です。[既定では](https://www.w3.org/TR/html5/rendering.html#lists)、 {{HTMLElement("li")}} 要素が該当します。このプロパティは継承されるので、親要素 (通常は {{HTMLElement("ol")}} や {{HTMLElement("ul")}}) に設定することで、すべてのリスト項目に適用することができます。
 
-<p><strong>メモ:</strong> このプロパティはリストアイテムに対して適用されます。つまり、 <code>{{cssxref("display")}}: list-item;</code> が指定された要素です。<a href="https://www.w3.org/TR/html5/rendering.html#lists">既定では</a>、 {{HTMLElement("li")}} 要素を含みます。このプロパティは継承されるので、親要素 (通常は {{HTMLElement("ol")}} や {{HTMLElement("ul")}}) に設定することで、すべてのリストアイテムに適用することができます。</p>
+なお、 `list-style-position: inside` を指定したリスト要素の中で最初にブロック要素が配置された場合、その動作はブラウザーによって異なります。 Chrome と Safari では、この要素はマーカーボックスと同じ行に配置されますが、 Firefox、 Internet Explorer、 Opera では次の行に配置されます。 詳細については {{bug(36854)}} をご覧ください。
 
-<p><strong>メモ:</strong> <code>list-style-position: inside</code> を指定したリスト要素の中で最初にブロック要素が配置された場合、その動作はブラウザーによって異なります。 Chrome と Safari では、この要素はマーカーボックスと同じ行に配置されますが、 Firefox、 Internet Explorer、 Opera では次の行に配置されます。 詳細については {{bug(36854)}} をご覧ください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 list-style-position: inside;
 list-style-position: outside;
 
 /* グローバル値 */
 list-style-position: inherit;
 list-style-position: initial;
+list-style-position: revert;
 list-style-position: unset;
-</pre>
+```
 
-<p><code>list-style-position</code> プロパティには、下記の値の中の一つが指定されます。</p>
+`list-style-position` プロパティには、下記の値の中の一つが指定されます。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>inside</code></dt>
- <dd>{{cssxref("::marker")}} はリストアイテムの最初の要素として配置されます。</dd>
- <dt><code>outside</code></dt>
- <dd>{{cssxref("::marker")}} は主要ブロックボックスの外に配置されます。</dd>
-</dl>
+- `inside`
+  - : {{cssxref("::marker")}} はリスト項目の最初の要素として配置されます。
+- `outside`
+  - : {{cssxref("::marker")}} は主要ブロックボックスの外に配置されます。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="HTML" name="HTML">HTML</h3>
+<h3 id="Setting_list_item_position">リスト項目の位置の設定</h3>
 
-<pre class="brush: html">&lt;ul class="inside"&gt;List 1
-  &lt;li&gt;List Item 1-1&lt;/li&gt;
-  &lt;li&gt;List Item 1-2&lt;/li&gt;
-  &lt;li&gt;List Item 1-3&lt;/li&gt;
-  &lt;li&gt;List Item 1-4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul class="outside"&gt;List 2
-  &lt;li&gt;List Item 2-1&lt;/li&gt;
-  &lt;li&gt;List Item 2-2&lt;/li&gt;
-  &lt;li&gt;List Item 2-3&lt;/li&gt;
-  &lt;li&gt;List Item 2-4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul class="inside-img"&gt;List 3
-  &lt;li&gt;List Item 3-1&lt;/li&gt;
-  &lt;li&gt;List Item 3-2&lt;/li&gt;
-  &lt;li&gt;List Item 3-3&lt;/li&gt;
-  &lt;li&gt;List Item 3-4&lt;/li&gt;
-&lt;/ul&gt;</pre>
+#### HTML
 
-<h3 id="CSS" name="CSS">CSS</h3>
+```html
+<ul class="inside">List 1
+  <li>List Item 1-1</li>
+  <li>List Item 1-2</li>
+  <li>List Item 1-3</li>
+  <li>List Item 1-4</li>
+</ul>
+<ul class="outside">List 2
+  <li>List Item 2-1</li>
+  <li>List Item 2-2</li>
+  <li>List Item 2-3</li>
+  <li>List Item 2-4</li>
+</ul>
+<ul class="inside-img">List 3
+  <li>List Item 3-1</li>
+  <li>List Item 3-2</li>
+  <li>List Item 3-3</li>
+  <li>List Item 3-4</li>
+</ul>
+```
 
-<pre class="brush:css;">.inside {
+#### CSS
+
+```css
+.inside {
   list-style-position: inside;
   list-style-type: square;
 }
@@ -88,45 +95,22 @@ list-style-position: unset;
 
 .inside-img {
   list-style-position: inside;
-  list-style-image: url("https://mdn.mozillademos.org/files/11979/starsolid.gif");
-}</pre>
+  list-style-image: url("starsolid.gif");
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+#### 結果
 
-<p>{{EmbedLiveSample("Examples", 200, 420)}}</p>
+{{EmbedLiveSample("Setting_list_item_position", 200, 420)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Lists', '#list-style-position-property', 'list-style-position')}}</td>
-   <td>{{Spec2('CSS3 Lists')}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'generate.html#propdef-list-style-position', 'list-style-position')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p>{{cssinfo}}</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.list-style-position")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-type")}}, {{Cssxref("list-style-image")}}</li>
-</ul>
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-type")}}, {{Cssxref("list-style-image")}}
