@@ -176,7 +176,7 @@ let playing = false;</pre>
 window.addEventListener("load", setup, false);
 </pre>
 
-<p>첫번째로, 우리는 <code>context</code>에 참조를 저장하며 window의 {{domxref("AudioContext")}}에 대한 접근을 얻습니다. 그리고 나서 우리는 <code>playButton</code>에 재생 버튼에 대한 참조와 <code>volumeControl</code>에 유저가 연결된 오실레이터 쌍의 gain을 조정하기 위해 사용할 슬라이더 조종 장치에 대한 참조를 설정하며 제어 위젯에 대한 참조를 얻습니다.</p>
+<p>먼저, window의 {{domxref("AudioContext")}}에 대한 접근을 얻고, 이 참조를  <code>context</code> 변수에 저장합니다. 그리고 나서 우리는 <code>playButton</code>에 재생 버튼에 대한 참조와 <code>volumeControl</code>에 유저가 연결된 오실레이터 쌍의 gain을 조정하기 위해 사용할 슬라이더 조종 장치에 대한 참조를 설정하며 제어 위젯에 대한 참조를 얻습니다.</p>
 
 <p>그리고 나서 우리는 재생 버튼의 {{event("click")}} 이벤트에 대해 (<code>togglePlay()</code> 메서드에 대한 정보를 얻으시려면 {{anch("오실레이터 켜고 끄기")}}를 참고하세요), 그리고 볼륨 슬라이더의 {{event("input")}} 이벤트에 대해 (아주 짧은 <code>changeVolume()</code> 메서드를 살펴보려면 {{anch("연결된 오실레이터 제어하기")}}를 참고하세요) 이벤트 처리기를 배치합니다.</p>
 
