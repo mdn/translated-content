@@ -157,7 +157,7 @@ Dans cet exemple, on utilise l'attribut `placeholder` afin d'afficher une indica
 
 > **Note :** Les indications ne remplacent pas les élément {{HTMLElement("label")}}.
 
-### Lecutre seule et contrôle désactivé
+### Lecture seule et contrôle désactivé
 
 Cet exemple affiche deux éléments `<textarea>` : le premier est désactivé avec `disabled` et le second est en lecture seule avec `readonly`. Vous pouvez les manipuler pour voir les différences : pour le premier, on ne peut pas sélectionné son contenu et la valeur n'est pas envoyée avec le formulaire ; pour le second, le contenu peut être sélectionné et la valeur est envoyée, il est uniquement impossible d'éditer le contenu.
 

@@ -46,11 +46,13 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 #### HTML
 
-    <ol>
-        <li>premier article</li>
-        <li>second article</li>
-        <li>troisième article</li>
-    </ol>
+```html
+<ol>
+  <li>premier article</li>
+  <li>second article</li>
+  <li>troisième article</li>
+</ol>
+```
 
 #### Résultat
 
@@ -60,11 +62,13 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 #### HTML
 
-    <ol type="I">
-        <li value="3">troisième article</li>
-        <li>quatrième article</li>
-        <li>cinquième article</li>
-    </ol>
+```html
+<ol type="I">
+  <li value="3">troisième article</li>
+  <li>quatrième article</li>
+  <li>cinquième article</li>
+</ol>
+```
 
 #### Résultat
 
@@ -74,11 +78,13 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 #### HTML
 
-    <ul>
-        <li>premier article</li>
-        <li>second article</li>
-        <li>troisième article</li>
-    </ul>
+```html
+<ul>
+  <li>premier article</li>
+  <li>second article</li>
+  <li>troisième article</li>
+</ul>
+```
 
 #### Résultat
 
