@@ -28287,6 +28287,16 @@
       "mfuji09"
     ]
   },
+  "Web/CSS/CSS_Counter_Styles/Using_CSS_counters": {
+    "modified": "2020-08-18T01:07:42.151Z",
+    "contributors": [
+      "mfuji09",
+      "LuckyWind_sck",
+      "ethertank",
+      "sosleepy",
+      "sii"
+    ]
+  },
   "Web/CSS/CSS_Device_Adaptation": {
     "modified": "2020-10-15T22:06:16.617Z",
     "contributors": [
@@ -28538,16 +28548,6 @@
     "modified": "2019-07-04T10:31:30.605Z",
     "contributors": [
       "mfuji09"
-    ]
-  },
-  "Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters": {
-    "modified": "2020-08-18T01:07:42.151Z",
-    "contributors": [
-      "mfuji09",
-      "LuckyWind_sck",
-      "ethertank",
-      "sosleepy",
-      "sii"
     ]
   },
   "Web/CSS/CSS_Logical_Properties": {
