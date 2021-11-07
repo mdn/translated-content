@@ -23,7 +23,7 @@ tags:
 
 <p>듣기엔 어려워 보이지만 사실은 굉장히 쉬운 방법입니다. {{domxref("ConstantSourceNode")}}를 생성하고 항상 동일한 값을 갖도록 연결된 모든 {{domxref("AudioParam")}}에 이것을 연결합니다. <code>ConstantSourceNode</code>의 {{domxref("ConstantSourceNode.offset", "offset")}} 값은 모든 출력으로 바로 전달되므로, 이는 연결된 각 파라미터로 보내지는 스플리터 역할을 합니다.</p>
 
-<p>아래의 그림은 이것이 어떻게 작동하는지를 보여줍니다; 입력값 <code>N</code>은 {{domxref("ConstantSourceNode.offset")}} 속성의 값으로 설정됩니다. <code>ConstantSourceNode</code>는 필요한 만큼 많은 출력을 가질 수 있습니다; 이 경우, 우리는 이것을 세 개의 노드에 연결햇습니다: 두 개의 {{domxref("GainNode")}}와 {{domxref("StereoPannerNode")}}입니다. 그래서 <code>N</code>은 명시된 매개변수의 값이 됩니다 ({{domxref("GainNode")}}의 {{domxref("GainNode.gain", "gain")}}, {{domxref("StereoPannerNode")}}의 pan).</p>
+<p>아래의 그림은 이것이 어떻게 작동하는지를 보여줍니다; 입력값 <code>N</code>은 {{domxref("ConstantSourceNode.offset")}} 속성의 값으로 설정됩니다. <code>ConstantSourceNode</code>는 필요한 만큼 많은 출력을 가질 수 있습니다. 아래 그림의 경우, <code>ConstantSourceNode</code>를 세 개의 노드에 연결했습니다. 두 개의 {{domxref("GainNode")}}와 {{domxref("StereoPannerNode")}}입니다. 그래서 <code>N</code>은 명시된 매개변수의 값이 됩니다 ({{domxref("GainNode")}}의 {{domxref("GainNode.gain", "gain")}}, {{domxref("StereoPannerNode")}}의 pan).</p>
 
 <p><img alt="어떻게 ConstantSourceNode가 입력 매개변수를 다수의 노드에 공유하기 위해 사용될 수 있는지를 보여주는 SVG 그림." src="customsourcenode-as-splitter.svg"></p>
 
