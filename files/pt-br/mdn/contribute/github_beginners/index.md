@@ -204,53 +204,53 @@ Para atualizar seu repo:
 
 Você vai saber se as suas atualizações funcionaram corretamente vendo a página do seu fork em github.com (i.e. a minha é <https://github.com/chrisdavidmills/content>). Deve aparecer algo como "Este ramo está atualizado com mdn:main." em algum lugar próximo ao topo. Se estiver escrito que seu ramo principal está atrás da mdn:main por um número de commits, então você vai ter que tentar novamente ou leia [solução de problemas](#troubleshooting).
 
-### Create a new branch to do your work in
+### Crie um novo ramo para você trabalhar
 
-Once you've got your main branch up to date in your fork, you must always create a new branch to make a change in. You should _never_ do your work in the main branch and submit it from there — it can get messy very quickly, trust us. It is a lot cleaner and less error-prone to do all work in separate branches.
+Uma vez que você tenha atualizado o ramo principal do seu fork, você sempre deve criar um novo ramo para fazer suas alterações. Você _nunca_ deve fazer seu trabalho no ramo principal ou submeter a partir de lá — isso pode virar uma bagunça muito rápido, confie em nós. Isso é bem mais limpo e menos sujeito a erros fazer todo o trabalho em ramos separados.
 
-To create a new branch:
+Para criar um novo ramo:
 
-1.  Go to your fork's page on github.com (i.e. mine is <https://github.com/chrisdavidmills/content>) and find the branch button at the top left hand corner of the file list, which should say "main" on it:
+1.  Vá para a página do seu fork em github.com (i.e. a minha é <https://github.com/chrisdavidmills/content>) e encontre botão de ramo no canto superior esquerdo da lista de arquivos, no qual deve estar escrito "main":
 
-    ![Button labeled main](branch-button.png)
+    ![Botão rotulado como main](branch-button.png)
 
-2.  Click on this, and you'll be presented with a list of branches and a text field that says "Find or create a branch…":
+2.  Clique nele, e você receberá uma lista de ramos e um campo de texto que diz "Encontre ou crie um ramo...":
 
-    ![menu showing list of branch names with a text box labeled find or create a branch](branch-menu.png)
+    ![menu mostrando a lista de nomes de ramos com uma caixa de texto rotulada como encontre ou crie um ramo](branch-menu.png)
 
-3.  If you enter part of an existing branch name in the text field, it will filter the list of branches against that string, allowing you to search for existing branches easily. However, we want to create a new branch. Enter a branch name that doesn't already exist (try something like test-branch) and the display will change to give you a button labelled "Create branch: test-branch from 'main'":
+3.  Se você digitar parte do nome de um ramo que exista no campo de texto, a lista de ramos vai ser filtrada a partir desse texto, permitindo que você busque por um ramo existente facilmente. Contudo, nós queremos criar um ramo novo. Digite o nome de um ramo que ainda não exite (tente algo como test-branch) e a tela vai mudar para te mostrar um botão rotulado "Crie um ramo: test-branch a partir do 'main'":
 
-    ![menu showing a new branch name test-branch entered into a text box, with a create branch button below it](new-branch.png)
+    ![menu mostrando um novo ramo chamado test-branch digitado em uma caixa de texto, com um botão de criar ramo embaixo](new-branch.png)
 
-4.  Once you are happy with your branch name, click on this button, and the display will update to show the branch name in the branch button:
+4.  Assim que você estiver feliz com o nome do seu ramo, clique no botão, e a tela vai ser atualizada para mostrar o nome do ramo no botão ramo:
 
-    ![Button labeled test-branch](branch-button-new-branch.png)
+    ![Botão rotulado test-branch](branch-button-new-branch.png)
 
-That's it! You have now created a new branch to do your work in. This branch is identical to the main branch's state at the time that you created it. A good starting point to do our work from.
+É isso! Agora você criou um novo ramo para trabalhar. Este ramo é identico ao estado do ramo principal no momento em que você criou. Um bom ponto de partida para fazer o seu trabalho.
 
-Tips:
+Dicas:
 
-- Make sure that you always update your main branch to be in sync with the mozilla main branch, as discussed in the previous section, before creating a new branch.
-- Make sure that you always create your new branch based on main, and not some other branch.To do this, makes sure that the branch button shows "main" before starting the process. If you don't, your new branch will likely be really out of date, which will create content problems.
+- Tenha certeza de sempre atualizar seu ramo principal para estar atualizado com o ramo principal da mozilla, conforme discutido na seção anterior, antes de criar um ramo novo.
+- Tenha certeza de sempre criar um ramo novo baseado no main, e não algum outro ramo. Para fazer isto, tenha certeza que o botão ramo mostre "main" antes de começar o processo. Se você não fizer isso, seu novo ramo provavelmente estará desatualizado, o que irá causar problemas no conteúdo.
 
-### Get your branch locally and switch to it
+### Obtenha seu ramo localmente e mude para ele
 
-The previous section taught you how to create a new branch in your fork, but it currently only exists in your remote version of the fork. To work on it, you need to get it into your local version.
+A seção anterior te ensinou com criar um novo ramo no seu fork, mas atualmente ele só existe na versão remota do seu fork. Para trabalhar nele, você vai precisar obter ele na sua versão local.
 
-To do this, go back to your terminal and, making sure you are inside the repo directory you are working with (`content` for this example):
+Para fazer isto, volte para o seu terminal e, tendo certeza que você está dentro do diretório do repo no qual você está trabalhando (`content` para este exemplo):
 
-1.  Pull remote changes to your local clone by running the command `git pull`
-2.  You should get a message along the lines of `* [new branch] test-branch -> origin/test-branch`
-3.  To switch to your branch (meaning change over from "main", to work in that branch instead) run the command `git switch test-branch`
+1.  Puxe as mudanças remotas para o seu clone local rodando o comando `git pull`
+2.  Entre a mensagem exibida, você deve ver as linhas `* [new branch] test-branch -> origin/test-branch`
+3.  Para mudar para seu ramo (O que significa mudar do "main" para trabalhar no seu ramo ao invés disso) rodando o comando `git switch test-branch`
 
-If you were successful, git should tell you something like this:
+Se você foi bem sucedido, o git deve te dizer algo como:
 
 ```plain
 Branch 'test-branch' set up to track remote branch 'test-branch' from 'origin'.
 Switched to a new branch 'test-branch'
 ```
 
-Note that you can check the status of your repo, including what branch you are on, at any time by running the command `git status`. Try this now, and git should tell you something like this:
+Note que você pode verificar o status do seu repo, incluindo em qual branch você está, a qualquer momento rodando o comando `git status`. Tente isto agora, e o git deve te dizer algo como isto:
 
 ```plain
 On branch test-branch
@@ -259,7 +259,7 @@ Your branch is up to date with 'origin/test-branch'.
 nothing to commit, working tree clean
 ```
 
-This sounds about right. We are on the "test-branch" branch, and we've made no changes yet.
+Isto parece certo. Nós estamos no ramo "test-branch", e nós ainda não fizemos mudanças.
 
 ## Adding, committing, and pushing changes
 
