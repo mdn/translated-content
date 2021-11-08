@@ -75,7 +75,7 @@ Dans l'exemple ci dessous, on anime le centre de rotation et l'angle.
 </svg>
 ```
 
-{{ EmbedLiveSample("Animer_une_transformation_des_attributs", '100%', 120) }}
+{{ EmbedLiveSample("Animer_une_transformation_d'attributs", '100%', 120) }}
 
 ## Animation suivant un tracé (chemin)
 

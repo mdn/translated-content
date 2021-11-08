@@ -36,7 +36,7 @@ Les motifs (_patterns_ en anglais) sont sans aucun doute les types de remplissag
 </svg>
 ```
 
-{{ EmbedLiveSample('Exemple','220','220','/files/725/SVG_Pattern_Example.png') }}
+{{ EmbedLiveSample('Exemple','220','220') }}
 
 À l'intérieur de l'élément `pattern`, vous pouvez inclure toutes les formes de bases de SVG et les styliser de la même manière que d'habitude (remplissage, contour, dégradés, opacité, etc). Dans notre exemple, on a dessiné un cercle et deux rectangles (qui se chevauchent et dont l'un est deux fois plus grand que l'autre pour remplir le motif en entier).
 
@@ -114,7 +114,7 @@ textarea.addEventListener('input', drawSvg);
 window.addEventListener('load', drawSvg);
 ```
 
-{{ EmbedLiveSample('exemple_jouable','220','350') }}
+{{ EmbedLiveSample('Exemple_2','220','350') }}
 
 ## Unités du contenu: objectBoundingBox
 
@@ -186,7 +186,7 @@ textarea.addEventListener('input', drawSvg);
 window.addEventListener('load', drawSvg);
 ```
 
-{{ EmbedLiveSample('code_jouable_2','220','350') }}
+{{ EmbedLiveSample('Code_jouable_2','220','350') }}
 
 > **Note :** Dans Gecko, les cercles semblent avoir du mal à être dessinés si le rayon est inférieur à 0.075 (on ignore s'il s'agit d'un bug de l'élément pattern ou non). Pour contourner ce problème, il est probablement préférable d'éviter de dessiner des cercles dans des unités "objectBoundingBox".
 
@@ -260,7 +260,7 @@ textarea.addEventListener('input', drawSvg);
 window.addEventListener('load', drawSvg);
 ```
 
-{{ EmbedLiveSample('exemple_jouable_3','220','350') }}
+{{ EmbedLiveSample('Exemple_jouable','220','350') }}
 
 ## Récapitulatif
 

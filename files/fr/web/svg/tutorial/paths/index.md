@@ -263,7 +263,7 @@ Pour un rayon `rx` et un rayon `ry` donnés, il existe deux ellipses pouvant con
 </svg>
 ```
 
-{{ EmbedLiveSample('exemple_jouable', '100%', 200) }}
+{{ EmbedLiveSample('Exemple_jouable', '100%', 200) }}
 
 #### large-arc-flag
 
@@ -305,7 +305,7 @@ Pour chacune des deux ellipses, il existe deux chemins possibles, ce qui donne q
 </svg>
 ```
 
-{{ EmbedLiveSample('code_jouable_2', '100%', 200) }}
+{{ EmbedLiveSample('Code_jouable_2', '100%', 200) }}
 
 L’exemple ci-dessous montre les quatre combinaisons possibles avec `sweep-flag` et `large-arc-flag`:
 

@@ -30,7 +30,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('exemple', '100%', 200)}}
+{{EmbedLiveSample('Exemple', '100%', 200)}}
 
 > **Note :** Pour SVG2, `transform` est un attribut de présentation et peut donc être utilisé comme une propriété CSS. Attention toutefois aux différences de syntaxe entre la propriété CSS et cet attribut. Voir la documentation de la propriété {{cssxref('transform')}} pour la syntaxe .
 

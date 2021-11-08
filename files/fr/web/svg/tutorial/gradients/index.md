@@ -47,7 +47,7 @@ Un exemple de dégradé linéaire appliqué à un élément `<rect>`:
 </svg>
 ```
 
-{{ EmbedLiveSample('SVGLinearGradient','120','240','/files/722/SVG_Linear_Gradient_Example.png') }}
+{{ EmbedLiveSample('Exemple','120','240') }}
 
 ### Définir le dégradé
 
@@ -107,7 +107,7 @@ Les dégradés radiaux (_radial gradient_ en anglais) sont similaires aux dégra
 </svg>
 ```
 
-{{ EmbedLiveSample('Exemple_2','120','240','/files/726/SVG_Radial_Gradient_Example.png') }}
+{{ EmbedLiveSample('Exemple_2','120','240') }}
 
 ### Définir le dégradé
 
@@ -141,7 +141,7 @@ Les stops utilisés ici sont les mêmes que précédemment, la différence étan
 </svg>
 ```
 
-{{ EmbedLiveSample('Centre_et_point_focal','120','120','/files/727/SVG_Radial_Grandient_Focus_Example.png') }}
+{{ EmbedLiveSample('Centre_et_point_focal','120','120') }}
 
 Si le point focal est déplacé en dehors du cercle décrit précédemment, il est impossible que le dégradé s'affiche correctement, le point focal sera donc supposé être à l'intérieur du bord du cercle. Si le point focal n'est pas du tout indiqué, il sera supposé être au même endroit que le point central.
 
@@ -196,7 +196,7 @@ Cet attribut contrôle ce qu'il arrive quand le dégradé arrive à sa fin, mais
 </svg>
 ```
 
-{{ EmbedLiveSample('spreadMethod','220','220','/files/728/SVG_SpreadMethod_Example.png') }}
+{{ EmbedLiveSample('spreadMethod','220','220') }}
 
 ### gradientUnits
 

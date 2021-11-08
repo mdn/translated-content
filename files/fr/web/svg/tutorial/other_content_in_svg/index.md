@@ -23,7 +23,7 @@ L'image embarquée devient un élément SVG normal. Cela implique que vous pouve
 </svg>
 ```
 
-{{ EmbedLiveSample('embarquer_des_images','220','240') }}
+{{ EmbedLiveSample('Embarquer_des_images','220','240') }}
 
 ### Embarquer du contenu XML quelconque
 
