@@ -47,7 +47,7 @@ translation_of: Games/Techniques/Audio_for_Web_Games
 
 <h3 id="Lecture_audio_simultanée">Lecture audio simultanée</h3>
 
-<p>Une exigence de nombreux jeux est de jouer plus d'un morceau audio en même temps ; par exemple, il peut y avoir de la musique de fond et des effets sonores pour diverses actions se produisant dans le jeu. Bien que la situation évolue rapidement avec l'adoption de l' <a href="https://developer.mozilla.org/fr/docs/Web/API/Web_Audio_API">API Web Audio</a> , la méthode actuellement la plus largement supportée, utilisant l'élément vanilla {{htmlelement ("audio")}}, produit des résultats inégaux sur les appareils mobiles.</p>
+<p>Une exigence de nombreux jeux est de jouer plus d'un morceau audio en même temps ; par exemple, il peut y avoir de la musique de fond et des effets sonores pour diverses actions se produisant dans le jeu. Bien que la situation évolue rapidement avec l'adoption de l' <a href="/fr/docs/Web/API/Web_Audio_API">API Web Audio</a> , la méthode actuellement la plus largement supportée, utilisant l'élément vanilla {{htmlelement ("audio")}}, produit des résultats inégaux sur les appareils mobiles.</p>
 
 <h3 id="Test_et_support">Test et support</h3>
 
@@ -147,7 +147,7 @@ translation_of: Games/Techniques/Audio_for_Web_Games
 
 <h3 id="Les_sprites_audio">Les "sprites" audio</h3>
 
-<p>Les "sprites" audio empruntent leur nom aux <a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Images/Sprites_CSS">"sprites" CSS</a> ; c'est une technique visuelle permettant d'utiliser CSS avec une seule ressource graphique pour la découper en une série d'objets-images. Nous pouvons appliquer le même principe à l'audio, au lieu de disposer d'un petit nombre de petits fichiers audio qui prennent du temps à charger et à lire, nous avons un fichier audio plus grand contenant tous les fragments audio plus petits dont nous avons besoin. Pour lire un son spécifique à partir du fichier, nous utilisons simplement les périodes de début et de fin connues pour chaque "sprite" audio.</p>
+<p>Les "sprites" audio empruntent leur nom aux <a href="/fr/docs/Web/CSS/CSS_Images/Sprites_CSS">"sprites" CSS</a> ; c'est une technique visuelle permettant d'utiliser CSS avec une seule ressource graphique pour la découper en une série d'objets-images. Nous pouvons appliquer le même principe à l'audio, au lieu de disposer d'un petit nombre de petits fichiers audio qui prennent du temps à charger et à lire, nous avons un fichier audio plus grand contenant tous les fragments audio plus petits dont nous avons besoin. Pour lire un son spécifique à partir du fichier, nous utilisons simplement les périodes de début et de fin connues pour chaque "sprite" audio.</p>
 
 <p>L'avantage est que nous pouvons amorcer un morceau d'audio et avoir nos "sprites" prêts à partir. Pour ce faire, nous pouvons juste jouer et mettre en pause instantanément la plus grande partie de l'audio. Nous réduisons également le nombre de demandes de serveur et économisons de la bande passante.</p>
 
@@ -208,13 +208,13 @@ myAudio.addEventListener('timeupdate', function() {
 
 <h2 id="Musique_de_fond">Musique de fond</h2>
 
-<p>La musique dans les jeux peut avoir un effet émotionnel puissant. Vous pouvez mélanger et assortir divers échantillons de musique et, en supposant que vous pouvez contrôler le volume de votre élément audio, vous pouvez fondre différentes pièces musicales. En utilisant la méthode  <code><a href="https://developer.mozilla.org/fr/Apps/Fundamentals/Audio_and_video_delivery/WebAudio_playbackRate_explained">playbackRate()</a></code> , vous pouvez même ajuster la vitesse de votre musique sans affecter la hauteur, pour mieux la synchroniser avec l'action.<br>
+<p>La musique dans les jeux peut avoir un effet émotionnel puissant. Vous pouvez mélanger et assortir divers échantillons de musique et, en supposant que vous pouvez contrôler le volume de votre élément audio, vous pouvez fondre différentes pièces musicales. En utilisant la méthode  <code><a href="/fr/Apps/Fundamentals/Audio_and_video_delivery/WebAudio_playbackRate_explained">playbackRate()</a></code> , vous pouvez même ajuster la vitesse de votre musique sans affecter la hauteur, pour mieux la synchroniser avec l'action.<br>
  <br>
- Tout ceci est possible en utilisant l'élément standard {{HTMLElement ("audio")}} associé à l'API  {{domxref("HTMLMediaElement")}} , mais il devient beaucoup plus facile et flexible avec l'<a href="https://developer.mozilla.org/fr/docs/Web/API/Web_Audio_API">API Web Audio</a>.</p>
+ Tout ceci est possible en utilisant l'élément standard {{HTMLElement ("audio")}} associé à l'API  {{domxref("HTMLMediaElement")}} , mais il devient beaucoup plus facile et flexible avec l'<a href="/fr/docs/Web/API/Web_Audio_API">API Web Audio</a>.</p>
 
 <h2 id="API_Web_Audio_pour_les_jeux">API Web Audio pour les jeux</h2>
 
-<p>Maintenant qu'il est supporté dans tous les navigateurs modernes à l'exception d'Opera Mini et d'Internet Explorer (<a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/webaudioapi/">bien que Microsoft travaille maintenant dessus</a>), une approche acceptable pour de nombreuses situations est d'utiliser l'<a href="https://developer.mozilla.org/fr/docs/Web/API/Web_Audio_API">API Web Audio</a> (voir la page <a href="http://caniuse.com/#search=web%20audio%20api">Puis-je utiliser l'API Web Audio ?</a> pour plus d'informations sur la compatibilité du navigateur). L'API Web Audio est une API JavaScript audio avancée, idéale pour l'audio du jeu. Les développeurs peuvent générer de l'audio et manipuler des échantillons audio tout en positionnant le son dans l'espace de jeu 3D.</p>
+<p>Maintenant qu'il est supporté dans tous les navigateurs modernes à l'exception d'Opera Mini et d'Internet Explorer (<a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/webaudioapi/">bien que Microsoft travaille maintenant dessus</a>), une approche acceptable pour de nombreuses situations est d'utiliser l'<a href="/fr/docs/Web/API/Web_Audio_API">API Web Audio</a> (voir la page <a href="http://caniuse.com/#search=web%20audio%20api">Puis-je utiliser l'API Web Audio ?</a> pour plus d'informations sur la compatibilité du navigateur). L'API Web Audio est une API JavaScript audio avancée, idéale pour l'audio du jeu. Les développeurs peuvent générer de l'audio et manipuler des échantillons audio tout en positionnant le son dans l'espace de jeu 3D.</p>
 
 <p>Une stratégie inter-navigateurs envisageable serait de fournir un son basique à l'aide de l'élément standard {{HTMLElement ("audio")}} et, là où cela est pris en charge, d'améliorer l'expérience en utilisant l'API Web Audio.</p>
 
@@ -236,7 +236,7 @@ myAudio.addEventListener('timeupdate', function() {
 
 <h3 id="Chargement_des_pistes">Chargement des pistes</h3>
 
-<p>Avec l'API Web Audio, vous pouvez charger individuellement des pistes et des boucles séparées en utilisant  <a href="https://developer.mozilla.org/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a>, ce qui signifie que vous pouvez les charger de manière synchrone ou en parallèle. Le chargement synchrone peut signifier que certaines parties de votre musique sont prêtes plus tôt et vous pouvez commencer à les jouer pendant que d'autres se chargent.</p>
+<p>Avec l'API Web Audio, vous pouvez charger individuellement des pistes et des boucles séparées en utilisant  <a href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a>, ce qui signifie que vous pouvez les charger de manière synchrone ou en parallèle. Le chargement synchrone peut signifier que certaines parties de votre musique sont prêtes plus tôt et vous pouvez commencer à les jouer pendant que d'autres se chargent.</p>
 
 <p>De toute façon, vous pouvez vouloir synchroniser des pistes ou des boucles. L'API Web Audio contient la notion d'horloge interne qui commence à cocher le moment où vous créez un contexte audio. Vous devez prendre en compte le temps entre la création d'un contexte audio et le moment où la première piste audio commence à jouer. L'enregistrement de ce décalage et l'interrogation de l'heure actuelle de la piste de lecture vous donnent suffisamment d'informations pour synchroniser des morceaux audio distincts.</p>
 
@@ -365,17 +365,17 @@ for (var i = 0, len = tracks.length; i &lt; len; i++) {
  <li>l'environnement (caverneux, sous-marin, etc.)</li>
 </ul>
 
-<p>Ceci est particulièrement utile dans un environnement tridimensionnel rendu en utilisant <a href="https://developer.mozilla.org/fr/docs/Web/API/WebGL_API">WebGL</a>, avec lequel l'API Web Audio permet d'associer l'audio aux objets et aux points de vue .</p>
+<p>Ceci est particulièrement utile dans un environnement tridimensionnel rendu en utilisant <a href="/fr/docs/Web/API/WebGL_API">WebGL</a>, avec lequel l'API Web Audio permet d'associer l'audio aux objets et aux points de vue .</p>
 
 <div class="note">
-<p><strong>Note :</strong> Voir <a href="https://developer.mozilla.org/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web Audio API Spatialization Basics</a> <em>(Bases de la spacialisation de l'API Web Audio)</em> pour plus de détails.</p>
+<p><strong>Note :</strong> Voir <a href="/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web Audio API Spatialization Basics</a> <em>(Bases de la spacialisation de l'API Web Audio)</em> pour plus de détails.</p>
 </div>
 
 <h2 id="See_Also">See Also</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/API/Web_Audio_API">Web Audio API sur MDN</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code> sur MDN</a></li>
+ <li><a href="/fr/docs/Web/API/Web_Audio_API">Web Audio API sur MDN</a></li>
+ <li><a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code> sur MDN</a></li>
  <li><a href="http://www.html5rocks.com/en/tutorials/webaudio/games/">Developing Game Audio with the Web Audio API (HTML5Rocks) (en)</a></li>
  <li><a href="http://www.html5rocks.com/en/tutorials/webaudio/positional_audio/">Mixing Positional Audio and WebGL (HTML5Rocks) (en)</a></li>
  <li><a href="https://hacks.mozilla.org/2013/10/songs-of-diridum-pushing-the-web-audio-api-to-its-limits/">Songs of Diridum: Pushing the Web Audio API to Its Limits (en)</a></li>

@@ -205,7 +205,7 @@ main(); //Débuter le cycle.</pre>
    <li>Cela utilise le temps du processeur même quand il n'a pas l'attention ou qu'il est minimisé, qu'il ne monopolise pas le fil principal, et est probablement un artefact de la traditionnelle boucle principale (mais plus simple).</li>
   </ul>
  </li>
- <li>Dessiner à chaque <code>requestAnimationFrame</code> et mettre à jour sur un <code>setInterval</code> ou <code>setTimeout</code> dans un <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Worker</a>.
+ <li>Dessiner à chaque <code>requestAnimationFrame</code> et mettre à jour sur un <code>setInterval</code> ou <code>setTimeout</code> dans un <a href="/fr/docs/Web/Guide/Performance/Using_web_workers">Web Worker</a>.
   <ul>
    <li>C'est la même chose que ci-dessus, excepté que la mise à jour ne monopolise pas le fil principal (ni le fil principal ne le monopolise). C'est une solution plus complexe, et ce pourrait être trop de travail pour de simples mises à jours.</li>
   </ul>
