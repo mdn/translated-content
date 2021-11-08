@@ -261,14 +261,14 @@ nothing to commit, working tree clean
 
 Isto parece certo. Nós estamos no ramo "test-branch", e nós ainda não fizemos mudanças.
 
-## Adding, committing, and pushing changes
+## Adicionando, dando commit, e impulsionando alterações (push)
 
-At this point you are ready to make changes to the repo you are working on — to fix a bug on MDN or whatever it is that you are doing. We will mostly skip this part, as that's not the point of the tutorial. If you want to fix a real problem on MDN, go and choose a bug to fix from our [content issues list](https://github.com/mdn/content/issues/), or read [Contributing to MDN](/en-US/docs/MDN/Contribute) for more guidance.
+Neste ponto você já está preparado para fazer alterações no repo que você está trabalhando — para corrigir um bug no MDN ou qualquer coisa que você esteja fazendo. No geral, vamos pular esta parte, já que esse não é o objetivo do tutorial. Se você quiser corrigir um problema real no MDN, vá e escolha um bug para corrigir da nossa [lista de issues de conteúdo](https://github.com/mdn/content/issues/), ou leia [Contribuindo para o MDN](/pt-BR/docs/MDN/Contribute) para mais orientações.
 
-If you just want to follow along with this tutorial for example's sake, let's do something simple.
+Se você só quer seguir este tutorial com o propósito de ter um exemplo, vamos fazer algo simples.
 
-1.  Go into the `content/README.md` file, and add a single letter into the top heading of the README.
-2.  Now go back to your command line and enter the `git status` command again. This time git should tell you something like this:
+1.  Vá para o arquivo `content/README.md`, e adicione uma única letra no título superior do README.
+2.  Agora volte para a linha de comando e rode o comando `git status` de novo. Desta vez, o git deve dizer algo como:
 
     ```plain
     Your branch is up to date with 'origin/test-branch'.
@@ -281,15 +281,15 @@ If you just want to follow along with this tutorial for example's sake, let's do
         no changes added to commit (use "git add" and/or "git commit -a")
     ```
 
-3.  So at this point it is telling you what files you have modified. The next stage is to "add" them, which means add them to a list of files that you want to commit to push up to the remote fork. To add this file to the commit list, type the following:
+3.  Então, neste momento a mensagem está falando que arquivos você modificou. A próxima etapa é "adicionar" eles, o que significa adicionar eles para uma lista de arquivos que você quer dar commit para impulsionar as alterações para o fork remoto. Para adicionar este arquivo para a lista de commit, digite o seguinte:
 
     ```bash
     git add README.md
     ```
 
-    > **Note:** `README.md` is the path to the file you have changed, not just its name. If it were inside a subdirectory, you'd have to write the full path to the file.
+    > **Nota:** `README.md` é o caminho para o arquivo que você alterou, não apenas o nome dele. Se ele estiver dentro de um subdiretório, você teria que escrever o caminho completo para o arquivo.
 
-4.  If you run `git status` again, you'll now see this:
+4.  Se você rodar `git status` de novo, você vai ver isto agora:
 
     ```plain
     On branch test-branch
@@ -300,22 +300,22 @@ If you just want to follow along with this tutorial for example's sake, let's do
             modified:   README.md
     ```
 
-5.  Git is telling us that `README.md` is now in our commit list. To include all the files in the commit list in a commit (a single set of changes that we will later try to send to the main branch), enter the following (the `-m` option is short for message"):
+5.  O Git está nos dizendo que `README.md` agora está em nossa lista de commit. Para incluir todos os arquivos da lista de commit em um commit (um único conjunto de mudanças que depois nós vamos tentar enviar para o ramo principal), rode o seguinte (a opção `-m` é a abreviação para mensagem):
 
     ```bash
-    git commit -m 'my first commit'
+    git commit -m 'meu primeiro commit'
     ```
 
-    Git will tell you this:
+    O Git irá te dizer isto:
 
     ```plain
-    [test-branch 44b207ef6] my first commit
+    [test-branch 44b207ef6] meu primeiro commit
          1 file changed, 1 insertion(+), 1 deletion(-)
     ```
 
-    To show that it has registered that you've made a commit.
+    Para mostrar que o commit que você fez foi registrado.
 
-6.  Run `git status` again, and you'll get this information:
+6.  Rode `git status` de novo, e você vai obter esta informação:
 
     ```plain
     On branch test-branch
@@ -325,9 +325,9 @@ If you just want to follow along with this tutorial for example's sake, let's do
         nothing to commit, working tree clean
     ```
 
-The information readout has basically reset — it is telling us that there are no changes to commit, because we've now sent our previous change into the system as a commit. The key difference from before is the line "Your branch is ahead of 'origin/test-branch' by 1 commit." — our local version of the "test-branch" branch is now ahead of the remote version of "test-branch" by one commit — in other words, we've made a change locally that the remote branch doesn't have.
+A informação lida basicamente foi redefinida — está nos dizendo que não temos mudanças para fazer um commit, porque agora nós mandamos nossas mudanças anteriores para o sistema como um commit. A diferença chave de antes é a linha "Your branch is ahead of 'origin/test-branch' by 1 commit." (Seu ramo está na frente de 'origin/test-branch' por 1 commit.) — nossa versão local do ramo "test-branch" agora está a frente da versão remota de "teste-branch" por um commit — em outras palavras, nós fizemos uma mudança localmente que o ramo remoto não tem.
 
-Let's send our local change to the remote branch. You can do this by running the command `git push` — try this now. If there are no errors, you should get a readout like this:
+Vamos enviar nossa mudança local para o ramo remoto. Você pode fazer isto rodando o comando `git push` — tente isto agora. Se não tiver erros, você deve ter lido algo como isto:
 
 ```plain
 Enumerating objects: 5, done.
@@ -341,9 +341,9 @@ To github.com:chrisdavidmills/content.git
     77215e31e..44b207ef6  test-branch -> test-branch
 ```
 
-## Creating a pull request
+## Criando um pull request
 
-At this point, go back to your remote fork's github.com page. You should see a message along the lines of "This branch is 1 commit ahead of mdn:main. " meaning that our fork's content has a content change (commit) in it that mozilla's "main" branch doesn't have.
+Neste momento, volte para o a página do fork remoto em github.com. Você deve ver uma mensagem parecida com "Seu ramo está 1 commit a frente de mdn:main. " o que significa que o conteúdo do nosso fork tem uma mudança (commit) nela que não existe no ramo "main" do mozilla.
 
 1.  To send our change up to the main copy of the repo, we need to create a pull request. This can be easily done using the "Compare & pull request" button that you should see up the top of the files list, once the branch has had a change pushed to it.
 
