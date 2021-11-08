@@ -19,7 +19,7 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <p>La 3D est principalement basée sur la représentation de formes 3D dans l'espace, avec un système de coordonnées utilisé pour calculer leurs positions.</p>
 
-<p><img alt="Coordinate system" src="https://mdn.mozillademos.org/files/13326/mdn-games-3d-coordinate-system.png" style="height: 338px; width: 600px;"></p>
+<p><img src="mdn-games-3d-coordinate-system.png"></p>
 
 <p>WebGL utilise le système de coordonnées de droite — l'axe x pointe vers la droite, l'axe y vers le haut et l'axe z dans la profondeur, comme shématisé ci-dessus.</p>
 
@@ -36,7 +36,7 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <p>Vous pouvez faire de la géométrie en utilisant ces informations — voici l'exemple d'un cube :</p>
 
-<p><img alt="Cube" src="https://mdn.mozillademos.org/files/13324/mdn-games-3d-cube.png" style="height: 265px; width: 600px;"></p>
+<p><img alt="Cube" src="mdn-games-3d-cube.png"></p>
 
 <p>Une face de la forme donnée est un plan entre des sommets. Par exemple, un cube a 8 différents sommets (points dans l'espace) et 6 différentes faces, chacune construite à partir de 4 sommets. Une norme définit de quelle manière la face est orientée. De plus, en connectant les points, on crée les arêtes du cube.La géométrie est basée sur les sommets et les faces, où le matériau est une texture, utilisant une couleur ou une image. Si l'on connecte la géométrie avec le matériau, on obtient une maille (mesh)</p>
 
@@ -44,7 +44,7 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <p>Le rendu des tuyaux est un procédé avec lequel les images sont préparées et affichées sur l'écran. Les graphismes utilisant les rendus de tuyaux prennent des objets 3D construits à partir de primitives décrites à l'aide de sommets, les transforment, calculent les fragments, et les affichent sur un écran 2D en tant que pixels.</p>
 
-<p><img alt="Rendering pipeline" src="https://mdn.mozillademos.org/files/13334/mdn-games-3d-rendering-pipeline.png" style="height: 225px; width: 600px;"></p>
+<p><img alt="Rendering pipeline" src="mdn-games-3d-rendering-pipeline.png"></p>
 
 <p>Terminologie utilisée dans le diagramme ci-dessus :</p>
 
@@ -60,15 +60,15 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <p>Le traitement de sommet consiste à combiner les informations à propos de chaque sommet dans des primitives et de définir leurs coordonnées dans l'espace 3D pour le spectateur. C'est comme prendre une photo de la scène donnée que vous avez préparée — vous devez placer les objets en premier, configurer la caméra, et prendre la photo.</p>
 
-<p><img alt="Vertex processing" src="https://mdn.mozillademos.org/files/13336/mdn-games-3d-vertex-processing.png" style="height: 338px; width: 600px;"></p>
+<p><img src="mdn-games-3d-vertex-processing.png"></p>
 
 <p>Il y a 4 étapes dans ce traitement : la première implique d'arranger les objets dans le monde, elle est appelée la <strong>transformation du modèle</strong>. Ensuite, il y a la <strong>transformation de la vue</strong>, qui prend soin de positionner et de régler l'orientation de la caméra dans l'espace 3D. La caméra a 3 paramètres — position, direction et orientation — qui doivent être définis pour la scène nouvellement créée.</p>
 
-<p><img alt="Camera" src="https://mdn.mozillademos.org/files/13322/mdn-games-3d-camera.png" style="height: 225px; width: 600px;"></p>
+<p><img alt="Camera" src="mdn-games-3d-camera.png"></p>
 
 <p>La <strong>transformation de la projection</strong> (aussi appelée transformation de la perspective) définit ensuite les réglages de la caméra. Elle définit ce qui peut être vu par la caméra — la configuration inclut le champ de vision, le ratio d'aspect, et éventuellement les plans proches et éloignés. Lisez le <a href="https://developer.mozilla.org/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js#Camera">paragraphe sur la Caméra</a> dans l'article de Three.js pour en savoir plus.</p>
 
-<p><img alt="Camera settings" src="https://mdn.mozillademos.org/files/13320/mdn-games-3d-camera-settings.png" style="height: 338px; width: 600px;"></p>
+<p><img src="mdn-games-3d-camera-settings.png"></p>
 
 <p>La dernière étape est la transformation de la fenêtre, qui implique la production de tout pour la prochaine étape dans le rendu du tuyau.</p>
 
@@ -76,7 +76,7 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <p>La rastérisation convertit les primitives (des sommets reliés) à un ensemble de fragments.</p>
 
-<p><img alt="Rasterization" src="https://mdn.mozillademos.org/files/13332/mdn-games-3d-rasterization.png" style="height: 338px; width: 600px;"></p>
+<p><img src="mdn-games-3d-rasterization.png"></p>
 
 <p>Ces fragments — qui sont des projections 3D de pixels 2D — sont alignés sur la grille de pixels, donc éventuellement ils peuvent être affichés comme des pixels sur un écran 2D durant la phase de fusion du résultat.</p>
 
@@ -84,7 +84,7 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <p>Le traitement de fragment se concentre sur les textures et les lumières — il calcule les couleurs finales à partir des paramètres donnés.</p>
 
-<p><img alt="Fragment processing" src="https://mdn.mozillademos.org/files/13328/mdn-games-3d-fragment-processing.png" style="height: 338px; width: 600px;"></p>
+<p><img src="mdn-games-3d-fragment-processing.png"></p>
 
 <h3 id="Textures">Textures</h3>
 
@@ -105,7 +105,7 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 
 <h2 id="Fusion_de_sortie">Fusion de sortie</h2>
 
-<p>Durant l'étape de manipulation du résultat, tous les fragments des primitives de l'espace 3D sont transformés sur une grille de pixels 2D qui est ensuite affichée sur l'écran.<img alt="Output merging" src="https://mdn.mozillademos.org/files/13330/mdn-games-3d-output-merging.png" style="height: 338px; width: 600px;"></p>
+<p>Durant l'étape de manipulation du résultat, tous les fragments des primitives de l'espace 3D sont transformés sur une grille de pixels 2D qui est ensuite affichée sur l'écran.<img src="mdn-games-3d-output-merging.png"></p>
 
 <p>Durant la fusion de sortie, quelques traitements sont aussi appliqués pour ignorer de l'information qui n'est pas utile — par exemple, les paramètres des objets qui sont à l'extérieur de l'écran ou derrière d'autres, et par conséquent non visibles, ne sont pas calculés.</p>
 

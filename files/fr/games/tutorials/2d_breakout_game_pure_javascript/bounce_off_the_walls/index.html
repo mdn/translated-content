@@ -83,7 +83,7 @@ if(y + dy &gt; canvas.height || y + dy &lt; 0) {
 
 <p>Testez votre code à ce stade, et vous serez impressionné — nous avons maintenant une balle qui rebondit sur les quatre bords de la toile ! Mais nous avons un autre problème — lorsque la balle frappe un mur, elle s'y enfonce légèrement avant de changer de direction :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10432/ball-in-wall.png" style="display: block; height: 320px; margin: 0px auto; width: 480px;"></p>
+<p><img alt="" src="ball-in-wall.png"></p>
 
 <p>C'est parce que nous calculons le point de collision entre le mur et le centre de la balle, alors que nous devrions le faire pour sa circonférence. La balle devrait rebondir juste après avoir touché le mur, et non pas lorsqu'elle est déjà à mi-chemin dans le mur, alors ajustons un peu nos déclarations pour inclure cela. Mettez à jour le dernier code que vous avez ajouté :</p>
 
