@@ -11,9 +11,9 @@ tags:
   - seeking
 translation_of: Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
 ---
-<div class="summary">
-<p><span class="seoSummary">Il est parfois utile de savoir combien d'{{htmlelement("audio") }} ou {{htmlelement("video") }} a été téléchargé ou peut être joué sans délai — par exemple pour afficher la barre de progression du tampon dans un lecteur audio ou vidéo. Cet article explique comment construire une barre de progrès de mise en mémoire tampon en utilisant <a href="/fr/docs/Web/API/TimeRanges">TimeRanges</a>, et d'autres fonctionnalités de l'API Media.</span></p>
-</div>
+
+<p>Il est parfois utile de savoir combien d'{{htmlelement("audio") }} ou {{htmlelement("video") }} a été téléchargé ou peut être joué sans délai — par exemple pour afficher la barre de progression du tampon dans un lecteur audio ou vidéo. Cet article explique comment construire une barre de progrès de mise en mémoire tampon en utilisant <a href="/fr/docs/Web/API/TimeRanges">TimeRanges</a>, et d'autres fonctionnalités de l'API Media.</p>
+
 
 <h2 id="Buffered">Buffered</h2>
 
@@ -102,10 +102,10 @@ myAudio.buffered.end(1);   // returns 19</pre>
 
 <p>Cela fonctionne mieux avec les morceaux audio ou vidéo un peu plus longs, mais appuyez sur play et cliquez sur la barre de progression du lecteur et vous devriez obtenir quelque chose comme ci-dessous. Chaque rectangle rouge remplissant le rectangle blanc représente une plage de temps.</p>
 
-<p><img alt="A simple audio player with play button, seek bar and volume control, with a series of red rectangles beneath it representing time ranges." src="https://mdn.mozillademos.org/files/7347/bufferedtimeranges.png" style="display: block; height: 89px; margin: 0px auto; width: 318px;"></p>
+<p><img src="bufferedtimeranges.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez voir <a href="http://jsbin.com/memazaro/1/edit">cet exemple en direct sur JS Bin</a>.</p>
+<p><strong>Note :</strong> Vous pouvez voir <a href="http://jsbin.com/memazaro/1/edit">cet exemple en direct sur JS Bin</a>.</p>
 </div>
 
 <h2 id="Seekable">Seekable</h2>
@@ -123,7 +123,7 @@ myAudio.buffered.end(1);   // returns 19</pre>
 <pre class="brush: js">var seekableEnd = myAudio.seekable.end(myAudio.seekable.length - 1);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: <code>myAudio.seekable.end(myAudio.seekable.length - 1)</code> nous indique en fait le temps de fin de la dernière plage de temps disponible (et non toutes). En pratique, c'est suffisant, car le navigateur peut permettre ou non de requêter des plages d'octets. S'il ne le permet pas — <code>audio.seekable</code> sera l'équivalent de <code>audio.buffered</code> — on a une indication valide de la fin du média chargée. Sinon, alors cette valeur vaudra la durée du média presque instantannément.</p>
+<p><strong>Note :</strong> <code>myAudio.seekable.end(myAudio.seekable.length - 1)</code> nous indique en fait le temps de fin de la dernière plage de temps disponible (et non toutes). En pratique, c'est suffisant, car le navigateur peut permettre ou non de requêter des plages d'octets. S'il ne le permet pas — <code>audio.seekable</code> sera l'équivalent de <code>audio.buffered</code> — on a une indication valide de la fin du média chargée. Sinon, alors cette valeur vaudra la durée du média presque instantannément.</p>
 </div>
 
 <p>Il est peut-être préférable de donner une indication de la quantité de média effectivement téléchargée — c'est ce que les lecteurs natifs du navigateur semblent indiquer.</p>
@@ -203,10 +203,10 @@ myAudio.buffered.end(1);   // returns 19</pre>
 
 <p>Cela devrait vous donner des résultats similaires à ce qui suit, où la barre gris clair représente la progression de la mise en mémoire tampon et la barre verte montre la progression de la lecture:</p>
 
-<p><img alt="A simple audio player with play button, seek bar and volume control, with a bar below it. The bar has a red portion to show played video, and a dark gray bar to show how much has been buffered." src="https://mdn.mozillademos.org/files/7349/bufferedprogress.png" style="display: block; height: 67px; margin: 0px auto; width: 311px;"></p>
+<p><img src="bufferedprogress.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: Voir pouvez <a href="http://jsbin.com/badimipi/1/edit">voir l'exemple en direct sur JS Bin</a>.</p>
+<p><strong>Note :</strong> Voir pouvez <a href="http://jsbin.com/badimipi/1/edit">voir l'exemple en direct sur JS Bin</a>.</p>
 </div>
 
 <h2 id="Un_petit_mot_sur_Played">Un petit mot sur Played</h2>

@@ -38,7 +38,7 @@ translation_of: Web/Guide/Audio_and_video_delivery
 <p>Le code ci-dessus va créer un lecteur audio qui tente de précharger autant d'audio que possible pour une lecture fluide.</p>
 
 <div class="note">
-<p><strong>Note&nbsp;:</strong> l'attribut <code>preload</code> peut être ignoré par certains navigateurs mobiles.</p>
+<p><strong>Note :</strong> l'attribut <code>preload</code> peut être ignoré par certains navigateurs mobiles.</p>
 </div>
 
 <p>Pour plus d'informations voir <a href="/fr/docs/Web/Apps/Build/Manipulating_media/Cross-browser_audio_basics#html5_audio_in_detail">Les bases de l'audio multi-navigateur (Audio HTML5 en détails)</a></p>
@@ -62,7 +62,7 @@ translation_of: Web/Guide/Audio_and_video_delivery
 <p>Le code ci-dessus crée un lecteur vidéo de dimensions 640x480 pixels, affichant une vignette jusqu'à ce que la vidéo soit lue. On demande à la vidéo de passer en <code>autoplay</code> (jouer automatiquement) mais d'être <code>muted</code> (en sourdine) par défaut.</p>
 
 <div class="note">
-  <p><strong>Note&nbsp;:</strong> l'attribut <code>autoplay</code> peut être ignoré par certains navigateurs mobiles et est sujet à controverse lorsqu'il est utilisé à mauvais escient. Il est recommandé de lire <a href="/fr/docs/Web/Media/Autoplay_guide">le guide à ce sujet</a> pour savoir comment l'utiliser pertinemment.</p>
+  <p><strong>Note :</strong> l'attribut <code>autoplay</code> peut être ignoré par certains navigateurs mobiles et est sujet à controverse lorsqu'il est utilisé à mauvais escient. Il est recommandé de lire <a href="/fr/docs/Web/Media/Autoplay_guide">le guide à ce sujet</a> pour savoir comment l'utiliser pertinemment.</p>
 </div>
 
 <p>Pour plus d'informations voir <a href="/fr/docs/Web/HTML/Element/video">l'article de référence sur l'élément <code>&lt;video&gt;</code></a> et <a href="/fr/docs/Web/Apps/Build/Manipulating_media/cross_browser_video_player">la page sur la création d'un lecteur vidéo multi-navigateur</a>.</p>
@@ -83,7 +83,7 @@ myAudio.play();</pre>
 <p>On définit la source de l'audio en fonction du type de fichier audio pris en charge par le navigateur, puis nous plaçons la tête de lecture à 5 secondes et essayons de lire le fichier.</p>
 
 <div class="note">
-<p><strong>Note&nbsp;:</strong> <code>play()</code> sera ignoré par certains navigateurs mobiles à moins que l'événement ne soit initié par une action de la personne visitant le site.</p>
+<p><strong>Note :</strong> <code>play()</code> sera ignoré par certains navigateurs mobiles à moins que l'événement ne soit initié par une action de la personne visitant le site.</p>
 </div>
 
 <p>Il est également possible de donner un fichier WAV encodé en base64 à l'élément <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a>, permettant ainsi de générer de l'audio à la volée&nbsp;:</p>
@@ -216,7 +216,7 @@ navigator.mediaDevices.getUserMedia({audio:true})
 <p>Les principaux encodages utilisés pour le streaming adaptatif sont <a href="/fr/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video#hls">HLS</a> et <a href="/fr/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video#mpeg-dash">MPEG-DASH</a>. MSE a été conçu avec DASH en tête, il définit les flux d'octets selon <a href="https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html">ISOBMFF</a> et <a href="https://en.wikipedia.org/wiki/M2ts">M2TS</a> (deux formats pris en charge par DASH, le dernier étant également pris en charge par HLS). DASH est probablement la meilleure option en termes de compatibilité, standard et flexibilité.</p>
 
 <div class="note">
-<p><strong>Note&nbsp;:</strong> actuellement, Safari ne prend pas en charge DASH, cependant dash.js marche sur les nouvelles versions de Safari prévues pour être publiées avec OSX Yosemite.</p>
+<p><strong>Note :</strong> actuellement, Safari ne prend pas en charge DASH, cependant dash.js marche sur les nouvelles versions de Safari prévues pour être publiées avec OSX Yosemite.</p>
 </div>
 
 <p>DASH fournit également un certain nombre de profils, y compris des profils <em>à la demande</em> simples, sans pré-traitement ni séparation des fichiers multimédia. Il existe un certain nombre de services en ligne qui vous permettront de convertir vos média en HLS ou DASH.</p>

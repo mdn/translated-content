@@ -10,9 +10,7 @@ tags:
   - WebGL
 translation_of: Web/Guide/Audio_and_video_manipulation
 ---
-<div class="summary">
 <p>La beauté du web est qu'on peut combiner différentes technologies pour en créer de nouvelles. Avoir de l'audio et vidéo nativement dans le navigateur nous donne la possibilité d'utiliser ces flux de données avec d'autres technologies comme {{htmlelement("canvas")}}, <a href="/fr/docs/Web/API/WebGL_API">WebGL</a> ou <a href="/fr/docs/Web/API/Web_Audio_API">Web Audio API</a> pour modifier le média — par exemple ajouter des effets de réverbération ou de compression à l'audio, ou encore des filtres noir &amp; blanc/sépia aux vidéos. Cet article fournit une référence pour expliquer ce que vous pouvez faire.</p>
-</div>
 
 <h2 id="Manipulation_Vidéo">Manipulation Vidéo</h2>
 
@@ -92,11 +90,11 @@ translation_of: Web/Guide/Audio_and_video_manipulation
 <p>{{EmbedLiveSample("Vidéo_et_Canvas", '100%', 550)}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: En raison de problèmes de sécurité potentiels, si votre vidéo se trouve sur un domaine différent de votre page, vous devez activer <a href="/fr/docs/Web/HTTP/CORS">CORS (Cross Origin Resource Sharing)</a> sur le serveur qui héberge la vidéo et utiliser l'attribut <code>crossorigin</code> sur la balise vidéo.</p>
+<p><strong>Note :</strong> En raison de problèmes de sécurité potentiels, si votre vidéo se trouve sur un domaine différent de votre page, vous devez activer <a href="/fr/docs/Web/HTTP/CORS">CORS (Cross Origin Resource Sharing)</a> sur le serveur qui héberge la vidéo et utiliser l'attribut <code>crossorigin</code> sur la balise vidéo.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: L'exemple présenté est un exemple minimal de manipulation vidéo avec canvas; pour plus d'efficacité, vous pouvez envisager d'utiliser requestAnimationFrame à la place de setTimeout pour les navigateurs qui le prennent en charge.</p>
+<p><strong>Note :</strong> L'exemple présenté est un exemple minimal de manipulation vidéo avec canvas; pour plus d'efficacité, vous pouvez envisager d'utiliser requestAnimationFrame à la place de setTimeout pour les navigateurs qui le prennent en charge.</p>
 </div>
 
 <h3 id="Vidéo_e_WebGL">Vidéo e WebGL</h3>
@@ -108,7 +106,7 @@ translation_of: Web/Guide/Audio_and_video_manipulation
 <p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez trouver le <a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8">code source de cette démo sur GitHub</a> (<a href="https://mdn.github.io/webgl-examples/tutorial/sample8/">la voir en direct</a> aussi).</p>
+<p><strong>Note :</strong> Vous pouvez trouver le <a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8">code source de cette démo sur GitHub</a> (<a href="https://mdn.github.io/webgl-examples/tutorial/sample8/">la voir en direct</a> aussi).</p>
 </div>
 
 <h3 id="Vitesse_de_lecture">Vitesse de lecture</h3>
@@ -124,10 +122,9 @@ translation_of: Web/Guide/Audio_and_video_manipulation
 <pre class="brush: js">var myVideo = document.getElementById('my-video');
 myVideo.playbackRate = 2;</pre>
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+<h4>Code jouable</h4>
 
-<pre class="brush: html">&lt;video id="my-video" controls="true" width="480" height="270"&gt;
+<pre class="brush: html hidden">&lt;video id="my-video" controls="true" width="480" height="270"&gt;
   &lt;source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm"&gt;
   &lt;source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4"&gt;
 &lt;/video&gt;
@@ -140,7 +137,7 @@ var myVideo = document.getElementById('my-video');
 myVideo.playbackRate = 2;&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var edit = document.getElementById('edit');
 var code = textarea.value;
@@ -161,16 +158,15 @@ edit.addEventListener('click', function() {
 textarea.addEventListener('input', setPlaybackRate);
 window.addEventListener('load', setPlaybackRate);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 425) }}</p>
-
-<div class="note">
-<p><strong>Note</strong>: Essayez l' <a href="http://jsbin.com/qomuvefu/2/edit">exemple playbackRate</a> en direct.</p>
-</div>
+<p>{{ EmbedLiveSample('Code jouable', 700, 425) }}</p>
 
 <div class="note">
-<p><strong>Note</strong> : <code>playbackRate</code> marche avec les éléments <code>&lt;audio&gt;</code> et <code><code>&lt;video&gt;</code></code>; cependant, dans les deux cas, la vitesse change mais pas la hauteur du son. Pour manipuler la hauteur du son, vous devez utliliser l'API Web Audio — voir la propriété {{domxref("AudioBufferSourceNode.playbackRate")}}.</p>
+<p><strong>Note :</strong> Essayez l' <a href="http://jsbin.com/qomuvefu/2/edit">exemple playbackRate</a> en direct.</p>
+</div>
+
+<div class="note">
+<p><strong>Note :</strong> <code>playbackRate</code> marche avec les éléments <code>&lt;audio&gt;</code> et <code><code>&lt;video&gt;</code></code>; cependant, dans les deux cas, la vitesse change mais pas la hauteur du son. Pour manipuler la hauteur du son, vous devez utliliser l'API Web Audio — voir la propriété {{domxref("AudioBufferSourceNode.playbackRate")}}.</p>
 </div>
 
 <h2 id="Manipulation_Audio">Manipulation Audio</h2>
@@ -209,10 +205,9 @@ filter.type = "lowshelf";
 filter.frequency.value = 1000;
 filter.gain.value = 25;</pre>
 
-<div class="hidden">
-<h6 id="Playable_code_2" name="Playable_code_2">Playable code</h6>
+<h4>Code jouable 2</h4>
 
-<pre class="brush: html">&lt;video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous"&gt;
+<pre class="brush: html hidden">&lt;video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous"&gt;
   &lt;source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm"&gt;
   &lt;source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4"&gt;
 &lt;/video&gt;
@@ -225,7 +220,7 @@ filter.type = "lowshelf";
 filter.frequency.value = 1000;
 filter.gain.value = 25;&lt;/textarea&gt;</pre>
 
-<pre class="brush: js">var context     = new AudioContext(),
+<pre class="brush: js hidden">var context     = new AudioContext(),
     audioSource = context.createMediaElementSource(document.getElementById("my-video")),
     filter      = context.createBiquadFilter();
 audioSource.connect(filter);
@@ -252,12 +247,12 @@ edit.addEventListener('click', function() {
 textarea.addEventListener('input', setFilter);
 window.addEventListener('load', setFilter);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', 700, 425) }}</p>
+
+<p>{{ EmbedLiveSample('Code_jouable_2', 700, 425) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: À moins que <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> ne soit activé, vous devrez pour éviter les problèmes de sécurité placer la vidéo sur le même domaine que votre code.</p>
+<p><strong>Note :</strong> À moins que <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> ne soit activé, vous devrez pour éviter les problèmes de sécurité placer la vidéo sur le même domaine que votre code.</p>
 </div>
 
 <p>Les filtres pouvant être appliqués sont:</p>
@@ -274,7 +269,7 @@ window.addEventListener('load', setFilter);
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Voir {{domxref("BiquadFilterNode")}} pour plus d'informations.</p>
+<p><strong>Note :</strong> Voir {{domxref("BiquadFilterNode")}} pour plus d'informations.</p>
 </div>
 
 <h3 id="Convolutions_et_Impulsions">Convolutions et Impulsions</h3>
@@ -290,11 +285,11 @@ source.connect(convolver);
 convolver.connect(context.destination);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Voir ce <a href="https://codepen.io/DonKarlssonSan/pen/doVKRE">Codepen</a> pour un exemple appliqué.</p>
+<p><strong>Note :</strong> Voir ce <a href="https://codepen.io/DonKarlssonSan/pen/doVKRE">Codepen</a> pour un exemple appliqué.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Voir {{domxref("ConvolverNode")}} pour plus d'informations.</p>
+<p><strong>Note :</strong> Voir {{domxref("ConvolverNode")}} pour plus d'informations.</p>
 </div>
 
 <h3 id="Audio_dans_l'espace">Audio dans l'espace</h3>
@@ -316,11 +311,11 @@ source.start(0);
 context.listener.setPosition(0, 0, 0);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez trouver un <a href="https://github.com/mdn/webaudio-examples/tree/master/panner-node">exemple sur notre repo GitHub</a> (le <a href="https://mdn.github.io/webaudio-examples/panner-node/">voir en direct</a> aussi).</p>
+<p><strong>Note :</strong> Vous pouvez trouver un <a href="https://github.com/mdn/webaudio-examples/tree/master/panner-node">exemple sur notre repo GitHub</a> (le <a href="https://mdn.github.io/webaudio-examples/panner-node/">voir en direct</a> aussi).</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Voir {{domxref("PannerNode")}} pour plus d'informations.</p>
+<p><strong>Note :</strong> Voir {{domxref("PannerNode")}} pour plus d'informations.</p>
 </div>
 
 <h2 id="Codecs_JavaScript">Codecs JavaScript</h2>
@@ -339,7 +334,7 @@ context.listener.setPosition(0, 0, 0);</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Sur AudioCogs, vous pouvez <a href="http://audiocogs.org/codecs/">essayer quelques démos</a>; Audiocogs fournit également un Framework, <a href="http://audiocogs.org/codecs/">Aurora.js</a>, qui est destiné à vous aider à créer vos propres codecs en JavaScript.</p>
+<p><strong>Note :</strong> Sur AudioCogs, vous pouvez <a href="http://audiocogs.org/codecs/">essayer quelques démos</a>; Audiocogs fournit également un Framework, <a href="http://audiocogs.org/codecs/">Aurora.js</a>, qui est destiné à vous aider à créer vos propres codecs en JavaScript.</p>
 </div>
 
 <h2 id="Tutoriels">Tutoriels</h2>
