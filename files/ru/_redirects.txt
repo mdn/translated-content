@@ -413,6 +413,7 @@
 /ru/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes	/ru/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
 /ru/docs/Web/CSS/CSS_Grid_Layout/Грид-области	/ru/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 /ru/docs/Web/CSS/CSS_Grid_Layout/Расположение_элементов_по_грид-линиям_с_помощью_CSS_Grid	/ru/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
+/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/ru/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /ru/docs/Web/CSS/CSS_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 /ru/docs/Web/CSS/CSS_animated_properties	/ru/docs/Web/CSS
 /ru/docs/Web/CSS/CSS_Селекторы	/ru/docs/Web/CSS/CSS_Selectors

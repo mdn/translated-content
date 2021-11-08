@@ -523,6 +523,7 @@
 /ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃의_기본_개념	/ko/docs/Web/CSS/CSS_Grid_Layout/Basic_concepts_of_grid_layout
 /ko/docs/Web/CSS/CSS_Grid_Layout/그리드_템플릿_영역	/ko/docs/Web/CSS/CSS_Grid_Layout/Grid_template_areas
 /ko/docs/Web/CSS/CSS_Grid_Layout/이름이_주어진_그리드_라인을_이용한_레이아웃	/ko/docs/Web/CSS/CSS_Grid_Layout/Layout_using_named_grid_lines
+/ko/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/ko/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /ko/docs/Web/CSS/CSS_Masks	/ko/docs/Web/CSS/CSS_Masking
 /ko/docs/Web/CSS/CSS_Reference	/ko/docs/Web/CSS/Reference
 /ko/docs/Web/CSS/CSS_User_Interface	/ko/docs/Web/CSS/CSS_Basic_User_Interface

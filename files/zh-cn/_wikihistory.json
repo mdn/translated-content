@@ -26172,6 +26172,15 @@
       "ZZES_REN"
     ]
   },
+  "Web/CSS/CSS_Counter_Styles/Using_CSS_counters": {
+    "modified": "2019-03-23T23:28:24.261Z",
+    "contributors": [
+      "Ende93",
+      "Jiang-Xuan",
+      "Jiasm",
+      "Nightingale"
+    ]
+  },
   "Web/CSS/CSS_Flexible_Box_Layout": {
     "modified": "2019-09-20T14:46:03.892Z",
     "contributors": [
@@ -26509,15 +26518,6 @@
     "contributors": [
       "freshSep",
       "Wenbin"
-    ]
-  },
-  "Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters": {
-    "modified": "2019-03-23T23:28:24.261Z",
-    "contributors": [
-      "Ende93",
-      "Jiang-Xuan",
-      "Jiasm",
-      "Nightingale"
     ]
   },
   "Web/CSS/CSS_Logical_Properties": {

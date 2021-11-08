@@ -1722,6 +1722,7 @@
 /zh-CN/docs/Web/CSS/CSS_Flow_Layout/在Flow中和Flow之外	/zh-CN/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes	/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/利用CSS网格布局实现常用布局	/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
+/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/zh-CN/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_conceptsjie	/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts
 /zh-CN/docs/Web/CSS/CSS_Logical_Properties/浮动和定位	/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning
 /zh-CN/docs/Web/CSS/CSS_Selectors/Comparison_with_XPath	/zh-CN/docs/Web/XPath/Comparison_with_CSS_selectors
@@ -1892,7 +1893,7 @@
 /zh-CN/docs/Web/Guide/CSS	/zh-CN/docs/Learn/CSS
 /zh-CN/docs/Web/Guide/CSS/CSS_Image_Sprites	/zh-CN/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
 /zh-CN/docs/Web/Guide/CSS/Consistent_list_indentation	/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
-/zh-CN/docs/Web/Guide/CSS/Counters	/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/zh-CN/docs/Web/Guide/CSS/Counters	/zh-CN/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /zh-CN/docs/Web/Guide/CSS/Getting_started/Content	/zh-CN/docs/Learn/CSS/Howto/Generated_content
 /zh-CN/docs/Web/Guide/CSS/Getting_started/Media	/zh-CN/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /zh-CN/docs/Web/Guide/CSS/Getting_started/SVG_and_CSS	/zh-CN/docs/Web/SVG/Tutorial/SVG_and_CSS

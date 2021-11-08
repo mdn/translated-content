@@ -8152,6 +8152,13 @@
       "DeadIntegral"
     ]
   },
+  "Web/CSS/CSS_Counter_Styles/Using_CSS_counters": {
+    "modified": "2020-06-15T04:03:26.893Z",
+    "contributors": [
+      "lee.juyoung.1978",
+      "citrus.alice"
+    ]
+  },
   "Web/CSS/CSS_Device_Adaptation": {
     "modified": "2019-04-26T08:58:25.376Z",
     "contributors": [
@@ -8330,13 +8337,6 @@
       "alattalatta",
       "teoli",
       "Ioseph"
-    ]
-  },
-  "Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters": {
-    "modified": "2020-06-15T04:03:26.893Z",
-    "contributors": [
-      "lee.juyoung.1978",
-      "citrus.alice"
     ]
   },
   "Web/CSS/CSS_Logical_Properties": {

@@ -251,7 +251,7 @@
 /ja/docs/CSS/Class_selectors	/ja/docs/Web/CSS/Class_selectors
 /ja/docs/CSS/Class_selectors-redirect-1	/ja/docs/Web/CSS/Class_selectors
 /ja/docs/CSS/Comments	/ja/docs/Web/CSS/Comments
-/ja/docs/CSS/Counters	/ja/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/ja/docs/CSS/Counters	/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /ja/docs/CSS/Descendant_selectors	/ja/docs/Web/CSS/Descendant_combinator
 /ja/docs/CSS/General_sibling_selectors	/ja/docs/Web/CSS/General_sibling_combinator
 /ja/docs/CSS/Getting_Started	/ja/docs/Learn/CSS
@@ -3647,6 +3647,7 @@
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 /ja/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained	/ja/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
+/ja/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /ja/docs/Web/CSS/CSS_Masks	/ja/docs/Web/CSS/CSS_Masking
 /ja/docs/Web/CSS/CSS_Reference	/ja/docs/Web/CSS/Reference
 /ja/docs/Web/CSS/CSS_Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
@@ -3860,7 +3861,7 @@
 /ja/docs/Web/Guide/API/Vibration	/ja/docs/Web/API/Vibration_API
 /ja/docs/Web/Guide/Audio_and_video_delivery/H.264_support_in_Firefox	/ja/docs/Web/Guide/Audio_and_video_delivery
 /ja/docs/Web/Guide/CSS	/ja/docs/Learn/CSS
-/ja/docs/Web/Guide/CSS/Counters	/ja/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/ja/docs/Web/Guide/CSS/Counters	/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /ja/docs/Web/Guide/CSS/Flexible_boxes	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /ja/docs/Web/Guide/CSS/Getting_started	/ja/docs/Learn/CSS
 /ja/docs/Web/Guide/CSS/Getting_started/Boxes	/ja/docs/Learn/CSS/Building_blocks/The_box_model
@@ -4656,7 +4657,7 @@
 /ja/docs/addons.mozilla.org_(AMO)_API_Developers'_Guide	/ja/docs/Mozilla/Add-ons
 /ja/docs/ant_script_to_assemble_an_extension	/ja/docs/orphaned/ant_script_to_assemble_an_extension
 /ja/docs/console	/ja/docs/Web/API/console
-/ja/docs/counters	/ja/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/ja/docs/counters	/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /ja/docs/data_URIs	/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 /ja/docs/dummySlug/Reference	/ja/docs/Web/JavaScript/Reference
 /ja/docs/dummySlug/Reference/About	/ja/docs/Web/JavaScript/Reference/About

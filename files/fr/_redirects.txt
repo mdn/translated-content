@@ -408,7 +408,7 @@
 /fr/docs/CSS/Comprendre_z-index/Ajout_de_z-index	/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 /fr/docs/CSS/Comprendre_z-index/Empilement_et_float	/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 /fr/docs/CSS/Comprendre_z-index/Empilement_sans_z-index	/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
-/fr/docs/CSS/Compteurs_CSS	/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/fr/docs/CSS/Compteurs_CSS	/fr/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /fr/docs/CSS/FAQ	/fr/docs/Learn/CSS/Howto/CSS_FAQ
 /fr/docs/CSS/Feuilles_de_style_alternatives	/fr/docs/Web/CSS/Alternative_style_sheets
 /fr/docs/CSS/Fonds_multiples	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
@@ -545,10 +545,10 @@
 /fr/docs/CSS/column-span	/fr/docs/Web/CSS/column-span
 /fr/docs/CSS/column-width	/fr/docs/Web/CSS/column-width
 /fr/docs/CSS/columns	/fr/docs/Web/CSS/columns
-/fr/docs/CSS/compteur	/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/fr/docs/CSS/compteur	/fr/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /fr/docs/CSS/computed_value	/fr/docs/Web/CSS/computed_value
 /fr/docs/CSS/content	/fr/docs/Web/CSS/content
-/fr/docs/CSS/counter	/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/fr/docs/CSS/counter	/fr/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /fr/docs/CSS/counter-increment	/fr/docs/Web/CSS/counter-increment
 /fr/docs/CSS/counter-reset	/fr/docs/Web/CSS/counter-reset
 /fr/docs/CSS/cursor	/fr/docs/Web/CSS/cursor
@@ -849,7 +849,7 @@
 /fr/docs/Comprendre_z-index/Ajout_de_z-index	/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 /fr/docs/Comprendre_z-index/Empilement_et_float	/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 /fr/docs/Comprendre_z-index/Empilement_sans_z-index	/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
-/fr/docs/Compteurs_CSS	/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/fr/docs/Compteurs_CSS	/fr/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /fr/docs/Consistent_List_Indentation	/fr/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 /fr/docs/Console_JavaScript	/fr/docs/Tools/Browser_Console
 /fr/docs/Construire_une_extension	/fr/docs/Mozilla/Add-ons
@@ -4011,8 +4011,9 @@
 /fr/docs/Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_grille	/fr/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 /fr/docs/Web/CSS/CSS_Images/Sprites_CSS	/fr/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
 /fr/docs/Web/CSS/CSS_Lists	/fr/docs/Web/CSS/CSS_Lists_and_Counters
-/fr/docs/Web/CSS/CSS_Lists/Compteurs_CSS	/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/fr/docs/Web/CSS/CSS_Lists/Compteurs_CSS	/fr/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /fr/docs/Web/CSS/CSS_Lists/Indentation_homogène_des_listes	/fr/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
+/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/fr/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /fr/docs/Web/CSS/CSS_Logical_Properties/Concepts_de_base	/fr/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts
 /fr/docs/Web/CSS/CSS_Logical_Properties/Dimensionnement	/fr/docs/Web/CSS/CSS_Logical_Properties/Sizing
 /fr/docs/Web/CSS/CSS_Logical_Properties/Propriétés_logiques_flottements_positionnement	/fr/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning
@@ -4054,7 +4055,7 @@
 /fr/docs/Web/CSS/Comprendre_z-index/Exemple_1	/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 /fr/docs/Web/CSS/Comprendre_z-index/Exemple_2	/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
 /fr/docs/Web/CSS/Comprendre_z-index/Exemple_3	/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
-/fr/docs/Web/CSS/Compteurs_CSS	/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/fr/docs/Web/CSS/Compteurs_CSS	/fr/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /fr/docs/Web/CSS/Concepts_viewport	/fr/docs/Web/CSS/Viewport_concepts
 /fr/docs/Web/CSS/Contexte_de_formatage_en_ligne	/fr/docs/Web/CSS/Inline_formatting_context
 /fr/docs/Web/CSS/Couleurs_CSS	/fr/docs/conflicting/Web/CSS/CSS_Color
@@ -4180,7 +4181,7 @@
 /fr/docs/Web/CSS/clamp	/fr/docs/Web/CSS/clamp()
 /fr/docs/Web/CSS/conic-gradient	/fr/docs/orphaned/Web/CSS/conic-gradient()
 /fr/docs/Web/CSS/conic-gradient()	/fr/docs/orphaned/Web/CSS/conic-gradient()
-/fr/docs/Web/CSS/counter	/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/fr/docs/Web/CSS/counter	/fr/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /fr/docs/Web/CSS/counter_fonction	/fr/docs/Web/CSS/counter()
 /fr/docs/Web/CSS/counters	/fr/docs/Web/CSS/counters()
 /fr/docs/Web/CSS/cross-fade	/fr/docs/Web/CSS/cross-fade()
