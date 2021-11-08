@@ -3,106 +3,77 @@ title: padding-right
 slug: Web/CSS/padding-right
 tags:
   - CSS
-  - CSS Padding
-  - CSS Property
-  - Reference
-  - 'recipe:css-property'
+  - CSS パディング
+  - CSS プロパティ
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.padding-right
 translation_of: Web/CSS/padding-right
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>padding-right</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、要素の<a href="/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding-area">パディング領域</a>における右側の幅を設定します。</p>
+**`padding-right`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[パディング領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#パディング領域)における右側の幅を設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/padding-right.html")}}</div>
+{{EmbedInteractiveExample("pages/css/padding-right.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+要素のパディング領域とは、コンテンツと境界との間の空間のことです。
 
-<p>要素のパディング領域とは、コンテンツと境界線の間の領域のことです。</p>
+> **Note:** {{cssxref("padding")}} プロパティは、単一の宣言で要素の四方のパディングをすべて設定することができます。
 
-<div class="note">
-<p><strong>注:</strong> {{cssxref("padding")}} プロパティは、単一の宣言で要素の四方のパディングをすべて設定することができます。</p>
-</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* &lt;length&gt; の値 */
+```css
+/* <length> の値 */
 padding-right: 0.5em;
 padding-right: 0;
 padding-right: 2cm;
 
-/* &lt;percentage&gt; の値 */
+/* <percentage> の値 */
 padding-right: 10%;
 
 /* グローバル値 */
 padding-right: inherit;
 padding-right: initial;
+padding-right: revert;
 padding-right: unset;
-</pre>
+```
 
-<p><code>padding-right</code> プロパティは、以下のリスト内から選択した値で指定されます。マージンとは異なり、パディングには負の数は使用できません。</p>
+`padding-right` プロパティは、以下のリストから選択した値で指定されます。マージンとは異なり、パディングには負の数は使用できません。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>固定値によるパディングの寸法です。負の数であってはいけません。</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>包含ブロックの width に対するパーセント値によるパディングの寸法です。負の数であってはいけません。</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : パディングの寸法を固定値で表したものです。負の数であってはいけません。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : パディングの寸法を包含ブロックの*幅*に対するパーセント値で表したものです。負の数であってはいけません。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Setting_right_padding_using_pixels_and_percentages" name="Setting_right_padding_using_pixels_and_percentages">右パディングをピクセル数とパーセント値で設定</h3>
+### 右パディングをピクセル数とパーセント値で設定
 
-<pre class="brush: css notranslate">.content { padding-right: 5%; }
+```css
+.content { padding-right: 5%; }
 .sidebox { padding-right: 10px; }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#propdef-padding-right', 'padding-right')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td>変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#padding-properties', 'padding-right')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{Specname('CSS1', '#padding-right', 'padding-right')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.padding-right")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS 基本ボックスモデルの紹介</a></li>
- <li>{{cssxref("padding-top")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}} および {{cssxref("padding")}} 一括指定</li>
- <li>対応付けられる論理的プロパティ: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}} および一括指定の {{cssxref("padding-block")}} と {{cssxref("padding-inline")}}</li>
-</ul>
+- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- {{cssxref("padding-top")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}} および {{cssxref("padding")}} 一括指定
+- 対応付けられる論理的プロパティ: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}} および一括指定の {{cssxref("padding-block")}} と {{cssxref("padding-inline")}}
