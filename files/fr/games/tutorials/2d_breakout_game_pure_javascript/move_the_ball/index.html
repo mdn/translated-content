@@ -28,14 +28,14 @@ original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball
 
 <p>Supprimez tout le JavaScript que vous avez actuellement dans votre HTML à l'exception des deux premières lignes puis ajoutez ce qui suit en dessous de ces lignes. La fonction <code>draw()</code> sera exécutée toutes les 10 millisecondes (environ) grâce à <code>setInterval</code> :</p>
 
-<pre class="brush: js notranslate">function draw() {
+<pre class="brush: js">function draw() {
   // le code pour dessiner
 }
 setInterval(draw, 10);</pre>
 
 <p>Grâce à la nature infinie de <code>setInterval</code>, la fonction <code>draw()</code> sera appelée toutes les 10 millisecondes, sans arrêt jusqu'à ce que nous y mettions un terme. Maintenant, dessinons la balle — ajoutons le code ci-dessous à notre fonction <code>draw()</code> :</p>
 
-<pre class="brush: js notranslate">ctx.beginPath();
+<pre class="brush: js">ctx.beginPath();
 ctx.arc(50, 50, 10, 0, Math.PI*2);
 ctx.fillStyle = "#0095DD";
 ctx.fill();
@@ -50,13 +50,13 @@ ctx.closePath();
 
 <p>Ajoutez d'abord les deux lignes suivantes au-dessus de votre fonction <code>draw()</code> pour définir <code>x</code> et <code>y</code> :</p>
 
-<pre class="brush: js notranslate">var x = canvas.width/2;
+<pre class="brush: js">var x = canvas.width/2;
 var y = canvas.height-30;
 </pre>
 
 <p>Ensuite, mettez à jour la fonction <code>draw()</code> afin d'utiliser les variables x et y dans la méthode {{domxref("CanvasRenderingContext2D.arc()","arc()")}} , comme indiqué dans la ligne mise en évidence ci-dessous :</p>
 
-<pre class="brush: js; highlight:[3] notranslate">function draw() {
+<pre class="brush: js; highlight:[3]">function draw() {
   ctx.beginPath();
 <strong>  ctx.arc(x, y, 10, 0, Math.PI*2);</strong>
   ctx.fillStyle = "#0095DD";
@@ -67,13 +67,13 @@ var y = canvas.height-30;
 
 <p>Nous voici à la partie importante : nous voulons ajouter une valeur à <code>x</code> et <code>y</code> après que chaque image ait été dessinée afin de faire croire que la balle bouge. On définit ces valeurs comme <code>dx</code> et <code>dy</code> avec comme valeurs respectives 2 et -2. Ajoutez le code après la déclaration des variables <code>x</code> et <code>y</code> :</p>
 
-<pre class="brush: js notranslate">var dx = 2;
+<pre class="brush: js">var dx = 2;
 var dy = -2;
 </pre>
 
 <p>La dernière chose à faire est de mettre à jour <code>x</code> et <code>y</code> avec nos variables <code>dx</code> et  <code>dy</code> sur chaque image, de sorte que la balle sera peinte dans la nouvelle position à chaque nouvelle image. Ajoutez les deux nouvelles lignes, indiquées ci-dessous, à votre fonction <code>draw()</code> :</p>
 
-<pre class="brush: js notranslate">function draw() {
+<pre class="brush: js">function draw() {
   ctx.beginPath();
   ctx.arc(x, y, 10, 0, Math.PI*2);
   ctx.fillStyle = "#0095DD";
@@ -93,7 +93,7 @@ var dy = -2;
 
 <p>Ajoutez la nouvelle ligne en surbrillance ci-dessous à la fonction <code>draw()</code> :</p>
 
-<pre class="brush: js; highlight:[2] notranslate">function draw() {
+<pre class="brush: js; highlight:[2]">function draw() {
 <strong>  ctx.clearRect(0, 0, canvas.width, canvas.height);</strong>
   ctx.beginPath();
   ctx.arc(x, y, 10, 0, Math.PI*2);
@@ -113,7 +113,7 @@ var dy = -2;
 
 <p>Remplacez la fonction <code>draw()</code> existante par les deux fonctions suivantes :</p>
 
-<pre class="brush: js notranslate">function drawBall() {
+<pre class="brush: js">function drawBall() {
   ctx.beginPath();
   ctx.arc(x, y, 10, 0, Math.PI*2);
   ctx.fillStyle = "#0095DD";

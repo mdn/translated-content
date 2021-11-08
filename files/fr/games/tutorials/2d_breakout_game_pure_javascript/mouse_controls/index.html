@@ -26,13 +26,13 @@ original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls
 
 <p>Il est encore plus facile de détecter les mouvements de la souris que les pressions sur les touches : il suffit d'écouter l'évènement {{event("mousemove")}}. Ajouter la ligne suivante au même endroit que les autres écouteurs d'événement, juste en dessous de <code>l'évènement keyup</code> :</p>
 
-<pre class="brush: js notranslate">document.addEventListener("mousemove", mouseMoveHandler, false);</pre>
+<pre class="brush: js">document.addEventListener("mousemove", mouseMoveHandler, false);</pre>
 
 <h2 id="Lier_le_mouvement_de_la_raquette_au_mouvement_de_la_souris">Lier le mouvement de la raquette au mouvement de la souris</h2>
 
 <p>Nous pouvons mettre à jour la position de la raquette en fonction des coordonnées du pointeur — c'est exactement ce que fera la fonction de manipulation suivante. Ajoutez la fonction ci-dessous à votre code, sous la dernière ligne que vous avez ajoutée :</p>
 
-<pre class="brush: js notranslate">function mouseMoveHandler(e) {
+<pre class="brush: js">function mouseMoveHandler(e) {
     var relativeX = e.clientX - canvas.offsetLeft;
     if(relativeX &gt; 0 &amp;&amp; relativeX &lt; canvas.width) {
         paddleX = relativeX - paddleWidth/2;

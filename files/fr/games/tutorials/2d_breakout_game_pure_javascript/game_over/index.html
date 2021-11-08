@@ -26,7 +26,7 @@ original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over
 
 <p>Essayons d'intégrer une fin de partie dans le jeu . Voyons une partie du code de la troisième leçon, où nous faisions rebondir la balle contre les murs :</p>
 
-<pre class="brush: js notranslate">if(x + dx &gt; canvas.width-ballRadius || x + dx &lt; ballRadius) {
+<pre class="brush: js">if(x + dx &gt; canvas.width-ballRadius || x + dx &lt; ballRadius) {
     dx = -dx;
 }
 
@@ -40,19 +40,19 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
 
 <p>Tout d'abord remplacer l'appel initial à <code>setInterval()</code></p>
 
-<pre class="notranslate">setInterval(draw, 10);
+<pre class="brush: js">setInterval(draw, 10);
 </pre>
 
 <p>par </p>
 
-<pre class="notranslate">var interval = setInterval(draw, 10);
+<pre class="brush: js">var interval = setInterval(draw, 10);
 </pre>
 
 
 
 <p>Puis remplacez la seconde instruction <code>if</code> par le code suivant:</p>
 
-<pre class="brush: js notranslate">if(y + dy &lt; ballRadius) {
+<pre class="brush: js">if(y + dy &lt; ballRadius) {
     dy = -dy;
 } else if(y + dy &gt; canvas.height-ballRadius) {
     alert("GAME OVER");
@@ -64,7 +64,7 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
 
 <p>La dernière chose à faire dans cette leçon est de créer une sorte de détection de collision entre la raquette et la balle, de sorte qu'elle puisse rebondir et revenir dans la zone de jeu. La chose la plus facile à faire est de vérifier si le centre de la balle se  trouve entre les bords droit et gauche du paddle. Mettez à jour le dernier bout de code que vous venez de modifier, comme-ci dessous :</p>
 
-<pre class="brush: js notranslate">if(y + dy &lt; ballRadius) {
+<pre class="brush: js">if(y + dy &lt; ballRadius) {
     dy = -dy;
 } else if(y + dy &gt; canvas.height-ballRadius) {
     if(x &gt; paddleX &amp;&amp; x &lt; paddleX + paddleWidth) {

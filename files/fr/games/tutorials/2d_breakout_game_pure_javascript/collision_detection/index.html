@@ -28,7 +28,7 @@ original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisi
 <p><br>
  Pour commencer, nous voulons créer une fonction de détection de collision qui va parcourir toutes les briques et comparer la position de chaque brique avec les coordonnées de la balle lorsque chaque image est dessinée. Pour une meilleure lisibilité du code, nous allons définir la variable <code>b</code> pour stocker l’objet brique dans la boucle de la détection de collision:</p>
 
-<pre class="brush: js notranslate">function collisionDetection() {
+<pre class="brush: js">function collisionDetection() {
     for(var c=0; c&lt;brickColumnCount; c++) {
         for(var r=0; r&lt;brickRowCount; r++) {
             var b = bricks[c][r];
@@ -48,7 +48,7 @@ original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisi
 
 <p>Écrivons cela sous forme de code:</p>
 
-<pre class="brush: js notranslate">function collisionDetection() {
+<pre class="brush: js">function collisionDetection() {
     for(var c=0; c&lt;brickColumnCount; c++) {
         for(var r=0; r&lt;brickRowCount; r++) {
             var b = bricks[c][r];
@@ -65,7 +65,7 @@ original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisi
 
 <p>Le code ci-dessus fonctionnera comme vous le souhaitez et la balle changera de direction. Le problème est que les briques restent là où elles sont. Nous devons trouver un moyen de nous débarrasser de celles que nous avons déjà touchées avec la balle. Nous pouvons le faire en ajoutant un paramètre supplémentaire pour indiquer si nous voulons ou non afficher chaque brique à l’écran. Dans la partie du code où nous initialisons les briques, ajoutons une propriété <code>status</code> à chaque brique. Mettez à jour la partie suivante du code comme indiqué par la ligne en évidence:</p>
 
-<pre class="brush: js; highlight:[5] notranslate">var bricks = [];
+<pre class="brush: js; highlight:[5]">var bricks = [];
 for(var c=0; c&lt;brickColumnCount; c++) {
     bricks[c] = [];
     for(var r=0; r&lt;brickRowCount; r++) {
@@ -75,7 +75,7 @@ for(var c=0; c&lt;brickColumnCount; c++) {
 
 <p>Nous vérifierons ensuite la valeur de la propriété <code>status</code> de chaque brique dans la fonction <code>drawBricks</code><code>()</code> avant de la dessiner. Si <code>status</code> vaut <code>1</code>, dessinez-la, mais s'il vaut <code>0</code>, la balle a été touchée et nous ne voulons pas la voir sur l'écran. Mettez à jour votre fonction <code>drawBricks</code><code>()</code> comme suit:</p>
 
-<pre class="brush: js; highlight:[4,5,6,7,8,9,10,11,12,13,14] notranslate">function drawBricks() {
+<pre class="brush: js; highlight:[4,5,6,7,8,9,10,11,12,13,14]">function drawBricks() {
     for(var c=0; c&lt;brickColumnCount; c++) {
         for(var r=0; r&lt;brickRowCount; r++) {
             <strong>if(bricks[c][r].status == 1) {</strong>
@@ -97,7 +97,7 @@ for(var c=0; c&lt;brickColumnCount; c++) {
 
 <p>Nous devons maintenant impliquer la propriété de <code>status</code> de brique dans la fonction <code>collisionDetection()</code>: si la brique est active (son statut est <code>1</code>), nous vérifierons si une collision a lieu ; Si une collision se produit, nous allons définir l'état de la brique donnée sur <code>0</code> afin qu'elle ne soit pas affichée à l'écran. Mettez à jour votre fonction <code>collisionDetection()</code> comme indiqué ci-dessous:</p>
 
-<pre class="brush: js; highlight:[5,6,7,8,9,10] notranslate">function collisionDetection() {
+<pre class="brush: js; highlight:[5,6,7,8,9,10]">function collisionDetection() {
     for(var c=0; c&lt;brickColumnCount; c++) {
         for(var r=0; r&lt;brickRowCount; r++) {
             var b = bricks[c][r];
@@ -115,7 +115,7 @@ for(var c=0; c&lt;brickColumnCount; c++) {
 
 <p>La dernière chose à faire est d’ajouter un appel à la fonction <code>collisionDetection ()</code> à notre fonction <code>draw()</code> principale. Ajoutez la ligne suivante à la fonction <code>draw ()</code>, juste en dessous de l'appel <code>drawPaddle()</code>:</p>
 
-<pre class="brush: js notranslate">collisionDetection();
+<pre class="brush: js">collisionDetection();
 </pre>
 
 <h2 id="Comparez_votre_code">Comparez votre code</h2>

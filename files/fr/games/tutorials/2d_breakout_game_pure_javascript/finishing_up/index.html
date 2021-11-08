@@ -26,11 +26,11 @@ original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/finitions
 
 <p>Mettre en œuvre des vies est assez simple. Ajoutons d'abord une variable pour stocker le nombre de vies à l'endroit où nous avons déclaré nos autres variables :</p>
 
-<pre class="brush: js notranslate">var lives = 3;</pre>
+<pre class="brush: js">var lives = 3;</pre>
 
 <p>L'affichage du compteur de vie est similaire à celui du compteur de points — ajoutez la fonction suivante à votre code, sous la fonction <code>drawScore()</code> :</p>
 
-<pre class="brush: js notranslate">function drawLives() {
+<pre class="brush: js">function drawLives() {
     ctx.font = "16px Arial";
     ctx.fillStyle = "#0095DD";
     ctx.fillText("Lives: "+lives, canvas.width-65, 20);
@@ -38,7 +38,7 @@ original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/finitions
 
 <p>Au lieu de mettre immédiatement fin au jeu, nous allons réduire le nombre de vies jusqu'à ce qu'il n'y en ait plus. Nous pouvons également réinitialiser les positions du ballon et de la raquette lorsque le joueur commence sa prochaine vie. Ainsi, dans la fonction <code>draw()</code>, remplacez les trois lignes suivantes :</p>
 
-<pre class="brush: js notranslate">alert("GAME OVER");
+<pre class="brush: js">alert("GAME OVER");
 document.location.reload();
 clearInterval(interval); // Needed for Chrome to end game</pre>
 
@@ -46,7 +46,7 @@ clearInterval(interval); // Needed for Chrome to end game</pre>
 
 <p>Nous pouvons ainsi y ajouter une logique un peu plus complexe, comme indiqué ci-dessous :</p>
 
-<pre class="brush: js notranslate">lives--;
+<pre class="brush: js">lives--;
 if(!lives) {
     alert("GAME OVER");
     document.location.reload();
@@ -66,27 +66,27 @@ else {
 
 <p>Maintenant, vous devez ajouter un appel à <code>drawLives()</code> dans la fonction <code>draw()</code> et l'ajouter sous l'appel <code>drawScore()</code>.</p>
 
-<pre class="brush: js notranslate">drawLives();
+<pre class="brush: js">drawLives();
 </pre>
 
 <h2 id="Améliorer_le_rendu_avec_requestAnimationFrame">Améliorer le rendu avec requestAnimationFrame()</h2>
 
 <p>Maintenant, travaillons sur quelque chose qui n'est pas lié à la mécanique du jeu, mais à la façon dont il est rendu. {{domxref("window.requestAnimationFrame", "requestAnimationFrame")}} aide le navigateur à rendre le jeu mieux que la cadence fixe que nous avons actuellement mise en place en utilisant {{domxref("windowTimers.setInterval()", "setInterval()")}}. Remplacez la ligne suivante :</p>
 
-<pre class="brush: js notranslate">var interval = setInterval(draw, 10);</pre>
+<pre class="brush: js">var interval = setInterval(draw, 10);</pre>
 
 <p>avec simplement :</p>
 
-<pre class="brush: js notranslate">draw();</pre>
+<pre class="brush: js">draw();</pre>
 
 <p>et supprimez chaque occurence de :</p>
 
-<pre class="brush: js notranslate">clearInterval(interval); // Needed for Chrome to end game
+<pre class="brush: js">clearInterval(interval); // Needed for Chrome to end game
 </pre>
 
 <p>Ensuite, tout en bas de la fonction <code>draw()</code> (juste avant l'accolade de fermeture), ajoutez la ligne suivante, ce qui fait que la fonction <code>draw()</code> s'appelle encore et encore :</p>
 
-<pre class="brush: js notranslate">requestAnimationFrame(draw);</pre>
+<pre class="brush: js">requestAnimationFrame(draw);</pre>
 
 <p>La fonction <code>draw()</code> est maintenant exécutée indéfiniment dans une boucle <code>requestAnimationFrame()</code>, mais au lieu de la cadence fixe de 10 millisecondes, nous redonnons le contrôle de la cadence au navigateur. Il synchronisera la cadence en conséquence et ne n'acutalisera l'affichage que lorsque cela sera nécessaire. Cela permet d'obtenir une boucle d'animation plus efficace et plus fluide que l'ancienne méthode <code>setInterval()</code>.</p>
 

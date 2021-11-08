@@ -29,7 +29,7 @@ original_slug: >-
 
 <p>La structure de la page HTML est vraiment simple, car tout le jeu sera contenu dans l'élément {{htmlelement("canvas")}}. Avec votre éditeur de texte préféré, créez un nouveau fichier HTML, sauvegardez-le sous le nom <code>index.html</code>, et ajoutez-y le code suivant :</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;meta charset="utf-8" /&gt;
@@ -56,14 +56,14 @@ original_slug: >-
 
 <p>Pour utiliser l'élément {{htmlelement("canvas")}}, pour le rendu graphique de notre jeu, nous devons d'abord en donner la référence à JavaScript. Ajoutez le code après la balise ouvrante <code>&lt;script&gt;</code>.</p>
 
-<pre class="brush: js notranslate">var canvas = document.getElementById("myCanvas");
+<pre class="brush: js">var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");</pre>
 
 <p>Ici nous avons enregistré la référence à l'élément {{htmlelement("canvas")}} dans une variable nommée <code>canvas</code>. Ensuite, nous créons la variable ctx pour stocker le contexte de rendu 2D  — l'outil réel que nous pouvons utiliser pour peindre sur Canvas.</p>
 
 <p>Voyons un exemple de code qui imprime un carré rouge sur le canevas. Ajoutez ceci en dessous de vos lignes précédentes de JavaScript, puis chargez votre <code>index.html</code> dans un navigateur pour l'essayer.</p>
 
-<pre class="brush: js notranslate">ctx.beginPath();
+<pre class="brush: js">ctx.beginPath();
 ctx.rect(20, 40, 50, 50);
 ctx.fillStyle = "#FF0000";
 ctx.fill();
@@ -73,7 +73,7 @@ ctx.closePath();</pre>
 
 <p>Nous ne sommes pas limités aux rectangles, voici un code pour imprimer un cercle vert. Essayez d'ajouter ceci au bas de votre JavaScript, puis sauvegardez et rafraîchissez :</p>
 
-<pre class="brush: js notranslate">ctx.beginPath();
+<pre class="brush: js">ctx.beginPath();
 ctx.arc(240, 160, 20, 0, Math.PI*2, false);
 ctx.fillStyle = "green";
 ctx.fill();
@@ -92,7 +92,7 @@ ctx.closePath();</pre>
 
 <p>Au lieu d'utiliser {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}}  et de remplir les formes avec des couleurs, nous pouvons utiliser {{domxref("CanvasRenderingContext2D.stroke()","stroke()")}}  pour ne colorer que le contour exterieur. Essayez d'ajouter ce code à votre JavaScript aussi :</p>
 
-<pre class="brush: js notranslate">ctx.beginPath();
+<pre class="brush: js">ctx.beginPath();
 ctx.rect(160, 10, 100, 40);
 ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
 ctx.stroke();
