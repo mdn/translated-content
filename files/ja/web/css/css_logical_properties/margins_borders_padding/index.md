@@ -5,294 +5,154 @@ tags:
   - CSS
   - CSS 論理的プロパティ
   - ガイド
-  - 書字方向
   - 概念
+  - 書字方向
 translation_of: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p class="summary"><ruby><a href="https://drafts.csswg.org/css-logical/">論理的プロパティと値仕様書</a><rp> (</rp><rt>Logical Properties and Values specification</rt><rp>) </rp></ruby>では、それぞれのマージン、境界、パディングのプロパティおよびその一括指定について、フローに関連する対応付けを定義します。</p>
+[論理的プロパティと値仕様書](https://drafts.csswg.org/css-logical/) (Logical Properties and Values specification<) では、それぞれのマージン、境界、パディングのプロパティおよびその一括指定について、フローに関連する対応付けを定義します。
 
-<p><a href="/ja/docs/Web/CSS/CSS_Logical_Properties">CSS 論理的プロパティと値</a>のメインページを見ると、たくさんのプロパティが並んでいます。これは多くがマージン、境界、パディングのそれぞれの辺についての4つの個別指定値と、すべてを一括指定するものであるためです。</p>
+[CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_Logical_Properties)のメインページを見ると、たくさんのプロパティが並んでいます。これは多くがマージン、境界、パディングのそれぞれの辺について 4 つの個別指定値と、一括指定値のすべてがあるためです。
 
-<h2 id="Mappings_for_margins_borders_and_padding" name="Mappings_for_margins_borders_and_padding">マージン、境界、パティングの対応付け</h2>
+## マージン、境界、パティングの対応付け
 
-<p>The specification details mappings for each logical value to a physical counterpart. In the table below I have given these mapped values assuming that the {{cssxref("writing-mode")}} in use is <code>horizontal-tb</code> — with a left to right direction. The inline direction therefore runs horizontally — left to right — and {{cssxref("margin-inline-start")}} would be equivalent to {{cssxref("margin-left")}}.</p>
+この仕様では、それぞれの論理値の物理的な対応関係を詳細に示しています。下の表では、使用されている {{cssxref("writing-mode")}} が `horizontal-tb` — 左書きであると仮定して、これらに対応する値を与えています。インラインの方向は左から右への水平方向で、{{cssxref("margin-inline-start")}} は {{cssxref("margin-left")}} と同じになります。
 
-<p>If you were using a <code>horizontal-tb</code> writing mode with a right-to-left text direction then {{cssxref("margin-inline-start")}} would be the same as {{cssxref("margin-right")}}, and in a vertical writing mode it would be the same as using {{cssxref("margin-top")}}.</p>
+`horizontal-tb` を使用して右書きである場合は、 {{cssxref("margin-inline-start")}} が {{cssxref("margin-right")}} と同じになり、縦書きの場合は {{cssxref("margin-top")}} を使うのと同じになります。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">論理的プロパティ</th>
-   <th scope="col">物理的プロパティ</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{cssxref("border-block-end")}}</td>
-   <td>{{cssxref("border-bottom")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-end-color")}}</td>
-   <td>{{cssxref("border-bottom-color")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-end-style")}}</td>
-   <td>{{cssxref("border-bottom-style")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-end-width")}}</td>
-   <td>{{cssxref("border-bottom-width")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-start")}}</td>
-   <td>{{cssxref("border-top")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-start-color")}}</td>
-   <td>{{cssxref("border-top-color")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-start-style")}}</td>
-   <td>{{cssxref("border-top-style")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-start-width")}}</td>
-   <td>{{cssxref("border-top-width")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-end")}}</td>
-   <td>{{cssxref("border-right")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-end-color")}}</td>
-   <td>{{cssxref("border-right-color")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-end-style")}}</td>
-   <td>{{cssxref("border-right-style")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-end-width")}}</td>
-   <td>{{cssxref("border-right-width")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-start")}}</td>
-   <td>{{cssxref("border-left")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-start-color")}}</td>
-   <td>{{cssxref("border-left-color")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-start-style")}}</td>
-   <td>{{cssxref("border-left-style")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-start-width")}}</td>
-   <td>{{cssxref("border-left-width")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-start-start-radius")}}</td>
-   <td>{{cssxref("border-top-left-radius")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-start-end-radius")}}</td>
-   <td>{{cssxref("border-bottom-left-radius")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-end-start-radius")}}</td>
-   <td>{{cssxref("border-top-right-radius")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-end-end-radius")}}</td>
-   <td>{{cssxref("border-bottom-right-radius")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("margin-block-end")}}</td>
-   <td>{{cssxref("margin-bottom")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("margin-block-start")}}</td>
-   <td>{{cssxref("margin-top")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("margin-inline-end")}}</td>
-   <td>{{cssxref("margin-right")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("margin-inline-start")}}</td>
-   <td>{{cssxref("margin-left")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("padding-block-end")}}</td>
-   <td>{{cssxref("padding-bottom")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("padding-block-start")}}</td>
-   <td>{{cssxref("padding-top")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("padding-inline-end")}}</td>
-   <td>{{cssxref("padding-right")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("padding-inline-start")}}</td>
-   <td>{{cssxref("padding-left")}}</td>
-  </tr>
- </tbody>
-</table>
+| 論理的プロパティ                         | 物理的プロパティ                          |
+| ---------------------------------------- | ----------------------------------------- |
+| {{cssxref("border-block-end")}}          | {{cssxref("border-bottom")}}              |
+| {{cssxref("border-block-end-color")}}    | {{cssxref("border-bottom-color")}}        |
+| {{cssxref("border-block-end-style")}}    | {{cssxref("border-bottom-style")}}        |
+| {{cssxref("border-block-end-width")}}    | {{cssxref("border-bottom-width")}}        |
+| {{cssxref("border-block-start")}}        | {{cssxref("border-top")}}                 |
+| {{cssxref("border-block-start-color")}}  | {{cssxref("border-top-color")}}           |
+| {{cssxref("border-block-start-style")}}  | {{cssxref("border-top-style")}}           |
+| {{cssxref("border-block-start-width")}}  | {{cssxref("border-top-width")}}           |
+| {{cssxref("border-inline-end")}}         | {{cssxref("border-right")}}               |
+| {{cssxref("border-inline-end-color")}}   | {{cssxref("border-right-color")}}         |
+| {{cssxref("border-inline-end-style")}}   | {{cssxref("border-right-style")}}         |
+| {{cssxref("border-inline-end-width")}}   | {{cssxref("border-right-width")}}         |
+| {{cssxref("border-inline-start")}}       | {{cssxref("border-left")}}                |
+| {{cssxref("border-inline-start-color")}} | {{cssxref("border-left-color")}}          |
+| {{cssxref("border-inline-start-style")}} | {{cssxref("border-left-style")}}          |
+| {{cssxref("border-inline-start-width")}} | {{cssxref("border-left-width")}}          |
+| {{cssxref("border-start-start-radius")}} | {{cssxref("border-top-left-radius")}}     |
+| {{cssxref("border-start-end-radius")}}   | {{cssxref("border-bottom-left-radius")}}  |
+| {{cssxref("border-end-start-radius")}}   | {{cssxref("border-top-right-radius")}}    |
+| {{cssxref("border-end-end-radius")}}     | {{cssxref("border-bottom-right-radius")}} |
+| {{cssxref("margin-block-end")}}          | {{cssxref("margin-bottom")}}              |
+| {{cssxref("margin-block-start")}}        | {{cssxref("margin-top")}}                 |
+| {{cssxref("margin-inline-end")}}         | {{cssxref("margin-right")}}               |
+| {{cssxref("margin-inline-start")}}       | {{cssxref("margin-left")}}                |
+| {{cssxref("padding-block-end")}}         | {{cssxref("padding-bottom")}}             |
+| {{cssxref("padding-block-start")}}       | {{cssxref("padding-top")}}                |
+| {{cssxref("padding-inline-end")}}        | {{cssxref("padding-right")}}              |
+| {{cssxref("padding-inline-start")}}      | {{cssxref("padding-left")}}               |
 
-<p>There are also some additional shorthands, made possible because we have the ability to target both block or both inline edges of the box simultaneously. These shorthands have no physical equivalent.</p>
+また、ボックスの両方のブロックまたは両方のインライン側の縁を同時に対象にできることから、いくつかの追加の略語があります。これらの略語は、物理的プロパティに同等のものはありません。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">プロパティ</th>
-   <th scope="col">目的</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{cssxref("border-block")}}</td>
-   <td>Sets {{cssxref("border-color")}}, {{cssxref("border-style")}}, and {{cssxref("border-width")}} for both block borders.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-color")}}</td>
-   <td>Sets <code>border-color</code> for both block borders.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-style")}}</td>
-   <td>Sets <code>border-style</code> for both block borders.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-width")}}</td>
-   <td>Sets <code>border-width</code> for both block borders.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline")}}</td>
-   <td>Sets <code>border-color</code>, <code>-style</code>, and <code>-width</code> for both inline borders.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-color")}}</td>
-   <td>Sets <code>border-color</code> for both inline borders.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-style")}}</td>
-   <td>Sets <code>border-style</code> for both inline borders.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-width")}}</td>
-   <td>Sets <code>border-width</code> for both inline borders.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("margin-block")}}</td>
-   <td>Sets all the block {{cssxref("margin")}}s.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("margin-inline")}}</td>
-   <td>Sets all the inline <code>margin</code>s.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("padding-block")}}</td>
-   <td>Sets the block {{cssxref("padding")}}.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("padding-inline")}}</td>
-   <td>Sets the inline <code>padding</code>.</td>
-  </tr>
- </tbody>
-</table>
+| プロパティ                         | 目的                                                                                                                           |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| {{cssxref("border-block")}}        | {{cssxref("border-color")}}, {{cssxref("border-style")}}, {{cssxref("border-width")}} をブロック方向の両方の境界に設定します。 |
+| {{cssxref("border-block-color")}}  | `border-color` をブロック方向の両方の境界に設定します。                                                                        |
+| {{cssxref("border-block-style")}}  | `border-style` をブロック方向の両方の境界に設定します。                                                                        |
+| {{cssxref("border-block-width")}}  | `border-width` をブロック方向の両方の境界に設定します。                                                                        |
+| {{cssxref("border-inline")}}       | `border-color`, `-style`, `-width` をインライン方向の両方の境界に設定します。                                                  |
+| {{cssxref("border-inline-color")}} | `border-color`  をインライン方向の両方の境界に設定します。                                                                     |
+| {{cssxref("border-inline-style")}} | `border-style`  をインライン方向の両方の境界に設定します。                                                                     |
+| {{cssxref("border-inline-width")}} | `border-width`  をインライン方向の両方の境界に設定します。                                                                     |
+| {{cssxref("margin-block")}}        | ブロック方向のすべての {{cssxref("margin")}} を設定します。                                                                    |
+| {{cssxref("margin-inline")}}       | インライン方向のすべての `margin` を設定します。                                                                               |
+| {{cssxref("padding-block")}}       | ブロック方向のすべての {{cssxref("padding")}} を設定します。                                                                   |
+| {{cssxref("padding-inline")}}      | インライン方向のすべての `padding` を設定します。                                                                              |
 
-<h2 id="Margin_examples" name="Margin_examples">マージンの例</h2>
+## マージンの例
 
-<p>The mapped margin properties of {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}, {{cssxref("margin-block-start")}}, and {{cssxref("margin-inline-end")}} can be used instead of their physical counterparts.</p>
+対応付けられたされたマージンのプロパティである {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}, {{cssxref("margin-block-start")}}, {{cssxref("margin-inline-end")}} は、物理的に対応するプロパティの代わりに使用できます。
 
-<p>In the example below I have created two boxes and added different sized margins to each edge. I have added an extra container with a border in order to make the margin more obvious to see.</p>
+下の例では、2 つのボックスを作成し、それぞれの端に異なるサイズのマージンを加えています。マージンがよりわかりやすくなるように、境界付きの特別なコンテナーを追加しています。
 
-<p>One box uses physical properties and the other logical properties. Try changing the {{cssxref("direction")}} property to <code>rtl</code> to cause the boxes to display in a right-to-left direction, the margins on the first box will stay in the same place, while the margins on the inline dimension of the second box will switch.</p>
+一方のボックスは物理的なプロパティを使用しており、もう一方は論理的なプロパティを使用しています。{{cssxref("direction")}} プロパティを `rtl` に変更して、ボックスが右から左の方向に表示されるようにしてみてください。1 つ目のボックスのマージンは同じ場所に留まりますが、2 つ目のボックスのインライン方向のマージンは切り替わります。
 
-<p>You can also try changing the <code>writing-mode</code> from <code>horizontal-tb</code> to <code>vertical-rl</code>. Again, notice how the margins stay in the same place for the first box, but switch around to follow the text direction in the second.</p>
+また、`writing-mode` を `horizontal-tb` から `vertical-rl` に変更してみてください。ここでも、最初のボックスではマージンが同じ場所に留まっていますが、2 つ目のボックスではテキストの方向に合わせて切り替わっていることに注意してください。
 
-<p>{{EmbedGHLiveSample("css-examples/logical/margin-longhands.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/logical/margin-longhands.html", '100%', 700)}}
 
-<h3 id="Margin_shorthands" name="Margin_shorthands">マージンの一括指定</h3>
+### マージンの一括指定
 
-<p>As we can now target both sides of a box — either both inline sides or both block sides — there are new shorthands available, {{cssxref("margin-inline")}} and {{cssxref("margin-block")}}, which accept two values. The first value will apply to the start of that dimension, the second to the end. If you only use one value it is applied to both.</p>
+ボックスの両側 (インラインの両側またはブロックの両側) を対象とすることができるようになったため、{{cssxref("margin-inline")}} と {{cssxref("margin-block")}} という新しい一括指定が用意されており、2 つの値を受け入れます。1 つ目の値はその次元の先頭に適用され、2 つ目の値は末尾に適用されます。1 つの値しか使用しない場合は、両方に適用されます。
 
-<p>In a horizontal writing mode this CSS would apply a 5px margin to the top of the box and a 10px margin to the bottom.</p>
+横書きの場合、この CSS はボックスの上部に 5px のマージンを、下部に 10px のマージンを適用します。
 
-<pre class="brush: css">.box {
+```css
+.box {
   margin-block: 5px 10px;
-}</pre>
+}
+```
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: The shorthand properties <code>margin-inline</code> and <code>margin-block</code> shipped in Firefox 66. As these are new properties check browser support before using.</p>
-</div>
+## パディングの例
 
-<h2 id="Padding_examples" name="Padding_examples">パディングの例</h2>
+{{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}}, {{cssxref("padding-block-start")}}, {{cssxref("padding-inline-end")}} の対応付けられたパディングプロパティは、物理的な対応の代わりに使用することができます。
 
-<p>The mapped padding properties of {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}}, {{cssxref("padding-block-start")}}, and {{cssxref("padding-inline-end")}} can be used instead of their physical counterparts.</p>
+以下の例では、2 つのボックスがあり、一方は物理的なパディングプロパティを使用しており、もう一方は論理的なパディングプロパティを使用しています。 `writing-mode` が `horizontal-tb` の場合は、両方のボックスは同じように表示されるはずです。
 
-<p>In the example below I have two boxes, one of which is using physical padding properties and the other logical padding properties. With a <code>writing-mode</code> of <code>horizontal-tb</code>, both boxes should appear the same.</p>
+`direction` プロパティを `rtl` に変更して、ボックスが右から左の方向に表示されるようにしてみてください。1 つ目のボックスのパディングは同じ場所に留まりますが、2 つ目のボックスのインライン方向のパディングは切り替わります。
 
-<p>Try changing the <code>direction</code> property to <code>rtl</code> to cause the boxes to display in a right-to-left direction. The padding on the first box will stay in the same place, whereas the padding on the inline dimension of the second box will switch.</p>
+また、`writing-mode` を `horizontal-tb` から `vertical-rl` に変更してみてください。ここでも、最初のボックスではパディングは同じ場所に留まっていますが、2 つ目のボックスではテキストの方向に合わせて切り替わっていることに注意してください。
 
-<p>You can also try changing the <code>writing-mode</code> from <code>horizontal-tb</code> to <code>vertical-rl</code>. Again, notice how the padding stays in the same place for the first box, but switches around to follow the text direction in the second.</p>
+{{EmbedGHLiveSample("css-examples/logical/padding-longhands.html", '100%', 700)}}
 
-<p>{{EmbedGHLiveSample("css-examples/logical/padding-longhands.html", '100%', 700)}}</p>
+### パディングの一括指定
 
-<h3 id="Padding_shorthands" name="Padding_shorthands">パディングの一括指定</h3>
+マージンと同様に、パディングにも 2 つの値の一括指定 — {{cssxref("padding-inline")}} と {{cssxref("padding-block")}} — があります。これにより、2 つのインライン方向と 2 つのブロック方向のパディングをそれぞれ設定することができます。
 
-<p>As with margin, there are two-value shorthands for padding — {{cssxref("padding-inline")}} and {{cssxref("padding-block")}} — which allow you to set the padding of the two inline, and two block dimensions, respectively.</p>
+`writing-mode` が横書きである場合、この CSS はボックスの上部に `5px` のパディングを、下部に 10px のパディングを適用します。
 
-<p>In a horizontal <code>writing-mode</code> this CSS would apply <code>5px</code> of padding to the top of the box and 10px of padding to the bottom:</p>
-
-<pre class="brush: css">.box {
+```css
+.box {
   padding-block: 5px 10px;
-}</pre>
+}
+```
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: The shorthand properties <code>padding-inline</code> and <code>padding-block</code> shipped in Firefox 66. As these are new properties check browser support before using.</p>
-</div>
+## 境界の例
 
-<h2 id="Border_examples" name="Border_examples">境界の例</h2>
+境界のプロパティは、論理的プロパティと値が非常に多くのプロパティを持っているように見える主な原因であり、ボックスのそれぞれの辺の境界線の色、幅、スタイルを表す個別指定と、それぞれの辺に 3 つを一度に設定する一括指定があります。マージンやパディングと同様に、それぞれの物理的なプロパティの対応付けされたバージョンがあります。
 
-<p>The border properties are the main reason that Logical Properties and Values seems to have so many properties, as we have the longhands for the color, width, and style of the border on each side of a box, along with the shorthand to set all three at once for each side. As with margin and padding we have a mapped version of each physical property.</p>
+以下のデモでは、いくつかの個別指定と 3 つの一括指定の値を使用しています。他のデモと同様に、`direction` プロパティを `rtl` に変更してボックスを右から左の方向に表示させたり、`writing-mode` を `horizontal-tb` から `vertical-rl` に変更したりしてみてください。
 
-<p>The demo below uses some longhands and three shorthand values. As with the other demos try changing the <code>direction</code> property to <code>rtl</code> to cause the boxes to display in a right-to-left direction, or changing the <code>writing-mode</code> from <code>horizontal-tb</code> to <code>vertical-rl</code>.</p>
+{{EmbedGHLiveSample("css-examples/logical/border-longhands.html", '100%', 700)}}
 
-<p>{{EmbedGHLiveSample("css-examples/logical/border-longhands.html", '100%', 700)}}</p>
+### 新しい境界の一括指定
 
-<h3 id="New_border_shorthands" name="New_border_shorthands">新しい境界の一括指定</h3>
+ブロックやインライン方向の幅、スタイル、色を設定する 2 値の一括指定と、ブロックやインライン方向の 3 つの値をすべて設定する 2 値の一括指定があります。下のコードは、横書きの場合、ボックスの上下に 2px の緑の実線の境界線、左右に 4px の紫の点線の境界線が表示されます。
 
-<p>There are two-value shorthands to set the width, style and, color of the block or inline dimension, and two-value shorthands to set all three values in the block or inline dimension. The below code, in a horizontal writing mode, would give you a 2px green solid border on the top and bottom of the box, and a 4px dotted purple border on the left and right.</p>
-
-<pre class="brush: css">.box {
+```css
+.box {
   border-block: 2px solid green;
   border-inline-width: 4px;
   border-inline-style: dotted;
   border-inline-color: rebeccapurple;
-}</pre>
+}
+```
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: these two value shorthands shipped in Firefox 66, check browser support before using as other browsers may not have implemented them yet.</p>
-</div>
+### フローに関連した border-radius プロパティ
 
-<h3 id="Flow_relative_border-radius_properties" name="Flow_relative_border-radius_properties">フローに関連した border-radius プロパティ</h3>
+この仕様では、かなり最近になって {{cssxref("border-radius")}} の個別指定にフロー相対値が追加されました。これらはまだどのブラウザーでも実装されていません。以下の例では、横長の `writing-mode` で、右上の境界の半径を 1em、右下を 0、左下を 20px、左上を 40px に設定しています。
 
-<p>The specification has fairly recently added flow-relative values for the {{cssxref("border-radius")}} longhands. These have not yet been implemented by any browser. The below example, in a horizontal <code>writing-mode</code>, would set the top-right border radius to 1em, the bottom-right to 0, the bottom-left to 20px and the top-left to 40px.</p>
-
-<pre class="brush: css">.box {
+```css
+.box {
   border-end-start-radius: 1em;
   border-end-end-radius: 0;
   border-start-end-radius: 20px;
   border-start-start-radius: 40px;
-}</pre>
+}
+```
 
-<h2 id="Indicating_logical_values_for_the_4-value_shorthand_syntax" name="Indicating_logical_values_for_the_4-value_shorthand_syntax">4つの値の一括指定構文についての論理値による指定</h2>
+## 4 つの値の一括指定構文で論理的な値を示す
 
-<p>The specification makes a suggestion for the four-value shorthands such as the <code>margin</code> property, however the final decision on how this should be indicated is as yet unresolved, and is discussed in <a href="https://github.com/w3c/csswg-drafts/issues/1282">this issue</a>.</p>
+仕様書では、`margin` プロパティのような 4 つの値の一括指定を提案していますが、これをどのように表示するかの最終決定はまだなされておらず、[この Issue](https://github.com/w3c/csswg-drafts/issues/1282) で議論されています。
 
-<p>Using any four-value shorthand such as margin, padding, or border will currently use the physical versions, so if following the flow of the document is important, use the longhand properties for the time being.</p>
+margin、padding、border などの 4 つの値の一括指定を使用すると、現在は物理的なバージョンが使用されるので、文書の流れに従うことが重要な場合は、当面は個別指定のプロパティを使用してください。
