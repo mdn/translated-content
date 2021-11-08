@@ -36,7 +36,7 @@ original_slug: Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation_FR
 
 <p>Nous voulons un rendu de notre jeu sur un canevas, mais nous ne le ferons pas manuellement - cela sera pris en charge par le framework. Disons-le : notre point de départ est le fichier<code> index.html</code> avec le contenu suivant. Vous pouvez créer vous-même si vous voulez suivre :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;meta charset="utf-8" /&gt;
@@ -62,15 +62,15 @@ original_slug: Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation_FR
 })();
 &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;</pre>
 
 <p>Ça ressemble à une simple page de site HTML avec des éléments basiques dans la balise <code>&lt;head&gt;</code> <em>(en-tête)</em> : police de caractères, titre, CSS et inclusion des fichiers Javascript. Le <code>&lt;body&gt;</code> <em>(corps)</em> contient l'initialisation du framework et la définition des états du jeu.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var game = new Phaser.Game(320, 480, Phaser.CANVAS, 'game');</code></pre>
+<pre class="brush: js">var game = new Phaser.Game(320, 480, Phaser.CANVAS, 'game');</pre>
 
 <p>La ligne ci-dessus va initialiser l'instance de Phaser - les arguments sont la largeur et la hauteur du canevas, la méthode de rendu (nous utilisons <code>CANVAS</code>, mais il y a aussi les options <code>WEBGL</code> et <code>AUTO</code> disponibles) et l'ID optionnel du conteneur DOM dans lequel nous voulons placer le canevas. Si rien n'est spécifié dans ce dernier argument, ou si l'élément n'est pas trouvé, le <code>canvas</code> sera ajouté à la balise <code>&lt;body&gt;</code>. Sans le framework, pour ajouter l'élément <code>canvas</code> à la page, il faudrait écrire quelque chose comme ça dans la balise <code>&lt;body&gt;</code>:</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;canvas id='game' width='320' height='480'&gt;&lt;/canvas&gt;</code></pre>
+<pre class="brush: html">&lt;canvas id='game' width='320' height='480'&gt;&lt;/canvas&gt;</pre>
 
 <p>La chose importante à retenir est que le framework met en place des méthodes utiles pour accélérer beaucoup de choses comme la manipulation d'images ou la gestion des éléments, ce qui serait beaucoup plus difficile à faire manuellement.</p>
 
@@ -80,7 +80,7 @@ original_slug: Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation_FR
 
 <p>Retour aux états du jeu : la ligne ci-dessous ajoute un nouvel état appelé Boot au jeu :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">game.state.add('Boot', Ball.Boot);</code></pre>
+<pre class="brush: html">game.state.add('Boot', Ball.Boot);</pre>
 
 <p>La première valeur est le nom de l'état et la seconde est l'objet que nous voulons lui assigner. La méthode  <code>start</code>  démarre l'état donné et le rend actif. Voyons ce que les états sont en réalité. </p>
 
@@ -92,7 +92,7 @@ original_slug: Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation_FR
 
 <p>L'état <code>Boot</code> est le premier du jeu.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var Ball = {
+<pre class="brush: js">var Ball = {
     _WIDTH: 320,
     _HEIGHT: 480
 };
@@ -108,7 +108,7 @@ Ball.Boot.prototype = {
         this.game.scale.pageAlignVertically = true;
         this.game.state.start('Preloader');
     }
-};</code></pre>
+};</pre>
 
 <p>Le principal objet "<code>Ball</code>"  est défini et nous ajoutons deux variables appelées <code>_WIDTH</code> et <code>_HEIGHT</code> qui sont la largeur et la hauteur du caneva du jeu  —  elles nous aideront à positionner les éléments à l'écran. Nous chargeons d'abord deux images qui seront utilisées plus tard dans l'état <code>Preload</code> <em>(préchargement)</em> pour montrer la progression du chargement de tous les autres éléments. La fonction <code>create</code> contient une configuration de base : nous configurons la mise à l'échelle et l'alignement du canevas et passons à l'état <code>Preload</code>  lorsque tout est prêt.</p>
 
@@ -116,7 +116,7 @@ Ball.Boot.prototype = {
 
 <p>L'état <code>Preloader</code> prend soin de charger tous les éléments :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">Ball.Preloader = function(game) {};
+<pre class="brush: js">Ball.Preloader = function(game) {};
 Ball.Preloader.prototype = {
     preload: function() {
         this.preloadBg = this.add.sprite((Ball._WIDTH-297)*0.5, (Ball._HEIGHT-145)*0.5, 'preloaderBg');
@@ -132,7 +132,7 @@ Ball.Preloader.prototype = {
     create: function() {
         this.game.state.start('MainMenu');
     }
-};</code></pre>
+};</pre>
 
 <p>Il y a des images uniques, des feuilles de "sprites" et des fichiers audio chargés par le "framework". Dans cet état, la <code>preloadBar</code> <em>(barre du préchargement)</em> affiche la progression à l'écran. Cette progression des éléments chargés est visualisée par le framework avec l'utilisation d'une image. Avec chaque élément chargé, vous pouvez voir plus de l'image <code>preloadBar</code>: de 0% à 100%, mis à jour sur chaque image. Une fois que tous les éléments sont chargés, l'état MainMenu est lancé.</p>
 
@@ -140,7 +140,7 @@ Ball.Preloader.prototype = {
 
 <p>L'état <code>MainMenu</code> montre le menu principal du jeu, sur lequel vous pouvez lancer le jeu en cliquant sur le bouton.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">Ball.MainMenu = function(game) {};
+<pre class="brush: js">Ball.MainMenu = function(game) {};
 Ball.MainMenu.prototype = {
     create: function() {
         this.add.sprite(0, 0, 'screen-mainmenu');
@@ -153,7 +153,7 @@ Ball.MainMenu.prototype = {
     startGame: function() {
         this.game.state.start('Howto');
     }
-};</code></pre>
+};</pre>
 
 <p>Pour créer un nouveau bouton, il y a la méthode <code>add.button</code> avec la liste suivante d'arguments facultatifs :</p>
 
@@ -174,7 +174,7 @@ Ball.MainMenu.prototype = {
 
 <h3 id="Howto.js_(comment_jouer)">Howto.js <em>(comment jouer)</em></h3>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">Ball.Howto = function(game) {
+<pre class="brush: js">Ball.Howto = function(game) {
 };
 Ball.Howto.prototype = {
     create: function() {
@@ -183,7 +183,7 @@ Ball.Howto.prototype = {
     startGame: function() {
         this.game.state.start('Game');
     }
-};</code></pre>
+};</pre>
 
 <p>L'état <code>Howto</code> affiche les instructions du jeu à l'écran avant de commencer le jeu. Après avoir cliqué sur l'écran, le jeu réel est lancé.</p>
 
@@ -191,7 +191,7 @@ Ball.Howto.prototype = {
 
 <p>L'état <code>game</code> à partir du fichier <code>Game.js</code> est le lieu où toute la magie opère. Toute l'initialisation est dans la fonction <code>create ()</code> (lancée une fois au début du jeu). Après cela, certaines fonctionnalités nécessiteront d'autres codes à contrôler  —  nous écrirons nos propres fonctions pour gérer des tâches plus complexes. En particulier, notez  la fonction <code>update ()</code> exécutée à chaque frame, qui met à jour des choses telles que la position de la balle.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">Ball.Game = function(game) {};
+<pre class="brush: js">Ball.Game = function(game) {};
 Ball.Game.prototype = {
     create: function() {},
     initLevels: function() {},
@@ -203,7 +203,7 @@ Ball.Game.prototype = {
     wallCollision: function() {},
     handleOrientation: function(e) {},
     finishLevel: function() {}
-};</code></pre>
+};</pre>
 
 <p>Les fonctions <code>create</code> et <code>update</code> sont spécifiques au framework, tandis que d'autres seront nos créations :</p>
 
@@ -234,13 +234,13 @@ ball.body.linearDamping = 1;</pre>
 
 <p>C'est déjà sympa d'avoir une balle prête à être lancée dans la zone de jeu, mais c'est aussi important de pouvoir le faire. Maintenant on va ajouter la possibilité de contrôler la balle avec le clavier sur les ordinateurs, et ensuite on ajoutera l'implémentation de l'API  Device Orientation ( <em>gyroscope</em>). Maintenant, concentrons-nous sur le clavier en ajoutant la ligne suivante pour la fonction <code>create()</code> :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">this.keys = this.game.input.keyboard.createCursorKeys();</code></pre>
+<pre class="brush: js">this.keys = this.game.input.keyboard.createCursorKeys();</pre>
 
 <p>Comme vous pouvez le voir, Phaser a une fonction spéciale  <code>createCursorKeys()</code> qui nous donnera un objet avec des gestionnaires d'événements pour les quatre touches fléchées : haut, bas, gauche et droite. </p>
 
 <p>Ensuite, nous allons ajouter le code suivant dans la fonction <code>update ()</code>, il sera lancé à chaque "frame". L'objet <code>this.keys</code> sera vérifié aux pressions de touche du joueur, la balle réagira donc en conséquence :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">if(this.keys.left.isDown) {
+<pre class="brush: js">if(this.keys.left.isDown) {
     this.ball.body.velocity.x -= this.movementForce;
 }
 else if(this.keys.right.isDown) {
@@ -251,7 +251,7 @@ if(this.keys.up.isDown) {
 }
 else if(this.keys.down.isDown) {
     this.ball.body.velocity.y += this.movementForce;
-}</code></pre>
+}</pre>
 
 <p>De cette manière on peut vérifier quelle touche est pressée à un moment donné et appliquer une force définie à la balle, ce qui a pour effet d'augmenter sa vélocité dans la bonne direction.</p>
 
@@ -259,16 +259,16 @@ else if(this.keys.down.isDown) {
 
 <p>La particularité du jeu est qu'il utilise l'API gyroscopique sur les mobiles. Grâce à elle, vous pouvez jouer au jeu en inclinant l'appareil dans la direction où vous voulez que la balle aille. Voilà le code de la fonction  <code>create()</code> qui l'implémente :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">window.addEventListener("deviceorientation", this.handleOrientation, true);</code></pre>
+<pre class="brush: js">window.addEventListener("deviceorientation", this.handleOrientation, true);</pre>
 
 <p>L'ajout d'un évènement "listener" à l'évenement <code>"deviceorientation"</code> et la modification de la fonction <code>handleOrientation</code>ressembleront à ceci :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">handleOrientation: function(e) {
+<pre class="brush: js">handleOrientation: function(e) {
     var x = e.gamma;
     var y = e.beta;
     Ball._player.body.velocity.x += x;
     Ball._player.body.velocity.y += y;
-}</code></pre>
+}</pre>
 
 <p>Plus l'appareil est incliné, plus la force appliquée à la balle et sa vélocité sont importantes.</p>
 
@@ -282,10 +282,10 @@ else if(this.keys.down.isDown) {
 
 <p>L'objectif principal du jeu est de déplacer la balle du point de départ vers le point d'arrivée, qui est dans notre cas, un trou dans le sol. L'implémentation ressemble beaucoup à celle de la création de la balle et est ajoutée dans la fonction <code>create()</code> de l'état <code>Game</code> :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">this.hole = this.add.sprite(Ball._WIDTH*0.5, 90, 'hole');
+<pre class="brush: js">this.hole = this.add.sprite(Ball._WIDTH*0.5, 90, 'hole');
 this.physics.enable(this.hole, Phaser.Physics.ARCADE);
 this.hole.anchor.set(0.5);
-this.hole.body.setSize(2, 2);</code></pre>
+this.hole.body.setSize(2, 2);</pre>
 
 <p>La seule différence est que '<code>hole.body</code>' est mis à <code>immovable</code><em>(fixe)</em>, il ne bougera donc pas quand la balle le touchera et la collision sera alors calculée ( ce point sera approfondit plus loin dans cet article ).</p>
 
@@ -295,7 +295,7 @@ this.hole.body.setSize(2, 2);</code></pre>
 
 <p>Pour conserver les informations du bloc, nous utiliserons un tableau de données de niveau : pour chaque bloc, nous stockons les positions absolues supérieure et gauche en pixels (<code>x</code> et <code>y</code>) et le type du bloc - horizontal ou vertical (<code>t</code> avec le '<code>w</code> 'valeur signifiant largeur et' <code>h</code> 'signifiant hauteur). Ensuite, pour charger le niveau, nous allons analyser les données et afficher les blocs spécifiques à ce niveau. Dans la fonction <code>initLevels</code>, nous avons :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">this.levelData = [
+<pre class="brush: js">this.levelData = [
     [
         { x: 96, y: 224, t: 'w' }
     ],
@@ -305,11 +305,11 @@ this.hole.body.setSize(2, 2);</code></pre>
         { x: 72, y: 150, t: 'w' }
     ],
     // ...
-];</code></pre>
+];</pre>
 
 <p>Chaque élément de tableau contient une collection de blocs avec une position <code>x</code> et <code>y</code> et une valeur <code>t</code> pour chacun. Après <code>levelData</code>, mais toujours dans la fonction <code>initLevels</code>, nous ajoutons les blocs dans un tableau de la boucle <code>for</code> en utilisant certaines des méthodes spécifiques au framework :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">for(var i=0; i&lt;this.maxLevels; i++) {
+<pre class="brush: js">for(var i=0; i&lt;this.maxLevels; i++) {
     var newLevel = this.add.group();
     newLevel.enableBody = true;
     newLevel.physicsBodyType = Phaser.Physics.ARCADE;
@@ -320,19 +320,19 @@ this.hole.body.setSize(2, 2);</code></pre>
     newLevel.setAll('body.immovable', true);
     newLevel.visible = false;
     this.levels.push(newLevel);
-}</code></pre>
+}</pre>
 
 <p>Tout d'abord, <code>add.group ()</code> est utilisé pour créer un nouveau groupe d'éléments. Ensuite, le type de corps <code>ARCADE</code> est défini pour ce groupe pour activer les calculs physiques. La méthode <code>newLevel.create</code> crée de nouveaux éléments dans le groupe avec les positions de départ haut et gauche et sa propre image. Si vous ne souhaitez pas parcourir à nouveau la liste des éléments pour ajouter explicitement une propriété à chacun d'eux, vous pouvez utiliser <code>setAll</code> sur un groupe pour l'appliquer à tous les éléments de ce groupe.<br>
  <br>
  Les objets sont stockés dans le tableau <code>this.levels</code>, qui est ,par défaut, invisible. Pour charger des niveaux spécifiques, nous nous assurons que les niveaux précédents sont cachés et affichent le niveau actuel :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">showLevel: function(level) {
+<pre class="brush: js">showLevel: function(level) {
     var lvl = level | this.level;
     if(this.levels[lvl-2]) {
         this.levels[lvl-2].visible = false;
     }
     this.levels[lvl-1].visible = true;
-}</code></pre>
+}</pre>
 
 <p>Grâce à cela, le jeu donne au joueur un défi : il doit maintenant rouler la balle à travers l'aire de jeu et la guider dans le labyrinthe construit à partir des blocs. C'est juste un exemple de chargement des niveaux, et il n'y a que 5, juste pour présenter l'idée, mais vous pouvez travailler à l'étendre par vous-même.</p>
 
@@ -340,8 +340,8 @@ this.hole.body.setSize(2, 2);</code></pre>
 
 <p>À ce stade, nous avons la balle qui est contrôlée par le joueur, le trou à atteindre et les obstacles qui bloquent la route. Il y a un problème cependant : notre jeu n'a pas encore de détection de collision, donc il ne se passe rien quand la balle frappe les blocs, elle passe juste à travers. Réparons-le ! Les bonnes nouvelles sont que le cadre se chargera de calculer la détection de collision, il suffit de spécifier les objets en collision dans la fonction <code>update ()</code> :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">this.physics.arcade.collide(this.ball, this.borderGroup, this.wallCollision, null, this);
-this.physics.arcade.collide(this.ball, this.levels[this.level-1], this.wallCollision, null, this);</code></pre>
+<pre class="brush: js">this.physics.arcade.collide(this.ball, this.borderGroup, this.wallCollision, null, this);
+this.physics.arcade.collide(this.ball, this.levels[this.level-1], this.wallCollision, null, this);</pre>
 
 <p>Cela dira à la structure d'exécuter la fonction <code>wallCollision</code> lorsque la balle frappe l'un des murs. Nous pouvons utiliser la fonction <code>wallCollision</code> pour ajouter toutes les fonctionnalités que nous voulons comme jouer le son du rebondissement et implémenter l'API Vibration.</p>
 
@@ -349,13 +349,13 @@ this.physics.arcade.collide(this.ball, this.levels[this.level-1], this.wallColli
 
 <p>Parmi les éléments préchargés, il y avait une piste audio (dans différents formats pour la compatibilité avec les navigateurs), que nous pouvons utiliser maintenant. Il doit d'abord être défini dans la fonction <code>create ()</code> :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">this.bounceSound = this.game.add.audio('audio-bounce');</code></pre>
+<pre class="brush: js">this.bounceSound = this.game.add.audio('audio-bounce');</pre>
 
 <p>Si l'état de l'audio est <code>true</code> <em>(vrai)</em> (les sons du jeu sont activés), nous pouvons le jouer dans la fonction <code>wallCollision</code>:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">if(this.audioStatus) {
+<pre class="brush: js">if(this.audioStatus) {
     this.bounceSound.play();
-}</code></pre>
+}</pre>
 
 <p>C'est tout - charger et jouer les sons est facile avec Phaser.</p>
 
@@ -367,9 +367,9 @@ this.physics.arcade.collide(this.ball, this.levels[this.level-1], this.wallColli
 
 <p>La meilleure façon de l'utiliser dans notre cas est de faire vibrer le téléphone chaque fois que la balle frappe les murs, à l'intérieur de la fonction <code>wallCollision</code> :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">if("vibrate" in window.navigator) {
+<pre class="brush: js">if("vibrate" in window.navigator) {
     window.navigator.vibrate(100);
-}</code></pre>
+}</pre>
 
 <p>Si la méthode <code>vibrate</code> est prise en charge par le navigateur et disponible dans l'objet <code>window.navigator</code>, faites vibrer le téléphone pendant 100 millisecondes. C'est tout !</p>
 
@@ -377,25 +377,25 @@ this.physics.arcade.collide(this.ball, this.levels[this.level-1], this.wallColli
 
 <p>Pour améliorer la rejouabilité et donner aux joueurs l'option de rivaliser les uns avec les autres, nous pouvons introduire le temps écoulé. Grâce à cela, le joueur peut jouer les niveaux encore et encore en essayant d'améliorer son score. Pour implémenter cela dans le jeu, nous devons créer une variable pour stocker le nombre réel de secondes écoulées depuis le début du jeu et le montrer au joueur dans le jeu. Définissons d'abord la variable :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">this.timer = 0; // time elapsed in the current level
-this.totalTimer = 0; // time elapsed in the whole game</code></pre>
+<pre class="brush: js">this.timer = 0; // time elapsed in the current level
+this.totalTimer = 0; // time elapsed in the whole game</pre>
 
 <p>Ensuite, juste après, nous pouvons initialiser les objets texte nécessaires à l'affichage de cette information pour l'utilisateur:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">this.timerText = this.game.add.text(15, 15, "Time: "+this.timer, this.fontBig);
-this.totalTimeText = this.game.add.text(120, 30, "Total time: "+this.totalTimer, this.fontSmall);</code></pre>
+<pre class="brush: js">this.timerText = this.game.add.text(15, 15, "Time: "+this.timer, this.fontBig);
+this.totalTimeText = this.game.add.text(120, 30, "Total time: "+this.totalTimer, this.fontSmall);</pre>
 
 <p>Nous définissons les positions supérieure et gauche du texte, le contenu qui sera affiché et le style appliqué au texte. Nous l'avons imprimé à l'écran, mais il serait bon de mettre à jour les valeurs toutes les secondes :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">this.time.events.loop(Phaser.Timer.SECOND, this.updateCounter, this);</code></pre>
+<pre class="brush: js">this.time.events.loop(Phaser.Timer.SECOND, this.updateCounter, this);</pre>
 
 <p>Cette boucle, également dans la fonction  <code>create</code> , exécutera la fonction <code>updateCounter</code> à chaque seconde du début du jeu afin que nous puissions appliquer les modifications en conséquence. Voici à quoi ressemble la fonction <code>updateCounter</code> complète :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">updateCounter: function() {
+<pre class="brush: js">updateCounter: function() {
     this.timer++;
     this.timerText.setText("Time: "+this.timer);
     this.totalTimeText.setText("Total time: "+(this.totalTimer+this.timer));
-},</code></pre>
+},</pre>
 
 <p>Comme vous pouvez le voir, nous incrémentons la variable <code>this.timer</code> et mettons à jour le contenu des objets texte avec les valeurs actuelles à chaque itération, de sorte que le joueur voit le temps écoulé.</p>
 
@@ -403,11 +403,11 @@ this.totalTimeText = this.game.add.text(120, 30, "Total time: "+this.totalTimer,
 
 <p>La balle tourne sur l'écran, le minutage fonctionne et nous avons le trou créé que nous devons atteindre. Maintenant, mettons en place la possibilité de finir le niveau ! La ligne suivante de la fonction <code>update ()</code> ajoute un écouteur qui se déclenche lorsque la balle arrive au trou.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">this.physics.arcade.overlap(this.ball, this.hole, this.finishLevel, null, this);</code></pre>
+<pre class="brush: js">this.physics.arcade.overlap(this.ball, this.hole, this.finishLevel, null, this);</pre>
 
 <p>Cela fonctionne de la même manière que la méthode <code>collide</code> expliquée précédemment. Lorsque la balle chevauche le trou (au lieu de collision), la fonction <code>finishLevel</code> est exécutée :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">finishLevel: function() {
+<pre class="brush: js">finishLevel: function() {
     if(this.level &gt;= this.maxLevels) {
         this.totalTimer += this.timer;
         alert('Congratulations, game completed!\nTotal time of play: '+this.totalTimer+' seconds!');
@@ -427,7 +427,7 @@ this.totalTimeText = this.game.add.text(120, 30, "Total time: "+this.totalTimer,
         this.ball.body.velocity.y = 0;
         this.showLevel();
     }
-},</code></pre>
+},</pre>
 
 <p>Si le niveau actuel est égal au nombre maximum de niveaux (dans ce cas, 5), le jeu est terminé - vous recevrez un message de félicitations avec le nombre de secondes écoulées pendant toute la partie et un clique sur un bouton vous ramène au menu principal.</p>
 

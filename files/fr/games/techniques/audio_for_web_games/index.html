@@ -160,7 +160,7 @@ myAudio.pause();</pre>
 
 <p>Voici un exemple d'un lecteur de "sprite" audio - nous allons d'abord configurer l'interface utilisateur en HTML :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;audio id="myAudio" src="http://jPlayer.org/tmp/countdown.mp3"&gt;&lt;/audio&gt;
+<pre class="brush: html">lt;audio id="myAudio" src="http://jPlayer.org/tmp/countdown.mp3"&gt;&lt;/audio&gt;
 &lt;button data-start="18" data-stop="19"&gt;0&lt;/button&gt;
 &lt;button data-start="16" data-stop="17"&gt;1&lt;/button&gt;
 &lt;button data-start="14" data-stop="15"&gt;2&lt;/button&gt;
@@ -170,13 +170,13 @@ myAudio.pause();</pre>
 &lt;button data-start="6"  data-stop="7"&gt;6&lt;/button&gt;
 &lt;button data-start="4"  data-stop="5"&gt;7&lt;/button&gt;
 &lt;button data-start="2"  data-stop="3"&gt;8&lt;/button&gt;
-&lt;button data-start="0"  data-stop="1"&gt;9&lt;/button&gt;</code></pre>
+&lt;button data-start="0"  data-stop="1"&gt;9&lt;/button&gt;</pre>
 
 <p>Maintenant, nous avons des boutons avec des heures de début et de fin en quelques secondes. Le fichier MP3 "countdown.mp3" se compose d'un numéro qui est prononcé toutes les 2 secondes, l'idée étant de lire ce numéro lorsque le bouton correspondant est pressé.</p>
 
 <p>Ajoutons du JavaScript pour que ça marche:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var myAudio = document.getElementById('myAudio');
+<pre class="brush: js">var myAudio = document.getElementById('myAudio');
 var buttons = document.getElementsByTagName('button');
 var stopTime = 0;
 
@@ -192,7 +192,7 @@ myAudio.addEventListener('timeupdate', function() {
   if (this.currentTime &gt; stopTime) {
     this.pause();
   }
-}, false);</code></pre>
+}, false);</pre>
 
 <div class="note">
 <p><strong>Note </strong>: Vous pouvez <a href="http://jsfiddle.net/59vwaame/">essayer notre lecteur de sprite audio</a> sur JSFiddle.</p>
@@ -242,17 +242,17 @@ myAudio.addEventListener('timeupdate', function() {
 
 <p>Pour voir cela en action, mettons en place des pistes distinctes :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">ul&gt;
+<pre class="brush: html">ul&gt;
   &lt;li&gt;&lt;a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-leadguitar.mp3"&gt;Lead Guitar&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-drums.mp3"&gt;Drums&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-bassguitar.mp3"&gt;Bass Guitar&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-horns.mp3"&gt;Horns&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a class="track" href="http://jPlayer.org/audio/mp3/gbreggae-clav.mp3"&gt;Clavi&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+&lt;/ul&gt;</pre>
 
 <p>Toutes ces pistes ont le même tempo et sont conçues pour être synchronisées les unes avec les autres.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">window.AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js">window.AudioContext = window.AudioContext || window.webkitAudioContext;
 
 var offset = 0;
 var context = new AudioContext();
@@ -300,7 +300,7 @@ for (var i = 0, len = tracks.length; i &lt; len; i++) {
     playTrack(this.href);
     e.preventDefault();
   });
-}</code></pre>
+}</pre>
 
 <div class="note">
 <p><strong>Note</strong>: Vous pouvez essayer notre <a href="http://jsfiddle.net/c87z11jj/1/">démo multipiste API Web Audio</a> sur JSFiddle.</p>
@@ -332,7 +332,7 @@ for (var i = 0, len = tracks.length; i &lt; len; i++) {
 
 <p>Voici un peu de code qui donne un tempo (le temps en secondes de votre battement / mesure), calcule combien de temps attendre pour jouer la partie suivante  —  vous alimentez la valeur initiale de la fonction <code>start ()</code> avec le premier paramètre qui prend le temps absolu de début de la lecture. Notez que le deuxième paramètre (où commencer à jouer à partir de la nouvelle piste) est relatif :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">if (offset == 0) {
+<pre class="brush: js">if (offset == 0) {
   source.start();
   offset = context.currentTime;
 } else {
@@ -341,7 +341,7 @@ for (var i = 0, len = tracks.length; i &lt; len; i++) {
   var remainder = beats - Math.floor(beats);
   var delay = tempo - (remainder*tempo);
   source.start(context.currentTime+delay, relativeTime+delay);
-}</code></pre>
+}</pre>
 
 <div class="note">
 <p><strong>Note</strong>: Ici, vous pouvez <a href="http://jsfiddle.net/c87z11jj/2/">essayer notre code calculateur d'attente</a> , sur JSFiddle (synchronisé à la mesure).</p>
