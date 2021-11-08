@@ -17,7 +17,7 @@ original_slug: Web/JavaScript/Introduction_à_l_utilisation_de_XPath_avec_JavaSc
 
 <h2 id="document.evaluate()">document.evaluate()</h2>
 
-<p>Cette méthode évalue les expressions <a href="/fr/docs/Web/XPath">XPath</a> dans un document <a href="/fr/docs/Web/XML">XML</a> (y compris les documents HTML), et retourne un objet <code><a class="internal" href="/fr/docs/Web/XPath/XPathResult">XPathResult</a></code>, qui peut être un nœud unique ou un ensemble de nœuds. La documentation existante sur cette méthode se trouve à la page <code><a href="/fr/docs/Web/API/Document/evaluate">document.evaluate</a></code> mais elle est plutôt succincte comparée à nos besoins actuels. Nous l'examinerons de façon plus complète dans la suite de ce document.</p>
+<p>Cette méthode évalue les expressions <a href="/fr/docs/Web/XPath">XPath</a> dans un document <a href="/fr/docs/Web/XML">XML</a> (y compris les documents HTML), et retourne un objet <code><a href="/fr/docs/Web/XPath/XPathResult">XPathResult</a></code>, qui peut être un nœud unique ou un ensemble de nœuds. La documentation existante sur cette méthode se trouve à la page <code><a href="/fr/docs/Web/API/Document/evaluate">document.evaluate</a></code> mais elle est plutôt succincte comparée à nos besoins actuels. Nous l'examinerons de façon plus complète dans la suite de ce document.</p>
 
 <pre class="eval">var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceResolver, resultType, result );
 </pre>
@@ -52,16 +52,16 @@ original_slug: Web/JavaScript/Introduction_à_l_utilisation_de_XPath_avec_JavaSc
 
 <p>Renvoie <code>xpathResult</code>, qui est un objet <code>XPathResult</code> du type <a href="#D.C3.A9finition_du_type_de_retour">défini</a> dans le paramètre <code>resultType</code>. L'interface <code>XPathResult</code> est définie dans ce <a href="/fr/docs/Web/API/XPathResult">document</a>.</p>
 
-<h3 id="Implémentation_d'un_résolveur_d'espaces_de_nommage_par_défaut"><a id="Implémentation_d'un_résolveur"></a>Implémentation d'un résolveur d'espaces de nommage par défaut</h3>
+<h3 id="Implémentation_d'un_résolveur_d'espaces_de_nommage_par_défaut">Implémentation d'un résolveur d'espaces de nommage par défaut</h3>
 
 <p>On crée un résolveur d'espace de nommage à l'aide de la méthode <code>createNSResolver</code> de l'objet <a href="/fr/docs/Web/API/Document/">document</a>.</p>
 
 <pre class="eval">var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 </pre>
 
-<p><span class="comment">Ou alternativement en utilisant la méthode &lt;code&gt;createNSResolver&lt;/code&gt; d'un objet &lt;code&gt;XPathEvaluator&lt;/code&gt;. &lt;pre&gt; var xpEvaluator = new XPathEvaluator(); var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement ); &lt;/pre&gt;</span> On lui passe ensuite <code>document.evaluate</code>, la variable <code>nsResolver</code> comme paramètre <code>namespaceResolver</code>.</p>
+<p>Ou alternativement en utilisant la méthode &lt;code&gt;createNSResolver&lt;/code&gt; d'un objet &lt;code&gt;XPathEvaluator&lt;/code&gt;. &lt;pre&gt; var xpEvaluator = new XPathEvaluator(); var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement ); &lt;/pre&gt; On lui passe ensuite <code>document.evaluate</code>, la variable <code>nsResolver</code> comme paramètre <code>namespaceResolver</code>.</p>
 
-<p><span class="comment">véracité du paragraphe suivant à vérifier avec la doc du w3c</span> Notez que XPath définit que les <code>QNames</code> sans préfixe correspondent uniquement aux éléments de l'espace de nommage <code>null</code>. Il n'existe aucun moyen dans XPath pour récupérer l'espace de nommage par défaut. Pour coupler des éléments ou des attributs dans un espace de nommage non nul, vous devrez détecter les noms préfixés, et créer un résolveur d'espace de nommage qui fera correspondre le préfixe avec l'espace de nommage. Vous en saurez plus sur la façon de <a href="#Impl.C3.A9mentation_d.27un_r.C3.A9solveur_d.27espace_de_nommage_personnalis.C3.A9">créer un résolveur d'espace de nommage personnalisé</a> ci-dessous.</p>
+<p>véracité du paragraphe suivant à vérifier avec la doc du w3c Notez que XPath définit que les <code>QNames</code> sans préfixe correspondent uniquement aux éléments de l'espace de nommage <code>null</code>. Il n'existe aucun moyen dans XPath pour récupérer l'espace de nommage par défaut. Pour coupler des éléments ou des attributs dans un espace de nommage non nul, vous devrez détecter les noms préfixés, et créer un résolveur d'espace de nommage qui fera correspondre le préfixe avec l'espace de nommage. Vous en saurez plus sur la façon de <a href="#Impl.C3.A9mentation_d.27un_r.C3.A9solveur_d.27espace_de_nommage_personnalis.C3.A9">créer un résolveur d'espace de nommage personnalisé</a> ci-dessous.</p>
 
 <h3 id="Définition_du_type_de_retour">Définition du type de retour</h3>
 
@@ -122,9 +122,9 @@ console.log( 'Ce document contient ' + paragraphCount.stringValue + ' éléments
  <li><code>ORDERED_NODE_ITERATOR_TYPE</code></li>
 </ul>
 
-<p>L'objet <code>XPathResult</code> renvoyé sera un ensemble de nœuds correspondant à l'expression se comportant comme un itérateur. On pourra accéder individuellement aux nœuds qu'il contient en utilisant la méthode <a class="internal" href="/fr/docs/Web/XPathResult.IterateNext()"><code>iterateNext()</code></a> de l'objet <code>XPathResult</code>.</p>
+<p>L'objet <code>XPathResult</code> renvoyé sera un ensemble de nœuds correspondant à l'expression se comportant comme un itérateur. On pourra accéder individuellement aux nœuds qu'il contient en utilisant la méthode <a href="/fr/docs/Web/XPathResult/IterateNext"><code>iterateNext()</code></a> de l'objet <code>XPathResult</code>.</p>
 
-<p>Lorsque tous les nœuds ont été parcourus, <a class="internal" href="/fr/docs/Web/XPathResult.IterateNext()"><code>iterateNext()</code></a> renverra <code>null</code>.</p>
+<p>Lorsque tous les nœuds ont été parcourus, <a href="/fr/docs/Web/XPathResult/IterateNext"><code>iterateNext()</code></a> renverra <code>null</code>.</p>
 
 <p>Notez cependant que si le document est modifié (l'arbre du document est modifié) entre les itérations, l'itérateur sera invalidé et la propriété <code>invalidIteratorState</code> de <code>XPathResult</code> deviendra <code>true</code>. Une exception <code>NS_ERROR_DOM_INVALID_STATE_ERR</code> sera également déclenchée.</p>
 
@@ -154,7 +154,7 @@ catch (e) {
  <li><code>ORDERED_NODE_SNAPSHOT_TYPE</code></li>
 </ul>
 
-<p>L'objet <code>XPathResult</code> renvoyé sera un ensemble statique de nœuds correspondant à l'expression. L'accès à chaque nœud se fera au travers de la méthode <a class="internal" href="/fr/docs/Web/XPathResult.SnapshotItem()"><code>snapshotItem(itemNumber)</code></a> de l'objet <code>XPathResult</code>, où <code>itemNumber</code> est l'indice du nœud à récupérer. On peut accéder au nombre total de nœuds contenus dans l'ensemble par la propriété <code>snapshotLength</code>.</p>
+<p>L'objet <code>XPathResult</code> renvoyé sera un ensemble statique de nœuds correspondant à l'expression. L'accès à chaque nœud se fera au travers de la méthode <a href="/fr/docs/Web/XPathResult/SnapshotItem"><code>snapshotItem(itemNumber)</code></a> de l'objet <code>XPathResult</code>, où <code>itemNumber</code> est l'indice du nœud à récupérer. On peut accéder au nombre total de nœuds contenus dans l'ensemble par la propriété <code>snapshotLength</code>.</p>
 
 <p>Les snapshots ne changent pas avec les mutations du document. Aussi, contrairement aux itérateurs, le snapshot ne deviendra pas invalide mais peut ne plus correspondre au document actuel. Par exemple, des nœuds peuvent avoir été déplacés, il peut contenir des nœuds qui n'existent plus ou de nouveaux nœuds peuvent avoir été ajoutés.</p>
 
@@ -195,7 +195,7 @@ console.log( 'Le premier numéro de téléphone trouvé est ' + firstPhoneNumber
 
 <p>Pour déterminer le type utilisé après l'évaluation, on utilisera la propriété <code>resultType</code> de l'objet <code>XPathResult</code>. Les valeurs <a href="#Constantes_d.C3.A9finies_de_XPathResult">constantes</a> de cette propriété sont définies dans l'annexe.</p>
 
-<p><span class="comment">None Yet =====Exemple Any_Type===== &lt;pre&gt; &lt;/pre&gt;</span></p>
+<p>None Yet =====Exemple Any_Type===== &lt;pre&gt; &lt;/pre&gt;</p>
 
 <h2 id="Exemples">Exemples</h2>
 
@@ -203,7 +203,7 @@ console.log( 'Le premier numéro de téléphone trouvé est ' + firstPhoneNumber
 
 <p>Le code suivant est destiné à être inséré dans un fragment JavaScript intégré ou lié au document HTML qui devra être évalué par l'expression XPath.</p>
 
-<p>Pour extraire tous les éléments d'en-tête <code>&lt;h2&gt;</code> d'un document HTML à l'aide de XPath, l'expression <code>xpathExpression</code> est simplement '<code>//h2</code>', où <code>//</code> est l'opérateur descendant récursif (ou RDO) qui correspond aux éléments dont la propriété <code>nodeName</code> est <code>h2</code> n'importe où dans l'arbre du document. Le code complet pour cela est : <span class="comment">link to introductory xpath doc</span></p>
+<p>Pour extraire tous les éléments d'en-tête <code>&lt;h2&gt;</code> d'un document HTML à l'aide de XPath, l'expression <code>xpathExpression</code> est simplement '<code>//h2</code>', où <code>//</code> est l'opérateur descendant récursif (ou RDO) qui correspond aux éléments dont la propriété <code>nodeName</code> est <code>h2</code> n'importe où dans l'arbre du document. Le code complet pour cela est : link to introductory xpath doc</p>
 
 <pre class="brush:js">var headings = document.evaluate('//h2', document, null, XPathResult.ANY_TYPE, null );
 </pre>
