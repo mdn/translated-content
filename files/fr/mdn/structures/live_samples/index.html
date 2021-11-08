@@ -33,9 +33,8 @@ original_slug: MDN/Structures/Exemples_live
 
 <p>Le cadre (ou la page) qui en résulte est protégé par un bac à sable, sécurisé, et peut techniquement faire tout ce qui fonctionne sur le Web. Bien sûr, d'un point de vue pratique, le code doit contribuer à l'intérêt de la page qui le contient ; les trucs aléatoires qui tournent sur MDN seront supprimés par la communauté des éditeurs.</p>
 
-<div class="note notecard">
-  <p><b>Note :</b></p>
-  <p>Vous <strong>devez</strong> utiliser la macro pour présenter la sortie de l'échantillon en direct.</p>
+<div class="note">
+  <p><strong>Note :</strong> Vous <strong>devez</strong> utiliser la macro pour présenter la sortie de l'échantillon en direct.</p>
 </div>
 
 <p>Chaque bloc <a href="/fr/docs/Web/HTML/Element/pre"><code>&lt;pre&gt;</code></a> contenant du code pour l'échantillon est doté d'une classe qui indique s'il s'agit de code HTML, CSS ou JavaScript ; ces classes sont « brush : html », « brush : css » et « brush : js ». Ces classes doivent se trouver sur les blocs de code correspondants.</p>
@@ -69,8 +68,8 @@ original_slug: MDN/Structures/Exemples_live
   <dt>page_slug</dt>
   <dd>
     <p>Le slug de la page contenant l'échantillon ; ceci est facultatif, et s'il n'est pas fourni, l'échantillon est tiré de la même page sur laquelle la macro est utilisée.</p>
-    <div class="notecard warning">
-      <b>Attention :</b> Pour afficher un échantillon en direct d'une page contenant du code dans une page cible différente, la page contenant du code doit elle-même utiliser la macro <code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code> pour intégrer un échantillon en direct dans sa propre page. Sinon, si la page contenant le code n'utilise pas elle-même la macro <code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code> sa propre page, l'échantillon vivant ne s'affichera pas du tout sur la page cible. (Voir <a href="https://github.com/mdn/yari/issues/2243">Le ticket Yari #2243</a>.)
+    <div class="warning">
+      <p><strong>Attention :</strong> Pour afficher un échantillon en direct d'une page contenant du code dans une page cible différente, la page contenant du code doit elle-même utiliser la macro <code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code> pour intégrer un échantillon en direct dans sa propre page. Sinon, si la page contenant le code n'utilise pas elle-même la macro <code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code> sa propre page, l'échantillon vivant ne s'affichera pas du tout sur la page cible. (Voir <a href="https://github.com/mdn/yari/issues/2243">Le ticket Yari #2243</a>.)</p>
     </div>
   </dd>
 </dl>
@@ -100,9 +99,8 @@ original_slug: MDN/Structures/Exemples_live
 
 <p>Chaque morceau de code doit se trouver dans un bloc <a href="/fr/docs/Web/HTML/Element/pre"><code>&lt;pre&gt;</code></a>, avec un bloc distinct pour chaque langue, correctement marqué quant à sa langue. La plupart du temps, cela a déjà été fait, mais il est toujours utile de revérifier pour s'assurer que chaque morceau de code est configuré avec la bonne syntaxe. Ceci est fait avec une classe sur l'élément <code>&lt;pre&gt;</code> de <code>brush:<em>language-type</em></code>, où <em>language-type</em> est le type de langage que le bloc contient, par exemple <code>html</code>, <code>css</code>, ou <code>js</code>.</p>
 
-<div class="note notecard">
-  <p><b>Note :</b></p>
-  <p>Vous pouvez avoir plus d'un bloc pour chaque langue ; ils sont tous concaténés ensemble. Vous pouvez ainsi avoir un morceau de code, suivi d'une explication de son fonctionnement, puis un autre morceau, et ainsi de suite. Il est ainsi encore plus facile de produire des didacticiels et autres qui utilisent des échantillons en direct entrecoupés de texte explicatif.</p>
+<div class="note">
+  <p><strong>Note :</strong> Vous pouvez avoir plus d'un bloc pour chaque langue ; ils sont tous concaténés ensemble. Vous pouvez ainsi avoir un morceau de code, suivi d'une explication de son fonctionnement, puis un autre morceau, et ainsi de suite. Il est ainsi encore plus facile de produire des didacticiels et autres qui utilisent des échantillons en direct entrecoupés de texte explicatif.</p>
 </div>
 
 <p>Assurez-vous donc que les blocs <a href="/fr/docs/Web/HTML/Element/pre"><code>&lt;pre&gt;</code></a> de votre code HTML, CSS et/ou JavaScript sont chacun configurés correctement pour la coloration syntaxique de ce langage, et vous êtes prêt à partir.</p>
