@@ -3029,7 +3029,6 @@
 /fr/docs/MDN/Contribute/Structures/Macros	/fr/docs/MDN/Structures/Macros
 /fr/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros	/fr/docs/MDN/Structures/Macros/Commonly-used_macros
 /fr/docs/MDN/Contribute/Tools	/fr/docs/MDN/Tools
-/fr/docs/MDN/Contribute/Tools/KumaScript	/fr/docs/MDN/Tools/KumaScript
 /fr/docs/MDN/Débuter_sur_MDN	/fr/docs/MDN/Contribute/Getting_started
 /fr/docs/MDN/Feedback	/fr/docs/MDN/Contribute/Feedback
 /fr/docs/MDN/Guidelines/Code_lignesdirectrices	/fr/docs/MDN/Guidelines/Code_guidelines
