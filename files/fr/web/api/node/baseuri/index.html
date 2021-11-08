@@ -10,22 +10,22 @@ tags:
 translation_of: Web/XML/xml:base
 original_slug: Web/XML/xml:base
 ---
-<p>xml:base est comme  <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/base">L'élément pour l'URL de base du document en HTML</a> mais peut spécifier l'URI de base par élément ainsi que pour le document entier.</p>
+<p>xml:base est comme  <a href="/fr/docs/Web/HTML/Element/base">L'élément pour l'URL de base du document en HTML</a> mais peut spécifier l'URI de base par élément ainsi que pour le document entier.</p>
 
-<p>L'URL de base d'un élément peut être interrogé à partir d'un script en utilisant <a href="https://developer.mozilla.org/fr/docs/Web/API/Node/baseURI">Node.baseURI</a>.</p>
+<p>L'URL de base d'un élément peut être interrogé à partir d'un script en utilisant <a href="/fr/docs/Web/API/Node/baseURI">Node.baseURI</a>.</p>
 
 <blockquote>
-<p><a id="granularity" name="granularity">L'URI de base d'un élément est :</a></p>
+<p>L'URI de base d'un élément est :</p>
 
 <ol>
  <li>
-  <p><a id="granularity" name="granularity">l'URI de base spécifiée par un attribut <code>xml:base</code> sur l'élément, s'il en existe un, sinon</a></p>
+  <p>l'URI de base spécifiée par un attribut <code>xml:base</code> sur l'élément, s'il en existe un, sinon</p>
  </li>
  <li>
-  <p><a id="granularity" name="granularity">l'URI de base de l'élément du parent contenu dans l'entité du document ou une entité externe, s'il en existe, sinon</a></p>
+  <p>l'URI de base de l'élément du parent contenu dans l'entité du document ou une entité externe, s'il en existe, sinon</p>
  </li>
  <li>
-  <p><a id="granularity" name="granularity">l'URI de base de l'entité du document ou d'une entité externe contenant l'élément.</a></p>
+  <p>l'URI de base de l'entité du document ou d'une entité externe contenant l'élément.</p>
  </li>
 </ol>
 </blockquote>
@@ -39,9 +39,8 @@ original_slug: Web/XML/xml:base
 
 <h2 id="Cas_d'utilisation">Cas d'utilisation</h2>
 
-<p>Si vous avez un SVG en ligne, vous utilisez des icônes qui doivent fonctionner dans un document avec un <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/base">HTML BaseElement</a> , vous pouvez réinitialiser l'URI sur votre "sprite" d'icône en réglant le xml:base.</p>
+<p>Si vous avez un SVG en ligne, vous utilisez des icônes qui doivent fonctionner dans un document avec un <a href="/fr/docs/Web/HTML/Element/base">HTML BaseElement</a> , vous pouvez réinitialiser l'URI sur votre "sprite" d'icône en réglant le xml:base.</p>
 
-<p> </p>
 
 <pre class="brush: html"><code>&lt;html&gt;
   &lt;head&gt;
@@ -63,7 +62,6 @@ original_slug: Web/XML/xml:base
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-<p> </p>
 
 <p>Imaginez un SVG avec des références de polices de caractères. Par exemple :</p>
 
@@ -100,21 +98,18 @@ fill: #161615;
 
 <p>La définition du xml:base sur l'élément SVG signifie que vous pouvez intégrer le SVG et ainsi contourner le problème CORS sans modifier l'URI de base pour l'ensemble de votre document..</p>
 
-<p> </p>
 
-<h2 id="Specification" name="Specification">Les solutions de contournement</h2>
+<h2>Les solutions de contournement</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/docs/Archive/Add-ons/Code_snippets/XML/base_function">prise en charge de xml:base dans les anciens navigateurs</a></li>
+ <li><a href="/fr/docs/Archive/Add-ons/Code_snippets/XML/base_function">prise en charge de xml:base dans les anciens navigateurs</a></li>
  <li><a href="https://gist.github.com/leonderijke/c5cf7c5b2e424c0061d2">https://gist.github.com/leonderijke/c5cf7c5b2e424c0061d2</a></li>
 </ul>
 
-<h2 id="Specification" name="Specification">Spécification</h2>
+<h2>Spécification</h2>
 
 <ul>
  <li>{{spec("https://www.w3.org/TR/xmlbase/", "XML Base (Second Edition)","REC")}}</li>
 </ul>
 
-<p> </p>
 
-<p> </p>
