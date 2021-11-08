@@ -12,7 +12,7 @@ translation_of: MDN/Guidelines/Conventions_definitions
 ---
 <p>{{MDNSidebar}}</p>
 
-<p class="summary"><span class="seoSummary">MDN dispose de nombreux styles prédéfinis qui peuvent être utilisés dans les articles. Cette page recense les différentes classes disponibles et comment les utiliser.</span></p>
+<p>MDN dispose de nombreux styles prédéfinis qui peuvent être utilisés dans les articles. Cette page recense les différentes classes disponibles et comment les utiliser.</p>
 
 <p>On gardera à l'esprit que ces styles ont été développés afin d'aborder la plupart des situations pour la mise en forme du contenu d'un article. Autant que possible, on devra utiliser ces classes disponibles pour éviter de créer une hétérogénéité de styles. Si vous pensez qu'une page nécessite une mise en forme spécifique, commencez <a href="/fr/docs/MDN/Contribute/Getting_started#step_4_ask_for_help">par en discuter</a>.</p>
 
@@ -95,26 +95,6 @@ function works(){
 
 <p>{{EmbedLiveSample("Hidden_code_sample", "100%", 150)}}</p>
 
-<h3 id=".seoSummary"><code>.seoSummary</code></h3>
-
-<p>Il s'agit d'une classe sans effet visible sur le contenu de la page. Toutefois, si la classe est appliquée à un élément (généralement un <a href="/fr/docs/Web/HTML/Element/span"><code>&lt;span&gt;</code></a>), KumaScript utilisera le contenu de l'élément afin de créer une <code>description</code> via une balise <a href="/fr/docs/Web/HTML/Element/meta"><code>&lt;meta&gt;</code></a>. Celle-ci sera utilisée pour fournir une courte description dans les moteurs de recherche et sur les tuiles générées dans les messages sur les réseaux sociaux comme Facebook et Twitter.</p>
-
-<div class="notecard note">
-  <h4>Note</h4>
-  <p>Si <code>.seoSummary</code> n'est pas explicitement utilisée sur une page, le premier paragraphe sera automatiquement utilisé comme telle description.</p>
-</div>
-
-<h4 id="Example_syntax_4">Exemple de syntaxe</h4>
-
-<pre class="brush: html">&lt;span class="seoSummary"&gt;
-  Les extensions permettent aux développeuses et développeurs d'étendre les fonctionnalités d'un navigateur.
-&lt;/span&gt;</pre>
-
-<h4 id="Example_of_the_generated_HTMLElementmeta_elements">Exemple de <a href="/fr/docs/Web/HTML/Element/meta"><code>&lt;meta&gt;</code></a> généré</h4>
-
-<pre class="brush: html;">&lt;meta name="description"
-    content="Les extensions permettent aux développeuses et développeurs d'étendre les fonctionnalités d'un navigateur."&gt;</pre>
-
 <h2 id="Block_level_styles">Styles pour les éléments de bloc</h2>
 
 <p>Cette section énumère les différents styles permettant de mettre en forme les éléments de bloc sur MDN.</p>
@@ -171,29 +151,6 @@ Ce qui fournira le résultat suivant :
 }</pre>
 
 <p>Si aucun langage pertinent n'est disponible, on pourra n'utiliser aucune valeur ou <code>brush: plain</code> afin d'avoir du code sans coloration syntaxique.</p>
-
-<h3 id="details"><code>details</code></h3>
-
-<p>Un élément <code>&lt;details&gt;</code> peut être utilisé autour d'un bloc de contenu afin de masquer ce contenu et d'afficher un lien "▶︎ Détails" qui, lorsqu'on cliquera dessus, dévoilera son contenu.</p>
-
-<details open>
-  <summary>
-<h4 id="Example_syntax_9">Exemple de syntaxe</h4>
-  </summary>
-<p>Voici un exemple de syntaxe pour l'élément <a href="/fr/docs/Web/HTML/Element/details"><code>&lt;details&gt;</code></a> qui a été masqué avec <a href="/fr/docs/Web/HTML/Element/details"><code>&lt;details&gt;</code></a>.</p>
-
-<pre class="brush: html;">&lt;details&gt;
-  &lt;summary&gt;
-&lt;h4&gt;Exemple de syntaxe&lt;/h4&gt;
-  &lt;/summary&gt;
-&lt;p&gt;Voici un exemple de syntaxe pour l'élément &lt;code&gt;.detail&lt;/code&gt; qui a été masqué avec &lt;code&gt;.detail&lt;/code&gt;.&lt;/p&gt;
-&lt;/details&gt;</pre>
-</details>
-
-<div class="notecard note">
-  <h4>Note</h4>
-  <p>On peut inclure un attribut <code>open</code> sur l'élément <code>&lt;details&gt;</code> afin que celui-ci soit ouvert par défaut.</p>
-</div>
 
 <h3 id=".example-bad_and_.example-good"><code style="white-space: nowrap;">.example-bad</code> et <code style="white-space: nowrap;">.example-good</code></h3>
 
