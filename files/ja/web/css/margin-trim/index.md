@@ -3,63 +3,63 @@ title: margin-trim
 slug: Web/CSS/margin-trim
 tags:
   - CSS
-  - CSS Property
+  - CSS プロパティ
   - Draft
   - Experimental
   - NeedsContent
   - NeedsExample
   - NeedsLiveSample
-  - Reference
+  - リファレンス
   - recipe:css-property
 browser-compat: css.properties.margin-trim
 translation_of: Web/CSS/margin-trim
 ---
 {{CSSRef}}
 
-The `margin-trim` property allows the container to trim the margins of its children where they adjoin the container’s edges.
+`margin-trim` プロパティは、包含ブロックがその子のマージンを包含ブロックの縁に隣接する部分で切り取るすることを可能にします。
 
-## Syntax
+## 構文
 
 ```css
 margin-trim: none;
 margin-trim: in-flow;
 margin-trim: all;
 
-/* Global values */
+/* グローバル値 */
 margin-trim: inherit;
 margin-trim: initial;
 margin-trim: revert;
 margin-trim: unset;
 ```
 
-## Values
+## 値
 
 - `none`
-  - : Margins are not trimmed by the container.
+  - : マージンは包含ブロックで切り取られません。
 - `in-flow`
 
-  - : For in-flow boxes contained by this box, block-axis margins adjacent to the box's edges are truncated to zero.
+  - : このボックスに含まれるフロー内のボックスでは、ボックスの縁に隣接するブロック軸のマージンがゼロに切り捨てられます。
 
-    It also truncates any margins collapsed with such a margin.
+    また、そのようなマージンで相殺されたマージンは切り捨てられます。
 
 - `all`
-  - : Trims the margins of in-flow boxes and floats whose margins coincide with the container's content edge.
+  - : 包含ブロックのコンテンツの縁とマージンが一致しているフロー内のボックスや浮動要素のマージンを切り取ります。
 
-## Formal definition
+## 公式定義
 
 {{cssinfo}}
 
-## Formal syntax
+## 形式文法
 
 {{csssyntax}}
 
-## Examples
+## 例
 
-### Basic usage
+### 基本的な使用
 
-Once support is implemented for this property, it will probably work like so:
+このプロパティへの対応が実装されたら、次のように動作するでしょう。
 
-When you've got a container with some inline children and you want to put a margin between each child but not have it interfere with the spacing at the end of the row, you might do something like this:
+インラインの子を持つ包含ブロックがあり、それぞれの子の間にマージンを入れたいが、行末の空間とは干渉しないようにするには、次のようにします。
 
 ```css
 article {
@@ -78,7 +78,7 @@ article > span {
 }
 ```
 
-The problem here is that you'd end up with 20px too much spacing at the right of the row, so you'd maybe do this to fix it:
+ここでの問題は、行の右に 20px の間隔が空きすぎてしまうことで、それを修正するためにこのようにするのではないでしょうか。
 
 ```css
 span:last-child {
@@ -86,7 +86,7 @@ span:last-child {
 }
 ```
 
-It is a pain having to write another rule to achieve this, and it is also not very flexible. Instead, `margin-trim` could fix it:
+これを実現するために別のルールを書かなければならないのは面倒ですし、柔軟性もありません。代わりに、 `margin-trim` で解決できます。
 
 ```css
  article {
@@ -95,14 +95,14 @@ It is a pain having to write another rule to achieve this, and it is also not ve
 }
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{CSSxRef("margin")}}

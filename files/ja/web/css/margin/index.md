@@ -5,27 +5,29 @@ tags:
   - CSS
   - CSS プロパティ
   - CSS 基本ボックスモデル
-  - Reference
+  - recipe:css-shorthand-property
+browser-compat: css.properties.margin
 translation_of: Web/CSS/margin
-translation_of_original: Web/CSS/margin-new
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>margin</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、要素の全四辺の<a href="/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">マージン領域</a>を設定します。これはすべての個別のマージン ({{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}) の<a href="/ja/docs/Web/CSS/Shorthand_properties">一括指定</a>です。</p>
+**`margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の全四辺の[マージン領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/margin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/margin.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構成要素のプロパティ
 
-<p>top および bottom のマージンは、 {{HTMLElement("span")}} または {{HTMLElement("code")}} などの<em><a href="/ja/docs/Web/CSS/Replaced_element">置換要素</a>ではない</em>インライン要素には効果がありません。</p>
+このプロパティは以下の CSS プロパティの一括指定です。
 
-<div class="note">
-<p><strong>注:</strong> マージンは要素の周りに追加の領域を作成します。それに対して、 {{cssxref("padding")}} は要素<em>内</em>に追加の領域を作成します。</p>
-</div>
+- {{cssxref("margin-bottom")}}
+- {{cssxref("margin-left")}}
+- {{cssxref("margin-right")}}
+- {{cssxref("margin-top")}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="brush:css no-line-numbers notranslate">/* 四辺すべてに適用 */
+```css
+/* 四辺すべてに適用 */
 margin: 1em;
 margin: -3px;
 
@@ -41,62 +43,84 @@ margin: 2px 1em 0 auto;
 /* グローバル値 */
 margin: inherit;
 margin: initial;
+margin: revert;
 margin: unset;
-</pre>
+```
 
-<p><code>margin</code> プロパティは1～4つの値を使って指定することができます。それぞれの値は <code><a href="#&lt;length>">&lt;length&gt;</a></code>、 <code><a href="#&lt;percentage>">&lt;percentage&gt;</a></code>、 または <code><a href="#auto">auto</a></code> キーワードです。負の数を指定すると、要素を既定よりも隣と近づけて描画します。</p>
+`margin` プロパティは 1 ～ 4 つの値を使って指定することができます。それぞれの値は {{cssxref("&lt;length&gt;")}}、{{cssxref("&lt;percentage&gt;")}}、 または `auto` キーワードです。負の数を指定すると、要素を既定よりも隣と近づけて描画します。
 
-<ul>
- <li>値が<strong>1つ</strong>指定された場合、<strong>全四辺</strong>に同じマージンが適用される。</li>
- <li>値が<strong>2つ</strong>指定された場合、1つ目のマージンは<strong>上下</strong>、2つ目は<strong>左右</strong>の辺に適用される。</li>
- <li>値が<strong>3つ</strong>指定された場合、1つ目のマージンは<strong>上</strong>、2つ目は<strong>左右</strong>、3つ目は<strong>下</strong>の辺に適用される。</li>
- <li>値が<strong>4つ</strong>指定された場合、マージンはそれぞれ<strong>上</strong>、<strong>右</strong>、<strong>下</strong>、<strong>左</strong>の順 (時計回り) に適用される。</li>
-</ul>
+- 値が **1 つ**指定された場合、**全四辺**に同じマージンが適用される。
+- 値が **2 つ**指定された場合、1 つ目のマージンは**上下**、2 つ目は**左右**の辺に適用される。
+- 値が **3 つ**指定された場合、1 つ目のマージンは**上**、2 つ目は**左右**、3 つ目は**下**の辺に適用される。
+- 値が **4 つ**指定された場合、マージンはそれぞれ**上**、**右**、**下**、**左**の順 (時計回り) に適用される。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><strong>{{cssxref("length")}}</strong></dt>
- <dd>固定値によるマージンの寸法です。</dd>
- <dt>{{cssxref("percentage")}}</dt>
- <dd>内包ブロックの <em>width</em> に対するパーセントによるマージンの寸法です。</dd>
- <dt><code>auto</code></dt>
- <dd>ブラウザーが適切なマージンを選択して使用します。例えば、特定の場合に要素を中央揃えするためにこの値を使用します。</dd>
-</dl>
+- {{cssxref("length")}}
+  - : マージンの寸法を固定値で表したものです。
+- {{cssxref("percentage")}}
+  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)の*幅*に対するパーセント値で表したものです。
+- `auto`
+  - : ブラウザーが適切なマージンを選択して使用します。例えば、要素を中央揃えするためにこの値を使用することもあります。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 解説
+
+このプロパティを使用して、要素の全四辺のマージンを設定することができます。マージンは要素の周りに追加の領域を作成します。それに対して、 {{cssxref("padding")}} は要素*内部*に追加の領域を作成します。
+
+top および bottom のマージンは、 {{HTMLElement("span")}} または {{HTMLElement("code")}} などの[置換要素](/ja/docs/Web/CSS/Replaced_element)ではないインライン要素には効果がありません。
+
+### 水平方向の中央揃え
+
+最近のブラウザーで何かを中央揃えしたい場合は、{{cssxref("display")}}`: flex; `{{cssxref("justify-content")}}`: center;` を使用することができます。
+
+しかし、 IE8-9 のような古いブラウザーはフレックスボックスレイアウトに対応していないため、これは利用できません。親要素内で要素を中央揃えするのであれば、 `margin: 0 auto;` を使用してください。
+
+### マージンの相殺
+
+要素の上下のマージンは、相殺されて 2 つのマージンのうち大きい方を取る単一のマージンになることがあります。詳しくは[マージンの相殺の習得](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)を参照してください。
+
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Simple_example" name="Simple_example">単純な例</h3>
+<h3 id="Simple_example">単純な例</h3>
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div class="center"&gt;This element is centered.&lt;/div&gt;
+```html
+<div class="center">This element is centered.</div>
 
-&lt;div class="outside"&gt;This element is positioned outside of its container.&lt;/div&gt;</pre>
+<div class="outside">This element is positioned outside of its container.</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight:[2,8] notranslate">.center {
-  margin: auto;
-  background: lime;
-  width: 66%;
+```css
+.center {
+  margin: auto;
+  background: lime;
+  width: 66%;
 }
 
 .outside {
-  margin: 3rem 0 0 -3rem;
-  background: cyan;
-  width: 66%;
-}</pre>
+  margin: 3rem 0 0 -3rem;
+  background: cyan;
+  width: 66%;
+}
+```
 
-<p>{{ EmbedLiveSample('Simple_example','100%',120) }}</p>
+{{ EmbedLiveSample('Simple_example','100%',120) }}
 
-<h3 id="More_examples" name="More_examples">その他の例</h3>
+### その他の例
 
-<pre class="brush: css notranslate">margin: 5%;                /* 全辺: 5% のマージン */
+```css
+margin: 5%;                /* 全辺: 5% のマージン */
 
 margin: 10px;              /* 全辺: 10px のマージン */
 
@@ -117,64 +141,19 @@ margin: 2em auto;           /* 上と下: 2em のマージン   */
 
 margin: auto;               /* 上と下: 0 のマージン     */
                             /* ボックスは水平方向に中央 */
-</pre>
+```
 
-<h2 id="Notes" name="Notes">注</h2>
+## 仕様書
 
-<h3 id="Horizontal_centering" name="Horizontal_centering">水平方向の中央揃え</h3>
+{{Specifications}}
 
-<p>最近のブラウザーで何かを中央揃えしたい場合は、 <code><a href="/ja/docs/Web/CSS/display">display</a>: flex; <a href="/ja/docs/Web/CSS/justify-content">justify-content</a>: center;</code> を使用することができます。</p>
+## ブラウザーの互換性
 
-<p>しかし、 IE8-9 のような古いブラウザーはフレックスボックスレイアウトに対応していないため、これは利用できません。親要素内で要素を中央揃えするのであれば、 <code>margin: 0 auto;</code> を使用してください。</p>
+{{Compat}}
 
-<h3 id="Margin_collapsing" name="Margin_collapsing">マージンの相殺</h3>
+## 関連情報
 
-<p>要素の上下のマージンは、相殺されて2つのマージンのうち大きい方を取る単一のマージンになることがあります。詳しくは<a href="/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">マージンの相殺の理解</a>を参照してください。</p>
-
-<h2 id="Specifications" name="Specifications">仕様書</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Box', '#margin', 'margin') }}</td>
-   <td>{{ Spec2('CSS3 Box') }}</td>
-   <td>有意な変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Transitions', '#animatable-css', 'margin') }}</td>
-   <td>{{ Spec2('CSS3 Transitions') }}</td>
-   <td><code>margin</code> をアニメーション可能として定義。</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'box.html#margin-properties', 'margin') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>インライン要素における top および bottom マージンの効果を削除。</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS1', '#margin', 'margin') }}</td>
-   <td>{{ Spec2('CSS1') }}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
-
-<p>{{cssinfo}}</p>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p>{{Compat("css.properties.margin")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a class="internal" href="/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS 基本ボックスモデルの紹介 </a></li>
- <li><a class="internal" href="/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">マージンの相殺</a></li>
- <li>{{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}</li>
-</ul>
+- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}
+- 対応する論理的プロパティ: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}} および一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}

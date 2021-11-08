@@ -3,26 +3,26 @@ title: margin-bottom
 slug: Web/CSS/margin-bottom
 tags:
   - CSS
-  - CSS Property
-  - Reference
-  - 'recipe:css-property'
+  - CSS プロパティ
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.margin-bottom
 translation_of: Web/CSS/margin-bottom
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>margin-bottom</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、要素の下側の<a href="/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">マージン領域</a>を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。</p>
+**`margin-bottom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の[マージン領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
 
-<div>{{EmbedInteractiveExample("pages/css/margin-bottom.html")}}</div>
+{{EmbedInteractiveExample("pages/css/margin-bottom.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+![要素ボックスにおける CSS の margin-bottom プロパティの効果](margin-bottom.svg)
 
-<p><img alt="要素ボックスにおける CSS の margin-bottom プロパティの効果" src="/files/4045/margin-bottom.svg" style="border: 1px solid; display: block; height: 130px; margin-left: auto; margin-right: auto; width: 400px;"></p>
+このプロパティは、 {{HTMLElement("span")}} または {{HTMLElement("code")}} のような非[置換](/ja/docs/Web/CSS/Replaced_element)のインライン要素には効果がありません。
 
-<p>このプロパティは、 {{HTMLElement("span")}} または {{HTMLElement("code")}} のような<em>非<a href="/ja/docs/Web/CSS/Replaced_element">置換</a></em>のインライン要素には効果がありません。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* &lt;length&gt; 値 */
+```css
+/* <length> 値 */
 margin-bottom: 10px;  /* 絶対的な寸法 */
 margin-bottom: 1em;   /* 文字の寸法からの相対 */
 margin-bottom: 5%;    /* 直近のブロックコンテナーの幅からの相対 */
@@ -33,47 +33,49 @@ margin-bottom: auto;
 /* グローバル値 */
 margin-bottom: inherit;
 margin-bottom: initial;
+margin-bottom: revert;
 margin-bottom: unset;
-</pre>
+```
 
-<p><code>margin-bottom</code> プロパティは <code>auto</code> キーワード、または <code>&lt;length&gt;</code> や <code>&lt;percentage&gt;</code> で指定されます。正の数、ゼロ、負の数が指定できます。</p>
+`margin-bottom` プロパティは `auto` キーワード、または `<length>` や `<percentage>` で指定されます。正の数、ゼロ、負の数が指定できます。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>固定値によるマージンの寸法です。</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>包含ブロックの <em>width</em> に対するパーセントによるマージンの寸法です。</dd>
- <dt><code>auto</code></dt>
- <dd>ブラウザ―が適切な値を選択して使用します。 {{cssxref("margin")}} を参照してください。</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : マージンの寸法を固定値で表したものです。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : マージンの寸法を包含ブロックの*幅*に対するパーセント値で表したものです。
+- `auto`
+  - : ブラウザ―が適切な値を選択して使用します。 {{cssxref("margin")}} を参照してください。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Setting_positive_and_negative_bottom_margins" name="Setting_positive_and_negative_bottom_margins">正および負の数の下側のマージンの設定</h3>
+<h3 id="Setting_positive_and_negative_bottom_margins">正および負の数の下側のマージンの設定</h3>
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
-&lt;div class="box0"&gt;Box 0&lt;/div&gt;
-&lt;div class="box1"&gt;Box 1&lt;/div&gt;
-&lt;div class="box2"&gt;Box one's negative margin pulls me up&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="container">
+<div class="box0">Box 0</div>
+<div class="box1">Box 1</div>
+<div class="box2">Box one's negative margin pulls me up</div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<p>div に margin-bottom と height を設定する CSS です。</p>
+div に margin-bottom と height を設定する CSS です。
 
-<pre class="brush: css notranslate">.box0 {
+```css
+.box0 {
     margin-bottom:1em;
     height:3em;
 }
@@ -86,12 +88,12 @@ margin-bottom: unset;
     border-width:1px 0;
     margin-bottom:2em;
 }
+```
 
-</pre>
+包含要素と div の定義の一部です。これによってマージンの効果がより明確に見えます。
 
-<p>包含要素と div の定義の一部です。これによって margin の効果がより明確に見えます。</p>
-
-<pre class="brush: css notranslate">.container {
+```css
+.container {
     background-color:orange;
     width:320px;
     border:1px solid black;
@@ -99,48 +101,22 @@ margin-bottom: unset;
 div {
     width:320px;
     background-color:gold;
-}</pre>
+}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{ EmbedLiveSample('Setting_positive_and_negative_bottom_margins',350,200) }}</p>
+{{ EmbedLiveSample('Setting_positive_and_negative_bottom_margins',350,200) }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#propdef-margin-bottom', 'margin-bottom')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td>目立った変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-bottom')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>CSS1 と同様、ただしインライン要素での効果は削除。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#margin-bottom', 'margin-bottom')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.margin-bottom")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-left")}} と {{cssxref("margin")}} 一括指定</li>
- <li>対応する論理プロパティ: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}} および一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}</li>
-</ul>
+- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-left")}} と {{cssxref("margin")}} 一括指定
+- 対応する論理的プロパティ: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}} および一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}

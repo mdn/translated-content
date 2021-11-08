@@ -3,40 +3,36 @@ title: padding
 slug: Web/CSS/padding
 tags:
   - CSS
-  - CSS Padding
-  - CSS Property
-  - Reference
-  - 'recipe:css-shorthand-property'
+  - CSS パディング
+  - CSS プロパティ
+  - リファレンス
+  - recipe:css-shorthand-property
+browser-compat: css.properties.padding
 translation_of: Web/CSS/padding
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>padding</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/Shorthand_properties">一括指定プロパティ</a>で、要素の全四辺の<a href="/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding-area">パディング領域</a>を一度に設定します。</p>
+**`padding`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素の全四辺の[パディング領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#パディング領域)を一度に設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/padding.html")}}</div>
+{{EmbedInteractiveExample("pages/css/padding.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+要素のパディング領域とは、コンテンツと境界との間の領域のことです。
 
-<p>要素のパディング領域とは、コンテンツと境界線の間の領域のことです。</p>
+> **Note:** パディングは要素の内部に追加の領域を作成します。それに対して、 {{cssxref("margin")}} は要素の*周り*に追加の領域を作成します。
 
-<div class="note">
-<p><strong>注:</strong> パディングは要素の内部に追加の領域を作成します。それに対して、 {{cssxref("margin")}} は要素の<em>周り</em>に追加の領域を作成します。</p>
-</div>
+## 構成要素のプロパティ
 
-<h2 id="Constituent_properties" name="Constituent_properties">構成要素のプロパティ</h2>
+このプロパティは以下の CSS プロパティの一括指定です。
 
-<p>このプロパティは以下の CSS プロパティの一括指定です。</p>
+- {{cssxref("padding-bottom")}}
+- {{cssxref("padding-left")}}
+- {{cssxref("padding-right")}}}
+- {{cssxref("padding-top")}}
 
-<ul>
- <li>{{cssxref("padding-bottom")}}</li>
- <li>{{cssxref("padding-left")}}</li>
- <li>{{cssxref("padding-right")}}}</li>
- <li>{{cssxref("padding-top")}}</li>
-</ul>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* 四辺すべてに適用 */
+```css
+/* 四辺すべてに適用 */
 padding: 1em;
 
 /* 上下 | 左右 */
@@ -51,48 +47,47 @@ padding: 5px 1em 0 1em;
 /* グローバル値 */
 padding: inherit;
 padding: initial;
+padding: revert;
 padding: unset;
-</pre>
+```
 
-<p><code>padding</code> プロパティは1つ、2つ、3つ、4つの値を使って指定することができます。それぞれの値は {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。負の数は無効です。</p>
+`padding` プロパティは 1 つ、2 つ、3 つ、4 つの値を使って指定することができます。それぞれの値は {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。負の数は無効です。
 
-<ul>
- <li>値が<strong>1つ</strong>指定された場合、<strong>全四辺</strong>に同じパディングが適用される。</li>
- <li>値が<strong>2つ</strong>指定された場合、1つ目のパディングは<strong>上下</strong>、2つ目は<strong>左右</strong>の辺に適用される。</li>
- <li>値が<strong>3つ</strong>指定された場合、1つ目のパディングは<strong>上</strong>、2つ目は<strong>左右</strong>、3つ目は<strong>下</strong>の辺に適用される。</li>
- <li>値が<strong>4つ</strong>指定された場合、パディングはそれぞれ<strong>上</strong>、<strong>右</strong>、<strong>下</strong>、<strong>左</strong>の順 (時計回り) に適用される。</li>
-</ul>
+- 値が **1 つ**指定された場合、**全四辺**に同じパディングが適用される。
+- 値が **2 つ**指定された場合、1 つ目のパディングは**上下**、2 つ目は**左右**の辺に適用される。
+- 値が **3 つ**指定された場合、1 つ目のパディングは**上**、2 つ目は**左右**、3 つ目は**下**の辺に適用される。
+- 値が **4 つ**指定された場合、パディングはそれぞれ**上**、**右**、**下**、**左**の順 (時計回り) に適用される。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>固定値によるパディングの寸法です。</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>コンテナーブロックの<em>幅</em>に対するパーセント値によるパディングの寸法です。</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : パディングの寸法を固定値で表したものです。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : パディングの寸法を包含ブロックの*幅*に対するパーセント値で表したものです。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Setting_padding_with_pixels" name="Setting_padding_with_pixels">パディングをピクセル数で設定</h3>
+<h3 id="Setting_padding_with_pixels">パディングをピクセル数で設定</h3>
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;h4&gt;This element has moderate padding.&lt;/h4&gt;
-&lt;h3&gt;The padding is huge in this element!&lt;/h3&gt;
-</pre>
+```html
+<h4>This element has moderate padding.</h4>
+<h3>The padding is huge in this element!</h3>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">h4 {
+```css
+h4 {
   background-color: lime;
   padding: 20px 50px;
 }
@@ -101,15 +96,16 @@ h3 {
   background-color: cyan;
   padding: 110px 50px 50px 110px;
 }
-</pre>
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p><span>{{EmbedLiveSample('Setting_padding_with_pixels', '100%', 300)}}</span></p>
+{{EmbedLiveSample('Setting_padding_with_pixels', '100%', 300)}}
 
-<h3 id="Setting_padding_with_pixels_and_percentages" name="Setting_padding_with_pixels_and_percentages">パディングをピクセル数とパーセント値で設定</h3>
+### パディングをピクセル数とパーセント値で設定
 
-<pre class="brush: css notranslate">padding: 5%;                /* 全辺: 5% のパディング */
+```css
+padding: 5%;                /* 全辺: 5% のパディング */
 
 padding: 10px;              /* 全辺: 10px のパディング */
 
@@ -123,45 +119,19 @@ padding: 10px 3% 20px;      /* 上:     10px のパディング */
 padding: 1em 3px 30px 5px;  /* 上:     1em のパディング  */
                             /* 右:     3px のパディング  */
                             /* 下:     30px のパディング */
-                            /* 右:     5px のパディング  */ </pre>
+                            /* 右:     5px のパディング  */
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#padding-shorthand', 'padding')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td>変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#propdef-padding', 'padding')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{Specname('CSS1', '#padding', 'padding')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.padding")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS 基本ボックスモデルの紹介</a></li>
- <li>{{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}</li>
- <li>対応付けられる論理的プロパティ: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}} および一括指定の {{cssxref("padding-block")}} と {{cssxref("padding-inline")}}</li>
-</ul>
+- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}
+- 対応付けられる論理的プロパティ: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}} および一括指定の {{cssxref("padding-block")}} と {{cssxref("padding-inline")}}
