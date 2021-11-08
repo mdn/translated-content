@@ -41,7 +41,7 @@ line {
 }
 ```
 
-{{EmbedLiveSample('exemple', '100%', 200)}}
+{{EmbedLiveSample('Exemple', '100%', 200)}}
 
 ## altGlyph
 

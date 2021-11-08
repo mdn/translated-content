@@ -148,7 +148,7 @@ rect:hover, rect:active {
 }
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+{{EmbedLiveSample('Exemple', '100%', 200)}}
 
 ## Syntaxe
 

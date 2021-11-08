@@ -56,7 +56,7 @@ Cet élément est utilisé pour baliser des sous-parties d'un texte. Il doit s'a
 </svg>
 ```
 
-{{ EmbedLiveSample('exemple_jouable', '100%', 100) }}
+{{ EmbedLiveSample('Exemple_jouable', '100%', 100) }}
 
 L'élément tspan peut prendre les attributs personnalisés suivants:
 
@@ -119,6 +119,6 @@ Cet élément récupère via son attribut `xlink:href` un chemin arbitraire et a
 </svg>
 ```
 
-{{ EmbedLiveSample('code_jouable_2', '100%', 100) }}
+{{ EmbedLiveSample('Code_jouable_2', '100%', 100) }}
 
 {{PreviousNext("Web/SVG/Tutoriel/Motifs", "Web/SVG/Tutoriel/Transformations_de_base")}}

@@ -47,7 +47,7 @@ html,body,svg { height:100% }
 }
 ```
 
-{{EmbedLiveSample('exemple', 100, 100)}}
+{{EmbedLiveSample('Exemple', 100, 100)}}
 
 Sur le plan conceptuel, un détourage est un peu comme une zone d'affichage personnalisée pour l'élément sur lequel il est appliqué. Cela va limiter la zone dans laquelle l'élément est affiché, sans affecter sa géométrie (position, taille, etc).
 

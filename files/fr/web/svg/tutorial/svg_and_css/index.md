@@ -373,7 +373,7 @@ Ouvrez le document dans votre navigateur compatible SVG. Déplacez le pointeur d
 
 ### Résultat
 
-{{EmbedLiveSample("example", "660", "660")}}
+{{EmbedLiveSample("Exemple", "660", "660")}}
 
 Notes sur cette démonstration :
 

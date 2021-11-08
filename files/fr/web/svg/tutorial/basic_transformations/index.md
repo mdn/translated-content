@@ -23,7 +23,7 @@ Maintenant, nous sommes prêts à tordre nos images dans tous les sens. Mais ava
 </svg>
 ```
 
-{{ EmbedLiveSample('exemple', '30', '10') }}
+{{ EmbedLiveSample('Exemple', '30', '10') }}
 
 Toutes les transformations suivantes sont résumées dans l'attribut `transform` de l'élément. Les transformations peuvent être mises les unes à la suite des autres, tout simplement en les écrivant toutes dans cet attribut, séparées par des espaces.
 
