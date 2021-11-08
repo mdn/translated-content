@@ -11,7 +11,7 @@ original_slug: Web/Performance/Budgets_de_performance
 ---
 <p>{{draft}}</p>
 
-<p><span class="seoSummary">Un budget de performance est une limite pour éviter les régressions. Il peut s'appliquer à un fichier, un type de fichier, tous les fichiers chargés sur une page, une métrique spécifique (par exemple, <a href="/fr/docs/Glossaire/Time_to_interactive">Time to Interactive</a>), une métrique personnalisée (par exemple, Time to Hero Element), ou un seuil sur une période de temps.   </span></p>
+<p>Un budget de performance est une limite pour éviter les régressions. Il peut s'appliquer à un fichier, un type de fichier, tous les fichiers chargés sur une page, une métrique spécifique (par exemple, <a href="/fr/docs/Glossaire/Time_to_interactive">Time to Interactive</a>), une métrique personnalisée (par exemple, Time to Hero Element), ou un seuil sur une période de temps.</p>
 
 <h2 id="Pourquoi_ai-je_besoin_dun_budget_de_performance">Pourquoi ai-je besoin d'un budget de performance?</h2>
 
@@ -33,7 +33,7 @@ original_slug: Web/Performance/Budgets_de_performance
 
 <p>Un budget doit comprendre 2 niveaux:</p>
 
-<ul dir="ltr">
+<ul>
  <li>Attention.</li>
  <li>Erreur.</li>
 </ul>
@@ -42,21 +42,21 @@ original_slug: Web/Performance/Budgets_de_performance
 
 <p>Le niveau d'erreur est une limite supérieure, où les changements auront un impact négatif et notable.</p>
 
-<p>Pour commencer, vous devez d'abord mesurer les appareils et les vitesses de connexion d'où viennent vos utilisateurs (par exemple, un appareil Android à ~200$ via une connexion 3G), à l'aide de plusieurs <a href="/en-US/docs/Learn/Performance/Web_Performance_Basics">outils</a>. Ces mesures basées sur le temps se traduiront par des budgets de taille de fichier.</p>
+<p>Pour commencer, vous devez d'abord mesurer les appareils et les vitesses de connexion d'où viennent vos utilisateurs (par exemple, un appareil Android à ~200$ via une connexion 3G), à l'aide de plusieurs <a href="/fr/docs/Learn/Performance/Web_Performance_Basics">outils</a>. Ces mesures basées sur le temps se traduiront par des budgets de taille de fichier.</p>
 
 <p>Une base de référence par défaut pour réduire le taux de rebond est d'atteindre un <a href="https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/">Time to Interactive inférieur à 5 secondes en 3G/4G, et inférieur à 2 secondes pour les charges suivantes</a>. Cependant, en fonction des objectifs et du contenu spécifiques de votre site, vous pouvez choisir de vous concentrer sur d'autres mesures.</p>
 
-<p>Pour un site contenant beaucoup de texte, tel qu'un blog ou un site d'actualités, la métrique <a href="/fr/docs/Glossaire/First_contentful_paint">First Contentful Paint</a> pourrait refléter plus étroitement le comportement de l'utilisateur. (c'est-à-dire à quelle vitesse les utilisateurs peuvent-ils commencer à lire), ce qui informera les budgets spécifiques aux fichiers (par exemple, la taille de la police), et leurs optimisations. (par exemple, utiliser l'<a href="/fr/docs/Web/CSS/@font-face/font-display">affichage des polices</a> pour améliorer les <a href="/en-US/docs/Learn/Performance/perceived_performance">performances perçues</a>).</p>
+<p>Pour un site contenant beaucoup de texte, tel qu'un blog ou un site d'actualités, la métrique <a href="/fr/docs/Glossaire/First_contentful_paint">First Contentful Paint</a> pourrait refléter plus étroitement le comportement de l'utilisateur. (c'est-à-dire à quelle vitesse les utilisateurs peuvent-ils commencer à lire), ce qui informera les budgets spécifiques aux fichiers (par exemple, la taille de la police), et leurs optimisations. (par exemple, utiliser l'<a href="/fr/docs/Web/CSS/@font-face/font-display">affichage des polices</a> pour améliorer les <a href="/fr/docs/Learn/Performance/perceived_performance">performances perçues</a>).</p>
 
 <p>La valeur ultime d'un budget de performance est de corréler l'impact de la performance sur les objectifs commerciaux ou produits. Lors de la définition des mesures, vous devez vous concentrer sur l'<a href="https://extensionworkshop.com/documentation/develop/user-experience-best-practices/">expérience utilisateur</a>, qui dictera non seulement le taux de rebond ou de conversion, mais aussi la probabilité de retour de l'utilisateur.</p>
 
-<h2 id="Comment_mettre_en_œuvre_un_budget_de_performance">Comment mettre en <span class="tlid-translation translation" lang="fr"><span title="">œuvre un budget de performance?</span></span></h2>
+<h2 id="Comment_mettre_en_œuvre_un_budget_de_performance">Comment mettre en œuvre un budget de performance?</h2>
 
 <p>Pendant le développement, il existe quelques outils pour effectuer des vérifications sur les actifs nouveaux ou modifiés:</p>
 
 <ul>
  <li>Un bundler de modules (par exemple, <a href="https://webpack.js.org/">webpack</a>), possède des <a href="https://webpack.js.org/configuration/performance/">fonctionnalités de performance</a> qui vous avertiront lorsque les actifs dépassent les limites spécifiées.</li>
- <li><a href="https://github.com/siddharthkp/bundlesize">Bundlesize</a>, vous permet de définir et d'exécuter des contrôles de taille de fichier dans votre pipeline <a href="/en-US/docs/Mozilla/Continuous_integration">CI</a>.</li>
+ <li><a href="https://github.com/siddharthkp/bundlesize">Bundlesize</a>, vous permet de définir et d'exécuter des contrôles de taille de fichier dans votre pipeline <a href="/fr/docs/Mozilla/Continuous_integration">CI</a>.</li>
 </ul>
 
 <p>Les vérifications de la taille des fichiers sont la première ligne de défense contre les régressions, mais la conversion de la taille en mesures temporelles peut être difficile car les environnements de développement peuvent manquer de scripts tiers et d'optimisations généralement fournies par un <a href="/fr/docs/Glossaire/CDN">CDN</a>.</p>
