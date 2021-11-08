@@ -59,9 +59,9 @@ original_slug: >-
 <pre class="brush: js notranslate">var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");</pre>
 
-<p>Ici nous avons enregistré la référence à l'élément {{htmlelement("canvas")}} dans une variable nommée <code>canvas</code>. <span id="result_box" lang="fr"><span>Ensuite, nous créons la variable ctx pour stocker le contexte de rendu 2D </span></span> — <span lang="fr"><span>l'outil réel que nous pouvons utiliser pour peindre sur Canvas.</span></span></p>
+<p>Ici nous avons enregistré la référence à l'élément {{htmlelement("canvas")}} dans une variable nommée <code>canvas</code>. Ensuite, nous créons la variable ctx pour stocker le contexte de rendu 2D  — l'outil réel que nous pouvons utiliser pour peindre sur Canvas.</p>
 
-<p><span id="result_box" lang="fr"><span>Voyons un exemple de code qui imprime un carré rouge sur le canevas.</span> <span>Ajoutez ceci en dessous de vos lignes précédentes de JavaScript, puis chargez votre <code>index.html</code> dans un navigateur pour l'essayer.</span></span></p>
+<p>Voyons un exemple de code qui imprime un carré rouge sur le canevas. Ajoutez ceci en dessous de vos lignes précédentes de JavaScript, puis chargez votre <code>index.html</code> dans un navigateur pour l'essayer.</p>
 
 <pre class="brush: js notranslate">ctx.beginPath();
 ctx.rect(20, 40, 50, 50);
@@ -69,9 +69,9 @@ ctx.fillStyle = "#FF0000";
 ctx.fill();
 ctx.closePath();</pre>
 
-<p>Toutes les instructions sont entre les méthodes  {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} et {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}} . Nous définissons un rectangle en utilisant {{domxref("CanvasRenderingContext2D.rect()","rect()")}} : <span id="result_box" lang="fr"><span>les deux premières valeurs spécifient les coordonnées du coin supérieur gauche du rectangle tandis que les deux suivantes spécifient la largeur et la hauteur du rectangle. </span></span> <span id="result_box" lang="fr"><span>Dans notre cas, le rectangle est peint à 20 pixels du côté gauche de l'écran et à 40 pixels du haut, et a une largeur de 50 pixels et une hauteur de 50 pixels, ce qui en fait un carré parfait.</span></span> La propriété {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} stocke une couleur qui sera utilisée par la méthode {{domxref("CanvasRenderingContext2D.fill()","fill()")}} pour peindre le carré en rouge.</p>
+<p>Toutes les instructions sont entre les méthodes  {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} et {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}} . Nous définissons un rectangle en utilisant {{domxref("CanvasRenderingContext2D.rect()","rect()")}} : les deux premières valeurs spécifient les coordonnées du coin supérieur gauche du rectangle tandis que les deux suivantes spécifient la largeur et la hauteur du rectangle.  Dans notre cas, le rectangle est peint à 20 pixels du côté gauche de l'écran et à 40 pixels du haut, et a une largeur de 50 pixels et une hauteur de 50 pixels, ce qui en fait un carré parfait. La propriété {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} stocke une couleur qui sera utilisée par la méthode {{domxref("CanvasRenderingContext2D.fill()","fill()")}} pour peindre le carré en rouge.</p>
 
-<p><span id="result_box" lang="fr"><span>Nous ne sommes pas limités aux rectangles, voici un code pour imprimer un cercle vert.</span> <span>Essayez d'ajouter ceci au bas de votre JavaScript, puis sauvegardez et rafraîchissez :</span></span></p>
+<p>Nous ne sommes pas limités aux rectangles, voici un code pour imprimer un cercle vert. Essayez d'ajouter ceci au bas de votre JavaScript, puis sauvegardez et rafraîchissez :</p>
 
 <pre class="brush: js notranslate">ctx.beginPath();
 ctx.arc(240, 160, 20, 0, Math.PI*2, false);
@@ -79,7 +79,7 @@ ctx.fillStyle = "green";
 ctx.fill();
 ctx.closePath();</pre>
 
-<p><span id="result_box" lang="fr"><span>Comme nous pouvons le voir, nous utilisons à nouveau les méthodes </span></span> {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} <span lang="fr"><span> et </span></span> {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}} <span lang="fr"> <span>.</span> <span>Entre elles, la partie la plus importante du code ci-dessus est la méthode</span></span> {{domxref("CanvasRenderingContext2D.arc()","arc()")}} <span lang="fr"><span>.</span> <span>Elle comporte six paramètres :</span></span></p>
+<p>Comme nous pouvons le voir, nous utilisons à nouveau les méthodes  {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}}  et  {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}}  . Entre elles, la partie la plus importante du code ci-dessus est la méthode {{domxref("CanvasRenderingContext2D.arc()","arc()")}} . Elle comporte six paramètres :</p>
 
 <ul>
  <li>les coordonnées <code>x</code> et<code>y</code> du centre de l'arc</li>
@@ -88,9 +88,9 @@ ctx.closePath();</pre>
  <li>direction du dessin (<code>false</code><em>(faux)</em> pour le sens des aiguilles d'une montre, la valeur par défaut, ou <code>true</code> (vrai) pour le sens inverse). Ce dernier paramètre est facultatif.</li>
 </ul>
 
-<p>La propriété {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} semble différente par rapport à l'exemple précédent. C'est parce que, <span id="result_box" lang="fr"><span>tout comme avec CSS, la couleur peut être spécifiée sous la forme d'une valeur hexadécimale, d'un mot-clé, de la fonction <code>rgba ()</code> <em>(RVBA)</em> ou de toute autre méthode disponible pour les couleurs.</span></span></p>
+<p>La propriété {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} semble différente par rapport à l'exemple précédent. C'est parce que, tout comme avec CSS, la couleur peut être spécifiée sous la forme d'une valeur hexadécimale, d'un mot-clé, de la fonction <code>rgba ()</code> <em>(RVBA)</em> ou de toute autre méthode disponible pour les couleurs.</p>
 
-<p><span id="result_box" lang="fr"><span>Au lieu d'utiliser</span></span> {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} <span lang="fr"><span> et de remplir les formes avec des couleurs, nous pouvons utiliser</span></span> {{domxref("CanvasRenderingContext2D.stroke()","stroke()")}} <span lang="fr"><span> pour ne colorer que le contour exterieur.</span> <span>Essayez d'ajouter ce code à votre JavaScript aussi :</span></span></p>
+<p>Au lieu d'utiliser {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}}  et de remplir les formes avec des couleurs, nous pouvons utiliser {{domxref("CanvasRenderingContext2D.stroke()","stroke()")}}  pour ne colorer que le contour exterieur. Essayez d'ajouter ce code à votre JavaScript aussi :</p>
 
 <pre class="brush: js notranslate">ctx.beginPath();
 ctx.rect(160, 10, 100, 40);
@@ -98,7 +98,7 @@ ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
 ctx.stroke();
 ctx.closePath();</pre>
 
-<p><span id="result_box" lang="fr"><span>Le code ci-dessus affiche un rectangle vide avec des traits bleus.</span> <span>Grâce au canal alpha de la fonction rgba (), la couleur bleue est semi transparente.</span></span></p>
+<p>Le code ci-dessus affiche un rectangle vide avec des traits bleus. Grâce au canal alpha de la fonction rgba (), la couleur bleue est semi transparente.</p>
 
 <h2 id="Comparez_votre_code">Comparez votre code</h2>
 
@@ -112,6 +112,6 @@ ctx.closePath();</pre>
 
 <h2 id="Prochaines_étapes">Prochaines étapes</h2>
 
-<p><span id="result_box" lang="fr"><span>Maintenant, nous avons mis en place le code HTML de base et avons appris un peu sur Canvas, passons au deuxième chapitre et étudions comment</span></span> <a href="https://developer.mozilla.org/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball">Déplacer une balle sur notre jeu</a>.</p>
+<p>Maintenant, nous avons mis en place le code HTML de base et avons appris un peu sur Canvas, passons au deuxième chapitre et étudions comment <a href="https://developer.mozilla.org/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball">Déplacer une balle sur notre jeu</a>.</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}</p>
