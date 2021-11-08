@@ -38,17 +38,17 @@ translation_of: MDN/Tools/KumaScript
 
 <p>Un script en KumaScript est un <em>modèle</em>, et chaque modèle est un fichier du dépôt Github. Un <a class="link-https" href="/en-US/docs/Template:hello" title="/en-US/docs/Template:hello">modèle</a> ressemble à ceci :</p>
 
-<pre class="notranslate">&lt;% for (var i = 0; i &lt; $0; i++) { %&gt;
+<pre class="brush: html">&lt;% for (var i = 0; i &lt; $0; i++) { %&gt;
 Hello #&lt;%= i %&gt;
 &lt;% } %&gt;</pre>
 
 <p>Invoquer un modèle se fait avec un <em>macro</em>, pouvant être utilisé à tout endroit dans toute page wiki. Un <a class="link-https" href="/en-US/docs/KumaTests/hello_test?raw=1" title="/en-US/docs/KumaTests/hello_test?raw=1">macro</a> ressemble à ceci :</p>
 
-<pre class="notranslate">\{{ hello("3") }}</pre>
+<pre>\{{ hello("3") }}</pre>
 
 <p>La <a class="link-https" href="/en-US/docs/KumaTests/hello_test" title="/en-US/docs/KumaTests/hello_test">sortie du macro</a> ressemble à :</p>
 
-<pre class="notranslate">Hello #0
+<pre>Hello #0
 Hello #1
 Hello #2</pre>
 
@@ -56,7 +56,7 @@ Hello #2</pre>
 
 <p>Les modèles KumaScript sont invoqués dans le contenu d'un document avec des macros comme ceci :</p>
 
-<pre class="notranslate">\{{ templateName("arg0", "arg1", ..., "argN") }}
+<pre>\{{ templateName("arg0", "arg1", ..., "argN") }}
 </pre>
 
 <p>La syntaxe des macros consiste en quatre règles :</p>
@@ -72,7 +72,7 @@ Hello #2</pre>
 
 <p>En tant que fonctionnalité semi-expérimentale (il n'est pas garantie qu'elle fonctionne), vous pouvez fournir un objet JSON pour le premier paramètre uniquement, par exemple :</p>
 
-<pre class="notranslate">\\{{ templateName({ "Alpha":"one", "Beta":["a","b","c"], "Foo":"http:\/\/mozilla.org\/" }) }}
+<pre>\\{{ templateName({ "Alpha":"one", "Beta":["a","b","c"], "Foo":"http:\/\/mozilla.org\/" }) }}
 </pre>
 
 <p>Les données de ce macro sont disponibles dans le code du modèle en tant qu'objet à l'argument <code>$0</code> (par exemple <code>$0.Alpha</code>, <code>$0.Beta</code>, <code>$0.Foo</code>). Celà vous permet aussi d'exprimer des structures de données complexes dans les paramètres des macros qu'il serait difficile voire impossible d'exprimer comme une simple liste de paramètres.</p>
@@ -103,7 +103,7 @@ Hello #2</pre>
  </li>
  <li>Anything inside a <code>&lt;% %&gt;</code> block is interpreted as JavaScript. This can include loops, conditionals, etc.</li>
  <li>Nothing inside a <code>&lt;% %&gt;</code> block can ever contribute to the output stream. But, you can transition from JS mode to output mode using <code>&lt;% %&gt;</code>—for example:
-  <pre class="notranslate">&lt;% for (var i = 0; i &lt; $0; i++) { %&gt;
+  <pre>&lt;% for (var i = 0; i &lt; $0; i++) { %&gt;
 Hello #&lt;%= i %&gt;
 &lt;% } %&gt;
 </pre>
@@ -181,7 +181,7 @@ Hello #&lt;%= i %&gt;
 
 <p>You can look to see if a specific tag exists on a page like this:</p>
 
-<pre class="brush: js notranslate">if (env.tags.indexOf("tag") != −1) {
+<pre class="brush: js">if (env.tags.indexOf("tag") != −1) {
   // The page has the tag "tag"
 }
 </pre>
@@ -190,7 +190,7 @@ Hello #&lt;%= i %&gt;
 
 <p>You can also iterate over all the tags on a page, like this:</p>
 
-<pre class="brush: js notranslate">env.tag.forEach(function(tag) {
+<pre class="brush: js">env.tag.forEach(function(tag) {
   // do whatever you need to do, such as:
   if (tag.indexOf("a") == 0) {
     // this tag starts with "a" - woohoo!
@@ -246,7 +246,7 @@ Hello #&lt;%= i %&gt;
 
 <p>Using the built-in <code>require()</code> method, you can load a template as a module to share common variables and methods between templates. A module can be defined in a template like this:</p>
 
-<pre class="notranslate">&lt;%
+<pre>&lt;%
 module.exports = {
     add: function (a, b) {
         return a + b;
@@ -257,7 +257,7 @@ module.exports = {
 
 <p>Assuming this template is saved as <code>/en-US/docs/Template:MathLib</code>, you can use it in another template like so:</p>
 
-<pre class="notranslate">&lt;%
+<pre>&lt;%
 var math_lib = require("MathLib");
 %&gt;
 The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
@@ -265,7 +265,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
 
 <p>And, the output of this template will be:</p>
 
-<pre class="notranslate">The result of 2 + 2 = 4
+<pre>The result of 2 + 2 = 4
 </pre>
 
 <h4 id="Auto-loaded_modules">Auto-loaded modules</h4>
@@ -286,7 +286,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
 
 <p><strong>Note:</strong> You might notice that the DekiScript modules use a built-in method named <code>buildAPI()</code>, like so:</p>
 
-<pre class="notranslate">&lt;% module.exports = buildAPI({
+<pre>&lt;% module.exports = buildAPI({
     StartsWith: function (str, sub_str) {
         return (''+str).indexOf(sub_str) === 0;
     }
@@ -305,7 +305,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
 
 <p>A useful tip when debugging. You can use the <code>log.debug()</code> method to output text to the scripting messages area at the top of the page that's running your template. Note that you need to be really sure to remove these when you're done debugging, as they're visible to all users! To use it, just do something like this:</p>
 
-<pre class="notranslate">&lt;%- log.debug("Some text goes here"); %&gt;
+<pre>&lt;%- log.debug("Some text goes here"); %&gt;
 </pre>
 
 <p>You can, of course, create more complex output using script code if it's helpful.</p>
@@ -358,7 +358,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
 
 <p>Sometimes, you'll see a scripting message like this when you load a page:</p>
 
-<pre class="notranslate">Kumascript service failed unexpectedly: &lt;class 'httplib.BadStatusLine'&gt;</pre>
+<pre>Kumascript service failed unexpectedly: &lt;class 'httplib.BadStatusLine'&gt;</pre>
 
 <p>This is probably a temporary failure of the KumaScript service. If you Refresh the page, the error may disappear. If that doesn't work, try a Shift-Refresh. If, after a few tries, the error persists - <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=mozilla.org&amp;format=itrequest">file an IT bug</a> for Mozilla Developer Network to ask for an investigation.</p>
 
@@ -366,17 +366,17 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
 
 <p>On some pages, you'll see a scripting error like this:</p>
 
-<pre class="notranslate">Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but...
+<pre>Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but...
 </pre>
 
 <p>If you edit the page, you'll probably see a macro like this at the bottom of the page:</p>
 
-<pre class="notranslate">\{{ wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) }}
+<pre>\{{ wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) }}
 </pre>
 
 <p>To fix the problem, just delete the macro. Or, replace the curly braces on either side with HTML comments <code>&lt;!-- --&gt;</code> to preserve the information, like so:</p>
 
-<pre class="notranslate">&lt;!-- wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) --&gt;
+<pre>&lt;!-- wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) --&gt;
 </pre>
 
 <p>Because Kuma supports localization differently, these macros aren't actually needed any more. But, they've been left intact in case we need to revisit the relationships between localized pages. Unfortunately, it seems like migration has failed to convert some of them properly.</p>
@@ -385,7 +385,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
 
 <p>In KumaScript, the locale of the current document is exposed as an environment variable:</p>
 
-<pre class="notranslate">var lang = env.locale;
+<pre>var lang = env.locale;
 </pre>
 
 <p>The <code>env.locale</code> variable should be reliable and defined for every document.</p>
@@ -394,7 +394,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
 
 <p>You can read the contents of an attached file by using the <code>mdn.getFileContent()</code> function, like this:</p>
 
-<pre class="notranslate">&lt;%
+<pre>&lt;%
   var contents = mdn.getFileContent(fileUrl);
   ... do stuff with the contents ...
 %&gt;
@@ -402,12 +402,12 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
 
 <p>or</p>
 
-<pre class="notranslate">&lt;%-mdn.getFileContent(fileObject)%&gt;
+<pre>&lt;%-mdn.getFileContent(fileObject)%&gt;
 </pre>
 
 <p>In other words, you may specify either the URL of the file to read or as a file object. The file objects for a page can be accessed through the array <code>env.files</code>. So, for example, to embed the contents of the first file attached to the article, you can do this:</p>
 
-<pre class="notranslate">&lt;%-mdn.getFileContent(env.files[0])%&gt;
+<pre>&lt;%-mdn.getFileContent(env.files[0])%&gt;
 </pre>
 
 <div class="note"><strong>Note:</strong> You probably don't want to try to embed the contents of a non-text file this way, as the raw contents would be injected as text. This is meant to let you access the contents of text attachments.</div>
@@ -424,7 +424,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
 
 <p>The KumaScript equivalent of this can be achieved with simple if/else blocks, like so:</p>
 
-<pre class="notranslate">&lt;% if ("fr" == env.locale) { %&gt;
+<pre>&lt;% if ("fr" == env.locale) { %&gt;
 &lt;%- template("CSSRef") %&gt; « &lt;a title="Référence_CSS/Extensions_Mozilla" href="/fr/docs/Référence_CSS/Extensions_Mozilla"&gt;Référence CSS:Extensions Mozilla&lt;/a&gt;
 &lt;% } else if ("ja" == env.locale) { %&gt;
 &lt;%- template("CSSRef") %&gt; « &lt;a title="CSS_Reference/Mozilla_Extensions" href="/ja/docs/CSS_Reference/Mozilla_Extensions"&gt;CSS リファレンス:Mozilla 拡張仕様&lt;/a&gt;
@@ -441,7 +441,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
 
 <p>My favorite editor is MacVim, and a series of regexes like this does the bulk of the work with just a little manual clean up following:</p>
 
-<pre class="notranslate">%s#&lt;span#^M&lt;span#g
+<pre>%s#&lt;span#^M&lt;span#g
 %s#&lt;span lang="\(.*\)" .*&gt;#&lt;% } else if ("\1" == env.locale) { %&gt;#g
 %s#&lt;span class="script"&gt;template.Cssxref(#&lt;%- template("Cssxref", [#
 %s#)&lt;/span&gt; &lt;/span&gt;#]) %&gt;
@@ -453,7 +453,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
 
 <p>Rather than switch between full chunks of markup, you can define a set of strings, switch them based on locale, and then use them to fill in placeholders in a single chunk of markup:</p>
 
-<pre class="notranslate">&lt;%
+<pre>&lt;%
 var s_title = 'Firefox for Developers';
 switch (env.locale) {
     case 'de':
@@ -474,7 +474,7 @@ switch (env.locale) {
 
 <p>A recent addition to the <code>Template:MDN:Common</code> module is <code>mdn.localString()</code>, used like this:</p>
 
-<pre class="notranslate">&lt;%
+<pre>&lt;%
 var s_title = mdn.localString({
   "en-US": "Firefox for Developers",
   "de": "Firefox für Entwickler",
