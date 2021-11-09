@@ -3,116 +3,117 @@ title: mask-size
 slug: Web/CSS/mask-size
 tags:
   - CSS
-  - CSS Masking
-  - CSS Property
+  - CSS マスク
+  - CSS プロパティ
   - Experimental
-  - Reference
+  - リファレンス
   - recipe:css-property
 browser-compat: css.properties.mask-size
+translation_of: Web/CSS/mask-size
 ---
 {{CSSRef}}
 
-The **`mask-size`** [CSS](/en-US/docs/Web/CSS) property specifies the sizes of the mask images. The size of the image can be fully or partially constrained in order to preserve its intrinsic ratio.
+**`mask-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、マスク画像の寸法を指定します。画像の寸法は、その本質的な比率を維持するために、完全または部分的に制約を受けることがあります。
 
 ```css
-/* Keywords syntax */
+/* キーワード構文 */
 mask-size: cover;
 mask-size: contain;
 
-/* One-value syntax */
-/* the width of the image (height set to 'auto') */
+/* 値 1 つの構文 */
+/* 画像の幅 (高さは 'auto' に設定) */
 mask-size: 50%;
 mask-size: 3em;
 mask-size: 12px;
 mask-size: auto;
 
-/* Two-value syntax */
-/* first value: width of the image, second value: height */
+/* 値 2 つの構文 */
+/* 1 つ目の値: 画像の幅、2 つ目の値: 高さ */
 mask-size: 50% auto;
 mask-size: 3em 25%;
 mask-size: auto 6px;
 mask-size: auto auto;
 
-/* Multiple values */
-/* Do not confuse this with mask-size: auto auto */
+/* 複数の値 */
+/* これを mask-size: auto auto と混同しないでください */
 mask-size: auto, auto;
 mask-size: 50%, 25%, 25%;
 mask-size: 6px, auto, contain;
 
-/* Global values */
+/* グローバル値 */
 mask-size: inherit;
 mask-size: initial;
 mask-size: revert;
 mask-size: unset;
 ```
 
-> **Note:** If the value of this property is not set in a {{cssxref("mask")}} shorthand property that is applied to the element after the `mask-size` CSS property, the value of this property is then reset to its initial value by the shorthand property.
+> **Note:** `mask-size` の後に要素に {{cssxref("mask")}} 一括指定プロパティが指定され、このプロパティの値が設定されていない場合、このプロパティの値は、一括指定プロパティによって初期値にリセットされます。
 
-## Syntax
+## 構文
 
-One or more `<bg-size>` values, separated by commas.
+1 つ以上の `<bg-size>` 値で、カンマ区切りです。
 
-A `<bg-size>` can be specified in one of three ways:
+`<bg-size>` 次の 3 つの方法のうち 1 つで指定することができます。
 
-- using the keyword [`contain`](#contain)
-- using the keyword [`cover`](#cover)
-- using width and height values
+- `contain` キーワードの使用
+- `cover` キーワードの使用
+- 幅の高さの値の使用
 
-To specify a size using width and height, you can supply one or two values:
+幅と高さを使って大きさを指定するには、1 つまたは 2 つの値を指定します。
 
-- If only one value is given it sets the width, with the height set to [`auto`](#auto).
-- If two values are given, the first sets width and the second sets height.
+- 値が 1 つしか与えられていない場合は、幅が設定され、高さは `auto` に設定されます。
+- 2つの値が与えられた場合、1 つ目の値で幅を、2 つ目の値で高さを設定します。
 
-Each value can be a `<length>`, a `<percentage>`, or `auto`.
+それぞれの値は `<length>`、`<percentage>`、`auto` の何れかです。
 
-### Values
+### 値
 
 - `<length>`
-  - : A `{{cssxref("&lt;length&gt;")}}` value scales the mask image to the specified length in the corresponding dimension. Negative lengths are not allowed.
+  - : `{{cssxref("&lt;length&gt;")}}` の値は、マスク画像の対応する軸を、指定された長さに拡大縮小します。負の長さは許可されていません。
 - `<percentage>`
-  - : A {{cssxref("&lt;percentage&gt;")}} value scales the mask image in the corresponding dimension to the specified percentage of the mask positioning area, which is determined by the value of {{cssxref("mask-origin")}}. The mask positioning area is, by default, the area containing the content of the box and its padding; the area may also be changed to just the content or to the area containing borders, padding and content. Negative percentages are not allowed.
+  - : {{cssxref("&lt;percentage&gt;")}} の値は、マスク画像の対応する軸を、{{cssxref("mask-origin")}} の値で決定されるマスク配置領域に対する指定されたパーセント値に拡大縮小します。マスク配置領域は、既定では、ボックスのコンテンツとそのパディングを含む領域ですが、コンテンツのみの領域や、境界、パディング、コンテンツを含む領域に変更することもできます。負のパーセント値は許されません。
 - `auto`
-  - : A keyword that scales the mask image in the corresponding directions in order to maintain its intrinsic proportion.
+  - : マスク画像の対応する軸を、固有の比率を維持するように拡大縮小するキーワードです。
 - `contain`
-  - : A keyword that scales the image as large as possible and maintains image aspect ratio (image doesn't get squished). The image is _letterboxed_ within the container. The image is automatically centered unless over-ridden by another property such as {{cssxref("mask-position")}}.
+  - : 画像を可能な限り大きく拡大し、画像のアスペクト比を維持する (画像がゆがまない) ようにするキーワードです。画像はコンテナー内で*レターボックス*になります。画像は、{{cssxref("mask-position")}} のような他のプロパティで上書きされない限り、自動的に中央に配置されます。
 - `cover`
-  - : A keyword that is the inverse of `contain`. Scales the image as large as possible and maintains image aspect ratio (image doesn't get squished). The image "covers" the entire width or height of the container. When the image and container have different dimensions, _the image is clipped_ either on left/right or at top/bottom.
+  - : `contain` の逆バージョンのキーワードです。画像を可能な限り大きく拡大縮小し、画像のアスペクト比を維持する (画像がゆがまない) ようにします。画像は、コンテナーの幅または高さ全体を「カバー」します。画像とコンテナーの寸法が異なる場合、_画像は左右または上下のいずれかで切り取られます。
 
-The interpretation of possible values depends on the image's intrinsic dimensions (width and height) and intrinsic proportion (ratio of width and height). A bitmap image always has intrinsic dimensions and an intrinsic proportion. A vector image may have both intrinsic dimensions and thus it has an intrinsic proportion too. It also may have one or no intrinsic dimensions and in either case it might or might not have an intrinsic proportion. Gradients are treated as images with no intrinsic dimensions or intrinsic proportion.
+可能な値の解釈は、画像の固有の寸法 (幅と高さ) と固有の比率 (幅と高さの比率) に依存します。ビットマップ画像は、常に固有の寸法と固有の比率を持っています。ベクトル画像は、両方の固有の寸法を持つことがあり、したがって固有の比率も持つことがあります。また、固有の寸法を持たない場合もありますが、いずれの場合も固有の比率を持つ場合と持たない場合があります。グラデーションは、固有の寸法や固有の比率を持たない画像として扱われます。
 
-The rendered size of the mask image is then computed as follows:
+そして、マスク画像の描画の大きさは、以下のように計算されます。
 
-- If both components of `mask-size` are specified and are not `auto`:
-  - : The mask image renders at the specified size.
-- If the `mask-size` is `contain` or `cover`:
-  - : The image is rendered by preserving its intrinsic proportion at the largest size contained within or covering the mask positioning area. If the image has no intrinsic proportion, then it is rendered at the size of the mask positioning area.
-- If the `mask-size` is `auto` or `auto auto`:
-  - : If the image has both intrinsic dimensions, it is rendered at that size. If it has no intrinsic dimensions and no intrinsic proportion, it is rendered at the size of the mask positioning area. If it has no dimensions but has a proportion, it's rendered as if `contain` had been specified instead. If the image has one intrinsic dimension and a proportion, it's rendered at the size determined by that one dimension and the proportion. If the image has one intrinsic dimension but no proportion, it's rendered using the intrinsic dimension and the corresponding dimension of the mask positioning area.
-- If `mask-size` has one `auto` component and one non-`auto` component:
-  - : If the image has an intrinsic proportion, then render it using the specified dimension and compute the other dimension from the specified dimension and the intrinsic proportion. If the image has no intrinsic proportion, use the specified dimension for that dimension. For the other dimension, use the image's corresponding intrinsic dimension if there is one. If there is no such intrinsic dimension, use the corresponding dimension of the mask positioning area.
+- `mask-size` の両方の要素が指定され、`auto` ではない場合
+  - : マスク画像は指定された寸法で描画されます。
+- `mask-size` が `contain` または `cover` であった場合
+  - : 画像は、マスク配置領域に含まれる、またはマスク配置領域を覆う最大の寸法で、その固有の縦横比を維持して描画されます。画像が固有の縦横比を持たない場合は、マスク配置領域の大きさで描画されます。
+- `mask-size` が `auto` または `auto auto` であった場合
+  - : 画像に両方の固有の寸法がある場合は、その寸法で描画されます。固有の寸法がなく、固有の比率もない場合は、マスク配置領域の寸法で描画されます。固有の寸法がなく、縦横比がある場合は、代わりに `contain` が指定されたかのように描画されます。画像が 1 つの固有の寸法と縦横比を持っている場合、その 1 つの寸法と縦横比で決まる寸法で描画されます。画像が 1 つの固有の寸法を持ち、縦横比を持たない場合は、固有の寸法と、マスク配置領域の対応する寸法を使って描画されます。
+- `mask-size` の一方が `auto` でもう一方が `auto` ではない場合
+  - : 画像に固有の縦横比がある場合は、一方は指定された長さを使用し、もう一方の長さは指定された長さと指定された長さと固有の縦横比から計算して描画します。画像に固有の縦横比がない場合，その長さには指定された長さを使用します。もう一方の長さには、画像に対応する固有の長さがあればそれを使用します。そのような固有の寸法がない場合は、マスク配置領域の対応する寸法を使用します。
 
-## Formal definition
+## 公式定義
 
 {{cssinfo}}
 
-## Formal syntax
+## 形式文法
 
 {{csssyntax}}
 
-## Examples
+## 例
 
-### Setting mask size as a percentage
+### マスクの大きさをパーセント値で設定
 
 {{EmbedGHLiveSample("css-examples/masking/mask-size.html", '100%', 700)}}
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)

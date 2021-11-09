@@ -6,20 +6,24 @@ tags:
   - CSS プロパティ
   - CSS マスク
   - Experimental
-  - Reference
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.mask-image
 translation_of: Web/CSS/mask-image
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>mask-image</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、要素のマスクレイヤーとして使用される画像を設定します。</p>
+**`mask-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のマスクレイヤーとして使用される画像を設定します。
+既定では、マスク画像のアルファチャンネルと要素のアルファチャンネルが乗算されることになります。これは {{cssxref("mask-mode")}} プロパティで制御することができます。
 
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 mask-image: none;
 
-/* &lt;mask-source&gt; 値 */
+/* <mask-source> 値 */
 mask-image: url(masks.svg#mask1);
 
-/* &lt;image&gt; 値 */
+/* <image> 値 */
 mask-image: linear-gradient(rgba(0, 0, 0, 1.0), transparent);
 mask-image: image(url(mask.png), skyblue);
 
@@ -29,66 +33,44 @@ mask-image: image(url(mask.png), skyblue), linear-gradient(rgba(0, 0, 0, 1.0), t
 /* グローバル値 */
 mask-image: inherit;
 mask-image: initial;
+mask-image: revert;
 mask-image: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
+- `none`
+  - : このキーワードは、透明な黒い画像レイヤーとして解釈されます。
+- `<mask-source>`
+  - : {{cssxref("url()","url()")}} による {{SVGElement("mask")}} または CSS 画像への参照です。
+- {{cssxref("&lt;image&gt;")}}
+  - : マスク画像レイヤーとして使用される画像の値です。
 
-<dl>
- <dt><code>none</code></dt>
- <dd>このキーワードは、透明な黒い画像レイヤーとして解釈されます。</dd>
- <dt><code>&lt;mask-source&gt;</code></dt>
- <dd>{{cssxref("&lt;url&gt;")}} による {{SVGElement("mask")}} または CSS 画像への参照です。</dd>
- <dt>{{cssxref("&lt;image&gt;")}}</dt>
- <dd>マスク画像レイヤーとして使用される画像の値です。</dd>
-</dl>
+## 公式定義
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="CSS">CSS</h3>
+### マスク画像を URL で設定
 
-<pre class="brush: css">#masked {
-  width: 100px;
-  height: 100px;
-  background-color: #8cffa0;
-  -webkit-mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
-  mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
-}</pre>
+{{EmbedGHLiveSample("css-examples/masking/mask-image.html", '100%', 560)}}
 
-<h3 id="HTML">HTML</h3>
+## 仕様書
 
-<pre class="brush: html">&lt;div id="masked"&gt;&lt;/div&gt;
-</pre>
+{{Specifications}}
 
-<p>{{EmbedLiveSample('Example', '100px', '100px', '', '', 'hide-codepen-jsfiddle')}}</p>
+## ブラウザーの互換性
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{Compat}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#the-mask-image", "mask-image")}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 関連情報
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p>{{Compat("css.properties.mask-image")}}</p>
+- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
+- [Apply effects to images with CSS's mask-image property](https://web.dev/css-masking/)
