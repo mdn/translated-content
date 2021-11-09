@@ -3,18 +3,20 @@ title: mask-mode
 slug: Web/CSS/mask-mode
 tags:
   - CSS
-  - CSS Masking
-  - CSS Property
+  - CSS マスク
+  - CSS プロパティ
   - Experimental
-  - Reference
-  - 'recipe:css-property'
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.mask-mode
 translation_of: Web/CSS/mask-mode
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>mask-mode</code></strong> プロパティは、 {{cssxref("mask-image")}} で定義されたマスクを、明度とアルファマスクのどちらで扱うかを設定します。</p>
+**`mask-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("mask-image")}} で定義されたマスクを、輝度とアルファマスクのどちらで扱うかを設定します。
 
-<pre class="brush:css no-line-numbers notranslate">/* キーワード値 */
+```css
+/* キーワード値 */
 mask-mode: alpha;
 mask-mode: luminance;
 mask-mode: match-source;
@@ -25,95 +27,48 @@ mask-mode: alpha, match-source;
 /* グローバル値 */
 mask-mode: inherit;
 mask-mode: initial;
+mask-mode: revert;
 mask-mode: unset;
-</pre>
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>mask-mode</code> プロパティは、以下に示す1つ又は複数のキーワード値を、カンマで区切って指定します。</p>
+`mask-mode` プロパティは、以下に示す 1 つまたは複数のキーワード値を、カンマで区切って指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>alpha</code></dt>
- <dd>このキーワードは、マスクレイヤーの透過性 (アルファチャンネル) の値をマスクの値として使用することを示します。</dd>
- <dt><code>luminance</code></dt>
- <dd>このキーワードは、マスクレイヤーの明度の値をマスクの値として使用することを示します。</dd>
- <dt><code>match-source</code></dt>
- <dd>
- <p>{{cssxref("mask-image")}} プロパティが <code>&lt;mask-source&gt;</code> 型であれば、マスクレイヤー画像の明度の値がマスクの値として使用されます。</p>
+- `alpha`
+  - : このキーワードは、マスクレイヤーの透過性 (アルファチャンネル) の値をマスクの値として使用することを示します。
+- `luminance`
+  - : このキーワードは、マスクレイヤーの輝度の値をマスクの値として使用することを示します。
+- `match-source`
 
- <p>{{cssxref("&lt;image&gt;")}} 型であれば、マスクレイヤー画像のアルファ値がマスクの値として使用されます。</p>
- </dd>
-</dl>
+  - : {{cssxref("mask-image")}} プロパティが `<mask-source>` 型であれば、マスクレイヤー画像の輝度の値がマスクの値として使用されます。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+    {{cssxref("&lt;image&gt;")}} 型であれば、マスクレイヤー画像のアルファ値がマスクの値として使用されます。
 
-<p>{{cssinfo}}</p>
+## 公式定義
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_alpha_mask_mode" name="Using_alpha_mask_mode">アルファマスクモードの使用</h3>
+### アルファマスクモードの使用
 
-<h4 id="CSS">CSS</h4>
+{{EmbedGHLiveSample("css-examples/masking/mask-mode.html", '100%', 760)}}
 
-<pre class="brush: css; highlight[6] notranslate">#masked {
-  width: 227px;
-  height: 200px;
-  background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.mozillademos.org/files/12668/MDN.svg);
-  mask-mode: alpha; /* ライブサンプルで変更することができます */
-}
-</pre>
+## 仕様書
 
-<div class="hidden">
-<h4 id="HTML">HTML</h4>
+{{Specifications}}
 
-<pre class="brush: html notranslate">&lt;div id="masked"&gt;
-&lt;/div&gt;
-&lt;select id="maskMode"&gt;
-  &lt;option value="alpha"&gt;alpha&lt;/option&gt;
-  &lt;option value="luminance"&gt;luminance&lt;/option&gt;
-  &lt;option value="match-source"&gt;match-source&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+## ブラウザーの互換性
 
-<h4 id="JavaScript">JavaScript</h4>
+{{Compat}}
 
-<pre class="brush: js notranslate">var maskMode = document.getElementById("maskMode");
-maskMode.addEventListener("change", function (evt) {
-  document.getElementById("masked").style.maskMode = evt.target.value;
-});
-</pre>
-</div>
+## 関連情報
 
-<h3 id="Result" name="Result">結果</h3>
-
-<p>{{EmbedLiveSample("Using_alpha_mask_mode", 240, 240)}}</p>
-
-<h2 id="Specifications" name="Specifications">仕様書</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#the-mask-mode", "mask-mode")}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p>{{Compat("css.properties.mask-mode")}}</p>
+- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
