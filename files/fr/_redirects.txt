@@ -2083,7 +2083,7 @@
 /fr/docs/IndexedDB/Using_IndexedDB	/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /fr/docs/Introduction_à_SVG_dans_HTML	/fr/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
 /fr/docs/Introduction_à_XML	/fr/docs/Web/XML/XML_introduction
-/fr/docs/Introduction_à_XML/xml:base	/fr/docs/Web/XML/xml:base
+/fr/docs/Introduction_à_XML/xml:base	/fr/docs/Web/API/Node/baseURI
 /fr/docs/Introduction_à_l'utilisation_de_XPath_avec_JavaScript	/fr/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /fr/docs/Introduction_à_la_cryptographie_à_clef_publique/Signatures_numériques	/fr/docs/Glossary/Signature/Security
 /fr/docs/Introduction_à_la_cryptographie_à_clef_publique:Signatures_numériques	/fr/docs/Glossary/Signature/Security
@@ -5531,6 +5531,7 @@
 /fr/docs/Web/Web_Components/Shadow_DOM	/fr/docs/Web/Web_Components/Using_shadow_DOM
 /fr/docs/Web/Web_Components/Utilisation_des_templates_et_des_slots	/fr/docs/Web/Web_Components/Using_templates_and_slots
 /fr/docs/Web/XML/Introduction_à_XML	/fr/docs/Web/XML/XML_introduction
+/fr/docs/Web/XML/xml:base	/fr/docs/Web/API/Node/baseURI
 /fr/docs/Web/XPath/Fonctions	/fr/docs/Web/XPath/Functions
 /fr/docs/Web/XPath/Fonctions/boolean	/fr/docs/Web/XPath/Functions/boolean
 /fr/docs/Web/XPath/Fonctions/ceiling	/fr/docs/Web/XPath/Functions/ceiling

@@ -18303,8 +18303,9 @@
     ]
   },
   "Web/API/Node/baseURI": {
-    "modified": "2019-03-18T21:40:03.713Z",
+    "modified": "2019-05-01T21:49:37.439Z",
     "contributors": [
+      "ExE-Boss",
       "loella16"
     ]
   },
@@ -41504,13 +41505,6 @@
       "BenoitL",
       "Mgjbot",
       "Lbergere"
-    ]
-  },
-  "Web/XML/xml:base": {
-    "modified": "2019-05-01T21:49:37.439Z",
-    "contributors": [
-      "ExE-Boss",
-      "loella16"
     ]
   },
   "Web/XPath": {
