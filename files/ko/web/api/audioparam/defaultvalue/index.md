@@ -34,7 +34,7 @@ console.log(defaultVal); // 1
 console.log(defaultVal === gainNode.gain.value); // true
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
