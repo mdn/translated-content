@@ -44,7 +44,7 @@ AudioWorkletProcessorSubclass.parameterDescriptors;
 
 어떻게 static `parameterDescriptors` getter를 사용자 정의 `AudioWorkletProcessor` 에 추가하는지를 보여주는 예제 코드를 보시려면 [`AudioWorkletNode.parameters`](/ko/docs/Web/API/AudioWorkletNode/parameters#examples) 를 참고해 보세요.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
