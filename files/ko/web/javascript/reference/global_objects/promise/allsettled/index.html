@@ -27,7 +27,7 @@ browser-compat: html.elements.allSettled
 
 <h3 id="return_value">반환 값</h3>
 
-<p>이행이나 거부 여부에 관계 없이 주어진 모든 프로미스가 완전히 실행된 후에 <strong>비동기</strong>적으로 이행될, <strong>대기 중</strong>인 프로미스를 반환합니다.</p>
+<p>지정된 Promise 컬렉션의 모든 Promise가 성공적으로 이행되거나 거부되어 완료되면, <strong>보류 중</strong>인 Promise는 <strong>비동기적</strong>으로 이행됩니다. 그 때, 반환된 Promise의 핸들러는 원래 프로미스 집합에 있는 각 프로미스의 결과를 포함하는 배열을 입력으로 전달합니다.</p>
 
 <p>단, <code>Promise.allSettled()</code>는 빈 이터러블 객체를 인자로 전달받았을 <strong>경우에만</strong> 빈 배열로써 <strong>이미 이행된</strong> 객체를 반환합니다.</p>
 
