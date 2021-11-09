@@ -3,27 +3,25 @@ title: border-image-source
 slug: Web/CSS/border-image-source
 tags:
   - CSS
-  - CSS Borders
-  - CSS Property
-  - CSS プロパティ
   - CSS 背景と境界
-  - Reference
-  - 'recipe:css-property'
+  - CSS プロパティ
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.border-image-source
 translation_of: Web/CSS/border-image-source
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>border-image-source</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、要素の<a href="/ja/docs/Web/CSS/border-image">境界画像</a>に使われる元の画像を設定します。</p>
+**`border-image-source`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[境界画像](/ja/docs/Web/CSS/border-image)に使われる元の画像を設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/border-image-source.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-image-source.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+元の画像を最終的な境界画像に動的に適用する上で、複数の領域に分割するために {{cssxref("border-image-slice")}} プロパティが使用されます。
 
-<p>元の画像を最終的な境界画像に動的に適用する上で、複数の領域に分割するために {{cssxref("border-image-slice")}} プロパティが使用されます。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* キーワード値 */
+```css
+/* キーワード値 */
 border-image-source: none;
 
 /* &lt;image&gt; 値 */
@@ -33,59 +31,47 @@ border-image-source: linear-gradient(to top, red, yellow);
 /* グローバル値 */
 border-image-source: inherit;
 border-image-source: initial;
+border-image-source: revert;
 border-image-source: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>none</code></dt>
- <dd>境界画像は使用されません。代わりに {{cssxref("border-style")}} で定義されたものが表示されます。</dd>
- <dt>{{cssxref("&lt;image&gt;")}}</dt>
- <dd>境界に使用する画像への参照です。</dd>
-</dl>
+- `none`
+  - : 境界画像は使用されません。代わりに {{cssxref("border-style")}} で定義されたものが表示されます。
+- {{cssxref("&lt;image&gt;")}}
+  - : 境界に使用する画像への参照です。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>さまさまな値を使った表示例は、 {{cssxref("border-image")}} をご覧ください。</p>
+### 基本的な例
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+```css
+.box {
+  border-image-source: url('image.png');
+}
+```
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-border-image-source', 'border-image-source')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Specifications}}
 
-<p>{{Compat("css.properties.border-image-source")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat}}
 
-<ul>
- <li>{{cssxref("border")}}</li>
- <li>{{cssxref("outline")}}</li>
- <li>{{cssxref("box-shadow")}}</li>
- <li>{{cssxref("background-image")}}</li>
- <li>{{cssxref("url()", "url()")}} 関数</li>
-</ul>
+## 関連情報
+
+- {{cssxref("border")}}
+- {{cssxref("outline")}}
+- {{cssxref("box-shadow")}}
+- {{cssxref("background-image")}}
+- {{cssxref("url()", "url()")}} 関数

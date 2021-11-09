@@ -5,36 +5,34 @@ tags:
   - CSS
   - CSS プロパティ
   - CSS 背景と境界
-  - border-image
-  - border-image-slice
+  - NeedsExample
   - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.border-image-slice
 translation_of: Web/CSS/border-image-slice
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>border-image-slice</code></strong> プロパティは {{cssxref("border-image-source")}} で指定された画像を複数の領域に分割します。これらの領域は<a href="/ja/docs/Web/CSS/border-image">境界画像</a>の部品を構成します。</p>
+**`border-image-slice`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("border-image-source")}} で指定された画像を複数の領域に分割します。これらの領域は[境界画像](/ja/docs/Web/CSS/border-image)の部品を構成します。
 
-<div>{{EmbedInteractiveExample("pages/css/border-image-slice.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-image-slice.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+分割する過程で、4 つの角、4 つの辺、それに中央領域の計 9 つの領域を作成します。それぞれの辺からの距離で設定される 4 本の分割線が、領域の寸法を制御します。
 
-<p>分割する過程で、4つの角、4つの辺、それに中央領域の計9つの領域を作成します。それぞれの辺からの距離で設定される4本の分割線が、領域の寸法を制御します。</p>
+[![border-image または border-image-slice プロパティで定義された 9 つの領域](border-image-slice.png)](/ja/docs/Web/CSS/border-image-slice/border-image-slice.png)
 
-<p><a href="/files/3814/border-image-slice.png"><img alt="The nine regions defined by the border-image or border-image-slice properties" src="/files/3814/border-image-slice.png" style="margin: 1px; padding: 1em; width: 460px;"></a></p>
+上の図は、それぞれの領域の位置を説明しています。
 
-<p>上の図は、それぞれの領域の位置を説明しています。</p>
+- 1-4 の領域は角領域です。それぞれが1回ずつ使用され、最終的な境界画像の中で四隅を形成します。
+- 5-8 の領域は辺領域です。これらは最終的な境界画像の中で、要素の寸法に合わせて[反復、拡縮、その他の加工が行なわれ](/ja/docs/Web/CSS/border-image-repeat)ます。
+- 9 の領域は中央領域です。既定では描画されませんが、キーワード `fill` がセットされていれば背景画像のように使用されます。
 
-<ul>
- <li>1-4 の領域は<span id="corner-regions">角の領域</span>です。それぞれが1回ずつ使用され、最終的な境界画像の中で四隅を形成します。</li>
- <li>5-8 の領域は <span id="edge-regions">辺の領域</span>です。これらは最終的な境界画像の中で、要素の寸法に合わせて<a href="/ja/docs/Web/CSS/border-image-repeat">反復、拡縮、その他の加工が行なわれ</a>ます。</li>
- <li>9 の領域は<span id="middle-region">中央領域</span>です。既定では描画されませんが、キーワード <code>fill</code> がセットされていれば背景画像のように使用されます。</li>
-</ul>
+{{cssxref("border-image-repeat")}}, {{cssxref("border-image-width")}}, {{cssxref("border-image-outset")}} の各プロパティは、最終的な境界画像を構成するためにこれらの領域が使用される方法を指定します。
 
-<p>{{cssxref("border-image-repeat")}}, {{cssxref("border-image-width")}}, {{cssxref("border-image-outset")}} の各プロパティは、最終的な境界画像を構成するためにこれらの領域が使用される方法を指定します。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* すべての辺 */
+```css
+/* すべての辺 */
 border-image-slice: 30%;
 
 /* 上下 | 左右 */
@@ -52,62 +50,136 @@ border-image-slice: 10% fill 7 12;
 /* グローバル値 */
 border-image-slice: inherit;
 border-image-slice: initial;
+border-image-slice: revert;
 border-image-slice: unset;
-</pre>
+```
 
-<p><code>border-image-slice</code> プロパティは1つから4つの <code>&lt;number-percentage&gt;</code> 値を使用して指定することができます。負の値は無効です。実際の寸法よりも大きい値は <code>100%</code> に丸められます。</p>
+`border-image-slice` プロパティは 1 つから 4 つの `<number-percentage>` 値を使用して指定することができます。負の値は無効です。実際の寸法よりも大きい値は `100%` に丸められます。
 
-<ul>
- <li>位置が<strong>1つ</strong>指定された場合、全4本の分割線がそれぞれの辺から同じ距離で作成されます。</li>
- <li>位置が<strong>2つ</strong>指定された場合、1つ目の値を<strong>上下</strong>の辺からの距離として、2つ目を<strong>左右</strong>の辺からの距離として分割線を作成します。</li>
- <li>位置が<strong>3つ</strong>指定された場合、1つ目の値を<strong>上</strong>の辺からの距離として、2つ目を<strong>左右</strong>の辺からの距離、3つ目は<strong>下</strong>の辺からの距離として分割線を作成します。</li>
- <li>位置が<strong>4つ</strong>指定された場合、<strong>上</strong>、<strong>右</strong>、<strong>下</strong>、<strong>左</strong>の順（時計回り）でそれぞれの辺からの距離として分割線を作成します。</li>
-</ul>
+- 位置が **1 つ**指定された場合、全 4 本の分割線がそれぞれの辺から同じ距離で作成されます。
+- 位置が **2 つ**指定された場合、1 つ目の値を**上下**の辺からの距離として、2 つ目を**左右**の辺からの距離として分割線を作成します。
+- 位置が **3 つ**指定された場合、1 つ目の値を**上**の辺からの距離として、2 つ目を**左右**の辺からの距離、3 つ目は**下**の辺からの距離として分割線を作成します。
+- 位置が **4 つ**指定された場合、**上**、**右**、**下**、**左**の順（時計回り）でそれぞれの辺からの距離として分割線を作成します。
 
-<p><code>fill</code> の値は任意で、使用する場合は、宣言のどこにおいても構いません。</p>
+`fill` の値は任意で、使用する場合は、宣言のどこに置いても構いません。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt>{{cssxref("&lt;number&gt;")}}</dt>
- <dd>縁からのオフセットを、ラスター画像の場合はピクセル数で、ベクター画像の場合は座標で表します。ベクター画像の場合、数値は元の画像の寸法ではなく、要素の寸法に対する相対値になるので、この場合は一般にパーセント値の方が適しています。</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>縁からのオフセットを、元の画像の寸法、つまり水平方向のオフセットであれば画像の幅、垂直方向のオフセットであれば画像の高さに対するパーセント値で表します。</dd>
- <dt><code>fill</code></dt>
- <dd>中央の画像領域を維持し、背景画像のように表示しますが、実際の {{cssxref("background")}} の上に重ねられます。幅と高さは、画像領域のそれぞれ上と左に一致するように拡縮されます。</dd>
-</dl>
+- {{cssxref("&lt;number&gt;")}}
+  - : 縁からのオフセットを、ラスター画像の場合はピクセル数で、ベクター画像の場合は座標で表します。ベクター画像の場合、数値は元の画像の寸法ではなく、要素の寸法に対する相対値になるので、この場合は一般にパーセント値の方が適しています。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : 縁からのオフセットを、元の画像の寸法、つまり水平方向のオフセットであれば画像の幅、垂直方向のオフセットであれば画像の高さに対するパーセント値で表します。
+- `fill`
+  - : 中央の画像領域を維持し、背景画像のように表示しますが、実際の {{cssxref("background")}} の上に重ねられます。幅と高さは、画像領域のそれぞれ上と左に一致するように拡縮されます。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 例
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-border-image-slice', 'border-image-slice')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+<h3 id="Adjustable_border_width_and_slice">調整のできる境界の幅とスライス</h3>
 
-<p>{{cssinfo}}</p>
+次の例は、シンプルな `<div>` に境界画像を設定したものです。境界のソース画像は以下の通りです。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+![素敵な複数色のダイヤモンド](border-diamonds.png)
 
-<p>{{Compat("css.properties.border-image-slice")}}</p>
+ダイヤモンドの幅は 30px なので、[`border-width`](/ja/docs/Web/CSS/border-width) と `border-image-slice` の両方に 30 ピクセルを設定すると、ボーダーに完全でかなり鮮明なダイヤモンドが表示されます。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+```css
+border-width: 30px;
+border-image-slice: 30;
+```
+
+これらは、この例で使用している既定値です。しかし、上記の 2 つのプロパティの値を動的に変更できるように、2 つのスライダーを用意し、その効果を確認できるようにしています。
+
+`border-image-slice` は、各境界と境界の角 (および `fill` キーワードが使用されている場合はコンテンツ領域) で使用するためにサンプリングされる画像スライスの寸法を変更します。 - これを 30 から遠ざけると、境界が多少不規則に見えますが、面白い効果が得られます。
+
+`border-width`: 境界線の幅を変更します。サンプリングされた画像の大きさは境界線の内側に収まるように拡大縮小されます。つまり、幅がスライスよりも大きい場合、画像が多少ピクセル化して見えるようになります (もちろん、SVG 画像を使用している場合は別です)。
+
+#### HTML
+
+```html
+<div class="wrapper">
+  <div></div>
+</div>
 
 <ul>
- <li><a href="/ja/docs/Web/CSS/Shorthand_properties#Tricky_edge_cases">1～4つの値による構文の図による説明</a></li>
+  <li>
+    <label for="width">スライドして <code>border-width</code> を調整</label>
+    <input type="range" min="10" max="45" id="width">
+    <output id="width-output">30px</output>
+  </li>
+  <li>
+    <label for="slice">スライドして <code>border-image-slice</code> を調整</label>
+    <input type="range" min="10" max="45" id="slice">
+    <output id="slice-output">30</output>
+  </li>
 </ul>
+```
+
+#### CSS
+
+```css
+.wrapper {
+  width: 400px;
+  height: 300px;
+}
+
+div > div {
+  width: 300px;
+  height: 200px;
+  border-width: 30px;
+  border-style: solid;
+  border-image: url(https://interactive-examples.mdn.mozilla.net/media/examples/border-diamonds.png);
+  border-image-slice: 30;
+  border-image-repeat: round;
+}
+
+li {
+  display: flex;
+  place-content: center;
+}
+```
+
+#### JavaScript
+
+```js
+const widthSlider = document.getElementById('width');
+const sliceSlider = document.getElementById('slice');
+const widthOutput = document.getElementById('width-output');
+const sliceOutput = document.getElementById('slice-output');
+const divElem = document.querySelector('div > div');
+
+widthSlider.addEventListener('input', () => {
+  const newValue = widthSlider.value + 'px';
+  divElem.style.borderWidth = newValue;
+  widthOutput.textContent = newValue;
+})
+
+sliceSlider.addEventListener('input', () => {
+  const newValue = sliceSlider.value;
+  divElem.style.borderImageSlice = newValue;
+  sliceOutput.textContent = newValue;
+})
+```
+
+#### 結果
+
+{{EmbedLiveSample('Adjustable_border_width_and_slice', '100%', 400)}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [1 ～ 4 つの値による構文の図による説明](/ja/docs/Web/CSS/Shorthand_properties#tricky_edge_cases)
