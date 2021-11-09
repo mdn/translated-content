@@ -192,7 +192,7 @@ Si cet attribut est absent ou n'est pas un entier valide, ce sera à l'agent uti
 
 Une chaîne de caractères qui indique le type de contrôle à afficher. On pourra par exemple avoir une case à cocher en utilisant la valeur `checkbox`. Lorsque cet attribut est absent ou qu'une valeur inconnue est utilisée, la valeur par défaut sera `text` et le contrôle créé permettra de saisir un texte.
 
-Les valeurs autorisées pour cet attribut sont [présentées plus haut](#les_différents_types_de_champs_input).
+Les valeurs autorisées pour cet attribut sont [présentées plus haut](#les-différents-types-de-champs-input).
 
 #### {{htmlattrdef("value")}}
 
