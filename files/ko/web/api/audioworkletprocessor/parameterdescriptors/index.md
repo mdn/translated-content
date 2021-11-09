@@ -27,7 +27,7 @@ AudioWorkletProcessorSubclass.parameterDescriptors;
 
 ### Value
 
-{{domxref("AudioParamDescriptor")}} 기반 객체들의 iterable. 이 객체들의 속성들은 다음과 같습니다:
+{{domxref("AudioParamDescriptor")}} 기반 객체들의 iterable. 이 객체들의 속성들은 다음과 같습니다.
 
 - `name`
   - : `AudioParam` 의 이름을 나타내는 {{domxref("DOMString")}}. 이 이름 아래에서 `AudioParam` 은 이 노드의 {{domxref("AudioWorkletNode.parameters", "parameters")}} 속성에서 사용 가능하고, 이 이름 아래에서 {{domxref("AudioWorkletProcessor.process")}} 메서드는 이 `AudioParam` 의 계산된 값을 획득할 것입니다.
