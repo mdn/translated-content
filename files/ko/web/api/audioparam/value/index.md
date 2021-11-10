@@ -65,7 +65,7 @@ quantum** , 즉 오디오 버퍼가 처리되고 갱신되는 순간에서의 �
 
 - 만약 `value` setter가 사용되었다면, 매개변수의 값은 주어진 값으로 변경됩니다.
 - 만약 현재 시간이 {{domxref("AudioParam.setValueAtTime", "setValueAtTime()")}}의 이전 호출에 의해 명시된 시간과 같거나 초과한다면, `value` 는 `setValueAtTime()` 에 전달된 값으로 변경됩니다.
-- 만약 gradiated나 ramped 방식의 값 변경 메서드가 호출되었고 현재 시간이 gradiated된 변화가 발생해야 하는 시간 범위 내에 있다면, 값은 적절한 알고리즘에 기반해 갱신됩니다. 이 ramped 또는 gradiated 방식의 값 변화 메서드들에는 {{domxref("AudioParam.linearRampToValueAtTime",
+- 만약 gradiated나 ramped 방식의 값 변경 메서드가 호출되었고 현재 시간이 gradiated된 변화가 발생해야 하는 시간 범위 내에 있다면, 값은 적절한 알고리즘에 기반해 갱신됩니다. 이러한 방식의 값 변화 메서드에는 {{domxref("AudioParam.linearRampToValueAtTime",
     "linearRampToValueAtTime()")}}, {{domxref("AudioParam.setTargetAtTime",
     "setTargetAtTime()")}}, {{domxref("AudioParam.setValueCurveAtTime",
     "setValueCurveAtTime()")}}이 있습니다.
