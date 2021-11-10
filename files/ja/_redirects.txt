@@ -559,7 +559,7 @@
 /ja/docs/CSS_Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
 /ja/docs/CSS_Reference:Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
 /ja/docs/CSS_User_Interface	/ja/docs/Web/CSS/CSS_Basic_User_Interface
-/ja/docs/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/ja/docs/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
 /ja/docs/Canvas	/ja/docs/Web/API/Canvas_API
 /ja/docs/Canvas/Text	/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /ja/docs/Canvas:Text	/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text
@@ -2968,7 +2968,7 @@
 /ja/docs/Using_HTML5_audio_and_video	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /ja/docs/Using_HTML5_audio_and_video-redirect-1	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /ja/docs/Using_HTML5_audio_and_video_in_Firefox	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-/ja/docs/Using_URL_values_for_the_cursor_property	/ja/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/ja/docs/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
 /ja/docs/Using_XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /ja/docs/Using_XPath	/ja/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /ja/docs/Using_audio_and_video_in_Firefox	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
@@ -3641,6 +3641,7 @@
 /ja/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 /ja/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
+/ja/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
 /ja/docs/Web/CSS/CSS_Colors	/ja/docs/Web/CSS/CSS_Color
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
@@ -3654,7 +3655,7 @@
 /ja/docs/Web/CSS/CSS_Selectors/Comparison_with_XPath	/ja/docs/Web/XPath/Comparison_with_CSS_selectors
 /ja/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values	/ja/docs/Web/CSS/CSS_Shapes/From_box_values
 /ja/docs/Web/CSS/CSS_User_Interface	/ja/docs/Web/CSS/CSS_Basic_User_Interface
-/ja/docs/Web/CSS/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/ja/docs/Web/CSS/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
 /ja/docs/Web/CSS/CSS_transforms_の利用	/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms
 /ja/docs/Web/CSS/CSS_values_serialization	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/CSS_values_syntax	/ja/docs/Web/CSS

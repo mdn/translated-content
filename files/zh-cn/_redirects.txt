@@ -82,7 +82,7 @@
 /zh-CN/docs/CSS/calc	/zh-CN/docs/Web/CSS/calc()
 /zh-CN/docs/CSS/clip	/zh-CN/docs/Web/CSS/clip
 /zh-CN/docs/CSS/cursor	/zh-CN/docs/Web/CSS/cursor
-/zh-CN/docs/CSS/cursor/url	/zh-CN/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/zh-CN/docs/CSS/cursor/url	/zh-CN/docs/conflicting/Web/CSS/cursor
 /zh-CN/docs/CSS/display	/zh-CN/docs/Web/CSS/display
 /zh-CN/docs/CSS/flex-grow	/zh-CN/docs/Web/CSS/flex-grow
 /zh-CN/docs/CSS/float	/zh-CN/docs/Web/CSS/float
@@ -1715,6 +1715,7 @@
 /zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /zh-CN/docs/Web/CSS/CSS_Background_and_Borders/圆角边框发生器	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 /zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
+/zh-CN/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/zh-CN/docs/conflicting/Web/CSS/cursor
 /zh-CN/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持	/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/典型_用例_的_Flexbox	/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
@@ -1752,7 +1753,7 @@
 /zh-CN/docs/Web/CSS/clamp	/zh-CN/docs/Web/CSS/clamp()
 /zh-CN/docs/Web/CSS/counter	/zh-CN/docs/Web/CSS/counter()
 /zh-CN/docs/Web/CSS/counters	/zh-CN/docs/Web/CSS/counters()
-/zh-CN/docs/Web/CSS/cursor/url	/zh-CN/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/zh-CN/docs/Web/CSS/cursor/url	/zh-CN/docs/conflicting/Web/CSS/cursor
 /zh-CN/docs/Web/CSS/element	/zh-CN/docs/Web/CSS/element()
 /zh-CN/docs/Web/CSS/env	/zh-CN/docs/Web/CSS/env()
 /zh-CN/docs/Web/CSS/filter-function/blur	/zh-CN/docs/Web/CSS/filter-function/blur()

@@ -57,7 +57,7 @@
 /ko/docs/CSS/border-radius	/ko/docs/Web/CSS/border-radius
 /ko/docs/CSS/box-shadow	/ko/docs/Web/CSS/box-shadow
 /ko/docs/CSS/cursor	/ko/docs/Web/CSS/cursor
-/ko/docs/CSS/cursor/Using_URL_values_for_the_cursor_property	/ko/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/ko/docs/CSS/cursor/Using_URL_values_for_the_cursor_property	/ko/docs/conflicting/Web/CSS/cursor
 /ko/docs/CSS/initial_value	/ko/docs/Web/CSS/initial_value
 /ko/docs/CSS/text-shadow	/ko/docs/Web/CSS/text-shadow
 /ko/docs/CSS/transform	/ko/docs/Web/CSS/transform
@@ -431,8 +431,8 @@
 /ko/docs/Updating_extensions_for_Firefox_3	/ko/docs/Mozilla/Firefox/Releases/3/Updating_extensions
 /ko/docs/Updating_web_applications_for_Firefox_3	/ko/docs/Mozilla/Firefox/Releases/3/Updating_web_applications
 /ko/docs/Using_JSON_in_Firefox	/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON
-/ko/docs/Using_URL_values_for_the_cursor_property	/ko/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
-/ko/docs/Using_URL_values_for_the_cursor_property-redirect-1	/ko/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/ko/docs/Using_URL_values_for_the_cursor_property	/ko/docs/conflicting/Web/CSS/cursor
+/ko/docs/Using_URL_values_for_the_cursor_property-redirect-1	/ko/docs/conflicting/Web/CSS/cursor
 /ko/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ko/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
 /ko/docs/Web/API/Boolean	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/API/Canvas_API/캔버스_튜토리얼	/ko/docs/Web/API/Canvas_API/Tutorial
@@ -511,6 +511,7 @@
 /ko/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 /ko/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
+/ko/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/ko/docs/conflicting/Web/CSS/cursor
 /ko/docs/Web/CSS/CSS_Colors	/ko/docs/Web/CSS/CSS_Color
 /ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox의_기본_개념	/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /ko/docs/Web/CSS/CSS_Flexible_Box_Layout/가변상자의_대표적인_사용례	/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
@@ -553,7 +554,7 @@
 /ko/docs/Web/CSS/Using_CSS_variables	/ko/docs/Web/CSS/Using_CSS_custom_properties
 /ko/docs/Web/CSS/calc	/ko/docs/Web/CSS/calc()
 /ko/docs/Web/CSS/currentcolor	/ko/docs/Web/CSS/color_value#currentColor_키워드
-/ko/docs/Web/CSS/cursor/Using_URL_values_for_the_cursor_property	/ko/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/ko/docs/Web/CSS/cursor/Using_URL_values_for_the_cursor_property	/ko/docs/conflicting/Web/CSS/cursor
 /ko/docs/Web/CSS/filter-function/blur	/ko/docs/Web/CSS/filter-function/blur()
 /ko/docs/Web/CSS/filter-function/brightness	/ko/docs/Web/CSS/filter-function/brightness()
 /ko/docs/Web/CSS/filter-function/contrast	/ko/docs/Web/CSS/filter-function/contrast()

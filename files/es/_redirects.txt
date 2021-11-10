@@ -1502,7 +1502,7 @@
 /es/docs/Using_files_from_web_applications	/es/docs/Web/API/File/Using_files_from_web_applications
 /es/docs/Using_geolocation	/es/docs/Web/API/Geolocation_API
 /es/docs/Using_the_W3C_DOM_Level_1_Core	/es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
-/es/docs/Uso_de_URL_como_valor_de_la_propiedad_cursor	/es/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/es/docs/Uso_de_URL_como_valor_de_la_propiedad_cursor	/es/docs/conflicting/Web/CSS/cursor
 /es/docs/Web/API/API_de_almacenamiento_web	/es/docs/Web/API/Web_Storage_API
 /es/docs/Web/API/API_de_almacenamiento_web/Usando_la_API_de_almacenamiento_web	/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
 /es/docs/Web/API/API_del_portapapeles	/es/docs/Web/API/Clipboard_API
@@ -1641,6 +1641,7 @@
 /es/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
 /es/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 /es/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
+/es/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/es/docs/conflicting/Web/CSS/cursor
 /es/docs/Web/CSS/CSS_Colors	/es/docs/Web/CSS/CSS_Color
 /es/docs/Web/CSS/CSS_Colors/Herramienta_para_seleccionar_color	/es/docs/Web/CSS/CSS_Colors/Color_picker_tool
 /es/docs/Web/CSS/CSS_Flexible_Box_Layout/Casos_de_uso_tipicos_de_Flexbox.	/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
@@ -1699,7 +1700,7 @@
 /es/docs/Web/CSS/before	/es/docs/Web/CSS/::before
 /es/docs/Web/CSS/calc	/es/docs/Web/CSS/calc()
 /es/docs/Web/CSS/capacidad_de_animacion_de_propiedades_CSS	/es/docs/Web/CSS
-/es/docs/Web/CSS/cursor/Uso_de_URL_como_valor_de_la_propiedad_cursor	/es/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/es/docs/Web/CSS/cursor/Uso_de_URL_como_valor_de_la_propiedad_cursor	/es/docs/conflicting/Web/CSS/cursor
 /es/docs/Web/CSS/env	/es/docs/Web/CSS/env()
 /es/docs/Web/CSS/filter-function/blur	/es/docs/Web/CSS/filter-function/blur()
 /es/docs/Web/CSS/filter-function/brightness	/es/docs/Web/CSS/filter-function/brightness()

@@ -1,12 +1,12 @@
 ---
 title: Utilisation d'URL pour la propriété cursor
-slug: Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+slug: conflicting/Web/CSS/cursor
 tags:
   - CSS
   - Débutant
   - Guide
 translation_of: Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
-original_slug: Web/CSS/CSS_Basic_User_Interface/Utilisation_d_URL_pour_la_propriété_cursor
+original_slug: Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 ---
 {{CSSRef}}
 

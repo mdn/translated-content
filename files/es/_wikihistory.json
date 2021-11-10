@@ -10661,15 +10661,6 @@
       "israel-munoz"
     ]
   },
-  "Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property": {
-    "modified": "2019-03-24T00:04:04.275Z",
-    "contributors": [
-      "teoli",
-      "fscholz",
-      "Mgjbot",
-      "Jorolo"
-    ]
-  },
   "Web/CSS/CSS_Box_Model": {
     "modified": "2019-03-23T22:37:33.458Z",
     "contributors": [
@@ -21530,9 +21521,12 @@
     ]
   },
   "conflicting/Web/CSS/cursor": {
-    "modified": "2019-03-23T22:35:57.612Z",
+    "modified": "2019-03-24T00:04:04.275Z",
     "contributors": [
-      "pekechis"
+      "teoli",
+      "fscholz",
+      "Mgjbot",
+      "Jorolo"
     ]
   },
   "conflicting/Web/CSS/font-variant": {

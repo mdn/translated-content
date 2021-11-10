@@ -3436,7 +3436,7 @@
 /fr/docs/Une_réintroduction_à_JavaScript	/fr/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /fr/docs/Using_files_from_web_applications	/fr/docs/Web/API/File/Using_files_from_web_applications
 /fr/docs/Using_geolocation	/fr/docs/Web/API/Geolocation_API
-/fr/docs/Utilisation_d'URL_pour_la_propriété_cursor	/fr/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/fr/docs/Utilisation_d'URL_pour_la_propriété_cursor	/fr/docs/conflicting/Web/CSS/cursor
 /fr/docs/Utilisation_d'audio_et_video_dans_Firefox	/fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content_040b1c36f4218ba488ffb0284dfe52bf
 /fr/docs/Utilisation_de_XPath	/fr/docs/conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /fr/docs/Utilisation_de_dégradés	/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients
@@ -3963,7 +3963,8 @@
 /fr/docs/Web/CSS/CSS_Background_and_Borders/Utiliser_des_fonds_multiples	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Utiliser_plusieurs_arrière-plans	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-/fr/docs/Web/CSS/CSS_Basic_User_Interface/Utilisation_d_URL_pour_la_propriété_cursor	/fr/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/fr/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/fr/docs/conflicting/Web/CSS/cursor
+/fr/docs/Web/CSS/CSS_Basic_User_Interface/Utilisation_d_URL_pour_la_propriété_cursor	/fr/docs/conflicting/Web/CSS/cursor
 /fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_Flexbox	/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
 /fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_bloc_absolue_tableau	/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables
 /fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_colonnes	/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
@@ -4029,7 +4030,7 @@
 /fr/docs/Web/CSS/CSS_Transforms/Utilisation_des_transformations_CSS	/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms
 /fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS	/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
 /fr/docs/Web/CSS/CSS_User_Interface	/fr/docs/Web/CSS/CSS_Basic_User_Interface
-/fr/docs/Web/CSS/CSS_User_Interface/Utilisation_d_URL_pour_la_propriété_cursor	/fr/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/fr/docs/Web/CSS/CSS_User_Interface/Utilisation_d_URL_pour_la_propriété_cursor	/fr/docs/conflicting/Web/CSS/cursor
 /fr/docs/Web/CSS/CSS_percentage_values	/fr/docs/Web/CSS
 /fr/docs/Web/CSS/CSS_questions_frequentes	/fr/docs/Learn/CSS/Howto/CSS_FAQ
 /fr/docs/Web/CSS/CSS_values_serialization	/fr/docs/Web/CSS
@@ -4185,8 +4186,8 @@
 /fr/docs/Web/CSS/counter_fonction	/fr/docs/Web/CSS/counter()
 /fr/docs/Web/CSS/counters	/fr/docs/Web/CSS/counters()
 /fr/docs/Web/CSS/cross-fade	/fr/docs/Web/CSS/cross-fade()
-/fr/docs/Web/CSS/cursor/Utilisation_d'URL_pour_la_propriété_cursor	/fr/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
-/fr/docs/Web/CSS/cursor/Utilisation_d_URL_pour_la_propriété_cursor	/fr/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/fr/docs/Web/CSS/cursor/Utilisation_d'URL_pour_la_propriété_cursor	/fr/docs/conflicting/Web/CSS/cursor
+/fr/docs/Web/CSS/cursor/Utilisation_d_URL_pour_la_propriété_cursor	/fr/docs/conflicting/Web/CSS/cursor
 /fr/docs/Web/CSS/element	/fr/docs/Web/CSS/element()
 /fr/docs/Web/CSS/env	/fr/docs/Web/CSS/env()
 /fr/docs/Web/CSS/filter-function/blur	/fr/docs/Web/CSS/filter-function/blur()

@@ -26023,14 +26023,6 @@
       "namklaw"
     ]
   },
-  "Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property": {
-    "modified": "2019-03-23T23:32:59.999Z",
-    "contributors": [
-      "xgqfrms-GitHub",
-      "teoli",
-      "ziyunfei"
-    ]
-  },
   "Web/CSS/CSS_Box_Alignment": {
     "modified": "2020-02-11T06:02:03.390Z",
     "contributors": [
@@ -47514,6 +47506,14 @@
       "yeol",
       "teoli",
       "Chajn"
+    ]
+  },
+  "conflicting/Web/CSS/cursor": {
+    "modified": "2019-03-23T23:32:59.999Z",
+    "contributors": [
+      "xgqfrms-GitHub",
+      "teoli",
+      "ziyunfei"
     ]
   },
   "conflicting/Web/CSS/easing-function": {

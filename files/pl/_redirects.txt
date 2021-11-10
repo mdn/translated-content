@@ -1404,7 +1404,7 @@
 /pl/docs/Transformacje_XML_z_XSLT:Dokumentacja_XSLT_XPath	/pl/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
 /pl/docs/Transformacje_XML_z_XSLT:Przeczytaj_więcej	/pl/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
 /pl/docs/Tworzenie_wtyczek_OpenSearch_dla_Firefoksa	/pl/docs/Web/OpenSearch
-/pl/docs/Użycie_wartości_URL_dla_własności_cursor	/pl/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/pl/docs/Użycie_wartości_URL_dla_własności_cursor	/pl/docs/conflicting/Web/CSS/cursor
 /pl/docs/Web/API/AudioContext/createDynamicsCompressor	/pl/docs/Web/API/BaseAudioContext/createDynamicsCompressor
 /pl/docs/Web/API/Canvas_API/Tutorial/Optymalizacja_canvas	/pl/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
 /pl/docs/Web/API/Canvas_API/Tutorial/rysowanie_ksztaltow	/pl/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
@@ -1547,6 +1547,7 @@
 /pl/docs/Web/CSS/:first-node	/pl/docs/Web/CSS/:-moz-first-node
 /pl/docs/Web/CSS/:last-node	/pl/docs/Web/CSS/:-moz-last-node
 /pl/docs/Web/CSS/@-moz-document	/pl/docs/Web/CSS/@document
+/pl/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/pl/docs/conflicting/Web/CSS/cursor
 /pl/docs/Web/CSS/CSS_Colors	/pl/docs/Web/CSS/CSS_Color
 /pl/docs/Web/CSS/CSS_Colors/Narzedzie_doboru_kolorow	/pl/docs/Web/CSS/CSS_Colors/Color_picker_tool
 /pl/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/pl/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
@@ -1578,7 +1579,7 @@
 /pl/docs/Web/CSS/Skrócone_deklaracje_CSS	/pl/docs/Web/CSS/Shorthand_properties
 /pl/docs/Web/CSS/Uzycie_zmiennych_CSS	/pl/docs/Web/CSS/Using_CSS_custom_properties
 /pl/docs/Web/CSS/Wartość_początkowa	/pl/docs/Web/CSS/initial_value
-/pl/docs/Web/CSS/cursor/Użycie_wartości_URL_dla_własności_cursor	/pl/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/pl/docs/Web/CSS/cursor/Użycie_wartości_URL_dla_własności_cursor	/pl/docs/conflicting/Web/CSS/cursor
 /pl/docs/Web/CSS/transform-function/matrix	/pl/docs/Web/CSS/transform-function/matrix()
 /pl/docs/Web/Dostępność	/pl/docs/Web/Accessibility
 /pl/docs/Web/Dostępność/An_overview_of_accessible_web_applications_and_widgets	/pl/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets

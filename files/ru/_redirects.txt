@@ -404,7 +404,8 @@
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_генератор	/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Множественные_фоны	/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-/ru/docs/Web/CSS/CSS_Basic_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/ru/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/ru/docs/conflicting/Web/CSS/cursor
+/ru/docs/Web/CSS/CSS_Basic_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/conflicting/Web/CSS/cursor
 /ru/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /ru/docs/Web/CSS/CSS_Colors	/ru/docs/Web/CSS/CSS_Color
 /ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элементов_в_Flex_контейнере	/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
@@ -414,7 +415,7 @@
 /ru/docs/Web/CSS/CSS_Grid_Layout/Грид-области	/ru/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 /ru/docs/Web/CSS/CSS_Grid_Layout/Расположение_элементов_по_грид-линиям_с_помощью_CSS_Grid	/ru/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 /ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/ru/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
-/ru/docs/Web/CSS/CSS_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/ru/docs/Web/CSS/CSS_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/conflicting/Web/CSS/cursor
 /ru/docs/Web/CSS/CSS_animated_properties	/ru/docs/Web/CSS
 /ru/docs/Web/CSS/CSS_Селекторы	/ru/docs/Web/CSS/CSS_Selectors
 /ru/docs/Web/CSS/CSS_Селекторы/Using_the_:target_pseudo-class_in_selectors	/ru/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors

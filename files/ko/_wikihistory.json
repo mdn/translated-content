@@ -8070,15 +8070,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property": {
-    "modified": "2019-03-23T23:41:42.325Z",
-    "contributors": [
-      "hjunshin",
-      "teoli",
-      "jaemin_jo",
-      "Ioseph"
-    ]
-  },
   "Web/CSS/CSS_Box_Model": {
     "modified": "2019-04-11T11:38:24.806Z",
     "contributors": [
@@ -17578,6 +17569,15 @@
     "contributors": [
       "teoli",
       "SpikeYou"
+    ]
+  },
+  "conflicting/Web/CSS/cursor": {
+    "modified": "2019-03-23T23:41:42.325Z",
+    "contributors": [
+      "hjunshin",
+      "teoli",
+      "jaemin_jo",
+      "Ioseph"
     ]
   },
   "conflicting/Web/Guide": {

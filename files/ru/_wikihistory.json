@@ -12751,14 +12751,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property": {
-    "modified": "2019-03-23T22:05:55.809Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "Cheg"
-    ]
-  },
   "Web/CSS/CSS_Box_Alignment": {
     "modified": "2019-03-18T21:33:03.343Z",
     "contributors": [
@@ -24320,6 +24312,14 @@
       "dixiony",
       "SKaznadei",
       "iamale"
+    ]
+  },
+  "conflicting/Web/CSS/cursor": {
+    "modified": "2019-03-23T22:05:55.809Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "Cheg"
     ]
   },
   "conflicting/Web/CSS/gap": {
