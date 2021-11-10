@@ -140,9 +140,9 @@ EDITOR=code
 
 ### 용어 지침 `참고 링크` 우선 순위
 
-- 1. 해당 단어에 대한 의견을 나눈 PR
-- 2. 적절한 ko MDN 문서
-- 3. 적절한 en-us MDN 문서 
+- 1. 해당 단어에 대한 의견을 나눈 PR 링크
+- 2. 적절한 ko MDN 문서 링크
+- 3. 적절한 en-us MDN 문서 링크
 
 ## Section Title
 
