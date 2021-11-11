@@ -4,103 +4,67 @@ slug: Web/Security/Same-origin_policy
 translation_of: Web/Security/Same-origin_policy
 original_slug: Web/Security/Same_origin_policy_for_JavaScript
 ---
-<p>La same-origin policy restreint la manière dont un document ou un script chargé depuis une origine peut interagir avec une autre ressource chargée depuis une autre origine.</p>
+La same-origin policy restreint la manière dont un document ou un script chargé depuis une origine peut interagir avec une autre ressource chargée depuis une autre origine.
 
-<h2 id="Définition_de_lorigine">Définition de l'origine</h2>
+## Définition de l'origine
 
-<p>Deux pages ont la même origine si le protocole, le port (si spécifié) et l'hôte sont les mêmes pour les deux pages. Le tableau suivant présente des comparaisons d'origines pour l'URL <code>http://store.company.com/dir/page.html</code> :</p>
+Deux pages ont la même origine si le protocole, le port (si spécifié) et l'hôte sont les mêmes pour les deux pages. Le tableau suivant présente des comparaisons d'origines pour l'URL `http://store.company.com/dir/page.html` :
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>URL</th>
-   <th>Résultat</th>
-   <th>Motif</th>
-  </tr>
-  <tr>
-   <td><code>http://store.company.com/dir2/other.html</code></td>
-   <td>Succès</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>http://store.company.com/dir/inner/another.html</code></td>
-   <td>Succès</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>https://store.company.com/secure.html</code></td>
-   <td>Échec</td>
-   <td>Protocoles différents</td>
-  </tr>
-  <tr>
-   <td><code>http://store.company.com:81/dir/etc.html</code></td>
-   <td>Échec</td>
-   <td>Ports différents</td>
-  </tr>
-  <tr>
-   <td><code>http://news.company.com/dir/other.html</code></td>
-   <td>Échec</td>
-   <td>Hôtes différents</td>
-  </tr>
- </tbody>
-</table>
+| URL                                               | Résultat | Motif                 |
+| ------------------------------------------------- | -------- | --------------------- |
+| `http://store.company.com/dir2/other.html`        | Succès   |                       |
+| `http://store.company.com/dir/inner/another.html` | Succès   |                       |
+| `https://store.company.com/secure.html`           | Échec    | Protocoles différents |
+| `http://store.company.com:81/dir/etc.html`        | Échec    | Ports différents      |
+| `http://news.company.com/dir/other.html`          | Échec    | Hôtes différents      |
 
-<p>Voir aussi <a href="/fr/docs/Same-origin_policy_for_file:_URIs">origin definition for <code>file:</code> URLs</a>.</p>
+Voir aussi [origin definition for `file:` URLs](/fr/docs/Same-origin_policy_for_file:_URIs).
 
-<p>Les cookies utilisent une définition de l'origine différente de celle qui vient d'être définie.</p>
+Les cookies utilisent une définition de l'origine différente de celle qui vient d'être définie.
 
-<h2 id="Changer_lorigine">Changer l'origine</h2>
+## Changer l'origine
 
-<p>Une page peut changer son origine dans une certaine mesure. Un script peut définir la valeur de <code><a href="/en/DOM/document.domain">document.domain</a> </code>vers un suffixe du domaine courant. S'il procéde ainsi, le domaine le plus court sera utilisé pour les prochaines vérifications d'origines. Par exemple, un script dans la page <code>http://store.company.com/dir/other.html</code> exécute le code suivant :</p>
+Une page peut changer son origine dans une certaine mesure. Un script peut définir la valeur de `document.domain `vers un suffixe du domaine courant. S'il procéde ainsi, le domaine le plus court sera utilisé pour les prochaines vérifications d'origines. Par exemple, un script dans la page `http://store.company.com/dir/other.html` exécute le code suivant :
 
-<pre class="eval">document.domain = "company.com";
-</pre>
+    document.domain = "company.com";
 
-<p>Après l'exécution de ce code, la page passerait le test d'origine avec <code>http://company.com/dir/page.html</code>. Ceci-dit, il ne serait pas possible de définir <code>document.domain</code> à <code>othercompany.com</code>.</p>
+Après l'exécution de ce code, la page passerait le test d'origine avec `http://company.com/dir/page.html`. Ceci-dit, il ne serait pas possible de définir `document.domain` à `othercompany.com`.
 
-<p>Le numéro de port est stocké par le navigateur séparément. Tout appel aux setter, y compris <code>document.domain = document.domain</code> entraine l'effacement du port par la valeur <code>null</code>. Une page située sur <code>company.com:8080</code> ne peut donc pas communiquer avec une autre située sur <code>company.com</code> en ne définissant que <code>document.domain = "company.com"</code> dans la première page. Ceci doit être fait dans les deux pages, ainsi les ports seront à <code>null</code> pour les deux.</p>
+Le numéro de port est stocké par le navigateur séparément. Tout appel aux setter, y compris `document.domain = document.domain` entraine l'effacement du port par la valeur `null`. Une page située sur `company.com:8080` ne peut donc pas communiquer avec une autre située sur `company.com` en ne définissant que `document.domain = "company.com"` dans la première page. Ceci doit être fait dans les deux pages, ainsi les ports seront à `null` pour les deux.
 
-<h2 id="Accès_réseau_cross-origin">Accès réseau cross-origin</h2>
+## Accès réseau cross-origin
 
-<p>La same-origin policy contrôle les interactions entre deux origines différentes, quand vous utilisez <code><a href="/fr/docs/DOM/XMLHttpRequest">XMLHttpRequest</a></code> par exemple. Ces interactions sont généralement rangées dans trois catégories :</p>
+La same-origin policy contrôle les interactions entre deux origines différentes, quand vous utilisez [`XMLHttpRequest`](/fr/docs/DOM/XMLHttpRequest) par exemple. Ces interactions sont généralement rangées dans trois catégories :
 
-<ul>
- <li><em>Écritures </em>cross-origin généralement autorisées. Par exemple, les liens, les redirections ou les envois de formulaires. Quelques rares requêtes HTTP nécessitent <a href="/fr/docs/HTTP/Access_control_CORS#Preflighted_requests">preflight</a>.</li>
- <li><em>Embarqué </em>cross-origin généralement autorisé. Les exemples sont listés ci-après.</li>
- <li><em>Lectures </em>cross-origin généralement non autorisées.</li>
-</ul>
+- _Écritures_ cross-origin généralement autorisées. Par exemple, les liens, les redirections ou les envois de formulaires. Quelques rares requêtes HTTP nécessitent [preflight](/fr/docs/HTTP/Access_control_CORS#Preflighted_requests).
+- _Embarqué_ cross-origin généralement autorisé. Les exemples sont listés ci-après.
+- _Lectures_ cross-origin généralement non autorisées.
 
-<p>Voici quelques exemples de ressources qui peuvent être embarqués malgré leur origine incompatible avec la same-origin policy :</p>
+Voici quelques exemples de ressources qui peuvent être embarqués malgré leur origine incompatible avec la same-origin policy :
 
-<ul>
- <li>JavaScript avec <code>&lt;script src="..."&gt;&lt;/script&gt;</code>. Les messages d'erreur de syntaxe ne sont disponibles que pour les scripts ayant la même origine.</li>
- <li>CSS avec<code> &lt;link rel="stylesheet" href="..."&gt;</code>. Étant donnée la <a href="http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html">souplesse des règles de syntaxe</a> du CSS, les CSS d'origine différentes nécessitent une entête <code>Content-Type</code> correcte. Les restrictions varient selon les navigateurs : <a href="http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx">IE</a>, <a href="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html">Firefox</a>, <a href="http://code.google.com/p/chromium/issues/detail?id=9877">Chrome</a>, <a href="http://support.apple.com/kb/HT4070">Safari</a> et <a href="http://www.opera.com/support/kb/view/943/">Opera</a>.</li>
- <li>Images avec <a href="/fr/docs/HTML/Element/Img"><code>&lt;img&gt;</code></a>. Les formats d'image supportés, comprenant PNG, JPEG, GIF, BMP, SVG...</li>
- <li>Fichiers média avec <a href="/fr/docs/HTML/Element/video"><code>&lt;video&gt;</code></a> et <a href="/fr/docs/HTML/Element/audio"><code>&lt;audio&gt;</code></a>.</li>
- <li>Objets avec <a href="/fr/docs/HTML/Element/object"><code>&lt;object&gt;</code></a>, <a href="/fr/docs/HTML/Element/embed"><code>&lt;embed&gt;</code></a> et <a href="/fr/docs/HTML/Element/applet"><code>&lt;applet&gt;</code></a>.</li>
- <li>Fontes de polices avec <a href="/fr/docs/CSS/@font-face"><code>@font-face</code></a>. Certain navigateurs autorisent les fontes cross-origin, d'autres appliquent la same-origin policy.</li>
- <li>N'importe quoi avec <a href="/fr/docs/HTML/Element/frame"><code>&lt;frame&gt;</code></a> et <a href="/fr/docs/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a>. Un site peut utiliser l'entête<code><a href="/fr/docs/HTTP/X-Frame-Options"> X-Frame-Options</a></code> pour interdire cela depuis une page n'ayant pas la même origine.</li>
-</ul>
+- JavaScript avec `<script src="..."></script>`. Les messages d'erreur de syntaxe ne sont disponibles que pour les scripts ayant la même origine.
+- CSS avec` <link rel="stylesheet" href="...">`. Étant donnée la [souplesse des règles de syntaxe](http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html) du CSS, les CSS d'origine différentes nécessitent une entête `Content-Type` correcte. Les restrictions varient selon les navigateurs : [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](http://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](http://code.google.com/p/chromium/issues/detail?id=9877), [Safari](http://support.apple.com/kb/HT4070) et [Opera](http://www.opera.com/support/kb/view/943/).
+- Images avec [`<img>`](/fr/docs/HTML/Element/Img). Les formats d'image supportés, comprenant PNG, JPEG, GIF, BMP, SVG...
+- Fichiers média avec [`<video>`](/fr/docs/HTML/Element/video) et [`<audio>`](/fr/docs/HTML/Element/audio).
+- Objets avec [`<object>`](/fr/docs/HTML/Element/object), [`<embed>`](/fr/docs/HTML/Element/embed) et [`<applet>`](/fr/docs/HTML/Element/applet).
+- Fontes de polices avec [`@font-face`](/fr/docs/CSS/@font-face). Certain navigateurs autorisent les fontes cross-origin, d'autres appliquent la same-origin policy.
+- N'importe quoi avec [`<frame>`](/fr/docs/HTML/Element/frame) et [`<iframe>`](/fr/docs/HTML/Element/iframe). Un site peut utiliser l'entête[` X-Frame-Options`](/fr/docs/HTTP/X-Frame-Options) pour interdire cela depuis une page n'ayant pas la même origine.
 
-<h3 id="Autoriser_laccès_cross-origin">Autoriser l'accès cross-origin</h3>
+### Autoriser l'accès cross-origin
 
-<p>Utiliser <a href="/fr/docs/HTTP/Access_control_CORS">CORS</a> pour autoriser l'accès cross-origin.</p>
+Utiliser [CORS](/fr/docs/HTTP/Access_control_CORS) pour autoriser l'accès cross-origin.
 
-<h3 id="Comment_bloquer_laccès_cross-origin_access">Comment bloquer l'accès cross-origin access</h3>
+### Comment bloquer l'accès cross-origin access
 
-<ul>
- <li>Pour interdire les écritures cross-origin writes, contrôlez dans la requête un token qui ne peut être déviné, connu sous le nom de <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29">Cross-Site Request Forgery (CSRF)</a> token, et interdisez la lecture cross-origin des pages qui connaissent ce token.</li>
- <li>Pour interdire la lecture cross-origin d'une ressource, assurez-vous qu'elle ne peut pas être embarquée.</li>
- <li>Pour interdire l'embarquement (embed) d'une ressource cross-origin, assurez vous qu'elle ne peut pas être interprétée comme une des ressources embarquable vues précédemment. Dans la plupart des cas, les navigateurs ne respectent pas le <code>Content-Type</code>. Par exemple, pour une balise <code>&lt;script&gt;</code> pointant un document HTML, le navigateur va tenter d'interpréter le code HTML comme du JavaScript. Si votre ressource n'est pas un point d'entrée de votre site, vous pouvez également utiliser un jeton CSRF.</li>
-</ul>
+- Pour interdire les écritures cross-origin writes, contrôlez dans la requête un token qui ne peut être déviné, connu sous le nom de [Cross-Site Request Forgery (CSRF)](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29) token, et interdisez la lecture cross-origin des pages qui connaissent ce token.
+- Pour interdire la lecture cross-origin d'une ressource, assurez-vous qu'elle ne peut pas être embarquée.
+- Pour interdire l'embarquement (embed) d'une ressource cross-origin, assurez vous qu'elle ne peut pas être interprétée comme une des ressources embarquable vues précédemment. Dans la plupart des cas, les navigateurs ne respectent pas le `Content-Type`. Par exemple, pour une balise `<script>` pointant un document HTML, le navigateur va tenter d'interpréter le code HTML comme du JavaScript. Si votre ressource n'est pas un point d'entrée de votre site, vous pouvez également utiliser un jeton CSRF.
 
-<h2 id="Accès_script_cross-origin">Accès script cross-origin</h2>
+## Accès script cross-origin
 
-<p>Les APIs JavaScript comme <a href="/fr/docs/DOM/HTMLIFrameElement"><code>iframe.contentWindow</code></a>, <a href="/fr/docs/DOM/window.parent"><code>window.parent</code></a>, <a href="/fr/docs/DOM/window.open"><code>window.open</code></a> et <a href="/fr/docs/DOM/window.opener"><code>window.opener</code></a> autorisent les documents à se référencer directement entre eux. Quand deux documents n'ont pas la même origine, ces références fournissent des accès limités aux objets <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window">Window</a> et <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location">Location</a>.  Certains navigateurs <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=839867">permettent l'accès à plus de propriétés</a> que ce que les spécifications permettent. À la place, vous pouvez utiliser <code><a href="/fr/docs/DOM/window.postMessage">window.postMessage</a></code> pour communiquer entre deux documents.</p>
+Les APIs JavaScript comme [`iframe.contentWindow`](/fr/docs/DOM/HTMLIFrameElement), [`window.parent`](/fr/docs/DOM/window.parent), [`window.open`](/fr/docs/DOM/window.open) et [`window.opener`](/fr/docs/DOM/window.opener) autorisent les documents à se référencer directement entre eux. Quand deux documents n'ont pas la même origine, ces références fournissent des accès limités aux objets [Window](http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window) et [Location](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location).  Certains navigateurs [permettent l'accès à plus de propriétés](https://bugzilla.mozilla.org/show_bug.cgi?id=839867) que ce que les spécifications permettent. À la place, vous pouvez utiliser [`window.postMessage`](/fr/docs/DOM/window.postMessage) pour communiquer entre deux documents.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en/Same-origin_policy_for_file:_URIs">Same-origin policy for file: URIs</a></li>
- <li><a href="http://www.w3.org/Security/wiki/Same_Origin_Policy">Same-Origin Policy at W3C</a></li>
-</ul>
+- [Same-origin policy for file: URIs](/en/Same-origin_policy_for_file:_URIs)
+- [Same-Origin Policy at W3C](http://www.w3.org/Security/wiki/Same_Origin_Policy)
