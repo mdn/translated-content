@@ -30,7 +30,7 @@ audioParam.value = newValue;
 현재 시간에서의 매개변수의 값을 나타내는 부동점 {{jsxref("Number")}}. 이 값은 {{domxref("AudioParam.minValue", "minValue")}}와 {{domxref("AudioParam.maxValue",
   "maxValue")}} 속성에 의해 명시된 값 사이에 있을 것입니다.
 
-## 사용 상 참고할 점
+## 사용 일람
 
 ### 값 정밀도과 변화
 
