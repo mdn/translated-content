@@ -16,17 +16,17 @@ translation_of: Web/MathML/Element/math
 <p>En plus des attributs qui suivent, l'élément <code>&lt;math&gt;</code> accepte tous les attributs de l'élément {{ MathMLElement("mstyle") }}.</p>
 
 <dl>
- <dt id="attr-class-id-style">class, id, style</dt>
+ <dt>class, id, style</dt>
  <dd>Afin d'être utilisés avec les <a href="/fr/docs/CSS">feuilles de style</a>.</dd>
- <dt id="attr-dir">dir</dt>
- <dd><span class="hidden"> </span>Le sens global de lecture des formules. Les valeurs possibles sont <code>ltr</code> (gauche à droite) ou <code>rtl</code> (droite à gauche).</dd>
- <dt id="attr-href">href</dt>
+ <dt>dir</dt>
+ <dd>Le sens global de lecture des formules. Les valeurs possibles sont <code>ltr</code> (gauche à droite) ou <code>rtl</code> (droite à gauche).</dd>
+ <dt>href</dt>
  <dd>Un hyperlien pointant vers un URI donné.</dd>
- <dt id="attr-mathbackground">mathbackground</dt>
+ <dt>mathbackground</dt>
  <dd>La couleur de fond. Il est possible d'utiliser les codes au format <code>#rgb</code>, <code>#rrggbb</code> et les <a href="/fr/docs/CSS/valeur_de_couleur#Mots-cl.C3.A9s">noms de couleurs HTML</a>.</dd>
- <dt id="attr-mathcolor">mathcolor</dt>
+ <dt>mathcolor</dt>
  <dd>La couleur du texte. Il est possible d'utiliser les codes au format <code>#rgb</code>, <code>#rrggbb</code> et les <a href="/fr/docs/CSS/valeur_de_couleur#Mots-cl.C3.A9s">noms de couleurs HTML</a>.</dd>
- <dt id="attr-display">display</dt>
+ <dt>display</dt>
  <dd>Cet attribut à valeur donnée définit la façon dont le balisage MathML doit être rendu. Il peut avoir l'une des valeurs suivantes :
  <ul>
   <li><code>block</code>, ce qui signifie que cet élément sera affiché en dehors du fragment de texte courant, comme un bloc qui pourra être positionné n'importe où sans que cela change le sens du texte ;</li>
@@ -35,16 +35,16 @@ translation_of: Web/MathML/Element/math
 
  <p>La valeur par défaut, si l'attribut n'est pas présent, est <code>inline</code>.</p>
  </dd>
- <dt id="attr-mode">mode {{ deprecated_inline() }}</dt>
+ <dt>mode {{ deprecated_inline() }}</dt>
  <dd>Déprécié. L'attribut <code>display</code> doit être utilisé à la place. (Les anciennes valeurs possibles pour cet attribut était <code>display</code> - équivalent à <code>display="block"</code> et <code>inline</code>)</dd>
- <dt id="attr-overflow">overflow</dt>
+ <dt>overflow</dt>
  <dd>Définit comment l'affichage de la formule est géré si celle-ci est trop grande pour être insérée dans l'espace alloué.<br>
  Les valeurs possible pour cet attribut sont : <code>linebreak</code> (la valeur par défaut), <code>scroll</code>, <code>elide</code>, <code>truncate</code>, <code>scale</code>.</dd>
 </dl>
 
 <h2 id="Exemples">Exemples</h2>
 
-<p><img alt="Theorem of Pythagoras" src="/files/3157/math.jpg"></p>
+<p><img alt="Theorem of Pythagoras" src="math.jpg"></p>
 
 <h3 id="Notation_HTML5">Notation HTML5</h3>
 
@@ -114,9 +114,9 @@ translation_of: Web/MathML/Element/math
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p><strong>Note </strong>: Les documents XHTML avec du MathML doivent être servis en tant que <code>application/xhtml+xml</code>. Ceci est facilement réalisable en ajoutant l'extension <code>.xhtml</code> aux fichiers locaux. Pour les serveurs Apache, il est possible de <a class="external" href="http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype">configurer le fichier <code>.htaccess</code></a> afin que les extensions correspondent au type MIME correct. Étant donné qu'ici le MathML est utilisé au sein d'un document XML, il faut s'assurer que celui-ci est bien formé.</p>
+<p><strong>Note </strong>: Les documents XHTML avec du MathML doivent être servis en tant que <code>application/xhtml+xml</code>. Ceci est facilement réalisable en ajoutant l'extension <code>.xhtml</code> aux fichiers locaux. Pour les serveurs Apache, il est possible de <a href="http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype">configurer le fichier <code>.htaccess</code></a> afin que les extensions correspondent au type MIME correct. Étant donné qu'ici le MathML est utilisé au sein d'un document XML, il faut s'assurer que celui-ci est bien formé.</p>
 
-<h2 id="Specifications" name="Specifications">Spécifications</h2>
+<h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
  <thead>

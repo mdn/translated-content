@@ -273,7 +273,7 @@ mzlatex foo.tex       # Windows
 
 <p>Notez que <a href="https://github.com/michal-h21/tex4ebook">tex4ebook</a> s'appuie sur TeX4ht pour générer des documents EPUB.</p>
 
-<p><a href="https://dlmf.nist.gov/LaTeXML/" name="LaTeXML">LaTeXML</a> est un autre outil qui permet de générer des documents HTML5 et EPUB. Les utilisateurs de Windows peuvent regarder ce <a href="https://www.youtube.com/watch?v=Dg881w2e-lI">tutoriel vidéo</a>. Étant donné un fichier LaTeX foo.tex, vous pouvez utiliser ces simples commandes :</p>
+<p><a href="https://dlmf.nist.gov/LaTeXML/">LaTeXML</a> est un autre outil qui permet de générer des documents HTML5 et EPUB. Les utilisateurs de Windows peuvent regarder ce <a href="https://www.youtube.com/watch?v=Dg881w2e-lI">tutoriel vidéo</a>. Étant donné un fichier LaTeX foo.tex, vous pouvez utiliser ces simples commandes :</p>
 
 <pre>latexml --dest foo.xml foo.tex
 latexmlpost --dest foo.html --format=html5 foo.xml</pre>
@@ -311,7 +311,7 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpa
 
 <p><a href="https://github.com/fred-wang/TeXZilla">TeXZilla</a> possède plusieurs interfaces, notamment une <a href="https://ckeditor.com/addon/texzilla">fiche CKEditor</a> utilisé sur MDN, une <a href="https://fred-wang.github.io/TeXZilla/">démo en ligne</a>, un <a href="https://addons.mozilla.org/en-US/firefox/addon/texzilla/">module de Firefox</a> ou encore une <a href="https://marketplace.firefox.com/app/texzilla-1/">application web FirefoxOS</a>. Il est également intégré à <a href="https://www.seamonkey-project.org/">SeaMonkey</a> depuis la version 2.28 et à <a href="https://www.mozilla.org/thunderbird/">Thunderbird</a> depuis la version 31. <a href="http://abisource.org/">Abiword</a> contient un petit éditeur d'équations, basé sur itex2MML. Enfin,<a href="http://www.bluegriffon.com/"> Bluegriffon</a> possède un module complémentaire permettant d'insérer des formules MathML dans votre document, en utilisant une syntaxe de type ASCII/LaTeX.</p>
 
-<p style="text-align: center;"><img alt="BlueGriffon" src="mathml-shot1.png"></p>
+<p><img alt="BlueGriffon" src="mathml-shot1.png"></p>
 
 <h3 id="wysiywg_editors">Éditeur WYSIYWG</h3>
 
@@ -321,7 +321,7 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpa
 
 <p><a href="https://www.openoffice.org/">OpenOffice</a> et <a href="https://libreoffice.org/">LibreOffice</a> disposent d'un éditeur d'équations (Fichier → Nouveau → Formule). Il est semi-WYSIWYG : vous saisissez la source de la formule à l'aide du panneau/clavier d'équation et un aperçu de la formule est régulièrement rafraîchi. L'éditeur utilise sa propre syntaxe "StarMath" pour la source mais le code MathML est également généré lors de l'enregistrement du document. Pour obtenir le code MathML, enregistrez le document au format mml et ouvrez-le avec n'importe quel éditeur de texte. Vous pouvez également extraire le fichier odf (qui est en fait une archive zip) et ouvrir un fichier xml appelé <code>content.xml</code>.</p>
 
-<p style="text-align: center;"><img alt="Open Office Math" src="openoffice.png"></p>
+<p><img alt="Open Office Math" src="openoffice.png"></p>
 
 <p><a href="https://www.w3.org/Amaya/">Amaya</a> est l'éditeur web du W3C, qui est capable de gérer le MathML à l'intérieur des documents XHTML. Utilisez les panneaux Éléments et Caractères spéciaux pour créer diverses constructions mathématiques avancées. Un texte simple tel que <code>a+2</code> est automatiquement analysé et le balisage MathML approprié est généré. Une fois que vous avez terminé, vous pouvez directement enregistrer votre page XHTML et l'ouvrir dans Mozilla.</p>
 
