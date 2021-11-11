@@ -3,4 +3,4 @@ title: set
 slug: Web/EXSLT/set
 translation_of: Web/EXSLT/set
 ---
-<p>{{wiki.localize('System.API.page-generated-for-subpage')}}</p>
+{{wiki.localize('System.API.page-generated-for-subpage')}}

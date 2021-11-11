@@ -6,44 +6,36 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/exsl/object-type
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- <code>exsl:object-type()</code> retourne une chaîne indiquant le type de l'objet spécifié.</p>
+`exsl:object-type()` retourne une chaîne indiquant le type de l'objet spécifié.
 
-<p>{{ Note("La plupart des types d\'objet <a href='\"fr/XSLT\"'>XSLT</a> peuvent être contraints les uns avec les autres sans risque. Cependant, certaines contraintes peuvent provoquer des erreurs. En particulier, le traitement de quelque chose qui n\'est pas un ensemble de nœuds comme tel. Cette fonction laisse aux auteurs des modèles nommés et des fonctions d\'extensions de fournir facilement une certaine flexibilité pour les valeurs de paramètres.") }}</p>
+{{ Note("La plupart des types d\'objet <a href='\"fr/XSLT\"'>XSLT</a> peuvent être contraints les uns avec les autres sans risque. Cependant, certaines contraintes peuvent provoquer des erreurs. En particulier, le traitement de quelque chose qui n\'est pas un ensemble de nœuds comme tel. Cette fonction laisse aux auteurs des modèles nommés et des fonctions d\'extensions de fournir facilement une certaine flexibilité pour les valeurs de paramètres.") }}
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval">exsl:object-type(<em>objet</em>)
-</pre>
+    exsl:object-type(objet)
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code>objet</code></dt>
- <dd>L'objet dont on désire connaître le type.</dd>
-</dl>
+- `objet`
+  - : L'objet dont on désire connaître le type.
 
-<h3 id="Retourne">Retourne</h3>
+### Retourne
 
-<p>Le type de l'<code><em>objet</em></code>, qui sera un des types suivants :</p>
+Le type de l'`objet`, qui sera un des types suivants :
 
-<ul>
- <li><code>string</code> (chaîne)</li>
- <li><code>number</code> (nombre)</li>
- <li><code>boolean</code> (booléen)</li>
- <li><code>node-set</code> (ensemble de nœuds)</li>
- <li><code>RTF</code></li>
- <li><code>external</code> (externe)</li>
-</ul>
+- `string` (chaîne)
+- `number` (nombre)
+- `boolean` (booléen)
+- `node-set` (ensemble de nœuds)
+- `RTF`
+- `external` (externe)
 
-<h3 id="D.C3.A9finition">Définition</h3>
+### Définition
 
-<ul>
- <li><a class="external" href="http://www.exslt.org/regexp/functions/object-type/index.html">EXSLT - EXSL:OBJECT-TYPE (en)</a></li>
-</ul>
+- [EXSLT - EXSL:OBJECT-TYPE (en)](http://www.exslt.org/regexp/functions/object-type/index.html)
 
-<h3 id="Support_par_Gecko">Support par Gecko</h3>
+### Support par Gecko
 
-<p>Supporté par Gecko 1.9 et ultérieur.</p>
+Supporté par Gecko 1.9 et ultérieur.

@@ -6,33 +6,27 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/set/distinct
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- <code>set:distinct()</code> retourne un sous-ensemble des nœuds appartenant à l'ensemble de nœuds spécifié, en ne retournant que les nœuds possédant une valeur de chaîne unique.</p>
+`set:distinct()` retourne un sous-ensemble des nœuds appartenant à l'ensemble de nœuds spécifié, en ne retournant que les nœuds possédant une valeur de chaîne unique.
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval">set:distinct(<em>ensembleNœuds</em>)
-</pre>
+    set:distinct(ensembleNœuds)
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code>ensembleNœuds</code></dt>
- <dd>L'ensemble de nœuds duquel extraire les nœuds uniques.</dd>
-</dl>
+- `ensembleNœuds`
+  - : L'ensemble de nœuds duquel extraire les nœuds uniques.
 
-<h3 id="Retourne">Retourne</h3>
+### Retourne
 
-<p>Un ensemble de nœuds contenant les nœuds possédant une valeur de chaîne unique.</p>
+Un ensemble de nœuds contenant les nœuds possédant une valeur de chaîne unique.
 
-<h3 id="D.C3.A9finition">Définition</h3>
+### Définition
 
-<ul>
- <li><a class="external" href="http://www.exslt.org/set/functions/distinct/">EXSLT - SET:DISTINCT</a></li>
-</ul>
+- [EXSLT - SET:DISTINCT](http://www.exslt.org/set/functions/distinct/)
 
-<h3 id="Support_par_Gecko">Support par Gecko</h3>
+### Support par Gecko
 
-<p>Supporté par Gecko 1.9 et ultérieur.</p>
+Supporté par Gecko 1.9 et ultérieur.
