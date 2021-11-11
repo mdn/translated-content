@@ -135,5 +135,3 @@ Voici un exemple qui fonctionne dans les navigateurs ne possédant pas le suppor
 ### Ne laissez pas de tests qui ne fonctionnent pas dans votre code
 
 Si vous essayez d'utiliser une propriété CSS, mais que celle-ci n'a pas d'effet, supprimez-la. Elle pourrait se mettre à avoir un effet que vous n'attendiez pas du tout dans une version future.
-
-{{ languages( {"en":"en/Web_development/Writing_forward-compatible_websites" } ) }}

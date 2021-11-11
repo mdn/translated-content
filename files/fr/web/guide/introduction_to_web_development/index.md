@@ -32,7 +32,3 @@ Que vous débutiez dans le domaine du développement web ou que vous désiriez �
     </tr>
   </tbody>
 </table>
-
-
-
-{{ languages( { "en": "en/Web_development/Introduction_to_Web_development", "zh-tw": "zh_tw/Web\_開發/Web開發入門" } ) }}

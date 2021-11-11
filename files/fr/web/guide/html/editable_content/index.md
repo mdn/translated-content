@@ -44,5 +44,3 @@ Vous pouvez observer un exemple concret intégrant JavaScript utilisant LocalSto
 ## Voir aussi
 
 [Comment interagir avec le contenu ](/fr/docs/Midas "en/Midas")(style proche de l'ancienne API Internet Explorer) ou encore [ici](/fr/docs/Rich-Text_Editing_in_Mozilla "en/rich-text editing in mozilla").
-
-{{ languages({ "ja": "ja/HTML/Content_Editable", "zh-cn": "zh-cn/HTML/Content_Editable" }) }}
