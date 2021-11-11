@@ -14,10 +14,10 @@ tags:
   - time-based media
 translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
 ---
-<p class="summary">This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the <strong>Perceivable</strong> principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Perceivable states that users must be able to perceive it in some way, using one or more of their senses.</p>
+<p>This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the <strong>Perceivable</strong> principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Perceivable states that users must be able to perceive it in some way, using one or more of their senses.</p>
 
 <div class="note">
-<p><strong>Note</strong>: To read the W3C definitions for Perceivable and its guidelines and success criteria, see <a href="https://www.w3.org/TR/WCAG21/#perceivable">Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.</a></p>
+<p><strong>Note :</strong> To read the W3C definitions for Perceivable and its guidelines and success criteria, see <a href="https://www.w3.org/TR/WCAG21/#perceivable">Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.</a></p>
 </div>
 
 <h2 id="Guideline_1.1_—_Providing_text_alternatives_for_non-text_content">Guideline 1.1 — Providing text alternatives for non-text content</h2>
@@ -36,28 +36,28 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
   <tr>
    <td colspan="1" rowspan="5">1.1.1 Provide text equivalents  (A)</td>
    <td>All images that convey meaningful content should be given suitable alternative text.</td>
-   <td><a href="/en-US/docs/Learn/Accessibility/HTML#Text_alternatives">Text alternatives.</a></td>
+   <td><a href="/fr/docs/Learn/Accessibility/HTML#Text_alternatives">Text alternatives.</a></td>
   </tr>
   <tr>
    <td>Complex images or charts should have an accessible alternative provided, either on the same page or linked to. Use a regular link rather than the <code>longdesc</code> attribute.</td>
    <td>
-    <p>A text description may work, or an accessible data table (see <a href="/en-US/docs/Learn/HTML/Tables/Advanced">HTML table advanced features and accessibility</a>). Also see <a href="/en-US/docs/Learn/Accessibility/HTML#Other_text_alternative_mechanisms">Other text alternative mechanisms</a> for the argument against <code>longdesc</code>.</p>
+    <p>A text description may work, or an accessible data table (see <a href="/fr/docs/Learn/HTML/Tables/Advanced">HTML table advanced features and accessibility</a>). Also see <a href="/fr/docs/Learn/Accessibility/HTML#Other_text_alternative_mechanisms">Other text alternative mechanisms</a> for the argument against <code>longdesc</code>.</p>
    </td>
   </tr>
   <tr>
    <td>Multimedia content (e.g. audio or video) should at least have a descriptive identification available (e.g. a caption or similar).</td>
    <td>
-    <p>See <a href="/en-US/docs/Learn/Accessibility/HTML#Text_alternatives">Text alternatives</a> for static caption options, and <a href="/en-US/docs/Learn/Accessibility/Multimedia#Audio_transcripts">Audio transcripts</a>, <a href="/en-US/docs/Learn/Accessibility/Multimedia#Video_text_tracks">Video text tracks</a>, and <a href="/en-US/docs/Learn/Accessibility/Multimedia#Other_multimedia_content">Other multimedia content</a> for other alternatives.</p>
+    <p>See <a href="/fr/docs/Learn/Accessibility/HTML#Text_alternatives">Text alternatives</a> for static caption options, and <a href="/fr/docs/Learn/Accessibility/Multimedia#Audio_transcripts">Audio transcripts</a>, <a href="/fr/docs/Learn/Accessibility/Multimedia#Video_text_tracks">Video text tracks</a>, and <a href="/fr/docs/Learn/Accessibility/Multimedia#Other_multimedia_content">Other multimedia content</a> for other alternatives.</p>
    </td>
   </tr>
   <tr>
    <td>UI Controls such as form elements and buttons should have text labels that describe their purpose.</td>
-   <td>Buttons are simple — you should make sure the button text describes the function of the button (e.g. <code>&lt;button&gt;Upload image&lt;/button&gt;</code>). For further information on other UI controls, see <a href="/en-US/docs/Learn/Accessibility/HTML#UI_controls">UI controls</a>.</td>
+   <td>Buttons are simple — you should make sure the button text describes the function of the button (e.g. <code>&lt;button&gt;Upload image&lt;/button&gt;</code>). For further information on other UI controls, see <a href="/fr/docs/Learn/Accessibility/HTML#UI_controls">UI controls</a>.</td>
   </tr>
   <tr>
    <td>Implement decorative (non-content) images, video, etc., in a way that is invisible to assistive technology, so it doesn't confuse users.</td>
    <td>
-    <p>Decorative images should be implemented using CSS background images (see <a href="/en-US/docs/Learn/CSS/Styling_boxes/Backgrounds">Backgrounds</a>).  If you have to include an image via an {{htmlelement("img")}} element, give it a blank alt (<code>alt=""</code>), otherwise screenreaders may try to read out the filepath, etc.</p>
+    <p>Decorative images should be implemented using CSS background images (see <a href="/fr/docs/Learn/CSS/Styling_boxes/Backgrounds">Backgrounds</a>).  If you have to include an image via an {{htmlelement("img")}} element, give it a blank alt (<code>alt=""</code>), otherwise screenreaders may try to read out the filepath, etc.</p>
 
     <p>If you are including background video or audio that autoplays, make it as unobtrusive as possible. Don't make it look/sound like content, and provide a control to turn it off. Ideally, don't include it at all.</p>
    </td>
@@ -66,7 +66,7 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: Also see the <a href="https://www.w3.org/TR/WCAG21/#text-alternatives">WCAG description for Guideline 1.1: Text alternatives</a>.</p>
+<p><strong>Note :</strong> Also see the <a href="https://www.w3.org/TR/WCAG21/#text-alternatives">WCAG description for Guideline 1.1: Text alternatives</a>.</p>
 </div>
 
 <h2 id="Guideline_1.2_—_Providing_text_alternatives_for_time-based_media">Guideline 1.2 — Providing text alternatives for time-based media</h2>
@@ -83,17 +83,17 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
   <tr>
    <td colspan="1" rowspan="1">1.2.1 Provide alternatives for pre-recorded audio-only and video-only content (A)</td>
    <td>A transcript should be provided for prerecorded audio-only media, and a transcript or audio description should be provided for prerecorded video-only media (i.e. silent video).</td>
-   <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#Audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial available as yet.</td>
+   <td>See <a href="/fr/docs/Learn/Accessibility/Multimedia#Audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial available as yet.</td>
   </tr>
   <tr>
    <td colspan="1">1.2.2 Provide captions for web-based video (A)</td>
    <td>You should provide captions for video presented on the web, e.g. HTML5 video. This is for the benefit of people who can't hear the audio part of the video.</td>
-   <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#Video_text_tracks">Video text tracks</a> for HTML5 video captions, and <a href="/en-US/docs/Learn/Accessibility/Multimedia#Other_multimedia_content">Other multimedia content</a> for other technologies. See also <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a> (YouTube).</td>
+   <td>See <a href="/fr/docs/Learn/Accessibility/Multimedia#Video_text_tracks">Video text tracks</a> for HTML5 video captions, and <a href="/fr/docs/Learn/Accessibility/Multimedia#Other_multimedia_content">Other multimedia content</a> for other technologies. See also <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a> (YouTube).</td>
   </tr>
   <tr>
    <td colspan="1">1.2.3 Provide text transcript or audio description for web-based video (A)</td>
    <td>You should provide text transcripts or audio descriptions for video presented on the web, e.g. HTML5 video. This is for the benefit of people who can't see the visual part of the video, and don't get the full content from the audio alone.</td>
-   <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#Audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial available as yet.</td>
+   <td>See <a href="/fr/docs/Learn/Accessibility/Multimedia#Audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial available as yet.</td>
   </tr>
   <tr>
    <td colspan="1">1.2.4 Provide captions for live audio (AA)</td>
@@ -118,18 +118,18 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
   <tr>
    <td colspan="1">1.2.8 Provide an alternative for prerecorded media (AAA)</td>
    <td>For all content that features video, a descriptive text transcript should be provided, for example a script of the movie you are watching. This is for the benefit of hearing impaired viewers who cannot hear the content.</td>
-   <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#Audio_transcripts">Audio transcripts</a> for transcript information.</td>
+   <td>See <a href="/fr/docs/Learn/Accessibility/Multimedia#Audio_transcripts">Audio transcripts</a> for transcript information.</td>
   </tr>
   <tr>
    <td colspan="1">1.2.9 Provide a transcript for live audio (AAA)</td>
    <td>For any live audio content being broadcast, a descriptive text should be provided, for example a script of the play or musical you are listening to. This is for the benefit of hearing impaired viewers who cannot hear the content.</td>
-   <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#Audio_transcripts">Audio transcripts</a> for transcript information.</td>
+   <td>See <a href="/fr/docs/Learn/Accessibility/Multimedia#Audio_transcripts">Audio transcripts</a> for transcript information.</td>
   </tr>
  </thead>
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: Also see the <a href="https://www.w3.org/TR/WCAG21/#time-based-media">WCAG description for Guideline 1.2: Time-based Media: Provide alternatives for time-based media</a>.</p>
+<p><strong>Note :</strong> Also see the <a href="https://www.w3.org/TR/WCAG21/#time-based-media">WCAG description for Guideline 1.2: Time-based Media: Provide alternatives for time-based media</a>.</p>
 </div>
 
 <h2 id="Guideline_1.3_—_Create_content_that_can_be_presented_in_different_ways">Guideline 1.3 — Create content that can be presented in different ways</h2>
@@ -155,13 +155,13 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
     </ul>
    </td>
    <td>The whole of
-    <p><a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a> is packed with information about this, but you should particularly refer to <a href="/en-US/docs/Learn/Accessibility/HTML#Good_semantics">Good semantics</a>, <a href="/en-US/docs/Learn/Accessibility/HTML#UI_controls">UI controls</a>, and <a href="/en-US/docs/Learn/Accessibility/HTML#Text_alternatives">Text alternatives</a>.</p>
+    <p><a href="/fr/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a> is packed with information about this, but you should particularly refer to <a href="/fr/docs/Learn/Accessibility/HTML#Good_semantics">Good semantics</a>, <a href="/fr/docs/Learn/Accessibility/HTML#UI_controls">UI controls</a>, and <a href="/fr/docs/Learn/Accessibility/HTML#Text_alternatives">Text alternatives</a>.</p>
    </td>
   </tr>
   <tr>
    <td colspan="1">1.3.2 Meaningful content sequence (A)</td>
    <td>A sensible, logical reading order should be easy to determine for any content, even if it is visually presented in an unusual way. The order should be made obvious by use of correct semantic elements (e.g. headings, paragraphs), with CSS being used to create any unusual layout styles, irrespective of the markup.</td>
-   <td>Again, refer to <a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a>.</td>
+   <td>Again, refer to <a href="/fr/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a>.</td>
   </tr>
   <tr>
    <td colspan="1">1.3.3 Sensory characteristics (A)</td>
@@ -175,7 +175,7 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
     </ul>
 
     <div class="note">
-    <p><strong>Note</strong>: Conveying instructions solely by color is related, but covered in a different guideline — 1.4.1.</p>
+    <p><strong>Note :</strong> Conveying instructions solely by color is related, but covered in a different guideline — 1.4.1.</p>
     </div>
    </td>
    <td> </td>
@@ -205,7 +205,7 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#adaptable">Guideline 1.3: Adaptable: Create content that can be presented in different ways without losing information or structure.</a></p>
+<p><strong>Note :</strong> Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#adaptable">Guideline 1.3: Adaptable: Create content that can be presented in different ways without losing information or structure.</a></p>
 </div>
 
 <h2 id="Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">Guideline 1.4: Make it easier for users to see and hear content including separating foreground from background</h2>
@@ -224,12 +224,12 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
    <td>
     <p>Color should not be solely relied upon to convey information — for example, in forms you should never mark required fields purely with a color (like red). Instead (or as well as), something like an asterisk with a label of "required" would be more appropriate.</p>
    </td>
-   <td>See <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a> and <a href="/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form#Multiple_labels">Multiple labels</a>.</td>
+   <td>See <a href="/fr/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a> and <a href="/fr/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form#Multiple_labels">Multiple labels</a>.</td>
   </tr>
   <tr>
    <td colspan="1">1.4.2 Audio controls (A)</td>
    <td>For any audio that plays for longer than three seconds, accessible controls should be provided to play and pause the audio/video, and mute/adjust volume.</td>
-   <td>Use native <code>&lt;button&gt;</code>s to provide accessible keyboard controls, as shown in <a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics">Video player syling basics</a>.</td>
+   <td>Use native <code>&lt;button&gt;</code>s to provide accessible keyboard controls, as shown in <a href="/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics">Video player syling basics</a>.</td>
   </tr>
   <tr>
    <td colspan="1">1.4.3 Minimum contrast (AA)</td>
@@ -241,7 +241,7 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
      <li>Heading (or just larger) text should have a ratio of at least 3.1. Larger text is defined as at least 18pt, or 14pt bold.</li>
     </ul>
    </td>
-   <td>See <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a>.</td>
+   <td>See <a href="/fr/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a>.</td>
   </tr>
   <tr>
    <td colspan="1">1.4.4 Resize text (AA)</td>
@@ -263,7 +263,7 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
      <li>Heading (or just larger) text should have a ratio of at least 4.5.1. Larger text is defined as at least 18pt, or 14pt bold.</li>
     </ul>
    </td>
-   <td>See <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a>.</td>
+   <td>See <a href="/fr/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a>.</td>
   </tr>
   <tr>
    <td colspan="1">1.4.7 Low or no background audio (AAA)</td>
@@ -337,7 +337,7 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#distinguishable">Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.</a><a href="https://www.w3.org/TR/WCAG21/#distinguishable">.</a></p>
+<p><strong>Note :</strong> Also see the WCAG description for <a href="https://www.w3.org/TR/WCAG21/#distinguishable">Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.</a><a href="https://www.w3.org/TR/WCAG21/#distinguishable">.</a></p>
 </div>
 
 <p> </p>
@@ -349,9 +349,9 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
 
   <ol>
    <li>Perceivable</li>
-   <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable">Operable</a></li>
-   <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable">Understandable</a></li>
-   <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust">Robust</a></li>
+   <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Operable">Operable</a></li>
+   <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Understandable">Understandable</a></li>
+   <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Robust">Robust</a></li>
   </ol>
  </li>
 </ul>

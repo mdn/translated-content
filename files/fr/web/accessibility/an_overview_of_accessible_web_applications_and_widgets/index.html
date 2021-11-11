@@ -14,7 +14,7 @@ original_slug: >-
 
 <h2 id="Problématique">Problématique</h2>
 
-<p>La plupart des librairies JavaScript proposent des composants côté client qui miment le comportement familier des interfaces de bureaux classiques. Carrousels, barres de menu et d’autres composants peuvent être créés avec JavaScript, CSS et HTML. Mais du moment que les spécifications HTML 4 ne proposaient pas de tags pour décrire sémantiquement ce type de composants, les développeurs se contentaient d'éléments génériques tel que le tag <code>&lt;div&gt;</code> ou le tag <code>&lt;span&gt;</code>. Or, si d’apparence ces composants ressemblaient parfaitement à ceux spécifiques aux applications de bureau, on ne disposait pas d'informations sémantiques suffisantes pour les rendres accessibles aux technologies d’assistance. L’accès au contenu dynamique d’une page Web peut devenir problématique plus particulièrement pour les utilisateurs qui, pour une raison ou pour une autre ne peuvent pas voir l’écran. Les niveaux de stock, les indicateurs de progression... modifient le DOM de telle sorte que les technologies d'assistance n’y ont pas accès. C'est dans ce contexte que <a href="/fr/ARIA" title="ARIA">ARIA</a> entre en jeu.</p>
+<p>La plupart des librairies JavaScript proposent des composants côté client qui miment le comportement familier des interfaces de bureaux classiques. Carrousels, barres de menu et d’autres composants peuvent être créés avec JavaScript, CSS et HTML. Mais du moment que les spécifications HTML 4 ne proposaient pas de tags pour décrire sémantiquement ce type de composants, les développeurs se contentaient d'éléments génériques tel que le tag <code>&lt;div&gt;</code> ou le tag <code>&lt;span&gt;</code>. Or, si d’apparence ces composants ressemblaient parfaitement à ceux spécifiques aux applications de bureau, on ne disposait pas d'informations sémantiques suffisantes pour les rendres accessibles aux technologies d’assistance. L’accès au contenu dynamique d’une page Web peut devenir problématique plus particulièrement pour les utilisateurs qui, pour une raison ou pour une autre ne peuvent pas voir l’écran. Les niveaux de stock, les indicateurs de progression... modifient le DOM de telle sorte que les technologies d'assistance n’y ont pas accès. C'est dans ce contexte que <a href="/fr/ARIA">ARIA</a> entre en jeu.</p>
 
 <p><em>Exemple 1: Code d</em>’<em>une tabulation sans informations ARIA. Il n'y a aucune information permettant de décrire la forme du widget et ses fonctions.</em></p>
 
@@ -38,14 +38,14 @@ original_slug: >-
 &lt;/div&gt;</pre>
 
 <p><em>Example 2: Telles qu'elles sont représentées ci-dessous, les tabulations peuvent être reconnues en tant que tel par les utilisateurs. Or aucune information sémantique exploitable par une technologie d</em>’<em>assistance n</em>’<em>est présente.</em><br>
- <img alt="Screenshot of the tabs widget" class="default internal" src="/@api/deki/files/4926/=Tabs_Widget.png"></p>
+ <img alt="Screenshot of the tabs widget" src="tabs_widget.png"></p>
 
 <h2 id="ARIA">ARIA</h2>
 
 <p><a href="https://www.w3.org/WAI/standards-guidelines/aria/">WAI-ARIAI</a>, les spécifications concernant les applications <strong>internet "riches" et accessibles</strong> sont publiées par l’iniative du <a href="https://www.w3.org/WAI/">W3C sur l’accessibilité</a>, et fournissent la sémantique essentielle au bon fonctionnement des lecteurs d'écran. ARIA permet aux développeurs de décrire en quelque sorte leurs widgets plus finement en ajoutant des attributs spéciaux à leurs balises. Ces spécifications comblent le vide qui existait entre les spécifications du standard HTML et des widgets. ARIA spécifie des rôles et des états permettant de décrire en quelque sorte le fonctionnement des widgets d’interfaces utilisateurs les plus connus.</p>
 
 <div class="warning">
-<p>Beaucoup d’entre eux ont été ajouté plus tard dans HTML5, et <strong>les développeurs devraient toujours préférer utiliser la balise HTML correspondante plutôt qu’utiliser ARIA</strong>.</p>
+<p><strong>Attention :</strong> Beaucoup d’entre eux ont été ajouté plus tard dans HTML5, et <strong>les développeurs devraient toujours préférer utiliser la balise HTML correspondante plutôt qu’utiliser ARIA</strong>.</p>
 </div>
 
 <p>Les spécifications ARIA distinguent 3 types d’attributs : rôles, états et propriétés. Les rôles sont utilisés pour les widgets ne faisant pas partie des spécifications HTML 4 comme des sliders, menus, barres, boites de dialogue... Les propriétés sont utilisées pour représenter les caractéristiques de ces widgets, elles décrivent les caractéristiques de ces widgets comme s'il sont déplaçables avec la souris, requièrent un élément ou ont un popup associés à eux. Les états, comme leur nom l'indique, servent à representer l'état actuel de ces éléments en informant les technologies d'assistance s'il est occupé, désactivé, sélectionné ou masqué.</p>
@@ -126,7 +126,7 @@ original_slug: >-
 
 <p><em>Exemple 2c. JavaScript pour mettre à jour l'attribut aria-checked.</em></p>
 
-<pre class="brush: javascript">var showTip = function(el) {
+<pre class="brush: js">var showTip = function(el) {
   el.setAttribute('aria-hidden', 'false');
 }</pre>
 
@@ -137,10 +137,6 @@ original_slug: >-
 <p>Considérons une zone d’écriture, soit une zone qui permet à l’utilisateur d’éditer une partie de son texte, sans changer de contexte. Cette zone a un mode "vue", dans lequel le texte n’est pas éditable, et un mode "édition", dans lequel le texte peut être modifié. Un développeur peut être tenté d’implémenter le mode "vue" avec un texte en lecture seule via l’élément {{ HTMLElement("input") }} et en configurant le  <strong><code>role</code></strong>  ARIA à  <code>button</code>, puis passe au mode "édition" en rendant l’élément écrivable et en supprimant le <strong><code>role</code></strong> attribué dans le mode "édition" (puisque les éléments de type {{ HTMLElement("input") }} ont leur propre rôle sémantique).</p>
 
 <p>Ne faites pas ça. À la place, il vaut mieux implémenter le mode "vue" avec un autre élément, comme {{ HTMLElement("div") }} ou {{ HTMLElement("span") }} avec un <strong><code>role</code></strong> de <code>button</code>, et le mode "édition" avec un élément texte {{ HTMLElement("input") }}.</p>
-
-<h3 id="Mise_à_jour_asynchrone_de_contenu">Mise à jour asynchrone de contenu</h3>
-
-<div class="note">En construction. Voir aussi <a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Zones_live_ARIA" title="Live Regions">Live Regions</a></div>
 
 <h2 id="La_navigation_au_clavier">La navigation au clavier</h2>
 
@@ -158,16 +154,16 @@ original_slug: >-
  <li>En cas de doute, imitez le comportement standard du bureau du contrôle que vous créez.</li>
 </ul>
 
-<p>Ainsi, pour l’exemple de widget Tabs ci-dessus, l’utilisateur devrait être capable de naviguer dans le conteneur du widget (le &lt;ol&gt; dans notre balisage) en utilisant les touches <kbd>Tab</kbd> et <kbd><kbd>Maj</kbd>+<kbd>Tab</kbd></kbd>. Une fois que le focus du clavier est à l’intérieur du conteneur, les touches fléchées devraient permettre à l’utilisateur de naviguer entre chaque onglet (les éléments &lt;li&gt;). De là, les conventions varient d’une plateforme à l’autre. Sous Windows, l’onglet suivant doit être automatiquement activé lorsque l’utilisateur appuie sur les touches fléchées. Sous Mac OS X, l’utilisateur peut appuyer sur <kbd>Entrée</kbd> ou sur <kbd>Espace</kbd> pour activer l’onglet suivant. Un tutoriel en profondeur pour créer <a href="https://developer.mozilla.org/fr/docs/Contr%C3%B4les_DHTML_personnalis%C3%A9s_navigables_au_clavier" title="en/Accessibility/Keyboard-navigable JavaScript widgets">Widget navigables grâce à des contrôles Javascript </a>comme décrit ici afin de montrer comment avoir ce comportement en JS.</p>
+<p>Ainsi, pour l’exemple de widget Tabs ci-dessus, l’utilisateur devrait être capable de naviguer dans le conteneur du widget (le &lt;ol&gt; dans notre balisage) en utilisant les touches <kbd>Tab</kbd> et <kbd><kbd>Maj</kbd>+<kbd>Tab</kbd></kbd>. Une fois que le focus du clavier est à l’intérieur du conteneur, les touches fléchées devraient permettre à l’utilisateur de naviguer entre chaque onglet (les éléments &lt;li&gt;). De là, les conventions varient d’une plateforme à l’autre. Sous Windows, l’onglet suivant doit être automatiquement activé lorsque l’utilisateur appuie sur les touches fléchées. Sous Mac OS X, l’utilisateur peut appuyer sur <kbd>Entrée</kbd> ou sur <kbd>Espace</kbd> pour activer l’onglet suivant. Un tutoriel en profondeur pour créer <a href="/fr/docs/Contr%C3%B4les_DHTML_personnalis%C3%A9s_navigables_au_clavier">Widget navigables grâce à des contrôles Javascript </a>comme décrit ici afin de montrer comment avoir ce comportement en JS.</p>
 
-<p>Pour plus de détails à propos de ces conventions de navigation au clavier, un aperçu ici <a class="external" href="http://dev.aol.com/dhtml_style_guide" title="http://dev.aol.com/dhtml_style_guide">DHTML style guide</a> est disponible. Il délivre un aperçu de la façon dont la navigation au clavier devrait fonctionner pour chaque type de widget pris en charge par ARIA. Le W3C offre également un document utile <a class="external" href="http://www.w3.org/WAI/PF/aria-practices/Overview.html" title="http://www.w3.org/WAI/PF/aria-practices/Overview.html">ARIA Best Practices</a> qui inclut la navigation au clavier et les raccourcis pour une variété de widgets.</p>
+<p>Pour plus de détails à propos de ces conventions de navigation au clavier, un aperçu ici <a href="http://dev.aol.com/dhtml_style_guide">DHTML style guide</a> est disponible. Il délivre un aperçu de la façon dont la navigation au clavier devrait fonctionner pour chaque type de widget pris en charge par ARIA. Le W3C offre également un document utile <a href="http://www.w3.org/WAI/PF/aria-practices/Overview.html">ARIA Best Practices</a> qui inclut la navigation au clavier et les raccourcis pour une variété de widgets.</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA" title="ARIA">ARIA</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/FAQ_Applications_Web_et_ARIA" title="Web applications and ARIA FAQ">Des applications WEB et la FAQ ARIA</a></li>
- <li><a class="external" href="http://www.w3.org/TR/wai-aria/" title="http://www.w3.org/TR/wai-aria/">WAI-ARIA Spécification</a></li>
- <li><a class="external" href="http://www.w3.org/WAI/PF/aria-practices/Overview.html" title="http://www.w3.org/WAI/PF/aria-practices/Overview.html">WAI-ARIA Best Practices</a></li>
- <li><a class="external" href="http://dev.aol.com/dhtml_style_guide" title="http://dev.aol.com/dhtml_style_guide">DHTML Style Guide</a></li>
+ <li><a href="/fr/docs/Accessibilit%C3%A9/ARIA">ARIA</a></li>
+ <li><a href="/fr/docs/Accessibilit%C3%A9/ARIA/FAQ_Applications_Web_et_ARIA">Des applications WEB et la FAQ ARIA</a></li>
+ <li><a href="http://www.w3.org/TR/wai-aria/">WAI-ARIA Spécification</a></li>
+ <li><a href="http://www.w3.org/WAI/PF/aria-practices/Overview.html">WAI-ARIA Best Practices</a></li>
+ <li><a href="http://dev.aol.com/dhtml_style_guide">DHTML Style Guide</a></li>
 </ul>

@@ -11,7 +11,7 @@ tags:
 translation_of: Web/Accessibility/ARIA/Roles/button_role
 original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_button
 ---
-<p class="summary">Le rôle <strong><a href="https://www.w3.org/WAI/PF/aria/roles#button">button</a></strong> devrait être utilisé pour les éléments cliquables qui déclenchent une réponse lorsqu'activés par l'utilisateur. Ajouter <code>role="button"</code> permettra à un élément d'apparaître comme un bouton de contrôle pour un lecteur d'écran. Ce rôle peut être utilisé avec l'attribut <code>aria-pressed</code> afin de créer des boutons interrupteurs.</p>
+<p>Le rôle <strong><a href="https://www.w3.org/WAI/PF/aria/roles#button">button</a></strong> devrait être utilisé pour les éléments cliquables qui déclenchent une réponse lorsqu'activés par l'utilisateur. Ajouter <code>role="button"</code> permettra à un élément d'apparaître comme un bouton de contrôle pour un lecteur d'écran. Ce rôle peut être utilisé avec l'attribut <code>aria-pressed</code> afin de créer des boutons interrupteurs.</p>
 
 <pre class="brush: html">&lt;div id="saveChanges" tabindex="0" role="button" aria-pressed="false"&gt;Enregistrer&lt;/div&gt;</pre>
 
@@ -20,7 +20,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_button
 <pre class="brush: html">&lt;button id="saveChanges"&gt;Enregistrer&lt;/button&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong> : Si on utilise <code>role="button"</code> plutôt que les éléments sémantiques <code>&lt;button&gt;</code> ou <code>&lt;input type="button"&gt;</code>, il faudra : permettre à l'élément de recevoir le focus, définir des gestionnaires d'évènements pour <a href="/fr/docs/Web/API/Element/click_event"><code>click</code></a> et <a href="/fr/docs/Web/API/Document/keydown_event"><code>keydown</code></a>, y compris la gestion des touches <kbd>Entrée</kbd> et <kbd>Espace</kbd>, afin de traiter la saisie de l'utilisateur. Voir <a href="https://www.w3.org/TR/wai-aria-practices/examples/button/button.html">l'exemple de code officiel de WAI-ARIA</a>.</p>
+<p><strong>Note :</strong> Si on utilise <code>role="button"</code> plutôt que les éléments sémantiques <code>&lt;button&gt;</code> ou <code>&lt;input type="button"&gt;</code>, il faudra : permettre à l'élément de recevoir le focus, définir des gestionnaires d'évènements pour <a href="/fr/docs/Web/API/Element/click_event"><code>click</code></a> et <a href="/fr/docs/Web/API/Document/keydown_event"><code>keydown</code></a>, y compris la gestion des touches <kbd>Entrée</kbd> et <kbd>Espace</kbd>, afin de traiter la saisie de l'utilisateur. Voir <a href="https://www.w3.org/TR/wai-aria-practices/examples/button/button.html">l'exemple de code officiel de WAI-ARIA</a>.</p>
 </div>
 
 <h2 id="description">Description</h2>
@@ -248,8 +248,8 @@ function toggleButton(element) {
 
 <p>Les boutons sont des contrôles interactifs et, à ce titre, peuvent recevoir le focus. Si le rôle <code>button</code> est ajouté à un élément qui ne peut recevoir le focus nativement (comme <code>&lt;span&gt;</code>, <code>&lt;div&gt;</code> ou <code>&lt;p&gt;</code>), l'attribut <code>tabindex</code> devra être utilisé afin de permettre le focus sur le bouton.</p>
 
-<div class="note">
-<strong>Attention !</strong> Lorsqu'on utilise des liens avec le rôle <code>button</code>, il faut rajouter un gestionnaire d'évènement pour la touche <kbd>Espace</kbd>. En effet, les boutons s'activent avec <kbd>Espace</kbd> ou <kbd>Entrée</kbd> tandis que, nativement, les liens ne se déclenchent qu'avec <kbd>Entrée</kbd>.</p>
+<div class="warning">
+<p><strong>Attention :</strong> Lorsqu'on utilise des liens avec le rôle <code>button</code>, il faut rajouter un gestionnaire d'évènement pour la touche <kbd>Espace</kbd>. En effet, les boutons s'activent avec <kbd>Espace</kbd> ou <kbd>Entrée</kbd> tandis que, nativement, les liens ne se déclenchent qu'avec <kbd>Entrée</kbd>.</p>
 </div>
 
 <p>Lorsqu'on utilise le rôle <code>button</code>, les lecteurs d'écran annonce l'élément comme un bouton, généralement en énonçant « clic » suivi du nom accessible du bouton. Le nom accessible correspond au contenu de l'élément ou à la valeur de <code>aria-label</code> ou à l'élément référencé avec l'attribut <code>aria-labelledby</code>, ou à une description si elle existe.</p>
@@ -297,10 +297,5 @@ function toggleButton(element) {
  <li><a href="https://www.w3.org/TR/aria-in-html/">Notes sur l'utilisation d'ARIA en HTML</a></li>
  <li><a href="https://www.w3.org/TR/wai-aria-practices/examples/button/button.html">Exemple de code officiel WAI-ARIA</a></li>
  <li><a href="/fr/docs/Web/Accessibility/ARIA/Roles/menubutton_role">Rôle ARIA <code>menubutton</code></a></li>
+ <li><a href="/fr/docs/Web/Accessibility/ARIA/Roles"><strong>Rôles WAI-ARIA</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
 </ul>
-
-<section id="Quick_links">
-  <ol>
-   <li><a href="/fr/docs/Web/Accessibility/ARIA/Roles"><strong>Rôles WAI-ARIA</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
-  </ol>
-</section>

@@ -15,7 +15,7 @@ original_slug: Accessibilité/ARIA/formulaires/Alertes
 
 <h2 id="Le_formulaire">Le formulaire</h2>
 
-<p>Tout d’abord, veuillez lire la <a href="/fr/Accessibilité/ARIA/formulaires/Indications_élémentaires_pour_les_formulaires" rel="nofollow" title="Indications élémentaires pour les formulaires">technique <code>aria-required</code></a> pour commencer, si vous ne l’avez pas déjà lu, puisque la technique abordée en est le prolongement.</p>
+<p>Tout d’abord, veuillez lire la <a href="/fr/Accessibilité/ARIA/formulaires/Indications_élémentaires_pour_les_formulaires" rel="nofollow">technique <code>aria-required</code></a> pour commencer, si vous ne l’avez pas déjà lu, puisque la technique abordée en est le prolongement.</p>
 
 <p>Voici un formulaire simple :</p>
 
@@ -43,7 +43,7 @@ original_slug: Accessibilité/ARIA/formulaires/Alertes
 
 <p>Simple et direct, mais nous ne sommes pas là pour gagner un prix de beauté. :-)</p>
 
-<h2 id="Vérification_de_la_validité_et_avertissement_de_l’utilisateur"><span class="mw-headline" id="Checking_for_validity_and_notifying_the_user">Vérification de la validité et avertissement de l’utilisateur</span></h2>
+<h2 id="Vérification_de_la_validité_et_avertissement_de_l’utilisateur">Vérification de la validité et avertissement de l’utilisateur</h2>
 
 <p>Vérifier la validité et avertir l’utilisateur se déroule en plusieurs étapes :</p>
 
@@ -57,7 +57,7 @@ original_slug: Accessibilité/ARIA/formulaires/Alertes
 
 <p>La code JavaScript obtenu ressemble à ce qui suit, inséré au-dessus de la balise fermante {{ HTMLElement("head") }} :</p>
 
-<pre class="brush: javascript">&lt;script type="application/javascript"&gt;
+<pre class="brush: js">&lt;script type="application/javascript"&gt;
 function removeOldAlert()
 {
     var oldAlert = document.getElementById("alert");
@@ -91,7 +91,7 @@ function checkValidity(aID, aSearchTerm, aMsg)
 &lt;/script&gt;
 </pre>
 
-<h2 id="La_fonction_checkValidity_2"><span class="mw-headline" id="La_fonction_checkValidity">La fonction <code>checkValidity</code></span></h2>
+<h2 id="La_fonction_checkValidity_2">La fonction <code>checkValidity</code></h2>
 
 <p>Le cœur est la fonction <code>checkValidity</code>. Elle accepte trois paramètres : l’ID du champ de saisi qui doit être validé, le terme à recherche pour assurer la validité, et le message d’erreur à insérer dans l’alerte.</p>
 
@@ -106,17 +106,17 @@ function checkValidity(aID, aSearchTerm, aMsg)
 
 <p>Si le terme recherché est trouvé, l’attribut <code>aria-invalid</code> est réinitialisé à <code>true</code>. De plus, toute alerte qui subsisterait serait supprimée.</p>
 
-<h2 id="La_fonction_addAlert_2"><span class="mw-headline" id="La_fonction_addAlert">La fonction <code>addAlert</code></span></h2>
+<h2 id="La_fonction_addAlert_2">La fonction <code>addAlert</code></h2>
 
 <p>Cette fonction commence par enlever toutes les alertes restantes. Son fonctionnement est simple : elle cherche un élément avec un identifiant <code>alert</code>, et si elle en trouve un, l’enlève du modèle objet de document (DOM).</p>
 
-<p>Ensuite, la fonction crée un élément {{ HTMLElement("div") }} qui contient le texte de l’alerte. On lui attribue l’ID <code>alert</code>. Et son rôle est défini comme celui d’une « alert ». C’est inspiré par ARIA, même si le nom de l’attribut ne comporte par « aria ». Cela découle du fait que ce rôle est basé sur le module <a class="external text" href="http://www.w3.org/TR/xhtml-role/" title="XHTML Role Attribut Module">XHTML Role Attribut</a> qui a été tout simplement porté sur HTML pour plus de simplicité.</p>
+<p>Ensuite, la fonction crée un élément {{ HTMLElement("div") }} qui contient le texte de l’alerte. On lui attribue l’ID <code>alert</code>. Et son rôle est défini comme celui d’une « alert ». C’est inspiré par ARIA, même si le nom de l’attribut ne comporte par « aria ». Cela découle du fait que ce rôle est basé sur le module <a href="http://www.w3.org/TR/xhtml-role/">XHTML Role Attribut</a> qui a été tout simplement porté sur HTML pour plus de simplicité.</p>
 
 <p>Le texte est ajouté à l’élément {{ HTMLElement("div") }}, qui est lui-même ajouté au document.</p>
 
 <p>Au moment où cela se produira, Firefox déclenchera un événement « alert » pour la technologie d’assistance lorsque la {{ HTMLElement("div") }} apparaîtra. La plupart des lecteurs d’écran prendront celui-ci automatiquement et le liront. C’est similaire à la barre de notification de Firefox qui apparaît lorsque vous désirez mémoriser un mot de passe. Cette alerte que nous venons de créer n’a pas de bouton sur lequel cliquer, elle se contente de nous dire ce qui est erroné.</p>
 
-<h2 id="Ajouter_de_la_magie_à_l’événement_onblur"><span class="mw-headline" id="Ajouter_de_la_magie_a_l_evenement_onblur">Ajouter de la magie à l’événement <code>onblur</code></span></h2>
+<h2 id="Ajouter_de_la_magie_à_l’événement_onblur">Ajouter de la magie à l’événement <code>onblur</code></h2>
 
 <p>Tout ce qu’il reste à faire, c’est ajouter un gestionnaire d’événement. Nous avons besoin de modifier les deux {{ HTMLElement("input") }} de l’adresse électronique et du nom par ce qui suit :</p>
 
@@ -138,7 +138,7 @@ function checkValidity(aID, aSearchTerm, aMsg)
 
 <p>Dans les deux cas, lorsque le focus revient sur le champ concerné, votre lecteur d’écran devrait vous dire que le champ est invalide. JAWS 9 prend en charge cette fonction, mais pas JAWS 8, aussi il se peut que ça ne fonctionne pas pour toutes les versions des lecteurs d’écran pris en charge.</p>
 
-<h2 id="Quelques_questions_qu’on_peut_se_poser"><span class="mw-headline" id="Quelques_questions_qu_on_peut_se_poser">Quelques questions qu’on peut se poser</span></h2>
+<h2 id="Quelques_questions_qu’on_peut_se_poser">Quelques questions qu’on peut se poser</h2>
 
 <dl>
  <dt>Q. Pourquoi mettre à la fois un <code>(required)</code> dans le texte du label et l’attribut <code>aria-required</code> sur certains éléments {{ HTMLElement("input") }} ?</dt>
@@ -147,12 +147,6 @@ function checkValidity(aID, aSearchTerm, aMsg)
  <dd>R. Cela n’est pas autorisé par, au moins, la spécification de l’API Windows, et probablement par d’autres. De plus, laisser le focus se déplacer sans réelle intervention de l’utilisateur n’est généralement pas considéré comme une chose à faire.</dd>
 </dl>
 
-<div class="warning">
-<p>TBD : let's rethink this – personally, I think setting focus might be good if done without causing a keyboard trap.</p>
-
-<p>()Il faudrait y réfléchir – personnellement, je pense que définir le focus peut être une bonne chose si c’est fait sans causer de perturbation à la navigation au clavier).</p>
-</div>
-
-<h2 id="Conclusion"><span class="mw-headline" id="In_conclusion">Conclusion</span></h2>
+<h2 id="Conclusion">Conclusion</h2>
 
 <p>L’accessibilité des sites web est grandement améliorée lorsqu’on fournit des alertes accessibles pour la validation côté client. Il n’y a rien de plus frustrant pour un utilisateur que de remplir un formulaire d’une vingtaine de champs, voire plus, de le soumettre, de constater que seuls quelques champs ne sont pas correctement renseignés et de devoir tout recommencer depuis le début pour s’assurer que les valeurs sont correctement mémorisées, ou de fournir des informations redondantes.</p>

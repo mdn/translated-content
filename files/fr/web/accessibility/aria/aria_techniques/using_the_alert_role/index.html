@@ -11,9 +11,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alert
 ---
 <h3 id="Description">Description</h3>
 
-<div class="summary">
-<p>Cette technique présente l’utilisation du rôle <a class="external" href="http://www.w3.org/TR/wai-aria/roles#alert" hreflang="en" title="http://www.w3.org/TR/wai-aria/roles#alert"><code>alert</code> (en)</a> et décrit les effets produits sur les navigateurs et les technologies d’assistance.</p>
-</div>
+<p>Cette technique présente l’utilisation du rôle <a href="http://www.w3.org/TR/wai-aria/roles#alert"><code>alert</code> (en)</a> et décrit les effets produits sur les navigateurs et les technologies d’assistance.</p>
 
 <p>Le rôle <code>alert</code> est utilisé pour communiquer un message important et généralement avec une notion d'urgence à l’utilisateur. Lorsque ce rôle est ajouté à un élément, le navigateur émettra un événement d'alerte accessible aux produits de technologie d’assistance qui pourront alors le notifier à l’utilisateur. Le rôle <code>alert</code> est le plus utile lorsqu’il s’agit d’attirer l’attention de l’utilisateur, par exemple si :</p>
 
@@ -41,7 +39,9 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alert
  <li>Les loupes ou agrandisseurs d’écran peuvent indiquer qu’une alerte est survenue et quel en est le texte.</li>
 </ul>
 
-<div class="note"><strong>Note :</strong> plusieurs points de vue existent sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.</div>
+<div class="note">
+  <p><strong>Note :</strong> plusieurs points de vue existent sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.</p>
+</div>
 
 <h3 id="Exemples">Exemples</h3>
 
@@ -101,28 +101,24 @@ document.getElementById("expirationWarning").className = ""; </pre>
 <ul>
  <li>L’utilisation du rôle <code>alert</code> sur un élément implique que cet élément a l’attribut <code>aria-live="assertive"</code> ;</li>
  <li>Le rôle <code>alert</code> ne devrait être utilisé que pour du contenu texte statique. L’élément sur lequel on utilise le rôle <code>alert</code> ne devrait pas pouvoir recevoir le focus, car les lecteurs d’écran annonceront automatiquement l’alerte où que se trouve le focus clavier ;</li>
- <li>Si une alerte fournit également des contrôles interactifs – tels que des contrôles de formulaire qui permettraient à l’utilisateur de rectifier une erreur, ou un bouton <code>OK</code> pour annuler l’alerte – le rôle <a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alertdialog" title="Utiliser le rôle alertdialog"><code>alertdialog</code></a> est préférable.</li>
+ <li>Si une alerte fournit également des contrôles interactifs – tels que des contrôles de formulaire qui permettraient à l’utilisateur de rectifier une erreur, ou un bouton <code>OK</code> pour annuler l’alerte – le rôle <a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alertdialog"><code>alertdialog</code></a> est préférable.</li>
 </ul>
 
 <h3 id="Attributs_ARIA_utilisés">Attributs ARIA utilisés</h3>
 
 <ul>
- <li><a class="external" href="http://www.w3.org/TR/wai-aria/roles#alert" hreflang="en" title="http://www.w3.org/TR/wai-aria/roles#alert">alert (en)</a></li>
+ <li><a href="http://www.w3.org/TR/wai-aria/roles#alert">alert (en)</a></li>
 </ul>
 
 <h3 id="Techniques_ARIA_connexes">Techniques ARIA connexes</h3>
 
 <ul>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alertdialog" title="Utiliser le rôle alertdialog">Utiliser le rôle <code>alertdialog</code></a> ;</li>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_la_propriété_aria-invalid" title="Utiliser la propriété aria-invalid">Utiliser la propriété <code>aria-invalid</code></a>.</li>
+ <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alertdialog">Utiliser le rôle <code>alertdialog</code></a> ;</li>
+ <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_la_propriété_aria-invalid">Utiliser la propriété <code>aria-invalid</code></a>.</li>
 </ul>
-
-<h3 id="Compatibilité">Compatibilité</h3>
-
-<p class="comment">À définir : ajouter les informations de prise en charge pour les combinaisons les plus courantes d’agents utilisateurs et de produits de technologies d’assistance.</p>
 
 <h3 id="Autres_ressources">Autres ressources</h3>
 
 <ul>
- <li>Guide des bonnes pratiques ARIA - Rôle <code>Alert</code> : <a class="external" href="http://www.w3.org/TR/wai-aria-practices/#alert" hreflang="en" title="http://www.w3.org/TR/wai-aria-practices/#alert">http://www.w3.org/TR/wai-aria-practices/#alert (en)</a></li>
+ <li>Guide des bonnes pratiques ARIA - Rôle <code>Alert</code> : <a href="http://www.w3.org/TR/wai-aria-practices/#alert">http://www.w3.org/TR/wai-aria-practices/#alert (en)</a></li>
 </ul>

@@ -9,12 +9,12 @@ tags:
 translation_of: Web/Accessibility/ARIA
 original_slug: Accessibilité/ARIA
 ---
-<p class="summary"><span class="seoSummary"><em>Accessible Rich Internet Applications</em> <strong>(ARIA) </strong>(qu'on pourrait traduire par « applications internet riches et accessibles ») sont un ensemble un attribut qui définit comment rendre le contenu et les applications web accessibles. </span></p>
+<p><em>Accessible Rich Internet Applications</em> <strong>(ARIA) </strong>(qu'on pourrait traduire par « applications internet riches et accessibles ») sont un ensemble un attribut qui définit comment rendre le contenu et les applications web accessibles.</p>
 
-<p><span class="seoSummary">ARIA complète HTML afin que les éléments interactifs et les widgets puissent être utilisés par les outils d'assistance quand les fonctionnalités standard ne le permettent pas.</span> Ainsi, ARIA permet de rendre accessible les <em>widgets</em> JavaScript, les indications dans les formulaires, les messages d'erreur et les mises à jour dynamiques du contenu, etc.</p>
+<p>ARIA complète HTML afin que les éléments interactifs et les widgets puissent être utilisés par les outils d'assistance quand les fonctionnalités standard ne le permettent pas. Ainsi, ARIA permet de rendre accessible les <em>widgets</em> JavaScript, les indications dans les formulaires, les messages d'erreur et les mises à jour dynamiques du contenu, etc.</p>
 
 <div class="warning">
-<p><strong>Attention !</strong> La plupart de ces <em>widgets</em> ont été intégrés au sein d'HTML5 et mieux vaudra donc utiliser les éléments « sémantiques » HTML lorsqu'ils sont disponibles. Ainsi, les éléments natifs disposent de fonctionnalités <a href="/fr/docs/Contrôles_DHTML_personnalisés_navigables_au_clavier">de navigation au clavier</a>, de rôles et d'états définis en standard. Toutefois, lorsque vous choisissez d'utiliser ARIA, il vous revient de recoder les fonctionnalités équivalentes dans vos scripts.</p>
+<p><strong>Attention :</strong> La plupart de ces <em>widgets</em> ont été intégrés au sein d'HTML5 et mieux vaudra donc utiliser les éléments « sémantiques » HTML lorsqu'ils sont disponibles. Ainsi, les éléments natifs disposent de fonctionnalités <a href="/fr/docs/Contrôles_DHTML_personnalisés_navigables_au_clavier">de navigation au clavier</a>, de rôles et d'états définis en standard. Toutefois, lorsque vous choisissez d'utiliser ARIA, il vous revient de recoder les fonctionnalités équivalentes dans vos scripts.</p>
 </div>
 
 <p>Voici un <em>widget</em> utilisé pour une barre de progression :</p>
@@ -56,25 +56,22 @@ original_slug: Accessibilité/ARIA
 
 <p>Il est aussi important de tester l'ARIA écrit avec des technologies d'assistance réelles. Bien qu'il existe certains émulateurs et simulateurs, rien ne vaut un test réel afin d'obtenir suffisamment de garanties.</p>
 
-<section id="sect1">
-<div class="row topicpage-table">
-<div class="section">
-<h2 class="Documentation" id="Tutoriels">Tutoriels</h2>
+<h2 id="Tutoriels">Tutoriels</h2>
 
 <dl>
  <dt><a href="/fr/docs/Accessibilité/Aperçu_d_applications_Web_et_de_composants_dynamiques_accessibles">Introduction à ARIA</a></dt>
- <dd>Une rapide introduction à ARIA pour rendre accessible le contenu dynamique. Voir aussi <a class="external" href="https://dev.opera.com/articles/introduction-to-wai-aria/">l'introduction à ARIA de Gez Lemon</a> en 2008</dd>
- <dt><a class="external" href="https://zomigi.com/blog/videos-of-screen-readers-using-aria-updated/">Vidéos de lecteurs d'écran utilisant ARIA</a></dt>
+ <dd>Une rapide introduction à ARIA pour rendre accessible le contenu dynamique. Voir aussi <a href="https://dev.opera.com/articles/introduction-to-wai-aria/">l'introduction à ARIA de Gez Lemon</a> en 2008</dd>
+ <dt><a href="https://zomigi.com/blog/videos-of-screen-readers-using-aria-updated/">Vidéos de lecteurs d'écran utilisant ARIA</a></dt>
  <dd>Des exemples concrets et d'autres simplifiés avec des vidéos comparatives entre l'état « avant ARIA » et « après ARIA ».</dd>
- <dt><a class="external" href="https://w3c.github.io/using-aria/">Utiliser ARIA</a></dt>
+ <dt><a href="https://w3c.github.io/using-aria/">Utiliser ARIA</a></dt>
  <dd>Un guide pratique pour les développeurs qui fournit également des suggestions quant aux attributs ARIA à utiliser sur les éléments HTML sur la base d'implémentations concrètes.</dd>
 </dl>
 
 <h2 id="Améliorations_légères_avec_ARIA">Améliorations légères avec ARIA</h2>
 
 <dl>
- <dt><a class="external" href="https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/">Améliorer la navigation avec les balises (<em>landmarks</em>) ARIA</a></dt>
- <dd>Une introduction à l'utilisation des balises ARIA afin d'améliorer la navigation au sein d'une page web pour les utilisateurs de lecteur d'écran. <a class="external" href="http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/">Voir aussi les notes d'implémentation pour les balises ARIA</a> (mis à jour en juillet 2011).</dd>
+ <dt><a href="https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/">Améliorer la navigation avec les balises (<em>landmarks</em>) ARIA</a></dt>
+ <dd>Une introduction à l'utilisation des balises ARIA afin d'améliorer la navigation au sein d'une page web pour les utilisateurs de lecteur d'écran. <a href="http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/">Voir aussi les notes d'implémentation pour les balises ARIA</a> (mis à jour en juillet 2011).</dd>
  <dt><a href="/fr/docs/Accessibilité/ARIA/formulaires">Améliorer l'accessibilité des formulaires</a></dt>
  <dd>ARIA ne se limite pas au contenu dynamique ! Apprenez comment améliorer l'accessibilité des formulaires HTML grâce aux attributs ARIA.</dd>
 </dl>
@@ -86,18 +83,16 @@ original_slug: Accessibilité/ARIA
  <dd>Les éléments tels que <code>&lt;input&gt;</code>, <code>&lt;button&gt;</code> disposent de fonctionnalités natives pour l'utilisation au clavier. Si on triche en utilisant des <code> &lt;div&gt;</code> et ARIA, on doit s'assurer que l'accessibilité au clavier soit préservée.</dd>
  <dt><a href="/fr/docs/Accessibilité/ARIA/Zones_live_ARIA">Régions dynamiques</a> (<em>live regions</em>)</dt>
  <dd>Les régions dynamiques fournissent des suggestion aux lecteurs d'écran sur la façon dont gérer la modification du contenu d'une page.</dd>
- <dt><a class="external" href="https://www.freedomscientific.com/SurfsUp/AriaLiveRegions.htm">Utiliser les régions dynamiques ARIA afin d'indiquer une modification de contenu</a></dt>
+ <dt><a href="https://www.freedomscientific.com/SurfsUp/AriaLiveRegions.htm">Utiliser les régions dynamiques ARIA afin d'indiquer une modification de contenu</a></dt>
  <dd>Un rapide résumé des régions interactives par les concepteurs du lecteur d'écran JAWS. Les régions dynamiques sont également prises en charge par NVDA pour Firefox et par  VoiceOver avec Safari.</dd>
 </dl>
-</div>
 
-<div class="section">
-<h2 class="Tools" id="Processus_de_standardisation">Processus de standardisation</h2>
+<h2 id="Processus_de_standardisation">Processus de standardisation</h2>
 
 <dl>
- <dt><a class="external" href="https://www.w3.org/TR/wai-aria-1.1/">La spécification WAI-ARIA</a></dt>
+ <dt><a href="https://www.w3.org/TR/wai-aria-1.1/">La spécification WAI-ARIA</a></dt>
  <dd>La spécification rédigée par le W3C.</dd>
- <dt><a class="external" href="https://www.w3.org/TR/wai-aria-practices-1.1/">Bonnes pratiques afin d'écrire avec WAI-ARIA</a></dt>
+ <dt><a href="https://www.w3.org/TR/wai-aria-practices-1.1/">Bonnes pratiques afin d'écrire avec WAI-ARIA</a></dt>
  <dd>
  <p>Les documents officiels décrivant les meilleurs pratiques pour appliquer ARIA aux <em>widgets</em> et aux mécanismes interactifs.</p>
  </dd>
@@ -110,9 +105,6 @@ original_slug: Accessibilité/ARIA
 <h2 id="Rapporter_des_bogues">Rapporter des bogues</h2>
 
 <p><a href="/fr/docs/Accessibilité/ARIA/Comment_deposer_un_bug_lie_a_ARIA">Rapporter des bogues d'accessibilté/ARIA sur les navigateurs, les lecteurs d'écran et les bibliothèques JavaScript.</a></p>
-</div>
-</div>
-</section>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 

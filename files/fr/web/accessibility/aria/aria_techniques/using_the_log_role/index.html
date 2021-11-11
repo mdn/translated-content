@@ -10,11 +10,9 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_log
 ---
 <h3 id="Description">Description</h3>
 
-<div class="summary">
-<p>Cette technique présente l’utilisation du rôle <a class="external" href="http://www.w3.org/TR/wai-aria/roles#log"><code>log</code></a> et décrit les effets produits sur les navigateurs et les technologies d’assistance.</p>
-</div>
+<p>Cette technique présente l’utilisation du rôle <a href="http://www.w3.org/TR/wai-aria/roles#log"><code>log</code></a> et décrit les effets produits sur les navigateurs et les technologies d’assistance.</p>
 
-<p>Le rôle <code>log</code> est utilisé pour identifier un élément qui crée <a class="external" href="http://www.w3.org/WAI/PF/aria/terms#def_liveregion">une zone live</a> où de nouvelles informations sont ajoutées dans un ordre significatif et où les anciennes informations peuvent être supprimées. Par exemple, un journal de salon de discussion, l’historique d’une messagerie ou un fichier d’erreurs. Contrairement aux autres types de zones live, ce rôle est ordonné de façon séquentielle et les nouvelles informations sont uniquement ajoutées à la fin de l’enregistrement. Lorsque ce rôle est ajouté à un élément, le navigateur émettra un événement <code>log</code> accessible aux produits de technologie d’assistance qui pourront alors le notifier à l’utilisateur.</p>
+<p>Le rôle <code>log</code> est utilisé pour identifier un élément qui crée <a href="http://www.w3.org/WAI/PF/aria/terms#def_liveregion">une zone live</a> où de nouvelles informations sont ajoutées dans un ordre significatif et où les anciennes informations peuvent être supprimées. Par exemple, un journal de salon de discussion, l’historique d’une messagerie ou un fichier d’erreurs. Contrairement aux autres types de zones live, ce rôle est ordonné de façon séquentielle et les nouvelles informations sont uniquement ajoutées à la fin de l’enregistrement. Lorsque ce rôle est ajouté à un élément, le navigateur émettra un événement <code>log</code> accessible aux produits de technologie d’assistance qui pourront alors le notifier à l’utilisateur.</p>
 
 <p>Par défaut, les mises à jour ne contiennent que les changements apportés à la zone live et elles sont annoncées à l'utilisateur lorsqu'il est inactif. Si l'utilisateur a besoin d'entendre l'ensemble de la zone live lorsqu'un changement se produit, il faut utiliser <code>aria-atomic="true"</code>. Pour faire les annonces le plus tôt possible et lorsque l'utilisateur peut être interrompu, <code>aria-live="assertive"</code> peut être défini pour lancer des mises à jour plus agressives.</p>
 
@@ -34,7 +32,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_log
  <li>Les loupes d'écran devraient indiquer visuellement la disponibilité d'une mise à jour du fichier de journalisation.</li>
 </ul>
 
-<div class="note"><strong>Note :</strong> il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.</div>
+<div class="note"><p><strong>Note :</strong> il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.</p></div>
 
 <h3 id="Exemples">Exemples</h3>
 
@@ -58,14 +56,14 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_log
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
 
-<p>Voir l’<a class="external" href="http://codetalks.org/source/live/chat.html">exemple</a> sur CodeTalks pour plus d’informations.</p>
+<p>Voir l’<a href="http://codetalks.org/source/live/chat.html">exemple</a> sur CodeTalks pour plus d’informations.</p>
 
 <h4 id="Exemples_concrets">Exemples concrets :</h4>
 
 <ul>
- <li><a class="external" href="http://test.cita.illinois.edu/aria/live/live1.php">http://test.cita.illinois.edu/aria/live/live1.php</a> ;</li>
- <li><a class="external" href="http://websiteaccessibility.donaldevans.com/2011/07/12/aria-log/">http://websiteaccessibility.donaldevans.com/2011/07/12/aria-log/</a> ;</li>
- <li><a class="external" href="http://codetalks.org/source/live/chat.html">http://codetalks.org/source/live/chat.html</a> [<a class="external" href="http://codetalks.org/source/live/chat_notes.html">notes</a>].</li>
+ <li><a href="http://test.cita.illinois.edu/aria/live/live1.php">http://test.cita.illinois.edu/aria/live/live1.php</a> ;</li>
+ <li><a href="http://websiteaccessibility.donaldevans.com/2011/07/12/aria-log/">http://websiteaccessibility.donaldevans.com/2011/07/12/aria-log/</a> ;</li>
+ <li><a href="http://codetalks.org/source/live/chat.html">http://codetalks.org/source/live/chat.html</a> [<a href="http://codetalks.org/source/live/chat_notes.html">notes</a>].</li>
 </ul>
 
 <h3 id="Notes">Notes</h3>
@@ -78,21 +76,17 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_log
 <h3 id="Attributs_ARIA_utilisés">Attributs ARIA utilisés</h3>
 
 <ul>
- <li><a class="external" href="http://www.w3.org/TR/wai-aria/roles#log">log</a>.</li>
+ <li><a href="http://www.w3.org/TR/wai-aria/roles#log">log</a>.</li>
 </ul>
 
 <h3 id="Techniques_ARIA_connexes">Techniques ARIA connexes</h3>
 
 <ul>
- <li>Rôle <a class="external" href="http://www.w3.org/TR/wai-aria/roles#marquee" title="WAI-ARIA Role marquee">marquee</a>.</li>
+ <li>Rôle <a href="http://www.w3.org/TR/wai-aria/roles#marquee">marquee</a>.</li>
 </ul>
-
-<h3 id="Compatibilité">Compatibilité</h3>
-
-<p class="comment">À définir : ajouter les informations de prise en charge pour les combinaisons les plus courantes d’agents utilisateurs et de produits de technologies d’assistance.</p>
 
 <h3 id="Autres_ressources">Autres ressources</h3>
 
 <ul>
- <li>Bonnes pratiques ARIA – Implémentation des zones live : <a class="external" href="http://www.w3.org/TR/wai-aria-practices/#LiveRegions">#LiveRegions</a>.</li>
+ <li>Bonnes pratiques ARIA – Implémentation des zones live : <a href="http://www.w3.org/TR/wai-aria-practices/#LiveRegions">#LiveRegions</a>.</li>
 </ul>
