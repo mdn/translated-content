@@ -9,8 +9,8 @@ tags:
   - XML
 translation_of: Web/XML
 ---
-<p>{{QuickLinksWithSubpages("/fr/docs/Web/XML")}}{{Draft}}</p>
+{{QuickLinksWithSubpages("/fr/docs/Web/XML")}}{{Draft}}
 
-<p>Le langage de balisage extensible (nommé <strong>Extensible Markup Language</strong>) est une stricte sérialisation du <a href="/fr/docs/Web/API/Document_Object_Model">DOM</a>.</p>
+Le langage de balisage extensible (nommé **Extensible Markup Language**) est une stricte sérialisation du [DOM](/fr/docs/Web/API/Document_Object_Model).
 
-<p>{{LandingPageListSubpages}}</p>
+{{LandingPageListSubpages}}
