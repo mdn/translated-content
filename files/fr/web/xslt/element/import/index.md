@@ -6,34 +6,31 @@ tags:
 translation_of: Web/XSLT/Element/import
 original_slug: Web/XSLT/import
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>L'élément <code>&lt;xsl:import&gt;</code> est un élément de haut niveau qui sert à importer le contenu d'une feuille de styles dans une autre. Généralement, le contenu importé a une priorité inférieure à celui de la feuille qui effectue l'importation. Ceci contraste avec <a href="/fr/docs/Web/XSLT/include">&lt;xsl:include&gt;</a> où les contenus des deux feuilles ont exactement la même priorité.</p>
+L'élément `<xsl:import>` est un élément de haut niveau qui sert à importer le contenu d'une feuille de styles dans une autre. Généralement, le contenu importé a une priorité inférieure à celui de la feuille qui effectue l'importation. Ceci contraste avec [\<xsl:include>](/fr/docs/Web/XSLT/include) où les contenus des deux feuilles ont exactement la même priorité.
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<p>&lt;xsl:import href=URI /&gt;</p>
+\<xsl:import href=URI />
 
-<h3 id="Attribut_obligatoire">Attribut obligatoire</h3>
+### Attribut obligatoire
 
-<dl>
- <dt><code>href</code></dt>
- <dd>Définit l'URI de la feuille de styles à importer.</dd>
-</dl>
+- `href`
+  - : Définit l'URI de la feuille de styles à importer.
 
-<h3 id="Attributs_optionnels">Attributs optionnels</h3>
+### Attributs optionnels
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Haut niveau, doit apparaître avant tout autre descendant de <code>&lt;xsl:stylesheet&gt;</code> ou de <code>&lt;xsl:transform&gt;</code> dans la feuille de styles qui effectue l'importation.</p>
+Haut niveau, doit apparaître avant tout autre descendant de `<xsl:stylesheet>` ou de `<xsl:transform>` dans la feuille de styles qui effectue l'importation.
 
+### Définition
 
-<h3 id="Définition">Définition</h3>
+[XSLT 1.0, section 2.6.2](http://www.w3.org/TR/xslt#import).
 
-<p><a href="http://www.w3.org/TR/xslt#import">XSLT 1.0, section 2.6.2</a>.</p>
+### Support Gecko
 
-<h3 id="Support_Gecko">Support Gecko</h3>
-
-<p>Support presque complet, quelques problèmes avec les variables et les paramètres de haut niveau dans Mozilla 1.0.</p>
+Support presque complet, quelques problèmes avec les variables et les paramètres de haut niveau dans Mozilla 1.0.

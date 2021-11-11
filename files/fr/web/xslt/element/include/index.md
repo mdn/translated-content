@@ -6,34 +6,31 @@ tags:
 translation_of: Web/XSLT/Element/include
 original_slug: Web/XSLT/include
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p>L'élément <code>&lt;xsl:include&gt;</code> fusionne les contenus de deux feuilles de styles. Contrairement à l'élément <a href="/fr/XSLT/import">&lt;xsl:import&gt;</a>, les contenus des deux feuilles de styles fusionnées ont la même priorité.</p>
+L'élément `<xsl:include>` fusionne les contenus de deux feuilles de styles. Contrairement à l'élément [\<xsl:import>](/fr/XSLT/import), les contenus des deux feuilles de styles fusionnées ont la même priorité.
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval">&lt;xsl:include href=URI /&gt;
-</pre>
+    <xsl:include href=URI />
 
-<h3 id="Attribut_obligatoire">Attribut obligatoire</h3>
+### Attribut obligatoire
 
-<dl>
- <dt><code>href</code></dt>
- <dd>Définit l'URI de la feuille de styles à inclure.</dd>
-</dl>
+- `href`
+  - : Définit l'URI de la feuille de styles à inclure.
 
-<h3 id="Attributs_optionnels">Attributs optionnels</h3>
+### Attributs optionnels
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Type">Type</h3>
+### Type
 
-<p>Haut niveau, peut apparaître dans n'importe quel ordre comme enfant de <code>&lt;xsl:stylesheet&gt;</code> ou de <code>&lt;xsl:transform&gt;</code>.</p>
+Haut niveau, peut apparaître dans n'importe quel ordre comme enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
 
-<h3 id="D.C3.A9finition">Définition</h3>
+### Définition
 
-<p><a href="http://www.w3.org/TR/xslt#include">XSLT 1.0, section 2.6.1</a>.</p>
+[XSLT 1.0, section 2.6.1](http://www.w3.org/TR/xslt#include).
 
-<h3 id="Support_Gecko">Support Gecko</h3>
+### Support Gecko
 
-<p>Supporté.</p>
+Supporté.

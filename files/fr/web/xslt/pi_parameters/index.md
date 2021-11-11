@@ -6,124 +6,112 @@ tags:
 translation_of: Web/XSLT/PI_Parameters
 original_slug: Web/XSLT/Paramètres_des_instructions_de_traitement
 ---
-<h3 id="Pr.C3.A9sentation">Présentation</h3>
+### Présentation
 
-<p>XSLT permet de passer des paramètres à une feuille de style lors de son exécution. C'était déjà possible depuis quelques temps dans l'<a href="fr/XSLTProcessor">XSLTProcessor</a> sous JavaScript, mais pas lors de l'utilisation de l'instruction de traitement (<em>PI</em>, pour Processing Instruction) <code>&lt;?xml-stylesheet?&gt;</code>.</p>
+XSLT permet de passer des paramètres à une feuille de style lors de son exécution. C'était déjà possible depuis quelques temps dans l'[XSLTProcessor](fr/XSLTProcessor) sous JavaScript, mais pas lors de l'utilisation de l'instruction de traitement (_PI_, pour Processing Instruction) `<?xml-stylesheet?>`.
 
-<p>Pour résoudre cela, deux nouvelles PI (Instructions de traitement) ont été implémentées dans <a href="fr/Firefox_2">Firefox 2</a> (voir {{ Anch("Versions supportées") }} plus bas pour plus de détails), <code>&lt;?xslt-param?&gt;</code> et <code>&lt;?xslt-param-namespace?&gt;</code>. Ces deux PI peuvent contenir des « pseudo attributs » de la même manière que la PI (Instruction de traitement) <code>xml-stylesheet</code>.</p>
+Pour résoudre cela, deux nouvelles PI (Instructions de traitement) ont été implémentées dans [Firefox 2](fr/Firefox_2) (voir {{ Anch("Versions supportées") }} plus bas pour plus de détails), `<?xslt-param?>` et `<?xslt-param-namespace?>`. Ces deux PI peuvent contenir des « pseudo attributs » de la même manière que la PI (Instruction de traitement) `xml-stylesheet`.
 
-<p>L'exemple suivant passe les deux paramètres <code>color</code> et <code>size</code> à la feuille de style style.xsl :</p>
+L'exemple suivant passe les deux paramètres `color` et `size` à la feuille de style style.xsl :
 
-<pre class="eval">&lt;?xslt-param name="color" value="blue"?&gt;
-&lt;?xslt-param name="size" select="2"?&gt;
-&lt;?xml-stylesheet type="text/xsl" href="style.xsl"?&gt;
-</pre>
+    <?xslt-param name="color" value="blue"?>
+    <?xslt-param name="size" select="2"?>
+    <?xml-stylesheet type="text/xsl" href="style.xsl"?>
 
-<p>Notez que ces PI n'ont aucun effet lorsque la transformation est faite à l'aide de l'objet <code>XSLTProcessor</code> en JavaScript.</p>
+Notez que ces PI n'ont aucun effet lorsque la transformation est faite à l'aide de l'objet `XSLTProcessor` en JavaScript.
 
-<h3 id="Instructions_de_traitement">Instructions de traitement</h3>
+### Instructions de traitement
 
-<p>Les attributs des PI <code>xslt-param</code> et <code>xslt-param-namespace</code> sont analysés en utilisant les règles définies dans <a href="http://www.w3.org/TR/xml-stylesheet/">xml-stylesheet</a>. Tous les attributs non reconnus sont ignorés. L'analyse d'un attribut n'échouera pas à cause de la présence d'un attribut non reconnu tant que cet attribut respecte la syntaxe définie dans <code>xml-stylesheet</code>.</p>
+Les attributs des PI `xslt-param` et `xslt-param-namespace` sont analysés en utilisant les règles définies dans [xml-stylesheet](http://www.w3.org/TR/xml-stylesheet/). Tous les attributs non reconnus sont ignorés. L'analyse d'un attribut n'échouera pas à cause de la présence d'un attribut non reconnu tant que cet attribut respecte la syntaxe définie dans `xml-stylesheet`.
 
-<p>Les deux instructions de traitement <code>xslt-param</code> et <code>xslt-param-namespace</code> doivent apparaître dans le prologue du document, c'est-à-dire avant la balise du premier élément. Toutes les PI du prologue sont exécutées, celles présentes avant une PI <code>xml-stylesheet</code> comme celles présentes après.</p>
+Les deux instructions de traitement `xslt-param` et `xslt-param-namespace` doivent apparaître dans le prologue du document, c'est-à-dire avant la balise du premier élément. Toutes les PI du prologue sont exécutées, celles présentes avant une PI `xml-stylesheet` comme celles présentes après.
 
-<p>S'il existe plusieurs PI <code>xml-stylesheet</code> les paramètres s'appliquent à toutes les feuilles de style, conséquence du fait que selon la spécification XSLT, toutes les feuilles de style sont importées concaténées en une seule feuille.reference? Notez que les PI XSLT <code>xml-stylesheet</code> multiples ne sont pas supportées par Firefox à l'heure actuelle.</p>
+S'il existe plusieurs PI `xml-stylesheet` les paramètres s'appliquent à toutes les feuilles de style, conséquence du fait que selon la spécification XSLT, toutes les feuilles de style sont importées concaténées en une seule feuille.reference? Notez que les PI XSLT `xml-stylesheet` multiples ne sont pas supportées par Firefox à l'heure actuelle.
 
-<h4 id="xslt-param">xslt-param</h4>
+#### xslt-param
 
-<p>La PI <code>xslt-param</code> accepte quatre attributs :</p>
+La PI `xslt-param` accepte quatre attributs :
 
-<dl>
- <dt>name</dt>
- <dd>La partie locale du nom du paramètre. Aucune vérification de syntaxe n'est faite pour cet attribut. Cependant, si ce n'est pas un <a href="http://www.w3.org/TR/REC-xml-names/#NT-NCName">NCName</a> valide, il ne correspondra à aucun paramètre de la feuille de style.</dd>
- <dt>namespace</dt>
- <dd>L'espace de nommage du nom du paramètre. Aucune vérification de syntaxe n'est faite pour cet attribut.</dd>
- <dt>value</dt>
- <dd>Contient la valeur de chaîne du paramètre. La valeur de l'attribut est utilisée comme valeur du paramètre. Le type de donnée sera toujours<em>chaîne</em>.</dd>
- <dt>select</dt>
- <dd>Un expression <a href="fr/XPath">XPath</a> pour le paramètre. La valeur de cet attribut est analysée comme une expressions XPath. Le résultat de l'évaluation de l'expression est utilisé comme valeur pour le paramètre.</dd>
-</dl>
+- name
+  - : La partie locale du nom du paramètre. Aucune vérification de syntaxe n'est faite pour cet attribut. Cependant, si ce n'est pas un [NCName](http://www.w3.org/TR/REC-xml-names/#NT-NCName) valide, il ne correspondra à aucun paramètre de la feuille de style.
+- namespace
+  - : L'espace de nommage du nom du paramètre. Aucune vérification de syntaxe n'est faite pour cet attribut.
+- value
+  - : Contient la valeur de chaîne du paramètre. La valeur de l'attribut est utilisée comme valeur du paramètre. Le type de donnée sera toujours*chaîne*.
+- select
+  - : Un expression [XPath](fr/XPath) pour le paramètre. La valeur de cet attribut est analysée comme une expressions XPath. Le résultat de l'évaluation de l'expression est utilisé comme valeur pour le paramètre.
 
-<p>Si l'attribut <strong>name</strong> est absent ou vide, la PI est ignorée.</p>
+Si l'attribut **name** est absent ou vide, la PI est ignorée.
 
-<p>Si l'attribut <strong>namespace</strong> est absent ou vide, l'espace de nommage <code>null</code> est utilisé.</p>
+Si l'attribut **namespace** est absent ou vide, l'espace de nommage `null` est utilisé.
 
-<p>Spécifier un nom de paramètre qui n'existe pas dans la feuille de style (ou qui soit une variable dans la feuille de style) n'est pas une erreur. La PI est simplement ignorée dans ce cas.</p>
+Spécifier un nom de paramètre qui n'existe pas dans la feuille de style (ou qui soit une variable dans la feuille de style) n'est pas une erreur. La PI est simplement ignorée dans ce cas.
 
-<p>Si les attributs <strong>value</strong> et <strong>select</strong> sont tous deux présents (ou absents) la PI est ignorée.</p>
+Si les attributs **value** et **select** sont tous deux présents (ou absents) la PI est ignorée.
 
-<p>Notez que <code>value="..."</code> n'est pas strictement égal à <code>select="'...'"</code> car value peut contenir à la fois des caractères apostrophe et des caractères guillemet.</p>
+Notez que `value="..."` n'est pas strictement égal à `select="'...'"` car value peut contenir à la fois des caractères apostrophe et des caractères guillemet.
 
-<h5 id="Exemples">Exemples</h5>
+##### Exemples
 
-<p>Le paramètre <code>color</code> contient la chaîne <code>red</code> :</p>
+Le paramètre `color` contient la chaîne `red` :
 
-<pre class="eval">&lt;?xslt-param name="color" value="red"?&gt;
-</pre>
+    <?xslt-param name="color" value="red"?>
 
-<p>Le paramètre <code>columns</code> contient <code>2</code> :</p>
+Le paramètre `columns` contient `2` :
 
-<pre class="eval">&lt;?xslt-param name="columns" select="2"?&gt;
-</pre>
+    <?xslt-param name="columns" select="2"?>
 
-<p>Le paramètre <code>books</code> contient l'ensemble de noeuds qui regroupe tous les éléments <code>&lt;book&gt;</code> de l'espace de nommage <code>null</code> :</p>
+Le paramètre `books` contient l'ensemble de noeuds qui regroupe tous les éléments `<book>` de l'espace de nommage `null` :
 
-<pre class="eval">&lt;?xslt-param name="books" select="//book"?&gt;
-</pre>
+    <?xslt-param name="books" select="//book"?>
 
-<p>Le paramètre <code>show-toc&lt;code&gt; contient le booléen &lt;code&gt;true</code> :</p>
+Le paramètre `show-toc<code> contient le booléen <code>true` :
 
-<pre class="eval"> &lt;?xslt-param name="show-toc" select="true()"?&gt;
-</pre>
+     <?xslt-param name="show-toc" select="true()"?>
 
-<h5 id="Le_contexte_de_l.27attribut_select">Le contexte de l'attribut<em>select</em></h5>
+##### Le contexte de l'attribut*select*
 
-<p>Le contexte suivant est utilisé pour analyser et évaluer l'expression de l'attribut <strong>select</strong>.</p>
+Le contexte suivant est utilisé pour analyser et évaluer l'expression de l'attribut **select**.
 
-<ul>
- <li>Le nœud de contexte est le nœud utilisé comme nœud courant initial lors de l'exécution de la feuille de style.</li>
- <li>La position du contexte est la position du noeud de contexte dans la liste initiale de nœuds courants utilisée lors de l'exécution de la feuille de style.</li>
- <li>La taille du contexte est la taille de la liste initiale de nœuds courants utilisée lors de l'exécution de la feuille de style.</li>
- <li>Aucune variable n'est disponible.</li>
- <li>La bibliothèque de fonctions est la bibliothèque standard de fonctions XPath.</li>
- <li>Les déclarations d'espace de nommage sont déterminées par les PI <code>xslt-param-namespace</code>, voir ci-dessous.</li>
-</ul>
+- Le nœud de contexte est le nœud utilisé comme nœud courant initial lors de l'exécution de la feuille de style.
+- La position du contexte est la position du noeud de contexte dans la liste initiale de nœuds courants utilisée lors de l'exécution de la feuille de style.
+- La taille du contexte est la taille de la liste initiale de nœuds courants utilisée lors de l'exécution de la feuille de style.
+- Aucune variable n'est disponible.
+- La bibliothèque de fonctions est la bibliothèque standard de fonctions XPath.
+- Les déclarations d'espace de nommage sont déterminées par les PI `xslt-param-namespace`, voir ci-dessous.
 
-<p>Si l'attribut <strong>select</strong> ne peut pas être analysé ou exécuté, la PI est ignorée (en particulier, l'attribut <strong>value</strong> ne sera pas utilisé comme valeur de secours).</p>
+Si l'attribut **select** ne peut pas être analysé ou exécuté, la PI est ignorée (en particulier, l'attribut **value** ne sera pas utilisé comme valeur de secours).
 
-<h4 id="xslt-param-namespace">xslt-param-namespace</h4>
+#### xslt-param-namespace
 
-<p><code>xslt-param-namespace</code> accepte deux attributs :</p>
+`xslt-param-namespace` accepte deux attributs :
 
-<dl>
- <dt>prefix</dt>
- <dd>Le préfixe mappé.</dd>
- <dt>namespace</dt>
- <dd>L'espace de nommage vers lequel le préfixe mappe.</dd>
-</dl>
+- prefix
+  - : Le préfixe mappé.
+- namespace
+  - : L'espace de nommage vers lequel le préfixe mappe.
 
-<p>Une PI <code>xslt-param-namespace</code> affecte l'expression de l'attribut <strong>select</strong> de tous les <code>xslt-param</code> qui la suivent. Cela s'applique même s'il y a d'autres nœuds tels que des commentaires ou d'autres PI entre les PI <code>xslt-param-namespace</code> et <code>xslt-param</code>.</p>
+Une PI `xslt-param-namespace` affecte l'expression de l'attribut **select** de tous les `xslt-param` qui la suivent. Cela s'applique même s'il y a d'autres nœuds tels que des commentaires ou d'autres PI entre les PI `xslt-param-namespace` et `xslt-param`.
 
-<p>Utiliser le même préfixe pour plusieurs instructions de traitement n'est pas une erreur, chaque nouvelle PI ne fait que changer l'espace de nommage vers lequel le préfixe renvoie.</p>
+Utiliser le même préfixe pour plusieurs instructions de traitement n'est pas une erreur, chaque nouvelle PI ne fait que changer l'espace de nommage vers lequel le préfixe renvoie.
 
-<p>Si <strong>prefix</strong> est absent, vide ou égal un à NCName invalide, la PI est ignorée.</p>
+Si **prefix** est absent, vide ou égal un à NCName invalide, la PI est ignorée.
 
-<p>Si <strong>namespace</strong> est absent, la PI est ignorée. Si <strong>namespace</strong> est vide, le mappage du préfixe est supprimé.</p>
+Si **namespace** est absent, la PI est ignorée. Si **namespace** est vide, le mappage du préfixe est supprimé.
 
-<h5 id="Exemples_2">Exemples</h5>
+##### Exemples
 
-<p>Le paramètre <code>books</code> contient l'ensemble de noeuds qui regroupe tous les éléments <code>&lt;book&gt;</code> de l'espace de nommage <code>http://www.example.org/myNamespace</code> :</p>
+Le paramètre `books` contient l'ensemble de noeuds qui regroupe tous les éléments `<book>` de l'espace de nommage `http://www.example.org/myNamespace` :
 
-<pre class="eval">&lt;?xslt-param-namespace prefix="my" namespace="http://www.example.org/myNamespace"?&gt;
-&lt;?xslt-param name="books" select="//my:book"?&gt;
-</pre>
+    <?xslt-param-namespace prefix="my" namespace="http://www.example.org/myNamespace"?>
+    <?xslt-param name="books" select="//my:book"?>
 
-<h3 id="Versions_support.C3.A9es">Versions supportées</h3>
+### Versions supportées
 
-<p>Supportées depuis Firefox 2.0.0.1. Dans la version 2, l'attribut <strong>value</strong> est supporté mais l'attribut <strong>select</strong> provoque des plantages pour certaines expressions.</p>
+Supportées depuis Firefox 2.0.0.1. Dans la version 2, l'attribut **value** est supporté mais l'attribut **select** provoque des plantages pour certaines expressions.
 
-<h3 id="Possibilit.C3.A9s_de_d.C3.A9veloppements_futurs">Possibilités de développements futurs</h3>
+### Possibilités de développements futurs
 
-<p>Devons-nous autoriser n'importe quelle fonction XSLT dans les expressions ? <code>document()</code> semble utile, mais il semble difficile de conserver le fait que <code>generate-id()</code> devrait produire la même chaîne pour un même document.</p>
+Devons-nous autoriser n'importe quelle fonction XSLT dans les expressions ? `document()` semble utile, mais il semble difficile de conserver le fait que `generate-id()` devrait produire la même chaîne pour un même document.
 
-<p>Interwiki Language Links</p>
+Interwiki Language Links
