@@ -8,43 +8,41 @@ tags:
 translation_of: Web/XPath/Functions
 original_slug: Web/XPath/Fonctions
 ---
-<p> </p>
-<p>{{ XsltRef() }} La liste ci-dessous regroupe les principales fonctions de <a href="XPath">XPath</a> et les ajouts à XPath qui sont spécifiques à <a href="/XSLT">XSLT</a>. Chaque lien fournit pour la fonction correspondante description, syntaxe, liste d'arguments, types de résultats, description originelle dans les recommandations du W3C, et niveau de support actuel dans <a href="/Gecko">Gecko</a>. Pour plus d'informations sur l'utilisation des fonctions XPath/XSLT, reportez-vous à la page <a href="/Transformations_XML_avec_XSLT/Autres_ressources">Autres ressources</a>.</p>
-<ul>
-  <li><a href="Fonctions/boolean">boolean()</a></li>
-  <li><a href="Fonctions/ceiling">ceiling()</a></li>
-  <li><a href="Fonctions/concat">concat()</a></li>
-  <li><a href="Fonctions/contains">contains()</a></li>
-  <li><a href="Fonctions/count">count()</a></li>
-  <li><a href="Fonctions/current">current()</a> <i>Spécifique à XSLT</i></li>
-  <li><a href="Fonctions/document">document()</a> <i>Spécifique à XSLT</i></li>
-  <li><a href="Fonctions/element-available">element-available()</a></li>
-  <li><a href="Fonctions/false">false()</a></li>
-  <li><a href="Fonctions/floor">floor()</a></li>
-  <li><a href="Fonctions/format-number">format-number()</a> <i>Spécifique à XSLT</i></li>
-  <li><a href="Fonctions/function-available">function-available()</a></li>
-  <li><a href="Fonctions/generate-id">generate-id()</a> <i>Spécifique à XSLT</i></li>
-  <li><a href="Fonctions/id">id()</a> <i>(partiellement supporté)</i></li>
-  <li><a href="Fonctions/key">key()</a> <i>Spécifique à XSLT</i></li>
-  <li><a href="Fonctions/lang">lang()</a></li>
-  <li><a href="Fonctions/last">last()</a></li>
-  <li><a href="Fonctions/local-name">local-name()</a></li>
-  <li><a href="Fonctions/name">name()</a></li>
-  <li><a href="Fonctions/namespace-uri">namespace-uri()</a></li>
-  <li><a href="Fonctions/normalize-space">normalize-space()</a></li>
-  <li><a href="Fonctions/not">not()</a></li>
-  <li><a href="Fonctions/number">number()</a></li>
-  <li><a href="Fonctions/position">position()</a></li>
-  <li><a href="Fonctions/round">round()</a></li>
-  <li><a href="Fonctions/starts-with">starts-with()</a></li>
-  <li><a href="Fonctions/string">string()</a></li>
-  <li><a href="Fonctions/string-length">string-length()</a></li>
-  <li><a href="Fonctions/substring">substring()</a></li>
-  <li><a href="Fonctions/substring-after">substring-after()</a></li>
-  <li><a href="Fonctions/substring-before">substring-before()</a></li>
-  <li><a href="Fonctions/sum">sum()</a></li>
-  <li><a href="Fonctions/system-property">system-property()</a> <i>Spécifique à XSLT</i></li>
-  <li><a href="Fonctions/translate">translate()</a></li>
-  <li><a href="Fonctions/true">true()</a></li>
-  <li><a href="Fonctions/unparsed-entity-url">unparsed-entity-url()</a> <i>Spécifique à XSLT</i> <i>(non supporté)</i></li>
-</ul>
+{{ XsltRef() }} La liste ci-dessous regroupe les principales fonctions de [XPath](XPath) et les ajouts à XPath qui sont spécifiques à [XSLT](/XSLT). Chaque lien fournit pour la fonction correspondante description, syntaxe, liste d'arguments, types de résultats, description originelle dans les recommandations du W3C, et niveau de support actuel dans [Gecko](/Gecko). Pour plus d'informations sur l'utilisation des fonctions XPath/XSLT, reportez-vous à la page [Autres ressources](/Transformations_XML_avec_XSLT/Autres_ressources).
+
+- [boolean()](Fonctions/boolean)
+- [ceiling()](Fonctions/ceiling)
+- [concat()](Fonctions/concat)
+- [contains()](Fonctions/contains)
+- [count()](Fonctions/count)
+- [current()](Fonctions/current) _Spécifique à XSLT_
+- [document()](Fonctions/document) _Spécifique à XSLT_
+- [element-available()](Fonctions/element-available)
+- [false()](Fonctions/false)
+- [floor()](Fonctions/floor)
+- [format-number()](Fonctions/format-number) _Spécifique à XSLT_
+- [function-available()](Fonctions/function-available)
+- [generate-id()](Fonctions/generate-id) _Spécifique à XSLT_
+- [id()](Fonctions/id) _(partiellement supporté)_
+- [key()](Fonctions/key) _Spécifique à XSLT_
+- [lang()](Fonctions/lang)
+- [last()](Fonctions/last)
+- [local-name()](Fonctions/local-name)
+- [name()](Fonctions/name)
+- [namespace-uri()](Fonctions/namespace-uri)
+- [normalize-space()](Fonctions/normalize-space)
+- [not()](Fonctions/not)
+- [number()](Fonctions/number)
+- [position()](Fonctions/position)
+- [round()](Fonctions/round)
+- [starts-with()](Fonctions/starts-with)
+- [string()](Fonctions/string)
+- [string-length()](Fonctions/string-length)
+- [substring()](Fonctions/substring)
+- [substring-after()](Fonctions/substring-after)
+- [substring-before()](Fonctions/substring-before)
+- [sum()](Fonctions/sum)
+- [system-property()](Fonctions/system-property) _Spécifique à XSLT_
+- [translate()](Fonctions/translate)
+- [true()](Fonctions/true)
+- [unparsed-entity-url()](Fonctions/unparsed-entity-url) _Spécifique à XSLT_ _(non supporté)_

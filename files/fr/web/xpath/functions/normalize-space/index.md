@@ -6,31 +6,27 @@ tags:
 translation_of: Web/XPath/Functions/normalize-space
 original_slug: Web/XPath/Fonctions/normalize-space
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- La fonction <code>normalize-space</code> supprime les espaces de début et de fin d'une chaîne et remplace les successions d’espaces par une seule puis retourne la chaîne résultante.</p>
+La fonction `normalize-space` supprime les espaces de début et de fin d'une chaîne et remplace les successions d’espaces par une seule puis retourne la chaîne résultante.
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval notranslate">normalize-space(<em>chaîne</em> )
-</pre>
+    normalize-space(chaîne )
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code><em>chaîne</em></code></dt>
- <dd>La chaîne à normaliser.</dd>
-</dl>
+- `chaîne`
+  - : La chaîne à normaliser.
 
-<h3 id="Retour">Retour</h3>
+### Retour
 
-<p>La chaîne nomalisée.</p>
+La chaîne nomalisée.
 
-<h3 id="D.C3.A9finition">Définition</h3>
+### Définition
 
-<p><a href="http://www.w3.org/TR/xpath#function-normalize-space">XPath 1.0, section 4.2</a>.</p>
+[XPath 1.0, section 4.2](http://www.w3.org/TR/xpath#function-normalize-space).
 
-<h3 id="Support_Gecko">Support Gecko</h3>
+### Support Gecko
 
-<p>Supportée.</p>
+Supportée.
