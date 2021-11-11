@@ -2,102 +2,118 @@
 title: '-moz-outline-radius'
 slug: Web/CSS/-moz-outline-radius
 tags:
-  - '-moz-outline-radius'
-  - '-moz-outline-radius-bottomleft'
-  - '-moz-outline-radius-bottomright'
-  - '-moz-outline-radius-topleft'
-  - '-moz-outline-radius-topright'
   - CSS
   - CSS プロパティ
   - Mozilla 拡張
-  - Non-standard
-  - Reference
+  - 標準外
+  - リファレンス
+  - recipe:css-shorthand-property
+browser-compat: css.properties.-moz-outline-radius
 translation_of: Web/CSS/-moz-outline-radius
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{deprecated_header}}
 
-<p>Firefox などの Mozilla アプリケーションにおいて、 <a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>-moz-outline-radius</code></strong> プロパティは、要素の輪郭線 ({{cssxref("outline")}}) の角を丸くするために使用することができます。</p>
+Firefox などの Mozilla アプリケーションにおいて、**`-moz-outline-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の輪郭線 ({{cssxref("outline")}}) の角を丸くするために使用することができます。
 
-<pre class="brush:css">/* 1つの値 */
+```css
+/* 1 つの値 */
 -moz-outline-radius: 25px;
 
-/* 2つの値 */
+/* 2 つの値 */
 -moz-outline-radius: 25px 1em;
 
-/* 3つの値 */
+/* 3 つの値 */
 -moz-outline-radius: 25px 1em 12%;
 
-/* 4つの値 */
+/* 4 つの値 */
 -moz-outline-radius: 25px 1em 12% 4mm;
 
 /* グローバル値 */
 -moz-outline-radius: inherit;
 -moz-outline-radius: initial;
 -moz-outline-radius: unset;
-</pre>
+```
 
-<p>このプロパティは、<a href="/ja/docs/Web/CSS/Shorthand_properties">一括指定</a>であり、4つのプロパティ {{cssxref("-moz-outline-radius-topleft")}}, {{cssxref("-moz-outline-radius-topright")}}, {{cssxref("-moz-outline-radius-bottomright")}}, {{cssxref("-moz-outline-radius-bottomleft")}} を設定します。</p>
+## 構成要素のプロパティ
 
-<p>{{cssinfo}}</p>
+このプロパティは以下の CSS プロパティの一括指定です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+- [`-moz-outline-radius-bottomleft`](/ja/docs/Web/CSS/-moz-outline-radius-bottomleft)
+- [`-moz-outline-radius-bottomright`](/ja/docs/Web/CSS/-moz-outline-radius-bottomright)
+- [`-moz-outline-radius-topleft`](/ja/docs/Web/CSS/-moz-outline-radius-topleft)
+- [`-moz-outline-radius-topright`](/ja/docs/Web/CSS/-moz-outline-radius-topright)
 
-<h3 id="Values" name="Values">値</h3>
+## 構文
 
-<div class="note">楕円形の輪郭線や <code>&lt;percentage&gt;</code> の値は、 {{cssxref("border-radius")}} で説明されている構文に従います。</div>
+### 値
 
-<p>1～4つの <code>&lt;outline-radius&gt;</code> 値で、次のうちの一つを表します。</p>
+> **Note:** 楕円形の輪郭線や `<percentage>` の値は、 {{cssxref("border-radius")}} で説明されている構文に従います。
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>取りうる値については {{cssxref("&lt;length&gt;")}} をご覧ください。</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>{{cssxref("&lt;percentage&gt;")}}。詳しくは {{cssxref("border-radius")}} を参照してください。</dd>
-</dl>
+1 ～ 4 つの `<outline-radius>` 値で、次のうちの一つを表します。
 
-<ul>
- <li>1つの値が設定された場合、全4隅に適用します。</li>
- <li>2つの値が設定された場合、最初の値は左上と右下の角に、二番目の値は右上と左下の角に適用します。</li>
- <li>3つの値が設定された場合、最初の値は左上の角に、二番目の値は右上と左下の角に、三番目の値は右下の角に適用します。</li>
- <li>4つの値が設定された場合、最初の値は左上の角に、二番目の値は右上の角に、三番目の値は右下の角に、四番目の値は左下の角に適用します。</li>
-</ul>
+- {{cssxref("&lt;length&gt;")}}
+  - : 取りうる値については {{cssxref("&lt;length&gt;")}} をご覧ください。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : {{cssxref("&lt;percentage&gt;")}}。詳しくは {{cssxref("border-radius")}} を参照してください。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+<!---->
+
+- 1 つの値が設定された場合、全 4 隅に適用します。
+- 2 つの値が設定された場合、最初の値は左上と右下の角に、2 番目の値は右上と左下の角に適用します。
+- 3 つの値が設定された場合、最初の値は左上の角に、2 番目の値は右上と左下の角に、3 番目の値は右下の角に適用します。
+- 4 つの値が設定された場合、最初の値は左上の角に、2 番目の値は右上の角に、3 番目の値は右下の角に、4 番目の値は左下の角に適用します。
+
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+<h3 id="Rounding_an_outline">輪郭線を丸める</h3>
 
-<pre class="brush: html">&lt;p&gt;This element has a rounded outline!&lt;/p&gt;</pre>
+注: この例は Firefox 以外のブラウザーで閲覧したときに、期待される効果が表示されません。
 
-<h3 id="CSS">CSS</h3>
+#### HTML
 
-<pre class="brush: css">p {
+```html
+<p>This element has a rounded outline!</p>
+```
+
+#### CSS
+
+```css
+p {
   margin: 5px;
   border: 1px solid black;
   outline: dotted red;
   -moz-outline-radius: 12% 1em 25px;
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Rounding_an_outline')}}
 
-<p>注: 上記の例は、 Firefox 以外のブラウザーで表示させると、期待通りの効果が表示されません。</p>
+## メモ
 
-<h2 id="Notes" name="Notes">メモ</h2>
+- `dotted` または `dashed` で角を丸めた輪郭線は、 Firefox 50 までは実線で描かれていました。 {{bug("382721")}}
+- 将来のバージョンの Gecko/Firefox では、このプロパティが完全になくなるかもしれません。 {{bug("593717")}} を参照してください。
 
-<ul>
- <li><code>dotted</code> または <code>dashed</code> で角を丸めた輪郭線は、 Firefox 50 までは実戦で描かれていました。 {{bug("382721")}}</li>
- <li>将来のバージョンの Gecko/Firefox では、このプロパティが完全になくなるかもしれません。 {{bug("593717")}} を参照してください。</li>
-</ul>
+## 仕様書
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+どの標準にも含まれていません。
 
-<p>このプロパティはどの CSS 標準で定義されていません。</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.-moz-outline-radius")}}</p>
+## 関連情報
+
+- [Mozilla CSS 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)
+- 関連する CSS プロパティ:
+
+  - [`outline`](/ja/docs/Web/CSS/outline)

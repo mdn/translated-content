@@ -3,72 +3,73 @@ title: '-moz-outline-radius-bottomleft'
 slug: Web/CSS/-moz-outline-radius-bottomleft
 tags:
   - CSS
-  - CSS Property
+  - CSS プロパティ
   - NeedsCompatTable
   - NeedsContent
-  - Non-standard
-  - Reference
-  - 'recipe:css-property'
+  - 標準外
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.-moz-outline-radius-bottomleft
 translation_of: Web/CSS/-moz-outline-radius-bottomleft
 ---
-<div>{{Non-standard_header}}{{CSSRef}}</div>
+{{CSSRef}}{{deprecated_header}}
 
-<p>Mozilla アプリケーションにおいて、 <strong><code>-moz-outline-radius-bottomleft</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、要素の輪郭線 ({{cssxref("outline")}}) の左下の角を丸くするために使用することができます。</p>
+Mozilla アプリケーションにおいて、 **`-moz-outline-radius-bottomleft`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の輪郭線 ({{cssxref("outline")}}) の左下の角を丸くするために使用することができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>-moz-outline-radius-bottomleft</code> の値は、 {{cssxref("length", "&lt;length&gt;")}} または境界ボックスの対応する大きさに対する<a href="/ja/docs/Web/CSS/percentage">パーセント値</a>のどちらかです。 {{cssxref("calc", "calc()")}} 関数も同様に使用することができます。</p>
+`-moz-outline-radius-bottomleft` の値は、 {{cssxref("length", "&lt;length&gt;")}} または境界ボックスの対応する大きさに対する[パーセント値](/ja/docs/Web/CSS/percentage)のどちらかです。 {{cssxref("calc", "calc()")}} 関数も同様に使用することができます。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>要素の下端と左端の曲率を定義する円の半径を CSS の {{cssxref("length", "&lt;length&gt;")}} で指定します。</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>要素の左下隅の丸めを定義する円の半径で、ボーダーボックスの下辺と左辺の<a href="/ja/docs/Web/CSS/percentage">パーセント値</a>で指定します。</dd>
-</dl>
+- `<length>`
+  - : 要素の下端と左端の曲率を定義する円の半径を CSS の {{cssxref("length", "&lt;length&gt;")}} で指定します。
+- `<percentage>`
+  - : 要素の左下隅の丸めを定義する円の半径で、境界ボックスの下辺と左辺の[パーセント値](/ja/docs/Web/CSS/percentage)で指定します。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="Rounding_a_outline" name="Rounding_a_outline">アウトラインを丸める</h3>
+<h3 id="Rounding_a_outline">輪郭線を丸める</h3>
 
-<p>これは Firefox 専用のプロパティなので、この例では Firefox 以外のブラウザーで表示している場合は、期待した効果が表示されません。</p>
+これは Firefox 専用のプロパティなので、この例では Firefox 以外のブラウザーで表示している場合は、期待した効果が表示されません。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;Look at this paragraph's bottom-left corner.&lt;/p&gt;</pre>
+```html
+<p>Look at this paragraph's bottom-left corner.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">p {
+```css
+p {
   margin: 10px;
   border: solid cyan;
   outline: dotted green;
   -moz-outline-radius-bottomleft: 2em;
-}</pre>
+}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Rounding_a_outline")}}</p>
+{{EmbedLiveSample("Rounding_a_outline")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<p>標準の一部ではありません。</p>
+どの標準にも含まれていません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.-moz-outline-radius-bottomleft")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>詳しくは {{cssxref("-moz-outline-radius")}} プロパティを参照してください。</li>
-</ul>
+- 詳しくは {{cssxref("-moz-outline-radius")}} プロパティを参照してください。

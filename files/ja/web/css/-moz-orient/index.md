@@ -5,76 +5,79 @@ tags:
   - CSS
   - CSS プロパティ
   - Mozilla 拡張
-  - Non-standard
-  - Reference
+  - 標準外
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.-moz-orient
 translation_of: Web/CSS/-moz-orient
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>-moz-orient</code></strong> プロパティは、適用される要素の向きを指定します。</p>
+**`-moz-orient`** は [CSS](/ja/docs/Web/CSS) のプロパティで、適用される要素の向きを指定します。
 
-<p>{{cssinfo}}</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+`-moz-orient` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
 
-<p><code>-moz-orient</code> プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。</p>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
+- `inline`
+  - : 要素をテキストの軸と同じ方向に描画します。横書きモードでは水平方向に、縦書きモードでは垂直方向に描画します。
+- `block`
+  - : 要素をテキストの軸と直交するように描画します。横書きモードでは垂直方向に、縦書きモードでは水平方向に描画します。
+- `horizontal`
+  - : 要素が水平方向に描画される
+- `vertical`
+  - : 要素が垂直方向に描画される
 
-<dl>
- <dt><code>inline</code></dt>
- <dd>要素をテキストの軸と同じ方向に描画します。横書きモードでは水平方向に、縦書きモードでは垂直方向に描画します。</dd>
- <dt><code>block</code></dt>
- <dd>要素をテキストの軸と直交するように描画します。横書きモードでは垂直方向に、縦書きモードでは水平方向に描画します。</dd>
- <dt><code>horizontal</code></dt>
- <dd>要素が水平方向に描画される</dd>
- <dt><code>vertical</code></dt>
- <dd>要素が垂直方向に描画される</dd>
-</dl>
+## 公式定義
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+{{CSSInfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   The following progress meter
   is horizontal (the default):
-&lt;/p&gt;
-&lt;progress max="100" value="75"&gt;&lt;/progress&gt;
+</p>
+<progress max="100" value="75"></progress>
 
-&lt;p&gt;
+<p>
  The following progress meter
  is vertical:
-&lt;/p&gt;
-&lt;progress class="vert" max="100" value="75"&gt;&lt;/progress&gt;</pre>
+</p>
+<progress class="vert" max="100" value="75"></progress>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.vert {
+```css
+.vert {
   -moz-orient: vertical;
   width: 16px;
   height: 150px;
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Examples","200","360")}}</p>
+{{EmbedLiveSample("Examples","200","360")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<p>W3C に<a href="https://lists.w3.org/Archives/Public/www-style/2014Jun/0396.html">提出</a>され、最初の反応は肯定的でしたが、このプロパティはまだ仕様書には含まれていません。今のところ、 Mozilla 独自の拡張 (つまり、 <code>-moz-orient</code>) です。</p>
+W3C に[提出](https://lists.w3.org/Archives/Public/www-style/2014Jun/0396.html)され、最初の反応は肯定的でしたが、このプロパティはまだ仕様書には含まれていません。今のところ、 Mozilla 独自の拡張 (つまり、 `-moz-orient`) です。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
-<p>{{Compat("css.properties.-moz-orient")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{cssxref("box-orient")}}</li>
-</ul>
+- {{cssxref("box-orient")}}
