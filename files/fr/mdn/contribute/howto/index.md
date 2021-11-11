@@ -6,8 +6,8 @@ tags:
   - MDN Meta
 translation_of: MDN/Contribute/Howto
 ---
-<div>{{MDNSidebar}}</div><div>{{IncludeSubnav("/fr/docs/MDN")}}</div>
+{{MDNSidebar}}{{IncludeSubnav("/fr/docs/MDN")}}
 
-<p>Ces articles fournissent des guides pas-à-pas pour la réalisation d'objectifs spécifiques lorsque vous contribuez sur MDN.</p>
+Ces articles fournissent des guides pas-à-pas pour la réalisation d'objectifs spécifiques lorsque vous contribuez sur MDN.
 
-<p>{{LandingPageListSubpages}}</p>
+{{LandingPageListSubpages}}

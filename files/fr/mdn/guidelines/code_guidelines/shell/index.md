@@ -9,29 +9,28 @@ tags:
   - Shell
 translation_of: MDN/Guidelines/Code_guidelines/Shell
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>Les directives suivantes expliquent comment rédiger des exemples de lignes de commande sur MDN.</p>
+Les directives suivantes expliquent comment rédiger des exemples de lignes de commande sur MDN.
 
-<h2 id="Shell_prompts_in_brief">Les commandes Shell en bref</h2>
+## Les commandes Shell en bref
 
-<p>Un <i>shell</i> est un programme qui attend que vous tapiez une commande et que vous appuyiez sur la touche retour. Pour indiquer les commandes que vous devez taper, la documentation MDN les répertorie dans un bloc de code, similaire aux exemples de code. Un tel bloc ressemble à ceci :</p>
+Un _shell_ est un programme qui attend que vous tapiez une commande et que vous appuyiez sur la touche retour. Pour indiquer les commandes que vous devez taper, la documentation MDN les répertorie dans un bloc de code, similaire aux exemples de code. Un tel bloc ressemble à ceci :
 
-<pre class="brush: bash example-good"># Cela peut prendre un certain temps…
+```bash example-good
+# Cela peut prendre un certain temps…
 hg clone https://hg.mozilla.org/mozilla-central/ firefox
-cd firefox</pre>
+cd firefox
+```
 
-<h2 id="Guidelines">Directives</h2>
+## Directives
 
-<p>Il existe quelques directives à suivre lors de l'écriture d'un bloc de code shell :</p>
+Il existe quelques directives à suivre lors de l'écriture d'un bloc de code shell :
 
-<ul>
- <li>N'incluez pas de "$" ou de "&gt;" au début d'une instruction shell. Cela perturbe plus qu'il n'aide et n'est pas utile pour copier les instructions.</li>
- <li>Les commentaires commencent par "#".</li>
- <li>Choisissez la coloration syntaxique "bash".</li>
-</ul>
+- N'incluez pas de "$" ou de ">" au début d'une instruction shell. Cela perturbe plus qu'il n'aide et n'est pas utile pour copier les instructions.
+- Les commentaires commencent par "#".
+- Choisissez la coloration syntaxique "bash".
 
-<h2 id="Good_shell_prompt_examples_on_MDN">De bons exemples de commandes shell sur le MDN</h2>
+## De bons exemples de commandes shell sur le MDN
 
-<p>Nos <a href="/fr/docs/Learn/Server-side/Django">Documents de développement côté serveur de Django</a> montrent une bonne pratique de présentation des commandes de l'invite shell, etc. sur le MDN. Regardez <a href="/fr/docs/Learn/Server-side/Django/development_environment">Configurer un environnement de développement Django</a> par exemple.</p>
-
+Nos [Documents de développement côté serveur de Django](/fr/docs/Learn/Server-side/Django) montrent une bonne pratique de présentation des commandes de l'invite shell, etc. sur le MDN. Regardez [Configurer un environnement de développement Django](/fr/docs/Learn/Server-side/Django/development_environment) par exemple.

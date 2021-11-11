@@ -1,44 +1,47 @@
 ---
 title: Créer et modifier des pages
 slug: MDN/Contribute/Howto/Create_and_edit_pages
-translation_of: 'MDN/Contribute/Howto/Create_and_edit_pages'
+translation_of: MDN/Contribute/Howto/Create_and_edit_pages
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>Cet article est destiné à présenter aux personnes souhaitant contribuer à MDN le processus de modification de pages existantes et de création de nouvelles pages.</p>
+Cet article est destiné à présenter aux personnes souhaitant contribuer à MDN le processus de modification de pages existantes et de création de nouvelles pages.
 
-<div class="note">
-  <p><strong>Note :</strong> Le contenu de MDN s'organise au sein de deux dépôts Git : <a href="https://github.com/mdn/content"><code>mdn/content</code></a> avec le contenu en anglais et <a href="https://github.com/mdn/translated-content"><code>mdn/translated-content</code></a> avec le contenu traduit (y compris en français). C'est le dépôt <code>mdn/content</code> qui constitue la référence. Si vous souhaitez créer une page en français, celle-ci devra au préalable avoir été créée en anglais.</p>
-</div>
-<h2 id="editing_an_existing_page">Modifier une page existante</h2>
+> **Note :** Le contenu de MDN s'organise au sein de deux dépôts Git : [`mdn/content`](https://github.com/mdn/content) avec le contenu en anglais et [`mdn/translated-content`](https://github.com/mdn/translated-content) avec le contenu traduit (y compris en français). C'est le dépôt `mdn/content` qui constitue la référence. Si vous souhaitez créer une page en français, celle-ci devra au préalable avoir été créée en anglais.
 
-<p>Pour modifier une page, vous devez trouver la page source :</p>
-<ul>
-  <li>Si elle est en anglais : <a href="https://github.com/mdn/content">sur notre dépôt <i lang="en">content</i></a></li>
-  <li>Si elle est en français ou dans une autre langue : <a href="https://github.com/mdn/translated-content">sur notre dépôt <i lang="en">translated-content</i></a></li>
-</ul>.
-<p>La façon la plus rapide de la trouver est d'aller sur la page que vous souhaitez modifier, puis de vous rendre en bas de cette page et enfin de cliquer sur le lien <i lang="en">«&nbsp;Source on GitHub&nbsp;»</i>.</p>
+## Modifier une page existante
 
-<p>Une fois que vous avez trouvé la source à modifier, rendez-vous sur notre fichier <i lang="en">README</i> et parcourez notre <a href="https://github.com/mdn/translated-content/#making-contributions">guide sur la contribution (en anglais)</a>. Vous pouvez également consulter <a href="https://tech.mozfr.org/post/2021/03/16/MDN-sur-GitHub-comment-contribuer">ce billet en français</a> pour savoir comment contribuer.</p>
+Pour modifier une page, vous devez trouver la page source :
 
-<h3 id="preview_changes">Prévisualiser vos modifications</h3>
+- Si elle est en anglais : [sur notre dépôt <i lang="en">content</i>](https://github.com/mdn/content)
 
-<p>SI vous modifiez la page en local, vous pouvez voir à quoi ressembleront vos modifications en allant sur le dossier du dépôt nommé <i lang="en">content</i>, en exécutant la commande CLI <code>yarn start</code>, puis en vous rendant à l'URL <code>localhost:5000</code> dans votre navigateur, et enfin en retrouvant la page sur laquelle vous travaillez. Pour la trouver plus facilement, utilisez la boîte de recherche. La page que vous prévisualisez sera rafraîchie automatiquement au fur et à mesure que vous modifiez son code source.</p>
+  <i lang="en">content</i>
 
-<h3 id="attach_files">Ajouter des pièces jointes</h3>
+- Si elle est en français ou dans une autre langue : [sur notre dépôt <i lang="en">translated-content</i>](https://github.com/mdn/translated-content)
 
-<p>Pour ajouter un fichier en pièce jointe à votre article, vous avez simplement besoin de l'inclure dans le même répertoire du fichier <code>index.html</code> de votre article, puis de l'ajouter dans votre page, typiquement à l'aide d'un élément <code>&lt;a&gt;</code>.</p>
+  <i lang="en">translated-content</i>
 
-<h2 id="creating_a_new_page">Créer une nouvelle page</h2>
+.
 
-<p>Pour créer une nouvelle page, consultez les instructions fournies sur la <a href="https://github.com/mdn/content#adding-a-new-document">documentation concernant l'ajout de nouveaux documents (en anglais)</a>.</p>
+La façon la plus rapide de la trouver est d'aller sur la page que vous souhaitez modifier, puis de vous rendre en bas de cette page et enfin de cliquer sur le lien <i lang="en">« Source on GitHub »</i>.
 
-<div class="warning">
-  <p><strong>Attention :</strong> Pour créer une page en français (ou dans une autre langue), celle-ci devra préalablement exister/avoir été créée en anglais.</p>
-</div>
-<h2 id="see_also">Voir aussi</h2>
+Une fois que vous avez trouvé la source à modifier, rendez-vous sur notre fichier <i lang="en">README</i> et parcourez notre [guide sur la contribution (en anglais)](https://github.com/mdn/translated-content/#making-contributions). Vous pouvez également consulter [ce billet en français](https://tech.mozfr.org/post/2021/03/16/MDN-sur-GitHub-comment-contribuer) pour savoir comment contribuer.
 
-<ul>
-  <li><a href="/fr/docs/MDN/Guidelines/Writing_style_guide">Guide stylistique de MDN</a></li>
-  <li><a href="https://tech.mozfr.org/post/2021/03/16/MDN-sur-GitHub-comment-contribuer">MDN sur GitHub&nbsp;: comment contribuer&nbsp;?</a></li>
-</ul>
+### Prévisualiser vos modifications
+
+SI vous modifiez la page en local, vous pouvez voir à quoi ressembleront vos modifications en allant sur le dossier du dépôt nommé <i lang="en">content</i>, en exécutant la commande CLI `yarn start`, puis en vous rendant à l'URL `localhost:5000` dans votre navigateur, et enfin en retrouvant la page sur laquelle vous travaillez. Pour la trouver plus facilement, utilisez la boîte de recherche. La page que vous prévisualisez sera rafraîchie automatiquement au fur et à mesure que vous modifiez son code source.
+
+### Ajouter des pièces jointes
+
+Pour ajouter un fichier en pièce jointe à votre article, vous avez simplement besoin de l'inclure dans le même répertoire du fichier `index.html` de votre article, puis de l'ajouter dans votre page, typiquement à l'aide d'un élément `<a>`.
+
+## Créer une nouvelle page
+
+Pour créer une nouvelle page, consultez les instructions fournies sur la [documentation concernant l'ajout de nouveaux documents (en anglais)](https://github.com/mdn/content#adding-a-new-document).
+
+> **Attention :** Pour créer une page en français (ou dans une autre langue), celle-ci devra préalablement exister/avoir été créée en anglais.
+
+## Voir aussi
+
+- [Guide stylistique de MDN](/fr/docs/MDN/Guidelines/Writing_style_guide)
+- [MDN sur GitHub : comment contribuer ?](https://tech.mozfr.org/post/2021/03/16/MDN-sur-GitHub-comment-contribuer)

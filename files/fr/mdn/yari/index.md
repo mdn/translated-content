@@ -8,18 +8,16 @@ tags:
 translation_of: MDN/Kuma
 original_slug: MDN/Kuma
 ---
-<div>{{MDNSidebar}}{{IncludeSubnav("/fr/docs/MDN")}}</div>
+{{MDNSidebar}}{{IncludeSubnav("/fr/docs/MDN")}}
 
-<p>Kuma est le code Django qui alimente le MDN Web Docs.</p>
+Kuma est le code Django qui alimente le MDN Web Docs.
 
-<p>{{SubpagesWithSummaries}}</p>
+{{SubpagesWithSummaries}}
 
-<h2 id="Simpliquer_avec_Kuma">S'impliquer avec Kuma</h2>
+## S'impliquer avec Kuma
 
-<p>Pour s'engager avec Kuma :</p>
+Pour s'engager avec Kuma :
 
-<ul>
- <li>Visitez le <a href="https://github.com/mdn/kuma">projet Kuma sur GitHub</a> (en).</li>
- <li>Consultez le <a href="https://github.com/mdn/kuma/blob/master/CONTRIBUTING.md">Guide de contribution</a> (en).</li>
- <li>Au besoin, plongez dans la <a href="http://kuma.readthedocs.org/en/latest/">documentation complète de Kuma</a> (en).</li>
-</ul>
+- Visitez le [projet Kuma sur GitHub](https://github.com/mdn/kuma) (en).
+- Consultez le [Guide de contribution](https://github.com/mdn/kuma/blob/master/CONTRIBUTING.md) (en).
+- Au besoin, plongez dans la [documentation complète de Kuma](http://kuma.readthedocs.org/en/latest/) (en).
