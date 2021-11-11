@@ -5,10 +5,10 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 ---
 <div>{{WebAssemblySidebar}}</div>
 
-<p class="summary">Si vous avez déjà <a href="/en-US/docs/WebAssembly/C_to_wasm">compilé un module depuis un autre langage en utilisant des outils comme Emscripten</a>, ou <a href="/en-US/docs/WebAssembly/Loading_and_running">chargé et éxecuté vous-même le code</a>, l'étape suivante est d'en apprendre plus à propos des autres fonctionnalités de l'API JavaScript WebAssembly. Cet article vous enseigne ce que vous aurez besoin de connaître.</p>
+<p>Si vous avez déjà <a href="/fr/docs/WebAssembly/C_to_wasm">compilé un module depuis un autre langage en utilisant des outils comme Emscripten</a>, ou <a href="/fr/docs/WebAssembly/Loading_and_running">chargé et éxecuté vous-même le code</a>, l'étape suivante est d'en apprendre plus à propos des autres fonctionnalités de l'API JavaScript WebAssembly. Cet article vous enseigne ce que vous aurez besoin de connaître.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Si vous n'êtes pas familier avec les concepts de base mentionnés dans cet article et vous avez besoin de plus d'explication, lisez  d'abord <a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a>.</p>
+<p><strong>Note :</strong> Si vous n'êtes pas familier avec les concepts de base mentionnés dans cet article et vous avez besoin de plus d'explication, lisez  d'abord <a href="/fr/docs/WebAssembly/Concepts">WebAssembly concepts</a>.</p>
 </div>
 
 <h2 id="Quelques_exemples_simples">Quelques exemples simples</h2>
@@ -16,7 +16,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 <p>Parcourons quelques exemples illustrant l'utilisation de l'API Webassembly Javascript, et en particulier la manière dont elle peut être utilisé pour charger un module wasm au sein d'une page web. </p>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez trouver des exemples de code dans notre repo GitHub  <a href="https://github.com/mdn/webassembly-examples">webassembly-examples</a>.</p>
+<p><strong>Note :</strong> Vous pouvez trouver des exemples de code dans notre repo GitHub  <a href="https://github.com/mdn/webassembly-examples">webassembly-examples</a>.</p>
 </div>
 
 <h3 id="Préparation">Préparation</h3>
@@ -25,7 +25,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
  <li>Premièrement nous avons besoin d'un module wasm ! Récupérez notre fichier <a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm">simple.wasm</a> et sauvegardez une copie dans un nouveau document sur votre machine locale.</li>
  <li>Ensuite, assurez-vous d'utiliser un navigateur supportant WebAssembly. Firefox 52+ et Chrome 57+ supportent WebAssembly par défaut.</li>
  <li>Pour poursuivre, créez un simple fichier nommé <code>index.html</code> dans le même dossier que votre fichier wasm (vous pouvez utiliser notre <a href="https://github.com/mdn/webassembly-examples/blob/master/template/template.html">template simple</a> si vous n'en avez pas de facilement accessible).</li>
- <li>Maintenant, pour nous aider à comprendre ce qui se passe ici, regardons la représentation textuelle de notre module wasm  (que nous rencontrons aussi dans <a href="/en-US/docs/WebAssembly/Text_format_to_wasm#A_first_look_at_the_text_format">Converting WebAssembly format to wasm</a>):
+ <li>Maintenant, pour nous aider à comprendre ce qui se passe ici, regardons la représentation textuelle de notre module wasm  (que nous rencontrons aussi dans <a href="/fr/docs/WebAssembly/Text_format_to_wasm#A_first_look_at_the_text_format">Converting WebAssembly format to wasm</a>):
   <pre>(module
   (func $i (import "imports" "imported_func") (param i32))
   (func (export "exported_func")
@@ -78,7 +78,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 
 <p>In Firefox 54+, the Developer Tool Debugger Panel has functionality to expose the text representation of any wasm code included in a web page. To view it, you can go to the Debugger Panel and click on the “wasm://” entry.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15823/wasm-debug.png"></p>
+<p><img alt="" src="wasm-debug.png"></p>
 
 <p>Starting soon in Firefox, in addition to viewing WebAssembly as text, developers will be able to debug (place breakpoints, inspect the callstack, single-step, etc.) WebAssembly using the text format. See <a href="https://www.youtube.com/watch?v=R1WtBkMeGds">WebAssembly debugging with Firefox DevTools</a> for a video preview.</p>
 
@@ -126,7 +126,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 
 <p>Note: En raison du caractère immuable de la longueur de byte d'un {{domxref("ArrayBuffer")}}, après une opération {{jsxref("Memory.prototype.grow()")}} réussie, le buffer getter retourne un nouvel objet ArrayBuffer (avec la nouvelle longeur de byte du buffer) et tous les objets ArrayBuffer précédents se retrouve en état "dissocié", ou déconnectés de l'espace mémoire dont ils étaient issus initialement.</p>
 
-<p>Tout comme les fonctions, les espaces mémoires linéaires peuvent être définis à l'intérieur du module, ou bien importés. De manière similaire aux fonctions, un module peut également exporter sa mémoire. Cela signifie que Javascript peut accéder à la mémoire d'une instance WebAssembly soit en créant un nouveau <code>WebAssembly.Memory</code> afin de le passer en import à cette instance, soit en recevant un export Memory (via <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports">Instance.prototype.exports</a></code>).</p>
+<p>Tout comme les fonctions, les espaces mémoires linéaires peuvent être définis à l'intérieur du module, ou bien importés. De manière similaire aux fonctions, un module peut également exporter sa mémoire. Cela signifie que Javascript peut accéder à la mémoire d'une instance WebAssembly soit en créant un nouveau <code>WebAssembly.Memory</code> afin de le passer en import à cette instance, soit en recevant un export Memory (via <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports">Instance.prototype.exports</a></code>).</p>
 
 <h3 id="Exemple_avancé_pour_lutilisation_mémoire">Exemple avancé pour l'utilisation mémoire</h3>
 
@@ -160,7 +160,7 @@ console.log(sum);</code></pre>
  </li>
 </ol>
 
-<p>Note: vous pouvez remarquer que nous avons créé la vue {{domxref("Uint32Array")}} sur le champ buffer de l'objet Memory (<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer">Memory.prototype.buffer</a></code>), et pas sur l'objet Memory lui même.</p>
+<p>Note: vous pouvez remarquer que nous avons créé la vue {{domxref("Uint32Array")}} sur le champ buffer de l'objet Memory (<code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer">Memory.prototype.buffer</a></code>), et pas sur l'objet Memory lui même.</p>
 
 <p>Les imports Memory fonctionnent de la même manière que les imports fonctions, à la différence prés que les objets Memory véhiculent des valeurs au lieu de fonctions Javscripts. Les imports Memory sont utiles pour deux raisons:</p>
 
@@ -181,7 +181,7 @@ console.log(sum);</code></pre>
 
 <p>Lorsque l'appel à un pointeur sur fonction est nécessaire, le caller WebAssembly fournit l'index de la référence à appeler. La valeur de cet index est controlée par rapport au valeurs limites données à l'instantiation de la table (safety bounds checked), et cela avant que l'appel par référence à la fonction soit effectué. Autrement dit, les tables sont actuellement des primitives bas niveau utilisées pour compiler des fonctionnalités de language de programmation bas niveau, de manière sûre et portable.</p>
 
-<p>Les Tables peuvent être modifiées via <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set">Table.prototype.set()</a></code>, which updates one of the values in a table, and <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow">Table.prototype.grow()</a></code>, which increases the number of values that can be stored in a table.  This allows the indirectly-callable set of functions to change over time, which is necessary for <a href="http://webassembly.org/docs/dynamic-linking/">dynamic linking techniques</a>.  The mutations are immediately accessible via <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code> in JavaScript, and to wasm modules.</p>
+<p>Les Tables peuvent être modifiées via <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set">Table.prototype.set()</a></code>, which updates one of the values in a table, and <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow">Table.prototype.grow()</a></code>, which increases the number of values that can be stored in a table.  This allows the indirectly-callable set of functions to change over time, which is necessary for <a href="http://webassembly.org/docs/dynamic-linking/">dynamic linking techniques</a>.  The mutations are immediately accessible via <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code> in JavaScript, and to wasm modules.</p>
 
 <h3 id="Un_exemple_de_table">Un exemple de table</h3>
 
@@ -213,7 +213,7 @@ console.log(tbl.get(1)());  // 42</code></pre>
  </li>
 </ol>
 
-<p>Ce code accède à chaque fonction référencée contenue dans la table, et l' instancie afin d'imprimer sa valeur de retour dans la console — à noter que chaque référence de fonction est obtenue à l'aide de la méthode <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code>, suivie d'une paire suplémentaire de parenthèses pour finaliser l'invocation de la fonction.</p>
+<p>Ce code accède à chaque fonction référencée contenue dans la table, et l' instancie afin d'imprimer sa valeur de retour dans la console — à noter que chaque référence de fonction est obtenue à l'aide de la méthode <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code>, suivie d'une paire suplémentaire de parenthèses pour finaliser l'invocation de la fonction.</p>
 
 <p><strong>Note</strong>: Vous pouvez retoruver la démo complète sur <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html">table.html</a> (voir également <a href="https://mdn.github.io/webassembly-examples/js-api-examples/table.html">live</a>).</p>
 
@@ -277,7 +277,7 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
  <li>Une instance mémoire ou table peut être utilisée par 0-N instances de module — ces instances partagent toutes le même espace d'adressage, rendant possible l'implémentation d'un lien dynamique.</li>
 </ul>
 
-<p>Vous pouvez voir la mise en application du concept de multiplicité dans notre article Understanding text format — voir en particulier la section <a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format#Mutating_tables_and_dynamic_linking">Mutating tables and dynamic linking</a>.</p>
+<p>Vous pouvez voir la mise en application du concept de multiplicité dans notre article Understanding text format — voir en particulier la section <a href="/fr/docs/WebAssembly/Understanding_the_text_format#Mutating_tables_and_dynamic_linking">Mutating tables and dynamic linking</a>.</p>
 
 <h2 id="Résumé">Résumé</h2>
 
@@ -287,6 +287,6 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 
 <ul>
  <li><a href="http://webassembly.org/">webassembly.org</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
+ <li><a href="/fr/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
  <li><a href="https://research.mozilla.org/webassembly/">WebAssembly on Mozilla Research</a></li>
 </ul>

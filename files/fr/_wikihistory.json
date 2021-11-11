@@ -42414,17 +42414,6 @@
       "BenoitDel"
     ]
   },
-  "WebAssembly/Understanding_the_text_format": {
-    "modified": "2020-11-08T19:45:23.458Z",
-    "contributors": [
-      "duduindo",
-      "lassana.drame.avenir",
-      "SphinxKnight",
-      "neilbryson",
-      "afauroux",
-      "marcpicaud"
-    ]
-  },
   "WebAssembly/Using_the_JavaScript_API": {
     "modified": "2020-02-29T07:32:23.744Z",
     "contributors": [

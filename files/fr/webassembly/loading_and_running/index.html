@@ -19,7 +19,7 @@ translation_of: WebAssembly/Loading_and_running
 
 <h2 id="En_utilisant_Fetch">En utilisant Fetch</h2>
 
-<p><a href="/en-US/docs/Web/API/Fetch_API">Fetch</a>  est une API qui facilite la récupération de ressources sur le réseau.</p>
+<p><a href="/fr/docs/Web/API/Fetch_API">Fetch</a>  est une API qui facilite la récupération de ressources sur le réseau.</p>
 
 <p>La façon la plus rapide et la plus efficace de récupérer un module wasm (webassembly) est d'utiliser la méthode {{jsxref("WebAssembly.instantiateStreaming()")}}, qui accepte comme premier argument un appel de fonction <code>fetch()</code>, et s'occupe de récupérer, compiler, et instancier le module en une seule et même étape, en accedant directement au flux de code binaire provenant du serveur:</p>
 
@@ -50,11 +50,11 @@ translation_of: WebAssembly/Loading_and_running
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: En règle générale, on ne s'intéresse qu'à l'instance, mais il peut être utile de préserver le module afin de le mettre ultérieurement en cache, de le partager avec un autre worker ou window via <code><a href="/en-US/docs/Web/API/MessagePort/postMessage">postMessage()</a></code>, ou tout simplement pour créer d'autres instances.</p>
+<p><strong>Note :</strong> En règle générale, on ne s'intéresse qu'à l'instance, mais il peut être utile de préserver le module afin de le mettre ultérieurement en cache, de le partager avec un autre worker ou window via <code><a href="/fr/docs/Web/API/MessagePort/postMessage">postMessage()</a></code>, ou tout simplement pour créer d'autres instances.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Un chargement supplémentaire du module nécessite un object  de type {{jsxref("WebAssembly.Module")}} comme argument, et retourne une promesse contenant directement un objet de type instance comme résultat. Voir <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example">Second overload example</a>.</p>
+<p><strong>Note :</strong> Un chargement supplémentaire du module nécessite un object  de type {{jsxref("WebAssembly.Module")}} comme argument, et retourne une promesse contenant directement un objet de type instance comme résultat. Voir <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example">Second overload example</a>.</p>
 </div>
 
 <h3 id="Mise_en_marche_du_code_webassembly">Mise en marche du code webassembly</h3>
@@ -75,12 +75,12 @@ translation_of: WebAssembly/Loading_and_running
 })</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Pour plus d'informations sur la façon dont fonctionne l'exportation au sein d'un module webassembly, lisez <a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a>, et <a href="/en-US/docs/WebAssembly/Understanding_the_text_format">Understanding WebAssembly text format</a>.</p>
+<p><strong>Note :</strong> Pour plus d'informations sur la façon dont fonctionne l'exportation au sein d'un module webassembly, lisez <a href="/fr/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a>, et <a href="/fr/docs/WebAssembly/Understanding_the_text_format">Understanding WebAssembly text format</a>.</p>
 </div>
 
 <h2 id="En_utilisant_XMLHttpRequest">En utilisant XMLHttpRequest</h2>
 
-<p><code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> est plus ancien que Fetch, mais peut toujours être utiliser afin récupérer un array buffer. En supposant que notre module se nome <code>simple.wasm</code>:</p>
+<p><code><a href="/fr/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> est plus ancien que Fetch, mais peut toujours être utiliser afin récupérer un array buffer. En supposant que notre module se nome <code>simple.wasm</code>:</p>
 
 <ol>
  <li>Créer une nouvel instance {{domxref("XMLHttpRequest()")}}, afin d'utiliser la méthode {{domxref("XMLHttpRequest.open","open()")}} nécessaire pour ouvrir une requête. Paramètrer la requête avec une méthode <code>GET</code>, et y déclarer le chemin du fichier que nous souhaiter récupérer.</li>
@@ -104,5 +104,5 @@ request.onload = function() {
 };</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez retrouver un autre exemple sur <a href="https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html">xhr-wasm.html</a>.</p>
+<p><strong>Note :</strong> Vous pouvez retrouver un autre exemple sur <a href="https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html">xhr-wasm.html</a>.</p>
 </div>
