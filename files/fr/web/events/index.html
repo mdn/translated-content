@@ -7,15 +7,14 @@ tags:
   - Reference
 translation_of: Web/Events
 ---
-<p class="summary">Les <a href="/fr/docs/Web/API/Document_Object_Model/Events">événements DOM</a> sont déclenchés pour notifier au code des « changements intéressants » qui peuvent affecter l'exécution du code. Ces changements peuvent résulter d'interactions avec l'utilisateur, comme l'utilisation de la souris ou le redimensionnement d'une fenêtre, de changements dans l'état de l'environnement sous-jacent (par exemple, une batterie faible ou des événements médiatiques provenant du système d'exploitation), et d'autres causes.</p>
+<p>Les <a href="/fr/docs/Web/API/Document_Object_Model/Events">événements DOM</a> sont déclenchés pour notifier au code des « changements intéressants » qui peuvent affecter l'exécution du code. Ces changements peuvent résulter d'interactions avec l'utilisateur, comme l'utilisation de la souris ou le redimensionnement d'une fenêtre, de changements dans l'état de l'environnement sous-jacent (par exemple, une batterie faible ou des événements médiatiques provenant du système d'exploitation), et d'autres causes.</p>
 
 <p>Chaque événement est représenté par un objet implémentant l'interface <a href="/fr/docs/Web/API/Event"><code>Event</code></a>, et peut avoir d'autres propriétés et/ou champs, permettant d'obtenir des informations supplémentaires au sujet de ce qui s'est produit. La documentation de chaque événement comporte un tableau (en haut de la page) qui comprend un lien vers l'interface de l'événement associé et d'autres informations pertinentes. Une liste complète des différents types d'événements est donnée dans <a href="/fr/docs/Web/API/Event#introduction">Event >Événement <code> Interfaces basées sur</code></a>.</p>
 
-<p><span class="seoSummary">Cette rubrique fournit un index des principales <em>sortes</em> d'événements qui peuvent vous intéresser (animation, presse-papiers, workers, etc.) ainsi que les principales classes qui implémentent ces sortes d'événements. À la fin se trouve une liste exhaustive de tous les événements documentés.</span></p>
+<p>Cette rubrique fournit un index des principales <em>sortes</em> d'événements qui peuvent vous intéresser (animation, presse-papiers, workers, etc.) ainsi que les principales classes qui implémentent ces sortes d'événements. À la fin se trouve une liste exhaustive de tous les événements documentés.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Cette page répertorie les événements les plus courants que vous rencontrerez sur le Web. Si vous recherchez un événement qui n'est pas répertorié ici, essayez de rechercher son nom, son domaine ou les spécifications associées sur le reste du MDN.</p>
+<div class="note">
+  <p><strong>Note :</strong> Cette page répertorie les événements les plus courants que vous rencontrerez sur le Web. Si vous recherchez un événement qui n'est pas répertorié ici, essayez de rechercher son nom, son domaine ou les spécifications associées sur le reste du MDN.</p>
 </div>
 
 <h2 id="Event_index">Index des événements</h2>
@@ -23,7 +22,7 @@ translation_of: Web/Events
 <table class="standard-table">
   <tr>
     <th>Type d'événement</th>
-    <th style="width: 50%">Description</th>
+    <th>Description</th>
     <th>Documentation</th>
   </tr>
 
@@ -183,7 +182,7 @@ translation_of: Web/Events
     <td>Événements déclenchés sur <a href="/fr/docs/Web/API/Window#manifest_events"><code>Window</code></a>.</td>
   </tr>
 
-  <tr id="media">
+  <tr>
     <td>Médias</td>
     <td>
       <p>Événements liés à l'utilisation des médias (y compris l'<a href="/fr/docs/Web/API/Media_Streams_API#events">API de capture et de diffusion de médias</a>, <a href="/fr/docs/Web/API/Web_Audio_API#events">Web Audio API</a>, <a href="/fr/docs/Web/API/Picture-in-Picture_API#events">Picture-in-Picture API</a>, etc.).</p>
@@ -307,9 +306,8 @@ translation_of: Web/Events
     <td>Réalité virtuelle</td>
     <td>
       <p>Les événements liés à l'API <a href="/fr/docs/Web/API/WebXR_Device_API">WebXR Device API</a>.</p>
-      <div class="notecard note">
-        <p><b>Note :</b></p>
-        <p>L'API <a href="/fr/docs/Web/API/WebVR_API">WebVR API</a> (et les événements associés à <a href="/fr/docs/Web/API/Window#webvr_events"><code>Window</code></a>) sont dépréciés.</p>
+      <div class="note">
+        <p><strong>Note :</strong> L'API <a href="/fr/docs/Web/API/WebVR_API">WebVR API</a> (et les événements associés à <a href="/fr/docs/Web/API/Window#webvr_events"><code>Window</code></a>) sont dépréciés.</p>
       </div>
     </td>
     <td>Événements déclenchés sur <a href="/fr/docs/Web/API/XRSystem#events"><code>XRSystem</code></a>, <a href="/fr/docs/Web/API/XRSession#events"><code>XRSession</code></a>, <a href="/fr/docs/Web/API/XRReferenceSpace#events"><code>XRReferenceSpace</code></a>.</td>
@@ -355,661 +353,597 @@ translation_of: Web/Events
 
 <p>Cette section répertorie les événements qui ont <em>leurs propres</em> pages de référence sur MDN. Si vous êtes intéressé par un événement qui n'est pas listé ici, essayez de rechercher son nom, son domaine ou les spécifications associées sur le reste de MDN.</p>
 
-<dl>
-  <dt><a href="/fr/docs/Web/API/AbortSignal"><code>AbortSignal</code></a></dt>
-  <dd>
+<ul>
+  <li>{{DOMxRef("AbortSignal")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/AbortSignal/abort_event">Événement <code>abort</code></a></li>
+      <li><a href="/fr/docs/Web/API/AbortSignal/abort_event">abort</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/AudioScheduledSourceNode"><code>AudioScheduledSourceNode</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("AudioScheduledSourceNode")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/AudioScheduledSourceNode/ended_event">Événement <code>ended</code></a></li>
+      <li><a href="/fr/docs/Web/API/AudioScheduledSourceNode/ended_event">ended</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/AudioTrackList"><code>AudioTrackList</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("AudioTrackList")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/AudioTrackList/addtrack_event">Événement <code>addtrack</code></a></li>
-      <li><a href="/fr/docs/Web/API/AudioTrackList/change_event">Événement <code>change</code></a></li>
-      <li><a href="/fr/docs/Web/API/AudioTrackList/removetrack_event">Événement <code>removetrack</code></a></li>
+      <li><a href="/fr/docs/Web/API/AudioTrackList/addtrack_event">addtrack</a></li>
+      <li><a href="/fr/docs/Web/API/AudioTrackList/change_event">change</a></li>
+      <li><a href="/fr/docs/Web/API/AudioTrackList/removetrack_event">removetrack</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/BroadcastChannel"><code>BroadcastChannel</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("BroadcastChannel")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/BroadcastChannel/messageerror_event">Événement <code>messageerror</code></a></li>
-      <li><a href="/fr/docs/Web/API/BroadcastChannel/message_event">Événement <code>message</code></a></li>
+      <li><a href="/fr/docs/Web/API/BroadcastChannel/messageerror_event">messageerror</a></li>
+      <li><a href="/fr/docs/Web/API/BroadcastChannel/message_event">message</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/DedicatedWorkerGlobalScope"><code>DedicatedWorkerGlobalScope</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("DedicatedWorkerGlobalScope")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event">Événement <code>messageerror</code></a></li>
-      <li><a href="/fr/docs/Web/API/DedicatedWorkerGlobalScope/message_event">Événement <code>message</code></a></li>
+      <li><a href="/fr/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event">messageerror</a></li>
+      <li><a href="/fr/docs/Web/API/DedicatedWorkerGlobalScope/message_event">message</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/Document"><code>Document</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("Document")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/Document/animationcancel_event">Événement <code>animationcancel</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/animationend_event">Événement <code>animationend</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/animationiteration_event">Événement <code>animationiteration</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/animationstart_event">Événement <code>animationstart</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/copy_event">Événement <code>copy</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/cut_event">Événement <code>cut</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/DOMContentLoaded_event">Événement <code>DOMContentLoaded</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/dragend_event">Événement <code>dragend</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/dragenter_event">Événement <code>dragenter</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/dragleave_event">Événement <code>dragleave</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/dragover_event">Événement <code>dragover</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/dragstart_event">Événement <code>dragstart</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/drag_event">Événement <code>drag</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/drop_event">Événement <code>drop</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/fullscreenchange_event">Événement <code>fullscreenchange</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/fullscreenerror_event">Événement <code>fullscreenerror</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/gotpointercapture_event">Événement <code>gotpointercapture</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/keydown_event">Événement <code>keydown</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/keypress_event">Événement <code>keypress</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/keyup_event">Événement <code>keyup</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/lostpointercapture_event">Événement <code>lostpointercapture</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/paste_event">Événement <code>paste</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/pointercancel_event">Événement <code>pointercancel</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/pointerdown_event">Événement <code>pointerdown</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/pointerenter_event">Événement <code>pointerenter</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/pointerleave_event">Événement <code>pointerleave</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/pointerlockchange_event">Événement <code>pointerlockchange</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/pointerlockerror_event">Événement <code>pointerlockerror</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/pointermove_event">Événement <code>pointermove</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/pointerout_event">Événement <code>pointerout</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/pointerover_event">Événement <code>pointerover</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/pointerup_event">Événement <code>pointerup</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/readystatechange_event">Événement <code>readystatechange</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/scroll_event">Événement <code>scroll</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/selectionchange_event">Événement <code>selectionchange</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/selectstart_event">Événement <code>selectstart</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/touchcancel_event">Événement <code>touchcancel</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/touchend_event">Événement <code>touchend</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/touchmove_event">Événement <code>touchmove</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/touchstart_event">Événement <code>touchstart</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/transitioncancel_event">Événement <code>transitioncancel</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/transitionend_event">Événement <code>transitionend</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/transitionrun_event">Événement <code>transitionrun</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/transitionstart_event">Événement <code>transitionstart</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/visibilitychange_event">Événement <code>visibilitychange</code></a></li>
-      <li><a href="/fr/docs/Web/API/Document/wheel_event">Événement <code>wheel</code></a></li>
+      <li><a href="/fr/docs/Web/API/Document/animationcancel_event">animationcancel</a></li>
+      <li><a href="/fr/docs/Web/API/Document/animationend_event">animationend</a></li>
+      <li><a href="/fr/docs/Web/API/Document/animationiteration_event">animationiteration</a></li>
+      <li><a href="/fr/docs/Web/API/Document/animationstart_event">animationstart</a></li>
+      <li><a href="/fr/docs/Web/API/Document/copy_event">copy</a></li>
+      <li><a href="/fr/docs/Web/API/Document/cut_event">cut</a></li>
+      <li><a href="/fr/docs/Web/API/Document/DOMContentLoaded_event">DOMContentLoaded</a></li>
+      <li><a href="/fr/docs/Web/API/Document/dragend_event">dragend</a></li>
+      <li><a href="/fr/docs/Web/API/Document/dragenter_event">dragenter</a></li>
+      <li><a href="/fr/docs/Web/API/Document/dragleave_event">dragleave</a></li>
+      <li><a href="/fr/docs/Web/API/Document/dragover_event">dragover</a></li>
+      <li><a href="/fr/docs/Web/API/Document/dragstart_event">dragstart</a></li>
+      <li><a href="/fr/docs/Web/API/Document/drag_event">drag</a></li>
+      <li><a href="/fr/docs/Web/API/Document/drop_event">drop</a></li>
+      <li><a href="/fr/docs/Web/API/Document/fullscreenchange_event">fullscreenchange</a></li>
+      <li><a href="/fr/docs/Web/API/Document/fullscreenerror_event">fullscreenerror</a></li>
+      <li><a href="/fr/docs/Web/API/Document/gotpointercapture_event">gotpointercapture</a></li>
+      <li><a href="/fr/docs/Web/API/Document/keydown_event">keydown</a></li>
+      <li><a href="/fr/docs/Web/API/Document/keypress_event">keypress</a></li>
+      <li><a href="/fr/docs/Web/API/Document/keyup_event">keyup</a></li>
+      <li><a href="/fr/docs/Web/API/Document/lostpointercapture_event">lostpointercapture</a></li>
+      <li><a href="/fr/docs/Web/API/Document/paste_event">paste</a></li>
+      <li><a href="/fr/docs/Web/API/Document/pointercancel_event">pointercancel</a></li>
+      <li><a href="/fr/docs/Web/API/Document/pointerdown_event">pointerdown</a></li>
+      <li><a href="/fr/docs/Web/API/Document/pointerenter_event">pointerenter</a></li>
+      <li><a href="/fr/docs/Web/API/Document/pointerleave_event">pointerleave</a></li>
+      <li><a href="/fr/docs/Web/API/Document/pointerlockchange_event">pointerlockchange</a></li>
+      <li><a href="/fr/docs/Web/API/Document/pointerlockerror_event">pointerlockerror</a></li>
+      <li><a href="/fr/docs/Web/API/Document/pointermove_event">pointermove</a></li>
+      <li><a href="/fr/docs/Web/API/Document/pointerout_event">pointerout</a></li>
+      <li><a href="/fr/docs/Web/API/Document/pointerover_event">pointerover</a></li>
+      <li><a href="/fr/docs/Web/API/Document/pointerup_event">pointerup</a></li>
+      <li><a href="/fr/docs/Web/API/Document/readystatechange_event">readystatechange</a></li>
+      <li><a href="/fr/docs/Web/API/Document/scroll_event">scroll</a></li>
+      <li><a href="/fr/docs/Web/API/Document/selectionchange_event">selectionchange</a></li>
+      <li><a href="/fr/docs/Web/API/Document/selectstart_event">selectstart</a></li>
+      <li><a href="/fr/docs/Web/API/Document/touchcancel_event">touchcancel</a></li>
+      <li><a href="/fr/docs/Web/API/Document/touchend_event">touchend</a></li>
+      <li><a href="/fr/docs/Web/API/Document/touchmove_event">touchmove</a></li>
+      <li><a href="/fr/docs/Web/API/Document/touchstart_event">touchstart</a></li>
+      <li><a href="/fr/docs/Web/API/Document/transitioncancel_event">transitioncancel</a></li>
+      <li><a href="/fr/docs/Web/API/Document/transitionend_event">transitionend</a></li>
+      <li><a href="/fr/docs/Web/API/Document/transitionrun_event">transitionrun</a></li>
+      <li><a href="/fr/docs/Web/API/Document/transitionstart_event">transitionstart</a></li>
+      <li><a href="/fr/docs/Web/API/Document/visibilitychange_event">visibilitychange</a></li>
+      <li><a href="/fr/docs/Web/API/Document/wheel_event">wheel</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/Element"><code>Element</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("Element")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/Element/afterscriptexecute_event">Événement <code>afterscriptexecute</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/auxclick_event">Événement <code>auxclick</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/beforescriptexecute_event">Événement <code>beforescriptexecute</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/blur_event">Événement <code>blur</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/click_event">Événement <code>click</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/compositionend_event">Événement <code>compositionend</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/compositionstart_event">Événement <code>compositionstart</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/compositionupdate_event">Événement <code>compositionupdate</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/contextmenu_event">Événement <code>contextmenu</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/copy_event">Événement <code>copy</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/cut_event">Événement <code>cut</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/dblclick_event">Événement <code>dblclick</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/DOMActivate_event">Événement <code>DOMActivate</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/DOMMouseScroll_event">Événement <code>DOMMouseScroll</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/error_event">Événement <code>error</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/focusin_event">Événement <code>focusin</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/focusout_event">Événement <code>focusout</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/focus_event">Événement <code>focus</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/fullscreenchange_event">Événement <code>fullscreenchange</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/fullscreenerror_event">Événement <code>fullscreenerror</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/gesturechange_event">Événement <code>gesturechange</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/gestureend_event">Événement <code>gestureend</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/gesturestart_event">Événement <code>gesturestart</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/keydown_event">Événement <code>keydown</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/keypress_event">Événement <code>keypress</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/keyup_event">Événement <code>keyup</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/mousedown_event">Événement <code>mousedown</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/mouseenter_event">Événement <code>mouseenter</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/mouseleave_event">Événement <code>mouseleave</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/mousemove_event">Événement <code>mousemove</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/mouseout_event">Événement <code>mouseout</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/mouseover_event">Événement <code>mouseover</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/mouseup_event">Événement <code>mouseup</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/mousewheel_event">Événement <code>mousewheel</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/msContentZoom_event">Événement <code>msContentZoom</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/MSGestureChange_event">Événement <code>MSGestureChange</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/MSGestureEnd_event">Événement <code>MSGestureEnd</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/MSGestureHold_event">Événement <code>MSGestureHold</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/MSGestureStart_event">Événement <code>MSGestureStart</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/MSGestureTap_event">Événement <code>MSGestureTap</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/MSInertiaStart_event">Événement <code>MSInertiaStart</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/MSManipulationStateChanged_event">Événement <code>MSManipulationStateChanged</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/overflow_event">Événement <code>overflow</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/paste_event">Événement <code>paste</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/scroll_event">Événement <code>scroll</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/select_event">Événement <code>select</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/show_event">Événement <code>show</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/touchcancel_event">Événement <code>touchcancel</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/touchend_event">Événement <code>touchend</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/touchmove_event">Événement <code>touchmove</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/touchstart_event">Événement <code>touchstart</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/underflow_event">Événement <code>underflow</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/webkitmouseforcechanged_event">Événement <code>webkitmouseforcechanged</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/webkitmouseforcedown_event">Événement <code>webkitmouseforcedown</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/webkitmouseforceup_event">Événement <code>webkitmouseforceup</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/webkitmouseforcewillbegin_event">Événement <code>webkitmouseforcewillbegin</code></a></li>
-      <li><a href="/fr/docs/Web/API/Element/wheel_event">Événement <code>wheel</code></a></li>
+      <li><a href="/fr/docs/Web/API/Element/afterscriptexecute_event">afterscriptexecute</a></li>
+      <li><a href="/fr/docs/Web/API/Element/auxclick_event">auxclick</a></li>
+      <li><a href="/fr/docs/Web/API/Element/beforescriptexecute_event">beforescriptexecute</a></li>
+      <li><a href="/fr/docs/Web/API/Element/blur_event">blur</a></li>
+      <li><a href="/fr/docs/Web/API/Element/click_event">click</a></li>
+      <li><a href="/fr/docs/Web/API/Element/compositionend_event">compositionend</a></li>
+      <li><a href="/fr/docs/Web/API/Element/compositionstart_event">compositionstart</a></li>
+      <li><a href="/fr/docs/Web/API/Element/compositionupdate_event">compositionupdate</a></li>
+      <li><a href="/fr/docs/Web/API/Element/contextmenu_event">contextmenu</a></li>
+      <li><a href="/fr/docs/Web/API/Element/copy_event">copy</a></li>
+      <li><a href="/fr/docs/Web/API/Element/cut_event">cut</a></li>
+      <li><a href="/fr/docs/Web/API/Element/dblclick_event">dblclick</a></li>
+      <li><a href="/fr/docs/Web/API/Element/DOMActivate_event">DOMActivate</a></li>
+      <li><a href="/fr/docs/Web/API/Element/DOMMouseScroll_event">DOMMouseScroll</a></li>
+      <li><a href="/fr/docs/Web/API/Element/error_event">error</a></li>
+      <li><a href="/fr/docs/Web/API/Element/focusin_event">focusin</a></li>
+      <li><a href="/fr/docs/Web/API/Element/focusout_event">focusout</a></li>
+      <li><a href="/fr/docs/Web/API/Element/focus_event">focus</a></li>
+      <li><a href="/fr/docs/Web/API/Element/fullscreenchange_event">fullscreenchange</a></li>
+      <li><a href="/fr/docs/Web/API/Element/fullscreenerror_event">fullscreenerror</a></li>
+      <li><a href="/fr/docs/Web/API/Element/gesturechange_event">gesturechange</a></li>
+      <li><a href="/fr/docs/Web/API/Element/gestureend_event">gestureend</a></li>
+      <li><a href="/fr/docs/Web/API/Element/gesturestart_event">gesturestart</a></li>
+      <li><a href="/fr/docs/Web/API/Element/keydown_event">keydown</a></li>
+      <li><a href="/fr/docs/Web/API/Element/keypress_event">keypress</a></li>
+      <li><a href="/fr/docs/Web/API/Element/keyup_event">keyup</a></li>
+      <li><a href="/fr/docs/Web/API/Element/mousedown_event">mousedown</a></li>
+      <li><a href="/fr/docs/Web/API/Element/mouseenter_event">mouseenter</a></li>
+      <li><a href="/fr/docs/Web/API/Element/mouseleave_event">mouseleave</a></li>
+      <li><a href="/fr/docs/Web/API/Element/mousemove_event">mousemove</a></li>
+      <li><a href="/fr/docs/Web/API/Element/mouseout_event">mouseout</a></li>
+      <li><a href="/fr/docs/Web/API/Element/mouseover_event">mouseover</a></li>
+      <li><a href="/fr/docs/Web/API/Element/mouseup_event">mouseup</a></li>
+      <li><a href="/fr/docs/Web/API/Element/mousewheel_event">mousewheel</a></li>
+      <li><a href="/fr/docs/Web/API/Element/msContentZoom_event">msContentZoom</a></li>
+      <li><a href="/fr/docs/Web/API/Element/MSGestureChange_event">MSGestureChange</a></li>
+      <li><a href="/fr/docs/Web/API/Element/MSGestureEnd_event">MSGestureEnd</a></li>
+      <li><a href="/fr/docs/Web/API/Element/MSGestureHold_event">MSGestureHold</a></li>
+      <li><a href="/fr/docs/Web/API/Element/MSGestureStart_event">MSGestureStart</a></li>
+      <li><a href="/fr/docs/Web/API/Element/MSGestureTap_event">MSGestureTap</a></li>
+      <li><a href="/fr/docs/Web/API/Element/MSInertiaStart_event">MSInertiaStart</a></li>
+      <li><a href="/fr/docs/Web/API/Element/MSManipulationStateChanged_event">MSManipulationStateChanged</a></li>
+      <li><a href="/fr/docs/Web/API/Element/overflow_event">overflow</a></li>
+      <li><a href="/fr/docs/Web/API/Element/paste_event">paste</a></li>
+      <li><a href="/fr/docs/Web/API/Element/scroll_event">scroll</a></li>
+      <li><a href="/fr/docs/Web/API/Element/select_event">select</a></li>
+      <li><a href="/fr/docs/Web/API/Element/show_event">show</a></li>
+      <li><a href="/fr/docs/Web/API/Element/touchcancel_event">touchcancel</a></li>
+      <li><a href="/fr/docs/Web/API/Element/touchend_event">touchend</a></li>
+      <li><a href="/fr/docs/Web/API/Element/touchmove_event">touchmove</a></li>
+      <li><a href="/fr/docs/Web/API/Element/touchstart_event">touchstart</a></li>
+      <li><a href="/fr/docs/Web/API/Element/underflow_event">underflow</a></li>
+      <li><a href="/fr/docs/Web/API/Element/webkitmouseforcechanged_event">webkitmouseforcechanged</a></li>
+      <li><a href="/fr/docs/Web/API/Element/webkitmouseforcedown_event">webkitmouseforcedown</a></li>
+      <li><a href="/fr/docs/Web/API/Element/webkitmouseforceup_event">webkitmouseforceup</a></li>
+      <li><a href="/fr/docs/Web/API/Element/webkitmouseforcewillbegin_event">webkitmouseforcewillbegin</a></li>
+      <li><a href="/fr/docs/Web/API/Element/wheel_event">wheel</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/EventSource"><code>EventSource</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("EventSource")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/EventSource/error_event">Événement <code>error</code></a></li>
-      <li><a href="/fr/docs/Web/API/EventSource/message_event">Événement <code>message</code></a></li>
-      <li><a href="/fr/docs/Web/API/EventSource/open_event">Événement <code>open</code></a></li>
+      <li><a href="/fr/docs/Web/API/EventSource/error_event">error</a></li>
+      <li><a href="/fr/docs/Web/API/EventSource/message_event">message</a></li>
+      <li><a href="/fr/docs/Web/API/EventSource/open_event">open</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/FileReader"><code>FileReader</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("FileReader")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/FileReader/abort_event">Événement <code>abort</code></a></li>
-      <li><a href="/fr/docs/Web/API/FileReader/error_event">Événement <code>error</code></a></li>
-      <li><a href="/fr/docs/Web/API/FileReader/loadend_event">Événement <code>loadend</code></a></li>
-      <li><a href="/fr/docs/Web/API/FileReader/loadstart_event">Événement <code>loadstart</code></a></li>
-      <li><a href="/fr/docs/Web/API/FileReader/load_event">Événement <code>load</code></a></li>
-      <li><a href="/fr/docs/Web/API/FileReader/progress_event">Événement <code>progress</code></a></li>
+      <li><a href="/fr/docs/Web/API/FileReader/abort_event">abort</a></li>
+      <li><a href="/fr/docs/Web/API/FileReader/error_event">error</a></li>
+      <li><a href="/fr/docs/Web/API/FileReader/loadend_event">loadend</a></li>
+      <li><a href="/fr/docs/Web/API/FileReader/loadstart_event">loadstart</a></li>
+      <li><a href="/fr/docs/Web/API/FileReader/load_event">load</a></li>
+      <li><a href="/fr/docs/Web/API/FileReader/progress_event">progress</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/HTMLCanvasElement"><code>HTMLCanvasElement</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLCanvasElement")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event">Événement <code>webglcontextcreationerror</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">Événement <code>webglcontextlost</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">Événement <code>webglcontextrestored</code></a></li>
+      <li><a href="/fr/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event">webglcontextcreationerror</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/HTMLDetailsElement"><code>HTMLDetailsElement</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLDetailsElement")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/HTMLDetailsElement/toggle_event">Événement <code>toggle</code></a></li>
+      <li><a href="/fr/docs/Web/API/HTMLDetailsElement/toggle_event">toggle</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/HTMLDialogElement"><code>HTMLDialogElement</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLDialogElement")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/HTMLDialogElement/cancel_event">Événement <code>cancel</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLDialogElement/close_event">Événement <code>close</code></a></li>
+      <li><a href="/fr/docs/Web/API/HTMLDialogElement/cancel_event">cancel</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLDialogElement/close_event">close</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLElement")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/HTMLElement/animationcancel_event">Événement <code>animationcancel</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/animationend_event">Événement <code>animationend</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/animationiteration_event">Événement <code>animationiteration</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/animationstart_event">Événement <code>animationstart</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/beforeinput_event">Événement <code>beforeinput</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/change_event">Événement <code>change</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/gotpointercapture_event">Événement <code>gotpointercapture</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/input_event">Événement <code>input</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/lostpointercapture_event">Événement <code>lostpointercapture</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/pointercancel_event">Événement <code>pointercancel</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/pointerdown_event">Événement <code>pointerdown</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/pointerenter_event">Événement <code>pointerenter</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/pointerleave_event">Événement <code>pointerleave</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/pointermove_event">Événement <code>pointermove</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/pointerout_event">Événement <code>pointerout</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/pointerover_event">Événement <code>pointerover</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/pointerup_event">Événement <code>pointerup</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/transitioncancel_event">Événement <code>transitioncancel</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/transitionend_event">Événement <code>transitionend</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/transitionrun_event">Événement <code>transitionrun</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLElement/transitionstart_event">Événement <code>transitionstart</code></a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/animationcancel_event">animationcancel</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/animationend_event">animationend</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/animationiteration_event">animationiteration</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/animationstart_event">animationstart</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/beforeinput_event">beforeinput</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/change_event">change</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/gotpointercapture_event">gotpointercapture</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/input_event">input</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/lostpointercapture_event">lostpointercapture</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/pointercancel_event">pointercancel</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/pointerdown_event">pointerdown</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/pointerenter_event">pointerenter</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/pointerleave_event">pointerleave</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/pointermove_event">pointermove</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/pointerout_event">pointerout</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/pointerover_event">pointerover</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/pointerup_event">pointerup</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/transitioncancel_event">transitioncancel</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/transitionend_event">transitionend</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/transitionrun_event">transitionrun</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLElement/transitionstart_event">transitionstart</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/HTMLFormElement"><code>HTMLFormElement</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLFormElement")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/HTMLFormElement/formdata_event">Événement <code>formdata</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLFormElement/reset_event">Événement <code>reset</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLFormElement/submit_event">Événement <code>submit</code></a></li>
+      <li><a href="/fr/docs/Web/API/HTMLFormElement/formdata_event">formdata</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLFormElement/reset_event">reset</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLFormElement/submit_event">submit</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/HTMLInputElement"><code>HTMLInputElement</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLInputElement")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/HTMLInputElement/invalid_event">Événement <code>invalid</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLInputElement/search_event">Événement <code>search</code></a></li>
+      <li><a href="/fr/docs/Web/API/HTMLInputElement/invalid_event">invalid</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLInputElement/search_event">search</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/HTMLMediaElement"><code>HTMLMediaElement</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLMediaElement")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/abort_event">Événement <code>abort</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/canplaythrough_event">Événement <code>canplaythrough</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/canplay_event">Événement <code>canplay</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/durationchange_event">Événement <code>durationchange</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/emptied_event">Événement <code>emptied</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/ended_event">Événement <code>ended</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/error_event">Événement <code>error</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/loadeddata_event">Événement <code>loadeddata</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/loadedmetadata_event">Événement <code>loadedmetadata</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/loadstart_event">Événement <code>loadstart</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/pause_event">Événement <code>pause</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/playing_event">Événement <code>playing</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/play_event">Événement <code>play</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/progress_event">Événement <code>progress</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/ratechange_event">Événement <code>ratechange</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/seeked_event">Événement <code>seeked</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/seeking_event">Événement <code>seeking</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/stalled_event">Événement <code>stalled</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/suspend_event">Événement <code>suspend</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/timeupdate_event">Événement <code>timeupdate</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/volumechange_event">Événement <code>volumechange</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLMediaElement/waiting_event">Événement <code>waiting</code></a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/abort_event">abort</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/canplaythrough_event">canplaythrough</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/canplay_event">canplay</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/durationchange_event">durationchange</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/emptied_event">emptied</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/ended_event">ended</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/error_event">error</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/loadeddata_event">loadeddata</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/loadedmetadata_event">loadedmetadata</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/loadstart_event">loadstart</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/pause_event">pause</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/playing_event">playing</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/play_event">play</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/progress_event">progress</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/ratechange_event">ratechange</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/seeked_event">seeked</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/seeking_event">seeking</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/stalled_event">stalled</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/suspend_event">suspend</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/timeupdate_event">timeupdate</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/volumechange_event">volumechange</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLMediaElement/waiting_event">waiting</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/HTMLSlotElement"><code>HTMLSlotElement</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLSlotElement")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/HTMLSlotElement/slotchange_event">Événement <code>slotchange</code></a></li>
+      <li><a href="/fr/docs/Web/API/HTMLSlotElement/slotchange_event">slotchange</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/HTMLTrackElement"><code>HTMLTrackElement</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLTrackElement")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/HTMLTrackElement/cuechange_event">Événement <code>cuechange</code></a></li>
+      <li><a href="/fr/docs/Web/API/HTMLTrackElement/cuechange_event">cuechange</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/HTMLVideoElement"><code>HTMLVideoElement</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("HTMLVideoElement")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/HTMLVideoElement/enterpictureinpicture_event">Événement <code>enterpictureinpicture</code></a></li>
-      <li><a href="/fr/docs/Web/API/HTMLVideoElement/leavepictureinpicture_event">Événement <code>leavepictureinpicture</code></a></li>
+      <li><a href="/fr/docs/Web/API/HTMLVideoElement/enterpictureinpicture_event">enterpictureinpicture</a></li>
+      <li><a href="/fr/docs/Web/API/HTMLVideoElement/leavepictureinpicture_event">leavepictureinpicture</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/IDBDatabase"><code>IDBDatabase</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("IDBDatabase")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/IDBDatabase/abort_event">Événement <code>abort</code></a></li>
-      <li><a href="/fr/docs/Web/API/IDBDatabase/close_event">Événement <code>close</code></a></li>
-      <li><a href="/fr/docs/Web/API/IDBDatabase/error_event">Événement <code>error</code></a></li>
-      <li><a href="/fr/docs/Web/API/IDBDatabase/versionchange_event">Événement <code>versionchange</code></a></li>
+      <li><a href="/fr/docs/Web/API/IDBDatabase/abort_event">abort</a></li>
+      <li><a href="/fr/docs/Web/API/IDBDatabase/close_event">close</a></li>
+      <li><a href="/fr/docs/Web/API/IDBDatabase/error_event">error</a></li>
+      <li><a href="/fr/docs/Web/API/IDBDatabase/versionchange_event">versionchange</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("IDBOpenDBRequest")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/IDBOpenDBRequest/blocked_event">Événement <code>blocked</code></a></li>
-      <li><a href="/fr/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event">Événement <code>upgradeneeded</code></a></li>
+      <li><a href="/fr/docs/Web/API/IDBOpenDBRequest/blocked_event">blocked</a></li>
+      <li><a href="/fr/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event">upgradeneeded</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/IDBRequest"><code>IDBRequest</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("IDBRequest")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/IDBRequest/error_event">Événement <code>error</code></a></li>
-      <li><a href="/fr/docs/Web/API/IDBRequest/success_event">Événement <code>success</code></a></li>
+      <li><a href="/fr/docs/Web/API/IDBRequest/error_event">error</a></li>
+      <li><a href="/fr/docs/Web/API/IDBRequest/success_event">success</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/IDBTransaction"><code>IDBTransaction</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("IDBTransaction")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/IDBTransaction/abort_event">Événement <code>abort</code></a></li>
-      <li><a href="/fr/docs/Web/API/IDBTransaction/complete_event">Événement <code>complete</code></a></li>
-      <li><a href="/fr/docs/Web/API/IDBTransaction/error_event">Événement <code>error</code></a></li>
+      <li><a href="/fr/docs/Web/API/IDBTransaction/abort_event">abort</a></li>
+      <li><a href="/fr/docs/Web/API/IDBTransaction/complete_event">complete</a></li>
+      <li><a href="/fr/docs/Web/API/IDBTransaction/error_event">error</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/MediaDevices"><code>MediaDevices</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("MediaDevices")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/MediaDevices/devicechange_event">Événement <code>devicechange</code></a></li>
+      <li><a href="/fr/docs/Web/API/MediaDevices/devicechange_event">devicechange</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/MediaRecorder"><code>MediaRecorder</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("MediaRecorder")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/MediaRecorder/error_event">Événement <code>error</code></a></li>
+      <li><a href="/fr/docs/Web/API/MediaRecorder/error_event">error</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/MediaStream"><code>MediaStream</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("MediaStream")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/MediaStream/addtrack_event">Événement <code>addtrack</code></a></li>
-      <li><a href="/fr/docs/Web/API/MediaStream/removetrack_event">Événement <code>removetrack</code></a></li>
+      <li><a href="/fr/docs/Web/API/MediaStream/addtrack_event">addtrack</a></li>
+      <li><a href="/fr/docs/Web/API/MediaStream/removetrack_event">removetrack</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/MediaStreamTrack"><code>MediaStreamTrack</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("MediaStreamTrack")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/MediaStreamTrack/ended_event">Événement <code>ended</code></a></li>
-      <li><a href="/fr/docs/Web/API/MediaStreamTrack/mute_event">Événement <code>mute</code></a></li>
-      <li><a href="/fr/docs/Web/API/MediaStreamTrack/unmute_event">Événement <code>unmute</code></a></li>
+      <li><a href="/fr/docs/Web/API/MediaStreamTrack/ended_event">ended</a></li>
+      <li><a href="/fr/docs/Web/API/MediaStreamTrack/mute_event">mute</a></li>
+      <li><a href="/fr/docs/Web/API/MediaStreamTrack/unmute_event">unmute</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/MessagePort"><code>MessagePort</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("MessagePort")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/MessagePort/messageerror_event">Événement <code>messageerror</code></a></li>
-      <li><a href="/fr/docs/Web/API/MessagePort/message_event">Événement <code>message</code></a></li>
+      <li><a href="/fr/docs/Web/API/MessagePort/messageerror_event">messageerror</a></li>
+      <li><a href="/fr/docs/Web/API/MessagePort/message_event">message</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/OfflineAudioContext"><code>OfflineAudioContext</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("OfflineAudioContext")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/OfflineAudioContext/complete_event">Événement <code>complete</code></a></li>
+      <li><a href="/fr/docs/Web/API/OfflineAudioContext/complete_event">complete</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/PaymentRequest"><code>PaymentRequest</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("PaymentRequest")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/PaymentRequest/merchantvalidation_event">Événement <code>merchantvalidation</code></a></li>
-      <li><a href="/fr/docs/Web/API/PaymentRequest/paymentmethodchange_event">Événement <code>paymentmethodchange</code></a></li>
-      <li><a href="/fr/docs/Web/API/PaymentRequest/shippingaddresschange_event">Événement <code>shippingaddresschange</code></a></li>
-      <li><a href="/fr/docs/Web/API/PaymentRequest/shippingoptionchange_event">Événement <code>shippingoptionchange</code></a></li>
+      <li><a href="/fr/docs/Web/API/PaymentRequest/merchantvalidation_event">merchantvalidation</a></li>
+      <li><a href="/fr/docs/Web/API/PaymentRequest/paymentmethodchange_event">paymentmethodchange</a></li>
+      <li><a href="/fr/docs/Web/API/PaymentRequest/shippingaddresschange_event">shippingaddresschange</a></li>
+      <li><a href="/fr/docs/Web/API/PaymentRequest/shippingoptionchange_event">shippingoptionchange</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/PaymentResponse"><code>PaymentResponse</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("PaymentResponse")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/PaymentResponse/payerdetailchange_event">Événement <code>payerdetailchange</code></a></li>
+      <li><a href="/fr/docs/Web/API/PaymentResponse/payerdetailchange_event">payerdetailchange</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/Performance"><code>Performance</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("Performance")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/Performance/resourcetimingbufferfull_event">Événement <code>resourcetimingbufferfull</code></a></li>
+      <li><a href="/fr/docs/Web/API/Performance/resourcetimingbufferfull_event">resourcetimingbufferfull</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/PictureInPictureWindow"><code>PictureInPictureWindow</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("PictureInPictureWindow")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/PictureInPictureWindow/resize_event">Événement <code>resize</code></a></li>
+      <li><a href="/fr/docs/Web/API/PictureInPictureWindow/resize_event">resize</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/RTCDataChannel"><code>RTCDataChannel</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("RTCDataChannel")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/RTCDataChannel/bufferedamountlow_event">Événement <code>bufferedamountlow</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCDataChannel/close_event">Événement <code>close</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCDataChannel/closing_event">Événement <code>closing</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCDataChannel/error_event">Événement <code>error</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCDataChannel/message_event">Événement <code>message</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCDataChannel/open_event">Événement <code>open</code></a></li>
+      <li><a href="/fr/docs/Web/API/RTCDataChannel/bufferedamountlow_event">bufferedamountlow</a></li>
+      <li><a href="/fr/docs/Web/API/RTCDataChannel/close_event">close</a></li>
+      <li><a href="/fr/docs/Web/API/RTCDataChannel/closing_event">closing</a></li>
+      <li><a href="/fr/docs/Web/API/RTCDataChannel/error_event">error</a></li>
+      <li><a href="/fr/docs/Web/API/RTCDataChannel/message_event">message</a></li>
+      <li><a href="/fr/docs/Web/API/RTCDataChannel/open_event">open</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/RTCDtlsTransport"><code>RTCDtlsTransport</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("RTCDtlsTransport")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/RTCDtlsTransport/error_event">Événement <code>error</code></a></li>
+      <li><a href="/fr/docs/Web/API/RTCDtlsTransport/error_event">error</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/RTCDTMFSender"><code>RTCDTMFSender</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("RTCDTMFSender")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/RTCDTMFSender/tonechange_event">Événement <code>tonechange</code></a></li>
+      <li><a href="/fr/docs/Web/API/RTCDTMFSender/tonechange_event">tonechange</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/RTCIceTransport"><code>RTCIceTransport</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("RTCIceTransport")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/RTCIceTransport/gatheringstatechange_event">Événement <code>gatheringstatechange</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event">Événement <code>selectedcandidatepairchange</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCIceTransport/statechange_event">Événement <code>statechange</code></a></li>
+      <li><a href="/fr/docs/Web/API/RTCIceTransport/gatheringstatechange_event">gatheringstatechange</a></li>
+      <li><a href="/fr/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event">selectedcandidatepairchange</a></li>
+      <li><a href="/fr/docs/Web/API/RTCIceTransport/statechange_event">statechange</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/RTCPeerConnection"><code>RTCPeerConnection</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("RTCPeerConnection")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/RTCPeerConnection/addstream_event">Événement <code>addstream</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCPeerConnection/connectionstatechange_event">Événement <code>connectionstatechange</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCPeerConnection/datachannel_event">Événement <code>datachannel</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCPeerConnection/icecandidateerror_event">Événement <code>icecandidateerror</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCPeerConnection/icecandidate_event">Événement <code>icecandidate</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event">Événement <code>iceconnectionstatechange</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event">Événement <code>icegatheringstatechange</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCPeerConnection/identityresult_event">Événement <code>identityresult</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCPeerConnection/idpassertionerror_event">Événement <code>idpassertionerror</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCPeerConnection/idpvalidationerror_event">Événement <code>idpvalidationerror</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCPeerConnection/negotiationneeded_event">Événement <code>negotiationneeded</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCPeerConnection/peeridentity_event">Événement <code>peeridentity</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCPeerConnection/removestream_event">Événement <code>removestream</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCPeerConnection/signalingstatechange_event">Événement <code>signalingstatechange</code></a></li>
-      <li><a href="/fr/docs/Web/API/RTCPeerConnection/track_event">Événement <code>track</code></a></li>
+      <li><a href="/fr/docs/Web/API/RTCPeerConnection/addstream_event">addstream</a></li>
+      <li><a href="/fr/docs/Web/API/RTCPeerConnection/connectionstatechange_event">connectionstatechange</a></li>
+      <li><a href="/fr/docs/Web/API/RTCPeerConnection/datachannel_event">datachannel</a></li>
+      <li><a href="/fr/docs/Web/API/RTCPeerConnection/icecandidateerror_event">icecandidateerror</a></li>
+      <li><a href="/fr/docs/Web/API/RTCPeerConnection/icecandidate_event">icecandidate</a></li>
+      <li><a href="/fr/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event">iceconnectionstatechange</a></li>
+      <li><a href="/fr/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event">icegatheringstatechange</a></li>
+      <li><a href="/fr/docs/Web/API/RTCPeerConnection/negotiationneeded_event">negotiationneeded</a></li>
+      <li><a href="/fr/docs/Web/API/RTCPeerConnection/removestream_event">removestream</a></li>
+      <li><a href="/fr/docs/Web/API/RTCPeerConnection/signalingstatechange_event">signalingstatechange</a></li>
+      <li><a href="/fr/docs/Web/API/RTCPeerConnection/track_event">track</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/ScriptProcessorNode"><code>ScriptProcessorNode</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("ScriptProcessorNode")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/ScriptProcessorNode/audioprocess_event">Événement <code>audioprocess</code></a></li>
+      <li><a href="/fr/docs/Web/API/ScriptProcessorNode/audioprocess_event">audioprocess</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/ServiceWorkerContainer"><code>ServiceWorkerContainer</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("ServiceWorkerContainer")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/ServiceWorkerContainer/message_event">Événement <code>message</code></a></li>
+      <li><a href="/fr/docs/Web/API/ServiceWorkerContainer/message_event">message</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope"><code>ServiceWorkerGlobalScope</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("ServiceWorkerGlobalScope")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/activate_event">Événement <code>activate</code></a></li>
-      <li><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/contentdelete_event">Événement <code>contentdelete</code></a></li>
-      <li><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/install_event">Événement <code>install</code></a></li>
-      <li><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/message_event">Événement <code>message</code></a></li>
-      <li><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event">Événement <code>notificationclick</code></a></li>
-      <li><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event">Événement <code>pushsubscriptionchange</code></a></li>
-      <li><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event">Événement <code>push</code></a></li>
+      <li><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/activate_event">activate</a></li>
+      <li><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/contentdelete_event">contentdelete</a></li>
+      <li><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/install_event">install</a></li>
+      <li><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/message_event">message</a></li>
+      <li><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event">notificationclick</a></li>
+      <li><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event">pushsubscriptionchange</a></li>
+      <li><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event">push</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/SharedWorkerGlobalScope"><code>SharedWorkerGlobalScope</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("SharedWorkerGlobalScope")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event">Événement <code>connect</code></a></li>
+      <li><a href="/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event">connect</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/SpeechRecognition"><code>SpeechRecognition</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("SpeechRecognition")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/SpeechRecognition/audioend_event">Événement <code>audioend</code></a></li>
-      <li><a href="/fr/docs/Web/API/SpeechRecognition/audiostart_event">Événement <code>audiostart</code></a></li>
-      <li><a href="/fr/docs/Web/API/SpeechRecognition/end_event">Événement <code>end</code></a></li>
-      <li><a href="/fr/docs/Web/API/SpeechRecognition/error_event">Événement <code>error</code></a></li>
-      <li><a href="/fr/docs/Web/API/SpeechRecognition/nomatch_event">Événement <code>nomatch</code></a></li>
-      <li><a href="/fr/docs/Web/API/SpeechRecognition/result_event">Événement <code>result</code></a></li>
-      <li><a href="/fr/docs/Web/API/SpeechRecognition/soundend_event">Événement <code>soundend</code></a></li>
-      <li><a href="/fr/docs/Web/API/SpeechRecognition/soundstart_event">Événement <code>soundstart</code></a></li>
-      <li><a href="/fr/docs/Web/API/SpeechRecognition/speechend_event">Événement <code>speechend</code></a></li>
-      <li><a href="/fr/docs/Web/API/SpeechRecognition/speechstart_event">Événement <code>speechstart</code></a></li>
-      <li><a href="/fr/docs/Web/API/SpeechRecognition/start_event">Événement <code>start</code></a></li>
+      <li><a href="/fr/docs/Web/API/SpeechRecognition/audioend_event">audioend</a></li>
+      <li><a href="/fr/docs/Web/API/SpeechRecognition/audiostart_event">audiostart</a></li>
+      <li><a href="/fr/docs/Web/API/SpeechRecognition/end_event">end</a></li>
+      <li><a href="/fr/docs/Web/API/SpeechRecognition/error_event">error</a></li>
+      <li><a href="/fr/docs/Web/API/SpeechRecognition/nomatch_event">nomatch</a></li>
+      <li><a href="/fr/docs/Web/API/SpeechRecognition/result_event">result</a></li>
+      <li><a href="/fr/docs/Web/API/SpeechRecognition/soundend_event">soundend</a></li>
+      <li><a href="/fr/docs/Web/API/SpeechRecognition/soundstart_event">soundstart</a></li>
+      <li><a href="/fr/docs/Web/API/SpeechRecognition/speechend_event">speechend</a></li>
+      <li><a href="/fr/docs/Web/API/SpeechRecognition/speechstart_event">speechstart</a></li>
+      <li><a href="/fr/docs/Web/API/SpeechRecognition/start_event">start</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/SpeechSynthesis"><code>SpeechSynthesis</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("SpeechSynthesis")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/SpeechSynthesis/voiceschanged_event">Événement <code>voiceschanged</code></a></li>
+      <li><a href="/fr/docs/Web/API/SpeechSynthesis/voiceschanged_event">voiceschanged</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/SpeechSynthesisUtterance"><code>SpeechSynthesisUtterance</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("SpeechSynthesisUtterance")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/SpeechSynthesisUtterance/boundary_event">Événement <code>boundary</code></a></li>
-      <li><a href="/fr/docs/Web/API/SpeechSynthesisUtterance/end_event">Événement <code>end</code></a></li>
-      <li><a href="/fr/docs/Web/API/SpeechSynthesisUtterance/error_event">Événement <code>error</code></a></li>
-      <li><a href="/fr/docs/Web/API/SpeechSynthesisUtterance/mark_event">Événement <code>mark</code></a></li>
-      <li><a href="/fr/docs/Web/API/SpeechSynthesisUtterance/pause_event">Événement <code>pause</code></a></li>
-      <li><a href="/fr/docs/Web/API/SpeechSynthesisUtterance/resume_event">Événement <code>resume</code></a></li>
-      <li><a href="/fr/docs/Web/API/SpeechSynthesisUtterance/start_event">Événement <code>start</code></a></li>
+      <li><a href="/fr/docs/Web/API/SpeechSynthesisUtterance/boundary_event">boundary</a></li>
+      <li><a href="/fr/docs/Web/API/SpeechSynthesisUtterance/end_event">end</a></li>
+      <li><a href="/fr/docs/Web/API/SpeechSynthesisUtterance/error_event">error</a></li>
+      <li><a href="/fr/docs/Web/API/SpeechSynthesisUtterance/mark_event">mark</a></li>
+      <li><a href="/fr/docs/Web/API/SpeechSynthesisUtterance/pause_event">pause</a></li>
+      <li><a href="/fr/docs/Web/API/SpeechSynthesisUtterance/resume_event">resume</a></li>
+      <li><a href="/fr/docs/Web/API/SpeechSynthesisUtterance/start_event">start</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/SVGAnimationElement"><code>SVGAnimationElement</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("SVGAnimationElement")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/SVGAnimationElement/beginEvent_event">Événement <code>beginEvent</code></a></li>
-      <li><a href="/fr/docs/Web/API/SVGAnimationElement/endEvent_event">Événement <code>endEvent</code></a></li>
-      <li><a href="/fr/docs/Web/API/SVGAnimationElement/repeatEvent_event">Événement <code>repeatEvent</code></a></li>
+      <li><a href="/fr/docs/Web/API/SVGAnimationElement/beginEvent_event">beginEvent</a></li>
+      <li><a href="/fr/docs/Web/API/SVGAnimationElement/endEvent_event">endEvent</a></li>
+      <li><a href="/fr/docs/Web/API/SVGAnimationElement/repeatEvent_event">repeatEvent</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/SVGElement"><code>SVGElement</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("SVGElement")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/SVGElement/abort_event">Événement <code>abort</code></a></li>
-      <li><a href="/fr/docs/Web/API/SVGElement/error_event">Événement <code>error</code></a></li>
-      <li><a href="/fr/docs/Web/API/SVGElement/load_event">Événement <code>load</code></a></li>
-      <li><a href="/fr/docs/Web/API/SVGElement/resize_event">Événement <code>resize</code></a></li>
-      <li><a href="/fr/docs/Web/API/SVGElement/scroll_event">Événement <code>scroll</code></a></li>
-      <li><a href="/fr/docs/Web/API/SVGElement/unload_event">Événement <code>unload</code></a></li>
+      <li><a href="/fr/docs/Web/API/SVGElement/abort_event">abort</a></li>
+      <li><a href="/fr/docs/Web/API/SVGElement/error_event">error</a></li>
+      <li><a href="/fr/docs/Web/API/SVGElement/load_event">load</a></li>
+      <li><a href="/fr/docs/Web/API/SVGElement/resize_event">resize</a></li>
+      <li><a href="/fr/docs/Web/API/SVGElement/scroll_event">scroll</a></li>
+      <li><a href="/fr/docs/Web/API/SVGElement/unload_event">unload</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/SVGGraphicsElement"><code>SVGGraphicsElement</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("SVGGraphicsElement")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/SVGGraphicsElement/copy_event">Événement <code>copy</code></a></li>
-      <li><a href="/fr/docs/Web/API/SVGGraphicsElement/cut_event">Événement <code>cut</code></a></li>
-      <li><a href="/fr/docs/Web/API/SVGGraphicsElement/paste_event">Événement <code>paste</code></a></li>
+      <li><a href="/fr/docs/Web/API/SVGGraphicsElement/copy_event">copy</a></li>
+      <li><a href="/fr/docs/Web/API/SVGGraphicsElement/cut_event">cut</a></li>
+      <li><a href="/fr/docs/Web/API/SVGGraphicsElement/paste_event">paste</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/TextTrack"><code>TextTrack</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("TextTrack")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/TextTrack/cuechange_event">Événement <code>cuechange</code></a></li>
+      <li><a href="/fr/docs/Web/API/TextTrack/cuechange_event">cuechange</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/TextTrackList"><code>TextTrackList</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("TextTrackList")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/TextTrackList/addtrack_event">Événement <code>addtrack</code></a></li>
-      <li><a href="/fr/docs/Web/API/TextTrackList/change_event">Événement <code>change</code></a></li>
-      <li><a href="/fr/docs/Web/API/TextTrackList/removeTrack_event">Événement <code>removeTrack</code></a></li>
+      <li><a href="/fr/docs/Web/API/TextTrackList/addtrack_event">addtrack</a></li>
+      <li><a href="/fr/docs/Web/API/TextTrackList/change_event">change</a></li>
+      <li><a href="/fr/docs/Web/API/TextTrackList/removeTrack_event">removeTrack</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/VideoTrackList"><code>VideoTrackList</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("VideoTrackList")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/VideoTrackList/addtrack_event">Événement <code>addtrack</code></a></li>
-      <li><a href="/fr/docs/Web/API/VideoTrackList/change_event">Événement <code>change</code></a></li>
-      <li><a href="/fr/docs/Web/API/VideoTrackList/removetrack_event">Événement <code>removetrack</code></a></li>
+      <li><a href="/fr/docs/Web/API/VideoTrackList/addtrack_event">addtrack</a></li>
+      <li><a href="/fr/docs/Web/API/VideoTrackList/change_event">change</a></li>
+      <li><a href="/fr/docs/Web/API/VideoTrackList/removetrack_event">removetrack</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/VisualViewport"><code>VisualViewport</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("VisualViewport")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/VisualViewport/resize_event">Événement <code>resize</code></a></li>
-      <li><a href="/fr/docs/Web/API/VisualViewport/scroll_event">Événement <code>scroll</code></a></li>
+      <li><a href="/fr/docs/Web/API/VisualViewport/resize_event">resize</a></li>
+      <li><a href="/fr/docs/Web/API/VisualViewport/scroll_event">scroll</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/WebSocket"><code>WebSocket</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("WebSocket")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/WebSocket/close_event">Événement <code>close</code></a></li>
-      <li><a href="/fr/docs/Web/API/WebSocket/error_event">Événement <code>error</code></a></li>
-      <li><a href="/fr/docs/Web/API/WebSocket/message_event">Événement <code>message</code></a></li>
-      <li><a href="/fr/docs/Web/API/WebSocket/open_event">Événement <code>open</code></a></li>
+      <li><a href="/fr/docs/Web/API/WebSocket/close_event">close</a></li>
+      <li><a href="/fr/docs/Web/API/WebSocket/error_event">error</a></li>
+      <li><a href="/fr/docs/Web/API/WebSocket/message_event">message</a></li>
+      <li><a href="/fr/docs/Web/API/WebSocket/open_event">open</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/Window"><code>Window</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("Window")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/Window/afterprint_event">Événement <code>afterprint</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/animationcancel_event">Événement <code>animationcancel</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/animationend_event">Événement <code>animationend</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/animationiteration_event">Événement <code>animationiteration</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/animationstart_event">Événement <code>animationstart</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/appinstalled_event">Événement <code>appinstalled</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/beforeprint_event">Événement <code>beforeprint</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/beforeunload_event">Événement <code>beforeunload</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/blur_event">Événement <code>blur</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/copy_event">Événement <code>copy</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/cut_event">Événement <code>cut</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/devicemotion_event">Événement <code>devicemotion</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/deviceorientation_event">Événement <code>deviceorientation</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/DOMContentLoaded_event">Événement <code>DOMContentLoaded</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/error_event">Événement <code>error</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/focus_event">Événement <code>focus</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/gamepadconnected_event">Événement <code>gamepadconnected</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/gamepaddisconnected_event">Événement <code>gamepaddisconnected</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/hashchange_event">Événement <code>hashchange</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/languagechange_event">Événement <code>languagechange</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/load_event">Événement <code>load</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/messageerror_event">Événement <code>messageerror</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/message_event">Événement <code>message</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/offline_event">Événement <code>offline</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/online_event">Événement <code>online</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/orientationchange_event">Événement <code>orientationchange</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/pagehide_event">Événement <code>pagehide</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/pageshow_event">Événement <code>pageshow</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/paste_event">Événement <code>paste</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/popstate_event">Événement <code>popstate</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/rejectionhandled_event">Événement <code>rejectionhandled</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/resize_event">Événement <code>resize</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/storage_event">Événement <code>storage</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/transitioncancel_event">Événement <code>transitioncancel</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/transitionend_event">Événement <code>transitionend</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/transitionrun_event">Événement <code>transitionrun</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/transitionstart_event">Événement <code>transitionstart</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/unhandledrejection_event">Événement <code>unhandledrejection</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/unload_event">Événement <code>unload</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/vrdisplayactivate_event">Événement <code>vrdisplayactivate</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/vrdisplayblur_event">Événement <code>vrdisplayblur</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/vrdisplayconnect_event">Événement <code>vrdisplayconnect</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/vrdisplaydeactivate_event">Événement <code>vrdisplaydeactivate</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/vrdisplaydisconnect_event">Événement <code>vrdisplaydisconnect</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/vrdisplayfocus_event">Événement <code>vrdisplayfocus</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/vrdisplaypointerrestricted_event">Événement <code>vrdisplaypointerrestricted</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/vrdisplaypointerunrestricted_event">Événement <code>vrdisplaypointerunrestricted</code></a></li>
-      <li><a href="/fr/docs/Web/API/Window/vrdisplaypresentchange_event">Événement <code>vrdisplaypresentchange</code></a></li>
+      <li><a href="/fr/docs/Web/API/Window/afterprint_event">afterprint</a></li>
+      <li><a href="/fr/docs/Web/API/Window/animationcancel_event">animationcancel</a></li>
+      <li><a href="/fr/docs/Web/API/Window/animationend_event">animationend</a></li>
+      <li><a href="/fr/docs/Web/API/Window/animationiteration_event">animationiteration</a></li>
+      <li><a href="/fr/docs/Web/API/Window/animationstart_event">animationstart</a></li>
+      <li><a href="/fr/docs/Web/API/Window/appinstalled_event">appinstalled</a></li>
+      <li><a href="/fr/docs/Web/API/Window/beforeprint_event">beforeprint</a></li>
+      <li><a href="/fr/docs/Web/API/Window/beforeunload_event">beforeunload</a></li>
+      <li><a href="/fr/docs/Web/API/Window/blur_event">blur</a></li>
+      <li><a href="/fr/docs/Web/API/Window/copy_event">copy</a></li>
+      <li><a href="/fr/docs/Web/API/Window/cut_event">cut</a></li>
+      <li><a href="/fr/docs/Web/API/Window/devicemotion_event">devicemotion</a></li>
+      <li><a href="/fr/docs/Web/API/Window/deviceorientation_event">deviceorientation</a></li>
+      <li><a href="/fr/docs/Web/API/Window/DOMContentLoaded_event">DOMContentLoaded</a></li>
+      <li><a href="/fr/docs/Web/API/Window/error_event">error</a></li>
+      <li><a href="/fr/docs/Web/API/Window/focus_event">focus</a></li>
+      <li><a href="/fr/docs/Web/API/Window/gamepadconnected_event">gamepadconnected</a></li>
+      <li><a href="/fr/docs/Web/API/Window/gamepaddisconnected_event">gamepaddisconnected</a></li>
+      <li><a href="/fr/docs/Web/API/Window/hashchange_event">hashchange</a></li>
+      <li><a href="/fr/docs/Web/API/Window/languagechange_event">languagechange</a></li>
+      <li><a href="/fr/docs/Web/API/Window/load_event">load</a></li>
+      <li><a href="/fr/docs/Web/API/Window/messageerror_event">messageerror</a></li>
+      <li><a href="/fr/docs/Web/API/Window/message_event">message</a></li>
+      <li><a href="/fr/docs/Web/API/Window/offline_event">offline</a></li>
+      <li><a href="/fr/docs/Web/API/Window/online_event">online</a></li>
+      <li><a href="/fr/docs/Web/API/Window/orientationchange_event">orientationchange</a></li>
+      <li><a href="/fr/docs/Web/API/Window/pagehide_event">pagehide</a></li>
+      <li><a href="/fr/docs/Web/API/Window/pageshow_event">pageshow</a></li>
+      <li><a href="/fr/docs/Web/API/Window/paste_event">paste</a></li>
+      <li><a href="/fr/docs/Web/API/Window/popstate_event">popstate</a></li>
+      <li><a href="/fr/docs/Web/API/Window/rejectionhandled_event">rejectionhandled</a></li>
+      <li><a href="/fr/docs/Web/API/Window/resize_event">resize</a></li>
+      <li><a href="/fr/docs/Web/API/Window/storage_event">storage</a></li>
+      <li><a href="/fr/docs/Web/API/Window/transitioncancel_event">transitioncancel</a></li>
+      <li><a href="/fr/docs/Web/API/Window/transitionend_event">transitionend</a></li>
+      <li><a href="/fr/docs/Web/API/Window/transitionrun_event">transitionrun</a></li>
+      <li><a href="/fr/docs/Web/API/Window/transitionstart_event">transitionstart</a></li>
+      <li><a href="/fr/docs/Web/API/Window/unhandledrejection_event">unhandledrejection</a></li>
+      <li><a href="/fr/docs/Web/API/Window/unload_event">unload</a></li>
+      <li><a href="/fr/docs/Web/API/Window/vrdisplayactivate_event">vrdisplayactivate</a></li>
+      <li><a href="/fr/docs/Web/API/Window/vrdisplayblur_event">vrdisplayblur</a></li>
+      <li><a href="/fr/docs/Web/API/Window/vrdisplayconnect_event">vrdisplayconnect</a></li>
+      <li><a href="/fr/docs/Web/API/Window/vrdisplaydeactivate_event">vrdisplaydeactivate</a></li>
+      <li><a href="/fr/docs/Web/API/Window/vrdisplaydisconnect_event">vrdisplaydisconnect</a></li>
+      <li><a href="/fr/docs/Web/API/Window/vrdisplayfocus_event">vrdisplayfocus</a></li>
+      <li><a href="/fr/docs/Web/API/Window/vrdisplaypointerrestricted_event">vrdisplaypointerrestricted</a></li>
+      <li><a href="/fr/docs/Web/API/Window/vrdisplaypointerunrestricted_event">vrdisplaypointerunrestricted</a></li>
+      <li><a href="/fr/docs/Web/API/Window/vrdisplaypresentchange_event">vrdisplaypresentchange</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/Worker"><code>Worker</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("Worker")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/Worker/messageerror_event">Événement <code>messageerror</code></a></li>
-      <li><a href="/fr/docs/Web/API/Worker/message_event">Événement <code>message</code></a></li>
+      <li><a href="/fr/docs/Web/API/Worker/messageerror_event">messageerror</a></li>
+      <li><a href="/fr/docs/Web/API/Worker/message_event">message</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/WorkerGlobalScope"><code>WorkerGlobalScope</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("WorkerGlobalScope")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/WorkerGlobalScope/languagechange_event">Événement <code>languagechange</code></a></li>
+      <li><a href="/fr/docs/Web/API/WorkerGlobalScope/languagechange_event">languagechange</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("XMLHttpRequest")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/XMLHttpRequest/abort_event">Événement <code>abort</code></a></li>
-      <li><a href="/fr/docs/Web/API/XMLHttpRequest/error_event">Événement <code>error</code></a></li>
-      <li><a href="/fr/docs/Web/API/XMLHttpRequest/loadend_event">Événement <code>loadend</code></a></li>
-      <li><a href="/fr/docs/Web/API/XMLHttpRequest/loadstart_event">Événement <code>loadstart</code></a></li>
-      <li><a href="/fr/docs/Web/API/XMLHttpRequest/load_event">Événement <code>load</code></a></li>
-      <li><a href="/fr/docs/Web/API/XMLHttpRequest/progress_event">Événement <code>progress</code></a></li>
-      <li><a href="/fr/docs/Web/API/XMLHttpRequest/timeout_event">Événement <code>timeout</code></a></li>
+      <li><a href="/fr/docs/Web/API/XMLHttpRequest/abort_event">abort</a></li>
+      <li><a href="/fr/docs/Web/API/XMLHttpRequest/error_event">error</a></li>
+      <li><a href="/fr/docs/Web/API/XMLHttpRequest/loadend_event">loadend</a></li>
+      <li><a href="/fr/docs/Web/API/XMLHttpRequest/loadstart_event">loadstart</a></li>
+      <li><a href="/fr/docs/Web/API/XMLHttpRequest/load_event">load</a></li>
+      <li><a href="/fr/docs/Web/API/XMLHttpRequest/progress_event">progress</a></li>
+      <li><a href="/fr/docs/Web/API/XMLHttpRequest/timeout_event">timeout</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/XRReferenceSpace"><code>XRReferenceSpace</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("XRReferenceSpace")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/XRReferenceSpace/reset_event">Événement <code>reset</code></a></li>
+      <li><a href="/fr/docs/Web/API/XRReferenceSpace/reset_event">reset</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/XRSession"><code>XRSession</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("XRSession")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/XRSession/end_event">Événement <code>end</code></a></li>
-      <li><a href="/fr/docs/Web/API/XRSession/inputsourceschange_event">Événement <code>inputsourceschange</code></a></li>
-      <li><a href="/fr/docs/Web/API/XRSession/selectend_event">Événement <code>selectend</code></a></li>
-      <li><a href="/fr/docs/Web/API/XRSession/selectstart_event">Événement <code>selectstart</code></a></li>
-      <li><a href="/fr/docs/Web/API/XRSession/select_event">Événement <code>select</code></a></li>
-      <li><a href="/fr/docs/Web/API/XRSession/squeezeend_event">Événement <code>squeezeend</code></a></li>
-      <li><a href="/fr/docs/Web/API/XRSession/squeezestart_event">Événement <code>squeezestart</code></a></li>
-      <li><a href="/fr/docs/Web/API/XRSession/squeeze_event">Événement <code>squeeze</code></a></li>
-      <li><a href="/fr/docs/Web/API/XRSession/visibilitychange_event">Événement <code>visibilitychange</code></a></li>
+      <li><a href="/fr/docs/Web/API/XRSession/end_event">end</a></li>
+      <li><a href="/fr/docs/Web/API/XRSession/inputsourceschange_event">inputsourceschange</a></li>
+      <li><a href="/fr/docs/Web/API/XRSession/selectend_event">selectend</a></li>
+      <li><a href="/fr/docs/Web/API/XRSession/selectstart_event">selectstart</a></li>
+      <li><a href="/fr/docs/Web/API/XRSession/select_event">select</a></li>
+      <li><a href="/fr/docs/Web/API/XRSession/squeezeend_event">squeezeend</a></li>
+      <li><a href="/fr/docs/Web/API/XRSession/squeezestart_event">squeezestart</a></li>
+      <li><a href="/fr/docs/Web/API/XRSession/squeeze_event">squeeze</a></li>
+      <li><a href="/fr/docs/Web/API/XRSession/visibilitychange_event">visibilitychange</a></li>
     </ul>
-  </dd>
-  <dt><a href="/fr/docs/Web/API/XRSystem"><code>XRSystem</code></a></dt>
-  <dd>
+  </li>
+  <li>{{DOMxRef("XRSystem")}}
     <ul>
-      <li><a href="/fr/docs/Web/API/XRSystem/devicechange_event">Événement <code>devicechange</code></a></li>
+      <li><a href="/fr/docs/Web/API/XRSystem/devicechange_event">devicechange</a></li>
     </ul>
-  </dd>
-</dl>
+  </li>
+</ul>
