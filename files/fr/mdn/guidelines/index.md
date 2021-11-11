@@ -7,8 +7,8 @@ tags:
   - MDN Meta
 translation_of: MDN/Guidelines
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p>Ces guides fournissent des détails sur la manière de rédiger et de présenter la documentation MDN, mais également sur la façon dont les extraits de code et le contenu en général devraient être présentés. En respectant ces guides, vous vous assurez que ce que vous produisez est propre et facile à utiliser.</p>
+Ces guides fournissent des détails sur la manière de rédiger et de présenter la documentation MDN, mais également sur la façon dont les extraits de code et le contenu en général devraient être présentés. En respectant ces guides, vous vous assurez que ce que vous produisez est propre et facile à utiliser.
 
-<p>{{LandingPageListSubpages}}</p>
+{{LandingPageListSubpages}}
