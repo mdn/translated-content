@@ -10,37 +10,38 @@ tags:
   - WebGL
 translation_of: Web/Guide/Audio_and_video_manipulation
 ---
-<p>La beauté du web est qu'on peut combiner différentes technologies pour en créer de nouvelles. Avoir de l'audio et vidéo nativement dans le navigateur nous donne la possibilité d'utiliser ces flux de données avec d'autres technologies comme {{htmlelement("canvas")}}, <a href="/fr/docs/Web/API/WebGL_API">WebGL</a> ou <a href="/fr/docs/Web/API/Web_Audio_API">Web Audio API</a> pour modifier le média — par exemple ajouter des effets de réverbération ou de compression à l'audio, ou encore des filtres noir &amp; blanc/sépia aux vidéos. Cet article fournit une référence pour expliquer ce que vous pouvez faire.</p>
+La beauté du web est qu'on peut combiner différentes technologies pour en créer de nouvelles. Avoir de l'audio et vidéo nativement dans le navigateur nous donne la possibilité d'utiliser ces flux de données avec d'autres technologies comme {{htmlelement("canvas")}}, [WebGL](/fr/docs/Web/API/WebGL_API) ou [Web Audio API](/fr/docs/Web/API/Web_Audio_API) pour modifier le média — par exemple ajouter des effets de réverbération ou de compression à l'audio, ou encore des filtres noir & blanc/sépia aux vidéos. Cet article fournit une référence pour expliquer ce que vous pouvez faire.
 
-<h2 id="Manipulation_Vidéo">Manipulation Vidéo</h2>
+## Manipulation Vidéo
 
-<p>La possibilité de lire les valeurs de pixels de chaque image d'une vidéo peut être très utile, cela nous permet de placer ces images dans d'autres contextes.</p>
+La possibilité de lire les valeurs de pixels de chaque image d'une vidéo peut être très utile, cela nous permet de placer ces images dans d'autres contextes.
 
-<h3 id="Vidéo_et_Canvas">Vidéo et Canvas</h3>
+### Vidéo et Canvas
 
-<p>{{htmlelement("canvas")}} est un moyen de dessiner de manière scripté sur des pages web; c'est un outil très puissant et qui peut être couplé avec du contenu vidéo.</p>
+{{htmlelement("canvas")}} est un moyen de dessiner de manière scripté sur des pages web; c'est un outil très puissant et qui peut être couplé avec du contenu vidéo.
 
-<p>La technique générale est comme suit:</p>
+La technique générale est comme suit:
 
-<ol>
- <li>Dessiner une image de l'élément {{htmlelement("video")}} sur un élément {{htmlelement("canvas")}} intermédiaire.</li>
- <li>Lire les données de l'élément <code>&lt;canvas&gt;</code> et les manipuler.</li>
- <li>Écrire les données manipulées dans le <code>&lt;canvas&gt;</code> que l'on veut afficher.</li>
- <li>Marquer une pause et répéter.</li>
-</ol>
+1.  Dessiner une image de l'élément {{htmlelement("video")}} sur un élément {{htmlelement("canvas")}} intermédiaire.
+2.  Lire les données de l'élément `<canvas>` et les manipuler.
+3.  Écrire les données manipulées dans le `<canvas>` que l'on veut afficher.
+4.  Marquer une pause et répéter.
 
-<p>On peut configurer notre lecteur vidéo et l'élément <code>&lt;canvas&gt;</code> comme ceci:</p>
+On peut configurer notre lecteur vidéo et l'élément `<canvas>` comme ceci:
 
-<pre class="brush: html">&lt;video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous"&gt;
-  &lt;source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm"&gt;
-  &lt;source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4"&gt;
-&lt;/video&gt;
+```html
+<video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous">
+  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
+  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+</video>
 
-&lt;canvas id="my-canvas" width="480" height="270"&gt;&lt;/canvas&gt;</pre>
+<canvas id="my-canvas" width="480" height="270"></canvas>
+```
 
-<p>Et les manipuler comme ceci: (en l'occurence, on affiche une version en noir et blanc de la vidéo)</p>
+Et les manipuler comme ceci: (en l'occurence, on affiche une version en noir et blanc de la vidéo)
 
-<pre class="brush: js">var processor = {
+```js
+var processor = {
   timerCallback: function() {
     if (this.video.paused || this.video.ended) {
       return;
@@ -70,7 +71,7 @@ translation_of: Web/Guide/Audio_and_video_manipulation
     var frame = this.ctx1.getImageData(0, 0, this.width, this.height);
     var l = frame.data.length / 4;
 
-    for (var i = 0; i &lt; l; i++) {
+    for (var i = 0; i < l; i++) {
       var grey = (frame.data[i * 4 + 0] + frame.data[i * 4 + 1] + frame.data[i * 4 + 2]) / 3;
 
       frame.data[i * 4 + 0] = grey;
@@ -81,63 +82,66 @@ translation_of: Web/Guide/Audio_and_video_manipulation
 
     return;
   }
-};  </pre>
+};
+```
 
-<p>Une fois que la page est chargée, on peut appeler</p>
+Une fois que la page est chargée, on peut appeler
 
-<pre class="brush: js">processor.doLoad()</pre>
+```js
+processor.doLoad()
+```
 
-<p>{{EmbedLiveSample("Vidéo_et_Canvas", '100%', 550)}}</p>
+{{EmbedLiveSample("Vidéo_et_Canvas", '100%', 550)}}
 
-<div class="note">
-<p><strong>Note :</strong> En raison de problèmes de sécurité potentiels, si votre vidéo se trouve sur un domaine différent de votre page, vous devez activer <a href="/fr/docs/Web/HTTP/CORS">CORS (Cross Origin Resource Sharing)</a> sur le serveur qui héberge la vidéo et utiliser l'attribut <code>crossorigin</code> sur la balise vidéo.</p>
-</div>
+> **Note :** En raison de problèmes de sécurité potentiels, si votre vidéo se trouve sur un domaine différent de votre page, vous devez activer [CORS (Cross Origin Resource Sharing)](/fr/docs/Web/HTTP/CORS) sur le serveur qui héberge la vidéo et utiliser l'attribut `crossorigin` sur la balise vidéo.
 
-<div class="note">
-<p><strong>Note :</strong> L'exemple présenté est un exemple minimal de manipulation vidéo avec canvas; pour plus d'efficacité, vous pouvez envisager d'utiliser requestAnimationFrame à la place de setTimeout pour les navigateurs qui le prennent en charge.</p>
-</div>
+> **Note :** L'exemple présenté est un exemple minimal de manipulation vidéo avec canvas; pour plus d'efficacité, vous pouvez envisager d'utiliser requestAnimationFrame à la place de setTimeout pour les navigateurs qui le prennent en charge.
 
-<h3 id="Vidéo_e_WebGL">Vidéo e WebGL</h3>
+### Vidéo e WebGL
 
-<p><a href="/en-US/docs/Web/WebGL">WebGL</a> est une API puissante qui utilise canvas pour (typiquement) afficher des scènes en trois dimensions. On peut combiner WebGL et l'élément {{htmlelement("video")}} pour créer des textures vidéo, ce qui veut dire que vous pouvez placer une vidéo dans des scènes 3D.</p>
+[WebGL](/en-US/docs/Web/WebGL) est une API puissante qui utilise canvas pour (typiquement) afficher des scènes en trois dimensions. On peut combiner WebGL et l'élément {{htmlelement("video")}} pour créer des textures vidéo, ce qui veut dire que vous pouvez placer une vidéo dans des scènes 3D.
 
-<p>Exemple:</p>
+Exemple:
 
-<p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}</p>
+{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-<div class="note">
-<p><strong>Note :</strong> Vous pouvez trouver le <a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8">code source de cette démo sur GitHub</a> (<a href="https://mdn.github.io/webgl-examples/tutorial/sample8/">la voir en direct</a> aussi).</p>
-</div>
+> **Note :** Vous pouvez trouver le [code source de cette démo sur GitHub](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) ([la voir en direct](https://mdn.github.io/webgl-examples/tutorial/sample8/) aussi).
 
-<h3 id="Vitesse_de_lecture">Vitesse de lecture</h3>
+### Vitesse de lecture
 
-<p>On peut ajuster la vitesse de lecture de l'audio et vidéo en utilisant l'attribut <code>playbackRate</code> (voir {{domxref("HTMLMediaElement")}}). Il prend pour valeur un nombre qui est le coefficient à appliquer à la vitesse de lecture: par exemple, 0.5 représente la moitié de la vitesse tandis que 2 représente le double.<br>
- <br>
- HTML:</p>
+On peut ajuster la vitesse de lecture de l'audio et vidéo en utilisant l'attribut `playbackRate` (voir {{domxref("HTMLMediaElement")}}). Il prend pour valeur un nombre qui est le coefficient à appliquer à la vitesse de lecture: par exemple, 0.5 représente la moitié de la vitesse tandis que 2 représente le double.
 
-<pre class="brush: html">&lt;video id="my-video" controls src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"&gt;&lt;/video&gt;</pre>
+HTML:
 
-<p>JavaScript:</p>
+```html
+<video id="my-video" controls src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"></video>
+```
 
-<pre class="brush: js">var myVideo = document.getElementById('my-video');
-myVideo.playbackRate = 2;</pre>
+JavaScript:
 
-<h4>Code jouable</h4>
-
-<pre class="brush: html hidden">&lt;video id="my-video" controls="true" width="480" height="270"&gt;
-  &lt;source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm"&gt;
-  &lt;source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4"&gt;
-&lt;/video&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```js
 var myVideo = document.getElementById('my-video');
-myVideo.playbackRate = 2;&lt;/textarea&gt;
-</pre>
+myVideo.playbackRate = 2;
+```
 
-<pre class="brush: js hidden">var textarea = document.getElementById('code');
+#### Code jouable
+
+```html hidden
+<video id="my-video" controls="true" width="480" height="270">
+  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
+  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+</video>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
+var myVideo = document.getElementById('my-video');
+myVideo.playbackRate = 2;</textarea>
+```
+
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var edit = document.getElementById('edit');
 var code = textarea.value;
@@ -157,44 +161,41 @@ edit.addEventListener('click', function() {
 
 textarea.addEventListener('input', setPlaybackRate);
 window.addEventListener('load', setPlaybackRate);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Code jouable', 700, 425) }}</p>
+{{ EmbedLiveSample('Code jouable', 700, 425) }}
 
-<div class="note">
-<p><strong>Note :</strong> Essayez l' <a href="http://jsbin.com/qomuvefu/2/edit">exemple playbackRate</a> en direct.</p>
-</div>
+> **Note :** Essayez l' [exemple playbackRate](http://jsbin.com/qomuvefu/2/edit) en direct.
 
-<div class="note">
-<p><strong>Note :</strong> <code>playbackRate</code> marche avec les éléments <code>&lt;audio&gt;</code> et <code><code>&lt;video&gt;</code></code>; cependant, dans les deux cas, la vitesse change mais pas la hauteur du son. Pour manipuler la hauteur du son, vous devez utliliser l'API Web Audio — voir la propriété {{domxref("AudioBufferSourceNode.playbackRate")}}.</p>
-</div>
+> **Note :** `playbackRate` marche avec les éléments `<audio>` et `<video>`; cependant, dans les deux cas, la vitesse change mais pas la hauteur du son. Pour manipuler la hauteur du son, vous devez utliliser l'API Web Audio — voir la propriété {{domxref("AudioBufferSourceNode.playbackRate")}}.
 
-<h2 id="Manipulation_Audio">Manipulation Audio</h2>
+## Manipulation Audio
 
-<p>Laissons <code>playbackRate</code> de côté. Pour manipuler l'audio, on utilise typiquement l'<a href="/en-US/docs/Web/API/Web_Audio_API">API Web Audio</a>.</p>
+Laissons `playbackRate` de côté. Pour manipuler l'audio, on utilise typiquement l'[API Web Audio](/en-US/docs/Web/API/Web_Audio_API).
 
-<h3 id="Sélectionner_une_source_audio">Sélectionner une source audio</h3>
+### Sélectionner une source audio
 
-<p>On peut utiliser la piste audio d'un élément {{htmlelement("audio")}} ou {{htmlelement("video")}} comme source pour alimenter l'API Web Audio, ou un simple buffer audio, une onde sinusoïdale/oscillateur, un flux (comme <a href="/fr/docs/NavigatorUserMedia.getUserMedia">getUserMedia</a> de <a href="/fr/docs/Web/API/WebRTC_API">WebRTC</a>)... Découvrez exactement comment les utiliser en lisant les pages suivantes:</p>
+On peut utiliser la piste audio d'un élément {{htmlelement("audio")}} ou {{htmlelement("video")}} comme source pour alimenter l'API Web Audio, ou un simple buffer audio, une onde sinusoïdale/oscillateur, un flux (comme [getUserMedia](/fr/docs/NavigatorUserMedia.getUserMedia) de [WebRTC](/fr/docs/Web/API/WebRTC_API))... Découvrez exactement comment les utiliser en lisant les pages suivantes:
 
-<ul>
- <li>{{domxref("MediaElementAudioSourceNode")}}</li>
- <li>{{domxref("AudioBufferSourceNode")}}</li>
- <li>{{domxref("OscillatorNode")}}</li>
- <li>{{domxref("MediaStreamAudioSourceNode")}}</li>
-</ul>
+- {{domxref("MediaElementAudioSourceNode")}}
+- {{domxref("AudioBufferSourceNode")}}
+- {{domxref("OscillatorNode")}}
+- {{domxref("MediaStreamAudioSourceNode")}}
 
-<h3 id="Filtres_Audio">Filtres Audio</h3>
+### Filtres Audio
 
-<p>L'API Web Audio a beaucoup de différents filtres/effets qui peuvent être appliqués à l'audio en utilisant {{domxref("BiquadFilterNode")}}, par exemple:</p>
+L'API Web Audio a beaucoup de différents filtres/effets qui peuvent être appliqués à l'audio en utilisant {{domxref("BiquadFilterNode")}}, par exemple:
 
-<p>HTML:</p>
+HTML:
 
-<pre class="brush: html">&lt;video id="my-video" controls src="myvideo.mp4" type="video/mp4"&gt;&lt;/video&gt;</pre>
+```html
+<video id="my-video" controls src="myvideo.mp4" type="video/mp4"></video>
+```
 
-<p>JavaScript:</p>
+JavaScript:
 
-<pre class="brush: js">var context     = new AudioContext(),
+```js
+var context     = new AudioContext(),
     audioSource = context.createMediaElementSource(document.getElementById("my-video")),
     filter      = context.createBiquadFilter();
 audioSource.connect(filter);
@@ -203,24 +204,28 @@ filter.connect(context.destination);
 // Configure filter
 filter.type = "lowshelf";
 filter.frequency.value = 1000;
-filter.gain.value = 25;</pre>
+filter.gain.value = 25;
+```
 
-<h4>Code jouable 2</h4>
+#### Code jouable 2
 
-<pre class="brush: html hidden">&lt;video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous"&gt;
-  &lt;source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm"&gt;
-  &lt;source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4"&gt;
-&lt;/video&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous">
+  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
+  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+</video>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 filter.type = "lowshelf";
 filter.frequency.value = 1000;
-filter.gain.value = 25;&lt;/textarea&gt;</pre>
+filter.gain.value = 25;</textarea>
+```
 
-<pre class="brush: js hidden">var context     = new AudioContext(),
+```js hidden
+var context     = new AudioContext(),
     audioSource = context.createMediaElementSource(document.getElementById("my-video")),
     filter      = context.createBiquadFilter();
 audioSource.connect(filter);
@@ -246,59 +251,51 @@ edit.addEventListener('click', function() {
 
 textarea.addEventListener('input', setFilter);
 window.addEventListener('load', setFilter);
-</pre>
+```
 
+{{ EmbedLiveSample('Code_jouable_2', 700, 425) }}
 
-<p>{{ EmbedLiveSample('Code_jouable_2', 700, 425) }}</p>
+> **Note :** À moins que [CORS](/en-US/docs/Web/HTTP/Access_control_CORS) ne soit activé, vous devrez pour éviter les problèmes de sécurité placer la vidéo sur le même domaine que votre code.
 
-<div class="note">
-<p><strong>Note :</strong> À moins que <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> ne soit activé, vous devrez pour éviter les problèmes de sécurité placer la vidéo sur le même domaine que votre code.</p>
-</div>
+Les filtres pouvant être appliqués sont:
 
-<p>Les filtres pouvant être appliqués sont:</p>
+- Low Pass: Les fréquences en dessous de la fréquence de coupure sont inchangées et celles au-dessus sont atténuées.
+- High Pass: Les fréquences au-dessus de la fréquence de coupure sont inchangées et celles en dessous sont atténuées.
+- Band Pass: Les fréquence comprises entre deux bornes sont inchangées et celles en dehors sont atténuées.
+- Low Shelf: Les fréquences basses obtiennent un boost (ou une atténuation).
+- High Shelf: Les fréquences hautes obtiennent un boost (ou une atténuation).
+- Peaking: Les fréquences à l'intérieur d'une gamme donnée obtiennent un boost (ou une atténuation).
+- Notch: Les fréquences à l'intérieur d'une gamme donnée sont atténuées.
+- Allpass: Laisse touts les fréquences inchangées mais modifie le rapport de phrase entre les différentes fréquences.
 
-<ul>
- <li>Low Pass: Les fréquences en dessous de la fréquence de coupure sont inchangées et celles au-dessus sont atténuées.</li>
- <li>High Pass: Les fréquences au-dessus de la fréquence de coupure sont inchangées et celles en dessous sont atténuées.</li>
- <li>Band Pass: Les fréquence comprises entre deux bornes sont inchangées et celles en dehors sont atténuées.</li>
- <li>Low Shelf: Les fréquences basses obtiennent un boost (ou une atténuation).</li>
- <li>High Shelf: Les fréquences hautes obtiennent un boost (ou une atténuation).</li>
- <li>Peaking: Les fréquences à l'intérieur d'une gamme donnée obtiennent un boost (ou une atténuation).</li>
- <li>Notch: Les fréquences à l'intérieur d'une gamme donnée sont atténuées.</li>
- <li>Allpass: Laisse touts les fréquences inchangées mais modifie le rapport de phrase entre les différentes fréquences.</li>
-</ul>
+> **Note :** Voir {{domxref("BiquadFilterNode")}} pour plus d'informations.
 
-<div class="note">
-<p><strong>Note :</strong> Voir {{domxref("BiquadFilterNode")}} pour plus d'informations.</p>
-</div>
+### Convolutions et Impulsions
 
-<h3 id="Convolutions_et_Impulsions">Convolutions et Impulsions</h3>
+Il est également possible d'appliquer des réponses impulsionnelles à l'audio en utilisant {{domxref("ConvolverNode")}}. Une _réponse impulsionnelle_ (_impulse response_ en anglais) est un son crée après une brève impulsion sonore (comme un applaudissement) et qui s'applique sur l'environnement qui l'a créée. Exemple: un écho crée en frappant des mains dans un tunnel.
 
-<p>Il est également possible d'appliquer des réponses impulsionnelles à l'audio en utilisant {{domxref("ConvolverNode")}}. Une <em>réponse impulsionnelle</em> (<em>impulse response</em> en anglais) est un son crée après une brève impulsion sonore (comme un applaudissement) et qui s'applique sur l'environnement qui l'a créée. Exemple: un écho crée en frappant des mains dans un tunnel.</p>
+Exemple:
 
-<p>Exemple:</p>
-
-<pre class="brush: js">var convolver = context.createConvolver();
+```js
+var convolver = context.createConvolver();
 convolver.buffer = this.impulseResponseBuffer;
 // Connect the graph.
 source.connect(convolver);
-convolver.connect(context.destination);</pre>
+convolver.connect(context.destination);
+```
 
-<div class="note">
-<p><strong>Note :</strong> Voir ce <a href="https://codepen.io/DonKarlssonSan/pen/doVKRE">Codepen</a> pour un exemple appliqué.</p>
-</div>
+> **Note :** Voir ce [Codepen](https://codepen.io/DonKarlssonSan/pen/doVKRE) pour un exemple appliqué.
 
-<div class="note">
-<p><strong>Note :</strong> Voir {{domxref("ConvolverNode")}} pour plus d'informations.</p>
-</div>
+> **Note :** Voir {{domxref("ConvolverNode")}} pour plus d'informations.
 
-<h3 id="Audio_dans_l'espace">Audio dans l'espace</h3>
+### Audio dans l'espace
 
-<p>On peut également positionner l'audio dans l'espace en utilisant un noeud panoramique (un <em>panner</em>). Ce noeud permet de définir un cône source ainsi que des éléments positionnels et directionnels — le tout dans un espace 3D définit par des coordonnées cartésiennes 3D.  <br>
- <br>
- Exemple:</p>
+On peut également positionner l'audio dans l'espace en utilisant un noeud panoramique (un _panner_). Ce noeud permet de définir un cône source ainsi que des éléments positionnels et directionnels — le tout dans un espace 3D définit par des coordonnées cartésiennes 3D.
 
-<pre class="brush: js">var panner = context.createPanner();
+Exemple:
+
+```js
+var panner = context.createPanner();
 panner.coneOuterGain = 0.2;
 panner.coneOuterAngle = 120;
 panner.coneInnerAngle = 0;
@@ -308,54 +305,43 @@ source.connect(panner);
 source.start(0);
 
 // Position the listener at the origin.
-context.listener.setPosition(0, 0, 0);</pre>
+context.listener.setPosition(0, 0, 0);
+```
 
-<div class="note">
-<p><strong>Note :</strong> Vous pouvez trouver un <a href="https://github.com/mdn/webaudio-examples/tree/master/panner-node">exemple sur notre repo GitHub</a> (le <a href="https://mdn.github.io/webaudio-examples/panner-node/">voir en direct</a> aussi).</p>
-</div>
+> **Note :** Vous pouvez trouver un [exemple sur notre repo GitHub](https://github.com/mdn/webaudio-examples/tree/master/panner-node) (le [voir en direct](https://mdn.github.io/webaudio-examples/panner-node/) aussi).
 
-<div class="note">
-<p><strong>Note :</strong> Voir {{domxref("PannerNode")}} pour plus d'informations.</p>
-</div>
+> **Note :** Voir {{domxref("PannerNode")}} pour plus d'informations.
 
-<h2 id="Codecs_JavaScript">Codecs JavaScript</h2>
+## Codecs JavaScript
 
-<p>Il est possible de manipuler l'audio au bas niveau en utilisant JavaScript. Cela peut être utile si vous voulez créer des codecs audio.<br>
- <br>
- Des bibliothèques existent actuellement pour les formats suivants:</p>
+Il est possible de manipuler l'audio au bas niveau en utilisant JavaScript. Cela peut être utile si vous voulez créer des codecs audio.
 
-<ul>
- <li>AAC: <a href="https://github.com/audiocogs/aac.js">AAC.js</a></li>
- <li>ALAC: <a href="https://github.com/audiocogs/alac.js">alac.js</a></li>
- <li>FLAC: <a href="https://github.com/audiocogs/flac.js">flac.js</a></li>
- <li>MP3: <a href="https://github.com/audiocogs/mp3.js">mp3.js</a></li>
- <li>Opus: <a href="https://github.com/audiocogs/opus.js">Opus.js</a></li>
- <li>Vorbis: <a href="https://github.com/audiocogs/vorbis.js">vorbis.js</a></li>
-</ul>
+Des bibliothèques existent actuellement pour les formats suivants:
 
-<div class="note">
-<p><strong>Note :</strong> Sur AudioCogs, vous pouvez <a href="http://audiocogs.org/codecs/">essayer quelques démos</a>; Audiocogs fournit également un Framework, <a href="http://audiocogs.org/codecs/">Aurora.js</a>, qui est destiné à vous aider à créer vos propres codecs en JavaScript.</p>
-</div>
+- AAC: [AAC.js](https://github.com/audiocogs/aac.js)
+- ALAC: [alac.js](https://github.com/audiocogs/alac.js)
+- FLAC: [flac.js](https://github.com/audiocogs/flac.js)
+- MP3: [mp3.js](https://github.com/audiocogs/mp3.js)
+- Opus: [Opus.js](https://github.com/audiocogs/opus.js)
+- Vorbis: [vorbis.js](https://github.com/audiocogs/vorbis.js)
 
-<h2 id="Tutoriels">Tutoriels</h2>
+> **Note :** Sur AudioCogs, vous pouvez [essayer quelques démos](http://audiocogs.org/codecs/); Audiocogs fournit également un Framework, [Aurora.js](http://audiocogs.org/codecs/), qui est destiné à vous aider à créer vos propres codecs en JavaScript.
 
-<ul>
- <li><a href="/fr/docs/HTML/Manipulating_video_using_canvas">Manipulation vidéo avec la balise Canvas</a></li>
- <li><a href="/fr/Apps/Build/Manipulating_media/HTML5_playbackRate_explained">HTML5 playbackRate expliqué</a></li>
- <li><a href="/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Utiliser l'API Web Audio</a></li>
- <li><a href="/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Les bases de la spatialisation audio Web</a></li>
- <li><a href="/fr/docs/Web/API/WebGL_API/Tutorial/Animation_de_textures_en_WebGL#Utilisation_des_images_vid%C3%A9o_comme_texture">Utilisation des images vidéo comme texture WebGL</a> (Vous pouvez également utiliser la bilbiothèque WebGL <a href="http://threejs.org">THREE.js</a> (ou autres) pour <a href="http://stemkoski.github.io/Three.js/Video.html">obtenir cet effet</a>)</li>
- <li><a href="/fr/docs/Web/API/WebGL_API/Tutorial/Animation_de_textures_en_WebGL">Animation de Textures en WebGL</a></li>
- <li><a href="http://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room">Developing Game Audio with the Web Audio API (Room effects and filters)</a></li>
-</ul>
+## Tutoriels
 
-<h2 id="Référence">Référence</h2>
+- [Manipulation vidéo avec la balise Canvas](/fr/docs/HTML/Manipulating_video_using_canvas)
+- [HTML5 playbackRate expliqué](/fr/Apps/Build/Manipulating_media/HTML5_playbackRate_explained)
+- [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Les bases de la spatialisation audio Web](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Utilisation des images vidéo comme texture WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animation_de_textures_en_WebGL#Utilisation_des_images_vid%C3%A9o_comme_texture) (Vous pouvez également utiliser la bilbiothèque WebGL [THREE.js](http://threejs.org) (ou autres) pour [obtenir cet effet](http://stemkoski.github.io/Three.js/Video.html))
+- [Animation de Textures en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animation_de_textures_en_WebGL)
+- [Developing Game Audio with the Web Audio API (Room effects and filters)](http://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room)
 
-<ul>
- <li>Les éléments {{htmlelement("audio")}} et {{htmlelement("video")}}</li>
- <li>L'API {{domxref("HTMLMediaElement")}}</li>
- <li>L'élément {{htmlelement("canvas")}}</li>
- <li><a href="/fr/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
- <li><a href="/fr/docs/Web/API/AudioContext">AudioContext</a></li>
- <li>Plus d'infos sur <a href="/fr/docs/Web/API/AudioContext.createPanner">PannerNode</a></li>
-</ul>
+## Référence
+
+- Les éléments {{htmlelement("audio")}} et {{htmlelement("video")}}
+- L'API {{domxref("HTMLMediaElement")}}
+- L'élément {{htmlelement("canvas")}}
+- [Web Audio API](/fr/docs/Web/API/Web_Audio_API)
+- [AudioContext](/fr/docs/Web/API/AudioContext)
+- Plus d'infos sur [PannerNode](/fr/docs/Web/API/AudioContext.createPanner)
