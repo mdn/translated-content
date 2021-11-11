@@ -28,7 +28,7 @@ Mozilla アプリケーションでは、 **`-moz-user-input`** はある要素�
 
 {{HTMLElement("textarea")}} のようなユーザーからの入力を通常受け付ける要素では `-moz-user-input` の初期値は `enabled` です。
 
-> **Note:** `-moz-user-input` は、 CSS 3 {{cssxref("user-input")}} プロパティの先行実装案の一つでしたが、これはまだ (実装を要求する) 勧告候補に達していません。類似のプロパティ `user-focus` が [CSS3 UI 仕様の前身であった初期の草稿](https://www.w3.org/TR/2000/WD-css3-userint-20000216) で提案されましたが、作業グループによって却下されました。
+> **Note:** `-moz-user-input` は、 CSS 3 の {{cssxref("user-input")}} プロパティの先行実装案の一つでしたが、これはまだ (実装を要求する) 勧告候補に達していません。類似のプロパティ `user-focus` が [CSS3 UI 仕様の前身であった初期の草稿](https://www.w3.org/TR/2000/WD-css3-userint-20000216) で提案されましたが、作業グループによって却下されました。
 
 ## 構文
 
