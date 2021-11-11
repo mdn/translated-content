@@ -4,23 +4,19 @@ slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
 translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
 original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko/Ressources
 ---
-<p></p><ol>
-    <li><a href="/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko">Introduction</a></li>
-    <li><a href="/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Les_liaisons_JavaScript%2f%2fXSLT">Les liaisons JavaScript/XSLT</a></li>
-    <li><a href="/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Exemple_basique">Exemple basique</a></li>
-	<li><a href="/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/D%c3%a9finition_de_param%c3%a8tres">Définition de paramètres</a></li>
-	<li><a href="/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Exemple_avanc%c3%a9">Exemple avancé</a></li>
-	<li><a href="/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Liste_des_interfaces">Liste des interfaces</a></li>
-	<li><a href="/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Ressources">Ressources</a></li>
-</ol><p></p>
+1.  [Introduction](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko)
+2.  [Les liaisons JavaScript/XSLT](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Les_liaisons_JavaScript%2f%2fXSLT)
+3.  [Exemple basique](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Exemple_basique)
+4.  [Définition de paramètres](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/D%c3%a9finition_de_param%c3%a8tres)
+5.  [Exemple avancé](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Exemple_avanc%c3%a9)
+6.  [Liste des interfaces](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Liste_des_interfaces)
+7.  [Ressources](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Ressources)
 
-<h2 id="Ressources">Ressources</h2>
+## Ressources
 
-<ul>
- <li><a href="/fr/docs/L'interface_XSLT_JavaScript_dans_Gecko/fr/XSLT_dans_Gecko">XSLT dans Gecko</a></li>
- <li><a href="/fr/docs/L'interface_XSLT_JavaScript_dans_Gecko/fr/Utilisation_de_l'interface_JavaScript_de_Mozilla_pour_les_transformations_XSL">Utilisation de l'interface JavaScript de Mozilla pour les transformations XSL</a></li>
- <li><a href="/en-US/docs/Web/XSLT">Page du projet XSLT sur Mozilla.org (en)</a>, qui contient une section concernant les problèmes fréquemment rencontrés.</li>
- <li><a href="https://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk30/htm/xmconusingthexslprocessor.asp">MSDN documentation on IE/XSLT bindings (en)</a></li>
-</ul>
+- [XSLT dans Gecko](/fr/docs/L'interface_XSLT_JavaScript_dans_Gecko/fr/XSLT_dans_Gecko)
+- [Utilisation de l'interface JavaScript de Mozilla pour les transformations XSL](/fr/docs/L'interface_XSLT_JavaScript_dans_Gecko/fr/Utilisation_de_l'interface_JavaScript_de_Mozilla_pour_les_transformations_XSL)
+- [Page du projet XSLT sur Mozilla.org (en)](/en-US/docs/Web/XSLT), qui contient une section concernant les problèmes fréquemment rencontrés.
+- [MSDN documentation on IE/XSLT bindings (en)](https://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk30/htm/xmconusingthexslprocessor.asp)
 
-<p>{{Previous("L\'interface XSLT/JavaScript dans Gecko:Liste des interfaces")}}</p>
+{{Previous("L\'interface XSLT/JavaScript dans Gecko:Liste des interfaces")}}

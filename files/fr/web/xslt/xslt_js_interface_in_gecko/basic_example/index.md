@@ -6,130 +6,127 @@ tags:
 translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
 original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko/Exemple_basique
 ---
-<h2 id="Exemple_basique">Exemple basique</h2>
+## Exemple basique
 
-<p>L'exemple que nous allons voir va charger un fichier XML et lui appliquer une transformation XSL. Nous utiliserons les mêmes fichiers que dans l'exemple <a href="fr/XSLT_dans_Gecko/G%c3%a9n%c3%a9ration_de_HTML">Génération de HTML</a> de l'article <a href="fr/XSLT_dans_Gecko">XSLT dans Gecko</a>. Le fichier XML décrit un article et le fichier XSL formate les informations pour l'affichage.</p>
+L'exemple que nous allons voir va charger un fichier XML et lui appliquer une transformation XSL. Nous utiliserons les mêmes fichiers que dans l'exemple [Génération de HTML](fr/XSLT_dans_Gecko/G%c3%a9n%c3%a9ration_de_HTML) de l'article [XSLT dans Gecko](fr/XSLT_dans_Gecko). Le fichier XML décrit un article et le fichier XSL formate les informations pour l'affichage.
 
-<p><small><strong>Figure 4 : fichier XML</strong></small></p>
+**Figure 4 : fichier XML**
 
-<p>Document XML (example1.xml):</p>
+Document XML (example1.xml):
 
-<pre>  &lt;?xml version="1.0"?&gt;
-  &lt;myNS:Article
-                         xmlns:myNS="http://devedge.netscape.com/2002/de"&gt;
-    &lt;myNS:Title&gt;Mon article&lt;/myNS:Title&gt;
-    &lt;myNS:Authors&gt;
-      &lt;myNS:Author company="Foopy Corp."&gt;M. Foo&lt;/myNS:Author&gt;
-      &lt;myNS:Author&gt;M. Bar&lt;/myNS:Author&gt;
-    &lt;/myNS:Authors&gt;
-    &lt;myNS:Body&gt;
-      En &lt;em&gt;Espagne&lt;/em&gt;, les &lt;strong&gt;pluies&lt;/strong&gt; se concentrent
-      principalement dans les plaines.
-    &lt;/myNS:Body&gt;
-  &lt;/myNS:Article&gt;
-</pre>
+      <?xml version="1.0"?>
+      <myNS:Article
+                             xmlns:myNS="http://devedge.netscape.com/2002/de">
+        <myNS:Title>Mon article</myNS:Title>
+        <myNS:Authors>
+          <myNS:Author company="Foopy Corp.">M. Foo</myNS:Author>
+          <myNS:Author>M. Bar</myNS:Author>
+        </myNS:Authors>
+        <myNS:Body>
+          En <em>Espagne</em>, les <strong>pluies</strong> se concentrent
+          principalement dans les plaines.
+        </myNS:Body>
+      </myNS:Article>
 
-<p><small><strong>Figure 5 : feuille de style XSLT</strong></small></p>
+**Figure 5 : feuille de style XSLT**
 
-<p>feuille de style XSL (example1.xsl):</p>
+feuille de style XSL (example1.xsl):
 
-<pre>  &lt;?xml version="1.0"?&gt;
-  &lt;xsl:stylesheet version="1.0"
-                           xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                           xmlns:myNS="http://devedge.netscape.com/2002/de"&gt;
+      <?xml version="1.0"?>
+      <xsl:stylesheet version="1.0"
+                               xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                               xmlns:myNS="http://devedge.netscape.com/2002/de">
 
-    &lt;xsl:output method="html" /&gt;
+        <xsl:output method="html" />
 
-    &lt;xsl:template match="/"&gt;
-      &lt;html&gt;
+        <xsl:template match="/">
+          <html>
 
-        &lt;head&gt;
+            <head>
 
-          &lt;title&gt;
-            &lt;xsl:value-of select="/myNS:Article/myNS:Title"/&gt;
-          &lt;/title&gt;
+              <title>
+                <xsl:value-of select="/myNS:Article/myNS:Title"/>
+              </title>
 
-          &lt;style type="text/css"&gt;
-            .myBox {margin:10px 155px 0 50px; border: 1px dotted #639ACE; padding:0 5px 0 5px;}
-          &lt;/style&gt;
+              <style type="text/css">
+                .myBox {margin:10px 155px 0 50px; border: 1px dotted #639ACE; padding:0 5px 0 5px;}
+              </style>
 
-        &lt;/head&gt;
+            </head>
 
-        &lt;body&gt;
-          &lt;p class="myBox"&gt;
-            &lt;span class="title"&gt;
-              &lt;xsl:value-of select="/myNS:Article/myNS:Title"/&gt;
-            &lt;/span&gt; &lt;br /&gt;
+            <body>
+              <p class="myBox">
+                <span class="title">
+                  <xsl:value-of select="/myNS:Article/myNS:Title"/>
+                </span> <br />
 
-            Auteurs :   &lt;br /&gt;
-              &lt;xsl:apply-templates select="/myNS:Article/myNS:Authors/myNS:Author"/&gt;
-            &lt;/p&gt;
+                Auteurs :   <br />
+                  <xsl:apply-templates select="/myNS:Article/myNS:Authors/myNS:Author"/>
+                </p>
 
-          &lt;p class="myBox"&gt;
-            &lt;xsl:apply-templates select="//myNS:Body"/&gt;
-          &lt;/p&gt;
+              <p class="myBox">
+                <xsl:apply-templates select="//myNS:Body"/>
+              </p>
 
-        &lt;/body&gt;
+            </body>
 
-      &lt;/html&gt;
-    &lt;/xsl:template&gt;
+          </html>
+        </xsl:template>
 
-    &lt;xsl:template match="myNS:Author"&gt;
-       --   &lt;xsl:value-of select="." /&gt;
+        <xsl:template match="myNS:Author">
+           --   <xsl:value-of select="." />
 
-      &lt;xsl:if test="@company"&gt;
-       ::   &lt;strong&gt;  &lt;xsl:value-of select="@company" /&gt;  &lt;/strong&gt;
-      &lt;/xsl:if&gt;
+          <xsl:if test="@company">
+           ::   <strong>  <xsl:value-of select="@company" />  </strong>
+          </xsl:if>
 
-      &lt;br /&gt;
-    &lt;/xsl:template&gt;
+          <br />
+        </xsl:template>
 
-    &lt;xsl:template match="myNS:Body"&gt;
-      &lt;xsl:copy&gt;
-        &lt;xsl:apply-templates select="@*|node()"/&gt;
-      &lt;/xsl:copy&gt;
-    &lt;/xsl:template&gt;
+        <xsl:template match="myNS:Body">
+          <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+          </xsl:copy>
+        </xsl:template>
 
-    &lt;xsl:template match="@*|node()"&gt;
-        &lt;xsl:copy&gt;
-          &lt;xsl:apply-templates select="@*|node()"/&gt;
-        &lt;/xsl:copy&gt;
-    &lt;/xsl:template&gt;
-  &lt;/xsl:stylesheet&gt;
-</pre>
+        <xsl:template match="@*|node()">
+            <xsl:copy>
+              <xsl:apply-templates select="@*|node()"/>
+            </xsl:copy>
+        </xsl:template>
+      </xsl:stylesheet>
 
-<p>L'exemple charge en mémoire les deux fichiers .xsl (<code>xslStylesheet</code>) et .xml (<code>xmlDoc</code>) à l'aide de <code>XMLHTTPRequest</code> synchrone. Le fichier .xsl est alors importé (<code>xsltProcessor.importStylesheet(xslStylesheet)</code>) et la transformation exécutée (<code>xsltProcessor.transformToFragment(xmlDoc, document)</code>). Cela permet d'extraire des données après le chargement de la page, sans avoir à la rafraîchir.</p>
+L'exemple charge en mémoire les deux fichiers .xsl (`xslStylesheet`) et .xml (`xmlDoc`) à l'aide de `XMLHTTPRequest` synchrone. Le fichier .xsl est alors importé (`xsltProcessor.importStylesheet(xslStylesheet)`) et la transformation exécutée (`xsltProcessor.transformToFragment(xmlDoc, document)`). Cela permet d'extraire des données après le chargement de la page, sans avoir à la rafraîchir.
 
-<p><small><strong>Figure 6 : Exemple voir l'exemple</strong></small></p>
+**Figure 6 : Exemple voir l'exemple**
 
-<pre>var xslStylesheet;
-var xsltProcessor = new XSLTProcessor();
-var myDOM;
+    var xslStylesheet;
+    var xsltProcessor = new XSLTProcessor();
+    var myDOM;
 
-var xmlDoc;
+    var xmlDoc;
 
-function Init(){
+    function Init(){
 
-  // chargement du fichier xslt, example1.xsl
-  var myXMLHTTPRequest = new XMLHttpRequest();
-  myXMLHTTPRequest.open("GET", "example1.xsl", false);
-  myXMLHTTPRequest.send(null);
+      // chargement du fichier xslt, example1.xsl
+      var myXMLHTTPRequest = new XMLHttpRequest();
+      myXMLHTTPRequest.open("GET", "example1.xsl", false);
+      myXMLHTTPRequest.send(null);
 
-  xslStylesheet = myXMLHTTPRequest.responseXML;
-  xsltProcessor.importStylesheet(xslStylesheet);
+      xslStylesheet = myXMLHTTPRequest.responseXML;
+      xsltProcessor.importStylesheet(xslStylesheet);
 
-  // chargement du fichier xml, example1.xml
-  myXMLHTTPRequest = new XMLHttpRequest();
-  myXMLHTTPRequest.open("GET", "example1.xml", false);
-  myXMLHTTPRequest.send(null);
+      // chargement du fichier xml, example1.xml
+      myXMLHTTPRequest = new XMLHttpRequest();
+      myXMLHTTPRequest.open("GET", "example1.xml", false);
+      myXMLHTTPRequest.send(null);
 
-  xmlDoc = myXMLHTTPRequest.responseXML;
+      xmlDoc = myXMLHTTPRequest.responseXML;
 
-  var fragment = xsltProcessor.transformToFragment(xmlDoc, document);
+      var fragment = xsltProcessor.transformToFragment(xmlDoc, document);
 
-  document.getElementById("example").innerHTML = "";
+      document.getElementById("example").innerHTML = "";
 
-  myDOM = fragment;
-  document.getElementById("example").appendChild(fragment);
-}
-</pre>
+      myDOM = fragment;
+      document.getElementById("example").appendChild(fragment);
+    }
