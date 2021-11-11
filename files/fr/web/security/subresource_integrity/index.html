@@ -10,7 +10,7 @@ translation_of: Web/Security/Subresource_Integrity
 
 <h2 id="Comment_fonctionne_le_contrôle_d'intégrité_des_sous-ressources">Comment fonctionne le contrôle d'intégrité des sous-ressources ?</h2>
 
-<p>Utiliser un <a href="/en-US/docs/Glossary/CDN">CDN</a> pour héberger des fichiers tels que les scripts et les feuilles de style qui sont partagés entre plusieurs sites permet d'améliorer les performances du site et d'économiser de la bande passante. Cependant, utiliser des CDN comporte un risque : si un attaquant prend le contrôle du CDN, il pourra injecter du contenu malveillant dans les fichiers (ou les remplacer complètement), et il pourra donc aussi potentiellement attaquer tous les sites qui récupèrent les fichiers sur ce CDN.</p>
+<p>Utiliser un <a href="/fr/docs/Glossary/CDN">CDN</a> pour héberger des fichiers tels que les scripts et les feuilles de style qui sont partagés entre plusieurs sites permet d'améliorer les performances du site et d'économiser de la bande passante. Cependant, utiliser des CDN comporte un risque : si un attaquant prend le contrôle du CDN, il pourra injecter du contenu malveillant dans les fichiers (ou les remplacer complètement), et il pourra donc aussi potentiellement attaquer tous les sites qui récupèrent les fichiers sur ce CDN.</p>
 
 <p>Le contrôle d'intégrité des sous-ressources vous permet d'atténuer le risque de ce genre d'attaques, en veillant à ce que les fichiers de votre application ou document Web utilisent (à partir d'un CDN ou ailleurs) aient été livrés sans modification d'un tiers ayant injecté du contenu supplémentaire dans les fichiers - et sans autre changement de toute nature ayant été faits à ces fichiers.</p>
 
@@ -21,7 +21,7 @@ translation_of: Web/Security/Subresource_Integrity
 <p>Une valeur de l'attribut <code><strong>integrity</strong></code> commence par au moins une chaîne, chaque chaîne comprenant un préfixe indiquant un algorithme particulier de hachage (actuellement les préfixes autorisés sont <code>sha256</code>, <code>sha384</code> et <code>sha512</code>), suivi d'un tiret, et se terminant par le hachage base64 proprement dit.</p>
 
 <div class="note">
-<p><strong>Note : </strong>Une valeur de l'attribut <code><strong>integrity</strong></code> peut contenir plusieurs hachages séparés par des espaces. Une ressource sera chargée si elle correspond à l'un de ces hachages.</p>
+<p><strong>Note :</strong> Une valeur de l'attribut <code><strong>integrity</strong></code> peut contenir plusieurs hachages séparés par des espaces. Une ressource sera chargée si elle correspond à l'un de ces hachages.</p>
 </div>
 
 <p>Voici un exemple de valeur pour l'attribut <code><strong>integrity</strong></code> avec un hash sha384 encodé en base64 :</p>
@@ -95,5 +95,5 @@ translation_of: Web/Security/Subresource_Integrity
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="https://frederik-braun.com/using-subresource-integrity.html" id="page-title">Un CDN sans risque de XSS : utiliser le contrôle d'intégrité des sous-ressources (en anglais)</a></li>
+ <li><a href="https://frederik-braun.com/using-subresource-integrity.html">Un CDN sans risque de XSS : utiliser le contrôle d'intégrité des sous-ressources (en anglais)</a></li>
 </ul>

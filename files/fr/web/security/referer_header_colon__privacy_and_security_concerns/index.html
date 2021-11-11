@@ -9,11 +9,11 @@ tags:
   - referrer
 translation_of: 'Web/Security/Referer_header:_privacy_and_security_concerns'
 ---
-<p class="summary">L'<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer">entête HTTP Referer</a> présente des risques de confidentialité et de sécurité<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer">.</a> Cet article les décrit et donne des conseils pour les minimiser.</p>
+<p>L'<a href="/fr/docs/Web/HTTP/Headers/Referer">entête HTTP Referer</a> présente des risques de confidentialité et de sécurité<a href="/fr/docs/Web/HTTP/Headers/Referer">.</a> Cet article les décrit et donne des conseils pour les minimiser.</p>
 
 <h2 id="Le_problème...">Le problème...</h2>
 
-<p><span class="tlid-translation translation" lang="fr"><span title="">L'en-tête </span></span><code>{{httpheader("Referer")}}</code> (sic) <span class="tlid-translation translation" lang="fr"><span title=""> contient l'adresse de la page web précédente lorsqu'un lien vers la page actuelle a été suivi, ce qui offre de nombreuses possibilités légitimes comme l'analyse, la journalisation ou la mise en cache optimisée</span><span title="">. </span><span title="">Cependant, il existe des utilisations plus problématiques telles que le suivi ou le vol d'informations, ou même des effets secondaires tels que la fuite accidentelle d'informations sensibles.</span></span></p>
+<p>L'en-tête <code>{{httpheader("Referer")}}</code> (sic)  contient l'adresse de la page web précédente lorsqu'un lien vers la page actuelle a été suivi, ce qui offre de nombreuses possibilités légitimes comme l'analyse, la journalisation ou la mise en cache optimisée. Cependant, il existe des utilisations plus problématiques telles que le suivi ou le vol d'informations, ou même des effets secondaires tels que la fuite accidentelle d'informations sensibles.</p>
 
 <p>Par exemple, considérons une page de réinitialisation de mot de passe comportant un lien vers un réseau social dans le pied de page. Si le lien a été suivi, selon la façon dont l’information a été partagée, le réseau social peut recevoir l’URL de réinitialisation du mot de passe et peut toujours être en mesure d’utiliser l’information partagée, ce qui pourrait compromettre la sécurité de l’utilisateur.</p>
 
