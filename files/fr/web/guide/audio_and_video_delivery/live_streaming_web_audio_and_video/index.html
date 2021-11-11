@@ -6,9 +6,8 @@ tags:
   - Streaming adaptatif
 translation_of: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 ---
-<div class="summary">
-<p><span class="seoSummary">La technologie de <em>live streaming</em> (diffusion en direct) est souvent utilisée pour relayer des événements en direct, tels que le sport, les concerts, ou de manière plus générale les programmes TV et radio en direct. Souvent raccourci au simple terme de <em>streaming</em>, le live streaming est le processus de transmissions d'un média <em>live</em> (c'est à dire dynamique et non statique) aux ordinateurs et aux périphériques. C'est un sujet assez complexe et nouveau avec beaucoup de variables à prendre en considération, dans cet article nous allons vous introduire le sujet et vous donner des clés pour démarrer.</span></p>
-</div>
+
+<p>La technologie de <em>live streaming</em> (diffusion en direct) est souvent utilisée pour relayer des événements en direct, tels que le sport, les concerts, ou de manière plus générale les programmes TV et radio en direct. Souvent raccourci au simple terme de <em>streaming</em>, le live streaming est le processus de transmissions d'un média <em>live</em> (c'est à dire dynamique et non statique) aux ordinateurs et aux périphériques. C'est un sujet assez complexe et nouveau avec beaucoup de variables à prendre en considération, dans cet article nous allons vous introduire le sujet et vous donner des clés pour démarrer.</p>
 
 <p>La première chose à avoir en tête quand on diffuse un live stream à un navigateur est le fait que, plutôt que de jouer un fichier fini, on relaie un fichier qui est créé à la volée et qui n'a pas de début ou de fin prédéterminé.</p>
 
@@ -50,14 +49,16 @@ translation_of: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_
 
 <p>Real Time Streaming Protocol (RTSP) contrôle les sessions média entre les entités et il est souvent utilisé en combinaison avec Real-time Transport Protocol (RTP) et Real-time Control Protocol (RTCP) pour délivrer des flux média. Utiliser RTP avec RTCP permet un streaming adaptatif. Il n'est pas encore suporté nativement par la plupart des navigateurs, mais <a href="http://www.mozilla.org/en-US/firefox/os/notes/1.3/">Firefox OS 1.3 supporte RTSP</a>.</p>
 
-<div class="note"><strong>Note</strong>: Certains fournisseurs implémentent des protocoles de transfert propriétaires, tel que RealNetworks et leur Real Data Transport (RDT).</div>
+<div class="note">
+  <p><strong>Note :</strong> Certains fournisseurs implémentent des protocoles de transfert propriétaires, tel que RealNetworks et leur Real Data Transport (RDT).</p>
+</div>
 
 <h3 id="RTSP_2.0">RTSP 2.0</h3>
 
 <p>RTSP 2.0 est actuellement en cours de développement, il n'est pas rétro-compatible avec RTSP 1.0.</p>
 
 <div class="warning">
-<p><strong>Important</strong>: Bien que les balises {{ htmlelement("audio") }} et {{ htmlelement("video") }} soient agnostiques de tout protocole, aucun navigateur ne supporte actuellement autre chose que HTTP sans nécessiter de plugin, bien que cela semble être parti pour changer. De plus, les protocoles autres que HTTP peuvent être bloqués par des pare-feu et des serveurs proxy.</p>
+<p><strong>Attention :</strong> Bien que les balises {{ htmlelement("audio") }} et {{ htmlelement("video") }} soient agnostiques de tout protocole, aucun navigateur ne supporte actuellement autre chose que HTTP sans nécessiter de plugin, bien que cela semble être parti pour changer. De plus, les protocoles autres que HTTP peuvent être bloqués par des pare-feu et des serveurs proxy.</p>
 </div>
 
 <h2 id="Utiliser_des_protocoles_de_streaming">Utiliser des protocoles de streaming</h2>
@@ -77,7 +78,7 @@ translation_of: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_
  Par exemple, <a href="http://msopentech.com/blog/2014/01/03/streaming_video_player/">vous pourriez implémenter MPEG-DASH en utilisant JavaScript tout en laissant le décodage à la charge de MSE</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Le décalage temporel est le processus de lire un live stream quelque temps après qu'il ait été diffusé.</p>
+<p><strong>Note :</strong> Le décalage temporel est le processus de lire un live stream quelque temps après qu'il ait été diffusé.</p>
 </div>
 
 <h2 id="Formats_de_fichiers_Vidéo_en_Streaming">Formats de fichiers Vidéo en Streaming</h2>
@@ -85,7 +86,7 @@ translation_of: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_
 <p>Quelques formats de vidéo en live streaming HTTP commençent à être pris en charge parmi les navigateurs.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez trouver un guide pour encoder HLS et MPEG-DASH pour une utilisation sur le web sur <a href="/fr/Apps/Build/Manipulating_media/Setting_up_adaptive_streaming_media_sources">Configuration de sources multimédia en streaming adaptatif</a>.</p>
+<p><strong>Note :</strong> Vous pouvez trouver un guide pour encoder HLS et MPEG-DASH pour une utilisation sur le web sur <a href="/fr/Apps/Build/Manipulating_media/Setting_up_adaptive_streaming_media_sources">Configuration de sources multimédia en streaming adaptatif</a>.</p>
 </div>
 
 <h3 id="MPEG-DASH">MPEG-DASH</h3>
@@ -95,7 +96,7 @@ translation_of: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_
 <p>Cette approche permet de télécharger des segments de flux vidéo en utilisant XHR et en "ajoutant" le segment au flux en cours de lecture par l'élément {{ htmlelement("video") }}. Ainsi, par exemple, si l'on détecte que le réseau est lent, on peut demander des segments de moins bonne qualité (plus petits) en cours de route. Cette technologie permet également d'ajouter/insérer un segment publicitaire dans le flux.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez également <a href="http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification">utiliser WebM avec le système de streaming adaptatif MPEG DASH</a>.</p>
+<p><strong>Note :</strong> Vous pouvez également <a href="http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification">utiliser WebM avec le système de streaming adaptatif MPEG DASH</a>.</p>
 </div>
 
 <h3 id="HLS">HLS</h3>
@@ -208,7 +209,7 @@ translation_of: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_
  Actuellement, Opus est supporté par Firefox (bureau et mobile) ainsi que les dernières versions de Chrome bureau et Opera.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="http://tools.ietf.org/html/draft-ietf-rtcweb-audio-05">Opus est un format obligatoire</a> pour les implémentations navigateur de WebRTC.</p>
+<p><strong>Note :</strong> <a href="http://tools.ietf.org/html/draft-ietf-rtcweb-audio-05">Opus est un format obligatoire</a> pour les implémentations navigateur de WebRTC.</p>
 </div>
 
 <h3 id="MP3_AAC_Ogg_Vorbis">MP3, AAC, Ogg Vorbis</h3>
@@ -216,7 +217,7 @@ translation_of: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_
 <p>Les formats audio les plus courants peuvent être diffusés en stream en utilisant des technologies spécifiques côté serveur.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Il est plus facile de diffuser de l'audio en stream en utilisant des formats qui n'ont pas été conçu pour car, contrairement aux vidéos, il n'y a pas de keyframes.</p>
+<p><strong>Note :</strong> Il est plus facile de diffuser de l'audio en stream en utilisant des formats qui n'ont pas été conçu pour car, contrairement aux vidéos, il n'y a pas de keyframes.</p>
 </div>
 
 <h2 id="Technologies_de_Streaming_côté_serveur">Technologies de Streaming côté serveur</h2>
@@ -236,7 +237,7 @@ translation_of: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_
 <p><a href="http://en.wikipedia.org/wiki/SHOUTcast">SHOUTcast</a> est une technologie propriétaire multi-plateforme pour diffuser des médias en streaming. Développé par Nullsoft, elle permet de diffuser du contenu audio au format MP3 ou AAC en broadcast. Pour utilisation sur le web, les streams SHOUTcast sont transmis sur HTTP.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="http://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5">Les urls SHOUTcast peuvent nécessiter l'ajout d'un point-virgule à la fin</a>.</p>
+<p><strong>Note :</strong> <a href="http://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5">Les urls SHOUTcast peuvent nécessiter l'ajout d'un point-virgule à la fin</a>.</p>
 </div>
 
 <h3 id="Icecast">Icecast</h3>
@@ -244,7 +245,7 @@ translation_of: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_
 <p>Le serveur <a href="http://www.icecast.org/">Icecast</a> est une technologie open source pour diffuser des média en streaming. Maintenu par <a href="http://www.xiph.org/">Xiph.org Foundation</a>, il diffuse les formats Ogg Vorbis/Theora ainsi que MP3 et AAC  via le protocole SHOUTcast.</p>
 
 <div class="note">
-<p><strong>Note</strong>: SHOUTcast et Icecast font partie des technologies les plus répandues et les plus populaires, mais il existe de nombreux <a href="http://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers">autres systèmes de diffusion en streaming disponibles</a>.</p>
+<p><strong>Note :</strong> SHOUTcast et Icecast font partie des technologies les plus répandues et les plus populaires, mais il existe de nombreux <a href="http://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers">autres systèmes de diffusion en streaming disponibles</a>.</p>
 </div>
 
 <h3 id="Services_de_Streaming">Services de Streaming</h3>
@@ -253,7 +254,7 @@ translation_of: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
-<ul class="task-list">
+<ul>
  <li><a href="http://en.wikipedia.org/wiki/HTTP_Live_Streaming">HTTP Live Streaming</a></li>
  <li><a href="http://www.jwplayer.com/html5/hls/">HLS Browser Support</a></li>
  <li><a href="https://github.com/RReverser/mpegts">HTTP Live Streaming JavaScript player</a></li>
