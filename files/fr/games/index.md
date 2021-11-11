@@ -8,62 +8,55 @@ tags:
 translation_of: Games
 original_slug: Jeux
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p>Les jeux vidéo sont parmi les activités numériques les plus populaires. L'arrivée continue de nouvelles technologies permet de développer encore des jeux de meilleure qualité et plus performants qui peuvent fonctionner dans n'importe quel navigateur respectant les standards du web.</p>
+Les jeux vidéo sont parmi les activités numériques les plus populaires. L'arrivée continue de nouvelles technologies permet de développer encore des jeux de meilleure qualité et plus performants qui peuvent fonctionner dans n'importe quel navigateur respectant les standards du web.
 
-<p>{{EmbedGHLiveSample("web-tech-games/index.html", '100%', 820)}}</p>
+{{EmbedGHLiveSample("web-tech-games/index.html", '100%', 820)}}
 
-<h2 id="Développement_de_jeux_pour_le_web">Développement de jeux pour le web</h2>
+## Développement de jeux pour le web
 
-<p>Bienvenue dans le centre de développement de jeux MDN ! Dans cette zone du site, nous fournissons des ressources pour les développeurs web désireux de développer des jeux. Vous trouverez de nombreux tutoriels et articles techniques dans le menu principal à gauche, alors n'hésitez pas à explorer.</p>
+Bienvenue dans le centre de développement de jeux MDN ! Dans cette zone du site, nous fournissons des ressources pour les développeurs web désireux de développer des jeux. Vous trouverez de nombreux tutoriels et articles techniques dans le menu principal à gauche, alors n'hésitez pas à explorer.
 
-<p>Nous avons également inclus une section de références afin que vous puissiez facilement trouver des informations sur toutes les API les plus courantes utilisées dans le développement de jeux.</p>
+Nous avons également inclus une section de références afin que vous puissiez facilement trouver des informations sur toutes les API les plus courantes utilisées dans le développement de jeux.
 
-<div class="note">
-<p><strong>Note :</strong> La création de jeux sur le Web s'appuie sur un certain nombre de technologies Web de base telles que HTML, CSS et JavaScript. La <a href="/fr/Apprendre">Zone "Apprendre"</a> est un bon endroit pour commencer avec les bases.</p>
-</div>
+> **Note :** La création de jeux sur le Web s'appuie sur un certain nombre de technologies Web de base telles que HTML, CSS et JavaScript. La [Zone "Apprendre"](/fr/Apprendre) est un bon endroit pour commencer avec les bases.
 
+## Portez des jeux natifs sur le Web
 
-<h2 id="Portez_des_jeux_natifs_sur_le_Web">Portez des jeux natifs sur le Web</h2>
+Si vous êtes un développeur natif (par exemple écrivant des jeux en C ++), et que vous êtes intéressé par la façon dont vous pouvez porter vos jeux sur le Web, vous devriez en apprendre plus sur notre outil [Emscripten](http://kripken.github.io/emscripten-site/index.html) - c'est un compilateur LLVM vers JavaScript, qui prend le "bytecode LLVM" (par exemple, généré à partir de C / C ++ en utilisant Clang ou un autre langage) et le compile dans [asm.js](/fr/docs/Games/Tools/asm.js) , qui peut être exécuté sur le Web.
 
-<p>Si vous êtes un développeur natif (par exemple écrivant des jeux en C ++), et que vous êtes intéressé par la façon dont vous pouvez porter vos jeux sur le Web, vous devriez en apprendre plus sur notre outil  <a href="http://kripken.github.io/emscripten-site/index.html">Emscripten</a>  - c'est un compilateur LLVM vers JavaScript, qui prend le "bytecode LLVM" (par exemple, généré à partir de C / C ++ en utilisant Clang ou un autre langage) et le compile dans  <a href="/fr/docs/Games/Tools/asm.js">asm.js</a> , qui peut être exécuté sur le Web.</p>
+Pour commencer, voir :
 
-<p>Pour commencer, voir :</p>
+- [About Emscripten](http://kripken.github.io/emscripten-site/docs/introducing_emscripten/about_emscripten.html) pour une introduction incluant des détails de haut niveau.
+- [D/gameswnload and Install](http://kripken.github.io/emscripten-site/docs/getting_started/downloads.html) pour installer la chaîne d'outils .
+- [Emscripten Tutorial](http://kripken.github.io/emscripten-site/docs/getting_started/Tutorial.html) pour un tutoriel qui vous enseigne comment commencer.
 
-<ul>
- <li><a href="http://kripken.github.io/emscripten-site/docs/introducing_emscripten/about_emscripten.html">About Emscripten</a> pour une introduction incluant des détails de haut niveau.</li>
- <li><a href="http://kripken.github.io/emscripten-site/docs/getting_started/downloads.html">D/gameswnload and Install</a> pour installer la chaîne d'outils .</li>
- <li><a href="http://kripken.github.io/emscripten-site/docs/getting_started/Tutorial.html">Emscripten Tutorial</a> pour un tutoriel qui vous enseigne comment commencer.</li>
-</ul>
+## Exemples
 
-<h2 id="Exemples">Exemples</h2>
+Pour une liste d'exemples de jeux, voir notre [page exemples](/fr/docs/Games/Examples). Consultez aussi <https://games.mozilla.org/> pour des ressources et des exemples plus utiles !
 
-<p>Pour une liste d'exemples de jeux, voir notre <a href="/fr/docs/Games/Examples">page exemples</a>. Consultez aussi <a href="https://games.mozilla.org/">https://games.mozilla.org/</a> pour des ressources et des exemples plus utiles !</p>
+## Voir aussi
 
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<dl>
- <dt><a href="http://buildnewgames.com/">Build New Games </a>(en)</dt>
- <dd>Un site collaboratif avec de nombreux tutoriels concernant le développement de jeux vidéo sur le Web. N'a pas été très actif récemment, mais détient toujours de belles ressources.</dd>
- <dt><a href="http://creativejs.com/">Creative JS </a>(en)</dt>
- <dd>Un ensemble de techniques et d'expérimentations JavaScript, pas nécessairement liées au domaine vidéo-ludique mais qui se révèlent plutôt utiles et impressionnantes. N'a pas été très actif récemment, mais détient toujours de belles ressources.</dd>
- <dt><a href="http://gameprogrammingpatterns.com/">Game programming patterns </a>(en)</dt>
- <dd>Un livre en ligne, écrit par Bob Nystrom, qui traite des modèles de programmation dans le contexte du développement de jeux, dans le but d'aider les développeurs de jeux à produire un code plus réussi et plus opérationnel.</dd>
- <dt><a href="http://gamedevjsweekly/games.com/">Gamedev.js Weekly </a>(en)</dt>
- <dd>Bulletin hebdomadaire sur le développement de jeux HTML5, envoyé tous les vendredis. Contient les derniers articles, didacticiels, outils et ressources.</dd>
- <dt><a href="http://www.html5gamedevs.com/">HTML5 Game Devs Forum </a>(en)</dt>
- <dd>Forums pour développeurs, créateurs de "framework" et éditeurs. Posez des questions, obtenez des commentaires, aidez les autres.</dd>
- <dt><a href="http://html5gameengine.com/">HTML5 Game Engine </a>(en)</dt>
- <dd>Liste des architectures de jeux HTML5 les plus populaires ainsi que leurs classement, fonctionnalités et exemples.</dd>
- <dt><a href="http://www.jsbreakouts.org/">JSBreakouts</a> (en)</dt>
- <dd>Comparez les clones JavaScript Breakout dans différents systèmes pour vous aider à choisir le bon pour vous.</dd>
- <dt><a href="http://gamedevelopment.tutsplus.com/">Tuts+ Game Development </a>(en)</dt>
- <dd>Tutoriels et articles sur le developpement de jeux en général.</dd>
- <dt><a href="http://html5devstarter.enclavegames.com/">HTML5 Gamedev Starter </a>(en)</dt>
- <dd>De quoi démarrer pour les nouveaux développeurs de jeux, une liste organisée de liens vers diverses ressources utiles sur le web.</dd>
- <dt><a href="http://js13kgames.com/">js13kGames </a>(en)</dt>
- <dd>Concours de codage JavaScript pour les développeurs de jeux HTML5 avec une limite de taille de fichier fixée à 13 kilo-octets. Tous les jeux soumis sont disponibles sous forme lisible sur GitHub.</dd>
- <dt><a href="https://hacks.mozilla.org/category/games/">Mozilla Hacks blog </a>(en)</dt>
- <dd>Catégorie Jeux sur le blog "Hacks" de Mozilla contenant des articles connexes intéressants.</dd>
-</dl>
+- [Build New Games ](http://buildnewgames.com/)(en)
+  - : Un site collaboratif avec de nombreux tutoriels concernant le développement de jeux vidéo sur le Web. N'a pas été très actif récemment, mais détient toujours de belles ressources.
+- [Creative JS ](http://creativejs.com/)(en)
+  - : Un ensemble de techniques et d'expérimentations JavaScript, pas nécessairement liées au domaine vidéo-ludique mais qui se révèlent plutôt utiles et impressionnantes. N'a pas été très actif récemment, mais détient toujours de belles ressources.
+- [Game programming patterns ](http://gameprogrammingpatterns.com/)(en)
+  - : Un livre en ligne, écrit par Bob Nystrom, qui traite des modèles de programmation dans le contexte du développement de jeux, dans le but d'aider les développeurs de jeux à produire un code plus réussi et plus opérationnel.
+- [Gamedev.js Weekly ](http://gamedevjsweekly/games.com/)(en)
+  - : Bulletin hebdomadaire sur le développement de jeux HTML5, envoyé tous les vendredis. Contient les derniers articles, didacticiels, outils et ressources.
+- [HTML5 Game Devs Forum ](http://www.html5gamedevs.com/)(en)
+  - : Forums pour développeurs, créateurs de "framework" et éditeurs. Posez des questions, obtenez des commentaires, aidez les autres.
+- [HTML5 Game Engine ](http://html5gameengine.com/)(en)
+  - : Liste des architectures de jeux HTML5 les plus populaires ainsi que leurs classement, fonctionnalités et exemples.
+- [JSBreakouts](http://www.jsbreakouts.org/) (en)
+  - : Comparez les clones JavaScript Breakout dans différents systèmes pour vous aider à choisir le bon pour vous.
+- [Tuts+ Game Development ](http://gamedevelopment.tutsplus.com/)(en)
+  - : Tutoriels et articles sur le developpement de jeux en général.
+- [HTML5 Gamedev Starter ](http://html5devstarter.enclavegames.com/)(en)
+  - : De quoi démarrer pour les nouveaux développeurs de jeux, une liste organisée de liens vers diverses ressources utiles sur le web.
+- [js13kGames ](http://js13kgames.com/)(en)
+  - : Concours de codage JavaScript pour les développeurs de jeux HTML5 avec une limite de taille de fichier fixée à 13 kilo-octets. Tous les jeux soumis sont disponibles sous forme lisible sur GitHub.
+- [Mozilla Hacks blog ](https://hacks.mozilla.org/category/games/)(en)
+  - : Catégorie Jeux sur le blog "Hacks" de Mozilla contenant des articles connexes intéressants.

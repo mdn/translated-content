@@ -6,6 +6,6 @@ tags:
 translation_of: Games/Index
 original_slug: Jeux/Index
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/fr/docs/Jeux")}}</div>
+{{GamesSidebar}}{{IncludeSubnav("/fr/docs/Jeux")}}
 
-<p>{{Index("/fr/docs/Jeux")}}</p>
+{{Index("/fr/docs/Jeux")}}

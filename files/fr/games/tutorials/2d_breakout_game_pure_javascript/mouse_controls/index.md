@@ -12,47 +12,49 @@ tags:
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}{{IncludeSubnav("/fr/docs/Games")}}
 
-<div>{{IncludeSubnav("/fr/docs/Games")}}</div>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/finitions")}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/finitions")}}</p>
+C'est la **9<sup>e</sup> étape sur** 10 de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Workflows/Breakout_game_from_scratch). Vous pouvez trouver le code source tel qu'il devrait être après avoir terminé cette leçon à l'adresse [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html).
 
-<p>C'est la <strong>9<sup>e</sup> étape sur</strong> 10 de ce <a href="/fr/docs/Games/Workflows/Breakout_game_from_scratch">tutoriel Gamedev Canvas</a>. Vous pouvez trouver le code source tel qu'il devrait être après avoir terminé cette leçon à l'adresse <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html">Gamedev-Canvas-workshop/lesson9.html</a>.</p>
+Le jeu lui-même est en fait terminé, alors travaillons à le peaufiner. Nous avons déjà ajouté des commandes au clavier, mais nous pourrions facilement ajouter des commandes à la souris.
 
-<p>Le jeu lui-même est en fait terminé, alors travaillons à le peaufiner. Nous avons déjà ajouté des commandes au clavier, mais nous pourrions facilement ajouter des commandes à la souris.</p>
+## Détecter les mouvements de la souris
 
-<h2 id="Détecter_les_mouvements_de_la_souris">Détecter les mouvements de la souris</h2>
+Il est encore plus facile de détecter les mouvements de la souris que les pressions sur les touches : il suffit d'écouter l'évènement {{event("mousemove")}}. Ajouter la ligne suivante au même endroit que les autres écouteurs d'événement, juste en dessous de `l'évènement keyup` :
 
-<p>Il est encore plus facile de détecter les mouvements de la souris que les pressions sur les touches : il suffit d'écouter l'évènement {{event("mousemove")}}. Ajouter la ligne suivante au même endroit que les autres écouteurs d'événement, juste en dessous de <code>l'évènement keyup</code> :</p>
+```js
+document.addEventListener("mousemove", mouseMoveHandler, false);
+```
 
-<pre class="brush: js">document.addEventListener("mousemove", mouseMoveHandler, false);</pre>
+## Lier le mouvement de la raquette au mouvement de la souris
 
-<h2 id="Lier_le_mouvement_de_la_raquette_au_mouvement_de_la_souris">Lier le mouvement de la raquette au mouvement de la souris</h2>
+Nous pouvons mettre à jour la position de la raquette en fonction des coordonnées du pointeur — c'est exactement ce que fera la fonction de manipulation suivante. Ajoutez la fonction ci-dessous à votre code, sous la dernière ligne que vous avez ajoutée :
 
-<p>Nous pouvons mettre à jour la position de la raquette en fonction des coordonnées du pointeur — c'est exactement ce que fera la fonction de manipulation suivante. Ajoutez la fonction ci-dessous à votre code, sous la dernière ligne que vous avez ajoutée :</p>
-
-<pre class="brush: js">function mouseMoveHandler(e) {
+```js
+function mouseMoveHandler(e) {
     var relativeX = e.clientX - canvas.offsetLeft;
-    if(relativeX &gt; 0 &amp;&amp; relativeX &lt; canvas.width) {
+    if(relativeX > 0 && relativeX < canvas.width) {
         paddleX = relativeX - paddleWidth/2;
     }
-}</pre>
+}
+```
 
-<p>Dans cette fonction, nous calculons d'abord une valeur <code>relativeX</code>, qui est égale à la position horizontale de la souris dans la fenêtre de visualisation (<code>e.clientX</code>) moins la distance entre le bord gauche de la toile et le bord gauche de la fenêtre de visualisation (<code>canvas.offsetLeft</code>) — en fait, cette valeur est égale à la distance entre le bord gauche du canevas et le pointeur de la souris. Si la position relative du pointeur X est supérieure à zéro et inférieure à la largeur du canevas, le pointeur se trouve dans les limites du canevas, et la position <code>paddleX</code> (ancrée sur le bord gauche de la palette) est fixée à la valeur <code>relativeX</code> moins la moitié de la largeur de la palette, de sorte que le mouvement sera en fait relatif au milieu de la raquette.</p>
+Dans cette fonction, nous calculons d'abord une valeur `relativeX`, qui est égale à la position horizontale de la souris dans la fenêtre de visualisation (`e.clientX`) moins la distance entre le bord gauche de la toile et le bord gauche de la fenêtre de visualisation (`canvas.offsetLeft`) — en fait, cette valeur est égale à la distance entre le bord gauche du canevas et le pointeur de la souris. Si la position relative du pointeur X est supérieure à zéro et inférieure à la largeur du canevas, le pointeur se trouve dans les limites du canevas, et la position `paddleX` (ancrée sur le bord gauche de la palette) est fixée à la valeur `relativeX` moins la moitié de la largeur de la palette, de sorte que le mouvement sera en fait relatif au milieu de la raquette.
 
-<p>La raquette suivra désormais la position du curseur de la souris, mais comme nous limitons le mouvement à la taille du canevas, elle ne disparaîtra pas complètement d'un côté ou de l'autre.</p>
+La raquette suivra désormais la position du curseur de la souris, mais comme nous limitons le mouvement à la taille du canevas, elle ne disparaîtra pas complètement d'un côté ou de l'autre.
 
-<h2 id="Comparez_votre_code">Comparez votre code</h2>
+## Comparez votre code
 
-<p>Voici le code final du chapitre, à vous de vérifier et de le tester pour voir si il y a des différences.</p>
+Voici le code final du chapitre, à vous de vérifier et de le tester pour voir si il y a des différences.
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/vt7y5hcp/","","395")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/vt7y5hcp/","","395")}}
 
-<p>Exercice : ajustez les limites du mouvement de la raquette, de sorte que la raquette entière soit visible sur les deux bords du canevas au lieu de seulement la moitié.</p>
+Exercice : ajustez les limites du mouvement de la raquette, de sorte que la raquette entière soit visible sur les deux bords du canevas au lieu de seulement la moitié.
 
-<h2 id="Prochaine_étape">Prochaine étape</h2>
+## Prochaine étape
 
-<p>Maintenant que nous avons un jeu complet, nous allons terminer notre série de leçons avec quelques petites retouches supplémentaires — <a href="/fr/docs/Games/Workflows/Breakout_game_from_scratch/Finishing_up">Finitions</a>.</p>
+Maintenant que nous avons un jeu complet, nous allons terminer notre série de leçons avec quelques petites retouches supplémentaires — [Finitions](/fr/docs/Games/Workflows/Breakout_game_from_scratch/Finishing_up).
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/finitions")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/finitions")}}

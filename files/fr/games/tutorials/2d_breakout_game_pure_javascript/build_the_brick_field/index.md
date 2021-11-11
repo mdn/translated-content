@@ -12,50 +12,53 @@ tags:
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}{{IncludeSubnav("/fr/docs/Games")}}
 
-<div>{{IncludeSubnav("/fr/docs/Games")}}</div>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisions")}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisions")}}</p>
+Il s'agit de la **6ème étape** sur 10 du [Gamedev Canvas tutorial](/fr/docs/Games/Workflows/Breakout_game_from_scratch). Vous pouvez trouver le code source après avoir complété cette leçon à : [Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html).
 
-<p>Il s'agit de la <strong>6ème étape</strong> sur 10 du <a href="/fr/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>. Vous pouvez trouver le code source après avoir complété cette leçon à : <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html">Gamedev-Canvas-workshop/lesson6.html</a>.</p>
+Après avoir modifié la mécanique du Gameplay, nous sommes maintenant en mesure de perdre. Et ça c'est top car on a enfin l'impression de jouer à un vrai jeu. Cependant, ça devient vite ennuyeux si la balle ne fait que rebondir sur la raquette. Ce dont a vraiment besoin un jeu de casse-brique c'est des briques à détruire avec la balle. Et c'est ce que nous allons faire maintenant.
 
-<p>Après avoir modifié la mécanique du Gameplay, nous sommes maintenant en mesure de perdre. Et ça c'est top car on a enfin l'impression de jouer à un vrai jeu. Cependant, ça devient vite ennuyeux si la balle ne fait que rebondir sur la raquette. Ce dont a vraiment besoin un jeu de casse-brique c'est des briques à détruire avec la balle. Et c'est ce que nous allons faire maintenant.</p>
+## Mettre en place les variables "Brique"
 
-<h2 id="Mettre_en_place_les_variables_Brique">Mettre en place les variables "Brique"</h2>
+Le principal objectif de cette leçon est d'avoir quelques lignes de code pour afficher les briques, en utilisant une boucle imbriquée qui va parcourir un tableau à deux dimensions. Cependant nous avons besoin de définir quelques variables pour stocker des informations décrivant les briques, telles que leur largeur, leur hauteur, les colonnes et les lignes, etc. Ajoutez les lignes suivantes dans votre code, sous les variables préalablement déclarées.
 
-<p>Le principal objectif de cette leçon est d'avoir quelques lignes de code pour afficher les briques, en utilisant une boucle imbriquée qui va parcourir un tableau à deux dimensions. Cependant nous avons besoin de définir quelques variables pour stocker des informations décrivant les briques, telles que leur largeur, leur hauteur, les colonnes et les lignes, etc. Ajoutez les lignes suivantes dans votre code, sous les variables préalablement déclarées.</p>
-
-<pre class="brush: js">var brickRowCount = 3;
+```js
+var brickRowCount = 3;
 var brickColumnCount = 5;
 var brickWidth = 75;
 var brickHeight = 20;
 var brickPadding = 10;
 var brickOffsetTop = 30;
-var brickOffsetLeft = 30;</pre>
+var brickOffsetLeft = 30;
+```
 
-<p>Ici nous avons défini dans l'ordre le nombre de lignes et de colonnes de briques, mais également une hauteur, une largeur et un espacement (<em>padding</em>) entre les briques pour qu'elles ne se touchent pas entre elles et qu'elles ne commencent pas a être tracées sur le bord du canevas.</p>
+Ici nous avons défini dans l'ordre le nombre de lignes et de colonnes de briques, mais également une hauteur, une largeur et un espacement (_padding_) entre les briques pour qu'elles ne se touchent pas entre elles et qu'elles ne commencent pas a être tracées sur le bord du canevas.
 
-<p>Nous allons placer nos briques dans un tableau à deux dimensions. Il contiendra les colonnes de briques (c), qui à leur tour contiendront les lignes de briques (r) qui chacune contiendront un objet défini par une position <code>x</code> et <code>y</code> pour afficher chaque brique sur l'écran.<br>
- Ajoutez le code suivant juste en-dessous des variables :</p>
+Nous allons placer nos briques dans un tableau à deux dimensions. Il contiendra les colonnes de briques (c), qui à leur tour contiendront les lignes de briques (r) qui chacune contiendront un objet défini par une position `x` et `y` pour afficher chaque brique sur l'écran.
+Ajoutez le code suivant juste en-dessous des variables :
 
-<pre class="brush: js">var bricks = [];
-for(var c=0; c&lt;brickColumnCount; c++) {
+```js
+var bricks = [];
+for(var c=0; c<brickColumnCount; c++) {
     bricks[c] = [];
-    for(var r=0; r&lt;brickRowCount; r++) {
+    for(var r=0; r<brickRowCount; r++) {
         bricks[c][r] = { x: 0, y: 0 };
     }
-}</pre>
+}
+```
 
-<p>Le code ci-dessus va parcourir les lignes et les colonnes et créer de nouvelles briques. REMARQUE : les objets briques seront également utilisés plus tard afin de détecter les collisions.</p>
+Le code ci-dessus va parcourir les lignes et les colonnes et créer de nouvelles briques. REMARQUE : les objets briques seront également utilisés plus tard afin de détecter les collisions.
 
-<h2 id="Logique_de_dessin_des_briques">Logique de dessin des briques</h2>
+## Logique de dessin des briques
 
-<p>Maintenant créons une fonction pour parcourir toutes les briques dans le tableau et les dessiner sur l'écran. Notre code pourrait ressembler à ça :</p>
+Maintenant créons une fonction pour parcourir toutes les briques dans le tableau et les dessiner sur l'écran. Notre code pourrait ressembler à ça :
 
-<pre class="brush: js">function drawBricks() {
-    for(var c=0; c&lt;brickColumnCount; c++) {
-        for(var r=0; r&lt;brickRowCount; r++) {
+```js
+function drawBricks() {
+    for(var c=0; c<brickColumnCount; c++) {
+        for(var r=0; r<brickRowCount; r++) {
             bricks[c][r].x = 0;
             bricks[c][r].y = 0;
             ctx.beginPath();
@@ -65,20 +68,24 @@ for(var c=0; c&lt;brickColumnCount; c++) {
             ctx.closePath();
         }
     }
-}</pre>
+}
+```
 
-<p>Une nouvelle fois, nous parcourons les colonnes et les lignes pour attribuer une position <code>x</code> et <code>y </code>à chaque brique, et nous dessinons les briques — de taille : <code>brickWidth</code> x <code>brickHeight</code>  — sur le canevas, pour chaque itération de la boucle. Le problème est que nous les affichons toutes au même endroit, aux coordonnées <code>(0,0)</code>. Ce dont nous avons besoin d'inclure ce sont quelques calculs qui vont définir la position <code>x</code> et <code>y</code> de chaque brique à chaque passage dans la boucle :</p>
+Une nouvelle fois, nous parcourons les colonnes et les lignes pour attribuer une position `x` et `y `à chaque brique, et nous dessinons les briques — de taille : `brickWidth` x `brickHeight`  — sur le canevas, pour chaque itération de la boucle. Le problème est que nous les affichons toutes au même endroit, aux coordonnées `(0,0)`. Ce dont nous avons besoin d'inclure ce sont quelques calculs qui vont définir la position `x` et `y` de chaque brique à chaque passage dans la boucle :
 
-<pre class="brush: js">var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
-var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;</pre>
+```js
+var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
+var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
+```
 
-<p>Chaque position <code>brickX</code> est déterminée par <code>brickWidth</code> + <code>brickPadding</code>, multiplié par le nombre de colonnes, <code>c</code>, plus <code>brickOffsetLeft</code>; la logique pour <code>brickY</code> est identique excepté qu'on utilise pour les ligne les valeurs <code>r</code>,<code>brickHeight</code> et <code>brickOffsetTop</code>. Maintenant chaque brique peut être dessinée à la bonne place - en lignes et colonnes, avec un espacement entre les briques, avec un espace par rapport à la gauche et au haut du contour du canvas.</p>
+Chaque position `brickX` est déterminée par `brickWidth` + `brickPadding`, multiplié par le nombre de colonnes, `c`, plus `brickOffsetLeft`; la logique pour `brickY` est identique excepté qu'on utilise pour les ligne les valeurs `r`,`brickHeight` et `brickOffsetTop`. Maintenant chaque brique peut être dessinée à la bonne place - en lignes et colonnes, avec un espacement entre les briques, avec un espace par rapport à la gauche et au haut du contour du canvas.
 
-<p>La version finale de la fonction <code>drawBricks()</code>, après avoir assigné les valeurs <code>brickX</code> et <code>brickY</code> comme coordonnées, plutot que <code>(0,0)</code> à chaque fois, va ressembler à ceci  — ajouter la fonction ci-dessous après <code>drawPaddle()</code> :</p>
+La version finale de la fonction `drawBricks()`, après avoir assigné les valeurs `brickX` et `brickY` comme coordonnées, plutot que `(0,0)` à chaque fois, va ressembler à ceci  — ajouter la fonction ci-dessous après `drawPaddle()` :
 
-<pre class="brush: js">function drawBricks() {
-    for(var c=0; c&lt;brickColumnCount; c++) {
-        for(var r=0; r&lt;brickRowCount; r++) {
+```js
+function drawBricks() {
+    for(var c=0; c<brickColumnCount; c++) {
+        for(var r=0; r<brickRowCount; r++) {
             var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
             var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
             bricks[c][r].x = brickX;
@@ -90,26 +97,28 @@ var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;</pre>
             ctx.closePath();
         }
     }
-}</pre>
+}
+```
 
-<h2 id="Afficher_les_briques">Afficher les briques</h2>
+## Afficher les briques
 
-<p>La dernière chose à faire dans cette leçon est d'ajouter un appel à <code>drawBricks()</code> quelque part dans la fonction <code>draw()</code>, préférablement au début, entre le nettoyage du canevas et le dessin de la balle. Ajoutez la ligne suivante juste en dessous de <code>drawBall()</code> :</p>
+La dernière chose à faire dans cette leçon est d'ajouter un appel à `drawBricks()` quelque part dans la fonction `draw()`, préférablement au début, entre le nettoyage du canevas et le dessin de la balle. Ajoutez la ligne suivante juste en dessous de `drawBall()` :
 
-<pre class="brush: js">drawBricks();
-</pre>
+```js
+drawBricks();
+```
 
-<h2 id="Comparez_votre_code">Comparez votre code</h2>
+## Comparez votre code
 
-<p>À ce stade, le jeu a gagné un peu en intérêt :</p>
+À ce stade, le jeu a gagné un peu en intérêt :
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/yumetodo/t1zqmzLp/","","395")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/yumetodo/t1zqmzLp/","","395")}}
 
-<p>Exercice : essayez de changer le nombre de briques dans une colonne ou dans une ligne ou bien leur position.</p>
+Exercice : essayez de changer le nombre de briques dans une colonne ou dans une ligne ou bien leur position.
 
-<h2 id="Prochaines_étapes">Prochaines étapes</h2>
+## Prochaines étapes
 
-<p>Nous avons donc maintenant des briques !  <br>
- Mais la balle n'a toujours aucune interaction avec elles. Nous allons donc changer ça dans le chapitre sept : <a href="/fr/docs/">Détection des collisions </a></p>
+Nous avons donc maintenant des briques !  
+Mais la balle n'a toujours aucune interaction avec elles. Nous allons donc changer ça dans le chapitre sept : [Détection des collisions ](/fr/docs/)
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisions")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisions")}}
