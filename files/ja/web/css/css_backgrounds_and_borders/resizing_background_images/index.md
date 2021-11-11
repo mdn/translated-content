@@ -140,5 +140,5 @@ original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images
 <ul>
  <li>{{ cssxref("background-size") }}</li>
  <li>{{ cssxref("background") }}</li>
- <li><a href="/ja/docs/Web/CSS/Scaling_of_SVG_backgrounds">SVG の背景画像の拡大縮小</a></li>
+ <li>[SVG の背景画像の拡大縮小](/ja/docs/Web/CSS/Scaling_of_SVG_backgrounds)</li>
 </ul>
