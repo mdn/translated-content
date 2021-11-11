@@ -18,7 +18,7 @@ Mozilla アプリケーションにおいて、 **`-moz-outline-radius-bottomrig
 
 ## 構文
 
-`-moz-outline-radius-bottomright` の値は、 {{cssxref("length", "&lt;length&gt;")}} または境界ボックスの対応する大きさに対する[パーセント値](/ja/docs/Web/CSS/percentage)のどちらかです。 {{cssxref("calc", "calc()")}} 関数も同様に使用することができます。
+`-moz-outline-radius-bottomright` の値は、 {{cssxref("length", "&lt;length&gt;")}} または境界ボックスの対応する大きさに対する[パーセント値](/ja/docs/Web/CSS/percentage)のどちらかです。 {{cssxref("calc()", "calc()")}} 関数も同様に使用することができます。
 
 ### 値
 
