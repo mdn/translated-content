@@ -3,88 +3,88 @@ title: '-moz-float-edge'
 slug: Web/CSS/-moz-float-edge
 tags:
   - CSS
-  - CSS Property
-  - 'CSS:Mozilla Extensions'
+  - CSS プロパティ
+  - CSS:Mozilla 拡張
   - Layout
   - NeedsCompatTable
-  - Non-standard
-  - 'recipe:css-property'
+  - 標準外
+  - recipe:css-property
+browser-compat: css.properties.-moz-float-edge
 translation_of: Web/CSS/-moz-float-edge
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>非標準の <strong><code>-moz-float-edge</code></strong> <a href="/ja/docs/Web/CSS">CSS</a> プロパティは要素の高さと幅のプロパティが margin 、border 、padding の厚さを含んでいるのかを指定します。</p>
+標準外の **`-moz-float-edge`** [CSS](/ja/docs/Web/CSS) プロパティは要素の高さと幅のプロパティが margin 、border 、padding の厚さを含んでいるのかを指定します。
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+```css
+/* キーワード値 */
 -moz-float-edge: border-box;
 -moz-float-edge: content-box;
 -moz-float-edge: margin-box;
 -moz-float-edge: padding-box;
 
-/* Global values */
+/* グローバル値 */
 -moz-float-edge: inherit;
 -moz-float-edge: initial;
 -moz-float-edge: unset;
-</pre>
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>border-box</code></dt>
- <dd>高さと幅のプロパティがコンテンツ、padding および border を含むが、margin は含まない。</dd>
- <dt><code>content-box</code></dt>
- <dd>高さと幅のプロパティがコンテンツを含むが、padding 、border および margin は含まない。</dd>
- <dt><code>margin-box</code></dt>
- <dd>高さと幅のプロパティがコンテンツ、padding 、 border および margin を含む。</dd>
- <dt><code>padding-box</code></dt>
- <dd>高さと幅のプロパティがコンテンツと padding を含むが、border および margin は含まない。</dd>
-</dl>
+- `border-box`
+  - : 高さと幅のプロパティがコンテンツ、padding および border を含むが、margin は含まない。
+- `content-box`
+  - : 高さと幅のプロパティがコンテンツを含むが、padding 、border および margin は含まない。
+- `margin-box`
+  - : 高さと幅のプロパティがコンテンツ、padding 、 border および margin を含む。
+- `padding-box`
+  - : 高さと幅のプロパティがコンテンツと padding を含むが、border および margin は含まない。
 
-<h2 id="Formal_definition" name="Formal_definition">形式定義</h2>
+## 公式定義
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="HTML" name="HTML">HTML</h3>
+### HTML
 
-<pre class="html prettyprint notranslate"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"box"</span><span class="tag">&gt;</span><span class="pln"> </span>
-<span class="pln">  </span><span class="tag">&lt;p&gt;</span><span class="pln">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="tag">&lt;/p&gt;</span><span class="pln">
-</span><span class="tag">&lt;/div&gt;</span></pre>
+```html
+<div class="box">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+```
 
-<h3 id="CSS" name="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">.box {
-  display: <span class="highVAL">block</span>;
+```css
+.box {
+  display: block;
   height: 5px;
   margin: 0.5em auto 0.5em auto;
   color: gray;
   -moz-float-edge: margin-box;
   box-sizing: border-box;
-} </pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+## 結果
 
-<p>{{ EmbedLiveSample('Examples') }}</p>
+{{ EmbedLiveSample('Examples') }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<p>このプロパティはどの CSS 標準でも定義されていません。</p>
+どの標準にも含まれていません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザの対応</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("css.properties.-moz-float-edge")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{bug(432891)}}</li>
-</ul>
+- {{bug(432891)}}
