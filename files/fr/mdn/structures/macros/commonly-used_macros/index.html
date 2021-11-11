@@ -5,7 +5,7 @@ translation_of: MDN/Structures/Macros/Commonly-used_macros
 ---
 <div>{{MDNSidebar}}</div>
 
-<p><span class="seoSummary">Cette page présente un grand nombre de macros à usage général créées pour une utilisation avec MDN. Pour avoir des informations sur l'utilisation de ces macros, voir <a href="https://developer.mozilla.org/fr/docs/MDN/Contribute/Structures/Macros" title="/fr/docs/MDN/Contribute/Content/Macros"> Utilisation des macros </a> et <a href="/fr/docs/MDN/Contribute/Editor/Links#Using_link_macros" title="/fr/docs/MDN/Contribute/Editor/Links#Using_link_macros"> Utiliser les liens macros </a>.</span> Voir <a href="/fr/docs/MDN/Contribute/Structures/Macros/Other" title="/fr/docs/MDN/Contribute/Structures/Macros/Other"> les autres macros </a> pour avoir des informations sur les macros qui sont rarement utilisées, ou utilisées dans des contextes spécifiques, ou obsolètes. Il y a aussi une liste complète de <a href="/fr/docs/templates" title="/fr/docs/templates">toutes les macros MDN</a>.</p>
+<p>Cette page présente un grand nombre de macros à usage général créées pour une utilisation avec MDN. Pour avoir des informations sur l'utilisation de ces macros, voir <a href="https://developer.mozilla.org/fr/docs/MDN/Contribute/Structures/Macros" title="/fr/docs/MDN/Contribute/Content/Macros"> Utilisation des macros </a> et <a href="/fr/docs/MDN/Contribute/Editor/Links#Using_link_macros" title="/fr/docs/MDN/Contribute/Editor/Links#Using_link_macros"> Utiliser les liens macros </a>. Voir <a href="/fr/docs/MDN/Contribute/Structures/Macros/Other" title="/fr/docs/MDN/Contribute/Structures/Macros/Other"> les autres macros </a> pour avoir des informations sur les macros qui sont rarement utilisées, ou utilisées dans des contextes spécifiques, ou obsolètes. Il y a aussi une liste complète de <a href="/fr/docs/templates" title="/fr/docs/templates">toutes les macros MDN</a>.</p>
 
 <p>Voir aussi le<a href="/fr/docs/MDN/Contribute/Guidelines/CSS_style_guide" title="/fr/docs/MDN/Contribute/Guidelines/CSS_style_guide"> Guide style CSS </a> pour l'utilisation des styles disponibles.</p>
 
@@ -13,7 +13,7 @@ translation_of: MDN/Structures/Macros/Commonly-used_macros
 
 <h3 id="Création_dun_lien_hypertexte_unique">Création d'un lien hypertexte unique</h3>
 
-<p id="To_another_MDN_page_or_its_section_(anch_SectionOnPage_manch_Link_LinkItem_LinkItemDL)">En général, vous ne devez pas utiliser des macros pour créer des liens arbitraires. Utilisez le <strong> Lien </strong> dans l'interface de l'éditeur pour créer des liens.</p>
+<p>En général, vous ne devez pas utiliser des macros pour créer des liens arbitraires. Utilisez le <strong> Lien </strong> dans l'interface de l'éditeur pour créer des liens.</p>
 
 <ul>
  <li>La macro {{TemplateLink("Glossary")}} crée un lien vers une entrée du<a href="https://developer.mozilla.org/fr/docs/Glossaire"> glossaire</a> MDN. Cette macro accepte un paramètre obligatoire et deux optionnels:
@@ -40,7 +40,7 @@ translation_of: MDN/Structures/Macros/Commonly-used_macros
 
 <ul>
  <li>{{TemplateLink("cssxref")}} links to a page in the <a href="/en-US/docs/CSS_Reference" title="en-US/docs/CSS_Reference">CSS Reference</a>. Example: <code>\{{cssxref("cursor")}}</code>, results in: {{ cssxref("cursor") }}.</li>
- <li>{{TemplateLink("domxref")}} links to pages in the DOM reference; if you include parentheses at the end, the template knows to display the link to look like a function name. For example, <span class="plain"><span class="nowiki">\{{domxref("document.getElementsByName()")}}</span></span> results in {{ domxref("document.getElementsByName()") }} while <code>\{\{domxref("Node")\}\}</code> results in {{ domxref("Node") }}.</li>
+ <li>{{TemplateLink("domxref")}} links to pages in the DOM reference; if you include parentheses at the end, the template knows to display the link to look like a function name. For example, \{{domxref("document.getElementsByName()")}} results in {{ domxref("document.getElementsByName()") }} while <code>\{\{domxref("Node")\}\}</code> results in {{ domxref("Node") }}.</li>
  <li>{{TemplateLink("event")}} links to pages in the DOM Event reference, for example: \{{event("change")}} results in {{event("change")}}.</li>
  <li>{{TemplateLink("HTMLElement")}} links to an HTML element in the HTML Reference.</li>
  <li>{{TemplateLink("htmlattrxref")}} links to an HTML attribute, either a global attribute description if you only specify the attribute name or an attribute associated with a specific element if you specify an attribute name and an element name. For example, <code>\{\{htmlattrxref("lang")\}\} </code>will create this link: {{htmlattrxref("lang")}}.<code> </code> <code>\{\{htmlattrxref("type","input")\}\}</code> will create this link: {{htmlattrxref("type","input")}}.</li>

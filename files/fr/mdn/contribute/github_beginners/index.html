@@ -11,7 +11,7 @@ translation_of: MDN/Contribute/GitHub_beginners
 ---
 <p>{{MDNSidebar}}</p>
 
-<p class="summary"><a href="https://git-scm.com/">Git</a> et <a href="https://github.com/">GitHub</a> sont des outils difficiles à apprendre et à maîtriser, mais avec quelques commandes simples et quelques bons conseils, vous devriez pouvoir en faire assez pour commencer à contribuer à MDN sans trop de difficultés. Le but de cet article n'est pas de vous aider à maîtriser Git ou GitHub, mais de vous donner juste assez d'éléments pour être productif à un niveau de base et contribuer à MDN.</p>
+<p><a href="https://git-scm.com/">Git</a> et <a href="https://github.com/">GitHub</a> sont des outils difficiles à apprendre et à maîtriser, mais avec quelques commandes simples et quelques bons conseils, vous devriez pouvoir en faire assez pour commencer à contribuer à MDN sans trop de difficultés. Le but de cet article n'est pas de vous aider à maîtriser Git ou GitHub, mais de vous donner juste assez d'éléments pour être productif à un niveau de base et contribuer à MDN.</p>
 
 <p>Si vous êtes déjà familiarisé avec les bases de Git/GitHub, vous n'apprendrez probablement rien de nouveau ici, mais cet article peut néanmoins vous être utile comme référence. Il existe également une <a href="/fr/docs/MDN/Contribute/GitHub_cheatsheet">antisèche GitHub</a> disponible, avec juste les commandes et aucune des longues explications.</p>
 
@@ -69,8 +69,8 @@ translation_of: MDN/Contribute/GitHub_beginners
 <h2 id="setting_up_to_work_on_a_specific_repo">Se préparer à travailler sur un dépôt spécifique</h2>
 
 <!-- start:Note spéciale pour l'équpe de traduction l10n-fr -->
-<div class="notecard note">
-  <p><b>Note pour la traduction française :</b></p>
+<div class="note">
+  <p><strong>Note :</strong> pour la traduction française :</p>
   <p>Ce qui a été expliqué par Chris Mills ici est identique pour le dépôt de traduction français, vous devez remplacer <code>mdn/content</code> par <code>mdn/translated-content</code>, et <code>&lt;votre-nom-utilisateur&gt;/content</code> par <code>&lt;votre-nom-utilisateur&gt;/translated-content</code></p>
   <p>Vous pouvez retrouver des explications de ceci sur notre article <a href="https://tech.mozfr.org/post/2021/03/16/MDN-sur-GitHub-comment-contribuer">Comment contribuer sur GitHub au MDN</a></p>
 </div>
@@ -181,9 +181,8 @@ origin    git@github.com:chrisdavidmills/content.git (push)</pre>
 
 <pre class="brush: bash">git switch main</pre>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Dans d'autres tutoriels, vous avez peut-être vu <code>git checkout</code> utilisée pour changer de branche dans un dépôt. Cela fonctionne bien la plupart du temps, mais peut parfois avoir des effets secondaires involontaires, c'est pourquoi dans ce tutoriel nous recommandons la commande <code>git switch</code>, plus récente, qui est conçue pour changer de branche et a moins de chance de faire des erreurs. Si vous êtes intéressé par la façon dont ces commandes sont liées, et les différences entre elles, l'article <a href="https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout">Les points forts de Git 2.23 > Alternatives expérimentales pour git checkout</a> fournit un bon résumé.</p>
+<div class="note">
+  <p><strong>Note :</strong> Dans d'autres tutoriels, vous avez peut-être vu <code>git checkout</code> utilisée pour changer de branche dans un dépôt. Cela fonctionne bien la plupart du temps, mais peut parfois avoir des effets secondaires involontaires, c'est pourquoi dans ce tutoriel nous recommandons la commande <code>git switch</code>, plus récente, qui est conçue pour changer de branche et a moins de chance de faire des erreurs. Si vous êtes intéressé par la façon dont ces commandes sont liées, et les différences entre elles, l'article <a href="https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout">Les points forts de Git 2.23 > Alternatives expérimentales pour git checkout</a> fournit un bon résumé.</p>
 </div>
 
 <h3 id="update_your_main_branch">Mettre à jour votre branche principale</h3>
@@ -297,9 +296,8 @@ nothing to commit, working tree clean</pre>
   <li>
     <p>À ce stade, il vous indique donc les fichiers que vous avez modifiés. L'étape suivante consiste à les "ajouter", c'est-à-dire à les ajouter à une liste de fichiers que vous souhaitez commiter pour les pousser vers le fork distant. Pour ajouter ce fichier à la liste de commit, tapez ce qui suit :</p>
     <pre class="brush: bash">git add README.md</pre>
-    <div class="notecard note">
-      <p><b>Note :</b></p>
-      <p><code>README.md</code> est le chemin d'accès au fichier que vous avez modifié, pas seulement son nom. S'il était à l'intérieur d'un sous-répertoire, vous auriez dû écrire le chemin complet du fichier.</p>
+    <div class="note">
+      <p><strong>Note :</strong> <code>README.md</code> est le chemin d'accès au fichier que vous avez modifié, pas seulement son nom. S'il était à l'intérieur d'un sous-répertoire, vous auriez dû écrire le chemin complet du fichier.</p>
     </div>
   </li>
   <li>
@@ -357,9 +355,8 @@ To github.com:chrisdavidmills/content.git
 
     <p><img src="open-pull-request.png" alt="un formulaire de demande de triage ouvert, qui comprend des champs de texte pour le titre et la description"></p>
 
-    <div class="notecard warning">
-      <p><b>Attention !</b></p>
-      <p>Ne suivez le reste de ces étapes que si vous avez une réelle modification à apporter au dépôt ! Veuillez ne pas soumettre de PR de test à nos dépôts.</p>
+    <div class="warning">
+      <p><strong>Attention :</strong> Ne suivez le reste de ces étapes que si vous avez une réelle modification à apporter au dépôt ! Veuillez ne pas soumettre de PR de test à nos dépôts.</p>
     </div>
   </li>
   <li>
@@ -422,9 +419,8 @@ To github.com:chrisdavidmills/content.git
 
 <p>Si vous regardez à nouveau la page github.com de votre bifurcation distante, vous verrez le commit que vous vouliez inverser, plus le commit qui l'inverse.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Une autre façon de se débarrasser de fichiers qui se sont retrouvés dans des demandes de triage que vous ne voulez pas voir figurer est d'utiliser l'interface utilisateur de GitHub. Allez sur la page de votre demande sur github.com, allez dans l'onglet « Files changed », et trouvez le fichier que vous voulez supprimer de la demande. En haut à droite de la boîte du fichier dans la page, il y aura un menu à « trois points » (<code>...</code>). Appuyez sur ce bouton et choisissez « Delete file ». Dans la page de confirmation, entrez un titre pour le nouveau commit, assurez-vous que la case « Commit directly... « est cochée, et appuyez sur le bouton « Commit changes ».</p>
+<div class="note">
+  <p><strong>Note :</strong> Une autre façon de se débarrasser de fichiers qui se sont retrouvés dans des demandes de triage que vous ne voulez pas voir figurer est d'utiliser l'interface utilisateur de GitHub. Allez sur la page de votre demande sur github.com, allez dans l'onglet « Files changed », et trouvez le fichier que vous voulez supprimer de la demande. En haut à droite de la boîte du fichier dans la page, il y aura un menu à « trois points » (<code>...</code>). Appuyez sur ce bouton et choisissez « Delete file ». Dans la page de confirmation, entrez un titre pour le nouveau commit, assurez-vous que la case « Commit directly... « est cochée, et appuyez sur le bouton « Commit changes ».</p>
   <p>C'est généralement une bonne idée de faire en sorte que le reste de la demande de trisage ressemble exactement à ce que vous voulez avant de faire des changements via l'interface utilisateur de GitHub. Si vous faites quelque chose comme ça et que vous devez ensuite faire d'autres changements, vous devrez vous rappeler de tirer les changements que vous avez faits sur votre branche distante vers votre branche locale (par exemple avec <code>git pull</code>) avant de pouvoir pousser d'autres commits.</p>
 </div>
 

@@ -11,7 +11,7 @@ translation_of: MDN/Guidelines/Code_guidelines/JavaScript
 ---
 <div>{{MDNSidebar}}</div>
 
-<p class="summary">Les directives suivantes couvrent la manière d'écrire le JavaScript pour les exemples de code MDN.</p>
+<p>Les directives suivantes couvrent la manière d'écrire le JavaScript pour les exemples de code MDN.</p>
 
 <p>Ce qui suit est un ensemble assez simple de directives JavaScript. Nous pourrions aller beaucoup plus en profondeur sur ce sujet, mais nous voulons essentiellement fournir des directives simples pour écrire des exemples concis qui seront compréhensibles par le plus grand nombre de personnes possible, plutôt que des directives détaillées pour écrire des applications web complexes. Si vous voulez quelque chose qui entre dans plus de détails, nous vous recommandons le <a href="https://github.com/airbnb/javascript">guide stylistique JavaScript d'AirBnB</a>, qui est généralement compatible avec nos directives.</p>
 
@@ -134,9 +134,8 @@ translation_of: MDN/Guidelines/Code_guidelines/JavaScript
 
 <p>Cependant, nous ne recommandons pas encore l'utilisation générale des nouvelles fonctionnalités ES telles que <a href="/fr/docs/Web/JavaScript/Reference/Statements/async_function">async</a>/<a href="/fr/docs/Web/JavaScript/Reference/Operators/await">await</a>, les virgules de fin sur les listes d'arguments, etc. Nous préférerions que vous ne les utilisiez pas, sauf si cela est strictement nécessaire, et si vous les utilisez, incluez une explication dans votre exemple pour dire ce qu'ils font, avec un lien vers le matériel de référence approprié.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>* Par "usage général", nous entendons la rédaction d'exemples généraux. Les pages de référence couvrant des fonctionnalités spécifiques de l'ES moderne doivent évidemment utiliser les fonctionnalités qu'elles documentent !</p>
+<div class="note">
+  <p><strong>Note :</strong> Par "usage général", nous entendons la rédaction d'exemples généraux. Les pages de référence couvrant des fonctionnalités spécifiques de l'ES moderne doivent évidemment utiliser les fonctionnalités qu'elles documentent !</p>
 </div>
 
 <h2 id="Variables">Variables</h2>
@@ -158,9 +157,8 @@ let speed = distance / time;</pre>
 let s = d/t;
 </pre>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>The only place where it is OK to not use human-readable semantic names is where a very common recognized convention exists, such as using <code>i</code>, <code>j</code>, etc. for loop iterators.</p>
+<div class="note">
+  <p><strong>Note :</strong> The only place where it is OK to not use human-readable semantic names is where a very common recognized convention exists, such as using <code>i</code>, <code>j</code>, etc. for loop iterators.</p>
 </div>
 
 <h3 id="Declaring_variables">Déclaration des variables</h3>
@@ -354,9 +352,8 @@ function notVeryObviousName() {
 };
 </pre>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Le seul endroit où il est acceptable de ne pas utiliser des noms sémantiques lisibles par l'homme est lorsqu'une convention reconnue très courante existe, comme l'utilisation de <code>i</code>, <code>j</code>, etc. pour les itérateurs de boucle.</p>
+<div class="note">
+  <p><strong>Note :</strong> Le seul endroit où il est acceptable de ne pas utiliser des noms sémantiques lisibles par l'homme est lorsqu'une convention reconnue très courante existe, comme l'utilisation de <code>i</code>, <code>j</code>, etc. pour les itérateurs de boucle.</p>
 </div>
 
 <h3 id="Defining_functions">Définition des fonctions</h3>
