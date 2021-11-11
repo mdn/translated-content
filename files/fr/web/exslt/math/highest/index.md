@@ -6,35 +6,30 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/math/highest
 ---
-<p>{{ XsltRef() }}<br>
- <code>math:highest()</code> retourne le nœud de l'ensemble de nœuds spécifié possédant la plus grande valeur (où la plus grande valeur est calculée avec <code><a href="fr/EXSLT/math/max">math:max()</a></code>).</p>
+{{ XsltRef() }}
+`math:highest()` retourne le nœud de l'ensemble de nœuds spécifié possédant la plus grande valeur (où la plus grande valeur est calculée avec [`math:max()`](fr/EXSLT/math/max)).
 
-<p>Un nœud a sa valeur maximale si sa valeur de chaîne convertie en nombre est égale à la valeur maximale.</p>
+Un nœud a sa valeur maximale si sa valeur de chaîne convertie en nombre est égale à la valeur maximale.
 
-<p>{{ Note() }}</p>
+{{ Note() }}
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval">math:highest(<em>ensembleNœud</em>)
-</pre>
+    math:highest(ensembleNœud)
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code>ensembleNœud</code></dt>
- <dd>L'ensemble de nœuds pour lequel il faut retourner la plus grande valeur.</dd>
-</dl>
+- `ensembleNœud`
+  - : L'ensemble de nœuds pour lequel il faut retourner la plus grande valeur.
 
-<h3 id="Retourne">Retourne</h3>
+### Retourne
 
-<p>Un fragment d'arbre résultat consistant en copies des nœuds retournés par la fonction <code><a href="fr/EXSLT/math/max">math:max()</a></code>.</p>
+Un fragment d'arbre résultat consistant en copies des nœuds retournés par la fonction [`math:max()`](fr/EXSLT/math/max).
 
-<h3 id="D.C3.A9finition">Définition</h3>
+### Définition
 
-<ul>
- <li><a class="external" href="http://www.exslt.org/regexp/functions/highest/index.html">EXSLT - MATH:HIGHEST (en)</a></li>
-</ul>
+- [EXSLT - MATH:HIGHEST (en)](http://www.exslt.org/regexp/functions/highest/index.html)
 
-<h3 id="Support_par_Gecko">Support par Gecko</h3>
+### Support par Gecko
 
-<p>Supporté par Gecko 1.9 et ultérieur.</p>
+Supporté par Gecko 1.9 et ultérieur.

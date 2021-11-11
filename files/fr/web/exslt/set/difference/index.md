@@ -6,35 +6,30 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/set/difference
 ---
-<p>{{ XsltRef() }}<br>
- <code>set:difference()</code> retourne la différence entre deux ensembles de nœuds. En d'autres termes, elle retourne un ensemble de nœuds qui sont dans un des ensembles mais par dans l'autre.</p>
+{{ XsltRef() }}
+`set:difference()` retourne la différence entre deux ensembles de nœuds. En d'autres termes, elle retourne un ensemble de nœuds qui sont dans un des ensembles mais par dans l'autre.
 
-<p>La version<em>modèle</em> de <code>set:difference</code> applique des modèles à ces nœuds dans le mode <code>set:difference</code>, en copiant les nœuds afin de retourner un un fragment d'arbre résultant comprenant ces nœuds.</p>
+La version*modèle* de `set:difference` applique des modèles à ces nœuds dans le mode `set:difference`, en copiant les nœuds afin de retourner un un fragment d'arbre résultant comprenant ces nœuds.
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval">set:difference(<em>ensembleNœuds1</em>,<em>ensembleNœuds2</em>)
-</pre>
+    set:difference(ensembleNœuds1,ensembleNœuds2)
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code>ensembleNœuds1</code></dt>
- <dd>L'ensemble de nœuds duquel soustraire des nœuds.</dd>
- <dt><code>ensembleNœuds2</code></dt>
- <dd>L'ensemble de nœuds à soustraire de<em>ensembleNœuds1</em>.</dd>
-</dl>
+- `ensembleNœuds1`
+  - : L'ensemble de nœuds duquel soustraire des nœuds.
+- `ensembleNœuds2`
+  - : L'ensemble de nœuds à soustraire de*ensembleNœuds1*.
 
-<h3 id="Retourne">Retourne</h3>
+### Retourne
 
-<p>Un ensemble de nœuds contenant les nœuds présents dans<em>ensembleNœuds1</em> mais pas dans<em>ensembleNœuds2</em>.</p>
+Un ensemble de nœuds contenant les nœuds présents dans*ensembleNœuds1* mais pas dans*ensembleNœuds2*.
 
-<h3 id="D.C3.A9finition">Définition</h3>
+### Définition
 
-<ul>
- <li><a class="external" href="http://www.exslt.org/set/functions/difference/">EXSLT - SET:DIFFERENCE (en)</a></li>
-</ul>
+- [EXSLT - SET:DIFFERENCE (en)](http://www.exslt.org/set/functions/difference/)
 
-<h3 id="Support_par_Gecko">Support par Gecko</h3>
+### Support par Gecko
 
-<p>Supporté par Gecko 1.9 et ultérieur.</p>
+Supporté par Gecko 1.9 et ultérieur.

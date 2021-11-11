@@ -6,35 +6,31 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/set/trailing
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- <code>set:trailing()</code> retourne les nœuds d'un 1er ensemble de nœuds qui se trouvent après le 1er nœud du 2nd ensemble de nœuds.</p>
+`set:trailing()` retourne les nœuds d'un 1er ensemble de nœuds qui se trouvent après le 1er nœud du 2nd ensemble de nœuds.
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval">set:trailing(<em>ensembleNœuds1</em>,<em>ensembleNœuds2</em>)
-</pre>
+    set:trailing(ensembleNœuds1,ensembleNœuds2)
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code>ensembleNœuds1</code></dt>
- <dd>L'ensemble de nœuds dans lequel chercher les nœuds qui suivent le 1er nœuds du 2nd ensemble de nœuds.</dd>
- <dt><code>ensembleNœuds2</code></dt>
- <dd>L'ensemble de nœuds avec lequel on compare le 1er ensemble de nœuds.</dd>
-</dl>
+- `ensembleNœuds1`
+  - : L'ensemble de nœuds dans lequel chercher les nœuds qui suivent le 1er nœuds du 2nd ensemble de nœuds.
+- `ensembleNœuds2`
+  - : L'ensemble de nœuds avec lequel on compare le 1er ensemble de nœuds.
 
-<h3 id="Retourne">Retourne</h3>
+### Retourne
 
-<p>Un ensemble de nœuds contenant les nœuds appartenant à <code>ensembleNœuds1</code> dont les valeurs suivent le 1er nœud de <code>ensembleNœuds2</code>.</p>
+Un ensemble de nœuds contenant les nœuds appartenant à `ensembleNœuds1` dont les valeurs suivent le 1er nœud de `ensembleNœuds2`.
 
-<p>{{ Note("Si le 1er nœud de <code>ensembleNœuds2</code> n\'est pas contenu dans <code>ensembleNœuds1</code>, cette fonction retourne un ensemble vide. Si <code>ensembleNœuds2</code> est vide, alors le résultat est <code>ensembleNœuds1</code>.") }}</p>
+{{ Note("Si le 1er nœud de <code>ensembleNœuds2</code> n\'est pas contenu dans <code>ensembleNœuds1</code>, cette fonction retourne un ensemble vide. Si <code>ensembleNœuds2</code> est vide, alors le résultat est <code>ensembleNœuds1</code>.") }}
 
-<h3 id="D.C3.A9finition">Définition</h3>
+### Définition
 
-<p><a class="external" href="http://www.exslt.org/set/functions/trailing/">EXSLT - SET:TRAILING (en)</a></p>
+[EXSLT - SET:TRAILING (en)](http://www.exslt.org/set/functions/trailing/)
 
-<h3 id="Support_par_Gecko">Support par Gecko</h3>
+### Support par Gecko
 
-<p>Supporté par Gecko 1.9 et ultérieur.</p>
+Supporté par Gecko 1.9 et ultérieur.

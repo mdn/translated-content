@@ -6,48 +6,40 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/str/split
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- <code>str:split()</code> divise une chaîne en utilisation un motif pour déterminer où doivent être fait les séparations, en retournant un ensemble de nœuds contenant les chaînes résultantes.</p>
+`str:split()` divise une chaîne en utilisation un motif pour déterminer où doivent être fait les séparations, en retournant un ensemble de nœuds contenant les chaînes résultantes.
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval">str:split(<em>chaîne</em>,<em>motif</em>)
-</pre>
+    str:split(chaîne,motif)
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code>chaîne</code></dt>
- <dd>La chaîne à diviser.</dd>
- <dt><code>motif</code></dt>
- <dd>Le motif indiquant les endroits de division de la chaîne.</dd>
-</dl>
+- `chaîne`
+  - : La chaîne à diviser.
+- `motif`
+  - : Le motif indiquant les endroits de division de la chaîne.
 
-<h3 id="Retourne">Retourne</h3>
+### Retourne
 
-<p>Un ensemble de nœuds d'éléments <code>token</code>, contenant chacun un <code>token</code> provenant de <code>chaîne</code>.</p>
+Un ensemble de nœuds d'éléments `token`, contenant chacun un `token` provenant de `chaîne`.
 
-<p>Par exemple :</p>
+Par exemple :
 
-<pre class="eval">str:split('livre, téléphone, ordinateur, chaise', ', ')
-</pre>
+    str:split('livre, téléphone, ordinateur, chaise', ', ')
 
-<p>Retourne l'ensemble de nœuds suivant :</p>
+Retourne l'ensemble de nœuds suivant :
 
-<pre class="eval">&lt;token&gt;livre&lt;/token&gt;
-&lt;token&gt;téléphone&lt;/token&gt;
-&lt;token&gt;ordinateur&lt;/token&gt;
-&lt;token&gt;chaise&lt;/token&gt;
-</pre>
+    <token>livre</token>
+    <token>téléphone</token>
+    <token>ordinateur</token>
+    <token>chaise</token>
 
-<h3 id="D.C3.A9finition">Définition</h3>
+### Définition
 
-<ul>
- <li><a class="external" href="http://www.exslt.org/regexp/functions/split/index.html">EXSLT - STR:SPLIT (en)</a></li>
-</ul>
+- [EXSLT - STR:SPLIT (en)](http://www.exslt.org/regexp/functions/split/index.html)
 
-<h3 id="Support_par_Gecko">Support par Gecko</h3>
+### Support par Gecko
 
-<p>Supporté par Gecko 1.9 et ultérieur.</p>
+Supporté par Gecko 1.9 et ultérieur.

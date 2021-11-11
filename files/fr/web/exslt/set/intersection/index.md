@@ -6,35 +6,29 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/set/intersection
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- <code>set:intersection()</code> retourne l'intersection de deux ensembles de nœuds. En d'autres termes, cette fonction retourne un ensemble de nœuds contenant tous les nœuds appartenant aux deux ensembles de nœuds.</p>
+`set:intersection()` retourne l'intersection de deux ensembles de nœuds. En d'autres termes, cette fonction retourne un ensemble de nœuds contenant tous les nœuds appartenant aux deux ensembles de nœuds.
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval">set:intersection(<em>ensembleNœuds1</em>,<em>ensembleNœuds2</em>)
-</pre>
+    set:intersection(ensembleNœuds1,ensembleNœuds2)
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code>ensembleNœuds1</code></dt>
- <dd>Le premier ensemble de nœuds.</dd>
- <dt><code>ensembleNœuds2</code></dt>
- <dd>Le second ensemble de nœuds.</dd>
-</dl>
+- `ensembleNœuds1`
+  - : Le premier ensemble de nœuds.
+- `ensembleNœuds2`
+  - : Le second ensemble de nœuds.
 
-<h3 id="Retourne">Retourne</h3>
+### Retourne
 
-<p>Un ensemble de nœuds contenant les nœuds appartenant à la fois à<em>ensembleNœuds</em> et à<em>ensembleNœuds</em>.</p>
+Un ensemble de nœuds contenant les nœuds appartenant à la fois à*ensembleNœuds* et à*ensembleNœuds*.
 
-<h3 id="D.C3.A9finition">Définition</h3>
+### Définition
 
-<ul>
- <li><a class="external" href="http://www.exslt.org/set/functions/intersection/">EXSLT - SET:INTERSECTION</a></li>
-</ul>
+- [EXSLT - SET:INTERSECTION](http://www.exslt.org/set/functions/intersection/)
 
-<h3 id="Support_par_Gecko">Support par Gecko</h3>
+### Support par Gecko
 
-<p>Supporté par Gecko 1.9 et ultérieur.</p>
+Supporté par Gecko 1.9 et ultérieur.

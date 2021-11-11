@@ -6,35 +6,29 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/set/has-same-node
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- <code>set:has-same-node()</code> détermine si deux ensembles de nœuds ont ou non des nœuds communs.</p>
+`set:has-same-node()` détermine si deux ensembles de nœuds ont ou non des nœuds communs.
 
-<h3 id="Syntaxe">Syntaxe</h3>
+### Syntaxe
 
-<pre class="eval">set:has-same-node(<em>ensembleNœuds1</em>,<em>ensembleNœuds2</em>)
-</pre>
+    set:has-same-node(ensembleNœuds1,ensembleNœuds2)
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt><code>ensembleNœuds1</code></dt>
- <dd>Le premier ensemble de nœuds à vérifier.</dd>
- <dt><code>ensembleNœuds2</code></dt>
- <dd>Le second ensemble de nœuds à vérifier.</dd>
-</dl>
+- `ensembleNœuds1`
+  - : Le premier ensemble de nœuds à vérifier.
+- `ensembleNœuds2`
+  - : Le second ensemble de nœuds à vérifier.
 
-<h3 id="Retourne">Retourne</h3>
+### Retourne
 
-<p><code>true</code> si les deux ensembles de nœuds ont des nœuds en commun, <code>false</code> dans le cas contraire.</p>
+`true` si les deux ensembles de nœuds ont des nœuds en commun, `false` dans le cas contraire.
 
-<h3 id="D.C3.A9finition">Définition</h3>
+### Définition
 
-<ul>
- <li><a class="external" href="http://www.exslt.org/set/functions/has-same-node/">EXSLT - SET:HAS-SAME-NODE (en)</a></li>
-</ul>
+- [EXSLT - SET:HAS-SAME-NODE (en)](http://www.exslt.org/set/functions/has-same-node/)
 
-<h3 id="Support_par_Gecko">Support par Gecko</h3>
+### Support par Gecko
 
-<p>Supporté par Gecko 1.9 et ultérieur.</p>
+Supporté par Gecko 1.9 et ultérieur.
