@@ -5,4 +5,4 @@ tags:
   - MathML
 translation_of: Web/MathML/Index
 ---
-<p>{{Index("/fr/docs/Web/MathML")}}</p>
+{{Index("/fr/docs/Web/MathML")}}

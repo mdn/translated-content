@@ -3,118 +3,90 @@ title: maction
 slug: Web/MathML/Element/maction
 tags:
   - MathML
-  - 'MathML:Element'
-  - 'MathML:Référence'
+  - MathML:Element
+  - MathML:Référence
 translation_of: Web/MathML/Element/maction
 ---
-<p>L'élément MathML <code>&lt;maction&gt;</code> permet de lier des actions à des (sous-)expressions.<br>
-  L'action est définie par l'attribut <code>actiontype</code> qui peut prendre plusieurs valeurs. Pour définir quels éléments fils sont affectés par l'action, il est possible d'utiliser l'attribut <code>selection</code>.</p>
-<h2 id="Attributs">Attributs</h2>
-<dl>
-  <dt id="attr-actiontype">
-    actiontype</dt>
-  <dd>
-    L'action qui se produit pour cet élément. Les valeurs possibles sont :
-    <ul>
-      <li><code>statusline</code> : S'il y a un clic sur l'<em>expression</em> ou que le lecteur passe la souris sur celle-ci, le <em>message</em> est envoyé au statut du navigateur (<em>status line</em>). La syntaxe est la suivante : <code>&lt;maction actiontype="statusline"&gt; <em>expression</em> <em>message</em> &lt;/maction&gt;.</code></li>
-      <li><code>toggle</code> : Quand il y a un clic sur la sous-expression, la mise en forme des sous-expressions sélectionnées change. Ainsi chaque clic augmente la valeur de <code>selection</code>.<br>
-        La syntaxe est la suivante : <code>&lt;maction actiontype="toggle" selection="<em>entier-positif</em>" &gt; <em>expression1</em> <em>expression2</em> <em>expressionN</em> &lt;/maction&gt;</code>.</li>
-      <li><code>tooltip</code> : Lorsque la souris passe au-dessus de l'<em>expression</em>, une info-bulle est affichée à proximité de l'expression.<br>
-        La syntaxe est la suivante :<code> &lt;maction actiontype="tooltip"&gt; <em>expression</em> <em>message</em> &lt;/maction&gt;.</code></li>
-    </ul>
-  </dd>
-  <dt id="attr-class-id-style">
-    class, id, style</dt>
-  <dd>
-    Afin d'être utilisés avec les <a href="/fr/docs/CSS">feuilles de styles</a>.</dd>
-  <dt id="attr-href">
-    href</dt>
-  <dd>
-    Un hyperlien pointant vers un URI donné.</dd>
-  <dt id="attr-mathbackground">
-    mathbackground</dt>
-  <dd>
-    La couleur de fond. Il est possible d'utiliser les codes au format <code>#rgb</code>, <code>#rrggbb</code> et les <a href="/fr/docs/CSS/valeur_de_couleur#Mots-cl.C3.A9s">noms de couleurs HTML</a>.</dd>
-  <dt id="attr-mathcolor">
-    mathcolor</dt>
-  <dd>
-    La couleur du texte. Il est possible d'utiliser les codes au format <code>#rgb</code>, <code>#rrggbb</code> et les <a href="/fr/docs/CSS/valeur_de_couleur#Mots-cl.C3.A9s">noms de couleurs HTML</a>.</dd>
-  <dt id="attr-selection">
-    selection</dt>
-  <dd>
-    L'élément fils auquel s'applique l'action. La valeur par défaut est <code>1</code>, ce qui correspond au premier élément fils.</dd>
-</dl>
-<h2 id="Exemples">Exemples</h2>
-<pre class="brush: html">&lt;math&gt;
+L'élément MathML `<maction>` permet de lier des actions à des (sous-)expressions.
+L'action est définie par l'attribut `actiontype` qui peut prendre plusieurs valeurs. Pour définir quels éléments fils sont affectés par l'action, il est possible d'utiliser l'attribut `selection`.
 
-&lt;maction actiontype="toggle"&gt;
+## Attributs
 
-  &lt;mfrac&gt;
-    &lt;mn&gt;6&lt;/mn&gt;
-    &lt;mn&gt;8&lt;/mn&gt;
-  &lt;/mfrac&gt;
+- actiontype
 
-  &lt;mfrac&gt;
-    &lt;mrow&gt;
-      &lt;mn&gt;3&lt;/mn&gt;
-      &lt;mo&gt;&amp;sdot;&lt;/mo&gt;
-      &lt;mn&gt;2&lt;/mn&gt;
-    &lt;/mrow&gt;
-    &lt;mrow&gt;
-      &lt;mn&gt;4&lt;/mn&gt;
-      &lt;mo&gt;&amp;sdot;&lt;/mo&gt;
-      &lt;mn&gt;2&lt;/mn&gt;
-    &lt;/mrow&gt;
-  &lt;/mfrac&gt;
+  - : L'action qui se produit pour cet élément. Les valeurs possibles sont :
 
-  &lt;mfrac&gt;
-    &lt;mn&gt;3&lt;/mn&gt;
-    &lt;mn&gt;4&lt;/mn&gt;
-  &lt;/mfrac&gt;
+    - `statusline` : S'il y a un clic sur l'_expression_ ou que le lecteur passe la souris sur celle-ci, le _message_ est envoyé au statut du navigateur (_status line_). La syntaxe est la suivante : `<maction actiontype="statusline"> expression message </maction>.`
+    - `toggle` : Quand il y a un clic sur la sous-expression, la mise en forme des sous-expressions sélectionnées change. Ainsi chaque clic augmente la valeur de `selection`.
+      La syntaxe est la suivante : `<maction actiontype="toggle" selection="entier-positif" > expression1 expression2 expressionN </maction>`.
+    - `tooltip` : Lorsque la souris passe au-dessus de l'_expression_, une info-bulle est affichée à proximité de l'expression.
+      La syntaxe est la suivante :` <maction actiontype="tooltip"> expression message </maction>.`
 
-&lt;/maction&gt;
+- class, id, style
+  - : Afin d'être utilisés avec les [feuilles de styles](/fr/docs/CSS).
+- href
+  - : Un hyperlien pointant vers un URI donné.
+- mathbackground
+  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/CSS/valeur_de_couleur#Mots-cl.C3.A9s).
+- mathcolor
+  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/CSS/valeur_de_couleur#Mots-cl.C3.A9s).
+- selection
+  - : L'élément fils auquel s'applique l'action. La valeur par défaut est `1`, ce qui correspond au premier élément fils.
 
-&lt;/math&gt;
-</pre>
+## Exemples
 
-<h2 id="Specifications">Spécifications</h2>
+```html
+<math>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('MathML3', 'chapter3.html#presm.maction', 'maction') }}</td>
-      <td>{{ Spec2('MathML3') }}</td>
-      <td>Définition actuelle</td>
-    </tr>
-    <tr>
-      <td>{{ SpecName('MathML2', 'chapter3.html#presm.maction', 'maction') }}</td>
-      <td>{{ Spec2('MathML2') }}</td>
-      <td>Définition initiale</td>
-    </tr>
-  </tbody>
-</table>
+<maction actiontype="toggle">
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+  <mfrac>
+    <mn>6</mn>
+    <mn>8</mn>
+  </mfrac>
 
-<p>{{Compat("mathml.elements.maction")}}</p>
+  <mfrac>
+    <mrow>
+      <mn>3</mn>
+      <mo>&sdot;</mo>
+      <mn>2</mn>
+    </mrow>
+    <mrow>
+      <mn>4</mn>
+      <mo>&sdot;</mo>
+      <mn>2</mn>
+    </mrow>
+  </mfrac>
 
-<h3 id="Gecko-specific_notes">Notes relatives à Gecko</h3>
+  <mfrac>
+    <mn>3</mn>
+    <mn>4</mn>
+  </mfrac>
 
-<ul>
-  <li>Avant Gecko 9.0 {{ geckoRelease("9.0") }} la valeur <code>restyle</code> (non-standard) était supportée pour l'attribut <code>actiontype</code>. Cette valeur a été retirée.</li>
-  <li>Avant Gecko 14.0 {{ geckoRelease("14.0") }} le type d'action <code>statusline</code> utilisait une syntaxe non-standard (voir ci-dessous). Cela a été résolu afin de respecter la spécification MathML.<br>
-    <pre>&lt;maction actiontype="statusline#(message)"&gt;
-(expression)
-&lt;/maction&gt;
-</pre>
-  </li>
-  <li>Gecko 15.0 {{geckoRelease("15.0")}} ne prend en compte l'attribut <code>selection</code> seulement s'il est utilisé avec le type d'action <code>toggle</code>.</li>
-  <li>À partir de Gecko 16.0 {{geckoRelease("16.0")}} l'attribut <code>selection</code> est également pris en compte lorsqu'un <code>actiontype</code> inconnu est spécifié. Si un <code>actiontype</code> n'est pas spécifié (il est vide) ou que l'attribut <code>selection</code> est invalide, cela entraînera une erreur de balisage MathML (« invalid-markup »).</li>
-</ul>
+</maction>
+
+</math>
+```
+
+## Spécifications
+
+| Spécification                                                                            | Statut                       | Commentaire         |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{ SpecName('MathML3', 'chapter3.html#presm.maction', 'maction') }} | {{ Spec2('MathML3') }} | Définition actuelle |
+| {{ SpecName('MathML2', 'chapter3.html#presm.maction', 'maction') }} | {{ Spec2('MathML2') }} | Définition initiale |
+
+## Compatibilité des navigateurs
+
+{{Compat("mathml.elements.maction")}}
+
+### Notes relatives à Gecko
+
+- Avant Gecko 9.0 {{ geckoRelease("9.0") }} la valeur `restyle` (non-standard) était supportée pour l'attribut `actiontype`. Cette valeur a été retirée.
+- Avant Gecko 14.0 {{ geckoRelease("14.0") }} le type d'action `statusline` utilisait une syntaxe non-standard (voir ci-dessous). Cela a été résolu afin de respecter la spécification MathML.
+
+      <maction actiontype="statusline#(message)">
+      (expression)
+      </maction>
+
+- Gecko 15.0 {{geckoRelease("15.0")}} ne prend en compte l'attribut `selection` seulement s'il est utilisé avec le type d'action `toggle`.
+- À partir de Gecko 16.0 {{geckoRelease("16.0")}} l'attribut `selection` est également pris en compte lorsqu'un `actiontype` inconnu est spécifié. Si un `actiontype` n'est pas spécifié (il est vide) ou que l'attribut `selection` est invalide, cela entraînera une erreur de balisage MathML (« invalid-markup »).
