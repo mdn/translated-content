@@ -3,109 +3,98 @@ title: Le chargement différé
 slug: Web/Performance/Lazy_loading
 translation_of: Web/Performance/Lazy_loading
 ---
-<p>Le <strong>chargement différé</strong> (<i lang="en">lazy loading</i> en anglais) est une stratégie d'identification des ressources non bloquantes (non critiques) afin de ne les charger qu'au moment où elles sont utiles. C'est une façon de raccourcir le <a href="/fr/docs/Web/Performance/Critical_rendering_path">chemin critique de rendu</a>, ce qui se traduit par une réduction du temps de chargement de la page.</p>
+Le **chargement différé** (<i lang="en">lazy loading</i> en anglais) est une stratégie d'identification des ressources non bloquantes (non critiques) afin de ne les charger qu'au moment où elles sont utiles. C'est une façon de raccourcir le [chemin critique de rendu](/fr/docs/Web/Performance/Critical_rendering_path), ce qui se traduit par une réduction du temps de chargement de la page.
 
-<p>Le chargement différé peut se dérouler à plusieurs moments du chargement d'une application, mais il se déroule typiquement lorsque l'internaute interagit avec la page, notamment lors du défilement de la page ou de la navigation.</p>
+Le chargement différé peut se dérouler à plusieurs moments du chargement d'une application, mais il se déroule typiquement lorsque l'internaute interagit avec la page, notamment lors du défilement de la page ou de la navigation.
 
-<h2 id="general_overview">Vue d'ensemble</h2>
+## Vue d'ensemble
 
-<p>Au fur et à mesure de l'évolution du web, nous avons vu une grande augmentation du nombre et de la taille des ressources servie aux internautes. Entre 2011 et 2019, le poids médian des ressources est passé de <strong>~10 Ko</strong> à <strong>~40 Ko</strong> sur ordinateur et de <strong>~5 Ko</strong> à <strong>~35 Ko</strong> sur mobile. Tandis que la taille médiane des images est passée de <strong>~25 Ko</strong> à <strong>~90 Ko</strong> sur ordinateur et de <strong>~10 Ko</strong> à <strong>~85 Ko</strong> sur mobile.</p>
+Au fur et à mesure de l'évolution du web, nous avons vu une grande augmentation du nombre et de la taille des ressources servie aux internautes. Entre 2011 et 2019, le poids médian des ressources est passé de **\~10 Ko** à **\~40 Ko** sur ordinateur et de **\~5 Ko** à **\~35 Ko** sur mobile. Tandis que la taille médiane des images est passée de **\~25 Ko** à **\~90 Ko** sur ordinateur et de **\~10 Ko** à **\~85 Ko** sur mobile.
 
-<p>L'une des méthodes utilisables pour s'occuper de ce problème consiste à réduire la longueur du <a href="/fr/docs/Web/Performance/Critical_rendering_path">chemin critique de rendu</a> en chargeant les ressources de façon différée lors du premier rendu de la page. Exemple concret : lorsque vous arrivez sur la page d'accueil d'une boutique en ligne disposant d'un lien vers la section « panier », il est plus optimal de ne charger ses ressources que lorsque vous naviguerez vers cette section.</p>
+L'une des méthodes utilisables pour s'occuper de ce problème consiste à réduire la longueur du [chemin critique de rendu](/fr/docs/Web/Performance/Critical_rendering_path) en chargeant les ressources de façon différée lors du premier rendu de la page. Exemple concret : lorsque vous arrivez sur la page d'accueil d'une boutique en ligne disposant d'un lien vers la section « panier », il est plus optimal de ne charger ses ressources que lorsque vous naviguerez vers cette section.
 
-<h2 id="strategies">Stratégies</h2>
+## Stratégies
 
-<p>Le chargement différé peut être appliqué sur de multiples ressources et avec de multiples stratégies.</p>
+Le chargement différé peut être appliqué sur de multiples ressources et avec de multiples stratégies.
 
-<h3 id="general">En général</h3>
+### En général
 
-<h4 id="code_splitting">Division du code</h4>
+#### Division du code
 
-<p>Le code JavaScript, CSS et HTML peuvent être divisés en petits morceaux. Cela permet de n'envoyer que la portion de code nécessaire à l'affichage sur l'écran de l'internaute, et donc d'améliorer les temps de chargement. Le reste sera chargé sur demande. Deux systèmes sont possibles&nbsp;:</p>
+Le code JavaScript, CSS et HTML peuvent être divisés en petits morceaux. Cela permet de n'envoyer que la portion de code nécessaire à l'affichage sur l'écran de l'internaute, et donc d'améliorer les temps de chargement. Le reste sera chargé sur demande. Deux systèmes sont possibles :
 
-<ul>
-  <li>division par points d'entrée&nbsp;: séparation du code en différents points d'entrée au sein de l'application&nbsp;;</li>
-  <li>division dynamique&nbsp;: séparation du code où des déclarations <a href="/fr/docs/Web/JavaScript/Reference/Statements/import"><code>import()</code></a> dynamiques sont utilisées.</li>
-</ul>
+- division par points d'entrée : séparation du code en différents points d'entrée au sein de l'application ;
+- division dynamique : séparation du code où des déclarations [`import()`](/fr/docs/Web/JavaScript/Reference/Statements/import) dynamiques sont utilisées.
 
-<h3 id="javascript">JavaScript</h3>
+### JavaScript
 
-<h4 id="script_de_type_module">Script de type module</h4>
+#### Script de type module
 
-<p>Toute balise <code>&lt;script&gt;</code> utilisant <code>type="module"</code> sera traitée comme un <a href="/fr/docs/Web/JavaScript/Guide/Modules">module JavaScript</a> et son chargement sera différé par défaut.</p>
+Toute balise `<script>` utilisant `type="module"` sera traitée comme un [module JavaScript](/fr/docs/Web/JavaScript/Guide/Modules) et son chargement sera différé par défaut.
 
-<h3 id="css">CSS</h3>
+### CSS
 
-<p>Par défaut, les fichiers CSS sont traités comme des ressources <a href="/fr/docs/Web/Performance/Critical_rendering_path">bloquant le rendu</a>, donc le navigateur n'affichera aucun contenu traité tant que le <a href="/fr/docs/Web/API/CSS_Object_Model">CSSOM (pour <i lang="en">CSS Object Model</i>)</a> est construit. Les fichiers CSS doivent être légers, délivrés aussi rapidement que possible, et l'utilisation des types de médias et des requêtes média est conseillé pour ne pas bloquer le rendu&nbsp;:</p>
+Par défaut, les fichiers CSS sont traités comme des ressources [bloquant le rendu](/fr/docs/Web/Performance/Critical_rendering_path), donc le navigateur n'affichera aucun contenu traité tant que le [CSSOM (pour <i lang="en">CSS Object Model</i>)](/fr/docs/Web/API/CSS_Object_Model) est construit. Les fichiers CSS doivent être légers, délivrés aussi rapidement que possible, et l'utilisation des types de médias et des requêtes média est conseillé pour ne pas bloquer le rendu :
 
-<pre class="brush: html">&lt;link href="style.css"    rel="stylesheet" media="all"&gt;
-&lt;link href="portrait.css" rel="stylesheet" media="orientation:portrait"&gt;
-&lt;link href="print.css"    rel="stylesheet" media="print"&gt;
-</pre>
+```html
+<link href="style.css"    rel="stylesheet" media="all">
+<link href="portrait.css" rel="stylesheet" media="orientation:portrait">
+<link href="print.css"    rel="stylesheet" media="print">
+```
 
-<p>Pour cela, il est possible de réaliser certaines <a href="/fr/docs/Learn/Performance/CSS">optimisations CSS</a>.</p>
+Pour cela, il est possible de réaliser certaines [optimisations CSS](/fr/docs/Learn/Performance/CSS).
 
-<h3 id="fonts">Polices</h3>
+### Polices
 
-<p>Par défaut, les requêtes d'affichage des polices sont différées jusqu'à ce que l'arbre de rendu soit construit, ce qui peut conduire à un délai d'affichage du texte.</p>
+Par défaut, les requêtes d'affichage des polices sont différées jusqu'à ce que l'arbre de rendu soit construit, ce qui peut conduire à un délai d'affichage du texte.
 
-<p>Il est possible de surcharger le comportement par défaut et de précharger les polices web en utilisant <code>&lt;link rel="preload"&gt;</code>, la <a href="/fr/docs/Web/CSS/@font-face/font-display">propriété CSS <code>font-display</code></a> et the <a href="/fr/docs/Web/API/CSS_Font_Loading_API">l'API de chargement des polices</a>.<br><br>Voir aussi <a href="/fr/docs/Web/HTML/Element/link">la documentation de l'élément <code>Link</code></a></p>
+Il est possible de surcharger le comportement par défaut et de précharger les polices web en utilisant `<link rel="preload">`, la [propriété CSS `font-display`](/fr/docs/Web/CSS/@font-face/font-display) et the [l'API de chargement des polices](/fr/docs/Web/API/CSS_Font_Loading_API).
 
-<h3 id="images_and_iframes">Images et iframes</h3>
+Voir aussi [la documentation de l'élément `Link`](/fr/docs/Web/HTML/Element/link)
 
-<p>Très souvent, les pages web contiennent beaucoup d'images et cela contribue à la quantité de données chargées et donc à la vitesse de chargement de la page. La plupart de ces images sont généralement en dehors de l'écran (ces ressources sont alors considérées comme étant <a href="/fr/docs/Web/Performance/Critical_rendering_path">non critiques</a>), car elles nécessitent une interaction de l'internaute (par exemple le faire de défiler dans la page) avant de les voir.</p>
+### Images et iframes
 
-<h4 id="attribut_loading">Attribut loading</h4>
+Très souvent, les pages web contiennent beaucoup d'images et cela contribue à la quantité de données chargées et donc à la vitesse de chargement de la page. La plupart de ces images sont généralement en dehors de l'écran (ces ressources sont alors considérées comme étant [non critiques](/fr/docs/Web/Performance/Critical_rendering_path)), car elles nécessitent une interaction de l'internaute (par exemple le faire de défiler dans la page) avant de les voir.
 
-<p>L'attribut <a href="/fr/docs/Web/HTML/Element/Img#attr-loading"><code>loading</code></a> utilisé sur un élément <a href="/fr/docs/Web/HTML/Element/Img"><code>&lt;img&gt;</code></a> (ou sur un élément <a href="/fr/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a>) peut être utilisé pour demander au navigateur de différer le chargement des images et des iframes qui se situent en dehors de la zone affichée à l'écran, jusqu'à ce que la personne visitant le site ne les affiche en faisant défiler la page.</p>
+#### Attribut loading
 
-<pre class="brush: html">&lt;img src="image.jpg" alt="..." loading="lazy"&gt;
-&lt;iframe src="video-player.html" title="..." loading="lazy"&gt;&lt;/iframe&gt;</pre>
+L'attribut [`loading`](/fr/docs/Web/HTML/Element/Img#attr-loading) utilisé sur un élément [`<img>`](/fr/docs/Web/HTML/Element/Img) (ou sur un élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)) peut être utilisé pour demander au navigateur de différer le chargement des images et des iframes qui se situent en dehors de la zone affichée à l'écran, jusqu'à ce que la personne visitant le site ne les affiche en faisant défiler la page.
 
-<p>L'événement <code>load</code> se déclenche lorsque que le contenu le plus rapide a entièrement été chargé. À ce moment-là, il est complètement possible (et même probable) que des images utilisant le chargement différé, situées dans la <a href="/fr/docs/Glossary/Visual_Viewport">zone visible de l'écran</a> n'aient pas encore été chargées.</p>
+```html
+<img src="image.jpg" alt="..." loading="lazy">
+<iframe src="video-player.html" title="..." loading="lazy"></iframe>
+```
 
-<p>Vous pouvez déterminer si une image donnée a terminé son chargement en examinant la valeur de la valeur booléenne de sa propriété <a href="/fr/docs/Web/API/HTMLImageElement/complete"><code>complete</code></a>.</p>
+L'événement `load` se déclenche lorsque que le contenu le plus rapide a entièrement été chargé. À ce moment-là, il est complètement possible (et même probable) que des images utilisant le chargement différé, situées dans la [zone visible de l'écran](/fr/docs/Glossary/Visual_Viewport) n'aient pas encore été chargées.
 
-<h4 id="polyfill">Polyfill</h4>
+Vous pouvez déterminer si une image donnée a terminé son chargement en examinant la valeur de la valeur booléenne de sa propriété [`complete`](/fr/docs/Web/API/HTMLImageElement/complete).
 
-<p>Pour ajouter la prise en charge de l'attribut <code>loading</code> sur les vieux navigateurs qui ne sont pas compatibles, vous pouvez utiliser le polyfill suivant&nbsp;: <a href="https://github.com/mfranzke/loading-attribute-polyfill">loading-attribute-polyfill</a></p>
+#### Polyfill
 
-<h4 id="api_intersection_observer">API Intersection Observer</h4>
+Pour ajouter la prise en charge de l'attribut `loading` sur les vieux navigateurs qui ne sont pas compatibles, vous pouvez utiliser le polyfill suivant : [loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill)
 
-<p><a href="/fr/docs/Web/API/IntersectionObserver">L'API Intersection Observers</a> permet à l'internaute de savoir si un élément suivi est entré ou est déjà dans la zone d'affichage.</p>
+#### API Intersection Observer
 
-<h4 id="gestionnaire_d_évènements">Gestionnaires d'évènements</h4>
+[L'API Intersection Observers](/fr/docs/Web/API/IntersectionObserver) permet à l'internaute de savoir si un élément suivi est entré ou est déjà dans la zone d'affichage.
 
-<p>Lorsque la compatibilité navigateur est cruciale, vous pouvez utiliser ces quelques options&nbsp;:</p>
+#### Gestionnaires d'évènements
 
-<ul>
-  <li><a href="https://github.com/w3c/IntersectionObserver">polyfill pour l'API <i lang="en">Intersection observer</i></a></li>
-  <li>Utilisés en tant que solution de contournement pour le défilement, les gestionnaires de redimensionnement ou de changement d'orientation peuvent déterminer si un élément spécifique se trouve dans la zone d'affichage ou non.</li>
-</ul>
+Lorsque la compatibilité navigateur est cruciale, vous pouvez utiliser ces quelques options :
 
-<h2 id="specifications">Spécifications</h2>
+- [polyfill pour l'API <i lang="en">Intersection observer</i>](https://github.com/w3c/IntersectionObserver)
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th><strong>Spécification</strong></th>
-      <th><strong>Statut</strong></th>
-      <th><strong>Commentaires</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "#lazy-loading-attributes")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+  <i lang="en">Intersection observer</i>
 
-<h2 id="see_also">Voir aussi</h2>
+- Utilisés en tant que solution de contournement pour le défilement, les gestionnaires de redimensionnement ou de changement d'orientation peuvent déterminer si un élément spécifique se trouve dans la zone d'affichage ou non.
 
-<ul>
-  <li><a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css">CSS bloquant le rendu (en anglais)</a></li>
-  <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization#optimizing_loading_and_rendering">Optimiser le chargement et le rendu (en anglais)</a></li>
-  <li><a href="https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video">Chargement différé des images et des vidéos (en anglais)</a></li>
-</ul>
+## Spécifications
+
+| **Spécification**                                                        | **Statut**                       | **Commentaires** |
+| ------------------------------------------------------------------------ | -------------------------------- | ---------------- |
+| {{SpecName('HTML WHATWG', "#lazy-loading-attributes")}} | {{Spec2('HTML WHATWG')}} |                  |
+
+## Voir aussi
+
+- [CSS bloquant le rendu (en anglais)](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css)
+- [Optimiser le chargement et le rendu (en anglais)](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization#optimizing_loading_and_rendering)
+- [Chargement différé des images et des vidéos (en anglais)](https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video)
