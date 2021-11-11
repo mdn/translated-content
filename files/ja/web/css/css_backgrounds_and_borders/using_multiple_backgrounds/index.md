@@ -25,7 +25,7 @@ translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 
 <h2 id="Example" name="Example">例</h2>
 
-<p>この例では、3 つの背景が重なっています。Firefox のロゴ、泡の画像、そして <a href="/ja/docs/Web/CSS/linear-gradient">linear-gradient</a> です。</p>
+<p>この例では、3 つの背景が重なっています。Firefox のロゴ、泡の画像、そして [linear-gradient](/ja/docs/Web/CSS/linear-gradient) です。</p>
 
 <h3 id="HTML" name="HTML">HTML</h3>
 
@@ -58,5 +58,5 @@ translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 <h2 id="See_also" name="See_also">関連情報</h2>
 
 <ul>
- <li><a href="/ja/docs/CSS/Using_CSS_gradients">CSS グラデーションの利用</a></li>
+ <li>[CSS グラデーションの利用](/ja/docs/CSS/Using_CSS_gradients)</li>
 </ul>
