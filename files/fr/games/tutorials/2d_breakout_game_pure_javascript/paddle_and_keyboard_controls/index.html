@@ -16,27 +16,25 @@ original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_et_contr�
 ---
 <div>{{GamesSidebar}}</div>
 
-<div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{IncludeSubnav("/fr/docs/Games")}}</div>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Faire_rebondir_la_balle_sur_les_murs", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}</p>
 
-<div class="summary">
-<p>C'est la <strong>4<sup>ème</sup> étape sur</strong> 10 de ce <a href="https://developer.mozilla.org/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript">tutoriel Gamedev Canvas</a>. Vous pouvez retrouver le code source de cette leçon sur <a class="external external-icon" href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html" rel="noopener">Gamedev-Canvas-workshop/lesson4.html</a>.</p>
-</div>
+<p>C'est la <strong>4<sup>e</sup> étape sur</strong> 10 de ce <a href="/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript">tutoriel Gamedev Canvas</a>. Vous pouvez retrouver le code source de cette leçon sur <a class="external external-icon" href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html" rel="noopener">Gamedev-Canvas-workshop/lesson4.html</a>.</p>
 
-<p><span class="seoSummary">La balle rebondit librement partout et vous pourriez la regarder indéfiniment... Mais il n'y a pas d'interaction avec le joueur. Ce n'est pas un jeu si vous ne pouvez pas le contrôler ! Nous allons donc ajouter une interaction avec le joueur : une raquette contrôlable.</span></p>
+<p>La balle rebondit librement partout et vous pourriez la regarder indéfiniment... Mais il n'y a pas d'interaction avec le joueur. Ce n'est pas un jeu si vous ne pouvez pas le contrôler ! Nous allons donc ajouter une interaction avec le joueur : une raquette contrôlable.</p>
 
 <h2 id="Créer_une_raquette_pour_frapper_la_balle">Créer une raquette pour frapper la balle</h2>
 
 <p>Il nous faut donc une raquette pour frapper la balle. Définissons quelques variables pour cela. Ajoutez les variables suivantes en haut de votre code, près de vos autres variables :</p>
 
-<pre class="brush: js notranslate">var paddleHeight = 10;
+<pre class="brush: js">var paddleHeight = 10;
 var paddleWidth = 75;
 var paddleX = (canvas.width-paddleWidth)/2;</pre>
 
 <p>Ici, nous définissons la hauteur et la largeur de la raquette et son point de départ sur l'axe des x pour l'utiliser dans les calculs plus loin dans le code. Créons une fonction qui dessinera la raquette sur l'écran. Ajoutez ce qui suit juste en dessous de votre fonction <code>drawBall()</code> :</p>
 
-<pre class="brush: js notranslate">function drawPaddle() {
+<pre class="brush: js">function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
     ctx.fillStyle = "#0095DD";
@@ -58,17 +56,17 @@ var paddleX = (canvas.width-paddleWidth)/2;</pre>
 
 <p>L'état des touches peut être mémorisé dans des variables booléennes comme dans l'exemple ci-dessous. Ajoutez ces lignes près de vos variables :</p>
 
-<pre class="brush: js notranslate">var rightPressed = false;
+<pre class="brush: js">var rightPressed = false;
 var leftPressed = false;</pre>
 
 <p>La valeur par défaut pour les deux est fausse car au début, car les touches ne sont pas enfoncés. Pour être informé des appuis sur les touches, nous allons mettre en place deux écouteurs d'événements. Ajoutez les lignes suivantes juste au-dessus de la ligne setInterval() au bas de votre JavaScript :</p>
 
-<pre class="brush: js notranslate">document.addEventListener("keydown", keyDownHandler, false);
+<pre class="brush: js">document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);</pre>
 
 <p>Lorsque l'événement <code>keydown</code> est déclenché par l'appui d'une des touches de votre clavier (lorsqu'elles sont enfoncées), la fonction <code>keyDownHandler()</code> est exécutée. Le même principe est vrai pour le deuxième écouteur : les événements <code>keyup</code> activent la fonction <code>keyUpHandler()</code> (lorsque les touches cessent d'être enfoncées). Ajoutez ces lignes à votre code, sous les lignes <code>addEventListener()</code> :</p>
 
-<pre class="brush: js notranslate">function keyDownHandler(e) {
+<pre class="brush: js">function keyDownHandler(e) {
     if(e.key == "Right" || e.key == "ArrowRight") {
         rightPressed = true;
     }
@@ -94,7 +92,7 @@ function keyUpHandler(e) {
 
 <p>Nous avons maintenant mis en place les variables pour stocker les informations sur les touches pressées, les écouteurs d'événements et les fonctions associées. Ensuite, nous allons entrer dans le code pour utiliser tout ce que nous venons de configurer et pour déplacer la palette à l'écran. Dans la fonction <code>draw()</code>, nous vérifierons si les touches gauche ou droite sont pressées lors du rendu de chaque image. Notre code pourrait ressembler à ceci :</p>
 
-<pre class="brush: js notranslate">if(rightPressed) {
+<pre class="brush: js">if(rightPressed) {
     paddleX += 7;
 }
 else if(leftPressed) {
@@ -103,7 +101,7 @@ else if(leftPressed) {
 
 <p>Si la touche gauche est enfoncée, la raquette se déplacera de sept pixels vers la gauche, et si la droite est enfoncé, la raquette se déplacera de sept pixels vers la droite. Cela fonctionne actuellement, mais la raquette disparaît du bord du canevas si nous maintenons l'une ou l'autre des touches trop longtemps enfoncée. Nous pourrions améliorer cela et déplacer la raquette uniquement dans les limites du canevas en changeant le code comme ceci :</p>
 
-<pre class="brush: js notranslate">if(rightPressed) {
+<pre class="brush: js">if(rightPressed) {
     paddleX += 7;
     if (paddleX + paddleWidth &gt; canvas.width){
         paddleX = canvas.width - paddleWidth;
@@ -122,7 +120,7 @@ else if(leftPressed) {
  <br>
  Il ne reste plus qu'à appeler la fonction <code>drawPaddle()</code> depuis la fonction <code>draw()</code>, pour l'afficher réellement à l'écran. Ajoutez la ligne suivante à l'intérieur de votre fonction <code>draw()</code>, juste en dessous de la ligne qui appelle <code>drawBall()</code> :</p>
 
-<pre class="brush: js notranslate">drawPaddle();
+<pre class="brush: js">drawPaddle();
 </pre>
 
 <h2 id="Comparez_votre_code">Comparez votre code</h2>
@@ -131,12 +129,10 @@ else if(leftPressed) {
 
 <p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/tgn3zscj/","","395")}}</p>
 
-<div class="note">
 <p><strong>Exercice: </strong>faites aller la raquette plus vite ou plus lentement, ou changez sa taille.</p>
-</div>
 
 <h2 id="Dans_le_prochain_chapitre">Dans le prochain chapitre</h2>
 
-<p>Maintenant, nous avons quelque chose qui ressemble à un jeu. Le seul problème, c'est que vous pouvez continuer à frapper la balle avec la raquette indéfiniment. Tout cela va changer dans le cinquième chapitre, <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Game_over">Game over</a>, lorsque nous commencerons à ajouter un état de fin de partie pour notre jeu.</p>
+<p>Maintenant, nous avons quelque chose qui ressemble à un jeu. Le seul problème, c'est que vous pouvez continuer à frapper la balle avec la raquette indéfiniment. Tout cela va changer dans le cinquième chapitre, <a href="/fr/docs/Games/Workflows/Breakout_game_from_scratch/Game_over">Game over</a>, lorsque nous commencerons à ajouter un état de fin de partie pour notre jeu.</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Faire_rebondir_la_balle_sur_les_murs", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}</p>

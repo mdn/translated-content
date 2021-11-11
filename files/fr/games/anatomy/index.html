@@ -11,9 +11,7 @@ original_slug: Jeux/Anatomie
 ---
 <div>{{GamesSidebar}}</div><p>  {{IncludeSubnav("/fr/docs/Jeux")}}</p>
 
-<div class="summary">
-<p><span class="seoSummary">Cet article se concentre sur l'anatomie et le flux de la plupart des jeux video à partir d'un point de vue technique, concernant la manière dont la boucle principale devrait tourner. Cela aide les débutants dans l'arène du développement à comprendre  ce qui est requis quand il est question de bâtir un jeu et comment les standards du web comme JavaScript leur est offert comme outil.</span> Les programmeurs de jeux expérimentés et nouveaux dans le développement web pourront aussi en tirer bénéfice.</p>
-</div>
+<p>Cet article se concentre sur l'anatomie et le flux de la plupart des jeux video à partir d'un point de vue technique, concernant la manière dont la boucle principale devrait tourner. Cela aide les débutants dans l'arène du développement à comprendre  ce qui est requis quand il est question de bâtir un jeu et comment les standards du web comme JavaScript leur est offert comme outil. Les programmeurs de jeux expérimentés et nouveaux dans le développement web pourront aussi en tirer bénéfice.</p>
 
 <h2 id="Présenter_accepter_interpréter_calculer_repéter">Présenter, accepter, interpréter, calculer, repéter</h2>
 
@@ -207,7 +205,7 @@ main(); //Débuter le cycle.</pre>
    <li>Cela utilise le temps du processeur même quand il n'a pas l'attention ou qu'il est minimisé, qu'il ne monopolise pas le fil principal, et est probablement un artefact de la traditionnelle boucle principale (mais plus simple).</li>
   </ul>
  </li>
- <li>Dessiner à chaque <code>requestAnimationFrame</code> et mettre à jour sur un <code>setInterval</code> ou <code>setTimeout</code> dans un <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Worker</a>.
+ <li>Dessiner à chaque <code>requestAnimationFrame</code> et mettre à jour sur un <code>setInterval</code> ou <code>setTimeout</code> dans un <a href="/fr/docs/Web/Guide/Performance/Using_web_workers">Web Worker</a>.
   <ul>
    <li>C'est la même chose que ci-dessus, excepté que la mise à jour ne monopolise pas le fil principal (ni le fil principal ne le monopolise). C'est une solution plus complexe, et ce pourrait être trop de travail pour de simples mises à jours.</li>
   </ul>
