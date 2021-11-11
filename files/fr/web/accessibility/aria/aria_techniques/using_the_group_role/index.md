@@ -8,116 +8,106 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
 original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_group
 ---
-<h3 id="Description">Description</h3>
+### Description
 
-<p>Cette technique présente l’utilisation du rôle <a href="http://www.w3.org/TR/wai-aria/roles#group">group</a> et décrit les effets produits sur les navigateurs et les technologies d’assistance.</p>
+Cette technique présente l’utilisation du rôle [group](http://www.w3.org/TR/wai-aria/roles#group) et décrit les effets produits sur les navigateurs et les technologies d’assistance.
 
-<p>Le rôle <code>group</code> est utilisé pour identifier un ensemble d’objets de l’interface utilisateur qui, contrairement à une <a href="http://www.w3.org/TR/wai-aria/roles#region"><code>region</code></a>, ne sont pas destinés à être intégrés dans une table de contenus ou une page récapitulative (telles que des structures dynamiquement créées par des scripts ou par les technologies d’assistance) ; un groupe ne devrait pas être considéré comme une partie perceptible majeure d’une page. Lorsque le rôle <code>group</code> est ajouté à un élément, , le navigateur émettra un événement <code>group</code> accessible aux produits de technologie d’assistance qui pourront alors le notifier à l’utilisateur.</p>
+Le rôle `group` est utilisé pour identifier un ensemble d’objets de l’interface utilisateur qui, contrairement à une [`region`](http://www.w3.org/TR/wai-aria/roles#region), ne sont pas destinés à être intégrés dans une table de contenus ou une page récapitulative (telles que des structures dynamiquement créées par des scripts ou par les technologies d’assistance) ; un groupe ne devrait pas être considéré comme une partie perceptible majeure d’une page. Lorsque le rôle `group` est ajouté à un élément, , le navigateur émettra un événement `group` accessible aux produits de technologie d’assistance qui pourront alors le notifier à l’utilisateur.
 
-<p>Un groupe devrait utilisé pour former un ensemble logique d’éléments avec des fonctions connexes, tels que les enfants dans un composant d’arborescence formant un ensemble apparenté dans une hiérarchie, ou une collection d’éléments ayant le même conteneur dans un répertoire. Cependant, lorsqu’on utilise un groupe pour former une liste, les développeurs doivent limiter ses enfants aux éléments <a href="http://www.w3.org/TR/wai-aria/roles#listitem">listitem</a>. Les éléments de groupe devraient être imbriqués.</p>
+Un groupe devrait utilisé pour former un ensemble logique d’éléments avec des fonctions connexes, tels que les enfants dans un composant d’arborescence formant un ensemble apparenté dans une hiérarchie, ou une collection d’éléments ayant le même conteneur dans un répertoire. Cependant, lorsqu’on utilise un groupe pour former une liste, les développeurs doivent limiter ses enfants aux éléments [listitem](http://www.w3.org/TR/wai-aria/roles#listitem). Les éléments de groupe devraient être imbriqués.
 
-<p>La gestion correcte d’un groupe par les technologies d’assistance est déterminée par le contexte dans lequel il est fourni.</p>
+La gestion correcte d’un groupe par les technologies d’assistance est déterminée par le contexte dans lequel il est fourni.
 
-<p>Si un auteur pense qu’une section est suffisamment importante pour faire partie de la table des matières d’une page, il devrait assigner un rôle de <a href="http://www.w3.org/TR/wai-aria/roles#region"><code>region</code></a> ou un rôle standard de <a href="http://www.w3.org/TR/wai-aria/roles#landmark_roles">point de repère</a> à cette section.</p>
+Si un auteur pense qu’une section est suffisamment importante pour faire partie de la table des matières d’une page, il devrait assigner un rôle de [`region`](http://www.w3.org/TR/wai-aria/roles#region) ou un rôle standard de [point de repère](http://www.w3.org/TR/wai-aria/roles#landmark_roles) à cette section.
 
-<h3 id="Effets_possibles_sur_les_agents_utilisateurs_et_les_technologies_d’assistance">Effets possibles sur les agents utilisateurs et les technologies d’assistance</h3>
+### Effets possibles sur les agents utilisateurs et les technologies d’assistance
 
-<p>Lorsque le rôle <code>group</code> est ajouté à un élément, ou qu’un tel élément devient visible, l’agent utilisateur devrait suivre les étapes suivantes :</p>
+Lorsque le rôle `group` est ajouté à un élément, ou qu’un tel élément devient visible, l’agent utilisateur devrait suivre les étapes suivantes :
 
-<ul>
- <li>Présenter l’élément ayant un rôle de groupe à l’API d’accessibilité du système d’exploitation ;</li>
- <li>Déclencher un événement groupe accessible à l’aide l’API d’accessibilité du système d’exploitation si elle le prend en charge.</li>
-</ul>
+- Présenter l’élément ayant un rôle de groupe à l’API d’accessibilité du système d’exploitation ;
+- Déclencher un événement groupe accessible à l’aide l’API d’accessibilité du système d’exploitation si elle le prend en charge.
 
-<p>Les technologies d’assistance devraient être à l’écoute de tels événements et les notifier à l’utilisateur en conséquence :</p>
+Les technologies d’assistance devraient être à l’écoute de tels événements et les notifier à l’utilisateur en conséquence :
 
-<ul>
- <li>Les lecteurs d’écran devraient annoncer le groupe lorsque le focus atteint l’un des contrôles appartenant au groupe, et si <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby">aria-describedby</a> a été défini, la description peut être lue. Après cela seulement le contrôle focalisé devrait être annoncé.</li>
- <li>Les loupes d’écran devraient agrandir le groupe.</li>
-</ul>
+- Les lecteurs d’écran devraient annoncer le groupe lorsque le focus atteint l’un des contrôles appartenant au groupe, et si [aria-describedby](http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby) a été défini, la description peut être lue. Après cela seulement le contrôle focalisé devrait être annoncé.
+- Les loupes d’écran devraient agrandir le groupe.
 
-<div class="note"><p><strong>Note :</strong> il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.</p></div>
+> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.
 
-<h3 id="Exemples">Exemples</h3>
+### Exemples
 
-<h4 id="Exemple_1_Utiliser_le_rôle_group_avec_une_arborescence_HTML">Exemple 1 : Utiliser le rôle <code>group</code> avec une arborescence HTML</h4>
+#### Exemple 1 : Utiliser le rôle `group` avec une arborescence HTML
 
-<p>L’extrait de code ci-dessous montre comment le rôle <code>group</code> est ajouté directement dans le code source HTML.</p>
+L’extrait de code ci-dessous montre comment le rôle `group` est ajouté directement dans le code source HTML.
 
-<pre class="brush: html">&lt;div id="tree1" class="tree" role="tree" tabindex="-1"&gt;
-  &lt;div id="animals" class="groupHeader" role="presentation" aria-owns="animalGroup" aria-expanded="true"&gt;
-    &lt;img class="headerImg" role="presentation" tabindex="-1" src="images/treeExpanded.gif" /&gt;
-    &lt;span role="treeitem" tabindex="0"&gt;Animaux&lt;/span&gt;
-  &lt;/div&gt;
+```html
+<div id="tree1" class="tree" role="tree" tabindex="-1">
+  <div id="animals" class="groupHeader" role="presentation" aria-owns="animalGroup" aria-expanded="true">
+    <img class="headerImg" role="presentation" tabindex="-1" src="images/treeExpanded.gif" />
+    <span role="treeitem" tabindex="0">Animaux</span>
+  </div>
 
-  &lt;div id="animalGroup" class="group" role="group"&gt;
-    &lt;div id="birds" class="treeitem" role="presentation"&gt;
-      &lt;span role="treeitem" tabindex="-1"&gt;Oiseaux&lt;/span&gt;
-    &lt;/div&gt;
+  <div id="animalGroup" class="group" role="group">
+    <div id="birds" class="treeitem" role="presentation">
+      <span role="treeitem" tabindex="-1">Oiseaux</span>
+    </div>
 
-    &lt;div id="cats" class="groupHeader" role="presentation" aria-owns="catGroup" aria-expanded="false"&gt;
-      &lt;img class="headerImg" role="presentation" tabindex="-1" src="images/treeContracted.gif" /&gt;
-      &lt;span role="treeitem" tabindex="0"&gt;Chats&lt;/span&gt;
-    &lt;/div&gt;
+    <div id="cats" class="groupHeader" role="presentation" aria-owns="catGroup" aria-expanded="false">
+      <img class="headerImg" role="presentation" tabindex="-1" src="images/treeContracted.gif" />
+      <span role="treeitem" tabindex="0">Chats</span>
+    </div>
 
- &lt;div id="catGroup" class="group" role="group"&gt;
-      &lt;div id="siamese" class="treeitem" role="presentation"&gt;
-        &lt;span role="treeitem" tabindex="-1"&gt;Siamois&lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div id="tabby" class="treeitem" role="presentation"&gt;
-        &lt;span role="treeitem" tabindex="-1"&gt;Tigré&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+ <div id="catGroup" class="group" role="group">
+      <div id="siamese" class="treeitem" role="presentation">
+        <span role="treeitem" tabindex="-1">Siamois</span>
+      </div>
+      <div id="tabby" class="treeitem" role="presentation">
+        <span role="treeitem" tabindex="-1">Tigré</span>
+      </div>
+    </div>
+  </div>
+</div>
+```
 
-<h4 id="Exemple_2_Utiliser_le_rôle_group_avec_un_menu_déroulant_HTML">Exemple 2 : Utiliser le rôle <code>group</code> avec un menu déroulant HTML</h4>
+#### Exemple 2 : Utiliser le rôle `group` avec un menu déroulant HTML
 
-<p>L’extrait de code ci-dessous montre comment le rôle <code>group</code> est ajouté directement au code source HTML.</p>
+L’extrait de code ci-dessous montre comment le rôle `group` est ajouté directement au code source HTML.
 
-<pre class="brush: html">&lt;div role="menu"&gt;
-  &lt;ul role="group"&gt;
-    &lt;li role="menuitem"&gt;Courrier entrant&lt;/li&gt;
-    &lt;li role="menuitem"&gt;Archive&lt;/li&gt;
-    &lt;li role="menuitem"&gt;Corbeille&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;ul role="group"&gt;
-    &lt;li role="menuitem"&gt;Dossier personnalisé 1&lt;/li&gt;
-    &lt;li role="menuitem"&gt;Dossier personnalisé 2&lt;/li&gt;
-    &lt;li role="menuitem"&gt;Dossier personnalisé 3&lt;/li&gt;
-  &lt;/ul&gt;
+```html
+<div role="menu">
+  <ul role="group">
+    <li role="menuitem">Courrier entrant</li>
+    <li role="menuitem">Archive</li>
+    <li role="menuitem">Corbeille</li>
+  </ul>
+  <ul role="group">
+    <li role="menuitem">Dossier personnalisé 1</li>
+    <li role="menuitem">Dossier personnalisé 2</li>
+    <li role="menuitem">Dossier personnalisé 3</li>
+  </ul>
 
-  &lt;ul role="group"&gt;
-    &lt;li role="menuitem"&gt;Nouveau dossier&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre>
+  <ul role="group">
+    <li role="menuitem">Nouveau dossier</li>
+  </ul>
+</div>
+```
 
-<h4 id="Exemples_concrets">Exemples concrets :</h4>
+#### Exemples concrets :
 
-<ul>
- <li><a href="http://test.cita.illinois.edu/aria/tree/tree2.php">http://test.cita.illinois.edu/aria/tree/tree2.php</a></li>
-</ul>
+- <http://test.cita.illinois.edu/aria/tree/tree2.php>
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<ul>
- <li>Les membres du groupe qui se trouve à l’extérieur du sous-arbre DOM du groupe doivent avoir leurs relations avec ce dernier explicitement assignées afin de participer au groupe.</li>
-</ul>
+- Les membres du groupe qui se trouve à l’extérieur du sous-arbre DOM du groupe doivent avoir leurs relations avec ce dernier explicitement assignées afin de participer au groupe.
 
-<h3 id="Attributs_ARIA_utilisés">Attributs ARIA utilisés</h3>
+### Attributs ARIA utilisés
 
-<ul>
- <li><a href="http://www.w3.org/TR/wai-aria/roles#group">group (en)</a></li>
-</ul>
+- [group (en)](http://www.w3.org/TR/wai-aria/roles#group)
 
-<h3 id="Techniques_ARIA_connexes">Techniques ARIA connexes</h3>
+### Techniques ARIA connexes
 
-<ul>
- <li>Rôle <a href="http://www.w3.org/TR/wai-aria/roles#region">region (en)</a></li>
-</ul>
+- Rôle [region (en)](http://www.w3.org/TR/wai-aria/roles#region)
 
-<h3 id="Autres_ressources">Autres ressources</h3>
+### Autres ressources
 
-<ul>
- <li>Bonnes pratiques ARIA – Répertoires, groupes et zones : <a href="http://www.w3.org/TR/wai-aria-practices/#kbd_layout_groupheading">Directories, Groups, and Regions (en)</a></li>
-</ul>
+- Bonnes pratiques ARIA – Répertoires, groupes et zones : [Directories, Groups, and Regions (en)](http://www.w3.org/TR/wai-aria-practices/#kbd_layout_groupheading)

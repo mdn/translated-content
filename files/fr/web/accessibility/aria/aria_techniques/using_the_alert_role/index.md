@@ -9,116 +9,110 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alert
 ---
-<h3 id="Description">Description</h3>
+### Description
 
-<p>Cette technique présente l’utilisation du rôle <a href="http://www.w3.org/TR/wai-aria/roles#alert"><code>alert</code> (en)</a> et décrit les effets produits sur les navigateurs et les technologies d’assistance.</p>
+Cette technique présente l’utilisation du rôle [`alert` (en)](http://www.w3.org/TR/wai-aria/roles#alert) et décrit les effets produits sur les navigateurs et les technologies d’assistance.
 
-<p>Le rôle <code>alert</code> est utilisé pour communiquer un message important et généralement avec une notion d'urgence à l’utilisateur. Lorsque ce rôle est ajouté à un élément, le navigateur émettra un événement d'alerte accessible aux produits de technologie d’assistance qui pourront alors le notifier à l’utilisateur. Le rôle <code>alert</code> est le plus utile lorsqu’il s’agit d’attirer l’attention de l’utilisateur, par exemple si :</p>
+Le rôle `alert` est utilisé pour communiquer un message important et généralement avec une notion d'urgence à l’utilisateur. Lorsque ce rôle est ajouté à un élément, le navigateur émettra un événement d'alerte accessible aux produits de technologie d’assistance qui pourront alors le notifier à l’utilisateur. Le rôle `alert` est le plus utile lorsqu’il s’agit d’attirer l’attention de l’utilisateur, par exemple si :
 
-<ul>
- <li>Une valeur non valide a été saisie dans un champ de formulaire ;</li>
- <li>La session d’un utilisateur est sur le point d’expirer ;</li>
- <li>La connexion au serveur a été interrompue, les modifications locales ne seront pas sauvegardées.</li>
-</ul>
+- Une valeur non valide a été saisie dans un champ de formulaire ;
+- La session d’un utilisateur est sur le point d’expirer ;
+- La connexion au serveur a été interrompue, les modifications locales ne seront pas sauvegardées.
 
-<p>De fait de sa nature intrusive, le rôle <code>alert</code> doit être utilisé avec parcimonie et uniquement dans les situations où l’attention de l’utilisateur est immédiatement requise. Les changements dynamiques de moindre urgence devraient utiliser une méthode moins agressive, telle que <code>aria-live="polite"</code> ou autres rôles de zone live.</p>
+De fait de sa nature intrusive, le rôle `alert` doit être utilisé avec parcimonie et uniquement dans les situations où l’attention de l’utilisateur est immédiatement requise. Les changements dynamiques de moindre urgence devraient utiliser une méthode moins agressive, telle que `aria-live="polite"` ou autres rôles de zone live.
 
-<h3 id="Effets_possibles_sur_les_agents_utilisateurs_et_les_technologies_d’assistance">Effets possibles sur les agents utilisateurs et les technologies d’assistance</h3>
+### Effets possibles sur les agents utilisateurs et les technologies d’assistance
 
-<p>Lorsque le rôle <code>alert</code> est ajouté à un élément, ou qu’un tel élément devient visible, l’agent utilisateur devrait suivre les étapes suivantes :</p>
+Lorsque le rôle `alert` est ajouté à un élément, ou qu’un tel élément devient visible, l’agent utilisateur devrait suivre les étapes suivantes :
 
-<ul>
- <li>Présenter l’élément ayant un rôle d’alerte à l’API d’accessibilité du système d’exploitation ;</li>
- <li>Déclencher un événement d'alerte accessible à l’aide l’API d’accessibilité du système d’exploitation si elle le prend en charge.</li>
-</ul>
+- Présenter l’élément ayant un rôle d’alerte à l’API d’accessibilité du système d’exploitation ;
+- Déclencher un événement d'alerte accessible à l’aide l’API d’accessibilité du système d’exploitation si elle le prend en charge.
 
-<p>Les technologies d’assistance devraient être à l’écoute de tels évènements et les notifier à l’utilisateur en conséquence :</p>
+Les technologies d’assistance devraient être à l’écoute de tels évènements et les notifier à l’utilisateur en conséquence :
 
-<ul>
- <li>Les lecteurs d’écran peuvent interrompre la sortie en cours (qu’elle soit vocale ou en braille) et immédiatement annoncer ou afficher le message d’alerte ;</li>
- <li>Les loupes ou agrandisseurs d’écran peuvent indiquer qu’une alerte est survenue et quel en est le texte.</li>
-</ul>
+- Les lecteurs d’écran peuvent interrompre la sortie en cours (qu’elle soit vocale ou en braille) et immédiatement annoncer ou afficher le message d’alerte ;
+- Les loupes ou agrandisseurs d’écran peuvent indiquer qu’une alerte est survenue et quel en est le texte.
 
-<div class="note">
-  <p><strong>Note :</strong> plusieurs points de vue existent sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.</p>
-</div>
+> **Note :** plusieurs points de vue existent sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.
 
-<h3 id="Exemples">Exemples</h3>
+### Exemples
 
-<h4 id="Exemple_1_Ajout_du_rôle_dans_le_code_HTML">Exemple 1 : Ajout du rôle dans le code HTML</h4>
+#### Exemple 1 : Ajout du rôle dans le code HTML
 
-<p>L’extrait de code ci-dessous montre comment le rôle <code>alert</code> est directement ajouté dans le code source HTML. Au moment où l’élément finit de se charger, le lecteur d’écran doit être notifié de l’alerte. Si l’élément était dans le code source original lorsque la page s’est chargée, le lecteur d’écran annonce immédiatement l’erreur après la lecture du titre de la page.</p>
+L’extrait de code ci-dessous montre comment le rôle `alert` est directement ajouté dans le code source HTML. Au moment où l’élément finit de se charger, le lecteur d’écran doit être notifié de l’alerte. Si l’élément était dans le code source original lorsque la page s’est chargée, le lecteur d’écran annonce immédiatement l’erreur après la lecture du titre de la page.
 
-<pre class="brush: html">&lt;h2 role="alert"&gt;Votre formulaire ne peut être soumis à cause de 3 erreurs de validation.&lt;/h2&gt;
-</pre>
+```html
+<h2 role="alert">Votre formulaire ne peut être soumis à cause de 3 erreurs de validation.</h2>
+```
 
-<h4 id="Exemple_2_Ajout_dynamique_d'un_élément_avec_le_rôle_alert">Exemple 2 : Ajout dynamique d'un élément avec le rôle <code>alert</code></h4>
+#### Exemple 2 : Ajout dynamique d'un élément avec le rôle `alert`
 
-<p>Cet extrait de code crée dynamiquement un élément avec un rôle <code>alert</code> et l’ajoute à la structure du document.</p>
+Cet extrait de code crée dynamiquement un élément avec un rôle `alert` et l’ajoute à la structure du document.
 
-<pre class="brush: js">var myAlert = document.createElement("p");
+```js
+var myAlert = document.createElement("p");
 myAlert.setAttribute("role", "alert");
 
 var myAlertText = document.createTextNode("Vous devez accepter nos conditions d’utilisation pour créer un compte.");
 myAlert.appendChild(myAlertText);
 document.body.appendChild(myAlertText);
-</pre>
+```
 
-<p><strong>Note :</strong> le même résultat peut être obtenu avec moins de code en utilisant une bibliothèque de scripts telle que <em>jQuery</em> :</p>
+**Note :** le même résultat peut être obtenu avec moins de code en utilisant une bibliothèque de scripts telle que *jQuery* :
 
-<pre class="brush: js">$("&lt;p role='alert'&gt;Vous devez accepter nos conditions d’utilisation pour créer un compte.&lt;/p&gt;").appendTo(document.body);
-</pre>
+```js
+$("<p role='alert'>Vous devez accepter nos conditions d’utilisation pour créer un compte.</p>").appendTo(document.body);
+```
 
-<h4 id="Exemple_3_Ajout_d'un_rôle_alert_à_un_élément_existant">Exemple 3 : Ajout d'un rôle <code>alert</code> à un élément existant</h4>
+#### Exemple 3 : Ajout d'un rôle `alert` à un élément existant
 
-<p>Parfois, il peut être utile d’ajouter un rôle <code>alert</code> à un élément déjà visible dans la page plutôt que de créer un nouvel élément. Ceci permet au développeur de répéter une information devenue plus pertinente ou urgente pour l’utilisateur. Par exemple, un contrôle de formulaire peut avoir des instructions sur les valeurs attendues. Si une valeur différente est saisie, <code>role="alert"</code> peut être ajouté au texte de l’instruction pour que le lecteur d’écran l’annonce comme une alerte. L'extrait de pseudo-code ci-dessous illustre cette approche :</p>
+Parfois, il peut être utile d’ajouter un rôle `alert` à un élément déjà visible dans la page plutôt que de créer un nouvel élément. Ceci permet au développeur de répéter une information devenue plus pertinente ou urgente pour l’utilisateur. Par exemple, un contrôle de formulaire peut avoir des instructions sur les valeurs attendues. Si une valeur différente est saisie, `role="alert"` peut être ajouté au texte de l’instruction pour que le lecteur d’écran l’annonce comme une alerte. L'extrait de pseudo-code ci-dessous illustre cette approche :
 
-<pre class="brush: html">&lt;p id="formInstruction"&gt;Vous devez cocher au moins trois options&lt;/p&gt;
-</pre>
+```html
+<p id="formInstruction">Vous devez cocher au moins trois options</p>
+```
 
-<pre class="brush: js">// Lorsque l’utilisateur essaye de soumettre le formulaire avec moins de 3 cases cochées :
-document.getElementById("formInstruction").setAttribute("role", "alert");</pre>
+```js
+// Lorsque l’utilisateur essaye de soumettre le formulaire avec moins de 3 cases cochées :
+document.getElementById("formInstruction").setAttribute("role", "alert");
+```
 
-<h4 id="Exemple_4_Rendre_visible_un_élément_avec_le_rôle_alert">Exemple 4 : Rendre visible un élément avec le rôle <code>alert</code></h4>
+#### Exemple 4 : Rendre visible un élément avec le rôle `alert`
 
-<p>Si un élément possède déjà <code>role="alert"</code> et qu’il est initialement caché par des règles CSS, le rendre visible déclenchera l’alerte comme si elle venait juste d’être ajoutée à la page. Cela signifie qu’une alerte existante peut être « réutilisée » plusieurs fois.</p>
+Si un élément possède déjà `role="alert"` et qu’il est initialement caché par des règles CSS, le rendre visible déclenchera l’alerte comme si elle venait juste d’être ajoutée à la page. Cela signifie qu’une alerte existante peut être « réutilisée » plusieurs fois.
 
-<p><strong>Note :</strong> dans la plupart des cas cette approche n’est pas recommandée, parce qu'il n'est pas idéal de masquer une erreur ou un texte d’alerte qui n’est pas applicable à ce moment précis. Les utilisateurs de technologies d’assistance plus anciennes pourraient toujours percevoir le texte d’alerte même si l’alerte ne s’applique pas à ce moment, faisant croire de façon erronée aux utilisateurs à l’existence d’un problème.</p>
+**Note :** dans la plupart des cas cette approche n’est pas recommandée, parce qu'il n'est pas idéal de masquer une erreur ou un texte d’alerte qui n’est pas applicable à ce moment précis. Les utilisateurs de technologies d’assistance plus anciennes pourraient toujours percevoir le texte d’alerte même si l’alerte ne s’applique pas à ce moment, faisant croire de façon erronée aux utilisateurs à l’existence d’un problème.
 
-<pre class="brush: css">.hidden {
+```css
+.hidden {
   display:none;
   }
-</pre>
+```
 
-<pre class="brush: html">&lt;p id="expirationWarning" role="alert" class="hidden"&gt;Votre session expirera dans 2 minutes&lt;/p&gt;
-</pre>
+```html
+<p id="expirationWarning" role="alert" class="hidden">Votre session expirera dans 2 minutes</p>
+```
 
-<pre class="brush: js">// suppression de la classe 'hidden' rend l’élément visible, ce qui entraînera l’annonce de l’alerte par le lecteur d’écran :
-document.getElementById("expirationWarning").className = ""; </pre>
+```js
+// suppression de la classe 'hidden' rend l’élément visible, ce qui entraînera l’annonce de l’alerte par le lecteur d’écran :
+document.getElementById("expirationWarning").className = "";
+```
 
-<h3 id="Notes">Notes </h3>
+### Notes 
 
-<ul>
- <li>L’utilisation du rôle <code>alert</code> sur un élément implique que cet élément a l’attribut <code>aria-live="assertive"</code> ;</li>
- <li>Le rôle <code>alert</code> ne devrait être utilisé que pour du contenu texte statique. L’élément sur lequel on utilise le rôle <code>alert</code> ne devrait pas pouvoir recevoir le focus, car les lecteurs d’écran annonceront automatiquement l’alerte où que se trouve le focus clavier ;</li>
- <li>Si une alerte fournit également des contrôles interactifs – tels que des contrôles de formulaire qui permettraient à l’utilisateur de rectifier une erreur, ou un bouton <code>OK</code> pour annuler l’alerte – le rôle <a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alertdialog"><code>alertdialog</code></a> est préférable.</li>
-</ul>
+- L’utilisation du rôle `alert` sur un élément implique que cet élément a l’attribut `aria-live="assertive"` ;
+- Le rôle `alert` ne devrait être utilisé que pour du contenu texte statique. L’élément sur lequel on utilise le rôle `alert` ne devrait pas pouvoir recevoir le focus, car les lecteurs d’écran annonceront automatiquement l’alerte où que se trouve le focus clavier ;
+- Si une alerte fournit également des contrôles interactifs – tels que des contrôles de formulaire qui permettraient à l’utilisateur de rectifier une erreur, ou un bouton `OK` pour annuler l’alerte – le rôle [`alertdialog`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alertdialog) est préférable.
 
-<h3 id="Attributs_ARIA_utilisés">Attributs ARIA utilisés</h3>
+### Attributs ARIA utilisés
 
-<ul>
- <li><a href="http://www.w3.org/TR/wai-aria/roles#alert">alert (en)</a></li>
-</ul>
+- [alert (en)](http://www.w3.org/TR/wai-aria/roles#alert)
 
-<h3 id="Techniques_ARIA_connexes">Techniques ARIA connexes</h3>
+### Techniques ARIA connexes
 
-<ul>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alertdialog">Utiliser le rôle <code>alertdialog</code></a> ;</li>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_la_propriété_aria-invalid">Utiliser la propriété <code>aria-invalid</code></a>.</li>
-</ul>
+- [Utiliser le rôle `alertdialog`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alertdialog) ;
+- [Utiliser la propriété `aria-invalid`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_la_propriété_aria-invalid).
 
-<h3 id="Autres_ressources">Autres ressources</h3>
+### Autres ressources
 
-<ul>
- <li>Guide des bonnes pratiques ARIA - Rôle <code>Alert</code> : <a href="http://www.w3.org/TR/wai-aria-practices/#alert">http://www.w3.org/TR/wai-aria-practices/#alert (en)</a></li>
-</ul>
+- Guide des bonnes pratiques ARIA - Rôle `Alert` : [http://www.w3.org/TR/wai-aria-practices/#alert (en)](http://www.w3.org/TR/wai-aria-practices/#alert)

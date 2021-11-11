@@ -6,13 +6,11 @@ tags:
 translation_of: Web/Accessibility/Community
 original_slug: Accessibilité/Communauté
 ---
-<p>Ce document fournit des liens vers des listes de diffusions, des forums, et d'autres communautés portées sur l'accessibilité.</p>
+Ce document fournit des liens vers des listes de diffusions, des forums, et d'autres communautés portées sur l'accessibilité.
 
-<p>Si vous connaissez d'autres, ressources utiles  n'hésitez pas à ajouter un lien ci-dessous.</p>
+Si vous connaissez d'autres, ressources utiles  n'hésitez pas à ajouter un lien ci-dessous.
 
-<ul>
- <li><a href="news://news.mozilla.org/netscape.public.mozilla.accessibility">Newsgroup Mozilla Accessibility</a></li>
- <li><a href="http://www.w3.org/WAI/IG/">Liste de discussion du groupe WAI</a></li>
- <li><a href="http://www.mozilla.org/projects/ui/accessibility/unix">Projet d'accessibilité d'Unix</a> (référence en anglais)</li>
- <li><a href="http://www.mozilla.org/access/resources">SUN Mozilla Accessibility Task Force</a></li>
-</ul>
+- [Newsgroup Mozilla Accessibility](news://news.mozilla.org/netscape.public.mozilla.accessibility)
+- [Liste de discussion du groupe WAI](http://www.w3.org/WAI/IG/)
+- [Projet d'accessibilité d'Unix](http://www.mozilla.org/projects/ui/accessibility/unix) (référence en anglais)
+- [SUN Mozilla Accessibility Task Force](http://www.mozilla.org/access/resources)

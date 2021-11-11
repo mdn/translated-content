@@ -8,59 +8,57 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute
 original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-invalid
 ---
-<h3 id="Description">Description</h3>
+### Description
 
-<p>Cette technique présente l’utilisation de l’attribut <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid"><code>aria-invalid</code></a>.</p>
+Cette technique présente l’utilisation de l’attribut [`aria-invalid`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid).
 
-<p>L’attribut <code>aria-invalid</code> est utilisé pour indiquer que la valeur saisie dans un champ de saisie n’est pas conforme au format attendu par l’application. Cela comprend les formats tels que les adresses électroniques ou les numéros de téléphone. <code>aria-invalid</code> peut également être utilisé pour indiquer qu’un champ obligatoire n’a pas été rempli. L’attribut devrait être programmatiquement défini comme étant le résultat du processus de validation.</p>
+L’attribut `aria-invalid` est utilisé pour indiquer que la valeur saisie dans un champ de saisie n’est pas conforme au format attendu par l’application. Cela comprend les formats tels que les adresses électroniques ou les numéros de téléphone. `aria-invalid` peut également être utilisé pour indiquer qu’un champ obligatoire n’a pas été rempli. L’attribut devrait être programmatiquement défini comme étant le résultat du processus de validation.
 
-<p>Cet attribut peut être utilisé avec n’importe quel élément de formulaire HTML typique ; il n’est pas limité aux éléments auxquels a été assigné un <code>rôle</code> ARIA.</p>
+Cet attribut peut être utilisé avec n’importe quel élément de formulaire HTML typique ; il n’est pas limité aux éléments auxquels a été assigné un `rôle` ARIA.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<h4 id="Vocabulaire">Vocabulaire</h4>
+#### Vocabulaire
 
-<dl>
- <dt><code>false</code> (défaut)</dt>
- <dd>Aucune erreur détectée</dd>
- <dt><code>grammar</code></dt>
- <dd>Une faute de grammaire a été détectée.</dd>
- <dt><code>spelling</code></dt>
- <dd>Une faute d’orthographe a été détectée.</dd>
- <dt><code>true</code></dt>
- <dd>La valeur n’a pas passé la validation.</dd>
-</dl>
+- `false` (défaut)
+  - : Aucune erreur détectée
+- `grammar`
+  - : Une faute de grammaire a été détectée.
+- `spelling`
+  - : Une faute d’orthographe a été détectée.
+- `true`
+  - : La valeur n’a pas passé la validation.
 
-<p>Toute valeur absente de ce vocabulaire devrait être traitée comme <code>true</code>.</p>
+Toute valeur absente de ce vocabulaire devrait être traitée comme `true`.
 
-<h3 id="Effets_possibles_sur_les_agents_utilisateurs_et_les_technologies_d’assistance">Effets possibles sur les agents utilisateurs et les technologies d’assistance</h3>
+### Effets possibles sur les agents utilisateurs et les technologies d’assistance
 
-<p>Les agents utilisateurs devraient informer l’utilisateur lorsqu’un champ n’est pas valide. Les développeurs d’applications devraient fournir des suggestions pour la correction du problème, lorsque c’est possible. Les auteurs devraient empêcher la soumission de formulaires contenant des erreurs.</p>
+Les agents utilisateurs devraient informer l’utilisateur lorsqu’un champ n’est pas valide. Les développeurs d’applications devraient fournir des suggestions pour la correction du problème, lorsque c’est possible. Les auteurs devraient empêcher la soumission de formulaires contenant des erreurs.
 
-<div class="note">
-  <p><strong>Note :</strong> il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournit ci-dessus est l’une de ces opinions et n’est pas normative.</p>
-</div>
+> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournit ci-dessus est l’une de ces opinions et n’est pas normative.
 
-<h3 id="Exemples">Exemples</h3>
+### Exemples
 
-<h4 id="Exemple_1_validation_d’un_formulaire_de_base">Exemple 1 : validation d’un formulaire de base</h4>
+#### Exemple 1 : validation d’un formulaire de base
 
-<p>L’extrait de code suivant décrit une version simplifiée de deux champs de formulaire avec une fonction de validation de la saisie attachée à la perte de focus. Notez que la valeur par défaut de <code>aria-required</code> étant <code>false</code>, il n’est pas strictement nécessaire d’ajouter à entrer.</p>
+L’extrait de code suivant décrit une version simplifiée de deux champs de formulaire avec une fonction de validation de la saisie attachée à la perte de focus. Notez que la valeur par défaut de `aria-required` étant `false`, il n’est pas strictement nécessaire d’ajouter à entrer.
 
-<pre class="brush: html">&lt;input name="nom" id="nom" aria-required="true" aria-invalid="false"
-        onblur="checkValidity('nom', ' ', 'Le nom saisi n’est pas valide (vous devez saisir un nom et un prénom)');"/&gt;
-&lt;br /&gt;
-&lt;input name="courriel" id="courriel" aria-required="true" aria-invalid="false"
-        onblur="checkValidity('courriel', '@', 'L’adresse électronique saisie n’est pas valide');"/&gt;
-</pre>
+```html
+<input name="nom" id="nom" aria-required="true" aria-invalid="false"
+        onblur="checkValidity('nom', ' ', 'Le nom saisi n’est pas valide (vous devez saisir un nom et un prénom)');"/>
+<br />
+<input name="courriel" id="courriel" aria-required="true" aria-invalid="false"
+        onblur="checkValidity('courriel', '@', 'L’adresse électronique saisie n’est pas valide');"/>
+```
 
-<p>Remarquez qu’il n’est pas nécessaire de valider les champs de saisie immédiatement à la perte de focus ; l’application peut attendre jusqu’à la soumission du formulaire (bien que ce ne soit pas particulièrement recommandé).</p>
+Remarquez qu’il n’est pas nécessaire de valider les champs de saisie immédiatement à la perte de focus ; l’application peut attendre jusqu’à la soumission du formulaire (bien que ce ne soit pas particulièrement recommandé).
 
-<p>L’extrait de code ci-dessous décrit une fonction de validation très simple qui ne vérifie que la présence d’un caractère particulier (en réalité, la validation sera un peu plus sophistiquée) :</p>
+L’extrait de code ci-dessous décrit une fonction de validation très simple qui ne vérifie que la présence d’un caractère particulier (en réalité, la validation sera un peu plus sophistiquée) :
 
-<pre class="brush: js">function checkValidity(aID, aSearchTerm, aMsg){
+```js
+function checkValidity(aID, aSearchTerm, aMsg){
     var elem = document.getElementById(aID);
-    var invalid = (elem.value.indexOf(aSearchTerm) &lt; 0);
+    var invalid = (elem.value.indexOf(aSearchTerm) < 0);
     if (invalid) {
       elem.setAttribute("aria-invalid", "true");
       updateAlert(aMsg);
@@ -69,11 +67,12 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-inva
       updateAlert();
     }
 }
-</pre>
+```
 
-<p>L’extrait de code ci-dessous décrit des fonctions d’alertes, qui ajoutent (ou suppriment) le message d’erreur :</p>
+L’extrait de code ci-dessous décrit des fonctions d’alertes, qui ajoutent (ou suppriment) le message d’erreur :
 
-<pre class="brush: js">function updateAlert(msg) {
+```js
+function updateAlert(msg) {
     var oldAlert = document.getElementById("alert");
     if (oldAlert) {
         document.body.removeChild(oldAlert);
@@ -88,31 +87,25 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-inva
         document.body.appendChild(newAlert);
     }
 }
-</pre>
+```
 
-<p>Remarquez que le <code>rôle</code> ARIA de l’alerte est définit comme étant <a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alert"><code>"alert"</code></a>.</p>
+Remarquez que le `rôle` ARIA de l’alerte est définit comme étant [`"alert"`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alert).
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<ul>
- <li>Lorsque <code>aria-invalid</code> est utilisé en conjonction avec l’attribut <code>aria-required</code>, <code>aria-invalid</code> <strong>ne devrait pas</strong> être défini à <code>true</code> avant la soumission du formulaire – uniquement en réponse à la validation.</li>
- <li>Les développements futurs pourraient ajouter des termes au vocabulaire utilisé pour cet attribut. Toute valeur absente du vocabulaire actuel devrait être traitée comme <code>true</code>.</li>
-</ul>
+- Lorsque `aria-invalid` est utilisé en conjonction avec l’attribut `aria-required`, `aria-invalid` **ne devrait pas** être défini à `true` avant la soumission du formulaire – uniquement en réponse à la validation.
+- Les développements futurs pourraient ajouter des termes au vocabulaire utilisé pour cet attribut. Toute valeur absente du vocabulaire actuel devrait être traitée comme `true`.
 
-<h3 id="Utilisé_dans_les_rôles_ARIA">Utilisé dans les rôles ARIA</h3>
+### Utilisé dans les rôles ARIA
 
-<p>Tous les éléments de balisage de base.</p>
+Tous les éléments de balisage de base.
 
-<h3 id="Techniques_ARIA_connexes">Techniques ARIA connexes</h3>
+### Techniques ARIA connexes
 
-<ul>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-required">Utiliser l’attribut <code>aria-required</code></a></li>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alert">Utiliser le rôle <code>alert</code></a></li>
-</ul>
+- [Utiliser l’attribut `aria-required`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-required)
+- [Utiliser le rôle `alert`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alert)
 
-<h3 id="Autres_ressources">Autres ressources</h3>
+### Autres ressources
 
-<ul>
- <li><a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid">Spécification WAI-ARIA de la propriété <code>aria-invalid</code></a></li>
- <li><a href="http://www.w3.org/TR/wai-aria-practices/#ariaform">WAI Authoring Practices for forms</a> (Règles WAI de création de formulaires)</li>
-</ul>
+- [Spécification WAI-ARIA de la propriété `aria-invalid`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid)
+- [WAI Authoring Practices for forms](http://www.w3.org/TR/wai-aria-practices/#ariaform) (Règles WAI de création de formulaires)

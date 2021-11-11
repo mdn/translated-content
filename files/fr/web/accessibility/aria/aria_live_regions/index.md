@@ -8,120 +8,82 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Live_Regions
 original_slug: Accessibilité/ARIA/Zones_live_ARIA
 ---
-<h2 id="Introduction_2">Introduction </h2>
+## Introduction
 
-<p>Dans le passé, un changement dans une page web débouchait souvent sur une relecture intégrale, ce qui agaçait souvent l’utilisateur, ou au contraire très peu ou pas de lecture du tout, rendant inaccessible une partie, voire l’ensemble des informations. Jusqu’à récemment, les lecteurs d’écran n’étaient en mesure d’améliorer cela du fait de l’absence d’éléments standardisés pour prévenir le lecteur d’écran d’un changement. Les zones « live » ARIA comblent cette lacune et fournissent des solutions aux lecteurs d’écran afin de savoir si et comment interrompre l'utilisateur lors d’un changement.</p>
+Dans le passé, un changement dans une page web débouchait souvent sur une relecture intégrale, ce qui agaçait souvent l’utilisateur, ou au contraire très peu ou pas de lecture du tout, rendant inaccessible une partie, voire l’ensemble des informations. Jusqu’à récemment, les lecteurs d’écran n’étaient en mesure d’améliorer cela du fait de l’absence d’éléments standardisés pour prévenir le lecteur d’écran d’un changement. Les zones « live » ARIA comblent cette lacune et fournissent des solutions aux lecteurs d’écran afin de savoir si et comment interrompre l'utilisateur lors d’un changement.
 
-<h2 id="Zones_«_live_»_basiques">Zones « live » basiques</h2>
+## Zones « live » basiques
 
-<p>Le contenu dynamique qui s’actualise sans rechargement de la page est généralement une zone ou un composant d’interface. Les changements de contenu simples, sans interaction possible, devraient être marqués comme des zones « live ». Ci-dessous, voici une liste de chaque propriété relative à une zone « live » ARIA et sa description.</p>
+Le contenu dynamique qui s’actualise sans rechargement de la page est généralement une zone ou un composant d’interface. Les changements de contenu simples, sans interaction possible, devraient être marqués comme des zones « live ». Ci-dessous, voici une liste de chaque propriété relative à une zone « live » ARIA et sa description.
 
-<dl>
- <dt>aria-live :</dt>
- <dd>L’attribut <code>aria-live=VALEUR_POLITESSE</code> est utilisé pour définir la priorité avec laquelle le lecteur d’écran devrait traiter une mise à jour dans une zone « live » – les valeurs possibles sont : <code>off</code>/<code>polite</code>/<code>assertive</code>. La valeur par défaut est <code>off</code>. Cet attribut est de loin le plus important.</dd>
- <dt>aria-controls :</dt>
- <dd><p>L’attribut <code>aria-controls=[LISTE_IDs]</code> est utilisé pour associer un contrôle avec les zones qu’il contrôle. Les zones sont identifiées comme un <code>ID</code> dans un élément {{ HTMLElement("div") }}, et plusieurs zones peuvent être associées à un unique contrôle, en séparant les identifiants des zones par un espace, par exemple : <code>aria-controls="maZoneID1 maZoneID2"</code>.</p>
-  <div class="warning">
-    <p><strong>Attention :</strong>Nous ne savons pas si <code>aria-controls</code> pour les zones « live » est utilisé dans des technologies d’assistance modernes, et si oui lesquelles. Des recherches sont nécessaires.
-    </p>
-  </div>
- </dd>
-</dl>
+- aria-live :
+  - : L’attribut `aria-live=VALEUR_POLITESSE` est utilisé pour définir la priorité avec laquelle le lecteur d’écran devrait traiter une mise à jour dans une zone « live » – les valeurs possibles sont : `off`/`polite`/`assertive`. La valeur par défaut est `off`. Cet attribut est de loin le plus important.
+- aria-controls :
 
-<p>Normalement, seul <code>aria-live="polite"</code> est utilisé. Toute zone recevant une mise à jour qu’il est important de faire suivre à l’utilisateur, mais pas au point de le déranger dans sa navigation, devrait recevoir cet attribut. Le lecteur d’écran lira les changements dès que l’utilisateur sera inoccupé.</p>
+  - : L’attribut `aria-controls=[LISTE_IDs]` est utilisé pour associer un contrôle avec les zones qu’il contrôle. Les zones sont identifiées comme un `ID` dans un élément {{ HTMLElement("div") }}, et plusieurs zones peuvent être associées à un unique contrôle, en séparant les identifiants des zones par un espace, par exemple : `aria-controls="maZoneID1 maZoneID2"`.
 
-<p>Pour les zones de moindre importance, ou qui seraient perturbantes à cause d’actualisations répétées et rapprochées ou toute autre raison, il est possible de les rendre silencieux avec <code>aria-live="off"</code>.</p>
+    > **Attention :**Nous ne savons pas si `aria-controls` pour les zones « live » est utilisé dans des technologies d’assistance modernes, et si oui lesquelles. Des recherches sont nécessaires.
 
-<h3 id="Cas_d’étude_simple_une_''combobox''_actualise_des_informations_utiles_à_l’écran">Cas d’étude simple : une ''combobox'' actualise des informations utiles à l’écran</h3>
+Normalement, seul `aria-live="polite"` est utilisé. Toute zone recevant une mise à jour qu’il est important de faire suivre à l’utilisateur, mais pas au point de le déranger dans sa navigation, devrait recevoir cet attribut. Le lecteur d’écran lira les changements dès que l’utilisateur sera inoccupé.
 
-<p>Un site web spécialisé dans l’ornithologie fournit une liste déroulante avec des noms d’oiseaux. Lorsqu’un oiseau est sélectionné dans la liste, une zone de la page web est actualisée avec les détails concernant la famille d’oiseaux choisie.</p>
+Pour les zones de moindre importance, ou qui seraient perturbantes à cause d’actualisations répétées et rapprochées ou toute autre raison, il est possible de les rendre silencieux avec `aria-live="off"`.
 
-<p><code>&lt;select size="1" id="bird-selector" aria-controls="bird-info"&gt;&lt;option&gt; .... &lt;/select&gt;</code></p>
+### Cas d’étude simple : une ''combobox'' actualise des informations utiles à l’écran
 
-<pre class="brush: html">&lt;div role="region" id="bird-info" aria-live="polite"&gt;</pre>
+Un site web spécialisé dans l’ornithologie fournit une liste déroulante avec des noms d’oiseaux. Lorsqu’un oiseau est sélectionné dans la liste, une zone de la page web est actualisée avec les détails concernant la famille d’oiseaux choisie.
 
-<p>Lorsque l’utilisateur sélectionne un nouvel oiseau, l’information est lue. Du fait de la valeur <code>polite</code>, le lecteur d’écran attendra une pause de la part de l’utilisateur. Ainsi, descendre dans la liste ne déclenchera pas la lecture pour chaque oiseau visité par l’utilisateur, mais uniquement pour celui qui sera finalement choisi.</p>
+`<select size="1" id="bird-selector" aria-controls="bird-info"><option> .... </select>`
 
-<h2 id="Préférences_de_rôles_pour_les_zones_«_live_»_spécialisées">Préférences de rôles pour les zones « live » spécialisées</h2>
+```html
+<div role="region" id="bird-info" aria-live="polite">
+```
 
-<p>Dans les cas prédéfinis répandus ci-dessous, il est préférable d’utiliser un des rôles de zone « live » spécifique fourni :</p>
+Lorsque l’utilisateur sélectionne un nouvel oiseau, l’information est lue. Du fait de la valeur `polite`, le lecteur d’écran attendra une pause de la part de l’utilisateur. Ainsi, descendre dans la liste ne déclenchera pas la lecture pour chaque oiseau visité par l’utilisateur, mais uniquement pour celui qui sera finalement choisi.
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Rôle</th>
-   <th scope="col">Description</th>
-   <th scope="col">Compatibilité</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>log</td>
-   <td>Chat, erreur, jeux ou autres types de journalisation</td>
-   <td>Pour maximiser la compatibilité, ajouter un <code>aria-live="polite"</code> redondant lorsque vous utiliserez ce rôle.</td>
-  </tr>
-  <tr>
-   <td>status</td>
-   <td>Une barre d’état ou une zone de l’écran qui fournit un état actualisé de quelque chose. Les utilisateurs de lecteur d’écran ont à leur disposition une commande spéciale pour lire l’état courant.</td>
-   <td>Pour maximiser la compatibilité, ajouter un <code>aria-live="polite"</code> redondant lorsque vous utiliserez ce rôle.</td>
-  </tr>
-  <tr>
-   <td>alert</td>
-   <td>Message d’erreur ou avertissement souligné à l’écran. Les alertes sont particulièrement importantes pour la validation côté client notifiée à l’utilisateur. (TBD: lien vers un tutoriel sur les formulaires ARIA avec des informations plus complètes)</td>
-   <td>Pour maximiser la compatibilité, ajouter un <code>aria-live="assertive"</code> redondant lorsque vous utiliserez ce rôle. Attention, cette redondance occasionne un problème de double restitution orale dans VoiceOver sur iOS.</td>
-  </tr>
-  <tr>
-   <td>progressbar</td>
-   <td>Élément hybride entre un composant d’interface et une zone « Live ». Utilisez ce rôle avec les attributs <code>aria-valuemin</code>, <code>aria-valuenow</code> et <code>aria-valuemax</code>. (TBD : Ajouter plus d’informations pour cet élément).</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>marquee</td>
-   <td>Pour faire défiler un texte, comme pour un téléscripteur ou un afficheur alphanumérique.</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>timer</td>
-   <td>Pour tout type de minuterie ou d’horloge, tel qu’un compte-à-rebours ou un chronomètre.</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Préférences de rôles pour les zones « live » spécialisées
 
-<h2 id="Zones_«_live_»_avancées">Zones « live » avancées</h2>
+Dans les cas prédéfinis répandus ci-dessous, il est préférable d’utiliser un des rôles de zone « live » spécifique fourni :
 
-<p>(TBD : Qu'est-ce qui est pris en charge par qui ?)</p>
+| Rôle        | Description                                                                                                                                                                                                                                             | Compatibilité                                                                                                                                                                                                         |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| log         | Chat, erreur, jeux ou autres types de journalisation                                                                                                                                                                                                    | Pour maximiser la compatibilité, ajouter un `aria-live="polite"` redondant lorsque vous utiliserez ce rôle.                                                                                                           |
+| status      | Une barre d’état ou une zone de l’écran qui fournit un état actualisé de quelque chose. Les utilisateurs de lecteur d’écran ont à leur disposition une commande spéciale pour lire l’état courant.                                                      | Pour maximiser la compatibilité, ajouter un `aria-live="polite"` redondant lorsque vous utiliserez ce rôle.                                                                                                           |
+| alert       | Message d’erreur ou avertissement souligné à l’écran. Les alertes sont particulièrement importantes pour la validation côté client notifiée à l’utilisateur. (TBD: lien vers un tutoriel sur les formulaires ARIA avec des informations plus complètes) | Pour maximiser la compatibilité, ajouter un `aria-live="assertive"` redondant lorsque vous utiliserez ce rôle. Attention, cette redondance occasionne un problème de double restitution orale dans VoiceOver sur iOS. |
+| progressbar | Élément hybride entre un composant d’interface et une zone « Live ». Utilisez ce rôle avec les attributs `aria-valuemin`, `aria-valuenow` et `aria-valuemax`. (TBD : Ajouter plus d’informations pour cet élément).                                     |                                                                                                                                                                                                                       |
+| marquee     | Pour faire défiler un texte, comme pour un téléscripteur ou un afficheur alphanumérique.                                                                                                                                                                |                                                                                                                                                                                                                       |
+| timer       | Pour tout type de minuterie ou d’horloge, tel qu’un compte-à-rebours ou un chronomètre.                                                                                                                                                                 |                                                                                                                                                                                                                       |
 
-<p>Le support général des zones "Live" a été ajouté à JAWS à partir de la version 10.0. Windows Eyes supporte les zones "Live" depuis la version 8.0 "pour une utilisation en dehors du mode de navigation (Browse Mode) pour Microsoft Internet Explorer et Mozilla Firefox". NVDA a ajouté un support basique pour les zones "Live" pour Mozilla Firefox en 2008 et qui a été amélioré en 2010 et 2014. En 2015 un support basique fut également ajouté à Internet Explorer (MSHTML).</p>
+## Zones « live » avancées
 
-<p>The Paciello Group propose des <a href="https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/">informations sur l'état du support des zones "Live"</a>(2014). Paul Jadam s'est intéressé plus particulièrement au <a href="http://pauljadam.com/demos/aria-atomic-relevant.html">support des attributs aria-atomic and aria-relevant</a>.</p>
+(TBD : Qu'est-ce qui est pris en charge par qui ?)
 
-<dl>
- <dt>aria-atomic :</dt>
- <dd>L’attribut <code>aria-atomic=BOOLÉEN</code> est utilisé pour définir si le lecteur d’écran doit ou non présenter la zone « Live » comme un ensemble, même si une partie seulement de la zone est modifiée – Les valeurs possibles sont <code>false</code>/<code>true</code>. La valeur par défaut est <code>false</code>.</dd>
- <dt>aria-relevant :</dt>
- <dd>L’attribut <code>aria-relevant=[LISTE_DES_CHANGEMENTS]</code> est utilisé pour définir quel type de changements est adéquat à une zone « Live » – les valeurs possibles sont <code>additions</code> (addition)/<code>removals</code> (suppression)/<code>text</code> (texte)/<code>all</code> (tous). La valeur par défaut est « <code>additions text</code>. »</dd>
- <dt>aria-labelledby :</dt>
- <dd>L’attribut <code>aria-labelledby=[LISTE_ID]</code> est utilisé pour associer un ou des libellés à une zone. Le fonctionnement est similaire à celui d'<code>aria-controls</code> mais les références d'id pointent vers les libellés associés aux blocs identifiés, et les références multiples sont également séparées par un espace.</dd>
- <dt>aria-describedby :</dt>
- <dd>L’attribut <code>aria-describedby=[LISTE_ID]</code> est utilisé pour associer une ou des descriptions à une zone. Le fonctionnement est similaire à celui d'<code>aria-controls </code>mais les références d'id pointent vers les textes descriptifs associés aux blocs identifiés, et les références multiples sont également séparées par un espace.</dd>
-</dl>
+Le support général des zones "Live" a été ajouté à JAWS à partir de la version 10.0. Windows Eyes supporte les zones "Live" depuis la version 8.0 "pour une utilisation en dehors du mode de navigation (Browse Mode) pour Microsoft Internet Explorer et Mozilla Firefox". NVDA a ajouté un support basique pour les zones "Live" pour Mozilla Firefox en 2008 et qui a été amélioré en 2010 et 2014. En 2015 un support basique fut également ajouté à Internet Explorer (MSHTML).
 
-<h3 id="Cas_d’étude_avancé_liste_de_contacts">Cas d’étude avancé : liste de contacts</h3>
+The Paciello Group propose des [informations sur l'état du support des zones "Live"](https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/)(2014). Paul Jadam s'est intéressé plus particulièrement au [support des attributs aria-atomic and aria-relevant](http://pauljadam.com/demos/aria-atomic-relevant.html).
 
-<p>Un site de chat voudrait afficher la liste des utilisateurs actuellement connectés. L'affichage de la liste des utilisateurs doit alors refléter l’état de connexion ou de déconnexion des utilisateurs de manière dynamique (sans actualisation de la page).</p>
+- aria-atomic :
+  - : L’attribut `aria-atomic=BOOLÉEN` est utilisé pour définir si le lecteur d’écran doit ou non présenter la zone « Live » comme un ensemble, même si une partie seulement de la zone est modifiée – Les valeurs possibles sont `false`/`true`. La valeur par défaut est `false`.
+- aria-relevant :
+  - : L’attribut `aria-relevant=[LISTE_DES_CHANGEMENTS]` est utilisé pour définir quel type de changements est adéquat à une zone « Live » – les valeurs possibles sont `additions` (addition)/`removals` (suppression)/`text` (texte)/`all` (tous). La valeur par défaut est « `additions text`. »
+- aria-labelledby :
+  - : L’attribut `aria-labelledby=[LISTE_ID]` est utilisé pour associer un ou des libellés à une zone. Le fonctionnement est similaire à celui d'`aria-controls` mais les références d'id pointent vers les libellés associés aux blocs identifiés, et les références multiples sont également séparées par un espace.
+- aria-describedby :
+  - : L’attribut `aria-describedby=[LISTE_ID]` est utilisé pour associer une ou des descriptions à une zone. Le fonctionnement est similaire à celui d'`aria-controls `mais les références d'id pointent vers les textes descriptifs associés aux blocs identifiés, et les références multiples sont également séparées par un espace.
 
-<pre class="brush: html">&lt;ul id="roster" aria-live="polite" aria-relevant="additions removals"&gt;
-	&lt;!-- utilisez JavaScript ici pour ajouter/supprimer des utilisateurs--&gt;
-&lt;/ul&gt;
-</pre>
+### Cas d’étude avancé : liste de contacts
 
-<h4 id="Détails_des_propriétés_«_live_»_d’ARIA">Détails des propriétés « live » d’ARIA :</h4>
+Un site de chat voudrait afficher la liste des utilisateurs actuellement connectés. L'affichage de la liste des utilisateurs doit alors refléter l’état de connexion ou de déconnexion des utilisateurs de manière dynamique (sans actualisation de la page).
 
-<ul>
- <li>L’attribut <code>aria-live="polite"</code> indique au lecteur d’écran qu’il doit attendre que l’utilisateur soit inactif avant de lui présenter une mise à jour. C’est la valeur la plus communément utilisée, car interrompre l’utilisateur avec la valeur <code>assertive</code> briserait son flux de lecture.</li>
- <li>L’attribut <code>aria-atomic</code> n’est pas défini (<code>false</code> par défaut), ainsi seuls les utilisateurs ajoutés ou supprimés devraient être lus et non l’intégralité de la liste, à chaque mise à jour.</li>
- <li>L’attribut <code>aria-relevant="additions removals"</code> assure à la fois que les utilisateurs ajoutés et supprimés de la liste seront lus.</li>
+```html
+<ul id="roster" aria-live="polite" aria-relevant="additions removals">
+	<!-- utilisez JavaScript ici pour ajouter/supprimer des utilisateurs-->
 </ul>
+```
 
-<p>TBD : Cas d’étude(s) réel(s) de l’attribut aria-atomic="true".</p>
+#### Détails des propriétés « live » d’ARIA :
+
+- L’attribut `aria-live="polite"` indique au lecteur d’écran qu’il doit attendre que l’utilisateur soit inactif avant de lui présenter une mise à jour. C’est la valeur la plus communément utilisée, car interrompre l’utilisateur avec la valeur `assertive` briserait son flux de lecture.
+- L’attribut `aria-atomic` n’est pas défini (`false` par défaut), ainsi seuls les utilisateurs ajoutés ou supprimés devraient être lus et non l’intégralité de la liste, à chaque mise à jour.
+- L’attribut `aria-relevant="additions removals"` assure à la fois que les utilisateurs ajoutés et supprimés de la liste seront lus.
+
+TBD : Cas d’étude(s) réel(s) de l’attribut aria-atomic="true".
