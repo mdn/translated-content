@@ -4,37 +4,37 @@ slug: Web/Web_Components/Using_templates_and_slots
 translation_of: Web/Web_Components/Using_templates_and_slots
 original_slug: Web/Web_Components/Utilisation_des_templates_et_des_slots
 ---
-<div>{{DefaultAPISidebar("Web Components")}}</div>
+{{DefaultAPISidebar("Web Components")}}
 
-<p>Cet article explique comment utiliser les éléments <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/slot"><code>&lt;slot&gt;</code></a> pour créer un modèle (<i lang="en">template</i>) flexible qui peut ensuite être utilisé pour alimenter le Shadow DOM d'un composant web.</p>
+Cet article explique comment utiliser les éléments [`<template>`](/fr/docs/Web/HTML/Element/template) et [`<slot>`](/fr/docs/Web/HTML/Element/slot) pour créer un modèle (<i lang="en">template</i>) flexible qui peut ensuite être utilisé pour alimenter le Shadow DOM d'un composant web.
 
-<h2 id="la_vérité_sur_les_modèles">La vérité sur les modèmes</h2>
+## La vérité sur les modèmes
 
-<p>Lorsqu'une structure de balises se répète sur une page web, il est judicieux d'utiliser un modèle plutôt que d'écrire cette même structure encore et encore. Il était déjà possible de le faire, mais l'élément HTML <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a> (pris en charge par les navigateurs modernes) nous facilite la tâche. Cet élément et ce qu'il renferme n'est pas directement retranscrit dans le DOM, mais peut par contre toujours être manipulé avec JavaScript.</p>
+Lorsqu'une structure de balises se répète sur une page web, il est judicieux d'utiliser un modèle plutôt que d'écrire cette même structure encore et encore. Il était déjà possible de le faire, mais l'élément HTML [`<template>`](/fr/docs/Web/HTML/Element/template) (pris en charge par les navigateurs modernes) nous facilite la tâche. Cet élément et ce qu'il renferme n'est pas directement retranscrit dans le DOM, mais peut par contre toujours être manipulé avec JavaScript.
 
-<p>Voyons un exemple simple&nbsp;:</p>
+Voyons un exemple simple :
 
-<pre class="brush: html">
-&lt;template id="my-paragraph"&gt;
-  &lt;p&gt;My paragraph&lt;/p&gt;
-&lt;/template&gt;
-</pre>
+```html
+<template id="my-paragraph">
+  <p>My paragraph</p>
+</template>
+```
 
-<p>Ceci restera invisible sur la page tant qu'aucune référence n'y sera faite dans le code JavaScript puis ajouté au DOM, en utilisant par exemple&nbsp;:</p>
+Ceci restera invisible sur la page tant qu'aucune référence n'y sera faite dans le code JavaScript puis ajouté au DOM, en utilisant par exemple :
 
-<pre class="brush: js">
+```js
 let template = document.getElementById('my-paragraph');
 let templateContent = template.content;
 document.body.appendChild(templateContent);
-</pre>
+```
 
-<p>Quoique trivial, cet exemple vous permet d'entrevoir l'interêt d'utiliser des modèles.</p>
+Quoique trivial, cet exemple vous permet d'entrevoir l'interêt d'utiliser des modèles.
 
-<h2 id="accorder_modèles_et_composants_web">Accorder modèles et composants web</h2>
+## Accorder modèles et composants web
 
-<p>Les modèles sont utiles en eux-mêmes, mais ils fonctionnent encore mieux avec des composants web. Créons un composant web qui utilise notre modèle comme contenu de son Shadow DOM. Nous l'appellerons <code>&lt;my-paragraph&gt;</code>&nbsp;:</p>
+Les modèles sont utiles en eux-mêmes, mais ils fonctionnent encore mieux avec des composants web. Créons un composant web qui utilise notre modèle comme contenu de son Shadow DOM. Nous l'appellerons `<my-paragraph>` :
 
-<pre class="brush: js">
+```js
 customElements.define('my-paragraph',
   class extends HTMLElement {
     constructor() {
@@ -45,102 +45,95 @@ customElements.define('my-paragraph',
       const shadowRoot = this.attachShadow({mode: 'open'})
         .appendChild(templateContent.cloneNode(true));
   }
-})</pre>
+})
+```
 
-<p>Le point important à noter est que l'on ajoute un clone du contenu du modèle à la racine du DOM, créé à l'aide de la méthode <a href="/fr/docs/Web/API/Node/cloneNode"><code>Node.cloneNode()</code></a>.</p>
+Le point important à noter est que l'on ajoute un clone du contenu du modèle à la racine du DOM, créé à l'aide de la méthode [`Node.cloneNode()`](/fr/docs/Web/API/Node/cloneNode).
 
-<p>Et parce que nous ajoutons son contenu à un Shadow DOM, on peut inclure des informations de mise en forme à l'intérieur de l'élément <code>&lt;template&gt;</code> dans d'un élément <a href="/fr/docs/Web/HTML/Element/style"><code>&lt;style&gt;</code></a>, qui est ensuite encapsulé à l'intérieur de l'élément personnalisé. Cette procédure n'aurait pas fonctionné si on avait ajouté le contenu à un DOM standard.</p>
+Et parce que nous ajoutons son contenu à un Shadow DOM, on peut inclure des informations de mise en forme à l'intérieur de l'élément `<template>` dans d'un élément [`<style>`](/fr/docs/Web/HTML/Element/style), qui est ensuite encapsulé à l'intérieur de l'élément personnalisé. Cette procédure n'aurait pas fonctionné si on avait ajouté le contenu à un DOM standard.
 
-<p>Par exemple&nbsp;:</p>
+Par exemple :
 
-<pre class="brush: html">
-&lt;template id="my-paragraph"&gt;
-  &lt;style&gt;
+```html
+<template id="my-paragraph">
+  <style>
     p {
       color: white;
       background-color: #666;
       padding: 5px;
     }
-  &lt;/style&gt;
-  &lt;p&gt;My paragraph&lt;/p&gt;
-&lt;/template&gt;
-</pre>
+  </style>
+  <p>My paragraph</p>
+</template>
+```
 
-<p>On peut maintenent utiliser le modèle dans le document HTML:</p>
+On peut maintenent utiliser le modèle dans le document HTML:
 
-<pre class="brush: html">
-&lt;my-paragraph&gt;&lt;/my-paragraph&gt;
-</pre>
+```html
+<my-paragraph></my-paragraph>
+```
 
-<div class="note">
-<p><strong>Note :</strong> Les modèles sont bien pris en charge par les navigateurs&nbsp;; l'API Shadow DOM est pris en charge par défaut dans Firefox (à partir de la version 63), Chrome, Opera, Safari et Edge (à partir de la version 70).</p>
-</div>
+> **Note :** Les modèles sont bien pris en charge par les navigateurs ; l'API Shadow DOM est pris en charge par défaut dans Firefox (à partir de la version 63), Chrome, Opera, Safari et Edge (à partir de la version 70).
 
-<h2 id="plus_de_flexibilité_avec_les_slots">Plus de flexibilité avec les slots</h2>
+## Plus de flexibilité avec les slots
 
-<p>Jusque-là, nous avons vu une première utilisation de l'élément <code>&lt;template&gt;</code>. Cette implémentation n'est pas très flexible&nbsp;; elle ne permet d'afficher que du texte, c'est-à-dire qu'il est aussi utile qu'un paragraphe classique&nbsp;! Il est possible d'insérer du texte dans chaque instance d'élément de façon déclarative grâce à <a href="/fr/docs/Web/HTML/Element/slot"><code>&lt;slot&gt;</code></a>. Cette fonction est moins bien prise en charge que <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a>, disponible sur Chrome 53, Opera 40, Safari 10, Firefox 59 et Edge 79.</p>
+Jusque-là, nous avons vu une première utilisation de l'élément `<template>`. Cette implémentation n'est pas très flexible ; elle ne permet d'afficher que du texte, c'est-à-dire qu'il est aussi utile qu'un paragraphe classique ! Il est possible d'insérer du texte dans chaque instance d'élément de façon déclarative grâce à [`<slot>`](/fr/docs/Web/HTML/Element/slot). Cette fonction est moins bien prise en charge que [`<template>`](/fr/docs/Web/HTML/Element/template), disponible sur Chrome 53, Opera 40, Safari 10, Firefox 59 et Edge 79.
 
-<p>Les emplacements (<i lang="en">slots</i>) sont identifiés par leur attribut <code>name</code>, et permettent de définir des emplacements dans le modèle qui peuvent être alimentés avec n'importe quelle structure HTML.</p>
+Les emplacements (<i lang="en">slots</i>) sont identifiés par leur attribut `name`, et permettent de définir des emplacements dans le modèle qui peuvent être alimentés avec n'importe quelle structure HTML.
 
-<p>Donc, si on souhaite ajouter un emplacement dans le précédent exemple, on peut modifier l'élément de cette façon&nbsp;:</p>
+Donc, si on souhaite ajouter un emplacement dans le précédent exemple, on peut modifier l'élément de cette façon :
 
-<pre class="brush: html">
-&lt;p&gt;&lt;slot name="my-text"&gt;Texte par défaut&lt;/slot&gt;&lt;/p&gt;
-</pre>
+```html
+<p><slot name="my-text">Texte par défaut</slot></p>
+```
 
-<p>Si le contenu de l'emplacement n'est pas défini quand l'élément est inclus dans la page, ou si les emplacements ne sont pas pris en charge par le navigateur, <code>&lt;my-paragraph&gt;</code> contiendra simplement le texte statique précisé dans le modèle.</p>
+Si le contenu de l'emplacement n'est pas défini quand l'élément est inclus dans la page, ou si les emplacements ne sont pas pris en charge par le navigateur, `<my-paragraph>` contiendra simplement le texte statique précisé dans le modèle.
 
-<p>Pour définir le contenu de l'emplacement, on insère une structure HTML dans <code>&lt;my-paragraph&gt;</code> avec un attribut <a href="/fr/docs/Web/HTML/Global_attributes#slot"><code>slot</code></a> dont la valeur est égale au nom de l'emplacement que l'on veut alimenter. Comme précédemment, on peut utiliser n'importe quelle structure HTML, par exemple&nbsp;:</p>
+Pour définir le contenu de l'emplacement, on insère une structure HTML dans `<my-paragraph>` avec un attribut [`slot`](/fr/docs/Web/HTML/Global_attributes#slot) dont la valeur est égale au nom de l'emplacement que l'on veut alimenter. Comme précédemment, on peut utiliser n'importe quelle structure HTML, par exemple :
 
-<pre class="brush: html">
-&lt;my-paragraph&gt;
-  &lt;span slot="my-text"&gt;Voici un autre texte&amp;nbsp;!&lt;/span&gt;
-&lt;/my-paragraph&gt;
-</pre>
+```html
+<my-paragraph>
+  <span slot="my-text">Voici un autre texte&nbsp;!</span>
+</my-paragraph>
+```
 
-<p>ou</p>
+ou
 
-<pre class="brush: html">
-&lt;my-paragraph&gt;
-  &lt;ul slot="my-text"&gt;
-    &lt;li&gt;Voici un autre texte&amp;nbsp;!&lt;/li&gt;
-    &lt;li&gt;dans une liste!&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/my-paragraph&gt;
-</pre>
+```html
+<my-paragraph>
+  <ul slot="my-text">
+    <li>Voici un autre texte&nbsp;!</li>
+    <li>dans une liste!</li>
+  </ul>
+</my-paragraph>
+```
 
-<div class="note">
-  <p><strong>Note :</strong> Un élément <a href="/fr/docs/Web/HTML/Element/slot"><code>&lt;slot&gt;</code></a> sans nom sera rempli avec l'ensemble des nœuds-fils de plus haut niveau de l'élément personnalisé qui n'ont pas d'attribut <a href="/fr/docs/Web/HTML/Global_attributes#slot"><code>slot</code></a>. Cela inclut les nœuds texte.</p>
-</div>
+> **Note :** Un élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) sans nom sera rempli avec l'ensemble des nœuds-fils de plus haut niveau de l'élément personnalisé qui n'ont pas d'attribut [`slot`](/fr/docs/Web/HTML/Global_attributes#slot). Cela inclut les nœuds texte.
 
-<p>Et c'est tout pour ce premier exemple. Si vous souhaitez manipuler les emplacements, vous pouvez <a href="https://github.com/mdn/web-components-examples/tree/master/simple-template">voir la page sur GitHub</a> (voir aussi <a href="https://mdn.github.io/web-components-examples/simple-template/">le résultat</a>).</p>
+Et c'est tout pour ce premier exemple. Si vous souhaitez manipuler les emplacements, vous pouvez [voir la page sur GitHub](https://github.com/mdn/web-components-examples/tree/master/simple-template) (voir aussi [le résultat](https://mdn.github.io/web-components-examples/simple-template/)).
 
-<h2 id="un_exemple_plus_complexe">Un exemple plus complexe</h2>
+## Un exemple plus complexe
 
-<p>Pour finir, voyons un exemple un peu moins trivial.</p>
+Pour finir, voyons un exemple un peu moins trivial.
 
-<p>L'ensemble de fragments de code qui suit illustre comment utiliser <a href="/fr/docs/Web/HTML/Element/slot"><code>&lt;slot&gt;</code></a> avec <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a> et un peu de JavaScript afin de&nbsp;:</p>
+L'ensemble de fragments de code qui suit illustre comment utiliser [`<slot>`](/fr/docs/Web/HTML/Element/slot) avec [`<template>`](/fr/docs/Web/HTML/Element/template) et un peu de JavaScript afin de :
 
-<ul>
-	<li>Créer un élément <strong><code>&lt;element-details&gt;</code></strong> avec des <a href="/fr/docs/Web/HTML/Element/slot#named-slot">emplacements nommés</a> à <a href="/fr/docs/Web/API/ShadowRoot">la racine virtuelle (<code>ShadowRoot</code>)</a></li>
-	<li>Concevoir l'élément <strong><code>&lt;element-details&gt;</code></strong> afin que, lorsqu'il est utilisé dans les documents, il soit rendu en composant le contenu de l'élément avec le contenu de <a href="/fr/docs/Web/API/ShadowRoot">la racine virtuelle</a>. Autrement dit, les parties du contenu de l'élément seront utilisées afin de remplir <a href="/fr/docs/Web/HTML/Element/slot#named-slot">les emplacements nommés</a> dans sa <a href="/fr/docs/Web/API/ShadowRoot">racine virtuelle</a></li>
-</ul>
+- Créer un élément **`<element-details>`** avec des [emplacements nommés](/fr/docs/Web/HTML/Element/slot#named-slot) à [la racine virtuelle (`ShadowRoot`)](/fr/docs/Web/API/ShadowRoot)
+- Concevoir l'élément **`<element-details>`** afin que, lorsqu'il est utilisé dans les documents, il soit rendu en composant le contenu de l'élément avec le contenu de [la racine virtuelle](/fr/docs/Web/API/ShadowRoot). Autrement dit, les parties du contenu de l'élément seront utilisées afin de remplir [les emplacements nommés](/fr/docs/Web/HTML/Element/slot#named-slot) dans sa [racine virtuelle](/fr/docs/Web/API/ShadowRoot)
 
-<p>Il est techniquement possible d'utiliser un élément <a href="/fr/docs/Web/HTML/Element/slot"><code>&lt;slot&gt;</code></a> sans élément <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a> (par exemple au sein d'un <a href="/fr/docs/Web/HTML/Element/div"><code>&lt;div&gt;</code></a> classique) tout en tirant parti des fonctionnalités d'emplacement fournies par <a href="/fr/docs/Web/HTML/Element/slot"><code>&lt;slot&gt;</code></a> pour le contenu du Shadow DOM. On peut ainsi éviter d'avoir à d'abord accéder à la propriété <code>content</code> du modèle (et de la cloner). Toutefois, il est souvent plus pratique d'ajouter des emplacements au sein d'un élément <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a>, car il est peu probable de définir un composant à partir d'un élément déjà rendu.</p>
+Il est techniquement possible d'utiliser un élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) sans élément [`<template>`](/fr/docs/Web/HTML/Element/template) (par exemple au sein d'un [`<div>`](/fr/docs/Web/HTML/Element/div) classique) tout en tirant parti des fonctionnalités d'emplacement fournies par [`<slot>`](/fr/docs/Web/HTML/Element/slot) pour le contenu du Shadow DOM. On peut ainsi éviter d'avoir à d'abord accéder à la propriété `content` du modèle (et de la cloner). Toutefois, il est souvent plus pratique d'ajouter des emplacements au sein d'un élément [`<template>`](/fr/docs/Web/HTML/Element/template), car il est peu probable de définir un composant à partir d'un élément déjà rendu.
 
-<p>De plus, même si l'élément n'est pas déjà rendu, le rôle de conteneur porté par le modèle sera sémantiquement plus clair en utilisant <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a>. De plus, <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a> peut avoir des éléments qui lui sont directement rattachés comme <a href="/fr/docs/Web/HTML/Element/td"><code>&lt;td&gt;</code></a>. Ce même élément disparaîtrait s'il était ajouté à un élément <a href="/fr/docs/Web/HTML/Element/div"><code>&lt;div&gt;</code></a>.</p>
+De plus, même si l'élément n'est pas déjà rendu, le rôle de conteneur porté par le modèle sera sémantiquement plus clair en utilisant [`<template>`](/fr/docs/Web/HTML/Element/template). De plus, [`<template>`](/fr/docs/Web/HTML/Element/template) peut avoir des éléments qui lui sont directement rattachés comme [`<td>`](/fr/docs/Web/HTML/Element/td). Ce même élément disparaîtrait s'il était ajouté à un élément [`<div>`](/fr/docs/Web/HTML/Element/div).
 
-<div class="note">
-<p><strong>Note :</strong> Vous pourrez retrouver l'exemple complet sur <a href="https://github.com/mdn/web-components-examples/tree/master/element-details">le dépôt GitHub pour element-details</a> (voir également <a href="https://mdn.github.io/web-components-examples/element-details/">le résultat en action</a>).</p>
-</div>
+> **Note :** Vous pourrez retrouver l'exemple complet sur [le dépôt GitHub pour element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (voir également [le résultat en action](https://mdn.github.io/web-components-examples/element-details/)).
 
-<h3 id="créer_un_modèle_avec_des_emplacements">Créer un modèle avec des emplacements</h3>
+### Créer un modèle avec des emplacements
 
-<p>Tout d'abord, on utilise l'élément <a href="/fr/docs/Web/HTML/Element/slot"><code>&lt;slot&gt;</code></a> au sein d'un élément <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a> afin de créer notre nouveau <a href="/fr/docs/Web/API/DocumentFragment">fragment de document</a> "element-details-template" qui contient quelques <a href="/fr/docs/Web/HTML/Element/slot#named-slot">emplacements nommés</a>&nbsp;:</p>
+Tout d'abord, on utilise l'élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) au sein d'un élément [`<template>`](/fr/docs/Web/HTML/Element/template) afin de créer notre nouveau [fragment de document](/fr/docs/Web/API/DocumentFragment) "element-details-template" qui contient quelques [emplacements nommés](/fr/docs/Web/HTML/Element/slot#named-slot) :
 
-<pre class="brush: html">
-&lt;template id="element-details-template"&gt;
-  &lt;style&gt;
+```html
+<template id="element-details-template">
+  <style>
   details {font-family: "Open Sans Light",Helvetica,Arial}
   .name {font-weight: bold; color: #217ac0; font-size: 120%}
   h4 { margin: 10px 0 -8px 0; }
@@ -149,42 +142,39 @@ customElements.define('my-paragraph',
   h4 span { color: white }
   .attributes { margin-left: 22px; font-size: 90% }
   .attributes p { margin-left: 16px; font-style: italic }
-  &lt;/style&gt;
-  &lt;details&gt;
-    &lt;summary&gt;
-      &lt;span&gt;
-        &lt;code class="name"&gt;&amp;lt;&lt;slot name="element-name"&gt;BESOIN D'UN NOM&lt;/slot&gt;&amp;gt;&lt;/code&gt;
-        &lt;i class="desc"&gt;&lt;slot name="description"&gt;BESOIN D'UNE DESCRIPTION&lt;/slot&gt;&lt;/i&gt;
-      &lt;/span&gt;
-    &lt;/summary&gt;
-    &lt;div class="attributes"&gt;
-      &lt;h4&gt;&lt;span&gt;Attributs&lt;/span&gt;&lt;/h4&gt;
-      &lt;slot name="attributes"&gt;&lt;p&gt;Aucun&lt;/p&gt;&lt;/slot&gt;
-    &lt;/div&gt;
-  &lt;/details&gt;
-  &lt;hr&gt;
-&lt;/template&gt;
-</pre>
+  </style>
+  <details>
+    <summary>
+      <span>
+        <code class="name">&lt;<slot name="element-name">BESOIN D'UN NOM</slot>&gt;</code>
+        <i class="desc"><slot name="description">BESOIN D'UNE DESCRIPTION</slot></i>
+      </span>
+    </summary>
+    <div class="attributes">
+      <h4><span>Attributs</span></h4>
+      <slot name="attributes"><p>Aucun</p></slot>
+    </div>
+  </details>
+  <hr>
+</template>
+```
 
-<p>Voyons les caractéristiques de cet élément <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a>&nbsp;:</p>
+Voyons les caractéristiques de cet élément [`<template>`](/fr/docs/Web/HTML/Element/template) :
 
-<ul>
-	<li>Ce <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a> contient un élément <a href="/fr/docs/Web/HTML/Element/style"><code>&lt;style&gt;</code></a> avec un ensemble de règles CSS dont la portée est celle du fragment de document créé par l'élément <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a>.</li>
-	<li>Ce <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a> utilise un élément <a href="/fr/docs/Web/HTML/Element/slot"><code>&lt;slot&gt;</code></a> et l'attribut <a href="/fr/docs/Web/HTML/Element/slot#attr-name"><code>name</code></a> correspondant afin d'avoir trois <a href="/fr/docs/Web/HTML/Element/slot#named-slot">emplacements nommés</a>&nbsp;:
-	<ul>
-		<li><code>&lt;slot name="element-name"&gt;</code></li>
-		<li><code>&lt;slot name="description"&gt;</code></li>
-		<li><code>&lt;slot name="attributes"&gt;</code></li>
-	</ul>
-	</li>
-	<li>L'élément <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a> intègre les <a href="/fr/docs/Web/HTML/Element/slot#named-slot">emplacements nommés slots</a> dans un élément <a href="/fr/docs/Web/HTML/Element/details"><code>&lt;details&gt;</code></a>.</li>
-</ul>
+- Ce [`<template>`](/fr/docs/Web/HTML/Element/template) contient un élément [`<style>`](/fr/docs/Web/HTML/Element/style) avec un ensemble de règles CSS dont la portée est celle du fragment de document créé par l'élément [`<template>`](/fr/docs/Web/HTML/Element/template).
+- Ce [`<template>`](/fr/docs/Web/HTML/Element/template) utilise un élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) et l'attribut [`name`](/fr/docs/Web/HTML/Element/slot#attr-name) correspondant afin d'avoir trois [emplacements nommés](/fr/docs/Web/HTML/Element/slot#named-slot) :
 
-<h3 id="créer_un_nouvel_élément_element-details_avec_le_modèle">Créer un nouvel élément element-details avec le modèle</h3>
+  - `<slot name="element-name">`
+  - `<slot name="description">`
+  - `<slot name="attributes">`
 
-<p>Ensuite, voyons comment créer un nouvel élément personnalisé, intitulé <strong><code>&lt;element-details&gt;</code></strong>, et comment utiliser <a href="/fr/docs/Web/API/Element/attachShadow"><code>Element.attachShadow</code></a> pour lui rattacher, comme <a href="/fr/docs/Web/API/ShadowRoot">racine virtuelle</a>, le fragment de document créé avec l'élément <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a> ci-dessus. Pour cela, on utilisera la même méthode qu'avec notre exemple plus simple.</p>
+- L'élément [`<template>`](/fr/docs/Web/HTML/Element/template) intègre les [emplacements nommés slots](/fr/docs/Web/HTML/Element/slot#named-slot) dans un élément [`<details>`](/fr/docs/Web/HTML/Element/details).
 
-<pre class="brush: js">
+### Créer un nouvel élément element-details avec le modèle
+
+Ensuite, voyons comment créer un nouvel élément personnalisé, intitulé **`<element-details>`**, et comment utiliser [`Element.attachShadow`](/fr/docs/Web/API/Element/attachShadow) pour lui rattacher, comme [racine virtuelle](/fr/docs/Web/API/ShadowRoot), le fragment de document créé avec l'élément [`<template>`](/fr/docs/Web/HTML/Element/template) ci-dessus. Pour cela, on utilisera la même méthode qu'avec notre exemple plus simple.
+
+```js
 customElements.define('element-details',
   class extends HTMLElement {
     constructor() {
@@ -197,90 +187,88 @@ customElements.define('element-details',
     }
   }
 );
-</pre>
+```
 
-<h3 id="utiliser_l_élément_element-details_avec_les_emplacements_nommés">Utiliser l'élément element-details avec les emplacements nommés</h3>
+### Utiliser l'élément element-details avec les emplacements nommés
 
-<p>Prenons maintenant un élément <strong><code>&lt;element-details&gt;</code></strong> et utilisons le dans notre document&nbsp;:</p>
+Prenons maintenant un élément **`<element-details>`** et utilisons le dans notre document :
 
-<pre class="brush: html">
-&lt;element-details&gt;
-  &lt;span slot="element-name"&gt;slot&lt;/span&gt;
-  &lt;span slot="description"&gt;Un emplacement dans un
+```html
+<element-details>
+  <span slot="element-name">slot</span>
+  <span slot="description">Un emplacement dans un
     composant web que les utilisateurs pourront remplir
     avec leur propre contenu pour composer plusieurs
-    arbres DOM ensemble.&lt;/span&gt;
-  &lt;dl slot="attributes"&gt;
-    &lt;dt&gt;name&lt;/dt&gt;
-    &lt;dd&gt;Le nom de l'emplacement.&lt;/dd&gt;
-  &lt;/dl&gt;
-&lt;/element-details&gt;
+    arbres DOM ensemble.</span>
+  <dl slot="attributes">
+    <dt>name</dt>
+    <dd>Le nom de l'emplacement.</dd>
+  </dl>
+</element-details>
 
-&lt;element-details&gt;
-  &lt;span slot="element-name"&gt;template&lt;/span&gt;
-  &lt;span slot="description"&gt;Un mécanisme pour stocker
+<element-details>
+  <span slot="element-name">template</span>
+  <span slot="description">Un mécanisme pour stocker
     du contenu côté client qui n'est pas affiché lorsque la
     page est chargée mais lors de l'exécution avec du code
-    JavaScript.&lt;/span&gt;
-&lt;/element-details&gt;
-</pre>
+    JavaScript.</span>
+</element-details>
+```
 
-<p>En voyant ce fragment, notons quelques points&nbsp;:</p>
+En voyant ce fragment, notons quelques points :
 
-<ul>
-	<li>Ce fragment contient deux exemplaires <strong><code>&lt;element-details&gt;</code></strong> qui utilisent tous les deux l'attribut <a href="/fr/docs/Web/HTML/Global_attributes#slot"><code>slot</code></a> afin de référencer <a href="/fr/docs/Web/HTML/Element/slot#named-slot">les emplacements nommés</a> <code>"element-name"</code> et <code>"description"</code> qui sont inscrits dans <a href="/fr/docs/Web/API/ShadowRoot">la racine virtuelle</a> <code>&lt;element-details&gt;</code>.</li>
-	<li>Seul le premier élément <strong><code>&lt;element-details&gt;</code></strong> fait référence à <a href="/fr/docs/Web/HTML/Element/slot#named-slot">l'emplacement nommé</a> <code>"attributes"</code>. Le deuxième élément <code><strong>&lt;element-details</strong>&gt;</code> n'y fait pas référence.</li>
-	<li>Le premier élément <code>&lt;<strong>element-details&gt;</strong></code> fait référence à <a href="/fr/docs/Web/HTML/Element/slot#named-slot">l'emplacement nommé</a> <code>"attributes"</code> en utilisant un élément <a href="/fr/docs/Web/HTML/Element/dl"><code>&lt;dl&gt;</code></a> contenant comme enfants un élément <a href="/fr/docs/Web/HTML/Element/dt"><code>&lt;dt&gt;</code></a> et un élément <a href="/fr/docs/Web/HTML/Element/dd"><code>&lt;dd&gt;</code></a>.</li>
-</ul>
+- Ce fragment contient deux exemplaires **`<element-details>`** qui utilisent tous les deux l'attribut [`slot`](/fr/docs/Web/HTML/Global_attributes#slot) afin de référencer [les emplacements nommés](/fr/docs/Web/HTML/Element/slot#named-slot) `"element-name"` et `"description"` qui sont inscrits dans [la racine virtuelle](/fr/docs/Web/API/ShadowRoot) `<element-details>`.
+- Seul le premier élément **`<element-details>`** fait référence à [l'emplacement nommé](/fr/docs/Web/HTML/Element/slot#named-slot) `"attributes"`. Le deuxième élément `<element-details>` n'y fait pas référence.
+- Le premier élément `<element-details>` fait référence à [l'emplacement nommé](/fr/docs/Web/HTML/Element/slot#named-slot) `"attributes"` en utilisant un élément [`<dl>`](/fr/docs/Web/HTML/Element/dl) contenant comme enfants un élément [`<dt>`](/fr/docs/Web/HTML/Element/dt) et un élément [`<dd>`](/fr/docs/Web/HTML/Element/dd).
 
-<h3 id="mettre_le_tout_en_forme">Mettre le tout en forme</h3>
+### Mettre le tout en forme
 
-<p>Pour finir, ajoutons un peu de CSS pour les éléments <a href="/fr/docs/Web/HTML/Element/dl"><code>&lt;dl&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/dt"><code>&lt;dt&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/dd"><code>&lt;dd&gt;</code></a> de notre document&nbsp;:</p>
+Pour finir, ajoutons un peu de CSS pour les éléments [`<dl>`](/fr/docs/Web/HTML/Element/dl), [`<dt>`](/fr/docs/Web/HTML/Element/dt) et [`<dd>`](/fr/docs/Web/HTML/Element/dd) de notre document :
 
-<pre class="brush: css">
+```css
 dl { margin-left: 6px; }
 dt { font-weight: bold; color: #217ac0; font-size: 110% }
 dt { font-family: Consolas, "Liberation Mono", Courier }
 dd { margin-left: 16px }
-</pre>
+```
 
-<pre class="brush: css hidden">body { margin-top: 47px }</pre>
+```css hidden
+body { margin-top: 47px }
+```
 
-<h3 id="résultat">Résultat</h3>
+### Résultat
 
-<p>Assemblons l'ensemble des fragments pour voir le résultat final.</p>
+Assemblons l'ensemble des fragments pour voir le résultat final.
 
-<p>{{ EmbedLiveSample('exemple_complet', '300','400','element-details.png','') }}</p>
+{{ EmbedLiveSample('exemple_complet', '300','400','element-details.png','') }}
 
-<p>Quelques notes à propos du résultat affiché&nbsp;:</p>
+Quelques notes à propos du résultat affiché :
 
-<ul>
-	<li>Bien que les exemplaires des éléments <strong><code>&lt;element-details&gt;</code></strong> du document n'utilisent pas directement d'élément <a href="/fr/docs/Web/HTML/Element/details"><code>&lt;details&gt;</code></a>, ils sont rendus comme celui-ci, car <a href="/fr/docs/Web/HTML/Element/details"><code>&lt;details&gt;</code></a> <a href="/fr/docs/Web/API/ShadowRoot">la racine virtuelle</a> les peuple avec ceci.</li>
-	<li>Au sein de l'élément <a href="/fr/docs/Web/HTML/Element/details"><code>&lt;details&gt;</code></a> affiché, le contenu des éléments <strong><code>&lt;element-details&gt;</code></strong> remplit <a href="/fr/docs/Web/HTML/Element/slot#named-slot">les emplacements nommés</a> de <a href="/fr/docs/Web/API/ShadowRoot">la racine virtuelle</a>. Autrement dit, l'arbre du DOM pour les éléments <strong><code>&lt;element-details&gt;</code></strong> est composé avec le contenu <a href="/fr/docs/Web/API/ShadowRoot">de la racine virtuelle</a>.</li>
-	<li>Pour les deux éléments <strong><code>&lt;element-details&gt;</code></strong>, un titre <strong>Attributs</strong> est automatiquement ajouté à partir de <a href="/fr/docs/Web/API/ShadowRoot">la racine virtuelle</a> avant la position de l'emplacement nommé <code>"attributes"</code>.</li>
-	<li>Étant donné que le premier élément <strong><code>&lt;element-details&gt;</code></strong> possède un élément <a href="/fr/docs/Web/HTML/Element/dl"><code>&lt;dl&gt;</code></a> qui référence explicitement <a href="/fr/docs/Web/HTML/Element/slot#named-slot">l'emplacement nommé</a> <code>"attributes"</code> depuis <a href="/fr/docs/Web/API/ShadowRoot">sa racine virtuelle</a>, les contenus de <a href="/fr/docs/Web/HTML/Element/dl"><code>&lt;dl&gt;</code></a> remplacent l'emplacement nommé <code>"attributes"</code> de <a href="/fr/docs/Web/API/ShadowRoot">la racine virtuelle</a>.</li>
-	<li>Comme le second élément <strong><code>&lt;element-details&gt;</code></strong> ne fait pas explicitement référence à l'emplacement nommé <code>"attributes"</code> depuis <a href="/fr/docs/Web/API/ShadowRoot">sa racine virtuelle</a>, le contenu de cet <a href="/fr/docs/Web/HTML/Element/slot#named-slot">emplacement nommé</a> est rempli avec le contenu par défaut fourni par <a href="/fr/docs/Web/API/ShadowRoot">la racine virtuelle</a>.</li>
-</ul>
+- Bien que les exemplaires des éléments **`<element-details>`** du document n'utilisent pas directement d'élément [`<details>`](/fr/docs/Web/HTML/Element/details), ils sont rendus comme celui-ci, car [`<details>`](/fr/docs/Web/HTML/Element/details) [la racine virtuelle](/fr/docs/Web/API/ShadowRoot) les peuple avec ceci.
+- Au sein de l'élément [`<details>`](/fr/docs/Web/HTML/Element/details) affiché, le contenu des éléments **`<element-details>`** remplit [les emplacements nommés](/fr/docs/Web/HTML/Element/slot#named-slot) de [la racine virtuelle](/fr/docs/Web/API/ShadowRoot). Autrement dit, l'arbre du DOM pour les éléments **`<element-details>`** est composé avec le contenu [de la racine virtuelle](/fr/docs/Web/API/ShadowRoot).
+- Pour les deux éléments **`<element-details>`**, un titre **Attributs** est automatiquement ajouté à partir de [la racine virtuelle](/fr/docs/Web/API/ShadowRoot) avant la position de l'emplacement nommé `"attributes"`.
+- Étant donné que le premier élément **`<element-details>`** possède un élément [`<dl>`](/fr/docs/Web/HTML/Element/dl) qui référence explicitement [l'emplacement nommé](/fr/docs/Web/HTML/Element/slot#named-slot) `"attributes"` depuis [sa racine virtuelle](/fr/docs/Web/API/ShadowRoot), les contenus de [`<dl>`](/fr/docs/Web/HTML/Element/dl) remplacent l'emplacement nommé `"attributes"` de [la racine virtuelle](/fr/docs/Web/API/ShadowRoot).
+- Comme le second élément **`<element-details>`** ne fait pas explicitement référence à l'emplacement nommé `"attributes"` depuis [sa racine virtuelle](/fr/docs/Web/API/ShadowRoot), le contenu de cet [emplacement nommé](/fr/docs/Web/HTML/Element/slot#named-slot) est rempli avec le contenu par défaut fourni par [la racine virtuelle](/fr/docs/Web/API/ShadowRoot).
 
+##### Exemple complet
 
-<h5 id="exemple_complet">Exemple complet</h5>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;slot example&lt;/title&gt;
-    &lt;style&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>slot example</title>
+    <style>
 
       dl { margin-left: 6px; }
       dt { font-weight: bold; color: #217ac0; font-size: 110% }
       dt { font-family: Consolas, "Liberation Mono", Courier }
       dd { margin-left: 16px }
 
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;template id="element-details-template"&gt;
-      &lt;style&gt;
+    </style>
+  </head>
+  <body>
+    <template id="element-details-template">
+      <style>
       details {font-family: "Open Sans Light",Helvetica,Arial}
       .name {font-weight: bold; color: #217ac0; font-size: 120%}
       h4 { margin: 10px 0 -8px 0; }
@@ -289,43 +277,43 @@ dd { margin-left: 16px }
       h4 span { color: white }
       .attributes { margin-left: 22px; font-size: 90% }
       .attributes p { margin-left: 16px; font-style: italic }
-      &lt;/style&gt;
-      &lt;details&gt;
-        &lt;summary&gt;
-          &lt;span&gt;
-            &lt;code class="name"&gt;&amp;lt;&lt;slot name="element-name"&gt;BESOIN D'UN NOM&lt;/slot&gt;&amp;gt;&lt;/code&gt;
-            &lt;i class="desc"&gt;&lt;slot name="description"&gt;BESOIN D'UNE DESCRIPTION&lt;/slot&gt;&lt;/i&gt;
-          &lt;/span&gt;
-        &lt;/summary&gt;
-        &lt;div class="attributes"&gt;
-          &lt;h4&gt;&lt;span&gt;Attributs&lt;/span&gt;&lt;/h4&gt;
-          &lt;slot name="attributes"&gt;&lt;p&gt;Aucun&lt;/p&gt;&lt;/slot&gt;
-        &lt;/div&gt;
-      &lt;/details&gt;
-      &lt;hr&gt;
-    &lt;/template&gt;
+      </style>
+      <details>
+        <summary>
+          <span>
+            <code class="name">&lt;<slot name="element-name">BESOIN D'UN NOM</slot>&gt;</code>
+            <i class="desc"><slot name="description">BESOIN D'UNE DESCRIPTION</slot></i>
+          </span>
+        </summary>
+        <div class="attributes">
+          <h4><span>Attributs</span></h4>
+          <slot name="attributes"><p>Aucun</p></slot>
+        </div>
+      </details>
+      <hr>
+    </template>
 
-    &lt;element-details&gt;
-      &lt;span slot="element-name"&gt;slot&lt;/span&gt;
-      &lt;span slot="description"&gt;Un emplacement dans un
+    <element-details>
+      <span slot="element-name">slot</span>
+      <span slot="description">Un emplacement dans un
         composant web que les utilisateurs pourront remplir
         avec leur propre contenu pour composer plusieurs
-        arbres DOM ensemble.&lt;/span&gt;
-      &lt;dl slot="attributes"&gt;
-        &lt;dt&gt;name&lt;/dt&gt;
-        &lt;dd&gt;Le nom de l'emplacement.&lt;/dd&gt;
-      &lt;/dl&gt;
-    &lt;/element-details&gt;
+        arbres DOM ensemble.</span>
+      <dl slot="attributes">
+        <dt>name</dt>
+        <dd>Le nom de l'emplacement.</dd>
+      </dl>
+    </element-details>
 
-    &lt;element-details&gt;
-      &lt;span slot="element-name"&gt;template&lt;/span&gt;
-      &lt;span slot="description"&gt;Un mécanisme pour stocker
+    <element-details>
+      <span slot="element-name">template</span>
+      <span slot="description">Un mécanisme pour stocker
         du contenu côté client qui n'est pas affiché lorsque la
         page est chargée mais lors de l'exécution avec du code
-        JavaScript.&lt;/span&gt;
-    &lt;/element-details&gt;
+        JavaScript.</span>
+    </element-details>
 
-    &lt;script&gt;
+    <script>
     customElements.define('element-details',
       class extends HTMLElement {
         constructor() {
@@ -337,7 +325,7 @@ dd { margin-left: 16px }
             .appendChild(template.cloneNode(true));
         }
       })
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-</div>
+    </script>
+  </body>
+</html>
+```
