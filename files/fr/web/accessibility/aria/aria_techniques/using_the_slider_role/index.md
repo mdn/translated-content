@@ -8,100 +8,82 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_slider
 ---
-<h3 id="Description">Description</h3>
+### Description
 
-<p>Cette technique présente l’utilisation du rôle <a href="http://www.w3.org/TR/wai-aria/roles#slider">slider</a>.</p>
+Cette technique présente l’utilisation du rôle [slider](http://www.w3.org/TR/wai-aria/roles#slider).
 
-<p>Le rôle <code>slider</code> est utilisé pour des balises qui permettent à l'utilisateur de sélectionner une valeur dans un intervalle donné. Le rôle <code>slider</code> est assigné à la « <em>molette</em> », le contrôle qui est ajusté pour modifier la valeur. Typiquement, un autre élément est stylé pour représenter visuellement l'intervalle de valeurs possibles, et le curseur est positionné visuellement pour représenter la valeur dans cet intervalle. Lorsque l'utilisateur interagit avec la molette, l'application doit programmatiquement ajuster l'attribut <code>aria-valuenow</code> du curseur de défilement (et si possible <code>aria-valuetext</code>) pour refléter la valeur courante. Voir la section {{ anch("Exemples") }} ci-dessous pour plus d'informations.</p>
+Le rôle `slider` est utilisé pour des balises qui permettent à l'utilisateur de sélectionner une valeur dans un intervalle donné. Le rôle `slider` est assigné à la « *molette* », le contrôle qui est ajusté pour modifier la valeur. Typiquement, un autre élément est stylé pour représenter visuellement l'intervalle de valeurs possibles, et le curseur est positionné visuellement pour représenter la valeur dans cet intervalle. Lorsque l'utilisateur interagit avec la molette, l'application doit programmatiquement ajuster l'attribut `aria-valuenow` du curseur de défilement (et si possible `aria-valuetext`) pour refléter la valeur courante. Voir la section {{ anch("Exemples") }} ci-dessous pour plus d'informations.
 
-<h4 id="Clavier_et_focus">Clavier et focus</h4>
+#### Clavier et focus
 
-<p>Le curseur doit pouvoir recevoir le focus et être manipulable au clavier. Lorsque l'utilisateur tabule pour amener le focus sur le curseur, il doit arriver sur la molette : le contrôle qu'un utilisateur de souris fera glisser. Les touches flèches doivent agir de la façon suivante (attention toutefois, dans les applications, aux directions de flèches pour les langues s'écrivant de droite à gauche) :</p>
+Le curseur doit pouvoir recevoir le focus et être manipulable au clavier. Lorsque l'utilisateur tabule pour amener le focus sur le curseur, il doit arriver sur la molette : le contrôle qu'un utilisateur de souris fera glisser. Les touches flèches doivent agir de la façon suivante (attention toutefois, dans les applications, aux directions de flèches pour les langues s'écrivant de droite à gauche) :
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Touche(s)</th>
-   <th scope="col">Action</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Flèches haut et droite</td>
-   <td>Augmente la valeur sélectionnée</td>
-  </tr>
-  <tr>
-   <td>Flèches bas et gauche</td>
-   <td>Baisse la valeur sélectionnée</td>
-  </tr>
-  <tr>
-   <td>Page haut et Page bas</td>
-   <td>Augmente ou baisse facultativement la valeur selon un pas prédéfini (par exemple de 10 en 10 dans un intervalle de 0 à 100)</td>
-  </tr>
- </tbody>
-</table>
+| Touche(s)              | Action                                                                                                                      |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Flèches haut et droite | Augmente la valeur sélectionnée                                                                                             |
+| Flèches bas et gauche  | Baisse la valeur sélectionnée                                                                                               |
+| Page haut et Page bas  | Augmente ou baisse facultativement la valeur selon un pas prédéfini (par exemple de 10 en 10 dans un intervalle de 0 à 100) |
 
-<h3 id="Effets_possibles_sur_les_agents_utilisateurs_et_les_technologies_d’assistance">Effets possibles sur les agents utilisateurs et les technologies d’assistance</h3>
+### Effets possibles sur les agents utilisateurs et les technologies d’assistance
 
-<div class="note"><p><strong>Note :</strong> il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.</p></div>
+> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.
 
-<h3 id="Exemples">Exemples</h3>
+### Exemples
 
-<h4 id="Exemple_1_Intervalle_numérique_simple">Exemple 1 : Intervalle numérique simple</h4>
+#### Exemple 1 : Intervalle numérique simple
 
-<p>Dans l'exemple ci-dessous, un simple curseur est utilisé pour sélectionner une valeur entre 1 et 100. Le volume courant est 60. L'application actualisera programmatiquement la valeur de <code>aria-valuenow</code> en réponse à l'action de l'utilisateur.</p>
+Dans l'exemple ci-dessous, un simple curseur est utilisé pour sélectionner une valeur entre 1 et 100. Le volume courant est 60. L'application actualisera programmatiquement la valeur de `aria-valuenow` en réponse à l'action de l'utilisateur.
 
-<pre class="brush: html">&lt;div id="slider-label"&gt;Volume&lt;/div&gt;
+```html
+<div id="slider-label">Volume</div>
 
-&lt;div class="vol-slider"&gt;
-  &lt;a href="#" id="vol-handle" class="handle" role="slider" aria-labelledby="slider-label"
+<div class="vol-slider">
+  <a href="#" id="vol-handle" class="handle" role="slider" aria-labelledby="slider-label"
     aria-valuemin="1"
     aria-valuemax="100"
-    aria-valuenow="60"&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</pre>
+    aria-valuenow="60">
+  </a>
+</div>
+```
 
-<h4 id="Exemple_2_Valeurs_texte">Exemple 2 : Valeurs texte</h4>
+#### Exemple 2 : Valeurs texte
 
-<p>Parfois, un slider est utilisé pour choisir une valeur qui n'est pas, sémantiquement , un nombre. Dans ces cas là, l'attribut <code>aria-valuetext</code> est utilisé pour donner le texte approprié pour la valeur sélectionnée. Dans l'exemple ci-dessous, le slider est utilisé pour sélectionner un jour de la semaine .</p>
+Parfois, un slider est utilisé pour choisir une valeur qui n'est pas, sémantiquement , un nombre. Dans ces cas là, l'attribut `aria-valuetext` est utilisé pour donner le texte approprié pour la valeur sélectionnée. Dans l'exemple ci-dessous, le slider est utilisé pour sélectionner un jour de la semaine .
 
-<pre class="brush: html">&lt;div id="slider-label"&gt;Jour de la semaine :&lt;/div&gt;
+```html
+<div id="slider-label">Jour de la semaine :</div>
 
-&lt;div class="day-slider"&gt;
-  &lt;a href="#" id="day-handle" class="day-slider-handle" role="slider" aria-labelledby="slider-label"
+<div class="day-slider">
+  <a href="#" id="day-handle" class="day-slider-handle" role="slider" aria-labelledby="slider-label"
     aria-valuemin="1"
     aria-valuemax="7"
     aria-valuenow="2"
-    aria-valuetext="Lundi"&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</pre>
+    aria-valuetext="Lundi">
+  </a>
+</div>
+```
 
-<p>L'extrait de code ci-dessous décrit une fonction qui répond à l'action de l'utilisateur et actualise les attributs <code>aria-valuenow</code> et <code>aria-valuetext</code> :</p>
+L'extrait de code ci-dessous décrit une fonction qui répond à l'action de l'utilisateur et actualise les attributs `aria-valuenow` et `aria-valuetext` :
 
-<pre class="brush: js">var dayNames = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+```js
+var dayNames = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
 var updateSlider = function (newValue) {
     var handle = document.getElementById("day-handle");
     handle.setAttribute("aria-valuenow", newValue.toString());
     handle.setAttribute("aria-valuetext", dayNames[newValue]);
 };
-</pre>
+```
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<h3 id="Attributs_ARIA_utilisés">Attributs ARIA utilisés</h3>
+### Attributs ARIA utilisés
 
-<ul>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemin">aria-valuemin</a> ;</li>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemax">aria-valuemax</a> ;</li>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuenow">aria-valuenow</a> ;</li>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuetext">aria-valuetext</a> ;</li>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-orientation">aria-orientation</a>.</li>
-</ul>
+- [aria-valuemin](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemin) ;
+- [aria-valuemax](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemax) ;
+- [aria-valuenow](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuenow) ;
+- [aria-valuetext](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuetext) ;
+- [aria-orientation](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-orientation).
 
-<h3 id="Autres_ressources">Autres ressources</h3>
+### Autres ressources
 
-<ul>
- <li><a href="http://www.w3.org/TR/wai-aria/roles#slider">Spécifications WAI-ARIA pour le rôle <code>slider</code></a></li>
-</ul>
+- [Spécifications WAI-ARIA pour le rôle `slider`](http://www.w3.org/TR/wai-aria/roles#slider)

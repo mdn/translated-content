@@ -8,55 +8,50 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute
 original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-orientation
 ---
-<h3 id="Description">Description</h3>
+### Description
 
-<p>Cette technique présente l’utilisation de l’attribut <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-orientation">aria-orientation</a>.</p>
+Cette technique présente l’utilisation de l’attribut [aria-orientation](http://www.w3.org/TR/wai-aria/states_and_properties#aria-orientation).
 
-<p>L’attribut <code>aria-orientation</code> est utilisé pour indiquer si un élément est orienté verticalement ou horizontalement.</p>
+L’attribut `aria-orientation` est utilisé pour indiquer si un élément est orienté verticalement ou horizontalement.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<p>Vocabulaire</p>
+Vocabulaire
 
-<dl>
- <dt>vertical</dt>
- <dd>L’élément est orienté verticalement.</dd>
- <dt>horizontal (défaut)</dt>
- <dd>L’élément est orienté horizontalement.</dd>
-</dl>
+- vertical
+  - : L’élément est orienté verticalement.
+- horizontal (défaut)
+  - : L’élément est orienté horizontalement.
 
-<h3 id="Effets_possibles_sur_les_agents_utilisateurs_et_les_technologies_d’assistance">Effets possibles sur les agents utilisateurs et les technologies d’assistance</h3>
+### Effets possibles sur les agents utilisateurs et les technologies d’assistance
 
-<div class="note"><p><strong>Note :</strong> il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.</p></div>
+> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.
 
-<h3 id="Exemples">Exemples</h3>
+### Exemples
 
-<h4 id="Exemple_1">Exemple 1 :</h4>
+#### Exemple 1 :
 
-<p>L’extrait de code ci-dessous présente un curseur simple orienté verticalement.</p>
+L’extrait de code ci-dessous présente un curseur simple orienté verticalement.
 
-<pre class="brush: html">&lt;a href="#" id="handle_zoomSlider"
+```html
+<a href="#" id="handle_zoomSlider"
   role="slider"
   aria-orientation="vertical"
   aria-valuemin="0"
   aria-valuemax="17"
-  aria-valuenow="14" &gt;
-    &lt;span&gt;11&lt;/span&gt;
-&lt;/a&gt;
-</pre>
+  aria-valuenow="14" >
+    <span>11</span>
+</a>
+```
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<h3 id="Utilisé_avec_les_rôles_ARIA">Utilisé avec les rôles ARIA</h3>
+### Utilisé avec les rôles ARIA
 
-<ul>
- <li>scrollbar ;</li>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_slider_role">slider</a> ;</li>
- <li>separator.</li>
-</ul>
+- scrollbar ;
+- [slider](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_slider_role) ;
+- separator.
 
-<h3 id="Autres_ressources">Autres ressources</h3>
+### Autres ressources
 
-<ul>
- <li><a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-orientation">Spécification WAI-ARIA pour l’attribut <code>aria-orientation</code></a>.</li>
-</ul>
+- [Spécification WAI-ARIA pour l’attribut `aria-orientation`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-orientation).

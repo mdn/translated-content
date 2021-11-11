@@ -8,66 +8,61 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-required
 ---
-<h3 id="Description">Description</h3>
+### Description
 
-<p>Cette technique présente l’utilisation de l’attribut <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required"><code>aria-required</code></a>.</p>
+Cette technique présente l’utilisation de l’attribut [`aria-required`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-required).
 
-<p>L’attribut <code>aria-required</code> est utilisé pour indiquer que l’utilisateur doit obligatoirement remplir un champ de formulaire avant de le soumettre. Cet attribut peut être utilisé avec n’importe quel élément de formulaire HTML ; il n’est pas limité aux éléments auxquels a été assigné un <code>rôle</code> ARIA.</p>
+L’attribut `aria-required` est utilisé pour indiquer que l’utilisateur doit obligatoirement remplir un champ de formulaire avant de le soumettre. Cet attribut peut être utilisé avec n’importe quel élément de formulaire HTML ; il n’est pas limité aux éléments auxquels a été assigné un `rôle` ARIA.
 
-<p>{{ HTMLVersionInline("5") }} a introduit l’attribut <a href="/fr/docs/Web/HTML/Attributes"><code>required</code></a>, mais <code>aria-required</code> est toujours utile pour les agents utilisateurs qui ne prennent pas encore en charge HTML5.</p>
+{{ HTMLVersionInline("5") }} a introduit l’attribut [`required`](/fr/docs/Web/HTML/Attributes), mais `aria-required` est toujours utile pour les agents utilisateurs qui ne prennent pas encore en charge HTML5.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<p><code>true</code> ou <code>false</code> (Valeur par défaut : <code>false</code>)</p>
+`true` ou `false` (Valeur par défaut : `false`)
 
-<h3 id="Effets_possibles_sur_les_agents_utilisateurs_et_les_technologies_d’assistance">Effets possibles sur les agents utilisateurs et les technologies d’assistance</h3>
+### Effets possibles sur les agents utilisateurs et les technologies d’assistance
 
-<p>Les lecteurs d’écran devraient annoncer le champ comme étant obligatoire.</p>
+Les lecteurs d’écran devraient annoncer le champ comme étant obligatoire.
 
-<p>Remarquez que cet attribut ne changera pas automatiquement la présentation du champ.</p>
+Remarquez que cet attribut ne changera pas automatiquement la présentation du champ.
 
-<div class="note"><p><strong>Note :</strong> il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.</p></div>
+> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.
 
-<h3 id="Exemples">Exemples</h3>
+### Exemples
 
-<h4 id="Exemple_1_un_formulaire_simple">Exemple 1 : un formulaire simple</h4>
+#### Exemple 1 : un formulaire simple
 
-<pre class="brush: html">&lt;form action="post"&gt;
-  &lt;label for="prenom"&gt;Prénom&amp;nbsp;:&lt;/label&gt;
-  &lt;input id="prenom" type="text" aria-required="true"&gt;
-  &lt;br/&gt;
-  &lt;label for="nom"&gt;Nom&amp;nbsp;:&lt;/label&gt;
-  &lt;input id="nom" type="text" aria-required="true"&gt;
-  &lt;br/&gt;
-  &lt;label for="adresse"&gt;Adresse&amp;nbsp;:&lt;/label&gt;
-  &lt;input id="adresse" type="text"&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form action="post">
+  <label for="prenom">Prénom&nbsp;:</label>
+  <input id="prenom" type="text" aria-required="true">
+  <br/>
+  <label for="nom">Nom&nbsp;:</label>
+  <input id="nom" type="text" aria-required="true">
+  <br/>
+  <label for="adresse">Adresse&nbsp;:</label>
+  <input id="adresse" type="text">
+</form>
+```
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<h3 id="Utilisé_dans_les_rôles_ARIA">Utilisé dans les rôles ARIA</h3>
+### Utilisé dans les rôles ARIA
 
-<ul>
- <li>Combobox ;</li>
- <li>Gridcell ;</li>
- <li>Listbox ;</li>
- <li>Radiogroup ;</li>
- <li>Spinbutton ;</li>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_textbox">Textbox</a> ;</li>
- <li>Tree.</li>
-</ul>
+- Combobox ;
+- Gridcell ;
+- Listbox ;
+- Radiogroup ;
+- Spinbutton ;
+- [Textbox](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_textbox) ;
+- Tree.
 
-<h3 id="Techniques_ARIA_connexes">Techniques ARIA connexes</h3>
+### Techniques ARIA connexes
 
-<ul>
- <li><a href="/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-invalid">Utiliser l’attribut <code>aria-invalid</code></a></li>
-</ul>
+- [Utiliser l’attribut `aria-invalid`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-invalid)
 
-<h3 id="Autres_ressources">Autres ressources</h3>
+### Autres ressources
 
-<ul>
- <li><a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required">Spécification WAI-ARIA pour <code>aria-required</code></a> ;</li>
- <li><a href="http://www.w3.org/TR/wai-aria-practices/#ariaform">WAI-ARIA Authoring Practices for forms</a> (Règles WAI-ARIA de création de formulaires) ;</li>
- <li><a href="/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation">Validation de condition</a> en {{ HTMLVersionInline("5") }}.</li>
-</ul>
+- [Spécification WAI-ARIA pour `aria-required`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-required) ;
+- [WAI-ARIA Authoring Practices for forms](http://www.w3.org/TR/wai-aria-practices/#ariaform) (Règles WAI-ARIA de création de formulaires) ;
+- [Validation de condition](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) en {{ HTMLVersionInline("5") }}.

@@ -8,45 +8,49 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role
 original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_presentation
 ---
-<p>Cette page présente l'usage du rôle <code><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#presentation_role">presentation</a></code> et décrit l'effet qu'il a sur les navigateurs et les technologies d'assistance.</p>
+Cette page présente l'usage du rôle [`presentation`](https://www.w3.org/TR/wai-aria-practices-1.1/#presentation_role) et décrit l'effet qu'il a sur les navigateurs et les technologies d'assistance.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Le rôle <code>presentation</code> est utilisé pour retirer toute représentation sémantique pour un élément donné ainsi que pour ses descendants. Par exemple, un tableau utilisé pour la mise en page pourrait avoir un rôle <code>presentation</code> appliqué sur l'élément <code>table</code> pour retirer la sémantique de l'élément en lui-même ainsi que tout ses sous-éléments, comme l'en-tête de tableau ou même les données de tableau elles-mêmes.</p>
+Le rôle `presentation` est utilisé pour retirer toute représentation sémantique pour un élément donné ainsi que pour ses descendants. Par exemple, un tableau utilisé pour la mise en page pourrait avoir un rôle `presentation` appliqué sur l'élément `table` pour retirer la sémantique de l'élément en lui-même ainsi que tout ses sous-éléments, comme l'en-tête de tableau ou même les données de tableau elles-mêmes.
 
-<h2 id="Effets_possibles_sur_les_agents_utilisateurs_et_les_technologies_d’assistance">Effets possibles sur les agents utilisateurs et les technologies d’assistance</h2>
+## Effets possibles sur les agents utilisateurs et les technologies d’assistance
 
-<p>Les agents utilisateurs ou les technologies d'assistance ne devrait normalement pas lire les éléments marqués comme étant de rôle <code>presentation</code>.</p>
+Les agents utilisateurs ou les technologies d'assistance ne devrait normalement pas lire les éléments marqués comme étant de rôle `presentation`.
 
-<div class="note"><p><strong>Note :</strong> il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.</p></div>
+> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemple_1_Les_icônes-fontes">Exemple 1: Les icônes-fontes</h3>
+### Exemple 1: Les icônes-fontes
 
-<p>Une des recommandations d'accessibilité propose que les couleurs ou les représentations imagées (icônes par exemple) ne soient pas l'unique méthode pour transmettre une information. Ainsi nous pouvons partir du postula que votre icône est un complément décoratif à un texte explicite. Il faut donc lui appliquer un rôle <code>presentation</code>.</p>
+Une des recommandations d'accessibilité propose que les couleurs ou les représentations imagées (icônes par exemple) ne soient pas l'unique méthode pour transmettre une information. Ainsi nous pouvons partir du postula que votre icône est un complément décoratif à un texte explicite. Il faut donc lui appliquer un rôle `presentation`.
 
-<pre class="brush: html">&lt;i class="icon-user" role="presentation"&gt;&lt;/i&gt;
-</pre>
+```html
+<i class="icon-user" role="presentation"></i>
+```
 
-<h4 id="Exemples_concrets">Exemples concrets :</h4>
+#### Exemples concrets :
 
-<p>Par exemple, en reprenant le bouton de la navigation principale de ce site web, nous pourrions écrire.</p>
+Par exemple, en reprenant le bouton de la navigation principale de ce site web, nous pourrions écrire.
 
-<pre class="brush: html">&lt;button type="button" aria-haspopup="true"&gt;
+```html
+<button type="button" aria-haspopup="true">
     Technologies
-    &lt;span class="main-menu-arrow" role="presentation"&gt;▼&lt;/span&gt;
-&lt;/button&gt;
-</pre>
+    <span class="main-menu-arrow" role="presentation">▼</span>
+</button>
+```
 
-<h3 id="Exemple_2_Inline_SVG">Exemple 2 : Inline SVG</h3>
+### Exemple 2 : Inline SVG
 
-<p>De plus en plus d'images sont proposées sous la forme de compositions SVG directement insérées dans le document HTML. À l'image de l'attribut <code>alt</code> vide sur un élément <code>img</code>, il est possible d'indiquer qu'un élément SVG est purement décoratif grâce au rôle <code>presentation</code>.</p>
+De plus en plus d'images sont proposées sous la forme de compositions SVG directement insérées dans le document HTML. À l'image de l'attribut `alt` vide sur un élément `img`, il est possible d'indiquer qu'un élément SVG est purement décoratif grâce au rôle `presentation`.
 
-<pre class="brush: html">&lt;svg role="presentation"&gt;
+```html
+<svg role="presentation">
 …
-&lt;/svg&gt;</pre>
+</svg>
+```
 
-<h2 id="Autres_ressources">Autres ressources</h2>
+## Autres ressources
 
-<p>Using Aria - 2.9 Use of Role=presentation or Role=none: <a href="https://www.w3.org/TR/using-aria/#presentation">https://www.w3.org/TR/using-aria/#presentation</a></p>
+Using Aria - 2.9 Use of Role=presentation or Role=none: <https://www.w3.org/TR/using-aria/#presentation>
