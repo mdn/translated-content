@@ -12,62 +12,65 @@ tags:
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}{{IncludeSubnav("/fr/docs/Games")}}
 
-<div>{{IncludeSubnav("/fr/docs/Games")}}</div>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_et_contr%C3%B4le_clavier", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_et_contr%C3%B4le_clavier", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}</p>
+Voici la **5ème étape** sur 10 du [Gamedev Canvas tutorial](/fr/docs/Games/Workflows/Breakout_game_from_scratch). Vous pouvez trouver le code source comme il devrait être après avoir terminé cette leçon sur [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html).
 
-<p>Voici la <strong>5ème étape</strong> sur 10 du <a href="/fr/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>. Vous pouvez trouver le code source comme il devrait être après avoir terminé cette leçon sur <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html">Gamedev-Canvas-workshop/lesson5.html</a>.</p>
+C'est sympa de regarder la balle rebondir contre les murs et de pouvoir bouger la raquette, mais à part ça, le jeu ne fait rien, il n'y a pas de progression ni de but final. Il serait bien, du point de vue du gameplay, de pouvoir perdre. La façon de perdre dans le casse briques est simple. Si vous loupez la balle avec le paddle et la laissez atteindre le bas de l'écran, la partie est terminée.
 
-<p>C'est sympa de regarder la balle rebondir contre les murs et de pouvoir bouger la raquette, mais à part ça, le jeu ne fait rien, il n'y a pas de progression ni de but final. Il serait bien, du point de vue du gameplay, de pouvoir perdre. La façon de perdre dans le casse briques est simple. Si vous loupez la balle avec le paddle et la laissez atteindre le bas de l'écran, la partie est terminée.</p>
+## Intégrer une fin de partie
 
-<h2 id="Intégrer_une_fin_de_partie">Intégrer une fin de partie</h2>
+Essayons d'intégrer une fin de partie dans le jeu . Voyons une partie du code de la troisième leçon, où nous faisions rebondir la balle contre les murs :
 
-<p>Essayons d'intégrer une fin de partie dans le jeu . Voyons une partie du code de la troisième leçon, où nous faisions rebondir la balle contre les murs :</p>
-
-<pre class="brush: js">if(x + dx &gt; canvas.width-ballRadius || x + dx &lt; ballRadius) {
+```js
+if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
     dx = -dx;
 }
 
-if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
+if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
     dy = -dy;
-}</pre>
+}
+```
 
-<p>Au lieu de permettre à la balle de rebondir sur les quatre murs, nous n'en autoriserons que trois désormais — gauche, haut et droite. Toucher le mur du bas mettra fin à la partie.</p>
+Au lieu de permettre à la balle de rebondir sur les quatre murs, nous n'en autoriserons que trois désormais — gauche, haut et droite. Toucher le mur du bas mettra fin à la partie.
 
-<p>Nous allons  donc modifier le second bloc <code>if</code> (qui gère le déplacement sur l'axe vertical, y) en y ajoutant un <code>else if</code> qui déclenchera un Game Over si la balle entre en collision avec le mur du bas. Pour l'instant nous allons rester simple, afficher un message d'alerte et redémarrer le jeu en rechargeant la page.</p>
+Nous allons  donc modifier le second bloc `if` (qui gère le déplacement sur l'axe vertical, y) en y ajoutant un `else if` qui déclenchera un Game Over si la balle entre en collision avec le mur du bas. Pour l'instant nous allons rester simple, afficher un message d'alerte et redémarrer le jeu en rechargeant la page.
 
-<p>Tout d'abord remplacer l'appel initial à <code>setInterval()</code></p>
+Tout d'abord remplacer l'appel initial à `setInterval()`
 
-<pre class="brush: js">setInterval(draw, 10);
-</pre>
+```js
+setInterval(draw, 10);
+```
 
-<p>par </p>
+par
 
-<pre class="brush: js">var interval = setInterval(draw, 10);
-</pre>
+```js
+var interval = setInterval(draw, 10);
+```
 
+Puis remplacez la seconde instruction `if` par le code suivant:
 
-
-<p>Puis remplacez la seconde instruction <code>if</code> par le code suivant:</p>
-
-<pre class="brush: js">if(y + dy &lt; ballRadius) {
+```js
+if(y + dy < ballRadius) {
     dy = -dy;
-} else if(y + dy &gt; canvas.height-ballRadius) {
+} else if(y + dy > canvas.height-ballRadius) {
     alert("GAME OVER");
     document.location.reload();
     clearInterval(interval); // Needed for Chrome to end game
-}</pre>
+}
+```
 
-<h2 id="Faire_rebondir_la_balle_sur_la_raquette">Faire rebondir la balle sur la raquette</h2>
+## Faire rebondir la balle sur la raquette
 
-<p>La dernière chose à faire dans cette leçon est de créer une sorte de détection de collision entre la raquette et la balle, de sorte qu'elle puisse rebondir et revenir dans la zone de jeu. La chose la plus facile à faire est de vérifier si le centre de la balle se  trouve entre les bords droit et gauche du paddle. Mettez à jour le dernier bout de code que vous venez de modifier, comme-ci dessous :</p>
+La dernière chose à faire dans cette leçon est de créer une sorte de détection de collision entre la raquette et la balle, de sorte qu'elle puisse rebondir et revenir dans la zone de jeu. La chose la plus facile à faire est de vérifier si le centre de la balle se  trouve entre les bords droit et gauche du paddle. Mettez à jour le dernier bout de code que vous venez de modifier, comme-ci dessous :
 
-<pre class="brush: js">if(y + dy &lt; ballRadius) {
+```js
+if(y + dy < ballRadius) {
     dy = -dy;
-} else if(y + dy &gt; canvas.height-ballRadius) {
-    if(x &gt; paddleX &amp;&amp; x &lt; paddleX + paddleWidth) {
+} else if(y + dy > canvas.height-ballRadius) {
+    if(x > paddleX && x < paddleX + paddleWidth) {
         dy = -dy;
     }
     else {
@@ -75,20 +78,21 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
         document.location.reload();
         clearInterval(interval);
     }
-}</pre>
+}
+```
 
-<p>Si la balle entre en collision avec le mur du bas, nous devons vérifier si elle touche la raquette. Si c'est le cas, la balle rebondit et revient dans la zone de jeu. Sinon, le jeu est terminé comme avant.</p>
+Si la balle entre en collision avec le mur du bas, nous devons vérifier si elle touche la raquette. Si c'est le cas, la balle rebondit et revient dans la zone de jeu. Sinon, le jeu est terminé comme avant.
 
-<h2 id="Comparez_votre_code">Comparez votre code</h2>
+## Comparez votre code
 
-<p>Voici le code fonctionnel avec lesquel vous pouvez comparer le vôtre :</p>
+Voici le code fonctionnel avec lesquel vous pouvez comparer le vôtre :
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/z4zy79fo/","","395")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/z4zy79fo/","","395")}}
 
-<p><strong>Exercice: Faites en sorte que la balle accélère quand elle touche la raquette.</strong></p>
+**Exercice: Faites en sorte que la balle accélère quand elle touche la raquette.**
 
-<h2 id="Prochaine_étape">Prochaine étape</h2>
+## Prochaine étape
 
-<p>Nous avons déja bien avancé et notre jeu est devenu plus intéressant depuis que vous pouvez perdre ! Mais il manque encore quelque chose. Rendons-nous au sixième chapitre — <a href="/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field">Créer le champs de briques</a> — et créons quelques briques que la balle pourra détruire.</p>
+Nous avons déja bien avancé et notre jeu est devenu plus intéressant depuis que vous pouvez perdre ! Mais il manque encore quelque chose. Rendons-nous au sixième chapitre — [Créer le champs de briques](/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field) — et créons quelques briques que la balle pourra détruire.
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_et_contr%C3%B4le_clavier", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}</p>
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_et_contr%C3%B4le_clavier", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
