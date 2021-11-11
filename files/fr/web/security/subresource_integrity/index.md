@@ -6,94 +6,72 @@ tags:
   - Sécurité
 translation_of: Web/Security/Subresource_Integrity
 ---
-<p><em><strong>Subresource Integrity</strong></em> (SRI, ou « Intégrité des sous-ressources ») est une fonction de sécurité qui permet aux navigateurs de vérifier que les fichiers qu'ils vont chercher (par exemple, à partir d'un <a href="/fr/docs/Glossaire/CDN">CDN</a>) sont livrés sans manipulation inattendue. Cela fonctionne en permettant de fournir un hachage cryptographique (« <em>hash</em> ») auquel le fichier récupéré doit correspondre.</p>
+**_Subresource Integrity_** (SRI, ou « Intégrité des sous-ressources ») est une fonction de sécurité qui permet aux navigateurs de vérifier que les fichiers qu'ils vont chercher (par exemple, à partir d'un [CDN](/fr/docs/Glossaire/CDN)) sont livrés sans manipulation inattendue. Cela fonctionne en permettant de fournir un hachage cryptographique (« _hash_ ») auquel le fichier récupéré doit correspondre.
 
-<h2 id="Comment_fonctionne_le_contrôle_d'intégrité_des_sous-ressources">Comment fonctionne le contrôle d'intégrité des sous-ressources ?</h2>
+## Comment fonctionne le contrôle d'intégrité des sous-ressources ?
 
-<p>Utiliser un <a href="/fr/docs/Glossary/CDN">CDN</a> pour héberger des fichiers tels que les scripts et les feuilles de style qui sont partagés entre plusieurs sites permet d'améliorer les performances du site et d'économiser de la bande passante. Cependant, utiliser des CDN comporte un risque : si un attaquant prend le contrôle du CDN, il pourra injecter du contenu malveillant dans les fichiers (ou les remplacer complètement), et il pourra donc aussi potentiellement attaquer tous les sites qui récupèrent les fichiers sur ce CDN.</p>
+Utiliser un [CDN](/fr/docs/Glossary/CDN) pour héberger des fichiers tels que les scripts et les feuilles de style qui sont partagés entre plusieurs sites permet d'améliorer les performances du site et d'économiser de la bande passante. Cependant, utiliser des CDN comporte un risque : si un attaquant prend le contrôle du CDN, il pourra injecter du contenu malveillant dans les fichiers (ou les remplacer complètement), et il pourra donc aussi potentiellement attaquer tous les sites qui récupèrent les fichiers sur ce CDN.
 
-<p>Le contrôle d'intégrité des sous-ressources vous permet d'atténuer le risque de ce genre d'attaques, en veillant à ce que les fichiers de votre application ou document Web utilisent (à partir d'un CDN ou ailleurs) aient été livrés sans modification d'un tiers ayant injecté du contenu supplémentaire dans les fichiers - et sans autre changement de toute nature ayant été faits à ces fichiers.</p>
+Le contrôle d'intégrité des sous-ressources vous permet d'atténuer le risque de ce genre d'attaques, en veillant à ce que les fichiers de votre application ou document Web utilisent (à partir d'un CDN ou ailleurs) aient été livrés sans modification d'un tiers ayant injecté du contenu supplémentaire dans les fichiers - et sans autre changement de toute nature ayant été faits à ces fichiers.
 
-<h2 id="Utiliser_le_SRI">Utiliser le SRI</h2>
+## Utiliser le SRI
 
-<p>Le contrôle d'intégrité des sous-ressources s'active en spécifiant un hachage cryptographique encodé en base64 d'une ressource (fichier) que vous transmettez au navigateur au moment où il va chercher cette ressource, comme valeur de l'attribut <code><strong>integrity</strong></code> de chaque élément {{HTMLElement("script")}} ou {{HTMLElement("link")}}.</p>
+Le contrôle d'intégrité des sous-ressources s'active en spécifiant un hachage cryptographique encodé en base64 d'une ressource (fichier) que vous transmettez au navigateur au moment où il va chercher cette ressource, comme valeur de l'attribut **`integrity`** de chaque élément {{HTMLElement("script")}} ou {{HTMLElement("link")}}.
 
-<p>Une valeur de l'attribut <code><strong>integrity</strong></code> commence par au moins une chaîne, chaque chaîne comprenant un préfixe indiquant un algorithme particulier de hachage (actuellement les préfixes autorisés sont <code>sha256</code>, <code>sha384</code> et <code>sha512</code>), suivi d'un tiret, et se terminant par le hachage base64 proprement dit.</p>
+Une valeur de l'attribut **`integrity`** commence par au moins une chaîne, chaque chaîne comprenant un préfixe indiquant un algorithme particulier de hachage (actuellement les préfixes autorisés sont `sha256`, `sha384` et `sha512`), suivi d'un tiret, et se terminant par le hachage base64 proprement dit.
 
-<div class="note">
-<p><strong>Note :</strong> Une valeur de l'attribut <code><strong>integrity</strong></code> peut contenir plusieurs hachages séparés par des espaces. Une ressource sera chargée si elle correspond à l'un de ces hachages.</p>
-</div>
+> **Note :** Une valeur de l'attribut **`integrity`** peut contenir plusieurs hachages séparés par des espaces. Une ressource sera chargée si elle correspond à l'un de ces hachages.
 
-<p>Voici un exemple de valeur pour l'attribut <code><strong>integrity</strong></code> avec un hash sha384 encodé en base64 :</p>
+Voici un exemple de valeur pour l'attribut **`integrity`** avec un hash sha384 encodé en base64 :
 
-<pre>sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
-</pre>
+    sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
 
-<div class="note">
-<p><strong>Note :</strong> Le « <em>hash</em> » est à proprement parler une <strong><em>fonction de hachage cryptographique</em></strong> formé en appliquant une fonction de hachage particulière à une certaine entrée (par exemple, un script ou un fichier de feuille de styles). Mais il est plus commun d'utiliser le mot <strong><em>hash</em></strong> pour indiquer <em>fonction de hachage cryptographique</em>, d'où son utilisation dans cet article.</p>
-</div>
+> **Note :** Le « _hash_ » est à proprement parler une **_fonction de hachage cryptographique_** formé en appliquant une fonction de hachage particulière à une certaine entrée (par exemple, un script ou un fichier de feuille de styles). Mais il est plus commun d'utiliser le mot **_hash_** pour indiquer _fonction de hachage cryptographique_, d'où son utilisation dans cet article.
 
-<h3 id="Outil_pour_générer_des_hachages_SRI">Outil pour générer des hachages SRI</h3>
+### Outil pour générer des hachages SRI
 
-<p>Vous pouvez générer des <em>hashes</em> SRI en ligne de commande avec OpenSSL en utilisant une commande de ce genre :</p>
+Vous pouvez générer des _hashes_ SRI en ligne de commande avec OpenSSL en utilisant une commande de ce genre :
 
-<pre class="brush: bash">cat <strong>FILENAME.js</strong> | openssl dgst -sha384 -binary | openssl enc -base64 -A</pre>
+```bash
+cat FILENAME.js | openssl dgst -sha384 -binary | openssl enc -base64 -A
+```
 
-<p>Il existe également, <strong>SRI Hash Generator</strong> : <a href="https://srihash.org/">https://srihash.org/</a> qui est un utilitaire en ligne permettant de générer des <em>hashes</em> SRI. </p>
+Il existe également, **SRI Hash Generator** : <https://srihash.org/> qui est un utilitaire en ligne permettant de générer des _hashes_ SRI.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans les exemples suivants, supposons que <code>oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC</code> est la valeur attendue du <em>hash</em> SHA-384 d'un script <code>exemple-framework.js</code>, et qu'il existe une copie de ce script hébergée sur <code>https://exemple.com/exemple-framework.js</code>.</p>
+Dans les exemples suivants, supposons que `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` est la valeur attendue du _hash_ SHA-384 d'un script `exemple-framework.js`, et qu'il existe une copie de ce script hébergée sur `https://exemple.com/exemple-framework.js`.
 
-<h3 id="Exemple_utiliser_l'élément_script_pour_le_contrôle_d'intégrité">Exemple : utiliser l'élément <code>script</code> pour le contrôle d'intégrité</h3>
+### Exemple : utiliser l'élément `script` pour le contrôle d'intégrité
 
-<p>Vous pouvez utiliser l'élément {{HTMLElement("script")}} suivant pour dire au navigateur qu'il doit comparer le <em>hash</em> fourni avec celui du fichier et que les deux correspondent avant d'exécuter le script hébergé à <code>https://example.com/exemple-framework.js</code>.</p>
+Vous pouvez utiliser l'élément {{HTMLElement("script")}} suivant pour dire au navigateur qu'il doit comparer le _hash_ fourni avec celui du fichier et que les deux correspondent avant d'exécuter le script hébergé à `https://example.com/exemple-framework.js`.
 
-<pre class="brush: html">&lt;script src="https://exemple.com/exemple-framework.js"
+```html
+<script src="https://exemple.com/exemple-framework.js"
         integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
-        crossorigin="anonymous"&gt;&lt;/script&gt;</pre>
+        crossorigin="anonymous"></script>
+```
 
-<div class="note">
-<p><strong>Note :</strong> Pour plus de détails sur l'objectif de l'attribut <code><strong>crossorigin</strong></code>, voir <a href="/fr/docs/Web/HTML/Reglages_des_attributs_CORS">les attributs CORS</a>.</p>
-</div>
+> **Note :** Pour plus de détails sur l'objectif de l'attribut **`crossorigin`**, voir [les attributs CORS](/fr/docs/Web/HTML/Reglages_des_attributs_CORS).
 
-<h2 id="La_gestion_du_SRI_par_les_navigateurs">La gestion du SRI par les navigateurs</h2>
+## La gestion du SRI par les navigateurs
 
-<p>Les navigateurs gèrent SRI en effectuant les étapes suivantes :</p>
+Les navigateurs gèrent SRI en effectuant les étapes suivantes :
 
-<ol>
- <li>Lorsqu'un navigateur rencontre un élément {{HTMLElement("script")}} ou {{HTMLElement("link")}} avec un attribut <code><strong>integrity</strong></code>, avant d'exécuter le script ou avant d'appliquer les styles spécifiés par l'élément {{HTMLElement("link")}}, la navigateur doit comparer le script ou la feuille de style à la valeur donnée dans l'attribut <code><strong>integrity</strong></code>.</li>
- <li>Si le script ou la feuille de styles ne correspond pas à la valeur de l'attribut <code><strong>integrity</strong></code> qui lui est associée, alors le navigateur doit refuser d'exécuter le script ou d'appliquer la feuille de style et doit retourner une erreur indiquant que le chargement de la ressource a échoué.</li>
-</ol>
+1.  Lorsqu'un navigateur rencontre un élément {{HTMLElement("script")}} ou {{HTMLElement("link")}} avec un attribut **`integrity`**, avant d'exécuter le script ou avant d'appliquer les styles spécifiés par l'élément {{HTMLElement("link")}}, la navigateur doit comparer le script ou la feuille de style à la valeur donnée dans l'attribut **`integrity`**.
+2.  Si le script ou la feuille de styles ne correspond pas à la valeur de l'attribut **`integrity`** qui lui est associée, alors le navigateur doit refuser d'exécuter le script ou d'appliquer la feuille de style et doit retourner une erreur indiquant que le chargement de la ressource a échoué.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Subresource Integrity')}}</td>
-   <td>{{Spec2('Subresource Integrity')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                    | État                                         | Commentaires |
+| ------------------------------------------------ | -------------------------------------------- | ------------ |
+| {{SpecName('Subresource Integrity')}} | {{Spec2('Subresource Integrity')}} |              |
+| {{SpecName('Fetch')}}                     | {{Spec2('Fetch')}}                     |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http.headers.csp.require-sri-for")}}</p>
+{{Compat("http.headers.csp.require-sri-for")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://frederik-braun.com/using-subresource-integrity.html">Un CDN sans risque de XSS : utiliser le contrôle d'intégrité des sous-ressources (en anglais)</a></li>
-</ul>
+- [Un CDN sans risque de XSS : utiliser le contrôle d'intégrité des sous-ressources (en anglais)](https://frederik-braun.com/using-subresource-integrity.html)
