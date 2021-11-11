@@ -7,7 +7,6 @@ translation_of: Web/Web_Components
 ---
 <p>{{DefaultAPISidebar("Web Components")}}{{ draft }}</p>
 
-<div class="summary">
 <p>Les Composants Web sont constitués de plusieurs technologies distinctes permettant de créer des composants d'interface graphique personnalisés et réutilisables, qui ont été créés en utilisant des technologies web libres. Ils font partie du navigateur, et donc ne nécessitent pas de bibliothèque externe comme jQuery ou Dojo. Un Composant Web existant peut être utilisé sans l'écriture de code, en ajoutant simplement une déclaration d'importation à une page HTML. Les Composants Web utilisent les nouvelles capacités standard de navigateur, ou celles en cours de développement.</p>
 
 <h2 id="Concepts_et_utilisation">Concepts et utilisation</h2>
@@ -23,7 +22,6 @@ translation_of: Web/Web_Components
 </ul>
 
 <p>Au début de la spécification, il y avait aussi la technologie <a href="/fr/docs/Web/Web_Components/HTML_Imports">HTML Imports</a>. Celle-ci servait à packager ses composants (CSS, JavaScript, etc.) et permettre leur intégration dans d'autres pages. Elle a néanmoins été abandonnée au profit des imports javascript qui permettent la même chose en utilisant une syntaxe plus moderne.</p>
-</div>
 
 <p>La description ci-dessus fonctionne assez bien à l'heure actuelle, mais cela laisse de côté plusieurs choses pour lesquelles les Composants Web pourraient être utilisés. Avec un Composant Web, vous pouvez faire presque tout ce qui peut être fait en HTML, CSS et JavaScript, et celui-ci peut devenir un élément réutilisable facilement.</p>
 
@@ -33,18 +31,16 @@ translation_of: Web/Web_Components
 
 <ol>
  <li>Créer une classe dans laquelle est spécifié la fonctionnalité du composant Web en utilisant la syntaxe de classe ECMAScript 2015 (voir les <a href="/fr/docs/Web/JavaScript/Reference/Classes">Classes</a> pour de plus amples informations).</li>
- <li>Enregistrer le nouvel élément personnalisé en utilisant la méthode {{domxref("CustomElementRegistry.define()")}}, avec en paramètre le nom de l'élément à définir, la classe ou la fonction dans laquelle la fonctionnalité est spécifiée, et <span id="p3">optionnellement</span>, de quel élément celui-ci hérite-t-il.</li>
+ <li>Enregistrer le nouvel élément personnalisé en utilisant la méthode {{domxref("CustomElementRegistry.define()")}}, avec en paramètre le nom de l'élément à définir, la classe ou la fonction dans laquelle la fonctionnalité est spécifiée, et optionnellement, de quel élément celui-ci hérite-t-il.</li>
  <li>Si nécessaire, connecter un shadow DOM à l'élément personnalisé en utilisant la méthode {{domxref("Element.attachShadow()")}}. Ajouter les éléments-fils, les écouteurs d'événements, etc., au shadow DOM en utilisant les méthodes DOM usuelles.</li>
  <li>Si nécessaire, définir un template HTML en utilisant {{htmlelement("template")}} et {{htmlelement("slot")}}. Toujours en utilisant les méthodes DOM usuelles pour cloner le template et le connecter au shadow DOM.</li>
  <li>Utiliser l'élément personnalisé à l'endroit désiré sur la page, comme tous les autres éléments HTML.</li>
 </ol>
 
 <div class="note">
-<p>Les Composants Web ne sont pas encore pleinement mis en œuvre dans tous les navigateurs, et pour les utiliser dès maintenant dans la plupart des navigateurs (janvier 2015), vous devrez probablement utiliser des polyfills (ce sont des bibliothèques JavaScript destinées à émuler des fonctionnalités qui ne sont pas encore implémentées nativement dans les navigateurs). Les polyfills sont disponibles dans le <a href="http://www.polymer-project.org/">projet Google Polymer</a>. Pour savoir quels navigateurs implémentent les Composants Web, voir <a href="http://jonrimmer.github.io/are-we-componentized-yet/">Are We Componentized Yet?</a></p>
+<p><strong>Note :</strong> Les Composants Web ne sont pas encore pleinement mis en œuvre dans tous les navigateurs, et pour les utiliser dès maintenant dans la plupart des navigateurs (janvier 2015), vous devrez probablement utiliser des polyfills (ce sont des bibliothèques JavaScript destinées à émuler des fonctionnalités qui ne sont pas encore implémentées nativement dans les navigateurs). Les polyfills sont disponibles dans le <a href="http://www.polymer-project.org/">projet Google Polymer</a>. Pour savoir quels navigateurs implémentent les Composants Web, voir <a href="http://jonrimmer.github.io/are-we-componentized-yet/">Are We Componentized Yet?</a></p>
 </div>
 
-<ul>
-</ul>
 
 <p>Les spécifications des Composants Web définissent les éléments suivants :</p>
 
