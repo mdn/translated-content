@@ -6,13 +6,13 @@ tags:
 translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
 original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko/Exemple_basique
 ---
-<h2 id="Exemple_basique" name="Exemple_basique">Exemple basique</h2>
+<h2 id="Exemple_basique">Exemple basique</h2>
 
 <p>L'exemple que nous allons voir va charger un fichier XML et lui appliquer une transformation XSL. Nous utiliserons les mêmes fichiers que dans l'exemple <a href="fr/XSLT_dans_Gecko/G%c3%a9n%c3%a9ration_de_HTML">Génération de HTML</a> de l'article <a href="fr/XSLT_dans_Gecko">XSLT dans Gecko</a>. Le fichier XML décrit un article et le fichier XSL formate les informations pour l'affichage.</p>
 
 <p><small><strong>Figure 4 : fichier XML</strong></small></p>
 
-<p><span class="comment">Document XML (example1.xml):</span></p>
+<p>Document XML (example1.xml):</p>
 
 <pre>  &lt;?xml version="1.0"?&gt;
   &lt;myNS:Article
@@ -31,7 +31,7 @@ original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko/Exemple_basique
 
 <p><small><strong>Figure 5 : feuille de style XSLT</strong></small></p>
 
-<p><span class="comment">feuille de style XSL (example1.xsl):</span></p>
+<p>feuille de style XSL (example1.xsl):</p>
 
 <pre>  &lt;?xml version="1.0"?&gt;
   &lt;xsl:stylesheet version="1.0"
@@ -100,7 +100,7 @@ original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko/Exemple_basique
 
 <p>L'exemple charge en mémoire les deux fichiers .xsl (<code>xslStylesheet</code>) et .xml (<code>xmlDoc</code>) à l'aide de <code>XMLHTTPRequest</code> synchrone. Le fichier .xsl est alors importé (<code>xsltProcessor.importStylesheet(xslStylesheet)</code>) et la transformation exécutée (<code>xsltProcessor.transformToFragment(xmlDoc, document)</code>). Cela permet d'extraire des données après le chargement de la page, sans avoir à la rafraîchir.</p>
 
-<p><small><strong>Figure 6 : Exemple <span class="comment">voir l'exemple</span></strong></small></p>
+<p><small><strong>Figure 6 : Exemple voir l'exemple</strong></small></p>
 
 <pre>var xslStylesheet;
 var xsltProcessor = new XSLTProcessor();

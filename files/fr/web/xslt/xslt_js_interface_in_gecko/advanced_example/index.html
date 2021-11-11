@@ -6,7 +6,7 @@ tags:
 translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko/Exemple_avancé
 ---
-<h2 id="Exemple_avanc.C3.A9" name="Exemple_avanc.C3.A9">Exemple avancé</h2>
+<h2 id="Exemple_avanc.C3.A9">Exemple avancé</h2>
 
 <p>Dans l'exemple avancé, nous allons trier plusieurs <code>div</code> selon leur contenu. L'exemple permet de trier le contenu plusieurs fois, en alternant entre le tri ascendant et le tri descendant. Le JavaScript ne charge que le fichier .xsl la première fois, et définit la variable <code>xslloaded</code> à <code>true</code> une fois que le fichier est fini de chargé. En utilisant la méthode <code>getParameter</code> sur l'objet <code>XSLTProcessor</code> , le code peut estimer s'il faut trier de façon ascendante ou descendante. Il trie par défaut de manière ascendante si le paramètre est vide (lors du premier tri, car sa valeur n'est pas définie dans le fichier XSLT). La valeur du tri est définie à l'aide de <code>setParameter</code>.</p>
 
@@ -14,9 +14,9 @@ original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko/Exemple_avancé
 
 <p>Une fois la transformation complétée, le résultat est ajouté au document, comme indiqué dans l'exemple.</p>
 
-<p><small><strong>Figure 7 : Tri selon le contenu des div<span class="comment">voir l'exemple</span></strong></small></p>
+<p><small><strong>Figure 7 : Tri selon le contenu des divvoir l'exemple</strong></small></p>
 
-<div style="margin-left: 1.5em; padding: 1em; border: 1px dotted #000;">
+
 <p><em>Fragment XHTML :</em></p>
 
 <pre>&lt;div id="example"&gt;
@@ -105,4 +105,3 @@ function sort() {
   &lt;/xsl:template&gt;
 &lt;/xsl:stylesheet&gt;
 </pre>
-</div>
