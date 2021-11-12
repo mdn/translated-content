@@ -3787,6 +3787,15 @@
       "L_e_o"
     ]
   },
+  "MDN/Contribute/Markdown_in_MDN": {
+    "modified": "2020-09-30T15:28:56.171Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "Jeremie",
+      "LeoHirsch"
+    ]
+  },
   "MDN/Contribute/Processes": {
     "modified": "2019-01-17T02:12:44.469Z",
     "contributors": [
@@ -3796,15 +3805,6 @@
   },
   "MDN/Guidelines": {
     "modified": "2020-09-30T15:28:55.816Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Jeremie",
-      "LeoHirsch"
-    ]
-  },
-  "MDN/Guidelines/CSS_style_guide": {
-    "modified": "2020-09-30T15:28:56.171Z",
     "contributors": [
       "chrisdavidmills",
       "wbamberg",

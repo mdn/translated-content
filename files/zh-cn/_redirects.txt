@@ -1109,7 +1109,7 @@
 /zh-CN/docs/Localization	/zh-CN/docs/Glossary/Localization
 /zh-CN/docs/MDN/CSS	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 /zh-CN/docs/MDN/Contribute/Content	/zh-CN/docs/MDN/Guidelines
-/zh-CN/docs/MDN/Contribute/Content/CSS_style_guide	/zh-CN/docs/MDN/Guidelines/CSS_style_guide
+/zh-CN/docs/MDN/Contribute/Content/CSS_style_guide	/zh-CN/docs/MDN/Contribute/Markdown_in_MDN
 /zh-CN/docs/MDN/Contribute/Content/Custom_macros	/zh-CN/docs/MDN/Structures/Macros/Commonly-used_macros
 /zh-CN/docs/MDN/Contribute/Content/Rules_Of_MDN_Documenting	/zh-CN/docs/MDN/Guidelines/Does_this_belong_on_MDN
 /zh-CN/docs/MDN/Contribute/Content/Style_guide	/zh-CN/docs/MDN/Guidelines/Writing_style_guide
@@ -1123,6 +1123,7 @@
 /zh-CN/docs/MDN/Contribute/Structures/Macros	/zh-CN/docs/MDN/Structures/Macros
 /zh-CN/docs/MDN/Feedback	/zh-CN/docs/MDN/Contribute/Feedback
 /zh-CN/docs/MDN/Getting_started	/zh-CN/docs/MDN/Contribute/Getting_started
+/zh-CN/docs/MDN/Guidelines/CSS_style_guide	/zh-CN/docs/MDN/Contribute/Markdown_in_MDN
 /zh-CN/docs/MDN/Guidelines/Rules_Of_MDN_Documenting	/zh-CN/docs/MDN/Guidelines/Does_this_belong_on_MDN
 /zh-CN/docs/MDN/Guidelines/Style_guide	/zh-CN/docs/MDN/Guidelines/Writing_style_guide
 /zh-CN/docs/MDN/JavaScript	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create

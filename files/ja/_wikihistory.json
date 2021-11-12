@@ -6237,16 +6237,6 @@
       "hamasaki"
     ]
   },
-  "MDN/Guidelines/CSS_style_guide": {
-    "modified": "2020-09-30T15:30:25.061Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "silverskyvicto",
-      "wbamberg",
-      "Uemmra3"
-    ]
-  },
   "MDN/Guidelines/Code_guidelines": {
     "modified": "2020-09-30T15:30:24.568Z",
     "contributors": [
@@ -48527,6 +48517,16 @@
     "contributors": [
       "papparapa",
       "silverskyvicto"
+    ]
+  },
+  "conflicting/MDN/Contribute/Markdown_in_MDN": {
+    "modified": "2020-09-30T15:30:25.061Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09",
+      "silverskyvicto",
+      "wbamberg",
+      "Uemmra3"
     ]
   },
   "conflicting/Web/API/Blob/size": {

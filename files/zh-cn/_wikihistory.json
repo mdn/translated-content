@@ -5309,6 +5309,13 @@
       "MartinJLiu"
     ]
   },
+  "MDN/Contribute/Markdown_in_MDN": {
+    "modified": "2020-09-30T15:32:47.524Z",
+    "contributors": [
+      "chrisdavidmills",
+      "shc0743"
+    ]
+  },
   "MDN/Guidelines": {
     "modified": "2020-09-30T15:32:46.472Z",
     "contributors": [
@@ -5319,13 +5326,6 @@
       "pixiu",
       "OlingCat",
       "Sheppy"
-    ]
-  },
-  "MDN/Guidelines/CSS_style_guide": {
-    "modified": "2020-09-30T15:32:47.524Z",
-    "contributors": [
-      "chrisdavidmills",
-      "shc0743"
     ]
   },
   "MDN/Guidelines/Does_this_belong_on_MDN": {
