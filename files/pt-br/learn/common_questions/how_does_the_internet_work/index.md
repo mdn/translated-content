@@ -79,7 +79,7 @@ Esta rede é muito parecida com o que chamamos de Internet, mas alguma coisa est
 
 ![Um roteador conectado a um modem](internet-schema-6.png)
 
-Então nós estamos conectados à infraestrutuca telefônica. O próximo passo é enviar mensagens da nossa rede para a rede que nós desejamos alcançar. Para fazer isto, vamos precisar conectar nossa rede a um Provedor de Serviço de Internet (ISP, em inglês). Um ISP é uma compania que gerencia alguns roteadores especiais que são conectados e pode também acessar roteadores de outros ISPs. Então a mensagem da nossa rede é transportada para a rede de redes do ISP e então para a rede de destino. A Internet é composta por toda esta infraestrutura de redes.
+Então nós estamos conectados à infraestrutura telefônica. O próximo passo é enviar mensagens da nossa rede para a rede que nós desejamos alcançar. Para fazer isto, vamos precisar conectar nossa rede a um Provedor de Serviço de Internet (ISP, em inglês). Um ISP é uma companhia que gerencia alguns roteadores especiais que são conectados e podem também acessar roteadores de outros ISPs. Então a mensagem da nossa rede é transportada para a rede de redes do ISP e então para a rede de destino. A Internet é composta por toda esta infraestrutura de redes.
 
 ![Pilha completa da Internet](https://mdn.mozillademos.org/files/8453/internet-schema-7.png)
 
