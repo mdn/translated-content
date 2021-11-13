@@ -57,7 +57,7 @@ Quando dois computadores precisam se comunicar, você precisa conectá-los, seja
 
 Uma rede não é limitada a dois computadores. Você pode conectar quantos computadores desejar. Mas isto se torna complicado. Se você está tentando conectar, digamos, dez computadores, você irá precisar de 45 cabos, com 9 conexões por computador!
 
-![Dez computadores conectados entre si](https://mdn.mozillademos.org/files/8443/internet-schema-2.png)
+![Dez computadores conectados entre si](internet-schema-2.png)
 
 Para resolver este problema, cada computador na rede está conectado à um pequeno computador especial chamado de _roteador_. Este _roteador_ tem um único trabalho: como um sinalizador em uma estação de trem, ter certeza de que a mensagem enviada por um determinado computador chegue ao computador destinatário corretamente. Para enviar uma mensagem para o computador B, o computador A deve enviar a mensagem para o roteador, que por sua vez encaminha a mensagem para o computador B e tem a certeza de que a mensagem não foi entregue ao computador C.
 
