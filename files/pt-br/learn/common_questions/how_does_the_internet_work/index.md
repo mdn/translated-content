@@ -59,7 +59,7 @@ Uma rede não é limitada a dois computadores. Você pode conectar quantos compu
 
 ![Dez computadores conectados entre si](internet-schema-2.png)
 
-Para resolver este problema, cada computador na rede está conectado à um pequeno computador especial chamado de _roteador_. Este _roteador_ tem um único trabalho: como um sinalizador em uma estação de trem, ter certeza de que a mensagem enviada por um determinado computador chegue ao computador destinatário corretamente. Para enviar uma mensagem para o computador B, o computador A deve enviar a mensagem para o roteador, que por sua vez encaminha a mensagem para o computador B e tem a certeza de que a mensagem não foi entregue ao computador C.
+Para resolver este problema, cada computador na rede está conectado a um pequeno computador especial chamado de _roteador_. Este _roteador_ tem um único trabalho: como um sinalizador em uma estação de trem, ter certeza de que a mensagem enviada por um determinado computador chegue ao computador destinatário corretamente. Para enviar uma mensagem para o computador B, o computador A deve enviar a mensagem para o roteador, que por sua vez encaminha a mensagem para o computador B e tem a certeza de que a mensagem não foi entregue ao computador C.
 
 Uma vez que nós adicionamos um roteador no sistema, nossa rede de 10 computadores apenas necessitará de 10 cabos: uma única conexão para cada computador e um roteador com 10 conexões.
 
