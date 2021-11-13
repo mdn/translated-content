@@ -81,7 +81,7 @@ Esta rede é muito parecida com o que chamamos de Internet, mas alguma coisa est
 
 Então nós estamos conectados à infraestrutura telefônica. O próximo passo é enviar mensagens da nossa rede para a rede que nós desejamos alcançar. Para fazer isto, vamos precisar conectar nossa rede a um Provedor de Serviço de Internet (ISP, em inglês). Um ISP é uma companhia que gerencia alguns roteadores especiais que são conectados e podem também acessar roteadores de outros ISPs. Então a mensagem da nossa rede é transportada para a rede de redes do ISP e então para a rede de destino. A Internet é composta por toda esta infraestrutura de redes.
 
-![Pilha completa da Internet](https://mdn.mozillademos.org/files/8453/internet-schema-7.png)
+![Pilha completa da Internet](internet-schema-7.png)
 
 ### Encontrando computadores
 
@@ -89,11 +89,11 @@ Se você quer enviar uma mensagem para um computador, você precisa especificar 
 
 Isto é perfeito para computadores, mas nós seres humanos temos dificuldades para lembrar estes endereços. Para tornar as coisas mais fáceis, nós podemos dar apelidos aos endereços IP que nós humanos podemos compreender, chamados _nome de domínio_. Por exemplo, `google.com` é um nome de domínio usado para "apelidar" o endereço `142.250.190.78` (no momento em que este artigo foi escrito. Endereços de IP podem mudar). Então, usando o nome de domínio é uma forma mais simples de encontrar um computador na Internet.
 
-![Mostrando como um nome de domínio pode criar um apelido para um endereço IP](https://mdn.mozillademos.org/files/8405/dns-ip.png)
+![Mostrando como um nome de domínio pode criar um apelido para um endereço IP](dns-ip.png)
 
 ### A Internet e a Web
 
-Como você deve ter notado, quando navegamos na Web com nossos navegadores, normalmente utilizamos os nomes de domínios para chegar a um website. Isto significa que a Internet e a Web são a mesma coisa? Não tão simples assim. Como vimos, a Internet é uma infraestrutura técnica que permite conectar bilhões de computadores. Entre estes computadores, alguns computadores (chamados de _servidores Web_) podem enviar mensagens intelegíveis para navegadores Web. A _Internet_ é a infraestrutura, enquanto a _Web_ é um serviço construído sob esta infraestrutura. Vale a pena notar que existem diversos outros serviços que funcionam na Internet, tais como email e {{Glossary("IRC")}}.
+Como você deve ter notado, quando navegamos na Web com nossos navegadores, normalmente utilizamos os nomes de domínios para chegar a um website. Isto significa que a Internet e a Web são a mesma coisa? Não é tão simples assim. Como vimos, a Internet é uma infraestrutura técnica que permite conectar bilhões de computadores. Entre estes computadores, alguns computadores (chamados de _servidores Web_) podem enviar mensagens inteligíveis para navegadores Web. A _Internet_ é a infraestrutura, enquanto a _Web_ é um serviço construído sob esta infraestrutura. Vale a pena notar que existem diversos outros serviços que funcionam na Internet, tais como email e {{Glossary("IRC")}}.
 
 ### Intranets e Extranets
 
@@ -108,10 +108,10 @@ Elas são normalmente usadas para compartilhar informações de forma segura com
 
 Tanto as intranets quanto as extranets são executadas no mesmo tipo de infraestrutura que a _Internet_ e usam os mesmos protocolos. Eles podem, portanto, ser acessados por membros autorizados de diferentes locais físicos.
 
-![Representação Gráfica de como uma Extranet e uma Intranet funcionam](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work/internet-schema-8.png)
+![Representação Gráfica de como uma Extranet e uma Intranet funcionam](internet-schema-8.png)
 
 ## Próximos passos
 
 - [Como a Web funciona](/pt-BR/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-- [Entendendo a diferença entre uma página web, um website, um servidor web e um mecânismo de pesquisa](https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
-- [Entendendo nomes de domínio](https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/What_is_a_domain_name)
+- [Entendendo a diferença entre uma página web, um website, um servidor web e um mecânismo de pesquisa](/pt-BR/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
+- [Entendendo nomes de domínio](/pt-BR/docs/Learn/Common_questions/What_is_a_domain_name)
