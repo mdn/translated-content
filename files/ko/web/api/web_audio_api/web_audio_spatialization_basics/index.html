@@ -92,7 +92,7 @@ const outerGain = 0.3;
 <pre class="brush: js">const distanceModel = 'linear';
 </pre>
 
-<p>우리는 리스너와 음원 사이의 최대 거리를 (<a href="/ko/docs/Web/API/PannerNode/maxDistance"><code>maxDistance</code></a>) 설정할 수 있습니다 — 만약 음원이 이 지점으로부터 더 멀리 이동하면 볼륨은 더 이상 감소되지 않을 것입니다. 이것은 유용한데, 왜냐하면 여러분이 거리를 모방하기를 원하게 될지도 모르지만, 볼륨은 떨어질 수 있고 이것은 실제로 여러분이 원하는 것이 아닐 것입니다. 기본값으로, 이것은 10,000 (단위없는 상대 값) 입니다. 우리는 다음과 같이 이것을 유지합니다:</p>
+<p>우리는 리스너와 음원 사이의 최대 거리를 (<a href="/ko/docs/Web/API/PannerNode/maxDistance"><code>maxDistance</code></a>) 설정할 수 있습니다 — 만약 음원이 이 지점으로부터 더 멀리 이동하면 볼륨은 더 이상 감소되지 않을 것입니다. 최대 거리 설정 기능은 유용한데, 왜냐하면 여러분이 거리를 모방하기를 원하게 될지도 모르지만, 볼륨은 떨어지는 건 실제로 여러분이 원하는 것이 아닐 것입니다. 최대 거리는 기본값으로 10,000 (단위없는 상대 값)입니다. 아래와 같은 코드로 설정합니다. </p>
 
 <pre class="brush: js">const maxDistance = 10000;
 </pre>
