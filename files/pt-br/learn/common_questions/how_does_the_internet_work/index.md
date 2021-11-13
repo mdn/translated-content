@@ -37,7 +37,7 @@ Este artigo discute sobre o que é e como funciona a internet.
 
 A **Internet** é a espinha dorsal da Web, a infraestrutura técnica que faz a Web possível. Mas basicamente, a Internet é uma gigantesca rede de computadores que se comunicam juntos.
 
-[A história da internet é um pouco obscura](https://pt.wikipedia.org/wiki/Internet#Hist.C3.B3ria). Ela começou nos anos 60 como um projeto de pesquisa consolidado pelo exército norte americano, e tornou-se uma infraestrutura pública nos anos 80 com o suporte dado por diversas universidades públicas e companias privadas. As várias tecnologias que suportam a internet se acoplaram através do tempo, mas a forma de funcionamento não mudou muito: Internet é uma forma de conectar computadores e garantir, em qualquer situação, que eles encontrem uma forma de se manter conectados.
+[A história da internet é um pouco obscura](https://pt.wikipedia.org/wiki/Internet#Hist.C3.B3ria). Ela começou nos anos 60 como um projeto de pesquisa consolidado pelo exército norte americano, e tornou-se uma infraestrutura pública nos anos 80 com o suporte dado por diversas universidades públicas e companhias privadas. As várias tecnologias que suportam a internet evoluíram através do tempo, mas a forma de funcionamento não mudou muito: Internet é uma forma de conectar computadores e garantir, em qualquer situação, que eles encontrem uma forma de se manter conectados.
 
 ## Aprendizado Ativo
 
