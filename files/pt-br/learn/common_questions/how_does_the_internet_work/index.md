@@ -21,7 +21,7 @@ Este artigo discute sobre o que é e como funciona a internet.
       <td>
         Nenhum, mas encorajamos a ler primeiro
         <a href="/pt-BR/docs/Learn/Common_questions/Thinking_before_coding"
-          >Pensando antes de codificar</a>
+          >Como eu começo a criar meu site?</a>
       </td>
     </tr>
     <tr>
