@@ -53,7 +53,7 @@ Quando dois computadores precisam se comunicar, você precisa conectá-los, seja
 
 > **Nota:** Até o final deste artigo nós estaremos falando apenas a respeito de cabos físicos, mas redes sem fio funcionam da mesma forma
 
-![Dois computadores conectados](https://mdn.mozillademos.org/files/8441/internet-schema-1.png)
+![Dois computadores conectados](internet-schema-1.png)
 
 Uma rede não é limitada a dois computadores. Você pode conectar quantos computadores desejar. Mas isto se torna complicado. Se você está tentando conectar, digamos, dez computadores, você irá precisar de 45 cabos, com 9 conexões por computador!
 
