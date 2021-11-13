@@ -63,7 +63,7 @@ Para resolver este problema, cada computador na rede está conectado à um peque
 
 Uma vez que nós adicionamos um roteador no sistema, nossa rede de 10 computadores apenas necessitará de 10 cabos: uma única conexão para cada computador e um roteador com 10 conexões.
 
-![10 computadores com um roteador](https://mdn.mozillademos.org/files/8445/internet-schema-3.png)
+![10 computadores com um roteador](internet-schema-3.png)
 
 ### Uma rede de redes
 
