@@ -67,7 +67,7 @@ Uma vez que nós adicionamos um roteador no sistema, nossa rede de 10 computador
 
 ### Uma rede de redes
 
-Por enquanto, tudo bem. Mas como conectar centenas, milhares, bilhões de computadores? Claro que um unico _roteador_ não pode se adaptar para tanto, mas, se você ler com cuidado, nós dissemos que um _roteador_ é um computador como qualquer outro, então o que nos impede de conectar dois _roteadores_ juntos? Nada, então façamos isto.
+Por enquanto, tudo bem. Mas como conectar centenas, milhares, bilhões de computadores? Claro que um único _roteador_ não pode se adaptar para tanto, mas, se você ler com cuidado, nós dissemos que um _roteador_ é um computador como qualquer outro, então o que nos impede de conectar dois _roteadores_ juntos? Nada, então façamos isto.
 
 ![Dois roteadores conectados](https://mdn.mozillademos.org/files/8447/internet-schema-4.png)
 
