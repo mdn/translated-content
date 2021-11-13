@@ -77,7 +77,7 @@ Conectando computadores a roteadores, e então roteadores a roteadores nós pode
 
 Esta rede é muito parecida com o que chamamos de Internet, mas alguma coisa está faltando. Nós construímos tais redes para nossos próprios fins. Existem outras redes além das nossas ligadas em outros lugares: nossos amigos, vizinhos, qualquer pessoa pode ter uma rede de computadores. Mas é inviável ligarmos cabos entre nossas casas e o resto do mundo, então como nos podemos lidar com isso? Muito bem, já existem cabos ligados a sua casa, como por exemplo, cabos de eletricidade e telefone. A estrutura do telefone já conecta nossa casa com o resto do mundo, então é exatamente o que nós precisamos. Para conectar nossa rede a rede telefônica, precisamos de um equipamento especial chamado _modem_. Este *modem* transforma a informação da nossa rede em uma informação gerenciável pela rede telefônica e vice-versa.
 
-![Um roteador conectado a um modem](https://mdn.mozillademos.org/files/8451/internet-schema-6.png)
+![Um roteador conectado a um modem](internet-schema-6.png)
 
 Então nós estamos conectados à infraestrutuca telefônica. O próximo passo é enviar mensagens da nossa rede para a rede que nós desejamos alcançar. Para fazer isto, vamos precisar conectar nossa rede a um Provedor de Serviço de Internet (ISP, em inglês). Um ISP é uma compania que gerencia alguns roteadores especiais que são conectados e pode também acessar roteadores de outros ISPs. Então a mensagem da nossa rede é transportada para a rede de redes do ISP e então para a rede de destino. A Internet é composta por toda esta infraestrutura de redes.
 
