@@ -1477,6 +1477,7 @@
 /zh-CN/docs/Web/API/Selection.isCollapsed	/zh-CN/docs/Web/API/Selection/isCollapsed
 /zh-CN/docs/Web/API/Selection.removeRange	/zh-CN/docs/Web/API/Selection/removeRange
 /zh-CN/docs/Web/API/Selection/从Document中删除	/zh-CN/docs/Web/API/Selection/deleteFromDocument
+/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/caches	/zh-CN/docs/conflicting/Web/API/caches
 /zh-CN/docs/Web/API/StorageEstimate	/zh-CN/docs/conflicting/Web/API/StorageManager/estimate
 /zh-CN/docs/Web/API/Streams_API/使用可读文件流	/zh-CN/docs/Web/API/Streams_API/Using_readable_streams
 /zh-CN/docs/Web/API/Streams_API/概念	/zh-CN/docs/Web/API/Streams_API/Concepts

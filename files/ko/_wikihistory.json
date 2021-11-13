@@ -6073,12 +6073,6 @@
       "ESnark"
     ]
   },
-  "Web/API/PhotoCapabilities": {
-    "modified": "2020-10-15T22:27:09.730Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Web/API/Plugin": {
     "modified": "2019-03-23T22:11:26.376Z",
     "contributors": [
@@ -17520,6 +17514,12 @@
     "contributors": [
       "alattalatta",
       "Saem"
+    ]
+  },
+  "conflicting/Web/API/ImageCapture/getPhotoCapabilities": {
+    "modified": "2020-10-15T22:27:09.730Z",
+    "contributors": [
+      "alattalatta"
     ]
   },
   "conflicting/Web/API/RTCPeerConnection/RTCPeerConnection": {
