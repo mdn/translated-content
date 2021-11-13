@@ -20,7 +20,7 @@ Este artigo discute sobre o que é e como funciona a internet.
       <th scope="row">Pré-requisitos:</th>
       <td>
         Nenhum, mas encorajamos a ler primeiro
-        <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/Pensando_antes_de_codificar"
+        <a href="/pt-BR/docs/Learn/Common_questions/Thinking_before_coding"
           >Pensando antes de codificar</a>
       </td>
     </tr>
