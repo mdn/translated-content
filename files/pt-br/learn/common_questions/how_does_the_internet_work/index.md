@@ -73,7 +73,7 @@ Por enquanto, tudo bem. Mas como conectar centenas, milhares, bilhões de comput
 
 Conectando computadores a roteadores, e então roteadores a roteadores nós podemos escalar nossa rede infinitamente.
 
-![Roteadores conectados a roteadores](https://mdn.mozillademos.org/files/8449/internet-schema-5.png)
+![Roteadores conectados a roteadores](internet-schema-5.png)
 
 Esta rede é muito parecida com o que chamamos de Internet, mas alguma coisa está faltando. Nós contruímos tais redes para nossos próprios fins. Existem outras redes além das nossas ligadas em outros lugares: nossos amigos, vizinhos, qualquer pessoa que tenha uma rede de computadores. Mas é inviável ligarmos cabos entre nossas casas e o resto do mundo, então como nos podemos lidar com isso? Muito bem, já existem cabos ligados a sua casa, como por exemplo, cabos de eletricidade e telefone. A estrutura do telefone já conecta nossa casa com o resto do mundo. Para conectar nossa rede a rede telefonica, precisamos de um equipamento especial chamado _modem_. Este *modem* transforma a informação da nossa rede em uma informação gerenciável pela rede telefônica e vice-versa.
 
