@@ -36,7 +36,7 @@ translation_of: Learn/Server-side/Django/Admin_site
 
 <p>Quand nous avons créé <a href="/fr/docs//Learn/Server-side/Django/skeleton_website">le squelette du projet</a>, nous avons généré automatiquement toute ce qui était nécessaire à son administration au sein de l'application web (<a href="https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/">le détail des relations en jeux</a> sont décrites sur le site documentaire Django). Au final, vous n'aurez juste qu'à ajouter vos modèles dans l'administration du site en les enregistrant. A la fin de ce chapitre, vous aurez des pistes sur l'une des manière d'améliorer l'affichage des données dans la zone d'administration.</p>
 
-<p>Passons aux actes ! Après l'enregsitrment des objets du modèle relationnel, nous verrons comment créer un super-utilisateur, s'authetifier et ensuite créer quelques livres, auteurs et ouvrages à la dispostion des lecteurs. Ces données seront très utiles pour tester ensuite les vues et gabarits qui seront abordés dans les chapitres suivants.</p>
+<p>Passons aux actes ! Après l'enregistrement des objets du modèle relationnel, nous verrons comment créer un super-utilisateur, s'authentifier et ensuite créer quelques livres, auteurs et ouvrages à la disposition des lecteurs. Ces données seront très utiles pour tester ensuite les vues et gabarits qui seront abordés dans les chapitres suivants.</p>
 
 <h2 id="Enregistrer_les_objets_de_la_modélisation">Enregistrer les objets de la modélisation</h2>
 
@@ -47,7 +47,7 @@ translation_of: Learn/Server-side/Django/Admin_site
 # Register your models here.
 </pre>
 
-<p>L'enregistrement de objets de modélisation ce fait par l'appel de la fonction <code>admin.site.register</code> comme indiqué ci-dessous. Il vous suffit pour le moment de copier le texte ci-dessous et de l'ajouter à la fin du fichier.Register the models by copying the following text into the bottom of the file.</p>
+<p>L'enregistrement de objets de modélisation se fait par l'appel de la fonction <code>admin.site.register</code> comme indiqué ci-dessous. Il vous suffit pour le moment de copier le texte ci-dessous et de l'ajouter à la fin du fichier.Register the models by copying the following text into the bottom of the file.</p>
 
 <pre class="brush: python">from catalog.models import Author, Genre, Book, BookInstance
 
@@ -94,7 +94,7 @@ Cela devrait être de la forme : <code>admin.site.register(Language)</code> et n
 
 <p>Cliquez sur le lien <strong>+ Ajouter</strong> à la droite de l'objet Books pour créer un nouveau livre. Le site va afficher une page de saisie de données (analogue à celle ci-dessous). Notez que Django prend en compte le type de champs définit dans le modèle pour utiliser le widget associé ainsi que le champs <code>help_text</code> quand vous l'aviez défini. </p>
 
-<p>Entrez les valeurs des champs. Pour les champs qui relève de relations entre objet, vous pouvez utiliser le bouton + pour accéder en cascade au formulkaire de saisie des informations nécessaires à la créarion de cette objet. Vous pouvez aussi sélectionner un objet si d'autres avaient été créés précédement. Ne pas oublier de cliquer sur <strong>Enregistrer et ajouter un nouveau</strong> ou <strong>Enregistrer et continuer les modification</strong> pour sauvegarder en base de données les informations saisies.</p>
+<p>Entrez les valeurs des champs. Pour les champs qui relèvent de relations entre objet, vous pouvez utiliser le bouton + pour accéder en cascade au formulaire de saisie des informations nécessaires à la créarion de cette objet. Vous pouvez aussi sélectionner un objet si d'autres avaient été créés précédement. Ne pas oublier de cliquer sur <strong>Enregistrer et ajouter un nouveau</strong> ou <strong>Enregistrer et continuer les modification</strong> pour sauvegarder en base de données les informations saisies.</p>
 
 <p><img alt="Admin Site - Book Add" src="https://mdn.mozillademos.org/files/13979/admin_book_add.png" style="border-style: solid; border-width: 1px; display: block; height: 780px; margin: 0px auto; width: 841px;"></p>
 
@@ -124,10 +124,10 @@ Cela devrait être de la forme : <code>admin.site.register(Language)</code> et n
 
 <h2 id="Configuration_avancée">Configuration avancée</h2>
 
-<p>La cadriciel Django réalise une excellente assistance avec la création d'un site d'administration debase en utilisant les données des enregistrements effectués :</p>
+<p>La cadriciel Django réalise une excellente assistance avec la création d'un site d'administration de base en utilisant les données des enregistrements effectués :</p>
 
 <ul>
- <li>Pour chaque modèles, les enregistrement sont identifiés par le résultat de la méthode<code> __str__()</code>, et les détails sont accessible par des vues dédiées. Par défaut, ces vues et formulaires dispose d'un menu en haut et vous pouvez opérer des opérations de suppressions en bloc en sélectionnant les enregistrements.</li>
+ <li>Pour chaque modèle, les enregistrements sont identifiés par le résultat de la méthode<code> __str__()</code>, et les détails sont accessibles par des vues dédiées. Par défaut, ces vues et formulaires disposent d'un menu en haut et vous pouvez opérer des opérations de suppressions en bloc en sélectionnant les enregistrements.</li>
  <li>Le détail de chaque modèle est contenu dans un formulaire où chaque champ est affiché verticalement dans l'ordre de déclaration de ces derniers dans le modèle d'objet. </li>
 </ul>
 
@@ -149,7 +149,7 @@ Cela devrait être de la forme : <code>admin.site.register(Language)</code> et n
  </li>
 </ul>
 
-<p>Dans la section qui suit, nous allons effectuer quelques modification pour améliorer l'interface de votre application <em>LocalLibrary</em>. Nous allons notamment ajouter des information pour les objets <code>Book</code> et <code>Author</code>, et améliorer la présentation de leur vue d'édition. Il n'y aura pas de changement pour les objets <code>Language</code> et <code>Genre</code> qui ne possède pas assez d'information pour que cela puisse avoir une incidence réelle !</p>
+<p>Dans la section qui suit, nous allons effectuer quelques modification pour améliorer l'interface de votre application <em>LocalLibrary</em>. Nous allons notamment ajouter des informations pour les objets <code>Book</code> et <code>Author</code>, et améliorer la présentation de leur vue d'édition. Il n'y aura pas de changement pour les objets <code>Language</code> et <code>Genre</code> qui ne possèdent pas assez d'information pour que cela puisse avoir une incidence réelle !</p>
 
 <p>Le détail complet de la personnalisation du site d'administration est disponible <a href="https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/">sur le site documentaire de Django</a>.</p>
 
@@ -189,11 +189,11 @@ class BookInstanceAdmin(admin.ModelAdmin):
     pass
 </pre>
 
-<p>Pour le moment, toutes les classes d’administration sont vides (cf. pass), par conséquent le comportement d'affichage n'est pas modifié. Cependant, nous allons pouvoir désormais modifier les comportements d'affichage pour chacun des objets nouvellements enregistrés.</p>
+<p>Pour le moment, toutes les classes d’administration sont vides (cf. pass), par conséquent le comportement d'affichage n'est pas modifié. Cependant, nous allons pouvoir désormais modifier les comportements d'affichage pour chacun des objets nouvellement enregistrés.</p>
 
 <h3 id="Configurer_les_vues_en_liste">Configurer les vues en liste</h3>
 
-<p>La liste des auteurs (objet <code>Author</code>) est affiché dans l'application <em>LocalLibrary</em> à l'aide du nom généré par la méthode  <code>__str__()</code>. Ceci fonctionne bien, judqu'à ce que vous aurez de nombreux auteurs et éventuellement des doublons parmi ces auteurs. Pour bien les différencier, ou simplement parce que vous souhaitez avoir directement plus d'informations, vous allez utiliser la directive <a href="https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin">list_display</a> tpour ajouter d'autres champs de l'objet <code>Author</code>.</p>
+<p>La liste des auteurs (objet <code>Author</code>) est affichée dans l'application <em>LocalLibrary</em> à l'aide du nom généré par la méthode  <code>__str__()</code>. Ceci fonctionne bien, judqu'à ce que vous aurez de nombreux auteurs et éventuellement des doublons parmi ces auteurs. Pour bien les différencier, ou simplement parce que vous souhaitez avoir directement plus d'information, vous allez utiliser la directive <a href="https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin">list_display</a> pour ajouter d'autres champs de l'objet <code>Author</code>.</p>
 
 <p><span class="tlid-translation translation" lang="fr"><span title="">Modifiez votre classe <code>AuthorAdmin</code> comme décrit ci-dessous (vous pouvez copier et coller le code).</span> <span title="">Les noms de champs à afficher dans la liste sont déclarés dans un tuple dans l'ordre requis. Ils sont identiques à </span></span><span class="tlid-translation translation" lang="fr"><span title="">ceux spécifiés dans votre modèle d'objet <code>Author</code>.</span></span></p>
 
@@ -211,7 +211,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'display_genre')
 </pre>
 
-<p>Le champ <font face="Consolas, Liberation Mono, Courier, monospace">genre </font>représente une relation n à n (<code>ManyToManyField</code>)qui ne peut pas être prise en charge par la directive <code>list_display</code>. Le coût d'accès à la base de donnée peut être important et donc le cadriciel se protège de ce phénomène. A la place, nous devons définir une fonction(<code>display_genre</code>) qui permettra de traiter l'affichage des informations souhaitées pour le genre.</p>
+<p>Le champ <font face="Consolas, Liberation Mono, Courier, monospace">genre </font>représente une relation n à n (<code>ManyToManyField</code>) qui ne peut pas être prise en charge par la directive <code>list_display</code>. Le coût d'accès à la base de donnée peut être important et donc le cadriciel se protège de ce phénomène. A la place, nous devons définir une fonction(<code>display_genre</code>) qui permettra de traiter l'affichage des informations souhaitées pour le genre.</p>
 
 <div class="note">
 <p><strong>Note</strong>: C'est dans un but pédagogique que nous recherchons ici l'affichage du <code>genre</code> qui n'a peut-être pas nécessaire d'intérêt et peut représenter un coût d'accès. Nous montrons, ici, comment appler les fonctions dans vos modèles ce qui sera très utile pour la suite de vos applications  — par exemple pour ajouter un lien de suppression de vos enregistrements en liste.</p>
@@ -322,7 +322,7 @@ class BookAdmin(admin.ModelAdmin):
 <p>Dans le cas présent nous avons juste décidé d'afficher toutes les informations des copies associées à un livre. Si vous consultez sur la documentation Django les informations relatives au type <a href="https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> vous aurez accès à l'ensemble des éléments qui permettent de filtrer et afficher les éléments dont vous aurez besoin. </p>
 
 <div class="note">
-<p><strong>Note</strong>: Il y a quelques limitation pénibles à ces outils. Si vous observez bien la liste des copies pour un ouvrage, vous decouvrirez des copies fantômes sans nom et informations pré-reservées pour de futures instances à enregistrer. Il serait préférable de ne pas les avoir et vous devriez alors appliquer un filtre pour éliminer de l'affichage ces copies. Vous pourriez aussi ajouter une section particulière pour permettre d'ajouter de nouvelles copies dans les rayonnages... La première solution est assez rapide à traiter en utilisant l'attribut <code>extra</code> à 0 dans la définition de l'objet <code>BooksInstanceInline</code> ... essayez !</p>
+<p><strong>Note</strong>: Il y a quelques limitations pénibles à ces outils. Si vous observez bien la liste des copies pour un ouvrage, vous decouvrirez des copies fantômes sans nom et informations pré-reservées pour de futures instances à enregistrer. Il serait préférable de ne pas les avoir et vous devriez alors appliquer un filtre pour éliminer de l'affichage ces copies. Vous pourriez aussi ajouter une section particulière pour permettre d'ajouter de nouvelles copies dans les rayonnages... La première solution est assez rapide à traiter en utilisant l'attribut <code>extra</code> à 0 dans la définition de l'objet <code>BooksInstanceInline</code> ... essayez !</p>
 </div>
 
 <h2 id="Défi">Défi</h2>
