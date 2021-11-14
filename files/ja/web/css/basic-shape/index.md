@@ -133,7 +133,7 @@ translation_of: Web/CSS/basic-shape
 #### HTML
 
 ```html
-
+<div></div>
 ```
 
 #### CSS

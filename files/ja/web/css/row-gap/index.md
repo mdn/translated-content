@@ -58,12 +58,12 @@ row-gap: unset;
 
 ```html
 <div id="flexbox">
-  
-  
-  
-  
-  
-  
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
 </div>
 ```
 
@@ -96,9 +96,9 @@ row-gap: unset;
 
 ```html
 <div id="grid">
-  
-  
-  
+  <div></div>
+  <div></div>
+  <div></div>
 </div>
 ```
 

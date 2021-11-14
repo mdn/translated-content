@@ -78,9 +78,9 @@ div:nth-child(3) {
 ### HTML
 
 ```html
-
-
-
+<div></div>
+<div></div>
+<div></div>
 ```
 
 ### Résultat

@@ -85,14 +85,14 @@ Pour plus de détails, voir les pages de chacune des propriétés : {{cssxref("g
 
 ```html
 <div id="container">
-  
-  
-  
-  
-  
-  
-  
-  
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
 </div>
 ```
 

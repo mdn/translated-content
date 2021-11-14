@@ -45,7 +45,7 @@ Les scripts qui doivent avoir une haute compatibilité pour l'ensemble des navig
 Ce simple exemple récupère l'objet `DOMRect` représentant le rectangle de délimitation dans le client d'un simple élément div, et affiche ses propriétés dessous.
 
 ```html
-
+<div></div>
 ```
 
 ```css

@@ -165,7 +165,7 @@ Cette application utilise un élément {{HTMLElement("div")}} comme zone de touc
  <!-- UI pour log/debug -->
  <button id="log" onclick="enableLog(event);">Démarrer/Stopper les logs</button>
  <button id="clearlog" onclick="clearLog(event);">Nettoyer les logs</button>
- 
+ <p></p>
  <output></output>
 </body>
 ```

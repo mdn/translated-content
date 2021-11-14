@@ -43,7 +43,7 @@ domRect = element.getBoundingClientRect();
 ## 示例
 
 ```html
-
+<div></div>
 ```
 
 ```css

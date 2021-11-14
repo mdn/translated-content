@@ -70,7 +70,7 @@ div {
 ### HTML
 
 ```html
-
+<div></div>
 <p class=exemple>
   C’est ce qui arriva en effet, et bien plus tôt
   qu’elle ne s’y attendait. Elle n’avait pas bu

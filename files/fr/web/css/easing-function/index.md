@@ -167,7 +167,7 @@ Dans cet exemple, on crée une animation qui peut être démarrée ou stoppée �
 
 ```html
 <div>
-  
+  <div></div>
 </div>
 <ul>
   <li>

@@ -86,7 +86,7 @@ L’objet `FormData` vous permet également d’envoyer des fichiers. Il vous 
   <input type="file" name="file" required />
   <input type="submit" value="Mettez le fichier de côté." />
 </form>
-
+<div></div>
 ```
 
 Vous pouvez ensuite l’envoyer à l’aide du code suivant :
