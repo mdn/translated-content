@@ -10,11 +10,11 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 ---
 <div><strong>自定义属性</strong>（有时候也被称作<strong>CSS变量</strong>或者<strong>级联变量</strong>）是由CSS作者定义的，它包含的值可以在整个文档中重复使用。由自定义属性标记设定值（比如： <strong><code>--main-color: black;</code></strong>），由<a href="/zh-CN/docs/Web/CSS/var">var() </a>函数来获取值（比如： <code>color: <strong>var(--main-color)</strong>;</code>）</div>
 
-<div></div>
+
 
 <div>复杂的网站都会有大量的CSS代码，通常也会有许多重复的值。举个例子，同样一个颜色值可能在成千上百个地方被使用到，如果这个值发生了变化，需要全局搜索并且一个一个替换（很麻烦哎～）。自定义属性在某个地方存储一个值，然后在其他许多地方引用它。另一个好处是语义化的标识。比如，<code>--main-text-color</code> 会比 <code>#00ff00</code> 更易理解，尤其是这个颜色值在其他上下文中也被使用到。</div>
 
-<div></div>
+
 
 <div>自定义属性受级联的约束，并从其父级继承其值。</div>
 

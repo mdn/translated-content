@@ -132,9 +132,9 @@ justify-content: unset;
 
 ```html hidden
 <div id="container">
-  <div></div>
-  <div></div>
-  <div></div>
+  
+  
+  
 </div>
 <select id="justifyContent">
   <option value="start">start</option>

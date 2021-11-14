@@ -72,7 +72,7 @@ Si un élément n'a pas de noeud parent, définir sa propriété `outerHTML` ne 
 ```js
 var div = document.createElement("div");
 div.outerHTML = "<div class=\"test\">test</div>";
-console.log(div.outerHTML); // output: "<div></div>"
+console.log(div.outerHTML); // output: ""
 ```
 
 Aussi, lorsqu'un élément va être remplacé dans le document, la variable dont la propriété `outerHTML` a été modifiée contiendra toujours une référence à l'élément initial :

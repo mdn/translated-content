@@ -117,7 +117,7 @@ div {
 ```
 
 ```html hidden
-<div></div>
+
 ```
 
 ```css
@@ -141,7 +141,7 @@ div {
 ```
 
 ```html hidden
-<div></div>
+
 ```
 
 ```css

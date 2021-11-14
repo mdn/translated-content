@@ -128,7 +128,7 @@ Dans cet exemple, on utilise la règle-@ {{cssxref("@keyframes")}} afin d'animer
 #### HTML
 
 ```html
-<div></div>
+
 ```
 
 #### CSS

@@ -72,12 +72,12 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
 
 ```html
 <div id="flexbox">
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
+  
+  
+  
+  
+  
+  
 </div>
 ```
 
@@ -111,15 +111,15 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
 
 ```html
 <div id="grid">
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </div>
 ```
 

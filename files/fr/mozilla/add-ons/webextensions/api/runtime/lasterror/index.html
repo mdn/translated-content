@@ -17,11 +17,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
 
 <div>Cette valeur est utilisée pour signaler un message d'erreur provenant d'une API asynchrone, lorsque l'API asynchrone reçoit un rappel. Cela est utile pour les extensions qui utilisent la valeur basée sur le rappel des API WebExtension.</div>
 
-<div></div>
+
 
 <div>Vpous n'avez pas besoin de vérifier cette propriété si vous utilisez la version basée sur la promesse des API : à la place, passez un gestionnaire d'erreurs à la promesse :</div>
 
-<div></div>
+
 
 <pre class="brush: js">var gettingCookies = browser.cookies.getAll();
 gettingCookies.then(onGot, onError);</pre>
@@ -30,7 +30,7 @@ gettingCookies.then(onGot, onError);</pre>
 
 <div>Si vous applez une fonction asynchrone qui veut définir <code>lastError</code>, vous devez vérifier l'erreur lorsque vous gérez le résultat de la fonction. Si  <code>lastError</code> a été défini et que vous ne cochez pas dans la fonction de rappel, une erreur sera générée.</div>
 
-<div></div>
+
 
 <h2 id="Syntaxe">Syntaxe</h2>
 

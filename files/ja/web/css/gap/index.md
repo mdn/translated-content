@@ -80,12 +80,12 @@ gap: unset;
 
 ```html
 <div id="flexbox">
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
+  
+  
+  
+  
+  
+  
 </div>
 ```
 
@@ -119,15 +119,15 @@ gap: unset;
 
 ```html
 <div id="grid">
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </div>
 ```
 

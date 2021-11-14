@@ -73,7 +73,7 @@ border-top-right-radius: unset;
 単一の `<length>` 値を指定すると、円弧を生成します。
 
 ```html hidden
-<div></div>
+
 ```
 
 ```css
@@ -93,7 +93,7 @@ div {
 2 つの異なる `<length>` 値を指定すると、楕円の弧を生成します。
 
 ```html hidden
-<div></div>
+
 ```
 
 ```css
@@ -113,7 +113,7 @@ div {
 正方形の要素に単一の `<percentage>` 値を指定すると、円弧を生成します。
 
 ```html hidden
-<div></div>
+
 ```
 
 ```css
@@ -133,7 +133,7 @@ div {
 正方形ではない要素に単一の `<percentage>` 値を指定すると、楕円の弧を生成します。
 
 ```html hidden
-<div></div>
+
 ```
 
 ```css

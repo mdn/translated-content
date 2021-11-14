@@ -1101,7 +1101,7 @@ CSS Color 4 でこの表記が導入されました。
 #### HTML
 
 ```html
-<div></div>
+
 <hr>
 <label for="color">有効な色の値を入力してください:</label>
 <input type="text" id="color">
