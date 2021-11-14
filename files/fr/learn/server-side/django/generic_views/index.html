@@ -181,7 +181,7 @@ class BookListView(generic.ListView):
 <pre class="brush: html notranslate">&lt;a href="\{{ book.get_absolute_url }}"&gt;\{{ book.title }}&lt;/a&gt; (\{{book.author}})
 </pre>
 
-<p>Nous accédont aux <em>champs</em> de l'enregistrement "livre" associé, en utilisant la notation "à points" (par exemple <code>book.title</code> et <code>book.author</code>), où le texte suivant l'item <code>book</code> est le nom du champ (comme défini dans le modèle).</p>
+<p>Nous accédons aux <em>champs</em> de l'enregistrement "livre" associé, en utilisant la notation "à points" (par exemple <code>book.title</code> et <code>book.author</code>), où le texte suivant l'item <code>book</code> est le nom du champ (comme défini dans le modèle).</p>
 
 <p>Nous pouvons aussi appeler des <em>fonctions</em> contenues dans le modèle depuis l'intérieur de notre template — dans ce cas nous appelons <code>Book.get_absolute_url()</code> pour obtenir une URL que vous pouvez utiliser pour afficher dans la vue détail l'enregistrement associé. Cela fonctionne, pourvu que la fonction ne comporte pas d'arguments (il n'y a aucun moyen de passer des arguments !).</p>
 
@@ -386,7 +386,7 @@ def book_detail_view(request, primary_key):
     book = get_object_or_404(Book, pk=primary_key)
     return render(request, 'catalog/book_detail.html', context={'book': book})</pre>
 
-<h3 id="Créerle_template_de_la_Vue_Détail">Créerle template de la Vue Détail</h3>
+<h3 id="Créer_le_template_de_la_Vue_Détail">Créer le template de la Vue Détail</h3>
 
 <p>Créez le fichier HTML <strong>/locallibrary/catalog/templates/catalog/book_detail.html</strong>, et copiez-y le code ci-dessous. Comme on l'a dit plus haut, c'est là le nom de template attendu par défaut par la vue générique basée sur classe <em>detail</em> (pour un modèle appelé <code>Book</code> dans une application appelée <code>catalog</code>).</p>
 
