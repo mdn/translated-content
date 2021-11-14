@@ -13,13 +13,13 @@ original_slug: Actualizar_aplicaciones_web_para_Firefox_3
 <h3 id="DOM_changes" name="DOM_changes">Cambios DOM</h3>
 
 
-<p></p><p>Nodes from external documents should be cloned using <a href="/es/docs/Web/API/Document/importNode" title="Crea una copia de un nodo desde un documento externo para ser insertado en el documento actual."><code>document.importNode()</code></a> (or adopted using <a href="/es/docs/Web/API/Document/adoptNode" title="Adopta un nodo extreno. El nodo y sub subnodos son quitados del documento en que se encuentra  y su nuevo  ownerDocument se cambia por el actual. El nodo puede entoces ser insertado en el documento actual."><code>document.adoptNode()</code></a>) before they
+<p>Nodes from external documents should be cloned using <a href="/es/docs/Web/API/Document/importNode" title="Crea una copia de un nodo desde un documento externo para ser insertado en el documento actual."><code>document.importNode()</code></a> (or adopted using <a href="/es/docs/Web/API/Document/adoptNode" title="Adopta un nodo extreno. El nodo y sub subnodos son quitados del documento en que se encuentra  y su nuevo  ownerDocument se cambia por el actual. El nodo puede entoces ser insertado en el documento actual."><code>document.adoptNode()</code></a>) before they
     can be inserted into the current document. For more on the <a href="/es/docs/Web/API/Node/ownerDocument" title="La propiedad de lectura Nodo.ownerDocument devuelve el objecto Document de más alto nivel/jerarquia para ese nodo."><code>Node.ownerDocument</code></a> issues, see the
     <a class="external" href="http://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a>.</p>
 
     <p>Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many
     sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for
-    improved future compatibility.</p><p></p>
+    improved future compatibility.</p>
 
 <h3 id="HTML_changes" name="HTML_changes">Cambios HTML</h3>
 

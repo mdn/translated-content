@@ -32,13 +32,13 @@ translation_of: Web/API/Document/adoptNode
 <p>Es kann oassieren, dass der Aufruf von <code>adoptNode</code> fehlschlägt, wenn der Ursprungsknoten von einer anderen Implementierung kommt, was aber bei Browser-Implementierungen kein Problem darstellen sollte.</p>
 
 
-<p></p><p>Nodes from external documents should be cloned using <a href="/de/docs/Web/API/Document/importNode" title="Die Document-Methode importNode() erzeugt eine neue Kopie eines konkreten Knotens (Node) oder Dokumenten-Fragments (DocumentFragment) eines anderen Dokuments, so dass diese dann in das aktuelle Dokument eingefügt werden kann. "><code>document.importNode()</code></a> (or adopted using <a href="/de/docs/Web/API/Document/adoptNode" title="Überträgt einen Knoten. Der Knoten und sein Unterbaum werden aus dem Dokument, in dem sie sich befinden entfernt (so vorhanden), und sein ownerDocument wird zu dem aktuellen Dokument geändert. Der Knoten kann dann in das aktuelle Dokument eingefügt werden."><code>document.adoptNode()</code></a>) before they
+<p>Nodes from external documents should be cloned using <a href="/de/docs/Web/API/Document/importNode" title="Die Document-Methode importNode() erzeugt eine neue Kopie eines konkreten Knotens (Node) oder Dokumenten-Fragments (DocumentFragment) eines anderen Dokuments, so dass diese dann in das aktuelle Dokument eingefügt werden kann. "><code>document.importNode()</code></a> (or adopted using <a href="/de/docs/Web/API/Document/adoptNode" title="Überträgt einen Knoten. Der Knoten und sein Unterbaum werden aus dem Dokument, in dem sie sich befinden entfernt (so vorhanden), und sein ownerDocument wird zu dem aktuellen Dokument geändert. Der Knoten kann dann in das aktuelle Dokument eingefügt werden."><code>document.adoptNode()</code></a>) before they
     can be inserted into the current document. For more on the <a class="new" href="/de/docs/Web/API/Node/ownerDocument" rel="nofollow" title="Die Beschreibung hierüber wurde bisher noch nicht geschrieben. Bitte überlege, mitzuwirken!"><code>Node.ownerDocument</code></a> issues, see the
     <a class="external" href="http://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a>.</p>
 
     <p>Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many
     sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for
-    improved future compatibility.</p><p></p>
+    improved future compatibility.</p>
 
 <h2 id="Specification" name="Specification">Spezifikation</h2>
 

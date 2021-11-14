@@ -43,14 +43,14 @@ document.getElementById("container").appendChild(newNode);
 <p>Pierwotny węzeł nie jest usunięty z oryginalnego dokumentu. Importowany węzeł jest klonem oryginału .</p>
 
 
-<p></p><p>Przed włączeniem węzłów pochodzących z zewnętrznych dokumentów do bieżącego dokumentu konieczne jest ich sklonowanie za
+<p>Przed włączeniem węzłów pochodzących z zewnętrznych dokumentów do bieżącego dokumentu konieczne jest ich sklonowanie za
     pomocą metody <a href="/pl/docs/Web/API/Document/importNode" title="Tworzy kopię węzła z zewnętrznego dokumentu, która może być umieszczona wewnątrz bieżącego dokumentu."><code>document.importNode()</code></a> (lub zaadaptowanie przy użyciu metody <a class="new" href="/pl/docs/Web/API/Document/adoptNode" rel="nofollow" title="The documentation about this has not yet been written; please consider contributing!"><code>document.adoptNode()</code></a>). Więcej informacji na temat własności
     <a class="new" href="/pl/docs/Web/API/Node/ownerDocument" rel="nofollow" title="The documentation about this has not yet been written; please consider contributing!"><code>Node.ownerDocument</code></a> znajduje się na liście najczęściej zadawanych pytań na <a class="external" href="http://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">temat
     DOM w witrynie W3C</a>.</p>
 
     <p>Aktualnie Firefox nie wymusza tej reguły (robił to przez pewien czas podczas cykli rozwojowych Firefoksa 3, ale zbyt
     dużo stron przestawało działać po wymuszeniu tej reguły). Zachęcamy autorów stron do poprawienia ich kodu dla lepszej
-    kompatybilności w przyszłości.</p><p></p>
+    kompatybilności w przyszłości.</p>
 
 <h3 id="Specyfikacja" name="Specyfikacja">Specyfikacja</h3>
 
