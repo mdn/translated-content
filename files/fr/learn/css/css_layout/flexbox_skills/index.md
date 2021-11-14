@@ -4,97 +4,80 @@ slug: Learn/CSS/CSS_layout/Flexbox_skills
 translation_of: Learn/CSS/CSS_layout/Flexbox_skills
 original_slug: Apprendre/CSS/CSS_layout/Flexbox_skills
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Apprendre/CSS/CSS_layout/Flexbox", "Apprendre/CSS/CSS_layout/Grids", "Apprendre/CSS/CSS_layout")}}
 
-<div>{{PreviousMenuNext("Apprendre/CSS/CSS_layout/Flexbox", "Apprendre/CSS/CSS_layout/Grids", "Apprendre/CSS/CSS_layout")}}</div>
+Le but de cette tâche est de vous faire travailler avec Flexbox et de démontrer votre compréhension du comportement des éléments flexibles. Vous trouverez ci-dessous quatre modèles de conception courants que vous pourriez utiliser pour créer avec Flexbox, votre tâche est de les construire.
 
-<p>Le but de cette tâche est de vous faire travailler avec Flexbox et de démontrer votre compréhension du comportement des éléments flexibles. Vous trouverez ci-dessous quatre modèles de conception courants que vous pourriez utiliser pour créer avec Flexbox, votre tâche est de les construire.</p>
+> **Note :** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+>
+> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
-<div class="note">
-<p><strong>Note :</strong> You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a> to work on the tasks.<br>
- <br>
- If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.</p>
-</div>
+## Flex Layout One
 
-<h2 id="Flex_Layout_One">Flex Layout One</h2>
+Ces éléments de liste constituent la navigation pour un site. Ils doivent être disposés en ligne, avec un espace égal entre chaque élément. L'exemple fini doit ressembler à l'image ci-dessous.
 
-<p>Ces éléments de liste constituent la navigation pour un site. Ils doivent être disposés en ligne, avec un espace égal entre chaque élément. L'exemple fini doit ressembler à l'image ci-dessous.</p>
+![Flex items laid out as a row with space between them.](flex-task1.png)
 
-<p><img alt="Flex items laid out as a row with space between them." src="flex-task1.png"></p>
+Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé :
 
-<p>Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé :</p>
+{{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox1.html", '100%', 700)}}
 
-<p>{{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox1.html", '100%', 700)}}</p>
+> **Note :** For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox1-download.html) to work in your own editor or in an online editor.
 
-<div class="note">
-<p><strong>Note :</strong> For assessment or further work purposes, <a href="https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox1-download.html">download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+## Flex Layout Two
 
-<h2 id="Flex_Layout_Two">Flex Layout Two</h2>
+Ces éléments de liste sont tous de tailles différentes, mais nous voulons qu'ils soient affichés sous forme de trois colonnes de taille égale, quel que soit le contenu de chaque élément.
 
-<p>Ces éléments de liste sont tous de tailles différentes, mais nous voulons qu'ils soient affichés sous forme de trois colonnes de taille égale, quel que soit le contenu de chaque élément.</p>
+![Flex items laid out as three equal size columns with different amounts of content.](flex-task2.png)
 
-<p><img alt="Flex items laid out as three equal size columns with different amounts of content." src="flex-task2.png"></p>
+Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé :
 
-<p>Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé :</p>
+{{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox2.html", '100%', 800)}}
 
-<p>{{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox2.html", '100%', 800)}}</p>
+Questions supplémentaires:
 
-<p>Questions supplémentaires:</p>
+- Pouvez-vous maintenant faire en sorte que le premier article soit deux fois plus grand que les autres ?
 
-<ul>
- <li>Pouvez-vous maintenant faire en sorte que le premier article soit deux fois plus grand que les autres ?</li>
-</ul>
+> **Note :** For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox1-download.html) to work in your own editor or in an online editor.
 
-<div class="note">
-<p><strong>Note :</strong> For assessment or further work purposes, <a href="https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox1-download.html">download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+## Flex Layout Three
 
-<h2 id="Flex_Layout_Three">Flex Layout Three</h2>
+Il y a deux éléments dans le HTML ci-dessous, une div avec une classe `.parent` qui contient une autre div avec une classe `.child`. Utilisez Flexbox pour centrer le fichier enfant à l'intérieur du parent.
 
-<p>Il y a deux éléments dans le HTML ci-dessous, une div avec une classe <code>.parent</code> qui contient une autre div avec une classe <code>.child</code>. Utilisez Flexbox pour centrer le fichier enfant à l'intérieur du parent.</p>
+![A box centered inside another box.](flex-task3.png)
 
-<p><img alt="A box centered inside another box." src="flex-task3.png"></p>
+Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé :
 
-<p>Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé :</p>
+{{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox3.html", '100%', 800)}}
 
-<p>{{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox3.html", '100%', 800)}}</p>
+> **Note :** For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox3-download.html) to work in your own editor or in an online editor.
 
-<div class="note">
-<p><strong>Note :</strong> For assessment or further work purposes, <a href="https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox3-download.html">download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+## Flex Layout Four
 
-<h2 id="Flex_Layout_Four">Flex Layout Four</h2>
+Dans cette dernière tâche, placez ces éléments en lignes comme dans l'image.
 
-<p>Dans cette dernière tâche, placez ces éléments en lignes comme dans l'image.<br>
-  </p>
 
-<p><img alt="A set of items displayed as rows." src="flex-task4.png"></p>
 
-<p>Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé :</p>
+![A set of items displayed as rows.](flex-task4.png)
 
-<p>{{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox4.html", '100%', 800)}}</p>
+Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé :
 
-<div class="note">
-<p><strong>Note :</strong> For assessment or further work purposes, <a href="https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox4-download.html">download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+{{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox4.html", '100%', 800)}}
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
+> **Note :** For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox4-download.html) to work in your own editor or in an online editor.
 
-<p>You can practice these examples in the Interactive Editors mentioned above.</p>
+## Assessment or further help
 
-<p>If you would like your work assessed, or are stuck and want to ask for help:</p>
+You can practice these examples in the Interactive Editors mentioned above.
 
-<ol>
- <li>Put your work into an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>. You can write the code yourself, or use the starting point files linked to in the above sections.</li>
- <li>Write a post asking for assessment and/or help at the<a href="https://discourse.mozilla.org/c/mdn"> MDN Discourse forum</a>. Add the "learning" tag to your post so we are able to more easily find it. Your post should include:
-  <ul>
-   <li>A descriptive title such as "Assessment wanted for Flexbox layout 1 skill test".</li>
-   <li>Details of what you would like us to do — for example what you have already tried, if you are stuck and need help,.</li>
-   <li>A link to the example you want assessed or need help with, in an online editor. This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.</li>
-   <li>A link to the actual task or assessment page, so we can find the question you want help with.</li>
-  </ul>
- </li>
-</ol>
+If you would like your work assessed, or are stuck and want to ask for help:
 
-<p>{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}</p>
+1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2.  Write a post asking for assessment and/or help at the[ MDN Discourse forum](https://discourse.mozilla.org/c/mdn). Add the "learning" tag to your post so we are able to more easily find it. Your post should include:
+
+    - A descriptive title such as "Assessment wanted for Flexbox layout 1 skill test".
+    - Details of what you would like us to do — for example what you have already tried, if you are stuck and need help,.
+    - A link to the example you want assessed or need help with, in an online editor. This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the actual task or assessment page, so we can find the question you want help with.
+
+{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}

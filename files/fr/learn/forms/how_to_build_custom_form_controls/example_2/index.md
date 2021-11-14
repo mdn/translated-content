@@ -8,37 +8,39 @@ translation_of: Learn/Forms/How_to_build_custom_form_controls/Example_2
 original_slug: >-
   Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_2
 ---
-<p>Ceci est le deuxième exemple expliquant comment <a href="/fr/docs/HTML/Forms/How_to_build_custom_form_widgets" title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets">construire un formulaire personnalisé</a>.</p>
+Ceci est le deuxième exemple expliquant comment [construire un formulaire personnalisé](/fr/docs/HTML/Forms/How_to_build_custom_form_widgets "/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets").
 
-<h2 id="JS">JS</h2>
+## JS
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;form class="no-widget"&gt;
-  &lt;select name="myFruit"&gt;
-      &lt;option&gt;Cerise&lt;/option&gt;
-      &lt;option&gt;Citron&lt;/option&gt;
-      &lt;option&gt;Banane&lt;/option&gt;
-      &lt;option&gt;Fraise&lt;/option&gt;
-      &lt;option&gt;Pomme&lt;/option&gt;
-  &lt;/select&gt;
+```html
+<form class="no-widget">
+  <select name="myFruit">
+      <option>Cerise</option>
+      <option>Citron</option>
+      <option>Banane</option>
+      <option>Fraise</option>
+      <option>Pomme</option>
+  </select>
 
-  &lt;div class="select"&gt;
-    &lt;span class="value"&gt;Cerise&lt;/span&gt;
-    &lt;ul class="optList hidden"&gt;
-      &lt;li class="option"&gt;Cerise&lt;/li&gt;
-      &lt;li class="option"&gt;Citron&lt;/li&gt;
-      &lt;li class="option"&gt;Banane&lt;/li&gt;
-      &lt;li class="option"&gt;Fraise&lt;/li&gt;
-      &lt;li class="option"&gt;Pomme&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;form&gt;
-</pre>
+  <div class="select">
+    <span class="value">Cerise</span>
+    <ul class="optList hidden">
+      <li class="option">Cerise</li>
+      <li class="option">Citron</li>
+      <li class="option">Banane</li>
+      <li class="option">Fraise</li>
+      <li class="option">Pomme</li>
+    </ul>
+  </div>
+<form>
+```
 
-<h3 id="CSS_Content">CSS Content</h3>
+### CSS Content
 
-<pre class="brush: css">.widget select,
+```css
+.widget select,
 .no-widget .select {
   position : absolute;
   left     : -5000em;
@@ -159,58 +161,63 @@ original_slug: >-
 .select .highlight {
   background: #000;
   color: #FFFFFF;
-}</pre>
+}
+```
 
-<h3 id="Contenu_JavaScript">Contenu JavaScript</h3>
+### Contenu JavaScript
 
-<pre class="brush: js">window.addEventListener("load", function () {
+```js
+window.addEventListener("load", function () {
   var form = document.querySelector('form');
 
   form.classList.remove("no-widget");
   form.classList.add("widget");
-});</pre>
+});
+```
 
-<h3 id="Résultat_avec_JavaScript">Résultat avec JavaScript</h3>
+### Résultat avec JavaScript
 
-<p>{{ EmbedLiveSample('JS', 120, 130) }}</p>
+{{ EmbedLiveSample('JS', 120, 130) }}
 
-<h2 id="No_JS">Sans JS</h2>
+## Sans JS
 
-<h3 id="HTML_Content_2">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;form class="no-widget"&gt;
-  &lt;select name="myFruit"&gt;
-      &lt;option&gt;Cerise&lt;/option&gt;
-      &lt;option&gt;Citron&lt;/option&gt;
-      &lt;option&gt;Banane&lt;/option&gt;
-      &lt;option&gt;Fraise&lt;/option&gt;
-      &lt;option&gt;Pomme&lt;/option&gt;
-  &lt;/select&gt;
+```html
+<form class="no-widget">
+  <select name="myFruit">
+      <option>Cerise</option>
+      <option>Citron</option>
+      <option>Banane</option>
+      <option>Fraise</option>
+      <option>Pomme</option>
+  </select>
 
-  &lt;div class="select"&gt;
-    &lt;span class="value"&gt;Cerise&lt;/span&gt;
-    &lt;ul class="optList hidden"&gt;
-      &lt;li class="option"&gt;Cerise&lt;/li&gt;
-      &lt;li class="option"&gt;Citron&lt;/li&gt;
-      &lt;li class="option"&gt;Banane&lt;/li&gt;
-      &lt;li class="option"&gt;Fraise&lt;/li&gt;
-      &lt;li class="option"&gt;Pomme&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;form&gt;</pre>
+  <div class="select">
+    <span class="value">Cerise</span>
+    <ul class="optList hidden">
+      <li class="option">Cerise</li>
+      <li class="option">Citron</li>
+      <li class="option">Banane</li>
+      <li class="option">Fraise</li>
+      <li class="option">Pomme</li>
+    </ul>
+  </div>
+<form>
+```
 
-<h3 id="CSS_Content_2">CSS Content</h3>
+### CSS Content
 
-<pre class="brush: css">.widget select,
+```css
+.widget select,
 .no-widget .select {
   position : absolute;
   left     : -5000em;
   height   : 0;
   overflow : hidden;
-}</pre>
+}
+```
 
-<h3 id="Result_for_No_JS">Result for No JS</h3>
+### Result for No JS
 
-<p>{{ EmbedLiveSample('No_JS', 120, 130) }}</p>
-
-<p> </p>
+{{ EmbedLiveSample('No_JS', 120, 130) }}

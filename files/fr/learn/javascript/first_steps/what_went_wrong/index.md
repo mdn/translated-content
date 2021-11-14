@@ -14,243 +14,258 @@ tags:
   - outils de développement
 translation_of: Learn/JavaScript/First_steps/What_went_wrong
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}</div>
-
-<p>Après avoir créé le jeu "Devinez le nombre" de l'article précédent, vous avez peut-être constaté qu'il ne fonctionnait pas. Pas de panique — cet article vise à ce que vous ne vous arrachiez pas les cheveux sur ces problèmes en donnant quelques conseils simples sur la façon de trouver et corriger les erreurs dans les programmes JavaScript.</p>
+Après avoir créé le jeu "Devinez le nombre" de l'article précédent, vous avez peut-être constaté qu'il ne fonctionnait pas. Pas de panique — cet article vise à ce que vous ne vous arrachiez pas les cheveux sur ces problèmes en donnant quelques conseils simples sur la façon de trouver et corriger les erreurs dans les programmes JavaScript.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prérequis :</th>
-   <td>
-    <p>Vocabulaire courant de l'informatique, bases de HTML et CSS, compréhension de ce que fait JavaScript.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Objectif :</th>
-   <td>Acquérir la capacité et la confiance pour commencer à résoudre des problèmes simples dans votre propre code.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prérequis :</th>
+      <td>
+        <p>
+          Vocabulaire courant de l'informatique, bases de HTML et CSS,
+          compréhension de ce que fait JavaScript.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objectif :</th>
+      <td>
+        Acquérir la capacité et la confiance pour commencer à résoudre des
+        problèmes simples dans votre propre code.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Types_d_erreurs">Types d' erreurs</h2>
-
-<p>En règle générale, les erreurs dans un code sont à ranger dans deux catégories :</p>
-
-<ul>
- <li><strong>Erreurs de syntaxe : </strong>Ce sont les fautes d'orthographe. Elles empêchent réellement le programme de fonctionner ou l'arrêtent en cours de chemin — elles sont accompagnées de messages d'erreur. Ces erreurs sont généralement simple à corriger, pour autant que vous connaissiez les bons outils et sachiez ce que signifient les messages !</li>
- <li>
-  <p><strong>Erreurs logiques : </strong>La syntaxe est correcte, mais le code n'est pas ce que vous attendiez : le programme tourne sans planter mais donne des résultats inattendus. Ces erreurs sont souvent plus difficiles à corriger que les erreurs de syntaxe, car il n'y a pas, en général, de message d'erreur pour vous diriger vers la source de l'erreur.</p>
- </li>
-</ul>
-
-<p>Bon, mais ce n'est pas si simple que cela — il y a d'autres facteurs de différenciation lorsque vous approfondissez. Mais la classification ci-dessus suffiira pour commencer. Nous examinerons ces deux catégories d'erreur un peu plus loin.</p>
-
-<h2 id="Un_exemple_erroné">Un exemple erroné</h2>
-
-<p>Pour commencer, revenons à notre jeu de devinettes numériques — sauf que cette fois-ci, nous explorerons une version qui comporte des erreurs délibérées. Allez sur Github et fabriquez vous-même une copie locale de <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html">number-game-errors.html</a> (<a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html">voyez-la ici</a> en direct).</p>
-
-<ol>
- <li>Pour commencer, ouvrez la copie locale avec votre éditeur de texte favoris.</li>
- <li>Essayez de lancer le jeu — vous remarquerez que quand vous pressez le bouton <kbd>Submit guess</kbd>, cela ne fonctionne pas!</li>
-</ol>
-
-<div class="note">
-<p><strong>Note :</strong> Votre propre version de l'exemple de jeu ne fonctionne pas, vous pourriez vouloir la corriger ! Il nous semble plus efficace que vous travailliez sur notre version boguée, afin que vous puissiez apprendre les techniques que nous enseignons ici. Ensuite, vous pouvez revenir en arrière et essayer de réparer votre exemple.</p>
-</div>
-
-<p>À ce stade, consultons la <a href="/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs">console du développeur</a> pour voir si nous pouvons voir des erreurs de syntaxe, puis essayez de les corriger. Vous apprendrez comment ci-dessous.</p>
-
-<h2 id="Réparer_les_erreurs_de_syntaxe">Réparer les erreurs de syntaxe</h2>
-
-<p>Antérieurement dans le cours, nous vous avons demandé de taper quelques commandes JavaScript simples dans la <a href="/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs">console JavaScript</a> <a href="/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs">des outils de développement</a> (si vous ne pouvez pas vous rappeler comment l'ouvrir dans votre navigateur, suivez le lien précédent pour savoir comment). Ce qui est encore plus utile, c'est que la console vous donne des messages d'erreur chaque fois qu'une erreur de syntaxe existe dans le JavaScript qui est introduit dans le moteur JavaScript du navigateur. Maintenant partons en chasse !</p>
-
-<ol>
- <li>Allez à l'onglet dans lequel est affiché <code>number-game-errors.html</code>, et ouvrez la console  JavaScript. Vous devriez voir un message d'erreur dans les lignes qui suivent : <img alt="" src="not-a-function.png"></li>
- <li>C'est une erreur très facile à trouver, et le navigateur vous fournit quelques indices pour vous en sortir (la copie d'écran ci‑dessus provient de Firefox, mais les autres navigateurs donnent des indications semblables). De gauche à droite, nous avons :
-  <ul>
-   <li>Une croix rouge indiquant que c'est une erreur.</li>
-   <li>Un message d'erreur précisant ce qui ne va pas : "TypeError: guessSubmit.addeventListener is not a function" ("Type d'erreur : guessSubmit.addeventListener n'est pas une fonction")</li>
-   <li>Un lien "Learn More" ("En savoir plus") pointant sur une page MDN explicitant ce que l'erreur signifie avec pléthore de détails.</li>
-   <li>Le nom du fichier JavaScript, lié à l'onglet Debugger de l'outil de développement. Si vous suivez le lien, vous verrez exactement la ligne dans laquelle l'erreur est mise en évidence.</li>
-   <li>Le numéro de la ligne où se situe l'erreur, et le rang du caractère dans cette ligne où l'erreur a été repérée pour la première fois. Dans notre cas, il s'agit de la ligne 86, caractère 3.</li>
-  </ul>
- </li>
- <li>En examinant la ligne 86 dans l'éditeur de code, nous voyons :
-  <pre class="brush: js">guessSubmit.addeventListener('click', checkGuess);</pre>
- </li>
- <li>Le message d'erreur dit "guessSubmit.addeventListener n'est pas une fonction", donc nous avons probablement mal orthographié quelque chose. Si vous n'êtes pas sûr de la bonne orthographe d'un élément syntaxique, il est fréquemment opportun de regarder dans MDN. Actuellement, la meilleure façon d'opérer consiste à faire une recherche pour  "mdn <em>nom-de-fonctionnalité</em>" avec votre moteur de recherche préféré. Voici un raccourci pour gagner un peu de temps dans le cas présent : <code><a href="/fr/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>.</li>
- <li>Donc, en regardant cette page, il apparaît que nous avions mal orthographié le nom de la fonction ! Souvenez-vous que JavaScript est sensible à la casse, et que la moindre différence dans l'orthographe ou la casse déclenchera une erreur. Remplacer <code>addeventListener</code> par <code>addEventListener</code> corrigera cela. Faisons‑le maintenant.</li>
-</ol>
+## Types d' erreurs
 
-<div class="note">
-<p><strong>Note :</strong> Voyez la page relative à <a href="/fr/docs/Web/JavaScript/Reference/Errors/Not_a_function">TypeError: "x" is not a function</a> pour plus de précisions à propos de cette erreur.</p>
-</div>
+En règle générale, les erreurs dans un code sont à ranger dans deux catégories :
 
-<h3 id="Erreurs_de_syntaxe_deuxième_tour">Erreurs de syntaxe : deuxième tour</h3>
+- **Erreurs de syntaxe :** Ce sont les fautes d'orthographe. Elles empêchent réellement le programme de fonctionner ou l'arrêtent en cours de chemin — elles sont accompagnées de messages d'erreur. Ces erreurs sont généralement simple à corriger, pour autant que vous connaissiez les bons outils et sachiez ce que signifient les messages !
+- **Erreurs logiques :** La syntaxe est correcte, mais le code n'est pas ce que vous attendiez : le programme tourne sans planter mais donne des résultats inattendus. Ces erreurs sont souvent plus difficiles à corriger que les erreurs de syntaxe, car il n'y a pas, en général, de message d'erreur pour vous diriger vers la source de l'erreur.
 
-<ol>
- <li>Enregistrez la page et actualisez‑la, vous constaterez que l'erreur a disparu.</li>
- <li>Maintenant si vous entrez une supposition et pressez le bouton de soumission, vous constaterez ... une autre erreur ! <img alt="" src="variable-is-null.png"></li>
- <li>Cette fois‑ci, l'erreur rapportée est "TypeError: lowOrHi is null", à la ligne 78.
-  <div class="note">
-    <p><strong>Note :</strong> <code><a href="/fr/docs/Glossary/Null">Null</a></code> est une valeur spéciale signifiant "rien" ou "aucune valeur". Or <code>lowOrHi</code> a été déclaré et initialisé, mais sans valeur signifiante — il n'a ni type ni valeur.</p></div>
+Bon, mais ce n'est pas si simple que cela — il y a d'autres facteurs de différenciation lorsque vous approfondissez. Mais la classification ci-dessus suffiira pour commencer. Nous examinerons ces deux catégories d'erreur un peu plus loin.
 
-  <div class="note">
-    <p><strong>Note :</strong> Cette erreur n'apparaît pas au moment du chargement de la page car elle survient à l'intérieur d'une fonction (dans <code>checkGuess() { ... }</code>). Comme vous l'apprendrez de manière plus précise plus loin dans l'article à propos des fonctions, le code dans les fonctions s'exécute dans une instance séparée du code en dehors des fonctions. Dans notre cas, le code n'avait pas été exécuté et l'erreur ne pouvait pas survenir avant que la fonction <code>checkGuess()</code> soit lancée à la ligne 86.</p></div>
- </li>
- <li>Regardez à la ligne 78, vous verrez ce code :
-  <pre class="brush: js">lowOrHi.textContent = 'Last guess was too high!';</pre>
- </li>
- <li>La commande dans cette ligne essaie de définir la propriété <code>textContent</code> de la variable <code>lowOrHi</code> à l'aide d'une chaîne textuelle ; mais cela ne fonctionne pas car <code>lowOrHi</code> ne contient pas ce qui est attendu. Voyons voir — recherchons d'autres occurrences de <code>lowOrHi</code> dans le code. La plus proche que vous trouverez dans le JavaScript se situe à la ligne 48 :
-  <pre class="brush: js">let lowOrHi = document.querySelector('lowOrHi');</pre>
- </li>
- <li>Là, nous essayons de faire en sorte que la variable contienne une référence à un élément dans le HTML du document. Vérifions si sa valeur est <code>null</code> après que cette ligne ait été exécutée. Ajoutez le code suivant à la ligne 49 :
-  <pre class="brush: js">console.log(lowOrHi);</pre>
+## Un exemple erroné
 
-  <div class="note">
-  <p><strong>Note :</strong> <code><a href="/fr/docs/Web/API/Console/log">console.log()</a></code> est vraiment utile pour déboguer une fonction en affichant sa valeur sur la console. Donc, elle affichera sur cette dernière la valeur de <code>lowOrHi</code> que nous avons essayé de définir à la ligne 48.</p>
-  </div>
- </li>
- <li>Enregistrez et actualisez la page, et vous verrez le résultat de <code>console.log()</code> sur la console. <img alt="" src="console-log-output.png"> C'est sûr, la valeur de <code>lowOrHi</code> est <code>null</code> à ce niveau ; il y a bien un problème à la ligne 48.</li>
- <li>Quel est ce problème ? Réfléchissons. À la ligne 48, nous avons utilisé la méthode <code><a href="/fr/docs/Web/API/Document/querySelector">document.querySelector()</a></code> pour obtenir une référence sur un élément avec un sélecteur CSS. En regardant plus en amont dans notre fichier, nous pouvons trouver le paragraphe en question :
-  <pre class="brush: js">&lt;p class="lowOrHi"&gt;&lt;/p&gt;</pre>
- </li>
- <li>Donc, il nous faut un sélecteur de classe ici, précédé d'un point (.), alors que le sélecteur passé à la méthode <code>querySelector()</code> en ligne 48 n'en a pas. Ce pourrait être le problème ! Changeons <code>lowOrHi</code> en <code>.lowOrHi</code> à la ligne 48.</li>
- <li>Enregistrons et actualisons à nouveau, et la directive <code>console.log()</code> renvoie bien l'élément  <code>&lt;p&gt;</code> attendu. Pfff ! Une autre erreur corrigée ! On peut enlever la ligne <code>console.log()</code> maintenant, ou bien la garder pour s'y reporter plus tard — comme vous l'entendez.</li>
-</ol>
+Pour commencer, revenons à notre jeu de devinettes numériques — sauf que cette fois-ci, nous explorerons une version qui comporte des erreurs délibérées. Allez sur Github et fabriquez vous-même une copie locale de [number-game-errors.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html) ([voyez-la ici](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html) en direct).
 
-<div class="note">
-<p><strong>Note :</strong> Voyez la page relative à <a href="/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_type">TypeError: "x" is (not) "y"</a> pour plus de précisions à propos de cette erreur.</p>
-</div>
+1.  Pour commencer, ouvrez la copie locale avec votre éditeur de texte favoris.
+2.  Essayez de lancer le jeu — vous remarquerez que quand vous pressez le bouton
 
-<h3 id="Erreurs_de_syntaxe_troisième_tour">Erreurs de syntaxe : troisième tour</h3>
+    <kbd>Submit guess</kbd>
 
-<ol>
- <li>Maintenant si vous essayez de jouer, cela ira mieux — tout se déroule correctement, jusqu'à ce que vous arriviez à la fin, soit en devinant le bon chiffre, soit en épuisant le nombre de tentatives permises.</li>
- <li>Arrivé là, le jeu échoue à nouveau et vous rencontrez la même erreur qu'au début — "TypeError: resetButton.addeventListener is not a function" ! Mais cette fois‑ci, elle vient de la ligne  94.</li>
- <li>En regardant cette ligne, il est facile de voir que nous avons fait ici la même erreur que précédemment. Il nous suffit de changer <code>addeventListener</code> en <code>addEventListener</code>. Faites‑le.</li>
-</ol>
+    , cela ne fonctionne pas!
 
-<h2 id="Une_erreur_de_logique">Une erreur de logique</h2>
+> **Note :** Votre propre version de l'exemple de jeu ne fonctionne pas, vous pourriez vouloir la corriger ! Il nous semble plus efficace que vous travailliez sur notre version boguée, afin que vous puissiez apprendre les techniques que nous enseignons ici. Ensuite, vous pouvez revenir en arrière et essayer de réparer votre exemple.
 
-<p>À ce stade, le jeu se déroule correctement, mais après avoir fait quelques parties, vous noterez sans doute que le nombre « aléatoire » à deviner est toujours 0 ou 1. Franchement, de quoi vous dégoûter de jouer !</p>
+À ce stade, consultons la [console du développeur](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs) pour voir si nous pouvons voir des erreurs de syntaxe, puis essayez de les corriger. Vous apprendrez comment ci-dessous.
 
-<p>Il y a sûrement un problème dans la logique du jeu quelque part — le jeu ne renvoie pas d'erreur ; il ne fonctionne pas correctement.</p>
+## Réparer les erreurs de syntaxe
 
-<ol>
- <li>Recherchons les lignes où la variable <code>randomNumber</code> est définie. L'instance qui stocke en début de jeu le nombre aléatoire à deviner se situe autour de la ligne 44 :
+Antérieurement dans le cours, nous vous avons demandé de taper quelques commandes JavaScript simples dans la [console JavaScript](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs) [des outils de développement](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs) (si vous ne pouvez pas vous rappeler comment l'ouvrir dans votre navigateur, suivez le lien précédent pour savoir comment). Ce qui est encore plus utile, c'est que la console vous donne des messages d'erreur chaque fois qu'une erreur de syntaxe existe dans le JavaScript qui est introduit dans le moteur JavaScript du navigateur. Maintenant partons en chasse !
 
-  <pre class="brush: js">let randomNumber = Math.floor(Math.random()) + 1;</pre>
-  Et celle qui génére le nombre aléatoire pour une succession de jeux se situe autour de la ligne 113 :
+1.  Allez à l'onglet dans lequel est affiché `number-game-errors.html`, et ouvrez la console  JavaScript. Vous devriez voir un message d'erreur dans les lignes qui suivent : ![](not-a-function.png)
+2.  C'est une erreur très facile à trouver, et le navigateur vous fournit quelques indices pour vous en sortir (la copie d'écran ci‑dessus provient de Firefox, mais les autres navigateurs donnent des indications semblables). De gauche à droite, nous avons :
 
-  <pre class="brush: js">randomNumber = Math.floor(Math.random()) + 1;</pre>
- </li>
- <li>Pour vérifier si ces lignes sont vraiment à l'origine du problème, faisons appel à nouveau à notre ami <code>console.log()</code> — insérons la ligne suivante directement en dessous des deux lignes indiquées plus haut :
-  <pre class="brush: js">console.log(randomNumber);</pre>
- </li>
- <li>Enregistrons, actualisons et jouons quelques parties — on constate que <code>randomNumber</code> est égal à 1 quel que soit le point où il est raccordé à la console.</li>
-</ol>
+    - Une croix rouge indiquant que c'est une erreur.
+    - Un message d'erreur précisant ce qui ne va pas : "TypeError: guessSubmit.addeventListener is not a function" ("Type d'erreur : guessSubmit.addeventListener n'est pas une fonction")
+    - Un lien "Learn More" ("En savoir plus") pointant sur une page MDN explicitant ce que l'erreur signifie avec pléthore de détails.
+    - Le nom du fichier JavaScript, lié à l'onglet Debugger de l'outil de développement. Si vous suivez le lien, vous verrez exactement la ligne dans laquelle l'erreur est mise en évidence.
+    - Le numéro de la ligne où se situe l'erreur, et le rang du caractère dans cette ligne où l'erreur a été repérée pour la première fois. Dans notre cas, il s'agit de la ligne 86, caractère 3.
 
-<h3 id="Travaillons_la_logique">Travaillons la logique</h3>
+3.  En examinant la ligne 86 dans l'éditeur de code, nous voyons :
 
-<p>Pour corriger cela, examinons d'abord le fonctionnement de cette ligne. Premièrement, appelons <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a></code>, qui génére un nombre décimal aléatoire compris entre 0 et 1, par exemple 0.5675493843.</p>
+    ```js
+    guessSubmit.addeventListener('click', checkGuess);
+    ```
 
-<pre class="brush: js">Math.random()</pre>
+4.  Le message d'erreur dit "guessSubmit.addeventListener n'est pas une fonction", donc nous avons probablement mal orthographié quelque chose. Si vous n'êtes pas sûr de la bonne orthographe d'un élément syntaxique, il est fréquemment opportun de regarder dans MDN. Actuellement, la meilleure façon d'opérer consiste à faire une recherche pour  "mdn _nom-de-fonctionnalité_" avec votre moteur de recherche préféré. Voici un raccourci pour gagner un peu de temps dans le cas présent : [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener).
+5.  Donc, en regardant cette page, il apparaît que nous avions mal orthographié le nom de la fonction ! Souvenez-vous que JavaScript est sensible à la casse, et que la moindre différence dans l'orthographe ou la casse déclenchera une erreur. Remplacer `addeventListener` par `addEventListener` corrigera cela. Faisons‑le maintenant.
 
-<p>Puis, nous passons le résultat de l'appel de <code>Math.random()</code> à <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor()</a></code>, qui arrondit le nombre passé à l'entier inférieur le plus proche. Puis, on ajoute 1 au résultat :</p>
+> **Note :** Voyez la page relative à [TypeError: "x" is not a function](/fr/docs/Web/JavaScript/Reference/Errors/Not_a_function) pour plus de précisions à propos de cette erreur.
 
-<pre>Math.floor(Math.random()) + 1</pre>
+### Erreurs de syntaxe : deuxième tour
 
-<p>Garder la partie entière d'un nombre décimal compris entre 0 et 1 renvoie toujours 0, y ajouter 1 donne toujours  1. Il faut multiplier le nombre aléatoire par 100 avant de l'arrondir par défaut. La ligne suivante nous donne un entier aléatoire entre 0 et  99 :</p>
+1.  Enregistrez la page et actualisez‑la, vous constaterez que l'erreur a disparu.
+2.  Maintenant si vous entrez une supposition et pressez le bouton de soumission, vous constaterez ... une autre erreur ! ![](variable-is-null.png)
+3.  Cette fois‑ci, l'erreur rapportée est "TypeError: lowOrHi is null", à la ligne 78.
 
-<pre class="brush: js">Math.floor(Math.random()*100);</pre>
+    > **Note :** [`Null`](/fr/docs/Glossary/Null) est une valeur spéciale signifiant "rien" ou "aucune valeur". Or `lowOrHi` a été déclaré et initialisé, mais sans valeur signifiante — il n'a ni type ni valeur.
 
-<p>Maintenant ajoutons 1 pour obtenir un nombre aléatoire entre 1 et 100 :</p>
+    > **Note :** Cette erreur n'apparaît pas au moment du chargement de la page car elle survient à l'intérieur d'une fonction (dans `checkGuess() { ... }`). Comme vous l'apprendrez de manière plus précise plus loin dans l'article à propos des fonctions, le code dans les fonctions s'exécute dans une instance séparée du code en dehors des fonctions. Dans notre cas, le code n'avait pas été exécuté et l'erreur ne pouvait pas survenir avant que la fonction `checkGuess()` soit lancée à la ligne 86.
 
-<pre class="brush: js">Math.floor(Math.random()*100) + 1;</pre>
+4.  Regardez à la ligne 78, vous verrez ce code :
 
-<p>Modifiez ces deux lignes comme indiqué, enregistrez, actualisez — le jeu devrait maintenant fonctionner comme il faut !</p>
+    ```js
+    lowOrHi.textContent = 'Last guess was too high!';
+    ```
 
-<h2 id="Autres_erreurs_courantes">Autres erreurs courantes</h2>
+5.  La commande dans cette ligne essaie de définir la propriété `textContent` de la variable `lowOrHi` à l'aide d'une chaîne textuelle ; mais cela ne fonctionne pas car `lowOrHi` ne contient pas ce qui est attendu. Voyons voir — recherchons d'autres occurrences de `lowOrHi` dans le code. La plus proche que vous trouverez dans le JavaScript se situe à la ligne 48 :
 
-<p>D'autres erreurs courantes peuvent être commises en écrivant du code. Ce paragraphe attire votre attention sur la plupart d'entre elles.</p>
+    ```js
+    let lowOrHi = document.querySelector('lowOrHi');
+    ```
 
-<h3 id="SyntaxError_missing_before_statement">SyntaxError: missing ; before statement</h3>
+6.  Là, nous essayons de faire en sorte que la variable contienne une référence à un élément dans le HTML du document. Vérifions si sa valeur est `null` après que cette ligne ait été exécutée. Ajoutez le code suivant à la ligne 49 :
 
-<p>Cette erreur signale généralement l'oubli du point‑virgule à la fin d'une ligne de code ; mais elle peut se révéler parfois plus énigmatique. Par exemple, si, dans la fonction  <code>checkGuess(),</code>nous modifions cette ligne :</p>
+    ```js
+    console.log(lowOrHi);
+    ```
 
-<pre class="brush: js">let userGuess = Number(guessField.value);</pre>
+    > **Note :** [`console.log()`](/fr/docs/Web/API/Console/log) est vraiment utile pour déboguer une fonction en affichant sa valeur sur la console. Donc, elle affichera sur cette dernière la valeur de `lowOrHi` que nous avons essayé de définir à la ligne 48.
 
-<p>en</p>
+7.  Enregistrez et actualisez la page, et vous verrez le résultat de `console.log()` sur la console. ![](console-log-output.png) C'est sûr, la valeur de `lowOrHi` est `null` à ce niveau ; il y a bien un problème à la ligne 48.
+8.  Quel est ce problème ? Réfléchissons. À la ligne 48, nous avons utilisé la méthode [`document.querySelector()`](/fr/docs/Web/API/Document/querySelector) pour obtenir une référence sur un élément avec un sélecteur CSS. En regardant plus en amont dans notre fichier, nous pouvons trouver le paragraphe en question :
 
-<pre class="brush: js">let userGuess === Number(guessField.value);</pre>
+    ```js
+    <p class="lowOrHi"></p>
+    ```
 
-<p>cela déclenchera cette même erreur car le logiciel pense que vous êtes en train de faire quelque chose d'autre. Vous devez vous assurer que vous n'avez pas confondu l'opérateur d'assignation  (<code>=</code>) — qui fixe une valeur donnée à une variable — avec l'opérateur (<code>===</code>) qui teste la stricte égalité de deux valeurs, et renvoie un résultat  <code>true</code>/<code>false</code> (vrai/faux).</p>
+9.  Donc, il nous faut un sélecteur de classe ici, précédé d'un point (.), alors que le sélecteur passé à la méthode `querySelector()` en ligne 48 n'en a pas. Ce pourrait être le problème ! Changeons `lowOrHi` en `.lowOrHi` à la ligne 48.
+10. Enregistrons et actualisons à nouveau, et la directive `console.log()` renvoie bien l'élément  `<p>` attendu. Pfff ! Une autre erreur corrigée ! On peut enlever la ligne `console.log()` maintenant, ou bien la garder pour s'y reporter plus tard — comme vous l'entendez.
 
-<div class="note">
-<p><strong>Note :</strong> Voyez la page relative à <a href="/fr/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement">SyntaxError: missing ; before statement</a> pour plus de précisions à propos de cette erreur.</p>
-</div>
+> **Note :** Voyez la page relative à [TypeError: "x" is (not) "y"](/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_type) pour plus de précisions à propos de cette erreur.
 
-<h3 id="Le_programme_dit_que_vous_avez_gagné_quelle_que_soit_votre_suggestion.">Le programme dit que vous avez gagné quelle que soit votre suggestion.</h3>
+### Erreurs de syntaxe : troisième tour
 
-<p>Voilà un autre symptome de la confusion entre opérateur d'assignation et opérateur de test d'égalité. Ainsi, dans <code>checkGuess()</code>, si vous modifiez cette ligne :</p>
+1.  Maintenant si vous essayez de jouer, cela ira mieux — tout se déroule correctement, jusqu'à ce que vous arriviez à la fin, soit en devinant le bon chiffre, soit en épuisant le nombre de tentatives permises.
+2.  Arrivé là, le jeu échoue à nouveau et vous rencontrez la même erreur qu'au début — "TypeError: resetButton.addeventListener is not a function" ! Mais cette fois‑ci, elle vient de la ligne  94.
+3.  En regardant cette ligne, il est facile de voir que nous avons fait ici la même erreur que précédemment. Il nous suffit de changer `addeventListener` en `addEventListener`. Faites‑le.
 
-<pre class="brush: js">if (userGuess === randomNumber) {</pre>
+## Une erreur de logique
 
-<p>en</p>
+À ce stade, le jeu se déroule correctement, mais après avoir fait quelques parties, vous noterez sans doute que le nombre « aléatoire » à deviner est toujours 0 ou 1. Franchement, de quoi vous dégoûter de jouer !
 
-<pre class="brush: js">if (userGuess = randomNumber) {</pre>
+Il y a sûrement un problème dans la logique du jeu quelque part — le jeu ne renvoie pas d'erreur ; il ne fonctionne pas correctement.
 
-<p>le test renverra toujours <code>true</code> (vrai) et le programme indiquera que vous avez gagné à tout coup. Soyez attentif !</p>
+1.  Recherchons les lignes où la variable `randomNumber` est définie. L'instance qui stocke en début de jeu le nombre aléatoire à deviner se situe autour de la ligne 44 :
 
-<h3 id="SyntaxError_missing_after_argument_list">SyntaxError: missing ) after argument list</h3>
+    ```js
+    let randomNumber = Math.floor(Math.random()) + 1;
+    ```
 
-<p>Cette erreur est triviale — elle indique en général que vous avez oublié une parenthèse fermante à la fin de l'appel d'une fonction ou d'une méthode.</p>
+    Et celle qui génére le nombre aléatoire pour une succession de jeux se situe autour de la ligne 113 :
 
-<div class="note">
-<p><strong>Note :</strong> Voyez la page relative à <a href="/fr/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list">SyntaxError: missing ) after argument list</a> pour plus de précisions à ce propos.</p>
-</div>
+    ```js
+    randomNumber = Math.floor(Math.random()) + 1;
+    ```
 
-<h3 id="SyntaxError_missing_after_property_id">SyntaxError: missing : after property id</h3>
+2.  Pour vérifier si ces lignes sont vraiment à l'origine du problème, faisons appel à nouveau à notre ami `console.log()` — insérons la ligne suivante directement en dessous des deux lignes indiquées plus haut :
 
-<p>Cette erreur concerne généralement un objet JavaScript mal construit, mais dans ce cas nous l'avons déclenchée en modifiant</p>
+    ```js
+    console.log(randomNumber);
+    ```
 
-<pre class="brush: js">function checkGuess() {</pre>
+3.  Enregistrons, actualisons et jouons quelques parties — on constate que `randomNumber` est égal à 1 quel que soit le point où il est raccordé à la console.
 
-<p>en</p>
+### Travaillons la logique
 
-<pre class="brush: js">function checkGuess( {</pre>
+Pour corriger cela, examinons d'abord le fonctionnement de cette ligne. Premièrement, appelons [`Math.random()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/random), qui génére un nombre décimal aléatoire compris entre 0 et 1, par exemple 0.5675493843.
 
-<p>Le navigateur pense que vous essayez de passer le contenu d'un fonction comme argument pour l'autre fonction. Soyez attentifs avec les parenthèses !</p>
+```js
+Math.random()
+```
 
-<h3 id="SyntaxError_missing_after_function_body">SyntaxError: missing } after function body</h3>
+Puis, nous passons le résultat de l'appel de `Math.random()` à [`Math.floor()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/floor), qui arrondit le nombre passé à l'entier inférieur le plus proche. Puis, on ajoute 1 au résultat :
 
-<p>Facile — elle signifie généralement que vous avez omis une accolade dans une fonction ou dans une structure conditionnelle. Vous l'obtiendrez en effaçant une des accolades voisines de la terminaison de la fonction <code>checkGuess()</code>.</p>
+    Math.floor(Math.random()) + 1
 
-<h3 id="SyntaxError_expected_expression_got_string_ou_SyntaxError_unterminated_string_literal">SyntaxError: expected expression, got '<em>string</em>' ou SyntaxError: unterminated string literal</h3>
+Garder la partie entière d'un nombre décimal compris entre 0 et 1 renvoie toujours 0, y ajouter 1 donne toujours  1. Il faut multiplier le nombre aléatoire par 100 avant de l'arrondir par défaut. La ligne suivante nous donne un entier aléatoire entre 0 et  99 :
 
-<p>Ces erreurs signalent généralement l'oubli de guillemets ouvrants ou fermants dans une chaîne littérale. Dans la première erreur du titre, <em>string</em> doit être remplacé par l'un ou les caractères inattendus que l'explorateur a trouvé à la place du guillemet en début de chaîne. La deuxième erreur indique que la chaîne n'a pas été clôturée avec un guillement fermant.</p>
+```js
+Math.floor(Math.random()*100);
+```
 
-<p>Pour toutes ces erreurs, revoyez comment nous avons opéré dans les exemples de ce parcours. Quand une erreur survient, regardez le numéro de ligne indiqué, allez à cette ligne et voyez si vous remarquez ce qui ne va pas. N'oubliez pas que l'erreur n'est pas forcément sur la ligne indiquée, et qu'elle ne provient pas forcément d'un des problèmes évoqués plus haut !</p>
+Maintenant ajoutons 1 pour obtenir un nombre aléatoire entre 1 et 100 :
 
-<div class="note">
-<p><strong>Note :</strong> Voyez les pages relatives à  <a href="/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_token">SyntaxError: Unexpected token</a> et <a href="/fr/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal">SyntaxError: unterminated string literal</a> pour plus de précisions à ce propos.</p>
-</div>
+```js
+Math.floor(Math.random()*100) + 1;
+```
 
-<h2 id="Résumé">Résumé</h2>
+Modifiez ces deux lignes comme indiqué, enregistrez, actualisez — le jeu devrait maintenant fonctionner comme il faut !
 
-<p>Voilà ce que nous pouvons dire à propos des erreurs basiques pour de simples programmes JavaScript. Il n'est pas toujours aussi simple de détecter ce qui ne va pas dans du code, mais au moins vous économiserez ainsi quelques heures de veille et vous progresserez plus rapidement si les choses ne déraillent pas dès le début de votre parcours d'apprentissage.</p>
+## Autres erreurs courantes
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+D'autres erreurs courantes peuvent être commises en écrivant du code. Ce paragraphe attire votre attention sur la plupart d'entre elles.
 
-<div>
-<ul>
- <li>Il y a nombre d'autres erreurs qui n'ont pas été listées ici ; nous les avons récolées dans un référencement qui les explique en détail — voyez <a href="/fr/docs/Web/JavaScript/Reference/Errors">JavaScript error reference</a>.</li>
- <li>Si dans votre code vous rencontrez une erreur, et même après avoir lu cet article, vous ne parvenez pas à la corriger, vous pouvez obtenir de l'aide ! Demandez‑la sur le fil de discussion <a class="external external-icon" href="https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294">Learning Area Discourse thread</a> ou par le canal IRC de <a href="irc://irc.mozilla.org/mdn">#mdn</a> sur  <a class="external external-icon" href="https://wiki.mozilla.org/IRC">Mozilla IRC</a>. Dites‑nous quelle est cette erreur, et nous essayerons de vous aider. Un listing de votre code sera aussi utile.</li>
-</ul>
-</div>
+### SyntaxError: missing ; before statement
 
-<p>{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}</p>
+Cette erreur signale généralement l'oubli du point‑virgule à la fin d'une ligne de code ; mais elle peut se révéler parfois plus énigmatique. Par exemple, si, dans la fonction  `checkGuess(),`nous modifions cette ligne :
+
+```js
+let userGuess = Number(guessField.value);
+```
+
+en
+
+```js
+let userGuess === Number(guessField.value);
+```
+
+cela déclenchera cette même erreur car le logiciel pense que vous êtes en train de faire quelque chose d'autre. Vous devez vous assurer que vous n'avez pas confondu l'opérateur d'assignation  (`=`) — qui fixe une valeur donnée à une variable — avec l'opérateur (`===`) qui teste la stricte égalité de deux valeurs, et renvoie un résultat  `true`/`false` (vrai/faux).
+
+> **Note :** Voyez la page relative à [SyntaxError: missing ; before statement](/fr/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) pour plus de précisions à propos de cette erreur.
+
+### Le programme dit que vous avez gagné quelle que soit votre suggestion.
+
+Voilà un autre symptome de la confusion entre opérateur d'assignation et opérateur de test d'égalité. Ainsi, dans `checkGuess()`, si vous modifiez cette ligne :
+
+```js
+if (userGuess === randomNumber) {
+```
+
+en
+
+```js
+if (userGuess = randomNumber) {
+```
+
+le test renverra toujours `true` (vrai) et le programme indiquera que vous avez gagné à tout coup. Soyez attentif !
+
+### SyntaxError: missing ) after argument list
+
+Cette erreur est triviale — elle indique en général que vous avez oublié une parenthèse fermante à la fin de l'appel d'une fonction ou d'une méthode.
+
+> **Note :** Voyez la page relative à [SyntaxError: missing ) after argument list](/fr/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) pour plus de précisions à ce propos.
+
+### SyntaxError: missing : after property id
+
+Cette erreur concerne généralement un objet JavaScript mal construit, mais dans ce cas nous l'avons déclenchée en modifiant
+
+```js
+function checkGuess() {
+```
+
+en
+
+```js
+function checkGuess( {
+```
+
+Le navigateur pense que vous essayez de passer le contenu d'un fonction comme argument pour l'autre fonction. Soyez attentifs avec les parenthèses !
+
+### SyntaxError: missing } after function body
+
+Facile — elle signifie généralement que vous avez omis une accolade dans une fonction ou dans une structure conditionnelle. Vous l'obtiendrez en effaçant une des accolades voisines de la terminaison de la fonction `checkGuess()`.
+
+### SyntaxError: expected expression, got '_string_' ou SyntaxError: unterminated string literal
+
+Ces erreurs signalent généralement l'oubli de guillemets ouvrants ou fermants dans une chaîne littérale. Dans la première erreur du titre, _string_ doit être remplacé par l'un ou les caractères inattendus que l'explorateur a trouvé à la place du guillemet en début de chaîne. La deuxième erreur indique que la chaîne n'a pas été clôturée avec un guillement fermant.
+
+Pour toutes ces erreurs, revoyez comment nous avons opéré dans les exemples de ce parcours. Quand une erreur survient, regardez le numéro de ligne indiqué, allez à cette ligne et voyez si vous remarquez ce qui ne va pas. N'oubliez pas que l'erreur n'est pas forcément sur la ligne indiquée, et qu'elle ne provient pas forcément d'un des problèmes évoqués plus haut !
+
+> **Note :** Voyez les pages relatives à  [SyntaxError: Unexpected token](/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_token) et [SyntaxError: unterminated string literal](/fr/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal) pour plus de précisions à ce propos.
+
+## Résumé
+
+Voilà ce que nous pouvons dire à propos des erreurs basiques pour de simples programmes JavaScript. Il n'est pas toujours aussi simple de détecter ce qui ne va pas dans du code, mais au moins vous économiserez ainsi quelques heures de veille et vous progresserez plus rapidement si les choses ne déraillent pas dès le début de votre parcours d'apprentissage.
+
+## Voir aussi
+
+- Il y a nombre d'autres erreurs qui n'ont pas été listées ici ; nous les avons récolées dans un référencement qui les explique en détail — voyez [JavaScript error reference](/fr/docs/Web/JavaScript/Reference/Errors).
+- Si dans votre code vous rencontrez une erreur, et même après avoir lu cet article, vous ne parvenez pas à la corriger, vous pouvez obtenir de l'aide ! Demandez‑la sur le fil de discussion [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) ou par le canal IRC de [#mdn](irc://irc.mozilla.org/mdn) sur  [Mozilla IRC](https://wiki.mozilla.org/IRC). Dites‑nous quelle est cette erreur, et nous essayerons de vous aider. Un listing de votre code sera aussi utile.
+
+{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}

@@ -13,128 +13,146 @@ tags:
 translation_of: Learn/CSS/CSS_layout/Multiple-column_Layout
 original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
 
-<div>{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}</div>
-
-<p>Une mise en page à colonnes multiples est une méthode de disposition du contenu sur plusieurs colonnes juxtaposées, telle dans un journal. Cet article explique comment utiliser cette fonction.</p>
+Une mise en page à colonnes multiples est une méthode de disposition du contenu sur plusieurs colonnes juxtaposées, telle dans un journal. Cet article explique comment utiliser cette fonction.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prérequis:</th>
-   <td>Les fondamentaux du HTML (étudiez <a href="/fr/Apprendre/HTML/Introduction_à_HTML">Introduction au HTML</a>), et une idée du fonctionnement de CSS (étudiez <a href="/fr/Apprendre/CSS/Introduction_à_CSS">Introduction à CSS</a>.)</td>
-  </tr>
-  <tr>
-   <th scope="row">Objectif:</th>
-   <td>Apprendre comment créer une disposition de contenu sur plusieurs colonnes dans une page web, comme dans un journal.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prérequis:</th>
+      <td>
+        Les fondamentaux du HTML (étudiez
+        <a href="/fr/Apprendre/HTML/Introduction_à_HTML">Introduction au HTML</a
+        >), et une idée du fonctionnement de CSS (étudiez
+        <a href="/fr/Apprendre/CSS/Introduction_à_CSS">Introduction à CSS</a>.)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objectif:</th>
+      <td>
+        Apprendre comment créer une disposition de contenu sur plusieurs
+        colonnes dans une page web, comme dans un journal.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Un_exemple_élémentaire">Un exemple élémentaire</h2>
+## Un exemple élémentaire
 
-<p>Nous allons maintenant explorer la disposition du contenu sur plusieurs colonnes, souvent nommée  « <em>multicol</em> ». Vous pourrez effectuer le suivi de cet article en  <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/multicol/0-starting-point.html">téléchargeant le fichier de depart multicol</a> et en ajoutant la CSS aux emplacements appropriés. En fin de section, vous verrez un exemple en direct de ce à quoi le code final peut ressembler.</p>
+Nous allons maintenant explorer la disposition du contenu sur plusieurs colonnes, souvent nommée  « *multicol* ». Vous pourrez effectuer le suivi de cet article en  [téléchargeant le fichier de depart multicol](https://github.com/mdn/learning-area/blob/master/css/css-layout/multicol/0-starting-point.html) et en ajoutant la CSS aux emplacements appropriés. En fin de section, vous verrez un exemple en direct de ce à quoi le code final peut ressembler.
 
-<p>Notre point de départ contient un HTML très simple ; une enveloppe de la classe <code>container</code> dans laquelle nous avons placé un en‑tête et quelques paragraphes.</p>
+Notre point de départ contient un HTML très simple ; une enveloppe de la classe `container` dans laquelle nous avons placé un en‑tête et quelques paragraphes.
 
-<p>L'élément {{htmlelement("div")}} de la classe <code>container</code> sera notre conteneur multi‑colonnes. Nous basculons dans une disposition <em>multicol</em> en utilisant l'une des deux propriétés {{cssxref("column-count")}} ou {{cssxref("column-width")}}. La propriété <code>column-count</code> crée autant de colonnes que la valeur indiquée, donc si vous ajoutez la CSS suivante et actalisez la page, vous obtiendrez une disposition sur trois colonnes :</p>
+L'élément {{htmlelement("div")}} de la classe `container` sera notre conteneur multi‑colonnes. Nous basculons dans une disposition _multicol_ en utilisant l'une des deux propriétés {{cssxref("column-count")}} ou {{cssxref("column-width")}}. La propriété `column-count` crée autant de colonnes que la valeur indiquée, donc si vous ajoutez la CSS suivante et actalisez la page, vous obtiendrez une disposition sur trois colonnes :
 
-<pre class="brush: css">.container {
+```css
+.container {
   column-count: 3;
 }
-</pre>
+```
 
-<p>Les colonnes créées sont de largeur variable — le navigateur calcule automatiquement l'espace à donner à chacune d'entre elles.</p>
+Les colonnes créées sont de largeur variable — le navigateur calcule automatiquement l'espace à donner à chacune d'entre elles.
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
   font: .9em/1.2 Arial, Helvetica, sans-serif;
 }
-    </pre>
 
-<pre class="brush: html">&lt;div class="container"&gt;
-  &lt;h1&gt;Simple exemple &lt;i&gt;multicol&lt;/i&gt;&lt;/h1&gt;
+```
 
-  &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.
+```html
+<div class="container">
+  <h1>Simple exemple <i>multicol</i></h1>
+
+  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.
   Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
   Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse
   ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit
-  quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
+  quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
 
-  &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique
+  <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique
   elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit
   cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis
-  dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+  dis parturient montes, nascetur ridiculus mus.</p>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Un_exemple_élémentaire', '100%', 400) }}</p>
+{{ EmbedLiveSample('Un_exemple_élémentaire', '100%', 400) }}
 
-<h3>Définir column-width</h3>
+### Définir column-width
 
-<p>Modifiez la CSS pour utiliser <code>column-width</code> ainsi :</p>
+Modifiez la CSS pour utiliser `column-width` ainsi :
 
-<pre class="brush: css">.container {
+```css
+.container {
   column-width: 200px;
 }
-</pre>
+```
 
-<p>Le navigateur dispose maintenant le maximum de colonnes possible de la taille fixée ; le reste de l'espace est partagé entre les colonnes existantes. Cela signifie que vous n'obtiendrez pas exactement la largeur définie, à moins que le conteneur soit exactement divisible par cette largeur.</p>
+Le navigateur dispose maintenant le maximum de colonnes possible de la taille fixée ; le reste de l'espace est partagé entre les colonnes existantes. Cela signifie que vous n'obtiendrez pas exactement la largeur définie, à moins que le conteneur soit exactement divisible par cette largeur.
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
   font: .9em/1.2 Arial, Helvetica, sans-serif;
-}</pre>
+}
+```
 
-<pre class="brush: html hidden">&lt;div class="container"&gt;
-  &lt;h1&gt;Simple exemple &lt;i&gt;multicol&lt;/i&gt;&lt;/h1&gt;
+```html hidden
+<div class="container">
+  <h1>Simple exemple <i>multicol</i></h1>
 
-  &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.
+  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.
   Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
   Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse
   ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit
-  quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
+  quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
 
-  &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique
+  <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique
   elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit
   cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis
-  dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
-&lt;/div&gt;</pre>
+  dis parturient montes, nascetur ridiculus mus.</p>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Définir_column-width', '100%', 400) }}</p>
+{{ EmbedLiveSample('Définir_column-width', '100%', 400) }}
 
-<h2 id="Style_des_colonnes">Style des colonnes</h2>
+## Style des colonnes
 
-<p>Les colonnes créées avec <em>multicol</em> ne peuvent pas être stylisées individuellement. Il n'y a aucun moyen de faire en sorte qu'une colonne soit plus large qu'une autre, ou de modifier l'arrière‑plan ou la couleur du texte d'une seule colonne. Il y a deux moyens de modifier l'affichage des colonnes :</p>
+Les colonnes créées avec _multicol_ ne peuvent pas être stylisées individuellement. Il n'y a aucun moyen de faire en sorte qu'une colonne soit plus large qu'une autre, ou de modifier l'arrière‑plan ou la couleur du texte d'une seule colonne. Il y a deux moyens de modifier l'affichage des colonnes :
 
-<ul>
- <li>modifier la taille de l'espacement entre colonnes avec {{cssxref("column-gap")}}.</li>
- <li>ajouter une règle entre colonnes avec {{cssxref("column-rule")}}.</li>
-</ul>
+- modifier la taille de l'espacement entre colonnes avec {{cssxref("column-gap")}}.
+- ajouter une règle entre colonnes avec {{cssxref("column-rule")}}.
 
-<p>En utilisant l'exemple ci‑dessus, changeons la taille de l'espacement entre colonnes avec la propriété <code>column-gap</code> :</p>
+En utilisant l'exemple ci‑dessus, changeons la taille de l'espacement entre colonnes avec la propriété `column-gap` :
 
-<pre class="brush: css">.container {
+```css
+.container {
   column-width: 200px;
   column-gap: 20px;
-}</pre>
+}
+```
 
-<p>Vous pouvez tester diverses valeurs — la propriété accepte n'importe quelle unité de longueur. Ajoutons maintenant une règle entre colonnes avec <code>column-rule</code>. De la même manière qu'avec la propriété {{cssxref("border")}} rencontrée dans les articles précédents, <code>column-rule</code>, forme abrégée de {{cssxref("column-rule-color")}}, {{cssxref("column-rule-style")}} et  {{cssxref("column-rule-width")}}, accepte les mêmes valeurs.</p>
+Vous pouvez tester diverses valeurs — la propriété accepte n'importe quelle unité de longueur. Ajoutons maintenant une règle entre colonnes avec `column-rule`. De la même manière qu'avec la propriété {{cssxref("border")}} rencontrée dans les articles précédents, `column-rule`, forme abrégée de {{cssxref("column-rule-color")}}, {{cssxref("column-rule-style")}} et  {{cssxref("column-rule-width")}}, accepte les mêmes valeurs.
 
-<pre class="brush: css">.container {
+```css
+.container {
   column-count: 3;
   column-gap: 20px;
   column-rule: 4px dotted rgb(79, 185, 227);
-}</pre>
+}
+```
 
-<p>Ajoutons des règles pour les divers styles et couleurs.</p>
+Ajoutons des règles pour les divers styles et couleurs.
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
@@ -144,101 +162,107 @@ original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
  column-count: 3;
  column-gap: 20px;
  column-rule: 4px dotted rgb(79, 185, 227);
-}</pre>
+}
+```
 
-<pre class="brush: html hidden">&lt;div class="container"&gt;
-  &lt;h1&gt;Simple exemple &lt;i&gt;multicol&lt;/i&gt;&lt;/h1&gt;
+```html hidden
+<div class="container">
+  <h1>Simple exemple <i>multicol</i></h1>
 
-  &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.
+  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.
   Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
   Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse
   ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit
-  quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
+  quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
 
-  &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique
+  <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique
   elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit
   cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis
-  dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
-&lt;/div&gt;</pre>
+  dis parturient montes, nascetur ridiculus mus.</p>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Style_des_colonnes', '100%', 400) }}</p>
+{{ EmbedLiveSample('Style_des_colonnes', '100%', 400) }}
 
-<p>Notez que  la règle ne prend pas de largeur en soi. Elle se place dans l'espace créé avec  <code>column-gap</code>. Pour faire un peu plus d'espace d'un côté ou de l'autre de la règle, vous devez augmenter la taille de l'espace entre les colonnes.</p>
+Notez que  la règle ne prend pas de largeur en soi. Elle se place dans l'espace créé avec  `column-gap`. Pour faire un peu plus d'espace d'un côté ou de l'autre de la règle, vous devez augmenter la taille de l'espace entre les colonnes.
 
-<h2 id="Colonnes_et_coupures">Colonnes et coupures</h2>
+## Colonnes et coupures
 
-<p>Le contenu d'une disposition en plusieurs colonnes est coupé. Il se comporte essentiellement de la même manière qu'un contenu en plusieurs pages — comme quand vous imprimez une page web. Quand vous mettez un contenu dans un conteneur <em>multicol</em>, il est découpé en colonnes de texte pour permettre cette disposition.</p>
+Le contenu d'une disposition en plusieurs colonnes est coupé. Il se comporte essentiellement de la même manière qu'un contenu en plusieurs pages — comme quand vous imprimez une page web. Quand vous mettez un contenu dans un conteneur _multicol_, il est découpé en colonnes de texte pour permettre cette disposition.
 
-<p>Quelquefois, ces coupures se font dans des endroits amenant des difficultés de lecture. Dans l'exemple en direct ci‑dessous, j'ai utilisé <em>multicol</em> pour disposer une série de boîtes dont chacune a un titre et un peu de texte. Le titre est séparé du texte si la coupure de colonne se produit entre les deux.</p>
+Quelquefois, ces coupures se font dans des endroits amenant des difficultés de lecture. Dans l'exemple en direct ci‑dessous, j'ai utilisé _multicol_ pour disposer une série de boîtes dont chacune a un titre et un peu de texte. Le titre est séparé du texte si la coupure de colonne se produit entre les deux.
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
   font: .9em/1.2 Arial, Helvetica, sans-serif;
-}            </pre>
+}
+```
+
+```html hidden
+<div class="container">
+  <div class="card">
+    <h2>Je suis un titre</h2>
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
+                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
+                vel, viverra egestas ligula.</p>
+    </div>
+
+    <div class="card">
+      <h2>Je suis un titre</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
+                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
+                vel, viverra egestas ligula.</p>
+    </div>
+
+    <div class="card">
+      <h2>Je suis un titre</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
+                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
+                vel, viverra egestas ligula.</p>
+    </div>
+    <div class="card">
+      <h2>Je suis un titre</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
+                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
+                vel, viverra egestas ligula.</p>
+    </div>
+
+    <div class="card">
+      <h2>Je suis un titre</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
+                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
+                vel, viverra egestas ligula.</p>
+    </div>
+
+    <div class="card">
+      <h2>Je suis un titre</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
+                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
+                vel, viverra egestas ligula.</p>
+    </div>
+
+    <div class="card">
+      <h2>Je suis un titre</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
+                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
+                vel, viverra egestas ligula.</p>
+    </div>
+
 </div>
+```
 
-<pre class="brush: html hidden">&lt;div class="container"&gt;
-  &lt;div class="card"&gt;
-    &lt;h2&gt;Je suis un titre&lt;/h2&gt;
-    &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.&lt;/p&gt;
-    &lt;/div&gt;
-
-    &lt;div class="card"&gt;
-      &lt;h2&gt;Je suis un titre&lt;/h2&gt;
-      &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.&lt;/p&gt;
-    &lt;/div&gt;
-
-    &lt;div class="card"&gt;
-      &lt;h2&gt;Je suis un titre&lt;/h2&gt;
-      &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="card"&gt;
-      &lt;h2&gt;Je suis un titre&lt;/h2&gt;
-      &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.&lt;/p&gt;
-    &lt;/div&gt;
-
-    &lt;div class="card"&gt;
-      &lt;h2&gt;Je suis un titre&lt;/h2&gt;
-      &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.&lt;/p&gt;
-    &lt;/div&gt;
-
-    &lt;div class="card"&gt;
-      &lt;h2&gt;Je suis un titre&lt;/h2&gt;
-      &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.&lt;/p&gt;
-    &lt;/div&gt;
-
-    &lt;div class="card"&gt;
-      &lt;h2&gt;Je suis un titre&lt;/h2&gt;
-      &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.&lt;/p&gt;
-    &lt;/div&gt;
-
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">.container {
+```css
+.container {
   column-width: 250px;
   column-gap: 20px;
 }
@@ -248,17 +272,19 @@ original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
   border: 2px solid rgb(79, 185, 227);
   padding: 10px;
   margin: 0 0 1em 0;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Colonnes_et_coupures', '100%', 600) }}</p>
+{{ EmbedLiveSample('Colonnes_et_coupures', '100%', 600) }}
 
-<h3>Utiliser break-inside</h3>
+### Utiliser break-inside
 
-<p>Pour contrôler ce comportement, utilisons les propriétés stipulées dans <a href="/fr/docs/Web/CSS/CSS_Fragmentation">CSS Fragmentation</a> (coupures dans la CSS). Cette fonctionnalité nous offre des propriétés pour contrôler les coupures de contenu dans le <em>multicol</em> et les médias paginés. Par exemple, ajoutons la propriété {{cssxref("break-inside")}} avec la valeur <code>avoid</code> aux règles pour <code>.card</code>, qui est le conteneur du titre et du texte. Nous indiquons que nous ne souhaitons pas que cette boîte soit coupée.</p>
+Pour contrôler ce comportement, utilisons les propriétés stipulées dans [CSS Fragmentation](/fr/docs/Web/CSS/CSS_Fragmentation) (coupures dans la CSS). Cette fonctionnalité nous offre des propriétés pour contrôler les coupures de contenu dans le _multicol_ et les médias paginés. Par exemple, ajoutons la propriété {{cssxref("break-inside")}} avec la valeur `avoid` aux règles pour `.card`, qui est le conteneur du titre et du texte. Nous indiquons que nous ne souhaitons pas que cette boîte soit coupée.
 
-<p>Il est également préférable d'ajouter l'ancienne propriété <code>page-break-inside: avoid</code> pour une meilleure prise en charge par les divers navigateurs.</p>
+Il est également préférable d'ajouter l'ancienne propriété `page-break-inside: avoid` pour une meilleure prise en charge par les divers navigateurs.
 
-<pre class="brush: css">.card {
+```css
+.card {
   break-inside: avoid;
   page-break-inside: avoid;
   background-color: rgb(207,232,220);
@@ -266,77 +292,81 @@ original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
   padding: 10px;
   margin: 0 0 1em 0;
 }
-</pre>
+```
 
-<p>Actualisez la page et les boîtes devraient rester entières.</p>
+Actualisez la page et les boîtes devraient rester entières.
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
   font: .9em/1.2 Arial, Helvetica, sans-serif;
-}              </pre>
+}
+```
 
-<pre class="brush: html hidden">&lt;div class="container"&gt;
-  &lt;div class="card"&gt;
-    &lt;h2&gt;Je suis un titre&lt;/h2&gt;
-    &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+```html hidden
+<div class="container">
+  <div class="card">
+    <h2>Je suis un titre</h2>
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
                 vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
                 tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.&lt;/p&gt;
-    &lt;/div&gt;
+                vel, viverra egestas ligula.</p>
+    </div>
 
-    &lt;div class="card"&gt;
-      &lt;h2&gt;Je suis un titre&lt;/h2&gt;
-      &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+    <div class="card">
+      <h2>Je suis un titre</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
                 vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
                 tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.&lt;/p&gt;
-    &lt;/div&gt;
+                vel, viverra egestas ligula.</p>
+    </div>
 
-    &lt;div class="card"&gt;
-      &lt;h2&gt;Je suis un titre&lt;/h2&gt;
-      &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+    <div class="card">
+      <h2>Je suis un titre</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
                 vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
                 tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="card"&gt;
-      &lt;h2&gt;Je suis un titre&lt;/h2&gt;
-      &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+                vel, viverra egestas ligula.</p>
+    </div>
+    <div class="card">
+      <h2>Je suis un titre</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
                 vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
                 tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.&lt;/p&gt;
-    &lt;/div&gt;
+                vel, viverra egestas ligula.</p>
+    </div>
 
-    &lt;div class="card"&gt;
-      &lt;h2&gt;Je suis un titre&lt;/h2&gt;
-      &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+    <div class="card">
+      <h2>Je suis un titre</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
                 vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
                 tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.&lt;/p&gt;
-    &lt;/div&gt;
+                vel, viverra egestas ligula.</p>
+    </div>
 
-    &lt;div class="card"&gt;
-      &lt;h2&gt;Je suis un titre&lt;/h2&gt;
-      &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+    <div class="card">
+      <h2>Je suis un titre</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
                 vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
                 tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.&lt;/p&gt;
-    &lt;/div&gt;
+                vel, viverra egestas ligula.</p>
+    </div>
 
-    &lt;div class="card"&gt;
-      &lt;h2&gt;Je suis un titre&lt;/h2&gt;
-      &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+    <div class="card">
+      <h2>Je suis un titre</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
                 vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
                 tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.&lt;/p&gt;
-    &lt;/div&gt;
+                vel, viverra egestas ligula.</p>
+    </div>
 
-&lt;/div&gt;
-</pre>
+</div>
+```
 
-<pre class="brush: css">.container {
+```css
+.container {
   column-width: 250px;
   column-gap: 20px;
 }
@@ -348,34 +378,31 @@ original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
   border: 2px solid rgb(79, 185, 227);
   padding: 10px;
   margin: 0 0 1em 0;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Utiliser_break-inside', '100%', 600) }}</p>
+{{ EmbedLiveSample('Utiliser_break-inside', '100%', 600) }}
 
-<h2 id="Résumé">Résumé</h2>
+## Résumé
 
-<p>Vous savez maintenant comment utiliser les fonctionnalités élémentaires de la mise en page sur plusieurs colonnes, autre outil à votre disposition pour choisir une méthode de présentation pour le désign de vos applications.</p>
+Vous savez maintenant comment utiliser les fonctionnalités élémentaires de la mise en page sur plusieurs colonnes, autre outil à votre disposition pour choisir une méthode de présentation pour le désign de vos applications.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Fragmentation">Coupures avec la CSS</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts">Utilisation des mises en page sur plusieurs colonnes</a></li>
-</ul>
+- [Coupures avec la CSS](/fr/docs/Web/CSS/CSS_Fragmentation)
+- [Utilisation des mises en page sur plusieurs colonnes](/fr/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
 
-<p>{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}</p>
+{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
 
-<h2 id="Dans_ce_module">Dans ce module</h2>
+## Dans ce module
 
-<ul>
- <li><a href="/fr/docs/Learn/CSS/CSS_layout/Introduction">Introduction to CSS layout</a></li>
- <li><a href="/fr/docs/Learn/CSS/CSS_layout/Normal_Flow">Normal Flow</a></li>
- <li><a href="/fr/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
- <li><a href="/fr/docs/Learn/CSS/CSS_layout/Grids">Grid</a></li>
- <li><a href="/fr/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li>
- <li><a href="/fr/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li>
- <li><a href="/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column Layout</a></li>
- <li><a href="/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy Layout Methods</a></li>
- <li><a href="/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Supporting older browsers</a></li>
- <li><a href="/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">Fundamental Layout Comprehension Assessment</a></li>
-</ul>
+- [Introduction to CSS layout](/fr/docs/Learn/CSS/CSS_layout/Introduction)
+- [Normal Flow](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
+- [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
+- [Grid](/fr/docs/Learn/CSS/CSS_layout/Grids)
+- [Floats](/fr/docs/Learn/CSS/CSS_layout/Floats)
+- [Positioning](/fr/docs/Learn/CSS/CSS_layout/Positioning)
+- [Multiple-column Layout](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Legacy Layout Methods](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
+- [Supporting older browsers](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
+- [Fundamental Layout Comprehension Assessment](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

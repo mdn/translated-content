@@ -9,26 +9,29 @@ translation_of: Learn/Forms/How_to_build_custom_form_controls/Example_1
 original_slug: >-
   Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_1
 ---
-<p>C'est le premier exemple de code qui explique <a href="/fr/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets">comment construire un widget de formulaire personnalisé</a>.</p>
+C'est le premier exemple de code qui explique [comment construire un widget de formulaire personnalisé](/fr/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets).
 
-<h2 id="Basic_state">État initial</h2>
+## État initial
 
-<h3 id="Basic_state_HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="select"&gt;
-  &lt;span class="value"&gt;Cerise&lt;/span&gt;
-  &lt;ul class="optList hidden"&gt;
-    &lt;li class="option"&gt;Cerise&lt;/li&gt;
-    &lt;li class="option"&gt;Citron&lt;/li&gt;
-    &lt;li class="option"&gt;Banane&lt;/li&gt;
-    &lt;li class="option"&gt;Fraise&lt;/li&gt;
-    &lt;li class="option"&gt;Pomme&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="select">
+  <span class="value">Cerise</span>
+  <ul class="optList hidden">
+    <li class="option">Cerise</li>
+    <li class="option">Citron</li>
+    <li class="option">Banane</li>
+    <li class="option">Fraise</li>
+    <li class="option">Pomme</li>
+  </ul>
+</div>
+```
 
-<h3 id="Basic_state_CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* --------------- */
+```css
+/* --------------- */
 /* Styles Requis   */
 /* --------------- */
 
@@ -142,30 +145,33 @@ original_slug: >-
   background: #000;
   color: #FFFFFF;
 }
-</pre>
+```
 
-<h3 id="Resultat_pour_l'état_initial">Resultat pour l'état initial</h3>
+### Resultat pour l'état initial
 
-<div>{{ EmbedLiveSample("Basic_state", 120, 130) }}</div>
+{{ EmbedLiveSample("Basic_state", 120, 130) }}
 
-<h2 id="Active_state">État actif</h2>
+## État actif
 
-<h3 id="Active_state_HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;div class="select active"&gt;
-  &lt;span class="value"&gt;Cerise&lt;/span&gt;
-  &lt;ul class="optList hidden"&gt;
-    &lt;li class="option"&gt;Cerise&lt;/li&gt;
-    &lt;li class="option"&gt;Citron&lt;/li&gt;
-    &lt;li class="option"&gt;Banane&lt;/li&gt;
-    &lt;li class="option"&gt;Fraise&lt;/li&gt;
-    &lt;li class="option"&gt;Pomme&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="select active">
+  <span class="value">Cerise</span>
+  <ul class="optList hidden">
+    <li class="option">Cerise</li>
+    <li class="option">Citron</li>
+    <li class="option">Banane</li>
+    <li class="option">Fraise</li>
+    <li class="option">Pomme</li>
+  </ul>
+</div>
+```
 
-<h3 id="Active_state_CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">/* --------------- */
+```css
+/* --------------- */
 /* Styles Requis   */
 /* --------------- */
 
@@ -278,30 +284,34 @@ original_slug: >-
 .select .highlight {
   background: #000;
   color: #FFFFFF;
-}</pre>
+}
+```
 
-<h3 id="Résultat_pour_état_actif">Résultat pour état actif</h3>
+### Résultat pour état actif
 
-<div>{{ EmbedLiveSample("Active_state", 120, 130) }}</div>
+{{ EmbedLiveSample("Active_state", 120, 130) }}
 
-<h2 id="Open_state">État ouvert</h2>
+## État ouvert
 
-<h3 id="Open_state_HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;div class="select active"&gt;
-  &lt;span class="value"&gt;Cerise&lt;/span&gt;
-  &lt;ul class="optList"&gt;
-    &lt;li class="option highlight"&gt;Cerise&lt;/li&gt;
-    &lt;li class="option"&gt;Citron&lt;/li&gt;
-    &lt;li class="option"&gt;Banane&lt;/li&gt;
-    &lt;li class="option"&gt;Fraise&lt;/li&gt;
-    &lt;li class="option"&gt;Pomme&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="select active">
+  <span class="value">Cerise</span>
+  <ul class="optList">
+    <li class="option highlight">Cerise</li>
+    <li class="option">Citron</li>
+    <li class="option">Banane</li>
+    <li class="option">Fraise</li>
+    <li class="option">Pomme</li>
+  </ul>
+</div>
+```
 
-<h3 id="Open_state_CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">/* --------------- */
+```css
+/* --------------- */
 /* Styles Requis   */
 /* --------------- */
 
@@ -414,8 +424,9 @@ original_slug: >-
 .select .highlight {
   background: #000;
   color: #FFF;
-}</pre>
+}
+```
 
-<h3 id="Resultat_pour_état_ouvert">Resultat pour état ouvert</h3>
+### Resultat pour état ouvert
 
-<div>{{ EmbedLiveSample("Open_state", 120, 130) }}</div>
+{{ EmbedLiveSample("Open_state", 120, 130) }}

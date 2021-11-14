@@ -4,61 +4,60 @@ slug: Learn/Forms/Sending_forms_through_JavaScript
 translation_of: Learn/Forms/Sending_forms_through_JavaScript
 original_slug: Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript
 ---
-<div>{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés", "Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers", "Web/Guide/HTML/Formulaires")}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés", "Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers", "Web/Guide/HTML/Formulaires")}}
 
-<p>Comme dans le <a href="/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires">précédent article</a>, les formulaires HTML peuvent envoyer une requête HTTP par déclaration. Mais des formulaires peuvent aussi préparer une requête HTTP à adresser via JavaScript. Cet article explore comment faire cela.</p>
+Comme dans le [précédent article](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires), les formulaires HTML peuvent envoyer une requête HTTP par déclaration. Mais des formulaires peuvent aussi préparer une requête HTTP à adresser via JavaScript. Cet article explore comment faire cela.
 
-<h2 id="Un_formulaire_n'est_pas_toujours_un_&lt;form>">Un formulaire n'est pas toujours un &lt;form&gt;</h2>
+## Un formulaire n'est pas toujours un \<form>
 
-<p>Avec les <a href="/fr/docs/Open_Web_apps_and_Web_standards">applications Web ouvertes</a>, il est de plus en plus courant d'utiliser des <a href="/fr/docs/Learn/Forms">formulaires HTML</a> autres que des formulaires à remplir par des personnes — de plus en plus de développeurs prennent le contrôle sur la transmission des données.</p>
+Avec les [applications Web ouvertes](/fr/docs/Open_Web_apps_and_Web_standards), il est de plus en plus courant d'utiliser des [formulaires HTML](/fr/docs/Learn/Forms) autres que des formulaires à remplir par des personnes — de plus en plus de développeurs prennent le contrôle sur la transmission des données.
 
-<h3 id="Obtenir_le_contrôle_sur_la_totalité_de_l'interface">Obtenir le contrôle sur la totalité de l'interface</h3>
+### Obtenir le contrôle sur la totalité de l'interface
 
-<p>La soumission d'un formulaire HTML standard charge l'URL où les données sont envoyées, car la fenêtre du navigateur manipule une pleine page. Éviter de charger une pleine page peut amener plus de fluidité en masquant des clignotements et des lenteurs de réseau.</p>
+La soumission d'un formulaire HTML standard charge l'URL où les données sont envoyées, car la fenêtre du navigateur manipule une pleine page. Éviter de charger une pleine page peut amener plus de fluidité en masquant des clignotements et des lenteurs de réseau.
 
-<p>De nombreuses UI modernes n'utilisent les formulaires HTML que pour recueillir des données utilisateur. Lorsque l'utilisateur veut envoyer les données, l'application prend la main et transmet les données de manière asynchrone en arrière-plan, mettant à jour uniquement les parties de l'interface utilisateur nécessitant des modifications.</p>
+De nombreuses UI modernes n'utilisent les formulaires HTML que pour recueillir des données utilisateur. Lorsque l'utilisateur veut envoyer les données, l'application prend la main et transmet les données de manière asynchrone en arrière-plan, mettant à jour uniquement les parties de l'interface utilisateur nécessitant des modifications.
 
-<p>L'envoi asynchrone de données arbitraires est connu sous le nom AJAX, qui signifie "Asynchronous JavaScript And XML" (XML et JavaScript asynchrones).</p>
+L'envoi asynchrone de données arbitraires est connu sous le nom AJAX, qui signifie "Asynchronous JavaScript And XML" (XML et JavaScript asynchrones).
 
-<h3 id="Comment_est-ce_différent">Comment est-ce différent ?</h3>
+### Comment est-ce différent ?
 
-<p><a href="/fr/docs/AJAX">AJAX</a> utilise l'objet DOM {{domxref("XMLHttpRequest")}} (XHR).Il peut construire des requêtes HTTP, les envoyer et retrouver leur résultats.</p>
+[AJAX](/fr/docs/AJAX) utilise l'objet DOM {{domxref("XMLHttpRequest")}} (XHR).Il peut construire des requêtes HTTP, les envoyer et retrouver leur résultats.
 
-<div class="note">
-<p><strong>Note :</strong> Les techniques AJAX anciennes ne se fondaient pas forcément sur {{domxref("XMLHttpRequest")}}. Par exemple, <a href="http://en.wikipedia.org/wiki/JSONP" rel="external">JSONP</a> combiné à la fonction <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/eval"><code>eval()</code></a>. Cela fonctionne, mais n'est pas recommandé en raison de sérieux problèmes de sécurité. La seule raison d'en poursuivre l'utilisation est l'utilisation de navigateurs anciens qui ne prennent pas en charge {{domxref("XMLHttpRequest")}} ou <a href="/fr/docs/Glossaire/JSON">JSON</a>, mais ce sont vraiment des navigateurs anciens ! <strong>Évitez ces techniques.</strong></p>
-</div>
+> **Note :** Les techniques AJAX anciennes ne se fondaient pas forcément sur {{domxref("XMLHttpRequest")}}. Par exemple, [JSONP](http://en.wikipedia.org/wiki/JSONP) combiné à la fonction [`eval()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/eval). Cela fonctionne, mais n'est pas recommandé en raison de sérieux problèmes de sécurité. La seule raison d'en poursuivre l'utilisation est l'utilisation de navigateurs anciens qui ne prennent pas en charge {{domxref("XMLHttpRequest")}} ou [JSON](/fr/docs/Glossaire/JSON), mais ce sont vraiment des navigateurs anciens ! **Évitez ces techniques.**
 
-<p> </p>
 
-<p>Historiquement, {{domxref("XMLHttpRequest")}} a été conçu pour récupérer et envoyer du XML comme format d'échange. Cependant,<a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON"> JSON</a> a remplacé XML et est de plus en plus courant aujourd'hui.</p>
 
-<p>Mais ni XML ni JSON ne s'adaptent à l'encodage des demandes de données de formulaire. Les données de formulaire (<code>application/x-www-form-urlencoded</code>) sont constituées de listes de paires clé/valeur codées par URL. Pour la transmission de données binaires, la requête HTTP est transformée en données <code>multipart/form‑data</code>.</p>
+Historiquement, {{domxref("XMLHttpRequest")}} a été conçu pour récupérer et envoyer du XML comme format d'échange. Cependant,[ JSON](/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON) a remplacé XML et est de plus en plus courant aujourd'hui.
 
-<p>Si vous contrôlez le frontal (le code exécuté dans le navigateur) et l'arrière‑plan (le code exécuté sur le serveur), vous pouvez envoyer JSON/XML et les traiter comme vous le souhaitez.</p>
+Mais ni XML ni JSON ne s'adaptent à l'encodage des demandes de données de formulaire. Les données de formulaire (`application/x-www-form-urlencoded`) sont constituées de listes de paires clé/valeur codées par URL. Pour la transmission de données binaires, la requête HTTP est transformée en données `multipart/form‑data`.
 
-<p>Mais si vous voulez utiliser un service tiers, ce n'est pas si facile. Certains services n'acceptent que les données de formulaire. Il y a aussi des cas où il est plus simple d'utiliser les données du formulaire. Si les données sont des paires clé/valeur ou des données binaires brutes, des outils d'arrière‑plan existants peuvent les traiter sans code supplémentaire.</p>
+Si vous contrôlez le frontal (le code exécuté dans le navigateur) et l'arrière‑plan (le code exécuté sur le serveur), vous pouvez envoyer JSON/XML et les traiter comme vous le souhaitez.
 
-<p>Comment envoyer de telles données ?</p>
+Mais si vous voulez utiliser un service tiers, ce n'est pas si facile. Certains services n'acceptent que les données de formulaire. Il y a aussi des cas où il est plus simple d'utiliser les données du formulaire. Si les données sont des paires clé/valeur ou des données binaires brutes, des outils d'arrière‑plan existants peuvent les traiter sans code supplémentaire.
 
-<h2 id="Envoi_des_données_de_formulaire">Envoi des données de formulaire</h2>
+Comment envoyer de telles données ?
 
-<p>Il y a 3 façons d'envoyer des données de formulaire, allant des techniques existantes jusqu'à l'objet {{domxref("XMLHttpRequest/FormData", "FormData")}} plus récent. Examinons-les en détail.</p>
+## Envoi des données de formulaire
 
-<h3 id="Construire_manuellement_un_XMLHttpRequest">Construire manuellement un XMLHttpRequest</h3>
+Il y a 3 façons d'envoyer des données de formulaire, allant des techniques existantes jusqu'à l'objet {{domxref("XMLHttpRequest/FormData", "FormData")}} plus récent. Examinons-les en détail.
 
-<p>{{domxref("XMLHttpRequest")}} est la manière la plus sûre et la plus fiable de faire des requêtes HTTP. Pour envoyer des données de formulaire avec {{domxref("XMLHttpRequest")}}, préparez les données par encodage URL et suivez les spécificités des requêtes de données de formulaire.</p>
+### Construire manuellement un XMLHttpRequest
 
-<div class="note">
-<p><strong>Note :</strong> Pour en savoir plus sur <code>XMLHttpRequest</code>, ces articles pourraient vous intéresser : un article d'introduction à <a href="/fr/docs/Web/Guide/AJAX/Premiers_pas">AJAX</a> et un didacticiel plus fouillé à ce propos utilisant <a href="/fr/docs/HTML_in_XMLHttpRequest"><code>XMLHttpRequest</code></a>.</p>
-</div>
+{{domxref("XMLHttpRequest")}} est la manière la plus sûre et la plus fiable de faire des requêtes HTTP. Pour envoyer des données de formulaire avec {{domxref("XMLHttpRequest")}}, préparez les données par encodage URL et suivez les spécificités des requêtes de données de formulaire.
 
-<p>Reconstruisons l'exemple précédent :</p>
+> **Note :** Pour en savoir plus sur `XMLHttpRequest`, ces articles pourraient vous intéresser : un article d'introduction à [AJAX](/fr/docs/Web/Guide/AJAX/Premiers_pas) et un didacticiel plus fouillé à ce propos utilisant [`XMLHttpRequest`](/fr/docs/HTML_in_XMLHttpRequest).
 
-<pre class="brush: html">&lt;button type="button" onclick="sendData({test:'ok'})"&gt;Cliquez ici !&lt;/button&gt;</pre>
+Reconstruisons l'exemple précédent :
 
-<p>Comme vous pouvez le voir, le HTML n'a pas réellement changé. Mais, le JavaScript est totalement différent :</p>
+```html
+<button type="button" onclick="sendData({test:'ok'})">Cliquez ici !</button>
+```
 
-<pre class="brush: js">function sendData(data) {
+Comme vous pouvez le voir, le HTML n'a pas réellement changé. Mais, le JavaScript est totalement différent :
+
+```js
+function sendData(data) {
   var XHR = new XMLHttpRequest();
   var urlEncodedData = "";
   var urlEncodedDataPairs = [];
@@ -72,7 +71,7 @@ original_slug: Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript
   // Combinez les paires en une seule chaîne de caractères et remplacez tous
   // les espaces codés en % par le caractère'+' ; cela correspond au comportement
   // des soumissions de formulaires de navigateur.
-  urlEncodedData = urlEncodedDataPairs.join('&amp;').replace(/%20/g, '+');
+  urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
 
   // Définissez ce qui se passe en cas de succès de soumission de données
   XHR.addEventListener('load', function(event) {
@@ -92,31 +91,33 @@ original_slug: Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript
 
   // Finalement, envoyez les données.
   XHR.send(urlEncodedData);
-}</pre>
+}
+```
 
-<p>Voici le résultat en direct :</p>
+Voici le résultat en direct :
 
-<p>{{EmbedLiveSample("Construire_manuellement_un_XMLHttpRequest", "100%", 50)}}</p>
+{{EmbedLiveSample("Construire_manuellement_un_XMLHttpRequest", "100%", 50)}}
 
-<div class="note">
-<p><strong>Note :</strong> Cette utilisation de {{domxref("XMLHttpRequest")}} est assujettie à la politique « même origine » si vous voulez envoyer des données à un site web tiers. Pour les demandes d'origine croisée, vous aurez besoin d'un contrôle d'accès <a href="/fr/docs/HTTP/Access_control_CORS">CORS et HTTP</a>.</p>
-</div>
+> **Note :** Cette utilisation de {{domxref("XMLHttpRequest")}} est assujettie à la politique « même origine » si vous voulez envoyer des données à un site web tiers. Pour les demandes d'origine croisée, vous aurez besoin d'un contrôle d'accès [CORS et HTTP](/fr/docs/HTTP/Access_control_CORS).
 
-<h3 id="Utilisation_de_XMLHttpRequest_et_de_l'objet_FormData">Utilisation de XMLHttpRequest et de l'objet FormData</h3>
+### Utilisation de XMLHttpRequest et de l'objet FormData
 
-<p>Construire manuellement une requête HTTP peut devenir fastidieux. Heureusement, une <a href="http://www.w3.org/TR/XMLHttpRequest/">spécification XMLHttpRequest</a> récente fournit un moyen pratique et plus simple pour traiter les demandes de données de formulaire avec l'objet {{domxref("XMLHttpRequest/FormData", "FormData")}}.</p>
+Construire manuellement une requête HTTP peut devenir fastidieux. Heureusement, une [spécification XMLHttpRequest](http://www.w3.org/TR/XMLHttpRequest/) récente fournit un moyen pratique et plus simple pour traiter les demandes de données de formulaire avec l'objet {{domxref("XMLHttpRequest/FormData", "FormData")}}.
 
-<p>L'objet {{domxref("XMLHttpRequest/FormData", "FormData")}} peut s'utiliser pour construire des données de formulaire pour la transmission ou pour obtenir les données des élément de formulaire de façon à gérer leur mode d'envoi. Notez que les objets {{domxref("XMLHttpRequest/FormData", "FormData")}} sont en écriture seule (« write only »), ce qui signifie que vous pouvez les modifier, mais pas récupérer leur contenu.</p>
+L'objet {{domxref("XMLHttpRequest/FormData", "FormData")}} peut s'utiliser pour construire des données de formulaire pour la transmission ou pour obtenir les données des élément de formulaire de façon à gérer leur mode d'envoi. Notez que les objets {{domxref("XMLHttpRequest/FormData", "FormData")}} sont en écriture seule (« write only »), ce qui signifie que vous pouvez les modifier, mais pas récupérer leur contenu.
 
-<p>L'utilisation de cet objet est détaillée dans <a href="/fr/docs/Web/API/FormData/Utilisation_objets_FormData">Utiliser les objets FormData</a>, mais voici deux exemples :</p>
+L'utilisation de cet objet est détaillée dans [Utiliser les objets FormData](/fr/docs/Web/API/FormData/Utilisation_objets_FormData), mais voici deux exemples :
 
-<h4 id="Utiliser_un_objet_FormData_autonome">Utiliser un objet FormData autonome</h4>
+#### Utiliser un objet FormData autonome
 
-<pre class="brush: html">&lt;button type="button" onclick="sendData({test:'ok'})"&gt;Cliquez ici !&lt;/button&gt;</pre>
+```html
+<button type="button" onclick="sendData({test:'ok'})">Cliquez ici !</button>
+```
 
-<p>Vous devriez être familier de cet exemple HTML.</p>
+Vous devriez être familier de cet exemple HTML.
 
-<pre class="brush: js">function sendData(data) {
+```js
+function sendData(data) {
   var XHR = new XMLHttpRequest();
   var FD  = new FormData();
 
@@ -140,27 +141,31 @@ original_slug: Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript
 
   // Expédiez l'objet FormData ; les en-têtes HTTP sont automatiquement définies
   XHR.send(FD);
-}</pre>
+}
+```
 
-<p>Voici le résultat directement :</p>
+Voici le résultat directement :
 
-<p>{{EmbedLiveSample("Utiliser_un_objet_FormData_autonome", "100%", 60)}}</p>
+{{EmbedLiveSample("Utiliser_un_objet_FormData_autonome", "100%", 60)}}
 
-<h4 id="Utiliser_un_objet_FormData_lié_à_un_élément_form">Utiliser un objet FormData lié à un élément form</h4>
+#### Utiliser un objet FormData lié à un élément form
 
-<p>Vous pouvez également lier un objet <code>FormData</code> à un élément {{HTMLElement("form")}} et  créer ainsi un <code>FormData</code> représentant les données contenues dans le formulaire.</p>
+Vous pouvez également lier un objet `FormData` à un élément {{HTMLElement("form")}} et  créer ainsi un `FormData` représentant les données contenues dans le formulaire.
 
-<p>Le HTML est classique :</p>
+Le HTML est classique :
 
-<pre class="brush: html">&lt;form id="myForm"&gt;
-  &lt;label for="myName"&gt;Dites-moi votre nom :&lt;/label&gt;
-  &lt;input id="myName" name="name" value="John"&gt;
-  &lt;input type="submit" value="Envoyer !"&gt;
-&lt;/form&gt;</pre>
+```html
+<form id="myForm">
+  <label for="myName">Dites-moi votre nom :</label>
+  <input id="myName" name="name" value="John">
+  <input type="submit" value="Envoyer !">
+</form>
+```
 
-<p>Mais JavaScript sera de la forme :</p>
+Mais JavaScript sera de la forme :
 
-<pre class="brush: js">window.addEventListener("load", function () {
+```js
+window.addEventListener("load", function () {
   function sendData() {
     var XHR = new XMLHttpRequest();
 
@@ -193,27 +198,29 @@ original_slug: Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript
 
     sendData();
   });
-});</pre>
+});
+```
 
-<p>Voici le résultat en direct :</p>
+Voici le résultat en direct :
 
-<p>{{EmbedLiveSample("Utiliser_un_objet_FormData_lié_à_un_élément_form", "100%", 70)}}</p>
+{{EmbedLiveSample("Utiliser_un_objet_FormData_lié_à_un_élément_form", "100%", 70)}}
 
-<p>Vous pouvez même intervenir davantage dans le processus en utilisant la propriété {{domxref("HTMLFormElement.elements", "elements")}} du formulaire pour obtenir une liste de tous les éléments de données du formulaire et les gérer chacun individuellement dans le programme. Pour en savoir plus, voir l'exemple dans la {{SectionOnPage("/en-US/docs/Web/API/HTMLFormElement.elements", "Accessing the element list's contents")}}.</p>
+Vous pouvez même intervenir davantage dans le processus en utilisant la propriété {{domxref("HTMLFormElement.elements", "elements")}} du formulaire pour obtenir une liste de tous les éléments de données du formulaire et les gérer chacun individuellement dans le programme. Pour en savoir plus, voir l'exemple dans la {{SectionOnPage("/en-US/docs/Web/API/HTMLFormElement.elements", "Accessing the element list's contents")}}.
 
-<h3 id="Construire_un_DOM_dans_un_iframe_caché">Construire un DOM dans un <code>iframe</code> caché</h3>
+### Construire un DOM dans un `iframe` caché
 
-<p>La plus ancienne façon d'expédier des données de formulaire de manière asynchrone consiste à construire un formulaire avec l'API DOM, puis d'envoyer ses données dans un {{HTMLElement("iframe")}} caché. Pour accéder au résultat de votre envoi, il suffit de récupérer le contenu de l'élément {{HTMLElement("iframe")}}.</p>
+La plus ancienne façon d'expédier des données de formulaire de manière asynchrone consiste à construire un formulaire avec l'API DOM, puis d'envoyer ses données dans un {{HTMLElement("iframe")}} caché. Pour accéder au résultat de votre envoi, il suffit de récupérer le contenu de l'élément {{HTMLElement("iframe")}}.
 
-<div class="warning">
-<p><strong>Attention :</strong> <strong>Évitez d'employer cette technique.</strong> Il y a des risques concernant la sécurité avec des services tierce-partie car vous laissez ouverte la possibilité d'une <a href="https://fr.wikipedia.org/wiki/Cross-site_scripting" rel="external">attaque par injection de script</a>. Si vous utilisez HTTPS, il reste possible de perturber la <a href="/fr/docs/JavaScript/Same_origin_policy_for_JavaScript">politique de la même origine</a>, ce qui peut rendre le contenu de l'élément {{HTMLElement("iframe")}} inatteignable. Toutefois, cette méthode peut être votre seule possibilité si vous devez prendre en charge des navigateurs très anciens.</p>
-</div>
+> **Attention :** **Évitez d'employer cette technique.** Il y a des risques concernant la sécurité avec des services tierce-partie car vous laissez ouverte la possibilité d'une [attaque par injection de script](https://fr.wikipedia.org/wiki/Cross-site_scripting). Si vous utilisez HTTPS, il reste possible de perturber la [politique de la même origine](/fr/docs/JavaScript/Same_origin_policy_for_JavaScript), ce qui peut rendre le contenu de l'élément {{HTMLElement("iframe")}} inatteignable. Toutefois, cette méthode peut être votre seule possibilité si vous devez prendre en charge des navigateurs très anciens.
 
-<p>Voici un exemple :</p>
+Voici un exemple :
 
-<pre class="brush: html">&lt;button onclick="sendData({test:'ok'})"&gt;Cliquez ici !&lt;/button&gt;</pre>
+```html
+<button onclick="sendData({test:'ok'})">Cliquez ici !</button>
+```
 
-<pre class="brush: js">// Créer l'iFrame servant à envoyer les données
+```js
+// Créer l'iFrame servant à envoyer les données
 var iframe = document.createElement("iframe");
 iframe.name = "myTarget";
 
@@ -252,39 +259,43 @@ function sendData(data) {
 
   // Une fois le formulaire envoyé, le supprimer.
   document.body.removeChild(form);
-}</pre>
+}
+```
 
-<p>Voici le résultat en direct :</p>
+Voici le résultat en direct :
 
-<p>{{EmbedLiveSample('Construire_un_DOM_dans_un_iframe_caché', "100%", 50)}}</p>
+{{EmbedLiveSample('Construire_un_DOM_dans_un_iframe_caché', "100%", 50)}}
 
-<p> </p>
 
-<h2 id="Gestion_des_données_binaires">Gestion des données binaires</h2>
 
-<p>Si vous utilisez un objet {{domxref("XMLHttpRequest/FormData", "FormData")}} avec un formulaire qui inclut des widgets <code>&lt;input type="file"&gt;</code>, les données seront traitées automatiquement. Mais pour envoyer des données binaires à la main, il y a un travail supplémentaire à faire.</p>
+## Gestion des données binaires
 
-<p>Il existe de nombreuses sources de données binaires sur le Web moderne : {{domxref("FileReader")}}, {{domxref("HTMLCanvasElement", "Canvas")}} et <a href="/fr/docs/WebRTC/navigator.getUserMedia">WebRTC</a>, par exemple. Malheureusement, certains anciens navigateurs ne peuvent pas accéder aux données binaires ou nécessitent des solutions de contournement compliquées. Ces cas hérités sont hors du champ d'application de cet article. Si vous voulez en savoir plus sur l'API FileReader, lisez <a href="/fr/docs/Using_files_from_web_applications">Utiliser les fichiers des applications Web</a>.</p>
+Si vous utilisez un objet {{domxref("XMLHttpRequest/FormData", "FormData")}} avec un formulaire qui inclut des widgets `<input type="file">`, les données seront traitées automatiquement. Mais pour envoyer des données binaires à la main, il y a un travail supplémentaire à faire.
 
-<p>Envoyer des données binaires avec le support de {{domxref("XMLHttpRequest/FormData", "FormData")}} est direct. Utilisez la méthode append() et vous avez terminé. Si vous devez le faire à la main, c'est plus délicat.</p>
+Il existe de nombreuses sources de données binaires sur le Web moderne : {{domxref("FileReader")}}, {{domxref("HTMLCanvasElement", "Canvas")}} et [WebRTC](/fr/docs/WebRTC/navigator.getUserMedia), par exemple. Malheureusement, certains anciens navigateurs ne peuvent pas accéder aux données binaires ou nécessitent des solutions de contournement compliquées. Ces cas hérités sont hors du champ d'application de cet article. Si vous voulez en savoir plus sur l'API FileReader, lisez [Utiliser les fichiers des applications Web](/fr/docs/Using_files_from_web_applications).
 
-<p>Dans l'exemple suivant, nous utilisons l'API {{domxref("FileReader")}} pour accéder aux données binaires et ensuite nous construisons à la main la demande de données du formulaire en plusieurs parties :</p>
+Envoyer des données binaires avec le support de {{domxref("XMLHttpRequest/FormData", "FormData")}} est direct. Utilisez la méthode append() et vous avez terminé. Si vous devez le faire à la main, c'est plus délicat.
 
-<pre class="brush: html">&lt;form id="myForm"&gt;
-  &lt;p&gt;
-    &lt;label for="i1"&gt;Données textuelles :&lt;/label&gt;
-    &lt;input id="i1" name="myText" value="Quelques données textuelles"&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="i2"&gt;Fichier de données :&lt;/label&gt;
-    &lt;input id="i2" name="myFile" type="file"&gt;
-  &lt;/p&gt;
-  &lt;button&gt;Envoyer !&lt;/button&gt;
-&lt;/form&gt;</pre>
+Dans l'exemple suivant, nous utilisons l'API {{domxref("FileReader")}} pour accéder aux données binaires et ensuite nous construisons à la main la demande de données du formulaire en plusieurs parties :
 
-<p>Comme vous pouvez le voir, le HTML est un <code>&lt;form&gt;</code>standard. Il n'y a rien de magique là‑dedans. La « magie » est dans le JavaScript :</p>
+```html
+<form id="myForm">
+  <p>
+    <label for="i1">Données textuelles :</label>
+    <input id="i1" name="myText" value="Quelques données textuelles">
+  </p>
+  <p>
+    <label for="i2">Fichier de données :</label>
+    <input id="i2" name="myFile" type="file">
+  </p>
+  <button>Envoyer !</button>
+</form>
+```
 
-<pre class="brush: js">// Comme nous voulons avoir accès à un nœud DOM,
+Comme vous pouvez le voir, le HTML est un `<form>`standard. Il n'y a rien de magique là‑dedans. La « magie » est dans le JavaScript :
+
+```js
+// Comme nous voulons avoir accès à un nœud DOM,
 // nous initialisons le script au chargement de la page.
 window.addEventListener('load', function () {
 
@@ -322,7 +333,7 @@ window.addEventListener('load', function () {
   function sendData() {
     // S'il y a un fichier sélectionné, attendre sa lecture
     // Sinon, retarder l'exécution de la fonction
-    if(!file.binary &amp;&amp; file.dom.files.length &gt; 0) {
+    if(!file.binary && file.dom.files.length > 0) {
       setTimeout(sendData, 10);
       return;
     }
@@ -402,40 +413,37 @@ window.addEventListener('load', function () {
     event.preventDefault();
     sendData();
   });
-});</pre>
+});
+```
 
-<p>Voici le résultat en direct :</p>
+Voici le résultat en direct :
 
-<p>{{EmbedLiveSample('Gestion_des_données_binaires', "100%", 150)}}</p>
+{{EmbedLiveSample('Gestion_des_données_binaires', "100%", 150)}}
 
-<h2 id="Conclusion">Conclusion</h2>
+## Conclusion
 
-<p>Selon le navigateur, l'envoi de données de formulaire par JavaScript peut être facile ou difficile. L'objet {{domxref("XMLHttpRequest/FormData", "FormData")}} en est généralement la cause et n'hésitez pas à utiliser un « polyfill » (<a href="https://fr.wikipedia.org/wiki/Polyfill">prothèse d'émulation</a>) pour cela sur les navigateurs anciens :</p>
+Selon le navigateur, l'envoi de données de formulaire par JavaScript peut être facile ou difficile. L'objet {{domxref("XMLHttpRequest/FormData", "FormData")}} en est généralement la cause et n'hésitez pas à utiliser un « polyfill » ([prothèse d'émulation](https://fr.wikipedia.org/wiki/Polyfill)) pour cela sur les navigateurs anciens :
 
-<ul>
- <li><a href="https://gist.github.com/3120320" rel="external">Ces primitives</a> sont des « polyfills » de  <code>FormData</code> avec des {{domxref("Using_web_workers","worker")}}.</li>
- <li><a href="https://github.com/francois2metz/html5-formdata" rel="external">HTML5-formdata</a> tente d'opérer un « polyfill » de l'objet <code>FormData</code>, mais il requiert un <a href="http://www.w3.org/TR/FileAPI/" rel="external">File API</a></li>
- <li><a href="https://github.com/jimmywarting/FormData">Ce « polyfill »</a> fournit la plupart des nouvelles méthodes dont <code>FormData</code> dispose (entrées, clés, valeurs et prise en charge de <code>for...of</code>)</li>
-</ul>
+- [Ces primitives](https://gist.github.com/3120320) sont des « polyfills » de  `FormData` avec des {{domxref("Using_web_workers","worker")}}.
+- [HTML5-formdata](https://github.com/francois2metz/html5-formdata) tente d'opérer un « polyfill » de l'objet `FormData`, mais il requiert un [File API](http://www.w3.org/TR/FileAPI/)
+- [Ce « polyfill »](https://github.com/jimmywarting/FormData) fournit la plupart des nouvelles méthodes dont `FormData` dispose (entrées, clés, valeurs et prise en charge de `for...of`)
 
-<p> </p>
 
-<div>{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés", "Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers", "Web/Guide/HTML/Formulaires")}}</div>
 
-<p> </p>
+{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés", "Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers", "Web/Guide/HTML/Formulaires")}}
 
-<h2 id="Dans_ce_module">Dans ce module</h2>
 
-<ul>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML">Mon premier formulaire HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML">Comment structurer un formulaire HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs">Les widgets natifs pour formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires">Envoi des données de formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire">Validation des données de formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés">Comment construire des widgets personnalisés pour formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript">Envoi de formulaires à l'aide du JavaScript</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers">Formulaires HTML dans les navigateurs anciens</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML">Mise en forme des formulaires HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms">Mise en forme avancée des formulaires HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets">Table de compatibilité des propriétés pour les widgets de formulaire</a></li>
-</ul>
+
+## Dans ce module
+
+- [Mon premier formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML)
+- [Comment structurer un formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML)
+- [Les widgets natifs pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs)
+- [Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires)
+- [Validation des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire)
+- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés)
+- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript)
+- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers)
+- [Mise en forme des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML)
+- [Mise en forme avancée des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms)
+- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets)

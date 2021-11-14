@@ -12,93 +12,103 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 original_slug: Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Debugging_HTML", "Apprendre/HTML/Introduction_%C3%A0_HTML/Structuring_a_page_of_content", "Apprendre/HTML/Introduction_à_HTML")}}
 
-<div>{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Debugging_HTML", "Apprendre/HTML/Introduction_%C3%A0_HTML/Structuring_a_page_of_content", "Apprendre/HTML/Introduction_à_HTML")}}</div>
-
-<p>Tôt ou tard nous apprenons tous à écrire une lettre ; c'est aussi un exemple utile pour tester nos compétences en matière de mise en forme ! Dans cet exercice, vous devrez opérer le balisage d'une lettre en utilisant les fonctionnalités textes élémentaires et avancées, y compris les hyperliens, et en plus nous testerons vos connaissances avec certains contenus de <code>&lt;head&gt;</code> en HTML.</p>
+Tôt ou tard nous apprenons tous à écrire une lettre ; c'est aussi un exemple utile pour tester nos compétences en matière de mise en forme ! Dans cet exercice, vous devrez opérer le balisage d'une lettre en utilisant les fonctionnalités textes élémentaires et avancées, y compris les hyperliens, et en plus nous testerons vos connaissances avec certains contenus de `<head>` en HTML.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prérequis :</th>
-   <td>Avant de se lancer dans cet exercice, vous devez déja avoir travaillé <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Commencer avec le HTML, </a><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML, </a><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">Fondamentaux du texte HTML, </a><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Création d'hyperliens</a> et <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">Formatage avancé du texte</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objectif :</th>
-   <td>Tester vos connaissances en balisage HTML simple et avancé de texte, d'hyperliens et de ce qu'il convient de mettre dans l'élément &lt;head&gt;.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prérequis :</th>
+      <td>
+        Avant de se lancer dans cet exercice, vous devez déja avoir travaillé
+        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+          >Commencer avec le HTML, </a
+        ><a
+          href="/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"
+          >Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML, </a
+        ><a
+          href="/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          >Fondamentaux du texte HTML, </a
+        ><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+          >Création d'hyperliens</a
+        >
+        et
+        <a
+          href="/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting"
+          >Formatage avancé du texte</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objectif :</th>
+      <td>
+        Tester vos connaissances en balisage HTML simple et avancé de texte,
+        d'hyperliens et de ce qu'il convient de mettre dans l'élément
+        &#x3C;head>.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Point_de_départ">Point de départ</h2>
+## Point de départ
 
-<p>Pour commencer cet exercice, vous devez récupérer le <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt">texte brut que vous allez baliser</a> et les CSS <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt">à inclure</a> dans l'HTML. Créez un nouveau fichier <code>.html</code> avec l'éditeur de texte dans lequel vous allez travailler (ou bien utilisez un site comme <a class="external external-icon" href="http://jsbin.com/">JSBin</a> ou <a class="external external-icon" href="https://thimble.mozilla.org/">Thimble</a> pour faire l'exercice.)</p>
+Pour commencer cet exercice, vous devez récupérer le [texte brut que vous allez baliser](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt) et les CSS [à inclure](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt) dans l'HTML. Créez un nouveau fichier `.html` avec l'éditeur de texte dans lequel vous allez travailler (ou bien utilisez un site comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) pour faire l'exercice.)
 
-<h2 id="Projet_«_lettre_»">Projet « lettre »</h2>
+## Projet « lettre »
 
-<p>Pour ce projet, votre tâche consiste à baliser une lettre destinée à être hébergée dans l'intranet d'une université. La lettre est une réponse d'une chercheuse en poste à une doctorante éventuelle à propos de sa candidature pour travailler à l'université.</p>
+Pour ce projet, votre tâche consiste à baliser une lettre destinée à être hébergée dans l'intranet d'une université. La lettre est une réponse d'une chercheuse en poste à une doctorante éventuelle à propos de sa candidature pour travailler à l'université.
 
-<p>Sémantique de blocs/structures :</p>
+Sémantique de blocs/structures :
 
-<ul>
- <li>Il convient que vous donniez à la totalité du document une structure appropriée comprenant le type de document et les éléments {{htmlelement("html")}}, {{htmlelement("head")}} et {{htmlelement("body")}}.</li>
- <li>La lettre doit être marquée avec une structure de paragraphes et d'en‑têtes, en prenant en considération les points suivants : un en‑tête de haut niveau (la ligne « Re : ») et trois en-têtes de deuxième niveau.</li>
- <li>Les dates de début des semestres, les sujets d'étude et les danses exotiques seront balisées avec les types de listes appropriés.</li>
- <li>Mettez les deux adresses dans l'élement {{htmlelement("address")}}. En plus, chaque ligne des adresses doit être mise sur une nouvelle ligne sans que ce soit un nouveau paragraphe.</li>
-</ul>
+- Il convient que vous donniez à la totalité du document une structure appropriée comprenant le type de document et les éléments {{htmlelement("html")}}, {{htmlelement("head")}} et {{htmlelement("body")}}.
+- La lettre doit être marquée avec une structure de paragraphes et d'en‑têtes, en prenant en considération les points suivants : un en‑tête de haut niveau (la ligne « Re : ») et trois en-têtes de deuxième niveau.
+- Les dates de début des semestres, les sujets d'étude et les danses exotiques seront balisées avec les types de listes appropriés.
+- Mettez les deux adresses dans l'élement {{htmlelement("address")}}. En plus, chaque ligne des adresses doit être mise sur une nouvelle ligne sans que ce soit un nouveau paragraphe.
 
-<p>Sémantique en ligne :</p>
+Sémantique en ligne :
 
-<ul>
- <li>Les noms de l'expéditeur et du destinataire (et « Tél » et « e‑mail ») doivent être marqués comme étant de grande importance.</li>
- <li>Les quatre dates du document doivent être indiquées dans des éléments appropriés contenant des dates lisibles par la machine.</li>
- <li>La première adresse et la première date de la lettre doivent recevoir une valeur d'attribut de classe « sender-column » ; le CSS que vous ajouterez plus tard les alignera à droite, comme c'est le cas dans une mise en page de lettre classique.</li>
- <li>Les cinq acronymes/abréviations dans le corps du texte de la lettre seront marqués pour permettre leur développement.</li>
- <li>Les six indices/exposants seront balisés de manière appropriée.</li>
- <li>Les symboles « degré », « plus grand que » , « multiplier » seront marqués avec les références d'entités voulues.</li>
- <li>Essayez de marquer au moins deux mots importants en gras/italique.</li>
- <li>Deux emplacements nécessitent un hyperlien ; ajoutez les liens appropriés avec des intitulés. Pour l'emplacement sur lequel le lien pointe, utilisez simplement http://example.com.</li>
- <li>La citation et la devise de l'université doivent être marquées avec les éléments appropriés.</li>
-</ul>
+- Les noms de l'expéditeur et du destinataire (et « Tél » et « e‑mail ») doivent être marqués comme étant de grande importance.
+- Les quatre dates du document doivent être indiquées dans des éléments appropriés contenant des dates lisibles par la machine.
+- La première adresse et la première date de la lettre doivent recevoir une valeur d'attribut de classe « sender-column » ; le CSS que vous ajouterez plus tard les alignera à droite, comme c'est le cas dans une mise en page de lettre classique.
+- Les cinq acronymes/abréviations dans le corps du texte de la lettre seront marqués pour permettre leur développement.
+- Les six indices/exposants seront balisés de manière appropriée.
+- Les symboles « degré », « plus grand que » , « multiplier » seront marqués avec les références d'entités voulues.
+- Essayez de marquer au moins deux mots importants en gras/italique.
+- Deux emplacements nécessitent un hyperlien ; ajoutez les liens appropriés avec des intitulés. Pour l'emplacement sur lequel le lien pointe, utilisez simplement http\://example.com.
+- La citation et la devise de l'université doivent être marquées avec les éléments appropriés.
 
-<p>Dans l'en‑tête du document :</p>
+Dans l'en‑tête du document :
 
-<ul>
- <li>Le jeu de caractères sera précisé comme étant utf-8 avec la balise <code>meta</code> appropriée.</li>
- <li>L'auteur de la lettre sera indiqué dans une balise <code>meta</code> adéquate.</li>
- <li>Les CSS fournies seront incorporées avec le marquage approprié.</li>
-</ul>
+- Le jeu de caractères sera précisé comme étant utf-8 avec la balise `meta` appropriée.
+- L'auteur de la lettre sera indiqué dans une balise `meta` adéquate.
+- Les CSS fournies seront incorporées avec le marquage approprié.
 
-<h2 id="Conseils_et_astuces">Conseils et astuces</h2>
+## Conseils et astuces
 
-<ul>
- <li>Utilisez le <a href="https://validator.w3.org/">validateur HTML W3C</a> pour valider votre HTML ; Vous aurez des points supplémentaires s'il est valide.</li>
- <li>Il n'est pas nécessaire de connaître les CSS pour faire cet exercice ; vous avez juste besoin de le mettre dans un élément HTML.</li>
-</ul>
+- Utilisez le [validateur HTML W3C](https://validator.w3.org/) pour valider votre HTML ; Vous aurez des points supplémentaires s'il est valide.
+- Il n'est pas nécessaire de connaître les CSS pour faire cet exercice ; vous avez juste besoin de le mettre dans un élément HTML.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>La capture d'écran suivante montre ce à quoi la lettre devrait ressembler après le balisage.</p>
+La capture d'écran suivante montre ce à quoi la lettre devrait ressembler après le balisage.
 
-<p><img alt="Présentation de la lettre" src="fr-lettre.png"></p>
+![Présentation de la lettre](fr-lettre.png)
 
-<h2 id="Évaluation">Évaluation</h2>
+## Évaluation
 
-<p>Si cette évaluation fait partie d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur/formateur pour notation. Si vous faites de l'auto‑formation vous pouvez obtenir un guide d'auto‑évaluation en le demandant sur le <a href="https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294">Learning Area Discourse thread</a> ou sur le canal IRC <a href="irc://irc.mozilla.org/mdn">#mdn</a> sur <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a>. Essayez l'exercice d'abord — il n'y a rien à gagner à tricher !</p>
+Si cette évaluation fait partie d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur/formateur pour notation. Si vous faites de l'auto‑formation vous pouvez obtenir un guide d'auto‑évaluation en le demandant sur le [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) ou sur le canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez l'exercice d'abord — il n'y a rien à gagner à tricher !
 
-<p>{{PreviousMenuNext("Apprendre/HTML/Introduction_to_HTML/Debugging_HTML", "Apprendre/HTML/Introduction_%C3%A0_HTML/Structuring_a_page_of_content", "Apprendre/HTML/Introduction_to_HTML")}}</p>
+{{PreviousMenuNext("Apprendre/HTML/Introduction_to_HTML/Debugging_HTML", "Apprendre/HTML/Introduction_%C3%A0_HTML/Structuring_a_page_of_content", "Apprendre/HTML/Introduction_to_HTML")}}
 
-<h2 id="Dans_ce_module">Dans ce module</h2>
+## Dans ce module
 
-<ul>
- <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Commencer avec le HTML</a></li>
- <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML</a></li>
- <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">Fondamentaux du texte HTML</a></li>
- <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Creation d'hyperliens</a></li>
- <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">Formatage avancé du texte</a></li>
- <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">Structure de Site Web et de document</a></li>
- <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Déboguer de l'HTML</a></li>
- <li>Faire une Lettre</li>
- <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content">Structurer une page de contenu</a></li>
-</ul>
+- [Commencer avec le HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [Fondamentaux du texte HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+- [Creation d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [Formatage avancé du texte](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
+- [Structure de Site Web et de document](/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [Déboguer de l'HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
+- Faire une Lettre
+- [Structurer une page de contenu](/fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

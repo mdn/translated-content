@@ -12,222 +12,230 @@ tags:
 translation_of: Learn/Forms/Styling_web_forms
 original_slug: Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML
 ---
-<div>{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers", "Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms", "Web/Guide/HTML/Formulaires")}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers", "Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms", "Web/Guide/HTML/Formulaires")}}
 
-<blockquote>
-<p>Dans cet article, nous allons apprendre comment utiliser <a href="/fr/docs/CSS" title="/fr/docs/CSS">les CSS</a> avec les formulaires <a href="/fr/docs/HTML" title="/fr/docs/HTML">HTML</a> pour (espérons-le) améliorer leur apparence. Étonnamment, ceci peut être délicat. Pour des raisons techniques et historiques, les widgets de formulaires ne s'allient pas très bien avec CSS. À cause de ces difficultés, de nombreux développeurs préfèrent <a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés" title="/fr/docs/HTML/Formulaires/Comment_créer_des_blocs_de_formulaires_personnalisés">construire leurs propres widgets HTML</a> pour avoir plus de maîtrise sur leur apparence. Toutefois, avec les navigateurs modernes, les web designers ont de plus en plus d'emprise sur l'apparence de leurs formulaires. Voyons cela de plus près.</p>
-</blockquote>
+> Dans cet article, nous allons apprendre comment utiliser [les CSS](/fr/docs/CSS "/fr/docs/CSS") avec les formulaires [HTML](/fr/docs/HTML "/fr/docs/HTML") pour (espérons-le) améliorer leur apparence. Étonnamment, ceci peut être délicat. Pour des raisons techniques et historiques, les widgets de formulaires ne s'allient pas très bien avec CSS. À cause de ces difficultés, de nombreux développeurs préfèrent [construire leurs propres widgets HTML](/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés "/fr/docs/HTML/Formulaires/Comment_créer_des_blocs_de_formulaires_personnalisés") pour avoir plus de maîtrise sur leur apparence. Toutefois, avec les navigateurs modernes, les web designers ont de plus en plus d'emprise sur l'apparence de leurs formulaires. Voyons cela de plus près.
 
-<h2 id="Pourquoi_est-ce_si_difficile_de_modifier_l'apparence_des_formulaires_avec_CSS">Pourquoi est-ce si difficile de modifier l'apparence des formulaires avec CSS ?</h2>
+## Pourquoi est-ce si difficile de modifier l'apparence des formulaires avec CSS ?
 
-<p>Dans la jeunesse du Web — aux alentours de 1995 — les formulaires ont été ajoutés au HTML dans la <a href="http://www.ietf.org/rfc/rfc1866.txt" rel="extrenal">spécification HTML 2</a>. À cause de la complexité des formulaires, ceux qui les mettaient en œuvre ont préféré s'appuyer sur le système d'exploitation sous‑jacent pour les gérer et les afficher.</p>
+Dans la jeunesse du Web — aux alentours de 1995 — les formulaires ont été ajoutés au HTML dans la [spécification HTML 2](http://www.ietf.org/rfc/rfc1866.txt). À cause de la complexité des formulaires, ceux qui les mettaient en œuvre ont préféré s'appuyer sur le système d'exploitation sous‑jacent pour les gérer et les afficher.
 
-<p>Quelques années plus tard, les CSS ont été créées et ce qui était une nécessité technique — c'est-à-dire, utiliser des widgets natifs pour les contrôles de formulaire — est devenu un préalable stylistique. Dans la jeunesse des CSS, l'apparence des formulaires n'était pas une priorité.</p>
+Quelques années plus tard, les CSS ont été créées et ce qui était une nécessité technique — c'est-à-dire, utiliser des widgets natifs pour les contrôles de formulaire — est devenu un préalable stylistique. Dans la jeunesse des CSS, l'apparence des formulaires n'était pas une priorité.
 
-<p>Comme les utilisateurs étaient habitués à l'apparence visuelle de leurs plateformes respectives, les fournisseurs de navigateurs étaient réticents à rendre possible la modification de l'apparence des formulaires. Et pour être honnête, il est toujours extrêmement difficile de reconstruire tous les contrôles pour que leur apparence soit modifiable.</p>
+Comme les utilisateurs étaient habitués à l'apparence visuelle de leurs plateformes respectives, les fournisseurs de navigateurs étaient réticents à rendre possible la modification de l'apparence des formulaires. Et pour être honnête, il est toujours extrêmement difficile de reconstruire tous les contrôles pour que leur apparence soit modifiable.
 
-<p>Même aujourd'hui, aucun des navigateurs n'a entièrement mis en œuvre les CSS 2.1. Avec le temps, les fournisseurs de navigateurs ont toutefois amélioré la compatibilité des CSS avec les éléments de formulaires, et bien que ce soit de mauvaise réputation pour leur utilisation, vous pouvez désormais modifier l'apparence des <a href="/fr/docs/Web/Guide/HTML/Formulaires" title="/fr/docs/HTML/Formulaires">formulaires HTML</a>.</p>
+Même aujourd'hui, aucun des navigateurs n'a entièrement mis en œuvre les CSS 2.1. Avec le temps, les fournisseurs de navigateurs ont toutefois amélioré la compatibilité des CSS avec les éléments de formulaires, et bien que ce soit de mauvaise réputation pour leur utilisation, vous pouvez désormais modifier l'apparence des [formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires "/fr/docs/HTML/Formulaires").
 
-<h3 id="Tous_les_widgets_ne_sont_pas_égaux_devant_les_CSS">Tous les widgets ne sont pas égaux devant les CSS</h3>
+### Tous les widgets ne sont pas égaux devant les CSS
 
-<p>Actuellement, quelques difficultés subsistent dans l'utilisation des CSS avec les formulaires. Ces problèmes peuvent être classés en trois catégories.</p>
+Actuellement, quelques difficultés subsistent dans l'utilisation des CSS avec les formulaires. Ces problèmes peuvent être classés en trois catégories.
 
-<h4 id="Le_bon">Le bon</h4>
+#### Le bon
 
-<p>L'apparence de certains éléments peut être modifiée sans poser beaucoup de problèmes suivant les diverses plateformes. Ceci inclut les éléments structurels suivants :</p>
+L'apparence de certains éléments peut être modifiée sans poser beaucoup de problèmes suivant les diverses plateformes. Ceci inclut les éléments structurels suivants :
 
-<ol>
- <li>{{HTMLElement("form")}}</li>
- <li>{{HTMLElement("fieldset")}}</li>
- <li>{{HTMLElement("label")}}</li>
- <li>{{HTMLElement("output")}}</li>
-</ol>
+1.  {{HTMLElement("form")}}
+2.  {{HTMLElement("fieldset")}}
+3.  {{HTMLElement("label")}}
+4.  {{HTMLElement("output")}}
 
-<p>Ceci inclut aussi tous les widgets de champs textuels (qu'ils soient mono ou multi‑lignes), ainsi que les boutons.</p>
+Ceci inclut aussi tous les widgets de champs textuels (qu'ils soient mono ou multi‑lignes), ainsi que les boutons.
 
-<h4 id="La_brute">La brute</h4>
+#### La brute
 
-<p>L'apparence de certains éléments ne peut être modifiée que rarement et peut nécessiter quelques astuces complexes, et parfois une connaissance avancée des CSS3.</p>
+L'apparence de certains éléments ne peut être modifiée que rarement et peut nécessiter quelques astuces complexes, et parfois une connaissance avancée des CSS3.
 
-<p>Ceci inclut l'élément {{HTMLElement("legend")}}. Ce dernier ne peut pas être positionné correctement sur toutes les plateformes. De plus, l'apparence des cases à cocher et des boutons radio ne peut pas être modifiée directement. Toutefois, grâce à CSS3 c'est possible de contourner cette limitation. L'apparence du contenu {{htmlattrxref("placeholder", "input")}} ne peut pas être modifiée d'une manière standard. Mais tous les navigateurs qui sont compatible avec cet attribut ont aussi implémenté des pseudo-classes ou pseudo-élément propriétaires qui permettent de modifier son apparence.</p>
+Ceci inclut l'élément {{HTMLElement("legend")}}. Ce dernier ne peut pas être positionné correctement sur toutes les plateformes. De plus, l'apparence des cases à cocher et des boutons radio ne peut pas être modifiée directement. Toutefois, grâce à CSS3 c'est possible de contourner cette limitation. L'apparence du contenu {{htmlattrxref("placeholder", "input")}} ne peut pas être modifiée d'une manière standard. Mais tous les navigateurs qui sont compatible avec cet attribut ont aussi implémenté des pseudo-classes ou pseudo-élément propriétaires qui permettent de modifier son apparence.
 
-<p>Nous allons voir comment gérer ces cas particuliers dans l'article <a href="/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms" title="/fr/docs/HTML/Formulaires/Apparence_avancée_des_formulaires_HTML">Apparence avancée des formulaires HTML</a>.</p>
+Nous allons voir comment gérer ces cas particuliers dans l'article [Apparence avancée des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms "/fr/docs/HTML/Formulaires/Apparence_avancée_des_formulaires_HTML").
 
-<h4 id="Le_truand">Le truand</h4>
+#### Le truand
 
-<p>L'apparence de certains éléments n'est tout bonnement pas modifiable en utilisant les CSS. Ceci inclut toutes les interfaces avancées comme les intervalles, la sélection de couleur ou de date ainsi que les éléments déroulants, y compris les éléments {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} et {{HTMLElement("datalist")}}. La sélection de fichiers est aussi connue pour ne pas pouvoir changer d'apparence. Les nouveaux éléments {{HTMLElement("progress")}} et {{HTMLElement("meter")}} font aussi partie de cette catégorie.</p>
+L'apparence de certains éléments n'est tout bonnement pas modifiable en utilisant les CSS. Ceci inclut toutes les interfaces avancées comme les intervalles, la sélection de couleur ou de date ainsi que les éléments déroulants, y compris les éléments {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} et {{HTMLElement("datalist")}}. La sélection de fichiers est aussi connue pour ne pas pouvoir changer d'apparence. Les nouveaux éléments {{HTMLElement("progress")}} et {{HTMLElement("meter")}} font aussi partie de cette catégorie.
 
-<p>Le principal problème avec tous ces widgets vient du fait que leur structure est très complexe et les CSS n'ont pas assez d'expressions pour décrire et modifier l'apparence des éléments. Si vous souhaitez modifier l'apparence des widgets vous devez utiliser JavaScript pour construire une arborescence DOM qui vous permet de modifier l'apparence. Nous explorons cette possibilité dans l'article <a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés" title="/fr/docs/HTML/Formulaires/Comment_créer_des_blocs_de_formulaires_personnalisés">Comment créer des widgets de formulaire personnalisés</a>.</p>
+Le principal problème avec tous ces widgets vient du fait que leur structure est très complexe et les CSS n'ont pas assez d'expressions pour décrire et modifier l'apparence des éléments. Si vous souhaitez modifier l'apparence des widgets vous devez utiliser JavaScript pour construire une arborescence DOM qui vous permet de modifier l'apparence. Nous explorons cette possibilité dans l'article [Comment créer des widgets de formulaire personnalisés](/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés "/fr/docs/HTML/Formulaires/Comment_créer_des_blocs_de_formulaires_personnalisés").
 
-<h2 id="Compositions_stylistiques_de_base">Compositions stylistiques de base</h2>
+## Compositions stylistiques de base
 
-<p>Pour changer l'apparence <a href="/fr/docs/HTML/Formulaires/Apparence_des_formulaires_HTML#Le_bon" title="/fr/docs/HTML/Formulaires/Apparence_des_formulaires_HTML#Le_bon">des éléments facilement modifiables</a> avec les CSS, vous ne devriez pas rencontrer de problèmes, puisqu'ils se comportent comme n'importe quel autre élément HTML. Toutefois, les feuilles de style peuvent ne pas être cohérentes entre navigateurs, il y a donc un certain nombre d'astuces à connaître.</p>
+Pour changer l'apparence [des éléments facilement modifiables](/fr/docs/HTML/Formulaires/Apparence_des_formulaires_HTML#Le_bon "/fr/docs/HTML/Formulaires/Apparence_des_formulaires_HTML#Le_bon") avec les CSS, vous ne devriez pas rencontrer de problèmes, puisqu'ils se comportent comme n'importe quel autre élément HTML. Toutefois, les feuilles de style peuvent ne pas être cohérentes entre navigateurs, il y a donc un certain nombre d'astuces à connaître.
 
-<h3 id="Champs_de_recherche">Champs de recherche</h3>
+### Champs de recherche
 
-<p>Les boîtes de recherche sont le seul type de champ textuel dont l'apparence peut être un peu complexe à modifier. Sur les navigateurs utilisant WebKit (Chrome, Safari, etc.) vous devrez utiliser la propriété CSS propriétaire <code>-webkit-appearance</code>. Nous allons aborder le sujet plus en détails dans dans l'article : <a href="/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms" title="/fr/docs/Apparence_avancée_des_formulaires_HTML">Apparence avancée des formulaires HTML</a>.</p>
+Les boîtes de recherche sont le seul type de champ textuel dont l'apparence peut être un peu complexe à modifier. Sur les navigateurs utilisant WebKit (Chrome, Safari, etc.) vous devrez utiliser la propriété CSS propriétaire `-webkit-appearance`. Nous allons aborder le sujet plus en détails dans dans l'article : [Apparence avancée des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms "/fr/docs/Apparence_avancée_des_formulaires_HTML").
 
-<h4 id="Exemple">Exemple</h4>
+#### Exemple
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;input type="search"&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form>
+  <input type="search">
+</form>
+```
 
-<pre class="brush: css">input[type=search] {
+```css
+input[type=search] {
   border: 1px dotted #999;
   border-radius: 0;
 
   -webkit-appearance: none;
-}</pre>
+}
+```
 
-<p><img alt="This is a screenshot of a search filed on Chrome, with and without the use of -webkit-appearance" src="search-chrome-macos.png"></p>
+![This is a screenshot of a search filed on Chrome, with and without the use of -webkit-appearance](search-chrome-macos.png)
 
-<p>Comme vous pouvez le voir sur la capture d'écran pour Chrome, les deux champs ont une bordure, mais le premier champ n'utilise pas la propriété <code>-webkit-appearance</code> tandis que le second a recours à la propriété <code>-webkit-appearance:none</code>. La différence est notable.</p>
+Comme vous pouvez le voir sur la capture d'écran pour Chrome, les deux champs ont une bordure, mais le premier champ n'utilise pas la propriété `-webkit-appearance` tandis que le second a recours à la propriété `-webkit-appearance:none`. La différence est notable.
 
-<h3 id="Texte_et_polices_de_caractères">Texte et polices de caractères</h3>
+### Texte et polices de caractères
 
-<p>Les fonctionnalités liées au texte et aux polices de caractères dans les CSS peuvent être utilisées facilement avec n'importe quel widget (et oui, vous pouvez utiliser {{cssxref("@font-face")}} avec les formulaires). Toutefois, le comportement des navigateurs est souvent incompatible. Par défaut, certains éléments comme {{cssxref("font-family")}} {{cssxref("font-size")}} n'héritent pas de leurs parents. De nombreux navigateurs utilisent les valeurs du système d'exploitation. Pour que l'apparence des formulaires soit cohérente avec le reste de votre contenu, vous pouvez ajouter les règles suivantes à votre feuille de style :</p>
+Les fonctionnalités liées au texte et aux polices de caractères dans les CSS peuvent être utilisées facilement avec n'importe quel widget (et oui, vous pouvez utiliser {{cssxref("@font-face")}} avec les formulaires). Toutefois, le comportement des navigateurs est souvent incompatible. Par défaut, certains éléments comme {{cssxref("font-family")}} {{cssxref("font-size")}} n'héritent pas de leurs parents. De nombreux navigateurs utilisent les valeurs du système d'exploitation. Pour que l'apparence des formulaires soit cohérente avec le reste de votre contenu, vous pouvez ajouter les règles suivantes à votre feuille de style :
 
-<pre class="brush: css">button, input, select, textarea {
+```css
+button, input, select, textarea {
   font-family : inherit;
   font-size   : 100%;
-}</pre>
+}
+```
 
-<p>La capture d'écran ci-dessous montre les différences. Sur la gauche il y a l'affichage par défaut de Firefox pour Mac OS X, avec les réglages de police par défaut du système. Sur la droite, les mêmes éléments avec la règle d'harmonisation utilisée.</p>
+La capture d'écran ci-dessous montre les différences. Sur la gauche il y a l'affichage par défaut de Firefox pour Mac OS X, avec les réglages de police par défaut du système. Sur la droite, les mêmes éléments avec la règle d'harmonisation utilisée.
 
-<p><img alt="This is a screenshot of the main form widgets on Firefox on Mac OSX, with and without font harmonization" src="font-firefox-macos.png"></p>
+![This is a screenshot of the main form widgets on Firefox on Mac OSX, with and without font harmonization](font-firefox-macos.png)
 
-<p>Il existe un débat animé sur le fait qu'un formulaire ait une meilleure apparence en utilisant les valeurs par défaut du système d'exploitation ou en utilisant des valeurs unifiant l'apparence. C'est à vous de décider en tant que designer du site ou de l'application.</p>
+Il existe un débat animé sur le fait qu'un formulaire ait une meilleure apparence en utilisant les valeurs par défaut du système d'exploitation ou en utilisant des valeurs unifiant l'apparence. C'est à vous de décider en tant que designer du site ou de l'application.
 
-<h3 id="Modèle_de_boîte">Modèle de boîte</h3>
+### Modèle de boîte
 
-<p>Tous les champs textuels sont compatibles avec les différentes propriétés du modèle de boîte CSS ({{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}} et {{cssxref("border")}}). Toutefois, comme précédemment les navigateurs s'appuient sur l'apparence par défaut du système d'exploitation. C'est votre décision de choisir si vous souhaitez intégrer vos formulaires à votre contenu du point de vue de l'apparence. Si vous souhaitez conserver l'apparence originale des blocs, vous aurez des difficultés à leur donner des dimensions cohérentes.</p>
+Tous les champs textuels sont compatibles avec les différentes propriétés du modèle de boîte CSS ({{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}} et {{cssxref("border")}}). Toutefois, comme précédemment les navigateurs s'appuient sur l'apparence par défaut du système d'exploitation. C'est votre décision de choisir si vous souhaitez intégrer vos formulaires à votre contenu du point de vue de l'apparence. Si vous souhaitez conserver l'apparence originale des blocs, vous aurez des difficultés à leur donner des dimensions cohérentes.
 
-<p><strong>Chacun des blocs a ses propres règles concernant les bordures, la marge intérieure (padding) et extérieure (margin).</strong> Si vous souhaitez qu'ils aient tous la même dimension, vous devrez utiliser la propriété {{cssxref("box-sizing")}} :</p>
+**Chacun des blocs a ses propres règles concernant les bordures, la marge intérieure (padding) et extérieure (margin).** Si vous souhaitez qu'ils aient tous la même dimension, vous devrez utiliser la propriété {{cssxref("box-sizing")}} :
 
-<pre class="brush: css">input, textarea, select, button {
+```css
+input, textarea, select, button {
   width : 150px;
   margin: 0;
 
   -webkit-box-sizing: border-box; /* Pour les anciennes versions des navigateurs WebKit */
      -moz-box-sizing: border-box; /* Pour tous les navigateurs Gecko */
           box-sizing: border-box;
-}</pre>
+}
+```
 
-<p><img alt="This is a screenshot of the main form widgets on Chrome on Windows 7, with and without the use of box-sizing." src="size-chrome-win7.png"></p>
+![This is a screenshot of the main form widgets on Chrome on Windows 7, with and without the use of box-sizing.](size-chrome-win7.png)
 
-<p>Dans la capture d'écran ci-dessous, la colonne de gauche n'utilise pas {{cssxref("box-sizing")}}, alors que la colonne de droite utilise la propriété CSS <code>border-box</code>. Remarquez comment tous les éléments occupent le même espace, malgré les valeurs par défaut de la plateforme pour chacun des blocs.</p>
+Dans la capture d'écran ci-dessous, la colonne de gauche n'utilise pas {{cssxref("box-sizing")}}, alors que la colonne de droite utilise la propriété CSS `border-box`. Remarquez comment tous les éléments occupent le même espace, malgré les valeurs par défaut de la plateforme pour chacun des blocs.
 
-<h3 id="Positionnement">Positionnement</h3>
+### Positionnement
 
-<p>Le positionnement des formulaires HTML n'est pas un problème de manière générale. Seulement deux éléments nécessitent une attention particulière :</p>
+Le positionnement des formulaires HTML n'est pas un problème de manière générale. Seulement deux éléments nécessitent une attention particulière :
 
-<h4 id="legend">legend</h4>
+#### legend
 
-<p>L'apparence de l'élément {{HTMLElement("legend")}} est facile à modifier à l'exception de sa position. Dans chaque navigateur, l'élément {{HTMLElement("legend")}} est positionné au-dessus de la bordure supérieure de son élément {{HTMLElement("fieldset")}} parent. Il n'existe aucune manière de changer sa position dans le flux HTML. Vous pouvez toutefois le positionner de manière absolue ou relative en utilisant la propriété {{cssxref("position")}}, sinon, ce sera une partie de la bordure de l'élément <code>fieldset</code>.</p>
+L'apparence de l'élément {{HTMLElement("legend")}} est facile à modifier à l'exception de sa position. Dans chaque navigateur, l'élément {{HTMLElement("legend")}} est positionné au-dessus de la bordure supérieure de son élément {{HTMLElement("fieldset")}} parent. Il n'existe aucune manière de changer sa position dans le flux HTML. Vous pouvez toutefois le positionner de manière absolue ou relative en utilisant la propriété {{cssxref("position")}}, sinon, ce sera une partie de la bordure de l'élément `fieldset`.
 
-<p>Comme l'élément {{HTMLElement("legend")}} est très important pour des raisons d'accessibilité (nous parlerons des techniques pour l'assistance à propos de l'attribut  <code>label</code> de chaque élément de formulaire du <code>fieldset</code>), il est souvent associé à un intitulé, puis caché à l'accessibilité, comme ceci :</p>
+Comme l'élément {{HTMLElement("legend")}} est très important pour des raisons d'accessibilité (nous parlerons des techniques pour l'assistance à propos de l'attribut  `label` de chaque élément de formulaire du `fieldset`), il est souvent associé à un intitulé, puis caché à l'accessibilité, comme ceci :
 
-<h5 id="HTML">HTML</h5>
+##### HTML
 
-<pre class="brush: html">&lt;fieldset&gt;
-  &lt;legend&gt;Hi!&lt;/legend&gt;
-  &lt;h1&gt;Hello&lt;/h1&gt;
-&lt;/fieldset&gt;</pre>
+```html
+<fieldset>
+  <legend>Hi!</legend>
+  <h1>Hello</h1>
+</fieldset>
+```
 
-<h5 id="CSS">CSS</h5>
+##### CSS
 
-<pre class="brush: css">legend {
+```css
+legend {
   width: 1px;
   height: 1px;
   overflow: hidden;
-}</pre>
+}
+```
 
-<h4 id="textarea">textarea</h4>
+#### textarea
 
-<p>Par défaut, tous les navigateurs considèrent l'élément {{HTMLElement("textarea")}} comme un bloc incorporé aligné sur la ligne du bas du texte. C'est rarement ce que nous souhaitons vraiment. Pour passer d<code>'inline-block</code> à <code>block</code>, il est assez facile d'utiliser la propriété {{cssxref("display")}}. Mais si vous voulez l'utiliser en ligne, il est courant de changer son alignement vertical :</p>
+Par défaut, tous les navigateurs considèrent l'élément {{HTMLElement("textarea")}} comme un bloc incorporé aligné sur la ligne du bas du texte. C'est rarement ce que nous souhaitons vraiment. Pour passer d`'inline-block` à `block`, il est assez facile d'utiliser la propriété {{cssxref("display")}}. Mais si vous voulez l'utiliser en ligne, il est courant de changer son alignement vertical :
 
-<pre class="brush: css">textarea {
+```css
+textarea {
   vertical-align: top;
-}</pre>
+}
+```
 
-<h2 id="Exemple_2">Exemple</h2>
+## Exemple
 
-<p>Regardons sur un exemple concret la façon de composer un formulaire HTML. Cela aidera à clarifier nombre de ces concepts. Nous allons construire un formulaire de contact sous forme de « carte postale » :</p>
+Regardons sur un exemple concret la façon de composer un formulaire HTML. Cela aidera à clarifier nombre de ces concepts. Nous allons construire un formulaire de contact sous forme de « carte postale » :
 
-<p><img alt="C'est ce que nous voulons réaliser avec le HTML et les CSS." src="fr-carte.png"></p>
+![C'est ce que nous voulons réaliser avec le HTML et les CSS.](fr-carte.png)
 
-<h3 id="HTML_2">HTML</h3>
+### HTML
 
-<p>Le HTML n'est qu'à peine plus développé que celui de l'exemple du premier<a href="/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML" title="/en-US/docs/HTML/Forms/My_first_HTML_form"> article de ce guide</a> ; il ne comporte que quelques identifiants supplémentaires et un titre.</p>
+Le HTML n'est qu'à peine plus développé que celui de l'exemple du premier[ article de ce guide](/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML "/en-US/docs/HTML/Forms/My_first_HTML_form") ; il ne comporte que quelques identifiants supplémentaires et un titre.
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;h1&gt;à: Mozilla&lt;/h1&gt;
+```html
+<form>
+  <h1>à: Mozilla</h1>
 
-  &lt;div id="from"&gt;
-    &lt;label for="name"&gt;de :&lt;/label&gt;
-    &lt;input type="text" id="name" name="user_name"&gt;
-  &lt;/div&gt;
+  <div id="from">
+    <label for="name">de :</label>
+    <input type="text" id="name" name="user_name">
+  </div>
 
-  &lt;div id="reply"&gt;
-    &lt;label for="mail"&gt;répondre à :&lt;/label&gt;
-    &lt;input type="email" id="mail" name="user_email"&gt;
-  &lt;/div&gt;
+  <div id="reply">
+    <label for="mail">répondre à :</label>
+    <input type="email" id="mail" name="user_email">
+  </div>
 
-  &lt;div id="message"&gt;
-    &lt;label for="msg"&gt;Votre message :&lt;/label&gt;
-    &lt;textarea id="msg" name="user_message"&gt;&lt;/textarea&gt;
-  &lt;/div&gt;
+  <div id="message">
+    <label for="msg">Votre message :</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </div>
 
-  &lt;div class="button"&gt;
-    &lt;button type="submit"&gt;Poster le message&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+  <div class="button">
+    <button type="submit">Poster le message</button>
+  </div>
+</form>
+```
 
-<h3 id="Organiser_les_ressources">Organiser les ressources</h3>
+### Organiser les ressources
 
-<p>C'est ici que le « fun » commence ! Avant de commencer à coder, nous avons besoin de trois ressources supplémentaires :</p>
+C'est ici que le « fun » commence ! Avant de commencer à coder, nous avons besoin de trois ressources supplémentaires :
 
-<ol>
- <li>L'<a href="/files/4151/background.jpg" title="The postcard background">image de fond</a> de la carte postale — téléchargez cette image et sauvegardez‑la dans le même répertoire que votre fichier HTML de travail.</li>
- <li>Une police de machine à écrire : <a href="http://www.fontsquirrel.com/fonts/Secret-Typewriter" rel="external">« Secret Typewriter » de fontsquirrel.com</a> — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.</li>
- <li>Une police d'écriture manuelle : <a href="http://www.fontsquirrel.com/fonts/Journal" rel="external"> « Journal » de fontsquirrel.com </a>— téléchargez le fichier TTF dans le même répertoire que ci‑dessus.</li>
-</ol>
+1.  L'[image de fond](/files/4151/background.jpg "The postcard background") de la carte postale — téléchargez cette image et sauvegardez‑la dans le même répertoire que votre fichier HTML de travail.
+2.  Une police de machine à écrire : [« Secret Typewriter » de fontsquirrel.com](http://www.fontsquirrel.com/fonts/Secret-Typewriter) — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
+3.  Une police d'écriture manuelle : [ « Journal » de fontsquirrel.com ](http://www.fontsquirrel.com/fonts/Journal)— téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
 
-<p> </p>
 
-<p>Les polices demandent un supplément de traitement avant de débuter :</p>
 
-<ol>
- <li>Allez sur le <a href="https://www.fontsquirrel.com/tools/webfont-generator">Webfont Generator</a> de fontsquirrel.</li>
- <li>En utilisant le formulaire, téléversez les fichiers de polices et créez un kit de polices pou le Web. Téléchargez le kit sur votre ordinateur.</li>
- <li>Décompressez le fichier zip fourni.</li>
- <li>Dans le contenu décompressé vous trouverez deux fichiers <code>.woff</code> et deux fichiers <code>.woff2</code>. Copiez ces quatre fichiers dans un répertoire nommé <code>fonts</code>, dans le même répertoire que ci‑dessus. Nous utilisons deux fichiers différents pour maximiser la compatibilité avec les navigateurs ; voyez notre article sur les <a href="/fr/docs/Learn/CSS/Styling_text/Web_fonts">Web fonts</a> pour des informations plus détaillées.</li>
-</ol>
+Les polices demandent un supplément de traitement avant de débuter :
 
-<h3 id="Le_CSS">Le CSS</h3>
+1.  Allez sur le [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) de fontsquirrel.
+2.  En utilisant le formulaire, téléversez les fichiers de polices et créez un kit de polices pou le Web. Téléchargez le kit sur votre ordinateur.
+3.  Décompressez le fichier zip fourni.
+4.  Dans le contenu décompressé vous trouverez deux fichiers `.woff` et deux fichiers `.woff2`. Copiez ces quatre fichiers dans un répertoire nommé `fonts`, dans le même répertoire que ci‑dessus. Nous utilisons deux fichiers différents pour maximiser la compatibilité avec les navigateurs ; voyez notre article sur les [Web fonts](/fr/docs/Learn/CSS/Styling_text/Web_fonts) pour des informations plus détaillées.
 
-<p> </p>
+### Le CSS
 
-<p>Maintenant nous pouvons approfondir les CSS de l'exemple. Ajoutez tous les blocs de code affichés ci‑dessous dans un élément {{htmlelement("style")}}, l'un après l'autre.</p>
 
-<p>D'abord, la préparation de base en définissant les règles de {{cssxref("@font-face")}} et les base des éléments {{HTMLElement("body")}} et {{HTMLElement("form")}}.</p>
 
-<pre class="brush: css">@font-face{
+Maintenant nous pouvons approfondir les CSS de l'exemple. Ajoutez tous les blocs de code affichés ci‑dessous dans un élément {{htmlelement("style")}}, l'un après l'autre.
+
+D'abord, la préparation de base en définissant les règles de {{cssxref("@font-face")}} et les base des éléments {{HTMLElement("body")}} et {{HTMLElement("form")}}.
+
+```css
+@font-face{
   font-family : "handwriting";
-<code class="language-css">  src: url('fonts/journal-webfont.woff2') format('woff2'),
+  src: url('fonts/journal-webfont.woff2') format('woff2'),
        url('fonts/journal-webfont.woff') format('woff');
   font-weight: normal;
-  font-style: normal;</code>
+  font-style: normal;
 }
 
 @font-face{
   font-family : "typewriter";
-<code class="language-css">  src: url('fonts/veteran_typewriter-webfont.woff2') format('woff2'),
+  src: url('fonts/veteran_typewriter-webfont.woff2') format('woff2'),
        url('fonts/veteran_typewriter-webfont.woff') format('woff');
   font-weight: normal;
-  font-style: normal;</code>
+  font-style: normal;
 }
 
 body {
@@ -247,11 +255,13 @@ form {
   margin : 0 auto;
 
   background: #FFF url(background.jpg);
-}</pre>
+}
+```
 
-<p>Maintenant nous pouvons placer nos éléments, y compris le titre et tous les éléments du formulaire.</p>
+Maintenant nous pouvons placer nos éléments, y compris le titre et tous les éléments du formulaire.
 
-<pre class="brush: css">h1 {
+```css
+h1 {
   position : absolute;
   left : 415px;
   top  : 185px;
@@ -275,17 +285,21 @@ form {
   position: absolute;
   left : 20px;
   top  : 70px;
-}</pre>
+}
+```
 
-<p>C'est là que nous commençons à travailler sur les éléments du formulaire eux-mêmes. Tout d'abord, assurons-nous que l'élément {{HTMLElement("label")}} est doté de la bonne police de caractères.</p>
+C'est là que nous commençons à travailler sur les éléments du formulaire eux-mêmes. Tout d'abord, assurons-nous que l'élément {{HTMLElement("label")}} est doté de la bonne police de caractères.
 
-<pre class="brush: css">label {
+```css
+label {
   font : .8em "typewriter", sans-serif;
-}</pre>
+}
+```
 
-<p>Les champs texte nécessitent quelques règles courantes. Mettons‑les simplement, nous supprimons {{cssxref("border","borders")}} et {{cssxref("background","backgrounds")}} et redéfinissons {{cssxref("padding")}} et {{cssxref("margin")}}.</p>
+Les champs texte nécessitent quelques règles courantes. Mettons‑les simplement, nous supprimons {{cssxref("border","borders")}} et {{cssxref("background","backgrounds")}} et redéfinissons {{cssxref("padding")}} et {{cssxref("margin")}}.
 
-<pre class="brush: css">input, textarea {
+```css
+input, textarea {
   font    : .9em/1.5em "handwriting", sans-serif;
 
   border  : none;
@@ -294,28 +308,34 @@ form {
   width   : 240px;
 
   background: none;
-}</pre>
+}
+```
 
-<p>Lorsque l'un de ces champs reçoit le focus, nous le mettons en évidence avec un fond gris clair et transparent. Notez qu'il est important d'ajouter la propriété {{cssxref("outline")}} pour supprimer le focus par défaut ajouté par certains navigateurs.</p>
+Lorsque l'un de ces champs reçoit le focus, nous le mettons en évidence avec un fond gris clair et transparent. Notez qu'il est important d'ajouter la propriété {{cssxref("outline")}} pour supprimer le focus par défaut ajouté par certains navigateurs.
 
-<pre class="brush: css">input:focus, textarea:focus {
+```css
+input:focus, textarea:focus {
   background   : rgba(0,0,0,.1);
   border-radius: 5px;
   outline      : none;
-}</pre>
+}
+```
 
-<p>Maintenant que nos champs texte sont terminés, nous devons ajuster l'affichage de ceux à une et ceux à plusieurs lignes pour qu'ils correspondent, car ils ne sont généralement pas du tout identiques par défaut.</p>
+Maintenant que nos champs texte sont terminés, nous devons ajuster l'affichage de ceux à une et ceux à plusieurs lignes pour qu'ils correspondent, car ils ne sont généralement pas du tout identiques par défaut.
 
-<p>Le champ texte à une seule ligne a besoin de quelques ajustements pour un bon rendu dans Internet Explorer. Internet Explorer ne définit pas la hauteur des champs en fonction de la hauteur naturelle de la police (qui est le comportement de tous les autres navigateurs). Pour résoudre ce problème, nous devons ajouter une hauteur explicite au champ, comme suit :</p>
+Le champ texte à une seule ligne a besoin de quelques ajustements pour un bon rendu dans Internet Explorer. Internet Explorer ne définit pas la hauteur des champs en fonction de la hauteur naturelle de la police (qui est le comportement de tous les autres navigateurs). Pour résoudre ce problème, nous devons ajouter une hauteur explicite au champ, comme suit :
 
-<pre class="brush: css">input {
+```css
+input {
     height: 2.5em; /* pour IE */
     vertical-align: middle; /* optionnel mais donne meilleur aspect pour IE */
-}</pre>
+}
+```
 
-<p>Les éléments {{HTMLElement("textarea")}} sont rendus par défaut en tant qu'élément bloc. Les deux choses importantes ici sont les propriétés {{cssxref("resize")}} et {{cssxref("overflow")}}. Comme notre design est à taille fixe, nous utiliserons la propriété resize pour empêcher les utilisateurs de redimensionner le champ texte multiligne. La propriété {{cssxref("overflow")}} est utilisée pour rendre le champ plus cohérent d'un navigateur à l'autre ; certains navigateurs utilisent la valeur <code>auto</code> et d'autres la valeur par défaut pour <code>scroll</code> lorsqu'elle n'est pas précisée. Dans notre cas, il vaut mieux s'assurer que tout le monde utilise <code>auto</code>.</p>
+Les éléments {{HTMLElement("textarea")}} sont rendus par défaut en tant qu'élément bloc. Les deux choses importantes ici sont les propriétés {{cssxref("resize")}} et {{cssxref("overflow")}}. Comme notre design est à taille fixe, nous utiliserons la propriété resize pour empêcher les utilisateurs de redimensionner le champ texte multiligne. La propriété {{cssxref("overflow")}} est utilisée pour rendre le champ plus cohérent d'un navigateur à l'autre ; certains navigateurs utilisent la valeur `auto` et d'autres la valeur par défaut pour `scroll` lorsqu'elle n'est pas précisée. Dans notre cas, il vaut mieux s'assurer que tout le monde utilise `auto`.
 
-<pre class="brush: css">textarea {
+```css
+textarea {
   display : block;
 
   padding : 10px;
@@ -325,11 +345,13 @@ form {
 
   resize  : none;
   overflow: auto;
-}</pre>
+}
+```
 
-<p>L'élément {{HTMLElement("button")}} est très accommodant avec les CSS ; vous faites ce que vous voulez, même en utilisant les <a href="/fr/docs/CSS/Pseudo-elements" title="/en-US/docs/CSS/Pseudo-elements">pseudo-elements</a> !</p>
+L'élément {{HTMLElement("button")}} est très accommodant avec les CSS ; vous faites ce que vous voulez, même en utilisant les [pseudo-elements](/fr/docs/CSS/Pseudo-elements "/en-US/docs/CSS/Pseudo-elements") !
 
-<pre class="brush: css">button {
+```css
+button {
   position     : absolute;
   left         : 440px;
   top          : 360px;
@@ -351,7 +373,7 @@ form {
 }
 
 button:after {
-  content: " &gt;&gt;&gt;";
+  content: " >>>";
 }
 
 button:hover,
@@ -359,34 +381,31 @@ button:focus {
   outline   : none;
   background: #000;
   color   : #FFF;
-}</pre>
+}
+```
 
-<p>Et voilà ! (en français dans le texte)</p>
+Et voilà ! (en français dans le texte)
 
-<div class="note">
-<p><strong>Note :</strong> si cet exemple ne fonctionne pas tout à fait comme vous l'attendez et que vous voulez vérifier votre version, vous la trouverez sur GitHub — voyez‑la <a href="https://mdn.github.io/learning-area/html/forms/postcard-example/">fonctionner en direct</a> (et revoyez son <a href="https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example">code source</a>).</p>
-</div>
+> **Note :** si cet exemple ne fonctionne pas tout à fait comme vous l'attendez et que vous voulez vérifier votre version, vous la trouverez sur GitHub — voyez‑la [fonctionner en direct](https://mdn.github.io/learning-area/html/forms/postcard-example/) (et revoyez son [code source](https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example)).
 
-<h2 id="Conclusion">Conclusion</h2>
+## Conclusion
 
-<p>Comme vous pouvez le voir, tant que nous voulons construire des formulaires avec seulement des champs de texte et des boutons, il est facile de les styliser à l'aide des CSS. Si vous voulez en savoir plus sur les petites astuces des CSS qui peuvent vous faciliter la vie lorsque vous travaillez avec des widgets de formulaire, jetez un coup d'oeil à la partie formulaire du <a href="http://necolas.github.com/normalize.css">projet normalize.css</a>.</p>
+Comme vous pouvez le voir, tant que nous voulons construire des formulaires avec seulement des champs de texte et des boutons, il est facile de les styliser à l'aide des CSS. Si vous voulez en savoir plus sur les petites astuces des CSS qui peuvent vous faciliter la vie lorsque vous travaillez avec des widgets de formulaire, jetez un coup d'oeil à la partie formulaire du [projet normalize.css](http://necolas.github.com/normalize.css).
 
-<p>Dans le <a href="/fr/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms">prochain article</a>, nous verrons comment gérer les widgets des catégories « brutes » et « truands ».</p>
+Dans le [prochain article](/fr/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms), nous verrons comment gérer les widgets des catégories « brutes » et « truands ».
 
-<p>{{PreviousMenuNext("Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers", "Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms", "Web/Guide/HTML/Formulaires")}}</p>
+{{PreviousMenuNext("Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers", "Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms", "Web/Guide/HTML/Formulaires")}}
 
-<h2 id="Dans_ce_module">Dans ce module</h2>
+## Dans ce module
 
-<ul>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML">Mon premier formulaire HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML">Comment structurer un formulaire HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs">Les widgets natifs pour formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires">Envoi des données de formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire">Validation des données de formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés">Comment construire des widgets personnalisés pour formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript">Envoi de formulaires à l'aide du JavaScript</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers">Formulaires HTML dans les navigateurs anciens</a></li>
- <li>Mise en forme des formulaires HTML</li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms">Mise en forme avancée des formulaires HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets">Table de compatibilité des propriétés pour les widgets de formulaire</a></li>
-</ul>
+- [Mon premier formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML)
+- [Comment structurer un formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML)
+- [Les widgets natifs pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs)
+- [Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires)
+- [Validation des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire)
+- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés)
+- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript)
+- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers)
+- Mise en forme des formulaires HTML
+- [Mise en forme avancée des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms)
+- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets)
