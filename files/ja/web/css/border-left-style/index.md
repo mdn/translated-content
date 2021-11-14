@@ -3,27 +3,25 @@ title: border-left-style
 slug: Web/CSS/border-left-style
 tags:
   - CSS
+  - CSS 境界
   - CSS プロパティ
-  - CSS 背景と境界
-  - Reference
-  - border
-  - border-left
-  - border-style
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.border-left-style
 translation_of: Web/CSS/border-left-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>border-left-style</code></strong> プロパティは、要素の左側の {{cssxref("border")}} における線の形状を設定します。</p>
+**`border-left-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の {{cssxref("border")}} における線の形状を設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/border-left-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-left-style.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+> **Note:** 仕様書では、異なる形状の境界線を角でどの様に接続するかを定義していません。
 
-<div class="note"><strong>メモ:</strong> 仕様書では、異なる形状の境界線を角でどの様に接続するかを定義していません。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 border-left-style: none;
 border-left-style: hidden;
 border-left-style: dotted;
@@ -38,41 +36,51 @@ border-left-style: outset;
 /* グローバル値 */
 border-left-style: inherit;
 border-left-style: initial;
+border-left-style: revert;
 border-left-style: unset;
-</pre>
+```
 
-<p><code>border-left-style</code> プロパティは、 {{cssxref("border-style")}} プロパティで利用できるキーワードのうちの一つで指定します。</p>
+`border-left-style` プロパティは、 {{cssxref("border-style")}} プロパティで利用できるキーワードのうちの一つで指定します。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h4 id="HTML">HTML</h4>
+### border-left-style の設定
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td class="b1"&gt;none&lt;/td&gt;
-    &lt;td class="b2"&gt;hidden&lt;/td&gt;
-    &lt;td class="b3"&gt;dotted&lt;/td&gt;
-    &lt;td class="b4"&gt;dashed&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="b5"&gt;solid&lt;/td&gt;
-    &lt;td class="b6"&gt;double&lt;/td&gt;
-    &lt;td class="b7"&gt;groove&lt;/td&gt;
-    &lt;td class="b8"&gt;ridge&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="b9"&gt;inset&lt;/td&gt;
-    &lt;td class="b10"&gt;outset&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+#### HTML
 
-<h4 id="CSS">CSS</h4>
+```html
+<table>
+  <tr>
+    <td class="b1">none</td>
+    <td class="b2">hidden</td>
+    <td class="b3">dotted</td>
+    <td class="b4">dashed</td>
+  </tr>
+  <tr>
+    <td class="b5">solid</td>
+    <td class="b6">double</td>
+    <td class="b7">groove</td>
+    <td class="b8">ridge</td>
+  </tr>
+  <tr>
+    <td class="b9">inset</td>
+    <td class="b10">outset</td>
+  </tr>
+</table>
+```
 
-<pre class="brush: css">/* 表の外見を定義 */
+#### CSS
+
+```css
+/* 表の外見を定義 */
 table {
   border-width: 2px;
   background-color: #52E385;
@@ -91,45 +99,22 @@ tr, td {
 .b7 {border-left-style: groove;}
 .b8 {border-left-style: ridge;}
 .b9 {border-left-style: inset;}
-.b10 {border-left-style: outset;}</pre>
+.b10 {border-left-style: outset;}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{ EmbedLiveSample('Examples', 300, 200) }}</p>
+{{ EmbedLiveSample('Examples', 300, 200) }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-border-style', 'border-left-style')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>明確な変更はなし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#border-style-properties', 'border-left-style')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p>{{cssinfo}}</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.border-left-style")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>その他の形状に関する境界のプロパティ: {{Cssxref("border-bottom-style")}}, {{Cssxref("border-right-style")}}, {{Cssxref("border-top-style")}}, {{Cssxref("border-style")}}</li>
- <li>その他の左側の境界に関するプロパティ: {{Cssxref("border-left")}}, {{Cssxref("border-left-color")}}, {{Cssxref("border-left-width")}}</li>
-</ul>
+ - その他の形状に関する境界のプロパティ: {{Cssxref("border-bottom-style")}}, {{Cssxref("border-right-style")}}, {{Cssxref("border-top-style")}}, {{Cssxref("border-style")}}
+ - その他の左側の境界に関するプロパティ: {{Cssxref("border-left")}}, {{Cssxref("border-left-color")}}, {{Cssxref("border-left-width")}}
