@@ -2,145 +2,114 @@
 title: background-size
 slug: Web/CSS/background-size
 tags:
-  - Background
   - CSS
+  - CSS 背景
   - CSS プロパティ
-  - CSS 背景と境界
-  - Reference
-  - background-size
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.background-size
 translation_of: Web/CSS/background-size
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>background-size</code></strong> は <a href="/ja/docs/CSS">CSS</a> のプロパティで、要素の背景画像の寸法を設定します。画像は自然な寸法になったり、引き伸ばされたり、利用可能な領域に収まるように縮小されたりします。</p>
+**`background-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景画像の寸法を設定します。画像は自然な寸法になったり、引き伸ばされたり、利用可能な領域に収まるように縮小されたりします。
 
-<div>{{EmbedInteractiveExample("pages/css/background-size.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-size.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+背景画像に覆われていない領域は {{cssxref("background-color")}} プロパティで埋められ、背景画像の後ろに見える背景色は透過性があります。
 
-<p>背景画像に覆われていない領域は {{cssxref("background-color")}} プロパティで埋められ、背景画像の後ろに見える背景色は透過性があります。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush: css no-line-numbers notranslate">/* キーワード値 */
+```css
+/* キーワード値 */
 background-size: cover;
 background-size: contain;
 
-/* 値1つの構文 */
+/* 値 1 つの構文 */
 /* 画像の幅 (高さは 'auto' になる) */
 background-size: 50%;
 background-size: 3.2em;
 background-size: 12px;
 background-size: auto;
 
-/* 値2つの構文 */
-/* 1番目の値は画像の幅、2番目の値は高さ */
+/* 値 2 つの構文 */
+/* 1 つ目の値は画像の幅、2番目の値は高さ */
 background-size: 50% auto;
 background-size: 3em 25%;
 background-size: auto 6px;
 background-size: auto auto;
 
 /* 複数の背景 */
-background-size: auto, auto; /* 'auto auto' と混同しないでください */
+background-size: auto, auto; /* `auto auto` と混同しないでください */
 background-size: 50%, 25%, 25%;
 background-size: 6px, auto, contain;
 
 /* グローバル値 */
 background-size: inherit;
 background-size: initial;
+background-size: revert;
 background-size: unset;
-</pre>
+```
 
-<p><code>background-size</code> プロパティは以下のいずれか1つの方法で指定します。</p>
+`background-size` プロパティは以下のいずれか 1 つの方法で指定します。
 
-<ul>
- <li><code><a href="#contain">contain</a></code> または <code><a href="#cover">cover</a></code> のキーワード値を使用</li>
- <li>幅の値のみを使用、この場合の高さは既定の <code><a href="#auto">auto</a></code> になります。</li>
- <li>幅と高さの値の両方を使用、この場合は1番目の値で幅を、2番目の値で高さを設定します。どちらの値も {{cssxref("&lt;length&gt;")}}、 {{cssxref("&lt;percentage&gt;")}} または <code><a href="#auto">auto</a></code> のいずれかになります。</li>
-</ul>
+- `contain` または `cover` のキーワード値を使用
+- 幅の値のみを使用、この場合の高さは既定の `auto` になります。
+- 幅と高さの値の両方を使用、この場合は 1 番目の値で幅を、2 番目の値で高さを設定します。どちらの値も {{cssxref("&lt;length&gt;")}}、 {{cssxref("&lt;percentage&gt;")}} または `auto` のいずれかになります。
 
-<p>複数の背景画像の寸法を指定するには、それぞれの値をカンマで区切ってください。</p>
+複数の背景画像の寸法を指定するには、それぞれの値をカンマで区切ってください。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt id="contain"><code>contain</code></dt>
- <dd>画像を切り取ったり縦横比を崩したりすることなく、画像ができるだけ大きくなるよう拡大縮小します。</dd>
- <dt id="cover"><code>cover</code></dt>
- <dd>画像の縦横比を崩すことなく、画像ができるだけ大きくなるよう拡大縮小します。画像の縦横比が要素と異なる場合、空き領域が残らないように上下または左右のどちらかを切り取ります。</dd>
- <dt id="auto"><code>auto</code></dt>
- <dd>縦横比が維持されるように、適切な方向に背景画像を拡大縮小します。</dd>
- <dt id="length">{{cssxref("&lt;length&gt;")}}</dt>
- <dd>その軸が指定された長さになるよう画像を拡大縮小します。負の値は使用できません。</dd>
- <dt id="percentage">{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>その軸が<em>背景配置領域</em>の指定された割合になるよう拡大縮小します。背景配置領域とは、 {{cssxref("background-origin")}} の値（既定ではパディングボックス）によって定められます。しかし、背景の {{cssxref("background-attachment")}} の値が <code>fixed</code> の場合、配置領域は{{glossary("viewport", "ビューポート")}}全体となります。負の値は使用できません。</dd>
-</dl>
+- `contain`
+  - : 画像を切り取ったり縦横比を崩したりすることなく、コンテナー内で可能な限り大きくします。コンテナーが画像よりも大きい場合、{{cssxref("background-repeat")}} プロパティが `no-repeat` に設定されていない限り、画像がタイル状に配置されます。
+- `cover`
+  - : 画像をコンテナーいっぱいにできるだけ大きく拡大縮小し、必要に応じて画像を引き伸ばします。画像の比率が要素と異なる場合は、何もない空間が残らないように、上下または左右が切り取られます。
+- `auto`
+  - : 背景画像の本来の比率が維持されるように、対応する方向に拡大縮小します。
+- {{cssxref("&lt;length&gt;")}}
+  - : その軸が指定された長さになるよう画像を拡大縮小します。負の値は使用できません。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : その軸が*背景配置領域*の指定された割合になるよう拡大縮小します。背景配置領域とは、 {{cssxref("background-origin")}} の値 (既定ではパディングボックス) によって定められます。しかし、背景の {{cssxref("background-attachment")}} の値が `fixed` の場合、配置領域は{{glossary("viewport", "ビューポート")}}全体となります。負の値は使用できません。
 
-<h3 id="Intrinsic_dimensions_and_proportions" name="Intrinsic_dimensions_and_proportions">固有の軸と比率</h3>
+## 固有の軸と比率
 
-<p>値の計算は画像の固有の寸法 (幅と高さ) と固有の比率 (幅と高さの比率) に依存します。属性は以下の通りです。</p>
+値の計算は画像の固有の寸法 (幅と高さ) と固有の比率 (幅と高さの比率) に依存します。属性は以下の通りです。
 
-<ul>
- <li>ビットマップ画像 (JPG など) には、常に固有の寸法と比率があります。</li>
- <li>ベクター画像 (SVG など) には固有の寸法がないことがあります。水平と垂直の両方に固有の寸法がある場合は、固有の比率もあります。固有の寸法がなかったり、一方しかなかったりする場合は、固有の比率がある場合もあるしない場合もあります。</li>
- <li>CSS の {{cssxref("&lt;gradient&gt;")}} には固有の寸法も固有の比率もありません。</li>
- <li>{{cssxref("element()")}} 関数によって作成された背景画像では、それを作成する要素の固有の寸法と比率を使用します。</li>
-</ul>
+- ビットマップ画像 (JPG など) には、常に固有の寸法と比率があります。
+- ベクター画像 (SVG など) には固有の寸法がないことがあります。水平と垂直の両方に固有の寸法がある場合は、固有の比率もあります。固有の寸法がなかったり、一方しかなかったりする場合は、固有の比率がある場合もあるしない場合もあります。
+- CSS の {{cssxref("&lt;gradient&gt;")}} には固有の寸法も固有の比率もありません。
+- {{cssxref("element()")}} 関数によって作成された背景画像では、それを作成する要素の固有の寸法と比率を使用します。
 
-<div class="note">
-<p><strong>メモ:</strong> <code>&lt;gradient&gt;</code> の振る舞いは Gecko 8.0 {{geckoRelease("8.0")}} で変更されました。それより前は、固有の寸法がないものの、背景配置領域と同じ比率の画像として扱われていました。</p>
-</div>
+> **Note:**  Gecko では、 {{cssxref("element()")}} 関数を使用して作成された背景画像は要素の寸法、または要素が SVG の場合は背景配置領域の寸法を持つ画像として扱われ、適切な固有の比率を持ちます。これは非標準の振る舞いです。
 
-<div class="note">
-<p><strong>メモ:</strong> Gecko では、 {{cssxref("element()")}} 関数を使用して作成された背景画像は要素の寸法、または要素が SVG の場合は背景配置領域の寸法を持つ画像として扱われ、適切な固有の比率を持ちます。これは非標準の振る舞いです。</p>
-</div>
+固有の寸法と比率に基づき、背景画像の描画寸法は以下のようにして計算されます。
 
-<p>固有の寸法と比率に基づき、背景画像の描画寸法は以下のようにして計算されます。</p>
+- **`background-size` の幅と高さがともに定義されていて `auto` でない場合:** 背景画像は指定の寸法で描画されます。 
+- **`background-size` が `contain` または `cover` の場合:** 固有の比率を維持するため、画像は背景配置領域の中に収まるか、背景配置領域を覆うように描画されます。画像が固有の比率を持たない場合は、背景配置領域の寸法で描画されます。
+- **`background-size` が `auto` または `auto auto` の場合:**
 
-<dl>
- <dt><code>background-size</code> の幅と高さがともに定義されていて <code>auto</code> でない場合</dt>
- <dd>背景画像は指定の寸法で描画されます。</dd>
- <dt><code>background-size</code> が <code>contain</code> または <code>cover</code> の場合</dt>
- <dd>固有の比率を維持するため、画像は背景配置領域の中に収まるか、背景配置領域を覆うように描画されます。画像が固有の比率を持たない場合は、背景配置領域の寸法で描画されます。</dd>
- <dt><code>background-size</code> が <code>auto</code> または <code>auto auto</code> の場合</dt>
- <dd>
- <ul>
-  <li>画像に水平および垂直の固有の寸法がある場合は、その寸法で描画されます。</li>
-  <li>画像に固有の寸法も固有の比率もない場合は、背景配置領域の寸法で描画されます。</li>
-  <li>画像に固有の寸法はない物の固有の比率がある場合は、 <code>contain</code> が指定された場合のように描画されます。</li>
-  <li>画像に一方だけ固有の寸法があり、固有の比率がある場合は、一方の寸法に合わせて描画されます。もう一方の寸法は指定された寸法と固有の比率を使用して計算されます。</li>
-  <li>画像に一方だけ固有の寸法があり、固有の比率がない場合は、指定された寸法と、もう一方は背景配置領域の寸法を使用して描画されます。</li>
- </ul>
- </dd>
- <dd>
- <div class="note"><strong>メモ:</strong> SVG 画像には <code><a href="/ja/docs/Web/SVG/Attribute/preserveAspectRatio">preserveAspectRatio</a></code> 属性があり、既定では <code>contain</code> と同等です。 Firefox 43 では、 Chrome 52 とは対照的に、明確に <code>background-size</code> が設定されると <code>preserveAspectRatio</code> が無視されます。</div>
- </dd>
- <dt><code>background-size</code> の一方が <code>auto</code> でもう一方が <code>auto</code> ではない場合</dt>
- <dd>
- <ul>
-  <li>画像に固有の比率がある場合は、指定された寸法まで拡大縮小されます。指定されていない方の寸法は指定された寸法と固有の比率を使用して計算されます。</li>
-  <li>画像に固有の比率がない場合は、指定された寸法まで拡大縮小されます。指定されていない方の寸法は、画像の指定された寸法を使用して計算されます。そのような固有の寸法がない場合、背景配置領域の適切な寸法になります。</li>
- </ul>
- </dd>
-</dl>
+  - 画像に水平および垂直の固有の寸法がある場合は、その寸法で描画されます。
+  - 画像に固有の寸法も固有の比率もない場合は、背景配置領域の寸法で描画されます。
+  - 画像に固有の寸法はない物の固有の比率がある場合は、 `contain` が指定された場合のように描画されます。
+  - 画像に一方だけ固有の寸法があり、固有の比率がある場合は、一方の寸法に合わせて描画されます。もう一方の寸法は指定された寸法と固有の比率を使用して計算されます。
+  - 画像に一方だけ固有の寸法があり、固有の比率がない場合は、指定された寸法と、もう一方は背景配置領域の寸法を使用して描画されます。
 
-<div class="note">
-<p><strong>メモ:</strong> 固有の寸法や比率を持たないベクター画像の背景の拡大縮小は、まだすべてのブラウザーで完全に実装されているわけではありません。上記に記述した振る舞いに注意し、結果が適切であるかを複数のブラウザーで確認してください。</p>
-</div>
+  > **Note:** SVG 画像には [`preserveAspectRatio`](/ja/docs/Web/SVG/Attribute/preserveAspectRatio) 属性があり、既定では `contain` と同等です。明示的に `background-size` が設定されると `preserveAspectRatio` が無視されます。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+- **`background-size` の一方が `auto` でもう一方が `auto` ではない場合:**
 
-{{csssyntax}}
+  - 画像に固有の比率がある場合は、指定された寸法まで拡大縮小されます。指定されていない方の寸法は指定された寸法と固有の比率を使用して計算されます。
+  - 画像に固有の比率がない場合は、指定された寸法まで拡大縮小されます。指定されていない方の寸法は、画像の指定された寸法を使用して計算されます。そのような固有の寸法がない場合、背景配置領域の適切な寸法になります。
 
-<h2 id="Examples" name="Examples">例</h2>
+  > **Note:** 固有の寸法や比率を持たないベクター画像の背景の拡大縮小は、まだすべてのブラウザーで完全に実装されているわけではありません。上記に記述した振る舞いに注意し、結果が適切であるかを複数のブラウザーで確認してください。
 
-<p>例については <a href="/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images">Scaling background images</a> を参照してください。</p>
+### グラデーションでの動き
 
-<h2 id="Notes" name="Notes">メモ</h2>
+背景に `<gradient>` を使用し、それに合わせて `background-size` を指定した場合、`auto` を 1 つだけ使用する大きさや、幅の値だけで指定する大きさ (例: `background-size: 50%`) は、指定しないほうがよいでしょう。こういった場合のグラデーションの描画方法は Firefox 8 で変更され、現在のところ [CSS3 の `background-size` 仕様](https://www.w3.org/TR/css3-background/#the-background-size)や [CSS3 の Image Values gradient 仕様](https://dev.w3.org/csswg/css3-images/#gradients)に完全準拠した描画方式をすべて実装していない他ブラウザーと、たいていは一致しません。
 
-<p>背景としてグラデーションを定義し、<code>background-size</code> をそれにあわせて定義した場合には、単独の auto を使うサイズを指定しないか、width 値だけを使って定義するのがよいでしょう (例えば <code>background-size: 50%</code>)。こういった場合のグラデーションの描画方法は Firefox 8 で変更され、現在のところ <a href="http://www.w3.org/TR/css3-background/#the-background-size">CSS3 の <code>background-size</code> 仕様</a> や <a href="http://dev.w3.org/csswg/css3-images/#gradients">CSS3 の Image Values gradient 仕様</a> に完全準拠した描画方式をすべて実装していない他ブラウザと、たいていは一致しません。</p>
-
-<pre class="brush: css notranslate">.gradient-example {
+```css
+.gradient-example {
   width: 50px;
   height: 100px;
   background-image: linear-gradient(blue, red);
@@ -155,39 +124,60 @@ background-size: unset;
   background-size: 25px 50px;
   background-size: 50% 50%;
 }
-</pre>
+```
 
-<p>なお、 <code>&lt;gradient&gt;</code> に対してピクセルの寸法と <code>auto</code> を利用することは推奨されません。 Firefox の 8 より前と、 Firefox 8 のレンダリングを実装していないブラウザーでは、背景が指定されている要素の正確な寸法が分からないと、レンダリングできないからです。</p>
+なお、 `<gradient>` に対してピクセルの寸法と `auto` を利用することは推奨されません。 Firefox の 8 より前と、 Firefox 8 のレンダリングを実装していないブラウザーでは、背景が指定されている要素の正確な寸法が分からないと、レンダリングできないからです。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 公式定義
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-background-size', 'background-size')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
+## 形式文法
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{csssyntax}}
 
-<p>{{Compat("css.properties.background-size")}}</p>
+## 例
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h3 id="Tiling_a_large_image">巨大な画像をタイル表示</h3>
 
-<ul>
- <li><a href="/ja/docs/CSS/Scaling_background_images" title="CSS/Scaling_background_images">背景画像の拡大縮小</a></li>
- <li><a href="/ja/docs/Web/CSS/Scaling_of_SVG_backgrounds">背景 SVG の拡大縮小</a></li>
- <li>{{cssxref("object-fit")}}</li>
-</ul>
+2982 x 2808 の Firefox ロゴ画像という大きな画像を考えてみましょう。この画像のコピーを 4 枚、300 x 300 ピクセルの要素にタイル状に配置したいとします。これを実現するには、固定の `background-size` 値として 150 ピクセルを使用します。
+
+#### HTML
+
+```html
+<div class="tiledBackground">
+</div>
+```
+
+#### CSS
+
+```css
+.tiledBackground {
+  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
+  background-size: 150px;
+  width: 300px;
+  height: 300px;
+  border: 2px solid;
+  color: pink;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample("Tiling_a_large_image", 340, 340)}}
+
+その他の例は[背景画像の拡大縮小](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)を参照してください。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [背景画像の拡大縮小](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)
+- [背景 SVG の拡大縮小](/ja/docs/Web/CSS/Scaling_of_SVG_backgrounds)
+- {{cssxref("object-fit")}}

@@ -3,33 +3,29 @@ title: background-clip
 slug: Web/CSS/background-clip
 tags:
   - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - 'recipe:css-property'
+  - CSS 背景
+  - CSS プロパティ
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.background-clip
 translation_of: Web/CSS/background-clip
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p><strong><code>background-clip</code></strong> は CSS のプロパティで、要素の背景を境界ボックス、パディングボックス、コンテンツボックスのどれまで拡張するかを設定します。</p>
+**`background-clip`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景を境界ボックス、パディングボックス、コンテンツボックスのどれまで拡張するかを設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/background-clip.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-clip.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+要素に {{cssxref("background-image")}} または {{cssxref("background-color")}} がない場合、このプロパティは ({{cssxref("border-style")}} または {{cssxref("border-image")}} によって) 境界に透明な領域や部分的に不透明な領域がある場合のみ視覚効果があります。そうでなければ、境界は異なるマスク方法になります。
 
-<p>要素に {{cssxref("background-image")}} または {{cssxref("background-color")}} がない場合、このプロパティは ({{cssxref("border-style")}} または {{cssxref("border-image")}} によって) 境界に透明な領域や部分的に不透明な領域がある場合のみ視覚効果があります。そうでなければ、境界は異なるマスク方法になります。</p>
+> **Note:** [ルート要素](/ja/docs/Web/HTML/Element/html)は異なる背景の描画領域を持っているため、その要素に `background-clip` プロパティが指定されても効果はありません。「[特殊要素の背景](https://drafts.csswg.org/css-backgrounds-3/#special-backgrounds)」を参照してください。
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> <a href="/ja/docs/Web/HTML/Element/html">ルート要素</a>は異なる背景の描画領域を持っているため、その要素に <code>background-clip</code> プロパティが指定されても効果はありません。「<a href="https://drafts.csswg.org/css-backgrounds-3/#special-backgrounds">特殊要素の背景</a>」を参照してください。</p>
-</div>
+> **Note:** [ルート要素](/ja/docs/Web/HTML/Element/html)が HTML 要素である文書の場合、ルート要素上の {{cssxref("background-image")}} の計算値が `none` であり、その {{cssxref("background-color")}} が `transparent` であると、ユーザーエージェントは代わりに、 `background` プロパティの計算値をその要素の HTML の {{HTMLElement("body")}} の子要素から伝搬させなければなりません。その `<body>` 要素の `background` プロパティの使用値はその初期値であり、伝搬された値は、それらがルート要素上で指定されたかのように扱われます。 HTML 文書を作成するときは、 HTML 要素ではなく、 `<body>` 要素にキャンバスの背景を指定することを推奨します。
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> <a href="/ja/docs/Web/HTML/Element/html">ルート要素</a>が HTML 要素である文書の場合、ルート要素上の {{cssxref("background-image")}} の計算値が <code>none</code> であり、その {{cssxref("background-color")}} が <code>transparent</code> であると、ユーザーエージェントは代わりに、 {{cssxref("background")}} プロパティの計算値をその要素の HTML の {{HTMLElement("body")}} の子要素から伝搬させなければなりません。その <code>&lt;body&gt;</code> 要素の <code>background</code> プロパティの使用値はその初期値であり、伝搬された値は、それらがルート要素上で指定されたかのように扱われます。 HTML 文書を作成するときは、 HTML 要素ではなく、 <code>&lt;body&gt;</code> 要素にキャンバスの背景を指定することを推奨します。</p>
-</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* キーワード値 */
+```css
+/* キーワード値 */
 background-clip: border-box;
 background-clip: padding-box;
 background-clip: content-box;
@@ -38,43 +34,52 @@ background-clip: text;
 /* グローバル値 */
 background-clip: inherit;
 background-clip: initial;
+background-clip: revert;
 background-clip: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>border-box</code></dt>
- <dd>背景を境界の外側の辺まで拡張します (但し、境界の下に重ね合わせられます)。</dd>
- <dt><code>padding-box</code></dt>
- <dd>背景をパディングの外側の辺まで拡張します。境界の下には背景が描かれません。</dd>
- <dt><code>content-box</code></dt>
- <dd>背景をコンテンツボックスの中に (切り取って) 表示します。</dd>
- <dt><code>text</code> {{experimental_inline}}</dt>
- <dd>背景を前景のテキストの中に (切り取って) 表示します。</dd>
-</dl>
+- `border-box`
+  - : 背景を境界の外側の辺まで拡張します (但し、境界の下に重ね合わせられます)。
+- `padding-box`
+  - : 背景をパディングの外側の辺まで拡張します。境界の下には背景が描かれません。
+- `content-box`
+  - : 背景をコンテンツボックスの中に (切り取って) 表示します。
+- `text`
+  - : 背景を前景のテキストの中に (切り取って) 表示します。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## アクセシビリティの考慮
 
-<p>{{cssinfo}}</p>
+`background-clip: text` を使用する際には、背景色とその上に配置されたテキストの色のコントラスト比が、弱視の人がページの内容を読むことができる程度に高いことを確認してください。
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+背景画像が読み込まれないと、テキストが読めなくなることがあります。これを防ぐために、代替の {{cssxref("background-color")}} を追加し、画像なしでテストしてください。
+
+{{cssxref("@supports")}} で機能クエリの使用し、`background-clip: text` に対応しているかどうかをテストして、対応していない場合はアクセス可能な代替手段を提供することを検討してください。
+
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h4 id="HTML">HTML</h4>
+### HTML
 
-<pre class="brush: html notranslate">&lt;p class="border-box"&gt;背景が境界の裏まで拡張されます。&lt;/p&gt;
-&lt;p class="padding-box"&gt;背景が境界の内側の縁まで拡張されます。&lt;/p&gt;
-&lt;p class="content-box"&gt;背景がコンテンツボックスの縁までだけ表示されます。&lt;/p&gt;
-&lt;p class="text"&gt;背景が前景のテキストで切り取られます。&lt;/p&gt;
-</pre>
+```html
+<p class="border-box">背景が境界の裏まで拡張されます。</p>
+<p class="padding-box">背景が境界の内側の縁まで拡張されます。</p>
+<p class="content-box">背景がコンテンツボックスの縁までだけ表示されます。</p>
+<p class="text">背景が前景のテキストで切り取られます。</p>
+```
 
-<h4 id="CSS">CSS</h4>
+### CSS
 
-<pre class="brush: css notranslate">p {
+```css
+p {
   border: .8em darkviolet;
   border-style: dotted double;
   margin: 1em 0;
@@ -92,44 +97,23 @@ background-clip: unset;
   background-clip: text;
   -webkit-background-clip: text;
   color: rgba(0,0,0,.2);
-}</pre>
+}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Examples', 600, 580)}}</p>
+{{EmbedLiveSample('Examples', 600, 580)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>初回定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Backgrounds', '#background-clip', 'background-clip')}}</td>
-   <td>{{Spec2('CSS4 Backgrounds')}}</td>
-   <td><code>text</code> の値を追加。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.background-clip")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{cssxref("clip-path")}} プロパティは<em>要素全体</em>を表示する部分を定義するクリッピング領域を作成します。</li>
- <li>背景のプロパティ: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}</li>
- <li><a href="/ja/docs/Web/CSS/box_model">CSS ボックスモデルの紹介</a></li>
-</ul>
+- {{cssxref("clip-path")}} プロパティは*要素全体*を表示する部分を定義するクリッピング領域を作成します。
+- 背景のプロパティ: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}
+- [CSS ボックスモデルの紹介](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
