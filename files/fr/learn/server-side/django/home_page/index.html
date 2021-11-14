@@ -18,9 +18,9 @@ translation_of: Learn/Server-side/Django/Home_page
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">Le travail préparatoire pour nous permettre de créer une page d'accueil pour le site web de <a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">la bibliothèque locale</a> est réalisé. La page d'accueil montera le nombre d'enregistrements pour chacun des objets décrits dans la base et les liens à l'aide d'une barre latérale de navigation. Dans la progression de l'article, nous apprendrons à gérer les vues et à présenter les données à l'aide de gabarits.</p>
+<p>Le travail préparatoire pour nous permettre de créer une page d'accueil pour le site web de <a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">la bibliothèque locale</a> est réalisé. La page d'accueil montera le nombre d'enregistrements pour chacun des objets décrits dans la base et les liens à l'aide d'une barre latérale de navigation. Dans la progression de l'article, nous apprendrons à gérer les vues et à présenter les données à l'aide de gabarits.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Pré-requis:</th>
@@ -45,7 +45,7 @@ translation_of: Learn/Server-side/Django/Home_page
  <li>créer les gabarits qui vont permettre de publier les données dans les vues.</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13931/basic-django.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="basic-django.png"></p>
 
 <p>Nous aurons à créer 5 pages web pour publier les informations à destination des utilisateurs. Cela fait beaucoup d'éléments à maîtriser dans une seule section d'apprentissage de l'outils. Nous avons donc opté pour ne traiter dans cette section que de la page d'accueil et de traiter les autres pages dans une autre section du didacticiel. Cela permet, en outre, de mieux appréhender les composants comme le routage d'URL ou les vues et d'une manière générale le fonctionnement du modèle de Django.</p>
 
@@ -68,7 +68,7 @@ translation_of: Learn/Server-side/Django/Home_page
 <p>En revanche, les pages concernant le détails d'un livre ou d'un auteur nécessiteront de traiter l'identifiant d'un  objet. Il sera nécessaire d'extraire de la requête HTTP l'information encodé de cet identifiant pour obtenir ensuite le détail depuis la base de données. Pour cela nous utiliserons un seul jeu de vue et de gabarit pour publier les informations sur les livres (et auteurs).</p>
 
 <div class="note">
-<p><strong>Note</strong>: Avec le cadriciel Django, vous pouvez élaborer vos URLs comme bon vous semble — Vous pouvez avoir une approche comme celle présentée ci-dessus, ou de faire un appel de la méthode <code>GET</code> avec un passage de paramètres (<code>/book/?id=6</code>). Cependant, quelque soit l'approche pour laquelle vous opterez, garder en mémoire d'avoir des URLs claires, logique et compréhensibles comme cela est  <a href="https://www.w3.org/Provider/Style/URI">recommandé par le W3C</a>.</p>
+<p><strong>Note :</strong> Avec le cadriciel Django, vous pouvez élaborer vos URLs comme bon vous semble — Vous pouvez avoir une approche comme celle présentée ci-dessus, ou de faire un appel de la méthode <code>GET</code> avec un passage de paramètres (<code>/book/?id=6</code>). Cependant, quelque soit l'approche pour laquelle vous opterez, garder en mémoire d'avoir des URLs claires, logique et compréhensibles comme cela est  <a href="https://www.w3.org/Provider/Style/URI">recommandé par le W3C</a>.</p>
 
 <p>La documentation de Django recommande aussi de coder les informations dans le corps des URLs pour avoir une meilleure conception de ces URLs.</p>
 </div>
@@ -80,7 +80,7 @@ translation_of: Learn/Server-side/Django/Home_page
 <p>La toute première page à créer est la page d'accueil (<code>catalog/</code>). Cette page d'index est globalement une page statique contenant le décompte des différents enregistrements de la base de données. Pour faire cela, il sera nécessaire de créer un routage d'URL, une vue et un gabarit. </p>
 
 <div class="note">
-<p><strong>Note</strong>: Cette section est essentielle, et cela vaut vraiment la peine d'être attentif aux concepts déployés dans celle-ci. La plupart des éléments aborder ici seront ré-utilisés par la suite.</p>
+<p><strong>Note :</strong> Cette section est essentielle, et cela vaut vraiment la peine d'être attentif aux concepts déployés dans celle-ci. La plupart des éléments aborder ici seront ré-utilisés par la suite.</p>
 </div>
 
 <h3 id="Routage_d'URL">Routage d'URL</h3>
@@ -112,7 +112,7 @@ translation_of: Learn/Server-side/Django/Home_page
 <pre class="brush: html">&lt;a href="<strong>{% url 'index' %}</strong>"&gt;Home&lt;/a&gt;.</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Vus pourriez bien évidemment coder en dur l'accès à la page d'accueil de cette manaière <code>&lt;a href="<strong>/catalog/</strong>"&gt;Home&lt;/a&gt;</code>), mais si nous changions le modèle d'URL, par exemple en <code>/catalog/index</code>, alors le gabarit ne fonctionnerait plus correctement et présenterait un lien mort. L'utilisation des noms et des routage inversés est plus robuste et adapté aux évolutions de l'application.</p>
+<p><strong>Note :</strong> Vus pourriez bien évidemment coder en dur l'accès à la page d'accueil de cette manaière <code>&lt;a href="<strong>/catalog/</strong>"&gt;Home&lt;/a&gt;</code>), mais si nous changions le modèle d'URL, par exemple en <code>/catalog/index</code>, alors le gabarit ne fonctionnerait plus correctement et présenterait un lien mort. L'utilisation des noms et des routage inversés est plus robuste et adapté aux évolutions de l'application.</p>
 </div>
 
 <h3 id="Vue_(View_function-based)">Vue (<em>View function-based</em>)</h3>
@@ -176,7 +176,7 @@ def index(request):
 <p>Vous pouvez en faire l'expérience dès à présent, après avoir redémarré votre serveur local, en accédant à l'URL <code>127.0.0.1:8000</code> de votre navigateur. Une page d'erreur explicite s'affiche en indiquant un message du type : "<code>TemplateDoesNotExist at /catalog/</code>", ainsi que de nombreux détails sur l'enchaînement des fonctions aboutissant à cette erreur.</p>
 
 <div class="note">
-<p><strong>Note</strong>: En fonction du paramétrage de votre projet - le fichier settings.py de votre projet - Django va chercher pour des gabarits dans différents répertoires et dans ceux de votre application par défaut. Si vous souhaitez approfondir ce sujet vous pouvez consulter la <a href="https://docs.djangoproject.com/fr/2.2/topics/templates/">documentation Django relative aux gabarit</a>.</p>
+<p><strong>Note :</strong> En fonction du paramétrage de votre projet - le fichier settings.py de votre projet - Django va chercher pour des gabarits dans différents répertoires et dans ceux de votre application par défaut. Si vous souhaitez approfondir ce sujet vous pouvez consulter la <a href="https://docs.djangoproject.com/fr/2.2/topics/templates/">documentation Django relative aux gabarit</a>.</p>
 </div>
 
 <h4 id="Concevoir_les_gabarits">Concevoir les gabarits</h4>
@@ -186,7 +186,7 @@ def index(request):
 <p>Le langage de gabarit de Django permet de définir un modèle de base puis de l'étendre ensuite. L'extrait de code ci-dessous vient du fichier de gabarit <strong>base_generic.html</strong>, vous constaterez qu'il s'y mélange du code HTML et des sections nommées contenu dans entre des marqueurs <code>block</code> et <code>endblock</code> qui peut contenir ou non des données.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <span class="tlid-translation translation" lang="fr"><span title="">Les marqueurs de gabarits sont des fonctions que vous pouvez utiliser dans un modèle pour parcourir des listes, effectuer des opérations conditionnelles en fonction de la valeur d'une variable, etc.</span> <span title="">Outre les balises de modèle, la syntaxe de gabarit vous permet de référencer les variables qui sont transmises au modèle à partir de la vue et d'utiliser des filtres de gabarit pour mettre en forme les variables (par exemple, pour convertir une chaîne en minuscule).</span></span></p>
+<p><strong>Note :</strong> Les marqueurs de gabarits sont des fonctions que vous pouvez utiliser dans un modèle pour parcourir des listes, effectuer des opérations conditionnelles en fonction de la valeur d'une variable, etc. Outre les balises de modèle, la syntaxe de gabarit vous permet de référencer les variables qui sont transmises au modèle à partir de la vue et d'utiliser des filtres de gabarit pour mettre en forme les variables (par exemple, pour convertir une chaîne en minuscule).</p>
 </div>
 
 <p>Dans l'extrait ci-dessous vous avec trois sections nommées qui pourront être remplacés par la suite :</p>
@@ -225,7 +225,7 @@ def index(request):
 <p>Nous allons nous appuyer sur le gabarit ci-dessous pour constuire la page de base de la bibliothèque locale. Vous le constatez, il contient des éléments HTML et des blocs dédiés Django pour spécifier trois sections <code>title</code>, <code>sidebar</code>, et <code>content</code>. La section <code>title</code> contient un titre par défaut. De même la section <code>sidebar</code> contient un liens vers la liste des livres et des auteurs qui pourra être modifié ensuite.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Il y a aussi deux balises supplémentaires : <code>url</code> et <code>load static</code>. Elles seront étudiées dans le chapitre suivant.</p>
+<p><strong>Note :</strong> Il y a aussi deux balises supplémentaires : <code>url</code> et <code>load static</code>. Elles seront étudiées dans le chapitre suivant.</p>
 </div>
 
 <p>Créez un nouveau fichier nommé <strong><em>base_generic.html </em></strong>dans le dossier <strong>/locallibrary/catalog/templates/</strong> (à créer aussi) et copiez-y le texte ci-dessous :</p>
@@ -276,20 +276,20 @@ def index(request):
 
 <p>Maintenant créez le fichier HTML <strong><em>index.html</em></strong> dans le dossier <strong>/locallibrary/catalog/templates/</strong> et copiez-y le code ci-dessous. This code extends our base template on the first line, and then replaces the default <code>content</code> block for the template. </p>
 
-<pre class="brush: html line-numbers language-html"><code class="language-html">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 
 {% block content %}
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h1</span><span class="punctuation token">&gt;</span></span>Accueil de la bibliothèque locale<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h1</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span><span class="tag token"><span class="punctuation token">Bienvenue à la bibliothèque locale, un site web développé par </span></span></span></code><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span>Mozilla Developer Network<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>!</code><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h2</span><span class="punctuation token">&gt;</span></span>Contenu dynamique<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h2</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>La bibliothèque dispose des enregistrements suivants:<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>ul</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>strong</span><span class="punctuation token">&gt;Livres</span></span>:<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>strong</span><span class="punctuation token">&gt;</span></span> <strong>\{{ num_books }}</strong><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>strong</span><span class="punctuation token">&gt;</span></span>Copies:<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>strong</span><span class="punctuation token">&gt;</span></span> <strong>\{{ num_instances }}</strong><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>strong</span><span class="punctuation token">&gt;</span></span>Copies disponibles:<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>strong</span><span class="punctuation token">&gt;</span></span> <strong>\{{ num_instances_available }}</strong><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>strong</span><span class="punctuation token">&gt;</span></span>Auteurs:<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>strong</span><span class="punctuation token">&gt;</span></span> <strong>\{{ num_authors }}</strong><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>ul</span><span class="punctuation token">&gt;</span></span>
-{% endblock %}</code></pre>
+  &lt;h1&gt;Accueil de la bibliothèque locale&lt;/h1&gt;
+  &lt;p&gt;Bienvenue à la bibliothèque locale, un site web développé par &lt;em&gt;Mozilla Developer Network&lt;/em&gt;!&lt;/p&gt;
+  &lt;h2&gt;Contenu dynamique&lt;/h2&gt;
+  &lt;p&gt;La bibliothèque dispose des enregistrements suivants:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;strong&gt;Livres:&lt;/strong&gt; \{{ num_books }}&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Copies:&lt;/strong&gt; \{{ num_instances }}&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Copies disponibles:&lt;/strong&gt; \{{ num_instances_available }}&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Auteurs:&lt;/strong&gt; \{{ num_authors }}&lt;/li&gt;
+  &lt;/ul&gt;
+{% endblock %}</pre>
 
 <p>Dans la section cont'enu dynamique, des emplacements réservés sont définis pour pouvoir y insérer le contenu de variable qui sont identifiées à l'intérieur de doubles accolades (ouvrantes et fermantes). Pour une meilleure visibilité ces emplacements et les variables nommées sont identifiées en caractères gras dans l'extrait de code ci-dessus. </p>
 
@@ -325,7 +325,7 @@ return render(request, 'index.html', context=context)</pre>
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Les exemples ci-dessus indiquent où se trouvent les fichiers, mais le cadriciel ne travail pas ainsi par défaut. Nous avons configuré le serveur web de développement en modifiant le routage des URL (<strong>/locallibrary/locallibrary/urls.py</strong>) à <a href="/fr/docs/Learn/Server-side/Django/skeleton_website">la création du squelette du site</a>. Cependant nous devrons travailler plus tard la mise en production.</p>
+<p><strong>Note :</strong> Les exemples ci-dessus indiquent où se trouvent les fichiers, mais le cadriciel ne travail pas ainsi par défaut. Nous avons configuré le serveur web de développement en modifiant le routage des URL (<strong>/locallibrary/locallibrary/urls.py</strong>) à <a href="/fr/docs/Learn/Server-side/Django/skeleton_website">la création du squelette du site</a>. Cependant nous devrons travailler plus tard la mise en production.</p>
 </div>
 
 <p>Pour plus de détails sur les fichiers statiques vous pouvez consulter la documentation Django sur <a href="https://docs.djangoproject.com/fr/2.2/howto/static-files/">la gestion des fichiers statiques</a>.</p>
@@ -365,7 +365,7 @@ return render(request, 'index.html', context=context)</pre>
 
 <p>A ce niveau, nous avons créé l'ensemble des ressources nécessaires à l'affichage de la page d'accueil. Démarrez le serveur (<code>python3 manage.py runserver</code>) et accédez avec votre navigateur à la page d'accueil du site web <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>. Si tout va bien, vous devriez avoir une page qui ressemble à celle ci-dessous.</p>
 
-<p><img alt="Page d'accueil en Français" src="https://mdn.mozillademos.org/files/16794/index_fr_page_ok.png" style="height: 1050px; width: 1872px;"></p>
+<p><img alt="Page d'accueil en Français" src="index_fr_page_ok.png"></p>
 
 <div class="note">
 <p><strong>Note:</strong> Toutes les ressources n'ayant pas été encore créées les liens vers Tous les livres et Tous les auteurs ne fonctionnent pas encore.</p>
@@ -379,7 +379,7 @@ return render(request, 'index.html', context=context)</pre>
  <li>La bibliothèque locale dispose d'un gabarit d'origine qui inclu une section <code>title</code>. Surchargez cette section dans le gabarit index et créer un nouveau titre.
 
   <div class="note">
-  <p><strong>Hint:</strong> La section Concevoir un gabarit détaille la manière de modifier une section.</p>
+  <p><strong>Note :</strong> La section Concevoir un gabarit détaille la manière de modifier une section.</p>
   </div>
  </li>
  <li>Modifiez la vue pour disposer de décomptes pour les genres et les titres de livre qui contiennent un mot (en repectant la casse) et transmettez cela via le  <code>context.</code> Pour faire cela utilisez les variables <code>num_books</code> et <code>num_instances_available</code>. Ensuite vous pourrez mettre à jour le gabarit de la page d'accueil.<br>
@@ -412,18 +412,18 @@ return render(request, 'index.html', context=context)</pre>
 
 <ul>
  <li><a href="/fr/docs/Learn/Server-side/Django/Introduction">Django introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
  <li><a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Didactique: Site web "Bibliothèque locale"</a></li>
  <li><a href="/fr/docs/Learn/Server-side/Django/skeleton_website">Django didactique Section 2: Créer le squelette du site web</a></li>
  <li><a href="/fr/docs/Learn/Server-side/Django/Models">Django didactique Section 3: Utilisation des modèles de données</a></li>
  <li><a href="/fr/docs/Learn/Server-side/Django/Admin_site">Django didactique Section 4 : Site d'administration de Django</a></li>
  <li><a href="/fr/docs/Learn/Server-side/Django/Home_page">Django didactique Section 5: Créer la page d'accueil</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
 </ul>

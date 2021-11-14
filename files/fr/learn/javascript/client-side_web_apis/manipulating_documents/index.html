@@ -20,9 +20,9 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Manipulating_documents
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}</div>
 
-<p class="summary">Quand on écrit des pages web et des applications, une des choses les plus courantes que l'on veut faire est de manipuler la structure du document d'une manière ou d'une autre. On le fait généralement en utilisant le Document Object Model (DOM), un ensemble d'APIs qui permettent de contrôler le HTML et le style — et qui utilisent massivement l'objet <a href="/fr/docs/Web/API/Document"><code>Document</code></a>. Dans cet article, nous allons voir comment utiliser le DOM en détail, ainsi que quelques APIs intéressantes qui peuvent modifier votre environnement.</p>
+<p>Quand on écrit des pages web et des applications, une des choses les plus courantes que l'on veut faire est de manipuler la structure du document d'une manière ou d'une autre. On le fait généralement en utilisant le Document Object Model (DOM), un ensemble d'APIs qui permettent de contrôler le HTML et le style — et qui utilisent massivement l'objet <a href="/fr/docs/Web/API/Document"><code>Document</code></a>. Dans cet article, nous allons voir comment utiliser le DOM en détail, ainsi que quelques APIs intéressantes qui peuvent modifier votre environnement.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -41,7 +41,7 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Manipulating_documents
 
 <p>Malgré les limitations, les APIs Web nous donnent accès à beaucoup de fonctionnalités, lesquelles nous permettent de faire plein de choses géniales avec les pages web. Il existe quelques éléments évidents que vous utilisez régulièrement dans votre code — jetez un coup d'œil au diagramme suivant, il représente les principaux composants du navigateur directement impliqués dans l'affichage des pages web:</p>
 
-<p><img alt="" src="document-window-navigator.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="document-window-navigator.png"></p>
 
 <ul>
  <li>La <em>fenêtre</em> est l'onglet du navigateur dans lequel une page web est chargée. Elle est représentée en JavaScript par l'objet <a href="/fr/docs/Web/API/Window"><code>Window</code></a>. Utiliser les méthodes disponibles sur cet objet nous permet par exemple de récupérer la taille de la fenêtre (voir <a href="/fr/docs/Web/API/Window/innerWidth"><code>Window.innerWidth</code></a> et <a href="/fr/docs/Web/API/Window/innerHeight"><code>Window.innerHeight</code></a>), manipuler le document chargé dans cette fenêtre, stocker des données spécifiques à ce document côté client (par exemple en utilisant une base de données locale ou autre mécanisme de stockage), attacher un <a href="/fr/docs/Learn/JavaScript/Building_blocks/Events">gestionnaire d'événement</a> à la fenêtre en cours, et plus encore.</li>
@@ -73,7 +73,7 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Manipulating_documents
 
 <p>Le DOM, quant à lui, ressemble à ça :</p>
 
-<p><img alt="" src="dom-screenshot.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="dom-screenshot.png"></p>
 
 <div class="note">
 <p><strong>Note :</strong> Ce diagramme du DOM a été créé en utilisant le <a href="https://software.hixie.ch/utilities/js/live-dom-viewer/">Live DOM viewer</a> de Ian Hickson.</p>
@@ -198,7 +198,7 @@ para.style.textAlign = 'center';</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong> : Vous remarquerez que les propriétés JavaScript qui représentent les propriétés CSS sont écrites en <a href="https://fr.wikipedia.org/wiki/Camel_case">lower camel case</a> tandis que les versions CSS sont reliées par des tirets (par exemple <code>backgroundColor</code> au lieu de <code>background-color</code>). Prenez garde à ne pas les mélanger, sans quoi ça ne fonctionnera pas.</p>
+<p><strong>Note :</strong> Vous remarquerez que les propriétés JavaScript qui représentent les propriétés CSS sont écrites en <a href="https://fr.wikipedia.org/wiki/Camel_case">lower camel case</a> tandis que les versions CSS sont reliées par des tirets (par exemple <code>backgroundColor</code> au lieu de <code>background-color</code>). Prenez garde à ne pas les mélanger, sans quoi ça ne fonctionnera pas.</p>
 </div>
 
 <p>Il y a un autre moyen de manipuler dynamiquement des styles sur votre document, que nous allons étudier maintenant.</p>
@@ -229,7 +229,7 @@ para.style.textAlign = 'center';</pre>
 <p>Dans les deux prochaines sections, nous verrons des exemples d'utilisation plus pratiques des APIs du DOM.</p>
 
 <div class="note">
-<p><strong>Note</strong> : Vous pouvez trouver la <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example-manipulated.html">version finale de dom-example.html</a> sur GitHub (<a href="https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html">le voir en direct aussi</a>).</p>
+<p><strong>Note :</strong> Vous pouvez trouver la <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example-manipulated.html">version finale de dom-example.html</a> sur GitHub (<a href="https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html">le voir en direct aussi</a>).</p>
 </div>
 
 <h2 id="active_learning_getting_useful_information_from_the_window_object">Apprentissage actif : Récupérer des informations utiles depuis l'objet Window</h2>
@@ -262,7 +262,7 @@ para.style.textAlign = 'center';</pre>
   </ol>
 
 <div class="note">
-<p><strong>Note</strong> : En cas de blocage, jetez un œil à notre <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/window-resize-example-finished.html">exemple de redimensionnement de la fenêtre terminé</a> sur GitHub (<a href="https://mdn.github.io/learning-area/javascript/apis/document-manipulation/window-resize-example-finished.html">voir en direct aussi</a>).</p>
+<p><strong>Note :</strong> En cas de blocage, jetez un œil à notre <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/window-resize-example-finished.html">exemple de redimensionnement de la fenêtre terminé</a> sur GitHub (<a href="https://mdn.github.io/learning-area/javascript/apis/document-manipulation/window-resize-example-finished.html">voir en direct aussi</a>).</p>
 </div>
 
 <h2 id="active_learning_a_dynamic_shopping_list">Apprentissage actif : Une liste de courses dynamique</h2>
@@ -277,7 +277,7 @@ para.style.textAlign = 'center';</pre>
 
 <p>La démo terminée doit ressembler à ça:</p>
 
-<p><img alt="" src="shopping-list.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="shopping-list.png"></p>
 
 <p>Pour compléter l'exercice, suivez les étapes ci-dessous, et assurez-vous que votre exemple se comporte comme décrit ci-dessus.</p>
 
@@ -296,7 +296,7 @@ para.style.textAlign = 'center';</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong> : Si vous bloquez vraiment, jetez un œil à notre <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list-finished.html">liste de courses terminée</a> (<a href="https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html">voir en direct</a>.)</p>
+<p><strong>Note :</strong> Si vous bloquez vraiment, jetez un œil à notre <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list-finished.html">liste de courses terminée</a> (<a href="https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html">voir en direct</a>.)</p>
 </div>
 
 <h2 id="summary">Résumé</h2>

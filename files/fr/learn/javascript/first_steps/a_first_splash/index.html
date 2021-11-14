@@ -18,9 +18,9 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">Maintenant que vous avez appris quelques éléments théoriques sur le JavaScript, et ce que vous pouvez faire avec, nous allons vous donner un cours intensif sur les fonctionnalités basiques du JavaScript avec un tutoriel entièrement pratique. Vous allez construire un jeu simple, étape par étape. Il s'agit de faire deviner un nombre, notre jeu s'appelle « Guess the number ».</p>
+<p>Maintenant que vous avez appris quelques éléments théoriques sur le JavaScript, et ce que vous pouvez faire avec, nous allons vous donner un cours intensif sur les fonctionnalités basiques du JavaScript avec un tutoriel entièrement pratique. Vous allez construire un jeu simple, étape par étape. Il s'agit de faire deviner un nombre, notre jeu s'appelle « Guess the number ».</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -36,7 +36,7 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 <p>Ne vous attendez pas à comprendre tout le code en détail immédiatement — nous voulons simplement vous présenter les grands concepts pour le moment, et vous donner une idée de la façon dont JavaScript (et d'autres langages de programmation) fonctionne. Dans les articles suivants, vous reviendrez plus en détails sur toutes ces fonctionnalités !</p>
 
 <div class="note">
-<p>Note : De nombreuses fonctionnalités que vous allez voir en JavaScript sont identiques à celles d'autres langages de programmation — fonctions, boucles, etc. La syntaxe du code est différente mais les concepts sont globalement identiques.</p>
+<p><strong>Note :</strong> De nombreuses fonctionnalités que vous allez voir en JavaScript sont identiques à celles d'autres langages de programmation — fonctions, boucles, etc. La syntaxe du code est différente mais les concepts sont globalement identiques.</p>
 </div>
 
 <h2 id="Penser_comme_un_programmeur">Penser comme un programmeur</h2>
@@ -49,12 +49,10 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 
 <h2 id="Exemple_—_Jeu_Guess_the_number">Exemple — Jeu : Guess the number</h2>
 
-<p><span id="result_box" lang="fr"><span>Dans cet article, nous allons vous montrer comment construire le jeu simple que vous pouvez voir ci-dessous :</span></span></p>
+<p>Dans cet article, nous allons vous montrer comment construire le jeu simple que vous pouvez voir ci-dessous :</p>
 
-<div class="hidden">
-<h6 id="Top_hidden_code">Top hidden code</h6>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 
 &lt;head&gt;
@@ -160,16 +158,15 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 &lt;/script&gt;
 
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Top_hidden_code', '100%', 320, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Exemple_—_Jeu_Guess_the_number', '100%', 320, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<p><span id="result_box" lang="fr"><span>Essayez de jouer et familiarisez-vous avec ce jeu avant de continuer.</span><br>
- <br>
- <span>Imaginons que votre patron vous ait donné le résumé suivant pour créer ce jeu :</span></span></p>
+<p>Essayez de jouer et familiarisez-vous avec ce jeu avant de continuer.</p>
+
+<p>Imaginons que votre patron vous ait donné le résumé suivant pour créer ce jeu :</p>
 
 <blockquote>
-<p><span id="result_box" lang="fr"><span>Je vous demande de créer un jeu simple de devinette de </span><span>nombre. Le jeu choisit aléatoirement un nombre entre 1 et 100, puis il met le joueur au défi de le deviner en 10 tentatives maxi.</span> <span>À chaque tour, le joueur doit être informé s'il a deviné ou non le bon nombre — si ce n'est pas le cas, le jeu lui indique si son estimation est trop basse ou trop élevée.</span> Le jeu<span> doit également rappeler au joueur les nombres déjà proposés.</span> <span>Le jeu se termine quand le joueur a deviné le nombre mystère, ou s'il a épuisé ses 10 chances.</span> </span>À<span lang="fr"><span> la fin du jeu, le joueur a la possibilité de débuter une nouvelle partie.</span></span></p>
+<p>Je vous demande de créer un jeu simple de devinette de nombre. Le jeu choisit aléatoirement un nombre entre 1 et 100, puis il met le joueur au défi de le deviner en 10 tentatives maxi. À chaque tour, le joueur doit être informé s'il a deviné ou non le bon nombre — si ce n'est pas le cas, le jeu lui indique si son estimation est trop basse ou trop élevée. Le jeu doit également rappeler au joueur les nombres déjà proposés. Le jeu se termine quand le joueur a deviné le nombre mystère, ou s'il a épuisé ses 10 chances. À la fin du jeu, le joueur a la possibilité de débuter une nouvelle partie.</p>
 </blockquote>
 
 <p>La première chose à faire en regardant ce résumé, c'est de le décomposer en tâches simples et codables comme le ferait un programmeur :</p>
@@ -201,12 +198,10 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
    <li>Afficher un contrôle pour que le joueur puisse rejouer.</li>
   </ol>
  </li>
- <li><span id="result_box" lang="fr"><span title="Once the game restarts, make sure the game logic and UI are completely reset, then go back to step 1.
-
-">Une fois le jeu redémarré, s'assurer que la logique du jeu et l'interface utilisateur sont complètement réinitialisées, puis revenir à l'étape 1.</span></span></li>
+ <li>Une fois le jeu redémarré, s'assurer que la logique du jeu et l'interface utilisateur sont complètement réinitialisées, puis revenir à l'étape 1.</li>
 </ol>
 
-<p><span id="result_box" lang="fr"><span title="Let's now move forward, looking at how we can turn these steps into code, building up the example, and exploring JavaScript features as we go.">Voyons maintenant comment nous pouvons transformer ces étapes en code. Nous allons développer cet exemple et explorer les fonctionnalités JavaScript </span></span><span lang="fr"><span title="Let's now move forward, looking at how we can turn these steps into code, building up the example, and exploring JavaScript features as we go.">au fur et à mesure.</span></span></p>
+<p>Voyons maintenant comment nous pouvons transformer ces étapes en code. Nous allons développer cet exemple et explorer les fonctionnalités JavaScript au fur et à mesure.</p>
 
 <h3 id="Configuration_initiale">Configuration initiale</h3>
 
@@ -256,7 +251,7 @@ let resetButton;</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note </strong>: Vous en apprendrez beaucoup plus sur les variables plus tard dans le cours, en commençant par le <a href="/fr/docs/Learn/JavaScript/First_steps/Variables">prochain article</a>.</p>
+<p><strong>Note :</strong> Vous en apprendrez beaucoup plus sur les variables plus tard dans le cours, en commençant par le <a href="/fr/docs/Learn/JavaScript/First_steps/Variables">prochain article</a>.</p>
 </div>
 
 <h3 id="Fonctions">Fonctions</h3>
@@ -278,7 +273,7 @@ let resetButton;</pre>
 <p>Après avoir pressé <kbd>Entrée</kbd> ou <kbd>Retour</kbd>, vous devriez voir apparaître une alerte « Je suis un espace réservé » ; nous avons défini une fonction dans notre code créant une alerte chaque fois que nous l'appelons.</p>
 
 <div class="note">
-<p><strong>Note</strong> : Vous allez en apprendre beaucoup plus sur les fonctions plus tard dans ce cours.</p>
+<p><strong>Note :</strong> Vous allez en apprendre beaucoup plus sur les fonctions plus tard dans ce cours.</p>
 </div>
 
 <h3 id="Opérateurs">Opérateurs</h3>
@@ -287,10 +282,7 @@ let resetButton;</pre>
 
 <p>Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affichée dans le navigateur et ouvrez les<a href="/fr/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs"> outils de développement et la console Javascript</a>. Ensuite, vous pouvez saisir les exemples ci‑dessous — saisissez chacun dans les colonnes « Exemple » exactement comme indiqué, en appuyant sur la touche <kbd>Entrée</kbd> du clavier après chacun et regardez le résultat renvoyé. Si vous n'avez pas facilement accès aux outils de développement du navigateur, vous pouvez toujours utiliser la console intégrée ci-dessous :</p>
 
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -397,9 +389,8 @@ let resetButton;</pre>
 
   &lt;/script&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_code', '100%', 300,"", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Opérateurs', '100%', 300,"", "", "hide-codepen-jsfiddle") }}</p>
 
 <p>Regardons d'abord les opérateurs arithmétiques, par exemple :</p>
 
@@ -444,7 +435,7 @@ hello;
 let greeting = name + hello;
 greeting;</pre>
 
-<p>Des raccourcis d'opérateurs sont également disponibles, appelés <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_d_affectation">opérateurs d'assignation</a> augmentés. Par exemple, si vous voulez simplement ajouter une nouvelle chaîne de texte à une chaîne existante et renvoyer le résultat, vous pouvez faire :</p>
+<p>Des raccourcis d'opérateurs sont également disponibles, appelés <a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_d_affectation">opérateurs d'assignation</a> augmentés. Par exemple, si vous voulez simplement ajouter une nouvelle chaîne de texte à une chaîne existante et renvoyer le résultat, vous pouvez faire :</p>
 
 <pre class="brush: js">name += ' dit bonjour !';</pre>
 
@@ -486,11 +477,11 @@ greeting;</pre>
 
 <h3 id="Structures_conditionnelles">Structures conditionnelles</h3>
 
-<p>Revenons à la fonction <code style="font-size: 16px !important; line-height: 24px !important;">checkGuess()</code>. Nous pouvons assurément dire que nous ne souhaitons pas qu'elle renvoie un message d'emplacement réservé. Nous voulons qu'elle vérifie si la supposition du joueur est correcte ou non et qu'elle renvoie une réponse appropriée.</p>
+<p>Revenons à la fonction <code>checkGuess()</code>. Nous pouvons assurément dire que nous ne souhaitons pas qu'elle renvoie un message d'emplacement réservé. Nous voulons qu'elle vérifie si la supposition du joueur est correcte ou non et qu'elle renvoie une réponse appropriée.</p>
 
-<p>Donc, remplacez l'actuelle fonction <code style="font-size: 16px !important; line-height: 24px !important;">checkGuess()</code> par celle-ci :</p>
+<p>Donc, remplacez l'actuelle fonction <code>checkGuess()</code> par celle-ci :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function checkGuess(){
+<pre class="brush: js">function checkGuess(){
   let userGuess = Number(guessField.value);
   if (guessCount === 1) {
     guesses.textContent = 'Propositions précédentes : ';
@@ -519,12 +510,12 @@ greeting;</pre>
   guessField.value = '';
   guessField.focus();
 }
-</code></pre>
+</pre>
 
 <p>Pas mal de code — ouf ! Passons en revue chaque section et expliquons ce qu'elle fait.</p>
 
 <ul>
- <li>La première ligne de la fonction (ligne 2) déclare une variable nommée <code>userGuess</code> et définit sa valeur par celle qui vient d'être saisie dans le champ de texte. Nous faisons passer aussi cette valeur par la méthode  <code style="font-size: 16px !important; line-height: 24px !important;">Number()</code> , juste pour nous assurer que la valeur stockée dans <code>userGuess</code> est bien un nombre.</li>
+ <li>La première ligne de la fonction (ligne 2) déclare une variable nommée <code>userGuess</code> et définit sa valeur par celle qui vient d'être saisie dans le champ de texte. Nous faisons passer aussi cette valeur par la méthode  <code>Number()</code> , juste pour nous assurer que la valeur stockée dans <code>userGuess</code> est bien un nombre.</li>
  <li>Ensuite, nous rencontrons notre premier bloc de code conditionnel (lignes 3-5). Il permet d'exécuter des instructions de manière sélective, selon certaines conditions qui sont vraies ou non. Cela ressemble un peu à une fonction, mais ce n'est pas le cas. La forme la plus simple du bloc conditionnel commence par le mot clé <code>if</code>, puis parenthèses, puis des accolades <code>{ }</code>.<br>
   A l'intérieur de ces parenthèses, nous mettons le test. S'il renvoie <code>true</code> , nous exécutons le code à l'intérieur des accolades. Sinon, nous ne le faisons pas, et passons au morceau de code suivant. Dans ce cas, le test vérifie si la variable <code>guessCount</code> est égale à <code>1</code> (c'est-à-dire s'il s'agit de la première supposition du joueur) :
   <pre class="brush: js">guessCount === 1</pre>

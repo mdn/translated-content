@@ -18,9 +18,9 @@ original_slug: >-
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}</div>
 
-<p class="summary">Dans cet exercice, vous devrez utiliser le jeu des balles rebondissantes de l'article précédent comme base, pour y ajouter de nouvelles fonctionnalitées intéressantes.</p>
+<p>Dans cet exercice, vous devrez utiliser le jeu des balles rebondissantes de l'article précédent comme base, pour y ajouter de nouvelles fonctionnalitées intéressantes.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis:</th>
@@ -38,7 +38,7 @@ original_slug: >-
 <p>Pour commencer, faite une copie locale de <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html">index-finished.html</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css">style.css</a>, et <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js">main-finished.js</a> de l'article précédent, dans un nouveau dossier.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez utiliser un site comme <a class="external external-icon" href="http://jsbin.com/">JSBin</a> ou <a class="external external-icon" href="https://thimble.mozilla.org/">Thimble</a>. Vous pouvez copier vos codes HTML, CSS et JavaScript dans l'un d'entre eux. Si celui que vous utilisez ne possède pas de fenêtres séparées pour les différents langages, ajoutez les dans des balises <code>&lt;script&gt;</code>/<code>&lt;style&gt;</code> dans votre code HTML.</p>
+<p><strong>Note :</strong> Vous pouvez utiliser un site comme <a class="external external-icon" href="http://jsbin.com/">JSBin</a> ou <a class="external external-icon" href="https://thimble.mozilla.org/">Thimble</a>. Vous pouvez copier vos codes HTML, CSS et JavaScript dans l'un d'entre eux. Si celui que vous utilisez ne possède pas de fenêtres séparées pour les différents langages, ajoutez les dans des balises <code>&lt;script&gt;</code>/<code>&lt;style&gt;</code> dans votre code HTML.</p>
 </div>
 
 <h2 id="Le_projet_en_bref">Le projet en bref</h2>
@@ -47,7 +47,7 @@ original_slug: >-
 
 <p>Ce screenshot vous donne une idée du résultat final:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13875/bouncing-evil-circle.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="bouncing-evil-circle.png"></p>
 
 <ul>
 </ul>
@@ -102,8 +102,8 @@ original_slug: >-
 <p>Cette méthode doit avoir la même fonction que celle de <code>Ball()</code>: soit dessiner l'objet dans le canvas. Elle fonctionnera quasiment de la même manière, copiez la fonction <code>Ball.prototype.draw</code>. Puis appliquez les modifications suivantes:</p>
 
 <ul>
- <li>On ne veut pas que le viseur soit plein, mais qu'il ait seulement un contour. Changez <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle">fillStyle</a></code> et <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fill">fill()</a></code> pour <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle">strokeStyle</a></code> et <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/stroke">stroke()</a></code>.</li>
- <li>On voudrait qu'il soit aussi un peu plus épais, pour être plus facile à voir. Pour ça on doit définir un attribut <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth">lineWidth</a></code> à ctx après l'appel à la fonction <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath">beginPath()</a></code> (avec une valeur de 3).</li>
+ <li>On ne veut pas que le viseur soit plein, mais qu'il ait seulement un contour. Changez <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/fillStyle">fillStyle</a></code> et <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/fill">fill()</a></code> pour <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/strokeStyle">strokeStyle</a></code> et <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/stroke">stroke()</a></code>.</li>
+ <li>On voudrait qu'il soit aussi un peu plus épais, pour être plus facile à voir. Pour ça on doit définir un attribut <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/lineWidth">lineWidth</a></code> à ctx après l'appel à la fonction <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/beginPath">beginPath()</a></code> (avec une valeur de 3).</li>
 </ul>
 
 <h4 id="checkBounds()"><code>checkBounds()</code></h4>
@@ -132,7 +132,7 @@ window.onkeydown = function(e) {
     }
   }</pre>
 
-<p>Quand une touche est enfoncée, la propriété <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> de l'objet event est consultée pour savoir quelle touche est enfoncée. Si c'est une des touches spécifiée, alors le viseur ce déplacera à gauche, à droite, en haut ou en bas.</p>
+<p>Quand une touche est enfoncée, la propriété <a href="/fr/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> de l'objet event est consultée pour savoir quelle touche est enfoncée. Si c'est une des touches spécifiée, alors le viseur ce déplacera à gauche, à droite, en haut ou en bas.</p>
 
 <ul>
  <li>Pour un point bonus, faite apparaître à quel touche correspond le code de celle que l'utilisateur a enfoncé.</li>
@@ -199,11 +199,11 @@ window.onkeydown = function(e) {
 <h2 id="Dans_ce_Module">Dans ce Module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Object basics</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object-oriented JavaScript for beginners</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance">Inheritance in JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/JSON">Working with JSON data</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Adding features to our bouncing balls demo</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Basics">Object basics</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object-oriented JavaScript for beginners</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Inheritance">Inheritance in JavaScript</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/JSON">Working with JSON data</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Adding features to our bouncing balls demo</a></li>
 </ul>

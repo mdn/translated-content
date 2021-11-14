@@ -1,26 +1,18 @@
 ---
 title: Validation des données de formulaires
 slug: Learn/Forms/Form_validation
-tags:
-  - Exemple
-  - Formulaires
-  - Guide
-  - HTML
-  - Intermédiaire
-  - JavaScript
-  - Web
 translation_of: Learn/Forms/Form_validation
 original_slug: Web/Guide/HTML/Formulaires/Validation_donnees_formulaire
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés", "Web/Guide/HTML/Formulaires")}}</div>
 
-<p class="summary">Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les données mises dans un formulaire par un utilisateur sont dans un format correct pour pouvoir être traitées correctement et qu'elles ne vont pas casser nos applications. Nous voulons également aider les utilisateurs à compléter les formulaires correctement et à ne pas ressentir de frustration en essayant d'utiliser les applications. La validation des données de formulaire vous aide à remplir ces objectifs — cet article indique ce qu'il est nécessaire de savoir.</p>
+<p>Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les données mises dans un formulaire par un utilisateur sont dans un format correct pour pouvoir être traitées correctement et qu'elles ne vont pas casser nos applications. Nous voulons également aider les utilisateurs à compléter les formulaires correctement et à ne pas ressentir de frustration en essayant d'utiliser les applications. La validation des données de formulaire vous aide à remplir ces objectifs — cet article indique ce qu'il est nécessaire de savoir.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
-   <td>Notions concernant les ordinateurs, une bonne compréhension du <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML</a>, des <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS</a> et de <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript">JavaScript</a>.</td>
+   <td>Notions concernant les ordinateurs, une bonne compréhension du <a href="/fr/docs/Learn/HTML">HTML</a>, des <a href="/fr/docs/Learn/CSS">CSS</a> et de <a href="/fr/docs/Learn/JavaScript">JavaScript</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objectif :</th>
@@ -56,7 +48,7 @@ original_slug: Web/Guide/HTML/Formulaires/Validation_donnees_formulaire
 
 <p>Vous rencontrerez différents types de validation de formulaires sur le Web :</p>
 
-<ul style="list-style-type: disc;">
+<ul>
  <li>La validation côté client est la validation qui est effectuée dans le navigateur, avant que les données n'aient été soumises au serveur. Cette méthode est plus conviviale que la validation côté serveur car elle donne une réponse instantanée. Il est possible de la subdiviser encore avec :
   <ul>
    <li>la validation JavaScript, codée en JavaScript, entièrement personnalisable.</li>
@@ -76,7 +68,7 @@ original_slug: Web/Guide/HTML/Formulaires/Validation_donnees_formulaire
 
 <h2 id="Utiliser_la_validation_intégrée_au_formulaire">Utiliser la validation intégrée au formulaire</h2>
 
-<p>Une des caractéristiques de <a href="/fr/docs/HTML/HTML5">HTML5</a> est la possibilité de valider la plupart des données utilisateur sans avoir recours à des scripts. Ceci se fait en utilisant des <a href="/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation">attributs de validation</a> sur les éléments de formulaire ; ils vous permettent de spécifier des règles pour une entrée de formulaire comme : une valeur doit‑elle être remplie ? y a-t-il une longueur minimale et/ou maximale des données ? doit‑elle être un nombre, une adresse e-mail ou autre chose ? doit‑elle correspondre à un modèle ? Si les données saisies suivent toutes ces règles, elles sont considérées comme valides ; si ce n'est pas le cas, elles sont considérées comme non valides.<br>
+<p>Une des caractéristiques de <a href="/fr/docs/orphaned/Web/Guide/HTML/HTML5">HTML5</a> est la possibilité de valider la plupart des données utilisateur sans avoir recours à des scripts. Ceci se fait en utilisant des <a href="/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation">attributs de validation</a> sur les éléments de formulaire ; ils vous permettent de spécifier des règles pour une entrée de formulaire comme : une valeur doit‑elle être remplie ? y a-t-il une longueur minimale et/ou maximale des données ? doit‑elle être un nombre, une adresse e-mail ou autre chose ? doit‑elle correspondre à un modèle ? Si les données saisies suivent toutes ces règles, elles sont considérées comme valides ; si ce n'est pas le cas, elles sont considérées comme non valides.<br>
  Quand un élément est valide :</p>
 
 <ul>
@@ -91,37 +83,31 @@ original_slug: Web/Guide/HTML/Formulaires/Validation_donnees_formulaire
  <li>si l'utilisateur essaie d'envoyer le formulaire, le navigateur le bloquera et affichera un message d'erreur.</li>
 </ul>
 
-<h3 id="Contraintes_de_validation_sur_les_éléments_d'entrée_—_simple_début">Contraintes de validation sur les éléments d'entrée — simple début</h3>
-
-
+<h3 id="Contraintes_de_validation_sur_les_éléments_input_—_simple_début">Contraintes de validation sur les éléments input — simple début</h3>
 
 <p>Dans cette section, nous examinerons quelques unes des diverses fonctionnalités HTML5 peuvant être utilisées pour valider des éléments d'{{HTMLElement("input")}}.</p>
 
 <p>Commençons par un exemple simple — une entrée ouvrant un choix, selon votre préférence, entre banane ou cerise. Il faut un texte {{HTMLElement("input")}} simple avec une étiquette correspondante et un {{htmlelement("button")}} de soumission. Le code source est sur GitHub à l'adresse <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a> et un exemple « live » ci-dessous :</p>
 
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
-
-<pre class="brush: html">&lt;form&gt;
+<pre class="brush: html hidden">&lt;form&gt;
   &lt;label for="choose"&gt;Préférez‑vous la banane ou la cerise ?&lt;/label&gt;
   &lt;input id="choose" name="i_like"&gt;
   &lt;button&gt;Soumettre&lt;/button&gt;
 &lt;/form&gt;</pre>
 
-<pre class="brush: css">input:invalid {
+<pre class="brush: css hidden">input:invalid {
   border: 2px dashed red;
 }
 
 input:valid {
   border: 1px solid black;
 }</pre>
-</div>
 
-<p>{{EmbedLiveSample("Hidden_code", "100%", 55)}}</p>
+<p>{{EmbedLiveSample("Contraintes_de_validation_sur_les_éléments_input_—_simple_début", "100%", 55)}}</p>
 
 <p>Pour commencer, faites une copie de fruit-start.html dans un nouveau répertoire sur votre disque dur.</p>
 
-<h3 id="L'attribut_required">L'attribut required</h3>
+<h3 id="Attribut_required">Attribut required</h3>
 
 <p>La fonctionnalité de validation HTML5 la plus simple à utiliser est l'attribut {{htmlattrxref("required", "input")}}} — si vous voulez rendre une entrée obligatoire, vous pouvez marquer l'élément en utilisant cet attribut. Lorsque cet attribut est mis, le formulaire ne sera pas soumis (et affichera un message d'erreur) si l'entrée est vide (l'entrée sera également considérée comme invalide).</p>
 
@@ -145,11 +131,11 @@ input:valid {
 
 <p>L'entrée a une bordure en pointillés rouge vif lorsqu'elle n'est pas valide, et une bordure noire plus subtile lorsqu'elle est valide. Essayez le nouveau comportement dans l'exemple ci-dessous :</p>
 
-<p>{{EmbedLiveSample("L'attribut_required", "100%", 55)}}</p>
+<p>{{EmbedLiveSample("Attribut_required", "100%", 55)}}</p>
 
 <h3 id="Validation_selon_une_expression_régulière">Validation selon une expression régulière</h3>
 
-<p>Une autre fonctionnalité de validation très courante est l'attribut {{htmlattrxref("pattern", "input")}}, qui attend une <a href="/fr/docs/Web/JavaScript/Guide/Expressions_régulières">expression régulière</a> comme valeur. Une expression régulière (regex) est un modèle qui peut être utilisé pour faire correspondre des combinaisons de caractères dans des chaînes de texte, de sorte qu'elles sont idéales pour la validation de formulaires (ainsi que diverses autres utilisations en JavaScript). Les Regex sont assez complexes et nous n'avons pas l'intention de vous les enseigner de manière exhaustive dans cet article.</p>
+<p>Une autre fonctionnalité de validation très courante est l'attribut {{htmlattrxref("pattern", "input")}}, qui attend une <a href="/fr/docs/Web/JavaScript/Guide/Regular_Expressions">expression régulière</a> comme valeur. Une expression régulière (regex) est un modèle qui peut être utilisé pour faire correspondre des combinaisons de caractères dans des chaînes de texte, de sorte qu'elles sont idéales pour la validation de formulaires (ainsi que diverses autres utilisations en JavaScript). Les Regex sont assez complexes et nous n'avons pas l'intention de vous les enseigner de manière exhaustive dans cet article.</p>
 
 <p>Vous trouverez ci-dessous quelques exemples pour vous donner une idée de base de leur fonctionnement :</p>
 
@@ -184,21 +170,19 @@ input:valid {
 
 <p>Voyons un exemple — mettons à jour notre HTML en y ajoutant un attribut <code>pattern</code>, ainsi :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="choose"&gt;Préférez‑vous la banane ou la cerise ?&lt;/label&gt;
   &lt;input id="choose" name="i_like" required pattern="banane|cerise"&gt;
   &lt;button&gt;Soumettre&lt;/button&gt;
-&lt;/form&gt;</code></pre>
+&lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css line-numbers  language-css"><code class="language-css">input:invalid {
+<pre class="brush: css">input:invalid {
   border: 2px dashed red;
 }
 
 input:valid {
   border: 1px solid black;
-}</code></pre>
-</div>
+}</pre>
 
 <p>{{EmbedLiveSample("Validation_selon_une_expression_régulière", "100%", 55)}}</p>
 
@@ -211,7 +195,7 @@ input:valid {
 </div>
 
 <div class="note">
-<p><strong>Note : </strong>L'élément {{HTMLElement("textarea")}} ne prend pas en charge l'attribut {{htmlattrxref("pattern", "input")}}.</p>
+<p><strong>Note :</strong> L'élément {{HTMLElement("textarea")}} ne prend pas en charge l'attribut {{htmlattrxref("pattern", "input")}}.</p>
 </div>
 
 <h3 id="Limitation_de_la_taille_des_entrées">Limitation de la taille des entrées</h3>
@@ -224,7 +208,7 @@ input:valid {
 
 <p>Supprimez maintenant le contenu de l'élément <code>&lt;body&gt;</code> et remplacez-le par le suivant :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="choose"&gt;Préférez‑vous la banane ou la cerise ?&lt;/label&gt;
     &lt;input id="choose" name="i_like" required minlength="6" maxlength="6"&gt;
@@ -236,15 +220,14 @@ input:valid {
   &lt;div&gt;
     &lt;button&gt;Soumettre&lt;/button&gt;
   &lt;/div&gt;
-&lt;/form&gt;</code></pre>
+&lt;/form&gt;</pre>
 
 <ul>
  <li>Ici, nous avons donné au champ de texte une taille minimale et maximale de 6 caractères — la même que celle de <em>banane</em> ou <em>cerise</em>. La saisie de moins de 6 caractères s'affichera comme non valide et la saisie de plus de 6 caractères ne sera pas possible dans la plupart des navigateurs.</li>
  <li>Nous avons également contraint le champ <code>number</code> à un <code>min</code> de 1 et un <code>max </code>de 10 — les nombres entrés hors de cette plage seront affichés comme non valides, et vous ne pourrez pas utiliser les flèches d'incrémentation/décrémentation pour porter la valeur en dehors de cette plage.</li>
 </ul>
 
-<div class="hidden">
-<pre class="line-numbers  language-html"><code class="language-html">input:invalid {
+<pre class="brush: html hidden">input:invalid {
   border: 2px dashed red;
 }
 
@@ -254,113 +237,112 @@ input:valid {
 
 div {
   margin-bottom: 10px;
-}</code></pre>
-</div>
+}</pre>
 
 <p>Voici cet exemple s'exécutant en « live » :</p>
 
 <p>{{EmbedLiveSample('Limitation_de_la_taille_des_entrées', "100%", 100)}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: <code>&lt;input type="number"&gt;</code> (et d'autres types, comme <code>range</code>) acceptent aussi un attribut {{htmlattrxref("step", "input")}} qui spécifie l'incrément en plus ou en moins de la valeur quand les contrôles d'entrée sont utilisés (comme les boutons <kbd>^</kbd> et <kbd>v</kbd>).</p>
+<p><strong>Note :</strong> <code>&lt;input type="number"&gt;</code> (et d'autres types, comme <code>range</code>) acceptent aussi un attribut {{htmlattrxref("step", "input")}} qui spécifie l'incrément en plus ou en moins de la valeur quand les contrôles d'entrée sont utilisés (comme les boutons <kbd>^</kbd> et <kbd>v</kbd>).</p>
 </div>
 
 <h3 id="Exemple_complet">Exemple complet</h3>
 
 <p>Voici un exemple complet montrant l'utilisation des fonctionnalités HTML intégrées pour la validation :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>form</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>fieldset</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>legend</span><span class="punctuation token">&gt;Qualité</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>abbr</span> <span class="attr-name token">title</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Ce champ est obligatoire<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>*<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>abbr</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>legend</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>radio<span class="punctuation token">"</span></span> <span class="attr-name token">required</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>title<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>r1<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Mr<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>r1<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>M.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>radio<span class="punctuation token">"</span></span> <span class="attr-name token">required</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>title<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>r2<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Ms<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>r2<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Mme.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>fieldset</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>n1<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Quel est votre âge ?<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-    <span class="comment token">&lt;!-- L'attribut pattern peut servir de recours pour les navigateurs dont le type number n'est
+<pre class="brush: html">&lt;form&gt;
+  &lt;p&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;Qualité&lt;abbr title="Ce champ est obligatoire"&gt;*&lt;/abbr&gt;&lt;/legend&gt;
+      &lt;input type="radio" required name="title" id="r1" value="Mr"&gt;&lt;label for="r1"&gt;M.&lt;/label&gt;
+      &lt;input type="radio" required name="title" id="r2" value="Ms"&gt;&lt;label for="r2"&gt;Mme.&lt;/label&gt;
+    &lt;/fieldset&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for="n1"&gt;Quel est votre âge ?&lt;/label&gt;
+    &lt;!-- L'attribut pattern peut servir de recours pour les navigateurs dont le type number n'est
          pas implémenté pour input mais qui prennent en charge l'attribut pattern. Veuillez noter
          que les navigateurs prenant en charge l'attribut pattern ne signalent pas d'erreur quand
-         il est utilisé avec un champ number. Seule son utilisation ici agit en tant que recours. --&gt;</span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>number<span class="punctuation token">"</span></span> <span class="attr-name token">min</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>12<span class="punctuation token">"</span></span> <span class="attr-name token">max</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>120<span class="punctuation token">"</span></span> <span class="attr-name token">step</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>1<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>n1<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>age<span class="punctuation token">"</span></span>
-           <span class="attr-name token">pattern</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>\d+<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>t1<span class="punctuation token">"</span></span><span class="punctuation token">&gt;Quel est votre fruit </span></span>favori ?<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>abbr</span> <span class="attr-name token">title</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Ce champ est obligatoire<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>*<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>abbr</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>t1<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>fruit<span class="punctuation token">"</span></span> <span class="attr-name token">list</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>l1<span class="punctuation token">"</span></span> <span class="attr-name token">required</span>
-           <span class="attr-name token">pattern</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>[Bb]anane|[Cc]erise|[Cc]itron|[Ff]raise|[Oo]range|[Pp]omme<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>datalist</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>l1<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;</span></span>Banane<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;</span></span>Cerise<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;
-      </span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;Citron</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;
-</span></span>      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;Fraise</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;</span></span>Orange<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span><span class="punctuation token">&gt;</span></span>Pomme<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>datalist</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>t2<span class="punctuation token">"</span></span><span class="punctuation token">&gt;Quelle est votre</span></span> adresse électronique ?<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>email<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>t2<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>email<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>t3<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Laissez un court message<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>textarea</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>t3<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>msg<span class="punctuation token">"</span></span> <span class="attr-name token">maxlength</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>140<span class="punctuation token">"</span></span> <span class="attr-name token">rows</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>5<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>textarea</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>button</span><span class="punctuation token">&gt;</span></span>Soumettre<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>button</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>form</span><span class="punctuation token">&gt;</span></span></code></pre>
+         il est utilisé avec un champ number. Seule son utilisation ici agit en tant que recours. --&gt;
+    &lt;input type="number" min="12" max="120" step="1" id="n1" name="age"
+           pattern="\d+"&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for="t1"&gt;Quel est votre fruit favori ?&lt;abbr title="Ce champ est obligatoire"&gt;*&lt;/abbr&gt;&lt;/label&gt;
+    &lt;input type="text" id="t1" name="fruit" list="l1" required
+           pattern="[Bb]anane|[Cc]erise|[Cc]itron|[Ff]raise|[Oo]range|[Pp]omme"&gt;
+    &lt;datalist id="l1"&gt;
+      &lt;option&gt;Banane&lt;/option&gt;
+      &lt;option&gt;Cerise&lt;/option&gt;
+      &lt;option&gt;Citron&lt;/option&gt;
+      &lt;option&gt;Fraise&lt;/option&gt;
+      &lt;option&gt;Orange&lt;/option&gt;
+      &lt;option&gt;Pomme&lt;/option&gt;
+    &lt;/datalist&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for="t2"&gt;Quelle est votre adresse électronique ?&lt;/label&gt;
+    &lt;input type="email" id="t2" name="email"&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for="t3"&gt;Laissez un court message&lt;/label&gt;
+    &lt;textarea id="t3" name="msg" maxlength="140" rows="5"&gt;&lt;/textarea&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;button&gt;Soumettre&lt;/button&gt;
+  &lt;/p&gt;
+&lt;/form&gt;</pre>
 
-<pre class="brush: css line-numbers  language-css"><code class="language-css"><span class="selector token">body </span><span class="punctuation token">{</span>
-  <span class="property token">font</span><span class="punctuation token">:</span> <span class="number token">1</span>em sans-serif<span class="punctuation token">;</span>
-  <span class="property token">padding</span><span class="punctuation token">:</span> <span class="number token">0</span><span class="punctuation token">;</span>
-  <span class="property token">margin</span> <span class="punctuation token">:</span> <span class="number token">0</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: css">body {
+  font: 1em sans-serif;
+  padding: 0;
+  margin : 0;
+}
 
-<span class="selector token">form </span><span class="punctuation token">{</span>
-  <span class="property token">max-width</span><span class="punctuation token">:</span> <span class="number token">300</span>px<span class="punctuation token">;</span>
-  <span class="property token">margin</span><span class="punctuation token">:</span> <span class="number token">0</span><span class="punctuation token">;</span>
-  <span class="property token">padding</span><span class="punctuation token">:</span> <span class="number token">0</span> <span class="number token">5</span>px<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+form {
+  max-width: 300px;
+  margin: 0;
+  padding: 0 5px;
+}
 
-<span class="selector token">p &gt; label </span><span class="punctuation token">{</span>
-  <span class="property token">display</span><span class="punctuation token">:</span> block<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+p &gt; label {
+  display: block;
+}
 
-<span class="selector token">input[type=text],
+input[type=text],
 input[type=email],
 input[type=number],
 textarea,
-fieldset </span><span class="punctuation token">{</span>
-<span class="comment token">/* requis pour composer de manière appropriée les éléments
-   de formulaire sur les navigateurs fondés sur WebKit */</span>
-  <span class="property token">-webkit-appearance</span><span class="punctuation token">:</span> none<span class="punctuation token">;</span>
+fieldset {
+/* requis pour composer de manière appropriée les éléments
+   de formulaire sur les navigateurs fondés sur WebKit */
+  -webkit-appearance: none;
 
-  <span class="property token">width</span> <span class="punctuation token">:</span> <span class="number token">100%</span><span class="punctuation token">;</span>
-  <span class="property token">border</span><span class="punctuation token">:</span> <span class="number token">1</span>px solid <span class="hexcode token">#333</span><span class="punctuation token">;</span>
-  <span class="property token">margin</span><span class="punctuation token">:</span> <span class="number token">0</span><span class="punctuation token">;</span>
+  width : 100%;
+  border: 1px solid #333;
+  margin: 0;
 
-  <span class="property token">font-family</span><span class="punctuation token">:</span> inherit<span class="punctuation token">;</span>
-  <span class="property token">font-size</span><span class="punctuation token">:</span> <span class="number token">90%</span><span class="punctuation token">;</span>
+  font-family: inherit;
+  font-size: 90%;
 
-  <span class="property token">-moz-box-sizing</span><span class="punctuation token">:</span> border-box<span class="punctuation token">;</span>
-  <span class="property token">box-sizing</span><span class="punctuation token">:</span> border-box<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-<span class="selector token">input<span class="pseudo-class token">:invalid</span> </span><span class="punctuation token">{</span>
-  <span class="property token">box-shadow</span><span class="punctuation token">:</span> <span class="number token">0</span> <span class="number token">0</span> <span class="number token">5</span>px <span class="number token">1</span>px red<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
 
-<span class="selector token">input<span class="pseudo-class token">:focus</span><span class="pseudo-class token">:invalid</span> </span><span class="punctuation token">{</span>
-  <span class="property token">outline</span><span class="punctuation token">:</span> none<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+input:focus:invalid {
+  outline: none;
+}</pre>
 
 <p>{{EmbedLiveSample("Exemple_complet", "100%", 450)}}</p>
 
 
 
-<h3 id="Messages_d'erreur_personnalisés">Messages d'erreur personnalisés</h3>
+<h3 id="Messages_adaptés_pour_les_erreurs">Messages adaptés pour les erreurs</h3>
 
 <p>Comme nous avons vu dans les exemples précédents, à chaque fois qu'un utilisateur tente d'envoyer un formulaire invalide, le navigateur affiche un message d'erreur. La manière dont le message est affiché dépend du navigateur.</p>
 
@@ -382,22 +364,22 @@ fieldset </span><span class="punctuation token">{</span>
  <tbody>
   <tr>
    <td>Firefox 17 (Windows 7)</td>
-   <td><img alt="Example of an error message with Firefox in French on an English page" src="/files/4329/error-firefox-win7.png" style="height: 97px; width: 228px;"></td>
+   <td><img alt="Example of an error message with Firefox in French on an English page" src="error-firefox-win7.png"></td>
   </tr>
   <tr>
    <td>Chrome 22 (Windows 7)</td>
-   <td><img alt="Example of an error message with Chrome in French on an English page" src="/files/4327/error-chrome-win7.png" style="height: 96px; width: 261px;"></td>
+   <td><img alt="Example of an error message with Chrome in French on an English page" src="error-chrome-win7.png"></td>
   </tr>
   <tr>
    <td>Opera 12.10 (Mac OSX)</td>
-   <td><img alt="Example of an error message with Opera in French on an English page" src="/files/4331/error-opera-macos.png" style="height: 83px; width: 218px;"></td>
+   <td><img alt="Example of an error message with Opera in French on an English page" src="error-opera-macos.png"></td>
   </tr>
  </tbody>
 </table>
 
 <p>Pour personnaliser l'apparence et le texte de ces messages, vous devez utiliser JavaScript ; il n'est pas possible de l'implémenter en utilisant uniquement HTML et CSS.</p>
 
-<p>HMTL5 fournit une <a href="http://www.w3.org/TR/html5/forms.html#the-constraint-validation-api">API de contraintes de validation</a> pour vérifier et personnaliser l'état des élément d'un formulaire. Il est possible, entre autres, de changer le texte des messages d'erreur. Voici un court exemple :</p>
+<p>HMTL5 fournit une <a href="https://www.w3.org/TR/html5/forms.html#the-constraint-validation-api">API de contraintes de validation</a> pour vérifier et personnaliser l'état des élément d'un formulaire. Il est possible, entre autres, de changer le texte des messages d'erreur. Voici un court exemple :</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;label for="mail"&gt;Pourriez-vous nous fournir une adresse mail ?&lt;/label&gt;
@@ -405,7 +387,7 @@ fieldset </span><span class="punctuation token">{</span>
   &lt;button&gt;Envoyer&lt;/button&gt;
 &lt;/form&gt;</pre>
 
-<p>En JavaScript, il faut appeler la méthode <a href="/en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()" title="/en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()"><code>setCustomValidity()</code></a>:</p>
+<p>En JavaScript, il faut appeler la méthode <a href="/fr/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()" title="/en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()"><code>setCustomValidity()</code></a>:</p>
 
 <pre class="brush: js">var email = document.getElementById("mail");
 
@@ -417,7 +399,7 @@ email.addEventListener("keyup", function (event) {
   }
 });</pre>
 
-<p>{{EmbedLiveSample("Messages_d'erreur_personnalisés", "100%", 50)}}</p>
+<p>{{EmbedLiveSample("Messages_adaptés_pour_les_erreurs", "100%", 50)}}</p>
 
 <h2 id="Validation_de_formulaires_avec_JavaScript">Validation de formulaires avec JavaScript</h2>
 
@@ -511,7 +493,7 @@ email.addEventListener("keyup", function (event) {
 
 <p>Pour les anciens navigateurs, il existe <a href="https://hyperform.js.org/">une prothèse d'émulation (<em>polyfill</em>) comme Hyperform</a>, pour compenser le défaut de prise en charge de cette API. Comme vous utilisez déjà JavaScript, l'utilisation d'une prethèse d'émulation n'est pas un souci supplémentaire pour la conception ou l'implémentation de votre site ou application Web.</p>
 
-<h4 id="Exemple_d'utilisation_de_l'API_de_validation_des_contraintes">Exemple d'utilisation de l'API de validation des contraintes</h4>
+<h4 id="Exemple_utilisant_la_validation_des_contraintes">Exemple utilisant la validation des contraintes</h4>
 
 <p>Voyons comment utiliser l'API pour créer des messages d'erreur personnalisés. Tout d'abord, le HTML :</p>
 
@@ -528,7 +510,7 @@ email.addEventListener("keyup", function (event) {
 
 <p>Ce formulaire simple utilise l'attribut {{htmlattrxref("novalidate","form")}} pour désactiver la validation automatique par le navigateur ; cela permet donc à notre script d'avoir le contrôle sur la validation. Toutefois, cela ne désactive la prise en charge par l'API de validation des contraintes, ni l'application des pseudo-classes CSS  {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}} et {{cssxref(":out-of-range")}}. Cela signifie que, même si le navigateur ne vérifie pas automatiquement la validité du formulaire avant l'envoi des données, vous pouvez toujours effectuer cette validation et définir l'apparence du formulaire par vous-même.</p>
 
-<p>L'attribut <code><a href="https://developer.mozilla.org/en-US/docs/Accessibility/ARIA/ARIA_Live_Regions">aria-live</a></code> garantit que nos messages d'erreur personnalisés seront affichés à tout le monde, y compris les personnes utilisant des techniques d'assistance comme des lecteurs d'écran.</p>
+<p>L'attribut <code><a href="/fr/docs/Accessibility/ARIA/ARIA_Live_Regions">aria-live</a></code> garantit que nos messages d'erreur personnalisés seront affichés à tout le monde, y compris les personnes utilisant des techniques d'assistance comme des lecteurs d'écran.</p>
 
 <h5 id="CSS">CSS</h5>
 
@@ -628,7 +610,7 @@ form.addEventListener("submit", function (event) {
 
 <p>Voici le résultat:</p>
 
-<p>{{EmbedLiveSample("Exemple_d'utilisation_de_l'API_de_validation_des_contraintes", "100%", 130)}}</p>
+<p>{{EmbedLiveSample("Exemple_utilisant_la_validation_des_contraintes", "100%", 130)}}</p>
 
 <p>L'API de validation des contraintes fournit un outil puissant pour gérer la validation des formulaires, en vous laissant un contrôle sur l'interface utilisateur bien supérieur à ce que vous auriez pu avoir avec uniquement HTML et CSS. </p>
 
@@ -644,18 +626,17 @@ form.addEventListener("submit", function (event) {
  <dt>Que dois-je faire si le formulaire n'est pas valide ?</dt>
  <dd>C'est clairement une affaire d'interface utilisateur. Vous devez décider comment le formulaire doit se comporter : enverra-t-il quand même les données ? Devriez-vous mettre en évidence les champs qui sont en erreur ? Devriez-vous afficher des messages d'erreur ?</dd>
  <dt>Comment puis-je aider l'utilisateur à corriger ses données invalides?</dt>
- <dd>Pour limiter la frustration de l'utilisateur, il est très important de fournir autant d'information d'aide que nécessaire pour le guider dans la correction de sa saisie. Vous devriez afficher des suggestions en amont pour que l'utilisateur sache ce qui est attendu, ainsi que des messages d'erreur clairs. Si vous souhaitez vous plonger dans les exigences d'interface utilsateur pour la validation de formulaires, voici quelques articles (en anglais) utiles que vous devriez lire :</dd>
- <dd>
+ <dd><p>Pour limiter la frustration de l'utilisateur, il est très important de fournir autant d'information d'aide que nécessaire pour le guider dans la correction de sa saisie. Vous devriez afficher des suggestions en amont pour que l'utilisateur sache ce qui est attendu, ainsi que des messages d'erreur clairs. Si vous souhaitez vous plonger dans les exigences d'interface utilsateur pour la validation de formulaires, voici quelques articles (en anglais) utiles que vous devriez lire :</p>
  <ul>
   <li>SmashingMagazine : <a href="http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/" rel="external">Form-Field Validation: The Errors-Only Approach</a></li>
   <li>SmashingMagazine : <a href="http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/" rel="external">Web Form Validation: Best Practices and Tutorials</a></li>
   <li>Six Revision : <a href="http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/" rel="external">Best Practices for Hints and Validation in Web Forms</a></li>
-  <li>A List Apart : <a href="http://www.alistapart.com/articles/inline-validation-in-web-forms/" rel="external">Inline Validation in Web Forms</a></li>
+  <li>A List Apart : <a href="https://www.alistapart.com/articles/inline-validation-in-web-forms/" rel="external">Inline Validation in Web Forms</a></li>
  </ul>
  </dd>
 </dl>
 
-<h4 id="Exemple_qui_n'utilise_pas_l'API_de_validation_des_contraintes">Exemple qui n'utilise pas l'API de validation des contraintes</h4>
+<h4 id="Exemple_sans_utilisation_de_la_validation_des_contraintes">Exemple sans utilisation de la validation des contraintes</h4>
 
 <p>Afin d'illustrer le propos, réécrivons le précédent exemple afin qu'il fonctionne avec d'anciens navigateurs:</p>
 
@@ -672,7 +653,7 @@ form.addEventListener("submit", function (event) {
   &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
 &lt;/form&gt;</pre>
 
-<p>Comme vous pouvez voir, le HTML est quasiment identique; nous avons juste enlevé les fonctionnalités de validation HTML. Notez que <a href="/en-US/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a> est une spécification indépendante qui n'est pas spécifiquement liée à HTML5.</p>
+<p>Comme vous pouvez voir, le HTML est quasiment identique; nous avons juste enlevé les fonctionnalités de validation HTML. Notez que <a href="/fr/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a> est une spécification indépendante qui n'est pas spécifiquement liée à HTML5.</p>
 
 <h5 id="CSS_2">CSS</h5>
 
@@ -818,7 +799,7 @@ addEvent(form, "submit", function () {
 
 <p>Voici le résultat:</p>
 
-<p>{{EmbedLiveSample("Exemple_qui_n'utilise_pas_l'API_de_validation_des_contraintes", "100%", 130)}}</p>
+<p>{{EmbedLiveSample("Exemple_sans_utilisation_de_la_validation_des_contraintes", "100%", 130)}}</p>
 
 <p>Comme vous avez pu le voir, il n'est pas si difficile de créer par soi-même un système de validation. La difficulté consiste à rendre le tout assez générique pour l'utiliser à la fois sur toutes les plateformes et pour chaque formulaire que vous pourriez créer. Il existe de nombreuses bibliothèques permettant ce genre de validation de formulaire ; n'hésitez pas à les utiliser. En voici quelques exemples :</p>
 
@@ -830,7 +811,7 @@ addEvent(form, "submit", function () {
  </li>
  <li>Greffons jQuery :
   <ul>
-   <li><a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/" rel="external">Validation</a><span class="hidden"> </span></li>
+   <li><a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/" rel="external">Validation</a> </li>
   </ul>
  </li>
 </ul>
@@ -861,15 +842,15 @@ addEvent(form, "submit", function () {
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML">Mon premier formulaire HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML"><span>Comment structurer un formulaire HTML</span></a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs">Les widgets natifs pour formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires">Envoi des données de formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire">Validation des données de formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés">Comment construire des widgets personnalisés pour formulaire</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript">Envoi de formulaires à l'aide du JavaScript</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers">Formulaires HTML dans les navigateurs anciens</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML">Mise en forme des formulaires HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms">Mise en forme avancée des formulaires HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets">Table de compatibilité des propriétés pour les widgets de formulaire</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Your_first_form">Mon premier formulaire HTML</a></li>
+ <li><a href="/fr/docs/Learn/Forms/How_to_structure_a_web_form">Comment structurer un formulaire HTML</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Basic_native_form_controls">Les widgets natifs pour formulaire</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Sending_and_retrieving_form_data">Envoi des données de formulaire</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Form_validation">Validation des données de formulaire</a></li>
+ <li><a href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls">Comment construire des widgets personnalisés pour formulaire</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Sending_forms_through_JavaScript">Envoi de formulaires à l'aide du JavaScript</a></li>
+ <li><a href="/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers">Formulaires HTML dans les navigateurs anciens</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Styling_web_forms">Mise en forme des formulaires HTML</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Advanced_form_styling">Mise en forme avancée des formulaires HTML</a></li>
+ <li><a href="/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Table de compatibilité des propriétés pour les widgets de formulaire</a></li>
 </ul>

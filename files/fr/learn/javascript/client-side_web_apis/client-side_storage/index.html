@@ -19,9 +19,9 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage
 
 
 
-<p class="summary">Les navigateurs web modernes permettent aux sites web de stocker des données sur l'ordinateur de l'utilisateur — avec sa permission — puis de les récupérer au besoin. Cela permet d'enregistrer des données pour du stockage à long terme, de sauvegarder des documents ou des sites hors-ligne, de conserver des préférences spécifiques à l'utilisateur et plus encore. Cet article explique les fondamentaux pour y parvenir.</p>
+<p>Les navigateurs web modernes permettent aux sites web de stocker des données sur l'ordinateur de l'utilisateur — avec sa permission — puis de les récupérer au besoin. Cela permet d'enregistrer des données pour du stockage à long terme, de sauvegarder des documents ou des sites hors-ligne, de conserver des préférences spécifiques à l'utilisateur et plus encore. Cet article explique les fondamentaux pour y parvenir.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis:</th>
@@ -36,7 +36,7 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage
 
 <h2 id="Stockage_côté_client">Stockage côté client ?</h2>
 
-<p>Ailleurs dans la zone d'apprentissage de MDN, nous avons parlé de la différence entre les <a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview#Static_sites">sites statiques</a> et les <a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview#Dynamic_sites">sites dynamiques</a> — ces derniers stockent des données <a href="/fr/docs/Learn/Server-side">côté serveur</a> en utilisant une base de données. Ensuite, ils exécutent du code pour récupérer les données et les insérer dans des templates de page statique. Finalement, le HTML résultant est envoyé au client, qui est alors affiché par le navigateur de l'utilisateur.</p>
+<p>Ailleurs dans la zone d'apprentissage de MDN, nous avons parlé de la différence entre les <a href="/fr/docs/Learn/Server-side/First_steps/Client-Server_overview#Static_sites">sites statiques</a> et les <a href="/fr/docs/Learn/Server-side/First_steps/Client-Server_overview#Dynamic_sites">sites dynamiques</a> — ces derniers stockent des données <a href="/fr/docs/Learn/Server-side">côté serveur</a> en utilisant une base de données. Ensuite, ils exécutent du code pour récupérer les données et les insérer dans des templates de page statique. Finalement, le HTML résultant est envoyé au client, qui est alors affiché par le navigateur de l'utilisateur.</p>
 
 <p>Le stockage côté client fonctionne sur des principes similaires, mais pour une utilisation différente. Le stockage côté client repose sur des APIs JavaScript qui permettent de stocker des données sur la machine de l'utilisateur et de les récupérer au besoin. Cela peut se révéler utile dans différents cas comme :</p>
 
@@ -50,7 +50,7 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage
 <p>Souvent, le stockage côté client et côté serveur sont utilisés ensemble. Par exemple, vous pouvez télécharger à partir d'une base de données côté serveur une série de fichiers mp3 utilisés par un site web (comme un jeu ou une application de musique) vers une base de données côté client et ainsi pouvoir les lire quand vous le voulez. Avec cette stratégie, l'utilisateur n'a à télécharger le fichier qu'une seule fois — les visites suivantes, ils sont récupérés à partir de la base de données locale.</p>
 
 <div class="note">
-<p><strong>Note </strong>: La quantité de données que l'on peut stocker à l'aide des APIs de stockage côté client est limitée (limite par API et limite globale), la limite exacte dépend du navigateur et des configurations. Voir <a href="/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria">Limites de stockage du navigateur et critères d'éviction</a> pour plus d'informations.</p>
+<p><strong>Note :</strong> La quantité de données que l'on peut stocker à l'aide des APIs de stockage côté client est limitée (limite par API et limite globale), la limite exacte dépend du navigateur et des configurations. Voir <a href="/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria">Limites de stockage du navigateur et critères d'éviction</a> pour plus d'informations.</p>
 </div>
 
 <h3 id="À_lancienne_les_cookies">À l'ancienne : les cookies</h3>
@@ -59,14 +59,14 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage
 
 <p>De par leur histoire, les cookies souffrent d'un certain nombre de problèmes — tant techniques qu'au niveau de l'expérience utilisateur. Ces problèmes sont suffisamment importants pour imposer un message d'information aux utilisateurs habitant en Europe lors de leur première visite si le site utilise des cookies pour stocker des informations sur eux. Cela est dû à une loi de l'Union Européenne connue sous le nom de <a href="/fr/docs/Web/HTTP/Cookies#EU_cookie_directive">directive Cookie</a>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15734/cookies-notice.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="cookies-notice.png"></p>
 
 <p>Pour ces raisons, nous ne verrons pas dans cet article comment utiliser les cookies. Entre le fait qu'ils sont dépassés, les <a href="/fr/docs/Web/HTTP/Cookies#Security">problèmes de sécurité</a> qu'ils présentent et l'incapacité de stocker des données complexes, les cookies ne sont pas la meilleure manière pour stocker des données. Il y a de meilleures alternatives, modernes, permettant de stocker des données variées sur l'ordinateur de l'utilisateur.</p>
 
 <p>Le seul avantage des cookies est qu'ils sont supportés par des navigateurs anciens : si votre projet requiert le support de navigateurs obsolètes (comme Internet Explorer 8 et inférieur), les cookies peuvent se révéler utiles. Pour la plupart des projets, vous ne devriez pas avoir besoin d'y recourir.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Pourquoi existe-t-il encore de nouveaux sites crées à l'aide de cookies? Principalement de par les habitudes des développeurs, l'utilisation de bibliothèques anciennes qui utilisent encore des cookies et l'existence de nombreux sites web fournissant des formations et références dépassées pour apprendre à stocker des données.</p>
+<p><strong>Note :</strong> Pourquoi existe-t-il encore de nouveaux sites crées à l'aide de cookies? Principalement de par les habitudes des développeurs, l'utilisation de bibliothèques anciennes qui utilisent encore des cookies et l'existence de nombreux sites web fournissant des formations et références dépassées pour apprendre à stocker des données.</p>
 </div>
 
 <h3 id="La_nouvelle_école_Web_Storage_et_IndexedDB">La nouvelle école : Web Storage et IndexedDB</h3>
@@ -169,7 +169,7 @@ myName</pre>
 
 <p>Le HTML de l'exemple est disponible à <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html">personal-greeting.html</a> — il s'agit d'un site web très simple avec entête, contenu et pied de page, ainsi qu'un formulaire pour entrer votre nom.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15735/web-storage-demo.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="web-storage-demo.png"></p>
 
 <p>Nous allons construire cet exemple pas à pas, cela vous permettra de comprendre comment ça marche.</p>
 
@@ -260,16 +260,16 @@ function nameDisplayCheck() {
 <p>Notre exemple est terminé — bien joué ! Il ne vous reste plus qu'à enregistrer votre code et tester votre page HTML dans un navigateur. Vous pouvez voir notre <a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html">version terminée en direct ici</a> (ou le <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/index.js">code JavaScript terminé</a>).</p>
 
 <div class="note">
-<p><strong>Note </strong>: Vous pouvez trouver un exemple un peu plus complexe dans l'article <a href="/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Utiliser l'API de stockage web</a>.</p>
+<p><strong>Note :</strong> Vous pouvez trouver un exemple un peu plus complexe dans l'article <a href="/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Utiliser l'API de stockage web</a>.</p>
 </div>
 
 <div class="note">
-<p><strong>Note </strong>: Dans la ligne <code>&lt;script src="index.js" defer&gt;&lt;/script&gt;</code> de notre version finie, l'attribut <code>defer</code> spécifie que le contenu de l'élément {{htmlelement("script")}} ne doit pas s'exécuter avant que la page ait fini de charger.</p>
+<p><strong>Note :</strong> Dans la ligne <code>&lt;script src="index.js" defer&gt;&lt;/script&gt;</code> de notre version finie, l'attribut <code>defer</code> spécifie que le contenu de l'élément {{htmlelement("script")}} ne doit pas s'exécuter avant que la page ait fini de charger.</p>
 </div>
 
 <h2 id="Stocker_des_données_complexes_—_IndexedDB">Stocker des données complexes — IndexedDB</h2>
 
-<p>L'<a href="/en-US/docs/Web/API/IndexedDB_API">API IndexedDB</a> (parfois abrégé IDB) est un système de base de données complet disponible dans le navigateur. Vous pouvez y stocker des données complexes, les types ne sont pas limités à des valeurs simples de type chaînes ou nombres. Vous pouvez stocker des vidéos, des images et à peu près tout ce que vous voulez, dans une instance IndexedDB.</p>
+<p>L'<a href="/fr/docs/Web/API/IndexedDB_API">API IndexedDB</a> (parfois abrégé IDB) est un système de base de données complet disponible dans le navigateur. Vous pouvez y stocker des données complexes, les types ne sont pas limités à des valeurs simples de type chaînes ou nombres. Vous pouvez stocker des vidéos, des images et à peu près tout ce que vous voulez, dans une instance IndexedDB.</p>
 
 <p>Cependant, cela a un coût : IndexedDB est beaucoup plus complexe à utiliser que l'API Web Storage. Dans cette section, nous ne ferons qu'égratigner la surface de ce qu'IndexedDB peut faire, mais nous vous en donnerons assez pour débuter.</p>
 
@@ -279,7 +279,7 @@ function nameDisplayCheck() {
 
 <p>L'application ressemble à ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15744/idb-demo.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="idb-demo.png"></p>
 
 <p>Chaque note a un titre et une description, chacun éditables individuellement. Le code JavaScript que nous allons voir ci-dessous contient des commentaires détaillés pour vous aider à comprendre ce qu'il se passe.</p>
 
@@ -333,7 +333,7 @@ let request = window.indexedDB.open('notes', 1);</pre>
   <p>Pour gérer cela dans IndexedDB, on crée d'abord une requête (que vous pouvez appeler comme vous le voulez — on l'appelle <code>request</code> pour que ce soit plus explicite). On utilise ensuite des gestionnaire d'événement pour exécuter du code lorsque les requêtes sont terminées, échouent, etc, ce que l'on va voir ci-dessous.</p>
 
   <div class="note">
-  <p><strong>Note </strong>: Le numéro de version est important. Si vous voulez mettre à jour votre base de données (par exemple, pour modifier la structure de la table), vous devez ré-exécuter votre code avec un numéro de version supérieur et spécifier le schéma de la base de données avec le gestionnaire d'événement <code>onupgradeneeded</code>. Nous ne verrons pas la mise à jour de base de données dans ce tutoriel.</p>
+  <p><strong>Note :</strong> Le numéro de version est important. Si vous voulez mettre à jour votre base de données (par exemple, pour modifier la structure de la table), vous devez ré-exécuter votre code avec un numéro de version supérieur et spécifier le schéma de la base de données avec le gestionnaire d'événement <code>onupgradeneeded</code>. Nous ne verrons pas la mise à jour de base de données dans ce tutoriel.</p>
   </div>
  </li>
  <li>
@@ -396,11 +396,11 @@ request.onupgradeneeded = function(e) {
 
 <p>Avec ce simple schéma de base de données en place, on va pouvoir ajouter des entrées à la base de données, des objets qui ressembleront à ça :</p>
 
-<pre class="brush: js"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-object"><span class="objectLeftBrace">{
-  </span><span class="nodeName">title</span><span class="objectEqual">: </span><span class="objectBox objectBox-string">"Acheter du lait"</span>,
-  <span class="nodeName">body</span><span class="objectEqual">: </span><span class="objectBox objectBox-string">"Lait de vache et de soja."</span>,
-  <span class="nodeName">id</span><span class="objectEqual">: </span><span class="objectBox objectBox-number">8</span></span></span></span></span><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-object"><span class="objectRightBrace">
-}</span></span></span></span></span></pre>
+<pre class="brush: js">{
+  title: "Acheter du lait",
+  body: "Lait de vache et de soja.",
+  id: 8
+}</pre>
 
 <h3 id="Ajouter_des_données_à_la_base_de_données">Ajouter des données à la base de données</h3>
 
@@ -608,7 +608,7 @@ function deleteItem(e) {
 <p>Et voilà ! L'exemple devrait maintenant fonctionner.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Si vous rencontrez des difficultés, n'hésitez pas à consulter <a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/notes/">notre exemple en direct</a> (ou voir <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.js">le code source</a>).</p>
+<p><strong>Note :</strong> Si vous rencontrez des difficultés, n'hésitez pas à consulter <a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/notes/">notre exemple en direct</a> (ou voir <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.js">le code source</a>).</p>
 </div>
 
 <h3 id="Stocker_des_données_complexes_avec_IndexedDB">Stocker des données complexes avec IndexedDB</h3>
@@ -729,7 +729,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 
 <p>L'exemple ci-dessus montre comment créer une application qui stocke des ressources volumineuses dans une base de données IndexedDB, évitant ainsi de devoir les télécharger plus d'une fois. C'est déjà une grande amélioration pour l'expérience utilisateur, mais il manque encore une chose: les fichiers HTML, CSS, et JavaScript doivent encore être téléchargés à chaque fois que le site est accédé, ce qui veut dire qu'il ne fonctionnera pas lorsqu'il n'y a pas de connexion réseau</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15759/ff-offline.png" style="border-style: solid; border-width: 1px; display: block; height: 307px; margin: 0px auto; width: 765px;"></p>
+<p><img alt="" src="ff-offline.png"></p>
 
 <p>C'est là qu'interviennet les <a href="/fr/docs/Web/API/Service_Worker_API">Service workers</a> et l'API étroitement liée, <a href="/fr/docs/Web/API/Cache">Cache</a>.</p>
 
@@ -742,7 +742,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 <p>L'API Cache est un autre mécanisme de stockage côté client, il a été conçu pour enregistrer les réponses HTTP et fonctionne donc très bien en synergie avec les service workers.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Les Service workers et Cache sont pris en charge par la plupart des navigateurs modernes aujourd'hui. Au moment de la rédaction de cet article, Safari était encore occupé à l'implémenter, mais il devrait bientôt être disponible.</p>
+<p><strong>Note :</strong> Les Service workers et Cache sont pris en charge par la plupart des navigateurs modernes aujourd'hui. Au moment de la rédaction de cet article, Safari était encore occupé à l'implémenter, mais il devrait bientôt être disponible.</p>
 </div>
 
 <h3 id="Un_exemple_service_worker">Un exemple service worker</h3>
@@ -769,7 +769,7 @@ if('serviceWorker' in navigator) {
 </ul>
 
 <div class="note">
-<p><strong>Note </strong>: Le chemin du fichier <code>sw.js</code> est relatif à l'origine du site, et non au fichier JavaScript qui l'appelle.<br>
+<p><strong>Note :</strong> Le chemin du fichier <code>sw.js</code> est relatif à l'origine du site, et non au fichier JavaScript qui l'appelle.<br>
  Le service worker est sur <code>https://mdn.github.io/learning-area/.../sw.js</code>. L'origine est <code>https://mdn.github.io</code>. Le chemin donné doit donc être <code>/learning-area/.../sw.js</code>.<br>
  Si vous vouliez héberger cet exemple sur votre propre serveur, vous devriez changer le chemin en conséquence. C'est plutôt inhabituel, mais cela doit fonctionner de cette façon pour des raisons de sécurité.</p>
 </div>
@@ -872,11 +872,11 @@ if('serviceWorker' in navigator) {
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction">Introduction aux API du Web</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipuler des documents</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Fetching_data">Récupérer des données du serveur</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Third_party_APIs">APIs tierces</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Drawing_graphics">Dessiner des éléments graphiques</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">APIs vidéo et audio</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage">Stockage côté client</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction">Introduction aux API du Web</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipuler des documents</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Fetching_data">Récupérer des données du serveur</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Third_party_APIs">APIs tierces</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Drawing_graphics">Dessiner des éléments graphiques</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">APIs vidéo et audio</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage">Stockage côté client</a></li>
 </ul>

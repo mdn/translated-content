@@ -19,13 +19,13 @@ original_slug: Apprendre/JavaScript/Building_blocks/Build_your_own_function
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}</div>
 
-<p class="summary">Dans l'article précédent, nous avons traité essentiellement de la théorie. Le présent article fournira une expérience pratique. Ici vous allez mettre en pratique ces connaissances en construisant vos propres fonctions. Tout au long, nous expliquerons également quelques détails supplémentaires concernant les fonctions.</p>
+<p>Dans l'article précédent, nous avons traité essentiellement de la théorie. Le présent article fournira une expérience pratique. Ici vous allez mettre en pratique ces connaissances en construisant vos propres fonctions. Tout au long, nous expliquerons également quelques détails supplémentaires concernant les fonctions.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
-   <td>Savoir-faire de base, une compréhension minimale HTML et CSS, <a href="/en-US/docs/Learn/JavaScript/First_steps">premiers pas en JavaScript</a>, <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Fonctions — blocs de code réutilisables</a>.</td>
+   <td>Savoir-faire de base, une compréhension minimale HTML et CSS, <a href="/fr/docs/Learn/JavaScript/First_steps">premiers pas en JavaScript</a>, <a href="/fr/docs/Learn/JavaScript/Building_blocks/Functions">Fonctions — blocs de code réutilisables</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objectif :</th>
@@ -36,16 +36,16 @@ original_slug: Apprendre/JavaScript/Building_blocks/Build_your_own_function
 
 <h2 id="Apprentissage_actif_Construisons_une_fonction">Apprentissage actif : Construisons une fonction</h2>
 
-<p>La fonction que nous allons construire sera nommée <code>displayMessage()</code>. Elle affichera une boîte de message personnalisée sur une page web. Elle fonctionnera comme un substitut personnalisé de la fonction <a href="/en-US/docs/Web/API/Window/alert">alert()</a> du navigateur. Vous avez déjà vu cela avant, mais nous allons simplement nous rafraîchir la mémoire — essayez le code qui suit dans la console JavaScript de votre navigateur, sur n'importe quelle page que vous aimez :</p>
+<p>La fonction que nous allons construire sera nommée <code>displayMessage()</code>. Elle affichera une boîte de message personnalisée sur une page web. Elle fonctionnera comme un substitut personnalisé de la fonction <a href="/fr/docs/Web/API/Window/alert">alert()</a> du navigateur. Vous avez déjà vu cela avant, mais nous allons simplement nous rafraîchir la mémoire — essayez le code qui suit dans la console JavaScript de votre navigateur, sur n'importe quelle page que vous aimez :</p>
 
 <pre class="brush: js">alert('This is a message');</pre>
 
 <p>La fonction prend un seul argument en paramètre — la chaîne de caractères qui est affichée dans la boîte d'alerte. Vous pouvez essayer de varier la syntaxe de la chaîne pour modifier le message.</p>
 
-<p>La fonction <a href="/en-US/docs/Web/API/Window/alert">alert()</a> est assez limitée : vous pouvez modifier le message, mais vous ne pouvez pas facilement faire varier autre chose, comme la couleur, une icône, ou autre chose. Nous en construirons une qui s'avérera plus amusante.</p>
+<p>La fonction <a href="/fr/docs/Web/API/Window/alert">alert()</a> est assez limitée : vous pouvez modifier le message, mais vous ne pouvez pas facilement faire varier autre chose, comme la couleur, une icône, ou autre chose. Nous en construirons une qui s'avérera plus amusante.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Cet exemple devrait fonctionner correctement dans tous les navigateurs modernes, mais elle pourrait avoir un comportement un peu plus inattendu dans un navigateur ancien. Nous recommandons donc de faire cet exercice dans un navigateur moderne tel que Firefox, Opera, ou Chrome.</p>
+<p><strong>Note :</strong> Cet exemple devrait fonctionner correctement dans tous les navigateurs modernes, mais elle pourrait avoir un comportement un peu plus inattendu dans un navigateur ancien. Nous recommandons donc de faire cet exercice dans un navigateur moderne tel que Firefox, Opera, ou Chrome.</p>
 </div>
 
 <h2 id="La_fonction_de_base">La fonction de base</h2>
@@ -53,7 +53,7 @@ original_slug: Apprendre/JavaScript/Building_blocks/Build_your_own_function
 <p>Pour commencer, mettons en place une fonction de base.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Pour les conventions de nommage des fonctions, vous devez suivre les mêmes règles que les <a href="/en-US/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules">conventions de noms de variables</a>. Ce qui est bien, c'est que vous pouvez les différencier — les noms de fonctions se terminent par des parenthèses, pas les variables.</p>
+<p><strong>Note :</strong> Pour les conventions de nommage des fonctions, vous devez suivre les mêmes règles que les <a href="/fr/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules">conventions de noms de variables</a>. Ce qui est bien, c'est que vous pouvez les différencier — les noms de fonctions se terminent par des parenthèses, pas les variables.</p>
 </div>
 
 <ol>
@@ -195,7 +195,8 @@ panel.appendChild(closeBtn);</pre>
 <ol>
  <li>Tout d'abord, téléchargez les icônes nécessaires à cet exercice (<a href="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png">warning</a> et <a href="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png">chat</a>) depuis GitHub. Enregistrez-les dans un nouveau dossier appelé <code>icons</code> dans le même répertoire que votre fichier HTML.
 
-  <div class="note"><strong>Note </strong>: icônes <a href="https://www.iconfinder.com/icons/1031466/alarm_alert_error_warning_icon">warning</a> et <a href="https://www.iconfinder.com/icons/1031441/chat_message_text_icon">chat</a> trouvés sur iconfinder.com, et créés par <a href="https://www.iconfinder.com/nazarr">Nazarrudin Ansyari</a>. Merci !</div>
+  <div class="note">
+    <p><strong>Note :</strong> icônes <a href="https://www.iconfinder.com/icons/1031466/alarm_alert_error_warning_icon">warning</a> et <a href="https://www.iconfinder.com/icons/1031441/chat_message_text_icon">chat</a> trouvés sur iconfinder.com, et créés par <a href="https://www.iconfinder.com/nazarr">Nazarrudin Ansyari</a>. Merci !</p></div>
  </li>
  <li>Ensuite, trouvez le CSS à l'intérieur de votre fichier HTML. Nous ferons quelques changements pour faire place aux icônes. Tout d'abord, mettez à jour la largeur <code>.msgBox</code> en changeant :
   <pre class="brush: css">width: 200px;</pre>
@@ -229,7 +230,7 @@ displayMessage('Brian: Hi there, how are you today?','chat');</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note </strong>: Si vous avez des difficultés à mettre en œuvre cet exemple, n'hésitez pas à verifier votre code par rapport à la <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html">version définitive sur GitHub</a> (aussi, vous pouvez tester la <a href="http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html">démo</a>), ou nous demander de l'aide.</p>
+<p><strong>Note :</strong> Si vous avez des difficultés à mettre en œuvre cet exemple, n'hésitez pas à verifier votre code par rapport à la <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html">version définitive sur GitHub</a> (aussi, vous pouvez tester la <a href="http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html">démo</a>), ou nous demander de l'aide.</p>
 </div>
 
 <h2 id="Conclusion">Conclusion</h2>

@@ -18,9 +18,9 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Getting_started
 
 <div>{{NextMenu("Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML", "Apprendre/HTML/Introduction_à_HTML")}}</div>
 
-<p class="summary">Cet article porte sur les fondements du HTML, pour prendre un bon départ — nous définissons les éléments, les attributs et tout autre terme important que vous avez peut‑être entendu, ainsi que leur emplacement adéquat dans le langage. Nous montrons comment un élément HTML est structuré, comment une page HTML classique est structurée et expliquons les autres importants traits de base du langage. Dans ce parcours, nous jouons avec certains HTML pour exciter votre intérêt.</p>
+<p>Cet article porte sur les fondements du HTML, pour prendre un bon départ — nous définissons les éléments, les attributs et tout autre terme important que vous avez peut‑être entendu, ainsi que leur emplacement adéquat dans le langage. Nous montrons comment un élément HTML est structuré, comment une page HTML classique est structurée et expliquons les autres importants traits de base du langage. Dans ce parcours, nous jouons avec certains HTML pour exciter votre intérêt.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -44,14 +44,14 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Getting_started
 <pre class="brush: html">&lt;p&gt;Mon chat est très grincheux&lt;/p&gt;</pre>
 
 <div class="note">
-<p><strong>Note : </strong>Les éléments en HTML sont insensibles à la casse, c'est-à-dire qu'ils peuvent être écrits en majuscules ou en minuscules. Par exemple, un élément {{htmlelement("title")}}} peut être écrit &lt;title&gt;, &lt;TITLE&gt;, &lt;Title&gt;, &lt;TiTlE&gt;, etc. et il fonctionnera parfaitement. La meilleure pratique, cependant, est d'écrire tous les éléments en minuscules pour des raisons de cohérence, de lisibilité et autres.</p>
+<p><strong>Note :</strong> Les éléments en HTML sont insensibles à la casse, c'est-à-dire qu'ils peuvent être écrits en majuscules ou en minuscules. Par exemple, un élément {{htmlelement("title")}}} peut être écrit &lt;title&gt;, &lt;TITLE&gt;, &lt;Title&gt;, &lt;TiTlE&gt;, etc. et il fonctionnera parfaitement. La meilleure pratique, cependant, est d'écrire tous les éléments en minuscules pour des raisons de cohérence, de lisibilité et autres.</p>
 </div>
 
 <h2 id="Anatomie_d'un_élément_HTML">Anatomie d'un élément HTML</h2>
 
 <p>Regardons notre élément paragraphe d'un peu plus près :</p>
 
-<p><img alt="" src="chat-grincheuxl.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="chat-grincheuxl.png"></p>
 
 <p>Les principales parties de notre élément sont :</p>
 
@@ -68,10 +68,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Getting_started
 
 <p>Si vous faites une erreur, vous pouvez toujours réinitialiser avec le bouton <em>Réinitialiser</em>. Si vous êtes vraiment coincé, appuyez sur le bouton <em>Voir la solution</em> pour la réponse.</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Zone de rendu&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Zone de rendu&lt;/h2&gt;
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
 
@@ -88,7 +85,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Getting_started
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -109,7 +106,7 @@ body {
 }
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -186,9 +183,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 400, "", "","hide-codepen-jsfiddle")}}</p>
+<p>{{ EmbedLiveSample('Apprentissage_actif_créer_votre_premier_élément_HTML', 700, 400, "", "","hide-codepen-jsfiddle")}}</p>
 
 <h3 id="Eléments_imbriqués">Eléments imbriqués</h3>
 
@@ -223,15 +219,15 @@ textarea.onkeyup = function(){
 <p>{{ EmbedLiveSample('Éléments_bloc_vs_en_ligne', 700, 200, "", "") }}</p>
 
 <div class="note">
-<p><strong>Note </strong>: HTML5 a redéfini les catégories d'éléments dans HTML5 : voir <a href="https://html.spec.whatwg.org/multipage/indices.html#element-content-categories">catégories de contenu d'éléments</a>. Bien que ces définitions soient plus précises et moins ambiguës que celles qui précèdent, elles sont beaucoup plus compliquées à comprendre que « block » et « inline ». Nous nous en tiendrons donc à cela tout au long de ce sujet.</p>
+<p><strong>Note :</strong> HTML5 a redéfini les catégories d'éléments dans HTML5 : voir <a href="https://html.spec.whatwg.org/multipage/indices.html#element-content-categories">catégories de contenu d'éléments</a>. Bien que ces définitions soient plus précises et moins ambiguës que celles qui précèdent, elles sont beaucoup plus compliquées à comprendre que « block » et « inline ». Nous nous en tiendrons donc à cela tout au long de ce sujet.</p>
 </div>
 
 <div class="note">
-<p> <strong>Note</strong> : les termes « block » et « inline », tels qu'utilisés dans cet article, ne doivent pas être confondus avec <a href="/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Le_mod%C3%A8le_de_bo%C3%AEte">les types de boîtes des CSS </a>portant les mêmes noms. Alors qu'ils sont corrélés par défaut, modifier le type d'affichage des CSS ne modifie pas la catégorie d'un élément et n'affecte pas les éléments qu'il pourrait contenir ni ceux dans lequel il pourrait être contenu. Une des raisons pour lesquelles HTML5 a abandonné ces termes était d'éviter cette confusion assez courante.</p>
+<p><strong>Note :</strong> les termes « block » et « inline », tels qu'utilisés dans cet article, ne doivent pas être confondus avec <a href="/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Le_mod%C3%A8le_de_bo%C3%AEte">les types de boîtes des CSS </a>portant les mêmes noms. Alors qu'ils sont corrélés par défaut, modifier le type d'affichage des CSS ne modifie pas la catégorie d'un élément et n'affecte pas les éléments qu'il pourrait contenir ni ceux dans lequel il pourrait être contenu. Une des raisons pour lesquelles HTML5 a abandonné ces termes était d'éviter cette confusion assez courante.</p>
 </div>
 
 <div class="note">
-<p><strong>Note </strong>: Vous trouverez des pages de référence utiles incluant des listes d'<a href="/fr/docs/Web/HTML/%C3%89l%C3%A9ments_en_bloc">éléments de niveau bloc</a> et d'<a href="/fr/docs/Web/HTML/%C3%89l%C3%A9ments_en_ligne">éléments en ligne</a>.</p>
+<p><strong>Note :</strong> Vous trouverez des pages de référence utiles incluant des listes d'<a href="/fr/docs/Web/HTML/%C3%89l%C3%A9ments_en_bloc">éléments de niveau bloc</a> et d'<a href="/fr/docs/Web/HTML/%C3%89l%C3%A9ments_en_ligne">éléments en ligne</a>.</p>
 </div>
 
 <h3 id="Éléments_vides">Éléments vides</h3>
@@ -248,7 +244,7 @@ textarea.onkeyup = function(){
 
 <p>Les éléments peuvent aussi avoir des attributs, qui comme suit:</p>
 
-<p><img alt='&amp;amp;amp;lt;p class="editor-note">My cat is very grumpy&amp;amp;amp;lt;/p>' src="attribut-chat-grincheux.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt='&amp;amp;amp;lt;p class="editor-note">My cat is very grumpy&amp;amp;amp;lt;/p>' src="attribut-chat-grincheux.png"></p>
 
 <p>Les attributs contiennent des informations supplémentaires sur l'élément sans qu'elles n'apparaissent dans le contenu réel. Dans ce cas, l'attribut <code>class</code> vous permet de donner à l'élément un nom d'identification qui peut ensuite être utilisé pour cibler l'élément afin de lui attribuer un <a href="/fr/docs/Web/CSS">style CSS</a> ou un comportement particulier, par exemple.</p>
 
@@ -274,10 +270,7 @@ textarea.onkeyup = function(){
 
 <p>Si vous faites une erreur, vous pouvez toujours réinitialiser la <em>zone de saisie</em> en cliquant sur le bouton <em>Réinitialiser</em>. Si vous êtes vraiment coincé, cliquez sur le bouton <em>Voir la solution</em> pour afficher la réponse.</p>
 
-<div class="hidden">
-<h6 id="Playable_code2">Playable code2</h6>
-
-<pre class="brush: html">&lt;h2&gt;Zone de rendu&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Zone de rendu&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -294,7 +287,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Voir la solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -314,7 +307,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -391,9 +384,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code2', 700, 400,"","","hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Apprentissage_actif_ajouter_des_attributs_à_un_élément', 700, 400,"","","hide-codepen-jsfiddle") }}</p>
 
 <h3 id="Les_attributs_booléens">Les attributs booléens</h3>
 
@@ -488,12 +480,12 @@ textarea.onkeyup = function(){
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez également trouver ce modèle HTML dans le<a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html"> dépôt GitHub MDN Learning Area</a>.</p>
+<p><strong>Note :</strong> Vous pouvez également trouver ce modèle HTML dans le<a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html"> dépôt GitHub MDN Learning Area</a>.</p>
 </div>
 
 <p>Vous pouvez maintenant ouvrir ce fichier dans un navigateur Web pour voir à quoi ressemble le rendu, puis modifier le code et actualiser le navigateur pour voir le résultat. Initialement, il ressemblera à ceci:</p>
 
-<p><img alt="Une simple page HTML affichant Voici ma page" src="fr-capture-modele.png" style="display: block; margin: 0px auto;">Dans cet exercice, vous pouvez modifier le code sur votre ordinateur, comme indiqué ci-dessus, ou directement dans la fenêtre d'exemple modifiable ci-dessous (la fenêtre d'exemple modifiable représente uniquement le contenu de l'élément &lt;body&gt;. ) Nous aimerions que vous le fassiez en suivant les étapes suivantes :</p>
+<p><img alt="Une simple page HTML affichant Voici ma page" src="fr-capture-modele.png">Dans cet exercice, vous pouvez modifier le code sur votre ordinateur, comme indiqué ci-dessus, ou directement dans la fenêtre d'exemple modifiable ci-dessous (la fenêtre d'exemple modifiable représente uniquement le contenu de l'élément &lt;body&gt;. ) Nous aimerions que vous le fassiez en suivant les étapes suivantes :</p>
 
 <ul>
  <li>Au début du document, juste après la balise d'ouverture &lt;body&gt;, ajoutez un titre principal pour le document. Il doit être entre une balise ouvrante &lt;h1&gt; et la balise fermante &lt;/ h1&gt; ;</li>
@@ -505,10 +497,7 @@ textarea.onkeyup = function(){
 
 <p>Si vous faites une erreur, vous pouvez toujours recommencer en utilisant le bouton <em>Réinitialiser</em>. Si vous êtes vraiment coincé, appuyez sur le bouton <em>Voir la solution</em> pour l'afficher.</p>
 
-<div class="hidden">
-<h6 id="Playable_code3">Playable code3</h6>
-
-<pre class="brush: html">&lt;h2&gt;Zone de rendu&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Zone de rendu&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -525,7 +514,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Voir la solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -549,7 +538,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -626,9 +615,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code3', 700, 600, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Apprentissage_actif_ajouter_certaines_fonctionnalités_à_un_document_HTML', 700, 600, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <h3 id="Espace_vide_en_HTML">Espace vide en HTML</h3>
 
@@ -689,7 +677,7 @@ textarea.onkeyup = function(){
 <p>{{ EmbedLiveSample("Références_dentités", 700, 200, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: Un graphique de toutes les références d'entité de caractères HTML est disponible sur Wikipedia : <a href="https://fr.wikipedia.org/wiki/Liste_des_entit%C3%A9s_caract%C3%A8re_de_XML_et_HTML">Liste des entités caractère de XML et HTML</a>.</p>
+<p><strong>Note :</strong> Un graphique de toutes les références d'entité de caractères HTML est disponible sur Wikipedia : <a href="https://fr.wikipedia.org/wiki/Liste_des_entit%C3%A9s_caract%C3%A8re_de_XML_et_HTML">Liste des entités caractère de XML et HTML</a>.</p>
 </div>
 
 <h2 id="Commentaires_en_HTML">Commentaires en HTML</h2>
@@ -711,7 +699,7 @@ textarea.onkeyup = function(){
 <p>Vous avez atteint la fin de l'article — nous espérons que vous avez apprécié de faire le tour des bases du HTML ! À ce stade, vous devez comprendre à quoi ce langage ressemble, comment il fonctionne à un niveau de base, et être en mesure d'écrire quelques éléments et attributs. C'est parfait pour le moment, car dans les articles suivants, nous allons approfondir certaines des choses que vous venez de voir, et introduire de nouveaux aspects du langage. Restez à l'écoute !</p>
 
 <div class="note">
-<p><strong>Note</strong>: À ce stade, lorsque vous commencez à en apprendre davantage sur le langage HTML, vous pouvez également commencer à explorer les bases des feuilles de style <a href="/fr/docs/Learn/CSS">CSS</a>. CSS est le langage utilisé pour composer vos pages Web (par exemple, changer la police ou les couleurs, ou modifier la mise en page). HTML et CSS vont très bien ensemble, comme vous allez bientôt le découvrir.</p>
+<p><strong>Note :</strong> À ce stade, lorsque vous commencez à en apprendre davantage sur le langage HTML, vous pouvez également commencer à explorer les bases des feuilles de style <a href="/fr/docs/Learn/CSS">CSS</a>. CSS est le langage utilisé pour composer vos pages Web (par exemple, changer la police ou les couleurs, ou modifier la mise en page). HTML et CSS vont très bien ensemble, comme vous allez bientôt le découvrir.</p>
 </div>
 
 <h2 id="Voir_aussi">Voir aussi</h2>

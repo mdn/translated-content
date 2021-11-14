@@ -8,11 +8,9 @@ tags:
 translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 original_slug: Apprendre/Transférer_des_fichiers_vers_un_serveur_web
 ---
-<div class="summary">
 <p>Cet article illustre comment publier votre site en ligne grâce à des outils {{Glossary("FTP")}}. </p>
-</div>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -25,11 +23,11 @@ original_slug: Apprendre/Transférer_des_fichiers_vers_un_serveur_web
  </tbody>
 </table>
 
-<p>Maintenant que vous avez <a href="/en-US/Learn/HTML/Write_a_simple_page_in_HTML">construit une page web</a>, vous voulez peut être la mettre en ligne grâce à un serveur web. Dans cet article, nous verrons comment faire en utilisant {{Glossary("FTP")}}.</p>
+<p>Maintenant que vous avez <a href="/fr/Learn/HTML/Write_a_simple_page_in_HTML">construit une page web</a>, vous voulez peut être la mettre en ligne grâce à un serveur web. Dans cet article, nous verrons comment faire en utilisant {{Glossary("FTP")}}.</p>
 
 <h2 id="Pédagogie_active">Pédagogie active</h2>
 
-<p><em>Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette section. <a href="https://developer.mozilla.org/fr/docs/MDN/D%C3%A9buter_sur_MDN">Vous pouvez néanmoins contribuer</a>.</em></p>
+<p><em>Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette section. <a href="/fr/docs/MDN/D%C3%A9buter_sur_MDN">Vous pouvez néanmoins contribuer</a>.</em></p>
 
 <h2 id="Aller_plus_loin">Aller plus loin</h2>
 
@@ -38,19 +36,19 @@ original_slug: Apprendre/Transférer_des_fichiers_vers_un_serveur_web
 <p>Il existe de nombreux clients FTP. Dans cette démonstration, nous utiliserons FireFTP. Celui-ci est simple à installer avec Firefox car <a href="https://addons.mozilla.org/firefox/addon/fireftp/">c'est un module complémentaire</a>.</p>
 
 <div class="note">
-<p>Il existe de nombreuses autres options, voir <a href="/fr/Apprendre/How_much_does_it_cost#Publishing_tools.3A_FTP_client">les outils de publications : les clients FTP</a> pour plus d'informations.</p>
+<p><strong>Note :</strong> Il existe de nombreuses autres options, voir <a href="/fr/Apprendre/How_much_does_it_cost#Publishing_tools.3A_FTP_client">les outils de publications : les clients FTP</a> pour plus d'informations.</p>
 </div>
 
 <p>Pour ouvrir FireFTP dans un nouvel onglet de Firefox, il existe deux méthodes :</p>
 
 <ol>
- <li><strong>Menu de Firefox <img alt="" src="https://mdn.mozillademos.org/files/9633/2014-01-10-13-08-08-f52b8c.png" style="height: 16px; width: 16px;"> ➤ <img alt="Developer" src="https://mdn.mozillademos.org/files/9635/Screenshot%20from%202014-11-26%2014:24:56.png" style="height: 24px; vertical-align: middle; width: 27px;"> ➤ FireFTP</strong></li>
+ <li><strong>Menu de Firefox <img alt="" src="2014-01-10-13-08-08-f52b8c.png"> ➤ <img alt="Developer" src="Screenshot%20from%202014-11-26%2014:24:56.png"> ➤ FireFTP</strong></li>
  <li><strong>Outils </strong>➤ <strong>Développement web</strong> ➤ <strong>FireFTP</strong></li>
 </ol>
 
 <p>Vous devriez voir apparaître cette fenêtre :</p>
 
-<p><img alt="FireFTP : the interface, not connected to a server" src="https://mdn.mozillademos.org/files/9613/fireftp-default.png" style="height: 800px; width: 1280px;"></p>
+<p><img alt="FireFTP : the interface, not connected to a server" src="fireftp-default.png"></p>
 
 <h3 id="Se_connecter">Se connecter</h3>
 
@@ -77,7 +75,7 @@ original_slug: Apprendre/Transférer_des_fichiers_vers_un_serveur_web
 
 <p>Tout d'abord, jetons un coup d'œil à <code>http://demozilla.hebergeurexemple.net/</code> — pour le moment, comme vous pouvez le voir, il n'y a pas grand chose :</p>
 
-<p><img alt="Our demozilla personal website, seen in a browser: it's empty" src="https://mdn.mozillademos.org/files/9615/demozilla-empty.png" style="height: 233px; width: 409px;"></p>
+<p><img alt="Our demozilla personal website, seen in a browser: it's empty" src="demozilla-empty.png"></p>
 
 <div class="note">
 <p><strong>Note :</strong> Selon l'hébergeur que vous avez choisi, vous pourriez ici voir une page avec un texte ressemblant à « Ce site web est hébergé par [Nom de l'hébergeur] ».</p>
@@ -85,13 +83,13 @@ original_slug: Apprendre/Transférer_des_fichiers_vers_un_serveur_web
 
 <p>Pour connecter votre client FTP au serveur distant, cliquez sur le bouton <em>« Créer un compte »</em> de FireFTP, puis remplissez les informations telles qu'elles vous ont été fournies par votre hébergeur :</p>
 
-<p><img alt="FireFTP: creating an account" src="https://mdn.mozillademos.org/files/9617/fireftp-createlogin.png" style="height: 436px; width: 578px;"></p>
+<p><img alt="FireFTP: creating an account" src="fireftp-createlogin.png"></p>
 
 <h3 id="Ici_et_là-bas_la_vue_locale_et_la_vue_distante">Ici et là-bas : la vue locale et la vue distante</h3>
 
 <p>Vous pouvez ensuite vous connecter sur ce nouveau compte :</p>
 
-<p><img alt="The FTP interface, once logged" src="https://mdn.mozillademos.org/files/9619/fireftp-logged.png" style="height: 800px; width: 1280px;"></p>
+<p><img alt="The FTP interface, once logged" src="fireftp-logged.png"></p>
 
 <p>Examinons cet écran :</p>
 
@@ -105,19 +103,19 @@ original_slug: Apprendre/Transférer_des_fichiers_vers_un_serveur_web
 
 <p>Comme nous l'avons vu plus tôt, notre hébergeur nous a indiqué que les fichiers devaient être stockés sous <code>Public/htdocs</code> pour être visible sur le Web. Déplaçons-nous donc dans ce dossier grâce au volet droit :</p>
 
-<p><img alt="Changing to the htdocs folder on the remote server" src="https://mdn.mozillademos.org/files/9623/remote-htdocs-empty.png" style="height: 315px; width: 561px;"></p>
+<p><img alt="Changing to the htdocs folder on the remote server" src="remote-htdocs-empty.png"></p>
 
 <p>Ensuite, pour transférer des fichiers de votre ordinateur vers ce dossier du serveur, il suffit de les glisser-déposer du volet gauche vers le volet droit :</p>
 
-<p><img alt="The files show in the remote view: they have been pushed to the server" src="https://mdn.mozillademos.org/files/9625/files-dropped-onto-the-server.png" style="height: 800px; width: 1280px;"></p>
+<p><img alt="The files show in the remote view: they have been pushed to the server" src="files-dropped-onto-the-server.png"></p>
 
 <h3 id="Est-ce_que_mes_fichiers_sont_bien_en_ligne">Est-ce que mes fichiers sont bien en ligne ?</h3>
 
 <p>Jusqu'ici tout va bien, vérifions quand même en tapant <code>http://demozilla.hebergeurexemple.net/</code> dans la barre d'URL du navigateur :</p>
 
-<p><img alt="Here we go: our website is live!" src="https://mdn.mozillademos.org/files/9627/here-we-go.png" style="height: 442px; width: 400px;"></p>
+<p><img alt="Here we go: our website is live!" src="here-we-go.png"></p>
 
-<p>Et <em lang="fr">voilà</em> ! Notre site est en ligne !</p>
+<p>Et <em>voilà</em> ! Notre site est en ligne !</p>
 
 <h3 id="D'autres_méthodes_pour_transférer_des_fichiers">D'autres méthodes pour transférer des fichiers</h3>
 

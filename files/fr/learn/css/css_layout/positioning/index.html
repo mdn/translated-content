@@ -22,9 +22,9 @@ original_slug: Apprendre/CSS/CSS_layout/Le_positionnement
 
 <div>{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Apprendre/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}</div>
 
-<p class="summary">Le positionnement permet de sortir les éléments du cours normal de composition du document, et faire qu'ils se comportent différemment, par exemple de se placer sur un autre, ou de toujours rester à la même place dans le cadre d'affichage (viewport) du navigateur. Cet article explique les diverses valeurs de {{cssxref("position")}}, et comment les utiliser.</p>
+<p>Le positionnement permet de sortir les éléments du cours normal de composition du document, et faire qu'ils se comportent différemment, par exemple de se placer sur un autre, ou de toujours rester à la même place dans le cadre d'affichage (viewport) du navigateur. Cet article explique les diverses valeurs de {{cssxref("position")}}, et comment les utiliser.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis:</th>
@@ -51,25 +51,25 @@ original_slug: Apprendre/CSS/CSS_layout/Le_positionnement
 
 <p>Pour le démontrer et avoir préparer un premier exemple pour les prochaines sections, ajoutez tout d'abord une classe <code>positioned</code> pour le deuxième {{htmlelement("p")}} dans le HTML:</p>
 
-<pre class="brush: html notranslate">&lt;p class="positioned"&gt; ... &lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p class="positioned"&gt; ... &lt;/p&gt;</pre>
 
 <p>Puis ajoutez la règle suivante au bas de votre CSS:</p>
 
-<pre class="brush: css notranslate">.positioned {
+<pre class="brush: css">.positioned {
   position: static;
   background: yellow; }</pre>
 
 <p>Si maintenant vous sauvegardez et actualisez, vous verrez qu'il n'y a aucune différence, à l'exception de la mise à jour de la couleur de l'arrière-plan du deuxième paragraphe. C'est correct, comme nous l'avons vu plus tôt, le positionnement statique est le comportement par défaut !</p>
 
 <div class="note">
-<p><strong>Remarque </strong>: ce lien <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html">1_static-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html">voir le code source</a>) pointe sur un exemple de positionnement « static ».</p>
+<p><strong>Note :</strong> ce lien <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html">1_static-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html">voir le code source</a>) pointe sur un exemple de positionnement « static ».</p>
 </div>
 
 <h3 id="Positionnement_«_relative_»">Positionnement « relative »</h3>
 
 <p>Le positionnement relatif est le premier type de positionnement que nous allons étudier. Il est très similaire au positionnement statique. Cependant, une fois que l'élément positionné occupe une place dans le cours normal de la mise en page, vous pourrez modifier sa position finale. Vous pourrez par exemple le faire chevaucher d'autres éléments de la page. Poursuivons : mettez à jour la déclaration de <code>position</code> dans le code :</p>
 
-<pre class="brush: css notranslate">position: relative;</pre>
+<pre class="brush: css">position: relative;</pre>
 
 <p>Si vous sauvegardez et actualisez à ce stade, vous ne verrez aucun changement dans le résultat. Alors, comment modifier la position de l'élément ? Vous avez besoin d'employer les propriétés {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} dont nous parlerons dans le prochain paragraphe.</p>
 
@@ -77,25 +77,23 @@ original_slug: Apprendre/CSS/CSS_layout/Le_positionnement
 
 <p>{{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} sont utilisés conjointement à {{cssxref("position")}} pour définir exactement là où placer l'élément positionné. Pour le tester, ajoutez les déclarations suivantes à la règle <code>.positioned</code> dans la CSS :</p>
 
-<pre class="notranslate">top: 30px;
+<pre>top: 30px;
 left: 30px;</pre>
 
 <div class="note">
-<p><strong>Remarque </strong>: les valeurs de ces propriétés peuvent prendre n'importe quelle <a href="/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units">unité</a> logiquement attendue — pixels, mm, rem, %, etc.</p>
+<p><strong>Note :</strong> les valeurs de ces propriétés peuvent prendre n'importe quelle <a href="/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units">unité</a> logiquement attendue — pixels, mm, rem, %, etc.</p>
 </div>
 
 <p>Si vous enregistrez et actualisez maintenant, vous verrez ce résultat :</p>
 
-<div id="example_1">
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Positionnement relatif&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Positionnement relatif&lt;/h1&gt;
 &lt;p&gt;Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.&lt;/p&gt;
 &lt;p class="positioned"&gt;Par défaut, je couvre 100% de la largeur de mon élément parent et je suis aussi haut que mon contenu enfant. Mes largeur et hauteur totales sont égales aux largeur et hauteur du contenu, plus celles du remplissage, plus celles de l'encadrement.&lt;/p&gt;
 &lt;p&gt;Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.&lt;/p&gt;
-&lt;p&gt;Les éléments « inline » &lt;span&gt;comme celui-ci &lt;/span&gt;ou &lt;span&gt;cet autre&lt;/span&gt; sont sur une même ligne que les nœuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants &lt;span&gt;se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte&lt;/span&gt; ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Les éléments « inline » &lt;span&gt;comme celui-ci &lt;/span&gt;ou &lt;span&gt;cet autre&lt;/span&gt; sont sur une même ligne que les nœuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants &lt;span&gt;se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte&lt;/span&gt; ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : &lt;img src="long.jpg"&gt;&lt;/p&gt;
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   margin: 0 auto; }
 p {
@@ -111,35 +109,31 @@ span {
   background: yellow;
   top: 30px;
   left: 30px; }</pre>
-</div>
-</div>
 
-<p>{{ EmbedLiveSample('example_1', '100%', 500) }}</p>
+<p>{{ EmbedLiveSample('Présentation_de_«_top_»_«_bottom_»_«_left_»_et_«_right_»', '100%', 500) }}</p>
 
-<p>Cool, n'est-ce-pas ? Oui, mais ce n'était probablement pas ce à quoi vous vous attendiez. Pourquoi le déplacement s'est‑il effectué vers le bas et à droite si nous avons défini <code>top</code> (haut) et <code>left</code> (gauche) ? Même si cela <span class="st">peut paraître illogique, c'est la façon dont fonctionne le positionnement relatif</span>. Songez à une force invisible poussant le côté spécifié de l'élément à positionner, le déplaçant ainsi dans la direction opposé. Par exemple, si nous spécifions <code>top: 30px;</code>, une force pousse le haut de la boîte, entraînant son déplacement vers le bas de 30px.</p>
+<p>Cool, n'est-ce-pas ? Oui, mais ce n'était probablement pas ce à quoi vous vous attendiez. Pourquoi le déplacement s'est‑il effectué vers le bas et à droite si nous avons défini <code>top</code> (haut) et <code>left</code> (gauche) ? Même si cela peut paraître illogique, c'est la façon dont fonctionne le positionnement relatif. Songez à une force invisible poussant le côté spécifié de l'élément à positionner, le déplaçant ainsi dans la direction opposé. Par exemple, si nous spécifions <code>top: 30px;</code>, une force pousse le haut de la boîte, entraînant son déplacement vers le bas de 30px.</p>
 
 <div class="note">
-<p><strong>Remarque</strong>: à ce stade de l'article, vous pouvez retrouver un exemple ici <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html">2_relative-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html">voir le code source</a>).</p>
+<p><strong>Note :</strong> à ce stade de l'article, vous pouvez retrouver un exemple ici <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html">2_relative-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html">voir le code source</a>).</p>
 </div>
 
 <h3 id="Positionnement_«_absolute_»">Positionnement « absolute »</h3>
 
 <p>Le positionnement absolu nous apporte des résultats bien différents. Modifions la déclaration de <code>position</code> dans le code :</p>
 
-<pre class="notranslate">position: absolute;</pre>
+<pre>position: absolute;</pre>
 
 <p>Si vous enregistrez et actualisez maintenant, vous verrez quelque chose comme ceci apparaitre :</p>
 
-<div id="example_2">
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Positionnement absolu&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Positionnement absolu&lt;/h1&gt;
 &lt;p&gt;Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.&lt;/p&gt;
 &lt;p class="positioned"&gt;Par défaut, je couvre 100% de la largeur de mon élément parent et je suis aussi haut que mon contenu enfant. Mes largeur et hauteur totales sont égales aux largeur et hauteur du contenu, plus celles du remplissage, plus celles de l'encadrement.&lt;/p&gt;
 &lt;p&gt;Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.&lt;/p&gt;
-&lt;p&gt;Les éléments « inline » &lt;span&gt;comme celui-ci &lt;/span&gt;ou &lt;span&gt;cet autre&lt;/span&gt; sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants &lt;span&gt;se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte&lt;/span&gt; ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Les éléments « inline » &lt;span&gt;comme celui-ci &lt;/span&gt;ou &lt;span&gt;cet autre&lt;/span&gt; sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants &lt;span&gt;se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte&lt;/span&gt; ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : &lt;img src="long.jpg"&gt;&lt;/p&gt;
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   margin: 0 auto; }
 p {
@@ -155,25 +149,23 @@ span {
   background: yellow;
   top: 30px;
   left: 30px; }</pre>
-</div>
-</div>
 
-<p>{{ EmbedLiveSample('example_2', '100%', 420) }}</p>
+<p>{{ EmbedLiveSample('Positionnement_«_absolute_»', '100%', 420) }}</p>
 
-<p>Tout d'abord, notez que l'emplacement où l'élément à positionner aurait dû se trouver dans le cours normal de la mise en page du document ne s'y trouve plus. Le premier élément et le troisième sont l'un à côté de l'autre comme si le second n'existait plus ! Dans un sens, c'est le cas. Un élément positionné de manière absolue ne fait plus partie du cours normal de la mise en page. <span class="st">Il se trouve maintenant sur un plan qui lui est propre, séparé de tout le reste.</span> C'est très utile : cela signifie que nous pouvons créer une fonctionnalité d'interface graphique isolée qui n'interfère pas avec la position des autres éléments sur la page. Par exemple, des boîtes d'informations contextuelles (popup), des menus de contrôle, des panneaux déroulants (rollover panels), des fonctionnalités d'interface utilisateur que l'on peut glisser et déposer n'importe où sur la page, et bien plus encore.</p>
+<p>Tout d'abord, notez que l'emplacement où l'élément à positionner aurait dû se trouver dans le cours normal de la mise en page du document ne s'y trouve plus. Le premier élément et le troisième sont l'un à côté de l'autre comme si le second n'existait plus ! Dans un sens, c'est le cas. Un élément positionné de manière absolue ne fait plus partie du cours normal de la mise en page. Il se trouve maintenant sur un plan qui lui est propre, séparé de tout le reste. C'est très utile : cela signifie que nous pouvons créer une fonctionnalité d'interface graphique isolée qui n'interfère pas avec la position des autres éléments sur la page. Par exemple, des boîtes d'informations contextuelles (popup), des menus de contrôle, des panneaux déroulants (rollover panels), des fonctionnalités d'interface utilisateur que l'on peut glisser et déposer n'importe où sur la page, et bien plus encore.</p>
 
-<p>Ensuite, notez que la position de l'élément a changé. {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} se comportent différemment avec le positionnement absolu. Au lieu <span class="st">de positionner l'élément en fonction de sa position relative dans la mise en page du document, ils définissent la distance à laquelle l'élément doit se situer par rapport aux côtés de l'élément contenant.</span> Dans ce cas, nous indiquons que l'élément à positionner de manière absolue doit se placer à 30px du haut et à 30px de la gauche de « l'élément conteneur ». (Dans ce cas, le bloc conteneur initial. Voir la section ci-dessous pour plus d'information)</p>
+<p>Ensuite, notez que la position de l'élément a changé. {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} se comportent différemment avec le positionnement absolu. Au lieu de positionner l'élément en fonction de sa position relative dans la mise en page du document, ils définissent la distance à laquelle l'élément doit se situer par rapport aux côtés de l'élément contenant. Dans ce cas, nous indiquons que l'élément à positionner de manière absolue doit se placer à 30px du haut et à 30px de la gauche de « l'élément conteneur ». (Dans ce cas, le bloc conteneur initial. Voir la section ci-dessous pour plus d'information)</p>
 
 <div class="note">
-<p><strong>Note</strong> : vous pouvez utiliser {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} pour redimensionner les éléments selon vos besoins. Définissez <code>top: 0; bottom: 0; left: 0; right: 0;</code> et <code>margin: 0;</code> sur les éléments à positionner et voyez ce qu'il se produit ! Réinitialisez le tout ensuite...</p>
+<p><strong>Note :</strong> vous pouvez utiliser {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} pour redimensionner les éléments selon vos besoins. Définissez <code>top: 0; bottom: 0; left: 0; right: 0;</code> et <code>margin: 0;</code> sur les éléments à positionner et voyez ce qu'il se produit ! Réinitialisez le tout ensuite...</p>
 </div>
 
 <div class="note">
-<p><strong>Note </strong>: Les marges affectent toujours les éléments à positionner. Toutefois, la fusion de marges ne se fait pas.</p>
+<p><strong>Note :</strong> Les marges affectent toujours les éléments à positionner. Toutefois, la fusion de marges ne se fait pas.</p>
 </div>
 
 <div class="note">
-<p><strong>Note </strong>: à ce stade de l'article, vous pouvez voir un exemple ici <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html">3_absolute-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html">voir le code source</a>).</p>
+<p><strong>Note :</strong> à ce stade de l'article, vous pouvez voir un exemple ici <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html">3_absolute-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html">voir le code source</a>).</p>
 </div>
 
 <h3 id="Contextes_de_positionnement">Contextes de positionnement</h3>
@@ -182,21 +174,19 @@ span {
 
 <p>Nous pouvons changer ce <strong>contexte de positionnement</strong> — par rapport à quel élément est placé l'élément à positionner en absolu. Cela s'effectue en définissant le positionnement sur un des autres éléments parents — un des éléments dans lequel il est imbriqué (vous ne pouvez pas le positionner par rapport à un élément dans lequel il n'est pas imbriqué). Pour l'illustrer, ajoutez la déclaration suivante à la règle body:</p>
 
-<pre class="notranslate">position: relative;</pre>
+<pre>position: relative;</pre>
 
 <p>Cela devrait donner le résultat suivant:</p>
 
-<div id="example_3">
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Contextes de positionnement&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Contextes de positionnement&lt;/h1&gt;
 
 &lt;p&gt;Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.&lt;/p&gt;
 &lt;p class="positioned"&gt;Maintenant je suis positionné de manière absolue par rapport à l'élément &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;, et non par rapport à l'élément &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; !&lt;/p&gt;
 &lt;p&gt;Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.&lt;/p&gt;
-&lt;p&gt;Les éléments « inline » &lt;span&gt;comme celui-ci &lt;/span&gt;ou &lt;span&gt;cet autre&lt;/span&gt; sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants &lt;span&gt;se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte&lt;/span&gt; ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Les éléments « inline » &lt;span&gt;comme celui-ci &lt;/span&gt;ou &lt;span&gt;cet autre&lt;/span&gt; sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants &lt;span&gt;se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte&lt;/span&gt; ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : &lt;img src="long.jpg"&gt;&lt;/p&gt;
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   margin: 0 auto;
   position: relative;
@@ -220,15 +210,13 @@ span {
   top: 30px;
   left: 30px;
 }</pre>
-</div>
-</div>
 
-<p>{{ EmbedLiveSample('example_3','100%', 420) }}</p>
+<p>{{ EmbedLiveSample('Contextes_de_positionnement','100%', 420) }}</p>
 
-<p><span class="st">À présent, l</span>'élément a été positionné par rapport à l'élément {{htmlelement("body")}}.</p>
+<p>À présent, l'élément a été positionné par rapport à l'élément {{htmlelement("body")}}.</p>
 
 <div class="note">
-<p><strong>Note </strong>: à ce stade, vous pouvez voir cet exemple ici <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html">4_positioning-context.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/4_positioning-context.html">voir le code source</a>).</p>
+<p><strong>Note :</strong> à ce stade, vous pouvez voir cet exemple ici <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html">4_positioning-context.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/4_positioning-context.html">voir le code source</a>).</p>
 </div>
 
 <h3 id="Présentation_du_z-index">Présentation du z-index</h3>
@@ -237,7 +225,7 @@ span {
 
 <p>Ajoutez le code suivant à la CSS, pour faire en sorte que le premier paragraphe soit aussi en positionnement absolu :</p>
 
-<pre class="notranslate">p:nth-of-type(1) {
+<pre>p:nth-of-type(1) {
   position: absolute;
   background: lime;
   top: 10px;
@@ -252,22 +240,20 @@ span {
 
 <p>Pour modifier l'ordre d'empilement, ajoutez la déclaration suivante à la règle <code>p:nth-of-type(1)</code> :</p>
 
-<pre class="notranslate">z-index: 1;</pre>
+<pre>z-index: 1;</pre>
 
 <p>Voici maintenant l'exemple terminé :</p>
 
-<div id="example_4">
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;z-index&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;z-index&lt;/h1&gt;
 
 
 &lt;p&gt;Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.&lt;/p&gt;
 &lt;p class="positioned"&gt;Maintenant je suis positionné de manière absolue par rapport à l'élément &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;, et non par rapport à l'élément &lt;code&gt;&amp;lt;html&amp;lt;html&amp;gt;&lt;/code&gt; !&lt;/p&gt;
 &lt;p&gt;Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.&lt;/p&gt;
-&lt;p&gt;Les éléments « inline » &lt;span&gt;comme celui-ci &lt;/span&gt;ou &lt;span&gt;cet autre&lt;/span&gt; sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants &lt;span&gt;se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte&lt;/span&gt; ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Les éléments « inline » &lt;span&gt;comme celui-ci &lt;/span&gt;ou &lt;span&gt;cet autre&lt;/span&gt; sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants &lt;span&gt;se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte&lt;/span&gt; ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : &lt;img src="long.jpg"&gt;&lt;/p&gt;
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   margin: 0 auto;
   position: relative; }
@@ -291,15 +277,13 @@ p:nth-of-type(1) {
   right: 30px;
   z-index: 1; }
 </pre>
-</div>
-</div>
 
-<p>{{ EmbedLiveSample('example_4', '100%', 400) }}</p>
+<p>{{ EmbedLiveSample('Présentation_du_z-index', '100%', 400) }}</p>
 
 <p>Notez que <code>z-index</code> n'accepte que des valeurs d'index sans unité ; vous ne pouvez pas préciser que vous voulez qu'un élément soit à 23 pixels sur l'axe des z — cela ne fonctionne pas ainsi. Les plus grandes valeurs vont au‑dessus des valeurs plus faibles et c'est à vous d'indiquer les valeurs. Utiliser 2 et 3 aura le même effet que 300 et 40000.</p>
 
 <div class="note">
-<p><strong>Note</strong> : sur ce sujet, vous pouvez voir l'exemple <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html">5_z-index.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html">voir le code source</a>).</p>
+<p><strong>Note :</strong> sur ce sujet, vous pouvez voir l'exemple <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html">5_z-index.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html">voir le code source</a>).</p>
 </div>
 
 <h3 id="Positionnement_«_fixed_»">Positionnement « fixed »</h3>
@@ -310,7 +294,7 @@ p:nth-of-type(1) {
 
 <p>Maintenant, mettez à jour la règle <code>body</code> : supprimez la déclaration <code>position : relative ;</code> et ajoutez une hauteur fixe, ainsi :</p>
 
-<pre class="notranslate">body {
+<pre>body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
@@ -318,7 +302,7 @@ p:nth-of-type(1) {
 
 <p>Maintenant, donnez la position <code>fixed</code> à l'élément {{htmlelement("h1")}} et centrez‑le en haut de la fenêtre. Ajoutez la règle suivante à la CSS :</p>
 
-<pre class="notranslate">h1 {
+<pre>h1 {
   position: fixed;
   top: 0;
   width: 500px;
@@ -331,22 +315,20 @@ p:nth-of-type(1) {
 
 <p>Si vous enregistrez et actualisez maintenant, vous verrez un petit effet amusant par lequel le titre reste fixe et le contenu semble défiler vers le haut et disparaître en dessous. Mais nous pouvons l'améliorer davantage — actuellement, une partie du contenu commence sous l'en‑tête. En effet, l'en-tête positionné n'apparaît plus dans le cours du document, de sorte que le reste du contenu se déplace vers le haut. Nous devons tout baisser un peu ; nous pouvons le faire en fixant une marge supérieure sur le premier paragraphe. Ajoutez ceci maintenant :</p>
 
-<pre class="notranslate">p:nth-of-type(1) {
+<pre>p:nth-of-type(1) {
   margin-top: 60px;
 }</pre>
 
 <p>Voici l'exemple terminé :</p>
 
-<div id="example_5">
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Positionnement fixe&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Positionnement fixe&lt;/h1&gt;
 
 &lt;p&gt;Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.&lt;/p&gt;
 &lt;p class="positioned"&gt;Je ne suis plus positionné...&lt;/p&gt;
 &lt;p&gt;Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.&lt;/p&gt;
-&lt;p&gt;Les éléments « inline » &lt;span&gt;comme celui-ci &lt;/span&gt;ou &lt;span&gt;cet autre&lt;/span&gt; sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants &lt;span&gt;se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte&lt;/span&gt; ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
+&lt;p&gt;Les éléments « inline » &lt;span&gt;comme celui-ci &lt;/span&gt;ou &lt;span&gt;cet autre&lt;/span&gt; sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants &lt;span&gt;se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte&lt;/span&gt; ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : &lt;img src="long.jpg"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
@@ -376,24 +358,21 @@ h1 {
 p:nth-of-type(1) {
   margin-top: 60px;
 }</pre>
-</div>
-</div>
 
-<p>{{ EmbedLiveSample('example_5', '100%', 400) }}</p>
+<p>{{ EmbedLiveSample('Positionnement_«_fixed_»', '100%', 400) }}</p>
 
 <div class="note">
-<p><strong>Note</strong> : à ce stade de l'article, vous pouvez voir un exemple en direct ici  <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html">6_fixed-positioning.html</a></code> (voir le <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html">code source</a>).</p>
+<p><strong>Note :</strong> à ce stade de l'article, vous pouvez voir un exemple en direct ici  <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html">6_fixed-positioning.html</a></code> (voir le <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html">code source</a>).</p>
 </div>
 
 <h3 id="«_position_sticky_»">« position: sticky »</h3>
 
 <p>Il y a une autre valeur de positionnement disponible appelée <code>position : sticky</code>. Elle est un peu plus récente que les autres. Il s'agit essentiellement d'un hybride entre position relative et position fixe : l'élément à positionner est en positionnement relatif jusqu'à un certain seuil (par ex. 10px du haut de la fenêtre), seuil au delà duquel il est en positionnement fixe. Ce positionnement s'utilise par exemple pour faire défiler une barre de navigation avec la page jusqu'à un certain point et ensuite coller en haut de la page.</p>
 
-<div id="Sticky_1">
-<div class="hidden">
-<h6 id="Exemple_de_positionnement_collant">Exemple de positionnement collant</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Positionnement collant&lt;/h1&gt;
+<h4>Exemple simple</h4>
+
+<pre class="brush: html hidden">&lt;h1&gt;Positionnement collant&lt;/h1&gt;
 
 &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
 
@@ -403,7 +382,7 @@ p:nth-of-type(1) {
 
 &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;       </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -415,20 +394,21 @@ p:nth-of-type(1) {
   margin: 10px;
   border-radius: 5px;
 }</pre>
-</div>
 
-<pre class="brush: css notranslate">.positioned {
+<pre class="brush: css">.positioned {
   position: sticky;
   top: 30px;
   left: 30px;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Sticky_1', '100%', 200) }}</p>
+
+<p>{{ EmbedLiveSample('Exemple_simple', '100%', 200) }}</p>
+
+<h4>Index déroulant</h4>
 
 <p>Une utilisation courante pleine d'intérêt de <code>position: sticky</code> permet de créer une page d'index déroulante dans laquelle les divers en‑tête restent collés en haut de la page une fois qu'ils l'ont atteint. Le balisage d'un exemple de ce type ressemble à ceci :</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Positionnement collant&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Positionnement collant&lt;/h1&gt;
 
 &lt;dl&gt;
     &lt;dt&gt;A&lt;/dt&gt;
@@ -461,7 +441,7 @@ p:nth-of-type(1) {
 
 <p>Le CSS pourrait ressembler à ce qui suit. Dans le cours normal, les éléments {{htmlelement("dt")}} défilent avec le contenu. Quand on ajoute <code>position : sticky</code> à l'élément {{htmlelement("dt")}} avec une valeur {{cssxref("top")}} de 0, les navigateurs prenant en charge ce positionnement colleront les titres au sommet de la vue de la fenêtre au fur et à mesure qu'ils atteignent cette position. Chaque en-tête suivant remplacera l'en-tête précédent au fur et à mesure que le contenu défile.</p>
 
-<pre class="brush: css notranslate">dt {
+<pre class="brush: css">dt {
   background-color: black;
   color: white;
   padding: 10px;
@@ -472,9 +452,7 @@ p:nth-of-type(1) {
 }
 </pre>
 
-<div id="Sticky_2">
-<div class="hidden">
-<pre class="brush: css notranslate">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
@@ -491,43 +469,10 @@ dt {
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Positionnement collant&lt;/h1&gt;
-
-&lt;dl&gt;
-&lt;dt&gt;A&lt;/dt&gt;
-&lt;dd&gt;Abeille&lt;/dd&gt;
-&lt;dd&gt;Abricot&lt;/dd&gt;
-&lt;dd&gt;Altimètre&lt;/dd&gt;
-&lt;dd&gt;Avion&lt;/dd&gt;
-&lt;dt&gt;B&lt;/dt&gt;
-&lt;dd&gt;Banane&lt;/dd&gt;
-&lt;dd&gt;Betterave&lt;/dd&gt;
-&lt;dd&gt;Bœuf&lt;/dd&gt;
-&lt;dd&gt;Bouvreuil&lt;/dd&gt;
-&lt;dd&gt;Buzzard&lt;/dd&gt;
-&lt;dt&gt;C&lt;/dt&gt;
-&lt;dd&gt;Calculateur&lt;/dd&gt;
-&lt;dd&gt;Camera&lt;/dd&gt;
-&lt;dd&gt;Cane&lt;/dd&gt;
-&lt;dd&gt;Chameau&lt;/dd&gt;
-&lt;dt&gt;D&lt;/dt&gt;
-&lt;dd&gt;Dime&lt;/dd&gt;
-&lt;dd&gt;Dindon&lt;/dd&gt;
-&lt;dd&gt;Drapeau&lt;/dd&gt;
-&lt;dd&gt;Drone&lt;/dd&gt;
-&lt;dt&gt;E&lt;/dt&gt;
-&lt;dd&gt;Eau&lt;/dd&gt;
-&lt;dd&gt;Éléphant&lt;/dd&gt;
-&lt;dd&gt;Escadrille&lt;/dd&gt;
-&lt;/dl&gt;
-</pre>
-</div>
-</div>
-
-<p>{{ EmbedLiveSample('Sticky_2', '100%', 200) }}</p>
+<p>{{ EmbedLiveSample('Index_déroulant', '100%', 200) }}</p>
 
 <div class="note">
-<p><strong>Note </strong>: à ce stade de l'article, vous pouvez voir un exemple en direct ici <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html">7_sticky-positioning.html</a></code> (voir le <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html">code</a> <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html">source</a>).</p>
+<p><strong>Note :</strong> à ce stade de l'article, vous pouvez voir un exemple en direct ici <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html">7_sticky-positioning.html</a></code> (voir le <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html">code</a> <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html">source</a>).</p>
 </div>
 
 <h2 id="Résumé">Résumé</h2>
@@ -540,20 +485,20 @@ dt {
 
 <ul>
  <li>Référence de la propriété {{cssxref("position")}}.</li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples">Exemples pratiques de positionnement</a>, pour quelques idées utiles supplémentaires.</li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Practical_positioning_examples">Exemples pratiques de positionnement</a>, pour quelques idées utiles supplémentaires.</li>
 </ul>
 
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Introduction">Introduction to CSS layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow">Normal Flow</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column Layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy Layout Methods</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Supporting older browsers</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">Fundamental Layout Comprehension Assessment</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Introduction">Introduction to CSS layout</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Normal_Flow">Normal Flow</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Grids">Grid</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column Layout</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy Layout Methods</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Supporting older browsers</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">Fundamental Layout Comprehension Assessment</a></li>
 </ul>

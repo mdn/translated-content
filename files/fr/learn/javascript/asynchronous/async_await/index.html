@@ -17,9 +17,9 @@ translation_of: Learn/JavaScript/Asynchronous/Async_await
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}</div>
 
-<p class="summary">Plus récemment, les <a href="/fr/docs/Web/JavaScript/Reference/Statements/async_function">fonctions async</a> et le mot-clé <code><a href="/fr/docs/Web/JavaScript/Reference/Operators/await">await</a></code> ont été ajoutés au langage JavaScript avec l'édition intitulée ECMAScript 2017. Ces fonctionnalités agissent essentiellement comme du sucre syntaxique sur les promesses, rendant le code asynchrone plus facile à écrire et à lire par la suite. Elles font en sorte que le code asynchrone ressemble davantage au code synchrone de la vieille école, et elles valent donc la peine d'être apprises. Cet article fournit les informations à connaître.</p>
+<p>Plus récemment, les <a href="/fr/docs/Web/JavaScript/Reference/Statements/async_function">fonctions async</a> et le mot-clé <code><a href="/fr/docs/Web/JavaScript/Reference/Operators/await">await</a></code> ont été ajoutés au langage JavaScript avec l'édition intitulée ECMAScript 2017. Ces fonctionnalités agissent essentiellement comme du sucre syntaxique sur les promesses, rendant le code asynchrone plus facile à écrire et à lire par la suite. Elles font en sorte que le code asynchrone ressemble davantage au code synchrone de la vieille école, et elles valent donc la peine d'être apprises. Cet article fournit les informations à connaître.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
   <tbody>
     <tr>
       <th scope="row">Prérequis :</th>
@@ -295,8 +295,7 @@ displayContent()
 <p>Pour la gestion des erreurs, nous avons inclus un bloc <code>.catch()</code> sur notre appel <code>displayContent()</code> ; cela permettra de gérer les erreurs survenant dans les deux fonctions.</p>
 
 <div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Il est également possible d'utiliser un bloc <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_clause">finally</a></code> au sein d'une fonction asynchrone, à la place d'un bloc asynchrone <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally">.finally()</a></code>, pour montrer un état final sur le déroulement de l'opération — vous pouvez voir cela en action dans notre <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html">exemple en direct</a> (voir aussi le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html">code source</a>).</p>
+  <p><strong>Note :</strong> Il est également possible d'utiliser un bloc <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_clause">finally</a></code> au sein d'une fonction asynchrone, à la place d'un bloc asynchrone <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally">.finally()</a></code>, pour montrer un état final sur le déroulement de l'opération — vous pouvez voir cela en action dans notre <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html">exemple en direct</a> (voir aussi le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html">code source</a>).</p>
 </div>
 
 <h2 id="handling_asyncawait_slowdown">Gérer les ralentissements potentiellement causés par async/await</h2>

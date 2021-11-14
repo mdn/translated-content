@@ -16,17 +16,17 @@ translation_of: Learn/CSS/Styling_text/Styling_lists
 
 <div>{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}</div>
 
-<p class="summary"><span id="result_box" lang="fr"><span>Les <a href="/fr/Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals#Listes">listes</a> se comportent comme la plupart des autres textes, mais il existe des propriétés CSS propres aux listes que vous devez connaître, et quelques bonnes pratiques à prendre en compte.</span> <span>Cet article explique tout.</span></span></p>
+<p>Les <a href="/fr/Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals#Listes">listes</a> se comportent comme la plupart des autres textes, mais il existe des propriétés CSS propres aux listes que vous devez connaître, et quelques bonnes pratiques à prendre en compte. Cet article explique tout.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
-   <td>Connaissances de base informatiques, bases HTML (étudiées dans <a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_%C3%A0_HTML">Introduction à HTML</a>), bases CSS (étudiées dans <a href="https://developer.mozilla.org/fr/Apprendre/CSS/Introduction_%C3%A0_CSS">Introduction à CSS</a>), <a href="https://developer.mozilla.org/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte">la mise en forme du texte</a>.</td>
+   <td>Connaissances de base informatiques, bases HTML (étudiées dans <a href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML">Introduction à HTML</a>), bases CSS (étudiées dans <a href="/fr/Apprendre/CSS/Introduction_%C3%A0_CSS">Introduction à CSS</a>), <a href="/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte">la mise en forme du texte</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objectif :</th>
-   <td><span id="result_box" lang="fr"><span>Se familiariser avec les meilleures pratiques et propriétés liées aux styles de liste.</span></span></td>
+   <td>Se familiariser avec les meilleures pratiques et propriétés liées aux styles de liste.</td>
   </tr>
  </tbody>
 </table>
@@ -35,7 +35,7 @@ translation_of: Learn/CSS/Styling_text/Styling_lists
 
 <p>Pour commencer, regardons un exemple de liste simple. Au long de cet article nous verrons les listes non ordonnées, ordonnées et des listes descriptives — tous les styles ont des fonctionnalités similaires, mais il existe quelques particularités en fonction du type de liste. Un exemple sans style est <a href="http://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html">disponible sur Github</a> (voyez aussi le <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html">code source</a>).</p>
 
-<p><span id="result_box" lang="fr"><span>Le code HTML pour nos exemples de liste ressemble à ceci :</span></span></p>
+<p>Le code HTML pour nos exemples de liste ressemble à ceci :</p>
 
 <pre class="brush: html">&lt;h2&gt;Liste de courses (non ordonnée)&lt;/h2&gt;
 
@@ -77,11 +77,11 @@ paragraphe de référence, paragraphe de référence, paragraphe de référence.
   &lt;dd&gt;Ces feuilles vertes et saines que beaucoup d'entre nous n'utilisent que pour garnir les kebabs.&lt;/dd&gt;
 &lt;/dl&gt;</pre>
 
-<p>Si vous allez à l'exemple réel maintenant, et examinez les éléments de la liste en utilisant <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">les outils de développement du navigateur</a>, vous noterez quelques valeurs de style par défaut :</p>
+<p>Si vous allez à l'exemple réel maintenant, et examinez les éléments de la liste en utilisant <a href="/fr/docs/Learn/Common_questions/What_are_browser_developer_tools">les outils de développement du navigateur</a>, vous noterez quelques valeurs de style par défaut :</p>
 
 <ul>
  <li>Les éléments {{htmlelement("ul")}} et {{htmlelement("ol")}} ont une propriété {{cssxref("margin")}} de <code>16 px</code> (<code>1 em</code>) en haut et en bas et une propriété {{cssxref("padding-left")}} de <code>40 px</code> (<code>2.5 em</code>.)</li>
- <li>Les éléments de la liste ({{htmlelement("li")}}) <span id="result_box" lang="fr"><span>n'ont aucun paramètre d'espacement par défaut</span></span><span lang="fr"><span>.</span></span></li>
+ <li>Les éléments de la liste ({{htmlelement("li")}}) n'ont aucun paramètre d'espacement par défaut.</li>
  <li>L'élément {{htmlelement("dl")}} a des propriétés {{cssxref("margin")}} de<code>16 px</code> (<code>1 em</code>) en haut et en bas , mais pas de définition du remplissage.</li>
  <li>Les éléments {{htmlelement("dd")}} ont une propriété {{cssxref("margin-left")}} de <code>40 px</code> (<code>2.5 em</code>.)</li>
  <li>Les éléments {{htmlelement("p")}}, inclus pour référence, ont des propriétés {{cssxref("margin")}} de <code>16 px</code> (<code>1 em</code>) en haut et en bas, identiques à ceux des différents types de listes.</li>
@@ -154,7 +154,7 @@ dd {
 
 <p>Cela donne l'apparence suivante :</p>
 
-<p><img alt="une liste ordonnée avec les puces placées à l'extérieur du texte de l'élément de la liste." src="https://mdn.mozillademos.org/files/16069/ex_1.png" style="border-style: solid; border-width: 1px; display: block; height: 94px; margin: 0px auto; width: 406px;"></p>
+<p><img alt="une liste ordonnée avec les puces placées à l'extérieur du texte de l'élément de la liste." src="ex_1.png"></p>
 
 <p>Vous pouvez trouver beaucoup plus d'options en consultant la page de référence {{cssxref("list-style-type")}}.</p>
 
@@ -169,7 +169,7 @@ dd {
   list-style-position: inside;
 }</pre>
 
-<p><img alt="une liste ordonnée avec les puces intégrées au texte des éléments de la liste." src="https://mdn.mozillademos.org/files/16070/ex_2.png" style="border-style: solid; border-width: 1px; display: block; height: 147px; margin: 0px auto; width: 406px;"></p>
+<p><img alt="une liste ordonnée avec les puces intégrées au texte des éléments de la liste." src="ex_2.png"></p>
 
 <h3 id="Utilisation_d'une_puce_image_personnalisée">Utilisation d'une puce image personnalisée</h3>
 
@@ -179,7 +179,7 @@ dd {
   list-style-image: url(star.svg);
 }</pre>
 
-<p>Cependant, cette propriété est un peu limitée en terme de contrôle de la position, de la taille, etc. des puces. Il vaut mieux utiliser la famille de propriétés de {{cssxref ("background")}}, dont vous apprendrez beaucoup plus dans le module <a href="https://developer.mozilla.org/fr/Apprendre/CSS/styliser_boites"> Styliser les boîtes</a>. Pour l'instant, voici un avant-goût !</p>
+<p>Cependant, cette propriété est un peu limitée en terme de contrôle de la position, de la taille, etc. des puces. Il vaut mieux utiliser la famille de propriétés de {{cssxref ("background")}}, dont vous apprendrez beaucoup plus dans le module <a href="/fr/Apprendre/CSS/styliser_boites"> Styliser les boîtes</a>. Pour l'instant, voici un avant-goût !</p>
 
 <p>Dans notre exemple achevé, nous avons appliqué un style à la liste non ordonnée (en plus de ce que vous avez déjà vu ci-dessus) comme ceci :</p>
 
@@ -213,7 +213,7 @@ ul li {
 
 <p>Ceci nous donne le résultat suivant :</p>
 
-<p><img alt="une liste non ordonnée avec les puces définies comme de petites images d'étoiles." src="https://mdn.mozillademos.org/files/16071/ex_3.png" style="border-style: solid; border-width: 1px; display: block; height: 115px; margin: 0px auto; width: 194px;"></p>
+<p><img alt="une liste non ordonnée avec les puces définies comme de petites images d'étoiles." src="ex_3.png"></p>
 
 <h3 id="Raccourci_de_style_de_liste">Raccourci de style de liste</h3>
 
@@ -269,7 +269,7 @@ ul li {
 
 <h3 id="Valeurs_individualisées">Valeurs individualisées</h3>
 
-<p>L'attribut {{htmlattrxref("value","ol")}} vous permet <span id="result_box" lang="fr"><span>de numéroter les éléments de liste avec des valeurs numériques de votre choix</span></span> . L'exemple suivant :</p>
+<p>L'attribut {{htmlattrxref("value","ol")}} vous permet de numéroter les éléments de liste avec des valeurs numériques de votre choix . L'exemple suivant :</p>
 
 <pre class="brush: html">&lt;ol&gt;
   &lt;li value="2"&gt;Faire griller le pain pitta, laisser refroidir, puis le trancher sur le côté.&lt;/li&gt;
@@ -283,7 +283,7 @@ ul li {
 <p>{{ EmbedLiveSample('Valeurs_individualisées', '100%', 150) }}</p>
 
 <div class="note">
-<p><strong>Note</strong> : Même si vous utilisez une propriété {{cssxref ("type-style-list")}}  avec des caractères non‑numériques, vous devez toujours utiliser les valeurs numériques équivalentes avec l'attribut <code>value</code>.</p>
+<p><strong>Note :</strong> Même si vous utilisez une propriété {{cssxref ("type-style-list")}}  avec des caractères non‑numériques, vous devez toujours utiliser les valeurs numériques équivalentes avec l'attribut <code>value</code>.</p>
 </div>
 
 <h2 id="Apprentissage_actif_définir_le_style_d'une_liste_imbriquée">Apprentissage actif : définir le style d'une liste imbriquée</h2>
@@ -299,10 +299,7 @@ ul li {
 
 <p>Si vous faites une erreur, vous pourrez toujours tout remettre à zéro avec le bouton <em>Réinitialiser</em>. Si vous êtes vraiment bloqué, pressez le bouton <em>Voir la solution</em> pour voir une réponse possible.</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
+<pre class="brush: html hidden">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
   &lt;h2&gt;Zone de saisie du HTML&lt;/h2&gt;
   &lt;textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;ul&gt;
   &lt;li&gt;D'abord, allumez la chandelle.&lt;/li&gt;
@@ -330,7 +327,7 @@ ul li {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var htmlInput = document.querySelector(".html-input");
+<pre class="brush: js hidden">var htmlInput = document.querySelector(".html-input");
 var cssInput = document.querySelector(".css-input");
 var reset = document.getElementById("reset");
 var htmlCode = htmlInput.value;
@@ -365,7 +362,7 @@ window.addEventListener("load", drawOutput);
 </pre>
 </div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 800) }}</p>
+<p>{{ EmbedLiveSample("Apprentissage_actif_définir_le_style_d'une_liste_imbriquée", 700, 800) }}</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
@@ -391,6 +388,6 @@ window.addEventListener("load", drawOutput);
  <li><a href="/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte">Initiation à la mise en forme du texte</a></li>
  <li><a href="/fr/docs/Learn/CSS/Styling_text/Styling_lists">Style de listes</a></li>
  <li><a href="/fr/docs/Learn/CSS/Styling_text/Mise_en_forme_des_liens">Mise en forme des liens</a></li>
- <li><a class="new" href="https://developer.mozilla.org/fr/docs/Learn/CSS/Styling_text/Web_fonts" rel="nofollow">Polices de caractères web</a></li>
- <li><a class="new" href="https://developer.mozilla.org/fr/docs/Learn/CSS/Styling_text/Typesetting_a_homepage" rel="nofollow">Composition d'une page d'accueil d'une école communale</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Styling_text/Web_fonts">Polices de caractères web</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Styling_text/Typesetting_a_homepage">Composition d'une page d'accueil d'une école communale</a></li>
 </ul>

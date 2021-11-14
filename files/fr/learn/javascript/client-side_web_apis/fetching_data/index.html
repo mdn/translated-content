@@ -18,9 +18,9 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Fetching_data
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}</div>
 
-<p class="summary">Une autre tâche courante dans les sites et applications web modernes est de récupérer des données à partir du serveur pour mettre à jour des sections de la page web sans la recharger entièrement. Ce qui pourrait paraître comme un petit détail a, en vérité, eu un impact énorme sur les performances et le comportement des sites. Dans cet article, nous allons expliquer le concept et les technologies qui rendent cela possible, tels que XMLHttpRequest et l'API Fetch.</p>
+<p>Une autre tâche courante dans les sites et applications web modernes est de récupérer des données à partir du serveur pour mettre à jour des sections de la page web sans la recharger entièrement. Ce qui pourrait paraître comme un petit détail a, en vérité, eu un impact énorme sur les performances et le comportement des sites. Dans cet article, nous allons expliquer le concept et les technologies qui rendent cela possible, tels que XMLHttpRequest et l'API Fetch.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -37,7 +37,7 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Fetching_data
 
 <p>À la base, le chargement d'une page web est simple — vous envoyez une requête à un serveur et, tant qu'il n'y a pas eu de problème, les ressources de la page web sont téléchargées et affichées sur votre ordinateur.</p>
 
-<p><img alt="A basic representation of a web site architecture" src="https://mdn.mozillademos.org/files/6475/web-site-architechture@2x.png" style="display: block; height: 134px; margin: 0px auto; width: 484px;"></p>
+<p><img alt="A basic representation of a web site architecture" src="web-site-architechture@2x.png"></p>
 
 <p>Le problème avec ce modèle c'est qu'à chaque fois que vous voulez mettre à jour une partie de la page, par exemple pour afficher la page suivante d'une liste de produits, vous devez recharger toute la page. Ce surcoût est tout à fait inutile et résulte en une mauvaise expérience utilisateur, particulièrement pour les pages qui sont lourdes, complexes et du coup longues à charger.</p>
 
@@ -48,10 +48,10 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Fetching_data
 <p>Nous avons pour cela l'API {{domxref("XMLHttpRequest")}} à notre disposition ou — plus récemment — l'<a href="/fr/docs/Web/API/Fetch_API">API Fetch</a>. Elles permettent de réaliser des requêtes <a href="/fr/docs/Web/HTTP">HTTP</a> pour récupérer des ressources spécifiques disponibles sur un serveur et de formater les données retournées selon les besoins avant l'affichage dans la page.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Dans les premiers temps, cette technique était appelée "Asynchronous JavaScript and XML" (JavaScript asychrone et XML), dit AJAX, parce qu'elle utilisait {{domxref("XMLHttpRequest")}} pour requêter des données XML. De nos jours, c'est rarement le cas; la plupart du temps, on utilise <code>XMLHttpRequest</code> ou Fetch pour requêter des données JSON. Quoi qu'il en soit, le procédé reste le même et le terme "Ajax" est resté pour décrire cette technique.</p>
+<p><strong>Note :</strong> Dans les premiers temps, cette technique était appelée "Asynchronous JavaScript and XML" (JavaScript asychrone et XML), dit AJAX, parce qu'elle utilisait {{domxref("XMLHttpRequest")}} pour requêter des données XML. De nos jours, c'est rarement le cas; la plupart du temps, on utilise <code>XMLHttpRequest</code> ou Fetch pour requêter des données JSON. Quoi qu'il en soit, le procédé reste le même et le terme "Ajax" est resté pour décrire cette technique.</p>
 </div>
 
-<p><img alt="A simple modern architecture for web sites" src="https://mdn.mozillademos.org/files/6477/moderne-web-site-architechture@2x.png" style="display: block; height: 235px; margin: 0px auto; width: 559px;"></p>
+<p><img alt="A simple modern architecture for web sites" src="moderne-web-site-architechture@2x.png"></p>
 
 <p>Le modèle Ajax implique une API web comme proxy pour requêter les données plus intelligemment que simplement rafraîchir la page à chaque fois. Voyons plutôt l'impact que cela a :</p>
 
@@ -69,7 +69,7 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Fetching_data
 
 <p>Notez que pour accélerer les choses encore davantage, certains sites stockent les ressources et données chez le client lors de sa première visite, si bien que les visites suivantes, les fichiers locaux sont utilisés et non re-téléchargés du serveur. Le contenu n'est rechargé que lorsqu'il a été mis à jour sur le serveur.</p>
 
-<p><img alt="A basic web app data flow architecture" src="https://mdn.mozillademos.org/files/6479/web-app-architecture@2x.png" style="display: block; height: 383px; margin: 0px auto; width: 562px;"></p>
+<p><img alt="A basic web app data flow architecture" src="web-app-architecture@2x.png"></p>
 
 <h2 id="Une_requête_Ajax_basique">Une requête Ajax basique</h2>
 
@@ -130,7 +130,7 @@ var url = verse + '.txt';</pre>
  <li>
   <p>Récupérer une ressource sur le réseau est une opération {{glossary("asynchronous","asynchrone")}}, ce qui signifie que vous devez attendre que cette opération se termine (par exemple, que la ressource soit renvoyée) avant de pouvoir récupérer la réponse — sans quoi une erreur est levée. XHR permet d'exécuter du code lorsque la réponse est reçue grâce au gestionnaire d'événement {{domxref("XMLHttpRequest.onload", "onload")}} — quand l'événement {{event("load")}} est déclenché. Une fois que la réponse a été reçue, alors la réponse est accessible via la propriété <code>response</code> de l'objet XHR utilisé.</p>
 
-  <p>Ajoutez le bloc de code qui suit toujours au bas de la fonction <code>updateDisplay()</code>. Vous verrez qu'à l'intérieur du gestionnaire d'événément <code>onload</code>, nous assignons la propriété <code><a href="/en-US/docs/Web/API/Node/textContent">textContent</a></code> de <code>poemDisplay</code> (l'élément {{htmlelement("pre")}}) à la valeur de la propriété {{domxref("XMLHttpRequest.response", "request.response")}}.</p>
+  <p>Ajoutez le bloc de code qui suit toujours au bas de la fonction <code>updateDisplay()</code>. Vous verrez qu'à l'intérieur du gestionnaire d'événément <code>onload</code>, nous assignons la propriété <code><a href="/fr/docs/Web/API/Node/textContent">textContent</a></code> de <code>poemDisplay</code> (l'élément {{htmlelement("pre")}}) à la valeur de la propriété {{domxref("XMLHttpRequest.response", "request.response")}}.</p>
 
   <pre class="brush: js">request.onload = function() {
   poemDisplay.textContent = request.response;
@@ -257,7 +257,7 @@ myFetch.then(function(response) {
 
 <p>L'objet <code>response</code> a une méthode {{domxref("Body.text","text()")}}, qui convertit les données brutes contenues dans la réponse en texte brut — c'est le format que nous voulons. Cette méthode retourne également une promesse, qui se résout lorsque la réponse est convertie en texte, nous utilisons donc un deuxième {{jsxref("Promise.then",".then()")}} pour cette deuxième promesse.</p>
 
-<p>À l'intérieur de ce dernier <code>.then()</code>, nous définissons une nouvelle fonction, qui décide de ce que nous faisons avec le texte récupéré. Nous nous contentons de définir la propriété <code><a href="/en-US/docs/Web/API/Node/textContent">textContent</a></code> de l'élément {{htmlelement("pre")}} à la valeur du texte.</p>
+<p>À l'intérieur de ce dernier <code>.then()</code>, nous définissons une nouvelle fonction, qui décide de ce que nous faisons avec le texte récupéré. Nous nous contentons de définir la propriété <code><a href="/fr/docs/Web/API/Node/textContent">textContent</a></code> de l'élément {{htmlelement("pre")}} à la valeur du texte.</p>
 
 <h4 id="Chaîner_les_then">Chaîner les then()</h4>
 
@@ -285,7 +285,7 @@ myFetch.then(function(response) {
 
 <p>Pour clore l'article, nous allons regarder un exemple un peu plus complexe, qui montre des utilisations plus intéressantes de Fetch. Nous avons créé un site d'exemple appelé The Can Store (le magasin de conserves) — c'est un supermarché fictif qui ne vend que des boites de conserves. Vous pouvez trouver cet <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/">exemple en direct sur GitHub</a>, et <a href="https://github.com/mdn/learning-area/tree/master/javascript/apis/fetching-data/can-store">voir le code source</a>.</p>
 
-<p><img alt="A fake ecommerce site showing search options in the left hand column, and product search results in the right hand column." src="https://mdn.mozillademos.org/files/14779/can-store.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="A fake ecommerce site showing search options in the left hand column, and product search results in the right hand column." src="can-store.png"></p>
 
 <p>Par défaut, le site affiche tous les produits ; mais vous pouvez utiliser le formulaire dans la colonne de gauche pour les filtrer par catégorie, ou chercher un terme, ou les deux.</p>
 
@@ -361,7 +361,7 @@ myFetch.then(function(response) {
 </ul>
 
 <div class="note">
-<p><strong>Note </strong>: Si vous avez des difficultés à le faire, vous pouvez comparer votre code à la version finale sur GitHub (<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js">voir le code source</a>, ou <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/">voir en direct</a>).</p>
+<p><strong>Note :</strong> Si vous avez des difficultés à le faire, vous pouvez comparer votre code à la version finale sur GitHub (<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js">voir le code source</a>, ou <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/">voir en direct</a>).</p>
 </div>
 
 <h2 id="Sommaire">Sommaire</h2>
@@ -387,12 +387,12 @@ myFetch.then(function(response) {
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction">Introduction aux API du Web</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipuler des documents</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Fetching_data">Récupérer des données du serveur</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Third_party_APIs">APIs tierces</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Drawing_graphics">Dessiner des éléments graphiques</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">APIs vidéo et audio</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage">Stockage côté client</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction">Introduction aux API du Web</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipuler des documents</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Fetching_data">Récupérer des données du serveur</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Third_party_APIs">APIs tierces</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Drawing_graphics">Dessiner des éléments graphiques</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">APIs vidéo et audio</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage">Stockage côté client</a></li>
 </ul>
 </div>

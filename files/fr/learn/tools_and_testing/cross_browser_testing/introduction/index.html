@@ -13,13 +13,13 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 <div>{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}</div>
 
-<p class="summary">Cet article commence en donnant un aperçu sur le sujet des test sur navigateurs (croisé), répondant aux questions telles que "qu'est-ce que le test en navigateur croisé?", "Quels sont les problèmes les plus communs que vous allez rencontrer?", et "quelles sont les principales approches pour tester, identifier, et fixer les problèmes?"</p>
+<p>Cet article commence en donnant un aperçu sur le sujet des test sur navigateurs (croisé), répondant aux questions telles que "qu'est-ce que le test en navigateur croisé?", "Quels sont les problèmes les plus communs que vous allez rencontrer?", et "quelles sont les principales approches pour tester, identifier, et fixer les problèmes?"</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis:</th>
-   <td>Etre familier avec les bases des langage <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, et <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>.</td>
+   <td>Etre familier avec les bases des langage <a href="/fr/docs/Learn/HTML">HTML</a>, <a href="/fr/docs/Learn/CSS">CSS</a>, et <a href="/fr/docs/Learn/JavaScript">JavaScript</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objectif:</th>
@@ -41,22 +41,22 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 <p>Souvenez-vous que vous n'êtes pas votre utilisateur — uniquement parce que votre site fonctionne sur votre Macbook Pro ou votre Galaxy Nexus haut de gamme, cela ne veut pas dire qu'il fonctionnera pour tout vos utilisateurs — Il y a encore un paquet de tests à effectuer !</p>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/">Make the web work for everyone</a> fournit une perspective plus précise sur les différents navigateurs que les gens utilisent, leur part de marché, et les problèmes de compatibilité entre navigateurs.</p>
+<p><strong>Note :</strong> <a href="https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/">Make the web work for everyone</a> fournit une perspective plus précise sur les différents navigateurs que les gens utilisent, leur part de marché, et les problèmes de compatibilité entre navigateurs.</p>
 </div>
 
 <p>Il est important de préciser quelque termes de terminologie. Pour commencer, quand on parle de "travailler en navigateurs croisés", on veut vraiment dire que chaque navigateur doit être capable  de fournir une expérience utilisateur acceptable. C'est potentiellement bon pour un site de ne pas fournir exactement la même expérience sur tous les navigateurs, tant que le noyau des fonctionnalités reste accessible. Avec des navigateurs modernes vous pourrez ajouter quelques animations 3D et stylisées, tandis que sur de plus vieux navigateurs vous pouvez juste utiliser un design plus plat représentant la même information. Tant que le propriétaire du site est content, alors vous avez terminé votre travail.</p>
 
 <p>D'un autre côté, ce n'est pas ok qu'un site soit fonctionnel pour les personnes voyantes mais complètement inaccessible pour des utilisateurs qui ont des problèmes de vision  parce que leur application de lecture d'écran ne peut lire aucune des données stockées sur le site.</p>
 
-<p>De plus, lorsqu'on dit "à travers un nombre acceptable de navigateurs", on ne veut pas dire 100% des navigateurs dans le monde — c'est tout simplement impossible. Vous pouvez faire des recherches d'informations (analyse sectorielle) pour savoir quels sont les types de supports et de navigateurs que vos utilisateurs vont utiliser (comme on peut en parler dans le second article — voir <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all">Gotta test 'em all?</a>), mais vous ne pouvez pas tout garantir. En tant que developpeur web, vous devez convenir avec le demandeur du site d'une liste de navigateurs et d'appareils sur lesquels le code doit absolument fonctionner, au-delà de ces prérequis, vous devez vous assurer de donner un maximum de chances aux autres navigateurs de pouvoir afficher votre contenu grâce à du code préventif. Cette étape représente le défi le plus important d'un développeur web.</p>
+<p>De plus, lorsqu'on dit "à travers un nombre acceptable de navigateurs", on ne veut pas dire 100% des navigateurs dans le monde — c'est tout simplement impossible. Vous pouvez faire des recherches d'informations (analyse sectorielle) pour savoir quels sont les types de supports et de navigateurs que vos utilisateurs vont utiliser (comme on peut en parler dans le second article — voir <a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all">Gotta test 'em all?</a>), mais vous ne pouvez pas tout garantir. En tant que developpeur web, vous devez convenir avec le demandeur du site d'une liste de navigateurs et d'appareils sur lesquels le code doit absolument fonctionner, au-delà de ces prérequis, vous devez vous assurer de donner un maximum de chances aux autres navigateurs de pouvoir afficher votre contenu grâce à du code préventif. Cette étape représente le défi le plus important d'un développeur web.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Nous traiterons également du code préventif dans ce module.</p>
+<p><strong>Note :</strong> Nous traiterons également du code préventif dans ce module.</p>
 </div>
 
 <h2 id="Pourquoi_y'a-t-il_des_problèmes_en_navigateur_croisé">Pourquoi y'a-t-il des problèmes en navigateur croisé?</h2>
 
-<p>Il y a beaucoup de raisons différentes qui amènent des problèmes en navigateur croisé, et notez qu'ici nous parlons des bug qui se comportent différemment selon les navigateurs / supports / préférences de navigateurs. Avant même d'attaquer les problèmes en navigateurs croisés, commencez déjà par fixer encore et encore tous les bugs présents dans votre propre code (voir <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a>, <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS">Debugging CSS</a>, et <a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a> des sujets précédents afin de vous rafraichir la mémoire si nécessaire).</p>
+<p>Il y a beaucoup de raisons différentes qui amènent des problèmes en navigateur croisé, et notez qu'ici nous parlons des bug qui se comportent différemment selon les navigateurs / supports / préférences de navigateurs. Avant même d'attaquer les problèmes en navigateurs croisés, commencez déjà par fixer encore et encore tous les bugs présents dans votre propre code (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a>, <a href="/fr/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS">Debugging CSS</a>, et <a href="/fr/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a> des sujets précédents afin de vous rafraichir la mémoire si nécessaire).</p>
 
 <p>Les problèmes en navigateurs croisés se produisent le plus fréquemment parce que :</p>
 
@@ -95,7 +95,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 <p>Vous devriez mettre en place une liste des différents champs de problèmes potentiels.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez trouver les informations concernant les différentes technologies et leur support par les navigateurs en recherchant les différentes fonctionnalités sur MDN — le site sur lequel vous vous trouvez! Vous pouvrez également consulter  <a href="http://caniuse.com/">caniuse.com</a>, pour d'autres détails utiles.</p>
+<p><strong>Note :</strong> Vous pouvez trouver les informations concernant les différentes technologies et leur support par les navigateurs en recherchant les différentes fonctionnalités sur MDN — le site sur lequel vous vous trouvez! Vous pouvrez également consulter  <a href="http://caniuse.com/">caniuse.com</a>, pour d'autres détails utiles.</p>
 </div>
 
 <p>Une fois que vous êtes d'accord sur ces détails, vous pouvez continuer et démarrer le développement du site.</p>
@@ -126,7 +126,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 <p>A cet instant, résolvez tous les problèmes que vous avez trouvé sur votre nouveau code.</p>
 
-<p>Ensuite, vous devriez essayer d'étendre votre liste de navigaturs de test à une liste complète des navigateurs du public cible et commencer à vous concentrer sur l'élimination des problèmes en navigateurs croisés (voir le prochaine article <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all">determining your target browsers</a> pour plus d'informations). Par exemple:</p>
+<p>Ensuite, vous devriez essayer d'étendre votre liste de navigaturs de test à une liste complète des navigateurs du public cible et commencer à vous concentrer sur l'élimination des problèmes en navigateurs croisés (voir le prochaine article <a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all">determining your target browsers</a> pour plus d'informations). Par exemple:</p>
 
 <ul>
  <li>Essayez de tester vos dernières modifications sur tous les navigateurs modernes que vous pouvez — incluant Firefox, Chrome, Opera, IE, Edge, et Safari sur ordinateur (Mac, Windows, et Linux, idéallement).</li>
@@ -171,7 +171,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 <p>Ce n'est pas forcément de votre faute — si un bug existe sur un navigateur, alors on peut espérer que le distributeur le fixera rapidement. Il est peut-être même déjà réparé — par exemple si un bug est présent sur la release 49 de Firefox, mais qu'il n'existe plus sur Firefox Nightly (version52), alors il a été fixé. S'il n'a pas été résolu, alors vous pouvez déposer un bug (voir {{anch("Reporting bugs")}}, plus bas).</p>
 
-<p>Si c'est de votre faute, vous devez le résoudre ! Trouver la cause d'un bug implique la même stratégie que pour n'importe quel bug de développement web (à nouveau, voir <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a>, <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS">Debugging CSS</a>, et <a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a>). Une fois que vous avez découvert ce qui causait le bug, vous devez décider comment est-ce que vous allez travailler sur le navigateur en particulier qui vous pose problèmes — vous ne pouvez pas juste modifier le code du problème, cela risque de casser le code sur un autre navigateur. En général, l'approche veut qu'on fasse bifurquer le code dans une certaine direction, par exemple utilisez une fonctionnalité de détecton en code Javascript pour détecter les situations où une fonctionnalité ne marche pas, et éxecuter un code différent qui fonctionnera dans ce cas.</p>
+<p>Si c'est de votre faute, vous devez le résoudre ! Trouver la cause d'un bug implique la même stratégie que pour n'importe quel bug de développement web (à nouveau, voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a>, <a href="/fr/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS">Debugging CSS</a>, et <a href="/fr/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a>). Une fois que vous avez découvert ce qui causait le bug, vous devez décider comment est-ce que vous allez travailler sur le navigateur en particulier qui vous pose problèmes — vous ne pouvez pas juste modifier le code du problème, cela risque de casser le code sur un autre navigateur. En général, l'approche veut qu'on fasse bifurquer le code dans une certaine direction, par exemple utilisez une fonctionnalité de détecton en code Javascript pour détecter les situations où une fonctionnalité ne marche pas, et éxecuter un code différent qui fonctionnera dans ce cas.</p>
 
 <p>Lorsque le fix a été créé, vous devrez repéter votre processus de test afin de vous assurer que votre réparation fonctionne bien, et n'a pas causé une faille autre part sur le site ou sur un autre navigateur.</p>
 
@@ -196,12 +196,12 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 <h2 id="Sur_ce_module">Sur ce module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">Introduction to cross browser testing</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies">Strategies for carrying out testing</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">Handling common HTML and CSS problems</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">Handling common JavaScript problems</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">Handling common accessibility problems</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">Implementing feature detection</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">Introduction to automated testing</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Setting up your own test automation environment</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">Introduction to cross browser testing</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies">Strategies for carrying out testing</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">Handling common HTML and CSS problems</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">Handling common JavaScript problems</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">Handling common accessibility problems</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">Implementing feature detection</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">Introduction to automated testing</a></li>
+ <li><a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Setting up your own test automation environment</a></li>
 </ul>

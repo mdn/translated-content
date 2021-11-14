@@ -17,9 +17,9 @@ original_slug: Apprendre/CSS/CSS_layout/Legacy_Layout_Methods
 
 <p>{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}</p>
 
-<p class="summary">Les systèmes de trames sont courants dans les mises en page avec une CSS, mais avant la création de l'application « CSS Grid Layout », ces mises en page  étaient mises en œuvre à l'aide de boîtes flottantes ou autres. Vous imaginiez votre mise en page sous la forme d'un nombre fixe de colonnes (par exemple 4, 6 ou 12), puis insériez des colonnes de contenu dans ces colonnes imaginaires. Dans cet article, nous allons explorer le fonctionnement de ces méthodes traditionnelles anciennes pour que vous compreniez comment elles sont utilisées si vous travaillez sur un projet ancien.</p>
+<p>Les systèmes de trames sont courants dans les mises en page avec une CSS, mais avant la création de l'application « CSS Grid Layout », ces mises en page  étaient mises en œuvre à l'aide de boîtes flottantes ou autres. Vous imaginiez votre mise en page sous la forme d'un nombre fixe de colonnes (par exemple 4, 6 ou 12), puis insériez des colonnes de contenu dans ces colonnes imaginaires. Dans cet article, nous allons explorer le fonctionnement de ces méthodes traditionnelles anciennes pour que vous compreniez comment elles sont utilisées si vous travaillez sur un projet ancien.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis:</th>
@@ -93,11 +93,9 @@ div:nth-of-type(2) {
 
 <p>En mettant tout ensemble, voici le résultat :</p>
 
-<div id="Floated_Two_Col">
-<div class="hidden">
-<h6 id="Simple_two-column_layout">Simple two-column layout</h6>
+<h3>Exemple complet</h3>
 
-<pre class="brush: html">&lt;h1&gt;Exemple de disposition sur 2 colonnes&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Exemple de disposition sur 2 colonnes&lt;/h1&gt;
 
 &lt;div&gt;
   &lt;h2&gt;Première colonne&lt;/h2&gt;
@@ -110,7 +108,7 @@ div:nth-of-type(2) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -126,20 +124,18 @@ div:nth-of-type(2) {
   float: right;
 }
 </pre>
-</div>
-</div>
 
-<p>{{ EmbedLiveSample('Floated_Two_Col', '100%', 520) }}</p>
+<p>{{ EmbedLiveSample('Exemple_complet', '100%', 520) }}</p>
 
 <p>Notez que nous avons utilisé des pourcentages pour définir les largeurs — c'est la bonne stratégie, cela crée une <strong>disposition fluide</strong>, s'ajustant à diverses tailles d'écran et gardant les mêmes proportions pour les tailles d'écran plus petites. Modifiez la taille de la fenêtre du navigateur pour voir par vous‑même. C'est un outil adapté au désign web adaptatif.</p>
 
 <div class="note">
-<p><strong>Note</strong> : Vous pouvez voir cet exemple en cours à la page <a href="http://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html">0_two-column-layout.html</a> (voyez aussi son  <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/0_two-column-layout.html">code source</a>).</p>
+<p><strong>Note :</strong> Vous pouvez voir cet exemple en cours à la page <a href="http://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html">0_two-column-layout.html</a> (voyez aussi son  <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/0_two-column-layout.html">code source</a>).</p>
 </div>
 
 <h2 id="Ancienne_création_d'un_cadre_de_trames">Ancienne création d'un cadre de trames</h2>
 
-<p>La plupart des anciens cadres de création de trames utilisaient le comportement de la propriété {{cssxref("float")}} pour faire flotter les colonnes les unes à côté des autres pour créer quelque chose qui ressemble à des trames. Travailler le processus de création d'une trame avec des boîtes flottantes vous en montre le fonctionnement et sert également d'introduction à certains concepts plus avancés pour construire les choses apprises dans la leçon sur le <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">dégagement des boîtes flottantes</a>.</p>
+<p>La plupart des anciens cadres de création de trames utilisaient le comportement de la propriété {{cssxref("float")}} pour faire flotter les colonnes les unes à côté des autres pour créer quelque chose qui ressemble à des trames. Travailler le processus de création d'une trame avec des boîtes flottantes vous en montre le fonctionnement et sert également d'introduction à certains concepts plus avancés pour construire les choses apprises dans la leçon sur le <a href="/fr/docs/Learn/CSS/CSS_layout/Floats">dégagement des boîtes flottantes</a>.</p>
 
 <p>Le type de cadre de trames le plus facile à créer est un cadre de largeur fixe — il faut simplement déterminer la largeur totale du désign, le nombre de colonnes voulues et la largeur des gouttières et des colonnes. Si nous décidons plutôt de disposer ce design sur une trame avec des colonnes s'adaptant à la largeur de vue du navigateur, nous devrons  calculer les pourcentages de largeur des colonnes et celui des gouttières entre colonnes.</p>
 
@@ -176,7 +172,7 @@ div:nth-of-type(2) {
 
 <p>Le but est d'en faire une trame de démonstration sur deux lignes à partir des 12 colonnes — la ligne haute montre la taille de colonnes prises isolément, la ligne basse montre des zones de taille différentes à partir de cette trame.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13901/simple-grid-finished.png" style="display: block; height: 50px; margin: 0px auto; width: 952px;"></p>
+<p><img alt="" src="simple-grid-finished.png"></p>
 
 <p>À l'élément {{htmlelement("style")}}, ajoutons le code ci-après. Il donne une largeur de 980 pixels au conteneur enveloppe avec un remplissage de 20 pixels du côté droit. Cela nous laisse 960 pixels comme largeur totale pour les colonnes et les gouttières — dans ce cas, le remplissage est soustrait à la largeur totale du contenu car nous avons fixé la valeur de  {{cssxref("box-sizing")}} à <code>border-box</code> sur tous les éléments du site (voir <a href="/fr/docs/Apprendre/CSS/Styling_boxes/Box_model_recap#Modification totale du modèle de boîte">Modification totale du modèle de boîte</a> pour plus d'explications).</p>
 
@@ -217,7 +213,7 @@ body {
 <p>La ligne supérieure des colonnes unitaires est maintenant disposées en tant que trame.</p>
 
 <div class="note">
-<p><strong>Note</strong> : Nous avons aussi donné à chaque colonne une couleur légèrement rosée pour que vous puissiez voir exactement l'espace pris par chacune.</p>
+<p><strong>Note :</strong> Nous avons aussi donné à chaque colonne une couleur légèrement rosée pour que vous puissiez voir exactement l'espace pris par chacune.</p>
 </div>
 
 <p>Les conteneurs destinés à accueillir plusieurs colonnes doivent être d'une classe spéciale pour pouvoir ajuster leurs valeurs {{cssxref("width")}} en fonction du nombre de colonnes requis (plus les gouttières intermédiaires). Nous devons créer une classe supplémentaire pour permettre aux conteneurs de s'étendre de 2 à 12 colonnes. Cette largeur est le résultat de l'addition de la largeur de toutes les colonnes plus les largeurs des gouttières dont le nombre est toujours inférieur de 1 au nombre de colonnes.</p>
@@ -242,7 +238,7 @@ body {
 <p>Une fois ces classes crées, nous pouvons disposer des colonnes de largeur différentes sur la trame. Enregistrez et chargez cette page dans le navigateur pour voir l'effet.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Si vous avez du mal à faire fonctionner cet exemple, comparez‑le avec notre <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html">version terminée</a> sur GitHub (la voir aussi <a href="http://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html">en fonctionnement direct</a>).</p>
+<p><strong>Note :</strong> Si vous avez du mal à faire fonctionner cet exemple, comparez‑le avec notre <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html">version terminée</a> sur GitHub (la voir aussi <a href="http://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html">en fonctionnement direct</a>).</p>
 </div>
 
 <p>Modifiez les classes de vos éléments soit en ajoutant ou retirant certains conteneurs, pour voir comment faire varier la disposition. Par exemple, vous pouvez faire en sorte que la deuxième ligne ressemble à ceci :</p>
@@ -323,12 +319,12 @@ body {
 <p>Maintenant enregistrez le code, chargez le dans le navigateur et modifiez la largeur de vue — vous devez constater que la largeur des colonnes s'ajuste comme il convient.</p>
 
 <div class="note">
-<p><strong>Note</strong> : Si vous avez du mal à faire fonctionner l'exemple ci‑dessus, comparez‑le avec notre <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html">version terminée sur GitHub</a> (voir aussi celle <a href="http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html">s'exécutant en direct</a>).</p>
+<p><strong>Note :</strong> Si vous avez du mal à faire fonctionner l'exemple ci‑dessus, comparez‑le avec notre <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html">version terminée sur GitHub</a> (voir aussi celle <a href="http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html">s'exécutant en direct</a>).</p>
 </div>
 
 <h3 id="Faciliter_les_calculs_avec_la_fonction_calc()">Faciliter les calculs avec la fonction calc()</h3>
 
-<p>Vous pouvez utiliser la fonction {{cssxref("calc()")}} pour faire les calculs à l'intérieur même de la CSS — la fonction vous permet d'insérer de simples expressions mathématiques pour calculer la valeur qu'il convient de donner à la propriété CSS. C'est utile quand les calculs sont complexes ; vous pouvez même effectuer un calcul avec des unités différentes, par exemple « je veux que la hauteur de cet élément soit toujours égale à 100% de son parent moins 50px ». Voir <a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()">cet exemple dans le didacticiel MediaRecorder API</a>.</p>
+<p>Vous pouvez utiliser la fonction {{cssxref("calc()")}} pour faire les calculs à l'intérieur même de la CSS — la fonction vous permet d'insérer de simples expressions mathématiques pour calculer la valeur qu'il convient de donner à la propriété CSS. C'est utile quand les calculs sont complexes ; vous pouvez même effectuer un calcul avec des unités différentes, par exemple « je veux que la hauteur de cet élément soit toujours égale à 100% de son parent moins 50px ». Voir <a href="/fr/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()">cet exemple dans le didacticiel MediaRecorder API</a>.</p>
 
 <p>Revenon à nos trames ! Toute colonne se développant au delà de la première a une largeur totale de 6.25% multipliée par le nombre de colonnes précédentes plus 2.08333333% multiplié par le nombre de gouttières (qui doit toujours être égal au nombre de colonnes moins 1). La fonction <code>calc()</code> nous permet de faire ce calcul dans la valeur <code>width</code> même, ainsi pour tout élément au-delà de la colonne 4 nous pouvons écrire, par exemple :</p>
 
@@ -351,11 +347,11 @@ body {
 .col.span12 { width: calc((6.25%*12) + (2.08333333%*11)); }</pre>
 
 <div class="note">
-<p><strong>Note </strong>: Vous pouvez voir la version terminée dans <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-calc.html">fluid-grid-calc.html</a> (la voir aussi  <a href="http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html">en direct</a>).</p>
+<p><strong>Note :</strong> Vous pouvez voir la version terminée dans <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-calc.html">fluid-grid-calc.html</a> (la voir aussi  <a href="http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html">en direct</a>).</p>
 </div>
 
 <div class="note">
-<p><strong>Note </strong>: Si vous n'arrivez pas à faire fonctionner ce qui précède, cela peut être dû au fait que votre navigateur ne prend pas en charge la fonction <code>calc()</code>, même si elle est assez bien prise en charge parmi les navigateurs — au‑delà de IE9.</p>
+<p><strong>Note :</strong> Si vous n'arrivez pas à faire fonctionner ce qui précède, cela peut être dû au fait que votre navigateur ne prend pas en charge la fonction <code>calc()</code>, même si elle est assez bien prise en charge parmi les navigateurs — au‑delà de IE9.</p>
 </div>
 
 <h3 id="Systèmes_de_trames_«_sémantiques_»_vs._«_non_sémantiques_»">Systèmes de trames « sémantiques » vs. « non sémantiques »</h3>
@@ -369,7 +365,7 @@ body {
 }</pre>
 
 <div class="note">
-<p><strong>Note </strong>: Si vous deviez utiliser un préprocesseur tel que <a href="http://sass-lang.com/">Sass</a>, vous pourriez créer un simple mixage pour qu'il insère cette valeur pour vous.</p>
+<p><strong>Note :</strong> Si vous deviez utiliser un préprocesseur tel que <a href="http://sass-lang.com/">Sass</a>, vous pourriez créer un simple mixage pour qu'il insère cette valeur pour vous.</p>
 </div>
 
 <h3 id="Décalage_du_conteneur_d'une_trame">Décalage du conteneur d'une trame</h3>
@@ -401,15 +397,15 @@ body {
 <pre class="brush: html">&lt;div class="col span5 offset-by-one"&gt;14&lt;/div&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong> : Notez que vous devez réduire le nombre de colonnes réparties pour faire de la place au décalage !</p>
+<p><strong>Note :</strong> Notez que vous devez réduire le nombre de colonnes réparties pour faire de la place au décalage !</p>
 </div>
 
 <p>Chargez et actualisez pour voir la différence, ou bien vérifiez avec l'exemple <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-offset.html">fluid-grid-offset.html</a> (voir aussi <a href="http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html">l'exécution directement</a>). L'exemple terminé doit ressembler à ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13903/offset-grid-finished.png" style="display: block; height: 47px; margin: 0px auto; width: 944px;"></p>
+<p><img alt="" src="offset-grid-finished.png"></p>
 
 <div class="note">
-<p><strong>Note </strong>: Comme exercice supplémentaire, pouvez‑vous implémenter une classe <code>offset-by-two</code> ?</p>
+<p><strong>Note :</strong> Comme exercice supplémentaire, pouvez‑vous implémenter une classe <code>offset-by-two</code> ?</p>
 </div>
 
 <h3 id="Limitations_des_trames_de_boîtes_flottantes">Limitations des trames de boîtes flottantes</h3>
@@ -457,7 +453,7 @@ body {
 
 <p>Sur la ligne haute, nous disposons de douze boîtes nettes sur la trame et elle s'élargissent ou s'étrécissent de manière égale quand nous modifions la largeur de la vue. Sur la ligne suivante, toutefois, nous n'avons que quatre éléments et ceux-ci s'élargissent ou s'étrécissent à partir de la base de 60px. Avec seulement quatre d'entre eux ils peuvent s'élargir un peu plus que les éléments de la ligne au‑dessus, le résultat étant qu'ils occupent tous la même largeur sur la deuxième ligne.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13905/flexbox-grid-incomplete.png" style="display: block; height: 71px; margin: 0px auto; width: 944px;"></p>
+<p><img alt="" src="flexbox-grid-incomplete.png"></p>
 
 <p>Pour corriger cela, nous avons encore besoin d'inclure les classes <code>span</code> pour donner une largeur qui remplave la valeur donnée par <code>flex-basis</code> pour cet élément.</p>
 
@@ -485,7 +481,7 @@ body {
 <p>Skeleton inclut plus qu'un système de grille — il contient aussi des CSS pour la typographie et autres éléments de page que vous pouvez utiliser comme point de départ. Toutefois nous les laisserons de côté pour l'instant — c'est la trame qui nous interesse pour le moment.</p>
 
 <div class="note">
-<p><strong>Note</strong> : <a href="/en-US/docs/">Normalize</a> est une petite bibliothèque réellement utile écrite par Nicolas Gallagher, bibliothèque qui fait automatiquement quelques corrections sur les dispositions de base et rend le style des éléments par défaut plus conhérent entre les divers navigateurs.</p>
+<p><strong>Note :</strong> <a href="/fr/docs/">Normalize</a> est une petite bibliothèque réellement utile écrite par Nicolas Gallagher, bibliothèque qui fait automatiquement quelques corrections sur les dispositions de base et rend le style des éléments par défaut plus conhérent entre les divers navigateurs.</p>
 </div>
 
 <p>Nous utiliserons un HTML similaire à celui de notre dernier exemple. Ajoutez ce qui suit dans le corps du HTML :</p>
@@ -553,7 +549,7 @@ body {
 <p>Enregistrez le fichier HTML et chargez‑le dans le navigateur pour voir ce que cela donne.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Si vous éprouvez des difficulatés à faire fonctionner cet exemple, comparez votre code avec le fichier <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html">html-skeleton-finished.html</a> (à voir aussi  <a href="http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html">en exécution directe</a>).</p>
+<p><strong>Note :</strong> Si vous éprouvez des difficulatés à faire fonctionner cet exemple, comparez votre code avec le fichier <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html">html-skeleton-finished.html</a> (à voir aussi  <a href="http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html">en exécution directe</a>).</p>
 </div>
 
 <p>Si vous regardez dans le fichier <em>skeleton.css</em> vous verrez comment cela fonctionne. Par exemple, Skeleton prédéfinit ce qui suit pour styler des éléments de la classe « three columns » que l'on ajouterait.</p>
@@ -573,14 +569,14 @@ body {
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Introduction">Introduction to CSS layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow">Normal Flow</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column Layout</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy Layout Methods</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Supporting older browsers</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">Fundamental Layout Comprehension Assessment</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Introduction">Introduction to CSS layout</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Normal_Flow">Normal Flow</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Grids">Grid</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column Layout</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy Layout Methods</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Supporting older browsers</a></li>
+ <li><a href="/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">Fundamental Layout Comprehension Assessment</a></li>
 </ul>

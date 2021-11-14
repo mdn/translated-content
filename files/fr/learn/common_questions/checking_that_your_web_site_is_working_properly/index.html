@@ -12,11 +12,9 @@ tags:
 translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
 original_slug: Apprendre/Tester_le_bon_fonctionnement_de_votre_site_web
 ---
-<div class="summary">
 <p>Dans cet article, nous présenterons les différentes étapes permettant de diagnostiquer les problèmes d'un site web ainsi que les mesures à prendre pour corriger certains de ces problèmes.</p>
-</div>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -29,7 +27,7 @@ original_slug: Apprendre/Tester_le_bon_fonctionnement_de_votre_site_web
  </tbody>
 </table>
 
-<p id="Summary">Vous avez donc publié votre site web en ligne. Bien. Mais êtes-vous sûr-e que celui-ci fonctionne correctement ?</p>
+<p>Vous avez donc publié votre site web en ligne. Bien. Mais êtes-vous sûr-e que celui-ci fonctionne correctement ?</p>
 
 <p>Un serveur web distant se comportera différemment d'un serveur local. Mieux vaut donc tester le bon fonctionnement d'un site web une fois qu'il est en ligne. Des problèmes « étonnants » peuvent survenir : les images peuvent ne pas apparaître, des pages ne se chargeront pas ou se chargeront lentement, etc. La plupart du temps, ce n'est pas un problème critique : il s'agit de corriger une erreur ou de paramétrer correctement la configuration du serveur hébergé.</p>
 
@@ -49,11 +47,11 @@ original_slug: Apprendre/Tester_le_bon_fonctionnement_de_votre_site_web
 
 <p>Allons sur notre site web : <code>http://demozilla.hebergeurexemple.net/</code>. L'image n'apparaît pas alors qu'il y aurait du y en avoir une !</p>
 
-<p><img alt="Oops, the ‘unicorn’ image is missing" src="https://mdn.mozillademos.org/files/11759/Capture%20du%202015-10-12%2017-21-20.png" style="height: 174px; width: 364px;"></p>
+<p><img alt="Oops, the ‘unicorn’ image is missing" src="Capture%20du%202015-10-12%2017-21-20.png"></p>
 
 <p>Ouvrons les outils de développement et plus particulièrement ceux qui portent sur le réseau (<strong>Outils ➤ Développement Web ➤ Réseau</strong>) puis rechargeons la page :</p>
 
-<p><img alt="The image has a 404 error" src="https://mdn.mozillademos.org/files/11763/Capture%20du%202015-10-12%2018-21-23.png" style="height: 299px; width: 681px;"></p>
+<p><img alt="The image has a 404 error" src="Capture%20du%202015-10-12%2018-21-23.png"></p>
 
 <p>Le problème c'est ce 404 qu'on voit en bas. 404 signifie que la ressource n'a pas été trouvée et c'est pour ça que nous ne voyons pas l'image.</p>
 
@@ -62,7 +60,7 @@ original_slug: Apprendre/Tester_le_bon_fonctionnement_de_votre_site_web
 <p>Le serveur répond avec une message de statut à chaque fois qu'il reçoit une requête. Voici les statuts les plus communs ainsi que leur code :</p>
 
 <dl>
- <dt><strong><span id="cke_bm_110S" class="hidden"> </span>200 : OK</strong></dt>
+ <dt><strong> 200 : OK</strong></dt>
  <dd>La ressource demandée a bien été transmise.</dd>
  <dt><strong>301 : Déplacée de façon permanente (<em>Moved permanently</em>)</strong></dt>
  <dd>La ressource a été déplacée à un nouvel emplacement. Vous ne verrez cette erreur que rarement mais elle est utile à connaître car les moteurs de recherchee utilise cette information pour mettre à jour leurs index.</dd>
@@ -87,15 +85,15 @@ original_slug: Apprendre/Tester_le_bon_fonctionnement_de_votre_site_web
 
 <p>Où est donc le problème ?</p>
 
-<p><img alt="Le list of images in our project" src="https://mdn.mozillademos.org/files/11765/Capture%20du%202015-10-12%2018-45-07.png" style="height: 206px; width: 263px;"></p>
+<p><img alt="Le list of images in our project" src="Capture%20du%202015-10-12%2018-45-07.png"></p>
 
 <p>À premièrve vue, l'image semble être au bon endroit mais l'outil d'analyse réseau affiche un code 404 renvoyé par le serveur. Le problème ici est une coquille dans le code de la page HTML <code>licornes.png</code> plutôt que <code>licorne.png</code>. En corrigeant cette erreur avec l'attribut <code>src</code></p>
 
-<p><img alt="Deleting the ‘s’" src="https://mdn.mozillademos.org/files/11767/Capture%20du%202015-10-12%2018-50-56.png" style="height: 162px; width: 852px;"></p>
+<p><img alt="Deleting the ‘s’" src="Capture%20du%202015-10-12%2018-50-56.png"></p>
 
-<p>Puis en sauvegardant et <a href="/en-US/Learn/Upload_files_to_a_web_server">en envoyant le fichier vers le serveur</a>, on peut ensuite recharger la page dans le navigateur :</p>
+<p>Puis en sauvegardant et <a href="/fr/Learn/Upload_files_to_a_web_server">en envoyant le fichier vers le serveur</a>, on peut ensuite recharger la page dans le navigateur :</p>
 
-<p><img alt="The image loads corectly in the browser" src="https://mdn.mozillademos.org/files/11769/Capture%20du%202015-10-12%2018-53-50.png" style="height: 422px; width: 531px;"></p>
+<p><img alt="The image loads corectly in the browser" src="Capture%20du%202015-10-12%2018-53-50.png"></p>
 
 <p>Et voilà, revenons sur les status {{Glossary("HTTP")}} :</p>
 
@@ -114,7 +112,7 @@ original_slug: Apprendre/Tester_le_bon_fonctionnement_de_votre_site_web
 
 <p>Dans la capture suivante, nous avons voulu accéder à <code>http://demozilla.hebergeurexemple.net/</code> mais nous avons oublié un « m » :</p>
 
-<p><img alt="Address unreachable" src="https://mdn.mozillademos.org/files/11771/Capture%20du%202015-10-12%2018-58-19.png" style="height: 511px; width: 803px;"></p>
+<p><img alt="Address unreachable" src="Capture%20du%202015-10-12%2018-58-19.png"></p>
 
 <p>L'adresse est introuvable… en effet.</p>
 
@@ -128,7 +126,7 @@ original_slug: Apprendre/Tester_le_bon_fonctionnement_de_votre_site_web
 
 <p>Pour voir ces erreurs, ouvrez la console (<strong>Outils ➤ Développement web ➤ Console web</strong>) and puis rechargez la page:</p>
 
-<p><img alt="A Javascript error is shown in the Console" src="https://mdn.mozillademos.org/files/11773/Capture%20du%202015-10-12%2019-10-52.png" style="height: 391px; width: 461px;"></p>
+<p><img alt="A Javascript error is shown in the Console" src="Capture%20du%202015-10-12%2019-10-52.png"></p>
 
 <p>Ici, nous voyons comment détecter une erreur, la console affiche sur quoi porte l'erreur et éventuellement comment la résoudre (nous verrons JavaScript dans <a href="/fr/Apprendre/JavaScript">une autre série d'articles</a>).</p>
 
@@ -140,7 +138,7 @@ original_slug: Apprendre/Tester_le_bon_fonctionnement_de_votre_site_web
 
 <p>Est-ce que la page charge suffisamment vite ? Pour le savoir, vous pouvez utiliser des outils comme <a href="http://www.webpagetest.org/">webpagetest.org</a> ou des modules complémentaires comme <a href="https://addons.mozilla.org/en-US/firefox/addon/yslow/">YSlow</a> qui peuvent fournir des indications intéressantes :</p>
 
-<p><img alt="Yslow diagnostics" src="https://mdn.mozillademos.org/files/9661/yslow-diagnostics.png" style="height: 766px; width: 637px;"></p>
+<p><img alt="Yslow diagnostics" src="yslow-diagnostics.png"></p>
 
 <p>Les notes vont de A à F. La page actuelle est pluôt légère et respecte donc la plupart des critères. On voit ici qu'il aurait été préférable d'utiliser un {{Glossary("CDN")}}. Dans notre cas, cette remarque n'est pas très critique car notre site web n'est pas un site à forte audience qui sert des milliers d'images.</p>
 

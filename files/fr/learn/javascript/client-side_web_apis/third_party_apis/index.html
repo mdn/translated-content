@@ -10,9 +10,9 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Third_party_APIs
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}</div>
 
-<p class="summary">Jusqu'à présent, nous avons uniquement abordé des API qui sont fournies par le navigateur. Il en existe d'autres : de nombreux sites et services, tels que Google Maps, Twitter, Facebook, PayPal, etc. fournissent des API permettant aux développeurs d'exploiter leurs données (ex. afficher un flux Twitter sur un blog) ou leurs services (utiliser l'outil de connexion Facebook pour que vos utilisateurs se connectent sur votre application). Dans cet article, nous verrons les différences entre les API du navigateur et celles fournies par des services tiers (en anglais, on parle de « <em>third-party API</em> ») et nous illustrerons certains cas d'usage pour ces API tierces.</p>
+<p>Jusqu'à présent, nous avons uniquement abordé des API qui sont fournies par le navigateur. Il en existe d'autres : de nombreux sites et services, tels que Google Maps, Twitter, Facebook, PayPal, etc. fournissent des API permettant aux développeurs d'exploiter leurs données (ex. afficher un flux Twitter sur un blog) ou leurs services (utiliser l'outil de connexion Facebook pour que vos utilisateurs se connectent sur votre application). Dans cet article, nous verrons les différences entre les API du navigateur et celles fournies par des services tiers (en anglais, on parle de « <em>third-party API</em> ») et nous illustrerons certains cas d'usage pour ces API tierces.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -203,7 +203,7 @@ var map = L.mapquest.map('map', {
 
 <p>Au final, on souhaite que l'application permette de saisir un terme de recherche, des dates optionnelles pour le début et la fin de la période à rechercher. Nous utiliserons alors ces paramètres afin de d'envoyer des requêtes sur l'API Article Search puis nous afficherons les résultats obtenus.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14821/nytimes-search.png" style="border-style: solid; border-width: 1px; display: block; height: 374px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="nytimes-search.png"></p>
 
 <h3 id="Connecter_lAPI_à_son_application">Connecter l'API à son application</h3>
 
@@ -235,7 +235,7 @@ function fetchResults(e) {
   e.preventDefault();
 
   // On compose l'URL
-  url = baseURL + '?api-key=' + key + '&amp;page=' + pageNumber + '&amp;q=' + searchTerm.value <span class="blob-code-inner"><span class="pl-s1"><span class="pl-k x">+</span><span class="x"> </span><span class="pl-s"><span class="pl-pds x">'</span><span class="x">&amp;fq=document_type:("article")</span><span class="pl-pds x x-last">'</span></span></span></span>;
+  url = baseURL + '?api-key=' + key + '&amp;page=' + pageNumber + '&amp;q=' + searchTerm.value + '&amp;fq=document_type:("article")';
 
   if(startDate.value !== '') {
     url += '&amp;begin_date=' + startDate.value;
@@ -264,7 +264,7 @@ function fetchResults(e) {
 <p>Si on prend un exemple d'URL complète ainsi construite :</p>
 
 <pre>https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=YOUR-API-KEY-HERE&amp;page=0&amp;q=cats
-&amp;<span class="blob-code-inner"><span class="pl-s1"><span class="pl-s"><span class="x">fq=document_type:("article")</span></span></span></span>&amp;begin_date=20170301&amp;end_date=20170312 </pre>
+&amp;fq=document_type:("article")&amp;begin_date=20170301&amp;end_date=20170312 </pre>
 
 <div class="note">
 <p><strong>Note :</strong> Pour en savoir plus sur les différents paramètres d'URL qui peuvent être utilisés, vous pouvez consulter <a href="https://developer.nytimes.com/">la documentation du NYTimes</a>.</p>
@@ -325,7 +325,7 @@ fetch(url).then(function(result) {
 
       link.href = current.web_url;
       link.textContent = current.headline.main;
-      para1.textContent = current.<span class="blob-code-inner"><span class="pl-s1"><span class="pl-smi x x-first x-last">snippet</span></span></span>;
+      para1.textContent = current.snippet;
       para2.textContent = 'Mots-clés : ';
       for(var j = 0; j &lt; current.keywords.length; j++) {
         var span = document.createElement('span');
@@ -418,7 +418,7 @@ function previousPage(e) {
 
 <p>Cet exemple est intéressant car il permet d'illustrer l'utilisation combinée de deux API tierces pour construire une application. La première API est une API REST tandis que la seconde est plus proche du fonctionnement de MapQuest (des méthodes spécifiques à l'API, etc.). On notera que les deux API ont besoin qu'une bibliothèque JavaScript soit chargée sur la page. L'API REST possède des fonctions qui permettent de gérer les requêtes HTTP et de renvoyer les résultats.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14823/youtube-example.png" style="border-style: solid; border-width: 1px; display: block; height: 389px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="youtube-example.png"></p>
 
 <p>Nous n'allons pas détailler plus encore cet exemple ici, vous pouvez <a href="https://github.com/mdn/learning-area/tree/master/javascript/apis/third-party-apis/youtube">consulter le code source</a> qui contient des commentaires expliquant son fonctionnement. Là encore, pour utiliser vous-même l'exemple, vous aurez besoin de récupérer une clé d'API et de l'insérer dans le code afin que les exemples fonctionnent.</p>
 

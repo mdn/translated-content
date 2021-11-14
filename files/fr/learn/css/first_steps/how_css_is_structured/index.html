@@ -9,7 +9,7 @@ translation_of: Learn/CSS/First_steps/How_CSS_is_structured
 
 <p>Vous avez maintenant une idée plus claire de CSS. Vous connaissez les bases de son fonctionnement. Il est temps d'explorer plus avant la structure du langage lui-même. Nous avons déjà rencontré nombre des concepts apparaissant dans ce tutoriel ; reportez vous aux leçons précédentes si un concept vous semble peu clair.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis&nbsp;:</th>
@@ -244,18 +244,19 @@ p {
 </ul>
 
 <div class="warning">
-<p><strong>Important :</strong> Si la propriété est inconnue ou si la valeur est invalide pour une propriété donnée, la déclaration est considérée comme <em>invalide</em> et complètement ignorée par le moteur CSS du navigateur.</p>
+<p><strong>Attention :</strong> Si la propriété est inconnue ou si la valeur est invalide pour une propriété donnée, la déclaration est considérée comme <em>invalide</em> et complètement ignorée par le moteur CSS du navigateur.</p>
 </div>
 
 <div class="warning">
-<p><strong>Important :</strong> En CSS (et dans les autres standards web), l'orthographe américaine a été adoptée comme norme à respecter en cas d'incertitude linguistique. Par exemple, la couleur doit <em>toujours</em> être notée <code>color</code>. <code>couleur</code> ne fonctionnera pas.</p>
+<p><strong>Attention :</strong> En CSS (et dans les autres standards web), l'orthographe américaine a été adoptée comme norme à respecter en cas d'incertitude linguistique. Par exemple, la couleur doit <em>toujours</em> être notée <code>color</code>. <code>couleur</code> ne fonctionnera pas.</p>
 </div>
 
 <h3 id="functions">Fonctions</h3>
 
 <p>Bien que la plupart des valeurs soient des mots-clés relativement simples ou des valeurs numériques, on peut aussi appeler une fonction pour calculer une valeur dans une déclaration CSS. Un exemple serait la fonction <code>calc()</code>. Cette fonction vous permet de faire des calculs simples à partir de CSS, par exemple :</p>
 
-<div id="calc_example">
+<h4 id="Exemple_calc">Exemple calc</h4>
+
 <pre class="brush: html">&lt;div class="outer"&gt;&lt;div class="box"&gt;la boite interne vaut 90% - 30px.&lt;/div&gt;&lt;/div&gt;</pre>
 
 <pre class="brush: css">.outer {
@@ -268,17 +269,17 @@ p {
   background-color: rebeccapurple;
   color: white;
 }</pre>
-</div>
 
 <p>La page devrait s'afficher comme ceci :</p>
 
-<p>{{EmbedLiveSample('calc_example', '100%', 200)}}</p>
+<p>{{EmbedLiveSample('Exemple_calc', '100%', 200)}}</p>
 
 <p>Une fonction est composée du nom de la fonction suivi d'une paire de parenthèses entre lesquelles sont placées les valeurs autorisées pour cette fonction. Dans le cas de l'exemple <code>calc()</code> ci-dessus, on demande que la largeur de cette zone soit égale à 90% de la largeur du bloc conteneur, moins 30 pixels. Ce n'est pas quelque chose que l'on peut calculer à l'avance et simplement entrer la valeur dans le CSS, car on ne sait pas ce que seront 90%. Comme pour toutes les valeurs, chaque fonction a sa page de documentation sur MDN avec des exemples d'utilisation pour en voir le fonctionnement.</p>
 
 <p>Un autre exemple serait les différentes valeurs de la propriété <a href="/fr/docs/Web/CSS/&lt;transform&gt;"><code>&lt;transform&gt;</code></a>, telles que <code>rotate()</code>.</p>
 
-<div id="transform_example">
+<h4 id="Exemple_transform">Exemple transform</h4>
+
 <pre class="brush: html">&lt;div class="box"&gt;&lt;/div&gt;</pre>
 
 <pre class="brush: css">.box {
@@ -288,11 +289,10 @@ p {
   background-color: rebeccapurple;
   transform: rotate(0.8turn)
 }</pre>
-</div>
 
 <p>La page devrait s'afficher comme ceci :</p>
 
-<p>{{EmbedLiveSample('transform_example', '100%', 200)}}</p>
+<p>{{EmbedLiveSample('Exemple_transform', '100%', 200)}}</p>
 
 <p><strong>Essayez de rechercher différentes valeurs des propriétés suivantes et d'écrire des règles CSS qui les appliquent à différents éléments HTML : </strong></p>
 
