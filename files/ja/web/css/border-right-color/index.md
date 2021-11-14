@@ -3,23 +3,23 @@ title: border-right-color
 slug: Web/CSS/border-right-color
 tags:
   - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - 'recipe:css-property'
+  - CSS 境界
+  - CSS プロパティ
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.border-right-color
 translation_of: Web/CSS/border-right-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><strong><code>border-right-color</code></strong> は CSS のプロパティで、要素の右側の<a href="/ja/docs/Web/CSS/border">境界線</a>の色を設定します。</span>一括指定プロパティの {{cssxref("border-color")}} または {{cssxref("border-right")}} でも設定することができます。</p>
+**`border-right-color`** は CSS のプロパティで、要素の右側の[境界線](/ja/docs/Web/CSS/border)の色を設定します。一括指定プロパティの {{cssxref("border-color")}} または {{cssxref("border-right")}} でも設定することができます。
 
-<div>{{EmbedInteractiveExample("pages/css/border-right-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-right-color.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush: css no-line-numbers  language-css notranslate">/* &lt;color&gt; 値 */
+```css
+/* <color> 値 */
 border-right-color: red;
 border-right-color: #ffbb00;
 border-right-color: rgb(255, 0, 0);
@@ -30,41 +30,43 @@ border-right-color: transparent;
 /* グローバル値 */
 border-right-color: inherit;
 border-right-color: initial;
+border-right-color: revert;
 border-right-color: unset;
-</pre>
+```
 
-<p><code>border-right-color</code> プロパティは1つの値で指定します。</p>
+`border-right-color` プロパティは 1 つの値で指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>右の境界線の色を定義します。</dd>
-</dl>
+- {{cssxref("&lt;color&gt;")}}
+  - : 右の境界線の色を定義します。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="A_simple_div_with_a_border" name="A_simple_div_with_a_border">境界線が付いた単純な div</h3>
+<h3 id="A_simple_div_with_a_border">境界線が付いた単純な div</h3>
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div class="mybox"&gt;
-  &lt;p&gt;これは周囲に境界線があるボックスです。
+```html
+<div class="mybox">
+  <p>これは周囲に境界線があるボックスです。
      なお、ボックスのその辺が
-     &lt;span class="redtext"&gt;赤&lt;/span&gt;になっています。&lt;/p&gt;
-&lt;/div&gt;</pre>
+     <span class="redtext">赤</span>になっています。</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">.mybox {
+```css
+.mybox {
     border: solid 0.3em gold;
     border-right-color: red;
     width: auto;
@@ -72,44 +74,23 @@ border-right-color: unset;
 
 .redtext {
     color: red;
-}</pre>
+}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('A_simple_div_with_a_border')}}</p>
+{{EmbedLiveSample('A_simple_div_with_a_border')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#propdef-border-right-color', 'border-right-color')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>目立った変更はないが、<code>transparent</code> キーワードが {{cssxref("&lt;color&gt;")}} 含められたので、形式的には削除された。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#propdef-border-right-color', 'border-right-color')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.border-right-color")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>境界に関する CSS 一括指定プロパティ: {{cssxref("border")}}, {{cssxref("border-right")}}, {{cssxref("border-color")}}.</li>
- <li>他の境界線の色に関する CSS プロパティ: {{cssxref("border-left-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-top-color")}}</li>
- <li>同じ境界線に適用される他の境界関連の CSS プロパティ: {{cssxref("border-right-style")}}, {{cssxref("border-right-width")}}</li>
-</ul>
+ - 境界に関する CSS 一括指定プロパティ: {{cssxref("border")}}, {{cssxref("border-right")}}, {{cssxref("border-color")}}
+ - 他の境界線の色に関する CSS プロパティ: {{cssxref("border-left-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-top-color")}}
+ - 同じ境界に適用される他の境界関連の CSS プロパティ: {{cssxref("border-right-style")}}, {{cssxref("border-right-width")}}

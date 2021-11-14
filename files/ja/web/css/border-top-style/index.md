@@ -3,29 +3,25 @@ title: border-top-style
 slug: Web/CSS/border-top-style
 tags:
   - CSS
+  - CSS 境界
   - CSS プロパティ
-  - CSS 背景と境界
-  - Reference
-  - border
-  - border-style
-  - border-top
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.border-top-style
 translation_of: Web/CSS/border-top-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>border-top-style</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、要素の上側の境界 ({{CSSxRef("border")}}) における線の形状を設定します。</p>
+**`border-top-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界 ({{CSSxRef("border")}}) における線の形状を設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/border-top-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-top-style.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+> **Note:** 仕様書では、異なる形状の境界線を角でどのように接続するかを定義していません。
 
-<div class="blockIndicator note">
-<p><strong>メモ:</strong> 仕様書では、異なる形状の境界線を角でどの様に接続するかを定義していません。</p>
-</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 border-top-style: none;
 border-top-style: hidden;
 border-top-style: dotted;
@@ -40,41 +36,51 @@ border-top-style: outset;
 /* グローバル値 */
 border-top-style: inherit;
 border-top-style: initial;
+border-top-style: revert;
 border-top-style: unset;
-</pre>
+```
 
-<p><code>border-top-style</code> プロパティは、 {{CSSxRef("border-style")}} プロパティで利用できるキーワードのうちの一つで指定します。</p>
+`border-top-style` プロパティは、 {{CSSxRef("border-style")}} プロパティで利用できるキーワードのうちの一つで指定します。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{CSSSyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h4 id="HTML">HTML</h4>
+### border-top-style の設定
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td class="b1"&gt;none&lt;/td&gt;
-    &lt;td class="b2"&gt;hidden&lt;/td&gt;
-    &lt;td class="b3"&gt;dotted&lt;/td&gt;
-    &lt;td class="b4"&gt;dashed&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="b5"&gt;solid&lt;/td&gt;
-    &lt;td class="b6"&gt;double&lt;/td&gt;
-    &lt;td class="b7"&gt;groove&lt;/td&gt;
-    &lt;td class="b8"&gt;ridge&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="b9"&gt;inset&lt;/td&gt;
-    &lt;td class="b10"&gt;outset&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+#### HTML
 
-<h4 id="CSS">CSS</h4>
+```html
+<table>
+  <tr>
+    <td class="b1">none</td>
+    <td class="b2">hidden</td>
+    <td class="b3">dotted</td>
+    <td class="b4">dashed</td>
+  </tr>
+  <tr>
+    <td class="b5">solid</td>
+    <td class="b6">double</td>
+    <td class="b7">groove</td>
+    <td class="b8">ridge</td>
+  </tr>
+  <tr>
+    <td class="b9">inset</td>
+    <td class="b10">outset</td>
+  </tr>
+</table>
+```
 
-<pre class="brush: css">/* 表の外見を定義 */
+#### CSS
+
+```css
+/* 表の外見を定義 */
 table {
   border-width: 2px;
   background-color: #52E385;
@@ -93,45 +99,22 @@ tr, td {
 .b7 {border-top-style: groove;}
 .b8 {border-top-style: ridge;}
 .b9 {border-top-style: inset;}
-.b10 {border-top-style: outset;}</pre>
+.b10 {border-top-style: outset;}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Examples', 300, 200)}}</p>
+{{EmbedLiveSample('Examples', 300, 200)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-border-style', 'border-top-style')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>重要な変更はなし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#border-style-properties', 'border-top-style')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p>{{CSSInfo}}</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.border-top-style")}}</p>
+## 関連情報
 
-<h2 id="See_Also" name="See_Also">関連情報</h2>
-
-<ul>
- <li>その他の形状に関する境界のプロパティ: {{CSSxRef("border-left-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-bottom-style")}}, {{CSSxRef("border-style")}}</li>
- <li>その他の左側の境界に関するプロパティ: {{CSSxRef("border-top")}}, {{CSSxRef("border-top-color")}}, {{CSSxRef("border-top-width")}}</li>
-</ul>
+ - その他の形状に関する境界のプロパティ: {{CSSxRef("border-left-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-bottom-style")}}, {{CSSxRef("border-style")}}
+ - その他の左側の境界に関するプロパティ: {{CSSxRef("border-top")}}, {{CSSxRef("border-top-color")}}, {{CSSxRef("border-top-width")}}
