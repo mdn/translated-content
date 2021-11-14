@@ -7,7 +7,7 @@ tags:
 translation_of: Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation
 original_slug: Web/JavaScript/Performance_les_dangers_liés_à_la_modification_de_Prototype
 ---
-{{draft}}
+
 
 Chaque objet JavaScript possède un prototype (que nous désignerons par la suite par `[[Prototype]]`, la notation utilisée par la spécification et les implémentations). Lorsqu'on recherche des propriétés sur un objet, on consulte d'abord cet objet puis on analyse son prototype (on « remonte la chaîne ») et ensuite le prototype de ce dernier et ainsi de suite jusqu'à trouver la propriété en question ou jusqu'à ce que la chaîne soit terminée. Cette chaîne est particulièrement utile pour émuler [l'héritage entre objets](/fr/docs/Web/JavaScript/Héritage_et_chaîne_de_prototypes).
 

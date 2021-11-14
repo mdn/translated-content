@@ -8,7 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/cross-fade()
 ---
-{{draft}}{{CSSRef}}
+{{CSSRef}}
 
 La fonction CSS **`cross-fade()`** peut être utilisée afin de fusionner deux ou plusieurs images avec une transparence donnée. On peut l'utiliser pour de nombreuses manipulations d'image : teinter une image avec une couleur donnée ou mettre en avant une zone de l'image en combinant celle-ci avec un dégradé radial.
 

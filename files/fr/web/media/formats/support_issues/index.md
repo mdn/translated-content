@@ -16,7 +16,7 @@ tags:
 translation_of: Web/Media/Formats/Support_issues
 original_slug: Web/Media/Formats/Questions_sur_le_soutien
 ---
-{{QuickLinksWithSubpages("/fr/docs/Web/Media")}}{{draft}}
+{{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
 
 L'une des réalités du travail avec la présentation et la manipulation audio et vidéo sur le web est qu'il existe un certain nombre de formats de médias disponibles, de degrés de popularité variables et avec des capacités variées. La possibilité de choisir est bonne pour l'utilisateur, dans la mesure où il peut choisir le format qui répond le mieux à ses besoins. Il y a cependant un inconvénient : comme il y a un grand choix, avec tant de types de licences et de principes de conception différents, chaque développeur de navigateur web est laissé à lui-même pour décider des types de fichiers média et des codecs à prendre en charge.
 

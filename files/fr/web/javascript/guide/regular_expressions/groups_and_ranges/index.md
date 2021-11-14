@@ -10,7 +10,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 original_slug: Web/JavaScript/Guide/Expressions_régulières/Groupes_et_intervalles
 ---
-{{jsSidebar("JavaScript Guide")}}{{draft}}
+{{jsSidebar("JavaScript Guide")}}
 
 Les groupes et intervalles permettent de représenter des groupes ou des intervalles de caractères dans des expressions rationnelles.
 

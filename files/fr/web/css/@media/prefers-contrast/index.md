@@ -3,7 +3,7 @@ title: prefers-contrast
 slug: Web/CSS/@media/prefers-contrast
 translation_of: Web/CSS/@media/prefers-contrast
 ---
-{{CSSRef}}{{SeeCompatTable}}{{draft}}
+{{CSSRef}}{{SeeCompatTable}}
 
 La [caractéristique média](</fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#Caractéristiques_média_(media_features)>) **`prefers-contrast`** permet de détecter si l'utilisateur a configuré son système pour utiliser un contraste élevé.
 

@@ -8,7 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@font-face/font-stretch
 ---
-{{CSSRef}}{{draft}}
+{{CSSRef}}
 
 Le descripteur CSS **`font-stretch`** permet aux auteurs de choisir entre la forme normale, condensée ou étendue d'une police fournie dans une règle {{cssxref("@font-face")}}.
 

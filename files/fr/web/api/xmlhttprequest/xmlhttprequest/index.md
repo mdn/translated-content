@@ -15,7 +15,7 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest/XMLHttpRequest
 ---
-{{draft}}{{APIRef('XMLHttpRequest')}}
+{{APIRef('XMLHttpRequest')}}
 
 Le constructeur **`XMLHttpRequest()`** crée une nouvelle instance {{domxref("XMLHttpRequest")}}.
 

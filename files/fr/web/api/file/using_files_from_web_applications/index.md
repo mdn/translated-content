@@ -8,7 +8,7 @@ tags:
   - ajax upload
 translation_of: Web/API/File/Using_files_from_web_applications
 ---
-{{APIRef("File API")}}{{draft}}
+{{APIRef("File API")}}
 
 Grâce à l'API File ajoutée au DOM avec HTML5, il est maintenant possible depuis une page web de proposer à l'utilisateur de sélectionner des fichiers locaux, puis d'en lire le contenu. Cette sélection est possible en utilisant un élément HTML {{ HTMLElement("input") }} ou par glisser-déposer.
 

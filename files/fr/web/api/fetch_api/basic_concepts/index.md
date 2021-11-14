@@ -3,7 +3,7 @@ title: 'Fetch : concepts de départ'
 slug: Web/API/Fetch_API/Basic_concepts
 translation_of: Web/API/Fetch_API/Basic_concepts
 ---
-{{DefaultAPISidebar("Fetch API")}}{{draft}}
+{{DefaultAPISidebar("Fetch API")}}
 
 L'API [Fetch ](/en-US/docs/Web/API/Fetch_API)fournit une interface pour récupérer des ressources (y compris depuis le réseau). Elle paraîtra familière à quiconque aura déjà utilisé {{domxref("XMLHttpRequest")}}, mais elle fournit un jeu de fonctionnalités plus puissantes et plus souples. Cet article explique quelques uns des principes de base de l'API Fetch.
 

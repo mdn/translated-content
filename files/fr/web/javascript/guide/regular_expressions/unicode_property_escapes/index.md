@@ -10,7 +10,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
 original_slug: Web/JavaScript/Guide/Expressions_régulières/Échappement_propriétés_Unicode
 ---
-{{jsSidebar("JavaScript Guide")}}{{draft}}
+{{jsSidebar("JavaScript Guide")}}
 
 Les séquences d'échappement pour les propriétés Unicode permettent de distinguer les caractères Unicodes en fonction de leurs propriétés : majuscules, minuscules, symboles mathématiques, ponctuation, etc.
 

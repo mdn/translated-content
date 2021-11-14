@@ -7,7 +7,7 @@ tags:
   - Statut
 translation_of: Web/HTTP/Status/103
 ---
-{{HTTPSidebar}}{{Draft}}
+{{HTTPSidebar}}
 
 Le code de statut de réponse  **`103 Early Hints`** est principalement utilisé avec l'en-tête HTTP {{HTTPHeader("Link")}} afin de permettre à l'application cliente de commencer le chargement des ressources tandis que le serveur prépare une réponse.
 

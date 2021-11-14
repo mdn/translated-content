@@ -7,7 +7,7 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest/response
 ---
-{{draft}}{{APIRef('XMLHttpRequest')}}La propriété `XMLHttpRequest.response` contient le corps de la réponse. Elle peut être de type ArrayBuffer, Blob, Document, un objet JavaScript ou une DOMString en fonction de la valeur de la propriété `XMLHttpRequest.responseType`. La réponse ( `Value of response` ) est nulle si la requête est incomplète ou n'as pas été effectué avec succès. Cependant, si `responseType` est "text" ou une chaine vide et tant que la requête est en cours ( dans l'état _loading_ ), `response` peut contenir la réponse partielle.
+{{APIRef('XMLHttpRequest')}}La propriété `XMLHttpRequest.response` contient le corps de la réponse. Elle peut être de type ArrayBuffer, Blob, Document, un objet JavaScript ou une DOMString en fonction de la valeur de la propriété `XMLHttpRequest.responseType`. La réponse ( `Value of response` ) est nulle si la requête est incomplète ou n'as pas été effectué avec succès. Cependant, si `responseType` est "text" ou une chaine vide et tant que la requête est en cours ( dans l'état _loading_ ), `response` peut contenir la réponse partielle.
 
 <table class="standard-table">
   <tbody>

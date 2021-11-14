@@ -3,7 +3,7 @@ title: CSS performance optimization
 slug: Learn/Performance/CSS
 translation_of: Learn/Performance/CSS
 ---
-<p>{{draft}}</p>
+<p></p>
 
 <p>页面在样式没有渲染完毕的情况下被绘制，在样式渲染完毕后又被刷新，这大概是很糟糕的用户体验。因此，除非浏览器知道当前不需要 该 CSS，否则 该 CSS将阻止渲染。浏览器只会在下载 CSS 和构建 CSSOM之后绘制页面。浏览器遵循特定的渲染路径：绘制 paint 仅在布局 layout之后进行，布局 layout 则在创建渲染树 render tree 之后进行，创建渲染树则需要在DOM和CSSOM 树解析完成后进行。为了优化CSSOM的构造，请删除不必要的样式，对 CSS 进行最小化，压缩和缓存，并将页面加载时不需要的CSS拆分为其他文件，以减少CSS渲染阻塞。</p>
 
